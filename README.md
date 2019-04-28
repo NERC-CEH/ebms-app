@@ -1,4 +1,4 @@
-# European Butterflies App
+# eBMS App
 
 ## Authors
 

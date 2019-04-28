@@ -1,0 +1,13 @@
+.app-home-page {
+  ion-tab-bar {
+    contain: none;
+
+    .add-survey {
+      background-color: var(--ion-color-light);
+      margin-top: -22px;
+      height: 64px;
+      box-shadow: inset 0px 0 2px 0px;
+      border-radius: 50%;
+    }
+  }
+}
