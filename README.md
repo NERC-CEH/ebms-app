@@ -1,4 +1,5 @@
-# eBMS App
+# eBMS App [![Build Status](https://travis-ci.org/NERC-CEH/ebms-app.svg?branch=master)](https://travis-ci.org/NERC-CEH/ebms-app)
+
 
 ## Authors
 
