@@ -10,9 +10,10 @@ import {
   IonPopover,
 } from '@ionic/react';
 import { Route, Redirect } from 'react-router-dom';
+import PrivateRoute from 'common/Components/PrivateRoute';
 import Report from './Report';
-import Guide from './Guide';
-import User from './User';
+import Guide from '../Info/Guide';
+import User from '../User/Report';
 import './styles.scss';
 
 const selectSurvey = (
@@ -36,21 +37,25 @@ const Component = () => {
       </IonPopover>
 
       <IonPage className="app-home-page">
-        <Route exact path="/" render={() => <Redirect to="/home" />} />
+        <Route exact path="/" render={() => <Redirect to="/home/report" />} />
 
         <IonTabs>
           <IonRouterOutlet>
-            <Route path="/:tab(home)" component={Report} exact />
-            <Route path="/:tab(guide)" component={Guide} exact />
-            <Route path="/:tab(user)" component={User} exact />
+            <Route path="/:tab(home/report)" component={Report} exact />
+            <Route path="/:tab(home/guide)" component={Guide} exact />
+            <Route
+              path="/:tab(home/user-report)"
+              render={() => <PrivateRoute component={User} />}
+              exact
+            />
           </IonRouterOutlet>
 
           <IonTabBar slot="bottom">
-            <IonTabButton tab="home" href="/home">
+            <IonTabButton tab="home" href="/home/report">
               <IonIcon name="home" />
               <IonLabel>Home</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="guide" href="/guide">
+            <IonTabButton tab="guide" href="/home/guide">
               <IonIcon name="book" />
               <IonLabel>Guide</IonLabel>
             </IonTabButton>
@@ -60,7 +65,7 @@ const Component = () => {
             >
               <IonIcon name="add" />
             </IonTabButton>
-            <IonTabButton tab="user" href="/user">
+            <IonTabButton tab="user" href="/home/user-report">
               <IonIcon name="person" />
               <IonLabel>Account</IonLabel>
             </IonTabButton>

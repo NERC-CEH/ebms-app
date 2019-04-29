@@ -8,14 +8,12 @@ import 'helpers/analytics';
 import React from 'react'; // eslint-disable-line
 import 'helpers/translator';
 
-import {
-  HashRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { IonApp, IonSplitPane, IonPage } from '@ionic/react';
-import Info from './Info';
 import Home from './Home';
+import Info from './Info';
+import User from './User';
+import Settings from './Settings';
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
 import './common/styles/app.scss';
@@ -28,6 +26,8 @@ const App = () => (
           <IonPage id="main">
             <Switch>
               <Route path="/info" component={Info} />
+              <Route path="/user" component={User} />
+              <Route path="/settings" component={Settings} />
               <Route path="/" component={Home} />
             </Switch>
           </IonPage>

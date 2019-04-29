@@ -4,7 +4,7 @@ import { IonContent } from '@ionic/react';
 const Component = () => (
   <>
     <IonContent class="ion-padding">
-      <small>TODO: add user login</small>
+      <small>TODO: add user report</small>
     </IonContent>
   </>
 );

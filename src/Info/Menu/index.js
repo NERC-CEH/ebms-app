@@ -43,7 +43,15 @@ const Controller = observer(props => {
     });
   }
 
-  return <Menu user={userModel.attrs} logOut={logOut} {...restProps} />;
+  const isLoggedIn = userModel.hasLogIn();
+  return (
+    <Menu
+      user={userModel.attrs}
+      isLoggedIn={isLoggedIn}
+      logOut={logOut}
+      {...restProps}
+    />
+  );
 });
 
 Controller.propTypes = {
