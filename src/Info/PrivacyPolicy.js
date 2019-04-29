@@ -4,7 +4,7 @@ import AppHeader from 'common/Components/Header';
 
 export default () => (
   <>
-    <AppHeader title="Privacy Policy" />
+    <AppHeader title={t('Privacy Policy')} />
     <IonContent class="ion-padding">
       <small>TODO: add privacy policy</small>
     </IonContent>

@@ -7,7 +7,7 @@ import AppHeader from 'common/Components/Header';
 const Component = observer(({ isLoggedIn, user, logOut }) => {
   return (
     <>
-      <AppHeader title="Menu" />
+      <AppHeader title={t('Menu')} />
       <IonContent>
         <ion-list lines="full">
           {isLoggedIn && (

@@ -6,8 +6,9 @@ import { observable, set as setMobXAttrs } from 'mobx';
 import { getStore } from 'common/store';
 
 const getDefaultAttrs = () => ({
-  showWelcome: true,
-  language: 'EN',
+  showedWelcome: false,
+  language: '',
+  country: '',
 
   locations: [],
   attrLocks: { general: {}, complex: {} },
@@ -43,7 +44,7 @@ class AppModel {
 
         setMobXAttrs(this.attrs, app.attrs);
         this._initDone = true;
-      })
+      });
   }
 
   get(name) {

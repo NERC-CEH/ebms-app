@@ -222,7 +222,7 @@ class Component extends React.Component {
     return (
       <>
         {ToDoPopover}
-        <AppHeader title="Register" />
+        <AppHeader title={t('Register')} />
         <IonContent>
           <ion-list lines="full">
             <ion-item error={this.state.userEmailError}>

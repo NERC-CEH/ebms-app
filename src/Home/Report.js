@@ -12,11 +12,11 @@ const Component = () => (
     <IonContent class="ion-padding">
       <IonList>
         <IonItemDivider>
-          <IonLabel>TOP RECORDERS</IonLabel>
+          <IonLabel>{t('TOP RECORDERS')}</IonLabel>
         </IonItemDivider>
         <IonItem><small>TODO: add report</small></IonItem>
         <IonItemDivider>
-          <IonLabel>TOP SPECIES</IonLabel>
+          <IonLabel>{t('TOP SPECIES')}</IonLabel>
         </IonItemDivider>
         <IonItem><small>TODO: add report</small></IonItem>
       </IonList>

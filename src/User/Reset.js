@@ -127,7 +127,7 @@ class Component extends React.Component {
     return (
       <>
         {ToDoPopover}
-        <AppHeader title="Reset" />
+        <AppHeader title={t('Reset')} />
         <IonContent>
           <div className="info-message">
             <p>

@@ -17,8 +17,9 @@ describe('App Model', () => {
     const appModel = new AppModel();
     console.log(Object.keys(appModel.attrs));
     expect(appModel.attrs).to.have.all.keys([
-      'showWelcome',
+      'showedWelcome',
       'language',
+      'country',
       'locations',
       'attrLocks',
       'autosync',
@@ -34,7 +35,7 @@ describe('App Model', () => {
     ]);
 
     // should set the exact value checks in the modules requiring them
-    expect(appModel.get('showWelcome')).to.be.equal(true);
+    expect(appModel.get('showedWelcome')).to.be.equal(false);
     expect(appModel.get('locations') instanceof Array).to.be.true;
     expect(appModel.get('attrLocks'))
       .to.be.an('object')

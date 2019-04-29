@@ -5,7 +5,7 @@ import './sponsor_logo.svg';
 
 export default () => (
   <>
-    <AppHeader title="Credits" />
+    <AppHeader title={t('Credits')} />
     <IonContent class="ion-padding">
       <ion-list lines="none">
         <ion-list-item>
@@ -14,8 +14,9 @@ export default () => (
         <ion-list-item>
           <p>
             <strong>
-              We are very grateful for all the people that helped to create this
-              app:
+              {t(
+                'We are very grateful for all the people that helped to create this app:'
+              )}
             </strong>
           </p>
           <ul style={{ listStyleType: 'none' }}>

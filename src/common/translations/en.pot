@@ -1,0 +1,139 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Select your country"
+msgstr "Select your country"
+
+msgid "United Kingdom"
+msgstr "United Kingdom"
+
+msgid "Lietuva"
+msgstr "Lithuania"
+
+msgid "Skip"
+msgstr "Skip"
+
+msgid "Next"
+msgstr "Next"
+
+msgid "Get Started"
+msgstr "Get Started"
+
+msgid "Please sign in with your eBMS account or register."
+msgstr "Please sign in with your eBMS account or register."
+
+msgid "Username or email"
+msgstr "Username or email"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Sign in"
+msgstr "Sign in"
+
+msgid "Register"
+msgstr "Register"
+
+msgid "Forgot password?"
+msgstr "Forgot password?"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "About"
+msgstr "About"
+
+msgid "Help"
+msgstr "Help"
+
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+msgid "Credits"
+msgstr "Credits"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "First Name"
+msgstr "First Name"
+
+msgid "Surname"
+msgstr "Surname"
+
+msgid "I agree to"
+msgstr "I agree to"
+
+msgid "Terms and Conditions"
+msgstr "Terms and Conditions"
+
+msgid "Enter your username or email address to request a password reset"
+msgstr "Enter your username or email address to request a password reset"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid "Records"
+msgstr "Records"
+
+msgid "Submit All"
+msgstr "Submit All"
+
+msgid "Remove All Saved"
+msgstr "Remove All Saved"
+
+msgid "Application"
+msgstr "Application"
+
+msgid "Training Mode"
+msgstr "Training Mode"
+
+msgid "Experimental Features"
+msgstr "Experimental Features"
+
+msgid "Welcome"
+msgstr "Welcome"
+
+msgid "Lets start!"
+msgstr "Lets start!"
+
+msgid "TOP RECORDERS"
+msgstr "TOP RECORDERS"
+
+msgid "TOP SPECIES"
+msgstr "TOP SPECIES"
+
+msgid "Back"
+msgstr "Back"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "App"
+msgstr "App"
+
+msgid "We are very grateful for all the people that helped to create this app:"
+msgstr "We are very grateful for all the people that helped to create this app:"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Guide"
+msgstr "Guide"
+
+msgid "Account"
+msgstr "Account"
+

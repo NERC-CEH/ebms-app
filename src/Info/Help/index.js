@@ -4,7 +4,7 @@ import AppHeader from 'common/Components/Header';
 
 export default () => (
   <>
-    <AppHeader title="Help" />
+    <AppHeader title={t('Help')} />
     <IonContent class="ion-padding">
       <small>TODO: add help info text</small>
     </IonContent>

@@ -9,7 +9,7 @@ import {
   IonPage,
   IonPopover,
 } from '@ionic/react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import PrivateRoute from 'common/Components/PrivateRoute';
 import Report from './Report';
 import Guide from '../Info/Guide';
@@ -37,8 +37,6 @@ const Component = () => {
       </IonPopover>
 
       <IonPage className="app-home-page">
-        <Route exact path="/" render={() => <Redirect to="/home/report" />} />
-
         <IonTabs>
           <IonRouterOutlet>
             <Route path="/:tab(home/report)" component={Report} exact />
@@ -53,11 +51,11 @@ const Component = () => {
           <IonTabBar slot="bottom">
             <IonTabButton tab="home" href="/home/report">
               <IonIcon name="home" />
-              <IonLabel>Home</IonLabel>
+              <IonLabel>{t('Home')}</IonLabel>
             </IonTabButton>
             <IonTabButton tab="guide" href="/home/guide">
               <IonIcon name="book" />
-              <IonLabel>Guide</IonLabel>
+              <IonLabel>{t('Guide')}</IonLabel>
             </IonTabButton>
             <IonTabButton
               class="add-survey"
@@ -67,11 +65,11 @@ const Component = () => {
             </IonTabButton>
             <IonTabButton tab="user" href="/home/user-report">
               <IonIcon name="person" />
-              <IonLabel>Account</IonLabel>
+              <IonLabel>{t('Account')}</IonLabel>
             </IonTabButton>
             <IonTabButton tab="menu" href="/info/menu">
               <IonIcon name="menu" />
-              <IonLabel>Menu</IonLabel>
+              <IonLabel>{t('Menu')}</IonLabel>
             </IonTabButton>
           </IonTabBar>
         </IonTabs>

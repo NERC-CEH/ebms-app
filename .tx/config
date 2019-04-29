@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[ebms.app]
+file_filter = src/common/translations/<lang>.po
+minimum_perc = 0
+source_file = src/common/translations/en.pot
+source_lang = en
+type = POT

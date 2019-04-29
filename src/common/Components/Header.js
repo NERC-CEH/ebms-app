@@ -14,7 +14,11 @@ const Header = ({ title }) => (
   <IonHeader>
     <IonToolbar>
       <IonButtons slot="start">
-        <IonBackButton onClick={defaultOnLeave} text="Back" defaultHref="/" />
+        <IonBackButton
+          onClick={defaultOnLeave}
+          text={t('Back')}
+          defaultHref="/"
+        />
       </IonButtons>
       <IonTitle>{title}</IonTitle>
     </IonToolbar>

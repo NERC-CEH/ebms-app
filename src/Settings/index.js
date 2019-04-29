@@ -160,7 +160,7 @@ class Component extends React.Component {
     return (
       <>
         {ToDoPopover}
-        <AppHeader title="Settings" />
+        <AppHeader title={t('Settings')} />
         <IonContent>
           <ion-list lines="full">
             <ion-item-divider>{t('Records')}</ion-item-divider>

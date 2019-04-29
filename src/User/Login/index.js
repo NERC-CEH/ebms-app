@@ -150,10 +150,10 @@ class Component extends React.Component {
     return (
       <>
         {ToDoPopover}
-        <AppHeader title="Login" />
+        <AppHeader title={t('Login')} />
         <IonContent>
           <div className="info-message">
-            <p>{t('Please sign in with your iRecord account or register.')}</p>
+            <p>{t('Please sign in with your eBMS account or register.')}</p>
           </div>
 
           <ion-list lines="full">

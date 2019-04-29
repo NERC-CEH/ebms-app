@@ -1,0 +1,146 @@
+# Translators:
+# Karolis, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"Last-Translator: Karolis, 2019\n"
+"Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lt_LT\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Select your country"
+msgstr "Pasirinkite šalį"
+
+msgid "United Kingdom"
+msgstr "Jungtinė Karalystė"
+
+msgid "Lietuva"
+msgstr "Lietuva"
+
+msgid "Skip"
+msgstr "Praleisti"
+
+msgid "Next"
+msgstr "Kitas"
+
+msgid "Get Started"
+msgstr "Pradėti"
+
+msgid "Please sign in with your eBMS account or register."
+msgstr "Prašome prisijungti prie eBMS sąskaitos arba užsiregistruoti"
+
+msgid "Username or email"
+msgstr "Vartotojo vardas arba e-paštas"
+
+msgid "Password"
+msgstr "Slaptažodis"
+
+msgid "Sign in"
+msgstr "Prisijungti"
+
+msgid "Register"
+msgstr "Registruotis"
+
+msgid "Forgot password?"
+msgstr "Pamiršote slaptažodį?"
+
+msgid "Login"
+msgstr "Prisijungti"
+
+msgid "Settings"
+msgstr "Nustatymai"
+
+msgid "Info"
+msgstr "Informacija"
+
+msgid "About"
+msgstr "Apie"
+
+msgid "Help"
+msgstr "Pagalba"
+
+msgid "Privacy Policy"
+msgstr "Privatumo nuostatai"
+
+msgid "Credits"
+msgstr "Padėkos"
+
+msgid "Email"
+msgstr "E-paštas"
+
+msgid "First Name"
+msgstr "Vardas"
+
+msgid "Surname"
+msgstr "Pavardė"
+
+msgid "I agree to"
+msgstr "Aš sutinku su"
+
+msgid "Terms and Conditions"
+msgstr "Nuostatais"
+
+msgid "Enter your username or email address to request a password reset"
+msgstr ""
+"Įveskite savo vartotojo vardą arba e-paštą tam, kad gautumėte slaptažodžio "
+"atnaujinimą"
+
+msgid "Reset"
+msgstr "Atnaujinti"
+
+msgid "Records"
+msgstr "Įrašai"
+
+msgid "Submit All"
+msgstr "Išsiųsti visus"
+
+msgid "Remove All Saved"
+msgstr "Ištrinti visus išsaugotus"
+
+msgid "Application"
+msgstr "Aplikacija"
+
+msgid "Training Mode"
+msgstr "Mokymosi režimas"
+
+msgid "Experimental Features"
+msgstr "Bandomosios funkcijos"
+
+msgid "Welcome"
+msgstr "Sveiki"
+
+msgid "Lets start!"
+msgstr "Pirmyn"
+
+msgid "TOP RECORDERS"
+msgstr "TOP VARTOTOJAI"
+
+msgid "TOP SPECIES"
+msgstr "POPULIARIAUSIOS RŪŠYS"
+
+msgid "Back"
+msgstr "Atgal"
+
+msgid "Menu"
+msgstr "Meniu"
+
+msgid "App"
+msgstr "Aplikacija"
+
+msgid "Mes labai dėkingi šiems žmonėms prisidėjusiems prie šio projekto:"
+"We are very grateful for all the people that helped to create this app:"
+msgstr ""
+
+msgid "Home"
+msgstr "Namai"
+
+msgid "Guide"
+msgstr "Gidas"
+
+msgid "Account"
+msgstr "Sąskaita"

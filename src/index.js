@@ -5,6 +5,15 @@ import 'core-js/features/set';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import appModel from 'app_model';
+import userModel from 'user_model';
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+async function init() {
+  await appModel._init;
+  await userModel._init;
+
+  ReactDOM.render(<App />, document.getElementById('root'));
+}
+
+init();

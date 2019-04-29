@@ -4,7 +4,7 @@ import AppHeader from 'common/Components/Header';
 
 const Component = () => (
   <>
-    <AppHeader title="About" />
+    <AppHeader title={t('About')} />
     <IonContent class="ion-padding">
       <small>TODO: add about the app text</small>
     </IonContent>

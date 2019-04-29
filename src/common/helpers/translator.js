@@ -1,28 +1,37 @@
-/** At the moment all disabled because iRecord App
- * doesn't support other languages than English.
- */
+/* eslint-disable camelcase */
+import appModel from 'app_model';
+import en from '../translations/en.pot';
+import lt_LT from '../translations/lt_LT.po';
 
-// import dictionary from 'common/data/translations.data';
-// import appModel from 'app_model';
+const dictionary = {
+  en,
+  lt_LT,
+};
+
+export const languages = {
+  en: 'English',
+  lt_LT: 'Lietuvių',
+};
 
 function translate(key) {
-  return key;
+  const language = appModel.get('language');
 
-  // // eslint-disable-next-line
-  // const language = appModel.get('language');
-  // const translations = dictionary[key];
-  // if (!translations) {
-  //   dictionary[key] = { CK: '' };
-  //   console.log(`!new: ${key}`); // TODO: remove
-  //   return key;
-  // }
+  const translation = dictionary[language][key];
+  if (!translation) {
+    window.dic = window.dic || [];
+    if (!window.dic.includes(key)) {
+      window.dic.push(key);
+      console.log(`!new: ${key}`); // todo: remove
+      // all='';dic.forEach(word => {all+=`\nmsgid "${word}"\nmsgstr "${word}"\n`})
+    }
+    return key;
+  }
 
-  // const translated = translations[language];
-  // if (!translated) {
-  //   return key;
-  // }
+  if (!translation) {
+    return key;
+  }
 
-  // return translated;
+  return translation;
 }
 
 window.t = translate;
