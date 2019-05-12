@@ -273,12 +273,7 @@ class Component extends React.Component {
               <ion-label>
                 {t('I agree to')}
                 {' '}
-                <a
-                  href="#info/terms"
-                  style={{ display: 'inline', color: '#91a71c' }}
-                >
-                  {t('Terms and Conditions')}
-                </a>
+                <a href="#info/terms">{t('Terms and Conditions')}</a>
               </ion-label>
 
               <Toggle onToggle={this.onTermsAgree} />
