@@ -132,7 +132,8 @@ msgstr "Meniu"
 msgid "App"
 msgstr "Aplikacija"
 
-msgid "We are very grateful for all the people that helped to create this app:"
+msgid ""
+"We are very grateful for all the people that helped to create this app:"
 msgstr "Mes labai dėkingi šiems žmonėms prisidėjusiems prie šio projekto:"
 
 msgid "Home"
@@ -177,3 +178,22 @@ msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
 msgid "Logout"
 msgstr "Atsijungti"
 
+msgid "Are you sure you want to logout?"
+msgstr "Ar tikrai norite atsijungti?"
+
+msgid "This will delete all the records on this device."
+msgstr "Šis veiksmas pašalins visus jūsų įrašus iš šio įrenginio."
+
+msgid "Cancel"
+msgstr "Atšaukti"
+
+msgid "Welcome aboard!"
+msgstr "Sveiki prisijungę!"
+
+msgid ""
+"Before submitting any records please check your email and click on the "
+"verification link."
+msgstr "Iki naudodamiesi aplikacija prašome patvirtinti savo e-paštą - paspausdami nuorodą išsiųstą jūsų adresu."
+
+msgid "OK, got it"
+msgstr "Supratau"

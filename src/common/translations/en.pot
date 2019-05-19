@@ -175,3 +175,15 @@ msgstr "Are you sure you want to logout?"
 
 msgid "This will delete all the records on this device."
 msgstr "This will delete all the records on this device."
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Welcome aboard!"
+msgstr "Welcome aboard!"
+
+msgid "Before submitting any records please check your email and click on the verification link."
+msgstr "Before submitting any records please check your email and click on the verification link."
+
+msgid "OK, got it"
+msgstr "OK, got it"

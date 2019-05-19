@@ -7,18 +7,18 @@ import Menu from './Menu';
 
 function showLogoutConfirmationDialog(callback) {
   alert({
-    header: 'Logout',
+    header: t('Logout'),
     message: `${t('Are you sure you want to logout?')}<p><i>${t(
       'This will delete all the records on this device.'
     )}</i></p>`,
     buttons: [
       {
-        text: 'Cancel',
+        text: t('Cancel'),
         role: 'cancel',
         cssClass: 'secondary',
       },
       {
-        text: 'Logout',
+        text: t('Logout'),
         cssClass: 'primary',
         handler: callback,
       },

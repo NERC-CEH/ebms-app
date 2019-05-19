@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonIcon, IonInput, IonItem } from '@ionic/react';
+import { IonIcon, IonItem, IonLabel } from '@ionic/react';
+import Toggle from 'common/Components/Toggle';
 import './styles.scss';
 
 const InputWithValidation = ({
   name,
-  type,
-  placeholder,
+  label,
   icon,
-  handleChange,
-  handleBlur,
+  setFieldValue,
   values,
   errors,
-  children,
   touched,
 }) => {
   const error = errors[name] && touched[name];
@@ -20,15 +18,12 @@ const InputWithValidation = ({
     <>
       <IonItem error={!!error}>
         <IonIcon name={icon} faint size="small" slot="start" />
-        <IonInput
-          type={type}
-          placeholder={placeholder}
-          onIonChange={handleChange}
-          onIonBlur={handleBlur}
-          value={values[name]}
+        <IonLabel text-wrap>{label}</IonLabel>
+        <Toggle
+          checked={values[name]}
+          onToggle={val => setFieldValue(name, val)}
           name={name}
         />
-        {children}
       </IonItem>
       {error && (
         <div className="error-container">
@@ -49,17 +44,15 @@ const InputWithValidation = ({
 
 InputWithValidation.propTypes = {
   name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
+  label: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   icon: PropTypes.string,
-  handleChange: PropTypes.func.isRequired,
-  handleBlur: PropTypes.func.isRequired,
+  setFieldValue: PropTypes.func.isRequired,
   values: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,
   touched: PropTypes.object.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
 };
 export default InputWithValidation;
