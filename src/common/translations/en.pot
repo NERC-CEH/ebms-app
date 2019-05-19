@@ -187,3 +187,15 @@ msgstr "Before submitting any records please check your email and click on the v
 
 msgid "OK, got it"
 msgstr "OK, got it"
+
+msgid "email is a required field"
+msgstr "email is a required field"
+
+msgid "firstname is a required field"
+msgstr "firstname is a required field"
+
+msgid "secondname is a required field"
+msgstr "secondname is a required field"
+
+msgid "must accept terms and conditions"
+msgstr "must accept terms and conditions"

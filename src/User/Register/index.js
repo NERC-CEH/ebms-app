@@ -17,7 +17,7 @@ const schema = Yup.object().shape({
   secondname: Yup.string().required(),
   password: Yup.string().required(),
   terms: Yup.boolean()
-    .oneOf([true], 'Must Accept Terms and Conditions')
+    .oneOf([true], 'must accept terms and conditions')
     .required(),
 });
 

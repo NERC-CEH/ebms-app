@@ -161,10 +161,10 @@ msgid "Please wait..."
 msgstr "Prašome palaukti"
 
 msgid "name is a required field"
-msgstr "Vartotojo vardas negali būti tuščias"
+msgstr "vartotojo vardas negali būti tuščias"
 
 msgid "password is a required field"
-msgstr "Slaptažodis negali būti tuščias"
+msgstr "slaptažodis negali būti tuščias"
 
 msgid "Login error:"
 msgstr "Prisijungimo klaida:"
@@ -193,7 +193,21 @@ msgstr "Sveiki prisijungę!"
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
-msgstr "Iki naudodamiesi aplikacija prašome patvirtinti savo e-paštą - paspausdami nuorodą išsiųstą jūsų adresu."
+msgstr ""
+"Iki naudodamiesi aplikacija prašome patvirtinti savo e-paštą - paspausdami "
+"nuorodą išsiųstą jūsų adresu."
 
 msgid "OK, got it"
 msgstr "Supratau"
+
+msgid "email is a required field"
+msgstr "e-pašto adresas turi būti užpildytas"
+
+msgid "firstname is a required field"
+msgstr "vardas turi būti užpildytas"
+
+msgid "secondname is a required field"
+msgstr "pavardė turi būti užpildyta"
+
+msgid "must accept terms and conditions"
+msgstr "būtina pažymėti, kad sutinkate su naudojimosi nuostatais"
