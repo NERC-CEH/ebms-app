@@ -14,7 +14,7 @@ const Component = observer(({ isLoggedIn, user, logOut }) => {
             <ion-item detail id="logout-button" onClick={logOut}>
               <IonIcon name="exit" size="small" slot="start" />
               {t('Logout')}
-:
+              {': '}
               {user.firstname} 
               {' '}
               {user.secondname}
