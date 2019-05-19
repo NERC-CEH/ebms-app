@@ -32,7 +32,7 @@ msgid "Get Started"
 msgstr "Pradėti"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr "Prašome prisijungti prie eBMS sąskaitos arba užsiregistruoti"
+msgstr "Prašome prisijungti prie eBMS sąskaitos arba užsiregistruoti."
 
 msgid "Username or email"
 msgstr "Vartotojo vardas arba e-paštas"
@@ -132,9 +132,8 @@ msgstr "Meniu"
 msgid "App"
 msgstr "Aplikacija"
 
-msgid "Mes labai dėkingi šiems žmonėms prisidėjusiems prie šio projekto:"
-"We are very grateful for all the people that helped to create this app:"
-msgstr ""
+msgid "We are very grateful for all the people that helped to create this app:"
+msgstr "Mes labai dėkingi šiems žmonėms prisidėjusiems prie šio projekto:"
 
 msgid "Home"
 msgstr "Namai"
@@ -144,3 +143,37 @@ msgstr "Gidas"
 
 msgid "Account"
 msgstr "Sąskaita"
+
+msgid "Offline"
+msgstr "Neprisijungęs"
+
+msgid "Sorry, looks like you're offline."
+msgstr "Įrenginys nėra prisijungęs prie interneto"
+
+msgid "OK"
+msgstr "Gerai"
+
+msgid "Sorry"
+msgstr "Atriprašome"
+
+msgid "Please wait..."
+msgstr "Prašome palaukti"
+
+msgid "name is a required field"
+msgstr "Vartotojo vardas negali būti tuščias"
+
+msgid "password is a required field"
+msgstr "Slaptažodis negali būti tuščias"
+
+msgid "Login error:"
+msgstr "Prisijungimo klaida:"
+
+msgid "Failed to fetch"
+msgstr "Nepavyko prisijungti"
+
+msgid "Incorrect password or email."
+msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
+
+msgid "Logout"
+msgstr "Atsijungti"
+

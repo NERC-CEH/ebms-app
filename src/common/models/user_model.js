@@ -90,9 +90,6 @@ class UserModel {
     this.set('secondname', user.secondname || '');
     this.set('isLoggedIn', true);
 
-    this.syncActivities();
-    this.syncStats();
-
     Analytics.trackEvent('User', 'login');
 
     return this.save();

@@ -12,7 +12,7 @@ import App from './App';
 async function init() {
   await appModel._init;
   await userModel._init;
-
+  
   ReactDOM.render(<App />, document.getElementById('root'));
 }
 

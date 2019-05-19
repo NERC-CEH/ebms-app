@@ -137,3 +137,41 @@ msgstr "Guide"
 msgid "Account"
 msgstr "Account"
 
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Sorry, looks like you're offline."
+msgstr "Sorry, looks like you're offline."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Sorry"
+msgstr "Sorry"
+
+msgid "Please wait..."
+msgstr "Please wait..."
+
+msgid "name is a required field"
+msgstr "name is a required field"
+
+msgid "password is a required field"
+msgstr "password is a required field"
+
+msgid "Login error:"
+msgstr "Login error:"
+
+msgid "Failed to fetch"
+msgstr "Failed to fetch"
+
+msgid "Incorrect password or email."
+msgstr "Incorrect password or email."
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Are you sure you want to logout?"
+msgstr "Are you sure you want to logout?"
+
+msgid "This will delete all the records on this device."
+msgstr "This will delete all the records on this device."
