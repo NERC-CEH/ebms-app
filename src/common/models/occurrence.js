@@ -11,6 +11,17 @@ export default Indicia.Occurrence.extend({
     this.media.models = observable(this.media.models);
   },
 
+  defaults() {
+    return {
+      count: 1,
+      comment: null,
+      taxon: {
+        scientific_name: null,
+        warehouse_id: null,
+      },
+    };
+  },
+
   /**
    * Disable sort for mobx to keep the same refs.
    * @param mediaObj

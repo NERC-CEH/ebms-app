@@ -199,3 +199,39 @@ msgstr "secondname is a required field"
 
 msgid "must accept terms and conditions"
 msgstr "must accept terms and conditions"
+
+msgid "Area Count"
+msgstr "Area Count"
+
+msgid "Area"
+msgstr "Area"
+
+msgid "Time (duration)"
+msgstr "Time (duration)"
+
+msgid "Add"
+msgstr "Add"
+
+msgid "Time"
+msgstr "Time"
+
+msgid "Species"
+msgstr "Species"
+
+msgid "Species name"
+msgstr "Species name"
+
+msgid "For quicker searching of the taxa you can use different shortcuts. For example, to find"
+msgstr "For quicker searching of the taxa you can use different shortcuts. For example, to find"
+
+msgid "you can type in the search bar"
+msgstr "you can type in the search bar"
+
+msgid "Edit Occurrence"
+msgstr "Edit Occurrence"
+
+msgid "Count"
+msgstr "Count"
+
+msgid "Comment"
+msgstr "Comment"

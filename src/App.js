@@ -20,6 +20,7 @@ import Info from './Info';
 import SplashScreenRequired from './Info/SplashScreenRequired';
 import User from './User';
 import Settings from './Settings';
+import Survey from './Survey';
 import LanguageCountrySelectRequired from './Settings/LanguageCountrySelectRequired';
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
@@ -37,6 +38,7 @@ const App = () => (
                   <Route path="/info" component={Info} />
                   <Route path="/user" component={User} />
                   <Route path="/settings" component={Settings} />
+                  <Route path="/survey" component={Survey} />
                   <Route
                     exact
                     path="/"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   IonTabs,
   IonTabButton,
@@ -7,7 +7,6 @@ import {
   IonRouterOutlet,
   IonTabBar,
   IonPage,
-  IonPopover,
 } from '@ionic/react';
 import { Route } from 'react-router-dom';
 import PrivateRoute from 'common/Components/PrivateRoute';
@@ -16,26 +15,9 @@ import Guide from '../Info/Guide';
 import User from '../User/Report';
 import './styles.scss';
 
-const selectSurvey = (
-  <small style={{ padding: '30px' }}>
-    <center>TODO: implement</center>
-  </small>
-);
-
 const Component = () => {
-  const [showPopover, setShowPopover] = useState(false);
-
   return (
     <>
-      <IonPopover
-        isOpen={showPopover}
-        onDidDismiss={() => {
-          setShowPopover(false);
-        }}
-      >
-        {selectSurvey}
-      </IonPopover>
-
       <IonPage className="app-home-page">
         <IonTabs>
           <IonRouterOutlet>
@@ -57,10 +39,7 @@ const Component = () => {
               <IonIcon name="book" />
               <IonLabel>{t('Guide')}</IonLabel>
             </IonTabButton>
-            <IonTabButton
-              class="add-survey"
-              onClick={() => setShowPopover(true)}
-            >
+            <IonTabButton tab="survey" class="add-survey" href="/survey/new/edit">
               <IonIcon name="add" />
             </IonTabButton>
             <IonTabButton tab="user" href="/home/user-report">

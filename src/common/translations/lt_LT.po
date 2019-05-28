@@ -211,3 +211,41 @@ msgstr "pavardė turi būti užpildyta"
 
 msgid "must accept terms and conditions"
 msgstr "būtina pažymėti, kad sutinkate su naudojimosi nuostatais"
+
+msgid "Area Count"
+msgstr "Teritorijos Monitoringas"
+
+msgid "Area"
+msgstr "Plotas"
+
+msgid "Time (duration)"
+msgstr "Laikas (trukmė)"
+
+msgid "Add"
+msgstr "Pridėti"
+
+msgid "Time"
+msgstr "Laikas"
+
+msgid "Species"
+msgstr "Rūšis"
+
+msgid "Species name"
+msgstr "Rūšis"
+
+msgid ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
+msgstr "Tam kad surastumėte rūšį greičiau, galite naudoti trumpinius. Pavyzdžiui, ieškant"
+
+msgid "you can type in the search bar"
+msgstr "galite įvesti į paieškos lauką"
+
+msgid "Edit Occurrence"
+msgstr "Redaguoti įrašą"
+
+msgid "Count"
+msgstr "Skaičius"
+
+msgid "Comment"
+msgstr "Komentaras"
