@@ -7,11 +7,13 @@ import ReactDOM from 'react-dom';
 
 import appModel from 'app_model';
 import userModel from 'user_model';
+import savedSamples from 'saved_samples';
 import App from './App';
 
 async function init() {
   await appModel._init;
   await userModel._init;
+  await savedSamples._init;
   
   ReactDOM.render(<App />, document.getElementById('root'));
 }

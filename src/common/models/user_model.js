@@ -8,20 +8,12 @@ import { getStore } from 'common/store';
 
 const getDefaultAttrs = () => ({
   isLoggedIn: false,
-  drupalID: '',
-  name: '',
-  firstname: '',
-  secondname: '',
-  email: '',
-  password: '',
-
-  activities: [],
-
-  statistics: {
-    synced_on: null,
-    species: [],
-    speciesRaw: [],
-  },
+  drupalID: null,
+  name: null,
+  firstname: null,
+  secondname: null,
+  email: null,
+  password: null,
 });
 
 class UserModel {

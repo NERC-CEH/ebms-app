@@ -10,7 +10,7 @@ import {
 
 const defaultOnLeave = () => window.history.back();
 
-const Header = ({ title }) => (
+const Header = ({ title, subheader, rightSlot }) => (
   <IonHeader>
     <IonToolbar>
       <IonButtons slot="start">
@@ -21,12 +21,22 @@ const Header = ({ title }) => (
         />
       </IonButtons>
       <IonTitle>{title}</IonTitle>
+      {rightSlot && <IonButtons slot="end">{rightSlot}</IonButtons>}
     </IonToolbar>
+    {subheader && <IonToolbar>{subheader}</IonToolbar>}
   </IonHeader>
 );
 
 Header.propTypes = {
   title: PropTypes.string,
+  rightSlot: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  subheader: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default Header;

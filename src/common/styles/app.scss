@@ -56,7 +56,14 @@ ion-icon[faint] {
     10px center/22px auto no-repeat var(--ion-color-success-tint);
 }
 
-ion-label[slot="end"] {
+ion-label[slot='end'] {
   text-align: right;
-  opacity: 0.5
+  opacity: 0.5;
+}
+
+button.alert-button.secondary {
+  font-weight: normal !important;
+}
+button.alert-button.primary {
+  font-weight: 700;
 }

@@ -7,23 +7,12 @@ import { getStore } from 'common/store';
 
 const getDefaultAttrs = () => ({
   showedWelcome: false,
-  language: '',
-  country: '',
-
-  locations: [],
-  attrLocks: { general: {}, complex: {} },
-  autosync: true,
-  useGridRef: true,
-  useGridMap: true,
+  language: null,
+  country: null,
   useTraining: false,
-
   useExperiments: false,
-  useGridNotifications: false,
-  gridSquareUnit: 'monad',
-
   feedbackGiven: false,
-  taxonGroupFilters: [],
-  searchNamesOnly: null,
+  areaCountDraftId: null,
 });
 
 class AppModel {

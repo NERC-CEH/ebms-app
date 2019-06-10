@@ -235,3 +235,30 @@ msgstr "Count"
 
 msgid "Comment"
 msgstr "Comment"
+
+msgid "Draft"
+msgstr "Draft"
+
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr "Previous survey draft exists, would you like to continue it?"
+
+msgid "Discard"
+msgstr "Discard"
+
+msgid "Continue"
+msgstr "Continue"
+
+msgid "Finish"
+msgstr "Finish"
+
+msgid "minutes"
+msgstr "minutes"
+
+msgid "No species added"
+msgstr "No species added"
+
+msgid "Please draw your area on the map"
+msgstr "Please draw your area on the map"
+
+msgid "Draw an area"
+msgstr "Draw an area"

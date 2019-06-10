@@ -2,6 +2,7 @@
  * Main app configuration file.
  **************************************************************************** */
 import Indicia from 'indicia';
+import DateHelp from 'helpers/date';
 
 const HOST =
   process.env.APP_INDICIA_API_HOST || 'http://www.butterfly-monitoring.net/';
@@ -58,7 +59,54 @@ const CONFIG = {
   indicia: {
     host: HOST,
     api_key: process.env.APP_INDICIA_API_KEY,
-    website_id: 23,
+    website_id: 120,
+    id: 291,
+    webForm: 'enter-app-record',
+    attrs: {
+      smp: {
+        location: {
+          values(location) {
+            return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
+              location.longitude
+            ).toFixed(7)}`;
+          },
+        },
+        device: {
+          id: 829,
+          values: {
+            iOS: 14317,
+            Android: 14318,
+          },
+        },
+        device_version: { id: 836 },
+        app_version: { id: 934 },
+
+        date: {
+          values(date) {
+            return DateHelp.print(date);
+          },
+          isValid: val => val && val.toString() !== 'Invalid Date',
+          type: 'date',
+          max: () => new Date(),
+        },
+
+        customSurveyStartTime: { id: 30 },
+        customSurveyEndime: { id: 31 },
+
+        area: { id: 933 },
+      },
+      occ: {
+        training: {
+          id: 'training',
+        },
+
+        taxon: {
+          values(taxon) {
+            return taxon.warehouse_id;
+          },
+        },
+      },
+    },
   },
 };
 

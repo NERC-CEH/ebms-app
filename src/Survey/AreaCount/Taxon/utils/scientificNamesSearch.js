@@ -41,13 +41,6 @@ function search(
   // check if hybrid eg. X Cupressocyparis
   if (!hybridRun && searchPhrase.match(/X\s.*/i)) {
     search(species, searchPhrase, results, maxResults, true, informalGroups);
-  } else if (hybridRun) {
-    // run with different first word
-    firstWord = helpers.normalizeFirstWord(searchPhrase);
-    firstWordRegexStr = helpers.getFirstWordRegexString(firstWord);
-    firstWordRegex = new RegExp(firstWordRegexStr, 'i');
-    otherWords = null;
-    otherWordsRegex = null;
   }
 
   // find first match in array
@@ -149,6 +142,23 @@ function search(
   return results;
 }
 
+const searchScientificSpeciesName = (
+  species,
+  searchPhrase,
+  results,
+  maxResults,
+  hybridRun,
+  informalGroups
+) =>
+  search(
+    species,
+    `. ${searchPhrase}`,
+    results,
+    maxResults,
+    hybridRun,
+    informalGroups
+  );
+
 function searchMulti(
   species,
   searchPhrase,
@@ -158,6 +168,18 @@ function searchMulti(
   informalGroups = []
 ) {
   search(species, searchPhrase, results, maxResults, hybridRun, informalGroups);
+
+  const isOneWord = searchPhrase.split(' ').length;
+  if (isOneWord) {
+    searchScientificSpeciesName(
+      species,
+      searchPhrase,
+      results,
+      maxResults,
+      hybridRun,
+      informalGroups
+    );
+  }
 
   const is5CharacterShortcut = searchPhrase.length === 5;
   if (is5CharacterShortcut && results.length < maxResults) {

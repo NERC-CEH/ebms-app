@@ -2,4 +2,32 @@
   ion-button {
     margin: 30px 0;
   }
+
+  #add {
+    width: 40%;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #list {
+    font-weight: bold;
+
+    .empty {
+      span {
+        margin: 0 auto;
+      }
+    }
+
+    ion-label {
+      margin-left: 8px;
+    }
+
+    .area-count-edit-count {
+      margin: 0;
+      max-width: 40px;
+      font-size: 1.3em;
+      border-right: 1px solid rgba(0,0,0,0.13);
+      padding-right: 8px;
+    }
+  }
 }

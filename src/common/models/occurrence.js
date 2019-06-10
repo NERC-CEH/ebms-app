@@ -1,5 +1,6 @@
 import Indicia from 'indicia';
 import { observable } from 'mobx';
+import CONFIG from 'config';
 import ImageModel from './image';
 
 export default Indicia.Occurrence.extend({
@@ -21,6 +22,8 @@ export default Indicia.Occurrence.extend({
       },
     };
   },
+
+  keys: CONFIG.indicia.occ, // warehouse attribute keys
 
   /**
    * Disable sort for mobx to keep the same refs.

@@ -236,7 +236,9 @@ msgstr "Rūšis"
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
-msgstr "Tam kad surastumėte rūšį greičiau, galite naudoti trumpinius. Pavyzdžiui, ieškant"
+msgstr ""
+"Tam kad surastumėte rūšį greičiau, galite naudoti trumpinius. Pavyzdžiui, "
+"ieškant"
 
 msgid "you can type in the search bar"
 msgstr "galite įvesti į paieškos lauką"
@@ -249,3 +251,30 @@ msgstr "Skaičius"
 
 msgid "Comment"
 msgstr "Komentaras"
+
+msgid "Draft"
+msgstr "Irašas"
+
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr "Rastas buvęs įrašas, ar norėtumėte jį tęsti?"
+
+msgid "Discard"
+msgstr "Atmesti"
+
+msgid "Continue"
+msgstr "Tęsti"
+
+msgid "Finish"
+msgstr "Užbaigti"
+
+msgid "minutes"
+msgstr "minutės"
+
+msgid "No species added"
+msgstr "Rūšių sąrašas tuščias"
+
+msgid "Please draw your area on the map"
+msgstr "Prašome apibrėžti vietovę žemėlapyje"
+
+msgid "Draw an area"
+msgstr "Pasirinkti vietovę"

@@ -20,29 +20,10 @@ describe('App Model', () => {
       'showedWelcome',
       'language',
       'country',
-      'locations',
-      'attrLocks',
-      'autosync',
-      'useGridRef',
-      'useGridMap',
-      'useExperiments',
       'useTraining',
-      'useGridNotifications',
-      'gridSquareUnit',
+      'useExperiments',
       'feedbackGiven',
-      'taxonGroupFilters',
-      'searchNamesOnly',
+      'areaCountDraftId',
     ]);
-
-    // should set the exact value checks in the modules requiring them
-    expect(appModel.get('showedWelcome')).to.be.equal(false);
-    expect(appModel.get('locations') instanceof Array).to.be.true;
-    expect(appModel.get('attrLocks'))
-      .to.be.an('object')
-      .and.has.all.keys('general', 'complex');
-    expect(appModel.get('autosync')).to.be.equal(true);
-    expect(appModel.get('useGridRef')).to.be.equal(true);
-    expect(appModel.get('useGridMap')).to.be.equal(true);
-    expect(appModel.get('gridSquareUnit')).to.be.equal('monad');
   });
 });

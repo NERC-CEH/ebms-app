@@ -84,7 +84,7 @@ Log('SavedSamples: fetching all samples.');
 // load all the samples from storage
 savedSamples.fetching = true;
 savedSamples.metadata.fetching = true; // for mobx hook only
-savedSamples
+savedSamples._init = savedSamples
   .fetch()
   .then(() => {
     Log('SavedSamples: fetching all samples done.');
@@ -94,8 +94,6 @@ savedSamples
 
     // because the reference is changed in the meanwhile
     savedSamples.models = observable(savedSamples.models);
-    window.s1 = savedSamples.models;
-    window.savedSamples = savedSamples;
     savedSamples.trigger('fetching:done');
   })
   .catch(err => {

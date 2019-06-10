@@ -1,8 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import appModel from 'app_model';
-import userModel from 'user_model';
 import savedSamples from 'saved_samples';
+import appModel from 'app_model';
 import Edit from './AreaCount/Edit';
 import EditOccurrence from './AreaCount/EditOccurrence';
 import Taxon from './AreaCount/Taxon';
@@ -27,11 +26,12 @@ const App = () => (
       exact
       render={props => <Taxon savedSamples={savedSamples} {...props} />}
     />
-
     <Route
       path="/survey/:id/edit"
       exact
-      render={props => <Edit savedSamples={savedSamples} {...props} />}
+      render={props => (
+        <Edit savedSamples={savedSamples} appModel={appModel} {...props} />
+      )}
     />
     <Route
       path="/survey/:id/edit/occ/:occId"

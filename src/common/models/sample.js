@@ -4,7 +4,7 @@
 /* eslint-disable react/no-this-in-sfc */
 import _ from 'lodash';
 import Indicia from 'indicia';
-import { observable } from 'mobx';
+import { observable, toJS } from 'mobx';
 import CONFIG from 'config';
 import userModel from 'user_model';
 import appModel from 'app_model';
@@ -34,7 +34,7 @@ let Sample = Indicia.Sample.extend({
 
   // warehouse attribute keys
   keys() {
-    return this.getSurvey().attrs.smp;
+    return CONFIG.indicia.attrs.smp;
   },
 
   /**
@@ -43,14 +43,13 @@ let Sample = Indicia.Sample.extend({
    */
   defaults() {
     return {
+      entered_sref_system: 4326, // lat long
       location: {
-        accuracy: null,
-        altitude: null,
-        gridref: null,
         latitude: null,
         longitude: null,
-        name: null,
         source: null,
+        shape: [],
+        area: null,
       },
     };
   },
@@ -60,13 +59,12 @@ let Sample = Indicia.Sample.extend({
     this.metadata = observable(this.metadata);
     this.remote = observable({ synchronising: null });
     this.media.models = observable(this.media.models);
+    this.occurrences.models = observable(this.occurrences.models);
 
     // for mobx to keep same refs
     this.media.models.add = (...args) =>
       Indicia.Collection.prototype.add.apply(this, [...args, { sort: false }]);
 
-    this.checkExpiredActivity(); // activities
-    this.listenTo(userModel, 'sync:activities:end', this.checkExpiredActivity);
     this.gpsExtensionInit();
   },
 
@@ -80,21 +78,47 @@ let Sample = Indicia.Sample.extend({
     this.media.add(mediaObj, { sort: false });
   },
 
-  validateRemote() {
-    const survey = this.getSurvey();
-    const verify = survey.verify.bind(this);
-    const [attributes, samples, occurrences] = verify(this.attributes);
+  validateRemote(attributes) {
+    const attrs = _.extend({}, this.attributes, attributes);
 
-    if (
-      !_.isEmpty(attributes) ||
-      !_.isEmpty(samples) ||
-      !_.isEmpty(occurrences)
-    ) {
-      return {
-        attributes,
-        samples,
+    const sample = {};
+    const occurrences = {};
+
+    // location
+    const location = attrs.location || {};
+    if (!location.latitude || !location.longitude) {
+      sample.location = 'missing';
+    }
+
+    // location area
+    if (!attrs.area) {
+      sample.area = "can't be blank";
+    }
+
+    // date
+    if (!attrs.date) {
+      sample.date = 'missing';
+    } else {
+      const date = new Date(attrs.date);
+      if (date === 'Invalid Date' || date > new Date()) {
+        sample.date = new Date(date) > new Date() ? 'future date' : 'invalid';
+      }
+    }
+
+    // occurrences
+    this.occurrences.each(occurrence => {
+      const errors = occurrence.validate(null, { remote: true });
+      if (errors) {
+        sample.occurrence = 'no species selected';
+      }
+    });
+
+    if (!_.isEmpty(sample) || !_.isEmpty(occurrences)) {
+      const errors = {
+        sample,
         occurrences,
       };
+      return errors;
     }
 
     return null;
@@ -104,13 +128,12 @@ let Sample = Indicia.Sample.extend({
    * Changes the plain survey key to survey specific metadata
    */
   onSend(submission, media) {
-    const surveyConfig = this.getSurvey();
     const newAttrs = {
-      survey_id: surveyConfig.id,
-      input_form: surveyConfig.webForm,
+      survey_id: CONFIG.indicia.id,
+      input_form: CONFIG.indicia.webForm,
     };
 
-    const smpAttrs = surveyConfig.attrs.smp;
+    const smpAttrs = this.keys();
     const updatedSubmission = Object.assign({}, submission, newAttrs);
     updatedSubmission.fields = Object.assign({}, updatedSubmission.fields, {
       [smpAttrs.device.id]: smpAttrs.device.values[Device.getPlatform()],
@@ -177,25 +200,10 @@ let Sample = Indicia.Sample.extend({
     return Indicia.Sample.prototype._syncRemote.apply(this, args);
   },
 
-  checkExpiredActivity() {
-    const activity = this.get('activity');
-    if (activity) {
-      const expired = userModel.hasActivityExpired(activity);
-      if (expired) {
-        const newActivity = userModel.getActivity(activity.id);
-        if (!newActivity) {
-          // the old activity is expired and removed
-          Log('Sample:Activity: removing exipired activity.');
-          this.unset('activity');
-          this.save();
-        } else {
-          // old activity has been updated
-          Log('Sample:Activity: updating exipired activity.');
-          this.set('activity', newActivity);
-          this.save();
-        }
-      }
-    }
+  toJSON() {
+    const json = Indicia.Sample.prototype.toJSON.apply(this);
+    json.attributes = toJS(json.attributes);
+    return json;
   },
 
   timeout() {

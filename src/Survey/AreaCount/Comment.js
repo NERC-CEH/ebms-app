@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  IonItem,
-  IonTextarea,
-  IonContent,
-} from '@ionic/react';
+import { IonItem, IonTextarea, IonContent } from '@ionic/react';
 import AppHeader from 'common/Components/Header';
 import { observer } from 'mobx-react';
 
@@ -40,10 +36,11 @@ class EditOccurrence extends Component {
         <IonContent id="area-count-occurrence-edit-comment">
           <IonItem>
             <IonTextarea
-              placeholder="Enter more information here..."
+              placeholder={t('Enter more information here...')}
               value={comment}
               onIonChange={this.onChange}
               debounce={200}
+              rows={8}
             />
           </IonItem>
         </IonContent>

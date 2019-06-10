@@ -42,7 +42,16 @@ class Controller extends React.Component {
     const sampleID = match.params.id;
     const sample = savedSamples.get(sampleID);
     this.sample = sample;
+
+    this.recordedTaxa = this.sample.occurrences.models.map(
+      occ => occ.get('taxon').warehouse_id
+    );
   }
+
+  filterOutRecordedTaxa = searchResults =>
+    searchResults.filter(
+      result => !this.recordedTaxa.includes(result.warehouse_id)
+    );
 
   async onInputKeystroke(e) {
     let searchPhrase = e.target.value;
@@ -60,8 +69,10 @@ class Controller extends React.Component {
     // search
     const searchResults = await SpeciesSearchEngine.search(searchPhrase);
 
+    const uniqueSearchResults = this.filterOutRecordedTaxa(searchResults);
+
     this.setState({
-      searchResults,
+      searchResults: uniqueSearchResults,
       searchPhrase,
     });
   }

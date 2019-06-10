@@ -1,0 +1,43 @@
+.leaflet-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #5d5d5d;
+
+  .sr-only {
+    display: none;
+  }
+
+  .leaflet-draw-toolbar {
+    float: right;
+  }
+
+  .leaflet-error-draw-tooltip {
+    display: none;
+  }
+
+  .leaflet-draw-draw-polygon {
+    width: 120px !important;
+    background-image: none !important;
+    background-color: var(--ion-color-secondary);
+    color: white;
+    .sr-only {
+      display: block;
+    }
+  }
+}
+
+#area-edit-toolbar {
+  --background: var(--ion-color-primary-shade);
+  --min-height: 33px;
+  ion-title {
+    font-size: 0.8em;
+  }
+}
+
+html[mode='ios'] {
+  #area-edit-toolbar {
+    ion-title {
+      padding: 0;
+    }
+  }
+}
