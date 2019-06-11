@@ -83,7 +83,7 @@ const helpers = {
       // get values to compare
       if (wordCount >= 0) {
         // common name from pointer
-        searchPhrase = searchPhrase.split(' ')[0];
+        [searchPhrase] = searchPhrase.split(' ');
         let p = searchArray[index];
 
         value = helpers.getCommonName(species, p);

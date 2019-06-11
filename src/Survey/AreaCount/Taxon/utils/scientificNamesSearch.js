@@ -24,12 +24,12 @@ function search(
   const searchWords = searchPhrase.split(' ');
 
   // prepare first word regex
-  let firstWord = helpers.normalizeFirstWord(searchWords[0]);
-  let firstWordRegexStr = helpers.getFirstWordRegexString(firstWord);
-  let firstWordRegex = new RegExp(firstWordRegexStr, 'i');
+  const firstWord = helpers.normalizeFirstWord(searchWords[0]);
+  const firstWordRegexStr = helpers.getFirstWordRegexString(firstWord);
+  const firstWordRegex = new RegExp(firstWordRegexStr, 'i');
 
   // prepare other words regex
-  let otherWords = searchWords.splice(1).join(' ');
+  const otherWords = searchWords.splice(1).join(' ');
   let otherWordsRegex;
   if (otherWords) {
     otherWordsRegex = new RegExp(
@@ -60,21 +60,11 @@ function search(
   ) {
     const speciesEntry = species[speciesArrayIndex];
 
-    // check if species is in informal groups to search
-    if (
-      informalGroups.length &&
-      informalGroups.indexOf(speciesEntry[GROUP_INDEX]) < 0
-    ) {
-      // skip this taxa because not in the searched informal groups
-      speciesArrayIndex++;
-      continue; // eslint-disable-line
-    }
-
     // check if matches
     if (firstWordRegex.test(speciesEntry[SCI_NAME_INDEX])) {
       // find species array
       let speciesArray;
-      for (let j = 0, length = speciesEntry.length; j < length; j++) {
+      for (let j = 0, { length } = speciesEntry; j < length; j++) {
         if (speciesEntry[j] instanceof Array) {
           speciesArray = speciesEntry[j];
         }
@@ -97,7 +87,7 @@ function search(
       if (speciesArray) {
         // go through all species
         for (
-          let speciesIndex = 0, length = speciesArray.length;
+          let speciesIndex = 0, { length } = speciesArray;
           speciesIndex < length && results.length < maxResults;
           speciesIndex++
         ) {

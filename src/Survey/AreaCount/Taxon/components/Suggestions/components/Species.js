@@ -49,6 +49,7 @@ const Species = ({ species, searchPhrase, onSelect }) => {
 
   // const group = informalGroups[species.group];
 
+  /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   return (
     <li
       className="table-view-cell"
@@ -57,6 +58,7 @@ const Species = ({ species, searchPhrase, onSelect }) => {
       <div className="taxon">{prettyName}</div>
     </li>
   );
+  /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 };
 
 Species.propTypes = {
