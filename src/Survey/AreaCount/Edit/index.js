@@ -177,7 +177,7 @@ class AreaCount extends Component {
                 color="danger"
                 onClick={() => deleteOccurrence(occ)}
               >
-                Delete
+                {t('Delete')}
               </IonItemOption>
             </IonItemOptions>
           </IonItemSliding>
@@ -230,9 +230,7 @@ class AreaCount extends Component {
           <IonList lines="full">
             <IonItem href={`#survey/${sampleID}/edit/area`} detail>
               <IonLabel>{t('Area')}</IonLabel>
-              <IonLabel slot="end">
-                {areaPretty}
-              </IonLabel>
+              <IonLabel slot="end">{areaPretty}</IonLabel>
             </IonItem>
             <IonItem href={`#survey/${sampleID}/edit/time`} detail>
               <IonLabel>{t('Time (duration)')}</IonLabel>

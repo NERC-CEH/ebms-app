@@ -13,6 +13,12 @@
     font-weight: bold;
 
     .empty {
+      width: 80%;
+      max-width: 250px;
+      margin: 50px auto 0;
+      --border-width: 0;
+      --background: var(--ion-color-light);
+      --color: var(--ion-color-light-contrast);
       span {
         margin: 0 auto;
       }
@@ -26,7 +32,7 @@
       margin: 0;
       max-width: 40px;
       font-size: 1.3em;
-      border-right: 1px solid rgba(0,0,0,0.13);
+      border-right: 1px solid rgba(0, 0, 0, 0.13);
       padding-right: 8px;
     }
   }

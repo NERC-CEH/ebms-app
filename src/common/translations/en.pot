@@ -262,3 +262,30 @@ msgstr "Please draw your area on the map"
 
 msgid "Draw an area"
 msgstr "Draw an area"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Surveys"
+msgstr "Surveys"
+
+msgid "Reports"
+msgstr "Reports"
+
+msgid "Are you sure you want to delete this survey?"
+msgstr "Are you sure you want to delete this survey?"
+
+msgid "No finished surveys"
+msgstr "No finished surveys"
+
+msgid "Selected area"
+msgstr "Selected area"
+
+msgid "Use survey create time"
+msgstr "Use survey create time"
+
+msgid "Use survey finish time"
+msgstr "Use survey finish time"
+
+msgid "species"
+msgstr "species"

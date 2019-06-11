@@ -1,7 +1,17 @@
 #user-report {
+  ion-segment {
+    margin-bottom: 3px;
+  }
+
   .empty {
-    display: block;
-    margin: 20px;
-    text-align: center;
+    width: 80%;
+    max-width: 250px;
+    margin: 100px auto 0;
+    --border-width: 0;
+    --background: var(--ion-color-light);
+    --color: var(--ion-color-light-contrast);
+    span {
+      margin: 0 auto;
+    }
   }
 }
