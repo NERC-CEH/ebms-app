@@ -12,6 +12,7 @@ const getDefaultAttrs = () => ({
   useTraining: false,
   useExperiments: false,
   feedbackGiven: false,
+  areaSurveyListSortedByTime: false,
   areaCountDraftId: null,
 });
 

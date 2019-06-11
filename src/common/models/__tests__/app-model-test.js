@@ -23,6 +23,7 @@ describe('App Model', () => {
       'useTraining',
       'useExperiments',
       'feedbackGiven',
+      'areaSurveyListSortedByTime',
       'areaCountDraftId',
     ]);
   });

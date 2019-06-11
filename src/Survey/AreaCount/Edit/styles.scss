@@ -1,12 +1,20 @@
 #area-count-edit {
-  ion-button {
-    margin: 30px 0;
+  ion-list {
+    margin-bottom: 0;
   }
 
   #add {
     width: 40%;
+    margin: 30px 0 10px;
     margin-left: 50%;
     transform: translate(-50%, 0);
+  }
+
+  #species-list-sort {
+    text-align: end;
+    ion-button {
+      margin-right: 5px;
+    }
   }
 
   #list {
@@ -21,7 +29,7 @@
       --color: var(--ion-color-light-contrast);
       span {
         margin: 0 auto;
-        font-weight: 100;
+        font-weight: 200;
       }
     }
 

@@ -105,15 +105,14 @@ class AreaCount extends Component {
       if (draftID) {
         continueDraftSurvey = await showDraftAlert();
       }
-      let sample;
       if (continueDraftSurvey) {
-        sample = savedSamples.get(draftID);
+        this.sample = savedSamples.get(draftID);
       } else {
-        sample = await createNewSample(savedSamples);
-        appModel.set('areaCountDraftId', sample.cid);
+        this.sample = await createNewSample(savedSamples);
+        appModel.set('areaCountDraftId', this.sample.cid);
         await appModel.save();
       }
-      history.replace(`/survey/${sample.cid}/edit`);
+      history.replace(`/survey/${this.sample.cid}/edit`);
     }
   }
 
@@ -125,11 +124,10 @@ class AreaCount extends Component {
   }
 
   onSubmit = async () => {
-    const { match, savedSamples, appModel, history } = this.props;
-    const sampleID = match.params.id;
-    const sample = savedSamples.get(sampleID);
-    sample.metadata.saved = true;
-    await sample.save();
+    const { appModel, history } = this.props;
+
+    this.sample.metadata.saved = true;
+    await this.sample.save();
     appModel.set('areaCountDraftId', null);
     await appModel.save();
 
@@ -137,6 +135,15 @@ class AreaCount extends Component {
 
     // TODO:
     // sample.save(null, { remote: true })
+  };
+
+  toggleSpeciesSort = () => {
+    const { appModel } = this.props;
+    const areaSurveyListSortedByTime = appModel.get(
+      'areaSurveyListSortedByTime'
+    );
+    appModel.set('areaSurveyListSortedByTime', !areaSurveyListSortedByTime);
+    appModel.save();
   };
 
   getSpeciesList(sample) {
@@ -149,40 +156,63 @@ class AreaCount extends Component {
         </IonList>
       );
     }
+    const { appModel } = this.props;
+    const areaSurveyListSortedByTime = appModel.get(
+      'areaSurveyListSortedByTime'
+    );
 
-    const occurrences = [...sample.occurrences.models].sort((occ1, occ2) => {
+    const speciesNameSort = (occ1, occ2) => {
       const taxon1 = occ1.get('taxon').scientific_name;
       const taxon2 = occ2.get('taxon').scientific_name;
       return taxon1.localeCompare(taxon2);
-    });
+    };
+
+    const speciesOccAddedTimeSort = (occ1, occ2) => {
+      const date1 = new Date(occ1.metadata.updated_on);
+      const date2 = new Date(occ2.metadata.updated_on);
+      return date2.getTime() - date1.getTime();
+    };
+    const sort = areaSurveyListSortedByTime
+      ? speciesOccAddedTimeSort
+      : speciesNameSort;
+
+    const occurrences = [...sample.occurrences.models].sort(sort);
 
     return (
-      <IonList id="list" lines="full">
-        {occurrences.map(occ => (
-          <IonItemSliding key={occ.cid}>
-            <IonItem detail>
-              <IonButton
-                class="area-count-edit-count"
-                onClick={() => increaseCount(occ)}
-                fill="clear"
-              >
-                {occ.get('count')}
-              </IonButton>
-              <IonLabel onClick={() => this.navigateToOccurrence(occ)}>
-                {occ.get('taxon').scientific_name}
-              </IonLabel>
-            </IonItem>
-            <IonItemOptions side="end">
-              <IonItemOption
-                color="danger"
-                onClick={() => deleteOccurrence(occ)}
-              >
-                {t('Delete')}
-              </IonItemOption>
-            </IonItemOptions>
-          </IonItemSliding>
-        ))}
-      </IonList>
+      <>
+        <div id="species-list-sort">
+          <IonButton fill="clear" size="small" onClick={this.toggleSpeciesSort}>
+            <IonIcon name="md-funnel" />
+          </IonButton>
+        </div>
+
+        <IonList id="list" lines="full">
+          {occurrences.map(occ => (
+            <IonItemSliding key={occ.cid}>
+              <IonItem detail>
+                <IonButton
+                  class="area-count-edit-count"
+                  onClick={() => increaseCount(occ)}
+                  fill="clear"
+                >
+                  {occ.get('count')}
+                </IonButton>
+                <IonLabel onClick={() => this.navigateToOccurrence(occ)}>
+                  {occ.get('taxon').scientific_name}
+                </IonLabel>
+              </IonItem>
+              <IonItemOptions side="end">
+                <IonItemOption
+                  color="danger"
+                  onClick={() => deleteOccurrence(occ)}
+                >
+                  {t('Delete')}
+                </IonItemOption>
+              </IonItemOptions>
+            </IonItemSliding>
+          ))}
+        </IonList>
+      </>
     );
   }
 
@@ -234,11 +264,7 @@ class AreaCount extends Component {
             </IonItem>
             <IonItem href={`#survey/${sampleID}/edit/time`} detail>
               <IonLabel>{t('Time (duration)')}</IonLabel>
-              <IonLabel slot="end">
-                {time} 
-                {' '}
-                {t('minutes')}
-              </IonLabel>
+              <IonLabel slot="end">{`${time} ${t('minutes')}`}</IonLabel>
             </IonItem>
 
             <IonButton
