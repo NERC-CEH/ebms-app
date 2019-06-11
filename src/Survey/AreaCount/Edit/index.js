@@ -111,6 +111,7 @@ class AreaCount extends Component {
   async componentDidMount() {
     const { savedSamples, match, history, appModel } = this.props;
     const sampleID = match.params.id;
+
     if (sampleID === 'new') {
       const draftID = appModel.get('areaCountDraftId');
       let continueDraftSurvey = false;
@@ -125,7 +126,10 @@ class AreaCount extends Component {
         await appModel.save();
       }
       history.replace(`/survey/${this.sample.cid}/edit`);
+      return;
     }
+
+    this.sample = savedSamples.get(sampleID);
   }
 
   navigateToOccurrence(occ) {
