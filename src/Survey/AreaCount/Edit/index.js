@@ -87,6 +87,18 @@ async function showDraftAlert() {
   });
 }
 
+const speciesNameSort = (occ1, occ2) => {
+  const taxon1 = occ1.get('taxon').scientific_name;
+  const taxon2 = occ2.get('taxon').scientific_name;
+  return taxon1.localeCompare(taxon2);
+};
+
+const speciesOccAddedTimeSort = (occ1, occ2) => {
+  const date1 = new Date(occ1.metadata.updated_on);
+  const date2 = new Date(occ2.metadata.updated_on);
+  return date2.getTime() - date1.getTime();
+};
+
 @observer
 class AreaCount extends Component {
   static propTypes = {
@@ -161,17 +173,6 @@ class AreaCount extends Component {
       'areaSurveyListSortedByTime'
     );
 
-    const speciesNameSort = (occ1, occ2) => {
-      const taxon1 = occ1.get('taxon').scientific_name;
-      const taxon2 = occ2.get('taxon').scientific_name;
-      return taxon1.localeCompare(taxon2);
-    };
-
-    const speciesOccAddedTimeSort = (occ1, occ2) => {
-      const date1 = new Date(occ1.metadata.updated_on);
-      const date2 = new Date(occ2.metadata.updated_on);
-      return date2.getTime() - date1.getTime();
-    };
     const sort = areaSurveyListSortedByTime
       ? speciesOccAddedTimeSort
       : speciesNameSort;
