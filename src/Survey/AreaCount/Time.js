@@ -91,7 +91,7 @@ class AreaAttr extends Component {
     const { customSurveyStartTime, customSurveyEndTime } = this.state;
     return (
       <>
-        <AppHeader title={t('Time')} />
+        <AppHeader title={t('Duration')} />
         <IonContent>
           <IonList lines="full">
             <IonItem>

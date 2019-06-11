@@ -218,14 +218,11 @@ msgstr "Teritorijos Monitoringas"
 msgid "Area"
 msgstr "Vietovė"
 
-msgid "Time (duration)"
-msgstr "Laikas (trukmė)"
-
 msgid "Add"
 msgstr "Pridėti"
 
-msgid "Time"
-msgstr "Laikas"
+msgid "Duration"
+msgstr "Trukmė"
 
 msgid "Species"
 msgstr "Rūšis"

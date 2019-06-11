@@ -206,14 +206,11 @@ msgstr "Area Count"
 msgid "Area"
 msgstr "Area"
 
-msgid "Time (duration)"
-msgstr "Time (duration)"
-
 msgid "Add"
 msgstr "Add"
 
-msgid "Time"
-msgstr "Time"
+msgid "Duration"
+msgstr "Duration"
 
 msgid "Species"
 msgstr "Species"

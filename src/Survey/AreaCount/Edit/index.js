@@ -255,7 +255,7 @@ class AreaCount extends Component {
     const time = timeDiffInMinutes(startTime, endTime);
 
     const finishButton = (
-      <IonButton onClick={this.onSubmit}>{t('Finish')}</IonButton>
+      <IonButton fill="solid" onClick={this.onSubmit}>{t('Finish')}</IonButton>
     );
 
     return (
@@ -264,11 +264,13 @@ class AreaCount extends Component {
         <IonContent id="area-count-edit">
           <IonList lines="full">
             <IonItem href={`#survey/${sampleID}/edit/area`} detail>
+              <IonIcon name="map" slot="start" />
               <IonLabel>{t('Area')}</IonLabel>
               <IonLabel slot="end">{areaPretty}</IonLabel>
             </IonItem>
             <IonItem href={`#survey/${sampleID}/edit/time`} detail>
-              <IonLabel>{t('Time (duration)')}</IonLabel>
+              <IonIcon name="time" slot="start" />
+              <IonLabel>{t('Duration')}</IonLabel>
               <IonLabel slot="end">{`${time} ${t('minutes')}`}</IonLabel>
             </IonItem>
 
