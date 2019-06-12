@@ -77,6 +77,7 @@ async function showDraftAlert() {
       message: `${t(
         'Previous survey draft exists, would you like to continue it?'
       )}`,
+      backdropDismiss: false,
       buttons: [
         {
           text: t('Discard'),
