@@ -109,7 +109,7 @@ msgid "Training Mode"
 msgstr "Mokymosi Režimas"
 
 msgid "Experimental Features"
-msgstr "Bandomosios funkcijos"
+msgstr "Bandomosios Funkcijos"
 
 msgid "Welcome"
 msgstr "Sveiki"
