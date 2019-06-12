@@ -14,7 +14,21 @@ async function init() {
   await appModel._init;
   await userModel._init;
   await savedSamples._init;
+
+  // TODO: Update.run()
   
+  if (window.cordova) {
+    document.addEventListener(
+      'deviceready',
+      () => {
+        if (navigator && navigator.splashscreen) {
+          navigator.splashscreen.hide();
+        }
+      },
+      false
+    );
+  }
+
   ReactDOM.render(<App />, document.getElementById('root'));
 }
 

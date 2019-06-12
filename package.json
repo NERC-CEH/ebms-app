@@ -8,7 +8,7 @@
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "build": "NODE_ENV=production grunt",
-    "build:update": "NODE_ENV=production grunt udpate",
+    "build:update": "NODE_ENV=production grunt update",
     "build:dev": "grunt",
     "build:species": "cd src/common/data && node species.js",
     "build:dev:update": "grunt update",
