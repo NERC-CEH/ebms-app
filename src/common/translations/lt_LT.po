@@ -109,7 +109,7 @@ msgid "Training Mode"
 msgstr "Mokymosi Režimas"
 
 msgid "Experimental Features"
-msgstr "Bandomosios Funkcijos"
+msgstr "Bandomosios funkcijos"
 
 msgid "Welcome"
 msgstr "Sveiki"
@@ -302,3 +302,18 @@ msgstr "Naudoti įrašo užbaigimo laiką"
 
 msgid "species"
 msgstr "rūšys"
+
+msgid "Done"
+msgstr "Baigti"
+
+msgid "Time's up!"
+msgstr "Laikas baigėsi!"
+
+msgid "Incomplete"
+msgstr "Neužbaigta"
+
+msgid "The survey is not complete yet."
+msgstr "Įrašui trūksta informacijos."
+
+msgid "Area is not valid."
+msgstr "Nepasirinkta vietovė."

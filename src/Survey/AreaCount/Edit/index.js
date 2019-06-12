@@ -16,22 +16,42 @@ import Sample from 'sample';
 import { observer } from 'mobx-react';
 import Log from 'helpers/log';
 import alert from 'common/helpers/alert';
+import Countdown, { zeroPad } from 'react-countdown-now';
 import './styles.scss';
 
+const DEFAULT_SURVEY_TIME = 15 * 60 * 1000;
+
 async function createNewSample(savedSamples) {
-  // general survey
   const sample = new Sample();
 
   // sample.startGPS();
 
-  await sample.save();
+  await sample.save({
+    // this can't be done in defaults
+    surveyStartTime: sample.metadata.created_on,
+  });
+
   // add to main collection
   savedSamples.add(sample);
   return sample;
 }
 
-const timeDiffInMinutes = (startDate, endDate) =>
-  Math.floor((endDate.getTime() - startDate.getTime()) / 1000 / 60);
+function CountdownRenderer({ minutes, seconds, completed }) {
+  if (completed) {
+    return t(`Time's up!`);
+  }
+  return (
+    <span id="countdown" className={minutes < 3 ? 'warn' : ''}>
+      {`${zeroPad(minutes)}:${zeroPad(seconds)}`}
+    </span>
+  );
+}
+
+CountdownRenderer.propTypes = {
+  minutes: PropTypes.number.isRequired,
+  seconds: PropTypes.number.isRequired,
+  completed: PropTypes.bool.isRequired,
+};
 
 function increaseCount(occ) {
   const count = occ.get('count');
@@ -62,8 +82,7 @@ function deleteOccurrence(occ) {
 }
 
 function showValidationAlert(errors) {
-  window.errors = errors;
-  const errorsPretty = errors.errors.reduce((agg, err) => `${agg} ${err}`, '');
+  const errorsPretty = errors.errors.reduce((agg, err) => `${agg} ${t(err)}`, '');
   alert({
     header: t('Incomplete'),
     message: `${t('The survey is not complete yet.')} ${errorsPretty}`,
@@ -256,19 +275,9 @@ class AreaCount extends Component {
     // TODO: check if submitted
     const { area } = sample.get('location') || {};
     const areaPretty = area && `${area.toLocaleString()} m²`;
-    let startTime = new Date(sample.metadata.created_on);
-    const customSurveyStartTime = sample.get('customSurveyStartTime');
-    if (customSurveyStartTime) {
-      startTime = new Date(customSurveyStartTime);
-    }
-
-    let endTime = new Date();
-    const customSurveyEndTime = sample.get('customSurveyEndTime');
-    if (customSurveyEndTime) {
-      endTime = new Date(customSurveyEndTime);
-    }
-
-    const time = timeDiffInMinutes(startTime, endTime);
+    
+    const startTime = new Date(sample.get('surveyStartTime'));
+    const countdown = startTime.getTime() + DEFAULT_SURVEY_TIME;
 
     const finishButton = (
       <IonButton fill="solid" onClick={this.onSubmit}>
@@ -289,7 +298,9 @@ class AreaCount extends Component {
             <IonItem href={`#survey/${sampleID}/edit/time`} detail>
               <IonIcon name="time" slot="start" />
               <IonLabel>{t('Duration')}</IonLabel>
-              <IonLabel slot="end">{`${time} ${t('minutes')}`}</IonLabel>
+              <IonLabel slot="end">
+                <Countdown date={countdown} renderer={CountdownRenderer} />
+              </IonLabel>
             </IonItem>
 
             <IonButton

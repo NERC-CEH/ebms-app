@@ -68,7 +68,7 @@ button.alert-button.primary {
   font-weight: 700;
 }
 
-ion-toolbar {
+html[mode='ios'] ion-toolbar {
   ion-button {
     color: var(--ion-color-primary-contrast);
   }

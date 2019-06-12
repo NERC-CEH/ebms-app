@@ -3,6 +3,15 @@
     margin-bottom: 0;
   }
 
+  #countdown {
+    width: 50px;
+    display: inline-block;
+    text-align: left;
+    &.warn {
+      color: var(--ion-color-warning);
+    }
+  }
+
   #add {
     width: 40%;
     margin: 30px 0 10px;

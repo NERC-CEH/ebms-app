@@ -32,7 +32,7 @@ const schema = Yup.object().shape({
     return true;
   }),
 
-  date: Yup.date().required('Date is missing'),
+  surveyStartTime: Yup.date().required('Date is missing'),
   location_type: Yup.string()
     .matches(/latlon/)
     .required('Location type is missing'),
@@ -67,6 +67,7 @@ let Sample = Indicia.Sample.extend({
    */
   defaults() {
     return {
+      surveyStartTime: null,
       entered_sref_system: 4326, // lat long
       location: null,
     };

@@ -286,3 +286,18 @@ msgstr "Use survey finish time"
 
 msgid "species"
 msgstr "species"
+
+msgid "Done"
+msgstr "Done"
+
+msgid "Time's up!"
+msgstr "Time's up!"
+
+msgid "Incomplete"
+msgstr "Incomplete"
+
+msgid "The survey is not complete yet."
+msgstr "The survey is not complete yet."
+
+msgid "Area is not valid."
+msgstr "Area is not valid."

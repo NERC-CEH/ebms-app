@@ -58,6 +58,7 @@
     "prop-types": "15.6.2",
     "raven-js": "3.22.1",
     "react": "16.8.6",
+    "react-countdown-now": "^2.1.0",
     "react-dom": "16.8.6",
     "react-leaflet": "^2.3.0",
     "react-router-dom": "^5.0.0",
