@@ -61,6 +61,15 @@ function deleteOccurrence(occ) {
   });
 }
 
+function showValidationAlert(errors) {
+  window.errors = errors;
+  const errorsPretty = errors.errors.reduce((agg, err) => `${agg} ${err}`, '');
+  alert({
+    header: t('Incomplete'),
+    message: `${t('The survey is not complete yet.')} ${errorsPretty}`,
+  });
+}
+
 async function showDraftAlert() {
   return new Promise(resolve => {
     alert({
@@ -143,6 +152,12 @@ class AreaCount extends Component {
     const { appModel, history } = this.props;
 
     this.sample.metadata.saved = true;
+    const errors = await this.sample.validateRemote();
+    if (errors) {
+      showValidationAlert(errors);
+      return;
+    }
+
     await this.sample.save();
     appModel.set('areaCountDraftId', null);
     await appModel.save();
@@ -238,7 +253,7 @@ class AreaCount extends Component {
     }
 
     // TODO: check if submitted
-    const { area } = sample.get('location');
+    const { area } = sample.get('location') || {};
     const areaPretty = area && `${area.toLocaleString()} m²`;
     let startTime = new Date(sample.metadata.created_on);
     const customSurveyStartTime = sample.get('customSurveyStartTime');
@@ -255,7 +270,9 @@ class AreaCount extends Component {
     const time = timeDiffInMinutes(startTime, endTime);
 
     const finishButton = (
-      <IonButton fill="solid" onClick={this.onSubmit}>{t('Finish')}</IonButton>
+      <IonButton fill="solid" onClick={this.onSubmit}>
+        {t('Finish')}
+      </IonButton>
     );
 
     return (

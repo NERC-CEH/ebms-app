@@ -73,15 +73,14 @@ class AreaAttr extends Component {
     });
     map.addControl(drawControl);
 
-    const location = this.sample.get('location');
-    const savedShape = location.shape;
-    if (savedShape.length) {
-      const positions = savedShape.map(coordinates =>
+    const location = this.sample.get('location') || {};
+    if (location.shape) {
+      const positions = location.shape.map(coordinates =>
         [...coordinates].reverse()
       );
       const polygon = L.polygon(positions, { color: DEFAULT_POLYGON_COLOR });
       polygon.addTo(drawnItems);
-      this.zoomToShape(savedShape);
+      this.zoomToShape(location.shape);
     } else {
       map.panTo(new L.LatLng(...DEFAULT_POSITION));
     }
@@ -124,23 +123,19 @@ class AreaAttr extends Component {
         longitude,
         area,
         shape,
+        source: 'map',
       },
     });
   };
 
   deleteShape = () => {
     this.sample.save({
-      location: {
-        shape: [],
-        area: null,
-        latitude: null,
-        longitude: null,
-      },
+      location: null,
     });
   };
 
   render() {
-    const location = this.sample.get('location');
+    const location = this.sample.get('location') || {};
     const { area } = location;
 
     let areaPretty;

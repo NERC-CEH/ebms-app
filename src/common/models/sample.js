@@ -2,7 +2,7 @@
  * Indicia Sample.
  **************************************************************************** */
 /* eslint-disable react/no-this-in-sfc */
-import _ from 'lodash';
+import * as Yup from 'yup';
 import Indicia from 'indicia';
 import { observable, toJS } from 'mobx';
 import CONFIG from 'config';
@@ -13,6 +13,30 @@ import Log from 'helpers/log';
 import Device from 'helpers/device';
 import store from '../store';
 import GPSExtension from './sample_gps_ext';
+
+const locationSchema = Yup.object().shape({
+  latitude: Yup.number().required(),
+  longitude: Yup.number().required(),
+  area: Yup.number().required(),
+  shape: Yup.number().required(),
+  source: Yup.string().required(),
+});
+
+const schema = Yup.object().shape({
+  location: Yup.mixed().test('area', 'Area is not valid.', val => {
+    try {
+      locationSchema.validateSync(val);
+    } catch (e) {
+      return false;
+    }
+    return true;
+  }),
+
+  date: Yup.date().required('Date is missing'),
+  location_type: Yup.string()
+    .matches(/latlon/)
+    .required('Location type is missing'),
+});
 
 // eslint-disable-next-line
 let Sample = Indicia.Sample.extend({
@@ -44,13 +68,7 @@ let Sample = Indicia.Sample.extend({
   defaults() {
     return {
       entered_sref_system: 4326, // lat long
-      location: {
-        latitude: null,
-        longitude: null,
-        source: null,
-        shape: [],
-        area: null,
-      },
+      location: null,
     };
   },
 
@@ -78,49 +96,12 @@ let Sample = Indicia.Sample.extend({
     this.media.add(mediaObj, { sort: false });
   },
 
-  validateRemote(attributes) {
-    const attrs = _.extend({}, this.attributes, attributes);
-
-    const sample = {};
-    const occurrences = {};
-
-    // location
-    const location = attrs.location || {};
-    if (!location.latitude || !location.longitude) {
-      sample.location = 'missing';
+  validateRemote() {
+    try {
+      schema.validateSync(this.attributes);
+    } catch (e) {
+      return e;
     }
-
-    // location area
-    if (!attrs.area) {
-      sample.area = "can't be blank";
-    }
-
-    // date
-    if (!attrs.date) {
-      sample.date = 'missing';
-    } else {
-      const date = new Date(attrs.date);
-      if (date === 'Invalid Date' || date > new Date()) {
-        sample.date = new Date(date) > new Date() ? 'future date' : 'invalid';
-      }
-    }
-
-    // occurrences
-    this.occurrences.each(occurrence => {
-      const errors = occurrence.validate(null, { remote: true });
-      if (errors) {
-        sample.occurrence = 'no species selected';
-      }
-    });
-
-    if (!_.isEmpty(sample) || !_.isEmpty(occurrences)) {
-      const errors = {
-        sample,
-        occurrences,
-      };
-      return errors;
-    }
-
     return null;
   },
 

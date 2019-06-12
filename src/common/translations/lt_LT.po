@@ -97,16 +97,16 @@ msgid "Records"
 msgstr "Įrašai"
 
 msgid "Submit All"
-msgstr "Išsiųsti visus"
+msgstr "Išsiųsti Visus"
 
 msgid "Remove All Saved"
-msgstr "Ištrinti visus išsaugotus"
+msgstr "Ištrinti Visus Išsaugotus"
 
 msgid "Application"
 msgstr "Aplikacija"
 
 msgid "Training Mode"
-msgstr "Mokymosi režimas"
+msgstr "Mokymosi Režimas"
 
 msgid "Experimental Features"
 msgstr "Bandomosios funkcijos"
