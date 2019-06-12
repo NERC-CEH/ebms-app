@@ -59,13 +59,17 @@ class Component extends React.Component {
                     type={showPassword ? 'text' : 'password'}
                     {...props}
                   >
-                    <IonIcon
-                      name={showPassword ? 'eye' : 'eye-off'}
-                      faint
-                      size="small"
+                    <IonButton
                       slot="end"
                       onClick={this.togglePassword}
-                    />
+                      fill="clear"
+                    >
+                      <IonIcon
+                        name={showPassword ? 'eye' : 'eye-off'}
+                        faint
+                        size="small"
+                      />
+                    </IonButton>
                   </InputWithValidation>
                   <ToggleWithValidation
                     name="terms"
