@@ -31,6 +31,11 @@ function SelectLanguage({ onSelect }) {
             <IonLabel>Lietuvių</IonLabel>
             <IonRadio value="lt_LT" />
           </IonItem>
+
+          <IonItem>
+            <IonLabel>Español</IonLabel>
+            <IonRadio value="es_ES" />
+          </IonItem>
         </IonRadioGroup>
       </IonList>
     </IonPage>
@@ -55,8 +60,13 @@ function SelectCountry({ onSelect }) {
           </IonItem>
 
           <IonItem>
-            <IonLabel>{t('Lietuva')}</IonLabel>
+            <IonLabel>{t('Lithuania')}</IonLabel>
             <IonRadio value="LT" />
+          </IonItem>
+
+          <IonItem>
+            <IonLabel>{t('Spain')}</IonLabel>
+            <IonRadio value="ES" />
           </IonItem>
         </IonRadioGroup>
       </IonList>

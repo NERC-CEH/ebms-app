@@ -14,8 +14,11 @@ msgstr "Select your country"
 msgid "United Kingdom"
 msgstr "United Kingdom"
 
-msgid "Lietuva"
+msgid "Lithuania"
 msgstr "Lithuania"
+
+msgid "Spain"
+msgstr "Spain"
 
 msgid "Skip"
 msgstr "Skip"

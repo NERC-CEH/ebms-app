@@ -19,8 +19,11 @@ msgstr "Pasirinkite šalį"
 msgid "United Kingdom"
 msgstr "Jungtinė Karalystė"
 
-msgid "Lietuva"
+msgid "Lithuania"
 msgstr "Lietuva"
+
+msgid "Spain"
+msgstr "Ispanija"
 
 msgid "Skip"
 msgstr "Praleisti"
