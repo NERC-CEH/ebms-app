@@ -304,3 +304,21 @@ msgstr "The survey is not complete yet."
 
 msgid "Area is not valid."
 msgstr "Area is not valid."
+
+msgid "Choose a method to upload a photo"
+msgstr "Choose a method to upload a photo"
+
+msgid "Gallery"
+msgstr "Gallery"
+
+msgid "Camera"
+msgstr "Camera"
+
+msgid "Are you sure you want to remove this photo from the sample?"
+msgstr "Are you sure you want to remove this photo from the sample?"
+
+msgid "Note: it will remain in the gallery."
+msgstr "Note: it will remain in the gallery."
+
+msgid "No photo has been added"
+msgstr "No photo has been added"

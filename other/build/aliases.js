@@ -1,7 +1,7 @@
 module.exports = grunt => ({
   default: ['init', 'webpack:main'],
 
-  init: ['init:validate', 'copy:main', 'vendor'],
+  init: ['init:validate', 'copy:main'],
 
   'init:validate': () => {
     if (process.env.APP_FORCE) {
@@ -31,12 +31,6 @@ module.exports = grunt => ({
       }
     });
   },
-
-  vendor: [
-    'replace:leaflet',
-    'replace:fontello_fonts',
-    'replace:photoswipe',
-  ],
 
   update: ['webpack:main'],
 

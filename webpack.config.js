@@ -40,14 +40,22 @@ const config = {
       occurrence: 'common/models/occurrence',
       app_model: 'common/models/app_model',
       user_model: 'common/models/user_model',
-
-      // vendor
-      'photoswipe-lib': 'photoswipe/dist/photoswipe',
-      'photoswipe-ui-default': 'photoswipe/dist/photoswipe-ui-default',
     },
   },
   module: {
     rules: [
+      {
+        test: /.*photoswipe.*$/,
+        loader: 'string-replace-loader',
+        options: {
+          multiple: [
+            {
+              search: 'url("./default-skin.svg")',
+              replace: 'url("./images/default-skin.svg")',
+            },
+          ],
+        },
+      },
       { test: /\.tpl/, loader: 'ejs-loader?variable=obj' },
       {
         test: /^((?!data\.).)*\.js$/,

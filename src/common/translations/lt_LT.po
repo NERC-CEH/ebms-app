@@ -320,3 +320,21 @@ msgstr "Įrašui trūksta informacijos."
 
 msgid "Area is not valid."
 msgstr "Nepasirinkta vietovė."
+
+msgid "Choose a method to upload a photo"
+msgstr "Pasirinkite metodą pridėti nuotraukai"
+
+msgid "Gallery"
+msgstr "Galerija"
+
+msgid "Camera"
+msgstr "Kamera"
+
+msgid "Are you sure you want to remove this photo from the sample?"
+msgstr "Ar jūs tikrai norite ištrinti šią nuotrauką?"
+
+msgid "Note: it will remain in the gallery."
+msgstr "Pastaba: Ištrynus nuotrauka liks telefono galerijoje."
+
+msgid "No photo has been added"
+msgstr "Nėra pridėtų nuotraukų"

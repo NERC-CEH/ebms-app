@@ -9,6 +9,7 @@ import {
 } from '@ionic/react';
 import AppHeader from 'common/Components/Header';
 import { observer } from 'mobx-react';
+import Footer from './Footer';
 import './styles.scss';
 
 @observer
@@ -86,6 +87,7 @@ class EditOccurrence extends Component {
             <IonLabel slot="end">{comment}</IonLabel>
           </IonItem>
         </IonContent>
+        <Footer sample={this.sample} />
       </>
     );
   }

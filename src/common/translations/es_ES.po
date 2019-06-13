@@ -322,3 +322,21 @@ msgstr "La encuesta aún no está completa."
 
 msgid "Area is not valid."
 msgstr "El área no es válida."
+
+msgid "Choose a method to upload a photo"
+msgstr ""
+
+msgid "Gallery"
+msgstr ""
+
+msgid "Camera"
+msgstr ""
+
+msgid "Are you sure you want to remove this photo from the sample?"
+msgstr ""
+
+msgid "Note: it will remain in the gallery."
+msgstr ""
+
+msgid "No photo has been added"
+msgstr ""
