@@ -1,9 +1,10 @@
 import React from 'react';
-import Log from 'helpers/log';
 import { observer } from 'mobx-react';
-import appModel from 'app_model';
+import PropTypes from 'prop-types';
 import Toggle from 'common/Components/Toggle';
 import { IonContent, IonPopover, IonIcon } from '@ionic/react';
+import alert from 'common/helpers/alert';
+import Log from 'helpers/log';
 import AppHeader from 'common/Components/Header';
 
 // function deleteAllSamples(savedSamples) {
@@ -85,52 +86,33 @@ import AppHeader from 'common/Components/Header';
 //   });
 // }
 
-// function resetApp(savedSamples, appModel, userModel) {
-//   Log('Settings:Menu:Controller: resetting the application!', 'w');
-//   Analytics.trackEvent('Settings', 'reset app');
-
-//   appModel.resetDefaults();
-//   userModel.logOut();
-//   return savedSamples.resetDefaults();
-// }
-
-// function resetDialog(savedSamples, appModel, userModel) {
-//   radio.trigger('app:dialog', {
-//     title: 'Reset',
-//     class: 'error',
-//     body: `${t(
-//       'Are you sure you want to reset the application to its initial state?'
-//     )}<p><b>${t('This will wipe all the locally stored app data!')}</b></p>`,
-//     buttons: [
-//       {
-//         title: 'Cancel',
-//         fill: 'clear',
-//         onClick() {
-//           radio.trigger('app:dialog:hide');
-//         },
-//       },
-//       {
-//         title: 'Reset',
-//         color: 'danger',
-//         onClick() {
-//           // delete all
-//           resetApp(savedSamples, appModel, userModel).then(() => {
-//             radio.trigger('app:dialog', {
-//               title: 'Done!',
-//               timeout: 1000,
-//             });
-//           });
-//         },
-//       },
-//     ],
-//   });
-// }
+function resetDialog(resetApp) {
+  alert({
+    header: t('Reset'),
+    message: `${t(
+      'Are you sure you want to reset the application to its initial state?'
+    )}<p><b>${t('This will wipe all the locally stored app data!')}</b></p>`,
+    buttons: [
+      {
+        text: t('Cancel'),
+        role: 'cancel',
+        cssClass: 'primary',
+      },
+      {
+        text: t('Reset'),
+        cssClass: 'secondary',
+        handler: resetApp,
+      },
+    ],
+  });
+}
 
 @observer
 class Component extends React.Component {
   state = { showPopover: false };
 
   onToggle = (setting, checked) => {
+    const { appModel } = this.props;
     Log('Settings:Menu:Controller: setting toggled.');
     appModel.set(setting, checked);
     appModel.save();
@@ -141,8 +123,8 @@ class Component extends React.Component {
   };
 
   render() {
+    const { resetApp, appModel } = this.props;
     const useTraining = appModel.get('useTraining');
-    const useExperiments = appModel.get('useExperiments');
 
     const ToDoPopover = (
       <IonPopover
@@ -190,19 +172,7 @@ class Component extends React.Component {
                 checked={useTraining}
               />
             </ion-item>
-            <ion-item>
-              <IonIcon name="flame" size="small" slot="start" />
-              <ion-label>{t('Experimental Features')}</ion-label>
-              <Toggle
-                onToggle={checked => this.onToggle('useExperiments', checked)}
-                checked={useExperiments}
-              />
-            </ion-item>
-            <ion-item
-              id="app-reset-btn"
-              onClick={() => this.setShowPopover(true)}
-              // onClick={() => resetDialog(savedSamples, appModel, userModel)}
-            >
+            <ion-item id="app-reset-btn" onClick={() => resetDialog(resetApp)}>
               <IonIcon name="undo" size="small" slot="start" />
               {t('Reset')}
             </ion-item>
@@ -213,6 +183,9 @@ class Component extends React.Component {
   }
 }
 
-Component.propTypes = {};
+Component.propTypes = {
+  resetApp: PropTypes.func.isRequired,
+  appModel: PropTypes.object.isRequired,
+};
 
 export default Component;

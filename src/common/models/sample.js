@@ -17,7 +17,7 @@ import GPSExtension from './sample_gps_ext';
 const locationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
   longitude: Yup.number().required(),
-  area: Yup.number().required(),
+  area: Yup.number().required(), // TODO: max 20,000,000 m²
   shape: Yup.number().required(),
   source: Yup.string().required(),
 });

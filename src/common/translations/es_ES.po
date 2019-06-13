@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Selecciona tu país"
+msgstr "Selecciona tu pais"
 
 msgid "United Kingdom"
 msgstr "Reino Unido"
@@ -23,10 +23,10 @@ msgid "Lithuania"
 msgstr "Lituania"
 
 msgid "Spain"
-msgstr ""
+msgstr "España"
 
 msgid "Skip"
-msgstr ""
+msgstr "Omitir"
 
 msgid "Next"
 msgstr "Siguiente"
@@ -35,19 +35,19 @@ msgid "Get Started"
 msgstr "Empezar"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr "Por favor inicie sesión con su cuenta de eBMS o regístrese"
+msgstr "Por favor inicie sesión con su cuenta de eBMS o regístrese."
 
 msgid "Username or email"
-msgstr "Usuario o email"
+msgstr "Nombre de usuario o correo electrónico"
 
 msgid "Password"
 msgstr "Contraseña"
 
 msgid "Sign in"
-msgstr "Iniciar sesión "
+msgstr "Registrarse"
 
 msgid "Register"
-msgstr "Registrarse"
+msgstr "Registro"
 
 msgid "Forgot password?"
 msgstr "¿Se te olvidó tu contraseña?"
@@ -62,7 +62,7 @@ msgid "Info"
 msgstr "Información"
 
 msgid "About"
-msgstr "Sobre"
+msgstr "Acerca de"
 
 msgid "Help"
 msgstr "Ayuda"
@@ -71,46 +71,48 @@ msgid "Privacy Policy"
 msgstr "Política de privacidad"
 
 msgid "Credits"
-msgstr ""
+msgstr "Creditos"
 
 msgid "Email"
-msgstr "Email"
+msgstr "Correo Electrónico"
 
 msgid "First Name"
-msgstr "Nombre"
+msgstr "Nombre de pila"
 
 msgid "Surname"
-msgstr "Apellido(s)"
+msgstr "Apellido"
 
 msgid "I agree to"
-msgstr "Estoy de acuerdo"
+msgstr "estoy de acuerdo con"
 
 msgid "Terms and Conditions"
-msgstr "Términos y condiciones"
+msgstr "Términos y Condiciones"
 
 msgid "Enter your username or email address to request a password reset"
-msgstr "Introduce tu usuario o dirección email para solicitar una contraseña"
+msgstr ""
+"Ingrese su nombre de usuario o dirección de correo electrónico para "
+"solicitar un restablecimiento de contraseña"
 
 msgid "Reset"
-msgstr "Restaurar"
+msgstr "Reiniciar"
 
 msgid "Records"
-msgstr ""
+msgstr "Archivos"
 
 msgid "Submit All"
 msgstr "Enviar todo"
 
 msgid "Remove All Saved"
-msgstr "Eliminar todo lo guardado"
+msgstr "Eliminar todos los guardados"
 
 msgid "Application"
-msgstr ""
+msgstr "Solicitud"
 
 msgid "Training Mode"
-msgstr ""
+msgstr "Modo de entrenamiento"
 
 msgid "Experimental Features"
-msgstr ""
+msgstr "Características experimentales"
 
 msgid "Welcome"
 msgstr "Bienvenido"
@@ -119,28 +121,28 @@ msgid "Lets start!"
 msgstr "¡Empecemos!"
 
 msgid "TOP RECORDERS"
-msgstr ""
+msgstr "MEJORES REGISTRADORES"
 
 msgid "TOP SPECIES"
-msgstr ""
+msgstr "ESPECIES SUPERIORES"
 
 msgid "Back"
-msgstr "Volver"
+msgstr "Espalda"
 
 msgid "Menu"
 msgstr "Menú"
 
 msgid "App"
-msgstr ""
+msgstr "Aplicación"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
-"Estamos muy agradecidos a todas las personas que ayudaron a crear esta "
+"Estamos muy agradecidos por todas las personas que ayudaron a crear esta "
 "aplicación:"
 
 msgid "Home"
-msgstr "Home"
+msgstr "Casa"
 
 msgid "Guide"
 msgstr "Guía"
@@ -152,40 +154,40 @@ msgid "Offline"
 msgstr "Desconectado"
 
 msgid "Sorry, looks like you're offline."
-msgstr "Lo siento, parece que estás desconectado"
+msgstr "Lo siento, parece que estás desconectado."
 
 msgid "OK"
-msgstr "Ok"
+msgstr "DE ACUERDO"
 
 msgid "Sorry"
 msgstr "Lo siento"
 
 msgid "Please wait..."
-msgstr "Por favor espere..."
+msgstr "Por favor espera..."
 
 msgid "name is a required field"
-msgstr "Nombre es un campo obligatorio"
+msgstr "nombre es un campo obligatorio"
 
 msgid "password is a required field"
-msgstr "Contraseña es un campo obligatorio"
+msgstr "La contraseña es un campo requerido"
 
 msgid "Login error:"
 msgstr "Error de inicio de sesión:"
 
 msgid "Failed to fetch"
-msgstr ""
+msgstr "Fallo en recuperar"
 
 msgid "Incorrect password or email."
-msgstr "Contraseña incorrecta o correo electrónico"
+msgstr "Contraseña incorrecta o correo electrónico."
 
 msgid "Logout"
-msgstr ""
+msgstr "Cerrar sesión"
 
 msgid "Are you sure you want to logout?"
-msgstr ""
+msgstr "¿Estás seguro de que quieres cerrar sesión?"
 
 msgid "This will delete all the records on this device."
-msgstr "Esto eliminará todos los registros en este dispositivo"
+msgstr "Esto borrará todos los registros en este dispositivo."
 
 msgid "Cancel"
 msgstr "Cancelar"
@@ -197,124 +199,126 @@ msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Antes de enviar algún registro, por favor revise su correo electrónico y "
-"haga clic en el enlace de verificación."
+"Antes de enviar cualquier registro, revise su correo electrónico y haga clic"
+" en el enlace de verificación."
 
 msgid "OK, got it"
-msgstr ""
+msgstr "Ok, lo tengo"
 
 msgid "email is a required field"
-msgstr ""
+msgstr "correo electrónico es un campo obligatorio"
 
 msgid "firstname is a required field"
-msgstr ""
+msgstr "El primer nombre es un campo obligatorio"
 
 msgid "secondname is a required field"
-msgstr ""
+msgstr "El segundo nombre es un campo obligatorio"
 
 msgid "must accept terms and conditions"
-msgstr ""
+msgstr "debe aceptar términos y condiciones"
 
 msgid "Area Count"
-msgstr ""
+msgstr "Área de Conteo"
 
 msgid "Area"
-msgstr ""
+msgstr "Zona"
 
 msgid "Add"
-msgstr ""
+msgstr "Añadir"
 
 msgid "Duration"
-msgstr ""
+msgstr "Duración"
 
 msgid "Species"
-msgstr ""
+msgstr "Especies"
 
 msgid "Species name"
-msgstr ""
+msgstr "Nombre de la especie"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
+"Para una búsqueda más rápida de los taxones puede utilizar diferentes "
+"atajos. Por ejemplo, para encontrar"
 
 msgid "you can type in the search bar"
-msgstr ""
+msgstr "puedes escribir en la barra de búsqueda"
 
 msgid "Edit Occurrence"
-msgstr ""
+msgstr "Editar suceso"
 
 msgid "Count"
-msgstr ""
+msgstr "Contar"
 
 msgid "Comment"
-msgstr ""
+msgstr "Comentario"
 
 msgid "Draft"
-msgstr ""
+msgstr "Borrador"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr ""
+msgstr "Existe un borrador de encuesta anterior, ¿te gustaría continuarlo?"
 
 msgid "Discard"
-msgstr ""
+msgstr "Descartar"
 
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 msgid "Finish"
-msgstr ""
+msgstr "Terminar"
 
 msgid "minutes"
-msgstr ""
+msgstr "minutos"
 
 msgid "No species added"
-msgstr ""
+msgstr "Sin especies añadidas"
 
 msgid "Please draw your area on the map"
-msgstr ""
+msgstr "Por favor dibuje su área en el mapa"
 
 msgid "Draw an area"
-msgstr ""
+msgstr "Dibujar un area"
 
 msgid "Delete"
-msgstr ""
+msgstr "Borrar"
 
 msgid "Surveys"
-msgstr ""
+msgstr "Encuestas"
 
 msgid "Reports"
-msgstr ""
+msgstr "Informes"
 
 msgid "Are you sure you want to delete this survey?"
-msgstr ""
+msgstr "¿Seguro que quieres borrar esta encuesta?"
 
 msgid "No finished surveys"
-msgstr ""
+msgstr "No hay encuestas terminadas"
 
 msgid "Selected area"
-msgstr ""
+msgstr "Area seleccionada"
 
 msgid "Use survey create time"
-msgstr ""
+msgstr "Utilice el tiempo para crear la encuesta"
 
 msgid "Use survey finish time"
-msgstr ""
+msgstr "Utilice el tiempo de finalización de la encuesta"
 
 msgid "species"
-msgstr ""
+msgstr "especies"
 
 msgid "Done"
-msgstr ""
+msgstr "Hecho"
 
 msgid "Time's up!"
-msgstr ""
+msgstr "¡Se acabó el tiempo!"
 
 msgid "Incomplete"
-msgstr ""
+msgstr "Incompleto"
 
 msgid "The survey is not complete yet."
-msgstr ""
+msgstr "La encuesta aún no está completa."
 
 msgid "Area is not valid."
-msgstr ""
+msgstr "El área no es válida."

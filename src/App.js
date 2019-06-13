@@ -19,7 +19,7 @@ import Home from './Home';
 import Info from './Info';
 import SplashScreenRequired from './Info/SplashScreenRequired';
 import User from './User';
-import Settings from './Settings';
+import Settings from './Settings/Menu';
 import Survey from './Survey';
 import LanguageCountrySelectRequired from './Settings/LanguageCountrySelectRequired';
 import '@ionic/core/css/core.css';

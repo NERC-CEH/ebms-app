@@ -15,13 +15,11 @@ describe('App Model', () => {
 
   it('has default values', () => {
     const appModel = new AppModel();
-    console.log(Object.keys(appModel.attrs));
     expect(appModel.attrs).to.have.all.keys([
       'showedWelcome',
       'language',
       'country',
       'useTraining',
-      'useExperiments',
       'feedbackGiven',
       'areaSurveyListSortedByTime',
       'areaCountDraftId',
