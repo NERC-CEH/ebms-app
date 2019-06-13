@@ -84,8 +84,8 @@ function deleteOccurrence(occ) {
 function showValidationAlert(errors) {
   const errorsPretty = errors.errors.reduce((agg, err) => `${agg} ${t(err)}`, '');
   alert({
-    header: t('Incomplete'),
-    message: `${t('The survey is not complete yet.')} ${errorsPretty}`,
+    header: t('Survey incomplete'),
+    message: `${errorsPretty}`,
   });
 }
 

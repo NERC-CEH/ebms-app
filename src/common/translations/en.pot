@@ -296,14 +296,17 @@ msgstr "Done"
 msgid "Time's up!"
 msgstr "Time's up!"
 
-msgid "Incomplete"
-msgstr "Incomplete"
+msgid "Survey incomplete"
+msgstr "Survey incomplete"
 
 msgid "The survey is not complete yet."
 msgstr "The survey is not complete yet."
 
-msgid "Area is not valid."
-msgstr "Area is not valid."
+msgid "Please select a smaller area."
+msgstr "Please select a smaller area."
+
+msgid "Please add survey area information."
+msgstr "Please add survey area information."
 
 msgid "Choose a method to upload a photo"
 msgstr "Choose a method to upload a photo"

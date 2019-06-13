@@ -17,18 +17,19 @@ import GPSExtension from './sample_gps_ext';
 const locationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
   longitude: Yup.number().required(),
-  area: Yup.number().required(), // TODO: max 20,000,000 m²
+  area: Yup.number()
+    .max(20000000, 'Please select a smaller area.')
+    .required(),
   shape: Yup.number().required(),
   source: Yup.string().required(),
 });
 
 const schema = Yup.object().shape({
-  location: Yup.mixed().test('area', 'Area is not valid.', val => {
-    try {
-      locationSchema.validateSync(val);
-    } catch (e) {
+  location: Yup.mixed().test('area', 'Please add survey area information.', val => {
+    if (!val) {
       return false;
     }
+    locationSchema.validateSync(val);
     return true;
   }),
 

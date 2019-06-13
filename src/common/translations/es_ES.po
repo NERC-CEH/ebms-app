@@ -314,14 +314,17 @@ msgstr "Hecho"
 msgid "Time's up!"
 msgstr "¡Se acabó el tiempo!"
 
-msgid "Incomplete"
-msgstr "Incompleto"
+msgid "Survey incomplete"
+msgstr ""
 
 msgid "The survey is not complete yet."
 msgstr "La encuesta aún no está completa."
 
-msgid "Area is not valid."
-msgstr "El área no es válida."
+msgid "Please select a smaller area."
+msgstr ""
+
+msgid "Please add survey area information."
+msgstr ""
 
 msgid "Choose a method to upload a photo"
 msgstr ""

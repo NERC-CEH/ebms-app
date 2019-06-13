@@ -312,14 +312,17 @@ msgstr "Baigti"
 msgid "Time's up!"
 msgstr "Laikas baigėsi!"
 
-msgid "Incomplete"
+msgid "Survey incomplete"
 msgstr "Neužbaigta"
 
 msgid "The survey is not complete yet."
 msgstr "Įrašui trūksta informacijos."
 
-msgid "Area is not valid."
-msgstr "Nepasirinkta vietovė."
+msgid "Please select a smaller area."
+msgstr "Prašome pasirinkti mažesnę vietovę."
+
+msgid "Please add survey area information."
+msgstr "Prašome pasirinkti vietovę."
 
 msgid "Choose a method to upload a photo"
 msgstr "Pasirinkite metodą pridėti nuotraukai"
