@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { IonTitle, IonToolbar } from '@ionic/react';
+import { IonTitle, IonToolbar, IonIcon } from '@ionic/react';
 import CONFIG from 'config';
 import AppHeader from 'common/Components/Header';
 import L from 'leaflet';
+import GPS from 'helpers/GPS';
 import { Map, TileLayer } from 'react-leaflet';
+import LeafletControl from 'react-leaflet-control';
 import 'leaflet-draw';
 import { observer } from 'mobx-react';
 import geojsonArea from '@mapbox/geojson-area';
@@ -24,13 +26,16 @@ class AreaAttr extends Component {
     savedSamples: PropTypes.object.isRequired,
   };
 
+  state = {
+    locating: false,
+  };
+
   constructor(props) {
     super(props);
     const { match, savedSamples } = props;
 
     this.sample = savedSamples.get(match.params.id);
 
-    window.sample = this.sample;
     this.map = React.createRef();
   }
 
@@ -95,6 +100,45 @@ class AreaAttr extends Component {
     map.on(L.Draw.Event.DELETED, this.deleteShape);
   }
 
+  onGeolocate = async () => {
+    if (this.state.locating) {
+      this.stopGPS();
+      return;
+    }
+    const location = await this.startGPS();
+    const map = this.map.current.leafletElement;
+    map.setView(new L.LatLng(location.latitude, location.longitude), 15);
+  };
+
+  startGPS = () => {
+    return new Promise((resolve, reject) => {
+      const options = {
+        accuracyLimit: 160,
+
+        onUpdate: () => {},
+
+        callback: (error, location) => {
+          this.stopGPS();
+
+          if (error) {
+            this.stopGPS();
+            reject(error);
+            return;
+          }
+          resolve(location);
+        },
+      };
+
+      const locatingJobId = GPS.start(options);
+      this.setState({ locating: locatingJobId });
+    });
+  };
+
+  stopGPS = () => {
+    GPS.stop(this.state.locating);
+    this.setState({ locating: false });
+  };
+
   zoomToShape(savedShape) {
     const map = this.map.current.leafletElement;
     const positions = savedShape.map(coordinates => [...coordinates].reverse());
@@ -106,6 +150,10 @@ class AreaAttr extends Component {
     map.off(L.Draw.Event.CREATED, this._onCreatedEventListener);
     map.off(L.Draw.Event.EDITED, this.setEditedShape);
     map.off(L.Draw.Event.DELETED, this.deleteShape);
+
+    if (this.state.locating) {
+      this.stopGPS();
+    }
   }
 
   setEditedShape = e => e.layers.eachLayer(layer => this.setShape({ layer }));
@@ -159,6 +207,14 @@ class AreaAttr extends Component {
               url="https://api.mapbox.com/styles/v1/cehapps/cipqvo0c0000jcknge1z28ejp/tiles/256/{z}/{x}/{y}?access_token={accessToken}"
               accessToken={CONFIG.map.mapbox_api_key}
             />
+            <LeafletControl position="topleft">
+              <button
+                className={`geolocate-btn ${this.state.locating ? 'spin' : ''}`}
+                onClick={this.onGeolocate}
+              >
+                <IonIcon name="md-locate" size="large" />
+              </button>
+            </LeafletControl>
           </Map>
         </div>
       </>
