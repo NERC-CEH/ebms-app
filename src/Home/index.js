@@ -10,7 +10,7 @@ import {
 } from '@ionic/react';
 import { Route } from 'react-router-dom';
 import savedSamples from 'saved_samples';
-// import PrivateRoute from 'common/Components/PrivateRoute';
+import PrivateRoute from 'common/Components/PrivateRoute';
 import Report from './Report';
 import About from '../Info/About';
 import User from '../User/Report';
@@ -22,11 +22,15 @@ const Component = () => {
       <IonPage className="app-home-page">
         <IonTabs>
           <IonRouterOutlet>
-            <Route path="/:tab(home/report)" component={Report} exact />
+            <Route path="/:tab(home/report)" render={Report} exact />
             <Route path="/:tab(home/about)" component={About} exact />
             <Route
               path="/:tab(home/user-report)"
-              render={() => <User savedSamples={savedSamples} />}
+              render={() => (
+                <PrivateRoute
+                  component={() => <User savedSamples={savedSamples} />}
+                />
+              )}
               exact
             />
           </IonRouterOutlet>

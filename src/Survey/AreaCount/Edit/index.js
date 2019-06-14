@@ -132,13 +132,13 @@ class Container extends React.Component {
   onSubmit = async () => {
     const { appModel, history } = this.props;
     const { sample } = this.state;
-    sample.metadata.saved = true;
     const errors = await sample.validateRemote();
     if (errors) {
       showValidationAlert(errors);
       return;
     }
-
+    
+    sample.metadata.saved = true;
     await sample.save();
     appModel.set('areaCountDraftId', null);
     await appModel.save();

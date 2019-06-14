@@ -33,7 +33,7 @@ const Controller = observer(props => {
   function logOut() {
     Log('Info:Menu: logging out.');
     showLogoutConfirmationDialog(() => {
-      appModel.resetDefaults();
+      appModel.set('areaCountDraftId', null).save();
       userModel.logOut();
       return savedSamples.resetDefaults();
     });

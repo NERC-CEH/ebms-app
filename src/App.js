@@ -15,6 +15,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { IonApp, IonSplitPane, IonPage } from '@ionic/react';
+import PrivateRoute from 'common/Components/PrivateRoute';
 import Home from './Home';
 import Info from './Info';
 import SplashScreenRequired from './Info/SplashScreenRequired';
@@ -38,7 +39,10 @@ const App = () => (
                   <Route path="/info" component={Info} />
                   <Route path="/user" component={User} />
                   <Route path="/settings" component={Settings} />
-                  <Route path="/survey" component={Survey} />
+                  <Route
+                    path="/survey"
+                    render={() => <PrivateRoute component={Survey} />}
+                  />
                   <Route
                     exact
                     path="/"
