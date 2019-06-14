@@ -333,3 +333,6 @@ msgid "Incorrect password or email.
 "
 msgstr "Incorrect password or email.
 "
+
+msgid "email is not valid"
+msgstr "email is not valid"

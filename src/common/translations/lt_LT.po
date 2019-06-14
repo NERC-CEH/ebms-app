@@ -347,3 +347,6 @@ msgstr "Nepavyko prisiregistruoti:"
 
 msgid "Incorrect password or email"
 msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
+
+msgid "email is not valid"
+msgstr "negalimas e-paštas"

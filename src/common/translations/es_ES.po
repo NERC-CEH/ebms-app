@@ -349,3 +349,6 @@ msgstr ""
 
 msgid "Incorrect password or email"
 msgstr ""
+
+msgid "email is not valid"
+msgstr ""

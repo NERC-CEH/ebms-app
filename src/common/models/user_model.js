@@ -37,7 +37,7 @@ class UserModel {
 
   registerSchema = Yup.object().shape({
     email: Yup.string()
-      .email()
+      .email('email is not valid')
       .required(),
     firstname: Yup.string().required(),
     secondname: Yup.string().required(),
