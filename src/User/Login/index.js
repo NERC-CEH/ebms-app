@@ -7,7 +7,8 @@ import CONFIG from 'config';
 import alert from 'common/helpers/alert';
 import loader from 'common/helpers/loader';
 import makeRequest from 'common/helpers/makeRequest';
-import Login from './Login';
+import AppHeader from 'common/Components/Header';
+import Main from './Main';
 
 const schema = Yup.object().shape({
   name: Yup.string().required(),
@@ -86,7 +87,12 @@ export default function LoginContainer({ userModel, onSuccess }) {
     loader.hide();
   }
 
-  return <Login schema={schema} onSubmit={onLogin} />;
+  return (
+    <>
+      <AppHeader title={t('Login')} />
+      <Main schema={schema} onSubmit={onLogin} />
+    </>
+  );
 }
 
 LoginContainer.propTypes = {

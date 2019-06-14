@@ -7,7 +7,8 @@ import CONFIG from 'config';
 import alert from 'common/helpers/alert';
 import loader from 'common/helpers/loader';
 import makeRequest from 'common/helpers/makeRequest';
-import Register from './Register';
+import AppHeader from 'common/Components/Header';
+import Main from './Main';
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -41,7 +42,7 @@ async function register(details) {
     headers: {
       authorization: `Basic ${userAuth}`,
       'x-api-key': CONFIG.indicia.api_key,
-      "content-type": "plain/text",
+      'content-type': 'plain/text',
     },
     body: JSON.stringify({ data: details }),
   };
@@ -114,7 +115,12 @@ export default function RegisterContainer({ userModel }) {
     loader.hide();
   }
 
-  return <Register schema={schema} onSubmit={onRegister} />;
+  return (
+    <>
+      <AppHeader title={t('Register')} />
+      <Main schema={schema} onSubmit={onRegister} />
+    </>
+  );
 }
 
 RegisterContainer.propTypes = {
