@@ -3,7 +3,8 @@ import Log from 'helpers/log';
 import savedSamples from 'saved_samples';
 import appModel from 'app_model';
 import userModel from 'user_model';
-import Menu from './Menu';
+import AppHeader from 'common/Components/Header';
+import Main from './Main';
 
 function resetApp() {
   Log('Settings:Menu:Controller: resetting the application!', 'w');
@@ -13,7 +14,12 @@ function resetApp() {
 }
 
 const Container = ({ ...props }) => {
-  return <Menu resetApp={resetApp} {...props} appModel={appModel} />;
+  return (
+    <>
+      <AppHeader title={t('Settings')} />
+      <Main resetApp={resetApp} {...props} appModel={appModel} />
+    </>
+  );
 };
 
 Container.propTypes = {};

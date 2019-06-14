@@ -5,7 +5,6 @@ import Toggle from 'common/Components/Toggle';
 import { IonContent, IonPopover, IonIcon } from '@ionic/react';
 import alert from 'common/helpers/alert';
 import Log from 'helpers/log';
-import AppHeader from 'common/Components/Header';
 
 // function deleteAllSamples(savedSamples) {
 //   const body = `${t(
@@ -142,7 +141,6 @@ class Component extends React.Component {
     return (
       <>
         {ToDoPopover}
-        <AppHeader title={t('Settings')} />
         <IonContent>
           <ion-list lines="full">
             <ion-item-divider>{t('Records')}</ion-item-divider>
