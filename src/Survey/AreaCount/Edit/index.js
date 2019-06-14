@@ -149,7 +149,7 @@ class Container extends React.Component {
     // sample.save(null, { remote: true })
   };
 
-  navigateToOccurrence(occ) {
+  navigateToOccurrence = (occ) => {
     const { match, history } = this.props;
     const sampleID = match.params.id;
 
