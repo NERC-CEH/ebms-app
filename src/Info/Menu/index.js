@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import Log from 'helpers/log';
 import alert from 'common/helpers/alert';
-import Menu from './Menu';
+import AppHeader from 'common/Components/Header';
+import Main from './Main';
 
 function showLogoutConfirmationDialog(callback) {
   alert({
@@ -40,12 +41,15 @@ const Controller = observer(props => {
 
   const isLoggedIn = userModel.hasLogIn();
   return (
-    <Menu
-      user={userModel.attrs}
-      isLoggedIn={isLoggedIn}
-      logOut={logOut}
-      {...restProps}
-    />
+    <>
+      <AppHeader title={t('Menu')} />
+      <Main
+        user={userModel.attrs}
+        isLoggedIn={isLoggedIn}
+        logOut={logOut}
+        {...restProps}
+      />
+    </>
   );
 });
 
