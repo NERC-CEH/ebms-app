@@ -44,6 +44,11 @@ async function onLogin(userModel, details, onSuccess) {
 }
 
 export default function LoginContainer({ userModel, onSuccess }) {
+  if (userModel.hasLogIn()) {
+    window.history.back();
+    return null;
+  }
+
   return (
     <>
       <AppHeader title={t('Login')} />
