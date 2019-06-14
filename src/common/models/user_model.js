@@ -5,6 +5,9 @@ import Analytics from 'helpers/analytics';
 import Log from 'helpers/log';
 import { observable, set as setMobXAttrs } from 'mobx';
 import { getStore } from 'common/store';
+import makeRequest from 'common/helpers/makeRequest';
+import * as Yup from 'yup';
+import CONFIG from 'config';
 
 const getDefaultAttrs = () => ({
   isLoggedIn: false,
@@ -18,6 +21,42 @@ const getDefaultAttrs = () => ({
 
 class UserModel {
   @observable attrs = getDefaultAttrs();
+
+  loginSchema = Yup.object().shape({
+    name: Yup.string().required(),
+    password: Yup.string().required(),
+  });
+
+  loginSchemaBackend = Yup.object().shape({
+    id: Yup.number().required(),
+    email: Yup.string()
+      .email()
+      .required(),
+    name: Yup.string().required(),
+  });
+
+  registerSchema = Yup.object().shape({
+    email: Yup.string()
+      .email()
+      .required(),
+    firstname: Yup.string().required(),
+    secondname: Yup.string().required(),
+    password: Yup.string().required(),
+    terms: Yup.boolean()
+      .oneOf([true], 'must accept terms and conditions')
+      .required(),
+  });
+
+  registerSchemaBackend = Yup.object().shape({
+    id: Yup.number().required(),
+    warehouse_id: Yup.number().required(),
+    email: Yup.string()
+      .email()
+      .required(),
+    name: Yup.string().required(),
+    firstname: Yup.string().required(),
+    secondname: Yup.string().required(),
+  });
 
   constructor() {
     Log('UserModel: initializing');
@@ -65,13 +104,64 @@ class UserModel {
     return this.save();
   }
 
-  /**
-   * Sets the app login state of the user account.
-   * Saves the user account details into storage for permanent availability.
-   *
-   * @param user User object or empty object
-   */
-  logIn(user) {
+  async logIn(details) {
+    Log('User: logging in.');
+
+    const userAuth = btoa(`${details.name}:${details.password}`);
+    const url = CONFIG.users.url + encodeURIComponent(details.name);
+    const options = {
+      headers: {
+        authorization: `Basic ${userAuth}`,
+        'x-api-key': CONFIG.indicia.api_key,
+        'content-type': 'application/json',
+      },
+    };
+
+    let res;
+    try {
+      res = await makeRequest(url, options, CONFIG.users.timeout);
+      const isValidResponse = await this.loginSchemaBackend.isValid(res.data);
+      if (!isValidResponse) {
+        throw new Error('invalid backend response.');
+      }
+    } catch (e) {
+      throw new Error(`${t('Login error:')} ${t(e.message)}`);
+    }
+
+    const user = { ...res.data, ...{ password: details.password } };
+    this._logIn(user);
+  }
+
+  async register(details) {
+    Log('User: registering.');
+    const userAuth = btoa(`${details.name}:${details.password}`);
+    const options = {
+      method: 'post',
+      mode: 'cors',
+      headers: {
+        authorization: `Basic ${userAuth}`,
+        'x-api-key': CONFIG.indicia.api_key,
+        'content-type': 'plain/text',
+      },
+      body: JSON.stringify({ data: details }),
+    };
+
+    let res;
+    try {
+      res = await makeRequest(CONFIG.users.url, options, CONFIG.users.timeout);
+      const isValidResponse = await this.registerSchemaBackend.isValid(res);
+      if (!isValidResponse) {
+        throw new Error('invalid backend response.');
+      }
+    } catch (e) {
+      throw new Error(`${t('Registration error:')} ${t(e.message)}`);
+    }
+
+    const user = { ...res, ...{ password: details.password } };
+    this._logIn(user);
+  }
+
+  _logIn(user) {
     Log('UserModel: logging in.');
 
     this.set('drupalID', user.id || '');
