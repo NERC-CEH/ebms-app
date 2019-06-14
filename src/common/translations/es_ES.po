@@ -343,3 +343,9 @@ msgstr ""
 
 msgid "No photo has been added"
 msgstr ""
+
+msgid "Registration error:"
+msgstr ""
+
+msgid "Incorrect password or email"
+msgstr ""

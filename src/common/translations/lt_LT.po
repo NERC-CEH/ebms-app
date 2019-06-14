@@ -176,7 +176,7 @@ msgid "Failed to fetch"
 msgstr "Nepavyko prisijungti"
 
 msgid "Incorrect password or email."
-msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
+msgstr "Neteisingas prisijungimo vardas arba slaptažodis."
 
 msgid "Logout"
 msgstr "Atsijungti"
@@ -313,16 +313,16 @@ msgid "Time's up!"
 msgstr "Laikas baigėsi!"
 
 msgid "Survey incomplete"
-msgstr "Neužbaigta"
+msgstr ""
 
 msgid "The survey is not complete yet."
 msgstr "Įrašui trūksta informacijos."
 
 msgid "Please select a smaller area."
-msgstr "Prašome pasirinkti mažesnę vietovę."
+msgstr ""
 
 msgid "Please add survey area information."
-msgstr "Prašome pasirinkti vietovę."
+msgstr ""
 
 msgid "Choose a method to upload a photo"
 msgstr "Pasirinkite metodą pridėti nuotraukai"
@@ -341,3 +341,9 @@ msgstr "Pastaba: Ištrynus nuotrauka liks telefono galerijoje."
 
 msgid "No photo has been added"
 msgstr "Nėra pridėtų nuotraukų"
+
+msgid "Registration error:"
+msgstr "Nepavyko prisiregistruoti:"
+
+msgid "Incorrect password or email"
+msgstr "Neteisingas prisijungimo vardas arba slaptažodis"

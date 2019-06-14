@@ -325,3 +325,11 @@ msgstr "Note: it will remain in the gallery."
 
 msgid "No photo has been added"
 msgstr "No photo has been added"
+
+msgid "Registration error:"
+msgstr "Registration error:"
+
+msgid "Incorrect password or email.
+"
+msgstr "Incorrect password or email.
+"
