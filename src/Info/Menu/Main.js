@@ -42,7 +42,7 @@ const Component = observer(({ isLoggedIn, user, logOut }) => {
           <IonIcon name="help-circle" size="small" slot="start" />
           {t('Help')}
         </ion-item>
-        <ion-item href="#info/privacy" detail>
+        <ion-item href="https://butterfly-monitoring.net/privacy-notice" detail>
           <IonIcon name="lock" size="small" slot="start" />
           {t('Privacy Policy')}
         </ion-item>

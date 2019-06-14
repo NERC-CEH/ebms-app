@@ -5,7 +5,6 @@ import userModel from 'user_model';
 import savedSamples from 'saved_samples';
 import InfoMenu from './Menu';
 import Credits from './Credits';
-import PrivacyPolicy from './PrivacyPolicy';
 import Help from './Help';
 
 const App = () => (
@@ -22,7 +21,6 @@ const App = () => (
       )}
     />
     <Route path="/info/credits" component={Credits} />
-    <Route path="/info/privacy" component={PrivacyPolicy} />
     <Route path="/info/help" component={Help} />
   </>
 );
