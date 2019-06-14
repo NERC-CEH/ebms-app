@@ -74,7 +74,7 @@ class Component extends React.Component {
                     <>
                       {t('I agree to')}
                       {' '}
-                      <a href="#info/terms">{t('Terms and Conditions')}</a>
+                      <a href="https://butterfly-monitoring.net/privacy-notice">{t('Terms and Conditions')}</a>
                     </>
                   )}
                   icon="lock"
