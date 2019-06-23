@@ -237,7 +237,10 @@ export default () => (
             <li>
               <b>
                 Hungarian Lepidoptera Monitoring Network as part of the Jozsef
-                Szalkay Hungarian Lepidopterists' Society
+                Szalkay Hungarian Lepidopterists
+                {"'"}
+                {' '}
+Society
               </b>
               , Hungary BMS, András Szabadfalvi
               {' '}
