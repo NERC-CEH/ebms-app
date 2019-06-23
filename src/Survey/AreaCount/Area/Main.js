@@ -15,7 +15,38 @@ L.Icon.Default.imagePath =
 
 const DEFAULT_POSITION = [51.505, -0.09];
 const DEFAULT_ZOOM = 5;
-const DEFAULT_POLYGON_COLOR = '#9733ff';
+const DEFAULT_SHAPE_COLOR = '#9733ff';
+const DEFAULT_TRANSECT_BUFFER = 10; // 2x5m
+
+function calculateLineLenght(lineString) {
+  /**
+   * Calculate the approximate distance between two coordinates (lat/lon)
+   *
+   * © Chris Veness, MIT-licensed,
+   * http://www.movable-type.co.uk/scripts/latlong.html#equirectangular
+   */
+  function distance(λ1, φ1, λ2, φ2) {
+    const R = 6371000;
+    const Δλ = ((λ2 - λ1) * Math.PI) / 180;
+    φ1 = (φ1 * Math.PI) / 180; //eslint-disable-line
+    φ2 = (φ2 * Math.PI) / 180; //eslint-disable-line
+    const x = Δλ * Math.cos((φ1 + φ2) / 2);
+    const y = φ2 - φ1;
+    const d = Math.sqrt(x * x + y * y);
+    return R * d;
+  }
+
+  if (lineString.length < 2) return 0;
+  let result = 0;
+  for (let i = 1; i < lineString.length; i++)
+    result += distance(
+      lineString[i - 1][0],
+      lineString[i - 1][1],
+      lineString[i][0],
+      lineString[i][1]
+    );
+  return result;
+}
 
 @observer
 class AreaAttr extends Component {
@@ -32,9 +63,8 @@ class AreaAttr extends Component {
     this.map = React.createRef();
   }
 
-  componentDidMount() {
+  addDrawControls() {
     const map = this.map.current.leafletElement;
-    L.drawLocal.draw.toolbar.buttons.polygon = t('Draw an area');
 
     const drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);
@@ -42,12 +72,17 @@ class AreaAttr extends Component {
       position: 'topright',
       draw: {
         marker: false,
-        polyline: false,
         rectangle: false,
         circle: false,
         circlemarker: false,
+        polyline: {
+          showLength: true,
+          metric: ['m'],
+          shapeOptions: {
+            color: DEFAULT_SHAPE_COLOR,
+          },
+        },
         polygon: {
-          className: 'lala',
           showArea: true,
           precision: { m: 1 },
           metric: ['m'],
@@ -57,7 +92,7 @@ class AreaAttr extends Component {
             message: "<strong>Sorry, the area can't intersect!",
           },
           shapeOptions: {
-            color: DEFAULT_POLYGON_COLOR,
+            color: DEFAULT_SHAPE_COLOR,
           },
         },
       },
@@ -71,14 +106,37 @@ class AreaAttr extends Component {
     });
     map.addControl(drawControl);
 
-    const location = this.props.sample.get('location') || {};
-    if (location.shape) {
-      const positions = location.shape.map(coordinates =>
+    return drawnItems;
+  }
+
+  setExistingShape(shape, drawnItems) {
+    const map = this.map.current.leafletElement;
+
+    if (shape.type === 'Polygon') {
+      const positions = shape.coordinates[0].map(coordinates =>
         [...coordinates].reverse()
       );
-      const polygon = L.polygon(positions, { color: DEFAULT_POLYGON_COLOR });
+      const polygon = L.polygon(positions, { color: DEFAULT_SHAPE_COLOR });
       polygon.addTo(drawnItems);
-      this.zoomToShape(location.shape);
+      this.zoomToPolygonShape(shape);
+      return;
+    }
+
+    const positions = shape.coordinates.map(coordinates =>
+      [...coordinates].reverse()
+    );
+    const polygon = L.polyline(positions, { color: DEFAULT_SHAPE_COLOR });
+    polygon.addTo(drawnItems);
+    map.fitBounds(positions);
+  }
+
+  componentDidMount() {
+    const map = this.map.current.leafletElement;
+    const drawnItems = this.addDrawControls();
+
+    const location = this.props.sample.get('location') || {};
+    if (location.shape) {
+      this.setExistingShape(location.shape, drawnItems);
     } else {
       map.panTo(new L.LatLng(...DEFAULT_POSITION));
     }
@@ -132,9 +190,11 @@ class AreaAttr extends Component {
     this.setState({ locating: false });
   };
 
-  zoomToShape(savedShape) {
+  zoomToPolygonShape(polygon) {
     const map = this.map.current.leafletElement;
-    const positions = savedShape.map(coordinates => [...coordinates].reverse());
+    const positions = polygon.coordinates[0].map(coordinates =>
+      [...coordinates].reverse()
+    );
     map.fitBounds(positions);
   }
 
@@ -153,11 +213,27 @@ class AreaAttr extends Component {
 
   setShape = async e => {
     const geojson = e.layer.toGeoJSON();
-    const area = Math.floor(geojsonArea.geometry(geojson.geometry));
-    const shape = geojson.geometry.coordinates[0];
-    this.zoomToShape(shape);
+    const shape = geojson.geometry;
 
-    const [longitude, latitude] = shape[0];
+    if (geojson.geometry.type === 'Polygon') {
+      const area = Math.floor(geojsonArea.geometry(shape));
+      const [longitude, latitude] = shape.coordinates[0][0];
+      this.zoomToPolygonShape(shape);
+      this.props.sample.save({
+        location: {
+          latitude,
+          longitude,
+          area,
+          shape,
+          source: 'map',
+        },
+      });
+      return;
+    }
+
+    const area =
+      DEFAULT_TRANSECT_BUFFER * calculateLineLenght(shape.coordinates);
+    const [longitude, latitude] = shape.coordinates[0];
     this.props.sample.save({
       location: {
         latitude,

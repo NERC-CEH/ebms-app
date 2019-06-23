@@ -49,20 +49,14 @@
 
   .leaflet-draw-toolbar {
     float: right;
+
+    &.leaflet-draw-toolbar-top {
+      border: 3px solid var(--ion-color-primary-tint) !important;
+    }
   }
 
   .leaflet-error-draw-tooltip {
     display: none;
-  }
-
-  .leaflet-draw-draw-polygon {
-    width: 120px !important;
-    background-image: none !important;
-    background-color: var(--ion-color-secondary);
-    color: white;
-    .sr-only {
-      display: contents;
-    }
   }
 }
 

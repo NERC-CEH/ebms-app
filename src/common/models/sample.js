@@ -20,7 +20,7 @@ const locationSchema = Yup.object().shape({
   area: Yup.number()
     .max(20000000, 'Please select a smaller area.')
     .required(),
-  shape: Yup.number().required(),
+  shape: Yup.object().required(),
   source: Yup.string().required(),
 });
 

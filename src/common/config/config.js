@@ -10,16 +10,6 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   minute: 'numeric',
 });
 
-const wkt = new Wkt.Wkt();
-function toWKT(shape) {
-  // const coords = shape.map(([lat, lon]) => `${lat} ${lon}`).join(', ');
-  // return `POLYGON((${coords}))`;
-
-  return wkt
-    .read(`{"coordinates": [${JSON.stringify(shape)}], "type": "Polygon"}`)
-    .write();
-}
-
 const HOST =
   process.env.APP_INDICIA_API_HOST || 'https://butterfly-monitoring.net/';
 
@@ -85,12 +75,13 @@ const CONFIG = {
         location: {
           values(location, submission) {
             // area
+            const wkt = new Wkt.Wkt(location.shape);
             // eslint-disable-next-line
             submission.fields = {
               ...submission.fields,
               ...{
                 [CONFIG.indicia.attrs.smp.area.id]: location.area,
-                geom: toWKT(location.shape),
+                geom: wkt.write(),
               },
             };
 
