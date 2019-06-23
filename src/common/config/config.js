@@ -3,6 +3,23 @@
  **************************************************************************** */
 import Indicia from 'indicia';
 import DateHelp from 'helpers/date';
+import Wkt from 'wicket';
+
+const wkt = new Wkt.Wkt();
+
+const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
+  hour: 'numeric',
+  minute: 'numeric',
+});
+
+function toWKT(shape) {
+  // const coords = shape.map(([lat, lon]) => `${lat} ${lon}`).join(', ');
+  // return `POLYGON((${coords}))`;
+
+  return wkt
+    .read(`{"coordinates": [${JSON.stringify(shape)}], "type": "Polygon"}`)
+    .write();
+}
 
 const HOST =
   process.env.APP_INDICIA_API_HOST || 'http://www.butterfly-monitoring.net/';
@@ -55,6 +72,8 @@ const CONFIG = {
     mapbox_satellite_id: 'cehapps.0femh3mh',
   },
 
+  DEFAULT_SURVEY_TIME: 15 * 60 * 1000, // 15 mins
+
   // indicia configuration
   indicia: {
     host: HOST,
@@ -65,7 +84,17 @@ const CONFIG = {
     attrs: {
       smp: {
         location: {
-          values(location) {
+          values(location, submission) {
+            // area
+            // eslint-disable-next-line
+            submission.fields = {
+              ...submission.fields,
+              ...{
+                [CONFIG.indicia.attrs.smp.area.id]: location.area,
+                geom: toWKT(location.shape),
+              },
+            };
+
             return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
               location.longitude
             ).toFixed(7)}`;
@@ -90,8 +119,14 @@ const CONFIG = {
           max: () => new Date(),
         },
 
-        customSurveyStartTime: { id: 30 },
-        customSurveyEndime: { id: 31 },
+        surveyStartTime: {
+          id: 30,
+          values: date => dateTimeFormat.format(new Date(date)),
+        },
+        surveyEndime: {
+          id: 31,
+          values: date => dateTimeFormat.format(new Date(date)),
+        },
 
         area: { id: 933 },
       },
@@ -105,6 +140,7 @@ const CONFIG = {
             return taxon.warehouse_id;
           },
         },
+        count: { id: 7 },
       },
     },
   },

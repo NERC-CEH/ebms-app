@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import alert from 'common/helpers/alert';
+import { observer } from 'mobx-react';
 import {
   IonItem,
   IonLabel,
-  IonIcon,
   IonItemSliding,
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
-import './styles.scss';
+import OnlineStatus from './components/OnlineStatus';
 
 function deleteSurvey(sample) {
   alert({
@@ -32,24 +32,20 @@ function deleteSurvey(sample) {
   });
 }
 
-function Survey({ sample }) {
+const Survey = observer(({ sample }) => {
   const date = new Date(sample.metadata.created_on);
   const prettyDate = date.toLocaleDateString();
   const speciesCount = sample.occurrences.models.length;
-  const statusClass = sample.metadata.id ? 'sent' : 'unsent';
   return (
     <IonItemSliding>
       <IonItem>
         <IonLabel>
-          <h3><b>{prettyDate}</b></h3>
+          <h3>
+            <b>{prettyDate}</b>
+          </h3>
           <h4>{`${t('species')}: ${speciesCount}`}</h4>
         </IonLabel>
-        <IonIcon
-          slot="end"
-          name="paper-plane"
-          size="small"
-          className={`survey-status ${statusClass}`}
-        />
+        <OnlineStatus sample={sample} />
       </IonItem>
       <IonItemOptions side="end">
         <IonItemOption color="danger" onClick={() => deleteSurvey(sample)}>
@@ -58,7 +54,7 @@ function Survey({ sample }) {
       </IonItemOptions>
     </IonItemSliding>
   );
-}
+});
 
 Survey.propTypes = {
   sample: PropTypes.object.isRequired,

@@ -23,7 +23,7 @@ export default Indicia.Occurrence.extend({
     };
   },
 
-  keys: CONFIG.indicia.occ, // warehouse attribute keys
+  keys: CONFIG.indicia.attrs.occ, // warehouse attribute keys
 
   /**
    * Disable sort for mobx to keep the same refs.

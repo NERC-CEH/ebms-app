@@ -13,6 +13,12 @@ import PropTypes from 'prop-types';
 import Survey from './components/Survey';
 import './styles.scss';
 
+function byCreateTime(occ1, occ2) {
+  const date1 = new Date(occ1.metadata.created_on);
+  const date2 = new Date(occ2.metadata.created_on);
+  return date2.getTime() - date1.getTime();
+}
+
 @observer
 class Component extends React.Component {
   static propTypes = {
@@ -30,9 +36,9 @@ class Component extends React.Component {
   getSavedSamplesList() {
     const { savedSamples } = this.props;
 
-    const savedSurveys = savedSamples.models.filter(
-      sample => sample.metadata.saved
-    );
+    const savedSurveys = savedSamples.models
+      .filter(sample => sample.metadata.saved)
+      .sort(byCreateTime);
 
     if (!savedSurveys.length) {
       return (

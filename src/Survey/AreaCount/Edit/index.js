@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import Sample from 'sample';
+import config from 'config';
 import alert from 'common/helpers/alert';
 import Header from './Header';
 import Main from './Main';
@@ -87,6 +88,21 @@ function deleteOccurrence(occ) {
   });
 }
 
+function setSurveyEndTime(sample) {
+  const startTime = sample.get('surveyStartTime');
+  const defaultSurveyEndTime = startTime.getTime() + config.DEFAULT_SURVEY_TIME;
+  const isOverDefaultSurveyEndTime =
+    defaultSurveyEndTime < new Date().getTime();
+
+  const surveyEndime = isOverDefaultSurveyEndTime
+    ? defaultSurveyEndTime
+    : new Date();
+
+  return sample.save({
+    surveyEndime,
+  });
+}
+
 @observer
 class Container extends React.Component {
   static propTypes = {
@@ -137,24 +153,23 @@ class Container extends React.Component {
       showValidationAlert(errors);
       return;
     }
-    
+
     sample.metadata.saved = true;
-    await sample.save();
     appModel.set('areaCountDraftId', null);
     await appModel.save();
 
-    history.replace(`/home/user-report`);
+    await setSurveyEndTime(sample);
 
-    // TODO:
-    // sample.save(null, { remote: true })
+    sample.save(null, { remote: true });
+    history.replace(`/home/user-report`);
   };
 
-  navigateToOccurrence = (occ) => {
+  navigateToOccurrence = occ => {
     const { match, history } = this.props;
     const sampleID = match.params.id;
 
     history.push(`/survey/${sampleID}/edit/occ/${occ.cid}`);
-  }
+  };
 
   toggleSpeciesSort = () => {
     const { appModel } = this.props;

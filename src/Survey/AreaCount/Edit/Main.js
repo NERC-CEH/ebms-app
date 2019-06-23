@@ -13,9 +13,8 @@ import {
 } from '@ionic/react';
 import { observer } from 'mobx-react';
 import Countdown, { zeroPad } from 'react-countdown-now';
+import config from 'config';
 import './styles.scss';
-
-const DEFAULT_SURVEY_TIME = 15 * 60 * 1000;
 
 function CountdownRenderer({ minutes, seconds, completed }) {
   if (completed) {
@@ -124,7 +123,7 @@ class AreaCount extends Component {
     const areaPretty = area && `${area.toLocaleString()} m²`;
 
     const startTime = new Date(sample.get('surveyStartTime'));
-    const countdown = startTime.getTime() + DEFAULT_SURVEY_TIME;
+    const countdown = startTime.getTime() + config.DEFAULT_SURVEY_TIME;
 
     return (
       <IonContent id="area-count-edit">
