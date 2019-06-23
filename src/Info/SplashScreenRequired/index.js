@@ -1,11 +1,13 @@
 import React from 'react';
 import { observer } from 'mobx-react';
+import { IonSlides, IonSlide, IonButton } from '@ionic/react';
 import Log from 'helpers/log';
 import appModel from 'app_model';
 import './styles.scss';
 import './images/welcome_1.jpg';
 import './images/welcome_2.jpg';
 import './images/welcome_3.jpg';
+import './images/welcome_4.jpg';
 
 function next(sliderRef) {
   sliderRef.current.slideNext();
@@ -21,70 +23,102 @@ const SplashScreen = () => {
   const sliderRef = React.createRef();
 
   return (
-    <ion-slides id="welcome" pager="true" ref={sliderRef}>
-      <ion-slide class="first">
-        <ion-button
+    <IonSlides id="welcome" pager="true" ref={sliderRef}>
+      <IonSlide class="first">
+        <IonButton
           class="skip"
           fill="outline"
+          color="primary"
+          strong="true"
+          onClick={exit}
+        >
+          {t('Skip')}
+        </IonButton>
+        <IonButton
+          class="next"
+          fill="outline"
+          color="primary"
+          strong="true"
+          onClick={() => next(sliderRef)}
+        >
+          {t('Next')}
+        </IonButton>
+        <div className="message">
+          <p>
+            {t(`Butterflies are captivating insects, but they are in decline in many parts of Europe. As shown by this graph of The Grassland Butterfly Indicator for the EU.`)}
+          </p>
+        </div>
+      </IonSlide>
+
+      <IonSlide class="second">
+        <IonButton
+          class="skip"
           color="light"
           strong="true"
           onClick={exit}
         >
           {t('Skip')}
-        </ion-button>
-        <ion-button
+        </IonButton>
+        <IonButton
           class="next"
-          fill="outline"
           color="light"
           strong="true"
           onClick={() => next(sliderRef)}
         >
           {t('Next')}
-        </ion-button>
-        <div className="message">
-          <h2>{t('Welcome')}</h2>
-          <p>TODO: Add some text</p>
-        </div>
-      </ion-slide>
+        </IonButton>
 
-      <ion-slide class="second">
-        <ion-button
+        <div className="message">
+          <p>
+            {t(
+              'Data collected by this app can greatly improve knowledge of the status of butterflies and their habitats.'
+            )}
+          </p>
+        </div>
+      </IonSlide>
+
+      <IonSlide class="third">
+        <IonButton
           class="skip"
           fill="outline"
-          color="light"
+          color="primary"
           strong="true"
           onClick={exit}
         >
           {t('Skip')}
-        </ion-button>
-        <ion-button
+        </IonButton>
+        <IonButton
           class="next"
           fill="outline"
-          color="light"
+          color="primary"
           strong="true"
           onClick={() => next(sliderRef)}
         >
           {t('Next')}
-        </ion-button>
+        </IonButton>
 
         <div className="message">
-          <h2>Welcome</h2>
-          <p>TODO: Add some text</p>
+          <p>
+            {t(
+              'We lack information on butterfly numbers in many parts of Europe, as shown by the density of records currently available to assess butterfly status.'
+            )}
+          </p>
         </div>
-      </ion-slide>
+      </IonSlide>
 
-      <ion-slide class="third">
+      <IonSlide class="fourth">
         <div className="message">
-          <h2>{t('Lets start!')}</h2>
-          <p>TODO: Add some text</p>
+          <p>
+            {t(
+              'It has never been easier to contribute high quality data for research to support conservation of these fascinating and vital insects.  You can get started straight away'
+            )}
+          </p>
         </div>
-        <ion-button color="light" strong="true" onClick={exit}>
-          {' '}
+        <IonButton color="primary" strong="true" onClick={exit}>
           {t('Get Started')}
-          {' '}
-        </ion-button>
-      </ion-slide>
-    </ion-slides>
+        </IonButton>
+      </IonSlide>
+    </IonSlides>
   );
 };
 

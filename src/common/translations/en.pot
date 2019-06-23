@@ -336,3 +336,15 @@ msgstr "Incorrect password or email.
 
 msgid "email is not valid"
 msgstr "email is not valid"
+
+msgid "Butterflies are captivating insects, but they are in decline in many parts of Europe. As shown by this graph of The Grassland Butterfly Indicator for the EU."
+msgstr "Butterflies are captivating insects, but they are in decline in many parts of Europe. As shown by this graph of The Grassland Butterfly Indicator for the EU."
+
+msgid "Data collected by this app can greatly improve knowledge of the status of butterflies and their habitats."
+msgstr "Data collected by this app can greatly improve knowledge of the status of butterflies and their habitats."
+
+msgid "We lack information on butterfly numbers in many parts of Europe, as shown by the density of records currently available to assess butterfly status."
+msgstr "We lack information on butterfly numbers in many parts of Europe, as shown by the density of records currently available to assess butterfly status."
+
+msgid "It has never been easier to contribute high quality data for research to support conservation of these fascinating and vital insects.  You can get started straight away"
+msgstr "It has never been easier to contribute high quality data for research to support conservation of these fascinating and vital insects.  You can get started straight away"

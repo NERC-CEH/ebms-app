@@ -350,3 +350,25 @@ msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
 
 msgid "email is not valid"
 msgstr "negalimas e-paštas"
+
+msgid ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
+msgstr "Drugeliai yra nuostabūs vabzdžiai, tačiau jie nyksta daugelyje Europos šalių. Ši grafa parodo Europos drugelių nykimą."
+
+msgid ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
+msgstr "Šia aplikacija renkama informacija praplečia mūsų žinias apie drugelius ir jų būveines."
+
+msgid ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
+msgstr "Šis žemėlapis atskleidžia kaip mums trūksta reikiamos informacijos apie drugelių paplitimą."
+
+msgid ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects.  You can get "
+"started straight away"
+msgstr "Niekada dar nebuvo taip paprasta prisidėti prie šio svarbaus vabzdžio išlikimo. Jūs galite pradėti jau dabar!"

@@ -4,7 +4,7 @@ ion-slides#welcome {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #3e3e3e;
+  background: white;
 
   --bullet-background-active: white;
 
@@ -38,11 +38,19 @@ ion-slides#welcome {
   .message h2 {
     padding: 10px;
     color: whitesmoke;
-    background-color: rgba(123, 117, 55, 0.9);
+    background-color: var(--ion-color-primary-tint);
   }
 
   .swiper-pagination-bullets {
     bottom: 3%;
+
+    .swiper-pagination-bullet {
+      background: black;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--ion-color-primary);
+    }
   }
 
   .message p {
@@ -54,13 +62,13 @@ ion-slides#welcome {
   ion-slide {
     &.first {
       background: url('images/welcome_1.jpg') no-repeat;
-      background-position: left;
-      background-size: cover;
+      background-position: bottom;
+      background-size: contain;
 
       .message {
         text-align: left;
         left: 10vw;
-        bottom: $bottom;
+        top: 20vh;
       }
     }
 
@@ -72,12 +80,27 @@ ion-slides#welcome {
       .message {
         text-align: left;
         left: 10vw;
-        top: 10vh;
+        bottom: 20vh;
+      }
+
+      ion-button {
+        --ion-color-contrast: var(--ion-color-primary) !important;
       }
     }
 
     &.third {
       background: url('images/welcome_3.jpg') no-repeat;
+      background-position: left;
+      background-size: contain;
+      .message {
+        text-align: left;
+        right: 10vw;
+        bottom: 12vh;
+      }
+    }
+
+    &.fourth {
+      background: url('images/welcome_4.jpg') no-repeat;
       background-position: left;
       background-size: cover;
       .message {
