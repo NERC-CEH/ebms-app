@@ -191,9 +191,11 @@ class Container extends React.Component {
       return null;
     }
 
+    const isTraining = this.state.sample.metadata.training;
+    
     return (
       <>
-        <Header onSubmit={this.onSubmit} />
+        <Header onSubmit={this.onSubmit} isTraining={isTraining}/>
         <Main
           sample={this.state.sample}
           onSubmit={this.onSubmit}
