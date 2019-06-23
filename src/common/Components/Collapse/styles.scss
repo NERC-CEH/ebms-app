@@ -7,15 +7,12 @@
     overflow: hidden;
     top: 0;
     padding: 10px;
+  }
 
-    &:after {
-      font-size: 20px;
-      margin-right: 10px;
-      font-family: icons;
-      content: '\E804';
-      position: absolute;
-      right: 14px;
-    }
+  & > ion-icon {
+    position: absolute;
+    right: 0;
+    top: 8px;
   }
 
   .body {
@@ -25,11 +22,6 @@
   &.opened {
     .header {
       background-color: #e4e4e4;
-
-      &:after {
-        content: '\E81C';
-        right: 18px;
-      }
     }
   }
 }

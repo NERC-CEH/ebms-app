@@ -38,10 +38,6 @@ const Component = observer(({ isLoggedIn, user, logOut }) => {
           {t('App')}
         </ion-item>
         <ion-item-divider>{t('Info')}</ion-item-divider>
-        <ion-item href="#info/help" detail>
-          <IonIcon name="help-circle" size="small" slot="start" />
-          {t('Help')}
-        </ion-item>
         <ion-item href="https://butterfly-monitoring.net/privacy-notice" detail>
           <IonIcon name="lock" size="small" slot="start" />
           {t('Privacy Policy')}

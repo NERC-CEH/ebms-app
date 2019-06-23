@@ -3,9 +3,10 @@ import {
   IonContent,
   IonList,
   IonItem,
-  IonSegment,
+  // IonSegment,
   IonLabel,
-  IonSegmentButton,
+  // IonSegmentButton,
+  IonItemDivider,
 } from '@ionic/react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
@@ -45,6 +46,9 @@ class Component extends React.Component {
 
     return (
       <IonList>
+        <IonItemDivider>
+          <IonLabel>{t('Finished surveys')}</IonLabel>
+        </IonItemDivider>
         {savedSurveys.map(sample => (
           <Survey key={sample.cid} sample={sample} />
         ))}
@@ -57,25 +61,25 @@ class Component extends React.Component {
     const savedSamplesList = this.getSavedSamplesList();
 
     const showingSurveys = segment === 'surveys';
-    const showingReports = segment === 'reports';
+    // const showingReports = segment === 'reports';
     return (
       <>
         <IonContent id="user-report" class="ion-padding">
-          <IonSegment onIonChange={this.onSegmentClick} value={segment}>
+          {/* <IonSegment onIonChange={this.onSegmentClick} value={segment}>
             <IonSegmentButton value="surveys" checked={showingSurveys}>
               <IonLabel>{t('Surveys')}</IonLabel>
             </IonSegmentButton>
             <IonSegmentButton value="reports" checked={showingReports} disabled>
               <IonLabel>{t('Reports')}</IonLabel>
             </IonSegmentButton>
-          </IonSegment>
+          </IonSegment> */}
 
           {showingSurveys && savedSamplesList}
-          {showingReports && (
+          {/* {showingReports && (
             <IonList>
               <small>TODO: add report</small>
             </IonList>
-          )}
+          )} */}
         </IonContent>
       </>
     );

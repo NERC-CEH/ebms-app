@@ -10,15 +10,15 @@ import {
 const Component = () => (
   <>
     <IonContent class="ion-padding">
-      <IonList>
+      <IonList lines="none">
         <IonItemDivider>
           <IonLabel>{t('TOP RECORDERS')}</IonLabel>
         </IonItemDivider>
-        <IonItem><small>TODO: add report</small></IonItem>
+        <IonItem><small>{t('Not enough data yet')}</small></IonItem>
         <IonItemDivider>
           <IonLabel>{t('TOP SPECIES')}</IonLabel>
         </IonItemDivider>
-        <IonItem><small>TODO: add report</small></IonItem>
+        <IonItem><small>{t('Not enough data yet')}</small></IonItem>
       </IonList>
     </IonContent>
   </>

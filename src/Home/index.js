@@ -12,7 +12,7 @@ import { Route } from 'react-router-dom';
 import savedSamples from 'saved_samples';
 import PrivateRoute from 'common/Components/PrivateRoute';
 import Report from './Report';
-import About from '../Info/About';
+import Help from '../Info/Help';
 import User from '../User/Report';
 import './styles.scss';
 
@@ -23,7 +23,7 @@ const Component = () => {
         <IonTabs>
           <IonRouterOutlet>
             <Route path="/:tab(home/report)" render={Report} exact />
-            <Route path="/:tab(home/about)" component={About} exact />
+            <Route path="/:tab(home/help)" component={Help} exact />
             <Route
               path="/:tab(home/user-report)"
               render={() => (
@@ -40,9 +40,9 @@ const Component = () => {
               <IonIcon name="home" />
               <IonLabel>{t('Home')}</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="about" href="/home/about">
-              <IonIcon name="information-circle" />
-              <IonLabel>{t('About')}</IonLabel>
+            <IonTabButton tab="user" href="/home/user-report">
+              <IonIcon name="person" />
+              <IonLabel>{t('Account')}</IonLabel>
             </IonTabButton>
             <IonTabButton
               tab="survey"
@@ -51,9 +51,9 @@ const Component = () => {
             >
               <IonIcon name="add" />
             </IonTabButton>
-            <IonTabButton tab="user" href="/home/user-report">
-              <IonIcon name="person" />
-              <IonLabel>{t('Account')}</IonLabel>
+            <IonTabButton tab="help" href="/home/help">
+              <IonIcon name="help-circle" />
+              <IonLabel>{t('Help')}</IonLabel>
             </IonTabButton>
             <IonTabButton tab="menu" href="/info/menu">
               <IonIcon name="menu" />

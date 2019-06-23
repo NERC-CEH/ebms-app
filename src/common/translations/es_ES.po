@@ -401,3 +401,130 @@ msgstr ""
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
 msgstr ""
+
+msgid "Not enough data yet"
+msgstr ""
+
+msgid "How to start a survey"
+msgstr ""
+
+msgid "To start a new survey you can press the plus button"
+msgstr ""
+
+msgid "in the home page footer. This will start a new 15 minute survey."
+msgstr ""
+
+msgid "Selecting species"
+msgstr ""
+
+msgid "Please press the Add"
+msgstr ""
+
+msgid ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
+msgstr ""
+
+msgid ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
+msgstr ""
+
+msgid ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
+msgstr ""
+
+msgid "To finish a record you should also fill in the details of the area."
+msgstr ""
+
+msgid ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
+msgstr ""
+
+msgid "Searching for species"
+msgstr ""
+
+msgid ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
+msgstr ""
+
+msgid "Sync. with the website"
+msgstr ""
+
+msgid "All your saved surveys will be shown on your account page."
+msgstr ""
+
+msgid ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
+msgstr ""
+
+msgid "If the record has reached the database a red"
+msgstr ""
+
+msgid "(set for submission & saved locally) will become green"
+msgstr ""
+
+msgid "synced to the database"
+msgstr ""
+
+msgid ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
+msgstr ""
+
+msgid "Delete a record"
+msgstr ""
+
+msgid ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Sign in/out or register"
+msgstr ""
+
+msgid ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
+msgstr ""
+
+msgid "To logout, visit the main menu page and click the logout button."
+msgstr ""
+
+msgid ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
+msgstr ""
+
+msgid "Other"
+msgstr ""
+
+msgid "Reset the application"
+msgstr ""
+
+msgid "Go to the application settings page"
+msgstr ""
+
+msgid "and click on the Reset"
+msgstr ""
+
+msgid "button"
+msgstr ""
