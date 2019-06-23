@@ -374,3 +374,30 @@ msgid ""
 "support conservation of these fascinating and vital insects.  You can get "
 "started straight away"
 msgstr ""
+
+msgid ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
+msgstr ""
+
+msgid "The ABLE project is a partnership between"
+msgstr ""
+
+msgid "and"
+msgstr ""
+
+msgid ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
+msgstr ""
+
+msgid "ABLE partners:"
+msgstr ""
+
+msgid ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
+msgstr ""
+
+msgid "In June 2019, the following organisations are partners in eBMS:"
+msgstr ""

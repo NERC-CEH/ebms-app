@@ -13,9 +13,9 @@ import './styles.scss';
 export default () => (
   <>
     <AppHeader title={t('Credits')} />
-    <IonContent class="ion-padding">
-      <IonList>
-        <IonListHeader>
+    <IonContent id="credits" class="ion-padding">
+      <IonList lines="none">
+        <IonListHeader color="light" mode="ios">
           <IonLabel>
             {t(
               'We are very grateful for all the people that helped to create this app:'
@@ -23,33 +23,47 @@ export default () => (
           </IonLabel>
         </IonListHeader>
         <IonItem>
-          <ul className="credits-list">
+          <ul>
             <li>
               <a href="https://kazlauskis.com">
-                Karolis Kazlauskis (App developer)
+                <b>Karolis Kazlauskis</b>
+                {' '}
+(App developer)
               </a>
             </li>
             <li>
               <a href="https://www.ceh.ac.uk/staff/david-roy">
-                David Roy (the Centre for Ecology & Hydrology)
+                <b>David Roy</b>
+                {' '}
+(the Centre for Ecology & Hydrology)
               </a>
             </li>
-            <li>Cristina Sevilleja (Dutch Butterfly Conservation)</li>
             <li>
-              Chris van Swaay (Dutch Butterfly Conservation, Butterfly
+              <b>Cristina Sevilleja</b>
+              {' '}
+(Dutch Butterfly Conservation)
+            </li>
+            <li>
+              <b>Chris van Swaay</b>
+              {' '}
+(Dutch Butterfly Conservation, Butterfly
               Conservation Europe)
             </li>
             <li>
-              Irma van Swaay (Dutch Butterfly Conservation, Butterfly
+              <b>Irma van Swaay</b>
+              {' '}
+(Dutch Butterfly Conservation, Butterfly
               Conservation Europe)
             </li>
-            <li>Martin Warren (Butterfly Conservation Europe)</li>
+            <li>
+              <b>Martin Warren</b>
+              {' '}
+(Butterfly Conservation Europe)
+            </li>
           </ul>
         </IonItem>
-      </IonList>
 
-      <IonList>
-        <IonListHeader>
+        <IonListHeader color="light" mode="ios">
           <IonLabel>
             {t(
               'The app was developed as part of the Assessing Butterflies in Europe (ABLE) project.'
@@ -58,38 +72,85 @@ export default () => (
         </IonListHeader>
 
         <IonItem>
-          {t(`The ABLE project is a partnership between Butterfly Conservation
-            Europe, the Centre for Ecology and Hydrology (UK), the Helmholtz
-            Centre for Environmental Research (UFZ, Germany), Dutch Butterfly
-            Conservation and Butterfly Conservation (UK). ABLE is funded by a
-            service contract from the European Union Directorate for the
-            Environment, for an initial period of two years from 2019-20.`)}
+          <p>
+            {t(`The ABLE project is a partnership between`)}
+            {' '}
+            <a href="http://www.bc-europe.eu/">Butterfly Conservation Europe</a>
+            ,
+            {' '}
+            <a href="www.ceh.ac.uk">
+              the Centre for Ecology and Hydrology (UK)
+            </a>
+            ,
+            {' '}
+            <a href="https://www.ufz.de/index.php">
+              the Helmholtz Centre for Environmental Research (UFZ, Germany)
+            </a>
+            ,
+            {' '}
+            <a href="https://www.vlinderstichting.nl/">
+              Dutch Butterfly Conservation
+            </a>
+            {' '}
+            {t('and')}
+            {' '}
+            <a href="https://butterfly-conservation.org/">
+              Butterfly Conservation (UK)
+            </a>
+            .
+            {' '}
+          </p>
         </IonItem>
-        <IonItem>{t(`ABLE partners:`)}</IonItem>
         <IonItem>
-          <ul className="credits-list">
-            <li>Butterfly Conservation Europe – Sue Collins, Martin Warren</li>
+          <p>
+            {t(
+              `ABLE is funded by a service contract from the European Union Directorate for the Environment, for an initial period of two years from 2019-20.`
+            )}
+          </p>
+        </IonItem>
+        <IonItem>
+          <p>
+            <u>{t(`ABLE partners:`)}</u>
+          </p>
+        </IonItem>
+        <IonItem>
+          <ul>
             <li>
-              Centre for Ecology and Hydrology (CEH, UK) – David Roy, Reto
-              Schmucki
+              <b>Butterfly Conservation Europe</b>
+              {' '}
+– Sue Collins, Martin Warren
             </li>
             <li>
-              Sub-contracts to CEH: Karolis Kazlauskis (App development), Gary
-              van Breda (Website development), John van Breda (Website
+              <b>Centre for Ecology and Hydrology (CEH, UK)</b>
+              {' '}
+– David Roy,
+              Reto Schmucki
+            </li>
+            <li>
+              <b>Sub-contracts to CEH</b>
+: Karolis Kazlauskis (App development),
+              Gary van Breda (Website development), John van Breda (Website
               development)
             </li>
             <li>
-              Dutch Butterfly Conservation, De Vlinderstichting (Netherlands) –
-              Chris van Swaay, Cristina Sevilleja, Irma Wynhoff
+              <b>
+                Dutch Butterfly Conservation, De Vlinderstichting (Netherlands)
+              </b>
+              {' '}
+              – Chris van Swaay, Cristina Sevilleja, Irma Wynhoff
             </li>
-            <li>Helmholtz Centre for Environmental Research (UFZ, Germany)</li>
-            <li>Butterfly Conservation UK – Nigel Bourn, Emily Dennis</li>
+            <li>
+              <b>Helmholtz Centre for Environmental Research (UFZ, Germany)</b>
+            </li>
+            <li>
+              <b>Butterfly Conservation UK</b>
+              {' '}
+– Nigel Bourn, Emily Dennis
+            </li>
           </ul>
         </IonItem>
-      </IonList>
 
-      <IonList>
-        <IonListHeader>
+        <IonListHeader color="light" mode="ios">
           <IonLabel>
             {t(
               'This app contributes data to the European Butterfly Monitoring Scheme (eBMS).'
@@ -98,10 +159,14 @@ export default () => (
         </IonListHeader>
 
         <IonItem>
-          {t(`In June 2019, the following organisations are partners in eBMS:`)}
+          <p>
+            {t(
+              `In June 2019, the following organisations are partners in eBMS:`
+            )}
+          </p>
         </IonItem>
         <IonItem>
-          <ul className="credits-list">
+          <ul>
             <li>
               <b>NERC-CEH</b>
 , CEH, David Roy

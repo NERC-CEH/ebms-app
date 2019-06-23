@@ -1,12 +1,28 @@
-.credits-list {
-  list-style-type: none;
-  padding-inline-start: 15px;
-  
+#credits {
   ion-label {
     white-space: normal;
   }
-  
+
+  ion-list-header:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  p,
+  ul,
+  li,
+  a {
+    font-size: 14px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-inline-start: 15px;
+  }
+
   li {
     margin-bottom: 8px;
+    b {
+      font-weight: 600;
+    }
   }
 }
