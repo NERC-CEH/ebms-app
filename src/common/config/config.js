@@ -5,13 +5,12 @@ import Indicia from 'indicia';
 import DateHelp from 'helpers/date';
 import Wkt from 'wicket';
 
-const wkt = new Wkt.Wkt();
-
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
   minute: 'numeric',
 });
 
+const wkt = new Wkt.Wkt();
 function toWKT(shape) {
   // const coords = shape.map(([lat, lon]) => `${lat} ${lon}`).join(', ');
   // return `POLYGON((${coords}))`;
@@ -22,7 +21,7 @@ function toWKT(shape) {
 }
 
 const HOST =
-  process.env.APP_INDICIA_API_HOST || 'http://www.butterfly-monitoring.net/';
+  process.env.APP_INDICIA_API_HOST || 'https://butterfly-monitoring.net/';
 
 const CONFIG = {
   // variables replaced on build
