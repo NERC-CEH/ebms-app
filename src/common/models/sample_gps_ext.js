@@ -10,6 +10,8 @@ import config from 'config';
 import { observable } from 'mobx';
 import geojsonArea from '@mapbox/geojson-area';
 
+const DEFAULT_MIN_DISTANCE_SINCE_LAST_LOCATION = 20; // meters
+
 function calculateLineLenght(lineString) {
   /**
    * Calculate the approximate distance between two coordinates (lat/lon)
@@ -40,22 +42,46 @@ function calculateLineLenght(lineString) {
   return result;
 }
 
-export function updateSampleLocation(sample, { latitude, longitude }) {
+function getShape(sample) {
   const oldLocation = sample.get('location') || {};
 
-  let shape;
   if (!oldLocation.shape) {
-    shape = { type: 'LineString', coordinates: [] };
-  } else {
-    shape = JSON.parse(JSON.stringify(oldLocation.shape));
+    return { type: 'LineString', coordinates: [] };
+  }
+  return JSON.parse(JSON.stringify(oldLocation.shape));
+}
+
+function isSufficientDistanceMade(coordinates, latitude, longitude) {
+  const lastLocation = [...(coordinates[coordinates.length - 1] || [])]
+    .reverse()
+    .map(parseFloat);
+  const newLocation = [latitude, longitude].map(parseFloat);
+
+  const distanceSinceLastLocation = calculateLineLenght([
+    lastLocation,
+    newLocation,
+  ]);
+
+  if (
+    lastLocation.length &&
+    distanceSinceLastLocation < DEFAULT_MIN_DISTANCE_SINCE_LAST_LOCATION
+  ) {
+    return false;
   }
 
-  if (shape.type === 'Polygon') {
-    shape.coordinates[0].push([longitude, latitude]);
-  } else {
-    shape.coordinates.push([longitude, latitude]);
+  return true;
+}
+
+export function updateSampleLocation(sample, { latitude, longitude }) {
+  const shape = getShape(sample);
+  const coordinates =
+    shape.type === 'Polygon' ? shape.coordinates[0] : shape.coordinates;
+
+  if (!isSufficientDistanceMade(coordinates, latitude, longitude)) {
+    return sample;
   }
 
+  coordinates.push([longitude, latitude]);
   return sample.setLocation(shape);
 }
 
@@ -67,23 +93,16 @@ const extension = {
       });
     }
 
-    if (shape.type === 'Polygon') {
-      const area = Math.floor(geojsonArea.geometry(shape));
-      const [longitude, latitude] = shape.coordinates[0][0];
-      return this.save({
-        location: {
-          latitude,
-          longitude,
-          area,
-          shape,
-          source: 'map',
-        },
-      });
-    }
-
-    const area =
-      config.DEFAULT_TRANSECT_BUFFER * calculateLineLenght(shape.coordinates);
+    let area;
     const [longitude, latitude] = shape.coordinates[0];
+
+    if (shape.type === 'Polygon') {
+      area = Math.floor(geojsonArea.geometry(shape));
+      [longitude, latitude] = shape.coordinates[0][0]; // eslint-disable-line
+    } else {
+      area =
+        config.DEFAULT_TRANSECT_BUFFER * calculateLineLenght(shape.coordinates);
+    }
 
     return this.save({
       location: {
@@ -135,7 +154,7 @@ const extension = {
 
         const startTime = that.get('surveyStartTime');
         const defaultSurveyEndTime =
-          startTime.getTime() + config.DEFAULT_SURVEY_TIME;
+          new Date(startTime).getTime() + config.DEFAULT_SURVEY_TIME;
         const isOverDefaultSurveyEndTime =
           defaultSurveyEndTime < new Date().getTime();
         if (isOverDefaultSurveyEndTime) {
@@ -144,6 +163,7 @@ const extension = {
         }
 
         console.log('GPS callback');
+        console.log(location);
         updateSampleLocation(that, location);
       },
     };

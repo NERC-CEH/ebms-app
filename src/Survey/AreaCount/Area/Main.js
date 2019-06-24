@@ -15,7 +15,7 @@ L.Icon.Default.imagePath =
 
 const DEFAULT_POSITION = [51.505, -0.09];
 const DEFAULT_ZOOM = 5;
-const DEFAULT_LOCATED_ZOOM = 16;
+const DEFAULT_LOCATED_ZOOM = 18;
 const DEFAULT_SHAPE_COLOR = '#9733ff';
 
 @observer
