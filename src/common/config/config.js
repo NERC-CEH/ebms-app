@@ -62,6 +62,7 @@ const CONFIG = {
   },
 
   DEFAULT_SURVEY_TIME: 15 * 60 * 1000, // 15 mins
+  DEFAULT_TRANSECT_BUFFER: 10, // 5x2 meters
 
   // indicia configuration
   indicia: {

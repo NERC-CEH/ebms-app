@@ -28,6 +28,7 @@ class Toggle extends Component {
         slot="end"
         disabled={this.props.disabled}
         checked={this.props.checked}
+        class={this.props.className || ''}
       />
     );
   }
@@ -37,6 +38,7 @@ Toggle.propTypes = {
   onToggle: PropTypes.func.isRequired,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default Toggle;

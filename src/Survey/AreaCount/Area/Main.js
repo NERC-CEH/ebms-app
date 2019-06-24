@@ -8,50 +8,22 @@ import { Map, TileLayer } from 'react-leaflet';
 import LeafletControl from 'react-leaflet-control';
 import 'leaflet-draw';
 import { observer } from 'mobx-react';
-import geojsonArea from '@mapbox/geojson-area';
+import { toJS } from 'mobx';
 
 L.Icon.Default.imagePath =
   '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/images/';
 
 const DEFAULT_POSITION = [51.505, -0.09];
 const DEFAULT_ZOOM = 5;
+const DEFAULT_LOCATED_ZOOM = 16;
 const DEFAULT_SHAPE_COLOR = '#9733ff';
-const DEFAULT_TRANSECT_BUFFER = 10; // 2x5m
-
-function calculateLineLenght(lineString) {
-  /**
-   * Calculate the approximate distance between two coordinates (lat/lon)
-   *
-   * © Chris Veness, MIT-licensed,
-   * http://www.movable-type.co.uk/scripts/latlong.html#equirectangular
-   */
-  function distance(λ1, φ1, λ2, φ2) {
-    const R = 6371000;
-    const Δλ = ((λ2 - λ1) * Math.PI) / 180;
-    φ1 = (φ1 * Math.PI) / 180; //eslint-disable-line
-    φ2 = (φ2 * Math.PI) / 180; //eslint-disable-line
-    const x = Δλ * Math.cos((φ1 + φ2) / 2);
-    const y = φ2 - φ1;
-    const d = Math.sqrt(x * x + y * y);
-    return R * d;
-  }
-
-  if (lineString.length < 2) return 0;
-  let result = 0;
-  for (let i = 1; i < lineString.length; i++)
-    result += distance(
-      lineString[i - 1][0],
-      lineString[i - 1][1],
-      lineString[i][0],
-      lineString[i][1]
-    );
-  return result;
-}
 
 @observer
 class AreaAttr extends Component {
   static propTypes = {
-    sample: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    setLocation: PropTypes.func.isRequired,
+    isGPSTracking: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -98,7 +70,7 @@ class AreaAttr extends Component {
       },
       edit: {
         poly: {
-          allowIntersection: false,
+          allowIntersection: true, // to edit GPS messed up polygon
         },
         featureGroup: drawnItems,
         remove: true,
@@ -109,46 +81,56 @@ class AreaAttr extends Component {
     return drawnItems;
   }
 
-  setExistingShape(shape, drawnItems) {
+  setExistingShape(shape) {
     const map = this.map.current.leafletElement;
 
     if (shape.type === 'Polygon') {
       const positions = shape.coordinates[0].map(coordinates =>
-        [...coordinates].reverse()
+        [...coordinates].reverse().map(float => Number.parseFloat(float))
       );
       const polygon = L.polygon(positions, { color: DEFAULT_SHAPE_COLOR });
-      polygon.addTo(drawnItems);
+      polygon.addTo(this.drawnItems);
       this.zoomToPolygonShape(shape);
       return;
     }
 
     const positions = shape.coordinates.map(coordinates =>
-      [...coordinates].reverse()
+      [...coordinates].reverse().map(float => Number.parseFloat(float))
     );
-    const polygon = L.polyline(positions, { color: DEFAULT_SHAPE_COLOR });
-    polygon.addTo(drawnItems);
-    map.fitBounds(positions);
+
+    const polyline = L.polyline(positions, { color: DEFAULT_SHAPE_COLOR });
+    polyline.addTo(this.drawnItems);
+    map.setView(positions[positions.length - 1], DEFAULT_LOCATED_ZOOM);
   }
 
   componentDidMount() {
     const map = this.map.current.leafletElement;
-    const drawnItems = this.addDrawControls();
+    this.drawnItems = this.addDrawControls();
 
-    const location = this.props.sample.get('location') || {};
+    const { location } = this.props;
     if (location.shape) {
-      this.setExistingShape(location.shape, drawnItems);
+      this.setExistingShape(location.shape);
     } else {
       map.panTo(new L.LatLng(...DEFAULT_POSITION));
     }
 
     this._onCreatedEventListener = e => {
-      drawnItems.clearLayers();
-      drawnItems.addLayer(e.layer);
+      this.drawnItems.clearLayers();
+      this.drawnItems.addLayer(e.layer);
       this.setShape(e);
     };
     map.on(L.Draw.Event.CREATED, this._onCreatedEventListener);
     map.on(L.Draw.Event.EDITED, this.setEditedShape);
     map.on(L.Draw.Event.DELETED, this.deleteShape);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.location.shape !== this.props.location.shape) {
+      if (this.props.location.shape) {
+        this.drawnItems.clearLayers();
+        this.setExistingShape(toJS(this.props.location.shape));
+      }
+    }
   }
 
   onGeolocate = async () => {
@@ -158,7 +140,10 @@ class AreaAttr extends Component {
     }
     const location = await this.startGPS();
     const map = this.map.current.leafletElement;
-    map.setView(new L.LatLng(location.latitude, location.longitude), 15);
+    map.setView(
+      new L.LatLng(location.latitude, location.longitude),
+      DEFAULT_LOCATED_ZOOM
+    );
   };
 
   startGPS = () => {
@@ -212,48 +197,26 @@ class AreaAttr extends Component {
   setEditedShape = e => e.layers.eachLayer(layer => this.setShape({ layer }));
 
   setShape = async e => {
+    const { setLocation } = this.props;
     const geojson = e.layer.toGeoJSON();
     const shape = geojson.geometry;
+    setLocation(shape);
 
-    if (geojson.geometry.type === 'Polygon') {
-      const area = Math.floor(geojsonArea.geometry(shape));
-      const [longitude, latitude] = shape.coordinates[0][0];
+    if (shape.type === 'Polygon') {
       this.zoomToPolygonShape(shape);
-      this.props.sample.save({
-        location: {
-          latitude,
-          longitude,
-          area,
-          shape,
-          source: 'map',
-        },
-      });
-      return;
     }
-
-    const area =
-      DEFAULT_TRANSECT_BUFFER * calculateLineLenght(shape.coordinates);
-    const [longitude, latitude] = shape.coordinates[0];
-    this.props.sample.save({
-      location: {
-        latitude,
-        longitude,
-        area,
-        shape,
-        source: 'map',
-      },
-    });
   };
 
   deleteShape = () => {
-    this.props.sample.save({
-      location: null,
-    });
+    this.props.setLocation();
   };
 
   render() {
+    const { isGPSTracking } = this.props;
     return (
-      <div className="leaflet-container">
+      <div
+        className={`leaflet-container ${isGPSTracking ? 'GPStracking' : ''}`}
+      >
         <Map ref={this.map} zoom={DEFAULT_ZOOM} onClick={this.handleClick}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

@@ -58,6 +58,11 @@
   .leaflet-error-draw-tooltip {
     display: none;
   }
+
+  // hide drawing when GPS on
+  &.GPStracking .leaflet-top.leaflet-right {
+    display: none;
+  }
 }
 
 #area-edit-toolbar {

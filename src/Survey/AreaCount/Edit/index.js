@@ -140,6 +140,8 @@ class Container extends React.Component {
     }
 
     const sample = await createNewSample(savedSamples);
+    sample.toggleGPStracking();
+
     appModel.set('areaCountDraftId', sample.cid);
     await appModel.save();
     return sample;
@@ -159,6 +161,7 @@ class Container extends React.Component {
     await appModel.save();
 
     await setSurveyEndTime(sample);
+    sample.toggleGPStracking(false);
 
     sample.save(null, { remote: true });
     history.replace(`/home/user-report`);

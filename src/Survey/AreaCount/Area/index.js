@@ -14,15 +14,41 @@ class Container extends React.Component {
 
   state = {};
 
+  toggleGPStracking = () => {
+    const { match, savedSamples } = this.props;
+    const sample = savedSamples.get(match.params.id);
+    sample.toggleGPStracking();
+  };
+
+  setLocation = shape => {
+    const { match, savedSamples } = this.props;
+    const sample = savedSamples.get(match.params.id);
+    // console.log(JSON.stringify(shape.coordinates.map(coordinates =>
+    //   [...coordinates].reverse().map(float => Number.parseFloat(float))
+    // )));
+
+    sample.setLocation(shape);
+  };
+
   render() {
     const { match, savedSamples } = this.props;
 
     const sample = savedSamples.get(match.params.id);
+    const location = sample.get('location') || {};
+    const isGPSTracking = sample.isGPSRunning();
 
     return (
       <>
-        <Header sample={sample} />
-        <Main sample={sample} />
+        <Header
+          sample={sample}
+          toggleGPStracking={this.toggleGPStracking}
+          isGPSTracking={isGPSTracking}
+        />
+        <Main
+          isGPSTracking={isGPSTracking}
+          location={location}
+          setLocation={this.setLocation}
+        />
       </>
     );
   }
