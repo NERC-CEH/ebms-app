@@ -84,7 +84,8 @@ export default () => (
             ,
             {' '}
             <a href="https://www.ufz.de/index.php">
-              the Helmholtz Centre for Environmental Research (UFZ, Germany)
+              the Helmholtz Centre for Environmental Research (UFZ, Germany) -
+              Josef Settele, Oliver Schweiger
             </a>
             ,
             {' '}
