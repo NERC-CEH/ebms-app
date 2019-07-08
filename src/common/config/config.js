@@ -4,6 +4,7 @@
 import Indicia from 'indicia';
 import DateHelp from 'helpers/date';
 import Wkt from 'wicket';
+import { toJS } from 'mobx';
 
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
@@ -68,22 +69,28 @@ const CONFIG = {
   indicia: {
     host: HOST,
     api_key: process.env.APP_INDICIA_API_KEY,
-    website_id: 120,
-    id: 291,
+    website_id: 118,
+    id: 565,
     webForm: 'enter-app-record',
     attrs: {
       smp: {
         location: {
           values(location, submission) {
-            // area
-            const wkt = new Wkt.Wkt(location.shape);
+            const areaId = CONFIG.indicia.attrs.smp.area.id;
+            const area = parseFloat(location.area.toFixed(0));
+
+            const wkt = new Wkt.Wkt(toJS(location.shape));
+            const wktString = wkt.write();
+
+            const geomAndArea = {
+              [areaId]: area,
+              geom: wktString,
+            };
+
             // eslint-disable-next-line
             submission.fields = {
               ...submission.fields,
-              ...{
-                [CONFIG.indicia.attrs.smp.area.id]: location.area,
-                geom: wkt.write(),
-              },
+              ...geomAndArea,
             };
 
             return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
@@ -92,14 +99,14 @@ const CONFIG = {
           },
         },
         device: {
-          id: 829,
+          id: 922,
           values: {
-            iOS: 14317,
-            Android: 14318,
+            iOS: 2398,
+            Android: 2399,
           },
         },
-        device_version: { id: 836 },
-        app_version: { id: 934 },
+        device_version: { id: 759 },
+        app_version: { id: 1139 },
 
         date: {
           values(date) {
@@ -111,15 +118,15 @@ const CONFIG = {
         },
 
         surveyStartTime: {
-          id: 30,
+          id: 1385,
           values: date => dateTimeFormat.format(new Date(date)),
         },
         surveyEndime: {
-          id: 31,
+          id: 1386,
           values: date => dateTimeFormat.format(new Date(date)),
         },
 
-        area: { id: 933 },
+        area: { id: 723 },
       },
       occ: {
         training: {
@@ -131,7 +138,7 @@ const CONFIG = {
             return taxon.warehouse_id;
           },
         },
-        count: { id: 7 },
+        count: { id: 780 },
       },
     },
   },
