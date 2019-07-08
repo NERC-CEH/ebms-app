@@ -4,7 +4,7 @@
   "title": "eBMS App",
   "description": "eBMS mobile application.",
   "version": "1.0.0",
-  "build": "3",
+  "build": "6",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "build": "NODE_ENV=production grunt",

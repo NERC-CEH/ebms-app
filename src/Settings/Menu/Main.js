@@ -90,7 +90,7 @@ class Component extends React.Component {
               {t('Reset')}
             </ion-item>
             <ion-item>
-              <IonIcon name="fire" size="small" slot="start" />
+              <IonIcon name="flame" size="small" slot="start" />
               <ion-label>{t('Experimental Features')}</ion-label>
               <Toggle
                 onToggle={checked => onToggle('useExperiments', checked)}
@@ -99,7 +99,7 @@ class Component extends React.Component {
             </ion-item>
             {useExperiments && (
               <ion-item>
-                <IonIcon name="pen" size="small" slot="start" />
+                <IonIcon name="create" size="small" slot="start" />
                 <ion-label>{t('Allow Sample Edit')}</ion-label>
                 <Toggle
                   onToggle={checked => onToggle('allowEdit', checked)}

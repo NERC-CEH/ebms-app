@@ -99,7 +99,7 @@ msgstr "Reiniciar"
 msgid "Records"
 msgstr "Archivos"
 
-msgid "Submit All"
+msgid "Upload All"
 msgstr "Enviar todo"
 
 msgid "Remove All Saved"
@@ -295,6 +295,9 @@ msgstr "¿Seguro que quieres borrar esta encuesta?"
 
 msgid "No finished surveys"
 msgstr "No hay encuestas terminadas"
+
+msgid "Finished surveys"
+msgstr ""
 
 msgid "Selected area"
 msgstr "Area seleccionada"
@@ -530,4 +533,10 @@ msgid "button"
 msgstr ""
 
 msgid "No species found with this name"
+msgstr ""
+
+msgid "Allow Sample Edit"
+msgstr ""
+
+msgid "Upload"
 msgstr ""

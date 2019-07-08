@@ -99,7 +99,7 @@ msgstr "Atnaujinti"
 msgid "Records"
 msgstr "Įrašai"
 
-msgid "Submit All"
+msgid "Upload All"
 msgstr "Išsiųsti Visus"
 
 msgid "Remove All Saved"
@@ -293,6 +293,9 @@ msgstr "Ar jūs tikrai norite ištrinti šį įrašą?"
 
 msgid "No finished surveys"
 msgstr "Neturite užbaigtų įrašų"
+
+msgid "Finished surveys"
+msgstr "Užbaigti įrašai"
 
 msgid "Selected area"
 msgstr "Pasirinkta vietovė"
@@ -540,3 +543,9 @@ msgstr ""
 
 msgid "No species found with this name"
 msgstr "Nieko nerasta su tokiu rūšies vardu"
+
+msgid "Allow Sample Edit"
+msgstr "Leisti Modifikuoti Įrašus"
+
+msgid "Upload"
+msgstr "Išsiųsti"
