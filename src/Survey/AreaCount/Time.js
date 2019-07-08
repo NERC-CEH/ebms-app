@@ -12,6 +12,22 @@ import AppHeader from 'common/Components/Header';
 import Toggle from 'common/Components/Toggle';
 import { observer } from 'mobx-react';
 
+function isoDate(date) {
+  const tzo = -date.getTimezoneOffset();
+  const dif = tzo >= 0 ? '+' : '-';
+
+  const pad = num => {
+    const norm = Math.floor(Math.abs(num));
+    return (norm < 10 ? '0' : '') + norm;
+  };
+
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(
+    date.getDate()
+  )}T${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(
+    date.getSeconds()
+  )}${dif}${pad(tzo / 60)}:${pad(tzo % 60)}`;
+}
+
 @observer
 class AreaAttr extends Component {
   static propTypes = {
@@ -31,12 +47,12 @@ class AreaAttr extends Component {
   onChangeSurveyTime = e => {
     const createdOn = new Date(this.sample.metadata.created_on);
     const surveyStartTime = new Date(this.sample.get('surveyStartTime'));
-    const isDefaultStartTime = surveyStartTime.getTime() === createdOn.getTime();
+    const isDefaultStartTime =
+      surveyStartTime.getTime() === createdOn.getTime();
 
     if (isDefaultStartTime) {
       return;
     }
-
 
     this.sample.save({ surveyStartTime: new Date(e.target.value) });
   };
@@ -53,8 +69,8 @@ class AreaAttr extends Component {
   render() {
     const createdOn = new Date(this.sample.metadata.created_on);
     const surveyStartTime = new Date(this.sample.get('surveyStartTime'));
-
-    const isDefaultStartTime = surveyStartTime.getTime() === createdOn.getTime();
+    const isDefaultStartTime =
+      surveyStartTime.getTime() === createdOn.getTime();
 
     return (
       <>
@@ -72,9 +88,9 @@ class AreaAttr extends Component {
               <IonDatetime
                 displayFormat="HH:mm"
                 onIonChange={this.onChangeSurveyTime}
-                value={surveyStartTime.toISOString()}
+                value={isoDate(surveyStartTime)}
                 disabled={isDefaultStartTime}
-                max={(new Date()).toISOString()}
+                max={isoDate(new Date())}
                 doneText={t('Done')}
                 cancelText={t('Cancel')}
               />
