@@ -471,3 +471,6 @@ msgstr "and click on the Reset"
 
 msgid "button"
 msgstr "button"
+
+msgid "No species found with this name"
+msgstr "No species found with this name"

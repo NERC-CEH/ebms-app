@@ -206,6 +206,7 @@ class Container extends React.Component {
           increaseCount={increaseCount}
           navigateToOccurrence={this.navigateToOccurrence}
           areaSurveyListSortedByTime={areaSurveyListSortedByTime}
+          onToggleSpeciesSort={this.toggleSpeciesSort}
         />
       </>
     );

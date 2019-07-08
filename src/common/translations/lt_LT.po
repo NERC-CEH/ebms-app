@@ -537,3 +537,6 @@ msgstr ""
 
 msgid "button"
 msgstr ""
+
+msgid "No species found with this name"
+msgstr "Nieko nerasta su tokiu rūšies vardu"

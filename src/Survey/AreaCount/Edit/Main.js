@@ -51,6 +51,7 @@ class AreaCount extends Component {
     sample: PropTypes.object.isRequired,
     deleteOccurrence: PropTypes.func.isRequired,
     navigateToOccurrence: PropTypes.func.isRequired,
+    onToggleSpeciesSort: PropTypes.func.isRequired,
     areaSurveyListSortedByTime: PropTypes.bool.isRequired,
     increaseCount: PropTypes.func.isRequired,
   };
@@ -81,7 +82,7 @@ class AreaCount extends Component {
     return (
       <>
         <div id="species-list-sort">
-          <IonButton fill="clear" size="small" onClick={this.toggleSpeciesSort}>
+          <IonButton fill="clear" size="small" onClick={this.props.onToggleSpeciesSort}>
             <IonIcon name="md-funnel" />
           </IonButton>
         </div>
