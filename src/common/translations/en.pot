@@ -92,8 +92,8 @@ msgstr "Reset"
 msgid "Records"
 msgstr "Records"
 
-msgid "Submit All"
-msgstr "Submit All"
+msgid "Upload All"
+msgstr "Upload All"
 
 msgid "Remove All Saved"
 msgstr "Remove All Saved"

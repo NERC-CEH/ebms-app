@@ -36,30 +36,18 @@ const Collection = Indicia.Collection.extend({
     return Promise.all(toWait);
   },
 
-  setAllToSend() {
-    Log('SavedSamples: setting all samples to send.');
+  async uploadAllSaved() {
+    Log('SavedSamples: uploading all samples.');
 
-    const toWait = [];
-    this.models.forEach(sample => {
-      const validPromise = sample.setToSend();
-      if (!validPromise) {
-        return;
-      }
-      toWait.push(validPromise);
-    });
-    return Promise.all(toWait).then(() => {
-      const toWaitSend = [];
-      this.models.forEach(sample => {
-        const validPromise = sample.save(null, { remote: true });
-        if (!validPromise) {
-          return;
+    for (let index = 0; index < this.models.length; index += 1) {
+      const sample = this.models[index];
+      if (sample.metadata.saved) {
+        const errors = await sample.validateRemote(); // eslint-disable-line
+        if (!errors) {
+          sample.save(null, { remote: true });
         }
-        toWaitSend.push(validPromise);
-      });
-      // return Promise.all(toWaitSend);
-      // no promise return since we don't want wait till all are submitted
-      // as this can be done in the background
-    });
+      }
+    }
   },
 
   /**

@@ -23,6 +23,8 @@ describe('App Model', () => {
       'feedbackGiven',
       'areaSurveyListSortedByTime',
       'areaCountDraftId',
+      'useExperiments',
+      'allowEdit',
     ]);
   });
 });
