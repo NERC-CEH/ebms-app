@@ -5,6 +5,26 @@ import Indicia from 'indicia';
 import DateHelp from 'helpers/date';
 import Wkt from 'wicket';
 import { toJS } from 'mobx';
+import L from 'leaflet';
+
+
+function transformToMeters(coordinates) {
+  return coordinates.map(([lng, lat]) => {
+    const { x, y } = L.Projection.SphericalMercator.project({ lat, lng });
+    return [x, y];
+  });
+}
+function getGeomString(shape) {
+  const geoJSON = toJS(shape);
+  if (geoJSON.type === 'Polygon') {
+    geoJSON.coordinates[0] = transformToMeters(geoJSON.coordinates[0])
+  } else {
+    geoJSON.coordinates = transformToMeters(geoJSON.coordinates)
+  }
+
+  const wkt = new Wkt.Wkt(geoJSON);
+  return wkt.write();
+}
 
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
@@ -77,11 +97,10 @@ const CONFIG = {
         location: {
           values(location, submission) {
             const areaId = CONFIG.indicia.attrs.smp.area.id;
-            const wkt = new Wkt.Wkt(toJS(location.shape));
 
             const geomAndArea = {
               [areaId]: location.area,
-              geom: wkt.write(),
+              geom: getGeomString(location.shape),
             };
 
             // eslint-disable-next-line
