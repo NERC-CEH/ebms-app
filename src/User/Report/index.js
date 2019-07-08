@@ -23,6 +23,7 @@ function byCreateTime(occ1, occ2) {
 class Component extends React.Component {
   static propTypes = {
     savedSamples: PropTypes.object.isRequired,
+    appModel: PropTypes.object.isRequired,
   };
 
   state = {
@@ -34,7 +35,7 @@ class Component extends React.Component {
   };
 
   getSavedSamplesList() {
-    const { savedSamples } = this.props;
+    const { savedSamples, appModel } = this.props;
 
     const savedSurveys = savedSamples.models
       .filter(sample => sample.metadata.saved)
@@ -50,13 +51,14 @@ class Component extends React.Component {
       );
     }
 
+    const allowEdit = appModel.get('allowEdit')
     return (
       <IonList>
         <IonItemDivider>
           <IonLabel>{t('Finished surveys')}</IonLabel>
         </IonItemDivider>
         {savedSurveys.map(sample => (
-          <Survey key={sample.cid} sample={sample} />
+          <Survey key={sample.cid} sample={sample} allowEdit={allowEdit} />
         ))}
       </IonList>
     );

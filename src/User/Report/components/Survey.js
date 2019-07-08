@@ -32,13 +32,17 @@ function deleteSurvey(sample) {
   });
 }
 
-const Survey = observer(({ sample }) => {
+const Survey = observer(({ sample, allowEdit }) => {
   const date = new Date(sample.metadata.created_on);
   const prettyDate = date.toLocaleDateString();
   const speciesCount = sample.occurrences.models.length;
+
+  const isSent = sample.metadata.server_on;
+  const href = allowEdit && !isSent ? `#/survey/${sample.cid}/edit` : null;
+
   return (
     <IonItemSliding>
-      <IonItem>
+      <IonItem href={href}>
         <IonLabel>
           <h3>
             <b>{prettyDate}</b>
@@ -58,6 +62,7 @@ const Survey = observer(({ sample }) => {
 
 Survey.propTypes = {
   sample: PropTypes.object.isRequired,
+  allowEdit: PropTypes.bool,
 };
 
 export default Survey;

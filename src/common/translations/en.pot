@@ -278,6 +278,9 @@ msgstr "Are you sure you want to delete this survey?"
 msgid "No finished surveys"
 msgstr "No finished surveys"
 
+msgid "Finished surveys"
+msgstr "Finished surveys"
+
 msgid "Selected area"
 msgstr "Selected area"
 
@@ -474,3 +477,9 @@ msgstr "button"
 
 msgid "No species found with this name"
 msgstr "No species found with this name"
+
+msgid "Allow Sample Edit"
+msgstr "Allow Sample Edit"
+
+msgid "Upload"
+msgstr "Upload"

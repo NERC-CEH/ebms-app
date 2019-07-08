@@ -13,6 +13,9 @@ const getDefaultAttrs = () => ({
   feedbackGiven: false,
   areaSurveyListSortedByTime: false,
   areaCountDraftId: null,
+  
+  useExperiments: false,
+  allowEdit: false,
 });
 
 class AppModel {

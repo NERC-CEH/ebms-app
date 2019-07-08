@@ -10,6 +10,7 @@ import {
 } from '@ionic/react';
 import { Route } from 'react-router-dom';
 import savedSamples from 'saved_samples';
+import appModel from 'app_model';
 import PrivateRoute from 'common/Components/PrivateRoute';
 import Report from './Report';
 import Help from '../Info/Help';
@@ -28,7 +29,9 @@ const Component = () => {
               path="/:tab(home/user-report)"
               render={() => (
                 <PrivateRoute
-                  component={() => <User savedSamples={savedSamples} />}
+                  component={() => (
+                    <User savedSamples={savedSamples} appModel={appModel} />
+                  )}
                 />
               )}
               exact

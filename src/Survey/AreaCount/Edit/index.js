@@ -156,13 +156,20 @@ class Container extends React.Component {
       return;
     }
 
-    sample.metadata.saved = true;
     appModel.set('areaCountDraftId', null);
     await appModel.save();
 
     await setSurveyEndTime(sample);
     sample.toggleGPStracking(false);
 
+    if (appModel.get('allowEdit') && !sample.metadata.saved) {
+      sample.metadata.saved = true;
+      sample.save();
+      history.replace(`/home/user-report`);
+      return;
+    }
+
+    sample.metadata.saved = true;
     sample.save(null, { remote: true });
     history.replace(`/home/user-report`);
   };
@@ -195,10 +202,15 @@ class Container extends React.Component {
     }
 
     const isTraining = this.state.sample.metadata.training;
-
+    const isEditing =
+      appModel.get('allowEdit') && this.state.sample.metadata.saved;
     return (
       <>
-        <Header onSubmit={this.onSubmit} isTraining={isTraining} />
+        <Header
+          onSubmit={this.onSubmit}
+          isTraining={isTraining}
+          isEditing={isEditing}
+        />
         <Main
           sample={this.state.sample}
           onSubmit={this.onSubmit}

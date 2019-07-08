@@ -5,7 +5,6 @@ import Toggle from 'common/Components/Toggle';
 import { IonContent, IonPopover, IonIcon } from '@ionic/react';
 import alert from 'common/helpers/alert';
 
-
 function resetDialog(resetApp) {
   alert({
     header: t('Reset'),
@@ -33,6 +32,8 @@ class Component extends React.Component {
     resetApp: PropTypes.func.isRequired,
     onToggle: PropTypes.func.isRequired,
     useTraining: PropTypes.bool.isRequired,
+    useExperiments: PropTypes.bool.isRequired,
+    allowEdit: PropTypes.bool.isRequired,
   };
 
   state = { showPopover: false };
@@ -42,7 +43,13 @@ class Component extends React.Component {
   };
 
   render() {
-    const { resetApp, onToggle, useTraining } = this.props;
+    const {
+      resetApp,
+      onToggle,
+      useTraining,
+      useExperiments,
+      allowEdit,
+    } = this.props;
 
     const ToDoPopover = (
       <IonPopover
@@ -93,6 +100,24 @@ class Component extends React.Component {
               <IonIcon name="undo" size="small" slot="start" />
               {t('Reset')}
             </ion-item>
+            <ion-item>
+              <IonIcon name="fire" size="small" slot="start" />
+              <ion-label>{t('Experimental Features')}</ion-label>
+              <Toggle
+                onToggle={checked => onToggle('useExperiments', checked)}
+                checked={useExperiments}
+              />
+            </ion-item>
+            {useExperiments && (
+              <ion-item>
+                <IonIcon name="pen" size="small" slot="start" />
+                <ion-label>{t('Allow Sample Edit')}</ion-label>
+                <Toggle
+                  onToggle={checked => onToggle('allowEdit', checked)}
+                  checked={allowEdit}
+                />
+              </ion-item>
+            )}
           </ion-list>
         </IonContent>
       </>
