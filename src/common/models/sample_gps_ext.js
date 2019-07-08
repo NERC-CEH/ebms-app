@@ -154,9 +154,9 @@ const extension = {
           return;
         }
 
-        const startTime = that.get('surveyStartTime');
+        const startTime = new Date(that.get('surveyStartTime'));
         const defaultSurveyEndTime =
-          new Date(startTime).getTime() + config.DEFAULT_SURVEY_TIME;
+          startTime.getTime() + config.DEFAULT_SURVEY_TIME;
         const isOverDefaultSurveyEndTime =
           defaultSurveyEndTime < new Date().getTime();
         if (isOverDefaultSurveyEndTime) {

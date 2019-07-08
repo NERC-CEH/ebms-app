@@ -89,7 +89,7 @@ function deleteOccurrence(occ) {
 }
 
 function setSurveyEndTime(sample) {
-  const startTime = sample.get('surveyStartTime');
+  const startTime = new Date(sample.get('surveyStartTime'));
   const defaultSurveyEndTime = startTime.getTime() + config.DEFAULT_SURVEY_TIME;
   const isOverDefaultSurveyEndTime =
     defaultSurveyEndTime < new Date().getTime();
