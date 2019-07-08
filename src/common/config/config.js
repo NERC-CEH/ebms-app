@@ -77,14 +77,11 @@ const CONFIG = {
         location: {
           values(location, submission) {
             const areaId = CONFIG.indicia.attrs.smp.area.id;
-            const area = parseFloat(location.area.toFixed(0));
-
             const wkt = new Wkt.Wkt(toJS(location.shape));
-            const wktString = wkt.write();
 
             const geomAndArea = {
-              [areaId]: area,
-              geom: wktString,
+              [areaId]: location.area,
+              geom: wkt.write(),
             };
 
             // eslint-disable-next-line
