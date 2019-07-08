@@ -26,6 +26,20 @@ function resetDialog(resetApp) {
   });
 }
 
+function uploadDialog() {
+  alert({
+    header: t('Uplaod Started'),
+    message: t('Your surveys are being uploaded now.'),
+    buttons: [
+      {
+        text: t('OK'),
+        role: 'cancel',
+        cssClass: 'primary',
+      },
+    ],
+  });
+}
+
 @observer
 class Component extends React.Component {
   static propTypes = {
@@ -47,20 +61,21 @@ class Component extends React.Component {
       uploadAll,
     } = this.props;
 
-   
+    const onUploadAll = () => {
+      uploadAll();
+      uploadDialog();
+    };
+
     return (
       <>
         <IonContent>
           <ion-list lines="full">
             <ion-item-divider>{t('Records')}</ion-item-divider>
-            <ion-item
-              id="submit-all-btn"
-              onClick={() => uploadAll()}
-            >
+            <ion-item id="submit-all-btn" onClick={onUploadAll}>
               <IonIcon name="paper-plane" size="small" slot="start" />
               {t('Upload All')}
             </ion-item>
-   
+
             <ion-item-divider>{t('Application')}</ion-item-divider>
             <ion-item>
               <IonIcon name="school" size="small" slot="start" />
