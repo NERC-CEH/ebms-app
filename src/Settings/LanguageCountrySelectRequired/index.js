@@ -11,9 +11,19 @@ import {
   IonLabel,
 } from '@ionic/react';
 import appModel from 'app_model';
+import { languages, countries } from 'helpers/translator';
 import './styles.scss';
 
 function SelectLanguage({ onSelect }) {
+  const languagesOptions = Object.entries(languages).map(
+    ([value, language]) => (
+      <IonItem key={value}>
+        <IonLabel>{language}</IonLabel>
+        <IonRadio value={value} />
+      </IonItem>
+    )
+  );
+
   return (
     <IonPage id="language-country-select">
       <IonList>
@@ -21,31 +31,23 @@ function SelectLanguage({ onSelect }) {
           <IonIcon name="globe" size="large" />
           <h4>Select your language</h4>
         </div>
-        <IonRadioGroup onIonChange={onSelect}>
-          <IonItem>
-            <IonLabel>English</IonLabel>
-            <IonRadio value="en" />
-          </IonItem>
-
-          <IonItem>
-            <IonLabel>Lietuvių</IonLabel>
-            <IonRadio value="lt_LT" />
-          </IonItem>
-
-          <IonItem>
-            <IonLabel>Español</IonLabel>
-            <IonRadio value="es_ES" />
-          </IonItem>
-        </IonRadioGroup>
+        <IonRadioGroup onIonChange={onSelect}>{languagesOptions}</IonRadioGroup>
       </IonList>
     </IonPage>
   );
 }
 SelectLanguage.propTypes = {
   onSelect: PropTypes.func.isRequired,
-}
+};
 
 function SelectCountry({ onSelect }) {
+  const countriesOptions = Object.entries(countries).map(([value, country]) => (
+    <IonItem key={value}>
+      <IonLabel>{t(country)}</IonLabel>
+      <IonRadio value={value} />
+    </IonItem>
+  ));
+
   return (
     <IonPage id="language-country-select">
       <IonList>
@@ -53,29 +55,14 @@ function SelectCountry({ onSelect }) {
           <IonIcon name="flag" size="large" />
           <h4>{t('Select your country')}</h4>
         </div>
-        <IonRadioGroup onIonChange={onSelect}>
-          <IonItem>
-            <IonLabel>{t('United Kingdom')}</IonLabel>
-            <IonRadio value="UK" />
-          </IonItem>
-
-          <IonItem>
-            <IonLabel>{t('Lithuania')}</IonLabel>
-            <IonRadio value="LT" />
-          </IonItem>
-
-          <IonItem>
-            <IonLabel>{t('Spain')}</IonLabel>
-            <IonRadio value="ES" />
-          </IonItem>
-        </IonRadioGroup>
+        <IonRadioGroup onIonChange={onSelect}>{countriesOptions}</IonRadioGroup>
       </IonList>
     </IonPage>
   );
 }
 SelectCountry.propTypes = {
   onSelect: PropTypes.func.isRequired,
-}
+};
 
 const Component = observer(props => {
   if (!appModel.get('language')) {
