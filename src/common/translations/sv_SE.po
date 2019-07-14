@@ -583,12 +583,14 @@ msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Den här appen stöder fjärilövervakning och bevarande. Klicka på + "
-"knappen nedan för att börja räkna fjärilar."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
-"Du kommer se många förbättringar till den här appen när vi lägger till nya "
-"funktioner under de kommande månaderna."
+
+msgid "Are you sure you want to reset the application to its initial state?"
+msgstr ""
+
+msgid "This will wipe all the locally stored app data!"
+msgstr ""
