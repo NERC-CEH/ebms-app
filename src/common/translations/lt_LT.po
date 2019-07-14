@@ -595,3 +595,6 @@ msgstr "Ar tikrai norite atstatyti aplikaciją į pradinę būseną? "
 
 msgid "This will wipe all the locally stored app data!"
 msgstr "Tai ištrins visus įrenginyje saugomus aplikacijos duomenis!"
+
+msgid "Sweden"
+msgstr "Švedija"

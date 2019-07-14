@@ -23,6 +23,7 @@ export const countries = {
   UK: 'United Kingdom',
   LT: 'Lithuania',
   ES: 'Spain',
+  SE: 'Sweden',
 };
 
 function translate(key) {
