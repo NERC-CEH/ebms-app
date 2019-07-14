@@ -1,10 +1,11 @@
 # Translators:
 # Karolis, 2019
+# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2019\n"
+"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2019\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,7 +39,7 @@ msgid "Please sign in with your eBMS account or register."
 msgstr "Prašome prisijungti prie eBMS sąskaitos arba užsiregistruoti."
 
 msgid "Username or email"
-msgstr "Vartotojo vardas arba e-paštas"
+msgstr "Vartotojo vardas arba el.paštas"
 
 msgid "Password"
 msgstr "Slaptažodis"
@@ -74,7 +75,7 @@ msgid "Credits"
 msgstr "Padėkos"
 
 msgid "Email"
-msgstr "E-paštas"
+msgstr "El.paštas"
 
 msgid "First Name"
 msgstr "Vardas"
@@ -90,7 +91,7 @@ msgstr "Nuostatais"
 
 msgid "Enter your username or email address to request a password reset"
 msgstr ""
-"Įveskite savo vartotojo vardą arba e-paštą tam, kad gautumėte slaptažodžio "
+"Įveskite savo vartotojo vardą arba el,paštą tam, kad gautumėte slaptažodžio "
 "atnaujinimą"
 
 msgid "Reset"
@@ -176,7 +177,7 @@ msgid "Failed to fetch"
 msgstr "Nepavyko prisijungti"
 
 msgid "Incorrect password or email."
-msgstr "Neteisingas prisijungimo vardas arba slaptažodis."
+msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
 
 msgid "Logout"
 msgstr "Atsijungti"
@@ -204,7 +205,7 @@ msgid "OK, got it"
 msgstr "Supratau"
 
 msgid "email is a required field"
-msgstr "e-pašto adresas turi būti užpildytas"
+msgstr "el.pašto adresas turi būti užpildytas"
 
 msgid "firstname is a required field"
 msgstr "vardas turi būti užpildytas"
@@ -352,7 +353,7 @@ msgid "Incorrect password or email"
 msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
 
 msgid "email is not valid"
-msgstr "negalimas e-paštas"
+msgstr "negalimas el.paštas"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
@@ -418,19 +419,19 @@ msgid "Not enough data yet"
 msgstr "Nepakankamai surinkta įrašų"
 
 msgid "How to start a survey"
-msgstr ""
+msgstr "Kaip pradėti apklausą"
 
 msgid "To start a new survey you can press the plus button"
-msgstr ""
+msgstr "Pradėti naują apklausą galite paspaude pliuso mygtuką"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
 
 msgid "Selecting species"
-msgstr ""
+msgstr "Rūšių pasirinkimas"
 
 msgid "Please press the Add"
-msgstr ""
+msgstr "Prašome paspausti Pridėti"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
@@ -438,7 +439,7 @@ msgid ""
 msgstr ""
 
 msgid "Note"
-msgstr ""
+msgstr "Pastaba"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
@@ -473,7 +474,7 @@ msgid ""
 msgstr ""
 
 msgid "Sync. with the website"
-msgstr ""
+msgstr "Sinchronizavimas su interneto svetaine"
 
 msgid "All your saved surveys will be shown on your account page."
 msgstr ""
@@ -491,7 +492,7 @@ msgid "(set for submission & saved locally) will become green"
 msgstr ""
 
 msgid "synced to the database"
-msgstr ""
+msgstr "susinchronizuota su duomenų baze"
 
 msgid ""
 "you have to be signed in to your website account and have a network "
@@ -500,7 +501,7 @@ msgid ""
 msgstr ""
 
 msgid "Delete a record"
-msgstr ""
+msgstr "Įrašo ištrynimas"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
@@ -508,18 +509,22 @@ msgid ""
 msgstr ""
 
 msgid "User"
-msgstr ""
+msgstr "Vartotojas"
 
 msgid "Sign in/out or register"
-msgstr ""
+msgstr "Prisijungimas/Atsijungimas arba Registracija"
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
+"Norėdami prisijungti, pagrandiniame meniu puslapyje paspauskite Prisijungti "
+"arba Registruotis mygtukus ir sekite instrukcijas."
 
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr ""
+"Norėdami atsijungti, pagrandiniame meniu puslapyje paspauskite Atsijungti "
+"mygtuką."
 
 msgid ""
 "after registering a new account you must verify your email address by "
@@ -527,7 +532,7 @@ msgid ""
 msgstr ""
 
 msgid "Other"
-msgstr ""
+msgstr "Likusieji"
 
 msgid "Reset the application"
 msgstr ""
@@ -539,7 +544,7 @@ msgid "and click on the Reset"
 msgstr ""
 
 msgid "button"
-msgstr ""
+msgstr "mygtuko"
 
 msgid "No species found with this name"
 msgstr "Nieko nerasta su tokiu rūšies vardu"
@@ -549,3 +554,13 @@ msgstr "Leisti Modifikuoti Įrašus"
 
 msgid "Upload"
 msgstr "Išsiųsti"
+
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""

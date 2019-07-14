@@ -590,3 +590,13 @@ msgstr "Permitir edición de muestra"
 
 msgid "Upload"
 msgstr "Enviar"
+
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""

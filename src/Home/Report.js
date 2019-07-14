@@ -3,14 +3,30 @@ import {
   IonContent,
   IonList,
   IonItem,
-  IonItemDivider,
-  IonLabel,
 } from '@ionic/react';
 
 const Component = () => (
   <>
-    <IonContent class="ion-padding">
-      <IonList lines="none">
+    <IonContent id="home-report" class="ion-padding">
+      <IonList lines="full">
+        <IonItem class="empty">
+          <span>
+            <p>
+              {t(
+                'This app supports butterfly monitoring and conservation. Click on the + button below to starting counting butterflies.'
+              )}
+            </p>
+            <br />
+            <p>
+              {t(
+                'You will see lots of enhancements to this app as we add in new features over the coming months.'
+              )}
+            </p>
+          </span>
+        </IonItem>
+      </IonList>
+
+      {/* <IonList lines="none">
         <IonItemDivider>
           <IonLabel>{t('TOP RECORDERS')}</IonLabel>
         </IonItemDivider>
@@ -19,7 +35,7 @@ const Component = () => (
           <IonLabel>{t('TOP SPECIES')}</IonLabel>
         </IonItemDivider>
         <IonItem><small>{t('Not enough data yet')}</small></IonItem>
-      </IonList>
+      </IonList> */}
     </IonContent>
   </>
 );

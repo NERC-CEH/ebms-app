@@ -483,3 +483,9 @@ msgstr "Allow Sample Edit"
 
 msgid "Upload"
 msgstr "Upload"
+
+msgid "This app supports butterfly monitoring and conservation. Click on the + button below to starting counting butterflies."
+msgstr "This app supports butterfly monitoring and conservation. Click on the + button below to starting counting butterflies."
+
+msgid "You will see lots of enhancements to this app as we add in new features over the coming months."
+msgstr "You will see lots of enhancements to this app as we add in new features over the coming months."
