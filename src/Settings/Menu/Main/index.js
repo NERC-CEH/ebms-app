@@ -5,6 +5,8 @@ import Toggle from 'common/Components/Toggle';
 import { IonContent, IonIcon } from '@ionic/react';
 import { undo, school, flame } from 'ionicons/icons';
 import alert from 'common/helpers/alert';
+import config from 'config';
+import './styles.scss';
 
 function resetDialog(resetApp) {
   alert({
@@ -41,7 +43,7 @@ class Component extends React.Component {
 
     return (
       <>
-        <IonContent>
+        <IonContent class="app-settings">
           <ion-list lines="full">
             <ion-item-divider>{t('Application')}</ion-item-divider>
             <ion-item>
@@ -65,6 +67,10 @@ class Component extends React.Component {
               />
             </ion-item>
           </ion-list>
+
+          <p className="app-version">
+            {`v${config.version} (${config.build})`}
+          </p>
         </IonContent>
       </>
     );
