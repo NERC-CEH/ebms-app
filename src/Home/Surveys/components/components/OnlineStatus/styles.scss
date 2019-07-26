@@ -1,12 +1,3 @@
-ion-icon.survey-status {
-  margin: 0;
-  margin-top: -15px;
-
-  &.unsent {
-    color: var(--ion-color-danger-shade);
-  }
-
-  &.sent {
-    color: var(--ion-color-success-shade);
-  }
+.survey-status {
+  width: 15px;
 }

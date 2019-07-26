@@ -3,10 +3,10 @@ import {
   IonContent,
   IonList,
   IonItem,
-  // IonSegment,
+  IonSegment,
   IonLabel,
-  // IonSegmentButton,
-  IonItemDivider,
+  IonSegmentButton,
+  IonBadge,
 } from '@ionic/react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
@@ -19,6 +19,46 @@ function byCreateTime(occ1, occ2) {
   return date2.getTime() - date1.getTime();
 }
 
+function getPendingSurveys(surveys) {
+  if (!surveys.length) {
+    return (
+      <IonList lines="full">
+        <IonItem className="empty">
+          <span>{t('No finished pending surveys')}</span>
+        </IonItem>
+      </IonList>
+    );
+  }
+
+  return (
+    <IonList>
+      {surveys.map(sample => (
+        <Survey key={sample.cid} sample={sample} />
+      ))}
+    </IonList>
+  );
+}
+
+function getUploadedSurveys(surveys) {
+  if (!surveys.length) {
+    return (
+      <IonList lines="full">
+        <IonItem className="empty">
+          <span>{t('No uploaded surveys')}</span>
+        </IonItem>
+      </IonList>
+    );
+  }
+
+  return (
+    <IonList>
+      {surveys.map(sample => (
+        <Survey key={sample.cid} sample={sample} />
+      ))}
+    </IonList>
+  );
+}
+
 @observer
 class Component extends React.Component {
   static propTypes = {
@@ -26,66 +66,62 @@ class Component extends React.Component {
   };
 
   state = {
-    segment: 'surveys',
+    segment: 'pending',
   };
 
   onSegmentClick = e => {
     this.setState({ segment: e.detail.value });
   };
 
-  getSavedSamplesList() {
+  getSamplesList(uploaded) {
     const { savedSamples } = this.props;
 
-    const savedSurveys = savedSamples.models
-      .filter(sample => sample.metadata.saved)
+    return savedSamples.models
+      .filter(sample =>
+        sample.metadata.saved && uploaded
+          ? !sample.metadata.synced_on
+          : sample.metadata.synced_on
+      )
       .sort(byCreateTime);
-
-    if (!savedSurveys.length) {
-      return (
-        <IonList lines="full">
-          <IonItem className="empty">
-            <span>{t('No finished surveys')}</span>
-          </IonItem>
-        </IonList>
-      );
-    }
-
-    return (
-      <IonList>
-        <IonItemDivider>
-          <IonLabel>{t('Finished surveys')}</IonLabel>
-        </IonItemDivider>
-        {savedSurveys.map(sample => (
-          <Survey key={sample.cid} sample={sample} />
-        ))}
-      </IonList>
-    );
   }
 
   render() {
     const { segment } = this.state;
-    const savedSamplesList = this.getSavedSamplesList();
 
-    const showingSurveys = segment === 'surveys';
-    // const showingReports = segment === 'reports';
+    const showingPending = segment === 'pending';
+    const showingUploaded = segment === 'uploaded';
+
+    const pendingSurveys = this.getSamplesList(true);
+    const uploadedSurveys = this.getSamplesList();
+
     return (
       <>
         <IonContent id="user-report" class="ion-padding">
-          {/* <IonSegment onIonChange={this.onSegmentClick} value={segment}>
-            <IonSegmentButton value="surveys" checked={showingSurveys}>
-              <IonLabel>{t('Surveys')}</IonLabel>
+          <IonSegment onIonChange={this.onSegmentClick} value={segment}>
+            <IonSegmentButton value="pending" checked={showingPending}>
+              <IonLabel>
+                {t('Pending')}
+                {pendingSurveys.length ? (
+                  <IonBadge color="danger" slot="end">
+                    {pendingSurveys.length}
+                  </IonBadge>
+                ) : null}
+              </IonLabel>
             </IonSegmentButton>
-            <IonSegmentButton value="reports" checked={showingReports} disabled>
-              <IonLabel>{t('Reports')}</IonLabel>
+            <IonSegmentButton value="uploaded" checked={showingUploaded}>
+              <IonLabel>
+                {t('Uploaded')}
+                {uploadedSurveys.length ? (
+                  <IonBadge color="light" slot="end">
+                    {uploadedSurveys.length}
+                  </IonBadge>
+                ) : null}
+              </IonLabel>
             </IonSegmentButton>
-          </IonSegment> */}
+          </IonSegment>
 
-          {showingSurveys && savedSamplesList}
-          {/* {showingReports && (
-            <IonList>
-              <small>TODO: add report</small>
-            </IonList>
-          )} */}
+          {showingPending && getPendingSurveys(pendingSurveys)}
+          {showingUploaded && getUploadedSurveys(uploadedSurveys)}
         </IonContent>
       </>
     );

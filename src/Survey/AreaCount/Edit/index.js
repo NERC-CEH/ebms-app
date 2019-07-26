@@ -167,6 +167,8 @@ class Container extends React.Component {
     sample.toggleGPStracking(false);
 
     if (sample.metadata.saved) {
+      sample.save(null, { remote: true });
+      history.replace(`/home/user-surveys`);
       return;
     }
 

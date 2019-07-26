@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Spinner from 'common/Components/Spinner';
+import { IonSpinner } from '@ionic/react';
+
 import { observer } from 'mobx-react';
-import { IonIcon } from '@ionic/react';
-import { paperPlane } from 'ionicons/icons';
 import './styles.scss';
 
 const Component = observer(props => {
@@ -14,20 +13,11 @@ const Component = observer(props => {
     return null;
   }
 
-  if (sample.remote.synchronising) {
-    return <Spinner />;
+  if (!sample.remote.synchronising) {
+    return null;
   }
 
-  const statusClass = sample.metadata.server_on ? 'sent' : 'unsent';
-
-  return (
-    <IonIcon
-      slot="end"
-      icon={paperPlane}
-      size="small"
-      className={`survey-status ${statusClass}`}
-    />
-  );
+  return <IonSpinner class="survey-status" />;
 });
 
 Component.propTypes = {

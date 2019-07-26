@@ -1,6 +1,12 @@
 #user-report {
   ion-segment {
     margin-bottom: 30px;
+
+    ion-badge {
+      vertical-align: top;
+      margin: 3px;
+      margin-left: 6px;
+    }
   }
 
   .empty {

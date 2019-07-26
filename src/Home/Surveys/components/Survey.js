@@ -38,7 +38,10 @@ const Survey = observer(({ sample }) => {
   const speciesCount = sample.occurrences.models.length;
 
   const isSent = sample.metadata.server_on;
-  const href = !isSent ? `/survey/${sample.cid}/edit` : null;
+  const href =
+    !isSent && !sample.remote.synchronising
+      ? `/survey/${sample.cid}/edit`
+      : null;
 
   return (
     <IonItemSliding>
