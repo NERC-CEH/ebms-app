@@ -29,7 +29,7 @@ function CountdownRenderer({ minutes, seconds, completed }) {
     return t(`Time's up!`);
   }
   return (
-    <span id="countdown" className={minutes < 3 ? 'warn' : ''}>
+    <span className={minutes < 3 ? 'warn' : ''}>
       {`${zeroPad(minutes)}:${zeroPad(seconds)}`}
     </span>
   );
@@ -163,9 +163,9 @@ class AreaCount extends Component {
           >
             <IonIcon icon={time} slot="start" />
             <IonLabel>{t('Duration')}</IonLabel>
-            <IonLabel slot="end">
+            <IonLabel id="countdown" slot="end">
               {isPaused ? (
-                t('Paused')
+                <span className="paused">{t('Paused')}</span>
               ) : (
                 <Countdown date={countdown} renderer={CountdownRenderer} />
               )}
