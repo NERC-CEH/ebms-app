@@ -620,3 +620,6 @@ msgstr "Uppladdad"
 
 msgid "No finished pending surveys"
 msgstr "Tömma"
+
+msgid "No uploaded surveys"
+msgstr "Tömma"

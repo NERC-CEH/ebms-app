@@ -3,8 +3,8 @@
   "id": "uk.ac.ceh.ebms",
   "title": "eBMS App",
   "description": "eBMS mobile application.",
-  "version": "1.0.0",
-  "build": "8",
+  "version": "1.1.0",
+  "build": "1",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "build": "NODE_ENV=production grunt",

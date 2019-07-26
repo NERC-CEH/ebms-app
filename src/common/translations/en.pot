@@ -510,3 +510,6 @@ msgstr "Uploaded"
 
 msgid "No finished pending surveys"
 msgstr "No finished pending surveys"
+
+msgid "No uploaded surveys"
+msgstr "No uploaded surveys"

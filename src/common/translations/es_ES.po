@@ -626,3 +626,6 @@ msgstr "Subido"
 
 msgid "No finished pending surveys"
 msgstr "Nada"
+
+msgid "No uploaded surveys"
+msgstr "Nada"
