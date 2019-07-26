@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { IonIcon } from '@ionic/react';
+import {
+  IonIcon,
+  IonContent,
+  IonLifeCycleContext,
+  IonToolbar,
+  IonTitle,
+} from '@ionic/react';
+import { locate } from 'ionicons/icons';
 import CONFIG from 'config';
 import L from 'leaflet';
 import GPS from 'helpers/GPS';
@@ -20,9 +27,12 @@ const DEFAULT_SHAPE_COLOR = '#9733ff';
 
 @observer
 class AreaAttr extends Component {
+  static contextType = IonLifeCycleContext;
+
   static propTypes = {
     location: PropTypes.object.isRequired,
     setLocation: PropTypes.func.isRequired,
+    areaPretty: PropTypes.string.isRequired,
     isGPSTracking: PropTypes.bool.isRequired,
   };
 
@@ -105,9 +115,21 @@ class AreaAttr extends Component {
 
   componentDidMount() {
     const map = this.map.current.leafletElement;
+
+    // correct map size after animation
+    const { location } = this.props;
+
+    this.context.onIonViewDidEnter(() => {
+      map.whenReady(() => {
+        map.invalidateSize();
+        if (location.shape) {
+          this.setExistingShape(location.shape);
+        }
+      });
+    });
+
     this.drawnItems = this.addDrawControls();
 
-    const { location } = this.props;
     if (location.shape) {
       this.setExistingShape(location.shape);
     } else {
@@ -212,11 +234,12 @@ class AreaAttr extends Component {
   };
 
   render() {
-    const { isGPSTracking } = this.props;
+    const { isGPSTracking, areaPretty } = this.props;
     return (
-      <div
-        className={`leaflet-container ${isGPSTracking ? 'GPStracking' : ''}`}
-      >
+      <IonContent className={`${isGPSTracking ? 'GPStracking' : ''}`}>
+        <IonToolbar id="area-edit-toolbar">
+          <IonTitle slot="start">{areaPretty}</IonTitle>
+        </IonToolbar>
         <Map ref={this.map} zoom={DEFAULT_ZOOM} onClick={this.handleClick}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -228,11 +251,11 @@ class AreaAttr extends Component {
               className={`geolocate-btn ${this.state.locating ? 'spin' : ''}`}
               onClick={this.onGeolocate}
             >
-              <IonIcon name="md-locate" size="large" />
+              <IonIcon icon={locate} mode="md" size="large" />
             </button>
           </LeafletControl>
         </Map>
-      </div>
+      </IonContent>
     );
   }
 }

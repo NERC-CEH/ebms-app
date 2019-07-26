@@ -191,7 +191,7 @@ class Container extends React.Component {
   };
 
   render() {
-    const { appModel } = this.props;
+    const { appModel, history } = this.props;
 
     const areaSurveyListSortedByTime = appModel.get(
       'areaSurveyListSortedByTime'
@@ -219,6 +219,7 @@ class Container extends React.Component {
           navigateToOccurrence={this.navigateToOccurrence}
           areaSurveyListSortedByTime={areaSurveyListSortedByTime}
           onToggleSpeciesSort={this.toggleSpeciesSort}
+          history={history}
         />
       </>
     );

@@ -3,6 +3,7 @@ import React from 'react';
 // import Device from 'helpers/device';
 // import CONFIG from 'config';
 import { IonContent, IonIcon, IonPopover } from '@ionic/react';
+import { person } from 'ionicons/icons';
 import AppHeader from 'common/Components/Header';
 
 // function reset(data) {
@@ -140,7 +141,7 @@ class Component extends React.Component {
 
           <ion-list lines="full">
             <ion-item error={this.state.userNameError}>
-              <IonIcon name="person" faint size="small" slot="start" />
+              <IonIcon icon={person} faint size="small" slot="start" />
               <ion-input
                 ref={this.userName}
                 required

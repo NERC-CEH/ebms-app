@@ -261,7 +261,7 @@ Society
           </ul>
         </IonItem>
         <IonItem>
-          <img src="images/sponsors.png" alt="" />
+          <img src="/images/sponsors.png" alt="" />
         </IonItem>
       </IonList>
     </IonContent>

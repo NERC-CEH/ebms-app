@@ -17,13 +17,14 @@ const SRC_DIR = path.resolve(ROOT_DIR, 'src');
 
 const config = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  entry: [path.join(SRC_DIR, 'index.js'), path.join(SRC_DIR, 'vendor.js')],
+  entry: ['index.js', 'vendor.js'],
   devtool: 'source-map',
   target: 'web',
 
   output: {
     path: DIST_DIR,
     filename: '[name].js',
+    publicPath: '/',
   },
   resolve: {
     modules: [
@@ -153,7 +154,6 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      inject: true,
       sourceMap: true,
       // https://github.com/marcelklehr/toposort/issues/20
       chunksSortMode: 'none',
@@ -165,6 +165,9 @@ const config = {
     children: false,
   },
   cache: true,
+  devServer: {
+    historyApiFallback: true,
+  },
 };
 
 if (process.env.APP_MANUAL_TESTING) {

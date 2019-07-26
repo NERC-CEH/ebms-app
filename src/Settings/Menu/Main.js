@@ -3,6 +3,8 @@ import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import Toggle from 'common/Components/Toggle';
 import { IonContent, IonIcon } from '@ionic/react';
+import { undo, paperPlane, school, create, flame } from 'ionicons/icons';
+
 import alert from 'common/helpers/alert';
 
 function resetDialog(resetApp) {
@@ -72,13 +74,13 @@ class Component extends React.Component {
           <ion-list lines="full">
             <ion-item-divider>{t('Records')}</ion-item-divider>
             <ion-item id="submit-all-btn" onClick={onUploadAll}>
-              <IonIcon name="paper-plane" size="small" slot="start" />
+              <IonIcon icon={paperPlane} size="small" slot="start" />
               {t('Upload All')}
             </ion-item>
 
             <ion-item-divider>{t('Application')}</ion-item-divider>
             <ion-item>
-              <IonIcon name="school" size="small" slot="start" />
+              <IonIcon icon={school} size="small" slot="start" />
               <ion-label>{t('Training Mode')}</ion-label>
               <Toggle
                 onToggle={checked => onToggle('useTraining', checked)}
@@ -86,11 +88,11 @@ class Component extends React.Component {
               />
             </ion-item>
             <ion-item id="app-reset-btn" onClick={() => resetDialog(resetApp)}>
-              <IonIcon name="undo" size="small" slot="start" />
+              <IonIcon icon={undo} size="small" slot="start" />
               {t('Reset')}
             </ion-item>
             <ion-item>
-              <IonIcon name="flame" size="small" slot="start" />
+              <IonIcon icon={flame} size="small" slot="start" />
               <ion-label>{t('Experimental Features')}</ion-label>
               <Toggle
                 onToggle={checked => onToggle('useExperiments', checked)}
@@ -99,7 +101,7 @@ class Component extends React.Component {
             </ion-item>
             {useExperiments && (
               <ion-item>
-                <IonIcon name="create" size="small" slot="start" />
+                <IonIcon icon={create} size="small" slot="start" />
                 <ion-label>{t('Allow Sample Edit')}</ion-label>
                 <Toggle
                   onToggle={checked => onToggle('allowEdit', checked)}

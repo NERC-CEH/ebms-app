@@ -1,5 +1,6 @@
 import React from 'react';
 import { IonContent, IonList, IonItemDivider, IonIcon } from '@ionic/react';
+import { settings, undo, person, add, send } from 'ionicons/icons';
 import Collapse from 'common/Components/Collapse/index';
 
 export default () => (
@@ -10,7 +11,7 @@ export default () => (
         <Collapse title={t('How to start a survey')}>
           <p>
             {t('To start a new survey you can press the plus button')}
-            <IonIcon name="add" />
+            <IonIcon icon={add} />
             {t(
               'in the home page footer. This will start a new 15 minute survey.'
             )}
@@ -19,7 +20,7 @@ export default () => (
             <strong>{t('Selecting species')}</strong>
             <br />
             {t('Please press the Add')}
-            <IonIcon name="add" />
+            <IonIcon icon={add} />
             {t(
               'button in your new survey edit page. This will bring you to the taxa search page. After selecting the species, this will add it to your survey list.'
             )}
@@ -30,7 +31,8 @@ export default () => (
 :
             </b>
             {' '}
-            {t('you can increment the species count by tapping on the number next to the species name in the list.'
+            {t(
+              'you can increment the species count by tapping on the number next to the species name in the list.'
             )}
             <br />
             <br />
@@ -79,18 +81,20 @@ export default () => (
         <Collapse title={t('Sync. with the website')}>
           <p>
             {t('All your saved surveys will be shown on your account page.')}
-            <IonIcon name="person" />
+            <IonIcon icon={person} />
             <br />
             <br />
-            {t(`By default a survey is in a 'draft' mode which will not be sent to the database until the 'Finish' button in the header is clicked. The application will try to submit your record once there is a good network connection.`)}
+            {t(
+              `By default a survey is in a 'draft' mode which will not be sent to the database until the 'Finish' button in the header is clicked. The application will try to submit your record once there is a good network connection.`
+            )}
             <br />
             <br />
             {t('If the record has reached the database a red')}
             {' '}
-            <IonIcon name="send" style={{ color: 'red' }} />
+            <IonIcon icon={send} style={{ color: 'red' }} />
             {t('(set for submission & saved locally) will become green')}
             {' '}
-            <IonIcon name="send" style={{ color: 'green' }} />
+            <IonIcon icon={send} style={{ color: 'green' }} />
             {' '}
 (
             {t('synced to the database')}
@@ -120,10 +124,14 @@ export default () => (
         <IonItemDivider>{t('User')}</IonItemDivider>
         <Collapse title={t('Sign in/out or register')}>
           <p>
-            {t('To login, open the main menu page click Login or Register buttons and follow the instructions.')}
+            {t(
+              'To login, open the main menu page click Login or Register buttons and follow the instructions.'
+            )}
             <br />
             <br />
-            {t('To logout, visit the main menu page and click the logout button.')}
+            {t(
+              'To logout, visit the main menu page and click the logout button.'
+            )}
             .
             <br />
             <br />
@@ -144,11 +152,11 @@ export default () => (
           <p>
             {t('Go to the application settings page')}
             {' '}
-            <IonIcon name="settings" /> 
+            <IonIcon icon={settings} /> 
             {' '}
             {t('and click on the Reset')}
             {' '}
-            <IonIcon name="undo" />
+            <IonIcon icon={undo} />
             {t('button')}
 .
           </p>

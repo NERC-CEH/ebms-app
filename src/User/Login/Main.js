@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonContent, IonIcon, IonButton, IonList } from '@ionic/react';
+import { IonContent, IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
+import { key, person, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 import InputWithValidation from 'common/Components/InputWithValidation';
 import './styles.scss';
@@ -34,14 +35,14 @@ class Component extends React.Component {
                 <InputWithValidation
                   name="name"
                   placeholder={t('Username or email')}
-                  icon="person"
+                  icon={person}
                   type="text"
                   {...props}
                 />
                 <InputWithValidation
                   name="password"
                   placeholder={t('Password')}
-                  icon="key"
+                  icon={key}
                   type={showPassword ? 'text' : 'password'}
                   {...props}
                 >
@@ -51,7 +52,7 @@ class Component extends React.Component {
                     fill="clear"
                   >
                     <IonIcon
-                      name={showPassword ? 'eye' : 'eye-off'}
+                      icon={showPassword ? eye : eyeOff}
                       faint
                       size="small"
                     />
@@ -62,14 +63,15 @@ class Component extends React.Component {
                 <IonButton expand="full" color="primary" type="submit">
                   {t('Sign in')}
                 </IonButton>
+              </IonList>
 
-                <ion-button href="#user/register" expand="full" color="light">
+              <IonList>
+                <IonItem href="/user/register" detail>
                   {t('Register')}
-                </ion-button>
-
-                <ion-button href="#user/reset" expand="full" color="light">
+                </IonItem>
+                <IonItem href="/user/reset" detail>
                   {t('Forgot password?')}
-                </ion-button>
+                </IonItem>
               </IonList>
             </Form>
           )}

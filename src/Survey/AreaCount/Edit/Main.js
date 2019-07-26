@@ -11,6 +11,7 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
+import { map, time, addCircleOutline, mdFunnel } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import Countdown, { zeroPad } from 'react-countdown-now';
 import config from 'config';
@@ -49,6 +50,7 @@ const speciesOccAddedTimeSort = (occ1, occ2) => {
 class AreaCount extends Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
     deleteOccurrence: PropTypes.func.isRequired,
     navigateToOccurrence: PropTypes.func.isRequired,
     onToggleSpeciesSort: PropTypes.func.isRequired,
@@ -82,8 +84,12 @@ class AreaCount extends Component {
     return (
       <>
         <div id="species-list-sort">
-          <IonButton fill="clear" size="small" onClick={this.props.onToggleSpeciesSort}>
-            <IonIcon name="md-funnel" />
+          <IonButton
+            fill="clear"
+            size="small"
+            onClick={this.props.onToggleSpeciesSort}
+          >
+            <IonIcon icon={mdFunnel} />
           </IonButton>
         </div>
 
@@ -129,13 +135,13 @@ class AreaCount extends Component {
     return (
       <IonContent id="area-count-edit">
         <IonList lines="full">
-          <IonItem href={`#survey/${sample.cid}/edit/area`} detail>
-            <IonIcon name="map" slot="start" />
+          <IonItem href={`/survey/${sample.cid}/edit/area`} detail>
+            <IonIcon icon={map} slot="start" />
             <IonLabel>{t('Area')}</IonLabel>
             <IonLabel slot="end">{areaPretty}</IonLabel>
           </IonItem>
-          <IonItem href={`#survey/${sample.cid}/edit/time`} detail>
-            <IonIcon name="time" slot="start" />
+          <IonItem href={`/survey/${sample.cid}/edit/time`} detail>
+            <IonIcon icon={time} slot="start" />
             <IonLabel>{t('Duration')}</IonLabel>
             <IonLabel slot="end">
               <Countdown date={countdown} renderer={CountdownRenderer} />
@@ -145,9 +151,11 @@ class AreaCount extends Component {
           <IonButton
             color="primary"
             id="add"
-            href={`#survey/${sample.cid}/edit/taxa`}
+            onClick={() => {
+              this.props.history.push(`/survey/${sample.cid}/edit/taxa`);
+            }}
           >
-            <IonIcon name="add-circle-outline" slot="start" />
+            <IonIcon icon={addCircleOutline} slot="start" />
             <IonLabel>{t('Add')}</IonLabel>
           </IonButton>
         </IonList>

@@ -1,52 +1,59 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
-import { IonContent, IonIcon } from '@ionic/react';
+import {
+  IonContent,
+  IonIcon,
+  IonList,
+  IonItem,
+  IonItemDivider,
+} from '@ionic/react';
+import { settings, exit, person, personAdd, lock, heart } from 'ionicons/icons';
 
 const Component = observer(({ isLoggedIn, user, logOut }) => {
   return (
     <IonContent>
-      <ion-list lines="full">
+      <IonList lines="full">
         {isLoggedIn && (
-          <ion-item detail id="logout-button" onClick={logOut}>
-            <IonIcon name="exit" size="small" slot="start" />
+          <IonItem detail id="logout-button" onClick={logOut}>
+            <IonIcon icon={exit} size="small" slot="start" />
             {t('Logout')}
             {': '}
             {user.firstname} 
             {' '}
             {user.secondname}
-          </ion-item>
+          </IonItem>
         )}
 
         {!isLoggedIn && (
-          <ion-item href="#user/login" detail>
-            <IonIcon name="person" size="small" slot="start" />
+          <IonItem href="/user/login" detail>
+            <IonIcon icon={person} size="small" slot="start" />
             {t('Login')}
-          </ion-item>
+          </IonItem>
         )}
 
         {!isLoggedIn && (
-          <ion-item href="#user/register" detail>
-            <IonIcon name="person-add" size="small" slot="start" />
+          <IonItem href="/user/register" detail>
+            <IonIcon icon={personAdd} size="small" slot="start" />
             {t('Register')}
-          </ion-item>
+          </IonItem>
         )}
 
-        <ion-item-divider>{t('Settings')}</ion-item-divider>
-        <ion-item href="#settings" detail>
-          <IonIcon name="settings" size="small" slot="start" />
+        <IonItemDivider>{t('Settings')}</IonItemDivider>
+        <IonItem href="/settings" detail>
+          <IonIcon icon={settings} size="small" slot="start" />
           {t('App')}
-        </ion-item>
-        <ion-item-divider>{t('Info')}</ion-item-divider>
-        <ion-item href="https://butterfly-monitoring.net/privacy-notice" detail>
-          <IonIcon name="lock" size="small" slot="start" />
+        </IonItem>
+        <IonItemDivider>{t('Info')}</IonItemDivider>
+        <IonItem href="https://butterfly-monitoring.net/privacy-notice" target="_blank" detail>
+          <IonIcon icon={lock} size="small" slot="start" />
           {t('Privacy Policy')}
-        </ion-item>
-        <ion-item href="#info/credits" detail>
-          <IonIcon name="heart" size="small" slot="start" />
+        </IonItem>
+        <IonItem href="/info/credits" detail>
+          <IonIcon icon={heart} size="small" slot="start" />
           {t('Credits')}
-        </ion-item>
-      </ion-list>
+        </IonItem>
+      </IonList>
     </IonContent>
   );
 });

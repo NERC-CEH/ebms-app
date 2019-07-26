@@ -1,5 +1,5 @@
 .leaflet-container {
-  height: 100vh;
+  height: calc(100% - 33px); // accomodate subheader
   width: 100vw;
   background-color: #5d5d5d;
 
@@ -58,11 +58,11 @@
   .leaflet-error-draw-tooltip {
     display: none;
   }
+}
 
-  // hide drawing when GPS on
-  &.GPStracking .leaflet-top.leaflet-right {
-    display: none;
-  }
+// hide drawing when GPS on
+ion-content.GPStracking .leaflet-top.leaflet-right {
+  display: none;
 }
 
 #area-edit-toolbar {

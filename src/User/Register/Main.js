@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonContent, IonIcon, IonButton, IonList } from '@ionic/react';
+import {  person, mail, key, lock, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 import InputWithValidation from 'common/Components/InputWithValidation';
 import ToggleWithValidation from 'common/Components/ToggleWithValidation';
@@ -31,28 +32,28 @@ class Component extends React.Component {
                 <InputWithValidation
                   name="email"
                   placeholder={t('Email')}
-                  icon="mail"
+                  icon={mail}
                   type="email"
                   {...props}
                 />
                 <InputWithValidation
                   name="firstname"
                   placeholder={t('First Name')}
-                  icon="person"
+                  icon={person}
                   type="text"
                   {...props}
                 />
                 <InputWithValidation
                   name="secondname"
                   placeholder={t('Surname')}
-                  icon="person"
+                  icon={person}
                   type="text"
                   {...props}
                 />
                 <InputWithValidation
                   name="password"
                   placeholder={t('Password')}
-                  icon="key"
+                  icon={key}
                   type={showPassword ? 'text' : 'password'}
                   {...props}
                 >
@@ -62,7 +63,7 @@ class Component extends React.Component {
                     fill="clear"
                   >
                     <IonIcon
-                      name={showPassword ? 'eye' : 'eye-off'}
+                      icon={showPassword ? eye : eyeOff}
                       faint
                       size="small"
                     />
@@ -77,7 +78,7 @@ class Component extends React.Component {
                       <a href="https://butterfly-monitoring.net/privacy-notice">{t('Terms and Conditions')}</a>
                     </>
                   )}
-                  icon="lock"
+                  icon={lock}
                   type="terms"
                   {...props}
                 />

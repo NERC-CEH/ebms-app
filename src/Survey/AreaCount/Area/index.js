@@ -37,14 +37,23 @@ class Container extends React.Component {
     const location = sample.get('location') || {};
     const isGPSTracking = sample.isGPSRunning();
 
+    const { area } = location;
+
+    let areaPretty;
+    if (area) {
+      areaPretty = `${t('Selected area')}: ${area.toLocaleString()} m²`;
+    } else {
+      areaPretty = t('Please draw your area on the map');
+    }
+
     return (
       <>
         <Header
-          sample={sample}
           toggleGPStracking={this.toggleGPStracking}
           isGPSTracking={isGPSTracking}
         />
         <Main
+          areaPretty={areaPretty}
           isGPSTracking={isGPSTracking}
           location={location}
           setLocation={this.setLocation}

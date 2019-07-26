@@ -8,6 +8,7 @@ import {
   IonContent,
   IonLabel,
 } from '@ionic/react';
+import { time, create } from 'ionicons/icons';
 import AppHeader from 'common/Components/Header';
 import Toggle from 'common/Components/Toggle';
 import { observer } from 'mobx-react';
@@ -78,12 +79,12 @@ class AreaAttr extends Component {
         <IonContent>
           <IonList lines="full">
             <IonItem>
-              <IonIcon name="time" size="small" slot="start" />
+              <IonIcon icon={time} size="small" slot="start" />
               <IonLabel text-wrap>{`${t('Use survey create time')} `}</IonLabel>
               <Toggle onToggle={this.onToggle} checked={isDefaultStartTime} />
             </IonItem>
             <IonItem>
-              <IonIcon name="create" faint size="small" slot="start" />
+              <IonIcon icon={create} faint size="small" slot="start" />
               <IonLabel>HH:mm</IonLabel>
               <IonDatetime
                 displayFormat="HH:mm"

@@ -10,6 +10,7 @@ import {
   IonRadio,
   IonLabel,
 } from '@ionic/react';
+import { globe, flag } from 'ionicons/icons';
 import appModel from 'app_model';
 import { languages, countries } from 'helpers/translator';
 import './styles.scss';
@@ -28,7 +29,7 @@ function SelectLanguage({ onSelect }) {
     <IonPage id="language-country-select">
       <IonList>
         <div className="header">
-          <IonIcon name="globe" size="large" />
+          <IonIcon icon={globe} size="large" />
           <h4>Select your language</h4>
         </div>
         <IonRadioGroup onIonChange={onSelect}>{languagesOptions}</IonRadioGroup>
@@ -52,7 +53,7 @@ function SelectCountry({ onSelect }) {
     <IonPage id="language-country-select">
       <IonList>
         <div className="header">
-          <IonIcon name="flag" size="large" />
+          <IonIcon icon={flag} size="large" />
           <h4>{t('Select your country')}</h4>
         </div>
         <IonRadioGroup onIonChange={onSelect}>{countriesOptions}</IonRadioGroup>

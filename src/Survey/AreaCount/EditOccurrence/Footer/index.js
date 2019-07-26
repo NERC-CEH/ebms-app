@@ -7,7 +7,8 @@ import { observer } from 'mobx-react';
 import alert from 'common/helpers/alert';
 import actionSheet from 'common/helpers/actionSheet';
 import { PhotoSwipe } from 'react-photoswipe';
-import { IonIcon, IonButton } from '@ionic/react';
+import { IonIcon, IonButton, IonFooter } from '@ionic/react';
+import { close, camera } from 'ionicons/icons';
 import ImageModel from 'common/models/image';
 import 'react-photoswipe/lib/photoswipe.css';
 import './styles.scss';
@@ -172,7 +173,7 @@ class Footer extends Component {
             class="delete"
             onClick={() => photoDelete(img)}
           >
-            <IonIcon name="close" />
+            <IonIcon icon={close} />
           </IonButton>
           <img
             src={thumbnail}
@@ -191,7 +192,7 @@ class Footer extends Component {
         <>
           <IonIcon
             class="non-cordova-img-picker-logo"
-            name="camera"
+            icon={camera}
             size="large"
           />
           <input type="file" accept="image/*" onChange={this.photoUpload} />
@@ -200,7 +201,7 @@ class Footer extends Component {
     }
     return (
       <IonButton fill="clear" onClick={this.photoSelect}>
-        <IonIcon name="camera" />
+        <IonIcon icon={camera} />
       </IonButton>
     );
   };
@@ -211,7 +212,7 @@ class Footer extends Component {
     const isSynchronising = sample.remote.synchronising;
 
     return (
-      <footer>
+      <IonFooter>
         {this.getGallery()}
         <div id="edit-footer">
           <div
@@ -222,7 +223,7 @@ class Footer extends Component {
             <div id="img-array">{this.getImageArray()}</div>
           </div>
         </div>
-      </footer>
+      </IonFooter>
     );
   }
 }

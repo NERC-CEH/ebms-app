@@ -7,7 +7,7 @@ import './styles.scss';
 function getFinishButton(onSubmit, isEditing) {
   const label = isEditing ? t('Upload') : t('Finish');
   return (
-    <IonButton fill="solid" onClick={onSubmit}>
+    <IonButton onClick={onSubmit}>
       {label}
     </IonButton>
   );

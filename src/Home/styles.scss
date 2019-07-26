@@ -1,4 +1,4 @@
-.app-home-page {
+#main {
   ion-tab-bar {
     contain: none;
 
@@ -10,6 +10,19 @@
       box-shadow: inset 0px 0 2px 0px;
       border-radius: 50%;
     }
+  }
+
+  £ > ion-router-outlet > div > div {
+    display: inherit !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    contain: size layout style;
   }
 }
 

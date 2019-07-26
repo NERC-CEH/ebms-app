@@ -7,6 +7,7 @@ import {
   IonLabel,
   IonContent,
 } from '@ionic/react';
+import { removeCircleOutline, addCircleOutline } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import './styles.scss';
 
@@ -38,7 +39,7 @@ class EditOccurrence extends Component {
 
     return (
       <IonContent id="area-count-occurrence-edit">
-        <IonItem href={`#survey/${sample.cid}/edit/occ/${occurrence.cid}/taxa`}>
+        <IonItem href={`/survey/${sample.cid}/edit/occ/${occurrence.cid}/taxa`}>
           <IonLabel>{t('Species')}</IonLabel>
           <IonLabel slot="end">{species}</IonLabel>
         </IonItem>
@@ -51,7 +52,7 @@ class EditOccurrence extends Component {
               size="default"
               onClick={this.increaseCount}
             >
-              <IonIcon name="add-circle-outline" />
+              <IonIcon icon={addCircleOutline} />
             </IonButton>
             <span>{count}</span>
             <IonButton
@@ -60,12 +61,12 @@ class EditOccurrence extends Component {
               size="default"
               onClick={this.decreaseCount}
             >
-              <IonIcon name="remove-circle-outline" />
+              <IonIcon icon={removeCircleOutline} />
             </IonButton>
           </div>
         </IonItem>
         <IonItem
-          href={`#survey/${sample.cid}/edit/occ/${occurrence.cid}/comment`}
+          href={`/survey/${sample.cid}/edit/occ/${occurrence.cid}/comment`}
         >
           <IonLabel>{t('Comment')}</IonLabel>
           <IonLabel slot="end">{comment}</IonLabel>

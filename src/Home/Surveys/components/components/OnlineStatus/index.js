@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Spinner from 'common/Components/Spinner';
 import { observer } from 'mobx-react';
 import { IonIcon } from '@ionic/react';
+import { paperPlane } from 'ionicons/icons';
 import './styles.scss';
 
 const Component = observer(props => {
@@ -22,7 +23,7 @@ const Component = observer(props => {
   return (
     <IonIcon
       slot="end"
-      name="paper-plane"
+      icon={paperPlane}
       size="small"
       className={`survey-status ${statusClass}`}
     />

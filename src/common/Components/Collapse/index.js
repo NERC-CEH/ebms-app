@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonItem, IonIcon } from '@ionic/react';
+import { remove, add } from 'ionicons/icons';
 import './styles.scss';
 
 class Collapse extends Component {
@@ -23,7 +24,7 @@ class Collapse extends Component {
         }`}
       >
         <div className="header">{this.props.title}</div>
-        <IonIcon name={this.state.open ? 'remove' : 'add'} />
+        <IonIcon icon={this.state.open ? remove : add} />
         {this.state.open && <div className="body">{this.props.children}</div>}
       </IonItem>
     );

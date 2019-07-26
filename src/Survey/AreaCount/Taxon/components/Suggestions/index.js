@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Species from './components/Species';
-import './styles.scss';
 
 /**
  * Some common names might be identical so needs to add

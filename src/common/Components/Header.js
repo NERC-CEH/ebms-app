@@ -8,14 +8,11 @@ import {
   IonBackButton,
 } from '@ionic/react';
 
-const defaultOnLeave = () => window.history.back();
-
 const Header = ({ title, subheader, rightSlot }) => (
   <IonHeader>
     <IonToolbar>
       <IonButtons slot="start">
         <IonBackButton
-          onClick={defaultOnLeave}
           text={t('Back')}
           defaultHref="/"
         />
