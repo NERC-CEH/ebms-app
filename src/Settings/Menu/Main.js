@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Toggle from 'common/Components/Toggle';
 import { IonContent, IonIcon } from '@ionic/react';
 import { undo, school, flame } from 'ionicons/icons';
-
 import alert from 'common/helpers/alert';
 
 function resetDialog(resetApp) {
@@ -38,12 +37,7 @@ class Component extends React.Component {
   };
 
   render() {
-    const {
-      resetApp,
-      onToggle,
-      useTraining,
-      useExperiments,
-    } = this.props;
+    const { resetApp, onToggle, useTraining, useExperiments } = this.props;
 
     return (
       <>

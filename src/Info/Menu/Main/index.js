@@ -9,10 +9,14 @@ import {
   IonItemDivider,
 } from '@ionic/react';
 import { settings, exit, person, personAdd, lock, heart } from 'ionicons/icons';
+import './styles.scss';
+import './logo.png';
 
 const Component = observer(({ isLoggedIn, user, logOut }) => {
   return (
-    <IonContent>
+    <IonContent class="app-menu">
+      <img src="/images/logo.png" alt="app logo" />
+
       <IonList lines="full">
         {isLoggedIn && (
           <IonItem detail id="logout-button" onClick={logOut}>
@@ -45,7 +49,11 @@ const Component = observer(({ isLoggedIn, user, logOut }) => {
           {t('App')}
         </IonItem>
         <IonItemDivider>{t('Info')}</IonItemDivider>
-        <IonItem href="https://butterfly-monitoring.net/privacy-notice" target="_blank" detail>
+        <IonItem
+          href="https://butterfly-monitoring.net/privacy-notice"
+          target="_blank"
+          detail
+        >
           <IonIcon icon={lock} size="small" slot="start" />
           {t('Privacy Policy')}
         </IonItem>
