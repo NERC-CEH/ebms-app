@@ -50,18 +50,18 @@ class EditOccurrence extends Component {
               shape="round"
               fill="clear"
               size="default"
-              onClick={this.increaseCount}
+              onClick={this.decreaseCount}
             >
-              <IonIcon icon={addCircleOutline} />
+              <IonIcon icon={removeCircleOutline} />
             </IonButton>
             <span>{count}</span>
             <IonButton
               shape="round"
               fill="clear"
               size="default"
-              onClick={this.decreaseCount}
+              onClick={this.increaseCount}
             >
-              <IonIcon icon={removeCircleOutline} />
+              <IonIcon icon={addCircleOutline} />
             </IonButton>
           </div>
         </IonItem>
