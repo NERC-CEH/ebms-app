@@ -165,13 +165,13 @@ class Container extends React.Component {
     if (appModel.get('allowEdit') && !sample.metadata.saved) {
       sample.metadata.saved = true;
       sample.save();
-      history.replace(`/home/user-report`);
+      history.replace(`/home/user-surveys`);
       return;
     }
 
     sample.metadata.saved = true;
     sample.save(null, { remote: true });
-    history.replace(`/home/user-report`);
+    history.replace(`/home/user-surveys`);
   };
 
   navigateToOccurrence = occ => {
