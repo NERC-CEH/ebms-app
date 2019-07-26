@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import Sample from 'sample';
-import config from 'config';
 import alert from 'common/helpers/alert';
 import Header from './Header';
 import Main from './Main';
@@ -167,15 +166,12 @@ class Container extends React.Component {
     await setSurveyEndTime(sample);
     sample.toggleGPStracking(false);
 
-    if (appModel.get('allowEdit') && !sample.metadata.saved) {
-      sample.metadata.saved = true;
-      sample.save();
-      history.replace(`/home/user-surveys`);
+    if (sample.metadata.saved) {
       return;
     }
 
     sample.metadata.saved = true;
-    sample.save(null, { remote: true });
+    sample.save();
     history.replace(`/home/user-surveys`);
   };
 
@@ -207,8 +203,7 @@ class Container extends React.Component {
     }
 
     const isTraining = this.state.sample.metadata.training;
-    const isEditing =
-      appModel.get('allowEdit') && this.state.sample.metadata.saved;
+    const isEditing = this.state.sample.metadata.saved;
     return (
       <>
         <Header

@@ -15,7 +15,6 @@ const getDefaultAttrs = () => ({
   areaCountDraftId: null,
   
   useExperiments: false,
-  allowEdit: false,
 });
 
 class AppModel {

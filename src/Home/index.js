@@ -10,7 +10,6 @@ import {
 } from '@ionic/react';
 import { person, add, helpCircle, menu, home } from 'ionicons/icons';
 import savedSamples from 'saved_samples';
-import appModel from 'app_model';
 import PrivateRoute from 'common/Components/PrivateRoute';
 import Report from './Report';
 import Help from './Help';
@@ -28,12 +27,7 @@ const Component = () => {
             path="/home/:tab(user-surveys)"
             render={() => (
               <PrivateRoute
-                component={() => (
-                  <UserSurveys
-                    savedSamples={savedSamples}
-                    appModel={appModel}
-                  />
-                )}
+                component={() => <UserSurveys savedSamples={savedSamples} />}
               />
             )}
             exact

@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import Toggle from 'common/Components/Toggle';
 import { IonContent, IonIcon } from '@ionic/react';
-import { undo, paperPlane, school, create, flame } from 'ionicons/icons';
+import { undo, school, flame } from 'ionicons/icons';
 
 import alert from 'common/helpers/alert';
 
@@ -28,29 +28,13 @@ function resetDialog(resetApp) {
   });
 }
 
-function uploadDialog() {
-  alert({
-    header: t('Uplaod Started'),
-    message: t('Your surveys are being uploaded now.'),
-    buttons: [
-      {
-        text: t('OK'),
-        role: 'cancel',
-        cssClass: 'primary',
-      },
-    ],
-  });
-}
-
 @observer
 class Component extends React.Component {
   static propTypes = {
     resetApp: PropTypes.func.isRequired,
     onToggle: PropTypes.func.isRequired,
-    uploadAll: PropTypes.func.isRequired,
     useTraining: PropTypes.bool.isRequired,
     useExperiments: PropTypes.bool.isRequired,
-    allowEdit: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -59,25 +43,12 @@ class Component extends React.Component {
       onToggle,
       useTraining,
       useExperiments,
-      allowEdit,
-      uploadAll,
     } = this.props;
-
-    const onUploadAll = () => {
-      uploadAll();
-      uploadDialog();
-    };
 
     return (
       <>
         <IonContent>
           <ion-list lines="full">
-            <ion-item-divider>{t('Records')}</ion-item-divider>
-            <ion-item id="submit-all-btn" onClick={onUploadAll}>
-              <IonIcon icon={paperPlane} size="small" slot="start" />
-              {t('Upload All')}
-            </ion-item>
-
             <ion-item-divider>{t('Application')}</ion-item-divider>
             <ion-item>
               <IonIcon icon={school} size="small" slot="start" />
@@ -99,16 +70,6 @@ class Component extends React.Component {
                 checked={useExperiments}
               />
             </ion-item>
-            {useExperiments && (
-              <ion-item>
-                <IonIcon icon={create} size="small" slot="start" />
-                <ion-label>{t('Allow Sample Edit')}</ion-label>
-                <Toggle
-                  onToggle={checked => onToggle('allowEdit', checked)}
-                  checked={allowEdit}
-                />
-              </ion-item>
-            )}
           </ion-list>
         </IonContent>
       </>

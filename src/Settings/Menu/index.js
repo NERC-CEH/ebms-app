@@ -18,7 +18,6 @@ function onToggle(setting, checked) {
   Log('Settings:Menu:Controller: setting toggled.');
   if (setting === 'useExperiments' && !checked) {
     appModel.set('useExperiments', false);
-    appModel.set('allowEdit', false);
     appModel.save();
     return;
   }
@@ -27,14 +26,9 @@ function onToggle(setting, checked) {
   appModel.save();
 }
 
-function uploadAll() {
-  savedSamples.uploadAllSaved();
-}
-
 const Container = observer(() => {
   const useTraining = appModel.get('useTraining');
   const useExperiments = appModel.get('useExperiments');
-  const allowEdit = appModel.get('allowEdit');
 
   return (
     <>
@@ -42,10 +36,8 @@ const Container = observer(() => {
       <Main
         useTraining={useTraining}
         useExperiments={useExperiments}
-        allowEdit={allowEdit}
         resetApp={resetApp}
         onToggle={onToggle}
-        uploadAll={uploadAll}
       />
     </>
   );
