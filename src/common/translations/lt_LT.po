@@ -601,3 +601,12 @@ msgstr "Švedija"
 
 msgid "Paused"
 msgstr "Pauzė"
+
+msgid "Pending"
+msgstr "Neišsiųsta"
+
+msgid "Uploaded"
+msgstr "Išsiųsta"
+
+msgid "No finished pending surveys"
+msgstr "Neturite užbaigtų neišsiųstų įrašų"

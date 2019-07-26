@@ -45,7 +45,7 @@ const Survey = observer(({ sample }) => {
 
   return (
     <IonItemSliding>
-      <IonItem href={href}>
+      <IonItem href={href} detail={href}>
         <IonLabel>
           <h3>
             <b>{prettyDate}</b>

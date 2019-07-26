@@ -1,11 +1,12 @@
 # Translators:
 # Carin Kullberg <listrefjarilar@ckg.se>, 2019
 # Lars Pettersson <lars.pettersson@biol.lu.se>, 2019
+# Karolis, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Lars Pettersson <lars.pettersson@biol.lu.se>, 2019\n"
+"Last-Translator: Karolis, 2019\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -610,3 +611,12 @@ msgstr "Sverige"
 
 msgid "Paused"
 msgstr "Paus"
+
+msgid "Pending"
+msgstr "Avvaktan"
+
+msgid "Uploaded"
+msgstr "Uppladdad"
+
+msgid "No finished pending surveys"
+msgstr "Tömma"
