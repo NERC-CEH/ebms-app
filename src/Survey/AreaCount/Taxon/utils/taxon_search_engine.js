@@ -6,6 +6,7 @@ import _ from 'lodash';
 import Log from 'helpers/log';
 import species from 'common/data/species.data.json';
 import searchSciNames from './scientificNamesSearch';
+import searchCommonNames from './commonNamesSearch';
 
 let loading = false;
 
@@ -65,6 +66,8 @@ const API = {
 
     // normalize the search phrase
     const normSearchPhrase = searchPhrase.toLowerCase();
+
+    searchCommonNames(species, normSearchPhrase, results, maxResults);
 
     // search sci names
     searchSciNames(

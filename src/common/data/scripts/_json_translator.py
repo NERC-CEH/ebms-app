@@ -17,6 +17,8 @@ import pdb
 
 OUTPUT_TAXON_ID = 1
 INPUT_TAXON_ID = OUTPUT_TAXON_ID
+with open('./names.json', 'r') as f:
+  names = json.load(f)
 
 
 def split_row(row):
@@ -80,7 +82,18 @@ def add_to_genus(genus, row_data):
 
     row_data[2] = list(filter(lambda x: x, map(parse_abundance, row_data[2])))
     # add row to genus
-    genus[2].append(copy.copy(row_data))
+    english = ''
+    english_names = list(filter(lambda x: (int(x['preferred_taxa_taxon_list_id']) == row_data[0] and (x['language_iso'] == 'eng')), names['data']))
+    if (len(english_names) > 0) : 
+      english = english_names[0]['taxon']
+
+    swedish = ''
+    swedish_names = list(filter(lambda x: (int(x['preferred_taxa_taxon_list_id']) == row_data[0] and (x['language_iso'] == 'swe')), names['data']))
+    if (len(swedish_names) > 0) : 
+      swedish = swedish_names[0]['taxon']
+
+    common_names = [english, swedish]
+    genus[2].append(copy.copy([*row_data, common_names]))
 
 
 def process_row(data, row):

@@ -42,8 +42,10 @@ CountdownRenderer.propTypes = {
 };
 
 const speciesNameSort = (occ1, occ2) => {
-  const taxon1 = occ1.get('taxon').scientific_name;
-  const taxon2 = occ2.get('taxon').scientific_name;
+  const foundInName1 = occ1.get('taxon').found_in_name;
+  const foundInName2 = occ2.get('taxon').found_in_name;
+  const taxon1 = occ1.get('taxon')[foundInName1];
+  const taxon2 = occ2.get('taxon')[foundInName2];
   return taxon1.localeCompare(taxon2);
 };
 
@@ -113,7 +115,7 @@ class AreaCount extends Component {
                   {occ.get('count')}
                 </IonButton>
                 <IonLabel onClick={() => navigateToOccurrence(occ)}>
-                  {occ.get('taxon').scientific_name}
+                  {occ.get('taxon')[occ.get('taxon').found_in_name]}
                 </IonLabel>
               </IonItem>
               <IonItemOptions side="end">
@@ -140,7 +142,10 @@ class AreaCount extends Component {
     const areaPretty = area && `${area.toLocaleString()} m²`;
 
     const startTime = new Date(sample.get('surveyStartTime'));
-    const countdown = startTime.getTime() + config.DEFAULT_SURVEY_TIME + sample.metadata.pausedTime;
+    const countdown =
+      startTime.getTime() +
+      config.DEFAULT_SURVEY_TIME +
+      sample.metadata.pausedTime;
     const isPaused = sample.timerPausedTime.time;
 
     return (

@@ -53,7 +53,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Corsican or Sardinian Small Tortoiseshell", ""]
       ],
       [
         432425,
@@ -105,7 +106,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Peacock", "P\u00e5f\u00e5gel\u00f6ga"]
       ],
       [
         432426,
@@ -157,7 +159,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Small Tortoiseshell", "N\u00e4sselfj\u00e4ril"]
       ]
     ]
   ],
@@ -215,7 +218,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Arctic Blue", ""]
       ],
       [
         432325,
@@ -267,7 +271,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Bosnian blue", ""]
       ],
       [
         432327,
@@ -319,7 +324,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Glandon Blue", ""]
       ],
       [
         432323,
@@ -371,7 +377,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Cranberry Blue", "Violett bl\u00e5vinge"]
       ],
       [
         432322,
@@ -423,7 +430,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Alpine Blue", ""]
       ],
       [
         432324,
@@ -475,7 +483,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Gavarnie Blue", ""]
       ],
       [
         432326,
@@ -527,7 +536,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Zullich\u00b4s Blue", ""]
       ]
     ]
   ],
@@ -586,7 +596,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Orange-tip", "Aurorafj\u00e4ril"]
       ],
       [
         432246,
@@ -638,7 +649,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Eastern Orange-tip", ""]
       ],
       [
         432243,
@@ -690,7 +702,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Provence Orange-tip", ""]
       ],
       [
         432245,
@@ -742,7 +755,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Gr\u00fcner's Orange-tip", ""]
       ]
     ]
   ],
@@ -800,7 +814,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Lesser Purple Emperor", "Aspskimmerfj\u00e4ril"]
       ],
       [
         432418,
@@ -852,7 +867,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["", "S\u00e4lgskimmerfj\u00e4ril/Aspskimmerfj\u00e4ril"]
       ],
       [
         432415,
@@ -904,7 +920,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Purple Emperor", "S\u00e4lgskimmerfj\u00e4ril"]
       ],
       [
         432416,
@@ -956,7 +973,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Freyer's Purple Emperor", ""]
       ]
     ]
   ],
@@ -1015,7 +1033,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Ringlet", "Luktgr\u00e4sfj\u00e4ril"]
       ]
     ]
   ],
@@ -1074,7 +1093,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Black-veined White", "Hagtornsfj\u00e4ril"]
       ]
     ]
   ],
@@ -1132,7 +1152,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Map", "Kartfj\u00e4ril"]
       ]
     ]
   ],
@@ -1190,7 +1211,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["False Apollo", ""]
       ]
     ]
   ],
@@ -1248,7 +1270,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["False Grayling", ""]
       ]
     ]
   ],
@@ -1306,7 +1329,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Pallas' Fritillary", "Skuggp\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432389,
@@ -1358,7 +1382,8 @@
           { "SK": "I" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Cardinal", ""]
       ],
       [
         432388,
@@ -1410,7 +1435,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Silver-washed Fritillary", "Silverstreckad p\u00e4rlemorfj\u00e4ril"]
       ]
     ]
   ],
@@ -1468,7 +1494,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Brown Argus", "R\u00f6dfl\u00e4ckig bl\u00e5vinge"]
       ],
       [
         432340,
@@ -1520,7 +1547,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Blue Argus", ""]
       ],
       [
         432343,
@@ -1572,7 +1600,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Northern Brown Argus", "Midsommarbl\u00e5vinge"]
       ],
       [
         432341,
@@ -1624,7 +1653,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Brown Argus", ""]
       ],
       [
         432344,
@@ -1676,7 +1706,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Mountain Argus", ""]
       ],
       [
         432339,
@@ -1728,7 +1759,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Argus", ""]
       ],
       [
         432342,
@@ -1780,7 +1812,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Silvery Argus", "Turkos bl\u00e5vinge"]
       ]
     ]
   ],
@@ -1839,7 +1872,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["African Babul Blue", ""]
       ],
       [
         432282,
@@ -1891,7 +1925,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Bright Babul Blue", ""]
       ]
     ]
   ],
@@ -1949,7 +1984,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Alaskan fritillary", ""]
       ],
       [
         432414,
@@ -2001,7 +2037,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432400,
@@ -2053,7 +2090,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Cranberry Fritillary", "Myrp\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432413,
@@ -2105,7 +2143,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Arctic Fritillary", "Arktisk p\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432406,
@@ -2157,7 +2196,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Weaver's Fritillary", "Violett p\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432395,
@@ -2209,7 +2249,8 @@
           { "SK": "Ex" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Bog Fritillary", "Svartringlad p\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432405,
@@ -2261,7 +2302,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Pearl-bordered Fritillary", "Prydlig p\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432409,
@@ -2313,7 +2355,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Freija's Fritillary", "Frejas p\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432408,
@@ -2365,7 +2408,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Frigga's Fritillary", "Friggas p\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432396,
@@ -2417,7 +2461,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Balkan Fritillary", ""]
       ],
       [
         432407,
@@ -2469,7 +2514,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Dusky-winged Fritillary", "Dv\u00e4rgp\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432399,
@@ -2521,7 +2567,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Mountain Fritillary", "Fj\u00e4llp\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432411,
@@ -2573,7 +2620,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432397,
@@ -2625,7 +2673,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Shepherd's Fritillary", ""]
       ],
       [
         432402,
@@ -2677,7 +2726,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Polar Fritillary", "H\u00f6gnordisk p\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432404,
@@ -2729,6 +2779,10 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
+        ],
+        [
+          "Small Pearl-bordered Fritillary",
+          "Brunfl\u00e4ckig p\u00e4rlemorfj\u00e4ril"
         ]
       ],
       [
@@ -2781,7 +2835,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432721,
@@ -2833,7 +2888,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Thor's Fritillary", "B\u00e4ckp\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432412,
@@ -2885,7 +2941,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "Ex" }
-        ]
+        ],
+        ["Titania's Fritillary", "Lundp\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432401,
@@ -2937,7 +2994,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ]
     ]
   ],
@@ -2995,7 +3053,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Zeller's Skipper", ""]
       ]
     ]
   ],
@@ -3053,7 +3112,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Marbled Fritillary", ""]
       ],
       [
         432385,
@@ -3105,7 +3165,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Twin-spot Fritillary", ""]
       ],
       [
         432386,
@@ -3157,6 +3218,10 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
+        ],
+        [
+          "Lesser Marbled Fritillary",
+          "\u00c4lggr\u00e4sp\u00e4rlemorfj\u00e4ril"
         ]
       ]
     ]
@@ -3215,7 +3280,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Great Banded Grayling", ""]
       ]
     ]
   ],
@@ -3273,7 +3339,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Geranium Bronze", "Tr\u00e4dg\u00e5rdsbl\u00e5vinge"]
       ]
     ]
   ],
@@ -3331,7 +3398,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Chapman's Green Hairstreak", ""]
       ],
       [
         432271,
@@ -3383,7 +3451,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Sovinsky's Green Hairstreak", ""]
       ],
       [
         432270,
@@ -3435,7 +3504,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Green Hairstreak", "Gr\u00f6nsnabbvinge"]
       ],
       [
         432269,
@@ -3487,7 +3557,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ]
     ]
   ],
@@ -3545,7 +3616,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Mallow Skipper", ""]
       ],
       [
         432166,
@@ -3597,7 +3669,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Marbled Skipper", ""]
       ],
       [
         432164,
@@ -3649,7 +3722,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Tufted Marbled Skipper", ""]
       ],
       [
         432162,
@@ -3701,7 +3775,8 @@
           { "SK": "Ex" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Marbled Skipper", ""]
       ],
       [
         432163,
@@ -3753,7 +3828,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Oriental Marbled Skipper", ""]
       ],
       [
         432165,
@@ -3805,7 +3881,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["False Marbled Skipper", ""]
       ],
       [
         432157,
@@ -3857,7 +3934,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["False Mallow Skipper", ""]
       ]
     ]
   ],
@@ -3915,7 +3993,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Chequered Skipper", "Gulfl\u00e4ckig glanssmygare"]
       ],
       [
         432139,
@@ -3967,7 +4046,8 @@
           { "SK": "Ex" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Northern Chequered Skipper", "Svartfl\u00e4ckig glanssmygare"]
       ]
     ]
   ],
@@ -4025,7 +4105,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["African Migrant", ""]
       ]
     ]
   ],
@@ -4083,7 +4164,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Holly Blue", "Tostebl\u00e5vinge"]
       ]
     ]
   ],
@@ -4141,7 +4223,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Two-tailed Pasha", "Pasha"]
       ]
     ]
   ],
@@ -4200,7 +4283,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["The Hermit", "Vitbandad gr\u00e4sfj\u00e4ril"]
       ],
       [
         432541,
@@ -4252,7 +4336,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Dark Rockbrown", ""]
       ],
       [
         432540,
@@ -4304,7 +4389,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Hermit", ""]
       ]
     ]
   ],
@@ -4362,7 +4448,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Levantine Leopard", ""]
       ]
     ]
   ],
@@ -4420,7 +4507,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432475,
@@ -4472,7 +4560,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Pearly Heath", "P\u00e4rlgr\u00e4sfj\u00e4ril"]
       ],
       [
         432470,
@@ -4524,7 +4613,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Corsican Heath", ""]
       ],
       [
         432463,
@@ -4576,7 +4666,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Dusky Heath", ""]
       ],
       [
         432473,
@@ -4628,7 +4719,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Alpine Heath", ""]
       ],
       [
         432722,
@@ -4680,7 +4772,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Chestnut Heath", "Darrgr\u00e4sfj\u00e4ril"]
       ],
       [
         432472,
@@ -4732,7 +4825,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Scarce Heath", "Brun gr\u00e4sfj\u00e4ril"]
       ],
       [
         432471,
@@ -4784,7 +4878,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Russian Heath", ""]
       ],
       [
         432462,
@@ -4836,7 +4931,8 @@
           { "SK": "Ex" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["False Ringlet", ""]
       ],
       [
         432474,
@@ -4888,7 +4984,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Balkan Heath", ""]
       ],
       [
         432465,
@@ -4940,7 +5037,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Small Heath", "Kamgr\u00e4sfj\u00e4ril"]
       ],
       [
         432461,
@@ -4992,7 +5090,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432467,
@@ -5044,7 +5143,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Eastern Large Heath", ""]
       ],
       [
         432464,
@@ -5096,7 +5196,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Cretan Small Heath", ""]
       ],
       [
         432466,
@@ -5148,7 +5249,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large Heath", "Starrgr\u00e4sfj\u00e4ril"]
       ]
     ]
   ],
@@ -5207,7 +5309,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Berger's Clouded Yellow", "Sydlig h\u00f6fj\u00e4ril"]
       ],
       [
         432204,
@@ -5259,7 +5362,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Greek Clouded Yellow", ""]
       ],
       [
         432209,
@@ -5311,7 +5415,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Balkan Clouded Yellow", ""]
       ],
       [
         432205,
@@ -5363,7 +5468,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Lesser Clouded Yellow", ""]
       ],
       [
         432207,
@@ -5415,7 +5521,8 @@
           { "SK": "M" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Clouded Yellow", "R\u00f6dgul h\u00f6fj\u00e4ril"]
       ],
       [
         432206,
@@ -5467,7 +5574,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Eastern Pale Clouded Yellow", ""]
       ],
       [
         432212,
@@ -5519,7 +5627,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Northern Clouded Yellow", "H\u00f6gnordisk h\u00f6fj\u00e4ril"]
       ],
       [
         432710,
@@ -5571,7 +5680,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Pale Clouded Yellow", "Ljusgul h\u00f6fj\u00e4ril"]
       ],
       [
         432712,
@@ -5623,6 +5733,10 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
+        ],
+        [
+          "Pale/Berger's Clouded Yellow",
+          "Ljusgul h\u00f6fj\u00e4ril/Sydlig h\u00f6fj\u00e4ril"
         ]
       ],
       [
@@ -5675,7 +5789,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Danube Clouded Yellow", ""]
       ],
       [
         432210,
@@ -5727,7 +5842,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Moorland Clouded Yellow", "Svavelgul h\u00f6fj\u00e4ril"]
       ],
       [
         432203,
@@ -5779,7 +5895,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Mountain Clouded Yellow", ""]
       ],
       [
         432211,
@@ -5831,7 +5948,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Pale Arctic Clouded Yellow", "Fj\u00e4llh\u00f6fj\u00e4ril"]
       ]
     ]
   ],
@@ -5889,7 +6007,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Desert Orange-tip", ""]
       ]
     ]
   ],
@@ -5947,7 +6066,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Proven\u00e7al Short-tailed Blue", ""]
       ],
       [
         432310,
@@ -5999,7 +6119,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Short-tailed Blue", "Kortsvansad bl\u00e5vinge"]
       ],
       [
         432311,
@@ -6051,7 +6172,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Eastern Short-tailed Blue", ""]
       ],
       [
         432315,
@@ -6103,7 +6225,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Lorquin's Blue", ""]
       ],
       [
         432314,
@@ -6155,7 +6278,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Small Blue", "Mindre bl\u00e5vinge"]
       ],
       [
         432313,
@@ -6207,7 +6331,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Osiris Blue", ""]
       ]
     ]
   ],
@@ -6265,7 +6390,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Mazarine Blue", "\u00c4ngsbl\u00e5vinge"]
       ]
     ]
   ],
@@ -6323,7 +6449,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Canary Blue", ""]
       ]
     ]
   ],
@@ -6382,7 +6509,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "I" }
-        ]
+        ],
+        ["Plain Tiger", ""]
       ],
       [
         432458,
@@ -6434,7 +6562,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Monarch", "Monark"]
       ]
     ]
   ],
@@ -6493,7 +6622,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["False Mnestra Ringlet", ""]
       ],
       [
         432611,
@@ -6545,7 +6675,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Scotch Argus", ""]
       ],
       [
         432605,
@@ -6597,7 +6728,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Almond-eyed Ringlet", ""]
       ],
       [
         432590,
@@ -6649,7 +6781,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Western Brassy Ringlet", ""]
       ],
       [
         432589,
@@ -6701,7 +6834,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Lorkovic's Brassy Ringlet", ""]
       ],
       [
         432584,
@@ -6753,7 +6887,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Colorado Alpine", ""]
       ],
       [
         432586,
@@ -6805,7 +6940,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Common Brassy Ringlet", ""]
       ],
       [
         432613,
@@ -6857,7 +6993,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["R\u00e4tzer's Ringlet", ""]
       ],
       [
         432579,
@@ -6909,7 +7046,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["White Speck Ringlet", ""]
       ],
       [
         432573,
@@ -6961,7 +7099,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432577,
@@ -7013,7 +7152,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432575,
@@ -7065,7 +7205,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Arctic Ringlet", "Disas gr\u00e4sfj\u00e4ril"]
       ],
       [
         432571,
@@ -7117,7 +7258,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Red-disked Alpine", ""]
       ],
       [
         432569,
@@ -7169,7 +7311,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432574,
@@ -7221,7 +7364,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Lapland Ringlet", "Gulringad gr\u00e4sfj\u00e4ril"]
       ],
       [
         432615,
@@ -7273,7 +7417,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Mountain Ringlet", ""]
       ],
       [
         432596,
@@ -7325,7 +7470,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spring Ringlet", ""]
       ],
       [
         432595,
@@ -7377,7 +7523,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Eriphyle Ringlet", ""]
       ],
       [
         432597,
@@ -7429,7 +7576,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large Ringlet", "\u00d6stlig gr\u00e4sfj\u00e4ril"]
       ],
       [
         432570,
@@ -7481,7 +7629,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Banded Alpine", ""]
       ],
       [
         432616,
@@ -7533,7 +7682,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Yellow-banded Ringlet", ""]
       ],
       [
         432592,
@@ -7585,7 +7735,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Silky Ringlet", ""]
       ],
       [
         432602,
@@ -7637,7 +7788,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Gavarnie Ringlet", ""]
       ],
       [
         432582,
@@ -7689,7 +7841,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Brassy Ringlet", ""]
       ],
       [
         432578,
@@ -7741,7 +7894,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432623,
@@ -7793,7 +7947,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Lef\u00e8bvre's Ringlet", ""]
       ],
       [
         432599,
@@ -7845,7 +8000,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Arran Brown", "Skogsgr\u00e4sfj\u00e4ril"]
       ],
       [
         432730,
@@ -7897,7 +8053,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Yellow-spotted Ringlet", ""]
       ],
       [
         432610,
@@ -7949,7 +8106,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Woodland Ringlet", "H\u00f6gnordisk gr\u00e4sfj\u00e4ril"]
       ],
       [
         432607,
@@ -8001,7 +8159,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Lesser Mountain Ringlet", ""]
       ],
       [
         432622,
@@ -8053,7 +8212,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Black Ringlet", ""]
       ],
       [
         432576,
@@ -8105,7 +8265,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Piedmont Ringlet", ""]
       ],
       [
         432604,
@@ -8157,7 +8318,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Mnestra's Ringlet", ""]
       ],
       [
         432617,
@@ -8209,7 +8371,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Marbled Ringlet", ""]
       ],
       [
         432588,
@@ -8261,7 +8424,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432625,
@@ -8313,7 +8477,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Autumn Ringlet", ""]
       ],
       [
         432587,
@@ -8365,7 +8530,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["De Lesse's Brassy Ringlet", ""]
       ],
       [
         432591,
@@ -8417,7 +8583,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Bright-eyed Ringlet", ""]
       ],
       [
         432614,
@@ -8469,7 +8636,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Bulgarian Ringlet", ""]
       ],
       [
         432581,
@@ -8521,7 +8689,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Ottoman Brassy Ringlet", ""]
       ],
       [
         432598,
@@ -8573,7 +8742,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Chapman's Ringlet", ""]
       ],
       [
         432594,
@@ -8625,7 +8795,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Dewy Ringlet", "Fj\u00e4llgr\u00e4sfj\u00e4ril"]
       ],
       [
         432612,
@@ -8677,7 +8848,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Blind Ringlet", ""]
       ],
       [
         432600,
@@ -8729,7 +8901,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Sooty Ringlet", ""]
       ],
       [
         432609,
@@ -8781,7 +8954,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Arctic Woodland Ringlet", ""]
       ],
       [
         432621,
@@ -8833,7 +9007,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Water Ringlet", ""]
       ],
       [
         432603,
@@ -8885,7 +9060,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Nicholl's Ringlet", ""]
       ],
       [
         432583,
@@ -8937,7 +9113,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Pyrenees Brassy Ringlet", ""]
       ],
       [
         432572,
@@ -8989,7 +9166,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Ross's Apine", ""]
       ],
       [
         432620,
@@ -9041,7 +9219,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Larche Ringlet", ""]
       ],
       [
         432593,
@@ -9093,7 +9272,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["False Dewy Ringlet", ""]
       ],
       [
         432619,
@@ -9145,7 +9325,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Styrian Ringlet", ""]
       ],
       [
         432618,
@@ -9197,7 +9378,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Stygian Ringlet", ""]
       ],
       [
         432606,
@@ -9249,7 +9431,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Sudeten Ringlet", ""]
       ],
       [
         432608,
@@ -9301,7 +9484,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["de Prunner's Ringlet", ""]
       ],
       [
         432585,
@@ -9353,7 +9537,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Swiss Brassy Ringlet", ""]
       ],
       [
         432624,
@@ -9405,7 +9590,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Zapater's Ringlet", ""]
       ]
     ]
   ],
@@ -9463,7 +9649,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Inky Skipper", ""]
       ],
       [
         432167,
@@ -9515,7 +9702,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Dingy Skipper", "Skogsvisslare"]
       ]
     ]
   ],
@@ -9573,7 +9761,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Eastern Dappled White", "Svartkantad vitfj\u00e4ril"]
       ],
       [
         432240,
@@ -9625,7 +9814,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Greenish Black-tip", ""]
       ],
       [
         432233,
@@ -9677,7 +9867,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Green-striped White", ""]
       ],
       [
         432238,
@@ -9729,7 +9920,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Greenish Black-tip", ""]
       ],
       [
         432235,
@@ -9781,7 +9973,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Western Dappled White", ""]
       ],
       [
         432230,
@@ -9833,7 +10026,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432231,
@@ -9885,7 +10079,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432232,
@@ -9937,7 +10132,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Canary Green-striped White", ""]
       ],
       [
         432234,
@@ -9989,7 +10185,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Corsican Dappled White", ""]
       ],
       [
         432239,
@@ -10041,7 +10238,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Eastern Greenish Black-tip", ""]
       ],
       [
         432236,
@@ -10093,7 +10291,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Mountain Dappled White", ""]
       ],
       [
         432229,
@@ -10145,7 +10344,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Portuguese Dappled White", ""]
       ]
     ]
   ],
@@ -10203,7 +10403,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Geranium Argus", "Brun bl\u00e5vinge"]
       ]
     ]
   ],
@@ -10261,7 +10462,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Marsh Fritillary", "V\u00e4ddn\u00e4tfj\u00e4ril"]
       ],
       [
         432437,
@@ -10313,7 +10515,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Cynthia's Fritillary", ""]
       ],
       [
         432435,
@@ -10365,7 +10568,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Fritillary", ""]
       ],
       [
         432438,
@@ -10417,7 +10621,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Lapland Fritillary", "Lappn\u00e4tfj\u00e4ril"]
       ],
       [
         432440,
@@ -10469,7 +10674,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Asian Fritillary", ""]
       ],
       [
         432439,
@@ -10521,7 +10727,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Scarce Fritillary", "Askn\u00e4tfj\u00e4ril"]
       ]
     ]
   ],
@@ -10579,7 +10786,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["High Brown Fritillary", "Skogsp\u00e4rlemorfj\u00e4ril"]
       ],
       [
         432392,
@@ -10631,7 +10839,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Corsican Fritillary", ""]
       ],
       [
         432393,
@@ -10683,7 +10892,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Niobe Fritillary", "Hedp\u00e4rlemorfj\u00e4ril"]
       ]
     ]
   ],
@@ -10741,7 +10951,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Purple Hairstreak", "Eksnabbvinge"]
       ]
     ]
   ],
@@ -10799,7 +11010,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Grass Jewel", ""]
       ]
     ]
   ],
@@ -10857,7 +11069,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Mediterranean Skipper", ""]
       ],
       [
         432705,
@@ -10909,7 +11122,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Pygmy Skipper", ""]
       ]
     ]
   ],
@@ -10967,7 +11181,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ]
     ]
   ],
@@ -11025,7 +11240,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Green-underside Blue", "Kl\u00f6verbl\u00e5vinge"]
       ],
       [
         432304,
@@ -11077,7 +11293,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Black-eyed Blue", ""]
       ],
       [
         432305,
@@ -11129,7 +11346,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Paphos Blue", ""]
       ]
     ]
   ],
@@ -11187,7 +11405,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Canary Brimstone", ""]
       ],
       [
         432196,
@@ -11239,7 +11458,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Cleopatra", ""]
       ],
       [
         432709,
@@ -11291,7 +11511,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Powdered Brimstone", ""]
       ],
       [
         432197,
@@ -11343,7 +11564,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Madeiran Brimstone", ""]
       ],
       [
         432194,
@@ -11395,7 +11617,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Brimstone", "Citronfj\u00e4ril"]
       ]
     ]
   ],
@@ -11453,7 +11676,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Duke of Burgundy", "Gullvivefj\u00e4ril"]
       ]
     ]
   ],
@@ -11512,7 +11736,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Silver-spotted Skipper", "Silversmygare"]
       ]
     ]
   ],
@@ -11573,7 +11798,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large Chequered Skipper", "Spegelsmygare"]
       ]
     ]
   ],
@@ -11631,7 +11857,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Grayling", ""]
       ],
       [
         432504,
@@ -11683,7 +11910,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Russian Grayling", ""]
       ],
       [
         432510,
@@ -11735,7 +11963,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Azores Grayling", ""]
       ],
       [
         432498,
@@ -11787,7 +12016,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["El Hierro Grayling", ""]
       ],
       [
         432514,
@@ -11839,7 +12069,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Sicilian Grayling", ""]
       ],
       [
         432523,
@@ -11891,7 +12122,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Karpathos Grayling", ""]
       ],
       [
         432522,
@@ -11943,7 +12175,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Cretan Grayling", ""]
       ],
       [
         432521,
@@ -11995,7 +12228,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Cyprus Grayling", ""]
       ],
       [
         432726,
@@ -12047,7 +12281,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Woodland Grayling", ""]
       ],
       [
         432725,
@@ -12099,7 +12334,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Freyer's Grayling", ""]
       ],
       [
         432502,
@@ -12151,7 +12387,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Striped Grayling", ""]
       ],
       [
         432501,
@@ -12203,7 +12440,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Gomera Grayling", ""]
       ],
       [
         432505,
@@ -12255,7 +12493,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Rock Grayling", "Mindre bandgr\u00e4sfj\u00e4ril"]
       ],
       [
         432518,
@@ -12307,7 +12546,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Eolian Grayling", ""]
       ],
       [
         432512,
@@ -12359,7 +12599,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Madeiran Grayling", ""]
       ],
       [
         432508,
@@ -12411,7 +12652,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Samos Grayling", ""]
       ],
       [
         432509,
@@ -12463,7 +12705,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Le Cerf's Grayling", ""]
       ],
       [
         432517,
@@ -12515,7 +12758,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Italian Grayling", ""]
       ],
       [
         432503,
@@ -12567,7 +12811,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Corsican Grayling", ""]
       ],
       [
         432519,
@@ -12619,7 +12864,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Lesbos Grayling", ""]
       ],
       [
         432520,
@@ -12671,7 +12917,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Ponza Grayling", ""]
       ],
       [
         432727,
@@ -12723,7 +12970,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Grayling", "Sandgr\u00e4sfj\u00e4ril"]
       ],
       [
         432511,
@@ -12775,7 +13023,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Balkan Grayling", ""]
       ],
       [
         432496,
@@ -12827,7 +13076,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Tree Grayling", ""]
       ],
       [
         432506,
@@ -12879,7 +13129,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Eastern Rock Grayling", ""]
       ],
       [
         432500,
@@ -12931,7 +13182,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Gran Canaria Grayling", ""]
       ],
       [
         432497,
@@ -12983,7 +13235,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["La Palma Grayling", ""]
       ],
       [
         432516,
@@ -13035,7 +13288,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Delattin's Grayling", ""]
       ],
       [
         432499,
@@ -13087,7 +13341,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Canary Grayling", ""]
       ]
     ]
   ],
@@ -13145,7 +13400,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Danaid Eggfly", ""]
       ]
     ]
   ],
@@ -13203,7 +13459,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432728,
@@ -13255,7 +13512,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Oriental Meadow Brown", ""]
       ],
       [
         432556,
@@ -13307,7 +13565,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Dusky Meadow Brown", ""]
       ]
     ]
   ],
@@ -13366,7 +13625,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432302,
@@ -13418,7 +13678,8 @@
           { "SK": "Ex" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Iolas Blue", ""]
       ]
     ]
   ],
@@ -13476,7 +13737,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Iberian Scarce Swallowtail", ""]
       ],
       [
         432123,
@@ -13528,7 +13790,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Scarce Swallowtail", "Segelfj\u00e4ril"]
       ]
     ]
   ],
@@ -13586,7 +13849,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432383,
@@ -13638,6 +13902,10 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
+        ],
+        [
+          "Queen of Spain Fritillary",
+          "Storfl\u00e4ckig p\u00e4rlemorfj\u00e4ril"
         ]
       ]
     ]
@@ -13696,7 +13964,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Lesser Lattice Brown", ""]
       ],
       [
         432476,
@@ -13748,7 +14017,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Lattice Brown", ""]
       ]
     ]
   ],
@@ -13806,7 +14076,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Eastern Brown Argus", ""]
       ],
       [
         432332,
@@ -13858,7 +14129,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Zephyr Blue", ""]
       ],
       [
         432331,
@@ -13910,7 +14182,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Cretan Argus", ""]
       ],
       [
         432336,
@@ -13962,7 +14235,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Zephyr Blue", ""]
       ],
       [
         432335,
@@ -14014,7 +14288,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Balkan Zephyr Blue", ""]
       ],
       [
         432334,
@@ -14066,7 +14341,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Alpine Zephyr Blue", ""]
       ]
     ]
   ],
@@ -14124,7 +14400,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Purple Hairstreak", ""]
       ]
     ]
   ],
@@ -14182,7 +14459,8 @@
           { "SK": "I" },
           { "TR": "P" },
           { "UA": "I" }
-        ]
+        ],
+        ["Long-tailed Blue", "L\u00e5ngsvansad bl\u00e5vinge"]
       ]
     ]
   ],
@@ -14240,7 +14518,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432482,
@@ -14292,7 +14571,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large Wall Brown", "Vitgr\u00e4sfj\u00e4ril"]
       ],
       [
         432486,
@@ -14344,7 +14624,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Wall Brown", "Svingelgr\u00e4sfj\u00e4ril"]
       ],
       [
         432485,
@@ -14396,7 +14677,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Corsican Wall Brown", ""]
       ],
       [
         432484,
@@ -14448,7 +14730,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Northern Wall Brown", "Berggr\u00e4sfj\u00e4ril"]
       ]
     ]
   ],
@@ -14507,7 +14790,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Eastern Wood White", ""]
       ],
       [
         432708,
@@ -14559,7 +14843,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Cryptic Wood White", "\u00c4ngsvitvinge"]
       ],
       [
         432188,
@@ -14611,7 +14896,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Fenton's Wood White", ""]
       ],
       [
         432193,
@@ -14663,7 +14949,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["R\u00e9al's Wood White", ""]
       ],
       [
         432190,
@@ -14715,7 +15002,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Wood White", "Skogsvitvinge"]
       ],
       [
         432191,
@@ -14767,7 +15055,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Wood White/Real's Wood White", "Skogsvitvinge/\u00c4ngsvitvinge"]
       ]
     ]
   ],
@@ -14825,7 +15114,8 @@
           { "SK": "I" },
           { "TR": "P" },
           { "UA": "I" }
-        ]
+        ],
+        ["Lang's Short-tailed Blue", ""]
       ]
     ]
   ],
@@ -14883,7 +15173,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Nettle-tree Butterfly", ""]
       ]
     ]
   ],
@@ -14943,7 +15234,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["White Admiral", "Tryfj\u00e4ril"]
       ],
       [
         432381,
@@ -14995,7 +15287,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Poplar Admiral", "Aspfj\u00e4ril"]
       ],
       [
         432720,
@@ -15047,7 +15340,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Southern White Admiral", ""]
       ]
     ]
   ],
@@ -15105,7 +15399,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Woodland Brown", "D\u00e5rgr\u00e4sfj\u00e4ril"]
       ]
     ]
   ],
@@ -15163,7 +15458,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Small Desert Blue", ""]
       ]
     ]
   ],
@@ -15221,7 +15517,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Purple-shot Copper", "Ametistguldvinge"]
       ],
       [
         432257,
@@ -15273,7 +15570,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Iberian Sooty Copper", ""]
       ],
       [
         432255,
@@ -15325,7 +15623,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Balkan Copper", ""]
       ],
       [
         432248,
@@ -15377,7 +15676,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432253,
@@ -15429,7 +15729,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large Copper", "K\u00e4rrguldvinge"]
       ],
       [
         432249,
@@ -15481,7 +15782,8 @@
           { "SK": "Ex" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Violet Copper", "Violett guldvinge"]
       ],
       [
         432254,
@@ -15533,7 +15835,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Purple-edged Copper", "Violettkantad guldvinge"]
       ],
       [
         432256,
@@ -15585,7 +15888,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Grecian Copper", ""]
       ],
       [
         432258,
@@ -15637,7 +15941,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Small Copper", "Mindre guldvinge"]
       ],
       [
         432252,
@@ -15689,7 +15994,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Lesser Fiery Copper", ""]
       ],
       [
         432251,
@@ -15741,7 +16047,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Fiery Copper", ""]
       ],
       [
         432260,
@@ -15793,7 +16100,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Sooty Copper", "Sotguldvinge"]
       ],
       [
         432259,
@@ -15845,7 +16153,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Scarce Copper", "Vitfl\u00e4ckig guldvinge"]
       ]
     ]
   ],
@@ -15905,7 +16214,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Chalkhill Blue", ""]
       ],
       [
         432349,
@@ -15957,7 +16267,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Adonis Blue", ""]
       ],
       [
         432351,
@@ -16009,7 +16320,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Azure Chalkhill Blue", ""]
       ],
       [
         432350,
@@ -16061,7 +16373,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Chalkhill Blue", ""]
       ],
       [
         432348,
@@ -16113,7 +16426,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["False Chalkhill Blue", ""]
       ],
       [
         432347,
@@ -16165,7 +16479,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Provence Chalkhill Blue", ""]
       ]
     ]
   ],
@@ -16223,7 +16538,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Chios Meadow Brown", ""]
       ],
       [
         432566,
@@ -16275,7 +16591,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Cyprus Meadow Brown", ""]
       ],
       [
         432568,
@@ -16327,7 +16644,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Thomson's Meadow Brown", ""]
       ],
       [
         432562,
@@ -16379,7 +16697,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Meadow Brown", "Sl\u00e5ttergr\u00e4sfj\u00e4ril"]
       ],
       [
         432565,
@@ -16431,7 +16750,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Turkish Meadow Brown", ""]
       ],
       [
         432563,
@@ -16483,7 +16803,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Sardinian Meadow Brown", ""]
       ],
       [
         432567,
@@ -16535,7 +16856,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Aegean Meadow Brown", ""]
       ]
     ]
   ],
@@ -16593,7 +16915,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Italian Marbled White", ""]
       ],
       [
         432490,
@@ -16645,7 +16968,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Marbled White", "Schackbr\u00e4de"]
       ],
       [
         432491,
@@ -16697,7 +17021,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Marbled White", ""]
       ],
       [
         432489,
@@ -16749,7 +17074,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Iberian Marbled White", ""]
       ],
       [
         432488,
@@ -16801,7 +17127,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Balkan Marbled White", ""]
       ],
       [
         432494,
@@ -16853,7 +17180,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Western Marbled White", ""]
       ],
       [
         432493,
@@ -16905,7 +17233,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Sicilian Marbled White", ""]
       ],
       [
         432487,
@@ -16957,7 +17286,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Esper's Marbled White", ""]
       ]
     ]
   ],
@@ -17015,7 +17345,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Aetherie Fritillary", ""]
       ],
       [
         432443,
@@ -17067,7 +17398,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Freyer's Fritillary", ""]
       ],
       [
         432456,
@@ -17119,7 +17451,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Little Fritillary", ""]
       ],
       [
         432452,
@@ -17171,7 +17504,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Heath Fritillary", "Skogsn\u00e4tfj\u00e4ril"]
       ],
       [
         432455,
@@ -17223,7 +17557,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Nickerl's Fritillary", ""]
       ],
       [
         432451,
@@ -17275,7 +17610,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Assmann's Fritillary", "Veronikan\u00e4tfj\u00e4ril"]
       ],
       [
         432449,
@@ -17327,7 +17663,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Heath Fritillary", ""]
       ],
       [
         432447,
@@ -17379,7 +17716,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Glanville Fritillary", "\u00c4ngsn\u00e4tfj\u00e4ril"]
       ],
       [
         432450,
@@ -17431,7 +17769,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Proven\u00e7al Fritillary", ""]
       ],
       [
         432448,
@@ -17483,7 +17822,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["False Heath Fritillary", "Sotn\u00e4tfj\u00e4ril"]
       ],
       [
         432442,
@@ -17535,7 +17875,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Spotted Fritillary", ""]
       ],
       [
         432446,
@@ -17587,7 +17928,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Eastern Knapweed Fritillary", ""]
       ],
       [
         432454,
@@ -17639,7 +17981,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Meadow Fritillary", ""]
       ],
       [
         432445,
@@ -17691,7 +18034,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Knapweed Fritillary", ""]
       ],
       [
         432441,
@@ -17743,7 +18087,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Lesser Spotted Fritillary", ""]
       ],
       [
         432453,
@@ -17795,7 +18140,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Grisons Fritillary", ""]
       ]
     ]
   ],
@@ -17853,7 +18199,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Dryad", ""]
       ]
     ]
   ],
@@ -17911,7 +18258,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Spinose Skipper", ""]
       ],
       [
         432161,
@@ -17963,7 +18311,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Sage Skipper", ""]
       ],
       [
         432706,
@@ -18015,7 +18364,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Tessellated Skipper", ""]
       ]
     ]
   ],
@@ -18074,7 +18424,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["", ""]
       ]
     ]
   ],
@@ -18132,7 +18483,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Pontic Blue", ""]
       ]
     ]
   ],
@@ -18190,7 +18542,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Hungarian Glider", ""]
       ],
       [
         432378,
@@ -18242,7 +18595,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Common Glider", ""]
       ]
     ]
   ],
@@ -18302,7 +18656,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Camberwell Beauty", "Sorgmantel"]
       ],
       [
         432431,
@@ -18354,7 +18709,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large Tortoiseshell", "K\u00f6rsb\u00e4rsfuks"]
       ],
       [
         432430,
@@ -18406,7 +18762,8 @@
           { "SK": "Ex" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["False Comma", "Aspfuks"]
       ],
       [
         432432,
@@ -18458,7 +18815,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Yellow-legged Tortoiseshell", "Videfuks"]
       ]
     ]
   ],
@@ -18517,7 +18875,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large Skipper", "\u00c4ngssmygare"]
       ]
     ]
   ],
@@ -18575,7 +18934,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432528,
@@ -18627,7 +18987,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Arctic Grayling", "Tundragr\u00e4sfj\u00e4ril"]
       ],
       [
         432535,
@@ -18679,7 +19040,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Alpine Grayling", ""]
       ],
       [
         432532,
@@ -18731,7 +19093,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Baltic Grayling", "Tallgr\u00e4sfj\u00e4ril"]
       ],
       [
         432531,
@@ -18783,7 +19146,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432530,
@@ -18835,7 +19199,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Melissa Arctic", ""]
       ],
       [
         432533,
@@ -18887,7 +19252,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Norse Grayling", "Myrgr\u00e4sfj\u00e4ril"]
       ],
       [
         432534,
@@ -18939,7 +19305,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Polixenes Arctic", ""]
       ],
       [
         432527,
@@ -18991,7 +19358,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "Ex" }
-        ]
+        ],
+        ["", ""]
       ]
     ]
   ],
@@ -19050,7 +19418,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Swallowtail", ""]
       ],
       [
         432127,
@@ -19102,7 +19471,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Corsican Swallowtail", ""]
       ],
       [
         432126,
@@ -19154,7 +19524,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Swallowtail", "Makaonfj\u00e4ril"]
       ]
     ]
   ],
@@ -19214,7 +19585,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Speckled Wood", "Kvickgr\u00e4sfj\u00e4ril"]
       ],
       [
         432479,
@@ -19266,7 +19638,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Madeiran Speckled Wood", ""]
       ],
       [
         432480,
@@ -19318,7 +19691,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Canary Speckled Wood", ""]
       ]
     ]
   ],
@@ -19377,7 +19751,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "Ex" }
-        ]
+        ],
+        ["Apollo", "Apollofj\u00e4ril"]
       ],
       [
         432128,
@@ -19429,7 +19804,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Clouded Apollo", "Mnemosynefj\u00e4ril"]
       ],
       [
         432129,
@@ -19481,7 +19857,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Small Apollo", ""]
       ]
     ]
   ],
@@ -19539,7 +19916,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Millet Skipper", ""]
       ]
     ]
   ],
@@ -19597,7 +19975,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Alcon Blue", "Alkonbl\u00e5vinge"]
       ],
       [
         432290,
@@ -19649,7 +20028,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large Blue", "Svartfl\u00e4ckig bl\u00e5vinge"]
       ],
       [
         432292,
@@ -19701,7 +20081,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Dusky Large Blue", ""]
       ],
       [
         432291,
@@ -19753,7 +20134,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Scarce Large Blue", ""]
       ]
     ]
   ],
@@ -19813,7 +20195,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Balkan Green-veined White", ""]
       ],
       [
         432220,
@@ -19865,7 +20248,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large White", "K\u00e5lfj\u00e4ril"]
       ],
       [
         432226,
@@ -19917,7 +20301,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Mountain Green-veined White", ""]
       ],
       [
         432222,
@@ -19969,7 +20354,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Canary Islands Large White", ""]
       ],
       [
         432225,
@@ -20021,7 +20407,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Mountain Small White", ""]
       ],
       [
         432219,
@@ -20073,7 +20460,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Krueper's Small White", ""]
       ],
       [
         432224,
@@ -20125,7 +20513,8 @@
           { "SK": "Ex" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Small White", "Sydlig rovfj\u00e4ril"]
       ],
       [
         432227,
@@ -20177,7 +20566,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Green-veined White", "Rapsfj\u00e4ril"]
       ],
       [
         432223,
@@ -20229,7 +20619,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Small White", "Rovfj\u00e4ril"]
       ],
       [
         432221,
@@ -20281,7 +20672,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Madeiran Large White", ""]
       ]
     ]
   ],
@@ -20339,7 +20731,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Loew's Blue", ""]
       ]
     ]
   ],
@@ -20397,7 +20790,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Silver-studded Blue", "Ljungbl\u00e5vinge"]
       ],
       [
         432321,
@@ -20449,7 +20843,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Reverdin's Blue", "Kron\u00e4rtsbl\u00e5vinge"]
       ],
       [
         432320,
@@ -20501,7 +20896,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Bellier's Blue", ""]
       ],
       [
         432319,
@@ -20553,7 +20949,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Idas Blue", "Hedbl\u00e5vinge"]
       ]
     ]
   ],
@@ -20611,7 +21008,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Comma", "Vinb\u00e4rsfuks"]
       ],
       [
         432428,
@@ -20663,7 +21061,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Comma", ""]
       ]
     ]
   ],
@@ -20722,7 +21121,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Anomalous Blue", ""]
       ],
       [
         432356,
@@ -20774,7 +21174,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Amanda's Blue", "Silverbl\u00e5vinge"]
       ],
       [
         432377,
@@ -20826,7 +21227,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Grecian Anomalous Blue", ""]
       ],
       [
         432360,
@@ -20878,7 +21280,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Common Blue", ""]
       ],
       [
         432365,
@@ -20930,7 +21333,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432363,
@@ -20982,7 +21386,8 @@
           { "SK": "Ex" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Damon Blue", ""]
       ],
       [
         432364,
@@ -21034,7 +21439,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432355,
@@ -21086,7 +21492,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Meleager's Blue", ""]
       ],
       [
         432373,
@@ -21138,7 +21545,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Furry Blue", ""]
       ],
       [
         432359,
@@ -21190,7 +21598,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Turquoise Blue", "V\u00e4pplingbl\u00e5vinge"]
       ],
       [
         432362,
@@ -21242,7 +21651,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Eros Blue", ""]
       ],
       [
         432353,
@@ -21294,7 +21704,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Escher's Blue", ""]
       ],
       [
         432372,
@@ -21346,7 +21757,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Oberth\u00fcr\u0092s Anomalous Blue", ""]
       ],
       [
         432371,
@@ -21398,7 +21810,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Catalonian Furry Blue", ""]
       ],
       [
         432357,
@@ -21450,7 +21863,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Nevada Blue", ""]
       ],
       [
         432374,
@@ -21502,7 +21916,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Piedmont Anomalous Blue", ""]
       ],
       [
         432361,
@@ -21554,7 +21969,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Common Blue", "Pukt\u00f6rnebl\u00e5vinge"]
       ],
       [
         432369,
@@ -21606,7 +22022,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Chelmos Blue", ""]
       ],
       [
         432368,
@@ -21658,7 +22075,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Higgins' Anomalous Blue", ""]
       ],
       [
         432358,
@@ -21710,7 +22128,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Mother-of-Pearl Blue", ""]
       ],
       [
         432376,
@@ -21762,7 +22181,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Kolev's Anomalous Blue", ""]
       ],
       [
         432718,
@@ -21814,7 +22234,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Ripart's Anomalous Blue", ""]
       ],
       [
         432717,
@@ -21866,7 +22287,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Chapman's Blue", ""]
       ],
       [
         432375,
@@ -21918,7 +22340,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432370,
@@ -21970,7 +22393,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Andalusian Anomalous Blue", ""]
       ]
     ]
   ],
@@ -22028,7 +22452,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Peak White", "Alpvitfj\u00e4ril"]
       ],
       [
         432215,
@@ -22080,7 +22505,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "I" }
-        ]
+        ],
+        ["Small Bath White", "Bergvitfj\u00e4ril"]
       ],
       [
         432218,
@@ -22132,7 +22558,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Bath White", "Gr\u00f6nfl\u00e4ckig vitfj\u00e4ril"]
       ],
       [
         432217,
@@ -22184,7 +22611,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Eastern Bath White", "Gr\u00f6nfl\u00e4ckig vitfj\u00e4ril"]
       ]
     ]
   ],
@@ -22242,7 +22670,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ]
     ]
   ],
@@ -22300,7 +22729,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Dalmatian Ringlet", ""]
       ]
     ]
   ],
@@ -22358,7 +22788,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432544,
@@ -22410,7 +22841,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Brown's Grayling", ""]
       ],
       [
         432545,
@@ -22462,7 +22894,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["White-banded Grayling", ""]
       ],
       [
         432550,
@@ -22514,7 +22947,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Macedonian Grayling", ""]
       ],
       [
         432548,
@@ -22566,7 +23000,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432542,
@@ -22618,7 +23053,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Grey Asian Grayling", ""]
       ],
       [
         432543,
@@ -22670,7 +23106,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Grecian Grayling", ""]
       ],
       [
         432549,
@@ -22722,7 +23159,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ],
       [
         432552,
@@ -22774,7 +23212,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Dils' Grayling", ""]
       ],
       [
         432551,
@@ -22826,7 +23265,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Dark Grayling", ""]
       ],
       [
         432547,
@@ -22878,7 +23318,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Nevada Grayling", ""]
       ]
     ]
   ],
@@ -22936,7 +23377,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["False Baton Blue", ""]
       ],
       [
         432295,
@@ -22988,7 +23430,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Sardinian Blue", ""]
       ],
       [
         432299,
@@ -23040,7 +23483,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Baton Blue", ""]
       ],
       [
         432294,
@@ -23092,7 +23536,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Bavius Blue", ""]
       ],
       [
         432297,
@@ -23144,7 +23589,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Panoptes Blue", ""]
       ],
       [
         432298,
@@ -23196,7 +23642,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Eastern Baton Blue", ""]
       ]
     ]
   ],
@@ -23256,7 +23703,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Large Grizzled Skipper", "Kattunvisslare"]
       ],
       [
         432175,
@@ -23308,7 +23756,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Alpine Grizzled Skipper", "Blomvisslare"]
       ],
       [
         432177,
@@ -23360,7 +23809,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Oberth\u00fcr's Grizzled Skipper", "Backvisslare"]
       ],
       [
         432178,
@@ -23412,7 +23862,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Oliver Grizzled Skipper", "Backvisslare/Finger\u00f6rtsvisslare"]
       ],
       [
         432174,
@@ -23464,7 +23915,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Dusky Grizzled Skipper", ""]
       ],
       [
         432184,
@@ -23516,7 +23968,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Carline Skipper", ""]
       ],
       [
         432171,
@@ -23568,7 +24021,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Safflower Skipper", ""]
       ],
       [
         432173,
@@ -23620,7 +24074,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Northern Grizzled Skipper", "Myrvisslare"]
       ],
       [
         432186,
@@ -23672,7 +24127,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Sandy Grizzled Skipper", ""]
       ],
       [
         432185,
@@ -23724,7 +24180,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Cinquefoil Skipper", ""]
       ],
       [
         432182,
@@ -23776,7 +24233,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Foulquier's Grizzled Skipper", ""]
       ],
       [
         432170,
@@ -23828,7 +24286,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Grizzled Skipper", "Smultronvisslare"]
       ],
       [
         432169,
@@ -23880,7 +24339,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Grizzled Skipper", ""]
       ],
       [
         432183,
@@ -23932,7 +24392,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Rosy Grizzled Skipper", ""]
       ],
       [
         432176,
@@ -23984,7 +24445,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Olive Skipper", "Finger\u00f6rtsvisslare"]
       ],
       [
         432172,
@@ -24036,7 +24498,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Yellow-banded Skipper", ""]
       ],
       [
         432181,
@@ -24088,7 +24551,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Warren's Skipper", ""]
       ]
     ]
   ],
@@ -24146,7 +24610,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Gatekeeper", ""]
       ],
       [
         432729,
@@ -24198,7 +24663,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Southern Gatekeeper", ""]
       ],
       [
         432560,
@@ -24250,7 +24716,8 @@
           { "SK": "Ex" },
           { "TR": "P" },
           { "UA": "Ex" }
-        ]
+        ],
+        ["Gatekeeper", "Buskgr\u00e4sfj\u00e4ril"]
       ]
     ]
   ],
@@ -24310,7 +24777,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Sloe Hairstreak", ""]
       ],
       [
         432275,
@@ -24362,7 +24830,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["False Ilex Hairstreak", ""]
       ],
       [
         432274,
@@ -24414,7 +24883,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Ilex Hairstreak", "Krattsnabbvinge"]
       ],
       [
         432276,
@@ -24466,7 +24936,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Orange-banded Hairstreak", ""]
       ],
       [
         432715,
@@ -24518,7 +24989,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Black Hairstreak", "Busksnabbvinge"]
       ],
       [
         432278,
@@ -24570,7 +25042,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Blue-spot Hairstreak", ""]
       ],
       [
         432277,
@@ -24622,7 +25095,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["White-letter Hairstreak", "Almsnabbvinge"]
       ]
     ]
   ],
@@ -24680,7 +25154,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Black Satyr", ""]
       ],
       [
         432536,
@@ -24732,7 +25207,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Great Sooty Satyr", ""]
       ],
       [
         432537,
@@ -24784,7 +25260,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["", ""]
       ]
     ]
   ],
@@ -24842,7 +25319,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Chequered Blue", "Fet\u00f6rtsbl\u00e5vinge"]
       ]
     ]
   ],
@@ -24900,7 +25378,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Dark Green Fritillary", "\u00c4ngsp\u00e4rlemorfj\u00e4ril"]
       ]
     ]
   ],
@@ -24958,7 +25437,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Hungarian Skipper", ""]
       ],
       [
         432152,
@@ -25010,7 +25490,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Persian Skipper", ""]
       ],
       [
         432155,
@@ -25062,7 +25543,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Red-underwing Skipper", ""]
       ],
       [
         432153,
@@ -25114,7 +25596,8 @@
           { "SK": "P" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Red-underwing Skipper", ""]
       ],
       [
         432154,
@@ -25166,7 +25649,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Corsican Red-underwing Skipper", ""]
       ]
     ]
   ],
@@ -25224,7 +25708,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Little Tiger Blue", ""]
       ],
       [
         432287,
@@ -25276,7 +25761,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Common Tiger Blue", ""]
       ]
     ]
   ],
@@ -25334,7 +25820,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Brown Hairstreak", "Eldsnabbvinge"]
       ]
     ]
   ],
@@ -25393,7 +25880,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Lulworth Skipper", ""]
       ],
       [
         432147,
@@ -25445,7 +25933,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Canarian Skipper", ""]
       ],
       [
         432149,
@@ -25497,7 +25986,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Levantine Skipper", ""]
       ],
       [
         432151,
@@ -25549,7 +26039,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Essex Skipper", "Mindre t\u00e5telsmygare"]
       ],
       [
         432150,
@@ -25601,7 +26092,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Small Skipper", "St\u00f6rre t\u00e5telsmygare"]
       ]
     ]
   ],
@@ -25659,7 +26151,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Provence Hairstreak", ""]
       ],
       [
         432267,
@@ -25711,7 +26204,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Caucasian vernal copper", ""]
       ],
       [
         432266,
@@ -25763,7 +26257,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Nogel's Hairstreak", ""]
       ]
     ]
   ],
@@ -25821,7 +26316,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Fischer's blue", ""]
       ]
     ]
   ],
@@ -25879,7 +26375,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Odd-spot Blue", ""]
       ]
     ]
   ],
@@ -25937,7 +26434,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Red Admiral", "Amiral"]
       ],
       [
         432422,
@@ -25989,7 +26487,8 @@
           { "SK": "M" },
           { "TR": "M" },
           { "UA": "M" }
-        ]
+        ],
+        ["Painted Lady", "Tistelfj\u00e4ril"]
       ],
       [
         432421,
@@ -26041,7 +26540,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["American Painted Lady", ""]
       ],
       [
         432423,
@@ -26093,7 +26593,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Canary Red Admiral", ""]
       ]
     ]
   ],
@@ -26152,7 +26653,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["African Ringlet", ""]
       ]
     ]
   ],
@@ -26210,7 +26712,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "P" }
-        ]
+        ],
+        ["Sooty Orange-tip", ""]
       ],
       [
         432241,
@@ -26262,7 +26765,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["", ""]
       ]
     ]
   ],
@@ -26320,7 +26824,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Italian Festoon", ""]
       ],
       [
         432134,
@@ -26372,7 +26877,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Caucasian Festoon", ""]
       ],
       [
         432132,
@@ -26424,7 +26930,8 @@
           { "SK": "A" },
           { "TR": "P" },
           { "UA": "A" }
-        ]
+        ],
+        ["Eastern Festoon", ""]
       ],
       [
         432133,
@@ -26476,7 +26983,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Cretan Festoon", ""]
       ],
       [
         432136,
@@ -26528,7 +27036,8 @@
           { "SK": "P" },
           { "TR": "P" },
           { "UA": "P" }
-        ]
+        ],
+        ["Southern Festoon", ""]
       ],
       [
         432135,
@@ -26580,7 +27089,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Spanish Festoon", ""]
       ]
     ]
   ],
@@ -26638,7 +27148,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["Dark Grass Blue", ""]
       ],
       [
         432307,
@@ -26690,7 +27201,8 @@
           { "SK": "A" },
           { "TR": "A" },
           { "UA": "A" }
-        ]
+        ],
+        ["African Grass Blue", ""]
       ]
     ]
   ]
