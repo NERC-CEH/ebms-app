@@ -8,7 +8,6 @@ import Edit from './AreaCount/Edit';
 import EditOccurrence from './AreaCount/EditOccurrence';
 import Taxon from './AreaCount/Taxon';
 import AreaAttr from './AreaCount/Area';
-import TimeAttr from './AreaCount/Time';
 import Comment from './AreaCount/Comment';
 
 const App = routeProps => {
@@ -30,11 +29,6 @@ const App = routeProps => {
         path="/survey/:id/edit/area"
         exact
         render={props => <AreaAttr savedSamples={savedSamples} {...props} />}
-      />
-      <Route
-        path="/survey/:id/edit/time"
-        exact
-        render={props => <TimeAttr savedSamples={savedSamples} {...props} />}
       />
       <Route
         path="/survey/:id/edit/taxa"

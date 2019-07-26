@@ -498,3 +498,6 @@ msgstr "This will wipe all the locally stored app data!"
 
 msgid "Sweden"
 msgstr "Sweden"
+
+msgid "Paused"
+msgstr "Paused"

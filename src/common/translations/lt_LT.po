@@ -598,3 +598,6 @@ msgstr "Tai ištrins visus įrenginyje saugomus aplikacijos duomenis!"
 
 msgid "Sweden"
 msgstr "Švedija"
+
+msgid "Paused"
+msgstr "Pauzė"

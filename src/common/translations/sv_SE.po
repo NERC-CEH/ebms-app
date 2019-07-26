@@ -607,3 +607,6 @@ msgstr "Detta kommer ta bort alla dina lokalt lagrade appdata!"
 
 msgid "Sweden"
 msgstr "Sverige"
+
+msgid "Paused"
+msgstr "Paus"

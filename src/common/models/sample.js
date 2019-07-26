@@ -25,13 +25,17 @@ const locationSchema = Yup.object().shape({
 });
 
 const schema = Yup.object().shape({
-  location: Yup.mixed().test('area', 'Please add survey area information.', val => {
-    if (!val) {
-      return false;
+  location: Yup.mixed().test(
+    'area',
+    'Please add survey area information.',
+    val => {
+      if (!val) {
+        return false;
+      }
+      locationSchema.validateSync(val);
+      return true;
     }
-    locationSchema.validateSync(val);
-    return true;
-  }),
+  ),
 
   surveyStartTime: Yup.date().required('Date is missing'),
   location_type: Yup.string()
@@ -53,6 +57,7 @@ let Sample = Indicia.Sample.extend({
   metadata() {
     return {
       saved: null,
+      pausedTime: 0,
       training: appModel.get('useTraining'),
     };
   },
@@ -78,6 +83,7 @@ let Sample = Indicia.Sample.extend({
     this.attributes = observable(this.attributes);
     this.metadata = observable(this.metadata);
     this.remote = observable({ synchronising: null });
+    this.timerPausedTime = observable({ time: null });
     this.media.models = observable(this.media.models);
     this.occurrences.models = observable(this.occurrences.models);
 

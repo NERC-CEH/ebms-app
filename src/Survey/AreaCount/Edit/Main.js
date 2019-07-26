@@ -11,7 +11,14 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
-import { map, time, addCircleOutline, funnel } from 'ionicons/icons';
+import {
+  map,
+  time,
+  pause,
+  play,
+  addCircleOutline,
+  funnel,
+} from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import Countdown, { zeroPad } from 'react-countdown-now';
 import config from 'config';
@@ -54,6 +61,7 @@ class AreaCount extends Component {
     deleteOccurrence: PropTypes.func.isRequired,
     navigateToOccurrence: PropTypes.func.isRequired,
     onToggleSpeciesSort: PropTypes.func.isRequired,
+    toggleTimer: PropTypes.func.isRequired,
     areaSurveyListSortedByTime: PropTypes.bool.isRequired,
     increaseCount: PropTypes.func.isRequired,
   };
@@ -89,7 +97,7 @@ class AreaCount extends Component {
             size="small"
             onClick={this.props.onToggleSpeciesSort}
           >
-            <IonIcon icon={funnel} mode='md'/>
+            <IonIcon icon={funnel} mode="md" />
           </IonButton>
         </div>
 
@@ -123,6 +131,8 @@ class AreaCount extends Component {
     );
   }
 
+  toggleTimer = () => this.props.toggleTimer(this.props.sample);
+
   render() {
     const { sample } = this.props;
 
@@ -130,7 +140,8 @@ class AreaCount extends Component {
     const areaPretty = area && `${area.toLocaleString()} m²`;
 
     const startTime = new Date(sample.get('surveyStartTime'));
-    const countdown = startTime.getTime() + config.DEFAULT_SURVEY_TIME;
+    const countdown = startTime.getTime() + config.DEFAULT_SURVEY_TIME + sample.metadata.pausedTime;
+    const isPaused = sample.timerPausedTime.time;
 
     return (
       <IonContent id="area-count-edit">
@@ -140,11 +151,19 @@ class AreaCount extends Component {
             <IonLabel>{t('Area')}</IonLabel>
             <IonLabel slot="end">{areaPretty}</IonLabel>
           </IonItem>
-          <IonItem href={`/survey/${sample.cid}/edit/time`} detail>
+          <IonItem
+            detail
+            detailIcon={isPaused ? play : pause}
+            onClick={this.toggleTimer}
+          >
             <IonIcon icon={time} slot="start" />
             <IonLabel>{t('Duration')}</IonLabel>
             <IonLabel slot="end">
-              <Countdown date={countdown} renderer={CountdownRenderer} />
+              {isPaused ? (
+                t('Paused')
+              ) : (
+                <Countdown date={countdown} renderer={CountdownRenderer} />
+              )}
             </IonLabel>
           </IonItem>
 

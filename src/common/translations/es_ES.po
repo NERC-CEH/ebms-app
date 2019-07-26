@@ -614,3 +614,6 @@ msgstr "Esto borrará todos los datos de la aplicación almacenados localmente!"
 
 msgid "Sweden"
 msgstr "Suecia"
+
+msgid "Paused"
+msgstr "Pausa"

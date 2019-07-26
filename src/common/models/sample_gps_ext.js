@@ -141,31 +141,27 @@ const extension = {
     const options = {
       accuracyLimit,
 
-      onUpdate(location) {
-        console.log('GPS onUpdate');
-        console.log(location);
-      },
+      onUpdate() {},
 
       callback(error, location) {
         if (error) {
-          console.log('GPS onError');
-          console.log(error);
           that.stopGPS();
           return;
         }
 
         const startTime = new Date(that.get('surveyStartTime'));
         const defaultSurveyEndTime =
-          startTime.getTime() + config.DEFAULT_SURVEY_TIME;
+          startTime.getTime() +
+          config.DEFAULT_SURVEY_TIME +
+          that.metadata.pausedTime;
         const isOverDefaultSurveyEndTime =
           defaultSurveyEndTime < new Date().getTime();
+
         if (isOverDefaultSurveyEndTime) {
           that.stopGPS();
           return;
         }
 
-        console.log('GPS callback');
-        console.log(location);
         updateSampleLocation(that, location);
       },
     };

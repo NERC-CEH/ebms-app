@@ -89,19 +89,24 @@ function deleteOccurrence(occ) {
 }
 
 function setSurveyEndTime(sample) {
-  const startTime = new Date(sample.get('surveyStartTime'));
-  const defaultSurveyEndTime = startTime.getTime() + config.DEFAULT_SURVEY_TIME;
-  const isOverDefaultSurveyEndTime =
-    defaultSurveyEndTime < new Date().getTime();
-
-  const surveyEndime = isOverDefaultSurveyEndTime
-    ? defaultSurveyEndTime
-    : new Date();
-
   return sample.save({
-    surveyEndime,
+    surveyEndime: new Date(),
   });
 }
+
+/* eslint-disable no-param-reassign */
+function toggleTimer(sample) {
+  if (sample.timerPausedTime.time) {
+    const pausedTime =
+      Date.now() - new Date(sample.timerPausedTime.time).getTime();
+    sample.metadata.pausedTime += pausedTime;
+    sample.timerPausedTime.time = null;
+    sample.save();
+    return;
+  }
+  sample.timerPausedTime.time = new Date();
+}
+/* eslint-enable no-param-reassign */
 
 @observer
 class Container extends React.Component {
@@ -216,6 +221,7 @@ class Container extends React.Component {
           onSubmit={this.onSubmit}
           deleteOccurrence={deleteOccurrence}
           increaseCount={increaseCount}
+          toggleTimer={toggleTimer}
           navigateToOccurrence={this.navigateToOccurrence}
           areaSurveyListSortedByTime={areaSurveyListSortedByTime}
           onToggleSpeciesSort={this.toggleSpeciesSort}
