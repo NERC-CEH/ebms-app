@@ -11,7 +11,7 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
-import { map, time, addCircleOutline, mdFunnel } from 'ionicons/icons';
+import { map, time, addCircleOutline, funnel } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import Countdown, { zeroPad } from 'react-countdown-now';
 import config from 'config';
@@ -89,7 +89,7 @@ class AreaCount extends Component {
             size="small"
             onClick={this.props.onToggleSpeciesSort}
           >
-            <IonIcon icon={mdFunnel} />
+            <IonIcon icon={funnel} mode='md'/>
           </IonButton>
         </div>
 
