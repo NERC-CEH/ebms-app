@@ -1,12 +1,8 @@
 import React from 'react';
-import {
-  IonContent,
-  IonList,
-  IonItem,
-} from '@ionic/react';
+import { IonContent, IonList, IonItem, IonPage } from '@ionic/react';
 
 const Component = () => (
-  <>
+  <IonPage>
     <IonContent id="home-report" class="ion-padding">
       <IonList lines="full">
         <IonItem class="empty">
@@ -37,7 +33,7 @@ const Component = () => (
         <IonItem><small>{t('Not enough data yet')}</small></IonItem>
       </IonList> */}
     </IonContent>
-  </>
+  </IonPage>
 );
 
 Component.propTypes = {};

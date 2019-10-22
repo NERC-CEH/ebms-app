@@ -7,6 +7,7 @@ import {
   IonLabel,
   IonSegmentButton,
   IonBadge,
+  IonPage,
 } from '@ionic/react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
@@ -77,11 +78,7 @@ class Component extends React.Component {
     const { savedSamples } = this.props;
 
     return savedSamples.models
-      .filter(sample =>
-        sample.metadata.saved && uploaded
-          ? !sample.metadata.synced_on
-          : sample.metadata.synced_on
-      )
+      .filter(sample => (uploaded ? sample.metadata.synced_on : !sample.metadata.synced_on))
       .sort(byCreateTime);
   }
 
@@ -91,11 +88,11 @@ class Component extends React.Component {
     const showingPending = segment === 'pending';
     const showingUploaded = segment === 'uploaded';
 
-    const pendingSurveys = this.getSamplesList(true);
-    const uploadedSurveys = this.getSamplesList();
+    const pendingSurveys = this.getSamplesList();
+    const uploadedSurveys = this.getSamplesList(true);
 
     return (
-      <>
+      <IonPage>
         <IonContent id="user-report" class="ion-padding">
           <IonSegment onIonChange={this.onSegmentClick} value={segment}>
             <IonSegmentButton value="pending" checked={showingPending}>
@@ -123,7 +120,7 @@ class Component extends React.Component {
           {showingPending && getPendingSurveys(pendingSurveys)}
           {showingUploaded && getUploadedSurveys(uploadedSurveys)}
         </IonContent>
-      </>
+      </IonPage>
     );
   }
 }

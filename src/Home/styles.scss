@@ -2,6 +2,10 @@
   ion-tab-bar {
     contain: none;
 
+    ion-tab-button {
+      max-width: 20vw;
+    }
+
     .add-survey {
       background-color: var(--ion-color-light);
       margin-top: -22px;

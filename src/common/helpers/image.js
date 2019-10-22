@@ -3,7 +3,6 @@
  **************************************************************************** */
 import Indicia from 'indicia';
 import Log from './log';
-import Analytics from './analytics';
 import Device from './device';
 
 export function _onGetImageError(err, resolve, reject) {
@@ -48,7 +47,7 @@ const Image = {
         correctOrientation: true,
       };
 
-      const cameraOptions = Object.assign({}, defaultCameraOptions, options);
+      const cameraOptions = { ...{}, ...defaultCameraOptions, ...options };
 
       if (Device.isAndroid()) {
         // Android bug:
@@ -107,7 +106,6 @@ const Image = {
         err => _onGetImageError(err, resolve, reject),
         cameraOptions
       );
-      Analytics.trackEvent('Image', 'get', cameraOptions.sourceType);
     });
   },
 

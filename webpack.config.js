@@ -41,23 +41,11 @@ const config = {
       occurrence: 'common/models/occurrence',
       app_model: 'common/models/app_model',
       user_model: 'common/models/user_model',
+      Components: 'common/Components',
     },
   },
   module: {
     rules: [
-      {
-        test: /.*photoswipe.*$/,
-        loader: 'string-replace-loader',
-        options: {
-          multiple: [
-            {
-              search: 'url("./default-skin.svg")',
-              replace: 'url("./images/default-skin.svg")',
-            },
-          ],
-        },
-      },
-      { test: /\.tpl/, loader: 'ejs-loader?variable=obj' },
       {
         test: /^((?!data\.).)*\.js$/,
         exclude: /(node_modules|vendor(?!\.js))/,
@@ -76,6 +64,14 @@ const config = {
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
+          {
+            loader: 'string-replace-loader',
+            options: {
+              search: './default-skin.png',
+              replace: '/images/default-skin.png',
+              flags: 'g',
+            },
+          },
           'css-loader?-url',
           {
             loader: 'postcss-loader',
@@ -86,7 +82,8 @@ const config = {
               },
             },
           },
-          `sass-loader?includePaths[]=${SRC_DIR}`,
+
+          `sass-loader`,
         ],
       },
       { test: /\.pot?$/, loader: 'json-loader!po-loader?format=mf' },

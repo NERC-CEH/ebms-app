@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton } from '@ionic/react';
-import AppHeader from 'common/Components/Header';
+import AppHeader from 'Components/Header';
 import './styles.scss';
 
 function getFinishButton(onSubmit, isEditing) {

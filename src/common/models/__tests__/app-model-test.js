@@ -24,6 +24,7 @@ describe('App Model', () => {
       'areaSurveyListSortedByTime',
       'areaCountDraftId',
       'useExperiments',
+      'sendAnalytics',
     ]);
   });
 });

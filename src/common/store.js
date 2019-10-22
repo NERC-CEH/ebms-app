@@ -9,9 +9,9 @@ let storeConfig = {
 
 // enable SQLite
 if (window.cordova) {
-  storeConfig = Object.assign({}, storeConfig, {
+  storeConfig = { ...{}, ...storeConfig, ...{
     driverOrder: [CordovaSQLiteDriver, 'indexeddb', 'websql'],
-  });
+  } };
 }
 
 export default new Indicia.Store(storeConfig);

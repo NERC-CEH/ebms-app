@@ -10,17 +10,9 @@ import Taxon from './AreaCount/Taxon';
 import AreaAttr from './AreaCount/Area';
 import Comment from './AreaCount/Comment';
 
-const App = routeProps => {
+const App = () => {
   if (!userModel.hasLogIn()) {
-    return (
-      <Redirect
-        push
-        to={{
-          pathname: '/user/login',
-          state: { from: routeProps && routeProps.location, direction: 'root' },
-        }}
-      />
-    );
+    return <Redirect push to="/user/login" />;
   }
 
   return (

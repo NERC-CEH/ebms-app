@@ -1,72 +1,35 @@
-// /** ****************************************************************************
-//  * App start.
-//  **************************************************************************** */
-
 import 'helpers/system_checkup';
-import 'helpers/analytics';
-
-import React from 'react'; // eslint-disable-line
 import 'helpers/translator';
-
+import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
-import { IonApp, IonPage, IonReactRouter, IonRouterOutlet } from '@ionic/react';
-import appModel from 'app_model';
-import userModel from 'user_model';
-import savedSamples from 'saved_samples';
-import Home from './Home';
-import Login from './User/Login';
-import Register from './User/Register';
-import Reset from './User/Reset';
-import Settings from './Settings/Menu';
-import InfoMenu from './Info/Menu';
-import Credits from './Info/Credits';
-import Survey from './Survey';
-import LanguageCountrySelectRequired from './Settings/LanguageCountrySelectRequired';
-import SplashScreenRequired from './Info/SplashScreenRequired';
+import { IonApp, IonPage, IonRouterOutlet } from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
-import './common/styles/app.scss';
-import './Home/styles.scss';
+import 'common/styles/app.scss';
+import appModel from 'app_model';
+import LanguageCountrySelectRequired from 'Components/LanguageCountrySelectRequired';
+import Home from './Home';
+import User from './User';
+import Info from './Info';
+import Settings from './Settings';
+import SplashScreenRequired from './Info/SplashScreenRequired';
+import Survey from './Survey';
 
 const App = () => (
   <IonApp>
     <IonReactRouter>
       <Route exact path="/" render={() => <Redirect to="/home/report" />} />
-      <LanguageCountrySelectRequired>
+      <LanguageCountrySelectRequired appModel={appModel}>
         <SplashScreenRequired>
           <IonPage id="main">
             <Switch>
               <Route path="/home" component={Home} />
               <Route path="/survey" component={Survey} />
               <IonRouterOutlet>
-                <Route
-                  path="/user/login"
-                  exact
-                  render={() => <Login userModel={userModel} />}
-                />
-                <Route
-                  path="/user/register"
-                  exact
-                  render={() => <Register userModel={userModel} />}
-                />
-                <Route
-                  path="/user/reset"
-                  exact
-                  render={() => <Reset userModel={userModel} />}
-                />
-                <Route
-                  path="/info/menu"
-                  render={props => (
-                    <InfoMenu
-                      userModel={userModel}
-                      appModel={appModel}
-                      savedSamples={savedSamples}
-                      {...props}
-                    />
-                  )}
-                />
-                <Route path="/info/credits" component={Credits} />
-                <Route path="/settings" component={Settings} />
+                {User}
+                {Info}
+                {Settings}
               </IonRouterOutlet>
             </Switch>
           </IonPage>

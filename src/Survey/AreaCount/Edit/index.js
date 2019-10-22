@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import { IonPage } from '@ionic/react';
 import Sample from 'sample';
 import alert from 'common/helpers/alert';
 import Header from './Header';
@@ -207,7 +208,7 @@ class Container extends React.Component {
     const isTraining = this.state.sample.metadata.training;
     const isEditing = this.state.sample.metadata.saved;
     return (
-      <>
+      <IonPage>
         <Header
           onSubmit={this.onSubmit}
           isTraining={isTraining}
@@ -224,7 +225,7 @@ class Container extends React.Component {
           onToggleSpeciesSort={this.toggleSpeciesSort}
           history={history}
         />
-      </>
+      </IonPage>
     );
   }
 }

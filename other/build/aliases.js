@@ -24,7 +24,6 @@ module.exports = grunt => ({
       'APP_MAPBOX_MAP_KEY',
       'APP_SENTRY_KEY',
       'APP_INDICIA_API_KEY',
-      'APP_GA',
     ].forEach(setting => {
       if (!process.env[setting]) {
         grunt.warn(`${setting} env variable is missing`);

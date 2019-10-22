@@ -1,6 +1,7 @@
 /**
  * Input view.
  */
+import { IonItem, IonLabel, IonDatetime } from '@ionic/react';
 import DateHelp from 'helpers/date';
 import Device from 'helpers/device';
 import StringHelp from 'helpers/string';
@@ -59,27 +60,15 @@ class Component extends React.Component {
   }
 
   componentDidMount() {
+    const config = this.props.config || {};
+    const type = this.props.type || config.type;
+    if (type === 'date') {
+      this.input.current.open();      
+      return;
+    }
+
     this.input.current.focus();
     if (window.cordova && Device.isAndroid()) {
-      const config = this.props.config || {};
-      const type = this.props.type || config.type;
-      if (type === 'date') {
-        const options = {
-          date: new Date(this.state.value),
-          mode: 'date',
-          androidTheme: 16974373,
-          allowOldDates: true,
-          allowFutureDates: false,
-        };
-
-        window.datePicker.show(options, date => {
-          this.onChange({
-            target: { value: DateHelp.toDateInputValue(new Date(date)) },
-          });
-        });
-        return;
-      }
-
       window.Keyboard.show();
       this.input.current.onfocusout = () => {
         window.Keyboard.hide();
@@ -90,6 +79,26 @@ class Component extends React.Component {
   render() {
     const config = this.props.config || {};
     const type = this.props.type || config.type || 'text';
+
+    if (type === 'date') {
+      return (
+        <IonItem>
+          <IonLabel>DD/MM/YYYY</IonLabel>
+          <IonDatetime
+            ref={this.input}
+            cancelText={t('Cancel')}
+            doneText={t('OK')}
+            displayFormat="DD/MM/YYYY"
+            value={DateHelp.toDateInputValue(this.state.value)}
+            onIonChange={val => {
+              const dateStr = val.detail.value.split('T')[0];
+              this.onChange({ target: { value: dateStr } });
+            }}
+          />
+        </IonItem>
+      );
+    }
+
     let max = this.props.max || config.max;
     if (typeof max === 'function') {
       max = max();

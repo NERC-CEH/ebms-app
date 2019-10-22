@@ -77,9 +77,12 @@ $footer-height: 80px;
   }
 }
 
-ion-footer #edit-footer {
-  margin: 0 -5px;
-  background-color: var(---ion-color-primary-contras);
-  border-top: 1px solid var(--ion-color-light-shade);
-  box-shadow: 0px -1px 6px 0px #b5b5b5;
+#edit-footer {
+  background: #ffffff;
+
+  & > div {
+    margin: 0 -5px;
+    border-top: 1px solid var(--ion-color-light-shade);
+    box-shadow: 0px -1px 6px 0px #b5b5b5;
+  }
 }

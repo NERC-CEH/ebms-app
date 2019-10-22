@@ -332,10 +332,8 @@ msgstr "No photo has been added"
 msgid "Registration error:"
 msgstr "Registration error:"
 
-msgid "Incorrect password or email.
-"
-msgstr "Incorrect password or email.
-"
+msgid "Incorrect password or email"
+msgstr "Incorrect password or email"
 
 msgid "email is not valid"
 msgstr "email is not valid"
@@ -513,3 +511,70 @@ msgstr "No finished pending surveys"
 
 msgid "No uploaded surveys"
 msgstr "No uploaded surveys"
+
+msgid "Enjoying the app?"
+msgstr "Enjoying the app?"
+
+msgid "Not really"
+msgstr "Not really"
+
+msgid "Yes!"
+msgstr "Yes!"
+
+msgid "Would you mind giving us some feedback?"
+msgstr "Would you mind giving us some feedback?"
+
+msgid "No, thanks"
+msgstr "No, thanks"
+
+msgid "OK, sure"
+msgstr "OK, sure"
+
+msgid "How about a rating on the App Store then?"
+msgstr "How about a rating on the App Store then?"
+
+msgid "How about a rating on the Play Store then?"
+msgstr "How about a rating on the Play Store then?"
+
+msgid "Icons made by"
+msgstr "Icons made by"
+
+msgid "from"
+msgstr "from"
+
+msgid "Enter your username or email address to request a password reset."
+msgstr "Enter your username or email address to request a password reset."
+
+msgid "We've sent an email to you"
+msgstr "We've sent an email to you"
+
+msgid "Click the link in the email to reset your password. If you don't see the email, check other places like your junk, spam or other folders."
+msgstr "Click the link in the email to reset your password. If you don't see the email, check other places like your junk, spam or other folders."
+
+msgid "App Development"
+msgstr "App Development"
+
+msgid "This app was hand crafted with love by"
+msgstr "This app was hand crafted with love by"
+
+msgid "Agency specializing in building bespoke data oriented sollutions."
+msgstr "Agency specializing in building bespoke data oriented sollutions."
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr "For suggestions and feedback please do not hesitate to"
+
+msgid "contact us"
+msgstr "contact us"
+
+msgid "Language"
+msgstr "Language"
+
+msgid "Country"
+msgstr "Country"
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr "Mark any new records as 'training' and exclude from all reports."
+
+msgid "Share App Analytics"
+msgstr "Share App Analytics"
+"

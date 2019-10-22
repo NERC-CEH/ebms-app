@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { IonPage, NavContext } from '@ionic/react';
 import Log from 'helpers/log';
 import Device from 'helpers/device';
 import alert from 'common/helpers/alert';
 import loader from 'common/helpers/loader';
-import AppHeader from 'common/Components/Header';
+import AppHeader from 'Components/Header';
 import Main from './Main';
 
 async function onLogin(userModel, details, onSuccess) {
@@ -29,8 +30,7 @@ async function onLogin(userModel, details, onSuccess) {
   try {
     await userModel.logIn(loginDetails);
 
-    onSuccess && onSuccess();
-    window.history.back();
+    onSuccess();
   } catch (err) {
     Log(err, 'e');
     alert({
@@ -44,19 +44,27 @@ async function onLogin(userModel, details, onSuccess) {
 }
 
 export default function LoginContainer({ userModel, onSuccess }) {
-  if (userModel.hasLogIn()) {
-    window.history.back();
-    return null;
-  }
+  const context = useContext(NavContext);
+  window.context = context;
+  const onSuccessReturn = () => {
+    onSuccess && onSuccess();
+    if (context.currentPath === '/survey/new/edit') {
+      // login page is not part of the same outlet when redirected from survey
+      window.history.back();
+      return;
+    }
+
+    context.goBack();
+  };
 
   return (
-    <>
+    <IonPage>
       <AppHeader title={t('Login')} />
       <Main
         schema={userModel.loginSchema}
-        onSubmit={details => onLogin(userModel, details, onSuccess)}
+        onSubmit={details => onLogin(userModel, details, onSuccessReturn)}
       />
-    </>
+    </IonPage>
   );
 }
 

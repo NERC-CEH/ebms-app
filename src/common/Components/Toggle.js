@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { IonToggle } from '@ionic/react';
 import PropTypes from 'prop-types';
 
 class Toggle extends Component {
@@ -23,7 +24,7 @@ class Toggle extends Component {
 
   render() {
     return (
-      <ion-toggle
+      <IonToggle
         ref={this.toggleRef}
         slot="end"
         disabled={this.props.disabled}

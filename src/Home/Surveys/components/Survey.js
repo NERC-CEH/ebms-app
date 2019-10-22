@@ -10,6 +10,7 @@ import {
   IonItemOption,
 } from '@ionic/react';
 import OnlineStatus from './components/OnlineStatus';
+import ErrorMessage from './components/ErrorMessage';
 
 function deleteSurvey(sample) {
   alert({
@@ -41,11 +42,12 @@ const Survey = observer(({ sample }) => {
   const href =
     !isSent && !sample.remote.synchronising
       ? `/survey/${sample.cid}/edit`
-      : null;
+      : undefined;
 
   return (
     <IonItemSliding>
-      <IonItem href={href} detail={href}>
+      <ErrorMessage sample={sample} />
+      <IonItem routerLink={href} detail={!!href}>
         <IonLabel>
           <h3>
             <b>{prettyDate}</b>

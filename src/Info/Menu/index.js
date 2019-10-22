@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import { IonPage } from '@ionic/react';
 import Log from 'helpers/log';
 import alert from 'common/helpers/alert';
-import AppHeader from 'common/Components/Header';
+import AppHeader from 'Components/Header';
 import Main from './Main';
 
 function showLogoutConfirmationDialog(callback) {
@@ -41,15 +42,16 @@ const Controller = observer(props => {
 
   const isLoggedIn = userModel.hasLogIn();
   return (
-    <>
+    <IonPage>
       <AppHeader title={t('Menu')} />
       <Main
         user={userModel.attrs}
+        appModel={appModel}
         isLoggedIn={isLoggedIn}
         logOut={logOut}
         {...restProps}
       />
-    </>
+    </IonPage>
   );
 });
 

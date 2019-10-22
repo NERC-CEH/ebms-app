@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonContent, IonIcon, IonButton, IonList } from '@ionic/react';
-import {  person, mail, key, lock, eye, eyeOff } from 'ionicons/icons';
+import { person, mail, key, lock, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
-import InputWithValidation from 'common/Components/InputWithValidation';
-import ToggleWithValidation from 'common/Components/ToggleWithValidation';
+import InputWithValidation from 'Components/InputWithValidation';
+import ToggleWithValidation from 'Components/ToggleWithValidation';
+import config from 'config';
 
 class Component extends React.Component {
   state = {
@@ -19,7 +20,7 @@ class Component extends React.Component {
 
   render() {
     const { showPassword } = this.state;
-    const { onSubmit, schema } = this.props;
+    const { onSubmit, schema, lang } = this.props;
 
     return (
       <IonContent id="register-page">
@@ -75,7 +76,9 @@ class Component extends React.Component {
                     <>
                       {t('I agree to')}
                       {' '}
-                      <a href="https://butterfly-monitoring.net/privacy-notice">{t('Terms and Conditions')}</a>
+                      <a href={`${config.site_url}/privacy-notice?lang=${lang}`}>
+                        {t('Terms and Conditions')}
+                      </a>
                     </>
                   )}
                   icon={lock}
@@ -97,6 +100,7 @@ class Component extends React.Component {
 Component.propTypes = {
   schema: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  lang: PropTypes.string.isRequired,
 };
 
 export default Component;

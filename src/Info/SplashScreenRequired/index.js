@@ -25,13 +25,7 @@ const SplashScreen = () => {
   return (
     <IonSlides id="welcome" pager="true" ref={sliderRef}>
       <IonSlide class="first">
-        <IonButton
-          class="skip"
-          fill="outline"
-          color="primary"
-          strong="true"
-          onClick={exit}
-        >
+        <IonButton class="skip" color="primary" strong="true" onClick={exit}>
           {t('Skip')}
         </IonButton>
         <IonButton
@@ -96,7 +90,6 @@ const SplashScreen = () => {
         >
           {t('Next')}
         </IonButton>
-
         <div className="message">
           <p>
             {t(
@@ -105,7 +98,6 @@ const SplashScreen = () => {
           </p>
         </div>
       </IonSlide>
-
       <IonSlide class="fourth">
         <div className="message">
           <p>

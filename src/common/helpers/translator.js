@@ -5,6 +5,16 @@ import lt_LT from '../translations/lt_LT.po';
 import es_ES from '../translations/es_ES.po';
 import sv_SE from '../translations/sv_SE.po';
 
+// Adding some context, reference and other in po files:
+
+// #: Some reference!!
+// msgctxt "this is my context!!!!"
+// msgid "Select your country"
+// msgid_plural "plural!!!"
+// msgstr[0] "Selecciona tu pais"
+// msgstr[1] ""
+
+
 const dictionary = {
   en,
   lt_LT,

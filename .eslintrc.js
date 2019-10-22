@@ -46,6 +46,9 @@ module.exports = {
     'no-negated-in-lhs': WARN,
     'linebreak-style': OFF,
     'no-underscore-dangle': OFF,
+    'react/jsx-props-no-spreading': OFF,
+    'react/state-in-constructor': OFF,
+    'react/static-property-placement': OFF,
     'react/jsx-one-expression-per-line': [WARN, { allow: 'single-child' }],
   },
   overrides: [
@@ -69,6 +72,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
+      node: {}, // https://github.com/benmosher/eslint-plugin-import/issues/1396#issuecomment-511007063
       webpack: {
         config: 'webpack.config.js',
       },

@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
+import { IonItem, IonRange } from '@ionic/react';
 
 // http://stackoverflow.com/questions/846221/logarithmic-slider
 function LogSlider(options = {}) {
@@ -94,8 +95,8 @@ class Component extends React.Component {
             <p>{message}</p>
           </div>
         )}
-        <ion-item>
-          <ion-range
+        <IonItem>
+          <IonRange
             ref={this.sliderRef}
             min="1"
             max="100"
@@ -104,12 +105,16 @@ class Component extends React.Component {
           />
           <input
             ref={this.inputRef}
-            style={{ width: '5%', minWidth: '60px' }}
+            style={{
+              width: '5%',
+              minWidth: '60px',
+              border: '#c1baba solid 1px',
+            }}
             type="number"
             onChange={this.onChangeInput}
             value={this.state.value || ''}
           />
-        </ion-item>
+        </IonItem>
       </div>
     );
   }

@@ -35,12 +35,12 @@ function prettifyName(species, searchPhrase) {
     );
   }
   return (
-    <React.Fragment>
+    <>
       {name.slice(0, searchPos)}
       <b>{name.slice(searchPos, searchPos + searchPhrase.length)}</b>
       {name.slice(searchPos + searchPhrase.length)}
       {deDupedName}
-    </React.Fragment>
+    </>
   );
 }
 

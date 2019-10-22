@@ -1,5 +1,5 @@
 import Indicia from 'indicia';
-import { observable } from 'mobx';
+import { observable, toJS } from 'mobx';
 import CONFIG from 'config';
 import ImageModel from './image';
 
@@ -33,5 +33,12 @@ export default Indicia.Occurrence.extend({
     if (!mediaObj) return;
     mediaObj.setParent(this);
     this.media.add(mediaObj, { sort: false });
+  },
+
+  toJSON() {
+    const json = Indicia.Occurrence.prototype.toJSON.apply(this);
+    json.attributes = toJS(json.attributes);
+    json.metadata = toJS(json.metadata);
+    return json;
   },
 });

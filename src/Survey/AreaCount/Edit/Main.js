@@ -151,7 +151,7 @@ class AreaCount extends Component {
     return (
       <IonContent id="area-count-edit">
         <IonList lines="full">
-          <IonItem href={`/survey/${sample.cid}/edit/area`} detail>
+          <IonItem routerLink={`/survey/${sample.cid}/edit/area`} detail>
             <IonIcon icon={map} slot="start" />
             <IonLabel>{t('Area')}</IonLabel>
             <IonLabel slot="end">{areaPretty}</IonLabel>

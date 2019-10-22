@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonItem, IonLabel } from '@ionic/react';
-import Toggle from 'common/Components/Toggle';
+import { informationCircleOutline } from 'ionicons/icons';
+import Toggle from 'Components/Toggle';
 import './styles.scss';
 
 const InputWithValidation = ({
@@ -18,7 +19,7 @@ const InputWithValidation = ({
     <>
       <IonItem error={!!error}>
         <IonIcon icon={icon} faint size="small" slot="start" />
-        <IonLabel text-wrap>{label}</IonLabel>
+        <IonLabel class="ion-text-wrap">{label}</IonLabel>
         <Toggle
           checked={values[name]}
           onToggle={val => setFieldValue(name, val)}
@@ -28,11 +29,11 @@ const InputWithValidation = ({
       {error && (
         <div className="error-container">
           <div className="error-message">
-            <ion-icon
-              name="information-circle-outline"
-              role="img"
-              class="hydrated"
-              aria-label="information circle outline"
+            <IonIcon
+              icon={informationCircleOutline}
+              faint
+              size="small"
+              slot="start"
             />
             <span>{t(errors[name])}</span>
           </div>

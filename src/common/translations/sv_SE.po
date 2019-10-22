@@ -623,3 +623,71 @@ msgstr "Tömma"
 
 msgid "No uploaded surveys"
 msgstr "Tömma"
+
+msgid "Enjoying the app?"
+msgstr ""
+
+msgid "Not really"
+msgstr ""
+
+msgid "Yes!"
+msgstr ""
+
+msgid "Would you mind giving us some feedback?"
+msgstr ""
+
+msgid "No, thanks"
+msgstr ""
+
+msgid "OK, sure"
+msgstr ""
+
+msgid "How about a rating on the App Store then?"
+msgstr ""
+
+msgid "How about a rating on the Play Store then?"
+msgstr ""
+
+msgid "Icons made by"
+msgstr ""
+
+msgid "from"
+msgstr ""
+
+msgid "Enter your username or email address to request a password reset."
+msgstr ""
+
+msgid "We've sent an email to you"
+msgstr ""
+
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+
+msgid "App Development"
+msgstr ""
+
+msgid "This app was hand crafted with love by"
+msgstr ""
+
+msgid "Agency specializing in building bespoke data oriented sollutions."
+msgstr ""
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr ""
+
+msgid "contact us"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr ""
+
+msgid "Share App Analytics"
+msgstr ""

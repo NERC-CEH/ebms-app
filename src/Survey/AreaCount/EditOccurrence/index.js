@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import AppHeader from 'common/Components/Header';
+import { IonPage } from '@ionic/react';
+
 import Main from './Main';
 import Footer from './Footer';
 import './styles.scss';
@@ -22,11 +24,11 @@ class Container extends React.Component {
     const occurrence = sample.occurrences.models.find(occ => occ.cid === occID);
 
     return (
-      <>
+      <IonPage>
         <AppHeader title={t('Edit Occurrence')} />
         <Main sample={sample} occurrence={occurrence} />
         <Footer sample={sample} />
-      </>
+      </IonPage>
     );
   }
 }

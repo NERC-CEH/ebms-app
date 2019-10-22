@@ -8,11 +8,22 @@ import {
   IonItem,
   IonItemDivider,
 } from '@ionic/react';
-import { settings, exit, person, personAdd, lock, heart } from 'ionicons/icons';
+import {
+  settings,
+  exit,
+  person,
+  personAdd,
+  lock,
+  heart,
+  informationCircleOutline,
+} from 'ionicons/icons';
+import config from 'config';
 import './styles.scss';
 import './logo.png';
 
-const Component = observer(({ isLoggedIn, user, logOut }) => {
+const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
+  const lang = appModel.get('language');
+
   return (
     <IonContent class="app-menu">
       <img src="/images/logo.png" alt="app logo" />
@@ -30,36 +41,43 @@ const Component = observer(({ isLoggedIn, user, logOut }) => {
         )}
 
         {!isLoggedIn && (
-          <IonItem href="/user/login" detail>
+          <IonItem routerLink="/user/login" detail>
             <IonIcon icon={person} size="small" slot="start" />
             {t('Login')}
           </IonItem>
         )}
 
         {!isLoggedIn && (
-          <IonItem href="/user/register" detail>
+          <IonItem routerLink="/user/register" detail>
             <IonIcon icon={personAdd} size="small" slot="start" />
             {t('Register')}
           </IonItem>
         )}
 
-        <IonItemDivider>{t('Settings')}</IonItemDivider>
-        <IonItem href="/settings" detail>
-          <IonIcon icon={settings} size="small" slot="start" />
-          {t('App')}
-        </IonItem>
         <IonItemDivider>{t('Info')}</IonItemDivider>
+        <IonItem routerLink="/info/about" detail>
+          <IonIcon icon={informationCircleOutline} size="small" slot="start" />
+          {t('About')}
+        </IonItem>
+
+        <IonItem routerLink="/info/credits" detail>
+          <IonIcon icon={heart} size="small" slot="start" />
+          {t('Credits')}
+        </IonItem>
+
         <IonItem
-          href="https://butterfly-monitoring.net/privacy-notice"
+          href={`${config.site_url}/privacy-notice?lang=${lang}`}
           target="_blank"
           detail
         >
           <IonIcon icon={lock} size="small" slot="start" />
           {t('Privacy Policy')}
         </IonItem>
-        <IonItem href="/info/credits" detail>
-          <IonIcon icon={heart} size="small" slot="start" />
-          {t('Credits')}
+
+        <IonItemDivider>{t('Settings')}</IonItemDivider>
+        <IonItem routerLink="/settings/menu" detail>
+          <IonIcon icon={settings} size="small" slot="start" />
+          {t('App')}
         </IonItem>
       </IonList>
     </IonContent>

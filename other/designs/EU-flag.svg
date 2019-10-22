@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 230 157" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-927.998,-2171.53)">
+        <g transform="matrix(0.271503,0,0,0.271503,933.021,2176.55)">
+            <rect x="0" y="0" width="810" height="540" style="fill:white;fill-opacity:0;stroke:white;stroke-width:37px;"/>
+            <g transform="matrix(30,0,0,30,405,270)">
+                <g id="s" transform="matrix(1,0,0,1,0,-6)">
+                    <g id="c">
+                        <g id="t" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                            <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                        </g>
+                        <g id="t1" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                            <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                        </g>
+                    </g>
+                    <g id="a">
+                        <g id="c1" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                            <g id="t2" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t3" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="c2" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                            <g id="t4" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t5" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="a1" transform="matrix(-1,0,0,1,0,0)">
+                        <g id="c3" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                            <g id="t6" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t7" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="c4" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                            <g id="t8" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t9" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="s1" transform="matrix(1,0,0,1,0,6)">
+                    <g id="c5">
+                        <g id="t10" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                            <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                        </g>
+                        <g id="t11" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                            <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                        </g>
+                    </g>
+                    <g id="a2">
+                        <g id="c6" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                            <g id="t12" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t13" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="c7" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                            <g id="t14" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t15" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="a3" transform="matrix(-1,0,0,1,0,0)">
+                        <g id="c8" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                            <g id="t16" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t17" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="c9" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                            <g id="t18" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t19" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="l">
+                    <g id="s2" transform="matrix(1,0,0,1,-6,0)">
+                        <g id="c10">
+                            <g id="t20" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t21" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a4">
+                            <g id="c11" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t22" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t23" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c12" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t24" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t25" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a5" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c13" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t26" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t27" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c14" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t28" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t29" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="s3" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,-3,-5.19615)">
+                        <g id="c15">
+                            <g id="t30" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t31" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a6">
+                            <g id="c16" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t32" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t33" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c17" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t34" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t35" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a7" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c18" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t36" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t37" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c19" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t38" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t39" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="s4" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,-5.19615,-3)">
+                        <g id="c20">
+                            <g id="t40" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t41" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a8">
+                            <g id="c21" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t42" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t43" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c22" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t44" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t45" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a9" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c23" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t46" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t47" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c24" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t48" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t49" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="s5" transform="matrix(0.309017,0.951057,-0.951057,0.309017,-5.19615,3)">
+                        <g id="c25">
+                            <g id="t50" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t51" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a10">
+                            <g id="c26" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t52" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t53" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c27" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t54" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t55" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a11" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c28" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t56" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t57" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c29" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t58" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t59" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="s6" transform="matrix(0.309017,0.951057,-0.951057,0.309017,-3,5.19615)">
+                        <g id="c30">
+                            <g id="t60" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t61" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a12">
+                            <g id="c31" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t62" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t63" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c32" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t64" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t65" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a13" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c33" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t66" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t67" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c34" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t68" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t69" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="l1" transform="matrix(-1,0,0,1,0,0)">
+                    <g id="s7" transform="matrix(1,0,0,1,-6,0)">
+                        <g id="c35">
+                            <g id="t70" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t71" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a14">
+                            <g id="c36" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t72" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t73" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c37" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t74" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t75" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a15" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c38" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t76" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t77" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c39" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t78" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t79" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="s8" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,-3,-5.19615)">
+                        <g id="c40">
+                            <g id="t80" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t81" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a16">
+                            <g id="c41" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t82" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t83" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c42" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t84" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t85" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a17" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c43" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t86" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t87" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c44" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t88" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t89" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="s9" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,-5.19615,-3)">
+                        <g id="c45">
+                            <g id="t90" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t91" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a18">
+                            <g id="c46" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t92" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t93" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c47" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t94" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t95" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a19" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c48" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t96" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t97" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c49" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t98" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t99" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="s10" transform="matrix(0.309017,0.951057,-0.951057,0.309017,-5.19615,3)">
+                        <g id="c50">
+                            <g id="t100" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t101" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a20">
+                            <g id="c51" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t102" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t103" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c52" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t104" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t105" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a21" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c53" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t106" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t107" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c54" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t108" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t109" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="s11" transform="matrix(0.309017,0.951057,-0.951057,0.309017,-3,5.19615)">
+                        <g id="c55">
+                            <g id="t110" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                            <g id="t111" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                        <g id="a22">
+                            <g id="c56" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t112" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t113" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c57" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t114" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t115" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="a23" transform="matrix(-1,0,0,1,0,0)">
+                            <g id="c58" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                                <g id="t116" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t117" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                            <g id="c59" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                                <g id="t118" transform="matrix(0.951057,0.309017,-0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                                <g id="t119" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0,-1)">
+                                    <path d="M0,0L0,1L0.5,1L0,0Z" style="fill:white;fill-rule:nonzero;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

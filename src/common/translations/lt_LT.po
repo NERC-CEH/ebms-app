@@ -613,3 +613,73 @@ msgstr "Neturite užbaigtų neišsiųstų įrašų"
 
 msgid "No uploaded surveys"
 msgstr "Neturite išsiųstų įrašų"
+
+msgid "Enjoying the app?"
+msgstr "Ar tau patinka ši aplikacija?"
+
+msgid "Not really"
+msgstr "Deja, ne"
+
+msgid "Yes!"
+msgstr "Taip!"
+
+msgid "Would you mind giving us some feedback?"
+msgstr "Gal turite kokių pasiūlymų?"
+
+msgid "No, thanks"
+msgstr "Ne, ačiū"
+
+msgid "OK, sure"
+msgstr "Taip, žinoma"
+
+msgid "How about a rating on the App Store then?"
+msgstr "Gal galėtumėte parekomenduoti aplikaciją App Store?"
+
+msgid "How about a rating on the Play Store then?"
+msgstr "Gal galėtumėte parekomenduoti aplikaciją Play Store?"
+
+msgid "Icons made by"
+msgstr "Ikonos sukirtos"
+
+msgid "from"
+msgstr "iš"
+
+msgid "Enter your username or email address to request a password reset."
+msgstr "Jeigu norite atnaujinti savo slaptažodį įveskite savo vartotojo vardą arba el.paštą."
+
+msgid "We've sent an email to you"
+msgstr "Mes jums išsiuntėme el.laišką"
+
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+"Gavus laišką paspauskite ten esančią nuorodą ir sekite tolimesnes instrukcijas. "
+" Jeigu laiško negavote, patikrinkite savo elektroninio šlamšto 'spam' arba 'junk' dėžutes."
+
+msgid "App Development"
+msgstr "Mobilios programos kūrimas"
+
+msgid "This app was hand crafted with love by"
+msgstr "Šią mobilią programą su meile sukūrė"
+
+msgid "Agency specializing in building bespoke data oriented sollutions."
+msgstr "Kompanija specializuojanti progaminės įrangos kurime."
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr "Jeigu turite kokių patarimų ar pageidavimų"
+
+msgid "contact us"
+msgstr "susisiekite su mumis"
+
+msgid "Language"
+msgstr "Kalba"
+
+msgid "Country"
+msgstr "Šalis"
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr "Pažymėti naujus įrašus 'testavimui' ir nerodyti jokiuose reportuose."
+
+msgid "Share App Analytics"
+msgstr "Dalintis naudojimosi duomenimis"

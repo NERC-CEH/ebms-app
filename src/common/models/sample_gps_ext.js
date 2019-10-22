@@ -85,6 +85,8 @@ export function updateSampleLocation(sample, { latitude, longitude }) {
   return sample.setLocation(shape);
 }
 
+const DEFAULT_ACCURACY_LIMIT = 50; // meters
+
 const extension = {
   setLocation(shape) {
     if (!shape) {
@@ -128,12 +130,9 @@ const extension = {
 
   gpsExtensionInit() {
     this.gps = observable({ locating: null });
-
-    // TODO: remove
-    // window.testing.GPS.mock();
   },
 
-  startGPS(accuracyLimit) {
+  startGPS(accuracyLimit = DEFAULT_ACCURACY_LIMIT) {
     Log('SampleModel:GPS: start.');
 
     // eslint-disable-next-line

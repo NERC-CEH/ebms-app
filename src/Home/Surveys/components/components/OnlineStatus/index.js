@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonSpinner } from '@ionic/react';
+import { IonSpinner, IonLabel, IonBadge } from '@ionic/react';
 
 import { observer } from 'mobx-react';
 import './styles.scss';
@@ -10,7 +10,11 @@ const Component = observer(props => {
   const { saved } = sample.metadata;
 
   if (!saved) {
-    return null;
+    return (
+      <IonLabel slot="end" class="record-status">
+        <IonBadge class="ion-text-wrap">{t('Draft')}</IonBadge>
+      </IonLabel>
+    );
   }
 
   if (!sample.remote.synchronising) {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { IonContent, IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
 import { key, person, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
-import InputWithValidation from 'common/Components/InputWithValidation';
+import InputWithValidation from 'Components/InputWithValidation';
 import './styles.scss';
 
 class Component extends React.Component {
@@ -66,10 +66,10 @@ class Component extends React.Component {
               </IonList>
 
               <IonList>
-                <IonItem href="/user/register" detail>
+                <IonItem routerLink="/user/register" detail>
                   {t('Register')}
                 </IonItem>
-                <IonItem href="/user/reset" detail>
+                <IonItem routerLink="/user/reset" detail>
                   {t('Forgot password?')}
                 </IonItem>
               </IonList>

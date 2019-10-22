@@ -3,7 +3,7 @@ import Device from 'helpers/device';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import AppHeader from 'common/Components/Header';
-import { IonContent } from '@ionic/react';
+import { IonContent, IonPage, NavContext } from '@ionic/react';
 import Occurrence from 'occurrence';
 import SpeciesSearchEngine from './utils/taxon_search_engine';
 import Suggestions from './components/Suggestions';
@@ -25,6 +25,8 @@ class Controller extends React.Component {
     match: PropTypes.object.isRequired,
     savedSamples: PropTypes.object.isRequired,
   };
+
+  static contextType = NavContext;
 
   constructor(props) {
     super(props);
@@ -126,11 +128,11 @@ class Controller extends React.Component {
       }
 
       await this.sample.save();
-      window.history.back();
+      this.context.goBack();
     };
 
     return (
-      <>
+      <IonPage>
         <AppHeader title={t('Species')} />
         <IonContent id="area-count-taxa">
           <ion-searchbar
@@ -148,7 +150,7 @@ class Controller extends React.Component {
             onSpeciesSelected={onSpeciesSelected}
           />
         </IonContent>
-      </>
+      </IonPage>
     );
   }
 }
