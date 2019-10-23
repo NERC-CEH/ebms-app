@@ -4,6 +4,9 @@ import en from '../translations/en.pot';
 import lt_LT from '../translations/lt_LT.po';
 import es_ES from '../translations/es_ES.po';
 import sv_SE from '../translations/sv_SE.po';
+import fi_FI from '../translations/fi_FI.po';
+import fr_FR from '../translations/fr_FR.po';
+import ru_RU from '../translations/ru_RU.po';
 
 // Adding some context, reference and other in po files:
 
@@ -14,12 +17,14 @@ import sv_SE from '../translations/sv_SE.po';
 // msgstr[0] "Selecciona tu pais"
 // msgstr[1] ""
 
-
 const dictionary = {
   en,
   lt_LT,
   es_ES,
   sv_SE,
+  fi_FI,
+  fr_FR,
+  ru_RU,
 };
 
 export const languages = {
@@ -27,6 +32,9 @@ export const languages = {
   lt_LT: 'Lietuvių',
   es_ES: 'Español',
   sv_SE: 'Svenska',
+  fi_FI: 'Suomi',
+  fr_FR: 'Français',
+  ru_RU: 'Pусский',
 };
 
 export const countries = {

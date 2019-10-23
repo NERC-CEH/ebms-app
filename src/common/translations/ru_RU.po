@@ -1,0 +1,698 @@
+# Translators:
+# Светлана Соболева <sv.goloshchapova@gmail.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"Last-Translator: Светлана Соболева <sv.goloshchapova@gmail.com>, 2019\n"
+"Language-Team: Russian (Russia) (https://www.transifex.com/ceh/teams/95441/ru_RU/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Select your country"
+msgstr "Выберите вашу страну"
+
+msgid "United Kingdom"
+msgstr "Великобритания"
+
+msgid "Lithuania"
+msgstr "Литва"
+
+msgid "Spain"
+msgstr "Испания"
+
+msgid "Skip"
+msgstr "Пропустить"
+
+msgid "Next"
+msgstr "Следующее"
+
+msgid "Get Started"
+msgstr "Начнем"
+
+msgid "Please sign in with your eBMS account or register."
+msgstr "Пожалуйста, войдите используя Ваш eBMS аккаунт или зарегистрируйтесь."
+
+msgid "Username or email"
+msgstr "Введите Ваше имя пользователя или адрес электронной почты"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Sign in"
+msgstr "Войти"
+
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+msgid "Login"
+msgstr "Логин"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Info"
+msgstr "Информация"
+
+msgid "About"
+msgstr "О"
+
+msgid "Help"
+msgstr "Помощь"
+
+msgid "Privacy Policy"
+msgstr "Политика конфиденциальности"
+
+msgid "Credits"
+msgstr ""
+
+msgid "Email"
+msgstr "Электронная почта"
+
+msgid "First Name"
+msgstr "Имя"
+
+msgid "Surname"
+msgstr "Фамилия"
+
+msgid "I agree to"
+msgstr "Я принимаю"
+
+msgid "Terms and Conditions"
+msgstr "Условия и правила использования"
+
+msgid "Enter your username or email address to request a password reset"
+msgstr ""
+"Введите ваше имя пользователя или адрес электронной почты, чтобы "
+"восстановить пароль"
+
+msgid "Reset"
+msgstr "Повторная установка"
+
+msgid "Records"
+msgstr "Записи"
+
+msgid "Upload All"
+msgstr "Загрузить все"
+
+msgid "Remove All Saved"
+msgstr "Удалить все сохраненные"
+
+msgid "Application"
+msgstr "Заявка"
+
+msgid "Training Mode"
+msgstr "Режим тренировки"
+
+msgid "Experimental Features"
+msgstr "Экспериментальные особенности"
+
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+msgid "Lets start!"
+msgstr "Начнем!"
+
+msgid "TOP RECORDERS"
+msgstr "Ведущие регистраторы"
+
+msgid "TOP SPECIES"
+msgstr "Ведущие виды"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "App"
+msgstr "Приложение"
+
+msgid ""
+"We are very grateful for all the people that helped to create this app:"
+msgstr ""
+"Мы выражаем благодарность всем, кто принял участие в создании данного "
+"приложения"
+
+msgid "Home"
+msgstr "Домашняя страница"
+
+msgid "Guide"
+msgstr "Руководство"
+
+msgid "Account"
+msgstr "Учетная запись"
+
+msgid "Offline"
+msgstr "Офлайн"
+
+msgid "Sorry, looks like you're offline."
+msgstr "Извините, вы находитесь в режиме офлайна."
+
+msgid "OK"
+msgstr "Ок"
+
+msgid "Sorry"
+msgstr "Извините"
+
+msgid "Please wait..."
+msgstr "Пожалуйста, ожидайте."
+
+msgid "name is a required field"
+msgstr "Имя является обязательным полем для заполнения"
+
+msgid "password is a required field"
+msgstr "Пароль является обязательным полем для заполнения"
+
+msgid "Login error:"
+msgstr "Неправильный пароль"
+
+msgid "Failed to fetch"
+msgstr "Не удалось получить"
+
+msgid "Incorrect password or email."
+msgstr "Неправильный пароль или логин."
+
+msgid "Logout"
+msgstr "Выход"
+
+msgid "Are you sure you want to logout?"
+msgstr "Вы уверены, что хотите выйти из аккаунта?"
+
+msgid "This will delete all the records on this device."
+msgstr "Все записи с данного устройства будут удалены."
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Welcome aboard!"
+msgstr "Добро пожаловать!"
+
+msgid ""
+"Before submitting any records please check your email and click on the "
+"verification link."
+msgstr ""
+"Перед отправкой записей, подтвердите адрес электронной почты, нажав на "
+"ссылку для подтверждения."
+
+msgid "OK, got it"
+msgstr "Хорошо, спасибо."
+
+msgid "email is a required field"
+msgstr "Адрес электронной почты является обязательным полем для заполнения"
+
+msgid "firstname is a required field"
+msgstr "Имя является обязательным полем для заполнения"
+
+msgid "secondname is a required field"
+msgstr "Фамилия является обязательным полем для заполнения"
+
+msgid "must accept terms and conditions"
+msgstr "Должны принять условия и правила использования"
+
+msgid "Area Count"
+msgstr ""
+
+msgid "Area"
+msgstr "Территория"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Duration"
+msgstr "Длительность"
+
+msgid "Species"
+msgstr "Вид"
+
+msgid "Species name"
+msgstr "Название вида"
+
+msgid ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
+msgstr ""
+"Для быстрого поиска таксонов Вы можете использовать различные сокращения. "
+"Например, чтобы найти"
+
+msgid "you can type in the search bar"
+msgstr "Вы можете ввести в строке поиска"
+
+msgid "Edit Occurrence"
+msgstr "Изменить местоположение"
+
+msgid "Count"
+msgstr "Учет"
+
+msgid "Comment"
+msgstr "Комментарии"
+
+msgid "Draft"
+msgstr "Черновик"
+
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr "Продолжить предыдущий учет, сохраненный в черновике?"
+
+msgid "Discard"
+msgstr "Сбросить"
+
+msgid "Continue"
+msgstr "Продолжить"
+
+msgid "Finish"
+msgstr "Закончить"
+
+msgid "minutes"
+msgstr "Минуты"
+
+msgid "No species added"
+msgstr "Нет видов для добавления"
+
+msgid "Please draw your area on the map"
+msgstr "Пожалуйста, нарисуйте Вашу территорию на карте"
+
+msgid "Draw an area"
+msgstr "Нарисуйте территорию"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Surveys"
+msgstr "Исследование"
+
+msgid "Reports"
+msgstr "Отчет"
+
+msgid "Are you sure you want to delete this survey?"
+msgstr "Вы уверены, что ходите удалить данное исследование?"
+
+msgid "No finished surveys"
+msgstr "Нет законченных исследований"
+
+msgid "Finished surveys"
+msgstr "Законченные исследования"
+
+msgid "Selected area"
+msgstr "Выбранная территория"
+
+msgid "Use survey create time"
+msgstr ""
+
+msgid "Use survey finish time"
+msgstr ""
+
+msgid "species"
+msgstr "Вид"
+
+msgid "Done"
+msgstr "Сделано"
+
+msgid "Time's up!"
+msgstr "Время вышло"
+
+msgid "Survey incomplete"
+msgstr "Исследование неполное"
+
+msgid "The survey is not complete yet."
+msgstr "Данное исследование еще на завершилось"
+
+msgid "Please select a smaller area."
+msgstr "Пожалуйста, выберите территорию меньше."
+
+msgid "Please add survey area information."
+msgstr "Пожалуйста, добавьте информацию о территории исследования."
+
+msgid "Choose a method to upload a photo"
+msgstr "Выберите способ загрузки фотографии"
+
+msgid "Gallery"
+msgstr "Галерея"
+
+msgid "Camera"
+msgstr "Камера"
+
+msgid "Are you sure you want to remove this photo from the sample?"
+msgstr "Вы уверены, что хотите удалить эту фотографию из образца?"
+
+msgid "Note: it will remain in the gallery."
+msgstr "Обратите внимание, что оно останется в галерее."
+
+msgid "No photo has been added"
+msgstr "Фотографии не были добавлены"
+
+msgid "Registration error:"
+msgstr "Регистрационная ошибка"
+
+msgid "Incorrect password or email"
+msgstr "Неправильный пароль или электронный адрес"
+
+msgid "email is not valid"
+msgstr "Данный электронный адрес не является допустимым"
+
+msgid ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
+msgstr ""
+"Бабочки - удивительные насекомые, но их численность сокращается во многих "
+"частях Европы.  Как представлено на данном графике луговые виды бабочек на "
+"территории ЕС."
+
+msgid ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
+msgstr ""
+"Использование данного приложения представляет собой замечательную "
+"возможность расширения знаний о бабочках, их категории охраны и "
+"местообитаниях."
+
+msgid ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
+msgstr ""
+"Нам не хватает информации о численности бабочек из многих частей Европы, о "
+"чем свидетельствует плотность записей, доступных в настоящее время для "
+"оценки категории охраны бабочек."
+
+msgid ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects.  You can get "
+"started straight away"
+msgstr ""
+"Никогда еще не было так легко представить высококачественные данные для "
+"исследований, чтобы сохранить этих удивительных и важных насекомых. Вы "
+"можете начать прямо сейчас"
+
+msgid ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
+msgstr ""
+"Данное приложение было разработано в рамках проекта «Изучение бабочек "
+"Европы» (ABLE)."
+
+msgid "The ABLE project is a partnership between"
+msgstr "ABLE - проект - это партнерский проект"
+
+msgid "and"
+msgstr "и"
+
+msgid ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
+msgstr ""
+"ABLE-проект финансируется Дирекцией управления по защите окружающей среды "
+"Европейского союза на начальный двухлетний период 2019-2020 гг."
+
+msgid "ABLE partners:"
+msgstr "Партнеры ABLE-проекта:"
+
+msgid ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
+msgstr ""
+"Данное приложение вносит данные в Европейскую схему мониторинга бабочек "
+"(eBMS)."
+
+msgid "In June 2019, the following organisations are partners in eBMS:"
+msgstr "В июне 2019 представленные организации являлись партнерами eBMS:"
+
+msgid "Not enough data yet"
+msgstr "Недостаточно данных"
+
+msgid "How to start a survey"
+msgstr "Как начать исследование"
+
+msgid "To start a new survey you can press the plus button"
+msgstr "Для начала нового исследования Вы можете нажать на кнопку \"плюс\""
+
+msgid "in the home page footer. This will start a new 15 minute survey."
+msgstr ""
+"в нижней части главной страницы. Начнется новое 15-ти минутное исследование."
+
+msgid "Selecting species"
+msgstr "Выбор вида"
+
+msgid "Please press the Add"
+msgstr "Пожалуйста, нажмите Добавить"
+
+msgid ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
+msgstr ""
+"кнопку на странице редактирования Вашего нового исследования. Это направит "
+"Вас на страницу поиска таксона. После выбора вида, он будет добавлен в "
+"список Вашего исследования."
+
+msgid "Note"
+msgstr "Внимание"
+
+msgid ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
+msgstr ""
+
+msgid ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
+msgstr ""
+"Для удаления вида из списка, Вы можете провести влево и нажать кнопку "
+"\"удалить\"."
+
+msgid ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
+msgstr ""
+"Чтобы добавить больше информации о распространении Вашего вида, вы можете "
+"открыть статью о виде, нажав на нее."
+
+msgid "To finish a record you should also fill in the details of the area."
+msgstr ""
+"Для завершения записи Вам будет необходимо добавить информацию о "
+"местоположении."
+
+msgid ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
+msgstr "Когда закончите, нажмите кнопку \"Завершить\" в верхней части страницы."
+
+msgid "Searching for species"
+msgstr "Поиск вида"
+
+msgid ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
+msgstr ""
+"В приложение включено около 500 видов бабочек согласно таксономическому "
+"принципу. Для быстрого поиска таксона Вы можете использовать любые "
+"сокращения. Например, чтобы найти "
+
+msgid "Sync. with the website"
+msgstr "Синхронизация с сайтом"
+
+msgid "All your saved surveys will be shown on your account page."
+msgstr ""
+"Все Ваши сохраненные исследования будут показаны на странице Вашего "
+"аккаунта."
+
+msgid ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
+msgstr ""
+"По умолчанию исследование находится в режиме \"черновика\", который не будет"
+" отправлен в базу данных до тех пор, пока не будет нажата кнопка «Готово» в "
+"верхней части страницы. Приложение попытается отправить вашу запись, как "
+"только будет установлено хорошее сетевое соединение."
+
+msgid "If the record has reached the database a red"
+msgstr "Если запись отправлена в базу данных красный"
+
+msgid "(set for submission & saved locally) will become green"
+msgstr "(отправляется и локально сохранен) станет зеленым"
+
+msgid "synced to the database"
+msgstr "синхронизируется с базой данных"
+
+msgid ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
+msgstr ""
+"Вы должны войти в свою учетную запись на сайте и подключиться к интернету, "
+"чтобы записи автоматически синхронизировались в фоновом режиме"
+
+msgid "Delete a record"
+msgstr "Удалить запись"
+
+msgid ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
+msgstr ""
+"Для удаления записи, проведите влево на странице своей учетной записи и "
+"нажмите кнопку \"удалить\"."
+
+msgid "User"
+msgstr "Пользователь"
+
+msgid "Sign in/out or register"
+msgstr "Войти/выйти или зарегистрироваться"
+
+msgid ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
+msgstr ""
+"Для входа откройте страницу главного меню и нажмите кнопку \"Войти\" или "
+"\"Зарегистрироваться\" и следуйте инструкциям."
+
+msgid "To logout, visit the main menu page and click the logout button."
+msgstr "Для выхода, откройте страницу главного меню и нажмите кнопку \"Выход\"."
+
+msgid ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
+msgstr ""
+"после регистрации новой учетной записи Вы должны подтвердить Ваш адрес "
+"электронной почты, нажав на подтверждающую ссылку, отправленную Вам в письме"
+
+msgid "Other"
+msgstr "Другое"
+
+msgid "Reset the application"
+msgstr "Переустановка приложения"
+
+msgid "Go to the application settings page"
+msgstr "Перейдите на страницу \"Настройки\""
+
+msgid "and click on the Reset"
+msgstr "И нажмите \"Переустановить\""
+
+msgid "button"
+msgstr "кнопка"
+
+msgid "No species found with this name"
+msgstr "Виды с данным именем не найдены"
+
+msgid "Allow Sample Edit"
+msgstr "Разрешить редактирование образца"
+
+msgid "Upload"
+msgstr "Обновить"
+
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+"Данное приложение создано для мониторинга и сохранения бабочек. Нажмите на "
+"кнопку \"+\" ниже, чтобы начать подсчет бабочек."
+
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""
+"Вы увидите улучшение данного приложения, поскольку мы добавим новые функции "
+"в ближайшие месяцы."
+
+msgid "Are you sure you want to reset the application to its initial state?"
+msgstr ""
+"Вы уверены в том, что хотите вернуть приложение к его первоначальным "
+"настройкам?"
+
+msgid "This will wipe all the locally stored app data!"
+msgstr "Это удалит все данные с сохраненные на данном устройстве данные!"
+
+msgid "Sweden"
+msgstr "Швеция"
+
+msgid "Paused"
+msgstr "Пауза"
+
+msgid "Pending"
+msgstr "В ожидании"
+
+msgid "Uploaded"
+msgstr "Загружено"
+
+msgid "No finished pending surveys"
+msgstr ""
+
+msgid "No uploaded surveys"
+msgstr "Нет загруженных опросов"
+
+msgid "Enjoying the app?"
+msgstr ""
+
+msgid "Not really"
+msgstr ""
+
+msgid "Yes!"
+msgstr ""
+
+msgid "Would you mind giving us some feedback?"
+msgstr ""
+
+msgid "No, thanks"
+msgstr ""
+
+msgid "OK, sure"
+msgstr ""
+
+msgid "How about a rating on the App Store then?"
+msgstr ""
+
+msgid "How about a rating on the Play Store then?"
+msgstr ""
+
+msgid "Icons made by"
+msgstr ""
+
+msgid "from"
+msgstr ""
+
+msgid "Enter your username or email address to request a password reset."
+msgstr ""
+
+msgid "We've sent an email to you"
+msgstr ""
+
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+
+msgid "App Development"
+msgstr ""
+
+msgid "This app was hand crafted with love by"
+msgstr ""
+
+msgid "Agency specializing in building bespoke data oriented sollutions."
+msgstr ""
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr ""
+
+msgid "contact us"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr ""
+
+msgid "Share App Analytics"
+msgstr ""
+
+msgid "Save Draft"
+msgstr ""
