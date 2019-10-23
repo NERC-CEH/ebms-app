@@ -254,7 +254,7 @@ msgid "Comment"
 msgstr "Komentaras"
 
 msgid "Draft"
-msgstr "Irašas"
+msgstr "Juodraštis"
 
 msgid "Previous survey draft exists, would you like to continue it?"
 msgstr "Rastas neužbaigtas įrašas, ar norėtumėte jį tęsti?"
@@ -645,7 +645,9 @@ msgid "from"
 msgstr "iš"
 
 msgid "Enter your username or email address to request a password reset."
-msgstr "Jeigu norite atnaujinti savo slaptažodį įveskite savo vartotojo vardą arba el.paštą."
+msgstr ""
+"Jeigu norite atnaujinti savo slaptažodį įveskite savo vartotojo vardą arba "
+"el.paštą."
 
 msgid "We've sent an email to you"
 msgstr "Mes jums išsiuntėme el.laišką"
@@ -654,8 +656,9 @@ msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
-"Gavus laišką paspauskite ten esančią nuorodą ir sekite tolimesnes instrukcijas. "
-" Jeigu laiško negavote, patikrinkite savo elektroninio šlamšto 'spam' arba 'junk' dėžutes."
+"Gavus laišką paspauskite ten esančią nuorodą ir sekite tolimesnes "
+"instrukcijas.  Jeigu laiško negavote, patikrinkite savo elektroninio šlamšto"
+" 'spam' arba 'junk' dėžutes."
 
 msgid "App Development"
 msgstr "Mobilios programos kūrimas"
@@ -683,3 +686,6 @@ msgstr "Pažymėti naujus įrašus 'testavimui' ir nerodyti jokiuose reportuose.
 
 msgid "Share App Analytics"
 msgstr "Dalintis naudojimosi duomenimis"
+
+msgid "Save Draft"
+msgstr "Išsaugoti Juodraštį"

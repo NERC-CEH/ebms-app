@@ -691,3 +691,6 @@ msgstr ""
 
 msgid "Share App Analytics"
 msgstr ""
+
+msgid "Save Draft"
+msgstr ""

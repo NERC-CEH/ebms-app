@@ -10,8 +10,6 @@ import Main from './Main';
 async function createNewSample(savedSamples) {
   const sample = new Sample();
 
-  // sample.startGPS();
-
   await sample.save({
     // this can't be done in defaults
     surveyStartTime: sample.metadata.created_on,
@@ -49,7 +47,7 @@ async function showDraftAlert() {
   });
 }
 
-function showValidationAlert(errors) {
+function showValidationAlert(errors, onSaveDraft) {
   const errorsPretty = errors.errors.reduce(
     (agg, err) => `${agg} ${t(err)}`,
     ''
@@ -57,6 +55,17 @@ function showValidationAlert(errors) {
   alert({
     header: t('Survey incomplete'),
     message: `${errorsPretty}`,
+    buttons: [
+      {
+        text: t('Cancel'),
+        role: 'cancel',
+      },
+      {
+        text: t('Save Draft'),
+        cssClass: 'secondary',
+        handler: onSaveDraft,
+      },
+    ],
   });
 }
 
@@ -112,8 +121,8 @@ function toggleTimer(sample) {
 class Container extends React.Component {
   static propTypes = {
     savedSamples: PropTypes.object.isRequired,
-    match: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired,
+    match: PropTypes.object,
+    history: PropTypes.object,
     appModel: PropTypes.object.isRequired,
   };
 
@@ -136,12 +145,16 @@ class Container extends React.Component {
   async getNewSample() {
     const { savedSamples, appModel } = this.props;
     const draftID = appModel.get('areaCountDraftId');
-    let continueDraftSurvey = false;
     if (draftID) {
-      continueDraftSurvey = await showDraftAlert();
-    }
-    if (continueDraftSurvey) {
-      return savedSamples.get(draftID);
+      const draftWasNotDeleted = savedSamples.get(draftID);
+      if (draftWasNotDeleted) {
+        const continueDraftRecord = await showDraftAlert();
+        if (continueDraftRecord) {
+          return savedSamples.get(draftID);
+        }
+
+        savedSamples.get(draftID).destroy();
+      }
     }
 
     const sample = await createNewSample(savedSamples);
@@ -149,33 +162,60 @@ class Container extends React.Component {
 
     appModel.set('areaCountDraftId', sample.cid);
     await appModel.save();
-    return sample;
+    return sample.save();
   }
 
-  onSubmit = async () => {
-    const { appModel, history } = this.props;
+  _processSubmission = async () => {
+    const { history } = this.props;
     const { sample } = this.state;
+
     const errors = await sample.validateRemote();
     if (errors) {
       showValidationAlert(errors);
       return;
     }
+    sample.error.message = null;
+
+    sample.save(null, { remote: true }).catch(e => {
+      sample.error.message = e.message;
+    });
+    history.replace(`/home/user-surveys`);
+  };
+
+  _processDraft = async () => {
+    const { history, appModel } = this.props;
+    const { sample } = this.state;
 
     appModel.set('areaCountDraftId', null);
     await appModel.save();
 
-    await setSurveyEndTime(sample);
-    sample.toggleGPStracking(false);
-
-    if (sample.metadata.saved) {
-      sample.save(null, { remote: true });
+    const saveAndReturn = () => {
+      sample.save();
       history.replace(`/home/user-surveys`);
+    };
+
+    const errors = await sample.validateRemote();
+    if (errors) {
+      showValidationAlert(errors, saveAndReturn);
       return;
     }
 
     sample.metadata.saved = true;
-    sample.save();
-    history.replace(`/home/user-surveys`);
+    saveAndReturn();
+  };
+
+  onSubmit = async () => {
+    const { sample } = this.state;
+
+    await setSurveyEndTime(sample);
+    sample.toggleGPStracking(false);
+
+    if (!sample.metadata.saved) {
+      await this._processDraft();
+      return;
+    }
+
+    await this._processSubmission();
   };
 
   navigateToOccurrence = occ => {
