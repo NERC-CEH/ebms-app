@@ -25,15 +25,22 @@ function SelectCountry({ appModel, hideHeader }) {
     appModel.save();
   }
 
-  const countriesOptions = Object.entries(countries).map(([value, country]) => (
-    <>
-      {value === 'ELSEWHERE' && <IonItemDivider />}
-      <IonItem key={value}>
-        <IonLabel>{t(country)}</IonLabel>
-        <IonRadio value={value} checked={currentValue === value} />
-      </IonItem>
-    </>
-  ));
+  const translate = ([value, country]) => [value, t(country)];
+  const placeElseWhereAtEnd = ([value1, country1], [, country2]) =>
+    value1 === 'ELSEWHERE' ? 1 : country1.localeCompare(country2);
+
+  const countriesOptions = Object.entries(countries)
+    .map(translate)
+    .sort(placeElseWhereAtEnd)
+    .map(([value, country]) => (
+      <React.Fragment key={value}>
+        {value === 'ELSEWHERE' && <IonItemDivider />}
+        <IonItem>
+          <IonLabel>{country}</IonLabel>
+          <IonRadio value={value} checked={currentValue === value} />
+        </IonItem>
+      </React.Fragment>
+    ));
 
   return (
     <IonPage id="country-select">

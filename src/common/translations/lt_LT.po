@@ -26,6 +26,135 @@ msgstr "Lietuva"
 msgid "Spain"
 msgstr "Ispanija"
 
+msgid "Andorra"
+msgstr "Andora"
+
+msgid "Albania"
+msgstr "Albanija"
+
+msgid "Austria"
+msgstr "Austrija"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Bosnija ir Hercegovina"
+
+msgid "Belgium"
+msgstr "Belgija"
+
+msgid "Bulgaria"
+msgstr "Bulgarija"
+
+msgid "Belarus"
+msgstr "Baltarusija"
+
+msgid "Switzerland"
+msgstr "Šveicarija"
+
+msgid "Cyprus"
+msgstr "Kipras"
+
+msgid "Czechia"
+msgstr "Čekija"
+
+msgid "Germany"
+msgstr "Vokietija"
+
+msgid "Denmark"
+msgstr "Danija"
+
+msgid "Estonia"
+msgstr "Estija"
+
+msgid "Spain: Canary Islands"
+msgstr "Ispanija: Kanarų salos"
+
+msgid "Finland"
+msgstr "Suomija"
+
+msgid "France"
+msgstr "Prancūzija"
+
+msgid "Greece"
+msgstr "Graikija"
+
+msgid "Croatia"
+msgstr "Kroatija"
+
+msgid "Hungary"
+msgstr "Vengrija"
+
+msgid "Ireland"
+msgstr "Airija"
+
+msgid "Iceland"
+msgstr "Islandija"
+
+msgid "Italy"
+msgstr "Italija"
+
+msgid "Liechtenstein"
+msgstr "Lichtenšteinas"
+
+msgid "Luxembourg"
+msgstr "Liuksemburgas"
+
+msgid "Latvia"
+msgstr "Latvija"
+
+msgid "Moldova"
+msgstr "Moldova"
+
+msgid "Montenegro"
+msgstr "Juodkalnija"
+
+msgid "North Macedonia"
+msgstr "Šiaurės Makedonija"
+
+msgid "Malta"
+msgstr "Malta"
+
+msgid "Netherlands"
+msgstr "Nyderlandai"
+
+msgid "Norway"
+msgstr "Norvegija"
+
+msgid "Poland"
+msgstr "Lenkija"
+
+msgid "Portugal"
+msgstr "Portugalija"
+
+msgid "Portugal: Azores"
+msgstr "Portugalija: Azorai"
+
+msgid "Portugal: Madeira Islands"
+msgstr "Portugalija: Madeiros salos"
+
+msgid "Romania"
+msgstr "Rumunija"
+
+msgid "Serbia"
+msgstr "Serbija"
+
+msgid "Russian Federation"
+msgstr "Rusijos Federacija"
+
+msgid "Slovenia"
+msgstr "Slovėnija"
+
+msgid "Slovakia"
+msgstr "Slovakija"
+
+msgid "Turkey"
+msgstr "Turkija"
+
+msgid "Ukraine"
+msgstr "Ukraina"
+
+msgid "Elsewhere"
+msgstr "Kitur"
+
 msgid "Skip"
 msgstr "Praleisti"
 

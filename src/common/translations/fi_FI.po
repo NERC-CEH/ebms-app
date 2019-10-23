@@ -25,6 +25,135 @@ msgstr "Liettua"
 msgid "Spain"
 msgstr "Espanja"
 
+msgid "Andorra"
+msgstr ""
+
+msgid "Albania"
+msgstr ""
+
+msgid "Austria"
+msgstr ""
+
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+msgid "Belgium"
+msgstr ""
+
+msgid "Bulgaria"
+msgstr ""
+
+msgid "Belarus"
+msgstr ""
+
+msgid "Switzerland"
+msgstr ""
+
+msgid "Cyprus"
+msgstr ""
+
+msgid "Czechia"
+msgstr ""
+
+msgid "Germany"
+msgstr ""
+
+msgid "Denmark"
+msgstr ""
+
+msgid "Estonia"
+msgstr ""
+
+msgid "Spain: Canary Islands"
+msgstr ""
+
+msgid "Finland"
+msgstr ""
+
+msgid "France"
+msgstr ""
+
+msgid "Greece"
+msgstr ""
+
+msgid "Croatia"
+msgstr ""
+
+msgid "Hungary"
+msgstr ""
+
+msgid "Ireland"
+msgstr ""
+
+msgid "Iceland"
+msgstr ""
+
+msgid "Italy"
+msgstr ""
+
+msgid "Liechtenstein"
+msgstr ""
+
+msgid "Luxembourg"
+msgstr ""
+
+msgid "Latvia"
+msgstr ""
+
+msgid "Moldova"
+msgstr ""
+
+msgid "Montenegro"
+msgstr ""
+
+msgid "North Macedonia"
+msgstr ""
+
+msgid "Malta"
+msgstr ""
+
+msgid "Netherlands"
+msgstr ""
+
+msgid "Norway"
+msgstr ""
+
+msgid "Poland"
+msgstr ""
+
+msgid "Portugal"
+msgstr ""
+
+msgid "Portugal: Azores"
+msgstr ""
+
+msgid "Portugal: Madeira Islands"
+msgstr ""
+
+msgid "Romania"
+msgstr ""
+
+msgid "Serbia"
+msgstr ""
+
+msgid "Russian Federation"
+msgstr ""
+
+msgid "Slovenia"
+msgstr ""
+
+msgid "Slovakia"
+msgstr ""
+
+msgid "Turkey"
+msgstr ""
+
+msgid "Ukraine"
+msgstr ""
+
+msgid "Elsewhere"
+msgstr ""
+
 msgid "Skip"
 msgstr "Ohita"
 

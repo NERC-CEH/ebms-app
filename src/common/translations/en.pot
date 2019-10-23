@@ -20,6 +20,135 @@ msgstr "Lithuania"
 msgid "Spain"
 msgstr "Spain"
 
+msgid "Andorra"
+msgstr "Andorra"
+
+msgid "Albania"
+msgstr "Albania"
+
+msgid "Austria"
+msgstr "Austria"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Bosnia and Herzegovina"
+
+msgid "Belgium"
+msgstr "Belgium"
+
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+msgid "Belarus"
+msgstr "Belarus"
+
+msgid "Switzerland"
+msgstr "Switzerland"
+
+msgid "Cyprus"
+msgstr "Cyprus"
+
+msgid "Czechia"
+msgstr "Czechia"
+
+msgid "Germany"
+msgstr "Germany"
+
+msgid "Denmark"
+msgstr "Denmark"
+
+msgid "Estonia"
+msgstr "Estonia"
+
+msgid "Spain: Canary Islands"
+msgstr "Spain: Canary Islands"
+
+msgid "Finland"
+msgstr "Finland"
+
+msgid "France"
+msgstr "France"
+
+msgid "Greece"
+msgstr "Greece"
+
+msgid "Croatia"
+msgstr "Croatia"
+
+msgid "Hungary"
+msgstr "Hungary"
+
+msgid "Ireland"
+msgstr "Ireland"
+
+msgid "Iceland"
+msgstr "Iceland"
+
+msgid "Italy"
+msgstr "Italy"
+
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+msgid "Luxembourg"
+msgstr "Luxembourg"
+
+msgid "Latvia"
+msgstr "Latvia"
+
+msgid "Moldova"
+msgstr "Moldova"
+
+msgid "Montenegro"
+msgstr "Montenegro"
+
+msgid "North Macedonia"
+msgstr "North Macedonia"
+
+msgid "Malta"
+msgstr "Malta"
+
+msgid "Netherlands"
+msgstr "Netherlands"
+
+msgid "Norway"
+msgstr "Norway"
+
+msgid "Poland"
+msgstr "Poland"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Portugal: Azores"
+msgstr "Portugal: Azores"
+
+msgid "Portugal: Madeira Islands"
+msgstr "Portugal: Madeira Islands"
+
+msgid "Romania"
+msgstr "Romania"
+
+msgid "Serbia"
+msgstr "Serbia"
+
+msgid "Russian Federation"
+msgstr "Russian Federation"
+
+msgid "Slovenia"
+msgstr "Slovenia"
+
+msgid "Slovakia"
+msgstr "Slovakia"
+
+msgid "Turkey"
+msgstr "Turkey"
+
+msgid "Ukraine"
+msgstr "Ukraine"
+
+msgid "Elsewhere"
+msgstr "Elsewhere"
+
 msgid "Skip"
 msgstr "Skip"
 
