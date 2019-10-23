@@ -3,18 +3,26 @@
     margin-bottom: 0;
   }
 
+  #countdown {
+    opacity: 1;
+  }
+  
   #countdown span {
     width: 50px;
     display: inline-block;
     text-align: left;
+    opacity: 0.5;
 
     &.paused {
+      opacity: 1;
       width: inherit;
+      padding: 0 10px;
       color: var(--ion-color-tertiary);
     }
 
     &.warn {
-      color: var(--ion-color-warning-shade);
+      opacity: 1;
+      color: var(--ion-color-danger);
     }
   }
 

@@ -20,26 +20,9 @@ import {
   funnel,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
-import Countdown, { zeroPad } from 'react-countdown-now';
 import config from 'config';
+import CountdownClock from './components/CountdownClock';
 import './styles.scss';
-
-function CountdownRenderer({ minutes, seconds, completed }) {
-  if (completed) {
-    return t(`Time's up!`);
-  }
-  return (
-    <span className={minutes < 3 ? 'warn' : ''}>
-      {`${zeroPad(minutes)}:${zeroPad(seconds)}`}
-    </span>
-  );
-}
-
-CountdownRenderer.propTypes = {
-  minutes: PropTypes.number.isRequired,
-  seconds: PropTypes.number.isRequired,
-  completed: PropTypes.bool.isRequired,
-};
 
 const speciesNameSort = (occ1, occ2) => {
   const foundInName1 = occ1.get('taxon').found_in_name;
@@ -163,13 +146,7 @@ class AreaCount extends Component {
           >
             <IonIcon icon={time} slot="start" />
             <IonLabel>{t('Duration')}</IonLabel>
-            <IonLabel id="countdown" slot="end">
-              {isPaused ? (
-                <span className="paused">{t('Paused')}</span>
-              ) : (
-                <Countdown date={countdown} renderer={CountdownRenderer} />
-              )}
-            </IonLabel>
+            <CountdownClock isPaused={isPaused} countdown={countdown} />
           </IonItem>
 
           <IonButton
