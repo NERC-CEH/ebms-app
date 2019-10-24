@@ -13,6 +13,7 @@ import Log from 'helpers/log';
 import Device from 'helpers/device';
 import store from '../store';
 import GPSExtension from './sample_gps_ext';
+import VibrateExtension from './sample_vibrate_ext';
 
 const locationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
@@ -95,6 +96,12 @@ let Sample = Indicia.Sample.extend({
     this.gpsExtensionInit();
   },
 
+  destroy() {
+    this.toggleGPStracking(false);
+    this.stopVibrateCounter();
+    Indicia.Sample.prototype.destroy.apply(this);
+  },
+
   /**
    * Disable sort for mobx to keep the same refs.
    * @param mediaObj
@@ -125,11 +132,15 @@ let Sample = Indicia.Sample.extend({
 
     const smpAttrs = this.keys();
     const updatedSubmission = { ...{}, ...submission, ...newAttrs };
-    updatedSubmission.fields = { ...{}, ...updatedSubmission.fields, ...{
-      [smpAttrs.device.id]: smpAttrs.device.values[Device.getPlatform()],
-      [smpAttrs.device_version.id]: Device.getVersion(),
-      [smpAttrs.app_version.id]: `${CONFIG.version}.${CONFIG.build}`,
-    } };
+    updatedSubmission.fields = {
+      ...{},
+      ...updatedSubmission.fields,
+      ...{
+        [smpAttrs.device.id]: smpAttrs.device.values[Device.getPlatform()],
+        [smpAttrs.device_version.id]: Device.getVersion(),
+        [smpAttrs.app_version.id]: `${CONFIG.version}.${CONFIG.build}`,
+      },
+    };
 
     // add the survey_id to subsamples too
     if (this.metadata.complex_survey) {
@@ -140,40 +151,6 @@ let Sample = Indicia.Sample.extend({
     }
 
     return Promise.resolve([updatedSubmission, media]);
-  },
-
-  /**
-   * Set the sample for submission and send it.
-   */
-  setToSend() {
-    // don't change it's status if already saved
-    if (this.metadata.saved) {
-      return Promise.resolve(this);
-    }
-
-    // TODO: remove this once clear why the resubmission occurs
-    // https://www.brc.ac.uk/irecord/node/7194
-    if (this.id || this.metadata.server_on) {
-      // an error, this should never happen
-      Log(
-        'SampleModel: trying to set a record for submission that is already sent!',
-        'w'
-      );
-    }
-
-    this.metadata.saved = true;
-
-    if (!this.isValid({ remote: true })) {
-      // since the sample was invalid and so was not saved
-      // we need to revert it's status
-      this.metadata.saved = false;
-      return false;
-    }
-
-    Log('SampleModel: was set to send.');
-
-    // save sample
-    return this.save();
   },
 
   // TODO: remove this once clear why the resubmission occurs
@@ -207,5 +184,6 @@ let Sample = Indicia.Sample.extend({
 
 // add geolocation functionality
 Sample = Sample.extend(GPSExtension);
+Sample = Sample.extend(VibrateExtension);
 
 export { Sample as default };

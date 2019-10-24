@@ -2,23 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonPage } from '@ionic/react';
-import Sample from 'sample';
 import alert from 'common/helpers/alert';
+import modelFactory from 'common/models/model_factory';
 import Header from './Header';
 import Main from './Main';
-
-async function createNewSample(savedSamples) {
-  const sample = new Sample();
-
-  await sample.save({
-    // this can't be done in defaults
-    surveyStartTime: sample.metadata.created_on,
-  });
-
-  // add to main collection
-  savedSamples.add(sample);
-  return sample;
-}
 
 async function showDraftAlert() {
   return new Promise(resolve => {
@@ -157,12 +144,10 @@ class Container extends React.Component {
       }
     }
 
-    const sample = await createNewSample(savedSamples);
-    sample.toggleGPStracking();
-
+    const sample = await modelFactory.createSample();
     appModel.set('areaCountDraftId', sample.cid);
     await appModel.save();
-    return sample.save();
+    return sample;
   }
 
   _processSubmission = async () => {
@@ -174,6 +159,7 @@ class Container extends React.Component {
       showValidationAlert(errors);
       return;
     }
+    sample.toggleGPStracking(false);
     sample.error.message = null;
 
     sample.save(null, { remote: true }).catch(e => {
@@ -190,6 +176,10 @@ class Container extends React.Component {
     await appModel.save();
 
     const saveAndReturn = () => {
+      setSurveyEndTime(sample);
+      sample.toggleGPStracking(false);
+      sample.stopVibrateCounter();
+  
       sample.save();
       history.replace(`/home/user-surveys`);
     };
@@ -206,9 +196,6 @@ class Container extends React.Component {
 
   onSubmit = async () => {
     const { sample } = this.state;
-
-    await setSurveyEndTime(sample);
-    sample.toggleGPStracking(false);
 
     if (!sample.metadata.saved) {
       await this._processDraft();

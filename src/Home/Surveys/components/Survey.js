@@ -25,9 +25,7 @@ function deleteSurvey(sample) {
       {
         text: t('Delete'),
         cssClass: 'secondary',
-        handler: () => {
-          sample.destroy();
-        },
+        handler: () => sample.destroy(),
       },
     ],
   });

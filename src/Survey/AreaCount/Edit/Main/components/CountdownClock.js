@@ -34,7 +34,7 @@ function CountdownClock({ isPaused, countdown }) {
 
 CountdownClock.propTypes = {
   isPaused: PropTypes.bool,
-  countdown: PropTypes.object,
+  countdown: PropTypes.number,
 };
 
 export default CountdownClock;
