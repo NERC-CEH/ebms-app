@@ -59,6 +59,7 @@
     <preference name="BackupWebStorage" value="none"/>
     <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
     <preference name="KeyboardResizeMode" value="body" />
+    <preference name="WKSuspendInBackground" value="false" />
 
     <!--see https://calendee.com/2015/03/03/polish-app-launch-with-cordova-splashscreen-plugin/-->
     <preference name="AutoHideSplashScreen" value="false" />

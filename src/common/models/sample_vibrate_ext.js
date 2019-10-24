@@ -11,7 +11,7 @@ const extension = {
         this.metadata.pausedTime;
 
       const timeLeft = (countdown - Date.now()) / 60;
-      const isBelow3mins = timeLeft <= 1000;
+      const isBelow3mins = timeLeft <= 3000;
       const isTimeout = timeLeft <= 0;
 
       if (isTimeout && !this._timeoutVibrated) {
