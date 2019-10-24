@@ -21,31 +21,12 @@ function deDuplicateSuggestions(suggestions) {
     const noCommonNames = !nameNormalized || !previousNameNormalized;
     const isUnique = noCommonNames || nameNormalized !== previousNameNormalized;
 
-    if (isUnique) {
-      results.push(taxon);
-      previous = taxon;
+    if (!isUnique) {
       return;
     }
 
-    const sameSpecies = previous.warehouse_id === taxon.warehouse_id;
-    const sameScientificName =
-      previous.scientific_name === taxon.scientific_name;
-    if (!sameSpecies && !sameScientificName) {
-      // need to qualify both the last pushed name and this entry with the
-      // scientific name helps to disambiguate Silene pusilla and
-      // Silene suecica with have been (wrongly) assigned the same
-      // vernacular name
-      if (!previous._dedupedScientificName) {
-        previous._dedupedScientificName = previous.scientific_name;
-      }
-
-      results.push({
-        ...taxon,
-        ...{
-          _dedupedScientificName: taxon.scientific_name,
-        },
-      });
-    }
+    results.push(taxon);
+    previous = taxon;
   });
 
   return results;
@@ -105,7 +86,7 @@ const Suggestions = ({ searchResults, searchPhrase, onSpeciesSelected }) => {
 
   return (
     <div id="suggestions">
-      <ul className="table-view">{suggestionsList}</ul>
+      <ul>{suggestionsList}</ul>
     </div>
   );
 };

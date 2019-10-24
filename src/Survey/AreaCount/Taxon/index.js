@@ -50,9 +50,11 @@ class Controller extends React.Component {
     );
   }
 
-  filterOutRecordedTaxa = searchResults =>
-    searchResults.filter(
-      result => !this.recordedTaxa.includes(result.warehouse_id)
+  annotateRecordedTaxa = searchResults =>
+    searchResults.map(result =>
+      this.recordedTaxa.includes(result.warehouse_id)
+        ? { ...result, ...{ isRecorded: true } }
+        : result
     );
 
   async onInputKeystroke(e) {
@@ -71,10 +73,10 @@ class Controller extends React.Component {
     // search
     const searchResults = await SpeciesSearchEngine.search(searchPhrase);
 
-    const uniqueSearchResults = this.filterOutRecordedTaxa(searchResults);
+    const annotatedSearchResults = this.annotateRecordedTaxa(searchResults);
 
     this.setState({
-      searchResults: uniqueSearchResults,
+      searchResults: annotatedSearchResults,
       searchPhrase,
     });
   }

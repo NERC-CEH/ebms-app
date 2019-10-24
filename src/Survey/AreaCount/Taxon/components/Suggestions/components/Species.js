@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Log from 'helpers/log';
+import './styles.scss';
 
 const onClick = (e, species, onSelect) => {
   Log('taxon: selected.', 'd');
@@ -25,35 +26,24 @@ function prettifyName(species, searchPhrase) {
   if (!(searchPos >= 0)) {
     return name;
   }
-  let deDupedName;
-  if (species._dedupedScientificName) {
-    deDupedName = (
-      <small>
-        <br />
-        <i>{species._dedupedScientificName}</i>
-      </small>
-    );
-  }
   return (
     <>
       {name.slice(0, searchPos)}
       <b>{name.slice(searchPos, searchPos + searchPhrase.length)}</b>
       {name.slice(searchPos + searchPhrase.length)}
-      {deDupedName}
     </>
   );
 }
 
 const Species = ({ species, searchPhrase, onSelect }) => {
   const prettyName = prettifyName(species, searchPhrase);
-
-  // const group = informalGroups[species.group];
+  const { isRecorded } = species;
 
   /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   return (
     <li
-      className="table-view-cell"
-      onClick={e => onClick(e, species, onSelect)}
+      className={`search-result ${isRecorded ? 'recorded' : ''}`}
+      onClick={e => !isRecorded && onClick(e, species, onSelect)}
     >
       <div className="taxon">{prettyName}</div>
     </li>

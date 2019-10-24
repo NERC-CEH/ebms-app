@@ -5,7 +5,7 @@
   color: #353535;
 }
 
-#suggestions .table-view {
+#suggestions ul {
   border-top: none;
   padding-left: 0;
   margin-top: 0;
@@ -14,102 +14,4 @@
   background-color: #fff;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-}
-
-#suggestions .table-view-cell {
-  padding: 8px 8px 8px 15px;
-  font-size: 16px;
-  position: relative;
-  overflow: hidden;
-  &:nth-child(odd) {
-    background-color: #f7f7f7;
-  }
-
-  &.empty {
-    font-size: 13.3333px;
-    line-height: 17.3333px;
-
-    height: initial !important;
-    min-height: initial !important;
-    padding: 13px 0;
-    border: none;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    font-weight: normal;
-    color: var(--ion-color-dark);
-  }
-
-  &:hover {
-    background-color: var(--ion-color-light);
-  }
-
-  button {
-    width: 20%;
-    max-width: 80px;
-    right: 0;
-
-    background-color: transparent;
-    border: none;
-
-    //left line
-    &:after {
-      content: '';
-      background: var(--ion-color-light-shade);
-      position: absolute;
-      bottom: 9px;
-      left: 0;
-      height: 63%;
-      width: 1px;
-    }
-  }
-
-  button.edit-shortcut {
-    height: 47px;
-    padding: 0 20px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  div.taxon {
-    white-space: normal;
-    overflow: visible;
-    font-weight: normal;
-    margin-bottom: 3px;
-    margin-top: 3px;
-    line-height: 20px;
-  }
-
-  span.group {
-    position: absolute;
-    right: 22%;
-
-    &.right {
-      right: 2%;
-    }
-
-    bottom: -2px;
-    font-weight: 200;
-    font-size: 14px;
-    color: var(--ion-color-dark);
-  }
-
-  @media only screen and (min-width: 400px) {
-    span.group {
-      right: 90px;
-    }
-  }
-
-  &.selected {
-    background-color: var(--ion-color-light-shade);
-
-    button {
-      border-left: 1px var(--ion-color-medium) solid;
-    }
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
 }
