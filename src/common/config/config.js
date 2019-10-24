@@ -7,7 +7,6 @@ import Wkt from 'wicket';
 import { toJS } from 'mobx';
 import L from 'leaflet';
 
-
 function transformToMeters(coordinates) {
   return coordinates.map(([lng, lat]) => {
     const { x, y } = L.Projection.SphericalMercator.project({ lat, lng });
@@ -17,9 +16,9 @@ function transformToMeters(coordinates) {
 function getGeomString(shape) {
   const geoJSON = toJS(shape);
   if (geoJSON.type === 'Polygon') {
-    geoJSON.coordinates[0] = transformToMeters(geoJSON.coordinates[0])
+    geoJSON.coordinates[0] = transformToMeters(geoJSON.coordinates[0]);
   } else {
-    geoJSON.coordinates = transformToMeters(geoJSON.coordinates)
+    geoJSON.coordinates = transformToMeters(geoJSON.coordinates);
   }
 
   const wkt = new Wkt.Wkt(geoJSON);
@@ -150,6 +149,20 @@ const CONFIG = {
           },
         },
         count: { id: 780 },
+        stage: {
+          id: 293,
+          label: 'Stage',
+          type: 'radio',
+          default: 'Not Recorded',
+
+          values: {
+            Adults: 3929,
+            Larvae: 3931,
+            Eggs: 3932,
+            Pupae: 3930,
+            'Larval webs': 14079,
+          },
+        },
       },
     },
   },

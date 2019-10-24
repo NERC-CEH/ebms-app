@@ -710,3 +710,23 @@ msgstr "Share App Analytics"
 msgid "Save Draft"
 msgstr "Save Draft"
 
+msgid "Stage"
+msgstr "Stage"
+
+msgid "Not Recorded"
+msgstr "Not Recorded"
+
+msgid "Adults"
+msgstr "Adults"
+
+msgid "Larvae"
+msgstr "Larvae"
+
+msgid "Eggs"
+msgstr "Eggs"
+
+msgid "Pupae"
+msgstr "Pupae"
+
+msgid "Larval webs"
+msgstr "Larval webs"

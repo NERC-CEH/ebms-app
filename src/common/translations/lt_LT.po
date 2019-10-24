@@ -818,3 +818,24 @@ msgstr "Dalintis naudojimosi duomenimis"
 
 msgid "Save Draft"
 msgstr "Išsaugoti Juodraštį"
+
+msgid "Stage"
+msgstr "Stadija"
+
+msgid "Not Recorded"
+msgstr "Nepažymėta"
+
+msgid "Adults"
+msgstr "Suaugęs"
+
+msgid "Larvae"
+msgstr "Lerva"
+
+msgid "Eggs"
+msgstr "Kiaušinėlis"
+
+msgid "Pupae"
+msgstr "Lėliukė"
+
+msgid "Larval webs"
+msgstr "Lervos tinklas"

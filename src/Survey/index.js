@@ -9,6 +9,7 @@ import EditOccurrence from './AreaCount/EditOccurrence';
 import Taxon from './AreaCount/Taxon';
 import AreaAttr from './AreaCount/Area';
 import Comment from './AreaCount/Comment';
+import Stage from './AreaCount/Stage';
 
 const App = () => {
   if (!userModel.hasLogIn()) {
@@ -45,6 +46,11 @@ const App = () => {
         path="/survey/:id/edit/occ/:occId/taxa"
         exact
         render={props => <Taxon savedSamples={savedSamples} {...props} />}
+      />
+      <Route
+        path="/survey/:id/edit/occ/:occId/stage"
+        exact
+        render={props => <Stage savedSamples={savedSamples} {...props} />}
       />
       <Route
         path="/survey/:id/edit/occ/:occId/comment"

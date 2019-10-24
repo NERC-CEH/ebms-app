@@ -829,3 +829,24 @@ msgstr ""
 
 msgid "Save Draft"
 msgstr ""
+
+msgid "Stage"
+msgstr ""
+
+msgid "Not Recorded"
+msgstr ""
+
+msgid "Adults"
+msgstr ""
+
+msgid "Larvae"
+msgstr ""
+
+msgid "Eggs"
+msgstr ""
+
+msgid "Pupae"
+msgstr ""
+
+msgid "Larval webs"
+msgstr ""

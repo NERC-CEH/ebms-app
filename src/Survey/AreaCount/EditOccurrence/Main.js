@@ -34,12 +34,16 @@ class EditOccurrence extends Component {
   render() {
     const { sample, occurrence } = this.props;
     const species = occurrence.get('taxon').scientific_name;
+    const stage = occurrence.get('stage');
     const comment = occurrence.get('comment');
     const count = occurrence.get('count');
 
     return (
       <IonContent id="area-count-occurrence-edit">
-        <IonItem routerLink={`/survey/${sample.cid}/edit/occ/${occurrence.cid}/taxa`}>
+        <IonItem
+          routerLink={`/survey/${sample.cid}/edit/occ/${occurrence.cid}/taxa`}
+          detail
+        >
           <IonLabel>{t('Species')}</IonLabel>
           <IonLabel slot="end">{species}</IonLabel>
         </IonItem>
@@ -66,7 +70,15 @@ class EditOccurrence extends Component {
           </div>
         </IonItem>
         <IonItem
+          routerLink={`/survey/${sample.cid}/edit/occ/${occurrence.cid}/stage`}
+          detail
+        >
+          <IonLabel>{t('Stage')}</IonLabel>
+          <IonLabel slot="end">{t(stage)}</IonLabel>
+        </IonItem>
+        <IonItem
           routerLink={`/survey/${sample.cid}/edit/occ/${occurrence.cid}/comment`}
+          detail
         >
           <IonLabel>{t('Comment')}</IonLabel>
           <IonLabel slot="end">{comment}</IonLabel>
