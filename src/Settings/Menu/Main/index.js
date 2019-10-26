@@ -71,7 +71,7 @@ class Component extends React.Component {
           <IonItem routerLink="/settings/country">
             <IonLabel>{t('Country')}</IonLabel>
             <IonIcon icon={globe} size="small" slot="start" />
-            <IonLabel slot="end">{countries[country]}</IonLabel>
+            <IonLabel slot="end">{t(countries[country])}</IonLabel>
           </IonItem>
 
           <IonItem>
