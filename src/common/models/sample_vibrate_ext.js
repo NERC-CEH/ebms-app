@@ -1,7 +1,10 @@
+import Log from 'helpers/log';
 import config from 'config';
 
 const extension = {
   startVibrateCounter() {
+    Log('SampleModel:Vibrate: start.');
+
     this.counterId = setInterval(() => {
       const startTime = new Date(this.get('surveyStartTime'));
 
@@ -28,6 +31,7 @@ const extension = {
 
   stopVibrateCounter() {
     if (this.counterId) {
+      Log('SampleModel:Vibrate: stop.');
       clearInterval(this.counterId);
     }
   },
