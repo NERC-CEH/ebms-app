@@ -6,11 +6,6 @@ import { Route } from 'react-router-dom';
 import { IonRouterOutlet } from '@ionic/react';
 import modelFactory from 'common/models/model_factory';
 import Edit from './Edit';
-import EditOccurrence from './EditOccurrence';
-import Taxon from './Taxon';
-import AreaAttr from './Area';
-import Comment from './Comment';
-import Stage from './Stage';
 
 async function showDraftAlert() {
   return new Promise(resolve => {
@@ -57,7 +52,7 @@ class Routes extends React.Component {
     if (sampleID === 'new') {
       const newSample = await this.getNewSample();
       this.setState({ sample: newSample });
-      history.replace(`/survey/area/${newSample.cid}/edit`);
+      history.replace(`/survey/transect/${newSample.cid}/edit`);
       return;
     }
 
@@ -66,7 +61,7 @@ class Routes extends React.Component {
 
   async getNewSample() {
     const { savedSamples, appModel } = this.props;
-    const draftID = appModel.get('areaCountDraftId');
+    const draftID = appModel.get('transectDraftId');
     if (draftID) {
       const draftWasNotDeleted = savedSamples.get(draftID);
       if (draftWasNotDeleted) {
@@ -79,8 +74,8 @@ class Routes extends React.Component {
       }
     }
 
-    const sample = await modelFactory.createAreaCountSample();
-    appModel.set('areaCountDraftId', sample.cid);
+    const sample = await modelFactory.createTransectSample();
+    appModel.set('transectDraftId', sample.cid);
     await appModel.save();
     return sample;
   }
@@ -94,42 +89,10 @@ class Routes extends React.Component {
     return (
       <IonRouterOutlet>
         <Route
-          path="/survey/area/:id/edit/area"
-          exact
-          render={props => <AreaAttr sample={this.state.sample} {...props} />}
-        />
-        <Route
-          path="/survey/area/:id/edit/taxa"
-          exact
-          render={props => <Taxon sample={this.state.sample} {...props} />}
-        />
-        <Route
-          path="/survey/area/:id/edit"
+          path="/survey/transect/:id/edit"
           exact
           render={props => (
             <Edit sample={this.state.sample} appModel={appModel} {...props} />
-          )}
-        />
-        <Route
-          path="/survey/area/:id/edit/occ/:occId/taxa"
-          exact
-          render={props => <Taxon sample={this.state.sample} {...props} />}
-        />
-        <Route
-          path="/survey/area/:id/edit/occ/:occId/stage"
-          exact
-          render={props => <Stage sample={this.state.sample} {...props} />}
-        />
-        <Route
-          path="/survey/area/:id/edit/occ/:occId/comment"
-          exact
-          render={props => <Comment sample={this.state.sample} {...props} />}
-        />
-        <Route
-          path="/survey/area/:id/edit/occ/:occId"
-          exact
-          render={props => (
-            <EditOccurrence sample={this.state.sample} {...props} />
           )}
         />
       </IonRouterOutlet>

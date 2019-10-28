@@ -7,8 +7,15 @@ import {
   IonLabel,
   IonContent,
 } from '@ionic/react';
-import { removeCircleOutline, addCircleOutline } from 'ionicons/icons';
+import {
+  removeCircleOutline,
+  addCircleOutline,
+  clipboard,
+} from 'ionicons/icons';
 import { observer } from 'mobx-react';
+import 'common/images/number.svg';
+import 'common/images/butterfly.svg';
+import './caterpillar.svg';
 import './styles.scss';
 
 @observer
@@ -44,11 +51,13 @@ class EditOccurrence extends Component {
           routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/taxa`}
           detail
         >
+          <IonIcon src="/images/butterfly.svg" slot="start" />
           <IonLabel>{t('Species')}</IonLabel>
           <IonLabel slot="end">{species}</IonLabel>
         </IonItem>
         <IonItem id="area-count-occurrence-edit-count">
           <IonLabel>{t('Count')}</IonLabel>
+          <IonIcon src="/images/number.svg" slot="start" />
           <div slot="end">
             <IonButton
               shape="round"
@@ -73,6 +82,7 @@ class EditOccurrence extends Component {
           routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/stage`}
           detail
         >
+          <IonIcon src="/images/caterpillar.svg" slot="start" />
           <IonLabel>{t('Stage')}</IonLabel>
           <IonLabel slot="end">{t(stage)}</IonLabel>
         </IonItem>
@@ -80,6 +90,7 @@ class EditOccurrence extends Component {
           routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/comment`}
           detail
         >
+          <IonIcon icon={clipboard} slot="start" />
           <IonLabel>{t('Comment')}</IonLabel>
           <IonLabel slot="end">{comment}</IonLabel>
         </IonItem>
