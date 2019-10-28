@@ -37,7 +37,7 @@ const Component = () => (
         <IonIcon icon={person} />
         <IonLabel>{t('Surveys')}</IonLabel>
       </IonTabButton>
-      <IonTabButton tab="survey" class="add-survey" href="/survey/new/edit">
+      <IonTabButton tab="survey" class="add-survey" href="/survey/area/new/edit">
         <IonIcon icon={add} />
       </IonTabButton>
       <IonTabButton tab="help" href="/home/help">

@@ -3,36 +3,8 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonPage } from '@ionic/react';
 import alert from 'common/helpers/alert';
-import modelFactory from 'common/models/model_factory';
 import Header from './Header';
 import Main from './Main';
-
-async function showDraftAlert() {
-  return new Promise(resolve => {
-    alert({
-      header: t('Draft'),
-      message: `${t(
-        'Previous survey draft exists, would you like to continue it?'
-      )}`,
-      backdropDismiss: false,
-      buttons: [
-        {
-          text: t('Discard'),
-          handler: () => {
-            resolve(false);
-          },
-        },
-        {
-          text: t('Continue'),
-          cssClass: 'primary',
-          handler: () => {
-            resolve(true);
-          },
-        },
-      ],
-    });
-  });
-}
 
 function showValidationAlert(errors, onSaveDraft) {
   const errorsPretty = errors.errors.reduce(
@@ -107,48 +79,11 @@ function toggleTimer(sample) {
 @observer
 class Container extends React.Component {
   static propTypes = {
-    savedSamples: PropTypes.object.isRequired,
+    sample: PropTypes.object.isRequired,
     match: PropTypes.object,
     history: PropTypes.object,
     appModel: PropTypes.object.isRequired,
   };
-
-  state = { sample: null };
-
-  async componentDidMount() {
-    const { savedSamples, match, history } = this.props;
-    const sampleID = match.params.id;
-
-    if (sampleID === 'new') {
-      const newSample = await this.getNewSample();
-      history.replace(`/survey/${newSample.cid}/edit`);
-      this.setState({ sample: newSample });
-      return;
-    }
-
-    this.setState({ sample: savedSamples.get(sampleID) });
-  }
-
-  async getNewSample() {
-    const { savedSamples, appModel } = this.props;
-    const draftID = appModel.get('areaCountDraftId');
-    if (draftID) {
-      const draftWasNotDeleted = savedSamples.get(draftID);
-      if (draftWasNotDeleted) {
-        const continueDraftRecord = await showDraftAlert();
-        if (continueDraftRecord) {
-          return savedSamples.get(draftID);
-        }
-
-        savedSamples.get(draftID).destroy();
-      }
-    }
-
-    const sample = await modelFactory.createSample();
-    appModel.set('areaCountDraftId', sample.cid);
-    await appModel.save();
-    return sample;
-  }
 
   _processSubmission = async () => {
     const { history } = this.props;
@@ -179,7 +114,7 @@ class Container extends React.Component {
       setSurveyEndTime(sample);
       sample.toggleGPStracking(false);
       sample.stopVibrateCounter();
-  
+
       sample.save();
       history.replace(`/home/user-surveys`);
     };
@@ -209,7 +144,7 @@ class Container extends React.Component {
     const { match, history } = this.props;
     const sampleID = match.params.id;
 
-    history.push(`/survey/${sampleID}/edit/occ/${occ.cid}`);
+    history.push(`/survey/area/${sampleID}/edit/occ/${occ.cid}`);
   };
 
   toggleSpeciesSort = () => {
@@ -222,18 +157,18 @@ class Container extends React.Component {
   };
 
   render() {
-    const { appModel, history } = this.props;
+    const { sample, appModel, history } = this.props;
+
+    if (!sample) {
+      return null;
+    }
 
     const areaSurveyListSortedByTime = appModel.get(
       'areaSurveyListSortedByTime'
     );
 
-    if (!this.state.sample) {
-      return null;
-    }
-
-    const isTraining = this.state.sample.metadata.training;
-    const isEditing = this.state.sample.metadata.saved;
+    const isTraining = sample.metadata.training;
+    const isEditing = sample.metadata.saved;
     return (
       <IonPage>
         <Header
@@ -242,7 +177,7 @@ class Container extends React.Component {
           isEditing={isEditing}
         />
         <Main
-          sample={this.state.sample}
+          sample={sample}
           onSubmit={this.onSubmit}
           deleteOccurrence={deleteOccurrence}
           increaseCount={increaseCount}

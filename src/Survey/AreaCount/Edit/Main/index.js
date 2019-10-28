@@ -134,7 +134,7 @@ class AreaCount extends Component {
     return (
       <IonContent id="area-count-edit">
         <IonList lines="full">
-          <IonItem routerLink={`/survey/${sample.cid}/edit/area`} detail>
+          <IonItem routerLink={`/survey/area/${sample.cid}/edit/area`} detail>
             <IonIcon icon={map} slot="start" />
             <IonLabel>{t('Area')}</IonLabel>
             <IonLabel slot="end">{areaPretty}</IonLabel>
@@ -153,7 +153,7 @@ class AreaCount extends Component {
             color="primary"
             id="add"
             onClick={() => {
-              this.props.history.push(`/survey/${sample.cid}/edit/taxa`);
+              this.props.history.push(`/survey/area/${sample.cid}/edit/taxa`);
             }}
           >
             <IonIcon icon={addCircleOutline} slot="start" />

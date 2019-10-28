@@ -14,17 +14,15 @@ class Component extends React.Component {
 
   static propTypes = {
     match: PropTypes.object,
-    savedSamples: PropTypes.object.isRequired,
+    sample: PropTypes.object.isRequired,
   };
 
   constructor(props) {
     super(props);
-    const { match, savedSamples } = props;
+    const { match, sample } = props;
 
-    const { id: sampleId, occId } = match.params;
+    const { occId } = match.params;
     this.attrName = 'stage'; // match.params.attr;
-    const sample = savedSamples.get(sampleId);
-    this.sample = sample;
     this.occ = sample.occurrences.find(occ => occ.cid === occId);
 
     this.model = this.occ;

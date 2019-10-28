@@ -12,15 +12,13 @@ import './styles.scss';
 class Container extends React.Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
-    savedSamples: PropTypes.object.isRequired,
+    sample: PropTypes.object.isRequired,
   };
 
   render() {
-    const { match, savedSamples } = this.props;
+    const { match, sample } = this.props;
 
-    const sampleID = match.params.id;
     const occID = match.params.occId;
-    const sample = savedSamples.get(sampleID);
     const occurrence = sample.occurrences.models.find(occ => occ.cid === occID);
 
     return (

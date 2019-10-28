@@ -23,7 +23,7 @@ function getDefaultState() {
 class Controller extends React.Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
-    savedSamples: PropTypes.object.isRequired,
+    sample: PropTypes.object.isRequired,
   };
 
   static contextType = NavContext;
@@ -39,13 +39,9 @@ class Controller extends React.Component {
     this.onFocus = this.onFocus.bind(this);
     this.state = getDefaultState();
 
-    const { match, savedSamples } = props;
+    const { sample } = props;
 
-    const sampleID = match.params.id;
-    const sample = savedSamples.get(sampleID);
-    this.sample = sample;
-
-    this.recordedTaxa = this.sample.occurrences.models.map(
+    this.recordedTaxa = sample.occurrences.models.map(
       occ => occ.get('taxon').warehouse_id
     );
   }
@@ -115,21 +111,21 @@ class Controller extends React.Component {
   }
 
   render() {
-    const { match } = this.props;
+    const { sample, match } = this.props;
     const occID = match.params.occId;
 
     const onSpeciesSelected = async taxon => {
       if (occID) {
-        const occurrence = this.sample.occurrences.models.find(
+        const occurrence = sample.occurrences.models.find(
           occ => occ.cid === occID
         );
         occurrence.set('taxon', taxon);
       } else {
         const occurrence = new Occurrence({ taxon });
-        this.sample.addOccurrence(occurrence);
+        sample.addOccurrence(occurrence);
       }
 
-      await this.sample.save();
+      await sample.save();
       this.context.goBack();
     };
 

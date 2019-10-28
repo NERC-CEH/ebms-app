@@ -41,7 +41,7 @@ class EditOccurrence extends Component {
     return (
       <IonContent id="area-count-occurrence-edit">
         <IonItem
-          routerLink={`/survey/${sample.cid}/edit/occ/${occurrence.cid}/taxa`}
+          routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/taxa`}
           detail
         >
           <IonLabel>{t('Species')}</IonLabel>
@@ -70,14 +70,14 @@ class EditOccurrence extends Component {
           </div>
         </IonItem>
         <IonItem
-          routerLink={`/survey/${sample.cid}/edit/occ/${occurrence.cid}/stage`}
+          routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/stage`}
           detail
         >
           <IonLabel>{t('Stage')}</IonLabel>
           <IonLabel slot="end">{t(stage)}</IonLabel>
         </IonItem>
         <IonItem
-          routerLink={`/survey/${sample.cid}/edit/occ/${occurrence.cid}/comment`}
+          routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/comment`}
           detail
         >
           <IonLabel>{t('Comment')}</IonLabel>

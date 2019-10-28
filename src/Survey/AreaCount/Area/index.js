@@ -9,32 +9,24 @@ import './styles.scss';
 @observer
 class Container extends React.Component {
   static propTypes = {
-    match: PropTypes.object.isRequired,
-    savedSamples: PropTypes.object.isRequired,
+    sample: PropTypes.object.isRequired,
   };
 
   state = {};
 
   toggleGPStracking = () => {
-    const { match, savedSamples } = this.props;
-    const sample = savedSamples.get(match.params.id);
+    const { sample } = this.props;
     sample.toggleGPStracking();
   };
 
   setLocation = shape => {
-    const { match, savedSamples } = this.props;
-    const sample = savedSamples.get(match.params.id);
-    // console.log(JSON.stringify(shape.coordinates.map(coordinates =>
-    //   [...coordinates].reverse().map(float => Number.parseFloat(float))
-    // )));
-
+    const { sample } = this.props;
     sample.setLocation(shape);
   };
 
   render() {
-    const { match, savedSamples } = this.props;
+    const { sample } = this.props;
 
-    const sample = savedSamples.get(match.params.id);
     const location = sample.get('location') || {};
     const isGPSTracking = sample.isGPSRunning();
 
