@@ -178,7 +178,6 @@ class Container extends React.Component {
         />
         <Main
           sample={sample}
-          onSubmit={this.onSubmit}
           deleteOccurrence={deleteOccurrence}
           increaseCount={increaseCount}
           toggleTimer={toggleTimer}
