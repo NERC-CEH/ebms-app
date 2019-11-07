@@ -8,14 +8,11 @@ import {
   IonBackButton,
 } from '@ionic/react';
 
-const Header = ({ title, subheader, rightSlot }) => (
+const Header = ({ title, subheader, rightSlot, defaultHref }) => (
   <IonHeader>
     <IonToolbar>
       <IonButtons slot="start">
-        <IonBackButton
-          text={t('Back')}
-          defaultHref="/"
-        />
+        <IonBackButton text={t('Back')} defaultHref={defaultHref || '/'} />
       </IonButtons>
       <IonTitle>{title}</IonTitle>
       {rightSlot && <IonButtons slot="end">{rightSlot}</IonButtons>}
@@ -26,6 +23,7 @@ const Header = ({ title, subheader, rightSlot }) => (
 
 Header.propTypes = {
   title: PropTypes.string,
+  defaultHref: PropTypes.string,
   rightSlot: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
