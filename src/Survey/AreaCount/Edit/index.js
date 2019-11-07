@@ -86,8 +86,7 @@ class Container extends React.Component {
   };
 
   _processSubmission = async () => {
-    const { history } = this.props;
-    const { sample } = this.state;
+    const { history, sample } = this.props;
 
     const errors = await sample.validateRemote();
     if (errors) {
@@ -104,8 +103,7 @@ class Container extends React.Component {
   };
 
   _processDraft = async () => {
-    const { history, appModel } = this.props;
-    const { sample } = this.state;
+    const { history, appModel, sample } = this.props;
 
     appModel.set('areaCountDraftId', null);
     await appModel.save();
@@ -130,7 +128,7 @@ class Container extends React.Component {
   };
 
   onSubmit = async () => {
-    const { sample } = this.state;
+    const { sample } = this.props;
 
     if (!sample.metadata.saved) {
       await this._processDraft();
