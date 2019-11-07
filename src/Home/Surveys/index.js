@@ -32,7 +32,7 @@ function getPendingSurveys(surveys) {
   }
 
   return (
-    <IonList>
+    <IonList lines="full">
       {surveys.map(sample => (
         <Survey key={sample.cid} sample={sample} />
       ))}
@@ -52,7 +52,7 @@ function getUploadedSurveys(surveys) {
   }
 
   return (
-    <IonList>
+    <IonList lines="full">
       {surveys.map(sample => (
         <Survey key={sample.cid} sample={sample} />
       ))}
@@ -78,7 +78,9 @@ class Component extends React.Component {
     const { savedSamples } = this.props;
 
     return savedSamples.models
-      .filter(sample => (uploaded ? sample.metadata.synced_on : !sample.metadata.synced_on))
+      .filter(sample =>
+        uploaded ? sample.metadata.synced_on : !sample.metadata.synced_on
+      )
       .sort(byCreateTime);
   }
 
