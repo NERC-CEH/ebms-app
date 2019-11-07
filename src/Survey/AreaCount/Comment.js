@@ -33,6 +33,9 @@ class EditOccurrence extends Component {
       <IonPage>
         <AppHeader title={t('Comment')} />
         <IonContent id="area-count-occurrence-edit-comment">
+          <div className="info-message">
+            <p>{t('Please add any extra info about this record.')}</p>
+          </div>
           <IonItem>
             <IonTextarea
               placeholder={t('Enter more information here...')}
