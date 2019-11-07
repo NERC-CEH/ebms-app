@@ -23,6 +23,7 @@ const Header = ({ onSubmit, isTraining, isEditing }) => {
       title={t('Area Count')}
       rightSlot={getFinishButton(onSubmit, isEditing)}
       subheader={trainingModeSubheader}
+      defaultHref='/home/user-surveys'
     />
   );
 };
