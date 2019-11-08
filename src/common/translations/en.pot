@@ -730,3 +730,138 @@ msgstr "Pupae"
 
 msgid "Larval webs"
 msgstr "Larval webs"
+
+msgid "Transect"
+msgstr "Transect"
+
+msgid "Sections"
+msgstr "Sections"
+
+msgid "No transect"
+msgstr "No transect"
+
+msgid "Start Time"
+msgstr "Start Time"
+
+msgid "End Time"
+msgstr "End Time"
+
+msgid "Temperature"
+msgstr "Temperature"
+
+msgid "Cloud"
+msgstr "Cloud"
+
+msgid "Wind Direction"
+msgstr "Wind Direction"
+
+msgid "Wind Speed"
+msgstr "Wind Speed"
+
+msgid "Recorder"
+msgstr "Recorder"
+
+msgid "Refresh"
+msgstr "Refresh"
+
+msgid "Please select your transect first."
+msgstr "Please select your transect first."
+
+msgid "Invalid server response."
+msgstr "Invalid server response."
+
+msgid "Not recorded/no data"
+msgstr "Not recorded/no data"
+
+msgid "Please specify the temperature C°."
+msgstr "Please specify the temperature C°."
+
+msgid "S"
+msgstr "S"
+
+msgid "SW"
+msgstr "SW"
+
+msgid "W"
+msgstr "W"
+
+msgid "NW"
+msgstr "NW"
+
+msgid "N"
+msgstr "N"
+
+msgid "NE"
+msgstr "NE"
+
+msgid "E"
+msgstr "E"
+
+msgid "SE"
+msgstr "SE"
+
+msgid "No direction"
+msgstr "No direction"
+
+msgid "Please specify the wind direction."
+msgstr "Please specify the wind direction."
+
+msgid "Smoke rises vertically"
+msgstr "Smoke rises vertically"
+
+msgid "Slight smoke drift"
+msgstr "Slight smoke drift"
+
+msgid "Wind felt on face, leaves rustle"
+msgstr "Wind felt on face, leaves rustle"
+
+msgid "Leaves and twigs in slight motion"
+msgstr "Leaves and twigs in slight motion"
+
+msgid "Dust raised and small branches move"
+msgstr "Dust raised and small branches move"
+
+msgid "Small trees in leaf begin to sway"
+msgstr "Small trees in leaf begin to sway"
+
+msgid "Large branches move and trees sway"
+msgstr "Large branches move and trees sway"
+
+msgid "Please specify the wind speed."
+msgstr "Please specify the wind speed."
+
+msgid "Transects"
+msgstr "Transects"
+
+msgid "Transect list was successfully updated."
+msgstr "Transect list was successfully updated."
+
+msgid "Section"
+msgstr "Section"
+
+msgid "Reliability"
+msgstr "Reliability"
+
+msgid "Please specify the reliability of the section count."
+msgstr "Please specify the reliability of the section count."
+
+msgid "Timed Area Count"
+msgstr "Timed Area Count"
+
+msgid "eBMS Transect"
+msgstr "eBMS Transect"
+
+msgid "Please add any extra info about this record."
+msgstr "Please add any extra info about this record."
+
+msgid "Enter more information here..."
+msgstr "Enter more information here..."
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr "Please specify the person responsible for identifying the species."
+
+msgid "HH:mm"
+msgstr "HH:mm"
+
+msgid "Please specify the % of cloud cover."
+msgstr "Please specify the % of cloud cover."

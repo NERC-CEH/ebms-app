@@ -59,13 +59,14 @@ let Sample = Indicia.Sample.extend({
     return {
       saved: null,
       pausedTime: 0,
+      survey: null,
       training: appModel.get('useTraining'),
     };
   },
 
   // warehouse attribute keys
   keys() {
-    return CONFIG.indicia.attrs.smp;
+    return CONFIG.indicia.surveys[this.getSurvey()].attrs.smp;
   },
 
   /**
@@ -96,10 +97,14 @@ let Sample = Indicia.Sample.extend({
     this.gpsExtensionInit();
   },
 
-  destroy() {
+  getSurvey() {
+    return this.metadata.survey || 'area'; // !survey - for backwards compatibility
+  },
+
+  destroy(...args) {
     this.toggleGPStracking(false);
     this.stopVibrateCounter();
-    Indicia.Sample.prototype.destroy.apply(this);
+    Indicia.Sample.prototype.destroy.apply(this, args);
   },
 
   /**
@@ -113,6 +118,11 @@ let Sample = Indicia.Sample.extend({
   },
 
   validateRemote() {
+    if (this.getSurvey() === 'transect') {
+      // TODO: enable
+      return null;
+    }
+
     try {
       schema.validateSync(this.attributes);
     } catch (e) {
@@ -126,10 +136,13 @@ let Sample = Indicia.Sample.extend({
    */
   onSend(submission, media) {
     const newAttrs = {
-      survey_id: CONFIG.indicia.id,
-      input_form: CONFIG.indicia.webForm,
+      survey_id: CONFIG.indicia.surveys[this.getSurvey()].id,
+      input_form: CONFIG.indicia.surveys[this.getSurvey()].webForm,
     };
-
+    submission.samples.forEach(sample => {
+      sample.survey_id = CONFIG.indicia.surveys[this.getSurvey()].id; // eslint-disable-line
+    });
+    
     const smpAttrs = this.keys();
     const updatedSubmission = { ...{}, ...submission, ...newAttrs };
     updatedSubmission.fields = {
@@ -141,14 +154,6 @@ let Sample = Indicia.Sample.extend({
         [smpAttrs.app_version.id]: `${CONFIG.version}.${CONFIG.build}`,
       },
     };
-
-    // add the survey_id to subsamples too
-    if (this.metadata.complex_survey) {
-      updatedSubmission.samples.forEach(subSample => {
-        subSample.survey_id = surveyConfig.id; // eslint-disable-line
-        subSample.input_form = surveyConfig.webForm; // eslint-disable-line
-      });
-    }
 
     return Promise.resolve([updatedSubmission, media]);
   },
@@ -172,6 +177,10 @@ let Sample = Indicia.Sample.extend({
     json.attributes = toJS(json.attributes);
     json.metadata = toJS(json.metadata);
     return json;
+  },
+
+  getSectionSample(id) {
+    return this.samples.models.find(s => s.cid === id);
   },
 
   timeout() {

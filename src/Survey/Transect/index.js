@@ -6,6 +6,12 @@ import { Route } from 'react-router-dom';
 import { IonRouterOutlet } from '@ionic/react';
 import modelFactory from 'common/models/model_factory';
 import Edit from './Edit';
+import Attr from './Attr';
+import SectionsList from './Sections/List';
+import SectionsEdit from './Sections/Edit';
+import SectionsEditTaxa from './Sections/Taxon';
+import SectionsEditCloud from './Sections/Cloud';
+import SectionsEditReliability from './Sections/Reliability';
 
 async function showDraftAlert() {
   return new Promise(resolve => {
@@ -41,6 +47,7 @@ class Routes extends React.Component {
     match: PropTypes.object,
     history: PropTypes.object,
     appModel: PropTypes.object.isRequired,
+    userModel: PropTypes.object.isRequired,
   };
 
   state = { sample: null };
@@ -56,8 +63,19 @@ class Routes extends React.Component {
       return;
     }
 
-    this.setState({ sample: savedSamples.get(sampleID) });
+    const sample = savedSamples.get(sampleID);
+    this.setState({ sample });
   }
+
+  addSectionSubSamples = () => {
+    const { sample } = this.state;
+    const transect = sample.get('location');
+    transect.sections.forEach(section => {
+      const sectionSample = modelFactory.createTransectSectionSample(section);
+      sample.addSample(sectionSample);
+    });
+    sample.save();
+  };
 
   async getNewSample() {
     const { savedSamples, appModel } = this.props;
@@ -81,10 +99,12 @@ class Routes extends React.Component {
   }
 
   render() {
-    const { appModel } = this.props;
+    const { appModel, userModel } = this.props;
     if (!this.state.sample) {
       return null;
     }
+
+    const hasSectionSubSamples = true;
 
     return (
       <IonRouterOutlet>
@@ -95,6 +115,80 @@ class Routes extends React.Component {
             <Edit sample={this.state.sample} appModel={appModel} {...props} />
           )}
         />
+
+        <Route
+          path="/survey/transect/:id/edit/:attr"
+          exact
+          render={props => {
+            if (props && props.match.params.attr !== 'sections') {
+              return <Attr sample={this.state.sample} {...props} />;
+            }
+
+            return (
+              <SectionsList
+                sample={this.state.sample}
+                appModel={appModel}
+                userModel={userModel}
+                onTransectSelect={this.addSectionSubSamples}
+                {...props}
+              />
+            );
+          }}
+        />
+
+        {hasSectionSubSamples && (
+          <Route
+            path="/survey/transect/:id/edit/sections/:sectionId"
+            exact
+            render={props => (
+              <SectionsEdit
+                sample={this.state.sample}
+                appModel={appModel}
+                {...props}
+              />
+            )}
+          />
+        )}
+
+        {hasSectionSubSamples && (
+          <Route
+            path="/survey/transect/:id/edit/sections/:sectionId/taxa"
+            exact
+            render={props => (
+              <SectionsEditTaxa
+                sample={this.state.sample}
+                appModel={appModel}
+                {...props}
+              />
+            )}
+          />
+        )}
+        {hasSectionSubSamples && (
+          <Route
+            path="/survey/transect/:id/edit/sections/:sectionId/cloud"
+            exact
+            render={props => (
+              <SectionsEditCloud
+                sample={this.state.sample}
+                appModel={appModel}
+                {...props}
+              />
+            )}
+          />
+        )}
+        {hasSectionSubSamples && (
+          <Route
+            path="/survey/transect/:id/edit/sections/:sectionId/reliability"
+            exact
+            render={props => (
+              <SectionsEditReliability
+                sample={this.state.sample}
+                appModel={appModel}
+                {...props}
+              />
+            )}
+          />
+        )}
       </IonRouterOutlet>
     );
   }

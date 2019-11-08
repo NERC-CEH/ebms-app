@@ -4,7 +4,7 @@ import savedSamples from 'saved_samples';
 import appModel from 'app_model';
 import userModel from 'user_model';
 import AreaCount from './AreaCount';
-// import Transect from './Transect';
+import Transect from './Transect';
 
 const App = () => {
   if (!userModel.hasLogIn()) {
@@ -23,8 +23,17 @@ const App = () => {
           />
         )}
       />
-
-      {/* <Transect savedSamples={savedSamples} appModel={appModel} /> */}
+      <Route
+        path="/survey/transect/:id"
+        render={props => (
+          <Transect
+            savedSamples={savedSamples}
+            appModel={appModel}
+            userModel={userModel}
+            {...props}
+          />
+        )}
+      />
     </>
   );
 };

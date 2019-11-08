@@ -23,8 +23,10 @@ describe('App Model', () => {
       'feedbackGiven',
       'areaSurveyListSortedByTime',
       'areaCountDraftId',
+      'transectDraftId',
       'useExperiments',
       'sendAnalytics',
+      'transects',
     ]);
   });
 });

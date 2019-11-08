@@ -839,3 +839,138 @@ msgstr "Lėliukė"
 
 msgid "Larval webs"
 msgstr "Lervos tinklas"
+
+msgid "Transect"
+msgstr "Maršrutas"
+
+msgid "Sections"
+msgstr "Dalys"
+
+msgid "No transect"
+msgstr "Nėra maršruto"
+
+msgid "Start Time"
+msgstr "Pradėjimo Laikas"
+
+msgid "End Time"
+msgstr "Užbaigimo Laikas"
+
+msgid "Temperature"
+msgstr "Oro Temperatūra"
+
+msgid "Cloud"
+msgstr "Debesuotumas"
+
+msgid "Wind Direction"
+msgstr "Vėjo Kryptis"
+
+msgid "Wind Speed"
+msgstr "Vėjo Greitis"
+
+msgid "Recorder"
+msgstr "Atsakingas Asmuo"
+
+msgid "Refresh"
+msgstr "Atnaujinti"
+
+msgid "Please select your transect first."
+msgstr "Prašome pirma pasirinkti savo maršrutą."
+
+msgid "Invalid server response."
+msgstr "Nesuprantamas serverio atsakymas."
+
+msgid "Not recorded/no data"
+msgstr "Neužfiksuota / nėra informacijos"
+
+msgid "Please specify the temperature C°."
+msgstr "Prašome nurodyti oro temperatūrą C°."
+
+msgid "S"
+msgstr "Pietūs"
+
+msgid "SW"
+msgstr "Pietvakariai"
+
+msgid "W"
+msgstr "Vakarai"
+
+msgid "NW"
+msgstr "Šiaurės vakarai"
+
+msgid "N"
+msgstr "Šiaurė"
+
+msgid "NE"
+msgstr "Šiaurės rytai"
+
+msgid "E"
+msgstr "Rytai"
+
+msgid "SE"
+msgstr "Pietryčiai"
+
+msgid "No direction"
+msgstr "Jokios krypties"
+
+msgid "Please specify the wind direction."
+msgstr "Prašome pasirinkti vėjo kryptį."
+
+msgid "Smoke rises vertically"
+msgstr "Dūmai ore kyla vertikaliai aukštyn"
+
+msgid "Slight smoke drift"
+msgstr "Dūmai ore juda į šoną"
+
+msgid "Wind felt on face, leaves rustle"
+msgstr "Vėjas jaučiamas and veido, mėdžių lapai kruta"
+
+msgid "Leaves and twigs in slight motion"
+msgstr "Lapai ir mažos šakelės truputėlį linguoja"
+
+msgid "Dust raised and small branches move"
+msgstr "Sujudinamos dulkės ir mažos medžių šakelės"
+
+msgid "Small trees in leaf begin to sway"
+msgstr "Maži sužaliavę medeliai pradeda truputį juda"
+
+msgid "Large branches move and trees sway"
+msgstr "Didelės medžių šakos juda ir medžiai linguoja"
+
+msgid "Please specify the wind speed."
+msgstr "Prašome pasirinkti vėjo greitį."
+
+msgid "Transects"
+msgstr "Maršrutai"
+
+msgid "Transect list was successfully updated."
+msgstr "Maršrutų sąrašas buvo sėkmingai atnaujintas."
+
+msgid "Section"
+msgstr "Dalis"
+
+msgid "Reliability"
+msgstr "Patikimumas"
+
+msgid "Please specify the reliability of the section count."
+msgstr "Prašome pasirinkti šios dalies įrašų patikimumą."
+
+msgid "Timed Area Count"
+msgstr "Teritorijos Monitoringas"
+
+msgid "eBMS Transect"
+msgstr "eBMS Monitoringas"
+
+msgid "Please add any extra info about this record."
+msgstr "Prašome papildyti įrašą kita susijusia informacija."
+
+msgid "Enter more information here..."
+msgstr "Įvesti daugiau informacijos čia..."
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr "Prašome nurodyti žmogų atpažinusį šio įrašo rūšis."
+
+msgid "HH:mm"
+msgstr "VV:mm"
+
+msgid "Please specify the % of cloud cover."
+msgstr "Prašome nurodyti debesuotumą %."

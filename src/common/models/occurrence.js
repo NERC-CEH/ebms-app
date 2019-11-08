@@ -24,7 +24,13 @@ export default Indicia.Occurrence.extend({
     };
   },
 
-  keys: CONFIG.indicia.attrs.occ, // warehouse attribute keys
+  keys() {
+    return CONFIG.indicia.surveys[this.getSurvey()].attrs.occ;
+  },
+
+  getSurvey() {
+    return this.parent.getSurvey();
+  },
 
   /**
    * Disable sort for mobx to keep the same refs.

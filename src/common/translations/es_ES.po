@@ -1,11 +1,11 @@
 # Translators:
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2019
 # Karolis, 2019
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2019\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2019\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,133 +27,133 @@ msgid "Spain"
 msgstr "España"
 
 msgid "Andorra"
-msgstr ""
+msgstr "Andorra"
 
 msgid "Albania"
-msgstr ""
+msgstr "Albania"
 
 msgid "Austria"
-msgstr ""
+msgstr "Austria"
 
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "Bosnia y Herzegovina"
 
 msgid "Belgium"
-msgstr ""
+msgstr "Bélgica"
 
 msgid "Bulgaria"
-msgstr ""
+msgstr "Bulgaria"
 
 msgid "Belarus"
-msgstr ""
+msgstr "Bielorrusia"
 
 msgid "Switzerland"
-msgstr ""
+msgstr "Suiza"
 
 msgid "Cyprus"
-msgstr ""
+msgstr "Chipre "
 
 msgid "Czechia"
-msgstr ""
+msgstr "República Checa"
 
 msgid "Germany"
-msgstr ""
+msgstr "Alemania"
 
 msgid "Denmark"
-msgstr ""
+msgstr "Dinamarca"
 
 msgid "Estonia"
-msgstr ""
+msgstr "Estonia "
 
 msgid "Spain: Canary Islands"
-msgstr ""
+msgstr "España: Islas Canarias"
 
 msgid "Finland"
-msgstr ""
+msgstr "Finlandia"
 
 msgid "France"
-msgstr ""
+msgstr "Francia"
 
 msgid "Greece"
-msgstr ""
+msgstr "Grecia"
 
 msgid "Croatia"
-msgstr ""
+msgstr "Croacia"
 
 msgid "Hungary"
-msgstr ""
+msgstr "Hungría"
 
 msgid "Ireland"
-msgstr ""
+msgstr "Irlanda"
 
 msgid "Iceland"
-msgstr ""
+msgstr "Islandia"
 
 msgid "Italy"
-msgstr ""
+msgstr "Italia"
 
 msgid "Liechtenstein"
-msgstr ""
+msgstr "Liechtenstein"
 
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luxemburgo"
 
 msgid "Latvia"
-msgstr ""
+msgstr "Letonia"
 
 msgid "Moldova"
-msgstr ""
+msgstr "Moldavia"
 
 msgid "Montenegro"
-msgstr ""
+msgstr "Montenegro"
 
 msgid "North Macedonia"
-msgstr ""
+msgstr "Macedonia del norte"
 
 msgid "Malta"
-msgstr ""
+msgstr "Malta"
 
 msgid "Netherlands"
-msgstr ""
+msgstr "Países Bajos"
 
 msgid "Norway"
-msgstr ""
+msgstr "Noruega"
 
 msgid "Poland"
-msgstr ""
+msgstr "Polonia"
 
 msgid "Portugal"
-msgstr ""
+msgstr "Portugal"
 
 msgid "Portugal: Azores"
-msgstr ""
+msgstr "Portugal: Azores"
 
 msgid "Portugal: Madeira Islands"
-msgstr ""
+msgstr "Portugal: Islas de Madeira"
 
 msgid "Romania"
-msgstr ""
+msgstr "Rumanía"
 
 msgid "Serbia"
-msgstr ""
+msgstr "Serbia"
 
 msgid "Russian Federation"
-msgstr ""
+msgstr "Federación Rusa"
 
 msgid "Slovenia"
-msgstr ""
+msgstr "Eslovenia"
 
 msgid "Slovakia"
-msgstr ""
+msgstr "Eslovaquia"
 
 msgid "Turkey"
-msgstr ""
+msgstr "Turquía"
 
 msgid "Ukraine"
-msgstr ""
+msgstr "Ucrania"
 
 msgid "Elsewhere"
-msgstr ""
+msgstr "En otro lugar"
 
 msgid "Skip"
 msgstr "Omitir"
@@ -760,93 +760,237 @@ msgid "No uploaded surveys"
 msgstr "Nada"
 
 msgid "Enjoying the app?"
-msgstr ""
+msgstr "¿Estás disfrutando la aplicación?"
 
 msgid "Not really"
-msgstr ""
+msgstr "No realmente"
 
 msgid "Yes!"
-msgstr ""
+msgstr "¡Si!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr ""
+msgstr "¿Te importaría darnos algún comentario?"
 
 msgid "No, thanks"
-msgstr ""
+msgstr "No, gracias"
 
 msgid "OK, sure"
-msgstr ""
+msgstr "Sí, claro"
 
 msgid "How about a rating on the App Store then?"
-msgstr ""
+msgstr "¿Qué tal una calificación en la App Store entonces?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr ""
+msgstr "¿Qué tal una calificación en la App Store entonces?"
 
 msgid "Icons made by"
-msgstr ""
+msgstr "Iconos hechos por"
 
 msgid "from"
-msgstr ""
+msgstr "desde"
 
 msgid "Enter your username or email address to request a password reset."
 msgstr ""
+"Introduce su nombre de usuario o su dirección de correo electrónico para "
+"solicitar un restablecimiento de contraseña."
 
 msgid "We've sent an email to you"
-msgstr ""
+msgstr "Te hemos enviado un correo electrónico"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
+"Haga clic en el enlace del correo electrónico para restablecer su "
+"contraseña. Si no ve el correo electrónico, revise otros lugares como el "
+"spam, su correo no deseado u otras carpetas."
 
 msgid "App Development"
-msgstr ""
+msgstr "Desarrollo de aplicaciones"
 
 msgid "This app was hand crafted with love by"
-msgstr ""
+msgstr "Esta aplicación hecha a mano con amor por "
 
 msgid "Agency specializing in building bespoke data oriented sollutions."
 msgstr ""
+"Agenica especializada en la construcción de soluciones a medida orientadas a"
+" datos."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr ""
+msgstr "Para sugerencias o comentarios por favor no dude en"
 
 msgid "contact us"
-msgstr ""
+msgstr "contáctarnos"
 
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 msgid "Country"
-msgstr ""
+msgstr "País"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
+"Marca cualquier nuevo registro como \"entrenamiento\" y excluyeló de todos "
+"los informes."
 
 msgid "Share App Analytics"
-msgstr ""
+msgstr "Compartir análisis de aplicaciones"
 
 msgid "Save Draft"
-msgstr ""
+msgstr "Guardar borrador"
 
 msgid "Stage"
-msgstr ""
+msgstr "Estado"
 
 msgid "Not Recorded"
-msgstr ""
+msgstr "No registrado"
 
 msgid "Adults"
-msgstr ""
+msgstr "Adultos"
 
 msgid "Larvae"
-msgstr ""
+msgstr "Orugas"
 
 msgid "Eggs"
-msgstr ""
+msgstr "Huevos"
 
 msgid "Pupae"
-msgstr ""
+msgstr "Pupa/crisálida"
 
 msgid "Larval webs"
+msgstr "Seda de oruga"
+
+msgid "Transect"
+msgstr ""
+
+msgid "Sections"
+msgstr ""
+
+msgid "No transect"
+msgstr ""
+
+msgid "Start Time"
+msgstr ""
+
+msgid "End Time"
+msgstr ""
+
+msgid "Temperature"
+msgstr ""
+
+msgid "Cloud"
+msgstr ""
+
+msgid "Wind Direction"
+msgstr ""
+
+msgid "Wind Speed"
+msgstr ""
+
+msgid "Recorder"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Please select your transect first."
+msgstr ""
+
+msgid "Invalid server response."
+msgstr ""
+
+msgid "Not recorded/no data"
+msgstr ""
+
+msgid "Please specify the temperature C°."
+msgstr ""
+
+msgid "S"
+msgstr ""
+
+msgid "SW"
+msgstr ""
+
+msgid "W"
+msgstr ""
+
+msgid "NW"
+msgstr ""
+
+msgid "N"
+msgstr ""
+
+msgid "NE"
+msgstr ""
+
+msgid "E"
+msgstr ""
+
+msgid "SE"
+msgstr ""
+
+msgid "No direction"
+msgstr ""
+
+msgid "Please specify the wind direction."
+msgstr ""
+
+msgid "Smoke rises vertically"
+msgstr ""
+
+msgid "Slight smoke drift"
+msgstr ""
+
+msgid "Wind felt on face, leaves rustle"
+msgstr ""
+
+msgid "Leaves and twigs in slight motion"
+msgstr ""
+
+msgid "Dust raised and small branches move"
+msgstr ""
+
+msgid "Small trees in leaf begin to sway"
+msgstr ""
+
+msgid "Large branches move and trees sway"
+msgstr ""
+
+msgid "Please specify the wind speed."
+msgstr ""
+
+msgid "Transects"
+msgstr ""
+
+msgid "Transect list was successfully updated."
+msgstr ""
+
+msgid "Section"
+msgstr ""
+
+msgid "Reliability"
+msgstr ""
+
+msgid "Please specify the reliability of the section count."
+msgstr ""
+
+msgid "Timed Area Count"
+msgstr ""
+
+msgid "eBMS Transect"
+msgstr ""
+
+msgid "Please add any extra info about this record."
+msgstr ""
+
+msgid "Enter more information here..."
+msgstr ""
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr ""
+
+msgid "HH:mm"
+msgstr ""
+
+msgid "Please specify the % of cloud cover."
 msgstr ""

@@ -37,21 +37,39 @@ const Survey = observer(({ sample }) => {
   const speciesCount = sample.occurrences.models.length;
 
   const isSent = sample.metadata.server_on;
+  const survey = sample.getSurvey();
   const href =
     !isSent && !sample.remote.synchronising
-      ? `/survey/${sample.cid}/edit`
+      ? `/survey/${survey}/${sample.cid}/edit`
       : undefined;
 
+  function getSampleInfo() {
+    if (survey === 'transect') {
+      return (
+        <IonLabel>
+          <h3>
+            <b>{t('Transect')}</b>
+          </h3>
+          <h3>{prettyDate}</h3>
+        </IonLabel>
+      );
+    }
+
+    return (
+      <IonLabel>
+        <h3>
+          <b>{t('Area Count')}</b>
+        </h3>
+        <h3>{prettyDate}</h3>
+        <h4>{`${t('species')}: ${speciesCount}`}</h4>
+      </IonLabel>
+    );
+  }
   return (
     <IonItemSliding>
       <ErrorMessage sample={sample} />
       <IonItem routerLink={href} detail={!!href}>
-        <IonLabel>
-          <h3>
-            <b>{prettyDate}</b>
-          </h3>
-          <h4>{`${t('species')}: ${speciesCount}`}</h4>
-        </IonLabel>
+        {getSampleInfo()}
         <OnlineStatus sample={sample} />
       </IonItem>
       <IonItemOptions side="end">

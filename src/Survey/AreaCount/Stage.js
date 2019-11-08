@@ -30,10 +30,12 @@ class Component extends React.Component {
     const value = this.model.get(this.attrName);
     this.state = { currentVal: value };
 
+    const survey = sample.getSurvey();
+
     this.attrConfig =
       this.attrName === 'date'
-        ? config.indicia.attrs.smp.date
-        : config.indicia.attrs.occ[this.attrName];
+        ? config.indicia.surveys[survey].attrs.smp.date
+        : config.indicia.surveys[survey].attrs.occ[this.attrName];
   }
 
   onChange = val => {

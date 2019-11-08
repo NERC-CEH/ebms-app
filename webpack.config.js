@@ -13,7 +13,8 @@ const pkg = require('./package.json');
 
 const ROOT_DIR = path.resolve(__dirname, './');
 const DIST_DIR = path.resolve(ROOT_DIR, 'dist/main');
-const SRC_DIR = path.resolve(ROOT_DIR, 'src');
+
+const isDevEnv = process.env.NODE_ENV === 'development';
 
 const config = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -42,6 +43,15 @@ const config = {
       app_model: 'common/models/app_model',
       user_model: 'common/models/user_model',
       Components: 'common/Components',
+
+      // species database
+      'common/data/species.data.json': isDevEnv
+        ? 'common/data/species.data.dev.json'
+        : 'common/data/species.data.json',
+
+      // configs
+      './transect$': isDevEnv ? './transect.dev.js' : './transect.js',
+      './area-count$': isDevEnv ? './area-count.dev.js' : './area-count.js',
     },
   },
   module: {

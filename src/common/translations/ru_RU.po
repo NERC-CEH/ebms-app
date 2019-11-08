@@ -846,3 +846,138 @@ msgstr ""
 
 msgid "Larval webs"
 msgstr ""
+
+msgid "Transect"
+msgstr ""
+
+msgid "Sections"
+msgstr ""
+
+msgid "No transect"
+msgstr ""
+
+msgid "Start Time"
+msgstr ""
+
+msgid "End Time"
+msgstr ""
+
+msgid "Temperature"
+msgstr ""
+
+msgid "Cloud"
+msgstr ""
+
+msgid "Wind Direction"
+msgstr ""
+
+msgid "Wind Speed"
+msgstr ""
+
+msgid "Recorder"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Please select your transect first."
+msgstr ""
+
+msgid "Invalid server response."
+msgstr ""
+
+msgid "Not recorded/no data"
+msgstr ""
+
+msgid "Please specify the temperature C°."
+msgstr ""
+
+msgid "S"
+msgstr ""
+
+msgid "SW"
+msgstr ""
+
+msgid "W"
+msgstr ""
+
+msgid "NW"
+msgstr ""
+
+msgid "N"
+msgstr ""
+
+msgid "NE"
+msgstr ""
+
+msgid "E"
+msgstr ""
+
+msgid "SE"
+msgstr ""
+
+msgid "No direction"
+msgstr ""
+
+msgid "Please specify the wind direction."
+msgstr ""
+
+msgid "Smoke rises vertically"
+msgstr ""
+
+msgid "Slight smoke drift"
+msgstr ""
+
+msgid "Wind felt on face, leaves rustle"
+msgstr ""
+
+msgid "Leaves and twigs in slight motion"
+msgstr ""
+
+msgid "Dust raised and small branches move"
+msgstr ""
+
+msgid "Small trees in leaf begin to sway"
+msgstr ""
+
+msgid "Large branches move and trees sway"
+msgstr ""
+
+msgid "Please specify the wind speed."
+msgstr ""
+
+msgid "Transects"
+msgstr ""
+
+msgid "Transect list was successfully updated."
+msgstr ""
+
+msgid "Section"
+msgstr ""
+
+msgid "Reliability"
+msgstr ""
+
+msgid "Please specify the reliability of the section count."
+msgstr ""
+
+msgid "Timed Area Count"
+msgstr ""
+
+msgid "eBMS Transect"
+msgstr ""
+
+msgid "Please add any extra info about this record."
+msgstr ""
+
+msgid "Enter more information here..."
+msgstr ""
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr ""
+
+msgid "HH:mm"
+msgstr ""
+
+msgid "Please specify the % of cloud cover."
+msgstr ""

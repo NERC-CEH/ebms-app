@@ -5,15 +5,6 @@
     ion-tab-button {
       max-width: 20vw;
     }
-
-    .add-survey {
-      background-color: var(--ion-color-light);
-      margin-top: -22px;
-      height: 64px;
-      max-width: 64px;
-      box-shadow: inset 0px 0 2px 0px;
-      border-radius: 50%;
-    }
   }
 
   £ > ion-router-outlet > div > div {
@@ -27,6 +18,22 @@
     width: 100%;
     height: 100%;
     contain: size layout style;
+  }
+
+  ion-fab-button:not(.fab-button-label) {
+    --box-shadow: 1px 2px 8px 0px rgba(0, 0, 0, 0.75)
+  }
+  
+  ion-fab-button.fab-button-label {
+    width: 240px;
+    transform: translateX(-93px);
+    --border-radius: 4px;
+    --background: var(--ion-color-primary-shade);
+    --color: var(--ion-color-primary-contrast);
+
+    ion-label {
+      font-size: 1.2em;
+    }
   }
 }
 
@@ -44,4 +51,12 @@
       font-weight: 200;
     }
   }
+}
+ion-fab .fab-list-active .fab-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(100, 100, 100, 0.5);
 }
