@@ -995,3 +995,15 @@ msgstr ""
 
 msgid "You don't have any transects. Please try to refresh the list."
 msgstr ""
+
+msgid "Wind speed info is missing"
+msgstr ""
+
+msgid "Temperature info is missing"
+msgstr ""
+
+msgid "Recorder info is missing"
+msgstr ""
+
+msgid "Please select your transect."
+msgstr ""

@@ -977,3 +977,15 @@ msgstr "Prašome nurodyti debesuotumą %."
 
 msgid "You don't have any transects. Please try to refresh the list."
 msgstr "Nerasta eBMS maršrutų. Prašome pabandyti atnaujinti sąrašą."
+
+msgid "Wind speed info is missing"
+msgstr "Trūksta informacijos apie vėjo greitį"
+
+msgid "Temperature info is missing"
+msgstr "Trūksta informacijos apie oro temperatūrą"
+
+msgid "Recorder info is missing"
+msgstr "Trūksta informacijos apie atsakingą žmogų"
+
+msgid "Please select your transect."
+msgstr "Prašome pirma pasirinkti savo maršrutą"

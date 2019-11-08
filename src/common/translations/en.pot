@@ -868,3 +868,15 @@ msgstr "Please specify the % of cloud cover."
 
 msgid "You don't have any transects. Please try to refresh the list."
 msgstr "You don't have any transects. Please try to refresh the list."
+
+msgid "Wind speed info is missing"
+msgstr "Wind speed info is missing"
+
+msgid "Temperature info is missing"
+msgstr "Temperature info is missing"
+
+msgid "Recorder info is missing"
+msgstr "Recorder info is missing"
+
+msgid "Please select your transect."
+msgstr "Please select your transect."

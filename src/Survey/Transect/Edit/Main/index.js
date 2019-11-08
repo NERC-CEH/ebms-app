@@ -80,7 +80,7 @@ class Edit extends Component {
           >
             <IonIcon src="/images/thermometer.svg" slot="start" />
             <IonLabel>{t('Temperature')}</IonLabel>
-            <IonLabel slot="end">{temperature}</IonLabel>
+            <IonLabel slot="end">{t(temperature)}</IonLabel>
           </IonItem>
           <IonItem
             routerLink={`/survey/transect/${sample.cid}/edit/cloud`}
@@ -96,7 +96,7 @@ class Edit extends Component {
           >
             <IonIcon src="/images/wind.svg" slot="start" />
             <IonLabel>{t('Wind Direction')}</IonLabel>
-            <IonLabel slot="end">{windDirection}</IonLabel>
+            <IonLabel slot="end">{t(windDirection)}</IonLabel>
           </IonItem>
           <IonItem
             routerLink={`/survey/transect/${sample.cid}/edit/windSpeed`}
@@ -104,7 +104,7 @@ class Edit extends Component {
           >
             <IonIcon src="/images/wind.svg" slot="start" />
             <IonLabel>{t('Wind Speed')}</IonLabel>
-            <IonLabel slot="end">{windSpeed}</IonLabel>
+            <IonLabel slot="end">{t(windSpeed)}</IonLabel>
           </IonItem>
           <IonItem
             routerLink={`/survey/transect/${sample.cid}/edit/recorder`}

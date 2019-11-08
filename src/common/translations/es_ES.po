@@ -629,7 +629,7 @@ msgstr ""
 "puede utilizar diferentes atajos. Por ejemplo, para encontrar"
 
 msgid "Sync. with the website"
-msgstr "Sincronizado con la website"
+msgstr "Sincronización con la website"
 
 msgid "All your saved surveys will be shown on your account page."
 msgstr "Todos tus muestreos guardados se mostrarán en la página de su cuenta"
@@ -645,13 +645,13 @@ msgstr ""
 "conexión de red."
 
 msgid "If the record has reached the database a red"
-msgstr "Si el registro ha llegado a la base de datos en rojo"
+msgstr "Si el registro ha llegado a la base de datos aparecerá en rojo"
 
 msgid "(set for submission & saved locally) will become green"
-msgstr "(set for submission & saved locally) will become green"
+msgstr "(configurado para envío y guardado localmente). Se volverá verde "
 
 msgid "synced to the database"
-msgstr "sincronizado con la base de datos"
+msgstr "cuando esté sincronizado con la base de datos."
 
 msgid ""
 "you have to be signed in to your website account and have a network "
@@ -996,4 +996,16 @@ msgid "Please specify the % of cloud cover."
 msgstr "Especifique el % de cobertura de nubes."
 
 msgid "You don't have any transects. Please try to refresh the list."
+msgstr "No tiene ningún transecto. Por favor actualice la lista."
+
+msgid "Wind speed info is missing"
+msgstr ""
+
+msgid "Temperature info is missing"
+msgstr ""
+
+msgid "Recorder info is missing"
+msgstr ""
+
+msgid "Please select your transect."
 msgstr ""

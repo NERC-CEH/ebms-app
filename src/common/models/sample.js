@@ -25,7 +25,13 @@ const locationSchema = Yup.object().shape({
   source: Yup.string().required(),
 });
 
-const schema = Yup.object().shape({
+const transectLocationSchema = Yup.object().shape({
+  id: Yup.string().required(),
+  centroid_sref: Yup.string().required(),
+  sref_system: Yup.string().required(),
+});
+
+const areaCountSchema = Yup.object().shape({
   location: Yup.mixed().test(
     'area',
     'Please add survey area information.',
@@ -42,6 +48,21 @@ const schema = Yup.object().shape({
   location_type: Yup.string()
     .matches(/latlon/)
     .required('Location type is missing'),
+});
+
+const transectSchema = Yup.object().shape({
+  location: Yup.mixed().test('area', 'Please select your transect.', val => {
+    if (!val) {
+      return false;
+    }
+    transectLocationSchema.validateSync(val);
+    return true;
+  }),
+  recorder: Yup.string().required('Recorder info is missing'),
+  surveyStartTime: Yup.date().required('Start time is missing'),
+  // surveyEndTime: Yup.date().required('End time is missing'), // automatically set on send
+  temperature: Yup.string().required('Temperature info is missing'),
+  windSpeed: Yup.string().required('Wind speed info is missing'),
 });
 
 // eslint-disable-next-line
@@ -119,15 +140,20 @@ let Sample = Indicia.Sample.extend({
 
   validateRemote() {
     if (this.getSurvey() === 'transect') {
-      // TODO: enable
-      return null;
+      try {
+        console.log(toJS(this.attributes));
+        transectSchema.validateSync(this.attributes);
+      } catch (e) {
+        return e;
+      }
+    } else {
+      try {
+        areaCountSchema.validateSync(this.attributes);
+      } catch (e) {
+        return e;
+      }
     }
 
-    try {
-      schema.validateSync(this.attributes);
-    } catch (e) {
-      return e;
-    }
     return null;
   },
 
@@ -142,7 +168,7 @@ let Sample = Indicia.Sample.extend({
     submission.samples.forEach(sample => {
       sample.survey_id = CONFIG.indicia.surveys[this.getSurvey()].id; // eslint-disable-line
     });
-    
+
     const smpAttrs = this.keys();
     const updatedSubmission = { ...{}, ...submission, ...newAttrs };
     updatedSubmission.fields = {
