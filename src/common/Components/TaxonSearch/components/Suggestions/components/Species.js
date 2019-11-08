@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { IonItem } from '@ionic/react';
 import Log from 'helpers/log';
 import './styles.scss';
 
@@ -39,16 +40,14 @@ const Species = ({ species, searchPhrase, onSelect }) => {
   const prettyName = prettifyName(species, searchPhrase);
   const { isRecorded } = species;
 
-  /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   return (
-    <li
+    <IonItem
       className={`search-result ${isRecorded ? 'recorded' : ''}`}
       onClick={e => !isRecorded && onClick(e, species, onSelect)}
     >
       <div className="taxon">{prettyName}</div>
-    </li>
+    </IonItem>
   );
-  /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 };
 
 Species.propTypes = {

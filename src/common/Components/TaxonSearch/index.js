@@ -1,13 +1,8 @@
-import React from 'react';
-import Device from 'helpers/device';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { observer } from 'mobx-react';
-import AppHeader from 'common/Components/Header';
-import { IonContent, IonPage, NavContext } from '@ionic/react';
-import Occurrence from 'occurrence';
+import Device from 'helpers/device';
 import SpeciesSearchEngine from './utils/taxon_search_engine';
 import Suggestions from './components/Suggestions';
-
 import './styles.scss';
 
 const MIN_SEARCH_LENGTH = 2;
@@ -19,14 +14,11 @@ function getDefaultState() {
   };
 }
 
-@observer
-class Controller extends React.Component {
+export default class index extends Component {
   static propTypes = {
-    match: PropTypes.object,
-    sample: PropTypes.object.isRequired,
+    onSpeciesSelected: PropTypes.func.isRequired,
+    recordedTaxa: PropTypes.array,
   };
-
-  static contextType = NavContext;
 
   constructor(props) {
     super(props);
@@ -38,22 +30,16 @@ class Controller extends React.Component {
     this.onInputClear = this.onInputClear.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.state = getDefaultState();
-
-    const { sample: transectSample, match } = props;
-    const sectionSampleId = match.params.sectionId;
-    const sample = transectSample.getSectionSample(sectionSampleId);
-
-    this.recordedTaxa = sample.occurrences.models.map(
-      occ => occ.get('taxon').warehouse_id
-    );
   }
 
-  annotateRecordedTaxa = searchResults =>
-    searchResults.map(result =>
-      this.recordedTaxa.includes(result.warehouse_id)
+  annotateRecordedTaxa = searchResults => {
+    const recordedTaxa = this.props.recordedTaxa || [];
+    return searchResults.map(result =>
+      recordedTaxa.includes(result.warehouse_id)
         ? { ...result, ...{ isRecorded: true } }
         : result
     );
+  };
 
   async onInputKeystroke(e) {
     let searchPhrase = e.target.value;
@@ -113,49 +99,23 @@ class Controller extends React.Component {
   }
 
   render() {
-    const { sample: transectSample, match } = this.props;
-    const sectionSampleId = match.params.sectionId;
-    const sample = transectSample.getSectionSample(sectionSampleId);
-
-    const occID = match.params.occId;
-
-    const onSpeciesSelected = async taxon => {
-      if (occID) {
-        const occurrence = sample.occurrences.models.find(
-          occ => occ.cid === occID
-        );
-        occurrence.set('taxon', taxon);
-      } else {
-        const occurrence = new Occurrence({ taxon });
-        sample.addOccurrence(occurrence);
-      }
-
-      await sample.save();
-      this.context.goBack();
-    };
-
     return (
-      <IonPage>
-        <AppHeader title={t('Species')} />
-        <IonContent id="area-count-taxa">
-          <ion-searchbar
-            id="taxon"
-            ref={this.inputEl}
-            placeholder={t('Species name')}
-            autocorrect="off"
-            autocomplete="off"
-            debounce="300"
-          />
+      <>
+        <ion-searchbar
+          id="taxon"
+          ref={this.inputEl}
+          placeholder={t('Species name')}
+          autocorrect="off"
+          autocomplete="off"
+          debounce="300"
+        />
 
-          <Suggestions
-            searchResults={this.state.searchResults}
-            searchPhrase={this.state.searchPhrase}
-            onSpeciesSelected={onSpeciesSelected}
-          />
-        </IonContent>
-      </IonPage>
+        <Suggestions
+          searchResults={this.state.searchResults}
+          searchPhrase={this.state.searchPhrase}
+          onSpeciesSelected={this.props.onSpeciesSelected}
+        />
+      </>
     );
   }
 }
-
-export default Controller;

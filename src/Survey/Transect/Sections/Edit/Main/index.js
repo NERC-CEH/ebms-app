@@ -32,7 +32,7 @@ const speciesOccAddedTimeSort = (occ1, occ2) => {
 };
 
 @observer
-class AreaCount extends Component {
+class Edit extends Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired,
@@ -154,4 +154,4 @@ class AreaCount extends Component {
   }
 }
 
-export default AreaCount;
+export default Edit;

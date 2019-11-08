@@ -13,7 +13,7 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
 });
 
 @observer
-class AreaCount extends Component {
+class Edit extends Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
   };
@@ -128,4 +128,4 @@ class AreaCount extends Component {
   }
 }
 
-export default AreaCount;
+export default Edit;
