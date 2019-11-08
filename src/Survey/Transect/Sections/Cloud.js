@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IonContent, IonPage, NavContext } from '@ionic/react';
 import AppHeader from 'Components/Header';
-import Input from 'Components/Input';
+import SliderInput from 'Components/SliderInput';
 import { observer } from 'mobx-react';
 import config from 'config';
 
@@ -45,7 +45,7 @@ class Component extends React.Component {
       <IonPage>
         <AppHeader title={t(this.attrConfig.label)} />
         <IonContent id="record-edit-attr">
-          <Input
+          <SliderInput
             type="text"
             config={this.attrConfig}
             default={this.state.currentVal}

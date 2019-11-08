@@ -4,6 +4,7 @@ import { IonContent, IonPage, NavContext } from '@ionic/react';
 import AppHeader from 'Components/Header';
 import RadioInput from 'Components/RadioInput';
 import Input from 'Components/Input';
+import SliderInput from 'Components/SliderInput';
 import Textarea from 'Components/Textarea';
 import { observer } from 'mobx-react';
 import config from 'config';
@@ -55,11 +56,21 @@ class Component extends React.Component {
           />
         );
 
+      case 'slider':
+        return (
+          <SliderInput
+            type={this.attrConfig.type}
+            config={this.attrConfig}
+            default={this.state.currentVal}
+            onChange={val => this.onChange(val)}
+          />
+        );
+
       case 'textarea':
         return (
           <Textarea
             config={this.attrConfig}
-            info='Please add any extra info about this record.'
+            info="Please add any extra info about this record."
             default={this.state.currentVal}
             onChange={val => this.onChange(val)}
           />

@@ -6,6 +6,12 @@ import { IonItem, IonRange } from '@ionic/react';
 function LogSlider(options = {}) {
   this.minpos = options.minpos || 0;
   this.maxpos = options.maxpos || 100;
+
+  if (options.notUseLogarithmic) {
+    this.notUseLogarithmic = true;
+    return;
+  }
+
   this.minlval = Math.log(options.minval || 1);
   this.maxlval = Math.log(options.maxval || 100000);
 
@@ -15,19 +21,25 @@ function LogSlider(options = {}) {
 LogSlider.prototype = {
   // Calculate value from a slider position
   value(position) {
+    if (this.notUseLogarithmic) {
+      return position;
+    }
+
     return Math.floor(
       Math.exp((position - this.minpos) * this.scale + this.minlval)
     );
   },
   // Calculate slider position from a value
   position(value) {
+    if (this.notUseLogarithmic) {
+      return value;
+    }
+
     return Math.floor(
       this.minpos + (Math.log(value) - this.minlval) / this.scale
     );
   },
 };
-
-const logsl = new LogSlider({ maxpos: 100, minval: 1, maxval: 500 });
 
 class Component extends React.Component {
   constructor(props) {
@@ -35,9 +47,21 @@ class Component extends React.Component {
     this.sliderRef = React.createRef();
     this.inputRef = React.createRef();
     const value = props.default;
+
+    const maxval = props.config.max || 500;
+    const minval = props.config.min || 1;
+    const notUseLogarithmic = maxval <= 100;
+
+    this.logsl = new LogSlider({
+      maxpos: 100,
+      minval,
+      maxval,
+      notUseLogarithmic,
+    });
+
     this.state = {
       value,
-      position: logsl.position(value || 1).toFixed(0),
+      position: this.logsl.position(value || 1).toFixed(0),
     };
   }
 
@@ -47,7 +71,7 @@ class Component extends React.Component {
       value = null;
     }
 
-    const position = value > 0 ? logsl.position(value) : null;
+    const position = value > 0 ? this.logsl.position(value) : null;
     if (this.state.sliderUpdating) {
       this.setState({ value, sliderUpdating: false });
     } else {
@@ -62,7 +86,7 @@ class Component extends React.Component {
       position = null;
     }
 
-    const value = position > 0 ? logsl.value(position) : null;
+    const value = position > 0 ? this.logsl.value(position) : null;
     if (this.state.inputUpdating) {
       this.setState({ position, inputUpdating: false });
     } else {

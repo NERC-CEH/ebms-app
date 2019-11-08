@@ -66,7 +66,7 @@ export default {
 
       cloud: {
         label: 'Cloud',
-        type: 'number',
+        type: 'slider',
         info: 'Please specify the % of cloud cover.',
         max: 100,
         min: 0,
