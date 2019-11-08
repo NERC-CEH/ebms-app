@@ -7,6 +7,7 @@ import transformToLatLon from 'helpers/location';
 import Transects from './components/Transects';
 import SVG from './components/SVG';
 import './styles.scss';
+import 'common/images/butterfly.svg';
 
 const getSectionItem = (sectionSample, match) => {
   const section = sectionSample.get('location');

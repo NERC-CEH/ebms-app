@@ -13,6 +13,7 @@ import {
 } from '@ionic/react';
 import OnlineStatus from './components/OnlineStatus';
 import ErrorMessage from './components/ErrorMessage';
+import 'common/images/butterfly.svg';
 import './styles.scss';
 
 function deleteSurvey(sample) {
