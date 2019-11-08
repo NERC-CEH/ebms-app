@@ -44,7 +44,7 @@ class Controller extends React.Component {
     return (
       <IonPage>
         <AppHeader title={t('Species')} />
-        <IonContent id="area-count-taxa">
+        <IonContent id="transect-sections-taxa">
           <TaxonSearch
             onSpeciesSelected={onSpeciesSelected}
             recordedTaxa={recordedTaxa}
