@@ -865,3 +865,6 @@ msgstr "HH:mm"
 
 msgid "Please specify the % of cloud cover."
 msgstr "Please specify the % of cloud cover."
+
+msgid "You don't have any transects. Please try to refresh the list."
+msgstr "You don't have any transects. Please try to refresh the list."

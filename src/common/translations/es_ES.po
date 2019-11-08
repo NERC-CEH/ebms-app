@@ -861,136 +861,139 @@ msgid "Larval webs"
 msgstr "Seda de oruga"
 
 msgid "Transect"
-msgstr ""
+msgstr "Transecto"
 
 msgid "Sections"
-msgstr ""
+msgstr "Secciones"
 
 msgid "No transect"
-msgstr ""
+msgstr "Sin transecto"
 
 msgid "Start Time"
-msgstr ""
+msgstr "Hora de Inicio"
 
 msgid "End Time"
-msgstr ""
+msgstr "Hora de finalización"
 
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatura"
 
 msgid "Cloud"
-msgstr ""
+msgstr "Nubes"
 
 msgid "Wind Direction"
-msgstr ""
+msgstr "Dirección del Viento"
 
 msgid "Wind Speed"
-msgstr ""
+msgstr "Velocidad del Viento"
 
 msgid "Recorder"
-msgstr ""
+msgstr "Censador"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Actualizar"
 
 msgid "Please select your transect first."
-msgstr ""
+msgstr "Por favor,  seleccione su transecto primero"
 
 msgid "Invalid server response."
-msgstr ""
+msgstr "Respuesta inválida del servidor."
 
 msgid "Not recorded/no data"
-msgstr ""
+msgstr "No registrado/sin datos"
 
 msgid "Please specify the temperature C°."
-msgstr ""
+msgstr "Por favor especifique la temperatura en grados C°."
 
 msgid "S"
-msgstr ""
+msgstr "Sur"
 
 msgid "SW"
-msgstr ""
+msgstr "Suroeste"
 
 msgid "W"
-msgstr ""
+msgstr "Oeste"
 
 msgid "NW"
-msgstr ""
+msgstr "Noroeste"
 
 msgid "N"
-msgstr ""
+msgstr "Norte"
 
 msgid "NE"
-msgstr ""
+msgstr "Noreste"
 
 msgid "E"
-msgstr ""
+msgstr "Este"
 
 msgid "SE"
-msgstr ""
+msgstr "Sureste"
 
 msgid "No direction"
-msgstr ""
+msgstr "Sin dirección"
 
 msgid "Please specify the wind direction."
-msgstr ""
+msgstr "Por favor especifique la dirección del viento"
 
 msgid "Smoke rises vertically"
-msgstr ""
+msgstr "Humo asciende vertical"
 
 msgid "Slight smoke drift"
-msgstr ""
+msgstr "Ligera deriva del humo"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr ""
+msgstr "Viento se siente en la cara y el susurro de las hojas"
 
 msgid "Leaves and twigs in slight motion"
-msgstr ""
+msgstr "Hojas y ramitas en ligero movimiento."
 
 msgid "Dust raised and small branches move"
-msgstr ""
+msgstr "Polvo y pequeñas ramas se mueven"
 
 msgid "Small trees in leaf begin to sway"
-msgstr ""
+msgstr "Pequeños árboles se tambalean"
 
 msgid "Large branches move and trees sway"
-msgstr ""
+msgstr "Grandes ramas se mueven y los árboles se balancean"
 
 msgid "Please specify the wind speed."
-msgstr ""
+msgstr "Por favor especifique la velocidad del viento"
 
 msgid "Transects"
-msgstr ""
+msgstr "Transectos"
 
 msgid "Transect list was successfully updated."
-msgstr ""
+msgstr "Lista de transectos actualizados correctamente"
 
 msgid "Section"
-msgstr ""
+msgstr "Sección"
 
 msgid "Reliability"
-msgstr ""
+msgstr "Veracidad"
 
 msgid "Please specify the reliability of the section count."
-msgstr ""
+msgstr "Especifique la veracidad en los recuentos por secciones"
 
 msgid "Timed Area Count"
-msgstr ""
+msgstr "Área Recuentos cronometrados"
 
 msgid "eBMS Transect"
-msgstr ""
+msgstr "Transecto eBMS"
 
 msgid "Please add any extra info about this record."
-msgstr ""
+msgstr "Por favor añada cualquier otra información extra sobre este recuento"
 
 msgid "Enter more information here..."
-msgstr ""
+msgstr "Introducir más información aquí..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr ""
+msgstr "Especifique la persona responsable para identificar las especies."
 
 msgid "HH:mm"
-msgstr ""
+msgstr "HH:mm"
 
 msgid "Please specify the % of cloud cover."
+msgstr "Especifique el % de cobertura de nubes."
+
+msgid "You don't have any transects. Please try to refresh the list."
 msgstr ""

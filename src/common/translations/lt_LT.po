@@ -974,3 +974,6 @@ msgstr "VV:mm"
 
 msgid "Please specify the % of cloud cover."
 msgstr "Prašome nurodyti debesuotumą %."
+
+msgid "You don't have any transects. Please try to refresh the list."
+msgstr "Nerasta eBMS maršrutų. Prašome pabandyti atnaujinti sąrašą."
