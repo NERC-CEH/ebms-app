@@ -8,9 +8,12 @@ import {
   IonItemSliding,
   IonItemOptions,
   IonItemOption,
+  IonIcon,
+  IonBadge,
 } from '@ionic/react';
 import OnlineStatus from './components/OnlineStatus';
 import ErrorMessage from './components/ErrorMessage';
+import './styles.scss';
 
 function deleteSurvey(sample) {
   alert({
@@ -46,7 +49,7 @@ const Survey = observer(({ sample }) => {
   function getSampleInfo() {
     if (survey === 'transect') {
       return (
-        <IonLabel>
+        <IonLabel class="ion-text-wrap">
           <h3>
             <b>{t('Transect')}</b>
           </h3>
@@ -56,17 +59,19 @@ const Survey = observer(({ sample }) => {
     }
 
     return (
-      <IonLabel>
+      <IonLabel class="ion-text-wrap">
         <h3>
           <b>{t('Area Count')}</b>
         </h3>
         <h3>{prettyDate}</h3>
-        <h4>{`${t('species')}: ${speciesCount}`}</h4>
+        <IonBadge color="medium">
+          <IonIcon src="/images/butterfly.svg" /> {speciesCount}
+        </IonBadge>
       </IonLabel>
     );
   }
   return (
-    <IonItemSliding>
+    <IonItemSliding class="survey-list-item">
       <ErrorMessage sample={sample} />
       <IonItem routerLink={href} detail={!!href}>
         {getSampleInfo()}
