@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   IonIcon,
+  IonList,
   IonItem,
   IonButton,
   IonLabel,
@@ -47,53 +48,55 @@ class EditOccurrence extends Component {
 
     return (
       <IonContent id="area-count-occurrence-edit">
-        <IonItem
-          routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/taxa`}
-          detail
-        >
-          <IonIcon src="/images/butterfly.svg" slot="start" />
-          <IonLabel>{t('Species')}</IonLabel>
-          <IonLabel slot="end">{species}</IonLabel>
-        </IonItem>
-        <IonItem id="area-count-occurrence-edit-count">
-          <IonLabel>{t('Count')}</IonLabel>
-          <IonIcon src="/images/number.svg" slot="start" />
-          <div slot="end">
-            <IonButton
-              shape="round"
-              fill="clear"
-              size="default"
-              onClick={this.decreaseCount}
-            >
-              <IonIcon icon={removeCircleOutline} />
-            </IonButton>
-            <span>{count}</span>
-            <IonButton
-              shape="round"
-              fill="clear"
-              size="default"
-              onClick={this.increaseCount}
-            >
-              <IonIcon icon={addCircleOutline} />
-            </IonButton>
-          </div>
-        </IonItem>
-        <IonItem
-          routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/stage`}
-          detail
-        >
-          <IonIcon src="/images/caterpillar.svg" slot="start" />
-          <IonLabel>{t('Stage')}</IonLabel>
-          <IonLabel slot="end">{t(stage)}</IonLabel>
-        </IonItem>
-        <IonItem
-          routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/comment`}
-          detail
-        >
-          <IonIcon icon={clipboard} slot="start" />
-          <IonLabel>{t('Comment')}</IonLabel>
-          <IonLabel slot="end">{comment}</IonLabel>
-        </IonItem>
+        <IonList lines="full">
+          <IonItem
+            routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/taxa`}
+            detail
+          >
+            <IonIcon src="/images/butterfly.svg" slot="start" />
+            <IonLabel>{t('Species')}</IonLabel>
+            <IonLabel slot="end">{species}</IonLabel>
+          </IonItem>
+          <IonItem id="area-count-occurrence-edit-count">
+            <IonLabel>{t('Count')}</IonLabel>
+            <IonIcon src="/images/number.svg" slot="start" />
+            <div slot="end">
+              <IonButton
+                shape="round"
+                fill="clear"
+                size="default"
+                onClick={this.decreaseCount}
+              >
+                <IonIcon icon={removeCircleOutline} />
+              </IonButton>
+              <span>{count}</span>
+              <IonButton
+                shape="round"
+                fill="clear"
+                size="default"
+                onClick={this.increaseCount}
+              >
+                <IonIcon icon={addCircleOutline} />
+              </IonButton>
+            </div>
+          </IonItem>
+          <IonItem
+            routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/stage`}
+            detail
+          >
+            <IonIcon src="/images/caterpillar.svg" slot="start" />
+            <IonLabel>{t('Stage')}</IonLabel>
+            <IonLabel slot="end">{t(stage)}</IonLabel>
+          </IonItem>
+          <IonItem
+            routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/comment`}
+            detail
+          >
+            <IonIcon icon={clipboard} slot="start" />
+            <IonLabel>{t('Comment')}</IonLabel>
+            <IonLabel slot="end">{comment}</IonLabel>
+          </IonItem>
+        </IonList>
       </IonContent>
     );
   }
