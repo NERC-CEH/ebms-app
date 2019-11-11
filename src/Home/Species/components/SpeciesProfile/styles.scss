@@ -1,0 +1,26 @@
+#species-profile {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+
+  .species-label {
+    font-weight: bold;
+    border-left: 3px solid var(--ion-color-primary);
+    padding-left: 5px;
+    text-transform: uppercase;
+    margin: 10px auto 5px;
+  }
+
+  .species-habitats {
+    text-transform: capitalize;
+  }
+
+  #species-map {
+    height: 200px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #474c4a !important;
+  }
+}

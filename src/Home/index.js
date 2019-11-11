@@ -11,11 +11,12 @@ import {
   IonFabButton,
   IonFabList,
 } from '@ionic/react';
-import { person, add, helpCircle, menu, home } from 'ionicons/icons';
+import { person, add, book, menu, home } from 'ionicons/icons';
 import savedSamples from 'saved_samples';
+import appModel from 'app_model';
 import PrivateRoute from 'common/Components/PrivateRoute';
 import Report from './Report';
-import Help from './Help';
+import Species from './Species';
 import UserSurveys from './Surveys';
 import './styles.scss';
 
@@ -50,7 +51,13 @@ const Component = () => (
     <IonTabs>
       <IonRouterOutlet>
         <Route path="/home/report" render={Report} exact />
-        <Route path="/home/help" component={Help} exact />
+        <Route
+          path="/home/species"
+          render={() => (
+            <Species appModel={appModel} savedSamples={savedSamples} />
+          )}
+          exact
+        />
         <PrivateRoute
           path="/home/user-surveys"
           component={() => <UserSurveys savedSamples={savedSamples} />}
@@ -63,17 +70,19 @@ const Component = () => (
           <IonIcon icon={home} />
           <IonLabel>{t('Home')}</IonLabel>
         </IonTabButton>
+
+        <IonTabButton tab="home/species" href="/home/species">
+          <IonIcon icon={book} />
+          <IonLabel>{t('Guide')}</IonLabel>
+        </IonTabButton>
+
+        <IonTabButton>{/* placeholder */}</IonTabButton>
+
         <IonTabButton tab="/home/user-surveys" href="/home/user-surveys">
           <IonIcon icon={person} />
           <IonLabel>{t('Surveys')}</IonLabel>
         </IonTabButton>
 
-        <IonTabButton>{/* placeholder */}</IonTabButton>
-
-        <IonTabButton tab="help" href="/home/help">
-          <IonIcon icon={helpCircle} />
-          <IonLabel>{t('Help')}</IonLabel>
-        </IonTabButton>
         <IonTabButton tab="menu" href="/info/menu">
           <IonIcon icon={menu} />
           <IonLabel>{t('Menu')}</IonLabel>
