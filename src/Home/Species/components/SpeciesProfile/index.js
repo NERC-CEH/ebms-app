@@ -10,6 +10,15 @@ import {
 import PropTypes from 'prop-types';
 import './styles.scss';
 
+const statuses = {
+  A: 'Absent',
+  P: 'Present',
+  'P?': 'Possibly present',
+  M: 'Regular migrant',
+  I: 'Irregular vagrant',
+  Ex: 'Regionally extinct',
+};
+
 class Component extends React.Component {
   static contextType = IonLifeCycleContext;
 
@@ -21,7 +30,7 @@ class Component extends React.Component {
   }
 
   render() {
-    const { species } = this.props;
+    const { species, country } = this.props;
 
     return (
       <IonContent id="species-profile" class="ion-padding">
@@ -32,7 +41,15 @@ class Component extends React.Component {
           <IonCardSubtitle>{species.taxon}</IonCardSubtitle>
         </IonCardHeader>
 
-        <IonCardContent>{t(species.descriptionKey, true)}</IonCardContent>
+        <IonCardContent>
+          <h3 className="species-label inline-label">{`${t('Status')}:`}</h3>
+          <span>{t(statuses[species[country]])}</span>
+        </IonCardContent>
+        
+        <IonCardContent>
+          <h3 className="species-label">{`${t('Description')}:`}</h3>
+          {t(species.descriptionKey, true)}
+        </IonCardContent>
       </IonContent>
     );
   }
@@ -40,6 +57,7 @@ class Component extends React.Component {
 
 Component.propTypes = {
   species: PropTypes.object.isRequired,
+  country: PropTypes.string.isRequired,
 };
 
 export default Component;

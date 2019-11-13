@@ -4,12 +4,21 @@
   --padding-top: 0;
   --padding-bottom: 0;
 
+  ion-card-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .species-label {
     font-weight: bold;
     border-left: 3px solid var(--ion-color-primary);
     padding-left: 5px;
     text-transform: uppercase;
-    margin: 10px auto 5px;
+    margin: 10px auto 15px;
+  }
+  .species-label.inline-label {
+    display: inline-block;
+    margin-right: 5px;
   }
 
   .species-habitats {

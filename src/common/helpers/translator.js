@@ -91,17 +91,17 @@ export const countries = {
 
 window.dic = window.dic || [];
 
-function translate(key, revertToEnglish) {
+function translate(key, isSpeciesDescription) {
   const language = appModel.get('language');
 
+  if (isSpeciesDescription) {
+    // revert to English descriptions
+    const description = dictionary[language][key] || dictionary.en[key];
+    return description !== key ? description : null;
+  }
+  
   const translation = dictionary[language][key];
-
   if (!translation) {
-    if (revertToEnglish) {
-      // revert to English descriptions
-      return dictionary.en[key];
-    }
-
     if (!window.dic.includes(key)) {
       console.warn(`!new key: ${key}`);
       window.dic.push(key);

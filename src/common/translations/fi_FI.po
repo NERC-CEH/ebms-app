@@ -2492,3 +2492,33 @@ msgstr ""
 
 msgid "Erebia-neoridas-description"
 msgstr ""
+
+msgid ""
+"This guide is still in development. It covers %(countrySpeciesCount) "
+"butterfly species out of the %(totalSpeciesCountryCount) species in your "
+"selected country."
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Absent"
+msgstr ""
+
+msgid "Present"
+msgstr ""
+
+msgid "Possibly present"
+msgstr ""
+
+msgid "Regular migrant"
+msgstr ""
+
+msgid "Irregular vagrant"
+msgstr ""
+
+msgid "Regionally extinct"
+msgstr ""
+
+msgid "Description"
+msgstr ""

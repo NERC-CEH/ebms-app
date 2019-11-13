@@ -1,11 +1,11 @@
 # Translators:
-# Karolis, 2019
 # Vilius Stankaitis <stankaitisvilius@gmail.com>, 2019
+# Karolis, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2019\n"
+"Last-Translator: Karolis, 2019\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2485,7 +2485,40 @@ msgid "Erebia-lefebvrei-description"
 msgstr ""
 
 msgid "Erebia-zapateri-description"
-msgstr ""
+msgstr "test string 1"
 
 msgid "Erebia-neoridas-description"
+msgstr "test string 2"
+
+msgid ""
+"This guide is still in development. It covers %(countrySpeciesCount) "
+"butterfly species out of the %(totalSpeciesCountryCount) species in your "
+"selected country."
 msgstr ""
+"Šis drugelių gidas yra dar plečiamas. Šiuo metu jūs galite matyti "
+"%(countrySpeciesCount) drugelių rūšis iš %(totalSpeciesCountryCount) "
+"drugelių jūsų pasirinktoje šalyje."
+
+msgid "Status"
+msgstr "Statusas"
+
+msgid "Absent"
+msgstr "Nėra aptinkamas"
+
+msgid "Present"
+msgstr "Randamas"
+
+msgid "Possibly present"
+msgstr "Galbūt randamas"
+
+msgid "Regular migrant"
+msgstr "Dažnas svečias"
+
+msgid "Irregular vagrant"
+msgstr "Retas svečias"
+
+msgid "Regionally extinct"
+msgstr "Šalyje išnykęs"
+
+msgid "Description"
+msgstr "Apibūdinimas"

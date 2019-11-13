@@ -17,6 +17,20 @@ import './images';
 import './thumbnails';
 import './styles.scss';
 
+function getInfoMessage(countrySpeciesCount, totalSpeciesCountryCount) {
+  return (
+    <div className="info-message">
+      <p>
+        {t(
+          'This guide is still in development. It covers %(countrySpeciesCount) butterfly species out of the %(totalSpeciesCountryCount) species in your selected country.'
+        )
+          .replace('%(countrySpeciesCount)', countrySpeciesCount)
+          .replace('%(totalSpeciesCountryCount)', totalSpeciesCountryCount)}
+      </p>
+    </div>
+  );
+}
+
 @observer
 class Component extends React.Component {
   static propTypes = {
@@ -37,30 +51,28 @@ class Component extends React.Component {
     this.setState({ showModal: false });
   };
 
-  getSpecies = () => {
-    const { appModel } = this.props;
-    let country = appModel.get('country');
-
-    country = country === 'UK' ? 'GB' : country;
-
-    const byCountry = sp => country === 'ELSEWHERE' || sp[country] === 'P';
+  getSpecies = country => {
+    const byCountry = sp => {
+      const isPresent = !['A', 'Ex'].includes(sp[country]);
+      return country === 'ELSEWHERE' || isPresent;
+    };
     const byNotEmptyContent = sp => {
       const hasDescription = t(sp.descriptionKey, true);
       return sp.image && hasDescription;
     };
     const bySpeciesId = (sp1, sp2) => sp1.sort_id - sp2.sort_id;
 
-    const filteredSpecies = [...speciesProfiles]
+    let filteredSpecies = [...speciesProfiles].filter(byCountry);
+    const totalSpeciesCountryCount = filteredSpecies.length;
+
+    filteredSpecies = filteredSpecies
       .filter(byNotEmptyContent)
-      .filter(byCountry)
       .sort(bySpeciesId);
 
-    return filteredSpecies;
+    return [filteredSpecies, totalSpeciesCountryCount];
   };
 
-  getSpeciesGrid() {
-    const speciesList = this.getSpecies();
-
+  getSpeciesGrid(speciesList) {
     const getSpeciesElement = sp => {
       const { id, taxon, image } = sp;
 
@@ -94,32 +106,36 @@ class Component extends React.Component {
     );
   }
 
-  getList = () => {
-    const { savedSamples } = this.props;
+  render() {
+    const { savedSamples, appModel } = this.props;
+    let country = appModel.get('country');
+    country = country === 'UK' ? 'GB' : country;
 
     const samplesLength = savedSamples.length;
+    const [speciesList, totalSpeciesCountryCount] = this.getSpecies(country);
+    const countrySpeciesCount = speciesList.length;
 
     return (
-      <IonContent id="home-species" class="ion-padding">
-        <UserFeedbackRequest
-          samplesLength={samplesLength}
-          appModel={this.props.appModel}
-        />
+      <IonPage>
+        <IonContent id="home-species" class="ion-padding">
+          {getInfoMessage(countrySpeciesCount, totalSpeciesCountryCount)}
 
-        {this.getSpeciesGrid()}
+          <UserFeedbackRequest
+            samplesLength={samplesLength}
+            appModel={this.props.appModel}
+          />
 
-        <IonModal isOpen={this.state.showModal} backdropDismiss={false}>
-          <ModalHeader title={t('Species')} onClose={this.hideSpeciesModal} />
-          {this.state.showModal && (
-            <SpeciesProfile species={this.state.species} />
-          )}
-        </IonModal>
-      </IonContent>
+          {this.getSpeciesGrid(speciesList)}
+
+          <IonModal isOpen={this.state.showModal} backdropDismiss={false}>
+            <ModalHeader title={t('Species')} onClose={this.hideSpeciesModal} />
+            {this.state.showModal && (
+              <SpeciesProfile species={this.state.species} country={country} />
+            )}
+          </IonModal>
+        </IonContent>
+      </IonPage>
     );
-  };
-
-  render() {
-    return <IonPage>{this.getList()}</IonPage>;
   }
 }
 

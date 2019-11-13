@@ -96,7 +96,22 @@ const config = {
           `sass-loader`,
         ],
       },
-      { test: /\.pot?$/, loader: 'json-loader!po-loader?format=mf' },
+      {
+        test: /\.pot?$/,
+        use: [
+          'json-loader',
+          'po-loader?format=mf',
+          {
+            // removes empty translations
+            loader: 'string-replace-loader',
+            options: {
+              search: 'msgstr ""\n\n',
+              replace: '\n',
+              flags: 'g',
+            },
+          },
+        ],
+      },
     ],
   },
 

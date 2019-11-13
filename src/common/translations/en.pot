@@ -2380,3 +2380,30 @@ msgstr "Erebia-zapateri-description"
 
 msgid "Erebia-neoridas-description"
 msgstr "The Water Ringlet is found especially on flower-rich grasslands, rocky, grassy slopes, and near woodland. The female usually deposits her eggs close to the ground, on dry stalks of grass. The caterpillars feed on Sheep's Fescue (Festuca ovina), F. quadriflora and various meadow-grasses (Poa spp.). The caterpillars hibernate in the first larval instar and pupate in June or July of the following year."
+
+msgid "This guide is still in development. It covers %(countrySpeciesCount) butterfly species out of the %(totalSpeciesCountryCount) species in your selected country."
+msgstr "This guide is still in development. It covers %(countrySpeciesCount) butterfly species out of the %(totalSpeciesCountryCount) species in your selected country."
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Absent"
+msgstr "Absent"
+
+msgid "Present"
+msgstr "Present"
+
+msgid "Possibly present"
+msgstr "Possibly present"
+
+msgid "Regular migrant"
+msgstr "Regular migrant"
+
+msgid "Irregular vagrant"
+msgstr "Irregular vagrant"
+
+msgid "Regionally extinct"
+msgstr "Regionally extinct"
+
+msgid "Description"
+msgstr "Description"
