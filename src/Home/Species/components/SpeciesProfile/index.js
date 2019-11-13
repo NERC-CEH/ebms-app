@@ -32,9 +32,7 @@ class Component extends React.Component {
           <IonCardSubtitle>{species.taxon}</IonCardSubtitle>
         </IonCardHeader>
 
-        <IonCardContent>
-          {t(species.description)}
-        </IonCardContent>
+        <IonCardContent>{t(species.descriptionKey, true)}</IonCardContent>
       </IonContent>
     );
   }

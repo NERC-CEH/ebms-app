@@ -89,21 +89,25 @@ export const countries = {
   ELSEWHERE: 'Elsewhere',
 };
 
-function translate(key) {
+window.dic = window.dic || [];
+
+function translate(key, revertToEnglish) {
   const language = appModel.get('language');
 
   const translation = dictionary[language][key];
-  if (!translation) {
-    window.dic = window.dic || [];
-    if (!window.dic.includes(key)) {
-      window.dic.push(key);
-      console.log(`!new: ${key}`); // todo: remove
-      // all='';dic.forEach(word => {all+=`\nmsgid "${word}"\nmsgstr "${word}"\n`})
-    }
-    return key;
-  }
 
   if (!translation) {
+    if (revertToEnglish) {
+      // revert to English descriptions
+      return dictionary.en[key];
+    }
+
+    if (!window.dic.includes(key)) {
+      console.warn(`!new key: ${key}`);
+      window.dic.push(key);
+      // console command to extract into .po file
+      // all='';dic.forEach(word => {all+=`\nmsgid "${word}"\nmsgstr "${word}"\n`})
+    }
     return key;
   }
 

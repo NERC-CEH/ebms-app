@@ -44,7 +44,10 @@ class Component extends React.Component {
     country = country === 'UK' ? 'GB' : country;
 
     const byCountry = sp => country === 'ELSEWHERE' || sp[country] === 'P';
-    const byNotEmptyContent = sp => sp.image && sp.description;
+    const byNotEmptyContent = sp => {
+      const hasDescription = t(sp.descriptionKey, true);
+      return sp.image && hasDescription;
+    };
     const bySpeciesId = (sp1, sp2) => sp1.sort_id - sp2.sort_id;
 
     const filteredSpecies = [...speciesProfiles]

@@ -1007,3 +1007,1503 @@ msgstr ""
 
 msgid "Please select your transect."
 msgstr ""
+
+msgid "Papilio-hospiton-description"
+msgstr ""
+
+msgid "Parnassius-mnemosyne-description"
+msgstr ""
+
+msgid "Parnassius-phoebus-description"
+msgstr ""
+
+msgid "Parnassius-apollo-description"
+msgstr ""
+
+msgid "Archon-apollinus-description"
+msgstr ""
+
+msgid "Zerynthia-cerisy-description"
+msgstr ""
+
+msgid "Carcharodus-stauderi-description"
+msgstr ""
+
+msgid "Carcharodus-baeticus-description"
+msgstr ""
+
+msgid "Erynnis-tages-description"
+msgstr ""
+
+msgid "Erynnis-marloyi-description"
+msgstr ""
+
+msgid "Zerynthia-cretica-description"
+msgstr ""
+
+msgid "Zerynthia-caucasica-description"
+msgstr ""
+
+msgid "Zerynthia-rumina-description"
+msgstr ""
+
+msgid "Zerynthia-polyxena-description"
+msgstr ""
+
+msgid "Zerynthia-cassandra-description"
+msgstr ""
+
+msgid "Heteropterus-morpheus-description"
+msgstr ""
+
+msgid "Carterocephalus-silvicola-description"
+msgstr ""
+
+msgid "Carterocephalus-palaemon-description"
+msgstr ""
+
+msgid "Pelopidas-thrax-description"
+msgstr ""
+
+msgid "Borbo-borbonica-description"
+msgstr ""
+
+msgid "Gegenes-pumilio-description"
+msgstr ""
+
+msgid "Gegenes-nostrodamus-description"
+msgstr ""
+
+msgid "Ochlodes-sylvanus-description"
+msgstr ""
+
+msgid "Hesperia-comma-description"
+msgstr ""
+
+msgid "Thymelicus-christi-description"
+msgstr ""
+
+msgid "Thymelicus-acteon-description"
+msgstr ""
+
+msgid "Thymelicus-hyrax-description"
+msgstr ""
+
+msgid "Thymelicus-sylvestris-description"
+msgstr ""
+
+msgid "Thymelicus-lineola-description"
+msgstr ""
+
+msgid "Spialia-phlomidis-description"
+msgstr ""
+
+msgid "Spialia-sertorius-description"
+msgstr ""
+
+msgid "Spialia-therapne-description"
+msgstr ""
+
+msgid "Spialia-rosae-description"
+msgstr ""
+
+msgid "Spialia-orbifer-description"
+msgstr ""
+
+msgid "Carcharodus-tripolinus-description"
+msgstr ""
+
+msgid "Carcharodus-alceae-description"
+msgstr ""
+
+msgid "Muschampia-cribrellum-description"
+msgstr ""
+
+msgid "Muschampia-tessellum-description"
+msgstr ""
+
+msgid "Muschampia-proto-description"
+msgstr ""
+
+msgid "Carcharodus-lavatherae-description"
+msgstr ""
+
+msgid "Carcharodus-orientalis-description"
+msgstr ""
+
+msgid "Carcharodus-floccifera-description"
+msgstr ""
+
+msgid "Iphiclides-podalirius-description"
+msgstr ""
+
+msgid "Iphiclides-feisthamelii-description"
+msgstr ""
+
+msgid "Papilio-alexanor-description"
+msgstr ""
+
+msgid "Papilio-machaon-description"
+msgstr ""
+
+msgid "Pyrgus-malvoides-description"
+msgstr ""
+
+msgid "Pyrgus-malvae-description"
+msgstr ""
+
+msgid "Pyrgus-carthami-description"
+msgstr ""
+
+msgid "Pyrgus-sidae-description"
+msgstr ""
+
+msgid "Pyrgus-centaureae-description"
+msgstr ""
+
+msgid "Pyrgus-cacaliae-description"
+msgstr ""
+
+msgid "Pyrgus-andromedae-description"
+msgstr ""
+
+msgid "Pyrgus-serratulae-description"
+msgstr ""
+
+msgid "Pyrgus-armoricanus/serratulae-description"
+msgstr ""
+
+msgid "Pyrgus-armoricanus-description"
+msgstr ""
+
+msgid "Pyrgus-alveus-description"
+msgstr ""
+
+msgid "Pyrgus-warrenensis-description"
+msgstr ""
+
+msgid "Pyrgus-foulquieri-description"
+msgstr ""
+
+msgid "Pyrgus-onopordi-description"
+msgstr ""
+
+msgid "Pyrgus-carlinae-description"
+msgstr ""
+
+msgid "Pyrgus-cirsii-description"
+msgstr ""
+
+msgid "Pyrgus-cinarae-description"
+msgstr ""
+
+msgid "Leptidea-duponcheli-description"
+msgstr ""
+
+msgid "Leptidea-morsei-description"
+msgstr ""
+
+msgid "Leptidea-juvernica-description"
+msgstr ""
+
+msgid "Leptidea-sinapis-description"
+msgstr ""
+
+msgid "Leptidea-sinapis/juvernica-description"
+msgstr ""
+
+msgid "Leptidea-reali-description"
+msgstr ""
+
+msgid "Gonepteryx-rhamni-description"
+msgstr ""
+
+msgid "Gonepteryx-cleobule-description"
+msgstr ""
+
+msgid "Gonepteryx-cleopatra-description"
+msgstr ""
+
+msgid "Gonepteryx-maderensis-description"
+msgstr ""
+
+msgid "Gonepteryx-farinosa-description"
+msgstr ""
+
+msgid "Catopsilia-florella-description"
+msgstr ""
+
+msgid "Colias-hyale-description"
+msgstr ""
+
+msgid "Colias-hyale/alfacariensis-description"
+msgstr ""
+
+msgid "Colias-alfacariensis-description"
+msgstr ""
+
+msgid "Colias-phicomone-description"
+msgstr ""
+
+msgid "Colias-aurorina-description"
+msgstr ""
+
+msgid "Colias-chrysotheme-description"
+msgstr ""
+
+msgid "Colias-erate-description"
+msgstr ""
+
+msgid "Colias-crocea-description"
+msgstr ""
+
+msgid "Colias-myrmidone-description"
+msgstr ""
+
+msgid "Colias-caucasica-description"
+msgstr ""
+
+msgid "Colias-palaeno-description"
+msgstr ""
+
+msgid "Colias-tyche-description"
+msgstr ""
+
+msgid "Colias-hecla-description"
+msgstr ""
+
+msgid "Colotis-evagore-description"
+msgstr ""
+
+msgid "Aporia-crataegi-description"
+msgstr ""
+
+msgid "Pontia-chloridice-description"
+msgstr ""
+
+msgid "Pontia-callidice-description"
+msgstr ""
+
+msgid "Pontia-edusa-description"
+msgstr ""
+
+msgid "Pontia-daplidice-description"
+msgstr ""
+
+msgid "Pieris-krueperi-description"
+msgstr ""
+
+msgid "Pieris-brassicae-description"
+msgstr ""
+
+msgid "Pieris-wollastoni-description"
+msgstr ""
+
+msgid "Pieris-cheiranthi-description"
+msgstr ""
+
+msgid "Pieris-rapae-description"
+msgstr ""
+
+msgid "Pieris-mannii-description"
+msgstr ""
+
+msgid "Pieris-ergane-description"
+msgstr ""
+
+msgid "Pieris-bryoniae-description"
+msgstr ""
+
+msgid "Pieris-napi-description"
+msgstr ""
+
+msgid "Pieris-balcana-description"
+msgstr ""
+
+msgid "Euchloe-tagis-description"
+msgstr ""
+
+msgid "Euchloe-eversi-description"
+msgstr ""
+
+msgid "Euchloe-grancanariensis-description"
+msgstr ""
+
+msgid "Euchloe-hesperidum-description"
+msgstr ""
+
+msgid "Euchloe-belemia-description"
+msgstr ""
+
+msgid "Euchloe-insularis-description"
+msgstr ""
+
+msgid "Euchloe-crameri-description"
+msgstr ""
+
+msgid "Euchloe-simplonia-description"
+msgstr ""
+
+msgid "Euchloe-ausonia-description"
+msgstr ""
+
+msgid "Euchloe-charlonia-description"
+msgstr ""
+
+msgid "Euchloe-penia-description"
+msgstr ""
+
+msgid "Euchloe-bazae-description"
+msgstr ""
+
+msgid "Zegris-pyrothoe-description"
+msgstr ""
+
+msgid "Zegris-eupheme-description"
+msgstr ""
+
+msgid "Anthocharis-euphenoides-description"
+msgstr ""
+
+msgid "Anthocharis-cardamines-description"
+msgstr ""
+
+msgid "Anthocharis-gruneri-description"
+msgstr ""
+
+msgid "Anthocharis-damone-description"
+msgstr ""
+
+msgid "Hamearis-lucina-description"
+msgstr ""
+
+msgid "Lycaena-dimorpha-description"
+msgstr ""
+
+msgid "Lycaena-helle-description"
+msgstr ""
+
+msgid "Lycaena-alciphron-description"
+msgstr ""
+
+msgid "Lycaena-thetis-description"
+msgstr ""
+
+msgid "Lycaena-thersamon-description"
+msgstr ""
+
+msgid "Lycaena-dispar-description"
+msgstr ""
+
+msgid "Lycaena-hippothoe-description"
+msgstr ""
+
+msgid "Pseudophilotes-barbagiae-description"
+msgstr ""
+
+msgid "Pseudophilotes-abencerragus-description"
+msgstr ""
+
+msgid "Pseudophilotes-panoptes-description"
+msgstr ""
+
+msgid "Pseudophilotes-vicrama-description"
+msgstr ""
+
+msgid "Pseudophilotes-baton-description"
+msgstr ""
+
+msgid "Scolitantides-orion-description"
+msgstr ""
+
+msgid "Praephilotes-anthracias-description"
+msgstr ""
+
+msgid "Iolana-iolas-description"
+msgstr ""
+
+msgid "Iolana-debilitata-description"
+msgstr ""
+
+msgid "Glaucopsyche-melanops-description"
+msgstr ""
+
+msgid "Glaucopsyche-paphos-description"
+msgstr ""
+
+msgid "Glaucopsyche-alexis-description"
+msgstr ""
+
+msgid "Hipparchia-tilosi-description"
+msgstr ""
+
+msgid "Hipparchia-bacchus-description"
+msgstr ""
+
+msgid "Hipparchia-wyssii-description"
+msgstr ""
+
+msgid "Hipparchia-tamadabae-description"
+msgstr ""
+
+msgid "Hipparchia-gomera-description"
+msgstr ""
+
+msgid "Hipparchia-fidia-description"
+msgstr ""
+
+msgid "Hipparchia-neomiris-description"
+msgstr ""
+
+msgid "Hipparchia-autonoe-description"
+msgstr ""
+
+msgid "Hipparchia-hermione-description"
+msgstr ""
+
+msgid "Hipparchia-syriaca-description"
+msgstr ""
+
+msgid "Hipparchia-fagi-description"
+msgstr ""
+
+msgid "Hipparchia-mersina-description"
+msgstr ""
+
+msgid "Hipparchia-miguelensis-description"
+msgstr ""
+
+msgid "Lycaena-candens-description"
+msgstr ""
+
+msgid "Lycaena-ottomana-description"
+msgstr ""
+
+msgid "Lycaena-bleusei-description"
+msgstr ""
+
+msgid "Lycaena-phlaeas-description"
+msgstr ""
+
+msgid "Lycaena-virgaureae-description"
+msgstr ""
+
+msgid "Lycaena-tityrus-description"
+msgstr ""
+
+msgid "Cigaritis-acamas-description"
+msgstr ""
+
+msgid "Thecla-betulae-description"
+msgstr ""
+
+msgid "Favonius-quercus-description"
+msgstr ""
+
+msgid "Laeosopis-roboris-description"
+msgstr ""
+
+msgid "Tomares-ballus-description"
+msgstr ""
+
+msgid "Tomares-nogelii-description"
+msgstr ""
+
+msgid "Tomares-callimachus-description"
+msgstr ""
+
+msgid "Callophrys-avis-description"
+msgstr ""
+
+msgid "Callophrys-suaveola-description"
+msgstr ""
+
+msgid "Callophrys-rubi-description"
+msgstr ""
+
+msgid "Callophrys-chalybeitincta-description"
+msgstr ""
+
+msgid "Neolycaena-rhymnus-description"
+msgstr ""
+
+msgid "Satyrium-pruni-description"
+msgstr ""
+
+msgid "Satyrium-ilicis-description"
+msgstr ""
+
+msgid "Satyrium-esculi-description"
+msgstr ""
+
+msgid "Satyrium-ledereri-description"
+msgstr ""
+
+msgid "Satyrium-w-album-description"
+msgstr ""
+
+msgid "Satyrium-spini-description"
+msgstr ""
+
+msgid "Satyrium-acaciae-description"
+msgstr ""
+
+msgid "Leptotes-pirithous-description"
+msgstr ""
+
+msgid "Cyclyrius-webbianus-description"
+msgstr ""
+
+msgid "Azanus-ubaldus-description"
+msgstr ""
+
+msgid "Azanus-jesous-description"
+msgstr ""
+
+msgid "Lampides-boeticus-description"
+msgstr ""
+
+msgid "Cacyreus-marshalli-description"
+msgstr ""
+
+msgid "Celastrina-argiolus-description"
+msgstr ""
+
+msgid "Tarucus-theophrastus-description"
+msgstr ""
+
+msgid "Tarucus-balkanicus-description"
+msgstr ""
+
+msgid "Phengaris-alcon-description"
+msgstr ""
+
+msgid "Phengaris-arion-description"
+msgstr ""
+
+msgid "Phengaris-teleius-description"
+msgstr ""
+
+msgid "Phengaris-nausithous-description"
+msgstr ""
+
+msgid "Turanana-taygetica-description"
+msgstr ""
+
+msgid "Pseudophilotes-bavius-description"
+msgstr ""
+
+msgid "Zizeeria-knysna-description"
+msgstr ""
+
+msgid "Zizeeria-karsandra-description"
+msgstr ""
+
+msgid "Tongeia-fischeri-description"
+msgstr ""
+
+msgid "Cupido-argiades-description"
+msgstr ""
+
+msgid "Cupido-decoloratus-description"
+msgstr ""
+
+msgid "Cupido-alcetas-description"
+msgstr ""
+
+msgid "Cupido-osiris-description"
+msgstr ""
+
+msgid "Cupido-minimus-description"
+msgstr ""
+
+msgid "Cupido-lorquinii-description"
+msgstr ""
+
+msgid "Luthrodes-galba-description"
+msgstr ""
+
+msgid "Freyeria-trochylus-description"
+msgstr ""
+
+msgid "Plebejus-argus-description"
+msgstr ""
+
+msgid "Plebejus-idas-description"
+msgstr ""
+
+msgid "Plebejus-bellieri-description"
+msgstr ""
+
+msgid "Plebejus-argyrognomon-description"
+msgstr ""
+
+msgid "Agriades-orbitulus-description"
+msgstr ""
+
+msgid "Agriades-optilete-description"
+msgstr ""
+
+msgid "Agriades-pyrenaicus-description"
+msgstr ""
+
+msgid "Agriades-dardanus-description"
+msgstr ""
+
+msgid "Agriades-zullichi-description"
+msgstr ""
+
+msgid "Agriades-glandon-description"
+msgstr ""
+
+msgid "Agriades-aquilo-description"
+msgstr ""
+
+msgid "Plebejidea-loewii-description"
+msgstr ""
+
+msgid "Eumedonia-eumedon-description"
+msgstr ""
+
+msgid "Kretania-psylorita-description"
+msgstr ""
+
+msgid "Kretania-hesperica-description"
+msgstr ""
+
+msgid "Kretania-eurypilus-description"
+msgstr ""
+
+msgid "Kretania-trappi-description"
+msgstr ""
+
+msgid "Kretania-sephirus-description"
+msgstr ""
+
+msgid "Kretania-pylaon-description"
+msgstr ""
+
+msgid "Cyaniris-semiargus-description"
+msgstr ""
+
+msgid "Glabroculus-cyane-description"
+msgstr ""
+
+msgid "Aricia-morronensis-description"
+msgstr ""
+
+msgid "Aricia-anteros-description"
+msgstr ""
+
+msgid "Aricia-cramera-description"
+msgstr ""
+
+msgid "Aricia-nicias-description"
+msgstr ""
+
+msgid "Aricia-artaxerxes-description"
+msgstr ""
+
+msgid "Aricia-montensis-description"
+msgstr ""
+
+msgid "Aricia-agestis-description"
+msgstr ""
+
+msgid "Neolysandra-coelestina-description"
+msgstr ""
+
+msgid "Lysandra-hispana-description"
+msgstr ""
+
+msgid "Lysandra-corydonius-description"
+msgstr ""
+
+msgid "Lysandra-bellargus-description"
+msgstr ""
+
+msgid "Lysandra-coridon-description"
+msgstr ""
+
+msgid "Lysandra-caelestissima-description"
+msgstr ""
+
+msgid "Lysandra-albicans-description"
+msgstr ""
+
+msgid "Polyommatus-escheri-description"
+msgstr ""
+
+msgid "Polyommatus-thersites-description"
+msgstr ""
+
+msgid "Polyommatus-daphnis-description"
+msgstr ""
+
+msgid "Polyommatus-amandus-description"
+msgstr ""
+
+msgid "Polyommatus-golgus-description"
+msgstr ""
+
+msgid "Polyommatus-nivescens-description"
+msgstr ""
+
+msgid "Polyommatus-dorylas-description"
+msgstr ""
+
+msgid "Polyommatus-celina-description"
+msgstr ""
+
+msgid "Polyommatus-icarus-description"
+msgstr ""
+
+msgid "Polyommatus-eros-description"
+msgstr ""
+
+msgid "Polyommatus-damon-description"
+msgstr ""
+
+msgid "Polyommatus-damone-description"
+msgstr ""
+
+msgid "Polyommatus-damocles-description"
+msgstr ""
+
+msgid "Polyommatus-admetus-description"
+msgstr ""
+
+msgid "Polyommatus-ripartii-description"
+msgstr ""
+
+msgid "Polyommatus-nephohiptamenos-description"
+msgstr ""
+
+msgid "Polyommatus-iphigenia-description"
+msgstr ""
+
+msgid "Polyommatus-violetae-description"
+msgstr ""
+
+msgid "Polyommatus-fulgens-description"
+msgstr ""
+
+msgid "Polyommatus-fabressei-description"
+msgstr ""
+
+msgid "Polyommatus-dolus-description"
+msgstr ""
+
+msgid "Polyommatus-humedasae-description"
+msgstr ""
+
+msgid "Polyommatus-timfristos-description"
+msgstr ""
+
+msgid "Polyommatus-orphicus-description"
+msgstr ""
+
+msgid "Polyommatus-aroaniensis-description"
+msgstr ""
+
+msgid "Neptis-sappho-description"
+msgstr ""
+
+msgid "Neptis-rivularis-description"
+msgstr ""
+
+msgid "Limenitis-reducta-description"
+msgstr ""
+
+msgid "Limenitis-populi-description"
+msgstr ""
+
+msgid "Limenitis-camilla-description"
+msgstr ""
+
+msgid "Issoria-lathonia-description"
+msgstr ""
+
+msgid "Issoria-eugenia-description"
+msgstr ""
+
+msgid "Brenthis-hecate-description"
+msgstr ""
+
+msgid "Brenthis-ino-description"
+msgstr ""
+
+msgid "Brenthis-daphne-description"
+msgstr ""
+
+msgid "Argynnis-paphia-description"
+msgstr ""
+
+msgid "Argynnis-pandora-description"
+msgstr ""
+
+msgid "Argynnis-laodice-description"
+msgstr ""
+
+msgid "Speyeria-aglaja-description"
+msgstr ""
+
+msgid "Fabriciana-elisa-description"
+msgstr ""
+
+msgid "Fabriciana-niobe-description"
+msgstr ""
+
+msgid "Fabriciana-adippe-description"
+msgstr ""
+
+msgid "Boloria-eunomia-description"
+msgstr ""
+
+msgid "Boloria-graeca-description"
+msgstr ""
+
+msgid "Boloria-pales-description"
+msgstr ""
+
+msgid "Boloria-alaskensis-description"
+msgstr ""
+
+msgid "Boloria-napaea-description"
+msgstr ""
+
+msgid "Boloria-aquilonaris-description"
+msgstr ""
+
+msgid "Boloria-tritonia-description"
+msgstr ""
+
+msgid "Boloria-polaris-description"
+msgstr ""
+
+msgid "Boloria-thore-description"
+msgstr ""
+
+msgid "Boloria-selene-description"
+msgstr ""
+
+msgid "Boloria-euphrosyne-description"
+msgstr ""
+
+msgid "Boloria-dia-description"
+msgstr ""
+
+msgid "Boloria-improba-description"
+msgstr ""
+
+msgid "Boloria-frigga-description"
+msgstr ""
+
+msgid "Boloria-freija-description"
+msgstr ""
+
+msgid "Boloria-selenis-description"
+msgstr ""
+
+msgid "Boloria-oscarus-description"
+msgstr ""
+
+msgid "Boloria-titania-description"
+msgstr ""
+
+msgid "Boloria-chariclea-description"
+msgstr ""
+
+msgid "Boloria-angarensis-description"
+msgstr ""
+
+msgid "Apatura-iris-description"
+msgstr ""
+
+msgid "Apatura-metis-description"
+msgstr ""
+
+msgid "Apatura-ilia-description"
+msgstr ""
+
+msgid "Apatura-ilia/iris-description"
+msgstr ""
+
+msgid "Araschnia-levana-description"
+msgstr ""
+
+msgid "Vanessa-virginiensis-description"
+msgstr ""
+
+msgid "Vanessa-cardui-description"
+msgstr ""
+
+msgid "Vanessa-vulcania-description"
+msgstr ""
+
+msgid "Vanessa-atalanta-description"
+msgstr ""
+
+msgid "Aglais-io-description"
+msgstr ""
+
+msgid "Aglais-urticae-description"
+msgstr ""
+
+msgid "Aglais-ichnusa-description"
+msgstr ""
+
+msgid "Polygonia-egea-description"
+msgstr ""
+
+msgid "Polygonia-c-album-description"
+msgstr ""
+
+msgid "Nymphalis-vaualbum-description"
+msgstr ""
+
+msgid "Nymphalis-polychloros-description"
+msgstr ""
+
+msgid "Nymphalis-xanthomelas-description"
+msgstr ""
+
+msgid "Nymphalis-antiopa-description"
+msgstr ""
+
+msgid "Hypolimnas-misippus-description"
+msgstr ""
+
+msgid "Euphydryas-desfontainii-description"
+msgstr ""
+
+msgid "Euphydryas-aurinia-description"
+msgstr ""
+
+msgid "Euphydryas-cynthia-description"
+msgstr ""
+
+msgid "Euphydryas-iduna-description"
+msgstr ""
+
+msgid "Euphydryas-maturna-description"
+msgstr ""
+
+msgid "Euphydryas-intermedia-description"
+msgstr ""
+
+msgid "Melitaea-trivia-description"
+msgstr ""
+
+msgid "Melitaea-didyma-description"
+msgstr ""
+
+msgid "Melitaea-arduinna-description"
+msgstr ""
+
+msgid "Melitaea-aetherie-description"
+msgstr ""
+
+msgid "Melitaea-phoebe-description"
+msgstr ""
+
+msgid "Melitaea-ornata-description"
+msgstr ""
+
+msgid "Melitaea-cinxia-description"
+msgstr ""
+
+msgid "Melitaea-diamina-description"
+msgstr ""
+
+msgid "Melitaea-celadussa-description"
+msgstr ""
+
+msgid "Melitaea-deione-description"
+msgstr ""
+
+msgid "Melitaea-britomartis-description"
+msgstr ""
+
+msgid "Melitaea-athalia-description"
+msgstr ""
+
+msgid "Melitaea-varia-description"
+msgstr ""
+
+msgid "Melitaea-parthenoides-description"
+msgstr ""
+
+msgid "Melitaea-aurelia-description"
+msgstr ""
+
+msgid "Melitaea-asteria-description"
+msgstr ""
+
+msgid "Libythea-celtis-description"
+msgstr ""
+
+msgid "Danaus-plexippus-description"
+msgstr ""
+
+msgid "Danaus-chrysippus-description"
+msgstr ""
+
+msgid "Charaxes-jasius-description"
+msgstr ""
+
+msgid "Coenonympha-phryne-description"
+msgstr ""
+
+msgid "Coenonympha-oedippus-description"
+msgstr ""
+
+msgid "Coenonympha-dorus-description"
+msgstr ""
+
+msgid "Coenonympha-thyrsis-description"
+msgstr ""
+
+msgid "Coenonympha-pamphilus-description"
+msgstr ""
+
+msgid "Coenonympha-tullia-description"
+msgstr ""
+
+msgid "Coenonympha-rhodopensis-description"
+msgstr ""
+
+msgid "Coenonympha-amaryllis-description"
+msgstr ""
+
+msgid "Coenonympha-glycerion-description"
+msgstr ""
+
+msgid "Coenonympha-corinna-description"
+msgstr ""
+
+msgid "Coenonympha-leander-description"
+msgstr ""
+
+msgid "Coenonympha-hero-description"
+msgstr ""
+
+msgid "Coenonympha-gardetta-description"
+msgstr ""
+
+msgid "Coenonympha-orientalis-description"
+msgstr ""
+
+msgid "Coenonympha-arcania-description"
+msgstr ""
+
+msgid "Kirinia-roxelana-description"
+msgstr ""
+
+msgid "Kirinia-climene-description"
+msgstr ""
+
+msgid "Lopinga-achine-description"
+msgstr ""
+
+msgid "Pararge-xiphia-description"
+msgstr ""
+
+msgid "Pararge-xiphioides-description"
+msgstr ""
+
+msgid "Pararge-aegeria-description"
+msgstr ""
+
+msgid "Lasiommata-maera-description"
+msgstr ""
+
+msgid "Lasiommata-deidamia-description"
+msgstr ""
+
+msgid "Lasiommata-petropolitana-description"
+msgstr ""
+
+msgid "Lasiommata-paramegaera-description"
+msgstr ""
+
+msgid "Lasiommata-megera-description"
+msgstr ""
+
+msgid "Melanargia-russiae-description"
+msgstr ""
+
+msgid "Melanargia-larissa-description"
+msgstr ""
+
+msgid "Melanargia-lachesis-description"
+msgstr ""
+
+msgid "Melanargia-galathea-description"
+msgstr ""
+
+msgid "Melanargia-ines-description"
+msgstr ""
+
+msgid "Melanargia-arge-description"
+msgstr ""
+
+msgid "Melanargia-pherusa-description"
+msgstr ""
+
+msgid "Melanargia-occitanica-description"
+msgstr ""
+
+msgid "Hipparchia-fatua-description"
+msgstr ""
+
+msgid "Hipparchia-statilinus-description"
+msgstr ""
+
+msgid "Hipparchia-azorina-description"
+msgstr ""
+
+msgid "Hipparchia-senthes-description"
+msgstr ""
+
+msgid "Hipparchia-maderensis-description"
+msgstr ""
+
+msgid "Hipparchia-semele-description"
+msgstr ""
+
+msgid "Hipparchia-blachieri-description"
+msgstr ""
+
+msgid "Hipparchia-aristaeus-description"
+msgstr ""
+
+msgid "Hipparchia-volgensis-description"
+msgstr ""
+
+msgid "Hipparchia-neapolitana-description"
+msgstr ""
+
+msgid "Hipparchia-leighebi-description"
+msgstr ""
+
+msgid "Hipparchia-pellucida-description"
+msgstr ""
+
+msgid "Hipparchia-sbordonii-description"
+msgstr ""
+
+msgid "Hipparchia-cypriensis-description"
+msgstr ""
+
+msgid "Hipparchia-cretica-description"
+msgstr ""
+
+msgid "Hipparchia-christenseni-description"
+msgstr ""
+
+msgid "Minois-dryas-description"
+msgstr ""
+
+msgid "Brintesia-circe-description"
+msgstr ""
+
+msgid "Arethusana-arethusa-description"
+msgstr ""
+
+msgid "Oeneis-tarpeia-description"
+msgstr ""
+
+msgid "Oeneis-bore-description"
+msgstr ""
+
+msgid "Oeneis-ammon-description"
+msgstr ""
+
+msgid "Oeneis-melissa-description"
+msgstr ""
+
+msgid "Oeneis-magna-description"
+msgstr ""
+
+msgid "Oeneis-jutta-description"
+msgstr ""
+
+msgid "Oeneis-norna-description"
+msgstr ""
+
+msgid "Oeneis-polixenes-description"
+msgstr ""
+
+msgid "Oeneis-glacialis-description"
+msgstr ""
+
+msgid "Satyrus-ferula-description"
+msgstr ""
+
+msgid "Satyrus-virbius-description"
+msgstr ""
+
+msgid "Satyrus-actaea-description"
+msgstr ""
+
+msgid "Chazara-briseis-description"
+msgstr ""
+
+msgid "Chazara-prieuri-description"
+msgstr ""
+
+msgid "Chazara-persephone-description"
+msgstr ""
+
+msgid "Pseudochazara-geyeri-description"
+msgstr ""
+
+msgid "Pseudochazara-graeca-description"
+msgstr ""
+
+msgid "Pseudochazara-amymone-description"
+msgstr ""
+
+msgid "Pseudochazara-anthelea-description"
+msgstr ""
+
+msgid "Pseudochazara-amalthea-description"
+msgstr ""
+
+msgid "Pseudochazara-williamsi-description"
+msgstr ""
+
+msgid "Pseudochazara-euxina-description"
+msgstr ""
+
+msgid "Pseudochazara-mercurius-description"
+msgstr ""
+
+msgid "Pseudochazara-cingovskii-description"
+msgstr ""
+
+msgid "Pseudochazara-tisiphone-description"
+msgstr ""
+
+msgid "Pseudochazara-orestes-description"
+msgstr ""
+
+msgid "Ypthima-asterope-description"
+msgstr ""
+
+msgid "Proterebia-phegea-description"
+msgstr ""
+
+msgid "Hyponephele-huebneri-description"
+msgstr ""
+
+msgid "Hyponephele-lycaon-description"
+msgstr ""
+
+msgid "Hyponephele-lupina-description"
+msgstr ""
+
+msgid "Aphantopus-hyperantus-description"
+msgstr ""
+
+msgid "Pyronia-cecilia-description"
+msgstr ""
+
+msgid "Pyronia-tithonus-description"
+msgstr ""
+
+msgid "Pyronia-bathseba-description"
+msgstr ""
+
+msgid "Maniola-jurtina-description"
+msgstr ""
+
+msgid "Maniola-nurag-description"
+msgstr ""
+
+msgid "Maniola-chia-description"
+msgstr ""
+
+msgid "Maniola-megala-description"
+msgstr ""
+
+msgid "Maniola-cypricola-description"
+msgstr ""
+
+msgid "Maniola-telmessia-description"
+msgstr ""
+
+msgid "Maniola-halicarnassus-description"
+msgstr ""
+
+msgid "Erebia-edda-description"
+msgstr ""
+
+msgid "Erebia-fasciata-description"
+msgstr ""
+
+msgid "Erebia-discoidalis-description"
+msgstr ""
+
+msgid "Erebia-rossii-description"
+msgstr ""
+
+msgid "Erebia-cyclopius-description"
+msgstr ""
+
+msgid "Erebia-embla-description"
+msgstr ""
+
+msgid "Erebia-disa-description"
+msgstr ""
+
+msgid "Erebia-meolans-description"
+msgstr ""
+
+msgid "Erebia-dabanensis-description"
+msgstr ""
+
+msgid "Erebia-jeniseiensis-description"
+msgstr ""
+
+msgid "Erebia-claudina-description"
+msgstr ""
+
+msgid "Erebia-manto-description"
+msgstr ""
+
+msgid "Erebia-ottomana-description"
+msgstr ""
+
+msgid "Erebia-hispania-description"
+msgstr ""
+
+msgid "Erebia-rondoui-description"
+msgstr ""
+
+msgid "Erebia-callias-description"
+msgstr ""
+
+msgid "Erebia-tyndarus-description"
+msgstr ""
+
+msgid "Erebia-cassioides-description"
+msgstr ""
+
+msgid "Erebia-nivalis-description"
+msgstr ""
+
+msgid "Erebia-neleus-description"
+msgstr ""
+
+msgid "Erebia-calcarius-description"
+msgstr ""
+
+msgid "Erebia-arvernensis-description"
+msgstr ""
+
+msgid "Erebia-oeme-description"
+msgstr ""
+
+msgid "Erebia-gorge-description"
+msgstr ""
+
+msgid "Erebia-sthennyo-description"
+msgstr ""
+
+msgid "Erebia-pandrose-description"
+msgstr ""
+
+msgid "Erebia-eriphyle-description"
+msgstr ""
+
+msgid "Erebia-epistygne-description"
+msgstr ""
+
+msgid "Erebia-euryale-description"
+msgstr ""
+
+msgid "Erebia-palarica-description"
+msgstr ""
+
+msgid "Erebia-ligea-description"
+msgstr ""
+
+msgid "Erebia-pluto-description"
+msgstr ""
+
+msgid "Erebia-aethiopellus-description"
+msgstr ""
+
+msgid "Erebia-gorgone-description"
+msgstr ""
+
+msgid "Erebia-rhodopensis-description"
+msgstr ""
+
+msgid "Erebia-mnestra-description"
+msgstr ""
+
+msgid "Erebia-albergana-description"
+msgstr ""
+
+msgid "Erebia-sudetica-description"
+msgstr ""
+
+msgid "Erebia-melampus-description"
+msgstr ""
+
+msgid "Erebia-triarius-description"
+msgstr ""
+
+msgid "Erebia-polaris-description"
+msgstr ""
+
+msgid "Erebia-medusa-description"
+msgstr ""
+
+msgid "Erebia-aethiops-description"
+msgstr ""
+
+msgid "Erebia-pharte-description"
+msgstr ""
+
+msgid "Erebia-christi-description"
+msgstr ""
+
+msgid "Erebia-orientalis-description"
+msgstr ""
+
+msgid "Erebia-epiphron-description"
+msgstr ""
+
+msgid "Erebia-flavofasciata-description"
+msgstr ""
+
+msgid "Erebia-montana-description"
+msgstr ""
+
+msgid "Erebia-styx-description"
+msgstr ""
+
+msgid "Erebia-stiria-description"
+msgstr ""
+
+msgid "Erebia-scipio-description"
+msgstr ""
+
+msgid "Erebia-pronoe-description"
+msgstr ""
+
+msgid "Erebia-melas-description"
+msgstr ""
+
+msgid "Erebia-lefebvrei-description"
+msgstr ""
+
+msgid "Erebia-zapateri-description"
+msgstr ""
+
+msgid "Erebia-neoridas-description"
+msgstr ""
