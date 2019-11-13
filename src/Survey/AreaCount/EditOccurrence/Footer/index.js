@@ -57,6 +57,10 @@ function addPhoto(occurrence, photo) {
 
 @observer
 class Footer extends Component {
+  static propTypes = {
+    occurrence: PropTypes.object.isRequired,
+  };
+
   state = {
     showGallery: false,
   };
@@ -71,7 +75,7 @@ class Footer extends Component {
     Log('Samples:Edit:Footer: photo uploaded.');
     const photo = e.target.files[0];
 
-    const occurrence = this.props.sample.getOccurrence();
+    const { occurrence } = this.props;
     // TODO: show loader
     addPhoto(occurrence, photo).catch(err => {
       Log(err, 'e');
@@ -81,7 +85,7 @@ class Footer extends Component {
 
   photoSelect() {
     Log('Samples:Edit:Controller: photo selection.');
-    const occurrence = this.props.sample.getOccurrence();
+    const { occurrence } = this.props;
 
     actionSheet({
       header: t('Choose a method to upload a photo'),
@@ -127,9 +131,9 @@ class Footer extends Component {
 
   getGallery = () => {
     Log('Samples:Edit:Footer: photo view.');
-    const { sample } = this.props;
+    const { occurrence } = this.props;
     const { showGallery } = this.state;
-    const { media } = sample.getOccurrence();
+    const { media } = occurrence;
 
     const items = [];
 
@@ -156,15 +160,10 @@ class Footer extends Component {
   };
 
   getImageArray = () => {
-    const { sample } = this.props;
-    const { models } = sample.getOccurrence().media;
+    const { occurrence } = this.props;
+    const { models } = occurrence.media;
     if (!models || !models.length) {
-      return (
-        <span className="empty"> 
-          {' '}
-          {t('No photo has been added')}
-        </span>
-      );
+      return <span className="empty"> {t('No photo has been added')}</span>;
     }
 
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
@@ -212,18 +211,11 @@ class Footer extends Component {
   };
 
   render() {
-    const { sample } = this.props;
-
-    const isSynchronising = sample.remote.synchronising;
-
     return (
       <IonFooter id="edit-footer">
         {this.getGallery()}
         <div>
-          <div
-            id="img-picker-array"
-            className={isSynchronising ? 'disabled' : ''}
-          >
+          <div id="img-picker-array">
             <div className="img-picker">{this.getNewImageButton()}</div>
             <div id="img-array">{this.getImageArray()}</div>
           </div>
@@ -232,9 +224,5 @@ class Footer extends Component {
     );
   }
 }
-
-Footer.propTypes = {
-  sample: PropTypes.object.isRequired,
-};
 
 export default Footer;

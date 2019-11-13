@@ -11,8 +11,8 @@ import './styles.scss';
 @observer
 class Container extends React.Component {
   static propTypes = {
-    match: PropTypes.object.isRequired,
     sample: PropTypes.object.isRequired,
+    match: PropTypes.object,
   };
 
   render() {
@@ -25,7 +25,7 @@ class Container extends React.Component {
       <IonPage>
         <AppHeader title={t('Edit Occurrence')} />
         <Main sample={sample} occurrence={occurrence} />
-        <Footer sample={sample} />
+        <Footer occurrence={occurrence} />
       </IonPage>
     );
   }
