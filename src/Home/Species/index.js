@@ -108,7 +108,7 @@ class Component extends React.Component {
 
         {this.getSpeciesGrid()}
 
-        <IonModal isOpen={this.state.showModal}>
+        <IonModal isOpen={this.state.showModal} backdropDismiss={false}>
           <ModalHeader title={t('Species')} onClose={this.hideSpeciesModal} />
           {this.state.showModal && (
             <SpeciesProfile species={this.state.species} />

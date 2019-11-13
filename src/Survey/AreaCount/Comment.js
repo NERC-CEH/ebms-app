@@ -7,8 +7,8 @@ import { observer } from 'mobx-react';
 @observer
 class EditOccurrence extends Component {
   static propTypes = {
-    match: PropTypes.object.isRequired,
     sample: PropTypes.object.isRequired,
+    match: PropTypes.object,
   };
 
   constructor(props) {
