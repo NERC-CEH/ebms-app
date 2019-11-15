@@ -1,11 +1,11 @@
 # Translators:
-# Karolis, 2019
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2019
+# Karolis, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2019\n"
+"Last-Translator: Karolis, 2019\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1017,28 +1017,28 @@ msgid ""
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 msgid "Absent"
-msgstr ""
+msgstr "Ausente"
 
 msgid "Present"
-msgstr ""
+msgstr "Presente"
 
 msgid "Possibly present"
-msgstr ""
+msgstr "Posiblemente presente"
 
 msgid "Regular migrant"
-msgstr ""
+msgstr "Migrante regular"
 
 msgid "Irregular vagrant"
-msgstr ""
+msgstr "Nómada irregular"
 
 msgid "Regionally extinct"
-msgstr ""
+msgstr "Regionalmente extinto"
 
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 msgid "Counts"
-msgstr ""
+msgstr "Recuentos"
