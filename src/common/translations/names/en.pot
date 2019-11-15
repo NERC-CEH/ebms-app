@@ -1,0 +1,1509 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Papilio hospiton"
+msgstr "Corsican Swallowtail"
+
+msgid "Parnassius mnemosyne"
+msgstr "Clouded Apollo"
+
+msgid "Parnassius phoebus"
+msgstr "Small Apollo"
+
+msgid "Parnassius apollo"
+msgstr "Apollo"
+
+msgid "Archon apollinus"
+msgstr "False Apollo"
+
+msgid "Zerynthia cerisy"
+msgstr "Eastern Festoon"
+
+msgid "Carcharodus stauderi"
+msgstr "False Marbled Skipper"
+
+msgid "Carcharodus baeticus"
+msgstr "Southern Marbled Skipper"
+
+msgid "Erynnis tages"
+msgstr "Dingy Skipper"
+
+msgid "Erynnis marloyi"
+msgstr "Inky Skipper"
+
+msgid "Zerynthia cretica"
+msgstr "Cretan Festoon"
+
+msgid "Zerynthia caucasica"
+msgstr "Caucasian Festoon"
+
+msgid "Zerynthia rumina"
+msgstr "Spanish Festoon"
+
+msgid "Zerynthia polyxena"
+msgstr "Southern Festoon"
+
+msgid "Zerynthia cassandra"
+msgstr "Italian Festoon"
+
+msgid "Heteropterus morpheus"
+msgstr "Large Chequered Skipper"
+
+msgid "Carterocephalus silvicola"
+msgstr "Northern Chequered Skipper"
+
+msgid "Carterocephalus palaemon"
+msgstr "Chequered Skipper"
+
+msgid "Pelopidas thrax"
+msgstr "Millet Skipper"
+
+msgid "Borbo borbonica"
+msgstr "Zeller's Skipper"
+
+msgid "Gegenes pumilio"
+msgstr "Pygmy Skipper"
+
+msgid "Gegenes nostrodamus"
+msgstr "Mediterranean Skipper"
+
+msgid "Ochlodes sylvanus"
+msgstr "Large Skipper"
+
+msgid "Hesperia comma"
+msgstr "Silver-spotted Skipper"
+
+msgid "Thymelicus christi"
+msgstr "Canarian Skipper"
+
+msgid "Thymelicus acteon"
+msgstr "Lulworth Skipper"
+
+msgid "Thymelicus hyrax"
+msgstr "Levantine Skipper"
+
+msgid "Thymelicus sylvestris"
+msgstr "Small Skipper"
+
+msgid "Thymelicus lineola"
+msgstr "Essex Skipper"
+
+msgid "Spialia phlomidis"
+msgstr "Persian Skipper"
+
+msgid "Spialia sertorius"
+msgstr "Red-underwing Skipper"
+
+msgid "Spialia therapne"
+msgstr "Corsican Red-underwing Skipper"
+
+msgid "Spialia rosae"
+msgstr "Spanish Red-underwing Skipper"
+
+msgid "Spialia orbifer"
+msgstr "Hungarian Skipper"
+
+msgid "Carcharodus tripolinus"
+msgstr "False Mallow Skipper"
+
+msgid "Carcharodus alceae"
+msgstr "Mallow Skipper"
+
+msgid "Muschampia cribrellum"
+msgstr "Spinose Skipper"
+
+msgid "Muschampia tessellum"
+msgstr "Tessellated Skipper"
+
+msgid "Muschampia proto"
+msgstr "Sage Skipper"
+
+msgid "Carcharodus lavatherae"
+msgstr "Marbled Skipper"
+
+msgid "Carcharodus orientalis"
+msgstr "Oriental Marbled Skipper"
+
+msgid "Carcharodus floccifera"
+msgstr "Tufted Marbled Skipper"
+
+msgid "Iphiclides podalirius"
+msgstr "Scarce Swallowtail"
+
+msgid "Iphiclides feisthamelii"
+msgstr "Iberian Scarce Swallowtail"
+
+msgid "Papilio alexanor"
+msgstr "Southern Swallowtail"
+
+msgid "Papilio machaon"
+msgstr "Swallowtail"
+
+msgid "Pyrgus malvoides"
+msgstr "Southern Grizzled Skipper"
+
+msgid "Pyrgus malvae"
+msgstr "Grizzled Skipper"
+
+msgid "Pyrgus carthami"
+msgstr "Safflower Skipper"
+
+msgid "Pyrgus sidae"
+msgstr "Yellow-banded Skipper"
+
+msgid "Pyrgus centaureae"
+msgstr "Northern Grizzled Skipper"
+
+msgid "Pyrgus cacaliae"
+msgstr "Dusky Grizzled Skipper"
+
+msgid "Pyrgus andromedae"
+msgstr "Alpine Grizzled Skipper"
+
+msgid "Pyrgus serratulae"
+msgstr "Olive Skipper"
+
+msgid "Pyrgus armoricanus/serratulae"
+msgstr "Oliver Grizzled Skipper"
+
+msgid "Pyrgus armoricanus"
+msgstr "Oberthür's Grizzled Skipper"
+
+msgid "Pyrgus alveus"
+msgstr "Large Grizzled Skipper"
+
+msgid "Pyrgus warrenensis"
+msgstr "Warren's Skipper"
+
+msgid "Pyrgus foulquieri"
+msgstr "Foulquier's Grizzled Skipper"
+
+msgid "Pyrgus onopordi"
+msgstr "Rosy Grizzled Skipper"
+
+msgid "Pyrgus carlinae"
+msgstr "Carline Skipper"
+
+msgid "Pyrgus cirsii"
+msgstr "Cinquefoil Skipper"
+
+msgid "Pyrgus cinarae"
+msgstr "Sandy Grizzled Skipper"
+
+msgid "Leptidea duponcheli"
+msgstr "Eastern Wood White"
+
+msgid "Leptidea morsei"
+msgstr "Fenton's Wood White"
+
+msgid "Leptidea juvernica"
+msgstr "Cryptic Wood White"
+
+msgid "Leptidea sinapis"
+msgstr "Wood White"
+
+msgid "Leptidea sinapis/juvernica"
+msgstr "Wood White/Real's Wood White"
+
+msgid "Leptidea reali"
+msgstr "Réal's Wood White"
+
+msgid "Gonepteryx rhamni"
+msgstr "Brimstone"
+
+msgid "Gonepteryx cleobule"
+msgstr "Canary Brimstone"
+
+msgid "Gonepteryx cleopatra"
+msgstr "Cleopatra"
+
+msgid "Gonepteryx maderensis"
+msgstr "Madeiran Brimstone"
+
+msgid "Gonepteryx farinosa"
+msgstr "Powdered Brimstone"
+
+msgid "Catopsilia florella"
+msgstr "African Migrant"
+
+msgid "Colias hyale"
+msgstr "Pale Clouded Yellow"
+
+msgid "Colias hyale/alfacariensis"
+msgstr "Pale/Berger's Clouded Yellow"
+
+msgid "Colias alfacariensis"
+msgstr "Berger's Clouded Yellow"
+
+msgid "Colias phicomone"
+msgstr "Mountain Clouded Yellow"
+
+msgid "Colias aurorina"
+msgstr "Greek Clouded Yellow"
+
+msgid "Colias chrysotheme"
+msgstr "Lesser Clouded Yellow"
+
+msgid "Colias erate"
+msgstr "Eastern Pale Clouded Yellow"
+
+msgid "Colias crocea"
+msgstr "Clouded Yellow"
+
+msgid "Colias myrmidone"
+msgstr "Danube Clouded Yellow"
+
+msgid "Colias caucasica"
+msgstr "Balkan Clouded Yellow"
+
+msgid "Colias palaeno"
+msgstr "Moorland Clouded Yellow"
+
+msgid "Colias tyche"
+msgstr "Pale Arctic Clouded Yellow"
+
+msgid "Colias hecla"
+msgstr "Northern Clouded Yellow"
+
+msgid "Colotis evagore"
+msgstr "Desert Orange-tip"
+
+msgid "Aporia crataegi"
+msgstr "Black-veined White"
+
+msgid "Pontia chloridice"
+msgstr "Small Bath White"
+
+msgid "Pontia callidice"
+msgstr "Peak White"
+
+msgid "Pontia edusa"
+msgstr "Eastern Bath White"
+
+msgid "Pontia daplidice"
+msgstr "Bath White"
+
+msgid "Pieris krueperi"
+msgstr "Krueper's Small White"
+
+msgid "Pieris brassicae"
+msgstr "Large White"
+
+msgid "Pieris wollastoni"
+msgstr "Madeiran Large White"
+
+msgid "Pieris cheiranthi"
+msgstr "Canary Islands Large White"
+
+msgid "Pieris rapae"
+msgstr "Small White"
+
+msgid "Pieris mannii"
+msgstr "Southern Small White"
+
+msgid "Pieris ergane"
+msgstr "Mountain Small White"
+
+msgid "Pieris bryoniae"
+msgstr "Mountain Green-veined White"
+
+msgid "Pieris napi"
+msgstr "Green-veined White"
+
+msgid "Pieris balcana"
+msgstr "Balkan Green-veined White"
+
+msgid "Euchloe tagis"
+msgstr "Portuguese Dappled White"
+
+msgid "Euchloe eversi"
+msgstr "Euchloe eversi"
+
+msgid "Euchloe grancanariensis"
+msgstr "Euchloe grancanariensis"
+
+msgid "Euchloe hesperidum"
+msgstr "Canary Green-striped White"
+
+msgid "Euchloe belemia"
+msgstr "Green-striped White"
+
+msgid "Euchloe insularis"
+msgstr "Corsican Dappled White"
+
+msgid "Euchloe crameri"
+msgstr "Western Dappled White"
+
+msgid "Euchloe simplonia"
+msgstr "Mountain Dappled White"
+
+msgid "Euchloe ausonia"
+msgstr "Eastern Dappled White"
+
+msgid "Euchloe charlonia"
+msgstr "Greenish Black-tip"
+
+msgid "Euchloe penia"
+msgstr "Eastern Greenish Black-tip"
+
+msgid "Euchloe bazae"
+msgstr "Spanish Greenish Black-tip"
+
+msgid "Zegris pyrothoe"
+msgstr "Zegris pyrothoe"
+
+msgid "Zegris eupheme"
+msgstr "Sooty Orange-tip"
+
+msgid "Anthocharis euphenoides"
+msgstr "Provence Orange-tip"
+
+msgid "Anthocharis cardamines"
+msgstr "Orange-tip"
+
+msgid "Anthocharis gruneri"
+msgstr "Grüner's Orange-tip"
+
+msgid "Anthocharis damone"
+msgstr "Eastern Orange-tip"
+
+msgid "Hamearis lucina"
+msgstr "Duke of Burgundy"
+
+msgid "Lycaena dimorpha"
+msgstr "Lycaena dimorpha"
+
+msgid "Lycaena helle"
+msgstr "Violet Copper"
+
+msgid "Lycaena alciphron"
+msgstr "Purple-shot Copper"
+
+msgid "Lycaena thetis"
+msgstr "Fiery Copper"
+
+msgid "Lycaena thersamon"
+msgstr "Lesser Fiery Copper"
+
+msgid "Lycaena dispar"
+msgstr "Large Copper"
+
+msgid "Lycaena hippothoe"
+msgstr "Purple-edged Copper"
+
+msgid "Pseudophilotes barbagiae"
+msgstr "Sardinian Blue"
+
+msgid "Pseudophilotes abencerragus"
+msgstr "False Baton Blue"
+
+msgid "Pseudophilotes panoptes"
+msgstr "Panoptes Blue"
+
+msgid "Pseudophilotes vicrama"
+msgstr "Eastern Baton Blue"
+
+msgid "Pseudophilotes baton"
+msgstr "Baton Blue"
+
+msgid "Scolitantides orion"
+msgstr "Chequered Blue"
+
+msgid "Praephilotes anthracias"
+msgstr "Praephilotes anthracias"
+
+msgid "Iolana iolas"
+msgstr "Iolas Blue"
+
+msgid "Iolana debilitata"
+msgstr "Iolana debilitata"
+
+msgid "Glaucopsyche melanops"
+msgstr "Black-eyed Blue"
+
+msgid "Glaucopsyche paphos"
+msgstr "Paphos Blue"
+
+msgid "Glaucopsyche alexis"
+msgstr "Green-underside Blue"
+
+msgid "Hipparchia tilosi"
+msgstr "La Palma Grayling"
+
+msgid "Hipparchia bacchus"
+msgstr "El Hierro Grayling"
+
+msgid "Hipparchia wyssii"
+msgstr "Canary Grayling"
+
+msgid "Hipparchia tamadabae"
+msgstr "Gran Canaria Grayling"
+
+msgid "Hipparchia gomera"
+msgstr "Gomera Grayling"
+
+msgid "Hipparchia fidia"
+msgstr "Striped Grayling"
+
+msgid "Hipparchia neomiris"
+msgstr "Corsican Grayling"
+
+msgid "Hipparchia autonoe"
+msgstr "Russian Grayling"
+
+msgid "Hipparchia hermione"
+msgstr "Rock Grayling"
+
+msgid "Hipparchia syriaca"
+msgstr "Eastern Rock Grayling"
+
+msgid "Hipparchia fagi"
+msgstr "Woodland Grayling"
+
+msgid "Hipparchia mersina"
+msgstr "Samos Grayling"
+
+msgid "Hipparchia miguelensis"
+msgstr "Le Cerf's Grayling"
+
+msgid "Lycaena candens"
+msgstr "Balkan Copper"
+
+msgid "Lycaena ottomana"
+msgstr "Grecian Copper"
+
+msgid "Lycaena bleusei"
+msgstr "Iberian Sooty Copper"
+
+msgid "Lycaena phlaeas"
+msgstr "Small Copper"
+
+msgid "Lycaena virgaureae"
+msgstr "Scarce Copper"
+
+msgid "Lycaena tityrus"
+msgstr "Sooty Copper"
+
+msgid "Cigaritis acamas"
+msgstr "Levantine Leopard"
+
+msgid "Thecla betulae"
+msgstr "Brown Hairstreak"
+
+msgid "Favonius quercus"
+msgstr "Purple Hairstreak"
+
+msgid "Laeosopis roboris"
+msgstr "Spanish Purple Hairstreak"
+
+msgid "Tomares ballus"
+msgstr "Provence Hairstreak"
+
+msgid "Tomares nogelii"
+msgstr "Nogel's Hairstreak"
+
+msgid "Tomares callimachus"
+msgstr "Caucasian vernal copper"
+
+msgid "Callophrys avis"
+msgstr "Chapman's Green Hairstreak"
+
+msgid "Callophrys suaveola"
+msgstr "Callophrys suaveola"
+
+msgid "Callophrys rubi"
+msgstr "Green Hairstreak"
+
+msgid "Callophrys chalybeitincta"
+msgstr "Sovinsky's Green Hairstreak"
+
+msgid "Neolycaena rhymnus"
+msgstr "Neolycaena rhymnus"
+
+msgid "Satyrium pruni"
+msgstr "Black Hairstreak"
+
+msgid "Satyrium ilicis"
+msgstr "Ilex Hairstreak"
+
+msgid "Satyrium esculi"
+msgstr "False Ilex Hairstreak"
+
+msgid "Satyrium ledereri"
+msgstr "Orange-banded Hairstreak"
+
+msgid "Satyrium w-album"
+msgstr "White-letter Hairstreak"
+
+msgid "Satyrium spini"
+msgstr "Blue-spot Hairstreak"
+
+msgid "Satyrium acaciae"
+msgstr "Sloe Hairstreak"
+
+msgid "Leptotes pirithous"
+msgstr "Lang's Short-tailed Blue"
+
+msgid "Cyclyrius webbianus"
+msgstr "Canary Blue"
+
+msgid "Azanus ubaldus"
+msgstr "Bright Babul Blue"
+
+msgid "Azanus jesous"
+msgstr "African Babul Blue"
+
+msgid "Lampides boeticus"
+msgstr "Long-tailed Blue"
+
+msgid "Cacyreus marshalli"
+msgstr "Geranium Bronze"
+
+msgid "Celastrina argiolus"
+msgstr "Holly Blue"
+
+msgid "Tarucus theophrastus"
+msgstr "Common Tiger Blue"
+
+msgid "Tarucus balkanicus"
+msgstr "Little Tiger Blue"
+
+msgid "Phengaris alcon"
+msgstr "Alcon Blue"
+
+msgid "Phengaris arion"
+msgstr "Large Blue"
+
+msgid "Phengaris teleius"
+msgstr "Scarce Large Blue"
+
+msgid "Phengaris nausithous"
+msgstr "Dusky Large Blue"
+
+msgid "Turanana taygetica"
+msgstr "Odd-spot Blue"
+
+msgid "Pseudophilotes bavius"
+msgstr "Bavius Blue"
+
+msgid "Zizeeria knysna"
+msgstr "African Grass Blue"
+
+msgid "Zizeeria karsandra"
+msgstr "Dark Grass Blue"
+
+msgid "Tongeia fischeri"
+msgstr "Fischer's blue"
+
+msgid "Cupido argiades"
+msgstr "Short-tailed Blue"
+
+msgid "Cupido decoloratus"
+msgstr "Eastern Short-tailed Blue"
+
+msgid "Cupido alcetas"
+msgstr "Provençal Short-tailed Blue"
+
+msgid "Cupido osiris"
+msgstr "Osiris Blue"
+
+msgid "Cupido minimus"
+msgstr "Small Blue"
+
+msgid "Cupido lorquinii"
+msgstr "Lorquin's Blue"
+
+msgid "Luthrodes galba"
+msgstr "Small Desert Blue"
+
+msgid "Freyeria trochylus"
+msgstr "Grass Jewel"
+
+msgid "Plebejus argus"
+msgstr "Silver-studded Blue"
+
+msgid "Plebejus idas"
+msgstr "Idas Blue"
+
+msgid "Plebejus bellieri"
+msgstr "Bellier's Blue"
+
+msgid "Plebejus argyrognomon"
+msgstr "Reverdin's Blue"
+
+msgid "Agriades orbitulus"
+msgstr "Alpine Blue"
+
+msgid "Agriades optilete"
+msgstr "Cranberry Blue"
+
+msgid "Agriades pyrenaicus"
+msgstr "Gavarnie Blue"
+
+msgid "Agriades dardanus"
+msgstr "Bosnian blue"
+
+msgid "Agriades zullichi"
+msgstr "Zullich´s Blue"
+
+msgid "Agriades glandon"
+msgstr "Glandon Blue"
+
+msgid "Agriades aquilo"
+msgstr "Arctic Blue"
+
+msgid "Plebejidea loewii"
+msgstr "Loew's Blue"
+
+msgid "Eumedonia eumedon"
+msgstr "Geranium Argus"
+
+msgid "Kretania psylorita"
+msgstr "Cretan Argus"
+
+msgid "Kretania hesperica"
+msgstr "Spanish Zephyr Blue"
+
+msgid "Kretania eurypilus"
+msgstr "Eastern Brown Argus"
+
+msgid "Kretania trappi"
+msgstr "Alpine Zephyr Blue"
+
+msgid "Kretania sephirus"
+msgstr "Balkan Zephyr Blue"
+
+msgid "Kretania pylaon"
+msgstr "Zephyr Blue"
+
+msgid "Cyaniris semiargus"
+msgstr "Mazarine Blue"
+
+msgid "Glabroculus cyane"
+msgstr "Glabroculus cyane"
+
+msgid "Aricia morronensis"
+msgstr "Spanish Argus"
+
+msgid "Aricia anteros"
+msgstr "Blue Argus"
+
+msgid "Aricia cramera"
+msgstr "Southern Brown Argus"
+
+msgid "Aricia nicias"
+msgstr "Silvery Argus"
+
+msgid "Aricia artaxerxes"
+msgstr "Northern Brown Argus"
+
+msgid "Aricia montensis"
+msgstr "Southern Mountain Argus"
+
+msgid "Aricia agestis"
+msgstr "Brown Argus"
+
+msgid "Neolysandra coelestina"
+msgstr "Pontic Blue"
+
+msgid "Lysandra hispana"
+msgstr "Provence Chalkhill Blue"
+
+msgid "Lysandra corydonius"
+msgstr "False Chalkhill Blue"
+
+msgid "Lysandra bellargus"
+msgstr "Adonis Blue"
+
+msgid "Lysandra coridon"
+msgstr "Chalkhill Blue"
+
+msgid "Lysandra caelestissima"
+msgstr "Azure Chalkhill Blue"
+
+msgid "Lysandra albicans"
+msgstr "Spanish Chalkhill Blue"
+
+msgid "Polyommatus escheri"
+msgstr "Escher's Blue"
+
+msgid "Polyommatus thersites"
+msgstr "Chapman's Blue"
+
+msgid "Polyommatus daphnis"
+msgstr "Meleager's Blue"
+
+msgid "Polyommatus amandus"
+msgstr "Amanda's Blue"
+
+msgid "Polyommatus golgus"
+msgstr "Nevada Blue"
+
+msgid "Polyommatus nivescens"
+msgstr "Mother-of-Pearl Blue"
+
+msgid "Polyommatus dorylas"
+msgstr "Turquoise Blue"
+
+msgid "Polyommatus celina"
+msgstr "Southern Common Blue"
+
+msgid "Polyommatus icarus"
+msgstr "Common Blue"
+
+msgid "Polyommatus eros"
+msgstr "Eros Blue"
+
+msgid "Polyommatus damon"
+msgstr "Damon Blue"
+
+msgid "Polyommatus damone"
+msgstr "Polyommatus damone"
+
+msgid "Polyommatus damocles"
+msgstr "Polyommatus damocles"
+
+msgid "Polyommatus admetus"
+msgstr "Anomalous Blue"
+
+msgid "Polyommatus ripartii"
+msgstr "Ripart's Anomalous Blue"
+
+msgid "Polyommatus nephohiptamenos"
+msgstr "Higgins' Anomalous Blue"
+
+msgid "Polyommatus iphigenia"
+msgstr "Chelmos Blue"
+
+msgid "Polyommatus violetae"
+msgstr "Andalusian Anomalous Blue"
+
+msgid "Polyommatus fulgens"
+msgstr "Catalonian Furry Blue"
+
+msgid "Polyommatus fabressei"
+msgstr "Oberthürs Anomalous Blue"
+
+msgid "Polyommatus dolus"
+msgstr "Furry Blue"
+
+msgid "Polyommatus humedasae"
+msgstr "Piedmont Anomalous Blue"
+
+msgid "Polyommatus timfristos"
+msgstr "Polyommatus timfristos"
+
+msgid "Polyommatus orphicus"
+msgstr "Kolev's Anomalous Blue"
+
+msgid "Polyommatus aroaniensis"
+msgstr "Grecian Anomalous Blue"
+
+msgid "Neptis sappho"
+msgstr "Common Glider"
+
+msgid "Neptis rivularis"
+msgstr "Hungarian Glider"
+
+msgid "Limenitis reducta"
+msgstr "Southern White Admiral"
+
+msgid "Limenitis populi"
+msgstr "Poplar Admiral"
+
+msgid "Limenitis camilla"
+msgstr "White Admiral"
+
+msgid "Issoria lathonia"
+msgstr "Queen of Spain Fritillary"
+
+msgid "Issoria eugenia"
+msgstr "Issoria eugenia"
+
+msgid "Brenthis hecate"
+msgstr "Twin-spot Fritillary"
+
+msgid "Brenthis ino"
+msgstr "Lesser Marbled Fritillary"
+
+msgid "Brenthis daphne"
+msgstr "Marbled Fritillary"
+
+msgid "Argynnis paphia"
+msgstr "Silver-washed Fritillary"
+
+msgid "Argynnis pandora"
+msgstr "Cardinal"
+
+msgid "Argynnis laodice"
+msgstr "Pallas' Fritillary"
+
+msgid "Speyeria aglaja"
+msgstr "Dark Green Fritillary"
+
+msgid "Fabriciana elisa"
+msgstr "Corsican Fritillary"
+
+msgid "Fabriciana niobe"
+msgstr "Niobe Fritillary"
+
+msgid "Fabriciana adippe"
+msgstr "High Brown Fritillary"
+
+msgid "Boloria eunomia"
+msgstr "Bog Fritillary"
+
+msgid "Boloria graeca"
+msgstr "Balkan Fritillary"
+
+msgid "Boloria pales"
+msgstr "Shepherd's Fritillary"
+
+msgid "Boloria alaskensis"
+msgstr "Alaskan fritillary"
+
+msgid "Boloria napaea"
+msgstr "Mountain Fritillary"
+
+msgid "Boloria aquilonaris"
+msgstr "Cranberry Fritillary"
+
+msgid "Boloria tritonia"
+msgstr "Boloria tritonia"
+
+msgid "Boloria polaris"
+msgstr "Polar Fritillary"
+
+msgid "Boloria thore"
+msgstr "Thor's Fritillary"
+
+msgid "Boloria selene"
+msgstr "Small Pearl-bordered Fritillary"
+
+msgid "Boloria euphrosyne"
+msgstr "Pearl-bordered Fritillary"
+
+msgid "Boloria dia"
+msgstr "Weaver's Fritillary"
+
+msgid "Boloria improba"
+msgstr "Dusky-winged Fritillary"
+
+msgid "Boloria frigga"
+msgstr "Frigga's Fritillary"
+
+msgid "Boloria freija"
+msgstr "Freija's Fritillary"
+
+msgid "Boloria selenis"
+msgstr "Boloria selenis"
+
+msgid "Boloria oscarus"
+msgstr "Boloria oscarus"
+
+msgid "Boloria titania"
+msgstr "Titania's Fritillary"
+
+msgid "Boloria chariclea"
+msgstr "Arctic Fritillary"
+
+msgid "Boloria angarensis"
+msgstr "Boloria angarensis"
+
+msgid "Apatura iris"
+msgstr "Purple Emperor"
+
+msgid "Apatura metis"
+msgstr "Freyer's Purple Emperor"
+
+msgid "Apatura ilia"
+msgstr "Lesser Purple Emperor"
+
+msgid "Apatura ilia/iris"
+msgstr "Apatura ilia/iris"
+
+msgid "Araschnia levana"
+msgstr "Map"
+
+msgid "Vanessa virginiensis"
+msgstr "American Painted Lady"
+
+msgid "Vanessa cardui"
+msgstr "Painted Lady"
+
+msgid "Vanessa vulcania"
+msgstr "Canary Red Admiral"
+
+msgid "Vanessa atalanta"
+msgstr "Red Admiral"
+
+msgid "Aglais io"
+msgstr "Peacock"
+
+msgid "Aglais urticae"
+msgstr "Small Tortoiseshell"
+
+msgid "Aglais ichnusa"
+msgstr "Corsican or Sardinian Small Tortoiseshell"
+
+msgid "Polygonia egea"
+msgstr "Southern Comma"
+
+msgid "Polygonia c-album"
+msgstr "Comma"
+
+msgid "Nymphalis vaualbum"
+msgstr "False Comma"
+
+msgid "Nymphalis polychloros"
+msgstr "Large Tortoiseshell"
+
+msgid "Nymphalis xanthomelas"
+msgstr "Yellow-legged Tortoiseshell"
+
+msgid "Nymphalis antiopa"
+msgstr "Camberwell Beauty"
+
+msgid "Hypolimnas misippus"
+msgstr "Danaid Eggfly"
+
+msgid "Euphydryas desfontainii"
+msgstr "Spanish Fritillary"
+
+msgid "Euphydryas aurinia"
+msgstr "Marsh Fritillary"
+
+msgid "Euphydryas cynthia"
+msgstr "Cynthia's Fritillary"
+
+msgid "Euphydryas iduna"
+msgstr "Lapland Fritillary"
+
+msgid "Euphydryas maturna"
+msgstr "Scarce Fritillary"
+
+msgid "Euphydryas intermedia"
+msgstr "Asian Fritillary"
+
+msgid "Melitaea trivia"
+msgstr "Lesser Spotted Fritillary"
+
+msgid "Melitaea didyma"
+msgstr "Spotted Fritillary"
+
+msgid "Melitaea arduinna"
+msgstr "Freyer's Fritillary"
+
+msgid "Melitaea aetherie"
+msgstr "Aetherie Fritillary"
+
+msgid "Melitaea phoebe"
+msgstr "Knapweed Fritillary"
+
+msgid "Melitaea ornata"
+msgstr "Eastern Knapweed Fritillary"
+
+msgid "Melitaea cinxia"
+msgstr "Glanville Fritillary"
+
+msgid "Melitaea diamina"
+msgstr "False Heath Fritillary"
+
+msgid "Melitaea celadussa"
+msgstr "Southern Heath Fritillary"
+
+msgid "Melitaea deione"
+msgstr "Provençal Fritillary"
+
+msgid "Melitaea britomartis"
+msgstr "Assmann's Fritillary"
+
+msgid "Melitaea athalia"
+msgstr "Heath Fritillary"
+
+msgid "Melitaea varia"
+msgstr "Grisons Fritillary"
+
+msgid "Melitaea parthenoides"
+msgstr "Meadow Fritillary"
+
+msgid "Melitaea aurelia"
+msgstr "Nickerl's Fritillary"
+
+msgid "Melitaea asteria"
+msgstr "Little Fritillary"
+
+msgid "Libythea celtis"
+msgstr "Nettle-tree Butterfly"
+
+msgid "Danaus plexippus"
+msgstr "Monarch"
+
+msgid "Danaus chrysippus"
+msgstr "Plain Tiger"
+
+msgid "Charaxes jasius"
+msgstr "Two-tailed Pasha"
+
+msgid "Coenonympha phryne"
+msgstr "Coenonympha phryne"
+
+msgid "Coenonympha oedippus"
+msgstr "False Ringlet"
+
+msgid "Coenonympha dorus"
+msgstr "Dusky Heath"
+
+msgid "Coenonympha thyrsis"
+msgstr "Cretan Small Heath"
+
+msgid "Coenonympha pamphilus"
+msgstr "Small Heath"
+
+msgid "Coenonympha tullia"
+msgstr "Large Heath"
+
+msgid "Coenonympha rhodopensis"
+msgstr "Eastern Large Heath"
+
+msgid "Coenonympha amaryllis"
+msgstr "Coenonympha amaryllis"
+
+msgid "Coenonympha glycerion"
+msgstr "Chestnut Heath"
+
+msgid "Coenonympha corinna"
+msgstr "Corsican Heath"
+
+msgid "Coenonympha leander"
+msgstr "Russian Heath"
+
+msgid "Coenonympha hero"
+msgstr "Scarce Heath"
+
+msgid "Coenonympha gardetta"
+msgstr "Alpine Heath"
+
+msgid "Coenonympha orientalis"
+msgstr "Balkan Heath"
+
+msgid "Coenonympha arcania"
+msgstr "Pearly Heath"
+
+msgid "Kirinia roxelana"
+msgstr "Lattice Brown"
+
+msgid "Kirinia climene"
+msgstr "Lesser Lattice Brown"
+
+msgid "Lopinga achine"
+msgstr "Woodland Brown"
+
+msgid "Pararge xiphia"
+msgstr "Madeiran Speckled Wood"
+
+msgid "Pararge xiphioides"
+msgstr "Canary Speckled Wood"
+
+msgid "Pararge aegeria"
+msgstr "Speckled Wood"
+
+msgid "Lasiommata maera"
+msgstr "Large Wall Brown"
+
+msgid "Lasiommata deidamia"
+msgstr "Lasiommata deidamia"
+
+msgid "Lasiommata petropolitana"
+msgstr "Northern Wall Brown"
+
+msgid "Lasiommata paramegaera"
+msgstr "Corsican Wall Brown"
+
+msgid "Lasiommata megera"
+msgstr "Wall Brown"
+
+msgid "Melanargia russiae"
+msgstr "Esper's Marbled White"
+
+msgid "Melanargia larissa"
+msgstr "Balkan Marbled White"
+
+msgid "Melanargia lachesis"
+msgstr "Iberian Marbled White"
+
+msgid "Melanargia galathea"
+msgstr "Marbled White"
+
+msgid "Melanargia ines"
+msgstr "Spanish Marbled White"
+
+msgid "Melanargia arge"
+msgstr "Italian Marbled White"
+
+msgid "Melanargia pherusa"
+msgstr "Sicilian Marbled White"
+
+msgid "Melanargia occitanica"
+msgstr "Western Marbled White"
+
+msgid "Hipparchia fatua"
+msgstr "Freyer's Grayling"
+
+msgid "Hipparchia statilinus"
+msgstr "Tree Grayling"
+
+msgid "Hipparchia azorina"
+msgstr "Azores Grayling"
+
+msgid "Hipparchia senthes"
+msgstr "Balkan Grayling"
+
+msgid "Hipparchia maderensis"
+msgstr "Madeiran Grayling"
+
+msgid "Hipparchia semele"
+msgstr "Grayling"
+
+msgid "Hipparchia blachieri"
+msgstr "Sicilian Grayling"
+
+msgid "Hipparchia aristaeus"
+msgstr "Southern Grayling"
+
+msgid "Hipparchia volgensis"
+msgstr "Delattin's Grayling"
+
+msgid "Hipparchia neapolitana"
+msgstr "Italian Grayling"
+
+msgid "Hipparchia leighebi"
+msgstr "Eolian Grayling"
+
+msgid "Hipparchia pellucida"
+msgstr "Lesbos Grayling"
+
+msgid "Hipparchia sbordonii"
+msgstr "Ponza Grayling"
+
+msgid "Hipparchia cypriensis"
+msgstr "Cyprus Grayling"
+
+msgid "Hipparchia cretica"
+msgstr "Cretan Grayling"
+
+msgid "Hipparchia christenseni"
+msgstr "Karpathos Grayling"
+
+msgid "Minois dryas"
+msgstr "Dryad"
+
+msgid "Brintesia circe"
+msgstr "Great Banded Grayling"
+
+msgid "Arethusana arethusa"
+msgstr "False Grayling"
+
+msgid "Oeneis tarpeia"
+msgstr "Oeneis tarpeia"
+
+msgid "Oeneis bore"
+msgstr "Arctic Grayling"
+
+msgid "Oeneis ammon"
+msgstr "Oeneis ammon"
+
+msgid "Oeneis melissa"
+msgstr "Melissa Arctic"
+
+msgid "Oeneis magna"
+msgstr "Oeneis magna"
+
+msgid "Oeneis jutta"
+msgstr "Baltic Grayling"
+
+msgid "Oeneis norna"
+msgstr "Norse Grayling"
+
+msgid "Oeneis polixenes"
+msgstr "Polixenes Arctic"
+
+msgid "Oeneis glacialis"
+msgstr "Alpine Grayling"
+
+msgid "Satyrus ferula"
+msgstr "Great Sooty Satyr"
+
+msgid "Satyrus virbius"
+msgstr "Satyrus virbius"
+
+msgid "Satyrus actaea"
+msgstr "Black Satyr"
+
+msgid "Chazara briseis"
+msgstr "The Hermit"
+
+msgid "Chazara prieuri"
+msgstr "Southern Hermit"
+
+msgid "Chazara persephone"
+msgstr "Dark Rockbrown"
+
+msgid "Pseudochazara geyeri"
+msgstr "Grey Asian Grayling"
+
+msgid "Pseudochazara graeca"
+msgstr "Grecian Grayling"
+
+msgid "Pseudochazara amymone"
+msgstr "Brown's Grayling"
+
+msgid "Pseudochazara anthelea"
+msgstr "White-banded Grayling"
+
+msgid "Pseudochazara amalthea"
+msgstr "Pseudochazara amalthea"
+
+msgid "Pseudochazara williamsi"
+msgstr "Nevada Grayling"
+
+msgid "Pseudochazara euxina"
+msgstr "Pseudochazara euxina"
+
+msgid "Pseudochazara mercurius"
+msgstr "Pseudochazara mercurius"
+
+msgid "Pseudochazara cingovskii"
+msgstr "Macedonian Grayling"
+
+msgid "Pseudochazara tisiphone"
+msgstr "Dark Grayling"
+
+msgid "Pseudochazara orestes"
+msgstr "Dils' Grayling"
+
+msgid "Ypthima asterope"
+msgstr "African Ringlet"
+
+msgid "Proterebia phegea"
+msgstr "Dalmatian Ringlet"
+
+msgid "Hyponephele huebneri"
+msgstr "Hyponephele huebneri"
+
+msgid "Hyponephele lycaon"
+msgstr "Dusky Meadow Brown"
+
+msgid "Hyponephele lupina"
+msgstr "Oriental Meadow Brown"
+
+msgid "Aphantopus hyperantus"
+msgstr "Ringlet"
+
+msgid "Pyronia cecilia"
+msgstr "Southern Gatekeeper"
+
+msgid "Pyronia tithonus"
+msgstr "Gatekeeper"
+
+msgid "Pyronia bathseba"
+msgstr "Spanish Gatekeeper"
+
+msgid "Maniola jurtina"
+msgstr "Meadow Brown"
+
+msgid "Maniola nurag"
+msgstr "Sardinian Meadow Brown"
+
+msgid "Maniola chia"
+msgstr "Chios Meadow Brown"
+
+msgid "Maniola megala"
+msgstr "Turkish Meadow Brown"
+
+msgid "Maniola cypricola"
+msgstr "Cyprus Meadow Brown"
+
+msgid "Maniola telmessia"
+msgstr "Aegean Meadow Brown"
+
+msgid "Maniola halicarnassus"
+msgstr "Thomson's Meadow Brown"
+
+msgid "Erebia edda"
+msgstr "Erebia edda"
+
+msgid "Erebia fasciata"
+msgstr "Banded Alpine"
+
+msgid "Erebia discoidalis"
+msgstr "Red-disked Alpine"
+
+msgid "Erebia rossii"
+msgstr "Ross's Apine"
+
+msgid "Erebia cyclopius"
+msgstr "Erebia cyclopius"
+
+msgid "Erebia embla"
+msgstr "Lapland Ringlet"
+
+msgid "Erebia disa"
+msgstr "Arctic Ringlet"
+
+msgid "Erebia meolans"
+msgstr "Piedmont Ringlet"
+
+msgid "Erebia dabanensis"
+msgstr "Erebia dabanensis"
+
+msgid "Erebia jeniseiensis"
+msgstr "Erebia jeniseiensis"
+
+msgid "Erebia claudina"
+msgstr "White Speck Ringlet"
+
+msgid "Erebia manto"
+msgstr "Yellow-spotted Ringlet"
+
+msgid "Erebia ottomana"
+msgstr "Ottoman Brassy Ringlet"
+
+msgid "Erebia hispania"
+msgstr "Spanish Brassy Ringlet"
+
+msgid "Erebia rondoui"
+msgstr "Pyrenees Brassy Ringlet"
+
+msgid "Erebia callias"
+msgstr "Colorado Alpine"
+
+msgid "Erebia tyndarus"
+msgstr "Swiss Brassy Ringlet"
+
+msgid "Erebia cassioides"
+msgstr "Common Brassy Ringlet"
+
+msgid "Erebia nivalis"
+msgstr "De Lesse's Brassy Ringlet"
+
+msgid "Erebia neleus"
+msgstr "Erebia neleus"
+
+msgid "Erebia calcarius"
+msgstr "Lorkovic's Brassy Ringlet"
+
+msgid "Erebia arvernensis"
+msgstr "Western Brassy Ringlet"
+
+msgid "Erebia oeme"
+msgstr "Bright-eyed Ringlet"
+
+msgid "Erebia gorge"
+msgstr "Silky Ringlet"
+
+msgid "Erebia sthennyo"
+msgstr "False Dewy Ringlet"
+
+msgid "Erebia pandrose"
+msgstr "Dewy Ringlet"
+
+msgid "Erebia eriphyle"
+msgstr "Eriphyle Ringlet"
+
+msgid "Erebia epistygne"
+msgstr "Spring Ringlet"
+
+msgid "Erebia euryale"
+msgstr "Large Ringlet"
+
+msgid "Erebia palarica"
+msgstr "Chapman's Ringlet"
+
+msgid "Erebia ligea"
+msgstr "Arran Brown"
+
+msgid "Erebia pluto"
+msgstr "Sooty Ringlet"
+
+msgid "Erebia aethiopellus"
+msgstr "False Mnestra Ringlet"
+
+msgid "Erebia gorgone"
+msgstr "Gavarnie Ringlet"
+
+msgid "Erebia rhodopensis"
+msgstr "Nicholl's Ringlet"
+
+msgid "Erebia mnestra"
+msgstr "Mnestra's Ringlet"
+
+msgid "Erebia albergana"
+msgstr "Almond-eyed Ringlet"
+
+msgid "Erebia sudetica"
+msgstr "Sudeten Ringlet"
+
+msgid "Erebia melampus"
+msgstr "Lesser Mountain Ringlet"
+
+msgid "Erebia triarius"
+msgstr "de Prunner's Ringlet"
+
+msgid "Erebia polaris"
+msgstr "Arctic Woodland Ringlet"
+
+msgid "Erebia medusa"
+msgstr "Woodland Ringlet"
+
+msgid "Erebia aethiops"
+msgstr "Scotch Argus"
+
+msgid "Erebia pharte"
+msgstr "Blind Ringlet"
+
+msgid "Erebia christi"
+msgstr "Rätzer's Ringlet"
+
+msgid "Erebia orientalis"
+msgstr "Bulgarian Ringlet"
+
+msgid "Erebia epiphron"
+msgstr "Mountain Ringlet"
+
+msgid "Erebia flavofasciata"
+msgstr "Yellow-banded Ringlet"
+
+msgid "Erebia montana"
+msgstr "Marbled Ringlet"
+
+msgid "Erebia styx"
+msgstr "Stygian Ringlet"
+
+msgid "Erebia stiria"
+msgstr "Styrian Ringlet"
+
+msgid "Erebia scipio"
+msgstr "Larche Ringlet"
+
+msgid "Erebia pronoe"
+msgstr "Water Ringlet"
+
+msgid "Erebia melas"
+msgstr "Black Ringlet"
+
+msgid "Erebia lefebvrei"
+msgstr "Lefèbvre's Ringlet"
+
+msgid "Erebia zapateri"
+msgstr "Zapater's Ringlet"
+
+msgid "Erebia neoridas"
+msgstr "Autumn Ringlet"
