@@ -14,7 +14,7 @@ msgid "Papilio hospiton"
 msgstr ""
 
 msgid "Parnassius mnemosyne"
-msgstr ""
+msgstr "Juodasis apolonas"
 
 msgid "Parnassius phoebus"
 msgstr ""
@@ -35,7 +35,7 @@ msgid "Carcharodus baeticus"
 msgstr ""
 
 msgid "Erynnis tages"
-msgstr ""
+msgstr "Juodoji hesperija"
 
 msgid "Erynnis marloyi"
 msgstr ""
@@ -56,13 +56,13 @@ msgid "Zerynthia cassandra"
 msgstr ""
 
 msgid "Heteropterus morpheus"
-msgstr ""
+msgstr "Viksvinė hesperija"
 
 msgid "Carterocephalus silvicola"
-msgstr ""
+msgstr "Geltonmargė hesperija"
 
 msgid "Carterocephalus palaemon"
-msgstr ""
+msgstr "Rudmargė hesperija"
 
 msgid "Pelopidas thrax"
 msgstr ""
@@ -77,10 +77,10 @@ msgid "Gegenes nostrodamus"
 msgstr ""
 
 msgid "Ochlodes sylvanus"
-msgstr ""
+msgstr "Miškinis storgalvis"
 
 msgid "Hesperia comma"
-msgstr ""
+msgstr "Gelsvažalis storgalvis"
 
 msgid "Thymelicus christi"
 msgstr ""
@@ -92,10 +92,10 @@ msgid "Thymelicus hyrax"
 msgstr ""
 
 msgid "Thymelicus sylvestris"
-msgstr ""
+msgstr "Raudonbuožis storgalvis"
 
 msgid "Thymelicus lineola"
-msgstr ""
+msgstr "Juodbuožis storgalvis"
 
 msgid "Spialia phlomidis"
 msgstr ""
@@ -134,10 +134,10 @@ msgid "Carcharodus orientalis"
 msgstr ""
 
 msgid "Carcharodus floccifera"
-msgstr ""
+msgstr "Pietinė hesperija"
 
 msgid "Iphiclides podalirius"
-msgstr ""
+msgstr "Podalirijus"
 
 msgid "Iphiclides feisthamelii"
 msgstr ""
@@ -146,16 +146,16 @@ msgid "Papilio alexanor"
 msgstr ""
 
 msgid "Papilio machaon"
-msgstr ""
+msgstr "Machaonas"
 
 msgid "Pyrgus malvoides"
 msgstr ""
 
 msgid "Pyrgus malvae"
-msgstr ""
+msgstr "Mažoji hesperija"
 
 msgid "Pyrgus carthami"
-msgstr ""
+msgstr "Didžioji hesperija"
 
 msgid "Pyrgus sidae"
 msgstr ""
@@ -170,16 +170,16 @@ msgid "Pyrgus andromedae"
 msgstr ""
 
 msgid "Pyrgus serratulae"
-msgstr ""
+msgstr "Smiltyninė hesperija"
 
 msgid "Pyrgus armoricanus/serratulae"
 msgstr ""
 
 msgid "Pyrgus armoricanus"
-msgstr ""
+msgstr "Baltmargė hesperija"
 
 msgid "Pyrgus alveus"
-msgstr ""
+msgstr "Margoji hesperija"
 
 msgid "Pyrgus warrenensis"
 msgstr ""
@@ -209,16 +209,16 @@ msgid "Leptidea juvernica"
 msgstr ""
 
 msgid "Leptidea sinapis"
-msgstr ""
+msgstr "Paprastoji garstytė"
 
 msgid "Leptidea sinapis/juvernica"
 msgstr ""
 
 msgid "Leptidea reali"
-msgstr ""
+msgstr "Netikroji garstytė"
 
 msgid "Gonepteryx rhamni"
-msgstr ""
+msgstr "Citrinukas"
 
 msgid "Gonepteryx cleobule"
 msgstr ""
@@ -236,13 +236,13 @@ msgid "Catopsilia florella"
 msgstr ""
 
 msgid "Colias hyale"
-msgstr ""
+msgstr "Dirvinis gelsvys"
 
 msgid "Colias hyale/alfacariensis"
 msgstr ""
 
 msgid "Colias alfacariensis"
-msgstr ""
+msgstr "Pietinis dirvinis gelsvys"
 
 msgid "Colias phicomone"
 msgstr ""
@@ -260,13 +260,13 @@ msgid "Colias crocea"
 msgstr ""
 
 msgid "Colias myrmidone"
-msgstr ""
+msgstr "Pietinis gelsvys"
 
 msgid "Colias caucasica"
 msgstr ""
 
 msgid "Colias palaeno"
-msgstr ""
+msgstr "Pelkinis gelsvys"
 
 msgid "Colias tyche"
 msgstr ""
@@ -278,7 +278,7 @@ msgid "Colotis evagore"
 msgstr ""
 
 msgid "Aporia crataegi"
-msgstr ""
+msgstr "Gudobelinis baltukas"
 
 msgid "Pontia chloridice"
 msgstr ""
@@ -290,13 +290,13 @@ msgid "Pontia edusa"
 msgstr ""
 
 msgid "Pontia daplidice"
-msgstr ""
+msgstr "Stepinis baltukas"
 
 msgid "Pieris krueperi"
 msgstr ""
 
 msgid "Pieris brassicae"
-msgstr ""
+msgstr "Kopūstinis baltukas"
 
 msgid "Pieris wollastoni"
 msgstr ""
@@ -305,7 +305,7 @@ msgid "Pieris cheiranthi"
 msgstr ""
 
 msgid "Pieris rapae"
-msgstr ""
+msgstr "Ropinis baltukas"
 
 msgid "Pieris mannii"
 msgstr ""
@@ -317,7 +317,7 @@ msgid "Pieris bryoniae"
 msgstr ""
 
 msgid "Pieris napi"
-msgstr ""
+msgstr "Griežtinis baltukas"
 
 msgid "Pieris balcana"
 msgstr ""
@@ -368,7 +368,7 @@ msgid "Anthocharis euphenoides"
 msgstr ""
 
 msgid "Anthocharis cardamines"
-msgstr ""
+msgstr "Aušrelė"
 
 msgid "Anthocharis gruneri"
 msgstr ""
@@ -377,16 +377,16 @@ msgid "Anthocharis damone"
 msgstr ""
 
 msgid "Hamearis lucina"
-msgstr ""
+msgstr "Pavasarinis margūnas"
 
 msgid "Lycaena dimorpha"
 msgstr ""
 
 msgid "Lycaena helle"
-msgstr ""
+msgstr "Šiaurinis auksinukas"
 
 msgid "Lycaena alciphron"
-msgstr ""
+msgstr "Čiobrelinis auksinukas"
 
 msgid "Lycaena thetis"
 msgstr ""
@@ -395,10 +395,10 @@ msgid "Lycaena thersamon"
 msgstr ""
 
 msgid "Lycaena dispar"
-msgstr ""
+msgstr "Didysis auksinukas"
 
 msgid "Lycaena hippothoe"
-msgstr ""
+msgstr "Žvilgantysis auksinukas"
 
 msgid "Pseudophilotes barbagiae"
 msgstr ""
@@ -410,7 +410,7 @@ msgid "Pseudophilotes panoptes"
 msgstr ""
 
 msgid "Pseudophilotes vicrama"
-msgstr ""
+msgstr "Pušyninis melsvys"
 
 msgid "Pseudophilotes baton"
 msgstr ""
@@ -434,7 +434,7 @@ msgid "Glaucopsyche paphos"
 msgstr ""
 
 msgid "Glaucopsyche alexis"
-msgstr ""
+msgstr "Žalsvasis melsvys"
 
 msgid "Hipparchia tilosi"
 msgstr ""
@@ -485,19 +485,19 @@ msgid "Lycaena bleusei"
 msgstr ""
 
 msgid "Lycaena phlaeas"
-msgstr ""
+msgstr "Mažasis auksinukas"
 
 msgid "Lycaena virgaureae"
-msgstr ""
+msgstr "Ugninis auksinukas"
 
 msgid "Lycaena tityrus"
-msgstr ""
+msgstr "Tamsusis auksinukas"
 
 msgid "Cigaritis acamas"
 msgstr ""
 
 msgid "Thecla betulae"
-msgstr ""
+msgstr "Beržinis zefyras"
 
 msgid "Favonius quercus"
 msgstr ""
@@ -521,7 +521,7 @@ msgid "Callophrys suaveola"
 msgstr ""
 
 msgid "Callophrys rubi"
-msgstr ""
+msgstr "Žalsvasis varinukas"
 
 msgid "Callophrys chalybeitincta"
 msgstr ""
@@ -530,10 +530,10 @@ msgid "Neolycaena rhymnus"
 msgstr ""
 
 msgid "Satyrium pruni"
-msgstr ""
+msgstr "Slyvinis uodeguotis"
 
 msgid "Satyrium ilicis"
-msgstr ""
+msgstr "Ąžuolinis uodeguotis"
 
 msgid "Satyrium esculi"
 msgstr ""
@@ -542,10 +542,10 @@ msgid "Satyrium ledereri"
 msgstr ""
 
 msgid "Satyrium w-album"
-msgstr ""
+msgstr "Guobinis uodeguotis"
 
 msgid "Satyrium spini"
-msgstr ""
+msgstr "Žydrataškis uodeguotis"
 
 msgid "Satyrium acaciae"
 msgstr ""
@@ -569,7 +569,7 @@ msgid "Cacyreus marshalli"
 msgstr ""
 
 msgid "Celastrina argiolus"
-msgstr ""
+msgstr "Žydrasis melsvys"
 
 msgid "Tarucus theophrastus"
 msgstr ""
@@ -605,7 +605,7 @@ msgid "Tongeia fischeri"
 msgstr ""
 
 msgid "Cupido argiades"
-msgstr ""
+msgstr "Uodegotasis melsvys"
 
 msgid "Cupido decoloratus"
 msgstr ""
@@ -617,7 +617,7 @@ msgid "Cupido osiris"
 msgstr ""
 
 msgid "Cupido minimus"
-msgstr ""
+msgstr "Mažasis melsvys"
 
 msgid "Cupido lorquinii"
 msgstr ""
@@ -710,7 +710,7 @@ msgid "Aricia montensis"
 msgstr ""
 
 msgid "Aricia agestis"
-msgstr ""
+msgstr "Geltontaškis melsvys"
 
 msgid "Neolysandra coelestina"
 msgstr ""
@@ -743,7 +743,7 @@ msgid "Polyommatus daphnis"
 msgstr ""
 
 msgid "Polyommatus amandus"
-msgstr ""
+msgstr "Didysis melsvys"
 
 msgid "Polyommatus golgus"
 msgstr ""
@@ -752,13 +752,13 @@ msgid "Polyommatus nivescens"
 msgstr ""
 
 msgid "Polyommatus dorylas"
-msgstr ""
+msgstr "Smiltyninis melsvys"
 
 msgid "Polyommatus celina"
 msgstr ""
 
 msgid "Polyommatus icarus"
-msgstr ""
+msgstr "Dirvinis melsvys"
 
 msgid "Polyommatus eros"
 msgstr ""
@@ -818,34 +818,34 @@ msgid "Limenitis reducta"
 msgstr ""
 
 msgid "Limenitis populi"
-msgstr ""
+msgstr "Didysis juodmargis"
 
 msgid "Limenitis camilla"
 msgstr ""
 
 msgid "Issoria lathonia"
-msgstr ""
+msgstr "Sidabrinis perlinukas"
 
 msgid "Issoria eugenia"
 msgstr ""
 
 msgid "Brenthis hecate"
-msgstr ""
+msgstr "Stepinis perlinukas"
 
 msgid "Brenthis ino"
-msgstr ""
+msgstr "Gelsvasis perlinukas"
 
 msgid "Brenthis daphne"
-msgstr ""
+msgstr "Pietinis perlinukas"
 
 msgid "Argynnis paphia"
-msgstr ""
+msgstr "Didysis perlinukas"
 
 msgid "Argynnis pandora"
 msgstr ""
 
 msgid "Argynnis laodice"
-msgstr ""
+msgstr "Rausvasis perlinukas"
 
 msgid "Speyeria aglaja"
 msgstr ""
@@ -860,7 +860,7 @@ msgid "Fabriciana adippe"
 msgstr ""
 
 msgid "Boloria eunomia"
-msgstr ""
+msgstr "Pelkinis perlinukas"
 
 msgid "Boloria graeca"
 msgstr ""
@@ -875,7 +875,7 @@ msgid "Boloria napaea"
 msgstr ""
 
 msgid "Boloria aquilonaris"
-msgstr ""
+msgstr "Palinis perlinukas"
 
 msgid "Boloria tritonia"
 msgstr ""
@@ -887,19 +887,19 @@ msgid "Boloria thore"
 msgstr ""
 
 msgid "Boloria selene"
-msgstr ""
+msgstr "Pievinis perlinukas"
 
 msgid "Boloria euphrosyne"
-msgstr ""
+msgstr "Miškapievis perlinukas"
 
 msgid "Boloria dia"
-msgstr ""
+msgstr "Mažasis perlinukas"
 
 msgid "Boloria improba"
 msgstr ""
 
 msgid "Boloria frigga"
-msgstr ""
+msgstr "Šiaurinis perlinukas"
 
 msgid "Boloria freija"
 msgstr ""
@@ -911,7 +911,7 @@ msgid "Boloria oscarus"
 msgstr ""
 
 msgid "Boloria titania"
-msgstr ""
+msgstr "Alpinis perlinukas"
 
 msgid "Boloria chariclea"
 msgstr ""
@@ -920,37 +920,37 @@ msgid "Boloria angarensis"
 msgstr ""
 
 msgid "Apatura iris"
-msgstr ""
+msgstr "Kilnioji vaiva"
 
 msgid "Apatura metis"
 msgstr ""
 
 msgid "Apatura ilia"
-msgstr ""
+msgstr "Puošnioji vaiva"
 
 msgid "Apatura ilia/iris"
 msgstr ""
 
 msgid "Araschnia levana"
-msgstr ""
+msgstr "Mažasis dilgėlinukas"
 
 msgid "Vanessa virginiensis"
 msgstr ""
 
 msgid "Vanessa cardui"
-msgstr ""
+msgstr "Usninukas"
 
 msgid "Vanessa vulcania"
 msgstr ""
 
 msgid "Vanessa atalanta"
-msgstr ""
+msgstr "Admirolas (drugys)"
 
 msgid "Aglais io"
 msgstr ""
 
 msgid "Aglais urticae"
-msgstr ""
+msgstr "Dilgėlinukas"
 
 msgid "Aglais ichnusa"
 msgstr ""
@@ -959,19 +959,19 @@ msgid "Polygonia egea"
 msgstr ""
 
 msgid "Polygonia c-album"
-msgstr ""
+msgstr "Karpytūnė"
 
 msgid "Nymphalis vaualbum"
-msgstr ""
+msgstr "Baltataškė pleštekė"
 
 msgid "Nymphalis polychloros"
-msgstr ""
+msgstr "Daugiaspalvė pleštekė"
 
 msgid "Nymphalis xanthomelas"
-msgstr ""
+msgstr "Raudonjuostė pleštekė"
 
 msgid "Nymphalis antiopa"
-msgstr ""
+msgstr "Šeirys"
 
 msgid "Hypolimnas misippus"
 msgstr ""
@@ -980,7 +980,7 @@ msgid "Euphydryas desfontainii"
 msgstr ""
 
 msgid "Euphydryas aurinia"
-msgstr ""
+msgstr "Auksuotoji šaškytė"
 
 msgid "Euphydryas cynthia"
 msgstr ""
@@ -989,7 +989,7 @@ msgid "Euphydryas iduna"
 msgstr ""
 
 msgid "Euphydryas maturna"
-msgstr ""
+msgstr "Baltamargė šaškytė"
 
 msgid "Euphydryas intermedia"
 msgstr ""
@@ -998,7 +998,7 @@ msgid "Melitaea trivia"
 msgstr ""
 
 msgid "Melitaea didyma"
-msgstr ""
+msgstr "Smiltyninė šaškytė"
 
 msgid "Melitaea arduinna"
 msgstr ""
@@ -1007,16 +1007,16 @@ msgid "Melitaea aetherie"
 msgstr ""
 
 msgid "Melitaea phoebe"
-msgstr ""
+msgstr "Didžioji šaškytė"
 
 msgid "Melitaea ornata"
 msgstr ""
 
 msgid "Melitaea cinxia"
-msgstr ""
+msgstr "Rudgelsvė šaškytė"
 
 msgid "Melitaea diamina"
-msgstr ""
+msgstr "Tamsioji šaškytė"
 
 msgid "Melitaea celadussa"
 msgstr ""
@@ -1025,10 +1025,10 @@ msgid "Melitaea deione"
 msgstr ""
 
 msgid "Melitaea britomartis"
-msgstr ""
+msgstr "Margoji šaškytė"
 
 msgid "Melitaea athalia"
-msgstr ""
+msgstr "Paprastoji šaškytė"
 
 msgid "Melitaea varia"
 msgstr ""
@@ -1037,7 +1037,7 @@ msgid "Melitaea parthenoides"
 msgstr ""
 
 msgid "Melitaea aurelia"
-msgstr ""
+msgstr "Mažoji šaškytė"
 
 msgid "Melitaea asteria"
 msgstr ""
@@ -1067,10 +1067,10 @@ msgid "Coenonympha thyrsis"
 msgstr ""
 
 msgid "Coenonympha pamphilus"
-msgstr ""
+msgstr "Gelsvasis satyriukas"
 
 msgid "Coenonympha tullia"
-msgstr ""
+msgstr "Pievinis satyriukas"
 
 msgid "Coenonympha rhodopensis"
 msgstr ""
@@ -1079,7 +1079,7 @@ msgid "Coenonympha amaryllis"
 msgstr ""
 
 msgid "Coenonympha glycerion"
-msgstr ""
+msgstr "Tamsusis satyriukas"
 
 msgid "Coenonympha corinna"
 msgstr ""
@@ -1088,7 +1088,7 @@ msgid "Coenonympha leander"
 msgstr ""
 
 msgid "Coenonympha hero"
-msgstr ""
+msgstr "Rudakis satyriukas"
 
 msgid "Coenonympha gardetta"
 msgstr ""
@@ -1097,7 +1097,7 @@ msgid "Coenonympha orientalis"
 msgstr ""
 
 msgid "Coenonympha arcania"
-msgstr ""
+msgstr "Krūminis satyriukas"
 
 msgid "Kirinia roxelana"
 msgstr ""
@@ -1106,7 +1106,7 @@ msgid "Kirinia climene"
 msgstr ""
 
 msgid "Lopinga achine"
-msgstr ""
+msgstr "Akiuotasis satyras"
 
 msgid "Pararge xiphia"
 msgstr ""
@@ -1115,22 +1115,22 @@ msgid "Pararge xiphioides"
 msgstr ""
 
 msgid "Pararge aegeria"
-msgstr ""
+msgstr "Margasis satyras"
 
 msgid "Lasiommata maera"
-msgstr ""
+msgstr "Rudasis satyras"
 
 msgid "Lasiommata deidamia"
 msgstr ""
 
 msgid "Lasiommata petropolitana"
-msgstr ""
+msgstr "Mažasis rudasis satyras"
 
 msgid "Lasiommata paramegaera"
 msgstr ""
 
 msgid "Lasiommata megera"
-msgstr ""
+msgstr "Gelsvamargis satyras"
 
 msgid "Melanargia russiae"
 msgstr ""
@@ -1142,7 +1142,7 @@ msgid "Melanargia lachesis"
 msgstr ""
 
 msgid "Melanargia galathea"
-msgstr ""
+msgstr "Juodmargis satyras"
 
 msgid "Melanargia ines"
 msgstr ""
@@ -1160,7 +1160,7 @@ msgid "Hipparchia fatua"
 msgstr ""
 
 msgid "Hipparchia statilinus"
-msgstr ""
+msgstr "Pietinis satyras"
 
 msgid "Hipparchia azorina"
 msgstr ""
@@ -1172,7 +1172,7 @@ msgid "Hipparchia maderensis"
 msgstr ""
 
 msgid "Hipparchia semele"
-msgstr ""
+msgstr "Pušyninis satyras"
 
 msgid "Hipparchia blachieri"
 msgstr ""
@@ -1229,7 +1229,7 @@ msgid "Oeneis magna"
 msgstr ""
 
 msgid "Oeneis jutta"
-msgstr ""
+msgstr "Pelkinis satyras"
 
 msgid "Oeneis norna"
 msgstr ""
@@ -1301,7 +1301,7 @@ msgid "Hyponephele huebneri"
 msgstr ""
 
 msgid "Hyponephele lycaon"
-msgstr ""
+msgstr "Dirvoninis satyras"
 
 msgid "Hyponephele lupina"
 msgstr ""
@@ -1319,7 +1319,7 @@ msgid "Pyronia bathseba"
 msgstr ""
 
 msgid "Maniola jurtina"
-msgstr ""
+msgstr "Paprastasis jautakis satyras"
 
 msgid "Maniola nurag"
 msgstr ""
@@ -1430,7 +1430,7 @@ msgid "Erebia palarica"
 msgstr ""
 
 msgid "Erebia ligea"
-msgstr ""
+msgstr "Tamsioji erebija"
 
 msgid "Erebia pluto"
 msgstr ""
@@ -1466,7 +1466,7 @@ msgid "Erebia medusa"
 msgstr ""
 
 msgid "Erebia aethiops"
-msgstr ""
+msgstr "Šilinė erebija"
 
 msgid "Erebia pharte"
 msgstr ""
