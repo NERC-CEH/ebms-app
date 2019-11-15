@@ -1,12 +1,20 @@
 /* eslint-disable camelcase */
 import appModel from 'app_model';
-import en from '../translations/en.pot';
-import lt_LT from '../translations/lt_LT.po';
-import es_ES from '../translations/es_ES.po';
-import sv_SE from '../translations/sv_SE.po';
-import fi_FI from '../translations/fi_FI.po';
-import fr_FR from '../translations/fr_FR.po';
-import ru_RU from '../translations/ru_RU.po';
+import en from '../translations/interface/en.pot';
+import lt_LT from '../translations/interface/lt_LT.po';
+import es_ES from '../translations/interface/es_ES.po';
+import sv_SE from '../translations/interface/sv_SE.po';
+import fi_FI from '../translations/interface/fi_FI.po';
+import fr_FR from '../translations/interface/fr_FR.po';
+import ru_RU from '../translations/interface/ru_RU.po';
+
+import species_en from '../translations/species/en.pot';
+import species_lt_LT from '../translations/species/lt_LT.po';
+import species_es_ES from '../translations/species/es_ES.po';
+import species_sv_SE from '../translations/species/sv_SE.po';
+import species_fi_FI from '../translations/species/fi_FI.po';
+import species_fr_FR from '../translations/species/fr_FR.po';
+import species_ru_RU from '../translations/species/ru_RU.po';
 
 // Adding some context, reference and other in po files:
 
@@ -25,6 +33,16 @@ const dictionary = {
   fi_FI,
   fr_FR,
   ru_RU,
+};
+
+const species = {
+  en: species_en,
+  lt_LT: species_lt_LT,
+  es_ES: species_es_ES,
+  sv_SE: species_sv_SE,
+  fi_FI: species_fi_FI,
+  fr_FR: species_fr_FR,
+  ru_RU: species_ru_RU,
 };
 
 export const languages = {
@@ -96,10 +114,10 @@ function translate(key, isSpeciesDescription) {
 
   if (isSpeciesDescription) {
     // revert to English descriptions
-    const description = dictionary[language][key] || dictionary.en[key];
+    const description = species[language][key] || species.en[key];
     return description !== key ? description : null;
   }
-  
+
   const translation = dictionary[language][key];
   if (!translation) {
     if (!window.dic.includes(key)) {

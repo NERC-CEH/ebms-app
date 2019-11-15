@@ -1,0 +1,1027 @@
+# Translators:
+# Janne Heliola <janne.heliola@ymparisto.fi>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"Last-Translator: Janne Heliola <janne.heliola@ymparisto.fi>, 2019\n"
+"Language-Team: Finnish (Finland) (https://www.transifex.com/ceh/teams/95441/fi_FI/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi_FI\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Select your country"
+msgstr "Valitse maasi"
+
+msgid "United Kingdom"
+msgstr "Iso-Britannia"
+
+msgid "Lithuania"
+msgstr "Liettua"
+
+msgid "Spain"
+msgstr "Espanja"
+
+msgid "Andorra"
+msgstr ""
+
+msgid "Albania"
+msgstr ""
+
+msgid "Austria"
+msgstr ""
+
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+msgid "Belgium"
+msgstr ""
+
+msgid "Bulgaria"
+msgstr ""
+
+msgid "Belarus"
+msgstr ""
+
+msgid "Switzerland"
+msgstr ""
+
+msgid "Cyprus"
+msgstr ""
+
+msgid "Czechia"
+msgstr ""
+
+msgid "Germany"
+msgstr ""
+
+msgid "Denmark"
+msgstr ""
+
+msgid "Estonia"
+msgstr ""
+
+msgid "Spain: Canary Islands"
+msgstr ""
+
+msgid "Finland"
+msgstr ""
+
+msgid "France"
+msgstr ""
+
+msgid "Greece"
+msgstr ""
+
+msgid "Croatia"
+msgstr ""
+
+msgid "Hungary"
+msgstr ""
+
+msgid "Ireland"
+msgstr ""
+
+msgid "Iceland"
+msgstr ""
+
+msgid "Italy"
+msgstr ""
+
+msgid "Liechtenstein"
+msgstr ""
+
+msgid "Luxembourg"
+msgstr ""
+
+msgid "Latvia"
+msgstr ""
+
+msgid "Moldova"
+msgstr ""
+
+msgid "Montenegro"
+msgstr ""
+
+msgid "North Macedonia"
+msgstr ""
+
+msgid "Malta"
+msgstr ""
+
+msgid "Netherlands"
+msgstr ""
+
+msgid "Norway"
+msgstr ""
+
+msgid "Poland"
+msgstr ""
+
+msgid "Portugal"
+msgstr ""
+
+msgid "Portugal: Azores"
+msgstr ""
+
+msgid "Portugal: Madeira Islands"
+msgstr ""
+
+msgid "Romania"
+msgstr ""
+
+msgid "Serbia"
+msgstr ""
+
+msgid "Russian Federation"
+msgstr ""
+
+msgid "Slovenia"
+msgstr ""
+
+msgid "Slovakia"
+msgstr ""
+
+msgid "Turkey"
+msgstr ""
+
+msgid "Ukraine"
+msgstr ""
+
+msgid "Elsewhere"
+msgstr ""
+
+msgid "Skip"
+msgstr "Ohita"
+
+msgid "Next"
+msgstr "Seuraava"
+
+msgid "Get Started"
+msgstr "Aloita"
+
+msgid "Please sign in with your eBMS account or register."
+msgstr "Kirjaudu eBMS -tilillesi tai rekisteröidy uudeksi käyttäjäksi."
+
+msgid "Username or email"
+msgstr "Käyttäjätunnus tai sähköpostiosoitteesi"
+
+msgid "Password"
+msgstr "Salasana"
+
+msgid "Sign in"
+msgstr "Kirjaudu sisään"
+
+msgid "Register"
+msgstr "Rekisteröidy"
+
+msgid "Forgot password?"
+msgstr "Salasana unohtui?"
+
+msgid "Login"
+msgstr "Kirjaudu sisään"
+
+msgid "Settings"
+msgstr "Asetukset"
+
+msgid "Info"
+msgstr "Tiedot"
+
+msgid "About"
+msgstr "Lisätietoja"
+
+msgid "Help"
+msgstr "Auta"
+
+msgid "Privacy Policy"
+msgstr "Yksityisyyden suoja"
+
+msgid "Credits"
+msgstr "Kiitokset"
+
+msgid "Email"
+msgstr "Sähköpostiosoite"
+
+msgid "First Name"
+msgstr "Etunimi"
+
+msgid "Surname"
+msgstr "Sukunimi"
+
+msgid "I agree to"
+msgstr "Suostun"
+
+msgid "Terms and Conditions"
+msgstr "Luvat ja käyttöehdot"
+
+msgid "Enter your username or email address to request a password reset"
+msgstr ""
+"Syötä käyttäjätunnuksesi tai sähköpostiosoitteesi pyytääksesi uutta "
+"salasanaa"
+
+msgid "Reset"
+msgstr "Päivitä"
+
+msgid "Records"
+msgstr "Havainnot"
+
+msgid "Upload All"
+msgstr "Lataa kaikki"
+
+msgid "Remove All Saved"
+msgstr "Poista kaikki tallennukset"
+
+msgid "Application"
+msgstr "Sovellus"
+
+msgid "Training Mode"
+msgstr "Kokeiluversio"
+
+msgid "Experimental Features"
+msgstr "Kokeellisia ominaisuuksia"
+
+msgid "Welcome"
+msgstr "Tervetuloa"
+
+msgid "Lets start!"
+msgstr "Aloitetaan!"
+
+msgid "TOP RECORDERS"
+msgstr "ENITEN HAVAINTOJA"
+
+msgid "TOP SPECIES"
+msgstr "ENITEN YKSILÖITÄ"
+
+msgid "Back"
+msgstr "Takaisin"
+
+msgid "Menu"
+msgstr "Valikko"
+
+msgid "App"
+msgstr "Sovellus"
+
+msgid ""
+"We are very grateful for all the people that helped to create this app:"
+msgstr "Kiitämme tämän sovelluksen laatimiseen osallistuneita:"
+
+msgid "Home"
+msgstr "Päävalikko"
+
+msgid "Guide"
+msgstr "Ohje"
+
+msgid "Account"
+msgstr "Käyttäjätili"
+
+msgid "Offline"
+msgstr "Ei verkkoyhteyttä"
+
+msgid "Sorry, looks like you're offline."
+msgstr "Sinulla ei ole verkkoyhteyttä."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Sorry"
+msgstr "Pahoittelemme"
+
+msgid "Please wait..."
+msgstr "Odota..."
+
+msgid "name is a required field"
+msgstr "Nimi on pakollinen tieto"
+
+msgid "password is a required field"
+msgstr "Salasana on pakollinen tieto"
+
+msgid "Login error:"
+msgstr "Virhe kirjautumisessa:"
+
+msgid "Failed to fetch"
+msgstr "Virhe tiedonhaussa"
+
+msgid "Incorrect password or email."
+msgstr "Virheellinen salasana tai sähköpostiosoite."
+
+msgid "Logout"
+msgstr "Kirjaudu ulos"
+
+msgid "Are you sure you want to logout?"
+msgstr "Haluatko kirjautua ulos?"
+
+msgid "This will delete all the records on this device."
+msgstr "Tämä poistaa kaikki havainnot laitteelta."
+
+msgid "Cancel"
+msgstr "Peruuta"
+
+msgid "Welcome aboard!"
+msgstr "Tervetuloa mukaan!"
+
+msgid ""
+"Before submitting any records please check your email and click on the "
+"verification link."
+msgstr ""
+"Ennen havaintojen tallennusta tarkista sähköpostisi ja klikkaa sinne "
+"tunnistautumista varten lähetettyä linkkiä."
+
+msgid "OK, got it"
+msgstr "Selvä"
+
+msgid "email is a required field"
+msgstr "Sähköposti on pakollinen tieto"
+
+msgid "firstname is a required field"
+msgstr "Etunimi on pakollinen tieto"
+
+msgid "secondname is a required field"
+msgstr "Toinen nimi on pakollinen tieto"
+
+msgid "must accept terms and conditions"
+msgstr "Hyväksyn käyttäjäehdot"
+
+msgid "Area Count"
+msgstr "Aluelaskenta"
+
+msgid "Area"
+msgstr "Alue"
+
+msgid "Add"
+msgstr "Lisää"
+
+msgid "Duration"
+msgstr "Kesto"
+
+msgid "Species"
+msgstr "Laji"
+
+msgid "Species name"
+msgstr "Lajinimi"
+
+msgid ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
+msgstr ""
+"Voit etsiä lajinimeä erilaisten pikahakujen avulla. Esimerkiksi, löytääksesi"
+
+msgid "you can type in the search bar"
+msgstr "voit kirjoittaa etsi -kohtaan"
+
+msgid "Edit Occurrence"
+msgstr "Muuta havaintoa"
+
+msgid "Count"
+msgstr "Yksilömäärä"
+
+msgid "Comment"
+msgstr "Kommentti"
+
+msgid "Draft"
+msgstr "Luonnos"
+
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr "Aiempi luonnos havaintokerrasta löytyy, haluatko jatkaa sitä?"
+
+msgid "Discard"
+msgstr "Hylkää"
+
+msgid "Continue"
+msgstr "Jatka"
+
+msgid "Finish"
+msgstr "Lopeta"
+
+msgid "minutes"
+msgstr "minuuttia"
+
+msgid "No species added"
+msgstr "Ei lajeja lisättynä"
+
+msgid "Please draw your area on the map"
+msgstr "Piirrä havaintoalueesi kartalle"
+
+msgid "Draw an area"
+msgstr "Piirrä alue"
+
+msgid "Delete"
+msgstr "Poista"
+
+msgid "Surveys"
+msgstr "Havaintokerrat"
+
+msgid "Reports"
+msgstr "Raportit"
+
+msgid "Are you sure you want to delete this survey?"
+msgstr "Haluatko poistaa tämän havaintokerran?"
+
+msgid "No finished surveys"
+msgstr "Ei valmiita havaintokertoja"
+
+msgid "Finished surveys"
+msgstr "Valmiit havaintokerrat"
+
+msgid "Selected area"
+msgstr "Valittu alue"
+
+msgid "Use survey create time"
+msgstr "Käytä havaintokerran aloitusaikaa"
+
+msgid "Use survey finish time"
+msgstr "Käytä havaintokerran päättymisaikaa"
+
+msgid "species"
+msgstr "Laji"
+
+msgid "Done"
+msgstr "Valmis"
+
+msgid "Time's up!"
+msgstr "Aika loppui!"
+
+msgid "Survey incomplete"
+msgstr "Havaintokerta puutteellinen"
+
+msgid "The survey is not complete yet."
+msgstr "Havaintokerta ei ole vielä valmis."
+
+msgid "Please select a smaller area."
+msgstr "Valitse pienempi alue."
+
+msgid "Please add survey area information."
+msgstr "Lisää tiedot havaintoalueesta."
+
+msgid "Choose a method to upload a photo"
+msgstr "Valitse tapa ladata valokuva"
+
+msgid "Gallery"
+msgstr "Galleria"
+
+msgid "Camera"
+msgstr "Kamera"
+
+msgid "Are you sure you want to remove this photo from the sample?"
+msgstr "Haluatko poistaa tämän valokuvan näytteestä?"
+
+msgid "Note: it will remain in the gallery."
+msgstr "Huomaa: se säilyy galleriassa."
+
+msgid "No photo has been added"
+msgstr "Valokuvaa ei ole lisätty"
+
+msgid "Registration error:"
+msgstr "Kirjautumisvirhe:"
+
+msgid "Incorrect password or email"
+msgstr "Väärä salasana tai sähköpostiosoite"
+
+msgid "email is not valid"
+msgstr "Puutteellinen sähköpostiosoite"
+
+msgid ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
+msgstr ""
+"Päiväperhoset ovat kiehtovia hyönteisiä, mutta ne ovat vähentyneet laajalti "
+"Euroopassa. Esimerkkinä oheinen EU:n ruohostomaiden päiväperhosten tilaa "
+"kuvastava indikaattori."
+
+msgid ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
+msgstr ""
+"Tällä sovelluksella kerätyt havainnot voivat merkittävästi lisätä tietojamme"
+" päiväperhosista ja niiden elinympäristöistä."
+
+msgid ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
+msgstr ""
+"Monessa osin Eurooppaa tiedot päiväperhosista ovat puutteellisia. Tämä "
+"ilmenee suurena vaihteluna havaintomäärien tiheydessä."
+
+msgid ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects.  You can get "
+"started straight away"
+msgstr ""
+"Nyt on todella helppoa osallistua laadukkaan havaintoaineiston keräämiseen "
+"näistä kiehtovista hyönteisistä. Voit aloittaa saman tien"
+
+msgid ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
+msgstr ""
+"Tämä sovellus on kehitetty osana EU-rahoitteista Assessing Butterflies in "
+"Europe (ABLE) -projektia."
+
+msgid "The ABLE project is a partnership between"
+msgstr "ABLE-projektin toteuttajia ovat"
+
+msgid "and"
+msgstr "ja"
+
+msgid ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
+msgstr ""
+"ABLE on saanut rahoitusta EU:n ympäristöjaostolta kahden vuoden "
+"kokeilukaudelle 2019-20."
+
+msgid "ABLE partners:"
+msgstr "ABLE -projektin osakkaat:"
+
+msgid ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
+msgstr ""
+"Tällä sovelluksella kerättyjä tietoja käyttää kansallisten "
+"päiväperhosseurantojen yhteistyötä koordinoiva European Butterfly Monitoring"
+" Scheme (eBMS)."
+
+msgid "In June 2019, the following organisations are partners in eBMS:"
+msgstr "Kesäkuussa 2019 eBMS:n jäseniä olivat seuraavat organisaatiot:"
+
+msgid "Not enough data yet"
+msgstr "Ei riittävästi tietoja"
+
+msgid "How to start a survey"
+msgstr "Kuinka aloittaa havaintokerta"
+
+msgid "To start a new survey you can press the plus button"
+msgstr "Aloittaaksesi uuden havaintokerran paina plus -kuvaketta"
+
+msgid "in the home page footer. This will start a new 15 minute survey."
+msgstr ""
+"kotisivun alalaidassa. Tämä aloittaa uuden 15 min mittaisen havaintokerran."
+
+msgid "Selecting species"
+msgstr "Lajien valitseminen"
+
+msgid "Please press the Add"
+msgstr "Paina Lisää"
+
+msgid ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
+msgstr ""
+"kuvaketta uuden havaintokerran muokkausikkunassa. Tämä ohjaa sinut sivulle, "
+"jolla voit etsiä lajinimiä. Valittuasi lajinimen se ilmestyy havaintokertasi"
+" lajilistalle."
+
+msgid "Note"
+msgstr "Huomaa"
+
+msgid ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
+msgstr ""
+"voit kasvattaa lajin yksilömäärää klikkaamalla lajinimen vieressä olevaa "
+"numeroa."
+
+msgid ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
+msgstr ""
+"Poistaaksesi lajinimen listalta pyyhkäise sitä vasemmalle ja paina Poista "
+"-kuvaketta."
+
+msgid ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
+msgstr ""
+"Voit kirjata lisätietoja haluamastasi lajihavainnosta klikkaamalla ensin "
+"kyseistä lajinimeä."
+
+msgid "To finish a record you should also fill in the details of the area."
+msgstr ""
+"Havaintosi ovat valmiita lähettäväksi vasta, kun olet täyttänyt "
+"havaintoaluetta koskevat yksityiskohdat."
+
+msgid ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
+msgstr ""
+"Kun olet valmis, lähetä havaintosi eteenpäin painamalla Lopeta -kuvaketta."
+
+msgid "Searching for species"
+msgstr "Lajien etsiminen"
+
+msgid ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
+msgstr ""
+"Sovellus sisältää noin 500 päiväperhoslajin tiedot. Pikahakuna voit käyttää "
+"erilaisia oikoteitä. Esimerkiksi, löytääksesi"
+
+msgid "Sync. with the website"
+msgstr "Synkronoi verkkosivun kanssa"
+
+msgid "All your saved surveys will be shown on your account page."
+msgstr ""
+"Kaikki tallentamasi havaintokerrat tulevat näkyviin omalle "
+"käyttäjätilillesi."
+
+msgid ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
+msgstr ""
+"Havaintokerta tallentuu lähtökohtaisesti 'luonnoksena', joka ei siirry "
+"tietokantaan ennen kuin painat Lopeta -kuvaketta. Sovellus lähettää "
+"havaintokerran saatuaan riittävän hyvän verkkoyhteyden."
+
+msgid "If the record has reached the database a red"
+msgstr "Jos havaintosi on päässyt tietokantaan, punainen"
+
+msgid "(set for submission & saved locally) will become green"
+msgstr ""
+"(valmiina lähetettäväksi & tallennettu laitteelle) merkkivalo muuttuu "
+"vihreäksi."
+
+msgid "synced to the database"
+msgstr "synkronoitu tietokantaan"
+
+msgid ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
+msgstr ""
+"sinulla tulee olla verkkoyhteys ja kirjautunut käyttäjätilillesi, jotta "
+"havaintosi automaattisesti synkronoidaan tietokannan kanssa."
+
+msgid "Delete a record"
+msgstr "Havainnon poistaminen"
+
+msgid ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
+msgstr ""
+"Poistaaksesi havainnon, pyyhkäise sitä vasemmalle käyttäjätiedoissasi ja "
+"paina Poista -kuvaketta."
+
+msgid "User"
+msgstr "Käyttäjä"
+
+msgid "Sign in/out or register"
+msgstr "Kirjaudu sisään/ulos tai rekisteröidy"
+
+msgid ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
+msgstr ""
+"Kirjautuaksesi avaa päävalikko, klikkaa Kirjaudu tai Rekisteröidy, ja seuraa"
+" ohjeita."
+
+msgid "To logout, visit the main menu page and click the logout button."
+msgstr "Kirjautuaksesi ulos avaa päävalikko, ja klikkaa Kirjaudu ulos."
+
+msgid ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
+msgstr ""
+"Avattuasi uuden tilin sinun pitää vahvistaa sähköpostiosoitteesi "
+"klikkaamalla vahvistuslinkkiä saamassasi sähköpostiviestissä."
+
+msgid "Other"
+msgstr "Muu"
+
+msgid "Reset the application"
+msgstr "Palauta sovelluksen lähtöasetukset"
+
+msgid "Go to the application settings page"
+msgstr "Siirry sovelluksen asetuksiin"
+
+msgid "and click on the Reset"
+msgstr "ja klikkaa Uudelleenmääritä"
+
+msgid "button"
+msgstr "kuvaketta"
+
+msgid "No species found with this name"
+msgstr "Tätä lajinimeä ei löydy"
+
+msgid "Allow Sample Edit"
+msgstr "Salli näytteen muokkaaminen"
+
+msgid "Upload"
+msgstr "Lataa"
+
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+"Tämä sovellus tukee päiväperhosten seurantaa ja suojelua. Klikkaa + "
+"kuvaketta aloittaaksesi päiväperhosten laskennan."
+
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""
+"Sovellukseen tulee jatkossa parannuksia, kun uusia ominaisuuksia otetaan "
+"hiljalleen käyttöön."
+
+msgid "Are you sure you want to reset the application to its initial state?"
+msgstr "Haluatko varmasti palauttaa sovelluksen lähtöasetuksiinsa?"
+
+msgid "This will wipe all the locally stored app data!"
+msgstr "Tämä hävittää kaikki laitteelle tallentuneet tiedot!"
+
+msgid "Sweden"
+msgstr "Ruotsi"
+
+msgid "Paused"
+msgstr "Pysähtynyt"
+
+msgid "Pending"
+msgstr "Käynnissä"
+
+msgid "Uploaded"
+msgstr "Ladattu"
+
+msgid "No finished pending surveys"
+msgstr "Ei siirtämättömiä havaintokertoja"
+
+msgid "No uploaded surveys"
+msgstr "Ei lähetettyjä havaintokertoja"
+
+msgid "Enjoying the app?"
+msgstr ""
+
+msgid "Not really"
+msgstr ""
+
+msgid "Yes!"
+msgstr ""
+
+msgid "Would you mind giving us some feedback?"
+msgstr ""
+
+msgid "No, thanks"
+msgstr ""
+
+msgid "OK, sure"
+msgstr ""
+
+msgid "How about a rating on the App Store then?"
+msgstr ""
+
+msgid "How about a rating on the Play Store then?"
+msgstr ""
+
+msgid "Icons made by"
+msgstr ""
+
+msgid "from"
+msgstr ""
+
+msgid "Enter your username or email address to request a password reset."
+msgstr ""
+
+msgid "We've sent an email to you"
+msgstr ""
+
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+
+msgid "App Development"
+msgstr ""
+
+msgid "This app was hand crafted with love by"
+msgstr ""
+
+msgid "Agency specializing in building bespoke data oriented sollutions."
+msgstr ""
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr ""
+
+msgid "contact us"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr ""
+
+msgid "Share App Analytics"
+msgstr ""
+
+msgid "Save Draft"
+msgstr ""
+
+msgid "Stage"
+msgstr ""
+
+msgid "Not Recorded"
+msgstr ""
+
+msgid "Adults"
+msgstr ""
+
+msgid "Larvae"
+msgstr ""
+
+msgid "Eggs"
+msgstr ""
+
+msgid "Pupae"
+msgstr ""
+
+msgid "Larval webs"
+msgstr ""
+
+msgid "Transect"
+msgstr ""
+
+msgid "Sections"
+msgstr ""
+
+msgid "No transect"
+msgstr ""
+
+msgid "Start Time"
+msgstr ""
+
+msgid "End Time"
+msgstr ""
+
+msgid "Temperature"
+msgstr ""
+
+msgid "Cloud"
+msgstr ""
+
+msgid "Wind Direction"
+msgstr ""
+
+msgid "Wind Speed"
+msgstr ""
+
+msgid "Recorder"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Please select your transect first."
+msgstr ""
+
+msgid "Invalid server response."
+msgstr ""
+
+msgid "Not recorded/no data"
+msgstr ""
+
+msgid "Please specify the temperature C°."
+msgstr ""
+
+msgid "S"
+msgstr ""
+
+msgid "SW"
+msgstr ""
+
+msgid "W"
+msgstr ""
+
+msgid "NW"
+msgstr ""
+
+msgid "N"
+msgstr ""
+
+msgid "NE"
+msgstr ""
+
+msgid "E"
+msgstr ""
+
+msgid "SE"
+msgstr ""
+
+msgid "No direction"
+msgstr ""
+
+msgid "Please specify the wind direction."
+msgstr ""
+
+msgid "Smoke rises vertically"
+msgstr ""
+
+msgid "Slight smoke drift"
+msgstr ""
+
+msgid "Wind felt on face, leaves rustle"
+msgstr ""
+
+msgid "Leaves and twigs in slight motion"
+msgstr ""
+
+msgid "Dust raised and small branches move"
+msgstr ""
+
+msgid "Small trees in leaf begin to sway"
+msgstr ""
+
+msgid "Large branches move and trees sway"
+msgstr ""
+
+msgid "Please specify the wind speed."
+msgstr ""
+
+msgid "Transects"
+msgstr ""
+
+msgid "Transect list was successfully updated."
+msgstr ""
+
+msgid "Section"
+msgstr ""
+
+msgid "Reliability"
+msgstr ""
+
+msgid "Please specify the reliability of the section count."
+msgstr ""
+
+msgid "Timed Area Count"
+msgstr ""
+
+msgid "eBMS Transect"
+msgstr ""
+
+msgid "Please add any extra info about this record."
+msgstr ""
+
+msgid "Enter more information here..."
+msgstr ""
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr ""
+
+msgid "HH:mm"
+msgstr ""
+
+msgid "Please specify the % of cloud cover."
+msgstr ""
+
+msgid "You don't have any transects. Please try to refresh the list."
+msgstr ""
+
+msgid "Wind speed info is missing"
+msgstr ""
+
+msgid "Temperature info is missing"
+msgstr ""
+
+msgid "Recorder info is missing"
+msgstr ""
+
+msgid "Please select your transect."
+msgstr ""
+
+msgid ""
+"This guide is still in development. It covers %(countrySpeciesCount) "
+"butterfly species out of the %(totalSpeciesCountryCount) species in your "
+"selected country."
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Absent"
+msgstr ""
+
+msgid "Present"
+msgstr ""
+
+msgid "Possibly present"
+msgstr ""
+
+msgid "Regular migrant"
+msgstr ""
+
+msgid "Irregular vagrant"
+msgstr ""
+
+msgid "Regionally extinct"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Counts"
+msgstr ""
