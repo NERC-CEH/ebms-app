@@ -2522,3 +2522,6 @@ msgstr "Šalyje išnykęs"
 
 msgid "Description"
 msgstr "Apibūdinimas"
+
+msgid "Counts"
+msgstr "Įrašai"

@@ -2407,3 +2407,6 @@ msgstr "Regionally extinct"
 
 msgid "Description"
 msgstr "Description"
+
+msgid "Counts"
+msgstr "Counts"

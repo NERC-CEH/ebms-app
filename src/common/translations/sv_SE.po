@@ -2524,3 +2524,6 @@ msgstr ""
 
 msgid "Description"
 msgstr ""
+
+msgid "Counts"
+msgstr ""
