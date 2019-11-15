@@ -503,7 +503,7 @@ msgid "Thecla betulae"
 msgstr "Beržinis zefyras"
 
 msgid "Favonius quercus"
-msgstr ""
+msgstr "Ąžuolinis zefyras"
 
 msgid "Laeosopis roboris"
 msgstr ""
@@ -635,7 +635,7 @@ msgid "Plebejus argus"
 msgstr ""
 
 msgid "Plebejus idas"
-msgstr ""
+msgstr "Žaliaakis melsvys"
 
 msgid "Plebejus bellieri"
 msgstr ""
@@ -707,7 +707,7 @@ msgid "Aricia nicias"
 msgstr ""
 
 msgid "Aricia artaxerxes"
-msgstr ""
+msgstr "Rudasis melsvys"
 
 msgid "Aricia montensis"
 msgstr ""
@@ -728,7 +728,7 @@ msgid "Lysandra bellargus"
 msgstr ""
 
 msgid "Lysandra coridon"
-msgstr ""
+msgstr "Stepinis melsvys"
 
 msgid "Lysandra caelestissima"
 msgstr ""
@@ -824,7 +824,7 @@ msgid "Limenitis populi"
 msgstr "Didysis juodmargis"
 
 msgid "Limenitis camilla"
-msgstr ""
+msgstr "Mažasis juodmargis"
 
 msgid "Issoria lathonia"
 msgstr "Sidabrinis perlinukas"
@@ -851,7 +851,7 @@ msgid "Argynnis laodice"
 msgstr "Rausvasis perlinukas"
 
 msgid "Speyeria aglaja"
-msgstr ""
+msgstr "Žalsvasis perlinukas"
 
 msgid "Fabriciana elisa"
 msgstr ""
