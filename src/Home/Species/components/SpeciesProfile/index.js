@@ -39,7 +39,7 @@ class Component extends React.Component {
         <img src={`/images/${species.image}_image.jpg`} alt="species" />
 
         <IonCardHeader>
-          <IonCardTitle>{t(species.english)}</IonCardTitle>
+          <IonCardTitle>{t(species.taxon, null, true)}</IonCardTitle>
           <IonCardSubtitle>{species.taxon}</IonCardSubtitle>
         </IonCardHeader>
 

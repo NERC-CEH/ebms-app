@@ -16,6 +16,14 @@ import species_fi_FI from '../translations/species/fi_FI.po';
 import species_fr_FR from '../translations/species/fr_FR.po';
 import species_ru_RU from '../translations/species/ru_RU.po';
 
+import names_en from '../translations/names/en.pot';
+import names_lt_LT from '../translations/names/lt_LT.po';
+import names_es_ES from '../translations/names/es_ES.po';
+import names_sv_SE from '../translations/names/sv_SE.po';
+import names_fi_FI from '../translations/names/fi_FI.po';
+import names_fr_FR from '../translations/names/fr_FR.po';
+import names_ru_RU from '../translations/names/ru_RU.po';
+
 // Adding some context, reference and other in po files:
 
 // #: Some reference!!
@@ -43,6 +51,16 @@ const species = {
   fi_FI: species_fi_FI,
   fr_FR: species_fr_FR,
   ru_RU: species_ru_RU,
+};
+
+const names = {
+  en: names_en,
+  lt_LT: names_lt_LT,
+  es_ES: names_es_ES,
+  sv_SE: names_sv_SE,
+  fi_FI: names_fi_FI,
+  fr_FR: names_fr_FR,
+  ru_RU: names_ru_RU,
 };
 
 export const languages = {
@@ -109,8 +127,14 @@ export const countries = {
 
 window.dic = window.dic || [];
 
-function translate(key, isSpeciesDescription) {
+function translate(key, isSpeciesDescription, isSpeciesName) {
   const language = appModel.get('language');
+
+  if (isSpeciesName) {
+    // revert to English names
+    const description = names[language][key];
+    return description !== key ? description : null;
+  }
 
   if (isSpeciesDescription) {
     // revert to English descriptions

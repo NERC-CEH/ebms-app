@@ -91,7 +91,7 @@ class Component extends React.Component {
               backgroundImage: `url('/images/${image}_thumbnail.jpg')`,
             }}
           >
-            <span className="label">{taxon}</span>
+            <span className="label">{t(taxon, null, true) || taxon}</span>
           </div>
         </IonCol>
       );
