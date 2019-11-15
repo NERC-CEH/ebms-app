@@ -32,6 +32,8 @@ class Component extends React.Component {
   render() {
     const { species, country } = this.props;
 
+    const status = statuses[species[country]];
+
     return (
       <IonContent id="species-profile" class="ion-padding">
         <img src={`/images/${species.image}_image.jpg`} alt="species" />
@@ -41,11 +43,13 @@ class Component extends React.Component {
           <IonCardSubtitle>{species.taxon}</IonCardSubtitle>
         </IonCardHeader>
 
-        <IonCardContent>
-          <h3 className="species-label inline-label">{`${t('Status')}:`}</h3>
-          <span>{t(statuses[species[country]])}</span>
-        </IonCardContent>
-        
+        {status && (
+          <IonCardContent>
+            <h3 className="species-label inline-label">{`${t('Status')}:`}</h3>
+            <span>{t(status)}</span>
+          </IonCardContent>
+        )}
+
         <IonCardContent>
           <h3 className="species-label">{`${t('Description')}:`}</h3>
           {t(species.descriptionKey, true)}
