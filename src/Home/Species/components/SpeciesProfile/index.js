@@ -9,6 +9,8 @@ import {
 } from '@ionic/react';
 import { PhotoSwipe } from 'react-photoswipe';
 import PropTypes from 'prop-types';
+import 'react-photoswipe/lib/photoswipe.css';
+import 'react-photoswipe/dist/default-skin.png';
 import './styles.scss';
 
 const statuses = {
