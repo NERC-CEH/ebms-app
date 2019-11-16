@@ -29,7 +29,7 @@ class Edit extends Component {
       );
     }
 
-    return <IonLabel slot="end">{transect.id}</IonLabel>;
+    return <IonLabel slot="end">{transect.name || transect.id}</IonLabel>;
   };
 
   render() {
