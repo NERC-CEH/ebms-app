@@ -135,7 +135,7 @@ class AreaCount extends Component {
       <IonContent id="area-count-edit">
         <IonList lines="full">
           <IonItem routerLink={`/survey/area/${sample.cid}/edit/area`} detail>
-            <IonIcon icon={map} slot="start" />
+            <IonIcon icon={map} slot="start" mode="md" />
             <IonLabel>{t('Area')}</IonLabel>
             <IonLabel slot="end">{areaPretty}</IonLabel>
           </IonItem>
@@ -144,7 +144,7 @@ class AreaCount extends Component {
             detailIcon={isPaused ? play : pause}
             onClick={this.toggleTimer}
           >
-            <IonIcon icon={time} slot="start" />
+            <IonIcon icon={time} slot="start" mode="md" />
             <IonLabel>{t('Duration')}</IonLabel>
             <CountdownClock isPaused={isPaused} countdown={countdown} />
           </IonItem>

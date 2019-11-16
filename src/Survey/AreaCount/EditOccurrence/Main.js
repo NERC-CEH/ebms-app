@@ -92,7 +92,7 @@ class EditOccurrence extends Component {
             routerLink={`/survey/area/${sample.cid}/edit/occ/${occurrence.cid}/comment`}
             detail
           >
-            <IonIcon icon={clipboard} slot="start" />
+            <IonIcon icon={clipboard} slot="start" mode="md" />
             <IonLabel>{t('Comment')}</IonLabel>
             <IonLabel slot="end">{comment}</IonLabel>
           </IonItem>

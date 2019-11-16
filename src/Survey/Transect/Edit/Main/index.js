@@ -54,7 +54,7 @@ class Edit extends Component {
             routerLink={`/survey/transect/${sample.cid}/edit/sections`}
             detail
           >
-            <IonIcon icon={map} slot="start" />
+            <IonIcon icon={map} slot="start" mode="md" />
             <IonLabel>{t('Sections')}</IonLabel>
             {this.getPrettySectionsLabel()}
           </IonItem>
@@ -62,7 +62,7 @@ class Edit extends Component {
             routerLink={`/survey/transect/${sample.cid}/edit/surveyStartTime`}
             detail
           >
-            <IonIcon icon={time} slot="start" />
+            <IonIcon icon={time} slot="start" mode="md" />
             <IonLabel>{t('Start Time')}</IonLabel>
             <IonLabel slot="end">{startTimePretty}</IonLabel>
           </IonItem>
@@ -70,7 +70,7 @@ class Edit extends Component {
             routerLink={`/survey/transect/${sample.cid}/edit/surveyEndTime`}
             detail
           >
-            <IonIcon icon={time} slot="start" />
+            <IonIcon icon={time} slot="start" mode="md" />
             <IonLabel>{t('End Time')}</IonLabel>
             <IonLabel slot="end">{endTimePretty}</IonLabel>
           </IonItem>
@@ -118,7 +118,7 @@ class Edit extends Component {
             routerLink={`/survey/transect/${sample.cid}/edit/comment`}
             detail
           >
-            <IonIcon icon={clipboard} slot="start" />
+            <IonIcon icon={clipboard} slot="start" mode="md" />
             <IonLabel>{t('Comment')}</IonLabel>
             <IonLabel slot="end">{comment}</IonLabel>
           </IonItem>
