@@ -1040,3 +1040,6 @@ msgstr ""
 
 msgid "Counts"
 msgstr ""
+
+msgid "Photo credits"
+msgstr ""

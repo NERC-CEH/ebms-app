@@ -910,3 +910,6 @@ msgstr "Description"
 
 msgid "Counts"
 msgstr "Counts"
+
+msgid "Photo credits"
+msgstr "Photo credits"

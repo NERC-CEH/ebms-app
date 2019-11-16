@@ -1,6 +1,7 @@
 import React from 'react';
 import { IonContent, IonList, IonItem, IonLabel, IonPage } from '@ionic/react';
 import AppHeader from 'Components/Header';
+import species from 'common/data/species.profiles.data';
 import './sponsors.png';
 import './styles.scss';
 
@@ -225,6 +226,24 @@ export default () => (
             Portugal BMS, Eva Monteiro
           </IonLabel>
         </IonItem>
+      </IonList>
+
+      <IonList>
+        <IonItem>
+          <IonLabel>
+            <b>{t('Photo credits')}:</b>
+          </IonLabel>
+        </IonItem>
+        {species
+          .filter(s => s.image_copyright)
+          .map(s => (
+            <IonItem key={s.id} lines="none">
+              <IonLabel>
+                <i>{`${s.taxon}: `}</i>
+                <span dangerouslySetInnerHTML={{ __html: s.image_copyright }} />
+              </IonLabel>
+            </IonItem>
+          ))}
       </IonList>
     </IonContent>
   </IonPage>

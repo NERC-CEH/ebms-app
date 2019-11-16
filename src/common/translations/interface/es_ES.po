@@ -1042,3 +1042,6 @@ msgstr "Descripción"
 
 msgid "Counts"
 msgstr "Recuentos"
+
+msgid "Photo credits"
+msgstr ""

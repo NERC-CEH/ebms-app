@@ -1025,3 +1025,6 @@ msgstr "Apibūdinimas"
 
 msgid "Counts"
 msgstr "Įrašai"
+
+msgid "Photo credits"
+msgstr "Nuotraukų autoriai"
