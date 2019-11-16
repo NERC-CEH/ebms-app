@@ -77,8 +77,8 @@ const config = {
           {
             loader: 'string-replace-loader',
             options: {
-              search: './default-skin.png',
-              replace: '/images/default-skin.png',
+              search: './default-skin.svg',
+              replace: '/images/default-skin.svg',
               flags: 'g',
             },
           },

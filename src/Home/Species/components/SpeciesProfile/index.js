@@ -10,7 +10,7 @@ import {
 import { PhotoSwipe } from 'react-photoswipe';
 import PropTypes from 'prop-types';
 import 'react-photoswipe/lib/photoswipe.css';
-import 'react-photoswipe/dist/default-skin.png';
+import 'react-photoswipe/dist/default-skin.svg';
 import './styles.scss';
 
 const statuses = {
@@ -45,6 +45,7 @@ class Component extends React.Component {
         src: `/images/${species.image}_image.jpg`,
         w: species.image_width || 800,
         h: species.image_height || 800,
+        title: `© ${species.image_copyright}`,
       },
     ];
     

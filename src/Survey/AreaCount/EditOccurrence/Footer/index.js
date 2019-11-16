@@ -11,7 +11,7 @@ import { IonIcon, IonButton, IonFooter } from '@ionic/react';
 import { close, camera } from 'ionicons/icons';
 import ImageModel from 'common/models/image';
 import 'react-photoswipe/lib/photoswipe.css';
-import 'react-photoswipe/dist/default-skin.png';
+import 'react-photoswipe/dist/default-skin.svg';
 import './styles.scss';
 
 function photoDelete(photo) {
