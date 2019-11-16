@@ -1,4 +1,7 @@
 require('dotenv').config({ silent: true }); // get local environment variables from .env
+const pkg = require('../../package.json')
+
+const appMinorVersion = pkg.version.split('.').splice(0,2).join('.')
 
 module.exports = function(grunt) {
   return {
@@ -8,6 +11,19 @@ module.exports = function(grunt) {
     },
     cordova_init: {
       command: 'cordova create dist/cordova',
+      stdout: true,
+    },
+    cordova_resources: {
+      command: `mkdir -p dist/resources && 
+                cp -R other/designs/android dist/resources && 
+                
+                cp other/designs/splash.svg dist/resources && 
+                sed -i '' 's/{{APP_VERSION}}/${appMinorVersion}/g' dist/resources/splash.svg &&
+                
+                ./node_modules/.bin/sharp -i dist/resources/splash.svg -o dist/resources/splash.png resize 2737 2737 && 
+                ./node_modules/.bin/sharp -i other/designs/icon.svg -o dist/resources/icon.png resize 1024 1024 && 
+                
+                ./node_modules/.bin/cordova-res --resources dist/resources`,
       stdout: true,
     },
     cordova_clean_www: {

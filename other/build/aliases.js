@@ -41,6 +41,7 @@ module.exports = grunt => ({
     // init cordova source
     // add www source to cordova
     'exec:cordova_init',
+    'exec:cordova_resources',
 
     'exec:cordova_clean_www',
     'exec:cordova_copy_dist',

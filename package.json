@@ -124,6 +124,7 @@
     "prettier-eslint": "9.0.0",
     "prettier-eslint-cli": "5.0.0",
     "sass-loader": "8.0.0",
+    "sharp-cli": "^1.11.0",
     "sinon": "7.5.0",
     "string-replace-loader": "^2.1.1",
     "style-loader": "1.0.0",

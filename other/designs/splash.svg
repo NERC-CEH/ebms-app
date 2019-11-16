@@ -141,22 +141,10 @@
             <path d="M998.916,776.375C994.043,790.065 989.723,802.693 985.004,815.181C983.349,819.561 980.84,823.64 978.466,827.699C977.459,829.422 975.793,830.755 974.001,831.938" style="fill:white;"/>
         </g>
         <g transform="matrix(0.969669,0,0,0.971608,1556.24,986.133)">
-            <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Light', 'Apple SD Gothic Neo';font-weight:300;font-size:262.9px;fill:white;">A</text>
-        </g>
-        <g transform="matrix(0.969669,0,0,0.971608,1707.14,986.133)">
-            <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Light', 'Apple SD Gothic Neo';font-weight:300;font-size:262.9px;fill:white;">p</text>
-        </g>
-        <g transform="matrix(0.969669,0,0,0.971608,1840.73,986.133)">
-            <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Light', 'Apple SD Gothic Neo';font-weight:300;font-size:262.9px;fill:white;">p</text>
+            <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Light', 'Apple SD Gothic Neo';font-weight:200;font-size:262.9px;fill:white;">App</text>
         </g>
         <g transform="matrix(0.969669,0,0,0.971608,1775.52,1268.43)">
-            <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Light', 'Apple SD Gothic Neo';font-weight:300;font-size:171.1px;fill:white;">1</text>
-        </g>
-        <g transform="matrix(0.969669,0,0,0.971608,1834.75,1268.43)">
-            <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Light', 'Apple SD Gothic Neo';font-weight:300;font-size:171.1px;fill:white;">.</text>
-        </g>
-        <g transform="matrix(0.969669,0,0,0.971608,1870.89,1268.43)">
-            <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Light', 'Apple SD Gothic Neo';font-weight:300;font-size:171.1px;fill:white;">3</text>
+            <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Light', 'Apple SD Gothic Neo';font-weight:200;font-size:171.1px;fill:white;">{{APP_VERSION}}</text>
         </g>
         <g id="_Image1_" transform="matrix(0.278096,0,0,0.278096,1183.31,2135.01)">
             <use xlink:href="#_Image1" x="0" y="0" width="1014px" height="528px"/>
