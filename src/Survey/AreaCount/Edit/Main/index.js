@@ -129,7 +129,7 @@ class AreaCount extends Component {
       startTime.getTime() +
       config.DEFAULT_SURVEY_TIME +
       sample.metadata.pausedTime;
-    const isPaused = sample.timerPausedTime.time;
+    const isPaused = !!sample.timerPausedTime.time;
 
     return (
       <IonContent id="area-count-edit">
