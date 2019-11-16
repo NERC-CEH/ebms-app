@@ -181,6 +181,9 @@ msgstr "Rekisteröidy"
 msgid "Forgot password?"
 msgstr "Salasana unohtui?"
 
+msgid "User not found."
+msgstr ""
+
 msgid "Login"
 msgstr "Kirjaudu sisään"
 

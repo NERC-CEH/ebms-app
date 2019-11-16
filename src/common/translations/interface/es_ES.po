@@ -182,6 +182,9 @@ msgstr "Registro"
 msgid "Forgot password?"
 msgstr "¿Se te olvidó tu contraseña?"
 
+msgid "User not found."
+msgstr ""
+
 msgid "Login"
 msgstr "Iniciar sesión"
 

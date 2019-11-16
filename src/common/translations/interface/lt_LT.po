@@ -182,6 +182,9 @@ msgstr "Registruotis"
 msgid "Forgot password?"
 msgstr "Pamiršote slaptažodį?"
 
+msgid "User not found."
+msgstr "Vartotojas nerastas."
+
 msgid "Login"
 msgstr "Prisijungti"
 
@@ -1027,4 +1030,4 @@ msgid "Counts"
 msgstr "Įrašai"
 
 msgid "Photo credits"
-msgstr "Nuotraukų autoriai"
+msgstr ""

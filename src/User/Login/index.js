@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { IonPage, NavContext } from '@ionic/react';
 import Log from 'helpers/log';
 import Device from 'helpers/device';
-import alert from 'common/helpers/alert';
+import toast from 'common/helpers/toast';
 import loader from 'common/helpers/loader';
 import AppHeader from 'Components/Header';
 import Main from './Main';
@@ -11,10 +11,10 @@ import Main from './Main';
 async function onLogin(userModel, details, onSuccess) {
   const { name, password } = details;
   if (!Device.isOnline()) {
-    alert({
-      header: t('Offline'),
+    toast({
       message: t("Sorry, looks like you're offline."),
-      buttons: [t('OK')],
+      duration: 3000,
+      color: 'warning',
     });
     return;
   }
@@ -33,10 +33,11 @@ async function onLogin(userModel, details, onSuccess) {
     onSuccess();
   } catch (err) {
     Log(err, 'e');
-    alert({
+    toast({
       header: t('Sorry'),
-      message: err.message,
-      buttons: [t('OK')],
+      message: `${err.message}`,
+      duration: 3000,
+      color: 'danger',
     });
   }
 

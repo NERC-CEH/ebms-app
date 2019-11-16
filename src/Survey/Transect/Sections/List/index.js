@@ -25,7 +25,7 @@ class index extends React.Component {
     if (!Device.isOnline()) {
       toast({
         message: t("Sorry, looks like you're offline."),
-        duration: 2000,
+        duration: 3000,
         color: 'warning',
       });
       return;
@@ -47,7 +47,7 @@ class index extends React.Component {
       toast({
         header: t('Sorry'),
         message: `${e.message}`,
-        duration: 2000,
+        duration: 3000,
         color: 'danger',
       });
     }

@@ -182,6 +182,9 @@ msgstr "S'enregistrer"
 msgid "Forgot password?"
 msgstr "Mot de passe oublié ?"
 
+msgid "User not found."
+msgstr ""
+
 msgid "Login"
 msgstr "Connexion"
 

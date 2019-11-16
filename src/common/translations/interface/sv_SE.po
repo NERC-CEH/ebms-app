@@ -183,6 +183,9 @@ msgstr "Skapa konto"
 msgid "Forgot password?"
 msgstr "Glömt lösenordet?"
 
+msgid "User not found."
+msgstr ""
+
 msgid "Login"
 msgstr "Logga in"
 

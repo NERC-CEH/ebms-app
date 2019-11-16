@@ -176,6 +176,9 @@ msgstr "Register"
 msgid "Forgot password?"
 msgstr "Forgot password?"
 
+msgid "User not found."
+msgstr "User not found."
+
 msgid "Login"
 msgstr "Login"
 

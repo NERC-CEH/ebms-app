@@ -182,6 +182,9 @@ msgstr "Зарегистрироваться"
 msgid "Forgot password?"
 msgstr "Забыли пароль?"
 
+msgid "User not found."
+msgstr ""
+
 msgid "Login"
 msgstr "Логин"
 
