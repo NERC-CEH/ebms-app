@@ -7,6 +7,7 @@ import {
   IonCardTitle,
   IonLifeCycleContext,
 } from '@ionic/react';
+import { PhotoSwipe } from 'react-photoswipe';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
@@ -22,12 +23,51 @@ const statuses = {
 class Component extends React.Component {
   static contextType = IonLifeCycleContext;
 
+  state = {
+    showGallery: false,
+  };
+
   constructor(props) {
     super(props);
 
     this.map = React.createRef();
     this.speciesMap = React.createRef();
   }
+
+  getGallery = () => {
+    const { species } = this.props;
+    const { showGallery } = this.state;
+
+    const items = [
+      {
+        src: `/images/${species.image}_image.jpg`,
+        w: species.image_width || 800,
+        h: species.image_height || 800,
+      },
+    ];
+    
+    /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
+    return (
+      <>
+        <PhotoSwipe
+          isOpen={!!showGallery}
+          items={items}
+          options={{
+            index: showGallery - 1,
+            shareEl: false,
+            fullscreenEl: false,
+          }}
+          onClose={() => this.setState({ showGallery: false })}
+        />
+        <img
+          src={`/images/${species.image}_image.jpg`}
+          alt="species"
+          onClick={() => this.setState({ showGallery: 1 })}
+        />
+      </>
+    );
+    /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
+  };
 
   render() {
     const { species, country } = this.props;
@@ -36,7 +76,7 @@ class Component extends React.Component {
 
     return (
       <IonContent id="species-profile" class="ion-padding">
-        <img src={`/images/${species.image}_image.jpg`} alt="species" />
+        {this.getGallery()}
 
         <IonCardHeader>
           <IonCardTitle>{t(species.taxon, null, true)}</IonCardTitle>
