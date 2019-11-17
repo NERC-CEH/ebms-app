@@ -20,8 +20,8 @@ module.exports = function(grunt) {
                 cp other/designs/splash.svg dist/resources && 
                 sed -i '' 's/{{APP_VERSION}}/${appMinorVersion}/g' dist/resources/splash.svg &&
                 
-                ./node_modules/.bin/sharp -i dist/resources/splash.svg -o dist/resources/splash.png resize 2737 2737 && 
-                ./node_modules/.bin/sharp -i other/designs/icon.svg -o dist/resources/icon.png resize 1024 1024 && 
+                ./node_modules/.bin/sharp -i dist/resources/splash.svg -o dist/resources/splash.png resize 2737 2737 -- removeAlpha && 
+                ./node_modules/.bin/sharp -i other/designs/icon.svg -o dist/resources/icon.png resize 1024 1024 -- removeAlpha && 
                 
                 ./node_modules/.bin/cordova-res --resources dist/resources`,
       stdout: true,
