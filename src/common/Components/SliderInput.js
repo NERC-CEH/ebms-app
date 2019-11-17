@@ -71,7 +71,7 @@ class Component extends React.Component {
       value = null;
     }
 
-    const position = value > 0 ? this.logsl.position(value) : null;
+    const position = value >= 0 ? this.logsl.position(value) : null;
     if (this.state.sliderUpdating) {
       this.setState({ value, sliderUpdating: false });
     } else {
@@ -86,7 +86,7 @@ class Component extends React.Component {
       position = null;
     }
 
-    const value = position > 0 ? this.logsl.value(position) : null;
+    const value = position >= 0 ? this.logsl.value(position) : null;
     if (this.state.inputUpdating) {
       this.setState({ position, inputUpdating: false });
     } else {
@@ -122,10 +122,10 @@ class Component extends React.Component {
         <IonItem>
           <IonRange
             ref={this.sliderRef}
-            min="1"
+            min="0"
             max="100"
             onChange={this.onChangeSlider}
-            value={this.state.position || 1}
+            value={this.state.position}
           />
           <input
             ref={this.inputRef}
@@ -136,7 +136,7 @@ class Component extends React.Component {
             }}
             type="number"
             onChange={this.onChangeInput}
-            value={this.state.value || ''}
+            value={this.state.value}
           />
         </IonItem>
       </div>
