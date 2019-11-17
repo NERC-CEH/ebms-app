@@ -38,3 +38,4 @@
 ### Features
 
 * Add eBMS Transect recording
+* Add species guide
