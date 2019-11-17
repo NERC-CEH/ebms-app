@@ -49,56 +49,57 @@ class Component extends React.Component {
       },
     ];
     
-    /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
     return (
-      <>
-        <PhotoSwipe
-          isOpen={!!showGallery}
-          items={items}
-          options={{
-            index: showGallery - 1,
-            shareEl: false,
-            fullscreenEl: false,
-          }}
-          onClose={() => this.setState({ showGallery: false })}
-        />
-        <img
-          src={`/images/${species.image}_image.jpg`}
-          alt="species"
-          onClick={() => this.setState({ showGallery: 1 })}
-        />
-      </>
+      <PhotoSwipe
+        isOpen={!!showGallery}
+        items={items}
+        options={{
+          index: showGallery - 1,
+          shareEl: false,
+          fullscreenEl: false,
+        }}
+        onClose={() => this.setState({ showGallery: false })}
+      />
     );
-    /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   };
 
   render() {
     const { species, country } = this.props;
 
     const status = statuses[species[country]];
-
+    
+    /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
     return (
-      <IonContent id="species-profile" class="ion-padding">
+      <>
         {this.getGallery()}
 
-        <IonCardHeader>
-          <IonCardTitle>{t(species.taxon, null, true)}</IonCardTitle>
-          <IonCardSubtitle>{species.taxon}</IonCardSubtitle>
-        </IonCardHeader>
+        <IonContent id="species-profile" class="ion-padding">
+          <img
+            src={`/images/${species.image}_image.jpg`}
+            alt="species"
+            onClick={() => this.setState({ showGallery: 1 })}
+          />
 
-        {status && (
+          <IonCardHeader>
+            <IonCardTitle>{t(species.taxon, null, true)}</IonCardTitle>
+            <IonCardSubtitle>{species.taxon}</IonCardSubtitle>
+          </IonCardHeader>
+
+          {status && (
+            <IonCardContent>
+              <h3 className="species-label inline-label">{`${t('Status')}:`}</h3>
+              <span>{t(status)}</span>
+            </IonCardContent>
+          )}
+
           <IonCardContent>
-            <h3 className="species-label inline-label">{`${t('Status')}:`}</h3>
-            <span>{t(status)}</span>
+            <h3 className="species-label">{`${t('Description')}:`}</h3>
+            {t(species.descriptionKey, true)}
           </IonCardContent>
-        )}
-
-        <IonCardContent>
-          <h3 className="species-label">{`${t('Description')}:`}</h3>
-          {t(species.descriptionKey, true)}
-        </IonCardContent>
-      </IonContent>
+        </IonContent>
+      </>
     );
+    /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   }
 }
 
