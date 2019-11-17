@@ -131,7 +131,7 @@ class Edit extends Component {
           <IonItem routerLink={`/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}/reliability`} detail>
             <IonIcon src="/images/thumb-up.svg" slot="start" />
             <IonLabel>{t('Reliability')}</IonLabel>
-            <IonLabel slot="end">{reliability}</IonLabel>
+            <IonLabel slot="end">{t(reliability)}</IonLabel>
           </IonItem>
 
           <IonButton

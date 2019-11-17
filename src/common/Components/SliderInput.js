@@ -116,7 +116,7 @@ class Component extends React.Component {
       <div>
         {message && (
           <div className="info-message">
-            <p>{message}</p>
+            <p>{t(message)}</p>
           </div>
         )}
         <IonItem>
