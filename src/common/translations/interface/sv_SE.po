@@ -1,12 +1,12 @@
 # Translators:
 # Lars Pettersson <lars.pettersson@biol.lu.se>, 2019
-# Carin Kullberg <listrefjarilar@ckg.se>, 2019
 # Karolis, 2019
+# Carin Kullberg <listrefjarilar@ckg.se>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2019\n"
+"Last-Translator: Carin Kullberg <listrefjarilar@ckg.se>, 2019\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,133 +28,133 @@ msgid "Spain"
 msgstr "Spanien"
 
 msgid "Andorra"
-msgstr ""
+msgstr "Andorra"
 
 msgid "Albania"
-msgstr ""
+msgstr "Albanien"
 
 msgid "Austria"
-msgstr ""
+msgstr "Österrike"
 
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "Bosnien och Hercegovina"
 
 msgid "Belgium"
-msgstr ""
+msgstr "Belgien"
 
 msgid "Bulgaria"
-msgstr ""
+msgstr "Bulgarien"
 
 msgid "Belarus"
-msgstr ""
+msgstr "Vitryssland"
 
 msgid "Switzerland"
-msgstr ""
+msgstr "Schweiz "
 
 msgid "Cyprus"
-msgstr ""
+msgstr "Cypern"
 
 msgid "Czechia"
-msgstr ""
+msgstr "Tjeckien"
 
 msgid "Germany"
-msgstr ""
+msgstr "Tyskland"
 
 msgid "Denmark"
-msgstr ""
+msgstr "Danmark"
 
 msgid "Estonia"
-msgstr ""
+msgstr "Estland"
 
 msgid "Spain: Canary Islands"
-msgstr ""
+msgstr "Spanien: Kanarieöarna"
 
 msgid "Finland"
-msgstr ""
+msgstr "Finland"
 
 msgid "France"
-msgstr ""
+msgstr "Frankrike"
 
 msgid "Greece"
-msgstr ""
+msgstr "Grekland"
 
 msgid "Croatia"
-msgstr ""
+msgstr "Kroatien"
 
 msgid "Hungary"
-msgstr ""
+msgstr "Ungern"
 
 msgid "Ireland"
-msgstr ""
+msgstr "Irland"
 
 msgid "Iceland"
-msgstr ""
+msgstr "Island"
 
 msgid "Italy"
-msgstr ""
+msgstr "Italien"
 
 msgid "Liechtenstein"
-msgstr ""
+msgstr "Liechtenstein"
 
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luxemburg"
 
 msgid "Latvia"
-msgstr ""
+msgstr "Lettland"
 
 msgid "Moldova"
-msgstr ""
+msgstr "Moldavien"
 
 msgid "Montenegro"
-msgstr ""
+msgstr "Montenegro"
 
 msgid "North Macedonia"
-msgstr ""
+msgstr "Nord-Makedonien"
 
 msgid "Malta"
-msgstr ""
+msgstr "Malta"
 
 msgid "Netherlands"
-msgstr ""
+msgstr "Nederländerna"
 
 msgid "Norway"
-msgstr ""
+msgstr "Norge"
 
 msgid "Poland"
-msgstr ""
+msgstr "Polen"
 
 msgid "Portugal"
-msgstr ""
+msgstr "Portugal"
 
 msgid "Portugal: Azores"
-msgstr ""
+msgstr "Portugal: Azorerna"
 
 msgid "Portugal: Madeira Islands"
-msgstr ""
+msgstr "Portugal: Madeira-öarna"
 
 msgid "Romania"
-msgstr ""
+msgstr "Rumänien"
 
 msgid "Serbia"
-msgstr ""
+msgstr "Serbien"
 
 msgid "Russian Federation"
-msgstr ""
+msgstr "Ryssland"
 
 msgid "Slovenia"
-msgstr ""
+msgstr "Slovenien"
 
 msgid "Slovakia"
-msgstr ""
+msgstr "Slovakien"
 
 msgid "Turkey"
-msgstr ""
+msgstr "Turkiet"
 
 msgid "Ukraine"
-msgstr ""
+msgstr "Ukraina"
 
 msgid "Elsewhere"
-msgstr ""
+msgstr "Annan plats"
 
 msgid "Skip"
 msgstr "Hoppa över"
@@ -184,7 +184,7 @@ msgid "Forgot password?"
 msgstr "Glömt lösenordet?"
 
 msgid "User not found."
-msgstr ""
+msgstr "Användaren kunde inte hittas"
 
 msgid "Login"
 msgstr "Logga in"
@@ -757,210 +757,217 @@ msgid "No uploaded surveys"
 msgstr "Tömma"
 
 msgid "Enjoying the app?"
-msgstr ""
+msgstr "Gillar du appen?"
 
 msgid "Not really"
-msgstr ""
+msgstr "Inte så bra"
 
 msgid "Yes!"
-msgstr ""
+msgstr "Ja!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr ""
+msgstr "Vill du ge oss lite feedback?"
 
 msgid "No, thanks"
-msgstr ""
+msgstr "Nej tack"
 
 msgid "OK, sure"
-msgstr ""
+msgstr "OK, gärna"
 
 msgid "How about a rating on the App Store then?"
-msgstr ""
+msgstr "Vill du ge ett betyg på App Store?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr ""
+msgstr "Vill du ge ett betyg på Play Store?"
 
 msgid "Icons made by"
-msgstr ""
+msgstr "ikoner skapade av"
 
 msgid "from"
-msgstr ""
+msgstr "från"
 
 msgid "Enter your username or email address to request a password reset."
 msgstr ""
+"Ange ditt användarnamn eller e-postadress för att återställa lösenordet"
 
 msgid "We've sent an email to you"
-msgstr ""
+msgstr "Vi har skickat ett mejl till dig."
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
+"Klicka på länken i mejlet för att återställa ditt lösenord. Om du inte ser "
+"något mejl bör du titta bland papperskorgen, spamkorgen eller andra mejl-"
+"mappar."
 
 msgid "App Development"
-msgstr ""
+msgstr "Apputveckling"
 
 msgid "This app was hand crafted with love by"
-msgstr ""
+msgstr "Den här appen gjordes kärleksfullt för hand av"
 
 msgid "Agency specializing in building bespoke data oriented sollutions."
 msgstr ""
+"Organisation specialiserad på att skapa skräddarsydda dataorienterade "
+"lösningar"
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr ""
+msgstr "Har du förslag och synpunkter är du välkommen att"
 
 msgid "contact us"
-msgstr ""
+msgstr "kontakta oss"
 
 msgid "Language"
-msgstr ""
+msgstr "Språk"
 
 msgid "Country"
-msgstr ""
+msgstr "Land"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
+"Märk alla nya data som 'träning' och utelämna dem från all rapportering."
 
 msgid "Share App Analytics"
-msgstr ""
+msgstr "Tillåt delning av appens analysresultat"
 
 msgid "Save Draft"
-msgstr ""
+msgstr "Spara utkastet"
 
 msgid "Stage"
-msgstr ""
+msgstr "Stadium"
 
 msgid "Not Recorded"
-msgstr ""
+msgstr "Inte noterat"
 
 msgid "Adults"
-msgstr ""
+msgstr "Adulta"
 
 msgid "Larvae"
-msgstr ""
+msgstr "Larver"
 
 msgid "Eggs"
-msgstr ""
+msgstr "Ägg"
 
 msgid "Pupae"
-msgstr ""
+msgstr "Puppor"
 
 msgid "Larval webs"
-msgstr ""
+msgstr "Larvnät"
 
 msgid "Transect"
-msgstr ""
+msgstr "Transekt"
 
 msgid "Sections"
-msgstr ""
+msgstr "Urval"
 
 msgid "No transect"
-msgstr ""
+msgstr "Ingen transekt"
 
 msgid "Start Time"
-msgstr ""
+msgstr "Starttid"
 
 msgid "End Time"
-msgstr ""
+msgstr "Sluttid"
 
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatur"
 
 msgid "Cloud"
-msgstr ""
+msgstr "Moln"
 
 msgid "Wind Direction"
-msgstr ""
+msgstr "Vindriktning"
 
 msgid "Wind Speed"
-msgstr ""
+msgstr "Vindhastighet"
 
 msgid "Recorder"
-msgstr ""
+msgstr "Rapportör"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Uppdatera"
 
 msgid "Please select your transect first."
-msgstr ""
+msgstr "Välj din transekt först"
 
 msgid "Invalid server response."
-msgstr ""
+msgstr "Ogiltigt server-svar"
 
 msgid "Not recorded/no data"
-msgstr ""
+msgstr "Ej noterat/Inga uppgifter"
 
 msgid "Please specify the temperature C°."
-msgstr ""
+msgstr "Ange temperatur, C°."
 
 msgid "S"
-msgstr ""
+msgstr "S"
 
 msgid "SW"
-msgstr ""
+msgstr "SV"
 
 msgid "W"
-msgstr ""
+msgstr "V"
 
 msgid "NW"
-msgstr ""
+msgstr "NV"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "NE"
-msgstr ""
+msgstr "NO"
 
 msgid "E"
-msgstr ""
+msgstr "O"
 
 msgid "SE"
-msgstr ""
+msgstr "SO"
 
 msgid "No direction"
-msgstr ""
+msgstr "Ingen riktning"
 
 msgid "Please specify the wind direction."
-msgstr ""
+msgstr "Ange vindriktning."
 
 msgid "Smoke rises vertically"
-msgstr ""
+msgstr "Rök stiger rakt upp"
 
 msgid "Slight smoke drift"
-msgstr ""
+msgstr "Rök driver lite"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr ""
+msgstr "Vinden känns i ansiktet, löven prasslar"
 
 msgid "Leaves and twigs in slight motion"
-msgstr ""
+msgstr "Löv och kvistar sätts rör sig lite"
 
 msgid "Dust raised and small branches move"
-msgstr ""
+msgstr "Damm rörs upp och mindre grenar rör sig"
 
 msgid "Small trees in leaf begin to sway"
-msgstr ""
+msgstr "Små, lövklädda träd börjar svaja"
 
 msgid "Large branches move and trees sway"
-msgstr ""
+msgstr "Stora grenar rör sig och träd svajar"
 
 msgid "Please specify the wind speed."
-msgstr ""
+msgstr "Ange vindstyrka"
 
 msgid "Transects"
-msgstr ""
+msgstr "Transekter"
 
 msgid "Transect list was successfully updated."
-msgstr ""
+msgstr "Listan över transekter har uppdaterats."
 
 msgid "Section"
-msgstr ""
+msgstr "Segment"
 
 msgid "Reliability"
-msgstr ""
+msgstr "Tillförlitlighet"
 
 msgid "Please specify the reliability of the section count."
-msgstr ""
+msgstr "Ange hur tillförlitligt antalet i segmentet angetts "
 
 msgid "Timed Area Count"
 msgstr ""
@@ -969,49 +976,52 @@ msgid "eBMS Transect"
 msgstr ""
 
 msgid "Please add any extra info about this record."
-msgstr ""
+msgstr "Ange ev. övrig information om dessa observationer"
 
 msgid "Enter more information here..."
-msgstr ""
+msgstr "Lägg till mer information här"
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr ""
+msgstr "Ange vem som gjort artbestämningen."
 
 msgid "HH:mm"
-msgstr ""
+msgstr "HH:mm"
 
 msgid "Please specify the % of cloud cover."
-msgstr ""
+msgstr "Ange molntäcke i %"
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr ""
+msgstr "Du har inga transekter. Försök att uppdatera listan."
 
 msgid "Wind speed info is missing"
-msgstr ""
+msgstr "Uppgift om vindhastighet saknas"
 
 msgid "Temperature info is missing"
-msgstr ""
+msgstr "Uppgift om temperatur saknas"
 
 msgid "Recorder info is missing"
-msgstr ""
+msgstr "Uppgift om rapportör saknas"
 
 msgid "Please select your transect."
-msgstr ""
+msgstr "Ange din transekt."
 
 msgid ""
 "This guide is still in development. It covers %(countrySpeciesCount) "
 "butterfly species out of the %(totalSpeciesCountryCount) species in your "
 "selected country."
 msgstr ""
+"Den här guiden är fortfarande under utveckling. Den omfattar "
+"%(countrySpeciesCount) fjärilsarter av de %(totalSpeciesCountryCount) "
+"arterna i det land du valt."
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Absent"
-msgstr ""
+msgstr "Ej funnen"
 
 msgid "Present"
-msgstr ""
+msgstr "Funnen"
 
 msgid "Possibly present"
 msgstr ""
@@ -1023,13 +1033,13 @@ msgid "Irregular vagrant"
 msgstr ""
 
 msgid "Regionally extinct"
-msgstr ""
+msgstr "Regionalt utdöd"
 
 msgid "Description"
-msgstr ""
+msgstr "Beskrivning"
 
 msgid "Counts"
-msgstr ""
+msgstr "Antal"
 
 msgid "Photo credits"
 msgstr ""
