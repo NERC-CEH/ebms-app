@@ -969,6 +969,15 @@ msgstr "Tillförlitlighet"
 msgid "Please specify the reliability of the section count."
 msgstr "Ange hur tillförlitligt antalet i segmentet angetts "
 
+msgid "Suitable conditions"
+msgstr ""
+
+msgid "Unsuitable conditions"
+msgstr ""
+
+msgid "Unable to survey"
+msgstr ""
+
 msgid "Timed Area Count"
 msgstr ""
 

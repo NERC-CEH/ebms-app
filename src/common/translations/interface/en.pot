@@ -848,6 +848,15 @@ msgstr "Reliability"
 msgid "Please specify the reliability of the section count."
 msgstr "Please specify the reliability of the section count."
 
+msgid "Suitable conditions"
+msgstr "Suitable conditions"
+
+msgid "Unsuitable conditions"
+msgstr "Unsuitable conditions"
+
+msgid "Unable to survey"
+msgstr "Unable to survey"
+
 msgid "Timed Area Count"
 msgstr "Timed Area Count"
 

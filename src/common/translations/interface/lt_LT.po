@@ -957,6 +957,15 @@ msgstr "Patikimumas"
 msgid "Please specify the reliability of the section count."
 msgstr "Prašome pasirinkti šios dalies įrašų patikimumą."
 
+msgid "Suitable conditions"
+msgstr "Tinkamos sąlygos"
+
+msgid "Unsuitable conditions"
+msgstr "Netinkamos sąlygos"
+
+msgid "Unable to survey"
+msgstr "Monitoringas negalimas"
+
 msgid "Timed Area Count"
 msgstr "Teritorijos Monitoringas"
 

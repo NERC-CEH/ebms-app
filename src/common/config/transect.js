@@ -149,9 +149,9 @@ export default {
         info: 'Please specify the reliability of the section count.',
         id: 1393,
         values: {
-          1: 16590,
-          2: 16591,
-          3: 16592,
+          'Suitable conditions': 16590,
+          'Unsuitable conditions': 16591,
+          'Unable to survey': 16592,
         },
       },
 
