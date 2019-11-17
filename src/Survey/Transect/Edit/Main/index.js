@@ -37,9 +37,9 @@ class Edit extends Component {
 
     const surveyStartTime = sample.get('surveyStartTime');
     const startTimePretty =
-      surveyStartTime && dateTimeFormat.format(surveyStartTime);
+      surveyStartTime && dateTimeFormat.format(new Date(surveyStartTime));
     const surveyEndTime = sample.get('surveyEndTime');
-    const endTimePretty = surveyEndTime && dateTimeFormat.format(surveyEndTime);
+    const endTimePretty = surveyEndTime && dateTimeFormat.format(new Date(surveyEndTime));
     const temperature = sample.get('temperature');
     const cloud = sample.get('cloud');
     const windDirection = sample.get('windDirection');
