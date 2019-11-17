@@ -80,7 +80,7 @@ $footer-height: 80px;
 #edit-footer {
   background: #ffffff;
 
-  & > div {
+  & > div:not(.pswp) {
     margin: 0 -5px;
     border-top: 1px solid var(--ion-color-light-shade);
     box-shadow: 0px -1px 6px 0px #b5b5b5;
