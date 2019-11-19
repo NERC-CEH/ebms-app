@@ -120,7 +120,7 @@ msgid "Muschampia-cribrellum-description"
 msgstr "Muschampia-cribrellum-description"
 
 msgid "Muschampia-tessellum-description"
-msgstr "The Sage Skipper occurs on dry, flower-rich grassland, in open scrub, on rocky ground with sparse vegetation. However, in its chosen habitat, the larval foodplants are usually abundant. Various species of Phlomis are used, such as Jerusalem Sage (P. fructicosa), P. lychnitis, P. herba-venti, and perhaps also Horehound (Marrubium spp.). Although there is probably only one generation a year, the butterflies of the Sage Skipper can be seen from spring until autumn, due to prolonged emergence from the chrysalis. This skipper passes the winter as a caterpillar."
+msgstr "Muschampia-tessellum-description"
 
 msgid "Muschampia-proto-description"
 msgstr "The Sage Skipper occurs on dry, flower-rich grassland, in open scrub, on rocky ground with sparse vegetation. However, in its chosen habitat, the larval foodplants are usually abundant. Various species of Phlomis are used, such as Jerusalem Sage (P. fructicosa), P. lychnitis, P. herba-venti, and perhaps also Horehound (Marrubium spp.). Although there is probably only one generation a year, the butterflies of the Sage Skipper can be seen from spring until autumn, due to prolonged emergence from the chrysalis. This skipper passes the winter as a caterpillar."
