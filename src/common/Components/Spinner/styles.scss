@@ -1,39 +1,6 @@
-#loader {
-  z-index: 1000;
+.spinner {
   position: fixed;
-
-  padding-top: 30vh;
-  width: 100%;
-  height: 100vh;
-}
-
-#loader h1 {
-  color: var(--ion-color-primary);
-  text-align: center;
-  font-size: 3em;
-}
-
-#loader h3 {
-  text-align: center;
-  margin-right: -200px;
-  font-weight: 200;
-  color: var(--ion-color-primary-tint);
-}
-
-#loader #animation {
-  margin-top: 5%;
-  text-align: center;
-  font-size: 2em;
-  color: var(--ion-color-primary);
-}
-
-#loader #animation span:before {
-  font-size: 28px;
-}
-
-#loader #animation .error {
-  font-size: 20px;
-  margin-top: 20px;
-  color: var(--ion-color-danger);
-  text-shadow: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

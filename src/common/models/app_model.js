@@ -128,6 +128,8 @@ const getDefaultAttrs = () => ({
 class AppModel {
   @observable attrs = getDefaultAttrs();
 
+  @observable speciesReport = [];
+
   constructor() {
     Log('AppModel: initializing');
     this._init = getStore()

@@ -50,7 +50,11 @@ const Component = () => (
 
     <IonTabs>
       <IonRouterOutlet>
-        <Route path="/home/report" component={Report} exact />
+        <Route
+          path="/home/report"
+          render={props => <Report appModel={appModel} {...props} />}
+          exact
+        />
         <Route
           path="/home/species"
           render={() => (

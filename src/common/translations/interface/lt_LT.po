@@ -421,6 +421,9 @@ msgstr "Įrašai"
 msgid "Reports"
 msgstr "Ataskaitos"
 
+msgid "Sorry, no report data is available at the moment."
+msgstr "Atsiprašome, bet šią akimirką ataskaitos nėra pasiekiamos."
+
 msgid "Are you sure you want to delete this survey?"
 msgstr "Ar jūs tikrai norite ištrinti šį įrašą?"
 

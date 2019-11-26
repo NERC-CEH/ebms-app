@@ -404,6 +404,9 @@ msgstr "Surveys"
 msgid "Reports"
 msgstr "Reports"
 
+msgid "Sorry, no report data is available at the moment."
+msgstr "Sorry, no report data is available at the moment."
+
 msgid "Are you sure you want to delete this survey?"
 msgstr "Are you sure you want to delete this survey?"
 

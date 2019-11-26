@@ -1,6 +1,6 @@
 # Translators:
-# Lars Pettersson <lars.pettersson@biol.lu.se>, 2019
 # Karolis, 2019
+# Lars Pettersson <lars.pettersson@biol.lu.se>, 2019
 # Carin Kullberg <listrefjarilar@ckg.se>, 2019
 # 
 msgid ""
@@ -376,7 +376,7 @@ msgstr ""
 " exempel, för att hitta"
 
 msgid "you can type in the search bar"
-msgstr "du kan skriva i sökrutan"
+msgstr "så kan du skriva i sökrutan"
 
 msgid "Edit Occurrence"
 msgstr "Ändra förekomst"
@@ -423,6 +423,9 @@ msgstr "Inventeringar"
 msgid "Reports"
 msgstr "Rapporter"
 
+msgid "Sorry, no report data is available at the moment."
+msgstr ""
+
 msgid "Are you sure you want to delete this survey?"
 msgstr "Är du säker på att du vill radera den här inventeringen?"
 
@@ -457,10 +460,10 @@ msgid "The survey is not complete yet."
 msgstr "Inventeringen är inte färdig än."
 
 msgid "Please select a smaller area."
-msgstr "Välj ett mindre område"
+msgstr "Välj ett mindre område."
 
 msgid "Please add survey area information."
-msgstr "Beskriv inventerings-området"
+msgstr "Beskriv inventerings-området."
 
 msgid "Choose a method to upload a photo"
 msgstr "Välj ett sätt att ladda upp en bild."
@@ -856,13 +859,13 @@ msgid "Larval webs"
 msgstr "Larvnät"
 
 msgid "Transect"
-msgstr "Transekt"
+msgstr "Slinga"
 
 msgid "Sections"
 msgstr "Urval"
 
 msgid "No transect"
-msgstr "Ingen transekt"
+msgstr "Ingen slinga"
 
 msgid "Start Time"
 msgstr "Starttid"
@@ -889,7 +892,7 @@ msgid "Refresh"
 msgstr "Uppdatera"
 
 msgid "Please select your transect first."
-msgstr "Välj din transekt först"
+msgstr "Välj din slinga först"
 
 msgid "Invalid server response."
 msgstr "Ogiltigt server-svar"
@@ -955,10 +958,10 @@ msgid "Please specify the wind speed."
 msgstr "Ange vindstyrka"
 
 msgid "Transects"
-msgstr "Transekter"
+msgstr "Slingor"
 
 msgid "Transect list was successfully updated."
-msgstr "Listan över transekter har uppdaterats."
+msgstr "Listan över slingor har uppdaterats."
 
 msgid "Section"
 msgstr "Segment"
@@ -970,19 +973,19 @@ msgid "Please specify the reliability of the section count."
 msgstr "Ange hur tillförlitligt antalet i segmentet angetts "
 
 msgid "Suitable conditions"
-msgstr ""
+msgstr "Lämpliga förhållanden"
 
 msgid "Unsuitable conditions"
-msgstr ""
+msgstr "Olämpliga förhållanden"
 
 msgid "Unable to survey"
-msgstr ""
+msgstr "Kan ej inventeras"
 
 msgid "Timed Area Count"
-msgstr ""
+msgstr "Tidsbegränsad områdesinventering (punktlokal)"
 
 msgid "eBMS Transect"
-msgstr ""
+msgstr "eBMS Slingor"
 
 msgid "Please add any extra info about this record."
 msgstr "Ange ev. övrig information om dessa observationer"
@@ -1000,7 +1003,7 @@ msgid "Please specify the % of cloud cover."
 msgstr "Ange molntäcke i %"
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "Du har inga transekter. Försök att uppdatera listan."
+msgstr "Du har inga slingor. Försök att uppdatera listan."
 
 msgid "Wind speed info is missing"
 msgstr "Uppgift om vindhastighet saknas"
@@ -1012,7 +1015,7 @@ msgid "Recorder info is missing"
 msgstr "Uppgift om rapportör saknas"
 
 msgid "Please select your transect."
-msgstr "Ange din transekt."
+msgstr "Ange din slinga."
 
 msgid ""
 "This guide is still in development. It covers %(countrySpeciesCount) "
@@ -1033,13 +1036,13 @@ msgid "Present"
 msgstr "Funnen"
 
 msgid "Possibly present"
-msgstr ""
+msgstr "Möjlig förekomst"
 
 msgid "Regular migrant"
-msgstr ""
+msgstr "Återkommande migrant"
 
 msgid "Irregular vagrant"
-msgstr ""
+msgstr "Tillfälligt migrerande"
 
 msgid "Regionally extinct"
 msgstr "Regionalt utdöd"
@@ -1051,4 +1054,4 @@ msgid "Counts"
 msgstr "Antal"
 
 msgid "Photo credits"
-msgstr ""
+msgstr "Foto av"

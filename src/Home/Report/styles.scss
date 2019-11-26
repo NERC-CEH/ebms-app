@@ -1,0 +1,37 @@
+#home-report {
+  .empty {
+    width: 80%;
+    max-width: 250px;
+    margin: 100px auto 0;
+    --border-width: 0;
+    --background: var(--ion-color-light);
+    --color: var(--ion-color-light-contrast);
+
+    span {
+      margin: 0 auto;
+      font-weight: 200;
+    }
+  }
+
+  .report-common-name-label {
+    margin: 0;
+  }
+  .report-taxon-label {
+    opacity: 0.6;
+  }
+  .report-count-label {
+    max-width: 50px;
+  }
+
+  .list-header-labels {
+    --min-height: 0px;
+
+    ion-label {
+      margin: 7px 0;
+    }
+  }
+
+  .refreshing {
+    opacity: 0.5;
+  }
+}

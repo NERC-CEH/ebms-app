@@ -37,21 +37,6 @@
   }
 }
 
-#home-report {
-  .empty {
-    width: 80%;
-    max-width: 250px;
-    margin: 100px auto 0;
-    --border-width: 0;
-    --background: var(--ion-color-light);
-    --color: var(--ion-color-light-contrast);
-
-    span {
-      margin: 0 auto;
-      font-weight: 200;
-    }
-  }
-}
 ion-fab .fab-list-active .fab-backdrop {
   position: fixed;
   top: 0;
