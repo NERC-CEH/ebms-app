@@ -11,6 +11,8 @@ import {
   IonIcon,
   IonBadge,
 } from '@ionic/react';
+import { open } from 'ionicons/icons';
+import config from 'config';
 import OnlineStatus from './components/OnlineStatus';
 import ErrorMessage from './components/ErrorMessage';
 import 'common/images/butterfly.svg';
@@ -47,6 +49,15 @@ const Survey = observer(({ sample }) => {
       ? `/survey/${survey}/${sample.cid}/edit`
       : undefined;
 
+  let externalHref;
+
+  if (isSent) {
+    externalHref =
+      survey === 'transect'
+        ? `${config.site_url}my-walks`
+        : `${config.site_url}elastic/my-records`;
+  }
+
   function getSampleInfo() {
     if (survey === 'transect') {
       return (
@@ -66,7 +77,9 @@ const Survey = observer(({ sample }) => {
         </h3>
         <h3>{prettyDate}</h3>
         <IonBadge color="medium">
-          <IonIcon src="/images/butterfly.svg" /> {speciesCount}
+          <IonIcon src="/images/butterfly.svg" /> 
+          {' '}
+          {speciesCount}
         </IonBadge>
       </IonLabel>
     );
@@ -74,7 +87,11 @@ const Survey = observer(({ sample }) => {
   return (
     <IonItemSliding class="survey-list-item">
       <ErrorMessage sample={sample} />
-      <IonItem routerLink={href} detail={!!href}>
+      <IonItem
+        routerLink={href}
+        href={externalHref}
+        detailIcon={externalHref ? open : undefined}
+      >
         {getSampleInfo()}
         <OnlineStatus sample={sample} />
       </IonItem>
