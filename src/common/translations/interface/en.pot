@@ -926,5 +926,11 @@ msgstr "Description"
 msgid "Counts"
 msgstr "Counts"
 
+msgid "Species descriptions"
+msgstr "Species descriptions"
+
+msgid "Species descriptions included as part of the guide are based on those produced for the Climatic Risk Atlas of European Butterflies. We thank Josef Settele for making these available."
+msgstr "Species descriptions included as part of the guide are based on those produced for the Climatic Risk Atlas of European Butterflies. We thank Josef Settele for making these available."
+
 msgid "Photo credits"
 msgstr "Photo credits"

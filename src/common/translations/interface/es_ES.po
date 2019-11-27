@@ -424,7 +424,7 @@ msgid "Reports"
 msgstr "Informes"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr ""
+msgstr "Lo sentimos, no hay datos de informes disponibles en este momento."
 
 msgid "Are you sure you want to delete this survey?"
 msgstr "¿Seguro que quieres borrar este muestreo?"
@@ -1060,6 +1060,15 @@ msgstr "Descripción"
 
 msgid "Counts"
 msgstr "Recuentos"
+
+msgid "Species descriptions"
+msgstr ""
+
+msgid ""
+"Species descriptions included as part of the guide are based on those "
+"produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
+" Settele for making these available."
+msgstr ""
 
 msgid "Photo credits"
 msgstr "Créditos fotográficos"

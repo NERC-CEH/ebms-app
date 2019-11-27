@@ -1,10 +1,11 @@
 # Translators:
 # Carin Kullberg <listrefjarilar@ckg.se>, 2019
+# Karolis, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Carin Kullberg <listrefjarilar@ckg.se>, 2019\n"
+"Last-Translator: Karolis, 2019\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -158,6 +159,16 @@ msgstr ""
 
 msgid "Hesperia-comma-description"
 msgstr ""
+"Silversmygaren förekommer på öppen, mager gräsmark, hedmark och glest "
+"beväxta sandfält. Habitatet kan vara allt från torrt till fuktigt, men "
+"aldrig näringsrikt. Däremot kan silversmygaren söka nektar på näringsrika, "
+"blomrika områden, vanligen i nära anslutning till de platser där ägg och "
+"larver återfinns. Denna värmeälskande fjäril ses ofta sola på varma platser."
+" Äggen läggs på olika smalbladiga gräs, och övervintrar i detta stadium. På "
+"våren kommer larverna fram och tillbringar större delen av sin tid i skydd "
+"av sammanspunna gräsblad. De kommer främst ut nattetid för att äta. När de "
+"är fullvuxna spinner larverna en kokong av silke och gräsblad nära marken, "
+"och dör förpuppas den. Silversmygaren har en generation per år."
 
 msgid "Thymelicus-christi-description"
 msgstr ""
@@ -374,6 +385,16 @@ msgstr ""
 
 msgid "Gonepteryx-rhamni-description"
 msgstr ""
+"För många är citronfjärilen det första vårtecknet. Varma vårvinterdagar kan "
+"de citrongula hanarna titta fram. Honorna som är ljusare, nästan grönvita, "
+"brukar komma fram litet senare. Äggen läggs ett och ett på unga grenar av "
+"brakved (Frangula alnus) eller getapel (Rhamnus frangula). Larverna äter på "
+"de unga bladen. Pupporna hänger från små kvistar eller bladnerver. När de "
+"nya fjärilarna kläckts på sommaren besöker de blommor under en tid, innan de"
+" söker upp små hålrum bland grenar och stubbar eller i grästuvor där de "
+"sedan övervintrar, hängande uppochner för att kondensvatten ska kunna rinna "
+"av vingarna. Uppvaktning och parning sker följande vår. Citronfjäril har "
+"bara en generation per år."
 
 msgid "Gonepteryx-cleobule-description"
 msgstr ""

@@ -1041,5 +1041,14 @@ msgstr "Apibūdinimas"
 msgid "Counts"
 msgstr "Įrašai"
 
+msgid "Species descriptions"
+msgstr "Rūšių aprašai"
+
+msgid ""
+"Species descriptions included as part of the guide are based on those "
+"produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
+" Settele for making these available."
+msgstr "Ačiū Josef Settele už leidimą naudoti rūšių aprašus iš Climatic Risk Atlas of European Butterflies."
+
 msgid "Photo credits"
 msgstr ""

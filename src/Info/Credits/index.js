@@ -237,6 +237,19 @@ export default () => (
       <IonList>
         <IonItem>
           <IonLabel>
+            <b>{t('Species descriptions')}:</b>
+          </IonLabel>
+        </IonItem>
+        <IonItem lines="none">
+          <IonLabel>
+            {t('Species descriptions included as part of the guide are based on those produced for the Climatic Risk Atlas of European Butterflies. We thank Josef Settele for making these available.')}
+          </IonLabel>
+        </IonItem>
+      </IonList>
+
+      <IonList>
+        <IonItem>
+          <IonLabel>
             <b>{t('Photo credits')}:</b>
           </IonLabel>
         </IonItem>
