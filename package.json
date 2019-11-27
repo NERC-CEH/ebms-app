@@ -1,8 +1,8 @@
 {
-  "name": "ebms-app",
+  "name": "butterfly-count-app",
   "id": "uk.ac.ceh.ebms",
-  "title": "eBMS App",
-  "description": "eBMS mobile application.",
+  "title": "ButterflyCount",
+  "description": "ButterflyCount mobile application.",
   "version": "1.3.0",
   "build": "2",
   "homepage": "http://www.butterfly-monitoring.net",

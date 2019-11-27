@@ -1,9 +1,9 @@
-# eBMS App [![Build Status](https://travis-ci.org/NERC-CEH/ebms-app.svg?branch=master)](https://travis-ci.org/NERC-CEH/ebms-app)
+# ButterflyCount [![Build Status](https://travis-ci.org/NERC-CEH/ebms-app.svg?branch=master)](https://travis-ci.org/NERC-CEH/ebms-app)
 
 
 ## Authors
 
-[Karolis Kazlauskis](https://kazlauskis.com)
+[Flumens](https://flumens.io)
 
 ## Copyright and license
 
