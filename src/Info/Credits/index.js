@@ -27,7 +27,7 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>David Roy</b> (the Centre for Ecology & Hydrology)
+            <b>David Roy</b> (UK Centre for Ecology & Hydrology)
           </IonLabel>
         </IonItem>
         <IonItem>
@@ -57,6 +57,11 @@ export default () => (
             <b>Martin Warren</b> (Butterfly Conservation Europe)
           </IonLabel>
         </IonItem>
+        <IonItem>
+          <IonLabel>
+            <b>Biren Rathod</b> (the UK Centre for Ecology & Hydrology)
+          </IonLabel>
+        </IonItem>
       </IonList>
 
       <IonList>
@@ -82,13 +87,13 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Centre for Ecology and Hydrology (CEH, UK)</b> – David Roy, Reto
+            <b>UK Centre for Ecology and Hydrology (UKCEH, UK)</b> – David Roy, Reto
             Schmucki
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Sub-contracts to CEH</b>: Karolis Kazlauskis (App development),
+            <b>Sub-contracts to UKCEH</b>: Karolis Kazlauskis (App development),
             Gary van Breda (Website development), John van Breda (Website
             development)
           </IonLabel>
@@ -104,6 +109,7 @@ export default () => (
         <IonItem>
           <IonLabel>
             <b>Helmholtz Centre for Environmental Research (UFZ, Germany)</b>
+            – Josef Settele, Oliver Schweiger
           </IonLabel>
         </IonItem>
         <IonItem>
@@ -123,7 +129,7 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>NERC-CEH</b>, CEH, David Roy
+            <b>UKCEH</b>, David Roy
           </IonLabel>
         </IonItem>
         <IonItem>
