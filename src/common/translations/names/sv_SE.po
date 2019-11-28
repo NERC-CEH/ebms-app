@@ -1,11 +1,12 @@
 # Translators:
 # Karolis, 2019
 # Carin Kullberg <listrefjarilar@ckg.se>, 2019
+# Lars Pettersson <lars.pettersson@biol.lu.se>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Carin Kullberg <listrefjarilar@ckg.se>, 2019\n"
+"Last-Translator: Lars Pettersson <lars.pettersson@biol.lu.se>, 2019\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1458,19 +1459,19 @@ msgid "Erebia sudetica"
 msgstr ""
 
 msgid "Erebia melampus"
-msgstr ""
+msgstr "Erebia melampus"
 
 msgid "Erebia triarius"
 msgstr ""
 
 msgid "Erebia polaris"
-msgstr ""
+msgstr "Erebia polaris"
 
 msgid "Erebia medusa"
 msgstr "Högnordisk gräsfjäril"
 
 msgid "Erebia aethiops"
-msgstr ""
+msgstr "Erebia aethiops"
 
 msgid "Erebia pharte"
 msgstr ""
@@ -1482,34 +1483,34 @@ msgid "Erebia orientalis"
 msgstr ""
 
 msgid "Erebia epiphron"
-msgstr ""
+msgstr "Erebia epiphron"
 
 msgid "Erebia flavofasciata"
-msgstr ""
+msgstr "Erebia flavofasciata"
 
 msgid "Erebia montana"
-msgstr ""
+msgstr "Erebia montanus"
 
 msgid "Erebia styx"
-msgstr ""
+msgstr "Erebia styx"
 
 msgid "Erebia stiria"
-msgstr ""
+msgstr "Erebia stirius"
 
 msgid "Erebia scipio"
-msgstr ""
+msgstr "Erebia scipio"
 
 msgid "Erebia pronoe"
-msgstr ""
+msgstr "Erebia pronoe"
 
 msgid "Erebia melas"
-msgstr ""
+msgstr "Erebia melas"
 
 msgid "Erebia lefebvrei"
-msgstr ""
+msgstr "Erebia lefebvrei"
 
 msgid "Erebia zapateri"
-msgstr ""
+msgstr "Erebia zapateri"
 
 msgid "Erebia neoridas"
-msgstr ""
+msgstr "Erebia neoridas"

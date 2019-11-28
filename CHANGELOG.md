@@ -39,3 +39,12 @@
 
 * Add eBMS Transect recording
 * Add species guide
+
+## 1.4
+
+### Features
+* Add top recorded species report
+
+### Other
+* Change app name to ButterflyCount
+* Content updates
