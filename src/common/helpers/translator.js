@@ -5,6 +5,8 @@ import lt_LT from '../translations/interface/lt_LT.po';
 import es_ES from '../translations/interface/es_ES.po';
 import sv_SE from '../translations/interface/sv_SE.po';
 import fi_FI from '../translations/interface/fi_FI.po';
+import hr_HR from '../translations/interface/hr_HR.po';
+import nl_NL from '../translations/interface/nl_NL.po';
 import fr_FR from '../translations/interface/fr_FR.po';
 import ru_RU from '../translations/interface/ru_RU.po';
 
@@ -13,6 +15,8 @@ import species_lt_LT from '../translations/species/lt_LT.po';
 import species_es_ES from '../translations/species/es_ES.po';
 import species_sv_SE from '../translations/species/sv_SE.po';
 import species_fi_FI from '../translations/species/fi_FI.po';
+import species_hr_HR from '../translations/species/hr_HR.po';
+import species_nl_NL from '../translations/species/nl_NL.po';
 import species_fr_FR from '../translations/species/fr_FR.po';
 import species_ru_RU from '../translations/species/ru_RU.po';
 
@@ -21,6 +25,8 @@ import names_lt_LT from '../translations/names/lt_LT.po';
 import names_es_ES from '../translations/names/es_ES.po';
 import names_sv_SE from '../translations/names/sv_SE.po';
 import names_fi_FI from '../translations/names/fi_FI.po';
+import names_hr_HR from '../translations/names/hr_HR.po';
+import names_nl_NL from '../translations/names/nl_NL.po';
 import names_fr_FR from '../translations/names/fr_FR.po';
 import names_ru_RU from '../translations/names/ru_RU.po';
 
@@ -39,6 +45,8 @@ const dictionary = {
   es_ES,
   sv_SE,
   fi_FI,
+  hr_HR,
+  nl_NL,
   fr_FR,
   ru_RU,
 };
@@ -49,6 +57,8 @@ const species = {
   es_ES: species_es_ES,
   sv_SE: species_sv_SE,
   fi_FI: species_fi_FI,
+  hr_HR: species_hr_HR,
+  nl_NL: species_nl_NL,
   fr_FR: species_fr_FR,
   ru_RU: species_ru_RU,
 };
@@ -59,6 +69,8 @@ const names = {
   es_ES: names_es_ES,
   sv_SE: names_sv_SE,
   fi_FI: names_fi_FI,
+  hr_HR: names_hr_HR,
+  nl_NL: names_nl_NL,
   fr_FR: names_fr_FR,
   ru_RU: names_ru_RU,
 };
@@ -68,6 +80,8 @@ export const languages = {
   lt_LT: 'Lietuvių',
   es_ES: 'Español',
   sv_SE: 'Svenska',
+  hr_HR: 'Hrvatski',
+  nl_NL: 'Nederlands',
   fi_FI: 'Suomi',
   fr_FR: 'Français',
   ru_RU: 'Pусский',

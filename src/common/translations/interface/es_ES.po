@@ -761,10 +761,10 @@ msgid "Uploaded"
 msgstr "Subido"
 
 msgid "No finished pending surveys"
-msgstr "Nada"
+msgstr "No hay muestreos terminados"
 
 msgid "No uploaded surveys"
-msgstr "Nada"
+msgstr "No hay muestreos subidos"
 
 msgid "Enjoying the app?"
 msgstr "¿Estás disfrutando la aplicación?"

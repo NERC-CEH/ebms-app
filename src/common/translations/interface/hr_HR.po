@@ -1,0 +1,1057 @@
+# Translators:
+# Martina Sasic <martina.sasic@hpm.hr>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"Last-Translator: Martina Sasic <martina.sasic@hpm.hr>, 2019\n"
+"Language-Team: Croatian (Croatia) (https://www.transifex.com/ceh/teams/95441/hr_HR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hr_HR\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Select your country"
+msgstr "Odaberi svoju državu"
+
+msgid "United Kingdom"
+msgstr "Velika Britanija"
+
+msgid "Lithuania"
+msgstr "Litva"
+
+msgid "Spain"
+msgstr "Španjolska"
+
+msgid "Andorra"
+msgstr "Andora"
+
+msgid "Albania"
+msgstr "Albanija"
+
+msgid "Austria"
+msgstr "Austrija"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Bosna i Hercegovina"
+
+msgid "Belgium"
+msgstr "Belgija"
+
+msgid "Bulgaria"
+msgstr "Bugarska"
+
+msgid "Belarus"
+msgstr "Bjelorusija"
+
+msgid "Switzerland"
+msgstr "Švicarska"
+
+msgid "Cyprus"
+msgstr "Cipar"
+
+msgid "Czechia"
+msgstr "Češka"
+
+msgid "Germany"
+msgstr "Njemačka"
+
+msgid "Denmark"
+msgstr "Danska"
+
+msgid "Estonia"
+msgstr "Estonija"
+
+msgid "Spain: Canary Islands"
+msgstr "Španjolska: Kanarski otoci"
+
+msgid "Finland"
+msgstr "Finska"
+
+msgid "France"
+msgstr "Francuska"
+
+msgid "Greece"
+msgstr "Grčka"
+
+msgid "Croatia"
+msgstr "Hrvatska"
+
+msgid "Hungary"
+msgstr "Mađarska"
+
+msgid "Ireland"
+msgstr "Irska"
+
+msgid "Iceland"
+msgstr "Island"
+
+msgid "Italy"
+msgstr "Italija"
+
+msgid "Liechtenstein"
+msgstr "Lihtenštajn"
+
+msgid "Luxembourg"
+msgstr "Luksemburg"
+
+msgid "Latvia"
+msgstr "Latvija"
+
+msgid "Moldova"
+msgstr "Moldavija"
+
+msgid "Montenegro"
+msgstr "Crna Gora"
+
+msgid "North Macedonia"
+msgstr "Sjeverna Makedonija"
+
+msgid "Malta"
+msgstr "Malta"
+
+msgid "Netherlands"
+msgstr "Nizozemska"
+
+msgid "Norway"
+msgstr "Norveška"
+
+msgid "Poland"
+msgstr "Poljska"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Portugal: Azores"
+msgstr "Portugal: Azori"
+
+msgid "Portugal: Madeira Islands"
+msgstr "Portugal: Madeira"
+
+msgid "Romania"
+msgstr "Rumunjska"
+
+msgid "Serbia"
+msgstr "Srbija"
+
+msgid "Russian Federation"
+msgstr "Ruska Federacija"
+
+msgid "Slovenia"
+msgstr "Slovenija"
+
+msgid "Slovakia"
+msgstr "Slovačka"
+
+msgid "Turkey"
+msgstr "Turska"
+
+msgid "Ukraine"
+msgstr "Ukrajina"
+
+msgid "Elsewhere"
+msgstr "drugdje"
+
+msgid "Skip"
+msgstr "Preskoči"
+
+msgid "Next"
+msgstr "Sljedeće"
+
+msgid "Get Started"
+msgstr "Započni"
+
+msgid "Please sign in with your eBMS account or register."
+msgstr "Prijavite se s vašim eBMS računom ili se registrirajte"
+
+msgid "Username or email"
+msgstr "Korisničko ime ili e-pošta"
+
+msgid "Password"
+msgstr "Lozinka"
+
+msgid "Sign in"
+msgstr "Prijavi se"
+
+msgid "Register"
+msgstr "Registriraj se"
+
+msgid "Forgot password?"
+msgstr "Zaboravljena lozinka?"
+
+msgid "User not found."
+msgstr "Korisnik nije pronađen."
+
+msgid "Login"
+msgstr "Prijavi se"
+
+msgid "Settings"
+msgstr "Postavke"
+
+msgid "Info"
+msgstr "Informacije"
+
+msgid "About"
+msgstr "O"
+
+msgid "Help"
+msgstr "Pomoć"
+
+msgid "Privacy Policy"
+msgstr "Politika zaštite privatnosti"
+
+msgid "Credits"
+msgstr "Krediti"
+
+msgid "Email"
+msgstr "E-pošta"
+
+msgid "First Name"
+msgstr "Ime"
+
+msgid "Surname"
+msgstr "Prezime"
+
+msgid "I agree to"
+msgstr "Prihvaćam"
+
+msgid "Terms and Conditions"
+msgstr "Odredbe i uvjeti"
+
+msgid "Enter your username or email address to request a password reset"
+msgstr "Unesi svoje korisničko ime ili e-poštu za promjenu lozinke"
+
+msgid "Reset"
+msgstr "Promijeni"
+
+msgid "Records"
+msgstr "Zapisi"
+
+msgid "Upload All"
+msgstr "Učitaj sve"
+
+msgid "Remove All Saved"
+msgstr "Ukloni sve pohranjeno"
+
+msgid "Application"
+msgstr "Aplikacija"
+
+msgid "Training Mode"
+msgstr "Trening način rada"
+
+msgid "Experimental Features"
+msgstr "Eksperimentalne značajke"
+
+msgid "Welcome"
+msgstr "Dobrodošli"
+
+msgid "Lets start!"
+msgstr "Započnimo!"
+
+msgid "TOP RECORDERS"
+msgstr "Top opažač"
+
+msgid "TOP SPECIES"
+msgstr "Top vrsta"
+
+msgid "Back"
+msgstr "Natrag"
+
+msgid "Menu"
+msgstr "Izbornik"
+
+msgid "App"
+msgstr "App"
+
+msgid ""
+"We are very grateful for all the people that helped to create this app:"
+msgstr ""
+"Najljepše zahvaljujemo svima koji su pomogli stvaranju ove aplikacije:"
+
+msgid "Home"
+msgstr "Početna stranica"
+
+msgid "Guide"
+msgstr "Vodič"
+
+msgid "Account"
+msgstr "Račun"
+
+msgid "Offline"
+msgstr "Izvanmrežno"
+
+msgid "Sorry, looks like you're offline."
+msgstr "Oprosti, izgleda da si izvan mreže."
+
+msgid "OK"
+msgstr "U redu"
+
+msgid "Sorry"
+msgstr "Oprosti"
+
+msgid "Please wait..."
+msgstr "Molimo pričekati..."
+
+msgid "name is a required field"
+msgstr "ime je obavezno polje"
+
+msgid "password is a required field"
+msgstr "lozinka je obavezno polje"
+
+msgid "Login error:"
+msgstr "Pogreška pri prijavi:"
+
+msgid "Failed to fetch"
+msgstr "Neuspjelo dohvaćanje"
+
+msgid "Incorrect password or email."
+msgstr "Neispravna lozinka ili e-pošta"
+
+msgid "Logout"
+msgstr "Odjavi se"
+
+msgid "Are you sure you want to logout?"
+msgstr "Da li si siguran da se želiš odjaviti?"
+
+msgid "This will delete all the records on this device."
+msgstr "To će obrisati sve podatke na ovom uređaju."
+
+msgid "Cancel"
+msgstr "Odustani"
+
+msgid "Welcome aboard!"
+msgstr "Dobrodošli!"
+
+msgid ""
+"Before submitting any records please check your email and click on the "
+"verification link."
+msgstr ""
+"Prije slanja podataka molimo vas da provjerite svoju elektroničku poštu i "
+"kliknete na link za verifikaciju."
+
+msgid "OK, got it"
+msgstr "U redu, shvatio sam"
+
+msgid "email is a required field"
+msgstr "e-pošta je obavezno polje"
+
+msgid "firstname is a required field"
+msgstr "Ime je obavezno polje"
+
+msgid "secondname is a required field"
+msgstr "Prezime je obavezno polje"
+
+msgid "must accept terms and conditions"
+msgstr "mora prihvatiti Odredbe i uvjete"
+
+msgid "Area Count"
+msgstr "???"
+
+msgid "Area"
+msgstr "Područje"
+
+msgid "Add"
+msgstr "Dodajte"
+
+msgid "Duration"
+msgstr "Trajanje"
+
+msgid "Species"
+msgstr "Vrsta"
+
+msgid "Species name"
+msgstr "Ime vrste"
+
+msgid ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
+msgstr ""
+"Za brže traženje imena taksona možete koristiti različite kratice. Npr. za "
+"pronalaženje"
+
+msgid "you can type in the search bar"
+msgstr "možete upisivati u polje za pretraživanje"
+
+msgid "Edit Occurrence"
+msgstr "Uredi pojavljivanje"
+
+msgid "Count"
+msgstr "Brojnost"
+
+msgid "Comment"
+msgstr "Komentar"
+
+msgid "Draft"
+msgstr "Nacrt"
+
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr ""
+"U nacrtu postoje podaci prethodnog istraživanja, da li želite nastaviti?"
+
+msgid "Discard"
+msgstr "Odbaci"
+
+msgid "Continue"
+msgstr "Nastavi"
+
+msgid "Finish"
+msgstr "Završi"
+
+msgid "minutes"
+msgstr "minute"
+
+msgid "No species added"
+msgstr "Vrsta nije dodana"
+
+msgid "Please draw your area on the map"
+msgstr "Molimo nacrtajte vaše područje na karti"
+
+msgid "Draw an area"
+msgstr "Nacrtaj područje"
+
+msgid "Delete"
+msgstr "Izbriši"
+
+msgid "Surveys"
+msgstr "Istraživanja"
+
+msgid "Reports"
+msgstr "Izvještaji"
+
+msgid "Sorry, no report data is available at the moment."
+msgstr ""
+
+msgid "Are you sure you want to delete this survey?"
+msgstr "Da li ste sigurni da želite izbrisati istraživanje?"
+
+msgid "No finished surveys"
+msgstr "Nema nezavršenih istraživanja"
+
+msgid "Finished surveys"
+msgstr "Završena istraživanja"
+
+msgid "Selected area"
+msgstr "Izabrano područje"
+
+msgid "Use survey create time"
+msgstr "Upotrijebi vrijeme početka istraživanja"
+
+msgid "Use survey finish time"
+msgstr "Upotrijebi vrijeme završetka istraživanja"
+
+msgid "species"
+msgstr "vrsta"
+
+msgid "Done"
+msgstr "Gotovo"
+
+msgid "Time's up!"
+msgstr "Vrijeme je isteklo!"
+
+msgid "Survey incomplete"
+msgstr "Istraživanje je nepotpuno"
+
+msgid "The survey is not complete yet."
+msgstr "Istraživanje još nije završeno"
+
+msgid "Please select a smaller area."
+msgstr "Molimo izaberite manje područje."
+
+msgid "Please add survey area information."
+msgstr "Molimo vas da dodate informacije o području istraživanja"
+
+msgid "Choose a method to upload a photo"
+msgstr "Izaberite način učitavanja fotografije"
+
+msgid "Gallery"
+msgstr "Galerija"
+
+msgid "Camera"
+msgstr "Kamera"
+
+msgid "Are you sure you want to remove this photo from the sample?"
+msgstr "Da li ste sigurni da želite ukloniti fotografiju iz uzorka???"
+
+msgid "Note: it will remain in the gallery."
+msgstr "Bilješka: ostat će u galeriji"
+
+msgid "No photo has been added"
+msgstr "Fotografija nije dodana"
+
+msgid "Registration error:"
+msgstr "Greška u registraciji:"
+
+msgid "Incorrect password or email"
+msgstr "Kriva lozinka ili e-pošta"
+
+msgid "email is not valid"
+msgstr "e-pošta ne vrijedi"
+
+msgid ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
+msgstr ""
+"Leptiri su zadivljujući kukci, ali njihov broj i dalje opada u mnogim "
+"dijelovima Europe, kao što je vidljivo na grafu indikatora travnjačkih "
+"staništa."
+
+msgid ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
+msgstr ""
+"Podaci prikupljeni ovom aplikacijom uvelike će doprinijeti poznavanju "
+"statusa leptira i njihovih staništa."
+
+msgid ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
+msgstr ""
+"U mnogim dijelovima Europe nedostaju nam podaci o o brojnosti leptira što je"
+" vidljivo u gustoći podataka upotrijebljenih za analizu njihova statusa."
+
+msgid ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects.  You can get "
+"started straight away"
+msgstr ""
+"Nikada nije bilo lakše doprijeti visokokvalitetnim podacima za istraživanje "
+"u svrhu očuvanja ovih fascinantnih i važnih kukaca. Možete početi odmah"
+
+msgid ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
+msgstr ""
+"Aplikacija je razvijena kao dio Projekta procjene stanja leptira Europe "
+"(ABLE)."
+
+msgid "The ABLE project is a partnership between"
+msgstr "Projekt ABLE je partnerstvo između"
+
+msgid "and"
+msgstr "i"
+
+msgid ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
+msgstr ""
+"ABLE je financiran od strane Glavne uprave za okoliš Europske unije kao "
+"ugovor o nabavi usluge za inicijalni period od 2019-20 godine."
+
+msgid "ABLE partners:"
+msgstr "ABLE partneri:"
+
+msgid ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
+msgstr ""
+"Ova aplikacija doprinosi podacima Europskog programa praćenja leptira "
+"(eBMS)."
+
+msgid "In June 2019, the following organisations are partners in eBMS:"
+msgstr "U lipnju 2019, sljedeće organizacije su partneri u eBMS-u:"
+
+msgid "Not enough data yet"
+msgstr "Još nema dovoljno podataka"
+
+msgid "How to start a survey"
+msgstr "Kako početi istraživanje"
+
+msgid "To start a new survey you can press the plus button"
+msgstr "Za početak novog istraživanja možete stisnuti tipku plus"
+
+msgid "in the home page footer. This will start a new 15 minute survey."
+msgstr ""
+"u podnožju početne stranice. Time će započeti novo 15-minutno istraživanje."
+
+msgid "Selecting species"
+msgstr "Odabir vrsta"
+
+msgid "Please press the Add"
+msgstr "Stisnite Dodaj"
+
+msgid ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
+msgstr ""
+"tipka na vašoj novoj stranici za uređivanje istraživanja. Ovo će vas dovesti"
+" na stranicu za pretraživanje svojti. Nakon odabira vrste, ista će biti "
+"dodana na popis vrsta opaženih tijekom istraživanja."
+
+msgid "Note"
+msgstr "Bilješka"
+
+msgid ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
+msgstr ""
+"možete dodati broj jedinki dodirom na broj pored imena vrste na popisu."
+
+msgid ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
+msgstr ""
+"Za brisanje vrste s popisa, prstom je povucite lijevo i kliknite tipku za "
+"brisanje."
+
+msgid ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
+msgstr ""
+"Da biste dodali više informacija o pojavi svoje vrste, možete otvoriti unos "
+"klikom na ime vrste."
+
+msgid "To finish a record you should also fill in the details of the area."
+msgstr "Za završetak zapisa unesite detaljne podatke o području."
+
+msgid ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
+msgstr ""
+"Kada ste gotovi, pošaljite podatke pritiskom na tipku Završi u zaglavlju."
+
+msgid "Searching for species"
+msgstr "Traženje vrste"
+
+msgid ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
+msgstr ""
+"Aplikacija sadrži oko 500 vrsta danjih leptira i svu pridruženu taksonomiju."
+" Za brže pretraživanje možete koristiti prečace. Npr, pronađi"
+
+msgid "Sync. with the website"
+msgstr "sinhronizacija s mrežnom stranicom"
+
+msgid "All your saved surveys will be shown on your account page."
+msgstr ""
+"Sva spremljena istraživanja bit će prikazana na stranici vašeg računa."
+
+msgid ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
+msgstr ""
+"Prema zadanim postavkama, istraživanje je u nacrtu „skice“ i neće se slati u"
+" bazu podataka dok se ne stisne tipka „Završi“ u zaglavlju. Aplikacija će "
+"vam pokušati poslati podatke kad postoji dobra mrežna veza."
+
+msgid "If the record has reached the database a red"
+msgstr "Ako je zapis dospio u bazu podataka crveno"
+
+msgid "(set for submission & saved locally) will become green"
+msgstr "(priprema za predaju i lokalna pohrana) će postati zeleno"
+
+msgid "synced to the database"
+msgstr "sinhronizirano s bazom podataka"
+
+msgid ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
+msgstr ""
+"za automatsku pozadinsku sinhronizaciju podataka morate biti na mreži i "
+"prijavljeni na svoj račun"
+
+msgid "Delete a record"
+msgstr "Izbrišite podatak"
+
+msgid ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
+msgstr ""
+"Za brisanje zapisa, prijeđite prstom lijevo na stranici vašeg računa i "
+"kliknite tipku za brisanje."
+
+msgid "User"
+msgstr "Korisnik"
+
+msgid "Sign in/out or register"
+msgstr "Prijavi se/ Odjavi se/ Registriraj se"
+
+msgid ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
+msgstr ""
+"Za prijavu, otvorite stranicu glavnog izbornika pritisnite tipku za prijavu "
+"ili registraciju, te slijedite upute."
+
+msgid "To logout, visit the main menu page and click the logout button."
+msgstr ""
+"Za odjavu, otiđite na stranicu glavnog izbornika i pritisnite tipku za "
+"odjavljivanje."
+
+msgid ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
+msgstr ""
+"Nakon registracije novog računa morate potvrditi svoju e-mail adresu klikom "
+"na link za verifikaciju poslan na vašu e-mail adresu"
+
+msgid "Other"
+msgstr "Drugo"
+
+msgid "Reset the application"
+msgstr "Resetirajte aplikaciju"
+
+msgid "Go to the application settings page"
+msgstr "Otiđite na stranicu postavki aplikacije"
+
+msgid "and click on the Reset"
+msgstr "i stisnite reset"
+
+msgid "button"
+msgstr "tipka"
+
+msgid "No species found with this name"
+msgstr "Nije pronađena vrsta s tim imenom"
+
+msgid "Allow Sample Edit"
+msgstr "Dopusti uređivanje uzorka"
+
+msgid "Upload"
+msgstr "Učitaj"
+
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+"Ova aplikacija podržava monitoring i očuvanje leptira. Kliknite tipku + u "
+"nastavku za početak brojanja leptira."
+
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""
+"Vidjet ćete puno poboljšanja aplikacije dodavanjem novih značajki u "
+"nadolazećim mjesecima."
+
+msgid "Are you sure you want to reset the application to its initial state?"
+msgstr "Jeste li sigurni da želite vratiti aplikaciju u početno stanje?"
+
+msgid "This will wipe all the locally stored app data!"
+msgstr "Izbrisat će se svi lokalno pohranjeni podaci aplikacije!"
+
+msgid "Sweden"
+msgstr "Švedska"
+
+msgid "Paused"
+msgstr "Pauzirano"
+
+msgid "Pending"
+msgstr "Čekanje"
+
+msgid "Uploaded"
+msgstr "Učitano"
+
+msgid "No finished pending surveys"
+msgstr "Nema gotovih istraživanja na čekanju"
+
+msgid "No uploaded surveys"
+msgstr "Nema učitanih istraživanja"
+
+msgid "Enjoying the app?"
+msgstr "Uživate u aplikaciji?"
+
+msgid "Not really"
+msgstr "Ne baš"
+
+msgid "Yes!"
+msgstr "Da!"
+
+msgid "Would you mind giving us some feedback?"
+msgstr "Želite li nam dati povratne informacije?"
+
+msgid "No, thanks"
+msgstr "Ne hvala"
+
+msgid "OK, sure"
+msgstr "U redu, naravno"
+
+msgid "How about a rating on the App Store then?"
+msgstr "Što kažete onda na ocijenjivanje aplikacije u App Storeu?"
+
+msgid "How about a rating on the Play Store then?"
+msgstr "Što kažete onda na ocijenjivanje aplikacije u Trgovini Play?"
+
+msgid "Icons made by"
+msgstr "Ikone napravio"
+
+msgid "from"
+msgstr "od"
+
+msgid "Enter your username or email address to request a password reset."
+msgstr ""
+"Unesite svoje korisničko ime ili adresu e-pošte da biste zatražili vraćanje "
+"lozinke"
+
+msgid "We've sent an email to you"
+msgstr "Poslali smo vam e-poštu"
+
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+"Kliknite vezu u e-pošti da biste resetirali zaporku. Ako ne vidite e-poštu, "
+"provjerite druga mjesta poput smeća, neželjene pošte ili drugih mapa."
+
+msgid "App Development"
+msgstr "Razvoj aplikacije"
+
+msgid "This app was hand crafted with love by"
+msgstr "Ovu je aplikaciju s ljubavlju ručno izrađivao"
+
+msgid "Agency specializing in building bespoke data oriented sollutions."
+msgstr "Agencija specijalizirana za izgradnju rješenja usmjerenih na podatke."
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr "Za prijedloge i povratne informacije ne ustručavajte se"
+
+msgid "contact us"
+msgstr "kontaktirajte nas"
+
+msgid "Language"
+msgstr "Jezik"
+
+msgid "Country"
+msgstr "Država"
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr ""
+"Svaki novi zapis označite kao \"trening\" i isključi ga iz svih izvještaja."
+
+msgid "Share App Analytics"
+msgstr "Dijelite analitiku aplikacije"
+
+msgid "Save Draft"
+msgstr "Spremiti nacrt"
+
+msgid "Stage"
+msgstr "Stupanj"
+
+msgid "Not Recorded"
+msgstr "Nije zabilježeno"
+
+msgid "Adults"
+msgstr "Odrasli"
+
+msgid "Larvae"
+msgstr "Gisjenice"
+
+msgid "Eggs"
+msgstr "Jaja"
+
+msgid "Pupae"
+msgstr "Kukuljice"
+
+msgid "Larval webs"
+msgstr "Mreže"
+
+msgid "Transect"
+msgstr "Transekt"
+
+msgid "Sections"
+msgstr "Odsječak"
+
+msgid "No transect"
+msgstr "Nema transekta"
+
+msgid "Start Time"
+msgstr "Vrijeme početka"
+
+msgid "End Time"
+msgstr "Vrijeme završetka"
+
+msgid "Temperature"
+msgstr "Temperatura"
+
+msgid "Cloud"
+msgstr "Naoblaka"
+
+msgid "Wind Direction"
+msgstr "Smjer vjetra "
+
+msgid "Wind Speed"
+msgstr "Brzina vjetra"
+
+msgid "Recorder"
+msgstr "Opažač"
+
+msgid "Refresh"
+msgstr "Osvježi"
+
+msgid "Please select your transect first."
+msgstr "Molimo izaberite prvo vaš transekt."
+
+msgid "Invalid server response."
+msgstr "Nevažeći odgovor poslužitelja."
+
+msgid "Not recorded/no data"
+msgstr "Nije zabilježeno/ nema podataka"
+
+msgid "Please specify the temperature C°."
+msgstr "Navedite temperaturu C°."
+
+msgid "S"
+msgstr "J"
+
+msgid "SW"
+msgstr "JZ"
+
+msgid "W"
+msgstr "Z"
+
+msgid "NW"
+msgstr "SZ"
+
+msgid "N"
+msgstr "S"
+
+msgid "NE"
+msgstr "SI"
+
+msgid "E"
+msgstr "I"
+
+msgid "SE"
+msgstr "JI"
+
+msgid "No direction"
+msgstr "bez smjera"
+
+msgid "Please specify the wind direction."
+msgstr "Navedite smjer vjetra."
+
+msgid "Smoke rises vertically"
+msgstr "Dim se diže uspravno"
+
+msgid "Slight smoke drift"
+msgstr "Dim se kreće u smjeru vjetra"
+
+msgid "Wind felt on face, leaves rustle"
+msgstr "Vjetar se osjeća na licu, lišće treperi"
+
+msgid "Leaves and twigs in slight motion"
+msgstr "Lišće se zajedno s grančicama njiše i šušti"
+
+msgid "Dust raised and small branches move"
+msgstr "Diže se prašina i njišu manje grane"
+
+msgid "Small trees in leaf begin to sway"
+msgstr "Njišu se manja stabla s lišćem"
+
+msgid "Large branches move and trees sway"
+msgstr "Svijaju se velike grane i stabla"
+
+msgid "Please specify the wind speed."
+msgstr "Navedite brzinu vjetra."
+
+msgid "Transects"
+msgstr "Transekt"
+
+msgid "Transect list was successfully updated."
+msgstr "Popis transekata je uspješno ažuriran."
+
+msgid "Section"
+msgstr "Odsječak"
+
+msgid "Reliability"
+msgstr "Pouzdanost"
+
+msgid "Please specify the reliability of the section count."
+msgstr "Odredite pouzdanost podataka na odsječcima"
+
+msgid "Suitable conditions"
+msgstr ""
+
+msgid "Unsuitable conditions"
+msgstr ""
+
+msgid "Unable to survey"
+msgstr ""
+
+msgid "Timed Area Count"
+msgstr "Vremenski ograničen obilazak"
+
+msgid "eBMS Transect"
+msgstr "eBMS transekt"
+
+msgid "Please add any extra info about this record."
+msgstr "Dodajte još podataka ovom zapisu."
+
+msgid "Enter more information here..."
+msgstr "Podatke upišite ovdje"
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr "Navedite ime osobe odgovorne za identifikaciju vrste."
+
+msgid "HH:mm"
+msgstr "sat:min"
+
+msgid "Please specify the % of cloud cover."
+msgstr "Navedite % oblaka."
+
+msgid "You don't have any transects. Please try to refresh the list."
+msgstr "Nemate niti jedan transekt. Probajte osvježiti listu."
+
+msgid "Wind speed info is missing"
+msgstr "Nedostaju podaci o brzini vjetra"
+
+msgid "Temperature info is missing"
+msgstr "Nedostaju podaci o temperaturi"
+
+msgid "Recorder info is missing"
+msgstr "Nedostaju podaci o opažaču"
+
+msgid "Please select your transect."
+msgstr "Izaberite svoj transekt"
+
+msgid ""
+"This guide is still in development. It covers %(countrySpeciesCount) "
+"butterfly species out of the %(totalSpeciesCountryCount) species in your "
+"selected country."
+msgstr ""
+"Vodič je još uvijek u izradi. Pokriva %(countrySpeciesCount) vrsta leptira "
+"od ukupno %(totalSpeciesCountryCount) vrsta u izabranoj državi."
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Absent"
+msgstr "Odsutna"
+
+msgid "Present"
+msgstr "Prisutna"
+
+msgid "Possibly present"
+msgstr "Vjerovatno prisutna"
+
+msgid "Regular migrant"
+msgstr "Redoviti migrant"
+
+msgid "Irregular vagrant"
+msgstr "Neredoviti vagrant/ lutalica"
+
+msgid "Regionally extinct"
+msgstr "Regionalno izumrla"
+
+msgid "Description"
+msgstr "Opis"
+
+msgid "Counts"
+msgstr "Zbroj"
+
+msgid "Species descriptions"
+msgstr ""
+
+msgid ""
+"Species descriptions included as part of the guide are based on those "
+"produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
+" Settele for making these available."
+msgstr ""
+
+msgid "Photo credits"
+msgstr "Izvori fotografija"
