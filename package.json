@@ -121,7 +121,7 @@
     "po-loader": "0.5.0",
     "po2json": "^1.0.0-alpha",
     "postcss-loader": "3.0.0",
-    "prettier-eslint": "9.0.0",
+    "prettier-eslint": "9.0.1",
     "prettier-eslint-cli": "5.0.0",
     "sass-loader": "8.0.0",
     "sharp-cli": "^1.11.0",
