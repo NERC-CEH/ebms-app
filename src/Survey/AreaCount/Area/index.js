@@ -14,9 +14,9 @@ class Container extends React.Component {
 
   state = {};
 
-  toggleGPStracking = () => {
+  toggleGPStracking = (on) => {
     const { sample } = this.props;
-    sample.toggleGPStracking();
+    sample.toggleGPStracking(on);
   };
 
   setLocation = shape => {
