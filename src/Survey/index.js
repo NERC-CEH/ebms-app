@@ -6,9 +6,17 @@ import userModel from 'user_model';
 import AreaCount from './AreaCount';
 import Transect from './Transect';
 
-const App = () => {
+const App = topProps => {
   if (!userModel.hasLogIn()) {
-    return <Redirect push to="/user/login" />;
+    return (
+      <Redirect
+        push
+        to={{
+          pathname: '/user/login',
+          state: { from: topProps.location },
+        }}
+      />
+    );
   }
 
   return (

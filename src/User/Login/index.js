@@ -46,11 +46,11 @@ async function onLogin(userModel, details, onSuccess) {
 
 export default function LoginContainer({ userModel, onSuccess }) {
   const context = useContext(NavContext);
-  window.context = context;
+
   const onSuccessReturn = () => {
     onSuccess && onSuccess();
-    if (context.currentPath === '/survey/new/edit') {
-      // login page is not part of the same outlet when redirected from survey
+    const { from } = context.getLocation().state;
+    if (from && !from.pathname.includes('/info/menu')) {
       window.history.back();
       return;
     }
