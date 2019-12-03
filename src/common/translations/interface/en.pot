@@ -860,8 +860,8 @@ msgstr "Unsuitable conditions"
 msgid "Unable to survey"
 msgstr "Unable to survey"
 
-msgid "Timed Area Count"
-msgstr "Timed Area Count"
+msgid "Timed Count"
+msgstr "Timed Count"
 
 msgid "eBMS Transect"
 msgstr "eBMS Transect"

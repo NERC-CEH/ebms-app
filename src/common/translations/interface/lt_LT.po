@@ -969,7 +969,7 @@ msgstr "Netinkamos sąlygos"
 msgid "Unable to survey"
 msgstr "Monitoringas negalimas"
 
-msgid "Timed Area Count"
+msgid "Timed Count"
 msgstr "Teritorijos Monitoringas"
 
 msgid "eBMS Transect"

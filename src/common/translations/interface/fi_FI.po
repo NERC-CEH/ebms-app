@@ -972,7 +972,7 @@ msgstr ""
 msgid "Unable to survey"
 msgstr ""
 
-msgid "Timed Area Count"
+msgid "Timed Count"
 msgstr ""
 
 msgid "eBMS Transect"

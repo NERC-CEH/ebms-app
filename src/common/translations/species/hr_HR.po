@@ -1,7 +1,10 @@
+# Translators:
+# Martina Sasic <martina.sasic@hpm.hr>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
+"Last-Translator: Martina Sasic <martina.sasic@hpm.hr>, 2019\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/ceh/teams/95441/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -11,7 +14,7 @@ msgstr ""
 "X-Generator: POEditor.com\n"
 
 msgid "Papilio-hospiton-description"
-msgstr ""
+msgstr "Papilio-hospiton-opis"
 
 msgid "Parnassius-mnemosyne-description"
 msgstr ""
@@ -570,6 +573,13 @@ msgstr ""
 
 msgid "Celastrina-argiolus-description"
 msgstr ""
+"Vrsta je široko rasprostranjena, iako su populacije obično male. Često ga se"
+" može vidjeti u parkovima i vrtovima, te rubovima šume i drugim grmovitim "
+"staništima. Jaja polaže na čašku ili stabljiku cvjetnih pupova ili na zrele "
+"plodove različitih vrsta biljaka: božikovina (Ilex aquifolium), bršljan "
+"(Hedera helix), obična kurika (Euonymus europaeus), krkavina (Frangula "
+"alnus), kupine (Rubus spp.) te vrijes i crnjuše (Calluna vulgaris and Erica "
+"spp.)."
 
 msgid "Tarucus-theophrastus-description"
 msgstr ""

@@ -990,7 +990,7 @@ msgstr "Condiciones inadecuadas"
 msgid "Unable to survey"
 msgstr "No se puedehcer la encuenta"
 
-msgid "Timed Area Count"
+msgid "Timed Count"
 msgstr "Área Recuentos cronometrados"
 
 msgid "eBMS Transect"

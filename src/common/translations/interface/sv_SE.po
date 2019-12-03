@@ -351,7 +351,7 @@ msgid "must accept terms and conditions"
 msgstr "Du måste godkänna villkoren"
 
 msgid "Area Count"
-msgstr "Inventering av ett område"
+msgstr "Områdesinventering"
 
 msgid "Area"
 msgstr "Område"
@@ -748,13 +748,13 @@ msgid "Paused"
 msgstr "Pausad"
 
 msgid "Pending"
-msgstr "Avvaktar"
+msgstr "Väntande"
 
 msgid "Uploaded"
-msgstr "Uppladdad"
+msgstr "Uppladdade"
 
 msgid "No finished pending surveys"
-msgstr "Inga avslutade inventeringar som avvaktar uppladdning"
+msgstr "Inga avslutade inventeringar som väntar på att laddas upp"
 
 msgid "No uploaded surveys"
 msgstr "Inga uppladdade inventeringar"
@@ -958,7 +958,7 @@ msgid "Please specify the wind speed."
 msgstr "Ange vindstyrka"
 
 msgid "Transects"
-msgstr "Slingor"
+msgstr "slingor"
 
 msgid "Transect list was successfully updated."
 msgstr "Listan över slingor har uppdaterats."
@@ -981,7 +981,7 @@ msgstr "Olämpliga förhållanden"
 msgid "Unable to survey"
 msgstr "Kan ej inventeras"
 
-msgid "Timed Area Count"
+msgid "Timed Count"
 msgstr "Tidsbegränsad områdesinventering (punktlokal)"
 
 msgid "eBMS Transect"
@@ -1030,10 +1030,10 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Absent"
-msgstr "Ej funnen"
+msgstr "Ej påträffad"
 
 msgid "Present"
-msgstr "Funnen"
+msgstr "Bofast"
 
 msgid "Possibly present"
 msgstr "Möjlig förekomst"
@@ -1042,7 +1042,7 @@ msgid "Regular migrant"
 msgstr "Återkommande migrant"
 
 msgid "Irregular vagrant"
-msgstr "Tillfälligt funnen"
+msgstr "Tillfällig förekomst"
 
 msgid "Regionally extinct"
 msgstr "Regionalt utdöd"
