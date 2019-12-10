@@ -54,7 +54,7 @@ const Survey = observer(({ sample }) => {
   if (isSent) {
     externalHref =
       survey === 'transect'
-        ? `${config.site_url}my-walks`
+        ? `${config.site_url}ebms-input-data?sample_id=${sample.id}`
         : `${config.site_url}elastic/my-records`;
   }
 
@@ -73,7 +73,7 @@ const Survey = observer(({ sample }) => {
     return (
       <IonLabel class="ion-text-wrap">
         <h3>
-          <b>{t('Area Count')}</b>
+          <b>{t('Timed Count')}</b>
         </h3>
         <h3>{prettyDate}</h3>
         <IonBadge color="medium">
