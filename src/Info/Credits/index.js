@@ -48,7 +48,7 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Irma van Swaay</b> (Dutch Butterfly Conservation, Butterfly
+            <b>Irma Wynhoff</b> (Dutch Butterfly Conservation, Butterfly
             Conservation Europe)
           </IonLabel>
         </IonItem>
