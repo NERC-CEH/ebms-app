@@ -982,7 +982,7 @@ msgid "Unable to survey"
 msgstr "Kan ej inventeras"
 
 msgid "Timed Count"
-msgstr "Tidsbegränsad områdesinventering (punktlokal)"
+msgstr "eBMS punktlokal"
 
 msgid "eBMS Transect"
 msgstr "eBMS-slinga"

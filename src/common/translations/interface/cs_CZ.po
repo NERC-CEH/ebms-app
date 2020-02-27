@@ -1,0 +1,1051 @@
+# Translators:
+# Zdenek Faltynek Fric <fric@entu.cas.cz>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"Last-Translator: Zdenek Faltynek Fric <fric@entu.cas.cz>, 2019\n"
+"Language-Team: Czech (Czech Republic) (https://www.transifex.com/ceh/teams/95441/cs_CZ/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Select your country"
+msgstr "Vyber svou zemi"
+
+msgid "United Kingdom"
+msgstr "Velká Británie"
+
+msgid "Lithuania"
+msgstr "Litva"
+
+msgid "Spain"
+msgstr "Španělsko"
+
+msgid "Andorra"
+msgstr "Andora"
+
+msgid "Albania"
+msgstr "Albánie"
+
+msgid "Austria"
+msgstr "Rakousko"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Bosna a Hercegovina"
+
+msgid "Belgium"
+msgstr "Belgie"
+
+msgid "Bulgaria"
+msgstr "Bulharsko"
+
+msgid "Belarus"
+msgstr "Bělorusko"
+
+msgid "Switzerland"
+msgstr "Švýcarsko"
+
+msgid "Cyprus"
+msgstr "Kypr"
+
+msgid "Czechia"
+msgstr "Česká republika"
+
+msgid "Germany"
+msgstr "Německo"
+
+msgid "Denmark"
+msgstr "Dánsko"
+
+msgid "Estonia"
+msgstr "Estonsko"
+
+msgid "Spain: Canary Islands"
+msgstr "Španělsko: Kanárské ostrovy"
+
+msgid "Finland"
+msgstr "Finsko"
+
+msgid "France"
+msgstr "Francie"
+
+msgid "Greece"
+msgstr "Řecko"
+
+msgid "Croatia"
+msgstr "Chorvatsko"
+
+msgid "Hungary"
+msgstr "Maďarsko"
+
+msgid "Ireland"
+msgstr "Irsko"
+
+msgid "Iceland"
+msgstr "Island"
+
+msgid "Italy"
+msgstr "Itálie"
+
+msgid "Liechtenstein"
+msgstr "Lichtenštejnsko"
+
+msgid "Luxembourg"
+msgstr "Lucembursko"
+
+msgid "Latvia"
+msgstr "Lotyšsko"
+
+msgid "Moldova"
+msgstr "Moldávie"
+
+msgid "Montenegro"
+msgstr "Černá Hora"
+
+msgid "North Macedonia"
+msgstr "Severní Makedonie"
+
+msgid "Malta"
+msgstr "Malta"
+
+msgid "Netherlands"
+msgstr "Nizozemí"
+
+msgid "Norway"
+msgstr "Norsko"
+
+msgid "Poland"
+msgstr "Polsko"
+
+msgid "Portugal"
+msgstr "Portugalsko"
+
+msgid "Portugal: Azores"
+msgstr "Portugalsko: Azory"
+
+msgid "Portugal: Madeira Islands"
+msgstr "Portugalsko: Madeira"
+
+msgid "Romania"
+msgstr "Rumunsko"
+
+msgid "Serbia"
+msgstr "Srbsko"
+
+msgid "Russian Federation"
+msgstr "Rusko"
+
+msgid "Slovenia"
+msgstr "Slovinsko"
+
+msgid "Slovakia"
+msgstr "Slovensko"
+
+msgid "Turkey"
+msgstr "Turecko"
+
+msgid "Ukraine"
+msgstr "Ukrajina"
+
+msgid "Elsewhere"
+msgstr "Kdekoli"
+
+msgid "Skip"
+msgstr "Přeskočit"
+
+msgid "Next"
+msgstr "Další"
+
+msgid "Get Started"
+msgstr "Začít"
+
+msgid "Please sign in with your eBMS account or register."
+msgstr "Přihlašte se do Vašeho eBMS účtu nebo se zaregistrujte"
+
+msgid "Username or email"
+msgstr "Jméno uživatele nebo e-mail"
+
+msgid "Password"
+msgstr "Heslo"
+
+msgid "Sign in"
+msgstr "Přihlášení"
+
+msgid "Register"
+msgstr "Registrace"
+
+msgid "Forgot password?"
+msgstr "Zapomenuté heslo?"
+
+msgid "User not found."
+msgstr "Uživatel nenalezen"
+
+msgid "Login"
+msgstr "Uživatelské jméno"
+
+msgid "Settings"
+msgstr "Nastavení"
+
+msgid "Info"
+msgstr "Informace"
+
+msgid "About"
+msgstr "O aplikaci"
+
+msgid "Help"
+msgstr "Nápověda"
+
+msgid "Privacy Policy"
+msgstr "Nastavení soukromí"
+
+msgid "Credits"
+msgstr "Kredit"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "First Name"
+msgstr "Jméno"
+
+msgid "Surname"
+msgstr "Příjmení"
+
+msgid "I agree to"
+msgstr "Souhlasím"
+
+msgid "Terms and Conditions"
+msgstr "Všeobecné podmínky"
+
+msgid "Enter your username or email address to request a password reset"
+msgstr "Zadej jméno nebo e-mailovou adresu na požadavek změny hesla"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid "Records"
+msgstr "Záznamy"
+
+msgid "Upload All"
+msgstr "Načti všechno"
+
+msgid "Remove All Saved"
+msgstr "Odstraň všechny uložené"
+
+msgid "Application"
+msgstr "Aplikace"
+
+msgid "Training Mode"
+msgstr "Simulace"
+
+msgid "Experimental Features"
+msgstr "Experimentální funkce"
+
+msgid "Welcome"
+msgstr "Vítejte"
+
+msgid "Lets start!"
+msgstr "Začněme!"
+
+msgid "TOP RECORDERS"
+msgstr "Nejlepší mapovatelé"
+
+msgid "TOP SPECIES"
+msgstr "Nejhojnější druhy"
+
+msgid "Back"
+msgstr "Zpět"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "App"
+msgstr "Aplikace"
+
+msgid ""
+"We are very grateful for all the people that helped to create this app:"
+msgstr "Jsme zavázáni všem lidem, kteří pomohli vytvořit tuto aplikaci"
+
+msgid "Home"
+msgstr "Domů"
+
+msgid "Guide"
+msgstr "Průvodce"
+
+msgid "Account"
+msgstr "Účet"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Sorry, looks like you're offline."
+msgstr "Pardon, zdá se, že jste offline"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Sorry"
+msgstr "Omlouváme se"
+
+msgid "Please wait..."
+msgstr "Počkejte, prosím..."
+
+msgid "name is a required field"
+msgstr "Jméno musí být vyplněno"
+
+msgid "password is a required field"
+msgstr "Heslo musí být zadáno"
+
+msgid "Login error:"
+msgstr "Chyba přihlášení"
+
+msgid "Failed to fetch"
+msgstr "Chyba v natažení dat"
+
+msgid "Incorrect password or email."
+msgstr "Nesprávné heslo nebo e-mail"
+
+msgid "Logout"
+msgstr "Odhlášení"
+
+msgid "Are you sure you want to logout?"
+msgstr "Opravdu se chcete odhlásit?"
+
+msgid "This will delete all the records on this device."
+msgstr "Tto smaže veškeré záznamy z tohoto zařízení"
+
+msgid "Cancel"
+msgstr "Zrušit"
+
+msgid "Welcome aboard!"
+msgstr "Vítejte na palubě!"
+
+msgid ""
+"Before submitting any records please check your email and click on the "
+"verification link."
+msgstr ""
+"Před odesláním jakéhokoli záznamu zkontrolujte e-mail a klikněte na "
+"potvrzující odkaz"
+
+msgid "OK, got it"
+msgstr "OK, pochopil jsem"
+
+msgid "email is a required field"
+msgstr "E-mail musí být vyplněn"
+
+msgid "firstname is a required field"
+msgstr "Jméno musí být vyplněno"
+
+msgid "secondname is a required field"
+msgstr "Příjmení musí být vyplněno"
+
+msgid "must accept terms and conditions"
+msgstr "Musíte přijmout podmínky"
+
+msgid "Area Count"
+msgstr "Počet ploch"
+
+msgid "Area"
+msgstr "Plocha"
+
+msgid "Add"
+msgstr "Vložit"
+
+msgid "Duration"
+msgstr "Doba"
+
+msgid "Species"
+msgstr "Druh"
+
+msgid "Species name"
+msgstr "Název druhu"
+
+msgid ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
+msgstr ""
+"Pro rychlejší hledání druhů můžete použít různé zkratky. Například najít"
+
+msgid "you can type in the search bar"
+msgstr "můžete zadat ve hledacím políčku"
+
+msgid "Edit Occurrence"
+msgstr "Editovat výskyt"
+
+msgid "Count"
+msgstr "Počty"
+
+msgid "Comment"
+msgstr "Poznámka"
+
+msgid "Draft"
+msgstr "Návrh"
+
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr "Existuje předchozí verze návrhu. Chcete pokračovat s ní?"
+
+msgid "Discard"
+msgstr "Zahodit změny"
+
+msgid "Continue"
+msgstr "Pokračovat"
+
+msgid "Finish"
+msgstr "Dokončit"
+
+msgid "minutes"
+msgstr "minuty"
+
+msgid "No species added"
+msgstr "Žádný druh nebyl přidán"
+
+msgid "Please draw your area on the map"
+msgstr "Prosím, nakreslete vaši plochu do mapy"
+
+msgid "Draw an area"
+msgstr "Zakreslit plochu"
+
+msgid "Delete"
+msgstr "Smazat"
+
+msgid "Surveys"
+msgstr "Průzkumy"
+
+msgid "Reports"
+msgstr "Zprávy"
+
+msgid "Sorry, no report data is available at the moment."
+msgstr "Omlouváme se, nejsou k dispozici žádná data k vytvoření zprávy"
+
+msgid "Are you sure you want to delete this survey?"
+msgstr "Opravdu chcete smazat tento průzkum?"
+
+msgid "No finished surveys"
+msgstr "Nedokončené průzkumy"
+
+msgid "Finished surveys"
+msgstr "Dokončené průzkumy"
+
+msgid "Selected area"
+msgstr "Vybrané území"
+
+msgid "Use survey create time"
+msgstr "Použij čas vytvoření průzkumu"
+
+msgid "Use survey finish time"
+msgstr "Použij čas dokončení průzkumu"
+
+msgid "species"
+msgstr "druh"
+
+msgid "Done"
+msgstr "Hotovo"
+
+msgid "Time's up!"
+msgstr "Čas vypršel"
+
+msgid "Survey incomplete"
+msgstr "Průzkum není kompletní"
+
+msgid "The survey is not complete yet."
+msgstr "Průzkum ještě není dokončen"
+
+msgid "Please select a smaller area."
+msgstr "Vyberte, prosím, menší území"
+
+msgid "Please add survey area information."
+msgstr "Vložte, prosím, informace o území"
+
+msgid "Choose a method to upload a photo"
+msgstr "Vyberte metodu k nahrání fotografie"
+
+msgid "Gallery"
+msgstr "Galerie"
+
+msgid "Camera"
+msgstr "Fotoaparát"
+
+msgid "Are you sure you want to remove this photo from the sample?"
+msgstr "Opravdu chcete odebrat fotografii z tohoto vzorku?"
+
+msgid "Note: it will remain in the gallery."
+msgstr "Poznámka: fotografie zůstane v galerii"
+
+msgid "No photo has been added"
+msgstr "Žádná fotografie nebyla vložena"
+
+msgid "Registration error:"
+msgstr "Chyba registrace"
+
+msgid "Incorrect password or email"
+msgstr "Nesprávné heslo nebo e-mail"
+
+msgid "email is not valid"
+msgstr "E-mail není platný"
+
+msgid ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
+msgstr ""
+"Motýli patří mezi oblíbenou hmyzí skupinu, ale v mnoha evropských částech "
+"ubývají. Tak jako ukazuje tento Indikátor lučních motýlů v EU"
+
+msgid ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
+msgstr ""
+"Sběr dat touto aplikací pomůže velice zlepšit znalosti o stavu motýlů a "
+"jejich životního prostředí"
+
+msgid ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
+msgstr ""
+"Z mnoha evropských míst nemáme dostatek informací o počtech motýlů, jak "
+"ilustruje hustota záznamů, které jsou aktuálně k dispozici"
+
+msgid ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects.  You can get "
+"started straight away"
+msgstr ""
+"Nikdy nebylo jednodušší přispět velice kvalitními daty pro výzkum, který "
+"podpoří ochranu tohoto fasicnujícího a důležitéhohmyzu. SMůžete začít právě "
+"teď"
+
+msgid ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
+msgstr ""
+"Tato aplikace byla zhotovena jako součást Projektu pro vyhodnocení stavu "
+"evropských motýlů (Assessing Butterflies in Europe, ABLE)"
+
+msgid "The ABLE project is a partnership between"
+msgstr "Projekt ABLE představuje partnerství mezi"
+
+msgid "and"
+msgstr "a"
+
+msgid ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
+msgstr ""
+"ABLE je smluvně podpořena z ředitelství Evropské unie pro životní prostředí "
+"pro počáteční dvouleté období od 2019-2020"
+
+msgid "ABLE partners:"
+msgstr "Partneři ABLE"
+
+msgid ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
+msgstr ""
+"Tato aplikace přispívá daty pro Evropské motýlí monitorovací schema (eBMS)."
+
+msgid "In June 2019, the following organisations are partners in eBMS:"
+msgstr "Následující organizace jsou partnery eBMS od června 2019:"
+
+msgid "Not enough data yet"
+msgstr "Zatím není dostatek dat"
+
+msgid "How to start a survey"
+msgstr "Jak začít průzkum"
+
+msgid "To start a new survey you can press the plus button"
+msgstr "Pro začátek nového průzkumu zmáčkněte tlačítko plus"
+
+msgid "in the home page footer. This will start a new 15 minute survey."
+msgstr "Na záložce hlavního panelu. Toto vytvoří nový 15 minutový průzkum"
+
+msgid "Selecting species"
+msgstr "Vybírám druhy"
+
+msgid "Please press the Add"
+msgstr "Prosím, zmáčkněte tlačítko Vložit"
+
+msgid ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
+msgstr ""
+"na Vaší editační stránce nového průzkumu. To vás přenese na stránku pro "
+"hledání druhů. Druh bude po vybrání přidán do průzkumového seznamu"
+
+msgid "Note"
+msgstr "Poznámka"
+
+msgid ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
+msgstr ""
+"můžete zvýšit počet jedinců kliknutím na číslo vedle názvu druhu v seznamu"
+
+msgid ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
+msgstr ""
+"Pro smazání druhu z průzkumového seznamu ho můžete odsunout doleva a "
+"zmáčknout tlačítko pro smazání"
+
+msgid ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
+msgstr "Pro vložení více informací o výskytu druhu, tak klikněte na druh"
+
+msgid "To finish a record you should also fill in the details of the area."
+msgstr "Pro dokončení záznamu vyplňte detaily o území"
+
+msgid ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
+msgstr ""
+"Až skončíte, zmáčkněte tlačítko Konec nahoře, abyste mohli data odeslat"
+
+msgid "Searching for species"
+msgstr "Hledání druhu"
+
+msgid ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
+msgstr ""
+"Aplikace obsahuje seznam zhruba 500 druhů se všemi taxonomickými úrovněmi. "
+"Pro ruchlejší hledání druhů můžete použít různé klávesové zkratky. Např. "
+"abyste našli"
+
+msgid "Sync. with the website"
+msgstr "Synchronizace s webovým rozhraním"
+
+msgid "All your saved surveys will be shown on your account page."
+msgstr "Všechny uložené průzkumy budou zobrazeny na stránce Vašeho účtu"
+
+msgid ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
+msgstr ""
+"Průzkum je od začátku prováděn v editačním modu a nebude odeslán do "
+"databáze, dokud nezmačknete tlačítko Konec nahoře. Aplikace se pokusí "
+"odeslat Vaše údaje hned, jak bude na dobrém síťovém připojení"
+
+msgid "If the record has reached the database a red"
+msgstr "Pokud bude záznam odeslán do databáze"
+
+msgid "(set for submission & saved locally) will become green"
+msgstr ""
+"(nastavený pro odeslání a lokálně uložený), červené označení se změní na "
+"zelené"
+
+msgid "synced to the database"
+msgstr "synchronizováno s databází"
+
+msgid ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
+msgstr ""
+"musíte být přihlášen do webového rozhraní a musíte být připojen na síť, aby "
+"se Vaše záznamy automaticky synchronizovaly na pozadí"
+
+msgid "Delete a record"
+msgstr "Smazat záznam"
+
+msgid ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
+msgstr ""
+"Abyste smazali záznam, odsuňte ho doleva na stránce Vašeho účtu a zmáčkněte "
+"tlačítko Smazat"
+
+msgid "User"
+msgstr "Uživatel"
+
+msgid "Sign in/out or register"
+msgstr "Přihlašte se/odhlašte se a nebo se zaregistrujte"
+
+msgid ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
+msgstr ""
+"K přihlášení se otevřete hlavní nabídku, klikněte na Přihlášení nebo "
+"Registraci a následujte instrukce"
+
+msgid "To logout, visit the main menu page and click the logout button."
+msgstr "K odhlášení se přejděte na hlavní nabídku a klikněte na Odhlášení"
+
+msgid ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
+msgstr ""
+"Po registraci nového účtu musíte potvrdit Vaši e-mailovou adresu kliknutím "
+"na potvrzující odkaz, který Vám byl zaslán na e-mail"
+
+msgid "Other"
+msgstr "Jiné"
+
+msgid "Reset the application"
+msgstr "Resetujte aplikaci"
+
+msgid "Go to the application settings page"
+msgstr "Přejděte na nastavení aplikace"
+
+msgid "and click on the Reset"
+msgstr "a klikněte na Reset"
+
+msgid "button"
+msgstr "tlačítko"
+
+msgid "No species found with this name"
+msgstr "Nebyl nalezen žádný druh s tímto názvem"
+
+msgid "Allow Sample Edit"
+msgstr "Umožněte úpravu vzorku"
+
+msgid "Upload"
+msgstr "Nahrát"
+
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+"Tato aplikace podporuje monitoring a ochranu motýlů. Klikněte na tlačítko + "
+"dole, abystemohli začít s počítáním motýlů"
+
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""
+"Uvidíte spoustu vylepšení této aplikace. V příštích měsících přidáme nové "
+"funkce."
+
+msgid "Are you sure you want to reset the application to its initial state?"
+msgstr "Opravdu chcete aplikaci resetovat do původního stavu?"
+
+msgid "This will wipe all the locally stored app data!"
+msgstr "Toto odstraní všechna lokálně uložená data aplikace!"
+
+msgid "Sweden"
+msgstr "Ǚédsko"
+
+msgid "Paused"
+msgstr "Pozastaveno"
+
+msgid "Pending"
+msgstr "Čekám"
+
+msgid "Uploaded"
+msgstr "Nahráno"
+
+msgid "No finished pending surveys"
+msgstr "Žádný dokončený průzkum ve frontě"
+
+msgid "No uploaded surveys"
+msgstr "Žádný průzkum nebyl nahrán"
+
+msgid "Enjoying the app?"
+msgstr "Líbí se Vám aplikace?"
+
+msgid "Not really"
+msgstr "Moc ne"
+
+msgid "Yes!"
+msgstr "Ano!"
+
+msgid "Would you mind giving us some feedback?"
+msgstr "Nebude Vám vadit nám dát zpětnou vazbu?"
+
+msgid "No, thanks"
+msgstr "Ne, díky"
+
+msgid "OK, sure"
+msgstr "Ano, jistě"
+
+msgid "How about a rating on the App Store then?"
+msgstr "Co aplikaci ohodnotit na App Store?"
+
+msgid "How about a rating on the Play Store then?"
+msgstr "Co aplikaci ohodnotit na Play Store?"
+
+msgid "Icons made by"
+msgstr "Ikonky vyrobeny"
+
+msgid "from"
+msgstr "z"
+
+msgid "Enter your username or email address to request a password reset."
+msgstr ""
+"Zadejte Vaše uživatelské jméno nebo e-mailovou adresu pro Vaši žádost na "
+"reset hesla"
+
+msgid "We've sent an email to you"
+msgstr "Zaslali jsme Vám e-mail"
+
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+"Klikněte na odkaz v e-mailu pro resetování hesla. Pokud e-mail nevidíte, "
+"prohledejte také nevyžádanou poštu či jiné záložky."
+
+msgid "App Development"
+msgstr "Vývoj aplikace"
+
+msgid "This app was hand crafted with love by"
+msgstr "Tato aplikace byla vytvořena ručně a s láskou "
+
+msgid "Agency specializing in building bespoke data oriented sollutions."
+msgstr "Agentura specializovaná na zakázková datově orientovaná řešení"
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr "Pokud máte nápady či cítíte potřebu zpětné vazby, neváhejte "
+
+msgid "contact us"
+msgstr "nás kontaktovat"
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "Country"
+msgstr "Země"
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr "Označte jakýkoli záznam jako \"pokusný\" a vyjměte ho ze všech zpráv"
+
+msgid "Share App Analytics"
+msgstr "Sdílejte analýzy aplikace"
+
+msgid "Save Draft"
+msgstr "Uložte návrh"
+
+msgid "Stage"
+msgstr "Stadium"
+
+msgid "Not Recorded"
+msgstr "Nezaznamenáno"
+
+msgid "Adults"
+msgstr "Dospělci"
+
+msgid "Larvae"
+msgstr "Housenky"
+
+msgid "Eggs"
+msgstr "Vajíčka"
+
+msgid "Pupae"
+msgstr "Kukly"
+
+msgid "Larval webs"
+msgstr "Hnízda housenek"
+
+msgid "Transect"
+msgstr "Transekt"
+
+msgid "Sections"
+msgstr "Sekce"
+
+msgid "No transect"
+msgstr "Není transekt"
+
+msgid "Start Time"
+msgstr "Čas začátku"
+
+msgid "End Time"
+msgstr "Čas konce"
+
+msgid "Temperature"
+msgstr "Teplota"
+
+msgid "Cloud"
+msgstr "Oblačnost"
+
+msgid "Wind Direction"
+msgstr "Směr větru"
+
+msgid "Wind Speed"
+msgstr "Rychlost větru"
+
+msgid "Recorder"
+msgstr "Mapovatel"
+
+msgid "Refresh"
+msgstr "Obnovit"
+
+msgid "Please select your transect first."
+msgstr "Vyberte, prosím, napřed transekt"
+
+msgid "Invalid server response."
+msgstr "Neplatná odpověď serveru"
+
+msgid "Not recorded/no data"
+msgstr "Nezaznamenáno/chybí data"
+
+msgid "Please specify the temperature C°."
+msgstr "Prosím, specifikujte teplotu v °C"
+
+msgid "S"
+msgstr "J"
+
+msgid "SW"
+msgstr "JZ"
+
+msgid "W"
+msgstr "Z"
+
+msgid "NW"
+msgstr "SZ"
+
+msgid "N"
+msgstr "S"
+
+msgid "NE"
+msgstr "SV"
+
+msgid "E"
+msgstr "V"
+
+msgid "SE"
+msgstr "JV"
+
+msgid "No direction"
+msgstr "Žádný směr"
+
+msgid "Please specify the wind direction."
+msgstr "Prosím, specifikujte směr větru"
+
+msgid "Smoke rises vertically"
+msgstr "Kouř stoupá vzhůru"
+
+msgid "Slight smoke drift"
+msgstr "Kouř je lehce unášen pryč"
+
+msgid "Wind felt on face, leaves rustle"
+msgstr "Vítr je cítit na tváři, listy ševelí"
+
+msgid "Leaves and twigs in slight motion"
+msgstr "Listy a větvičky se lehce pohybují"
+
+msgid "Dust raised and small branches move"
+msgstr "Zvedá se prach a menší větve se hýbají"
+
+msgid "Small trees in leaf begin to sway"
+msgstr "Malé stromky s listím se začínají houpat"
+
+msgid "Large branches move and trees sway"
+msgstr "Velké větve se hýbají, stromy se houpají"
+
+msgid "Please specify the wind speed."
+msgstr "Prosím, specifikujte rychlost větru"
+
+msgid "Transects"
+msgstr "Transekty"
+
+msgid "Transect list was successfully updated."
+msgstr "Seznam transektů byl úspěšně aktualizován"
+
+msgid "Section"
+msgstr "Sekce"
+
+msgid "Reliability"
+msgstr "Věrohodnost"
+
+msgid "Please specify the reliability of the section count."
+msgstr "Prosím, specifikujte věrohodnost početnosti v sekci"
+
+msgid "Suitable conditions"
+msgstr "Vhodné podmínky"
+
+msgid "Unsuitable conditions"
+msgstr "Nevhodné podmínky"
+
+msgid "Unable to survey"
+msgstr "Průzkum nebylo možné provést"
+
+msgid "Timed Count"
+msgstr "Časový součet"
+
+msgid "eBMS Transect"
+msgstr "Transekt eBMS"
+
+msgid "Please add any extra info about this record."
+msgstr "Vložte, prosím, další informace o tomto záznamu"
+
+msgid "Enter more information here..."
+msgstr "Vložte víc informací zde"
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr "Specifikujte, prosím, osobu zodpovědnou za určení druhů"
+
+msgid "HH:mm"
+msgstr "HH:mm"
+
+msgid "Please specify the % of cloud cover."
+msgstr "Specifikujte, prosím, % oblačnosti"
+
+msgid "You don't have any transects. Please try to refresh the list."
+msgstr "Nemáte žádné transekty. Zkuste znovu načíst seznam"
+
+msgid "Wind speed info is missing"
+msgstr "Chybí informace o rychlosti větru"
+
+msgid "Temperature info is missing"
+msgstr "Chybí informace o teplotě"
+
+msgid "Recorder info is missing"
+msgstr "Chybí informace o mapovateli"
+
+msgid "Please select your transect."
+msgstr "Vyberte,  prosím, svůj transekt"
+
+msgid ""
+"This guide is still in development. It covers %(countrySpeciesCount) "
+"butterfly species out of the %(totalSpeciesCountryCount) species in your "
+"selected country."
+msgstr ""
+"Tento průvodce je pořád v přípravě. Pokrývá %(countrySpeciesCount) druhů  z "
+"%(totalSpeciesCountryCount) motýlů ve Vaší vybrané zemi."
+
+msgid "Status"
+msgstr "Stav"
+
+msgid "Absent"
+msgstr "Nevyskytující se"
+
+msgid "Present"
+msgstr "Vyskytující se"
+
+msgid "Possibly present"
+msgstr "Pravděpodobný výskyt"
+
+msgid "Regular migrant"
+msgstr "Pravidelný migrant"
+
+msgid "Irregular vagrant"
+msgstr "Nepravidelný migrant"
+
+msgid "Regionally extinct"
+msgstr "Vyhynulý"
+
+msgid "Description"
+msgstr "Popis"
+
+msgid "Counts"
+msgstr "Počty"
+
+msgid "Species descriptions"
+msgstr "Popisy druhů"
+
+msgid ""
+"Species descriptions included as part of the guide are based on those "
+"produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
+" Settele for making these available."
+msgstr ""
+"Popisy druhů použité jako část tohoto průvodce vycházejí z Climatic Risk "
+"Atlas of European Butterflies. Děkujeme Josefu Settelovi za možnost jejich "
+"použití."
+
+msgid "Photo credits"
+msgstr "Autoři fotografií"

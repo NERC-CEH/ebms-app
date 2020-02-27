@@ -9,6 +9,10 @@ import hr_HR from '../translations/interface/hr_HR.po';
 import nl_NL from '../translations/interface/nl_NL.po';
 import fr_FR from '../translations/interface/fr_FR.po';
 import ru_RU from '../translations/interface/ru_RU.po';
+import pt_PT from '../translations/interface/pt_PT.po';
+import de_DE from '../translations/interface/de_DE.po';
+import it_IT from '../translations/interface/it_IT.po';
+import cs_CZ from '../translations/interface/cs_CZ.po';
 
 import species_en from '../translations/species/en.pot';
 import species_lt_LT from '../translations/species/lt_LT.po';
@@ -19,6 +23,10 @@ import species_hr_HR from '../translations/species/hr_HR.po';
 import species_nl_NL from '../translations/species/nl_NL.po';
 import species_fr_FR from '../translations/species/fr_FR.po';
 import species_ru_RU from '../translations/species/ru_RU.po';
+import species_pt_PT from '../translations/species/pt_PT.po';
+import species_de_DE from '../translations/species/de_DE.po';
+import species_it_IT from '../translations/species/it_IT.po';
+import species_cs_CZ from '../translations/species/cs_CZ.po';
 
 import names_en from '../translations/names/en.pot';
 import names_lt_LT from '../translations/names/lt_LT.po';
@@ -29,6 +37,10 @@ import names_hr_HR from '../translations/names/hr_HR.po';
 import names_nl_NL from '../translations/names/nl_NL.po';
 import names_fr_FR from '../translations/names/fr_FR.po';
 import names_ru_RU from '../translations/names/ru_RU.po';
+import names_pt_PT from '../translations/names/pt_PT.po';
+import names_de_DE from '../translations/names/de_DE.po';
+import names_it_IT from '../translations/names/it_IT.po';
+import names_cs_CZ from '../translations/names/cs_CZ.po';
 
 // Adding some context, reference and other in po files:
 
@@ -49,6 +61,10 @@ const dictionary = {
   nl_NL,
   fr_FR,
   ru_RU,
+  pt_PT,
+  de_DE,
+  it_IT,
+  cs_CZ,
 };
 
 const species = {
@@ -61,6 +77,10 @@ const species = {
   nl_NL: species_nl_NL,
   fr_FR: species_fr_FR,
   ru_RU: species_ru_RU,
+  pt_PT: species_pt_PT,
+  de_DE: species_de_DE,
+  it_IT: species_it_IT,
+  cs_CZ: species_cs_CZ,
 };
 
 const names = {
@@ -73,6 +93,10 @@ const names = {
   nl_NL: names_nl_NL,
   fr_FR: names_fr_FR,
   ru_RU: names_ru_RU,
+  pt_PT: names_pt_PT,
+  de_DE: names_de_DE,
+  it_IT: names_it_IT,
+  cs_CZ: names_cs_CZ,
 };
 
 export const languages = {
@@ -85,6 +109,10 @@ export const languages = {
   fi_FI: 'Suomi',
   fr_FR: 'Français',
   ru_RU: 'Pусский',
+  pt_PT: 'Português',
+  de_DE: 'Deutsch',
+  it_IT: 'Italiano',
+  cs_CZ: 'Čeština',
 };
 
 export const countries = {

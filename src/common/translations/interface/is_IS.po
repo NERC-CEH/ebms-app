@@ -1,1046 +1,984 @@
-# Translators:
-# Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2019
-# Ineke <ineke.radstaat@vlinderstichting.nl>, 2020
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
-"Language-Team: Dutch (Netherlands) (https://www.transifex.com/ceh/teams/95441/nl_NL/)\n"
+"Language-Team: Icelandic (Iceland) (https://www.transifex.com/ceh/teams/95441/is_IS/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl_NL\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: is_IS\n"
+"Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Selecteer land"
+msgstr ""
 
 msgid "United Kingdom"
-msgstr "Verenigd Koninkrijk"
+msgstr ""
 
 msgid "Lithuania"
-msgstr "Litouwen"
+msgstr ""
 
 msgid "Spain"
-msgstr "Spanje"
+msgstr ""
 
 msgid "Andorra"
-msgstr "Andorra"
+msgstr ""
 
 msgid "Albania"
-msgstr "Albanië"
+msgstr ""
 
 msgid "Austria"
-msgstr "Oostenrijk"
+msgstr ""
 
 msgid "Bosnia and Herzegovina"
-msgstr "Bosnië en Herzegovina"
+msgstr ""
 
 msgid "Belgium"
-msgstr "België"
+msgstr ""
 
 msgid "Bulgaria"
-msgstr "Bulgarije"
+msgstr ""
 
 msgid "Belarus"
-msgstr "Wit Rusland"
+msgstr ""
 
 msgid "Switzerland"
-msgstr "Zwitserland"
+msgstr ""
 
 msgid "Cyprus"
-msgstr "Cyprus"
+msgstr ""
 
 msgid "Czechia"
-msgstr "Tjechië"
+msgstr ""
 
 msgid "Germany"
-msgstr "Duitsland"
+msgstr ""
 
 msgid "Denmark"
-msgstr "Denemarken"
+msgstr ""
 
 msgid "Estonia"
-msgstr "Estland"
+msgstr ""
 
 msgid "Spain: Canary Islands"
-msgstr "Spanje: Canarische eilanden"
+msgstr ""
 
 msgid "Finland"
-msgstr "Finland"
+msgstr ""
 
 msgid "France"
-msgstr "Frankrijk"
+msgstr ""
 
 msgid "Greece"
-msgstr "Griekenland"
+msgstr ""
 
 msgid "Croatia"
-msgstr "Kroatië"
+msgstr ""
 
 msgid "Hungary"
-msgstr "Hongarije"
+msgstr ""
 
 msgid "Ireland"
-msgstr "Ierland"
+msgstr ""
 
 msgid "Iceland"
-msgstr "IJsland"
+msgstr ""
 
 msgid "Italy"
-msgstr "Italië"
+msgstr ""
 
 msgid "Liechtenstein"
-msgstr "Liechtenstein"
+msgstr ""
 
 msgid "Luxembourg"
-msgstr "Luxemburg"
+msgstr ""
 
 msgid "Latvia"
-msgstr "Letland"
+msgstr ""
 
 msgid "Moldova"
-msgstr "Moldavië"
+msgstr ""
 
 msgid "Montenegro"
-msgstr "Montenegro"
+msgstr ""
 
 msgid "North Macedonia"
-msgstr "Noord Macedonië"
+msgstr ""
 
 msgid "Malta"
-msgstr "Malta"
+msgstr ""
 
 msgid "Netherlands"
-msgstr "Nederland"
+msgstr ""
 
 msgid "Norway"
-msgstr "Noorwegen"
+msgstr ""
 
 msgid "Poland"
-msgstr "Polen"
+msgstr ""
 
 msgid "Portugal"
-msgstr "Portugal"
+msgstr ""
 
 msgid "Portugal: Azores"
-msgstr "Portugal: Azoren"
+msgstr ""
 
 msgid "Portugal: Madeira Islands"
-msgstr "Portugal: Madeira"
+msgstr ""
 
 msgid "Romania"
-msgstr "Roemenië"
+msgstr ""
 
 msgid "Serbia"
-msgstr "Servië"
+msgstr ""
 
 msgid "Russian Federation"
-msgstr "Rusland"
+msgstr ""
 
 msgid "Slovenia"
-msgstr "Slovenië"
+msgstr ""
 
 msgid "Slovakia"
-msgstr "Slovakije"
+msgstr ""
 
 msgid "Turkey"
-msgstr "Turkije"
+msgstr ""
 
 msgid "Ukraine"
-msgstr "Oekraïne"
+msgstr ""
 
 msgid "Elsewhere"
-msgstr "Daarbuiten"
+msgstr ""
 
 msgid "Skip"
-msgstr "Overslaan"
+msgstr ""
 
 msgid "Next"
-msgstr "Volgende"
+msgstr ""
 
 msgid "Get Started"
-msgstr "Start"
+msgstr ""
 
 msgid "Please sign in with your eBMS account or register."
-msgstr "Login met uw eBMS account of registreer"
+msgstr ""
 
 msgid "Username or email"
-msgstr "Gebruikersnaam of e-mail"
+msgstr ""
 
 msgid "Password"
-msgstr "Wachtwoord"
+msgstr ""
 
 msgid "Sign in"
-msgstr "Login"
+msgstr ""
 
 msgid "Register"
-msgstr "Registreer"
+msgstr ""
 
 msgid "Forgot password?"
-msgstr "Wachtwoord vergeten?"
+msgstr ""
 
 msgid "User not found."
-msgstr "Gebruiker niet gevonden."
+msgstr ""
 
 msgid "Login"
-msgstr "Login"
+msgstr ""
 
 msgid "Settings"
-msgstr "Instellingen"
+msgstr ""
 
 msgid "Info"
-msgstr "Info"
+msgstr ""
 
 msgid "About"
-msgstr "Over"
+msgstr ""
 
 msgid "Help"
-msgstr "Help"
+msgstr ""
 
 msgid "Privacy Policy"
-msgstr "Privacy"
+msgstr ""
 
 msgid "Credits"
-msgstr "Credits"
+msgstr ""
 
 msgid "Email"
-msgstr "E-mail"
+msgstr ""
 
 msgid "First Name"
-msgstr "Voornaam"
+msgstr ""
 
 msgid "Surname"
-msgstr "Achternaam"
+msgstr ""
 
 msgid "I agree to"
-msgstr "Ik ben het eens met"
+msgstr ""
 
 msgid "Terms and Conditions"
-msgstr "Voorwaarden"
+msgstr ""
 
 msgid "Enter your username or email address to request a password reset"
-msgstr "Voer uw gebruikersnaam of mailadres in om uw wachtwoord te resetten"
+msgstr ""
 
 msgid "Reset"
-msgstr "Reset"
+msgstr ""
 
 msgid "Records"
-msgstr "Waarnemingen"
+msgstr ""
 
 msgid "Upload All"
-msgstr "Alles uploaden"
+msgstr ""
 
 msgid "Remove All Saved"
-msgstr "Verwijder opgeslagen"
+msgstr ""
 
 msgid "Application"
-msgstr "Applicatie"
+msgstr ""
 
 msgid "Training Mode"
-msgstr "Training modus"
+msgstr ""
 
 msgid "Experimental Features"
-msgstr "Experimentele onderdelen"
+msgstr ""
 
 msgid "Welcome"
-msgstr "Welkom"
+msgstr ""
 
 msgid "Lets start!"
-msgstr "Laten we beginnen!"
+msgstr ""
 
 msgid "TOP RECORDERS"
-msgstr "Topwaarnemers"
+msgstr ""
 
 msgid "TOP SPECIES"
-msgstr "Topsoorten"
+msgstr ""
 
 msgid "Back"
-msgstr "Terug"
+msgstr ""
 
 msgid "Menu"
-msgstr "Menu"
+msgstr ""
 
 msgid "App"
-msgstr "App"
+msgstr ""
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
-msgstr "We bedanken iedereen die heeft geholpen met het bouwen van deze app:"
+msgstr ""
 
 msgid "Home"
-msgstr "Home"
+msgstr ""
 
 msgid "Guide"
-msgstr "Gids"
+msgstr ""
 
 msgid "Account"
-msgstr "Account"
+msgstr ""
 
 msgid "Offline"
-msgstr "Geen verbinding"
+msgstr ""
 
 msgid "Sorry, looks like you're offline."
-msgstr "Sorry, het lijkt erop dat u geen verbinding heeft"
+msgstr ""
 
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 msgid "Sorry"
-msgstr "Sorry"
+msgstr ""
 
 msgid "Please wait..."
-msgstr "Even wachten..."
+msgstr ""
 
 msgid "name is a required field"
-msgstr "Naam is een verplicht veld"
+msgstr ""
 
 msgid "password is a required field"
-msgstr "Wachtwoord is een verplicht veld"
+msgstr ""
 
 msgid "Login error:"
-msgstr "Login fout:"
+msgstr ""
 
 msgid "Failed to fetch"
-msgstr "Ophalen mislukt"
+msgstr ""
 
 msgid "Incorrect password or email."
-msgstr "Fout wachtwoord of e-mailadres."
+msgstr ""
 
 msgid "Logout"
-msgstr "Afmelden"
+msgstr ""
 
 msgid "Are you sure you want to logout?"
-msgstr "Weet u zeker dat u zich wilt afmelden?"
+msgstr ""
 
 msgid "This will delete all the records on this device."
-msgstr "Dit zal alle waarnemingen van uw apparaat verwijderen"
+msgstr ""
 
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr ""
 
 msgid "Welcome aboard!"
-msgstr "Welkom!"
+msgstr ""
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Voordat u waarnemingen kunt indienen: controleer uw mailadres en klik op de "
-"verificatielink om uw deelname te bevestigen. "
 
 msgid "OK, got it"
-msgstr "Ok, ik begrijp het."
+msgstr ""
 
 msgid "email is a required field"
-msgstr "E-mailadres is een verplicht veld"
+msgstr ""
 
 msgid "firstname is a required field"
-msgstr "Voornaam is een verplicht veld"
+msgstr ""
 
 msgid "secondname is a required field"
-msgstr "Achternaam is een verplicht veld"
+msgstr ""
 
 msgid "must accept terms and conditions"
-msgstr "U dient de voorwaarden te accepteren"
+msgstr ""
 
 msgid "Area Count"
-msgstr "Gebiedstelling"
+msgstr ""
 
 msgid "Area"
-msgstr "Gebied"
+msgstr ""
 
 msgid "Add"
-msgstr "Toevoegen"
+msgstr ""
 
 msgid "Duration"
-msgstr "Duur"
+msgstr ""
 
 msgid "Species"
-msgstr "Soort"
+msgstr ""
 
 msgid "Species name"
-msgstr "Soortnaam"
+msgstr ""
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
-"Om sneller te zoeken naar taxa kunt u verschillende snelkoppelingen "
-"gebruiken. Vind bijvooorbeeld"
 
 msgid "you can type in the search bar"
-msgstr "door in de zoekbalk te typen"
+msgstr ""
 
 msgid "Edit Occurrence"
-msgstr "Bewerk voorkomen"
+msgstr ""
 
 msgid "Count"
-msgstr "Tel"
+msgstr ""
 
 msgid "Comment"
-msgstr "Commentaar"
+msgstr ""
 
 msgid "Draft"
-msgstr "Concept"
+msgstr ""
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Er bestaat een eerder concept. Wilt u hiermee doorgaan?"
+msgstr ""
 
 msgid "Discard"
-msgstr "Wijs af"
+msgstr ""
 
 msgid "Continue"
-msgstr "Ga door"
+msgstr ""
 
 msgid "Finish"
-msgstr "Klaar"
+msgstr ""
 
 msgid "minutes"
-msgstr "minuten"
+msgstr ""
 
 msgid "No species added"
-msgstr "Geen soorten toegevoegd"
+msgstr ""
 
 msgid "Please draw your area on the map"
-msgstr "Teken uw gebied op de kaart"
+msgstr ""
 
 msgid "Draw an area"
-msgstr "Teken een gebied"
+msgstr ""
 
 msgid "Delete"
-msgstr "Verwijder"
+msgstr ""
 
 msgid "Surveys"
-msgstr "Telling"
+msgstr ""
 
 msgid "Reports"
-msgstr "Rapporten"
+msgstr ""
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Sorry, er zijn momenteel geen rapportgegevens beschikbaar."
+msgstr ""
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "Weet u zeker dat u deze telling wilt verwijderen?"
+msgstr ""
 
 msgid "No finished surveys"
-msgstr "Geen afgesloten tellingen"
+msgstr ""
 
 msgid "Finished surveys"
-msgstr "Afgesloten tellingen"
+msgstr ""
 
 msgid "Selected area"
-msgstr "Geselecteerd gebied"
+msgstr ""
 
 msgid "Use survey create time"
-msgstr "Gebruikt tijd begin telling"
+msgstr ""
 
 msgid "Use survey finish time"
-msgstr "Gebruik tijd einde telling"
+msgstr ""
 
 msgid "species"
-msgstr "Soort"
+msgstr ""
 
 msgid "Done"
-msgstr "Klaar"
+msgstr ""
 
 msgid "Time's up!"
-msgstr "De tijd is voorbij!"
+msgstr ""
 
 msgid "Survey incomplete"
-msgstr "Telling onvolledig"
+msgstr ""
 
 msgid "The survey is not complete yet."
-msgstr "Deze telling is nog niet compleet"
+msgstr ""
 
 msgid "Please select a smaller area."
-msgstr "Kies een kleiner gebied"
+msgstr ""
 
 msgid "Please add survey area information."
-msgstr "Voeg informatie over het onderzoeksgebied toe"
+msgstr ""
 
 msgid "Choose a method to upload a photo"
-msgstr "Kies een manier om een foto te uploaden"
+msgstr ""
 
 msgid "Gallery"
-msgstr "Galerij"
+msgstr ""
 
 msgid "Camera"
-msgstr "Camera"
+msgstr ""
 
 msgid "Are you sure you want to remove this photo from the sample?"
-msgstr "Weet u zeker dat u de foto wilt verwijderen"
+msgstr ""
 
 msgid "Note: it will remain in the gallery."
-msgstr "Notitie: deze zal in de galerij blijven staan"
+msgstr ""
 
 msgid "No photo has been added"
-msgstr "Er is nog geen foto geupload"
+msgstr ""
 
 msgid "Registration error:"
-msgstr "Registratiefout:"
+msgstr ""
 
 msgid "Incorrect password or email"
-msgstr "Fout wachtwoord of e-mailadres"
+msgstr ""
 
 msgid "email is not valid"
-msgstr "E-mailadres is niet geldig"
+msgstr ""
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Dagvlinders zijn fascinerende insecten, maar ze gaan in grote delen van "
-"Europa achteruit. Dat ziet u in deze grafiek van de Europese Graslandvlinder"
-" indicator."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
-"Gegevens die met deze app worden verzameld dragen bij aan kennis over "
-"dagvlinders en hun leefgebied."
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
-"Uit grote delen van Europa hebben we nog te weinig gegevens. Dat is te zien "
-"aan de dichtheid van waarnemingen die nu beschikbaar is om de status van "
-"dagvlinders vast te stellen."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects.  You can get "
 "started straight away"
 msgstr ""
-"Het was nog nooit zo gemakkelijk om gegevens te verzamelen en onderzoek naar"
-" de bescherming van deze fascinerende insecten te ondersteunen. U kunt "
-"meteen aan de slag."
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"Deze app is ontwikkeld als onderdeel van het EU project 'Assessing "
-"Butterflies in Europe' (ABLE)"
 
 msgid "The ABLE project is a partnership between"
-msgstr "Het ABLE project is een samenwerkingsverband van"
+msgstr ""
 
 msgid "and"
-msgstr "en"
+msgstr ""
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
-"ABLE wordt gefinancierd als een servicecontract van het EU Directoraat-"
-"generaal Milieu voor een periode van twee jaar van 2019-2020."
 
 msgid "ABLE partners:"
-msgstr "ABLE partners"
+msgstr ""
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
-msgstr "Deze app draagt bij aan het Europese Meetnet Dagvlinders (eBMS)."
+msgstr ""
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr "In juni 2019 zijn de volgende organisaties partner in het eBMS:"
+msgstr ""
 
 msgid "Not enough data yet"
-msgstr "Nog onvoldoende data"
+msgstr ""
 
 msgid "How to start a survey"
-msgstr "Hoe start u een telling?"
+msgstr ""
 
 msgid "To start a new survey you can press the plus button"
-msgstr "Om een telling te starten drukt u de plus knop"
+msgstr ""
 
 msgid "in the home page footer. This will start a new 15 minute survey."
-msgstr "onderaan de homepage. Hiermee start u een nieuwe 15-minutentelling."
+msgstr ""
 
 msgid "Selecting species"
-msgstr "Soortselectie"
+msgstr ""
 
 msgid "Please press the Add"
-msgstr "Druk op Toevoegen"
+msgstr ""
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"knop in uw nieuwe Bewerk Telling-pagina. Daarna komt u in de taxa zoek-"
-"pagina. Als u een soort selecteert, wordt die toegevoegd aan uw "
-"tellinglijst."
 
 msgid "Note"
-msgstr "Notitie"
+msgstr ""
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
-"U kunt de telling van een soort verhogen door op het nummer links naast de "
-"soortnaam te klikken."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Om een soort te verwijderen uit een telling kunt u naar links vegen en op de"
-" verwijderknop drukken"
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"Om meer informatie toe te voegen over het voorkomen van soorten, kunt u de "
-"soortinvoer openen door er op te klikken."
 
 msgid "To finish a record you should also fill in the details of the area."
-msgstr "Vul de gebiedsdetails in om de waarneming af te sluiten."
+msgstr ""
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
 msgstr ""
-"Klaar? Zet de telling klaar om in te dienen door te drukken op de knop Klaar"
-" (aan de bovenkant)."
 
 msgid "Searching for species"
-msgstr "Soort zoeken"
+msgstr ""
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"Deze app heeft een lijst met ongeveer 500 soorten dagvlinders. Om sneller te"
-" kunnen zoeken kunt u diverse afkortingen gebruiken. Vind bijvoorbeeld"
 
 msgid "Sync. with the website"
-msgstr "Synchroniseer met de webpagina"
+msgstr ""
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr "All uw bewaarde tellingen worden getoond in de profielpagina"
+msgstr ""
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Standaard wordt een telling als 'concept' opgeslagen. Deze wordt pas naar de"
-" database verzonden als u op de knop 'Klaar' bovenaan de pagina klikt. De "
-"app probeert dan uw telling in te dienen zodra er een goede "
-"internetverbinding is."
 
 msgid "If the record has reached the database a red"
-msgstr "Als de telling is ontvangen door de database, zal een rood"
+msgstr ""
 
 msgid "(set for submission & saved locally) will become green"
-msgstr "(klaar voor indienen en lokaal opgeslagen) wordt groen"
+msgstr ""
 
 msgid "synced to the database"
-msgstr "gesynchroniseerd met de database"
+msgstr ""
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
-"u moet ingelogd zijn met uw account en een internetverbinding hebben, waarna"
-" de waarnemingen worden gesynchroniseerd in de achtergrond"
 
 msgid "Delete a record"
-msgstr "Verwijder een waarneming"
+msgstr ""
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Om een waarneming te verwijderen, veeg naar links in uw profiel pagina en "
-"klik op de knop 'Verwijder'."
 
 msgid "User"
-msgstr "Gebruiker"
+msgstr ""
 
 msgid "Sign in/out or register"
-msgstr "Schrijf in/uit of registreer"
+msgstr ""
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"Om in te loggen, open de hoofdpagina, klik Login of Registreer en volg de "
-"instructies."
 
 msgid "To logout, visit the main menu page and click the logout button."
-msgstr "Om uit te loggen, ga naar de hoofdpagina en klik op Afmelden."
+msgstr ""
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
-"Na de registratie van een nieuw profiel moet uw e-mailadres geverifieerd "
-"worden, door te klikken op een verificatielink die via e-mail aan u "
-"verzonden wordt."
 
 msgid "Other"
-msgstr "Ander"
+msgstr ""
 
 msgid "Reset the application"
-msgstr "Reset de applicatie"
+msgstr ""
 
 msgid "Go to the application settings page"
-msgstr "Ga naar de instellingen pagina"
+msgstr ""
 
 msgid "and click on the Reset"
-msgstr "en klik Reset"
+msgstr ""
 
 msgid "button"
-msgstr "knop"
+msgstr ""
 
 msgid "No species found with this name"
-msgstr "Geen soort met deze naam gevonden"
+msgstr ""
 
 msgid "Allow Sample Edit"
-msgstr "Voorbeeldbewerking toestaan"
+msgstr ""
 
 msgid "Upload"
-msgstr "Upload"
+msgstr ""
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Deze app ondersteunt vlindermonitoring en bescherming. Klik de + knop en "
-"begin met vlinders tellen."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
-"U zult in de toekomst veel toevoegingen en verbeteringen zien,  die we de "
-"komende maanden gaan toevoegen."
 
 msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Weet u zeker dat u de app wil resetten naar de fabrieksinstellingen?"
+msgstr ""
 
 msgid "This will wipe all the locally stored app data!"
-msgstr "Dit verwijdert alle lokaal opgeslagen gegevens!"
+msgstr ""
 
 msgid "Sweden"
-msgstr "Zweden"
+msgstr ""
 
 msgid "Paused"
-msgstr "Gepauzeerd"
+msgstr ""
 
 msgid "Pending"
-msgstr "In afwachting"
+msgstr ""
 
 msgid "Uploaded"
-msgstr "Geupload"
+msgstr ""
 
 msgid "No finished pending surveys"
-msgstr "Geen afgeronde afwachtende tellingen"
+msgstr ""
 
 msgid "No uploaded surveys"
-msgstr "Geen geuploade tellingen"
+msgstr ""
 
 msgid "Enjoying the app?"
-msgstr "Vindt u dit een leuke app?"
+msgstr ""
 
 msgid "Not really"
-msgstr "Niet echt"
+msgstr ""
 
 msgid "Yes!"
-msgstr "Ja!"
+msgstr ""
 
 msgid "Would you mind giving us some feedback?"
-msgstr "Wilt u ons terugkoppeling geven?"
+msgstr ""
 
 msgid "No, thanks"
-msgstr "Nee, dank u"
+msgstr ""
 
 msgid "OK, sure"
-msgstr "Ja, graag"
+msgstr ""
 
 msgid "How about a rating on the App Store then?"
-msgstr "Wilt u ons een beoordeling in de App Store geven?"
+msgstr ""
 
 msgid "How about a rating on the Play Store then?"
-msgstr "Wilt u ons een beoordeling in de Play Store geven?"
+msgstr ""
 
 msgid "Icons made by"
-msgstr "Icoontjes gemaakt door"
+msgstr ""
 
 msgid "from"
-msgstr "van"
+msgstr ""
 
 msgid "Enter your username or email address to request a password reset."
 msgstr ""
-"Voer uw gebruikersnaam en e-mailadres in om uw wachtwoord te resetten."
 
 msgid "We've sent an email to you"
-msgstr "Wij hebben u een e-mail gestuurd"
+msgstr ""
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
-msgstr "Klik op de link in uw e-mail om het wachtwoord te resetten."
+msgstr ""
 
 msgid "App Development"
-msgstr "App-ontwikkeling"
+msgstr ""
 
 msgid "This app was hand crafted with love by"
-msgstr "Deze app is handmatig en met zorg ontworpen door"
+msgstr ""
 
 msgid "Agency specializing in building bespoke data oriented sollutions."
 msgstr ""
-"Agentschap gespecialiseerd in het maken van gesproken data geörienteerde "
-"oplossingen."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr "Voor suggesties en terugkoppeling kunt u altijd"
+msgstr ""
 
 msgid "contact us"
-msgstr "contact met ons opnemen"
+msgstr ""
 
 msgid "Language"
-msgstr "Taal"
+msgstr ""
 
 msgid "Country"
-msgstr "Land"
+msgstr ""
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
-"Markeer een nieuwe telling als 'training' en sluit uit van alle rapporten."
 
 msgid "Share App Analytics"
-msgstr "Deel app analysedata"
+msgstr ""
 
 msgid "Save Draft"
-msgstr "Sla concept op"
+msgstr ""
 
 msgid "Stage"
-msgstr "Stadium"
+msgstr ""
 
 msgid "Not Recorded"
-msgstr "Niet opgenomen"
+msgstr ""
 
 msgid "Adults"
-msgstr "Adulten"
+msgstr ""
 
 msgid "Larvae"
-msgstr "Rupsen"
+msgstr ""
 
 msgid "Eggs"
-msgstr "Eitjes"
+msgstr ""
 
 msgid "Pupae"
-msgstr "Poppen"
+msgstr ""
 
 msgid "Larval webs"
-msgstr "Rupsennesten"
+msgstr ""
 
 msgid "Transect"
-msgstr "Transect"
+msgstr ""
 
 msgid "Sections"
-msgstr "Secties"
+msgstr ""
 
 msgid "No transect"
-msgstr "Geen transect"
+msgstr ""
 
 msgid "Start Time"
-msgstr "Starttijd"
+msgstr ""
 
 msgid "End Time"
-msgstr "Eindttijd"
+msgstr ""
 
 msgid "Temperature"
-msgstr "Temperatuur"
+msgstr ""
 
 msgid "Cloud"
-msgstr "Bewolking"
+msgstr ""
 
 msgid "Wind Direction"
-msgstr "Windrichting"
+msgstr ""
 
 msgid "Wind Speed"
-msgstr "Windsnelheid"
+msgstr ""
 
 msgid "Recorder"
-msgstr "Waarnemer"
+msgstr ""
 
 msgid "Refresh"
-msgstr "Verversen"
+msgstr ""
 
 msgid "Please select your transect first."
-msgstr "Selecteer eerst uw transect."
+msgstr ""
 
 msgid "Invalid server response."
-msgstr "Ongeldige server response"
+msgstr ""
 
 msgid "Not recorded/no data"
-msgstr "Niet opgenomen / geen data"
+msgstr ""
 
 msgid "Please specify the temperature C°."
-msgstr "Kies de temperatuur in C°."
+msgstr ""
 
 msgid "S"
-msgstr "Z"
+msgstr ""
 
 msgid "SW"
-msgstr "ZO"
+msgstr ""
 
 msgid "W"
-msgstr "W"
+msgstr ""
 
 msgid "NW"
-msgstr "NW"
+msgstr ""
 
 msgid "N"
-msgstr "N"
+msgstr ""
 
 msgid "NE"
-msgstr "NO"
+msgstr ""
 
 msgid "E"
-msgstr "O"
+msgstr ""
 
 msgid "SE"
-msgstr "ZO"
+msgstr ""
 
 msgid "No direction"
-msgstr "Geen richting"
+msgstr ""
 
 msgid "Please specify the wind direction."
-msgstr "Vul de windrichting in."
+msgstr ""
 
 msgid "Smoke rises vertically"
-msgstr "Rook stijgt (bijna) recht omhoog"
+msgstr ""
 
 msgid "Slight smoke drift"
-msgstr "Windrichting goed af te leiden uit rookpluimen"
+msgstr ""
 
 msgid "Wind felt on face, leaves rustle"
-msgstr "Wind voelbaar in gezicht, blad ritselt"
+msgstr ""
 
 msgid "Leaves and twigs in slight motion"
-msgstr "Bladeren en takken bewegen af en toe"
+msgstr ""
 
 msgid "Dust raised and small branches move"
-msgstr "Opwaaiend stof, bladeren en takken bewegen"
+msgstr ""
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Kleine bomen met blad bewegen"
+msgstr ""
 
 msgid "Large branches move and trees sway"
-msgstr "Dikke takken en bomen bewegen"
+msgstr ""
 
 msgid "Please specify the wind speed."
-msgstr "Vul de windsnelheid in."
+msgstr ""
 
 msgid "Transects"
-msgstr "Transecten"
+msgstr ""
 
 msgid "Transect list was successfully updated."
-msgstr "Update transectlijst succesvol"
+msgstr ""
 
 msgid "Section"
-msgstr "Sectie"
+msgstr ""
 
 msgid "Reliability"
-msgstr "Betrouwbaarheid"
+msgstr ""
 
 msgid "Please specify the reliability of the section count."
-msgstr "Vul de betrouwbaarheid van de telling van deze sectie in."
+msgstr ""
 
 msgid "Suitable conditions"
-msgstr "Gunstige omstandigheden"
+msgstr ""
 
 msgid "Unsuitable conditions"
-msgstr "Ongunstige omstandigheden"
+msgstr ""
 
 msgid "Unable to survey"
-msgstr "Tellen niet mogelijk"
+msgstr ""
 
 msgid "Timed Count"
-msgstr "Kwartiertelling"
+msgstr ""
 
 msgid "eBMS Transect"
-msgstr "eBMS Transect"
+msgstr ""
 
 msgid "Please add any extra info about this record."
-msgstr "Geef extra informatie over deze waarneming."
+msgstr ""
 
 msgid "Enter more information here..."
-msgstr "Geef hier meer informatie..."
+msgstr ""
 
 msgid "Please specify the person responsible for identifying the species."
 msgstr ""
-"Geef aan wie er verantwoordelijk is voor het op naam brengen van de soort."
 
 msgid "HH:mm"
-msgstr "UU:mm"
+msgstr ""
 
 msgid "Please specify the % of cloud cover."
-msgstr "Geef het % van de bewolking aan."
+msgstr ""
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "U heeft geen transecten. Probeer de lijst te verversen."
+msgstr ""
 
 msgid "Wind speed info is missing"
-msgstr "Windsnelheid ontbreekt"
+msgstr ""
 
 msgid "Temperature info is missing"
-msgstr "Temperatuur ontbreekt"
+msgstr ""
 
 msgid "Recorder info is missing"
-msgstr "Waarnemer ontbreekt"
+msgstr ""
 
 msgid "Please select your transect."
-msgstr "Selecteer uw transect"
+msgstr ""
 
 msgid ""
 "This guide is still in development. It covers %(countrySpeciesCount) "
 "butterfly species out of the %(totalSpeciesCountryCount) species in your "
 "selected country."
 msgstr ""
-"Deze gids is nog in ontwikkeling. Hij bevat %(countrySpeciesCount) "
-"vlindersoorten van de %(totalSpeciesCountryCount) dagvlinders in uw "
-"geselecteerde land."
 
 msgid "Status"
-msgstr "Toestand"
+msgstr ""
 
 msgid "Absent"
-msgstr "Afwezig"
+msgstr ""
 
 msgid "Present"
-msgstr "Aanwezig"
+msgstr ""
 
 msgid "Possibly present"
-msgstr "Mogelijk aanwezig"
+msgstr ""
 
 msgid "Regular migrant"
-msgstr "Reguliere migrant"
+msgstr ""
 
 msgid "Irregular vagrant"
-msgstr "Onregelmatige zwerver"
+msgstr ""
 
 msgid "Regionally extinct"
 msgstr ""
 
 msgid "Description"
-msgstr "Omschrijving"
+msgstr ""
 
 msgid "Counts"
 msgstr ""

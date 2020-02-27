@@ -1,16 +1,13 @@
-# Translators:
-# Karolis, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2020\n"
-"Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
+"Language-Team: Portuguese (Portugal) (https://www.transifex.com/ceh/teams/95441/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lt_LT\n"
-"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Papilio-hospiton-description"
@@ -1500,12 +1497,6 @@ msgstr ""
 
 msgid "Erebia-pronoe-description"
 msgstr ""
-"The Water Ringlet is found especially on flower-rich grasslands, rocky, "
-"grassy slopes, and near woodland. The female usually deposits her eggs close"
-" to the ground, on dry stalks of grass. The caterpillars feed on Sheep's "
-"Fescue (Festuca ovina), F. quadriflora and various meadow-grasses (Poa "
-"spp.). The caterpillars hibernate in the first larval instar and pupate in "
-"June or July of the following year."
 
 msgid "Erebia-melas-description"
 msgstr ""
@@ -1514,13 +1505,7 @@ msgid "Erebia-lefebvrei-description"
 msgstr ""
 
 msgid "Erebia-zapateri-description"
-msgstr "Erebia-zapateri-description"
+msgstr ""
 
 msgid "Erebia-neoridas-description"
 msgstr ""
-"The Autumn Ringlet occurs in woodland clearings and on grassy vegetation "
-"with scattered bushes. The caterpillars feed on different grasses, such as "
-"Crab-grass (Digitaria sanguinalis), Alpine Meadow-Grass (Poa alpina), Smooth"
-" Meadow-grass (Poa pratensis), Annual Meadow-grass (P. annua), "
-"Sheep's-fescue (Festuca ovina), and Meadow Fescue (F. pratensis). This "
-"species is single-brooded and hibernates as a caterpillar."

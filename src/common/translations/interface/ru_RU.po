@@ -1,10 +1,10 @@
 # Translators:
-# Светлана Соболева <sv.goloshchapova@gmail.com>, 2019
+# Светлана Соболева <sv.goloshchapova@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Светлана Соболева <sv.goloshchapova@gmail.com>, 2019\n"
+"Last-Translator: Светлана Соболева <sv.goloshchapova@gmail.com>, 2020\n"
 "Language-Team: Russian (Russia) (https://www.transifex.com/ceh/teams/95441/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,133 +26,133 @@ msgid "Spain"
 msgstr "Испания"
 
 msgid "Andorra"
-msgstr ""
+msgstr "Андорра"
 
 msgid "Albania"
-msgstr ""
+msgstr "Албания"
 
 msgid "Austria"
-msgstr ""
+msgstr "Австрия"
 
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "Босния и Герцеговина"
 
 msgid "Belgium"
-msgstr ""
+msgstr "Бельгия"
 
 msgid "Bulgaria"
-msgstr ""
+msgstr "Болгария"
 
 msgid "Belarus"
-msgstr ""
+msgstr "Беларусь"
 
 msgid "Switzerland"
-msgstr ""
+msgstr "Швейцария"
 
 msgid "Cyprus"
-msgstr ""
+msgstr "Кипр"
 
 msgid "Czechia"
-msgstr ""
+msgstr "Чехия"
 
 msgid "Germany"
-msgstr ""
+msgstr "Германия"
 
 msgid "Denmark"
-msgstr ""
+msgstr "Дания"
 
 msgid "Estonia"
-msgstr ""
+msgstr "Эстония"
 
 msgid "Spain: Canary Islands"
-msgstr ""
+msgstr "Испания: Канарские острова"
 
 msgid "Finland"
-msgstr ""
+msgstr "Финляндия"
 
 msgid "France"
-msgstr ""
+msgstr "Франция"
 
 msgid "Greece"
-msgstr ""
+msgstr "Греция"
 
 msgid "Croatia"
-msgstr ""
+msgstr "Хорватия"
 
 msgid "Hungary"
-msgstr ""
+msgstr "Венгрия"
 
 msgid "Ireland"
-msgstr ""
+msgstr "Ирландия"
 
 msgid "Iceland"
-msgstr ""
+msgstr "Исландия"
 
 msgid "Italy"
-msgstr ""
+msgstr "Италия"
 
 msgid "Liechtenstein"
-msgstr ""
+msgstr "Лихтенштейн"
 
 msgid "Luxembourg"
-msgstr ""
+msgstr "Люксембург"
 
 msgid "Latvia"
-msgstr ""
+msgstr "Латвия"
 
 msgid "Moldova"
-msgstr ""
+msgstr "Молдова"
 
 msgid "Montenegro"
-msgstr ""
+msgstr "Черногория"
 
 msgid "North Macedonia"
-msgstr ""
+msgstr "Македония"
 
 msgid "Malta"
-msgstr ""
+msgstr "Мальта"
 
 msgid "Netherlands"
-msgstr ""
+msgstr "Нидерланды"
 
 msgid "Norway"
-msgstr ""
+msgstr "Норвегия"
 
 msgid "Poland"
-msgstr ""
+msgstr "Польша"
 
 msgid "Portugal"
-msgstr ""
+msgstr "Португалия"
 
 msgid "Portugal: Azores"
-msgstr ""
+msgstr "Португалия: Азорские острова"
 
 msgid "Portugal: Madeira Islands"
-msgstr ""
+msgstr "Португалия: Мадейра"
 
 msgid "Romania"
-msgstr ""
+msgstr "Румыния"
 
 msgid "Serbia"
-msgstr ""
+msgstr "Сербия"
 
 msgid "Russian Federation"
-msgstr ""
+msgstr "Россия"
 
 msgid "Slovenia"
-msgstr ""
+msgstr "Словения"
 
 msgid "Slovakia"
-msgstr ""
+msgstr "Словакия"
 
 msgid "Turkey"
-msgstr ""
+msgstr "Турция"
 
 msgid "Ukraine"
-msgstr ""
+msgstr "Украина"
 
 msgid "Elsewhere"
-msgstr ""
+msgstr "Другое место"
 
 msgid "Skip"
 msgstr "Пропустить"
@@ -183,7 +183,7 @@ msgid "Forgot password?"
 msgstr "Забыли пароль?"
 
 msgid "User not found."
-msgstr ""
+msgstr "Пользователь не найден"
 
 msgid "Login"
 msgstr "Логин"
@@ -204,7 +204,7 @@ msgid "Privacy Policy"
 msgstr "Политика конфиденциальности"
 
 msgid "Credits"
-msgstr ""
+msgstr "Цитирование"
 
 msgid "Email"
 msgstr "Электронная почта"
@@ -424,7 +424,7 @@ msgid "Reports"
 msgstr "Отчеты"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr ""
+msgstr "Извините, на данный момент нет доступных данных отчета"
 
 msgid "Are you sure you want to delete this survey?"
 msgstr "Вы уверены, что ходите удалить данное исследование?"
@@ -769,16 +769,16 @@ msgid "Not really"
 msgstr "Нет"
 
 msgid "Yes!"
-msgstr ""
+msgstr "Да"
 
 msgid "Would you mind giving us some feedback?"
-msgstr ""
+msgstr "Не могли бы Вы дать нам обратную связь?"
 
 msgid "No, thanks"
-msgstr ""
+msgstr "Нет, спасибо"
 
 msgid "OK, sure"
-msgstr ""
+msgstr "Да, конечно"
 
 msgid "How about a rating on the App Store then?"
 msgstr "Хотите оценить приложение в App Store?"
@@ -794,20 +794,24 @@ msgstr "С"
 
 msgid "Enter your username or email address to request a password reset."
 msgstr ""
+"Введите ваше имя пользователя или адрес электронной почты, чтобы "
+"восстановить пароль"
 
 msgid "We've sent an email to you"
-msgstr ""
+msgstr "Вам было отправлено письмо на электронную почту"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
+"Нажмите на ссылку в письме для восстановления пароля. Если Вы не получили "
+"письмо проверьте другие папки, как, например, \"спам\"."
 
 msgid "App Development"
-msgstr ""
+msgstr "Разработка приложения"
 
 msgid "This app was hand crafted with love by"
-msgstr ""
+msgstr "Это приложение было сделано вручную с любовью"
 
 msgid "Agency specializing in building bespoke data oriented sollutions."
 msgstr "Разработано Агентством "
@@ -816,70 +820,70 @@ msgid "For suggestions and feedback please do not hesitate to"
 msgstr "В случае имеющейся у Вас обратной связи"
 
 msgid "contact us"
-msgstr ""
+msgstr "Свяжитесь с нами"
 
 msgid "Language"
-msgstr ""
+msgstr "Язык"
 
 msgid "Country"
-msgstr ""
+msgstr "Страна"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
-msgstr ""
+msgstr "Пометить новые записи как \"тренировочные\" и исключить из всех отчетов."
 
 msgid "Share App Analytics"
-msgstr ""
+msgstr "Поделиться статистикой"
 
 msgid "Save Draft"
-msgstr ""
+msgstr "Сохранить черновик"
 
 msgid "Stage"
-msgstr ""
+msgstr "Стадия"
 
 msgid "Not Recorded"
-msgstr ""
+msgstr "Не указано"
 
 msgid "Adults"
-msgstr ""
+msgstr "Взрослая особь"
 
 msgid "Larvae"
-msgstr ""
+msgstr "Личинка"
 
 msgid "Eggs"
-msgstr ""
+msgstr "Яйца"
 
 msgid "Pupae"
-msgstr ""
+msgstr "Куколка"
 
 msgid "Larval webs"
-msgstr ""
+msgstr "Сети личинок"
 
 msgid "Transect"
-msgstr ""
+msgstr "Трансекта"
 
 msgid "Sections"
-msgstr ""
+msgstr "Секции"
 
 msgid "No transect"
-msgstr ""
+msgstr "Нет трансекты"
 
 msgid "Start Time"
-msgstr ""
+msgstr "Время начала"
 
 msgid "End Time"
-msgstr ""
+msgstr "Время окончания"
 
 msgid "Temperature"
-msgstr ""
+msgstr "Температура"
 
 msgid "Cloud"
-msgstr ""
+msgstr "Облачность"
 
 msgid "Wind Direction"
-msgstr ""
+msgstr "Направление ветра"
 
 msgid "Wind Speed"
-msgstr ""
+msgstr "Скорость ветра"
 
 msgid "Recorder"
 msgstr "Исследователь"
@@ -894,109 +898,110 @@ msgid "Invalid server response."
 msgstr "Ошибка сервера"
 
 msgid "Not recorded/no data"
-msgstr ""
+msgstr "Нет записей/нет данных"
 
 msgid "Please specify the temperature C°."
-msgstr ""
+msgstr "Пожалуйста, укажите температуру в градусах Цельсия."
 
 msgid "S"
-msgstr ""
+msgstr "Южный"
 
 msgid "SW"
-msgstr ""
+msgstr "Юго-западный"
 
 msgid "W"
-msgstr ""
+msgstr "Западный"
 
 msgid "NW"
-msgstr ""
+msgstr "Северо-западный"
 
 msgid "N"
-msgstr ""
+msgstr "Северный"
 
 msgid "NE"
-msgstr ""
+msgstr "Северо-восточный"
 
 msgid "E"
-msgstr ""
+msgstr "Восточный"
 
 msgid "SE"
-msgstr ""
+msgstr "Юго-восточный"
 
 msgid "No direction"
 msgstr "Штиль"
 
 msgid "Please specify the wind direction."
-msgstr ""
+msgstr "Пожалуйста, укажите направление ветра."
 
 msgid "Smoke rises vertically"
-msgstr ""
+msgstr "Дым поднимается вертикально"
 
 msgid "Slight smoke drift"
-msgstr ""
+msgstr "Дым отклоняется в сторону"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr ""
+msgstr "Дуновение ветра ощущается лицом, листья шелестят"
 
 msgid "Leaves and twigs in slight motion"
-msgstr ""
+msgstr "Листья и тонкие ветви деревьев колышутся"
 
 msgid "Dust raised and small branches move"
-msgstr ""
+msgstr "Поднимается пыль, колышутся тонкие веточки деревьев"
 
 msgid "Small trees in leaf begin to sway"
-msgstr ""
+msgstr "Небольшие деревья колышутся"
 
 msgid "Large branches move and trees sway"
-msgstr ""
+msgstr "Качаются толстые сучья и стволы деревьев"
 
 msgid "Please specify the wind speed."
-msgstr ""
+msgstr "Пожалуйста, укажите скорость ветра"
 
 msgid "Transects"
-msgstr ""
+msgstr "Трансекты"
 
 msgid "Transect list was successfully updated."
 msgstr "Данные трансекты обновлены"
 
 msgid "Section"
-msgstr ""
+msgstr "Секция"
 
 msgid "Reliability"
 msgstr "Достоверность"
 
 msgid "Please specify the reliability of the section count."
-msgstr ""
+msgstr "Пожалуйста, укажите достоверность выделения секций."
 
 msgid "Suitable conditions"
-msgstr ""
+msgstr "Подходящие условия"
 
 msgid "Unsuitable conditions"
-msgstr ""
+msgstr "Неподходящие условия"
 
 msgid "Unable to survey"
-msgstr ""
+msgstr "Не возможно провести исследование"
 
 msgid "Timed Count"
-msgstr ""
+msgstr "Временной учет"
 
 msgid "eBMS Transect"
-msgstr ""
+msgstr "eBMS трансекта"
 
 msgid "Please add any extra info about this record."
 msgstr ""
+"Пожалуйста, добавьте необходимую дополнительную информацию о данной записи."
 
 msgid "Enter more information here..."
-msgstr ""
+msgstr "Введите необходимую информацию здесь"
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr ""
+msgstr "Пожалуйста, укажите лицо, ответственное за определение видов."
 
 msgid "HH:mm"
-msgstr ""
+msgstr "ЧЧ:ММ"
 
 msgid "Please specify the % of cloud cover."
-msgstr ""
+msgstr "Пожалуйста, укажите % облачности."
 
 msgid "You don't have any transects. Please try to refresh the list."
 msgstr "Записи не обнаружены. Пожалуйста, обновите список."
@@ -1005,55 +1010,60 @@ msgid "Wind speed info is missing"
 msgstr "Нет информации о скорости ветра"
 
 msgid "Temperature info is missing"
-msgstr ""
+msgstr "Нет информации о температуре"
 
 msgid "Recorder info is missing"
-msgstr ""
+msgstr "Нет информации о записи"
 
 msgid "Please select your transect."
-msgstr ""
+msgstr "Пожалуйста, выберите Вашу трансекту."
 
 msgid ""
 "This guide is still in development. It covers %(countrySpeciesCount) "
 "butterfly species out of the %(totalSpeciesCountryCount) species in your "
 "selected country."
 msgstr ""
+"Руководство находится в разработке.  Оно несет информацию в % ( "
+"странавидсчет) о видах бабочек в % (всегостарнавидсчет) в выбранной стране."
 
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 msgid "Absent"
-msgstr ""
+msgstr "Отсутствие"
 
 msgid "Present"
-msgstr ""
+msgstr "Присутствие"
 
 msgid "Possibly present"
-msgstr ""
+msgstr "Возможно присутствие"
 
 msgid "Regular migrant"
-msgstr ""
+msgstr "Регулярный мигрант"
 
 msgid "Irregular vagrant"
-msgstr ""
+msgstr "Нерегулярный мигрант"
 
 msgid "Regionally extinct"
-msgstr ""
+msgstr "Вымерший в регионе"
 
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 msgid "Counts"
-msgstr ""
+msgstr "Учеты"
 
 msgid "Species descriptions"
-msgstr ""
+msgstr "Описание видов"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
+"Описания видов, включенные в руководство, основаны на заметках, "
+"подготовленных для Атласа климатических рисков бабочек Европы. Мы благодарим"
+" Джозефа Сеттела за эту возможность"
 
 msgid "Photo credits"
-msgstr ""
+msgstr "Авторы фотографий"

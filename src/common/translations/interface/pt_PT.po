@@ -1,0 +1,1071 @@
+# Translators:
+# Renata Santos <renatailsantos@gmail.com>, 2020
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"Last-Translator: Renata Santos <renatailsantos@gmail.com>, 2020\n"
+"Language-Team: Portuguese (Portugal) (https://www.transifex.com/ceh/teams/95441/pt_PT/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Select your country"
+msgstr "Selecione o seu país"
+
+msgid "United Kingdom"
+msgstr "Reino Unido"
+
+msgid "Lithuania"
+msgstr "Lituânia"
+
+msgid "Spain"
+msgstr "Espanha"
+
+msgid "Andorra"
+msgstr "Andorra"
+
+msgid "Albania"
+msgstr "Albânia"
+
+msgid "Austria"
+msgstr "Áustria"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Bósnia-Herzegovina"
+
+msgid "Belgium"
+msgstr "Bélgica"
+
+msgid "Bulgaria"
+msgstr "Bulgária"
+
+msgid "Belarus"
+msgstr "Bielorrússia"
+
+msgid "Switzerland"
+msgstr "Suíça"
+
+msgid "Cyprus"
+msgstr "Chipre"
+
+msgid "Czechia"
+msgstr "Chéquia"
+
+msgid "Germany"
+msgstr "Alemanha"
+
+msgid "Denmark"
+msgstr "Dinamarca"
+
+msgid "Estonia"
+msgstr "Estónia"
+
+msgid "Spain: Canary Islands"
+msgstr "Espanha: Ilhas Canárias"
+
+msgid "Finland"
+msgstr "Finlândia"
+
+msgid "France"
+msgstr "França"
+
+msgid "Greece"
+msgstr "Grécia"
+
+msgid "Croatia"
+msgstr "Croácia"
+
+msgid "Hungary"
+msgstr "Hungria"
+
+msgid "Ireland"
+msgstr "Irlanda"
+
+msgid "Iceland"
+msgstr "Islândia"
+
+msgid "Italy"
+msgstr "Itália"
+
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+msgid "Luxembourg"
+msgstr "Luxemburgo"
+
+msgid "Latvia"
+msgstr "Letónia"
+
+msgid "Moldova"
+msgstr "Moldávia"
+
+msgid "Montenegro"
+msgstr "Montenegro"
+
+msgid "North Macedonia"
+msgstr "Macedónia do Norte"
+
+msgid "Malta"
+msgstr "Malta"
+
+msgid "Netherlands"
+msgstr "Países Baixos"
+
+msgid "Norway"
+msgstr "Noruega"
+
+msgid "Poland"
+msgstr "Polónia"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Portugal: Azores"
+msgstr "Portugal: Açores"
+
+msgid "Portugal: Madeira Islands"
+msgstr "Portugal: Madeira"
+
+msgid "Romania"
+msgstr "Roménia"
+
+msgid "Serbia"
+msgstr "Sérvia"
+
+msgid "Russian Federation"
+msgstr "Rússia"
+
+msgid "Slovenia"
+msgstr "Eslovénia"
+
+msgid "Slovakia"
+msgstr "Eslováquia"
+
+msgid "Turkey"
+msgstr "Turquia"
+
+msgid "Ukraine"
+msgstr "Ucrânia"
+
+msgid "Elsewhere"
+msgstr "Outro local"
+
+msgid "Skip"
+msgstr "Saltar"
+
+msgid "Next"
+msgstr "Próximo"
+
+msgid "Get Started"
+msgstr "Começar"
+
+msgid "Please sign in with your eBMS account or register."
+msgstr "Por favor, entre na sua conta eBMS ou registe-se."
+
+msgid "Username or email"
+msgstr "Nome de utilizador ou email"
+
+msgid "Password"
+msgstr "Palavra-passe"
+
+msgid "Sign in"
+msgstr "Entre"
+
+msgid "Register"
+msgstr "Registe-se"
+
+msgid "Forgot password?"
+msgstr "Esqueceu-se da palavra-passe?"
+
+msgid "User not found."
+msgstr "Utilizador não encontrado."
+
+msgid "Login"
+msgstr "Entrar"
+
+msgid "Settings"
+msgstr "Configurações"
+
+msgid "Info"
+msgstr "Informação"
+
+msgid "About"
+msgstr "Sobre"
+
+msgid "Help"
+msgstr "Ajuda"
+
+msgid "Privacy Policy"
+msgstr "Política de Privacidade"
+
+msgid "Credits"
+msgstr "Créditos"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "First Name"
+msgstr "Primeiro Nome"
+
+msgid "Surname"
+msgstr "Apelido"
+
+msgid "I agree to"
+msgstr "Concordo"
+
+msgid "Terms and Conditions"
+msgstr "Termos e Condições"
+
+msgid "Enter your username or email address to request a password reset"
+msgstr ""
+"Para recuperar a palavra-passe insira o seu nome de utilizador ou email"
+
+msgid "Reset"
+msgstr "Recuperar"
+
+msgid "Records"
+msgstr "Registos"
+
+msgid "Upload All"
+msgstr "Carregar todos"
+
+msgid "Remove All Saved"
+msgstr "Remover Todos os Guardados"
+
+msgid "Application"
+msgstr "Aplicação"
+
+msgid "Training Mode"
+msgstr "Modo de Treino"
+
+msgid "Experimental Features"
+msgstr "Recursos Experimentais"
+
+msgid "Welcome"
+msgstr "Bem-vindo"
+
+msgid "Lets start!"
+msgstr "Começar!"
+
+msgid "TOP RECORDERS"
+msgstr "PRINCIPAIS OBSERVADORES"
+
+msgid "TOP SPECIES"
+msgstr "PRINCIPAIS ESPÉCIES"
+
+msgid "Back"
+msgstr "Voltar"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "App"
+msgstr "App"
+
+msgid ""
+"We are very grateful for all the people that helped to create this app:"
+msgstr ""
+"Agradecemos imenso a todas as pessoas que participaram na criação desta app:"
+
+msgid "Home"
+msgstr "Início"
+
+msgid "Guide"
+msgstr "Guia"
+
+msgid "Account"
+msgstr "Conta"
+
+msgid "Offline"
+msgstr "Sem ligação"
+
+msgid "Sorry, looks like you're offline."
+msgstr "Lamentamos, mas parece que se encontra sem ligação."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Sorry"
+msgstr "Lamentamos"
+
+msgid "Please wait..."
+msgstr "Por favor aguarde..."
+
+msgid "name is a required field"
+msgstr "nome é um campo obrigatório"
+
+msgid "password is a required field"
+msgstr "palavra-passe é um campo obrigatório"
+
+msgid "Login error:"
+msgstr "Erro ao entrar:"
+
+msgid "Failed to fetch"
+msgstr "Falha na busca"
+
+msgid "Incorrect password or email."
+msgstr "Palavra-passe ou email incorreto."
+
+msgid "Logout"
+msgstr "Sair"
+
+msgid "Are you sure you want to logout?"
+msgstr "Tem a certeza que quer sair?"
+
+msgid "This will delete all the records on this device."
+msgstr "Isto irá apagar todos os registos neste aparelho."
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Welcome aboard!"
+msgstr "Bem-vindo!"
+
+msgid ""
+"Before submitting any records please check your email and click on the "
+"verification link."
+msgstr ""
+"Antes de submeter quaisquer registos por favor vá ao seu email e clique no "
+"link para verificação."
+
+msgid "OK, got it"
+msgstr "OK, compreendi"
+
+msgid "email is a required field"
+msgstr "email é um campo obrigatório"
+
+msgid "firstname is a required field"
+msgstr "primeiro nome é um campo obrigatório"
+
+msgid "secondname is a required field"
+msgstr "segundo nome é um campo obrigatório"
+
+msgid "must accept terms and conditions"
+msgstr "é necessário aceitar os termos e condições"
+
+msgid "Area Count"
+msgstr "Contagem por Área"
+
+msgid "Area"
+msgstr "Área"
+
+msgid "Add"
+msgstr "Adicionar"
+
+msgid "Duration"
+msgstr "Duração"
+
+msgid "Species"
+msgstr "Espécie"
+
+msgid "Species name"
+msgstr "Nome da espécie"
+
+msgid ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
+msgstr ""
+"Para uma pesquisa rápida dos taxa, pode usar diferentes atalhos. Por "
+"exemplo, para encontrar"
+
+msgid "you can type in the search bar"
+msgstr "pode escrever na barra de pesquisa"
+
+msgid "Edit Occurrence"
+msgstr "Editar Ocorrência"
+
+msgid "Count"
+msgstr "Contagem"
+
+msgid "Comment"
+msgstr "Comentário"
+
+msgid "Draft"
+msgstr "Rascunho"
+
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr "Já existe um rascunho da amostragem, gostaria de a continuar?"
+
+msgid "Discard"
+msgstr "Rejeitar"
+
+msgid "Continue"
+msgstr "Continuar"
+
+msgid "Finish"
+msgstr "Acabar"
+
+msgid "minutes"
+msgstr "minutos"
+
+msgid "No species added"
+msgstr "Nenhuma espécie adicionada"
+
+msgid "Please draw your area on the map"
+msgstr "Por favor trace a sua área no mapa"
+
+msgid "Draw an area"
+msgstr "Trace uma área"
+
+msgid "Delete"
+msgstr "Apagar"
+
+msgid "Surveys"
+msgstr "Amostragens"
+
+msgid "Reports"
+msgstr "Relatórios"
+
+msgid "Sorry, no report data is available at the moment."
+msgstr ""
+"Lamentamos, mas de momento não existem dados de relatórios disponíveis."
+
+msgid "Are you sure you want to delete this survey?"
+msgstr "Tem a certeza que quer apagar esta amostragem?"
+
+msgid "No finished surveys"
+msgstr "Não existem amostragens terminadas"
+
+msgid "Finished surveys"
+msgstr "Amostragens terminadas"
+
+msgid "Selected area"
+msgstr "Área selecionada"
+
+msgid "Use survey create time"
+msgstr "Use a hora de criação da amostragem"
+
+msgid "Use survey finish time"
+msgstr "Use a hora de fim da amostragem"
+
+msgid "species"
+msgstr "espécie"
+
+msgid "Done"
+msgstr "Feito"
+
+msgid "Time's up!"
+msgstr "Acabou o tempo!"
+
+msgid "Survey incomplete"
+msgstr "Amostragem incompleta"
+
+msgid "The survey is not complete yet."
+msgstr "A amostragem ainda está incompleta."
+
+msgid "Please select a smaller area."
+msgstr "Por favor selecione uma área mais pequena."
+
+msgid "Please add survey area information."
+msgstr "Por favor adicione informação sobre a área a amostrar."
+
+msgid "Choose a method to upload a photo"
+msgstr "Escolha um processo de carregamento de fotografias"
+
+msgid "Gallery"
+msgstr "Galeria"
+
+msgid "Camera"
+msgstr "Câmera"
+
+msgid "Are you sure you want to remove this photo from the sample?"
+msgstr "Tem a certeza que quer remover esta fotografia?"
+
+msgid "Note: it will remain in the gallery."
+msgstr "Nota: vai permanecer na galeria."
+
+msgid "No photo has been added"
+msgstr "Não foi adicionada nenhuma fotografia"
+
+msgid "Registration error:"
+msgstr "Erro de registo:"
+
+msgid "Incorrect password or email"
+msgstr "Palavra-passe ou email incorreto"
+
+msgid "email is not valid"
+msgstr "o email não é válido"
+
+msgid ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
+msgstr ""
+"As borboletas são insetos cativantes, mas estão em declínio em muitas partes"
+" da Europa, como se vê no gráfico do Indicador de Borboletas de Prados na "
+"UE."
+
+msgid ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
+msgstr ""
+"Dados coletados através desta aplicação podem contribuir bastante para o "
+"aumento do conhecimento sobre o estatuto das borboletas e dos seus habitats."
+
+msgid ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
+msgstr ""
+"Falta informação sobre os números de borboletas em muitas partes da Europa, "
+"como se vê na densidade de registos atualmente disponíveis para avaliar o "
+"estatuto das borboletas."
+
+msgid ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects.  You can get "
+"started straight away"
+msgstr ""
+"Nunca foi tão fácil contribuir com dados de alta qualidade para a "
+"investigação que apoia a conservação destes insetos fascinantes e vitais. "
+"Você pode começar agora "
+
+msgid ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
+msgstr ""
+"A app foi desenvolvida como parte do projeto Avaliar BorboLetas na Europa "
+"(ABLE)."
+
+msgid "The ABLE project is a partnership between"
+msgstr "O projeto ABLE é uma parceria entre"
+
+msgid "and"
+msgstr "e"
+
+msgid ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
+msgstr ""
+"O ABLE é financiado por um contrato de serviço da Direção-Geral de Ambiente "
+"da União Europeia, por um período inicial de dois anos de 2019-20."
+
+msgid "ABLE partners:"
+msgstr "Parceiros ABLE:"
+
+msgid ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
+msgstr ""
+"Esta app contribui com dados para o Plano Europeu de Monitorização de "
+"Borboletas (eBMS)."
+
+msgid "In June 2019, the following organisations are partners in eBMS:"
+msgstr "Em Junho de 2019, as seguintes organizações são parceiras do eBMS:"
+
+msgid "Not enough data yet"
+msgstr "Ainda sem dados suficientes"
+
+msgid "How to start a survey"
+msgstr "Como começar uma amostragem"
+
+msgid "To start a new survey you can press the plus button"
+msgstr "Para começar uma nova amostragem pressione o botão +"
+
+msgid "in the home page footer. This will start a new 15 minute survey."
+msgstr ""
+"no rodapé da página inicial. Isto dará inicio a uma nova amostragem de 15 "
+"minutos."
+
+msgid "Selecting species"
+msgstr "A selecionar espécies"
+
+msgid "Please press the Add"
+msgstr "Por favor pressione o botão Adicionar"
+
+msgid ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
+msgstr ""
+"na página de edição da sua nova amostragem. Isto vai levá-lo até à página de"
+" pesquisa de taxa. Após selecionar a espécie, esta será adicionada à sua "
+"lista de amostragem."
+
+msgid "Note"
+msgstr "Nota"
+
+msgid ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
+msgstr ""
+"pode aumentar a contagem de indivíduos selecionando o número ao lado do nome"
+" da espécie na lista."
+
+msgid ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
+msgstr ""
+"Para eliminar uma espécie da sua lista de amostragem arraste-a para a "
+"esquerda e pressione o botão eliminar."
+
+msgid ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
+msgstr ""
+"Para adicionar mais informação sobre a ocorrência de uma espécie, clique na "
+"mesma e abra a sua ficha. "
+
+msgid "To finish a record you should also fill in the details of the area."
+msgstr ""
+"Para terminar um registo deverá também preencher os detalhes sobre a área."
+
+msgid ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
+msgstr ""
+"Quando terminar, submeta o registo pressionando o botão Terminar no "
+"cabeçalho."
+
+msgid "Searching for species"
+msgstr "À procura de espécies"
+
+msgid ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
+msgstr ""
+"A aplicação tem uma lista de cerca de 500 espécies de borboletas, com todas "
+"as categorias taxonómicas associadas. Para uma pesquisa mais rápida dos "
+"taxa, pode utilizar diferentes atalhos. Por exemplo, para encontrar"
+
+msgid "Sync. with the website"
+msgstr "Sincronize com o website"
+
+msgid "All your saved surveys will be shown on your account page."
+msgstr ""
+"Todas as suas amostragens guardadas estarão disponíveis na página da sua "
+"conta."
+
+msgid ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
+msgstr ""
+"Por defeito, uma amostragem está em modo \"rascunho\", não sendo enviada "
+"para a base de dados, até ser pressionado o botão \"Terminar\", no "
+"cabeçalho. A aplicação tentará submeter o seu registo assim que tiver uma "
+"boa ligação à rede."
+
+msgid "If the record has reached the database a red"
+msgstr "Se o registo tiver chegado à base de dados, o vermelho"
+
+msgid "(set for submission & saved locally) will become green"
+msgstr "(submetido e gravado localmente) passará a verde"
+
+msgid "synced to the database"
+msgstr "sincronizado com a base de dados"
+
+msgid ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
+msgstr ""
+"para os registos serem automaticamente sincronizados tem de entrar na sua "
+"conta no website e ter uma ligação de rede"
+
+msgid "Delete a record"
+msgstr "Eliminar um registo"
+
+msgid ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
+msgstr ""
+"Para eliminar um registo, arraste-o para a esquerda na página da sua conta e"
+" pressione o botão eliminar."
+
+msgid "User"
+msgstr "Utilizador"
+
+msgid "Sign in/out or register"
+msgstr "Entrar/sair ou registar-se"
+
+msgid ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
+msgstr ""
+"Para entrar, vá à página do menu, pressione o botão Entrar ou Registar-se e "
+"siga as instruções."
+
+msgid "To logout, visit the main menu page and click the logout button."
+msgstr "Para sair, vá à página do menu e pressione o botão Sair."
+
+msgid ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
+msgstr ""
+"após registar uma nova conta, deve verificar o seu endereço de email, "
+"pressionando o link de verificação que vai receber por email"
+
+msgid "Other"
+msgstr "Outro"
+
+msgid "Reset the application"
+msgstr "Restaurar a aplicação"
+
+msgid "Go to the application settings page"
+msgstr "Vá para a página de configurações da aplicação"
+
+msgid "and click on the Reset"
+msgstr "e pressione Restaurar"
+
+msgid "button"
+msgstr "botão"
+
+msgid "No species found with this name"
+msgstr "Nenhuma espécie encontrada com este nome"
+
+msgid "Allow Sample Edit"
+msgstr "Permitir Edição da Amostra"
+
+msgid "Upload"
+msgstr "Carregar"
+
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+"Esta app contribui para a monitorização e conservação de borboletas. "
+"Pressione o botão + para começar a contagem de borboletas."
+
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""
+"A app vai sofrer alterações nos próximos meses, à medida que lhe são "
+"adicionadas novas funcionalidades."
+
+msgid "Are you sure you want to reset the application to its initial state?"
+msgstr "Tem a certeza que pretende restaurar o estado inicial da aplicação?"
+
+msgid "This will wipe all the locally stored app data!"
+msgstr "Isto irá apagar todos os dados da app armazenados localmente!"
+
+msgid "Sweden"
+msgstr "Suécia"
+
+msgid "Paused"
+msgstr "Em pausa"
+
+msgid "Pending"
+msgstr "Pendente"
+
+msgid "Uploaded"
+msgstr "Carregado"
+
+msgid "No finished pending surveys"
+msgstr "Não há amostragens terminadas pendentes"
+
+msgid "No uploaded surveys"
+msgstr "Não há amostragens carregadas"
+
+msgid "Enjoying the app?"
+msgstr "Está a gostar da app?"
+
+msgid "Not really"
+msgstr "Nem por isso"
+
+msgid "Yes!"
+msgstr "Sim!"
+
+msgid "Would you mind giving us some feedback?"
+msgstr "Importa-se de nos dar algum feedback?"
+
+msgid "No, thanks"
+msgstr "Não, obrigado"
+
+msgid "OK, sure"
+msgstr "Sim, claro"
+
+msgid "How about a rating on the App Store then?"
+msgstr "E, já agora, que tal avaliar-nos na App Store?"
+
+msgid "How about a rating on the Play Store then?"
+msgstr "E, já agora, que tal avaliar-nos na Play Store?"
+
+msgid "Icons made by"
+msgstr "Ícones feitos por"
+
+msgid "from"
+msgstr "de"
+
+msgid "Enter your username or email address to request a password reset."
+msgstr ""
+"Para recuperar a palavra-passe insira o seu nome de utilizador ou email."
+
+msgid "We've sent an email to you"
+msgstr "Enviámos-lhe um email"
+
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+"Para recuperar a sua palavra-passe, clique no link no email que recebeu. Se "
+"não encontra o email, procure noutros locais tais como as pastas Lixo ou "
+"Spam."
+
+msgid "App Development"
+msgstr "Desenvolvimento da App"
+
+msgid "This app was hand crafted with love by"
+msgstr "Esta App foi feita à mão com amor, por"
+
+msgid "Agency specializing in building bespoke data oriented sollutions."
+msgstr ""
+"Uma agência especializada na construção, à medida, de soluções para "
+"tratamento de dados."
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr "Para sugestões e feedback por favor não hesite em"
+
+msgid "contact us"
+msgstr "contactar-nos"
+
+msgid "Language"
+msgstr "Língua"
+
+msgid "Country"
+msgstr "País"
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr "Marque os novos registos como \"treino\" e exclua-os dos relatórios."
+
+msgid "Share App Analytics"
+msgstr "Partilhe as análises da App"
+
+msgid "Save Draft"
+msgstr "Guardar Rascunho"
+
+msgid "Stage"
+msgstr "Estádio"
+
+msgid "Not Recorded"
+msgstr "Não Registado"
+
+msgid "Adults"
+msgstr "Adultos"
+
+msgid "Larvae"
+msgstr "Larvas"
+
+msgid "Eggs"
+msgstr "Ovos"
+
+msgid "Pupae"
+msgstr "Pupas"
+
+msgid "Larval webs"
+msgstr "Teias de larvas"
+
+msgid "Transect"
+msgstr "Contagem"
+
+msgid "Sections"
+msgstr "Secções"
+
+msgid "No transect"
+msgstr "Sem contagem"
+
+msgid "Start Time"
+msgstr "Hora inicial"
+
+msgid "End Time"
+msgstr "Hora final"
+
+msgid "Temperature"
+msgstr "Temperatura"
+
+msgid "Cloud"
+msgstr "Nebulosidade"
+
+msgid "Wind Direction"
+msgstr "Direção do vento"
+
+msgid "Wind Speed"
+msgstr "Velocidade do vento"
+
+msgid "Recorder"
+msgstr "Observador"
+
+msgid "Refresh"
+msgstr "Atualizar"
+
+msgid "Please select your transect first."
+msgstr "Por favor selecione primeiro o seu transecto."
+
+msgid "Invalid server response."
+msgstr "Resposta do servidor inválida."
+
+msgid "Not recorded/no data"
+msgstr "Não registado/sem dados"
+
+msgid "Please specify the temperature C°."
+msgstr "Por favor especifique a temperatura ºC."
+
+msgid "S"
+msgstr "S"
+
+msgid "SW"
+msgstr "SO"
+
+msgid "W"
+msgstr "O"
+
+msgid "NW"
+msgstr "NO"
+
+msgid "N"
+msgstr "N"
+
+msgid "NE"
+msgstr "NE"
+
+msgid "E"
+msgstr "E"
+
+msgid "SE"
+msgstr "SE"
+
+msgid "No direction"
+msgstr "Sem direção"
+
+msgid "Please specify the wind direction."
+msgstr "Por favor especifique a direção do vento."
+
+msgid "Smoke rises vertically"
+msgstr "O fumo sobe verticalmente"
+
+msgid "Slight smoke drift"
+msgstr "O fumo deriva ligeiramente"
+
+msgid "Wind felt on face, leaves rustle"
+msgstr "O vento sente-se na cara, as folhas fazem ruído ao agitar"
+
+msgid "Leaves and twigs in slight motion"
+msgstr "A folhas e os ramos mexem-se ligeiramente"
+
+msgid "Dust raised and small branches move"
+msgstr "O pó levanta e os pequenos ramos movem-se"
+
+msgid "Small trees in leaf begin to sway"
+msgstr "As árvores pequenas começam a balançar"
+
+msgid "Large branches move and trees sway"
+msgstr "Os ramos grandes movem-se e as árvores balançam"
+
+msgid "Please specify the wind speed."
+msgstr "Por favor especifique a velocidade do vento."
+
+msgid "Transects"
+msgstr "Contagens"
+
+msgid "Transect list was successfully updated."
+msgstr "Lista de contagens foi atualizada com sucesso."
+
+msgid "Section"
+msgstr "Secção"
+
+msgid "Reliability"
+msgstr "Fiabilidade"
+
+msgid "Please specify the reliability of the section count."
+msgstr "Por favor especifique qual a fiabilidade da contagem da secção."
+
+msgid "Suitable conditions"
+msgstr "Condições adequadas"
+
+msgid "Unsuitable conditions"
+msgstr "Condições desadequadas"
+
+msgid "Unable to survey"
+msgstr "Não é possível amostrar"
+
+msgid "Timed Count"
+msgstr "Contagem Cronometrada"
+
+msgid "eBMS Transect"
+msgstr "Transecto eBMS"
+
+msgid "Please add any extra info about this record."
+msgstr "Por favor adicione quaisquer informações extra acerca deste registo."
+
+msgid "Enter more information here..."
+msgstr "Introduza mais informação aqui..."
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr ""
+"Por favor indique qual é a pessoa responsável pela identificação da espécie."
+
+msgid "HH:mm"
+msgstr "HH:mm"
+
+msgid "Please specify the % of cloud cover."
+msgstr "Por favor especifique qual a % de nebulosidade."
+
+msgid "You don't have any transects. Please try to refresh the list."
+msgstr "Não tem nenhuma contagem. Por favor atualize a lista."
+
+msgid "Wind speed info is missing"
+msgstr "A informação sobre a velocidade do vento está em falta"
+
+msgid "Temperature info is missing"
+msgstr "A informação sobre a temperatura está em falta"
+
+msgid "Recorder info is missing"
+msgstr "Falta informação sobre o observador"
+
+msgid "Please select your transect."
+msgstr "Por favor selecione o seu transecto."
+
+msgid ""
+"This guide is still in development. It covers %(countrySpeciesCount) "
+"butterfly species out of the %(totalSpeciesCountryCount) species in your "
+"selected country."
+msgstr ""
+"Este guia ainda está em desenvolvimento. Cobre %(countrySpeciesCount) "
+"espécies de borboletas, de um total de %(totalSpeciesCountryCount) espécies "
+"no país selecionado."
+
+msgid "Status"
+msgstr "Estatuto"
+
+msgid "Absent"
+msgstr "Ausente"
+
+msgid "Present"
+msgstr "Presente"
+
+msgid "Possibly present"
+msgstr "Possivelmente presente"
+
+msgid "Regular migrant"
+msgstr "Migrante regular"
+
+msgid "Irregular vagrant"
+msgstr "Viajantes irregulares"
+
+msgid "Regionally extinct"
+msgstr "Extinto regionalmente"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Counts"
+msgstr "Contagens"
+
+msgid "Species descriptions"
+msgstr "Descrição de espécies"
+
+msgid ""
+"Species descriptions included as part of the guide are based on those "
+"produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
+" Settele for making these available."
+msgstr ""
+"As descrições de espécies incluídas no guia foram baseadas nas produzidas "
+"pelo \"Climatic Risk Atlas of European Butterflies\". Agradecemos ao Josef "
+"Settele por as ter disponibilizado."
+
+msgid "Photo credits"
+msgstr "Créditos fotográficos"

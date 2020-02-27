@@ -1,29 +1,26 @@
-# Translators:
-# Светлана Соболева <sv.goloshchapova@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Светлана Соболева <sv.goloshchapova@gmail.com>, 2020\n"
-"Language-Team: Russian (Russia) (https://www.transifex.com/ceh/teams/95441/ru_RU/)\n"
+"Language-Team: Icelandic (Iceland) (https://www.transifex.com/ceh/teams/95441/is_IS/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: is_IS\n"
+"Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Papilio hospiton"
 msgstr ""
 
 msgid "Parnassius mnemosyne"
-msgstr "Парусник Мнемозина"
+msgstr ""
 
 msgid "Parnassius phoebus"
 msgstr ""
 
 msgid "Parnassius apollo"
-msgstr "Парусник Аполлон"
+msgstr ""
 
 msgid "Archon apollinus"
 msgstr ""
@@ -38,7 +35,7 @@ msgid "Carcharodus baeticus"
 msgstr ""
 
 msgid "Erynnis tages"
-msgstr "Бурокрылка Тагет"
+msgstr ""
 
 msgid "Erynnis marloyi"
 msgstr ""
@@ -53,19 +50,19 @@ msgid "Zerynthia rumina"
 msgstr ""
 
 msgid "Zerynthia polyxena"
-msgstr "Зеринтия Поликсена"
+msgstr ""
 
 msgid "Zerynthia cassandra"
 msgstr ""
 
 msgid "Heteropterus morpheus"
-msgstr "Разнокрылка Морфей"
+msgstr ""
 
 msgid "Carterocephalus silvicola"
-msgstr "Крепкоголовка пятнистая"
+msgstr ""
 
 msgid "Carterocephalus palaemon"
-msgstr "Крепкоголовка Палемон"
+msgstr ""
 
 msgid "Pelopidas thrax"
 msgstr ""
@@ -80,10 +77,10 @@ msgid "Gegenes nostrodamus"
 msgstr ""
 
 msgid "Ochlodes sylvanus"
-msgstr "Толстоголовка лесовик"
+msgstr ""
 
 msgid "Hesperia comma"
-msgstr "Толстоголовка запятая"
+msgstr ""
 
 msgid "Thymelicus christi"
 msgstr ""
@@ -95,10 +92,10 @@ msgid "Thymelicus hyrax"
 msgstr ""
 
 msgid "Thymelicus sylvestris"
-msgstr "Бронзовокрылка лесная"
+msgstr ""
 
 msgid "Thymelicus lineola"
-msgstr "Бронзовокрылка тире"
+msgstr ""
 
 msgid "Spialia phlomidis"
 msgstr ""
@@ -119,13 +116,13 @@ msgid "Carcharodus tripolinus"
 msgstr ""
 
 msgid "Carcharodus alceae"
-msgstr "Зубчатокрылка мальвовая"
+msgstr ""
 
 msgid "Muschampia cribrellum"
 msgstr ""
 
 msgid "Muschampia tessellum"
-msgstr "Мушампия большая"
+msgstr ""
 
 msgid "Muschampia proto"
 msgstr ""
@@ -137,10 +134,10 @@ msgid "Carcharodus orientalis"
 msgstr ""
 
 msgid "Carcharodus floccifera"
-msgstr "Зубчатокрылка шандровая"
+msgstr ""
 
 msgid "Iphiclides podalirius"
-msgstr "Ификлид Подалирий"
+msgstr ""
 
 msgid "Iphiclides feisthamelii"
 msgstr ""
@@ -149,13 +146,13 @@ msgid "Papilio alexanor"
 msgstr ""
 
 msgid "Papilio machaon"
-msgstr "Хвостоносец Махаон"
+msgstr ""
 
 msgid "Pyrgus malvoides"
 msgstr ""
 
 msgid "Pyrgus malvae"
-msgstr "Темнокрылка мальвовая"
+msgstr ""
 
 msgid "Pyrgus carthami"
 msgstr ""
@@ -173,7 +170,7 @@ msgid "Pyrgus andromedae"
 msgstr ""
 
 msgid "Pyrgus serratulae"
-msgstr "Темнокрылка травяная"
+msgstr ""
 
 msgid "Pyrgus armoricanus/serratulae"
 msgstr ""
@@ -182,7 +179,7 @@ msgid "Pyrgus armoricanus"
 msgstr ""
 
 msgid "Pyrgus alveus"
-msgstr "Темнокрылка белопятнистая"
+msgstr ""
 
 msgid "Pyrgus warrenensis"
 msgstr ""
@@ -212,16 +209,16 @@ msgid "Leptidea juvernica"
 msgstr ""
 
 msgid "Leptidea sinapis"
-msgstr "Беляночка горошковая"
+msgstr ""
 
 msgid "Leptidea sinapis/juvernica"
 msgstr ""
 
 msgid "Leptidea reali"
-msgstr "Беляночка ирландская"
+msgstr ""
 
 msgid "Gonepteryx rhamni"
-msgstr "Крушинница обыкновенная"
+msgstr ""
 
 msgid "Gonepteryx cleobule"
 msgstr ""
@@ -239,7 +236,7 @@ msgid "Catopsilia florella"
 msgstr ""
 
 msgid "Colias hyale"
-msgstr "Желтушка луговая"
+msgstr ""
 
 msgid "Colias hyale/alfacariensis"
 msgstr ""
@@ -260,16 +257,16 @@ msgid "Colias erate"
 msgstr ""
 
 msgid "Colias crocea"
-msgstr "Желтушка шафрановая"
+msgstr ""
 
 msgid "Colias myrmidone"
-msgstr "Желтушка ракитниковая"
+msgstr ""
 
 msgid "Colias caucasica"
 msgstr ""
 
 msgid "Colias palaeno"
-msgstr " Желтушка торфяниковая"
+msgstr ""
 
 msgid "Colias tyche"
 msgstr ""
@@ -281,7 +278,7 @@ msgid "Colotis evagore"
 msgstr ""
 
 msgid "Aporia crataegi"
-msgstr "Боярышница обыкновенная"
+msgstr ""
 
 msgid "Pontia chloridice"
 msgstr ""
@@ -290,7 +287,7 @@ msgid "Pontia callidice"
 msgstr ""
 
 msgid "Pontia edusa"
-msgstr "Понтия резедовая"
+msgstr ""
 
 msgid "Pontia daplidice"
 msgstr ""
@@ -299,7 +296,7 @@ msgid "Pieris krueperi"
 msgstr ""
 
 msgid "Pieris brassicae"
-msgstr "Белянка капустная"
+msgstr ""
 
 msgid "Pieris wollastoni"
 msgstr ""
@@ -308,7 +305,7 @@ msgid "Pieris cheiranthi"
 msgstr ""
 
 msgid "Pieris rapae"
-msgstr "Белянка репная"
+msgstr ""
 
 msgid "Pieris mannii"
 msgstr ""
@@ -320,7 +317,7 @@ msgid "Pieris bryoniae"
 msgstr ""
 
 msgid "Pieris napi"
-msgstr "Белянка брюквенная"
+msgstr ""
 
 msgid "Pieris balcana"
 msgstr ""
@@ -350,7 +347,7 @@ msgid "Euchloe simplonia"
 msgstr ""
 
 msgid "Euchloe ausonia"
-msgstr "Аврора белая"
+msgstr ""
 
 msgid "Euchloe charlonia"
 msgstr ""
@@ -371,7 +368,7 @@ msgid "Anthocharis euphenoides"
 msgstr ""
 
 msgid "Anthocharis cardamines"
-msgstr "Зорька обыкновенная"
+msgstr ""
 
 msgid "Anthocharis gruneri"
 msgstr ""
@@ -380,16 +377,16 @@ msgid "Anthocharis damone"
 msgstr ""
 
 msgid "Hamearis lucina"
-msgstr "Пеструшка лесная"
+msgstr ""
 
 msgid "Lycaena dimorpha"
 msgstr ""
 
 msgid "Lycaena helle"
-msgstr "Червонец Гелла"
+msgstr ""
 
 msgid "Lycaena alciphron"
-msgstr "Червонец фиолетовый"
+msgstr ""
 
 msgid "Lycaena thetis"
 msgstr ""
@@ -398,10 +395,10 @@ msgid "Lycaena thersamon"
 msgstr ""
 
 msgid "Lycaena dispar"
-msgstr "Червонец непарный"
+msgstr ""
 
 msgid "Lycaena hippothoe"
-msgstr "Червонец щавелевый"
+msgstr ""
 
 msgid "Pseudophilotes barbagiae"
 msgstr ""
@@ -413,13 +410,13 @@ msgid "Pseudophilotes panoptes"
 msgstr ""
 
 msgid "Pseudophilotes vicrama"
-msgstr "Голубянка викрама"
+msgstr ""
 
 msgid "Pseudophilotes baton"
 msgstr ""
 
 msgid "Scolitantides orion"
-msgstr "Голубянка Орион"
+msgstr ""
 
 msgid "Praephilotes anthracias"
 msgstr ""
@@ -437,7 +434,7 @@ msgid "Glaucopsyche paphos"
 msgstr ""
 
 msgid "Glaucopsyche alexis"
-msgstr "Голубянка Алексис"
+msgstr ""
 
 msgid "Hipparchia tilosi"
 msgstr ""
@@ -464,7 +461,7 @@ msgid "Hipparchia autonoe"
 msgstr ""
 
 msgid "Hipparchia hermione"
-msgstr "Бархатница Альциона"
+msgstr ""
 
 msgid "Hipparchia syriaca"
 msgstr ""
@@ -488,22 +485,22 @@ msgid "Lycaena bleusei"
 msgstr ""
 
 msgid "Lycaena phlaeas"
-msgstr "Червонец пятнистый"
+msgstr ""
 
 msgid "Lycaena virgaureae"
-msgstr "Червонец огненный"
+msgstr ""
 
 msgid "Lycaena tityrus"
-msgstr "Червонец бурый"
+msgstr ""
 
 msgid "Cigaritis acamas"
 msgstr ""
 
 msgid "Thecla betulae"
-msgstr "Текла березовая"
+msgstr ""
 
 msgid "Favonius quercus"
-msgstr "Зефир дубовый"
+msgstr ""
 
 msgid "Laeosopis roboris"
 msgstr ""
@@ -524,7 +521,7 @@ msgid "Callophrys suaveola"
 msgstr ""
 
 msgid "Callophrys rubi"
-msgstr "Зеленушка малинница"
+msgstr ""
 
 msgid "Callophrys chalybeitincta"
 msgstr ""
@@ -533,10 +530,10 @@ msgid "Neolycaena rhymnus"
 msgstr ""
 
 msgid "Satyrium pruni"
-msgstr "Хвостатка сливовая"
+msgstr ""
 
 msgid "Satyrium ilicis"
-msgstr "Хвостатка падубовая"
+msgstr ""
 
 msgid "Satyrium esculi"
 msgstr ""
@@ -545,10 +542,10 @@ msgid "Satyrium ledereri"
 msgstr ""
 
 msgid "Satyrium w-album"
-msgstr "Хвостатка вязовая"
+msgstr ""
 
 msgid "Satyrium spini"
-msgstr "Хвостатка терновая"
+msgstr ""
 
 msgid "Satyrium acaciae"
 msgstr ""
@@ -572,7 +569,7 @@ msgid "Cacyreus marshalli"
 msgstr ""
 
 msgid "Celastrina argiolus"
-msgstr "Голубянка весенняя"
+msgstr ""
 
 msgid "Tarucus theophrastus"
 msgstr ""
@@ -581,16 +578,16 @@ msgid "Tarucus balkanicus"
 msgstr ""
 
 msgid "Phengaris alcon"
-msgstr "Голубянка Алькон"
+msgstr ""
 
 msgid "Phengaris arion"
-msgstr "Голубянка Арион"
+msgstr ""
 
 msgid "Phengaris teleius"
-msgstr "Голубянка Эйфем"
+msgstr ""
 
 msgid "Phengaris nausithous"
-msgstr "Голубянка черноватая"
+msgstr ""
 
 msgid "Turanana taygetica"
 msgstr ""
@@ -608,7 +605,7 @@ msgid "Tongeia fischeri"
 msgstr ""
 
 msgid "Cupido argiades"
-msgstr "Голубянка короткохвостая"
+msgstr ""
 
 msgid "Cupido decoloratus"
 msgstr ""
@@ -632,16 +629,16 @@ msgid "Freyeria trochylus"
 msgstr ""
 
 msgid "Plebejus argus"
-msgstr "Голубянка Аргус"
+msgstr ""
 
 msgid "Plebejus idas"
-msgstr "Голубянка Идас"
+msgstr ""
 
 msgid "Plebejus bellieri"
 msgstr ""
 
 msgid "Plebejus argyrognomon"
-msgstr "Голубянка обыкновенная"
+msgstr ""
 
 msgid "Agriades orbitulus"
 msgstr ""
@@ -689,7 +686,7 @@ msgid "Kretania pylaon"
 msgstr ""
 
 msgid "Cyaniris semiargus"
-msgstr "Голубянка лесная"
+msgstr ""
 
 msgid "Glabroculus cyane"
 msgstr ""
@@ -713,7 +710,7 @@ msgid "Aricia montensis"
 msgstr ""
 
 msgid "Aricia agestis"
-msgstr "Голубянка темно-бурая"
+msgstr ""
 
 msgid "Neolysandra coelestina"
 msgstr ""
@@ -725,10 +722,10 @@ msgid "Lysandra corydonius"
 msgstr ""
 
 msgid "Lysandra bellargus"
-msgstr "Голубянка красивая"
+msgstr ""
 
 msgid "Lysandra coridon"
-msgstr "Голубянка Коридон"
+msgstr ""
 
 msgid "Lysandra caelestissima"
 msgstr ""
@@ -740,13 +737,13 @@ msgid "Polyommatus escheri"
 msgstr ""
 
 msgid "Polyommatus thersites"
-msgstr "Голубянка Терсит"
+msgstr ""
 
 msgid "Polyommatus daphnis"
-msgstr "Голубянка Дафнис"
+msgstr ""
 
 msgid "Polyommatus amandus"
-msgstr "Голубянка быстрая"
+msgstr ""
 
 msgid "Polyommatus golgus"
 msgstr ""
@@ -761,7 +758,7 @@ msgid "Polyommatus celina"
 msgstr ""
 
 msgid "Polyommatus icarus"
-msgstr "Голубянка Икар"
+msgstr ""
 
 msgid "Polyommatus eros"
 msgstr ""
@@ -812,22 +809,22 @@ msgid "Polyommatus aroaniensis"
 msgstr ""
 
 msgid "Neptis sappho"
-msgstr "Пеструшка Сапфо"
+msgstr ""
 
 msgid "Neptis rivularis"
-msgstr "Пеструшка таволговая"
+msgstr ""
 
 msgid "Limenitis reducta"
 msgstr ""
 
 msgid "Limenitis populi"
-msgstr "Ленточник тополевый"
+msgstr ""
 
 msgid "Limenitis camilla"
-msgstr "Ленточник Камилла"
+msgstr ""
 
 msgid "Issoria lathonia"
-msgstr "Иссория Латона"
+msgstr ""
 
 msgid "Issoria eugenia"
 msgstr ""
@@ -836,34 +833,34 @@ msgid "Brenthis hecate"
 msgstr ""
 
 msgid "Brenthis ino"
-msgstr "Брентис Ино"
+msgstr ""
 
 msgid "Brenthis daphne"
-msgstr "Брентис Дафна"
+msgstr ""
 
 msgid "Argynnis paphia"
-msgstr "Перламутровка Пафия"
+msgstr ""
 
 msgid "Argynnis pandora"
 msgstr ""
 
 msgid "Argynnis laodice"
-msgstr "Перламутровка Лаодика"
+msgstr ""
 
 msgid "Speyeria aglaja"
-msgstr "Перламутровка Аглая"
+msgstr ""
 
 msgid "Fabriciana elisa"
 msgstr ""
 
 msgid "Fabriciana niobe"
-msgstr "Перламутровка Ниоба"
+msgstr ""
 
 msgid "Fabriciana adippe"
-msgstr "Перламутровка Адиппа"
+msgstr ""
 
 msgid "Boloria eunomia"
-msgstr "Клоссиана Евномия"
+msgstr ""
 
 msgid "Boloria graeca"
 msgstr ""
@@ -890,13 +887,13 @@ msgid "Boloria thore"
 msgstr ""
 
 msgid "Boloria selene"
-msgstr "Клоссиана Селена"
+msgstr ""
 
 msgid "Boloria euphrosyne"
-msgstr "Клоссиана Евфросина"
+msgstr ""
 
 msgid "Boloria dia"
-msgstr "Клоссиана Дия"
+msgstr ""
 
 msgid "Boloria improba"
 msgstr ""
@@ -914,7 +911,7 @@ msgid "Boloria oscarus"
 msgstr ""
 
 msgid "Boloria titania"
-msgstr "Клоссиана Титания"
+msgstr ""
 
 msgid "Boloria chariclea"
 msgstr ""
@@ -923,37 +920,37 @@ msgid "Boloria angarensis"
 msgstr ""
 
 msgid "Apatura iris"
-msgstr "Переливница большая"
+msgstr ""
 
 msgid "Apatura metis"
 msgstr ""
 
 msgid "Apatura ilia"
-msgstr "Переливница малая"
+msgstr ""
 
 msgid "Apatura ilia/iris"
 msgstr ""
 
 msgid "Araschnia levana"
-msgstr "Пестрокрыльница изменчивая"
+msgstr ""
 
 msgid "Vanessa virginiensis"
 msgstr ""
 
 msgid "Vanessa cardui"
-msgstr "Ванесса чертополоховая"
+msgstr ""
 
 msgid "Vanessa vulcania"
 msgstr ""
 
 msgid "Vanessa atalanta"
-msgstr "Ванесса адмирал"
+msgstr ""
 
 msgid "Aglais io"
-msgstr "Многоцветница павлиний глаз"
+msgstr ""
 
 msgid "Aglais urticae"
-msgstr "Многоцветница крапивница"
+msgstr ""
 
 msgid "Aglais ichnusa"
 msgstr ""
@@ -962,19 +959,19 @@ msgid "Polygonia egea"
 msgstr ""
 
 msgid "Polygonia c-album"
-msgstr "Углокрыльница ц-белое"
+msgstr ""
 
 msgid "Nymphalis vaualbum"
-msgstr "Многоцветница V-белое"
+msgstr ""
 
 msgid "Nymphalis polychloros"
-msgstr "Многоцветница обыкновенная"
+msgstr ""
 
 msgid "Nymphalis xanthomelas"
-msgstr "Многоцветница черно-рыжая"
+msgstr ""
 
 msgid "Nymphalis antiopa"
-msgstr "Многоцветница траурница"
+msgstr ""
 
 msgid "Hypolimnas misippus"
 msgstr ""
@@ -989,10 +986,10 @@ msgid "Euphydryas cynthia"
 msgstr ""
 
 msgid "Euphydryas iduna"
-msgstr "Шашечница Авриния"
+msgstr ""
 
 msgid "Euphydryas maturna"
-msgstr "Шашечница большая"
+msgstr ""
 
 msgid "Euphydryas intermedia"
 msgstr ""
@@ -1001,7 +998,7 @@ msgid "Melitaea trivia"
 msgstr ""
 
 msgid "Melitaea didyma"
-msgstr "Шашечница красная"
+msgstr ""
 
 msgid "Melitaea arduinna"
 msgstr ""
@@ -1010,16 +1007,16 @@ msgid "Melitaea aetherie"
 msgstr ""
 
 msgid "Melitaea phoebe"
-msgstr "Шашечница Феба"
+msgstr ""
 
 msgid "Melitaea ornata"
 msgstr ""
 
 msgid "Melitaea cinxia"
-msgstr "Шашечница обыкновенная"
+msgstr ""
 
 msgid "Melitaea diamina"
-msgstr "Шашечница Диамина"
+msgstr ""
 
 msgid "Melitaea celadussa"
 msgstr ""
@@ -1028,10 +1025,10 @@ msgid "Melitaea deione"
 msgstr ""
 
 msgid "Melitaea britomartis"
-msgstr "Шашечница Бритомартис"
+msgstr ""
 
 msgid "Melitaea athalia"
-msgstr "Шашечница Аталия"
+msgstr ""
 
 msgid "Melitaea varia"
 msgstr ""
@@ -1040,7 +1037,7 @@ msgid "Melitaea parthenoides"
 msgstr ""
 
 msgid "Melitaea aurelia"
-msgstr "Шашечница Аврелия"
+msgstr ""
 
 msgid "Melitaea asteria"
 msgstr ""
@@ -1061,7 +1058,7 @@ msgid "Coenonympha phryne"
 msgstr ""
 
 msgid "Coenonympha oedippus"
-msgstr "Сенница Эдип"
+msgstr ""
 
 msgid "Coenonympha dorus"
 msgstr ""
@@ -1070,7 +1067,7 @@ msgid "Coenonympha thyrsis"
 msgstr ""
 
 msgid "Coenonympha pamphilus"
-msgstr "Сенница Памфил"
+msgstr ""
 
 msgid "Coenonympha tullia"
 msgstr ""
@@ -1082,7 +1079,7 @@ msgid "Coenonympha amaryllis"
 msgstr ""
 
 msgid "Coenonympha glycerion"
-msgstr "Сенница луговая"
+msgstr ""
 
 msgid "Coenonympha corinna"
 msgstr ""
@@ -1091,7 +1088,7 @@ msgid "Coenonympha leander"
 msgstr ""
 
 msgid "Coenonympha hero"
-msgstr "Сенница Геро"
+msgstr ""
 
 msgid "Coenonympha gardetta"
 msgstr ""
@@ -1100,7 +1097,7 @@ msgid "Coenonympha orientalis"
 msgstr ""
 
 msgid "Coenonympha arcania"
-msgstr "Сенница Аркания"
+msgstr ""
 
 msgid "Kirinia roxelana"
 msgstr ""
@@ -1109,7 +1106,7 @@ msgid "Kirinia climene"
 msgstr ""
 
 msgid "Lopinga achine"
-msgstr "Буроглазка крупноглазая"
+msgstr ""
 
 msgid "Pararge xiphia"
 msgstr ""
@@ -1118,10 +1115,10 @@ msgid "Pararge xiphioides"
 msgstr ""
 
 msgid "Pararge aegeria"
-msgstr "Буроглазка Эгерия"
+msgstr ""
 
 msgid "Lasiommata maera"
-msgstr "Буроглазка большая"
+msgstr ""
 
 msgid "Lasiommata deidamia"
 msgstr ""
@@ -1133,7 +1130,7 @@ msgid "Lasiommata paramegaera"
 msgstr ""
 
 msgid "Lasiommata megera"
-msgstr "Буроглазка Мегера"
+msgstr ""
 
 msgid "Melanargia russiae"
 msgstr ""
@@ -1175,7 +1172,7 @@ msgid "Hipparchia maderensis"
 msgstr ""
 
 msgid "Hipparchia semele"
-msgstr "Бархатница Семела"
+msgstr ""
 
 msgid "Hipparchia blachieri"
 msgstr ""
@@ -1208,7 +1205,7 @@ msgid "Hipparchia christenseni"
 msgstr ""
 
 msgid "Minois dryas"
-msgstr "Бархатница Дриада"
+msgstr ""
 
 msgid "Brintesia circe"
 msgstr ""
@@ -1232,7 +1229,7 @@ msgid "Oeneis magna"
 msgstr ""
 
 msgid "Oeneis jutta"
-msgstr "Энеис Ютта"
+msgstr ""
 
 msgid "Oeneis norna"
 msgstr ""
@@ -1307,10 +1304,10 @@ msgid "Hyponephele lycaon"
 msgstr ""
 
 msgid "Hyponephele lupina"
-msgstr "Крупноглазка Ликаон"
+msgstr ""
 
 msgid "Aphantopus hyperantus"
-msgstr "Глазок цветочный"
+msgstr ""
 
 msgid "Pyronia cecilia"
 msgstr ""
@@ -1322,7 +1319,7 @@ msgid "Pyronia bathseba"
 msgstr ""
 
 msgid "Maniola jurtina"
-msgstr "Крупноглазка воловий глаз"
+msgstr ""
 
 msgid "Maniola nurag"
 msgstr ""
@@ -1433,7 +1430,7 @@ msgid "Erebia palarica"
 msgstr ""
 
 msgid "Erebia ligea"
-msgstr "Чернушка Лигея"
+msgstr ""
 
 msgid "Erebia pluto"
 msgstr ""
@@ -1469,7 +1466,7 @@ msgid "Erebia medusa"
 msgstr ""
 
 msgid "Erebia aethiops"
-msgstr "Чернушка эфиопка"
+msgstr ""
 
 msgid "Erebia pharte"
 msgstr ""

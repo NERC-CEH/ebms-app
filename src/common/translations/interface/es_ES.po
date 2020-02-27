@@ -1,11 +1,11 @@
 # Translators:
 # Karolis, 2019
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2019
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2019\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -210,13 +210,13 @@ msgid "Email"
 msgstr "Correo Electrónico"
 
 msgid "First Name"
-msgstr "Nombre de pila"
+msgstr "Nombre "
 
 msgid "Surname"
 msgstr "Apellido"
 
 msgid "I agree to"
-msgstr "estoy de acuerdo con"
+msgstr "Estoy de acuerdo con"
 
 msgid "Terms and Conditions"
 msgstr "Términos y Condiciones"
@@ -230,7 +230,7 @@ msgid "Reset"
 msgstr "Reiniciar"
 
 msgid "Records"
-msgstr "Archivos"
+msgstr "Registros"
 
 msgid "Upload All"
 msgstr "Enviar todo"
@@ -257,7 +257,7 @@ msgid "TOP RECORDERS"
 msgstr "MEJORES REGISTRADORES"
 
 msgid "TOP SPECIES"
-msgstr "ESPECIES SUPERIORES"
+msgstr "ESPECIES MÁS VISTAS"
 
 msgid "Back"
 msgstr "Atrás"
@@ -271,7 +271,7 @@ msgstr "Aplicación"
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
-"Estamos muy agradecidos por todas las personas que ayudaron a crear esta "
+"Estamos muy agradecidos a todas las personas que ayudaron a crear esta "
 "aplicación:"
 
 msgid "Home"
@@ -302,7 +302,7 @@ msgid "name is a required field"
 msgstr "nombre es un campo obligatorio"
 
 msgid "password is a required field"
-msgstr "La contraseña es un campo requerido"
+msgstr "La contraseña es un campo obligatorio"
 
 msgid "Login error:"
 msgstr "Error de inicio de sesión:"
@@ -991,7 +991,7 @@ msgid "Unable to survey"
 msgstr "No se puedehcer la encuenta"
 
 msgid "Timed Count"
-msgstr "Área Recuentos cronometrados"
+msgstr "Recuento 15 minutos"
 
 msgid "eBMS Transect"
 msgstr "Transecto eBMS"
