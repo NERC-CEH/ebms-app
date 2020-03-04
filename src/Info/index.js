@@ -7,6 +7,7 @@ import Credits from './Credits';
 import About from './About';
 import Help from './Help';
 import Menu from './Menu';
+import Guide from './Guide';
 
 export default [
   <Route
@@ -25,4 +26,5 @@ export default [
   <Route path="/info/help" key="/info/help" exact component={Help} />,
   <Route path="/info/credits" key="/info/credits" exact component={Credits} />,
   <Route path="/info/about" key="/info/about" exact component={About} />,
+  <Route path="/info/guide" key="/info/guide" exact component={Guide} />,
 ];

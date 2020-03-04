@@ -17,6 +17,7 @@ import {
   heart,
   informationCircleOutline,
   helpBuoy,
+  book
 } from 'ionicons/icons';
 import config from 'config';
 import './styles.scss';
@@ -56,6 +57,10 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
         )}
 
         <IonItemDivider>{t('Info')}</IonItemDivider>
+        <IonItem routerLink="/info/guide" detail>
+          <IonIcon icon={book} size="small" slot="start" />
+          {t('Guide')}
+        </IonItem>
         <IonItem routerLink="/info/help" detail>
           <IonIcon icon={helpBuoy} size="small" slot="start" />
           {t('Help')}
