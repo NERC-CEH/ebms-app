@@ -1,12 +1,12 @@
 # Translators:
 # Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2019
-# Ineke <ineke.radstaat@vlinderstichting.nl>, 2020
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
+# Ineke <ineke.radstaat@vlinderstichting.nl>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
+"Last-Translator: Ineke <ineke.radstaat@vlinderstichting.nl>, 2020\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/ceh/teams/95441/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -496,7 +496,7 @@ msgid ""
 msgstr ""
 "Dagvlinders zijn fascinerende insecten, maar ze gaan in grote delen van "
 "Europa achteruit. Dat ziet u in deze grafiek van de Europese Graslandvlinder"
-" indicator."
+" Indicator."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
@@ -527,7 +527,7 @@ msgid ""
 "project."
 msgstr ""
 "Deze app is ontwikkeld als onderdeel van het EU project 'Assessing "
-"Butterflies in Europe' (ABLE)"
+"Butterflies in Europe' (ABLE)."
 
 msgid "The ABLE project is a partnership between"
 msgstr "Het ABLE project is een samenwerkingsverband van"
@@ -543,7 +543,7 @@ msgstr ""
 "generaal Milieu voor een periode van twee jaar van 2019-2020."
 
 msgid "ABLE partners:"
-msgstr "ABLE partners"
+msgstr "ABLE partners:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
@@ -664,7 +664,7 @@ msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Om een waarneming te verwijderen, veeg naar links in uw profiel pagina en "
+"Om een waarneming te verwijderen, swipe naar links in uw profielpagina en "
 "klik op de knop 'Verwijder'."
 
 msgid "User"
@@ -1037,22 +1037,25 @@ msgid "Irregular vagrant"
 msgstr "Onregelmatige zwerver"
 
 msgid "Regionally extinct"
-msgstr ""
+msgstr "Regionaal uitgestorven"
 
 msgid "Description"
 msgstr "Omschrijving"
 
 msgid "Counts"
-msgstr ""
+msgstr "Tellingen"
 
 msgid "Species descriptions"
-msgstr ""
+msgstr "Omschrijving soorten"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
+"Omschrijvingen van soorten als onderdeel van de gids zijn gebaseerd op de "
+"omschrijvingen van de Climatic Risk Atlas of European Butterflies. Wij "
+"bedanken Josef Settele voor het beschikbaar stellen daarvan. "
 
 msgid "Photo credits"
-msgstr ""
+msgstr "Foto credits"
