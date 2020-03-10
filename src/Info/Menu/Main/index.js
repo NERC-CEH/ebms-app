@@ -17,7 +17,7 @@ import {
   heart,
   informationCircleOutline,
   helpBuoy,
-  book
+  book,
 } from 'ionicons/icons';
 import config from 'config';
 import './styles.scss';

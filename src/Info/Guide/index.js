@@ -3,6 +3,7 @@ import { IonContent, IonList, IonItem, IonLabel, IonPage } from '@ionic/react';
 import AppHeader from 'Components/Header';
 import './styles.scss';
 
+/* eslint react/prop-types:0 */
 const P = ({ children }) => (
   <IonItem>
     <IonLabel>{children}</IonLabel>

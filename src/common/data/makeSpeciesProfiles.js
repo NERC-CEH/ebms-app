@@ -44,13 +44,13 @@ async function transformAbundance(species) {
   }
 
   return species.map(sp => {
-    const { string_agg } = abundance.find(
+    const { string_agg: countriesStr } = abundance.find(
       s => s.external_key === sp.external_key
     );
 
     return {
       ...sp,
-      ...getCountryMap(string_agg),
+      ...getCountryMap(countriesStr),
     };
   });
 }
