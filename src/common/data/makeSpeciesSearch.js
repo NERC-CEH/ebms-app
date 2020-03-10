@@ -10,8 +10,6 @@ async function fetch() {
 
 function saveSpeciesToFile(species) {
   return new Promise((resolve, reject) => {
-    console.log(`Writing ./species.data.json`);
-
     fs.writeFile('./species.data.json', JSON.stringify(species), err => {
       if (err) {
         reject(err);
