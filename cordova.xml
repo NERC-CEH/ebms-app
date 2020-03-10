@@ -51,7 +51,7 @@
 
     <preference name="android-minSdkVersion" value="22" />
     <preference name="orientation" value="portrait" />
-    <preference name="target-device" value="handset" />
+    <preference name="target-device" value="universal" />
     <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="webviewbounce" value="false"/>
     <preference name="UIWebViewBounce" value="false"/>
