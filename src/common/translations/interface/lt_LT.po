@@ -969,8 +969,8 @@ msgstr "Netinkamos sąlygos"
 msgid "Unable to survey"
 msgstr "Monitoringas negalimas"
 
-msgid "Timed Count"
-msgstr "Teritorijos Monitoringas"
+msgid "15min Count"
+msgstr "15min Monitoringas"
 
 msgid "eBMS Transect"
 msgstr "eBMS Monitoringas"
@@ -1080,7 +1080,7 @@ msgstr ""
 "vieta ar laiku. Svarbiausia, kad drugeliai būtų aktyvūs, t.y. kada oras yra "
 "šiltas ir saulėtas."
 
-msgid "How to do a 15-minute Count (a timed count)"
+msgid "How to do a 15-minute Count"
 msgstr "Kaip atlikti 15 minučių monitoringą"
 
 msgid ""

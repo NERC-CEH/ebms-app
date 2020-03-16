@@ -983,7 +983,7 @@ msgstr "Condições desadequadas"
 msgid "Unable to survey"
 msgstr "Não é possível amostrar"
 
-msgid "Timed Count"
+msgid "15min Count"
 msgstr "Contagem Cronometrada"
 
 msgid "eBMS Transect"
@@ -1090,7 +1090,7 @@ msgid ""
 "the currently available methods."
 msgstr ""
 
-msgid "How to do a 15-minute Count (a timed count)"
+msgid "How to do a 15-minute Count"
 msgstr ""
 
 msgid ""

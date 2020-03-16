@@ -36,7 +36,7 @@ const Component = () => (
           class="fab-button-label"
           routerLink="/survey/area/new/edit"
         >
-          <IonLabel>{t('Timed Count')}</IonLabel>
+          <IonLabel>{t('15min Count')}</IonLabel>
         </IonFabButton>
 
         <IonFabButton

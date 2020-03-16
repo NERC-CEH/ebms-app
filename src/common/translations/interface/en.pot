@@ -860,8 +860,8 @@ msgstr "Unsuitable conditions"
 msgid "Unable to survey"
 msgstr "Unable to survey"
 
-msgid "Timed Count"
-msgstr "Timed Count"
+msgid "15min Count"
+msgstr "15min Count"
 
 msgid "eBMS Transect"
 msgstr "eBMS Transect"
@@ -944,8 +944,8 @@ msgstr "You can use this app to monitor butterflies anywhere in Europe. The resu
 msgid "The preferred method is to conduct a 15-minute Count.  This can be done at any place and at any time when butterflies are active (i.e. when the weather is warm and preferably sunny). You can also use the app to record your established butterfly transects. Later in 2020, the app will also include the ability to submit casual records.  The notes below tell you how to use the currently available methods."
 msgstr "The preferred method is to conduct a 15-minute Count.  This can be done at any place and at any time when butterflies are active (i.e. when the weather is warm and preferably sunny). You can also use the app to record your established butterfly transects. Later in 2020, the app will also include the ability to submit casual records.  The notes below tell you how to use the currently available methods."
 
-msgid "How to do a 15-minute Count (a timed count)"
-msgstr "How to do a 15-minute Count (a timed count)"
+msgid "How to do a 15-minute Count"
+msgstr "How to do a 15-minute Count"
 
 msgid "This is the default method on the app. Simply count butterflies for a 15 minute period, either in a defined area such as a field, or while walking along, or standing on a fixed point counting butterflies that fly past. There is no need to draw the route as the app will know your route, provided you have the GPS tracking facility switched on in your Settings. Otherwise you will have to draw the area searched on a map, using the app. To start, touch the + button at the bottom of the screen. The app counts down the 15 minutes once you have started, but you can pause at any time (for example to identify a butterfly) by pressing the pause button. At the end of the survey you can review your records and make sure the totals are correct before submitting."
 msgstr "This is the default method on the app. Simply count butterflies for a 15 minute period, either in a defined area such as a field, or while walking along, or standing on a fixed point counting butterflies that fly past. There is no need to draw the route as the app will know your route, provided you have the GPS tracking facility switched on in your Settings. Otherwise you will have to draw the area searched on a map, using the app. To start, touch the + button at the bottom of the screen. The app counts down the 15 minutes once you have started, but you can pause at any time (for example to identify a butterfly) by pressing the pause button. At the end of the survey you can review your records and make sure the totals are correct before submitting."

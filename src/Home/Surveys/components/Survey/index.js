@@ -73,7 +73,7 @@ const Survey = observer(({ sample }) => {
     return (
       <IonLabel class="ion-text-wrap">
         <h3>
-          <b>{t('Timed Count')}</b>
+          <b>{t('15min Count')}</b>
         </h3>
         <h3>{prettyDate}</h3>
         <IonBadge color="medium">

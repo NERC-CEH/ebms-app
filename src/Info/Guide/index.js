@@ -39,7 +39,7 @@ const Component = () => (
       </Section>
 
       <Section>
-        <H>{t('How to do a 15-minute Count (a timed count)')}</H>
+        <H>{t('How to do a 15-minute Count')}</H>
         <P>
           {t(
             'This is the default method on the app. Simply count butterflies for a 15 minute period, either in a defined area such as a field, or while walking along, or standing on a fixed point counting butterflies that fly past. There is no need to draw the route as the app will know your route, provided you have the GPS tracking facility switched on in your Settings. Otherwise you will have to draw the area searched on a map, using the app. To start, touch the + button at the bottom of the screen. The app counts down the 15 minutes once you have started, but you can pause at any time (for example to identify a butterfly) by pressing the pause button. At the end of the survey you can review your records and make sure the totals are correct before submitting.'

@@ -1,11 +1,11 @@
 # Translators:
 # Martina Sasic <martina.sasic@hpm.hr>, 2019
-# Karolis, 2019
+# Karolis, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2019\n"
+"Last-Translator: Karolis, 2020\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/ceh/teams/95441/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -974,7 +974,7 @@ msgstr ""
 msgid "Unable to survey"
 msgstr ""
 
-msgid "Timed Count"
+msgid "15min Count"
 msgstr "Vremenski ograničen obilazak"
 
 msgid "eBMS Transect"
@@ -1076,7 +1076,7 @@ msgid ""
 "the currently available methods."
 msgstr ""
 
-msgid "How to do a 15-minute Count (a timed count)"
+msgid "How to do a 15-minute Count"
 msgstr ""
 
 msgid ""

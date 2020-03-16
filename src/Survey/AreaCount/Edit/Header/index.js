@@ -20,7 +20,7 @@ const Header = ({ onSubmit, isTraining, isEditing }) => {
 
   return (
     <AppHeader
-      title={t('Timed Count')}
+      title={t('15min Count')}
       rightSlot={getFinishButton(onSubmit, isEditing)}
       subheader={trainingModeSubheader}
       defaultHref='/home/user-surveys'
