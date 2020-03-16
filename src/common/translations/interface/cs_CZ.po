@@ -254,7 +254,7 @@ msgstr "Začněme!"
 msgid "TOP RECORDERS"
 msgstr "Nejlepší mapovatelé"
 
-msgid "TOP SPECIES"
+msgid "Top Species from all timed counts"
 msgstr "Nejhojnější druhy"
 
 msgid "Back"

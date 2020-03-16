@@ -257,7 +257,7 @@ msgstr "Начнем!"
 msgid "TOP RECORDERS"
 msgstr "Ведущие регистраторы"
 
-msgid "TOP SPECIES"
+msgid "Top Species from all timed counts"
 msgstr "Ведущие виды"
 
 msgid "Back"

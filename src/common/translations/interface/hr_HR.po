@@ -254,7 +254,7 @@ msgstr "Započnimo!"
 msgid "TOP RECORDERS"
 msgstr "Top opažač"
 
-msgid "TOP SPECIES"
+msgid "Top Species from all timed counts"
 msgstr "Top vrsta"
 
 msgid "Back"

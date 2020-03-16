@@ -256,7 +256,7 @@ msgstr "Nu börjar vi!"
 msgid "TOP RECORDERS"
 msgstr "Flest rapporter"
 
-msgid "TOP SPECIES"
+msgid "Top Species from all timed counts"
 msgstr "Vanligaste arter"
 
 msgid "Back"

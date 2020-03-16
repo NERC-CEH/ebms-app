@@ -250,7 +250,7 @@ msgstr ""
 msgid "TOP RECORDERS"
 msgstr ""
 
-msgid "TOP SPECIES"
+msgid "Top Species from all timed counts"
 msgstr ""
 
 msgid "Back"

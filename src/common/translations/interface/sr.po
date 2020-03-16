@@ -254,7 +254,7 @@ msgstr "Хајде да почнемо!"
 msgid "TOP RECORDERS"
 msgstr "ИСТАКНУТИ КОРИСНИЦИ"
 
-msgid "TOP SPECIES"
+msgid "Top Species from all timed counts"
 msgstr "НАЈБРОЈНИЈЕ ВРСТЕ"
 
 msgid "Back"

@@ -124,7 +124,7 @@ class Report extends React.Component {
     return (
       <>
         <IonItemDivider>
-          <IonLabel>{t('TOP SPECIES')}</IonLabel>
+          <IonLabel className="home-report-label">{t('Top Species from all timed counts')}</IonLabel>
         </IonItemDivider>
         <IonItem lines="full" className="list-header-labels">
           <IonLabel>

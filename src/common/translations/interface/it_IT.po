@@ -256,7 +256,7 @@ msgstr "Iniziamo!"
 msgid "TOP RECORDERS"
 msgstr "MIGLIOR CAMPIONATORE "
 
-msgid "TOP SPECIES"
+msgid "Top Species from all timed counts"
 msgstr "MIGLIORE SPECIE"
 
 msgid "Back"

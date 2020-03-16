@@ -255,7 +255,7 @@ msgstr "Começar!"
 msgid "TOP RECORDERS"
 msgstr "PRINCIPAIS OBSERVADORES"
 
-msgid "TOP SPECIES"
+msgid "Top Species from all timed counts"
 msgstr "PRINCIPAIS ESPÉCIES"
 
 msgid "Back"

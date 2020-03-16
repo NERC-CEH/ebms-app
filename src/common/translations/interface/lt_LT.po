@@ -256,8 +256,8 @@ msgstr "Pirmyn"
 msgid "TOP RECORDERS"
 msgstr "TOP VARTOTOJAI"
 
-msgid "TOP SPECIES"
-msgstr "POPULIARIAUSIOS RŪŠYS"
+msgid "Top Species from all timed counts"
+msgstr "15min monitoringo populiariausios rūšys"
 
 msgid "Back"
 msgstr "Atgal"

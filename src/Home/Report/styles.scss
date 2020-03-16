@@ -12,6 +12,10 @@
       font-weight: 200;
     }
   }
+  .home-report-label {
+    text-transform: uppercase;
+    white-space: normal;
+  }
 
   .report-common-name-label {
     margin: 0;
@@ -34,4 +38,8 @@
   .refreshing {
     opacity: 0.5;
   }
+}
+
+html[mode='ios'] .home-report-label {
+  font-size: 0.9em;
 }

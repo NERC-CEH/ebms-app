@@ -248,8 +248,8 @@ msgstr "Lets start!"
 msgid "TOP RECORDERS"
 msgstr "TOP RECORDERS"
 
-msgid "TOP SPECIES"
-msgstr "TOP SPECIES"
+msgid "Top Species from all timed counts"
+msgstr "Top Species from all timed counts"
 
 msgid "Back"
 msgstr "Back"

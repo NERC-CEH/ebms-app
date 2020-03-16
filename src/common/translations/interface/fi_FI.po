@@ -1,10 +1,11 @@
 # Translators:
 # Janne Heliola <janne.heliola@ymparisto.fi>, 2019
+# Karolis, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Janne Heliola <janne.heliola@ymparisto.fi>, 2019\n"
+"Last-Translator: Karolis, 2020\n"
 "Language-Team: Finnish (Finland) (https://www.transifex.com/ceh/teams/95441/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -255,7 +256,7 @@ msgstr "Aloitetaan!"
 msgid "TOP RECORDERS"
 msgstr "ENITEN HAVAINTOJA"
 
-msgid "TOP SPECIES"
+msgid "Top Species from all timed counts"
 msgstr "ENITEN YKSILÖITÄ"
 
 msgid "Back"
