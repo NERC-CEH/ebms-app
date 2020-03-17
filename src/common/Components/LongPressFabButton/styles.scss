@@ -6,3 +6,9 @@ ion-fab .fab-list-active .fab-backdrop {
   left: 0;
   background: rgba(100, 100, 100, 0.5);
 }
+
+ion-fab,
+ion-fab-list {
+  // padding needed for iOS with no toolbar
+  padding-bottom: var(--ion-safe-area-bottom, 0);
+}
