@@ -21,9 +21,9 @@
   }
 
   ion-fab-button:not(.fab-button-label) {
-    --box-shadow: 1px 2px 8px 0px rgba(0, 0, 0, 0.75)
+    --box-shadow: 1px 2px 8px 0px rgba(0, 0, 0, 0.75);
   }
-  
+
   ion-fab-button.fab-button-label {
     width: 240px;
     transform: translateX(-93px);
@@ -35,13 +35,4 @@
       font-size: 1.2em;
     }
   }
-}
-
-ion-fab .fab-list-active .fab-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(100, 100, 100, 0.5);
 }
