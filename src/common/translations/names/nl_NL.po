@@ -1,7 +1,10 @@
+# Translators:
+# Karolis, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
+"Last-Translator: Karolis, 2020\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/ceh/teams/95441/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -11,319 +14,319 @@ msgstr ""
 "X-Generator: POEditor.com\n"
 
 msgid "Papilio hospiton"
-msgstr ""
+msgstr "Corsicaanse koninginnenpage"
 
 msgid "Parnassius mnemosyne"
-msgstr ""
+msgstr "Zwarte apollovlinder"
 
 msgid "Parnassius phoebus"
-msgstr ""
+msgstr "Kleine apollovlinder"
 
 msgid "Parnassius apollo"
-msgstr ""
+msgstr "Apollovlinder"
 
 msgid "Archon apollinus"
-msgstr ""
+msgstr "Pijpbloemapollo"
 
 msgid "Zerynthia cerisy"
-msgstr ""
+msgstr "Oostelijke pijpbloemvlinder"
 
 msgid "Carcharodus stauderi"
-msgstr ""
+msgstr "Woestijndikkopje"
 
 msgid "Carcharodus baeticus"
-msgstr ""
+msgstr "Malrovedikkopje"
 
 msgid "Erynnis tages"
-msgstr ""
+msgstr "Bruin dikkopje"
 
 msgid "Erynnis marloyi"
-msgstr ""
+msgstr "Zwartbruin dikkopje"
 
 msgid "Zerynthia cretica"
-msgstr ""
+msgstr "Kretapijpbloemvlinder"
 
 msgid "Zerynthia caucasica"
 msgstr ""
 
 msgid "Zerynthia rumina"
-msgstr ""
+msgstr "Spaanse pijpbloemvlinder"
 
 msgid "Zerynthia polyxena"
-msgstr ""
+msgstr "Zuidelijke pijpbloemvlinder"
 
 msgid "Zerynthia cassandra"
-msgstr ""
+msgstr "Italiaanse pijpbloemvlinder"
 
 msgid "Heteropterus morpheus"
-msgstr ""
+msgstr "Spiegeldikkopje"
 
 msgid "Carterocephalus silvicola"
-msgstr ""
+msgstr "Geelbont dikkopje"
 
 msgid "Carterocephalus palaemon"
-msgstr ""
+msgstr "Bont dikkopje"
 
 msgid "Pelopidas thrax"
-msgstr ""
+msgstr "Gierstdikkopje  "
 
 msgid "Borbo borbonica"
-msgstr ""
+msgstr "Borbodikkopje"
 
 msgid "Gegenes pumilio"
-msgstr ""
+msgstr "Klein kustdikkopje"
 
 msgid "Gegenes nostrodamus"
-msgstr ""
+msgstr "Groot kustdikkopje"
 
 msgid "Ochlodes sylvanus"
-msgstr ""
+msgstr "Groot dikkopje"
 
 msgid "Hesperia comma"
-msgstr ""
+msgstr "Kommavlinder"
 
 msgid "Thymelicus christi"
-msgstr ""
+msgstr "Canarisch dwergdikkopje"
 
 msgid "Thymelicus acteon"
-msgstr ""
+msgstr "Dwergdikkopje"
 
 msgid "Thymelicus hyrax"
-msgstr ""
+msgstr "Turks geelsprietdikkopje"
 
 msgid "Thymelicus sylvestris"
-msgstr ""
+msgstr "Geelsprietdikkopje"
 
 msgid "Thymelicus lineola"
-msgstr ""
+msgstr "Zwartsprietdikkopje"
 
 msgid "Spialia phlomidis"
-msgstr ""
+msgstr "Groot windedikkopje"
 
 msgid "Spialia sertorius"
-msgstr ""
+msgstr "Kalkgraslanddikkopje"
 
 msgid "Spialia therapne"
-msgstr ""
+msgstr "Corsicaans kalkgraslanddikkopje"
 
 msgid "Spialia rosae"
-msgstr ""
+msgstr "Rozendikkopje"
 
 msgid "Spialia orbifer"
-msgstr ""
+msgstr "Oostelijk kalkgraslanddikkopje"
 
 msgid "Carcharodus tripolinus"
-msgstr ""
+msgstr "Moors kaasjeskruiddikkopje"
 
 msgid "Carcharodus alceae"
-msgstr ""
+msgstr "Kaasjeskruiddikkopje"
 
 msgid "Muschampia cribrellum"
-msgstr ""
+msgstr "Mozaïekdikkopje"
 
 msgid "Muschampia tessellum"
-msgstr ""
+msgstr "Groot brandkruiddikkopje"
 
 msgid "Muschampia proto"
-msgstr ""
+msgstr "Klein brandkruiddikkopje"
 
 msgid "Carcharodus lavatherae"
-msgstr ""
+msgstr "Andoorndikkopje"
 
 msgid "Carcharodus orientalis"
-msgstr ""
+msgstr "Oostelijk andoorndikkopje"
 
 msgid "Carcharodus floccifera"
-msgstr ""
+msgstr "Pluimdikkopje"
 
 msgid "Iphiclides podalirius"
-msgstr ""
+msgstr "Koningspage"
 
 msgid "Iphiclides feisthamelii"
-msgstr ""
+msgstr "Spaanse koningspage"
 
 msgid "Papilio alexanor"
-msgstr ""
+msgstr "Zuidelijke koninginnenpage"
 
 msgid "Papilio machaon"
-msgstr ""
+msgstr "Koninginnenpage"
 
 msgid "Pyrgus malvoides"
-msgstr ""
+msgstr "Zuidelijke aardbeivlinder"
 
 msgid "Pyrgus malvae"
-msgstr ""
+msgstr "Aardbeivlinder"
 
 msgid "Pyrgus carthami"
-msgstr ""
+msgstr "Witgezoomd spikkeldikkopje"
 
 msgid "Pyrgus sidae"
-msgstr ""
+msgstr "Geelbandspikkeldikkopje"
 
 msgid "Pyrgus centaureae"
-msgstr ""
+msgstr "Noords spikkeldikkopje"
 
 msgid "Pyrgus cacaliae"
-msgstr ""
+msgstr "Donker spikkeldikkopje"
 
 msgid "Pyrgus andromedae"
-msgstr ""
+msgstr "Bergspikkeldikkopje"
 
 msgid "Pyrgus serratulae"
-msgstr ""
+msgstr "Voorjaarsspikkeldikkopje"
 
 msgid "Pyrgus armoricanus/serratulae"
 msgstr ""
 
 msgid "Pyrgus armoricanus"
-msgstr ""
+msgstr "Bretons spikkeldikkopje"
 
 msgid "Pyrgus alveus"
-msgstr ""
+msgstr "Groot spikkeldikkopje"
 
 msgid "Pyrgus warrenensis"
-msgstr ""
+msgstr "Alpenspikkeldikkopje"
 
 msgid "Pyrgus foulquieri"
-msgstr ""
+msgstr "Frans spikkeldikkopje"
 
 msgid "Pyrgus onopordi"
-msgstr ""
+msgstr "Aambeeldspikkeldikkopje"
 
 msgid "Pyrgus carlinae"
-msgstr ""
+msgstr "Westelijk spikkeldikkopje"
 
 msgid "Pyrgus cirsii"
-msgstr ""
+msgstr "Rood spikkeldikkopje"
 
 msgid "Pyrgus cinarae"
-msgstr ""
+msgstr "Turks spikkeldikkopje"
 
 msgid "Leptidea duponcheli"
-msgstr ""
+msgstr "Zwartsprietboswitje"
 
 msgid "Leptidea morsei"
-msgstr ""
+msgstr "Oostelijk boswitje"
 
 msgid "Leptidea juvernica"
-msgstr ""
+msgstr "Cryptisch boswitje"
 
 msgid "Leptidea sinapis"
-msgstr ""
+msgstr "Boswitje"
 
 msgid "Leptidea sinapis/juvernica"
 msgstr ""
 
 msgid "Leptidea reali"
-msgstr ""
+msgstr "Verborgen boswitje"
 
 msgid "Gonepteryx rhamni"
-msgstr ""
+msgstr "Citroenvlinder"
 
 msgid "Gonepteryx cleobule"
-msgstr ""
+msgstr "Canarische cleopatra"
 
 msgid "Gonepteryx cleopatra"
-msgstr ""
+msgstr "Cleopatra"
 
 msgid "Gonepteryx maderensis"
-msgstr ""
+msgstr "Madeiracleopatra"
 
 msgid "Gonepteryx farinosa"
-msgstr ""
+msgstr "Bestoven citroenvlinder"
 
 msgid "Catopsilia florella"
-msgstr ""
+msgstr "Gele trekvlinder"
 
 msgid "Colias hyale"
-msgstr ""
+msgstr "Gele luzernevlinder"
 
 msgid "Colias hyale/alfacariensis"
 msgstr ""
 
 msgid "Colias alfacariensis"
-msgstr ""
+msgstr "Zuidelijke luzernevlinder"
 
 msgid "Colias phicomone"
-msgstr ""
+msgstr "Bergluzernevlinder"
 
 msgid "Colias aurorina"
-msgstr ""
+msgstr "Griekse luzernevlinder"
 
 msgid "Colias chrysotheme"
-msgstr ""
+msgstr "Steppeluzernevlinder"
 
 msgid "Colias erate"
-msgstr ""
+msgstr "Oostelijke luzernevlinder"
 
 msgid "Colias crocea"
-msgstr ""
+msgstr "Oranje luzernevlinder"
 
 msgid "Colias myrmidone"
-msgstr ""
+msgstr "Bremvlinder"
 
 msgid "Colias caucasica"
-msgstr ""
+msgstr "Balkanbremvlinder"
 
 msgid "Colias palaeno"
-msgstr ""
+msgstr "Veengeeltje"
 
 msgid "Colias tyche"
-msgstr ""
+msgstr "Vale luzernevlinder"
 
 msgid "Colias hecla"
-msgstr ""
+msgstr "Noordse luzernevlinder"
 
 msgid "Colotis evagore"
-msgstr ""
+msgstr "Vals oranjetipje"
 
 msgid "Aporia crataegi"
-msgstr ""
+msgstr "Groot geaderd witje"
 
 msgid "Pontia chloridice"
-msgstr ""
+msgstr "Klein resedawitje"
 
 msgid "Pontia callidice"
-msgstr ""
+msgstr "Bergresedawitje"
 
 msgid "Pontia edusa"
-msgstr ""
+msgstr "Oostelijk resedawitje"
 
 msgid "Pontia daplidice"
-msgstr ""
+msgstr "Resedawitje"
 
 msgid "Pieris krueperi"
-msgstr ""
+msgstr "Schildzaadwitje"
 
 msgid "Pieris brassicae"
-msgstr ""
+msgstr "Groot koolwitje"
 
 msgid "Pieris wollastoni"
-msgstr ""
+msgstr "Madeirakoolwitje"
 
 msgid "Pieris cheiranthi"
-msgstr ""
+msgstr "Canarisch koolwitje"
 
 msgid "Pieris rapae"
-msgstr ""
+msgstr "Klein koolwitje"
 
 msgid "Pieris mannii"
-msgstr ""
+msgstr "Scheefbloemwitje"
 
 msgid "Pieris ergane"
-msgstr ""
+msgstr "Wedewitje"
 
 msgid "Pieris bryoniae"
-msgstr ""
+msgstr "Berg geaderd witje"
 
 msgid "Pieris napi"
-msgstr ""
+msgstr "Klein geaderd witje"
 
 msgid "Pieris balcana"
-msgstr ""
+msgstr "Balkan geaderd witje"
 
 msgid "Euchloe tagis"
-msgstr ""
+msgstr "Klein marmerwitje"
 
 msgid "Euchloe eversi"
 msgstr ""
@@ -335,193 +338,193 @@ msgid "Euchloe hesperidum"
 msgstr ""
 
 msgid "Euchloe belemia"
-msgstr ""
+msgstr "Gestreept marmerwitje"
 
 msgid "Euchloe insularis"
-msgstr ""
+msgstr "Corsicaans marmerwitje"
 
 msgid "Euchloe crameri"
-msgstr ""
+msgstr "Westelijk marmerwitje"
 
 msgid "Euchloe simplonia"
-msgstr ""
+msgstr "Bergmarmerwitje"
 
 msgid "Euchloe ausonia"
-msgstr ""
+msgstr "Oostelijk marmerwitje"
 
 msgid "Euchloe charlonia"
-msgstr ""
+msgstr "Canarisch marmerwitje"
 
 msgid "Euchloe penia"
-msgstr ""
+msgstr "Geel marmerwitje"
 
 msgid "Euchloe bazae"
-msgstr ""
+msgstr "Groen marmerwitje"
 
 msgid "Zegris pyrothoe"
 msgstr ""
 
 msgid "Zegris eupheme"
-msgstr ""
+msgstr "Zuidelijk oranjetipje"
 
 msgid "Anthocharis euphenoides"
-msgstr ""
+msgstr "Geel oranjetipje"
 
 msgid "Anthocharis cardamines"
-msgstr ""
+msgstr "Oranjetipje"
 
 msgid "Anthocharis gruneri"
-msgstr ""
+msgstr "Zwavelig oranjetipje"
 
 msgid "Anthocharis damone"
-msgstr ""
+msgstr "Oostelijk oranjetipje"
 
 msgid "Hamearis lucina"
-msgstr ""
+msgstr "Sleutelbloemvlinder"
 
 msgid "Lycaena dimorpha"
 msgstr ""
 
 msgid "Lycaena helle"
-msgstr ""
+msgstr "Blauwe vuurvlinder"
 
 msgid "Lycaena alciphron"
-msgstr ""
+msgstr "Violette vuurvlinder"
 
 msgid "Lycaena thetis"
-msgstr ""
+msgstr "Felle vuurvlinder"
 
 msgid "Lycaena thersamon"
-msgstr ""
+msgstr "Oostelijke vuurvlinder"
 
 msgid "Lycaena dispar"
-msgstr ""
+msgstr "Grote vuurvlinder"
 
 msgid "Lycaena hippothoe"
-msgstr ""
+msgstr "Rode vuurvlinder"
 
 msgid "Pseudophilotes barbagiae"
-msgstr ""
+msgstr "Sardijns tijmblauwtje"
 
 msgid "Pseudophilotes abencerragus"
-msgstr ""
+msgstr "Moors tijmblauwtje"
 
 msgid "Pseudophilotes panoptes"
-msgstr ""
+msgstr "Spaans klein tijmblauwtje"
 
 msgid "Pseudophilotes vicrama"
-msgstr ""
+msgstr "Oostelijk tijmblauwtje"
 
 msgid "Pseudophilotes baton"
-msgstr ""
+msgstr "Klein tijmblauwtje"
 
 msgid "Scolitantides orion"
-msgstr ""
+msgstr "Vetkruidblauwtje"
 
 msgid "Praephilotes anthracias"
 msgstr ""
 
 msgid "Iolana iolas"
-msgstr ""
+msgstr "Blazenstruikblauwtje"
 
 msgid "Iolana debilitata"
 msgstr ""
 
 msgid "Glaucopsyche melanops"
-msgstr ""
+msgstr "Spaans bloemenblauwtje"
 
 msgid "Glaucopsyche paphos"
 msgstr ""
 
 msgid "Glaucopsyche alexis"
-msgstr ""
+msgstr "Bloemenblauwtje"
 
 msgid "Hipparchia tilosi"
-msgstr ""
+msgstr "Palmaheivlinder"
 
 msgid "Hipparchia bacchus"
-msgstr ""
+msgstr "Hierroheivlinder"
 
 msgid "Hipparchia wyssii"
-msgstr ""
+msgstr "Tenerifeheivlinder"
 
 msgid "Hipparchia tamadabae"
 msgstr ""
 
 msgid "Hipparchia gomera"
-msgstr ""
+msgstr "Gomeraheivlinder"
 
 msgid "Hipparchia fidia"
-msgstr ""
+msgstr "Gestreepte heivlinder"
 
 msgid "Hipparchia neomiris"
-msgstr ""
+msgstr "Corsicaanse heivlinder"
 
 msgid "Hipparchia autonoe"
 msgstr ""
 
 msgid "Hipparchia hermione"
-msgstr ""
+msgstr "Kleine boswachter"
 
 msgid "Hipparchia syriaca"
-msgstr ""
+msgstr "Balkanboswachter"
 
 msgid "Hipparchia fagi"
-msgstr ""
+msgstr "Grote boswachter"
 
 msgid "Hipparchia mersina"
-msgstr ""
+msgstr "Egeïsche heivlinder"
 
 msgid "Hipparchia miguelensis"
-msgstr ""
+msgstr "Sao miguelheivlinder"
 
 msgid "Lycaena candens"
-msgstr ""
+msgstr "Balkanvuurvlinder"
 
 msgid "Lycaena ottomana"
-msgstr ""
+msgstr "Griekse vuurvlinder"
 
 msgid "Lycaena bleusei"
 msgstr ""
 
 msgid "Lycaena phlaeas"
-msgstr ""
+msgstr "Kleine vuurvlinder"
 
 msgid "Lycaena virgaureae"
-msgstr ""
+msgstr "Morgenrood"
 
 msgid "Lycaena tityrus"
-msgstr ""
+msgstr "Bruine vuurvlinder"
 
 msgid "Cigaritis acamas"
 msgstr ""
 
 msgid "Thecla betulae"
-msgstr ""
+msgstr "Sleedoornpage"
 
 msgid "Favonius quercus"
-msgstr ""
+msgstr "Eikenpage"
 
 msgid "Laeosopis roboris"
-msgstr ""
+msgstr "Essenpage"
 
 msgid "Tomares ballus"
-msgstr ""
+msgstr "Groene klaverpage"
 
 msgid "Tomares nogelii"
-msgstr ""
+msgstr "Roemeense klaverpage"
 
 msgid "Tomares callimachus"
 msgstr ""
 
 msgid "Callophrys avis"
-msgstr ""
+msgstr "Aardbeiboomgroentje"
 
 msgid "Callophrys suaveola"
 msgstr ""
 
 msgid "Callophrys rubi"
-msgstr ""
+msgstr "Groentje"
 
 msgid "Callophrys chalybeitincta"
 msgstr ""
@@ -530,241 +533,241 @@ msgid "Neolycaena rhymnus"
 msgstr ""
 
 msgid "Satyrium pruni"
-msgstr ""
+msgstr "Pruimenpage"
 
 msgid "Satyrium ilicis"
-msgstr ""
+msgstr "Bruine eikenpage"
 
 msgid "Satyrium esculi"
-msgstr ""
+msgstr "Spaanse eikenpage"
 
 msgid "Satyrium ledereri"
-msgstr ""
+msgstr "Duizendknooppage"
 
 msgid "Satyrium w-album"
-msgstr ""
+msgstr "Iepenpage"
 
 msgid "Satyrium spini"
-msgstr ""
+msgstr "Wegedoornpage"
 
 msgid "Satyrium acaciae"
-msgstr ""
+msgstr "Kleine sleedoornpage"
 
 msgid "Leptotes pirithous"
-msgstr ""
+msgstr "Klein tijgerblauwtje"
 
 msgid "Cyclyrius webbianus"
-msgstr ""
+msgstr "Canarisch blauwtje"
 
 msgid "Azanus ubaldus"
-msgstr ""
+msgstr "Klein acaciablauwtje"
 
 msgid "Azanus jesous"
-msgstr ""
+msgstr "Groot acaciablauwtje"
 
 msgid "Lampides boeticus"
-msgstr ""
+msgstr "Tijgerblauwtje"
 
 msgid "Cacyreus marshalli"
-msgstr ""
+msgstr "Geraniumblauwtje"
 
 msgid "Celastrina argiolus"
-msgstr ""
+msgstr "Boomblauwtje"
 
 msgid "Tarucus theophrastus"
-msgstr ""
+msgstr "Moors christusdoornblauwtje"
 
 msgid "Tarucus balkanicus"
-msgstr ""
+msgstr "Klein christusdoornblauwtje"
 
 msgid "Phengaris alcon"
-msgstr ""
+msgstr "Gentiaanblauwtje"
 
 msgid "Phengaris arion"
-msgstr ""
+msgstr "Tijmblauwtje"
 
 msgid "Phengaris teleius"
-msgstr ""
+msgstr "Pimpernelblauwtje"
 
 msgid "Phengaris nausithous"
-msgstr ""
+msgstr "Donker pimpernelblauwtje"
 
 msgid "Turanana taygetica"
-msgstr ""
+msgstr "Loodkruidblauwtje"
 
 msgid "Pseudophilotes bavius"
-msgstr ""
+msgstr "Salieblauwtje"
 
 msgid "Zizeeria knysna"
-msgstr ""
+msgstr "Amethistblauwtje"
 
 msgid "Zizeeria karsandra"
-msgstr ""
+msgstr "Oostelijk amethistblauwtje"
 
 msgid "Tongeia fischeri"
 msgstr ""
 
 msgid "Cupido argiades"
-msgstr ""
+msgstr "Staartblauwtje"
 
 msgid "Cupido decoloratus"
-msgstr ""
+msgstr "Oostelijk staartblauwtje"
 
 msgid "Cupido alcetas"
-msgstr ""
+msgstr "Zuidelijk staartblauwtje"
 
 msgid "Cupido osiris"
-msgstr ""
+msgstr "Zuidelijk dwergblauwtje"
 
 msgid "Cupido minimus"
-msgstr ""
+msgstr "Dwergblauwtje"
 
 msgid "Cupido lorquinii"
-msgstr ""
+msgstr "Moors dwergblauwtje"
 
 msgid "Luthrodes galba"
 msgstr ""
 
 msgid "Freyeria trochylus"
-msgstr ""
+msgstr "Heliotroopblauwtje"
 
 msgid "Plebejus argus"
-msgstr ""
+msgstr "Heideblauwtje"
 
 msgid "Plebejus idas"
-msgstr ""
+msgstr "Vals heideblauwtje"
 
 msgid "Plebejus bellieri"
-msgstr ""
+msgstr "Corsicaans vals heideblauwtje"
 
 msgid "Plebejus argyrognomon"
-msgstr ""
+msgstr "Kroonkruidblauwtje"
 
 msgid "Agriades orbitulus"
-msgstr ""
+msgstr "Alpenblauwtje"
 
 msgid "Agriades optilete"
-msgstr ""
+msgstr "Veenbesblauwtje"
 
 msgid "Agriades pyrenaicus"
-msgstr ""
+msgstr "Zuidelijk mansschildblauwtje"
 
 msgid "Agriades dardanus"
-msgstr ""
+msgstr "Balkan manschildblauwtje"
 
 msgid "Agriades zullichi"
-msgstr ""
+msgstr "Nevada manschildblauwtje"
 
 msgid "Agriades glandon"
-msgstr ""
+msgstr "Noordelijk mansschildblauwtje"
 
 msgid "Agriades aquilo"
-msgstr ""
+msgstr "Arctisch manschildblauwtje"
 
 msgid "Plebejidea loewii"
-msgstr ""
+msgstr "Azuurblauwtje"
 
 msgid "Eumedonia eumedon"
-msgstr ""
+msgstr "Zwart blauwtje"
 
 msgid "Kretania psylorita"
-msgstr ""
+msgstr "Kretablauwtje"
 
 msgid "Kretania hesperica"
-msgstr ""
+msgstr "Spaans saffierblauwtje"
 
 msgid "Kretania eurypilus"
-msgstr ""
+msgstr "Bruin tragantblauwtje"
 
 msgid "Kretania trappi"
-msgstr ""
+msgstr "Alpensaffierblauwtje"
 
 msgid "Kretania sephirus"
 msgstr ""
 
 msgid "Kretania pylaon"
-msgstr ""
+msgstr "Oostelijk saffierblauwtje"
 
 msgid "Cyaniris semiargus"
-msgstr ""
+msgstr "Klaverblauwtje"
 
 msgid "Glabroculus cyane"
 msgstr ""
 
 msgid "Aricia morronensis"
-msgstr ""
+msgstr "Spaans bruin blauwtje"
 
 msgid "Aricia anteros"
-msgstr ""
+msgstr "Balkan bruin blauwtje"
 
 msgid "Aricia cramera"
-msgstr ""
+msgstr "Moors bruin blauwtje"
 
 msgid "Aricia nicias"
-msgstr ""
+msgstr "Zilverbruin blauwtje"
 
 msgid "Aricia artaxerxes"
-msgstr ""
+msgstr "Vals bruin blauwtje"
 
 msgid "Aricia montensis"
 msgstr ""
 
 msgid "Aricia agestis"
-msgstr ""
+msgstr "Bruin blauwtje"
 
 msgid "Neolysandra coelestina"
-msgstr ""
+msgstr "Kobaltblauwtje"
 
 msgid "Lysandra hispana"
-msgstr ""
+msgstr "Provençaals bleek blauwtje"
 
 msgid "Lysandra corydonius"
 msgstr ""
 
 msgid "Lysandra bellargus"
-msgstr ""
+msgstr "Adonisblauwtje"
 
 msgid "Lysandra coridon"
-msgstr ""
+msgstr "Bleek blauwtje"
 
 msgid "Lysandra caelestissima"
-msgstr ""
+msgstr "Spaans bleek blauwtje"
 
 msgid "Lysandra albicans"
-msgstr ""
+msgstr "Kwartsblauwtje"
 
 msgid "Polyommatus escheri"
-msgstr ""
+msgstr "Groot tragantblauwtje"
 
 msgid "Polyommatus thersites"
-msgstr ""
+msgstr "Esparcetteblauwtje"
 
 msgid "Polyommatus daphnis"
-msgstr ""
+msgstr "Getand blauwtje"
 
 msgid "Polyommatus amandus"
-msgstr ""
+msgstr "Wikkeblauwtje"
 
 msgid "Polyommatus golgus"
-msgstr ""
+msgstr "Nevadaturkooisblauwtje"
 
 msgid "Polyommatus nivescens"
-msgstr ""
+msgstr "Parelmoerblauwtje"
 
 msgid "Polyommatus dorylas"
-msgstr ""
+msgstr "Turkoois blauwtje"
 
 msgid "Polyommatus celina"
-msgstr ""
+msgstr "Mediteraans blauwtje"
 
 msgid "Polyommatus icarus"
-msgstr ""
+msgstr "Icarusblauwtje"
 
 msgid "Polyommatus eros"
-msgstr ""
+msgstr "Vlaggewikkeblauwtje"
 
 msgid "Polyommatus damon"
-msgstr ""
+msgstr "Witstreepblauwtje"
 
 msgid "Polyommatus damone"
 msgstr ""
@@ -773,79 +776,79 @@ msgid "Polyommatus damocles"
 msgstr ""
 
 msgid "Polyommatus admetus"
-msgstr ""
+msgstr "Oostelijk esparcetteblauwtje"
 
 msgid "Polyommatus ripartii"
-msgstr ""
+msgstr "Zuidelijk esparcetteblauwtje"
 
 msgid "Polyommatus nephohiptamenos"
-msgstr ""
+msgstr "Macedonisch  esparcetteblauwtje"
 
 msgid "Polyommatus iphigenia"
-msgstr ""
+msgstr "Turks witstreepblauwtje"
 
 msgid "Polyommatus violetae"
-msgstr ""
+msgstr "Almijara esparcetteblauwtje"
 
 msgid "Polyommatus fulgens"
-msgstr ""
+msgstr "Catalaans vachtblauwtje"
 
 msgid "Polyommatus fabressei"
-msgstr ""
+msgstr "Spaans esparcetteblauwtje"
 
 msgid "Polyommatus dolus"
-msgstr ""
+msgstr "Westelijk vachtblauwtje"
 
 msgid "Polyommatus humedasae"
-msgstr ""
+msgstr "Aosta-esparcetteblauwtje"
 
 msgid "Polyommatus timfristos"
 msgstr ""
 
 msgid "Polyommatus orphicus"
-msgstr ""
+msgstr "Rhodopen esparcetteblauwtje"
 
 msgid "Polyommatus aroaniensis"
-msgstr ""
+msgstr "Grieks esparcetteblauwtje"
 
 msgid "Neptis sappho"
-msgstr ""
+msgstr "Lathyruszwever"
 
 msgid "Neptis rivularis"
-msgstr ""
+msgstr "Spireazwever"
 
 msgid "Limenitis reducta"
-msgstr ""
+msgstr "Blauwe ijsvogelvlinder"
 
 msgid "Limenitis populi"
-msgstr ""
+msgstr "Grote ijsvogelvlinder"
 
 msgid "Limenitis camilla"
-msgstr ""
+msgstr "Kleine ijsvogelvlinder"
 
 msgid "Issoria lathonia"
-msgstr ""
+msgstr "Kleine parelmoervlinder"
 
 msgid "Issoria eugenia"
 msgstr ""
 
 msgid "Brenthis hecate"
-msgstr ""
+msgstr "Dubbelstipparelmoervlinder"
 
 msgid "Brenthis ino"
-msgstr ""
+msgstr "Purperstreepparelmoervlinder"
 
 msgid "Brenthis daphne"
-msgstr ""
+msgstr "Braamparelmoervlinder"
 
 msgid "Argynnis paphia"
-msgstr ""
+msgstr "Keizersmantel"
 
 msgid "Argynnis pandora"
-msgstr ""
+msgstr "Kardinaalsmantel"
 
 msgid "Argynnis laodice"
-msgstr ""
+msgstr "Tsarenmantel"
 
 msgid "Speyeria aglaja"
 msgstr ""
@@ -860,49 +863,49 @@ msgid "Fabriciana adippe"
 msgstr ""
 
 msgid "Boloria eunomia"
-msgstr ""
+msgstr "Ringoogparelmoervlinder"
 
 msgid "Boloria graeca"
-msgstr ""
+msgstr "Balkanparelmoervlinder"
 
 msgid "Boloria pales"
-msgstr ""
+msgstr "Herdersparelmoervlinder"
 
 msgid "Boloria alaskensis"
 msgstr ""
 
 msgid "Boloria napaea"
-msgstr ""
+msgstr "Bergparelmoervlinder"
 
 msgid "Boloria aquilonaris"
-msgstr ""
+msgstr "Veenbesparelmoervlinder"
 
 msgid "Boloria tritonia"
 msgstr ""
 
 msgid "Boloria polaris"
-msgstr ""
+msgstr "Poolparelmoervlinder"
 
 msgid "Boloria thore"
-msgstr ""
+msgstr "Thor’s parelmoervlinder"
 
 msgid "Boloria selene"
-msgstr ""
+msgstr "Zilveren maan"
 
 msgid "Boloria euphrosyne"
-msgstr ""
+msgstr "Zilvervlek"
 
 msgid "Boloria dia"
-msgstr ""
+msgstr "Paarse parelmoervlinder"
 
 msgid "Boloria improba"
-msgstr ""
+msgstr "Donkere parelmoervlinder"
 
 msgid "Boloria frigga"
-msgstr ""
+msgstr "Frigga’s parelmoervlinder"
 
 msgid "Boloria freija"
-msgstr ""
+msgstr "Freija’s parelmoervlinder"
 
 msgid "Boloria selenis"
 msgstr ""
@@ -911,286 +914,286 @@ msgid "Boloria oscarus"
 msgstr ""
 
 msgid "Boloria titania"
-msgstr ""
+msgstr "Titania’s parelmoervlinder"
 
 msgid "Boloria chariclea"
-msgstr ""
+msgstr "Arctische parelmoervlinder"
 
 msgid "Boloria angarensis"
 msgstr ""
 
 msgid "Apatura iris"
-msgstr ""
+msgstr "Grote weerschijnvlinder"
 
 msgid "Apatura metis"
-msgstr ""
+msgstr "Oostelijke weerschijnvlinder"
 
 msgid "Apatura ilia"
-msgstr ""
+msgstr "Kleine weerschijnvlinder"
 
 msgid "Apatura ilia/iris"
 msgstr ""
 
 msgid "Araschnia levana"
-msgstr ""
+msgstr "Landkaartje"
 
 msgid "Vanessa virginiensis"
-msgstr ""
+msgstr "Amerikaanse distelvlinder"
 
 msgid "Vanessa cardui"
-msgstr ""
+msgstr "Distelvlinder"
 
 msgid "Vanessa vulcania"
-msgstr ""
+msgstr "Canarische atalanta"
 
 msgid "Vanessa atalanta"
-msgstr ""
+msgstr "Atalanta"
 
 msgid "Aglais io"
-msgstr ""
+msgstr "Dagpauwoog"
 
 msgid "Aglais urticae"
-msgstr ""
+msgstr "Kleine vos"
 
 msgid "Aglais ichnusa"
-msgstr ""
+msgstr "Tyrreense kleine vos"
 
 msgid "Polygonia egea"
-msgstr ""
+msgstr "Zuidelijke aurelia"
 
 msgid "Polygonia c-album"
-msgstr ""
+msgstr "Gehakkelde aurelia"
 
 msgid "Nymphalis vaualbum"
 msgstr ""
 
 msgid "Nymphalis polychloros"
-msgstr ""
+msgstr "Grote vos"
 
 msgid "Nymphalis xanthomelas"
-msgstr ""
+msgstr "Oostelijke"
 
 msgid "Nymphalis antiopa"
-msgstr ""
+msgstr "Rouwmantel"
 
 msgid "Hypolimnas misippus"
-msgstr ""
+msgstr "Valse monarchvlinder"
 
 msgid "Euphydryas desfontainii"
-msgstr ""
+msgstr "Mozaïekparelmoervlinder"
 
 msgid "Euphydryas aurinia"
-msgstr ""
+msgstr "Moerasparelmoervlinder"
 
 msgid "Euphydryas cynthia"
-msgstr ""
+msgstr "Witbonte parelmoervlinder"
 
 msgid "Euphydryas iduna"
-msgstr ""
+msgstr "Geelbonte parelmoervlinder"
 
 msgid "Euphydryas maturna"
-msgstr ""
+msgstr "Roodbonte parelmoervlinder"
 
 msgid "Euphydryas intermedia"
-msgstr ""
+msgstr "Oranjebonte parelmoervlinder"
 
 msgid "Melitaea trivia"
-msgstr ""
+msgstr "Toortsparelmoervlinder"
 
 msgid "Melitaea didyma"
-msgstr ""
+msgstr "Tweekleurige parelmoervlinder"
 
 msgid "Melitaea arduinna"
-msgstr ""
+msgstr "Centaurieparelmoervlinder"
 
 msgid "Melitaea aetherie"
-msgstr ""
+msgstr "Moorse parelmoervlinder"
 
 msgid "Melitaea phoebe"
-msgstr ""
+msgstr "Knoopkruidparelmoervlinder"
 
 msgid "Melitaea ornata"
-msgstr ""
+msgstr "Oostelijke knoopkruidparelmoervlinder"
 
 msgid "Melitaea cinxia"
-msgstr ""
+msgstr "Veldparelmoervlinder"
 
 msgid "Melitaea diamina"
-msgstr ""
+msgstr "Woudparelmoervlinder"
 
 msgid "Melitaea celadussa"
 msgstr ""
 
 msgid "Melitaea deione"
-msgstr ""
+msgstr "Spaanse parelmoervlinder"
 
 msgid "Melitaea britomartis"
-msgstr ""
+msgstr "Oostelijke parelmoervlinder"
 
 msgid "Melitaea athalia"
-msgstr ""
+msgstr "Bosparelmoervlinder"
 
 msgid "Melitaea varia"
-msgstr ""
+msgstr "Alpenparelmoervlinder"
 
 msgid "Melitaea parthenoides"
-msgstr ""
+msgstr "Westelijke parelmoervlinder"
 
 msgid "Melitaea aurelia"
-msgstr ""
+msgstr "Steppeparelmoervlinder"
 
 msgid "Melitaea asteria"
-msgstr ""
+msgstr "Dwergparelmoervlinder"
 
 msgid "Libythea celtis"
-msgstr ""
+msgstr "Snuitvlinder"
 
 msgid "Danaus plexippus"
-msgstr ""
+msgstr "Monarchvlinder"
 
 msgid "Danaus chrysippus"
-msgstr ""
+msgstr "Kleine monarchvlinder"
 
 msgid "Charaxes jasius"
-msgstr ""
+msgstr "Pasja"
 
 msgid "Coenonympha phryne"
 msgstr ""
 
 msgid "Coenonympha oedippus"
-msgstr ""
+msgstr "Goudooghooibeestje"
 
 msgid "Coenonympha dorus"
-msgstr ""
+msgstr "Bleek hooibeestje"
 
 msgid "Coenonympha thyrsis"
-msgstr ""
+msgstr "Kretahooibeestje"
 
 msgid "Coenonympha pamphilus"
-msgstr ""
+msgstr "Hooibeestje"
 
 msgid "Coenonympha tullia"
-msgstr ""
+msgstr "Veenhooibeestje"
 
 msgid "Coenonympha rhodopensis"
-msgstr ""
+msgstr "Balkanhooibeestje"
 
 msgid "Coenonympha amaryllis"
 msgstr ""
 
 msgid "Coenonympha glycerion"
-msgstr ""
+msgstr "Roodstreephooibeestje"
 
 msgid "Coenonympha corinna"
-msgstr ""
+msgstr "Corsicaans hooibeestje"
 
 msgid "Coenonympha leander"
-msgstr ""
+msgstr "Turks hooibeestje"
 
 msgid "Coenonympha hero"
-msgstr ""
+msgstr "Zilverstreephooibeestje"
 
 msgid "Coenonympha gardetta"
-msgstr ""
+msgstr "Alpenhooibeestje"
 
 msgid "Coenonympha orientalis"
-msgstr ""
+msgstr "Oriëntaals hooibeestje"
 
 msgid "Coenonympha arcania"
-msgstr ""
+msgstr "Tweekleurig hooibeestje"
 
 msgid "Kirinia roxelana"
-msgstr ""
+msgstr "Grote schaduwzandoog"
 
 msgid "Kirinia climene"
-msgstr ""
+msgstr "Kleine schaduwzandoog"
 
 msgid "Lopinga achine"
-msgstr ""
+msgstr "Boszandoog"
 
 msgid "Pararge xiphia"
-msgstr ""
+msgstr "Madeira bont zandoogje"
 
 msgid "Pararge xiphioides"
-msgstr ""
+msgstr "Canarisch bont zandoogje"
 
 msgid "Pararge aegeria"
-msgstr ""
+msgstr "Bont zandoogje"
 
 msgid "Lasiommata maera"
-msgstr ""
+msgstr "Rotsvlinder"
 
 msgid "Lasiommata deidamia"
 msgstr ""
 
 msgid "Lasiommata petropolitana"
-msgstr ""
+msgstr "Kleine rotsvlinder"
 
 msgid "Lasiommata paramegaera"
-msgstr ""
+msgstr "Vale argusvlinder"
 
 msgid "Lasiommata megera"
-msgstr ""
+msgstr "Argusvlinder"
 
 msgid "Melanargia russiae"
-msgstr ""
+msgstr "Zuidelijk dambordje"
 
 msgid "Melanargia larissa"
-msgstr ""
+msgstr "Oostelijk dambordje"
 
 msgid "Melanargia lachesis"
-msgstr ""
+msgstr "Spaans dambordje"
 
 msgid "Melanargia galathea"
-msgstr ""
+msgstr "Dambordje"
 
 msgid "Melanargia ines"
-msgstr ""
+msgstr "Moors dambordje"
 
 msgid "Melanargia arge"
-msgstr ""
+msgstr "Italiaans dambordje"
 
 msgid "Melanargia pherusa"
-msgstr ""
+msgstr "Siciliaans dambordje"
 
 msgid "Melanargia occitanica"
-msgstr ""
+msgstr "Westelijk dambordje"
 
 msgid "Hipparchia fatua"
-msgstr ""
+msgstr "Donkere heivlinder"
 
 msgid "Hipparchia statilinus"
-msgstr ""
+msgstr "Kleine heivlinder"
 
 msgid "Hipparchia azorina"
-msgstr ""
+msgstr "Azorenheivlinder"
 
 msgid "Hipparchia senthes"
-msgstr ""
+msgstr "Verborgen heivlinder"
 
 msgid "Hipparchia maderensis"
-msgstr ""
+msgstr "Madeiraheivlinder"
 
 msgid "Hipparchia semele"
-msgstr ""
+msgstr "Heivlinder"
 
 msgid "Hipparchia blachieri"
 msgstr ""
 
 msgid "Hipparchia aristaeus"
-msgstr ""
+msgstr "Zuidelijke heivlinder"
 
 msgid "Hipparchia volgensis"
-msgstr ""
+msgstr "Balkanheivlinder"
 
 msgid "Hipparchia neapolitana"
 msgstr ""
 
 msgid "Hipparchia leighebi"
-msgstr ""
+msgstr "Eolische heivlinder"
 
 msgid "Hipparchia pellucida"
-msgstr ""
+msgstr "Turkse heivlinder"
 
 msgid "Hipparchia sbordonii"
 msgstr ""
@@ -1199,25 +1202,25 @@ msgid "Hipparchia cypriensis"
 msgstr ""
 
 msgid "Hipparchia cretica"
-msgstr ""
+msgstr "Kretaheivlinder"
 
 msgid "Hipparchia christenseni"
-msgstr ""
+msgstr "Karpathosheivlinder"
 
 msgid "Minois dryas"
-msgstr ""
+msgstr "Blauwoogvlinder"
 
 msgid "Brintesia circe"
-msgstr ""
+msgstr "Witbandzandoog"
 
 msgid "Arethusana arethusa"
-msgstr ""
+msgstr "Oranje steppevlinder"
 
 msgid "Oeneis tarpeia"
 msgstr ""
 
 msgid "Oeneis bore"
-msgstr ""
+msgstr "Pooltoendravlinder"
 
 msgid "Oeneis ammon"
 msgstr ""
@@ -1229,46 +1232,46 @@ msgid "Oeneis magna"
 msgstr ""
 
 msgid "Oeneis jutta"
-msgstr ""
+msgstr "Baltische toendravlinder"
 
 msgid "Oeneis norna"
-msgstr ""
+msgstr "Noordse toendravlinder"
 
 msgid "Oeneis polixenes"
 msgstr ""
 
 msgid "Oeneis glacialis"
-msgstr ""
+msgstr "Gletsjervlinder"
 
 msgid "Satyrus ferula"
-msgstr ""
+msgstr "Grote saterzandoog"
 
 msgid "Satyrus virbius"
 msgstr ""
 
 msgid "Satyrus actaea"
-msgstr ""
+msgstr "Kleine saterzandoog"
 
 msgid "Chazara briseis"
-msgstr ""
+msgstr "Heremiet"
 
 msgid "Chazara prieuri"
-msgstr ""
+msgstr "Bonte heremiet"
 
 msgid "Chazara persephone"
 msgstr ""
 
 msgid "Pseudochazara geyeri"
-msgstr ""
+msgstr "Grauwe heremiet"
 
 msgid "Pseudochazara graeca"
-msgstr ""
+msgstr "Griekse heremiet"
 
 msgid "Pseudochazara amymone"
-msgstr ""
+msgstr "Ioannina heremiet"
 
 msgid "Pseudochazara anthelea"
-msgstr ""
+msgstr "Witbandheremiet"
 
 msgid "Pseudochazara amalthea"
 msgstr ""
@@ -1280,64 +1283,64 @@ msgid "Pseudochazara euxina"
 msgstr ""
 
 msgid "Pseudochazara mercurius"
-msgstr ""
+msgstr "Nevadaheremiet"
 
 msgid "Pseudochazara cingovskii"
-msgstr ""
+msgstr "Macedonische heremiet"
 
 msgid "Pseudochazara tisiphone"
-msgstr ""
+msgstr "Roodbandheremiet"
 
 msgid "Pseudochazara orestes"
-msgstr ""
+msgstr "Bulgaarse heremiet"
 
 msgid "Ypthima asterope"
-msgstr ""
+msgstr "Dubbeloog"
 
 msgid "Proterebia phegea"
-msgstr ""
+msgstr "Veeloog"
 
 msgid "Hyponephele huebneri"
 msgstr ""
 
 msgid "Hyponephele lycaon"
-msgstr ""
+msgstr "Grauw zandoogje"
 
 msgid "Hyponephele lupina"
-msgstr ""
+msgstr "Zuidelijk grauw zandoogje"
 
 msgid "Aphantopus hyperantus"
-msgstr ""
+msgstr "Koevinkje"
 
 msgid "Pyronia cecilia"
-msgstr ""
+msgstr "Zuidelijk oranje zandoogje"
 
 msgid "Pyronia tithonus"
-msgstr ""
+msgstr "Oranje zandoogje"
 
 msgid "Pyronia bathseba"
-msgstr ""
+msgstr "Spaans oranje zandoogje"
 
 msgid "Maniola jurtina"
-msgstr ""
+msgstr "Bruin zandoogje"
 
 msgid "Maniola nurag"
-msgstr ""
+msgstr "Sardijns bruin zandoogje"
 
 msgid "Maniola chia"
-msgstr ""
+msgstr "Chios bruin zandoogje"
 
 msgid "Maniola megala"
-msgstr ""
+msgstr "Turks bruin zandoogje"
 
 msgid "Maniola cypricola"
 msgstr ""
 
 msgid "Maniola telmessia"
-msgstr ""
+msgstr "Levant bruin zandoogje"
 
 msgid "Maniola halicarnassus"
-msgstr ""
+msgstr "Egeïsch bruin zandoogje"
 
 msgid "Erebia edda"
 msgstr ""
@@ -1355,13 +1358,13 @@ msgid "Erebia cyclopius"
 msgstr ""
 
 msgid "Erebia embla"
-msgstr ""
+msgstr "Siberische erebia"
 
 msgid "Erebia disa"
-msgstr ""
+msgstr "Noordse erebia"
 
 msgid "Erebia meolans"
-msgstr ""
+msgstr "Donkere erebia"
 
 msgid "Erebia dabanensis"
 msgstr ""
@@ -1370,34 +1373,34 @@ msgid "Erebia jeniseiensis"
 msgstr ""
 
 msgid "Erebia claudina"
-msgstr ""
+msgstr "Parelsnoerbergerebia"
 
 msgid "Erebia manto"
-msgstr ""
+msgstr "Geelvlekbergerebia"
 
 msgid "Erebia ottomana"
-msgstr ""
+msgstr "Oostelijke glanserebia"
 
 msgid "Erebia hispania"
-msgstr ""
+msgstr "Spaanse glanserebia"
 
 msgid "Erebia rondoui"
-msgstr ""
+msgstr "Pyreneeënglanserebia"
 
 msgid "Erebia callias"
 msgstr ""
 
 msgid "Erebia tyndarus"
-msgstr ""
+msgstr "Zwitserse glanserebia"
 
 msgid "Erebia cassioides"
-msgstr ""
+msgstr "Gewone glanserebia"
 
 msgid "Erebia nivalis"
-msgstr ""
+msgstr "Alpenglanserebia"
 
 msgid "Erebia neleus"
-msgstr ""
+msgstr "Balkanglanserebia"
 
 msgid "Erebia calcarius"
 msgstr ""
@@ -1406,106 +1409,106 @@ msgid "Erebia arvernensis"
 msgstr ""
 
 msgid "Erebia oeme"
-msgstr ""
+msgstr "Bontoogerebia"
 
 msgid "Erebia gorge"
-msgstr ""
+msgstr "Gewone zijde-erebia"
 
 msgid "Erebia sthennyo"
-msgstr ""
+msgstr "Pyreneeëndauwerebia"
 
 msgid "Erebia pandrose"
-msgstr ""
+msgstr "Gewone dauwerebia"
 
 msgid "Erebia eriphyle"
-msgstr ""
+msgstr "Alpenbergerebia"
 
 msgid "Erebia epistygne"
-msgstr ""
+msgstr "Lente-erebia"
 
 msgid "Erebia euryale"
-msgstr ""
+msgstr "Grote erebia"
 
 msgid "Erebia palarica"
-msgstr ""
+msgstr "Asturische erebia"
 
 msgid "Erebia ligea"
-msgstr ""
+msgstr "Boserebia"
 
 msgid "Erebia pluto"
-msgstr ""
+msgstr "Roeterebia"
 
 msgid "Erebia aethiopellus"
 msgstr ""
 
 msgid "Erebia gorgone"
-msgstr ""
+msgstr "Pyreneeënzijde-erebia"
 
 msgid "Erebia rhodopensis"
-msgstr ""
+msgstr "Balkanzijde-erebia"
 
 msgid "Erebia mnestra"
-msgstr ""
+msgstr "Alpenzijde-erebia"
 
 msgid "Erebia albergana"
-msgstr ""
+msgstr "Amandeloogerebia"
 
 msgid "Erebia sudetica"
-msgstr ""
+msgstr "Karpatenbergerebia"
 
 msgid "Erebia melampus"
-msgstr ""
+msgstr "Kleine bergerebia"
 
 msgid "Erebia triarius"
 msgstr ""
 
 msgid "Erebia polaris"
-msgstr ""
+msgstr "Poolerebia"
 
 msgid "Erebia medusa"
-msgstr ""
+msgstr "Voorjaarserebia"
 
 msgid "Erebia aethiops"
-msgstr ""
+msgstr "Zomererebia"
 
 msgid "Erebia pharte"
-msgstr ""
+msgstr "Blinde bergerebia"
 
 msgid "Erebia christi"
-msgstr ""
+msgstr "Simplonbergerebia"
 
 msgid "Erebia orientalis"
-msgstr ""
+msgstr "Bulgaarse bergerebia"
 
 msgid "Erebia epiphron"
-msgstr ""
+msgstr "Bergerebia"
 
 msgid "Erebia flavofasciata"
-msgstr ""
+msgstr "Geelbandbergerebia"
 
 msgid "Erebia montana"
-msgstr ""
+msgstr "Marmererebia"
 
 msgid "Erebia styx"
-msgstr ""
+msgstr "Oostenrijkse erebia"
 
 msgid "Erebia stiria"
-msgstr ""
+msgstr "Karinthische erebia"
 
 msgid "Erebia scipio"
-msgstr ""
+msgstr "Provençaalse erebia"
 
 msgid "Erebia pronoe"
-msgstr ""
+msgstr "Watererebia"
 
 msgid "Erebia melas"
-msgstr ""
+msgstr "Zwarte erebia"
 
 msgid "Erebia lefebvrei"
-msgstr ""
+msgstr "Cantabrische erebia"
 
 msgid "Erebia zapateri"
-msgstr ""
+msgstr "Castiliaanse erebia"
 
 msgid "Erebia neoridas"
-msgstr ""
+msgstr "Herfsterebia"
