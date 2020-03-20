@@ -982,3 +982,47 @@ msgstr "Go to the application setting page to change the language and the countr
 
 msgid "You can also switch on the Training Mode, when you are still learning to identify butterflies."
 msgstr "You can also switch on the Training Mode, when you are still learning to identify butterflies."
+
+# This is part of mapping functionality
+msgid "Delete last point"
+msgstr "Delete last point"
+
+# This is part of mapping functionality
+msgid "Save"
+msgstr "Save"
+
+# This is part of mapping functionality
+msgid "Clear All"
+msgstr "Clear All"
+
+# This is part of mapping functionality
+msgid "Click to start drawing shape."
+msgstr "Click to start drawing shape."
+
+# This is part of mapping functionality
+msgid "Click to continue drawing shape."
+msgstr "Click to continue drawing shape."
+
+# This is part of mapping functionality
+msgid "Click first point to close this shape."
+msgstr "Click first point to close this shape."
+
+# This is part of mapping functionality
+msgid "Click to start drawing line."
+msgstr "Click to start drawing line."
+
+# This is part of mapping functionality
+msgid "Click to continue drawing line."
+msgstr "Click to continue drawing line."
+
+# This is part of mapping functionality
+msgid "Click last point to finish line."
+msgstr "Click last point to finish line."
+
+# This is part of mapping functionality
+msgid "Drag handles or markers to edit features."
+msgstr "Drag handles or markers to edit features."
+
+# This is part of mapping functionality
+msgid "Click cancel to undo changes."
+msgstr "Click cancel to undo changes."

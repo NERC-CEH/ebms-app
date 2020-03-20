@@ -1210,3 +1210,47 @@ msgid ""
 msgstr ""
 "Jūs taip pat galite įsijungti Mokymosi režimą su kuriuo įrašai nabus "
 "panaudoti jokiais tikslais."
+
+# This is part of mapping functionality
+msgid "Delete last point"
+msgstr "Ištrinti paskutinį"
+
+# This is part of mapping functionality
+msgid "Save"
+msgstr "Išsaugoti"
+
+# This is part of mapping functionality
+msgid "Clear All"
+msgstr "Ištrinti visus"
+
+# This is part of mapping functionality
+msgid "Click to start drawing shape."
+msgstr "Pradėkite žymėti vietovę."
+
+# This is part of mapping functionality
+msgid "Click to continue drawing shape."
+msgstr "Tęskite vietovės žymėjimą."
+
+# This is part of mapping functionality
+msgid "Click first point to close this shape."
+msgstr "Paspauskite ant pirmojo žymeklio tam kad užbaigti vietovę."
+
+# This is part of mapping functionality
+msgid "Click to start drawing line."
+msgstr "Pradėkite žymėti nueitą kelią."
+
+# This is part of mapping functionality
+msgid "Click to continue drawing line."
+msgstr "Tęskite nueito kelio žymėjimą."
+
+# This is part of mapping functionality
+msgid "Click last point to finish line."
+msgstr "Paspauskite ant paskutinio taško tam kad užbaigti žymėjimą."
+
+# This is part of mapping functionality
+msgid "Drag handles or markers to edit features."
+msgstr "Galite pastumkite žymeklį."
+
+# This is part of mapping functionality
+msgid "Click cancel to undo changes."
+msgstr "Paspauskite atšaukti, kad ištrinti pokyčius."

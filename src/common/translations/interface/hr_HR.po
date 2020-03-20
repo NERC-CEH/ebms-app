@@ -1165,3 +1165,47 @@ msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
+
+# This is part of mapping functionality
+msgid "Delete last point"
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Save"
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Clear All"
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to start drawing shape."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to continue drawing shape."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click first point to close this shape."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to start drawing line."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to continue drawing line."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click last point to finish line."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Drag handles or markers to edit features."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click cancel to undo changes."
+msgstr ""

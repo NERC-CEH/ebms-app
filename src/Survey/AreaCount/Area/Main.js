@@ -25,6 +25,31 @@ const DEFAULT_ZOOM = 5;
 const DEFAULT_LOCATED_ZOOM = 18;
 const DEFAULT_SHAPE_COLOR = '#9733ff';
 
+function translateDrawInterface() {
+  L.drawLocal.draw.toolbar.actions.text = t('Cancel');
+  L.drawLocal.draw.toolbar.finish.text = t('Finish');
+  L.drawLocal.draw.toolbar.undo.text = t('Delete last point');
+  L.drawLocal.edit.toolbar.actions.save.text = t('Save');
+  L.drawLocal.edit.toolbar.actions.cancel.text = t('Cancel');
+  L.drawLocal.edit.toolbar.actions.clearAll.text = t('Clear All');
+  L.drawLocal.edit.handlers.edit.tooltip = {
+    text: t('Drag handles or markers to edit features.'),
+    subtext: t('Click cancel to undo changes.'),
+  };
+  L.drawLocal.draw.handlers.polygon.tooltip = {
+    start: t('Click to start drawing shape.'),
+    cont: t('Click to continue drawing shape.'),
+    end: t('Click first point to close this shape.'),
+  };
+  L.drawLocal.draw.handlers.polyline = {
+    tooltip: {
+      start: t('Click to start drawing line.'),
+      cont: t('Click to continue drawing line.'),
+      end: t('Click last point to finish line.'),
+    },
+  };
+}
+
 @observer
 class AreaAttr extends Component {
   static contextType = IonLifeCycleContext;
@@ -87,6 +112,7 @@ class AreaAttr extends Component {
       },
     });
     map.addControl(drawControl);
+    translateDrawInterface();
 
     return drawnItems;
   }

@@ -1,11 +1,11 @@
 # Translators:
-# Federica Paradiso <fedediso94@gmail.com>, 2020
 # Karolis, 2020
+# Federica Paradiso <fedediso94@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2020\n"
+"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2020\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -391,8 +391,7 @@ msgid "Draft"
 msgstr "Bozza "
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr ""
-"Precedente bozza del campionamento esistente, vuoi continuare questa? "
+msgstr "Bozza del campionamento già esistente, vuoi continuarla? "
 
 msgid "Discard"
 msgstr "Elimina "
@@ -1253,3 +1252,47 @@ msgid ""
 msgstr ""
 "Puoi anche impostare la Modalità di allenamento, quando stai ancora "
 "imparando a identificare le farfalle."
+
+# This is part of mapping functionality
+msgid "Delete last point"
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Save"
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Clear All"
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to start drawing shape."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to continue drawing shape."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click first point to close this shape."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to start drawing line."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to continue drawing line."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click last point to finish line."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Drag handles or markers to edit features."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click cancel to undo changes."
+msgstr ""
