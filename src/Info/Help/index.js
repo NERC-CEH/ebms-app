@@ -13,7 +13,7 @@ import './styles.scss';
 
 export default () => (
   <IonPage>
-    <AppHeader title={t('Credits')} />
+    <AppHeader title={t('Help')} />
     <IonContent id="help" class="ion-padding">
       <IonList lines="none">
         <IonItemDivider>{t('Surveys')}</IonItemDivider>
