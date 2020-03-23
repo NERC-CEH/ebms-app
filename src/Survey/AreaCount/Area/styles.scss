@@ -3,11 +3,29 @@
   width: 100vw;
   background-color: #5d5d5d;
 
+  .leaflet-control-zoom.leaflet-control a,
+  .leaflet-control .leaflet-draw-toolbar a {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    background-size: 400px 40px !important;
+
+    &.leaflet-draw-draw-polygon {
+      background-position: -39px -1px;
+    }
+    &.leaflet-draw-edit-edit {
+      background-position: -200px -1px;
+    }
+    &.leaflet-draw-edit-remove {
+      background-position: -240px -1px;
+    }
+  }
+
   .leaflet-control .geolocate-btn {
     border-radius: 4px;
     background: white;
-    width: 33px;
-    height: 33px;
+    width: 42px;
+    height: 42px;
     margin-left: 1px;
     border: 2px solid rgba(0, 0, 0, 0.2);
     background-clip: padding-box;
