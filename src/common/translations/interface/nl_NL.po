@@ -1,13 +1,13 @@
 # Translators:
-# Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2019
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Ineke <ineke.radstaat@vlinderstichting.nl>, 2020
 # Karolis, 2020
+# Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2020\n"
+"Last-Translator: Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2020\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/ceh/teams/95441/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1062,7 +1062,7 @@ msgid "Photo credits"
 msgstr "Foto credits"
 
 msgid "How to use the app"
-msgstr ""
+msgstr "Hoe werkt deze app"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1070,6 +1070,11 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register with a username or email and enter a password."
 msgstr ""
+"Met deze app kunt u overal in Europa dagvlinders monitoren. De resultaten "
+"komen in de Europese Dagvlinder Monitoring Database, en ze zullen worden "
+"gebruikt om Europese dagvlindertrends te berekenen. Om deze app te gebruiken"
+" moet u zich eerst registreren met een gebruikersnaam of emailadres en een "
+"wachtwoord."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count.  This can be done at "
@@ -1079,9 +1084,15 @@ msgid ""
 "the ability to submit casual records.  The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
+"De voorkeursmethode is een kwartiertelling. Deze kan altijd en overal gedaan"
+" worden zolang dagvlinders actief zijn (bv. als het lekker warm en liefst "
+"zonnig is). Deze app kan ook gebruikt worden op vlindertransecten, maar niet"
+" in Nederland (ga daarvoor naar de site van De Vlinderstichting). Later in "
+"2020 kunnen ook losse waarnemingen worden doorgegeven met deze app. "
+"Hieronder wordt uitgelegd hoe de huidige methoden gebruikt kunnen worden."
 
 msgid "How to do a 15-minute Count"
-msgstr ""
+msgstr "Hoe kunt u een kwartiertelling doen?"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1096,6 +1107,9 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
+"Dit is de standaardmethode in de app. Tel simpelweg alle vlinders gedurende een kwartier, dat mag op een open plek in het bos, een veldje, uw tuin, tijdens het maken van een wandeling, of terwijl u op een plek zit of staat. U hoeft de route niet in te tekenen, de app houdt bij waar u telt als u de gps-locatie functie in de instellingen aan heeft staan. Anders moet u het onderzoeksgebied in de app intekenen. \n"
+"Om te beginnen tikt u de + knop aan de onderkant van het scherm. De app telt nu terug vanaf 15 minuten, maar u kunt op elk moment pauzeren (bv. om een vlinder op naam te brengen of een foto te maken) door op de pauze-knop te drukken.\n"
+"Aan het einde van de kwartiertelling kunt u uw waarnemingen doorkijken, controleren en zo nodig aanpassen."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1105,6 +1119,12 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
+"Voeg nieuwe soorten toe door op de +ADD knop te drukken en begin met het "
+"typen van de soortnaam. De selectie van soorten verschijnt dan als een drop-"
+"down menu. U kunt zowel Nederlandse als wetenschappelijke namen gebruiken. "
+"Selecteer de soort die u ziet, en nadat deze in de vlinderlijst staat, kunt "
+"u aan de linkerkant van de naam het aantal vlinders aanpassen of ophogen. U "
+"kunt dit later ook nog aanpassen. Ook kunt u foto's en commentaar toevoegen."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1113,6 +1133,10 @@ msgid ""
 " record of the count will be held on your device for future reference as "
 "well as on your online account."
 msgstr ""
+"Nadat u de kwartiertelling heeft afgerond en de soorten en aantallen heeft "
+"gecontroleerd, druk op de UPLOAD knop om uw telling in te dienen. Zo worden "
+"uw waarnemingen veilig opgeslagen in de eBMS database. De telling wordt op "
+"uw apparaat en onder uw online account opgeslagen."
 
 msgid "How to record along an existing transect"
 msgstr ""
@@ -1152,64 +1176,87 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the %(eBMSWebsiteLink)"
 msgstr ""
+"Op deze tab, recht van de + knop, ziet u de nog niet geüploade tellingen, de"
+" tellingen die u nog niet heeft ingediend en de tellingen die uw al heeft "
+"geüpload naar de eBMS database. U kunt de nog niet geüploade tellingen "
+"indienen door erop te klikken en dan op de Upload optie te klikken. U kunt "
+"de soortenlijst zien van geüploade tellingen. Al uw tellingen kunnen ook "
+"bekeken en bewerkt worden op de eBMS website."
 
 msgid "eBMS website"
-msgstr ""
+msgstr "eBMS website"
 
 msgid "App Settings"
-msgstr ""
+msgstr "Instellingen"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
+"Ga naar de instellingen om de taal en land in te stellen. Het land wordt "
+"gebruikt om de soorten in de fotogids te laten zien, u ziet alleen de "
+"soorten die in uw land voorkomen."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
+"U kunt ook de training-modus gebruiken, als u nog niet alle soorten goed "
+"kent."
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr ""
+msgstr "Verwijder laatste punt"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr ""
+msgstr "Opslaan"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr ""
+msgstr "Alles leegmaken"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "Klik om te beginnen met het tekenen van een vorm."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "Klik om door te gaan met tekenen van een vorm."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "Klik op het eerste punt om deze vorm te sluiten."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "Klik om te beginnen met een lijn."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "Klik om door te gaan met het tekenen van een lijn."
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "Klik op het laatste punt om het tekenen van de lijn te beëindigen."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr ""
+msgstr "Sleep markeerpunten om ze te bewerken."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
+msgstr "Klik Annuleren om veranderingen niet op te slaan."
+
+msgid "Map"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "This record has been submitted and cannot be edited within this App."
+msgstr ""
+
+msgid "Please go to %(website) to make any new edits."
 msgstr ""

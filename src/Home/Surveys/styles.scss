@@ -1,6 +1,14 @@
-#user-report {
+#surveys-list-page {
   ion-segment {
     margin-bottom: 30px;
+
+    ion-segment-button {
+      width: 33%;
+      z-index: 10000000;
+      &:not(.segment-button-checked) {
+        background: white;
+      }
+    }
 
     ion-badge {
       vertical-align: top;

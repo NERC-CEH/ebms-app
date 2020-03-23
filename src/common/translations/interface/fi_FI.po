@@ -1,11 +1,11 @@
 # Translators:
-# Janne Heliola <janne.heliola@ymparisto.fi>, 2019
 # Karolis, 2020
+# Janne Heliola <janne.heliola@ymparisto.fi>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2020\n"
+"Last-Translator: Janne Heliola <janne.heliola@ymparisto.fi>, 2020\n"
 "Language-Team: Finnish (Finland) (https://www.transifex.com/ceh/teams/95441/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,133 +27,133 @@ msgid "Spain"
 msgstr "Espanja"
 
 msgid "Andorra"
-msgstr ""
+msgstr "Andorra"
 
 msgid "Albania"
-msgstr ""
+msgstr "Albania"
 
 msgid "Austria"
-msgstr ""
+msgstr "Itävalta"
 
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "Bosnia ja Herzegovina"
 
 msgid "Belgium"
-msgstr ""
+msgstr "Belgia"
 
 msgid "Bulgaria"
-msgstr ""
+msgstr "Bulgaria"
 
 msgid "Belarus"
-msgstr ""
+msgstr "Valkovenäjä"
 
 msgid "Switzerland"
-msgstr ""
+msgstr "Sveitsi"
 
 msgid "Cyprus"
-msgstr ""
+msgstr "Kypros"
 
 msgid "Czechia"
-msgstr ""
+msgstr "Tsekki"
 
 msgid "Germany"
-msgstr ""
+msgstr "Saksa"
 
 msgid "Denmark"
-msgstr ""
+msgstr "Tanska"
 
 msgid "Estonia"
-msgstr ""
+msgstr "Viro"
 
 msgid "Spain: Canary Islands"
-msgstr ""
+msgstr "Espanja: Kanarian saaret"
 
 msgid "Finland"
-msgstr ""
+msgstr "Suomi"
 
 msgid "France"
-msgstr ""
+msgstr "Ranska"
 
 msgid "Greece"
-msgstr ""
+msgstr "Kreikka"
 
 msgid "Croatia"
-msgstr ""
+msgstr "Kroatia"
 
 msgid "Hungary"
-msgstr ""
+msgstr "Unkari"
 
 msgid "Ireland"
-msgstr ""
+msgstr "Irlanti"
 
 msgid "Iceland"
-msgstr ""
+msgstr "Islanti"
 
 msgid "Italy"
-msgstr ""
+msgstr "Italia"
 
 msgid "Liechtenstein"
-msgstr ""
+msgstr "Liechtenstein"
 
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luxemburg"
 
 msgid "Latvia"
-msgstr ""
+msgstr "Latvia"
 
 msgid "Moldova"
-msgstr ""
+msgstr "Moldova"
 
 msgid "Montenegro"
-msgstr ""
+msgstr "Montenegro"
 
 msgid "North Macedonia"
-msgstr ""
+msgstr "Pohjois-Makedonia"
 
 msgid "Malta"
-msgstr ""
+msgstr "Malta"
 
 msgid "Netherlands"
-msgstr ""
+msgstr "Alankomaat"
 
 msgid "Norway"
-msgstr ""
+msgstr "Norja"
 
 msgid "Poland"
-msgstr ""
+msgstr "Puola"
 
 msgid "Portugal"
-msgstr ""
+msgstr "Portugali"
 
 msgid "Portugal: Azores"
-msgstr ""
+msgstr "Portugali: Azorit"
 
 msgid "Portugal: Madeira Islands"
-msgstr ""
+msgstr "Portugali: Madeira"
 
 msgid "Romania"
-msgstr ""
+msgstr "Romania"
 
 msgid "Serbia"
-msgstr ""
+msgstr "Serbia"
 
 msgid "Russian Federation"
-msgstr ""
+msgstr "Venäjä"
 
 msgid "Slovenia"
-msgstr ""
+msgstr "Slovenia"
 
 msgid "Slovakia"
-msgstr ""
+msgstr "Slovakia"
 
 msgid "Turkey"
-msgstr ""
+msgstr "Turkki"
 
 msgid "Ukraine"
-msgstr ""
+msgstr "Ukraina"
 
 msgid "Elsewhere"
-msgstr ""
+msgstr "Muualla"
 
 msgid "Skip"
 msgstr "Ohita"
@@ -183,7 +183,7 @@ msgid "Forgot password?"
 msgstr "Salasana unohtui?"
 
 msgid "User not found."
-msgstr ""
+msgstr "Käyttäjää ei löydy."
 
 msgid "Login"
 msgstr "Kirjaudu sisään"
@@ -421,7 +421,7 @@ msgid "Reports"
 msgstr "Raportit"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr ""
+msgstr "Tulostettavia tietoja ei ole käytettävissä."
 
 msgid "Are you sure you want to delete this survey?"
 msgstr "Haluatko poistaa tämän havaintokerran?"
@@ -759,303 +759,312 @@ msgid "No uploaded surveys"
 msgstr "Ei lähetettyjä havaintokertoja"
 
 msgid "Enjoying the app?"
-msgstr ""
+msgstr "Pidätkö tästä sovelluksesta?"
 
 msgid "Not really"
-msgstr ""
+msgstr "Enpä juuri"
 
 msgid "Yes!"
-msgstr ""
+msgstr "Kyllä!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr ""
+msgstr "Haluaisitko antaa siitä palautetta?"
 
 msgid "No, thanks"
-msgstr ""
+msgstr "Ei kiitos."
 
 msgid "OK, sure"
-msgstr ""
+msgstr "Kyllä toki."
 
 msgid "How about a rating on the App Store then?"
-msgstr ""
+msgstr "Antaisitko arvosanan siitä App Storessa?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr ""
+msgstr "Antaisitko arvosanan siitä Play Storessa?"
 
 msgid "Icons made by"
-msgstr ""
+msgstr "Ikonien tekijä:"
 
 msgid "from"
-msgstr ""
+msgstr "keneltä:"
 
 msgid "Enter your username or email address to request a password reset."
 msgstr ""
+"Kirjoita käyttäjätunnuksesi tai sähköpostiosoitteesi pyytääksesi uutta "
+"salasanaa."
 
 msgid "We've sent an email to you"
-msgstr ""
+msgstr "Lähetimme sinulle sähköpostiviestin"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
+"Klikkaa viestissä olevaa linkkiä määrittääksesi uuden salasanan. Ellet löydä"
+" viestiä saapuneissa, tarkista myös roskapostisi ja muut kansiot."
 
 msgid "App Development"
-msgstr ""
+msgstr "Sovelluksen kehitystyö"
 
 msgid "This app was hand crafted with love by"
-msgstr ""
+msgstr "Tämän sovelluksen kehittivät"
 
 msgid "Agency specializing in building bespoke data oriented sollutions."
-msgstr ""
+msgstr "Datakeskeisten sovellusten suunnitteluun erikoistunut yritys."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr ""
+msgstr "Käyttäjäpalaute ja kehittämisehdotukset ovat tervetulleita"
 
 msgid "contact us"
-msgstr ""
+msgstr "ota yhteyttä"
 
 msgid "Language"
-msgstr ""
+msgstr "Kieli"
 
 msgid "Country"
-msgstr ""
+msgstr "Maa"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
+"Merkitse uudet havainnot 'harjoitteluksi' ja jätä ne pois raporteista."
 
 msgid "Share App Analytics"
-msgstr ""
+msgstr "Jaa sovelluksen analytiikkaa"
 
 msgid "Save Draft"
-msgstr ""
+msgstr "Tallenna luonnos"
 
 msgid "Stage"
-msgstr ""
+msgstr "Vaihe"
 
 msgid "Not Recorded"
-msgstr ""
+msgstr "Ei tallennettu"
 
 msgid "Adults"
-msgstr ""
+msgstr "Aikuisia"
 
 msgid "Larvae"
-msgstr ""
+msgstr "Toukkia"
 
 msgid "Eggs"
-msgstr ""
+msgstr "Munia"
 
 msgid "Pupae"
-msgstr ""
+msgstr "Koteloita"
 
 msgid "Larval webs"
-msgstr ""
+msgstr "Toukkaverkkoja"
 
 msgid "Transect"
-msgstr ""
+msgstr "Laskentalinja"
 
 msgid "Sections"
-msgstr ""
+msgstr "Laskentalohkot"
 
 msgid "No transect"
-msgstr ""
+msgstr "Ei laskentalinjaa"
 
 msgid "Start Time"
-msgstr ""
+msgstr "Aloituskellonaika"
 
 msgid "End Time"
-msgstr ""
+msgstr "Lopetuskellonaika"
 
 msgid "Temperature"
-msgstr ""
+msgstr "Lämpötila"
 
 msgid "Cloud"
-msgstr ""
+msgstr "Pilvisyys"
 
 msgid "Wind Direction"
-msgstr ""
+msgstr "Tuulen suunta"
 
 msgid "Wind Speed"
-msgstr ""
+msgstr "Tuulen voimakkuus"
 
 msgid "Recorder"
-msgstr ""
+msgstr "Havainnoija"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Päivitä"
 
 msgid "Please select your transect first."
-msgstr ""
+msgstr "Valitse ensin laskentalinjasi."
 
 msgid "Invalid server response."
-msgstr ""
+msgstr "Tallennusvirhe."
 
 msgid "Not recorded/no data"
-msgstr ""
+msgstr "Ei tallennettu/ei tietoja"
 
 msgid "Please specify the temperature C°."
-msgstr ""
+msgstr "Ilmoita lämpötila asteina."
 
 msgid "S"
-msgstr ""
+msgstr "Etelä"
 
 msgid "SW"
-msgstr ""
+msgstr "Lounas"
 
 msgid "W"
-msgstr ""
+msgstr "Länsi"
 
 msgid "NW"
-msgstr ""
+msgstr "Luode"
 
 msgid "N"
-msgstr ""
+msgstr "Pohjoinen"
 
 msgid "NE"
-msgstr ""
+msgstr "Koillinen"
 
 msgid "E"
-msgstr ""
+msgstr "Itä"
 
 msgid "SE"
-msgstr ""
+msgstr "Kaakko"
 
 msgid "No direction"
-msgstr ""
+msgstr "Ei suuntaa"
 
 msgid "Please specify the wind direction."
-msgstr ""
+msgstr "Määrittele tuulen suunta."
 
 msgid "Smoke rises vertically"
-msgstr ""
+msgstr "Savu nousee kohtisuoraan."
 
 msgid "Slight smoke drift"
-msgstr ""
+msgstr "Savu kääntyy hieman"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr ""
+msgstr "Tuulenvire kasvoilla, lehdet havisee"
 
 msgid "Leaves and twigs in slight motion"
-msgstr ""
+msgstr "Lehdet ja pienet oksat heiluvat"
 
 msgid "Dust raised and small branches move"
-msgstr ""
+msgstr "Pöly nousee, oksat heiluvat"
 
 msgid "Small trees in leaf begin to sway"
-msgstr ""
+msgstr "Pienet puut huojuvat"
 
 msgid "Large branches move and trees sway"
-msgstr ""
+msgstr "Isot oksat liikkuvat, puut huojuvat"
 
 msgid "Please specify the wind speed."
-msgstr ""
+msgstr "Määrittele tuulen nopeus."
 
 msgid "Transects"
-msgstr ""
+msgstr "Laskentalinjat"
 
 msgid "Transect list was successfully updated."
-msgstr ""
+msgstr "Lista laskentalinjoista on ladattu."
 
 msgid "Section"
-msgstr ""
+msgstr "Laskentalohko"
 
 msgid "Reliability"
-msgstr ""
+msgstr "Luotettavuus"
 
 msgid "Please specify the reliability of the section count."
-msgstr ""
+msgstr "Tarkenna lohkojen lukumäärän oikeellisuutta."
 
 msgid "Suitable conditions"
-msgstr ""
+msgstr "Sopivat sääolot"
 
 msgid "Unsuitable conditions"
-msgstr ""
+msgstr "Epäsopivat sääolot"
 
 msgid "Unable to survey"
-msgstr ""
+msgstr "Laskenta ei ole mahdollinen"
 
 msgid "15min Count"
-msgstr ""
+msgstr "15min laskenta"
 
 msgid "eBMS Transect"
-msgstr ""
+msgstr "eBMS Laskentalinja"
 
 msgid "Please add any extra info about this record."
-msgstr ""
+msgstr "Anna lisätietoja tästä havainnosta."
 
 msgid "Enter more information here..."
-msgstr ""
+msgstr "Syötä lisätiedot tähän..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr ""
+msgstr "Kerro havainnon määrittäjä."
 
 msgid "HH:mm"
-msgstr ""
+msgstr "HH:mm"
 
 msgid "Please specify the % of cloud cover."
-msgstr ""
+msgstr "Määrittele pilvisyys prosentteina, 0-100."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr ""
+msgstr "Sinulla ei ole laskentalinjoja. Yritä päivittää lista."
 
 msgid "Wind speed info is missing"
-msgstr ""
+msgstr "Tuulisuus-tieto puuttuu"
 
 msgid "Temperature info is missing"
-msgstr ""
+msgstr "Lämpötila-tieto puuttuu"
 
 msgid "Recorder info is missing"
-msgstr ""
+msgstr "Havainnoija-tieto puuttuu"
 
 msgid "Please select your transect."
-msgstr ""
+msgstr "Valitse laskentalinjasi."
 
 msgid ""
 "This guide is still in development. It covers %(countrySpeciesCount) "
 "butterfly species out of the %(totalSpeciesCountryCount) species in your "
 "selected country."
 msgstr ""
+"Tätä ohjetta kehitetään edelleen. Se kattaa % valitsemassasi maassa "
+"esiintyvistä päiväperhoslajeista."
 
 msgid "Status"
-msgstr ""
+msgstr "Tila"
 
 msgid "Absent"
-msgstr ""
+msgstr "Puuttuu"
 
 msgid "Present"
-msgstr ""
+msgstr "Esiintyy"
 
 msgid "Possibly present"
-msgstr ""
+msgstr "Saattaa esiintyä"
 
 msgid "Regular migrant"
-msgstr ""
+msgstr "Säännöllinen vaeltaja"
 
 msgid "Irregular vagrant"
-msgstr ""
+msgstr "Satunnainen vaeltaja"
 
 msgid "Regionally extinct"
-msgstr ""
+msgstr "Hävinnyt alueelta"
 
 msgid "Description"
-msgstr ""
+msgstr "Kuvaus"
 
 msgid "Counts"
-msgstr ""
+msgstr "Laskennat"
 
 msgid "Species descriptions"
-msgstr ""
+msgstr "Lajikuvaukset"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
+"Lajikuvausten lähdeteos on Climatic Risk Atlas of European Butterlies. "
+"Kiitämme Josef Setteleä sen luovuttamisesta käyttöömme."
 
 msgid "Photo credits"
-msgstr ""
+msgstr "Valokuvat"
 
 msgid "How to use the app"
-msgstr ""
+msgstr "Sovelluksen käyttäminen"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1063,6 +1072,12 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register with a username or email and enter a password."
 msgstr ""
+"Tällä sovelluksella voit tallentaa päiväperhoshavaintoja missä tahansa "
+"Euroopassa. Havaintosi tallentuvat Euroopan päiväperhosseurantojen yhteiseen"
+" havaintorekisteriin (eBMS), ja niiden pohjalta analysoidaan perhoskantojen "
+"kehitystä koko Euroopassa. Voidaksesi käyttää sovellusta Sinun pitää ensin "
+"rekisteröityä käyttäjätunnuksella tai sähköpostiosoitteella, sekä luoda "
+"salasana."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count.  This can be done at "
@@ -1072,9 +1087,15 @@ msgid ""
 "the ability to submit casual records.  The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
+"Suosittelemme havainnointia 15 minuutin ajastettuna laskentana. Sellaisen "
+"voi tehdä missä tahansa ja koska tahansa päiväperhoset ovat aktiisivia (eli "
+"sää on lämmin ja aurinkoinen). Sovelluksella voit myös tallentaa havaintoja "
+"laskentalinjalta. Myöhemmin vuonna 2020 sovellukseen tulee mahdollisuus "
+"tallentaa myös yksittäishavaintoja. Alla olevat ohjeet opastavat käyttämään "
+"kahta nyt tarjolla olevaa menetelmää."
 
 msgid "How to do a 15-minute Count"
-msgstr ""
+msgstr "Näin teet 15 minuutin ajastetun laskennan"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1089,6 +1110,16 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
+"Suosittelemme käyttämään tätä menetelmää. Voit vapaasti laskea päiväperhosia"
+" 15 minuutin aikana vaikkapa tietyllä niittylaikulla, joko kävelemällä "
+"ympäriinsä tai pysymällä paikallasi havainnoimassa. Sovellus tallentaa "
+"automaattisesti kävelyreittisi / sijaintisi, kunhan GPS on kytkettynä päälle"
+" puhelimessasi. Ellei ole, sovellus pyytää piirtämään alueen kartalle. "
+"Laskenta alkaa, kun painat + merkkiä näytön alalaidassa. Tällöin sovellus "
+"käynnistää käynnistää 15 min ajastimen, joka näyttää jäljellä olevan "
+"havainnointiajann. Voit koska tahansa pysäyttää ajastimen tauolle vaikkapa "
+"määrittääksesi perhosen. Kun aika loppuu, tarkista kirjaamasi havainnot ja "
+"yhteismäärät ennen kuin lähetät tiedot."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1098,6 +1129,12 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
+"Lisää näkemäsi lajit + LISÄÄ kuvakkeesta, aloittamalla kirjoittaa lajin "
+"nimeä. Sovellus tarjoaa lajilistaa ponnahdusvalikossa. Voit käyttää joko "
+"tieteellisiä tai englanninkielisiä nimiä. Valitse havaitsemasi lajin nimi, "
+"ja sitten lisää yksilömäärä painamalla nimen vasemmalla puolen olevaa "
+"numeroa. Voit korjata yksilömäärää myös havainnoinnin lopuksi. Voit myös "
+"liittää havaintoon valokuvan tai kommentteja."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1106,9 +1143,14 @@ msgid ""
 " record of the count will be held on your device for future reference as "
 "well as on your online account."
 msgstr ""
+"Kun ajastettu 15min laskenta on päättynyt, tarkista lajilista ja "
+"yksilömäärät. Sitten paina UPLOAD / LATAA kuvaketta lähettääksesi ne. Vasta "
+"tällöin havaintosi siirtyvät laitteeltasi verkossa olevaan tietokantaan. "
+"Laskentasi tiedot tallentuvat omalle laitteellesi, samoin kuin "
+"käyttäjätilillesi."
 
 msgid "How to record along an existing transect"
-msgstr ""
+msgstr "Kuinka havainnoida olemassa olevalla laskentalinjalla"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1119,6 +1161,12 @@ msgid ""
 " transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email %(helpEmail) for advice)."
 msgstr ""
+"Voit myös käyttää sovellusta tallentaaksesi havaintoja olemassa olevalta "
+"laskentalinjalta. Nämä on aiemmin perustettu osana kansallisia "
+"päiväperhosseurantoja. Tämä on mahdollista, jos käyttäjätilisi on linkitetty"
+" eBMS:n sisältämään laskentalinjaan. Jos tällaisia ei ole tarjolla kun "
+"kirjaudut järjestelmään, voit kysyä neuvoa kansalliselta koordinaattoriltasi"
+" (Suomessa: janne.heliola@ymparisto.fi)."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1133,9 +1181,17 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
+"Aloittaakseni linjalaskennan, paina pitkään + kuvaketta näytön alalaidassa "
+"ja valitse eBMS Laskentalinja. Avautuvalla sivulla pyydetään tekemään joukko"
+" valintoja. Ensin, valitse laskentalinja. Sen jälkeen lisää pyydetyt "
+"säätiedot (lämpö, tuulisuus ym.) ja kellonaika avaussivulle. Sitten lisää "
+"lajinimiä tarpeen mukaan, sekä kullakin laskentalohkolla havaitsemasi "
+"yksilömäärä samoilla periaatteilla kuin ajastetussa laskennassa. Kun "
+"laskenta on valmis, tarkista ja korjaa syöttämäsi tiedot. Sitten paina "
+"FINISH / LOPETA kuvaketta lähettääksesi tiedot."
 
 msgid "Survey section"
-msgstr ""
+msgstr "Laskentalohko"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1145,64 +1201,87 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the %(eBMSWebsiteLink)"
 msgstr ""
+"Tässä osiossa, + kuvakkeen oikealla puolen näet PENDING / ODOTTAVAT "
+"laskennat eli tiedot joita ei ole vielä lähetetty tietokantaan, sekä "
+"UPLOADED / LADATUT laskennat eli tiedot jotka on jo viety tietokantaan. "
+"Odottavat laskennat voidaan lähettää klikkaamalla niitä ja painamalla Lataa "
+"-vaihtoehtoa. Näet tallentamasi lajilistat Ladatuista laskennoista. Voit "
+"myös katsella ja korjailla kaikkia havaintojasi eBMS verkkosivun kautta."
 
 msgid "eBMS website"
-msgstr ""
+msgstr "eBMS verkkosivu"
 
 msgid "App Settings"
-msgstr ""
+msgstr "Sovelluksen asetukset"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
+"Mene sovelluksen asetuksiin vaihtaaksesi kieltä ja maata. Maan valitseminen "
+"on tärkeää, koska silloin näet tunnistusoppaassa vain siinä maassa "
+"esiintyvät lajit."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
+"Voit myös vaihtaa päälle Harjoittelu -moodin, kun olet vasta "
+"harjoittelemassa lajien tunnistusta."
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr ""
+msgstr "Poista viimeisin piste"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr ""
+msgstr "Poista kaikki"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "Klikkaa aloittaaksesi muodon piirtäminen."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "Klikkaa jatkaaksesi muodon piirtämistä."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "Klikkaa ensimmäistä pistettä sulkeaksesi tämän muodon."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "Klikkaa aloittaaksesi viivan piirtäminen."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "Klikkaa jatkaaksesi viivan piirtämistä."
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "Klikkaa viimeistä pistettä lopettaaksesi viivan piirtämisen."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr ""
+msgstr "Vedä kahvoista tai merkkipisteistä muokataksesi muotoja."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
+msgstr "Klikkaa peruuta hylätäksesi tekemäsi muutokset."
+
+msgid "Map"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "This record has been submitted and cannot be edited within this App."
+msgstr ""
+
+msgid "Please go to %(website) to make any new edits."
 msgstr ""

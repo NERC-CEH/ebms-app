@@ -1026,3 +1026,17 @@ msgstr "Drag handles or markers to edit features."
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
 msgstr "Click cancel to undo changes."
+
+msgid "Map"
+msgstr "Map"
+
+msgid "Today"
+msgstr "Today"
+
+# This is part of a saved record page
+msgid "This record has been submitted and cannot be edited within this App."
+msgstr "This record has been submitted and cannot be edited within this App."
+
+# This is part of a saved record page
+msgid "Please go to %(website) to make any new edits."
+msgstr "Please go to %(website) to make any new edits."

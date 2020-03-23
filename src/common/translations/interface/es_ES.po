@@ -1302,3 +1302,15 @@ msgstr ""
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
 msgstr ""
+
+msgid "Map"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "This record has been submitted and cannot be edited within this App."
+msgstr ""
+
+msgid "Please go to %(website) to make any new edits."
+msgstr ""

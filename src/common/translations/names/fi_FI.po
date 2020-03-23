@@ -1,7 +1,10 @@
+# Translators:
+# Janne Heliola <janne.heliola@ymparisto.fi>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
+"Last-Translator: Janne Heliola <janne.heliola@ymparisto.fi>, 2020\n"
 "Language-Team: Finnish (Finland) (https://www.transifex.com/ceh/teams/95441/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -947,10 +950,10 @@ msgid "Vanessa atalanta"
 msgstr ""
 
 msgid "Aglais io"
-msgstr ""
+msgstr "Neitoperhonen"
 
 msgid "Aglais urticae"
-msgstr ""
+msgstr "Nokkosperhonen"
 
 msgid "Aglais ichnusa"
 msgstr ""
@@ -959,7 +962,7 @@ msgid "Polygonia egea"
 msgstr ""
 
 msgid "Polygonia c-album"
-msgstr ""
+msgstr "Herukkaperhonen"
 
 msgid "Nymphalis vaualbum"
 msgstr ""
@@ -1067,7 +1070,7 @@ msgid "Coenonympha thyrsis"
 msgstr ""
 
 msgid "Coenonympha pamphilus"
-msgstr ""
+msgstr "Keltaniittyperhonen"
 
 msgid "Coenonympha tullia"
 msgstr ""

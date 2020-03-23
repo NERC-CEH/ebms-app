@@ -754,7 +754,7 @@ msgid "Paused"
 msgstr "In pausa "
 
 msgid "Pending"
-msgstr "In attesa di "
+msgstr "In attesa"
 
 msgid "Uploaded"
 msgstr "Caricati"
@@ -1255,44 +1255,56 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr ""
+msgstr "Elimina l'ultimo punto"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr ""
+msgstr "Salva"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr ""
+msgstr "Pulisci tutto"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "Clicca per iniziare a disegnare la forma. "
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "Clicca per continuare a disegnare la forma."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "Clicca il primo punto per chiudere la forma."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "Clicca per iniziare a disegnare la linea."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "Clicca per continuare a disegnare la forma"
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "Clicca l'ultimo punto per terminare la linea."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr ""
+msgstr "Trascina i marcatori per modificare le funzioni."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
+msgstr "Clicca cancella per annullare le modifiche."
+
+msgid "Map"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "This record has been submitted and cannot be edited within this App."
+msgstr ""
+
+msgid "Please go to %(website) to make any new edits."
 msgstr ""
