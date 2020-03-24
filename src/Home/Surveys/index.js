@@ -109,7 +109,7 @@ class Component extends React.Component {
               checked={showingPending}
               mode="ios"
             >
-              <IonLabel mode="ios">
+              <IonLabel className="ion-text-wrap" mode="ios">
                 {t('Pending')}
                 {pendingSurveys.length ? (
                   <IonBadge color="danger" slot="end" mode="ios">
@@ -124,7 +124,7 @@ class Component extends React.Component {
               checked={showingUploaded}
               mode="ios"
             >
-              <IonLabel mode="ios">
+              <IonLabel className="ion-text-wrap" mode="ios">
                 {t('Uploaded')}
                 {uploadedSurveys.length ? (
                   <IonBadge color="light" slot="end" mode="ios">
@@ -135,7 +135,9 @@ class Component extends React.Component {
             </IonSegmentButton>
 
             <IonSegmentButton value="map" checked={showingMap} mode="ios">
-              <IonLabel mode="ios">{t('Map')}</IonLabel>
+              <IonLabel className="ion-text-wrap" mode="ios">
+                {t('Map')}
+              </IonLabel>
             </IonSegmentButton>
           </IonSegment>
 
