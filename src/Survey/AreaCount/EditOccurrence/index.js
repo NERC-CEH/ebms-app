@@ -20,12 +20,13 @@ class Container extends React.Component {
 
     const occID = match.params.occId;
     const occurrence = sample.occurrences.models.find(occ => occ.cid === occID);
+    const isDisabled = !!sample.metadata.synced_on;
 
     return (
-      <IonPage>
+      <IonPage id="area-count-edit-occurrence">
         <AppHeader title={t('Edit Occurrence')} />
-        <Main sample={sample} occurrence={occurrence} />
-        <Footer occurrence={occurrence} />
+        <Main sample={sample} occurrence={occurrence} isDisabled={isDisabled} />
+        <Footer occurrence={occurrence} isDisabled={isDisabled} />
       </IonPage>
     );
   }

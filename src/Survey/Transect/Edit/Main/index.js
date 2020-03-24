@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { IonList, IonItem, IonIcon, IonLabel, IonContent } from '@ionic/react';
-import { person, map, time, clipboard } from 'ionicons/icons';
+import {
+  IonList,
+  IonItem,
+  IonIcon,
+  IonLabel,
+  IonContent,
+  IonButton,
+} from '@ionic/react';
+import { person, map, time, clipboard, open } from 'ionicons/icons';
 import { observer } from 'mobx-react';
+import config from 'config';
+import MenuAttrItem from 'Components/MenuAttrItem';
 import 'common/images/cloud.svg';
 import './wind.svg';
 import './thermometer.svg';
@@ -16,6 +25,7 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
 class Edit extends Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
+    isDisabled: PropTypes.bool,
   };
 
   getPrettySectionsLabel = () => {
@@ -33,95 +43,109 @@ class Edit extends Component {
   };
 
   render() {
-    const { sample } = this.props;
+    const { sample, isDisabled } = this.props;
 
-    const surveyStartTime = sample.get('surveyStartTime');
+    const {
+      temperature,
+      cloud,
+      windDirection,
+      windSpeed,
+      recorder,
+      comment,
+      surveyStartTime,
+      surveyEndTime,
+    } = sample.attributes;
+
     const startTimePretty =
       surveyStartTime && dateTimeFormat.format(new Date(surveyStartTime));
-    const surveyEndTime = sample.get('surveyEndTime');
-    const endTimePretty = surveyEndTime && dateTimeFormat.format(new Date(surveyEndTime));
-    const temperature = sample.get('temperature');
-    const cloud = sample.get('cloud');
-    const windDirection = sample.get('windDirection');
-    const windSpeed = sample.get('windSpeed');
-    const recorder = sample.get('recorder');
-    const comment = sample.get('comment');
+    const endTimePretty =
+      surveyEndTime && dateTimeFormat.format(new Date(surveyEndTime));
+
+    const baseURL = `/survey/transect/${sample.cid}/edit`;
 
     return (
       <IonContent id="transect-edit">
+        {isDisabled && (
+          <div className="info-message">
+            <p>
+              {t(
+                'This record has been submitted and cannot be edited within this App.'
+              )}
+            </p>
+
+            <IonButton href={`${config.site_url}`}>
+              <IonIcon icon={open} slot="end" />
+              <IonLabel>{t('eBMS website')}</IonLabel>
+            </IonButton>
+          </div>
+        )}
+
         <IonList lines="full">
-          <IonItem
-            routerLink={`/survey/transect/${sample.cid}/edit/sections`}
-            detail
-          >
+          <IonItem routerLink={`${baseURL}/sections`} detail>
             <IonIcon icon={map} slot="start" mode="md" />
             <IonLabel>{t('Sections')}</IonLabel>
             {this.getPrettySectionsLabel()}
           </IonItem>
-          <IonItem
-            routerLink={`/survey/transect/${sample.cid}/edit/surveyStartTime`}
-            detail
-          >
-            <IonIcon icon={time} slot="start" mode="md" />
-            <IonLabel>{t('Start Time')}</IonLabel>
-            <IonLabel slot="end">{startTimePretty}</IonLabel>
-          </IonItem>
-          <IonItem
-            routerLink={`/survey/transect/${sample.cid}/edit/surveyEndTime`}
-            detail
-          >
-            <IonIcon icon={time} slot="start" mode="md" />
-            <IonLabel>{t('End Time')}</IonLabel>
-            <IonLabel slot="end">{endTimePretty}</IonLabel>
-          </IonItem>
-          <IonItem
-            routerLink={`/survey/transect/${sample.cid}/edit/temperature`}
-            detail
-          >
-            <IonIcon src="/images/thermometer.svg" slot="start" />
-            <IonLabel>{t('Temperature')}</IonLabel>
-            <IonLabel slot="end">{t(temperature)}</IonLabel>
-          </IonItem>
-          <IonItem
-            routerLink={`/survey/transect/${sample.cid}/edit/cloud`}
-            detail
-          >
-            <IonIcon src="/images/cloud.svg" slot="start" />
-            <IonLabel>{t('Cloud')}</IonLabel>
-            <IonLabel slot="end">{cloud}</IonLabel>
-          </IonItem>
-          <IonItem
-            routerLink={`/survey/transect/${sample.cid}/edit/windDirection`}
-            detail
-          >
-            <IonIcon src="/images/wind.svg" slot="start" />
-            <IonLabel>{t('Wind Direction')}</IonLabel>
-            <IonLabel slot="end">{t(windDirection)}</IonLabel>
-          </IonItem>
-          <IonItem
-            routerLink={`/survey/transect/${sample.cid}/edit/windSpeed`}
-            detail
-          >
-            <IonIcon src="/images/wind.svg" slot="start" />
-            <IonLabel>{t('Wind Speed')}</IonLabel>
-            <IonLabel slot="end">{t(windSpeed)}</IonLabel>
-          </IonItem>
-          <IonItem
-            routerLink={`/survey/transect/${sample.cid}/edit/recorder`}
-            detail
-          >
-            <IonIcon icon={person} slot="start" />
-            <IonLabel>{t('Recorder')}</IonLabel>
-            <IonLabel slot="end">{recorder}</IonLabel>
-          </IonItem>
-          <IonItem
-            routerLink={`/survey/transect/${sample.cid}/edit/comment`}
-            detail
-          >
-            <IonIcon icon={clipboard} slot="start" mode="md" />
-            <IonLabel>{t('Comment')}</IonLabel>
-            <IonLabel slot="end">{comment}</IonLabel>
-          </IonItem>
+
+          <MenuAttrItem
+            routerLink={`${baseURL}/surveyStartTime`}
+            disabled={isDisabled}
+            icon={time}
+            iconMode="md"
+            label="Start Time"
+            value={startTimePretty}
+          />
+          <MenuAttrItem
+            routerLink={`${baseURL}/surveyEndTime`}
+            disabled={isDisabled}
+            icon={time}
+            iconMode="md"
+            label="End Time"
+            value={endTimePretty}
+          />
+          <MenuAttrItem
+            routerLink={`${baseURL}/temperature`}
+            disabled={isDisabled}
+            icon="/images/thermometer.svg"
+            label="Temperature"
+            value={t(temperature)}
+          />
+          <MenuAttrItem
+            routerLink={`${baseURL}/cloud`}
+            disabled={isDisabled}
+            icon="/images/cloud.svg"
+            label="Cloud"
+            value={cloud}
+          />
+          <MenuAttrItem
+            routerLink={`${baseURL}/windDirection`}
+            disabled={isDisabled}
+            icon="/images/wind.svg"
+            label="Cloud"
+            value={t(windDirection)}
+          />
+          <MenuAttrItem
+            routerLink={`${baseURL}/windSpeed`}
+            disabled={isDisabled}
+            icon="/images/wind.svg"
+            label="Wind Speed"
+            value={t(windSpeed)}
+          />
+          <MenuAttrItem
+            routerLink={`${baseURL}/recorder`}
+            disabled={isDisabled}
+            icon={person}
+            label="Recorder"
+            value={recorder}
+          />
+          <MenuAttrItem
+            routerLink={`${baseURL}/comment`}
+            disabled={isDisabled}
+            icon={clipboard}
+            iconMode="md"
+            label="Comment"
+            value={comment}
+          />
         </IonList>
       </IonContent>
     );

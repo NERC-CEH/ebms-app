@@ -18,9 +18,11 @@ import {
   play,
   addCircleOutline,
   funnel,
+  open,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
+import MenuAttrItem from 'Components/MenuAttrItem';
 import CountdownClock from './components/CountdownClock';
 import './styles.scss';
 
@@ -49,9 +51,40 @@ class AreaCount extends Component {
     toggleTimer: PropTypes.func.isRequired,
     areaSurveyListSortedByTime: PropTypes.bool.isRequired,
     increaseCount: PropTypes.func.isRequired,
+    isDisabled: PropTypes.bool,
   };
 
-  getSpeciesList(sample) {
+  getSpeciesAddButton = () => {
+    const { sample, isDisabled } = this.props;
+    if (isDisabled) {
+      // placeholder
+      return <div style={{ height: '44px' }} />;
+    }
+
+    return (
+      <IonButton
+        color="primary"
+        id="add"
+        onClick={() => {
+          this.props.history.push(`/survey/area/${sample.cid}/edit/taxa`);
+        }}
+      >
+        <IonIcon icon={addCircleOutline} slot="start" />
+        <IonLabel>{t('Add')}</IonLabel>
+      </IonButton>
+    );
+  };
+
+  getSpeciesList() {
+    const {
+      sample,
+      deleteOccurrence,
+      navigateToOccurrence,
+      areaSurveyListSortedByTime,
+      increaseCount,
+      isDisabled,
+    } = this.props;
+
     if (!sample.occurrences.models.length) {
       return (
         <IonList id="list" lines="full">
@@ -61,12 +94,6 @@ class AreaCount extends Component {
         </IonList>
       );
     }
-    const {
-      deleteOccurrence,
-      navigateToOccurrence,
-      areaSurveyListSortedByTime,
-      increaseCount,
-    } = this.props;
 
     const sort = areaSurveyListSortedByTime
       ? speciesOccAddedTimeSort
@@ -92,7 +119,7 @@ class AreaCount extends Component {
               <IonItem detail>
                 <IonButton
                   class="area-count-edit-count"
-                  onClick={() => increaseCount(occ)}
+                  onClick={() => !isDisabled && increaseCount(occ)}
                   fill="clear"
                 >
                   {occ.get('count')}
@@ -119,7 +146,7 @@ class AreaCount extends Component {
   toggleTimer = () => this.props.toggleTimer(this.props.sample);
 
   render() {
-    const { sample } = this.props;
+    const { sample, isDisabled } = this.props;
 
     const { area } = sample.get('location') || {};
     const areaPretty = area && `${area.toLocaleString()} m²`;
@@ -133,35 +160,44 @@ class AreaCount extends Component {
 
     return (
       <IonContent id="area-count-edit">
+        {isDisabled && (
+          <div className="info-message">
+            <p>
+              {t(
+                'This record has been submitted and cannot be edited within this App.'
+              )}
+            </p>
+
+            <IonButton href={`${config.site_url}`}>
+              <IonIcon icon={open} slot="end" />
+              <IonLabel>{t('eBMS website')}</IonLabel>
+            </IonButton>
+          </div>
+        )}
+
         <IonList lines="full">
-          <IonItem routerLink={`/survey/area/${sample.cid}/edit/area`} detail>
-            <IonIcon icon={map} slot="start" mode="md" />
-            <IonLabel>{t('Area')}</IonLabel>
-            <IonLabel slot="end">{areaPretty}</IonLabel>
-          </IonItem>
+          <MenuAttrItem
+            routerLink={`/survey/area/${sample.cid}/edit/area`}
+            icon={map}
+            iconMode="md"
+            label="Area"
+            value={areaPretty}
+          />
           <IonItem
-            detail
+            detail={!isDisabled}
             detailIcon={isPaused ? play : pause}
             onClick={this.toggleTimer}
+            disabled={isDisabled}
           >
             <IonIcon icon={time} slot="start" mode="md" />
             <IonLabel>{t('Duration')}</IonLabel>
             <CountdownClock isPaused={isPaused} countdown={countdown} />
           </IonItem>
 
-          <IonButton
-            color="primary"
-            id="add"
-            onClick={() => {
-              this.props.history.push(`/survey/area/${sample.cid}/edit/taxa`);
-            }}
-          >
-            <IonIcon icon={addCircleOutline} slot="start" />
-            <IonLabel>{t('Add')}</IonLabel>
-          </IonButton>
+          {this.getSpeciesAddButton()}
         </IonList>
 
-        {this.getSpeciesList(sample)}
+        {this.getSpeciesList()}
       </IonContent>
     );
   }

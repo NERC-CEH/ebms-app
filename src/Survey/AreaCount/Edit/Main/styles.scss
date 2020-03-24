@@ -3,10 +3,15 @@
     margin-bottom: 0;
   }
 
+  .item-disabled #countdown {
+    opacity: 0.5;
+    margin-right: 10px;
+  }
+
   #countdown {
     opacity: 1;
   }
-  
+
   #countdown span {
     width: 50px;
     display: inline-block;

@@ -59,6 +59,7 @@ function addPhoto(occurrence, photo) {
 class Footer extends Component {
   static propTypes = {
     occurrence: PropTypes.object.isRequired,
+    isDisabled: PropTypes.bool,
   };
 
   state = {
@@ -85,45 +86,53 @@ class Footer extends Component {
 
   photoSelect() {
     Log('Samples:Edit:Controller: photo selection.');
-    const { occurrence } = this.props;
+    const { occurrence, isDisabled } = this.props;
 
+    if (isDisabled) {
+      return;
+    }
+
+    const onGallerySelect = () => {
+      ImageHelp.getImage({
+        sourceType: window.Camera.PictureSourceType.PHOTOLIBRARY,
+        saveToPhotoAlbum: false,
+      })
+        .then(entry => {
+          entry &&
+            addPhoto(occurrence, entry.nativeURL, occErr => {
+              if (occErr) {
+                showErrMsg(occErr);
+              }
+            });
+        })
+        .catch(showErrMsg);
+    };
+
+    const onCameraSelect = () => {
+      ImageHelp.getImage()
+        .then(entry => {
+          entry &&
+            addPhoto(occurrence, entry.nativeURL, occErr => {
+              if (occErr) {
+                showErrMsg(occErr);
+              }
+            });
+        })
+        .catch(showErrMsg);
+    };
+    
     actionSheet({
       header: t('Choose a method to upload a photo'),
       buttons: [
         {
           text: t('Gallery'),
           icon: 'images',
-          handler: () => {
-            ImageHelp.getImage({
-              sourceType: window.Camera.PictureSourceType.PHOTOLIBRARY,
-              saveToPhotoAlbum: false,
-            })
-              .then(entry => {
-                entry &&
-                  addPhoto(occurrence, entry.nativeURL, occErr => {
-                    if (occErr) {
-                      showErrMsg(occErr);
-                    }
-                  });
-              })
-              .catch(showErrMsg);
-          },
+          handler: onGallerySelect,
         },
         {
           text: t('Camera'),
           icon: 'camera',
-          handler: () => {
-            ImageHelp.getImage()
-              .then(entry => {
-                entry &&
-                  addPhoto(occurrence, entry.nativeURL, occErr => {
-                    if (occErr) {
-                      showErrMsg(occErr);
-                    }
-                  });
-              })
-              .catch(showErrMsg);
-          },
+          handler: onCameraSelect,
         },
       ],
     });
@@ -159,26 +168,41 @@ class Footer extends Component {
     );
   };
 
+  getImageDeleteButton = img => {
+    const { isDisabled } = this.props;
+
+    if (isDisabled) {
+      return null;
+    }
+
+    return (
+      <IonButton fill="clear" class="delete" onClick={() => photoDelete(img)}>
+        <IonIcon icon={close} />
+      </IonButton>
+    );
+  };
+
   getImageArray = () => {
     const { occurrence } = this.props;
     const { models } = occurrence.media;
     if (!models || !models.length) {
-      return <span className="empty"> {t('No photo has been added')}</span>;
+      return (
+        <span className="empty"> 
+          {' '}
+          {t('No photo has been added')}
+        </span>
+      );
     }
 
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
-    return models.map((img, index) => {
+    const getImage = (img, index) => {
       const thumbnail = img.get('thumbnail');
       const id = img.cid;
+
       return (
         <div key={id} className="img">
-          <IonButton
-            fill="clear"
-            class="delete"
-            onClick={() => photoDelete(img)}
-          >
-            <IonIcon icon={close} />
-          </IonButton>
+          {this.getImageDeleteButton(img)}
+
           <img
             src={thumbnail}
             alt=""
@@ -186,8 +210,10 @@ class Footer extends Component {
           />
         </div>
       );
-    });
+    };
     /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
+
+    return models.map(getImage);
   };
 
   getNewImageButton = () => {

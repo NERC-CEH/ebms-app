@@ -6,14 +6,10 @@ import './styles.scss';
 
 function getFinishButton(onSubmit, isEditing) {
   const label = isEditing ? t('Upload') : t('Finish');
-  return (
-    <IonButton onClick={onSubmit}>
-      {label}
-    </IonButton>
-  );
+  return <IonButton onClick={onSubmit}>{label}</IonButton>;
 }
 
-const Header = ({ onSubmit, isTraining, isEditing }) => {
+const Header = ({ onSubmit, isTraining, isEditing, isDisabled }) => {
   const trainingModeSubheader = isTraining && (
     <div className="training-survey">training survey</div>
   );
@@ -21,9 +17,9 @@ const Header = ({ onSubmit, isTraining, isEditing }) => {
   return (
     <AppHeader
       title={t('15min Count')}
-      rightSlot={getFinishButton(onSubmit, isEditing)}
+      rightSlot={!isDisabled && getFinishButton(onSubmit, isEditing)}
       subheader={trainingModeSubheader}
-      defaultHref='/home/user-surveys'
+      defaultHref="/home/user-surveys"
     />
   );
 };
@@ -32,6 +28,7 @@ Header.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   isTraining: PropTypes.bool.isRequired,
   isEditing: PropTypes.bool,
+  isDisabled: PropTypes.bool,
 };
 
 export default Header;

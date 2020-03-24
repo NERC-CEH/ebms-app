@@ -167,12 +167,15 @@ class Container extends React.Component {
 
     const isTraining = sample.metadata.training;
     const isEditing = sample.metadata.saved;
+    const isDisabled = !!sample.metadata.synced_on;
+
     return (
       <IonPage>
         <Header
           onSubmit={this.onSubmit}
           isTraining={isTraining}
           isEditing={isEditing}
+          isDisabled={isDisabled}
         />
         <Main
           sample={sample}
@@ -183,6 +186,7 @@ class Container extends React.Component {
           areaSurveyListSortedByTime={areaSurveyListSortedByTime}
           onToggleSpeciesSort={this.toggleSpeciesSort}
           history={history}
+          isDisabled={isDisabled}
         />
       </IonPage>
     );

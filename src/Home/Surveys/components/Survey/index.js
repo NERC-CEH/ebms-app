@@ -12,7 +12,6 @@ import {
   IonBadge,
 } from '@ionic/react';
 import { open } from 'ionicons/icons';
-import config from 'config';
 import OnlineStatus from './components/OnlineStatus';
 import ErrorMessage from './components/ErrorMessage';
 import 'common/images/butterfly.svg';
@@ -42,21 +41,12 @@ const Survey = observer(({ sample }) => {
   const prettyDate = date.toLocaleDateString();
   const speciesCount = sample.occurrences.models.length;
 
-  const isSent = sample.metadata.server_on;
   const survey = sample.getSurvey();
-  const href =
-    !isSent && !sample.remote.synchronising
-      ? `/survey/${survey}/${sample.cid}/edit`
-      : undefined;
+  const href = !sample.remote.synchronising
+    ? `/survey/${survey}/${sample.cid}/edit`
+    : undefined;
 
   let externalHref;
-
-  if (isSent) {
-    externalHref =
-      survey === 'transect'
-        ? `${config.site_url}ebms-input-data?sample_id=${sample.id}`
-        : `${config.site_url}elastic/my-records`;
-  }
 
   function getSampleInfo() {
     if (survey === 'transect') {

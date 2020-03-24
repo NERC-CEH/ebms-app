@@ -51,7 +51,6 @@ function translateDrawInterface() {
   };
 }
 
-
 L.Draw.Polyline.prototype._onTouch = L.Util.falseFn;
 
 @observer
@@ -63,6 +62,7 @@ class AreaAttr extends Component {
     setLocation: PropTypes.func.isRequired,
     areaPretty: PropTypes.string.isRequired,
     isGPSTracking: PropTypes.bool.isRequired,
+    isDisabled: PropTypes.bool,
   };
 
   state = {
@@ -75,45 +75,55 @@ class AreaAttr extends Component {
   }
 
   addDrawControls() {
+    const { isDisabled } = this.props;
     const map = this.map.current.leafletElement;
 
     const drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);
+
+    if (isDisabled) {
+      return drawnItems;
+    }
+
+    const draw = {
+      marker: false,
+      rectangle: false,
+      circle: false,
+      circlemarker: false,
+      polyline: {
+        showLength: true,
+        metric: ['m'],
+        shapeOptions: {
+          color: DEFAULT_SHAPE_COLOR,
+        },
+      },
+      polygon: {
+        showArea: true,
+        precision: { m: 1 },
+        metric: ['m'],
+        allowIntersection: false,
+        drawError: {
+          color: '#e1e100',
+          message: "<strong>Sorry, the area can't intersect!",
+        },
+        shapeOptions: {
+          color: DEFAULT_SHAPE_COLOR,
+        },
+      },
+    };
+
+    const edit = {
+      poly: {
+        allowIntersection: true, // to edit GPS messed up polygon
+      },
+      featureGroup: drawnItems,
+      remove: true,
+    };
+
     const drawControl = new L.Control.Draw({
       position: 'topright',
-      draw: {
-        marker: false,
-        rectangle: false,
-        circle: false,
-        circlemarker: false,
-        polyline: {
-          showLength: true,
-          metric: ['m'],
-          shapeOptions: {
-            color: DEFAULT_SHAPE_COLOR,
-          },
-        },
-        polygon: {
-          showArea: true,
-          precision: { m: 1 },
-          metric: ['m'],
-          allowIntersection: false,
-          drawError: {
-            color: '#e1e100',
-            message: "<strong>Sorry, the area can't intersect!",
-          },
-          shapeOptions: {
-            color: DEFAULT_SHAPE_COLOR,
-          },
-        },
-      },
-      edit: {
-        poly: {
-          allowIntersection: true, // to edit GPS messed up polygon
-        },
-        featureGroup: drawnItems,
-        remove: true,
-      },
+      draw,
+      edit,
     });
     map.addControl(drawControl);
     translateDrawInterface();
@@ -178,7 +188,7 @@ class AreaAttr extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.location.shape !== this.props.location.shape) {
-      if (this.props.location.shape) {
+      if (this.props.location.shape && this.drawnItems) {
         this.drawnItems.clearLayers();
         this.setExistingShape(toJS(this.props.location.shape));
       }
@@ -250,7 +260,7 @@ class AreaAttr extends Component {
 
   setShape = async e => {
     console.log('setging shape!');
-    
+
     const { setLocation } = this.props;
     const geojson = e.layer.toGeoJSON();
     const shape = geojson.geometry;
@@ -266,7 +276,7 @@ class AreaAttr extends Component {
   };
 
   render() {
-    const { isGPSTracking, areaPretty } = this.props;
+    const { isGPSTracking, areaPretty, isDisabled } = this.props;
     return (
       <IonContent className={`${isGPSTracking ? 'GPStracking' : ''}`}>
         <IonToolbar id="area-edit-toolbar">
@@ -278,14 +288,16 @@ class AreaAttr extends Component {
             url="https://api.mapbox.com/styles/v1/cehapps/cipqvo0c0000jcknge1z28ejp/tiles/256/{z}/{x}/{y}?access_token={accessToken}"
             accessToken={CONFIG.map.mapbox_api_key}
           />
-          <LeafletControl position="topleft">
-            <button
-              className={`geolocate-btn ${this.state.locating ? 'spin' : ''}`}
-              onClick={this.onGeolocate}
-            >
-              <IonIcon icon={locate} mode="md" size="large" />
-            </button>
-          </LeafletControl>
+          {!isDisabled && (
+            <LeafletControl position="topleft">
+              <button
+                className={`geolocate-btn ${this.state.locating ? 'spin' : ''}`}
+                onClick={this.onGeolocate}
+              >
+                <IonIcon icon={locate} mode="md" size="large" />
+              </button>
+            </LeafletControl>
+          )}
         </Map>
       </IonContent>
     );

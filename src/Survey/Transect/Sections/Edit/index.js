@@ -67,6 +67,7 @@ class Container extends React.Component {
     const areaSurveyListSortedByTime = appModel.get(
       'areaSurveyListSortedByTime'
     );
+    const isDisabled = !!sample.metadata.synced_on;
 
     return (
       <IonPage>
@@ -80,6 +81,7 @@ class Container extends React.Component {
           onToggleSpeciesSort={this.toggleSpeciesSort}
           match={match}
           history={history}
+          isDisabled={isDisabled}
         />
       </IonPage>
     );

@@ -14,7 +14,7 @@ class Container extends React.Component {
 
   state = {};
 
-  toggleGPStracking = (on) => {
+  toggleGPStracking = on => {
     const { sample } = this.props;
     sample.toggleGPStracking(on);
   };
@@ -39,17 +39,21 @@ class Container extends React.Component {
       areaPretty = t('Please draw your area on the map');
     }
 
+    const isDisabled = !!sample.metadata.synced_on;
+
     return (
       <IonPage>
         <Header
           toggleGPStracking={this.toggleGPStracking}
           isGPSTracking={isGPSTracking}
+          isDisabled={isDisabled}
         />
         <Main
           areaPretty={areaPretty}
           isGPSTracking={isGPSTracking}
           location={location}
           setLocation={this.setLocation}
+          isDisabled={isDisabled}
         />
       </IonPage>
     );

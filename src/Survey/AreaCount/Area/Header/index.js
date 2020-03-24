@@ -6,7 +6,7 @@ import AppHeader from 'common/Components/Header';
 import Toggle from 'common/Components/Toggle';
 import './styles.scss';
 
-const Header = observer(({ isGPSTracking, toggleGPStracking }) => {
+const Header = observer(({ isGPSTracking, toggleGPStracking, isDisabled }) => {
   const GPSToggle = (
     <>
       <IonLabel>GPS</IonLabel>
@@ -18,12 +18,13 @@ const Header = observer(({ isGPSTracking, toggleGPStracking }) => {
     </>
   );
 
-  return <AppHeader title={t('Area')} rightSlot={GPSToggle} />;
+  return <AppHeader title={t('Area')} rightSlot={!isDisabled && GPSToggle} />;
 });
 
 Header.propTypes = {
   toggleGPStracking: PropTypes.func.isRequired,
   isGPSTracking: PropTypes.bool.isRequired,
+  isDisabled: PropTypes.bool,
 };
 
 export default Header;

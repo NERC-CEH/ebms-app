@@ -12,6 +12,7 @@ import {
   IonItemOption,
 } from '@ionic/react';
 import { addCircleOutline, removeCircleOutline, funnel } from 'ionicons/icons';
+import MenuAttrItem from 'Components/MenuAttrItem';
 import { observer } from 'mobx-react';
 import 'common/images/cloud.svg';
 import './thumb-up.svg';
@@ -42,9 +43,12 @@ class Edit extends Component {
     areaSurveyListSortedByTime: PropTypes.bool.isRequired,
     increaseCount: PropTypes.func.isRequired,
     decreaseCount: PropTypes.func.isRequired,
+    isDisabled: PropTypes.bool,
   };
 
   getSpeciesList(sample) {
+    const { isDisabled } = this.props;
+
     if (!sample.occurrences.models.length) {
       return (
         <IonList id="list" lines="full">
@@ -83,16 +87,21 @@ class Edit extends Component {
           {occurrences.map(occ => (
             <IonItemSliding key={occ.cid}>
               <IonItem>
-                <IonButton onClick={() => decreaseCount(occ)} fill="clear">
-                  <IonIcon icon={removeCircleOutline} slot="icon-only" />
-                </IonButton>
+                {!isDisabled && (
+                  <IonButton onClick={() => decreaseCount(occ)} fill="clear">
+                    <IonIcon icon={removeCircleOutline} slot="icon-only" />
+                  </IonButton>
+                )}
                 <IonButton class="transect-edit-count" fill="clear">
                   {occ.get('count')}
                 </IonButton>
 
-                <IonButton onClick={() => increaseCount(occ)} fill="clear">
-                  <IonIcon icon={addCircleOutline} slot="icon-only" />
-                </IonButton>
+                {!isDisabled && (
+                  <IonButton onClick={() => increaseCount(occ)} fill="clear">
+                    <IonIcon icon={addCircleOutline} slot="icon-only" />
+                  </IonButton>
+                )}
+
                 <IonLabel>
                   {occ.get('taxon')[occ.get('taxon').found_in_name]}
                 </IonLabel>
@@ -112,40 +121,58 @@ class Edit extends Component {
     );
   }
 
+  getSpeciesAddButton = () => {
+    const { history, match, sample, isDisabled } = this.props;
+    const sectionSampleId = match.params.sectionId;
+    if (isDisabled) {
+      // placeholder
+      return <div style={{ height: '44px' }} />;
+    }
+
+    return (
+      <IonButton
+        color="primary"
+        id="add"
+        onClick={() => {
+          history.push(
+            `/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}/taxa`
+          );
+        }}
+      >
+        <IonIcon icon={addCircleOutline} slot="start" />
+        <IonLabel>{t('Add')}</IonLabel>
+      </IonButton>
+    );
+  };
+
   render() {
-    const { sample, match, history } = this.props;
+    const { sample, match, isDisabled } = this.props;
     const sectionSampleId = match.params.sectionId;
 
     const sectionSample = sample.getSectionSample(sectionSampleId);
     const cloud = sectionSample.get('cloud');
     const reliability = sectionSample.get('reliability');
 
+    const baseURL = `/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}`;
+
     return (
       <IonContent id="area-count-edit">
         <IonList lines="full">
-          <IonItem routerLink={`/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}/cloud`} detail>
-            <IonIcon src="/images/cloud.svg" slot="start" />
-            <IonLabel>{t('Cloud')}</IonLabel>
-            <IonLabel slot="end">{cloud}</IonLabel>
-          </IonItem>
-          <IonItem routerLink={`/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}/reliability`} detail>
-            <IonIcon src="/images/thumb-up.svg" slot="start" />
-            <IonLabel>{t('Reliability')}</IonLabel>
-            <IonLabel slot="end">{t(reliability)}</IonLabel>
-          </IonItem>
-
-          <IonButton
-            color="primary"
-            id="add"
-            onClick={() => {
-              history.push(
-                `/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}/taxa`
-              );
-            }}
-          >
-            <IonIcon icon={addCircleOutline} slot="start" />
-            <IonLabel>{t('Add')}</IonLabel>
-          </IonButton>
+          <MenuAttrItem
+            routerLink={`${baseURL}/cloud`}
+            disabled={isDisabled}
+            icon="/images/cloud.svg"
+            label="Cloud"
+            value={cloud}
+          />
+          <MenuAttrItem
+            routerLink={`${baseURL}/reliability`}
+            disabled={isDisabled}
+            icon="/images/thumb-up.svg"
+            label="Reliability"
+            value={t(reliability)}
+          />
+          {this.getSpeciesAddButton()}
         </IonList>
 
         {this.getSpeciesList(sectionSample)}
