@@ -3,34 +3,49 @@ import PropTypes from 'prop-types';
 import { IonPage } from '@ionic/react';
 import Log from 'helpers/log';
 import { observer } from 'mobx-react';
-import savedSamples from 'saved_samples';
+import { resetDefaults, remoteSaveAll } from 'saved_samples';
 import AppHeader from 'Components/Header';
+import { success, warn, error } from 'helpers/toast';
 import Main from './Main';
 
-function resetApp(appModel, userModel) {
+async function resetApp(appModel, userModel) {
   Log('Settings:Menu:Controller: resetting the application!', 'w');
-  appModel.resetDefaults();
-  userModel.logOut();
-  return savedSamples.resetDefaults();
+
+  try {
+    appModel.resetDefaults();
+    userModel.logOut();
+    await resetDefaults();
+
+    success(t('Done'));
+  } catch (e) {
+    error(`${e.message}`);
+  }
 }
 
 function onToggle(appModel, setting, checked) {
   Log('Settings:Menu:Controller: setting toggled.');
-  if (setting === 'useExperiments' && !checked) {
-    appModel.set('useExperiments', false);
-    appModel.save();
-    return;
-  }
-
-  appModel.set(setting, checked);
+  appModel.attrs[setting] = checked; // eslint-disable-line no-param-reassign
   appModel.save();
 }
 
+async function uploadAllSamples(userModel) {
+  Log('Settings:Menu:Controller: sending all samples.');
+
+  if (!userModel.hasLogIn()) {
+    warn(t('Please log in first to upload the records.'));
+    return;
+  }
+
+  try {
+    const affectedRecordsCount = await remoteSaveAll();
+    success(`${t('Uploading')} ${affectedRecordsCount} ${t('record(s)')}`);
+  } catch (e) {
+    error(`${e.message}`);
+  }
+}
+
 const Container = observer(({ appModel, userModel }) => {
-  const useTraining = appModel.get('useTraining');
-  const sendAnalytics = appModel.get('sendAnalytics');
-  const language = appModel.get('language');
-  const country = appModel.get('country');
+  const { useTraining, sendAnalytics, language, country } = appModel.attrs;
 
   return (
     <IonPage>
@@ -38,6 +53,7 @@ const Container = observer(({ appModel, userModel }) => {
       <Main
         useTraining={useTraining}
         sendAnalytics={sendAnalytics}
+        uploadAllSamples={() => uploadAllSamples(userModel)}
         resetApp={() => resetApp(appModel, userModel)}
         onToggle={(setting, checked) => onToggle(appModel, setting, checked)}
         language={language}

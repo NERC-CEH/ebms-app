@@ -32,6 +32,7 @@ const config = {
   attrs: {
     smp: {
       location: {
+        id: 'entered_sref',
         values(location, submission) {
           const areaId = config.attrs.smp.area.id;
 
@@ -87,6 +88,7 @@ const config = {
       },
 
       taxon: {
+        id: 'taxa_taxon_list_id',
         values(taxon) {
           return taxon.warehouse_id;
         },

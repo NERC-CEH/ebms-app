@@ -35,7 +35,7 @@ function getInfoMessage(countrySpeciesCount, totalSpeciesCountryCount) {
 class Component extends React.Component {
   static propTypes = {
     appModel: PropTypes.object.isRequired,
-    savedSamples: PropTypes.object.isRequired,
+    savedSamples: PropTypes.array.isRequired,
   };
 
   state = { showModal: false, species: null };
@@ -108,7 +108,7 @@ class Component extends React.Component {
 
   render() {
     const { savedSamples, appModel } = this.props;
-    let country = appModel.get('country');
+    let { country } = appModel.attrs;
     country = country === 'UK' ? 'GB' : country;
 
     const samplesLength = savedSamples.length;

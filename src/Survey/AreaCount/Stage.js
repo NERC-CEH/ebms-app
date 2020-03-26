@@ -27,7 +27,7 @@ class Component extends React.Component {
 
     this.model = this.occ;
 
-    const value = this.model.get(this.attrName);
+    const value = this.model.attrs[this.attrName];
     this.state = { currentVal: value };
 
     const survey = sample.getSurvey();
@@ -40,7 +40,7 @@ class Component extends React.Component {
 
   onChange = val => {
     this.setState({ currentVal: val });
-    this.model.set(this.attrName, val);
+    this.model.attrs[this.attrName] = val;
     this.model.save();
 
     if (this.attrConfig.type === 'radio') {

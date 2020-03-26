@@ -52,11 +52,11 @@ describe('User Model', () => {
 
   it('has default values', () => {
     const userModel = new UserModel();
-    expect(userModel.get('drupalID')).to.be.equal(null);
-    expect(userModel.get('name')).to.be.equal(null);
-    expect(userModel.get('firstname')).to.be.equal(null);
-    expect(userModel.get('secondname')).to.be.equal(null);
-    expect(userModel.get('email')).to.be.equal(null);
-    expect(userModel.get('password')).to.be.equal(null);
+    expect(userModel.attrs.drupalID).to.be.equal(null);
+    expect(userModel.attrs.name).to.be.equal(null);
+    expect(userModel.attrs.firstname).to.be.equal(null);
+    expect(userModel.attrs.secondname).to.be.equal(null);
+    expect(userModel.attrs.email).to.be.equal(null);
+    expect(userModel.attrs.password).to.be.equal(null);
   });
 });

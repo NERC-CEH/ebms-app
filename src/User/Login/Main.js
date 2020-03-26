@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonContent, IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
+import { IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
+import AppMain from 'Components/Main';
 import { key, person, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 import InputWithValidation from 'Components/InputWithValidation';
-import './styles.scss';
 
 class Component extends React.Component {
   state = {
@@ -22,13 +22,14 @@ class Component extends React.Component {
     const { onSubmit, schema } = this.props;
 
     return (
-      <IonContent id="login-page">
+      <AppMain id="login-page">
         <div className="info-message">
           <p>{t('Please sign in with your eBMS account or register.')}</p>
         </div>
         <Formik
           validationSchema={schema}
           onSubmit={onSubmit}
+          initialValues={{}}
           render={props => (
             <Form>
               <IonList lines="full">
@@ -59,11 +60,10 @@ class Component extends React.Component {
                   </IonButton>
                 </InputWithValidation>
               </IonList>
-              <IonList class="login-buttons">
-                <IonButton expand="full" color="primary" type="submit">
-                  {t('Sign in')}
-                </IonButton>
-              </IonList>
+
+              <IonButton color="primary" type="submit" expand="block">
+                {t('Sign in')}
+              </IonButton>
 
               <IonList>
                 <IonItem routerLink="/user/register" detail>
@@ -76,7 +76,7 @@ class Component extends React.Component {
             </Form>
           )}
         />
-      </IonContent>
+      </AppMain>
     );
   }
 }

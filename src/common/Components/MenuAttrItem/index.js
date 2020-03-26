@@ -11,7 +11,12 @@ function MenuAttrItem({ routerLink, disabled, label, value, icon, iconMode }) {
       : { mode: iconMode, icon };
 
   return (
-    <IonItem routerLink={routerLink} detail={!isDisabled} disabled={isDisabled} className="menu-attr-item">
+    <IonItem
+      routerLink={routerLink}
+      detail={!isDisabled}
+      disabled={isDisabled}
+      className="menu-attr-item"
+    >
       <IonIcon slot="start" {...iconProps} />
       <IonLabel>{t(label)}</IonLabel>
       <IonLabel slot="end">{value}</IonLabel>

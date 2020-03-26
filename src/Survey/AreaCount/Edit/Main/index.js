@@ -27,10 +27,10 @@ import CountdownClock from './components/CountdownClock';
 import './styles.scss';
 
 const speciesNameSort = (occ1, occ2) => {
-  const foundInName1 = occ1.get('taxon').found_in_name;
-  const foundInName2 = occ2.get('taxon').found_in_name;
-  const taxon1 = occ1.get('taxon')[foundInName1];
-  const taxon2 = occ2.get('taxon')[foundInName2];
+  const foundInName1 = occ1.attrs.taxon.found_in_name;
+  const foundInName2 = occ2.attrs.taxon.found_in_name;
+  const taxon1 = occ1.attrs.taxon[foundInName1];
+  const taxon2 = occ2.attrs.taxon[foundInName2];
   return taxon1.localeCompare(taxon2);
 };
 
@@ -85,7 +85,7 @@ class AreaCount extends Component {
       isDisabled,
     } = this.props;
 
-    if (!sample.occurrences.models.length) {
+    if (!sample.occurrences.length) {
       return (
         <IonList id="list" lines="full">
           <IonItem className="empty">
@@ -99,7 +99,7 @@ class AreaCount extends Component {
       ? speciesOccAddedTimeSort
       : speciesNameSort;
 
-    const occurrences = [...sample.occurrences.models].sort(sort);
+    const occurrences = [...sample.occurrences].sort(sort);
 
     return (
       <>
@@ -122,10 +122,10 @@ class AreaCount extends Component {
                   onClick={() => !isDisabled && increaseCount(occ)}
                   fill="clear"
                 >
-                  {occ.get('count')}
+                  {occ.attrs.count}
                 </IonButton>
                 <IonLabel onClick={() => navigateToOccurrence(occ)}>
-                  {occ.get('taxon')[occ.get('taxon').found_in_name]}
+                  {occ.attrs.taxon[occ.attrs.taxon.found_in_name]}
                 </IonLabel>
               </IonItem>
               <IonItemOptions side="end">
@@ -148,10 +148,10 @@ class AreaCount extends Component {
   render() {
     const { sample, isDisabled } = this.props;
 
-    const { area } = sample.get('location') || {};
+    const { area } = sample.attrs.location || {};
     const areaPretty = area && `${area.toLocaleString()} m²`;
 
-    const startTime = new Date(sample.get('surveyStartTime'));
+    const startTime = new Date(sample.attrs.surveyStartTime);
     const countdown =
       startTime.getTime() +
       config.DEFAULT_SURVEY_TIME +

@@ -46,7 +46,7 @@ function getTransectItem(transect, onTransectSelect) {
 }
 
 function Transects({ appModel, onTransectSelect }) {
-  const transects = appModel.get('transects');
+  const { transects } = appModel.attrs;
 
   const hasTransects = !!transects.length;
   const transectsList = hasTransects

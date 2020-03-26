@@ -7,22 +7,22 @@ import AppHeader from 'Components/Header';
 import Main from './Main';
 
 function increaseCount(occ) {
-  const count = occ.get('count');
-  occ.set('count', count + 1);
+  const { count } = occ.attrs;
+  occ.attrs.count = count + 1;
   occ.save();
 }
 
 function decreaseCount(occ) {
-  const count = occ.get('count');
+  const { count } = occ.attrs;
   if (count <= 1) {
     return;
   }
-  occ.set('count', count - 1);
+  occ.attrs.count = count - 1;
   occ.save();
 }
 
 function deleteOccurrence(occ) {
-  const taxon = occ.get('taxon').scientific_name;
+  const taxon = occ.attrs.taxon.scientific_name;
   alert({
     header: t('Delete'),
     message: `${t('Are you sure you want to delete')} ${taxon}?`,
@@ -54,19 +54,15 @@ class Container extends React.Component {
 
   toggleSpeciesSort = () => {
     const { appModel } = this.props;
-    const areaSurveyListSortedByTime = appModel.get(
-      'areaSurveyListSortedByTime'
-    );
-    appModel.set('areaSurveyListSortedByTime', !areaSurveyListSortedByTime);
+    const { areaSurveyListSortedByTime } = appModel.attrs;
+    appModel.attrs.areaSurveyListSortedByTime = !areaSurveyListSortedByTime;
     appModel.save();
   };
 
   render() {
     const { sample, appModel, match, history } = this.props;
 
-    const areaSurveyListSortedByTime = appModel.get(
-      'areaSurveyListSortedByTime'
-    );
+    const { areaSurveyListSortedByTime } = appModel.attrs;
     const isDisabled = !!sample.metadata.synced_on;
 
     return (

@@ -1,7 +1,7 @@
 module.exports = grunt => ({
   default: ['init', 'webpack:main'],
 
-  init: ['init:validate', 'copy:main'],
+  init: ['init:validate'],
 
   'init:validate': () => {
     if (process.env.APP_FORCE) {
@@ -35,9 +35,6 @@ module.exports = grunt => ({
 
   // Cordova set up
   cordova: [
-    // prepare www source
-    'default',
-
     // init cordova source
     // add www source to cordova
     'exec:cordova_init',

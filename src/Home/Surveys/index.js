@@ -64,7 +64,7 @@ function getUploadedSurveys(surveys) {
 @observer
 class Component extends React.Component {
   static propTypes = {
-    savedSamples: PropTypes.object.isRequired,
+    savedSamples: PropTypes.array.isRequired,
   };
 
   state = {
@@ -78,7 +78,7 @@ class Component extends React.Component {
   getSamplesList(uploaded) {
     const { savedSamples } = this.props;
 
-    return savedSamples.models
+    return savedSamples
       .filter(sample =>
         uploaded ? sample.metadata.synced_on : !sample.metadata.synced_on
       )

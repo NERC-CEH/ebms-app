@@ -313,11 +313,17 @@ msgstr "Fallo en recuperar"
 msgid "Incorrect password or email."
 msgstr "Contraseña o correo electrónico incorrecto."
 
+# Part of logout process
 msgid "Logout"
 msgstr "Cerrar sesión"
 
+# Part of logout process
 msgid "Are you sure you want to logout?"
 msgstr "¿Estás seguro de que quieres cerrar sesión?"
+
+# Part of logout process
+msgid "Discard local data"
+msgstr ""
 
 msgid "This will delete all the records on this device."
 msgstr "Esto borrará todos los registros en este dispositivo."
@@ -474,7 +480,7 @@ msgstr "Galería"
 msgid "Camera"
 msgstr "Cámara"
 
-msgid "Are you sure you want to remove this photo from the sample?"
+msgid "Are you sure you want to remove this photo?"
 msgstr "¿Estás seguro que quieres eliminar esta foto de la muestra?"
 
 msgid "Note: it will remain in the gallery."
@@ -1261,56 +1267,84 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr ""
+msgstr "Eliminar el último punto"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr ""
+msgstr "Borrar todo"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "Haga clic para comenzar a dibujar "
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "Haga clic para continuar dibujando"
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "Haga clic en el primer punto para cerrar la figura"
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "Haga clic para empezar a dibujar una línea"
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "Haga clic para continuar dibujando una línea"
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "Haga clic para dibujar terminar la línea"
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr ""
+msgstr "Arrastre puntos o marcadores para editar las figuras."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr ""
+msgstr "Haga clic en cancelar para deshacer los cambios."
 
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 msgid "Today"
+msgstr "Hoy"
+
+msgid "Yesterday"
 msgstr ""
 
+# This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr ""
+"Este registro ha sido enviado y no puede ser editado dentro de esta app."
 
+# This is part of a saved record page
 msgid "Please go to %(website) to make any new edits."
+msgstr "Por favor vaya a %(website) to hacer cualquier edición."
+
+# Refers to surveys list when long-pressing plus button
+msgid "Other recording options"
+msgstr ""
+
+# A note in app settings page
+msgid ""
+"Batch upload all finished records. This does not include records in 'draft' "
+"stage."
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "Are you sure you want to upload all finished records?"
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "Uploading"
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "record(s)"
 msgstr ""

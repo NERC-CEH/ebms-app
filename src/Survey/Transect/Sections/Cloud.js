@@ -21,10 +21,10 @@ class Component extends React.Component {
 
     this.attrName = 'cloud';
 
-    this.sample = transectSample.samples.models.find(
+    this.sample = transectSample.samples.find(
       ({ cid }) => cid === match.params.sectionId
     );
-    const value = this.sample.get(this.attrName);
+    const value = this.sample.attrs[this.attrName];
     this.state = { currentVal: value };
 
     this.attrConfig = config.indicia.surveys.transect.attrs.smp.cloud;
@@ -32,7 +32,7 @@ class Component extends React.Component {
 
   onChange = val => {
     this.setState({ currentVal: val });
-    this.sample.set(this.attrName, val);
+    this.sample.attrs[this.attrName] = val;
     this.sample.save();
 
     if (this.attrConfig.type === 'radio') {

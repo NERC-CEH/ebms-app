@@ -3,39 +3,18 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonPage } from '@ionic/react';
 import alert from 'common/helpers/alert';
+import showInvalidsMessage from 'helpers/invalidsMessage';
 import Header from './Header';
 import Main from './Main';
 
-function showValidationAlert(errors, onSaveDraft) {
-  const errorsPretty = errors.errors.reduce(
-    (agg, err) => `${agg} ${t(err)}`,
-    ''
-  );
-  alert({
-    header: t('Survey incomplete'),
-    message: `${errorsPretty}`,
-    buttons: [
-      {
-        text: t('Cancel'),
-        role: 'cancel',
-      },
-      {
-        text: t('Save Draft'),
-        cssClass: 'secondary',
-        handler: onSaveDraft,
-      },
-    ],
-  });
-}
-
 function increaseCount(occ) {
-  const count = occ.get('count');
-  occ.set('count', count + 1);
+  const { count } = occ.attrs;
+  occ.attrs.count = count + 1;
   occ.save();
 }
 
 function deleteOccurrence(occ) {
-  const taxon = occ.get('taxon').scientific_name;
+  const taxon = occ.attrs.taxon.scientific_name;
   alert({
     header: t('Delete'),
     message: `${t('Are you sure you want to delete')} ${taxon}?`,
@@ -57,9 +36,8 @@ function deleteOccurrence(occ) {
 }
 
 function setSurveyEndTime(sample) {
-  return sample.save({
-    surveyEndime: new Date(),
-  });
+  sample.attrs.surveyEndime = new Date(); // eslint-disable-line no-param-reassign
+  return sample.save();
 }
 
 /* eslint-disable no-param-reassign */
@@ -85,27 +63,25 @@ class Container extends React.Component {
     appModel: PropTypes.object.isRequired,
   };
 
-  _processSubmission = async () => {
+  _processSubmission = () => {
     const { history, sample } = this.props;
 
-    const errors = await sample.validateRemote();
-    if (errors) {
-      showValidationAlert(errors);
+    const invalids = sample.validateRemote();
+    if (invalids) {
+      showInvalidsMessage(invalids);
       return;
     }
-    sample.toggleGPStracking(false);
-    sample.error.message = null;
 
-    sample.save(null, { remote: true }).catch(e => {
-      sample.error.message = e.message;
-    });
+    sample.toggleGPStracking(false);
+    sample.saveRemote();
+
     history.replace(`/home/user-surveys`);
   };
 
   _processDraft = async () => {
     const { history, appModel, sample } = this.props;
 
-    appModel.set('areaCountDraftId', null);
+    appModel.attrs.areaCountDraftId = null;
     await appModel.save();
 
     const saveAndReturn = () => {
@@ -117,9 +93,9 @@ class Container extends React.Component {
       history.replace(`/home/user-surveys`);
     };
 
-    const errors = await sample.validateRemote();
-    if (errors) {
-      showValidationAlert(errors, saveAndReturn);
+    const invalids = sample.validateRemote();
+    if (invalids) {
+      showInvalidsMessage(invalids, saveAndReturn);
       return;
     }
 
@@ -147,10 +123,8 @@ class Container extends React.Component {
 
   toggleSpeciesSort = () => {
     const { appModel } = this.props;
-    const areaSurveyListSortedByTime = appModel.get(
-      'areaSurveyListSortedByTime'
-    );
-    appModel.set('areaSurveyListSortedByTime', !areaSurveyListSortedByTime);
+    const { areaSurveyListSortedByTime } = appModel.attrs;
+    appModel.attrs.areaSurveyListSortedByTime = !areaSurveyListSortedByTime;
     appModel.save();
   };
 
@@ -161,10 +135,7 @@ class Container extends React.Component {
       return null;
     }
 
-    const areaSurveyListSortedByTime = appModel.get(
-      'areaSurveyListSortedByTime'
-    );
-
+    const { areaSurveyListSortedByTime } = appModel.attrs;
     const isTraining = sample.metadata.training;
     const isEditing = sample.metadata.saved;
     const isDisabled = !!sample.metadata.synced_on;

@@ -305,10 +305,16 @@ msgstr ""
 msgid "Incorrect password or email."
 msgstr ""
 
+# Part of logout process
 msgid "Logout"
 msgstr ""
 
+# Part of logout process
 msgid "Are you sure you want to logout?"
+msgstr ""
+
+# Part of logout process
+msgid "Discard local data"
 msgstr ""
 
 msgid "This will delete all the records on this device."
@@ -462,7 +468,7 @@ msgstr ""
 msgid "Camera"
 msgstr ""
 
-msgid "Are you sure you want to remove this photo from the sample?"
+msgid "Are you sure you want to remove this photo?"
 msgstr ""
 
 msgid "Note: it will remain in the gallery."
@@ -1154,8 +1160,35 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
+msgid "Yesterday"
+msgstr ""
+
+# This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr ""
 
+# This is part of a saved record page
 msgid "Please go to %(website) to make any new edits."
+msgstr ""
+
+# Refers to surveys list when long-pressing plus button
+msgid "Other recording options"
+msgstr ""
+
+# A note in app settings page
+msgid ""
+"Batch upload all finished records. This does not include records in 'draft' "
+"stage."
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "Are you sure you want to upload all finished records?"
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "Uploading"
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "record(s)"
 msgstr ""

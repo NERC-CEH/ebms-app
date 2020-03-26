@@ -2,15 +2,12 @@
  * Print App information for debugging, BRC ACII art and a link to BRC website.
  **************************************************************************** */
 
-import Indicia from 'indicia';
+import Indicia from '@indicia-js/core';
 import CONFIG from 'config';
 import Log from './log';
 
 // Print Hello
-const art = [
-  '\n',
-  '* Find me: https://kazlauskis.com',
-].join('\n');
+const art = ['\n', '* Find us: https://flumens.io'].join('\n');
 
 Log(art);
 

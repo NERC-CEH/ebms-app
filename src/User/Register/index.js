@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Log from 'helpers/log';
 import Device from 'helpers/device';
 import { IonPage, NavContext } from '@ionic/react';
-import toast from 'common/helpers/toast';
+import { warn, error } from 'common/helpers/toast';
 import alert from 'common/helpers/alert';
 import loader from 'common/helpers/loader';
 import AppHeader from 'Components/Header';
@@ -12,11 +12,7 @@ import Main from './Main';
 async function onRegister(userModel, details, lang, onSuccess) {
   const { email, password, firstname, secondname } = details;
   if (!Device.isOnline()) {
-    toast({
-      message: t("Sorry, looks like you're offline."),
-      duration: 3000,
-      color: 'warning',
-    });
+    warn(t("Sorry, looks like you're offline."));
     return;
   }
   await loader.show({
@@ -51,19 +47,14 @@ async function onRegister(userModel, details, lang, onSuccess) {
     });
   } catch (err) {
     Log(err, 'e');
-    toast({
-      header: t('Sorry'),
-      message: `${err.message}`,
-      duration: 3000,
-      color: 'danger',
-    }); 
+    error(`${err.message}`);
   }
 
   loader.hide();
 }
 
 export default function RegisterContainer({ userModel, appModel }) {
-  const lang = appModel.get('language');
+  const lang = appModel.attrs['language'];
   const context = useContext(NavContext);
 
   const onSuccess = () => {

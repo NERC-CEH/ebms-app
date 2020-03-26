@@ -31,27 +31,27 @@ class EditOccurrence extends Component {
   increaseCount = () => {
     const { occurrence } = this.props;
 
-    const count = occurrence.get('count');
-    this.props.occurrence.set('count', count + 1);
+    const { count } = occurrence.attrs;
+    this.props.occurrence.attrs.count = count + 1;
   };
 
   decreaseCount = () => {
     const { occurrence } = this.props;
 
-    const count = occurrence.get('count');
+    const { count } = occurrence.attrs;
     if (count <= 1) {
       return;
     }
 
-    this.props.occurrence.set('count', count - 1);
+    this.props.occurrence.attrs.count = count - 1;
   };
 
   render() {
     const { sample, occurrence, isDisabled } = this.props;
-    const species = occurrence.get('taxon').scientific_name;
-    const stage = occurrence.get('stage');
-    const comment = occurrence.get('comment');
-    const count = occurrence.get('count');
+    const species = occurrence.attrs.taxon.scientific_name;
+    const { stage } = occurrence.attrs;
+    const { comment } = occurrence.attrs;
+    const { count } = occurrence.attrs;
     const baseURL = `/survey/area/${sample.cid}/edit/occ/${occurrence.cid}`;
 
     return (

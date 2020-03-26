@@ -39,7 +39,7 @@ function deleteSurvey(sample) {
 const Survey = observer(({ sample }) => {
   const date = new Date(sample.metadata.created_on);
   const prettyDate = date.toLocaleDateString();
-  const speciesCount = sample.occurrences.models.length;
+  const speciesCount = sample.occurrences.length;
 
   const survey = sample.getSurvey();
   const href = !sample.remote.synchronising
@@ -67,9 +67,7 @@ const Survey = observer(({ sample }) => {
         </h3>
         <h3>{prettyDate}</h3>
         <IonBadge color="medium">
-          <IonIcon src="/images/butterfly.svg" /> 
-          {' '}
-          {speciesCount}
+          <IonIcon src="/images/butterfly.svg" /> {speciesCount}
         </IonBadge>
       </IonLabel>
     );

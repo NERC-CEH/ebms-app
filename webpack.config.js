@@ -35,6 +35,7 @@ const config = {
       path.resolve(ROOT_DIR, './src/common/vendor'),
     ],
     alias: {
+      Components: 'common/Components',
       config: 'common/config/config',
       helpers: 'common/helpers',
       saved_samples: 'common/saved_samples',
@@ -42,7 +43,8 @@ const config = {
       occurrence: 'common/models/occurrence',
       app_model: 'common/models/app_model',
       user_model: 'common/models/user_model',
-      Components: 'common/Components',
+      model_factory: 'common/models/model_factory',
+
 
       // species database
       'common/data/species.data.json': isDevEnv
@@ -92,7 +94,6 @@ const config = {
               },
             },
           },
-
           `sass-loader`,
         ],
       },
@@ -144,24 +145,16 @@ const config = {
 
       'process.env': {
         // package.json variables
-        APP_BUILD: JSON.stringify(
-          process.env.TRAVIS_BUILD_ID || pkg.build || new Date().getTime()
-        ),
+        APP_BUILD: JSON.stringify(process.env.TRAVIS_BUILD_ID || pkg.build || new Date().getTime()),
         APP_NAME: JSON.stringify(pkg.name), // no need to be an env value
         APP_VERSION: JSON.stringify(pkg.version), // no need to be an env value
 
         // mandatory env. variables
-        APP_INDICIA_API_KEY: JSON.stringify(
-          process.env.APP_INDICIA_API_KEY || ''
-        ),
-        APP_MAPBOX_MAP_KEY: JSON.stringify(
-          process.env.APP_MAPBOX_MAP_KEY || ''
-        ),
+        APP_INDICIA_API_KEY: JSON.stringify(process.env.APP_INDICIA_API_KEY || ''),
+        APP_MAPBOX_MAP_KEY: JSON.stringify(process.env.APP_MAPBOX_MAP_KEY || ''),
 
         // compulsory env. variables
-        APP_INDICIA_API_HOST: JSON.stringify(
-          process.env.APP_INDICIA_API_HOST || ''
-        ),
+        APP_INDICIA_API_HOST: JSON.stringify(process.env.APP_INDICIA_API_HOST || ''),
         APP_TRAINING: process.env.APP_TRAINING || false,
         APP_EXPERIMENTS: process.env.APP_EXPERIMENTS || false,
         APP_SENTRY_KEY: JSON.stringify(process.env.APP_SENTRY_KEY || ''),

@@ -19,19 +19,17 @@ class Controller extends React.Component {
     const { sample, match } = this.props;
     const occID = match.params.occId;
 
-    const recordedTaxa = sample.occurrences.models.map(
-      occ => occ.get('taxon').warehouse_id
+    const recordedTaxa = sample.occurrences.map(
+      occ => occ.attrs.taxon.warehouse_id
     );
 
     const onSpeciesSelected = async taxon => {
       if (occID) {
-        const occurrence = sample.occurrences.models.find(
-          occ => occ.cid === occID
-        );
-        occurrence.set('taxon', taxon);
+        const occurrence = sample.occurrences.find(occ => occ.cid === occID);
+        occurrence.attrs.taxon = taxon;
       } else {
-        const occurrence = new Occurrence({ taxon });
-        sample.addOccurrence(occurrence);
+        const occurrence = new Occurrence({ attrs: { taxon } });
+        sample.occurrences.push(occurrence);
       }
 
       await sample.save();

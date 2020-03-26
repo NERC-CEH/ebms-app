@@ -1,7 +1,10 @@
+# Translators:
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -932,7 +935,7 @@ msgid "Apatura ilia/iris"
 msgstr ""
 
 msgid "Araschnia levana"
-msgstr ""
+msgstr "Mapa"
 
 msgid "Vanessa virginiensis"
 msgstr ""

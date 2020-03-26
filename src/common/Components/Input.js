@@ -7,12 +7,15 @@ import Device from 'helpers/device';
 import StringHelp from 'helpers/string';
 import PropTypes from 'prop-types';
 import React from 'react';
+import AutoSuggestInput from './AutoSuggestInput';
 
 class Component extends React.Component {
   constructor(props) {
     super(props);
     this.input = React.createRef();
-    this.state = { value: props.default || props.config.default };
+    this.state = {
+      value: props.default || props.config.default,
+    };
 
     if (props.type === 'date' && this.state.value) {
       this.state.value = DateHelp.toDateInputValue(this.state.value);
@@ -76,7 +79,7 @@ class Component extends React.Component {
       return;
     }
 
-    this.input.current.focus();
+    !config.lookup && this.input.current.focus();
     if (window.cordova && Device.isAndroid()) {
       window.Keyboard.show();
       this.input.current.onfocusout = () => {
@@ -88,6 +91,17 @@ class Component extends React.Component {
   render() {
     const config = this.props.config || {};
     const type = this.props.type || config.type || 'text';
+
+    if (config.lookup) {
+      const { onChange, ...props } = this.props;
+      const onSuggestionSelected = onChange;
+      return (
+        <AutoSuggestInput
+          onSuggestionSelected={onSuggestionSelected}
+          {...props}
+        />
+      );
+    }
 
     if (type === 'date') {
       return (
@@ -135,6 +149,7 @@ class Component extends React.Component {
       }
     }
     const message = this.props.info || config.info;
+    const placeholder = this.props.placeholder || config.placeholder;
 
     return (
       <div>
@@ -152,6 +167,7 @@ class Component extends React.Component {
           min={min}
           value={this.state.value}
           debounce={200}
+          placeholder={placeholder}
           autofocus
         />
       </div>
@@ -163,6 +179,7 @@ Component.propTypes = {
   default: PropTypes.any,
   config: PropTypes.any.isRequired,
   info: PropTypes.string,
+  placeholder: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   validate: PropTypes.func,
   max: PropTypes.any,

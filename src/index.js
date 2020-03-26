@@ -47,6 +47,9 @@ async function init() {
     disableBackButton();
   }
 
+  appModel.attrs.appSession += 1;
+  appModel.save();
+
   ReactDOM.render(<App />, document.getElementById('root'));
 }
 

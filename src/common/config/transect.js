@@ -170,6 +170,7 @@ export default {
       },
 
       taxon: {
+        id: 'taxa_taxon_list_id',
         values(taxon) {
           return taxon.warehouse_id;
         },

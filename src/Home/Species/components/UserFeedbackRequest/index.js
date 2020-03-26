@@ -52,7 +52,7 @@ class Component extends React.Component {
       return;
     }
 
-    this.props.appModel.set('feedbackGiven', true);
+    this.props.appModel.attrs.feedbackGiven = true;
     this.props.appModel.save();
 
     if (!userActionIsPositive) {
@@ -73,11 +73,11 @@ class Component extends React.Component {
   }
 
   shouldAskForFeedback() {
-    if (this.props.appModel.get('feedbackGiven')) {
+    if (this.props.appModel.attrs.feedbackGiven) {
       return false;
     }
 
-    if (this.props.appModel.get('useTraining')) {
+    if (this.props.appModel.attrs.useTraining) {
       return false;
     }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import * as Sentry from '@sentry/browser';
+import * as Sentry from '@sentry/browser';
 import ErrorMessage from './components/ErrorMessage';
 
 export default class ErrorBoundary extends React.Component {
@@ -21,13 +21,13 @@ export default class ErrorBoundary extends React.Component {
     return { hasError: true };
   }
 
-  componentDidCatch() {
-    // Sentry.withScope(scope => {
-    //   scope.setExtras(errorInfo);
+  componentDidCatch(error, errorInfo) {
+    Sentry.withScope(scope => {
+      scope.setExtras(errorInfo);
 
-    //   const eventId = Sentry.captureException(error);
-    //   this.setState({ eventId });
-    // });
+      const eventId = Sentry.captureException(error);
+      this.setState({ eventId });
+    });
   }
 
   render() {

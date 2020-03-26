@@ -18,10 +18,10 @@ import AppHeader from 'Components/Header';
 import './styles.scss';
 
 function SelectCountry({ appModel, hideHeader }) {
-  const currentValue = appModel.get('country');
+  const currentValue = appModel.attrs.country;
 
   function onSelect(e) {
-    appModel.set('country', e.target.value);
+    appModel.attrs.country = e.target.value;
     appModel.save();
   }
 

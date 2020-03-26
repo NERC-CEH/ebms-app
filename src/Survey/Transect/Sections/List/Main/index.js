@@ -10,7 +10,7 @@ import './styles.scss';
 import 'common/images/butterfly.svg';
 
 const getSectionItem = (sectionSample, match) => {
-  const section = sectionSample.get('location');
+  const section = sectionSample.attrs.location;
   const geometry = toJS(section.geom);
 
   geometry.coordinates = transformToLatLon(geometry.coordinates);
@@ -38,7 +38,9 @@ const getSectionItem = (sectionSample, match) => {
 
       {!!sectionSpeciesCount && (
         <IonLabel slot="end">
-          <IonIcon src="/images/butterfly.svg" /> {sectionSpeciesCount}
+          <IonIcon src="/images/butterfly.svg" /> 
+          {' '}
+          {sectionSpeciesCount}
         </IonLabel>
       )}
     </IonItem>
@@ -46,14 +48,14 @@ const getSectionItem = (sectionSample, match) => {
 };
 
 function Sections({ sample, appModel, onTransectSelect, match }) {
-  const hasSelectedTransect = sample.get('location');
+  const hasSelectedTransect = sample.attrs.location;
   if (!hasSelectedTransect) {
     return (
       <Transects appModel={appModel} onTransectSelect={onTransectSelect} />
     );
   }
 
-  const sections = sample.samples.models.map(s => getSectionItem(s, match));
+  const sections = sample.samples.map(s => getSectionItem(s, match));
   return (
     <IonContent id="transect-sections-list">
       <IonList lines="full">{sections}</IonList>

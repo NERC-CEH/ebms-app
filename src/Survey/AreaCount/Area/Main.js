@@ -259,8 +259,6 @@ class AreaAttr extends Component {
   setEditedShape = e => e.layers.eachLayer(layer => this.setShape({ layer }));
 
   setShape = async e => {
-    console.log('setging shape!');
-
     const { setLocation } = this.props;
     const geojson = e.layer.toGeoJSON();
     const shape = geojson.geometry;

@@ -5,11 +5,11 @@ import SelectLanguage from 'Settings/Language';
 import SelectCountry from 'Settings/Country';
 
 const Component = observer(({ appModel, children }) => {
-  if (!appModel.get('language')) {
+  if (!appModel.attrs.language) {
     return <SelectLanguage appModel={appModel} hideHeader />;
   }
 
-  if (!appModel.get('country')) {
+  if (!appModel.attrs.country) {
     return <SelectCountry appModel={appModel} hideHeader />;
   }
 

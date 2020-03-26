@@ -34,6 +34,10 @@ const Component = ({ history }) => {
           >
             <IonLabel>{t('eBMS Transect')}</IonLabel>
           </IonFabButton>
+
+          <div className="long-press-surveys-label">
+            {t('Other recording options')}
+          </div>
         </IonFabList>
       </LongPressFabButton>
 

@@ -1,11 +1,11 @@
 # Translators:
-# Karolis, 2020
 # Janne Heliola <janne.heliola@ymparisto.fi>, 2020
+# Karolis, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Janne Heliola <janne.heliola@ymparisto.fi>, 2020\n"
+"Last-Translator: Karolis, 2020\n"
 "Language-Team: Finnish (Finland) (https://www.transifex.com/ceh/teams/95441/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -311,11 +311,17 @@ msgstr "Virhe tiedonhaussa"
 msgid "Incorrect password or email."
 msgstr "Virheellinen salasana tai sähköpostiosoite."
 
+# Part of logout process
 msgid "Logout"
 msgstr "Kirjaudu ulos"
 
+# Part of logout process
 msgid "Are you sure you want to logout?"
 msgstr "Haluatko kirjautua ulos?"
+
+# Part of logout process
+msgid "Discard local data"
+msgstr ""
 
 msgid "This will delete all the records on this device."
 msgstr "Tämä poistaa kaikki havainnot laitteelta."
@@ -471,7 +477,7 @@ msgstr "Galleria"
 msgid "Camera"
 msgstr "Kamera"
 
-msgid "Are you sure you want to remove this photo from the sample?"
+msgid "Are you sure you want to remove this photo?"
 msgstr "Haluatko poistaa tämän valokuvan näytteestä?"
 
 msgid "Note: it will remain in the gallery."
@@ -1280,8 +1286,35 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
+msgid "Yesterday"
+msgstr ""
+
+# This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr ""
 
+# This is part of a saved record page
 msgid "Please go to %(website) to make any new edits."
+msgstr ""
+
+# Refers to surveys list when long-pressing plus button
+msgid "Other recording options"
+msgstr ""
+
+# A note in app settings page
+msgid ""
+"Batch upload all finished records. This does not include records in 'draft' "
+"stage."
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "Are you sure you want to upload all finished records?"
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "Uploading"
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "record(s)"
 msgstr ""

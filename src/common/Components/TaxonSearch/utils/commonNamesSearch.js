@@ -5,7 +5,7 @@ const SCI_NAME_INDEX = 1;
 const SPECIES_SCI_NAME_INDEX = 1;
 
 export default (genera, normSearchPhrase, results, maxResults) => {
-  const language = appModel.get('language');
+  const { language } = appModel.attrs;
 
   let commonNames = [];
   genera.forEach((genus, generaArrayIndex) => {

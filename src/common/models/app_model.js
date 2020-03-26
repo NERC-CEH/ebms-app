@@ -2,8 +2,8 @@
  * App model. Persistent.
  **************************************************************************** */
 import Log from 'helpers/log';
-import { observable, set as setMobXAttrs } from 'mobx';
-import { getStore } from 'common/store';
+import { observable, toJS, set as setMobXAttrs } from 'mobx';
+import { store } from 'common/store';
 import makeRequest from 'common/helpers/makeRequest';
 import CONFIG from 'config';
 import * as Yup from 'yup';
@@ -123,6 +123,7 @@ const getDefaultAttrs = () => ({
 
   useExperiments: false,
   sendAnalytics: true,
+  appSession: 0,
 });
 
 class AppModel {
@@ -132,39 +133,24 @@ class AppModel {
 
   constructor() {
     Log('AppModel: initializing');
-    this._init = getStore()
-      .then(store => store.getItem('app'))
-      .then(appStr => {
-        const app = JSON.parse(appStr);
-        if (!app) {
-          Log('AppModel: persisting for the first time');
-          this._initDone = true;
-          this.save();
-          return;
-        }
+    this._init = store.find('app').then(app => {
+      if (typeof app === 'string') {
+        // backwards compatibility
+        app = JSON.parse(app); // eslint-disable-line
+      }
 
-        setMobXAttrs(this.attrs, app.attrs);
-        this._initDone = true;
-      });
-  }
+      if (!app) {
+        Log('AppModel: persisting for the first time');
+        this.save();
+        return;
+      }
 
-  get(name) {
-    return this.attrs[name];
-  }
-
-  set(name, value) {
-    this.attrs[name] = value;
-    return this;
-  }
-
-  save() {
-    if (!this._initDone) {
-      throw new Error(`App Model can't be saved before initialisation`);
-    }
-    const userStr = JSON.stringify({
-      attrs: this.attrs,
+      setMobXAttrs(this.attrs, app.attrs);
     });
-    return getStore().then(store => store.setItem('app', userStr));
+  }
+
+  async save() {
+    return store.save('app', { attrs: toJS(this.attrs) });
   }
 
   resetDefaults() {
@@ -191,12 +177,12 @@ class AppModel {
     };
     sectionsList.forEach(normalizeTransectsWithSections);
 
-    this.set('transects', transects);
+    this.attrs.transects = transects;
     await this.save();
   }
 
   toggleTaxonFilter(filter) {
-    const taxonGroupFilters = this.get('taxonGroupFilters');
+    const { taxonGroupFilters } = this.attrs;
     const index = taxonGroupFilters.indexOf(filter);
     if (index >= 0) {
       taxonGroupFilters.splice(index, 1);

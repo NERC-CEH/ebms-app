@@ -19,10 +19,10 @@ import './thumb-up.svg';
 import './styles.scss';
 
 const speciesNameSort = (occ1, occ2) => {
-  const foundInName1 = occ1.get('taxon').found_in_name;
-  const foundInName2 = occ2.get('taxon').found_in_name;
-  const taxon1 = occ1.get('taxon')[foundInName1];
-  const taxon2 = occ2.get('taxon')[foundInName2];
+  const foundInName1 = occ1.attrs.taxon.found_in_name;
+  const foundInName2 = occ2.attrs.taxon.found_in_name;
+  const taxon1 = occ1.attrs.taxon[foundInName1];
+  const taxon2 = occ2.attrs.taxon[foundInName2];
   return taxon1.localeCompare(taxon2);
 };
 
@@ -49,7 +49,7 @@ class Edit extends Component {
   getSpeciesList(sample) {
     const { isDisabled } = this.props;
 
-    if (!sample.occurrences.models.length) {
+    if (!sample.occurrences.length) {
       return (
         <IonList id="list" lines="full">
           <IonItem className="empty">
@@ -69,7 +69,7 @@ class Edit extends Component {
       ? speciesOccAddedTimeSort
       : speciesNameSort;
 
-    const occurrences = [...sample.occurrences.models].sort(sort);
+    const occurrences = [...sample.occurrences].sort(sort);
 
     return (
       <IonContent id="transect-section-edit">
@@ -93,7 +93,7 @@ class Edit extends Component {
                   </IonButton>
                 )}
                 <IonButton class="transect-edit-count" fill="clear">
-                  {occ.get('count')}
+                  {occ.attrs.count}
                 </IonButton>
 
                 {!isDisabled && (
@@ -103,7 +103,7 @@ class Edit extends Component {
                 )}
 
                 <IonLabel>
-                  {occ.get('taxon')[occ.get('taxon').found_in_name]}
+                  {occ.attrs.taxon[occ.attrs.taxon.found_in_name]}
                 </IonLabel>
               </IonItem>
               <IonItemOptions side="end">
@@ -150,8 +150,8 @@ class Edit extends Component {
     const sectionSampleId = match.params.sectionId;
 
     const sectionSample = sample.getSectionSample(sectionSampleId);
-    const cloud = sectionSample.get('cloud');
-    const reliability = sectionSample.get('reliability');
+    const { cloud } = sectionSample.attrs;
+    const { reliability } = sectionSample.attrs;
 
     const baseURL = `/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}`;
 

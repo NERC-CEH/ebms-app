@@ -7,7 +7,7 @@
 
     <name>{APP_TITLE}</name>
     <description>{APP_DESCRIPTION}</description>
-    <author email="karolis@kazlauskis.com" href="https://kazlauskis.com">
+    <author email="karolis@flumens.io" href="https://flumens.io">
         Karolis Kazlauskis
     </author>
 
@@ -51,7 +51,6 @@
 
     <preference name="android-minSdkVersion" value="22" />
     <preference name="orientation" value="portrait" />
-    <preference name="target-device" value="universal" />
     <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="webviewbounce" value="false"/>
     <preference name="UIWebViewBounce" value="false"/>

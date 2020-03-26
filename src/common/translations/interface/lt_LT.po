@@ -311,11 +311,17 @@ msgstr "Nepavyko prisijungti"
 msgid "Incorrect password or email."
 msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
 
+# Part of logout process
 msgid "Logout"
 msgstr "Atsijungti"
 
+# Part of logout process
 msgid "Are you sure you want to logout?"
 msgstr "Ar tikrai norite atsijungti?"
+
+# Part of logout process
+msgid "Discard local data"
+msgstr ""
 
 msgid "This will delete all the records on this device."
 msgstr "Šis veiksmas pašalins visus jūsų įrašus iš šio įrenginio."
@@ -472,7 +478,7 @@ msgstr "Galerija"
 msgid "Camera"
 msgstr "Kamera"
 
-msgid "Are you sure you want to remove this photo from the sample?"
+msgid "Are you sure you want to remove this photo?"
 msgstr "Ar jūs tikrai norite ištrinti šią nuotrauką?"
 
 msgid "Note: it will remain in the gallery."
@@ -1261,8 +1267,37 @@ msgstr "Žemėlapis"
 msgid "Today"
 msgstr "Šiandieną"
 
-msgid "This record has been submitted and cannot be edited within this App."
-msgstr "Šis įrašas buvo įkeltas į duomenų bazę ir šioje aplikacijoje negali būti kečiamas."
+msgid "Yesterday"
+msgstr ""
 
+# This is part of a saved record page
+msgid "This record has been submitted and cannot be edited within this App."
+msgstr ""
+"Šis įrašas buvo įkeltas į duomenų bazę ir šioje aplikacijoje negali būti "
+"kečiamas."
+
+# This is part of a saved record page
 msgid "Please go to %(website) to make any new edits."
 msgstr "Jeigu norite pakeisti įrašą prašome apsilankyti %(website) puslapyje."
+
+# Refers to surveys list when long-pressing plus button
+msgid "Other recording options"
+msgstr ""
+
+# A note in app settings page
+msgid ""
+"Batch upload all finished records. This does not include records in 'draft' "
+"stage."
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "Are you sure you want to upload all finished records?"
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "Uploading"
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "record(s)"
+msgstr ""

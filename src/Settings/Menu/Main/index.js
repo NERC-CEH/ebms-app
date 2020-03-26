@@ -3,7 +3,6 @@ import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import Toggle from 'Components/Toggle';
 import {
-  IonContent,
   IonIcon,
   IonList,
   IonItemDivider,
@@ -11,10 +10,11 @@ import {
   IonLabel,
   IonNote,
 } from '@ionic/react';
-import { undo, school, flag, globe, share } from 'ionicons/icons';
+import { undo, school, flag, globe, share, paperPlane } from 'ionicons/icons';
 import alert from 'common/helpers/alert';
 import { countries, languages } from 'helpers/translator';
 import config from 'config';
+import AppMain from 'Components/Main';
 import './styles.scss';
 
 function resetDialog(resetApp) {
@@ -38,11 +38,31 @@ function resetDialog(resetApp) {
   });
 }
 
+function uploadAllSamplesDialog(uploadAllSamples) {
+  alert({
+    header: t('Upload All'),
+    message: t('Are you sure you want to upload all finished records?'),
+    buttons: [
+      {
+        text: t('Cancel'),
+        role: 'cancel',
+        cssClass: 'primary',
+      },
+      {
+        text: t('Upload'),
+        cssClass: 'secondary',
+        handler: uploadAllSamples,
+      },
+    ],
+  });
+}
+
 @observer
 class Component extends React.Component {
   static propTypes = {
     resetApp: PropTypes.func.isRequired,
     onToggle: PropTypes.func.isRequired,
+    uploadAllSamples: PropTypes.func.isRequired,
     useTraining: PropTypes.bool.isRequired,
     sendAnalytics: PropTypes.bool.isRequired,
     language: PropTypes.string,
@@ -57,11 +77,29 @@ class Component extends React.Component {
       language,
       country,
       sendAnalytics,
+      uploadAllSamples,
     } = this.props;
 
     return (
-      <IonContent class="app-settings">
+      <AppMain class="app-settings">
         <IonList lines="full">
+          <IonItemDivider>{t('Records')}</IonItemDivider>
+          <IonItem
+            id="submit-all-btn"
+            onClick={() => uploadAllSamplesDialog(uploadAllSamples)}
+          >
+            <IonIcon icon={paperPlane} size="small" slot="start" />
+            <IonLabel>{t('Upload All')}</IonLabel>
+          </IonItem>
+          <IonItem>
+            <IonLabel class="ion-text-wrap">
+              <IonNote color="primary">
+                {t(
+                  "Batch upload all finished records. This does not include records in 'draft' stage."
+                )}
+              </IonNote>
+            </IonLabel>
+          </IonItem>
           <IonItemDivider>{t('Application')}</IonItemDivider>
           <IonItem routerLink="/settings/language">
             <IonLabel>{t('Language')}</IonLabel>
@@ -107,7 +145,7 @@ class Component extends React.Component {
         </IonList>
 
         <p className="app-version">{`v${config.version} (${config.build})`}</p>
-      </IonContent>
+      </AppMain>
     );
   }
 }

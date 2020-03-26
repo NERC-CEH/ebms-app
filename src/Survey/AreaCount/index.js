@@ -42,7 +42,7 @@ async function showDraftAlert() {
 @observer
 class Routes extends React.Component {
   static propTypes = {
-    savedSamples: PropTypes.object.isRequired,
+    savedSamples: PropTypes.array.isRequired,
     match: PropTypes.object,
     history: PropTypes.object,
     appModel: PropTypes.object.isRequired,
@@ -61,26 +61,27 @@ class Routes extends React.Component {
       return;
     }
 
-    this.setState({ sample: savedSamples.get(sampleID) });
+    const sample = savedSamples.find(({ cid }) => cid === sampleID);
+    this.setState({ sample });
   }
 
   async getNewSample() {
     const { savedSamples, appModel } = this.props;
-    const draftID = appModel.get('areaCountDraftId');
+    const draftID = appModel.attrs.areaCountDraftId;
     if (draftID) {
-      const draftWasNotDeleted = savedSamples.get(draftID);
-      if (draftWasNotDeleted) {
+      const draftSample = savedSamples.find(({ cid }) => cid === draftID);
+      if (draftSample) {
         const continueDraftRecord = await showDraftAlert();
         if (continueDraftRecord) {
-          return savedSamples.get(draftID);
+          return draftSample;
         }
 
-        savedSamples.get(draftID).destroy();
+        draftSample.destroy();
       }
     }
 
     const sample = await modelFactory.createAreaCountSample();
-    appModel.set('areaCountDraftId', sample.cid);
+    appModel.attrs.areaCountDraftId = sample.cid;
     await appModel.save();
     return sample;
   }

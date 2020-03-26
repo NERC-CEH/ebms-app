@@ -16,7 +16,7 @@ function getTransectMarker(sample) {
   let latitude;
   let longitude;
   try {
-    const { centroid_sref: centroid } = sample.attributes.location || {};
+    const { centroid_sref: centroid } = sample.attrs.location || {};
     [latitude, longitude] = centroid.split(' ').map(parseFloat);
   } catch (e) {
     return null;
@@ -30,7 +30,7 @@ function getTransectMarker(sample) {
 }
 
 function getAreaCountMarker(sample) {
-  const { latitude, longitude } = sample.attributes.location || {};
+  const { latitude, longitude } = sample.attrs.location || {};
   if (!latitude) {
     return null;
   }
@@ -46,7 +46,7 @@ function getAreaCountMarker(sample) {
 function getTransectPosition(sample) {
   try {
     // wrapping in try/catch because can't control the centroid_sref format
-    const { centroid_sref: centroid } = sample.attributes.location || {};
+    const { centroid_sref: centroid } = sample.attrs.location || {};
     const [latitude, longitude] = centroid.split(' ').map(parseFloat);
     return [latitude, longitude];
   } catch (e) {
@@ -55,7 +55,7 @@ function getTransectPosition(sample) {
 }
 
 function getAreaCountPosition(sample) {
-  const { latitude, longitude } = sample.attributes.location || {};
+  const { latitude, longitude } = sample.attrs.location || {};
   if (!latitude) {
     return [];
   }
@@ -65,7 +65,7 @@ function getAreaCountPosition(sample) {
 @observer
 class Component extends React.Component {
   static propTypes = {
-    savedSamples: PropTypes.object.isRequired,
+    savedSamples: PropTypes.array.isRequired,
     showingMap: PropTypes.bool.isRequired,
   };
 
@@ -127,7 +127,7 @@ class Component extends React.Component {
   };
 
   addRecordsPopup = (sample, marker) => {
-    const date = DateHelp.print(sample.attributes.date, true);
+    const date = DateHelp.print(sample.attrs.date, true);
 
     let speciesInfo = '';
     speciesInfo = !sample.metadata.synced_on

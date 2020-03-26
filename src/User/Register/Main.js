@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonContent, IonIcon, IonButton, IonList } from '@ionic/react';
+import { IonIcon, IonButton, IonList } from '@ionic/react';
+import AppMain from 'Components/Main';
 import { person, mail, key, lock, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 import InputWithValidation from 'Components/InputWithValidation';
@@ -23,10 +24,11 @@ class Component extends React.Component {
     const { onSubmit, schema, lang } = this.props;
 
     return (
-      <IonContent id="register-page">
+      <AppMain id="register-page">
         <Formik
           validationSchema={schema}
           onSubmit={onSubmit}
+          initialValues={{}}
           render={props => (
             <Form>
               <IonList lines="full">
@@ -76,7 +78,9 @@ class Component extends React.Component {
                     <>
                       {t('I agree to')}
                       {' '}
-                      <a href={`${config.site_url}/privacy-notice?lang=${lang}`}>
+                      <a
+                        href={`${config.site_url}/privacy-notice?lang=${lang}`}
+                      >
                         {t('Terms and Conditions')}
                       </a>
                     </>
@@ -86,13 +90,14 @@ class Component extends React.Component {
                   {...props}
                 />
               </IonList>
-              <IonButton expand="full" color="primary" type="submit">
+
+              <IonButton color="primary" type="submit" expand="block">
                 {t('Register')}
               </IonButton>
             </Form>
           )}
         />
-      </IonContent>
+      </AppMain>
     );
   }
 }

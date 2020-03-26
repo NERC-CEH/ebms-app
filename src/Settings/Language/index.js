@@ -17,10 +17,10 @@ import AppHeader from 'Components/Header';
 import './styles.scss';
 
 function SelectLanguage({ appModel, hideHeader }) {
-  const currentValue = appModel.get('language');
+  const currentValue = appModel.attrs.language;
 
   function onSelect(e) {
-    appModel.set('language', e.target.value);
+    appModel.attrs.language = e.target.value;
     appModel.save();
   }
 

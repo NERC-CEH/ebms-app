@@ -168,10 +168,12 @@ export const countries = {
   ELSEWHERE: 'Elsewhere',
 };
 
+const DEFAULT_LANGUAGE = 'en';
+
 window.dic = window.dic || [];
 
 function translate(key, isSpeciesDescription, isSpeciesName) {
-  const language = appModel.get('language');
+  const language = appModel.attrs.language || DEFAULT_LANGUAGE;
 
   if (isSpeciesName) {
     // revert to English names

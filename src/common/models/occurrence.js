@@ -1,19 +1,13 @@
-import Indicia from 'indicia';
-import { observable, toJS } from 'mobx';
+import Indicia from '@indicia-js/core';
+import { observable, observe, toJS } from 'mobx';
 import CONFIG from 'config';
-import ImageModel from './image';
+import Media from './image';
 
-export default Indicia.Occurrence.extend({
-  Media: ImageModel,
+export default class Occurrence extends Indicia.Occurrence {
+  constructor(...args) {
+    super(...args);
 
-  initialize() {
-    this.attributes = observable(this.attributes);
-    this.metadata = observable(this.metadata);
-    this.media.models = observable(this.media.models);
-  },
-
-  defaults() {
-    return {
+    this.attrs = observable({
       count: 1,
       comment: null,
       stage: null,
@@ -21,31 +15,72 @@ export default Indicia.Occurrence.extend({
         scientific_name: null,
         warehouse_id: null,
       },
+      ...this.attrs,
+    });
+    this.metadata = observable(this.metadata);
+    this.media = observable(this.media);
+
+    const onAddedSetParent = change => {
+      if (change.addedCount) {
+        const model = change.added[0];
+        model.parent = this;
+      }
     };
-  },
 
-  keys() {
-    return CONFIG.indicia.surveys[this.getSurvey()].attrs.occ;
-  },
+    observe(this.media, onAddedSetParent);
+  }
 
-  getSurvey() {
-    return this.parent.getSurvey();
-  },
+  static fromJSON(json) {
+    return super.fromJSON(json, Media);
+  }
 
-  /**
-   * Disable sort for mobx to keep the same refs.
-   * @param mediaObj
-   */
-  addMedia(mediaObj) {
-    if (!mediaObj) return;
-    mediaObj.setParent(this);
-    this.media.add(mediaObj, { sort: false });
-  },
+  async save() {
+    if (!this.parent) {
+      return Promise.reject(
+        new Error('Trying to save locally without a parent')
+      );
+    }
+
+    return this.parent.save();
+  }
+
+  async destroy(silent) {
+    if (!this.parent) {
+      return Promise.reject(
+        new Error('Trying to destroy locally without a parent')
+      );
+    }
+
+    this.parent.occurrences.remove(this);
+    await Promise.all(this.media.map(media => media.destroy(true)));
+
+    if (silent) {
+      return null;
+    }
+
+    return this.parent.save();
+  }
 
   toJSON() {
-    const json = Indicia.Occurrence.prototype.toJSON.apply(this);
-    json.attributes = toJS(json.attributes);
-    json.metadata = toJS(json.metadata);
-    return json;
-  },
-});
+    return toJS(super.toJSON(), { recurseEverything: true });
+  }
+
+  keys = () => {
+    if (!this.parent) {
+      throw new Error('No parent exists to get keys');
+    }
+
+    return {
+      ...Indicia.Occurrence.keys,
+      ...CONFIG.indicia.surveys[this.getSurvey()].attrs.occ,
+    };
+  };
+
+  getSurvey() {
+    if (!this.parent) {
+      throw new Error('No parent exists to get survey');
+    }
+
+    return this.parent.getSurvey();
+  }
+}

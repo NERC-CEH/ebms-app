@@ -1,7 +1,10 @@
+# Translators:
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
 "Language-Team: Hungarian (Hungary) (https://www.transifex.com/ceh/teams/95441/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,7 +17,7 @@ msgid "Papilio hospiton"
 msgstr ""
 
 msgid "Parnassius mnemosyne"
-msgstr ""
+msgstr "kis Apolló-lepke"
 
 msgid "Parnassius phoebus"
 msgstr ""
@@ -35,7 +38,7 @@ msgid "Carcharodus baeticus"
 msgstr ""
 
 msgid "Erynnis tages"
-msgstr ""
+msgstr "cigánylepke"
 
 msgid "Erynnis marloyi"
 msgstr ""
@@ -50,19 +53,19 @@ msgid "Zerynthia rumina"
 msgstr ""
 
 msgid "Zerynthia polyxena"
-msgstr ""
+msgstr "farkasalmalepke"
 
 msgid "Zerynthia cassandra"
 msgstr ""
 
 msgid "Heteropterus morpheus"
-msgstr ""
+msgstr "tükrös busalepke"
 
 msgid "Carterocephalus silvicola"
 msgstr ""
 
 msgid "Carterocephalus palaemon"
-msgstr ""
+msgstr "kockás busalepke"
 
 msgid "Pelopidas thrax"
 msgstr ""
@@ -77,31 +80,31 @@ msgid "Gegenes nostrodamus"
 msgstr ""
 
 msgid "Ochlodes sylvanus"
-msgstr ""
+msgstr "erdei busalepke"
 
 msgid "Hesperia comma"
-msgstr ""
+msgstr "vesszős busalepke"
 
 msgid "Thymelicus christi"
 msgstr ""
 
 msgid "Thymelicus acteon"
-msgstr ""
+msgstr "csíkos busalepke"
 
 msgid "Thymelicus hyrax"
 msgstr ""
 
 msgid "Thymelicus sylvestris"
-msgstr ""
+msgstr "barna busalepke"
 
 msgid "Thymelicus lineola"
-msgstr ""
+msgstr "vonalas busalepke"
 
 msgid "Spialia phlomidis"
 msgstr ""
 
 msgid "Spialia sertorius"
-msgstr ""
+msgstr "fahéjfonákú törpebusalepke"
 
 msgid "Spialia therapne"
 msgstr ""
@@ -110,13 +113,13 @@ msgid "Spialia rosae"
 msgstr ""
 
 msgid "Spialia orbifer"
-msgstr ""
+msgstr "kerekfoltú törpebusalepke"
 
 msgid "Carcharodus tripolinus"
 msgstr ""
 
 msgid "Carcharodus alceae"
-msgstr ""
+msgstr "mályva-busalepke"
 
 msgid "Muschampia cribrellum"
 msgstr ""
@@ -128,16 +131,16 @@ msgid "Muschampia proto"
 msgstr ""
 
 msgid "Carcharodus lavatherae"
-msgstr ""
+msgstr "tisztesfű-busalepke"
 
 msgid "Carcharodus orientalis"
 msgstr ""
 
 msgid "Carcharodus floccifera"
-msgstr ""
+msgstr "pemetefű-busalepke"
 
 msgid "Iphiclides podalirius"
-msgstr ""
+msgstr "kardoslepke"
 
 msgid "Iphiclides feisthamelii"
 msgstr ""
@@ -146,16 +149,16 @@ msgid "Papilio alexanor"
 msgstr ""
 
 msgid "Papilio machaon"
-msgstr ""
+msgstr "fecskefarkú lepke"
 
 msgid "Pyrgus malvoides"
 msgstr ""
 
 msgid "Pyrgus malvae"
-msgstr ""
+msgstr "kis busalepke"
 
 msgid "Pyrgus carthami"
-msgstr ""
+msgstr "nagy busalepke"
 
 msgid "Pyrgus sidae"
 msgstr ""
@@ -170,7 +173,7 @@ msgid "Pyrgus andromedae"
 msgstr ""
 
 msgid "Pyrgus serratulae"
-msgstr ""
+msgstr "homályos busalepke"
 
 msgid "Pyrgus armoricanus/serratulae"
 msgstr ""
@@ -179,7 +182,7 @@ msgid "Pyrgus armoricanus"
 msgstr ""
 
 msgid "Pyrgus alveus"
-msgstr ""
+msgstr "hegyi busalepke"
 
 msgid "Pyrgus warrenensis"
 msgstr ""
@@ -206,10 +209,10 @@ msgid "Leptidea morsei"
 msgstr ""
 
 msgid "Leptidea juvernica"
-msgstr ""
+msgstr "szibériai mustárlepke"
 
 msgid "Leptidea sinapis"
-msgstr ""
+msgstr "mustárlepke"
 
 msgid "Leptidea sinapis/juvernica"
 msgstr ""
@@ -218,7 +221,7 @@ msgid "Leptidea reali"
 msgstr ""
 
 msgid "Gonepteryx rhamni"
-msgstr ""
+msgstr "citromlepke"
 
 msgid "Gonepteryx cleobule"
 msgstr ""
@@ -236,13 +239,13 @@ msgid "Catopsilia florella"
 msgstr ""
 
 msgid "Colias hyale"
-msgstr ""
+msgstr "fakó kéneslepke"
 
 msgid "Colias hyale/alfacariensis"
-msgstr ""
+msgstr "kéneslepke fakó/déli"
 
 msgid "Colias alfacariensis"
-msgstr ""
+msgstr "déli kéneslepke"
 
 msgid "Colias phicomone"
 msgstr ""
@@ -251,16 +254,16 @@ msgid "Colias aurorina"
 msgstr ""
 
 msgid "Colias chrysotheme"
-msgstr ""
+msgstr "dolomit-kéneslepke"
 
 msgid "Colias erate"
-msgstr ""
+msgstr "keleti kéneslepke"
 
 msgid "Colias crocea"
-msgstr ""
+msgstr "sáfrányszínű kéneslepke"
 
 msgid "Colias myrmidone"
-msgstr ""
+msgstr "narancsszínű kéneslepke"
 
 msgid "Colias caucasica"
 msgstr ""
@@ -278,7 +281,7 @@ msgid "Colotis evagore"
 msgstr ""
 
 msgid "Aporia crataegi"
-msgstr ""
+msgstr "galagonyalepke"
 
 msgid "Pontia chloridice"
 msgstr ""
@@ -287,7 +290,7 @@ msgid "Pontia callidice"
 msgstr ""
 
 msgid "Pontia edusa"
-msgstr ""
+msgstr "rezedalepke"
 
 msgid "Pontia daplidice"
 msgstr ""
@@ -296,7 +299,7 @@ msgid "Pieris krueperi"
 msgstr ""
 
 msgid "Pieris brassicae"
-msgstr ""
+msgstr "káposzta-fehérlepke"
 
 msgid "Pieris wollastoni"
 msgstr ""
@@ -305,19 +308,19 @@ msgid "Pieris cheiranthi"
 msgstr ""
 
 msgid "Pieris rapae"
-msgstr ""
+msgstr "répa-fehérlepke"
 
 msgid "Pieris mannii"
-msgstr ""
+msgstr "magyar fehérlepke"
 
 msgid "Pieris ergane"
-msgstr ""
+msgstr "sziklai fehérlepke"
 
 msgid "Pieris bryoniae"
-msgstr ""
+msgstr "hegyi fehérlepke"
 
 msgid "Pieris napi"
-msgstr ""
+msgstr "repce-fehérlepke"
 
 msgid "Pieris balcana"
 msgstr ""
@@ -368,7 +371,7 @@ msgid "Anthocharis euphenoides"
 msgstr ""
 
 msgid "Anthocharis cardamines"
-msgstr ""
+msgstr "hajnalpírlepke"
 
 msgid "Anthocharis gruneri"
 msgstr ""
@@ -377,7 +380,7 @@ msgid "Anthocharis damone"
 msgstr ""
 
 msgid "Hamearis lucina"
-msgstr ""
+msgstr "kockáslepke"
 
 msgid "Lycaena dimorpha"
 msgstr ""
@@ -386,19 +389,19 @@ msgid "Lycaena helle"
 msgstr ""
 
 msgid "Lycaena alciphron"
-msgstr ""
+msgstr "ibolyás tűzlepke"
 
 msgid "Lycaena thetis"
 msgstr ""
 
 msgid "Lycaena thersamon"
-msgstr ""
+msgstr "kis tűzlepke"
 
 msgid "Lycaena dispar"
 msgstr ""
 
 msgid "Lycaena hippothoe"
-msgstr ""
+msgstr "havasi tűzlepke"
 
 msgid "Pseudophilotes barbagiae"
 msgstr ""
@@ -416,13 +419,13 @@ msgid "Pseudophilotes baton"
 msgstr ""
 
 msgid "Scolitantides orion"
-msgstr ""
+msgstr "szemes boglárka"
 
 msgid "Praephilotes anthracias"
 msgstr ""
 
 msgid "Iolana iolas"
-msgstr ""
+msgstr "magyar boglárka"
 
 msgid "Iolana debilitata"
 msgstr ""
@@ -434,7 +437,7 @@ msgid "Glaucopsyche paphos"
 msgstr ""
 
 msgid "Glaucopsyche alexis"
-msgstr ""
+msgstr "nagyszemes boglárka"
 
 msgid "Hipparchia tilosi"
 msgstr ""
@@ -467,7 +470,7 @@ msgid "Hipparchia syriaca"
 msgstr ""
 
 msgid "Hipparchia fagi"
-msgstr ""
+msgstr "szürkeöves szemeslepke"
 
 msgid "Hipparchia mersina"
 msgstr ""
@@ -485,22 +488,22 @@ msgid "Lycaena bleusei"
 msgstr ""
 
 msgid "Lycaena phlaeas"
-msgstr ""
+msgstr "közönséges tűzlepke"
 
 msgid "Lycaena virgaureae"
-msgstr ""
+msgstr "aranyos tűzlepke"
 
 msgid "Lycaena tityrus"
-msgstr ""
+msgstr "barna tűzlepke"
 
 msgid "Cigaritis acamas"
 msgstr ""
 
 msgid "Thecla betulae"
-msgstr ""
+msgstr "nyírfaboglárka"
 
 msgid "Favonius quercus"
-msgstr ""
+msgstr "tölgyfaboglárka"
 
 msgid "Laeosopis roboris"
 msgstr ""
@@ -521,7 +524,7 @@ msgid "Callophrys suaveola"
 msgstr ""
 
 msgid "Callophrys rubi"
-msgstr ""
+msgstr "zöldfonákú boglárka"
 
 msgid "Callophrys chalybeitincta"
 msgstr ""
@@ -530,10 +533,10 @@ msgid "Neolycaena rhymnus"
 msgstr ""
 
 msgid "Satyrium pruni"
-msgstr ""
+msgstr "szilvafa-csücsköslepke"
 
 msgid "Satyrium ilicis"
-msgstr ""
+msgstr "tölgyfa-csücsköslepke"
 
 msgid "Satyrium esculi"
 msgstr ""
@@ -542,16 +545,16 @@ msgid "Satyrium ledereri"
 msgstr ""
 
 msgid "Satyrium w-album"
-msgstr ""
+msgstr "w-betűs csücsköslepke"
 
 msgid "Satyrium spini"
-msgstr ""
+msgstr "kökény-farkosboglárka"
 
 msgid "Satyrium acaciae"
-msgstr ""
+msgstr "akác-csücsköslepke"
 
 msgid "Leptotes pirithous"
-msgstr ""
+msgstr "keleti farkosboglárka"
 
 msgid "Cyclyrius webbianus"
 msgstr ""
@@ -563,13 +566,13 @@ msgid "Azanus jesous"
 msgstr ""
 
 msgid "Lampides boeticus"
-msgstr ""
+msgstr "dudafürt-farkosboglárka"
 
 msgid "Cacyreus marshalli"
 msgstr ""
 
 msgid "Celastrina argiolus"
-msgstr ""
+msgstr "bengeboglárka"
 
 msgid "Tarucus theophrastus"
 msgstr ""
@@ -578,16 +581,16 @@ msgid "Tarucus balkanicus"
 msgstr ""
 
 msgid "Phengaris alcon"
-msgstr ""
+msgstr "szürkés hangyaboglárka"
 
 msgid "Phengaris arion"
-msgstr ""
+msgstr "nagypettyes hangyaboglárka"
 
 msgid "Phengaris teleius"
-msgstr ""
+msgstr "vérfű-hangyaboglárka"
 
 msgid "Phengaris nausithous"
-msgstr ""
+msgstr "sötét hangyaboglárka"
 
 msgid "Turanana taygetica"
 msgstr ""
@@ -605,19 +608,19 @@ msgid "Tongeia fischeri"
 msgstr ""
 
 msgid "Cupido argiades"
-msgstr ""
+msgstr "ékes boglárka"
 
 msgid "Cupido decoloratus"
-msgstr ""
+msgstr "fakó boglárka"
 
 msgid "Cupido alcetas"
 msgstr ""
 
 msgid "Cupido osiris"
-msgstr ""
+msgstr "hegyi boglárka"
 
 msgid "Cupido minimus"
-msgstr ""
+msgstr "törpeboglárka"
 
 msgid "Cupido lorquinii"
 msgstr ""
@@ -629,16 +632,16 @@ msgid "Freyeria trochylus"
 msgstr ""
 
 msgid "Plebejus argus"
-msgstr ""
+msgstr "ezüstös boglárka"
 
 msgid "Plebejus idas"
-msgstr ""
+msgstr "északi boglárka"
 
 msgid "Plebejus bellieri"
 msgstr ""
 
 msgid "Plebejus argyrognomon"
-msgstr ""
+msgstr "tintakék boglárka"
 
 msgid "Agriades orbitulus"
 msgstr ""
@@ -665,7 +668,7 @@ msgid "Plebejidea loewii"
 msgstr ""
 
 msgid "Eumedonia eumedon"
-msgstr ""
+msgstr "gólyaorr-szerecsenboglárka"
 
 msgid "Kretania psylorita"
 msgstr ""
@@ -680,13 +683,13 @@ msgid "Kretania trappi"
 msgstr ""
 
 msgid "Kretania sephirus"
-msgstr ""
+msgstr "fóti boglárka"
 
 msgid "Kretania pylaon"
 msgstr ""
 
 msgid "Cyaniris semiargus"
-msgstr ""
+msgstr "aprószemes boglárka"
 
 msgid "Glabroculus cyane"
 msgstr ""
@@ -710,7 +713,7 @@ msgid "Aricia montensis"
 msgstr ""
 
 msgid "Aricia agestis"
-msgstr ""
+msgstr "szalagos szerecsenboglárka"
 
 msgid "Neolysandra coelestina"
 msgstr ""
@@ -722,10 +725,10 @@ msgid "Lysandra corydonius"
 msgstr ""
 
 msgid "Lysandra bellargus"
-msgstr ""
+msgstr "égszínkék boglárka"
 
 msgid "Lysandra coridon"
-msgstr ""
+msgstr "ezüstkék boglárka"
 
 msgid "Lysandra caelestissima"
 msgstr ""
@@ -737,13 +740,13 @@ msgid "Polyommatus escheri"
 msgstr ""
 
 msgid "Polyommatus thersites"
-msgstr ""
+msgstr "ibolyaszín boglárka"
 
 msgid "Polyommatus daphnis"
-msgstr ""
+msgstr "csipkés boglárka"
 
 msgid "Polyommatus amandus"
-msgstr ""
+msgstr "bükkönyboglárka"
 
 msgid "Polyommatus golgus"
 msgstr ""
@@ -752,19 +755,19 @@ msgid "Polyommatus nivescens"
 msgstr ""
 
 msgid "Polyommatus dorylas"
-msgstr ""
+msgstr "mezei boglárka"
 
 msgid "Polyommatus celina"
 msgstr ""
 
 msgid "Polyommatus icarus"
-msgstr ""
+msgstr "közönséges boglárka"
 
 msgid "Polyommatus eros"
 msgstr ""
 
 msgid "Polyommatus damon"
-msgstr ""
+msgstr "csíkos boglárka"
 
 msgid "Polyommatus damone"
 msgstr ""
@@ -773,7 +776,7 @@ msgid "Polyommatus damocles"
 msgstr ""
 
 msgid "Polyommatus admetus"
-msgstr ""
+msgstr "barna boglárka"
 
 msgid "Polyommatus ripartii"
 msgstr ""
@@ -809,55 +812,55 @@ msgid "Polyommatus aroaniensis"
 msgstr ""
 
 msgid "Neptis sappho"
-msgstr ""
+msgstr "kis fehérsávoslepke"
 
 msgid "Neptis rivularis"
-msgstr ""
+msgstr "nagy fehérsávoslepke"
 
 msgid "Limenitis reducta"
-msgstr ""
+msgstr "kék lonclepke"
 
 msgid "Limenitis populi"
-msgstr ""
+msgstr "nagy nyárfalepke"
 
 msgid "Limenitis camilla"
-msgstr ""
+msgstr "kis lonclepke"
 
 msgid "Issoria lathonia"
-msgstr ""
+msgstr "közönséges gyöngyházlepke"
 
 msgid "Issoria eugenia"
 msgstr ""
 
 msgid "Brenthis hecate"
-msgstr ""
+msgstr "rozsdaszínű gyöngyházlepke"
 
 msgid "Brenthis ino"
-msgstr ""
+msgstr "lápi gyöngyházlepke"
 
 msgid "Brenthis daphne"
-msgstr ""
+msgstr "málna-gyöngyházlepke"
 
 msgid "Argynnis paphia"
-msgstr ""
+msgstr "nagy gyöngyházlepke"
 
 msgid "Argynnis pandora"
-msgstr ""
+msgstr "zöldes gyöngyházlepke"
 
 msgid "Argynnis laodice"
-msgstr ""
+msgstr "keleti gyöngyházlepke"
 
 msgid "Speyeria aglaja"
-msgstr ""
+msgstr "kerekfoltú gyöngyházlepke"
 
 msgid "Fabriciana elisa"
 msgstr ""
 
 msgid "Fabriciana niobe"
-msgstr ""
+msgstr "ibolya-gyöngyházlepke"
 
 msgid "Fabriciana adippe"
-msgstr ""
+msgstr "ezüstös gyöngyházlepke"
 
 msgid "Boloria eunomia"
 msgstr ""
@@ -887,13 +890,13 @@ msgid "Boloria thore"
 msgstr ""
 
 msgid "Boloria selene"
-msgstr ""
+msgstr "fakó gyöngyházlepke"
 
 msgid "Boloria euphrosyne"
-msgstr ""
+msgstr "árvácska-gyöngyházlepke"
 
 msgid "Boloria dia"
-msgstr ""
+msgstr "kis gyöngyházlepke"
 
 msgid "Boloria improba"
 msgstr ""
@@ -920,37 +923,37 @@ msgid "Boloria angarensis"
 msgstr ""
 
 msgid "Apatura iris"
-msgstr ""
+msgstr "nagy színjátszólepke"
 
 msgid "Apatura metis"
-msgstr ""
+msgstr "magyar színjátszólepke"
 
 msgid "Apatura ilia"
-msgstr ""
+msgstr "kis színjátszólepke"
 
 msgid "Apatura ilia/iris"
 msgstr ""
 
 msgid "Araschnia levana"
-msgstr ""
+msgstr "pókhálóslepke"
 
 msgid "Vanessa virginiensis"
 msgstr ""
 
 msgid "Vanessa cardui"
-msgstr ""
+msgstr "bogáncslepke"
 
 msgid "Vanessa vulcania"
 msgstr ""
 
 msgid "Vanessa atalanta"
-msgstr ""
+msgstr "Atalanta-lepke"
 
 msgid "Aglais io"
 msgstr ""
 
 msgid "Aglais urticae"
-msgstr ""
+msgstr "kis rókalepke"
 
 msgid "Aglais ichnusa"
 msgstr ""
@@ -959,19 +962,19 @@ msgid "Polygonia egea"
 msgstr ""
 
 msgid "Polygonia c-album"
-msgstr ""
+msgstr "c-betűs lepke"
 
 msgid "Nymphalis vaualbum"
 msgstr ""
 
 msgid "Nymphalis polychloros"
-msgstr ""
+msgstr "nagy rókalepke"
 
 msgid "Nymphalis xanthomelas"
-msgstr ""
+msgstr "vörös rókalepke"
 
 msgid "Nymphalis antiopa"
-msgstr ""
+msgstr "gyászlepke"
 
 msgid "Hypolimnas misippus"
 msgstr ""
@@ -980,7 +983,7 @@ msgid "Euphydryas desfontainii"
 msgstr ""
 
 msgid "Euphydryas aurinia"
-msgstr ""
+msgstr "lápi tarkalepke"
 
 msgid "Euphydryas cynthia"
 msgstr ""
@@ -989,16 +992,16 @@ msgid "Euphydryas iduna"
 msgstr ""
 
 msgid "Euphydryas maturna"
-msgstr ""
+msgstr "díszes tarkalepke"
 
 msgid "Euphydryas intermedia"
 msgstr ""
 
 msgid "Melitaea trivia"
-msgstr ""
+msgstr "kis tarkalepke"
 
 msgid "Melitaea didyma"
-msgstr ""
+msgstr "tüzes tarkalepke"
 
 msgid "Melitaea arduinna"
 msgstr ""
@@ -1007,16 +1010,16 @@ msgid "Melitaea aetherie"
 msgstr ""
 
 msgid "Melitaea phoebe"
-msgstr ""
+msgstr "nagy tarkalepke"
 
 msgid "Melitaea ornata"
 msgstr ""
 
 msgid "Melitaea cinxia"
-msgstr ""
+msgstr "réti tarkalepke"
 
 msgid "Melitaea diamina"
-msgstr ""
+msgstr "kockás tarkalepke"
 
 msgid "Melitaea celadussa"
 msgstr ""
@@ -1025,7 +1028,7 @@ msgid "Melitaea deione"
 msgstr ""
 
 msgid "Melitaea britomartis"
-msgstr ""
+msgstr "barnás tarkalepke"
 
 msgid "Melitaea athalia"
 msgstr ""
@@ -1037,13 +1040,13 @@ msgid "Melitaea parthenoides"
 msgstr ""
 
 msgid "Melitaea aurelia"
-msgstr ""
+msgstr "recés tarkalepke"
 
 msgid "Melitaea asteria"
 msgstr ""
 
 msgid "Libythea celtis"
-msgstr ""
+msgstr "csőröslepke"
 
 msgid "Danaus plexippus"
 msgstr ""
@@ -1058,7 +1061,7 @@ msgid "Coenonympha phryne"
 msgstr ""
 
 msgid "Coenonympha oedippus"
-msgstr ""
+msgstr "ezüstsávos szénalepke"
 
 msgid "Coenonympha dorus"
 msgstr ""
@@ -1067,7 +1070,7 @@ msgid "Coenonympha thyrsis"
 msgstr ""
 
 msgid "Coenonympha pamphilus"
-msgstr ""
+msgstr "kis szénalepke"
 
 msgid "Coenonympha tullia"
 msgstr ""
@@ -1079,7 +1082,7 @@ msgid "Coenonympha amaryllis"
 msgstr ""
 
 msgid "Coenonympha glycerion"
-msgstr ""
+msgstr "közönséges szénalepke"
 
 msgid "Coenonympha corinna"
 msgstr ""
@@ -1097,7 +1100,7 @@ msgid "Coenonympha orientalis"
 msgstr ""
 
 msgid "Coenonympha arcania"
-msgstr ""
+msgstr "fehéröves szénalepke"
 
 msgid "Kirinia roxelana"
 msgstr ""
@@ -1106,7 +1109,7 @@ msgid "Kirinia climene"
 msgstr ""
 
 msgid "Lopinga achine"
-msgstr ""
+msgstr "sápadt szemeslepke"
 
 msgid "Pararge xiphia"
 msgstr ""
@@ -1118,7 +1121,7 @@ msgid "Pararge aegeria"
 msgstr ""
 
 msgid "Lasiommata maera"
-msgstr ""
+msgstr "nagyfoltú szemeslepke"
 
 msgid "Lasiommata deidamia"
 msgstr ""
@@ -1130,7 +1133,7 @@ msgid "Lasiommata paramegaera"
 msgstr ""
 
 msgid "Lasiommata megera"
-msgstr ""
+msgstr "vörös szemeslepke"
 
 msgid "Melanargia russiae"
 msgstr ""
@@ -1142,7 +1145,7 @@ msgid "Melanargia lachesis"
 msgstr ""
 
 msgid "Melanargia galathea"
-msgstr ""
+msgstr "közönséges sakktáblalepke"
 
 msgid "Melanargia ines"
 msgstr ""
@@ -1160,7 +1163,7 @@ msgid "Hipparchia fatua"
 msgstr ""
 
 msgid "Hipparchia statilinus"
-msgstr ""
+msgstr "homoki szemeslepke"
 
 msgid "Hipparchia azorina"
 msgstr ""
@@ -1172,7 +1175,7 @@ msgid "Hipparchia maderensis"
 msgstr ""
 
 msgid "Hipparchia semele"
-msgstr ""
+msgstr "barna szemeslepke"
 
 msgid "Hipparchia blachieri"
 msgstr ""
@@ -1205,13 +1208,13 @@ msgid "Hipparchia christenseni"
 msgstr ""
 
 msgid "Minois dryas"
-msgstr ""
+msgstr "fekete szemeslepke"
 
 msgid "Brintesia circe"
-msgstr ""
+msgstr "fehéröves szemeslepke"
 
 msgid "Arethusana arethusa"
-msgstr ""
+msgstr "közönséges szemeslepke"
 
 msgid "Oeneis tarpeia"
 msgstr ""
@@ -1250,7 +1253,7 @@ msgid "Satyrus actaea"
 msgstr ""
 
 msgid "Chazara briseis"
-msgstr ""
+msgstr "tarka szemeslepke"
 
 msgid "Chazara prieuri"
 msgstr ""
@@ -1301,25 +1304,25 @@ msgid "Hyponephele huebneri"
 msgstr ""
 
 msgid "Hyponephele lycaon"
-msgstr ""
+msgstr "erdei ökörszemlepke"
 
 msgid "Hyponephele lupina"
-msgstr ""
+msgstr "homoki ökörszemlepke"
 
 msgid "Aphantopus hyperantus"
-msgstr ""
+msgstr "közönséges ökörszemlepke"
 
 msgid "Pyronia cecilia"
 msgstr ""
 
 msgid "Pyronia tithonus"
-msgstr ""
+msgstr "ikerpettyes ökörszemlepke"
 
 msgid "Pyronia bathseba"
 msgstr ""
 
 msgid "Maniola jurtina"
-msgstr ""
+msgstr "nagy ökörszemlepke"
 
 msgid "Maniola nurag"
 msgstr ""
@@ -1430,7 +1433,7 @@ msgid "Erebia palarica"
 msgstr ""
 
 msgid "Erebia ligea"
-msgstr ""
+msgstr "fehércsíkú szerecsenlepke"
 
 msgid "Erebia pluto"
 msgstr ""
@@ -1463,10 +1466,10 @@ msgid "Erebia polaris"
 msgstr ""
 
 msgid "Erebia medusa"
-msgstr ""
+msgstr "kerekfoltú szerecsenlepke"
 
 msgid "Erebia aethiops"
-msgstr ""
+msgstr "közönséges szerecsenlepke"
 
 msgid "Erebia pharte"
 msgstr ""
@@ -1508,4 +1511,4 @@ msgid "Erebia zapateri"
 msgstr ""
 
 msgid "Erebia neoridas"
-msgstr ""
+msgstr "nappali pávaszem"

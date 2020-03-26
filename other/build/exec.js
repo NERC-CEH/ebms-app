@@ -14,15 +14,15 @@ module.exports = function(grunt) {
       stdout: true,
     },
     cordova_resources: {
-      command: `mkdir -p dist/resources && 
-                cp -R other/designs/android dist/resources && 
-                
-                cp other/designs/splash.svg dist/resources && 
-                sed -i '' 's/{{APP_VERSION}}/${appMinorVersion}/g' dist/resources/splash.svg &&
-                
-                ./node_modules/.bin/sharp -i dist/resources/splash.svg -o dist/resources/splash.png resize 2737 2737 -- removeAlpha && 
-                ./node_modules/.bin/sharp -i other/designs/icon.svg -o dist/resources/icon.png resize 1024 1024 -- removeAlpha && 
-                
+      command: `mkdir -p dist/resources &&
+                cp -R other/designs/android dist/resources &&
+
+                cp other/designs/splash.svg dist/resources &&
+                sed -i.bak 's/{{APP_VERSION}}/${appMinorVersion}/g' dist/resources/splash.svg &&
+
+                ./node_modules/.bin/sharp -i dist/resources/splash.svg -o dist/resources/splash.png resize 2737 2737 -- removeAlpha &&
+                ./node_modules/.bin/sharp -i other/designs/icon.svg -o dist/resources/icon.png resize 1024 1024 -- removeAlpha &&
+
                 ./node_modules/.bin/cordova-res --resources dist/resources`,
       stdout: true,
     },

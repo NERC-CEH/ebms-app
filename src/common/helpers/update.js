@@ -61,7 +61,7 @@ function versionCompare(left, right) {
 
 export function updateSamples(samples, callback) {
   samples.each(sample => {
-    const group = sample.get('group');
+    const { group } = sample.attrs;
     if (group) {
       Log('Update: moving a sample group to activity');
       sample.set('activity', group);
@@ -79,10 +79,10 @@ const API = {
    */
   run(callback, silent = false) {
     appModel._init.then(() => {
-      const currentVersion = appModel.get('appVersion');
+      const currentVersion = appModel.attrs.appVersion;
 
       const newVersion = CONFIG.version;
-      const currentBuild = appModel.get('appBuild');
+      const currentBuild = appModel.attrs.appBuild;
       const newBuild = CONFIG.build;
 
       // when Beta testing we set training mode

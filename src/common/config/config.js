@@ -1,7 +1,7 @@
 /** ****************************************************************************
  * Main app configuration file.
  **************************************************************************** */
-import Indicia from 'indicia';
+import Indicia from '@indicia-js/core';
 import transect from './transect';
 import area from './area-count';
 

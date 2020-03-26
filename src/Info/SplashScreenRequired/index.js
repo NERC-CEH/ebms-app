@@ -16,7 +16,7 @@ function next(sliderRef) {
 const SplashScreen = () => {
   function exit() {
     Log('Info:Welcome:Controller: exit.');
-    appModel.set('showedWelcome', true);
+    appModel.attrs.showWelcome = false;
     appModel.save();
   }
 
@@ -39,18 +39,15 @@ const SplashScreen = () => {
         </IonButton>
         <div className="message">
           <p>
-            {t(`Butterflies are captivating insects, but they are in decline in many parts of Europe. As shown by this graph of The Grassland Butterfly Indicator for the EU.`)}
+            {t(
+              `Butterflies are captivating insects, but they are in decline in many parts of Europe. As shown by this graph of The Grassland Butterfly Indicator for the EU.`
+            )}
           </p>
         </div>
       </IonSlide>
 
       <IonSlide class="second">
-        <IonButton
-          class="skip"
-          color="light"
-          strong="true"
-          onClick={exit}
-        >
+        <IonButton class="skip" color="light" strong="true" onClick={exit}>
           {t('Skip')}
         </IonButton>
         <IonButton
@@ -117,7 +114,7 @@ const SplashScreen = () => {
 SplashScreen.propTypes = {};
 
 const Component = observer(props => {
-  if (!appModel.get('showedWelcome')) {
+  if (appModel.attrs.showWelcome) {
     return <SplashScreen appModel={appModel} />;
   }
 

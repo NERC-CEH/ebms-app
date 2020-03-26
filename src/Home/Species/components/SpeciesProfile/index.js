@@ -48,7 +48,7 @@ class Component extends React.Component {
         title: `© ${species.image_copyright}`,
       },
     ];
-    
+
     return (
       <PhotoSwipe
         isOpen={!!showGallery}
@@ -67,7 +67,7 @@ class Component extends React.Component {
     const { species, country } = this.props;
 
     const status = statuses[species[country]];
-    
+
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
     return (
       <>
@@ -87,7 +87,11 @@ class Component extends React.Component {
 
           {status && (
             <IonCardContent>
-              <h3 className="species-label inline-label">{`${t('Status')}:`}</h3>
+              <h3 className="species-label inline-label">
+                {`${t(
+                  'Status'
+                )}:`}
+              </h3>
               <span>{t(status)}</span>
             </IonCardContent>
           )}

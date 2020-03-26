@@ -2,31 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonPage } from '@ionic/react';
-import alert from 'common/helpers/alert';
+import showInvalidsMessage from 'helpers/invalidsMessage';
 import Header from './Header';
 import Main from './Main';
-
-function showValidationAlert(errors, onSaveDraft) {
-  const errorsPretty = errors.errors.reduce(
-    (agg, err) => `${agg} ${t(err)}`,
-    ''
-  );
-  alert({
-    header: t('Survey incomplete'),
-    message: `${errorsPretty}`,
-    buttons: [
-      {
-        text: t('Cancel'),
-        role: 'cancel',
-      },
-      {
-        text: t('Save Draft'),
-        cssClass: 'secondary',
-        handler: onSaveDraft,
-      },
-    ],
-  });
-}
 
 @observer
 class Container extends React.Component {
@@ -36,39 +14,37 @@ class Container extends React.Component {
     history: PropTypes.object,
   };
 
-  _processSubmission = async () => {
+  _processSubmission = () => {
     const { sample, history } = this.props;
 
-    const errors = await sample.validateRemote();
-    if (errors) {
-      showValidationAlert(errors);
+    const invalids = sample.validateRemote();
+    if (invalids) {
+      showInvalidsMessage(invalids);
       return;
     }
-    sample.error.message = null;
 
-    sample.save(null, { remote: true }).catch(e => {
-      sample.error.message = e.message;
-    });
+    sample.saveRemote();
+
     history.replace(`/home/user-surveys`);
   };
 
   _processDraft = async () => {
     const { sample, history, appModel } = this.props;
 
-    appModel.set('transectDraftId', null);
+    appModel.attrs.transectDraftId = null;
     await appModel.save();
 
     const saveAndReturn = () => {
-      if (!sample.get('surveyEndTime')) {
-        sample.set('surveyEndTime', new Date());
+      if (!sample.attrs.surveyEndTime) {
+        sample.attrs.surveyEndTime = new Date();
       }
       sample.save();
       history.replace(`/home/user-surveys`);
     };
 
-    const errors = await sample.validateRemote();
+    const errors = sample.validateRemote();
     if (errors) {
-      showValidationAlert(errors, saveAndReturn);
+      showInvalidsMessage(errors, saveAndReturn);
       return;
     }
 

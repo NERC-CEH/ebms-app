@@ -1,7 +1,8 @@
-import Raven from 'raven-js';
+import * as Sentry from '@sentry/browser';
 import CONFIG from 'config';
 import userModel from 'user_model';
 import appModel from 'app_model';
+import savedSamples from 'saved_samples';
 import Log from './log';
 
 function _removeUUID(string) {
@@ -17,7 +18,7 @@ export function removeUserId(URL) {
 }
 
 /* eslint-disable no-param-reassign */
-export function breadcrumbCallback(crumb) {
+export function beforeBreadcrumb(crumb) {
   // clean UUIDs
   if (crumb.category === 'navigation') {
     crumb.data = {
@@ -26,7 +27,8 @@ export function breadcrumbCallback(crumb) {
     };
     return crumb;
   }
-  if (crumb.category === 'xhr') {
+
+  if (['xhr', 'fetch'].includes(crumb.category)) {
     if (crumb.data.method === 'GET' && crumb.data.url.match(/jpeg$/i)) {
       crumb.data.url = crumb.data.url.replace(
         /files\/\d+\.jpeg/i,
@@ -34,9 +36,9 @@ export function breadcrumbCallback(crumb) {
       );
     }
 
-    crumb.data = {
-      url: removeUserId(crumb.data.url),
-    };
+    // crumb.data = {
+    //   url: removeUserId(crumb.data.url),
+    // };
     return crumb;
   }
 
@@ -44,68 +46,20 @@ export function breadcrumbCallback(crumb) {
 }
 /* eslint-enable no-param-reassign */
 
-function concatBreadcrumbs(breadcrumbs) {
-  const cleanBreadcrumbs = [];
-  let occurrences = 1;
-  breadcrumbs.forEach((crumb, i) => {
-    if (!cleanBreadcrumbs.length) {
-      cleanBreadcrumbs.push(crumb);
-      return;
-    }
-
-    const lastSavedCrumb = cleanBreadcrumbs[cleanBreadcrumbs.length - 1];
-    // count for duplicate crumbs
-    if (
-      lastSavedCrumb.category === 'xhr' &&
-      crumb.category === 'xhr' &&
-      lastSavedCrumb.data.method === crumb.data.method &&
-      lastSavedCrumb.data.url === crumb.data.url
-    ) {
-      occurrences++;
-      if (i === breadcrumbs.length - 1) {
-        lastSavedCrumb.data.url += `_x${occurrences}`;
-        occurrences = 1;
-      }
-      return;
-    }
-
-    // print out counter to last duplicate crumb
-    if (occurrences > 1) {
-      lastSavedCrumb.data.url += `_x${occurrences}`;
-      occurrences = 1;
-    }
-
-    cleanBreadcrumbs.push(crumb);
-  });
-
-  return cleanBreadcrumbs;
+function setContext() {
+  Sentry.setUser({ id: userModel.attrs.drupalID });
+  Sentry.setTag('app.records', savedSamples.length);
+  Sentry.setTag('app.language', appModel.attrs.language);
+  Sentry.setTag('app.useTraining', appModel.attrs.useTraining || false);
+  Sentry.setTag('app.useExperiments', appModel.attrs.useExperiments || false);
+  Sentry.setTag('app.feedbackGiven', appModel.attrs.feedbackGiven || false);
+  Sentry.setTag('app.appSession', appModel.attrs.appSession);
+  Sentry.setTag('app.build', CONFIG.build);
 }
-
-export function processBreadcrumbs(breadcrumbs) {
-  breadcrumbs.map(breadcrumbCallback);
-  return concatBreadcrumbs(breadcrumbs);
-}
-
-/* eslint-disable no-param-reassign */
-export function dataCallback(data) {
-  data.breadcrumbs.values = processBreadcrumbs(data.breadcrumbs.values);
-
-  // maxBreadcrumbs is 100 only, see the _globalOptions change below
-  const maxBreadcrumbs = 100;
-  const maxIndex = Math.max(data.breadcrumbs.values.length - maxBreadcrumbs, 0);
-  data.breadcrumbs.values.splice(0, maxIndex);
-
-  data.culprit = _removeUUID(data.culprit || '');
-  if (data.request && data.request.url) {
-    data.request.url = _removeUUID(data.request.url);
-  }
-  return data;
-}
-/* eslint-enable no-param-reassign */
 
 const API = {
   init() {
-    if (!userModel.hasLogIn() || !appModel.get('sendAnalytics')) {
+    if (!userModel.hasLogIn() || !appModel.attrs['sendAnalytics']) {
       return;
     }
 
@@ -119,27 +73,24 @@ const API = {
     }
 
     Log('Analytics: turning on server error logging.');
-    Raven.config(
-      `https://${CONFIG.sentry.key}@sentry.io/${CONFIG.sentry.project}`,
-      {
-        environment: CONFIG.environment,
-        release: CONFIG.version,
-        ignoreErrors: [
-          'setSelectionRange', // there is some fastclick issue (does not affect ux)
-          'Incorrect password or email', // no need to log that
-        ],
-        dataCallback,
-      }
-    ).install();
+    Sentry.init({
+      dsn: `https://${CONFIG.sentry.key}@sentry.io/${CONFIG.sentry.project}`,
+      environment: CONFIG.environment,
+      release: CONFIG.version,
+      maxBreadcrumbs: 400,
+      ignoreErrors: [
+        'Incorrect password or email', // no need to log that
+      ],
+      beforeBreadcrumb,
+    });
 
-    // increase breadcrumbs captured before send
-    // this is undocumented use of _globalOptions so might break in the future
-    Raven._globalOptions.maxBreadcrumbs = 400;
+    setContext();
 
     // capture unhandled promises
     window.onunhandledrejection = e => {
-      Raven.captureException(e.reason, {
-        extra: { unhandledPromise: true },
+      Sentry.withScope(scope => {
+        scope.setExtra('unhandledPromise', true);
+        Sentry.captureException(e.reason);
       });
     };
   },

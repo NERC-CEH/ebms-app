@@ -58,7 +58,7 @@ class index extends React.Component {
     const { sample, onTransectSelect: onTransectSelectParent } = this.props;
 
     const location = toJS(transect);
-    sample.set('location', location);
+    sample.attrs.location = location;
     onTransectSelectParent();
   };
 
@@ -71,7 +71,7 @@ class index extends React.Component {
 
   render() {
     const { sample, appModel, match } = this.props;
-    const transect = sample.get('location');
+    const transect = sample.attrs.location;
 
     return (
       <IonPage>

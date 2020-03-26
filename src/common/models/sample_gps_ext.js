@@ -43,7 +43,7 @@ function calculateLineLenght(lineString) {
 }
 
 function getShape(sample) {
-  const oldLocation = sample.get('location') || {};
+  const oldLocation = sample.attrs.location || {};
 
   if (!oldLocation.shape) {
     return { type: 'LineString', coordinates: [] };
@@ -90,9 +90,8 @@ const DEFAULT_ACCURACY_LIMIT = 50; // meters
 const extension = {
   setLocation(shape) {
     if (!shape) {
-      return this.save({
-        location: null,
-      });
+      this.attrs.location = null;
+      return this.save();
     }
 
     let area;
@@ -108,15 +107,15 @@ const extension = {
 
     area = Math.floor(area);
 
-    return this.save({
-      location: {
-        latitude,
-        longitude,
-        area,
-        shape,
-        source: 'map',
-      },
-    });
+    this.attrs.location = {
+      latitude,
+      longitude,
+      area,
+      shape,
+      source: 'map',
+    };
+
+    return this.save();
   },
 
   toggleGPStracking(state) {
@@ -148,7 +147,7 @@ const extension = {
           return;
         }
 
-        const startTime = new Date(that.get('surveyStartTime'));
+        const startTime = new Date(that.attrs.surveyStartTime);
         const defaultSurveyEndTime =
           startTime.getTime() +
           config.DEFAULT_SURVEY_TIME +

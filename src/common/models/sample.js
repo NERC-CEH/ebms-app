@@ -1,17 +1,18 @@
 /** ****************************************************************************
  * Indicia Sample.
  **************************************************************************** */
-/* eslint-disable react/no-this-in-sfc */
 import * as Yup from 'yup';
-import Indicia from 'indicia';
-import { observable, toJS } from 'mobx';
+import _ from 'lodash';
+import Indicia from '@indicia-js/core';
+import { observable, intercept, toJS } from 'mobx';
 import CONFIG from 'config';
 import userModel from 'user_model';
 import appModel from 'app_model';
-import Occurrence from 'occurrence';
 import Log from 'helpers/log';
 import Device from 'helpers/device';
-import store from '../store';
+import Occurrence from './occurrence';
+import Media from './image';
+import { modelStore } from '../store';
 import GPSExtension from './sample_gps_ext';
 import VibrateExtension from './sample_vibrate_ext';
 
@@ -66,159 +67,230 @@ const transectSchema = Yup.object().shape({
 });
 
 // eslint-disable-next-line
-let Sample = Indicia.Sample.extend({
-  api_key: CONFIG.indicia.api_key,
-  host_url: CONFIG.indicia.host,
-  user: userModel.getUser.bind(userModel),
-  password: userModel.getPassword.bind(userModel),
+class Sample extends Indicia.Sample {
+  static fromJSON(json) {
+    return super.fromJSON(json, Occurrence, Sample, Media);
+  }
 
-  store, // offline store
+  store = modelStore;
 
-  Occurrence,
+  constructor(...args) {
+    super(...args);
 
-  metadata() {
-    return {
-      saved: null,
-      pausedTime: 0,
-      survey: null,
-      training: appModel.get('useTraining'),
-    };
-  },
-
-  // warehouse attribute keys
-  keys() {
-    return CONFIG.indicia.surveys[this.getSurvey()].attrs.smp;
-  },
-
-  /**
-   * Need a function because Device might not be ready on module load.
-   * @returns {{device: *, device_version: *}}
-   */
-  defaults() {
-    return {
-      surveyStartTime: null,
-      entered_sref_system: 4326, // lat long
-      location: null,
-    };
-  },
-
-  initialize() {
+    this.attrs = observable(this.attrs);
     this.error = observable({ message: null });
-    this.attributes = observable(this.attributes);
-    this.metadata = observable(this.metadata);
-    this.remote = observable({ synchronising: null });
-    this.timerPausedTime = observable({ time: null });
-    this.media.models = observable(this.media.models);
-    this.occurrences.models = observable(this.occurrences.models);
+    this.remote = observable({
+      api_key: CONFIG.indicia.api_key,
+      host_url: CONFIG.indicia.host,
+      user: userModel.getUser.bind(userModel),
+      password: userModel.getPassword.bind(userModel),
+      synchronising: false,
+    });
+    this.metadata = observable({
+      training: appModel.attrs.useTraining,
+      saved: null,
+      survey: null,
+      ...this.metadata,
+    });
+    this.samples = observable(this.samples);
+    this.occurrences = observable(this.occurrences);
+    this.media = observable(this.media);
 
-    // for mobx to keep same refs
-    this.media.models.add = (...args) =>
-      Indicia.Collection.prototype.add.apply(this, [...args, { sort: false }]);
+    this.timerPausedTime = observable({ time: null });
+
+    const onAddedSetParent = change => {
+      if (change.added && change.added.length) {
+        const model = change.added[0];
+        model.parent = this;
+      }
+
+      return change;
+    };
+    intercept(this.samples, onAddedSetParent);
+    intercept(this.occurrences, onAddedSetParent);
+    intercept(this.media, onAddedSetParent);
 
     this.gpsExtensionInit();
-  },
+  }
 
-  getSurvey() {
-    return this.metadata.survey || 'area'; // !survey - for backwards compatibility
-  },
-
-  destroy(...args) {
-    this.toggleGPStracking(false);
-    this.stopVibrateCounter();
-    Indicia.Sample.prototype.destroy.apply(this, args);
-  },
-
-  /**
-   * Disable sort for mobx to keep the same refs.
-   * @param mediaObj
-   */
-  addMedia(mediaObj) {
-    if (!mediaObj) return;
-    mediaObj.setParent(this);
-    this.media.add(mediaObj, { sort: false });
-  },
+  keys = () => {
+    return {
+      ...Indicia.Sample.keys,
+      ...CONFIG.indicia.surveys[this.getSurvey()].attrs.smp,
+    };
+  };
 
   validateRemote() {
-    if (this.getSurvey() === 'transect') {
-      try {
-        console.log(toJS(this.attributes));
-        transectSchema.validateSync(this.attributes);
-      } catch (e) {
-        return e;
+    let attributes;
+
+    if (this.parent) {
+      // no verification for transect subsamples yet
+      return null;
+    }
+
+    try {
+      const survey = this.getSurvey();
+      survey === 'transect'
+        ? transectSchema.validateSync(this.attrs, { abortEarly: false })
+        : areaCountSchema.validateSync(this.attrs, { abortEarly: false });
+    } catch (attrError) {
+      attributes = attrError;
+    }
+
+    const validateSubModel = (agg, model) => {
+      if (model.validateRemote) {
+        const invalids = model.validateRemote();
+        if (invalids) {
+          return { [model.cid]: invalids, ...agg };
+        }
       }
-    } else {
-      try {
-        areaCountSchema.validateSync(this.attributes);
-      } catch (e) {
-        return e;
-      }
+
+      return agg;
+    };
+
+    const samples = this.samples.reduce(validateSubModel, {});
+    const occurrences = this.occurrences.reduce(validateSubModel, {});
+    const media = this.media.reduce(validateSubModel, {});
+
+    if (
+      !_.isEmpty(attributes) ||
+      !_.isEmpty(samples) ||
+      !_.isEmpty(occurrences) ||
+      !_.isEmpty(media)
+    ) {
+      return { attributes, samples, occurrences, media };
     }
 
     return null;
-  },
+  }
 
-  /**
-   * Changes the plain survey key to survey specific metadata
-   */
-  onSend(submission, media) {
-    const newAttrs = {
-      survey_id: CONFIG.indicia.surveys[this.getSurvey()].id,
-      input_form: CONFIG.indicia.surveys[this.getSurvey()].webForm,
+  toJSON() {
+    return toJS(super.toJSON(), { recurseEverything: true });
+  }
+
+  _attachTopSampleSubmission(updatedSubmission) {
+    const isTopSample = !this.parent;
+    if (!isTopSample) {
+      return;
+    }
+
+    const keys = this.keys();
+
+    const appAndDeviceFields = {
+      [keys.device.id]: keys.device.values[Device.getPlatform()],
+      [keys.device_version.id]: Device.getVersion(),
+      [keys.app_version.id]: `${CONFIG.version}.${CONFIG.build}`,
     };
-    submission.samples.forEach(sample => {
-      sample.survey_id = CONFIG.indicia.surveys[this.getSurvey()].id; // eslint-disable-line
-    });
-
-    const smpAttrs = this.keys();
-    const updatedSubmission = { ...{}, ...submission, ...newAttrs };
     updatedSubmission.fields = {
-      ...{},
       ...updatedSubmission.fields,
-      ...{
-        [smpAttrs.device.id]: smpAttrs.device.values[Device.getPlatform()],
-        [smpAttrs.device_version.id]: Device.getVersion(),
-        [smpAttrs.app_version.id]: `${CONFIG.version}.${CONFIG.build}`,
-      },
+      ...appAndDeviceFields,
     };
+  }
 
-    return Promise.resolve([updatedSubmission, media]);
-  },
+  _attachSubSampleSubmission(updatedSubmission, parentSurvey) {
+    const isTopSample = !this.parent;
+    if (isTopSample) {
+      return;
+    }
 
-  // TODO: remove this once clear why the resubmission occurs
-  // https://www.brc.ac.uk/irecord/node/7194
-  _syncRemote(...args) {
-    const { remote } = args[2] || {};
+    updatedSubmission.survey_id = parentSurvey.id; // eslint-disable-line no-param-reassign
+  }
 
-    if (remote && (this.id || this.metadata.server_on)) {
-      // an error, this should never happen
+  getSubmission(...args) {
+    const [submission, media] = super.getSubmission(...args);
+    const surveyName = this.getSurvey();
+    const survey = CONFIG.indicia.surveys[surveyName];
+
+    const newAttrs = {
+      survey_id: survey.id,
+      input_form: survey.webForm,
+    };
+    const updatedSubmission = { ...submission, ...newAttrs };
+
+    this._attachTopSampleSubmission(updatedSubmission);
+    this._attachSubSampleSubmission(updatedSubmission, survey);
+
+    return [updatedSubmission, media];
+  }
+
+  async save() {
+    if (this.parent) {
+      return this.parent.save();
+    }
+
+    if (!this.store) {
+      return Promise.reject(
+        new Error('Trying to sync locally without a store')
+      );
+    }
+
+    await this.store.save(this.cid, this.toJSON());
+    return this;
+  }
+
+  async destroy(silent) {
+    const destroySubModels = () =>
+      Promise.all([
+        Promise.all(this.media.map(media => media.destroy(true))),
+        Promise.all(this.occurrences.map(occ => occ.destroy(true))),
+      ]);
+
+    if (this.parent) {
+      this.parent.samples.remove(this);
+
+      await destroySubModels();
+
+      if (silent) {
+        return null;
+      }
+
+      return this.parent.save();
+    }
+
+    if (!this.store) {
+      return Promise.reject(
+        new Error('Trying to sync locally without a store')
+      );
+    }
+
+    await this.store.destroy(this.cid);
+
+    if (this.collection) {
+      this.collection.remove(this);
+    }
+
+    await destroySubModels();
+
+    return this;
+  }
+
+  getSurvey() {
+    return this.metadata.survey || 'area'; // !survey - for backwards compatibility
+  }
+
+  async saveRemote() {
+    if (this.id || this.metadata.server_on) {
+      // This should never happen
+      // TODO: remove this once clear why the resubmission occurs
+      // https://www.brc.ac.uk/irecord/node/7194
       Log('SampleModel: trying to send a record that is already sent!', 'w');
       return Promise.resolve({ data: {} });
     }
 
-    return Indicia.Sample.prototype._syncRemote.apply(this, args);
-  },
+    this.error.message = null;
 
-  toJSON() {
-    const json = Indicia.Sample.prototype.toJSON.apply(this);
-    json.attributes = toJS(json.attributes);
-    json.metadata = toJS(json.metadata);
-    return json;
-  },
+    await super.saveRemote();
+    return this.save();
+  }
 
   getSectionSample(id) {
-    return this.samples.models.find(s => s.cid === id);
-  },
-
-  timeout() {
-    if (!Device.connectionWifi()) {
-      return 180000; // 3 min
-    }
-    return 60000; // 1 min
-  },
-});
+    return this.samples.find(s => s.cid === id);
+  }
+}
 
 // add geolocation functionality
-Sample = Sample.extend(GPSExtension);
-Sample = Sample.extend(VibrateExtension);
+Sample.prototype = Object.assign(Sample.prototype, GPSExtension);
+Sample.prototype = Object.assign(Sample.prototype, VibrateExtension);
+Sample.prototype.constructor = Sample;
 
 export { Sample as default };

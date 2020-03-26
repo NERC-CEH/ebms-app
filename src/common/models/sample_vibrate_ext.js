@@ -6,7 +6,7 @@ const extension = {
     Log('SampleModel:Vibrate: start.');
 
     this.counterId = setInterval(() => {
-      const startTime = new Date(this.get('surveyStartTime'));
+      const startTime = new Date(this.attrs.surveyStartTime);
 
       const countdown =
         startTime.getTime() +

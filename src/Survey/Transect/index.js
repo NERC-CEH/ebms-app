@@ -43,7 +43,7 @@ async function showDraftAlert() {
 @observer
 class Routes extends React.Component {
   static propTypes = {
-    savedSamples: PropTypes.object.isRequired,
+    savedSamples: PropTypes.array.isRequired,
     match: PropTypes.object,
     history: PropTypes.object,
     appModel: PropTypes.object.isRequired,
@@ -62,38 +62,37 @@ class Routes extends React.Component {
       history.replace(`/survey/transect/${newSample.cid}/edit`);
       return;
     }
-
-    const sample = savedSamples.get(sampleID);
+    const sample = savedSamples.find(({ cid }) => cid === sampleID);
     this.setState({ sample });
   }
 
   addSectionSubSamples = () => {
     const { sample } = this.state;
-    const transect = sample.get('location');
+    const transect = sample.attrs.location;
     transect.sections.forEach(section => {
       const sectionSample = modelFactory.createTransectSectionSample(section);
-      sample.addSample(sectionSample);
+      sample.samples.push(sectionSample);
     });
     sample.save();
   };
 
   async getNewSample() {
     const { savedSamples, appModel } = this.props;
-    const draftID = appModel.get('transectDraftId');
+    const draftID = appModel.attrs.transectDraftId;
     if (draftID) {
-      const draftWasNotDeleted = savedSamples.get(draftID);
-      if (draftWasNotDeleted) {
+      const draftSample = savedSamples.find(({ cid }) => cid === draftID);
+      if (draftSample) {
         const continueDraftRecord = await showDraftAlert();
         if (continueDraftRecord) {
-          return savedSamples.get(draftID);
+          return draftSample;
         }
 
-        savedSamples.get(draftID).destroy();
+        draftSample.destroy();
       }
     }
 
     const sample = await modelFactory.createTransectSample();
-    appModel.set('transectDraftId', sample.cid);
+    appModel.attrs.transectDraftId = sample.cid;
     await appModel.save();
     return sample;
   }

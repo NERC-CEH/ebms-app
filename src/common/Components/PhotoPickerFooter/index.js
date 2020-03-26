@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Log from 'helpers/log';
 import ImageHelp from 'helpers/image';
-import showErrMsg from 'helpers/show_err_msg';
 import { observer } from 'mobx-react';
-import alert from 'common/helpers/alert';
-import actionSheet from 'common/helpers/actionSheet';
+import alert from 'helpers/alert';
+import actionSheet from 'helpers/actionSheet';
+import { error } from 'helpers/toast';
 import { PhotoSwipe } from 'react-photoswipe';
 import { IonIcon, IonButton, IonFooter } from '@ionic/react';
 import { close, camera } from 'ionicons/icons';
@@ -17,9 +17,7 @@ import './styles.scss';
 function photoDelete(photo) {
   alert({
     header: t('Delete'),
-    message: `${t(
-      `Are you sure you want to remove this photo from the sample?`
-    )}
+    message: `${t(`Are you sure you want to remove this photo?`)}
        </br></br> 
        ${t('Note: it will remain in the gallery.')}
        `,
@@ -31,15 +29,8 @@ function photoDelete(photo) {
       },
       {
         text: t('Delete'),
-        cssClass: 'secondary',
-        handler: () => {
-          // show loader
-          photo.destroy({
-            success: () => {
-              Log('Samples:Edit:Controller: photo deleted.');
-            },
-          });
-        },
+        cssClass: 'danger',
+        handler: () => photo.destroy(),
       },
     ],
   });
@@ -48,109 +39,94 @@ function photoDelete(photo) {
 /**
  * Adds a new image to occurrence.
  */
-function addPhoto(occurrence, photo) {
-  return ImageHelp.getImageModel(ImageModel, photo).then(image => {
-    occurrence.addMedia(image);
-    return occurrence.save();
-  });
+async function addPhoto(model, photo) {
+  const image = await ImageHelp.getImageModel(ImageModel, photo);
+  model.media.push(image);
+  return model.save();
 }
 
 @observer
 class Footer extends Component {
   static propTypes = {
-    occurrence: PropTypes.object.isRequired,
-    isDisabled: PropTypes.bool,
+    model: PropTypes.object.isRequired,
   };
 
   state = {
     showGallery: false,
   };
 
-  constructor(props) {
-    super(props);
-    this.photoSelect = this.photoSelect.bind(this);
-    this.photoUpload = this.photoUpload.bind(this);
-  }
-
-  photoUpload(e) {
-    Log('Samples:Edit:Footer: photo uploaded.');
+  photoUpload = e => {
     const photo = e.target.files[0];
 
-    const { occurrence } = this.props;
     // TODO: show loader
-    addPhoto(occurrence, photo).catch(err => {
+    addPhoto(this.props.model, photo).catch(err => {
       Log(err, 'e');
       // TODO: show err
     });
-  }
+  };
 
-  photoSelect() {
-    Log('Samples:Edit:Controller: photo selection.');
-    const { occurrence, isDisabled } = this.props;
+  photoSelect = () => {
+    const { model } = this.props;
 
-    if (isDisabled) {
-      return;
-    }
-
-    const onGallerySelect = () => {
-      ImageHelp.getImage({
-        sourceType: window.Camera.PictureSourceType.PHOTOLIBRARY,
-        saveToPhotoAlbum: false,
-      })
-        .then(entry => {
-          entry &&
-            addPhoto(occurrence, entry.nativeURL, occErr => {
-              if (occErr) {
-                showErrMsg(occErr);
-              }
-            });
-        })
-        .catch(showErrMsg);
-    };
-
-    const onCameraSelect = () => {
-      ImageHelp.getImage()
-        .then(entry => {
-          entry &&
-            addPhoto(occurrence, entry.nativeURL, occErr => {
-              if (occErr) {
-                showErrMsg(occErr);
-              }
-            });
-        })
-        .catch(showErrMsg);
-    };
-    
     actionSheet({
       header: t('Choose a method to upload a photo'),
       buttons: [
         {
           text: t('Gallery'),
-          icon: 'images',
-          handler: onGallerySelect,
+          handler: () => {
+            ImageHelp.getImage({
+              sourceType: window.Camera.PictureSourceType.PHOTOLIBRARY,
+              saveToPhotoAlbum: false,
+            })
+              .then(entry => {
+                entry &&
+                  addPhoto(model, entry.nativeURL, occErr => {
+                    if (occErr) {
+                      error(occErr.message);
+                    }
+                  });
+              })
+              .catch(occErr => {
+                error(occErr.message);
+              });
+          },
         },
         {
           text: t('Camera'),
-          icon: 'camera',
-          handler: onCameraSelect,
+          handler: () => {
+            ImageHelp.getImage()
+              .then(entry => {
+                entry &&
+                  addPhoto(model, entry.nativeURL, occErr => {
+                    if (occErr) {
+                      error(occErr.message);
+                    }
+                  });
+              })
+              .catch(occErr => {
+                error(occErr.message);
+              });
+          },
+        },
+        {
+          text: t('Cancel'),
+          role: 'cancel',
         },
       ],
     });
-  }
+  };
 
   getGallery = () => {
-    Log('Samples:Edit:Footer: photo view.');
-    const { occurrence } = this.props;
+    const { media } = this.props.model;
     const { showGallery } = this.state;
-    const { media } = occurrence;
 
     const items = [];
 
     media.forEach(image => {
       items.push({
         src: image.getURL(),
-        w: image.get('width') || 800,
-        h: image.get('height') || 800,
+        w: image.attrs.width || 800,
+        h: image.attrs.height || 800,
       });
     });
 
@@ -168,24 +144,9 @@ class Footer extends Component {
     );
   };
 
-  getImageDeleteButton = img => {
-    const { isDisabled } = this.props;
-
-    if (isDisabled) {
-      return null;
-    }
-
-    return (
-      <IonButton fill="clear" class="delete" onClick={() => photoDelete(img)}>
-        <IonIcon icon={close} />
-      </IonButton>
-    );
-  };
-
   getImageArray = () => {
-    const { occurrence } = this.props;
-    const { models } = occurrence.media;
-    if (!models || !models.length) {
+    const { media } = this.props.model;
+    if (!media.length) {
       return (
         <span className="empty"> 
           {' '}
@@ -195,14 +156,18 @@ class Footer extends Component {
     }
 
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
-    const getImage = (img, index) => {
-      const thumbnail = img.get('thumbnail');
+    return media.map((img, index) => {
+      const { thumbnail } = img.attrs;
       const id = img.cid;
-
       return (
         <div key={id} className="img">
-          {this.getImageDeleteButton(img)}
-
+          <IonButton
+            fill="clear"
+            class="delete"
+            onClick={() => photoDelete(img)}
+          >
+            <IonIcon icon={close} />
+          </IonButton>
           <img
             src={thumbnail}
             alt=""
@@ -210,10 +175,8 @@ class Footer extends Component {
           />
         </div>
       );
-    };
+    });
     /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
-
-    return models.map(getImage);
   };
 
   getNewImageButton = () => {
@@ -240,11 +203,9 @@ class Footer extends Component {
     return (
       <IonFooter id="edit-footer">
         {this.getGallery()}
-        <div>
-          <div id="img-picker-array">
-            <div className="img-picker">{this.getNewImageButton()}</div>
-            <div id="img-array">{this.getImageArray()}</div>
-          </div>
+        <div id="img-picker-array">
+          <div className="img-picker">{this.getNewImageButton()}</div>
+          <div id="img-array">{this.getImageArray()}</div>
         </div>
       </IonFooter>
     );

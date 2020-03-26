@@ -24,7 +24,7 @@ class Component extends React.Component {
 
     this.attrName = match.params.attr;
 
-    const value = sample.get(this.attrName);
+    const value = sample.attrs[this.attrName];
     this.state = { currentVal: value };
 
     this.attrConfig = config.indicia.surveys.transect.attrs.smp[this.attrName];
@@ -33,7 +33,7 @@ class Component extends React.Component {
   onChange = val => {
     const { sample } = this.props;
     this.setState({ currentVal: val });
-    sample.set(this.attrName, val);
+    sample.attrs[this.attrName] = val;
     sample.save();
 
     if (this.attrConfig.type === 'radio') {

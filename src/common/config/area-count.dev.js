@@ -39,7 +39,6 @@ export default mergeDeep(areaCountConfig, {
   webForm: 'enter-app-record',
   attrs: {
     smp: {
-
       surveyStartTime: {
         id: 1417,
       },
@@ -50,7 +49,7 @@ export default mergeDeep(areaCountConfig, {
       area: { id: 1462 },
     },
     occ: {
-      count: { id: 791 },
+      count: { id: 784 },
       stage: {
         id: 790,
         label: 'Stage',

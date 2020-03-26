@@ -1,16 +1,17 @@
 $footer-height: 80px;
 
 #img-picker-array {
-  display: table;
+  display: flex;
   height: $footer-height;
+  background: #ffffff;
   margin: 0;
   padding: 0;
 
   .img-picker {
     position: relative;
-    vertical-align: middle;
-    display: table-cell;
+    display: block;
     width: $footer-height;
+    height: $footer-height;
     min-height: $footer-height;
     padding: 0;
 
@@ -21,16 +22,25 @@ $footer-height: 80px;
     ion-button {
       margin: 0;
       margin-left: 54%;
+      height: 100%;
+      width: 80px;
       transform: translateX(-50%);
+
+      ion-icon {
+        width: 65%;
+        height: 65%;
+      }
     }
 
     // non-cordova picker
     .non-cordova-img-picker-logo {
       position: absolute;
-      bottom: 28px;
-      left: 23px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-16px, -16px);
     }
     & > input {
+      position: absolute;
       opacity: 0;
       width: $footer-height;
       margin-top: 0 !important;
@@ -44,6 +54,8 @@ $footer-height: 80px;
 
     white-space: nowrap;
     overflow: overlay;
+    overflow-y: hidden;
+    width: 100%;
 
     .img {
       display: inline-block;
@@ -68,21 +80,23 @@ $footer-height: 80px;
     }
 
     .empty {
-      float: left;
-      margin-top: 28px;
-      margin-left: 12px;
+      position: absolute;
       color: var(--ion-color-dark-tint);
       font-size: 14px;
+      padding: 0 15px;
+      margin-top: 30px;
     }
   }
 }
 
 #edit-footer {
-  background: #ffffff;
-
   & > div:not(.pswp) {
     margin: 0 -5px;
     border-top: 1px solid var(--ion-color-light-shade);
     box-shadow: 0px -1px 6px 0px #b5b5b5;
   }
+}
+
+.ios .pswp__top-bar {
+  margin-top: 30px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { IonContent, IonList, IonItem, IonLabel, IonPage } from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonPage } from '@ionic/react';
+import AppMain from 'Components/Main';
 import AppHeader from 'Components/Header';
 import species from 'common/data/species.profiles.data';
 import './sponsors.png';
@@ -8,7 +9,7 @@ import './styles.scss';
 export default () => (
   <IonPage>
     <AppHeader title={t('Credits')} />
-    <IonContent id="credits" class="ion-padding">
+    <AppMain id="credits" class="ion-padding">
       <IonList lines="none">
         <IonItem>
           <img src="/images/sponsors.png" alt="" />
@@ -25,6 +26,7 @@ export default () => (
             </b>
           </IonLabel>
         </IonItem>
+
         <IonItem>
           <IonLabel>
             <b>David Roy</b> (UK Centre for Ecology & Hydrology)
@@ -87,8 +89,8 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>UK Centre for Ecology and Hydrology (UKCEH, UK)</b> – David Roy, Reto
-            Schmucki
+            <b>UK Centre for Ecology and Hydrology (UKCEH, UK)</b> – David Roy,
+            Reto Schmucki
           </IonLabel>
         </IonItem>
         <IonItem>
@@ -108,8 +110,8 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Helmholtz Centre for Environmental Research (UFZ, Germany)</b>
-            – Josef Settele, Oliver Schweiger
+            <b>Helmholtz Centre for Environmental Research (UFZ, Germany)</b>–
+            Josef Settele, Oliver Schweiger
           </IonLabel>
         </IonItem>
         <IonItem>
@@ -242,7 +244,9 @@ export default () => (
         </IonItem>
         <IonItem lines="none">
           <IonLabel>
-            {t('Species descriptions included as part of the guide are based on those produced for the Climatic Risk Atlas of European Butterflies. We thank Josef Settele for making these available.')}
+            {t(
+              'Species descriptions included as part of the guide are based on those produced for the Climatic Risk Atlas of European Butterflies. We thank Josef Settele for making these available.'
+            )}
           </IonLabel>
         </IonItem>
       </IonList>
@@ -264,6 +268,6 @@ export default () => (
             </IonItem>
           ))}
       </IonList>
-    </IonContent>
+    </AppMain>
   </IonPage>
 );

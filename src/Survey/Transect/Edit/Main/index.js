@@ -30,7 +30,7 @@ class Edit extends Component {
 
   getPrettySectionsLabel = () => {
     const { sample } = this.props;
-    const transect = sample.get('location');
+    const transect = sample.attrs.location;
     if (!transect) {
       return (
         <IonLabel slot="end" color="danger  ">
@@ -54,7 +54,7 @@ class Edit extends Component {
       comment,
       surveyStartTime,
       surveyEndTime,
-    } = sample.attributes;
+    } = sample.attrs;
 
     const startTimePretty =
       surveyStartTime && dateTimeFormat.format(new Date(surveyStartTime));

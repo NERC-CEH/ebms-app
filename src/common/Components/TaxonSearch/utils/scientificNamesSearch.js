@@ -102,9 +102,7 @@ function search(
                 species_id: speciesIndex,
                 found_in_name: 'scientific_name',
                 warehouse_id: speciesInArray[WAREHOUSE_INDEX],
-                scientific_name: `${speciesEntry[SCI_NAME_INDEX]} ${
-                  speciesInArray[SPECIES_SCI_NAME_INDEX]
-                }`,
+                scientific_name: `${speciesEntry[SCI_NAME_INDEX]} ${speciesInArray[SPECIES_SCI_NAME_INDEX]}`,
               };
               results.push(fullRes);
             }
@@ -115,9 +113,7 @@ function search(
               species_id: speciesIndex,
               found_in_name: 'scientific_name',
               warehouse_id: speciesInArray[WAREHOUSE_INDEX],
-              scientific_name: `${speciesEntry[SCI_NAME_INDEX]} ${
-                speciesInArray[SPECIES_SCI_NAME_INDEX]
-              }`,
+              scientific_name: `${speciesEntry[SCI_NAME_INDEX]} ${speciesInArray[SPECIES_SCI_NAME_INDEX]}`,
             };
             results.push(fullRes);
           }

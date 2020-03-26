@@ -4,9 +4,6 @@ import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { IonApp, IonPage, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import '@ionic/core/css/core.css';
-import '@ionic/core/css/ionic.bundle.css';
-import 'common/styles/app.scss';
 import appModel from 'app_model';
 import LanguageCountrySelectRequired from 'Components/LanguageCountrySelectRequired';
 import Home from './Home';
@@ -15,6 +12,9 @@ import Info from './Info';
 import Settings from './Settings';
 import SplashScreenRequired from './Info/SplashScreenRequired';
 import Survey from './Survey';
+import '@ionic/core/css/core.css';
+import '@ionic/core/css/ionic.bundle.css';
+import 'common/theme.scss';
 
 const App = () => (
   <IonApp>

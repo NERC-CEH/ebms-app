@@ -16,18 +16,18 @@ class EditOccurrence extends Component {
     const { match, sample } = props;
 
     const occID = match.params.occId;
-    this.occ = sample.occurrences.models.find(occ => occ.cid === occID);
+    this.occ = sample.occurrences.find(occ => occ.cid === occID);
   }
 
   onChange = e => {
     const { sample } = this.props;
 
-    this.occ.set('comment', e.target.value);
+    this.occ.attrs.comment = e.target.value;
     sample.save();
   };
 
   render() {
-    const comment = this.occ.get('comment');
+    const { comment } = this.occ.attrs;
 
     return (
       <IonPage>

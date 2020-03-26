@@ -27,7 +27,7 @@ class Container extends React.Component {
   render() {
     const { sample } = this.props;
 
-    const location = sample.get('location') || {};
+    const location = sample.attrs.location || {};
     const isGPSTracking = sample.isGPSRunning();
 
     const { area } = location;

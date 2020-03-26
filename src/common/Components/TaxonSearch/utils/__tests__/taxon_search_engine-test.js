@@ -85,11 +85,12 @@ import searchEngine from '../taxon_search_engine';
 
       it('should allow searching by species (in latin) name', async () => {
         // When
-        const results = await searchEngine.search('io')
+        const results = await searchEngine.search('io');
         // Then
-        const found = results.find(species => species.scientific_name ==='Aglais io');
+        const found = results.find(
+          species => species.scientific_name === 'Aglais io'
+        );
         expect(!!found).to.be.equal(true);
-
       });
 
       describe('genus', () => {

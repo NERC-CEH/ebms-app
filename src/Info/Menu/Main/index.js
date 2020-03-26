@@ -1,13 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
-import {
-  IonContent,
-  IonIcon,
-  IonList,
-  IonItem,
-  IonItemDivider,
-} from '@ionic/react';
+import { IonIcon, IonList, IonItem, IonItemDivider } from '@ionic/react';
 import {
   settings,
   exit,
@@ -19,15 +13,16 @@ import {
   helpBuoy,
   book,
 } from 'ionicons/icons';
+import AppMain from 'Components/Main';
 import config from 'config';
 import './styles.scss';
 import './logo.png';
 
 const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
-  const lang = appModel.get('language');
+  const lang = appModel.attrs.language;
 
   return (
-    <IonContent class="app-menu">
+    <AppMain class="app-menu">
       <img src="/images/logo.png" alt="app logo" />
 
       <IonList lines="full">
@@ -36,9 +31,7 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
             <IonIcon icon={exit} size="small" slot="start" />
             {t('Logout')}
             {': '}
-            {user.firstname} 
-            {' '}
-            {user.secondname}
+            {user.firstname} {user.secondname}
           </IonItem>
         )}
 
@@ -90,7 +83,7 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
           {t('App')}
         </IonItem>
       </IonList>
-    </IonContent>
+    </AppMain>
   );
 });
 

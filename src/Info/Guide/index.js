@@ -76,8 +76,7 @@ const Component = () => (
         <P>
           {t(
             'In this tab, on the right part of the + Button, you can see the PENDING counts, your records that have not been submitted and the UPLOADED counts, the ones submitted to the eBMS database. The Pending counts can be submitted to the system by clicking on it and pressing the Upload option. You could see the species list that you recorded for Uploaded counts. All your records can also be viewed and edited on the %(eBMSWebsiteLink)'
-          ).replace('%(eBMSWebsiteLink)', '')}
-          {' '}
+          ).replace('%(eBMSWebsiteLink)', '')}{' '}
           <a
             href="https://butterfly-monitoring.net/elastic/my-records"
             target="_blank"
