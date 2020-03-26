@@ -49,6 +49,7 @@ async function addPhoto(model, photo) {
 class Footer extends Component {
   static propTypes = {
     model: PropTypes.object.isRequired,
+    isDisabled: PropTypes.bool,
   };
 
   state = {
@@ -66,47 +67,55 @@ class Footer extends Component {
   };
 
   photoSelect = () => {
-    const { model } = this.props;
+    const { model, isDisabled } = this.props;
+
+    if (isDisabled) {
+      return;
+    }
+
+    const onGallerySelect = () => {
+      ImageHelp.getImage({
+        sourceType: window.Camera.PictureSourceType.PHOTOLIBRARY,
+        saveToPhotoAlbum: false,
+      })
+        .then(entry => {
+          entry &&
+            addPhoto(model, entry.nativeURL, occErr => {
+              if (occErr) {
+                error(occErr.message);
+              }
+            });
+        })
+        .catch(occErr => {
+          error(occErr.message);
+        });
+    };
+
+    const onCameraSelect = () => {
+      ImageHelp.getImage()
+        .then(entry => {
+          entry &&
+            addPhoto(model, entry.nativeURL, occErr => {
+              if (occErr) {
+                error(occErr.message);
+              }
+            });
+        })
+        .catch(occErr => {
+          error(occErr.message);
+        });
+    };
 
     actionSheet({
       header: t('Choose a method to upload a photo'),
       buttons: [
         {
           text: t('Gallery'),
-          handler: () => {
-            ImageHelp.getImage({
-              sourceType: window.Camera.PictureSourceType.PHOTOLIBRARY,
-              saveToPhotoAlbum: false,
-            })
-              .then(entry => {
-                entry &&
-                  addPhoto(model, entry.nativeURL, occErr => {
-                    if (occErr) {
-                      error(occErr.message);
-                    }
-                  });
-              })
-              .catch(occErr => {
-                error(occErr.message);
-              });
-          },
+          handler: onGallerySelect,
         },
         {
           text: t('Camera'),
-          handler: () => {
-            ImageHelp.getImage()
-              .then(entry => {
-                entry &&
-                  addPhoto(model, entry.nativeURL, occErr => {
-                    if (occErr) {
-                      error(occErr.message);
-                    }
-                  });
-              })
-              .catch(occErr => {
-                error(occErr.message);
-              });
-          },
+          handler: onCameraSelect,
         },
         {
           text: t('Cancel'),
@@ -123,10 +132,12 @@ class Footer extends Component {
     const items = [];
 
     media.forEach(image => {
+      const { width, height } = image.attrs;
+
       items.push({
         src: image.getURL(),
-        w: image.attrs.width || 800,
-        h: image.attrs.height || 800,
+        w: width || 800,
+        h: height || 800,
       });
     });
 
@@ -145,7 +156,9 @@ class Footer extends Component {
   };
 
   getImageArray = () => {
-    const { media } = this.props.model;
+    const { model } = this.props;
+
+    const { media } = model;
     if (!media.length) {
       return (
         <span className="empty"> 
@@ -156,18 +169,14 @@ class Footer extends Component {
     }
 
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
-    return media.map((img, index) => {
+    const getImage = (img, index) => {
       const { thumbnail } = img.attrs;
       const id = img.cid;
+
       return (
         <div key={id} className="img">
-          <IonButton
-            fill="clear"
-            class="delete"
-            onClick={() => photoDelete(img)}
-          >
-            <IonIcon icon={close} />
-          </IonButton>
+          {this.getImageDeleteButton(img)}
+
           <img
             src={thumbnail}
             alt=""
@@ -175,8 +184,24 @@ class Footer extends Component {
           />
         </div>
       );
-    });
+    };
     /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
+
+    return media.map(getImage);
+  };
+
+  getImageDeleteButton = img => {
+    const { isDisabled } = this.props;
+
+    if (isDisabled) {
+      return null;
+    }
+
+    return (
+      <IonButton fill="clear" class="delete" onClick={() => photoDelete(img)}>
+        <IonIcon icon={close} />
+      </IonButton>
+    );
   };
 
   getNewImageButton = () => {
