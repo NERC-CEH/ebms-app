@@ -54,7 +54,7 @@ async function onRegister(userModel, details, lang, onSuccess) {
 }
 
 export default function RegisterContainer({ userModel, appModel }) {
-  const lang = appModel.attrs['language'];
+  const lang = appModel.attrs.language;
   const context = useContext(NavContext);
 
   const onSuccess = () => {

@@ -20,7 +20,7 @@ function SelectLanguage({ appModel, hideHeader }) {
   const currentValue = appModel.attrs.language;
 
   function onSelect(e) {
-    appModel.attrs.language = e.target.value;
+    appModel.attrs.language = e.target.value; // eslint-disable-line no-param-reassign
     appModel.save();
   }
 

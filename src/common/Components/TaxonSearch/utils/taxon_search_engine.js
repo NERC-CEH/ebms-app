@@ -1,8 +1,6 @@
 /** ****************************************************************************
  * Generates species list suggestions.
  **************************************************************************** */
-import Backbone from 'backbone';
-import _ from 'lodash';
 import Log from 'helpers/log';
 import species from 'common/data/species.data.json';
 import searchSciNames from './scientificNamesSearch';
@@ -83,7 +81,5 @@ const API = {
     return results;
   },
 };
-
-_.extend(API, Backbone.Events);
 
 export { API as default };

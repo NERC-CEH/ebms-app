@@ -8,8 +8,7 @@ import Header from './Header';
 import Main from './Main';
 
 function increaseCount(occ) {
-  const { count } = occ.attrs;
-  occ.attrs.count = count + 1;
+  occ.attrs.count++; // eslint-disable-line no-param-reassign
   occ.save();
 }
 

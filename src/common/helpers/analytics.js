@@ -59,7 +59,7 @@ function setContext() {
 
 const API = {
   init() {
-    if (!userModel.hasLogIn() || !appModel.attrs['sendAnalytics']) {
+    if (!userModel.hasLogIn() || !appModel.attrs.sendAnalytics) {
       return;
     }
 

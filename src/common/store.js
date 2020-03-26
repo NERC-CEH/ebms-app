@@ -1,6 +1,5 @@
 import CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
 import LocalForage from 'localforage';
-import _ from 'lodash';
 
 /* eslint-disable */
 // DEVELOPMENT ONLY

@@ -181,6 +181,8 @@ class Sample extends Indicia.Sample {
       [keys.device_version.id]: Device.getVersion(),
       [keys.app_version.id]: `${CONFIG.version}.${CONFIG.build}`,
     };
+
+    // eslint-disable-next-line no-param-reassign
     updatedSubmission.fields = {
       ...updatedSubmission.fields,
       ...appAndDeviceFields,

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import userModel from 'user_model';
-import Log from 'helpers/log';
 import Device from 'helpers/device';
 import CONFIG from 'config';
 import {

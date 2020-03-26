@@ -21,7 +21,7 @@ function SelectCountry({ appModel, hideHeader }) {
   const currentValue = appModel.attrs.country;
 
   function onSelect(e) {
-    appModel.attrs.country = e.target.value;
+    appModel.attrs.country = e.target.value; // eslint-disable-line no-param-reassign
     appModel.save();
   }
 

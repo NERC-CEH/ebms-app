@@ -37,11 +37,7 @@ function _removeUUID(string) {
  */
 function error(err = {}) {
   const isString = typeof err === 'string' || err instanceof String;
-  const e = isString
-    ? {
-        message: err,
-      }
-    : err;
+  const e = isString ? { message: err } : err;
 
   if (Sentry) {
     if (typeof e.stack === 'string') {
