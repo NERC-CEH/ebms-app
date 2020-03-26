@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { IonPage } from '@ionic/react';
+import { IonPage, IonButton } from '@ionic/react';
 import alert from 'common/helpers/alert';
 import AppHeader from 'Components/Header';
 import Main from './Main';
@@ -59,15 +59,54 @@ class Container extends React.Component {
     appModel.save();
   };
 
+  getNextSectionButton = sectionSample => {
+    const { sample, match, history } = this.props;
+
+    const currentSectionIndex = sample.samples.findIndex(
+      ({ cid }) => cid === sectionSample.cid
+    );
+
+    const nextSectionIndex = currentSectionIndex + 1;
+    const nextSectionSample = sample.samples[nextSectionIndex];
+    const isLastSection = !nextSectionSample;
+    if (isLastSection) {
+      return null;
+    }
+
+    const nextSectionSampleId = nextSectionSample.cid;
+
+    return (
+      <IonButton
+        onClick={e => {
+          e.preventDefault();
+          history.push(
+            `/survey/transect/${match.params.id}/edit/sections/${nextSectionSampleId}`
+          );
+        }}
+      >
+        {t('Next')}
+      </IonButton>
+    );
+  };
+
   render() {
     const { sample, appModel, match, history } = this.props;
 
     const { areaSurveyListSortedByTime } = appModel.attrs;
     const isDisabled = !!sample.metadata.synced_on;
 
+    const sectionSampleId = match.params.sectionId;
+
+    const sectionSample = sample.getSectionSample(sectionSampleId);
+    const sectionCode = sectionSample.attrs.location.code || t('Section');
+
     return (
       <IonPage>
-        <AppHeader title={t('Section')} defaultHref="/home/user-surveys" />
+        <AppHeader
+          title={sectionCode}
+          defaultHref="/home/user-surveys"
+          rightSlot={this.getNextSectionButton(sectionSample)}
+        />
         <Main
           sample={sample}
           deleteOccurrence={deleteOccurrence}
