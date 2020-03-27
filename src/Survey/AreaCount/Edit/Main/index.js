@@ -7,7 +7,6 @@ import {
   IonButton,
   IonIcon,
   IonLabel,
-  IonContent,
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
@@ -22,6 +21,7 @@ import {
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
+import Main from 'Components/Main';
 import MenuAttrItem from 'Components/MenuAttrItem';
 import CountdownClock from './components/CountdownClock';
 import './styles.scss';
@@ -159,7 +159,7 @@ class AreaCount extends Component {
     const isPaused = !!sample.timerPausedTime.time;
 
     return (
-      <IonContent id="area-count-edit">
+      <Main id="area-count-edit">
         {isDisabled && (
           <div className="info-message">
             <p>
@@ -198,7 +198,7 @@ class AreaCount extends Component {
         </IonList>
 
         {this.getSpeciesList()}
-      </IonContent>
+      </Main>
     );
   }
 }

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import AppHeader from 'common/Components/Header';
 import TaxonSearch from 'common/Components/TaxonSearch';
-import { IonContent, IonPage, NavContext } from '@ionic/react';
+import { IonPage, NavContext } from '@ionic/react';
+import Main from 'Components/Main';
 import Occurrence from 'occurrence';
 
 @observer
@@ -39,12 +40,12 @@ class Controller extends React.Component {
     return (
       <IonPage>
         <AppHeader title={t('Species')} />
-        <IonContent id="area-count-taxa">
+        <Main id="area-count-taxa">
           <TaxonSearch
             onSpeciesSelected={onSpeciesSelected}
             recordedTaxa={recordedTaxa}
           />
-        </IonContent>
+        </Main>
       </IonPage>
     );
   }

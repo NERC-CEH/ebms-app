@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonContent, IonPage, NavContext } from '@ionic/react';
+import { IonPage, NavContext } from '@ionic/react';
+import Main from 'Components/Main';
 import AppHeader from 'Components/Header';
 import SliderInput from 'Components/SliderInput';
 import { observer } from 'mobx-react';
@@ -44,14 +45,14 @@ class Component extends React.Component {
     return (
       <IonPage>
         <AppHeader title={t(this.attrConfig.label)} />
-        <IonContent id="record-edit-attr">
+        <Main id="record-edit-attr">
           <SliderInput
             type="text"
             config={this.attrConfig}
             default={this.state.currentVal}
             onChange={val => this.onChange(val)}
           />
-        </IonContent>
+        </Main>
       </IonPage>
     );
   }

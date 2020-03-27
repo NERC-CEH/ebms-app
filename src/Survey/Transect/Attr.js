@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonContent, IonPage, NavContext } from '@ionic/react';
+import { IonPage, NavContext } from '@ionic/react';
+import Main from 'Components/Main';
 import AppHeader from 'Components/Header';
 import RadioInput from 'Components/RadioInput';
 import Input from 'Components/Input';
@@ -95,7 +96,7 @@ class Component extends React.Component {
     return (
       <IonPage>
         <AppHeader title={t(this.attrConfig.label)} />
-        <IonContent id="record-edit-attr">{this.getAttr()}</IonContent>
+        <Main id="record-edit-attr">{this.getAttr()}</Main>
       </IonPage>
     );
   }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { IonItem, IonTextarea, IonContent, IonPage } from '@ionic/react';
+import { IonItem, IonTextarea, IonPage } from '@ionic/react';
 import AppHeader from 'common/Components/Header';
+import Main from 'Components/Main';
 import { observer } from 'mobx-react';
 
 @observer
@@ -32,7 +33,7 @@ class EditOccurrence extends Component {
     return (
       <IonPage>
         <AppHeader title={t('Comment')} />
-        <IonContent id="area-count-occurrence-edit-comment">
+        <Main id="area-count-occurrence-edit-comment">
           <div className="info-message">
             <p>{t('Please add any extra info about this record.')}</p>
           </div>
@@ -45,7 +46,7 @@ class EditOccurrence extends Component {
               rows={8}
             />
           </IonItem>
-        </IonContent>
+        </Main>
       </IonPage>
     );
   }

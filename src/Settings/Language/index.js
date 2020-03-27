@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import { useTranslation } from 'react-i18next';
+import Main from 'Components/Main';
 import {
   IonPage,
-  IonContent,
   IonIcon,
   IonList,
   IonItem,
@@ -17,6 +18,8 @@ import AppHeader from 'Components/Header';
 import './styles.scss';
 
 function SelectLanguage({ appModel, hideHeader }) {
+  const { t } = useTranslation();
+
   const currentValue = appModel.attrs.language;
 
   function onSelect(e) {
@@ -38,7 +41,7 @@ function SelectLanguage({ appModel, hideHeader }) {
     <IonPage id="language-select">
       {!hideHeader && <AppHeader title={t('Language')} />}
 
-      <IonContent>
+      <Main>
         <IonList>
           {hideHeader && (
             <div className="header">
@@ -50,7 +53,7 @@ function SelectLanguage({ appModel, hideHeader }) {
             {languagesOptions}
           </IonRadioGroup>
         </IonList>
-      </IonContent>
+      </Main>
     </IonPage>
   );
 }

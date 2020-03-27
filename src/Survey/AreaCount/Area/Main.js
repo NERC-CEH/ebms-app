@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   IonIcon,
-  IonContent,
   IonLifeCycleContext,
   IonToolbar,
   IonTitle,
 } from '@ionic/react';
+import Main from 'Components/Main';
 import { locate } from 'ionicons/icons';
 import CONFIG from 'config';
 import L from 'leaflet';
@@ -276,7 +276,7 @@ class AreaAttr extends Component {
   render() {
     const { isGPSTracking, areaPretty, isDisabled } = this.props;
     return (
-      <IonContent className={`${isGPSTracking ? 'GPStracking' : ''}`}>
+      <Main className={`${isGPSTracking ? 'GPStracking' : ''}`}>
         <IonToolbar id="area-edit-toolbar">
           <IonTitle slot="start">{areaPretty}</IonTitle>
         </IonToolbar>
@@ -297,7 +297,7 @@ class AreaAttr extends Component {
             </LeafletControl>
           )}
         </Map>
-      </IonContent>
+      </Main>
     );
   }
 }

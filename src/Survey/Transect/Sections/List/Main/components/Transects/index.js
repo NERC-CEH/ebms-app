@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
-import { IonContent, IonList, IonItem, IonLabel } from '@ionic/react';
+import { IonList, IonItem, IonLabel } from '@ionic/react';
+import Main from 'Components/Main';
 import transformToLatLon from 'helpers/location';
 import SVG from '../SVG';
 import './styles.scss';
@@ -54,12 +55,12 @@ function Transects({ appModel, onTransectSelect }) {
     : showNoTransects();
 
   return (
-    <IonContent id="transect-list">
+    <Main id="transect-list">
       <div className="info-message">
         <p>{t('Please select your transect first.')}</p>
       </div>
       <IonList lines="full">{transectsList}</IonList>
-    </IonContent>
+    </Main>
   );
 }
 

@@ -1,14 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import {
-  IonContent,
-  IonModal,
-  IonGrid,
-  IonRow,
-  IonPage,
-  IonCol,
-} from '@ionic/react';
+import { IonModal, IonGrid, IonRow, IonPage, IonCol } from '@ionic/react';
+import Main from 'Components/Main';
 import ModalHeader from 'Components/ModalHeader';
 import speciesProfiles from 'common/data/species.profiles.data.json';
 import SpeciesProfile from './components/SpeciesProfile';
@@ -117,7 +111,7 @@ class Component extends React.Component {
 
     return (
       <IonPage>
-        <IonContent id="home-species" class="ion-padding">
+        <Main id="home-species" class="ion-padding">
           {getInfoMessage(countrySpeciesCount, totalSpeciesCountryCount)}
 
           <UserFeedbackRequest
@@ -133,7 +127,7 @@ class Component extends React.Component {
               <SpeciesProfile species={this.state.species} country={country} />
             )}
           </IonModal>
-        </IonContent>
+        </Main>
       </IonPage>
     );
   }

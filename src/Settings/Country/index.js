@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import {
   IonPage,
-  IonContent,
   IonIcon,
   IonList,
   IonItem,
@@ -12,6 +11,7 @@ import {
   IonLabel,
   IonItemDivider,
 } from '@ionic/react';
+import Main from 'Components/Main';
 import { flag } from 'ionicons/icons';
 import { countries } from 'helpers/translator';
 import AppHeader from 'Components/Header';
@@ -46,7 +46,7 @@ function SelectCountry({ appModel, hideHeader }) {
     <IonPage id="country-select">
       {!hideHeader && <AppHeader title={t('Country')} />}
 
-      <IonContent>
+      <Main>
         <IonList>
           {hideHeader && (
             <div className="header">
@@ -58,7 +58,7 @@ function SelectCountry({ appModel, hideHeader }) {
             {countriesOptions}
           </IonRadioGroup>
         </IonList>
-      </IonContent>
+      </Main>
     </IonPage>
   );
 }

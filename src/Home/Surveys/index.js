@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  IonContent,
   IonList,
   IonItem,
   IonSegment,
@@ -9,6 +8,7 @@ import {
   IonBadge,
   IonPage,
 } from '@ionic/react';
+import Main from 'Components/Main';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import Survey from './components/Survey';
@@ -98,7 +98,7 @@ class Component extends React.Component {
 
     return (
       <IonPage id="surveys-list-page">
-        <IonContent class="ion-padding">
+        <Main class="ion-padding">
           <IonSegment
             onIonChange={this.onSegmentClick}
             value={segment}
@@ -145,7 +145,7 @@ class Component extends React.Component {
           {showingUploaded && getUploadedSurveys(uploadedSurveys)}
           {/* have to keep mounted because can't detect a mount to fit map bounds */}
           {<Map savedSamples={savedSamples} showingMap={showingMap} />}
-        </IonContent>
+        </Main>
       </IonPage>
     );
   }

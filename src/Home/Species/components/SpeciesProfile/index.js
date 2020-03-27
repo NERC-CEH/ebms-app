@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  IonContent,
   IonCardHeader,
   IonCardSubtitle,
   IonCardContent,
@@ -9,6 +8,7 @@ import {
 } from '@ionic/react';
 import { PhotoSwipe } from 'react-photoswipe';
 import PropTypes from 'prop-types';
+import Main from 'Components/Main';
 import 'react-photoswipe/lib/photoswipe.css';
 import 'react-photoswipe/dist/default-skin.svg';
 import './styles.scss';
@@ -73,7 +73,7 @@ class Component extends React.Component {
       <>
         {this.getGallery()}
 
-        <IonContent id="species-profile" class="ion-padding">
+        <Main id="species-profile" class="ion-padding">
           <img
             src={`/images/${species.image}_image.jpg`}
             alt="species"
@@ -88,9 +88,7 @@ class Component extends React.Component {
           {status && (
             <IonCardContent>
               <h3 className="species-label inline-label">
-                {`${t(
-                  'Status'
-                )}:`}
+                {`${t('Status')}:`}
               </h3>
               <span>{t(status)}</span>
             </IonCardContent>
@@ -100,7 +98,7 @@ class Component extends React.Component {
             <h3 className="species-label">{`${t('Description')}:`}</h3>
             {t(species.descriptionKey, true)}
           </IonCardContent>
-        </IonContent>
+        </Main>
       </>
     );
     /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */

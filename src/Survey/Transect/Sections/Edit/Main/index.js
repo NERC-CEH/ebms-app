@@ -7,11 +7,11 @@ import {
   IonButton,
   IonIcon,
   IonLabel,
-  IonContent,
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
 import { addCircleOutline, removeCircleOutline, funnel } from 'ionicons/icons';
+import Main from 'Components/Main';
 import MenuAttrItem from 'Components/MenuAttrItem';
 import { observer } from 'mobx-react';
 import 'common/images/cloud.svg';
@@ -72,7 +72,7 @@ class Edit extends Component {
     const occurrences = [...sample.occurrences].sort(sort);
 
     return (
-      <IonContent id="transect-section-edit">
+      <Main id="transect-section-edit">
         <div id="species-list-sort">
           <IonButton
             fill="clear"
@@ -117,7 +117,7 @@ class Edit extends Component {
             </IonItemSliding>
           ))}
         </IonList>
-      </IonContent>
+      </Main>
     );
   }
 
@@ -156,7 +156,7 @@ class Edit extends Component {
     const baseURL = `/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}`;
 
     return (
-      <IonContent id="area-count-edit">
+      <Main id="area-count-edit">
         <IonList lines="full">
           <MenuAttrItem
             routerLink={`${baseURL}/cloud`}
@@ -176,7 +176,7 @@ class Edit extends Component {
         </IonList>
 
         {this.getSpeciesList(sectionSample)}
-      </IonContent>
+      </Main>
     );
   }
 }

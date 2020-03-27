@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  IonIcon,
-  IonList,
-  IonItem,
-  IonButton,
-  IonLabel,
-  IonContent,
-} from '@ionic/react';
+import { IonIcon, IonList, IonItem, IonButton, IonLabel } from '@ionic/react';
 import {
   removeCircleOutline,
   addCircleOutline,
   clipboard,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
+import Main from 'Components/Main';
 import MenuAttrItem from 'Components/MenuAttrItem';
 import 'common/images/number.svg';
 import 'common/images/butterfly.svg';
@@ -55,7 +49,7 @@ class EditOccurrence extends Component {
     const baseURL = `/survey/area/${sample.cid}/edit/occ/${occurrence.cid}`;
 
     return (
-      <IonContent id="area-count-occurrence-edit">
+      <Main id="area-count-occurrence-edit">
         <IonList lines="full">
           <MenuAttrItem
             routerLink={`${baseURL}/taxa`}
@@ -108,7 +102,7 @@ class EditOccurrence extends Component {
             value={comment}
           />
         </IonList>
-      </IonContent>
+      </Main>
     );
   }
 }

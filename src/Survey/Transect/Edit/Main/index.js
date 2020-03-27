@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  IonList,
-  IonItem,
-  IonIcon,
-  IonLabel,
-  IonContent,
-  IonButton,
-} from '@ionic/react';
+import { IonList, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
+import Main from 'Components/Main';
 import { person, map, time, clipboard, open } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
@@ -64,7 +58,7 @@ class Edit extends Component {
     const baseURL = `/survey/transect/${sample.cid}/edit`;
 
     return (
-      <IonContent id="transect-edit">
+      <Main id="transect-edit">
         {isDisabled && (
           <div className="info-message">
             <p>
@@ -147,7 +141,7 @@ class Edit extends Component {
             value={comment}
           />
         </IonList>
-      </IonContent>
+      </Main>
     );
   }
 }

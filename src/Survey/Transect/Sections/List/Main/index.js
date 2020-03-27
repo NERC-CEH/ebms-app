@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { IonContent, IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import { toJS } from 'mobx';
+import Main from 'Components/Main';
 import transformToLatLon from 'helpers/location';
 import Transects from './components/Transects';
 import SVG from './components/SVG';
@@ -57,9 +58,9 @@ function Sections({ sample, appModel, onTransectSelect, match }) {
 
   const sections = sample.samples.map(s => getSectionItem(s, match));
   return (
-    <IonContent id="transect-sections-list">
+    <Main id="transect-sections-list">
       <IonList lines="full">{sections}</IonList>
-    </IonContent>
+    </Main>
   );
 }
 

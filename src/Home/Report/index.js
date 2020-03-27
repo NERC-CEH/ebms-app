@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  IonContent,
   IonList,
   IonItem,
   IonPage,
@@ -14,6 +13,7 @@ import Log from 'helpers/log';
 import toast from 'helpers/toast';
 import Device from 'helpers/device';
 import Spinner from 'Components/Spinner';
+import Main from 'Components/Main';
 import speciesNames from 'common/data/names';
 import { fetchSpeciesReport } from './services';
 import './styles.scss';
@@ -172,21 +172,21 @@ class Report extends React.Component {
     if (!species.length && refreshing) {
       return (
         <IonPage>
-          <IonContent id="home-report">
+          <Main id="home-report">
             <Spinner />
-          </IonContent>
+          </Main>
         </IonPage>
       );
     }
 
     return (
       <IonPage>
-        <IonContent id="home-report">
+        <Main id="home-report">
           <IonRefresher slot="fixed" onIonRefresh={this.onListRefreshPull}>
             <IonRefresherContent />
           </IonRefresher>
           {this.getReport()}
-        </IonContent>
+        </Main>
       </IonPage>
     );
   }
