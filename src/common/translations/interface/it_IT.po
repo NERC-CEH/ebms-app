@@ -1037,7 +1037,7 @@ msgid ""
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Questa guida è ancora in via di sviluppo. Copre % (countrySpeciesCount) "
+"Questa guida è ancora in via di sviluppo. Copre {{countrySpeciesCount}} "
 "specie di farfalle su un totale di specie {{totalSpeciesCountryCount}} nel "
 "paese che hai selezionato. "
 
