@@ -29,7 +29,7 @@ function onToggle(appModel, setting, checked) {
   appModel.save();
 }
 
-async function uploadAllSamples(userModel) {
+async function uploadAllSamples(userModel, t) {
   Log('Settings:Menu:Controller: sending all samples.');
 
   if (!userModel.hasLogIn()) {
@@ -39,7 +39,7 @@ async function uploadAllSamples(userModel) {
 
   try {
     const affectedRecordsCount = await remoteSaveAll();
-    success(`${t('Uploading')} ${affectedRecordsCount} ${t('record(s)')}`);
+    success(t('Uploading {{count}} record', { count: affectedRecordsCount }));
   } catch (e) {
     error(`${e.message}`);
   }
@@ -55,7 +55,7 @@ const Container = observer(({ appModel, userModel }) => {
       <Main
         useTraining={useTraining}
         sendAnalytics={sendAnalytics}
-        uploadAllSamples={() => uploadAllSamples(userModel)}
+        uploadAllSamples={() => uploadAllSamples(userModel, t)}
         resetApp={() => resetApp(appModel, userModel)}
         onToggle={(setting, checked) => onToggle(appModel, setting, checked)}
         language={language}

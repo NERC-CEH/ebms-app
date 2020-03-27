@@ -1187,12 +1187,14 @@ msgid "Are you sure you want to upload all finished records?"
 msgstr ""
 
 # Part of batch upload option in app settings page
-msgid "Uploading"
+msgid "Please log in first to upload the records."
 msgstr ""
 
 # Part of batch upload option in app settings page
-msgid "record(s)"
-msgstr ""
+msgid "Uploading {{count}} record"
+msgid_plural "Uploading {{count}} records"
+msgstr[0] ""
+msgstr[1] ""
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
