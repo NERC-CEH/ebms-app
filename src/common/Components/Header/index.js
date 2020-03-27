@@ -7,7 +7,7 @@ import {
   IonTitle,
   IonBackButton,
 } from '@ionic/react';
-import Device from 'helpers/device';
+import Device from '../../helpers/device';
 import './styles.scss';
 
 // eslint-disable-next-line
