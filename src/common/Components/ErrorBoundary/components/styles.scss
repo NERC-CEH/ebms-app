@@ -1,0 +1,13 @@
+.error-boundary-message {
+  text-align: center;
+  opacity: 0.7;
+  background: pink;
+  margin: 0 10%;
+  padding: 30px;
+  position: absolute;
+  top: 30%;
+
+  p.error-boundary-message-code {
+    font-size: 10px;
+  }
+}

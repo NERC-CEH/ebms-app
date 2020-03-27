@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { IonPage } from '@ionic/react';
 import Log from 'helpers/log';
 import { observer } from 'mobx-react';
+import { useTranslation } from 'react-i18next';
 import { resetDefaults, remoteSaveAll } from 'saved_samples';
 import AppHeader from 'Components/Header';
 import { success, warn, error } from 'helpers/toast';
@@ -46,6 +47,7 @@ async function uploadAllSamples(userModel) {
 
 const Container = observer(({ appModel, userModel }) => {
   const { useTraining, sendAnalytics, language, country } = appModel.attrs;
+  const { t } = useTranslation();
 
   return (
     <IonPage>

@@ -8,6 +8,7 @@ import 'core-js/features/set';
 
 import 'react';
 import 'react-dom';
+import 'react-i18next';
 import 'lodash';
 import '@indicia-js/core';
 import 'leaflet/dist/leaflet.css';

@@ -33,7 +33,6 @@ export default class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       const { eventId } = this.state;
-      console.error(eventId);
       return <ErrorMessage eventId={eventId} />;
     }
 

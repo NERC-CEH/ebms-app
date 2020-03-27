@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import alert from 'common/helpers/alert';
 import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
 import {
   IonItem,
   IonLabel,
@@ -53,7 +54,7 @@ const Survey = observer(({ sample }) => {
       return (
         <IonLabel class="ion-text-wrap">
           <h3>
-            <b>{t('Transect')}</b>
+            <b><T>Transect</T></b>
           </h3>
           <h3>{prettyDate}</h3>
         </IonLabel>
@@ -67,7 +68,9 @@ const Survey = observer(({ sample }) => {
         </h3>
         <h3>{prettyDate}</h3>
         <IonBadge color="medium">
-          <IonIcon src="/images/butterfly.svg" /> {speciesCount}
+          <IonIcon src="/images/butterfly.svg" /> 
+          {' '}
+          {speciesCount}
         </IonBadge>
       </IonLabel>
     );

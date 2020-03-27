@@ -101,7 +101,7 @@ const config = {
         test: /\.pot?$/,
         use: [
           'json-loader',
-          'po-loader?format=mf',
+          'po-loader?format=raw',
           {
             // removes empty translations
             loader: 'string-replace-loader',

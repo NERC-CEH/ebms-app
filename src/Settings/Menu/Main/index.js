@@ -12,7 +12,8 @@ import {
 } from '@ionic/react';
 import { undo, school, flag, globe, share, paperPlane } from 'ionicons/icons';
 import alert from 'common/helpers/alert';
-import { countries, languages } from 'helpers/translator';
+import languages from 'common/config/languages';
+import countries from 'common/config/countries';
 import config from 'config';
 import AppMain from 'Components/Main';
 import './styles.scss';

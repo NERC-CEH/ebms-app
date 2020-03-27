@@ -1,41 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Trans as T } from 'react-i18next';
+import './styles.scss';
 
 function ErrorMessage({ eventId }) {
   return (
-    <div
-      style={{
-        textAlign: 'center',
-        opacity: 0.7,
-        background: 'pink',
-        margin: '0 10%',
-        padding: '30px',
-        position: 'absolute',
-        top: '30%',
-      }}
-    >
-      <span
-        style={{
-          fontWeight: 500,
-        }}
-      >
-        Oops! Something, went wrong.
-      </span>
-      <p
-        style={{
-          fontSize: 10,
-        }}
-      >
-        This is the error event id: 
-        {' '}
-        {eventId}
+    <div className="error-boundary-message">
+      <h5>
+        <T>Oops! Something, went wrong.</T>
+      </h5>
+
+      <p className="error-boundary-message-code">
+        {eventId && <T>This is the error event id: {{ eventId }}</T>}
       </p>
     </div>
   );
 }
 
 ErrorMessage.propTypes = {
-  eventId: PropTypes.any.isRequired,
+  eventId: PropTypes.any,
 };
 
 export default ErrorMessage;

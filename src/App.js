@@ -1,5 +1,5 @@
 import 'helpers/system_checkup';
-import 'helpers/translator';
+import 'common/translations/translator';
 import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { IonApp, IonPage, IonRouterOutlet } from '@ionic/react';

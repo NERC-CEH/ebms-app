@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonModal, IonGrid, IonRow, IonPage, IonCol } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 import Main from 'Components/Main';
 import ModalHeader from 'Components/ModalHeader';
 import speciesProfiles from 'common/data/species.profiles.data.json';
@@ -15,11 +16,11 @@ function getInfoMessage(countrySpeciesCount, totalSpeciesCountryCount) {
   return (
     <div className="info-message">
       <p>
-        {t(
-          'This guide is still in development. It covers %(countrySpeciesCount) butterfly species out of the %(totalSpeciesCountryCount) species in your selected country.'
-        )
-          .replace('%(countrySpeciesCount)', countrySpeciesCount)
-          .replace('%(totalSpeciesCountryCount)', totalSpeciesCountryCount)}
+        <T>
+          This guide is still in development. It covers{' '}
+          {{ countrySpeciesCount }} butterfly species out of the{' '}
+          {{ totalSpeciesCountryCount }} species in your selected country.
+        </T>
       </p>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel, IonPage } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 import Main from 'Components/Main';
 import AppHeader from 'Components/Header';
 import './styles.scss';
@@ -20,6 +21,9 @@ const H = ({ children }) => (
 );
 
 const Section = ({ children }) => <IonList lines="none">{children}</IonList>;
+
+const helpEmail = 'ebms@ceh.ac.uk';
+const eBMSWebsiteLink = ''; // backwards compatible
 
 const Component = () => (
   <IonPage>
@@ -53,7 +57,7 @@ const Component = () => (
         </P>
         <P>
           {t(
-            'Once you have finished your 15-minute Count and checked that the species and numbers seen are correct, press the UPLOAD button to submit. This is important to make sure your data is stored securely in the eBMS database.  A record of the count will be held on your device for future reference as well as on your online account.'
+            'Once you have finished your 15-minute Count and checked that the species and numbers seen are correct, press the UPLOAD button to submit. This is important to make sure your data is stored securely in the eBMS database. A record of the count will be held on your device for future reference as well as on your online account.'
           )}
         </P>
       </Section>
@@ -61,9 +65,16 @@ const Component = () => (
       <Section>
         <H>{t('How to record along an existing transect')}</H>
         <P>
-          {t(
-            'You can also use the app to submit records while walking an existing butterfly monitoring transect. These have already been established by country Butterfly Monitoring Schemes and are best completed by experienced recorders. Recording existing transects within the app requires that your account is already linked to a transect setup within the eBMS system.  If no transect sites are listed once you are logged into the app, please contact your national co-ordinator (please email %(helpEmail) for advice).'
-          ).replace('%(helpEmail)', 'ebms@ceh.ac.uk')}
+          <T>
+            You can also use the app to submit records while walking an existing
+            butterfly monitoring transect. These have already been established
+            by country Butterfly Monitoring Schemes and are best completed by
+            experienced recorders. Recording existing transects within the app
+            requires that your account is already linked to a transect setup
+            within the eBMS system. If no transect sites are listed once you are
+            logged into the app, please contact your national co-ordinator
+            (please email {{ helpEmail }} for advice).
+          </T>
         </P>
         <P>
           {t(
@@ -75,10 +86,15 @@ const Component = () => (
       <Section>
         <H>{t('Survey section')}</H>
         <P>
-          {t(
-            'In this tab, on the right part of the + Button, you can see the PENDING counts, your records that have not been submitted and the UPLOADED counts, the ones submitted to the eBMS database. The Pending counts can be submitted to the system by clicking on it and pressing the Upload option. You could see the species list that you recorded for Uploaded counts. All your records can also be viewed and edited on the %(eBMSWebsiteLink)'
-          ).replace('%(eBMSWebsiteLink)', '')}
-          {' '}
+          <T>
+            In this tab, on the right part of the + Button, you can see the
+            PENDING counts, your records that have not been submitted and the
+            UPLOADED counts, the ones submitted to the eBMS database. The
+            Pending counts can be submitted to the system by clicking on it and
+            pressing the Upload option. You could see the species list that you
+            recorded for Uploaded counts. All your records can also be viewed
+            and edited on the {{ eBMSWebsiteLink }}
+          </T>
           <a
             href="https://butterfly-monitoring.net/elastic/my-records"
             target="_blank"

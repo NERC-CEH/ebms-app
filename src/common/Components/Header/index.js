@@ -7,6 +7,7 @@ import {
   IonTitle,
   IonBackButton,
 } from '@ionic/react';
+import { useTranslation } from 'react-i18next';
 import Device from '../../helpers/device';
 import './styles.scss';
 
@@ -38,6 +39,8 @@ const Header = ({
   defaultHref,
   _defaultToEdit,
 }) => {
+  const { t } = useTranslation();
+
   if (_defaultToEdit) {
     const baseUrl = _defaultToEdit.split('/edit/')[0];
     defaultHref = `${baseUrl}/edit`; // eslint-disable-line

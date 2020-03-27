@@ -49,7 +49,7 @@ module.exports = {
     'react/jsx-props-no-spreading': OFF,
     'react/state-in-constructor': OFF,
     'react/static-property-placement': OFF,
-    'react/jsx-one-expression-per-line': [WARN, { allow: 'single-child' }],
+    'react/jsx-one-expression-per-line': OFF,
   },
   overrides: [
     {

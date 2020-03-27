@@ -49,7 +49,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "kazlauskis.ionic-react-components/header@0.1.0": {
+    "kazlauskis.ionic-react-components/header@0.1.1": {
         "files": [
             {
                 "relativePath": "src/common/Components/Header/index.js",

@@ -20,7 +20,7 @@ class Component extends React.Component {
   render() {
     const { showPassword } = this.state;
     const { onSubmit, schema } = this.props;
-
+    
     return (
       <AppMain id="login-page">
         <div className="info-message">

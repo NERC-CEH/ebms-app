@@ -13,7 +13,7 @@ import {
   IonLabel,
 } from '@ionic/react';
 import { globe } from 'ionicons/icons';
-import { languages } from 'helpers/translator';
+import languages from 'common/config/languages';
 import AppHeader from 'Components/Header';
 import './styles.scss';
 

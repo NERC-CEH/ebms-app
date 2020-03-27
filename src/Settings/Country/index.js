@@ -13,7 +13,7 @@ import {
 } from '@ionic/react';
 import Main from 'Components/Main';
 import { flag } from 'ionicons/icons';
-import { countries } from 'helpers/translator';
+import countries from 'common/config/countries';
 import AppHeader from 'Components/Header';
 import './styles.scss';
 
