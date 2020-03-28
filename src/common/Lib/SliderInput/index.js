@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Trans as T } from 'react-i18next';
 import { IonItem, IonRange, IonButton, IonIcon } from '@ionic/react';
 import { removeCircleOutline, addCircleOutline } from 'ionicons/icons';
 import './styles.scss';
@@ -44,30 +45,31 @@ LogSlider.prototype = {
 };
 
 class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    this.sliderRef = React.createRef();
-    this.inputRef = React.createRef();
-    const value = props.default;
+  sliderRef = React.createRef();
 
-    const maxval = props.config.max || 500;
-    const minval = props.config.min || 1;
-    const notUseLogarithmic = maxval <= 100;
+  inputRef = React.createRef();
 
-    this.logsl = new LogSlider({
-      maxpos: 100,
-      minval,
-      maxval,
-      notUseLogarithmic,
-    });
+  logsl = new LogSlider({
+    maxpos: 100,
+    minval: this.props.config.min || 1,
+    maxval: this.props.config.max || 500,
+    notUseLogarithmic: this.props.config.max <= 100,
+  });
 
-    this.state = {
-      value,
-      position: this.logsl.position(value || 1).toFixed(0),
-    };
-  }
+  state = {
+    value: this.props.default,
+    position: this.logsl.position(this.props.default || 1).toFixed(0),
+  };
 
-  onChangeInputE = e => this.onChangeInput(e.target.value);
+  onChangeInputE = e => {
+    const { value } = e.target;
+
+    if (value > this.props.config.max) {
+      return;
+    }
+
+    this.onChangeInput(value);
+  };
 
   onChangeInput = val => {
     let value = parseInt(val, 10);
@@ -116,7 +118,13 @@ class Component extends React.Component {
 
   increaseCount = () => {
     const val = this.state.value || 0;
-    this.onChangeInput(val + 1);
+    const newVal = val + 1;
+
+    if (newVal > this.props.config.max) {
+      return;
+    }
+
+    this.onChangeInput(newVal);
   };
 
   decreaseCount = () => {
@@ -135,7 +143,9 @@ class Component extends React.Component {
       <div>
         {message && (
           <div className="info-message">
-            <p>{t(message)}</p>
+            <p>
+              <T>{message}</T>
+            </p>
           </div>
         )}
         <IonItem className="slider-input">
