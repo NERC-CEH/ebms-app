@@ -10,6 +10,7 @@ import EditOccurrence from './EditOccurrence';
 import Taxon from './Taxon';
 import AreaAttr from './Area';
 import Comment from './Comment';
+import OccurrenceComment from './OccurrenceComment';
 import Stage from './Stage';
 
 async function showDraftAlert() {
@@ -105,6 +106,11 @@ class Routes extends React.Component {
           render={props => <Taxon sample={this.state.sample} {...props} />}
         />
         <Route
+          path="/survey/area/:id/edit/comment"
+          exact
+          render={props => <Comment sample={this.state.sample} {...props} />}
+        />
+        <Route
           path="/survey/area/:id/edit"
           exact
           render={props => (
@@ -124,7 +130,9 @@ class Routes extends React.Component {
         <Route
           path="/survey/area/:id/edit/occ/:occId/comment"
           exact
-          render={props => <Comment sample={this.state.sample} {...props} />}
+          render={props => (
+            <OccurrenceComment sample={this.state.sample} {...props} />
+          )}
         />
         <Route
           path="/survey/area/:id/edit/occ/:occId"

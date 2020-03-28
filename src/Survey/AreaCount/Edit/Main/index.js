@@ -18,6 +18,7 @@ import {
   addCircleOutline,
   funnel,
   open,
+  clipboard,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
@@ -29,10 +30,10 @@ import './styles.scss';
 const speciesNameSort = (occ1, occ2) => {
   const taxon1 = occ1.attrs.taxon;
   const taxonName1 = taxon1[taxon1.found_in_name];
-  
+
   const taxon2 = occ2.attrs.taxon;
   const taxonName2 = taxon2[taxon2.found_in_name];
-  
+
   return taxonName1.localeCompare(taxonName2);
 };
 
@@ -153,6 +154,8 @@ class AreaCount extends Component {
     const { area } = sample.attrs.location || {};
     const areaPretty = area && `${area.toLocaleString()} m²`;
 
+    const { comment } = sample.attrs;
+
     const startTime = new Date(sample.attrs.surveyStartTime);
     const countdown =
       startTime.getTime() +
@@ -184,6 +187,14 @@ class AreaCount extends Component {
             iconMode="md"
             label="Area"
             value={areaPretty}
+          />
+          <MenuAttrItem
+            routerLink={`/survey/area/${sample.cid}/edit/comment`}
+            disabled={isDisabled}
+            icon={clipboard}
+            iconMode="md"
+            label="Comment"
+            value={comment}
           />
           <IonItem
             detail={!isDisabled}

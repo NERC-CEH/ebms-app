@@ -10,18 +10,26 @@ import { observer } from 'mobx-react';
 class EditOccurrence extends Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
+    match: PropTypes.object,
   };
+
+  constructor(props) {
+    super(props);
+    const { match, sample } = props;
+
+    const occID = match.params.occId;
+    this.occ = sample.occurrences.find(occ => occ.cid === occID);
+  }
 
   onChange = e => {
     const { sample } = this.props;
 
-    sample.attrs.comment = e.target.value;
+    this.occ.attrs.comment = e.target.value;
     sample.save();
   };
 
   render() {
-    const { sample } = this.props;
-    const { comment } = sample.attrs;
+    const { comment } = this.occ.attrs;
 
     return (
       <Page id="area-count-occurrence-edit-comment">

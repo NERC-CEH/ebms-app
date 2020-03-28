@@ -81,6 +81,11 @@ const config = {
       },
 
       area: { id: 723 },
+      
+      comment: {
+        label: 'Comment',
+        type: 'textarea',
+      },
     },
     occ: {
       training: {
