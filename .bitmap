@@ -19,7 +19,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "kazlauskis.ionic-react-components/collapse@0.2.1": {
+    "kazlauskis.ionic-react-components/collapse@0.2.2": {
         "files": [
             {
                 "relativePath": "src/common/Lib/Collapse/index.js",

@@ -7,16 +7,13 @@ import './styles.scss';
 class Collapse extends Component {
   state = { open: false };
 
-  constructor(props) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
-  }
-
-  onClick() {
+  onClick = () => {
     this.setState(prevState => ({ open: !prevState.open }));
-  }
+  };
 
   render() {
+    const { title, children } = this.props;
+
     return (
       <>
         <IonItem
@@ -24,17 +21,21 @@ class Collapse extends Component {
           class={`collapse-block in-list ${this.state.open ? 'opened' : ''}`}
           lines="none"
         >
-          <IonLabel class="ion-text-wrap">{this.props.title}</IonLabel>
+          <IonLabel class="ion-text-wrap">{title}</IonLabel>
           <IonIcon icon={this.state.open ? remove : add} slot="end" />
         </IonItem>
-        {this.state.open && <IonItem>{this.props.children}</IonItem>}
+
+        {this.state.open && <IonItem>{children}</IonItem>}
       </>
     );
   }
 }
 
 Collapse.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   title: PropTypes.string,
 };
 
