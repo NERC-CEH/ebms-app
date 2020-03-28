@@ -6,20 +6,23 @@ import Header from 'Lib/Header';
 import Toggle from 'Lib/Toggle';
 import './styles.scss';
 
-const HeaderComponent = observer(({ isGPSTracking, toggleGPStracking, isDisabled }) => {
-  const GPSToggle = (
-    <>
-      <IonLabel>GPS</IonLabel>
-      <Toggle
-        className="survey-gps-toggle"
-        checked={isGPSTracking}
-        onToggle={toggleGPStracking}
-      />
-    </>
-  );
+const HeaderComponent = observer(
+  ({ isGPSTracking, toggleGPStracking, isDisabled }) => {
+    const GPSToggle = (
+      <>
+        <IonLabel>GPS</IonLabel>
+        <Toggle
+          className="survey-gps-toggle"
+          color="success"
+          checked={isGPSTracking}
+          onToggle={toggleGPStracking}
+        />
+      </>
+    );
 
-  return <Header title={t('Area')} rightSlot={!isDisabled && GPSToggle} />;
-});
+    return <Header title={t('Area')} rightSlot={!isDisabled && GPSToggle} />;
+  }
+);
 
 HeaderComponent.propTypes = {
   toggleGPStracking: PropTypes.func.isRequired,

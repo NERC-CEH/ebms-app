@@ -3,16 +3,12 @@ import { IonToggle } from '@ionic/react';
 import PropTypes from 'prop-types';
 
 class Toggle extends Component {
-  constructor(props) {
-    super(props);
-    this.toggleRef = React.createRef();
-    this.onToggle = this.onToggle.bind(this);
-  }
+  toggleRef = React.createRef();
 
-  onToggle(e) {
+  onToggle = e => {
     const { checked } = e.target;
     this.props.onToggle(checked);
-  }
+  };
 
   componentDidMount() {
     this.toggleRef.current.addEventListener('ionChange', this.onToggle);
@@ -23,13 +19,15 @@ class Toggle extends Component {
   }
 
   render() {
+    const { checked, disabled, onToggle, ...props } = this.props;
+
     return (
       <IonToggle
         ref={this.toggleRef}
         slot="end"
-        disabled={this.props.disabled}
-        checked={this.props.checked}
-        class={this.props.className || ''}
+        disabled={disabled}
+        checked={checked}
+        {...props}
       />
     );
   }
@@ -39,7 +37,6 @@ Toggle.propTypes = {
   onToggle: PropTypes.func.isRequired,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
-  className: PropTypes.string,
 };
 
 export default Toggle;

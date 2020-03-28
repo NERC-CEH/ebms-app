@@ -270,7 +270,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "kazlauskis.ionic-react-components/toggle-with-validation@0.2.1": {
+    "kazlauskis.ionic-react-components/toggle-with-validation@0.2.2": {
         "files": [
             {
                 "relativePath": "src/common/Lib/ToggleWithValidation/index.js",
@@ -288,7 +288,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "kazlauskis.ionic-react-components/toggle@0.2.1": {
+    "kazlauskis.ionic-react-components/toggle@0.2.2": {
         "files": [
             {
                 "relativePath": "src/common/Lib/Toggle.js",
