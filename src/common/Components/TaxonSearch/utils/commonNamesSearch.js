@@ -12,7 +12,7 @@ export default (genera, normSearchPhrase, results, maxResults) => {
     genus[2].forEach((species, speciesIndex) => {
       const ENGLISH = 0;
       const SWEDISH = 1;
-      const nameIndex = language === 'sv_SE' ? SWEDISH : ENGLISH;
+      const nameIndex = language.startsWith('sv') ? SWEDISH : ENGLISH;
       const name = species[3][nameIndex];
 
       const matches = name.match(new RegExp(normSearchPhrase, 'i'));
