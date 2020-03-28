@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonItem, IonTextarea } from '@ionic/react';
 import Page from 'Components/Page';
-import AppHeader from 'common/Components/Header';
+import Header from 'common/Components/Header';
 import Main from 'Components/Main';
 import { observer } from 'mobx-react';
 
@@ -33,7 +33,7 @@ class EditOccurrence extends Component {
 
     return (
       <Page id="area-count-occurrence-edit-comment">
-        <AppHeader title={t('Comment')} />
+        <Header title={t('Comment')} />
         <Main>
           <div className="info-message">
             <p>{t('Please add any extra info about this record.')}</p>

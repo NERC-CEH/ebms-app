@@ -1,13 +1,13 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
 import Page from 'Components/Page';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import AppMain from 'Components/Main';
 import './styles.scss';
 
 const Component = () => (
   <Page id="about">
-    <AppHeader title={t('About')} />
+    <Header title={t('About')} />
     <AppMain id="about" class="ion-padding">
       <IonList lines="none">
         <IonItem>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { NavContext } from '@ionic/react';
 import Page from 'Components/Page';
 import Main from 'Components/Main';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import RadioInput from 'Components/RadioInput';
 import { observer } from 'mobx-react';
 import config from 'config';
@@ -45,7 +45,7 @@ class Component extends React.Component {
   render() {
     return (
       <Page id="transect-sections-edit-reliability">
-        <AppHeader title={t(this.attrConfig.label)} />
+        <Header title={t(this.attrConfig.label)} />
         <Main>
           <RadioInput
             config={this.attrConfig}

@@ -5,7 +5,7 @@ import { observer } from 'mobx-react';
 import { useTranslation } from 'react-i18next';
 import { resetDefaults, remoteSaveAll } from 'saved_samples';
 import Page from 'Components/Page';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import { success, warn, error } from 'helpers/toast';
 import Main from './Main';
 
@@ -51,7 +51,7 @@ const Container = observer(({ appModel, userModel }) => {
 
   return (
     <Page id="settings-menu">
-      <AppHeader title={t('Settings')} />
+      <Header title={t('Settings')} />
       <Main
         useTraining={useTraining}
         sendAnalytics={sendAnalytics}

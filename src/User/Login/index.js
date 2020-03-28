@@ -6,7 +6,7 @@ import Device from 'helpers/device';
 import { warn, error } from 'helpers/toast';
 import loader from 'helpers/loader';
 import Page from 'Components/Page';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import Main from './Main';
 
 async function onLogin(userModel, details, onSuccess) {
@@ -52,7 +52,7 @@ export default function LoginContainer({ userModel, onSuccess }) {
 
   return (
     <Page id="user-login">
-      <AppHeader title={t('Login')} />
+      <Header title={t('Login')} />
       <Main
         schema={userModel.loginSchema}
         onSubmit={details => onLogin(userModel, details, onSuccessReturn)}

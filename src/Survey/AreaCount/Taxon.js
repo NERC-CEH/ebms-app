@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import AppHeader from 'common/Components/Header';
+import Header from 'common/Components/Header';
 import TaxonSearch from 'common/Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
 import Page from 'Components/Page';
@@ -40,7 +40,7 @@ class Controller extends React.Component {
 
     return (
       <Page id="area-count-edit-taxa">
-        <AppHeader title={t('Species')} />
+        <Header title={t('Species')} />
         <Main>
           <TaxonSearch
             onSpeciesSelected={onSpeciesSelected}

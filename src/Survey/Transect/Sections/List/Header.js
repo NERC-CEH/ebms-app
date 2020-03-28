@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton } from '@ionic/react';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 
 function getRefreshButton(showRefreshButton, onRefresh) {
   if (!showRefreshButton) {
@@ -10,11 +10,11 @@ function getRefreshButton(showRefreshButton, onRefresh) {
   return <IonButton onClick={onRefresh}>{t('Refresh')}</IonButton>;
 }
 
-const Header = ({ showRefreshButton, onRefresh }) => {
+const HeaderComponent = ({ showRefreshButton, onRefresh }) => {
   const title = showRefreshButton ? t('Transects') : t('Sections');
 
   return (
-    <AppHeader
+    <Header
       title={title}
       rightSlot={getRefreshButton(showRefreshButton, onRefresh)}
       defaultHref="/home/user-surveys"
@@ -22,9 +22,9 @@ const Header = ({ showRefreshButton, onRefresh }) => {
   );
 };
 
-Header.propTypes = {
+HeaderComponent.propTypes = {
   showRefreshButton: PropTypes.bool.isRequired,
   onRefresh: PropTypes.func.isRequired,
 };
 
-export default Header;
+export default HeaderComponent;

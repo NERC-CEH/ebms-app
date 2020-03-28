@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import Log from 'helpers/log';
 import alert from 'common/helpers/alert';
 import Page from 'Components/Page';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import { resetDefaults } from 'saved_samples';
 import Main from './Main';
 
@@ -56,7 +56,7 @@ const Controller = observer(props => {
   const isLoggedIn = userModel.hasLogIn();
   return (
     <Page id="info-menu">
-      <AppHeader title={t('Menu')} />
+      <Header title={t('Menu')} />
       <Main
         user={userModel.attrs}
         appModel={appModel}

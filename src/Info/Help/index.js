@@ -4,12 +4,12 @@ import Page from 'Components/Page';
 import Main from 'Components/Main';
 import { settings, undo, person, add, send } from 'ionicons/icons';
 import Collapse from 'Components/Collapse/index';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import './styles.scss';
 
 export default () => (
   <Page id="help">
-    <AppHeader title={t('Help')} />
+    <Header title={t('Help')} />
     <Main class="ion-padding">
       <IonList lines="none">
         <IonItemDivider>{t('Surveys')}</IonItemDivider>

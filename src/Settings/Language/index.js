@@ -14,7 +14,7 @@ import {
 } from '@ionic/react';
 import { globe } from 'ionicons/icons';
 import languages from 'common/config/languages';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import './styles.scss';
 
 function SelectLanguage({ appModel, hideHeader }) {
@@ -39,7 +39,7 @@ function SelectLanguage({ appModel, hideHeader }) {
 
   return (
     <Page id="language-select">
-      {!hideHeader && <AppHeader title={t('Language')} />}
+      {!hideHeader && <Header title={t('Language')} />}
 
       <Main>
         <IonList>

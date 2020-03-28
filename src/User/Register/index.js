@@ -7,7 +7,7 @@ import { warn, error } from 'common/helpers/toast';
 import alert from 'common/helpers/alert';
 import loader from 'common/helpers/loader';
 import Page from 'Components/Page';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import Main from './Main';
 
 async function onRegister(userModel, details, lang, onSuccess) {
@@ -64,7 +64,7 @@ export default function RegisterContainer({ userModel, appModel }) {
 
   return (
     <Page id="user-register">
-      <AppHeader title={t('Register')} />
+      <Header title={t('Register')} />
       <Main
         schema={userModel.registerSchema}
         onSubmit={details => onRegister(userModel, details, lang, onSuccess)}

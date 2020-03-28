@@ -2,14 +2,14 @@ import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
 import Page from 'Components/Page';
 import Main from 'Components/Main';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import species from 'common/data/species.profiles.data';
 import './sponsors.png';
 import './styles.scss';
 
 export default () => (
   <Page id="credits">
-    <AppHeader title={t('Credits')} />
+    <Header title={t('Credits')} />
     <Main class="ion-padding">
       <IonList lines="none">
         <IonItem>

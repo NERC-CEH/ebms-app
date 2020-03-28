@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import {  IonButton } from '@ionic/react';
 import alert from 'common/helpers/alert';
 import Page from 'Components/Page';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import Main from './Main';
 
 function increaseCount(occ) {
@@ -103,7 +103,7 @@ class Container extends React.Component {
 
     return (
       <Page id="transect-sections-edit">
-        <AppHeader
+        <Header
           title={sectionCode}
           defaultHref="/home/user-surveys"
           rightSlot={this.getNextSectionButton(sectionSample)}

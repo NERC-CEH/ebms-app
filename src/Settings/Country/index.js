@@ -14,7 +14,7 @@ import Page from 'Components/Page';
 import Main from 'Components/Main';
 import { flag } from 'ionicons/icons';
 import countries from 'common/config/countries';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import './styles.scss';
 
 function SelectCountry({ appModel, hideHeader }) {
@@ -44,7 +44,7 @@ function SelectCountry({ appModel, hideHeader }) {
 
   return (
     <Page id="country-select">
-      {!hideHeader && <AppHeader title={t('Country')} />}
+      {!hideHeader && <Header title={t('Country')} />}
 
       <Main>
         <IonList>

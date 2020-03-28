@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton } from '@ionic/react';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import './styles.scss';
 
 function getFinishButton(onSubmit, isEditing) {
@@ -9,13 +9,13 @@ function getFinishButton(onSubmit, isEditing) {
   return <IonButton onClick={onSubmit}>{label}</IonButton>;
 }
 
-const Header = ({ onSubmit, isTraining, isEditing, isDisabled }) => {
+const HeaderComponent = ({ onSubmit, isTraining, isEditing, isDisabled }) => {
   const trainingModeSubheader = isTraining && (
     <div className="training-survey">training survey</div>
   );
 
   return (
-    <AppHeader
+    <Header
       title={t('15min Count')}
       rightSlot={!isDisabled && getFinishButton(onSubmit, isEditing)}
       subheader={trainingModeSubheader}
@@ -24,11 +24,11 @@ const Header = ({ onSubmit, isTraining, isEditing, isDisabled }) => {
   );
 };
 
-Header.propTypes = {
+HeaderComponent.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   isTraining: PropTypes.bool.isRequired,
   isEditing: PropTypes.bool,
   isDisabled: PropTypes.bool,
 };
 
-export default Header;
+export default HeaderComponent;

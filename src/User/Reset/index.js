@@ -7,7 +7,7 @@ import { warn, error } from 'common/helpers/toast';
 import alert from 'common/helpers/alert';
 import loader from 'common/helpers/loader';
 import Page from 'Components/Page';
-import AppHeader from 'Components/Header';
+import Header from 'Components/Header';
 import Main from './Main';
 
 async function onSubmit(userModel, details, onSuccess) {
@@ -56,7 +56,7 @@ export default function Container({ userModel }) {
 
   return (
     <Page id="user-reset">
-      <AppHeader title={t('Reset')} />
+      <Header title={t('Reset')} />
       <Main
         schema={userModel.resetSchema}
         onSubmit={details => onSubmit(userModel, details, onSuccess)}
