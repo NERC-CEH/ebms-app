@@ -2,13 +2,13 @@ import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
 import Page from 'Lib/Page';
 import Header from 'Lib/Header';
-import AppMain from 'Lib/Main';
+import Main from 'Lib/Main';
 import './styles.scss';
 
 const Component = () => (
   <Page id="about">
     <Header title={t('About')} />
-    <AppMain id="about" class="ion-padding">
+    <Main id="about" class="ion-padding">
       <IonList lines="none">
         <IonItem>
           <IonLabel>
@@ -74,7 +74,7 @@ const Component = () => (
           </IonLabel>
         </IonItem>
       </IonList>
-    </AppMain>
+    </Main>
   </Page>
 );
 

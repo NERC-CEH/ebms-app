@@ -15,7 +15,7 @@ import alert from 'common/helpers/alert';
 import languages from 'common/config/languages';
 import countries from 'common/config/countries';
 import config from 'config';
-import AppMain from 'Lib/Main';
+import Main from 'Lib/Main';
 import './styles.scss';
 
 function resetDialog(resetApp) {
@@ -82,7 +82,7 @@ class Component extends React.Component {
     } = this.props;
 
     return (
-      <AppMain class="app-settings">
+      <Main class="app-settings">
         <IonList lines="full">
           <IonItemDivider>{t('Records')}</IonItemDivider>
           <IonItem
@@ -146,7 +146,7 @@ class Component extends React.Component {
         </IonList>
 
         <p className="app-version">{`v${config.version} (${config.build})`}</p>
-      </AppMain>
+      </Main>
     );
   }
 }

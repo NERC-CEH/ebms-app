@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
-import AppMain from 'Lib/Main';
+import Main from 'Lib/Main';
 import { key, person, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 import InputWithValidation from 'Lib/InputWithValidation';
@@ -22,7 +22,7 @@ class Component extends React.Component {
     const { onSubmit, schema } = this.props;
     
     return (
-      <AppMain id="login-page">
+      <Main id="login-page">
         <div className="info-message">
           <p>{t('Please sign in with your eBMS account or register.')}</p>
         </div>
@@ -76,7 +76,7 @@ class Component extends React.Component {
             </Form>
           )}
         />
-      </AppMain>
+      </Main>
     );
   }
 }

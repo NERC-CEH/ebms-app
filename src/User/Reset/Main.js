@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton, IonList } from '@ionic/react';
-import AppMain from 'Lib/Main';
+import Main from 'Lib/Main';
 import { person } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 import InputWithValidation from 'Lib/InputWithValidation';
 
 const Component = ({ onSubmit, schema }) => {
   return (
-    <AppMain id="reset-page">
+    <Main id="reset-page">
       <div className="info-message">
         <p>
           {t(
@@ -38,7 +38,7 @@ const Component = ({ onSubmit, schema }) => {
           </Form>
         )}
       />
-    </AppMain>
+    </Main>
   );
 };
 

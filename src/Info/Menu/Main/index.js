@@ -13,7 +13,7 @@ import {
   helpBuoy,
   book,
 } from 'ionicons/icons';
-import AppMain from 'Lib/Main';
+import Main from 'Lib/Main';
 import config from 'config';
 import './styles.scss';
 import './logo.png';
@@ -22,7 +22,7 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
   const lang = appModel.attrs.language;
 
   return (
-    <AppMain class="app-menu">
+    <Main class="app-menu">
       <img src="/images/logo.png" alt="app logo" />
 
       <IonList lines="full">
@@ -83,7 +83,7 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
           {t('App')}
         </IonItem>
       </IonList>
-    </AppMain>
+    </Main>
   );
 });
 
