@@ -24,7 +24,7 @@ class Component extends React.Component {
     const { onSubmit, schema, lang } = this.props;
 
     return (
-      <Main id="register-page">
+      <Main>
         <Formik
           validationSchema={schema}
           onSubmit={onSubmit}

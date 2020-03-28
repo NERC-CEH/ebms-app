@@ -8,7 +8,7 @@ import InputWithValidation from 'Lib/InputWithValidation';
 
 const Component = ({ onSubmit, schema }) => {
   return (
-    <Main id="reset-page">
+    <Main>
       <div className="info-message">
         <p>
           {t(

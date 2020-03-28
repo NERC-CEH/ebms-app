@@ -22,7 +22,7 @@ class Component extends React.Component {
     const { onSubmit, schema } = this.props;
     
     return (
-      <Main id="login-page">
+      <Main>
         <div className="info-message">
           <p>{t('Please sign in with your eBMS account or register.')}</p>
         </div>
