@@ -228,6 +228,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "kazlauskis.ionic-react-components/section@0.2.2": {
+        "files": [
+            {
+                "relativePath": "src/common/Lib/Section.js",
+                "test": false,
+                "name": "Section.js"
+            }
+        ],
+        "mainFile": "src/common/Lib/Section.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "kazlauskis.ionic-react-components/slider-input@0.2.1": {
         "files": [
             {

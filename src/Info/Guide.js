@@ -1,26 +1,11 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel } from '@ionic/react';
 import Page from 'Lib/Page';
 import { Trans as T } from 'react-i18next';
 import Main from 'Lib/Main';
 import Header from 'Lib/Header';
+import Section from 'Lib/Section';
 
-/* eslint react/prop-types:0 */
-const P = ({ children }) => (
-  <IonItem>
-    <IonLabel>{children}</IonLabel>
-  </IonItem>
-);
-
-const H = ({ children }) => (
-  <IonItem lines="inset">
-    <IonLabel>
-      <b>{children}</b>
-    </IonLabel>
-  </IonItem>
-);
-
-const Section = ({ children }) => <IonList lines="none">{children}</IonList>;
+const { P, H } = Section;
 
 const helpEmail = 'ebms@ceh.ac.uk';
 const eBMSWebsiteLink = ''; // backwards compatible
