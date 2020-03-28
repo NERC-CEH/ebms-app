@@ -150,6 +150,10 @@ class Component extends React.Component {
           ? getTransectPosition(sample)
           : getAreaCountPosition(sample);
 
+      if (!position.length) {
+        return agg;
+      }
+
       return [...agg, position];
     };
 
