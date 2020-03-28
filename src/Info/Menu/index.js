@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import Log from 'helpers/log';
 import alert from 'common/helpers/alert';
-import Page from 'Components/Page';
-import Header from 'Components/Header';
+import Page from 'Lib/Page';
+import Header from 'Lib/Header';
 import { resetDefaults } from 'saved_samples';
 import Main from './Main';
 

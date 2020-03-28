@@ -1,8 +1,8 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
-import Page from 'Components/Page';
-import Main from 'Components/Main';
-import Header from 'Components/Header';
+import Page from 'Lib/Page';
+import Main from 'Lib/Main';
+import Header from 'Lib/Header';
 import species from 'common/data/species.profiles.data';
 import './sponsors.png';
 import './styles.scss';

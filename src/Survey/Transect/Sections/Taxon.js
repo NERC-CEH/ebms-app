@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import Header from 'common/Components/Header';
-import TaxonSearch from 'common/Components/TaxonSearch';
+import Header from 'Lib/Header';
+import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
-import Page from 'Components/Page';
-import Main from 'Components/Main';
+import Page from 'Lib/Page';
+import Main from 'Lib/Main';
 import Occurrence from 'occurrence';
 
 @observer

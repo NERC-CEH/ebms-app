@@ -13,7 +13,7 @@ import {
   helpBuoy,
   book,
 } from 'ionicons/icons';
-import AppMain from 'Components/Main';
+import AppMain from 'Lib/Main';
 import config from 'config';
 import './styles.scss';
 import './logo.png';

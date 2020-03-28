@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import Header from 'common/Components/Header';
-import Page from 'Components/Page';
+import Header from 'Lib/Header';
+import Page from 'Lib/Page';
 import Footer from 'Components/PhotoPickerFooter';
 import Main from './Main';
 import './styles.scss';

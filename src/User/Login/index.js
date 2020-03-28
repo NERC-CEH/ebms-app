@@ -5,8 +5,8 @@ import Log from 'helpers/log';
 import Device from 'helpers/device';
 import { warn, error } from 'helpers/toast';
 import loader from 'helpers/loader';
-import Page from 'Components/Page';
-import Header from 'Components/Header';
+import Page from 'Lib/Page';
+import Header from 'Lib/Header';
 import Main from './Main';
 
 async function onLogin(userModel, details, onSuccess) {

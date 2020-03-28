@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
-import Main from 'Components/Main';
+import Main from 'Lib/Main';
 import transformToLatLon from 'helpers/location';
 import SVG from '../SVG';
 import './styles.scss';

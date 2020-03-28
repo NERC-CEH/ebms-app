@@ -21,8 +21,8 @@ import {
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
-import Main from 'Components/Main';
-import MenuAttrItem from 'Components/MenuAttrItem';
+import Main from 'Lib/Main';
+import MenuAttrItem from 'Lib/MenuAttrItem';
 import CountdownClock from './components/CountdownClock';
 import './styles.scss';
 

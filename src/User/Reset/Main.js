@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton, IonList } from '@ionic/react';
-import AppMain from 'Components/Main';
+import AppMain from 'Lib/Main';
 import { person } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
-import InputWithValidation from 'Components/InputWithValidation';
+import InputWithValidation from 'Lib/InputWithValidation';
 
 const Component = ({ onSubmit, schema }) => {
   return (

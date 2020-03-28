@@ -7,8 +7,8 @@ import {
   clipboard,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
-import Main from 'Components/Main';
-import MenuAttrItem from 'Components/MenuAttrItem';
+import Main from 'Lib/Main';
+import MenuAttrItem from 'Lib/MenuAttrItem';
 import 'common/images/number.svg';
 import 'common/images/butterfly.svg';
 import './caterpillar.svg';

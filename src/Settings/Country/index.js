@@ -10,11 +10,11 @@ import {
   IonLabel,
   IonItemDivider,
 } from '@ionic/react';
-import Page from 'Components/Page';
-import Main from 'Components/Main';
+import Page from 'Lib/Page';
+import Main from 'Lib/Main';
 import { flag } from 'ionicons/icons';
 import countries from 'common/config/countries';
-import Header from 'Components/Header';
+import Header from 'Lib/Header';
 import './styles.scss';
 
 function SelectCountry({ appModel, hideHeader }) {

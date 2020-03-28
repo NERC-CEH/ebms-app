@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import Page from 'Components/Page';
+import Page from 'Lib/Page';
 import Header from './Header';
 import Main from './Main';
 import './styles.scss';

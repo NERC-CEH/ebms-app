@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import {  IonButton } from '@ionic/react';
 import alert from 'common/helpers/alert';
-import Page from 'Components/Page';
-import Header from 'Components/Header';
+import Page from 'Lib/Page';
+import Header from 'Lib/Header';
 import Main from './Main';
 
 function increaseCount(occ) {

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { useTranslation } from 'react-i18next';
-import Page from 'Components/Page';
-import Main from 'Components/Main';
+import Page from 'Lib/Page';
+import Main from 'Lib/Main';
 import {
   IonIcon,
   IonList,
@@ -14,7 +14,7 @@ import {
 } from '@ionic/react';
 import { globe } from 'ionicons/icons';
 import languages from 'common/config/languages';
-import Header from 'Components/Header';
+import Header from 'Lib/Header';
 import './styles.scss';
 
 function SelectLanguage({ appModel, hideHeader }) {

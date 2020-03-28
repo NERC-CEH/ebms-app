@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
-import Toggle from 'Components/Toggle';
+import Toggle from 'Lib/Toggle';
 import {
   IonIcon,
   IonList,
@@ -15,7 +15,7 @@ import alert from 'common/helpers/alert';
 import languages from 'common/config/languages';
 import countries from 'common/config/countries';
 import config from 'config';
-import AppMain from 'Components/Main';
+import AppMain from 'Lib/Main';
 import './styles.scss';
 
 function resetDialog(resetApp) {

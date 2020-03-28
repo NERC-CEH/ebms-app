@@ -5,7 +5,7 @@ import { observer } from 'mobx-react';
 import Device from 'common/helpers/device';
 import loader from 'common/helpers/loader';
 import { success, error, warn } from 'common/helpers/toast';
-import Page from 'Components/Page';
+import Page from 'Lib/Page';
 import Header from './Header';
 import Main from './Main';
 

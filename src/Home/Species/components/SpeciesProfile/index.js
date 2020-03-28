@@ -8,7 +8,7 @@ import {
 } from '@ionic/react';
 import { PhotoSwipe } from 'react-photoswipe';
 import PropTypes from 'prop-types';
-import Main from 'Components/Main';
+import Main from 'Lib/Main';
 import 'react-photoswipe/lib/photoswipe.css';
 import 'react-photoswipe/dist/default-skin.svg';
 import './styles.scss';

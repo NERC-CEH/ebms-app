@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonList, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
-import Main from 'Components/Main';
+import Main from 'Lib/Main';
 import { person, map, time, clipboard, open } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
-import MenuAttrItem from 'Components/MenuAttrItem';
+import MenuAttrItem from 'Lib/MenuAttrItem';
 import 'common/images/cloud.svg';
 import './wind.svg';
 import './thermometer.svg';

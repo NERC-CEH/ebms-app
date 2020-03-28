@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavContext } from '@ionic/react';
-import Page from 'Components/Page';
-import Main from 'Components/Main';
-import Header from 'Components/Header';
-import RadioInput from 'Components/RadioInput';
+import Page from 'Lib/Page';
+import Main from 'Lib/Main';
+import Header from 'Lib/Header';
+import RadioInput from 'Lib/RadioInput';
 import { observer } from 'mobx-react';
 import config from 'config';
 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonItem, IonTextarea } from '@ionic/react';
-import Page from 'Components/Page';
-import Header from 'common/Components/Header';
-import Main from 'Components/Main';
+import Page from 'Lib/Page';
+import Header from 'Lib/Header';
+import Main from 'Lib/Main';
 import { observer } from 'mobx-react';
 
 @observer

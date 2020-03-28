@@ -6,8 +6,8 @@ import { NavContext } from '@ionic/react';
 import { warn, error } from 'common/helpers/toast';
 import alert from 'common/helpers/alert';
 import loader from 'common/helpers/loader';
-import Page from 'Components/Page';
-import Header from 'Components/Header';
+import Page from 'Lib/Page';
+import Header from 'Lib/Header';
 import Main from './Main';
 
 async function onRegister(userModel, details, lang, onSuccess) {

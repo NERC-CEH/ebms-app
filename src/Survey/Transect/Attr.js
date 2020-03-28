@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavContext } from '@ionic/react';
-import Page from 'Components/Page';
-import Main from 'Components/Main';
-import Header from 'Components/Header';
-import RadioInput from 'Components/RadioInput';
-import Input from 'Components/Input';
-import SliderInput from 'Components/SliderInput';
-import Textarea from 'Components/Textarea';
+import Page from 'Lib/Page';
+import Main from 'Lib/Main';
+import Header from 'Lib/Header';
+import RadioInput from 'Lib/RadioInput';
+import Input from 'Lib/Input';
+import SliderInput from 'Lib/SliderInput';
+import Textarea from 'Lib/Textarea';
 import { observer } from 'mobx-react';
 import config from 'config';
 

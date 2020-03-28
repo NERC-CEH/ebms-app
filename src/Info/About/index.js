@@ -1,8 +1,8 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
-import Page from 'Components/Page';
-import Header from 'Components/Header';
-import AppMain from 'Components/Main';
+import Page from 'Lib/Page';
+import Header from 'Lib/Header';
+import AppMain from 'Lib/Main';
 import './styles.scss';
 
 const Component = () => (

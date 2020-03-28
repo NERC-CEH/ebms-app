@@ -7,8 +7,8 @@ import {
   IonSegmentButton,
   IonBadge,
 } from '@ionic/react';
-import Main from 'Components/Main';
-import Page from 'Components/Page';
+import Main from 'Lib/Main';
+import Page from 'Lib/Page';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import Survey from './components/Survey';

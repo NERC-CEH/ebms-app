@@ -1,9 +1,9 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
-import Page from 'Components/Page';
+import Page from 'Lib/Page';
 import { Trans as T } from 'react-i18next';
-import Main from 'Components/Main';
-import Header from 'Components/Header';
+import Main from 'Lib/Main';
+import Header from 'Lib/Header';
 
 /* eslint react/prop-types:0 */
 const P = ({ children }) => (

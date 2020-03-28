@@ -12,8 +12,8 @@ import {
 import Log from 'helpers/log';
 import { warn, error } from 'helpers/toast';
 import Device from 'helpers/device';
-import Page from 'Components/Page';
-import Main from 'Components/Main';
+import Page from 'Lib/Page';
+import Main from 'Lib/Main';
 import speciesNames from 'common/data/names';
 import { fetchSpeciesReport } from './services';
 import './styles.scss';

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton } from '@ionic/react';
-import Header from 'Components/Header';
+import Header from 'Lib/Header';
 
 function getRefreshButton(showRefreshButton, onRefresh) {
   if (!showRefreshButton) {

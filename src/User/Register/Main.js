@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonButton, IonList } from '@ionic/react';
-import AppMain from 'Components/Main';
+import AppMain from 'Lib/Main';
 import { person, mail, key, lock, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
-import InputWithValidation from 'Components/InputWithValidation';
-import ToggleWithValidation from 'Components/ToggleWithValidation';
+import InputWithValidation from 'Lib/InputWithValidation';
+import ToggleWithValidation from 'Lib/ToggleWithValidation';
 import config from 'config';
 
 class Component extends React.Component {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import Page from 'Components/Page';
+import Page from 'Lib/Page';
 import alert from 'common/helpers/alert';
 import showInvalidsMessage from 'helpers/invalidsMessage';
 import Header from './Header';

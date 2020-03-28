@@ -11,8 +11,8 @@ import {
   IonItemOption,
 } from '@ionic/react';
 import { addCircleOutline, removeCircleOutline, funnel } from 'ionicons/icons';
-import Main from 'Components/Main';
-import MenuAttrItem from 'Components/MenuAttrItem';
+import Main from 'Lib/Main';
+import MenuAttrItem from 'Lib/MenuAttrItem';
 import { observer } from 'mobx-react';
 import 'common/images/cloud.svg';
 import './thumb-up.svg';

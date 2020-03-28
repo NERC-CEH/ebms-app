@@ -1,10 +1,10 @@
 import React from 'react';
 import { IonList, IonItemDivider, IonIcon } from '@ionic/react';
-import Page from 'Components/Page';
-import Main from 'Components/Main';
+import Page from 'Lib/Page';
+import Main from 'Lib/Main';
 import { settings, undo, person, add, send } from 'ionicons/icons';
-import Collapse from 'Components/Collapse/index';
-import Header from 'Components/Header';
+import Collapse from 'Lib/Collapse';
+import Header from 'Lib/Header';
 import './styles.scss';
 
 export default () => (
