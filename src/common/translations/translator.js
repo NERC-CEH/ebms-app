@@ -43,6 +43,10 @@ i18n
   });
 
 observe(appModel.attrs, 'language', ({ newValue }) => {
+  if (!newValue) {
+    return;
+  }
+
   const newLanguageCode = newValue.replace('_', '-'); // backwards compatible
   i18n.changeLanguage(newLanguageCode);
 });
