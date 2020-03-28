@@ -7,11 +7,11 @@ import {
   IonLabel,
   IonRefresher,
   IonRefresherContent,
+  IonSpinner,
 } from '@ionic/react';
 import Log from 'helpers/log';
 import { warn, error } from 'helpers/toast';
 import Device from 'helpers/device';
-import Spinner from 'Components/Spinner';
 import Page from 'Components/Page';
 import Main from 'Components/Main';
 import speciesNames from 'common/data/names';
@@ -164,7 +164,7 @@ class Report extends React.Component {
       return (
         <Page id="home-report">
           <Main>
-            <Spinner />
+            <IonSpinner class="centered" />
           </Main>
         </Page>
       );
