@@ -20,7 +20,7 @@ class Component extends React.Component {
   render() {
     const { showPassword } = this.state;
     const { onSubmit, schema } = this.props;
-    
+
     return (
       <Main>
         <div className="info-message">
@@ -30,7 +30,8 @@ class Component extends React.Component {
           validationSchema={schema}
           onSubmit={onSubmit}
           initialValues={{}}
-          render={props => (
+        >
+          {props => (
             <Form>
               <IonList lines="full">
                 <InputWithValidation
@@ -75,7 +76,7 @@ class Component extends React.Component {
               </IonList>
             </Form>
           )}
-        />
+        </Formik>
       </Main>
     );
   }

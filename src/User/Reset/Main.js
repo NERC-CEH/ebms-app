@@ -16,11 +16,8 @@ const Component = ({ onSubmit, schema }) => {
           )}
         </p>
       </div>
-      <Formik
-        validationSchema={schema}
-        onSubmit={onSubmit}
-        initialValues={{}}
-        render={props => (
+      <Formik validationSchema={schema} onSubmit={onSubmit} initialValues={{}}>
+        {props => (
           <Form>
             <IonList lines="full">
               <InputWithValidation
@@ -37,7 +34,7 @@ const Component = ({ onSubmit, schema }) => {
             </IonButton>
           </Form>
         )}
-      />
+      </Formik>
     </Main>
   );
 };

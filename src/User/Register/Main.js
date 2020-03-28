@@ -29,7 +29,8 @@ class Component extends React.Component {
           validationSchema={schema}
           onSubmit={onSubmit}
           initialValues={{}}
-          render={props => (
+        >
+          {props => (
             <Form>
               <IonList lines="full">
                 <InputWithValidation
@@ -76,8 +77,7 @@ class Component extends React.Component {
                   name="terms"
                   label={(
                     <>
-                      {t('I agree to')}
-                      {' '}
+                      {t('I agree to')}{' '}
                       <a
                         href={`${config.site_url}/privacy-notice?lang=${lang}`}
                       >
@@ -96,7 +96,7 @@ class Component extends React.Component {
               </IonButton>
             </Form>
           )}
-        />
+        </Formik>
       </Main>
     );
   }
