@@ -43,8 +43,31 @@
 ## 1.4
 
 ### Features
+
 * Add top recorded species report
 
 ### Other
+
 * Change app name to ButterflyCount
 * Content updates
+
+## 1.5
+
+### Features
+
+* Add map view to locally stored records
+* Enable submitted records view within the app
+* Add record batch upload
+* Add 15min Count comment attribute 
+* Improve transect sections navigation
+
+### Other
+* Add usage guide
+* Renamed 'Timed Count' survey to '15min Count'
+* Add long-press to plus button to separate different surveys
+* Fix map drawing translations
+* Add plus/minus buttons to sun/cloud attribute page
+* Increase map drawing buttons size
+* Update translations
+* Fix species abundance indicators
+* Other small fixes
