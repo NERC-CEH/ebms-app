@@ -5,7 +5,7 @@ import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import Device from 'common/helpers/device';
 import loader from 'common/helpers/loader';
-import toast from 'common/helpers/toast';
+import { success, error, warn } from 'common/helpers/toast';
 import Header from './Header';
 import Main from './Main';
 
@@ -23,11 +23,7 @@ class index extends React.Component {
     const { userModel, appModel } = this.props;
 
     if (!Device.isOnline()) {
-      toast({
-        message: t("Sorry, looks like you're offline."),
-        duration: 3000,
-        color: 'warning',
-      });
+      warn(t("Sorry, looks like you're offline."));
       return;
     }
 
@@ -38,18 +34,9 @@ class index extends React.Component {
     try {
       await appModel.updateUserTransects(userModel);
 
-      toast({
-        message: t('Transect list was successfully updated.'),
-        duration: 2000,
-        color: 'success',
-      });
+      success(t('Transect list was successfully updated.'));
     } catch (e) {
-      toast({
-        header: t('Sorry'),
-        message: `${e.message}`,
-        duration: 3000,
-        color: 'danger',
-      });
+      error(e.message);
     }
     await loader.hide();
   };

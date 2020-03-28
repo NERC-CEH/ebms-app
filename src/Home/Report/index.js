@@ -10,7 +10,7 @@ import {
   IonRefresherContent,
 } from '@ionic/react';
 import Log from 'helpers/log';
-import toast from 'helpers/toast';
+import { warn, error } from 'helpers/toast';
 import Device from 'helpers/device';
 import Spinner from 'Components/Spinner';
 import Main from 'Components/Main';
@@ -61,11 +61,7 @@ class Report extends React.Component {
 
   onListRefreshPull = async e => {
     if (!Device.isOnline()) {
-      toast({
-        message: t("Sorry, looks like you're offline."),
-        duration: 3000,
-        color: 'warning',
-      });
+      warn(t("Sorry, looks like you're offline."));
       e && e.detail.complete(); // refresh pull update
       return;
     }
@@ -74,12 +70,7 @@ class Report extends React.Component {
       await this.refreshReport();
     } catch (err) {
       Log(err, 'e');
-      toast({
-        header: t('Sorry'),
-        message: `${t(err.message)}`,
-        duration: 3000,
-        color: 'danger',
-      });
+      error(t(err.message));
     }
     e && e.detail.complete(); // refresh pull update
   };
