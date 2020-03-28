@@ -12,7 +12,7 @@ import Log from 'helpers/log';
 import Device from 'helpers/device';
 import Occurrence from './occurrence';
 import Media from './image';
-import { modelStore } from '../store';
+import { modelStore } from './store';
 import GPSExtension from './sample_gps_ext';
 import VibrateExtension from './sample_vibrate_ext';
 

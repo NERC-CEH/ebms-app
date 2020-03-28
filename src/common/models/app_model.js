@@ -3,10 +3,10 @@
  **************************************************************************** */
 import Log from 'helpers/log';
 import { observable, toJS, set as setMobXAttrs } from 'mobx';
-import { store } from 'common/store';
 import makeRequest from 'common/helpers/makeRequest';
 import CONFIG from 'config';
 import * as Yup from 'yup';
+import { store } from './store';
 
 const transectsSchemaBackend = Yup.object().shape({
   data: Yup.array().of(

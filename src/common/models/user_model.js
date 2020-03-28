@@ -3,10 +3,10 @@
  **************************************************************************** */
 import Log from 'helpers/log';
 import { observable, set as setMobXAttrs, toJS } from 'mobx';
-import { store } from 'common/store';
 import makeRequest from 'common/helpers/makeRequest';
 import * as Yup from 'yup';
 import CONFIG from 'config';
+import { store } from './store';
 
 const getDefaultAttrs = () => ({
   isLoggedIn: false,

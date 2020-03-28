@@ -39,7 +39,7 @@ const config = {
       Components: 'common/Components',
       config: 'common/config/config',
       helpers: 'common/helpers',
-      saved_samples: 'common/saved_samples',
+      saved_samples: 'common/models/saved_samples',
       sample: 'common/models/sample',
       occurrence: 'common/models/occurrence',
       app_model: 'common/models/app_model',

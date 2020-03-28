@@ -1,6 +1,6 @@
 import config from 'config';
 import userModel from './user_model';
-import savedSamples from '../saved_samples';
+import savedSamples from './saved_samples';
 import Sample from './sample';
 
 const Factory = {
