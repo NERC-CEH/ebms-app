@@ -321,7 +321,7 @@ msgstr "Ar tikrai norite atsijungti?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr ""
+msgstr "Ištrinti neįkeltus duomenis"
 
 msgid "This will delete all the records on this device."
 msgstr "Šis veiksmas pašalins visus jūsų įrašus iš šio įrenginio."
@@ -1284,7 +1284,9 @@ msgstr "Kiti monitoringai"
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
-msgstr "Vienu kartu įkelti visus užbaigtus įrašus. Šis pasirinkimas neįtraukia 'juodraščių'."
+msgstr ""
+"Vienu kartu įkelti visus užbaigtus įrašus. Šis pasirinkimas neįtraukia "
+"'juodraščių'."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
@@ -1300,10 +1302,11 @@ msgid_plural "Uploading {{count}} records"
 msgstr[0] "Siunčiama {{count}} įrašas"
 msgstr[1] "Siunčiama {{count}} įrašai"
 msgstr[2] "Siunčiama {{count}} įrašų"
+msgstr[3] "Siunčiama {{count}} įrašų"
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
-msgstr "Ups! Kažkur įvyko klaida."
+msgstr "O ne! Kažkur įvyko klaida."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
