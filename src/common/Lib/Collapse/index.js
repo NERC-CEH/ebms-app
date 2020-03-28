@@ -36,7 +36,7 @@ Collapse.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 export default Collapse;
