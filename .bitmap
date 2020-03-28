@@ -61,7 +61,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "kazlauskis.ionic-react-components/error-boundary@0.2.1": {
+    "kazlauskis.ionic-react-components/error-boundary@0.2.2": {
         "files": [
             {
                 "relativePath": "src/common/Lib/ErrorBoundary/components/ErrorMessage.js",
@@ -150,7 +150,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "kazlauskis.ionic-react-components/main@0.2.1": {
+    "kazlauskis.ionic-react-components/main@0.2.2": {
         "files": [
             {
                 "relativePath": "src/common/Lib/Main.js",

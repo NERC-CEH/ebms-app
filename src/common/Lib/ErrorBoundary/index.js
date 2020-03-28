@@ -11,10 +11,7 @@ export default class ErrorBoundary extends React.Component {
     ]),
   };
 
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false, eventId: null };
-  }
+  state = { hasError: false, eventId: null };
 
   static getDerivedStateFromError() {
     // Update state so the next render will show the fallback UI.
@@ -31,11 +28,13 @@ export default class ErrorBoundary extends React.Component {
   }
 
   render() {
+    const { children } = this.props;
+    
     if (this.state.hasError) {
       const { eventId } = this.state;
       return <ErrorMessage eventId={eventId} />;
     }
 
-    return this.props.children;
+    return children;
   }
 }
