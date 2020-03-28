@@ -17,7 +17,6 @@ const API = {
     // data = await import(/* webpackChunkName: "data" */ 'common/data/species_names.data.json');
     // commonNamePointers = data.data;
     loading = false;
-    this.trigger('data:loaded');
   },
 
   /**
@@ -49,14 +48,8 @@ const API = {
         await API.init();
         return API.search(searchPhrase || '', options);
       }
-
-      // wait until loaded
-      return new Promise(resolve => {
-        // the process has started, wait until done
-        this.on('data:loaded', () => {
-          API.search(searchPhrase || '', options).then(resolve);
-        });
-      });
+      
+      return Promise.resolve([]);
     }
 
     const maxResults = options.maxResults || MAX;
