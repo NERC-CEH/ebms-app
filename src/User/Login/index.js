@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { IonPage, NavContext } from '@ionic/react';
+import { NavContext } from '@ionic/react';
 import Log from 'helpers/log';
 import Device from 'helpers/device';
 import { warn, error } from 'helpers/toast';
 import loader from 'helpers/loader';
+import Page from 'Components/Page';
 import AppHeader from 'Components/Header';
 import Main from './Main';
 
@@ -50,13 +51,13 @@ export default function LoginContainer({ userModel, onSuccess }) {
   };
 
   return (
-    <IonPage>
+    <Page id="user-login">
       <AppHeader title={t('Login')} />
       <Main
         schema={userModel.loginSchema}
         onSubmit={details => onLogin(userModel, details, onSuccessReturn)}
       />
-    </IonPage>
+    </Page>
   );
 }
 

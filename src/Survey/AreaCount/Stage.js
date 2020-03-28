@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonPage, NavContext } from '@ionic/react';
+import { NavContext } from '@ionic/react';
+import Page from 'Components/Page';
 import Main from 'Components/Main';
 import AppHeader from 'Components/Header';
 import RadioInput from 'Components/RadioInput';
@@ -87,10 +88,10 @@ class Component extends React.Component {
 
   render() {
     return (
-      <IonPage>
+      <Page id="area-count-edit-stage">
         <AppHeader title={t(this.attrConfig.label)} />
-        <Main id="record-edit-attr">{this.getAttr()}</Main>
-      </IonPage>
+        <Main>{this.getAttr()}</Main>
+      </Page>
     );
   }
 }

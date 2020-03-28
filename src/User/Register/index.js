@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Log from 'helpers/log';
 import Device from 'helpers/device';
-import { IonPage, NavContext } from '@ionic/react';
+import { NavContext } from '@ionic/react';
 import { warn, error } from 'common/helpers/toast';
 import alert from 'common/helpers/alert';
 import loader from 'common/helpers/loader';
+import Page from 'Components/Page';
 import AppHeader from 'Components/Header';
 import Main from './Main';
 
@@ -62,14 +63,14 @@ export default function RegisterContainer({ userModel, appModel }) {
   };
 
   return (
-    <IonPage>
+    <Page id="user-register">
       <AppHeader title={t('Register')} />
       <Main
         schema={userModel.registerSchema}
         onSubmit={details => onRegister(userModel, details, lang, onSuccess)}
         lang={lang}
       />
-    </IonPage>
+    </Page>
   );
 }
 

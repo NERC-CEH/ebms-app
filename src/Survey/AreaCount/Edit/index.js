@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { IonPage } from '@ionic/react';
+import Page from 'Components/Page';
 import alert from 'common/helpers/alert';
 import showInvalidsMessage from 'helpers/invalidsMessage';
 import Header from './Header';
@@ -140,7 +140,7 @@ class Container extends React.Component {
     const isDisabled = !!sample.metadata.synced_on;
 
     return (
-      <IonPage>
+      <Page id="area-count-edit">
         <Header
           onSubmit={this.onSubmit}
           isTraining={isTraining}
@@ -158,7 +158,7 @@ class Container extends React.Component {
           history={history}
           isDisabled={isDisabled}
         />
-      </IonPage>
+      </Page>
     );
   }
 }

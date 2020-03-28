@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { IonPage, NavContext } from '@ionic/react';
+import { NavContext } from '@ionic/react';
 import Log from 'helpers/log';
 import Device from 'helpers/device';
 import { warn, error } from 'common/helpers/toast';
 import alert from 'common/helpers/alert';
 import loader from 'common/helpers/loader';
+import Page from 'Components/Page';
 import AppHeader from 'Components/Header';
 import Main from './Main';
 
@@ -54,13 +55,13 @@ export default function Container({ userModel }) {
   };
 
   return (
-    <IonPage>
+    <Page id="user-reset">
       <AppHeader title={t('Reset')} />
       <Main
         schema={userModel.resetSchema}
         onSubmit={details => onSubmit(userModel, details, onSuccess)}
       />
-    </IonPage>
+    </Page>
   );
 }
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { IonPage } from '@ionic/react';
 import Log from 'helpers/log';
 import alert from 'common/helpers/alert';
+import Page from 'Components/Page';
 import AppHeader from 'Components/Header';
 import { resetDefaults } from 'saved_samples';
 import Main from './Main';
@@ -55,7 +55,7 @@ const Controller = observer(props => {
 
   const isLoggedIn = userModel.hasLogIn();
   return (
-    <IonPage>
+    <Page id="info-menu">
       <AppHeader title={t('Menu')} />
       <Main
         user={userModel.attrs}
@@ -64,7 +64,7 @@ const Controller = observer(props => {
         logOut={logOut}
         {...restProps}
       />
-    </IonPage>
+    </Page>
   );
 });
 

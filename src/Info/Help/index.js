@@ -1,5 +1,6 @@
 import React from 'react';
-import { IonList, IonItemDivider, IonIcon, IonPage } from '@ionic/react';
+import { IonList, IonItemDivider, IonIcon } from '@ionic/react';
+import Page from 'Components/Page';
 import Main from 'Components/Main';
 import { settings, undo, person, add, send } from 'ionicons/icons';
 import Collapse from 'Components/Collapse/index';
@@ -7,9 +8,9 @@ import AppHeader from 'Components/Header';
 import './styles.scss';
 
 export default () => (
-  <IonPage>
+  <Page id="help">
     <AppHeader title={t('Help')} />
-    <Main id="help" class="ion-padding">
+    <Main class="ion-padding">
       <IonList lines="none">
         <IonItemDivider>{t('Surveys')}</IonItemDivider>
         <Collapse title={t('How to start a survey')}>
@@ -30,11 +31,7 @@ export default () => (
             )}
             <br />
             <br />
-            <b>
-              {t('Note')}
-              :
-            </b>
-            {' '}
+            <b>{t('Note')}:</b>{' '}
             {t(
               'you can increment the species count by tapping on the number next to the species name in the list.'
             )}
@@ -65,11 +62,8 @@ export default () => (
           <p>
             {t(
               'The application holds around 500 butterfly species list and all the associated taxonomy ranks. For quicker searching of the taxa you can use different shortcuts. For example, to find'
-            )}
-            {' '}
-            <i>Lopinga achine</i> 
-            {' '}
-            {t('you can type in the search bar')}
+            )}{' '}
+            <i>Lopinga achine</i> {t('you can type in the search bar')}
             :
             <br />
             <br />
@@ -93,23 +87,15 @@ export default () => (
             )}
             <br />
             <br />
-            {t('If the record has reached the database a red')}
-            {' '}
+            {t('If the record has reached the database a red')}{' '}
             <IonIcon icon={send} style={{ color: 'red' }} />
-            {t('(set for submission & saved locally) will become green')}
-            {' '}
-            <IonIcon icon={send} style={{ color: 'green' }} />
-            {' '}
-            (
+            {t('(set for submission & saved locally) will become green')}{' '}
+            <IonIcon icon={send} style={{ color: 'green' }} /> (
             {t('synced to the database')}
             ).
             <br />
             <br />
-            <b>
-              {t('Note')}
-              :
-            </b>
-            {' '}
+            <b>{t('Note')}:</b>{' '}
             {t(
               'you have to be signed in to your website account and have a network connection, for the records to be automatically synchronised in the background'
             )}
@@ -139,11 +125,7 @@ export default () => (
             .
             <br />
             <br />
-            <b>
-              {t('Note')}
-              :
-            </b>
-            {' '}
+            <b>{t('Note')}:</b>{' '}
             {t(
               'after registering a new account you must verify your email address by clicking on a verification link sent to your email'
             )}
@@ -154,18 +136,13 @@ export default () => (
         <IonItemDivider>{t('Other')}</IonItemDivider>
         <Collapse title={t('Reset the application')}>
           <p>
-            {t('Go to the application settings page')}
-            {' '}
-            <IonIcon icon={settings} /> 
-            {' '}
-            {t('and click on the Reset')}
-            {' '}
+            {t('Go to the application settings page')}{' '}
+            <IonIcon icon={settings} /> {t('and click on the Reset')}{' '}
             <IonIcon icon={undo} />
-            {t('button')}
-            .
+            {t('button')}.
           </p>
         </Collapse>
       </IonList>
     </Main>
-  </IonPage>
+  </Page>
 );

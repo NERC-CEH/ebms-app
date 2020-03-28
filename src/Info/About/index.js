@@ -1,11 +1,12 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonPage } from '@ionic/react';
+import { IonList, IonItem, IonLabel } from '@ionic/react';
+import Page from 'Components/Page';
 import AppHeader from 'Components/Header';
 import AppMain from 'Components/Main';
 import './styles.scss';
 
 const Component = () => (
-  <IonPage>
+  <Page id="about">
     <AppHeader title={t('About')} />
     <AppMain id="about" class="ion-padding">
       <IonList lines="none">
@@ -26,33 +27,26 @@ const Component = () => (
 
         <IonItem>
           <p>
-            {t(`The ABLE project is a partnership between`)}
-            {' '}
+            {t(`The ABLE project is a partnership between`)}{' '}
             <a href="http://www.bc-europe.eu/">Butterfly Conservation Europe</a>
-            ,
-            {' '}
+            ,{' '}
             <a href="www.ceh.ac.uk">
               the Centre for Ecology and Hydrology (UK)
             </a>
-            ,
-            {' '}
+            ,{' '}
             <a href="https://www.ufz.de/index.php">
               the Helmholtz Centre for Environmental Research (UFZ, Germany) -
               Josef Settele, Oliver Schweiger
             </a>
-            ,
-            {' '}
+            ,{' '}
             <a href="https://www.vlinderstichting.nl/">
               Dutch Butterfly Conservation
-            </a>
-            {' '}
-            {t('and')}
-            {' '}
+            </a>{' '}
+            {t('and')}{' '}
             <a href="https://butterfly-conservation.org/">
               Butterfly Conservation (UK)
             </a>
-            .
-            {' '}
+            .{' '}
           </p>
         </IonItem>
       </IonList>
@@ -68,14 +62,11 @@ const Component = () => (
             <a href="https://flumens.io" style={{ whiteSpace: 'nowrap' }}>
               {' '}
               Flumens.
-            </a>
-            {' '}
+            </a>{' '}
             {t(
               'Agency specializing in building bespoke data oriented sollutions.'
-            )}
-            {' '}
-            {t('For suggestions and feedback please do not hesitate to')}
-            {' '}
+            )}{' '}
+            {t('For suggestions and feedback please do not hesitate to')}{' '}
             <a href="mailto:apps%40ceh.ac.uk?subject=eBMS%20App">
               {t('contact us')}
             </a>
@@ -84,7 +75,7 @@ const Component = () => (
         </IonItem>
       </IonList>
     </AppMain>
-  </IonPage>
+  </Page>
 );
 
 Component.propTypes = {};

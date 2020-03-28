@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import {
-  IonPage,
   IonIcon,
   IonList,
   IonItem,
@@ -11,6 +10,7 @@ import {
   IonLabel,
   IonItemDivider,
 } from '@ionic/react';
+import Page from 'Components/Page';
 import Main from 'Components/Main';
 import { flag } from 'ionicons/icons';
 import countries from 'common/config/countries';
@@ -43,7 +43,7 @@ function SelectCountry({ appModel, hideHeader }) {
     ));
 
   return (
-    <IonPage id="country-select">
+    <Page id="country-select">
       {!hideHeader && <AppHeader title={t('Country')} />}
 
       <Main>
@@ -59,7 +59,7 @@ function SelectCountry({ appModel, hideHeader }) {
           </IonRadioGroup>
         </IonList>
       </Main>
-    </IonPage>
+    </Page>
   );
 }
 

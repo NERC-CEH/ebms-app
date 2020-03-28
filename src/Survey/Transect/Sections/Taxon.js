@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import AppHeader from 'common/Components/Header';
 import TaxonSearch from 'common/Components/TaxonSearch';
-import { IonPage, NavContext } from '@ionic/react';
+import { NavContext } from '@ionic/react';
+import Page from 'Components/Page';
 import Main from 'Components/Main';
 import Occurrence from 'occurrence';
 
@@ -41,15 +42,15 @@ class Controller extends React.Component {
     };
 
     return (
-      <IonPage>
+      <Page id="transect-sections-taxa">
         <AppHeader title={t('Species')} />
-        <Main id="transect-sections-taxa">
+        <Main>
           <TaxonSearch
             onSpeciesSelected={onSpeciesSelected}
             recordedTaxa={recordedTaxa}
           />
         </Main>
-      </IonPage>
+      </Page>
     );
   }
 }

@@ -1,15 +1,16 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonPage } from '@ionic/react';
-import AppMain from 'Components/Main';
+import { IonList, IonItem, IonLabel } from '@ionic/react';
+import Page from 'Components/Page';
+import Main from 'Components/Main';
 import AppHeader from 'Components/Header';
 import species from 'common/data/species.profiles.data';
 import './sponsors.png';
 import './styles.scss';
 
 export default () => (
-  <IonPage>
+  <Page id="credits">
     <AppHeader title={t('Credits')} />
-    <AppMain id="credits" class="ion-padding">
+    <Main class="ion-padding">
       <IonList lines="none">
         <IonItem>
           <img src="/images/sponsors.png" alt="" />
@@ -29,53 +30,39 @@ export default () => (
 
         <IonItem>
           <IonLabel>
-            <b>David Roy</b>
-            {' '}
-            (UK Centre for Ecology & Hydrology)
+            <b>David Roy</b> (UK Centre for Ecology & Hydrology)
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Karolis Kazlauskis</b>
-            {' '}
-            (Flumens)
+            <b>Karolis Kazlauskis</b> (Flumens)
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Cristina Sevilleja</b>
-            {' '}
-            (Dutch Butterfly Conservation)
+            <b>Cristina Sevilleja</b> (Dutch Butterfly Conservation)
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Chris van Swaay</b>
-            {' '}
-            (Dutch Butterfly Conservation, Butterfly
+            <b>Chris van Swaay</b> (Dutch Butterfly Conservation, Butterfly
             Conservation Europe)
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Irma Wynhoff</b>
-            {' '}
-            (Dutch Butterfly Conservation, Butterfly
+            <b>Irma Wynhoff</b> (Dutch Butterfly Conservation, Butterfly
             Conservation Europe)
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Martin Warren</b>
-            {' '}
-            (Butterfly Conservation Europe)
+            <b>Martin Warren</b> (Butterfly Conservation Europe)
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Biren Rathod</b>
-            {' '}
-            (the UK Centre for Ecology & Hydrology)
+            <b>Biren Rathod</b> (the UK Centre for Ecology & Hydrology)
           </IonLabel>
         </IonItem>
       </IonList>
@@ -98,23 +85,18 @@ export default () => (
 
         <IonItem>
           <IonLabel>
-            <b>Butterfly Conservation Europe</b>
-            {' '}
-            – Sue Collins, Martin Warren
+            <b>Butterfly Conservation Europe</b> – Sue Collins, Martin Warren
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>UK Centre for Ecology and Hydrology (UKCEH, UK)</b>
-            {' '}
-            – David Roy,
+            <b>UK Centre for Ecology and Hydrology (UKCEH, UK)</b> – David Roy,
             Reto Schmucki
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Sub-contracts to UKCEH</b>
-            : Karolis Kazlauskis (App development),
+            <b>Sub-contracts to UKCEH</b>: Karolis Kazlauskis (App development),
             Gary van Breda (Website development), John van Breda (Website
             development)
           </IonLabel>
@@ -129,16 +111,13 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Helmholtz Centre for Environmental Research (UFZ, Germany)</b>
-            –
+            <b>Helmholtz Centre for Environmental Research (UFZ, Germany)</b>–
             Josef Settele, Oliver Schweiger
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Butterfly Conservation UK</b>
-            {' '}
-            – Nigel Bourn, Emily Dennis
+            <b>Butterfly Conservation UK</b> – Nigel Bourn, Emily Dennis
           </IonLabel>
         </IonItem>
       </IonList>
@@ -153,96 +132,81 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>UKCEH</b>
-            , David Roy
+            <b>UKCEH</b>, David Roy
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Butterfly Conservation, UK </b>
-            , BC UK, Ian Middlebrook
+            <b>Butterfly Conservation, UK </b>, BC UK, Ian Middlebrook
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Helmholtz-Zentrum für Umweltforschung GmbH - UFZ</b>
-            , UFZ, Josef
+            <b>Helmholtz-Zentrum für Umweltforschung GmbH - UFZ</b>, UFZ, Josef
             Settele
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>De Vlinderstichting</b>
-            , Dutch BC, Chris van Swaay
+            <b>De Vlinderstichting</b>, Dutch BC, Chris van Swaay
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Catalonia BMS</b>
-            , Catalonia BMS, Constanti Stefanescu
+            <b>Catalonia BMS</b>, Catalonia BMS, Constanti Stefanescu
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Finnish Environment Institute</b>
-            , SYKE, Mikko Kuussaari
+            <b>Finnish Environment Institute</b>, SYKE, Mikko Kuussaari
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Butterfly Conservation Europe</b>
-            , BCE, Chris van Swaay
+            <b>Butterfly Conservation Europe</b>, BCE, Chris van Swaay
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Flanders Butterfly Monitoring Scheme</b>
-            , Flanders BMS, Dirk Maes
+            <b>Flanders Butterfly Monitoring Scheme</b>, Flanders BMS, Dirk Maes
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Centre des Sciences de la Conservation</b>
-            , French BMS, Benoît
+            <b>Centre des Sciences de la Conservation</b>, French BMS, Benoît
             Fontaine
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>National Biodiversity Data Centre</b>
-            , Ireland BMS, Tomás Murray
+            <b>National Biodiversity Data Centre</b>, Ireland BMS, Tomás Murray
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Swedish Butterfly Monitoring Scheme</b>
-            , SEBMS, Lars Pettersson
+            <b>Swedish Butterfly Monitoring Scheme</b>, SEBMS, Lars Pettersson
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Luxembourg Institute of Science and Technology</b>
-            , Luxembourg
+            <b>Luxembourg Institute of Science and Technology</b>, Luxembourg
             BMS, Xavier Mestdagh
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>ZERYNTHIA Association</b>
-            , ZERYNTHIA-Spain BMS, Yeray León
+            <b>ZERYNTHIA Association</b>, ZERYNTHIA-Spain BMS, Yeray León
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Butterfly Monitoring Scheme</b>
-            , Spain BMS, España Miguel
+            <b>Butterfly Monitoring Scheme</b>, Spain BMS, España Miguel
             Munguira
           </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Društvo za Proučevanje in Ohranjanje Metuljev Slovenije</b>
-            ,
+            <b>Društvo za Proučevanje in Ohranjanje Metuljev Slovenije</b>,
             Slovenia BMS, Rudi Verovnik
           </IonLabel>
         </IonItem>
@@ -250,10 +214,7 @@ export default () => (
           <IonLabel>
             <b>
               Hungarian Lepidoptera Monitoring Network as part of the Jozsef
-              Szalkay Hungarian Lepidopterists
-              {"'"}
-              {' '}
-              Society
+              Szalkay Hungarian Lepidopterists&apos; Society
             </b>
             , Hungary BMS, András Szabadfalvi
           </IonLabel>
@@ -269,8 +230,7 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>TAGIS - Centro de Conservacao des Borboletas de Portugal</b>
-            ,
+            <b>TAGIS - Centro de Conservacao des Borboletas de Portugal</b>,
             Portugal BMS, Eva Monteiro
           </IonLabel>
         </IonItem>
@@ -279,10 +239,7 @@ export default () => (
       <IonList>
         <IonItem>
           <IonLabel>
-            <b>
-              {t('Species descriptions')}
-              :
-            </b>
+            <b>{t('Species descriptions')}:</b>
           </IonLabel>
         </IonItem>
         <IonItem lines="none">
@@ -297,10 +254,7 @@ export default () => (
       <IonList>
         <IonItem>
           <IonLabel>
-            <b>
-              {t('Photo credits')}
-              :
-            </b>
+            <b>{t('Photo credits')}:</b>
           </IonLabel>
         </IonItem>
         {species
@@ -314,6 +268,6 @@ export default () => (
             </IonItem>
           ))}
       </IonList>
-    </AppMain>
-  </IonPage>
+    </Main>
+  </Page>
 );

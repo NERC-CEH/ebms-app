@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { IonPage, IonButton } from '@ionic/react';
+import {  IonButton } from '@ionic/react';
 import alert from 'common/helpers/alert';
+import Page from 'Components/Page';
 import AppHeader from 'Components/Header';
 import Main from './Main';
 
@@ -101,7 +102,7 @@ class Container extends React.Component {
     const sectionCode = sectionSample.attrs.location.code || t('Section');
 
     return (
-      <IonPage>
+      <Page id="transect-sections-edit">
         <AppHeader
           title={sectionCode}
           defaultHref="/home/user-surveys"
@@ -118,7 +119,7 @@ class Container extends React.Component {
           history={history}
           isDisabled={isDisabled}
         />
-      </IonPage>
+      </Page>
     );
   }
 }

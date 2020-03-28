@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonPage } from '@ionic/react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import Device from 'common/helpers/device';
 import loader from 'common/helpers/loader';
 import { success, error, warn } from 'common/helpers/toast';
+import Page from 'Components/Page';
 import Header from './Header';
 import Main from './Main';
 
@@ -61,7 +61,7 @@ class index extends React.Component {
     const transect = sample.attrs.location;
 
     return (
-      <IonPage>
+      <Page id="transect-sections-list">
         <Header
           showRefreshButton={!transect}
           onRefresh={() => this.refreshUserTransects()}
@@ -72,7 +72,7 @@ class index extends React.Component {
           onTransectSelect={this.onTransectSelect}
           match={match}
         />
-      </IonPage>
+      </Page>
     );
   }
 }

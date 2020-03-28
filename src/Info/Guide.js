@@ -1,9 +1,9 @@
 import React from 'react';
-import { IonList, IonItem, IonLabel, IonPage } from '@ionic/react';
+import { IonList, IonItem, IonLabel } from '@ionic/react';
+import Page from 'Components/Page';
 import { Trans as T } from 'react-i18next';
 import Main from 'Components/Main';
 import AppHeader from 'Components/Header';
-import './styles.scss';
 
 /* eslint react/prop-types:0 */
 const P = ({ children }) => (
@@ -26,9 +26,9 @@ const helpEmail = 'ebms@ceh.ac.uk';
 const eBMSWebsiteLink = ''; // backwards compatible
 
 const Component = () => (
-  <IonPage>
+  <Page id="about">
     <AppHeader title={t('Guide')} />
-    <Main id="about" class="ion-padding">
+    <Main class="ion-padding">
       <Section>
         <H>{t('How to use the app')}</H>
         <P>
@@ -119,7 +119,7 @@ const Component = () => (
         </P>
       </Section>
     </Main>
-  </IonPage>
+  </Page>
 );
 
 Component.propTypes = {};

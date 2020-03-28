@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {
   IonList,
   IonItem,
-  IonPage,
   IonItemDivider,
   IonLabel,
   IonRefresher,
@@ -13,6 +12,7 @@ import Log from 'helpers/log';
 import { warn, error } from 'helpers/toast';
 import Device from 'helpers/device';
 import Spinner from 'Components/Spinner';
+import Page from 'Components/Page';
 import Main from 'Components/Main';
 import speciesNames from 'common/data/names';
 import { fetchSpeciesReport } from './services';
@@ -162,23 +162,23 @@ class Report extends React.Component {
     const { refreshing, species } = this.state;
     if (!species.length && refreshing) {
       return (
-        <IonPage>
-          <Main id="home-report">
+        <Page id="home-report">
+          <Main>
             <Spinner />
           </Main>
-        </IonPage>
+        </Page>
       );
     }
 
     return (
-      <IonPage>
-        <Main id="home-report">
+      <Page id="home-report">
+        <Main>
           <IonRefresher slot="fixed" onIonRefresh={this.onListRefreshPull}>
             <IonRefresherContent />
           </IonRefresher>
           {this.getReport()}
         </Main>
-      </IonPage>
+      </Page>
     );
   }
 }

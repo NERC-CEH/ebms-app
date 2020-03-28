@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonPage } from '@ionic/react';
 import Log from 'helpers/log';
 import { observer } from 'mobx-react';
 import { useTranslation } from 'react-i18next';
 import { resetDefaults, remoteSaveAll } from 'saved_samples';
+import Page from 'Components/Page';
 import AppHeader from 'Components/Header';
 import { success, warn, error } from 'helpers/toast';
 import Main from './Main';
@@ -50,7 +50,7 @@ const Container = observer(({ appModel, userModel }) => {
   const { t } = useTranslation();
 
   return (
-    <IonPage>
+    <Page id="settings-menu">
       <AppHeader title={t('Settings')} />
       <Main
         useTraining={useTraining}
@@ -61,7 +61,7 @@ const Container = observer(({ appModel, userModel }) => {
         language={language}
         country={country}
       />
-    </IonPage>
+    </Page>
   );
 });
 

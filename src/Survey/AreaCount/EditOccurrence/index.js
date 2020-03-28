@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import AppHeader from 'common/Components/Header';
-import { IonPage } from '@ionic/react';
+import Page from 'Components/Page';
 import Footer from 'Components/PhotoPickerFooter';
 import Main from './Main';
 import './styles.scss';
@@ -22,11 +22,11 @@ class Container extends React.Component {
     const isDisabled = !!sample.metadata.synced_on;
 
     return (
-      <IonPage id="area-count-edit-occurrence">
+      <Page id="area-count-edit-occurrence">
         <AppHeader title={t('Edit Occurrence')} />
         <Main sample={sample} occurrence={occurrence} isDisabled={isDisabled} />
         <Footer model={occurrence} isDisabled={isDisabled} />
-      </IonPage>
+      </Page>
     );
   }
 }

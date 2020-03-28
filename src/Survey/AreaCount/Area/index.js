@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { IonPage } from '@ionic/react';
+import Page from 'Components/Page';
 import Header from './Header';
 import Main from './Main';
 import './styles.scss';
@@ -42,7 +42,7 @@ class Container extends React.Component {
     const isDisabled = !!sample.metadata.synced_on;
 
     return (
-      <IonPage>
+      <Page id="area">
         <Header
           toggleGPStracking={this.toggleGPStracking}
           isGPSTracking={isGPSTracking}
@@ -55,7 +55,7 @@ class Container extends React.Component {
           setLocation={this.setLocation}
           isDisabled={isDisabled}
         />
-      </IonPage>
+      </Page>
     );
   }
 }
