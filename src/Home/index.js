@@ -14,6 +14,7 @@ import {
 import { person, add, book, menu, home } from 'ionicons/icons';
 import savedSamples from 'saved_samples';
 import appModel from 'app_model';
+import userModel from 'user_model';
 import LongPressFabButton from 'Components/LongPressFabButton';
 import PrivateRoute from 'Components/PrivateRoute';
 import Report from './Report';
@@ -57,6 +58,7 @@ const Component = ({ history }) => {
           />
           <PrivateRoute
             path="/home/user-surveys"
+            userModel={userModel}
             component={() => <UserSurveys savedSamples={savedSamples} />}
             exact
           />

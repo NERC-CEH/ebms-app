@@ -204,6 +204,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "kazlauskis.ionic-react-components/private-route@0.2.0": {
+        "files": [
+            {
+                "relativePath": "src/common/Components/PrivateRoute.js",
+                "test": false,
+                "name": "PrivateRoute.js"
+            }
+        ],
+        "mainFile": "src/common/Components/PrivateRoute.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "kazlauskis.ionic-react-components/radio-input@0.2.0": {
         "files": [
             {
@@ -231,24 +243,6 @@
         ],
         "mainFile": "src/common/Components/SliderInput/index.js",
         "trackDir": "src/common/Components/SliderInput",
-        "origin": "AUTHORED",
-        "exported": true
-    },
-    "kazlauskis.ionic-react-components/spinner@0.2.0": {
-        "files": [
-            {
-                "relativePath": "src/common/Components/Spinner/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/common/Components/Spinner/styles.scss",
-                "test": false,
-                "name": "styles.scss"
-            }
-        ],
-        "mainFile": "src/common/Components/Spinner/index.js",
-        "trackDir": "src/common/Components/Spinner",
         "origin": "AUTHORED",
         "exported": true
     },

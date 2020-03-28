@@ -1,9 +1,8 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import userModel from 'user_model';
 
-const PrivateRoute = ({ component }) => {
+const PrivateRoute = ({ component, userModel }) => {
   const routeRender = props => {
     if (userModel.hasLogIn()) {
       return React.createElement(component, props);
@@ -24,6 +23,7 @@ const PrivateRoute = ({ component }) => {
 };
 
 PrivateRoute.propTypes = {
-  component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  userModel: PropTypes.object.isRequired,
+  component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
 };
 export default PrivateRoute;
