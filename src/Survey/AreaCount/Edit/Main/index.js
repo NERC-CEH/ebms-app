@@ -27,11 +27,13 @@ import CountdownClock from './components/CountdownClock';
 import './styles.scss';
 
 const speciesNameSort = (occ1, occ2) => {
-  const foundInName1 = occ1.attrs.taxon.found_in_name;
-  const foundInName2 = occ2.attrs.taxon.found_in_name;
-  const taxon1 = occ1.attrs.taxon[foundInName1];
-  const taxon2 = occ2.attrs.taxon[foundInName2];
-  return taxon1.localeCompare(taxon2);
+  const taxon1 = occ1.attrs.taxon;
+  const taxonName1 = taxon1[taxon1.found_in_name];
+  
+  const taxon2 = occ2.attrs.taxon;
+  const taxonName2 = taxon2[taxon2.found_in_name];
+  
+  return taxonName1.localeCompare(taxonName2);
 };
 
 const speciesOccAddedTimeSort = (occ1, occ2) => {
