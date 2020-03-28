@@ -1,8 +1,8 @@
-import Device from 'helpers/device';
-import StringHelp from 'helpers/string';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { IonTextarea } from '@ionic/react';
+import StringHelp from '../helpers/string';
+import Device from '../helpers/device';
 
 class Component extends React.Component {
   constructor(props) {

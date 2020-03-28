@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ErrorBoundary from 'Components/ErrorBoundary';
 import { IonContent } from '@ionic/react';
+import ErrorBoundary from './ErrorBoundary';
 
 const Main = React.forwardRef(({ children, ...props }, ref) => {
   return (

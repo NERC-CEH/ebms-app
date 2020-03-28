@@ -33,7 +33,6 @@ function renderSuggestion(suggestion) {
   );
 }
 
-@observer
 class AutoSuggestInput extends Component {
   static propTypes = {
     default: PropTypes.any,
@@ -157,4 +156,4 @@ class AutoSuggestInput extends Component {
   }
 }
 
-export default AutoSuggestInput;
+export default observer(AutoSuggestInput);

@@ -2,11 +2,11 @@
  * Input view.
  */
 import { IonItem, IonLabel, IonDatetime, IonInput } from '@ionic/react';
-import DateHelp from 'helpers/date';
-import Device from 'helpers/device';
-import StringHelp from 'helpers/string';
 import PropTypes from 'prop-types';
 import React from 'react';
+import DateHelp from '../helpers/date';
+import Device from '../helpers/device';
+import StringHelp from '../helpers/string';
 import AutoSuggestInput from './AutoSuggestInput';
 
 class Component extends React.Component {

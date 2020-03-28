@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonItem, IonLabel } from '@ionic/react';
 import { informationCircleOutline } from 'ionicons/icons';
-import Toggle from 'Components/Toggle';
+import Toggle from '../Toggle';
 import './styles.scss';
 
 const ToggleWithValidation = ({
