@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonItem, IonLabel } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 import './styles.scss';
 
 function MenuAttrItem({ routerLink, disabled, label, value, icon, iconMode }) {
@@ -18,7 +19,9 @@ function MenuAttrItem({ routerLink, disabled, label, value, icon, iconMode }) {
       className="menu-attr-item"
     >
       <IonIcon slot="start" {...iconProps} />
-      <IonLabel>{t(label)}</IonLabel>
+      <IonLabel>
+        <T>{label}</T>
+      </IonLabel>
       <IonLabel slot="end">{value}</IonLabel>
     </IonItem>
   );

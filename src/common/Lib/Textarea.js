@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { IonTextarea } from '@ionic/react';
+import { withTranslation } from 'react-i18next';
 import StringHelp from '../helpers/string';
 import Device from '../helpers/device';
 
 class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    this.input = React.createRef();
-    this.state = { value: this.props.default || this.props.config.default };
-  }
+  input = React.createRef();
+
+  state = { value: this.props.default || this.props.config.default };
 
   onChange = val => {
     this.setState({ value: val });
@@ -27,6 +26,7 @@ class Component extends React.Component {
   }
 
   render() {
+    const { t } = this.props;
     const config = this.props.config || {};
     const message = this.props.info || config.info;
 
@@ -57,6 +57,7 @@ Component.propTypes = {
   config: PropTypes.any.isRequired,
   info: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
-export default Component;
+export default withTranslation()(Component);

@@ -4,6 +4,7 @@
 import { IonItem, IonLabel, IonDatetime, IonInput } from '@ionic/react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import DateHelp from '../helpers/date';
 import Device from '../helpers/device';
 import StringHelp from '../helpers/string';
@@ -89,6 +90,7 @@ class Component extends React.Component {
   }
 
   render() {
+    const { t } = this.props;
     const config = this.props.config || {};
     const type = this.props.type || config.type || 'text';
 
@@ -185,6 +187,7 @@ Component.propTypes = {
   max: PropTypes.any,
   min: PropTypes.any,
   type: PropTypes.string.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
-export default Component;
+export default withTranslation()(Component);

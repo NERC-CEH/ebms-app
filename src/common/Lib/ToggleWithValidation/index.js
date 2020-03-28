@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonItem, IonLabel } from '@ionic/react';
 import { informationCircleOutline } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import Toggle from '../Toggle';
 import './styles.scss';
 
@@ -15,6 +16,7 @@ const ToggleWithValidation = ({
   touched,
 }) => {
   const error = errors[name] && touched[name];
+
   return (
     <>
       <IonItem error={!!error}>
@@ -35,7 +37,9 @@ const ToggleWithValidation = ({
               size="small"
               slot="start"
             />
-            <span>{t(errors[name])}</span>
+            <span>
+              <T>{errors[name]}</T>
+            </span>
           </div>
         </div>
       )}

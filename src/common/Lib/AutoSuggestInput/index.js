@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import Autosuggest from 'react-autosuggest';
 import { IonItem, IonLabel, IonInput } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 import './styles.scss';
 
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters
@@ -135,7 +136,9 @@ class AutoSuggestInput extends Component {
       <div>
         {message && (
           <div className="info-message">
-            <p>{t(message)}</p>
+            <p>
+              <T>{message}</T>
+            </p>
           </div>
         )}
         <Autosuggest

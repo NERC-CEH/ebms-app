@@ -7,6 +7,7 @@ import {
   IonRadioGroup,
   IonRadio,
 } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 
 class Component extends React.PureComponent {
   onChange = e => {
@@ -40,7 +41,7 @@ class Component extends React.PureComponent {
     const inputs = selection.map(option => (
       <IonItem key={option.label || option.value}>
         <IonLabel class="ion-text-wrap normal-font-size">
-          {t(option.label || option.value)}
+          <T>{option.label || option.value}</T>
         </IonLabel>
         <IonRadio
           value={option.value}
@@ -54,7 +55,9 @@ class Component extends React.PureComponent {
       <div>
         {message && (
           <div className="info-message">
-            <p>{t(message)}</p>
+            <p>
+              <T>{message}</T>
+            </p>
           </div>
         )}
 

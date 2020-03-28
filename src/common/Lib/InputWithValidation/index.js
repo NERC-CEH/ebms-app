@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonInput, IonItem } from '@ionic/react';
 import { informationCircleOutline } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import './styles.scss';
 
 const InputWithValidation = ({
@@ -40,7 +41,9 @@ const InputWithValidation = ({
               class="hydrated"
               aria-label="information circle outline"
             />
-            <span>{t(errors[name])}</span>
+            <span>
+              <T>{errors[name]}</T>
+            </span>
           </div>
         </div>
       )}
