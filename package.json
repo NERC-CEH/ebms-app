@@ -4,7 +4,7 @@
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
   "version": "1.5.0",
-  "build": "1",
+  "build": "2",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "build": "NODE_ENV=production grunt",
