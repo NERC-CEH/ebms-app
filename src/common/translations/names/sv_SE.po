@@ -1,12 +1,12 @@
 # Translators:
 # Karolis, 2019
 # Carin Kullberg <listrefjarilar@ckg.se>, 2019
-# Lars Pettersson <lars.pettersson@biol.lu.se>, 2019
+# Lars Pettersson <lars.pettersson@biol.lu.se>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Lars Pettersson <lars.pettersson@biol.lu.se>, 2019\n"
+"Last-Translator: Lars Pettersson <lars.pettersson@biol.lu.se>, 2020\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,49 +16,49 @@ msgstr ""
 "X-Generator: POEditor.com\n"
 
 msgid "Papilio hospiton"
-msgstr "Korsikansk makaonfjäril"
+msgstr ""
 
 msgid "Parnassius mnemosyne"
 msgstr "Mnemosynefjäril"
 
 msgid "Parnassius phoebus"
-msgstr "Mindre apollofjäril"
+msgstr ""
 
 msgid "Parnassius apollo"
 msgstr "Apollofjäril"
 
 msgid "Archon apollinus"
-msgstr "Falsk apollofjäril"
+msgstr ""
 
 msgid "Zerynthia cerisy"
-msgstr "Östlig hålrotsfjäril"
+msgstr ""
 
 msgid "Carcharodus stauderi"
-msgstr "Falsk marmorsmygare"
+msgstr ""
 
 msgid "Carcharodus baeticus"
-msgstr "Sydlig marmorsmygare"
+msgstr ""
 
 msgid "Erynnis tages"
 msgstr "Skogsvisslare"
 
 msgid "Erynnis marloyi"
-msgstr "Sotsmygare"
+msgstr ""
 
 msgid "Zerynthia cretica"
-msgstr "Kretahålrotsfjäril"
+msgstr ""
 
 msgid "Zerynthia caucasica"
-msgstr "Kaukasisk hålrotsfjäril"
+msgstr ""
 
 msgid "Zerynthia rumina"
-msgstr "Spansk hålrotsfjäril"
+msgstr ""
 
 msgid "Zerynthia polyxena"
-msgstr "Sydlig hålrotsfjäril"
+msgstr ""
 
 msgid "Zerynthia cassandra"
-msgstr "Italiensk hålrotsfjäril"
+msgstr ""
 
 msgid "Heteropterus morpheus"
 msgstr "Spegelsmygare"
@@ -70,16 +70,16 @@ msgid "Carterocephalus palaemon"
 msgstr "Gulfläckig glanssmygare"
 
 msgid "Pelopidas thrax"
-msgstr "Hirssmygare"
+msgstr ""
 
 msgid "Borbo borbonica"
-msgstr "Zellers smygare"
+msgstr ""
 
 msgid "Gegenes pumilio"
-msgstr "Dvärgsmygare"
+msgstr ""
 
 msgid "Gegenes nostrodamus"
-msgstr "Medelhavssmygare"
+msgstr ""
 
 msgid "Ochlodes sylvanus"
 msgstr "Ängssmygare"
@@ -88,13 +88,13 @@ msgid "Hesperia comma"
 msgstr "Silversmygare"
 
 msgid "Thymelicus christi"
-msgstr "Kanariesmygare"
+msgstr ""
 
 msgid "Thymelicus acteon"
-msgstr "Lulworthsmygare"
+msgstr ""
 
 msgid "Thymelicus hyrax"
-msgstr "Levantsmygare"
+msgstr ""
 
 msgid "Thymelicus sylvestris"
 msgstr "Större tåtelsmygare"
@@ -103,73 +103,73 @@ msgid "Thymelicus lineola"
 msgstr "Mindre tåtelsmygare"
 
 msgid "Spialia phlomidis"
-msgstr "Persisk smygare"
+msgstr ""
 
 msgid "Spialia sertorius"
-msgstr "Rödvingesmygare"
+msgstr ""
 
 msgid "Spialia therapne"
-msgstr "Korsikansk rödvingesmygare"
+msgstr ""
 
 msgid "Spialia rosae"
-msgstr "Spansk rödvingesmygare"
+msgstr ""
 
 msgid "Spialia orbifer"
-msgstr "Ungersk smygare"
+msgstr ""
 
 msgid "Carcharodus tripolinus"
-msgstr "Falsk malvesmygare"
+msgstr ""
 
 msgid "Carcharodus alceae"
-msgstr "Malvesmygare"
+msgstr ""
 
 msgid "Muschampia cribrellum"
-msgstr "Taggsmygare"
+msgstr ""
 
 msgid "Muschampia tessellum"
-msgstr "Mosaiksmygare"
+msgstr ""
 
 msgid "Muschampia proto"
-msgstr "Salviasmygare"
+msgstr ""
 
 msgid "Carcharodus lavatherae"
-msgstr "Marmorsmygare"
+msgstr ""
 
 msgid "Carcharodus orientalis"
-msgstr "Orientmarmorsmygare"
+msgstr ""
 
 msgid "Carcharodus floccifera"
-msgstr "Tofsmarmorsmygare"
+msgstr ""
 
 msgid "Iphiclides podalirius"
 msgstr "Segelfjäril"
 
 msgid "Iphiclides feisthamelii"
-msgstr "Iberisk segelfjäril"
+msgstr ""
 
 msgid "Papilio alexanor"
-msgstr "Sydlig makaonfjäril"
+msgstr ""
 
 msgid "Papilio machaon"
 msgstr "Makaonfjäril"
 
 msgid "Pyrgus malvoides"
-msgstr "Sydlig smultronvisslare"
+msgstr ""
 
 msgid "Pyrgus malvae"
 msgstr "Smultronvisslare"
 
 msgid "Pyrgus carthami"
-msgstr "Tistelsmygare"
+msgstr ""
 
 msgid "Pyrgus sidae"
-msgstr "Gulbandsmygare"
+msgstr ""
 
 msgid "Pyrgus centaureae"
 msgstr "Myrvisslare"
 
 msgid "Pyrgus cacaliae"
-msgstr "Tussilagovisslare"
+msgstr ""
 
 msgid "Pyrgus andromedae"
 msgstr "Blomvisslare"
@@ -187,22 +187,22 @@ msgid "Pyrgus alveus"
 msgstr "Kattunvisslare"
 
 msgid "Pyrgus warrenensis"
-msgstr "Warrenvisslare"
+msgstr ""
 
 msgid "Pyrgus foulquieri"
-msgstr "Pyrgus foulquieri"
+msgstr ""
 
 msgid "Pyrgus onopordi"
-msgstr "Pyrgus onopordi"
+msgstr ""
 
 msgid "Pyrgus carlinae"
-msgstr "Pyrgus carlinae"
+msgstr ""
 
 msgid "Pyrgus cirsii"
-msgstr "Pyrgus cirsii"
+msgstr ""
 
 msgid "Pyrgus cinarae"
-msgstr "Pyrgus cinarae"
+msgstr ""
 
 msgid "Leptidea duponcheli"
 msgstr ""
@@ -226,16 +226,16 @@ msgid "Gonepteryx rhamni"
 msgstr "Citronfjäril"
 
 msgid "Gonepteryx cleobule"
-msgstr "Kanariecitronfjäril"
+msgstr ""
 
 msgid "Gonepteryx cleopatra"
-msgstr "Gonepteryx cleopatra"
+msgstr ""
 
 msgid "Gonepteryx maderensis"
-msgstr "Madeiracitronfjäril"
+msgstr ""
 
 msgid "Gonepteryx farinosa"
-msgstr "Gonepteryx farinosa"
+msgstr ""
 
 msgid "Catopsilia florella"
 msgstr ""
@@ -250,25 +250,25 @@ msgid "Colias alfacariensis"
 msgstr "Sydlig höfjäril"
 
 msgid "Colias phicomone"
-msgstr "Berghöfjäril"
+msgstr ""
 
 msgid "Colias aurorina"
-msgstr "Grekisk höfjäril"
+msgstr ""
 
 msgid "Colias chrysotheme"
-msgstr "Stäpphöfjäril"
+msgstr ""
 
 msgid "Colias erate"
-msgstr "Colias erate"
+msgstr ""
 
 msgid "Colias crocea"
 msgstr "Rödgul höfjäril"
 
 msgid "Colias myrmidone"
-msgstr "Colias myrmidone"
+msgstr ""
 
 msgid "Colias caucasica"
-msgstr "Balkanhöfjäril"
+msgstr ""
 
 msgid "Colias palaeno"
 msgstr "Svavelgul höfjäril"
@@ -280,7 +280,7 @@ msgid "Colias hecla"
 msgstr "Högnordisk höfjäril"
 
 msgid "Colotis evagore"
-msgstr "Ökenaurorafjäril"
+msgstr ""
 
 msgid "Aporia crataegi"
 msgstr "Hagtornsfjäril"
@@ -298,16 +298,16 @@ msgid "Pontia daplidice"
 msgstr "Grönfläckig vitfjäril"
 
 msgid "Pieris krueperi"
-msgstr "Kruepers rovfjäril"
+msgstr ""
 
 msgid "Pieris brassicae"
 msgstr "Kålfjäril"
 
 msgid "Pieris wollastoni"
-msgstr "Madeirakålfjäril"
+msgstr ""
 
 msgid "Pieris cheiranthi"
-msgstr "Kanariekålfjäril"
+msgstr ""
 
 msgid "Pieris rapae"
 msgstr "Rovfjäril"
@@ -316,76 +316,76 @@ msgid "Pieris mannii"
 msgstr "Sydlig rovfjäril"
 
 msgid "Pieris ergane"
-msgstr "Bergrovfjäril"
+msgstr ""
 
 msgid "Pieris bryoniae"
-msgstr "Bergrapsfjäril"
+msgstr ""
 
 msgid "Pieris napi"
 msgstr "Rapsfjäril"
 
 msgid "Pieris balcana"
-msgstr "Balkanrapsfjäril"
+msgstr ""
 
 msgid "Euchloe tagis"
-msgstr "Portugisisk vitfjäril"
+msgstr ""
 
 msgid "Euchloe eversi"
-msgstr "Teneriffas vitfjäril"
+msgstr ""
 
 msgid "Euchloe grancanariensis"
-msgstr "Gran Canarias vitfjäril"
+msgstr ""
 
 msgid "Euchloe hesperidum"
-msgstr "Kanarievitfjäril"
+msgstr ""
 
 msgid "Euchloe belemia"
-msgstr "Grönstreckad vitfjäril"
+msgstr ""
 
 msgid "Euchloe insularis"
-msgstr "Korsikansk vitfjäril"
+msgstr ""
 
 msgid "Euchloe crameri"
-msgstr "Västlig vitfjäril"
+msgstr ""
 
 msgid "Euchloe simplonia"
-msgstr "Bergvitfjäril"
+msgstr ""
 
 msgid "Euchloe ausonia"
 msgstr "Svartkantad vitfjäril"
 
 msgid "Euchloe charlonia"
-msgstr "Grön vitfjäril"
+msgstr ""
 
 msgid "Euchloe penia"
-msgstr "Östlig grön vitfjäril"
+msgstr ""
 
 msgid "Euchloe bazae"
-msgstr "Spansk grön vitfjäril"
+msgstr ""
 
 msgid "Zegris pyrothoe"
-msgstr "Östlig mörkspetsad aurorafjäril"
+msgstr ""
 
 msgid "Zegris eupheme"
-msgstr "Mörkspetsad aurorafjäril"
+msgstr ""
 
 msgid "Anthocharis euphenoides"
-msgstr "Provensalsk aurorafjäril"
+msgstr ""
 
 msgid "Anthocharis cardamines"
 msgstr "Aurorafjäril"
 
 msgid "Anthocharis gruneri"
-msgstr "Svavelgul aurorafjäril"
+msgstr ""
 
 msgid "Anthocharis damone"
-msgstr "Östlig aurorafjäril"
+msgstr ""
 
 msgid "Hamearis lucina"
 msgstr "Gullvivefjäril"
 
 msgid "Lycaena dimorpha"
-msgstr "Rysk guldvinge"
+msgstr ""
 
 msgid "Lycaena helle"
 msgstr "Violett guldvinge"
@@ -394,10 +394,10 @@ msgid "Lycaena alciphron"
 msgstr "Ametistguldvinge"
 
 msgid "Lycaena thetis"
-msgstr "Eldguldvinge"
+msgstr ""
 
 msgid "Lycaena thersamon"
-msgstr "Mindre eldguldvinge"
+msgstr ""
 
 msgid "Lycaena dispar"
 msgstr "Kärrguldvinge"
@@ -406,88 +406,88 @@ msgid "Lycaena hippothoe"
 msgstr "Violettkantad guldvinge"
 
 msgid "Pseudophilotes barbagiae"
-msgstr "Sardinsk blåvinge"
+msgstr ""
 
 msgid "Pseudophilotes abencerragus"
-msgstr "Pseudophilotes abencerragus"
+msgstr ""
 
 msgid "Pseudophilotes panoptes"
-msgstr "Pseudophilotes panoptes"
+msgstr ""
 
 msgid "Pseudophilotes vicrama"
 msgstr "Åsblåvinge"
 
 msgid "Pseudophilotes baton"
-msgstr "Pseudophilotes baton"
+msgstr ""
 
 msgid "Scolitantides orion"
 msgstr "Fetörtsblåvinge"
 
 msgid "Praephilotes anthracias"
-msgstr "Praephilotes anthracias"
+msgstr ""
 
 msgid "Iolana iolas"
-msgstr "Iolana iolas"
+msgstr ""
 
 msgid "Iolana debilitata"
-msgstr "Iolana debilitata"
+msgstr ""
 
 msgid "Glaucopsyche melanops"
-msgstr "Glaucopsyche melanops"
+msgstr ""
 
 msgid "Glaucopsyche paphos"
-msgstr "Glaucopsyche paphos"
+msgstr ""
 
 msgid "Glaucopsyche alexis"
 msgstr "Klöverblåvinge"
 
 msgid "Hipparchia tilosi"
-msgstr "La Palmas sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia bacchus"
-msgstr "El Hierros sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia wyssii"
-msgstr "Kanariesandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia tamadabae"
-msgstr "Gran Canarias sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia gomera"
-msgstr "Gomeras sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia fidia"
-msgstr "Vit sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia neomiris"
-msgstr "Korsikansk sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia autonoe"
-msgstr "Rysk bandgräsfäril"
+msgstr ""
 
 msgid "Hipparchia hermione"
 msgstr "Mindre bandgräsfjäril"
 
 msgid "Hipparchia syriaca"
-msgstr "Östlig bandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia fagi"
-msgstr "Bokbandfjäril"
+msgstr ""
 
 msgid "Hipparchia mersina"
-msgstr "Samos sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia miguelensis"
-msgstr "São Miguels sandgräsfjäriil"
+msgstr ""
 
 msgid "Lycaena candens"
-msgstr "Balkanguldvinge"
+msgstr ""
 
 msgid "Lycaena ottomana"
-msgstr "Grekisk guldvinge"
+msgstr ""
 
 msgid "Lycaena bleusei"
-msgstr "Iberisk sotguldvinge"
+msgstr ""
 
 msgid "Lycaena phlaeas"
 msgstr "Mindre guldvinge"
@@ -499,7 +499,7 @@ msgid "Lycaena tityrus"
 msgstr "Sotguldvinge"
 
 msgid "Cigaritis acamas"
-msgstr "Cigaritis acamas"
+msgstr ""
 
 msgid "Thecla betulae"
 msgstr "Eldsnabbvinge"
@@ -508,31 +508,31 @@ msgid "Favonius quercus"
 msgstr "Eksnabbvinge"
 
 msgid "Laeosopis roboris"
-msgstr "Spansk eksnabbvinge"
+msgstr ""
 
 msgid "Tomares ballus"
-msgstr "Provensalsk snabbvinge"
+msgstr ""
 
 msgid "Tomares nogelii"
-msgstr "Nogels snabbvinge"
+msgstr ""
 
 msgid "Tomares callimachus"
-msgstr "Vårguldvinge"
+msgstr ""
 
 msgid "Callophrys avis"
-msgstr "Jordgubbsträdssnabbvinge"
+msgstr ""
 
 msgid "Callophrys suaveola"
-msgstr "Callophrys suaveola"
+msgstr ""
 
 msgid "Callophrys rubi"
 msgstr "Grönsnabbvinge"
 
 msgid "Callophrys chalybeitincta"
-msgstr "Östlig grönsnabbvinge"
+msgstr ""
 
 msgid "Neolycaena rhymnus"
-msgstr "Neolycaena rhymnus"
+msgstr ""
 
 msgid "Satyrium pruni"
 msgstr "Busksnabbvinge"
@@ -541,31 +541,31 @@ msgid "Satyrium ilicis"
 msgstr "Krattsnabbvinge"
 
 msgid "Satyrium esculi"
-msgstr "Falsk krattsnabbvinge"
+msgstr ""
 
 msgid "Satyrium ledereri"
-msgstr "Slidesnabbvinge"
+msgstr ""
 
 msgid "Satyrium w-album"
 msgstr "Almsnabbvinge"
 
 msgid "Satyrium spini"
-msgstr "Getapelsnabbvinge"
+msgstr ""
 
 msgid "Satyrium acaciae"
-msgstr "Acaciasnabbvinge"
+msgstr ""
 
 msgid "Leptotes pirithous"
-msgstr "Leptotes pirithous"
+msgstr ""
 
 msgid "Cyclyrius webbianus"
-msgstr "Kanarieblåvinge"
+msgstr ""
 
 msgid "Azanus ubaldus"
-msgstr "Azanus ubaldus"
+msgstr ""
 
 msgid "Azanus jesous"
-msgstr "Azanus jesous"
+msgstr ""
 
 msgid "Lampides boeticus"
 msgstr "Långsvansad blåvinge"
@@ -577,10 +577,10 @@ msgid "Celastrina argiolus"
 msgstr "Tosteblåvinge"
 
 msgid "Tarucus theophrastus"
-msgstr "Tigerblåvinge"
+msgstr ""
 
 msgid "Tarucus balkanicus"
-msgstr "Mindre tigerblåvinge"
+msgstr ""
 
 msgid "Phengaris alcon"
 msgstr "Alkonblåvinge"
@@ -589,49 +589,49 @@ msgid "Phengaris arion"
 msgstr "Svartfläckig blåvinge"
 
 msgid "Phengaris teleius"
-msgstr "Phengaris teleius"
+msgstr "Blodtoppsblåvinge"
 
 msgid "Phengaris nausithous"
-msgstr "Phengaris nausithous"
+msgstr "Mörk blodtoppsblåvinge"
 
 msgid "Turanana taygetica"
-msgstr "Turanana taygetica"
+msgstr ""
 
 msgid "Pseudophilotes bavius"
-msgstr "Pseudophilotes bavius"
+msgstr ""
 
 msgid "Zizeeria knysna"
-msgstr "Zizeeria knysna"
+msgstr ""
 
 msgid "Zizeeria karsandra"
-msgstr "Zizeeria karsandra"
+msgstr ""
 
 msgid "Tongeia fischeri"
-msgstr "Tongeia fischeri "
+msgstr ""
 
 msgid "Cupido argiades"
 msgstr "Kortsvansad blåvinge"
 
 msgid "Cupido decoloratus"
-msgstr "Östlig kortsvansad blåvinge"
+msgstr ""
 
 msgid "Cupido alcetas"
-msgstr "Provensalsk kortsvansad blåvinge"
+msgstr "Kronillblåvinge"
 
 msgid "Cupido osiris"
-msgstr "Cupido osiris"
+msgstr ""
 
 msgid "Cupido minimus"
 msgstr "Mindre blåvinge"
 
 msgid "Cupido lorquinii"
-msgstr "Cupido lorquinii"
+msgstr ""
 
 msgid "Luthrodes galba"
-msgstr "Mindre ökenblåvinge"
+msgstr ""
 
 msgid "Freyeria trochylus"
-msgstr "Freyeria trochylus"
+msgstr ""
 
 msgid "Plebejus argus"
 msgstr "Ljungblåvinge"
@@ -640,70 +640,70 @@ msgid "Plebejus idas"
 msgstr "Hedblåvinge"
 
 msgid "Plebejus bellieri"
-msgstr "Plebejus bellieri"
+msgstr ""
 
 msgid "Plebejus argyrognomon"
 msgstr "Kronärtsblåvinge"
 
 msgid "Agriades orbitulus"
-msgstr "Albulina orbitulus"
+msgstr "Fjällvickerblåvinge"
 
 msgid "Agriades optilete"
 msgstr "Violett blåvinge"
 
 msgid "Agriades pyrenaicus"
-msgstr "Agriades pyrenaicus"
+msgstr ""
 
 msgid "Agriades dardanus"
-msgstr "Bosnisk blåvinge"
+msgstr ""
 
 msgid "Agriades zullichi"
-msgstr "Agriades zullichi"
+msgstr ""
 
 msgid "Agriades glandon"
-msgstr "Agriades glandon"
+msgstr ""
 
 msgid "Agriades aquilo"
 msgstr "Plebejus aquilo"
 
 msgid "Plebejidea loewii"
-msgstr "Plebejus loewii"
+msgstr ""
 
 msgid "Eumedonia eumedon"
 msgstr "Brun blåvinge"
 
 msgid "Kretania psylorita"
-msgstr "Kretania psylorita"
+msgstr ""
 
 msgid "Kretania hesperica"
-msgstr "Plebejus hespericus"
+msgstr ""
 
 msgid "Kretania eurypilus"
-msgstr "Eastern Brown Argus"
+msgstr ""
 
 msgid "Kretania trappi"
-msgstr "Plebejus trappi"
+msgstr ""
 
 msgid "Kretania sephirus"
-msgstr "Plebejus sephirus"
+msgstr ""
 
 msgid "Kretania pylaon"
-msgstr "Plebejus sephirus"
+msgstr ""
 
 msgid "Cyaniris semiargus"
 msgstr "Ängsblåvinge"
 
 msgid "Glabroculus cyane"
-msgstr "Glabroculus cyane"
+msgstr ""
 
 msgid "Aricia morronensis"
-msgstr "Aricia morronensis"
+msgstr ""
 
 msgid "Aricia anteros"
-msgstr "Aricia anteros"
+msgstr ""
 
 msgid "Aricia cramera"
-msgstr "Aricia cramera"
+msgstr ""
 
 msgid "Aricia nicias"
 msgstr "Turkos blåvinge"
@@ -712,31 +712,31 @@ msgid "Aricia artaxerxes"
 msgstr "Midsommarblåvinge"
 
 msgid "Aricia montensis"
-msgstr "Aricia montensis"
+msgstr ""
 
 msgid "Aricia agestis"
 msgstr "Rödfläckig blåvinge"
 
 msgid "Neolysandra coelestina"
-msgstr "Neolysandra coelestina"
+msgstr ""
 
 msgid "Lysandra hispana"
-msgstr "Lysandra hispana"
+msgstr ""
 
 msgid "Lysandra corydonius"
-msgstr "Lysandra corydonius"
+msgstr ""
 
 msgid "Lysandra bellargus"
-msgstr "Lysandra bellargus"
+msgstr ""
 
 msgid "Lysandra coridon"
-msgstr "Lysandra coridon"
+msgstr ""
 
 msgid "Lysandra caelestissima"
-msgstr "Lysandra caelestissima"
+msgstr ""
 
 msgid "Lysandra albicans"
-msgstr "Lysandra albicans"
+msgstr ""
 
 msgid "Polyommatus escheri"
 msgstr ""
@@ -751,16 +751,16 @@ msgid "Polyommatus amandus"
 msgstr "Silverblåvinge"
 
 msgid "Polyommatus golgus"
-msgstr "Nevadablåvinge"
+msgstr ""
 
 msgid "Polyommatus nivescens"
-msgstr "Pärlemorblåvinge"
+msgstr ""
 
 msgid "Polyommatus dorylas"
 msgstr "Väpplingblåvinge"
 
 msgid "Polyommatus celina"
-msgstr "Sydlig puktörneblåvinge"
+msgstr ""
 
 msgid "Polyommatus icarus"
 msgstr "Puktörneblåvinge"
@@ -772,10 +772,10 @@ msgid "Polyommatus damon"
 msgstr ""
 
 msgid "Polyommatus damone"
-msgstr "Polyommatus damone"
+msgstr ""
 
 msgid "Polyommatus damocles"
-msgstr "Polyommatus damocles"
+msgstr ""
 
 msgid "Polyommatus admetus"
 msgstr ""
@@ -805,7 +805,7 @@ msgid "Polyommatus humedasae"
 msgstr ""
 
 msgid "Polyommatus timfristos"
-msgstr "Polyommatus timfristos"
+msgstr ""
 
 msgid "Polyommatus orphicus"
 msgstr ""
@@ -820,7 +820,7 @@ msgid "Neptis rivularis"
 msgstr ""
 
 msgid "Limenitis reducta"
-msgstr "Sydlig tryfjäril"
+msgstr ""
 
 msgid "Limenitis populi"
 msgstr "Aspfjäril"
@@ -832,7 +832,7 @@ msgid "Issoria lathonia"
 msgstr "Storfläckig pärlemorfjäril"
 
 msgid "Issoria eugenia"
-msgstr "Issoria eugenia"
+msgstr ""
 
 msgid "Brenthis hecate"
 msgstr ""
@@ -847,7 +847,7 @@ msgid "Argynnis paphia"
 msgstr "Silverstreckad pärlemorfjäril"
 
 msgid "Argynnis pandora"
-msgstr "Kardinal"
+msgstr ""
 
 msgid "Argynnis laodice"
 msgstr "Skuggpärlemorfjäril"
@@ -883,7 +883,7 @@ msgid "Boloria aquilonaris"
 msgstr "Myrpärlemorfjäril"
 
 msgid "Boloria tritonia"
-msgstr "Boloria tritonia"
+msgstr ""
 
 msgid "Boloria polaris"
 msgstr "Högnordisk pärlemorfjäril"
@@ -910,10 +910,10 @@ msgid "Boloria freija"
 msgstr "Frejas pärlemorfjäril"
 
 msgid "Boloria selenis"
-msgstr "Boloria selenis"
+msgstr ""
 
 msgid "Boloria oscarus"
-msgstr "Boloria oscarus"
+msgstr ""
 
 msgid "Boloria titania"
 msgstr "Lundpärlemorfjäril"
@@ -922,7 +922,7 @@ msgid "Boloria chariclea"
 msgstr "Arktisk pärlemorfjäril"
 
 msgid "Boloria angarensis"
-msgstr "Boloria angarensis"
+msgstr ""
 
 msgid "Apatura iris"
 msgstr "Sälgskimmerfjäril"
@@ -940,13 +940,13 @@ msgid "Araschnia levana"
 msgstr "Kartfjäril"
 
 msgid "Vanessa virginiensis"
-msgstr "Amerikansk tistelfjäril"
+msgstr ""
 
 msgid "Vanessa cardui"
 msgstr "Tistelfjäril"
 
 msgid "Vanessa vulcania"
-msgstr "Kanarieamiral"
+msgstr ""
 
 msgid "Vanessa atalanta"
 msgstr "Amiral"
@@ -958,7 +958,7 @@ msgid "Aglais urticae"
 msgstr "Nässelfjäril"
 
 msgid "Aglais ichnusa"
-msgstr "Korsikansk/Sardinsk nässelfjäril"
+msgstr ""
 
 msgid "Polygonia egea"
 msgstr ""
@@ -1060,7 +1060,7 @@ msgid "Charaxes jasius"
 msgstr "Pasha"
 
 msgid "Coenonympha phryne"
-msgstr "Coenonympha phryne"
+msgstr ""
 
 msgid "Coenonympha oedippus"
 msgstr ""
@@ -1069,7 +1069,7 @@ msgid "Coenonympha dorus"
 msgstr ""
 
 msgid "Coenonympha thyrsis"
-msgstr "Kretakamgräsfjäril"
+msgstr ""
 
 msgid "Coenonympha pamphilus"
 msgstr "Kamgräsfjäril"
@@ -1078,10 +1078,10 @@ msgid "Coenonympha tullia"
 msgstr "Starrgräsfjäril"
 
 msgid "Coenonympha rhodopensis"
-msgstr "Östlig starrgräsfjäril"
+msgstr ""
 
 msgid "Coenonympha amaryllis"
-msgstr "Coenonympha amaryllis"
+msgstr ""
 
 msgid "Coenonympha glycerion"
 msgstr "Darrgräsfjäril"
@@ -1114,10 +1114,10 @@ msgid "Lopinga achine"
 msgstr "Dårgräsfjäril"
 
 msgid "Pararge xiphia"
-msgstr "Madeirakvickgräsfjäril"
+msgstr ""
 
 msgid "Pararge xiphioides"
-msgstr "Kanariekvickgräsfjäril"
+msgstr ""
 
 msgid "Pararge aegeria"
 msgstr "Kvickgräsfjäril"
@@ -1126,7 +1126,7 @@ msgid "Lasiommata maera"
 msgstr "Vitgräsfjäril"
 
 msgid "Lasiommata deidamia"
-msgstr "Lasiommata deidamia"
+msgstr ""
 
 msgid "Lasiommata petropolitana"
 msgstr "Berggräsfjäril"
@@ -1138,85 +1138,85 @@ msgid "Lasiommata megera"
 msgstr "Svingelgräsfjäril"
 
 msgid "Melanargia russiae"
-msgstr "Espers schackbräde"
+msgstr ""
 
 msgid "Melanargia larissa"
-msgstr "Balkanschackbräde"
+msgstr ""
 
 msgid "Melanargia lachesis"
-msgstr "Iberiskt schackbräde"
+msgstr ""
 
 msgid "Melanargia galathea"
 msgstr "Schackbräde"
 
 msgid "Melanargia ines"
-msgstr "Spanskt schackbräde"
+msgstr ""
 
 msgid "Melanargia arge"
-msgstr "Italienskt schackbräde"
+msgstr ""
 
 msgid "Melanargia pherusa"
-msgstr "Sicilianskt schackbräde"
+msgstr ""
 
 msgid "Melanargia occitanica"
-msgstr "Västligt schackbräde"
+msgstr ""
 
 msgid "Hipparchia fatua"
-msgstr "Grekisk trädgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia statilinus"
-msgstr "Trädgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia azorina"
-msgstr "Azorsandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia senthes"
-msgstr "Balkansandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia maderensis"
-msgstr "Madeirasandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia semele"
 msgstr "Sandgräsfjäril"
 
 msgid "Hipparchia blachieri"
-msgstr "Siciliansk sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia aristaeus"
-msgstr "Sydlig sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia volgensis"
-msgstr "Delattins sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia neapolitana"
-msgstr "Italiensk sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia leighebi"
-msgstr "Eolisk sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia pellucida"
-msgstr "Lesbos sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia sbordonii"
-msgstr "Ponzas sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia cypriensis"
-msgstr "Cyperns sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia cretica"
-msgstr "Kretas sandgräsfjäril"
+msgstr ""
 
 msgid "Hipparchia christenseni"
-msgstr "Karpathos sandgräsfjäril"
+msgstr ""
 
 msgid "Minois dryas"
 msgstr ""
 
 msgid "Brintesia circe"
-msgstr "Större bandgräsfjäril"
+msgstr ""
 
 msgid "Arethusana arethusa"
-msgstr "Falsk sadgräsfjäril"
+msgstr ""
 
 msgid "Oeneis tarpeia"
 msgstr ""
@@ -1243,7 +1243,7 @@ msgid "Oeneis polixenes"
 msgstr ""
 
 msgid "Oeneis glacialis"
-msgstr "Alpgräsfjäril"
+msgstr ""
 
 msgid "Satyrus ferula"
 msgstr ""
@@ -1255,7 +1255,7 @@ msgid "Satyrus actaea"
 msgstr ""
 
 msgid "Chazara briseis"
-msgstr "Vitbandad gräsfjäril"
+msgstr ""
 
 msgid "Chazara prieuri"
 msgstr ""
@@ -1264,37 +1264,37 @@ msgid "Chazara persephone"
 msgstr ""
 
 msgid "Pseudochazara geyeri"
-msgstr "Grå sandgräsfjäril"
+msgstr ""
 
 msgid "Pseudochazara graeca"
-msgstr "Grekisk sandgräsfjäril"
+msgstr ""
 
 msgid "Pseudochazara amymone"
-msgstr "Albansk sandgräsfjäril"
+msgstr ""
 
 msgid "Pseudochazara anthelea"
-msgstr "Vitbandad sandgräsfjäril"
+msgstr ""
 
 msgid "Pseudochazara amalthea"
-msgstr "Pseudochazara amalthea"
+msgstr ""
 
 msgid "Pseudochazara williamsi"
-msgstr "Nevadas sandgräsfjäril"
+msgstr ""
 
 msgid "Pseudochazara euxina"
-msgstr "Pseudochazara euxina"
+msgstr ""
 
 msgid "Pseudochazara mercurius"
-msgstr "Pseudochazara mercurius"
+msgstr ""
 
 msgid "Pseudochazara cingovskii"
-msgstr "Makedonsk sandgräsfjäril"
+msgstr ""
 
 msgid "Pseudochazara tisiphone"
-msgstr "Mörk sandgräsfjäril"
+msgstr ""
 
 msgid "Pseudochazara orestes"
-msgstr "Bergsandgräsfjäril"
+msgstr ""
 
 msgid "Ypthima asterope"
 msgstr ""
@@ -1303,7 +1303,7 @@ msgid "Proterebia phegea"
 msgstr ""
 
 msgid "Hyponephele huebneri"
-msgstr "Hyponephele huebneri"
+msgstr ""
 
 msgid "Hyponephele lycaon"
 msgstr ""
@@ -1345,19 +1345,19 @@ msgid "Maniola halicarnassus"
 msgstr ""
 
 msgid "Erebia edda"
-msgstr "Erebia edda"
+msgstr ""
 
 msgid "Erebia fasciata"
 msgstr ""
 
 msgid "Erebia discoidalis"
-msgstr "Erebia discoidalis "
+msgstr ""
 
 msgid "Erebia rossii"
 msgstr ""
 
 msgid "Erebia cyclopius"
-msgstr "Erebia cyclopius"
+msgstr ""
 
 msgid "Erebia embla"
 msgstr "Gulringad gräsfjäril"
@@ -1369,10 +1369,10 @@ msgid "Erebia meolans"
 msgstr ""
 
 msgid "Erebia dabanensis"
-msgstr "Erebia dabanensis"
+msgstr ""
 
 msgid "Erebia jeniseiensis"
-msgstr "Erebia jeniseiensis"
+msgstr ""
 
 msgid "Erebia claudina"
 msgstr ""
@@ -1402,7 +1402,7 @@ msgid "Erebia nivalis"
 msgstr ""
 
 msgid "Erebia neleus"
-msgstr "Erebia neleus"
+msgstr ""
 
 msgid "Erebia calcarius"
 msgstr ""
@@ -1429,7 +1429,7 @@ msgid "Erebia epistygne"
 msgstr ""
 
 msgid "Erebia euryale"
-msgstr "Östlig gräsfjäril"
+msgstr ""
 
 msgid "Erebia palarica"
 msgstr ""
@@ -1483,34 +1483,34 @@ msgid "Erebia orientalis"
 msgstr ""
 
 msgid "Erebia epiphron"
-msgstr "Erebia epiphron"
+msgstr ""
 
 msgid "Erebia flavofasciata"
-msgstr "Erebia flavofasciata"
+msgstr ""
 
 msgid "Erebia montana"
 msgstr ""
 
 msgid "Erebia styx"
-msgstr "Erebia styx"
+msgstr ""
 
 msgid "Erebia stiria"
-msgstr "Erebia stirius"
+msgstr ""
 
 msgid "Erebia scipio"
-msgstr "Erebia scipio"
+msgstr ""
 
 msgid "Erebia pronoe"
-msgstr "Erebia pronoe"
+msgstr ""
 
 msgid "Erebia melas"
-msgstr "Erebia melas"
+msgstr ""
 
 msgid "Erebia lefebvrei"
-msgstr "Erebia lefebvrei"
+msgstr ""
 
 msgid "Erebia zapateri"
-msgstr "Erebia zapateri"
+msgstr ""
 
 msgid "Erebia neoridas"
-msgstr "Erebia neoridas"
+msgstr ""

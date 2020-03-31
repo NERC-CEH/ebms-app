@@ -1,12 +1,12 @@
 # Translators:
 # Federica Paradiso <fedediso94@gmail.com>, 2020
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Karolis, 2020
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2020\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1311,7 +1311,7 @@ msgid "Today"
 msgstr "Oggi"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "Ieri"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
@@ -1321,7 +1321,7 @@ msgstr ""
 
 # Refers to surveys list when long-pressing plus button
 msgid "Other recording options"
-msgstr ""
+msgstr "Altre opzioni di registrazione"
 
 # A note in app settings page
 msgid ""
@@ -1331,11 +1331,11 @@ msgstr ""
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr ""
+msgstr "Sei sicuro di voler caricare tutti i campionamenti finiti?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "Accedi prima per caricare i campionamenti"
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
@@ -1345,7 +1345,7 @@ msgstr[1] ""
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
-msgstr ""
+msgstr "Oops! Qualcosa è andato storto."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"

@@ -1,11 +1,11 @@
 # Translators:
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Karolis, 2020
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2020\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -323,7 +323,7 @@ msgstr "¿Estás seguro de que quieres cerrar sesión?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr ""
+msgstr "Descartar datos locales"
 
 msgid "This will delete all the records on this device."
 msgstr "Esto borrará todos los registros en este dispositivo."
@@ -1316,7 +1316,7 @@ msgid "Today"
 msgstr "Hoy"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "Ayer"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
@@ -1325,21 +1325,23 @@ msgstr ""
 
 # Refers to surveys list when long-pressing plus button
 msgid "Other recording options"
-msgstr ""
+msgstr "Otras opciones de registro"
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
+"Carga por lotes todos los registros terminados. Esto no incluye registros en"
+" estado 'borrador'."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr ""
+msgstr "¿Seguro que quieres subir todos los registros terminados?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "Por favor registrese primero para enviar registros"
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
@@ -1349,8 +1351,8 @@ msgstr[1] ""
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
-msgstr ""
+msgstr "Ups! Algo salió mal."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr ""
+msgstr "Este es el ID del suceso error: {{eventId}}"

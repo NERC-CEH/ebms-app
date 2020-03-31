@@ -1,5 +1,5 @@
 export default {
-  // disabled - under-translated (< 90%)
+  // disabled - under-translated (< 80%)
   en: 'English',
   'lt-LT': 'Lietuvių',
   'es-ES': 'Español',
@@ -10,7 +10,7 @@ export default {
   'de-DE': 'Deutsch',
   'it-IT': 'Italiano',
   'cs-CZ': 'Čeština',
-  // 'hr-HR': 'Hrvatski',
-  // 'fi-FI': 'Suomi',
+  'hr-HR': 'Hrvatski',
+  'fi-FI': 'Suomi',
   // 'fr-FR': 'Français',
 };

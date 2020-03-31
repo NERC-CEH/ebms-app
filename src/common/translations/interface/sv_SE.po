@@ -1,12 +1,12 @@
 # Translators:
-# Lars Pettersson <lars.pettersson@biol.lu.se>, 2019
-# Carin Kullberg <listrefjarilar@ckg.se>, 2020
 # Karolis, 2020
+# Carin Kullberg <listrefjarilar@ckg.se>, 2020
+# Lars Pettersson <lars.pettersson@biol.lu.se>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2020\n"
+"Last-Translator: Lars Pettersson <lars.pettersson@biol.lu.se>, 2020\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -257,7 +257,7 @@ msgid "TOP RECORDERS"
 msgstr "Flest rapporter"
 
 msgid "Top Species from all timed counts"
-msgstr "Vanligaste arter"
+msgstr "Vanligaste arterna från 15-min inventeringar"
 
 msgid "Back"
 msgstr "Tillbaka"
@@ -323,7 +323,7 @@ msgstr "Är du säker på att du vill logga ut?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr ""
+msgstr "Ta bort lokalt lagrade appdata"
 
 msgid "This will delete all the records on this device."
 msgstr "Detta kommer att ta bort alla observationer från den här enheten."
@@ -481,7 +481,7 @@ msgid "Camera"
 msgstr "Kamera"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "Är du säker på att du vill ta bort den här bilden från observationen?"
+msgstr "Är du säker på att du vill ta bort den här bilden?"
 
 msgid "Note: it will remain in the gallery."
 msgstr "OBS! Den kommer att ligga kvar i galleriet."
@@ -988,7 +988,7 @@ msgid "Unable to survey"
 msgstr "Kan ej inventeras"
 
 msgid "15min Count"
-msgstr "eBMS punktlokal"
+msgstr "15-min inventering"
 
 msgid "eBMS Transect"
 msgstr "eBMS-slinga"
@@ -1097,15 +1097,17 @@ msgid ""
 "the ability to submit casual records.  The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"Helst bör man göra en inventering under 15 minuter. Den kan genomföras "
-"varsomhelst och närsomhelst är fjärilarna är aktiva (dvs. när det är varmt "
-"och helst soligt). Du kan också använda appen för att registrera data från "
-"dina fasta fjärilsslingor. Senare under 2020 kommer appen  också att kunna "
-"registrera tillfälliga observationer. Nedan följer beskrivningar om hur man "
-"använder de olika metoder som kan användas."
+"Du kan använda appen för att registrera data från dina fasta fjärilsslingor "
+"eller punktlokaler. Både slingor och punktlokaler kan i denna version av "
+"appen inventeras som fjärilsslingor. Du kan också göra en inventering på "
+"valfri plats under 15 minuter närsomhelst fjärilarna är aktiva (dvs. när det"
+" är varmt och helst soligt).  Denna metod kallas 15-min inventering. Senare "
+"under 2020 kommer appen  också att kunna registrera tillfälliga "
+"observationer. Nedan följer beskrivningar om hur man använder de olika "
+"metoderna."
 
 msgid "How to do a 15-minute Count"
-msgstr ""
+msgstr "Hur du gör en 15-minutersinventering"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1120,6 +1122,21 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
+"Det här är basmetoden för appen. Räkna helt enkelt alla fjärilar du ser "
+"under 15 minuter, endera inom ett definierat område, som t.ex. en äng, eller"
+" medan du går en sträcka eller står still på en bestämd plats och räknar "
+"alla fjärilar som flyger förbi. Man behöver inte rita upp någon slinga, "
+"eftersom appen känner av var du går, om du tillåtit GPS-spårning i "
+"inställningarna. Om du inte tillåter det måste du rita in det avsökta "
+"området på en karta med hjälp av appen. För att börja trycker du på plus-"
+"knappen på skärmens nederkant. Appen börjar räkna ner 15 minuter så snart du"
+" börjat, men du kan pausa när som helst (t.ex. för att identifiera en "
+"fjäril) genom att trycka på paus-knappen. När tiden är slut kan du "
+"kontrollera dina observationer och att antalet fjärilar är korrekt innan du "
+"sänder in dem. Metoden går att använda för att inventera Svensk "
+"Dagfjärilsövervaknings punktlokaler men då behöver du lägga till lokalens "
+"namn och väder (temperatur, sol, vindstyrka, vindriktning) i "
+"kommentarsfältet. "
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1129,6 +1146,13 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
+"Lägg till arter du ser genom att trycka på knappen \"+ Lägg till\" och börja"
+" skriva artens namn. Ett urval av arter visas då som en lista. Du kan "
+"använda både svenska och vetenskapliga namn. Välj den art du ser, och när "
+"den visas i din observationslista kan du trycka på siffran till vänster om "
+"artnamnet för att öka antalet observerade fjärilar som du har sett. Du kan "
+"också kontrollera och ändra antalet efter att du avslutat inventeringen. Om "
+"du vill kan du också lägga till foton och kommentarer."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1137,9 +1161,14 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
+"När du avslutat din 15-minutersinventering och kontrollerat de arter och "
+"antal som observerats trycker du på SÄND-knappen för att skicka in "
+"resultaten. Detta är viktigt för att dina data ska kunna lagras på ett "
+"säkert sätt i eBMS-databasen. Värdena lagras både på din enhet, som grund "
+"för kommande inventeringar, och på ditt online-konto."
 
 msgid "How to record along an existing transect"
-msgstr "Hur man räknar längs en angiven slinga"
+msgstr "Hur man räknar längs en existerande fjärilsslinga"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1150,13 +1179,17 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
-"Du kan också använda appen för att registrera fjärilar medan du går längs en"
-" definierad inventeringsslinga. Slingorna är redan angivna av varje lands "
-"inventeringsprogram, och bör inventeras av erfarna övervakare. För att kunna"
-" rapportera från en angiven slinga måste ditt användarkonto vara kopplat "
-"till en registrerad slinga i eBMS-systemet. Om du inte ser några slingor när"
-" du är inloggad i appen kan du kontakta den nationella samordnaren (sänd ett"
-" mail till {{helpEmail}} för att få hjälp)."
+"Du kan också använda appen för att registrera fjärilar när du inventerar en "
+"befintlig inventeringsslinga eller punktlokal. Slingorna och punktlokalerna "
+"är en del av respektive lands fjärilsövervakning. Du kan inventera en "
+"punktlokal med appen på två sätt, antingen som en variant av en slinga som "
+"har enbart ett segment, alternativt som en 15-minutersinventering men i det "
+"senare fallet behöver du själv fylla i lokalnamn och väder i "
+"kommentarsfältet. För att kunna rapportera från en befintlig slinga eller "
+"punktlokal måste ditt användarkonto vara kopplat till den i eBMS-systemet. "
+"Om du inte ser dina slingor eller punktlokaler när du är inloggad i appen "
+"kan du kontakta den nationella samordnaren för att få tillgång till dina "
+"lokaler (sänd ett mail till {{helpEmail}} för att få hjälp). "
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1171,20 +1204,20 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"För att börja en slinginventering trycker du på +-knappen (en lång "
+"För att börja en slinginventering trycker du på plus-knappen (en lång "
 "tryckning) längst ner på skärmen och väljer eBMS Slinga. Sidan för slingor "
 "visas, med alla uppgifter som ska anges. Först väljer du dina slingor (du "
 "måste vara inloggad för att kunna göra det, och för att slingornas "
 "sträckning ska länkas till ditt användarkonto). När du valt din slinglokal "
 "kan du fylla i väderuppgifter (t.ex temperatur, vindstyrka mm.) och annan "
-"obligatorisk information (t.ex starttid) på Sling-sidan. Sedan kan du lägga "
-"till en lista på de arter du sett och antalet individer för varje segment av"
-" slingan. När du har avslutat din slinginventering och kontrollerat att "
-"arter och antal stämmer, trycker du på knappen KLART för att skicka iväg "
-"uppgifterna."
+"obligatorisk information (t.ex starttid) på Sling-sidan. Sedan kan du på "
+"samma sätt som vid en 15-minutersinvertering lägga till en lista på de arter"
+" du sett och antalet individer för varje segment av slingan. När du har "
+"avslutat din slinginventering och kontrollerat att arter och antal stämmer, "
+"trycker du på knappen KLART för att skicka iväg uppgifterna."
 
 msgid "Survey section"
-msgstr "Sling-segment"
+msgstr "Slingsegment"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1194,7 +1227,7 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
-"På den här fliken kan du, till höger om +-knappen se antalet VÄNTANDE "
+"På den här fliken kan du, till höger om plus-knappen, se antalet VÄNTANDE "
 "registreringar, alltså de inventeringar som ännu inte sänts iväg, och "
 "antalet INSÄNDA inventeringar, som sänts in till eBMS databas. Väntande data"
 " kan sändas in till systemet genom att klicka på dem och välja alternativet "
@@ -1202,7 +1235,7 @@ msgstr ""
 "uppgifter kan också ses och ändras på websidan {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
-msgstr "eBMS webplats"
+msgstr "eBMS webbplats"
 
 msgid "App Settings"
 msgstr "Inställningar"
@@ -1245,7 +1278,7 @@ msgstr "Klicka för att fortsätta rita området."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr "Klicka på den förta punkten för att sluta området."
+msgstr "Klicka på den första punkten för att sluta området."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
@@ -1261,53 +1294,55 @@ msgstr "Klicka på den sista punkten för att avsluta linjen."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr "Dra i handtag eller markörer för att ändra egenskaperna."
+msgstr "Dra i handtag eller markörer för att ändra egenskaper."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr "Klicka på avsluta för att återställa ändringarna."
+msgstr "Klicka på avbryt för att ångra ändringarna."
 
 msgid "Map"
-msgstr ""
+msgstr "Karta"
 
 msgid "Today"
-msgstr ""
+msgstr "Idag"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "Igår"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
-msgstr ""
+msgstr "Det här resultatet har redan sänts in och kan inte ändras i appen."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Other recording options"
-msgstr ""
+msgstr "Andra sätt att registrera data"
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
+"Sänd alla avslutade inventeringar på en gång. Inventeringar som ännu inte är"
+" avslutade, dvs. i \"utkastläge\", omfattas inte."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr ""
+msgstr "Är du säker på att du vill sända alla avslutade inventeringar?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "Du måste logga in för att kunna sända in inventeringar."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oj då! Något gick fel."
+msgstr[1] "Sänder in {{count}} inventeringar"
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
-msgstr ""
+msgstr "Oj då! Något gick fel."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr ""
+msgstr "Detta är fel nr (error event id): {{eventId}}"

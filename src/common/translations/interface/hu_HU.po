@@ -1,11 +1,11 @@
 # Translators:
-# András Szabadfalvi <meggypej@gmail.com>, 2019
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
+# András Szabadfalvi <meggypej@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
+"Last-Translator: András Szabadfalvi <meggypej@gmail.com>, 2020\n"
 "Language-Team: Hungarian (Hungary) (https://www.transifex.com/ceh/teams/95441/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -183,7 +183,7 @@ msgid "Forgot password?"
 msgstr "Elfelejtetted a jelszavad?"
 
 msgid "User not found."
-msgstr ""
+msgstr "Ismeretlen felhasználó"
 
 msgid "Login"
 msgstr "Bejelentkezés"
@@ -207,7 +207,7 @@ msgid "Credits"
 msgstr "Közreműködők"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "E-mail cím"
 
 msgid "First Name"
 msgstr "Vezetéknév"
@@ -253,10 +253,10 @@ msgid "Lets start!"
 msgstr "Indítás!"
 
 msgid "TOP RECORDERS"
-msgstr ""
+msgstr "A LEGAKTÍVABB ADATBEKÜLDŐK"
 
 msgid "Top Species from all timed counts"
-msgstr ""
+msgstr "Leggyakoribb észlelt fajok"
 
 msgid "Back"
 msgstr "Vissza"
@@ -265,17 +265,18 @@ msgid "Menu"
 msgstr "Menü"
 
 msgid "App"
-msgstr "App"
+msgstr "Mobilalkalmazás"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
+"Köszönet mindazoknak, akik segítettek a mobilalkalmazás elkészítésében:"
 
 msgid "Home"
-msgstr "Kezdőképernyő"
+msgstr "Kezdőlap"
 
 msgid "Guide"
-msgstr ""
+msgstr "Határozó"
 
 msgid "Account"
 msgstr "Felhasználói fiók"
@@ -284,28 +285,28 @@ msgid "Offline"
 msgstr "Offline"
 
 msgid "Sorry, looks like you're offline."
-msgstr ""
+msgstr "Hoppsz! Nincs internetkapcsolat."
 
 msgid "OK"
 msgstr "OK"
 
 msgid "Sorry"
-msgstr ""
+msgstr "Hoppsz!"
 
 msgid "Please wait..."
-msgstr "Türelem rózsát terem..."
+msgstr "Türelem lepkét terem..."
 
 msgid "name is a required field"
-msgstr "A \"név\" kitöltése kötelező"
+msgstr "a \"név\" megadása kötelező"
 
 msgid "password is a required field"
-msgstr "A \"jelszó\" kitöltése kötelező"
+msgstr "a \"jelszó\" megadása kötelező"
 
 msgid "Login error:"
 msgstr "Hiba a bejelentkezéskor"
 
 msgid "Failed to fetch"
-msgstr ""
+msgstr "Sikertelen"
 
 msgid "Incorrect password or email."
 msgstr "Hibás jelszó vagy e-mail cím"
@@ -316,31 +317,33 @@ msgstr "Kijelentkezés"
 
 # Part of logout process
 msgid "Are you sure you want to logout?"
-msgstr ""
+msgstr "Biztos, hogy ki akarsz jelentkezni?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr ""
+msgstr "Mobileszközön tárolt adatok törlése."
 
 msgid "This will delete all the records on this device."
-msgstr ""
+msgstr "Az eszközön tárolt minden lepkeadat törlődni fog."
 
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 msgid "Welcome aboard!"
-msgstr ""
+msgstr "Üdvözlünk az Európai Lepkemonitoring Programban!"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
+"Addig nem tudsz adatokat beküldeni, amíg nem kattintasz a tőlünk kapott "
+"e-mailben lévő ellenőrző-linkre! Erre a robotok kiszűrése miatt van szükség."
 
 msgid "OK, got it"
-msgstr ""
+msgstr "OK, megértettem."
 
 msgid "email is a required field"
-msgstr ""
+msgstr "az \"e-mail cím\" megadása kötelező"
 
 msgid "firstname is a required field"
 msgstr ""
@@ -486,10 +489,10 @@ msgid "Registration error:"
 msgstr ""
 
 msgid "Incorrect password or email"
-msgstr ""
+msgstr "Hibás jelszó vagy e-mail cím"
 
 msgid "email is not valid"
-msgstr ""
+msgstr "érvénytelen e-mail cím"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
@@ -651,6 +654,8 @@ msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
+"új regisztrációd aktiválásához nyisd meg a tőlünk kapott e-mailben lévő "
+"ellenőrző linket!"
 
 msgid "Other"
 msgstr ""
@@ -742,9 +747,10 @@ msgstr ""
 
 msgid "Enter your username or email address to request a password reset."
 msgstr ""
+"Add meg a felhasználói neved vagy e-mail címed a jelszó visszaállításához!"
 
 msgid "We've sent an email to you"
-msgstr ""
+msgstr "Elküldtök címedre az e-mailt az ellenőrző linkkel."
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
