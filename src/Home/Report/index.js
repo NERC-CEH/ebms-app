@@ -14,16 +14,8 @@ import { warn, error } from 'helpers/toast';
 import Device from 'helpers/device';
 import Page from 'Lib/Page';
 import Main from 'Lib/Main';
-import speciesNames from 'common/data/names';
 import { fetchSpeciesReport } from './services';
 import './styles.scss';
-
-function getCommonName(taxon) {
-  const species = speciesNames.data.find(
-    sp => sp.preferred_taxon === taxon && sp.language_iso === 'eng'
-  );
-  return species ? species.taxon : null;
-}
 
 class Report extends React.Component {
   static propTypes = {
@@ -93,24 +85,35 @@ class Report extends React.Component {
 
     const speciesList = [...species].splice(0, 5);
 
-    const listComponents = speciesList.map(sp => (
-      <IonItem key={sp.key}>
-        <IonLabel style={{ margin: 0, padding: '7px 0' }}>
-          <IonLabel
-            class="ion-text-wrap report-common-name-label"
-            position="stacked"
-          >
-            <b style={{ fontSize: '1.1em' }}>{getCommonName(sp.key)}</b>
+    const listComponents = speciesList.map(sp => {
+      const scientificName = sp.key;
+      const commonName = t(scientificName, null, true);
+
+      return (
+        <IonItem key={sp.key}>
+          <IonLabel style={{ margin: 0, padding: '7px 0' }}>
+            {commonName && (
+              <IonLabel
+                class="ion-text-wrap report-common-name-label"
+                position="stacked"
+              >
+                <b style={{ fontSize: '1.1em' }}>{commonName}</b>
+              </IonLabel>
+            )}
+            
+            <IonLabel
+              class="ion-text-wrap report-taxon-label"
+              position="stacked"
+            >
+              <i>{scientificName}</i>
+            </IonLabel>
           </IonLabel>
-          <IonLabel class="ion-text-wrap report-taxon-label" position="stacked">
-            <i>{sp.key}</i>
+          <IonLabel slot="end" class="report-count-label">
+            {sp.doc_count}
           </IonLabel>
-        </IonLabel>
-        <IonLabel slot="end" class="report-count-label">
-          {sp.doc_count}
-        </IonLabel>
-      </IonItem>
-    ));
+        </IonItem>
+      );
+    });
 
     return (
       <>
