@@ -257,7 +257,7 @@ msgid "TOP RECORDERS"
 msgstr "MEJORES REGISTRADORES"
 
 msgid "Top Species from all timed counts"
-msgstr "ESPECIES MÁS VISTAS"
+msgstr "Especies más vistas en todos los Recuentos de 15 minutos"
 
 msgid "Back"
 msgstr "Atrás"
@@ -1116,7 +1116,7 @@ msgstr ""
 "indican cómo usar los métodos disponibles actualmente."
 
 msgid "How to do a 15-minute Count"
-msgstr "Como hacer un Registro de 15 minutros (cronometrado)"
+msgstr "Como hacer un Registro de 15 minutros"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1346,8 +1346,8 @@ msgstr "Por favor registrese primero para enviar registros"
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Cargando {{count}} muestreo"
+msgstr[1] "Cargando {{count}} muestreos"
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
