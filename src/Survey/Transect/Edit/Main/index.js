@@ -115,7 +115,7 @@ class Edit extends Component {
             routerLink={`${baseURL}/windDirection`}
             disabled={isDisabled}
             icon="/images/wind.svg"
-            label="Cloud"
+            label="Wind Direction"
             value={t(windDirection)}
           />
           <MenuAttrItem
