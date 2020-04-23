@@ -14,7 +14,10 @@ const getSectionItem = (sectionSample, match) => {
   const section = sectionSample.attrs.location;
   const geometry = toJS(section.geom);
 
-  geometry.coordinates = transformToLatLon(geometry.coordinates);
+  geometry.coordinates = transformToLatLon(
+    geometry.type === 'Point' ? [geometry.coordinates] : geometry.coordinates
+  );
+
   const geom = [
     {
       id: 4,

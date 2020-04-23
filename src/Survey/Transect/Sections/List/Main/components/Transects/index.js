@@ -23,7 +23,11 @@ function showNoTransects() {
 function getTransectItem(transect, onTransectSelect) {
   const geometries = transect.sections.map(section => {
     const geometry = toJS(section.geom);
-    geometry.coordinates = transformToLatLon(geometry.coordinates);
+
+    geometry.coordinates = transformToLatLon(
+      geometry.type === 'Point' ? [geometry.coordinates] : geometry.coordinates
+    );
+
     return geometry;
   });
 
