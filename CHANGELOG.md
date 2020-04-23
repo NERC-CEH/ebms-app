@@ -71,3 +71,10 @@
 * Update translations
 * Fix species abundance indicators
 * Other small fixes
+
+
+## 1.5.3
+
+### Other
+* Fixed transect recording for sections made of single geopoint
+* Updated transaltions
