@@ -78,3 +78,10 @@
 ### Other
 * Fixed transect recording for sections made of single geopoint
 * Updated transaltions
+
+
+## 1.5.4
+
+### Other
+* Fixed transect recording for sections made of multi-line strings
+* Fixed sites report duplication of transects
