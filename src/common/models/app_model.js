@@ -70,6 +70,14 @@ async function fetchUserTransects(userModel) {
       ...{ sections: [] },
     });
     transects = [...transects.data].map(replaceSectionsCountWithArray);
+
+    const deduplicateTransects = transectsArray => {
+      const assignById = (agg, t) => ({ ...agg, [t.id]: t });
+      const transectsObject = transectsArray.reduce(assignById, {});
+      return Object.values(transectsObject);
+    };
+
+    transects = deduplicateTransects(transects); // for some reason the warehouse report returns duplicates
   } catch (e) {
     throw new Error(t(e.message));
   }
