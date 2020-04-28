@@ -2,6 +2,12 @@
  * A common webpack configuration.
  **************************************************************************** */
 require('dotenv').config({ silent: true }); // get local environment variables from .env
+const checkEnv = require('@flumens/has-env');
+
+checkEnv({
+  warn: ['APP_TRAINING', 'APP_MANUAL_TESTING', 'APP_INDICIA_API_HOST'],
+  required: ['APP_MAPBOX_MAP_KEY', 'APP_SENTRY_KEY', 'APP_INDICIA_API_KEY'],
+});
 
 const path = require('path');
 const webpack = require('webpack');
@@ -15,6 +21,8 @@ const ROOT_DIR = path.resolve(__dirname, './');
 const DIST_DIR = path.resolve(ROOT_DIR, 'dist/main');
 
 const isDevEnv = process.env.NODE_ENV === 'development';
+const isProdEnv = process.env.NODE_ENV === 'production';
+const isTestEnv = process.env.NODE_ENV === 'test';
 
 const config = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -45,7 +53,6 @@ const config = {
       app_model: 'common/models/app_model',
       user_model: 'common/models/user_model',
       model_factory: 'common/models/model_factory',
-
 
       // species database
       'common/data/species.data.json': isDevEnv
@@ -140,9 +147,9 @@ const config = {
     // Extract environmental variables and replace references with values in the code
     new webpack.DefinePlugin({
       __ENV__: JSON.stringify(process.env.NODE_ENV || 'development'),
-      __DEV__: process.env.NODE_ENV === 'development',
-      __PROD__: process.env.NODE_ENV === 'production',
-      __TEST__: process.env.NODE_ENV === 'test',
+      __DEV__: isDevEnv,
+      __PROD__: isProdEnv,
+      __TEST__: isTestEnv,
 
       'process.env': {
         // package.json variables
