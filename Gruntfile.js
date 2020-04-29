@@ -3,10 +3,10 @@ const fs = require('fs');
 const pkg = require('./package.json');
 
 const exec = grunt => ({
-  webpack: {
+  build: {
     command: 'NODE_ENV=production npm run build',
   },
-  cordova_resources: {
+  resources: {
     command: () => {
       const appMinorVersion = pkg.version
         .split('.')
@@ -30,28 +30,28 @@ const exec = grunt => ({
     command: 'cp -R node_modules/@ionic dist/main',
     stdout: true,
   },
-  cordova_init: {
+  init: {
     command: 'cordova create dist/cordova',
     stdout: false,
   },
-  cordova_clean_www: {
+  clean_www: {
     command: 'rm -R -f dist/cordova/www/* && rm -f dist/cordova/config.xml',
     stdout: true,
   },
-  cordova_rebuild: {
+  rebuild: {
     command: 'cd dist/cordova/ && cordova prepare ios android',
     stdout: true,
   },
-  cordova_android_build_dev: {
+  android_build_dev: {
     command:
       'cd dist/cordova/ && ../../node_modules/.bin/cordova build android',
     stdout: true,
   },
-  cordova_copy_dist: {
+  copy_dist: {
     command: 'cp -R dist/main/* dist/cordova/www/',
     stdout: true,
   },
-  cordova_add_platforms: {
+  add_platforms: {
     // @6.4.0 because of https://github.com/ionic-team/ionic/issues/13857#issuecomment-381744212
     command: 'cd dist/cordova && cordova platforms add ios android',
     stdout: false,
@@ -59,7 +59,7 @@ const exec = grunt => ({
   /**
    * $ANDROID_KEYSTORE must be set up to point to your android certificates keystore
    */
-  cordova_android_build: {
+  android_build: {
     command() {
       const pass = grunt.config('keystore-password');
       return `cd dist/cordova && 
@@ -76,19 +76,19 @@ const exec = grunt => ({
     stdin: true,
   },
 
-  cordova_build_ios: {
+  build_ios: {
     command: 'cd dist/cordova && cordova build ios',
     stdout: true,
   },
 
-  cordova_build_android: {
+  build_android: {
     command: 'cd dist/cordova && cordova build android',
     stdout: true,
   },
 });
 
 const replace = {
-  cordova_config: {
+  config: {
     src: ['cordova.xml'],
     dest: 'dist/cordova/config.xml',
     replacements: [
@@ -185,32 +185,32 @@ module.exports = grunt => {
 
   grunt.registerTask('default', [
     'prompt:version',
-    'exec:webpack',
+    'exec:build',
 
-    'exec:cordova_init',
-    'exec:cordova_resources',
-    'exec:cordova_clean_www',
-    'exec:cordova_copy_dist',
-    'replace:cordova_config',
-    'exec:cordova_add_platforms',
+    'exec:init',
+    'exec:resources',
+    'exec:clean_www',
+    'exec:copy_dist',
+    'replace:config',
+    'exec:add_platforms',
 
     // android
     'prompt:keystore',
-    'exec:cordova_android_build',
+    'exec:android_build',
 
     'checklist',
   ]);
 
   grunt.registerTask('update', [
-    'exec:cordova_clean_www',
-    'exec:cordova_copy_dist',
-    'replace:cordova_config',
-    'exec:cordova_rebuild',
+    'exec:clean_www',
+    'exec:copy_dist',
+    'replace:config',
+    'exec:rebuild',
   ]);
 
   grunt.registerTask('checklist', () => {
     const Reset = '\x1b[0m';
-    const FgGreen = "\x1b[32m"
+    const FgGreen = '\x1b[32m';
     const FgYellow = '\x1b[33m';
     const FgCyan = '\x1b[36m';
 
