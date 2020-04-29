@@ -210,6 +210,7 @@ module.exports = grunt => {
 
   grunt.registerTask('checklist', () => {
     const Reset = '\x1b[0m';
+    const FgGreen = "\x1b[32m"
     const FgYellow = '\x1b[33m';
     const FgCyan = '\x1b[36m';
 
@@ -220,11 +221,15 @@ module.exports = grunt => {
       console.log(FgYellow);
       console.log('WARN:');
       console.log(`* Have you updated CHANGELOG.md?`);
+    } else {
+      console.log(FgGreen);
+      console.log('Success! 👌');
     }
 
     console.log(FgCyan);
     console.log('NEXT:');
-    console.log(`* Update Screenshots.`);
+    console.log(`* Update screenshots.`);
+    console.log(`* Update descriptions.`);
 
     console.log(Reset);
   });
