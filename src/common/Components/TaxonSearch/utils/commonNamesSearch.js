@@ -3,6 +3,7 @@ import appModel from 'app_model';
 const WAREHOUSE_INDEX = 0;
 const SCI_NAME_INDEX = 1;
 const SPECIES_SCI_NAME_INDEX = 1;
+const SPECIES_COM_NAME_INDEX = 2;
 
 export default (genera, normSearchPhrase, results, maxResults) => {
   const { language } = appModel.attrs;
@@ -13,7 +14,7 @@ export default (genera, normSearchPhrase, results, maxResults) => {
       const ENGLISH = 0;
       const SWEDISH = 1;
       const nameIndex = language.startsWith('sv') ? SWEDISH : ENGLISH;
-      const name = species[3][nameIndex];
+      const name = species[SPECIES_COM_NAME_INDEX][nameIndex];
 
       const matches = name.match(new RegExp(normSearchPhrase, 'i'));
       if (matches && results.length + commonNames.length <= maxResults) {

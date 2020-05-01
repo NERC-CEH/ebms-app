@@ -9,7 +9,7 @@ const GENUS_SPECIES_INDEX = 2;
 const SPECIES_ID_INDEX = 0;
 const SPECIES_TAXON_INDEX = 1;
 
-const SPECIES_COUNTRIES_INDEX = 2;
+const COMMON_NAMES_INDEX = 2;
 
 function normalizeValue(value) {
   // check if int
@@ -96,7 +96,6 @@ function addSpecies(optimised, taxa, taxaNameSplitted) {
   const species = [];
   species[SPECIES_ID_INDEX] = id;
   species[SPECIES_TAXON_INDEX] = taxonClean;
-  species[SPECIES_COUNTRIES_INDEX] = taxa.string_agg;
 
   const getCommonName = lang => {
     const names = commonNames.data.filter(
@@ -109,7 +108,6 @@ function addSpecies(optimised, taxa, taxaNameSplitted) {
   const englishName = getCommonName('eng');
   const swedishName = getCommonName('swe');
 
-  const COMMON_NAMES_INDEX = SPECIES_COUNTRIES_INDEX + 1;
   species[COMMON_NAMES_INDEX] = [englishName, swedishName];
 
   speciesArray.push(species);

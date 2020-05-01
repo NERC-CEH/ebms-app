@@ -34,30 +34,9 @@ function filterOutCommonNames(species) {
   });
 }
 
-function transformAbundance(species) {
-  function getCountryMap(string) {
-    const array = string.split(' | ').map(country => {
-      const [key, val] = country.split('=');
-      const normKey = key.replace(': ', '_');
-      const normVal = val.replace('?', '');
-      return { [normKey]: normVal };
-    });
-    return array;
-  }
-
-  return species.map(sp => {
-    return {
-      ...sp,
-      string_agg:
-        sp.string_agg === 'NULL' ? null : getCountryMap(sp.string_agg),
-    };
-  });
-}
-
 fetch()
   .then(filterOutCommonNames)
   .then(sortAlphabetically)
-  .then(transformAbundance)
   .then(species => optimise(species))
   .then(saveSpeciesToFile)
   .then(() => console.log('All done!'));
