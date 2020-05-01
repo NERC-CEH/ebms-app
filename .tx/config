@@ -14,10 +14,3 @@ minimum_perc = 0
 source_file = src/common/translations/species/en.pot
 source_lang = en
 type = POT
-
-[ebms.app_species_names]
-file_filter = src/common/translations/names/<lang>.po
-minimum_perc = 0
-source_file = src/common/translations/names/en.pot
-source_lang = en
-type = POT
