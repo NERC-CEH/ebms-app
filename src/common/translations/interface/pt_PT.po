@@ -819,7 +819,7 @@ msgstr "Desenvolvimento da App"
 msgid "This app was hand crafted with love by"
 msgstr "Esta App foi feita à mão com amor, por"
 
-msgid "Agency specializing in building bespoke data oriented sollutions."
+msgid "Agency specializing in building bespoke data oriented solutions."
 msgstr ""
 "Uma agência especializada na construção, à medida, de soluções para "
 "tratamento de dados."

@@ -808,7 +808,7 @@ msgstr "App-ontwikkeling"
 msgid "This app was hand crafted with love by"
 msgstr "Deze app is handmatig en met zorg ontworpen door"
 
-msgid "Agency specializing in building bespoke data oriented sollutions."
+msgid "Agency specializing in building bespoke data oriented solutions."
 msgstr ""
 "Agentschap gespecialiseerd in het maken van gesproken data geörienteerde "
 "oplossingen."

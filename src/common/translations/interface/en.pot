@@ -698,8 +698,8 @@ msgstr "App Development"
 msgid "This app was hand crafted with love by"
 msgstr "This app was hand crafted with love by"
 
-msgid "Agency specializing in building bespoke data oriented sollutions."
-msgstr "Agency specializing in building bespoke data oriented sollutions."
+msgid "Agency specializing in building bespoke data oriented solutions."
+msgstr "Agency specializing in building bespoke data oriented solutions."
 
 msgid "For suggestions and feedback please do not hesitate to"
 msgstr "For suggestions and feedback please do not hesitate to"

@@ -823,7 +823,7 @@ msgstr "Sviluppo dell'app"
 msgid "This app was hand crafted with love by"
 msgstr "Questa app è stata realizzata a mano con amore da"
 
-msgid "Agency specializing in building bespoke data oriented sollutions."
+msgid "Agency specializing in building bespoke data oriented solutions."
 msgstr "Agenzia specializzata nella creazione di soluzioni per dati ad hoc."
 
 msgid "For suggestions and feedback please do not hesitate to"

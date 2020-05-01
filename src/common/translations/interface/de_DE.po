@@ -834,7 +834,7 @@ msgstr ""
 "Diese App wurde in Handarbeit mit viel Liebe von der Firma Flumens "
 "entwickelt."
 
-msgid "Agency specializing in building bespoke data oriented sollutions."
+msgid "Agency specializing in building bespoke data oriented solutions."
 msgstr ""
 "Agentur, die sich auf die Entwicklung maßgeschneiderter datenorientierter "
 "Lösungen spezialisiert hat."

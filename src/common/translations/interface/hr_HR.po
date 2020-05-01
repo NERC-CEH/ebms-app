@@ -811,7 +811,7 @@ msgstr "Razvoj aplikacije"
 msgid "This app was hand crafted with love by"
 msgstr "Ovu je aplikaciju s ljubavlju ručno izrađivao"
 
-msgid "Agency specializing in building bespoke data oriented sollutions."
+msgid "Agency specializing in building bespoke data oriented solutions."
 msgstr "Agencija specijalizirana za izgradnju rješenja usmjerenih na podatke."
 
 msgid "For suggestions and feedback please do not hesitate to"

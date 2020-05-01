@@ -773,7 +773,7 @@ msgstr ""
 msgid "This app was hand crafted with love by"
 msgstr ""
 
-msgid "Agency specializing in building bespoke data oriented sollutions."
+msgid "Agency specializing in building bespoke data oriented solutions."
 msgstr ""
 
 msgid "For suggestions and feedback please do not hesitate to"
