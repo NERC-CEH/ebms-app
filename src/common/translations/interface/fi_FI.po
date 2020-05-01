@@ -1,3 +1,4 @@
+# 
 # Translators:
 # Janne Heliola <janne.heliola@ymparisto.fi>, 2020
 # Karolis, 2020
@@ -815,7 +816,9 @@ msgstr "Sovelluksen kehitystyö"
 msgid "This app was hand crafted with love by"
 msgstr "Tämän sovelluksen kehittivät"
 
-msgid "Agency specializing in building bespoke data oriented solutions."
+msgid ""
+"A technical consultancy that excels at building bespoke environmental"
+" science and community focussed solutions."
 msgstr "Datakeskeisten sovellusten suunnitteluun erikoistunut yritys."
 
 msgid "For suggestions and feedback please do not hesitate to"

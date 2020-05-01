@@ -1,3 +1,4 @@
+# 
 # Translators:
 # Vilius Stankaitis <stankaitisvilius@gmail.com>, 2019
 # Karolis, 2020
@@ -807,7 +808,9 @@ msgstr "Mobilios programos kūrimas"
 msgid "This app was hand crafted with love by"
 msgstr "Šią mobilią programą su meile sukūrė"
 
-msgid "Agency specializing in building bespoke data oriented solutions."
+msgid ""
+"A technical consultancy that excels at building bespoke environmental"
+" science and community focussed solutions."
 msgstr "Kompanija specializuojanti progaminės įrangos kurime."
 
 msgid "For suggestions and feedback please do not hesitate to"

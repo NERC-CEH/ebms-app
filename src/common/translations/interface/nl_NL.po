@@ -1,3 +1,4 @@
+# 
 # Translators:
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Ineke <ineke.radstaat@vlinderstichting.nl>, 2020
@@ -808,7 +809,9 @@ msgstr "App-ontwikkeling"
 msgid "This app was hand crafted with love by"
 msgstr "Deze app is handmatig en met zorg ontworpen door"
 
-msgid "Agency specializing in building bespoke data oriented solutions."
+msgid ""
+"A technical consultancy that excels at building bespoke environmental"
+" science and community focussed solutions."
 msgstr ""
 "Agentschap gespecialiseerd in het maken van gesproken data geörienteerde "
 "oplossingen."

@@ -5,6 +5,7 @@ import Main from 'Lib/Main';
 import Header from 'Lib/Header';
 import species from 'common/data/species.profiles.data';
 import './sponsors.png';
+import './flumens.png';
 import './styles.scss';
 
 export default () => (
@@ -76,6 +77,32 @@ export default () => (
           </IonLabel>
         </IonItem>
       </IonList>
+
+      <IonList lines="none">
+        <IonItem>
+          <a href="https://flumens.io">
+            <img className="flumens-logo" src="/images/flumens.png" alt="" />
+          </a>
+        </IonItem>
+        <IonItem>
+          <IonLabel>
+            {t('This app was hand crafted with love by')}
+            <a href="https://flumens.io" style={{ whiteSpace: 'nowrap' }}>
+              {' '}
+              Flumens.
+            </a>{' '}
+            {t(
+              'A technical consultancy that excels at building bespoke environmental science and community focussed solutions.'
+            )}{' '}
+            {t('For suggestions and feedback please do not hesitate to')}{' '}
+            <a href="mailto:apps%40ceh.ac.uk?subject=eBMS%20App">
+              {t('contact us')}
+            </a>
+            .
+          </IonLabel>
+        </IonItem>
+      </IonList>
+
       <IonList lines="none">
         <IonItem lines="inset">
           <IonLabel>

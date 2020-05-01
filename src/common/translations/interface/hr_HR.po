@@ -1,3 +1,4 @@
+# 
 # Translators:
 # Martina Sasic <martina.sasic@hpm.hr>, 2019
 # Karolis, 2020
@@ -811,7 +812,9 @@ msgstr "Razvoj aplikacije"
 msgid "This app was hand crafted with love by"
 msgstr "Ovu je aplikaciju s ljubavlju ručno izrađivao"
 
-msgid "Agency specializing in building bespoke data oriented solutions."
+msgid ""
+"A technical consultancy that excels at building bespoke environmental"
+" science and community focussed solutions."
 msgstr "Agencija specijalizirana za izgradnju rješenja usmjerenih na podatke."
 
 msgid "For suggestions and feedback please do not hesitate to"

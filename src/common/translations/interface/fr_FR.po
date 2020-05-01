@@ -1,3 +1,4 @@
+# 
 # Translators:
 # Xavier Mestdagh <xavier.mestdagh@list.lu>, 2019
 # Karolis, 2020
@@ -826,7 +827,9 @@ msgstr ""
 msgid "This app was hand crafted with love by"
 msgstr ""
 
-msgid "Agency specializing in building bespoke data oriented solutions."
+msgid ""
+"A technical consultancy that excels at building bespoke environmental"
+" science and community focussed solutions."
 msgstr ""
 
 msgid "For suggestions and feedback please do not hesitate to"

@@ -1,12 +1,13 @@
+# 
 # Translators:
-# Karolis, 2020
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Federica Paradiso <fedediso94@gmail.com>, 2020
+# Karolis, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2020\n"
+"Last-Translator: Karolis, 2020\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -823,7 +824,9 @@ msgstr "Sviluppo dell'app"
 msgid "This app was hand crafted with love by"
 msgstr "Questa app è stata realizzata a mano con amore da"
 
-msgid "Agency specializing in building bespoke data oriented solutions."
+msgid ""
+"A technical consultancy that excels at building bespoke environmental"
+" science and community focussed solutions."
 msgstr "Agenzia specializzata nella creazione di soluzioni per dati ad hoc."
 
 msgid "For suggestions and feedback please do not hesitate to"

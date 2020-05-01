@@ -50,30 +50,6 @@ const Component = () => (
           </p>
         </IonItem>
       </IonList>
-      <IonList lines="none">
-        <IonItem lines="inset">
-          <IonLabel>
-            <b>{t('App Development')}</b>
-          </IonLabel>
-        </IonItem>
-        <IonItem>
-          <IonLabel>
-            {t('This app was hand crafted with love by')}
-            <a href="https://flumens.io" style={{ whiteSpace: 'nowrap' }}>
-              {' '}
-              Flumens.
-            </a>{' '}
-            {t(
-              'Agency specializing in building bespoke data oriented solutions.'
-            )}{' '}
-            {t('For suggestions and feedback please do not hesitate to')}{' '}
-            <a href="mailto:apps%40ceh.ac.uk?subject=eBMS%20App">
-              {t('contact us')}
-            </a>
-            .
-          </IonLabel>
-        </IonItem>
-      </IonList>
     </Main>
   </Page>
 );
