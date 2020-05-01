@@ -50,7 +50,9 @@ async function transformAbundance(species) {
 
     return {
       ...sp,
-      ...getCountryMap(countriesStr),
+      abundance: {
+        ...getCountryMap(countriesStr),
+      },
     };
   });
 }

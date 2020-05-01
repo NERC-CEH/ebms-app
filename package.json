@@ -16,8 +16,8 @@
     "test:sauce": "karma start test/karma.conf-sauce.js",
     "test:eslint": "mocha test/eslint-test.js",
     "postinstall": "npm run build",
-    "fetch:species:search": "cd src/common/data && node makeSpeciesSearch.js",
-    "fetch:species:profiles": "cd src/common/data && node makeSpeciesProfiles.js"
+    "make:species:search": "cd src/common/data && node makeSpeciesSearch.js",
+    "make:species:profiles": "cd src/common/data && node makeSpeciesProfiles.js"
   },
   "husky": {
     "hooks": {

@@ -49,7 +49,7 @@ class Component extends React.Component {
 
   getSpecies = country => {
     const byCountry = sp => {
-      const isPresent = !['A', 'Ex'].includes(sp[country]);
+      const isPresent = !['A', 'Ex'].includes(sp.abundance[country]);
       return country === 'ELSEWHERE' || isPresent;
     };
     const byNotEmptyContent = sp => {

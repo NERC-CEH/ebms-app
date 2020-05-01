@@ -66,7 +66,7 @@ class Component extends React.Component {
   render() {
     const { species, country } = this.props;
 
-    const status = statuses[species[country]];
+    const status = statuses[species.abundance[country]];
 
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
     return (
