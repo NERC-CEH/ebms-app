@@ -35,7 +35,7 @@ export default class index extends Component {
   annotateRecordedTaxa = searchResults => {
     const recordedTaxa = this.props.recordedTaxa || [];
     return searchResults.map(result =>
-      recordedTaxa.includes(result.warehouse_id)
+      recordedTaxa.includes(result.preferredId || result.warehouse_id)
         ? { ...result, ...{ isRecorded: true } }
         : result
     );

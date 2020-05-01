@@ -48,8 +48,9 @@ const turnNamesArrayIntoLangObject = array =>
       id,
       taxon: name,
       preferred_taxon: taxon,
+      preferred_taxa_taxon_list_id: preferredId,
     } = term;
-    
+
     if (languageCode === 'lat') {
       // no need for latin - see species.data.json file
       return agg;
@@ -59,9 +60,10 @@ const turnNamesArrayIntoLangObject = array =>
     agg[language] || (agg[language] = []); // eslint-disable-line
 
     const species = {
-      warehouse_id: id,
+      warehouse_id: parseInt(id, 10),
       common_name: capitalize(name),
       scientific_name: taxon,
+      preferredId: parseInt(preferredId, 10),
     };
 
     agg[language].push(species);

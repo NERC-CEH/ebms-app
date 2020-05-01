@@ -22,7 +22,7 @@ class Controller extends React.Component {
     const occID = match.params.occId;
 
     const recordedTaxa = sample.occurrences.map(
-      occ => occ.attrs.taxon.warehouse_id
+      occ => occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id
     );
 
     const onSpeciesSelected = async taxon => {
