@@ -12,6 +12,7 @@ import {
 } from '@ionic/react';
 import Page from 'Lib/Page';
 import Main from 'Lib/Main';
+import alert from 'helpers/alert';
 import { flag } from 'ionicons/icons';
 import countries from 'common/config/countries';
 import Header from 'Lib/Header';
@@ -21,7 +22,21 @@ function SelectCountry({ appModel, hideHeader }) {
   const currentValue = appModel.attrs.country;
 
   function onSelect(e) {
-    appModel.attrs.country = e.target.value; // eslint-disable-line no-param-reassign
+    const newCountry = e.target.value;
+    if (appModel.attrs.country !== 'UK' && newCountry === 'UK') {
+      alert({
+        header: t('Note'),
+        message: `This app is not for the <b>Big Butterfly Count</b>. If you want to take part in that survey please visit <a href="https://www.bigbutterflycount.org">this website</a>.`,
+        buttons: [
+          {
+            text: 'Got it',
+            role: 'cancel',
+            cssClass: 'primary',
+          },
+        ],
+      });
+    }
+    appModel.attrs.country = newCountry; // eslint-disable-line no-param-reassign
     appModel.save();
   }
 
