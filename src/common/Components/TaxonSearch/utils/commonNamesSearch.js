@@ -1,34 +1,28 @@
 import appModel from 'app_model';
+import speciesNames from 'common/data/names.data.json';
 
-const WAREHOUSE_INDEX = 0;
-const SCI_NAME_INDEX = 1;
-const SPECIES_SCI_NAME_INDEX = 1;
-const SPECIES_COM_NAME_INDEX = 2;
-
-export default (genera, normSearchPhrase, results, maxResults) => {
+export default (normSearchPhrase, results, maxResults) => {
   const { language } = appModel.attrs;
+  const languageSpeciesNames = speciesNames[language];
+  if (!languageSpeciesNames) {
+    return results;
+  }
 
   let commonNames = [];
-  genera.forEach((genus, generaArrayIndex) => {
-    genus[2].forEach((species, speciesIndex) => {
-      const ENGLISH = 0;
-      const SWEDISH = 1;
-      const nameIndex = language.startsWith('sv') ? SWEDISH : ENGLISH;
-      const name = species[SPECIES_COM_NAME_INDEX][nameIndex];
-
-      const matches = name.match(new RegExp(normSearchPhrase, 'i'));
+  languageSpeciesNames.forEach(
+    // eslint-disable-next-line
+    ({ warehouse_id, scientific_name, common_name }) => {
+      const matches = common_name.match(new RegExp(normSearchPhrase, 'i'));
       if (matches && results.length + commonNames.length <= maxResults) {
         commonNames.push({
-          array_id: generaArrayIndex,
-          species_id: speciesIndex,
           found_in_name: 'common_name',
-          warehouse_id: species[WAREHOUSE_INDEX],
-          common_name: name,
-          scientific_name: `${genus[SCI_NAME_INDEX]} ${species[SPECIES_SCI_NAME_INDEX]}`,
+          warehouse_id,
+          common_name,
+          scientific_name,
         });
       }
-    });
-  });
+    }
+  );
 
   commonNames = commonNames.sort((sp1, sp2) =>
     sp1.common_name.localeCompare(sp2.common_name)

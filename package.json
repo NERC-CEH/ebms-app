@@ -17,7 +17,8 @@
     "test:eslint": "mocha test/eslint-test.js",
     "postinstall": "npm run build",
     "make:species:search": "cd src/common/data && node makeSpeciesSearch.js",
-    "make:species:profiles": "cd src/common/data && node makeSpeciesProfiles.js"
+    "make:species:profiles": "cd src/common/data && node makeSpeciesProfiles.js",
+    "fetch:species:names": "cd src/common/data && node fetchSpeciesCommonNames.js"
   },
   "husky": {
     "hooks": {
@@ -126,6 +127,7 @@
     "postcss-loader": "3.0.0",
     "prettier-eslint": "9.0.1",
     "prettier-eslint-cli": "5.0.0",
+    "request": "^2.88.2",
     "sass-loader": "8.0.0",
     "sharp-cli": "^1.11.0",
     "sinon": "^8.0.4",

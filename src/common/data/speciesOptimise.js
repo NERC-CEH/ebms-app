@@ -1,5 +1,4 @@
 const taxonCleaner = require('./speciesClean');
-const commonNames = require('./names');
 
 const TAXON = 'taxon';
 const ID = 'taxa_taxon_list_id';
@@ -8,8 +7,6 @@ const GENUS_TAXON_INDEX = 1;
 const GENUS_SPECIES_INDEX = 2;
 const SPECIES_ID_INDEX = 0;
 const SPECIES_TAXON_INDEX = 1;
-
-const COMMON_NAMES_INDEX = 2;
 
 function normalizeValue(value) {
   // check if int
@@ -96,19 +93,6 @@ function addSpecies(optimised, taxa, taxaNameSplitted) {
   const species = [];
   species[SPECIES_ID_INDEX] = id;
   species[SPECIES_TAXON_INDEX] = taxonClean;
-
-  const getCommonName = lang => {
-    const names = commonNames.data.filter(
-      ({ preferred_taxa_taxon_list_id: nameId, language_iso: language }) =>
-        id === Number.parseInt(nameId, 10) && language === lang
-    );
-    return names[0] ? names[0].taxon : '';
-  };
-
-  const englishName = getCommonName('eng');
-  const swedishName = getCommonName('swe');
-
-  species[COMMON_NAMES_INDEX] = [englishName, swedishName];
 
   speciesArray.push(species);
 }

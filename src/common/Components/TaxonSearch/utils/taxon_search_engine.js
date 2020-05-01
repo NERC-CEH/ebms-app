@@ -58,7 +58,7 @@ const API = {
     // normalize the search phrase
     const normSearchPhrase = searchPhrase.toLowerCase();
 
-    searchCommonNames(species, normSearchPhrase, results, maxResults);
+    searchCommonNames(normSearchPhrase, results, maxResults);
 
     // search sci names
     searchSciNames(
