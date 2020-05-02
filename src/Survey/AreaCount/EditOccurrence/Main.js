@@ -42,7 +42,8 @@ class EditOccurrence extends Component {
 
   render() {
     const { sample, occurrence, isDisabled } = this.props;
-    const species = occurrence.attrs.taxon.scientific_name;
+    const foundInName = occurrence.attrs.taxon.found_in_name;
+    const species = occurrence.attrs.taxon[foundInName];
     const { stage } = occurrence.attrs;
     const { comment } = occurrence.attrs;
     const { count } = occurrence.attrs;
