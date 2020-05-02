@@ -4,10 +4,10 @@ const fallback = require( 'express-history-api-fallback');
 
 const app = express();
 
-app.use(express.static('dist/main'));
+app.use(express.static('build'));
 app.use(express.static('other/'));
 
-app.use(fallback('index.html', { root: 'dist/main' })); // BrowserHistory router
+app.use(fallback('index.html', { root: 'build' })); // BrowserHistory router
 
 const server = app.listen(PORT, () => {
   const host = server.address().address;

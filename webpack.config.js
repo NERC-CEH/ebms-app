@@ -18,7 +18,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const pkg = require('./package.json');
 
 const ROOT_DIR = path.resolve(__dirname, './');
-const DIST_DIR = path.resolve(ROOT_DIR, 'dist/main');
+const DIST_DIR = path.resolve(ROOT_DIR, 'build');
 
 const isDevEnv = process.env.NODE_ENV === 'development';
 const isProdEnv = process.env.NODE_ENV === 'production';

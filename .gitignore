@@ -1,11 +1,12 @@
 .DS_Store
-.idea
-.sass-cache
 .npm-debug.log
-dist
 node_modules
 .env*
 *.patch
-yarn.lock
 coverage
 .vscode
+.nowbuild
+.now
+resources
+cordova
+build

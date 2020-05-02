@@ -13,47 +13,47 @@ const exec = grunt => ({
         .splice(0, 2)
         .join('.');
 
-      return `mkdir -p dist/resources &&
-                cp -R other/designs/android dist/resources &&
+      return `mkdir -p cordova/resources &&
+                cp -R other/designs/android cordova/resources &&
 
-                cp other/designs/splash.svg dist/resources &&
-                sed -i.bak 's/{{APP_VERSION}}/${appMinorVersion}/g' dist/resources/splash.svg &&
+                cp other/designs/splash.svg cordova/resources &&
+                sed -i.bak 's/{{APP_VERSION}}/${appMinorVersion}/g' cordova/resources/splash.svg &&
 
-                ./node_modules/.bin/sharp -i dist/resources/splash.svg -o dist/resources/splash.png resize 2737 2737 -- removeAlpha &&
-                ./node_modules/.bin/sharp -i other/designs/icon.svg -o dist/resources/icon.png resize 1024 1024 -- removeAlpha &&
+                ./node_modules/.bin/sharp -i cordova/resources/splash.svg -o cordova/resources/splash.png resize 2737 2737 -- removeAlpha &&
+                ./node_modules/.bin/sharp -i other/designs/icon.svg -o cordova/resources/icon.png resize 1024 1024 -- removeAlpha &&
 
-                ./node_modules/.bin/cordova-res --skip-config --resources dist/resources`;
+                ./node_modules/.bin/cordova-res --skip-config --resources cordova/resources`;
     },
     stdout: false,
   },
   ionic_copy: {
-    command: 'cp -R node_modules/@ionic dist/main',
+    command: 'cp -R node_modules/@ionic build',
     stdout: true,
   },
   init: {
-    command: 'cordova create dist/cordova',
+    command: './node_modules/.bin/cordova create cordova',
     stdout: false,
   },
   clean_www: {
-    command: 'rm -R -f dist/cordova/www/* && rm -f dist/cordova/config.xml',
+    command: 'rm -R -f cordova/www/* && rm -f cordova/config.xml',
     stdout: true,
   },
   rebuild: {
-    command: 'cd dist/cordova/ && cordova prepare ios android',
+    command: 'cd cordova/ && ../node_modules/.bin/cordova prepare ios android',
     stdout: true,
   },
   android_build_dev: {
     command:
-      'cd dist/cordova/ && ../../node_modules/.bin/cordova build android',
+      'cd cordova/ && ../node_modules/.bin/cordova build android',
     stdout: true,
   },
-  copy_dist: {
-    command: 'cp -R dist/main/* dist/cordova/www/',
+  copy_build: {
+    command: 'cp -R build/* cordova/www/',
     stdout: true,
   },
   add_platforms: {
     // @6.4.0 because of https://github.com/ionic-team/ionic/issues/13857#issuecomment-381744212
-    command: 'cd dist/cordova && cordova platforms add ios android',
+    command: 'cd cordova && ../node_modules/.bin/cordova platforms add ios android',
     stdout: false,
   },
   /**
@@ -62,14 +62,13 @@ const exec = grunt => ({
   android_build: {
     command() {
       const pass = grunt.config('keystore-password');
-      return `cd dist/cordova && 
-              mkdir -p dist && 
+      return `cd cordova && 
               cordova --release build android && 
               cd platforms/android/app/build/outputs/apk/release/ &&
               jarsigner -keystore ${process.env.KEYSTORE}
                 -storepass ${pass} app-release-unsigned.apk irecord &&
               zipalign 4 app-release-unsigned.apk main.apk &&
-              mv -f main.apk ../../../../../../../dist/`;
+              mv -f main.apk ../../../../../../../`;
     },
 
     stdout: false,
@@ -77,12 +76,12 @@ const exec = grunt => ({
   },
 
   build_ios: {
-    command: 'cd dist/cordova && cordova build ios',
+    command: 'cd cordova && cordova build ios',
     stdout: true,
   },
 
   build_android: {
-    command: 'cd dist/cordova && cordova build android',
+    command: 'cd cordova && cordova build android',
     stdout: true,
   },
 });
@@ -90,7 +89,7 @@ const exec = grunt => ({
 const replace = {
   config: {
     src: ['cordova.xml'],
-    dest: 'dist/cordova/config.xml',
+    dest: 'cordova/config.xml',
     replacements: [
       {
         from: /\{ID\}/g, // string replacement
@@ -190,7 +189,7 @@ module.exports = grunt => {
     'exec:init',
     'exec:resources',
     'exec:clean_www',
-    'exec:copy_dist',
+    'exec:copy_build',
     'replace:config',
     'exec:add_platforms',
 
@@ -203,7 +202,7 @@ module.exports = grunt => {
 
   grunt.registerTask('update', [
     'exec:clean_www',
-    'exec:copy_dist',
+    'exec:copy_build',
     'replace:config',
     'exec:rebuild',
   ]);
