@@ -85,3 +85,10 @@
 ### Other
 * Fixed transect recording for sections made of multi-line strings
 * Fixed sites report duplication of transects
+
+
+## 1.6.0
+
+### Features
+
+* Added localised species names to recording functionality.
