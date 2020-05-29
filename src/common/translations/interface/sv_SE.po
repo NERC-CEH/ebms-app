@@ -368,7 +368,7 @@ msgid "Add"
 msgstr "Lägg till"
 
 msgid "Add species"
-msgstr ""
+msgstr "Lägg till"
 
 msgid "Duration"
 msgstr "Tidsintervall"

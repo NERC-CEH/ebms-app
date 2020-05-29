@@ -365,7 +365,7 @@ msgid "Add"
 msgstr "Додај"
 
 msgid "Add species"
-msgstr ""
+msgstr "Додај"
 
 msgid "Duration"
 msgstr "Трајање"

@@ -368,7 +368,7 @@ msgid "Add"
 msgstr "Añadir"
 
 msgid "Add species"
-msgstr ""
+msgstr "Añadir"
 
 msgid "Duration"
 msgstr "Duración"

@@ -364,7 +364,7 @@ msgid "Add"
 msgstr "Vložit"
 
 msgid "Add species"
-msgstr ""
+msgstr "Vložit"
 
 msgid "Duration"
 msgstr "Doba"
