@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import {
@@ -19,6 +19,18 @@ import Header from 'Lib/Header';
 import './styles.scss';
 
 function SelectCountry({ appModel, hideHeader }) {
+  if (hideHeader) {
+    // This is an unkown issue where changing a language on the initial
+    // app load screen does not update the countries labels so we force rerender
+    // this screen after a timeout
+    const [secondRender, forceSecondRender] = useState(false);
+    setTimeout(() => forceSecondRender(true), 10);
+
+    if (!secondRender) {
+      return null;
+    }
+  }
+
   const currentValue = appModel.attrs.country;
 
   function onSelect(e) {
