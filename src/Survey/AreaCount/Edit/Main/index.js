@@ -24,6 +24,7 @@ import { observer } from 'mobx-react';
 import config from 'config';
 import Main from 'Lib/Main';
 import MenuAttrItem from 'Lib/MenuAttrItem';
+import { Trans as T } from 'react-i18next';
 import CountdownClock from './components/CountdownClock';
 import './styles.scss';
 
@@ -73,7 +74,9 @@ class AreaCount extends Component {
         }}
       >
         <IonIcon icon={addCircleOutline} slot="start" />
-        <IonLabel>{t('Add')}</IonLabel>
+        <IonLabel>
+          <T>Add species</T>
+        </IonLabel>
       </IonButton>
     );
   };
@@ -92,7 +95,9 @@ class AreaCount extends Component {
       return (
         <IonList id="list" lines="full">
           <IonItem className="empty">
-            <span>{t('No species added')}</span>
+            <span>
+              <T>No species added</T>
+            </span>
           </IonItem>
         </IonList>
       );
@@ -136,7 +141,7 @@ class AreaCount extends Component {
                   color="danger"
                   onClick={() => deleteOccurrence(occ)}
                 >
-                  {t('Delete')}
+                  <T>Delete</T>
                 </IonItemOption>
               </IonItemOptions>
             </IonItemSliding>
@@ -168,14 +173,17 @@ class AreaCount extends Component {
         {isDisabled && (
           <div className="info-message">
             <p>
-              {t(
-                'This record has been submitted and cannot be edited within this App.'
-              )}
+              <T>
+                This record has been submitted and cannot be edited within this
+                App.
+              </T>
             </p>
 
             <IonButton href={`${config.site_url}`}>
               <IonIcon icon={open} slot="end" />
-              <IonLabel>{t('eBMS website')}</IonLabel>
+              <IonLabel>
+                <T>eBMS website</T>
+              </IonLabel>
             </IonButton>
           </div>
         )}
@@ -203,7 +211,9 @@ class AreaCount extends Component {
             disabled={isDisabled}
           >
             <IonIcon icon={time} slot="start" mode="md" />
-            <IonLabel>{t('Duration')}</IonLabel>
+            <IonLabel>
+              <T>Duration</T>
+            </IonLabel>
             <CountdownClock isPaused={isPaused} countdown={countdown} />
           </IonItem>
 

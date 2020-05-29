@@ -14,6 +14,7 @@ import { addCircleOutline, removeCircleOutline, funnel } from 'ionicons/icons';
 import Main from 'Lib/Main';
 import MenuAttrItem from 'Lib/MenuAttrItem';
 import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
 import 'common/images/cloud.svg';
 import './thumb-up.svg';
 import './styles.scss';
@@ -53,7 +54,9 @@ class Edit extends Component {
       return (
         <IonList id="list" lines="full">
           <IonItem className="empty">
-            <span>{t('No species added')}</span>
+            <span>
+              <T>No species added</T>
+            </span>
           </IonItem>
         </IonList>
       );
@@ -111,7 +114,7 @@ class Edit extends Component {
                   color="danger"
                   onClick={() => deleteOccurrence(occ)}
                 >
-                  {t('Delete')}
+                  <T>Delete</T>
                 </IonItemOption>
               </IonItemOptions>
             </IonItemSliding>
@@ -140,7 +143,9 @@ class Edit extends Component {
         }}
       >
         <IonIcon icon={addCircleOutline} slot="start" />
-        <IonLabel>{t('Add')}</IonLabel>
+        <IonLabel>
+          <T>Add species</T>
+        </IonLabel>
       </IonButton>
     );
   };

@@ -366,6 +366,9 @@ msgstr "Område"
 msgid "Add"
 msgstr "Lägg till"
 
+msgid "Add species"
+msgstr ""
+
 msgid "Duration"
 msgstr "Tidsintervall"
 
@@ -818,8 +821,8 @@ msgid "This app was hand crafted with love by"
 msgstr "Den här appen gjordes kärleksfullt för hand av"
 
 msgid ""
-"A technical consultancy that excels at building bespoke environmental"
-" science and community focussed solutions."
+"A technical consultancy that excels at building bespoke environmental "
+"science and community focussed solutions."
 msgstr ""
 "Organisation specialiserad på att skapa skräddarsydda dataorienterade "
 "lösningar"

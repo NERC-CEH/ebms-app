@@ -350,6 +350,9 @@ msgstr "Area"
 msgid "Add"
 msgstr "Add"
 
+msgid "Add species"
+msgstr "Add species"
+
 msgid "Duration"
 msgstr "Duration"
 

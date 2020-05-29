@@ -355,6 +355,9 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
+msgid "Add species"
+msgstr ""
+
 msgid "Duration"
 msgstr ""
 
@@ -753,8 +756,8 @@ msgid "This app was hand crafted with love by"
 msgstr ""
 
 msgid ""
-"A technical consultancy that excels at building bespoke environmental"
-" science and community focussed solutions."
+"A technical consultancy that excels at building bespoke environmental "
+"science and community focussed solutions."
 msgstr ""
 
 msgid "For suggestions and feedback please do not hesitate to"

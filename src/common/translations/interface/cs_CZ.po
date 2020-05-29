@@ -362,6 +362,9 @@ msgstr "Plocha"
 msgid "Add"
 msgstr "Vložit"
 
+msgid "Add species"
+msgstr ""
+
 msgid "Duration"
 msgstr "Doba"
 

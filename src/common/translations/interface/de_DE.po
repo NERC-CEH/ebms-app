@@ -368,6 +368,9 @@ msgstr "Fläche"
 msgid "Add"
 msgstr "Hinzufügen"
 
+msgid "Add species"
+msgstr ""
+
 msgid "Duration"
 msgstr "Dauer"
 
@@ -836,8 +839,8 @@ msgstr ""
 "entwickelt."
 
 msgid ""
-"A technical consultancy that excels at building bespoke environmental"
-" science and community focussed solutions."
+"A technical consultancy that excels at building bespoke environmental "
+"science and community focussed solutions."
 msgstr ""
 "Agentur, die sich auf die Entwicklung maßgeschneiderter datenorientierter "
 "Lösungen spezialisiert hat."

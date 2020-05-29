@@ -364,6 +364,9 @@ msgstr "Територия"
 msgid "Add"
 msgstr "Добави"
 
+msgid "Add species"
+msgstr ""
+
 msgid "Duration"
 msgstr "Продължителност"
 

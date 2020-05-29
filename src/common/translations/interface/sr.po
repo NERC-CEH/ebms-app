@@ -363,6 +363,9 @@ msgstr "Област"
 msgid "Add"
 msgstr "Додај"
 
+msgid "Add species"
+msgstr ""
+
 msgid "Duration"
 msgstr "Трајање"
 

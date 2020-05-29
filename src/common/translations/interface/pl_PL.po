@@ -1,7 +1,11 @@
 # 
+# Translators:
+# Aleksandra Magdziarek <aleksandra.magdziarek@biol.lu.se>, 2020
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
+"Last-Translator: Aleksandra Magdziarek <aleksandra.magdziarek@biol.lu.se>, 2020\n"
 "Language-Team: Polish (Poland) (https://www.transifex.com/ceh/teams/95441/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -11,16 +15,16 @@ msgstr ""
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr ""
+msgstr "Wybierz kraj"
 
 msgid "United Kingdom"
-msgstr ""
+msgstr "Wielka Brytania"
 
 msgid "Lithuania"
-msgstr ""
+msgstr "Litwa"
 
 msgid "Spain"
-msgstr ""
+msgstr "Hiszpania"
 
 msgid "Andorra"
 msgstr ""
@@ -321,10 +325,10 @@ msgid "This will delete all the records on this device."
 msgstr ""
 
 msgid "Cancel"
-msgstr ""
+msgstr "Anuluj"
 
 msgid "Welcome aboard!"
-msgstr ""
+msgstr "Witaj!"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
@@ -332,10 +336,10 @@ msgid ""
 msgstr ""
 
 msgid "OK, got it"
-msgstr ""
+msgstr "OK, rozumiem"
 
 msgid "email is a required field"
-msgstr ""
+msgstr "Email jest wymagany"
 
 msgid "firstname is a required field"
 msgstr ""
@@ -353,6 +357,9 @@ msgid "Area"
 msgstr ""
 
 msgid "Add"
+msgstr ""
+
+msgid "Add species"
 msgstr ""
 
 msgid "Duration"
@@ -753,8 +760,8 @@ msgid "This app was hand crafted with love by"
 msgstr ""
 
 msgid ""
-"A technical consultancy that excels at building bespoke environmental"
-" science and community focussed solutions."
+"A technical consultancy that excels at building bespoke environmental "
+"science and community focussed solutions."
 msgstr ""
 
 msgid "For suggestions and feedback please do not hesitate to"

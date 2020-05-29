@@ -292,7 +292,7 @@ msgid "OK"
 msgstr "Gerai"
 
 msgid "Sorry"
-msgstr "Atsiprašome"
+msgstr "Atriprašome"
 
 msgid "Please wait..."
 msgstr "Prašome palaukti..."
@@ -337,7 +337,7 @@ msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Prieš naudodamiesi aplikacija prašome patvirtinti savo el.paštą - paspausdami "
+"Iki naudodamiesi aplikacija prašome patvirtinti savo el.paštą - paspausdami "
 "nuorodą išsiųstą jūsų adresu."
 
 msgid "OK, got it"
@@ -363,6 +363,9 @@ msgstr "Vietovė"
 
 msgid "Add"
 msgstr "Pridėti"
+
+msgid "Add species"
+msgstr "Pridėti rūšį"
 
 msgid "Duration"
 msgstr "Trukmė"
@@ -667,7 +670,7 @@ msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Norėdami ištrinti įrašą, braukite jį į kairę ĮRAŠAI puslapyje ir "
+"Norėdami ištrinti įrašą, braukite jį į kairę Įrašai puslapyje ir "
 "spustelėkite mygtuką IŠTRINTI."
 
 msgid "User"
