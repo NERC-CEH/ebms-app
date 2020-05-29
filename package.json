@@ -12,6 +12,7 @@
     "start": "node other/server.js",
     "start:dev": "webpack-dev-server --config webpack.config.js --content-base dist/main --port 8000",
     "deploy:web": "now --prod -A other/now.json",
+    "clean": "rm -rf cordova build resources",
     "test": "karma start test/karma.conf.js",
     "test:watch": "karma start test/karma.conf.js --no-single-run",
     "test:sauce": "karma start test/karma.conf-sauce.js",
