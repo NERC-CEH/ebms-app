@@ -12,5 +12,7 @@ export default {
   'cs-CZ': 'Čeština',
   'hr-HR': 'Hrvatski',
   'fi-FI': 'Suomi',
+  'bg-BG': 'Български',
+  'sr-RS': 'Cрпски',
   // 'fr-FR': 'Français',
 };

@@ -39,12 +39,18 @@ import species_it_IT from './species/it_IT.po';
 import cs_CZ from './interface/cs_CZ.po';
 import species_cs_CZ from './species/cs_CZ.po';
 
+import bg_BG from './interface/bg_BG.po';
+import species_bg_BG from './species/bg_BG.po';
+
+import sr_RS from './interface/sr.po';
+import species_sr_RS from './species/sr.po';
+
 const flatNames = { ...names };
 Object.keys(flatNames).forEach(lang => {
   flatNames[lang] = flatNames[lang].reduce((agg, term) => {
     const { scientific_name, common_name } = term;
     agg[scientific_name] = common_name; // eslint-disable-line
-    
+
     return agg;
   }, {});
 });
@@ -145,5 +151,15 @@ export default {
     interface: rawToKeyVal(cs_CZ),
     species: rawToKeyVal(species_cs_CZ),
     names: flatNames['cs-CZ'],
+  },
+  'bg-BG': {
+    interface: rawToKeyVal(bg_BG),
+    species: rawToKeyVal(species_bg_BG),
+    names: flatNames['bg-BG'],
+  },
+  'sr-RS': {
+    interface: rawToKeyVal(sr_RS),
+    species: rawToKeyVal(species_sr_RS),
+    names: flatNames['sr-RS'],
   },
 };

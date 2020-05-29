@@ -1,10 +1,12 @@
+# 
 # Translators:
 # Zdenek Faltynek Fric <fric@entu.cas.cz>, 2020
+# Karolis, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Zdenek Faltynek Fric <fric@entu.cas.cz>, 2020\n"
+"Last-Translator: Karolis, 2020\n"
 "Language-Team: Czech (Czech Republic) (https://www.transifex.com/ceh/teams/95441/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -802,7 +804,9 @@ msgstr "Vývoj aplikace"
 msgid "This app was hand crafted with love by"
 msgstr "Tato aplikace byla vytvořena ručně a s láskou "
 
-msgid "A technical consultancy that excels at building bespoke environmental science and community focussed solutions."
+msgid ""
+"A technical consultancy that excels at building bespoke environmental "
+"science and community focussed solutions."
 msgstr "Agentura specializovaná na zakázková datově orientovaná řešení."
 
 msgid "For suggestions and feedback please do not hesitate to"
