@@ -17,6 +17,7 @@ import appModel from 'app_model';
 import userModel from 'user_model';
 import LongPressFabButton from 'Lib/LongPressFabButton';
 import PrivateRoute from 'Lib/PrivateRoute';
+import { Trans as T } from 'react-i18next';
 import Report from './Report';
 import Species from './Species';
 import UserSurveys from './Surveys';
@@ -33,11 +34,13 @@ const Component = ({ history }) => {
             class="fab-button-label"
             routerLink="/survey/transect/new/edit"
           >
-            <IonLabel>{t('eBMS Transect')}</IonLabel>
+            <IonLabel>
+              <T>eBMS Transect</T>
+            </IonLabel>
           </IonFabButton>
 
           <div className="long-press-surveys-label">
-            {t('Other recording options')}
+            <T>Click on other recording options from list below</T>
           </div>
         </IonFabList>
       </LongPressFabButton>
@@ -67,24 +70,32 @@ const Component = ({ history }) => {
         <IonTabBar slot="bottom">
           <IonTabButton tab="home/report" href="/home/report">
             <IonIcon icon={home} />
-            <IonLabel>{t('Home')}</IonLabel>
+            <IonLabel>
+              <T>Home</T>
+            </IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="home/species" href="/home/species">
             <IonIcon icon={book} />
-            <IonLabel>{t('Guide')}</IonLabel>
+            <IonLabel>
+              <T>Guide</T>
+            </IonLabel>
           </IonTabButton>
 
           <IonTabButton>{/* placeholder */}</IonTabButton>
 
           <IonTabButton tab="/home/user-surveys" href="/home/user-surveys">
             <IonIcon icon={person} />
-            <IonLabel>{t('Surveys')}</IonLabel>
+            <IonLabel>
+              <T>Surveys</T>
+            </IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="menu" href="/info/menu">
             <IonIcon icon={menu} />
-            <IonLabel>{t('Menu')}</IonLabel>
+            <IonLabel>
+              <T>Menu</T>
+            </IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

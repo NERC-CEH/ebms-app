@@ -2,11 +2,12 @@
 # Translators:
 # Karolis, 2020
 # Miloš Popović <gpopac@gmail.com>, 2020
+# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Miloš Popović <gpopac@gmail.com>, 2020\n"
+"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/ceh/teams/95441/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1295,7 +1296,7 @@ msgid "This record has been submitted and cannot be edited within this App."
 msgstr "Налаз је послат и не може бити измењен преко апликације."
 
 # Refers to surveys list when long-pressing plus button
-msgid "Other recording options"
+msgid "Click on other recording options from list below"
 msgstr "Остале опције за бележење"
 
 # A note in app settings page

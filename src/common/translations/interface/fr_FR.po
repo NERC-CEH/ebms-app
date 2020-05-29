@@ -1248,7 +1248,7 @@ msgid "This record has been submitted and cannot be edited within this App."
 msgstr ""
 
 # Refers to surveys list when long-pressing plus button
-msgid "Other recording options"
+msgid "Click on other recording options from list below"
 msgstr ""
 
 # A note in app settings page

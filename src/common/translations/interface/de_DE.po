@@ -3,11 +3,12 @@
 # Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2020
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Karolis, 2020
+# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2020\n"
+"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020\n"
 "Language-Team: German (Germany) (https://www.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1346,7 +1347,7 @@ msgstr ""
 "bearbeitet werden."
 
 # Refers to surveys list when long-pressing plus button
-msgid "Other recording options"
+msgid "Click on other recording options from list below"
 msgstr "Andere Aufzeichnungsoptionen"
 
 # A note in app settings page

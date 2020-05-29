@@ -1049,9 +1049,9 @@ msgstr "Yesterday"
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr "This record has been submitted and cannot be edited within this App."
 
-# Refers to surveys list when long-pressing plus button
-msgid "Other recording options"
-msgstr "Other recording options"
+# Refers to surveys list when long-pressing plus button 
+msgid "Click on other recording options from list below"
+msgstr "Click on other recording options from list below"
 
 # A note in app settings page
 msgid "Batch upload all finished records. This does not include records in 'draft' stage."

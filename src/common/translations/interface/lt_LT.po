@@ -1283,7 +1283,7 @@ msgstr ""
 "kečiamas."
 
 # Refers to surveys list when long-pressing plus button
-msgid "Other recording options"
+msgid "Click on other recording options from list below"
 msgstr "Kiti monitoringai"
 
 # A note in app settings page
