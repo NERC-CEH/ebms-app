@@ -7,6 +7,7 @@ import Page from 'Lib/Page';
 import Header from 'Lib/Header';
 import { resetDefaults } from 'saved_samples';
 import Main from './Main';
+import './styles.scss';
 
 function showLogoutConfirmationDialog(callback) {
   alert({
@@ -19,6 +20,7 @@ function showLogoutConfirmationDialog(callback) {
         label: t('Discard local data'),
         value: 'reset',
         checked: true,
+        id: 'showLogoutConfirmationDialog',
       },
     ],
     buttons: [
