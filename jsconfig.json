@@ -11,6 +11,7 @@
       "helpers/*": ["src/common/helpers/*"],
       "Components/*": ["src/common/Components/*"],
       "Lib/*": ["src/common/Lib/*"],
+      "@apps": ["src/common/appsBitCollection"]
     }
   },
   "include": ["./src/**/*"]
