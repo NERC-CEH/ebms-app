@@ -10,3 +10,5 @@ coverage
 resources
 cordova
 build
+
+.vercel
