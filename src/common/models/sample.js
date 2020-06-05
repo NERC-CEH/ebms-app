@@ -10,6 +10,8 @@ import userModel from 'user_model';
 import appModel from 'app_model';
 import Log from 'helpers/log';
 import Device from 'helpers/device';
+import areaCountSurveyConfig from 'common/config/area-count';
+import transectSurveyConfig from 'common/config/transect';
 import Occurrence from './occurrence';
 import Media from './image';
 import { modelStore } from './store';
@@ -116,7 +118,7 @@ class Sample extends Indicia.Sample {
   keys = () => {
     return {
       ...Indicia.Sample.keys,
-      ...CONFIG.indicia.surveys[this.getSurvey()].attrs.smp,
+      ...CONFIG.indicia.surveys[this.getSurvey().name].attrs,
     };
   };
 
@@ -129,7 +131,7 @@ class Sample extends Indicia.Sample {
     }
 
     try {
-      const survey = this.getSurvey();
+      const survey = this.getSurvey().name;
       survey === 'transect'
         ? transectSchema.validateSync(this.attrs, { abortEarly: false })
         : areaCountSchema.validateSync(this.attrs, { abortEarly: false });
@@ -200,7 +202,7 @@ class Sample extends Indicia.Sample {
 
   getSubmission(...args) {
     const [submission, media] = super.getSubmission(...args);
-    const surveyName = this.getSurvey();
+    const surveyName = this.getSurvey().name;
     const survey = CONFIG.indicia.surveys[surveyName];
 
     const newAttrs = {
@@ -267,7 +269,8 @@ class Sample extends Indicia.Sample {
   }
 
   getSurvey() {
-    return this.metadata.survey || 'area'; // !survey - for backwards compatibility
+    const surveyName = this.metadata.survey || 'area'; // !survey - for backwards compatibility
+    return surveyName === 'area' ? areaCountSurveyConfig : transectSurveyConfig;
   }
 
   async saveRemote() {

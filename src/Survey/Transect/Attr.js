@@ -29,7 +29,7 @@ class Component extends React.Component {
     const value = sample.attrs[this.attrName];
     this.state = { currentVal: value };
 
-    this.attrConfig = config.indicia.surveys.transect.attrs.smp[this.attrName];
+    this.attrConfig = config.indicia.surveys.transect.attrs[this.attrName];
   }
 
   onChange = val => {

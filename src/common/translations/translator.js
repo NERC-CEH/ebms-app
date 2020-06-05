@@ -6,6 +6,15 @@ import resources from './loader';
 
 const DEFAULT_LANGUAGE = 'en';
 
+window.getNewTerms = () => {
+  window.dic = window.dic || [];
+  let all = '';
+  window.dic.forEach(word => {
+    all += `\n# Context term \nmsgid "${word}"\nmsgstr "${word}"\n`;
+  });
+  console.log(all);
+};
+
 // console command to extract into .po file
 // all='';dic.forEach(word => {all+=`\nmsgid "${word}"\nmsgstr "${word}"\n`})
 function saveMissingKey(key) {

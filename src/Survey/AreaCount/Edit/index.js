@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import Page from 'Lib/Page';
 import alert from 'common/helpers/alert';
+import i18n from 'i18next';
 import showInvalidsMessage from 'helpers/invalidsMessage';
 import Header from './Header';
 import Main from './Main';
@@ -16,7 +17,9 @@ function deleteOccurrence(occ) {
   const taxon = occ.attrs.taxon.scientific_name;
   alert({
     header: t('Delete'),
-    message: `${t('Are you sure you want to delete')} ${taxon}?`,
+    message: i18n.t('Are you sure you want to delete {{taxon}} ?', {
+      taxon,
+    }),
     buttons: [
       {
         text: t('Cancel'),

@@ -5,11 +5,12 @@ import alert from 'common/helpers/alert';
 import { Route } from 'react-router-dom';
 import { IonRouterOutlet } from '@ionic/react';
 import modelFactory from 'common/models/model_factory';
+import { AttrPage } from '@apps';
 import Edit from './Edit';
 import EditOccurrence from './EditOccurrence';
 import Taxon from './Taxon';
 import AreaAttr from './Area';
-import Comment from './Comment';
+import Details from './Details';
 import OccurrenceComment from './OccurrenceComment';
 import Stage from './Stage';
 
@@ -92,7 +93,6 @@ class Routes extends React.Component {
     if (!this.state.sample) {
       return null;
     }
-
     return (
       <IonRouterOutlet>
         <Route
@@ -106,10 +106,16 @@ class Routes extends React.Component {
           render={props => <Taxon sample={this.state.sample} {...props} />}
         />
         <Route
-          path="/survey/area/:id/edit/comment"
+          path="/survey/area/:id/edit/details"
           exact
-          render={props => <Comment sample={this.state.sample} {...props} />}
+          render={props => <Details sample={this.state.sample} {...props} />}
         />
+        <Route
+          path="/survey/area/:id/edit/details/:attr"
+          exact
+          render={props => <AttrPage sample={this.state.sample} {...props} />}
+        />
+
         <Route
           path="/survey/area/:id/edit"
           exact

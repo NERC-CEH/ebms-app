@@ -159,8 +159,6 @@ class AreaCount extends Component {
     const { area } = sample.attrs.location || {};
     const areaPretty = area && `${area.toLocaleString()} m²`;
 
-    const { comment } = sample.attrs;
-
     const startTime = new Date(sample.attrs.surveyStartTime);
     const countdown =
       startTime.getTime() +
@@ -196,14 +194,6 @@ class AreaCount extends Component {
             label="Area"
             value={areaPretty}
           />
-          <MenuAttrItem
-            routerLink={`/survey/area/${sample.cid}/edit/comment`}
-            disabled={isDisabled}
-            icon={clipboard}
-            iconMode="md"
-            label="Comment"
-            value={comment}
-          />
           <IonItem
             detail={!isDisabled}
             detailIcon={isPaused ? play : pause}
@@ -216,6 +206,13 @@ class AreaCount extends Component {
             </IonLabel>
             <CountdownClock isPaused={isPaused} countdown={countdown} />
           </IonItem>
+          <MenuAttrItem
+            routerLink={`/survey/area/${sample.cid}/edit/details`}
+            disabled={isDisabled}
+            icon={clipboard}
+            iconMode="md"
+            label="Additional Details"
+          />
 
           {this.getSpeciesAddButton()}
         </IonList>

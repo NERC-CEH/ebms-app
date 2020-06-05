@@ -72,7 +72,7 @@ export default class Occurrence extends Indicia.Occurrence {
 
     return {
       ...Indicia.Occurrence.keys,
-      ...CONFIG.indicia.surveys[this.getSurvey()].attrs.occ,
+      ...CONFIG.indicia.surveys[this.getSurvey().name].occ.attrs,
     };
   };
 

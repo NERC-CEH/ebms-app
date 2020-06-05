@@ -84,24 +84,6 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "flumens.apps/header@0.1.0": {
-        "files": [
-            {
-                "relativePath": "src/common/Lib/Header/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/common/Lib/Header/styles.scss",
-                "test": false,
-                "name": "styles.scss"
-            }
-        ],
-        "mainFile": "src/common/Lib/Header/index.js",
-        "trackDir": "src/common/Lib/Header",
-        "origin": "AUTHORED",
-        "exported": true
-    },
     "flumens.apps/input-with-validation@0.1.1": {
         "files": [
             {
@@ -159,24 +141,6 @@
             }
         ],
         "mainFile": "src/common/Lib/Main.js",
-        "origin": "AUTHORED",
-        "exported": true
-    },
-    "flumens.apps/menu-attr-item@0.1.1": {
-        "files": [
-            {
-                "relativePath": "src/common/Lib/MenuAttrItem/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/common/Lib/MenuAttrItem/styles.scss",
-                "test": false,
-                "name": "styles.scss"
-            }
-        ],
-        "mainFile": "src/common/Lib/MenuAttrItem/index.js",
-        "trackDir": "src/common/Lib/MenuAttrItem",
         "origin": "AUTHORED",
         "exported": true
     },

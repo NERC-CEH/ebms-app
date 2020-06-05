@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import {  IonButton } from '@ionic/react';
+import { IonButton } from '@ionic/react';
 import alert from 'common/helpers/alert';
+import i18n from 'i18next';
 import Page from 'Lib/Page';
 import Header from 'Lib/Header';
 import Main from './Main';
@@ -17,7 +18,7 @@ function decreaseCount(occ) {
   if (count <= 1) {
     return;
   }
-  
+
   occ.attrs.count--; // eslint-disable-line no-param-reassign
   occ.save();
 }
@@ -26,7 +27,9 @@ function deleteOccurrence(occ) {
   const taxon = occ.attrs.taxon.scientific_name;
   alert({
     header: t('Delete'),
-    message: `${t('Are you sure you want to delete')} ${taxon}?`,
+    message: i18n.t('Are you sure you want to delete {{taxon}} ?', {
+      taxon,
+    }),
     buttons: [
       {
         text: t('Cancel'),

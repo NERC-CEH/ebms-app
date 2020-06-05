@@ -28,7 +28,11 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
-    "@bit/flumens.apps.attr-page": "^0.1.0",
+    "@bit/flumens.apps.attr-page": "0.2.0",
+    "@bit/flumens.apps.header": "0.4.0",
+    "@bit/flumens.apps.main": "^0.1.0",
+    "@bit/flumens.apps.menu-attr-item": "0.5.1",
+    "@bit/flumens.apps.page": "^0.1.0",
     "@indicia-js/core": "^5.0.0",
     "@ionic/core": "4.11.0",
     "@ionic/react": "4.11.0",

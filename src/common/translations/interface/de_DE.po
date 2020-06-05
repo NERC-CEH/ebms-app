@@ -1379,3 +1379,15 @@ msgstr "Hoppla! Irgendwas ist schief gelaufen."
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
 msgstr "Dies ist das Fehlerereignis id: {{eventId}}"
+
+# Additional information button in Area-count survey
+msgid "Additional Details"
+msgstr ""
+
+# Section label in Area-count survey
+msgid "Weather Conditions"
+msgstr ""
+
+# Alert message
+msgid "Are you sure you want to delete {{taxon}} ?"
+msgstr ""

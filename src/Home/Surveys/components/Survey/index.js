@@ -42,7 +42,7 @@ const Survey = observer(({ sample }) => {
   const prettyDate = date.toLocaleDateString();
   const speciesCount = sample.occurrences.length;
 
-  const survey = sample.getSurvey();
+  const survey = sample.getSurvey().name;
   const href = !sample.remote.synchronising
     ? `/survey/${survey}/${sample.cid}/edit`
     : undefined;

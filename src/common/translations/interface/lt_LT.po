@@ -949,7 +949,7 @@ msgid "Dust raised and small branches move"
 msgstr "Sujudinamos dulkės ir mažos medžių šakelės"
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Maži sužaliavę medeliai pradeda truputį juda"
+msgstr "Maži sužaliavę medžio lapeliai pradeda truputį judėti"
 
 msgid "Large branches move and trees sway"
 msgstr "Didelės medžių šakos juda ir medžiai linguoja"
@@ -1317,3 +1317,15 @@ msgstr "O ne! Kažkur įvyko klaida."
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
 msgstr "Klaidos kodas: {{eventId}}"
+
+# Additional information button in Area-count survey
+msgid "Additional Details"
+msgstr "Papildoma informacija"
+
+# Section label in Area-count survey
+msgid "Weather Conditions"
+msgstr "Orų sąlygos"
+
+# Alert message
+msgid "Are you sure you want to delete {{taxon}} ?"
+msgstr "Ar tikrai norite ištrinti {{taxon}} rūšį ?"

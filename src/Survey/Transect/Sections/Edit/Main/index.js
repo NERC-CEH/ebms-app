@@ -169,6 +169,7 @@ class Edit extends Component {
             icon="/images/cloud.svg"
             label="Cloud"
             value={cloud}
+            skipValueTranslation
           />
           <MenuAttrItem
             routerLink={`${baseURL}/reliability`}

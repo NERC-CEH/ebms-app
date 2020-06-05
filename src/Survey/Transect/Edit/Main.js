@@ -7,8 +7,8 @@ import { observer } from 'mobx-react';
 import config from 'config';
 import MenuAttrItem from 'Lib/MenuAttrItem';
 import 'common/images/cloud.svg';
-import './wind.svg';
-import './thermometer.svg';
+import 'common/images/thermometer.svg';
+import 'common/images/wind.svg';
 
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
@@ -88,6 +88,7 @@ class Edit extends Component {
             iconMode="md"
             label="Start Time"
             value={startTimePretty}
+            skipValueTranslation
           />
           <MenuAttrItem
             routerLink={`${baseURL}/surveyEndTime`}
@@ -96,6 +97,7 @@ class Edit extends Component {
             iconMode="md"
             label="End Time"
             value={endTimePretty}
+            skipValueTranslation
           />
           <MenuAttrItem
             routerLink={`${baseURL}/temperature`}
@@ -103,6 +105,7 @@ class Edit extends Component {
             icon="/images/thermometer.svg"
             label="Temperature"
             value={t(temperature)}
+            skipValueTranslation
           />
           <MenuAttrItem
             routerLink={`${baseURL}/cloud`}
@@ -110,6 +113,7 @@ class Edit extends Component {
             icon="/images/cloud.svg"
             label="Cloud"
             value={cloud}
+            skipValueTranslation
           />
           <MenuAttrItem
             routerLink={`${baseURL}/windDirection`}
@@ -131,6 +135,7 @@ class Edit extends Component {
             icon={person}
             label="Recorder"
             value={recorder}
+            skipValueTranslation
           />
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
@@ -139,6 +144,7 @@ class Edit extends Component {
             iconMode="md"
             label="Comment"
             value={comment}
+            skipValueTranslation
           />
         </IonList>
       </Main>
