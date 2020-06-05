@@ -54,7 +54,9 @@ const Survey = observer(({ sample }) => {
       return (
         <IonLabel class="ion-text-wrap">
           <h3>
-            <b><T>Transect</T></b>
+            <b>
+              <T>Transect</T>
+            </b>
           </h3>
           <h3>{prettyDate}</h3>
         </IonLabel>
@@ -64,13 +66,13 @@ const Survey = observer(({ sample }) => {
     return (
       <IonLabel class="ion-text-wrap">
         <h3>
-          <b>{t('15min Count')}</b>
+          <b>
+            <T>15min Count</T>
+          </b>
         </h3>
         <h3>{prettyDate}</h3>
         <IonBadge color="medium">
-          <IonIcon src="/images/butterfly.svg" /> 
-          {' '}
-          {speciesCount}
+          <IonIcon src="/images/butterfly.svg" /> {speciesCount}
         </IonBadge>
       </IonLabel>
     );
@@ -88,7 +90,7 @@ const Survey = observer(({ sample }) => {
       </IonItem>
       <IonItemOptions side="end">
         <IonItemOption color="danger" onClick={() => deleteSurvey(sample)}>
-          {t('Delete')}
+          <T>Delete</T>
         </IonItemOption>
       </IonItemOptions>
     </IonItemSliding>
