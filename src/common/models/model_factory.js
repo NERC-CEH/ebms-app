@@ -10,11 +10,12 @@ const Factory = {
         survey: 'area',
         pausedTime: 0,
       },
-      attrs: { surveyStartTime: null },
+      attrs: { surveyStartTime: null, location: {} },
     });
     sample.attrs.surveyStartTime = sample.metadata.created_on; // this can't be done in defaults
     sample.toggleGPStracking();
     sample.startVibrateCounter();
+    sample.startMetOfficePull();
 
     savedSamples.push(sample);
     return sample.save();

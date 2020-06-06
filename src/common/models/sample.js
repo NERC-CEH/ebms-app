@@ -17,6 +17,7 @@ import Media from './image';
 import { modelStore } from './store';
 import GPSExtension from './sample_gps_ext';
 import VibrateExtension from './sample_vibrate_ext';
+import MetOfficeExtension from './sample_metoffice_ext';
 
 const locationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
@@ -296,6 +297,7 @@ class Sample extends Indicia.Sample {
 // add geolocation functionality
 Sample.prototype = Object.assign(Sample.prototype, GPSExtension);
 Sample.prototype = Object.assign(Sample.prototype, VibrateExtension);
+Sample.prototype = Object.assign(Sample.prototype, MetOfficeExtension);
 Sample.prototype.constructor = Sample;
 
 export { Sample as default };

@@ -6,7 +6,12 @@ const checkEnv = require('@flumens/has-env');
 
 checkEnv({
   warn: ['APP_TRAINING', 'APP_MANUAL_TESTING', 'APP_INDICIA_API_HOST'],
-  required: ['APP_MAPBOX_MAP_KEY', 'APP_SENTRY_KEY', 'APP_INDICIA_API_KEY'],
+  required: [
+    'APP_MAPBOX_MAP_KEY',
+    'APP_SENTRY_KEY',
+    'APP_INDICIA_API_KEY',
+    'APP_WEATHER_SITE_API_KEY',
+  ],
 });
 
 const path = require('path');
@@ -167,7 +172,9 @@ const config = {
         APP_MAPBOX_MAP_KEY: JSON.stringify(
           process.env.APP_MAPBOX_MAP_KEY || ''
         ),
-
+        APP_WEATHER_SITE_API_KEY: JSON.stringify(
+          process.env.APP_WEATHER_SITE_API_KEY || ''
+        ),
         // compulsory env. variables
         APP_INDICIA_API_HOST: JSON.stringify(
           process.env.APP_INDICIA_API_HOST || ''

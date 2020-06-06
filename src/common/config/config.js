@@ -22,6 +22,9 @@ const CONFIG = {
 
   site_url: HOST,
 
+  weatherSiteApiKey: process.env.APP_WEATHER_SITE_API_KEY,
+  weatherSiteUrl: 'http://api.openweathermap.org/data/2.5/weather',
+
   // use prod logging if testing otherwise full log
   log: !__TEST__,
 
