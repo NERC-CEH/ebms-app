@@ -71,7 +71,6 @@ class Component extends React.Component {
             icon="/images/wind.svg"
             label="Wind Direction"
             value={windDirection}
-            wrapText
           />
           <MenuAttrItem
             routerLink={`${baseURL}/windSpeed`}
@@ -79,7 +78,6 @@ class Component extends React.Component {
             icon="/images/wind.svg"
             label="Wind Speed"
             value={windSpeed}
-            wrapText
           />
         </IonList>
       </Main>
