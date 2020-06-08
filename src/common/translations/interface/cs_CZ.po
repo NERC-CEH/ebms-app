@@ -1,7 +1,6 @@
 # 
 # Translators:
 # Karolis, 2020
-# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # Zdenek Faltynek Fric <fric@entu.cas.cz>, 2020
 # 
 msgid ""
@@ -1290,7 +1289,7 @@ msgstr "Tento záznam již byl odeslán a  nemůže být touto aplikací změně
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr "Další možnosti pro záznam"
+msgstr "Klikněte na další možnosti pro záznam ze seznamu dole"
 
 # A note in app settings page
 msgid ""
@@ -1310,10 +1309,10 @@ msgstr "Pro odeslání záznamů se napřed přihlašte."
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Nahrávám {{count}} záznam"
+msgstr[1] "Nahrávám {{count}} záznamů"
+msgstr[2] "Nahrávám {{count}} záznamů"
+msgstr[3] "Nahrávání {{count}} záznamů"
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
@@ -1325,12 +1324,22 @@ msgstr "Toto je chyba č.: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr ""
+msgstr "Další podrobnosti"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Podmínky počasí"
+
+# Credits page heading
+msgid "Weather conditions"
+msgstr "Podmínky počasí"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
+msgstr "Opravdu chcete smazat {{taxon}} ?"
+
+# Credits page text
+msgid ""
+"The current weather values are prepopulated using the OpenWeatherMap API "
+"weather service."
 msgstr ""

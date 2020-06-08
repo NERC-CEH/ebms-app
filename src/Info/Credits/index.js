@@ -281,6 +281,21 @@ export default () => (
       <IonList>
         <IonItem>
           <IonLabel>
+            <b>{t('Weather conditions')}:</b>
+          </IonLabel>
+        </IonItem>
+        <IonItem lines="none">
+          <IonLabel>
+            {t(
+              'The current weather values are prepopulated using the OpenWeatherMap API weather service.'
+            )}
+          </IonLabel>
+        </IonItem>
+      </IonList>
+
+      <IonList>
+        <IonItem>
+          <IonLabel>
             <b>{t('Photo credits')}:</b>
           </IonLabel>
         </IonItem>

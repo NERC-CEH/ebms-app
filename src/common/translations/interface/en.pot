@@ -1087,6 +1087,14 @@ msgstr "Additional Details"
 msgid "Weather Conditions"
 msgstr "Weather Conditions"
 
+# Credits page heading
+msgid "Weather conditions"
+msgstr "Weather conditions"
+
 # Alert message 
 msgid "Are you sure you want to delete {{taxon}} ?"
 msgstr "Are you sure you want to delete {{taxon}} ?"
+
+# Credits page text 
+msgid "The current weather values are prepopulated using the OpenWeatherMap API weather service."
+msgstr "The current weather values are prepopulated using the OpenWeatherMap API weather service."
