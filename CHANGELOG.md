@@ -97,3 +97,10 @@
 ### Features
 
 - A minor text update
+
+## 1.7.0
+
+### Features
+
+- Added weather attributes to 15min survey
+- Fixed map drawing
