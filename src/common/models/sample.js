@@ -26,7 +26,7 @@ const locationSchema = Yup.object().shape({
     .max(20000000, 'Please select a smaller area.')
     .required(),
   shape: Yup.object().required(),
-  source: Yup.string().required(),
+  source: Yup.string().required('Please add survey area information.'),
 });
 
 const transectLocationSchema = Yup.object().shape({
