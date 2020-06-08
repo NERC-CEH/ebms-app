@@ -1,4 +1,5 @@
 import Log from 'helpers/log';
+import device from 'helpers/device';
 import config from 'config';
 import { observe } from 'mobx';
 import * as Sentry from '@sentry/browser';
@@ -125,7 +126,14 @@ const extension = {
     let stopLocationObserver;
 
     const observeLocation = async ({ newValue }) => {
-      if (!newValue || !newValue.longitude) {
+      const sampleWasSetForSubmission = this.metadata.saved;
+
+      if (
+        !device.isOnline() ||
+        sampleWasSetForSubmission ||
+        !newValue ||
+        !newValue.longitude
+      ) {
         return;
       }
 
