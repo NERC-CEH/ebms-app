@@ -36,7 +36,6 @@ class Component extends React.Component {
             icon={clipboard}
             label="Comment"
             value={comment}
-            wrapText
             skipValueTranslation
           />
 
@@ -52,7 +51,6 @@ class Component extends React.Component {
             icon="/images/thermometer.svg"
             label="Temperature"
             value={temperature}
-            wrapText
             skipValueTranslation
           />
           <MenuAttrItem
@@ -61,7 +59,6 @@ class Component extends React.Component {
             icon="/images/cloud.svg"
             label="Cloud"
             value={cloud}
-            wrapText
             skipValueTranslation
           />
 
