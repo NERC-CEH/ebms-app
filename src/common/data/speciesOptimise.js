@@ -1,7 +1,7 @@
 const taxonCleaner = require('./speciesClean');
 
 const TAXON = 'taxon';
-const ID = 'taxa_taxon_list_id';
+const ID = 'id';
 const GENUS_ID_INDEX = 0;
 const GENUS_TAXON_INDEX = 1;
 const GENUS_SPECIES_INDEX = 2;
@@ -119,6 +119,9 @@ function optimise(speciesFlattened) {
   const optimised = [];
 
   speciesFlattened.forEach(taxa => {
+    // eslint-disable-next-line no-param-reassign
+    taxa.taxon = taxa.taxon.replace(/\u200b/g, ''); // Taxon list = 260 doesn't exist, Taxon list = 251 does exist
+
     const taxaName = taxa[TAXON];
     const taxaNameSplitted = taxaName.split(' ');
 
