@@ -104,3 +104,10 @@
 
 - Added weather attributes to 15min survey
 - Fixed map drawing
+
+
+## 1.7.1
+
+### Features
+
+- Updated species list to include burnet moths
