@@ -13,7 +13,18 @@
     ion-badge {
       vertical-align: top;
       margin: 3px;
-      margin-left: 6px;
+      margin-left: 3px;
+    }
+    .ion-badge-custom-color {
+      color: var(--ion-color-primary);
+    }
+
+    ion-label {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-left: 1px;
     }
   }
 

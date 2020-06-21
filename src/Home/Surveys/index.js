@@ -127,7 +127,12 @@ class Component extends React.Component {
               <IonLabel className="ion-text-wrap" mode="ios">
                 {t('Uploaded')}
                 {uploadedSurveys.length ? (
-                  <IonBadge color="light" slot="end" mode="ios">
+                  <IonBadge
+                    class="ion-badge-custom-color"
+                    color="light"
+                    slot="end"
+                    mode="ios"
+                  >
                     {uploadedSurveys.length}
                   </IonBadge>
                 ) : null}
