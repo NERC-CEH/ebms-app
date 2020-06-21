@@ -23,8 +23,10 @@ import {
 import { observer } from 'mobx-react';
 import config from 'config';
 import Main from 'Lib/Main';
+import LongPressButton from 'Lib/LongPressButton';
 import MenuAttrItem from 'Lib/MenuAttrItem';
 import { Trans as T } from 'react-i18next';
+import alert from '@bit/flumens.apps.helpers.alert';
 import CountdownClock from './components/CountdownClock';
 import './styles.scss';
 
@@ -56,28 +58,44 @@ class AreaCount extends Component {
     areaSurveyListSortedByTime: PropTypes.bool.isRequired,
     increaseCount: PropTypes.func.isRequired,
     isDisabled: PropTypes.bool,
+    copyPreviousSurveyTaxonList: PropTypes.func.isRequired,
   };
 
   getSpeciesAddButton = () => {
-    const { sample, isDisabled } = this.props;
+    const { sample, isDisabled, copyPreviousSurveyTaxonList } = this.props;
     if (isDisabled) {
       // placeholder
       return <div style={{ height: '44px' }} />;
     }
+    function selectOptions() {
+      alert({
+        header: t('Copy species'),
+        message: t('Are you sure want to copy previous survey species list?'),
+        buttons: [
+          t('Cancel'),
+          {
+            text: t('Copy'),
+            cssClass: 'danger',
+            handler: copyPreviousSurveyTaxonList,
+          },
+        ],
+      });
+    }
 
     return (
-      <IonButton
+      <LongPressButton
         color="primary"
         id="add"
         onClick={() => {
           this.props.history.push(`/survey/area/${sample.cid}/edit/taxa`);
         }}
+        onLongClick={() => selectOptions(this.props)}
       >
         <IonIcon icon={addCircleOutline} slot="start" />
         <IonLabel>
           <T>Add species</T>
         </IonLabel>
-      </IonButton>
+      </LongPressButton>
     );
   };
 
@@ -109,6 +127,36 @@ class AreaCount extends Component {
 
     const occurrences = [...sample.occurrences].sort(sort);
 
+    const getSpeciesEntry = occ => {
+      const isSpeciesDisabled = !occ.attrs.count;
+
+      return (
+        <IonItemSliding key={occ.cid}>
+          <IonItem detail={!isSpeciesDisabled}>
+            <IonButton
+              class="area-count-edit-count"
+              onClick={() => !isDisabled && increaseCount(occ)}
+              fill="clear"
+            >
+              {occ.attrs.count}
+            </IonButton>
+            <IonLabel
+              onClick={() => !isSpeciesDisabled && navigateToOccurrence(occ)}
+            >
+              {occ.attrs.taxon[occ.attrs.taxon.found_in_name]}
+            </IonLabel>
+          </IonItem>
+          <IonItemOptions side="end">
+            <IonItemOption color="danger" onClick={() => deleteOccurrence(occ)}>
+              <T>Delete</T>
+            </IonItemOption>
+          </IonItemOptions>
+        </IonItemSliding>
+      );
+    };
+
+    const speciesList = occurrences.map(getSpeciesEntry);
+
     return (
       <>
         <div id="species-list-sort">
@@ -122,30 +170,7 @@ class AreaCount extends Component {
         </div>
 
         <IonList id="list" lines="full">
-          {occurrences.map(occ => (
-            <IonItemSliding key={occ.cid}>
-              <IonItem detail>
-                <IonButton
-                  class="area-count-edit-count"
-                  onClick={() => !isDisabled && increaseCount(occ)}
-                  fill="clear"
-                >
-                  {occ.attrs.count}
-                </IonButton>
-                <IonLabel onClick={() => navigateToOccurrence(occ)}>
-                  {occ.attrs.taxon[occ.attrs.taxon.found_in_name]}
-                </IonLabel>
-              </IonItem>
-              <IonItemOptions side="end">
-                <IonItemOption
-                  color="danger"
-                  onClick={() => deleteOccurrence(occ)}
-                >
-                  <T>Delete</T>
-                </IonItemOption>
-              </IonItemOptions>
-            </IonItemSliding>
-          ))}
+          {speciesList}
         </IonList>
       </>
     );

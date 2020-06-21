@@ -65,9 +65,10 @@ export async function remoteSaveAll() {
  * @param a
  * @returns {number}
  */
-export function comparator(a) {
-  const date = new Date(a.metadata.created_on);
-  return -date.getTime();
+export function comparator(s1, s2) {
+  const date1 = new Date(s1.metadata.created_on);
+  const date2 = new Date(s2.metadata.created_on);
+  return date2.getTime() - date1.getTime();
 }
 
 export function resetDefaults() {

@@ -4,3 +4,5 @@ export { default as Header } from '@bit/flumens.apps.header';
 export { default as Main } from '@bit/flumens.apps.main';
 export { default as Page } from '@bit/flumens.apps.page';
 export { default as MenuAttrItem } from '@bit/flumens.apps.menu-attr-item';
+export { default as alert } from '@bit/flumens.apps.helpers.alert';
+export { default as toast } from '@bit/flumens.apps.helpers.toast';

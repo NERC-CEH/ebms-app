@@ -89,7 +89,7 @@ class Routes extends React.Component {
   }
 
   render() {
-    const { appModel } = this.props;
+    const { appModel, savedSamples } = this.props;
     if (!this.state.sample) {
       return null;
     }
@@ -120,7 +120,12 @@ class Routes extends React.Component {
           path="/survey/area/:id/edit"
           exact
           render={props => (
-            <Edit sample={this.state.sample} appModel={appModel} {...props} />
+            <Edit
+              sample={this.state.sample}
+              appModel={appModel}
+              savedSamples={savedSamples}
+              {...props}
+            />
           )}
         />
         <Route

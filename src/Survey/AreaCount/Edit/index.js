@@ -5,8 +5,12 @@ import Page from 'Lib/Page';
 import alert from 'common/helpers/alert';
 import i18n from 'i18next';
 import showInvalidsMessage from 'helpers/invalidsMessage';
+import toast from '@bit/flumens.apps.helpers.toast';
+import Occurrence from 'occurrence';
 import Header from './Header';
 import Main from './Main';
+
+const { success, warn } = toast;
 
 function increaseCount(occ) {
   occ.attrs.count++; // eslint-disable-line no-param-reassign
@@ -63,6 +67,7 @@ class Container extends React.Component {
     match: PropTypes.object,
     history: PropTypes.object,
     appModel: PropTypes.object.isRequired,
+    savedSamples: PropTypes.array.isRequired,
   };
 
   _processSubmission = () => {
@@ -130,6 +135,63 @@ class Container extends React.Component {
     appModel.save();
   };
 
+  copyPreviousSurveyTaxonList = () => {
+    const { savedSamples, sample } = this.props;
+
+    const currentSampleIndex = savedSamples.findIndex(
+      s => s.cid === sample.cid
+    );
+
+    const isFirstSurvey = !currentSampleIndex;
+    if (isFirstSurvey) {
+      warn(t('Sorry, no previous survey to copy species from.'));
+      return;
+    }
+
+    const previousSurveys = savedSamples.slice(0, currentSampleIndex).reverse();
+
+    const previousSurvey = previousSurveys.find(
+      survey => survey.getSurvey().name === 'area'
+    );
+    if (!previousSurvey) {
+      warn(t('Sorry, no previous survey to copy species from.'));
+      return;
+    }
+
+    const existingSpeciesIds = sample.occurrences.map(
+      s => s.attrs.taxon.preferredId
+    );
+
+    const getNewSpeciesOnly = ({ preferredId }) =>
+      !existingSpeciesIds.includes(preferredId);
+
+    const addNewOccurrence = taxon => {
+      const occ = new Occurrence({
+        attrs: { taxon, count: 0 },
+      });
+
+      sample.occurrences.push(occ);
+    };
+
+    const newSpeciesList = previousSurvey.occurrences
+      .map(occ => occ.attrs.taxon)
+      .filter(getNewSpeciesOnly);
+
+    newSpeciesList.forEach(addNewOccurrence);
+
+    sample.save();
+
+    if (!newSpeciesList.length) {
+      warn(t('Sorry, no species were found to copy.'));
+    } else {
+      success(
+        i18n.t('You have succcesfully copied {{speciesCount}} species.', {
+          speciesCount: newSpeciesList.length,
+        })
+      );
+    }
+  };
+
   render() {
     const { sample, appModel, history } = this.props;
 
@@ -160,6 +222,7 @@ class Container extends React.Component {
           onToggleSpeciesSort={this.toggleSpeciesSort}
           history={history}
           isDisabled={isDisabled}
+          copyPreviousSurveyTaxonList={this.copyPreviousSurveyTaxonList}
         />
       </Page>
     );

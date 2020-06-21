@@ -83,4 +83,16 @@ export default class Occurrence extends Indicia.Occurrence {
 
     return this.parent.getSurvey();
   }
+
+  getSubmission() {
+    if (this.getSurvey().name === 'area') {
+      if (!this.attrs.count) {
+        console.log('RETURNED EMPTY!');
+
+        return [];
+      }
+    }
+
+    return super.getSubmission();
+  }
 }
