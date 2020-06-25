@@ -40,9 +40,14 @@ function deleteSurvey(sample) {
 const Survey = observer(({ sample }) => {
   const date = new Date(sample.metadata.created_on);
   const prettyDate = date.toLocaleDateString();
-  const speciesCount = sample.occurrences.length;
-
   const survey = sample.getSurvey().name;
+
+  let speciesCount = sample.occurrences.length;
+  if (survey === 'area') {
+    const isNotZeroCount = occ => occ.attrs.count;
+    speciesCount = sample.occurrences.filter(isNotZeroCount).length;
+  }
+
   const href = !sample.remote.synchronising
     ? `/survey/${survey}/${sample.cid}/edit`
     : undefined;
