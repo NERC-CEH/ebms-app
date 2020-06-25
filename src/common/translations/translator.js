@@ -24,7 +24,7 @@ function saveMissingKey(key) {
     return;
   }
 
-  console.warn(`!new key: ${key}`);
+  console.warn(`🇬🇧: ${key}`);
   window.dic.push(key);
 }
 
