@@ -7,12 +7,11 @@ const { APP_INDICIA_API_KEY, APP_INDICIA_API_USER_AUTH } = process.env;
 const fs = require('fs');
 const optimise = require('./speciesOptimise');
 
-async function fetch() {
+async function fetch(listID) {
   return new Promise(resolve => {
     const options = {
       method: 'GET',
-      url:
-        'https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=260',
+      url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}`,
       headers: {
         'x-api-key': APP_INDICIA_API_KEY,
         Authorization: `Basic ${APP_INDICIA_API_USER_AUTH}`,
@@ -35,14 +34,18 @@ async function fetch() {
 
 function saveSpeciesToFile(species) {
   return new Promise((resolve, reject) => {
-    fs.writeFile('./species.data.json', JSON.stringify(species), err => {
-      if (err) {
-        reject(err);
-        return;
-      }
+    fs.writeFile(
+      './species.data.json',
+      JSON.stringify(species, null, 2),
+      err => {
+        if (err) {
+          reject(err);
+          return;
+        }
 
-      resolve(species);
-    });
+        resolve(species);
+      }
+    );
   });
 }
 
@@ -51,8 +54,18 @@ function sortAlphabetically(species) {
   return species.sort((sp1, sp2) => sp1.taxon.localeCompare(sp2.taxon));
 }
 
-fetch()
-  .then(sortAlphabetically)
-  .then(optimise)
-  .then(saveSpeciesToFile)
-  .then(() => console.log('All done!'));
+(async () => {
+  const butterflies = await fetch(251);
+  const mothsOnly = ({ taxon_group: group }) => group === 'insect - moth';
+  const moths = (await fetch(260)).filter(mothsOnly);
+  const bumblebees = await fetch(261);
+  const dragonflies = await fetch(265);
+
+  const species = [...butterflies, ...moths, ...bumblebees, ...dragonflies];
+
+  const sortedSpecies = await sortAlphabetically(species);
+  const searchOptimisedList = await optimise(sortedSpecies);
+  await saveSpeciesToFile(searchOptimisedList);
+
+  console.log('All done! 🚀');
+})();

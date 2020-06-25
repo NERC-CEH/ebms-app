@@ -161,8 +161,8 @@
     ]
   ],
   [446415, "Acontiinae", []],
-  [446656, "Acontiini", []],
   [446638, "Acontiini", []],
+  [446656, "Acontiini", []],
   [
     448326,
     "Acontiola",
@@ -373,6 +373,23 @@
       [456739, "kabylalis"]
     ]
   ],
+  [
+    0,
+    "Aeshna",
+    [
+      [466598, "affinis"],
+      [466600, "caerulea"],
+      [466602, "crenata"],
+      [466604, "cyanea"],
+      [466606, "grandis"],
+      [466608, "isoceles"],
+      [466610, "juncea"],
+      [466612, "mixta"],
+      [466614, "serrata"],
+      [466616, "subarctica"],
+      [466618, "viridis"]
+    ]
+  ],
   [448016, "Aethalura", [[457700, "punctulata"]]],
   [
     447285,
@@ -426,6 +443,7 @@
       [453830, "xanthina"]
     ]
   ],
+  [466937, "Afarsia", [[466938, "morgiana"]]],
   [
     447996,
     "Afriberina",
@@ -482,12 +500,12 @@
     ]
   ],
   [
-    447567,
+    432093,
     "Aglais",
     [
-      [455838, "ichnusa"],
-      [455839, "io"],
-      [455836, "urticae"]
+      [432427, "ichnusa"],
+      [432425, "io"],
+      [432426, "urticae"]
     ]
   ],
   [447455, "Aglaope", [[455073, "infausta"]]],
@@ -666,15 +684,17 @@
     ]
   ],
   [
-    447528,
+    432072,
     "Agriades",
     [
-      [455461, "aquilo"],
-      [455459, "glandon"],
-      [455456, "optilete"],
-      [455463, "orbitulus"],
+      [432328, "aquilo"],
+      [432325, "dardanus"],
+      [432327, "glandon"],
+      [432323, "optilete"],
+      [432322, "orbitulus"],
       [455458, "pyrenaica"],
-      [455462, "zullichi"]
+      [432324, "pyrenaicus"],
+      [432326, "zullichi"]
     ]
   ],
   [
@@ -828,6 +848,7 @@
     ]
   ],
   [448194, "Albarracina", [[458917, "warionis"]]],
+  [466939, "Albulina", [[466940, "morgiana"]]],
   [
     448006,
     "Alcis",
@@ -1115,6 +1136,16 @@
     ]
   ],
   [
+    0,
+    "Anax",
+    [
+      [466620, "ephippiger"],
+      [466622, "immaculifrons"],
+      [466624, "imperator"],
+      [466626, "parthenope"]
+    ]
+  ],
+  [
     447067,
     "Anchinia",
     [
@@ -1246,6 +1277,8 @@
   [447314, "Aneuxanthis", [[454017, "locupletana"]]],
   [447960, "Angerona", [[457505, "prunaria"]]],
   [447733, "Angustalius", [[456534, "malacellus"]]],
+  [431981, "Animalia", []],
+  [461246, "Animalia", []],
   [
     446880,
     "Anomalotinea",
@@ -1278,13 +1311,13 @@
   ],
   [446689, "Anthocharini", []],
   [
-    447477,
+    432041,
     "Anthocharis",
     [
-      [455234, "cardamines"],
-      [455238, "damone"],
-      [455236, "euphenoides"],
-      [455239, "gruneri"]
+      [432244, "cardamines"],
+      [432246, "damone"],
+      [432243, "euphenoides"],
+      [432245, "gruneri"]
     ]
   ],
   [448050, "Anthometra", [[457785, "plumularia"]]],
@@ -1426,20 +1459,21 @@
     ]
   ],
   [
-    447564,
+    432090,
     "Apatura",
     [
-      [455823, "ilia"],
-      [455825, "iris"],
-      [455822, "metis"]
+      [432417, "ilia"],
+      [432418, "ilia/iris"],
+      [432415, "iris"],
+      [432416, "metis"]
     ]
   ],
-  [446445, "Apaturinae", []],
+  [432006, "Apaturinae", []],
   [446673, "Apaturini", []],
   [448345, "Apaustis", [[459631, "rupicola"]]],
   [447932, "Apeira", [[457343, "syringaria"]]],
   [446554, "Apeirini", []],
-  [447543, "Aphantopus", [[455665, "hyperantus"]]],
+  [432119, "Aphantopus", [[432558, "hyperantus"]]],
   [447490, "Apharitis", [[455314, "acamas"]]],
   [
     447335,
@@ -1455,7 +1489,7 @@
       [454074, "viburnana"]
     ]
   ],
-  [446443, "Aphnaeinae", []],
+  [432001, "Aphnaeinae", []],
   [
     447590,
     "Aphomia",
@@ -1470,6 +1504,7 @@
       [455981, "unicolor"]
     ]
   ],
+  [461251, "Apidae", []],
   [446995, "Apiletria", [[450663, "luella"]]],
   [448028, "Aplasta", [[457733, "ononaria"]]],
   [
@@ -1520,7 +1555,7 @@
   ],
   [447213, "Aponoea", [[453275, "obtusipalpis"]]],
   [448255, "Apopestes", [[459201, "spectrum"]]],
-  [447481, "Aporia", [[455257, "crataegi"]]],
+  [432036, "Aporia", [[432214, "crataegi"]]],
   [
     447767,
     "Aporodes",
@@ -1611,7 +1646,7 @@
   [446720, "Apteronini", []],
   [448271, "Araeopteron", [[459289, "ecphaea"]]],
   [446619, "Araeopteronini", []],
-  [447570, "Araschnia", [[455853, "levana"]]],
+  [432091, "Araschnia", [[432420, "levana"]]],
   [
     448510,
     "Archanara",
@@ -1639,7 +1674,14 @@
       [454036, "xylosteana"]
     ]
   ],
-  [447459, "Archon", [[455135, "apollinus"]]],
+  [
+    432015,
+    "Archon",
+    [
+      [467072, "apollinaris"],
+      [432131, "apollinus"]
+    ]
+  ],
   [
     448218,
     "Arctia",
@@ -1676,22 +1718,28 @@
     ]
   ],
   [
-    447551,
+    432111,
     "Arethusana",
     [
-      [455702, "arethusa"],
+      [432526, "arethusa"],
       [455704, "boabdil"]
     ]
   ],
   [447136, "Argolamprotes", [[452620, "micella"]]],
   [446674, "Argynnini", []],
   [
-    447556,
+    432086,
     "Argynnis",
     [
-      [455765, "laodice"],
-      [455763, "pandora"],
-      [455761, "paphia"]
+      [434663, "adippe"],
+      [466539, "adippe"],
+      [466540, "aglaja"],
+      [434653, "aglaja"],
+      [432390, "laodice"],
+      [466541, "niobe"],
+      [434654, "niobe"],
+      [432389, "pandora"],
+      [432388, "paphia"]
     ]
   ],
   [
@@ -1779,16 +1827,23 @@
   [447326, "Argyrotaenia", [[454046, "ljungiana"]]],
   [448007, "Arichanna", [[457676, "melanaria"]]],
   [
-    447525,
+    432078,
     "Aricia",
     [
-      [455443, "agestis"],
-      [455449, "anteros"],
-      [455445, "artaxerxes"],
-      [455442, "cramera"],
-      [455447, "montensis"],
-      [455448, "morronensis"],
-      [455450, "nicias"]
+      [432345, "agestis"],
+      [432340, "anteros"],
+      [432343, "artaxerxes"],
+      [467104, "bassoni"],
+      [432341, "cramera"],
+      [467103, "crassipunctus"],
+      [434650, "eumedon"],
+      [467099, "hyacinthus"],
+      [467100, "isauricus"],
+      [432344, "montensis"],
+      [432339, "morronensis"],
+      [432342, "nicias"],
+      [467101, "teberdina"],
+      [467102, "torulensis"]
     ]
   ],
   [447614, "Arimania", [[456050, "komaroffi"]]],
@@ -1856,6 +1911,8 @@
       [456075, "ramosella"]
     ]
   ],
+  [431982, "Arthropoda", []],
+  [461247, "Arthropoda", []],
   [448204, "Artimelia", [[458959, "latreillii"]]],
   [447936, "Artiora", [[457367, "evonymaria"]]],
   [448288, "Arytrura", [[459360, "musculus"]]],
@@ -2118,11 +2175,11 @@
   ],
   [448575, "Axylia", [[461037, "putris"]]],
   [
-    447507,
+    432054,
     "Azanus",
     [
-      [455374, "jesous"],
-      [455373, "ubaldus"]
+      [432283, "jesous"],
+      [432282, "ubaldus"]
     ]
   ],
   [446811, "Bacotia", [[449391, "claustrella"]]],
@@ -2239,6 +2296,7 @@
       [449423, "pectinella"]
     ]
   ],
+  [461245, "Biota", []],
   [
     447055,
     "Biselachista",
@@ -2345,33 +2403,122 @@
   [446405, "Boletobiinae", []],
   [446621, "Boletobiini", []],
   [
-    447561,
+    432089,
     "Boloria",
     [
-      [455790, "alaskensis"],
-      [455800, "angarensis"],
-      [455787, "aquilonaris"],
-      [455802, "chariclea"],
-      [455804, "dia"],
-      [455791, "eunomia"],
-      [455793, "euphrosyne"],
-      [455803, "freija"],
-      [455809, "frigga"],
-      [455789, "graeca"],
-      [455810, "improba"],
-      [455785, "napaea"],
-      [455801, "oscarus"],
-      [455783, "pales"],
-      [455806, "polaris"],
-      [455797, "selene"],
-      [455799, "selenis"],
-      [455807, "thore"],
-      [455795, "titania"],
-      [455811, "tritonia"]
+      [432398, "alaskensis"],
+      [432414, "angarensis"],
+      [432400, "aquilonaris"],
+      [467161, "caucasica"],
+      [466880, "caucasica"],
+      [432413, "chariclea"],
+      [432406, "dia"],
+      [432395, "eunomia"],
+      [432405, "euphrosyne"],
+      [432409, "freija"],
+      [432408, "frigga"],
+      [432396, "graeca"],
+      [432407, "improba"],
+      [432399, "napaea"],
+      [466596, "napaea/aquilonaris"],
+      [432411, "oscarus"],
+      [432397, "pales"],
+      [432402, "polaris"],
+      [432404, "selene"],
+      [466592, "selene/euphrosyne"],
+      [432410, "selenis"],
+      [432721, "thore"],
+      [432412, "titania"],
+      [432401, "tritonia"]
+    ]
+  ],
+  [
+    461252,
+    "Bombus",
+    [
+      [461253, "wurflenii"],
+      [461254, "alpinus"],
+      [461255, "balteatus"],
+      [461256, "hyperboreus"],
+      [461257, "polaris"],
+      [461258, "cryptarum"],
+      [461259, "lucorum"],
+      [461260, "magnus"],
+      [461261, "patagiatus"],
+      [461262, "sporadicus"],
+      [461263, "terrestris"],
+      [461264, "confusus"],
+      [461265, "cullumanus"],
+      [461266, "semenoviellus"],
+      [461267, "soroeensis"],
+      [461268, "argillaceus"],
+      [461269, "consobrinus"],
+      [461270, "gerstaeckeri"],
+      [461271, "hortorum"],
+      [461272, "portschinsky"],
+      [461273, "reinigiellus"],
+      [461274, "ruderatus"],
+      [461275, "saltuarius"],
+      [461276, "alagesianus"],
+      [461277, "erzurumensis"],
+      [461278, "incertus"],
+      [461279, "lapidarius"],
+      [461280, "sichelii"],
+      [461281, "handlirschianus"],
+      [461282, "mendax"],
+      [461283, "shaposhnikovi"],
+      [461284, "barbutellus"],
+      [461285, "bohemicus"],
+      [461286, "campestris"],
+      [461287, "flavidus"],
+      [461288, "norvegicus"],
+      [461289, "perezi"],
+      [461290, "quadricolor"],
+      [461291, "rupestris"],
+      [461292, "sylvestris"],
+      [461293, "vestalis"],
+      [461294, "brodmannicus"],
+      [461295, "cingulatus"],
+      [461296, "glacialis"],
+      [461297, "haematurus"],
+      [461298, "hypnorum"],
+      [461299, "jonellus"],
+      [461300, "lapponicus"],
+      [461301, "modestus"],
+      [461302, "monticola"],
+      [461303, "pratorum"],
+      [461304, "pyrenaeus"],
+      [461305, "niveatus"],
+      [461306, "sulfureus"],
+      [461307, "distinguendus"],
+      [461308, "fragrans"],
+      [461309, "melanurus"],
+      [461310, "subterraneus"],
+      [461311, "armeniacus"],
+      [461312, "brodmanni"],
+      [461313, "deuteronymus"],
+      [461314, "humilis"],
+      [461315, "inexspectatus"],
+      [461316, "laesus"],
+      [461317, "mesomelas"],
+      [461318, "mlokosievitzii"],
+      [461319, "mocsaryi"],
+      [461320, "mucidus"],
+      [461321, "muscorum"],
+      [461322, "pascuorum"],
+      [461323, "pereziellus"],
+      [461324, "persicus"],
+      [461325, "pomorum"],
+      [461326, "ruderarius"],
+      [461327, "schrencki"],
+      [461328, "sylvarum"],
+      [461329, "velox"],
+      [461330, "veteranus"],
+      [461331, "zonatus"]
     ]
   ],
   [446235, "Bombycoidea", []],
-  [447474, "Borbo", [[455224, "borbonica"]]],
+  [432020, "Borbo", [[432142, "borbonica"]]],
   [
     447027,
     "Borkhausenia",
@@ -2396,6 +2543,14 @@
       [457225, "notha"],
       [457227, "puella"],
       [457229, "touranginii"]
+    ]
+  ],
+  [
+    0,
+    "Boyeria",
+    [
+      [466628, "cretensis"],
+      [466630, "irene"]
     ]
   ],
   [
@@ -2449,6 +2604,8 @@
       [460190, "viminalis"]
     ]
   ],
+  [0, "Brachythemis", [[466632, "impartita"]]],
+  [0, "Brachytron", [[466634, "pratense"]]],
   [448442, "Brachyxanthia", [[460100, "zelotypa"]]],
   [
     447599,
@@ -2467,15 +2624,16 @@
   [447871, "Brahmaea", [[457136, "europaea"]]],
   [446269, "Brahmaeidae", []],
   [
-    447560,
+    432085,
     "Brenthis",
     [
-      [455779, "daphne"],
-      [455781, "hecate"],
-      [455777, "ino"]
+      [432387, "daphne"],
+      [432385, "hecate"],
+      [432386, "ino"],
+      [467160, "mofidii"]
     ]
   ],
-  [447550, "Brintesia", [[455700, "circe"]]],
+  [432110, "Brintesia", [[432525, "circe"]]],
   [448538, "Brithys", [[460601, "crini"]]],
   [
     448380,
@@ -2650,7 +2808,7 @@
     ]
   ],
   [447333, "Cacoecimorpha", [[454063, "pronubana"]]],
-  [447502, "Cacyreus", [[455365, "marshalli"]]],
+  [432056, "Cacyreus", [[432716, "marshalli"]]],
   [
     447699,
     "Cadra",
@@ -2684,6 +2842,7 @@
     ]
   ],
   [446693, "Calamotrophini", []],
+  [0, "Caliaeschna", [[466636, "microstigma"]]],
   [448363, "Calliergis", [[459760, "ramosa"]]],
   [447039, "Callimodes", [[450833, "heringii"]]],
   [448222, "Callimorpha", [[459045, "dominula"]]],
@@ -2707,13 +2866,18 @@
     ]
   ],
   [
-    447497,
+    432049,
     "Callophrys",
     [
-      [455348, "avis"],
+      [432268, "avis"],
       [455346, "butlerovi"],
-      [455347, "chalybeitincta"],
-      [455344, "rubi"]
+      [432271, "chalybeitincta"],
+      [467088, "danchenkoi"],
+      [467087, "herculeana"],
+      [467089, "mystaphia"],
+      [466881, "paulae"],
+      [432270, "rubi"],
+      [432269, "suaveola"]
     ]
   ],
   [
@@ -2735,6 +2899,16 @@
       [459733, "lunula"],
       [459739, "opalina"],
       [459736, "platyptera"]
+    ]
+  ],
+  [
+    0,
+    "Calopteryx",
+    [
+      [466638, "haemorrhoidalis"],
+      [466640, "splendens"],
+      [466642, "virgo"],
+      [466644, "xanthostoma"]
     ]
   ],
   [
@@ -2899,17 +3073,20 @@
     ]
   ],
   [446658, "Caradrini", []],
+  [432026, "Carcharodus", []],
   [
-    447464,
+    432028,
     "Carcharodus",
     [
-      [455154, "alceae"],
-      [455162, "baeticus"],
-      [455159, "floccifera"],
-      [455157, "lavatherae"],
-      [455161, "orientalis"],
-      [455164, "stauderi"],
-      [455156, "tripolina"]
+      [432158, "alceae"],
+      [432166, "baeticus"],
+      [432164, "floccifera"],
+      [434649, "flocciferus"],
+      [432162, "lavatherae"],
+      [432163, "orientalis"],
+      [432165, "stauderi"],
+      [455156, "tripolina"],
+      [432157, "tripolinus"]
     ]
   ],
   [447041, "Carcina", [[450835, "quercana"]]],
@@ -2966,11 +3143,11 @@
     ]
   ],
   [
-    447469,
+    432018,
     "Carterocephalus",
     [
-      [455206, "palaemon"],
-      [455208, "silvicola"]
+      [432140, "palaemon"],
+      [432139, "silvicola"]
     ]
   ],
   [
@@ -3138,7 +3315,7 @@
     ]
   ],
   [446628, "Catocalini", []],
-  [447487, "Catopsilia", [[455303, "florella"]]],
+  [432033, "Catopsilia", [[432199, "florella"]]],
   [
     447735,
     "Catoptria",
@@ -3234,7 +3411,7 @@
     ]
   ],
   [448492, "Celaena", [[460372, "haworthii"]]],
-  [447510, "Celastrina", [[455389, "argiolus"]]],
+  [432057, "Celastrina", [[432286, "argiolus"]]],
   [448141, "Celonoptera", [[458491, "mirificaria"]]],
   [
     447354,
@@ -3313,6 +3490,14 @@
     ]
   ],
   [
+    0,
+    "Ceriagrion",
+    [
+      [466646, "georgifreyi"],
+      [466648, "tenellum"]
+    ]
+  ],
+  [
     448279,
     "Cerocala",
     [
@@ -3342,6 +3527,14 @@
     [
       [450676, "tenebrionellus"],
       [450677, "viduellus"]
+    ]
+  ],
+  [
+    0,
+    "Chalcolestes",
+    [
+      [466650, "parvidens"],
+      [466652, "viridis"]
     ]
   ],
   [446514, "Chalcosinae", []],
@@ -3386,8 +3579,9 @@
   ],
   [447001, "Charadraula", [[450673, "cassandra"]]],
   [448418, "Charanyca", [[460023, "trigrammica"]]],
-  [447534, "Charaxes", [[455528, "jasius"]]],
-  [446446, "Charaxinae", []],
+  [432101, "Charaxes", [[432460, "jasius"]]],
+  [432010, "Charaxinae", []],
+  [466941, "Charaza", []],
   [447963, "Chariaspilates", [[457510, "formosaria"]]],
   [
     447955,
@@ -3425,12 +3619,15 @@
     ]
   ],
   [
-    447553,
+    432114,
     "Chazara",
     [
-      [455716, "briseis"],
-      [455718, "persephone"],
-      [455719, "prieuri"]
+      [467176, "bischo"],
+      [466942, "bischoffi"],
+      [432539, "briseis"],
+      [467177, "egina"],
+      [432541, "persephone"],
+      [432540, "prieuri"]
     ]
   ],
   [446543, "Chelariini", []],
@@ -3678,6 +3875,15 @@
   [447731, "Chrysoteuchia", [[456517, "culmella"]]],
   [448099, "Cidaria", [[458272, "fulvata"]]],
   [446583, "Cidariini", []],
+  [
+    432044,
+    "Cigaritis",
+    [
+      [432261, "acamas"],
+      [467083, "cilissa"],
+      [467084, "maxima"]
+    ]
+  ],
   [
     447852,
     "Cilix",
@@ -3935,6 +4141,24 @@
       [453861, "sannitica"]
     ]
   ],
+  [
+    0,
+    "Coenagrion",
+    [
+      [466654, "armatum"],
+      [466656, "caerulescens"],
+      [466658, "hastulatum"],
+      [466660, "hylas"],
+      [466662, "intermedium"],
+      [466664, "johanssoni"],
+      [466666, "lunulatum"],
+      [466668, "mercuriale"],
+      [466670, "ornatum"],
+      [466672, "puella"],
+      [466674, "pulchellum"],
+      [466676, "scitulum"]
+    ]
+  ],
   [448511, "Coenobia", [[460445, "rufa"]]],
   [
     448129,
@@ -3946,28 +4170,32 @@
   ],
   [447710, "Coenochroa", [[456417, "ablutella"]]],
   [
-    447539,
+    432102,
     "Coenonympha",
     [
-      [455549, "amaryllis"],
-      [455551, "arcania"],
-      [455561, "corinna"],
+      [432468, "amaryllis"],
+      [432475, "arcania"],
+      [432470, "corinna"],
       [455558, "darwiniana"],
-      [455563, "dorus"],
+      [432463, "dorus"],
       [455562, "elbana"],
-      [455556, "gardetta"],
-      [455553, "glycerion"],
-      [455564, "hero"],
+      [432473, "gardetta"],
+      [432722, "glycerion"],
+      [432472, "hero"],
       [455555, "iphioides"],
-      [455566, "leander"],
+      [432471, "leander"],
       [455560, "macromma"],
-      [455547, "oedippus"],
-      [455567, "orientalis"],
-      [455568, "pamphilus"],
-      [455571, "phryne"],
-      [455550, "rhodopensis"],
-      [455570, "thyrsis"],
-      [455545, "tullia"]
+      [432462, "oedippus"],
+      [432474, "orientalis"],
+      [432465, "pamphilus"],
+      [466949, "pamphilus ssp. Lyllus"],
+      [466948, "pamphius"],
+      [432461, "phryne"],
+      [432467, "rhodopensis"],
+      [466882, "saadi"],
+      [466883, "symphyta"],
+      [432464, "thyrsis"],
+      [432466, "tullia"]
     ]
   ],
   [446680, "Coenonymphini", []],
@@ -4609,24 +4837,29 @@
   ],
   [446289, "Coleophoridae", []],
   [447148, "Coleotechnites", [[452738, "piceaella"]]],
-  [446455, "Coliadinae", []],
+  [431997, "Coliadinae", []],
   [446686, "Coliadini", []],
   [
-    447486,
+    432034,
     "Colias",
     [
-      [455301, "alfacariensis"],
-      [455297, "aurorina"],
-      [455298, "caucasica"],
-      [455295, "chrysotheme"],
+      [432711, "alfacariensis"],
+      [432204, "aurorina"],
+      [432209, "caucasica"],
+      [466884, "chlorocoma"],
+      [432205, "chrysotheme"],
+      [432207, "crocea"],
       [455290, "croceus"],
-      [455288, "erate"],
-      [455292, "hecla"],
-      [455299, "hyale"],
-      [455293, "myrmidone"],
-      [455286, "palaeno"],
-      [455283, "phicomone"],
-      [455285, "tyche"]
+      [432206, "erate"],
+      [432212, "hecla"],
+      [432710, "hyale"],
+      [432712, "hyale/alfacariensis"],
+      [434659, "hyale\\alfacariensis\\croceus"],
+      [432208, "myrmidone"],
+      [432210, "palaeno"],
+      [432203, "phicomone"],
+      [466885, "thisoa"],
+      [432211, "tyche"]
     ]
   ],
   [448262, "Colobochyla", [[459230, "salicalis"]]],
@@ -4656,7 +4889,14 @@
       [458314, "wolfschlaegerae"]
     ]
   ],
-  [447484, "Colotis", [[455281, "evagore"]]],
+  [
+    432035,
+    "Colotis",
+    [
+      [432213, "evagore"],
+      [467078, "fausta"]
+    ]
+  ],
   [446562, "Colotoini", []],
   [447941, "Colotois", [[457388, "pennaria"]]],
   [
@@ -4754,6 +4994,20 @@
       [460634, "restricta"]
     ]
   ],
+  [
+    0,
+    "Cordulegaster",
+    [
+      [466678, "bidentata"],
+      [466680, "boltonii"],
+      [466682, "helladica"],
+      [466684, "heros"],
+      [466686, "insignis"],
+      [466688, "picta"],
+      [466690, "trinacriae"]
+    ]
+  ],
+  [0, "Cordulia", [[466692, "aenea"]]],
   [447783, "Cornifrons", [[456791, "ulceratalis"]]],
   [448318, "Cornutiplusia", [[459526, "circumflexa"]]],
   [447394, "Corticivora", [[454525, "piniana"]]],
@@ -4894,6 +5148,7 @@
       [457593, "tinctaria"]
     ]
   ],
+  [0, "Crocothemis", [[466694, "erythraea"]]],
   [447239, "Crombrugghia", [[453487, "reichli"]]],
   [447042, "Crossotocera", [[450836, "wagnerella"]]],
   [446549, "Crossotocerini", []],
@@ -5010,20 +5265,29 @@
   [448044, "Culpinia", [[457772, "prouti"]]],
   [446912, "Cupedia", [[449950, "cupediella"]]],
   [
-    447509,
+    432068,
     "Cupido",
     [
-      [455387, "alcetas"],
-      [455383, "argiades"],
+      [432312, "alcetas"],
+      [432310, "argiades"],
       [455382, "carswelli"],
       [455385, "decolorata"],
-      [455381, "lorquinii"],
-      [455377, "minimus"],
-      [455379, "osiris"]
+      [432311, "decoloratus"],
+      [432315, "lorquinii"],
+      [432314, "minimus"],
+      [432313, "osiris"],
+      [467095, "staudingeri"]
     ]
   ],
   [447078, "Cuprina", [[451437, "fuscella"]]],
-  [447527, "Cyaniris", [[455454, "semiargus"]]],
+  [
+    432076,
+    "Cyaniris",
+    [
+      [432337, "semiargus"],
+      [466886, "semiargus ssp. bellis"]
+    ]
+  ],
   [
     447754,
     "Cybalomia",
@@ -5057,7 +5321,7 @@
       [458069, "suppunctaria"]
     ]
   ],
-  [447505, "Cyclyrius", [[455370, "webbianus"]]],
+  [432053, "Cyclyrius", [[432281, "webbianus"]]],
   [447821, "Cydalima", [[456977, "perspectalis"]]],
   [
     447405,
@@ -5248,13 +5512,13 @@
     ]
   ],
   [446717, "Dahlicini", []],
-  [446447, "Danainae", []],
+  [432009, "Danainae", []],
   [
-    447533,
+    432100,
     "Danaus",
     [
-      [455527, "chrysippus"],
-      [455525, "plexippus"]
+      [432459, "chrysippus"],
+      [432458, "plexippus"]
     ]
   ],
   [447890, "Daphnis", [[457189, "nerii"]]],
@@ -5756,6 +6020,7 @@
   ],
   [448533, "Dioszeghyana", [[460568, "schmidtii"]]],
   [447441, "Dipchasphecia", [[454963, "lanipes"]]],
+  [0, "Diplacodes", [[466696, "lefebvrii"]]],
   [
     446796,
     "Diplodoma",
@@ -5778,7 +6043,7 @@
     ]
   ],
   [448073, "Disclisioprocta", [[458122, "purpurarium"]]],
-  [446456, "Dismorphiinae", []],
+  [431996, "Dismorphiinae", []],
   [
     446805,
     "Dissoctena",
@@ -6474,6 +6739,7 @@
   ],
   [448051, "Emmiltis", [[457786, "pygmaearia"]]],
   [447780, "Emprepes", [[456752, "pudicalis"]]],
+  [0, "Enallagma", [[466698, "cyathigerum"]]],
   [447930, "Enanthyperythra", [[457340, "legataria"]]],
   [
     448438,
@@ -6587,9 +6853,11 @@
     ]
   ],
   [448340, "Eogena", [[459591, "contaminei"]]],
+  [466943, "Eogenes", [[466944, "alcides"]]],
   [446802, "Eotaleporia", [[449352, "lusitaniella"]]],
   [446725, "Eotaleporiini", []],
   [447315, "Epagoge", [[454018, "grotiana"]]],
+  [0, "Epallage", [[466700, "fatime"]]],
   [
     446993,
     "Epanastasis",
@@ -6707,10 +6975,10 @@
   [446477, "Epichnopteriginae", []],
   [446478, "Epichnopteriginae", []],
   [446711, "Epichnopterigini", []],
-  [446712, "Epichnopterigini", []],
   [446710, "Epichnopterigini", []],
-  [446816, "Epichnopterix", []],
+  [446712, "Epichnopterigini", []],
   [446815, "Epichnopterix", []],
+  [446816, "Epichnopterix", []],
   [
     446814,
     "Epichnopterix",
@@ -6729,8 +6997,8 @@
     ]
   ],
   [446481, "Epichnopteryginae", []],
-  [446480, "Epichnopteryginae", []],
   [446479, "Epichnopteryginae", []],
+  [446480, "Epichnopteryginae", []],
   [446715, "Epichnopterygini", []],
   [446714, "Epichnopterygini", []],
   [447341, "Epichoristodes", [[454115, "acerbella"]]],
@@ -6899,6 +7167,7 @@
     ]
   ],
   [446661, "Episemini", []],
+  [0, "Epitheca", [[466702, "bimaculata"]]],
   [
     447982,
     "Erannis",
@@ -6910,66 +7179,74 @@
   ],
   [447021, "Eratophyes", [[450773, "amasiella"]]],
   [
-    447540,
+    432122,
     "Erebia",
     [
-      [455618, "aethiopellus"],
-      [455598, "aethiops"],
-      [455611, "alberganus"],
-      [455632, "arvernensis"],
+      [432601, "aethiopellus"],
+      [432611, "aethiops"],
+      [432605, "albergana"],
+      [434655, "alberganus"],
+      [432590, "arvernensis"],
       [455581, "bubastis"],
-      [455628, "calcarius"],
-      [455630, "cassioides"],
-      [455590, "christi"],
-      [455583, "claudina"],
-      [455605, "cyclopius"],
-      [455656, "dabanensis"],
-      [455604, "disa"],
-      [455655, "discoidalis"],
-      [455610, "edda"],
-      [455603, "embla"],
-      [455587, "epiphron"],
-      [455622, "epistygne"],
-      [455577, "eriphyle"],
-      [455574, "euryale"],
-      [455606, "fasciata"],
-      [455585, "flavofasciata"],
-      [455615, "gorge"],
-      [455621, "gorgone"],
-      [455635, "hispania"],
-      [455576, "jeniseiensis"],
-      [455639, "lefebvrei"],
-      [455572, "ligea"],
-      [455579, "manto"],
-      [455607, "medusa"],
-      [455594, "melampus"],
-      [455649, "melas"],
-      [455652, "meolans"],
-      [455619, "mnestra"],
+      [432589, "calcarius"],
+      [432584, "callias"],
+      [432586, "cassioides"],
+      [432613, "christi"],
+      [432579, "claudina"],
+      [432573, "cyclopius"],
+      [432577, "dabanensis"],
+      [432575, "disa"],
+      [432571, "discoidalis"],
+      [432569, "edda"],
+      [432574, "embla"],
+      [432615, "epiphron"],
+      [432596, "epistygne"],
+      [432595, "eriphyle"],
+      [432597, "euryale"],
+      [432570, "fasciata"],
+      [432616, "flavofasciata"],
+      [432592, "gorge"],
+      [432602, "gorgone"],
+      [466887, "graucasica"],
+      [467187, "hewitsonii"],
+      [432582, "hispania"],
+      [467188, "iranica"],
+      [432578, "jeniseiensis"],
+      [432623, "lefebvrei"],
+      [432599, "ligea"],
+      [432730, "manto"],
+      [432610, "medusa"],
+      [432607, "melampus"],
+      [467189, "melancholica"],
+      [432622, "melas"],
+      [432576, "meolans"],
+      [432604, "mnestra"],
+      [432617, "montana"],
       [455645, "montanus"],
-      [455634, "neleus"],
-      [455648, "neoridas"],
-      [455626, "nivalis"],
-      [455650, "oeme"],
-      [455589, "orientalis"],
-      [455623, "ottomana"],
-      [455654, "palarica"],
-      [455657, "pandrose"],
-      [455592, "pharte"],
-      [455613, "pluto"],
-      [455609, "polaris"],
-      [455637, "pronoe"],
-      [455617, "rhodopensis"],
-      [455636, "rondoui"],
-      [455602, "rossii"],
-      [455640, "scipio"],
-      [455659, "sthennyo"],
+      [432588, "neleus"],
+      [432625, "neoridas"],
+      [432587, "nivalis"],
+      [432591, "oeme"],
+      [432614, "orientalis"],
+      [432581, "ottomana"],
+      [432598, "palarica"],
+      [432594, "pandrose"],
+      [432612, "pharte"],
+      [432600, "pluto"],
+      [432609, "polaris"],
+      [432621, "pronoe"],
+      [432603, "rhodopensis"],
+      [432583, "rondoui"],
+      [432572, "rossii"],
+      [432620, "scipio"],
+      [432593, "sthennyo"],
+      [432619, "stiria"],
       [455641, "stirius"],
-      [455643, "styx"],
-      [455596, "sudetica"],
-      [455600, "triarius"],
-      [455624, "tyndarus"],
-      [455647, "zapateri"]
+      [432618, "styx"],
+      [432606, "sudetica"],
+      [432608, "triarius"],
+      [432585, "tyndarus"],
+      [432624, "zapateri"]
     ]
   ],
   [446310, "Erebidae", []],
@@ -7064,11 +7341,20 @@
     ]
   ],
   [
-    447463,
+    432029,
     "Erynnis",
     [
-      [455153, "marloyi"],
-      [455151, "tages"]
+      [432168, "marloyi"],
+      [432167, "tages"]
+    ]
+  ],
+  [
+    0,
+    "Erythromma",
+    [
+      [466704, "lindenii"],
+      [466706, "najas"],
+      [466708, "viridulum"]
     ]
   ],
   [447033, "Esperia", [[450819, "sulphurella"]]],
@@ -7139,6 +7425,7 @@
   ],
   [446377, "Ethmiinae", []],
   [447633, "Etiella", [[456118, "zinckenella"]]],
+  [467162, "Euapatura", [[467163, "mirza"]]],
   [
     448267,
     "Eublemma",
@@ -7208,20 +7495,21 @@
     ]
   ],
   [
-    447480,
+    432039,
     "Euchloe",
     [
-      [455252, "ausonia"],
-      [455255, "bazae"],
-      [455244, "belemia"],
-      [455254, "charlonia"],
-      [455248, "crameri"],
-      [455245, "eversi"],
-      [455246, "grancanariensis"],
-      [455247, "hesperidum"],
-      [455253, "insularis"],
-      [455256, "penia"],
-      [455250, "simplonia"]
+      [432237, "ausonia"],
+      [432240, "bazae"],
+      [432233, "belemia"],
+      [432238, "charlonia"],
+      [432235, "crameri"],
+      [432230, "eversi"],
+      [432231, "grancanariensis"],
+      [432232, "hesperidum"],
+      [432234, "insularis"],
+      [432239, "penia"],
+      [432236, "simplonia"],
+      [432229, "tagis"]
     ]
   ],
   [448118, "Euchoeca", [[458378, "nebulata"]]],
@@ -7536,7 +7824,7 @@
     ]
   ],
   [446482, "Eumasiinae", []],
-  [447526, "Eumedonia", [[455452, "eumedon"]]],
+  [432074, "Eumedonia", [[432330, "eumedon"]]],
   [
     446806,
     "Eumelasina",
@@ -7554,18 +7842,20 @@
     ]
   ],
   [
-    447573,
+    432097,
     "Euphydryas",
     [
-      [455897, "aurinia"],
+      [432436, "aurinia"],
+      [466542, "aurinia beckeri"],
       [455899, "beckeri"],
-      [455894, "cynthia"],
-      [455901, "desfontainii"],
+      [432437, "cynthia"],
+      [432435, "desfontainii"],
       [455900, "discordia"],
-      [455896, "iduna"],
-      [455891, "intermedia"],
+      [432438, "iduna"],
+      [432440, "intermedia"],
       [455893, "italica"],
-      [455889, "maturna"]
+      [432439, "maturna"],
+      [467164, "orientalis"]
     ]
   ],
   [
@@ -8000,12 +8290,12 @@
   ],
   [447017, "Fabiola", [[450745, "pokornyi"]]],
   [
-    447558,
+    432088,
     "Fabriciana",
     [
-      [455769, "adippe"],
-      [455773, "elisa"],
-      [455771, "niobe"]
+      [432394, "adippe"],
+      [432392, "elisa"],
+      [432393, "niobe"]
     ]
   ],
   [448502, "Fabula", [[460423, "zollikoferi"]]],
@@ -8027,7 +8317,7 @@
       [456117, "sordida"]
     ]
   ],
-  [447494, "Favonius", [[455338, "quercus"]]],
+  [432046, "Favonius", [[432263, "quercus"]]],
   [448569, "Feltia", [[460916, "nigrita"]]],
   [448390, "Feralia", [[459845, "sauberi"]]],
   [446653, "Feraliini", []],
@@ -8066,7 +8356,7 @@
       [448905, "weaveri"]
     ]
   ],
-  [447519, "Freyeria", [[455421, "trochylus"]]],
+  [432070, "Freyeria", [[432317, "trochylus"]]],
   [447724, "Friedlanderia", [[456494, "cicatricella"]]],
   [
     447065,
@@ -8113,6 +8403,7 @@
   [447588, "Galleria", [[455975, "mellonella"]]],
   [446473, "Galleriinae", []],
   [446702, "Galleriini", []],
+  [467003, "Gammafly", []],
   [448105, "Gandaritis", [[458292, "pyraliata"]]],
   [
     448301,
@@ -8140,11 +8431,11 @@
     ]
   ],
   [
-    447473,
+    432021,
     "Gegenes",
     [
-      [455223, "nostrodamus"],
-      [455222, "pumilio"]
+      [432144, "nostrodamus"],
+      [432705, "pumilio"]
     ]
   ],
   [447240, "Geina", [[453488, "didactyla"]]],
@@ -8223,7 +8514,7 @@
       [452367, "stereodoxa"]
     ]
   ],
-  [447521, "Glabroculus", [[455423, "cyane"]]],
+  [432077, "Glabroculus", [[432338, "cyane"]]],
   [
     447958,
     "Glacies",
@@ -8292,13 +8583,14 @@
     ]
   ],
   [
-    447515,
+    432065,
     "Glaucopsyche",
     [
-      [455403, "alexis"],
+      [432306, "alexis"],
+      [467094, "astraea"],
       [455405, "laetifica"],
-      [455406, "melanops"],
-      [455407, "paphos"]
+      [432304, "melanops"],
+      [432305, "paphos"]
     ]
   ],
   [
@@ -8381,18 +8673,29 @@
   ],
   [446545, "Gnorimoschemini", []],
   [447022, "Goidanichiana", [[450775, "jourdheuillella"]]],
+  [
+    0,
+    "Gomphus",
+    [
+      [466712, "graslinii"],
+      [466714, "pulchellus"],
+      [466716, "schneiderii"],
+      [466718, "simillimus"],
+      [466720, "vulgatissimus"]
+    ]
+  ],
   [446687, "Gonepterygini", []],
   [
-    447488,
+    432032,
     "Gonepteryx",
     [
-      [455308, "cleobule"],
-      [455307, "cleopatra"],
+      [432195, "cleobule"],
+      [432196, "cleopatra"],
       [455309, "eversi"],
-      [455306, "farinosa"],
-      [455311, "maderensis"],
+      [432709, "farinosa"],
+      [432197, "maderensis"],
       [455310, "palmae"],
-      [455304, "rhamni"]
+      [432194, "rhamni"]
     ]
   ],
   [
@@ -8613,7 +8916,7 @@
   ],
   [447674, "Hafisia", [[456259, "lundbladi"]]],
   [446697, "Haimbachiinae", []],
-  [447489, "Hamearis", [[455312, "lucina"]]],
+  [432042, "Hamearis", [[432247, "lucina"]]],
   [448488, "Hampsonicola", [[460365, "deccerti"]]],
   [447702, "Hansreisseria", [[456400, "gilvescens"]]],
   [
@@ -8688,7 +8991,7 @@
       [453303, "triannulella"]
     ]
   ],
-  [446448, "Heliconiinae", []],
+  [432005, "Heliconiinae", []],
   [448400, "Helicoverpa", [[459880, "armigera"]]],
   [448398, "Heliocheilus", [[459866, "syrticola"]]],
   [446968, "Heliodines", [[450515, "roesella"]]],
@@ -8824,9 +9127,9 @@
       [450669, "geminella"]
     ]
   ],
-  [447471, "Hesperia", [[455218, "comma"]]],
-  [446315, "Hesperiidae", []],
-  [446440, "Hesperiinae", []],
+  [432023, "Hesperia", [[432146, "comma"]]],
+  [431986, "Hesperiidae", []],
+  [431994, "Hesperiinae", []],
   [446435, "Heterocampinae", []],
   [447448, "Heterogenea", [[455026, "asella"]]],
   [446345, "Heterogynidae", []],
@@ -8859,8 +9162,8 @@
     ]
   ],
   [448429, "Heterophysa", [[460053, "dumetorum"]]],
-  [446441, "Heteropterinae", []],
-  [447468, "Heteropterus", [[455204, "morpheus"]]],
+  [431993, "Heteropterinae", []],
+  [432017, "Heteropterus", [[432704, "morpheus"]]],
   [
     448095,
     "Heterothera",
@@ -8869,43 +9172,48 @@
       [458250, "taigana"]
     ]
   ],
+  [461248, "Hexapoda", []],
   [446494, "Hieroxestinae", []],
   [448453, "Hillia", [[460193, "iris"]]],
   [
-    447555,
+    432108,
     "Hipparchia",
     [
       [455753, "alcyone"],
-      [455747, "aristaeus"],
-      [455760, "autonoe"],
+      [432515, "aristaeus"],
+      [432504, "autonoe"],
+      [432510, "azorina"],
       [455750, "azorinus"],
-      [455733, "bacchus"],
-      [455744, "blachieri"],
-      [455739, "christenseni"],
-      [455737, "cretica"],
-      [455738, "cypriensis"],
-      [455758, "fagi"],
-      [455727, "fatua"],
-      [455728, "fidia"],
+      [432498, "bacchus"],
+      [432514, "blachieri"],
+      [432523, "christenseni"],
+      [432522, "cretica"],
+      [432521, "cypriensis"],
+      [432726, "fagi"],
+      [432725, "fatua"],
+      [432502, "fidia"],
       [455755, "genava"],
-      [455730, "gomera"],
-      [455740, "leighebi"],
-      [455748, "maderensis"],
-      [455741, "mersina"],
-      [455752, "miguelensis"],
-      [455746, "neapolitana"],
-      [455749, "neomiris"],
+      [432501, "gomera"],
+      [432505, "hermione"],
+      [432518, "leighebi"],
+      [432512, "maderensis"],
+      [432508, "mersina"],
+      [432509, "miguelensis"],
+      [432517, "neapolitana"],
+      [432503, "neomiris"],
       [455751, "occidentalis"],
-      [455742, "pellucida"],
-      [455745, "sbordonii"],
-      [455734, "semele"],
-      [455743, "senthes"],
-      [455725, "statilinus"],
-      [455757, "syriaca"],
-      [455731, "tamadabae"],
-      [455732, "tilosi"],
-      [455736, "volgensis"],
-      [455729, "wyssii"]
+      [466888, "parisatis"],
+      [432519, "pellucida"],
+      [467172, "pisidice"],
+      [432520, "sbordonii"],
+      [432727, "semele"],
+      [432511, "senthes"],
+      [432496, "statilinus"],
+      [432506, "syriaca"],
+      [432500, "tamadabae"],
+      [432497, "tilosi"],
+      [432516, "volgensis"],
+      [432499, "wyssii"]
     ]
   ],
   [
@@ -9084,6 +9392,7 @@
       [457202, "zygophylli"]
     ]
   ],
+  [461250, "Hymenoptera", []],
   [447668, "Hypargyria", [[456240, "metalliferella"]]],
   [447209, "Hypatima", [[453265, "rhomboidella"]]],
   [
@@ -9169,7 +9478,7 @@
   ],
   [446566, "Hypochrosini", []],
   [448515, "Hypocoena", [[460453, "stigmatica"]]],
-  [447571, "Hypolimnas", [[455855, "misippus"]]],
+  [432096, "Hypolimnas", [[432434, "misippus"]]],
   [
     448008,
     "Hypomecis",
@@ -9180,12 +9489,21 @@
     ]
   ],
   [
-    447544,
+    432118,
     "Hyponephele",
     [
-      [455670, "huebneri"],
+      [467183, "cadusia"],
+      [432555, "huebneri"],
+      [467182, "kocaki"],
+      [432728, "lupina"],
       [455669, "lupinus"],
-      [455667, "lycaon"]
+      [432556, "lycaon"],
+      [466889, "lycaonoides"],
+      [466890, "naricina"],
+      [466891, "naricina ssp. naricoides"],
+      [467186, "naricoides"],
+      [467184, "urartua"],
+      [467185, "wagneri"]
     ]
   ],
   [
@@ -9463,13 +9781,22 @@
       [456120, "serraticornella"]
     ]
   ],
-  [447516, "Iolana", [[455408, "iolas"]]],
+  [431983, "Insecta", []],
+  [461249, "Insecta", []],
   [
-    447461,
+    432064,
+    "Iolana",
+    [
+      [432303, "debilitata"],
+      [432302, "iolas"]
+    ]
+  ],
+  [
+    432012,
     "Iphiclides",
     [
-      [455144, "feisthamelii"],
-      [455142, "podalirius"]
+      [432124, "feisthamelii"],
+      [432123, "podalirius"]
     ]
   ],
   [
@@ -9492,6 +9819,21 @@
     ]
   ],
   [446872, "Ischnoscia", [[449729, "borreonella"]]],
+  [
+    0,
+    "Ischnura",
+    [
+      [466722, "elegans"],
+      [466724, "fountaineae"],
+      [466726, "genei"],
+      [466728, "graellsii"],
+      [466730, "hastata"],
+      [466732, "intermedia"],
+      [466734, "pumilio"],
+      [466736, "saharensis"],
+      [466738, "senegalensis"]
+    ]
+  ],
   [
     447106,
     "Isidiella",
@@ -9533,11 +9875,11 @@
     ]
   ],
   [
-    447559,
+    432084,
     "Issoria",
     [
-      [455776, "eugenia"],
-      [455774, "lathonia"]
+      [432384, "eugenia"],
+      [432383, "lathonia"]
     ]
   ],
   [
@@ -9681,11 +10023,11 @@
   ],
   [447647, "Khorassania", [[456153, "compositella"]]],
   [
-    447535,
+    432103,
     "Kirinia",
     [
-      [455530, "climene"],
-      [455529, "roxelana"]
+      [432723, "climene"],
+      [432476, "roxelana"]
     ]
   ],
   [
@@ -9719,14 +10061,17 @@
   ],
   [447414, "Kotchevnik", [[454807, "durrelli"]]],
   [
-    447523,
+    432075,
     "Kretania",
     [
-      [455439, "eurypilus"],
-      [455440, "psylorita"],
-      [455435, "pylaon"],
-      [455438, "sephirus"],
-      [455436, "trappi"]
+      [466892, "alcedo"],
+      [432333, "eurypilus"],
+      [432332, "hesperica"],
+      [432331, "psylorita"],
+      [432336, "pylaon"],
+      [432335, "sephirus"],
+      [432334, "trappi"],
+      [466893, "zephyrinus"]
     ]
   ],
   [447753, "Krombia", [[456688, "venturalis"]]],
@@ -9755,7 +10100,7 @@
   ],
   [448213, "Lacydes", [[458985, "spectabilis"]]],
   [448197, "Laelia", [[458923, "coenosa"]]],
-  [447495, "Laeosopis", [[455340, "roboris"]]],
+  [432047, "Laeosopis", [[432264, "roboris"]]],
   [447675, "Laetilia", [[456260, "loxogramma"]]],
   [
     447591,
@@ -9768,7 +10113,7 @@
       [455989, "zelleri"]
     ]
   ],
-  [447500, "Lampides", [[455362, "boeticus"]]],
+  [432055, "Lampides", [[432284, "boeticus"]]],
   [
     446789,
     "Lampronia",
@@ -9857,14 +10202,16 @@
   [446606, "Lasiocampini", []],
   [446248, "Lasiocampoidea", []],
   [
-    447537,
+    432106,
     "Lasiommata",
     [
-      [455542, "deidamia"],
-      [455540, "maera"],
-      [455535, "megera"],
-      [455537, "paramegaera"],
-      [455538, "petropolitana"]
+      [432483, "deidamia"],
+      [432482, "maera"],
+      [432486, "megera"],
+      [467167, "menava"],
+      [432485, "paramegaera"],
+      [432484, "petropolitana"],
+      [466594, "petropolitana/maera"]
     ]
   ],
   [448566, "Lasionhada", [[460844, "proxima"]]],
@@ -9922,17 +10269,20 @@
     ]
   ],
   [447586, "Lepidogma", [[455972, "tamaricalis"]]],
+  [431984, "Lepidoptera", []],
   [446957, "Lepidotarphius", [[450376, "perornatella"]]],
   [447378, "Lepteucosma", [[454346, "huebneriana"]]],
   [
-    447476,
+    432031,
     "Leptidea",
     [
-      [455231, "duponcheli"],
-      [455229, "juvernica"],
-      [455232, "morsei"],
-      [455228, "reali"],
-      [455226, "sinapis"]
+      [432707, "duponcheli"],
+      [432708, "juvernica"],
+      [432188, "morsei"],
+      [432193, "reali"],
+      [432190, "sinapis"],
+      [432191, "sinapis/juvernica"],
+      [434661, "sinapis\\juvernica\\reali"]
     ]
   ],
   [446688, "Leptideini", []],
@@ -9946,7 +10296,18 @@
       [449498, "turatii"]
     ]
   ],
-  [447503, "Leptotes", [[455367, "pirithous"]]],
+  [432052, "Leptotes", [[432280, "pirithous"]]],
+  [
+    0,
+    "Lestes",
+    [
+      [466740, "barbarus"],
+      [466742, "dryas"],
+      [466744, "macrostigma"],
+      [466746, "sponsa"],
+      [466748, "virens"]
+    ]
+  ],
   [
     448563,
     "Leucania",
@@ -10017,11 +10378,31 @@
       [450489, "zanclaeella"]
     ]
   ],
+  [
+    0,
+    "Leucorrhinia",
+    [
+      [466750, "albifrons"],
+      [466752, "caudalis"],
+      [466754, "dubia"],
+      [466756, "pectoralis"],
+      [466758, "rubicunda"]
+    ]
+  ],
   [446923, "Leucospilapteryx", [[449975, "omissella"]]],
   [447058, "Levipalpus", [[451172, "hepatariella"]]],
   [447944, "Lhommeia", [[457397, "biskraria"]]],
-  [447532, "Libythea", [[455523, "celtis"]]],
-  [446449, "Libytheinae", []],
+  [
+    0,
+    "Libellula",
+    [
+      [466760, "depressa"],
+      [466762, "fulva"],
+      [466764, "quadrimaculata"]
+    ]
+  ],
+  [432099, "Libythea", [[432457, "celtis"]]],
+  [432008, "Libytheinae", []],
   [446871, "Lichenotinea", [[449728, "pustulatella"]]],
   [447904, "Ligdia", [[457237, "adustata"]]],
   [
@@ -10033,19 +10414,20 @@
     ]
   ],
   [446346, "Limacodidae", []],
-  [446450, "Limenitidinae", []],
+  [432004, "Limenitidinae", []],
   [446675, "Limenitidini", []],
   [
-    447562,
+    432083,
     "Limenitis",
     [
-      [455814, "camilla"],
-      [455812, "populi"],
-      [455816, "reducta"]
+      [432382, "camilla"],
+      [432381, "populi"],
+      [432720, "reducta"]
     ]
   ],
   [448055, "Limeria", [[457951, "macraria"]]],
   [447103, "Limnaecia", [[452378, "phragmitella"]]],
+  [0, "Lindenia", [[466766, "tetraphylla"]]],
   [446567, "Lithinini", []],
   [446395, "Lithocolletinae", []],
   [
@@ -10140,7 +10522,7 @@
       [459762, "millierei"]
     ]
   ],
-  [447538, "Lopinga", [[455543, "achine"]]],
+  [432104, "Lopinga", [[432724, "achine"]]],
   [447581, "Loryma", [[455957, "egregialis"]]],
   [
     447788,
@@ -10232,7 +10614,7 @@
       [460711, "luteago"]
     ]
   ],
-  [447520, "Luthrodes", [[455422, "galba"]]],
+  [432069, "Luthrodes", [[432316, "galba"]]],
   [
     447191,
     "Lutilabria",
@@ -10243,25 +10625,33 @@
     ]
   ],
   [
-    447491,
+    432043,
     "Lycaena",
     [
-      [455327, "alciphron"],
-      [455326, "bleusei"],
-      [455331, "candens"],
-      [455319, "dispar"],
-      [455317, "helle"],
-      [455329, "hippothoe"],
+      [432250, "alciphron"],
+      [466894, "asabinus"],
+      [432257, "bleusei"],
+      [432255, "candens"],
+      [432248, "dimorpha"],
+      [432253, "dispar"],
+      [467080, "euphratica"],
+      [432249, "helle"],
+      [432254, "hippothoe"],
+      [467082, "lampon"],
+      [466895, "ochimus"],
+      [432256, "ottomana"],
       [455323, "ottomanus"],
-      [455315, "phlaeas"],
-      [455332, "thersamon"],
-      [455334, "thetis"],
-      [455324, "tityrus"],
-      [455321, "virgaureae"]
+      [432258, "phlaeas"],
+      [466896, "phoenicura"],
+      [467081, "phoenicurus"],
+      [432252, "thersamon"],
+      [432251, "thetis"],
+      [432260, "tityrus"],
+      [432259, "virgaureae"]
     ]
   ],
-  [446316, "Lycaenidae", []],
-  [446444, "Lycaeninae", []],
+  [431989, "Lycaenidae", []],
+  [432000, "Lycaeninae", []],
   [446670, "Lycaenini", []],
   [
     447974,
@@ -10337,16 +10727,16 @@
   ],
   [446294, "Lypusidae", []],
   [
-    447529,
+    432080,
     "Lysandra",
     [
-      [455472, "albicans"],
-      [455465, "bellargus"],
-      [455470, "caelestissima"],
-      [455467, "coridon"],
-      [455473, "corydonius"],
+      [432352, "albicans"],
+      [432349, "bellargus"],
+      [432351, "caelestissima"],
+      [432350, "coridon"],
+      [432348, "corydonius"],
       [455469, "gennargenti"],
-      [455471, "hispana"]
+      [432347, "hispana"]
     ]
   ],
   [
@@ -10384,6 +10774,7 @@
   [446355, "Macroglossinae", []],
   [446520, "Macroglossini", []],
   [447889, "Macroglossum", [[457187, "stellatarum"]]],
+  [0, "Macromia", [[466768, "splendens"]]],
   [446931, "Macrosaccus", [[450180, "robiniella"]]],
   [
     447859,
@@ -10409,16 +10800,16 @@
   [446608, "Malacosomini", []],
   [448553, "Mamestra", [[460684, "brassicae"]]],
   [
-    447545,
+    432121,
     "Maniola",
     [
-      [455674, "chia"],
-      [455678, "cypricola"],
-      [455672, "halicarnassus"],
-      [455675, "jurtina"],
-      [455677, "megala"],
-      [455673, "nurag"],
-      [455671, "telmessia"]
+      [432564, "chia"],
+      [432566, "cypricola"],
+      [432568, "halicarnassus"],
+      [432562, "jurtina"],
+      [432565, "megala"],
+      [432563, "nurag"],
+      [432567, "telmessia"]
     ]
   ],
   [446683, "Maniolini", []],
@@ -10581,17 +10972,21 @@
   [447594, "Megasis", [[456000, "rippertella"]]],
   [447426, "Meharia", [[454840, "scythica"]]],
   [
-    447546,
+    432107,
     "Melanargia",
     [
-      [455684, "arge"],
-      [455680, "galathea"],
-      [455687, "ines"],
-      [455682, "lachesis"],
-      [455683, "larissa"],
-      [455685, "occitanica"],
-      [455686, "pherusa"],
-      [455679, "russiae"]
+      [432492, "arge"],
+      [432490, "galathea"],
+      [467171, "grumi"],
+      [467170, "hylata"],
+      [432491, "ines"],
+      [432489, "lachesis"],
+      [432488, "larissa"],
+      [432494, "occitanica"],
+      [432493, "pherusa"],
+      [432487, "russiae"],
+      [467169, "syriaca"],
+      [467168, "titea"]
     ]
   ],
   [446684, "Melanargiini", []],
@@ -10615,29 +11010,34 @@
   [446588, "Melanthiini", []],
   [446630, "Melipotini", []],
   [
-    447572,
+    432098,
     "Melitaea",
     [
-      [455864, "aetherie"],
-      [455858, "arduinna"],
-      [455887, "asteria"],
-      [455872, "athalia"],
-      [455883, "aurelia"],
-      [455885, "britomartis"],
-      [455874, "caucasogenita"],
-      [455856, "cinxia"],
-      [455877, "deione"],
-      [455859, "diamina"],
-      [455865, "didyma"],
+      [466897, "abbas"],
+      [432444, "aetherie"],
+      [432443, "arduinna"],
+      [432456, "asteria"],
+      [432452, "athalia"],
+      [432455, "aurelia"],
+      [432451, "britomartis"],
+      [466900, "caucasogenita"],
+      [432449, "celadussa"],
+      [432447, "cinxia"],
+      [467166, "collina"],
+      [432450, "deione"],
+      [432448, "diamina"],
+      [432442, "didyma"],
       [455871, "ignasiti"],
       [455867, "interrupta"],
       [455875, "nevadensis"],
-      [455863, "ornata"],
-      [455881, "parthenoides"],
-      [455868, "persea"],
-      [455861, "phoebe"],
-      [455869, "trivia"],
-      [455879, "varia"]
+      [432446, "ornata"],
+      [432454, "parthenoides"],
+      [466898, "persea"],
+      [432445, "phoebe"],
+      [466899, "phoebe ssp. pseudosibina"],
+      [467165, "telona"],
+      [432441, "trivia"],
+      [432453, "varia"]
     ]
   ],
   [446678, "Melitaeini", []],
@@ -10988,7 +11388,7 @@
     ]
   ],
   [448116, "Minoa", [[458371, "murinata"]]],
-  [447549, "Minois", [[455698, "dryas"]]],
+  [432109, "Minois", [[432524, "dryas"]]],
   [448281, "Minucia", [[459305, "lunaris"]]],
   [
     447170,
@@ -11174,15 +11574,20 @@
     ]
   ],
   [
-    447466,
+    432027,
     "Muschampia",
     [
-      [455175, "cribrellum"],
+      [432159, "cribrellum"],
+      [466903, "nomas"],
+      [466904, "nomas ssp. tersa"],
+      [467076, "plurimacula"],
+      [466902, "poggei"],
       [455173, "proteides"],
-      [455172, "proto"],
-      [455174, "tessellum"]
+      [432161, "proto"],
+      [432706, "tessellum"]
     ]
   ],
+  [0, "​Muschampia", [[466901, "proteides"]]],
   [447765, "Musotima", [[456721, "nitidalis"]]],
   [447667, "Mussidia", [[456239, "fiorii"]]],
   [448351, "Mycteroplus", [[459644, "puniceago"]]],
@@ -11304,6 +11709,7 @@
       [454851, "myrmosaeformis"]
     ]
   ],
+  [0, "Nehalennia", [[466770, "speciosa"]]],
   [
     446864,
     "Nemapogon",
@@ -11369,7 +11775,7 @@
   ],
   [446350, "Nematopogoninae", []],
   [446863, "Nemaxera", [[449618, "betulinella"]]],
-  [446458, "Nemeobiinae", []],
+  [431999, "Nemeobiinae", []],
   [
     446778,
     "Nemophora",
@@ -11423,8 +11829,22 @@
   [447912, "Neognopharmia", [[457281, "stevenaria"]]],
   [448175, "Neoharpyia", [[458852, "verbasci"]]],
   [447830, "Neoleucinodes", [[456993, "elegantalis"]]],
-  [447499, "Neolycaena", [[455361, "rhymnus"]]],
-  [447530, "Neolysandra", [[455474, "coelestina"]]],
+  [
+    432050,
+    "Neolycaena",
+    [
+      [432272, "rhymnus"],
+      [467191, "soezen"]
+    ]
+  ],
+  [
+    432079,
+    "Neolysandra",
+    [
+      [432346, "coelestina"],
+      [466905, "diana"]
+    ]
+  ],
   [
     447079,
     "Neomariania",
@@ -11455,11 +11875,11 @@
   [446250, "Nepticuloidea", []],
   [446676, "Neptidini", []],
   [
-    447563,
+    432082,
     "Neptis",
     [
-      [455820, "rivularis"],
-      [455818, "sappho"]
+      [432719, "rivularis"],
+      [432378, "sappho"]
     ]
   ],
   [448597, "Netrocerocora", [[461157, "quadrangula"]]],
@@ -11665,17 +12085,17 @@
       [459937, "simonyi"]
     ]
   ],
-  [446317, "Nymphalidae", []],
-  [446451, "Nymphalinae", []],
+  [431990, "Nymphalidae", []],
+  [432007, "Nymphalinae", []],
   [446679, "Nymphalini", []],
   [
-    447566,
+    432095,
     "Nymphalis",
     [
-      [455828, "antiopa"],
-      [455830, "polychloros"],
-      [455834, "vaualbum"],
-      [455832, "xanthomelas"]
+      [432433, "antiopa"],
+      [432431, "polychloros"],
+      [432430, "vaualbum"],
+      [432432, "xanthomelas"]
     ]
   ],
   [447764, "Nymphula", [[456720, "nitidulata"]]],
@@ -11688,7 +12108,7 @@
       [457952, "reaumuraria"]
     ]
   ],
-  [447472, "Ochlodes", [[455220, "sylvanus"]]],
+  [432022, "Ochlodes", [[432145, "sylvanus"]]],
   [448066, "Ochodontia", [[458078, "adustaria"]]],
   [447187, "Ochrodia", [[453073, "subdiminutella"]]],
   [446367, "Ochromolopinae", []],
@@ -11833,17 +12253,18 @@
   ],
   [446533, "Oegoconiini", []],
   [
-    447548,
+    432112,
     "Oeneis",
     [
-      [455692, "bore"],
-      [455689, "glacialis"],
-      [455693, "jutta"],
-      [455697, "magna"],
-      [455694, "melissa"],
-      [455691, "norna"],
-      [455695, "polixenes"],
-      [455696, "tarpeia"]
+      [432529, "ammon"],
+      [432528, "bore"],
+      [432535, "glacialis"],
+      [432532, "jutta"],
+      [432531, "magna"],
+      [432530, "melissa"],
+      [432533, "norna"],
+      [432534, "polixenes"],
+      [432527, "tarpeia"]
     ]
   ],
   [
@@ -11964,6 +12385,15 @@
       [459755, "strioligera"]
     ]
   ],
+  [
+    0,
+    "Onychogomphus",
+    [
+      [466772, "costae"],
+      [466774, "forcipatus"],
+      [466776, "uncatus"]
+    ]
+  ],
   [447967, "Onychora", [[457537, "agaritharia"]]],
   [
     448114,
@@ -11974,6 +12404,7 @@
     ]
   ],
   [446589, "Operophterini", []],
+  [0, "Ophiogomphus", [[466778, "cecilia"]]],
   [448280, "Ophiusa", [[459304, "tirhaca"]]],
   [446631, "Ophiusini", []],
   [448588, "Opigena", [[461128, "polygona"]]],
@@ -12099,6 +12530,21 @@
   ],
   [447917, "Ortaliella", [[457311, "gruneraria"]]],
   [
+    0,
+    "Orthetrum",
+    [
+      [466780, "albistylum"],
+      [466782, "brunneum"],
+      [466784, "cancellatum"],
+      [466786, "chrysostigma"],
+      [466788, "coerulescens"],
+      [466790, "nitidinerve"],
+      [466792, "sabina"],
+      [466794, "taeniolatum"],
+      [466796, "trinacria"]
+    ]
+  ],
+  [
     447643,
     "Ortholepis",
     [
@@ -12186,6 +12632,7 @@
     ]
   ],
   [447657, "Oxybia", [[456181, "transversella"]]],
+  [0, "Oxygastra", [[466798, "curtisii"]]],
   [
     447302,
     "Oxypteron",
@@ -12361,22 +12808,23 @@
       [450631, "scotinella"]
     ]
   ],
+  [0, "Pantala", [[466800, "flavescens"]]],
   [448333, "Panthea", [[459576, "coenobita"]]],
   [446429, "Pantheinae", []],
   [448550, "Papestra", [[460678, "biren"]]],
   [
-    447462,
+    432013,
     "Papilio",
     [
-      [455149, "alexanor"],
+      [432125, "alexanor"],
       [455150, "demoleus"],
-      [455148, "hospiton"],
-      [455145, "machaon"],
+      [432127, "hospiton"],
+      [432126, "machaon"],
       [455147, "saharae"]
     ]
   ],
-  [446318, "Papilionidae", []],
-  [446453, "Papilioninae", []],
+  [431985, "Papilionidae", []],
+  [431991, "Papilioninae", []],
   [446252, "Papilionoidea", []],
   [447997, "Paraboarmia", [[457631, "viertlii"]]],
   [447242, "Paracapperia", [[453504, "anatolicus"]]],
@@ -12404,6 +12852,7 @@
       [448919, "tingitella"]
     ]
   ],
+  [0, "Paragomphus", [[466802, "genei"]]],
   [
     446940,
     "Parahyponomeuta",
@@ -12488,12 +12937,12 @@
     ]
   ],
   [
-    447536,
+    432105,
     "Pararge",
     [
-      [455531, "aegeria"],
-      [455533, "xiphia"],
-      [455534, "xiphioides"]
+      [432481, "aegeria"],
+      [432479, "xiphia"],
+      [432480, "xiphioides"]
     ]
   ],
   [446850, "Pararhodobates", [[449578, "syriacus"]]],
@@ -12553,13 +13002,15 @@
       [458413, "lasithiotica"]
     ]
   ],
-  [446454, "Parnassiinae", []],
+  [431992, "Parnassiinae", []],
   [
-    447460,
+    432014,
     "Parnassius",
     [
-      [455140, "apollo"],
-      [455136, "mnemosyne"],
+      [432130, "apollo"],
+      [432128, "mnemosyne"],
+      [467071, "nordmanni"],
+      [432129, "phoebus"],
       [455138, "sacerdos"]
     ]
   ],
@@ -12708,7 +13159,7 @@
       [454373, "umbraculana"]
     ]
   ],
-  [447475, "Pelopidas", [[455225, "thrax"]]],
+  [432019, "Pelopidas", [[432141, "thrax"]]],
   [
     446813,
     "Peloponnesia",
@@ -12998,14 +13449,14 @@
     ]
   ],
   [
-    447517,
+    432059,
     "Phengaris",
     [
-      [455416, "alcon"],
-      [455410, "arion"],
-      [455414, "nausithous"],
+      [432289, "alcon"],
+      [432290, "arion"],
+      [432292, "nausithous"],
       [455418, "rebeli"],
-      [455412, "teleius"]
+      [432291, "teleius"]
     ]
   ],
   [
@@ -13420,23 +13871,26 @@
     ]
   ],
   [446623, "Phytometrini", []],
-  [446319, "Pieridae", []],
-  [446457, "Pierinae", []],
+  [431987, "Pieridae", []],
+  [431998, "Pierinae", []],
   [446690, "Pierini", []],
   [
-    447482,
+    432038,
     "Pieris",
     [
-      [455273, "balcana"],
-      [455259, "brassicae"],
-      [455271, "bryoniae"],
-      [455262, "cheiranthi"],
-      [455268, "ergane"],
-      [455263, "krueperi"],
-      [455264, "mannii"],
-      [455269, "napi"],
-      [455266, "rapae"],
-      [455261, "wollastoni"]
+      [432714, "balcana"],
+      [466906, "bowdeni"],
+      [432220, "brassicae"],
+      [432226, "bryoniae"],
+      [432222, "cheiranthi"],
+      [432225, "ergane"],
+      [432219, "krueperi"],
+      [432224, "mannii"],
+      [432227, "napi"],
+      [467079, "persis"],
+      [466907, "pseudorapae"],
+      [432223, "rapae"],
+      [432221, "wollastoni"]
     ]
   ],
   [
@@ -13467,6 +13921,15 @@
     [
       [457325, "dolabraria"],
       [457323, "pulveraria"]
+    ]
+  ],
+  [
+    0,
+    "Platycnemis",
+    [
+      [466804, "acutipennis"],
+      [466806, "latipes"],
+      [466808, "pennipes"]
     ]
   ],
   [447222, "Platyedra", [[453327, "subcinerea"]]],
@@ -13500,18 +13963,22 @@
       [456656, "cerussella"]
     ]
   ],
-  [447524, "Plebejidea", [[455441, "loewii"]]],
+  [432073, "Plebejidea", [[432329, "loewii"]]],
   [
-    447522,
+    432071,
     "Plebejus",
     [
-      [455426, "argus"],
-      [455431, "argyrognomon"],
-      [455433, "bellieri"],
+      [467096, "alcedo"],
+      [432318, "argus"],
+      [432321, "argyrognomon"],
+      [432320, "bellieri"],
       [455425, "brethertoni"],
+      [466908, "christophi"],
       [455424, "hespericus"],
-      [455428, "idas"],
+      [432319, "idas"],
       [455430, "maracandica"],
+      [467097, "morgianus"],
+      [467098, "rosei"],
       [455434, "villai"]
     ]
   ],
@@ -13630,11 +14097,11 @@
     ]
   ],
   [
-    447569,
+    432094,
     "Polygonia",
     [
-      [455851, "c-album"],
-      [455849, "egea"]
+      [432429, "c-album"],
+      [432428, "egea"]
     ]
   ],
   [446927, "Polymitia", [[450010, "eximipalpella"]]],
@@ -13676,52 +14143,128 @@
     ]
   ],
   [447713, "Polyochodes", [[456424, "stipella"]]],
+  [432003, "Polyommatinae", []],
   [446671, "Polyommatini", []],
   [
-    447531,
+    432081,
     "Polyommatus",
     [
       [455490, "abdon"],
-      [455496, "admetus"],
-      [455482, "amandus"],
-      [455506, "aroaniensis"],
+      [467117, "actis"],
+      [432366, "admetus"],
+      [467113, "aedon"],
+      [467124, "alcestis"],
+      [467190, "alibali"],
+      [467131, "altivagans"],
+      [466909, "altivagans"],
+      [432356, "amandus"],
+      [467132, "anticarmon"],
+      [467130, "antidolus"],
+      [432377, "aroaniensis"],
+      [467118, "artvinensis"],
+      [467133, "aserbeidschanus"],
+      [466910, "aserbeidschanus"],
       [455521, "australorossicus"],
+      [467134, "baytopi"],
+      [434651, "bellargus"],
+      [467127, "bilgini"],
+      [467115, "bollandi"],
       [455504, "budashkini"],
+      [467108, "buzulmavi"],
+      [467135, "caeruleus"],
+      [467136, "carmon"],
       [455519, "carmonides"],
-      [455488, "celina"],
-      [455522, "damocles"],
-      [455516, "damon"],
-      [455518, "damone"],
-      [455494, "daphnis"],
-      [455511, "dolus"],
-      [455477, "dorylas"],
+      [432360, "celina"],
+      [467119, "cilicius"],
+      [467116, "ciloicus"],
+      [467112, "cornelia"],
+      [467137, "cyaneus"],
+      [466911, "cyaneus"],
+      [467138, "dama"],
+      [432365, "damocles"],
+      [432363, "damon"],
+      [432364, "damone"],
+      [467126, "dantchenkoi"],
+      [432355, "daphnis"],
+      [466913, "demavendi"],
+      [467105, "dezinus"],
+      [467109, "diana"],
+      [467110, "diana"],
+      [432373, "dolus"],
+      [432359, "dorylas"],
       [455489, "elena"],
       [455507, "eleniae"],
-      [455492, "eros"],
-      [455475, "escheri"],
+      [467128, "eriwanensis"],
+      [466914, "eriwanensis"],
+      [432362, "eros"],
+      [467139, "erzindjanensis"],
+      [432353, "escheri"],
       [455502, "exuberans"],
-      [455498, "fabressei"],
-      [455512, "fulgens"],
+      [432372, "fabressei"],
+      [467111, "fatima"],
+      [467120, "firdussii"],
+      [466915, "firdussii"],
+      [432371, "fulgens"],
       [455505, "galloi"],
-      [455479, "golgus"],
-      [455499, "humedasae"],
+      [432357, "golgus"],
+      [467140, "guezelmavi"],
+      [467121, "haigi"],
+      [467141, "huberti"],
+      [466916, "huberti"],
+      [432374, "humedasae"],
       [455491, "icadius"],
-      [455486, "icarus"],
-      [455515, "iphigenia"],
+      [432361, "icarus"],
+      [466950, "icarus/celina"],
+      [434660, "icarus\\thersites"],
+      [467129, "interjectus"],
+      [467142, "iphicarmon"],
+      [432369, "iphigenia"],
+      [467125, "karacetinae"],
+      [467143, "kurdistanicus"],
+      [467144, "lycius"],
       [455513, "menalcas"],
-      [455509, "nephohiptamenos"],
-      [455481, "nivescens"],
-      [455508, "orphicus"],
+      [467145, "merhaba"],
+      [467146, "mithridates"],
+      [467114, "myrrha"],
+      [466917, "myrrha"],
+      [432368, "nephohiptamenos"],
+      [467147, "ninae"],
+      [466918, "ninae"],
+      [432358, "nivescens"],
+      [432376, "orphicus"],
+      [467106, "ossmar"],
       [455503, "pelopi"],
+      [467148, "phyllis"],
+      [467149, "pierceae"],
       [455514, "pljushtchi"],
-      [455501, "ripartii"],
+      [467150, "poseidon"],
+      [467151, "putnami"],
+      [432718, "ripartii"],
       [455480, "sagratrox"],
+      [467152, "schuriani"],
+      [467122, "sertavulensis"],
       [455520, "shamil"],
-      [455484, "thersites"],
-      [455500, "violetae"],
-      [455510, "virgilia"]
+      [467123, "sigberti"],
+      [467153, "surakovi"],
+      [466919, "surakovi"],
+      [467107, "syriacus"],
+      [467154, "tankeri"],
+      [467155, "theresiae"],
+      [432717, "thersites"],
+      [432375, "timfristos"],
+      [467156, "turcicolus"],
+      [467157, "turcicus"],
+      [466920, "turcicus"],
+      [466921, "vanensis"],
+      [432370, "violetae"],
+      [455510, "virgilia"],
+      [467158, "wagneri"],
+      [467159, "zapvadi"],
+      [466922, "zarathustra"]
     ]
   ],
+  [0, "​​Polyommatus", [[466879, "belovi"]]],
+  [0, "﻿Polyommatus", [[466912, "damonides"]]],
   [448425, "Polyphaenis", [[460045, "sericata"]]],
   [
     447845,
@@ -13744,19 +14287,19 @@
   [448528, "Polytela", [[460561, "cliens"]]],
   [448100, "Polythrena", [[458274, "coloraria"]]],
   [
-    447483,
+    432037,
     "Pontia",
     [
-      [455274, "callidice"],
-      [455280, "chloridice"],
-      [455276, "daplidice"],
-      [455278, "edusa"]
+      [432216, "callidice"],
+      [432215, "chloridice"],
+      [432218, "daplidice"],
+      [432217, "edusa"]
     ]
   ],
   [447248, "Porrittia", [[453516, "galactodactyla"]]],
   [446916, "Povolnya", [[449961, "leucapennella"]]],
   [446892, "Praeacedes", [[449817, "atomosella"]]],
-  [447511, "Praephilotes", [[455391, "anthracias"]]],
+  [432063, "Praephilotes", [[432301, "anthracias"]]],
   [448376, "Praestilbia", [[459797, "armeniaca"]]],
   [447167, "Pragmatodes", [[452813, "fruticosella"]]],
   [446340, "Praydidae", []],
@@ -13838,7 +14381,14 @@
       [460466, "brevilinea"]
     ]
   ],
-  [447541, "Proterebia", [[455660, "afra"]]],
+  [
+    432117,
+    "Proterebia",
+    [
+      [455660, "afra"],
+      [432554, "phegea"]
+    ]
+  ],
   [
     446887,
     "Proterospastis",
@@ -13934,20 +14484,31 @@
   [448150, "Pseudobaptria", [[458512, "bogumilaria"]]],
   [447725, "Pseudobissetia", [[456495, "terrestrellus"]]],
   [
-    447552,
+    432115,
     "Pseudochazara",
     [
-      [455707, "amymone"],
-      [455713, "anthelea"],
-      [455714, "beroe"],
-      [455712, "cingovskii"],
-      [455709, "euxina"],
-      [455705, "geyeri"],
-      [455706, "graeca"],
+      [432546, "amalthea"],
+      [432544, "amymone"],
+      [432545, "anthelea"],
+      [466923, "beroe"],
+      [432550, "cingovskii"],
+      [466924, "daghestana"],
+      [432548, "euxina"],
+      [432542, "geyeri"],
+      [432543, "graeca"],
+      [467181, "guriensis"],
       [455710, "hippolyte"],
-      [455708, "orestes"],
-      [455711, "tisiphone"],
-      [455715, "williamsi"]
+      [467178, "lydia"],
+      [466926, "mamurra"],
+      [466945, "mamurra ssp. schahrudensis"],
+      [432549, "mercurius"],
+      [467179, "mniszechii"],
+      [432552, "orestes"],
+      [466925, "pelopea"],
+      [467180, "schakuhensis"],
+      [466927, "thelephassa"],
+      [432551, "tisiphone"],
+      [432547, "williamsi"]
     ]
   ],
   [
@@ -13979,15 +14540,15 @@
   [447927, "Pseudopanthera", [[457334, "macularia"]]],
   [447401, "Pseudophiaris", [[454560, "sappadana"]]],
   [
-    447513,
+    432061,
     "Pseudophilotes",
     [
-      [455397, "abencerragus"],
-      [455398, "barbagiae"],
-      [455393, "baton"],
-      [455399, "bavius"],
-      [455400, "panoptes"],
-      [455395, "vicrama"]
+      [432296, "abencerragus"],
+      [432295, "barbagiae"],
+      [432299, "baton"],
+      [432294, "bavius"],
+      [432297, "panoptes"],
+      [432298, "vicrama"]
     ]
   ],
   [447636, "Pseudophycita", [[456122, "deformella"]]],
@@ -14273,27 +14834,33 @@
     ]
   ],
   [446468, "Pyraustinae", []],
-  [446442, "Pyrginae", []],
+  [431995, "Pyrginae", []],
   [
-    447467,
+    432030,
     "Pyrgus",
     [
-      [455199, "alveus"],
-      [455179, "andromedae"],
-      [455197, "armoricanus"],
+      [467077, "aladaghensis"],
+      [432180, "alveus"],
+      [432175, "andromedae"],
+      [432177, "armoricanus"],
+      [432178, "armoricanus/serratulae"],
       [455201, "bellieri"],
-      [455181, "cacaliae"],
-      [455192, "carlinae"],
-      [455176, "carthami"],
-      [455183, "centaureae"],
-      [455196, "cinarae"],
-      [455194, "cirsii"],
-      [455184, "malvae"],
-      [455186, "malvoides"],
-      [455190, "onopordi"],
-      [455188, "serratulae"],
-      [455178, "sidae"],
-      [455202, "warrenensis"]
+      [467192, "bolkariensis"],
+      [432174, "cacaliae"],
+      [432184, "carlinae"],
+      [432171, "carthami"],
+      [432173, "centaureae"],
+      [432186, "cinarae"],
+      [432185, "cirsii"],
+      [432182, "foulquieri"],
+      [466928, "jupei"],
+      [432170, "malvae"],
+      [432169, "malvoides"],
+      [466929, "melotis"],
+      [432183, "onopordi"],
+      [432176, "serratulae"],
+      [432172, "sidae"],
+      [432181, "warrenensis"]
     ]
   ],
   [
@@ -14309,12 +14876,12 @@
     ]
   ],
   [
-    447542,
+    432120,
     "Pyronia",
     [
-      [455664, "bathseba"],
-      [455663, "cecilia"],
-      [455661, "tithonus"]
+      [432561, "bathseba"],
+      [432729, "cecilia"],
+      [432560, "tithonus"]
     ]
   ],
   [
@@ -14345,6 +14912,14 @@
       [459855, "exprimens"],
       [459856, "purpura"],
       [459853, "umbra"]
+    ]
+  ],
+  [
+    0,
+    "Pyrrhosoma",
+    [
+      [466810, "elisabethae"],
+      [466812, "nymphula"]
     ]
   ],
   [446740, "Ramapesiini", []],
@@ -14578,7 +15153,7 @@
   [448189, "Rhynchina", [[458897, "canariensis"]]],
   [448269, "Rhypagla", [[459285, "lacernaria"]]],
   [448466, "Rileyiana", [[460248, "fovea"]]],
-  [446320, "Riodinidae", []],
+  [431988, "Riodinidae", []],
   [
     448185,
     "Rivula",
@@ -14673,29 +15248,40 @@
   [446271, "Saturniidae", []],
   [446354, "Saturniinae", []],
   [446518, "Saturniini", []],
-  [446452, "Satyrinae", []],
+  [432011, "Satyrinae", []],
   [446685, "Satyrini", []],
   [
-    447498,
+    432051,
     "Satyrium",
     [
-      [455358, "acaciae"],
-      [455357, "esculi"],
-      [455355, "ilicis"],
-      [455360, "ledereri"],
-      [455351, "pruni"],
-      [455353, "spini"],
-      [455349, "w-album"]
+      [466930, "abdominalis"],
+      [432279, "acaciae"],
+      [432275, "esculi"],
+      [466931, "hyrcanica"],
+      [467092, "hyrcanicum"],
+      [432274, "ilicis"],
+      [432276, "ledereri"],
+      [467090, "marcidum"],
+      [467091, "myrtale"],
+      [432715, "pruni"],
+      [432278, "spini"],
+      [432277, "w-album"],
+      [467093, "zabni"]
     ]
   ],
   [
-    447554,
+    432113,
     "Satyrus",
     [
-      [455724, "actaea"],
+      [432538, "actaea"],
+      [466932, "amasinus"],
       [455723, "bryce"],
-      [455720, "ferula"],
-      [455722, "virbius"]
+      [466933, "effendi"],
+      [467174, "favonius"],
+      [432536, "ferula"],
+      [467173, "iranicus"],
+      [467175, "parthicus"],
+      [432537, "virbius"]
     ]
   ],
   [446917, "Sauterina", [[449962, "hofmanniella"]]],
@@ -14792,7 +15378,7 @@
   [446413, "Scoliopteryginae", []],
   [446637, "Scoliopterygini", []],
   [448183, "Scoliopteryx", [[458869, "libatrix"]]],
-  [447514, "Scolitantides", [[455401, "orion"]]],
+  [432062, "Scolitantides", [[432300, "orion"]]],
   [
     447717,
     "Scoparia",
@@ -15305,6 +15891,7 @@
       [457665, "tamsi"]
     ]
   ],
+  [0, "Selysiothemis", [[466814, "nigra"]]],
   [
     447056,
     "Semioscopis",
@@ -15410,6 +15997,19 @@
   [446347, "Somabrachyidae", []],
   [447450, "Somabrachys", [[455029, "aegrota"]]],
   [
+    0,
+    "Somatochlora",
+    [
+      [466816, "alpestris"],
+      [466818, "arctica"],
+      [466820, "borisi"],
+      [466822, "flavomaculata"],
+      [466824, "meridionalis"],
+      [466826, "metallica"],
+      [466828, "sahlbergi"]
+    ]
+  ],
+  [
     447200,
     "Sophronia",
     [
@@ -15465,7 +16065,14 @@
   [448182, "Spatalia", [[458867, "argentina"]]],
   [447292, "Spatalistis", [[453866, "bifasciana"]]],
   [447146, "Spatuncusella", [[452732, "occitanica"]]],
-  [447557, "Speyeria", [[455767, "aglaja"]]],
+  [
+    432087,
+    "Speyeria",
+    [
+      [432391, "aglaja"],
+      [466934, "alexandra"]
+    ]
+  ],
   [
     447300,
     "Sphaleroptera",
@@ -15493,14 +16100,15 @@
   ],
   [448196, "Sphrageidus", [[458921, "similis"]]],
   [
-    447465,
+    432025,
     "Spialia",
     [
-      [455169, "orbifer"],
-      [455165, "phlomidis"],
-      [455168, "rosae"],
-      [455166, "sertorius"],
-      [455171, "therapne"]
+      [432156, "orbifer"],
+      [467075, "osthelderi"],
+      [432152, "phlomidis"],
+      [432155, "rosae"],
+      [432153, "sertorius"],
+      [432154, "therapne"]
     ]
   ],
   [448209, "Spilarctia", [[458970, "lutea"]]],
@@ -15696,11 +16304,11 @@
     ]
   ],
   [446992, "Stibaromacha", [[450656, "ratella"]]],
-  [446716, "Stichobasini", []],
   [446713, "Stichobasini", []],
-  [446829, "Stichobasis", []],
+  [446716, "Stichobasini", []],
+  [446830, "Stichobasis", []],
   [
-    446830,
+    446829,
     "Stichobasis",
     [
       [449466, "helicinoides"],
@@ -15908,6 +16516,7 @@
       [454839, "tricolor"]
     ]
   ],
+  [0, "Stylurus", [[466710, "flavipes"]]],
   [447683, "Sudaniola", [[456270, "remanella"]]],
   [447836, "Sufetula", [[457014, "diminutalis"]]],
   [448448, "Sunira", [[460125, "circellaris"]]],
@@ -15977,6 +16586,31 @@
       [450625, "gozmanyi"],
       [450626, "marthae"],
       [450627, "oxybiella"]
+    ]
+  ],
+  [
+    0,
+    "Sympecma",
+    [
+      [466830, "fusca"],
+      [466832, "paedisca"]
+    ]
+  ],
+  [
+    0,
+    "Sympetrum",
+    [
+      [466834, "danae"],
+      [466836, "depressiusculum"],
+      [466838, "flaveolum"],
+      [466840, "fonscolombii"],
+      [466842, "meridionale"],
+      [466844, "nigrifemur"],
+      [466846, "pedemontanum"],
+      [466848, "sanguineum"],
+      [466850, "sinaiticum"],
+      [466852, "striolatum"],
+      [466854, "vulgatum"]
     ]
   ],
   [
@@ -16149,11 +16783,12 @@
     ]
   ],
   [
-    447506,
+    432058,
     "Tarucus",
     [
       [455372, "balkanica"],
-      [455371, "theophrastus"]
+      [432288, "balkanicus"],
+      [432287, "theophrastus"]
     ]
   ],
   [448253, "Tathorhynchus", [[459187, "exsiccata"]]],
@@ -16287,7 +16922,7 @@
     ]
   ],
   [446579, "Thalerini", []],
-  [447565, "Thaleropis", [[455827, "ionia"]]],
+  [466946, "Thaleropis", [[466947, "ionia"]]],
   [
     448427,
     "Thalpophila",
@@ -16312,7 +16947,8 @@
     ]
   ],
   [446439, "Thaumetopoeinae", []],
-  [447493, "Thecla", [[455336, "betulae"]]],
+  [432045, "Thecla", [[432262, "betulae"]]],
+  [432002, "Theclinae", []],
   [446672, "Theclini", []],
   [
     448097,
@@ -16407,14 +17043,16 @@
   [446365, "Thyatirinae", []],
   [447659, "Thylacoptila", [[456187, "paurosema"]]],
   [
-    447470,
+    432024,
     "Thymelicus",
     [
-      [455214, "acteon"],
-      [455216, "christi"],
-      [455217, "hyrax"],
-      [455210, "lineola"],
-      [455212, "sylvestris"]
+      [432148, "acteon"],
+      [432147, "christi"],
+      [432149, "hyrax"],
+      [432151, "lineola"],
+      [434662, "lineolus\\sylvestris"],
+      [467074, "novus"],
+      [432150, "sylvestris"]
     ]
   ],
   [446325, "Thyrididae", []],
@@ -16523,15 +17161,18 @@
     ]
   ],
   [
-    447496,
+    432048,
     "Tomares",
     [
-      [455341, "ballus"],
-      [455343, "callimachus"],
-      [455342, "nogelii"]
+      [432265, "ballus"],
+      [432267, "callimachus"],
+      [467086, "desinens"],
+      [467085, "nesimachus"],
+      [432266, "nogelii"],
+      [466935, "romanovi"]
     ]
   ],
-  [447504, "Tongeia", [[455369, "fischeri"]]],
+  [432067, "Tongeia", [[432309, "fischeri"]]],
   [
     447076,
     "Tortilia",
@@ -16677,8 +17318,25 @@
     ]
   ],
   [448263, "Trisateles", [[459232, "emortualis"]]],
+  [
+    0,
+    "Trithemis",
+    [
+      [466856, "annulata"],
+      [466858, "arteriosa"],
+      [466860, "festiva"],
+      [466862, "kirbyi"]
+    ]
+  ],
   [447596, "Tsaraphycis", [[456002, "mimeticella"]]],
-  [447518, "Turanana", [[455420, "taygetica"]]],
+  [
+    432060,
+    "Turanana",
+    [
+      [466936, "endymion"],
+      [432293, "taygetica"]
+    ]
+  ],
   [447181, "Turcopalpa", [[453052, "glaseri"]]],
   [447184, "Tuta", [[453061, "absoluta"]]],
   [
@@ -16784,13 +17442,13 @@
     ]
   ],
   [
-    447568,
+    432092,
     "Vanessa",
     [
-      [455841, "atalanta"],
-      [455845, "cardui"],
-      [455847, "virginiensis"],
-      [455843, "vulcania"]
+      [432424, "atalanta"],
+      [432422, "cardui"],
+      [432421, "virginiensis"],
+      [432423, "vulcania"]
     ]
   ],
   [
@@ -17113,7 +17771,7 @@
   ],
   [446343, "Ypsolophidae", []],
   [446513, "Ypsolophinae", []],
-  [447547, "Ypthima", [[455688, "asterope"]]],
+  [432116, "Ypthima", [[432553, "asterope"]]],
   [
     448247,
     "Zanclognatha",
@@ -17126,12 +17784,12 @@
   [448186, "Zebeeba", [[458876, "falsalis"]]],
   [447837, "Zebronia", [[457015, "phenice"]]],
   [
-    447479,
+    432040,
     "Zegris",
     [
-      [455241, "eupheme"],
+      [432242, "eupheme"],
       [455242, "meridionalis"],
-      [455243, "pyrothoe"]
+      [432241, "pyrothoe"]
     ]
   ],
   [
@@ -17186,14 +17844,16 @@
   [446756, "Zenophassus", [[448697, "schamyl"]]],
   [447999, "Zernyia", [[457634, "granataria"]]],
   [
-    447458,
+    432016,
     "Zerynthia",
     [
-      [455134, "caucasica"],
-      [455132, "cerisy"],
-      [455133, "cretica"],
-      [455130, "polyxena"],
-      [455129, "rumina"]
+      [432137, "cassandra"],
+      [432134, "caucasica"],
+      [432132, "cerisy"],
+      [432133, "cretica"],
+      [467073, "deyrollei"],
+      [432136, "polyxena"],
+      [432135, "rumina"]
     ]
   ],
   [448275, "Zethes", [[459295, "insularis"]]],
@@ -17215,11 +17875,11 @@
     ]
   ],
   [
-    447508,
+    432066,
     "Zizeeria",
     [
-      [455376, "karsandra"],
-      [455375, "knysna"]
+      [432308, "karsandra"],
+      [432307, "knysna"]
     ]
   ],
   [
@@ -17275,5 +17935,6 @@
   ],
   [446348, "Zygaenidae", []],
   [446516, "Zygaeninae", []],
-  [446262, "Zygaenoidea", []]
+  [446262, "Zygaenoidea", []],
+  [0, "Zygonyx", [[466864, "torridus"]]]
 ]
