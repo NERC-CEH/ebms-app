@@ -1231,3 +1231,31 @@ msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
+
+# Species list copy functionality
+msgid "Copy species"
+msgstr ""
+
+# Species list copy functionality
+msgid "Are you sure want to copy previous survey species list?"
+msgstr ""
+
+# Species list copy functionality
+msgid "Copy"
+msgstr ""
+
+# Species list copy functionality
+msgid "Sorry, no species were found to copy."
+msgstr ""
+
+# Species list copy functionality
+msgid "You have succcesfully copied {{speciesCount}} species."
+msgstr ""
+
+# Species list copy functionality
+msgid "Šiandieną"
+msgstr ""
+
+# Species list copy functionality
+msgid "Sorry, no previous survey to copy species from."
+msgstr ""

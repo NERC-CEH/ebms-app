@@ -1098,3 +1098,31 @@ msgstr "Are you sure you want to delete {{taxon}} ?"
 # Credits page text 
 msgid "The current weather values are prepopulated using the OpenWeatherMap API weather service."
 msgstr "The current weather values are prepopulated using the OpenWeatherMap API weather service."
+
+# Species list copy functionality 
+msgid "Copy species"
+msgstr "Copy species"
+
+# Species list copy functionality 
+msgid "Are you sure want to copy previous survey species list?"
+msgstr "Are you sure want to copy previous survey species list?"
+
+# Species list copy functionality 
+msgid "Copy"
+msgstr "Copy"
+
+# Species list copy functionality 
+msgid "Sorry, no species were found to copy."
+msgstr "Sorry, no species were found to copy."
+
+# Species list copy functionality 
+msgid "You have succcesfully copied {{speciesCount}} species."
+msgstr "You have succcesfully copied {{speciesCount}} species."
+
+# Species list copy functionality 
+msgid "Šiandieną"
+msgstr "Šiandieną"
+
+# Species list copy functionality 
+msgid "Sorry, no previous survey to copy species from."
+msgstr "Sorry, no previous survey to copy species from."

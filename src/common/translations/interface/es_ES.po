@@ -1,7 +1,7 @@
 # 
 # Translators:
-# Karolis, 2020
 # Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
+# Karolis, 2020
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # 
 msgid ""
@@ -1378,10 +1378,40 @@ msgstr "Condiciones climáticas"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr ""
+msgstr "¿Estás seguro de que quieres eliminar {{taxon}} ?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
+msgstr ""
+"Los valores climáticos actuales se rellenan previamente utilizando el "
+"servicio meteorológico API OpenWeatherMap."
+
+# Species list copy functionality
+msgid "Copy species"
+msgstr ""
+
+# Species list copy functionality
+msgid "Are you sure want to copy previous survey species list?"
+msgstr ""
+
+# Species list copy functionality
+msgid "Copy"
+msgstr ""
+
+# Species list copy functionality
+msgid "Sorry, no species were found to copy."
+msgstr ""
+
+# Species list copy functionality
+msgid "You have succcesfully copied {{speciesCount}} species."
+msgstr ""
+
+# Species list copy functionality
+msgid "Šiandieną"
+msgstr ""
+
+# Species list copy functionality
+msgid "Sorry, no previous survey to copy species from."
 msgstr ""
