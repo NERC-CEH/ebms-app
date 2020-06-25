@@ -199,7 +199,7 @@ class Container extends React.Component {
       return null;
     }
 
-    const { areaSurveyListSortedByTime } = appModel.attrs;
+    const { areaSurveyListSortedByTime, useExperiments } = appModel.attrs;
     const isTraining = sample.metadata.training;
     const isEditing = sample.metadata.saved;
     const isDisabled = !!sample.metadata.synced_on;
@@ -216,6 +216,7 @@ class Container extends React.Component {
           sample={sample}
           deleteOccurrence={deleteOccurrence}
           increaseCount={increaseCount}
+          useExperiments={useExperiments}
           toggleTimer={toggleTimer}
           navigateToOccurrence={this.navigateToOccurrence}
           areaSurveyListSortedByTime={areaSurveyListSortedByTime}
