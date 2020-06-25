@@ -10,7 +10,15 @@ import {
   IonLabel,
   IonNote,
 } from '@ionic/react';
-import { undo, school, flag, globe, share, paperPlane } from 'ionicons/icons';
+import {
+  undo,
+  school,
+  flag,
+  globe,
+  share,
+  paperPlane,
+  flame,
+} from 'ionicons/icons';
 import alert from 'common/helpers/alert';
 import languages from 'common/config/languages';
 import countries from 'common/config/countries';
@@ -66,6 +74,7 @@ class Component extends React.Component {
     uploadAllSamples: PropTypes.func.isRequired,
     useTraining: PropTypes.bool.isRequired,
     sendAnalytics: PropTypes.bool.isRequired,
+    useExperiments: PropTypes.bool.isRequired,
     language: PropTypes.string,
     country: PropTypes.string,
   };
@@ -79,6 +88,7 @@ class Component extends React.Component {
       country,
       sendAnalytics,
       uploadAllSamples,
+      useExperiments,
     } = this.props;
 
     return (
@@ -112,7 +122,6 @@ class Component extends React.Component {
             <IonIcon icon={globe} size="small" slot="start" />
             <IonLabel slot="end">{t(countries[country])}</IonLabel>
           </IonItem>
-
           <IonItem>
             <IonIcon icon={school} size="small" slot="start" />
             <IonLabel>{t('Training Mode')}</IonLabel>
@@ -138,7 +147,14 @@ class Component extends React.Component {
               checked={sendAnalytics}
             />
           </IonItem>
-
+          <IonItem>
+            <IonIcon icon={flame} size="small" slot="start" />
+            <IonLabel>{t('Experimental Features')}</IonLabel>
+            <Toggle
+              onToggle={checked => onToggle('useExperiments', checked)}
+              checked={useExperiments}
+            />
+          </IonItem>
           <IonItem id="app-reset-btn" onClick={() => resetDialog(resetApp)}>
             <IonIcon icon={undo} size="small" slot="start" />
             {t('Reset')}
