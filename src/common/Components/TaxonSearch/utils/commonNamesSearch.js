@@ -1,5 +1,5 @@
 import appModel from 'app_model';
-import speciesNames from 'common/data/names.data.json';
+import speciesNames from 'common/data/commonNames';
 
 export default (normSearchPhrase, results, maxResults) => {
   const { language } = appModel.attrs;

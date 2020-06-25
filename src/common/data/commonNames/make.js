@@ -1,4 +1,4 @@
-require('dotenv').config({ silent: true, path: '../../../.env' }); // eslint-disable-line
+require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-disable-line
 
 const request = require('request'); // eslint-disable-line
 const fs = require('fs');
@@ -52,7 +52,7 @@ const turnNamesArrayIntoLangObject = array =>
     } = term;
 
     if (languageCode === 'lat') {
-      // no need for latin - see species.data.json file
+      // no need for latin - see data/species/index.json file
       return agg;
     }
 
@@ -77,7 +77,7 @@ request(options, (error, response) => {
   const structuredNames = turnNamesArrayIntoLangObject(namesArray);
 
   const names = JSON.stringify(structuredNames, null, 2);
-  fs.writeFileSync('./names.data.json', names, 'utf8');
+  fs.writeFileSync('./index.json', names, 'utf8');
 
-  console.log('Success!');
+  console.log('Success! 🚀');
 });

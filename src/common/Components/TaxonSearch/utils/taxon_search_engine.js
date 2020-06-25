@@ -1,22 +1,17 @@
 /** ****************************************************************************
  * Generates species list suggestions.
  **************************************************************************** */
-import Log from 'helpers/log';
-import species from 'common/data/species.data.json';
+import species from 'common/data/species';
 import searchSciNames from './scientificNamesSearch';
 import searchCommonNames from './commonNamesSearch';
 
-let loading = false;
+const loading = false;
 
 const MAX = 20;
 
 const API = {
   async init() {
-    Log('Taxon search engine: initializing.');
-    loading = true;
-    // data = await import(/* webpackChunkName: "data" */ 'common/data/species_names.data.json');
-    // commonNamePointers = data.data;
-    loading = false;
+    // empty
   },
 
   /**
@@ -48,7 +43,7 @@ const API = {
         await API.init();
         return API.search(searchPhrase || '', options);
       }
-      
+
       return Promise.resolve([]);
     }
 

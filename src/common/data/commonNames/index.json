@@ -5325,6 +5325,12 @@
       "preferredId": 432399
     },
     {
+      "warehouse_id": 466597,
+      "common_name": "Mountain Fritillary/cranberry Fritillary",
+      "scientific_name": "Boloria napaea/aquilonaris",
+      "preferredId": 466596
+    },
+    {
       "warehouse_id": 434394,
       "common_name": "Mountain Green-veined White",
       "scientific_name": "Pieris bryoniae",
@@ -5421,13 +5427,19 @@
       "preferredId": 432484
     },
     {
-      "warehouse_id": 434421,
+      "warehouse_id": 466595,
+      "common_name": "Northern Wall Brown/large Wall Brown",
+      "scientific_name": "Lasiommata petropolitana/maera",
+      "preferredId": 466594
+    },
+    {
+      "warehouse_id": 462956,
       "common_name": "Oberthür's Anomalous Blue",
       "scientific_name": "Polyommatus fabressei",
       "preferredId": 432372
     },
     {
-      "warehouse_id": 462956,
+      "warehouse_id": 434421,
       "common_name": "Oberthür's Anomalous Blue",
       "scientific_name": "Polyommatus fabressei",
       "preferredId": 432372
@@ -5967,6 +5979,12 @@
       "preferredId": 432404
     },
     {
+      "warehouse_id": 466593,
+      "common_name": "Small Pearl-bordered Fritillary/pearl-bordered Fritillary",
+      "scientific_name": "Boloria selene/euphrosyne",
+      "preferredId": 466592
+    },
+    {
       "warehouse_id": 434542,
       "common_name": "Small Skipper",
       "scientific_name": "Thymelicus sylvestris",
@@ -6283,6 +6301,54 @@
       "common_name": "Two-tailed Pasha",
       "scientific_name": "Charaxes jasius",
       "preferredId": 432460
+    },
+    {
+      "warehouse_id": 466586,
+      "common_name": "Unidentified Blue",
+      "scientific_name": "Unidentified Blue",
+      "preferredId": 466586
+    },
+    {
+      "warehouse_id": 466590,
+      "common_name": "Unidentified Browns, Graylings And Ringlets",
+      "scientific_name": "Unidentified Browns, Graylings and Ringlets",
+      "preferredId": 466590
+    },
+    {
+      "warehouse_id": 467046,
+      "common_name": "Unidentified Butterfly/moth",
+      "scientific_name": "Lepidoptera",
+      "preferredId": 431984
+    },
+    {
+      "warehouse_id": 466587,
+      "common_name": "Unidentified Copper",
+      "scientific_name": "Unidentified Copper",
+      "preferredId": 466587
+    },
+    {
+      "warehouse_id": 466591,
+      "common_name": "Unidentified Fritillary",
+      "scientific_name": "Unidentified Fritillary",
+      "preferredId": 466591
+    },
+    {
+      "warehouse_id": 466588,
+      "common_name": "Unidentified Hairstreak",
+      "scientific_name": "Unidentified Hairstreak",
+      "preferredId": 466588
+    },
+    {
+      "warehouse_id": 466589,
+      "common_name": "Unidentified Heliconians And Fritillaries",
+      "scientific_name": "Unidentified Heliconians and Fritillaries",
+      "preferredId": 466589
+    },
+    {
+      "warehouse_id": 467016,
+      "common_name": "Unidentified White",
+      "scientific_name": "Pieridae",
+      "preferredId": 431987
     },
     {
       "warehouse_id": 434607,
@@ -7549,6 +7615,12 @@
       "preferredId": 432484
     },
     {
+      "warehouse_id": 467014,
+      "common_name": "Berggräsfjäril/vitgräsfjäril",
+      "scientific_name": "Lasiommata petropolitana/maera",
+      "preferredId": 466594
+    },
+    {
       "warehouse_id": 434532,
       "common_name": "Bergvitfjäril",
       "scientific_name": "Pontia chloridice",
@@ -7577,6 +7649,12 @@
       "common_name": "Brunfläckig Pärlemorfjäril",
       "scientific_name": "Boloria selene",
       "preferredId": 432404
+    },
+    {
+      "warehouse_id": 467013,
+      "common_name": "Brunfläckig Pärlemorfjäril/prydlig Pärlemorfjäril",
+      "scientific_name": "Boloria selene/euphrosyne",
+      "preferredId": 466592
     },
     {
       "warehouse_id": 434248,
@@ -7661,6 +7739,12 @@
       "common_name": "Fjällpärlemorfjäril",
       "scientific_name": "Boloria napaea",
       "preferredId": 432399
+    },
+    {
+      "warehouse_id": 467015,
+      "common_name": "Fjällpärlemorfjäril/myrpärlemorfjäril",
+      "scientific_name": "Boloria napaea/aquilonaris",
+      "preferredId": 466596
     },
     {
       "warehouse_id": 434240,
@@ -7925,6 +8009,54 @@
       "common_name": "Nässelfjäril",
       "scientific_name": "Aglais urticae",
       "preferredId": 432426
+    },
+    {
+      "warehouse_id": 467000,
+      "common_name": "Obestämd Blåvinge",
+      "scientific_name": "Unidentified Blue",
+      "preferredId": 466586
+    },
+    {
+      "warehouse_id": 467047,
+      "common_name": "Obestämd Fjäril",
+      "scientific_name": "Lepidoptera",
+      "preferredId": 431984
+    },
+    {
+      "warehouse_id": 467011,
+      "common_name": "Obestämd Gräsfjäril",
+      "scientific_name": "Unidentified Browns, Graylings and Ringlets",
+      "preferredId": 466590
+    },
+    {
+      "warehouse_id": 467001,
+      "common_name": "Obestämd Guldvinge",
+      "scientific_name": "Unidentified Copper",
+      "preferredId": 466587
+    },
+    {
+      "warehouse_id": 467012,
+      "common_name": "Obestämd Nätfjäril",
+      "scientific_name": "Unidentified Fritillary",
+      "preferredId": 466591
+    },
+    {
+      "warehouse_id": 467010,
+      "common_name": "Obestämd Pärlemorfjäril",
+      "scientific_name": "Unidentified Heliconians and Fritillaries",
+      "preferredId": 466589
+    },
+    {
+      "warehouse_id": 467002,
+      "common_name": "Obestämd Snabbvinge",
+      "scientific_name": "Unidentified Hairstreak",
+      "preferredId": 466588
+    },
+    {
+      "warehouse_id": 467017,
+      "common_name": "Obestämd Vitfjäril",
+      "scientific_name": "Pieridae",
+      "preferredId": 431987
     },
     {
       "warehouse_id": 434325,

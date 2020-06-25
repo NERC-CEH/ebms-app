@@ -3,7 +3,7 @@ import { IonList, IonItem, IonLabel } from '@ionic/react';
 import Page from 'Lib/Page';
 import Main from 'Lib/Main';
 import Header from 'Lib/Header';
-import species from 'common/data/species.profiles.data';
+import species from 'common/data/profiles';
 import './sponsors.png';
 import './flumens.png';
 import './styles.scss';

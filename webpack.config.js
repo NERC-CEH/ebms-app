@@ -60,11 +60,6 @@ const config = {
       user_model: 'common/models/user_model',
       model_factory: 'common/models/model_factory',
 
-      // species database
-      'common/data/species.data.json': isDevEnv
-        ? 'common/data/species.data.dev.json'
-        : 'common/data/species.data.json',
-
       // configs
       './transect$': isDevEnv ? './transect.dev.js' : './transect.js',
       './area-count$': isDevEnv ? './area-count.dev.js' : './area-count.js',

@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import names from 'common/data/names.data';
+import names from 'common/data/commonNames';
 import en from './interface/en.pot';
 import species_en from './species/en.pot';
 

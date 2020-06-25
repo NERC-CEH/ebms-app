@@ -1,5 +1,5 @@
 // get local environment variables from .env
-require('dotenv').config({ silent: true, path: '../../../.env' }); // eslint-disable-line
+require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-disable-line
 const request = require('request'); // eslint-disable-line
 
 const { APP_INDICIA_API_KEY, APP_INDICIA_API_USER_AUTH } = process.env;
@@ -34,18 +34,14 @@ async function fetch(listID) {
 
 function saveSpeciesToFile(species) {
   return new Promise((resolve, reject) => {
-    fs.writeFile(
-      './species.data.json',
-      JSON.stringify(species, null, 2),
-      err => {
-        if (err) {
-          reject(err);
-          return;
-        }
-
-        resolve(species);
+    fs.writeFile('./index.json', JSON.stringify(species, null, 2), err => {
+      if (err) {
+        reject(err);
+        return;
       }
-    );
+
+      resolve(species);
+    });
   });
 }
 

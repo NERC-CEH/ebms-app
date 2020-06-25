@@ -16,9 +16,9 @@
     "test:watch": "karma start test/karma.conf.js --no-single-run",
     "test:sauce": "karma start test/karma.conf-sauce.js",
     "test:eslint": "mocha test/eslint-test.js",
-    "make:species:search": "cd src/common/data && node makeSpeciesSearch.js",
-    "make:species:profiles": "cd src/common/data && node makeSpeciesProfiles.js",
-    "fetch:species:names": "cd src/common/data && node fetchSpeciesCommonNames.js"
+    "make:species:data": "cd src/common/data/species && node make.js",
+    "make:species:profiles": "cd src/common/data/profiles && node make.js",
+    "make:species:commonNames": "cd src/common/data/commonNames && node make.js"
   },
   "husky": {
     "hooks": {

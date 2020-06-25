@@ -6,7 +6,7 @@ import { Trans as T } from 'react-i18next';
 import Page from 'Lib/Page';
 import Main from 'Lib/Main';
 import ModalHeader from 'Lib/ModalHeader';
-import speciesProfiles from 'common/data/species.profiles.data.json';
+import speciesProfiles from 'common/data/profiles';
 import SpeciesProfile from './components/SpeciesProfile';
 import UserFeedbackRequest from './components/UserFeedbackRequest';
 import './images';

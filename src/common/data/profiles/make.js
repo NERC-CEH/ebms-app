@@ -12,18 +12,14 @@ async function fetchAbundance() {
 
 function save(species) {
   return new Promise((resolve, reject) => {
-    fs.writeFile(
-      './species.profiles.data.json',
-      JSON.stringify(species),
-      err => {
-        if (err) {
-          reject(err);
-          return;
-        }
-
-        resolve(species);
+    fs.writeFile('./index.json', JSON.stringify(species), err => {
+      if (err) {
+        reject(err);
+        return;
       }
-    );
+
+      resolve(species);
+    });
   });
 }
 
