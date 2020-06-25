@@ -111,3 +111,10 @@
 ### Features
 
 - Updated species list to include burnet moths
+
+## 1.8.0
+
+### Features
+
+- Added bumblebees and dragonflies. 
+- Fixed some missing butterfly species. 
