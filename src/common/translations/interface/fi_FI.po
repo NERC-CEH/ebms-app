@@ -1375,9 +1375,5 @@ msgid "You have succcesfully copied {{speciesCount}} species."
 msgstr ""
 
 # Species list copy functionality
-msgid "Šiandieną"
-msgstr ""
-
-# Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
 msgstr ""
