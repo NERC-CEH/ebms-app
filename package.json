@@ -9,8 +9,7 @@
   "scripts": {
     "build": "webpack --display minimal",
     "build:production": "grunt",
-    "start": "node other/server.js",
-    "start:dev": "webpack-dev-server --config webpack.config.js --content-base dist/main --port 8000",
+    "start": "webpack-dev-server --config webpack.config.js --content-base dist/main --port 8000",
     "deploy": "vercel --prod -A other/now.json",
     "clean": "rm -rf cordova build resources",
     "test": "karma start test/karma.conf.js",
