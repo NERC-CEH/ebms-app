@@ -3885,18 +3885,6 @@
       "preferredId": 432711
     },
     {
-      "warehouse_id": 434088,
-      "common_name": "Black-eyed Blue",
-      "scientific_name": "Glaucopsyche melanops",
-      "preferredId": 432304
-    },
-    {
-      "warehouse_id": 434089,
-      "common_name": "Black-veined White",
-      "scientific_name": "Aporia crataegi",
-      "preferredId": 432214
-    },
-    {
       "warehouse_id": 434084,
       "common_name": "Black Hairstreak",
       "scientific_name": "Satyrium pruni",
@@ -3915,22 +3903,34 @@
       "preferredId": 432538
     },
     {
+      "warehouse_id": 434088,
+      "common_name": "Black-eyed Blue",
+      "scientific_name": "Glaucopsyche melanops",
+      "preferredId": 432304
+    },
+    {
+      "warehouse_id": 434089,
+      "common_name": "Black-veined White",
+      "scientific_name": "Aporia crataegi",
+      "preferredId": 432214
+    },
+    {
       "warehouse_id": 434091,
       "common_name": "Blind Ringlet",
       "scientific_name": "Erebia pharte",
       "preferredId": 432612
     },
     {
-      "warehouse_id": 434093,
-      "common_name": "Blue-spot Hairstreak",
-      "scientific_name": "Satyrium spini",
-      "preferredId": 432278
-    },
-    {
       "warehouse_id": 434092,
       "common_name": "Blue Argus",
       "scientific_name": "Aricia anteros",
       "preferredId": 432340
+    },
+    {
+      "warehouse_id": 434093,
+      "common_name": "Blue-spot Hairstreak",
+      "scientific_name": "Satyrium spini",
+      "preferredId": 432278
     },
     {
       "warehouse_id": 434094,
@@ -3945,28 +3945,22 @@
       "preferredId": 432325
     },
     {
-      "warehouse_id": 434098,
-      "common_name": "Bright-eyed Ringlet",
-      "scientific_name": "Erebia oeme",
-      "preferredId": 432591
-    },
-    {
       "warehouse_id": 434097,
       "common_name": "Bright Babul Blue",
       "scientific_name": "Azanus ubaldus",
       "preferredId": 432282
     },
     {
+      "warehouse_id": 434098,
+      "common_name": "Bright-eyed Ringlet",
+      "scientific_name": "Erebia oeme",
+      "preferredId": 432591
+    },
+    {
       "warehouse_id": 434099,
       "common_name": "Brimstone",
       "scientific_name": "Gonepteryx rhamni",
       "preferredId": 432194
-    },
-    {
-      "warehouse_id": 434105,
-      "common_name": "Brown's Grayling",
-      "scientific_name": "Pseudochazara amymone",
-      "preferredId": 432544
     },
     {
       "warehouse_id": 434101,
@@ -3979,6 +3973,12 @@
       "common_name": "Brown Hairstreak",
       "scientific_name": "Thecla betulae",
       "preferredId": 432262
+    },
+    {
+      "warehouse_id": 434105,
+      "common_name": "Brown's Grayling",
+      "scientific_name": "Pseudochazara amymone",
+      "preferredId": 432544
     },
     {
       "warehouse_id": 434106,
@@ -4395,12 +4395,6 @@
       "preferredId": 432247
     },
     {
-      "warehouse_id": 434196,
-      "common_name": "Dusky-winged Fritillary",
-      "scientific_name": "Boloria improba",
-      "preferredId": 432407
-    },
-    {
       "warehouse_id": 434192,
       "common_name": "Dusky Grizzled Skipper",
       "scientific_name": "Pyrgus cacaliae",
@@ -4423,6 +4417,12 @@
       "common_name": "Dusky Meadow Brown",
       "scientific_name": "Hyponephele lycaon",
       "preferredId": 432556
+    },
+    {
+      "warehouse_id": 434196,
+      "common_name": "Dusky-winged Fritillary",
+      "scientific_name": "Boloria improba",
+      "preferredId": 432407
     },
     {
       "warehouse_id": 434198,
@@ -4779,6 +4779,12 @@
       "preferredId": 432204
     },
     {
+      "warehouse_id": 434269,
+      "common_name": "Green Hairstreak",
+      "scientific_name": "Callophrys rubi",
+      "preferredId": 432270
+    },
+    {
       "warehouse_id": 434271,
       "common_name": "Green-striped White",
       "scientific_name": "Euchloe belemia",
@@ -4795,12 +4801,6 @@
       "common_name": "Green-veined White",
       "scientific_name": "Pieris napi",
       "preferredId": 432227
-    },
-    {
-      "warehouse_id": 434269,
-      "common_name": "Green Hairstreak",
-      "scientific_name": "Callophrys rubi",
-      "preferredId": 432270
     },
     {
       "warehouse_id": 434276,
@@ -5679,18 +5679,6 @@
       "preferredId": 432243
     },
     {
-      "warehouse_id": 434474,
-      "common_name": "Purple-edged Copper",
-      "scientific_name": "Lycaena hippothoe",
-      "preferredId": 432254
-    },
-    {
-      "warehouse_id": 434476,
-      "common_name": "Purple-shot Copper",
-      "scientific_name": "Lycaena alciphron",
-      "preferredId": 432250
-    },
-    {
       "warehouse_id": 434470,
       "common_name": "Purple Emperor",
       "scientific_name": "Apatura iris",
@@ -5701,6 +5689,18 @@
       "common_name": "Purple Hairstreak",
       "scientific_name": "Favonius quercus",
       "preferredId": 432263
+    },
+    {
+      "warehouse_id": 434474,
+      "common_name": "Purple-edged Copper",
+      "scientific_name": "Lycaena hippothoe",
+      "preferredId": 432254
+    },
+    {
+      "warehouse_id": 434476,
+      "common_name": "Purple-shot Copper",
+      "scientific_name": "Lycaena alciphron",
+      "preferredId": 432250
     },
     {
       "warehouse_id": 434478,
@@ -5733,6 +5733,12 @@
       "preferredId": 432193
     },
     {
+      "warehouse_id": 434484,
+      "common_name": "Red Admiral",
+      "scientific_name": "Vanessa atalanta",
+      "preferredId": 432424
+    },
+    {
       "warehouse_id": 434486,
       "common_name": "Red-disked Alpine",
       "scientific_name": "Erebia discoidalis",
@@ -5743,12 +5749,6 @@
       "common_name": "Red-underwing Skipper",
       "scientific_name": "Spialia sertorius",
       "preferredId": 432153
-    },
-    {
-      "warehouse_id": 434484,
-      "common_name": "Red Admiral",
-      "scientific_name": "Vanessa atalanta",
-      "preferredId": 432424
     },
     {
       "warehouse_id": 434488,
@@ -6399,18 +6399,6 @@
       "preferredId": 432494
     },
     {
-      "warehouse_id": 434621,
-      "common_name": "White-banded Grayling",
-      "scientific_name": "Pseudochazara anthelea",
-      "preferredId": 432545
-    },
-    {
-      "warehouse_id": 434622,
-      "common_name": "White-letter Hairstreak",
-      "scientific_name": "Satyrium w-album",
-      "preferredId": 432277
-    },
-    {
       "warehouse_id": 434618,
       "common_name": "White Admiral",
       "scientific_name": "Limenitis camilla",
@@ -6427,6 +6415,18 @@
       "common_name": "White Speck Ringlet",
       "scientific_name": "Erebia claudina",
       "preferredId": 432579
+    },
+    {
+      "warehouse_id": 434621,
+      "common_name": "White-banded Grayling",
+      "scientific_name": "Pseudochazara anthelea",
+      "preferredId": 432545
+    },
+    {
+      "warehouse_id": 434622,
+      "common_name": "White-letter Hairstreak",
+      "scientific_name": "Satyrium w-album",
+      "preferredId": 432277
     },
     {
       "warehouse_id": 434624,
