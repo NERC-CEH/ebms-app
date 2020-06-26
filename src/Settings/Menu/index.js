@@ -46,13 +46,7 @@ async function uploadAllSamples(userModel, t) {
 }
 
 const Container = observer(({ appModel, userModel }) => {
-  const {
-    useTraining,
-    sendAnalytics,
-    useExperiments,
-    language,
-    country,
-  } = appModel.attrs;
+  const { useTraining, sendAnalytics, language, country } = appModel.attrs;
   const { t } = useTranslation();
 
   return (
@@ -61,7 +55,6 @@ const Container = observer(({ appModel, userModel }) => {
       <Main
         useTraining={useTraining}
         sendAnalytics={sendAnalytics}
-        useExperiments={useExperiments}
         uploadAllSamples={() => uploadAllSamples(userModel, t)}
         resetApp={() => resetApp(appModel, userModel)}
         onToggle={(setting, checked) => onToggle(appModel, setting, checked)}

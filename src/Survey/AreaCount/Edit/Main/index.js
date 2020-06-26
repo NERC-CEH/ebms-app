@@ -58,17 +58,11 @@ class AreaCount extends Component {
     areaSurveyListSortedByTime: PropTypes.bool.isRequired,
     increaseCount: PropTypes.func.isRequired,
     isDisabled: PropTypes.bool,
-    useExperiments: PropTypes.bool,
     copyPreviousSurveyTaxonList: PropTypes.func.isRequired,
   };
 
   getSpeciesAddButton = () => {
-    const {
-      sample,
-      isDisabled,
-      copyPreviousSurveyTaxonList,
-      useExperiments,
-    } = this.props;
+    const { sample, isDisabled, copyPreviousSurveyTaxonList } = this.props;
 
     if (isDisabled) {
       // placeholder
@@ -96,7 +90,7 @@ class AreaCount extends Component {
         onClick={() => {
           this.props.history.push(`/survey/area/${sample.cid}/edit/taxa`);
         }}
-        onLongClick={() => useExperiments && selectOptions(this.props)}
+        onLongClick={() => selectOptions(this.props)}
       >
         <IonIcon icon={addCircleOutline} slot="start" />
         <IonLabel>
