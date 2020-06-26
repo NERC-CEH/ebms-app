@@ -86,19 +86,19 @@ function saveFile(data) {
   fs.writeFileSync('./index.json', names, 'utf8');
 }
 
-function sortAlphabetically(species) {
-  return species.sort((sp1, sp2) => sp1.taxon.localeCompare(sp2.taxon));
-}
+// function sortAlphabetically(species) {
+//   return species.sort((sp1, sp2) => sp1.taxon.localeCompare(sp2.taxon));
+// }
 
 (async () => {
   const butterflies = await fetch(251);
-  const mothsOnly = ({ taxon_group: group }) => group === 'insect - moth';
-  const moths = (await fetch(260)).filter(mothsOnly);
+  // const mothsOnly = ({ taxon_group: group }) => group === 'insect - moth';
+  // const moths = (await fetch(260)).filter(mothsOnly);
 
-  const species = [...butterflies, ...moths];
-  const sortedSpecies = sortAlphabetically(species);
+  // const species = [...butterflies, ...moths];
+  // const sortedSpecies = sortAlphabetically(species);
 
-  const structuredNames = turnNamesArrayIntoLangObject(sortedSpecies);
+  const structuredNames = turnNamesArrayIntoLangObject(butterflies);
 
   saveFile(structuredNames);
 

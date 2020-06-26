@@ -5433,13 +5433,13 @@
       "preferredId": 466594
     },
     {
-      "warehouse_id": 462956,
+      "warehouse_id": 434421,
       "common_name": "Oberthür's Anomalous Blue",
       "scientific_name": "Polyommatus fabressei",
       "preferredId": 432372
     },
     {
-      "warehouse_id": 434421,
+      "warehouse_id": 462956,
       "common_name": "Oberthür's Anomalous Blue",
       "scientific_name": "Polyommatus fabressei",
       "preferredId": 432372
@@ -7759,16 +7759,16 @@
       "preferredId": 432408
     },
     {
-      "warehouse_id": 434078,
-      "common_name": "Grönfläckig Vitfjäril",
-      "scientific_name": "Pontia daplidice",
-      "preferredId": 432218
-    },
-    {
       "warehouse_id": 434199,
       "common_name": "Grönfläckig Vitfjäril",
       "scientific_name": "Pontia edusa",
       "preferredId": 432217
+    },
+    {
+      "warehouse_id": 434078,
+      "common_name": "Grönfläckig Vitfjäril",
+      "scientific_name": "Pontia daplidice",
+      "preferredId": 432218
     },
     {
       "warehouse_id": 434270,
