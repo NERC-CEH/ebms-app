@@ -1,11 +1,16 @@
 // get local environment variables from .env
 require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-disable-line
 const request = require('request'); // eslint-disable-line
+const fs = require('fs');
+const optimise = require('./speciesOptimise');
 
 const { APP_INDICIA_API_KEY, APP_INDICIA_API_USER_AUTH } = process.env;
 
-const fs = require('fs');
-const optimise = require('./speciesOptimise');
+if (!APP_INDICIA_API_KEY || !APP_INDICIA_API_USER_AUTH) {
+  throw new Error(
+    'APP_INDICIA_API_KEY or APP_INDICIA_API_USER_AUTH is missing from env.'
+  );
+}
 
 async function fetch(listID) {
   return new Promise(resolve => {
