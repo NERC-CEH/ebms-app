@@ -93,9 +93,10 @@ function sortAlphabetically(species) {
 (async () => {
   const butterflies = await fetch(251);
   const mothsOnly = ({ taxon_group: group }) => group === 'insect - moth';
-  // const moths = (await fetch(260)).filter(mothsOnly);
+  const swedishOnly = ({ language_iso: lang }) => lang === 'swe';
+  const moths = (await fetch(260)).filter(mothsOnly).filter(swedishOnly);
 
-  const species = [...butterflies];
+  const species = [...butterflies, ...moths];
   const sortedSpecies = sortAlphabetically(species);
 
   const structuredNames = turnNamesArrayIntoLangObject(sortedSpecies);

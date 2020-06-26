@@ -7525,6 +7525,18 @@
       "preferredId": 432337
     },
     {
+      "warehouse_id": 466994,
+      "common_name": "Ängsmätare",
+      "scientific_name": "Ematurga atomaria",
+      "preferredId": 457702
+    },
+    {
+      "warehouse_id": 467029,
+      "common_name": "Ängsmetallvinge",
+      "scientific_name": "Adscita statices",
+      "preferredId": 455071
+    },
+    {
       "warehouse_id": 434257,
       "common_name": "Ängsnätfjäril",
       "scientific_name": "Melitaea cinxia",
@@ -7633,6 +7645,12 @@
       "preferredId": 432175
     },
     {
+      "warehouse_id": 467041,
+      "common_name": "Bredbrämad Bastardsvärmare",
+      "scientific_name": "Zygaena lonicerae",
+      "preferredId": 455123
+    },
+    {
       "warehouse_id": 434252,
       "common_name": "Brun Blåvinge",
       "scientific_name": "Eumedonia eumedon",
@@ -7705,6 +7723,12 @@
       "preferredId": 432263
     },
     {
+      "warehouse_id": 466998,
+      "common_name": "Ekspinnare",
+      "scientific_name": "Lasiocampa quercus",
+      "preferredId": 457094
+    },
+    {
       "warehouse_id": 434104,
       "common_name": "Eldsnabbvinge",
       "scientific_name": "Thecla betulae",
@@ -7721,6 +7745,12 @@
       "common_name": "Fingerörtsvisslare",
       "scientific_name": "Pyrgus serratulae",
       "preferredId": 432176
+    },
+    {
+      "warehouse_id": 467033,
+      "common_name": "Fjällbastardsvärmare",
+      "scientific_name": "Zygaena exulans",
+      "preferredId": 455098
     },
     {
       "warehouse_id": 434185,
@@ -7747,6 +7777,12 @@
       "preferredId": 466596
     },
     {
+      "warehouse_id": 466973,
+      "common_name": "Fläckig Glansspinnare",
+      "scientific_name": "Callimorpha dominula",
+      "preferredId": 459045
+    },
+    {
       "warehouse_id": 434240,
       "common_name": "Frejas Pärlemorfjäril",
       "scientific_name": "Boloria freija",
@@ -7757,6 +7793,12 @@
       "common_name": "Friggas Pärlemorfjäril",
       "scientific_name": "Boloria frigga",
       "preferredId": 432408
+    },
+    {
+      "warehouse_id": 467004,
+      "common_name": "Gammaeule",
+      "scientific_name": "Autographa gamma",
+      "preferredId": 459510
     },
     {
       "warehouse_id": 434199,
@@ -7777,6 +7819,12 @@
       "preferredId": 432270
     },
     {
+      "warehouse_id": 467006,
+      "common_name": "Gulbrokigt Slåtterfly",
+      "scientific_name": "Euclidia glyphica",
+      "preferredId": 459370
+    },
+    {
       "warehouse_id": 434130,
       "common_name": "Gulfläckig Glanssmygare",
       "scientific_name": "Carterocephalus palaemon",
@@ -7793,6 +7841,18 @@
       "common_name": "Gulringad Gräsfjäril",
       "scientific_name": "Erebia embla",
       "preferredId": 432574
+    },
+    {
+      "warehouse_id": 466991,
+      "common_name": "Gulvingad Fältmätare",
+      "scientific_name": "Camptogramma bilineata",
+      "preferredId": 458171
+    },
+    {
+      "warehouse_id": 466987,
+      "common_name": "Gulvit Streckmätare",
+      "scientific_name": "Cabera exanthemata",
+      "preferredId": 457395
     },
     {
       "warehouse_id": 434090,
@@ -7831,6 +7891,18 @@
       "preferredId": 432402
     },
     {
+      "warehouse_id": 467024,
+      "common_name": "Humledagsvärmare",
+      "scientific_name": "Hemaris fuciformis",
+      "preferredId": 457184
+    },
+    {
+      "warehouse_id": 467028,
+      "common_name": "Humledagsvärmare/svävflugedagsvärmare",
+      "scientific_name": "Hemaris fuciformis/tityus",
+      "preferredId": 466577
+    },
+    {
       "warehouse_id": 434333,
       "common_name": "Kålfjäril",
       "scientific_name": "Pieris brassicae",
@@ -7841,6 +7913,12 @@
       "common_name": "Kamgräsfjäril",
       "scientific_name": "Coenonympha pamphilus",
       "preferredId": 432465
+    },
+    {
+      "warehouse_id": 466975,
+      "common_name": "Karminspinnare",
+      "scientific_name": "Tyria jacobaeae",
+      "preferredId": 459049
     },
     {
       "warehouse_id": 434319,
@@ -7865,6 +7943,12 @@
       "common_name": "Klöverblåvinge",
       "scientific_name": "Glaucopsyche alexis",
       "preferredId": 432306
+    },
+    {
+      "warehouse_id": 467031,
+      "common_name": "Klubbsprötad Bastardsvärmare",
+      "scientific_name": "Zygaena minos",
+      "preferredId": 455078
     },
     {
       "warehouse_id": 434329,
@@ -7957,6 +8041,18 @@
       "preferredId": 432505
     },
     {
+      "warehouse_id": 467037,
+      "common_name": "Mindre Bastardsvärmare",
+      "scientific_name": "Zygaena viciae",
+      "preferredId": 455100
+    },
+    {
+      "warehouse_id": 467043,
+      "common_name": "Mindre Bastardsvärmare/bredbrämad Bastardsvärmare",
+      "scientific_name": "Zygaena viciae/lonicera",
+      "preferredId": 466579
+    },
+    {
       "warehouse_id": 434534,
       "common_name": "Mindre Blåvinge",
       "scientific_name": "Cupido minimus",
@@ -7967,6 +8063,12 @@
       "common_name": "Mindre Guldvinge",
       "scientific_name": "Lycaena phlaeas",
       "preferredId": 432258
+    },
+    {
+      "warehouse_id": 467020,
+      "common_name": "Mindre Påfågelspinnare",
+      "scientific_name": "Saturnia pavonia",
+      "preferredId": 457146
     },
     {
       "warehouse_id": 434220,
@@ -8005,10 +8107,22 @@
       "preferredId": 432173
     },
     {
+      "warehouse_id": 467018,
+      "common_name": "Nagelspinnare",
+      "scientific_name": "Aglia tau",
+      "preferredId": 457140
+    },
+    {
       "warehouse_id": 434545,
       "common_name": "Nässelfjäril",
       "scientific_name": "Aglais urticae",
       "preferredId": 432426
+    },
+    {
+      "warehouse_id": 467045,
+      "common_name": "Obestämd Bastardsvärmare",
+      "scientific_name": "Zygaena",
+      "preferredId": 447456
     },
     {
       "warehouse_id": 467000,
@@ -8033,6 +8147,12 @@
       "common_name": "Obestämd Guldvinge",
       "scientific_name": "Unidentified Copper",
       "preferredId": 466587
+    },
+    {
+      "warehouse_id": 466984,
+      "common_name": "Obestämd Mätare",
+      "scientific_name": "Geometridae",
+      "preferredId": 446300
     },
     {
       "warehouse_id": 467012,
@@ -8107,6 +8227,12 @@
       "preferredId": 432345
     },
     {
+      "warehouse_id": 466977,
+      "common_name": "Rödfransad Björnspinnare",
+      "scientific_name": "Diacrisia sannio",
+      "preferredId": 459005
+    },
+    {
       "warehouse_id": 434139,
       "common_name": "Rödgul Höfjäril",
       "scientific_name": "Colias crocea",
@@ -8117,6 +8243,12 @@
       "common_name": "Rovfjäril",
       "scientific_name": "Pieris rapae",
       "preferredId": 432223
+    },
+    {
+      "warehouse_id": 466989,
+      "common_name": "Rutig Buskmätare",
+      "scientific_name": "Chiasmia clathrata",
+      "preferredId": 457302
     },
     {
       "warehouse_id": 434471,
@@ -8147,6 +8279,12 @@
       "common_name": "Segelfjäril",
       "scientific_name": "Iphiclides podalirius",
       "preferredId": 432123
+    },
+    {
+      "warehouse_id": 467039,
+      "common_name": "Sexfläckig Bastardsvärmare",
+      "scientific_name": "Zygaena filipendulae",
+      "preferredId": 455121
     },
     {
       "warehouse_id": 434044,
@@ -8215,10 +8353,22 @@
       "preferredId": 432562
     },
     {
+      "warehouse_id": 467035,
+      "common_name": "Smalsprötad Bastardsvärmare",
+      "scientific_name": "Zygaena osterodensis",
+      "preferredId": 455112
+    },
+    {
       "warehouse_id": 434280,
       "common_name": "Smultronvisslare",
       "scientific_name": "Pyrgus malvae",
       "preferredId": 432170
+    },
+    {
+      "warehouse_id": 466985,
+      "common_name": "Snövit Streckmätare",
+      "scientific_name": "Cabera pusaria",
+      "preferredId": 457391
     },
     {
       "warehouse_id": 434108,
@@ -8231,6 +8381,12 @@
       "common_name": "Sotguldvinge",
       "scientific_name": "Lycaena tityrus",
       "preferredId": 432260
+    },
+    {
+      "warehouse_id": 466996,
+      "common_name": "Sotmätare",
+      "scientific_name": "Odezia atrata",
+      "preferredId": 458449
     },
     {
       "warehouse_id": 434229,
@@ -8257,6 +8413,12 @@
       "preferredId": 432383
     },
     {
+      "warehouse_id": 467026,
+      "common_name": "Större Dagsvärmare",
+      "scientific_name": "Macroglossum stellatarum",
+      "preferredId": 457187
+    },
+    {
       "warehouse_id": 434543,
       "common_name": "Större Tåtelsmygare",
       "scientific_name": "Thymelicus sylvestris",
@@ -8281,6 +8443,12 @@
       "preferredId": 432237
     },
     {
+      "warehouse_id": 466981,
+      "common_name": "Svartribbad Vitvingemätare",
+      "scientific_name": "Siona lineata",
+      "preferredId": 457508
+    },
+    {
       "warehouse_id": 434095,
       "common_name": "Svartringlad Pärlemorfjäril",
       "scientific_name": "Boloria eunomia",
@@ -8291,6 +8459,12 @@
       "common_name": "Svavelgul Höfjäril",
       "scientific_name": "Colias palaeno",
       "preferredId": 432210
+    },
+    {
+      "warehouse_id": 467022,
+      "common_name": "Svävflugedagsvärmare",
+      "scientific_name": "Hemaris tityus",
+      "preferredId": 457182
     },
     {
       "warehouse_id": 434610,
@@ -8371,6 +8545,12 @@
       "preferredId": 432451
     },
     {
+      "warehouse_id": 466979,
+      "common_name": "Vickerbackmätare",
+      "scientific_name": "Scotopteryx chenopodiata",
+      "preferredId": 458114
+    },
+    {
       "warehouse_id": 434634,
       "common_name": "Videfuks",
       "scientific_name": "Nymphalis xanthomelas",
@@ -8411,6 +8591,12 @@
       "common_name": "Vitbandad Gräsfjäril",
       "scientific_name": "Chazara briseis",
       "preferredId": 432539
+    },
+    {
+      "warehouse_id": 467008,
+      "common_name": "Vitbrokigt Slåtterfly",
+      "scientific_name": "Euclidia mi",
+      "preferredId": 459372
     },
     {
       "warehouse_id": 434506,
