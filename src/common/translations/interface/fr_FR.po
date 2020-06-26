@@ -67,7 +67,7 @@ msgstr ""
 msgid "Estonia"
 msgstr ""
 
-msgid "Spain: Canary Islands"
+msgid "Spain (Canary Islands)"
 msgstr ""
 
 msgid "Finland"
@@ -127,10 +127,10 @@ msgstr ""
 msgid "Portugal"
 msgstr ""
 
-msgid "Portugal: Azores"
+msgid "Portugal (Azores)"
 msgstr ""
 
-msgid "Portugal: Madeira Islands"
+msgid "Portugal (Madeira Islands)"
 msgstr ""
 
 msgid "Romania"
@@ -148,7 +148,10 @@ msgstr ""
 msgid "Slovakia"
 msgstr ""
 
-msgid "Turkey"
+msgid "Turkey (Europe)"
+msgstr ""
+
+msgid "Turkey (Asia)"
 msgstr ""
 
 msgid "Ukraine"

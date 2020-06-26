@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # Karolis, 2020
+# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2020\n"
+"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,8 +66,8 @@ msgstr "Danija"
 msgid "Estonia"
 msgstr "Estija"
 
-msgid "Spain: Canary Islands"
-msgstr "Ispanija: Kanarų salos"
+msgid "Spain (Canary Islands)"
+msgstr "Ispanija (Kanarų salos)"
 
 msgid "Finland"
 msgstr "Suomija"
@@ -126,11 +126,11 @@ msgstr "Lenkija"
 msgid "Portugal"
 msgstr "Portugalija"
 
-msgid "Portugal: Azores"
-msgstr "Portugalija: Azorai"
+msgid "Portugal (Azores)"
+msgstr "Portugalija (Azorai)"
 
-msgid "Portugal: Madeira Islands"
-msgstr "Portugalija: Madeiros salos"
+msgid "Portugal (Madeira Islands)"
+msgstr "Portugalija (Madeiros salos)"
 
 msgid "Romania"
 msgstr "Rumunija"
@@ -147,8 +147,11 @@ msgstr "Slovėnija"
 msgid "Slovakia"
 msgstr "Slovakija"
 
-msgid "Turkey"
-msgstr "Turkija"
+msgid "Turkey (Europe)"
+msgstr "Turkija (Europoje)"
+
+msgid "Turkey (Asia)"
+msgstr "Turkija (Azijoje)"
 
 msgid "Ukraine"
 msgstr "Ukraina"
@@ -1338,28 +1341,29 @@ msgstr "Ar tikrai norite ištrinti {{taxon}} rūšį ?"
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
-msgstr ""
+msgstr "Orų prognozės yra gaunamos naudojant OpenWeatherMap API"
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Kopijuoti rūšis"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr ""
+msgstr "Ar tikrai norite kopijuoti rūšis iš praeito įrašo?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Kopijuoti"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
 msgstr ""
+"Atsiprašome, nebuvo rasta jokių rūšių, kurias būtų galima nukopijuoti."
 
 # Species list copy functionality
 msgid "You have succcesfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "Sėkmingai nukopijuotos rūšys: {{speciesCount}}."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Atsiprašome, nebuvo rasta jokių rūšių iš praeito įrašo."

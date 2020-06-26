@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # Karolis, 2020
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
+# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
+"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,7 +67,7 @@ msgstr "Dinamarca"
 msgid "Estonia"
 msgstr "Estonia "
 
-msgid "Spain: Canary Islands"
+msgid "Spain (Canary Islands)"
 msgstr "España: Islas Canarias"
 
 msgid "Finland"
@@ -127,10 +127,10 @@ msgstr "Polonia"
 msgid "Portugal"
 msgstr "Portugal"
 
-msgid "Portugal: Azores"
-msgstr "Portugal: Azores"
+msgid "Portugal (Azores)"
+msgstr "Portugal (Azores)"
 
-msgid "Portugal: Madeira Islands"
+msgid "Portugal (Madeira Islands)"
 msgstr "Portugal: Islas de Madeira"
 
 msgid "Romania"
@@ -148,8 +148,11 @@ msgstr "Eslovenia"
 msgid "Slovakia"
 msgstr "Eslovaquia"
 
-msgid "Turkey"
-msgstr "Turquía"
+msgid "Turkey (Europe)"
+msgstr ""
+
+msgid "Turkey (Asia)"
+msgstr ""
 
 msgid "Ukraine"
 msgstr "Ucrania"

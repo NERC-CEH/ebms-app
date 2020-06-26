@@ -67,7 +67,7 @@ msgstr "Tanska"
 msgid "Estonia"
 msgstr "Viro"
 
-msgid "Spain: Canary Islands"
+msgid "Spain (Canary Islands)"
 msgstr "Espanja: Kanarian saaret"
 
 msgid "Finland"
@@ -127,10 +127,10 @@ msgstr "Puola"
 msgid "Portugal"
 msgstr "Portugali"
 
-msgid "Portugal: Azores"
+msgid "Portugal (Azores)"
 msgstr "Portugali: Azorit"
 
-msgid "Portugal: Madeira Islands"
+msgid "Portugal (Madeira Islands)"
 msgstr "Portugali: Madeira"
 
 msgid "Romania"
@@ -148,8 +148,11 @@ msgstr "Slovenia"
 msgid "Slovakia"
 msgstr "Slovakia"
 
-msgid "Turkey"
-msgstr "Turkki"
+msgid "Turkey (Europe)"
+msgstr ""
+
+msgid "Turkey (Asia)"
+msgstr ""
 
 msgid "Ukraine"
 msgstr "Ukraina"

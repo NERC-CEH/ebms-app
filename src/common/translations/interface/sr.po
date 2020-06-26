@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # Miloš Popović <gpopac@gmail.com>, 2020
+# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Miloš Popović <gpopac@gmail.com>, 2020\n"
+"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/ceh/teams/95441/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,7 +66,7 @@ msgstr "Данска"
 msgid "Estonia"
 msgstr "Естонија"
 
-msgid "Spain: Canary Islands"
+msgid "Spain (Canary Islands)"
 msgstr "Шпанија: Канарска острва"
 
 msgid "Finland"
@@ -126,10 +126,10 @@ msgstr "Пољска"
 msgid "Portugal"
 msgstr "Португалија"
 
-msgid "Portugal: Azores"
+msgid "Portugal (Azores)"
 msgstr "Португалија: Азорска острва"
 
-msgid "Portugal: Madeira Islands"
+msgid "Portugal (Madeira Islands)"
 msgstr "Португалија: Острва Мадеире"
 
 msgid "Romania"
@@ -147,8 +147,11 @@ msgstr "Словенија"
 msgid "Slovakia"
 msgstr "Словачка"
 
-msgid "Turkey"
-msgstr "Турска"
+msgid "Turkey (Europe)"
+msgstr ""
+
+msgid "Turkey (Asia)"
+msgstr ""
 
 msgid "Ukraine"
 msgstr "Украјина"
