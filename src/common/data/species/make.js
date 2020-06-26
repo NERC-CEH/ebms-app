@@ -52,15 +52,15 @@ function sortAlphabetically(species) {
 
 (async () => {
   const butterflies = await fetch(251);
-  const mothsOnly = ({ taxon_group: group }) => group === 'insect - moth';
-  const moths = (await fetch(260)).filter(mothsOnly);
-  const bumblebees = await fetch(261);
-  const dragonflies = await fetch(265);
+  // const mothsOnly = ({ taxon_group: group }) => group === 'insect - moth';
+  // const moths = (await fetch(260)).filter(mothsOnly);
+  // const bumblebees = await fetch(261);
+  // const dragonflies = await fetch(265);
 
-  const species = [...butterflies, ...moths, ...bumblebees, ...dragonflies];
+  // const species = [...butterflies, ...moths, ...bumblebees, ...dragonflies];
 
-  const sortedSpecies = await sortAlphabetically(species);
-  const searchOptimisedList = await optimise(sortedSpecies);
+  // const sortedSpecies = await sortAlphabetically(species);
+  const searchOptimisedList = await optimise(butterflies);
   await saveSpeciesToFile(searchOptimisedList);
 
   console.log('All done! 🚀');
