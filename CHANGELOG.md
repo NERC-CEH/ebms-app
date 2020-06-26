@@ -1,67 +1,48 @@
-## 1.1
+## 1.8.1
 
-### Features
+- Add 15min count survey full species list copy
+- Add Swedish moth common names
+- Add Turkey (Asia)
 
-- Survey review before submit
-- Timer pause
+## 1.8.0
 
-### Other
+- Added bumblebees and dragonflies. 
+- Fixed some missing butterfly species. 
 
-- English and Swedish species common names
-- Reversed plus/minus buttons
-- Added some more missing translations
+## 1.7.1
 
-## 1.2
+- Updated species list to include burnet moths
 
-### Features
+## 1.7.0
 
-- Add Password Reset page
-- Add About page
-- Add all the remaining countries
-- Add life stage attribute
+- Added weather attributes to 15min survey
+- Fixed map drawing
 
-### Other
+## 1.6.1
 
-- Show already recorded species in the search grayed out.
-- Improve countdown timer visibility and add phone vibration
-- Enable sample completion when no signal - multiple drafts
-- Allow user opt-out from app log analytics
-- Make draft samples more obvious
-- Fix 'Next' button in welcome screens
-- Add Finish, French and Russian languages
-- Improve feedback on record submission failures
-- Various bug fixes
+- A minor text update
 
-## 1.3
+## 1.6.0
 
-### Features
+- Added localised species names to recording functionality.
 
-- Add eBMS Transect recording
-- Add species guide
+## 1.5.4
 
-## 1.4
+- Fixed transect recording for sections made of multi-line strings
+- Fixed sites report duplication of transects
 
-### Features
+## 1.5.3
 
-- Add top recorded species report
-
-### Other
-
-- Change app name to ButterflyCount
-- Content updates
+- Fixed transect recording for sections made of single geopoint
+- Updated transaltions
 
 ## 1.5
-
-### Features
 
 - Add map view to locally stored records
 - Enable submitted records view within the app
 - Add record batch upload
 - Add 15min Count comment attribute
 - Improve transect sections navigation
-
-### Other
-
 - Add usage guide
 - Renamed 'Timed Count' survey to '15min Count'
 - Add long-press to plus button to separate different surveys
@@ -72,49 +53,37 @@
 - Fix species abundance indicators
 - Other small fixes
 
-## 1.5.3
+## 1.4
 
-### Other
+- Add top recorded species report
+- Change app name to ButterflyCount
+- Content updates
 
-- Fixed transect recording for sections made of single geopoint
-- Updated transaltions
+## 1.3
 
-## 1.5.4
+- Add eBMS Transect recording
+- Add species guide
 
-### Other
+## 1.2
 
-- Fixed transect recording for sections made of multi-line strings
-- Fixed sites report duplication of transects
+- Add Password Reset page
+- Add About page
+- Add all the remaining countries
+- Add life stage attribute
+- Show already recorded species in the search grayed out.
+- Improve countdown timer visibility and add phone vibration
+- Enable sample completion when no signal - multiple drafts
+- Allow user opt-out from app log analytics
+- Make draft samples more obvious
+- Fix 'Next' button in welcome screens
+- Add Finish, French and Russian languages
+- Improve feedback on record submission failures
+- Various bug fixes
 
-## 1.6.0
+## 1.1
 
-### Features
-
-- Added localised species names to recording functionality.
-
-## 1.6.1
-
-### Features
-
-- A minor text update
-
-## 1.7.0
-
-### Features
-
-- Added weather attributes to 15min survey
-- Fixed map drawing
-
-
-## 1.7.1
-
-### Features
-
-- Updated species list to include burnet moths
-
-## 1.8.0
-
-### Features
-
-- Added bumblebees and dragonflies. 
-- Fixed some missing butterfly species. 
+- Survey review before submit
+- Timer pause
+- English and Swedish species common names
+- Reversed plus/minus buttons
+- Added some more missing translations
