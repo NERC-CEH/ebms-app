@@ -1415,3 +1415,7 @@ msgstr "Ha copiado con éxito {{speciesCount}} especies."
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
 msgstr "Lo sentimos, no hay una encuesta previa para copiar especies."
+
+# Country name
+msgid "Armenia"
+msgstr ""

@@ -18,7 +18,8 @@
     "test:eslint": "mocha test/eslint-test.js",
     "make:species:data": "cd src/common/data/species && node make.js",
     "make:species:profiles": "cd src/common/data/profiles && node make.js",
-    "make:species:commonNames": "cd src/common/data/commonNames && node make.js"
+    "make:species:commonNames": "cd src/common/data/commonNames && node make.js",
+    "make:all": "npm run make:species:data && npm run make:species:profiles && npm run make:species:commonNames"
   },
   "husky": {
     "hooks": {

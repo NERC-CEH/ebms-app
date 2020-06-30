@@ -48,9 +48,18 @@ class Component extends React.Component {
   };
 
   getSpecies = country => {
-    const byCountry = sp => {
-      const isPresent = !['A', 'Ex'].includes(sp.abundance[country]);
-      return country === 'ELSEWHERE' || isPresent;
+    const existInCountry = sp => {
+      if (country === 'ELSEWHERE') {
+        return true;
+      }
+
+      const abundanceStatus = sp.abundance[country];
+      if (!abundanceStatus) {
+        return false;
+      }
+
+      const isPresent = !['A', 'Ex'].includes(abundanceStatus);
+      return isPresent;
     };
     const byNotEmptyContent = sp => {
       const hasDescription = t(sp.descriptionKey, true);
@@ -58,7 +67,7 @@ class Component extends React.Component {
     };
     const bySpeciesId = (sp1, sp2) => sp1.sort_id - sp2.sort_id;
 
-    let filteredSpecies = [...speciesProfiles].filter(byCountry);
+    let filteredSpecies = [...speciesProfiles].filter(existInCountry);
     const totalSpeciesCountryCount = filteredSpecies.length;
 
     filteredSpecies = filteredSpecies

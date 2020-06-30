@@ -46,6 +46,7 @@ export default {
   TR: 'Turkey (Europe)',
   TRA: 'Turkey (Asia)',
   UA: 'Ukraine',
+  AM: 'Armenia',
 
   // special option
   ELSEWHERE: 'Elsewhere',
