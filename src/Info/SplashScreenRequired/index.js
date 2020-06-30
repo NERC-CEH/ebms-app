@@ -17,7 +17,7 @@ function next(sliderRef) {
 const SplashScreen = () => {
   function exit() {
     Log('Info:Welcome:Controller: exit.');
-    appModel.attrs.showWelcome = false;
+    appModel.attrs.showedWelcome = true;
     appModel.save();
   }
 
@@ -122,7 +122,9 @@ const SplashScreen = () => {
 SplashScreen.propTypes = {};
 
 const Component = observer(props => {
-  if (appModel.attrs.showWelcome) {
+  const { showedWelcome } = appModel.attrs;
+
+  if (!showedWelcome) {
     return <SplashScreen appModel={appModel} />;
   }
 
