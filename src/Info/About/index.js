@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
+import Header from '@bit/flumens.apps.header';
 import Page from 'Lib/Page';
-import Header from 'Lib/Header';
 import Main from 'Lib/Main';
 import './styles.scss';
 
@@ -10,7 +11,7 @@ const Component = ({ appModel }) => {
   const isEnglish = appModel.attrs.language === 'en';
   return (
     <Page id="about">
-      <Header title={t('About')} />
+      <Header title="About" />
       <Main id="about" class="ion-padding">
         <IonList lines="none">
           {isEnglish ? (
@@ -30,24 +31,26 @@ const Component = ({ appModel }) => {
           ) : (
             <IonItem>
               <IonLabel>
-                {t(
-                  'This app contributes data to the European Butterfly Monitoring Scheme (eBMS).'
-                )}
+                <T>
+                  This app contributes data to the European Butterfly Monitoring
+                  Scheme (eBMS).
+                </T>
               </IonLabel>
             </IonItem>
           )}
 
           <IonItem>
             <IonLabel>
-              {t(
-                'The app was developed as part of the Assessing Butterflies in Europe (ABLE) project.'
-              )}
+              <T>
+                The app was developed as part of the Assessing Butterflies in
+                Europe (ABLE) project.
+              </T>
             </IonLabel>
           </IonItem>
 
           <IonItem>
             <p>
-              {t(`The ABLE project is a partnership between`)}{' '}
+              <T>The ABLE project is a partnership between</T>{' '}
               <a href="http://www.bc-europe.eu/">
                 Butterfly Conservation Europe
               </a>
@@ -64,7 +67,7 @@ const Component = ({ appModel }) => {
               <a href="https://www.vlinderstichting.nl/">
                 Dutch Butterfly Conservation
               </a>{' '}
-              {t('and')}{' '}
+              <T>and</T>{' '}
               <a href="https://butterfly-conservation.org/">
                 Butterfly Conservation (UK)
               </a>

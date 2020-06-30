@@ -2,7 +2,8 @@ import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
 import Page from 'Lib/Page';
 import Main from 'Lib/Main';
-import Header from 'Lib/Header';
+import { Trans as T } from 'react-i18next';
+import Header from '@bit/flumens.apps.header';
 import species from 'common/data/profiles';
 import './sponsors.png';
 import './flumens.png';
@@ -10,7 +11,7 @@ import './styles.scss';
 
 export default () => (
   <Page id="credits">
-    <Header title={t('Credits')} />
+    <Header title="Credits" />
     <Main class="ion-padding">
       <IonList lines="none">
         <IonItem>
@@ -22,9 +23,10 @@ export default () => (
         <IonItem lines="inset">
           <IonLabel>
             <b>
-              {t(
-                'We are very grateful for all the people that helped to create this app:'
-              )}
+              <T>
+                We are very grateful for all the people that helped to create
+                this app:
+              </T>
             </b>
           </IonLabel>
         </IonItem>
@@ -71,9 +73,11 @@ export default () => (
       <IonList>
         <IonItem lines="none">
           <IonLabel>
-            {t(
-              `ABLE is funded by a service contract from the European Union Directorate for the Environment, for an initial period of two years from 2019-20.`
-            )}
+            <T>
+              ABLE is funded by a service contract from the European Union
+              Directorate for the Environment, for an initial period of two
+              years from 2019-20.
+            </T>
           </IonLabel>
         </IonItem>
       </IonList>
@@ -86,17 +90,18 @@ export default () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            {t('This app was hand crafted with love by')}
+            <T>This app was hand crafted with love by</T>
             <a href="https://flumens.io" style={{ whiteSpace: 'nowrap' }}>
               {' '}
               Flumens.
             </a>{' '}
-            {t(
-              'A technical consultancy that excels at building bespoke environmental science and community focussed solutions.'
-            )}{' '}
-            {t('For suggestions and feedback please do not hesitate to')}{' '}
+            <T>
+              A technical consultancy that excels at building bespoke
+              environmental science and community focussed solutions.
+            </T>{' '}
+            <T>For suggestions and feedback please do not hesitate to</T>{' '}
             <a href="mailto:apps%40ceh.ac.uk?subject=eBMS%20App">
-              {t('contact us')}
+              <T>contact us</T>
             </a>
             .
           </IonLabel>
@@ -106,7 +111,9 @@ export default () => (
       <IonList lines="none">
         <IonItem lines="inset">
           <IonLabel>
-            <b>{t(`ABLE partners:`)}</b>
+            <b>
+              <T>ABLE partners:</T>
+            </b>
           </IonLabel>
         </IonItem>
 
@@ -152,9 +159,9 @@ export default () => (
       <IonList lines="none">
         <IonItem lines="inset">
           <b>
-            {t(
-              `In June 2019, the following organisations are partners in eBMS:`
-            )}
+            <T>
+              In June 2019, the following organisations are partners in eBMS:
+            </T>
           </b>
         </IonItem>
         <IonItem>
@@ -266,14 +273,18 @@ export default () => (
       <IonList>
         <IonItem>
           <IonLabel>
-            <b>{t('Species descriptions')}:</b>
+            <b>
+              <T>Species descriptions</T>:
+            </b>
           </IonLabel>
         </IonItem>
         <IonItem lines="none">
           <IonLabel>
-            {t(
-              'Species descriptions included as part of the guide are based on those produced for the Climatic Risk Atlas of European Butterflies. We thank Josef Settele for making these available.'
-            )}
+            <T>
+              Species descriptions included as part of the guide are based on
+              those produced for the Climatic Risk Atlas of European
+              Butterflies. We thank Josef Settele for making these available.
+            </T>
           </IonLabel>
         </IonItem>
       </IonList>
@@ -281,14 +292,17 @@ export default () => (
       <IonList>
         <IonItem>
           <IonLabel>
-            <b>{t('Weather conditions')}:</b>
+            <b>
+              <T>Weather conditions</T>:
+            </b>
           </IonLabel>
         </IonItem>
         <IonItem lines="none">
           <IonLabel>
-            {t(
-              'The current weather values are prepopulated using the OpenWeatherMap API weather service.'
-            )}
+            <T>
+              The current weather values are prepopulated using the
+              OpenWeatherMap API weather service.
+            </T>
           </IonLabel>
         </IonItem>
       </IonList>
@@ -296,7 +310,9 @@ export default () => (
       <IonList>
         <IonItem>
           <IonLabel>
-            <b>{t('Photo credits')}:</b>
+            <b>
+              <T>Photo credits</T>:
+            </b>
           </IonLabel>
         </IonItem>
         {species
