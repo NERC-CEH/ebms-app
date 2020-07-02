@@ -42,7 +42,6 @@ const config = {
   },
   resolve: {
     modules: [
-      path.resolve(ROOT_DIR, './dist/_build'),
       path.resolve(ROOT_DIR, './node_modules/'),
       path.resolve(ROOT_DIR, './src/'),
       path.resolve(ROOT_DIR, './src/common/vendor'),

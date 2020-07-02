@@ -26,10 +26,6 @@ const exec = grunt => ({
     },
     stdout: false,
   },
-  ionic_copy: {
-    command: 'cp -R node_modules/@ionic build',
-    stdout: true,
-  },
   init: {
     command: './node_modules/.bin/cordova create cordova',
     stdout: false,
@@ -42,17 +38,11 @@ const exec = grunt => ({
     command: 'cd cordova/ && ../node_modules/.bin/cordova prepare ios android',
     stdout: true,
   },
-  android_build_dev: {
-    command:
-      'cd cordova/ && ../node_modules/.bin/cordova build android',
-    stdout: true,
-  },
   copy_build: {
     command: 'cp -R build/* cordova/www/',
     stdout: true,
   },
   add_platforms: {
-    // @6.4.0 because of https://github.com/ionic-team/ionic/issues/13857#issuecomment-381744212
     command: 'cd cordova && ../node_modules/.bin/cordova platforms add ios android',
     stdout: false,
   },
