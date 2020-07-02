@@ -529,7 +529,6 @@ msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
-  
 msgstr ""
 "Niekada dar nebuvo taip paprasta prisidėti prie šio svarbaus vabzdžio "
 "išlikimo. Jūs galite pradėti jau dabar!"
@@ -1368,3 +1367,39 @@ msgstr "Sėkmingai nukopijuotos rūšys: {{speciesCount}}."
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
 msgstr "Atsiprašome, nebuvo rasta jokių rūšių iš praeito įrašo."
+
+# Country name
+msgid "Armenia"
+msgstr "Armėnija"
+
+# Survey page additional information note
+msgid "To delete any surveys swipe it to the left."
+msgstr "Norint ištrinti, įrašą braukite į kairę."
+
+# 15min survey additional information note after survey is finished
+msgid ""
+"Please check if the recording area is correct before sending the record."
+msgstr "Prašome pasitikrinti ar teisingai pažymėjote nueitą atstumą."
+
+# Survey page additional information note
+msgid "Please do not forget to upload any pending surveys!"
+msgstr "Prašome neužmiršti išsiųsti įrašų, kurie yra užbaigti!"
+
+# Survey page additional information note
+msgid "No finished pending surveys.<br/><br/>Press<4></4>to add."
+msgstr "Nėra užbaigtų įrašų.<br/><br/>Paspauskite<4></4>norint pridėti. "
+
+# Pop-up tip title when the user has installed the app and finished the
+# onboarding screens
+msgid "Tip: Finding Help"
+msgstr "Patarimas: Pagalbos radimas"
+
+# Pop-up content  when the user has installed the app and finished the
+# onboarding screens
+msgid ""
+"Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
+msgstr "Prašome aplankyti Gido <2></2>  ir Pagalbos <5></5> puslapius prieš naudojant aplikaciją!"
+
+# Link inside Guide page
+msgid "More Information"
+msgstr "Daugiau Informacijos"

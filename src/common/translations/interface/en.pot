@@ -1129,3 +1129,32 @@ msgstr "Sorry, no previous survey to copy species from."
 # Country name
 msgid "Armenia"
 msgstr "Armenia"
+
+# Survey page additional information note 
+msgid "To delete any surveys swipe it to the left."
+msgstr "To delete any surveys swipe it to the left."
+
+# 15min survey additional information note after survey is finished
+msgid "Please check if the recording area is correct before sending the record."
+msgstr "Please check if the recording area is correct before sending the record."
+
+# Survey page additional information note 
+msgid "Please do not forget to upload any pending surveys!"
+msgstr "Please do not forget to upload any pending surveys!"
+
+# Survey page additional information note  
+msgid "No finished pending surveys.<br/><br/>Press<4></4>to add."
+msgstr "No finished pending surveys.<br/><br/>Press<4></4>to add."
+
+# Pop-up tip title when the user has installed the app and finished the onboarding screens
+msgid "Tip: Finding Help"
+msgstr "Tip: Finding Help"
+
+# Pop-up content  when the user has installed the app and finished the onboarding screens
+msgid "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
+msgstr "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
+
+# Link inside Guide page
+msgid "More Information"
+msgstr "More Information"
+

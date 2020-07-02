@@ -229,31 +229,31 @@ msgstr ""
 "Parolanızı sıfırlamak için kullanıcı adınızı veya e-posta adresinizi girin"
 
 msgid "Reset"
-msgstr ""
+msgstr "Sıfırla"
 
 msgid "Records"
-msgstr ""
+msgstr "Kayıtlar"
 
 msgid "Upload All"
-msgstr ""
+msgstr "Hepsini Yükle"
 
 msgid "Remove All Saved"
-msgstr ""
+msgstr "Tüm Kaydedilenleri Kaldır"
 
 msgid "Application"
-msgstr ""
+msgstr "Uygulama"
 
 msgid "Training Mode"
-msgstr ""
+msgstr "Eğitimi Modu"
 
 msgid "Experimental Features"
-msgstr ""
+msgstr "Deneysel Özellikler"
 
 msgid "Welcome"
-msgstr ""
+msgstr "Hoşgeldiniz"
 
 msgid "Lets start!"
-msgstr ""
+msgstr "Hadi Başlayalım"
 
 msgid "TOP RECORDERS"
 msgstr ""
@@ -262,126 +262,129 @@ msgid "Top Species from all timed counts"
 msgstr ""
 
 msgid "Back"
-msgstr ""
+msgstr "Geri"
 
 msgid "Menu"
-msgstr ""
+msgstr "Menü"
 
 msgid "App"
-msgstr ""
+msgstr "Uygulama"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
-msgstr ""
+msgstr "Bu uygulamaya oluşturmaya yardımcı olan herkese minnetarız"
 
 msgid "Home"
-msgstr ""
+msgstr "Ana Sayfa"
 
 msgid "Guide"
-msgstr ""
+msgstr "Kılavuz"
 
 msgid "Account"
-msgstr ""
+msgstr "Hesap"
 
 msgid "Offline"
-msgstr ""
+msgstr "Çevirimdışı"
 
 msgid "Sorry, looks like you're offline."
-msgstr ""
+msgstr "Üzgünüz, çevirimdışı görünüyorsunuz. "
 
 msgid "OK"
-msgstr ""
+msgstr "Tamam"
 
 msgid "Sorry"
-msgstr ""
+msgstr "Üzgünüz"
 
 msgid "Please wait..."
-msgstr ""
+msgstr "Lütfen bekleyin"
 
 msgid "name is a required field"
-msgstr ""
+msgstr "İsim alanının doldurulması zorunludur"
 
 msgid "password is a required field"
-msgstr ""
+msgstr "Şifre alanının doldurulması zorunludur"
 
 msgid "Login error:"
-msgstr ""
+msgstr "Giriş hatası"
 
 msgid "Failed to fetch"
 msgstr ""
 
 msgid "Incorrect password or email."
-msgstr ""
+msgstr "Yanlış şifre ya da email"
 
 # Part of logout process
 msgid "Logout"
-msgstr ""
+msgstr "Oturumu kapat"
 
 # Part of logout process
 msgid "Are you sure you want to logout?"
-msgstr ""
+msgstr "Oturumu kapatmak istediğinizden emin misiniz?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr ""
+msgstr "Yerel verileri sil"
 
 msgid "This will delete all the records on this device."
-msgstr ""
+msgstr "Bu işlem ile bu aygıttaki tüm verileri silinecektir"
 
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 msgid "Welcome aboard!"
-msgstr ""
+msgstr "Hoşgeldiniz"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
+"Herhangi bir kayıt göndermeden önce lütfen e-postanızı kontrol edin ve "
+"doğrulama bağlantısını tıklayın."
 
 msgid "OK, got it"
-msgstr ""
+msgstr "Tamam, anladım"
 
 msgid "email is a required field"
-msgstr ""
+msgstr "e-posta alanının doldurulması zorunludur"
 
 msgid "firstname is a required field"
-msgstr ""
+msgstr "İsim alanının doldurulması zorunludur"
 
 msgid "secondname is a required field"
-msgstr ""
+msgstr "Soyisim alanının doldurulması zorunludur"
 
 msgid "must accept terms and conditions"
-msgstr ""
+msgstr "Şartlar ve koşulları kabul etmelisiniz"
 
 msgid "Area Count"
-msgstr ""
+msgstr "Alan sayımı"
 
 msgid "Area"
-msgstr ""
+msgstr "Alan"
 
 msgid "Add"
-msgstr ""
+msgstr "Ekle"
 
 msgid "Add species"
-msgstr ""
+msgstr "Tür ekle"
 
 msgid "Duration"
-msgstr ""
+msgstr "Süre"
 
 msgid "Species"
-msgstr ""
+msgstr "Tür"
 
 msgid "Species name"
-msgstr ""
+msgstr "Tür ismi"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
+"Taksayı daha hızlı aramak için farklı kısayollar kullanabilirsiniz. Örneğin,"
 
 msgid "you can type in the search bar"
-msgstr ""
+msgstr "Arama çubuğuna yazabilirsiniz"
 
 msgid "Edit Occurrence"
 msgstr ""
@@ -393,55 +396,55 @@ msgid "Comment"
 msgstr ""
 
 msgid "Draft"
-msgstr ""
+msgstr "Taslak"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr ""
+msgstr "Önceki anket taslağı mevcut, devam etmek ister misiniz?"
 
 msgid "Discard"
-msgstr ""
+msgstr "Çöpe at"
 
 msgid "Continue"
-msgstr ""
+msgstr "Devam et"
 
 msgid "Finish"
-msgstr ""
+msgstr "Bitir"
 
 msgid "minutes"
-msgstr ""
+msgstr "dakika"
 
 msgid "No species added"
-msgstr ""
+msgstr "Hiç tür eklenmedi"
 
 msgid "Please draw your area on the map"
-msgstr ""
+msgstr "Lütfen haritada alanınızı çiziniz"
 
 msgid "Draw an area"
-msgstr ""
+msgstr "Alan çiz"
 
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 msgid "Surveys"
-msgstr ""
+msgstr "anketler ? gözlemler? "
 
 msgid "Reports"
-msgstr ""
+msgstr "Kayıtlar"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr ""
+msgstr "Üzgünüz, şu anda hiç kayıt verisi bulunmamaktadır"
 
 msgid "Are you sure you want to delete this survey?"
-msgstr ""
+msgstr "Bu gözlemi silmek istediğinizden emin misiniz?"
 
 msgid "No finished surveys"
-msgstr ""
+msgstr "Hiç bitmiş gözlem bulunmakmaktadır"
 
 msgid "Finished surveys"
-msgstr ""
+msgstr "Bitmiş gözlemler"
 
 msgid "Selected area"
-msgstr ""
+msgstr "Seçilmiş alan"
 
 msgid "Use survey create time"
 msgstr ""
@@ -450,13 +453,13 @@ msgid "Use survey finish time"
 msgstr ""
 
 msgid "species"
-msgstr ""
+msgstr "tür"
 
 msgid "Done"
-msgstr ""
+msgstr "Tamamlandı"
 
 msgid "Time's up!"
-msgstr ""
+msgstr "Süre doldu!"
 
 msgid "Survey incomplete"
 msgstr ""
@@ -465,37 +468,37 @@ msgid "The survey is not complete yet."
 msgstr ""
 
 msgid "Please select a smaller area."
-msgstr ""
+msgstr "Lütfen daha küçük bir alan seçiniz."
 
 msgid "Please add survey area information."
 msgstr ""
 
 msgid "Choose a method to upload a photo"
-msgstr ""
+msgstr "Fotoğraf yükleme yönteminizi seçiniz"
 
 msgid "Gallery"
-msgstr ""
+msgstr "Galeri"
 
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr ""
+msgstr "Bu fotoğrafı silmek istediğinizden emin misiniz?"
 
 msgid "Note: it will remain in the gallery."
-msgstr ""
+msgstr "Not: Galeride saklı kalacak"
 
 msgid "No photo has been added"
-msgstr ""
+msgstr "Hiç fotoğraf eklenmedi"
 
 msgid "Registration error:"
-msgstr ""
+msgstr "Kayıt hatası:"
 
 msgid "Incorrect password or email"
-msgstr ""
+msgstr "Yanlış şifre ya da email"
 
 msgid "email is not valid"
-msgstr ""
+msgstr "e-posta geçerli değil"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
@@ -856,34 +859,34 @@ msgid "Please specify the temperature C°."
 msgstr ""
 
 msgid "S"
-msgstr ""
+msgstr "G"
 
 msgid "SW"
-msgstr ""
+msgstr "GB"
 
 msgid "W"
-msgstr ""
+msgstr "B"
 
 msgid "NW"
-msgstr ""
+msgstr "KB"
 
 msgid "N"
-msgstr ""
+msgstr "K"
 
 msgid "NE"
-msgstr ""
+msgstr "KD"
 
 msgid "E"
-msgstr ""
+msgstr "D"
 
 msgid "SE"
-msgstr ""
+msgstr "GD"
 
 msgid "No direction"
 msgstr ""
 
 msgid "Please specify the wind direction."
-msgstr ""
+msgstr "Lütfen rüzgar yönünü belirtiniz"
 
 msgid "Smoke rises vertically"
 msgstr ""
@@ -1260,4 +1263,36 @@ msgstr ""
 
 # Country name
 msgid "Armenia"
+msgstr "Ermenistan"
+
+# Survey page additional information note
+msgid "To delete any surveys swipe it to the left."
+msgstr ""
+
+# 15min survey additional information note after survey is finished
+msgid ""
+"Please check if the recording area is correct before sending the record."
+msgstr ""
+
+# Survey page additional information note
+msgid "Please do not forget to upload any pending surveys!"
+msgstr ""
+
+# Survey page additional information note
+msgid "No finished pending surveys.<br/><br/>Press<4></4>to add."
+msgstr ""
+
+# Pop-up tip title when the user has installed the app and finished the
+# onboarding screens
+msgid "Tip: Finding Help"
+msgstr ""
+
+# Pop-up content  when the user has installed the app and finished the
+# onboarding screens
+msgid ""
+"Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
+msgstr ""
+
+# Link inside Guide page
+msgid "More Information"
 msgstr ""

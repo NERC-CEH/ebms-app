@@ -6,9 +6,12 @@ import {
   IonLabel,
   IonSegmentButton,
   IonBadge,
+  IonIcon,
 } from '@ionic/react';
 import Main from 'Lib/Main';
 import Page from 'Lib/Page';
+import { Trans as T } from 'react-i18next';
+import { add } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import Survey from './components/Survey';
@@ -22,11 +25,40 @@ function byCreateTime(occ1, occ2) {
 }
 
 function getPendingSurveys(surveys) {
+  const finishedSurvey = surveys.find(sample => sample.metadata.saved);
+
   if (!surveys.length) {
     return (
       <IonList lines="full">
-        <IonItem className="empty">
-          <span>{t('No finished pending surveys')}</span>
+        <IonItem className="info-background-message">
+          <span>
+            <T>
+              No finished pending surveys.
+              <br />
+              <br />
+              Press
+              <IonIcon icon={add} />
+              to add.
+            </T>
+          </span>
+        </IonItem>
+      </IonList>
+    );
+  }
+
+  const surveysList = surveys.map(sample => (
+    <Survey key={sample.cid} sample={sample} />
+  ));
+
+  if (finishedSurvey) {
+    return (
+      <IonList lines="full">
+        {surveysList}
+
+        <IonItem className="info-background-message">
+          <span>
+            <T>Please do not forget to upload any pending surveys!</T>
+          </span>
         </IonItem>
       </IonList>
     );
@@ -34,9 +66,13 @@ function getPendingSurveys(surveys) {
 
   return (
     <IonList lines="full">
-      {surveys.map(sample => (
-        <Survey key={sample.cid} sample={sample} />
-      ))}
+      {surveysList}
+
+      <IonItem className="info-background-message">
+        <span>
+          <T>To delete any surveys swipe it to the left.</T>
+        </span>
+      </IonItem>
     </IonList>
   );
 }
@@ -45,18 +81,28 @@ function getUploadedSurveys(surveys) {
   if (!surveys.length) {
     return (
       <IonList lines="full">
-        <IonItem className="empty">
-          <span>{t('No uploaded surveys')}</span>
+        <IonItem className="info-background-message">
+          <span>
+            <T>No uploaded surveys</T>
+          </span>
         </IonItem>
       </IonList>
     );
   }
 
+  const surveysList = surveys.map(sample => (
+    <Survey key={sample.cid} sample={sample} />
+  ));
+
   return (
     <IonList lines="full">
-      {surveys.map(sample => (
-        <Survey key={sample.cid} sample={sample} />
-      ))}
+      {surveysList}
+
+      <IonItem className="info-background-message">
+        <span>
+          <T>To delete any surveys swipe it to the left.</T>
+        </span>
+      </IonItem>
     </IonList>
   );
 }

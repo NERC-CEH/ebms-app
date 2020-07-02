@@ -1272,3 +1272,35 @@ msgstr ""
 # Country name
 msgid "Armenia"
 msgstr ""
+
+# Survey page additional information note
+msgid "To delete any surveys swipe it to the left."
+msgstr ""
+
+# 15min survey additional information note after survey is finished
+msgid ""
+"Please check if the recording area is correct before sending the record."
+msgstr ""
+
+# Survey page additional information note
+msgid "Please do not forget to upload any pending surveys!"
+msgstr ""
+
+# Survey page additional information note
+msgid "No finished pending surveys.<br/><br/>Press<4></4>to add."
+msgstr ""
+
+# Pop-up tip title when the user has installed the app and finished the
+# onboarding screens
+msgid "Tip: Finding Help"
+msgstr ""
+
+# Pop-up content  when the user has installed the app and finished the
+# onboarding screens
+msgid ""
+"Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
+msgstr ""
+
+# Link inside Guide page
+msgid "More Information"
+msgstr ""
