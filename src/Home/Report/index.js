@@ -8,9 +8,13 @@ import {
   IonRefresher,
   IonRefresherContent,
   IonSpinner,
+  IonIcon,
 } from '@ionic/react';
+import { book, helpBuoy } from 'ionicons/icons';
 import Log from 'helpers/log';
 import { warn, error } from 'helpers/toast';
+import alert from '@bit/flumens.apps.helpers.alert';
+import { Trans as T } from 'react-i18next';
 import Device from 'helpers/device';
 import Page from 'Lib/Page';
 import Main from 'Lib/Main';
@@ -27,8 +31,42 @@ class Report extends React.Component {
     refreshing: false,
   };
 
+  showInfoGuideTip = () => {
+    const { appModel } = this.props;
+
+    if (!appModel.attrs.showGuideHelpTip) {
+      return;
+    }
+
+    alert({
+      header: t('Tip: Finding Help'),
+      message: (
+        <>
+          <T>
+            Please visit the Guide{' '}
+            <IonIcon icon={book} style={{ marginBottom: '-3px' }} /> and Help{' '}
+            <IonIcon icon={helpBuoy} style={{ marginBottom: '-3px' }} /> pages
+            before using the app!
+          </T>
+        </>
+      ),
+      buttons: [
+        {
+          text: t('OK, got it'),
+          role: 'cancel',
+          cssClass: 'primary',
+        },
+      ],
+    });
+    appModel.attrs.showGuideHelpTip = false;
+    appModel.save();
+  };
+
   componentDidMount = async () => {
     const { appModel } = this.props;
+
+    this.showInfoGuideTip();
+
     if (!appModel.speciesReport.length && Device.isOnline()) {
       this.refreshReport();
       return;
@@ -100,7 +138,7 @@ class Report extends React.Component {
                 <b style={{ fontSize: '1.1em' }}>{commonName}</b>
               </IonLabel>
             )}
-            
+
             <IonLabel
               class="ion-text-wrap report-taxon-label"
               position="stacked"
@@ -180,6 +218,7 @@ class Report extends React.Component {
             <IonRefresherContent />
           </IonRefresher>
           {this.getReport()}
+          {this.showInfoGuideTip()}
         </Main>
       </Page>
     );

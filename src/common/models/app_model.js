@@ -132,6 +132,8 @@ const getDefaultAttrs = () => ({
   useExperiments: false,
   sendAnalytics: true,
   appSession: 0,
+
+  showGuideHelpTip: true,
 });
 
 class AppModel {
