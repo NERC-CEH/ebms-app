@@ -4,6 +4,9 @@ import { Trans as T } from 'react-i18next';
 import Header from '@bit/flumens.apps.header';
 import Main from 'Lib/Main';
 import Section from 'Lib/Section';
+import { IonButton, IonIcon, IonList } from '@ionic/react';
+import { open } from 'ionicons/icons';
+import config from 'config';
 
 const { P, H } = Section;
 
@@ -158,6 +161,13 @@ const Component = () => (
           </T>
         </P>
       </Section>
+
+      <IonList className="ion-text-center">
+        <IonButton href={`${config.site_url}/ebms-app`} fill="outline">
+          <IonIcon slot="end" icon={open} />
+          <T>More Information</T>
+        </IonButton>
+      </IonList>
     </Main>
   </Page>
 );
