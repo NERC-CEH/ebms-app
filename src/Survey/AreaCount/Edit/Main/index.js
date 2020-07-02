@@ -27,6 +27,7 @@ import LongPressButton from 'Lib/LongPressButton';
 import MenuAttrItem from 'Lib/MenuAttrItem';
 import { Trans as T } from 'react-i18next';
 import alert from '@bit/flumens.apps.helpers.alert';
+import MenuNoteItem from '@bit/flumens.apps.menu-note-item';
 import CountdownClock from './components/CountdownClock';
 import './styles.scss';
 
@@ -177,6 +178,21 @@ class AreaCount extends Component {
     );
   }
 
+  showAreaWarningNote = () => {
+    const { sample } = this.props;
+
+    if (sample.metadata.saved) {
+      return (
+        <MenuNoteItem>
+          Please check if the recording area is correct before sending the
+          record.
+        </MenuNoteItem>
+      );
+    }
+
+    return null;
+  };
+
   toggleTimer = () => this.props.toggleTimer(this.props.sample);
 
   render() {
@@ -220,6 +236,9 @@ class AreaCount extends Component {
             label="Area"
             value={areaPretty}
           />
+
+          {this.showAreaWarningNote()}
+
           <IonItem
             detail={!isDisabled}
             detailIcon={isPaused ? play : pause}
@@ -232,6 +251,7 @@ class AreaCount extends Component {
             </IonLabel>
             <CountdownClock isPaused={isPaused} countdown={countdown} />
           </IonItem>
+
           <MenuAttrItem
             routerLink={`/survey/area/${sample.cid}/edit/details`}
             disabled={isDisabled}

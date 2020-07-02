@@ -35,6 +35,7 @@
     "@bit/flumens.apps.helpers.toast": "^0.1.1",
     "@bit/flumens.apps.main": "^0.1.0",
     "@bit/flumens.apps.menu-attr-item": "0.5.1",
+    "@bit/flumens.apps.menu-note-item": "^0.2.0",
     "@bit/flumens.apps.page": "^0.1.0",
     "@bit/flumens.apps.radio-input": "0.3.1",
     "@indicia-js/core": "5.2.0",
