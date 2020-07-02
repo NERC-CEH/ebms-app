@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import Log from 'helpers/log';
 import alert from 'common/helpers/alert';
 import Page from 'Lib/Page';
-import Header from 'Lib/Header';
+import Header from '@bit/flumens.apps.header';
 import { resetDefaults } from 'saved_samples';
 import Main from './Main';
 import './styles.scss';
@@ -58,7 +58,7 @@ const Controller = observer(props => {
   const isLoggedIn = userModel.hasLogIn();
   return (
     <Page id="info-menu">
-      <Header title={t('Menu')} />
+      <Header title="Menu" />
       <Main
         user={userModel.attrs}
         appModel={appModel}

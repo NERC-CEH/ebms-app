@@ -12,7 +12,9 @@ import {
   informationCircleOutline,
   helpBuoy,
   book,
+  open,
 } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import Main from 'Lib/Main';
 import config from 'config';
 import './styles.scss';
@@ -29,7 +31,7 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
         {isLoggedIn && (
           <IonItem detail id="logout-button" onClick={logOut}>
             <IonIcon icon={exit} size="small" slot="start" />
-            {t('Logout')}
+            <T>Logout</T>
             {': '}
             {user.firstname} {user.secondname}
           </IonItem>
@@ -38,49 +40,54 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
         {!isLoggedIn && (
           <IonItem routerLink="/user/login" detail>
             <IonIcon icon={person} size="small" slot="start" />
-            {t('Login')}
+            <T>Login</T>
           </IonItem>
         )}
 
         {!isLoggedIn && (
           <IonItem routerLink="/user/register" detail>
             <IonIcon icon={personAdd} size="small" slot="start" />
-            {t('Register')}
+            <T>Register</T>
           </IonItem>
         )}
 
-        <IonItemDivider>{t('Info')}</IonItemDivider>
+        <IonItemDivider>
+          <T>Info</T>
+        </IonItemDivider>
         <IonItem routerLink="/info/guide" detail>
           <IonIcon icon={book} size="small" slot="start" />
-          {t('Guide')}
+          <T>Guide</T>
         </IonItem>
         <IonItem routerLink="/info/help" detail>
           <IonIcon icon={helpBuoy} size="small" slot="start" />
-          {t('Help')}
+          <T>Help</T>
         </IonItem>
         <IonItem routerLink="/info/about" detail>
           <IonIcon icon={informationCircleOutline} size="small" slot="start" />
-          {t('About')}
+          <T>About</T>
         </IonItem>
 
         <IonItem routerLink="/info/credits" detail>
           <IonIcon icon={heart} size="small" slot="start" />
-          {t('Credits')}
+          <T>Credits</T>
         </IonItem>
 
         <IonItem
           href={`${config.site_url}/privacy-notice?lang=${lang}`}
           target="_blank"
           detail
+          detailIcon={open}
         >
           <IonIcon icon={lock} size="small" slot="start" />
-          {t('Privacy Policy')}
+          <T>Privacy Policy</T>
         </IonItem>
 
-        <IonItemDivider>{t('Settings')}</IonItemDivider>
+        <IonItemDivider>
+          <T>Settings</T>
+        </IonItemDivider>
         <IonItem routerLink="/settings/menu" detail>
           <IonIcon icon={settings} size="small" slot="start" />
-          {t('App')}
+          <T>App</T>
         </IonItem>
       </IonList>
     </Main>

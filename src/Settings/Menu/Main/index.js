@@ -11,6 +11,7 @@ import {
   IonNote,
 } from '@ionic/react';
 import { undo, school, flag, globe, share, paperPlane } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import alert from 'common/helpers/alert';
 import languages from 'common/config/languages';
 import countries from 'common/config/countries';
@@ -84,37 +85,52 @@ class Component extends React.Component {
     return (
       <Main class="app-settings">
         <IonList lines="full">
-          <IonItemDivider>{t('Records')}</IonItemDivider>
+          <IonItemDivider>
+            <T>Records</T>
+          </IonItemDivider>
           <IonItem
             id="submit-all-btn"
             onClick={() => uploadAllSamplesDialog(uploadAllSamples)}
           >
             <IonIcon icon={paperPlane} size="small" slot="start" />
-            <IonLabel>{t('Upload All')}</IonLabel>
+            <IonLabel>
+              <T>Upload All</T>
+            </IonLabel>
           </IonItem>
           <IonItem>
             <IonLabel class="ion-text-wrap">
               <IonNote color="primary">
-                {t(
-                  "Batch upload all finished records. This does not include records in 'draft' stage."
-                )}
+                <T>
+                  Batch upload all finished records. This does not include
+                  records in &#39;draft&#39; stage.
+                </T>
               </IonNote>
             </IonLabel>
           </IonItem>
-          <IonItemDivider>{t('Application')}</IonItemDivider>
+          <IonItemDivider>
+            <T>Application</T>
+          </IonItemDivider>
           <IonItem routerLink="/settings/language">
-            <IonLabel>{t('Language')}</IonLabel>
+            <IonLabel>
+              <T>Language</T>
+            </IonLabel>
             <IonIcon icon={flag} size="small" slot="start" />
             <IonLabel slot="end">{languages[language]}</IonLabel>
           </IonItem>
           <IonItem routerLink="/settings/country">
-            <IonLabel>{t('Country')}</IonLabel>
+            <IonLabel>
+              <T>Country</T>
+            </IonLabel>
             <IonIcon icon={globe} size="small" slot="start" />
-            <IonLabel slot="end">{t(countries[country])}</IonLabel>
+            <IonLabel slot="end">
+              <T>{countries[country]}</T>
+            </IonLabel>
           </IonItem>
           <IonItem>
             <IonIcon icon={school} size="small" slot="start" />
-            <IonLabel>{t('Training Mode')}</IonLabel>
+            <IonLabel>
+              <T>Training Mode</T>
+            </IonLabel>
             <Toggle
               onToggle={checked => onToggle('useTraining', checked)}
               checked={useTraining}
@@ -123,15 +139,18 @@ class Component extends React.Component {
           <IonItem>
             <IonLabel class="ion-text-wrap">
               <IonNote color="primary">
-                {t(
-                  "Mark any new records as 'training' and exclude from all reports."
-                )}
+                <T>
+                  Mark any new records as &#39;training&#39; and exclude from
+                  all reports.
+                </T>
               </IonNote>
             </IonLabel>
           </IonItem>
           <IonItem>
             <IonIcon icon={share} size="small" slot="start" />
-            <IonLabel>{t('Share App Analytics')}</IonLabel>
+            <IonLabel>
+              <T>Share App Analytics</T>
+            </IonLabel>
             <Toggle
               onToggle={checked => onToggle('sendAnalytics', checked)}
               checked={sendAnalytics}
@@ -140,7 +159,7 @@ class Component extends React.Component {
 
           <IonItem id="app-reset-btn" onClick={() => resetDialog(resetApp)}>
             <IonIcon icon={undo} size="small" slot="start" />
-            {t('Reset')}
+            <T>Reset</T>
           </IonItem>
         </IonList>
 

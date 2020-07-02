@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { useTranslation } from 'react-i18next';
 import Page from 'Lib/Page';
 import Main from 'Lib/Main';
 import {
@@ -14,12 +13,10 @@ import {
 } from '@ionic/react';
 import { globe } from 'ionicons/icons';
 import languages from 'common/config/languages';
-import Header from 'Lib/Header';
+import Header from '@bit/flumens.apps.header';
 import './styles.scss';
 
 function SelectLanguage({ appModel, hideHeader }) {
-  const { t } = useTranslation();
-
   const currentValue = appModel.attrs.language;
 
   function onSelect(e) {
@@ -39,7 +36,7 @@ function SelectLanguage({ appModel, hideHeader }) {
 
   return (
     <Page id="language-select">
-      {!hideHeader && <Header title={t('Language')} />}
+      {!hideHeader && <Header title="Language" />}
 
       <Main>
         <IonList>

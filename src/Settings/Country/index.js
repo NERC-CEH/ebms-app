@@ -14,8 +14,9 @@ import Page from 'Lib/Page';
 import Main from 'Lib/Main';
 import alert from 'helpers/alert';
 import { flag } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import countries from 'common/config/countries';
-import Header from 'Lib/Header';
+import Header from '@bit/flumens.apps.header';
 import './styles.scss';
 
 function SelectCountry({ appModel, hideHeader }) {
@@ -71,14 +72,16 @@ function SelectCountry({ appModel, hideHeader }) {
 
   return (
     <Page id="country-select">
-      {!hideHeader && <Header title={t('Country')} />}
+      {!hideHeader && <Header title="Country" />}
 
       <Main>
         <IonList>
           {hideHeader && (
             <div className="header">
               <IonIcon icon={flag} size="large" />
-              <h4>{t('Select your country')}</h4>
+              <h4>
+                <T>Select your country</T>
+              </h4>
             </div>
           )}
           <IonRadioGroup onIonChange={onSelect}>
