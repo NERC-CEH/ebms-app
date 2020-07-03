@@ -51,6 +51,8 @@ const speciesOccAddedTimeSort = (occ1, occ2) => {
 class AreaCount extends Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
+    appModel: PropTypes.object.isRequired,
+    previousSurvey: PropTypes.object,
     history: PropTypes.object.isRequired,
     deleteOccurrence: PropTypes.func.isRequired,
     navigateToOccurrence: PropTypes.func.isRequired,
@@ -60,6 +62,7 @@ class AreaCount extends Component {
     increaseCount: PropTypes.func.isRequired,
     isDisabled: PropTypes.bool,
     copyPreviousSurveyTaxonList: PropTypes.func.isRequired,
+    showCopySpeciesTip: PropTypes.func.isRequired,
   };
 
   getSpeciesAddButton = () => {
@@ -69,6 +72,7 @@ class AreaCount extends Component {
       // placeholder
       return <div style={{ height: '44px' }} />;
     }
+
     function selectOptions() {
       alert({
         header: t('Copy species'),
@@ -193,6 +197,39 @@ class AreaCount extends Component {
     return null;
   };
 
+  showCopySpeciesTip = () => {
+    const { appModel, previousSurvey } = this.props;
+
+    if (!appModel.attrs.showCopySpeciesTip || !previousSurvey) {
+      return;
+    }
+
+    const hasSpeciesInOccurrence = previousSurvey.occurrences.length;
+    if (!hasSpeciesInOccurrence) {
+      return;
+    }
+
+    alert({
+      header: t('Tip: Adding Species'),
+      message: (
+        <T>
+          You can bulk copy your previous species lists by long-pressing the Add
+          Species button.
+        </T>
+      ),
+      buttons: [
+        {
+          text: t('OK, got it'),
+          role: 'cancel',
+          cssClass: 'primary',
+        },
+      ],
+    });
+
+    appModel.attrs.showCopySpeciesTip = false;
+    appModel.save();
+  };
+
   toggleTimer = () => this.props.toggleTimer(this.props.sample);
 
   render() {
@@ -238,6 +275,8 @@ class AreaCount extends Component {
           />
 
           {this.showAreaWarningNote()}
+
+          {this.showCopySpeciesTip()}
 
           <IonItem
             detail={!isDisabled}

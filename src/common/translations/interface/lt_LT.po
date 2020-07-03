@@ -1386,8 +1386,8 @@ msgid "Please do not forget to upload any pending surveys!"
 msgstr "Prašome neužmiršti išsiųsti įrašų, kurie yra užbaigti!"
 
 # Survey page additional information note
-msgid "No finished pending surveys.<br/><br/>Press<4></4>to add."
-msgstr "Nėra užbaigtų įrašų.<br/><br/>Paspauskite<4></4>norint pridėti. "
+msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
+msgstr "Nėra užbaigtų įrašų.<br/><br/>Paspauskite <4></4> norint pridėti."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
@@ -1398,8 +1398,20 @@ msgstr "Patarimas: Pagalbos radimas"
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
-msgstr "Prašome aplankyti Gido <2></2>  ir Pagalbos <5></5> puslapius prieš naudojant aplikaciją!"
+msgstr ""
+"Prašome aplankyti Gido <2></2>  ir Pagalbos <5></5> puslapius prieš "
+"naudojant aplikaciją!"
 
 # Link inside Guide page
 msgid "More Information"
 msgstr "Daugiau Informacijos"
+
+# Pop-up alert tip title
+msgid "Tip: Adding Species"
+msgstr "Patarimas: Pridėkite rūšį"
+
+# Pop-up alert tip content
+msgid ""
+"You can bulk copy your previous species lists by long-pressing the Add "
+"Species button."
+msgstr "Jūs galite nukopijuoti visas rūšis iš buvusio sąrašo palaikydami Pridėti rūšį mygtuką."

@@ -36,9 +36,7 @@ function getPendingSurveys(surveys) {
               No finished pending surveys.
               <br />
               <br />
-              Press
-              <IonIcon icon={add} />
-              to add.
+              Press <IonIcon icon={add} /> to add.
             </T>
           </span>
         </IonItem>

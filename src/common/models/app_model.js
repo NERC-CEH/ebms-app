@@ -134,6 +134,7 @@ const getDefaultAttrs = () => ({
   appSession: 0,
 
   showGuideHelpTip: true,
+  showCopySpeciesTip: true,
 });
 
 class AppModel {

@@ -135,17 +135,17 @@ class Container extends React.Component {
     appModel.save();
   };
 
-  copyPreviousSurveyTaxonList = () => {
-    const { savedSamples, sample } = this.props;
+  getPreviousSurvey = () => {
+    const { sample, savedSamples } = this.props;
 
     const currentSampleIndex = savedSamples.findIndex(
       s => s.cid === sample.cid
     );
 
     const isFirstSurvey = !currentSampleIndex;
+
     if (isFirstSurvey) {
-      warn(t('Sorry, no previous survey to copy species from.'));
-      return;
+      return null;
     }
 
     const previousSurveys = savedSamples.slice(0, currentSampleIndex).reverse();
@@ -153,6 +153,14 @@ class Container extends React.Component {
     const previousSurvey = previousSurveys.find(
       survey => survey.getSurvey().name === 'area'
     );
+
+    return previousSurvey;
+  };
+
+  copyPreviousSurveyTaxonList = () => {
+    const { sample } = this.props;
+
+    const previousSurvey = this.getPreviousSurvey();
     if (!previousSurvey) {
       warn(t('Sorry, no previous survey to copy species from.'));
       return;
@@ -204,6 +212,8 @@ class Container extends React.Component {
     const isEditing = sample.metadata.saved;
     const isDisabled = !!sample.metadata.synced_on;
 
+    const previousSurvey = this.getPreviousSurvey();
+
     return (
       <Page id="area-count-edit">
         <Header
@@ -214,6 +224,8 @@ class Container extends React.Component {
         />
         <Main
           sample={sample}
+          appModel={appModel}
+          previousSurvey={previousSurvey}
           deleteOccurrence={deleteOccurrence}
           increaseCount={increaseCount}
           toggleTimer={toggleTimer}

@@ -1427,7 +1427,7 @@ msgid "Please do not forget to upload any pending surveys!"
 msgstr ""
 
 # Survey page additional information note
-msgid "No finished pending surveys.<br/><br/>Press<4></4>to add."
+msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
 
 # Pop-up tip title when the user has installed the app and finished the
@@ -1443,4 +1443,14 @@ msgstr ""
 
 # Link inside Guide page
 msgid "More Information"
+msgstr ""
+
+# Pop-up alert tip title
+msgid "Tip: Adding Species"
+msgstr ""
+
+# Pop-up alert tip content
+msgid ""
+"You can bulk copy your previous species lists by long-pressing the Add "
+"Species button."
 msgstr ""

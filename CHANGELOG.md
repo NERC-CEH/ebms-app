@@ -1,3 +1,9 @@
+## 1.9.0
+
+- Added more helpful information tips
+- Added Armenia
+- Fix splashscreen
+
 ## 1.8.1
 
 - Add 15min count survey full species list copy
@@ -6,8 +12,8 @@
 
 ## 1.8.0
 
-- Added bumblebees and dragonflies. 
-- Fixed some missing butterfly species. 
+- Added bumblebees and dragonflies.
+- Fixed some missing butterfly species.
 
 ## 1.7.1
 
