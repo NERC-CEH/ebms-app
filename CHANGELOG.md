@@ -3,6 +3,7 @@
 - Added more helpful information tips
 - Added Armenia
 - Fix splashscreen
+- Add primary survey selection
 
 ## 1.8.1
 
