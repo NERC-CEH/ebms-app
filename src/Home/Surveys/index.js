@@ -10,6 +10,7 @@ import {
 } from '@ionic/react';
 import Main from 'Lib/Main';
 import Page from 'Lib/Page';
+import InfoBackgroundMessage from 'Lib/InfoBackgroundMessage';
 import { Trans as T } from 'react-i18next';
 import { add } from 'ionicons/icons';
 import { observer } from 'mobx-react';
@@ -53,11 +54,9 @@ function getPendingSurveys(surveys) {
       <IonList lines="full">
         {surveysList}
 
-        <IonItem className="info-background-message">
-          <span>
-            <T>Please do not forget to upload any pending surveys!</T>
-          </span>
-        </IonItem>
+        <InfoBackgroundMessage name="showSurveyUploadTip">
+          Please do not forget to upload any pending surveys!
+        </InfoBackgroundMessage>
       </IonList>
     );
   }
@@ -66,11 +65,9 @@ function getPendingSurveys(surveys) {
     <IonList lines="full">
       {surveysList}
 
-      <IonItem className="info-background-message">
-        <span>
-          <T>To delete any surveys swipe it to the left.</T>
-        </span>
-      </IonItem>
+      <InfoBackgroundMessage name="showSurveysDeleteTip">
+        To delete any surveys swipe it to the left.
+      </InfoBackgroundMessage>
     </IonList>
   );
 }
@@ -79,11 +76,9 @@ function getUploadedSurveys(surveys) {
   if (!surveys.length) {
     return (
       <IonList lines="full">
-        <IonItem className="info-background-message">
-          <span>
-            <T>No uploaded surveys</T>
-          </span>
-        </IonItem>
+        <InfoBackgroundMessage>
+          <T>No uploaded surveys</T>
+        </InfoBackgroundMessage>
       </IonList>
     );
   }
@@ -92,17 +87,7 @@ function getUploadedSurveys(surveys) {
     <Survey key={sample.cid} sample={sample} />
   ));
 
-  return (
-    <IonList lines="full">
-      {surveysList}
-
-      <IonItem className="info-background-message">
-        <span>
-          <T>To delete any surveys swipe it to the left.</T>
-        </span>
-      </IonItem>
-    </IonList>
-  );
+  return <IonList lines="full">{surveysList}</IonList>;
 }
 
 @observer

@@ -1165,3 +1165,7 @@ msgstr "Tip: Adding Species"
 # Pop-up alert tip content
 msgid "You can bulk copy your previous species lists by long-pressing the Add Species button."
 msgstr "You can bulk copy your previous species lists by long-pressing the Add Species button."
+
+# Button
+msgid "Hide"
+msgstr "Hide"

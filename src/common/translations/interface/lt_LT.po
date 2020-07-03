@@ -1414,4 +1414,10 @@ msgstr "Patarimas: Pridėkite rūšį"
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
-msgstr "Jūs galite nukopijuoti visas rūšis iš buvusio sąrašo palaikydami Pridėti rūšį mygtuką."
+msgstr ""
+"Jūs galite nukopijuoti visas rūšis iš buvusio sąrašo palaikydami Pridėti "
+"rūšį mygtuką."
+
+# Button
+msgid "Hide"
+msgstr "Paslėpti"

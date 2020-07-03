@@ -133,7 +133,10 @@ const getDefaultAttrs = () => ({
   sendAnalytics: true,
   appSession: 0,
 
+  // tips
   showGuideHelpTip: true,
+  showSurveysDeleteTip: true,
+  showSurveyUploadTip: true,
   showCopySpeciesTip: true,
 });
 
