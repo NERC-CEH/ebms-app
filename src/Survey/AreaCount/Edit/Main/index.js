@@ -23,6 +23,7 @@ import {
 import { observer } from 'mobx-react';
 import config from 'config';
 import Main from 'Lib/Main';
+import InfoBackgroundMessage from 'Lib/InfoBackgroundMessage';
 import LongPressButton from 'Lib/LongPressButton';
 import MenuAttrItem from 'Lib/MenuAttrItem';
 import { Trans as T } from 'react-i18next';
@@ -118,11 +119,7 @@ class AreaCount extends Component {
     if (!sample.occurrences.length) {
       return (
         <IonList id="list" lines="full">
-          <IonItem className="empty">
-            <span>
-              <T>No species added</T>
-            </span>
-          </IonItem>
+          <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
         </IonList>
       );
     }

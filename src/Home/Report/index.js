@@ -13,6 +13,7 @@ import {
 import { book, helpBuoy } from 'ionicons/icons';
 import Log from 'helpers/log';
 import { warn, error } from 'helpers/toast';
+import InfoBackgroundMessage from 'Lib/InfoBackgroundMessage';
 import alert from '@bit/flumens.apps.helpers.alert';
 import { Trans as T } from 'react-i18next';
 import Device from 'helpers/device';
@@ -181,11 +182,9 @@ class Report extends React.Component {
 
     if (!species.length && !refreshing) {
       return (
-        <IonItem class="empty">
-          <span>
-            <p>{t('Sorry, no report data is available at the moment.')}</p>
-          </span>
-        </IonItem>
+        <InfoBackgroundMessage>
+          Sorry, no report data is available at the moment.
+        </InfoBackgroundMessage>
       );
     }
 
@@ -194,6 +193,7 @@ class Report extends React.Component {
         {this.showEmptyDataMessage()}
 
         {this.getUsersReportList()}
+
         {this.getSpeciesReportList()}
       </IonList>
     );
@@ -217,7 +217,9 @@ class Report extends React.Component {
           <IonRefresher slot="fixed" onIonRefresh={this.onListRefreshPull}>
             <IonRefresherContent />
           </IonRefresher>
+
           {this.getReport()}
+
           {this.showInfoGuideTip()}
         </Main>
       </Page>

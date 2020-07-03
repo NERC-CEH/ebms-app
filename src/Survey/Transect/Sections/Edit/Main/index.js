@@ -15,6 +15,7 @@ import Main from 'Lib/Main';
 import MenuAttrItem from 'Lib/MenuAttrItem';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
+import InfoBackgroundMessage from 'Lib/InfoBackgroundMessage';
 import 'common/images/cloud.svg';
 import './thumb-up.svg';
 import './styles.scss';
@@ -53,11 +54,7 @@ class Edit extends Component {
     if (!sample.occurrences.length) {
       return (
         <IonList id="list" lines="full">
-          <IonItem className="empty">
-            <span>
-              <T>No species added</T>
-            </span>
-          </IonItem>
+          <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
         </IonList>
       );
     }

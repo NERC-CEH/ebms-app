@@ -43,19 +43,6 @@
   #list {
     font-weight: bold;
 
-    .empty {
-      width: 80%;
-      max-width: 250px;
-      margin: 50px auto 0;
-      --border-width: 0;
-      --background: var(--ion-color-light);
-      --color: var(--ion-color-light-contrast);
-      span {
-        margin: 0 auto;
-        font-weight: 200;
-      }
-    }
-
     ion-label {
       margin-left: 8px;
     }
