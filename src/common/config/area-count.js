@@ -29,6 +29,7 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
 const config = {
   id: 565,
   name: 'area',
+  label: '15min Count',
   webForm: 'enter-app-record',
   attrs: {
     location: {

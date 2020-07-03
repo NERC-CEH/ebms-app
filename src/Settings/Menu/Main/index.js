@@ -10,12 +10,21 @@ import {
   IonLabel,
   IonNote,
 } from '@ionic/react';
-import { undo, school, flag, globe, share, paperPlane } from 'ionicons/icons';
+import {
+  undo,
+  school,
+  flag,
+  globe,
+  share,
+  paperPlane,
+  addCircleOutline,
+} from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import alert from 'common/helpers/alert';
 import languages from 'common/config/languages';
 import countries from 'common/config/countries';
 import config from 'config';
+import surveys from 'common/config/surveys';
 import Main from 'Lib/Main';
 import './styles.scss';
 
@@ -67,6 +76,7 @@ class Component extends React.Component {
     uploadAllSamples: PropTypes.func.isRequired,
     useTraining: PropTypes.bool.isRequired,
     sendAnalytics: PropTypes.bool.isRequired,
+    primarySurvey: PropTypes.string,
     language: PropTypes.string,
     country: PropTypes.string,
   };
@@ -80,7 +90,10 @@ class Component extends React.Component {
       country,
       sendAnalytics,
       uploadAllSamples,
+      primarySurvey,
     } = this.props;
+
+    const primarySurveyLabel = surveys[primarySurvey].label;
 
     return (
       <Main class="app-settings">
@@ -105,6 +118,15 @@ class Component extends React.Component {
                   records in &#39;draft&#39; stage.
                 </T>
               </IonNote>
+            </IonLabel>
+          </IonItem>
+          <IonItem routerLink="/settings/primary-survey">
+            <IonLabel>
+              <T>Primary Survey</T>
+            </IonLabel>
+            <IonIcon icon={addCircleOutline} size="small" slot="start" />
+            <IonLabel slot="end">
+              <T>{primarySurveyLabel}</T>
             </IonLabel>
           </IonItem>
           <IonItemDivider>

@@ -8,6 +8,7 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
 export default {
   id: 562,
   name: 'transect',
+  label: 'eBMS Transect',
   webForm: 'ebms-input-data',
   attrs: {
     date: {

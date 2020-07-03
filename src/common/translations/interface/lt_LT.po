@@ -1421,3 +1421,11 @@ msgstr ""
 # Button
 msgid "Hide"
 msgstr "Paslėpti"
+
+# App settings labels for primary survey change
+msgid "Primary Survey"
+msgstr "Pagrindinis monitoringas"
+
+# App settings labels for primary survey change
+msgid "All Surveys"
+msgstr "Visi monitoringai"

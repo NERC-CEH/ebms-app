@@ -1429,3 +1429,15 @@ msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+
+# Button
+msgid "Hide"
+msgstr ""
+
+# App settings labels for primary survey change
+msgid "Primary Survey"
+msgstr ""
+
+# App settings labels for primary survey change
+msgid "All Surveys"
+msgstr ""

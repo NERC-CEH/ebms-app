@@ -5,6 +5,7 @@ import userModel from 'user_model';
 import Menu from './Menu';
 import Language from './Language';
 import Country from './Country';
+import PrimarySurvey from './PrimarySurvey';
 
 export default [
   <Route
@@ -24,5 +25,11 @@ export default [
     key="/settings/country"
     exact
     render={() => <Country userModel={userModel} appModel={appModel} />}
+  />,
+  <Route
+    path="/settings/primary-survey"
+    key="/settings/primary-survey"
+    exact
+    render={() => <PrimarySurvey userModel={userModel} appModel={appModel} />}
   />,
 ];

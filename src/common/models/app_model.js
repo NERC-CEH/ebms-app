@@ -129,6 +129,8 @@ const getDefaultAttrs = () => ({
 
   transects: [],
 
+  primarySurvey: 'area',
+
   useExperiments: false,
   sendAnalytics: true,
   appSession: 0,

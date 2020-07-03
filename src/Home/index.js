@@ -18,26 +18,43 @@ import userModel from 'user_model';
 import LongPressFabButton from 'Lib/LongPressFabButton';
 import PrivateRoute from 'Lib/PrivateRoute';
 import { Trans as T } from 'react-i18next';
+import surveys from 'common/config/surveys';
 import Report from './Report';
 import Species from './Species';
 import UserSurveys from './Surveys';
 import './styles.scss';
 
 const Component = ({ history }) => {
-  const navigateTo15MinSurvey = () => history.push(`/survey/area/new/edit`);
+  const primarySurveyName = appModel.attrs.primarySurvey || 'area';
+
+  const navigateToPrimarySurvey = () =>
+    history.push(`/survey/${primarySurveyName}/new/edit`);
+
+  const getOtherSurveys = () => {
+    const otherSurveys = Object.values(surveys).filter(
+      ({ name }) => name !== primarySurveyName
+    );
+
+    // eslint-disable-next-line
+    const getSurveyButton = ({ name, label }) => (
+      <IonFabButton
+        class="fab-button-label"
+        routerLink={`/survey/${name}/new/edit`}
+      >
+        <IonLabel>
+          <T>{label}</T>
+        </IonLabel>
+      </IonFabButton>
+    );
+
+    return otherSurveys.map(getSurveyButton);
+  };
 
   return (
     <>
-      <LongPressFabButton onClick={navigateTo15MinSurvey} icon={add}>
+      <LongPressFabButton onClick={navigateToPrimarySurvey} icon={add}>
         <IonFabList side="top">
-          <IonFabButton
-            class="fab-button-label"
-            routerLink="/survey/transect/new/edit"
-          >
-            <IonLabel>
-              <T>eBMS Transect</T>
-            </IonLabel>
-          </IonFabButton>
+          {getOtherSurveys()}
 
           <div className="long-press-surveys-label">
             <T>Click on other recording options from list below</T>
