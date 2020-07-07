@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonList, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
-import Main from 'Lib/Main';
+import { Main, MenuAttrItem } from '@apps';
+import { Trans as T } from 'react-i18next';
 import { person, map, time, clipboard, open } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
-import MenuAttrItem from 'Lib/MenuAttrItem';
 import 'common/images/cloud.svg';
 import 'common/images/thermometer.svg';
 import 'common/images/wind.svg';
@@ -28,7 +28,7 @@ class Edit extends Component {
     if (!transect) {
       return (
         <IonLabel slot="end" color="danger  ">
-          {t('No transect')}
+          <T>No transect</T>
         </IonLabel>
       );
     }
@@ -62,14 +62,17 @@ class Edit extends Component {
         {isDisabled && (
           <div className="info-message">
             <p>
-              {t(
-                'This record has been submitted and cannot be edited within this App.'
-              )}
+              <T>
+                This record has been submitted and cannot be edited within this
+                App.
+              </T>
             </p>
 
             <IonButton href={`${config.site_url}`}>
               <IonIcon icon={open} slot="end" />
-              <IonLabel>{t('eBMS website')}</IonLabel>
+              <IonLabel>
+                <T>eBMS website</T>
+              </IonLabel>
             </IonButton>
           </div>
         )}
@@ -77,7 +80,9 @@ class Edit extends Component {
         <IonList lines="full">
           <IonItem routerLink={`${baseURL}/sections`} detail>
             <IonIcon icon={map} slot="start" mode="md" />
-            <IonLabel>{t('Sections')}</IonLabel>
+            <IonLabel>
+              <T>Sections</T>
+            </IonLabel>
             {this.getPrettySectionsLabel()}
           </IonItem>
 
@@ -90,6 +95,7 @@ class Edit extends Component {
             value={startTimePretty}
             skipValueTranslation
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/surveyEndTime`}
             disabled={isDisabled}
@@ -99,14 +105,16 @@ class Edit extends Component {
             value={endTimePretty}
             skipValueTranslation
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/temperature`}
             disabled={isDisabled}
             icon="/images/thermometer.svg"
             label="Temperature"
-            value={t(temperature)}
+            value={temperature}
             skipValueTranslation
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/cloud`}
             disabled={isDisabled}
@@ -115,20 +123,23 @@ class Edit extends Component {
             value={cloud}
             skipValueTranslation
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/windDirection`}
             disabled={isDisabled}
             icon="/images/wind.svg"
             label="Wind Direction"
-            value={t(windDirection)}
+            value={windDirection}
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/windSpeed`}
             disabled={isDisabled}
             icon="/images/wind.svg"
             label="Wind Speed"
-            value={t(windSpeed)}
+            value={windSpeed}
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/recorder`}
             disabled={isDisabled}
@@ -137,6 +148,7 @@ class Edit extends Component {
             value={recorder}
             skipValueTranslation
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}

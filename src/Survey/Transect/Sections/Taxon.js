@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import Header from 'Lib/Header';
+import { Page, Main, Header } from '@apps';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
-import Page from 'Lib/Page';
-import Main from 'Lib/Main';
 import Occurrence from 'occurrence';
 
 @observer
@@ -43,7 +41,7 @@ class Controller extends React.Component {
 
     return (
       <Page id="transect-sections-taxa">
-        <Header title={t('Species')} />
+        <Header title="Species" />
         <Main>
           <TaxonSearch
             onSpeciesSelected={onSpeciesSelected}

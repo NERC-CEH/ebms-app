@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
-import Device from 'common/helpers/device';
-import loader from 'common/helpers/loader';
-import { success, error, warn } from 'common/helpers/toast';
-import Page from 'Lib/Page';
+import { Page, toast, loader, device } from '@apps';
 import Header from './Header';
 import Main from './Main';
+
+const { success, error, warn } = toast;
 
 @observer
 class index extends React.Component {
@@ -22,7 +21,7 @@ class index extends React.Component {
   refreshUserTransects = async () => {
     const { userModel, appModel } = this.props;
 
-    if (!Device.isOnline()) {
+    if (!device.isOnline()) {
       warn(t("Sorry, looks like you're offline."));
       return;
     }
@@ -51,7 +50,7 @@ class index extends React.Component {
 
   componentDidMount = () => {
     const { appModel } = this.props;
-    if (!appModel.attrs.transects.length && Device.isOnline()) {
+    if (!appModel.attrs.transects.length && device.isOnline()) {
       this.refreshUserTransects();
     }
   };

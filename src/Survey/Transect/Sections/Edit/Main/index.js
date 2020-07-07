@@ -11,8 +11,7 @@ import {
   IonItemOption,
 } from '@ionic/react';
 import { addCircleOutline, removeCircleOutline, funnel } from 'ionicons/icons';
-import Main from 'Lib/Main';
-import MenuAttrItem from 'Lib/MenuAttrItem';
+import { Main, MenuAttrItem } from '@apps';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import InfoBackgroundMessage from 'Lib/InfoBackgroundMessage';
@@ -168,6 +167,7 @@ class Edit extends Component {
             value={cloud}
             skipValueTranslation
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/reliability`}
             disabled={isDisabled}
@@ -175,6 +175,7 @@ class Edit extends Component {
             label="Reliability"
             value={t(reliability)}
           />
+
           {this.getSpeciesAddButton()}
         </IonList>
 

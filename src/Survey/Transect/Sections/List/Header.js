@@ -1,17 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton } from '@ionic/react';
-import Header from 'Lib/Header';
+import { Header } from '@apps';
+import { Trans as T } from 'react-i18next';
 
 function getRefreshButton(showRefreshButton, onRefresh) {
   if (!showRefreshButton) {
     return null;
   }
-  return <IonButton onClick={onRefresh}>{t('Refresh')}</IonButton>;
+  return (
+    <IonButton onClick={onRefresh}>
+      <T>Refresh</T>
+    </IonButton>
+  );
 }
 
 const HeaderComponent = ({ showRefreshButton, onRefresh }) => {
-  const title = showRefreshButton ? t('Transects') : t('Sections');
+  const title = showRefreshButton ? 'Transects' : 'Sections';
 
   return (
     <Header

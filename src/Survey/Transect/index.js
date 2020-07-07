@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import alert from 'common/helpers/alert';
+import { alert } from '@apps';
 import { Route } from 'react-router-dom';
 import { IonRouterOutlet } from '@ionic/react';
 import modelFactory from 'common/models/model_factory';
@@ -162,6 +162,7 @@ class Routes extends React.Component {
             )}
           />
         )}
+
         {hasSectionSubSamples && (
           <Route
             path="/survey/transect/:id/edit/sections/:sectionId/cloud"
@@ -175,6 +176,7 @@ class Routes extends React.Component {
             )}
           />
         )}
+
         {hasSectionSubSamples && (
           <Route
             path="/survey/transect/:id/edit/sections/:sectionId/reliability"

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import { toJS } from 'mobx';
-import Main from 'Lib/Main';
+import { Main } from '@apps';
 import transformToLatLon from 'helpers/location';
 import Transects from './components/Transects';
 import SVG from './components/SVG';
@@ -37,11 +37,9 @@ const getSectionItem = (sectionSample, match) => {
       <IonLabel class="ion-text-wrap" slot="start">
         {section.name || section.id}
       </IonLabel>
-
       {!!sectionSpeciesCount && (
         <IonLabel slot="end">
-          <IonIcon src="/images/butterfly.svg" /> 
-          {' '}
+          <IonIcon src="/images/butterfly.svg" /> {/* prettier-ignore */}{' '}
           {sectionSpeciesCount}
         </IonLabel>
       )}

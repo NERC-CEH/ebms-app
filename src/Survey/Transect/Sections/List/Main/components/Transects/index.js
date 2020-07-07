@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
-import Main from 'Lib/Main';
+import { Main } from '@apps';
+import { Trans as T } from 'react-i18next';
 import transformToLatLon from 'helpers/location';
 import SVG from '../SVG';
 import './styles.scss';
@@ -13,7 +14,9 @@ function showNoTransects() {
     <IonList lines="full">
       <IonItem className="empty">
         <span>
-          {t("You don't have any transects. Please try to refresh the list.")}
+          <T>
+            You don&#39;t have any transects. Please try to refresh the list.
+          </T>
         </span>
       </IonItem>
     </IonList>
@@ -51,13 +54,15 @@ function Transects({ appModel, onTransectSelect }) {
 
   const hasTransects = !!transects.length;
   const transectsList = hasTransects
-    ? transects.map(t => getTransectItem(t, onTransectSelect))
+    ? transects.map(transect => getTransectItem(transect, onTransectSelect))
     : showNoTransects();
 
   return (
     <Main id="transect-list">
       <div className="info-message">
-        <p>{t('Please select your transect first.')}</p>
+        <p>
+          <T>Please select your transect first.</T>
+        </p>
       </div>
       <IonList lines="full">{transectsList}</IonList>
     </Main>

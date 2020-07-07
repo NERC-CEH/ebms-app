@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonButton } from '@ionic/react';
-import alert from 'common/helpers/alert';
 import i18n from 'i18next';
-import Page from 'Lib/Page';
-import Header from 'Lib/Header';
+import { Page, Header, alert } from '@apps';
 import Main from './Main';
 
 function increaseCount(occ) {
