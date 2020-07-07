@@ -12,6 +12,7 @@ export { default as Collapse } from '@bit/flumens.apps.collapse';
 export { default as Toggle } from '@bit/flumens.apps.toggle';
 export { default as TextArea } from '@bit/flumens.apps.textarea';
 export { default as RadioInput } from '@bit/flumens.apps.radio-input';
+export { default as InfoBackgroundMessage } from '@bit/flumens.apps.info-background-message';
 
 export { default as device } from '@bit/flumens.apps.device';
 export { default as alert } from '@bit/flumens.apps.helpers.alert';
