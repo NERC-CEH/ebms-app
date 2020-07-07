@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: POEditor.com\n"
 
 msgid "Papilio-hospiton-description"
-msgstr ""
+msgstr "Papilio-hospiton-tanım"
 
 msgid "Parnassius-mnemosyne-description"
 msgstr ""
@@ -28,7 +28,7 @@ msgstr ""
 "yumurtlar.  Dumanlı Apollo kışı yumurta halinde geçirir. İlkbaharda, küçük "
 "tırtıl yumurtadan çıkar çıkmaz uygun besin bitkisini aramaya başlar. "
 "Gelişimini tamamlayan tırtıl zeminden yukarıda, besin bitkisinin "
-"yapraklarında, ince ipliklerken bir koza örer. Dumanlı Apollon yılda bir "
+"yapraklarında, ince ipliklerken bir koza örer. Dumanlı Apollo yılda bir "
 "nesil verir."
 
 msgid "Parnassius-phoebus-description"
@@ -38,7 +38,7 @@ msgid "Parnassius-apollo-description"
 msgstr ""
 
 msgid "Archon-apollinus-description"
-msgstr ""
+msgstr "Archon-apollinus-tanım"
 
 msgid "Zerynthia-cerisy-description"
 msgstr ""

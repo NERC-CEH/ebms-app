@@ -257,7 +257,7 @@ msgid "Lets start!"
 msgstr "Začnimo!"
 
 msgid "TOP RECORDERS"
-msgstr ""
+msgstr "TOP POPISOVALCI"
 
 msgid "Top Species from all timed counts"
 msgstr "Najpogosteje najdene vrste vseh štetij"
@@ -428,7 +428,7 @@ msgid "Delete"
 msgstr "Izbriši"
 
 msgid "Surveys"
-msgstr "Opazovanja"
+msgstr "Popisi"
 
 msgid "Reports"
 msgstr "Poročila"
@@ -437,22 +437,22 @@ msgid "Sorry, no report data is available at the moment."
 msgstr "Se opravičujemo, trenutno ni na voljo nobenih podatkov o poročilih."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "Ste prepričani, da želite to opazovanje izbrisati?"
+msgstr "Ste prepričani, da želite ta popis izbrisati?"
 
 msgid "No finished surveys"
-msgstr "Ni dokončanih opazovanj"
+msgstr "Ni dokončanih popisov"
 
 msgid "Finished surveys"
-msgstr "Dokončana opazovanja"
+msgstr "Dokončani popisi"
 
 msgid "Selected area"
 msgstr "Izbrano območje"
 
 msgid "Use survey create time"
-msgstr ""
+msgstr "Uporabi začetni čas popisa"
 
 msgid "Use survey finish time"
-msgstr ""
+msgstr "Uporabi končni čas popisa"
 
 msgid "species"
 msgstr "vrsta"
@@ -464,16 +464,16 @@ msgid "Time's up!"
 msgstr "Čas je potekel!"
 
 msgid "Survey incomplete"
-msgstr "Opazovanje je nepopolno"
+msgstr "Popis je nepopoln"
 
 msgid "The survey is not complete yet."
-msgstr "Opazovanje ni še dokončano."
+msgstr "Popis še ni dokončan."
 
 msgid "Please select a smaller area."
 msgstr "Prosimo izberite manjše območje."
 
 msgid "Please add survey area information."
-msgstr "Prosimo dodajte podatke o območju opazovanja."
+msgstr "Prosimo dodajte podatke o območju popisa."
 
 msgid "Choose a method to upload a photo"
 msgstr "Izberite način prenosa fotografije"
@@ -507,6 +507,8 @@ msgid ""
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
+"Metulji so očarljive žuželke, vendar njihovo število v mnogih delih Europe "
+"upada. Kot nakazuje tudi graf Indikator travniških vrst metuljev v EU."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
@@ -519,20 +521,27 @@ msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
+"V številnih delih Evrope primanjkuje podatkov o distribuciji vrst metuljev, "
+"kar predstavlja težavo pri določanju statusa posameznih vrst."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
+"Še nikoli ni bilo lažje prispevati kakovostnih podatkov o distribuciji "
+"metuljev in s tem podpreti ohranjanje teh fascinantnih in ključnih žuželk. "
+"Lahko začnete takoj"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
+"Aplikacija je bila razvita kot del projekta ABLE (Assessing Butterflies in "
+"Europe)."
 
 msgid "The ABLE project is a partnership between"
-msgstr ""
+msgstr "Projekt ABLE je partnerstvo med"
 
 msgid "and"
 msgstr "in"
@@ -541,6 +550,8 @@ msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
+"Projekt ABLE je financiran s strani Evropske unije Direktorata za okolje za "
+"začetno obdobje dveh let 2019-20."
 
 msgid "ABLE partners:"
 msgstr "ABLE partnerji:"
@@ -549,32 +560,36 @@ msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
+"Ta aplikacija prispeva podatke k Evropskemu Programu Monitoringa Metuljev "
+"(eBMS)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr ""
+msgstr "Partnerji eBMS v mesecu juniju 2019, so naslednje organizacije:"
 
 msgid "Not enough data yet"
-msgstr ""
+msgstr "Še ni dovolj podatkov"
 
 msgid "How to start a survey"
-msgstr ""
+msgstr "Kako začnemo s popisom"
 
 msgid "To start a new survey you can press the plus button"
-msgstr ""
+msgstr "Če želite narediti nov popis pritisnite na gumb +"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
-msgstr ""
+msgstr "na dnu strani. S tem se bo začel nov 15-minutni popis."
 
 msgid "Selecting species"
-msgstr ""
+msgstr "Izbrane vrste"
 
 msgid "Please press the Add"
-msgstr ""
+msgstr "Prosimo pritisnite Dodaj"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
+"na vaši strani za urejanje novih popisov. S tem se bo odprla stran za "
+"iskanje taksonov. Ko izberete vrsto se bo dodala na vaš popisni seznam."
 
 msgid "Note"
 msgstr "Beležka"
@@ -583,24 +598,29 @@ msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
+"za povečanje števila opaženih osebkov vrst, na seznamu kliknite številko "
+"poleg vrstnega imena."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
+"Če želite vrsto izbrisati iz seznama povlecite levo in pritisnite izbriši."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
+"Če želite dodati več informacij o pojavljanju vrste odprite vnos s klikom "
+"nanjo."
 
 msgid "To finish a record you should also fill in the details of the area."
-msgstr ""
+msgstr "Za zaključek popisa morate izpolniti podatke o območju."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
-msgstr ""
+msgstr "Ko končate, popis oddate s pritiskom gumba Končaj desno zgoraj."
 
 msgid "Searching for species"
 msgstr "Iskanje vrst"
@@ -610,12 +630,15 @@ msgid ""
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
+"Aplikacija vsebuje približno 500 vrst metuljev in vse z njimi povezane "
+"klasifikacije. Za hitrejše iskanje taksonov lahko uporabite različne "
+"bližnjice. Na primer, da bi našli"
 
 msgid "Sync. with the website"
 msgstr "Sinhronizacija s spletno stranjo"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr ""
+msgstr "Vsi shranjeni popisi bodo vidni na strani vašega profila."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
@@ -639,7 +662,7 @@ msgid ""
 msgstr ""
 
 msgid "Delete a record"
-msgstr ""
+msgstr "Izbriši popis"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
@@ -718,10 +741,10 @@ msgid "Uploaded"
 msgstr ""
 
 msgid "No finished pending surveys"
-msgstr ""
+msgstr "Ni končanih popisov"
 
 msgid "No uploaded surveys"
-msgstr ""
+msgstr "Ni prenešenih popisov"
 
 msgid "Enjoying the app?"
 msgstr ""
@@ -940,7 +963,7 @@ msgid "Unsuitable conditions"
 msgstr ""
 
 msgid "Unable to survey"
-msgstr ""
+msgstr "Popis ni mogoč"
 
 msgid "15min Count"
 msgstr ""
@@ -1104,7 +1127,7 @@ msgid ""
 msgstr ""
 
 msgid "Survey section"
-msgstr "Območje raziskave"
+msgstr "Območje popisa"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1251,7 +1274,7 @@ msgstr "Kopiraj vrste"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr ""
+msgstr "Ste prepričani, da želite kopirati seznam vrst prejšnjega popisa?"
 
 # Species list copy functionality
 msgid "Copy"
@@ -1267,7 +1290,7 @@ msgstr ""
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Oprostite, na voljo ni nobenega seznama vrst iz prejšnjega popisa."
 
 # Country name
 msgid "Armenia"
@@ -1275,7 +1298,7 @@ msgstr ""
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Za izbris popisa povlecite s prstom v levo."
 
 # 15min survey additional information note after survey is finished
 msgid ""
@@ -1284,11 +1307,11 @@ msgstr ""
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "Prosimo, ne pozabite naložiti podatke opravljenih popisov!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
-msgstr ""
+msgstr "Ni dokončanih popisov. <br/><br/>Pritisnite<4></4>za dodajanje."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
@@ -1321,8 +1344,8 @@ msgstr ""
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Začetni Popis"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Vsi Popisi"

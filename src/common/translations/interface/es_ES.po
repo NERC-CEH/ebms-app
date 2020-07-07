@@ -1,13 +1,13 @@
 # 
 # Translators:
 # Karolis, 2020
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,7 +68,7 @@ msgid "Estonia"
 msgstr "Estonia "
 
 msgid "Spain (Canary Islands)"
-msgstr "España: Islas Canarias"
+msgstr "España (Islas Canarias)"
 
 msgid "Finland"
 msgstr "Finlandia"
@@ -131,7 +131,7 @@ msgid "Portugal (Azores)"
 msgstr "Portugal (Azores)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugal: Islas de Madeira"
+msgstr "Portugal (Islas de Madeira)"
 
 msgid "Romania"
 msgstr "Rumanía"
@@ -209,7 +209,7 @@ msgid "Privacy Policy"
 msgstr "Política de privacidad"
 
 msgid "Credits"
-msgstr "Creditos"
+msgstr "Créditos"
 
 msgid "Email"
 msgstr "Correo Electrónico"
@@ -244,7 +244,7 @@ msgid "Remove All Saved"
 msgstr "Eliminar todos los guardados"
 
 msgid "Application"
-msgstr "Solicitud"
+msgstr "Aplicación "
 
 msgid "Training Mode"
 msgstr "Modo de entrenamiento"
@@ -268,7 +268,7 @@ msgid "Back"
 msgstr "Atrás"
 
 msgid "Menu"
-msgstr "Menú"
+msgstr "Menu"
 
 msgid "App"
 msgstr "Aplicación"
@@ -371,7 +371,7 @@ msgid "Add"
 msgstr "Añadir"
 
 msgid "Add species"
-msgstr "Añadir"
+msgstr "Añadir especies"
 
 msgid "Duration"
 msgstr "Duración"
@@ -567,8 +567,8 @@ msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
-"Esta aplicación contribuye datos al Programa Europe de Seguimiento de "
-"mariposas (eBMS por sus siglas en inglés)"
+"Esta aplicación recoge datos para el Programa Europeo de Seguimiento de "
+"Mariposas (eBMS por sus siglas en inglés)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
 msgstr "En Junio de 2019, las siguientes organizaciones son socios de eBMS:"
@@ -678,7 +678,7 @@ msgid ""
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
-"debe iniciar sesión en su cuenta de sitio web y tener una conexión de red "
+"debe iniciar sesión en su cuenta del sitio web y tener una conexión de red "
 "para que los registros se sincronicen automáticamente en segundo plano"
 
 msgid "Delete a record"
@@ -781,7 +781,7 @@ msgid "No uploaded surveys"
 msgstr "No hay muestreos subidos"
 
 msgid "Enjoying the app?"
-msgstr "¿Estás disfrutando la aplicación?"
+msgstr "¿Estás disfrutando de la aplicación?"
 
 msgid "Not really"
 msgstr "No realmente"
@@ -1253,7 +1253,7 @@ msgstr ""
 "registros también se pueden ver y editar en el {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
-msgstr "Website de eBMS"
+msgstr "Página web de eBMS"
 
 msgid "App Settings"
 msgstr "Configuración de la Applicación"
@@ -1418,58 +1418,65 @@ msgstr "Lo sentimos, no hay una encuesta previa para copiar especies."
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Armenia"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Para eliminar cualquier muestreo, deslícela hacia la izquierda."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Verifique si el área de muestreo es correcta antes de enviar el registro."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "¡Por favor, no olvide subir los muestreos pendientes!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
+"No hay encuestas pendientes terminadas<br/><br/>Presione  <4></4> para "
+"agregar."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Consejo: Cómo encontrar ayuda"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"¡Por favor visite las páginas de Guía <2></2> y Ayuda <5></5> en el Menu "
+"antes de usar la aplicación!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Más información"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Consejo: Añadir especies"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Puede copiar toda su lista de especies anteriores presionando "
+"prolongadamente el botón Añadir especies."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Ocultar"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Muestreo Principal"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Todos los muestreos"

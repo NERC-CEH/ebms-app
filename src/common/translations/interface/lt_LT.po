@@ -702,7 +702,7 @@ msgstr ""
 "galite padaryti paspausdami patvirtinimo nuorodą atsiųstą jums į el. paštą"
 
 msgid "Other"
-msgstr "Likusieji"
+msgstr "Kiti"
 
 msgid "Reset the application"
 msgstr "Atstatyti aplikacija"
@@ -865,7 +865,7 @@ msgid "Transect"
 msgstr "Maršrutas"
 
 msgid "Sections"
-msgstr "Dalys"
+msgstr "Ruožai"
 
 msgid "No transect"
 msgstr "Nėra maršruto"
@@ -967,7 +967,7 @@ msgid "Transect list was successfully updated."
 msgstr "Maršrutų sąrašas buvo sėkmingai atnaujintas."
 
 msgid "Section"
-msgstr "Dalis"
+msgstr "Ruožas"
 
 msgid "Reliability"
 msgstr "Patikimumas"
