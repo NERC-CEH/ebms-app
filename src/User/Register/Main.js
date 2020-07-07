@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonButton, IonList } from '@ionic/react';
-import Main from 'Lib/Main';
+import { Trans as T } from 'react-i18next';
+import { Main, InputWithValidation, ToggleWithValidation } from '@apps';
 import { person, mail, key, lock, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
-import InputWithValidation from 'Lib/InputWithValidation';
-import ToggleWithValidation from 'Lib/ToggleWithValidation';
 import config from 'config';
 
 class Component extends React.Component {
@@ -35,28 +34,28 @@ class Component extends React.Component {
               <IonList lines="full">
                 <InputWithValidation
                   name="email"
-                  placeholder={t('Email')}
+                  placeholder="Email"
                   icon={mail}
                   type="email"
                   {...props}
                 />
                 <InputWithValidation
                   name="firstname"
-                  placeholder={t('First Name')}
+                  placeholder="First Name"
                   icon={person}
                   type="text"
                   {...props}
                 />
                 <InputWithValidation
                   name="secondname"
-                  placeholder={t('Surname')}
+                  placeholder="Surname"
                   icon={person}
                   type="text"
                   {...props}
                 />
                 <InputWithValidation
                   name="password"
-                  placeholder={t('Password')}
+                  placeholder="Password"
                   icon={key}
                   type={showPassword ? 'text' : 'password'}
                   {...props}
@@ -75,13 +74,14 @@ class Component extends React.Component {
                 </InputWithValidation>
                 <ToggleWithValidation
                   name="terms"
+                  // prettier-ignore
                   label={(
                     <>
-                      {t('I agree to')}{' '}
+                      <T>I agree to</T>{' '}
                       <a
                         href={`${config.site_url}/privacy-notice?lang=${lang}`}
                       >
-                        {t('Terms and Conditions')}
+                        <T>Terms and Conditions</T>
                       </a>
                     </>
                   )}
@@ -92,7 +92,7 @@ class Component extends React.Component {
               </IonList>
 
               <IonButton color="primary" type="submit" expand="block">
-                {t('Register')}
+                <T>Register</T>
               </IonButton>
             </Form>
           )}

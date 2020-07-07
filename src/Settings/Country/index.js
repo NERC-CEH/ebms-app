@@ -10,13 +10,10 @@ import {
   IonLabel,
   IonItemDivider,
 } from '@ionic/react';
-import Page from 'Lib/Page';
-import Main from 'Lib/Main';
-import alert from 'helpers/alert';
+import { Page, Main, Header, alert } from '@apps';
 import { flag } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import countries from 'common/config/countries';
-import Header from '@bit/flumens.apps.header';
 import './styles.scss';
 
 function SelectCountry({ appModel, hideHeader }) {

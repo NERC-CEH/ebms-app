@@ -7,8 +7,8 @@ import {
   clipboard,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
-import Main from 'Lib/Main';
-import MenuAttrItem from 'Lib/MenuAttrItem';
+import { Main, MenuAttrItem } from '@apps';
+import { Trans as T } from 'react-i18next';
 import 'common/images/number.svg';
 import 'common/images/butterfly.svg';
 import './caterpillar.svg';
@@ -60,7 +60,9 @@ class EditOccurrence extends Component {
             value={species}
           />
           <IonItem id="area-count-occurrence-edit-count" disabled={isDisabled}>
-            <IonLabel>{t('Count')}</IonLabel>
+            <IonLabel>
+              <T>Count</T>
+            </IonLabel>
             <IonIcon src="/images/number.svg" slot="start" />
             <div slot="end">
               {!isDisabled && (
@@ -92,7 +94,7 @@ class EditOccurrence extends Component {
             disabled={isDisabled}
             icon="/images/caterpillar.svg"
             label="Stage"
-            value={t(stage)}
+            value={stage}
           />
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}

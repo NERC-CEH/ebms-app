@@ -12,15 +12,13 @@ import {
 } from '@ionic/react';
 import { book, helpBuoy } from 'ionicons/icons';
 import Log from 'helpers/log';
-import { warn, error } from 'helpers/toast';
 import InfoBackgroundMessage from 'Lib/InfoBackgroundMessage';
-import alert from '@bit/flumens.apps.helpers.alert';
+import { Page, Main, device, alert, toast } from '@apps';
 import { Trans as T } from 'react-i18next';
-import Device from 'helpers/device';
-import Page from 'Lib/Page';
-import Main from 'Lib/Main';
 import { fetchSpeciesReport } from './services';
 import './styles.scss';
+
+const { warn, error } = toast;
 
 class Report extends React.Component {
   static propTypes = {
@@ -68,7 +66,7 @@ class Report extends React.Component {
 
     this.showInfoGuideTip();
 
-    if (!appModel.speciesReport.length && Device.isOnline()) {
+    if (!appModel.speciesReport.length && device.isOnline()) {
       this.refreshReport();
       return;
     }
@@ -91,7 +89,7 @@ class Report extends React.Component {
   };
 
   onListRefreshPull = async e => {
-    if (!Device.isOnline()) {
+    if (!device.isOnline()) {
       warn(t("Sorry, looks like you're offline."));
       e && e.detail.complete(); // refresh pull update
       return;
@@ -158,15 +156,19 @@ class Report extends React.Component {
       <>
         <IonItemDivider>
           <IonLabel className="home-report-label">
-            {t('Top Species from all timed counts')}
+            <T>Top Species from all timed counts</T>
           </IonLabel>
         </IonItemDivider>
         <IonItem lines="full" className="list-header-labels">
           <IonLabel>
-            <small>{t('Species')}</small>
+            <small>
+              <T>Species</T>
+            </small>
           </IonLabel>
           <IonLabel class="ion-text-right">
-            <small>{t('Counts')}</small>
+            <small>
+              <T>Counts</T>
+            </small>
           </IonLabel>
         </IonItem>
 

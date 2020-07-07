@@ -1,11 +1,8 @@
 import React from 'react';
 import { IonList, IonItemDivider, IonIcon } from '@ionic/react';
-import Page from 'Lib/Page';
-import Main from 'Lib/Main';
+import { Page, Main, Header, Collapse } from '@apps';
 import { Trans as T } from 'react-i18next';
-import Header from '@bit/flumens.apps.header';
 import { settings, undo, person, add, send } from 'ionicons/icons';
-import Collapse from 'Lib/Collapse';
 import './styles.scss';
 
 export default () => (
@@ -16,7 +13,7 @@ export default () => (
         <IonItemDivider>
           <T>Surveys</T>
         </IonItemDivider>
-        <Collapse title={t('How to start a survey')}>
+        <Collapse title="How to start a survey">
           <p>
             <T>To start a new survey you can press the plus button</T>
             <IonIcon class="help-page-record-start-icon" icon={add} />
@@ -72,7 +69,7 @@ export default () => (
           </p>
         </Collapse>
 
-        <Collapse title={t('Searching for species')}>
+        <Collapse title="Searching for species">
           <p>
             <T>
               The application holds around 500 butterfly species list and all
@@ -92,7 +89,7 @@ export default () => (
             <i>. achine</i>
           </p>
         </Collapse>
-        <Collapse title={t('Sync. with the website')}>
+        <Collapse title="Sync. with the website">
           <p>
             <T>All your saved surveys will be shown on your account page.</T>
             <IonIcon icon={person} />
@@ -126,7 +123,7 @@ export default () => (
             <br />
           </p>
         </Collapse>
-        <Collapse title={t('Delete a record')}>
+        <Collapse title="Delete a record">
           <p>
             <T>
               To delete a record, swipe it left in your account page and click
@@ -138,7 +135,7 @@ export default () => (
         <IonItemDivider>
           <T>User</T>
         </IonItemDivider>
-        <Collapse title={t('Sign in/out or register')}>
+        <Collapse title="Sign in/out or register">
           <p>
             <T>
               To login, open the main menu page click Login or Register buttons
@@ -166,7 +163,7 @@ export default () => (
         <IonItemDivider>
           <T>Other</T>
         </IonItemDivider>
-        <Collapse title={t('Reset the application')}>
+        <Collapse title="Reset the application">
           <p>
             <T>Go to the application settings page</T>{' '}
             <IonIcon icon={settings} /> <T>and click on the Reset</T>{' '}

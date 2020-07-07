@@ -4,10 +4,10 @@ import Log from 'helpers/log';
 import { observer } from 'mobx-react';
 import { useTranslation } from 'react-i18next';
 import { resetDefaults, remoteSaveAll } from 'saved_samples';
-import Page from 'Lib/Page';
-import Header from '@bit/flumens.apps.header';
-import { success, warn, error } from 'helpers/toast';
+import { Page, Header, toast } from '@apps';
 import Main from './Main';
+
+const { success, warn, error } = toast;
 
 async function resetApp(appModel, userModel) {
   Log('Settings:Menu:Controller: resetting the application!', 'w');

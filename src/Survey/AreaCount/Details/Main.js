@@ -2,7 +2,7 @@ import { observer } from 'mobx-react';
 import React from 'react';
 import { IonList, IonItemDivider, IonLabel } from '@ionic/react';
 import { clipboard } from 'ionicons/icons';
-import { withTranslation, Trans as T } from 'react-i18next';
+import { Trans as T } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Main, MenuAttrItem } from '@apps';
 import 'common/images/cloud.svg';
@@ -53,6 +53,7 @@ class Component extends React.Component {
             value={temperature}
             skipValueTranslation
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/cloud`}
             disabled={isDisabled}
@@ -69,6 +70,7 @@ class Component extends React.Component {
             label="Wind Direction"
             value={windDirection}
           />
+
           <MenuAttrItem
             routerLink={`${baseURL}/windSpeed`}
             disabled={isDisabled}
@@ -82,4 +84,4 @@ class Component extends React.Component {
   }
 }
 
-export default withTranslation()(Component);
+export default Component;

@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import Page from 'Lib/Page';
-import Main from 'Lib/Main';
+import { Page, Main, Header } from '@apps';
 import {
   IonIcon,
   IonList,
@@ -13,7 +12,6 @@ import {
 } from '@ionic/react';
 import { globe } from 'ionicons/icons';
 import languages from 'common/config/languages';
-import Header from '@bit/flumens.apps.header';
 import './styles.scss';
 
 function SelectLanguage({ appModel, hideHeader }) {

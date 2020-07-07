@@ -15,7 +15,7 @@ import {
   open,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import Main from 'Lib/Main';
+import { Main } from '@apps';
 import config from 'config';
 import './styles.scss';
 import './logo.png';

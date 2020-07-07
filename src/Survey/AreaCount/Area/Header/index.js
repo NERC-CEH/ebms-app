@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonLabel } from '@ionic/react';
-import Header from 'Lib/Header';
-import Toggle from 'Lib/Toggle';
+import { Header, Toggle } from '@apps';
 import './styles.scss';
 
 const HeaderComponent = observer(
@@ -20,7 +19,7 @@ const HeaderComponent = observer(
       </>
     );
 
-    return <Header title={t('Area')} rightSlot={!isDisabled && GPSToggle} />;
+    return <Header title="Area" rightSlot={!isDisabled && GPSToggle} />;
   }
 );
 

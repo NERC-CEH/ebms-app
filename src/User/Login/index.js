@@ -2,16 +2,14 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { NavContext } from '@ionic/react';
 import Log from 'helpers/log';
-import Device from 'helpers/device';
-import { warn, error } from 'helpers/toast';
-import loader from 'helpers/loader';
-import Page from 'Lib/Page';
-import Header from 'Lib/Header';
+import { Page, Header, loader, device, toast } from '@apps';
 import Main from './Main';
+
+const { warn, error } = toast;
 
 async function onLogin(userModel, details, onSuccess) {
   const { name, password } = details;
-  if (!Device.isOnline()) {
+  if (!device.isOnline()) {
     warn(t("Sorry, looks like you're offline."));
     return;
   }
@@ -52,7 +50,7 @@ export default function LoginContainer({ userModel, onSuccess }) {
 
   return (
     <Page id="user-login">
-      <Header title={t('Login')} />
+      <Header title="Login" />
       <Main
         schema={userModel.loginSchema}
         onSubmit={details => onLogin(userModel, details, onSuccessReturn)}

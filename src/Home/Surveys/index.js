@@ -8,8 +8,7 @@ import {
   IonBadge,
   IonIcon,
 } from '@ionic/react';
-import Main from 'Lib/Main';
-import Page from 'Lib/Page';
+import { Page, Main } from '@apps';
 import InfoBackgroundMessage from 'Lib/InfoBackgroundMessage';
 import { Trans as T } from 'react-i18next';
 import { add } from 'ionicons/icons';
@@ -139,7 +138,7 @@ class Component extends React.Component {
               mode="ios"
             >
               <IonLabel className="ion-text-wrap" mode="ios">
-                {t('Pending')}
+                <T>Pending</T>
                 {pendingSurveys.length ? (
                   <IonBadge color="danger" slot="end" mode="ios">
                     {pendingSurveys.length}
@@ -154,7 +153,7 @@ class Component extends React.Component {
               mode="ios"
             >
               <IonLabel className="ion-text-wrap" mode="ios">
-                {t('Uploaded')}
+                <T>Uploaded</T>
                 {uploadedSurveys.length ? (
                   <IonBadge
                     class="ion-badge-custom-color"
@@ -170,7 +169,7 @@ class Component extends React.Component {
 
             <IonSegmentButton value="map" checked={showingMap} mode="ios">
               <IonLabel className="ion-text-wrap" mode="ios">
-                {t('Map')}
+                <T>Map</T>
               </IonLabel>
             </IonSegmentButton>
           </IonSegment>

@@ -6,7 +6,7 @@ import {
   IonToolbar,
   IonTitle,
 } from '@ionic/react';
-import Main from 'Lib/Main';
+import { Main } from '@apps';
 import { locate } from 'ionicons/icons';
 import CONFIG from 'config';
 import L from 'leaflet';

@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavContext } from '@ionic/react';
-import Page from 'Lib/Page';
-import Main from 'Lib/Main';
-import Header from 'Lib/Header';
+import { Page, Main, Header } from '@apps';
 import RadioInput from 'Lib/RadioInput';
+
 import Input from 'Lib/Input';
 import Textarea from 'Lib/Textarea';
 import { observer } from 'mobx-react';
@@ -89,7 +88,7 @@ class Component extends React.Component {
   render() {
     return (
       <Page id="area-count-edit-stage">
-        <Header title={t(this.attrConfig.label)} />
+        <Header title={this.attrConfig.label} />
         <Main>{this.getAttr()}</Main>
       </Page>
     );

@@ -22,13 +22,10 @@ import {
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
-import Main from 'Lib/Main';
 import InfoBackgroundMessage from 'Lib/InfoBackgroundMessage';
 import LongPressButton from 'Lib/LongPressButton';
-import MenuAttrItem from 'Lib/MenuAttrItem';
+import { Main, MenuAttrItem, MenuNoteItem, alert } from '@apps';
 import { Trans as T } from 'react-i18next';
-import alert from '@bit/flumens.apps.helpers.alert';
-import MenuNoteItem from '@bit/flumens.apps.menu-note-item';
 import CountdownClock from './components/CountdownClock';
 import './styles.scss';
 

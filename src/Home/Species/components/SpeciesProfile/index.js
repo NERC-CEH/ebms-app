@@ -8,7 +8,8 @@ import {
 } from '@ionic/react';
 import { PhotoSwipe } from 'react-photoswipe';
 import PropTypes from 'prop-types';
-import Main from 'Lib/Main';
+import { Main } from '@apps';
+import { Trans as T } from 'react-i18next';
 import 'react-photoswipe/lib/photoswipe.css';
 import 'react-photoswipe/dist/default-skin.svg';
 import './styles.scss';
@@ -88,14 +89,18 @@ class Component extends React.Component {
           {status && (
             <IonCardContent>
               <h3 className="species-label inline-label">
-                {`${t('Status')}:`}
+                <T>Status</T>:
               </h3>
-              <span>{t(status)}</span>
+              <span>
+                <T>{status}</T>
+              </span>
             </IonCardContent>
           )}
 
           <IonCardContent>
-            <h3 className="species-label">{`${t('Description')}:`}</h3>
+            <h3 className="species-label">
+              <T>Description</T>:
+            </h3>
             {t(species.descriptionKey, true)}
           </IonCardContent>
         </Main>

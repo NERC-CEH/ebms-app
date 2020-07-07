@@ -1,9 +1,7 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
-import Page from 'Lib/Page';
-import Main from 'Lib/Main';
+import { Page, Main, Header } from '@apps';
 import { Trans as T } from 'react-i18next';
-import Header from '@bit/flumens.apps.header';
 import species from 'common/data/profiles';
 import './sponsors.png';
 import './flumens.png';

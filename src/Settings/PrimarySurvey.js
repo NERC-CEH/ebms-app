@@ -8,10 +8,8 @@ import {
   IonRadio,
   IonLabel,
 } from '@ionic/react';
-import Page from 'Lib/Page';
-import Main from 'Lib/Main';
+import { Page, Main, Header } from '@apps';
 import surveys from 'common/config/surveys';
-import Header from '@bit/flumens.apps.header';
 
 function SelectCountry({ appModel }) {
   const currentValue = appModel.attrs.primarySurvey;

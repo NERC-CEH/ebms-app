@@ -1,18 +1,15 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Log from 'helpers/log';
-import Device from 'helpers/device';
 import { NavContext } from '@ionic/react';
-import { warn, error } from 'common/helpers/toast';
-import alert from 'common/helpers/alert';
-import loader from 'common/helpers/loader';
-import Page from 'Lib/Page';
-import Header from 'Lib/Header';
+import { Page, Header, loader, alert, toast, device } from '@apps';
 import Main from './Main';
+
+const { warn, error } = toast;
 
 async function onRegister(userModel, details, lang, onSuccess) {
   const { email, password, firstname, secondname } = details;
-  if (!Device.isOnline()) {
+  if (!device.isOnline()) {
     warn(t("Sorry, looks like you're offline."));
     return;
   }
@@ -64,7 +61,7 @@ export default function RegisterContainer({ userModel, appModel }) {
 
   return (
     <Page id="user-register">
-      <Header title={t('Register')} />
+      <Header title="Register" />
       <Main
         schema={userModel.registerSchema}
         onSubmit={details => onRegister(userModel, details, lang, onSuccess)}

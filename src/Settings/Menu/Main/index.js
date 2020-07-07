@@ -1,7 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
-import Toggle from 'Lib/Toggle';
 import {
   IonIcon,
   IonList,
@@ -20,12 +19,11 @@ import {
   addCircleOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import alert from 'common/helpers/alert';
 import languages from 'common/config/languages';
 import countries from 'common/config/countries';
 import config from 'config';
 import surveys from 'common/config/surveys';
-import Main from 'Lib/Main';
+import { Main, alert, Toggle } from '@apps';
 import './styles.scss';
 
 function resetDialog(resetApp) {

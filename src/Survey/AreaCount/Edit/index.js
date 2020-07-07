@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import Page from 'Lib/Page';
-import alert from 'common/helpers/alert';
+import { Page, alert, toast } from '@apps';
 import i18n from 'i18next';
 import showInvalidsMessage from 'helpers/invalidsMessage';
-import toast from '@bit/flumens.apps.helpers.toast';
 import Occurrence from 'occurrence';
 import Header from './Header';
 import Main from './Main';

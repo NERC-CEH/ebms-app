@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton } from '@ionic/react';
-import Header from '@bit/flumens.apps.header';
+import { Header } from '@apps';
 import { Trans as T } from 'react-i18next';
 import './styles.scss';
 

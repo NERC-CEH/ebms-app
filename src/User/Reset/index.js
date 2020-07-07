@@ -2,20 +2,19 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { NavContext } from '@ionic/react';
 import Log from 'helpers/log';
-import Device from 'helpers/device';
-import { warn, error } from 'common/helpers/toast';
-import alert from 'common/helpers/alert';
-import loader from 'common/helpers/loader';
-import Page from 'Lib/Page';
-import Header from 'Lib/Header';
+import { Page, Header, alert, toast, loader, device } from '@apps';
 import Main from './Main';
+
+const { warn, error } = toast;
 
 async function onSubmit(userModel, details, onSuccess) {
   const { name } = details;
-  if (!Device.isOnline()) {
-    warn(t("Sorry, looks like you're offline."));
+
+  if (!device.isOnline()) {
+    warn(t("Sorry, looks like you're offline"));
     return;
   }
+
   await loader.show({
     message: t('Please wait...'),
   });
@@ -56,7 +55,7 @@ export default function Container({ userModel }) {
 
   return (
     <Page id="user-reset">
-      <Header title={t('Reset')} />
+      <Header title="Reset" />
       <Main
         schema={userModel.resetSchema}
         onSubmit={details => onSubmit(userModel, details, onSuccess)}

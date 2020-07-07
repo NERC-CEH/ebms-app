@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import Header from 'Lib/Header';
-import Page from 'Lib/Page';
+import { Page, Header } from '@apps';
 import Footer from 'Components/PhotoPickerFooter';
 import Main from './Main';
 import './styles.scss';
@@ -23,7 +22,7 @@ class Container extends React.Component {
 
     return (
       <Page id="area-count-edit-occurrence">
-        <Header title={t('Edit Occurrence')} />
+        <Header title="Edit Occurrence" />
         <Main sample={sample} occurrence={occurrence} isDisabled={isDisabled} />
         <Footer model={occurrence} isDisabled={isDisabled} />
       </Page>

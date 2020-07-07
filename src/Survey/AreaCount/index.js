@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import alert from 'common/helpers/alert';
 import { Route } from 'react-router-dom';
 import { IonRouterOutlet } from '@ionic/react';
 import modelFactory from 'common/models/model_factory';
-import { AttrPage } from '@apps';
+import { AttrPage, alert } from '@apps';
 import Edit from './Edit';
 import EditOccurrence from './EditOccurrence';
 import Taxon from './Taxon';
