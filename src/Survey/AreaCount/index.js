@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import { IonRouterOutlet } from '@ionic/react';
 import modelFactory from 'common/models/model_factory';
 import { AttrPage, alert } from '@apps';
+import { Trans as T } from 'react-i18next';
 import Edit from './Edit';
 import EditOccurrence from './EditOccurrence';
 import Taxon from './Taxon';
@@ -17,9 +18,9 @@ async function showDraftAlert() {
   return new Promise(resolve => {
     alert({
       header: t('Draft'),
-      message: `${t(
-        'Previous survey draft exists, would you like to continue it?'
-      )}`,
+      message: (
+        <T>Previous survey draft exists, would you like to continue it?</T>
+      ),
       backdropDismiss: false,
       buttons: [
         {

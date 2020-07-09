@@ -173,7 +173,7 @@ class Edit extends Component {
             disabled={isDisabled}
             icon="/images/thumb-up.svg"
             label="Reliability"
-            value={t(reliability)}
+            value={reliability}
           />
 
           {this.getSpeciesAddButton()}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonButton } from '@ionic/react';
 import i18n from 'i18next';
+import { Trans as T } from 'react-i18next';
 import { Page, Header, alert } from '@apps';
 import Main from './Main';
 
@@ -86,7 +87,7 @@ class Container extends React.Component {
           );
         }}
       >
-        {t('Next')}
+        <T>Next</T>
       </IonButton>
     );
   };

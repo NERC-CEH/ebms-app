@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
-import Main from 'Lib/Main';
+import { Main } from '@apps';
+import { Trans as T } from 'react-i18next';
 import { key, person, eye, eyeOff } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 import InputWithValidation from 'Lib/InputWithValidation';
@@ -24,7 +25,9 @@ class Component extends React.Component {
     return (
       <Main>
         <div className="info-message">
-          <p>{t('Please sign in with your eBMS account or register.')}</p>
+          <p>
+            <T>Please sign in with your eBMS account or register.</T>
+          </p>
         </div>
         <Formik
           validationSchema={schema}
@@ -63,15 +66,15 @@ class Component extends React.Component {
               </IonList>
 
               <IonButton color="primary" type="submit" expand="block">
-                {t('Sign in')}
+                <T>Sign in</T>
               </IonButton>
 
               <IonList>
                 <IonItem routerLink="/user/register" detail>
-                  {t('Register')}
+                  <T>Register</T>
                 </IonItem>
                 <IonItem routerLink="/user/reset" detail>
-                  {t('Forgot password?')}
+                  <T>Forgot password?</T>
                 </IonItem>
               </IonList>
             </Form>
