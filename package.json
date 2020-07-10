@@ -33,7 +33,7 @@
     "@bit/flumens.apps.collapse": "^0.2.0",
     "@bit/flumens.apps.device": "^0.1.0",
     "@bit/flumens.apps.header": "0.4.0",
-    "@bit/flumens.apps.helpers.alert": "^0.2.0",
+    "@bit/flumens.apps.helpers.alert": "0.3.0",
     "@bit/flumens.apps.helpers.loader": "^0.1.0",
     "@bit/flumens.apps.helpers.toast": "^0.1.1",
     "@bit/flumens.apps.info-background-message": "0.1.0",
