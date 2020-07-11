@@ -2,8 +2,10 @@
 
 - Added more helpful information tips
 - Added Armenia
-- Fix splashscreen
-- Add primary survey selection
+- Fixed splashscreen
+- Added primary survey selection
+- Fixed species common name search
+- Added Turkish language
 
 ## 1.8.1
 
