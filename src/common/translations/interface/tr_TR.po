@@ -2,11 +2,14 @@
 # Translators:
 # Evrim <ekaracetin@hotmail.com>, 2020
 # Vildan Acar <vildanacr@gmail.com>, 2020
+# Ahmet Furkan TON <afurkanton@gmail.com>, 2020
+# Gozde Atag <atag.gozde@outlook.com>, 2020
+# Karolis, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Vildan Acar <vildanacr@gmail.com>, 2020\n"
+"Last-Translator: Karolis, 2020\n"
 "Language-Team: Turkish (Turkey) (https://www.transifex.com/ceh/teams/95441/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -257,10 +260,10 @@ msgid "Lets start!"
 msgstr "Hadi Başlayalım"
 
 msgid "TOP RECORDERS"
-msgstr ""
+msgstr "EN ÇOK KAYIT YAPANLAR"
 
 msgid "Top Species from all timed counts"
-msgstr ""
+msgstr "Tüm zamanların en çok gözlemlenen türleri"
 
 msgid "Back"
 msgstr "Geri"
@@ -309,7 +312,7 @@ msgid "Login error:"
 msgstr "Giriş hatası"
 
 msgid "Failed to fetch"
-msgstr ""
+msgstr "Cevap vermekte başarısız olundu"
 
 msgid "Incorrect password or email."
 msgstr "Yanlış şifre ya da email"
@@ -388,13 +391,13 @@ msgid "you can type in the search bar"
 msgstr "Arama çubuğuna yazabilirsiniz"
 
 msgid "Edit Occurrence"
-msgstr ""
+msgstr "Olay Düzenle"
 
 msgid "Count"
-msgstr ""
+msgstr "Sayım"
 
 msgid "Comment"
-msgstr ""
+msgstr "Yorum"
 
 msgid "Draft"
 msgstr "Taslak"
@@ -427,7 +430,7 @@ msgid "Delete"
 msgstr "Sil"
 
 msgid "Surveys"
-msgstr "anketler ? gözlemler? "
+msgstr "Gözlemler"
 
 msgid "Reports"
 msgstr "Kayıtlar"
@@ -448,10 +451,10 @@ msgid "Selected area"
 msgstr "Seçilmiş alan"
 
 msgid "Use survey create time"
-msgstr ""
+msgstr "Gözlem başlangıç zamanını kullan"
 
 msgid "Use survey finish time"
-msgstr ""
+msgstr "Gözlem bitiş zamanını kullan"
 
 msgid "species"
 msgstr "tür"
@@ -463,16 +466,16 @@ msgid "Time's up!"
 msgstr "Süre doldu!"
 
 msgid "Survey incomplete"
-msgstr ""
+msgstr "Tamamlanmamış gözlem"
 
 msgid "The survey is not complete yet."
-msgstr ""
+msgstr "Gözlem henüz tamamlanmadı."
 
 msgid "Please select a smaller area."
 msgstr "Lütfen daha küçük bir alan seçiniz."
 
 msgid "Please add survey area information."
-msgstr ""
+msgstr "Lütfen gözlem yapılan bölgenin bilgilerini girin."
 
 msgid "Choose a method to upload a photo"
 msgstr "Fotoğraf yükleme yönteminizi seçiniz"
@@ -487,7 +490,7 @@ msgid "Are you sure you want to remove this photo?"
 msgstr "Bu fotoğrafı silmek istediğinizden emin misiniz?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Not: Galeride saklı kalacak"
+msgstr "Not: Galeride saklı kalacak."
 
 msgid "No photo has been added"
 msgstr "Hiç fotoğraf eklenmedi"
@@ -506,30 +509,43 @@ msgid ""
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
+"Kelebekler büyüleyici böcekler ama AB Çayır Kelebekleri İndeksi tarafından "
+"hazırlanan bu grafiğe göre Avrupa'nın çoğu bölgesinde sayıları azalıyor. "
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
+"Bu uygulama sayesinde elde edilen veriler, kelebekler ve onların yaşam "
+"alanlarıyla ilgili bilgilerin gelişmesine çok büyük katkılar sağlayabilir. "
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
+"Kelebeklerin ne durumda olduğunu belirlemek üzere yapılan kayıtların "
+"yoğunluğuna bakıldığında da anlaşıldığı üzere, Avrupa'nın pek çok bölgesinde"
+" yaşayan kelebeklerin sayısıyla ilgili bilgimiz sınırlı.  "
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
+"Bu muhteşem böceklerin korunması için yürütülen bilimsel araştırmalarda "
+"kullanılacak yüksek nitelikli verilerin elde edilmesine katkı sağlamak daha "
+"önce hiç bu kadar kolay olmamıştı! Siz de hemen şimdi katkıda bulunmaya "
+"başlayabilirsiniz"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
+"Bu uygulama Avrupa'daki Kelebeklerin Durumunu Belirleme (ABLE) Projesi "
+"kapsamında geliştirilmiştir."
 
 msgid "The ABLE project is a partnership between"
-msgstr ""
+msgstr "AKDB (ABLE) Projesi ... ile ... arasındaki ortaklıktır."
 
 msgid "and"
 msgstr "ve"
@@ -538,40 +554,48 @@ msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
+"ABLE Projesi,  Avrupa Birliği Çevre Genel Müdürlüğü tarafınca imzalanmış "
+"hizmet sözleşmesi kapsamında ilk aşamada 2019-2020 yılları boyunca "
+"fonlanmaktadır. "
 
 msgid "ABLE partners:"
-msgstr ""
+msgstr "ABLE Proje ortakları: "
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
+"Bu uygulama Avrupa Kelebek İzleme Planı (eBMS) verilerine katkıda bulunur. "
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
 msgstr ""
+"Haziran 2019 itibariyle Avrupa Kelebek İzleme Planı (eBMS) ortağı olan "
+"organizasyonlar: "
 
 msgid "Not enough data yet"
-msgstr ""
+msgstr "Henüz yeterli veri yok"
 
 msgid "How to start a survey"
-msgstr ""
+msgstr "Bir gözlemi nasıl başlatabilirim?"
 
 msgid "To start a new survey you can press the plus button"
-msgstr ""
+msgstr "Yeni bir gözlem başlatmak için \"+\" butonuna basabilirsiniz"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
-msgstr ""
+msgstr "anasayfa altbaşlığında. Bu, 15 dakikalık yeni bir gözlem başlatır."
 
 msgid "Selecting species"
-msgstr ""
+msgstr "Tür seçimi"
 
 msgid "Please press the Add"
-msgstr ""
+msgstr "Lütfen 'Ekle'ye basın"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
+"yeni gözlem düzenleme sayfanızdaki tuş. Bu, sizi takson arama sayfasına "
+"getirecektir. Türleri seçtikten sonra ise, gözem listenize eklenecektir. "
 
 msgid "Note"
 msgstr "Notlar"
@@ -580,71 +604,91 @@ msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
+"Gözlemlediğiniz kelebek sayısını listenizdeki tür isminin yanındaki sayıya "
+"tıklayarak arttırabilirsiniz."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
+"Bir türü gözlem listenizden çıkarmak için sola kaydırıp sil butonuna "
+"basabilirsiniz."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
+"Gözlemlediğiniz türle ilgili ayrıntılı bilgi eklemek isterseniz, tür ismine "
+"tıklayarak ilgili tür kaydını detaylandırabilirsiniz. "
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr ""
+"Bir kaydı tamamlamak için gözlem yaptığınız bölge ile ilgili bilgileri de "
+"eklemelisiniz. "
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
 msgstr ""
+"Bitirdiğinizde, başlıktaki 'Bitir' tuşuna basarak göndermeye hazır hale "
+"getirin."
 
 msgid "Searching for species"
-msgstr ""
+msgstr "Tür aramak"
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
+"Uygulamada yaklaşık 500 kelebek türü listesi ve ilgili tüm taksonomi "
+"birimleri bulunur. Taksayı daha hızlı aramak için farklı kısayollar "
+"kullanabilirsiniz. Örneğin,"
 
 msgid "Sync. with the website"
-msgstr ""
+msgstr "İnternet sitesiyle senkronize et"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr ""
+msgstr "Kaydettiğiniz tüm gözlemler profilinizde görüntülenecek."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
+"Bitir butonuna basana kadar gözleminiz \"taslak\" olarak görünür. Uygun "
+"internet bağlantısı bulunduğunda uygulama gözlem kaydınızı sisteme yükler."
 
 msgid "If the record has reached the database a red"
-msgstr ""
+msgstr "Gözlem kaydı veri tabanına ulaştıysa kırmızı"
 
 msgid "(set for submission & saved locally) will become green"
-msgstr ""
+msgstr "yeşile dönecek"
 
 msgid "synced to the database"
-msgstr ""
+msgstr "veritabanıyla eşzamanlandı"
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
+"Kayıtların arkaplanda otomatik olarak senkronize edilebilmesi için internet "
+"bağlantısına erişimde olmalı ve internet sitesinden hesabınıza giriş yapmış "
+"olmalısınız "
 
 msgid "Delete a record"
-msgstr ""
+msgstr "Kaydı sil"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
+"Gözlem kaydını silmek için, profil sayfanızda görünen kaydı sola kaydırın be"
+" sil butonuna basın."
 
 msgid "User"
-msgstr ""
+msgstr "Kullanıcı"
 
 msgid "Sign in/out or register"
 msgstr "Giriş/Çıkış yap ya da Kayıt ol"
@@ -653,119 +697,133 @@ msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
+"Giriş yapmak için ana menüyü açın ve Giriş Yap ya da Kayıt Ol butonlarına "
+"tıklayarak yönergeleri takip edin."
 
 msgid "To logout, visit the main menu page and click the logout button."
-msgstr ""
+msgstr "Çıkış yapmak için ana menüyü açın ve Çıkış Yap butonuna basın."
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
+"Yeni bir hesap oluşturduğunuzda mailinize gönderilmiş aktifleştirme "
+"bağlantısına tıklayarak e-posta adresinizi doğrulamanız gerekmektedir. "
 
 msgid "Other"
 msgstr "Diğer"
 
 msgid "Reset the application"
-msgstr ""
+msgstr "Uygulamayı sıfırla"
 
 msgid "Go to the application settings page"
-msgstr ""
+msgstr "Uygulama ayarlarına git"
 
 msgid "and click on the Reset"
-msgstr ""
+msgstr "ve Sıfırla butonuna bas"
 
 msgid "button"
-msgstr ""
+msgstr "Buton"
 
 msgid "No species found with this name"
-msgstr ""
+msgstr "Bu isimde bir tür bulunamadı."
 
 msgid "Allow Sample Edit"
-msgstr ""
+msgstr "Örnek düzenlemeye izin ver"
 
 msgid "Upload"
-msgstr ""
+msgstr "Yükle"
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
+"Bu uygulama kelebek gözlemi ve korunmasına katkı sağlar.  Alttaki \"+\" "
+"butonuna basarak kelebekleri saymaya başlayın."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
+"İlerleyen aylarda yeni özellikler eklendikçe uygulamada bek çok gelişme "
+"göreceksiniz. "
 
 msgid "Are you sure you want to reset the application to its initial state?"
 msgstr ""
+"Uygulamayı ilk ayarlara dönecek şekilde sıfırlamak istediğinize emin "
+"misiniz?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr ""
+msgstr "Bu, cihazda depolanmış bütün verileri temizleyecek!"
 
 msgid "Sweden"
-msgstr ""
+msgstr "İsveç"
 
 msgid "Paused"
-msgstr ""
+msgstr "Durduruldu"
 
 msgid "Pending"
-msgstr ""
+msgstr "Bekleniyor"
 
 msgid "Uploaded"
-msgstr ""
+msgstr "Yüklendi"
 
 msgid "No finished pending surveys"
-msgstr ""
+msgstr "Hiç tamamlanmış, 'bekleyen' gözlem bulunmamaktadır. "
 
 msgid "No uploaded surveys"
-msgstr ""
+msgstr "Hiç yüklenmiş gözlem bulunmamaktadır"
 
 msgid "Enjoying the app?"
-msgstr ""
+msgstr "Uygulamayı beğendiniz mi?"
 
 msgid "Not really"
-msgstr ""
+msgstr "Pek sayılmaz"
 
 msgid "Yes!"
-msgstr ""
+msgstr "Evet!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr ""
+msgstr "Bize geri bildirim vermek ister misiniz?"
 
 msgid "No, thanks"
-msgstr ""
+msgstr "Hayır, teşekkürler."
 
 msgid "OK, sure"
-msgstr ""
+msgstr "Tamam"
 
 msgid "How about a rating on the App Store then?"
-msgstr ""
+msgstr "Uygulamayı App Store üzerinden puanlamak ister misiniz?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr ""
+msgstr "Uygulamayı Play Store üzerinden puanlamak ister misiniz?"
 
 msgid "Icons made by"
-msgstr ""
+msgstr "Simgeler ... tarafından yapılmıştır."
 
 msgid "from"
-msgstr ""
+msgstr "itibaren"
 
 msgid "Enter your username or email address to request a password reset."
 msgstr ""
+"Parola sıfırlama isteği göndermek için e-posta adresinizi ya da kullanıcı "
+"adınızı girin."
 
 msgid "We've sent an email to you"
-msgstr ""
+msgstr "Size bir e-posta gönderdik"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
+"Parolanızı sıfırlamak için size gönderdiğimiz e-postadaki bağlantıya "
+"tıklayın. Eğer e-postayı göremiyorsanız spam mailleri kontrol edin. "
 
 msgid "App Development"
-msgstr ""
+msgstr "Uygulama geliştirme"
 
 msgid "This app was hand crafted with love by"
-msgstr ""
+msgstr "Bu uygulama, ... tarafından sevgiyle yapılmıştır. "
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
@@ -773,91 +831,92 @@ msgid ""
 msgstr ""
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr ""
+msgstr "Öneri ve geribildirimleriniz için lütfen çekinmeyin"
 
 msgid "contact us"
-msgstr ""
+msgstr "iletişime geçmek(ten)"
 
 msgid "Language"
-msgstr ""
+msgstr "Dil"
 
 msgid "Country"
-msgstr ""
+msgstr "Ülke"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
+"Yeni kayıtları 'eğitim' olarak işaretleyin ve tüm raporlardan çıkarın."
 
 msgid "Share App Analytics"
-msgstr ""
+msgstr "Uygulama analitiğini paylaş"
 
 msgid "Save Draft"
-msgstr ""
+msgstr "Taslağı Kaydet"
 
 msgid "Stage"
-msgstr ""
+msgstr "Evre"
 
 msgid "Not Recorded"
-msgstr ""
+msgstr "Kaydedilmedi"
 
 msgid "Adults"
-msgstr ""
+msgstr "Yetişkinler"
 
 msgid "Larvae"
-msgstr ""
+msgstr "Larvalar"
 
 msgid "Eggs"
-msgstr ""
+msgstr "Yumurtalar"
 
 msgid "Pupae"
-msgstr ""
+msgstr "Pupalar"
 
 msgid "Larval webs"
-msgstr ""
+msgstr "Larva ağları"
 
 msgid "Transect"
-msgstr ""
+msgstr "Transekt"
 
 msgid "Sections"
-msgstr ""
+msgstr "Kısımlar"
 
 msgid "No transect"
-msgstr ""
+msgstr "Transekt yok"
 
 msgid "Start Time"
 msgstr "Başlangıç zamanı"
 
 msgid "End Time"
-msgstr ""
+msgstr "Bitiş zamanı"
 
 msgid "Temperature"
-msgstr ""
+msgstr "Sıcaklık"
 
 msgid "Cloud"
-msgstr ""
+msgstr "Bulut"
 
 msgid "Wind Direction"
-msgstr ""
+msgstr "Rüzgar Yönü"
 
 msgid "Wind Speed"
-msgstr ""
+msgstr "Rüzgar Hızı"
 
 msgid "Recorder"
-msgstr ""
+msgstr "Kaydedici"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Yenile"
 
 msgid "Please select your transect first."
-msgstr ""
+msgstr "Lütfen önce transektinizi seçin."
 
 msgid "Invalid server response."
-msgstr ""
+msgstr "Sunucu yanıtı geçersiz"
 
 msgid "Not recorded/no data"
-msgstr ""
+msgstr "Kaydedilmedi/Veri yok"
 
 msgid "Please specify the temperature C°."
-msgstr ""
+msgstr "Lütfen hava sıcaklığını C° cinsinden belirtiniz."
 
 msgid "S"
 msgstr "G"
@@ -884,142 +943,147 @@ msgid "SE"
 msgstr "GD"
 
 msgid "No direction"
-msgstr ""
+msgstr "Yön yok"
 
 msgid "Please specify the wind direction."
 msgstr "Lütfen rüzgar yönünü belirtiniz"
 
 msgid "Smoke rises vertically"
-msgstr ""
+msgstr "Duman dik bir şekilde yükselir"
 
 msgid "Slight smoke drift"
-msgstr ""
+msgstr "Duman hafifçe sürüklenir"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr ""
+msgstr "Rüzgar yüzde hissedilir, yapraklar hışırdar"
 
 msgid "Leaves and twigs in slight motion"
-msgstr ""
+msgstr "Yapraklar ve ince dallar hafifçe kıpırdar"
 
 msgid "Dust raised and small branches move"
-msgstr ""
+msgstr "Toz kalkmıştır ve küçük dallar hareket eder"
 
 msgid "Small trees in leaf begin to sway"
-msgstr ""
+msgstr "Küçük ağaçlar yapraklarıyla sallanmaya başlar."
 
 msgid "Large branches move and trees sway"
-msgstr ""
+msgstr "Büyük dallar hareket eder ve ağaçlar salınır"
 
 msgid "Please specify the wind speed."
-msgstr ""
+msgstr "Lütfen rüzgar hızını belirtiniz."
 
 msgid "Transects"
-msgstr ""
+msgstr "Transektler"
 
 msgid "Transect list was successfully updated."
-msgstr ""
+msgstr "Transekt listesi başarılı bir biçimde güncellendi."
 
 msgid "Section"
-msgstr ""
+msgstr "Kısım"
 
 msgid "Reliability"
-msgstr ""
+msgstr "Güvenilirlik"
 
 msgid "Please specify the reliability of the section count."
-msgstr ""
+msgstr "Lütfen kesit sayımının güvenilirliğini açıklayın."
 
 msgid "Suitable conditions"
-msgstr ""
+msgstr "Uygun koşullar"
 
 msgid "Unsuitable conditions"
-msgstr ""
+msgstr "Uygun olmayan koşullar"
 
 msgid "Unable to survey"
-msgstr ""
+msgstr "Gözlem yapmaya uygun değil"
 
 msgid "15min Count"
-msgstr ""
+msgstr "15 dakikalık sayım"
 
 msgid "eBMS Transect"
-msgstr ""
+msgstr "eBMS Transekti"
 
 msgid "Please add any extra info about this record."
-msgstr ""
+msgstr "Lütfen bu kayıtla ilgili ilave bilgi girin."
 
 msgid "Enter more information here..."
-msgstr ""
+msgstr "Buraya daha fazla bilgi girin..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr ""
+msgstr "Lütfen türü tanımlayan kişiyi belirtiniz."
 
 msgid "HH:mm"
 msgstr ""
 
 msgid "Please specify the % of cloud cover."
-msgstr ""
+msgstr "Lütfen bulut örtüsü yüzdesini belirtin."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr ""
+msgstr "Hiç transektiniz bulunmamaktadır. Lütfen listeyi yenilemeyi deneyin."
 
 msgid "Wind speed info is missing"
-msgstr ""
+msgstr "Rüzgar hızı bilgisi eksik"
 
 msgid "Temperature info is missing"
-msgstr ""
+msgstr "Sıcaklık bilgisi eksik"
 
 msgid "Recorder info is missing"
-msgstr ""
+msgstr "Kaydedici bilgisi eksik"
 
 msgid "Please select your transect."
-msgstr ""
+msgstr "Lütfen transektinizi seçin."
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
+"Bu rehber hala geliştirilmektedir. Ülkenizdeki {{countrySpeciesCount}} türün"
+" {{totalSpeciesCountryCount}} tanesini kapsar. "
 
 msgid "Status"
-msgstr ""
+msgstr "Durum"
 
 msgid "Absent"
-msgstr ""
+msgstr "Yok"
 
 msgid "Present"
-msgstr ""
+msgstr "Var"
 
 msgid "Possibly present"
-msgstr ""
+msgstr "Belki var"
 
 msgid "Regular migrant"
-msgstr ""
+msgstr "Düzenli göçmen"
 
 msgid "Irregular vagrant"
-msgstr ""
+msgstr "Düzensiz göçmen"
 
 msgid "Regionally extinct"
-msgstr ""
+msgstr "Soyu bölgesel olarak tükenmiş"
 
 msgid "Description"
-msgstr ""
+msgstr "Tanım"
 
 msgid "Counts"
-msgstr ""
+msgstr "Sayımlar"
 
 msgid "Species descriptions"
-msgstr ""
+msgstr "Tür tanımları"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
+"Rehberdeki tür tanımları Avrupa Kelebeklerinin İklimsel Risk Atlası temel "
+"alınarak yapılmıştır. Bunları erişimimize açtığı için Josef Settele'ye "
+"teşekkür ediyoruz. "
 
 msgid "Photo credits"
-msgstr ""
+msgstr "Fotoğraf sahipleri"
 
 msgid "How to use the app"
-msgstr ""
+msgstr "Uygulama nasıl kullanılır"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1027,6 +1091,11 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register with a username or email and enter a password."
 msgstr ""
+"Bu uygulamayı Avrupanın her yerindeki kelebekleri izlemek için "
+"kullanabilirsiniz. Sonuçlar Avrupa Kelebek İzleme veritabanına girilerek "
+"Avrupadaki kelebeklerin eğilimlerini geliştirmek üzere kullanılacaktır. "
+"Uygulamayı kullanmak için önce bir kullanıcı şifresi ya da e-posta ile kayıt"
+" olup, bir şifre girmelisiniz. "
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1036,9 +1105,16 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
+"Tavsiye edilen yöntem 15 dakikalık sayımdır. Kelebeklerin aktif olduğu "
+"herhangi bir yer ve herhangi bir zamanda yapılabilir (örneğin, hava sıcak ve"
+" tercihen güneş varken). Uygulamayı daha önce var olan bir kelebek "
+"transektinizi kaydetmek için de kullanabilirsiniz. 2020'nin ilerleyen "
+"zamanlarında, uygulamaya günlük kayıtları ekleme özelliği de eklenecek. "
+"Alttaki notlar, size şu anda kullanılabilir olan yöntemleri nasıl "
+"kullanacağınızı anlatacak."
 
 msgid "How to do a 15-minute Count"
-msgstr ""
+msgstr "15 dakikalık sayım nasıl yapılır?"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1053,6 +1129,16 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
+"Uygulamadaki varsayılan yöntem budur. Belirli bir alanda, yürürken, ya da "
+"belirli bir noktada dururken yanınızdan geçen kelebekleri 15 dakika boyunca "
+"sayın. Ayarlardan GPS takip özelliğini açarsanız rotanızı çizmenize gerek "
+"kalmaz. Diğer türlü uygulamayı kullanarak bir haritadan alanı çizmeniz "
+"gerekir. Başlamak için ekranın altındaki + butonuna dokunun. Uygulama "
+"başladığınız andan itibaren 15 dakikadan geri saymaya başlar, ama "
+"istediğiniz zaman (mesela bir kelebeği tanımlarken) duraklat butonuna "
+"basarak süreyi duraklatabilirsiniz. Gözlemin sonunda kayıtlarınıza tekrar "
+"bakabilir ve göndermeden önce toplam sayıların doğru olup olmadığını kontrol"
+" edebilirsiniz."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1062,6 +1148,12 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
+"Gördüğünüz türleri +EKLE butonuna basarak ekleyin ve tür ismini yazmaya "
+"başlayın. Tür seçimleri aşağı doğru açılan menü olarak gözükecektir. "
+"Bilimsel ya da yaygın isimler kullanabilirsiniz. Gördüğünüz türleri seçin, "
+"kelebek listenize eklendiğinde sol taraftaki numaraya dokunarak görülen "
+"sayıyı arttırabilirsiniz. Bu sayıya sonradan bakıp düzeltebilirsiniz. "
+"İsterseniz fotoğraf ya da yorum da ekleyebilirsiniz. "
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1070,9 +1162,14 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
+"15 dakikalık sayımı bitirip türleri ve sayılarını kontrol ettikten sonra "
+"kaydı göndermek için YÜKLE butonuna basın. Böylece, veriniz güvenli bir "
+"şekilde eBMS veritabanında saklandığından emin olabilirsiniz. Sayımınızın "
+"bir kaydı da gelecek referanslar için cihazınızda ve çevrimiçi hesabınızda "
+"tutulur. "
 
 msgid "How to record along an existing transect"
-msgstr ""
+msgstr "Var olan bir transekt boyunca nasıl kayıt yapılır"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1083,6 +1180,8 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
+"Uygulamayı, daha önceden var olan bir kelebek izleme transektinde yürürken kayıt yüklemek için de kullanabilirsiniz. Bu kayıtlar ülke Kelebek İzleme Planı tarafından saptanmış ve tecrübeli kayıtçılar tarafından en iyi şekilde tamamlanmıştır. Uygulama üzerinden, var olan transektlerde kayıt yapmak, hesabınızın halihazırda Avrupa Kelebek İzleme Planı sisteminde bulunan bir transekt kurulumuna bağlı olmasını gerektirir. Eğer uygulamaya giriş yaptıığınızda hiçbir transekt alanı listelenmiyorsa, lütfen ulusal koooordinatörünüzle iletişime geçin. \n"
+"(Lütfen tavsiyelerinizi bu mail adresine yazın: ...)"
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1097,6 +1196,17 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
+"Transekt sayımına başlamak için ekranın altında bulunan + butonuna uzun "
+"basın ve eBMS Transekt'ini seçin. Tamamlanacak seçeneklerle birlikte "
+"Transekt sayfası karşınıza çıkacak. İlk olarak, transektlerinizi "
+"seçmelisiniz ( Bunu yapmak ve transekt rotalarınızın kullanıcı hesabınızla "
+"eşleştirilmesi için oturumu açmış olmanız gerekiyor). Transekt yerinizi "
+"seçtikten sonra gerekli hava durumu detaylarını (sıcaklık, rüzgar hızı gibi)"
+" ve diğer bilgileri (başlangıç zamanı gibi) Transekt sayfasında "
+"girebilirsiniz. Sonrasında, aynı 15 dakikalık sayımda olduğu gibi, görülen "
+"türlerin bir listesini ve her transekt kesitindeki sayımları ekleyin. "
+"Transektinizi tamamlayıp türlerin ve sayılarının doğruluğunu kontrol "
+"ettiğinizde, göndermek için TAMAMLA butonuna basın.  "
 
 msgid "Survey section"
 msgstr ""
@@ -1109,104 +1219,119 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
+"Bu sekmede, + butonunun sağ tarafında, eBMS veritabanına gönderilmemiş "
+"BEKLEYEN sayımları ve sisteme gönderilmiş YÜKLENEN sayımları görebilirsiniz."
+" Bekleyen sayımları, üstüne tıklayıp Yükle seçeneğine basarak sisteme "
+"gönderebilirsiniz. Yüklenen sayımlar için kaydettiğiniz türlerin listesini "
+"görebilirsiniz. Tüm kayıtlarınızı  {{eBMSİnternetsitesiLinki}}  sitesinden "
+"de görebilir ve düzenleyebilirsiniz. "
 
 msgid "eBMS website"
-msgstr ""
+msgstr "eBMS internet sitesi"
 
 msgid "App Settings"
-msgstr ""
+msgstr "Uygulama Ayarları"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
+"Dil ve ülkeyi değiştirmek için uygulama ayarları sayfasına gidin. Seçilen "
+"ülke Resim Rehberindeki farklı türleri görmek için önemlidir, çünkü sadece o"
+" ülkede bulunan kelebekleri görebilirsiniz."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
+"Kelebek tanımlamayı öğrenme aşamasındaysanız Eğitim Modu'na da "
+"geçebilirsiniz."
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr ""
+msgstr "Son noktayı sil"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr ""
+msgstr "Hepsini sil"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "Şekil çizmeye başlamak için tıklayın."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "Şekil çizmeye devam etmek için tıklayın."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "Şekli kapatmak için ilk noktaya tıklayın."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "Çizgi çizmeye başlamak için tıklayın."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "Çizgi çizmeye devam etmek için tıklayın."
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "Çizgiyi tamamlamak için son noktaya tıklayın."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
 msgstr ""
+"Özellikleri düzenlemek için işleyicileri veya işaretleyicileri sürükleyin."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
 msgstr ""
 
 msgid "Map"
-msgstr ""
+msgstr "Harita"
 
 msgid "Today"
-msgstr ""
+msgstr "Bugün"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "Dün"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
-msgstr ""
+msgstr "Bu kayıt gönderilmiş ve bu uygulamayla düzenlenemez."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr ""
+msgstr "Aşağıdaki listeden diğer kayıt seçeneklerine tıklayın"
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
+"Tüm tamamlanmış kayıtları toplu halde yükle. 'taslak' halinde bulunan "
+"kayıtlar dahil değildir."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
 msgstr ""
+"Tamamlanmış kayıtlarınızın hepsini yüklemek istediğinize emin misiniz?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "Kayıtları yüklemek için lütfen önce oturum açın."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{{sayım}} tane kayıt yükleniyor"
+msgstr[1] "{{sayım}} tane kayıt yükleniyor"
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
@@ -1222,11 +1347,11 @@ msgstr ""
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Hava Koşulları"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr ""
+msgstr "Hava koşulları"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
@@ -1240,27 +1365,27 @@ msgstr ""
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Türleri kopyala"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr ""
+msgstr "Önceki gözlemin tür listesini kopyalamak istediğinize emin misiniz?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Kopyala"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Üzgünüz, kopyalanacak bir tür bulunamadı."
 
 # Species list copy functionality
 msgid "You have succcesfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "{{türsayısı}} tane türü başarılı bir şekilde kopyaladınız."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Üzgünüz, tür listesi kopyalanabilecek eski gözlem kaydı bulunamadı. "
 
 # Country name
 msgid "Armenia"
@@ -1268,20 +1393,24 @@ msgstr "Ermenistan"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Herhangi bir gözlem kaydını silmek için sola kaydırın. "
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Lütfen gözleminizi kaydetmeden önce gözlem alanıyla ilgili bilgilerin "
+"doğruluğunu kontrol edin. "
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "Lütfen bekleyen gözlemleri yüklemeyi unutmayın!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
+"Tamamlanmış bekleyen gözlem bulunmamaktadır. <br/><br/> Eklemek için <4></4>"
+" e basın."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
@@ -1293,10 +1422,12 @@ msgstr ""
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Lütfen uygulamayı kullanmadan önce Rehber <2></2> ve Yardım <5></5> "
+"sayfalarını ziyaret edin!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Daha fazla bilgi"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
@@ -1307,6 +1438,8 @@ msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Önceki tür listelerinizi Tür Ekle butonuna uzun basarak topluca "
+"kopyalayabilirsiniz."
 
 # Button
 msgid "Hide"
@@ -1318,4 +1451,4 @@ msgstr ""
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Tüm Gözlemler"

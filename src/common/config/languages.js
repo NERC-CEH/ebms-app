@@ -14,5 +14,6 @@ export default {
   'fi-FI': 'Suomi',
   'bg-BG': 'Български',
   'sr-RS': 'Cрпски',
+  'tr-TR': 'Türkçe',
   // 'fr-FR': 'Français',
 };
