@@ -1,12 +1,12 @@
 # 
 # Translators:
+# Vilius Stankaitis <vilius@flumens.io>, 2020
 # Miloš Popović <gpopac@gmail.com>, 2020
-# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020\n"
+"Last-Translator: Miloš Popović <gpopac@gmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/ceh/teams/95441/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,7 +67,7 @@ msgid "Estonia"
 msgstr "Естонија"
 
 msgid "Spain (Canary Islands)"
-msgstr "Шпанија: Канарска острва"
+msgstr "Шпанија (Канарска острва)"
 
 msgid "Finland"
 msgstr "Финска"
@@ -127,10 +127,10 @@ msgid "Portugal"
 msgstr "Португалија"
 
 msgid "Portugal (Azores)"
-msgstr "Португалија: Азорска острва"
+msgstr "Португалија (Азорска острва)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Португалија: Острва Мадеире"
+msgstr "Португалија (Острва Мадеире)"
 
 msgid "Romania"
 msgstr "Румунија"
@@ -148,10 +148,10 @@ msgid "Slovakia"
 msgstr "Словачка"
 
 msgid "Turkey (Europe)"
-msgstr ""
+msgstr "Турска (Европа)"
 
 msgid "Turkey (Asia)"
-msgstr ""
+msgstr "Турска (Азија)"
 
 msgid "Ukraine"
 msgstr "Украјина"
@@ -1100,8 +1100,8 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"Препоручљиво је да за метод одаберете бројање лептира током 15 минута. Ово "
-"можете направити било где када су лептири активни (тј. када је време довољно"
+"Саветујемо да одаберете методу бројања лептира током 15 минута. Ову методу "
+"можете користити било где када су лептири активни (тј. када је време довољно"
 " топло и сунчано). Такође можете користити апликацију да уносите податке дуж"
 " ваших трансеката. Касније током 2020. апликација ће понудити и могућност да"
 " сачувате и успутне налазе. Следеће белешке ће вам помоћи да схватите како "
@@ -1196,9 +1196,10 @@ msgid ""
 "correct, press the FINISH button to submit."
 msgstr ""
 "Да би почели бројање дуж трансекта, притисните дугме + мало дуже и одаберите"
-" Трансект. На следећој страници је потребно да изаберете ваш трансект (за "
-"шта је неопходно да будете пријављени и да имате отворене руте трансекта у "
-"нашем систему). Када изаберете локацију трансекта, можете попунити потребне "
+" Трансект. Појавиће се страница за унос трансекта са потребним пољима за "
+"попуњавање. Најпре је потребно да изаберете ваш трансект (за шта је "
+"неопходно да будете пријављени и да имате отворене руте трансекта у нашем "
+"систему). Када изаберете локацију трансекта, можете попунити потребне "
 "податке о временским приликама (као што је температура или брзина ветра) и "
 "остале податке (време почетка трансекта). Затим можете додавати врсте на "
 "свакој деоници трансекта, на исти начин као што сте то радили код бројања у "
@@ -1362,82 +1363,88 @@ msgstr ""
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Копирај врсте"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
 msgstr ""
+"Да ли желите да прекопирате списак врста из претходног обиласка терена?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Копирај"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Нису пронађене врсте за копирање."
 
 # Species list copy functionality
 msgid "You have succcesfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "Успешно сте прекопирали {{speciesCount}} врста."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Нема претходних обиласка терена из којих можете копирати врсте."
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Јерменија"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Превуците налево да обришете неки обилазак."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
-msgstr ""
+msgstr "Проверите да ли је изабрана права област пре него што пошаљете налаз."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "Не заборавите да пошаљете налазе који су на чекању!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
+"Нема завршених обиласка на чекању.<br/><br/>Притисните <4></4> да додате."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Савет: Тражење помоћи"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Посетите странице са Упутством <2></2> и Помоћ <5></5> пре употребе ове "
+"апликације!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Више података"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Савет: Додавање врста"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Можете копирати листу свих претходно забележених врста ако дуже притиснете "
+"дугме Додај врсту."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Сакриј"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Основни обиласци"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Сви обиласци"

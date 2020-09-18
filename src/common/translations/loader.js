@@ -45,6 +45,9 @@ import species_bg_BG from './species/bg_BG.po';
 import sr_RS from './interface/sr.po';
 import species_sr_RS from './species/sr.po';
 
+import sl_SI from './interface/sl_SI.po';
+import species_sl_SI from './species/sl_SI.po';
+
 import tr_TR from './interface/tr_TR.po';
 import species_tr_TR from './species/tr_TR.po';
 
@@ -164,6 +167,11 @@ export default {
     interface: rawToKeyVal(sr_RS),
     species: rawToKeyVal(species_sr_RS),
     names: flatNames['sr-RS'],
+  },
+  'sl-SI': {
+    interface: rawToKeyVal(sl_SI),
+    species: rawToKeyVal(species_sl_SI),
+    names: flatNames['sl-SI'],
   },
   'tr-TR': {
     interface: rawToKeyVal(tr_TR),

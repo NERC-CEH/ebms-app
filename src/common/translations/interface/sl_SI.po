@@ -248,7 +248,7 @@ msgid "Training Mode"
 msgstr "Usposabljanje"
 
 msgid "Experimental Features"
-msgstr ""
+msgstr "Provizorične nastavitve"
 
 msgid "Welcome"
 msgstr "Dobrodošli"
@@ -645,21 +645,26 @@ msgid ""
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
+"Popis se samodejno shrani kot osnutek. Za pošiljanje v bazo podatkov "
+"stisnite gumb 'Končaj' desno zgoraj. Aplikacija bo shranila popis takoj, ko "
+"bo na voljo internetna povezava."
 
 msgid "If the record has reached the database a red"
-msgstr ""
+msgstr "Ko je popis shranjen v bazo podatkov se iz rdeče barve"
 
 msgid "(set for submission & saved locally) will become green"
-msgstr ""
+msgstr "(pripravljeno za oddajo) spremeni v zeleno"
 
 msgid "synced to the database"
-msgstr ""
+msgstr "sinhronizirano z bazo podatkov"
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
+"za avtomatsko sinhroniziranje popisov morate biti vpisani v svoj račun in "
+"povezani na internetno povezavo"
 
 msgid "Delete a record"
 msgstr "Izbriši popis"
@@ -668,6 +673,8 @@ msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
+"Za izbris popisa pojdite na svojo stran računa, na popisu potegnite s prstom"
+" v levo in kliknite izbriši"
 
 msgid "User"
 msgstr "Uporabnik"
@@ -679,35 +686,38 @@ msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
+"Za vpis kliknite Vpis ali Registracija v glavnem meniju in sledite navodilom"
 
 msgid "To logout, visit the main menu page and click the logout button."
-msgstr ""
+msgstr "Za izpis kliknite gumb izpis v glavnem meniju"
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
+"registracijo novega računa potrdite s klikom na povezavo poslano na vaš "
+"e-naslov"
 
 msgid "Other"
 msgstr "Drugo"
 
 msgid "Reset the application"
-msgstr ""
+msgstr "Ponastavitev aplikacije"
 
 msgid "Go to the application settings page"
-msgstr ""
+msgstr "Pojdite v nastavitve aplikacije"
 
 msgid "and click on the Reset"
-msgstr ""
+msgstr "in kliknite na gumb Ponastavitev"
 
 msgid "button"
 msgstr "gumb"
 
 msgid "No species found with this name"
-msgstr ""
+msgstr "Pod tem imenom ni najdena nobena vrsta"
 
 msgid "Allow Sample Edit"
-msgstr ""
+msgstr "Dovoli Vzorec Uredi"
 
 msgid "Upload"
 msgstr "Naloži"
@@ -716,29 +726,31 @@ msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
+"Ta aplikacija podpira varstvo in monitoring metuljev. Kliknite na + gumb "
+"spodaj in začnite s štetjem metuljev."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
-msgstr ""
+msgstr "Tekom prihajajočih mesecev bomo aplikaciji  dodajali nove izboljšave."
 
 msgid "Are you sure you want to reset the application to its initial state?"
-msgstr ""
+msgstr "Ste prepričani, da želite ponastaviti aplikacijo na prvotno stanje?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr ""
+msgstr "To bo izbrisalo podatke vseh shranjenih lokacij!"
 
 msgid "Sweden"
 msgstr "Švedska"
 
 msgid "Paused"
-msgstr ""
+msgstr "Premor"
 
 msgid "Pending"
-msgstr ""
+msgstr "V teku"
 
 msgid "Uploaded"
-msgstr ""
+msgstr "Naloženo"
 
 msgid "No finished pending surveys"
 msgstr "Ni končanih popisov"
@@ -747,16 +759,16 @@ msgid "No uploaded surveys"
 msgstr "Ni prenešenih popisov"
 
 msgid "Enjoying the app?"
-msgstr ""
+msgstr "Uživate v aplikaciji?"
 
 msgid "Not really"
-msgstr ""
+msgstr "V resnici ne"
 
 msgid "Yes!"
 msgstr "Da!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr ""
+msgstr "Bi nam želeli dati nekaj povratnih informacij?"
 
 msgid "No, thanks"
 msgstr "Ne, hvala"
@@ -765,16 +777,16 @@ msgid "OK, sure"
 msgstr "V redu"
 
 msgid "How about a rating on the App Store then?"
-msgstr ""
+msgstr "Bi želeli oceniti aplikacijo v trgovini App Store?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr ""
+msgstr "Bi želeli oceniti aplikacijo v trgovini App Store?"
 
 msgid "Icons made by"
-msgstr ""
+msgstr "Ikone je izdelal"
 
 msgid "from"
-msgstr ""
+msgstr "iz/od"
 
 msgid "Enter your username or email address to request a password reset."
 msgstr ""
@@ -782,29 +794,34 @@ msgstr ""
 " gesla."
 
 msgid "We've sent an email to you"
-msgstr ""
+msgstr "Poslali smo vam elektronsko sporočilo"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
+"Za ponastavitev gesla kliknite povezavo v e-poštnem sporočilu. Če e-poštnega"
+" sporočila ne vidite, si oglejte druga mesta, kot so smeti in neželena "
+"pošta."
 
 msgid "App Development"
-msgstr ""
+msgstr "Razvoj aplikacije"
 
 msgid "This app was hand crafted with love by"
-msgstr ""
+msgstr "To aplikacijo so ročno izdelali z ljubeznijo"
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
 msgstr ""
+"Tehnično svetovanje, ki je posebej specializirano za gradnjo v skladu z "
+"ekološkimi potrebami in usmerjeno v rešitve skupnosti."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr ""
+msgstr "Za predloge in povratne informacije"
 
 msgid "contact us"
-msgstr ""
+msgstr "nas kontaktirajte"
 
 msgid "Language"
 msgstr "Jezik"
@@ -814,18 +831,20 @@ msgstr "Država"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
+"Vse nove zapise označite kot \"usposabljanje\" in jih izključite iz vseh "
+"poročil."
 
 msgid "Share App Analytics"
-msgstr ""
+msgstr "Delitev analize aplikacije"
 
 msgid "Save Draft"
-msgstr ""
+msgstr "Shrani osnutek"
 
 msgid "Stage"
-msgstr ""
+msgstr "Stopnja"
 
 msgid "Not Recorded"
-msgstr ""
+msgstr "Ni zabeleženo"
 
 msgid "Adults"
 msgstr "Odrasli osebki"
@@ -840,7 +859,7 @@ msgid "Pupae"
 msgstr "Buba"
 
 msgid "Larval webs"
-msgstr ""
+msgstr "Zapredki gosenic"
 
 msgid "Transect"
 msgstr "Transekt"
@@ -849,13 +868,13 @@ msgid "Sections"
 msgstr "Odsek"
 
 msgid "No transect"
-msgstr ""
+msgstr "Ni transekta"
 
 msgid "Start Time"
-msgstr ""
+msgstr "Začetni čas"
 
 msgid "End Time"
-msgstr ""
+msgstr "Končni čas"
 
 msgid "Temperature"
 msgstr "Temperatura"
@@ -870,22 +889,22 @@ msgid "Wind Speed"
 msgstr "Hitrost vetra"
 
 msgid "Recorder"
-msgstr ""
+msgstr "Popisovalec"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Osveži"
 
 msgid "Please select your transect first."
-msgstr ""
+msgstr "Najprej izberite svoj transekt."
 
 msgid "Invalid server response."
-msgstr ""
+msgstr "Povezave s strežnikom ni bilo mogoče vzpostaviti."
 
 msgid "Not recorded/no data"
-msgstr ""
+msgstr "Ni zabeleženo/ni podatkov"
 
 msgid "Please specify the temperature C°."
-msgstr ""
+msgstr "Navedite temperaturo v C°."
 
 msgid "S"
 msgstr "J"
@@ -912,118 +931,120 @@ msgid "SE"
 msgstr "JV"
 
 msgid "No direction"
-msgstr ""
+msgstr "Ni smeri"
 
 msgid "Please specify the wind direction."
-msgstr ""
+msgstr "Navedite smer vetra."
 
 msgid "Smoke rises vertically"
-msgstr ""
+msgstr "Dim se dviguje navpično"
 
 msgid "Slight smoke drift"
-msgstr ""
+msgstr "Dim se počasi razhaja"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr ""
+msgstr "Rahel veter, šušljanje listov"
 
 msgid "Leaves and twigs in slight motion"
-msgstr ""
+msgstr "Listi in vejice v rahlem gibanju"
 
 msgid "Dust raised and small branches move"
-msgstr ""
+msgstr "Prah se dviguje, majhne veje se premikajo"
 
 msgid "Small trees in leaf begin to sway"
-msgstr ""
+msgstr "Manjša drevesa in listi se zibajo"
 
 msgid "Large branches move and trees sway"
-msgstr ""
+msgstr "Večje veje in drevesa se zibajo"
 
 msgid "Please specify the wind speed."
-msgstr ""
+msgstr "Prosimo navedite hitrost vetra."
 
 msgid "Transects"
-msgstr ""
+msgstr "Transekt"
 
 msgid "Transect list was successfully updated."
-msgstr ""
+msgstr "Transektni seznam je bil uspešno posodobljen."
 
 msgid "Section"
-msgstr ""
+msgstr "Odsek"
 
 msgid "Reliability"
-msgstr ""
+msgstr "Zanesljivost"
 
 msgid "Please specify the reliability of the section count."
-msgstr ""
+msgstr "Prosimo določite zanesljivost štetja posameznih odsekov."
 
 msgid "Suitable conditions"
-msgstr ""
+msgstr "Primerni pogoji"
 
 msgid "Unsuitable conditions"
-msgstr ""
+msgstr "Neprimerni pogoji"
 
 msgid "Unable to survey"
 msgstr "Popis ni mogoč"
 
 msgid "15min Count"
-msgstr ""
+msgstr "15min Štetje"
 
 msgid "eBMS Transect"
-msgstr ""
+msgstr "eBMS Transekt"
 
 msgid "Please add any extra info about this record."
-msgstr ""
+msgstr "Prosimo dodajte morebitne dodatne podatke o tem popisu."
 
 msgid "Enter more information here..."
-msgstr ""
+msgstr "Tu vnesite več informacij ..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr ""
+msgstr "Prosimo navedite osebo, odgovorno za identifikacijo vrste."
 
 msgid "HH:mm"
-msgstr ""
+msgstr "UU:mm"
 
 msgid "Please specify the % of cloud cover."
-msgstr ""
+msgstr "Prosimo v procentih navedite stopnjo oblačnosti."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr ""
+msgstr "Nimate nobenih transektov. Poskusite osvežiti seznam."
 
 msgid "Wind speed info is missing"
-msgstr ""
+msgstr "Manjkajo podatki o hitrosti vetra"
 
 msgid "Temperature info is missing"
-msgstr ""
+msgstr "Manjkajo podatki o temperaturi"
 
 msgid "Recorder info is missing"
-msgstr ""
+msgstr "Manjkajo podatki o popisu"
 
 msgid "Please select your transect."
-msgstr ""
+msgstr "Izberite svoj transekt."
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
+"Ta vodnik je še v razvoju. Vsebuje {{countrySpeciesCount}} vrst metuljev od "
+"{{totalSpeciesCountryCount}} vrst v vaši izbrani državi."
 
 msgid "Status"
 msgstr "Stanje"
 
 msgid "Absent"
-msgstr ""
+msgstr "Odsotna"
 
 msgid "Present"
-msgstr ""
+msgstr "Prisotna"
 
 msgid "Possibly present"
-msgstr ""
+msgstr "Verjetno prisotna"
 
 msgid "Regular migrant"
-msgstr ""
+msgstr "Reden migrant"
 
 msgid "Irregular vagrant"
-msgstr ""
+msgstr "Občasen migrant"
 
 msgid "Regionally extinct"
 msgstr "Lokalno izumrla"
@@ -1042,12 +1063,14 @@ msgid ""
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
+"Opisi vrst, ki so del vodnika, temeljijo na besedilu iz 'Climatic Risk Atlas"
+" of European Butterflies'. Hvala Josef Settele za dostop do podatkov."
 
 msgid "Photo credits"
-msgstr ""
+msgstr "Avtorji fotografij"
 
 msgid "How to use the app"
-msgstr ""
+msgstr "Kako uporabljati aplikacijo"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1055,6 +1078,11 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register with a username or email and enter a password."
 msgstr ""
+"To aplikacijo za spremljanje metuljev lahko uporabljate kjerkoli v Evropi. "
+"Rezultati bodo vneseni v podatkovno zbirko Evropskega Monitoringa Metuljev "
+"in uporabljeni za oceno trendov metuljev po Evropi. Za uporabo aplikacije se"
+" morate najprej registrirati z uporabniškim imenom ali e-pošto in vnesti "
+"geslo."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1064,6 +1092,12 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
+"Najprimernejša metoda je 15-minutno štetje vrst. To lahko opravite kjerkoli "
+"in kadarkoli, ko so metulji aktivni (tj. ko je vreme toplo in sončno). "
+"Aplikacijo lahko uporabite tudi za snemanje obstoječih transektov za "
+"metulje. V letu 2020 bo aplikacija vsebovala tudi možnost predložitve "
+"priložnostnih zapisov. Spodnje opombe vam povedo, kako uporabljati trenutno "
+"razpoložljive metode."
 
 msgid "How to do a 15-minute Count"
 msgstr "Kako narediti 15 minutno štetje"
@@ -1081,6 +1115,17 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
+"To je privzeta metoda aplikacije. Na določenem območju ali transektu "
+"preprosto štejte metulje, ki jih tam srečate oziroma priletijo mimo vas. "
+"Lahko jih opazujete stoje na eni točki ali med sprehajanjem. V primeru, da "
+"imate v nastavitvah vklopljeno možnost sledenja z gps sistemom vam ni "
+"potrebno vrisati prehojene poti opazovanja, saj bo aplikacija vrisala pot "
+"avtomatično. V nasprotnem primeru boste morali na zemljevidu transekt "
+"označiti sami. Če želite začeti s štetjem, pritisnite gumb + na dnu zaslona."
+" Aplikacija začne po tem odštevati 15 minut, vendar jo lahko kadar koli (na "
+"primer pri določanju metulja) začasno ustavite s pritiskom na gumb za "
+"premor. Na koncu popisa lahko svoje zapise pregledate, da se prepričate o "
+"pravilnosti podatkov."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1090,6 +1135,12 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
+"S tipko + DODAJ dodajte vrste, ki ste jih opazili, in začnite tipkati ime "
+"vrste. Izbira vrst se bo nato prikazala v obliki spustnega seznama. "
+"Uporabite lahko znanstvena ali angleška imena. Za povečanje števila osebkov "
+"opaženih vrst, na levi strani kliknite število. Izbrano število lahko "
+"pregledate in spremenite tudi na koncu. Če želite, lahko dodate tudi "
+"fotografije in komentarje."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1098,9 +1149,13 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
+"Po končanem 15-minutnim popisu, preverite ali so izbrane vrste in število "
+"osebkov določene vrste pravilne, nato pa pritisnite gumb NALOŽI. S tem bodo "
+"vaši podatki shranjeni v bazo podatkov eBMS. Popis bo za nadaljnjo uporabo "
+"shranjen tudi v vaši napravi in na vašem spletnem računu."
 
 msgid "How to record along an existing transect"
-msgstr ""
+msgstr "Kako popisovati ob obstoječem transektu"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1111,6 +1166,13 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
+"Aplikacijo lahko uporabite tudi za pošiljanje popisov že obstoječih "
+"transektov namenjenih monitoringu dnevnih metuljev. Ti so že bili "
+"vzpostavljeni na različnih območjih po sodelujočih državah za spremljanje "
+"dnevnih metuljev pod koordinatorji izkušenih popisovalcev. Vaš račun je za "
+"snemanje obstoječih transektov že povezan z nastavitvijo transekta znotraj "
+"sistema eBMS. Če po prijavi v aplikacijo ne vidite nobenih obstoječih "
+"transektov, se obrnite na vašega koordinatorja (za nasvet pošljite e-pošto)."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1125,6 +1187,17 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
+"Na začetku transektnega popisa na dnu zaslona držite pritisnjeno tipko + "
+"(daljši pritisk) in izberite eBMS Transekt. Prikazala se vam bo stran "
+"Transekt z vsemi možnostmi, ki jih je treba dokončati. Najprej morate "
+"izbrati svoje transekte (za to, da se bodo transekti povezali z vašim "
+"računom boste morali biti prijavljeni). Ko izberete mesto transekta, na "
+"strani Transekt izpolnite potrebne vremenske podatke (npr. temperatura, "
+"hitrost vetra itd.) In druge potrebne informacije (npr. čas začetka popisa)."
+" Nato dodate seznam popisanih vrst in njihovo število, ki se šteje za vsak "
+"odsek posebej, tako kot pri 15-minutnem popisu. Ko končate svoj Transekt in "
+"preverite, ali so popisane vrste in število opaženih osebkov pravilno, za "
+"pošiljanje pritisnite gumb KONČAJ."
 
 msgid "Survey section"
 msgstr "Območje popisa"
@@ -1137,6 +1210,12 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
+"V tem zavihku na desnem delu + gumba so prikazani vaši popisi, ki niso bili "
+"poslani in so v fazi ČAKANJA, in številke NALOŽENIH popisov poslane v bazo "
+"podatkov eBMS. Popise v čakanju lahko pošljete v sistem s klikom nanj in "
+"pritiskom na možnost Naloži. Lahko vidite seznam vrst, ki ste jih prenesli v"
+" bazo podatkov. Vse vaše zapise si lahko ogledate in uredite tudi na "
+"{{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
 msgstr "Spletna stran eBMS"
@@ -1149,11 +1228,15 @@ msgid ""
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
+"Če želite spremeniti jezik in državo pojdite v nastavitve aplikacije. V "
+"priročniku bodo prikazane le tiste vrste, ki se pojavljajo v izbrani državi."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
+"Ko se še učite prepoznavati metulje, lahko vklopite tudi način "
+"Usposabljanje."
 
 # This is part of mapping functionality
 msgid "Delete last point"
@@ -1169,27 +1252,27 @@ msgstr "Počisti vse"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "Kliknite za začetek risanja transekta."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "Kliknite za nadaljevanje risanja transekta."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "Kliknite začetno točko za zaključek transekta."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "Kliknite za začetek risanja črte."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "Kliknite za nadaljevanje risanja črte."
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "Kliknite zadnjo točko na koncu transekta."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
@@ -1210,33 +1293,34 @@ msgstr "Včeraj"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
-msgstr ""
+msgstr "Ta popis je bil oddan in ga ni več mogoče urejati v tej aplikaciji."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr ""
+msgstr "Na spodnjem seznamu kliknite druge možnosti popisa"
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
+"Naložite vse končane zapise. To ne vključuje zapisov v mapi „osnutki“."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr ""
+msgstr "Ali ste prepričani, da želite naložiti vse dokončane popise?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "Če želite naložiti zapise, se najprej prijavite."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Prenos {{štetje}} podatkov"
+msgstr[1] "Prenos {{štetje}} podatkov"
+msgstr[2] "Prenos {{štetje}} podatkov"
+msgstr[3] "Prenos {{štetje}} podatkov"
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
@@ -1244,7 +1328,7 @@ msgstr "Opa! Nekaj je šlo narobe."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr ""
+msgstr "To je napaka id: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
@@ -1260,13 +1344,14 @@ msgstr "Vremenske razmere"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr ""
+msgstr "Ali ste prepričani, da želite izbrisati {{takson}}?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
+"Trenutne vremenske vrednosti se preračunavajo s pomočjo API OpenWeatherMap."
 
 # Species list copy functionality
 msgid "Copy species"
@@ -1282,11 +1367,11 @@ msgstr "Kopiraj"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Žal ni bilo mogoče najti nobene vrste za kopiranje."
 
 # Species list copy functionality
 msgid "You have succcesfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "Uspešno ste kopirali {{štetjevrst}} vrste."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
@@ -1294,7 +1379,7 @@ msgstr "Oprostite, na voljo ni nobenega seznama vrst iz prejšnjega popisa."
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Armenija"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
@@ -1304,6 +1389,7 @@ msgstr "Za izbris popisa povlecite s prstom v levo."
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Preden pošljete posnetek, preverite, ali je območje snemanja pravilno."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
@@ -1316,31 +1402,34 @@ msgstr "Ni dokončanih popisov. <br/><br/>Pritisnite<4></4>za dodajanje."
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Nasvet: Iskanje Pomoči"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Pred uporabo aplikacije obiščite strani Vodnik<2></2> in Pomoč<5></5>!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Več informacij"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Nasvet: Dodaj vrste"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Svoje prejšnje sezname vrst lahko kopirate z daljšim pritiskom na gumb Dodaj"
+" vrste."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Skrij"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"

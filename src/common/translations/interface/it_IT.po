@@ -1,14 +1,14 @@
 # 
 # Translators:
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
-# Federica Paradiso <fedediso94@gmail.com>, 2020
 # Karolis, 2020
-# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
+# Vilius Stankaitis <vilius@flumens.io>, 2020
+# Federica Paradiso <fedediso94@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020\n"
+"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2020\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,10 +150,10 @@ msgid "Slovakia"
 msgstr "Slovacchia "
 
 msgid "Turkey (Europe)"
-msgstr ""
+msgstr "Turchia (Europa)"
 
 msgid "Turkey (Asia)"
-msgstr ""
+msgstr "Turchia (Asia)"
 
 msgid "Ukraine"
 msgstr "Ucraina "
@@ -1365,104 +1365,116 @@ msgstr "Questo è un errore id: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr ""
+msgstr "Dettagli aggiuntivi"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Condizioni Metereologiche "
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr ""
+msgstr "Condizioni metereologiche"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr ""
+msgstr "Sei sicuro di voler eliminare  {{taxon}} ?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
+"Gli attuali valori meteorologici vengono precompilati mediante il servizio "
+"meteo API OpenWeatherMap."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Copia la specie"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
 msgstr ""
+"Sei sicuro di voler copiare l'elenco specie del precedente campionamento?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Copia"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Scusa, non è stata trovata nessuna specie da copiare "
 
 # Species list copy functionality
 msgid "You have succcesfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "Hai copiato con successo {{speciesCount}} specie."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Scusa, nessun campionamento precedente da cui copiare le specie."
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Armenia"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Per eliminare eventuali campionamenti scorri verso sinistra."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Per favore controlla che l'area di campionamento sia corretta prima di "
+"inviare il record."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
 msgstr ""
+"Per favore non dimenticare di caricare eventuali campionamenti in attesa!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
+"Campionamenti in attesa non terminati <br/><br/> Schiaccia <4></4> per "
+"aggiungerli."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Suggerimento: Trovare Aiuto"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Per favore visita le pagine Guida <2></2> e Aiuto <5></5> prima di usare "
+"l'app!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Maggiori informazioni"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Suggerimento: Aggiungi Specie "
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Puoi copiare in blocco i tuoi elenchi di specie precedenti premendo a lungo "
+"il pulsante Aggiungi specie."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Nascondi"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Campionamento primario"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Tutti i Campionamenti"
