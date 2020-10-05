@@ -161,8 +161,8 @@
     ]
   ],
   [446415, "Acontiinae", []],
-  [446656, "Acontiini", []],
   [446638, "Acontiini", []],
+  [446656, "Acontiini", []],
   [
     448326,
     "Acontiola",
@@ -1724,8 +1724,8 @@
       [466540, "aglaja"],
       [434653, "aglaja"],
       [432390, "laodice"],
-      [466541, "niobe"],
       [434654, "niobe"],
+      [466541, "niobe"],
       [432389, "pandora"],
       [432388, "paphia"]
     ]
@@ -2395,8 +2395,8 @@
       [432398, "alaskensis"],
       [432414, "angarensis"],
       [432400, "aquilonaris"],
-      [467161, "caucasica"],
       [466880, "caucasica"],
+      [467161, "caucasica"],
       [432413, "chariclea"],
       [432406, "dia"],
       [432395, "eunomia"],
@@ -3058,9 +3058,9 @@
     ]
   ],
   [446658, "Caradrini", []],
-  [432026, "Carcharodus", []],
+  [432028, "Carcharodus", []],
   [
-    432028,
+    432026,
     "Carcharodus",
     [
       [432158, "alceae"],
@@ -4168,7 +4168,7 @@
       [432462, "oedippus"],
       [432474, "orientalis"],
       [432465, "pamphilus"],
-      [466949, "pamphilus ssp. Lyllus"],
+      [466949, "pamphilus ssp. lyllus"],
       [466948, "pamphius"],
       [432461, "phryne"],
       [432467, "rhodopensis"],
@@ -4831,7 +4831,7 @@
       [432212, "hecla"],
       [432710, "hyale"],
       [432712, "hyale/alfacariensis"],
-      [434659, "hyale\\alfacariensis\\croceus"],
+      [434659, "hyale/alfacariensis/croceus"],
       [432208, "myrmidone"],
       [432210, "palaeno"],
       [432203, "phicomone"],
@@ -6944,12 +6944,12 @@
       [450818, "mikkolai"]
     ]
   ],
+  [446476, "Epichnopteriginae", []],
   [446478, "Epichnopteriginae", []],
   [446477, "Epichnopteriginae", []],
-  [446476, "Epichnopteriginae", []],
-  [446712, "Epichnopterigini", []],
-  [446711, "Epichnopterigini", []],
   [446710, "Epichnopterigini", []],
+  [446711, "Epichnopterigini", []],
+  [446712, "Epichnopterigini", []],
   [446814, "Epichnopterix", []],
   [446815, "Epichnopterix", []],
   [
@@ -6969,11 +6969,11 @@
       [449412, "sieboldii"]
     ]
   ],
+  [446479, "Epichnopteryginae", []],
   [446480, "Epichnopteryginae", []],
   [446481, "Epichnopteryginae", []],
-  [446479, "Epichnopteryginae", []],
-  [446715, "Epichnopterygini", []],
   [446714, "Epichnopterygini", []],
+  [446715, "Epichnopterygini", []],
   [447341, "Epichoristodes", [[454115, "acerbella"]]],
   [447656, "Epicrocis", [[456180, "neftaella"]]],
   [
@@ -9140,6 +9140,7 @@
     432108,
     "Hipparchia",
     [
+      [467193, "alcyone"],
       [432515, "aristaeus"],
       [432504, "autonoe"],
       [432510, "azorina"],
@@ -10236,7 +10237,7 @@
       [432193, "reali"],
       [432190, "sinapis"],
       [432191, "sinapis/juvernica"],
-      [434661, "sinapis\\juvernica\\reali"]
+      [434661, "sinapis/juvernica/reali"]
     ]
   ],
   [
@@ -13820,6 +13821,7 @@
       [432219, "krueperi"],
       [432224, "mannii"],
       [432227, "napi"],
+      [473307, "napi/rapae"],
       [467079, "persis"],
       [466907, "pseudorapae"],
       [432223, "rapae"],
@@ -14089,8 +14091,8 @@
       [467130, "antidolus"],
       [432377, "aroaniensis"],
       [467118, "artvinensis"],
-      [467133, "aserbeidschanus"],
       [466910, "aserbeidschanus"],
+      [467133, "aserbeidschanus"],
       [467134, "baytopi"],
       [434651, "bellargus"],
       [467127, "bilgini"],
@@ -14134,7 +14136,7 @@
       [432374, "humedasae"],
       [432361, "icarus"],
       [466950, "icarus/celina"],
-      [434660, "icarus\\thersites"],
+      [434660, "icarus/thersites"],
       [467129, "interjectus"],
       [467142, "iphicarmon"],
       [432369, "iphigenia"],
@@ -14143,11 +14145,11 @@
       [467144, "lycius"],
       [467145, "merhaba"],
       [467146, "mithridates"],
-      [467114, "myrrha"],
       [466917, "myrrha"],
+      [467114, "myrrha"],
       [432368, "nephohiptamenos"],
-      [467147, "ninae"],
       [466918, "ninae"],
+      [467147, "ninae"],
       [432358, "nivescens"],
       [432376, "orphicus"],
       [467106, "ossmar"],
@@ -14167,8 +14169,8 @@
       [432717, "thersites"],
       [432375, "timfristos"],
       [467156, "turcicolus"],
-      [467157, "turcicus"],
       [466920, "turcicus"],
+      [467157, "turcicus"],
       [466921, "vanensis"],
       [432370, "violetae"],
       [467158, "wagneri"],
@@ -16206,11 +16208,11 @@
     ]
   ],
   [446992, "Stibaromacha", [[450656, "ratella"]]],
-  [446713, "Stichobasini", []],
   [446716, "Stichobasini", []],
-  [446829, "Stichobasis", []],
+  [446713, "Stichobasini", []],
+  [446830, "Stichobasis", []],
   [
-    446830,
+    446829,
     "Stichobasis",
     [
       [449466, "helicinoides"],
@@ -16950,7 +16952,7 @@
       [432147, "christi"],
       [432149, "hyrax"],
       [432151, "lineola"],
-      [434662, "lineolus\\sylvestris"],
+      [434662, "lineolus/sylvestris"],
       [467074, "novus"],
       [432150, "sylvestris"]
     ]
