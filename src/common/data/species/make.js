@@ -1,6 +1,6 @@
 // get local environment variables from .env
 require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-disable-line
-const request = require('request'); // eslint-disable-line
+const axios = require('axios'); // eslint-disable-line
 const fs = require('fs');
 const optimise = require('./speciesOptimise');
 
@@ -13,28 +13,20 @@ if (!APP_INDICIA_API_KEY || !APP_INDICIA_API_USER_AUTH) {
 }
 
 async function fetch(listID) {
-  return new Promise(resolve => {
-    const options = {
-      method: 'GET',
-      url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}`,
-      headers: {
-        'x-api-key': APP_INDICIA_API_KEY,
-        Authorization: `Basic ${APP_INDICIA_API_USER_AUTH}`,
-      },
-    };
-
-    request(options, (error, response) => {
-      if (error) throw new Error(error);
-
-      const { data } = JSON.parse(response.body);
-
-      const latinData = data.filter(
-        s => s.language_iso === 'lat' && !s.taxon.includes('Unterfamilie')
-      );
-
-      resolve(latinData);
-    });
+  const { data } = await axios({
+    method: 'GET',
+    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}`,
+    headers: {
+      'x-api-key': APP_INDICIA_API_KEY,
+      Authorization: `Basic ${APP_INDICIA_API_USER_AUTH}`,
+    },
   });
+
+  const latinData = data.data.filter(
+    s => s.language_iso === 'lat' && !s.taxon.includes('Unterfamilie')
+  );
+
+  return latinData;
 }
 
 function saveSpeciesToFile(species) {

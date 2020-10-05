@@ -16,10 +16,10 @@
     "test:watch": "karma start test/karma.conf.js --no-single-run",
     "test:sauce": "karma start test/karma.conf-sauce.js",
     "test:eslint": "mocha test/eslint-test.js",
-    "make:species:data": "cd src/common/data/species && node make.js",
-    "make:species:profiles": "cd src/common/data/profiles && node make.js",
-    "make:species:commonNames": "cd src/common/data/commonNames && node make.js",
-    "make:all": "npm run make:species:data && npm run make:species:profiles && npm run make:species:commonNames"
+    "fetch:species:data": "cd src/common/data/species && node make.js",
+    "fetch:species:profiles": "cd src/common/data/profiles && node make.js",
+    "fetch:species:commonNames": "cd src/common/data/commonNames && node make.js",
+    "fetch:all": "npm run fetch:species:data && npm run fetch:species:profiles && npm run fetch:species:commonNames"
   },
   "husky": {
     "hooks": {
@@ -95,6 +95,7 @@
     "@babel/preset-react": "^7.7.4",
     "@flumens/has-env": "^1.0.0",
     "autoprefixer": "^9.7.3",
+    "axios": "^0.20.0",
     "babel-eslint": "10.0.3",
     "babel-loader": "8.0.6",
     "chai": "4.2.0",
