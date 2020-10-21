@@ -4,35 +4,37 @@
 require('dotenv').config({ silent: true }); // get local environment variables from .env
 const checkEnv = require('@flumens/has-env');
 
-checkEnv({
-  warn: ['APP_TRAINING', 'APP_MANUAL_TESTING', 'APP_INDICIA_API_HOST'],
-  required: [
-    'APP_MAPBOX_MAP_KEY',
-    'APP_SENTRY_KEY',
-    'APP_INDICIA_API_KEY',
-    'APP_WEATHER_SITE_API_KEY',
-  ],
-});
+// checkEnv({
+//   warn: ['APP_TRAINING', 'APP_MANUAL_TESTING', 'APP_INDICIA_API_HOST'],
+//   required: [
+//     'APP_MAPBOX_MAP_KEY',
+//     'APP_SENTRY_KEY',
+//     'APP_INDICIA_API_KEY',
+//     'APP_WEATHER_SITE_API_KEY',
+//   ],
+// });
 
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const capacitorConfig = require('./capacitor.config.json');
 
 const pkg = require('./package.json');
 
 const ROOT_DIR = path.resolve(__dirname, './');
 const DIST_DIR = path.resolve(ROOT_DIR, 'build');
 
-const isDevEnv = process.env.NODE_ENV === 'development';
+const isDevEnv =
+  process.env.NODE_ENV === 'development' || process.env.APP_MANUAL_TESTING;
 const isProdEnv = process.env.NODE_ENV === 'production';
 const isTestEnv = process.env.NODE_ENV === 'test';
 
 const config = {
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  entry: ['index.js', 'vendor.js'],
-  devtool: 'source-map',
+  mode: isProdEnv ? 'production' : 'development',
+  entry: ['index.jsx'],
+  devtool: !isProdEnv && 'source-map',
   target: 'web',
 
   output: {
@@ -44,7 +46,6 @@ const config = {
     modules: [
       path.resolve(ROOT_DIR, './node_modules/'),
       path.resolve(ROOT_DIR, './src/'),
-      path.resolve(ROOT_DIR, './src/common/vendor'),
     ],
     alias: {
       '@apps': 'common/appsBitCollection',
@@ -52,22 +53,19 @@ const config = {
       Components: 'common/Components',
       config: 'common/config/config',
       helpers: 'common/helpers',
-      saved_samples: 'common/models/saved_samples',
+      savedSamples: 'common/models/savedSamples',
       sample: 'common/models/sample',
       occurrence: 'common/models/occurrence',
-      app_model: 'common/models/app_model',
-      user_model: 'common/models/user_model',
-      model_factory: 'common/models/model_factory',
-
-      // configs
-      './transect$': isDevEnv ? './transect.dev.js' : './transect.js',
-      './area-count$': isDevEnv ? './area-count.dev.js' : './area-count.js',
+      appModel: 'common/models/appModel',
+      userModel: 'common/models/userModel',
+      modelFactory: 'common/models/modelFactory',
     },
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     rules: [
       {
-        test: /^((?!data\.).)*\.js$/,
+        test: /^((?!data\.).)*\.jsx?$/,
         exclude: /(node_modules|vendor(?!\.js))/,
         loader: 'babel-loader',
       },
@@ -176,7 +174,6 @@ const config = {
         APP_TRAINING: process.env.APP_TRAINING || false,
         APP_EXPERIMENTS: process.env.APP_EXPERIMENTS || false,
         APP_SENTRY_KEY: JSON.stringify(process.env.APP_SENTRY_KEY || ''),
-        APP_GA: JSON.stringify(process.env.APP_GA || false),
 
         // https://github.com/webpack-contrib/karma-webpack/issues/316
         SAUCE_LABS: JSON.stringify(process.env.SAUCE_LABS),
@@ -205,6 +202,46 @@ const config = {
 
 if (process.env.APP_MANUAL_TESTING) {
   config.entry.push('./test/manual-test-utils.js');
+}
+
+if (process.env.DEBUG_IOS) {
+  const WebpackShellPluginNext = require('webpack-shell-plugin-next'); // eslint-disable-line
+  // for some reason script didn't accept ~ or $HOME
+  const homedir = require('os').homedir(); // eslint-disable-line
+  const buildID = process.env.IOS_BUILD_ID;
+  config.plugins.push(
+    new WebpackShellPluginNext({
+      dev: false, // run more than once
+      onBuildEnd: {
+        scripts: [
+          'npx cap copy ios',
+          'xcodebuild -workspace ./ios/App/App.xcworkspace -scheme App -sdk iphonesimulator',
+          `npx ios-sim launch -d iPhone-6s-Plus ${homedir}/Library/Developer/Xcode/DerivedData/${buildID}/Build/Products/Debug-iphonesimulator/App.app -x`,
+        ],
+        blocking: true,
+        parallel: false,
+      },
+    })
+  );
+}
+
+if (process.env.DEBUG_ANDROID) {
+  const WebpackShellPluginNext = require('webpack-shell-plugin-next'); // eslint-disable-line
+  config.plugins.push(
+    new WebpackShellPluginNext({
+      dev: false, // run more than once
+      onBuildEnd: {
+        scripts: [
+          'npx cap copy android',
+          './android/gradlew assembleDebug -p android',
+          'adb install -r android/app/build/outputs/apk/debug/app-debug.apk',
+          `adb shell am start -n ${capacitorConfig.appId}/.MainActivity`,
+        ],
+        blocking: true,
+        parallel: false,
+      },
+    })
+  );
 }
 
 module.exports = config;

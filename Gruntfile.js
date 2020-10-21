@@ -4,7 +4,7 @@ const pkg = require('./package.json');
 
 const exec = grunt => ({
   build: {
-    command: 'NODE_ENV=production npm run build',
+    command: 'npm run clean && NODE_ENV=production npm run build',
   },
   resources: {
     command: () => {
@@ -13,103 +13,72 @@ const exec = grunt => ({
         .splice(0, 2)
         .join('.');
 
-      return `mkdir -p cordova/resources &&
-                cp -R other/designs/android cordova/resources &&
+      return `mkdir -p resources &&
+                cp -R other/designs/android resources &&
 
-                cp other/designs/splash.svg cordova/resources &&
-                sed -i.bak 's/{{APP_VERSION}}/${appMinorVersion}/g' cordova/resources/splash.svg &&
+                cp other/designs/splash.svg resources &&
+                sed -i.bak 's/{{APP_VERSION}}/${appMinorVersion}/g' resources/splash.svg &&
 
-                ./node_modules/.bin/sharp -i cordova/resources/splash.svg -o cordova/resources/splash.png resize 2737 2737 -- removeAlpha &&
-                ./node_modules/.bin/sharp -i other/designs/icon.svg -o cordova/resources/icon.png resize 1024 1024 -- removeAlpha &&
+                ./node_modules/.bin/sharp -i resources/splash.svg -o resources/splash.png resize 2737 2737 -- removeAlpha &&
+                ./node_modules/.bin/sharp -i other/designs/icon.svg -o resources/icon.png resize 1024 1024 -- removeAlpha &&
 
-                ./node_modules/.bin/cordova-res --skip-config --resources cordova/resources`;
+                ./node_modules/.bin/cordova-res ios --skip-config --resources resources --copy &&
+                ./node_modules/.bin/cordova-res android --skip-config --resources resources --copy`;
     },
     stdout: false,
   },
   init: {
-    command: './node_modules/.bin/cordova create cordova',
+    command: './node_modules/.bin/cap sync',
     stdout: false,
   },
-  clean_www: {
-    command: 'rm -R -f cordova/www/* && rm -f cordova/config.xml',
-    stdout: true,
-  },
-  rebuild: {
-    command: 'cd cordova/ && ../node_modules/.bin/cordova prepare ios android',
-    stdout: true,
-  },
-  copy_build: {
-    command: 'cp -R build/* cordova/www/',
-    stdout: true,
-  },
-  add_platforms: {
-    command: 'cd cordova && ../node_modules/.bin/cordova platforms add ios android',
-    stdout: false,
-  },
-  /**
-   * $ANDROID_KEYSTORE must be set up to point to your android certificates keystore
-   */
-  android_build: {
+  build_android: {
     command() {
+      if (!process.env.KEYSTORE_PATH) {
+        throw new Error('KEYSTORE_PATH env variable is missing.');
+      }
+
+      if (!process.env.KEYSTORE_ALIAS) {
+        throw new Error('KEYSTORE_ALIAS env variable is missing.');
+      }
+
       const pass = grunt.config('keystore-password');
-      return `cd cordova && 
-              cordova --release build android && 
-              cd platforms/android/app/build/outputs/apk/release/ &&
-              jarsigner -keystore ${process.env.KEYSTORE}
-                -storepass ${pass} app-release-unsigned.apk irecord &&
-              zipalign 4 app-release-unsigned.apk main.apk &&
-              mv -f main.apk ../../../../../../../`;
+      if (!pass) {
+        throw new Error('KEYSTORE_PATH password is missing.');
+      }
+
+      return `cd android && 
+              ./gradlew assembleRelease && 
+              cd app/build/outputs/apk/release &&
+              jarsigner -keystore ${process.env.KEYSTORE_PATH} -storepass ${pass} app-release-unsigned.apk ${process.env.KEYSTORE_ALIAS} &&
+              zipalign 4 app-release-unsigned.apk app-release.apk &&
+              mv -f app-release.apk ../../../../../`;
     },
 
     stdout: false,
     stdin: true,
   },
-
   build_ios: {
-    command: 'cd cordova && cordova build ios',
-    stdout: true,
-  },
+    command() {
+      return `cd ios/App && xcodebuild -workspace App.xcworkspace -scheme App archive`;
+    },
 
-  build_android: {
-    command: 'cd cordova && cordova build android',
-    stdout: true,
+    stdout: false,
+    stdin: true,
+  },
+  create_commit: {
+    command() {
+      return `git add . &&
+              git commit -m "Release ${pkg.version}-${pkg.build}" && 
+              git tag v${pkg.version}-${pkg.build}`;
+    },
+
+    stdout: false,
+    stdin: true,
   },
 });
 
-const replace = {
-  config: {
-    src: ['cordova.xml'],
-    dest: 'cordova/config.xml',
-    replacements: [
-      {
-        from: /\{ID\}/g, // string replacement
-        to: () => pkg.id,
-      },
-      {
-        from: /\{APP_VER\}/g, // string replacement
-        to: () => pkg.version,
-      },
-      {
-        from: /\{APP_TITLE\}/g,
-        to: () => pkg.title,
-      },
-      {
-        from: /\{APP_DESCRIPTION\}/g,
-        to: () => pkg.description,
-      },
-      {
-        from: /\{BUNDLE_VER\}/g,
-        to: () => pkg.build,
-      },
-      {
-        from: /\{ANDROID_BUNDLE_VER\}/g,
-        to: () => pkg.version.replace(/\./g, '') + pkg.build + 8,
-      },
-    ],
-  },
-};
-
-const updateVersionAndBuild = ({ version, build }) => {
+const updateVersionAndBuild = ({ version, build = 1 }) => {
+  // Package
   let file = fs.readFileSync('./package.json', 'utf8');
   if (pkg.version !== version) {
     file = file.replace(pkg.version, version);
@@ -121,20 +90,38 @@ const updateVersionAndBuild = ({ version, build }) => {
     pkg.build = build;
   }
   fs.writeFileSync('./package.json', file, 'utf8');
+
+  // Android
+  file = fs.readFileSync('./android/app/build.gradle', 'utf8');
+  file = file.replace(/versionName "\d\.\d\.\d"/i, `versionName "${version}"`);
+  file = file.replace(/versionCode \d+/i, `versionCode ${build}`);
+  pkg.version = version;
+  pkg.build = build;
+  fs.writeFileSync('./android/app/build.gradle', file, 'utf8');
+
+  // iOS
+  function replaceAll(str, find, replace) {
+    // node doesn't yet support replaceAll
+    return str.replace(new RegExp(find, 'g'), replace);
+  }
+
+  file = fs.readFileSync('./ios/App/App.xcodeproj/project.pbxproj', 'utf8');
+  file = replaceAll(
+    file,
+    /MARKETING_VERSION = \d\.\d\.\d/i,
+    `MARKETING_VERSION = ${version}`
+  );
+  file = replaceAll(
+    file,
+    /CURRENT_PROJECT_VERSION = \d+/i,
+    `CURRENT_PROJECT_VERSION = ${build}`
+  );
+  pkg.version = version;
+  pkg.build = build;
+  fs.writeFileSync('./ios/App/App.xcodeproj/project.pbxproj', file, 'utf8');
 };
 
 const prompt = {
-  keystore: {
-    options: {
-      questions: [
-        {
-          name: 'keystore-password',
-          type: 'password',
-          message: 'Please enter keystore password:',
-        },
-      ],
-    },
-  },
   version: {
     options: {
       questions: [
@@ -155,16 +142,25 @@ const prompt = {
       then: updateVersionAndBuild,
     },
   },
+  keystore: {
+    options: {
+      questions: [
+        {
+          name: 'keystore-password',
+          type: 'password',
+          message: 'Please enter keystore password:',
+        },
+      ],
+    },
+  },
 };
 
 function init(grunt) {
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-prompt');
-  grunt.loadNpmTasks('grunt-text-replace');
 
   grunt.initConfig({
     exec: exec(grunt),
-    replace,
     prompt,
   });
 }
@@ -178,23 +174,13 @@ module.exports = grunt => {
 
     'exec:init',
     'exec:resources',
-    'exec:clean_www',
-    'exec:copy_build',
-    'replace:config',
-    'exec:add_platforms',
 
-    // android
     'prompt:keystore',
-    'exec:android_build',
+    'exec:build_android',
+    'exec:build_ios',
 
     'checklist',
-  ]);
-
-  grunt.registerTask('update', [
-    'exec:clean_www',
-    'exec:copy_build',
-    'replace:config',
-    'exec:rebuild',
+    'exec:create_commit',
   ]);
 
   grunt.registerTask('checklist', () => {

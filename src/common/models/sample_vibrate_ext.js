@@ -1,5 +1,9 @@
 import Log from 'helpers/log';
 import config from 'config';
+import { Plugins } from '@capacitor/core';
+import { isPlatform } from '@ionic/react';
+
+const { Haptics } = Plugins;
 
 const extension = {
   startVibrateCounter() {
@@ -18,12 +22,12 @@ const extension = {
       const isTimeout = timeLeft <= 0;
 
       if (isTimeout && !this._timeoutVibrated) {
-        navigator.vibrate(1000);
+        isPlatform('hybrid') && Haptics.vibrate();
         this._timeoutVibrated = true;
         this.stopVibrateCounter();
       }
       if (isBelow3mins && !this._below3minsVibrated) {
-        navigator.vibrate(1000);
+        isPlatform('hybrid') && Haptics.vibrate();
         this._below3minsVibrated = true;
       }
     }, 1000);

@@ -1,8 +1,8 @@
 import * as Sentry from '@sentry/browser';
 import CONFIG from 'config';
-import userModel from 'user_model';
-import appModel from 'app_model';
-import savedSamples from 'saved_samples';
+import userModel from 'userModel';
+import appModel from 'appModel';
+import savedSamples from 'savedSamples';
 import Log from './log';
 
 function _removeUUID(string) {
@@ -47,57 +47,49 @@ export function beforeBreadcrumb(crumb) {
 /* eslint-enable no-param-reassign */
 
 function setContext() {
-  Sentry.setUser({ id: userModel.attrs.drupalID });
+  Sentry.setUser({ id: userModel.attrs.id });
   Sentry.setTag('app.records', savedSamples.length);
   Sentry.setTag('app.language', appModel.attrs.language);
   Sentry.setTag('app.useTraining', appModel.attrs.useTraining || false);
-  Sentry.setTag('app.useExperiments', appModel.attrs.useExperiments || false);
   Sentry.setTag('app.feedbackGiven', appModel.attrs.feedbackGiven || false);
   Sentry.setTag('app.appSession', appModel.attrs.appSession);
   Sentry.setTag('app.build', CONFIG.build);
 }
 
-const API = {
-  init() {
-    if (!userModel.hasLogIn() || !appModel.attrs.sendAnalytics) {
-      return;
-    }
+export default function init() {
+  const isLoggedIn = !!userModel.attrs.id;
+  if (!isLoggedIn || !appModel.attrs.sendAnalytics) {
+    return;
+  }
 
-    Log('Analytics: initializing.');
-    if (!CONFIG.sentry.key) {
-      Log(
-        'Analytics: server error logging is turned off. Please provide Sentry key.',
-        'w'
-      );
-      return;
-    }
+  Log('Analytics: initializing.');
+  if (!CONFIG.sentry) {
+    Log(
+      'Analytics: server error logging is turned off. Please provide Sentry key.',
+      'w'
+    );
+    return;
+  }
 
-    Log('Analytics: turning on server error logging.');
-    Sentry.init({
-      dsn: `https://${CONFIG.sentry.key}@sentry.io/${CONFIG.sentry.project}`,
-      environment: CONFIG.environment,
-      release: CONFIG.version,
-      maxBreadcrumbs: 400,
-      ignoreErrors: [
-        'Incorrect password or email', // no need to log that
-      ],
-      beforeBreadcrumb,
+  Log('Analytics: turning on server error logging.');
+  Sentry.init({
+    dsn: CONFIG.sentry,
+    environment: CONFIG.environment,
+    release: `${CONFIG.name}@${CONFIG.version}`,
+    maxBreadcrumbs: 400,
+    ignoreErrors: [
+      'Incorrect password or email', // no need to log that
+    ],
+    beforeBreadcrumb,
+  });
+
+  setContext();
+
+  // capture unhandled promises
+  window.onunhandledrejection = e => {
+    Sentry.withScope(scope => {
+      scope.setExtra('unhandledPromise', true);
+      Sentry.captureException(e.reason);
     });
-
-    setContext();
-
-    // capture unhandled promises
-    window.onunhandledrejection = e => {
-      Sentry.withScope(scope => {
-        scope.setExtra('unhandledPromise', true);
-        Sentry.captureException(e.reason);
-      });
-    };
-  },
-
-  async trackEvent() {
-    // do nothing
-  },
-};
-
-export { API as default };
+  };
+}

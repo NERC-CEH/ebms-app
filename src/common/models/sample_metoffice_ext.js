@@ -1,5 +1,5 @@
 import Log from 'helpers/log';
-import device from 'helpers/device';
+import { device } from '@apps';
 import config from 'config';
 import { observe } from 'mobx';
 import * as Sentry from '@sentry/browser';
@@ -15,7 +15,12 @@ function getCelsiusTemperature(fahrenheitFromService) {
     return null;
   }
 
-  return Math.round(((fahrenheit - 32) * 5) / 9);
+  const temperature = Math.round(((fahrenheit - 32) * 5) / 9);
+  if (temperature < 10) {
+    return null;
+  }
+
+  return temperature;
 }
 
 const getWindDirection = degreesFromService => {

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ButterflyCount</string>
+    <string name="title_activity_main">ButterflyCount</string>
+    <string name="package_name">uk.ac.ceh.ebms</string>
+    <string name="custom_url_scheme">uk.ac.ceh.ebms</string>
+</resources>

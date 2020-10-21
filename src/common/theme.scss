@@ -239,3 +239,21 @@ ion-spinner.centered {
   top: 50%;
   left: 50%;
 }
+
+.collapse-block {
+  visibility: visible;
+  --inner-border-width: 0;
+}
+
+.ion-no-padding {
+  padding: 0;
+}
+
+html.ios.plt-hybrid #status-bar-background {
+  background: #443553;
+  width: 100vw;
+  height: env(safe-area-inset-top);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}

@@ -1,4 +1,4 @@
-import appModel from 'app_model';
+import appModel from 'appModel';
 import speciesNames from 'common/data/commonNames';
 
 const MAX_RESULTS = 200;

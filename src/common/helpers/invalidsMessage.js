@@ -1,4 +1,4 @@
-import alert from 'helpers/alert';
+import { alert } from '@apps';
 
 const printErrors = ({ errors }) => {
   if (!errors) {

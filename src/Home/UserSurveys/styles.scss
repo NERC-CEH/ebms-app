@@ -1,0 +1,28 @@
+#surveys-list.ion-page {
+  ion-segment {
+    max-width: 90%;
+    margin: 8px auto;
+    z-index: 100000000;
+
+    &[value='map'] {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    ion-badge {
+      vertical-align: top;
+      margin: 3px;
+      margin-left: 3px;
+    }
+    .ion-badge-custom-color {
+      color: var(--ion-color-primary);
+    }
+
+    ion-label {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-left: 1px;
+    }
+  }
+}

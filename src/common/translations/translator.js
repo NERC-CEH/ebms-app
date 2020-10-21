@@ -1,4 +1,4 @@
-import appModel from 'app_model';
+import appModel from 'appModel';
 import i18n from 'i18next';
 import { observe } from 'mobx';
 import { initReactI18next } from 'react-i18next';

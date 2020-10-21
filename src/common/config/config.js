@@ -1,14 +1,14 @@
 /** ****************************************************************************
  * Main app configuration file.
  **************************************************************************** */
+import { Plugins, FilesystemDirectory } from '@capacitor/core';
+import { isPlatform } from '@ionic/react';
 import Indicia from '@indicia-js/core';
-import transect from './transect';
-import area from './area-count';
 
 const HOST =
   process.env.APP_INDICIA_API_HOST || 'https://butterfly-monitoring.net/';
 
-const CONFIG = {
+const config = {
   // variables replaced on build
   version: process.env.APP_VERSION,
   build: process.env.APP_BUILD,
@@ -29,10 +29,9 @@ const CONFIG = {
   log: !__TEST__,
 
   // error analytics
-  sentry: {
-    key: !__TEST__ && process.env.APP_SENTRY_KEY,
-    project: '1448211',
-  },
+  sentry: !__TEST__ && process.env.APP_SENTRY_KEY,
+
+  feedbackEmail: 'apps%40ceh.ac.uk',
 
   users: {
     url: `${HOST + Indicia.API_BASE + Indicia.API_VER}/users/`,
@@ -40,21 +39,20 @@ const CONFIG = {
   },
 
   reports: {
-    url: `${HOST +
-      Indicia.API_BASE +
-      Indicia.API_VER +
-      Indicia.API_REPORTS_PATH}`,
+    url: `${
+      HOST + Indicia.API_BASE + Indicia.API_VER + Indicia.API_REPORTS_PATH
+    }`,
     timeout: 80000,
   },
 
   // mapping
   map: {
     mapbox_api_key: process.env.APP_MAPBOX_MAP_KEY,
-    mapbox_osm_id: 'cehapps.0fenl1fe',
-    mapbox_satellite_id: 'cehapps.0femh3mh',
+    mapbox_osm_id: 'cehapps/ckghr3uxz01xb19udplq7wi6x',
+    mapbox_satellite_id: 'cehapps/cipqvo0c0000jcknge1z28ejp',
   },
 
-  DEFAULT_SURVEY_TIME: 15 * 60 * 1000, // 15 mins
+  DEFAULT_SURVEY_TIME: 4 * 60 * 1000, // 15 mins TODO:
   DEFAULT_TRANSECT_BUFFER: 10, // 5x2 meters
 
   // indicia configuration
@@ -63,12 +61,17 @@ const CONFIG = {
     api_key: process.env.APP_INDICIA_API_KEY,
     website_id: 118,
     webForm: 'enter-app-record',
-
-    surveys: {
-      area,
-      transect,
-    },
   },
 };
 
-export default CONFIG;
+(async function getMediaDirectory() {
+  if (isPlatform('hybrid')) {
+    const { uri } = await Plugins.Filesystem.getUri({
+      path: '',
+      directory: FilesystemDirectory.Data,
+    });
+    config.dataPath = uri;
+  }
+})();
+
+export default config;

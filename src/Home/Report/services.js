@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
 import config from 'config';
 import makeRequest from 'common/helpers/makeRequest';
+import surveys from 'common/config/surveys';
 
 const speciesSchemaBackend = Yup.object().shape({
   aggregations: Yup.object()
@@ -21,8 +22,7 @@ async function fetchSpeciesReport() {
     'aggs[by_species][terms][field]': 'taxon.accepted_name.keyword',
     'aggs[by_species][aggs][sample_count][cardinality][field]':
       'event.event_id',
-    'query[bool][must][term][metadata.survey.id]':
-      config.indicia.surveys.area.id,
+    'query[bool][must][term][metadata.survey.id]': surveys.area.id,
     size: 0,
   };
 

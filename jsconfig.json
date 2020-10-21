@@ -2,17 +2,17 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "user_model": ["src/common/models/user_model"],
-      "app_model": ["src/common/models/app_model"],
+      "userModel": ["src/common/models/userModel"],
+      "appModel": ["src/common/models/appModel"],
+      "savedSamples": ["src/common/models/savedSamples"],
       "occurrence": ["src/common/models/occurrence"],
       "sample": ["src/common/models/sample"],
-      "saved_samples": ["src/common/saved_samples"],
       "common/*": ["src/common/*"],
       "helpers/*": ["src/common/helpers/*"],
       "Components/*": ["src/common/Components/*"],
-      "Lib/*": ["src/common/Lib/*"],
       "@apps": ["src/common/appsBitCollection"]
-    }
+    },
+    "experimentalDecorators": true
   },
   "include": ["./src/**/*"]
 }

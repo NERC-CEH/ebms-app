@@ -5,7 +5,7 @@ const glob = require('glob'); // eslint-disable-line
 const { CLIEngine } = require('eslint');
 const { assert } = require('chai');
 
-const paths = glob.sync('./+(src|test)/**/*.js');
+const paths = glob.sync('./+(src|test)/**/*.{js,jsx}');
 const engine = new CLIEngine({
   envs: ['node', 'mocha'],
   useEslintrc: true,
