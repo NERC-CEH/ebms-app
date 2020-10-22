@@ -52,7 +52,7 @@ const config = {
     mapbox_satellite_id: 'cehapps/cipqvo0c0000jcknge1z28ejp',
   },
 
-  DEFAULT_SURVEY_TIME: 4 * 60 * 1000, // 15 mins TODO:
+  DEFAULT_SURVEY_TIME: 15 * 60 * 1000, // 15 mins
   DEFAULT_TRANSECT_BUFFER: 10, // 5x2 meters
 
   // indicia configuration
