@@ -8,10 +8,7 @@ const exec = grunt => ({
   },
   resources: {
     command: () => {
-      const appMinorVersion = pkg.version
-        .split('.')
-        .splice(0, 2)
-        .join('.');
+      const appMinorVersion = pkg.version.split('.').splice(0, 2).join('.');
 
       return `mkdir -p resources &&
                 cp -R other/designs/android resources &&
@@ -93,7 +90,7 @@ const updateVersionAndBuild = ({ version, build = 1 }) => {
 
   // Android
   file = fs.readFileSync('./android/app/build.gradle', 'utf8');
-  file = file.replace(/versionName "\d\.\d\.\d"/i, `versionName "${version}"`);
+  file = file.replace(/versionName "(\d\.)+\d"/i, `versionName "${version}"`);
   file = file.replace(/versionCode \d+/i, `versionCode ${build}`);
   pkg.version = version;
   pkg.build = build;
@@ -108,7 +105,7 @@ const updateVersionAndBuild = ({ version, build = 1 }) => {
   file = fs.readFileSync('./ios/App/App.xcodeproj/project.pbxproj', 'utf8');
   file = replaceAll(
     file,
-    /MARKETING_VERSION = \d\.\d\.\d/i,
+    /MARKETING_VERSION = (\d\.)+\d/i,
     `MARKETING_VERSION = ${version}`
   );
   file = replaceAll(
