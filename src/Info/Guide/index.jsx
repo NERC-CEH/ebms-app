@@ -4,6 +4,7 @@ import { Page, Main, Header, Section } from '@apps';
 import { IonButton, IonIcon, IonList } from '@ionic/react';
 import { openOutline } from 'ionicons/icons';
 import config from 'config';
+import './styles.scss';
 
 const { P, H } = Section;
 
@@ -11,7 +12,7 @@ const helpEmail = 'ebms@ceh.ac.uk';
 const eBMSWebsiteLink = ''; // backwards compatible
 
 const Component = () => (
-  <Page id="about">
+  <Page id="guide">
     <Header title="Guide" />
     <Main class="ion-padding">
       <Section>
@@ -130,7 +131,7 @@ const Component = () => (
         </P>
       </Section>
 
-      <IonList className="ion-text-center">
+      <IonList>
         <IonButton href={`${config.site_url}/ebms-app`} fill="outline">
           <IonIcon slot="end" icon={openOutline} />
           <T>More Information</T>
