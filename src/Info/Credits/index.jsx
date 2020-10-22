@@ -324,6 +324,41 @@ export default () => (
             </IonItem>
           ))}
       </IonList>
+
+      <IonList>
+        <IonItem>
+          <IonLabel>
+            <b>
+              <T>Icons made by</T>:
+            </b>
+          </IonLabel>
+        </IonItem>
+        <IonItem lines="none">
+          <IonLabel>
+            <a
+              href="https://www.flaticon.com/authors/vitaly-gorbachev"
+              title="Vitaly Gorbachev"
+            >
+              Vitaly Gorbachev
+            </a>
+            ,{' '}
+            <a
+              href="https://www.flaticon.com/authors/good-ware"
+              title="Good Ware"
+            >
+              Good Ware
+            </a>
+            ,{' '}
+            <a href="https://www.flaticon.com/authors/freepik" title="FreePick">
+              FreePick
+            </a>{' '}
+            <T>from</T>{' '}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </IonLabel>
+        </IonItem>
+      </IonList>
     </Main>
   </Page>
 );
