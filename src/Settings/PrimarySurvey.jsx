@@ -24,14 +24,21 @@ function SelectCountry({ appModel }) {
 
   const surveyOptions = Object.values(surveys)
     .map(translate)
-    .map(([value, label]) => (
-      <React.Fragment key={value}>
-        <IonItem>
-          <IonLabel>{label}</IonLabel>
-          <IonRadio value={value} checked={currentValue === value} />
-        </IonItem>
-      </React.Fragment>
-    ));
+    .map(([value, label]) => {
+      if (value === 'precise-area' && !appModel.attrs.useExperiments) {
+        // TODO: remove once survey approved
+        return null;
+      }
+
+      return (
+        <React.Fragment key={value}>
+          <IonItem>
+            <IonLabel>{label}</IonLabel>
+            <IonRadio value={value} checked={currentValue === value} />
+          </IonItem>
+        </React.Fragment>
+      );
+    });
 
   return (
     <Page id="primary-survey">

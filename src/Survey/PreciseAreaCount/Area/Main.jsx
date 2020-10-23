@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   IonIcon,
-  IonLifeCycleContext,
+  NavContext,
   IonToolbar,
   IonTitle,
+  withIonLifeCycle,
 } from '@ionic/react';
 import { Main } from '@apps';
 import { locateOutline } from 'ionicons/icons';
@@ -53,11 +54,27 @@ function translateDrawInterface() {
 
 L.Draw.Polyline.prototype._onTouch = L.Util.falseFn;
 
+function getAreaCountMarker(sample) {
+  const { latitude, longitude } = sample.attrs.location || {};
+  if (!latitude) {
+    return null;
+  }
+
+  return L.circleMarker([latitude, longitude], {
+    color: 'white',
+    fillColor: '#745a8f',
+    fillOpacity: 1,
+    weight: 4,
+  });
+}
+
 @observer
 class AreaAttr extends Component {
-  static contextType = IonLifeCycleContext;
+  static contextType = NavContext;
 
   static propTypes = {
+    match: PropTypes.object.isRequired,
+    sample: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
     setLocation: PropTypes.func.isRequired,
     areaPretty: PropTypes.string.isRequired,
@@ -135,38 +152,59 @@ class AreaAttr extends Component {
     const map = this.map.current.leafletElement;
 
     if (shape.type === 'Polygon') {
-      const positions = shape.coordinates[0].map(coordinates =>
-        [...coordinates].reverse().map(float => Number.parseFloat(float))
-      );
+      const reverseCoords = coords =>
+        [...coords].reverse().map(Number.parseFloat);
+      const positions = shape.coordinates[0].map(reverseCoords);
+
       const polygon = L.polygon(positions, { color: DEFAULT_SHAPE_COLOR });
+
       polygon.addTo(this.drawnItems);
+      
       this.zoomToPolygonShape(shape);
       return;
     }
 
-    const positions = shape.coordinates.map(coordinates =>
-      [...coordinates].reverse().map(float => Number.parseFloat(float))
-    );
+    const reverseCoords = coords =>
+      [...coords].reverse().map(Number.parseFloat);
+    const positions = shape.coordinates.map(reverseCoords);
 
     const polyline = L.polyline(positions, { color: DEFAULT_SHAPE_COLOR });
     polyline.addTo(this.drawnItems);
     map.setView(positions[positions.length - 1], DEFAULT_LOCATED_ZOOM);
   }
 
-  componentDidMount() {
-    const map = this.map.current.leafletElement;
+  ionViewDidEnter = () => {
+    this._leaving = false;
 
     // correct map size after animation
     const { location } = this.props;
 
-    this.context.onIonViewDidEnter(() => {
-      map.whenReady(() => {
-        map.invalidateSize();
-        if (location.shape) {
-          this.setExistingShape(location.shape);
-        }
-      });
-    });
+    const map = this.map.current.leafletElement;
+
+    const refreshMap = () => {
+      map.invalidateSize();
+      if (location.shape) {
+        this.setExistingShape(location.shape);
+      }
+    };
+
+    map.whenReady(refreshMap);
+  };
+
+  ionViewWillEnter = () => {
+    this.updateRecords();
+  };
+
+  _onCreatedEventListener = e => {
+    this.drawnItems.clearLayers();
+    this.drawnItems.addLayer(e.layer);
+    this.setShape(e);
+  };
+
+  componentDidMount() {
+    const map = this.map.current.leafletElement;
+
+    const { location } = this.props;
 
     this.drawnItems = this.addDrawControls();
 
@@ -176,15 +214,65 @@ class AreaAttr extends Component {
       map.panTo(new L.LatLng(...DEFAULT_POSITION));
     }
 
-    this._onCreatedEventListener = e => {
-      this.drawnItems.clearLayers();
-      this.drawnItems.addLayer(e.layer);
-      this.setShape(e);
-    };
     map.on(L.Draw.Event.CREATED, this._onCreatedEventListener);
     map.on(L.Draw.Event.EDITED, this.setEditedShape);
     map.on(L.Draw.Event.DELETED, this.deleteShape);
+    this.addRecords();
   }
+
+  addRecordsPopup = (sample, marker) => {
+    const { match } = this.props;
+    const url = match.url.split('/area');
+    url.pop();
+
+    const occ = sample.occurrences[0];
+
+    const onMarkerClick = () => {
+      if (this._leaving) {
+        return;
+      }
+      this._leaving = true;
+      this.context.navigate(`${url}/samples/${sample.cid}/occ/${occ.cid}`);
+    };
+
+    marker.on(`click`, onMarkerClick);
+  };
+
+  _recordMarkers = [];
+
+  updateRecords = () => {
+    const updateMarker = ([marker, smp]) => {
+      const { latitude, longitude } = smp.attrs.location || {};
+      if (!latitude) {
+        return;
+      }
+
+      marker.setLatLng([latitude, longitude]);
+    };
+
+    this._recordMarkers.forEach(updateMarker);
+  };
+
+  addRecords = () => {
+    const map = this.map.current.leafletElement;
+
+    const { sample } = this.props;
+
+    const addSurveyMarkerToMap = smp => {
+      const marker = getAreaCountMarker(smp);
+
+      if (!marker) {
+        return;
+      }
+
+      this._recordMarkers.push([marker, smp]);
+
+      this.addRecordsPopup(smp, marker);
+      marker.addTo(map);
+    };
+
+    sample.samples.forEach(addSurveyMarkerToMap);
+  };
 
   componentDidUpdate(prevProps) {
     if (prevProps.location.shape !== this.props.location.shape) {
@@ -209,15 +297,12 @@ class AreaAttr extends Component {
   };
 
   startGPS = () => {
-    return new Promise((resolve, reject) => {
+    const cb = (resolve, reject) => {
       const options = {
         accuracyLimit: 160,
-
         onUpdate: () => {},
-
         callback: (error, location) => {
           this.stopGPS();
-
           if (error) {
             this.stopGPS();
             reject(error);
@@ -226,10 +311,11 @@ class AreaAttr extends Component {
           resolve(location);
         },
       };
-
       const locatingJobId = GPS.start(options);
       this.setState({ locating: locatingJobId });
-    });
+    };
+
+    return new Promise(cb);
   };
 
   stopGPS = () => {
@@ -239,9 +325,8 @@ class AreaAttr extends Component {
 
   zoomToPolygonShape(polygon) {
     const map = this.map.current.leafletElement;
-    const positions = polygon.coordinates[0].map(coordinates =>
-      [...coordinates].reverse()
-    );
+    const reverseCoords = coords => [...coords].reverse();
+    const positions = polygon.coordinates[0].map(reverseCoords);
     map.fitBounds(positions);
   }
 
@@ -256,7 +341,10 @@ class AreaAttr extends Component {
     }
   }
 
-  setEditedShape = e => e.layers.eachLayer(layer => this.setShape({ layer }));
+  setEditedShape = e => {
+    const setShape = layer => this.setShape({ layer });
+    e.layers.eachLayer(setShape);
+  };
 
   setShape = async e => {
     const { setLocation } = this.props;
@@ -302,4 +390,4 @@ class AreaAttr extends Component {
   }
 }
 
-export default AreaAttr;
+export default withIonLifeCycle(AreaAttr);

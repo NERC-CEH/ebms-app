@@ -48,17 +48,23 @@ class Component extends React.Component {
       );
 
       // eslint-disable-next-line
-      const getSurveyButton = ({ name, label }) => (
-        <IonFabButton
-          class="fab-button-label"
-          routerLink={`/survey/${name}/new`}
-          key={name}
-        >
-          <IonLabel>
-            <T>{label}</T>
-          </IonLabel>
-        </IonFabButton>
-      );
+      const getSurveyButton = ({ name, label }) => {
+        if (name === 'precise-area' && !appModel.attrs.useExperiments) {
+          // TODO: remove once survey approved
+          return null;
+        }
+        return (
+          <IonFabButton
+            class="fab-button-label"
+            routerLink={`/survey/${name}/new`}
+            key={name}
+          >
+            <IonLabel>
+              <T>{label}</T>
+            </IonLabel>
+          </IonFabButton>
+        );
+      };
 
       return otherSurveys.map(getSurveyButton);
     };

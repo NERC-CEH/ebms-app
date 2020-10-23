@@ -282,7 +282,7 @@ const config = {
 
     const sample = new Sample({
       metadata: {
-        survey: 'transect',
+        survey: config.name,
       },
       attrs: {
         survey_id: config.id,

@@ -21,6 +21,7 @@ export { default as LongPressFabButton } from '@bit/flumens.apps.long-press-fab-
 export { default as UserFeedbackRequest } from '@bit/flumens.apps.user-feedback-request';
 export { default as PhotoPicker } from '@bit/flumens.apps.photo-picker';
 export { default as LongPressButton } from '@bit/flumens.apps.long-press-button';
+export { default as ModelLocation } from '@bit/flumens.apps.model-location-map';
 
 export { default as device } from '@bit/flumens.apps.device';
 export { default as alert } from '@bit/flumens.apps.helpers.alert';
@@ -29,6 +30,7 @@ export { default as toast } from '@bit/flumens.apps.helpers.toast';
 export { default as date } from '@bit/flumens.apps.date';
 export { default as actionSheet } from '@bit/flumens.apps.helpers.action-sheet';
 export * from '@bit/flumens.apps.utils.validation';
+export * from '@bit/flumens.apps.utils.location';
 
 export { default as Model } from '@bit/flumens.apps.models.model';
 export { default as Sample } from '@bit/flumens.apps.models.sample-with-drupal-remote';

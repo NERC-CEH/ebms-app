@@ -46,6 +46,7 @@ async function uploadAllSamples(saveSamples, userModel, t) {
 const Container = observer(({ savedSamples, appModel, userModel, t }) => {
   const {
     useTraining,
+    useExperiments,
     sendAnalytics,
     language,
     country,
@@ -57,6 +58,7 @@ const Container = observer(({ savedSamples, appModel, userModel, t }) => {
       <Header title="Settings" />
       <Main
         useTraining={useTraining}
+        useExperiments={useExperiments}
         sendAnalytics={sendAnalytics}
         primarySurvey={primarySurvey}
         uploadAllSamples={() => uploadAllSamples(savedSamples, userModel, t)}

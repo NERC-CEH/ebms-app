@@ -47,9 +47,8 @@ const config = {
 
   // mapping
   map: {
-    mapbox_api_key: process.env.APP_MAPBOX_MAP_KEY,
-    mapbox_osm_id: 'cehapps/ckghr3uxz01xb19udplq7wi6x',
-    mapbox_satellite_id: 'cehapps/cipqvo0c0000jcknge1z28ejp',
+    mapboxApiKey: process.env.APP_MAPBOX_MAP_KEY,
+    mapboxSatelliteId: 'cehapps/cipqvo0c0000jcknge1z28ejp',
   },
 
   DEFAULT_SURVEY_TIME: 15 * 60 * 1000, // 15 mins

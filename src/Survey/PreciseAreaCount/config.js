@@ -13,17 +13,20 @@ const locationSchema = Yup.object().shape({
   source: Yup.string().required('Please add survey area information.'),
 });
 
+const validateLocation = val => {
+  if (!val) {
+    return false;
+  }
+
+  locationSchema.validateSync(val);
+  return true;
+};
+
 const areaCountSchema = Yup.object().shape({
   location: Yup.mixed().test(
     'area',
     'Please add survey area information.',
-    val => {
-      if (!val) {
-        return false;
-      }
-      locationSchema.validateSync(val);
-      return true;
-    }
+    validateLocation
   ),
 
   surveyStartTime: Yup.date().required('Date is missing'),
@@ -33,10 +36,11 @@ const areaCountSchema = Yup.object().shape({
 });
 
 function transformToMeters(coordinates) {
-  return coordinates.map(([lng, lat]) => {
+  const transform = ([lng, lat]) => {
     const { x, y } = L.Projection.SphericalMercator.project({ lat, lng });
     return [x, y];
-  });
+  };
+  return coordinates.map(transform);
 }
 function getGeomString(shape) {
   const geoJSON = toJS(shape);
@@ -55,10 +59,19 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   minute: 'numeric',
 });
 
+const dateAttr = {
+  values(date) {
+    return dateHelp.print(date);
+  },
+  isValid: val => val && val.toString() !== 'Invalid Date',
+  type: 'date',
+  max: () => new Date(),
+};
+
 const config = {
   id: 565,
-  name: 'area',
-  label: '15min Count',
+  name: 'precise-area',
+  label: 'Precise 15min Count',
   webForm: 'enter-app-record',
   attrs: {
     location: {
@@ -92,14 +105,7 @@ const config = {
     device_version: { id: 759 },
     app_version: { id: 1139 },
 
-    date: {
-      values(date) {
-        return dateHelp.print(date);
-      },
-      isValid: val => val && val.toString() !== 'Invalid Date',
-      type: 'date',
-      max: () => new Date(),
-    },
+    date: dateAttr,
 
     surveyStartTime: {
       id: 1385,
@@ -201,56 +207,81 @@ const config = {
     },
   },
 
-  occ: {
+  smp: {
     attrs: {
-      training: {
-        id: 'training',
-      },
-
-      taxon: {
-        id: 'taxa_taxon_list_id',
-        values(taxon) {
-          return taxon.warehouse_id;
+      location: {
+        id: 'entered_sref',
+        values(location) {
+          return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
+            location.longitude
+          ).toFixed(7)}`;
         },
       },
-      count: { id: 780 },
-      stage: {
-        id: 293,
-        label: 'Stage',
-        type: 'radio',
-
-        values: [
-          { value: null, isDefault: true, label: 'Not Recorded' },
-          { value: 'Adults', id: 3929 },
-          { value: 'Larvae', id: 3931 },
-          { value: 'Eggs', id: 3932 },
-          { value: 'Pupae', id: 3930 },
-          { value: 'Larval webs', id: 14079 },
-        ],
-      },
-      comment: {
-        label: 'Comment',
-        id: 'comment',
-        icon: chatboxOutline,
-        type: 'textarea',
-        info: 'Please add any extra information about your survey.',
-        skipValueTranslation: true,
-      },
+      date: dateAttr,
     },
 
-    create(Occurrence, attrs) {
-      return new Occurrence({
-        attrs: {
-          count: 1,
-          comment: null,
-          stage: null,
-          taxon: {
-            scientific_name: null,
-            warehouse_id: null,
-          },
-          ...attrs,
+    create(Sample, Occurrence, taxon) {
+      const sample = new Sample({
+        metadata: {
+          survey: config.name,
         },
+        attrs: { location: {} },
       });
+
+      const occurrence = config.smp.occ.create(Occurrence, taxon);
+      sample.occurrences.push(occurrence);
+
+      sample.startGPS();
+
+      return sample;
+    },
+
+    occ: {
+      attrs: {
+        training: {
+          id: 'training',
+        },
+
+        taxon: {
+          id: 'taxa_taxon_list_id',
+          values(taxon) {
+            return taxon.warehouse_id;
+          },
+        },
+        count: { id: 780 },
+        stage: {
+          id: 293,
+          label: 'Stage',
+          type: 'radio',
+
+          values: [
+            { value: null, isDefault: true, label: 'Not Recorded' },
+            { value: 'Adult', id: 3929 },
+            { value: 'Larva', id: 3931 },
+            { value: 'Egg', id: 3932 },
+            { value: 'Pupae', id: 3930 },
+            { value: 'Larval web', id: 14079 },
+          ],
+        },
+        comment: {
+          label: 'Comment',
+          id: 'comment',
+          icon: chatboxOutline,
+          type: 'textarea',
+          info: 'Please add any extra information about your survey.',
+          skipValueTranslation: true,
+        },
+      },
+
+      create(Occurrence, taxon) {
+        return new Occurrence({
+          attrs: {
+            comment: null,
+            stage: 'Adult',
+            taxon,
+          },
+        });
+      },
     },
   },
 

@@ -53,6 +53,8 @@ const Controller = observer(props => {
     showLogoutConfirmationDialog(async reset => {
       if (reset) {
         appModel.attrs['draftId:area'] = null;
+        appModel.attrs['draftId:precise-area'] = null;
+        appModel.attrs['draftId:transect'] = null;
         await savedSamples.resetDefaults();
       }
 

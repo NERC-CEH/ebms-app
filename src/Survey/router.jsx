@@ -1,4 +1,9 @@
 import AreaCountRoutes from './AreaCount/router';
+import PreciseAreaCountRoutes from './PreciseAreaCount/router';
 import TransectRoutes from './Transect/router';
 
-export default [...AreaCountRoutes, ...TransectRoutes];
+export default [
+  ...PreciseAreaCountRoutes,
+  ...AreaCountRoutes,
+  ...TransectRoutes,
+];

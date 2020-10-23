@@ -84,7 +84,7 @@ class Component extends React.Component {
       {
         attribution:'<a href="http://mapbox.com/about/maps" class="mapbox-wordmark" target="_blank">Mapbox</a> © <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
         id: CONFIG.map.mapbox_satellite_id,
-        accessToken: CONFIG.map.mapbox_api_key,
+        accessToken: CONFIG.map.mapboxApiKey,
         tileSize: 256, // specify as, OS layer overwites this with 200 otherwise,
         minZoom: MIN_WGS84_ZOOM,
       }

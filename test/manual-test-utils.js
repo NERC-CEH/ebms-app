@@ -3,6 +3,7 @@
  ******************************************************************** */
 import GPS from 'mock-geolocation';
 import { Plugins, FilesystemDirectory } from '@capacitor/core';
+import track from './track.json';
 
 window.FilesystemDirectory = FilesystemDirectory;
 
@@ -66,13 +67,19 @@ testing.GPS = {
           return;
         }
 
-        const [latitude, longitude] = location.shift();
-        this.update({ latitude, longitude });
+        const [longitude, latitude] = location.shift();
+
+        this.update({ latitude, longitude, accuracy: 1 });
       }, 2000);
       return;
     }
 
     GPS.change(location);
+  },
+
+  simulate() {
+    this.mock();
+    this.update(track.features[0].geometry.coordinates[0]);
   },
 
   stop() {

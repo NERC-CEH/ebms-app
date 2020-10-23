@@ -7,10 +7,10 @@ import {
   IonItemDivider,
   IonItem,
   IonLabel,
-  IonNote,
 } from '@ionic/react';
 import {
   arrowUndoOutline,
+  flameOutline,
   schoolOutline,
   flagOutline,
   globeOutline,
@@ -23,7 +23,7 @@ import languages from 'common/config/languages';
 import countries from 'common/config/countries';
 import config from 'config';
 import surveys from 'common/config/surveys';
-import { Main, alert, Toggle } from '@apps';
+import { Main, alert, Toggle, MenuNoteItem } from '@apps';
 import './styles.scss';
 
 function resetDialog(resetApp) {
@@ -73,6 +73,7 @@ class Component extends React.Component {
     onToggle: PropTypes.func.isRequired,
     uploadAllSamples: PropTypes.func.isRequired,
     useTraining: PropTypes.bool.isRequired,
+    useExperiments: PropTypes.bool.isRequired,
     sendAnalytics: PropTypes.bool.isRequired,
     primarySurvey: PropTypes.string,
     language: PropTypes.string,
@@ -84,6 +85,7 @@ class Component extends React.Component {
       resetApp,
       onToggle,
       useTraining,
+      useExperiments,
       language,
       country,
       sendAnalytics,
@@ -108,16 +110,10 @@ class Component extends React.Component {
               <T>Upload All</T>
             </IonLabel>
           </IonItem>
-          <IonItem>
-            <IonLabel class="ion-text-wrap">
-              <IonNote color="primary">
-                <T>
-                  Batch upload all finished records. This does not include
-                  records in &#39;draft&#39; stage.
-                </T>
-              </IonNote>
-            </IonLabel>
-          </IonItem>
+          <MenuNoteItem>
+            Batch upload all finished records. This does not include records in
+            &#39;draft&#39; stage.
+          </MenuNoteItem>
           <IonItem routerLink="/settings/primary-survey">
             <IonLabel>
               <T>Primary Survey</T>
@@ -146,6 +142,7 @@ class Component extends React.Component {
               <T>{countries[country]}</T>
             </IonLabel>
           </IonItem>
+
           <IonItem>
             <IonIcon icon={schoolOutline} size="small" slot="start" />
             <IonLabel>
@@ -156,16 +153,22 @@ class Component extends React.Component {
               checked={useTraining}
             />
           </IonItem>
+          <MenuNoteItem>
+            Mark any new records as &#39;training&#39; and exclude from all
+            reports.
+          </MenuNoteItem>
+
           <IonItem>
-            <IonLabel class="ion-text-wrap">
-              <IonNote color="primary">
-                <T>
-                  Mark any new records as &#39;training&#39; and exclude from
-                  all reports.
-                </T>
-              </IonNote>
+            <IonIcon icon={flameOutline} size="small" slot="start" />
+            <IonLabel>
+              <T>Experimental Features</T>
             </IonLabel>
+            <Toggle
+              onToggle={checked => onToggle('useExperiments', checked)}
+              checked={useExperiments}
+            />
           </IonItem>
+
           <IonItem>
             <IonIcon icon={shareOutline} size="small" slot="start" />
             <IonLabel>

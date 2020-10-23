@@ -41,42 +41,43 @@ function deleteSurvey(sample) {
 const Survey = observer(({ sample }) => {
   const date = new Date(sample.metadata.created_on);
   const prettyDate = date.toLocaleDateString();
-  const survey = sample.getSurvey().name;
+  const survey = sample.getSurvey();
 
   let speciesCount = sample.occurrences.length;
-  if (survey === 'area') {
+  if (survey.name === 'area') {
     const isNotZeroCount = occ => occ.attrs.count;
     speciesCount = sample.occurrences.filter(isNotZeroCount).length;
   }
 
+  if (survey.name === 'precise-area') {
+    speciesCount = sample.samples.length;
+  }
+
   const href = !sample.remote.synchronising
-    ? `/survey/${survey}/${sample.cid}/edit`
+    ? `/survey/${survey.name}/${sample.cid}/edit`
     : undefined;
 
   let externalHref;
 
   function getSampleInfo() {
-    if (survey === 'transect') {
-      return (
-        <IonLabel class="ion-text-wrap">
-          <h3>
-            <b>
-              <T>Transect</T>
-            </b>
-          </h3>
-          <h3>{prettyDate}</h3>
-        </IonLabel>
-      );
+    const label = (
+      <>
+        <h3>
+          <b>
+            <T>{survey.label}</T>
+          </b>
+        </h3>
+        <h3>{prettyDate}</h3>
+      </>
+    );
+
+    if (survey.name === 'transect') {
+      return <IonLabel class="ion-text-wrap">{label}</IonLabel>;
     }
 
     return (
       <IonLabel class="ion-text-wrap">
-        <h3>
-          <b>
-            <T>15min Count</T>
-          </b>
-        </h3>
-        <h3>{prettyDate}</h3>
+        {label}
         <IonBadge color="medium">
           <IonIcon src="/images/butterfly.svg" /> {speciesCount}
         </IonBadge>

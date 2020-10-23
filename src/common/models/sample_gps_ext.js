@@ -9,6 +9,7 @@ import Log from 'helpers/log';
 import config from 'config';
 import { observable } from 'mobx';
 import geojsonArea from '@mapbox/geojson-area';
+import { updateModelLocation } from '@apps';
 
 const DEFAULT_MIN_DISTANCE_SINCE_LAST_LOCATION = 20; // meters
 
@@ -72,7 +73,7 @@ function isSufficientDistanceMade(coordinates, latitude, longitude) {
   return true;
 }
 
-export function updateSampleLocation(sample, { latitude, longitude }) {
+export function updateSampleArea(sample, { latitude, longitude }) {
   const shape = getShape(sample);
   const coordinates =
     shape.type === 'Polygon' ? shape.coordinates[0] : shape.coordinates;
@@ -143,6 +144,8 @@ const extension = {
 
       callback(error, location) {
         if (error) {
+          console.log('GPS error', error);
+
           that.stopGPS();
           return;
         }
@@ -160,7 +163,14 @@ const extension = {
           return;
         }
 
-        updateSampleLocation(that, location);
+        if (that.parent && location.accuracy < 50) {
+          // subsample
+          updateModelLocation(that, location);
+          that.stopGPS();
+          return;
+        }
+
+        updateSampleArea(that, location);
       },
     };
 
