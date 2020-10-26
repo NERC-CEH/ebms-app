@@ -10,6 +10,7 @@ import {
   IonItemOptions,
   IonItemOption,
   NavContext,
+  IonSpinner,
 } from '@ionic/react';
 import {
   mapOutline,
@@ -58,6 +59,7 @@ const buildSpeciesCount = (agg, smp) => {
 
   agg[id] = agg[id] || { count: 0, taxon }; // eslint-disable-line
   agg[id].count++; // eslint-disable-line
+  agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning(); // eslint-disable-line
 
   const wasCreatedBeforeCurrent =
     new Date(agg[id].updatedOn).getTime() -
@@ -151,6 +153,12 @@ class AreaCount extends Component {
 
     const deleteSpeciesWrap = () => deleteSpecies(taxon);
 
+    let isGeolocatingSpinner;
+    // if (id %2) {
+    if (species.isGeolocating) {
+      isGeolocatingSpinner = <IonSpinner />;
+    }
+
     return (
       <IonItemSliding key={id}>
         <IonItem detail={!isSpeciesDisabled}>
@@ -163,6 +171,9 @@ class AreaCount extends Component {
           </IonButton>
           <IonLabel onClick={navigateToSpeciesOccurrencesWrap}>
             {speciesName}
+          </IonLabel>
+          <IonLabel slot="end" className="location-spinner">
+            {isGeolocatingSpinner}
           </IonLabel>
         </IonItem>
         <IonItemOptions side="end">

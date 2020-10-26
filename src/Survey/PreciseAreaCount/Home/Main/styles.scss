@@ -62,4 +62,14 @@
       padding-right: 8px;
     }
   }
+
+  .location-spinner {
+    max-height: 23px;
+    max-width: 30px;
+    
+    ion-spinner {
+      margin-top: -4px;
+      width: 15px;
+    }
+  }
 }
