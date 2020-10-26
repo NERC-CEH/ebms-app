@@ -33,6 +33,15 @@ export default class AppOccurrence extends Occurrence {
     return super.getSubmission();
   }
 
+  getTaxonName() {
+    const { taxon } = this.attrs;
+    if (!taxon || !taxon.found_in_name) {
+      return null;
+    }
+
+    return taxon[taxon.found_in_name];
+  }
+
   // eslint-disable-next-line class-methods-use-this
   validateRemote() {
     return null;

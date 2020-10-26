@@ -75,7 +75,7 @@ class EditOccurrence extends Component {
 
   render() {
     const { samples, isDisabled, match } = this.props;
-    // const foundInName = occurrence.attrs.taxon.found_in_name;
+
     if (!samples[0]) {
       return (
         <Main id="area-count-occurrence-edit">
@@ -86,8 +86,7 @@ class EditOccurrence extends Component {
       );
     }
 
-    const { taxon } = samples[0].occurrences[0].attrs;
-    const species = taxon[taxon.found_in_name];
+    const species = samples[0].occurrences[0].getTaxonName();
 
     const count = samples.length;
 

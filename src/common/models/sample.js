@@ -135,6 +135,14 @@ class AppSample extends Sample {
 
     return [updatedSubmission, media];
   }
+
+  getPrettyName() {
+    if (!this.parent || this.metadata.survey !== 'precise-area') {
+      return null;
+    }
+
+    return this.occurrences[0].getTaxonName();
+  }
 }
 
 // add geolocation functionality

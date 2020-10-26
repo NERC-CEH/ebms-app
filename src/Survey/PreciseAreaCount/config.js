@@ -236,6 +236,24 @@ const config = {
       return sample;
     },
 
+    verify(attrs) {
+      try {
+        Yup.object()
+          .shape({
+            location: Yup.mixed().test(
+              'area',
+              'Please add location information.',
+              val => !(!val || !val.latitude)
+            ),
+          })
+          .validateSync(attrs, { abortEarly: false });
+      } catch (attrError) {
+        return attrError;
+      }
+
+      return null;
+    },
+
     occ: {
       attrs: {
         training: {

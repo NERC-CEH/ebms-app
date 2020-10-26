@@ -43,8 +43,7 @@ class EditOccurrence extends Component {
 
   render() {
     const { match, occurrence, subSample, isDisabled } = this.props;
-    const foundInName = occurrence.attrs.taxon.found_in_name;
-    const species = occurrence.attrs.taxon[foundInName];
+    const species = occurrence.getTaxonName();
     const { stage } = occurrence.attrs;
     const { comment } = occurrence.attrs;
     const baseURL = match.url;
