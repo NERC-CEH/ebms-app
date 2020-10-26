@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { Page, Header, PhotoPicker } from '@apps';
-import { IonFooter } from '@ionic/react';
-import ImageModel from 'common/models/media';
-import config from 'config';
+import { Page, Header, } from '@apps';
+
 import Main from './Main';
 
 @observer
@@ -14,21 +12,10 @@ class Controller extends React.Component {
   };
 
   render() {
-    const { sample } = this.props;
-    const isDisabled = sample.isDisabled();
-
     return (
       <Page id="survey-area-count-detail-edit">
         <Header title="Additional Details" />
         <Main {...this.props} />
-        <IonFooter>
-          <PhotoPicker
-            model={sample}
-            isDisabled={isDisabled}
-            dataDirPath={config.dataPath}
-            ImageClass={ImageModel}
-          />
-        </IonFooter>
       </Page>
     );
   }

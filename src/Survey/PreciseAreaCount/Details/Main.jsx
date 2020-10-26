@@ -8,7 +8,9 @@ import {
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { Main, MenuAttrItem } from '@apps';
+import { Main, MenuAttrItem, PhotoPicker, MenuNoteItem } from '@apps';
+import ImageModel from 'common/models/media';
+import config from 'config';
 import 'common/images/wind.svg';
 
 @observer
@@ -19,7 +21,7 @@ class Component extends React.Component {
 
   render() {
     const { sample } = this.props;
-    const isDisabled = !!sample.metadata.synced_on;
+    const isDisabled = sample.isDisabled();
     const {
       comment,
       cloud,
@@ -79,6 +81,16 @@ class Component extends React.Component {
             icon="/images/wind.svg"
             label="Wind Speed"
             value={windSpeed}
+          />
+
+          <MenuNoteItem>
+            Representative photo of where the 15 minute count was made
+          </MenuNoteItem>
+          <PhotoPicker
+            model={sample}
+            isDisabled={isDisabled}
+            dataDirPath={config.dataPath}
+            ImageClass={ImageModel}
           />
         </IonList>
       </Main>

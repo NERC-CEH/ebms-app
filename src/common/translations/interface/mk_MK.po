@@ -1310,3 +1310,15 @@ msgstr ""
 # App settings labels for primary survey change
 msgid "All Surveys"
 msgstr ""
+
+# Part of a photo picker element
+msgid "Representative photo of where the 15 minute count was made"
+msgstr ""
+
+# Part of a photo picker element
+msgid "No photo has been added."
+msgstr ""
+
+# Part of a photo picker element
+msgid "Press <1></1> to add."
+msgstr ""
