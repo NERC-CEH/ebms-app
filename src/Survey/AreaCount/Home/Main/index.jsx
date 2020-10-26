@@ -187,7 +187,7 @@ class AreaCount extends Component {
 
     if (sample.metadata.saved) {
       return (
-        <MenuNoteItem>
+        <MenuNoteItem color="medium">
           Please check if the recording area is correct before sending the
           record.
         </MenuNoteItem>

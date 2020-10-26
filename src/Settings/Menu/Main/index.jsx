@@ -110,7 +110,7 @@ class Component extends React.Component {
               <T>Upload All</T>
             </IonLabel>
           </IonItem>
-          <MenuNoteItem>
+          <MenuNoteItem color="medium">
             Batch upload all finished records. This does not include records in
             &#39;draft&#39; stage.
           </MenuNoteItem>
@@ -153,7 +153,7 @@ class Component extends React.Component {
               checked={useTraining}
             />
           </IonItem>
-          <MenuNoteItem>
+          <MenuNoteItem color="medium">
             Mark any new records as &#39;training&#39; and exclude from all
             reports.
           </MenuNoteItem>
