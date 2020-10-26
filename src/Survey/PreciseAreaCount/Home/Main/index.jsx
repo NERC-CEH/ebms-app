@@ -21,6 +21,7 @@ import {
   openOutline,
   clipboardOutline,
   filterOutline,
+  warningOutline,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import { toJS } from 'mobx';
@@ -278,7 +279,10 @@ class AreaCount extends Component {
     const { sample, isDisabled, match } = this.props;
 
     const { area } = sample.attrs.location || {};
-    const areaPretty = area && `${area.toLocaleString()} m²`;
+    let areaPretty = <IonIcon icon={warningOutline} color="danger" />;
+    if (Number.isFinite(area) || sample.isGPSRunning()) {
+      areaPretty = area ? `${area} m²` : '';
+    }
 
     const startTime = new Date(sample.attrs.surveyStartTime);
     const countdown =
@@ -314,6 +318,7 @@ class AreaCount extends Component {
             iconMode="md"
             label="Area"
             value={areaPretty}
+            skipValueTranslation
           />
 
           {this.showAreaWarningNote()}
