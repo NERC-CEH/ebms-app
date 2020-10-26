@@ -260,7 +260,7 @@ msgid "TOP RECORDERS"
 msgstr "TOP POPISOVALCI"
 
 msgid "Top Species from all timed counts"
-msgstr "Najpogosteje najdene vrste vseh štetij"
+msgstr "Vrste, ki so bile najpogosteje popisane"
 
 msgid "Back"
 msgstr "Nazaj"
@@ -392,7 +392,7 @@ msgid "Edit Occurrence"
 msgstr "Uredi pojavljanje"
 
 msgid "Count"
-msgstr "Štetje"
+msgstr "Popis"
 
 msgid "Comment"
 msgstr "Komentar"
@@ -419,10 +419,10 @@ msgid "No species added"
 msgstr "Nobena vrsta ni dodana"
 
 msgid "Please draw your area on the map"
-msgstr "Na zemljevidu narišite območje"
+msgstr "Na zemljevidu narišite območje popisa"
 
 msgid "Draw an area"
-msgstr "Narišite območje"
+msgstr "Narišite območje popisa"
 
 msgid "Delete"
 msgstr "Izbriši"
@@ -434,7 +434,7 @@ msgid "Reports"
 msgstr "Poročila"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Se opravičujemo, trenutno ni na voljo nobenih podatkov o poročilih."
+msgstr "Se opravičujemo, trenutno ni na voljo nobenih podatkov o popisih."
 
 msgid "Are you sure you want to delete this survey?"
 msgstr "Ste prepričani, da želite ta popis izbrisati?"
@@ -507,8 +507,9 @@ msgid ""
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Metulji so očarljive žuželke, vendar njihovo število v mnogih delih Europe "
-"upada. Kot nakazuje tudi graf Indikator travniških vrst metuljev v EU."
+"Metulji so očarljive žuželke, vendar kljub temu njihovo število v mnogih "
+"delih Europe upada. Trend upadanja njihovega števila nakazuje tudi spodaj "
+"prikazan graf 'Indikator travniških vrst metuljev v EU'."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
@@ -673,8 +674,8 @@ msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Za izbris popisa pojdite na svojo stran računa, na popisu potegnite s prstom"
-" v levo in kliknite izbriši"
+"Za izbris popisa pojdite na stran svojega računa, na popisu potegnite s "
+"prstom v levo in kliknite izbriši."
 
 msgid "User"
 msgstr "Uporabnik"
@@ -686,10 +687,11 @@ msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"Za vpis kliknite Vpis ali Registracija v glavnem meniju in sledite navodilom"
+"Za vpis kliknite Vpis ali Registracija v glavnem meniju in sledite "
+"navodilom."
 
 msgid "To logout, visit the main menu page and click the logout button."
-msgstr "Za izpis kliknite gumb izpis v glavnem meniju"
+msgstr "Za izpis v glavnem meniju kliknite gumb izpis."
 
 msgid ""
 "after registering a new account you must verify your email address by "
@@ -780,13 +782,13 @@ msgid "How about a rating on the App Store then?"
 msgstr "Bi želeli oceniti aplikacijo v trgovini App Store?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "Bi želeli oceniti aplikacijo v trgovini App Store?"
+msgstr "Bi želeli oceniti aplikacijo v trgovini Play Store?"
 
 msgid "Icons made by"
 msgstr "Ikone je izdelal"
 
 msgid "from"
-msgstr "iz/od"
+msgstr "od"
 
 msgid "Enter your username or email address to request a password reset."
 msgstr ""
@@ -808,14 +810,14 @@ msgid "App Development"
 msgstr "Razvoj aplikacije"
 
 msgid "This app was hand crafted with love by"
-msgstr "To aplikacijo so ročno izdelali z ljubeznijo"
+msgstr "To aplikacijo so izdelali ročno z ljubeznijo"
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
 msgstr ""
-"Tehnično svetovanje, ki je posebej specializirano za gradnjo v skladu z "
-"ekološkimi potrebami in usmerjeno v rešitve skupnosti."
+"Tehnično svetovanje, ki je imelo posebni poudarek na združevanju znanosti in"
+" komunikacije."
 
 msgid "For suggestions and feedback please do not hesitate to"
 msgstr "Za predloge in povratne informacije"
@@ -865,7 +867,7 @@ msgid "Transect"
 msgstr "Transekt"
 
 msgid "Sections"
-msgstr "Odsek"
+msgstr "Odseki"
 
 msgid "No transect"
 msgstr "Ni transekta"
@@ -946,16 +948,16 @@ msgid "Wind felt on face, leaves rustle"
 msgstr "Rahel veter, šušljanje listov"
 
 msgid "Leaves and twigs in slight motion"
-msgstr "Listi in vejice v rahlem gibanju"
+msgstr "Listi in vejice so v rahlem gibanju"
 
 msgid "Dust raised and small branches move"
-msgstr "Prah se dviguje, majhne veje se premikajo"
+msgstr "Prah se dviguje, manjše veje se premikajo"
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Manjša drevesa in listi se zibajo"
+msgstr "Zibajo se manjša drevesa in listi"
 
 msgid "Large branches move and trees sway"
-msgstr "Večje veje in drevesa se zibajo"
+msgstr "Zibajo se večje veje in drevesa"
 
 msgid "Please specify the wind speed."
 msgstr "Prosimo navedite hitrost vetra."
@@ -994,7 +996,7 @@ msgid "Please add any extra info about this record."
 msgstr "Prosimo dodajte morebitne dodatne podatke o tem popisu."
 
 msgid "Enter more information here..."
-msgstr "Tu vnesite več informacij ..."
+msgstr "Tu vnesete več informacij ..."
 
 msgid "Please specify the person responsible for identifying the species."
 msgstr "Prosimo navedite osebo, odgovorno za identifikacijo vrste."
@@ -1003,7 +1005,7 @@ msgid "HH:mm"
 msgstr "UU:mm"
 
 msgid "Please specify the % of cloud cover."
-msgstr "Prosimo v procentih navedite stopnjo oblačnosti."
+msgstr "Prosimo navedite stopnjo oblačnosti v procentih."
 
 msgid "You don't have any transects. Please try to refresh the list."
 msgstr "Nimate nobenih transektov. Poskusite osvežiti seznam."
@@ -1053,7 +1055,7 @@ msgid "Description"
 msgstr "Opis"
 
 msgid "Counts"
-msgstr "Štetja"
+msgstr "Št. osebkov"
 
 msgid "Species descriptions"
 msgstr "Opisi vrst"
@@ -1094,13 +1096,13 @@ msgid ""
 msgstr ""
 "Najprimernejša metoda je 15-minutno štetje vrst. To lahko opravite kjerkoli "
 "in kadarkoli, ko so metulji aktivni (tj. ko je vreme toplo in sončno). "
-"Aplikacijo lahko uporabite tudi za snemanje obstoječih transektov za "
+"Aplikacijo lahko uporabite tudi za opravljanje obstoječih transektov za "
 "metulje. V letu 2020 bo aplikacija vsebovala tudi možnost predložitve "
-"priložnostnih zapisov. Spodnje opombe vam povedo, kako uporabljati trenutno "
+"priložnostnih popisov. Spodnje opombe vam povedo, kako uporabljati trenutno "
 "razpoložljive metode."
 
 msgid "How to do a 15-minute Count"
-msgstr "Kako narediti 15 minutno štetje"
+msgstr "Kako narediti 15-minutno štetje"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1367,7 +1369,7 @@ msgstr "Kopiraj"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr "Žal ni bilo mogoče najti nobene vrste za kopiranje."
+msgstr "Žal za kopiranje ni bilo mogoče najti nobene vrste."
 
 # Species list copy functionality
 msgid "You have succcesfully copied {{speciesCount}} species."

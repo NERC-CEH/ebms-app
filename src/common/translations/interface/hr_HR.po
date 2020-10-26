@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Martina Sasic <martina.sasic@hpm.hr>, 2019
 # Karolis, 2020
-# Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020
+# Vilius Stankaitis <vilius@flumens.io>, 2020
+# Martina Sasic <martina.sasic@hpm.hr>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Vilius Stankaitis <stankaitisvilius@gmail.com>, 2020\n"
+"Last-Translator: Martina Sasic <martina.sasic@hpm.hr>, 2020\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/ceh/teams/95441/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -128,10 +128,10 @@ msgid "Portugal"
 msgstr "Portugal"
 
 msgid "Portugal (Azores)"
-msgstr "Portugal: Azori"
+msgstr "Portugal (Azori)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugal: Madeira"
+msgstr "Portugal (Madeira)"
 
 msgid "Romania"
 msgstr "Rumunjska"
@@ -149,10 +149,10 @@ msgid "Slovakia"
 msgstr "Slovačka"
 
 msgid "Turkey (Europe)"
-msgstr ""
+msgstr "Turska (Europa)"
 
 msgid "Turkey (Asia)"
-msgstr ""
+msgstr "Turska (Azija)"
 
 msgid "Ukraine"
 msgstr "Ukrajina"
@@ -325,7 +325,7 @@ msgstr "Da li si siguran da se želiš odjaviti?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr ""
+msgstr "Odbaci lokalne podatke"
 
 msgid "This will delete all the records on this device."
 msgstr "To će obrisati sve podatke na ovom uređaju."
@@ -424,7 +424,7 @@ msgid "Please draw your area on the map"
 msgstr "Molimo nacrtajte vaše područje na karti"
 
 msgid "Draw an area"
-msgstr "Nacrtaj područje"
+msgstr "Ucrtaj područje"
 
 msgid "Delete"
 msgstr "Izbriši"
@@ -436,7 +436,7 @@ msgid "Reports"
 msgstr "Izvještaji"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr ""
+msgstr "Nažalost, trenutačno nisu dostupni podaci iz izvješća."
 
 msgid "Are you sure you want to delete this survey?"
 msgstr "Da li ste sigurni da želite izbrisati istraživanje?"
@@ -472,7 +472,7 @@ msgid "The survey is not complete yet."
 msgstr "Istraživanje još nije završeno"
 
 msgid "Please select a smaller area."
-msgstr "Molimo izaberite manje područje."
+msgstr "Izaberite manje područje."
 
 msgid "Please add survey area information."
 msgstr "Molimo vas da dodate informacije o području istraživanja"
@@ -608,7 +608,7 @@ msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Za brisanje vrste s popisa, prstom je povucite lijevo i kliknite tipku za "
+"Za brisanje vrste s popisa, prstom je povucite lijevo i pritisnite tipku za "
 "brisanje."
 
 msgid ""
@@ -982,16 +982,16 @@ msgid "Please specify the reliability of the section count."
 msgstr "Odredite pouzdanost podataka na odsječcima"
 
 msgid "Suitable conditions"
-msgstr ""
+msgstr "Povoljni uvjeti"
 
 msgid "Unsuitable conditions"
-msgstr ""
+msgstr "Nepovoljni uvjeti"
 
 msgid "Unable to survey"
-msgstr ""
+msgstr "Nije moguće provesti istraživanje"
 
 msgid "15min Count"
-msgstr "Vremenski ograničen obilazak"
+msgstr "15-minutni obilazak"
 
 msgid "eBMS Transect"
 msgstr "eBMS transekt"
@@ -1062,19 +1062,22 @@ msgid "Counts"
 msgstr "Zbroj"
 
 msgid "Species descriptions"
-msgstr ""
+msgstr "Opisi vrsta"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
+"Opisi vrsta uključenih u vodič temelje se na opisima izrađenim za Atlas "
+"klimatskog rizika europskih leptira. Zahvaljujemo Josefu Setteleu što nam je"
+" omogućio korištenje."
 
 msgid "Photo credits"
 msgstr "Izvori fotografija"
 
 msgid "How to use the app"
-msgstr ""
+msgstr "Kako koristiti aplikaciju"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1082,6 +1085,11 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register with a username or email and enter a password."
 msgstr ""
+"Aplikaciju možete koristiti za monitoring leptira bilo gdje u Europi. "
+"Rezultati će se unijeti u europsku bazu podataka o leptirima i koristiti za "
+"razvoj trendova populacija leptira širom Europe. Da biste koristili "
+"aplikaciju, prvo se morate registrirati s korisničkim imenom ili e-poštom i "
+"unijeti lozinku."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1091,9 +1099,15 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
+"Poželjna metoda je provođenje 15-minutnog brojanja. To možete učiniti na "
+"bilo kojem mjestu i u bilo koje vrijeme kada su leptiri aktivni (tj. kada je"
+" toplo i po mogućnosti sunčano). Aplikaciju možete koristiti i za snimanje "
+"utvrđenih transekata leptira. Kasnije u 2020., aplikacija će sadržavati i "
+"mogućnost slanja povremenih zapisa. Bilješke u nastavku govore vam kako "
+"koristiti trenutno dostupne metode."
 
 msgid "How to do a 15-minute Count"
-msgstr ""
+msgstr "Kako provesti 15-minutno brojanje"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1108,6 +1122,16 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
+"Ovo je zadana metoda u aplikaciji. Jednostavno brojite leptire tijekom "
+"razdoblja od 15 minuta, bilo na određenom području kao što je polje, ili dok"
+" šetate ili stojite na nepomičnoj točki brojeći leptire koji prolete. Nema "
+"potrebe za iscrtavanjem rute jer će aplikacija znati vašu rutu, pod uvjetom "
+"da ste u postavkama uključili GPS praćenje. U suprotnom ćete područje koje "
+"ste pretraživali morati nacrtati na karti pomoću aplikacije. Za početak "
+"dodirnite gumb + pri dnu zaslona. Aplikacija odbrojava 15 minuta nakon što "
+"započnete, ali pritiskom na tipku pauze, možete pauzirati u bilo kojem "
+"trenutku (na primjer za prepoznavanje leptira). Na kraju istraživanja možete"
+" pregledati svoje podatke i provjeriti je li brojnost točna prije slanja."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1117,6 +1141,12 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
+"Dodajte vrstu koju vidite pritiskom na tipku + DODAJ i počnite tipkati naziv"
+" vrste. Odabir vrsta će se pojaviti kao padajući izbornik. Možete koristiti "
+"bilo znanstvena ili hrvatska imena. Odaberite vrstu koju vidite. Na "
+"kreiranom popisu leptira dodirom na lijevi broj povećavate broj viđenih "
+"jedinki. Ovaj broj možete pregledati i izmijeniti na kraju. Ako želite "
+"možete dodati fotografije i komentare."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1125,9 +1155,14 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
+"Nakon što završite s 15-minutnim brojanjem i provjerite jesu li vrste i "
+"brojevi točni, pritisnite tipku POŠALJI za slanje. To je važno kako biste "
+"bili sigurni da su vaši podaci sigurno pohranjeni u bazi podataka eBMS-a. "
+"Podaci o brojanju čuvat će se na vašem uređaju za buduću upotrebu, kao i na "
+"vašem mrežnom računu."
 
 msgid "How to record along an existing transect"
-msgstr ""
+msgstr "Kako bilježiti podatke na postojećem transektu"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1138,6 +1173,14 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
+"Aplikaciju možete koristiti i za slanje zapisa dok hodate postojećim "
+"transektom za monitoring leptira. Oni su već uspostavljeni u državnim "
+"shemama za monitoring leptira, a najbolje ih ispunjavaju iskusni "
+"istraživači. Monitoring postojećih transekta u aplikaciji zahtijeva da je "
+"vaš račun već povezan s postavkom transekta u sustavu eBMS. Ako nakon "
+"prijave na aplikaciju transekti nisu izlistani, kontaktirajte svog "
+"nacionalnog koordinatora (za savjet pošaljite e-poštu na adresu "
+"{{martina.sasic@hpm.hr}})."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1152,9 +1195,20 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
+"Da biste započeli brojanje duž transekta, držite tipku + (dugim pritiskom) "
+"na dnu zaslona i odaberite eBMS transekt. Pojavit će se stranica Transekt sa"
+" svim opcijama koje treba dovršiti. Prvo morate odabrati svoje transekte (za"
+" to ćete morati biti prijavljeni i da bi rute transekta bile povezane s "
+"vašim korisničkim računom). Nakon što odaberete mjesto transekta, možete "
+"ispuniti potrebne vremenske prilike (npr. temperaturu, brzinu vjetra itd.) i"
+" ostale potrebne podatke (npr. vrijeme početka) na stranici Transekt. Zatim "
+"dodajte popis viđenih vrsta i broj na svakom odsječku transekta, na isti "
+"način kao kod 15-minutnog brojanja. Nakon što završite svoj Transekt i "
+"provjerite jesu li viđene vrste i brojevi ispravni, pritisnite gumb ZAVRŠI "
+"za predaju."
 
 msgid "Survey section"
-msgstr ""
+msgstr "Odsječci istraživanja"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1164,98 +1218,111 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
+"U ovom izborniku na desnoj strani tipke +, možete vidjeti vaše zapise koji "
+"nisu poslani i čije UČITAVANJE JE U TIJEKU, te UČITANE zapise koji su "
+"poslani u bazu podataka eBMS-a. Zapisi na čekanju mogu se poslati u sustav "
+"klikom na njega i pritiskom na opciju UČITAJ. Možete vidjeti popis "
+"zabilježenih vrsta među učitanim zapisima. Sve vaše zapise također možete "
+"pregledati i urediti na {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
-msgstr ""
+msgstr "mrežna stranica eBMS"
 
 msgid "App Settings"
-msgstr ""
+msgstr "Postavke aplikacije"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
+"Otiđite na stranicu s postavkama aplikacije da biste promijenili jezik i "
+"državu. Odabrana je država važna da biste u slikovnom vodiču vidjeli "
+"različite vrste i to one koje se javljaju u toj zemlji."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
+"Također možete uključiti način rada za obuku ako još uvijek učite "
+"raspoznavati vrste leptira."
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr ""
+msgstr "Izbriši zadnju točku"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr ""
+msgstr "Spremi"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr ""
+msgstr "Očisti sve"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "Pritisni za početak iscrtavanja putanje."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "Nastavi iscrtavati putanju."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "Pritisni na prvu točku za zatvoriti oblik putanje."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "Pritisni za početak iscrtavanja putanje."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "Pristisni za nastavak iscrtavanja putanje. "
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "Pritisni na zadnju točku za završiti liniju."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr ""
+msgstr "Povucite ručke ili markere za uređivanje značajki."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr ""
+msgstr "Pritisni otkaži da bi otkaznali promjene."
 
 msgid "Map"
-msgstr ""
+msgstr "Karta"
 
 msgid "Today"
-msgstr ""
+msgstr "Danas"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "Jučer"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
-msgstr ""
+msgstr "Podatak je predan i ne može se uređivati u aplikaciji."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr ""
+msgstr "Pritisni na druge mogućnosti snimanja s donjeg popisa."
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
+"Skupno prenesite sve završene zapise. To ne uključuje zapise u fazi "
+"\"skice\"."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr ""
+msgstr "Jeste li sigurni da želite prenijeti sve završene zapise?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "Molimo vas da se prvo prijavite da biste prenijeli zapise."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
@@ -1266,112 +1333,121 @@ msgstr[2] ""
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
-msgstr ""
+msgstr "Oops! Nešto je otišlo krivo."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr ""
+msgstr "Ovo je ID pogreške: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr ""
+msgstr "Dodatni detalji"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Vremenski uvjeti"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr ""
+msgstr "Vremenski uvjeti"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr ""
+msgstr "Sigurni ste da želite izbrisati {{taxon}} ?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
+"Trenutačni podaci o vremenu unaprijed se popunjavaju pomoću OpenWeatherMap "
+"API usluge."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Kopiraj vrstu"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr ""
+msgstr "Sigurno želite kopirati popis vrsta prethodnog istraživanja?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Kopiraj"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Nažalost, nije pronađena nijedna vrsta za kopiranje."
 
 # Species list copy functionality
 msgid "You have succcesfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "Uspješno ste kopirali {{speciesCount}} vrsta."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Nažalost, nemate prethodnih istraživanja za kopiranje vrsta."
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Armenija"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Da biste izbrisali istraživanje, prijeđite prstom ulijevo."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Molimo vas provjerite ispravnost područja istraživanja prije slanja "
+"podataka."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "Ne zaboravite prenijeti istraživanja na čekanju!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
+"Nemate završenih istraživanja na čekanju.<br/><br/>pritisni <4></4>za "
+"dodavanje."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Savjet: Traženje pomoći"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Prije upotrebe aplikacije posjetite stranice Vodič <2></2> i Pomoć <5></5>!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Više informacija"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Savjet: Dodavanje vrsta"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Možete skupno kopirati svoje prethodne popise vrsta dugotrajnim pritiskom na"
+" tipku Dodaj vrstu."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Sakrij"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Primarno istraživanje"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Sva istraživanja"

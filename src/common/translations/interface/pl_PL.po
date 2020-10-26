@@ -1,11 +1,12 @@
 # 
 # Translators:
 # Aleksandra Magdziarek <aleksandra.magdziarek@biol.lu.se>, 2020
+# Izabela Dziekańska <dzika200@interia.pl>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Aleksandra Magdziarek <aleksandra.magdziarek@biol.lu.se>, 2020\n"
+"Last-Translator: Izabela Dziekańska <dzika200@interia.pl>, 2020\n"
 "Language-Team: Polish (Poland) (https://www.transifex.com/ceh/teams/95441/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,211 +28,212 @@ msgid "Spain"
 msgstr "Hiszpania"
 
 msgid "Andorra"
-msgstr ""
+msgstr "Andora"
 
 msgid "Albania"
-msgstr ""
+msgstr "Albania"
 
 msgid "Austria"
-msgstr ""
+msgstr "Austria"
 
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "Bośnia i Hercegowina"
 
 msgid "Belgium"
-msgstr ""
+msgstr "Belgia"
 
 msgid "Bulgaria"
-msgstr ""
+msgstr "Bułgaria"
 
 msgid "Belarus"
-msgstr ""
+msgstr "Białoruś"
 
 msgid "Switzerland"
-msgstr ""
+msgstr "Szwajcaria"
 
 msgid "Cyprus"
-msgstr ""
+msgstr "Cypr"
 
 msgid "Czechia"
-msgstr ""
+msgstr "Czechy"
 
 msgid "Germany"
-msgstr ""
+msgstr "Niemcy"
 
 msgid "Denmark"
-msgstr ""
+msgstr "Dania"
 
 msgid "Estonia"
-msgstr ""
+msgstr "Estonia"
 
 msgid "Spain (Canary Islands)"
-msgstr ""
+msgstr "Hiszpania (Wyspy Kanaryjskie)"
 
 msgid "Finland"
-msgstr ""
+msgstr "Finlandia"
 
 msgid "France"
-msgstr ""
+msgstr "Francja"
 
 msgid "Greece"
-msgstr ""
+msgstr "Grecja"
 
 msgid "Croatia"
-msgstr ""
+msgstr "Chorwacja"
 
 msgid "Hungary"
-msgstr ""
+msgstr "Węgry"
 
 msgid "Ireland"
-msgstr ""
+msgstr "Irlandia"
 
 msgid "Iceland"
-msgstr ""
+msgstr "Islandia"
 
 msgid "Italy"
-msgstr ""
+msgstr "Włochy"
 
 msgid "Liechtenstein"
-msgstr ""
+msgstr "Liechtenstein"
 
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luksemburg"
 
 msgid "Latvia"
-msgstr ""
+msgstr "Łotwa"
 
 msgid "Moldova"
-msgstr ""
+msgstr "Mołdawia"
 
 msgid "Montenegro"
-msgstr ""
+msgstr "Czarnogóra"
 
 msgid "North Macedonia"
-msgstr ""
+msgstr "Macedonia Północna"
 
 msgid "Malta"
-msgstr ""
+msgstr "Malta"
 
 msgid "Netherlands"
-msgstr ""
+msgstr "Holandia"
 
 msgid "Norway"
-msgstr ""
+msgstr "Norwegia"
 
 msgid "Poland"
-msgstr ""
+msgstr "Polska"
 
 msgid "Portugal"
-msgstr ""
+msgstr "Portugalia"
 
 msgid "Portugal (Azores)"
-msgstr ""
+msgstr "Portugalia (Azory)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr ""
+msgstr "Portugalia (Madera)"
 
 msgid "Romania"
-msgstr ""
+msgstr "Rumunia"
 
 msgid "Serbia"
-msgstr ""
+msgstr "Serbia"
 
 msgid "Russian Federation"
-msgstr ""
+msgstr "Rosja"
 
 msgid "Slovenia"
-msgstr ""
+msgstr "Słowenia"
 
 msgid "Slovakia"
-msgstr ""
+msgstr "Słowacja"
 
 msgid "Turkey (Europe)"
-msgstr ""
+msgstr "Turcja (Europa)"
 
 msgid "Turkey (Asia)"
-msgstr ""
+msgstr "Turcja (Azja)"
 
 msgid "Ukraine"
-msgstr ""
+msgstr "Ukraina"
 
 msgid "Elsewhere"
 msgstr ""
 
 msgid "Skip"
-msgstr ""
+msgstr "Pomiń"
 
 msgid "Next"
-msgstr ""
+msgstr "Następny"
 
 msgid "Get Started"
 msgstr ""
 
 msgid "Please sign in with your eBMS account or register."
-msgstr ""
+msgstr "Zaloguj się na swoje konto eBMS lub zarejestruj."
 
 msgid "Username or email"
-msgstr ""
+msgstr "Nazwa użytkownika albo e-mail"
 
 msgid "Password"
-msgstr ""
+msgstr "Hasło"
 
 msgid "Sign in"
-msgstr ""
+msgstr "Zaloguj się"
 
 msgid "Register"
 msgstr ""
 
 msgid "Forgot password?"
-msgstr ""
+msgstr "Zapomniałeś hasło?"
 
 msgid "User not found."
-msgstr ""
+msgstr "Użytkownik nie został znaleziony."
 
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 msgid "Settings"
 msgstr ""
 
 msgid "Info"
-msgstr ""
+msgstr "Informacje"
 
 msgid "About"
 msgstr ""
 
 msgid "Help"
-msgstr ""
+msgstr "Pomoc"
 
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Polityka prywatności"
 
 msgid "Credits"
 msgstr ""
 
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 msgid "First Name"
-msgstr ""
+msgstr "Imię"
 
 msgid "Surname"
-msgstr ""
+msgstr "Nazwisko"
 
 msgid "I agree to"
-msgstr ""
+msgstr "Zgadzam się"
 
 msgid "Terms and Conditions"
 msgstr ""
 
 msgid "Enter your username or email address to request a password reset"
 msgstr ""
+"Aby zresetować hasło wprowadź swoją nazwę użytkownika lub adres e-mail"
 
 msgid "Reset"
 msgstr ""
 
 msgid "Records"
-msgstr ""
+msgstr "Rekordy"
 
 msgid "Upload All"
 msgstr ""
@@ -240,7 +242,7 @@ msgid "Remove All Saved"
 msgstr ""
 
 msgid "Application"
-msgstr ""
+msgstr "Aplikacja"
 
 msgid "Training Mode"
 msgstr ""
@@ -249,10 +251,10 @@ msgid "Experimental Features"
 msgstr ""
 
 msgid "Welcome"
-msgstr ""
+msgstr "Witamy"
 
 msgid "Lets start!"
-msgstr ""
+msgstr "Zaczynamy!"
 
 msgid "TOP RECORDERS"
 msgstr ""
@@ -261,71 +263,72 @@ msgid "Top Species from all timed counts"
 msgstr ""
 
 msgid "Back"
-msgstr ""
+msgstr "Wróć"
 
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 msgid "App"
-msgstr ""
+msgstr "Aplikacja"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
+"Jesteśmy bardzo wdzięczni wszystkim, którzy pomogli stworzyć tę aplikację:"
 
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 msgid "Guide"
-msgstr ""
+msgstr "Przewodnik"
 
 msgid "Account"
 msgstr ""
 
 msgid "Offline"
-msgstr ""
+msgstr "Offline"
 
 msgid "Sorry, looks like you're offline."
-msgstr ""
+msgstr "Przepraszamy, wygląda na to, że jesteś offline."
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "Sorry"
-msgstr ""
+msgstr "Przepraszamy"
 
 msgid "Please wait..."
-msgstr ""
+msgstr "Proszę poczekaj"
 
 msgid "name is a required field"
-msgstr ""
+msgstr "imię jest wymaganym polem"
 
 msgid "password is a required field"
-msgstr ""
+msgstr "Hasło jest wymaganym polem"
 
 msgid "Login error:"
-msgstr ""
+msgstr "Błąd logowania"
 
 msgid "Failed to fetch"
 msgstr ""
 
 msgid "Incorrect password or email."
-msgstr ""
+msgstr "Niepoprawne hasło albo e-mail"
 
 # Part of logout process
 msgid "Logout"
-msgstr ""
+msgstr "Wyloguj się"
 
 # Part of logout process
 msgid "Are you sure you want to logout?"
-msgstr ""
+msgstr "Czy jesteś pewny, że chcesz się wylogować?"
 
 # Part of logout process
 msgid "Discard local data"
 msgstr ""
 
 msgid "This will delete all the records on this device."
-msgstr ""
+msgstr "Spowoduje to usunięcie wszystkich rekordów na tym urządzeniu."
 
 msgid "Cancel"
 msgstr "Anuluj"
@@ -337,6 +340,8 @@ msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
+"Zanim prześlesz jakichkolwiek rekordy sprawdź swoją pocztę e-mail i kliknij link weryfikacyjny.\n"
+" "
 
 msgid "OK, got it"
 msgstr "OK, rozumiem"
@@ -354,33 +359,35 @@ msgid "must accept terms and conditions"
 msgstr ""
 
 msgid "Area Count"
-msgstr ""
+msgstr "Obszar zliczeń"
 
 msgid "Area"
-msgstr ""
+msgstr "Obszar"
 
 msgid "Add"
-msgstr ""
+msgstr "Dodaj"
 
 msgid "Add species"
-msgstr ""
+msgstr "Dodaj gatunek"
 
 msgid "Duration"
-msgstr ""
+msgstr "Czas trwania"
 
 msgid "Species"
-msgstr ""
+msgstr "Gatunki"
 
 msgid "Species name"
-msgstr ""
+msgstr "Nazwa gatunku"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
+"Aby przyspieszyć wyszukiwanie taksonów, możesz użyć różnych skrótów. Na "
+"przykład, aby znaleźć"
 
 msgid "you can type in the search bar"
-msgstr ""
+msgstr "możesz wpisać w pasku wyszukiwania"
 
 msgid "Edit Occurrence"
 msgstr ""
@@ -401,46 +408,46 @@ msgid "Discard"
 msgstr ""
 
 msgid "Continue"
-msgstr ""
+msgstr "Kontynuuj"
 
 msgid "Finish"
-msgstr ""
+msgstr "Koniec"
 
 msgid "minutes"
-msgstr ""
+msgstr "minut"
 
 msgid "No species added"
-msgstr ""
+msgstr "Nie dodano żadnego gatunku"
 
 msgid "Please draw your area on the map"
-msgstr ""
+msgstr "Narysuj swój obszar na mapie"
 
 msgid "Draw an area"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Usuń"
 
 msgid "Surveys"
-msgstr ""
+msgstr "Protokół"
 
 msgid "Reports"
-msgstr ""
+msgstr "Raport"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr ""
+msgstr "Przepraszamy, w tej chwili żadne dane protokołu nie są dostępne."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr ""
+msgstr "Czy na pewno chcesz usunąć ten protokół?"
 
 msgid "No finished surveys"
-msgstr ""
+msgstr "Nieskończony protokół "
 
 msgid "Finished surveys"
-msgstr ""
+msgstr "Protokół skończony"
 
 msgid "Selected area"
-msgstr ""
+msgstr "Wybrany obszar"
 
 msgid "Use survey create time"
 msgstr ""
@@ -449,52 +456,52 @@ msgid "Use survey finish time"
 msgstr ""
 
 msgid "species"
-msgstr ""
+msgstr "gatunek"
 
 msgid "Done"
-msgstr ""
+msgstr "Gotowe"
 
 msgid "Time's up!"
-msgstr ""
+msgstr "Koniec czasu!"
 
 msgid "Survey incomplete"
-msgstr ""
+msgstr "Protokół niekompletny "
 
 msgid "The survey is not complete yet."
 msgstr ""
 
 msgid "Please select a smaller area."
-msgstr ""
+msgstr "Wybierz mniejszy obszar"
 
 msgid "Please add survey area information."
 msgstr ""
 
 msgid "Choose a method to upload a photo"
-msgstr ""
+msgstr "Wybierz metodę przesyłania zdjęć"
 
 msgid "Gallery"
-msgstr ""
+msgstr "Galeria"
 
 msgid "Camera"
-msgstr ""
+msgstr "Aparat"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr ""
+msgstr "Czy jesteś pewny, że chcesz usunąć te zdjęcie?"
 
 msgid "Note: it will remain in the gallery."
 msgstr ""
 
 msgid "No photo has been added"
-msgstr ""
+msgstr "Żadne zdjęcie nie zostało dodane"
 
 msgid "Registration error:"
-msgstr ""
+msgstr "Błąd rejestracji:"
 
 msgid "Incorrect password or email"
-msgstr ""
+msgstr "Niepoprawne hasło lub e-mail"
 
 msgid "email is not valid"
-msgstr ""
+msgstr "E-mail jest nieprawidłowy"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
@@ -524,10 +531,10 @@ msgid ""
 msgstr ""
 
 msgid "The ABLE project is a partnership between"
-msgstr ""
+msgstr "Projekt ABLE to partnerstwo pomiędzy"
 
 msgid "and"
-msgstr ""
+msgstr "i"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
@@ -535,7 +542,7 @@ msgid ""
 msgstr ""
 
 msgid "ABLE partners:"
-msgstr ""
+msgstr "Partnerzy ABLE:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
@@ -546,22 +553,22 @@ msgid "In June 2019, the following organisations are partners in eBMS:"
 msgstr ""
 
 msgid "Not enough data yet"
-msgstr ""
+msgstr "Za mało danych"
 
 msgid "How to start a survey"
-msgstr ""
+msgstr "Jak zacząć wypełniać protokół"
 
 msgid "To start a new survey you can press the plus button"
-msgstr ""
+msgstr "Aby zacząć wypełniać nowy protokół naciśnij przycisk \"plus\""
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
 
 msgid "Selecting species"
-msgstr ""
+msgstr "Wybór gatunku"
 
 msgid "Please press the Add"
-msgstr ""
+msgstr "Naciśnij dodaj"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
@@ -569,7 +576,7 @@ msgid ""
 msgstr ""
 
 msgid "Note"
-msgstr ""
+msgstr "Uwaga"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
@@ -639,7 +646,7 @@ msgid ""
 msgstr ""
 
 msgid "User"
-msgstr ""
+msgstr "Użytkownik"
 
 msgid "Sign in/out or register"
 msgstr ""
@@ -661,16 +668,16 @@ msgid "Other"
 msgstr ""
 
 msgid "Reset the application"
-msgstr ""
+msgstr "Zresetuj aplikacje"
 
 msgid "Go to the application settings page"
 msgstr ""
 
 msgid "and click on the Reset"
-msgstr ""
+msgstr "i kliknij \"Resetuj\""
 
 msgid "button"
-msgstr ""
+msgstr "przycisk"
 
 msgid "No species found with this name"
 msgstr ""
@@ -679,7 +686,7 @@ msgid "Allow Sample Edit"
 msgstr ""
 
 msgid "Upload"
-msgstr ""
+msgstr "Załaduj"
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
@@ -698,13 +705,13 @@ msgid "This will wipe all the locally stored app data!"
 msgstr ""
 
 msgid "Sweden"
-msgstr ""
+msgstr "Szwecja"
 
 msgid "Paused"
-msgstr ""
+msgstr "Wstrzymano"
 
 msgid "Pending"
-msgstr ""
+msgstr "Oczekujące"
 
 msgid "Uploaded"
 msgstr ""
@@ -719,19 +726,19 @@ msgid "Enjoying the app?"
 msgstr ""
 
 msgid "Not really"
-msgstr ""
+msgstr "Nie całkiem"
 
 msgid "Yes!"
-msgstr ""
+msgstr "Tak!"
 
 msgid "Would you mind giving us some feedback?"
 msgstr ""
 
 msgid "No, thanks"
-msgstr ""
+msgstr "Nie, dziękuję"
 
 msgid "OK, sure"
-msgstr ""
+msgstr "Tak, oczywiście"
 
 msgid "How about a rating on the App Store then?"
 msgstr ""
@@ -771,13 +778,13 @@ msgid "For suggestions and feedback please do not hesitate to"
 msgstr ""
 
 msgid "contact us"
-msgstr ""
+msgstr "Skontaktuj się z nami"
 
 msgid "Language"
-msgstr ""
+msgstr "Język"
 
 msgid "Country"
-msgstr ""
+msgstr "Kraj"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
@@ -795,22 +802,22 @@ msgid "Not Recorded"
 msgstr ""
 
 msgid "Adults"
-msgstr ""
+msgstr "Osobniki dorosłe"
 
 msgid "Larvae"
-msgstr ""
+msgstr "Gąsienice"
 
 msgid "Eggs"
-msgstr ""
+msgstr "Jaja"
 
 msgid "Pupae"
-msgstr ""
+msgstr "Poczwarki"
 
 msgid "Larval webs"
-msgstr ""
+msgstr "Oprzędy"
 
 msgid "Transect"
-msgstr ""
+msgstr "Transekt"
 
 msgid "Sections"
 msgstr ""
@@ -819,40 +826,40 @@ msgid "No transect"
 msgstr ""
 
 msgid "Start Time"
-msgstr ""
+msgstr "Czas początkowy"
 
 msgid "End Time"
-msgstr ""
+msgstr "Czas końcowy"
 
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatura"
 
 msgid "Cloud"
-msgstr ""
+msgstr "Zachmurzenie"
 
 msgid "Wind Direction"
-msgstr ""
+msgstr "Kierunek wiatru"
 
 msgid "Wind Speed"
-msgstr ""
+msgstr "Szybkość wiatru"
 
 msgid "Recorder"
 msgstr ""
 
 msgid "Refresh"
-msgstr ""
+msgstr "Odśwież "
 
 msgid "Please select your transect first."
-msgstr ""
+msgstr "Proszę wybierz najpierw swój transekt."
 
 msgid "Invalid server response."
 msgstr ""
 
 msgid "Not recorded/no data"
-msgstr ""
+msgstr "Brak rekordów/brak daty"
 
 msgid "Please specify the temperature C°."
-msgstr ""
+msgstr "Proszę podać temperaturę C °."
 
 msgid "S"
 msgstr ""
@@ -879,43 +886,43 @@ msgid "SE"
 msgstr ""
 
 msgid "No direction"
-msgstr ""
+msgstr "Kierunek nieokreślony "
 
 msgid "Please specify the wind direction."
-msgstr ""
+msgstr "Określ kierunek wiatru."
 
 msgid "Smoke rises vertically"
-msgstr ""
+msgstr "Dym unosi się pionowo"
 
 msgid "Slight smoke drift"
 msgstr ""
 
 msgid "Wind felt on face, leaves rustle"
-msgstr ""
+msgstr "Wiatr wyczuwany na skórze. Liście szeleszczą."
 
 msgid "Leaves and twigs in slight motion"
-msgstr ""
+msgstr "Liście i gałązki lekko się poruszają"
 
 msgid "Dust raised and small branches move"
-msgstr ""
+msgstr "Kurz unosi się i gałęzie zaczynają się poruszać."
 
 msgid "Small trees in leaf begin to sway"
-msgstr ""
+msgstr "Małe drzewa zaczynają się poruszać."
 
 msgid "Large branches move and trees sway"
-msgstr ""
+msgstr "Duże gałęzie się poruszają i drzewa się kołyszą."
 
 msgid "Please specify the wind speed."
-msgstr ""
+msgstr "Proszę podaj prędkość wiatru."
 
 msgid "Transects"
-msgstr ""
+msgstr "Transekty "
 
 msgid "Transect list was successfully updated."
-msgstr ""
+msgstr "Lista transektów została pomyślnie zaktualizowana."
 
 msgid "Section"
-msgstr ""
+msgstr "Odcinek"
 
 msgid "Reliability"
 msgstr ""
@@ -933,16 +940,16 @@ msgid "Unable to survey"
 msgstr ""
 
 msgid "15min Count"
-msgstr ""
+msgstr "Motylowy Kwadrans"
 
 msgid "eBMS Transect"
-msgstr ""
+msgstr "Transekt eBMS"
 
 msgid "Please add any extra info about this record."
-msgstr ""
+msgstr "Dodaj dodatkowe informacje o tym rekordzie."
 
 msgid "Enter more information here..."
-msgstr ""
+msgstr "Wprowadź więcej informacji tutaj ..."
 
 msgid "Please specify the person responsible for identifying the species."
 msgstr ""
@@ -951,22 +958,22 @@ msgid "HH:mm"
 msgstr ""
 
 msgid "Please specify the % of cloud cover."
-msgstr ""
+msgstr "Podaj procentowe zachmurzenie."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr ""
+msgstr "Nie masz żadnych transektów. Spróbuj odświeżyć listę."
 
 msgid "Wind speed info is missing"
-msgstr ""
+msgstr "Brak informacji o prędkości wiatru"
 
 msgid "Temperature info is missing"
-msgstr ""
+msgstr "Brak informacji o temperaturze"
 
 msgid "Recorder info is missing"
 msgstr ""
 
 msgid "Please select your transect."
-msgstr ""
+msgstr "Proszę, wybierz swój transekt."
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
@@ -975,19 +982,19 @@ msgid ""
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Absent"
-msgstr ""
+msgstr "Nie występuje "
 
 msgid "Present"
-msgstr ""
+msgstr "Występuje"
 
 msgid "Possibly present"
 msgstr ""
 
 msgid "Regular migrant"
-msgstr ""
+msgstr "Regularny migrant"
 
 msgid "Irregular vagrant"
 msgstr ""
@@ -1002,7 +1009,7 @@ msgid "Counts"
 msgstr ""
 
 msgid "Species descriptions"
-msgstr ""
+msgstr "Opisy gatunków"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
@@ -1014,7 +1021,7 @@ msgid "Photo credits"
 msgstr ""
 
 msgid "How to use the app"
-msgstr ""
+msgstr "Jak korzystać z aplikacji"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1106,7 +1113,7 @@ msgid ""
 msgstr ""
 
 msgid "eBMS website"
-msgstr ""
+msgstr "strona eBMS"
 
 msgid "App Settings"
 msgstr ""
@@ -1124,39 +1131,39 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr ""
+msgstr "Usuń ostatni punkt"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr ""
+msgstr "Wyczyść wszystko"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "Kliknij aby rozpocząć rysowanie kształtu."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "Kliknij, aby kontynuować rysowanie kształtu."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "Kliknij pierwszy punkt, aby zamknąć ten kształt."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "Kliknij, aby rozpocząć rysowanie linii."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "Kliknij, aby kontynuować rysowanie linii."
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "Kliknij ostatni punkt, aby zakończyć linię."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
@@ -1164,16 +1171,16 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr ""
+msgstr "Kliknij \"Anuluj\", aby cofnąć zmiany."
 
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 msgid "Today"
-msgstr ""
+msgstr "Dzisiaj"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "Wczoraj"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
@@ -1195,7 +1202,7 @@ msgstr ""
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "Zanim wyślesz rekordy zaloguj się"
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
@@ -1207,7 +1214,7 @@ msgstr[3] ""
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
-msgstr ""
+msgstr "Ups! Coś poszło nie tak."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
@@ -1219,11 +1226,11 @@ msgstr ""
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Warunki pogodowe"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr ""
+msgstr "Warunki pogodowe"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
@@ -1245,7 +1252,7 @@ msgstr ""
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Kopiuj "
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
@@ -1261,7 +1268,7 @@ msgstr ""
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Armenia"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."

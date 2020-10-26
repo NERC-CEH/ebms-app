@@ -1,11 +1,11 @@
 # 
 # Translators:
-# Martina Sasic <martina.sasic@hpm.hr>, 2019
+# Martina Sasic <martina.sasic@hpm.hr>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Martina Sasic <martina.sasic@hpm.hr>, 2019\n"
+"Last-Translator: Martina Sasic <martina.sasic@hpm.hr>, 2020\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/ceh/teams/95441/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -324,7 +324,7 @@ msgid "Pieris-napi-description"
 msgstr ""
 
 msgid "Pieris-balcana-description"
-msgstr ""
+msgstr "Pieris-balcana-opis"
 
 msgid "Euchloe-tagis-description"
 msgstr ""
@@ -601,7 +601,7 @@ msgid "Phengaris-nausithous-description"
 msgstr ""
 
 msgid "Turanana-taygetica-description"
-msgstr ""
+msgstr "Turanana-taygetica-opis"
 
 msgid "Pseudophilotes-bavius-description"
 msgstr ""
@@ -610,10 +610,10 @@ msgid "Zizeeria-knysna-description"
 msgstr ""
 
 msgid "Zizeeria-karsandra-description"
-msgstr ""
+msgstr "Zizeeria-karsandra-opis"
 
 msgid "Tongeia-fischeri-description"
-msgstr ""
+msgstr "Tongeia-fischeri-opis"
 
 msgid "Cupido-argiades-description"
 msgstr ""
@@ -1450,7 +1450,7 @@ msgid "Erebia-aethiopellus-description"
 msgstr ""
 
 msgid "Erebia-gorgone-description"
-msgstr ""
+msgstr "Erebia-gorgone-opis"
 
 msgid "Erebia-rhodopensis-description"
 msgstr ""

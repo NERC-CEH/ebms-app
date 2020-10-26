@@ -68,7 +68,7 @@ msgid "Estonia"
 msgstr "Estonsko"
 
 msgid "Spain (Canary Islands)"
-msgstr "Španělsko: Kanárské ostrovy"
+msgstr "Španělsko (Kanárské ostrovy)"
 
 msgid "Finland"
 msgstr "Finsko"
@@ -128,10 +128,10 @@ msgid "Portugal"
 msgstr "Portugalsko"
 
 msgid "Portugal (Azores)"
-msgstr "Portugalsko: Azory"
+msgstr "Portugalsko (Azory)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugalsko: Madeira"
+msgstr "Portugalsko (Madeira)"
 
 msgid "Romania"
 msgstr "Rumunsko"
@@ -1089,11 +1089,12 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"Preferovanou metodou je 15 minutové Sčítání. To můžete provádět kdekoli a "
-"kdykoli, když jsou motýli aktivní. Tedy pokud je dostatečně teplo a "
-"slunečno. Pozdějí během roku 2020 bude aplikace také umožňovat vkládání "
-"nahodilých záznamů. Poznámka dole Vám řekne, jak použít metody, které jsou v"
-" současnosti dostupné."
+"Preferovanou metodou je 15 minutový Součet. To můžete provádět kdekoli a "
+"kdykoli, když jsou motýli aktivní (tedy pokud je dostatečně teplo a "
+"slunečno). Aplikaci také můžete použít pro již probíhající transektové "
+"sčítání motýlů Pozdějí během roku 2020 bude aplikace také umožňovat vkládání"
+" nahodilých záznamů. Poznámka dole Vám řekne, jak použít metody, které jsou "
+"v současnosti dostupné."
 
 msgid "How to do a 15-minute Count"
 msgstr "Jak provést 15 minutové Sčítání"
@@ -1392,45 +1393,51 @@ msgstr ""
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "Prosím, nezapomeňte nahrát jakékoli neodeslané průzkumy!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
+"Nejsou žádné nenahrané průzkumy.<br/><br/>Zmáčkněte <4></4> pro jejich "
+"vložení."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Tip: Hledání nápovědy"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Prosím, navštivte před použitím této aplikace Průvodce <2></2> a Nápovědu "
+"<5></5>!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Více informací"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Tip: Vložení druhu"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Dlouhým stiskem tlačítka Vložit druh můžete dávkově skopírovat předchozí "
+"seznam druhů."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Schovat"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Původní průzkum"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Všechny průzkumy"
