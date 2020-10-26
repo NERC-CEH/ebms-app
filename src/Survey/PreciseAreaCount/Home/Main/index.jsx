@@ -61,6 +61,9 @@ const buildSpeciesCount = (agg, smp) => {
   agg[id] = agg[id] || { count: 0, taxon }; // eslint-disable-line
   agg[id].count++; // eslint-disable-line
   agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning(); // eslint-disable-line
+  // eslint-disable-next-line
+  agg[id].hasLocationMissing =
+    agg[id].hasLocationMissing || smp.hasLoctionMissingAndIsnotLocating(); // eslint-disable-line
 
   const wasCreatedBeforeCurrent =
     new Date(agg[id].updatedOn).getTime() -
@@ -154,9 +157,11 @@ class AreaCount extends Component {
 
     const deleteSpeciesWrap = () => deleteSpecies(taxon);
 
-    let isGeolocatingSpinner;
-    if (species.isGeolocating) {
-      isGeolocatingSpinner = <IonSpinner />;
+    let location;
+    if (species.hasLocationMissing) {
+      location = <IonIcon icon={warningOutline} color="danger" />;
+    } else if (species.isGeolocating) {
+      location = <IonSpinner />;
     }
 
     return (
@@ -173,7 +178,7 @@ class AreaCount extends Component {
             {speciesName}
           </IonLabel>
           <IonLabel slot="end" className="location-spinner">
-            {isGeolocatingSpinner}
+            {location}
           </IonLabel>
         </IonItem>
         <IonItemOptions side="end">

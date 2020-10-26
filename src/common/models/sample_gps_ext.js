@@ -187,6 +187,13 @@ const extension = {
   isGPSRunning() {
     return !!(this.gps.locating || this.gps.locating === 0);
   },
+
+  hasLoctionMissingAndIsnotLocating() {
+    return (
+      (!this.attrs.location || !this.attrs.location.latitude) &&
+      !this.isGPSRunning()
+    );
+  },
 };
 
 export { extension as default };

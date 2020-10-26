@@ -9,7 +9,9 @@ import {
   IonItemSliding,
   IonItemDivider,
   IonBadge,
+  IonIcon,
 } from '@ionic/react';
+import { warningOutline } from 'ionicons/icons';
 import GridRefValue from 'Components/GridRefValue';
 import { observer } from 'mobx-react';
 import { Main, MenuAttrItem, InfoBackgroundMessage } from '@apps';
@@ -39,7 +41,12 @@ class EditOccurrence extends Component {
 
       const { stage } = occ.attrs;
 
-      const location = <GridRefValue sample={smp} />;
+      let location;
+      if (smp.hasLoctionMissingAndIsnotLocating()) {
+        location = <IonIcon icon={warningOutline} color="danger" />;
+      } else {
+        location = <GridRefValue sample={smp} />;
+      }
 
       const navigateToOccurrenceWithSample = () => navigateToOccurrence(smp);
 

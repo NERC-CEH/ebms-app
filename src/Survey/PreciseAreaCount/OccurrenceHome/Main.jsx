@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { IonList } from '@ionic/react';
-import { clipboardOutline, locationOutline } from 'ionicons/icons';
+import { IonList, IonIcon } from '@ionic/react';
+import {
+  clipboardOutline,
+  locationOutline,
+  warningOutline,
+} from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import { Main, MenuAttrItem } from '@apps';
 import GridRefValue from 'Components/GridRefValue';
@@ -48,6 +52,13 @@ class EditOccurrence extends Component {
     const sampleBaseUrl = baseURL.split('/occ');
     sampleBaseUrl.pop();
 
+    let location;
+    if (subSample.hasLoctionMissingAndIsnotLocating()) {
+      location = <IonIcon icon={warningOutline} color="danger" />;
+    } else {
+      location = <GridRefValue sample={subSample} />;
+    }
+
     return (
       <Main id="area-count-occurrence-edit">
         <IonList lines="full">
@@ -63,10 +74,9 @@ class EditOccurrence extends Component {
             disabled={isDisabled}
             icon={locationOutline}
             label="Location"
-            value={<GridRefValue sample={subSample} />}
+            value={location}
             skipTranslation
           />
-
           <MenuAttrItem
             routerLink={`${baseURL}/stage`}
             disabled={isDisabled}
