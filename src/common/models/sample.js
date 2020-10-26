@@ -121,8 +121,15 @@ class AppSample extends Sample {
   }
 
   getSubmission(...args) {
-    const [submission, media] = super.getSubmission(...args);
+    let submission;
+    let media;
+
     const survey = this.getSurvey();
+    if (survey.getSubmission) {
+      [submission, media] = survey.getSubmission(this, ...args);
+    } else {
+      [submission, media] = super.getSubmission(...args);
+    }
 
     const newAttrs = {
       survey_id: survey.id,
@@ -138,7 +145,7 @@ class AppSample extends Sample {
 
   getPrettyName() {
     if (!this.parent || this.metadata.survey !== 'precise-area') {
-      return null;
+      return '';
     }
 
     return this.occurrences[0].getTaxonName();

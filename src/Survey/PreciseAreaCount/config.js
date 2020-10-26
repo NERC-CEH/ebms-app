@@ -1,4 +1,4 @@
-import { date as dateHelp } from '@apps';
+import { date as dateHelp, Sample } from '@apps';
 import { chatboxOutline } from 'ionicons/icons';
 import Wkt from 'wicket';
 import { toJS } from 'mobx';
@@ -212,6 +212,10 @@ const config = {
       location: {
         id: 'entered_sref',
         values(location) {
+          if (!location.latitude) {
+            return null; // if missing then sub-sample will be removed
+          }
+
           return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
             location.longitude
           ).toFixed(7)}`;
@@ -220,8 +224,8 @@ const config = {
       date: dateAttr,
     },
 
-    create(Sample, Occurrence, taxon) {
-      const sample = new Sample({
+    create(AppSample, Occurrence, taxon) {
+      const sample = new AppSample({
         metadata: {
           survey: config.name,
         },
@@ -234,24 +238,6 @@ const config = {
       sample.startGPS();
 
       return sample;
-    },
-
-    verify(attrs) {
-      try {
-        Yup.object()
-          .shape({
-            location: Yup.mixed().test(
-              'area',
-              'Please add location information.',
-              val => !(!val || !val.latitude)
-            ),
-          })
-          .validateSync(attrs, { abortEarly: false });
-      } catch (attrError) {
-        return attrError;
-      }
-
-      return null;
     },
 
     occ: {
@@ -313,8 +299,8 @@ const config = {
     return null;
   },
 
-  create(Sample) {
-    const sample = new Sample({
+  create(AppSample) {
+    const sample = new AppSample({
       metadata: {
         survey: config.name,
         pausedTime: 0,
@@ -333,6 +319,29 @@ const config = {
     sample.startMetOfficePull();
 
     return sample;
+  },
+
+  getSubmission(sample, ...args) {
+    const [submission, media] = Sample.prototype.getSubmission.apply(
+      sample,
+      args
+    );
+
+    const subSamples = submission.samples;
+    submission.samples = [];
+
+    const removeSubSamplesLayerIfNoLocation = subSample => {
+      const locationIsMissing = !subSample.fields.entered_sref;
+      if (locationIsMissing) {
+        submission.occurrences.push(subSample.occurrences[0]);
+        return;
+      }
+      submission.samples.push(subSample);
+    };
+
+    subSamples.forEach(removeSubSamplesLayerIfNoLocation);
+
+    return [submission, media];
   },
 };
 
