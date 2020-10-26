@@ -34,15 +34,6 @@ class Component extends React.Component {
     return (
       <Main>
         <IonList lines="full">
-          <MenuAttrItem
-            routerLink={`${baseURL}/comment`}
-            disabled={isDisabled}
-            icon={clipboardOutline}
-            label="Comment"
-            value={comment}
-            skipValueTranslation
-          />
-
           <IonItemDivider>
             <IonLabel>
               <T>Weather Conditions</T>
@@ -83,15 +74,30 @@ class Component extends React.Component {
             value={windSpeed}
           />
 
-          <MenuNoteItem>
-            Representative photo of where the 15 minute count was made
-          </MenuNoteItem>
+          <IonItemDivider>
+            <IonLabel>
+              <T>Other</T>
+            </IonLabel>
+          </IonItemDivider>
+
+          <MenuAttrItem
+            routerLink={`${baseURL}/comment`}
+            disabled={isDisabled}
+            icon={clipboardOutline}
+            label="Comment"
+            value={comment}
+            skipValueTranslation
+          />
+
           <PhotoPicker
             model={sample}
             isDisabled={isDisabled}
             dataDirPath={config.dataPath}
             ImageClass={ImageModel}
           />
+          <MenuNoteItem color="medium"> 
+            Representative photo of where the 15 minute count was made
+          </MenuNoteItem>
         </IonList>
       </Main>
     );

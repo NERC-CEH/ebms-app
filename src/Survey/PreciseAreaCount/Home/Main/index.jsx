@@ -242,9 +242,9 @@ class AreaCount extends Component {
   showAreaWarningNote = () => {
     const { sample } = this.props;
 
-    if (sample.metadata.saved) {
+    if (sample.metadata.saved && !sample.isDisabled()) {
       return (
-        <MenuNoteItem>
+        <MenuNoteItem color="medium">
           Please check if the recording area is correct before sending the
           record.
         </MenuNoteItem>
@@ -289,13 +289,11 @@ class AreaCount extends Component {
 
   toggleTimer = () => this.props.toggleTimer(this.props.sample);
 
-  render() {
-    const { sample, isDisabled, match } = this.props;
+  getTimerButton = () => {
+    const { sample, isDisabled } = this.props;
 
-    const { area } = sample.attrs.location || {};
-    let areaPretty = <IonIcon icon={warningOutline} color="danger" />;
-    if (Number.isFinite(area) || sample.isGPSRunning()) {
-      areaPretty = area ? `${area} m²` : '';
+    if (isDisabled) {
+      return null;
     }
 
     const startTime = new Date(sample.attrs.surveyStartTime);
@@ -304,6 +302,31 @@ class AreaCount extends Component {
       config.DEFAULT_SURVEY_TIME +
       sample.metadata.pausedTime;
     const isPaused = !!sample.timerPausedTime.time;
+
+    return (
+      <IonItem
+        detail={!isDisabled}
+        detailIcon={isPaused ? playOutline : pauseOutline}
+        onClick={this.toggleTimer}
+        disabled={isDisabled}
+      >
+        <IonIcon icon={timeOutline} slot="start" mode="md" />
+        <IonLabel>
+          <T>Duration</T>
+        </IonLabel>
+        <CountdownClock isPaused={isPaused} countdown={countdown} />
+      </IonItem>
+    );
+  };
+
+  render() {
+    const { sample, isDisabled, match } = this.props;
+
+    const { area } = sample.attrs.location || {};
+    let areaPretty = <IonIcon icon={warningOutline} color="danger" />;
+    if (Number.isFinite(area) || sample.isGPSRunning()) {
+      areaPretty = area ? `${area} m²` : '';
+    }
 
     return (
       <Main id="area-count-edit">
@@ -339,22 +362,10 @@ class AreaCount extends Component {
 
           {this.showCopySpeciesTip()}
 
-          <IonItem
-            detail={!isDisabled}
-            detailIcon={isPaused ? playOutline : pauseOutline}
-            onClick={this.toggleTimer}
-            disabled={isDisabled}
-          >
-            <IonIcon icon={timeOutline} slot="start" mode="md" />
-            <IonLabel>
-              <T>Duration</T>
-            </IonLabel>
-            <CountdownClock isPaused={isPaused} countdown={countdown} />
-          </IonItem>
+          {this.getTimerButton()}
 
           <MenuAttrItem
             routerLink={`${match.url}/details`}
-            disabled={isDisabled}
             icon={clipboardOutline}
             iconMode="md"
             label="Additional Details"
