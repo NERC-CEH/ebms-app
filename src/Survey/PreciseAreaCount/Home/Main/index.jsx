@@ -154,7 +154,6 @@ class AreaCount extends Component {
     const deleteSpeciesWrap = () => deleteSpecies(taxon);
 
     let isGeolocatingSpinner;
-    // if (id %2) {
     if (species.isGeolocating) {
       isGeolocatingSpinner = <IonSpinner />;
     }
