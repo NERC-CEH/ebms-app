@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { toJS, observable } from 'mobx';
+import { toJS } from 'mobx';
 import { Page, alert, toast, showInvalidsMessage } from '@apps';
 import i18n from 'i18next';
 import { NavContext } from '@ionic/react';
@@ -56,6 +56,12 @@ function toggleTimer(sample) {
   sample.timerPausedTime.time = new Date();
 }
 /* eslint-enable no-param-reassign */
+
+function byCreateTime(model1, model2) {
+  const date1 = new Date(model1.metadata.created_on);
+  const date2 = new Date(model2.metadata.created_on);
+  return date2.getTime() - date1.getTime();
+}
 
 @observer
 class Container extends React.Component {
@@ -136,9 +142,10 @@ class Container extends React.Component {
 
   getPreviousSurvey = () => {
     const { sample, savedSamples } = this.props;
-
+    const sortedSavedSamples = [...savedSamples].sort(byCreateTime).reverse();
     const matchingSampleId = s => s.cid === sample.cid;
-    const currentSampleIndex = savedSamples.findIndex(matchingSampleId);
+
+    const currentSampleIndex = sortedSavedSamples.findIndex(matchingSampleId);
 
     const isFirstSurvey = !currentSampleIndex;
 
@@ -146,7 +153,9 @@ class Container extends React.Component {
       return null;
     }
 
-    const previousSurveys = savedSamples.slice(0, currentSampleIndex).reverse();
+    const previousSurveys = sortedSavedSamples
+      .slice(0, currentSampleIndex)
+      .reverse();
 
     const matchingSurvey = s => s.getSurvey().name === 'precise-area';
     const previousSurvey = previousSurveys.find(matchingSurvey);
@@ -180,7 +189,12 @@ class Container extends React.Component {
       .map(getTaxon)
       .filter(getNewSpeciesOnly);
 
-    sample.shallowSpeciesList = observable(newSpeciesList);
+    // copy but retain old observable ref
+    sample.shallowSpeciesList.splice(
+      0,
+      sample.shallowSpeciesList.length,
+      ...newSpeciesList
+    );
 
     if (!newSpeciesList.length) {
       warn(t('Sorry, no species were found to copy.'));
@@ -193,8 +207,24 @@ class Container extends React.Component {
     }
   };
 
-  deleteSpecies = taxon => {
+  deleteFromShallowList(taxon) {
     const { sample } = this.props;
+
+    const withSamePreferredId = t => t.preferredId === taxon.preferredId;
+    const taxonIndexInShallowList = sample.shallowSpeciesList.findIndex(
+      withSamePreferredId
+    );
+
+    sample.shallowSpeciesList.splice(taxonIndexInShallowList, 1);
+  }
+
+  deleteSpecies = (taxon, isShallow) => {
+    const { sample } = this.props;
+
+    if (isShallow) {
+      this.deleteFromShallowList(taxon);
+      return;
+    }
 
     const deleteSpecies = () => {
       const matchingTaxon = smp =>
@@ -208,11 +238,15 @@ class Container extends React.Component {
     showDeleteSpeciesPrompt(taxon).then(deleteSpecies);
   };
 
-  increaseCount = taxon => {
+  increaseCount = (taxon, isShallow) => {
     const { sample } = this.props;
 
     if (sample.isDisabled()) {
       return;
+    }
+
+    if (isShallow) {
+      this.deleteFromShallowList(taxon);
     }
 
     const survey = sample.getSurvey();

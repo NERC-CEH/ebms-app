@@ -55,10 +55,16 @@ class Controller extends React.Component {
   render() {
     const { sample } = this.props;
 
-    const recordedTaxa = sample.samples.map(smp => {
+    const species = sample.samples.map(smp => {
       const occ = smp.occurrences[0];
       return occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
     });
+
+    const shallowSpecies = sample.shallowSpeciesList.map(
+      taxon => taxon.preferredId || taxon.warehouse_id
+    );
+
+    const recordedTaxa = [...species, ...shallowSpecies];
 
     return (
       <Page id="area-count-edit-taxa">

@@ -54,11 +54,13 @@ const speciesOccAddedTimeSort = ([, sp1], [, sp2]) => {
   return date2.getTime() - date1.getTime();
 };
 
+const getDefaultTaxonCount = taxon => ({ count: 0, taxon });
+
 const buildSpeciesCount = (agg, smp) => {
   const taxon = toJS(smp.occurrences[0].attrs.taxon);
   const id = taxon.warehouse_id;
 
-  agg[id] = agg[id] || { count: 0, taxon }; // eslint-disable-line
+  agg[id] = agg[id] || getDefaultTaxonCount(taxon); // eslint-disable-line
   agg[id].count++; // eslint-disable-line
   agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning(); // eslint-disable-line
   // eslint-disable-next-line
@@ -150,12 +152,13 @@ class AreaCount extends Component {
 
     const speciesName = taxon[taxon.found_in_name];
 
-    const increaseCountWrap = () => increaseCount(taxon);
+    const isShallow = !species.count;
+    const increaseCountWrap = () => increaseCount(taxon, isShallow);
 
     const navigateToSpeciesOccurrencesWrap = () =>
       !isSpeciesDisabled && navigateToSpeciesOccurrences(taxon);
 
-    const deleteSpeciesWrap = () => deleteSpecies(taxon);
+    const deleteSpeciesWrap = () => deleteSpecies(taxon, isShallow);
 
     let location;
     if (species.hasLocationMissing) {
@@ -193,7 +196,7 @@ class AreaCount extends Component {
   getSpeciesList() {
     const { sample, areaSurveyListSortedByTime } = this.props;
 
-    if (!sample.samples.length) {
+    if (!sample.samples.length && !sample.shallowSpeciesList.length) {
       return (
         <IonList id="list" lines="full">
           <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
@@ -202,12 +205,18 @@ class AreaCount extends Component {
     }
 
     const speciesCounts = [...sample.samples].reduce(buildSpeciesCount, {});
+    const shallowCounts = sample.shallowSpeciesList.map(getDefaultTaxonCount);
+
+    const counts = {
+      ...speciesCounts,
+      ...shallowCounts,
+    };
 
     const sort = areaSurveyListSortedByTime
       ? speciesOccAddedTimeSort
       : speciesNameSort;
 
-    const speciesList = Object.entries(speciesCounts)
+    const speciesList = Object.entries(counts)
       .sort(sort)
       .map(this.getSpeciesEntry);
 

@@ -37,6 +37,8 @@ class AppSample extends Sample {
       ...this.metadata,
     });
 
+    this.shallowSpeciesList = observable([]);
+
     this.timerPausedTime = observable({ time: null });
 
     this.gpsExtensionInit();
