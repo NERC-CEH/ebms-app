@@ -170,6 +170,10 @@ const extension = {
   },
 
   stopGPS() {
+    if (!this.isGPSRunning()) {
+      return;
+    }
+
     GPS.stop(this.gps.locating);
     this.gps.locating = null;
   },
