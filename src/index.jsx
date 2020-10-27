@@ -12,6 +12,7 @@ const { App: AppPlugin, StatusBar, SplashScreen } = Plugins;
 
 setupConfig({
   hardwareBackButton: false, // android back button
+  swipeBackEnabled: false,
 });
 
 (async function () {
