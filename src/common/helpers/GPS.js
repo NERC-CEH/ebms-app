@@ -13,18 +13,6 @@ const API = {
 
   _onWatchPosition(position, err) {
     const clientCallbacks = Object.values(API._clientCallbacks);
-    if (!clientCallbacks.length) {
-      // Stop watching if no listeners
-      const clearWait = () => {
-        delete API._clearingWatch;
-      };
-      API._clearingWatch = Geolocation.clearWatch({ id: API._watchId })
-        .then(clearWait)
-        .catch(clearWait);
-
-      API._watchId = null;
-      return;
-    }
 
     if (err) {
       clientCallbacks.forEach(callback => callback(err));
@@ -40,6 +28,23 @@ const API = {
     };
 
     clientCallbacks.forEach(callback => callback(null, location));
+  },
+
+  async _clearWatch() {
+    if (API._clearingWatch) {
+      await API._clearingWatch;
+    }
+
+    // Stop watching if no listeners
+    const clearWait = () => {
+      delete API._clearingWatch;
+    };
+
+    API._clearingWatch = Geolocation.clearWatch({ id: API._watchId })
+      .then(clearWait)
+      .catch(clearWait);
+
+    API._watchId = null;
   },
 
   async _startWatch() {
@@ -61,6 +66,10 @@ const API = {
   },
 
   start(onPosition) {
+    if (typeof onPosition !== 'function') {
+      throw new Error('GPS start callback is missing');
+    }
+
     if (!API._watchId) {
       API._startWatch();
     }
@@ -73,7 +82,16 @@ const API = {
   },
 
   stop(id) {
+    if (!id) {
+      throw new Error('GPS stop callback id is missing');
+    }
+
     delete API._clientCallbacks[id];
+
+    const clientCallbacks = Object.values(API._clientCallbacks);
+    if (!clientCallbacks.length) {
+      API._clearWatch();
+    }
   },
 };
 
