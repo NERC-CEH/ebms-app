@@ -85,6 +85,9 @@ class Container extends React.Component {
     }
 
     sample.toggleGPStracking(false);
+    const stopGPS = smp => smp.toggleGPStracking(false);
+    sample.samples.forEach(stopGPS);
+
     sample.saveRemote();
 
     this.context.navigate(`/home/user-surveys`, 'root');
