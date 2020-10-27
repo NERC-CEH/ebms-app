@@ -1,3 +1,10 @@
+## 1.10.0
+
+- Added Slovenian language
+- Updated species dictionary
+- Fixed weather data submission
+- Added sample photo option to 15min count
+
 ## 1.9.0
 
 - Added more helpful information tips
