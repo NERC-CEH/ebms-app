@@ -8,7 +8,10 @@ import * as Yup from 'yup';
 const locationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
   longitude: Yup.number().required(),
-  area: Yup.number().max(20000000, 'Please select a smaller area.').required(),
+  area: Yup.number()
+    .min(1)
+    .max(20000000, 'Please select a smaller area.')
+    .required(),
   shape: Yup.object().required(),
   source: Yup.string().required('Please add survey area information.'),
 });
