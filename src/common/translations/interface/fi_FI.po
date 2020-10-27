@@ -1450,3 +1450,27 @@ msgstr ""
 # Part of a photo picker element
 msgid "Press <1></1> to add."
 msgstr ""
+
+# part of Precise 15min count survey
+msgid "Precise 15min Count"
+msgstr ""
+
+# part of Precise 15min count survey
+msgid "Occurrences"
+msgstr ""
+
+# part of Precise 15min count survey
+msgid "Are you sure you want to delete this occurrence?"
+msgstr ""
+
+# alert confirmation button
+msgid "Got it"
+msgstr ""
+
+# surveys page background message
+msgid "<0>No uploaded surveys</0>"
+msgstr ""
+
+# user register error message
+msgid "Account already exists."
+msgstr ""
