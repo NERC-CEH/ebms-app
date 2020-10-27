@@ -67,7 +67,7 @@ class Controller extends React.Component {
     const recordedTaxa = [...species, ...shallowSpecies];
 
     return (
-      <Page id="area-count-edit-taxa">
+      <Page id="precise-area-count-edit-taxa">
         <Header title="Species" />
         <Main>
           <TaxonSearch

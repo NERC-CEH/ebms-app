@@ -90,7 +90,7 @@ class Container extends React.Component {
     const isDisabled = sample.isDisabled();
 
     return (
-      <Page id="area-count-edit-taxon-group">
+      <Page id="precise-area-count-edit-taxon-group">
         <Header title="Occurrences" />
         <Main
           match={match}

@@ -266,7 +266,7 @@ class Container extends React.Component {
     const previousSurvey = this.getPreviousSurvey();
 
     return (
-      <Page id="area-count-edit">
+      <Page id="precise-area-count-edit">
         <Header
           survey={sample.getSurvey()}
           onSubmit={this.onSubmit}

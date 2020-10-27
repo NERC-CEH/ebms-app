@@ -153,7 +153,11 @@ class AreaCount extends Component {
     const speciesName = taxon[taxon.found_in_name];
 
     const isShallow = !species.count;
-    const increaseCountWrap = () => increaseCount(taxon, isShallow);
+    const increaseCountWrap = e => {
+      e.preventDefault();
+      e.stopPropagation();
+      increaseCount(taxon, isShallow);
+    };
 
     const navigateToSpeciesOccurrencesWrap = () =>
       !isSpeciesDisabled && navigateToSpeciesOccurrences(taxon);
@@ -169,17 +173,16 @@ class AreaCount extends Component {
 
     return (
       <IonItemSliding key={id}>
-        <IonItem detail={!isSpeciesDisabled}>
-          <IonButton
-            class="area-count-edit-count"
-            onClick={increaseCountWrap}
-            fill="clear"
-          >
-            {species.count}
-          </IonButton>
-          <IonLabel onClick={navigateToSpeciesOccurrencesWrap}>
-            {speciesName}
-          </IonLabel>
+        <IonItem
+          detail={!isSpeciesDisabled}
+          onClick={navigateToSpeciesOccurrencesWrap}
+        >
+          <div className="precise-area-count-edit-count">
+            <IonButton onClick={increaseCountWrap} fill="clear">
+              {species.count}
+            </IonButton>
+          </div>
+          <IonLabel>{speciesName}</IonLabel>
           <IonLabel slot="end" className="location-spinner">
             {location}
           </IonLabel>
@@ -329,7 +332,7 @@ class AreaCount extends Component {
     }
 
     return (
-      <Main id="area-count-edit">
+      <Main id="precise-area-count-edit">
         {isDisabled && (
           <div className="info-message">
             <p>

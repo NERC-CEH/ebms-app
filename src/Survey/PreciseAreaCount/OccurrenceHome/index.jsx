@@ -22,7 +22,7 @@ class Container extends React.Component {
     const isDisabled = !!sample.metadata.synced_on;
 
     return (
-      <Page id="area-count-edit-occurrence">
+      <Page id="precise-area-count-edit-occurrence">
         <Header title="Edit Occurrence" />
         <Main
           match={match}

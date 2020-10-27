@@ -1,4 +1,4 @@
-#area-count-edit {
+#precise-area-count-edit {
   ion-list {
     margin-bottom: 0;
   }
@@ -51,19 +51,36 @@
       margin-left: 8px;
     }
 
-    .area-count-edit-count {
-      margin: 0;
-      max-width: 40px;
-      font-size: 1.3em;
-      border-right: 1px solid rgba(0, 0, 0, 0.13);
-      padding-right: 8px;
+    ion-item {
+      --padding-start: 0;
+    }
+
+    .precise-area-count-edit-count {
+      height: 100%;
+
+      &:after {
+        position: absolute;
+        top: 20%;
+        left: 55px;
+        content: '';
+        height: 60%;
+        border-right: 1px solid rgba(0, 0, 0, 0.13);
+      }
+
+      ion-button {
+        margin: 0 8px;
+        height: 100%;
+        width: 100%;
+        max-width: 40px;
+        font-size: 1.3em;
+      }
     }
   }
 
   .location-spinner {
     max-height: 23px;
     max-width: 30px;
-    
+
     ion-spinner {
       margin-top: -4px;
       width: 15px;
