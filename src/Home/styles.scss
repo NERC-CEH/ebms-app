@@ -36,6 +36,7 @@
 
   ion-fab-button.fab-button-label {
     width: 240px;
+    white-space: normal;
     transform: translateX(-93px);
     --border-radius: 4px;
     --background: var(--ion-color-primary-shade);
