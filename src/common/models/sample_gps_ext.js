@@ -5,7 +5,6 @@
  * start, update, error, success, stop
  **************************************************************************** */
 import GPS from 'helpers/GPS';
-import Log from 'helpers/log';
 import config from 'config';
 import { observable } from 'mobx';
 import geojsonArea from '@mapbox/geojson-area';
@@ -86,8 +85,6 @@ export function updateSampleArea(sample, { latitude, longitude }) {
   return sample.setLocation(shape);
 }
 
-const DEFAULT_ACCURACY_LIMIT = 50; // meters
-
 const extension = {
   setLocation(shape) {
     if (!shape) {
@@ -132,54 +129,43 @@ const extension = {
     this.gps = observable({ locating: null });
   },
 
-  startGPS(accuracyLimit = DEFAULT_ACCURACY_LIMIT) {
-    Log('SampleModel:GPS: start.');
-
+  startGPS() {
     // eslint-disable-next-line
-    const that = this;
-    const options = {
-      accuracyLimit,
+    const onPosition = (error, location) => {
+      if (error) {
+        console.error('GPS: error', error);
 
-      onUpdate() {},
+        this.stopGPS();
+        return;
+      }
 
-      callback(error, location) {
-        if (error) {
-          console.log('GPS error', error);
+      const startTime = new Date(this.attrs.surveyStartTime);
+      const defaultSurveyEndTime =
+        startTime.getTime() +
+        config.DEFAULT_SURVEY_TIME +
+        this.metadata.pausedTime;
+      const isOverDefaultSurveyEndTime =
+        defaultSurveyEndTime < new Date().getTime();
 
-          that.stopGPS();
-          return;
-        }
+      if (isOverDefaultSurveyEndTime) {
+        this.stopGPS();
+        return;
+      }
 
-        const startTime = new Date(that.attrs.surveyStartTime);
-        const defaultSurveyEndTime =
-          startTime.getTime() +
-          config.DEFAULT_SURVEY_TIME +
-          that.metadata.pausedTime;
-        const isOverDefaultSurveyEndTime =
-          defaultSurveyEndTime < new Date().getTime();
+      if (this.parent && location.accuracy < 50) {
+        // subsample
+        updateModelLocation(this, location);
+        this.stopGPS();
+        return;
+      }
 
-        if (isOverDefaultSurveyEndTime) {
-          that.stopGPS();
-          return;
-        }
-
-        if (that.parent && location.accuracy < 50) {
-          // subsample
-          updateModelLocation(that, location);
-          that.stopGPS();
-          return;
-        }
-
-        updateSampleArea(that, location);
-      },
+      updateSampleArea(this, location);
     };
 
-    this.gps.locating = GPS.start(options);
+    this.gps.locating = GPS.start(onPosition);
   },
 
   stopGPS() {
-    Log('SampleModel:GPS: stop.');
-
     GPS.stop(this.gps.locating);
     this.gps.locating = null;
   },

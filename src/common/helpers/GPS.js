@@ -3,46 +3,77 @@ import { Plugins } from '@capacitor/core';
 const { Geolocation } = Plugins;
 
 const API = {
-  GPS_ACCURACY_LIMIT: 100, // meters
+  _watchId: null,
 
-  running: false,
+  _clientCallbackId: 0,
 
-  start(options = {}) {
-    const { callback, onUpdate } = options;
-    const accuracyLimit = options.accuracyLimit || API.GPS_ACCURACY_LIMIT;
+  _clientCallbacks: {
+    // _clientCallbackId: onPosition
+  },
 
-    // geolocation config
-    const GPSoptions = {
+  _onWatchPosition(position, err) {
+    const clientCallbacks = Object.values(API._clientCallbacks);
+    if (!clientCallbacks.length) {
+      // Stop watching if no listeners
+      const clearWait = () => {
+        delete API._clearingWatch;
+      };
+      API._clearingWatch = Geolocation.clearWatch({ id: API._watchId })
+        .then(clearWait)
+        .catch(clearWait);
+
+      API._watchId = null;
+      return;
+    }
+
+    if (err) {
+      clientCallbacks.forEach(callback => callback(err));
+      return;
+    }
+
+    const location = {
+      latitude: position.coords.latitude.toFixed(8),
+      longitude: position.coords.longitude.toFixed(8),
+      accuracy: parseInt(position.coords.accuracy, 10),
+      altitude: parseInt(position.coords.altitude, 10),
+      altitudeAccuracy: parseInt(position.coords.altitudeAccuracy, 10),
+    };
+
+    clientCallbacks.forEach(callback => callback(null, location));
+  },
+
+  async _startWatch() {
+    if (API._clearingWatch) {
+      await API._clearingWatch;
+    }
+
+    const watchOptions = {
       enableHighAccuracy: true,
       maximumAge: 0,
     };
 
-    const onPosition = (position, err) => {
-      if (err) {
-        callback && callback(new Error(err.message));
-        return;
-      }
+    const watchId = Geolocation.watchPosition(
+      watchOptions,
+      API._onWatchPosition
+    );
 
-      const location = {
-        latitude: position.coords.latitude.toFixed(8),
-        longitude: position.coords.longitude.toFixed(8),
-        accuracy: parseInt(position.coords.accuracy, 10),
-        altitude: parseInt(position.coords.altitude, 10),
-        altitudeAccuracy: parseInt(position.coords.altitudeAccuracy, 10),
-      };
+    API._watchId = watchId;
+  },
 
-      if (location.accuracy <= accuracyLimit) {
-        callback && callback(null, location);
-      } else {
-        onUpdate && onUpdate(location);
-      }
-    };
+  start(onPosition) {
+    if (!API._watchId) {
+      API._startWatch();
+    }
 
-    return Geolocation.watchPosition(GPSoptions, onPosition);
+    API._clientCallbackId++;
+
+    API._clientCallbacks[API._clientCallbackId] = onPosition;
+
+    return API._clientCallbackId;
   },
 
   stop(id) {
-    Geolocation.clearWatch({ id });
+    delete API._clientCallbacks[id];
   },
 };
 
