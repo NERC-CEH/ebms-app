@@ -89,15 +89,15 @@ class Component extends React.Component {
             skipValueTranslation
           />
 
+          <MenuNoteItem color="medium">
+            Representative photo of where the 15 minute count was made
+          </MenuNoteItem>
           <PhotoPicker
             model={sample}
             isDisabled={isDisabled}
             dataDirPath={config.dataPath}
             ImageClass={ImageModel}
           />
-          <MenuNoteItem color="medium"> 
-            Representative photo of where the 15 minute count was made
-          </MenuNoteItem>
         </IonList>
       </Main>
     );
