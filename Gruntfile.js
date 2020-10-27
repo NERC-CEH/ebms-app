@@ -106,8 +106,8 @@ const updateVersionAndBuild = ({ version, build = 1 }) => {
   file = fs.readFileSync('./ios/App/App.xcodeproj/project.pbxproj', 'utf8');
   file = replaceAll(
     file,
-    /MARKETING_VERSION = (\d\.)+\d/i,
-    `MARKETING_VERSION = ${version}`
+    /MARKETING_VERSION = (\d\.)+\d;/i,
+    `MARKETING_VERSION = ${version};`
   );
   file = replaceAll(
     file,
