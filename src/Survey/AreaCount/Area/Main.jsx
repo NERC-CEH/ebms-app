@@ -209,27 +209,23 @@ class AreaAttr extends Component {
   };
 
   startGPS = () => {
-    return new Promise((resolve, reject) => {
-      const options = {
-        accuracyLimit: 160,
+    const startGPS = (resolve, reject) => {
+      const onPosition = (error, location) => {
+        this.stopGPS();
 
-        onUpdate: () => {},
-
-        callback: (error, location) => {
-          this.stopGPS();
-
-          if (error) {
-            this.stopGPS();
-            reject(error);
-            return;
-          }
-          resolve(location);
-        },
+        if (error) {
+          reject(error);
+          return;
+        }
+        
+        resolve(location);
       };
 
-      const locatingJobId = GPS.start(options);
+      const locatingJobId = GPS.start(onPosition);
       this.setState({ locating: locatingJobId });
-    });
+    };
+
+    return new Promise(startGPS);
   };
 
   stopGPS = () => {
