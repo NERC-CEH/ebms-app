@@ -152,8 +152,12 @@ const extension = {
         return;
       }
 
-      if (this.parent && location.accuracy < 50) {
-        // subsample
+      const isPreciseAreaSubSample = !!this.parent;
+      if (isPreciseAreaSubSample) {
+        if (location.accuracy > 50) {
+          return;
+        }
+
         updateModelLocation(this, location);
         this.stopGPS();
         return;
