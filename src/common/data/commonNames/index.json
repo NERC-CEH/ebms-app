@@ -4803,6 +4803,12 @@
       "preferredId": 432227
     },
     {
+      "warehouse_id": 473309,
+      "common_name": "Green-veined/small White",
+      "scientific_name": "Pieris napi/rapae",
+      "preferredId": 473307
+    },
+    {
       "warehouse_id": 434276,
       "common_name": "Greenish Black-tip",
       "scientific_name": "Euchloe charlonia",
@@ -5433,13 +5439,13 @@
       "preferredId": 466594
     },
     {
-      "warehouse_id": 434421,
+      "warehouse_id": 462956,
       "common_name": "Oberthür's Anomalous Blue",
       "scientific_name": "Polyommatus fabressei",
       "preferredId": 432372
     },
     {
-      "warehouse_id": 462956,
+      "warehouse_id": 434421,
       "common_name": "Oberthür's Anomalous Blue",
       "scientific_name": "Polyommatus fabressei",
       "preferredId": 432372
@@ -6403,12 +6409,6 @@
       "common_name": "White Admiral",
       "scientific_name": "Limenitis camilla",
       "preferredId": 432382
-    },
-    {
-      "warehouse_id": 434656,
-      "common_name": "White Sp.",
-      "scientific_name": "Pieris",
-      "preferredId": 432038
     },
     {
       "warehouse_id": 434620,
@@ -7801,16 +7801,16 @@
       "preferredId": 459510
     },
     {
-      "warehouse_id": 434199,
-      "common_name": "Grönfläckig Vitfjäril",
-      "scientific_name": "Pontia edusa",
-      "preferredId": 432217
-    },
-    {
       "warehouse_id": 434078,
       "common_name": "Grönfläckig Vitfjäril",
       "scientific_name": "Pontia daplidice",
       "preferredId": 432218
+    },
+    {
+      "warehouse_id": 434199,
+      "common_name": "Grönfläckig Vitfjäril",
+      "scientific_name": "Pontia edusa",
+      "preferredId": 432217
     },
     {
       "warehouse_id": 434270,
