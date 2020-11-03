@@ -95,9 +95,13 @@ const updateVersionAndBuild = ({ version, build = 1 }) => {
 
   // Android
   const versionCode = replaceAll(version, /\./, '') + build;
+  const androidBuildPrefix = pkg.androidBuildPrefix || '';
   file = fs.readFileSync('./android/app/build.gradle', 'utf8');
   file = file.replace(/versionName "(\d\.)+\d"/i, `versionName "${version}"`);
-  file = file.replace(/versionCode \d+/i, `versionCode ${versionCode}`);
+  file = file.replace(
+    /versionCode \d+/i,
+    `versionCode ${androidBuildPrefix}${versionCode}`
+  );
   pkg.version = version;
   pkg.build = build;
   fs.writeFileSync('./android/app/build.gradle', file, 'utf8');
