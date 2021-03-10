@@ -4,6 +4,7 @@
 - Updated species dictionary
 - Fixed weather data submission
 - Added sample photo option to 15min count
+- [EXPERIMENTAL] Added occurrence precise location 15min count survey
 
 ## 1.9.0
 
