@@ -8,15 +8,12 @@ import Indicia from '@indicia-js/core';
 const HOST =
   process.env.APP_INDICIA_API_HOST || 'https://butterfly-monitoring.net/';
 
+const isTestEnv = process.env.NODE_ENV === 'test';
+
 const config = {
-  // variables replaced on build
+  environment: process.env.NODE_ENV,
   version: process.env.APP_VERSION,
   build: process.env.APP_BUILD,
-  name: process.env.APP_NAME,
-
-  environment: __ENV__,
-  experiments: process.env.APP_EXPERIMENTS,
-  training: process.env.APP_TRAINING,
 
   gps_accuracy_limit: 100,
 
@@ -25,11 +22,9 @@ const config = {
   weatherSiteApiKey: process.env.APP_WEATHER_SITE_API_KEY,
   weatherSiteUrl: 'https://api.openweathermap.org/data/2.5/weather',
 
-  // use prod logging if testing otherwise full log
-  log: !__TEST__,
+  log: !isTestEnv,
 
-  // error analytics
-  sentry: !__TEST__ && process.env.APP_SENTRY_KEY,
+  sentryDNS: !isTestEnv && process.env.APP_SENTRY_KEY,
 
   feedbackEmail: 'apps%40ceh.ac.uk',
 

@@ -22,13 +22,14 @@ export { default as UserFeedbackRequest } from '@bit/flumens.apps.user-feedback-
 export { default as PhotoPicker } from '@bit/flumens.apps.photo-picker';
 export { default as LongPressButton } from '@bit/flumens.apps.long-press-button';
 export { default as ModelLocation } from '@bit/flumens.apps.model-location-map';
-
+export { default as Gallery } from '@bit/flumens.apps.gallery';
 export { default as device } from '@bit/flumens.apps.device';
 export { default as alert } from '@bit/flumens.apps.helpers.alert';
 export { default as loader } from '@bit/flumens.apps.helpers.loader';
 export { default as toast } from '@bit/flumens.apps.helpers.toast';
 export { default as date } from '@bit/flumens.apps.date';
 export { default as actionSheet } from '@bit/flumens.apps.helpers.action-sheet';
+export { default as initAnalytics } from '@bit/flumens.apps.utils.analytics';
 export * from '@bit/flumens.apps.utils.validation';
 export * from '@bit/flumens.apps.utils.location';
 

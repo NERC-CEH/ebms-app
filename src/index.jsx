@@ -4,7 +4,8 @@ import { setupConfig, isPlatform } from '@ionic/react';
 import appModel from 'appModel';
 import userModel from 'userModel';
 import savedSamples from 'savedSamples';
-import initAnalytics from 'helpers/analytics';
+import config from 'config';
+import { initAnalytics } from '@apps';
 import { Plugins, StatusBarStyle } from '@capacitor/core';
 import App from './App';
 
@@ -19,7 +20,18 @@ setupConfig({
   await appModel._init;
   await userModel._init;
   await savedSamples._init;
-  initAnalytics();
+
+  appModel.attrs.sendAnalytics &&
+    initAnalytics({
+      dsn: config.sentryDNS,
+      environment: config.environment,
+      build: config.build,
+      release: config.version,
+      userId: userModel.attrs.drupalID,
+      tags: {
+        'app.appSession': appModel.attrs.appSession,
+      },
+    });
 
   appModel.attrs.appSession += 1;
   appModel.save();

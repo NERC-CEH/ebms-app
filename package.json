@@ -3,27 +3,21 @@
   "id": "uk.ac.ceh.ebms",
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
-  "version": "1.10.0",
-  "build": "3",
-  "androidBuildPrefix": "2020",
+  "version": "1.11.0",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --content-base build --port 8000",
-    "build": "webpack --display minimal",
-    "build:production": "grunt",
-    "deploy": "vercel --prod -A other/now.json",
-    "deploy:production": "echo 'NOTHING HERE :('",
+    "start": "webpack serve --progress --content-base build --port 8000",
+    "build": "NODE_ENV=production webpack",
+    "build:production": "npm run clean && npm run build && npx cap sync && npm run build:resources",
+    "build:resources": "mkdir -p resources && cp -R other/designs/android resources && cp -R other/designs/*.png resources && npx cordova-res ios --skip-config --resources resources --copy && npx cordova-res android --skip-config --resources resources --copy",
+    "deploy": "vercel --prod -A other/now.json -t $VERCEL_TOKEN --confirm",
+    "deploy:production": "bitrise ci",
     "clean": "rm -rf build resources",
-    "test:eslint": "mocha test/eslint-test.js",
+    "test:eslint": "eslint src --quiet --ext .jsx --ext .js && echo '\\033[37;42;1m PASS \\033[00m'",
     "fetch:species:data": "cd src/common/data/species && node make.js",
     "fetch:species:profiles": "cd src/common/data/profiles && node make.js",
     "fetch:species:commonNames": "cd src/common/data/commonNames && node make.js",
     "fetch:all": "npm run fetch:species:data && npm run fetch:species:profiles && npm run fetch:species:commonNames"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run test:eslint"
-    }
   },
   "dependencies": {
     "@babel/polyfill": "7.11.5",
@@ -32,7 +26,7 @@
     "@bit/flumens.apps.collapse": "0.2.0",
     "@bit/flumens.apps.date": "^0.1.0",
     "@bit/flumens.apps.device": "0.2.1",
-    "@bit/flumens.apps.gallery": "^0.1.0",
+    "@bit/flumens.apps.gallery": "1.2.2",
     "@bit/flumens.apps.header": "0.6.2",
     "@bit/flumens.apps.helpers.action-sheet": "^0.1.0",
     "@bit/flumens.apps.helpers.alert": "0.4.1",
@@ -55,7 +49,7 @@
     "@bit/flumens.apps.models.sample-with-drupal-remote": "0.0.1",
     "@bit/flumens.apps.models.store": "0.3.1",
     "@bit/flumens.apps.page": "0.2.0",
-    "@bit/flumens.apps.photo-picker": "0.1.3",
+    "@bit/flumens.apps.photo-picker": "1.1.0",
     "@bit/flumens.apps.radio-input": "0.4.0",
     "@bit/flumens.apps.route-with-models": "0.2.0",
     "@bit/flumens.apps.router": "^0.1.1",
@@ -65,6 +59,7 @@
     "@bit/flumens.apps.toggle": "0.1.0",
     "@bit/flumens.apps.toggle-with-validation": "0.1.1",
     "@bit/flumens.apps.user-feedback-request": "0.1.10",
+    "@bit/flumens.apps.utils.analytics": "^0.2.0",
     "@bit/flumens.apps.utils.location": "^0.1.0",
     "@bit/flumens.apps.utils.validation": "^0.1.1",
     "@capacitor/android": "^2.4.2",
@@ -77,7 +72,6 @@
     "@ionic/react": "5.4.0",
     "@ionic/react-router": "5.4.0",
     "@mapbox/geojson-area": "0.2.2",
-    "@sentry/browser": "5.26.0",
     "cordova-launch-review": "^4.0.0",
     "cordova-plugin-device": "^2.0.3",
     "cordova-plugin-network-information": "^2.0.2",
@@ -96,7 +90,6 @@
     "mobx": "^5.15.1",
     "mobx-react": "^6.1.4",
     "mobx-react-devtools": "6.1.1",
-    "photoswipe": "4.1.3",
     "prop-types": "15.7.2",
     "react": "16.14.0",
     "react-autosuggest": "10.0.3",
@@ -105,87 +98,46 @@
     "react-i18next": "11.7.3",
     "react-leaflet": "2.7.0",
     "react-leaflet-control": "2.1.2",
-    "react-photoswipe": "1.3.0",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "wicket": "1.3.6",
     "yup": "0.29.3"
   },
   "devDependencies": {
-    "@babel/core": "7.11.6",
-    "@babel/plugin-proposal-class-properties": "7.10.4",
-    "@babel/plugin-proposal-decorators": "7.10.5",
+    "@babel/core": "7.13.15",
+    "@babel/plugin-proposal-class-properties": "7.13.0",
+    "@babel/plugin-proposal-decorators": "7.13.15",
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
-    "@babel/plugin-transform-exponentiation-operator": "7.10.4",
-    "@babel/preset-env": "7.11.5",
-    "@babel/preset-react": "7.10.4",
-    "@capacitor/cli": "2.4.2",
-    "@flumens/has-env": "1.0.0",
-    "@getify/eslint-plugin-proper-arrows": "^10.0.0",
-    "autoprefixer": "^9.7.3",
-    "axios": "0.20.0",
-    "babel-eslint": "10.1.0",
-    "babel-loader": "8.1.0",
-    "chai": "4.2.0",
-    "cordova-res": "0.15.1",
-    "css-loader": "4.3.0",
+    "@babel/plugin-transform-exponentiation-operator": "7.12.13",
+    "@babel/preset-env": "7.13.15",
+    "@babel/preset-react": "7.13.13",
+    "@capacitor/cli": "2.4.7",
+    "@flumens/eslint-config": "^0.4.0",
+    "@flumens/webpack-config": "2.1.2",
+    "autoprefixer": "10.2.5",
+    "axios": "0.21.1",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "cordova-res": "0.15.3",
     "csvtojson": "2.0.10",
     "dotenv": "8.2.0",
-    "eslint": "7.10.0",
-    "eslint-config-airbnb": "18.2.0",
-    "eslint-config-prettier": "6.12.0",
-    "eslint-import-resolver-webpack": "0.13.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jsx-a11y": "6.3.1",
-    "eslint-plugin-react": "7.21.3",
-    "eslint-plugin-react-hooks": "^4.1.2",
-    "express": "4.17.1",
-    "express-history-api-fallback": "2.2.1",
-    "extract-text-webpack-plugin": "3.0.2",
-    "file-loader": "6.1.0",
-    "grunt": "1.3.0",
-    "grunt-cli": "1.3.2",
-    "grunt-exec": "3.0.0",
-    "grunt-prompt": "1.3.3",
-    "husky": "4.3.0",
-    "json-loader": "0.5.7",
-    "json-stable-stringify": "1.0.1",
-    "karma": "5.2.3",
-    "karma-chai": "0.1.0",
-    "karma-chrome-launcher": "3.1.0",
-    "karma-coverage": "2.0.3",
-    "karma-mocha": "2.0.1",
-    "karma-mocha-reporter": "2.2.5",
-    "karma-sauce-launcher": "4.1.5",
-    "karma-sinon": "1.0.5",
-    "karma-webpack": "4.0.2",
-    "load-grunt-config": "3.0.1",
-    "load-grunt-tasks": "5.1.0",
-    "mini-css-extract-plugin": "0.11.3",
-    "mocha": "8.1.3",
+    "eslint": "7.24.0",
+    "eslint-import-resolver-babel-module": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "6.0.0",
+    "jest": "^26.6.3",
     "mock-geolocation": "1.0.11",
-    "node-sass": "4.14.1",
-    "po-loader": "0.5.0",
-    "po2json": "1.0.0-beta-3",
-    "postcss-loader": "3.0.0",
-    "prettier-eslint": "11.0.0",
-    "prettier-eslint-cli": "5.0.0",
+    "prettier-eslint": "12.0.0",
+    "prettier-eslint-cli": "5.0.1",
     "request": "2.88.2",
-    "sass-loader": "10.0.2",
-    "sharp-cli": "1.14.1",
-    "sinon": "9.1.0",
-    "string-replace-loader": "2.3.0",
-    "style-loader": "1.3.0",
-    "url-loader": "4.1.0",
-    "vercel": "20.1.1",
-    "webpack": "4.44.2",
-    "webpack-cli": "3.3.12",
-    "webpack-dev-server": "3.11.0",
-    "webpack-shell-plugin-next": "1.2.0"
+    "vercel": "21.3.3",
+    "webpack": "5.32.0",
+    "webpack-cli": "4.6.0",
+    "webpack-dev-server": "3.11.2"
   },
   "engines": {
-    "node": "14",
-    "npm": "6"
+    "node": ">14",
+    "npm": ">6"
   },
   "author": {
     "name": "Flumens",
@@ -233,6 +185,27 @@
     ],
     "plugins": [
       [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ],
+          "alias": {
+            "@apps": "./src/common/appsBitCollection",
+            "common": "./src/common",
+            "helpers": "./src/common/helpers",
+            "models": "./src/common/models",
+            "appModel": "./src/common/models/appModel",
+            "userModel": "./src/common/models/userModel",
+            "savedSamples": "./src/common/models/savedSamples",
+            "sample": "./src/common/models/sample",
+            "occurrence": "./src/common/models/occurrence",
+            "config": "./src/common/config/config",
+            "Components": "./src/common/Components"
+          }
+        }
+      ],
+      [
         "@babel/plugin-proposal-decorators",
         {
           "legacy": true
@@ -253,54 +226,19 @@
       "browser": true
     },
     "parser": "babel-eslint",
-    "plugins": [
-      "@getify/proper-arrows"
-    ],
-    "extends": [
-      "airbnb",
-      "prettier",
-      "plugin:react-hooks/recommended"
-    ],
-    "rules": {
-      "@getify/proper-arrows/name": [
-        "warn",
-        {
-          "trivial": false
-        }
-      ],
-      "react/forbid-prop-types": 0,
-      "no-plusplus": 0,
-      "react/require-default-props": 0,
-      "react/sort-comp": 0,
-      "react/destructuring-assignment": 0,
-      "react/button-has-type": 0,
-      "no-unused-expressions": [
-        2,
-        {
-          "allowShortCircuit": true
-        }
-      ],
-      "jsx-a11y/alt-text": 0,
-      "no-underscore-dangle": 0,
-      "react/jsx-props-no-spreading": 0,
-      "react/state-in-constructor": 0,
-      "react/static-property-placement": 0,
-      "react/jsx-one-expression-per-line": 0,
-      "react/no-unescaped-entities": 0
-    },
-    "globals": {
-      "__ENV__": true,
-      "__DEV__": true,
-      "__TEST__": true,
-      "__PROD__": true,
-      "t": true
-    },
+    "extends": "@flumens",
     "settings": {
       "import/resolver": {
-        "webpack": {
-          "config": "webpack.config.js"
-        }
+        "babel-module": {}
       }
+    },
+    "rules": {
+      "jsx-a11y/accessible-emoji": 0,
+      "sort-class-members/sort-class-members": 0,
+      "@getify/proper-arrows/name": 0
+    },
+    "globals": {
+      "t": true
     }
   },
   "prettier": {

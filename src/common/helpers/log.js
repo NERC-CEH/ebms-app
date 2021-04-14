@@ -12,21 +12,12 @@
  *
  * Levels values defined in core app module.
  **************************************************************************** */
-import * as Sentry from '@sentry/browser';
 import CONFIG from 'config';
 
 const ERROR = 'e';
 const WARNING = 'w';
 const INFO = 'i';
 const DEBUG = 'd';
-
-function _removeUUID(string) {
-  // remove UUIDs
-  return string.replace(
-    /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/gi,
-    'UUID'
-  );
-}
 
 /**
  * Prints and posts an error to the mobile authentication log.
@@ -38,13 +29,6 @@ function _removeUUID(string) {
 function error(err = {}) {
   const isString = typeof err === 'string' || err instanceof String;
   const e = isString ? { message: err } : err;
-
-  if (Sentry) {
-    if (typeof e.stack === 'string') {
-      e.stack = _removeUUID(e.stack);
-    }
-    Sentry.captureException(e);
-  }
 
   console.error(e.message, e.url, e.line, e.column, e.obj);
 }

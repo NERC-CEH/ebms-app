@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, NavContext } from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
 import appModel from 'appModel';
 import { observer } from 'mobx-react';
-import { Router } from '@apps';
 import LanguageCountrySelectRequired from 'Components/LanguageCountrySelectRequired';
 import SplashScreenRequired from './Info/SplashScreenRequired';
 import Home from './Home';
@@ -38,7 +38,7 @@ const HomeRedirect = () => {
 
 const App = () => (
   <IonApp lang={appModel.attrs.language}>
-    <Router>
+    <IonReactRouter>
       <LanguageCountrySelectRequired appModel={appModel}>
         <SplashScreenRequired appModel={appModel}>
           <IonRouterOutlet id="main">
@@ -51,7 +51,7 @@ const App = () => (
           </IonRouterOutlet>
         </SplashScreenRequired>
       </LanguageCountrySelectRequired>
-    </Router>
+    </IonReactRouter>
   </IonApp>
 );
 

@@ -2,7 +2,6 @@ import Log from 'helpers/log';
 import { device } from '@apps';
 import config from 'config';
 import { observe } from 'mobx';
-import * as Sentry from '@sentry/browser';
 
 // TODO get values from config
 
@@ -151,7 +150,7 @@ const extension = {
 
         setNewWeatherValues(this, weatherValues);
       } catch (err) {
-        Sentry.captureException(err);
+        console.error(err);
       }
     };
 

@@ -6,12 +6,9 @@ import {
   IonCardTitle,
   IonLifeCycleContext,
 } from '@ionic/react';
-import { PhotoSwipe } from 'react-photoswipe';
 import PropTypes from 'prop-types';
-import { Main } from '@apps';
+import { Main, Gallery } from '@apps';
 import { Trans as T } from 'react-i18next';
-import 'react-photoswipe/lib/photoswipe.css';
-import 'react-photoswipe/dist/default-skin.svg';
 import './styles.scss';
 
 const statuses = {
@@ -37,29 +34,27 @@ class Component extends React.Component {
     this.speciesMap = React.createRef();
   }
 
-  getGallery = () => {
+  getFullScreenPhotoViewer = () => {
     const { species } = this.props;
     const { showGallery } = this.state;
+
+    if (!showGallery) {
+      return null;
+    }
 
     const items = [
       {
         src: `/images/${species.image}_image.jpg`,
-        w: species.image_width || 800,
-        h: species.image_height || 800,
-        title: `© ${species.image_copyright}`,
+        footer: `© ${species.image_copyright}`,
       },
     ];
 
     return (
-      <PhotoSwipe
-        isOpen={!!showGallery}
+      <Gallery
+        isOpen
         items={items}
-        options={{
-          index: showGallery - 1,
-          shareEl: false,
-          fullscreenEl: false,
-        }}
         onClose={() => this.setState({ showGallery: false })}
+        mode="md"
       />
     );
   };
@@ -72,7 +67,7 @@ class Component extends React.Component {
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
     return (
       <>
-        {this.getGallery()}
+        {this.getFullScreenPhotoViewer()}
 
         <Main id="species-profile" class="ion-padding">
           <img

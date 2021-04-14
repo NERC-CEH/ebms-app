@@ -1,4 +1,4 @@
-const taxonCleaner = require('./speciesClean');
+const taxonCleaner = require('./makeClean');
 
 const TAXON = 'taxon';
 const ID = 'id';

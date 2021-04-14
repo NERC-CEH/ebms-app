@@ -1,0 +1,108 @@
+format_version: '8'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: ios
+app:
+  envs:
+    - BITRISE_PROJECT_PATH: ios/App/App.xcworkspace
+      opts:
+        is_expand: false
+    - BITRISE_SCHEME: App
+      opts:
+        is_expand: false
+    - BITRISE_EXPORT_METHOD: app-store
+      opts:
+        is_expand: false
+trigger_map:
+  - push_branch: '*'
+    workflow: ci
+workflows:
+  android:
+    steps:
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $BITRISE_SOURCE_DIR/android/app/build.gradle
+            - version_code_offset: '300000000'
+            - new_version_name: $NPM_PACKAGE_VERSION
+      - android-build@0:
+          inputs:
+            - module: app
+            - variant: release\ndebug
+            - project_location: $BITRISE_SOURCE_DIR/android
+      - sign-apk@1:
+          inputs:
+            - debuggable_permitted: 'false'
+            - verbose_log: 'true'
+            - android_app: $BITRISE_APK_PATH
+  ci:
+    before_run:
+      - web
+      - android
+      - ios
+    after_run:
+      - deploy
+  deploy:
+    steps:
+      - npm@1:
+          title: Deploy to demo site
+          inputs:
+            - command: run deploy
+      - deploy-to-bitrise-io@1:
+          title: Create www artifact
+          inputs:
+            - notify_user_groups: none
+            - deploy_path: $BITRISE_SOURCE_DIR/build
+            - is_compress: 'true'
+      - deploy-to-bitrise-io@1:
+          title: Create app artifact
+          inputs:
+            - notify_user_groups: none
+      - deploy-to-itunesconnect-application-loader@0:
+          inputs:
+            - password: $ITUNES_CONNECT_PASS
+            - app_password: $ITUNES_CONNECT_APP_PASS
+            - itunescon_user: $ITUNES_CONNECT_USER
+      - git-tag-project-version-and-build-number@1:
+          inputs:
+            - bitrise_tag_format: v_VERSION_-_BUILD_
+            - use_lightweight_tag: 'yes'
+            - bitrise_tag_xcodeproj_path: ios/App/App.xcodeproj
+            - bitrise_tag_info_plist_path: ios/App/App/Info.plist
+  ios:
+    steps:
+      - certificate-and-profile-installer@1: {}
+      - recreate-user-schemes@1:
+          inputs:
+            - project_path: $BITRISE_PROJECT_PATH
+      - set-ios-version@2:
+          run_if: 'true'
+          inputs:
+            - bundle_version: $BITRISE_BUILD_NUMBER
+            - bundle_version_short: $NPM_PACKAGE_VERSION
+            - info_plist_file: ios/App/App/Info.plist
+      - xcode-archive@3:
+          inputs:
+            - export_method: app-store
+  web:
+    steps:
+      - get-npm-package-version@1: {}
+      - npm@1:
+          title: Config Bit.dev
+          inputs:
+            - command: config set @bit:registry https://node.bit.dev
+      - npm@1:
+          title: Install
+          timeout: 360
+          inputs:
+            - command: install
+      - npm@1:
+          title: Test
+          inputs:
+            - command: run test
+      - npm@1:
+          title: Test Eslint
+          inputs:
+            - command: run test:eslint
+      - npm@1:
+          title: Build
+          inputs:
+            - command: run build:production

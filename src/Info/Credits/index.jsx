@@ -2,7 +2,7 @@ import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
 import { Page, Main, Header } from '@apps';
 import { Trans as T } from 'react-i18next';
-import species from 'common/data/profiles';
+import species from 'common/data/profiles/index.json';
 import './sponsors.png';
 import './flumens.png';
 import './styles.scss';

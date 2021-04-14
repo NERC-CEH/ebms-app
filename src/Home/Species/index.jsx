@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import { IonModal, IonGrid, IonRow, IonCol } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { Page, Main, ModalHeader, UserFeedbackRequest } from '@apps';
-import speciesProfiles from 'common/data/profiles';
+import speciesProfiles from 'common/data/profiles/index.json';
 import config from 'config';
 import SpeciesProfile from './components/SpeciesProfile';
 import './images';

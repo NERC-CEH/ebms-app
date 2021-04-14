@@ -13,7 +13,7 @@ if (!APP_INDICIA_API_KEY || !APP_INDICIA_API_USER_AUTH) {
 }
 
 async function fetch() {
-  return csv({ checkType: true }).fromFile('./species.profiles.csv');
+  return csv({ checkType: true }).fromFile('./cache/species.profiles.csv');
 }
 
 async function fetchAbundance(listID) {
