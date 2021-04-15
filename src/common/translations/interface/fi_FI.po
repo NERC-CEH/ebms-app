@@ -847,6 +847,9 @@ msgstr ""
 msgid "Share App Analytics"
 msgstr "Jaa sovelluksen analytiikkaa"
 
+msgid "Share app crash data so we can make the app more reliable."
+msgstr ""
+
 msgid "Save Draft"
 msgstr "Tallenna luonnos"
 

@@ -179,6 +179,9 @@ class Component extends React.Component {
               checked={sendAnalytics}
             />
           </IonItem>
+          <MenuNoteItem color="medium">
+            Share app crash data so we can make the app more reliable.
+          </MenuNoteItem>
 
           <IonItem id="app-reset-btn" onClick={() => resetDialog(resetApp)}>
             <IonIcon icon={arrowUndoOutline} size="small" slot="start" />

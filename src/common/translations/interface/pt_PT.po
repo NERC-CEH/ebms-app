@@ -852,6 +852,9 @@ msgstr "Marque os novos registos como \"treino\" e exclua-os dos relatórios."
 msgid "Share App Analytics"
 msgstr "Partilhe as análises da App"
 
+msgid "Share app crash data so we can make the app more reliable."
+msgstr ""
+
 msgid "Save Draft"
 msgstr "Guardar Rascunho"
 
