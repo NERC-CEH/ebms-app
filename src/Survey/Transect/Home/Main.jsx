@@ -14,7 +14,7 @@ import {
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
-import 'common/images/wind.svg';
+import windIcon from 'common/images/wind.svg';
 
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
@@ -133,7 +133,7 @@ class Edit extends Component {
           <MenuAttrItem
             routerLink={`${baseURL}/windDirection`}
             disabled={isDisabled}
-            icon="/images/wind.svg"
+            icon={windIcon}
             label="Wind Direction"
             value={windDirection}
           />
@@ -141,7 +141,7 @@ class Edit extends Component {
           <MenuAttrItem
             routerLink={`${baseURL}/windSpeed`}
             disabled={isDisabled}
-            icon="/images/wind.svg"
+            icon={windIcon}
             label="Wind Speed"
             value={windSpeed}
           />

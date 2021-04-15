@@ -9,9 +9,9 @@ import {
 import { observer } from 'mobx-react';
 import { Main, MenuAttrItem } from '@apps';
 import { Trans as T } from 'react-i18next';
-import 'common/images/number.svg';
-import 'common/images/butterfly.svg';
-import './caterpillar.svg';
+import numberIcon from 'common/images/number.svg';
+import butterflyIcon from 'common/images/butterfly.svg';
+import caterpillarIcon from './caterpillar.svg';
 import './styles.scss';
 
 @observer
@@ -55,7 +55,7 @@ class EditOccurrence extends Component {
           <MenuAttrItem
             routerLink={`${baseURL}/taxa`}
             disabled={isDisabled}
-            icon="/images/butterfly.svg"
+            icon={butterflyIcon}
             label="Species"
             value={species}
           />
@@ -63,7 +63,7 @@ class EditOccurrence extends Component {
             <IonLabel>
               <T>Count</T>
             </IonLabel>
-            <IonIcon src="/images/number.svg" slot="start" />
+            <IonIcon icon={numberIcon} slot="start" />
             <div slot="end">
               {!isDisabled && (
                 <IonButton
@@ -92,7 +92,7 @@ class EditOccurrence extends Component {
           <MenuAttrItem
             routerLink={`${baseURL}/stage`}
             disabled={isDisabled}
-            icon="/images/caterpillar.svg"
+            icon={caterpillarIcon}
             label="Stage"
             value={stage}
           />

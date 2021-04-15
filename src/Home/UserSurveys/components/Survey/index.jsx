@@ -14,9 +14,9 @@ import {
 import { alert } from '@apps';
 
 import { openOutline } from 'ionicons/icons';
+import butterflyIcon from 'common/images/butterfly.svg';
 import OnlineStatus from './components/OnlineStatus';
 import ErrorMessage from './components/ErrorMessage';
-import 'common/images/butterfly.svg';
 import './styles.scss';
 
 function deleteSurvey(sample) {
@@ -79,7 +79,7 @@ const Survey = observer(({ sample }) => {
       <IonLabel class="ion-text-wrap">
         {label}
         <IonBadge color="medium">
-          <IonIcon src="/images/butterfly.svg" /> {speciesCount}
+          <IonIcon icon={butterflyIcon} /> {speciesCount}
         </IonBadge>
       </IonLabel>
     );

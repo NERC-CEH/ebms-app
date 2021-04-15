@@ -5,10 +5,6 @@ import { Trans as T } from 'react-i18next';
 import Log from 'helpers/log';
 import appModel from 'appModel';
 import './styles.scss';
-import './images/welcome_1.jpg';
-import './images/welcome_2.jpg';
-import './images/welcome_3.jpg';
-import './images/welcome_4.jpg';
 
 function next(sliderRef) {
   sliderRef.current.slideNext();

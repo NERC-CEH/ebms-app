@@ -9,9 +9,8 @@ import {
 import { observer } from 'mobx-react';
 import { Main, MenuAttrItem } from '@apps';
 import GridRefValue from 'Components/GridRefValue';
-import 'common/images/number.svg';
-import 'common/images/butterfly.svg';
-import './caterpillar.svg';
+import butterflyIcon from 'common/images/butterfly.svg';
+import caterpillarIcon from './caterpillar.svg';
 import './styles.scss';
 
 @observer
@@ -64,7 +63,7 @@ class EditOccurrence extends Component {
           <MenuAttrItem
             routerLink={`${baseURL}/taxon`}
             disabled={isDisabled}
-            icon="/images/butterfly.svg"
+            icon={butterflyIcon}
             label="Species"
             value={species}
           />
@@ -79,7 +78,7 @@ class EditOccurrence extends Component {
           <MenuAttrItem
             routerLink={`${baseURL}/stage`}
             disabled={isDisabled}
-            icon="/images/caterpillar.svg"
+            icon={caterpillarIcon}
             label="Stage"
             value={stage}
           />

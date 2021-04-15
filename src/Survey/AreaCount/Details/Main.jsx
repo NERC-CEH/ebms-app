@@ -9,7 +9,7 @@ import {
 import { Trans as T } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Main, MenuAttrItem } from '@apps';
-import 'common/images/wind.svg';
+import windIcon from 'common/images/wind.svg';
 
 @observer
 class Component extends React.Component {
@@ -68,7 +68,7 @@ class Component extends React.Component {
           <MenuAttrItem
             routerLink={`${baseURL}/windDirection`}
             disabled={isDisabled}
-            icon="/images/wind.svg"
+            icon={windIcon}
             label="Wind Direction"
             value={windDirection}
           />
@@ -76,7 +76,7 @@ class Component extends React.Component {
           <MenuAttrItem
             routerLink={`${baseURL}/windSpeed`}
             disabled={isDisabled}
-            icon="/images/wind.svg"
+            icon={windIcon}
             label="Wind Speed"
             value={windSpeed}
           />

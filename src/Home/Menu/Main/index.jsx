@@ -18,14 +18,14 @@ import { Trans as T } from 'react-i18next';
 import { Main } from '@apps';
 import config from 'config';
 import './styles.scss';
-import './logo.png';
+import logo from './logo.png';
 
 const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
   const lang = appModel.attrs.language;
 
   return (
     <Main class="app-menu">
-      <img src="/images/logo.png" alt="app logo" />
+      <img src={logo} alt="app logo" />
 
       <IonList lines="full">
         <IonItemDivider>

@@ -3,8 +3,8 @@ import { IonList, IonItem, IonLabel } from '@ionic/react';
 import { Page, Main, Header } from '@apps';
 import { Trans as T } from 'react-i18next';
 import species from 'common/data/profiles/index.json';
-import './sponsors.png';
-import './flumens.png';
+import sponsorsLogo from './sponsors.png';
+import flumensLogo from './flumens.png';
 import './styles.scss';
 
 export default () => (
@@ -13,7 +13,7 @@ export default () => (
     <Main class="ion-padding">
       <IonList lines="none">
         <IonItem>
-          <img src="/images/sponsors.png" alt="" />
+          <img src={sponsorsLogo} alt="" />
         </IonItem>
       </IonList>
 
@@ -83,7 +83,7 @@ export default () => (
       <IonList lines="none">
         <IonItem>
           <a href="https://flumens.io">
-            <img className="flumens-logo" src="/images/flumens.png" alt="" />
+            <img className="flumens-logo" src={flumensLogo} alt="" />
           </a>
         </IonItem>
         <IonItem>

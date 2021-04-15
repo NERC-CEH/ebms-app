@@ -16,8 +16,7 @@ import GridRefValue from 'Components/GridRefValue';
 import { observer } from 'mobx-react';
 import { Main, MenuAttrItem, InfoBackgroundMessage } from '@apps';
 import { Trans as T } from 'react-i18next';
-import 'common/images/number.svg';
-import 'common/images/butterfly.svg';
+import butterflyIcon from 'common/images/butterfly.svg';
 import './styles.scss';
 
 @observer
@@ -96,7 +95,7 @@ class EditOccurrence extends Component {
           <MenuAttrItem
             routerLink={`${match.url}/taxon`}
             disabled={isDisabled}
-            icon="/images/butterfly.svg"
+            icon={butterflyIcon}
             label="Species"
             value={species}
           />

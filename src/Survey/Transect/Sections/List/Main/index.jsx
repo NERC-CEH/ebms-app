@@ -5,10 +5,10 @@ import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import { toJS } from 'mobx';
 import { Main } from '@apps';
 import transformToLatLon from 'helpers/location';
+import butterflyIcon from 'common/images/butterfly.svg';
 import Transects from './components/Transects';
 import SVG from './components/SVG';
 import './styles.scss';
-import 'common/images/butterfly.svg';
 
 const getSectionItem = (sectionSample, match) => {
   const section = sectionSample.attrs.location;
@@ -39,7 +39,7 @@ const getSectionItem = (sectionSample, match) => {
       </IonLabel>
       {!!sectionSpeciesCount && (
         <IonLabel slot="end">
-          <IonIcon src="/images/butterfly.svg" /> {/* prettier-ignore */}{' '}
+          <IonIcon icon={butterflyIcon} /> {/* prettier-ignore */}{' '}
           {sectionSpeciesCount}
         </IonLabel>
       )}
