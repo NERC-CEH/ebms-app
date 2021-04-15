@@ -1482,35 +1482,37 @@ msgstr "Tutti i Campionamenti"
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
 msgstr ""
+"Foto rappresentativa del luogo in cui è stato fatto il conteggio di 15 "
+"minuti."
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Nessuna foto aggiunta "
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Premi<1></1>per aggiungere."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "Precisa conteggio di 15 minuti"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Eventi "
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Sei sicuro di voler eliminare questo evento?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Fatto"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Nessun campionamento caricato</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "L'account esiste già."

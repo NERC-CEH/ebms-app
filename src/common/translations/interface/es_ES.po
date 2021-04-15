@@ -405,7 +405,7 @@ msgid "Draft"
 msgstr "Borrador"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Existe un borrador de encuesta anterior, ¿te gustaría continuarlo?"
+msgstr "Existe un borrador de un muestreo anterior, ¿te gustaría continuarlo?"
 
 msgid "Discard"
 msgstr "Descartar"
@@ -477,7 +477,7 @@ msgid "Please select a smaller area."
 msgstr "Por favor, selecciona un área más pequeña"
 
 msgid "Please add survey area information."
-msgstr "Por favor, añade información del área de la encuesta"
+msgstr "Por favor, añade información del área de muestreo"
 
 msgid "Choose a method to upload a photo"
 msgstr "Elige un método para subir la foto"
@@ -1004,7 +1004,7 @@ msgid "Unsuitable conditions"
 msgstr "Condiciones inadecuadas"
 
 msgid "Unable to survey"
-msgstr "No se puedehcer la encuenta"
+msgstr "No se puede realizar el muestreo"
 
 msgid "15min Count"
 msgstr "Recuento 15 minutos"
@@ -1397,8 +1397,7 @@ msgstr "Copiar especies"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr ""
-"¿Seguro que desea copiar la lista de especies de la encuesta anterior?"
+msgstr "¿Seguro que desea copiar la lista de especies del muestreo anterior?"
 
 # Species list copy functionality
 msgid "Copy"
@@ -1414,7 +1413,7 @@ msgstr "Ha copiado con éxito {{speciesCount}} especies."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr "Lo sentimos, no hay una encuesta previa para copiar especies."
+msgstr "Lo sentimos, no hay un muestreo previo para copiar especies."
 
 # Country name
 msgid "Armenia"
@@ -1437,7 +1436,7 @@ msgstr "¡Por favor, no olvide subir los muestreos pendientes!"
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
-"No hay encuestas pendientes terminadas<br/><br/>Presione  <4></4> para "
+"No hay muestreos pendientes terminadas<br/><br/>Presione  <4></4> para "
 "agregar."
 
 # Pop-up tip title when the user has installed the app and finished the
@@ -1499,20 +1498,20 @@ msgstr ""
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Presencias"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "¿Está seguro de que desea eliminar esta presencia?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Entendido"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>No hay muestreos cargados </0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "La cuenta ya existe."

@@ -1,11 +1,11 @@
 # 
 # Translators:
-# Kaja Vukotić <kaja.vukotic@gmail.com>, 2020
+# Kaja Vukotić <kaja.vukotic@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Kaja Vukotić <kaja.vukotic@gmail.com>, 2020\n"
+"Last-Translator: Kaja Vukotić <kaja.vukotic@gmail.com>, 2021\n"
 "Language-Team: Slovenian (Slovenia) (https://www.transifex.com/ceh/teams/95441/sl_SI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -728,7 +728,7 @@ msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Ta aplikacija podpira varstvo in monitoring metuljev. Kliknite na + gumb "
+"Ta aplikacija podpira monitoring in varstvo metuljev. Kliknite na + gumb "
 "spodaj in začnite s štetjem metuljev."
 
 msgid ""
@@ -987,7 +987,7 @@ msgid "Unable to survey"
 msgstr "Popis ni mogoč"
 
 msgid "15min Count"
-msgstr "15min Štetje"
+msgstr "15min Popis"
 
 msgid "eBMS Transect"
 msgstr "eBMS Transekt"
@@ -1094,7 +1094,7 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"Najprimernejša metoda je 15-minutno štetje vrst. To lahko opravite kjerkoli "
+"Najprimernejša metoda je 15-minutni popis vrst. To lahko opravite kjerkoli "
 "in kadarkoli, ko so metulji aktivni (tj. ko je vreme toplo in sončno). "
 "Aplikacijo lahko uporabite tudi za opravljanje obstoječih transektov za "
 "metulje. V letu 2020 bo aplikacija vsebovala tudi možnost predložitve "
@@ -1102,7 +1102,7 @@ msgstr ""
 "razpoložljive metode."
 
 msgid "How to do a 15-minute Count"
-msgstr "Kako narediti 15-minutno štetje"
+msgstr "Kako narediti 15-minutni popis"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1151,7 +1151,7 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"Po končanem 15-minutnim popisu, preverite ali so izbrane vrste in število "
+"Po končanem 15-minutnem popisu, preverite ali so izbrane vrste in število "
 "osebkov določene vrste pravilne, nato pa pritisnite gumb NALOŽI. S tem bodo "
 "vaši podatki shranjeni v bazo podatkov eBMS. Popis bo za nadaljnjo uporabo "
 "shranjen tudi v vaši napravi in na vašem spletnem računu."
@@ -1443,36 +1443,36 @@ msgstr "Vsi Popisi"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr ""
+msgstr "Reprezentativna fotografija, kjer ste opravili 15-minutni popis"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Dodana ni bila nobena fotografija."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Za dodajanje pritisnite<1></1>."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "Natančni 15-minutni popis."
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Pojavljanja"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Ste prepričani, da želite izbrisati to pojavljanje?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Razumem"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Ni naloženih popisov</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "Račun že obstaja."

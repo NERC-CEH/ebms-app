@@ -1444,36 +1444,36 @@ msgstr "Všechny průzkumy"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr ""
+msgstr "Reprezentační fotografie místa, kde byl 15-minutový součet prováděn"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Žádná fotografie nebyla vložena."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Zmáčkněte <1></1> pro vložení."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "Přesný 15minutový součet"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Výskyt"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Opravdu chcete smazat tento výskyt?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Pochopil jsem."
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Žádné nahrané průzkumy</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "Účet již existuje."
