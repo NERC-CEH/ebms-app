@@ -1,9 +1,24 @@
-import { date as dateHelp, Sample } from '@apps';
-import { chatboxOutline } from 'ionicons/icons';
+import { isPlatform } from '@ionic/react';
+import config from 'config';
+import appModel from 'appModel';
 import Wkt from 'wicket';
 import { toJS } from 'mobx';
 import L from 'leaflet';
 import * as Yup from 'yup';
+import {
+  deviceAttr,
+  deviceVersionAttr,
+  appVersionAttr,
+  windSpeedAttr,
+  temperatureAttr,
+  windDirectionAttr,
+  cloudAttr,
+  taxonAttr,
+  surveyStartTimeAttr,
+  surveyEndTimeAttr,
+  commentAttr,
+  dateAttr,
+} from 'Survey/common/config';
 
 const locationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
@@ -57,171 +72,71 @@ function getGeomString(shape) {
   return wkt.write();
 }
 
-const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
-  hour: 'numeric',
-  minute: 'numeric',
-});
+const stageValues = [
+  { value: null, isDefault: true, label: 'Not Recorded' },
+  { value: 'Adult', id: 3929 },
+  { value: 'Larva', id: 3931 },
+  { value: 'Egg', id: 3932 },
+  { value: 'Pupae', id: 3930 },
+  { value: 'Larval web', id: 14079 },
+];
 
-const dateAttr = {
-  values(date) {
-    return dateHelp.print(date);
-  },
-  isValid: val => val && val.toString() !== 'Invalid Date',
-  type: 'date',
-  max: () => new Date(),
-};
-
-const config = {
+const survey = {
   id: 565,
   name: 'precise-area',
   label: 'Precise 15min Count',
   webForm: 'enter-app-record',
+
   attrs: {
-    location: {
-      id: 'entered_sref',
-      values(location, submission) {
-        const areaId = config.attrs.area.id;
-
-        const geomAndArea = {
-          [areaId]: location.area,
-          geom: getGeomString(location.shape),
-        };
-
-        // eslint-disable-next-line
-        submission.fields = {
-          ...submission.fields,
-          ...geomAndArea,
-        };
-
-        return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
-          location.longitude
-        ).toFixed(7)}`;
-      },
-    },
-    device: {
-      id: 922,
-      values: {
-        iOS: 2398,
-        Android: 2399,
-      },
-    },
-    device_version: { id: 759 },
-    app_version: { id: 1139 },
-
+    device: deviceAttr,
+    device_version: deviceVersionAttr,
+    app_version: appVersionAttr,
     date: dateAttr,
+    surveyStartTime: surveyStartTimeAttr,
+    surveyEndime: surveyEndTimeAttr,
+    comment: commentAttr,
+    temperature: temperatureAttr,
+    cloud: cloudAttr,
+    windDirection: windDirectionAttr,
+    windSpeed: windSpeedAttr,
 
-    surveyStartTime: {
-      id: 1385,
-      values: date => dateTimeFormat.format(new Date(date)),
-    },
-    surveyEndime: {
-      id: 1386,
-      values: date => dateTimeFormat.format(new Date(date)),
-    },
+    location: {
+      remote: {
+        id: 'entered_sref',
+        values(location, submission) {
+          const areaId = survey.attrs.area.remote.id;
 
-    area: { id: 723 },
+          // eslint-disable-next-line
+          submission.fields = {
+            ...submission.fields,
+            [areaId]: location.area,
+            geom: getGeomString(location.shape),
+          };
 
-    comment: {
-      label: 'Comment',
-      type: 'textarea',
-      info: 'Please add any extra info about this record.',
-    },
-    temperature: {
-      id: 1388,
-      label: 'Temperature',
-      type: 'radio',
-      info: 'Please specify the temperature C°.',
-      values: [
-        {
-          value: '',
-          label: 'Not recorded/no data',
-          id: 16556,
-          isDefault: true,
+          return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
+            location.longitude
+          ).toFixed(7)}`;
         },
-        { value: 10, id: 16530 },
-        { value: 11, id: 16531 },
-        { value: 12, id: 16532 },
-        { value: 13, id: 16533 },
-        { value: 14, id: 16534 },
-        { value: 15, id: 16535 },
-        { value: 16, id: 16536 },
-        { value: 17, id: 16537 },
-        { value: 18, id: 16538 },
-        { value: 19, id: 16539 },
-        { value: 20, id: 16540 },
-        { value: 21, id: 16541 },
-        { value: 22, id: 16542 },
-        { value: 23, id: 16543 },
-        { value: 24, id: 16544 },
-        { value: 25, id: 16545 },
-        { value: 26, id: 16546 },
-        { value: 27, id: 16547 },
-        { value: 28, id: 16548 },
-        { value: 29, id: 16549 },
-        { value: 30, id: 16550 },
-        { value: 31, id: 16551 },
-        { value: 32, id: 16552 },
-        { value: 33, id: 16553 },
-        { value: 34, id: 16554 },
-        { value: 35, id: 16555 },
-      ],
+      },
     },
-    cloud: {
-      id: 1457,
-      label: 'Cloud',
-      type: 'slider',
-      info: 'Please specify the % of cloud cover.',
-      max: 100,
-      min: 0,
-    },
-    windDirection: {
-      id: 1389,
-      label: 'Wind Direction',
-      type: 'radio',
-      info: 'Please specify the wind direction.',
-      values: [
-        { value: '', label: 'Not recorded/no data', id: 2460, isDefault: true },
-        { value: 'S', id: 2461 },
-        { value: 'SW', id: 2462 },
-        { value: 'W', id: 2463 },
-        { value: 'NW', id: 2464 },
-        { value: 'N', id: 2465 },
-        { value: 'NE', id: 2466 },
-        { value: 'E', id: 2467 },
-        { value: 'SE', id: 2468 },
-        { value: 'No direction', id: 2469 },
-      ],
-    },
-    windSpeed: {
-      id: 1390,
-      label: 'Wind Speed',
-      type: 'radio',
-      info: 'Please specify the wind speed.',
-      values: [
-        { value: '', label: 'Not recorded/no data', id: 2459, isDefault: true },
-        { value: 'Smoke rises vertically', id: 2606 },
-        { value: 'Slight smoke drift', id: 2453 },
-        { value: 'Wind felt on face, leaves rustle', id: 2454 },
-        { value: 'Leaves and twigs in slight motion', id: 2455 },
-        { value: 'Dust raised and small branches move', id: 2456 },
-        { value: 'Small trees in leaf begin to sway', id: 2457 },
-        { value: 'Large branches move and trees sway', id: 2458 },
-      ],
-    },
+
+    area: { remote: { id: 723 } },
   },
 
   smp: {
     attrs: {
       location: {
-        id: 'entered_sref',
-        values(location) {
-          if (!location.latitude) {
-            return null; // if missing then sub-sample will be removed
-          }
+        remote: {
+          id: 'entered_sref',
+          values(location) {
+            if (!location.latitude) {
+              return null; // if missing then sub-sample will be removed
+            }
 
-          return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
-            location.longitude
-          ).toFixed(7)}`;
+            return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
+              location.longitude
+            ).toFixed(7)}`;
+          },
         },
       },
       date: dateAttr,
@@ -230,12 +145,13 @@ const config = {
     create(AppSample, Occurrence, taxon) {
       const sample = new AppSample({
         metadata: {
-          survey: config.name,
+          survey_id: survey.id,
+          survey: survey.name,
         },
         attrs: { location: {} },
       });
 
-      const occurrence = config.smp.occ.create(Occurrence, taxon);
+      const occurrence = survey.smp.occ.create(Occurrence, taxon);
       sample.occurrences.push(occurrence);
 
       sample.startGPS();
@@ -245,38 +161,21 @@ const config = {
 
     occ: {
       attrs: {
-        training: {
-          id: 'training',
-        },
+        taxon: taxonAttr,
+        comment: commentAttr,
 
-        taxon: {
-          id: 'taxa_taxon_list_id',
-          values(taxon) {
-            return taxon.warehouse_id;
-          },
-        },
-        count: { id: 780 },
+        count: { remote: { id: 780 } },
+
         stage: {
-          id: 293,
           label: 'Stage',
           type: 'radio',
-
-          values: [
-            { value: null, isDefault: true, label: 'Not Recorded' },
-            { value: 'Adult', id: 3929 },
-            { value: 'Larva', id: 3931 },
-            { value: 'Egg', id: 3932 },
-            { value: 'Pupae', id: 3930 },
-            { value: 'Larval web', id: 14079 },
-          ],
-        },
-        comment: {
-          label: 'Comment',
-          id: 'comment',
-          icon: chatboxOutline,
-          type: 'textarea',
-          info: 'Please add any extra information about your survey.',
-          skipValueTranslation: true,
+          componentProps: {
+            options: stageValues,
+          },
+          remote: {
+            id: 293,
+            values: stageValues,
+          },
         },
       },
 
@@ -303,12 +202,20 @@ const config = {
   },
 
   create(AppSample) {
+    const training = appModel.attrs.useTraining && 't';
+
     const sample = new AppSample({
       metadata: {
-        survey: config.name,
+        survey_id: survey.id,
+        survey: survey.name,
         pausedTime: 0,
       },
       attrs: {
+        input_form: survey.webForm,
+        device: isPlatform('android') ? 'android' : 'ios',
+        app_version: config.version,
+        training,
+
         surveyStartTime: null,
         location: {},
         temperature: '',
@@ -324,14 +231,10 @@ const config = {
     return sample;
   },
 
-  getSubmission(sample, ...args) {
-    const [submission, media] = Sample.prototype.getSubmission.apply(
-      sample,
-      args
-    );
-
+  modifySubmission(fullSubmission) {
+    const submission = fullSubmission[0];
     const subSamples = submission.samples;
-    submission.samples = [];
+    submission.samples = []; // eslint-disable-line
 
     const removeSubSamplesLayerIfNoLocation = subSample => {
       const locationIsMissing = !subSample.fields.entered_sref;
@@ -344,8 +247,8 @@ const config = {
 
     subSamples.forEach(removeSubSamplesLayerIfNoLocation);
 
-    return [submission, media];
+    return fullSubmission;
   },
 };
 
-export default config;
+export default survey;

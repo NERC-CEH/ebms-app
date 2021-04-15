@@ -86,7 +86,6 @@ class EditOccurrence extends Component {
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}
             icon={clipboardOutline}
-            iconMode="md"
             label="Comment"
             value={comment}
           />

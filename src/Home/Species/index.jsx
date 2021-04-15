@@ -2,28 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonModal, IonGrid, IonRow, IonCol } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
-import { Page, Main, ModalHeader, UserFeedbackRequest } from '@apps';
+import { informationCircle } from 'ionicons/icons';
+import {
+  Page,
+  Main,
+  ModalHeader,
+  UserFeedbackRequest,
+  InfoMessage,
+} from '@apps';
 import speciesProfiles from 'common/data/profiles/index.json';
 import config from 'config';
 import SpeciesProfile from './components/SpeciesProfile';
 import './images';
 import './thumbnails';
 import './styles.scss';
-
-function getInfoMessage(countrySpeciesCount, totalSpeciesCountryCount) {
-  return (
-    <div className="info-message">
-      <p>
-        <T>
-          This guide is still in development. It covers{' '}
-          {{ countrySpeciesCount }} butterfly species out of the{' '}
-          {{ totalSpeciesCountryCount }} species in your selected country.
-        </T>
-      </p>
-    </div>
-  );
-}
 
 @observer
 class Component extends React.Component {
@@ -152,7 +144,11 @@ class Component extends React.Component {
     return (
       <Page id="home-species">
         <Main class="ion-padding">
-          {getInfoMessage(countrySpeciesCount, totalSpeciesCountryCount)}
+          <InfoMessage icon={informationCircle}>
+            This guide is still in development. It covers{' '}
+            {{ countrySpeciesCount }} butterfly species out of the{' '}
+            {{ totalSpeciesCountryCount }} species in your selected country.
+          </InfoMessage>
 
           {feedbackPanel}
 

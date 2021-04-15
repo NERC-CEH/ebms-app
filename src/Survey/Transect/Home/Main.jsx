@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonList, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
-import { Main, MenuAttrItem } from '@apps';
+import { Main, MenuAttrItem, InfoMessage } from '@apps';
 import { Trans as T } from 'react-i18next';
 import {
   personOutline,
@@ -11,10 +11,12 @@ import {
   openOutline,
   thermometerOutline,
   cloudyOutline,
+  informationCircle,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import config from 'config';
 import windIcon from 'common/images/wind.svg';
+import './styles.scss';
 
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
@@ -66,21 +68,25 @@ class Edit extends Component {
     return (
       <Main id="transect-edit">
         {isDisabled && (
-          <div className="info-message">
-            <p>
-              <T>
-                This record has been submitted and cannot be edited within this
-                App.
-              </T>
-            </p>
+          <>
+            <InfoMessage icon={informationCircle}>
+              This record has been submitted and cannot be edited within this
+              App.
+            </InfoMessage>
 
-            <IonButton href={`${config.site_url}`}>
+            <IonButton
+              href={`${config.backend.url}`}
+              expand="block"
+              fill="outline"
+              size="small"
+              className="website-link"
+            >
               <IonIcon icon={openOutline} slot="end" />
               <IonLabel>
                 <T>eBMS website</T>
               </IonLabel>
             </IonButton>
-          </div>
+          </>
         )}
 
         <IonList lines="full">
@@ -96,7 +102,6 @@ class Edit extends Component {
             routerLink={`${baseURL}/surveyStartTime`}
             disabled={isDisabled}
             icon={timeOutline}
-            iconMode="md"
             label="Start Time"
             value={startTimePretty}
             skipValueTranslation
@@ -106,7 +111,6 @@ class Edit extends Component {
             routerLink={`${baseURL}/surveyEndTime`}
             disabled={isDisabled}
             icon={timeOutline}
-            iconMode="md"
             label="End Time"
             value={endTimePretty}
             skipValueTranslation
@@ -159,7 +163,6 @@ class Edit extends Component {
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}
             icon={clipboardOutline}
-            iconMode="md"
             label="Comment"
             value={comment}
             skipValueTranslation

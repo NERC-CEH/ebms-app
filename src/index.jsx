@@ -5,16 +5,21 @@ import appModel from 'appModel';
 import userModel from 'userModel';
 import savedSamples from 'savedSamples';
 import config from 'config';
+import { configure as mobxConfig } from 'mobx';
 import { initAnalytics } from '@apps';
 import { Plugins, StatusBarStyle } from '@capacitor/core';
 import App from './App';
 
 const { App: AppPlugin, StatusBar, SplashScreen } = Plugins;
 
+console.log('🚩 App starting.');
+
 setupConfig({
   hardwareBackButton: false, // android back button
   swipeBackEnabled: false,
 });
+
+mobxConfig({ enforceActions: 'never' });
 
 (async function () {
   await appModel._init;

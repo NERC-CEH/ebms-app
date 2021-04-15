@@ -3,7 +3,7 @@
  **************************************************************************** */
 import Log from 'helpers/log';
 import { Model } from '@apps';
-import makeRequest from 'common/helpers/makeRequest';
+import axios from 'axios';
 import * as Yup from 'yup';
 import CONFIG from 'config';
 import { genericStore } from './store';
@@ -38,9 +38,6 @@ class UserModel extends Model {
     firstname: Yup.string().required(),
     secondname: Yup.string().required(),
     password: Yup.string().required(),
-    terms: Yup.boolean()
-      .oneOf([true], 'must accept terms and conditions')
-      .required(),
   });
 
   registerSchemaBackend = Yup.object().shape({
@@ -60,18 +57,21 @@ class UserModel extends Model {
     Log('User: logging in.');
 
     const userAuth = btoa(`${details.name}:${details.password}`);
-    const url = CONFIG.users.url + encodeURIComponent(details.name);
+    const url = `${CONFIG.backend.url}/api/v1/users/${encodeURIComponent(
+      details.name
+    )}`;
     const options = {
       headers: {
         authorization: `Basic ${userAuth}`,
-        'x-api-key': CONFIG.indicia.api_key,
+        'x-api-key': CONFIG.backend.apiKey,
         'content-type': 'application/json',
       },
     };
 
     let res;
     try {
-      res = await makeRequest(url, options, CONFIG.users.timeout);
+      res = await axios(url, options);
+      res = res.data;
       const isValidResponse = await this.loginSchemaBackend.isValid(res.data);
       if (!isValidResponse) {
         throw new Error('Invalid backend response.');
@@ -89,21 +89,20 @@ class UserModel extends Model {
     const userAuth = btoa(`${details.name}:${details.password}`);
     const options = {
       method: 'post',
-      mode: 'cors',
       headers: {
         authorization: `Basic ${userAuth}`,
-        'x-api-key': CONFIG.indicia.api_key,
+        'x-api-key': CONFIG.backend.apiKey,
         'content-type': 'plain/text',
       },
-      body: JSON.stringify({ data: details }),
+      data: { data: details },
     };
 
     let res;
     try {
-      res = await makeRequest(CONFIG.users.url, options, CONFIG.users.timeout);
-      const isValidResponse = await this.registerSchemaBackend.isValid(
-        res.data
-      );
+      const url = `${CONFIG.backend.url}/api/v1/users`;
+      res = await axios(url, options);
+      res = res.data;
+      const isValidResponse = await this.registerSchemaBackend.isValid(res);
       if (!isValidResponse) {
         throw new Error('Invalid backend response.');
       }
@@ -111,7 +110,7 @@ class UserModel extends Model {
       throw new Error(t(e.message));
     }
 
-    const user = { ...res.data, ...{ password: details.password } };
+    const user = { ...res, ...{ password: details.password } };
     this._logIn(user);
   }
 
@@ -120,23 +119,26 @@ class UserModel extends Model {
 
     const options = {
       method: 'put',
-      mode: 'cors',
       headers: {
-        'x-api-key': CONFIG.indicia.api_key,
+        'x-api-key': CONFIG.backend.apiKey,
         'content-type': 'plain/text',
       },
-      body: JSON.stringify({
+      data: {
         data: {
           type: 'users',
           password: ' ', // reset password
         },
-      }),
+      },
     };
 
     let res;
     try {
-      const url = CONFIG.users.url + encodeURIComponent(details.name); // url + user id
-      res = await makeRequest(url, options, CONFIG.users.timeout);
+      const url = `${CONFIG.backend.url}/api/v1/users/${encodeURIComponent(
+        details.name
+      )}`;
+      res = await axios(url, options);
+      res = res.data;
+
       const isValidResponse = await this.resetSchemaBackend.isValid(res);
       if (!isValidResponse) {
         throw new Error('Invalid backend response.');

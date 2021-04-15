@@ -76,7 +76,7 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
         </IonItem>
 
         <IonItem
-          href={`${config.site_url}/privacy-notice?lang=${lang}`}
+          href={`${config.backend.url}/privacy-notice?lang=${lang}`}
           target="_blank"
           detail
           detailIcon={openOutline}

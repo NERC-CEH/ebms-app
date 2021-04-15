@@ -3,7 +3,7 @@
  **************************************************************************** */
 import { Model } from '@apps';
 import { observable } from 'mobx';
-import makeRequest from 'common/helpers/makeRequest';
+import axios from 'axios';
 import CONFIG from 'config';
 import * as Yup from 'yup';
 import { genericStore } from './store';
@@ -41,24 +41,25 @@ const parseGeometries = s => ({
 
 async function fetchUserTransects(userModel) {
   const userAuth = btoa(`${userModel.attrs.name}:${userModel.attrs.password}`);
-  const url = `${CONFIG.site_url}api/v1/reports/projects/ebms/ebms_app_sites_list.xml`;
+  const url = `${CONFIG.backend.url}/api/v1/reports/projects/ebms/ebms_app_sites_list.xml`;
   const options = {
-    qs: {
-      website_id: CONFIG.indicia.website_id,
+    params: {
+      website_id: CONFIG.backend.websiteId,
       userID: userModel.attrs.drupalID,
       location_type_id: '',
       locattrs: '',
     },
     headers: {
       authorization: `Basic ${userAuth}`,
-      'x-api-key': CONFIG.indicia.api_key,
+      'x-api-key': CONFIG.backend.apiKey,
       'content-type': 'application/json',
     },
   };
 
   let transects;
   try {
-    transects = await makeRequest(url, options, CONFIG.users.timeout);
+    const res = await axios(url, options);
+    transects = res.data;
     const isValidResponse = await transectsSchemaBackend.isValid(transects);
 
     if (!isValidResponse) {
@@ -87,23 +88,24 @@ async function fetchUserTransects(userModel) {
 
 async function fetchTransectSections(transectLocationIds, userModel) {
   const userAuth = btoa(`${userModel.attrs.name}:${userModel.attrs.password}`);
-  const url = `${CONFIG.site_url}api/v1/reports/projects/ebms/ebms_app_sections_list.xml`;
+  const url = `${CONFIG.backend.url}/api/v1/reports/projects/ebms/ebms_app_sections_list.xml`;
   const options = {
-    qs: {
-      website_id: CONFIG.indicia.website_id,
+    params: {
+      website_id: CONFIG.backend.websiteId,
       userID: userModel.attrs.drupalID,
       location_list: transectLocationIds,
     },
     headers: {
       authorization: `Basic ${userAuth}`,
-      'x-api-key': CONFIG.indicia.api_key,
+      'x-api-key': CONFIG.backend.apiKey,
       'content-type': 'application/json',
     },
   };
 
   let sections;
   try {
-    sections = await makeRequest(url, options, CONFIG.users.timeout);
+    const res = await axios(url, options);
+    sections = res.data;
     const isValidResponse = await sectionsSchemaBackend.isValid(sections);
     if (!isValidResponse) {
       throw new Error('Invalid server response.');

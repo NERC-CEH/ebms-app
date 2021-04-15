@@ -22,6 +22,7 @@ import {
   clipboardOutline,
   filterOutline,
   warningOutline,
+  informationCircle,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import { toJS } from 'mobx';
@@ -32,6 +33,7 @@ import {
   MenuNoteItem,
   LongPressButton,
   alert,
+  InfoMessage,
 } from '@apps';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import { Trans as T } from 'react-i18next';
@@ -334,28 +336,31 @@ class AreaCount extends Component {
     return (
       <Main id="precise-area-count-edit">
         {isDisabled && (
-          <div className="info-message">
-            <p>
-              <T>
-                This record has been submitted and cannot be edited within this
-                App.
-              </T>
-            </p>
+          <>
+            <InfoMessage icon={informationCircle}>
+              This record has been submitted and cannot be edited within this
+              App.
+            </InfoMessage>
 
-            <IonButton href={`${config.site_url}`}>
+            <IonButton
+              href={`${config.backend.url}`}
+              expand="block"
+              fill="outline"
+              size="small"
+              className="website-link"
+            >
               <IonIcon icon={openOutline} slot="end" />
               <IonLabel>
                 <T>eBMS website</T>
               </IonLabel>
             </IonButton>
-          </div>
+          </>
         )}
 
         <IonList lines="full">
           <MenuAttrItem
             routerLink={`${match.url}/area`}
             icon={mapOutline}
-            iconMode="md"
             label="Area"
             value={areaPretty}
             skipValueTranslation
@@ -370,7 +375,6 @@ class AreaCount extends Component {
           <MenuAttrItem
             routerLink={`${match.url}/details`}
             icon={clipboardOutline}
-            iconMode="md"
             label="Additional Details"
           />
 

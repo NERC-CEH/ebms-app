@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 import config from 'config';
-import makeRequest from 'common/helpers/makeRequest';
+import axios from 'axios';
 import surveys from 'common/config/surveys';
 
 const speciesSchemaBackend = Yup.object().shape({
@@ -16,7 +16,7 @@ const speciesSchemaBackend = Yup.object().shape({
 });
 
 async function fetchSpeciesReport() {
-  const url = `${config.site_url}iform/esproxy/rawsearch/1`;
+  const url = `${config.backend.url}/iform/esproxy/rawsearch/1`;
 
   const body = {
     'aggs[by_species][terms][field]': 'taxon.accepted_name.keyword',
@@ -29,14 +29,10 @@ async function fetchSpeciesReport() {
   const formData = new FormData();
   Object.entries(body).forEach(prop => formData.append(...prop));
 
-  const options = {
-    method: 'post',
-    body: formData,
-  };
-
   let response;
   try {
-    response = await makeRequest(url, options, 1000000);
+    response = await axios.post(url, formData);
+    response = response.data;
     const isValidResponse = await speciesSchemaBackend.isValid(response);
 
     if (!isValidResponse) {

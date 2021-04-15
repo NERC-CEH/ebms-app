@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IonIcon, IonButton, IonList } from '@ionic/react';
+import { IonIcon, IonButton, IonList, IonRouterLink } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
-import { Main, InputWithValidation, ToggleWithValidation } from '@apps';
+import { Main, InputWithValidation } from '@apps';
 import {
   personOutline,
   mailOutline,
   keyOutline,
-  lockOutline,
   eyeOutline,
   eyeOffOutline,
 } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 import config from 'config';
+import './styles.scss';
 
 class Component extends React.Component {
   state = {
@@ -79,23 +79,21 @@ class Component extends React.Component {
                     />
                   </IonButton>
                 </InputWithValidation>
-                <ToggleWithValidation
-                  name="terms"
-                  // prettier-ignore
-                  label={(
-                    <>
-                      <T>I agree to</T>{' '}
-                      <a
-                        href={`${config.site_url}/privacy-notice?lang=${lang}`}
-                      >
-                        <T>Terms and Conditions</T>
-                      </a>
-                    </>
-                  )}
-                  icon={lockOutline}
-                  type="terms"
-                  {...props}
-                />
+
+                <div className="terms-info-text">
+                  <T>I agree to</T>{' '}
+                  <IonRouterLink
+                    href={`${config.backend.url}/privacy-notice?lang=${lang}`}
+                  >
+                    <T>Privacy Policy</T>
+                  </IonRouterLink>{' '}
+                  <T>and</T>{' '}
+                  <IonRouterLink
+                    href={`${config.backend.url}/terms-and-conditions?lang=${lang}`}
+                  >
+                    <T>Terms and Conditions</T>
+                  </IonRouterLink>
+                </div>
               </IonList>
 
               <IonButton color="primary" type="submit" expand="block">

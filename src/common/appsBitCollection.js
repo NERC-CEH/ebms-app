@@ -17,6 +17,7 @@ export { default as RadioInput } from '@bit/flumens.apps.radio-input';
 export { default as SliderInput } from '@bit/flumens.apps.slider-input';
 export { default as ModalHeader } from '@bit/flumens.apps.modal-header';
 export { default as InfoBackgroundMessage } from '@bit/flumens.apps.info-background-message';
+export { default as InfoMessage } from '@bit/flumens.apps.info-message';
 export { default as LongPressFabButton } from '@bit/flumens.apps.long-press-fab-button';
 export { default as UserFeedbackRequest } from '@bit/flumens.apps.user-feedback-request';
 export { default as PhotoPicker } from '@bit/flumens.apps.photo-picker';

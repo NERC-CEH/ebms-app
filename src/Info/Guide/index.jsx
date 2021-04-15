@@ -132,7 +132,7 @@ const Component = () => (
       </Section>
 
       <IonList>
-        <IonButton href={`${config.site_url}/ebms-app`} fill="outline">
+        <IonButton href={`${config.backend.url}/ebms-app`} fill="outline">
           <IonIcon slot="end" icon={openOutline} />
           <T>More Information</T>
         </IonButton>

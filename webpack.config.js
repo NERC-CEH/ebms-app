@@ -10,7 +10,7 @@ const required = [
 ];
 
 const development = {
-  APP_INDICIA_API_HOST: '',
+  APP_BACKEND_URL: '',
 };
 
 appConfig.plugins.unshift(

@@ -1,21 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton, IonList } from '@ionic/react';
-import { Main, InputWithValidation } from '@apps';
+import { Main, InputWithValidation, InfoMessage } from '@apps';
 import { Trans as T } from 'react-i18next';
-import { personOutline } from 'ionicons/icons';
+import { personOutline, informationCircle } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 
 const Component = ({ onSubmit, schema }) => {
   return (
     <Main>
-      <div className="info-message">
-        <p>
-          <T>
-            Enter your username or email address to request a password reset.
-          </T>
-        </p>
-      </div>
+      <InfoMessage icon={informationCircle}>
+        Enter your username or email address to request a password reset.
+      </InfoMessage>
+
       <Formik validationSchema={schema} onSubmit={onSubmit} initialValues={{}}>
         {props => (
           <Form>

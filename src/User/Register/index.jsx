@@ -24,7 +24,6 @@ async function onRegister(userModel, details, lang, onSuccess) {
     secondname: secondname.trim(),
     password,
     passwordConfirm: password,
-    termsAgree: true,
     lang,
   };
 

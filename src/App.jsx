@@ -28,8 +28,6 @@ import 'leaflet-draw/dist/images/spritesheet.svg';
 
 import 'common/theme.scss';
 
-console.log('🚩 App starting.'); // eslint-disable-line
-
 const HomeRedirect = () => {
   const { navigate } = useContext(NavContext);
   navigate('/home/report', 'root'); // simple redirect component doesn't work when back from login

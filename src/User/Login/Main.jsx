@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
-import { Main, InputWithValidation } from '@apps';
+import { Main, InputWithValidation, InfoMessage } from '@apps';
 import { Trans as T } from 'react-i18next';
 import {
   keyOutline,
   personOutline,
   eyeOutline,
   eyeOffOutline,
+  informationCircle,
 } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 
@@ -28,11 +29,10 @@ class Component extends React.Component {
 
     return (
       <Main>
-        <div className="info-message">
-          <p>
-            <T>Please sign in with your eBMS account or register.</T>
-          </p>
-        </div>
+        <InfoMessage icon={informationCircle}>
+          Please sign in with your eBMS account or register.
+        </InfoMessage>
+
         <Formik
           validationSchema={schema}
           onSubmit={onSubmit}

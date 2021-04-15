@@ -2,6 +2,7 @@
   .home-report-label {
     text-transform: uppercase;
     white-space: normal;
+    padding: 10px 0;
   }
 
   .report-common-name-label {
@@ -19,6 +20,10 @@
 
     ion-label {
       margin: 7px 0;
+    }
+
+    .ion-text-right {
+      text-align: right;
     }
   }
 
