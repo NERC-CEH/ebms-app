@@ -7,4 +7,39 @@
   ion-item-divider.md span {
     margin-right: 20px;
   }
+
+  ion-label.time {
+    max-width: 66px;
+    margin: 0;
+  }
+
+  .species-list-header {
+    background: #e6e6e6 !important;
+    color: #777777;
+
+    padding-left: 7px;
+    --inner-padding-end: 0;
+    &.ios {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    ion-label {
+      width: 100%;
+      text-align: center;
+      font-weight: normal;
+      font-size: 0.8em;
+
+      &:nth-of-type(2) {
+        padding-left: 13px;
+        text-align: left;
+      }
+      &:first-of-type {
+        max-width: 65px;
+      }
+      &:last-of-type {
+        max-width: 50px;
+      }
+    }
+  }
 }

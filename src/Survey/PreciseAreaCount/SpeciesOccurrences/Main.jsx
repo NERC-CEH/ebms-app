@@ -55,7 +55,7 @@ class EditOccurrence extends Component {
       return (
         <IonItemSliding key={smp.cid}>
           <IonItem detail onClick={navigateToOccurrenceWithSample}>
-            <IonLabel>{prettyTime}</IonLabel>
+            <IonLabel className="time">{prettyTime}</IonLabel>
             <IonLabel>
               <IonBadge color="medium">
                 <T>{stage}</T>
@@ -103,9 +103,14 @@ class EditOccurrence extends Component {
             value={species}
           />
 
-          <IonItemDivider>
-            <T>Occurrences list</T>
-            <span slot="end">{count}</span>
+          <IonItemDivider className="species-list-header">
+            <IonLabel>
+              <T>Time</T>
+            </IonLabel>
+            <IonLabel>
+              <T>Stage</T>
+            </IonLabel>
+            <IonLabel>{count}</IonLabel>
           </IonItemDivider>
 
           {this.getSamplesList()}

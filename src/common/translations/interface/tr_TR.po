@@ -367,6 +367,10 @@ msgstr "Alan sayımı"
 msgid "Area"
 msgstr "Alan Büyüklüğü "
 
+# Location attribute label
+msgid "Location"
+msgstr ""
+
 msgid "Add"
 msgstr "Ekle"
 
@@ -879,6 +883,26 @@ msgstr "Pupalar"
 
 msgid "Larval webs"
 msgstr "Larva ağları"
+
+# Butterfly stage
+msgid "Adult"
+msgstr ""
+
+# Butterfly stage
+msgid "Egg"
+msgstr ""
+
+# Butterfly stage
+msgid "Larva"
+msgstr ""
+
+# Butterfly stage
+msgid "Larval web"
+msgstr ""
+
+# Butterfly stage
+msgid "Pupa"
+msgstr ""
 
 msgid "Transect"
 msgstr "Gözlem Hattı"
@@ -1481,6 +1505,10 @@ msgstr ""
 
 # part of Precise 15min count survey
 msgid "Occurrences"
+msgstr ""
+
+# Context term
+msgid "Time"
 msgstr ""
 
 # part of Precise 15min count survey

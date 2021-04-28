@@ -363,6 +363,10 @@ msgstr "Območje štetja"
 msgid "Area"
 msgstr "Območje"
 
+# Location attribute label
+msgid "Location"
+msgstr ""
+
 msgid "Add"
 msgstr "Dodaj"
 
@@ -865,6 +869,26 @@ msgstr "Buba"
 
 msgid "Larval webs"
 msgstr "Zapredki gosenic"
+
+# Butterfly stage
+msgid "Adult"
+msgstr ""
+
+# Butterfly stage
+msgid "Egg"
+msgstr ""
+
+# Butterfly stage
+msgid "Larva"
+msgstr ""
+
+# Butterfly stage
+msgid "Larval web"
+msgstr ""
+
+# Butterfly stage
+msgid "Pupa"
+msgstr ""
 
 msgid "Transect"
 msgstr "Transekt"
@@ -1463,6 +1487,10 @@ msgstr "Natančni 15-minutni popis."
 # part of Precise 15min count survey
 msgid "Occurrences"
 msgstr "Pojavljanja"
+
+# Context term
+msgid "Time"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"

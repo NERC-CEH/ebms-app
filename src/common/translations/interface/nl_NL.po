@@ -365,6 +365,10 @@ msgstr "Gebiedstelling"
 msgid "Area"
 msgstr "Gebied"
 
+# Location attribute label
+msgid "Location"
+msgstr ""
+
 msgid "Add"
 msgstr "Toevoegen"
 
@@ -868,6 +872,26 @@ msgstr "Poppen"
 
 msgid "Larval webs"
 msgstr "Rupsennesten"
+
+# Butterfly stage
+msgid "Adult"
+msgstr ""
+
+# Butterfly stage
+msgid "Egg"
+msgstr ""
+
+# Butterfly stage
+msgid "Larva"
+msgstr ""
+
+# Butterfly stage
+msgid "Larval web"
+msgstr ""
+
+# Butterfly stage
+msgid "Pupa"
+msgstr ""
 
 msgid "Transect"
 msgstr "Transect"
@@ -1435,6 +1459,10 @@ msgstr ""
 
 # part of Precise 15min count survey
 msgid "Occurrences"
+msgstr ""
+
+# Context term
+msgid "Time"
 msgstr ""
 
 # part of Precise 15min count survey

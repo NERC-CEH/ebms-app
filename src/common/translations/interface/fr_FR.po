@@ -368,6 +368,10 @@ msgstr "Surface de comptage"
 msgid "Area"
 msgstr "Surface"
 
+# Location attribute label
+msgid "Location"
+msgstr ""
+
 msgid "Add"
 msgstr "Ajouter"
 
@@ -882,6 +886,26 @@ msgid "Pupae"
 msgstr ""
 
 msgid "Larval webs"
+msgstr ""
+
+# Butterfly stage
+msgid "Adult"
+msgstr ""
+
+# Butterfly stage
+msgid "Egg"
+msgstr ""
+
+# Butterfly stage
+msgid "Larva"
+msgstr ""
+
+# Butterfly stage
+msgid "Larval web"
+msgstr ""
+
+# Butterfly stage
+msgid "Pupa"
 msgstr ""
 
 msgid "Transect"
@@ -1408,6 +1432,10 @@ msgstr ""
 
 # part of Precise 15min count survey
 msgid "Occurrences"
+msgstr ""
+
+# Context term
+msgid "Time"
 msgstr ""
 
 # part of Precise 15min count survey

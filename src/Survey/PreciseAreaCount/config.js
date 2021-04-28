@@ -75,10 +75,10 @@ function getGeomString(shape) {
 const stageValues = [
   { value: null, isDefault: true, label: 'Not Recorded' },
   { value: 'Adult', id: 3929 },
-  { value: 'Larva', id: 3931 },
   { value: 'Egg', id: 3932 },
-  { value: 'Pupae', id: 3930 },
+  { value: 'Larva', id: 3931 },
   { value: 'Larval web', id: 14079 },
+  { value: 'Pupa', id: 3930 },
 ];
 
 const survey = {

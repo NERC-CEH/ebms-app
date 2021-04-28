@@ -368,6 +368,10 @@ msgstr "Area Conteggio"
 msgid "Area"
 msgstr "Area "
 
+# Location attribute label
+msgid "Location"
+msgstr ""
+
 msgid "Add"
 msgstr "Aggiungi"
 
@@ -882,6 +886,26 @@ msgstr "Pupa"
 
 msgid "Larval webs"
 msgstr "Ragnatele larvali "
+
+# Butterfly stage
+msgid "Adult"
+msgstr ""
+
+# Butterfly stage
+msgid "Egg"
+msgstr ""
+
+# Butterfly stage
+msgid "Larva"
+msgstr ""
+
+# Butterfly stage
+msgid "Larval web"
+msgstr ""
+
+# Butterfly stage
+msgid "Pupa"
+msgstr ""
 
 msgid "Transect"
 msgstr "Transetto"
@@ -1503,6 +1527,10 @@ msgstr "Precisa conteggio di 15 minuti"
 # part of Precise 15min count survey
 msgid "Occurrences"
 msgstr "Eventi "
+
+# Context term
+msgid "Time"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"

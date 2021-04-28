@@ -363,6 +363,10 @@ msgstr "Бројање у области"
 msgid "Area"
 msgstr "Област"
 
+# Location attribute label
+msgid "Location"
+msgstr ""
+
 msgid "Add"
 msgstr "Додај"
 
@@ -871,6 +875,26 @@ msgstr "Лутка"
 
 msgid "Larval webs"
 msgstr "Мрежа гусеница"
+
+# Butterfly stage
+msgid "Adult"
+msgstr ""
+
+# Butterfly stage
+msgid "Egg"
+msgstr ""
+
+# Butterfly stage
+msgid "Larva"
+msgstr ""
+
+# Butterfly stage
+msgid "Larval web"
+msgstr ""
+
+# Butterfly stage
+msgid "Pupa"
+msgstr ""
 
 msgid "Transect"
 msgstr "Трансект"
@@ -1470,6 +1494,10 @@ msgstr ""
 
 # part of Precise 15min count survey
 msgid "Occurrences"
+msgstr ""
+
+# Context term
+msgid "Time"
 msgstr ""
 
 # part of Precise 15min count survey

@@ -350,6 +350,10 @@ msgstr "Area Count"
 msgid "Area"
 msgstr "Area"
 
+# Location attribute label
+msgid "Location"
+msgstr "Location"
+
 msgid "Add"
 msgstr "Add"
 
@@ -751,6 +755,26 @@ msgstr "Pupae"
 
 msgid "Larval webs"
 msgstr "Larval webs"
+
+# Butterfly stage 
+msgid "Adult"
+msgstr "Adult"
+
+# Butterfly stage 
+msgid "Egg"
+msgstr "Egg"
+
+# Butterfly stage 
+msgid "Larva"
+msgstr "Larva"
+
+# Butterfly stage 
+msgid "Larval web"
+msgstr "Larval web"
+
+# Butterfly stage 
+msgid "Pupa"
+msgstr "Pupa"
 
 msgid "Transect"
 msgstr "Transect"
@@ -1200,6 +1224,10 @@ msgstr "Precise 15min Count"
 # part of Precise 15min count survey
 msgid "Occurrences"
 msgstr "Occurrences"
+
+# part of Precise 15min count survey
+msgid "Time"
+msgstr "Time"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
