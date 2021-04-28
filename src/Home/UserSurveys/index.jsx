@@ -132,7 +132,7 @@ class Component extends React.Component {
               <IonLabel className="ion-text-wrap">
                 <T>Pending</T>
                 {pendingSurveys.length ? (
-                  <IonBadge color="danger" slot="end">
+                  <IonBadge color="warning" slot="end">
                     {pendingSurveys.length}
                   </IonBadge>
                 ) : null}

@@ -23,6 +23,7 @@ import appModel from 'appModel';
 import userModel from 'userModel';
 import LongPressFabButton from 'Components/LongPressFabButton';
 import { Trans as T } from 'react-i18next';
+import PendingSurveysBadge from 'common/Components/PendingSurveysBadge';
 import surveys from 'common/config/surveys';
 import Report from './Report';
 import Species from './Species';
@@ -143,6 +144,7 @@ class Component extends React.Component {
               <IonLabel>
                 <T>Surveys</T>
               </IonLabel>
+              <PendingSurveysBadge savedSamples={savedSamples} />
             </IonTabButton>
 
             <IonTabButton tab="menu" href="/home/menu">
