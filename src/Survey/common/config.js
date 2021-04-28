@@ -55,16 +55,14 @@ const temperatureValues = [
 ];
 
 export const temperatureAttr = {
-  label: 'Temperature',
-  type: 'radio',
-  info: 'Please specify the temperature C°.',
-  componentProps: {
-    options: temperatureValues,
+  pageProps: {
+    attrProps: {
+      input: 'radio',
+      info: 'Please specify the temperature C°.',
+      inputProps: { options: temperatureValues },
+    },
   },
-  remote: {
-    id: 1388,
-    values: temperatureValues,
-  },
+  remote: { id: 1388, values: temperatureValues },
 };
 
 const windDirectionValues = [
@@ -81,16 +79,16 @@ const windDirectionValues = [
 ];
 
 export const windDirectionAttr = {
-  label: 'Wind Direction',
-  type: 'radio',
-  info: 'Please specify the wind direction.',
-  componentProps: {
-    options: windDirectionValues,
+  menuProps: { label: 'Wind Direction' },
+  pageProps: {
+    headerProps: { title: 'Wind Direction' },
+    attrProps: {
+      input: 'radio',
+      info: 'Please specify the wind direction.',
+      inputProps: { options: windDirectionValues },
+    },
   },
-  remote: {
-    id: 1389,
-    values: windDirectionValues,
-  },
+  remote: { id: 1389, values: windDirectionValues },
 };
 
 const windSpeedValues = [
@@ -105,37 +103,37 @@ const windSpeedValues = [
 ];
 
 export const windSpeedAttr = {
-  label: 'Wind Speed',
-  type: 'radio',
-  info: 'Please specify the wind speed.',
-  componentProps: {
-    options: windSpeedValues,
+  menuProps: { label: 'Wind Speed' },
+  pageProps: {
+    headerProps: { title: 'Wind Speed' },
+    attrProps: {
+      input: 'radio',
+      info: 'Please specify the wind speed.',
+      inputProps: { options: windSpeedValues },
+    },
   },
-  remote: {
-    id: 1390,
-    values: windSpeedValues,
-  },
+  remote: { id: 1390, values: windSpeedValues },
 };
 
 export const commentAttr = {
-  label: 'Comment',
-  type: 'textarea',
-  info: 'Please add any extra info about this record.',
-  icon: chatboxOutline,
-  skipValueTranslation: true,
+  menuProps: { icon: chatboxOutline, skipValueTranslation: true },
+  pageProps: {
+    attrProps: {
+      input: 'textarea',
+      info: 'Please add any extra info about this record.',
+    },
+  },
 };
 
 export const cloudAttr = {
-  label: 'Cloud',
-  type: 'slider',
-  info: 'Please specify the % of cloud cover.',
-  componentProps: {
-    max: 100,
-    min: 0,
+  pageProps: {
+    attrProps: {
+      input: 'slider',
+      info: 'Please specify the % of cloud cover.',
+      inputProps: { max: 100, min: 0 },
+    },
   },
-  remote: {
-    id: 1457,
-  },
+  remote: { id: 1457 },
 };
 
 export const taxonAttr = {
@@ -151,10 +149,13 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
 });
 
 export const surveyStartTimeAttr = {
-  label: 'Start Time',
-  type: 'time',
-  componentProps: {
-    format: 'HH:mm',
+  menuProps: { label: 'Start Time' },
+  pageProps: {
+    headerProps: { title: 'Start Time' },
+    attrProps: {
+      input: 'time',
+      inputProps: { format: 'HH:mm' },
+    },
   },
   remote: {
     id: 1385,
@@ -163,10 +164,13 @@ export const surveyStartTimeAttr = {
 };
 
 export const surveyEndTimeAttr = {
-  label: 'End Time',
-  type: 'time',
-  componentProps: {
-    format: 'HH:mm',
+  menuProps: { label: 'End Time' },
+  pageProps: {
+    headerProps: { title: 'End Time' },
+    attrProps: {
+      input: 'time',
+      inputProps: { format: 'HH:mm' },
+    },
   },
   remote: {
     id: 1386,
@@ -175,12 +179,12 @@ export const surveyEndTimeAttr = {
 };
 
 export const dateAttr = {
-  type: 'date',
-  isValid: val => val && val.toString() !== 'Invalid Date',
-  componentProps: {
-    max: () => new Date(),
+  isValid: val => val && val.toString() !== 'Invalid Date', // TODO: needed?
+  pageProps: {
+    attrProps: {
+      input: 'date',
+      inputProps: { max: () => new Date() },
+    },
   },
-  remote: {
-    values: date => dateHelp.print(date, false),
-  },
+  remote: { values: date => dateHelp.print(date, false) },
 };

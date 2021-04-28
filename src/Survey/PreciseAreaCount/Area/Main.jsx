@@ -7,6 +7,7 @@ import {
   IonTitle,
   withIonLifeCycle,
 } from '@ionic/react';
+import { withRouter } from 'react-router';
 import { Main } from '@apps';
 import { locateOutline } from 'ionicons/icons';
 import CONFIG from 'config';
@@ -159,7 +160,7 @@ class AreaAttr extends Component {
       const polygon = L.polygon(positions, { color: DEFAULT_SHAPE_COLOR });
 
       polygon.addTo(this.drawnItems);
-      
+
       this.zoomToPolygonShape(shape);
       return;
     }
@@ -305,7 +306,7 @@ class AreaAttr extends Component {
           reject(error);
           return;
         }
-        
+
         resolve(location);
       };
 
@@ -388,4 +389,4 @@ class AreaAttr extends Component {
   }
 }
 
-export default withIonLifeCycle(AreaAttr);
+export default withIonLifeCycle(withRouter(AreaAttr));

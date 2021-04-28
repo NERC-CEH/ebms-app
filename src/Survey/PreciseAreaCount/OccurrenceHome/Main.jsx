@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonList, IonIcon } from '@ionic/react';
+import { withRouter } from 'react-router';
 import {
   clipboardOutline,
   locationOutline,
@@ -95,4 +96,4 @@ class EditOccurrence extends Component {
   }
 }
 
-export default EditOccurrence;
+export default withRouter(EditOccurrence);

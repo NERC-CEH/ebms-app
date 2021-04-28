@@ -15,7 +15,6 @@ class index extends React.Component {
     sample: PropTypes.object.isRequired,
     appModel: PropTypes.object.isRequired,
     userModel: PropTypes.object.isRequired,
-    match: PropTypes.object,
   };
 
   refreshUserTransects = async () => {
@@ -67,7 +66,7 @@ class index extends React.Component {
   };
 
   render() {
-    const { sample, appModel, match } = this.props;
+    const { sample, appModel } = this.props;
     const transect = sample.attrs.location;
 
     return (
@@ -80,7 +79,6 @@ class index extends React.Component {
           sample={sample}
           appModel={appModel}
           onTransectSelect={this.onTransectSelect}
-          match={match}
         />
       </Page>
     );

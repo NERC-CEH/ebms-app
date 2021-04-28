@@ -10,7 +10,6 @@ import './styles.scss';
 class Container extends React.Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
-    match: PropTypes.object.isRequired,
   };
 
   state = {};
@@ -26,7 +25,7 @@ class Container extends React.Component {
   };
 
   render() {
-    const { sample, match } = this.props;
+    const { sample } = this.props;
 
     const location = sample.attrs.location || {};
     const isGPSTracking = sample.isGPSRunning();
@@ -50,7 +49,6 @@ class Container extends React.Component {
           isDisabled={isDisabled}
         />
         <Main
-          match={match}
           sample={sample}
           areaPretty={areaPretty}
           isGPSTracking={isGPSTracking}

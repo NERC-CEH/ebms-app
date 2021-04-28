@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
 import {
   IonList,
   IonItem,
@@ -23,7 +24,7 @@ import './styles.scss';
 class EditOccurrence extends Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
-    samples: PropTypes.object.isRequired,
+    samples: PropTypes.array.isRequired,
     navigateToOccurrence: PropTypes.func.isRequired,
     deleteSample: PropTypes.func.isRequired,
     isDisabled: PropTypes.bool,
@@ -56,7 +57,9 @@ class EditOccurrence extends Component {
           <IonItem detail onClick={navigateToOccurrenceWithSample}>
             <IonLabel>{prettyTime}</IonLabel>
             <IonLabel>
-              <IonBadge color="medium">{stage}</IonBadge>
+              <IonBadge color="medium">
+                <T>{stage}</T>
+              </IonBadge>
             </IonLabel>
             <IonLabel slot="end">{location}</IonLabel>
           </IonItem>
@@ -101,7 +104,7 @@ class EditOccurrence extends Component {
           />
 
           <IonItemDivider>
-            Occurrences list
+            <T>Occurrences list</T>
             <span slot="end">{count}</span>
           </IonItemDivider>
 
@@ -112,4 +115,4 @@ class EditOccurrence extends Component {
   }
 }
 
-export default EditOccurrence;
+export default withRouter(EditOccurrence);

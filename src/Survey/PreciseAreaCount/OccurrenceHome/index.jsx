@@ -11,21 +11,19 @@ import './styles.scss';
 @observer
 class Container extends React.Component {
   static propTypes = {
-    match: PropTypes.object.isRequired,
     sample: PropTypes.object.isRequired,
     subSample: PropTypes.object.isRequired,
     occurrence: PropTypes.object.isRequired,
   };
 
   render() {
-    const { sample, subSample, occurrence, match } = this.props;
+    const { sample, subSample, occurrence } = this.props;
     const isDisabled = !!sample.metadata.synced_on;
 
     return (
       <Page id="precise-area-count-edit-occurrence">
         <Header title="Edit Occurrence" />
         <Main
-          match={match}
           occurrence={occurrence}
           subSample={subSample}
           isDisabled={isDisabled}

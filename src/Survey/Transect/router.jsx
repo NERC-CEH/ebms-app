@@ -10,6 +10,8 @@ import SectionsEdit from './Sections/Edit';
 import SectionsEditTaxa from './Sections/Taxon';
 import survey from './config';
 
+const { AttrPageFromRoute } = AttrPage;
+
 const baseURL = '/survey/transect';
 
 const routes = [
@@ -20,7 +22,7 @@ const routes = [
       <Home appModel={appModel} savedSamples={savedSamples} {...props} />
     ),
   ],
-  [`${baseURL}/:smpId/edit/:attr`, AttrPage],
+  [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
   [
     `${baseURL}/:smpId/edit/sections`,
     props => (
@@ -31,7 +33,7 @@ const routes = [
     `${baseURL}/:smpId/edit/sections/:subSmpId`,
     props => <SectionsEdit {...props} appModel={appModel} />,
   ],
-  [`${baseURL}/:smpId/edit/sections/:subSmpId/:attr`, AttrPage],
+  [`${baseURL}/:smpId/edit/sections/:subSmpId/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/edit/sections/:subSmpId/taxa`, SectionsEditTaxa],
 ];
 

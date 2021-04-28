@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
 import { observer } from 'mobx-react';
 import { Page, Header, alert } from '@apps';
 import { NavContext, withIonLifeCycle } from '@ionic/react';
@@ -37,7 +38,7 @@ function byCreationDate(s1, s2) {
 class Container extends React.Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
-    match: PropTypes.object,
+    match: PropTypes.object.isRequired,
   };
 
   static contextType = NavContext;
@@ -86,14 +87,13 @@ class Container extends React.Component {
   };
 
   render() {
-    const { match, sample } = this.props;
+    const { sample } = this.props;
     const isDisabled = sample.isDisabled();
 
     return (
       <Page id="precise-area-count-edit-taxon-group">
         <Header title="Occurrences" />
         <Main
-          match={match}
           sample={sample}
           samples={this.getSamples()}
           isDisabled={isDisabled}
@@ -105,4 +105,4 @@ class Container extends React.Component {
   }
 }
 
-export default withIonLifeCycle(Container);
+export default withIonLifeCycle(withRouter(Container));

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import { withRouter } from 'react-router';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
 import { Page, Main, Header } from '@apps';
@@ -80,4 +81,4 @@ class Controller extends React.Component {
   }
 }
 
-export default Controller;
+export default withRouter(Controller);

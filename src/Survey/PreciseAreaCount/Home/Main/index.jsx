@@ -12,6 +12,7 @@ import {
   NavContext,
   IonSpinner,
 } from '@ionic/react';
+import { withRouter } from 'react-router';
 import {
   mapOutline,
   timeOutline,
@@ -387,4 +388,4 @@ class AreaCount extends Component {
   }
 }
 
-export default AreaCount;
+export default withRouter(AreaCount);

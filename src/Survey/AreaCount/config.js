@@ -123,15 +123,13 @@ const survey = {
 
       count: { remote: { id: 780 } },
       stage: {
-        label: 'Stage',
-        type: 'radio',
-        componentProps: {
-          options: stageValues,
+        pageProps: {
+          attrProps: {
+            input: 'radio',
+            inputProps: { options: stageValues },
+          },
         },
-        remote: {
-          id: 293,
-          values: stageValues,
-        },
+        remote: { id: 293, values: stageValues },
       },
     },
 

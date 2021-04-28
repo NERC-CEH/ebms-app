@@ -81,13 +81,14 @@ const config = {
     comment: commentAttr,
 
     recorder: {
-      label: 'Recorder',
-      type: 'text',
-      info:
-        'Please specify the person responsible for identifying the species.',
-      remote: {
-        id: 1384,
+      pageProps: {
+        attrProps: {
+          input: 'text',
+          info:
+            'Please specify the person responsible for identifying the species.',
+        },
       },
+      remote: { id: 1384 },
     },
   },
 
@@ -98,16 +99,14 @@ const config = {
       cloud: cloudAttr,
 
       reliability: {
-        label: 'Reliability',
-        type: 'radio',
-        info: 'Please specify the reliability of the section count.',
-        componentProps: {
-          options: reliabilityValues,
+        pageProps: {
+          attrProps: {
+            input: 'radio',
+            info: 'Please specify the reliability of the section count.',
+            inputProps: { options: reliabilityValues },
+          },
         },
-        remote: {
-          id: 1393,
-          values: reliabilityValues,
-        },
+        remote: { id: 1393, values: reliabilityValues },
       },
     },
 
@@ -176,6 +175,7 @@ const config = {
       attrs: {
         training,
         date: now,
+        location: null,
         sample_method_id: 22,
         surveyStartTime: now,
         recorder,

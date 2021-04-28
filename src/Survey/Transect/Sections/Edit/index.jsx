@@ -51,8 +51,6 @@ class Container extends React.Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
     subSample: PropTypes.object.isRequired,
-    match: PropTypes.object,
-    history: PropTypes.object,
     appModel: PropTypes.object.isRequired,
   };
 
@@ -98,7 +96,7 @@ class Container extends React.Component {
   };
 
   render() {
-    const { sample, subSample, appModel, match, history } = this.props;
+    const { sample, subSample, appModel } = this.props;
 
     const { areaSurveyListSortedByTime } = appModel.attrs;
     const isDisabled = !!sample.metadata.synced_on;
@@ -120,8 +118,6 @@ class Container extends React.Component {
           decreaseCount={decreaseCount}
           areaSurveyListSortedByTime={areaSurveyListSortedByTime}
           onToggleSpeciesSort={this.toggleSpeciesSort}
-          match={match}
-          history={history}
           isDisabled={isDisabled}
         />
       </Page>

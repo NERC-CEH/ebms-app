@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import { withRouter } from 'react-router';
 import { Page, Header, PhotoPicker } from '@apps';
 import { IonFooter } from '@ionic/react';
 import ImageModel from 'common/models/media';
@@ -12,7 +13,7 @@ import './styles.scss';
 class Container extends React.Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
-    match: PropTypes.object,
+    match: PropTypes.object.isRequired,
   };
 
   render() {
@@ -39,4 +40,4 @@ class Container extends React.Component {
   }
 }
 
-export default Container;
+export default withRouter(Container);

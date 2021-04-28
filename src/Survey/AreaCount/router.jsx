@@ -11,6 +11,8 @@ import AreaAttr from './Area';
 import Details from './Details';
 import survey from './config';
 
+const { AttrPageFromRoute } = AttrPage;
+
 const baseURL = '/survey/area';
 
 const routes = [
@@ -26,12 +28,12 @@ const routes = [
       />
     ),
   ],
-  [`${baseURL}/:smpId/edit/:attr`, AttrPage],
+  [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/edit/area`, AreaAttr],
   [`${baseURL}/:smpId/edit/taxa`, Taxon],
   [`${baseURL}/:smpId/edit/details`, Details],
-  [`${baseURL}/:smpId/edit/details/:attr`, AttrPage],
-  [`${baseURL}/:smpId/edit/occ/:occId/:attr`, AttrPage],
+  [`${baseURL}/:smpId/edit/details/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/edit/occ/:occId/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/edit/occ/:occId/taxa`, Taxon],
   [`${baseURL}/:smpId/edit/occ/:occId`, OccurrenceHome],
 ];

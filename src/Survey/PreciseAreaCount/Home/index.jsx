@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import { withRouter } from 'react-router';
 import { toJS } from 'mobx';
 import { Page, alert, toast, showInvalidsMessage } from '@apps';
 import i18n from 'i18next';
@@ -67,8 +68,7 @@ function byCreateTime(model1, model2) {
 class Container extends React.Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
-    match: PropTypes.object,
-    history: PropTypes.object,
+    match: PropTypes.object.isRequired,
     appModel: PropTypes.object.isRequired,
     savedSamples: PropTypes.array.isRequired,
   };
@@ -259,7 +259,7 @@ class Container extends React.Component {
   };
 
   render() {
-    const { sample, appModel, history, match } = this.props;
+    const { sample, appModel } = this.props;
 
     const { areaSurveyListSortedByTime } = appModel.attrs;
     const isTraining = sample.metadata.training;
@@ -278,7 +278,6 @@ class Container extends React.Component {
           isDisabled={isDisabled}
         />
         <Main
-          match={match}
           sample={sample}
           appModel={appModel}
           previousSurvey={previousSurvey}
@@ -288,7 +287,6 @@ class Container extends React.Component {
           navigateToSpeciesOccurrences={this.navigateToSpeciesOccurrences}
           areaSurveyListSortedByTime={areaSurveyListSortedByTime}
           onToggleSpeciesSort={this.toggleSpeciesSort}
-          history={history}
           isDisabled={isDisabled}
           copyPreviousSurveyTaxonList={this.copyPreviousSurveyTaxonList}
         />
@@ -297,4 +295,4 @@ class Container extends React.Component {
   }
 }
 
-export default Container;
+export default withRouter(Container);

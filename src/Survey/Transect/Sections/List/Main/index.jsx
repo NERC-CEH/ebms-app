@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import { withRouter } from 'react-router';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import { toJS } from 'mobx';
 import { Main } from '@apps';
@@ -70,4 +71,4 @@ Sections.propTypes = {
   onTransectSelect: PropTypes.func.isRequired,
 };
 
-export default observer(Sections);
+export default withRouter(observer(Sections));

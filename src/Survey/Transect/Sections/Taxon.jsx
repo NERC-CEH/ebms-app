@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import { withRouter } from 'react-router';
 import { Page, Main, Header } from '@apps';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
@@ -9,7 +10,7 @@ import Occurrence from 'occurrence';
 @observer
 class Controller extends React.Component {
   static propTypes = {
-    match: PropTypes.object,
+    match: PropTypes.object.isRequired,
     subSample: PropTypes.object.isRequired,
   };
 
@@ -54,4 +55,4 @@ class Controller extends React.Component {
   }
 }
 
-export default Controller;
+export default withRouter(Controller);
