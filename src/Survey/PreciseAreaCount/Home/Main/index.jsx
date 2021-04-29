@@ -11,6 +11,7 @@ import {
   IonItemOption,
   NavContext,
   IonSpinner,
+  IonItemDivider,
 } from '@ionic/react';
 import { withRouter } from 'react-router';
 import {
@@ -180,11 +181,14 @@ class AreaCount extends Component {
           detail={!isSpeciesDisabled}
           onClick={navigateToSpeciesOccurrencesWrap}
         >
-          <div className="precise-area-count-edit-count">
-            <IonButton onClick={increaseCountWrap} fill="clear">
-              {species.count}
-            </IonButton>
-          </div>
+          <IonButton
+            className="precise-area-count-edit-count"
+            onClick={increaseCountWrap}
+            fill="clear"
+          >
+            {species.count}
+            <div className="label-divider" />
+          </IonButton>
           <IonLabel>{speciesName}</IonLabel>
           <IonLabel slot="end" className="location-spinner">
             {location}
@@ -239,7 +243,15 @@ class AreaCount extends Component {
         </div>
 
         <IonList id="list" lines="full">
-          {speciesList}
+          <div className="rounded">
+            <IonItemDivider className="species-list-header">
+              <IonLabel>Count</IonLabel>
+              <IonLabel>Species</IonLabel>
+              <IonLabel>{speciesList.length}</IonLabel>
+            </IonItemDivider>
+
+            {speciesList}
+          </div>
         </IonList>
       </>
     );
@@ -359,25 +371,30 @@ class AreaCount extends Component {
         )}
 
         <IonList lines="full">
-          <MenuAttrItem
-            routerLink={`${match.url}/area`}
-            icon={mapOutline}
-            label="Area"
-            value={areaPretty}
-            skipValueTranslation
-          />
+          <IonItemDivider>
+            <T>Details</T>
+          </IonItemDivider>
+          <div className="rounded">
+            <MenuAttrItem
+              routerLink={`${match.url}/area`}
+              icon={mapOutline}
+              label="Area"
+              value={areaPretty}
+              skipValueTranslation
+            />
 
-          {this.showAreaWarningNote()}
+            {this.showAreaWarningNote()}
 
-          {this.showCopySpeciesTip()}
+            {this.showCopySpeciesTip()}
 
-          {this.getTimerButton()}
+            {this.getTimerButton()}
 
-          <MenuAttrItem
-            routerLink={`${match.url}/details`}
-            icon={clipboardOutline}
-            label="Additional Details"
-          />
+            <MenuAttrItem
+              routerLink={`${match.url}/details`}
+              icon={clipboardOutline}
+              label="Additional Details"
+            />
+          </div>
 
           {this.getSpeciesAddButton()}
         </IonList>

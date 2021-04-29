@@ -63,7 +63,9 @@ function Transects({ appModel, onTransectSelect }) {
       <InfoMessage icon={informationCircle}>
         Please select your transect first.
       </InfoMessage>
-      <IonList lines="full">{transectsList}</IonList>
+      <IonList lines="full">
+        <div className="rounded">{transectsList}</div>
+      </IonList>
     </Main>
   );
 }

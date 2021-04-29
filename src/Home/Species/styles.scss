@@ -5,6 +5,11 @@
   --padding-bottom: 0;
   --background: var(--ion-color-dark);
 
+  .info-message {
+    border-radius: 0;
+    margin: 0;
+  }
+
   &,
   .inner-scroll {
     margin: 0;

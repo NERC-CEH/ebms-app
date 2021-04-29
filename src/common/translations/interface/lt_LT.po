@@ -1478,7 +1478,7 @@ msgstr "Tikslusis 15 minučių monitoringas"
 msgid "Occurrences"
 msgstr "Rūšys"
 
-# Context term
+# part of Precise 15min count survey
 msgid "Time"
 msgstr "Laikas"
 
@@ -1497,3 +1497,23 @@ msgstr "<0>Nėra išsaugotų įrašų</0>"
 # user register error message
 msgid "Account already exists."
 msgstr "Paskyra jau egzistuoja."
+
+# A survey label
+msgid "Details"
+msgstr "Detalės"
+
+# A survey label
+msgid "Species Photo"
+msgstr "Drugelio Nuotrauka"
+
+# Info message for species stage picker
+msgid "Pick the life stage"
+msgstr "Pasirinkite drugio stadiją"
+
+# A survey label
+msgid "Weather"
+msgstr "Oras"
+
+# A survey label
+msgid "Photo"
+msgstr "Nuotrauka"

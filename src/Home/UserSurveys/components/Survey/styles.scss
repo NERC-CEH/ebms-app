@@ -1,4 +1,14 @@
 .survey-list-item {
+  border-radius: 10px;
+  background: white;
+  --border-style: none;
+  margin: 6px auto;
+  max-width: 600px; // ipad
+
+  ion-item {
+    --border-color: transparent;
+  }
+
   h3:not(:first-of-type) {
     margin-bottom: 10px;
   }

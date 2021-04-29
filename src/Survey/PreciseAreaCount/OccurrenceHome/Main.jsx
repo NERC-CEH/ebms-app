@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { IonList, IonIcon } from '@ionic/react';
+import { IonList, IonIcon, IonItemDivider } from '@ionic/react';
 import { withRouter } from 'react-router';
 import {
   clipboardOutline,
@@ -8,7 +8,10 @@ import {
   warningOutline,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
-import { Main, MenuAttrItem } from '@apps';
+import ImageModel from 'common/models/media';
+import config from 'config';
+import { Trans as T } from 'react-i18next';
+import { Main, MenuAttrItem, PhotoPicker } from '@apps';
 import GridRefValue from 'Components/GridRefValue';
 import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from './caterpillar.svg';
@@ -61,35 +64,52 @@ class EditOccurrence extends Component {
     return (
       <Main id="area-count-occurrence-edit">
         <IonList lines="full">
-          <MenuAttrItem
-            routerLink={`${baseURL}/taxon`}
-            disabled={isDisabled}
-            icon={butterflyIcon}
-            label="Species"
-            value={species}
-          />
-          <MenuAttrItem
-            routerLink={`${sampleBaseUrl}/location`}
-            disabled={isDisabled}
-            icon={locationOutline}
-            label="Location"
-            value={location}
-            skipTranslation
-          />
-          <MenuAttrItem
-            routerLink={`${baseURL}/stage`}
-            disabled={isDisabled}
-            icon={caterpillarIcon}
-            label="Stage"
-            value={stage}
-          />
-          <MenuAttrItem
-            routerLink={`${baseURL}/comment`}
-            disabled={isDisabled}
-            icon={clipboardOutline}
-            label="Comment"
-            value={comment}
-          />
+          <IonItemDivider>
+            <T>Details</T>
+          </IonItemDivider>
+          <div className="rounded">
+            <MenuAttrItem
+              routerLink={`${baseURL}/taxon`}
+              disabled={isDisabled}
+              icon={butterflyIcon}
+              label="Species"
+              value={species}
+            />
+            <MenuAttrItem
+              routerLink={`${sampleBaseUrl}/location`}
+              disabled={isDisabled}
+              icon={locationOutline}
+              label="Location"
+              value={location}
+              skipTranslation
+            />
+            <MenuAttrItem
+              routerLink={`${baseURL}/stage`}
+              disabled={isDisabled}
+              icon={caterpillarIcon}
+              label="Stage"
+              value={stage}
+            />
+            <MenuAttrItem
+              routerLink={`${baseURL}/comment`}
+              disabled={isDisabled}
+              icon={clipboardOutline}
+              label="Comment"
+              value={comment}
+            />
+          </div>
+
+          <IonItemDivider>
+            <T>Species Photo</T>
+          </IonItemDivider>
+          <div className="rounded">
+            <PhotoPicker
+              model={occurrence}
+              isDisabled={isDisabled}
+              dataDirPath={config.dataPath}
+              ImageClass={ImageModel}
+            />
+          </div>
         </IonList>
       </Main>
     );

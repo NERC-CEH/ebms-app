@@ -5,6 +5,7 @@ import {
   IonCardContent,
   IonCardTitle,
   IonLifeCycleContext,
+  IonChip,
 } from '@ionic/react';
 import PropTypes from 'prop-types';
 import { Main, Gallery } from '@apps';
@@ -78,7 +79,9 @@ class Component extends React.Component {
 
           <IonCardHeader>
             <IonCardTitle>{t(species.taxon, null, true)}</IonCardTitle>
-            <IonCardSubtitle>{species.taxon}</IonCardSubtitle>
+            <IonCardSubtitle>
+              <i>{species.taxon}</i>
+            </IonCardSubtitle>
           </IonCardHeader>
 
           {status && (
@@ -87,7 +90,9 @@ class Component extends React.Component {
                 <T>Status</T>:
               </h3>
               <span>
-                <T>{status}</T>
+                <IonChip className="species-status" outline>
+                  <T>{status}</T>
+                </IonChip>
               </span>
             </IonCardContent>
           )}

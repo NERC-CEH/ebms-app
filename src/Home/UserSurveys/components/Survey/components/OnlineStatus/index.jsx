@@ -11,11 +11,9 @@ const Component = observer(props => {
 
   if (!saved) {
     return (
-      <IonLabel slot="end" class="record-status">
-        <IonChip color="dark" class="ion-text-wrap">
-          {t('Draft')}
-        </IonChip>
-      </IonLabel>
+      <IonChip slot="end" class="record-status">
+        <IonLabel>{t('Draft')}</IonLabel>
+      </IonChip>
     );
   }
 

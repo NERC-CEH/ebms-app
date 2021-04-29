@@ -91,38 +91,40 @@ class Edit extends Component {
         </div>
 
         <IonList id="list" lines="full">
-          {occurrences.map(occ => (
-            <IonItemSliding key={occ.cid}>
-              <IonItem>
-                {!isDisabled && (
-                  <IonButton onClick={() => decreaseCount(occ)} fill="clear">
-                    <IonIcon icon={removeCircleOutline} slot="icon-only" />
+          <div className="rounded">
+            {occurrences.map(occ => (
+              <IonItemSliding key={occ.cid}>
+                <IonItem>
+                  {!isDisabled && (
+                    <IonButton onClick={() => decreaseCount(occ)} fill="clear">
+                      <IonIcon icon={removeCircleOutline} slot="icon-only" />
+                    </IonButton>
+                  )}
+                  <IonButton class="transect-edit-count" fill="clear">
+                    {occ.attrs.count}
                   </IonButton>
-                )}
-                <IonButton class="transect-edit-count" fill="clear">
-                  {occ.attrs.count}
-                </IonButton>
 
-                {!isDisabled && (
-                  <IonButton onClick={() => increaseCount(occ)} fill="clear">
-                    <IonIcon icon={addCircleOutline} slot="icon-only" />
-                  </IonButton>
-                )}
+                  {!isDisabled && (
+                    <IonButton onClick={() => increaseCount(occ)} fill="clear">
+                      <IonIcon icon={addCircleOutline} slot="icon-only" />
+                    </IonButton>
+                  )}
 
-                <IonLabel>
-                  {occ.attrs.taxon[occ.attrs.taxon.found_in_name]}
-                </IonLabel>
-              </IonItem>
-              <IonItemOptions side="end">
-                <IonItemOption
-                  color="danger"
-                  onClick={() => deleteOccurrence(occ)}
-                >
-                  <T>Delete</T>
-                </IonItemOption>
-              </IonItemOptions>
-            </IonItemSliding>
-          ))}
+                  <IonLabel>
+                    {occ.attrs.taxon[occ.attrs.taxon.found_in_name]}
+                  </IonLabel>
+                </IonItem>
+                <IonItemOptions side="end">
+                  <IonItemOption
+                    color="danger"
+                    onClick={() => deleteOccurrence(occ)}
+                  >
+                    <T>Delete</T>
+                  </IonItemOption>
+                </IonItemOptions>
+              </IonItemSliding>
+            ))}
+          </div>
         </IonList>
       </Main>
     );
@@ -163,22 +165,24 @@ class Edit extends Component {
     return (
       <Main id="area-count-edit">
         <IonList lines="full">
-          <MenuAttrItem
-            routerLink={`${baseURL}/cloud`}
-            disabled={isDisabled}
-            icon={cloudyOutline}
-            label="Cloud"
-            value={cloud}
-            skipValueTranslation
-          />
+          <div className="rounded">
+            <MenuAttrItem
+              routerLink={`${baseURL}/cloud`}
+              disabled={isDisabled}
+              icon={cloudyOutline}
+              label="Cloud"
+              value={cloud}
+              skipValueTranslation
+            />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/reliability`}
-            disabled={isDisabled}
-            icon={thumbsUpOutline}
-            label="Reliability"
-            value={reliability}
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/reliability`}
+              disabled={isDisabled}
+              icon={thumbsUpOutline}
+              label="Reliability"
+              value={reliability}
+            />
+          </div>
 
           {this.getSpeciesAddButton()}
         </IonList>

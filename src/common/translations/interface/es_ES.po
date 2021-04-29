@@ -1527,7 +1527,7 @@ msgstr ""
 msgid "Occurrences"
 msgstr "Presencias"
 
-# Context term
+# part of Precise 15min count survey
 msgid "Time"
 msgstr ""
 
@@ -1546,3 +1546,23 @@ msgstr "<0>No hay muestreos cargados </0>"
 # user register error message
 msgid "Account already exists."
 msgstr "La cuenta ya existe."
+
+# A survey label
+msgid "Details"
+msgstr ""
+
+# A survey label
+msgid "Species Photo"
+msgstr ""
+
+# Info message for species stage picker
+msgid "Pick the life stage"
+msgstr ""
+
+# A survey label
+msgid "Weather"
+msgstr ""
+
+# A survey label
+msgid "Photo"
+msgstr ""

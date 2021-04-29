@@ -1,4 +1,16 @@
 #help.ion-page ion-content {
+  * {
+    --background: transparent;
+  }
+
+  .rounded {
+    background: white;
+  }
+
+  ion-label {
+    font-weight: 500;
+  }
+
   ion-item-divider {
     --background: var(--ion-color-light-shade);
     --color: var(--ion-color-light-contrast);

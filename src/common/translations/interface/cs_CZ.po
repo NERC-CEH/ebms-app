@@ -1489,7 +1489,7 @@ msgstr "Přesný 15minutový součet"
 msgid "Occurrences"
 msgstr "Výskyt"
 
-# Context term
+# part of Precise 15min count survey
 msgid "Time"
 msgstr ""
 
@@ -1508,3 +1508,23 @@ msgstr "<0>Žádné nahrané průzkumy</0>"
 # user register error message
 msgid "Account already exists."
 msgstr "Účet již existuje."
+
+# A survey label
+msgid "Details"
+msgstr ""
+
+# A survey label
+msgid "Species Photo"
+msgstr ""
+
+# Info message for species stage picker
+msgid "Pick the life stage"
+msgstr ""
+
+# A survey label
+msgid "Weather"
+msgstr ""
+
+# A survey label
+msgid "Photo"
+msgstr ""

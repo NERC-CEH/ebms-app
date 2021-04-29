@@ -39,46 +39,48 @@ class Component extends React.Component {
           {props => (
             <Form>
               <IonList lines="full">
-                <InputWithValidation
-                  name="email"
-                  placeholder="Email"
-                  icon={mailOutline}
-                  type="email"
-                  {...props}
-                />
-                <InputWithValidation
-                  name="firstname"
-                  placeholder="First Name"
-                  icon={personOutline}
-                  type="text"
-                  {...props}
-                />
-                <InputWithValidation
-                  name="secondname"
-                  placeholder="Surname"
-                  icon={personOutline}
-                  type="text"
-                  {...props}
-                />
-                <InputWithValidation
-                  name="password"
-                  placeholder="Password"
-                  icon={keyOutline}
-                  type={showPassword ? 'text' : 'password'}
-                  {...props}
-                >
-                  <IonButton
-                    slot="end"
-                    onClick={this.togglePassword}
-                    fill="clear"
+                <div className="rounded">
+                  <InputWithValidation
+                    name="email"
+                    placeholder="Email"
+                    icon={mailOutline}
+                    type="email"
+                    {...props}
+                  />
+                  <InputWithValidation
+                    name="firstname"
+                    placeholder="First Name"
+                    icon={personOutline}
+                    type="text"
+                    {...props}
+                  />
+                  <InputWithValidation
+                    name="secondname"
+                    placeholder="Surname"
+                    icon={personOutline}
+                    type="text"
+                    {...props}
+                  />
+                  <InputWithValidation
+                    name="password"
+                    placeholder="Password"
+                    icon={keyOutline}
+                    type={showPassword ? 'text' : 'password'}
+                    {...props}
                   >
-                    <IonIcon
-                      icon={showPassword ? eyeOutline : eyeOffOutline}
-                      faint
-                      size="small"
-                    />
-                  </IonButton>
-                </InputWithValidation>
+                    <IonButton
+                      slot="end"
+                      onClick={this.togglePassword}
+                      fill="clear"
+                    >
+                      <IonIcon
+                        icon={showPassword ? eyeOutline : eyeOffOutline}
+                        faint
+                        size="small"
+                      />
+                    </IonButton>
+                  </InputWithValidation>
+                </div>
 
                 <div className="terms-info-text">
                   <T>I agree to</T>{' '}

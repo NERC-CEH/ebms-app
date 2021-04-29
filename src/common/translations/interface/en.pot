@@ -1244,3 +1244,23 @@ msgstr "<0>No uploaded surveys</0>"
 # user register error message
 msgid "Account already exists."
 msgstr "Account already exists."
+
+# A survey label
+msgid "Details"
+msgstr "Details"
+
+# A survey label
+msgid "Species Photo"
+msgstr "Species Photo"
+
+# Info message for species stage picker 
+msgid "Pick the life stage"
+msgstr "Pick the life stage"
+
+# A survey label
+msgid "Weather"
+msgstr "Weather"
+
+# A survey label
+msgid "Photo"
+msgstr "Photo"

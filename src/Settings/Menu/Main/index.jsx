@@ -101,92 +101,97 @@ class Component extends React.Component {
           <IonItemDivider>
             <T>Records</T>
           </IonItemDivider>
-          <IonItem
-            id="submit-all-btn"
-            onClick={() => uploadAllSamplesDialog(uploadAllSamples)}
-          >
-            <IonIcon icon={paperPlaneOutline} size="small" slot="start" />
-            <IonLabel>
-              <T>Upload All</T>
-            </IonLabel>
-          </IonItem>
-          <MenuNoteItem color="medium">
-            Batch upload all finished records. This does not include records in
-            &#39;draft&#39; stage.
-          </MenuNoteItem>
-          <IonItem routerLink="/settings/primary-survey">
-            <IonLabel>
-              <T>Primary Survey</T>
-            </IonLabel>
-            <IonIcon icon={addCircleOutline} size="small" slot="start" />
-            <IonLabel slot="end">
-              <T>{primarySurveyLabel}</T>
-            </IonLabel>
-          </IonItem>
+          <div className="rounded">
+            <IonItem
+              id="submit-all-btn"
+              onClick={() => uploadAllSamplesDialog(uploadAllSamples)}
+            >
+              <IonIcon icon={paperPlaneOutline} size="small" slot="start" />
+              <IonLabel>
+                <T>Upload All</T>
+              </IonLabel>
+            </IonItem>
+            <MenuNoteItem color="medium">
+              Batch upload all finished records. This does not include records
+              in &#39;draft&#39; stage.
+            </MenuNoteItem>
+            <IonItem routerLink="/settings/primary-survey">
+              <IonLabel>
+                <T>Primary Survey</T>
+              </IonLabel>
+              <IonIcon icon={addCircleOutline} size="small" slot="start" />
+              <IonLabel slot="end">
+                <T>{primarySurveyLabel}</T>
+              </IonLabel>
+            </IonItem>
+          </div>
+
           <IonItemDivider>
             <T>Application</T>
           </IonItemDivider>
-          <IonItem routerLink="/settings/language">
-            <IonLabel>
-              <T>Language</T>
-            </IonLabel>
-            <IonIcon icon={flagOutline} size="small" slot="start" />
-            <IonLabel slot="end">{languages[language]}</IonLabel>
-          </IonItem>
-          <IonItem routerLink="/settings/country">
-            <IonLabel>
-              <T>Country</T>
-            </IonLabel>
-            <IonIcon icon={globeOutline} size="small" slot="start" />
-            <IonLabel slot="end">
-              <T>{countries[country]}</T>
-            </IonLabel>
-          </IonItem>
+          <div className="rounded">
+            <IonItem routerLink="/settings/language">
+              <IonLabel>
+                <T>Language</T>
+              </IonLabel>
+              <IonIcon icon={flagOutline} size="small" slot="start" />
+              <IonLabel slot="end">{languages[language]}</IonLabel>
+            </IonItem>
+            <IonItem routerLink="/settings/country">
+              <IonLabel>
+                <T>Country</T>
+              </IonLabel>
+              <IonIcon icon={globeOutline} size="small" slot="start" />
+              <IonLabel slot="end">
+                <T>{countries[country]}</T>
+              </IonLabel>
+            </IonItem>
 
-          <IonItem>
-            <IonIcon icon={schoolOutline} size="small" slot="start" />
-            <IonLabel>
-              <T>Training Mode</T>
-            </IonLabel>
-            <Toggle
-              onToggle={checked => onToggle('useTraining', checked)}
-              checked={useTraining}
-            />
-          </IonItem>
-          <MenuNoteItem color="medium">
-            Mark any new records as &#39;training&#39; and exclude from all
-            reports.
-          </MenuNoteItem>
+            <IonItem>
+              <IonIcon icon={schoolOutline} size="small" slot="start" />
+              <IonLabel>
+                <T>Training Mode</T>
+              </IonLabel>
+              <Toggle
+                onToggle={checked => onToggle('useTraining', checked)}
+                checked={useTraining}
+              />
+            </IonItem>
+            <MenuNoteItem color="medium">
+              Mark any new records as &#39;training&#39; and exclude from all
+              reports.
+            </MenuNoteItem>
 
-          <IonItem>
-            <IonIcon icon={flameOutline} size="small" slot="start" />
-            <IonLabel>
-              <T>Experimental Features</T>
-            </IonLabel>
-            <Toggle
-              onToggle={checked => onToggle('useExperiments', checked)}
-              checked={useExperiments}
-            />
-          </IonItem>
+            <IonItem>
+              <IonIcon icon={flameOutline} size="small" slot="start" />
+              <IonLabel>
+                <T>Experimental Features</T>
+              </IonLabel>
+              <Toggle
+                onToggle={checked => onToggle('useExperiments', checked)}
+                checked={useExperiments}
+              />
+            </IonItem>
 
-          <IonItem>
-            <IonIcon icon={shareOutline} size="small" slot="start" />
-            <IonLabel>
-              <T>Share App Analytics</T>
-            </IonLabel>
-            <Toggle
-              onToggle={checked => onToggle('sendAnalytics', checked)}
-              checked={sendAnalytics}
-            />
-          </IonItem>
-          <MenuNoteItem color="medium">
-            Share app crash data so we can make the app more reliable.
-          </MenuNoteItem>
+            <IonItem>
+              <IonIcon icon={shareOutline} size="small" slot="start" />
+              <IonLabel>
+                <T>Share App Analytics</T>
+              </IonLabel>
+              <Toggle
+                onToggle={checked => onToggle('sendAnalytics', checked)}
+                checked={sendAnalytics}
+              />
+            </IonItem>
+            <MenuNoteItem color="medium">
+              Share app crash data so we can make the app more reliable.
+            </MenuNoteItem>
 
-          <IonItem id="app-reset-btn" onClick={() => resetDialog(resetApp)}>
-            <IonIcon icon={arrowUndoOutline} size="small" slot="start" />
-            <T>Reset</T>
-          </IonItem>
+            <IonItem id="app-reset-btn" onClick={() => resetDialog(resetApp)}>
+              <IonIcon icon={arrowUndoOutline} size="small" slot="start" />
+              <T>Reset</T>
+            </IonItem>
+          </div>
         </IonList>
 
         <p className="app-version">{`v${config.version} (${config.build})`}</p>

@@ -45,15 +45,51 @@
   #species-list-sort {
     text-align: end;
     ion-button {
-      margin-right: 5px;
+      margin-right: 12px;
+      margin-bottom: 10px;
     }
   }
 
   #list {
     font-weight: bold;
 
-    ion-label {
-      margin-left: 8px;
+    .species-list-header {
+      background: #e6e6e6 !important;
+      color: #777777;
+
+      padding-left: 7px;
+      --inner-padding-end: 0;
+      &.ios {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      ion-label {
+        width: 100%;
+        text-align: center;
+        font-weight: normal;
+        font-size: 0.9em;
+
+        &:nth-of-type(2) {
+          padding-left: 16px;
+          text-align: left;
+        }
+        &:first-of-type {
+          max-width: 54px;
+        }
+        &:last-of-type {
+          max-width: 50px;
+        }
+      }
+    }
+
+    ion-item {
+      --padding-start: 0;
+
+      ion-label {
+        margin-left: 16px;
+        font-weight: 700;
+      }
     }
 
     ion-item {
@@ -61,23 +97,16 @@
     }
 
     .precise-area-count-edit-count {
+      margin: 0;
+      width: 62px;
       height: 100%;
+      font-size: 1.3em;
 
-      &:after {
-        position: absolute;
-        top: 20%;
-        left: 55px;
-        content: '';
-        height: 60%;
+      div.label-divider {
+        height: 75%;
         border-right: 1px solid rgba(0, 0, 0, 0.13);
-      }
-
-      ion-button {
-        margin: 0 8px;
-        height: 100%;
-        width: 100%;
-        max-width: 40px;
-        font-size: 1.3em;
+        position: absolute;
+        right: -11px;
       }
     }
   }

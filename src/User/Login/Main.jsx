@@ -41,32 +41,34 @@ class Component extends React.Component {
           {props => (
             <Form>
               <IonList lines="full">
-                <InputWithValidation
-                  name="email"
-                  placeholder={t('Username or email')}
-                  icon={personOutline}
-                  type="text"
-                  {...props}
-                />
-                <InputWithValidation
-                  name="password"
-                  placeholder={t('Password')}
-                  icon={keyOutline}
-                  type={showPassword ? 'text' : 'password'}
-                  {...props}
-                >
-                  <IonButton
-                    slot="end"
-                    onClick={this.togglePassword}
-                    fill="clear"
+                <div className="rounded">
+                  <InputWithValidation
+                    name="email"
+                    placeholder={t('Username or email')}
+                    icon={personOutline}
+                    type="text"
+                    {...props}
+                  />
+                  <InputWithValidation
+                    name="password"
+                    placeholder={t('Password')}
+                    icon={keyOutline}
+                    type={showPassword ? 'text' : 'password'}
+                    {...props}
                   >
-                    <IonIcon
-                      icon={showPassword ? eyeOutline : eyeOffOutline}
-                      faint
-                      size="small"
-                    />
-                  </IonButton>
-                </InputWithValidation>
+                    <IonButton
+                      slot="end"
+                      onClick={this.togglePassword}
+                      fill="clear"
+                    >
+                      <IonIcon
+                        icon={showPassword ? eyeOutline : eyeOffOutline}
+                        faint
+                        size="small"
+                      />
+                    </IonButton>
+                  </InputWithValidation>
+                </div>
               </IonList>
 
               <IonButton color="primary" type="submit" expand="block">
@@ -74,12 +76,14 @@ class Component extends React.Component {
               </IonButton>
 
               <IonList>
-                <IonItem routerLink="/user/register" detail>
-                  <T>Register</T>
-                </IonItem>
-                <IonItem routerLink="/user/reset" detail>
-                  <T>Forgot password?</T>
-                </IonItem>
+                <div className="rounded">
+                  <IonItem routerLink="/user/register" detail>
+                    <T>Register</T>
+                  </IonItem>
+                  <IonItem routerLink="/user/reset" detail>
+                    <T>Forgot password?</T>
+                  </IonItem>
+                </div>
               </IonList>
             </Form>
           )}

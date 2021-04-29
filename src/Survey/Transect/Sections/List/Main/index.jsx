@@ -57,9 +57,12 @@ function Sections({ sample, appModel, onTransectSelect, match }) {
   }
 
   const sections = sample.samples.map(s => getSectionItem(s, match));
+
   return (
     <Main id="transect-sections-list">
-      <IonList lines="full">{sections}</IonList>
+      <IonList lines="full">
+        <div className="rounded">{sections}</div>
+      </IonList>
     </Main>
   );
 }

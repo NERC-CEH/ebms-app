@@ -1,4 +1,8 @@
 #credits.ion-page ion-content {
+  * {
+    --background: transparent;
+  }
+
   .flumens-logo {
     width: 60%;
     max-width: 200px;

@@ -12,8 +12,6 @@ import {
   IonBadge,
 } from '@ionic/react';
 import { alert } from '@apps';
-
-import { openOutline } from 'ionicons/icons';
 import butterflyIcon from 'common/images/butterfly.svg';
 import OnlineStatus from './components/OnlineStatus';
 import ErrorMessage from './components/ErrorMessage';
@@ -57,8 +55,6 @@ const Survey = observer(({ sample }) => {
     ? `/survey/${survey.name}/${sample.cid}/edit`
     : undefined;
 
-  let externalHref;
-
   function getSampleInfo() {
     const label = (
       <>
@@ -87,11 +83,7 @@ const Survey = observer(({ sample }) => {
   return (
     <IonItemSliding class="survey-list-item">
       <ErrorMessage sample={sample} />
-      <IonItem
-        routerLink={href}
-        href={externalHref}
-        detailIcon={externalHref ? openOutline : undefined}
-      >
+      <IonItem routerLink={href}>
         {getSampleInfo()}
         <OnlineStatus sample={sample} />
       </IonItem>

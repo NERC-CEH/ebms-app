@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { Page, Header, PhotoPicker } from '@apps';
-import { IonFooter } from '@ionic/react';
-import ImageModel from 'common/models/media';
-import config from 'config';
+import { Page, Header } from '@apps';
 import Main from './Main';
 import './styles.scss';
 
@@ -28,14 +25,6 @@ class Container extends React.Component {
           subSample={subSample}
           isDisabled={isDisabled}
         />
-        <IonFooter>
-          <PhotoPicker
-            model={occurrence}
-            isDisabled={isDisabled}
-            dataDirPath={config.dataPath}
-            ImageClass={ImageModel}
-          />
-        </IonFooter>
       </Page>
     );
   }

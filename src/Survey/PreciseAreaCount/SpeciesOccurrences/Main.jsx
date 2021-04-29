@@ -95,25 +95,29 @@ class EditOccurrence extends Component {
     return (
       <Main id="area-count-occurrence-edit">
         <IonList lines="full">
-          <MenuAttrItem
-            routerLink={`${match.url}/taxon`}
-            disabled={isDisabled}
-            icon={butterflyIcon}
-            label="Species"
-            value={species}
-          />
+          <div className="rounded">
+            <MenuAttrItem
+              routerLink={`${match.url}/taxon`}
+              disabled={isDisabled}
+              icon={butterflyIcon}
+              label="Species"
+              value={species}
+            />
+          </div>
 
-          <IonItemDivider className="species-list-header">
-            <IonLabel>
-              <T>Time</T>
-            </IonLabel>
-            <IonLabel>
-              <T>Stage</T>
-            </IonLabel>
-            <IonLabel>{count}</IonLabel>
-          </IonItemDivider>
+          <div className="rounded">
+            <IonItemDivider className="species-list-header">
+              <IonLabel>
+                <T>Time</T>
+              </IonLabel>
+              <IonLabel>
+                <T>Stage</T>
+              </IonLabel>
+              <IonLabel>{count}</IonLabel>
+            </IonItemDivider>
 
-          {this.getSamplesList()}
+            {this.getSamplesList()}
+          </div>
         </IonList>
       </Main>
     );

@@ -3,14 +3,40 @@
   --padding-end: 0;
   --padding-top: 0;
   --padding-bottom: 0;
+  --background: white;
 
-  ion-card-subtitle {
-    margin-top: 8px;
+  ion-card-header {
+    background: var(--ion-page-background);
+    margin-top: -3px;
+
+    ion-card-title {
+      color: var(--ion-color-primary-shade);
+      font-size: 1.4em;
+      margin: 0 0 8px;
+      font-weight: bold;
+    }
+
+    ion-card-subtitle {
+      margin-top: 8px;
+      text-transform: none;
+      font-weight: 400;
+      font-size: 1.2em;
+      color: black;
+    }
   }
 
   ion-card-content {
+    margin-top: 15px;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .species-status {
+    font-size: 0.8em;
+    line-height: 0.8em;
+    padding: 0 10px;
+    height: 20px;
+    text-transform: capitalize;
   }
 
   .species-label {

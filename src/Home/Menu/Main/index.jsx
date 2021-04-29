@@ -31,67 +31,75 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
         <IonItemDivider>
           <T>User</T>
         </IonItemDivider>
-        {isLoggedIn && (
-          <IonItem detail id="logout-button" onClick={logOut}>
-            <IonIcon icon={exitOutline} size="small" slot="start" />
-            <T>Logout</T>
-            {': '}
-            {user.firstname} {user.secondname}
-          </IonItem>
-        )}
+        <div className="rounded">
+          {isLoggedIn && (
+            <IonItem detail id="logout-button" onClick={logOut}>
+              <IonIcon icon={exitOutline} size="small" slot="start" />
+              <T>Logout</T>
+              {': '}
+              {user.firstname} {user.secondname}
+            </IonItem>
+          )}
 
-        {!isLoggedIn && (
-          <IonItem routerLink="/user/login" detail>
-            <IonIcon icon={personOutline} size="small" slot="start" />
-            <T>Login</T>
-          </IonItem>
-        )}
+          {!isLoggedIn && (
+            <IonItem routerLink="/user/login" detail>
+              <IonIcon icon={personOutline} size="small" slot="start" />
+              <T>Login</T>
+            </IonItem>
+          )}
 
-        {!isLoggedIn && (
-          <IonItem routerLink="/user/register" detail>
-            <IonIcon icon={personAddOutline} size="small" slot="start" />
-            <T>Register</T>
-          </IonItem>
-        )}
+          {!isLoggedIn && (
+            <IonItem routerLink="/user/register" detail>
+              <IonIcon icon={personAddOutline} size="small" slot="start" />
+              <T>Register</T>
+            </IonItem>
+          )}
+        </div>
 
         <IonItemDivider>
           <T>Info</T>
         </IonItemDivider>
-        <IonItem routerLink="/info/guide" detail>
-          <IonIcon icon={bookOutline} size="small" slot="start" />
-          <T>Guide</T>
-        </IonItem>
-        <IonItem routerLink="/info/help" detail>
-          <IonIcon icon={helpBuoyOutline} size="small" slot="start" />
-          <T>Help</T>
-        </IonItem>
-        <IonItem routerLink="/info/about" detail>
-          <IonIcon icon={informationCircleOutline} size="small" slot="start" />
-          <T>About</T>
-        </IonItem>
-
-        <IonItem routerLink="/info/credits" detail>
-          <IonIcon icon={heartOutline} size="small" slot="start" />
-          <T>Credits</T>
-        </IonItem>
-
-        <IonItem
-          href={`${config.backend.url}/privacy-notice?lang=${lang}`}
-          target="_blank"
-          detail
-          detailIcon={openOutline}
-        >
-          <IonIcon icon={lockClosedOutline} size="small" slot="start" />
-          <T>Privacy Policy</T>
-        </IonItem>
+        <div className="rounded">
+          <IonItem routerLink="/info/guide" detail>
+            <IonIcon icon={bookOutline} size="small" slot="start" />
+            <T>Guide</T>
+          </IonItem>
+          <IonItem routerLink="/info/help" detail>
+            <IonIcon icon={helpBuoyOutline} size="small" slot="start" />
+            <T>Help</T>
+          </IonItem>
+          <IonItem routerLink="/info/about" detail>
+            <IonIcon
+              icon={informationCircleOutline}
+              size="small"
+              slot="start"
+            />
+            <T>About</T>
+          </IonItem>
+          <IonItem routerLink="/info/credits" detail>
+            <IonIcon icon={heartOutline} size="small" slot="start" />
+            <T>Credits</T>
+          </IonItem>
+          <IonItem
+            href={`${config.backend.url}/privacy-notice?lang=${lang}`}
+            target="_blank"
+            detail
+            detailIcon={openOutline}
+          >
+            <IonIcon icon={lockClosedOutline} size="small" slot="start" />
+            <T>Privacy Policy</T>
+          </IonItem>
+        </div>
 
         <IonItemDivider>
           <T>Settings</T>
         </IonItemDivider>
-        <IonItem routerLink="/settings/menu" detail>
-          <IonIcon icon={settingsOutline} size="small" slot="start" />
-          <T>App</T>
-        </IonItem>
+        <div className="rounded">
+          <IonItem routerLink="/settings/menu" detail>
+            <IonIcon icon={settingsOutline} size="small" slot="start" />
+            <T>App</T>
+          </IonItem>
+        </div>
       </IonList>
     </Main>
   );

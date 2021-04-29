@@ -17,13 +17,15 @@ const Component = ({ onSubmit, schema }) => {
         {props => (
           <Form>
             <IonList lines="full">
-              <InputWithValidation
-                name="name"
-                placeholder="Username or email"
-                icon={personOutline}
-                type="text"
-                {...props}
-              />
+              <div className="rounded">
+                <InputWithValidation
+                  name="name"
+                  placeholder="Username or email"
+                  icon={personOutline}
+                  type="text"
+                  {...props}
+                />
+              </div>
             </IonList>
 
             <IonButton color="primary" type="submit" expand="block">

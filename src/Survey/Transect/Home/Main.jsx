@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { IonList, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
+import {
+  IonList,
+  IonItem,
+  IonIcon,
+  IonLabel,
+  IonButton,
+  IonItemDivider,
+} from '@ionic/react';
 import { Main, MenuAttrItem, InfoMessage } from '@apps';
 import { Trans as T } from 'react-i18next';
 import {
@@ -90,83 +97,95 @@ class Edit extends Component {
         )}
 
         <IonList lines="full">
-          <IonItem routerLink={`${baseURL}/sections`} detail>
-            <IonIcon icon={mapOutline} slot="start" mode="md" />
-            <IonLabel>
-              <T>Sections</T>
-            </IonLabel>
-            {this.getPrettySectionsLabel()}
-          </IonItem>
+          <div className="rounded">
+            <IonItem routerLink={`${baseURL}/sections`} detail>
+              <IonIcon icon={mapOutline} slot="start" mode="md" />
+              <IonLabel>
+                <T>Sections</T>
+              </IonLabel>
+              {this.getPrettySectionsLabel()}
+            </IonItem>
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/surveyStartTime`}
-            disabled={isDisabled}
-            icon={timeOutline}
-            label="Start Time"
-            value={startTimePretty}
-            skipValueTranslation
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/surveyStartTime`}
+              disabled={isDisabled}
+              icon={timeOutline}
+              label="Start Time"
+              value={startTimePretty}
+              skipValueTranslation
+            />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/surveyEndTime`}
-            disabled={isDisabled}
-            icon={timeOutline}
-            label="End Time"
-            value={endTimePretty}
-            skipValueTranslation
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/surveyEndTime`}
+              disabled={isDisabled}
+              icon={timeOutline}
+              label="End Time"
+              value={endTimePretty}
+              skipValueTranslation
+            />
+          </div>
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/temperature`}
-            disabled={isDisabled}
-            icon={thermometerOutline}
-            label="Temperature"
-            value={temperature}
-            skipValueTranslation
-          />
+          <IonItemDivider>
+            <T>Weather</T>
+          </IonItemDivider>
+          <div className="rounded">
+            <MenuAttrItem
+              routerLink={`${baseURL}/temperature`}
+              disabled={isDisabled}
+              icon={thermometerOutline}
+              label="Temperature"
+              value={temperature}
+              skipValueTranslation
+            />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/cloud`}
-            disabled={isDisabled}
-            icon={cloudyOutline}
-            label="Cloud"
-            value={cloud}
-            skipValueTranslation
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/cloud`}
+              disabled={isDisabled}
+              icon={cloudyOutline}
+              label="Cloud"
+              value={cloud}
+              skipValueTranslation
+            />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/windDirection`}
-            disabled={isDisabled}
-            icon={windIcon}
-            label="Wind Direction"
-            value={windDirection}
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/windDirection`}
+              disabled={isDisabled}
+              icon={windIcon}
+              label="Wind Direction"
+              value={windDirection}
+            />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/windSpeed`}
-            disabled={isDisabled}
-            icon={windIcon}
-            label="Wind Speed"
-            value={windSpeed}
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/windSpeed`}
+              disabled={isDisabled}
+              icon={windIcon}
+              label="Wind Speed"
+              value={windSpeed}
+            />
+          </div>
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/recorder`}
-            disabled={isDisabled}
-            icon={personOutline}
-            label="Recorder"
-            value={recorder}
-            skipValueTranslation
-          />
+          <IonItemDivider>
+            <T>Other</T>
+          </IonItemDivider>
+          <div className="rounded">
+            <MenuAttrItem
+              routerLink={`${baseURL}/recorder`}
+              disabled={isDisabled}
+              icon={personOutline}
+              label="Recorder"
+              value={recorder}
+              skipValueTranslation
+            />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/comment`}
-            disabled={isDisabled}
-            icon={clipboardOutline}
-            label="Comment"
-            value={comment}
-            skipValueTranslation
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/comment`}
+              disabled={isDisabled}
+              icon={clipboardOutline}
+              label="Comment"
+              value={comment}
+              skipValueTranslation
+            />
+          </div>
         </IonList>
       </Main>
     );

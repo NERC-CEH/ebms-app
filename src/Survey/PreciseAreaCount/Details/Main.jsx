@@ -39,65 +39,74 @@ class Component extends React.Component {
               <T>Weather Conditions</T>
             </IonLabel>
           </IonItemDivider>
+          <div className="rounded">
+            <MenuAttrItem
+              routerLink={`${baseURL}/temperature`}
+              disabled={isDisabled}
+              icon={thermometerOutline}
+              label="Temperature"
+              value={temperature}
+              skipValueTranslation
+            />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/temperature`}
-            disabled={isDisabled}
-            icon={thermometerOutline}
-            label="Temperature"
-            value={temperature}
-            skipValueTranslation
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/cloud`}
+              disabled={isDisabled}
+              icon={cloudyOutline}
+              label="Cloud"
+              value={cloud}
+              skipValueTranslation
+            />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/cloud`}
-            disabled={isDisabled}
-            icon={cloudyOutline}
-            label="Cloud"
-            value={cloud}
-            skipValueTranslation
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/windDirection`}
+              disabled={isDisabled}
+              icon={windIcon}
+              label="Wind Direction"
+              value={windDirection}
+            />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/windDirection`}
-            disabled={isDisabled}
-            icon={windIcon}
-            label="Wind Direction"
-            value={windDirection}
-          />
+            <MenuAttrItem
+              routerLink={`${baseURL}/windSpeed`}
+              disabled={isDisabled}
+              icon={windIcon}
+              label="Wind Speed"
+              value={windSpeed}
+            />
+          </div>
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/windSpeed`}
-            disabled={isDisabled}
-            icon={windIcon}
-            label="Wind Speed"
-            value={windSpeed}
-          />
+          <IonItemDivider>
+            <IonLabel>
+              <T>Photo</T>
+            </IonLabel>
+          </IonItemDivider>
+          <div className="rounded">
+            <PhotoPicker
+              model={sample}
+              isDisabled={isDisabled}
+              dataDirPath={config.dataPath}
+              ImageClass={ImageModel}
+            />
+            <MenuNoteItem color="medium">
+              Representative photo of where the 15 minute count was made
+            </MenuNoteItem>
+          </div>
 
           <IonItemDivider>
             <IonLabel>
               <T>Other</T>
             </IonLabel>
           </IonItemDivider>
-
-          <MenuAttrItem
-            routerLink={`${baseURL}/comment`}
-            disabled={isDisabled}
-            icon={clipboardOutline}
-            label="Comment"
-            value={comment}
-            skipValueTranslation
-          />
-
-          <MenuNoteItem color="medium">
-            Representative photo of where the 15 minute count was made
-          </MenuNoteItem>
-          <PhotoPicker
-            model={sample}
-            isDisabled={isDisabled}
-            dataDirPath={config.dataPath}
-            ImageClass={ImageModel}
-          />
+          <div className="rounded">
+            <MenuAttrItem
+              routerLink={`${baseURL}/comment`}
+              disabled={isDisabled}
+              icon={clipboardOutline}
+              label="Comment"
+              value={comment}
+              skipValueTranslation
+            />
+          </div>
         </IonList>
       </Main>
     );

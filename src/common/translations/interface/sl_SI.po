@@ -1488,7 +1488,7 @@ msgstr "Natančni 15-minutni popis."
 msgid "Occurrences"
 msgstr "Pojavljanja"
 
-# Context term
+# part of Precise 15min count survey
 msgid "Time"
 msgstr ""
 
@@ -1507,3 +1507,23 @@ msgstr "<0>Ni naloženih popisov</0>"
 # user register error message
 msgid "Account already exists."
 msgstr "Račun že obstaja."
+
+# A survey label
+msgid "Details"
+msgstr ""
+
+# A survey label
+msgid "Species Photo"
+msgstr ""
+
+# Info message for species stage picker
+msgid "Pick the life stage"
+msgstr ""
+
+# A survey label
+msgid "Weather"
+msgstr ""
+
+# A survey label
+msgid "Photo"
+msgstr ""
