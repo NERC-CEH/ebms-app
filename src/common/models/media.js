@@ -57,14 +57,14 @@ export default class AppMedia extends Media {
   getURL() {
     const { data: name, path } = this.attrs;
 
-    if (!isPlatform('hybrid') || __TEST__) {
+    if (!isPlatform('hybrid') || process.env.NODE_ENV === 'test') {
       return name;
     }
 
-    let pathToFile = path;
+    let pathToFile = config.dataPath;
 
     // backwards compatible
-    if (!pathToFile) {
+    if (!path) {
       pathToFile = config.dataPath.replace('/Documents/', '/Library/NoCloud/');
     }
 
