@@ -44,6 +44,12 @@
 	<string>Always allow Geolocation?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow Geolocation?</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>Allow Geolocation while your device is locked?</string>
+  <key>UIBackgroundModes</key>
+  <array>
+    <string>location</string>
+  </array>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>To Record Audio With Video</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>

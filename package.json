@@ -62,6 +62,7 @@
     "@bit/flumens.apps.utils.analytics": "^0.2.0",
     "@bit/flumens.apps.utils.location": "^0.1.0",
     "@bit/flumens.apps.utils.validation": "0.2.1",
+    "@capacitor-community/background-geolocation": "^0.3.11",
     "@capacitor/android": "^2.4.2",
     "@capacitor/core": "^2.4.2",
     "@capacitor/ios": "^2.4.2",
