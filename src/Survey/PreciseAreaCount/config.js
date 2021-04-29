@@ -24,7 +24,7 @@ const locationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
   longitude: Yup.number().required(),
   area: Yup.number()
-    .min(1)
+    .min(1, 'Please add survey area information.')
     .max(20000000, 'Please select a smaller area.')
     .required(),
   shape: Yup.object().required(),
