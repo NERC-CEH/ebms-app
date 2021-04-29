@@ -339,6 +339,18 @@ ion-radio-group {
   --background: transparent;
 }
 
+.info-background-message {
+  ion-button {
+    margin-left: 10px;
+
+    color: var(--ion-color-medium);
+    --border-color: var(--ion-color-medium);
+  }
+  span {
+    text-align: left;
+  }
+}
+
 /* ROUND-THEME END */
 
 .radio-input-attr ion-item ion-label {
