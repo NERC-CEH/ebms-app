@@ -170,6 +170,7 @@ const survey = {
           pageProps: {
             attrProps: {
               input: 'radio',
+              info: 'Pick the life stage',
               inputProps: { options: stageValues },
             },
           },
