@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonSearchbar, withIonLifeCycle } from '@ionic/react';
+import groups from 'common/data/species/groups.json';
 import SpeciesSearchEngine from './utils/taxon_search_engine';
 import Suggestions from './components/Suggestions';
 import './styles.scss';
@@ -18,6 +19,7 @@ class index extends Component {
   static propTypes = {
     onSpeciesSelected: PropTypes.func.isRequired,
     recordedTaxa: PropTypes.array,
+    speciesGroups: PropTypes.array,
   };
 
   input = React.createRef();
@@ -40,6 +42,8 @@ class index extends Component {
   };
 
   onInputKeystroke = async e => {
+    const { speciesGroups } = this.props;
+
     let searchPhrase = e.target.value;
 
     const isValidSearch =
@@ -53,8 +57,10 @@ class index extends Component {
     searchPhrase = searchPhrase.toLowerCase();
 
     // search
-    const searchResults = await SpeciesSearchEngine.search(searchPhrase);
-
+    const informalGroups = speciesGroups.map(group => groups[group].id);
+    const searchResults = await SpeciesSearchEngine.search(searchPhrase, {
+      informalGroups,
+    });
     const annotatedSearchResults = this.annotateRecordedTaxa(searchResults);
 
     this.setState({

@@ -1,7 +1,8 @@
 require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-disable-line
 
-const request = require('request'); // eslint-disable-line
+const axios = require('axios'); // eslint-disable-line
 const fs = require('fs');
+const groups = require('../species/groups');
 
 const LANGUAGE_ISO_MAPPING = {
   nld: 'nl-NL',
@@ -24,24 +25,18 @@ if (!APP_INDICIA_API_KEY || !APP_INDICIA_API_USER_AUTH) {
   );
 }
 
-function fetch(listID) {
-  return new Promise(resolve => {
-    const options = {
-      method: 'GET',
-      url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}`,
-      headers: {
-        'x-api-key': APP_INDICIA_API_KEY,
-        Authorization: `Basic ${APP_INDICIA_API_USER_AUTH}`,
-      },
-    };
-
-    request(options, (error, response) => {
-      if (error) throw new Error(error);
-
-      const namesArray = JSON.parse(response.body).data;
-      resolve(namesArray);
-    });
+async function fetch(listID) {
+  const { data } = await axios({
+    method: 'GET',
+    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}`,
+    headers: {
+      'x-api-key': APP_INDICIA_API_KEY,
+      Authorization: `Basic ${APP_INDICIA_API_USER_AUTH}`,
+    },
   });
+
+  const attachGroupID = s => ({ ...s, taxon_group: listID });
+  return data.data.map(attachGroupID);
 }
 
 function turnNamesArrayIntoLangObject(array) {
@@ -58,6 +53,7 @@ function turnNamesArrayIntoLangObject(array) {
       id,
       taxon: name,
       preferred_taxon: taxon,
+      taxon_group: group,
       preferred_taxa_taxon_list_id: preferredId,
     } = term;
 
@@ -73,6 +69,7 @@ function turnNamesArrayIntoLangObject(array) {
       warehouse_id: parseInt(id, 10),
       common_name: capitalize(name),
       scientific_name: taxon,
+      taxon_group: group,
       preferredId: parseInt(preferredId, 10),
     };
 
@@ -91,10 +88,12 @@ function sortAlphabetically(species) {
 }
 
 (async () => {
-  const butterflies = await fetch(251);
-  const mothsOnly = ({ taxon_group: group }) => group === 'insect - moth';
+  const butterflies = await fetch(groups.butterflies.id);
+  const mothsOnly = ({ taxon_group: group }) => group === groups.moths.id;
   const swedishOnly = ({ language_iso: lang }) => lang === 'swe';
-  const moths = (await fetch(260)).filter(mothsOnly).filter(swedishOnly);
+  const moths = (await fetch(groups.moths.id))
+    .filter(mothsOnly)
+    .filter(swedishOnly);
 
   const species = [...butterflies, ...moths];
   const sortedSpecies = sortAlphabetically(species);

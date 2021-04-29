@@ -1,0 +1,6 @@
+{
+  "butterflies": { "id": 251, "label": "Butterflies" },
+  "moths": { "id": 260, "label": "Moths" },
+  "bumblebees": { "id": 261, "label": "Bumblebees" },
+  "dragonflies": { "id": 265, "label": "Dragonflies" }
+}

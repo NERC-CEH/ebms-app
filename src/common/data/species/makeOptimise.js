@@ -3,8 +3,9 @@ const taxonCleaner = require('./makeClean');
 const TAXON = 'taxon';
 const ID = 'id';
 const GENUS_ID_INDEX = 0;
-const GENUS_TAXON_INDEX = 1;
-const GENUS_SPECIES_INDEX = 2;
+const GENUS_GROUP_INDEX = 1;
+const GENUS_TAXON_INDEX = 2;
+const GENUS_SPECIES_INDEX = 3;
 const SPECIES_ID_INDEX = 0;
 const SPECIES_TAXON_INDEX = 1;
 
@@ -54,6 +55,7 @@ function getLastGenus(
     // create a new genus with matching group
     lastGenus = [];
     lastGenus[GENUS_ID_INDEX] = 0;
+    lastGenus[GENUS_GROUP_INDEX] = taxa.taxon_group;
     lastGenus[GENUS_TAXON_INDEX] = genusName;
     lastGenus[GENUS_SPECIES_INDEX] = [];
     optimised.push(lastGenus);
@@ -86,6 +88,7 @@ function addGenus(optimised, taxa) {
 
   const genus = [];
   genus[GENUS_ID_INDEX] = Number.parseInt(taxa[ID], 10);
+  genus[GENUS_GROUP_INDEX] = taxa.taxon_group;
   genus[GENUS_TAXON_INDEX] = taxon;
   genus[GENUS_SPECIES_INDEX] = [];
 

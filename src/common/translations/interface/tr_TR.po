@@ -1546,3 +1546,23 @@ msgstr ""
 # A survey label
 msgid "Photo"
 msgstr ""
+
+# Part of species group selection
+msgid "Species groups"
+msgstr ""
+
+# Part of species group selection
+msgid "Butterflies"
+msgstr ""
+
+# Part of species group selection
+msgid "Moths"
+msgstr ""
+
+# Part of species group selection
+msgid "Bumblebees"
+msgstr ""
+
+# Part of species group selection
+msgid "Dragonflies"
+msgstr ""

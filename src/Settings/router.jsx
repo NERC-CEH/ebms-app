@@ -6,6 +6,7 @@ import savedSamples from 'savedSamples';
 import Menu from './Menu';
 import Language from './Language';
 import Country from './Country';
+import SpeciesGroups from './SpeciesGroups';
 import PrimarySurvey from './PrimarySurvey';
 
 export default [
@@ -32,6 +33,12 @@ export default [
     key="/settings/country"
     exact
     render={() => <Country userModel={userModel} appModel={appModel} />}
+  />,
+  <Route
+    path="/settings/species"
+    key="/settings/species"
+    exact
+    render={() => <SpeciesGroups appModel={appModel} />}
   />,
   <Route
     path="/settings/primary-survey"

@@ -3,6 +3,7 @@ require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-
 const axios = require('axios'); // eslint-disable-line
 const fs = require('fs');
 const optimise = require('./makeOptimise');
+const groups = require('./groups');
 
 const { APP_INDICIA_API_KEY, APP_INDICIA_API_USER_AUTH } = process.env;
 
@@ -22,11 +23,10 @@ async function fetch(listID) {
     },
   });
 
-  const latinData = data.data.filter(
-    s => s.language_iso === 'lat' && !s.taxon.includes('Unterfamilie')
-  );
-
-  return latinData;
+  const onlyLatin = s =>
+    s.language_iso === 'lat' && !s.taxon.includes('Unterfamilie');
+  const attachGroupID = s => ({ ...s, taxon_group: listID });
+  return data.data.filter(onlyLatin).map(attachGroupID);
 }
 
 function saveSpeciesToFile(species) {
@@ -48,12 +48,11 @@ function sortAlphabetically(species) {
 }
 
 (async () => {
-  const butterflies = await fetch(251);
-  const mothsOnly = ({ taxon_group: group }) => group === 'insect - moth';
-  const moths = (await fetch(260)).filter(mothsOnly);
-  const bumblebees = await fetch(261);
-  const dragonflies = await fetch(265);
-
+  const butterflies = await fetch(groups.butterflies.id);
+  const mothsOnly = ({ taxon_group: group }) => group === groups.moths.id;
+  const moths = (await fetch(groups.moths.id)).filter(mothsOnly);
+  const bumblebees = await fetch(groups.bumblebees.id);
+  const dragonflies = await fetch(groups.dragonflies.id);
   const species = [...butterflies, ...moths, ...bumblebees, ...dragonflies];
 
   const sortedSpecies = await sortAlphabetically(species);

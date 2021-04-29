@@ -24,6 +24,7 @@ import countries from 'common/config/countries';
 import config from 'config';
 import surveys from 'common/config/surveys';
 import { Main, alert, Toggle, MenuNoteItem } from '@apps';
+import butterflyIcon from 'common/images/butterfly.svg';
 import './styles.scss';
 
 function resetDialog(resetApp) {
@@ -115,7 +116,7 @@ class Component extends React.Component {
               Batch upload all finished records. This does not include records
               in &#39;draft&#39; stage.
             </MenuNoteItem>
-            <IonItem routerLink="/settings/primary-survey">
+            <IonItem routerLink="/settings/primary-survey" detail>
               <IonLabel>
                 <T>Primary Survey</T>
               </IonLabel>
@@ -124,20 +125,26 @@ class Component extends React.Component {
                 <T>{primarySurveyLabel}</T>
               </IonLabel>
             </IonItem>
+            <IonItem routerLink="/settings/species" detail>
+              <IonLabel>
+                <T>Species groups</T>
+              </IonLabel>
+              <IonIcon icon={butterflyIcon} size="small" slot="start" />
+            </IonItem>
           </div>
 
           <IonItemDivider>
             <T>Application</T>
           </IonItemDivider>
           <div className="rounded">
-            <IonItem routerLink="/settings/language">
+            <IonItem routerLink="/settings/language" detail>
               <IonLabel>
                 <T>Language</T>
               </IonLabel>
               <IonIcon icon={flagOutline} size="small" slot="start" />
               <IonLabel slot="end">{languages[language]}</IonLabel>
             </IonItem>
-            <IonItem routerLink="/settings/country">
+            <IonItem routerLink="/settings/country" detail>
               <IonLabel>
                 <T>Country</T>
               </IonLabel>

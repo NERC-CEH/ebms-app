@@ -4,7 +4,8 @@
 import helpers from './searchHelpers';
 
 const WAREHOUSE_INDEX = 0;
-const SCI_NAME_INDEX = 1; // in genera and above
+const GROUP_INDEX = 1; // in genera and above
+const SCI_NAME_INDEX = 2; // in genera and above
 const SPECIES_SCI_NAME_INDEX = 1; // in species and bellow
 
 /**
@@ -60,6 +61,16 @@ function search(
   ) {
     const speciesEntry = species[speciesArrayIndex];
 
+    // check if species is in informal groups to search
+    if (
+      informalGroups.length &&
+      informalGroups.indexOf(speciesEntry[GROUP_INDEX]) < 0
+    ) {
+      // skip this taxa because not in the searched informal groups
+      speciesArrayIndex++;
+      continue; // eslint-disable-line
+    }
+
     // check if matches
     if (firstWordRegex.test(speciesEntry[SCI_NAME_INDEX])) {
       // find species array
@@ -78,6 +89,7 @@ function search(
           array_id: speciesArrayIndex,
           found_in_name: 'scientific_name',
           warehouse_id: speciesEntry[WAREHOUSE_INDEX],
+          group: speciesEntry[GROUP_INDEX],
           scientific_name: speciesEntry[SCI_NAME_INDEX],
         };
         results.push(fullRes);
@@ -102,6 +114,7 @@ function search(
                 species_id: speciesIndex,
                 found_in_name: 'scientific_name',
                 warehouse_id: speciesInArray[WAREHOUSE_INDEX],
+                group: speciesEntry[GROUP_INDEX],
                 scientific_name: `${speciesEntry[SCI_NAME_INDEX]} ${speciesInArray[SPECIES_SCI_NAME_INDEX]}`,
               };
               results.push(fullRes);
@@ -113,6 +126,7 @@ function search(
               species_id: speciesIndex,
               found_in_name: 'scientific_name',
               warehouse_id: speciesInArray[WAREHOUSE_INDEX],
+              group: speciesEntry[GROUP_INDEX],
               scientific_name: `${speciesEntry[SCI_NAME_INDEX]} ${speciesInArray[SPECIES_SCI_NAME_INDEX]}`,
             };
             results.push(fullRes);
@@ -145,7 +159,7 @@ const searchScientificSpeciesName = (
     informalGroups
   );
 
-function searchMulti(
+export default function searchMulti(
   species,
   searchPhrase,
   results = [],
@@ -183,5 +197,3 @@ function searchMulti(
     );
   }
 }
-
-export { searchMulti as default };

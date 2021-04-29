@@ -2,14 +2,14 @@
 # Translators:
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Ineke <ineke.radstaat@vlinderstichting.nl>, 2020
-# Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2020
 # Karolis, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
+# Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Vilius Stankaitis <vilius@flumens.io>, 2020\n"
+"Last-Translator: Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2021\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/ceh/teams/95441/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -151,10 +151,10 @@ msgid "Slovakia"
 msgstr "Slovakije"
 
 msgid "Turkey (Europe)"
-msgstr ""
+msgstr "Turkije (Europees deel)"
 
 msgid "Turkey (Asia)"
-msgstr ""
+msgstr "Turkije (Aziatisch deel)"
 
 msgid "Ukraine"
 msgstr "Oekraïne"
@@ -326,7 +326,7 @@ msgstr "Weet u zeker dat u zich wilt afmelden?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr ""
+msgstr "Negeer locale data"
 
 msgid "This will delete all the records on this device."
 msgstr "Dit zal alle waarnemingen van uw apparaat verwijderen"
@@ -367,7 +367,7 @@ msgstr "Gebied"
 
 # Location attribute label
 msgid "Location"
-msgstr ""
+msgstr "Locatie"
 
 msgid "Add"
 msgstr "Toevoegen"
@@ -847,7 +847,7 @@ msgid "Share App Analytics"
 msgstr "Deel app analysedata"
 
 msgid "Share app crash data so we can make the app more reliable."
-msgstr ""
+msgstr "Deel uw app crash data zodat de app beter kunnen maken."
 
 msgid "Save Draft"
 msgstr "Sla concept op"
@@ -875,23 +875,23 @@ msgstr "Rupsennesten"
 
 # Butterfly stage
 msgid "Adult"
-msgstr ""
+msgstr "Adult"
 
 # Butterfly stage
 msgid "Egg"
-msgstr ""
+msgstr "Ei"
 
 # Butterfly stage
 msgid "Larva"
-msgstr ""
+msgstr "Rups"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr ""
+msgstr "Rupsennest"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr ""
+msgstr "Pop"
 
 msgid "Transect"
 msgstr "Transect"
@@ -942,7 +942,7 @@ msgid "S"
 msgstr "Z"
 
 msgid "SW"
-msgstr "ZO"
+msgstr "ZW"
 
 msgid "W"
 msgstr "W"
@@ -1182,7 +1182,7 @@ msgstr ""
 "uw apparaat en onder uw online account opgeslagen."
 
 msgid "How to record along an existing transect"
-msgstr ""
+msgstr "Hoe monitor je langs een bestaand transect?"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1209,7 +1209,7 @@ msgid ""
 msgstr ""
 
 msgid "Survey section"
-msgstr ""
+msgstr "Sectie"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1293,35 +1293,37 @@ msgid "Click cancel to undo changes."
 msgstr "Klik Annuleren om veranderingen niet op te slaan."
 
 msgid "Map"
-msgstr ""
+msgstr "Kaart"
 
 msgid "Today"
-msgstr ""
+msgstr "Vandaag"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "Gisteren"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr ""
+"Deze waarneming is ingediend en kan niet meer gewijzigd worden binnen de "
+"app."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr ""
+msgstr "Kies een van de andere waarnemingsopties uit onderstaande lijst"
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
-msgstr ""
+msgstr "Upload alle tellingen. Hieronder vallen niet de 'concept' tellingen."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr ""
+msgstr "Weet je zeker dat je alle afgesloten tellingen wil uploaden?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "Log eerst in om tellingen te uploaden."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
@@ -1331,7 +1333,7 @@ msgstr[1] ""
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
-msgstr ""
+msgstr "Oeps. Hier ging iets mis."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
@@ -1339,15 +1341,15 @@ msgstr ""
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr ""
+msgstr "Extra details"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Weersomstandigheden"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr ""
+msgstr "Weersomstandigheden"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
@@ -1358,22 +1360,24 @@ msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
+"De huidige weergegevens worden automatisch ingevuld uit de OpenWeatherMap "
+"API weather service."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Kopieer soort"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr ""
+msgstr "Weet je zeker dat je de vorige tellingsoortenlijst wil kopiëren?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Kopieer"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Sorry, er werden geen soorten gevonden om te kopiëren. "
 
 # Species list copy functionality
 msgid "You have succcesfully copied {{speciesCount}} species."
@@ -1381,24 +1385,25 @@ msgstr ""
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Sorry, er is geen vorige telling om soorten van te kopiëren."
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Armenië"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Veeg naar links om tellingen weg te gooien."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Controleer aub of het gebied correct is voor het verzenden van de telling."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "Vergeet aub niet om concept tellingen te uploaden."
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
@@ -1407,7 +1412,7 @@ msgstr ""
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Tip: Gebruik Help"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
@@ -1417,37 +1422,39 @@ msgstr ""
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Meer informatie"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Tip: soorten toevoegen"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Je kunt je vorige soortenlijst kopiëren door lang te drukken op de knop "
+"Soorten Toevoegen."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Verberg"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Hoofdtelling"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Alle tellingen"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr ""
+msgstr "Representatieve foto van de plek waar de kwartiertelling is gedaan"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Geen foto toegevoegd"
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
@@ -1455,23 +1462,23 @@ msgstr ""
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "Precieze kwartiertelling"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Voorkomen"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr ""
+msgstr "Tijd"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Weet je zeker dat je deze waarneming wil weggooien?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Ik begrijp het"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
@@ -1479,24 +1486,44 @@ msgstr ""
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "Dit account bestaat al."
 
 # A survey label
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 # A survey label
 msgid "Species Photo"
-msgstr ""
+msgstr "Foto van de soort"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "Kies levensfase"
 
 # A survey label
 msgid "Weather"
-msgstr ""
+msgstr "Weer"
 
 # A survey label
 msgid "Photo"
+msgstr "Foto"
+
+# Part of species group selection
+msgid "Species groups"
+msgstr ""
+
+# Part of species group selection
+msgid "Butterflies"
+msgstr ""
+
+# Part of species group selection
+msgid "Moths"
+msgstr ""
+
+# Part of species group selection
+msgid "Bumblebees"
+msgstr ""
+
+# Part of species group selection
+msgid "Dragonflies"
 msgstr ""

@@ -3,7 +3,7 @@
  **************************************************************************** */
 import _ from 'lodash';
 
-const SCI_NAME_INDEX = 1; // in genera and above
+const SCI_NAME_INDEX = 2; // in genera and above
 
 const helpers = {
   normalizeFirstWord(phrase) {

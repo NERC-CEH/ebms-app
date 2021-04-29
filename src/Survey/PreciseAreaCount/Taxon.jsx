@@ -5,6 +5,7 @@ import { withRouter } from 'react-router';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
 import { Page, Main, Header } from '@apps';
+import appModel from 'appModel';
 import Sample from 'sample';
 import Occurrence from 'occurrence';
 
@@ -74,6 +75,7 @@ class Controller extends React.Component {
           <TaxonSearch
             onSpeciesSelected={this.onSpeciesSelected}
             recordedTaxa={recordedTaxa}
+            speciesGroups={appModel.attrs.speciesGroups}
           />
         </Main>
       </Page>

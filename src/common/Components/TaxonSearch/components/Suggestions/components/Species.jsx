@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonItem } from '@ionic/react';
-import Log from 'helpers/log';
+import groups from 'common/data/species/groups.json';
+import { Trans as T } from 'react-i18next';
 import './styles.scss';
 
-const onClick = (e, species, onSelect) => {
-  Log('taxon: selected.', 'd');
-  const edit = e.target.tagName === 'BUTTON';
+const reduceToIdAndLabel = (agg, { label, id }) => ({ ...agg, [id]: label });
+const groupLabels = Object.values(groups).reduce(reduceToIdAndLabel, {});
 
+const onClick = (e, species, onSelect) => {
+  const edit = e.target.tagName === 'BUTTON';
   onSelect(species, edit);
 };
 
@@ -39,6 +41,7 @@ function prettifyName(species, searchPhrase) {
 const Species = ({ species, searchPhrase, onSelect }) => {
   const prettyName = prettifyName(species, searchPhrase);
   const { isRecorded } = species;
+  const speciesGroup = groupLabels[species.group];
 
   return (
     <IonItem
@@ -46,6 +49,9 @@ const Species = ({ species, searchPhrase, onSelect }) => {
       onClick={e => !isRecorded && onClick(e, species, onSelect)}
     >
       <div className="taxon">{prettyName}</div>
+      <div className="group">
+        <T>{speciesGroup}</T>
+      </div>
     </IonItem>
   );
 };
