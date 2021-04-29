@@ -160,20 +160,21 @@ class Report extends React.Component {
             <T>Top Species from all timed counts</T>
           </IonLabel>
         </IonItemDivider>
-        <IonItem lines="full" className="list-header-labels">
-          <IonLabel>
-            <small>
-              <T>Species</T>
-            </small>
-          </IonLabel>
-          <IonLabel class="ion-text-right">
-            <small>
-              <T>Counts</T>
-            </small>
-          </IonLabel>
-        </IonItem>
-
-        {listComponents}
+        <div className="rounded">
+          <IonItem lines="full" className="list-header-labels">
+            <IonLabel>
+              <small>
+                <T>Species</T>
+              </small>
+            </IonLabel>
+            <IonLabel class="ion-text-right">
+              <small>
+                <T>Counts</T>
+              </small>
+            </IonLabel>
+          </IonItem>
+          {listComponents}
+        </div>
       </>
     );
   };
