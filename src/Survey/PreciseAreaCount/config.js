@@ -143,12 +143,17 @@ const survey = {
     },
 
     create(AppSample, Occurrence, taxon) {
+      const training = appModel.attrs.useTraining && 't';
+
       const sample = new AppSample({
         metadata: {
           survey_id: survey.id,
           survey: survey.name,
         },
-        attrs: { location: {} },
+        attrs: {
+          training,
+          location: {},
+        },
       });
 
       const occurrence = survey.smp.occ.create(Occurrence, taxon);
@@ -179,8 +184,11 @@ const survey = {
       },
 
       create(Occurrence, taxon) {
+        const training = appModel.attrs.useTraining && 't';
+
         return new Occurrence({
           attrs: {
+            training,
             comment: null,
             stage: 'Adult',
             taxon,
