@@ -389,4 +389,4 @@ class AreaAttr extends Component {
   }
 }
 
-export default withIonLifeCycle(withRouter(AreaAttr));
+export default withRouter(withIonLifeCycle(AreaAttr));
