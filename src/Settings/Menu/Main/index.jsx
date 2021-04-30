@@ -10,7 +10,7 @@ import {
 } from '@ionic/react';
 import {
   arrowUndoOutline,
-  flameOutline,
+  // flameOutline,
   schoolOutline,
   flagOutline,
   globeOutline,
@@ -74,7 +74,7 @@ class Component extends React.Component {
     onToggle: PropTypes.func.isRequired,
     uploadAllSamples: PropTypes.func.isRequired,
     useTraining: PropTypes.bool.isRequired,
-    useExperiments: PropTypes.bool.isRequired,
+    // useExperiments: PropTypes.bool.isRequired,
     sendAnalytics: PropTypes.bool.isRequired,
     primarySurvey: PropTypes.string,
     language: PropTypes.string,
@@ -86,7 +86,7 @@ class Component extends React.Component {
       resetApp,
       onToggle,
       useTraining,
-      useExperiments,
+      // useExperiments,
       language,
       country,
       sendAnalytics,
@@ -169,7 +169,7 @@ class Component extends React.Component {
               reports.
             </MenuNoteItem>
 
-            <IonItem>
+            {/* <IonItem>
               <IonIcon icon={flameOutline} size="small" slot="start" />
               <IonLabel>
                 <T>Experimental Features</T>
@@ -178,7 +178,7 @@ class Component extends React.Component {
                 onToggle={checked => onToggle('useExperiments', checked)}
                 checked={useExperiments}
               />
-            </IonItem>
+            </IonItem> */}
 
             <IonItem>
               <IonIcon icon={shareOutline} size="small" slot="start" />

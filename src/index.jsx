@@ -39,6 +39,12 @@ mobxConfig({ enforceActions: 'never' });
     });
 
   appModel.attrs.appSession += 1;
+
+  if (appModel.attrs.primarySurvey === 'area') {
+    // TODO: remove after this propagates to all users
+    appModel.attrs.primarySurvey = 'precise-area';
+  }
+
   appModel.save();
 
   ReactDOM.render(<App />, document.getElementById('root'));

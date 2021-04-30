@@ -35,13 +35,13 @@ class Component extends React.Component {
   static contextType = NavContext;
 
   navigateToPrimarySurvey = () => {
-    const primarySurveyName = appModel.attrs.primarySurvey || 'area';
+    const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
 
     this.context.navigate(`/survey/${primarySurveyName}/new`);
   };
 
   render() {
-    const primarySurveyName = appModel.attrs.primarySurvey || 'area';
+    const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
 
     const getOtherSurveys = () => {
       const otherSurveys = Object.values(surveys).filter(
@@ -50,10 +50,8 @@ class Component extends React.Component {
 
       // eslint-disable-next-line
       const getSurveyButton = ({ name, label }) => {
-        if (name === 'precise-area' && !appModel.attrs.useExperiments) {
-          // TODO: remove once survey approved
-          return null;
-        }
+        if (name === 'area') return null; // for backwards compatible
+
         return (
           <IonFabButton
             class="fab-button-label"

@@ -172,7 +172,7 @@ const defaults = {
   speciesGroups: [...Object.keys(groups)],
   transects: [],
 
-  primarySurvey: 'area',
+  primarySurvey: 'precise-area',
 
   useExperiments: false,
   sendAnalytics: true,

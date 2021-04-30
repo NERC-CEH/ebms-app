@@ -25,10 +25,7 @@ function SelectCountry({ appModel }) {
   const surveyOptions = Object.values(surveys)
     .map(translate)
     .map(([value, label]) => {
-      if (value === 'precise-area' && !appModel.attrs.useExperiments) {
-        // TODO: remove once survey approved
-        return null;
-      }
+      if (value === 'area') return null; // for backwards compatible
 
       return (
         <React.Fragment key={value}>
