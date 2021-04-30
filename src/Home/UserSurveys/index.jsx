@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   IonList,
-  IonItem,
   IonSegment,
   IonLabel,
   IonSegmentButton,
@@ -30,16 +29,12 @@ function getPendingSurveys(surveys) {
   if (!surveys.length) {
     return (
       <IonList lines="full">
-        <IonItem className="info-background-message">
-          <span>
-            <T>
-              No finished pending surveys.
-              <br />
-              <br />
-              Press <IonIcon icon={addOutline} /> to add.
-            </T>
-          </span>
-        </IonItem>
+        <InfoBackgroundMessage className="text-center">
+          No finished pending surveys.
+          <br />
+          <br />
+          Press <IonIcon icon={addOutline} /> to add.
+        </InfoBackgroundMessage>
       </IonList>
     );
   }
