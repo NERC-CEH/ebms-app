@@ -53,6 +53,14 @@ class AppSample extends Sample {
     this.gpsExtensionInit();
   }
 
+  destroy = () => {
+    // clean up
+    this.stopGPS();
+    this.stopVibrateCounter();
+
+    super.destroy();
+  };
+
   getPrettyName() {
     if (!this.parent || this.metadata.survey !== 'precise-area') {
       return '';
