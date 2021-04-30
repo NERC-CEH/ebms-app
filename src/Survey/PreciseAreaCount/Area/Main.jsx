@@ -76,7 +76,7 @@ class AreaAttr extends Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
     sample: PropTypes.object.isRequired,
-    location: PropTypes.object.isRequired,
+    shape: PropTypes.object.isRequired,
     setLocation: PropTypes.func.isRequired,
     areaPretty: PropTypes.string.isRequired,
     isGPSTracking: PropTypes.bool.isRequired,
@@ -178,14 +178,14 @@ class AreaAttr extends Component {
     this._leaving = false;
 
     // correct map size after animation
-    const { location } = this.props;
+    const { shape } = this.props;
 
     const map = this.map.current.leafletElement;
 
     const refreshMap = () => {
       map.invalidateSize();
-      if (location.shape) {
-        this.setExistingShape(location.shape);
+      if (shape) {
+        this.setExistingShape(shape);
       }
     };
 
@@ -205,14 +205,14 @@ class AreaAttr extends Component {
   componentDidMount() {
     const map = this.map.current.leafletElement;
 
-    const { location } = this.props;
+    const { shape } = this.props;
 
     this.drawnItems = this.addDrawControls();
 
     map.attributionControl.setPrefix('');
 
-    if (location.shape) {
-      this.setExistingShape(location.shape);
+    if (shape) {
+      this.setExistingShape(shape);
     } else {
       map.panTo(new L.LatLng(...DEFAULT_POSITION));
     }
@@ -278,10 +278,10 @@ class AreaAttr extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    if (prevProps.location.shape !== this.props.location.shape) {
-      if (this.props.location.shape && this.drawnItems) {
+    if (prevProps.shape !== this.props.shape) {
+      if (this.props.shape && this.drawnItems) {
         this.drawnItems.clearLayers();
-        this.setExistingShape(toJS(this.props.location.shape));
+        this.setExistingShape(toJS(this.props.shape));
       }
     }
   }

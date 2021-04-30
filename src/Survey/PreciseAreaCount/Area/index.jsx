@@ -29,7 +29,6 @@ class Container extends React.Component {
 
     const location = sample.attrs.location || {};
     const isGPSTracking = sample.isGPSRunning();
-
     const { area } = location;
 
     let areaPretty;
@@ -52,7 +51,7 @@ class Container extends React.Component {
           sample={sample}
           areaPretty={areaPretty}
           isGPSTracking={isGPSTracking}
-          location={location}
+          shape={location.shape}
           setLocation={this.setLocation}
           isDisabled={isDisabled}
         />
