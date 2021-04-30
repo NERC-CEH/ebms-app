@@ -153,6 +153,11 @@ const survey = {
         return [];
       }
 
+      if (!submission[0].survey_id) {
+        // backwards compatible
+        submission[0].survey_id = survey.id; //eslint-disable-line
+      }
+
       return submission;
     },
   },
@@ -172,7 +177,7 @@ const survey = {
 
     const sample = new Sample({
       metadata: {
-        survey_id: survey.id,
+        // survey_id: survey.id,
         survey: survey.name,
         pausedTime: 0,
       },
@@ -195,6 +200,15 @@ const survey = {
     sample.startMetOfficePull();
 
     return sample;
+  },
+
+  modifySubmission(submission) {
+    if (!submission[0].survey_id) {
+      // backwards compatible
+      submission[0].survey_id = survey.id; //eslint-disable-line
+    }
+
+    return submission;
   },
 };
 

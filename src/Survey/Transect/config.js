@@ -149,6 +149,15 @@ const config = {
 
       return sample;
     },
+
+    modifySubmission(submission) {
+      if (!submission[0].survey_id) {
+        // backwards compatible
+        submission[0].survey_id = survey.id; //eslint-disable-line
+      }
+
+      return submission;
+    },
   },
 
   verify(attrs) {
@@ -183,6 +192,15 @@ const config = {
     });
 
     return sample;
+  },
+
+  modifySubmission(submission) {
+    if (!submission[0].survey_id) {
+      // backwards compatible
+      submission[0].survey_id = survey.id; //eslint-disable-line
+    }
+
+    return submission;
   },
 };
 
