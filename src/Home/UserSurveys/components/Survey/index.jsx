@@ -67,18 +67,18 @@ const Survey = observer(({ sample }) => {
       </>
     );
 
-    if (survey.name === 'transect') {
-      return <IonLabel class="ion-text-wrap">{label}</IonLabel>;
+    if (survey.name === 'precise-area') {
+      return (
+        <IonLabel class="ion-text-wrap">
+          {label}
+          <IonBadge color="medium">
+            <IonIcon icon={butterflyIcon} /> {speciesCount}
+          </IonBadge>
+        </IonLabel>
+      );
     }
 
-    return (
-      <IonLabel class="ion-text-wrap">
-        {label}
-        <IonBadge color="medium">
-          <IonIcon icon={butterflyIcon} /> {speciesCount}
-        </IonBadge>
-      </IonLabel>
-    );
+    return <IonLabel class="ion-text-wrap">{label}</IonLabel>;
   }
   return (
     <IonItemSliding class="survey-list-item">
