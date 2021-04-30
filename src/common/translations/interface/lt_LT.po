@@ -368,6 +368,24 @@ msgstr "Vietovė"
 msgid "Location"
 msgstr "Vieta"
 
+# GPS permissions message
+msgid "Location Required"
+msgstr "Vieta"
+
+# GPS permissions message
+msgid "Aplikacijai reikia naudoti GPS tačiau tam jūs turite suteikti leidimą. Ar atidaryti nustatymus?"
+"This app needs your location, but does not have permission. Open settings "
+"now?"
+msgstr ""
+
+# GPS message
+msgid "Cancel to prevent battery drain."
+msgstr "Atšaukite jeigu norite taupyti bateriją."
+
+# GPS message
+msgid "Using your location."
+msgstr "Naudoja jūsų vietą"
+
 msgid "Add"
 msgstr "Pridėti"
 
@@ -1013,6 +1031,9 @@ msgstr "Monitoringas negalimas"
 
 msgid "15min Count"
 msgstr "15min Monitoringas"
+
+msgid "15min Single Species Count"
+msgstr "15min Vienos Rūšies Monitoringas"
 
 msgid "eBMS Transect"
 msgstr "eBMS Maršrutas"

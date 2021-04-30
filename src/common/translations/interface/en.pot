@@ -918,6 +918,9 @@ msgstr "Unable to survey"
 msgid "15min Count"
 msgstr "15min Count"
 
+msgid "15min Single Species Count"
+msgstr "15min Single Species Count"
+
 msgid "eBMS Transect"
 msgstr "eBMS Transect"
 

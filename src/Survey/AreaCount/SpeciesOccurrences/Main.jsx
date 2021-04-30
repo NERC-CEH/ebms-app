@@ -90,7 +90,7 @@ class EditOccurrence extends Component {
 
     const species = samples[0].occurrences[0].getTaxonName();
 
-    const count = samples.length;
+    const count = samples.length > 1 ? samples.length : null;
 
     return (
       <Main id="area-count-occurrence-edit">

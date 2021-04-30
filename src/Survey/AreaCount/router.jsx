@@ -5,7 +5,7 @@ import userModel from 'userModel';
 import { AttrPage, RouteWithModels, ModelLocation } from '@apps';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import { observer } from 'mobx-react';
-import config from 'config';
+import appConfig from 'config';
 import Home from './Home';
 import OccurrenceHome from './OccurrenceHome';
 import SpeciesOccurrences from './SpeciesOccurrences';
@@ -13,10 +13,9 @@ import Taxon from './Taxon';
 import AreaAttr from './Area';
 import Details from './Details';
 import survey from './config';
+import surveySingleSpecies from './configSpecies';
 
 const { AttrPageFromRoute } = AttrPage;
-
-const baseURL = '/survey/precise-area';
 
 const HomeWrap = props => (
   <Home
@@ -28,11 +27,11 @@ const HomeWrap = props => (
 );
 
 const ModelLocationWrap = observer(props => (
-  <ModelLocation model={props.subSample} mapProviderOptions={config.map} />
+  <ModelLocation model={props.subSample} mapProviderOptions={appConfig.map} />
 ));
 
-const routes = [
-  [`${baseURL}/new`, StartNewSurvey.with(survey), true],
+const getRoutes = (baseURL, config) => [
+  [`${baseURL}/new`, StartNewSurvey.with(config), true],
   [`${baseURL}/:smpId/edit`, HomeWrap],
   [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/edit/area`, AreaAttr],
@@ -48,6 +47,11 @@ const routes = [
   [`${baseURL}/:smpId/edit/samples/:subSmpId/occ/:occId/taxon`, Taxon],
   [`${baseURL}/:smpId/edit/samples/:subSmpId/location`, ModelLocationWrap],
   [`${baseURL}/:smpId/edit/samples/:subSmpId/occ/:occId`, OccurrenceHome],
+];
+
+const routes = [
+  ...getRoutes(`/survey/${survey.name}`, survey),
+  ...getRoutes(`/survey/${surveySingleSpecies.name}`, surveySingleSpecies),
 ];
 
 export default RouteWithModels.fromArray(savedSamples, routes);

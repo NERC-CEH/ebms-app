@@ -367,6 +367,24 @@ msgstr "Област"
 msgid "Location"
 msgstr ""
 
+# GPS permissions message
+msgid "Location Required"
+msgstr ""
+
+# GPS permissions message
+msgid ""
+"This app needs your location, but does not have permission. Open settings "
+"now?"
+msgstr ""
+
+# GPS message
+msgid "Cancel to prevent battery drain."
+msgstr ""
+
+# GPS message
+msgid "Using your location."
+msgstr ""
+
 msgid "Add"
 msgstr "Додај"
 
@@ -1021,6 +1039,9 @@ msgstr "Обилазак није могућ"
 
 msgid "15min Count"
 msgstr "Бројање у 15 минута"
+
+msgid "15min Single Species Count"
+msgstr ""
 
 msgid "eBMS Transect"
 msgstr "eBMS трансект"

@@ -120,11 +120,18 @@ class AreaCount extends Component {
   };
 
   getSpeciesAddButton = () => {
-    const { isDisabled, match } = this.props;
+    const { isDisabled, match, sample } = this.props;
 
     if (isDisabled) {
       // placeholder
       return <div style={{ height: '44px' }} />;
+    }
+
+    const isSingleSpeciesSurvey =
+      sample.metadata.survey === 'precise-single-species-area';
+    const hasAlreadySpecies = !!sample.samples.length;
+    if (isSingleSpeciesSurvey && hasAlreadySpecies) {
+      return null;
     }
 
     const navigateToSearch = () => this.context.navigate(`${match.url}/taxon`);
@@ -230,24 +237,28 @@ class AreaCount extends Component {
       .sort(sort)
       .map(this.getSpeciesEntry);
 
+    const count = speciesList.length > 1 ? speciesList.length : null;
+
     return (
       <>
-        <div id="species-list-sort">
-          <IonButton
-            fill="clear"
-            size="small"
-            onClick={this.props.onToggleSpeciesSort}
-          >
-            <IonIcon icon={filterOutline} mode="md" />
-          </IonButton>
-        </div>
+        {count && (
+          <div id="species-list-sort">
+            <IonButton
+              fill="clear"
+              size="small"
+              onClick={this.props.onToggleSpeciesSort}
+            >
+              <IonIcon icon={filterOutline} mode="md" />
+            </IonButton>
+          </div>
+        )}
 
         <IonList id="list" lines="full">
           <div className="rounded">
             <IonItemDivider className="species-list-header">
               <IonLabel>Count</IonLabel>
               <IonLabel>Species</IonLabel>
-              <IonLabel>{speciesList.length}</IonLabel>
+              <IonLabel>{count}</IonLabel>
             </IonItemDivider>
 
             {speciesList}

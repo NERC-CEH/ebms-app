@@ -142,13 +142,19 @@ const survey = {
       date: dateAttr,
     },
 
-    create(AppSample, Occurrence, taxon) {
+    create(
+      AppSample,
+      Occurrence,
+      taxon,
+      surveyId = survey.id,
+      surveyName = survey.name
+    ) {
       const training = appModel.attrs.useTraining ? 't' : 'f';
 
       const sample = new AppSample({
         metadata: {
-          survey_id: survey.id,
-          survey: survey.name,
+          survey_id: surveyId,
+          survey: surveyName,
         },
         attrs: {
           training,
@@ -208,13 +214,13 @@ const survey = {
     return null;
   },
 
-  create(AppSample) {
+  create(AppSample, surveyId = survey.id, surveyName = survey.name) {
     const training = appModel.attrs.useTraining ? 't' : 'f';
 
     const sample = new AppSample({
       metadata: {
-        survey_id: survey.id,
-        survey: survey.name,
+        survey_id: surveyId,
+        survey: surveyName,
         pausedTime: 0,
       },
       attrs: {
