@@ -57,6 +57,16 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
         </div>
 
         <IonItemDivider>
+          <T>Settings</T>
+        </IonItemDivider>
+        <div className="rounded">
+          <IonItem routerLink="/settings/menu" detail>
+            <IonIcon icon={settingsOutline} size="small" slot="start" />
+            <T>App</T>
+          </IonItem>
+        </div>
+
+        <IonItemDivider>
           <T>Info</T>
         </IonItemDivider>
         <div className="rounded">
@@ -88,16 +98,6 @@ const Component = observer(({ isLoggedIn, user, logOut, appModel }) => {
           >
             <IonIcon icon={lockClosedOutline} size="small" slot="start" />
             <T>Privacy Policy</T>
-          </IonItem>
-        </div>
-
-        <IonItemDivider>
-          <T>Settings</T>
-        </IonItemDivider>
-        <div className="rounded">
-          <IonItem routerLink="/settings/menu" detail>
-            <IonIcon icon={settingsOutline} size="small" slot="start" />
-            <T>App</T>
           </IonItem>
         </div>
       </IonList>
