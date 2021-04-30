@@ -84,7 +84,7 @@ const stageValues = [
 const survey = {
   id: 565,
   name: 'precise-area',
-  label: 'Precise 15min Count',
+  label: '15min Count',
   webForm: 'enter-app-record',
 
   attrs: {

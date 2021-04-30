@@ -77,7 +77,7 @@ const stageValues = [
 const survey = {
   id: 565,
   name: 'area',
-  label: '15min Count',
+  label: '15min Count (old)',
   webForm: 'enter-app-record',
 
   attrs: {
