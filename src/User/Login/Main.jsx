@@ -46,7 +46,7 @@ class Component extends React.Component {
                     name="email"
                     placeholder={t('Username or email')}
                     icon={personOutline}
-                    type="text"
+                    type="email"
                     {...props}
                   />
                   <InputWithValidation

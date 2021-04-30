@@ -22,7 +22,7 @@ const Component = ({ onSubmit, schema }) => {
                   name="name"
                   placeholder="Username or email"
                   icon={personOutline}
-                  type="text"
+                  type="email"
                   {...props}
                 />
               </div>
