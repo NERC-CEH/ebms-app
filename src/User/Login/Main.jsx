@@ -11,6 +11,7 @@ import {
   informationCircle,
 } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
+import './styles.scss';
 
 class Component extends React.Component {
   state = {

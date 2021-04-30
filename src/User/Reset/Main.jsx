@@ -5,6 +5,7 @@ import { Main, InputWithValidation, InfoMessage } from '@apps';
 import { Trans as T } from 'react-i18next';
 import { personOutline, informationCircle } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
+import './styles.scss';
 
 const Component = ({ onSubmit, schema }) => {
   return (

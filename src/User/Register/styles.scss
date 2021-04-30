@@ -1,6 +1,11 @@
 #user-register {
   form {
     margin-top: 20px;
+
+    ion-input {
+      --padding-bottom: 0;
+      --padding-top: 0;
+    }
   }
 
   .terms-info-text {
