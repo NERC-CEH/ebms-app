@@ -6,7 +6,6 @@ import { observable } from 'mobx';
 import axios from 'axios';
 import CONFIG from 'config';
 import * as Yup from 'yup';
-import groups from 'common/data/species/groups.json';
 import { genericStore } from './store';
 
 const transectsSchemaBackend = Yup.object().shape({
@@ -169,7 +168,7 @@ const defaults = {
   'draftId:area': null,
   'draftId:transect': null,
 
-  speciesGroups: [...Object.keys(groups)],
+  speciesGroups: ['butterflies'],
   transects: [],
 
   primarySurvey: 'precise-area',
