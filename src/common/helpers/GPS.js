@@ -95,12 +95,7 @@ const API = {
     if (typeof onPosition !== 'function') {
       throw new Error('GPS start callback is missing');
     }
-    Modals.confirm({
-      title: t('Location Required'),
-      message: t(
-        'This app needs your location, but does not have permission. Open settings now?'
-      ),
-    });
+
     if (!API._watchId) {
       API._startWatch();
     }
