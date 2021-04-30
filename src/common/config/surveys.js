@@ -1,9 +1,9 @@
 import areaSurveyOld from 'Survey/AreaCountOld/config';
-import preciseAreaSurvey from 'Survey/PreciseAreaCount/config';
+import areaSurvey from 'Survey/AreaCount/config';
 import transectSurvey from 'Survey/Transect/config';
 
 export default {
-  [preciseAreaSurvey.name]: preciseAreaSurvey,
+  [areaSurvey.name]: areaSurvey,
   [areaSurveyOld.name]: areaSurveyOld,
   [transectSurvey.name]: transectSurvey,
 };
