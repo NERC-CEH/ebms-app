@@ -865,6 +865,8 @@ msgstr "Compartir análisis de aplicaciones"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
+"Comparta datos de problemasd de la aplicación para que podamos hacerla más "
+"confiable."
 
 msgid "Save Draft"
 msgstr "Guardar borrador"
@@ -1557,32 +1559,32 @@ msgstr "Fotos de especie"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "Elige la fase de la vida"
 
 # A survey label
 msgid "Weather"
-msgstr ""
+msgstr "Condiciones climáticas"
 
 # A survey label
 msgid "Photo"
-msgstr ""
+msgstr "Foto"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Grupos de especies"
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Mariposas"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Polillas"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Abejorros"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Libélulas"
