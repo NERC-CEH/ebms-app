@@ -354,6 +354,22 @@ msgstr "Area"
 msgid "Location"
 msgstr "Location"
 
+# GPS permissions message
+msgid "Location Required"
+msgstr "Location Required"
+
+# GPS permissions message
+msgid "This app needs your location, but does not have permission. Open settings now?"
+msgstr "This app needs your location, but does not have permission. Open settings now?"
+
+# GPS message
+msgid "Cancel to prevent battery drain."
+msgstr "Cancel to prevent battery drain."
+
+# GPS message
+msgid "Using your location."
+msgstr "Using your location."
+
 msgid "Add"
 msgstr "Add"
 

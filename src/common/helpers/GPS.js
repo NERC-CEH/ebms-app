@@ -20,11 +20,10 @@ const API = {
         const openSettings = ({ value }) =>
           value && BackgroundGeolocation.openSettings();
         Modals.confirm({
-          title: 'Location Required',
-          message:
-            'This app needs your location, ' +
-            'but does not have permission.\n\n' +
-            'Open settings now?',
+          title: t('Location Required'),
+          message: t(
+            'This app needs your location, but does not have permission. Open settings now?'
+          ),
         }).then(openSettings);
       }
 
@@ -82,7 +81,8 @@ const API = {
 
     API._watchId = BackgroundGeolocation.addWatcher(
       {
-        backgroundMessage: 'Cancel to prevent battery drain.',
+        backgroundTitle: t('Using your location.'),
+        backgroundMessage: t('Cancel to prevent battery drain.'),
         requestPermissions: true,
         stale: false,
         distanceFilter: 20,
@@ -95,7 +95,12 @@ const API = {
     if (typeof onPosition !== 'function') {
       throw new Error('GPS start callback is missing');
     }
-
+    Modals.confirm({
+      title: t('Location Required'),
+      message: t(
+        'This app needs your location, but does not have permission. Open settings now?'
+      ),
+    });
     if (!API._watchId) {
       API._startWatch();
     }
