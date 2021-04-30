@@ -162,7 +162,7 @@ const config = {
   },
 
   create(Sample) {
-    const training = appModel.attrs.useTraining && 't';
+    const training = appModel.attrs.useTraining ? 't' : 'f';
 
     const recorder = `${userModel.attrs.firstname} ${userModel.attrs.secondname}`;
     const now = new Date();

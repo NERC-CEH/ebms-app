@@ -143,7 +143,7 @@ const survey = {
     },
 
     create(AppSample, Occurrence, taxon) {
-      const training = appModel.attrs.useTraining && 't';
+      const training = appModel.attrs.useTraining ? 't' : 'f';
 
       const sample = new AppSample({
         metadata: {
@@ -184,7 +184,7 @@ const survey = {
       },
 
       create(Occurrence, taxon) {
-        const training = appModel.attrs.useTraining && 't';
+        const training = appModel.attrs.useTraining ? 't' : 'f';
 
         return new Occurrence({
           attrs: {
@@ -209,7 +209,7 @@ const survey = {
   },
 
   create(AppSample) {
-    const training = appModel.attrs.useTraining && 't';
+    const training = appModel.attrs.useTraining ? 't' : 'f';
 
     const sample = new AppSample({
       metadata: {

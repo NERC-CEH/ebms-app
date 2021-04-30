@@ -168,7 +168,7 @@ const survey = {
   },
 
   create(Sample) {
-    const training = appModel.attrs.useTraining && 't';
+    const training = appModel.attrs.useTraining ? 't' : 'f';
 
     const sample = new Sample({
       metadata: {
