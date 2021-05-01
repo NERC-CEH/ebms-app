@@ -10,7 +10,7 @@ import { observable } from 'mobx';
 import geojsonArea from '@mapbox/geojson-area';
 import { updateModelLocation } from '@apps';
 
-const METERS_SINCE_LAST_LOCATION = 20;
+const METERS_SINCE_LAST_LOCATION = 15;
 
 function calculateLineLenght(lineString) {
   /**
