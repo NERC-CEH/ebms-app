@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { withRouter } from 'react-router';
 import { toJS } from 'mobx';
+import { Plugins, HapticsImpactStyle } from '@capacitor/core';
 import { Page, alert, toast, showInvalidsMessage } from '@apps';
 import i18n from 'i18next';
-import { NavContext } from '@ionic/react';
+import { NavContext, isPlatform } from '@ionic/react';
 import Occurrence from 'occurrence';
 import Sample from 'sample';
 import Header from './Header';
 import Main from './Main';
+
+const { Haptics } = Plugins;
 
 const { success, warn } = toast;
 
@@ -241,6 +244,8 @@ class Container extends React.Component {
     const newSubSample = survey.smp.create(Sample, Occurrence, taxon);
     sample.samples.push(newSubSample);
     sample.save();
+
+    isPlatform('hybrid') && Haptics.impact({ style: HapticsImpactStyle.Light });
   };
 
   render() {
