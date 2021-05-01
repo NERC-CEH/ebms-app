@@ -70,6 +70,9 @@ module.exports = (taxon, common) => {
 
   // #remove spaces
   cleaned = cleaned.replace(/\s{2}/g, ' ');
+  // zero-width space https://stackoverflow.com/a/11305926/4460992
+  cleaned = cleaned.replace(/[\u200B-\u200D\uFEFF]/g, '');
+
   cleaned = cleaned.trim();
 
   return cleaned;

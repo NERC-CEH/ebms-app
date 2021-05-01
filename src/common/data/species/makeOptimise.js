@@ -56,7 +56,7 @@ function getLastGenus(
     lastGenus = [];
     lastGenus[GENUS_ID_INDEX] = 0;
     lastGenus[GENUS_GROUP_INDEX] = taxa.taxon_group;
-    lastGenus[GENUS_TAXON_INDEX] = genusName;
+    lastGenus[GENUS_TAXON_INDEX] = taxonCleaner(genusName, false, true);
     lastGenus[GENUS_SPECIES_INDEX] = [];
     optimised.push(lastGenus);
     return lastGenus;
