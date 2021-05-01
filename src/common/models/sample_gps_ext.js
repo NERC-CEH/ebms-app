@@ -10,7 +10,7 @@ import { observable } from 'mobx';
 import geojsonArea from '@mapbox/geojson-area';
 import { updateModelLocation } from '@apps';
 
-const DEFAULT_MIN_DISTANCE_SINCE_LAST_LOCATION = 20; // meters
+const METERS_SINCE_LAST_LOCATION = 20;
 
 function calculateLineLenght(lineString) {
   /**
@@ -64,7 +64,7 @@ function isSufficientDistanceMade(coordinates, latitude, longitude) {
 
   if (
     lastLocation.length &&
-    distanceSinceLastLocation < DEFAULT_MIN_DISTANCE_SINCE_LAST_LOCATION
+    distanceSinceLastLocation < METERS_SINCE_LAST_LOCATION
   ) {
     return false;
   }
@@ -156,10 +156,6 @@ const extension = {
 
       const isPreciseAreaSubSample = !!this.parent;
       if (isPreciseAreaSubSample) {
-        if (location.accuracy > 50) {
-          return;
-        }
-
         updateModelLocation(this, location);
         this.stopGPS();
         return;

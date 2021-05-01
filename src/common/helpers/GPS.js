@@ -85,7 +85,6 @@ const API = {
         backgroundMessage: t('Cancel to prevent battery drain.'),
         requestPermissions: true,
         stale: false,
-        distanceFilter: 20,
       },
       API._onWatchPosition
     );
