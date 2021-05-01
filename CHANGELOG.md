@@ -1,6 +1,15 @@
 ## 1.11.0
 
-WIP
+- Added 15min single species survey
+- Added background GPS tracking
+- Added favorite species groups setting
+- Added species group label to search results
+- Upgraded the 15min area survey to assign occurrences precise locations
+- Fixed species search issue with zero-width characters
+- Added 'upload' shortcut to saved surveys
+- Added confirmation to GPS toggle
+- Updated UI design
+- Updated translations
 
 ## 1.10.0
 
