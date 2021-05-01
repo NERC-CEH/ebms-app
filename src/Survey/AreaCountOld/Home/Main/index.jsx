@@ -251,23 +251,25 @@ class AreaCount extends Component {
       <Main id="area-count-edit">
         {isDisabled && (
           <>
-            <InfoMessage icon={informationCircle}>
-              This record has been submitted and cannot be edited within this
-              App.
+            <InfoMessage icon={informationCircle} skipTranslation>
+              <T>
+                This record has been submitted and cannot be edited within this
+                App.
+              </T>
+              <IonButton
+                href={`${config.backend.url}`}
+                expand="block"
+                color="dark"
+                fill="outline"
+                size="small"
+                className="website-link"
+              >
+                <IonIcon icon={openOutline} slot="end" />
+                <IonLabel>
+                  <T>eBMS website</T>
+                </IonLabel>
+              </IonButton>
             </InfoMessage>
-
-            <IonButton
-              href={`${config.backend.url}`}
-              expand="block"
-              fill="outline"
-              size="small"
-              className="website-link"
-            >
-              <IonIcon icon={openOutline} slot="end" />
-              <IonLabel>
-                <T>eBMS website</T>
-              </IonLabel>
-            </IonButton>
           </>
         )}
 

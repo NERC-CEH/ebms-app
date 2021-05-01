@@ -75,15 +75,15 @@ class Edit extends Component {
     return (
       <Main id="transect-edit">
         {isDisabled && (
-          <>
-            <InfoMessage icon={informationCircle}>
+          <InfoMessage icon={informationCircle} skipTranslation>
+            <T>
               This record has been submitted and cannot be edited within this
               App.
-            </InfoMessage>
-
+            </T>
             <IonButton
               href={`${config.backend.url}`}
               expand="block"
+              color="dark"
               fill="outline"
               size="small"
               className="website-link"
@@ -93,7 +93,7 @@ class Edit extends Component {
                 <T>eBMS website</T>
               </IonLabel>
             </IonButton>
-          </>
+          </InfoMessage>
         )}
 
         <IonList lines="full">
