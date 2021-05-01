@@ -31,7 +31,12 @@ class EditOccurrence extends Component {
   };
 
   getSamplesList = () => {
-    const { deleteSample, samples, navigateToOccurrence } = this.props;
+    const {
+      deleteSample,
+      samples,
+      navigateToOccurrence,
+      isDisabled,
+    } = this.props;
 
     const getOccurrence = smp => {
       const occ = smp.occurrences[0];
@@ -63,11 +68,13 @@ class EditOccurrence extends Component {
             </IonLabel>
             <IonLabel slot="end">{location}</IonLabel>
           </IonItem>
-          <IonItemOptions side="end">
-            <IonItemOption color="danger" onClick={deleteSubSample}>
-              <T>Delete</T>
-            </IonItemOption>
-          </IonItemOptions>
+          {!isDisabled && (
+            <IonItemOptions side="end">
+              <IonItemOption color="danger" onClick={deleteSubSample}>
+                <T>Delete</T>
+              </IonItemOption>
+            </IonItemOptions>
+          )}
         </IonItemSliding>
       );
     };

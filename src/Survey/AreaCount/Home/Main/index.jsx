@@ -155,6 +155,7 @@ class AreaCount extends Component {
       deleteSpecies,
       navigateToSpeciesOccurrences,
       increaseCount,
+      isDisabled,
     } = this.props;
 
     const isSpeciesDisabled = !species.count;
@@ -200,11 +201,13 @@ class AreaCount extends Component {
             {location}
           </IonLabel>
         </IonItem>
-        <IonItemOptions side="end">
-          <IonItemOption color="danger" onClick={deleteSpeciesWrap}>
-            <T>Delete</T>
-          </IonItemOption>
-        </IonItemOptions>
+        {!isDisabled && (
+          <IonItemOptions side="end">
+            <IonItemOption color="danger" onClick={deleteSpeciesWrap}>
+              <T>Delete</T>
+            </IonItemOption>
+          </IonItemOptions>
+        )}
       </IonItemSliding>
     );
   };
