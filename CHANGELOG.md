@@ -2,7 +2,7 @@
 
 - Added 15min single species survey
 - Added background GPS tracking
-- Added favorite species groups setting
+- Added favourite species groups setting
 - Added species group label to search results
 - Upgraded the 15min area survey to assign occurrences precise locations
 - Fixed species search issue with zero-width characters
