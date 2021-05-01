@@ -51,6 +51,7 @@ const Container = observer(({ savedSamples, appModel, userModel, t }) => {
     language,
     country,
     primarySurvey,
+    speciesGroups,
   } = appModel.attrs;
 
   return (
@@ -65,6 +66,7 @@ const Container = observer(({ savedSamples, appModel, userModel, t }) => {
         resetApp={() => resetApp(savedSamples, appModel, userModel)}
         onToggle={(setting, checked) => onToggle(appModel, setting, checked)}
         language={language}
+        speciesGroups={speciesGroups}
         country={country}
       />
     </Page>

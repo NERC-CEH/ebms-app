@@ -1500,6 +1500,10 @@ msgid "Species groups"
 msgstr ""
 
 # Part of species group selection
+msgid "Please select the species groups that you always record."
+msgstr ""
+
+# Part of species group selection
 msgid "Butterflies"
 msgstr ""
 

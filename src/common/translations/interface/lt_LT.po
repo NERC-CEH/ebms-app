@@ -1546,6 +1546,10 @@ msgid "Species groups"
 msgstr "Rūšių grupės"
 
 # Part of species group selection
+msgid "Please select the species groups that you always record."
+msgstr "Pasirinkite rūšių grupes kurias visada monitorinate."
+
+# Part of species group selection
 msgid "Butterflies"
 msgstr "Drugeliai"
 

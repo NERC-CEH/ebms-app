@@ -16,6 +16,7 @@ function SpeciesGroups({ appModel }) {
       model={appModel}
       attrProps={{
         input: 'checkbox',
+        info: 'Please select the species groups that you always record.',
         inputProps: { options: groupOptions },
       }}
       headerProps={{ title: 'Species groups' }}

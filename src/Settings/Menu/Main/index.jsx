@@ -79,6 +79,7 @@ class Component extends React.Component {
     primarySurvey: PropTypes.string,
     language: PropTypes.string,
     country: PropTypes.string,
+    speciesGroups: PropTypes.array,
   };
 
   render() {
@@ -92,6 +93,7 @@ class Component extends React.Component {
       sendAnalytics,
       uploadAllSamples,
       primarySurvey,
+      speciesGroups,
     } = this.props;
 
     const primarySurveyLabel = surveys[primarySurvey].label;
@@ -130,6 +132,7 @@ class Component extends React.Component {
                 <T>Species groups</T>
               </IonLabel>
               <IonIcon icon={butterflyIcon} size="small" slot="start" />
+              <IonLabel slot="end">{speciesGroups.length}</IonLabel>
             </IonItem>
           </div>
 
