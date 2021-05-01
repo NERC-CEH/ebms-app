@@ -245,7 +245,7 @@ class Container extends React.Component {
     sample.samples.push(newSubSample);
     sample.save();
 
-    isPlatform('hybrid') && Haptics.impact({ style: HapticsImpactStyle.Light });
+    isPlatform('hybrid') && Haptics.impact({ style: HapticsImpactStyle.Heavy });
   };
 
   render() {
