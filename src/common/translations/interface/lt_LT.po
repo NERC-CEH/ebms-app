@@ -373,10 +373,12 @@ msgid "Location Required"
 msgstr "Vieta"
 
 # GPS permissions message
-msgid "Aplikacijai reikia naudoti GPS tačiau tam jūs turite suteikti leidimą. Ar atidaryti nustatymus?"
+msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Aplikacijai reikia naudoti GPS tačiau tam jūs turite suteikti leidimą. Ar "
+"atidaryti nustatymus?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
@@ -1541,20 +1543,32 @@ msgstr "Nuotrauka"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Rūšių grupės"
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Drugeliai"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Drugiai"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Kamanės"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Laumžirgiai"
+
+# Alert label
+msgid "Warning"
+msgstr "Ispėjimas"
+
+# Alert message when turning GPS off
+msgid "Are you sure you want to turn off the GPS tracking?"
+msgstr "Ar tikrai norite išjungti GPS sekimą?"
+
+# Alert button option
+msgid "Turn off"
+msgstr "Išjungti"

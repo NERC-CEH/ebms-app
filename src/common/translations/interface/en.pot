@@ -1303,3 +1303,15 @@ msgstr "Bumblebees"
 # Part of species group selection 
 msgid "Dragonflies"
 msgstr "Dragonflies"
+
+# Alert label 
+msgid "Warning"
+msgstr "Warning"
+
+# Alert message when turning GPS off 
+msgid "Are you sure you want to turn off the GPS tracking?"
+msgstr "Are you sure you want to turn off the GPS tracking?"
+
+# Alert button option 
+msgid "Turn off"
+msgstr "Turn off"
