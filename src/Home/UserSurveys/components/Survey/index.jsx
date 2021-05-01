@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
@@ -10,6 +10,7 @@ import {
   IonItemOption,
   IonIcon,
   IonBadge,
+  NavContext,
 } from '@ionic/react';
 import { alert } from '@apps';
 import butterflyIcon from 'common/images/butterfly.svg';
@@ -36,7 +37,9 @@ function deleteSurvey(sample) {
   });
 }
 
-const Survey = observer(({ sample }) => {
+function Survey({ sample, userModel }) {
+  const { navigate } = useContext(NavContext);
+
   const date = new Date(sample.metadata.created_on);
   const prettyDate = date.toLocaleDateString();
   const survey = sample.getSurvey();
@@ -80,12 +83,26 @@ const Survey = observer(({ sample }) => {
 
     return <IonLabel class="ion-text-wrap">{label}</IonLabel>;
   }
+
+  const onUpload = e => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const isLoggedIn = !!userModel.attrs.email;
+    if (!isLoggedIn) {
+      navigate(`/user/login`);
+      return;
+    }
+
+    sample.upload();
+  };
+
   return (
     <IonItemSliding class="survey-list-item">
       <ErrorMessage sample={sample} />
       <IonItem routerLink={href}>
         {getSampleInfo()}
-        <OnlineStatus sample={sample} />
+        <OnlineStatus sample={sample} onUpload={onUpload} />
       </IonItem>
       <IonItemOptions side="end">
         <IonItemOption color="danger" onClick={() => deleteSurvey(sample)}>
@@ -94,10 +111,11 @@ const Survey = observer(({ sample }) => {
       </IonItemOptions>
     </IonItemSliding>
   );
-});
+}
 
 Survey.propTypes = {
   sample: PropTypes.object.isRequired,
+  userModel: PropTypes.object.isRequired,
 };
 
-export default Survey;
+export default observer(Survey);

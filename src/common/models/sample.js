@@ -5,7 +5,7 @@ import { observable } from 'mobx';
 import config from 'config';
 import userModel from 'userModel';
 import appModel from 'appModel';
-import { Sample } from '@apps';
+import { Sample, showInvalidsMessage, device, toast } from '@apps';
 import surveys from 'common/config/surveys';
 import Occurrence from './occurrence';
 import Media from './media';
@@ -13,6 +13,8 @@ import { modelStore } from './store';
 import GPSExtension from './sample_gps_ext';
 import VibrateExtension from './sample_vibrate_ext';
 import MetOfficeExtension from './sample_metoffice_ext';
+
+const { warn } = toast;
 
 // eslint-disable-next-line
 class AppSample extends Sample {
@@ -54,11 +56,15 @@ class AppSample extends Sample {
   }
 
   destroy = () => {
-    // clean up
-    this.stopGPS();
-    this.stopVibrateCounter();
-
+    this.cleanUp();
     super.destroy();
+  };
+
+  cleanUp = () => {
+    this.stopGPS();
+    const stopGPS = smp => smp.stopGPS();
+    this.samples.forEach(stopGPS);
+    this.stopVibrateCounter();
   };
 
   getPrettyName() {
@@ -67,6 +73,28 @@ class AppSample extends Sample {
     }
 
     return this.occurrences[0].getTaxonName();
+  }
+
+  upload() {
+    if (this.remote.synchronising) {
+      return true;
+    }
+
+    const invalids = this.validateRemote();
+    if (invalids) {
+      showInvalidsMessage(invalids);
+      return false;
+    }
+
+    if (!device.isOnline()) {
+      warn('Looks like you are offline!');
+      return false;
+    }
+
+    this.cleanUp();
+    this.saveRemote();
+
+    return true;
   }
 }
 

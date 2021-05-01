@@ -8,6 +8,7 @@ import {
   IonIcon,
 } from '@ionic/react';
 import { Page, Main } from '@apps';
+import userModel from 'userModel';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import { Trans as T } from 'react-i18next';
 import { addOutline } from 'ionicons/icons';
@@ -40,7 +41,7 @@ function getPendingSurveys(surveys) {
   }
 
   const surveysList = surveys.map(sample => (
-    <Survey key={sample.cid} sample={sample} />
+    <Survey key={sample.cid} sample={sample} userModel={userModel} />
   ));
 
   if (finishedSurvey) {

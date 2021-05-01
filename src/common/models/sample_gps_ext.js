@@ -130,6 +130,8 @@ const extension = {
   },
 
   startGPS() {
+    console.log('SampleModel:GPS start');
+
     // eslint-disable-next-line
     const onPosition = (error, location) => {
       if (error) {
@@ -174,6 +176,7 @@ const extension = {
       return;
     }
 
+    console.log('SampleModel:GPS stop');
     GPS.stop(this.gps.locating);
     this.gps.locating = null;
   },

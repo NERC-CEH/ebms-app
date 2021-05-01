@@ -75,23 +75,9 @@ class Container extends React.Component {
 
   static contextType = NavContext;
 
-  _processSubmission = () => {
-    const { sample } = this.props;
-
-    const invalids = sample.validateRemote();
-    if (invalids) {
-      showInvalidsMessage(invalids);
-      return;
-    }
-
-    sample.toggleGPStracking(false);
-    const stopGPS = smp => smp.toggleGPStracking(false);
-    sample.samples.forEach(stopGPS);
-
-    sample.saveRemote();
-
+  _processSubmission = () =>
+    this.props.sample.upload() &&
     this.context.navigate(`/home/user-surveys`, 'root');
-  };
 
   _processDraft = async () => {
     const { appModel, sample } = this.props;
@@ -101,9 +87,8 @@ class Container extends React.Component {
 
     const saveAndReturn = () => {
       setSurveyEndTime(sample);
-      sample.toggleGPStracking(false);
-      sample.stopVibrateCounter();
 
+      sample.cleanUp();
       sample.save();
       this.context.navigate(`/home/user-surveys`, 'root');
     };

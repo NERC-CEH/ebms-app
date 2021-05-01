@@ -16,19 +16,9 @@ class Container extends React.Component {
 
   static contextType = NavContext;
 
-  _processSubmission = () => {
-    const { sample } = this.props;
-
-    const invalids = sample.validateRemote();
-    if (invalids) {
-      showInvalidsMessage(invalids);
-      return;
-    }
-
-    sample.saveRemote();
-
+  _processSubmission = () =>
+    this.props.sample.upload() &&
     this.context.navigate(`/home/user-surveys`, 'root');
-  };
 
   _processDraft = async () => {
     const { sample, appModel } = this.props;
