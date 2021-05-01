@@ -1401,7 +1401,7 @@ msgid "Sorry, no species were found to copy."
 msgstr "Sorry, er werden geen soorten gevonden om te kopiëren. "
 
 # Species list copy functionality
-msgid "You have succcesfully copied {{speciesCount}} species."
+msgid "You have successfully copied {{speciesCount}} species."
 msgstr ""
 
 # Species list copy functionality

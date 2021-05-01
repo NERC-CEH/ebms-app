@@ -1165,8 +1165,8 @@ msgid "Sorry, no species were found to copy."
 msgstr "Sorry, no species were found to copy."
 
 # Species list copy functionality 
-msgid "You have succcesfully copied {{speciesCount}} species."
-msgstr "You have succcesfully copied {{speciesCount}} species."
+msgid "You have successfully copied {{speciesCount}} species."
+msgstr "You have successfully copied {{speciesCount}} species."
 
 # Species list copy functionality 
 msgid "Sorry, no previous survey to copy species from."

@@ -188,7 +188,7 @@ class Container extends React.Component {
       warn(t('Sorry, no species were found to copy.'));
     } else {
       success(
-        i18n.t('You have succcesfully copied {{speciesCount}} species.', {
+        i18n.t('You have successfully copied {{speciesCount}} species.', {
           speciesCount: newSpeciesList.length,
         })
       );
