@@ -3,12 +3,13 @@
 # Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2020
 # Karolis, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
+# Daniela Lehner <d.lehner@bioforschung.at>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020\n"
+"Last-Translator: Daniela Lehner <d.lehner@bioforschung.at>, 2021\n"
 "Language-Team: German (Germany) (https://www.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -69,7 +70,7 @@ msgid "Estonia"
 msgstr "Estland"
 
 msgid "Spain (Canary Islands)"
-msgstr "Spanien: Kanarische Inseln"
+msgstr "Spanien (Kanarische Inseln)"
 
 msgid "Finland"
 msgstr "Finnland"
@@ -129,10 +130,10 @@ msgid "Portugal"
 msgstr "Portugal"
 
 msgid "Portugal (Azores)"
-msgstr "Portugal: Azoren"
+msgstr "Portugal (Azoren)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugal: Madeira"
+msgstr "Portugal (Madeira)"
 
 msgid "Romania"
 msgstr "Rumänien"
@@ -150,10 +151,10 @@ msgid "Slovakia"
 msgstr "Slowakei"
 
 msgid "Turkey (Europe)"
-msgstr ""
+msgstr "Türkei (Europa)"
 
 msgid "Turkey (Asia)"
-msgstr ""
+msgstr "Türkei (Asien)"
 
 msgid "Ukraine"
 msgstr "Ukraine"
@@ -261,7 +262,7 @@ msgid "Lets start!"
 msgstr "Los geht's! "
 
 msgid "TOP RECORDERS"
-msgstr "TOP-REKORDNER"
+msgstr "TOP-ZÄHLER"
 
 msgid "Top Species from all timed counts"
 msgstr "TOP-ARTEN"
@@ -371,25 +372,27 @@ msgstr "Fläche"
 
 # Location attribute label
 msgid "Location"
-msgstr ""
+msgstr "Standort"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "Standortinformationen erforderlich"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Diese App benötigt einen Zugriff auf Ihre Standortdaten, hat aber keine "
+"Berechtigung. Wollen Sie die Einstellungen ändern?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Abbrechen um Batterie zu sparen."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "Ihr Standort wird genutzt."
 
 msgid "Add"
 msgstr "Hinzufügen"
@@ -602,14 +605,14 @@ msgid "Not enough data yet"
 msgstr "Noch nicht genügend Daten"
 
 msgid "How to start a survey"
-msgstr "So starten Sie eine Umfrage"
+msgstr "So starten Sie eine Erhebung"
 
 msgid "To start a new survey you can press the plus button"
 msgstr "Um eine neue Erhebung zu starten, können Sie die Plus-Taste drücken."
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
-"in der Fußzeile der Homepage. Damit wird eine neue Viertelstundenzählung "
+"in der Fußzeile der Startseite. Damit wird eine neue Viertelstundenzählung "
 "gestartet."
 
 msgid "Selecting species"
@@ -622,9 +625,9 @@ msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"Taste auf Ihrer neuen Bearbeitungsseite der Umfrage. Dadurch gelangen Sie "
-"zur Taxasuchseite. Nach der Auswahl der Art wird sie in Ihre Übersichtsliste"
-" aufgenommen."
+"Drücken Sie die Schaltfläche auf der Bearbeitungsseite ihrer neuen Erhebung."
+" Dadurch gelangen Sie zur Taxasuchseite. Nach der Auswahl der Art wird sie "
+"in Ihre Übersichtsliste aufgenommen."
 
 msgid "Note"
 msgstr "Hinweis"
@@ -686,10 +689,11 @@ msgid ""
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Standardmäßig befindet sich eine Umfrage im Modus \"Entwurf\", der erst dann"
-" an die Datenbank gesendet wird, wenn auf die Schaltfläche \"Fertigstellen\""
-" in der Kopfzeile geklickt wird. Die Anwendung wird versuchen, Ihren "
-"Datensatz einzureichen, sobald es eine gute Netzwerkverbindung gibt."
+"Standardmäßig befindet sich eine Erhebung im Modus \"Entwurf\", der erst "
+"dann an die Datenbank gesendet wird, wenn auf die Schaltfläche "
+"\"Fertigstellen\" in der Kopfzeile geklickt wird. Die Anwendung wird "
+"versuchen, Ihren Datensatz einzureichen, sobald es eine gute "
+"Netzwerkverbindung gibt."
 
 msgid "If the record has reached the database a red"
 msgstr "Wenn der Datensatz die Datenbank erreicht hat, wird er rot angezeigt."
@@ -735,7 +739,7 @@ msgstr ""
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr ""
 "Besuchen Sie die Hauptmenü-Seite und klicken Sie auf die Schaltfläche "
-"Abmelden, um sich abzumelden, "
+"Abmelden, um sich abzumelden"
 
 msgid ""
 "after registering a new account you must verify your email address by "
@@ -805,10 +809,10 @@ msgid "Uploaded"
 msgstr "Hoch geladen"
 
 msgid "No finished pending surveys"
-msgstr "Keine abgeschlossenen ausstehenden Daten "
+msgstr "Keine abgeschlossenen ausstehenden Erhebungen"
 
 msgid "No uploaded surveys"
-msgstr "Keine hochgeladenen Daten"
+msgstr "Keine hochgeladenen Erhebungen"
 
 msgid "Enjoying the app?"
 msgstr "Gefällt Ihnen die App?"
@@ -893,6 +897,8 @@ msgstr "App Analytics teilen"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
+"Teilen Sie App-Absturzdaten, damit wir die App zuverlässiger machen können.\n"
+" "
 
 msgid "Save Draft"
 msgstr "Entwurf speichern"
@@ -920,23 +926,23 @@ msgstr "Raupengespinst"
 
 # Butterfly stage
 msgid "Adult"
-msgstr ""
+msgstr "Adult/Falter"
 
 # Butterfly stage
 msgid "Egg"
-msgstr ""
+msgstr "Ei"
 
 # Butterfly stage
 msgid "Larva"
-msgstr ""
+msgstr "Larve/Raupe"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr ""
+msgstr "Raupengespinst"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr ""
+msgstr "Puppe"
 
 msgid "Transect"
 msgstr "Transekt"
@@ -1065,7 +1071,7 @@ msgid "15min Count"
 msgstr "15-Minuten-Zählung"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "15-Minuten-Zählung einer einzelnen Art"
 
 msgid "eBMS Transect"
 msgstr "eBMS Transekt"
@@ -1212,7 +1218,7 @@ msgstr ""
 " am unteren Rand des Bildschirms. Die App zählt die 15 Minuten nach dem "
 "Start herunter, aber Sie können jederzeit eine Pause machen (z.B. um einen "
 "Schmetterling zu identifizieren), indem Sie die Pausentaste drücken. Am Ende"
-" der Umfrage können Sie Ihre Aufzeichnungen überprüfen und sicherstellen, "
+" der Erhebung können Sie Ihre Aufzeichnungen überprüfen und sicherstellen, "
 "dass die Gesamtzahlen korrekt sind, bevor Sie das Formular abschicken."
 
 msgid ""
@@ -1296,7 +1302,7 @@ msgstr ""
 " abzuschließen."
 
 msgid "Survey section"
-msgstr "Umfrage-Bereich"
+msgstr "Erhebungs-Abschnitt"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1420,8 +1426,8 @@ msgstr "Bitte loggen Sie sich zuerst ein, um die Datensätze hochzuladen."
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{{count}} Zählung hochladen"
+msgstr[1] "{{count}} Zählungen hochladen"
 
 # Part of a page error
 msgid "Oops! Something, went wrong."
@@ -1433,200 +1439,214 @@ msgstr "Dies ist das Fehlerereignis id: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr ""
+msgstr "Weitere Details"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Wetterbedingungen"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr ""
+msgstr "Wetterbedingungen"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr ""
+msgstr "Sind Sie sich sicher, dass Sie {{taxon}} löschen möchten?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
+"Die aktuellen Wetterdaten werden von OpenweatherMap API weather service "
+"vorausgefüllt."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Art kopieren"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
 msgstr ""
+"Sind Sie sicher, dass Sie die Artenliste der vorherigen Erhebung kopieren "
+"möchten?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Kopieren"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Entschuldigung, es wurden keine Arten zum kopieren gefunden."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "{{speciesCount}} Arten wurden erfolgreich kopiert."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
 msgstr ""
+"Entschuldigung, es gibt keine vorherige Erhebung von der Arten kopiert "
+"werden können."
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Armenien"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Um eine Erhebung zu löschen, wischen Sie diese nach links."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Bitte überprüfen Sie ob das Erhebungsgebiet korrekt ist, bevor Sie die Daten"
+" hochladen."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "Bitte vergessen Sie nicht ausstehende Erhebungen hochzuladen!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
+"Keine abgeschlossenen ausstehenden Erhebungen.<br/><br/> Klicken Sie <4></4>"
+" um hinzuzufügen."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Tipp: Hilfe finden"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Bitte besuchen Sie die Anleitungs- <2></2> und Hilfeseiten <5></5> bevor Sie"
+" die App benutzen!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Mehr Informationen"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Tipp: Arten hinzufügen"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Sie können mehrere Einträge in Ihren vorherigen Artenlisten kopieren, indem "
+"Sie länger auf die Schaltfläche Arten hinzufügen klicken."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Verbergen"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Standard Erhebung"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Alle Erhebungen"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr ""
+msgstr "Representatives Foto des Standortes der 15-Minuten-Zählung"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Es wurde kein Foto hinzugefügt."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Zum Hinzufügen <1></1> drücken."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "Exakte 15-Minuten-Zählung"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Vorkommen"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr ""
+msgstr "Zeit"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Sind Sie sicher, dass sie diese Beobachtung löschen möchten?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Bestätigen"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Keine hochgeladenen Erhebungen</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "Account existiert bereits"
 
 # A survey label
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 # A survey label
 msgid "Species Photo"
-msgstr ""
+msgstr "Artenfoto"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "Wählen Sie das Entwicklungsstadium"
 
 # A survey label
 msgid "Weather"
-msgstr ""
+msgstr "Wetter"
 
 # A survey label
 msgid "Photo"
-msgstr ""
+msgstr "Foto"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Artengruppen"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "Bitte wählen Sie die Artengruppe, welche Sie immer erheben möchten."
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Tagfalter"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Nachtfalter"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Hummeln"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Libellen"
 
 # Alert label
 msgid "Warning"
-msgstr ""
+msgstr "Warnung"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "Sind Sie sich sicher, dass Sie die GPS Ortung ausschalten möchten?"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "Ausschalten"

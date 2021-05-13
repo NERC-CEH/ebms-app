@@ -1,7 +1,7 @@
 # 
 # Translators:
-# Karolis, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
+# Karolis, 2021
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
 # 
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Selecciona tu país"
+msgstr "Seleccione su país"
 
 msgid "United Kingdom"
 msgstr "Reino Unido"
@@ -373,21 +373,23 @@ msgstr "Lugar"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "Ubicación requerida"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Esta aplicación necesita su ubicación, pero no tiene permiso. ¿Abrir "
+"configuración ahora?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Cancele para evitar que se agote la batería."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "Usando su ubicación."
 
 msgid "Add"
 msgstr "Añadir"
@@ -550,7 +552,7 @@ msgid ""
 msgstr ""
 "Carecemos de información sobre los números de mariposas en muchas partes de "
 "Europa, como lo muestra la densidad de registros disponibles actualmente "
-"para evaluar el estado de las mariposas."
+"para poder evaluar el estado de las mariposas."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -682,9 +684,9 @@ msgid ""
 " will try to submit your record once there is a good network connection."
 msgstr ""
 "Por defecto, un muestreo está en modo 'borrador' que no se enviará a la base"
-" de datos hasta que se haga clic en el botón 'Finalizar' en el encabezado. "
-"La aplicación intentará enviar su registro una vez que haya una buena "
-"conexión de red."
+" de datos hasta que se haga clic en el botón 'Terminar' en el encabezado. La"
+" aplicación intentará enviar su registro una vez que haya una buena conexión"
+" de red."
 
 msgid "If the record has reached the database a red"
 msgstr "Si el registro ha llegado a la base de datos aparecerá en rojo"
@@ -724,7 +726,7 @@ msgid ""
 " the instructions."
 msgstr ""
 "Para iniciar sesión, abre la página del menu principal, haga click en el "
-"botón  Iniciar sesión or Registrarse y siga las instrucciones"
+"botón Iniciar sesión o Registrarse y siga las instrucciones"
 
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr ""
@@ -791,16 +793,16 @@ msgid "Paused"
 msgstr "Pausa"
 
 msgid "Pending"
-msgstr "Pendiente"
+msgstr "Pendientes"
 
 msgid "Uploaded"
-msgstr "Subido"
+msgstr "Enviados"
 
 msgid "No finished pending surveys"
 msgstr "No hay muestreos terminados"
 
 msgid "No uploaded surveys"
-msgstr "No hay muestreos subidos"
+msgstr "No hay muestreos enviados"
 
 msgid "Enjoying the app?"
 msgstr "¿Estás disfrutando de la aplicación?"
@@ -824,7 +826,7 @@ msgid "How about a rating on the App Store then?"
 msgstr "¿Qué tal una calificación en la App Store?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "¿Qué tal una calificación en la App Store?"
+msgstr "¿Qué tal una calificación en Play Store?"
 
 msgid "Icons made by"
 msgstr "Iconos hechos por"
@@ -1057,7 +1059,7 @@ msgid "15min Count"
 msgstr "Recuento 15 minutos"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "Recuento de 15 min única especie"
 
 msgid "eBMS Transect"
 msgstr "Transecto eBMS"
@@ -1176,7 +1178,7 @@ msgstr ""
 "indican cómo usar los métodos disponibles actualmente."
 
 msgid "How to do a 15-minute Count"
-msgstr "Como hacer un Registro de 15 minutros"
+msgstr "Como hacer un Registro de 15 minutos"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1296,11 +1298,11 @@ msgid ""
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
 "En esta pestaña, en la parte derecha del botón +, puede ver los muestreos "
-"PENDIENTES, sus registros que no se han enviado y los recuentos SUBIDOS, los"
-" enviados a la base de datos eBMS. Los recuentos pendientes se pueden enviar"
-" al sistema haciendo clic en él y presionando la opción Terminar. Puede ver "
-"la lista de especies que registró para los recuentos cargados. Todos sus "
-"registros también se pueden ver y editar en el {{eBMSWebsiteLink}}"
+"PENDIENTES, sus registros que no se han enviado y los recuentos ENVIADOS, "
+"los enviados a la base de datos eBMS. Los recuentos pendientes se pueden "
+"enviar al sistema haciendo clic en él y presionando la opción Terminar. "
+"Puede ver la lista de especies que registró para los recuentos cargados. "
+"Todos sus registros también se pueden ver y editar en el {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
 msgstr "Página web de eBMS"
@@ -1564,7 +1566,7 @@ msgstr "Entendido"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr "<0>No hay muestreos cargados </0>"
+msgstr "<0>No hay muestreos enviados </0>"
 
 # user register error message
 msgid "Account already exists."
@@ -1596,7 +1598,7 @@ msgstr "Grupos de especies"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "Por favor seleccione el grupo de especies que siempre registra."
 
 # Part of species group selection
 msgid "Butterflies"
@@ -1616,12 +1618,12 @@ msgstr "Libélulas"
 
 # Alert label
 msgid "Warning"
-msgstr ""
+msgstr "Advertencia"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "¿Estás seguro de que quieres desactivar el seguimiento GPS?"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "Desarctivar"
