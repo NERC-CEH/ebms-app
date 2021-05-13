@@ -39,11 +39,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>To Take Photos and Video</string>
+	<string>Allow camera access to attach photos to your records.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Always allow Geolocation?</string>
+	<string>Allow geolocation so we can improve your records.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow Geolocation?</string>
+	<string>Allow geolocation so we can improve your records.</string>
   <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
   <string>Allow Geolocation while your device is locked?</string>
   <key>UIBackgroundModes</key>
