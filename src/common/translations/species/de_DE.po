@@ -1,7 +1,11 @@
 # 
+# Translators:
+# Daniela Lehner <d.lehner@bioforschung.at>, 2021
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
+"Last-Translator: Daniela Lehner <d.lehner@bioforschung.at>, 2021\n"
 "Language-Team: German (Germany) (https://www.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -152,7 +156,7 @@ msgid "Pyrgus-malvoides-description"
 msgstr ""
 
 msgid "Pyrgus-malvae-description"
-msgstr ""
+msgstr "Pyrgus-malvae-Beschreibung"
 
 msgid "Pyrgus-carthami-description"
 msgstr ""
@@ -210,9 +214,11 @@ msgstr ""
 
 msgid "Leptidea-sinapis-description"
 msgstr ""
+"Gegenwärtig wird der Tintenfleck-Weißling in zwei Arten unterteilt, L. sinapis (Linnaeus, 1758) und L. reali Reissinger, 1990, die im Feld nicht zu unterscheiden sind. Ihre Verbreitungsgebiete sind noch nicht volständig geklärt.  Auch ihre Lebenszyklen sind ähnlich. Diese Schmetterlinge kommen auf feuchtem, warmen Grasland in der Nähe von Büschen und Gestrüpp vor. Sie legen ihre dünnen, spindelförmigen Eier auf verschiedene Arten von Platterbsen (Lathyrus spp.) und Hornklee (Lotus spp.) ab. Durch ihre Cremefarbe, welche sich im Laufe der Zeit in ein leuchtendes Gelb verwandelt, sind diese leicht zu finden. Die überwinternde Puppe ist hellgrün. Im Norden ihres Verbreitungsgebiets sind Tintenfleck-Weißlinge einbrütig, in der Mitte haben sie zwei Generationen pro Jahr und im Süden manchmal drei.\n"
+" "
 
 msgid "Leptidea-sinapis/juvernica-description"
-msgstr ""
+msgstr "Leptidea-sinapis/juvernica-Beschreibung"
 
 msgid "Leptidea-reali-description"
 msgstr ""
@@ -237,9 +243,21 @@ msgstr ""
 
 msgid "Colias-hyale-description"
 msgstr ""
+"Der Weißklee-Gelbling (Colias hyale) kommt hauptsächlich auf Klee- oder "
+"Luzernfeldern, aber auch auf extensiv beweideten Wiesen auf denen viele "
+"Hülsenfrüchte wachsen, vor. Er bevorzugt offene Landschaften mit wenigen "
+"Bäumen oder Büschen. Eier werden einzeln auf viele Leguminosen-Arten "
+"abgelegt. Die Raupe ernährt sich von jungen Blättern und überwintert als "
+"halbwüchsige Raupe. Sie verpuppt sich mit einem Gespinstfaden-Gürtel an "
+"einem Stiel der Nahrungspflanze aufgehängt. Der Weißklee-Gelbling hat zwei "
+"oder drei Generationen pro Jahr. Im nördlichen Teil seines "
+"Verbreitungsgebiets handelt es sich um einen Wanderfalter, in den meisten "
+"Teilen Mitteleuropas ist dies Art jedoch ansässig. Der Weißklee-Gelbling ist"
+" nur sehr schwer vom Hufeisenklee-Gelbling (Colias alfacariensis) zu "
+"unterscheiden."
 
 msgid "Colias-hyale/alfacariensis-description"
-msgstr ""
+msgstr "Colias-hyale/alfacariensis-Beschreibung"
 
 msgid "Colias-alfacariensis-description"
 msgstr ""
@@ -287,10 +305,12 @@ msgid "Pontia-callidice-description"
 msgstr ""
 
 msgid "Pontia-edusa-description"
-msgstr ""
+msgstr "Pontia-edusa-Beschreibung"
 
 msgid "Pontia-daplidice-description"
 msgstr ""
+"Der Reseda-Weißling-Komplex wurde in den 1980er Jahren in zwei Arten aufgeteilt: Westlicher Reseda-Weißling P. daplidice (Linnaeus, 1758), welche hauptsächlich im westlichen Mittelmeerraum vorkommt, und Östlicher Reseda-Weißling P. edusa (Fabricius, 1777), die über den Rest Europas verteilt ist. Diese beiden Arten können jedoch nicht im Feld voneinander unterschieden werden. Ihre Lebenszyklen sind ebenfalls sehr ähnlich. Die erwachsenen Schmetterlinge sehen nicht in ihrer Zeichnung, sondern auch in ihrer Größe sehr variabel. Sie sind sehr mobil, fliegen schnell und wandern in warmen Jahren nach Norden und Westen. Sie kommen an warmen, steinigen Orten vor; z.B. häufig gestörter Boden wie Straßenränder, verlassene landwirtschaftliche Flächen oder Steinbrüche. Die Weibchen legen ihre Eier auf Kreuzblütler wie Senf (Sinapis spp.), Steinkräuter (Alyssum spp.) und auch auf Reseda (Reseda ssp.) ab. Die Raupen ernähren sich hauptsächlich von Blüten und Samen. Die Verpuppung erfolgt am Stiel der Nahrungspflanze. Diese Arten haben zwei oder mehr Generationen pro Jahr.\n"
+" "
 
 msgid "Pieris-krueperi-description"
 msgstr ""
@@ -722,7 +742,7 @@ msgid "Lysandra-corydonius-description"
 msgstr ""
 
 msgid "Lysandra-bellargus-description"
-msgstr ""
+msgstr "Lysandra-bellargus-Beschreibung"
 
 msgid "Lysandra-coridon-description"
 msgstr ""
@@ -921,15 +941,29 @@ msgstr ""
 
 msgid "Apatura-iris-description"
 msgstr ""
+"Der Große Schillerfalter bewohnt feuchte, ältere Laubwälder mit Lichtungen. Diese Wälder haben oft verschiedene Arten von Bäumen, Bachtälern und Waldwegen. Männliche Schmetterlinge sind oft in der Nähe von Pfützen und auf Tierekot zu sehen. Sie fühlen sich auch zu stark riechendem Käse hingezogen. Verschiedene Weiden (Salix spp.) werden als Nahrungspflanzen verwendet, wobei das Weibchen seine Eier vorzugsweise in der Baumkrone auf der Oberseite von beschatteten Blättern ablegt. Die halbwüchsige Raupe produziert ein kleines Gespinst in der Gabel eines Zweigs, in dem sie überwintert. Im Frühjahr ernährt sie sich wieder von den Knospen und frischen jungen Blättern. Schließlich  verpuppt sich an der Unterseite eines Blattes hänngend. Der Große Schillerfalter hat eine Generation pro Jahr.\n"
+" "
 
 msgid "Apatura-metis-description"
 msgstr ""
 
 msgid "Apatura-ilia-description"
 msgstr ""
+"Der Kleine Schillerfalter kann in Lichtungen und auf Wegen feuchter "
+"Laubwälder, welche sich oft entlang von Flüssen befinden, gefunden werden. "
+"Die Schmetterlinge sind oft in der Nähe von Pfützen und auf dem Kot anderer "
+"Tieren zu sehen. Besonders die Männchen fühlen sich von stark riechendem "
+"Käse angezogen. Die Nahrungspflanzen dieses Tagfalters sind Pappeln (Populus"
+" spp.) und Weiden (Salix spp.). Das Weibchen, das eher kleine, nicht "
+"besonders robuste Bäume bevorzugt, legt seine Eier auf der Oberseite von "
+"halbschattig oder besonnt liegenden Blättern ab. Die halbwüchsige Raupe "
+"erzeugt ein kleines Gespinst in einer Astgabel in dem sie überwintert. Im "
+"Frühjahr ernährt sie sich von frischen Knospen und Blättern. Schließlich "
+"verpuppt sie sich an der Unterseite eines Blattes oder Astes. Der Kleine "
+"Schillerfalter hat ein bis zwei Generationnen pro Jahr."
 
 msgid "Apatura-ilia/iris-description"
-msgstr ""
+msgstr "Apatura-ilia/iris-Beschreibung"
 
 msgid "Araschnia-levana-description"
 msgstr ""
