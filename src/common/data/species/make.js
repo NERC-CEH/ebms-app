@@ -3,7 +3,7 @@ require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-
 const axios = require('axios'); // eslint-disable-line
 const fs = require('fs');
 const optimise = require('./makeOptimise');
-const groups = require('./groups');
+const groups = require('./groups.json');
 
 const { APP_INDICIA_API_KEY, APP_INDICIA_API_USER_AUTH } = process.env;
 
