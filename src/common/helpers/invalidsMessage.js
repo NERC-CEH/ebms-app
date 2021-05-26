@@ -48,7 +48,7 @@ export default function showInvalidsMessage(invalids, onSaveDraft) {
       {
         text: t('Save Draft'),
         cssClass: 'secondary',
-        handler: onSaveDraft || (() => {}),
+        handler: onSaveDraft || (() => null),
       },
     ],
   });

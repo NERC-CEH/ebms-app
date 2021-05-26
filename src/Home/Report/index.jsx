@@ -179,7 +179,7 @@ class Report extends React.Component {
     );
   };
 
-  showEmptyDataMessage = () => {};
+  showEmptyDataMessage = () => null;
 
   getReport = () => {
     const { refreshing, species } = this.state;
