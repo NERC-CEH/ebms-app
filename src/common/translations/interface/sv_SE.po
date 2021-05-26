@@ -2,13 +2,13 @@
 # Translators:
 # Carin Kullberg <carin@ckg.se>, 2020
 # Lars Pettersson <lars.pettersson@biol.lu.se>, 2020
-# Karolis, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
+# Karolis, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Vilius Stankaitis <vilius@flumens.io>, 2020\n"
+"Last-Translator: Karolis, 2021\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1398,7 +1398,7 @@ msgstr[0] "Oj då! Något gick fel."
 msgstr[1] "Sänder in {{count}} inventeringar"
 
 # Part of a page error
-msgid "Oops! Something, went wrong."
+msgid "Oops! Something went wrong."
 msgstr "Oj då! Något gick fel."
 
 # Part of a page error

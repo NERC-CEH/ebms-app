@@ -2,11 +2,12 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Miloš Popović <gpopac@gmail.com>, 2020
+# Karolis, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Miloš Popović <gpopac@gmail.com>, 2020\n"
+"Last-Translator: Karolis, 2021\n"
 "Language-Team: Serbian (https://www.transifex.com/ceh/teams/95441/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1378,7 +1379,7 @@ msgstr[1] "Шаљем {{count}} налаза"
 msgstr[2] "Шаљем {{count}} налаза"
 
 # Part of a page error
-msgid "Oops! Something, went wrong."
+msgid "Oops! Something went wrong."
 msgstr "Упс! Нешто је пошло по злу."
 
 # Part of a page error

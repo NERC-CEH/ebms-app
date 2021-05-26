@@ -1364,7 +1364,7 @@ msgstr[2] "Siunčiama {{count}} įrašų"
 msgstr[3] "Siunčiama {{count}} įrašų"
 
 # Part of a page error
-msgid "Oops! Something, went wrong."
+msgid "Oops! Something went wrong."
 msgstr "O ne! Kažkur įvyko klaida."
 
 # Part of a page error

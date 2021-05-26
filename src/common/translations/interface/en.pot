@@ -1121,8 +1121,8 @@ msgstr[0] "Uploading {{count}} record"
 msgstr[1] "Uploading {{count}} records"
 
 # Part of a page error
-msgid "Oops! Something, went wrong."
-msgstr "Oops! Something, went wrong."
+msgid "Oops! Something went wrong."
+msgstr "Oops! Something went wrong."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"

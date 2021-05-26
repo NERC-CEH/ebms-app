@@ -1,11 +1,12 @@
 # 
 # Translators:
 # Kaja Vukotić <kaja.vukotic@gmail.com>, 2021
+# Karolis, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Kaja Vukotić <kaja.vukotic@gmail.com>, 2021\n"
+"Last-Translator: Karolis, 2021\n"
 "Language-Team: Slovenian (Slovenia) (https://www.transifex.com/ceh/teams/95441/sl_SI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1373,7 +1374,7 @@ msgstr[2] "Prenos {{štetje}} podatkov"
 msgstr[3] "Prenos {{štetje}} podatkov"
 
 # Part of a page error
-msgid "Oops! Something, went wrong."
+msgid "Oops! Something went wrong."
 msgstr "Opa! Nekaj je šlo narobe."
 
 # Part of a page error

@@ -2,13 +2,13 @@
 # Translators:
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Karolis, 2021
 # Federica Paradiso <fedediso94@gmail.com>, 2021
+# Karolis, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2021\n"
+"Last-Translator: Karolis, 2021\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1408,7 +1408,7 @@ msgstr[0] "Caricamento {{count}} compionamenti"
 msgstr[1] "Caricamento {{count}} campionamenti  "
 
 # Part of a page error
-msgid "Oops! Something, went wrong."
+msgid "Oops! Something went wrong."
 msgstr "Oops! Qualcosa è andato storto."
 
 # Part of a page error

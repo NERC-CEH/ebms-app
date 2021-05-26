@@ -1,15 +1,15 @@
 # 
 # Translators:
 # Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2020
-# Karolis, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
 # Daniela Lehner <d.lehner@bioforschung.at>, 2021
+# Karolis, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Daniela Lehner <d.lehner@bioforschung.at>, 2021\n"
+"Last-Translator: Karolis, 2021\n"
 "Language-Team: German (Germany) (https://www.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1429,7 +1429,7 @@ msgstr[0] "{{count}} Zählung hochladen"
 msgstr[1] "{{count}} Zählungen hochladen"
 
 # Part of a page error
-msgid "Oops! Something, went wrong."
+msgid "Oops! Something went wrong."
 msgstr "Hoppla! Irgendwas ist schief gelaufen."
 
 # Part of a page error

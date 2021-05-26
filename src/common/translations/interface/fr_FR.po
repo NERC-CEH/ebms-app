@@ -1324,7 +1324,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 # Part of a page error
-msgid "Oops! Something, went wrong."
+msgid "Oops! Something went wrong."
 msgstr ""
 
 # Part of a page error
