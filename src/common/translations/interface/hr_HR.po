@@ -1,13 +1,13 @@
 # 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Martina Sasic <martina.sasic@hpm.hr>, 2020
 # Karolis, 2021
+# Martina Sasic <martina.sasic@hpm.hr>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2021\n"
+"Last-Translator: Martina Sasic <martina.sasic@hpm.hr>, 2021\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/ceh/teams/95441/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -366,25 +366,27 @@ msgstr "Područje"
 
 # Location attribute label
 msgid "Location"
-msgstr ""
+msgstr "Lokacija"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "Lokacija obavezna"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Aplikacija zahtjeva vašu lokaciju, ali nema dopuštenje. Želite li sada "
+"otvoriti postavke?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Otkažite kako biste spriječili pražnjenje baterije."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "Korištenje vaše lokacije."
 
 msgid "Add"
 msgstr "Dodajte"
@@ -867,6 +869,8 @@ msgstr "Dijelite analitiku aplikacije"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
+"Dijelite podatke o padu aplikacije kako bismo aplikaciju mogli učiniti "
+"pouzdanijom."
 
 msgid "Save Draft"
 msgstr "Spremiti nacrt"
@@ -894,23 +898,23 @@ msgstr "Mreže"
 
 # Butterfly stage
 msgid "Adult"
-msgstr ""
+msgstr "Odrasla jedinka"
 
 # Butterfly stage
 msgid "Egg"
-msgstr ""
+msgstr "Jaje"
 
 # Butterfly stage
 msgid "Larva"
-msgstr ""
+msgstr "Gusjenica"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr ""
+msgstr "Gnijezda gusjenica"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr ""
+msgstr "Kukuljica"
 
 msgid "Transect"
 msgstr "Transekt"
@@ -1039,7 +1043,7 @@ msgid "15min Count"
 msgstr "15-minutni obilazak"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "15 - minutno brojanje pojedinačnih vrsta"
 
 msgid "eBMS Transect"
 msgstr "eBMS transekt"
