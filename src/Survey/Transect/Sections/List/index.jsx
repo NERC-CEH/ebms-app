@@ -25,6 +25,11 @@ class index extends React.Component {
       return;
     }
 
+    const isActivated = await userModel.checkActivation();
+    if (!isActivated) {
+      return;
+    }
+
     await loader.show({
       message: t('Please wait...'),
     });
