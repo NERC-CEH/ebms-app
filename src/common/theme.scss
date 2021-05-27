@@ -45,7 +45,7 @@
   --ion-color-success-shade: #00a617;
   --ion-color-success-tint: #1ac431;
 
-  --ion-color-warning: #ffa600;
+  --ion-color-warning: #df9100;
   --ion-color-warning-rgb: 255, 206, 0;
   --ion-color-warning-contrast: #ffffff;
   --ion-color-warning-contrast-rgb: 255, 255, 255;
@@ -121,15 +121,19 @@ ion-icon[faint] {
   margin-bottom: 40px;
 }
 
-.info-message {
-  --background: #d9ecf8;
+#home-species,
+.ion-page[id^='user'],
+.attr-page {
+  .info-message {
+    --background: #d9ecf8;
 
-  ion-note {
-    color: #00395c;
-    font-size: 1.1em;
-  }
-  ion-icon {
-    color: #00395c !important;
+    ion-note {
+      color: #00395c;
+      font-size: 1em;
+    }
+    ion-icon {
+      color: #00395c !important;
+    }
   }
 }
 
