@@ -3,32 +3,30 @@ import PropTypes from 'prop-types';
 import { NavContext } from '@ionic/react';
 import Log from 'helpers/log';
 import { Page, Header, loader, device, toast } from '@apps';
+import i18next from 'i18next';
 import Main from './Main';
 
 const { warn, error } = toast;
 
 async function onLogin(userModel, details, onSuccess) {
   const { email, password } = details;
+
   if (!device.isOnline()) {
-    warn(t("Sorry, looks like you're offline."));
+    warn("Sorry, looks like you're offline.");
     return;
   }
+
   await loader.show({
-    message: t('Please wait...'),
+    message: i18next.t('Please wait...'),
   });
 
-  const loginDetails = {
-    name: email.trim(),
-    password,
-  };
-
   try {
-    await userModel.logIn(loginDetails);
+    await userModel.logIn(email.trim(), password);
 
     onSuccess();
   } catch (err) {
     Log(err, 'e');
-    error(`${err.message}`);
+    error(err.message);
   }
 
   loader.hide();

@@ -7,6 +7,9 @@ import { isPlatform } from '@ionic/react';
 const backendUrl =
   process.env.APP_BACKEND_URL || 'https://butterfly-monitoring.net';
 
+const indiciaUrl =
+  process.env.APP_BACKEND_INDICIA_URL || 'https://warehouse1.indicia.org.uk';
+
 const isTestEnv = process.env.NODE_ENV === 'test';
 
 const config = {
@@ -33,8 +36,15 @@ const config = {
 
   backend: {
     url: backendUrl,
-    apiKey: process.env.APP_INDICIA_API_KEY,
     websiteId: 118,
+    clientId: process.env.APP_BACKEND_CLIENT_ID,
+    clientPass: process.env.APP_BACKEND_CLIENT_PASS,
+
+    mediaUrl: `${indiciaUrl}/upload/`,
+
+    indicia: {
+      url: indiciaUrl,
+    },
   },
 };
 

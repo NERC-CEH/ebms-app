@@ -5,10 +5,10 @@ import { Main, InputWithValidation, InfoMessage } from '@apps';
 import { Trans as T } from 'react-i18next';
 import {
   keyOutline,
-  personOutline,
   eyeOutline,
   eyeOffOutline,
   informationCircle,
+  mailOutline,
 } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
 import './styles.scss';
@@ -45,8 +45,8 @@ class Component extends React.Component {
                 <div className="rounded">
                   <InputWithValidation
                     name="email"
-                    placeholder={t('Username or email')}
-                    icon={personOutline}
+                    placeholder={t('Email')}
+                    icon={mailOutline}
                     type="email"
                     {...props}
                   />

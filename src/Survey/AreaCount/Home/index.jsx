@@ -78,9 +78,10 @@ class Container extends React.Component {
 
   static contextType = NavContext;
 
-  _processSubmission = () =>
-    this.props.sample.upload() &&
-    this.context.navigate(`/home/user-surveys`, 'root');
+  _processSubmission = async () => {
+    if (await this.props.sample.upload())
+      this.context.navigate(`/home/user-surveys`, 'root');
+  };
 
   _processDraft = async () => {
     const { appModel, sample } = this.props;
@@ -202,9 +203,8 @@ class Container extends React.Component {
     const { sample } = this.props;
 
     const withSamePreferredId = t => t.preferredId === taxon.preferredId;
-    const taxonIndexInShallowList = sample.shallowSpeciesList.findIndex(
-      withSamePreferredId
-    );
+    const taxonIndexInShallowList =
+      sample.shallowSpeciesList.findIndex(withSamePreferredId);
 
     sample.shallowSpeciesList.splice(taxonIndexInShallowList, 1);
   }
@@ -252,7 +252,7 @@ class Container extends React.Component {
     const { sample, appModel } = this.props;
 
     const { areaSurveyListSortedByTime } = appModel.attrs;
-    const isTraining = sample.metadata.training;
+    const isTraining = !!sample.metadata.training;
     const isEditing = sample.metadata.saved;
     const isDisabled = !!sample.metadata.synced_on;
 

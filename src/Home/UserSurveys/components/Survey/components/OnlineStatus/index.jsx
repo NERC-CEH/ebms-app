@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IonSpinner, IonLabel, IonChip, IonButton } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 
 import { observer } from 'mobx-react';
 import './styles.scss';
@@ -26,7 +27,7 @@ function Component({ sample, onUpload }) {
 
   return (
     <IonButton class="survey-status-upload" onClick={onUpload}>
-      Upload
+      <T>Upload</T>
     </IonButton>
   );
 }

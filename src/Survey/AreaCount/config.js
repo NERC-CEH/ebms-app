@@ -1,6 +1,5 @@
 import { isPlatform } from '@ionic/react';
 import config from 'config';
-import appModel from 'appModel';
 import Wkt from 'wicket';
 import { toJS } from 'mobx';
 import L from 'leaflet';
@@ -107,8 +106,8 @@ const survey = {
           const areaId = survey.attrs.area.remote.id;
 
           // eslint-disable-next-line
-          submission.fields = {
-            ...submission.fields,
+          submission.values = {
+            ...submission.values,
             [areaId]: location.area,
             geom: getGeomString(location.shape),
           };
@@ -149,15 +148,12 @@ const survey = {
       surveyId = survey.id,
       surveyName = survey.name
     ) {
-      const training = appModel.attrs.useTraining ? 't' : 'f';
-
       const sample = new AppSample({
         metadata: {
           survey_id: surveyId,
           survey: surveyName,
         },
         attrs: {
-          training,
           location: {},
         },
       });
@@ -190,11 +186,8 @@ const survey = {
       },
 
       create(Occurrence, taxon) {
-        const training = appModel.attrs.useTraining ? 't' : 'f';
-
         return new Occurrence({
           attrs: {
-            training,
             comment: null,
             stage: 'Adult',
             taxon,
@@ -215,8 +208,6 @@ const survey = {
   },
 
   create(AppSample, surveyId = survey.id, surveyName = survey.name) {
-    const training = appModel.attrs.useTraining ? 't' : 'f';
-
     const sample = new AppSample({
       metadata: {
         survey_id: surveyId,
@@ -227,7 +218,6 @@ const survey = {
         input_form: survey.webForm,
         device: isPlatform('android') ? 'android' : 'ios',
         app_version: config.version,
-        training,
 
         surveyStartTime: null,
         location: {},
@@ -244,13 +234,12 @@ const survey = {
     return sample;
   },
 
-  modifySubmission(fullSubmission) {
-    const submission = fullSubmission[0];
+  modifySubmission(submission) {
     const subSamples = submission.samples;
     submission.samples = []; // eslint-disable-line
 
     const removeSubSamplesLayerIfNoLocation = subSample => {
-      const locationIsMissing = !subSample.fields.entered_sref;
+      const locationIsMissing = !subSample.values.entered_sref;
       if (locationIsMissing) {
         submission.occurrences.push(subSample.occurrences[0]);
         return;
@@ -260,7 +249,7 @@ const survey = {
 
     subSamples.forEach(removeSubSamplesLayerIfNoLocation);
 
-    return fullSubmission;
+    return submission;
   },
 };
 

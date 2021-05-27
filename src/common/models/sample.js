@@ -14,7 +14,7 @@ import GPSExtension from './sample_gps_ext';
 import VibrateExtension from './sample_vibrate_ext';
 import MetOfficeExtension from './sample_metoffice_ext';
 
-const { warn } = toast;
+const { warn, error } = toast;
 
 // eslint-disable-next-line
 class AppSample extends Sample {
@@ -27,16 +27,14 @@ class AppSample extends Sample {
   constructor(...args) {
     super(...args);
 
-    this.remote = observable({
-      api_key: config.backend.apiKey,
-      host_url: `${config.backend.url}/`,
-      user: userModel.getUser.bind(userModel),
-      password: userModel.getPassword.bind(userModel),
-      synchronising: false,
+    this.remote.url = `${config.backend.indicia.url}/index.php/services/rest`;
+    // eslint-disable-next-line
+    this.remote.headers = async () => ({
+      Authorization: `Bearer ${await userModel.getAccessToken()}`,
     });
 
     this.metadata = observable({
-      training: appModel.attrs.useTraining,
+      training: appModel.attrs.useTraining ? 't' : null,
       saved: null,
       survey: null,
       ...this.metadata,
@@ -75,7 +73,7 @@ class AppSample extends Sample {
     return this.occurrences[0].getTaxonName();
   }
 
-  upload() {
+  async upload() {
     if (this.remote.synchronising) {
       return true;
     }
@@ -91,8 +89,16 @@ class AppSample extends Sample {
       return false;
     }
 
+    const isActivated = await userModel.checkActivation();
+    if (!isActivated) {
+      return false;
+    }
+
     this.cleanUp();
-    this.saveRemote();
+    this.saveRemote().catch(e => {
+      error(e);
+      throw e;
+    });
 
     return true;
   }

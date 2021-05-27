@@ -71,9 +71,10 @@ class Container extends React.Component {
 
   static contextType = NavContext;
 
-  _processSubmission = () =>
-    this.props.sample.upload() &&
-    this.context.navigate(`/home/user-surveys`, 'root');
+  _processSubmission = async () => {
+    if (await this.props.sample.upload())
+      this.context.navigate(`/home/user-surveys`, 'root');
+  };
 
   _processDraft = async () => {
     const { appModel, sample } = this.props;

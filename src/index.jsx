@@ -6,7 +6,7 @@ import userModel from 'userModel';
 import savedSamples from 'savedSamples';
 import config from 'config';
 import { configure as mobxConfig } from 'mobx';
-import { initAnalytics } from '@apps';
+import { initAnalytics, device } from '@apps';
 import { Plugins, StatusBarStyle } from '@capacitor/core';
 import App from './App';
 
@@ -41,11 +41,22 @@ mobxConfig({ enforceActions: 'never' });
   appModel.attrs.appSession += 1;
 
   if (appModel.attrs.primarySurvey === 'area') {
-    // TODO: remove after this propagates to all users
+    // MIGRATION v1.11.0
+    // remove after this propagates to all users
     appModel.attrs.primarySurvey = 'precise-area';
   }
 
   appModel.save();
+
+  if (userModel.attrs.password && device.isOnline()) {
+    // MIGRATION v1.11.1
+    // remove after this propagates to all users
+    try {
+      userModel._migrateAuth();
+    } catch (_) {
+      // do nothing
+    }
+  }
 
   ReactDOM.render(<App />, document.getElementById('root'));
 

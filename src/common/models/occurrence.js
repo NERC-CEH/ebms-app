@@ -1,9 +1,15 @@
 import { Occurrence } from '@apps';
+import appModel from 'appModel';
 import Media from './media';
 
 export default class AppOccurrence extends Occurrence {
   static fromJSON(json) {
     return super.fromJSON(json, Media);
+  }
+
+  constructor(...args) {
+    super(...args);
+    this.metadata.training = appModel.attrs.useTraining ? 't' : null;
   }
 
   getTaxonName() {

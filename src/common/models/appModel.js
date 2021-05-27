@@ -40,19 +40,16 @@ const parseGeometries = s => ({
 });
 
 async function fetchUserTransects(userModel) {
-  const userAuth = btoa(`${userModel.attrs.name}:${userModel.attrs.password}`);
-  const url = `${CONFIG.backend.url}/api/v1/reports/projects/ebms/ebms_app_sites_list.xml`;
+  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/reports/projects/ebms/ebms_app_sites_list.xml`;
   const options = {
     params: {
       website_id: CONFIG.backend.websiteId,
-      userID: userModel.attrs.drupalID,
+      userID: userModel.attrs.id,
       location_type_id: '',
       locattrs: '',
     },
     headers: {
-      authorization: `Basic ${userAuth}`,
-      'x-api-key': CONFIG.backend.apiKey,
-      'content-type': 'application/json',
+      Authorization: `Bearer ${await userModel.getAccessToken()}`,
     },
   };
 
@@ -87,18 +84,15 @@ async function fetchUserTransects(userModel) {
 }
 
 async function fetchTransectSections(transectLocationIds, userModel) {
-  const userAuth = btoa(`${userModel.attrs.name}:${userModel.attrs.password}`);
-  const url = `${CONFIG.backend.url}/api/v1/reports/projects/ebms/ebms_app_sections_list.xml`;
+  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/reports/projects/ebms/ebms_app_sections_list.xml`;
   const options = {
     params: {
       website_id: CONFIG.backend.websiteId,
-      userID: userModel.attrs.drupalID,
+      userID: userModel.attrs.id,
       location_list: transectLocationIds,
     },
     headers: {
-      authorization: `Basic ${userAuth}`,
-      'x-api-key': CONFIG.backend.apiKey,
-      'content-type': 'application/json',
+      Authorization: `Bearer ${await userModel.getAccessToken()}`,
     },
   };
 

@@ -172,9 +172,6 @@ msgstr "Začít"
 msgid "Please sign in with your eBMS account or register."
 msgstr "Přihlašte se do Vašeho eBMS účtu nebo se zaregistrujte"
 
-msgid "Username or email"
-msgstr "Jméno uživatele nebo e-mail"
-
 msgid "Password"
 msgstr "Heslo"
 
@@ -225,9 +222,6 @@ msgstr "Souhlasím s"
 
 msgid "Terms and Conditions"
 msgstr "Všeobecné podmínky"
-
-msgid "Enter your username or email address to request a password reset"
-msgstr "Zadej jméno nebo e-mailovou adresu na požadavek změny hesla"
 
 msgid "Reset"
 msgstr "Reset"
@@ -345,17 +339,8 @@ msgstr ""
 msgid "OK, got it"
 msgstr "OK, pochopil jsem"
 
-msgid "email is a required field"
-msgstr "E-mail musí být vyplněn"
-
-msgid "firstname is a required field"
-msgstr "Jméno musí být vyplněno"
-
-msgid "secondname is a required field"
-msgstr "Příjmení musí být vyplněno"
-
-msgid "must accept terms and conditions"
-msgstr "Musíte přijmout podmínky"
+msgid "Please fill in"
+msgstr ""
 
 msgid "Area Count"
 msgstr "Počet na plochu"
@@ -519,8 +504,40 @@ msgstr "Žádná fotografie nebyla vložena"
 msgid "Registration error:"
 msgstr "Chyba registrace"
 
+# Login error message
 msgid "Incorrect password or email"
 msgstr "Nesprávné heslo nebo e-mail"
+
+msgid "Enter your email address to request a password reset."
+msgstr ""
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr ""
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr ""
+
+# User registration error
+msgid "This email is already taken."
+msgstr ""
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr ""
 
 msgid "email is not valid"
 msgstr "E-mail není platný"
@@ -813,11 +830,6 @@ msgstr "Ikonky vyrobeny"
 
 msgid "from"
 msgstr "z"
-
-msgid "Enter your username or email address to request a password reset."
-msgstr ""
-"Zadejte Vaše uživatelské jméno nebo e-mailovou adresu pro Vaši žádost na "
-"reset hesla."
 
 msgid "We've sent an email to you"
 msgstr "Zaslali jsme Vám e-mail"
@@ -1126,7 +1138,7 @@ msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
 "will be entered into the European Butterfly Monitoring database and used to "
 "develop trends of butterflies across Europe. To use the app you will first "
-"have to register with a username or email and enter a password."
+"have to register an account."
 msgstr ""
 "Tuto aplikaci můžete používat k monitorování motýlů kdekoli v Evropě. Vaše "
 "výsledky budou začleněny do Evropské Monitorovací databáze a použity ke "

@@ -172,9 +172,6 @@ msgstr "Започни"
 msgid "Please sign in with your eBMS account or register."
 msgstr "Пријавите се на постојећи еБМС налог или се региструјте."
 
-msgid "Username or email"
-msgstr "Корисничко име или е-пошта"
-
 msgid "Password"
 msgstr "Лозинка"
 
@@ -225,10 +222,6 @@ msgstr "Слажем се да"
 
 msgid "Terms and Conditions"
 msgstr "Услови коришћења"
-
-msgid "Enter your username or email address to request a password reset"
-msgstr ""
-"Унесите корисничко име или адресу е-поште како би поставили нову лозинку"
 
 msgid "Reset"
 msgstr "Поврати"
@@ -346,17 +339,8 @@ msgstr ""
 msgid "OK, got it"
 msgstr "Схватио сам"
 
-msgid "email is a required field"
-msgstr "морате унети адресу е-поште"
-
-msgid "firstname is a required field"
-msgstr "морате унети ваше име"
-
-msgid "secondname is a required field"
-msgstr "морате унети ваше презиме"
-
-msgid "must accept terms and conditions"
-msgstr "морате прихватити услове коришћења"
+msgid "Please fill in"
+msgstr ""
 
 msgid "Area Count"
 msgstr "Бројање у области"
@@ -519,8 +503,40 @@ msgstr "Није додата слика"
 msgid "Registration error:"
 msgstr "Грешка приликом регистрације:"
 
+# Login error message
 msgid "Incorrect password or email"
 msgstr "Неисправна лозинка или е-пошта"
+
+msgid "Enter your email address to request a password reset."
+msgstr ""
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr ""
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr ""
+
+# User registration error
+msgid "This email is already taken."
+msgstr ""
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr ""
 
 msgid "email is not valid"
 msgstr "е-пошта није исправна"
@@ -821,9 +837,6 @@ msgstr "Иконице направио"
 
 msgid "from"
 msgstr "из"
-
-msgid "Enter your username or email address to request a password reset."
-msgstr "Унесите корисничко име или адресу е-поште да би добили нову лозинку."
 
 msgid "We've sent an email to you"
 msgstr "Послали смо вам е-поруку"
@@ -1134,7 +1147,7 @@ msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
 "will be entered into the European Butterfly Monitoring database and used to "
 "develop trends of butterflies across Europe. To use the app you will first "
-"have to register with a username or email and enter a password."
+"have to register an account."
 msgstr ""
 "Можете користити апликацију за праћење стања дневних лептира било где у "
 "Европи. Резултати ће бити унети у базу података Европског мониторинга "

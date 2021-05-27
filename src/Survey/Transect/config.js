@@ -1,5 +1,4 @@
 import userModel from 'userModel';
-import appModel from 'appModel';
 import * as Yup from 'yup';
 import {
   deviceAttr,
@@ -27,8 +26,8 @@ const locationAttr = {
     id: 'location_id',
     values(location, submission) {
       // eslint-disable-next-line
-      submission.fields = {
-        ...submission.fields,
+      submission.values = {
+        ...submission.values,
         ...{
           entered_sref_system: location.sref_system,
           entered_sref: location.centroid_sref,
@@ -84,8 +83,7 @@ const config = {
       pageProps: {
         attrProps: {
           input: 'text',
-          info:
-            'Please specify the person responsible for identifying the species.',
+          info: 'Please specify the person responsible for identifying the species.',
         },
       },
       remote: { id: 1384 },
@@ -151,9 +149,9 @@ const config = {
     },
 
     modifySubmission(submission) {
-      if (!submission[0].survey_id) {
+      if (!submission.survey_id) {
         // backwards compatible
-        submission[0].survey_id = survey.id; //eslint-disable-line
+        submission.survey_id = survey.id; //eslint-disable-line
       }
 
       return submission;
@@ -171,9 +169,7 @@ const config = {
   },
 
   create(Sample) {
-    const training = appModel.attrs.useTraining ? 't' : 'f';
-
-    const recorder = `${userModel.attrs.firstname} ${userModel.attrs.secondname}`;
+    const recorder = `${userModel.attrs.firstName} ${userModel.attrs.lastName}`;
     const now = new Date();
 
     const sample = new Sample({
@@ -182,7 +178,6 @@ const config = {
         survey: config.name,
       },
       attrs: {
-        training,
         date: now,
         location: null,
         sample_method_id: 22,
@@ -195,9 +190,9 @@ const config = {
   },
 
   modifySubmission(submission) {
-    if (!submission[0].survey_id) {
+    if (!submission.survey_id) {
       // backwards compatible
-      submission[0].survey_id = survey.id; //eslint-disable-line
+      submission.survey_id = survey.id; //eslint-disable-line
     }
 
     return submission;

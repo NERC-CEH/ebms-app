@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { NavContext } from '@ionic/react';
-import Log from 'helpers/log';
+import { useTranslation } from 'react-i18next';
 import { Page, Header, alert, toast, loader, device } from '@apps';
 import Main from './Main';
 
 const { warn, error } = toast;
 
-async function onSubmit(userModel, details, onSuccess) {
-  const { name } = details;
+async function onSubmit(userModel, details, onSuccess, t) {
+  const { email } = details;
 
   if (!device.isOnline()) {
     warn(t("Sorry, looks like you're offline"));
@@ -19,28 +19,25 @@ async function onSubmit(userModel, details, onSuccess) {
     message: t('Please wait...'),
   });
 
-  const resetDetails = {
-    name: name.trim(),
-  };
-
   try {
-    await userModel.reset(resetDetails);
+    await userModel.reset(email.trim());
+
     alert({
-      header: t("We've sent an email to you"),
+      header: "We've sent an email to you",
       message: t(
         "Click the link in the email to reset your password. If you don't see the email, check other places like your junk, spam or other folders."
       ),
       buttons: [
         {
-          text: t('OK, got it'),
+          text: 'OK, got it',
           role: 'cancel',
           handler: onSuccess,
         },
       ],
     });
   } catch (err) {
-    Log(err, 'e');
-    error(`${err.message}`);
+    console.error(err, 'e');
+    error(err.message);
   }
 
   loader.hide();
@@ -48,6 +45,7 @@ async function onSubmit(userModel, details, onSuccess) {
 
 export default function Container({ userModel }) {
   const context = useContext(NavContext);
+  const { t } = useTranslation();
 
   const onSuccess = () => {
     context.goBack();
@@ -58,7 +56,7 @@ export default function Container({ userModel }) {
       <Header title="Reset" />
       <Main
         schema={userModel.resetSchema}
-        onSubmit={details => onSubmit(userModel, details, onSuccess)}
+        onSubmit={details => onSubmit(userModel, details, onSuccess, t)}
       />
     </Page>
   );

@@ -174,9 +174,6 @@ msgstr "Start"
 msgid "Please sign in with your eBMS account or register."
 msgstr "Login met uw eBMS account of registreer"
 
-msgid "Username or email"
-msgstr "Gebruikersnaam of e-mail"
-
 msgid "Password"
 msgstr "Wachtwoord"
 
@@ -227,9 +224,6 @@ msgstr "Ik ben het eens met"
 
 msgid "Terms and Conditions"
 msgstr "Voorwaarden"
-
-msgid "Enter your username or email address to request a password reset"
-msgstr "Voer uw gebruikersnaam of mailadres in om uw wachtwoord te resetten"
 
 msgid "Reset"
 msgstr "Reset"
@@ -347,17 +341,8 @@ msgstr ""
 msgid "OK, got it"
 msgstr "Ok, ik begrijp het."
 
-msgid "email is a required field"
-msgstr "E-mailadres is een verplicht veld"
-
-msgid "firstname is a required field"
-msgstr "Voornaam is een verplicht veld"
-
-msgid "secondname is a required field"
-msgstr "Achternaam is een verplicht veld"
-
-msgid "must accept terms and conditions"
-msgstr "U dient de voorwaarden te accepteren"
+msgid "Please fill in"
+msgstr ""
 
 msgid "Area Count"
 msgstr "Gebiedstelling"
@@ -520,8 +505,40 @@ msgstr "Er is nog geen foto geupload"
 msgid "Registration error:"
 msgstr "Registratiefout:"
 
+# Login error message
 msgid "Incorrect password or email"
 msgstr "Fout wachtwoord of e-mailadres"
+
+msgid "Enter your email address to request a password reset."
+msgstr ""
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr ""
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr ""
+
+# User registration error
+msgid "This email is already taken."
+msgstr ""
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr ""
 
 msgid "email is not valid"
 msgstr "E-mailadres is niet geldig"
@@ -819,10 +836,6 @@ msgstr "Icoontjes gemaakt door"
 
 msgid "from"
 msgstr "van"
-
-msgid "Enter your username or email address to request a password reset."
-msgstr ""
-"Voer uw gebruikersnaam en e-mailadres in om uw wachtwoord te resetten."
 
 msgid "We've sent an email to you"
 msgstr "Wij hebben u een e-mail gestuurd"
@@ -1132,7 +1145,7 @@ msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
 "will be entered into the European Butterfly Monitoring database and used to "
 "develop trends of butterflies across Europe. To use the app you will first "
-"have to register with a username or email and enter a password."
+"have to register an account."
 msgstr ""
 "Met deze app kunt u overal in Europa dagvlinders monitoren. De resultaten "
 "komen in de Europese Dagvlinder Monitoring Database, en ze zullen worden "

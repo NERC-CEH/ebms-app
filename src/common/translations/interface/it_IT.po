@@ -173,9 +173,6 @@ msgstr "Inizia "
 msgid "Please sign in with your eBMS account or register."
 msgstr "Entra con il tuo account eBMS  oppure registrati"
 
-msgid "Username or email"
-msgstr "Nome utente o email"
-
 msgid "Password"
 msgstr "Password "
 
@@ -226,11 +223,6 @@ msgstr "Sono d'accordo "
 
 msgid "Terms and Conditions"
 msgstr "Termini e Condizioni"
-
-msgid "Enter your username or email address to request a password reset"
-msgstr ""
-"Inserisci il tuo nome utente o il tuo indirizzo email per resettare la "
-"password "
 
 msgid "Reset"
 msgstr "Reset"
@@ -350,17 +342,8 @@ msgstr ""
 msgid "OK, got it"
 msgstr "OK, capito"
 
-msgid "email is a required field"
-msgstr "\"email\" è un campo obbligatorio  "
-
-msgid "firstname is a required field"
-msgstr "\"nome\" è un campo obbligatorio"
-
-msgid "secondname is a required field"
-msgstr "\"cognome\" è un campo obbligatorio  "
-
-msgid "must accept terms and conditions"
-msgstr "devi accettare termini e condizioni "
+msgid "Please fill in"
+msgstr ""
 
 msgid "Area Count"
 msgstr "Area Conteggio"
@@ -525,8 +508,40 @@ msgstr "Nessuna foto è stata aggiunta "
 msgid "Registration error:"
 msgstr "Errore di registrazione:"
 
+# Login error message
 msgid "Incorrect password or email"
 msgstr "Password o email scorrette "
+
+msgid "Enter your email address to request a password reset."
+msgstr ""
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr ""
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr ""
+
+# User registration error
+msgid "This email is already taken."
+msgstr ""
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr ""
 
 msgid "email is not valid"
 msgstr "l'email non è valida "
@@ -833,11 +848,6 @@ msgstr "Icone fatta da "
 
 msgid "from"
 msgstr "da"
-
-msgid "Enter your username or email address to request a password reset."
-msgstr ""
-"Inserisci lo username oppure il tuo indirizzo mail per richiedere la "
-"reimpostazione della password."
 
 msgid "We've sent an email to you"
 msgstr "Ti abbiamo inviato un'email "
@@ -1152,7 +1162,7 @@ msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
 "will be entered into the European Butterfly Monitoring database and used to "
 "develop trends of butterflies across Europe. To use the app you will first "
-"have to register with a username or email and enter a password."
+"have to register an account."
 msgstr ""
 "Puoi usare questa app per monitorare le farfalle in qualsiasi parte "
 "d'Europe. I risultati saranno inseriti nel database del Butterfly Monitoring"

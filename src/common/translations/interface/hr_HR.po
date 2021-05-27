@@ -172,9 +172,6 @@ msgstr "Započni"
 msgid "Please sign in with your eBMS account or register."
 msgstr "Prijavite se s vašim eBMS računom ili se registrirajte"
 
-msgid "Username or email"
-msgstr "Korisničko ime ili e-pošta"
-
 msgid "Password"
 msgstr "Lozinka"
 
@@ -225,9 +222,6 @@ msgstr "Prihvaćam"
 
 msgid "Terms and Conditions"
 msgstr "Odredbe i uvjeti"
-
-msgid "Enter your username or email address to request a password reset"
-msgstr "Unesi svoje korisničko ime ili e-poštu za promjenu lozinke"
 
 msgid "Reset"
 msgstr "Promijeni"
@@ -346,17 +340,8 @@ msgstr ""
 msgid "OK, got it"
 msgstr "U redu, shvatio sam"
 
-msgid "email is a required field"
-msgstr "e-pošta je obavezno polje"
-
-msgid "firstname is a required field"
-msgstr "Ime je obavezno polje"
-
-msgid "secondname is a required field"
-msgstr "Prezime je obavezno polje"
-
-msgid "must accept terms and conditions"
-msgstr "mora prihvatiti Odredbe i uvjete"
+msgid "Please fill in"
+msgstr ""
 
 msgid "Area Count"
 msgstr "???"
@@ -522,8 +507,40 @@ msgstr "Fotografija nije dodana"
 msgid "Registration error:"
 msgstr "Greška u registraciji:"
 
+# Login error message
 msgid "Incorrect password or email"
 msgstr "Kriva lozinka ili e-pošta"
+
+msgid "Enter your email address to request a password reset."
+msgstr ""
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr ""
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr ""
+
+# User registration error
+msgid "This email is already taken."
+msgstr ""
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr ""
 
 msgid "email is not valid"
 msgstr "e-pošta ne vrijedi"
@@ -821,11 +838,6 @@ msgstr "Ikone napravio"
 
 msgid "from"
 msgstr "od"
-
-msgid "Enter your username or email address to request a password reset."
-msgstr ""
-"Unesite svoje korisničko ime ili adresu e-pošte da biste zatražili vraćanje "
-"lozinke"
 
 msgid "We've sent an email to you"
 msgstr "Poslali smo vam e-poštu"
@@ -1135,7 +1147,7 @@ msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
 "will be entered into the European Butterfly Monitoring database and used to "
 "develop trends of butterflies across Europe. To use the app you will first "
-"have to register with a username or email and enter a password."
+"have to register an account."
 msgstr ""
 "Aplikaciju možete koristiti za monitoring leptira bilo gdje u Europi. "
 "Rezultati će se unijeti u europsku bazu podataka o leptirima i koristiti za "

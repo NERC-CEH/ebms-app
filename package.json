@@ -42,11 +42,12 @@
     "@bit/flumens.apps.menu-note-item": "^0.2.1",
     "@bit/flumens.apps.modal-header": "^0.1.1",
     "@bit/flumens.apps.model-location-map": "2.1.2",
+    "@bit/flumens.apps.models.drupal-user-model": "0.7.3",
     "@bit/flumens.apps.models.init-stored-samples": "^0.1.0",
-    "@bit/flumens.apps.models.media-with-drupal-remote": "0.0.1",
+    "@bit/flumens.apps.models.media": "0.2.4",
     "@bit/flumens.apps.models.model": "^0.1.0",
-    "@bit/flumens.apps.models.occurrence-with-drupal-remote": "1.0.0",
-    "@bit/flumens.apps.models.sample-with-drupal-remote": "1.1.0",
+    "@bit/flumens.apps.models.occurrence": "0.4.0",
+    "@bit/flumens.apps.models.sample": "1.0.0",
     "@bit/flumens.apps.models.store": "0.3.1",
     "@bit/flumens.apps.page": "1.1.0",
     "@bit/flumens.apps.photo-picker": "1.1.0",
@@ -319,7 +320,7 @@
   },
   "bit": {
     "env": {
-      "compiler": "bit.envs/compilers/react@1.0.14"
+      "compiler": "bit.envs/compilers/react@2.0.0"
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"

@@ -173,9 +173,6 @@ msgid "Please sign in with your eBMS account or register."
 msgstr ""
 "Пожалуйста, войдите, используя Ваш eBMS аккаунт или зарегистрируйтесь."
 
-msgid "Username or email"
-msgstr "Введите Ваше имя пользователя или адрес электронной почты"
-
 msgid "Password"
 msgstr "Пароль"
 
@@ -226,11 +223,6 @@ msgstr "Я принимаю"
 
 msgid "Terms and Conditions"
 msgstr "Условия и правила использования"
-
-msgid "Enter your username or email address to request a password reset"
-msgstr ""
-"Введите ваше имя пользователя или адрес электронной почты, чтобы "
-"восстановить пароль"
 
 msgid "Reset"
 msgstr "Сбросить"
@@ -350,17 +342,8 @@ msgstr ""
 msgid "OK, got it"
 msgstr "Хорошо, спасибо."
 
-msgid "email is a required field"
-msgstr "Адрес электронной почты является обязательным полем для заполнения"
-
-msgid "firstname is a required field"
-msgstr "Имя является обязательным полем для заполнения"
-
-msgid "secondname is a required field"
-msgstr "Фамилия является обязательным полем для заполнения"
-
-msgid "must accept terms and conditions"
-msgstr "Вы должны принять условия и правила использования"
+msgid "Please fill in"
+msgstr ""
 
 msgid "Area Count"
 msgstr "Площадка учета"
@@ -523,8 +506,40 @@ msgstr "Фотографии не были добавлены"
 msgid "Registration error:"
 msgstr "Ошибка при регистрации"
 
+# Login error message
 msgid "Incorrect password or email"
 msgstr "Неправильный пароль или адрес электронной почты"
+
+msgid "Enter your email address to request a password reset."
+msgstr ""
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr ""
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr ""
+
+# User registration error
+msgid "This email is already taken."
+msgstr ""
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr ""
 
 msgid "email is not valid"
 msgstr "Адрес электронной почты не действителен"
@@ -828,11 +843,6 @@ msgstr "Иконки сделаны"
 
 msgid "from"
 msgstr "С"
-
-msgid "Enter your username or email address to request a password reset."
-msgstr ""
-"Введите ваше имя пользователя или адрес электронной почты, чтобы "
-"восстановить пароль"
 
 msgid "We've sent an email to you"
 msgstr "Вам было отправлено письмо на электронную почту"
@@ -1141,7 +1151,7 @@ msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
 "will be entered into the European Butterfly Monitoring database and used to "
 "develop trends of butterflies across Europe. To use the app you will first "
-"have to register with a username or email and enter a password."
+"have to register an account."
 msgstr ""
 
 msgid ""

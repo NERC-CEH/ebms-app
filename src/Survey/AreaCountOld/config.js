@@ -1,6 +1,5 @@
 import { isPlatform } from '@ionic/react';
 import config from 'config';
-import appModel from 'appModel';
 import Wkt from 'wicket';
 import { toJS } from 'mobx';
 import L from 'leaflet';
@@ -100,8 +99,8 @@ const survey = {
           const areaId = survey.attrs.area.remote.id;
 
           // eslint-disable-next-line
-          submission.fields = {
-            ...submission.fields,
+          submission.values = {
+            ...submission.values,
             [areaId]: location.area,
             geom: getGeomString(location.shape),
           };
@@ -153,9 +152,9 @@ const survey = {
         return [];
       }
 
-      if (!submission[0].survey_id) {
+      if (!submission.survey_id) {
         // backwards compatible
-        submission[0].survey_id = survey.id; //eslint-disable-line
+        submission.survey_id = survey.id; //eslint-disable-line
       }
 
       return submission;
@@ -173,8 +172,6 @@ const survey = {
   },
 
   create(Sample) {
-    const training = appModel.attrs.useTraining ? 't' : 'f';
-
     const sample = new Sample({
       metadata: {
         // survey_id: survey.id,
@@ -185,7 +182,6 @@ const survey = {
         input_form: survey.webForm,
         device: isPlatform('android') ? 'android' : 'ios',
         app_version: config.version,
-        training,
 
         surveyStartTime: null,
         location: {},
@@ -203,9 +199,9 @@ const survey = {
   },
 
   modifySubmission(submission) {
-    if (!submission[0].survey_id) {
+    if (!submission.survey_id) {
       // backwards compatible
-      submission[0].survey_id = survey.id; //eslint-disable-line
+      submission.survey_id = survey.id; //eslint-disable-line
     }
 
     return submission;

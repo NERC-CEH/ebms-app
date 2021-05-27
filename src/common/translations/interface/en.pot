@@ -164,8 +164,6 @@ msgstr "Get Started"
 msgid "Please sign in with your eBMS account or register."
 msgstr "Please sign in with your eBMS account or register."
 
-msgid "Username or email"
-msgstr "Username or email"
 
 msgid "Password"
 msgstr "Password"
@@ -218,8 +216,6 @@ msgstr "I agree to"
 msgid "Terms and Conditions"
 msgstr "Terms and Conditions"
 
-msgid "Enter your username or email address to request a password reset"
-msgstr "Enter your username or email address to request a password reset"
 
 msgid "Reset"
 msgstr "Reset"
@@ -332,17 +328,8 @@ msgstr "Before submitting any records please check your email and click on the v
 msgid "OK, got it"
 msgstr "OK, got it"
 
-msgid "email is a required field"
-msgstr "email is a required field"
-
-msgid "firstname is a required field"
-msgstr "firstname is a required field"
-
-msgid "secondname is a required field"
-msgstr "secondname is a required field"
-
-msgid "must accept terms and conditions"
-msgstr "must accept terms and conditions"
+msgid "Please fill in"
+msgstr "Please fill in"
 
 msgid "Area Count"
 msgstr "Area Count"
@@ -499,8 +486,36 @@ msgstr "No photo has been added"
 msgid "Registration error:"
 msgstr "Registration error:"
 
+# Login error message
 msgid "Incorrect password or email"
 msgstr "Incorrect password or email"
+
+msgid "Enter your email address to request a password reset."
+msgstr "Enter your email address to request a password reset."
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr "The user has not been activated or is blocked."
+
+# Unverified account note message 
+msgid "Looks like your <1>{{userEmail}}</1> email hasn't been verified yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr "Looks like your <1>{{userEmail}}</1> email hasn't been verified yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+
+# Verification resend success message
+msgid "A new verification email was successfully sent now. If you did not receive the email, then check your Spam or Junk email folders."
+msgstr "A new verification email was successfully sent now. If you did not receive the email, then check your Spam or Junk email folders."
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr "Please log in first."
+
+# User registration error
+msgid "This email is already taken."
+msgstr "This email is already taken."
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr "Unrecognized email address."
 
 msgid "email is not valid"
 msgstr "email is not valid"
@@ -709,8 +724,6 @@ msgstr "Icons made by"
 msgid "from"
 msgstr "from"
 
-msgid "Enter your username or email address to request a password reset."
-msgstr "Enter your username or email address to request a password reset."
 
 msgid "We've sent an email to you"
 msgstr "We've sent an email to you"
@@ -996,8 +1009,8 @@ msgstr "Photo credits"
 msgid "How to use the app"
 msgstr "How to use the app"
 
-msgid "You can use this app to monitor butterflies anywhere in Europe. The results will be entered into the European Butterfly Monitoring database and used to develop trends of butterflies across Europe. To use the app you will first have to register with a username or email and enter a password."
-msgstr "You can use this app to monitor butterflies anywhere in Europe. The results will be entered into the European Butterfly Monitoring database and used to develop trends of butterflies across Europe. To use the app you will first have to register with a username or email and enter a password."
+msgid "You can use this app to monitor butterflies anywhere in Europe. The results will be entered into the European Butterfly Monitoring database and used to develop trends of butterflies across Europe. To use the app you will first have to register an account."
+msgstr "You can use this app to monitor butterflies anywhere in Europe. The results will be entered into the European Butterfly Monitoring database and used to develop trends of butterflies across Europe. To use the app you will first have to register an account."
 
 msgid "The preferred method is to conduct a 15-minute Count. This can be done at any place and at any time when butterflies are active (i.e. when the weather is warm and preferably sunny). You can also use the app to record your established butterfly transects. Later in 2020, the app will also include the ability to submit casual records. The notes below tell you how to use the currently available methods."
 msgstr "The preferred method is to conduct a 15-minute Count. This can be done at any place and at any time when butterflies are active (i.e. when the weather is warm and preferably sunny). You can also use the app to record your established butterfly transects. Later in 2020, the app will also include the ability to submit casual records. The notes below tell you how to use the currently available methods."

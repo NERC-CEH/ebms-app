@@ -21,8 +21,7 @@ const Component = () => (
           You can use this app to monitor butterflies anywhere in Europe. The
           results will be entered into the European Butterfly Monitoring
           database and used to develop trends of butterflies across Europe. To
-          use the app you will first have to register with a username or email
-          and enter a password.
+          use the app you will first have to register an account.
         </P>
         <P>
           The preferred method is to conduct a 15-minute Count. This can be done
