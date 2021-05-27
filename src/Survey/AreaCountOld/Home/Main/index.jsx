@@ -251,7 +251,11 @@ class AreaCount extends Component {
       <Main id="area-count-edit">
         {isDisabled && (
           <>
-            <InfoMessage icon={informationCircle} skipTranslation>
+            <InfoMessage
+              className="blue"
+              icon={informationCircle}
+              skipTranslation
+            >
               <T>
                 This record has been submitted and cannot be edited within this
                 App.

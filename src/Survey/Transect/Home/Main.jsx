@@ -75,7 +75,11 @@ class Edit extends Component {
     return (
       <Main id="transect-edit">
         {isDisabled && (
-          <InfoMessage icon={informationCircle} skipTranslation>
+          <InfoMessage
+            className="blue"
+            icon={informationCircle}
+            skipTranslation
+          >
             <T>
               This record has been submitted and cannot be edited within this
               App.

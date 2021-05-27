@@ -10,7 +10,7 @@ import './styles.scss';
 const Component = ({ onSubmit, schema }) => {
   return (
     <Main>
-      <InfoMessage icon={informationCircle}>
+      <InfoMessage className="blue" icon={informationCircle}>
         Enter your email address to request a password reset.
       </InfoMessage>
 

@@ -30,7 +30,7 @@ class Component extends React.Component {
 
     return (
       <Main>
-        <InfoMessage icon={informationCircle}>
+        <InfoMessage className="blue" icon={informationCircle}>
           Please sign in with your eBMS account or register.
         </InfoMessage>
 

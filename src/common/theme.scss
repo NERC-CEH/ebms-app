@@ -121,19 +121,16 @@ ion-icon[faint] {
   margin-bottom: 40px;
 }
 
-#home-species,
-.ion-page[id^='user'],
-.attr-page {
-  .info-message {
-    --background: #d9ecf8;
+.attr-page .info-message,
+.info-message.blue {
+  --background: #d9ecf8;
 
-    ion-note {
-      color: #00395c;
-      font-size: 1em;
-    }
-    ion-icon {
-      color: #00395c !important;
-    }
+  ion-note {
+    color: #00395c;
+    font-size: 1em;
+  }
+  ion-icon {
+    color: #00395c !important;
   }
 }
 

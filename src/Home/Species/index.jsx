@@ -144,7 +144,7 @@ class Component extends React.Component {
     return (
       <Page id="home-species">
         <Main class="ion-padding">
-          <InfoMessage icon={informationCircle}>
+          <InfoMessage className="blue" icon={informationCircle}>
             This guide is still in development. It covers{' '}
             {{ countrySpeciesCount }} butterfly species out of the{' '}
             {{ totalSpeciesCountryCount }} species in your selected country.
