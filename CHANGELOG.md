@@ -1,3 +1,15 @@
+## 1.12.0
+
+- Fixed paused timer GPS tracking and vibration
+- Fixed taxon search groups in transect survey
+- Added option to resend verification email
+- Added option to reset password with an unauthenticated account
+- Fixed user sign in with a password manager
+- Removed 20 photo per survey limit
+- Improved survey upload and reporting performance
+- Improved general user experience (UX)
+- Updated translations
+
 ## 1.11.0
 
 - Added 15min single species survey
