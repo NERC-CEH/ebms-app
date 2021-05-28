@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { withRouter } from 'react-router';
 import { Page, Main, Header } from '@apps';
+import appModel from 'appModel';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
 import Occurrence from 'occurrence';
@@ -48,6 +49,7 @@ class Controller extends React.Component {
           <TaxonSearch
             onSpeciesSelected={onSpeciesSelected}
             recordedTaxa={recordedTaxa}
+            speciesGroups={appModel.attrs.speciesGroups}
           />
         </Main>
       </Page>
