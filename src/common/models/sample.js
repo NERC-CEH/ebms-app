@@ -102,6 +102,27 @@ class AppSample extends Sample {
 
     return true;
   }
+
+  /**
+   * Area count methods.
+   */
+  isTimerPaused = () => !!this.timerPausedTime.time;
+
+  getTimerEndTime = () => {
+    const startTime = new Date(this.attrs.surveyStartTime);
+
+    return (
+      startTime.getTime() +
+      config.DEFAULT_SURVEY_TIME +
+      this.metadata.pausedTime
+    );
+  };
+
+  isTimerFinished = () => {
+    if (this.isTimerPaused()) return false;
+
+    return this.getTimerEndTime() < new Date().getTime();
+  };
 }
 
 export { AppSample as default };

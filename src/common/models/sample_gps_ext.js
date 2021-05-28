@@ -141,15 +141,9 @@ const extension = {
         return;
       }
 
-      const startTime = new Date(this.attrs.surveyStartTime);
-      const defaultSurveyEndTime =
-        startTime.getTime() +
-        config.DEFAULT_SURVEY_TIME +
-        this.metadata.pausedTime;
-      const isOverDefaultSurveyEndTime =
-        defaultSurveyEndTime < new Date().getTime();
-
+      const isOverDefaultSurveyEndTime = this.isTimerFinished();
       if (isOverDefaultSurveyEndTime) {
+        console.log('SampleModel:GPS: timed out stopping!');
         this.stopGPS();
         return;
       }

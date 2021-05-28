@@ -1,4 +1,3 @@
-import config from 'config';
 import { Plugins } from '@capacitor/core';
 import { isPlatform } from '@ionic/react';
 
@@ -8,31 +7,29 @@ const extension = {
   startVibrateCounter() {
     console.log('SampleModel:Vibrate: start.');
 
-    this.counterId = setInterval(() => {
-      const startTime = new Date(this.attrs.surveyStartTime);
+    const vibrateOnThresholds = () => {
+      if (this.isTimerFinished()) {
+        if (this._timeoutVibrated) return;
 
-      const countdown =
-        startTime.getTime() +
-        config.DEFAULT_SURVEY_TIME +
-        this.metadata.pausedTime;
-
-      const timeLeft = (countdown - Date.now()) / 60;
-      const isBelow3mins = timeLeft <= 3000;
-      const isTimeout = timeLeft <= 0;
-
-      if (isTimeout && !this._timeoutVibrated) {
         console.log('SampleModel:Vibrate: vibrating!');
-        isPlatform('hybrid') && Haptics.vibrate();
         this._timeoutVibrated = true;
         this.stopVibrateCounter();
+
+        isPlatform('hybrid') && Haptics.vibrate();
+        return;
       }
 
-      if (isBelow3mins && !this._below3minsVibrated) {
+      const timeLeft = (this.getTimerEndTime() - Date.now()) / 60;
+      const isBelow3mins = timeLeft <= 3000;
+      if (isBelow3mins && !this.isTimerPaused()) {
+        if (this._below3minsVibrated) return;
+
         console.log('SampleModel:Vibrate: vibrating!');
-        isPlatform('hybrid') && Haptics.vibrate();
         this._below3minsVibrated = true;
+        isPlatform('hybrid') && Haptics.vibrate();
       }
-    }, 1000);
+    };
+    this.counterId = setInterval(vibrateOnThresholds, 1000);
   },
 
   stopVibrateCounter() {

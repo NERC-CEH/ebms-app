@@ -24,6 +24,7 @@ import {
   filterOutline,
   warningOutline,
   informationCircle,
+  flagOutline,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import { toJS } from 'mobx';
@@ -327,17 +328,21 @@ class AreaCount extends Component {
       return null;
     }
 
-    const startTime = new Date(sample.attrs.surveyStartTime);
-    const countdown =
-      startTime.getTime() +
-      config.DEFAULT_SURVEY_TIME +
-      sample.metadata.pausedTime;
-    const isPaused = !!sample.timerPausedTime.time;
+    const timerEndTime = sample.getTimerEndTime();
+    const isTimerPaused = sample.isTimerPaused();
+    const isTimerFinished = sample.isTimerFinished();
+
+    let detailIcon = pauseOutline;
+    if (isTimerPaused) {
+      detailIcon = playOutline;
+    } else if (isTimerFinished) {
+      detailIcon = flagOutline;
+    }
 
     return (
       <IonItem
         detail={!isDisabled}
-        detailIcon={isPaused ? playOutline : pauseOutline}
+        detailIcon={detailIcon}
         onClick={this.toggleTimer}
         disabled={isDisabled}
       >
@@ -345,7 +350,7 @@ class AreaCount extends Component {
         <IonLabel>
           <T>Duration</T>
         </IonLabel>
-        <CountdownClock isPaused={isPaused} countdown={countdown} />
+        <CountdownClock isPaused={isTimerPaused} countdown={timerEndTime} />
       </IonItem>
     );
   };

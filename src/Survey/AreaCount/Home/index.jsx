@@ -49,6 +49,8 @@ function setSurveyEndTime(sample) {
 
 /* eslint-disable no-param-reassign */
 function toggleTimer(sample) {
+  if (sample.isTimerFinished()) return;
+
   if (sample.timerPausedTime.time) {
     const pausedTime =
       Date.now() - new Date(sample.timerPausedTime.time).getTime();
