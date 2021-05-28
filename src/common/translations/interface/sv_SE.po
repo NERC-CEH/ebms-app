@@ -173,9 +173,6 @@ msgstr "Börja"
 msgid "Please sign in with your eBMS account or register."
 msgstr "Logga in med ditt eBMS-konto, eller registrera ett konto"
 
-msgid "Username or email"
-msgstr "Användarnamn eller e-post"
-
 msgid "Password"
 msgstr "Lösenord"
 
@@ -226,10 +223,6 @@ msgstr "Jag godkänner"
 
 msgid "Terms and Conditions"
 msgstr "Villkor"
-
-msgid "Enter your username or email address to request a password reset"
-msgstr ""
-"Ange ditt användarnamn eller din e-postadress för att återställa lösenordet"
 
 msgid "Reset"
 msgstr "Återställ"
@@ -349,17 +342,8 @@ msgstr ""
 msgid "OK, got it"
 msgstr "OK, jag förstår"
 
-msgid "email is a required field"
-msgstr "Du måste ange en e-postadress"
-
-msgid "firstname is a required field"
-msgstr "Du måste ange ett förnamn"
-
-msgid "secondname is a required field"
-msgstr "Du måste ange ett efternamn"
-
-msgid "must accept terms and conditions"
-msgstr "Du måste godkänna villkoren"
+msgid "Please fill in"
+msgstr ""
 
 msgid "Area Count"
 msgstr "Områdesinventering"
@@ -522,8 +506,40 @@ msgstr "Ingen bild har lagts till."
 msgid "Registration error:"
 msgstr "Fel vid registrering:"
 
+# Login error message
 msgid "Incorrect password or email"
 msgstr "Felaktigt lösenord eller e-post"
+
+msgid "Enter your email address to request a password reset."
+msgstr ""
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr ""
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr ""
+
+# User registration error
+msgid "This email is already taken."
+msgstr ""
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr ""
 
 msgid "email is not valid"
 msgstr "e-postadressen är inte giltig"
@@ -824,10 +840,6 @@ msgstr "ikoner skapade av"
 
 msgid "from"
 msgstr "från"
-
-msgid "Enter your username or email address to request a password reset."
-msgstr ""
-"Ange ditt användarnamn eller e-postadress för att återställa lösenordet"
 
 msgid "We've sent an email to you"
 msgstr "Vi har skickat ett mejl till dig."
@@ -1139,7 +1151,7 @@ msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
 "will be entered into the European Butterfly Monitoring database and used to "
 "develop trends of butterflies across Europe. To use the app you will first "
-"have to register with a username or email and enter a password."
+"have to register an account."
 msgstr ""
 "Du kan använda den här appen för att inventera fjärilar varsomhelst i "
 "Europa. Resultaten samlas i databasen för den europeiska "

@@ -175,9 +175,6 @@ msgstr "Başla"
 msgid "Please sign in with your eBMS account or register."
 msgstr "Lütfen eBMS hesabınızla oturum açın veya kaydolun."
 
-msgid "Username or email"
-msgstr "Kullanıcı adı veya email"
-
 msgid "Password"
 msgstr "Şifre"
 
@@ -228,10 +225,6 @@ msgstr "Kabul ediyorum"
 
 msgid "Terms and Conditions"
 msgstr "Şartlar ve koşullar"
-
-msgid "Enter your username or email address to request a password reset"
-msgstr ""
-"Parolanızı sıfırlamak için kullanıcı adınızı veya e-posta adresinizi girin"
 
 msgid "Reset"
 msgstr "Sıfırla"
@@ -349,17 +342,8 @@ msgstr ""
 msgid "OK, got it"
 msgstr "Tamam, anladım"
 
-msgid "email is a required field"
-msgstr "e-posta alanının doldurulması zorunludur"
-
-msgid "firstname is a required field"
-msgstr "İsim alanının doldurulması zorunludur"
-
-msgid "secondname is a required field"
-msgstr "Soyisim alanının doldurulması zorunludur"
-
-msgid "must accept terms and conditions"
-msgstr "Şartlar ve koşulları kabul etmelisiniz"
+msgid "Please fill in"
+msgstr ""
 
 msgid "Area Count"
 msgstr "Alan sayımı"
@@ -523,8 +507,40 @@ msgstr "Hiç fotoğraf eklenmedi"
 msgid "Registration error:"
 msgstr "Kayıt hatası:"
 
+# Login error message
 msgid "Incorrect password or email"
 msgstr "Yanlış şifre ya da email"
+
+msgid "Enter your email address to request a password reset."
+msgstr ""
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr ""
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr ""
+
+# User registration error
+msgid "This email is already taken."
+msgstr ""
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr ""
 
 msgid "email is not valid"
 msgstr "e-posta geçerli değil"
@@ -830,10 +846,6 @@ msgstr "Simgeleri tasarlayan:"
 
 msgid "from"
 msgstr "itibaren"
-
-msgid "Enter your username or email address to request a password reset."
-msgstr ""
-"Parolanızı sıfırlamak için e-posta adresinizi ya da kullanıcı adınızı girin."
 
 msgid "We've sent an email to you"
 msgstr "Size bir e-posta gönderdik"
@@ -1146,7 +1158,7 @@ msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
 "will be entered into the European Butterfly Monitoring database and used to "
 "develop trends of butterflies across Europe. To use the app you will first "
-"have to register with a username or email and enter a password."
+"have to register an account."
 msgstr ""
 "Bu uygulamayı Avrupanın her yerindeki kelebekleri izlemek için "
 "kullanabilirsiniz. Sonuçlar Avrupa Kelebek İzleme veritabanına girilerek "
