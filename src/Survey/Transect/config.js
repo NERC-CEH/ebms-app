@@ -151,7 +151,7 @@ const config = {
     modifySubmission(submission) {
       if (!submission.survey_id) {
         // backwards compatible
-        submission.survey_id = survey.id; //eslint-disable-line
+        submission.survey_id = config.id; //eslint-disable-line
       }
 
       return submission;
@@ -192,7 +192,7 @@ const config = {
   modifySubmission(submission) {
     if (!submission.survey_id) {
       // backwards compatible
-      submission.survey_id = survey.id; //eslint-disable-line
+      submission.survey_id = config.id; //eslint-disable-line
     }
 
     return submission;
