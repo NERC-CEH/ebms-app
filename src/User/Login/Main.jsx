@@ -72,6 +72,8 @@ class Component extends React.Component {
                 </div>
               </IonList>
 
+              {/** https://github.com/formium/formik/issues/1418 */}
+              <input type="submit" style={{ display: 'none' }} />
               <IonButton color="primary" type="submit" expand="block">
                 <T>Sign in</T>
               </IonButton>
