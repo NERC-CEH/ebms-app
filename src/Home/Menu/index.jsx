@@ -66,6 +66,9 @@ const Controller = observer(props => {
 
   const isLoggedIn = userModel.hasLogIn();
 
+  const checkActivation = () => userModel.checkActivation();
+  const resendVerificationEmail = () => userModel.resendVerificationEmail();
+
   return (
     <Page id="info-menu">
       <Main
@@ -73,8 +76,8 @@ const Controller = observer(props => {
         appModel={appModel}
         isLoggedIn={isLoggedIn}
         logOut={logOut}
-        refreshAccount={userModel.checkActivation}
-        resendVerificationEmail={userModel.resendVerificationEmail}
+        refreshAccount={checkActivation}
+        resendVerificationEmail={resendVerificationEmail}
         {...restProps}
       />
     </Page>
