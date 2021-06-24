@@ -1,3 +1,7 @@
+## 1.13.0
+
+- Improved the login screen password autofill.
+
 ## 1.12.0
 
 - Fixed paused timer GPS tracking and vibration

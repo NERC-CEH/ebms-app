@@ -3,7 +3,7 @@
   "id": "uk.ac.ceh.ebms",
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "start": "webpack serve --progress --content-base build --port 8000",
@@ -33,7 +33,7 @@
     "@bit/flumens.apps.info-background-message": "1.0.0",
     "@bit/flumens.apps.info-message": "^1.2.1",
     "@bit/flumens.apps.input": "1.0.3",
-    "@bit/flumens.apps.input-with-validation": "0.3.0",
+    "@bit/flumens.apps.input-with-validation": "0.4.0",
     "@bit/flumens.apps.long-press-button": "0.1.1",
     "@bit/flumens.apps.long-press-fab-button": "^0.1.0",
     "@bit/flumens.apps.main": "0.2.0",
@@ -323,7 +323,7 @@
   },
   "bit": {
     "env": {
-      "compiler": "bit.envs/compilers/react@2.0.0"
+      "compiler": "bit.envs/compilers/react-typescript@4.0.0"
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"
