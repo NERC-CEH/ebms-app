@@ -3,7 +3,7 @@
   "id": "uk.ac.ceh.ebms",
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
-  "version": "1.13.0",
+  "version": "1.13.1",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "start": "webpack serve --progress --content-base build --port 8000",
@@ -68,7 +68,7 @@
     "@capacitor/core": "^2.4.2",
     "@capacitor/ios": "^2.4.2",
     "@indicia-js/core": "5.4.0",
-    "@indicia-js/remote": "^5.6.7",
+    "@indicia-js/remote": "5.6.8",
     "@ionic-native/core": "5.32.1",
     "@ionic-native/sqlite": "5.32.1",
     "@ionic/core": "5.6.5",
