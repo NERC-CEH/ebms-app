@@ -166,6 +166,18 @@ const survey = {
       return sample;
     },
 
+    modifySubmission(submission) {
+      if (!submission.values.survey_id) {
+        // TODO: remove this once it is known why this isn't set
+        console.error(
+          `Submission subsample had no survey_id so we are setting it to ${survey.id}`
+        );
+        submission.values.survey_id = survey.id; // eslint-disable-line
+      }
+
+      return submission;
+    },
+
     occ: {
       attrs: {
         taxon: taxonAttr,
@@ -237,6 +249,13 @@ const survey = {
   modifySubmission(submission) {
     const subSamples = submission.samples;
     submission.samples = []; // eslint-disable-line
+    if (!submission.values.survey_id) {
+      // TODO: remove this once it is known why this isn't set
+      console.error(
+        `Submission top sample had no survey_id so we are setting it to ${survey.id}`
+      );
+      submission.values.survey_id = survey.id; // eslint-disable-line
+    }
 
     const removeSubSamplesLayerIfNoLocation = subSample => {
       const locationIsMissing = !subSample.values.entered_sref;

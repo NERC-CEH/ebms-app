@@ -95,10 +95,11 @@ class AppSample extends Sample {
     }
 
     this.cleanUp();
-    this.saveRemote().catch(e => {
+    const showError = e => {
       error(e);
       throw e;
-    });
+    };
+    this.saveRemote().catch(showError);
 
     return true;
   }
