@@ -158,6 +158,14 @@ const survey = {
         },
       });
 
+      if (!sample.metadata.survey_id) {
+        // TODO: remove this once it is known why this isn't set
+        console.error(
+          `Creating subsample had no survey_id so we are setting it to ${survey.id}`
+        );
+        sample.metadata.survey_id = survey.id; // eslint-disable-line
+      }
+
       const occurrence = survey.smp.occ.create(Occurrence, taxon);
       sample.occurrences.push(occurrence);
 
@@ -238,6 +246,15 @@ const survey = {
         windSpeed: '',
       },
     });
+
+    if (!sample.metadata.survey_id) {
+      // TODO: remove this once it is known why this isn't set
+      console.error(
+        `Creating sample had no survey_id so we are setting it to ${survey.id}`
+      );
+      sample.metadata.survey_id = survey.id; // eslint-disable-line
+    }
+
     sample.attrs.surveyStartTime = sample.metadata.created_on; // this can't be done in defaults
     sample.toggleGPStracking();
     sample.startVibrateCounter();
