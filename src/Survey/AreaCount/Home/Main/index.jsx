@@ -19,7 +19,6 @@ import {
   timeOutline,
   pauseOutline,
   playOutline,
-  addOutline,
   clipboardOutline,
   filterOutline,
   warningOutline,
@@ -143,7 +142,6 @@ class AreaCount extends Component {
         onClick={navigateToSearch}
         onLongClick={this.showCopyOptions}
       >
-        <IonIcon icon={addOutline} slot="start" />
         <IonLabel>
           <T>Add species</T>
         </IonLabel>

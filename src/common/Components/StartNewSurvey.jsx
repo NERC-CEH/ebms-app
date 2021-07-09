@@ -39,7 +39,7 @@ async function getDraft(draftIdKey) {
   const draftID = appModel.attrs[draftIdKey];
   if (draftID) {
     const draftSample = savedSamples.find(({ cid }) => cid === draftID);
-    if (draftSample) {
+    if (draftSample && !draftSample.isDisabled()) {
       const continueDraftRecord = await showDraftAlert();
       if (continueDraftRecord) {
         return draftSample;

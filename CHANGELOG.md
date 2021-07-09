@@ -1,3 +1,7 @@
+## 1.13.2
+
+Fixed pending single species 15min count drafts.
+
 ## 1.13.0
 
 - Improved the login screen password autofill.

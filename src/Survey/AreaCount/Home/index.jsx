@@ -87,8 +87,8 @@ class Container extends React.Component {
 
   _processDraft = async () => {
     const { appModel, sample } = this.props;
-
-    appModel.attrs['draftId:precise-area'] = null;
+    const surveyName = sample.getSurvey().name;
+    appModel.attrs[`draftId:${surveyName}`] = null;
     await appModel.save();
 
     const saveAndReturn = () => {
