@@ -2,11 +2,12 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
+# Egle Viciuviene <eviciuviene@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2021\n"
+"Last-Translator: Egle Viciuviene <eviciuviene@gmail.com>, 2021\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -339,7 +340,7 @@ msgid "OK, got it"
 msgstr "Supratau"
 
 msgid "Please fill in"
-msgstr ""
+msgstr "Prašome užpildyti"
 
 msgid "Area Count"
 msgstr "Teritorijos Monitoringas"
@@ -496,7 +497,7 @@ msgid "Are you sure you want to remove this photo?"
 msgstr "Ar jūs tikrai norite ištrinti šią nuotrauką?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Pastaba: Ištrynus nuotrauka liks telefono galerijoje."
+msgstr "Pastaba: ištrynus nuotrauka liks telefono galerijoje."
 
 msgid "No photo has been added"
 msgstr "Nėra pridėtų nuotraukų"
@@ -509,35 +510,39 @@ msgid "Incorrect password or email"
 msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
+msgstr "Įveskite savo el. paštą norėdami atnaujinti savo slaptažodį"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "Vartotojas dar nėra aktyvuotas arba buvo užblokuotas"
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"Atrodo, kad jūsų <1>{{userEmail}}</1> el.paštas dar nebuvo patvirtintas. "
+"<3><0>Atnaujinti</0><1>Persiųsti e. laišką</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
+"Naujas patvirtinimo el. laiškas sėkmingai išsiųstas. Jei negavote el. "
+"laiško, patikrinkite šlamšto aplankus el.pašte"
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr ""
+msgstr "Prašome pirma prisijungti"
 
 # User registration error
 msgid "This email is already taken."
-msgstr ""
+msgstr "Šis el.paštas jau naudojamas"
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "netinkamas el.pašto formatas"
 
 msgid "email is not valid"
 msgstr "negalimas el.paštas"
@@ -547,8 +552,8 @@ msgid ""
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Drugeliai yra nuostabūs vabzdžiai, tačiau jie nyksta daugelyje Europos "
-"šalių. Ši grafa parodo Europos drugelių nykimą."
+"Dieniniai drugiai yra nuostabūs vabzdžiai, tačiau jie nyksta daugelyje "
+"Europos šalių. Ši grafa parodo Europos dieninių drugių populiacijų mažėjimą."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
@@ -561,16 +566,18 @@ msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
-"Šis žemėlapis atskleidžia kaip mums trūksta reikiamos informacijos apie "
-"drugelių paplitimą."
+"Mums dar trūksta informacijos apie drugelių būklę daugelyje Europos vietų, "
+"tai rodo šiuo metu žemėlapyje turimų pateiktų įrašų tankumas dieninių drugių"
+" būklei įvertinti."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Niekada dar nebuvo taip paprasta prisidėti prie šio svarbaus vabzdžio "
-"išlikimo. Jūs galite pradėti jau dabar!"
+"Dar niekada nebuvo taip paprasta pateikti aukštos kokybės duomenis "
+"moksliniams tyrimams, kurie padėtų išsaugoti šiuos įspūdingus ir gyvybiškai "
+"svarbius vabzdžius. Galite pradėti jau dabar!"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
@@ -769,7 +776,7 @@ msgid ""
 "button below to starting counting butterflies."
 msgstr ""
 "Ši aplikacija palaiko drugelių stebėjimą ir išsaugojimą. Paspauskite žemiau "
-"esantį  + mygtuką, kad pradėtumėte skaičiuoti drugelius."
+"esantį  + mygtuką, kad pradėtumėte skaičiuoti dieninius drugius."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
@@ -826,7 +833,7 @@ msgid "How about a rating on the Play Store then?"
 msgstr "Gal galėtumėte parekomenduoti aplikaciją Play Store?"
 
 msgid "Icons made by"
-msgstr "Ikonos sukirtos"
+msgstr "Ikonos sukurtos"
 
 msgid "from"
 msgstr "iš"
@@ -873,6 +880,8 @@ msgstr "Dalintis naudojimosi duomenimis"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
+"Bendrinkite programos strigčių duomenis, kad galėtume padaryti programą "
+"patikimesnę."
 
 msgid "Save Draft"
 msgstr "Išsaugoti Juodraštį"
@@ -887,7 +896,7 @@ msgid "Adults"
 msgstr "Suaugęs"
 
 msgid "Larvae"
-msgstr "Lerva"
+msgstr "Vikšras"
 
 msgid "Eggs"
 msgstr "Kiaušinėlis"
@@ -896,7 +905,7 @@ msgid "Pupae"
 msgstr "Lėliukė"
 
 msgid "Larval webs"
-msgstr "Lervos tinklas"
+msgstr "Vikšro tinklas"
 
 # Butterfly stage
 msgid "Adult"
@@ -908,30 +917,30 @@ msgstr "Kiaušinėlis"
 
 # Butterfly stage
 msgid "Larva"
-msgstr "Lerva"
+msgstr "Vikšras"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr "Lervos tinklas"
+msgstr "Vikšro tinklas"
 
 # Butterfly stage
 msgid "Pupa"
 msgstr "Lėliukė"
 
 msgid "Transect"
-msgstr "Maršrutas"
+msgstr "Transekta"
 
 msgid "Sections"
 msgstr "Ruožai"
 
 msgid "No transect"
-msgstr "Nėra maršruto"
+msgstr "Nėra transektos"
 
 msgid "Start Time"
-msgstr "Pradėjimo Laikas"
+msgstr "Pradios Laikas"
 
 msgid "End Time"
-msgstr "Užbaigimo Laikas"
+msgstr "Pabaigos Laikas"
 
 msgid "Temperature"
 msgstr "Oro Temperatūra"
@@ -946,13 +955,13 @@ msgid "Wind Speed"
 msgstr "Vėjo Greitis"
 
 msgid "Recorder"
-msgstr "Atsakingas Asmuo"
+msgstr "Stebėtojo vardas"
 
 msgid "Refresh"
 msgstr "Atnaujinti"
 
 msgid "Please select your transect first."
-msgstr "Prašome pirma pasirinkti savo maršrutą."
+msgstr "Prašome pirma pasirinkti savo transektą."
 
 msgid "Invalid server response."
 msgstr "Nesuprantamas serverio atsakymas."
@@ -1018,10 +1027,10 @@ msgid "Please specify the wind speed."
 msgstr "Prašome pasirinkti vėjo greitį."
 
 msgid "Transects"
-msgstr "Maršrutai"
+msgstr "Teansektos"
 
 msgid "Transect list was successfully updated."
-msgstr "Maršrutų sąrašas buvo sėkmingai atnaujintas."
+msgstr "Transektų sąrašas buvo sėkmingai atnaujintas."
 
 msgid "Section"
 msgstr "Ruožas"
@@ -1039,16 +1048,16 @@ msgid "Unsuitable conditions"
 msgstr "Netinkamos sąlygos"
 
 msgid "Unable to survey"
-msgstr "Monitoringas negalimas"
+msgstr "Stebėjimas negalimas"
 
 msgid "15min Count"
-msgstr "15min Monitoringas"
+msgstr "15min stebėjimas"
 
 msgid "15min Single Species Count"
-msgstr "15min Vienos Rūšies Monitoringas"
+msgstr "15min Vienos Rūšies Stebėjimas"
 
 msgid "eBMS Transect"
-msgstr "eBMS Maršrutas"
+msgstr "eBMS Transekta"
 
 msgid "Please add any extra info about this record."
 msgstr "Prašome papildyti įrašą kita susijusia informacija."
@@ -1066,7 +1075,7 @@ msgid "Please specify the % of cloud cover."
 msgstr "Prašome nurodyti debesuotumą %."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "Nerasta eBMS maršrutų. Prašome pabandyti atnaujinti sąrašą."
+msgstr "Nerasta eBMS transektų. Prašome pabandyti atnaujinti sąrašą."
 
 msgid "Wind speed info is missing"
 msgstr "Trūksta informacijos apie vėjo greitį"
@@ -1075,10 +1084,10 @@ msgid "Temperature info is missing"
 msgstr "Trūksta informacijos apie oro temperatūrą"
 
 msgid "Recorder info is missing"
-msgstr "Trūksta informacijos apie atsakingą žmogų"
+msgstr "Trūksta informacijos apie stebėtoją"
 
 msgid "Please select your transect."
-msgstr "Prašome pirma pasirinkti savo maršrutą"
+msgstr "Prašome pirma pasirinkti savo transektą"
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
@@ -1139,9 +1148,11 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Su šia aplikacija jūs galite rinkti drugelių įrašus visoje Europoje. Visi "
-"duomenys bus įkelti į European Butterfly Monitoring duomenų bazę ir "
-"panaudoti moksliniams tyrimams."
+"Šią programėlę galite naudoti norėdami stebėti drugelius bet kurioje Europos"
+" vietoje. Rezultatai bus įrašyti į Europos dininių drugių stebėjimo duomenų "
+"bazę ir naudojami kuriant dieninių drugių būklės tendencijas visoje "
+"Europoje. Norėdami naudoti programą, pirmiausia turėsite užregistruoti "
+"paskyrą."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1151,12 +1162,15 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"Rekomenduojamas yra 15 minučių teritorijos monitoringas, kuris neapribotas "
-"vieta ar laiku. Svarbiausia, kad drugeliai būtų aktyvūs, t.y. kada oras yra "
-"šiltas ir saulėtas."
+"Pageidautinas metodas yra 15 minučių stebėjimas. Jį galima daryti bet "
+"kurioje vietoje ir bet kuriuo metu, kai drugeliai yra aktyvūs (t. y. Kai "
+"oras šiltas ir, pageidautina, saulėtas). Šią programėlę taip pat galite "
+"naudoti atliekant jau numatytas transektas. Vėliau, 2020 m., Programoje taip"
+" pat bus galimybė pateikti pavienius įrašus. Žemiau pateikta informacija "
+"kaip naudotis šiuo metu prieinamais metodais"
 
 msgid "How to do a 15-minute Count"
-msgstr "Kaip atlikti 15 minučių monitoringą"
+msgstr "Kaip atlikti 15 minučių stebėjimą"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1203,10 +1217,10 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"Baigę 15 minučių skaičiavimą ir patikrinę, ar rūšys ir skaičiai yra "
-"teisingi, paspauskite mygtuką Įkelti. Tai svarbu norint, kad jūsų duomenys "
-"būtų įkelti į eBMS duombazę. Po įkėlimo įrašas išliks saugomas jūsų "
-"įrenginyje, kad būtų galima jį naudoti ir ateityje."
+"Baigę 15 minučių stebėjimą ir patikrinę, ar rūšys ir skaičiai yra teisingi, "
+"paspauskite mygtuką Įkelti. Tai svarbu norint, kad jūsų duomenys būtų įkelti"
+" į eBMS duombazę. Po įkėlimo įrašas išliks saugomas jūsų įrenginyje, kad "
+"būtų galima jį naudoti ir ateityje."
 
 msgid "How to record along an existing transect"
 msgstr "Kaip įrašyti pagal esamą transektą"
@@ -1224,7 +1238,7 @@ msgstr ""
 "transektą. Jas jau nustatė šalies drugelių stebėjimo schemos ir jas "
 "geriausiai užpildo patyrę registratoriai. Jei norite įrašyti esamus "
 "programos segmentus, reikia, kad jūsų sąskaita jau būtų susieta su "
-"transektais „eBMS“ sistemoje. Jei prisijungus prie programos nėra jokių "
+"transektomis „eBMS“ sistemoje. Jei prisijungus prie programos nėra jokių "
 "transektų vietų, prašome susisiekti su savo šalies koordinatoriumi (patarimo"
 " prašome klausti el. Paštu {{helpEmail}})."
 
@@ -1242,13 +1256,16 @@ msgid ""
 "correct, press the FINISH button to submit."
 msgstr ""
 "Norėdami pradėti su transektų skaičiavimu, palaikykite nuspaudę mygtuką + "
-"(ilgai paspauskite) ekrano apačioje ir pasirinkite „eBMS Transektas“. "
-"Pirmiausia turite pasirinkti savo transektus (tam reikės prisijungti, o "
+"(palaikykite ilgai) ekrano apačioje ir pasirinkite „eBMS Transekta“. "
+"Pirmiausia turite pasirinkti savo transektas (tam reikės prisijungti, o "
 "transektų maršrutus susieti su jūsų vartotojo sąskaita). Pasirinkę savo "
-"transekto vietą, puslapyje „Transektas“ galite užpildyti reikiamą orų "
+"transektos vietą, puslapyje „Transekta“ galite užpildyti reikiamą aplinkos "
 "informaciją (pvz., Temperatūrą, vėjo greitį ir kt.) Ir kitą būtiną "
-"informaciją (pvz., Pradžios laiką). Tada pridėsite matytų rūšių sąrašą ir "
-"kiekvienos transekto sekcijos suskaičiuotą skaičių."
+"informaciją (pvz., Pradžios laiką). Tada pridėkite matytų rūšių sąrašą ir "
+"kiekvienos transektos sekcijoje suskaičiuotą individų skaičių, taip pat kaip"
+" atliekant 15 min stebėjimą. Baigę transektą ir patikrinę ar visos stebėtos "
+"rūšys suvestos ir individų skaičiai teisinga, paspauskite mygtuką UŽBAIGTI, "
+"kad pateiktumėte duomenis"
 
 msgid "Survey section"
 msgstr "Įrašų skyrius"
@@ -1484,16 +1501,15 @@ msgstr "Paslėpti"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Pagrindinis monitoringas"
+msgstr "Pagrindinis stebėjimas"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr "Visi monitoringai"
+msgstr "Visi stebėjimai"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr ""
-"Reprezentacinė nuotrauka nuo kur buvo pradėtas 15 minučių monitoringas"
+msgstr "Reprezentacinė nuotrauka nuo kur buvo pradėtas 15 minučių stebėjimas"
 
 # Part of a photo picker element
 msgid "No photo has been added."
@@ -1505,7 +1521,7 @@ msgstr "Paspauskite <1></1> norint pridėti."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr "Tikslusis 15 minučių monitoringas"
+msgstr "Tikslusis 15 minučių stebėjimas"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
@@ -1537,11 +1553,11 @@ msgstr "Detalės"
 
 # A survey label
 msgid "Species Photo"
-msgstr "Drugelio Nuotrauka"
+msgstr "Rūšies Nuotrauka"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr "Pasirinkite drugio stadiją"
+msgstr "Pasirinkite drugio gyvenimo stadiją"
 
 # A survey label
 msgid "Weather"
@@ -1561,11 +1577,11 @@ msgstr "Pasirinkite rūšių grupes kurias visada monitorinate."
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr "Drugeliai"
+msgstr "Dieniniai drugiai"
 
 # Part of species group selection
 msgid "Moths"
-msgstr "Drugiai"
+msgstr "Naktiniai drugiai"
 
 # Part of species group selection
 msgid "Bumblebees"
@@ -1577,7 +1593,7 @@ msgstr "Laumžirgiai"
 
 # Alert label
 msgid "Warning"
-msgstr "Ispėjimas"
+msgstr "Įspėjimas"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"

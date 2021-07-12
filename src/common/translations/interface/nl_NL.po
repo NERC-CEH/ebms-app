@@ -3,13 +3,13 @@
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Ineke <ineke.radstaat@vlinderstichting.nl>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2021
 # Karolis, 2021
+# Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2021\n"
+"Last-Translator: Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2021\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/ceh/teams/95441/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -342,7 +342,7 @@ msgid "OK, got it"
 msgstr "Ok, ik begrijp het."
 
 msgid "Please fill in"
-msgstr ""
+msgstr "Vul in aub"
 
 msgid "Area Count"
 msgstr "Gebiedstelling"
@@ -1147,11 +1147,6 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Met deze app kunt u overal in Europa dagvlinders monitoren. De resultaten "
-"komen in de Europese Dagvlinder Monitoring Database, en ze zullen worden "
-"gebruikt om Europese dagvlindertrends te berekenen. Om deze app te gebruiken"
-" moet u zich eerst registreren met een gebruikersnaam of emailadres en een "
-"wachtwoord."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
