@@ -136,7 +136,7 @@ class Component extends React.Component {
       : '';
 
     if (sample.metadata.survey !== 'transect') {
-      speciesInfo += `<br/>${t('Species')}: ${sample.occurrences.length}`;
+      speciesInfo += `<br/>${t('Species')}: ${sample.samples.length}`;
     }
 
     marker.bindPopup(`<b>${t(date)}</b>${speciesInfo}`);
