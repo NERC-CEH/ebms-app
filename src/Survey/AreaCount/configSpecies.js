@@ -7,8 +7,19 @@ const speciesSurvey = merge({}, survey, {
   label: '15min Single Species Count',
 
   smp: {
-    create: (...args) =>
-      survey.smp.create(...args, speciesSurvey.id, speciesSurvey.name),
+    create: (appSample, appOccurrence, taxon, zeroAbundance) => {
+      const subSample = survey.smp.create(
+        appSample,
+        appOccurrence,
+        taxon,
+        zeroAbundance,
+        speciesSurvey.id,
+        speciesSurvey.name
+      );
+
+      subSample.occurrences[0].attrs.zero_abundance = zeroAbundance;
+      return subSample;
+    },
   },
 
   create: (...args) =>

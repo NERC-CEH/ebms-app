@@ -46,8 +46,19 @@ class Controller extends React.Component {
       occurrence.attrs.taxon = taxon;
     } else {
       const survey = sample.getSurvey();
-      const newSample = survey.smp.create(Sample, Occurrence, taxon);
+      const zeroAbundance = sample.isSurveyPreciseSingleSpecies() ? 't' : null;
+
+      const newSample = survey.smp.create(
+        Sample,
+        Occurrence,
+        taxon,
+        zeroAbundance
+      );
       sample.samples.push(newSample);
+
+      if (!sample.isSurveyPreciseSingleSpecies()) {
+        newSample.startGPS();
+      }
     }
 
     await sample.save();

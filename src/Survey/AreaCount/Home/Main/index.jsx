@@ -64,6 +64,11 @@ const buildSpeciesCount = (agg, smp) => {
   const id = taxon.warehouse_id;
 
   agg[id] = agg[id] || getDefaultTaxonCount(taxon); // eslint-disable-line
+
+  if (smp.isSurveyPreciseSingleSpecies() && smp.hasZeroAbundance()) {
+    return agg;
+  }
+
   agg[id].count++; // eslint-disable-line
   agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning(); // eslint-disable-line
   // eslint-disable-next-line
@@ -134,13 +139,15 @@ class AreaCount extends Component {
     }
 
     const navigateToSearch = () => this.context.navigate(`${match.url}/taxon`);
+    const showCopyOptionsWrap = () =>
+      !sample.isSurveyPreciseSingleSpecies() && this.showCopyOptions();
 
     return (
       <LongPressButton
         color="primary"
         id="add"
         onClick={navigateToSearch}
-        onLongClick={this.showCopyOptions}
+        onLongClick={showCopyOptionsWrap}
       >
         <IonLabel>
           <T>Add species</T>
@@ -151,6 +158,7 @@ class AreaCount extends Component {
 
   getSpeciesEntry = ([id, species]) => {
     const {
+      sample,
       deleteSpecies,
       navigateToSpeciesOccurrences,
       increaseCount,
@@ -181,10 +189,13 @@ class AreaCount extends Component {
       location = <IonSpinner />;
     }
 
+    const hasZeroAbundance =
+      sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance();
+
     return (
       <IonItemSliding key={id}>
         <IonItem
-          detail={!isSpeciesDisabled}
+          detail={!isSpeciesDisabled && !hasZeroAbundance}
           onClick={navigateToSpeciesOccurrencesWrap}
         >
           <IonButton

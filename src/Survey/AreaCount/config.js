@@ -145,6 +145,7 @@ const survey = {
       AppSample,
       Occurrence,
       taxon,
+      _,
       surveyId = survey.id,
       surveyName = survey.name
     ) {
@@ -168,8 +169,6 @@ const survey = {
 
       const occurrence = survey.smp.occ.create(Occurrence, taxon);
       sample.occurrences.push(occurrence);
-
-      sample.startGPS();
 
       return sample;
     },

@@ -214,7 +214,7 @@ class Container extends React.Component {
   deleteSpecies = (taxon, isShallow) => {
     const { sample } = this.props;
 
-    if (isShallow) {
+    if (!sample.isSurveyPreciseSingleSpecies() && isShallow) {
       this.deleteFromShallowList(taxon);
       return;
     }
@@ -234,6 +234,13 @@ class Container extends React.Component {
   increaseCount = (taxon, isShallow) => {
     const { sample } = this.props;
 
+    if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
+      sample.samples[0].occurrences[0].attrs.zero_abundance = null;
+      sample.samples[0].startGPS();
+      sample.save();
+      return;
+    }
+
     if (sample.isDisabled()) {
       return;
     }
@@ -243,8 +250,10 @@ class Container extends React.Component {
     }
 
     const survey = sample.getSurvey();
-    const newSubSample = survey.smp.create(Sample, Occurrence, taxon);
+
+    const newSubSample = survey.smp.create(Sample, Occurrence, taxon, null);
     sample.samples.push(newSubSample);
+    newSubSample.startGPS();
     sample.save();
 
     isPlatform('hybrid') && Haptics.impact({ style: HapticsImpactStyle.Heavy });

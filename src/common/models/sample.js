@@ -104,6 +104,17 @@ class AppSample extends Sample {
     return true;
   }
 
+  isSurveyPreciseSingleSpecies = () =>
+    this.metadata.survey === 'precise-single-species-area';
+
+  hasZeroAbundance = () => {
+    if (this.parent) {
+      return this.parent.samples[0].occurrences[0].attrs.zero_abundance;
+    }
+
+    return this.samples[0].occurrences[0].attrs.zero_abundance;
+  };
+
   /**
    * Area count methods.
    */
