@@ -15,8 +15,13 @@ function getCelsiusTemperature(fahrenheitFromService) {
   }
 
   const temperature = Math.round(((fahrenheit - 32) * 5) / 9);
-  if (temperature < 10 || temperature > 35) {
+
+  if (temperature < 10) {
     return null;
+  }
+
+  if (temperature > 39) {
+    return '40+';
   }
 
   return temperature;

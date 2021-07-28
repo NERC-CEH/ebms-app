@@ -52,6 +52,11 @@ const temperatureValues = [
   { value: 33, id: 16553 },
   { value: 34, id: 16554 },
   { value: 35, id: 16555 },
+  { value: 36, id: 17759 },
+  { value: 37, id: 17760 },
+  { value: 38, id: 17761 },
+  { value: 39, id: 17762 },
+  { value: '40+', id: 18878 },
 ];
 
 export const temperatureAttr = {
