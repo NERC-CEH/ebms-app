@@ -50,6 +50,7 @@ class EditOccurrence extends Component {
     const { stage } = occurrence.attrs;
     const { comment } = occurrence.attrs;
     const baseURL = match.url;
+    const isPreciseSurvey = subSample.isSurveyPreciseSingleSpecies();
 
     const sampleBaseUrl = baseURL.split('/occ');
     sampleBaseUrl.pop();
@@ -68,13 +69,15 @@ class EditOccurrence extends Component {
             <T>Details</T>
           </IonItemDivider>
           <div className="rounded">
-            <MenuAttrItem
-              routerLink={`${baseURL}/taxon`}
-              disabled={isDisabled}
-              icon={butterflyIcon}
-              label="Species"
-              value={species}
-            />
+            {!isPreciseSurvey && (
+              <MenuAttrItem
+                routerLink={`${baseURL}/taxon`}
+                disabled={isDisabled}
+                icon={butterflyIcon}
+                label="Species"
+                value={species}
+              />
+            )}
             <MenuAttrItem
               routerLink={`${sampleBaseUrl}/location`}
               disabled={isDisabled}
