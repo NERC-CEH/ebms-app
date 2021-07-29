@@ -104,6 +104,7 @@ const survey = {
         id: 'entered_sref',
         values(location, submission) {
           const areaId = survey.attrs.area.remote.id;
+          const { accuracy, altitude, altitudeAccuracy } = location;
 
           // eslint-disable-next-line
           submission.values = {
@@ -111,6 +112,12 @@ const survey = {
             [areaId]: location.area,
             geom: getGeomString(location.shape),
           };
+
+          submission.values['smpAttr:282'] = accuracy;
+          submission.values['smpAttr:283'] = altitude;
+          submission.values['smpAttr:284'] = altitudeAccuracy;
+
+          console.log(submission);
 
           return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
             location.longitude
@@ -127,7 +134,13 @@ const survey = {
       location: {
         remote: {
           id: 'entered_sref',
-          values(location) {
+          values(location, submission) {
+            const { accuracy, altitude, altitudeAccuracy } = location;
+
+            submission.values['smpAttr:282'] = accuracy;
+            submission.values['smpAttr:283'] = altitude;
+            submission.values['smpAttr:284'] = altitudeAccuracy;
+
             if (!location.latitude) {
               return null; // if missing then sub-sample will be removed
             }

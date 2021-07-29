@@ -72,7 +72,9 @@ function isSufficientDistanceMade(coordinates, latitude, longitude) {
   return true;
 }
 
-export function updateSampleArea(sample, { latitude, longitude }) {
+export function updateSampleArea(sample, location) {
+  const { latitude, longitude, accuracy, altitude, altitudeAccuracy } =
+    location;
   const shape = getShape(sample);
   const coordinates =
     shape.type === 'Polygon' ? shape.coordinates[0] : shape.coordinates;
@@ -82,11 +84,11 @@ export function updateSampleArea(sample, { latitude, longitude }) {
   }
 
   coordinates.push([longitude, latitude]);
-  return sample.setLocation(shape);
+  return sample.setLocation(shape, accuracy, altitude, altitudeAccuracy);
 }
 
 const extension = {
-  setLocation(shape) {
+  setLocation(shape, accuracy, altitude, altitudeAccuracy) {
     if (!shape) {
       this.attrs.location = null;
       return this.save();
@@ -111,6 +113,9 @@ const extension = {
       area,
       shape,
       source: 'map',
+      accuracy,
+      altitude,
+      altitudeAccuracy,
     };
 
     return this.save();
