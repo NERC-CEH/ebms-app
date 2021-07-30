@@ -113,9 +113,9 @@ const survey = {
             geom: getGeomString(location.shape),
           };
 
-          submission.values['smpAttr:282'] = accuracy;
-          submission.values['smpAttr:283'] = altitude;
-          submission.values['smpAttr:284'] = altitudeAccuracy;
+          submission.values['smpAttr:282'] = accuracy; // eslint-disable-line
+          submission.values['smpAttr:283'] = altitude; // eslint-disable-line
+          submission.values['smpAttr:284'] = altitudeAccuracy; // eslint-disable-line
 
           console.log(submission);
 
@@ -137,9 +137,9 @@ const survey = {
           values(location, submission) {
             const { accuracy, altitude, altitudeAccuracy } = location;
 
-            submission.values['smpAttr:282'] = accuracy;
-            submission.values['smpAttr:283'] = altitude;
-            submission.values['smpAttr:284'] = altitudeAccuracy;
+            submission.values['smpAttr:282'] = accuracy; // eslint-disable-line
+            submission.values['smpAttr:283'] = altitude; // eslint-disable-line
+            submission.values['smpAttr:284'] = altitudeAccuracy; // eslint-disable-line
 
             if (!location.latitude) {
               return null; // if missing then sub-sample will be removed
