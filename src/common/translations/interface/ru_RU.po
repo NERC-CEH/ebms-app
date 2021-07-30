@@ -1543,3 +1543,15 @@ msgstr ""
 # Alert button option
 msgid "Turn off"
 msgstr ""
+
+# Alert button label
+msgid "Merge"
+msgstr ""
+
+# Alert header
+msgid "Species already exists"
+msgstr ""
+
+# Alert message
+msgid "Are you sure you want to merge this list to the existing species list?"
+msgstr ""

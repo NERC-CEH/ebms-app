@@ -1597,3 +1597,15 @@ msgstr "Opravdu chcete vypnout sledování GPS?"
 # Alert button option
 msgid "Turn off"
 msgstr "Vypnout"
+
+# Alert button label
+msgid "Merge"
+msgstr ""
+
+# Alert header
+msgid "Species already exists"
+msgstr ""
+
+# Alert message
+msgid "Are you sure you want to merge this list to the existing species list?"
+msgstr ""

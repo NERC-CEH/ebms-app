@@ -4,10 +4,40 @@ import { observer } from 'mobx-react';
 import { withRouter } from 'react-router';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
-import { Page, Main, Header } from '@apps';
+import { Page, Main, Header, alert } from '@apps';
 import appModel from 'appModel';
 import Sample from 'sample';
 import Occurrence from 'occurrence';
+import { Trans as T } from 'react-i18next';
+
+async function showMergeSpeciesAlert() {
+  return new Promise(resolve => {
+    alert({
+      header: 'Species already exists',
+      message: (
+        <T>
+          Are you sure you want to merge this list to the existing species list?
+        </T>
+      ),
+      backdropDismiss: false,
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+            resolve(false);
+          },
+        },
+        {
+          text: 'Merge',
+          cssClass: 'primary',
+          handler: () => {
+            resolve(true);
+          },
+        },
+      ],
+    });
+  });
+}
 
 @observer
 class Controller extends React.Component {
@@ -21,8 +51,17 @@ class Controller extends React.Component {
 
   onSpeciesSelected = async taxon => {
     const { sample, occurrence, match } = this.props;
-
     const { taxa } = match.params;
+    const { isRecorded } = taxon;
+
+    if (taxa && isRecorded) {
+      const mergeSpecies = await showMergeSpeciesAlert();
+
+      if (!mergeSpecies) {
+        return;
+      }
+    }
+
     if (taxa) {
       sample.samples
         .filter(({ occurrences }) => {
@@ -34,11 +73,11 @@ class Controller extends React.Component {
           occ.attrs.taxon = taxon;
         });
 
-      const url = match.url.split('/speciesOccurrences');
-      url.pop();
-
       await sample.save();
-      this.context.goBack();
+
+      const [url] = match.url.split('/speciesOccurrences');
+      this.context.navigate(url, 'none', 'replace');
+
       return;
     }
 
