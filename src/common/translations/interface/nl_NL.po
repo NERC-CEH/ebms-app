@@ -5,11 +5,12 @@
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
 # Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2021
+# Jurrien van Deijk <jurrien.vandeijk@vlinderstichting.nl>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2021\n"
+"Last-Translator: Jurrien van Deijk <jurrien.vandeijk@vlinderstichting.nl>, 2021\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/ceh/teams/95441/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,7 +71,7 @@ msgid "Estonia"
 msgstr "Estland"
 
 msgid "Spain (Canary Islands)"
-msgstr "Spanje: Canarische eilanden"
+msgstr "Spanje (Canarische eilanden)"
 
 msgid "Finland"
 msgstr "Finland"
@@ -130,10 +131,10 @@ msgid "Portugal"
 msgstr "Portugal"
 
 msgid "Portugal (Azores)"
-msgstr "Portugal: Azoren"
+msgstr "Portugal (Azoren)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugal: Madeira"
+msgstr "Portugal (Madeira)"
 
 msgid "Romania"
 msgstr "Roemenië"
@@ -356,21 +357,23 @@ msgstr "Locatie"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "Locatie vereist"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"De app heeft uw locatie nodig, maar heeft geen toestemming. Open de "
+"instellingen nu?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Annuleren om te voorkomen dat de batterij leeg raakt."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "Gebruikt uw locatie."
 
 msgid "Add"
 msgstr "Toevoegen"
@@ -510,35 +513,39 @@ msgid "Incorrect password or email"
 msgstr "Fout wachtwoord of e-mailadres"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
+msgstr "Voer uw emailadres in om uw wachtwoord te resetten."
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "De gebruikersnaam is niet geactiveerd of is geblokkeerd."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"Het ziet er naar uit dat uw <1>{{userEmail}}</1> email nog niet is "
+"geverifieerd.<3><0>Ververs</0><1>Zend mail opnieuw</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
+"Er is nu een nieuwe e-mail ter verificatie verzonden. Als u de e-mail niet "
+"hebt ontvangen, controleer dan uw spam- of ongewenste e-mail."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr ""
+msgstr "Log eerst in."
 
 # User registration error
 msgid "This email is already taken."
-msgstr ""
+msgstr "Dit emailadres is al in gebruik."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "Het emailadres wordt niet herkent."
 
 msgid "email is not valid"
 msgstr "E-mailadres is niet geldig"
@@ -1051,7 +1058,7 @@ msgid "15min Count"
 msgstr "Kwartiertelling"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "15min Soortspecifieke telling"
 
 msgid "eBMS Transect"
 msgstr "eBMS Transect"
@@ -1147,6 +1154,10 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
+"De app kan gebruikt worden om overal in Europa dagvlinders te monitoren. De "
+"tellingen komen in de database van de Europese Dagvlinder Monitoring en "
+"worden gebruikt om dagvlindertrends verspreid over Europa te berekenen. Om "
+"de app te gebruiken moet eerst een account worden aangemaakt."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1436,7 +1447,7 @@ msgstr "Vergeet aub niet om concept tellingen te uploaden."
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
-msgstr ""
+msgstr "Geen afgeronde tellingen.<br/><br/>Druk <4></4> om toe te voegen."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
@@ -1487,7 +1498,7 @@ msgstr "Geen foto toegevoegd"
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Druk <1></1> om toe te voegen."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
@@ -1511,7 +1522,7 @@ msgstr "Ik begrijp het"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Geen geüploade tellingen</0>"
 
 # user register error message
 msgid "Account already exists."
@@ -1539,35 +1550,35 @@ msgstr "Foto"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Soortgroepen"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "Selecteer de soortgroepen die je altijd wil invoeren."
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Dagvlinders"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Nachtvlinders"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Hommels"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Libellen"
 
 # Alert label
 msgid "Warning"
-msgstr ""
+msgstr "Waarschuwing"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "Weet u zeker dat u de GPS wilt uitschakelen?"
 
 # Alert button option
 msgid "Turn off"
