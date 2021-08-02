@@ -20,6 +20,21 @@ const speciesSurvey = merge({}, survey, {
       subSample.occurrences[0].attrs.zero_abundance = zeroAbundance;
       return subSample;
     },
+
+    occ: {
+      attrs: {
+        count: {
+          remote: {
+            id: 780,
+            values: (value, _, model) => {
+              const hasZeroAbundance = model.attrs.zero_abundance;
+
+              return hasZeroAbundance ? null : value;
+            },
+          },
+        },
+      },
+    },
   },
 
   create: (...args) =>

@@ -223,6 +223,7 @@ const survey = {
             comment: null,
             stage: 'Adult',
             taxon,
+            count: 1,
           },
         });
       },
