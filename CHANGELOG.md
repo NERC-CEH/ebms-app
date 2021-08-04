@@ -1,3 +1,12 @@
+## 1.14.0
+
+Added ability to change the species ID to an existing one in list.
+Added more GPS metadata capturing.
+Enabled zero count recording in 15-min single-species survey.
+Updated translations.
+Removed maximum 35C temperature limit.
+Fixed map view showing zero species counts.
+
 ## 1.13.2
 
 Fixed pending single species 15min count drafts.
