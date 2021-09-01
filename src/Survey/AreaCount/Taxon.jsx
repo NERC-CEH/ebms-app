@@ -76,7 +76,7 @@ class Controller extends React.Component {
       await sample.save();
 
       const [url] = match.url.split('/speciesOccurrences');
-      this.context.navigate(url, 'none', 'replace');
+      this.context.navigate(url, 'pop');
 
       return;
     }
