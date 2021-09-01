@@ -103,21 +103,18 @@ const survey = {
       remote: {
         id: 'entered_sref',
         values(location, submission) {
-          const areaId = survey.attrs.area.remote.id;
           const { accuracy, altitude, altitudeAccuracy } = location;
 
           // eslint-disable-next-line
           submission.values = {
             ...submission.values,
-            [areaId]: location.area,
             geom: getGeomString(location.shape),
           };
 
           submission.values['smpAttr:282'] = accuracy; // eslint-disable-line
           submission.values['smpAttr:283'] = altitude; // eslint-disable-line
           submission.values['smpAttr:284'] = altitudeAccuracy; // eslint-disable-line
-
-          console.log(submission);
+          submission.values['smpAttr:723'] = location.area; // eslint-disable-line
 
           return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
             location.longitude
@@ -125,8 +122,6 @@ const survey = {
         },
       },
     },
-
-    area: { remote: { id: 723 } },
   },
 
   smp: {
