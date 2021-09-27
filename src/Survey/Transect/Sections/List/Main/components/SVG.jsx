@@ -37,6 +37,11 @@ class SVG extends Component {
       );
     const path = d3.geoPath(projection);
 
+    const strokeColor = (_, index) => {
+      return index % 2
+        ? 'var(--ion-color-primary-shade)'
+        : 'var(--ion-color-secondary-tint)';
+    };
     group
       .selectAll('path')
       .data(isGeometryCollection ? geoLineString.geometries : geoLineString)
@@ -44,11 +49,7 @@ class SVG extends Component {
       .insert('path')
       .attr('width', size.w)
       .attr('height', size.h)
-      .attr('stroke', (_, index) => {
-        return index % 2
-          ? 'var(--ion-color-primary-shade)'
-          : 'var(--ion-color-secondary-tint)';
-      })
+      .attr('stroke', strokeColor)
       .attr('stroke-width', 2)
       .attr('fill', 'none')
       .attr('d', path);

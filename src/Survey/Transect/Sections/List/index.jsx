@@ -48,10 +48,11 @@ class index extends React.Component {
     const { sample } = this.props;
     const transect = sample.attrs.location;
     const survey = sample.getSurvey();
-    transect.sections.forEach(section => {
+    const addSection = section => {
       const sectionSample = survey.smp.create(Sample, section);
       sample.samples.push(sectionSample);
-    });
+    };
+    transect.sections.forEach(addSection);
     sample.save();
   };
 
@@ -78,6 +79,7 @@ class index extends React.Component {
       <Page id="transect-sections-list">
         <Header
           showRefreshButton={!transect}
+          // eslint-disable-next-line @getify/proper-arrows/name
           onRefresh={() => this.refreshUserTransects()}
         />
         <Main

@@ -9,7 +9,7 @@ import { Trans as T } from 'react-i18next';
 import { withRouter } from 'react-router';
 
 async function showDraftAlert() {
-  return new Promise(resolve => {
+  const showDraftDialog = resolve => {
     alert({
       header: 'Draft',
       message: (
@@ -32,13 +32,15 @@ async function showDraftAlert() {
         },
       ],
     });
-  });
+  };
+  return new Promise(showDraftDialog);
 }
 
 async function getDraft(draftIdKey) {
   const draftID = appModel.attrs[draftIdKey];
   if (draftID) {
-    const draftSample = savedSamples.find(({ cid }) => cid === draftID);
+    const draftById = ({ cid }) => cid === draftID;
+    const draftSample = savedSamples.find(draftById);
     if (draftSample && !draftSample.isDisabled()) {
       const continueDraftRecord = await showDraftAlert();
       if (continueDraftRecord) {
@@ -70,8 +72,8 @@ function StartNewSurvey({ match, survey }) {
   const baseURL = `/survey/${survey.name}`;
   const draftIdKey = `draftId:${survey.name}`;
 
-  useEffect(() => {
-    (async () => {
+  const pickDraftOrCreateSampleWrap = () => {
+    const pickDraftOrCreateSample = async () => {
       if (!userModel.hasLogIn()) {
         context.navigate(`/user/login`, 'none', 'replace');
         return;
@@ -89,14 +91,20 @@ function StartNewSurvey({ match, survey }) {
       const url = match.url.replace('/new', '');
 
       context.navigate(`${url}/${sample.cid}/edit`, 'none', 'replace');
-    })();
-  }, []);
+    };
+
+    pickDraftOrCreateSample();
+  };
+  useEffect(pickDraftOrCreateSampleWrap, []);
 
   return null;
 }
-
+// eslint-disable-next-line @getify/proper-arrows/name
 StartNewSurvey.with = survey => {
-  return withRouter(params => <StartNewSurvey survey={survey} {...params} />);
+  const StartNewSurveyWithRouter = params => (
+    <StartNewSurvey survey={survey} {...params} />
+  );
+  return withRouter(StartNewSurveyWithRouter);
 };
 
 export default withRouter(StartNewSurvey);

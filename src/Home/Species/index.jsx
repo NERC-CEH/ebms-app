@@ -28,9 +28,10 @@ class Component extends React.Component {
   state = { showModal: false, species: null };
 
   showSpeciesModal = id => {
+    const bySpeciesId = sp => sp.id === id;
     this.setState({
       showModal: true,
-      species: speciesProfiles.find(sp => sp.id === id),
+      species: speciesProfiles.find(bySpeciesId),
     });
   };
 

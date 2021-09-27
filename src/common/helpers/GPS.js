@@ -28,6 +28,7 @@ const API = {
       }
 
       console.error(err);
+      // eslint-disable-next-line @getify/proper-arrows/name
       clientCallbacks.forEach(callback => callback(err));
       return;
     }
@@ -50,6 +51,7 @@ const API = {
       altitudeAccuracy,
     };
 
+    // eslint-disable-next-line @getify/proper-arrows/name
     clientCallbacks.forEach(callback => callback(null, location));
   },
 

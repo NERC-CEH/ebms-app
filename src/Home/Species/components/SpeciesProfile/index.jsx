@@ -35,6 +35,10 @@ class Component extends React.Component {
     this.speciesMap = React.createRef();
   }
 
+  closeGallery = () => this.setState({ showGallery: false });
+
+  openGallery = () => this.setState({ showGallery: 1 });
+
   getFullScreenPhotoViewer = () => {
     const { species } = this.props;
     const { showGallery } = this.state;
@@ -51,12 +55,7 @@ class Component extends React.Component {
     ];
 
     return (
-      <Gallery
-        isOpen
-        items={items}
-        onClose={() => this.setState({ showGallery: false })}
-        mode="md"
-      />
+      <Gallery isOpen items={items} onClose={this.closeGallery} mode="md" />
     );
   };
 
@@ -74,7 +73,7 @@ class Component extends React.Component {
           <img
             src={`/images/${species.image}_image.jpg`}
             alt="species"
-            onClick={() => this.setState({ showGallery: 1 })}
+            onClick={this.openGallery}
           />
 
           <IonCardHeader>

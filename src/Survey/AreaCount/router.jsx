@@ -26,6 +26,7 @@ const HomeWrap = props => (
   />
 );
 
+// eslint-disable-next-line @getify/proper-arrows/name
 const ModelLocationWrap = observer(props => (
   <ModelLocation model={props.subSample} mapProviderOptions={appConfig.map} />
 ));

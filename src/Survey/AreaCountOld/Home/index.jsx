@@ -127,9 +127,8 @@ class Container extends React.Component {
   getPreviousSurvey = () => {
     const { sample, savedSamples } = this.props;
 
-    const currentSampleIndex = savedSamples.findIndex(
-      s => s.cid === sample.cid
-    );
+    const byCid = s => s.cid === sample.cid;
+    const currentSampleIndex = savedSamples.findIndex(byCid);
 
     const isFirstSurvey = !currentSampleIndex;
 
@@ -139,9 +138,8 @@ class Container extends React.Component {
 
     const previousSurveys = savedSamples.slice(0, currentSampleIndex).reverse();
 
-    const previousSurvey = previousSurveys.find(
-      survey => survey.getSurvey().name === 'area'
-    );
+    const bySurveyNameArea = survey => survey.getSurvey().name === 'area';
+    const previousSurvey = previousSurveys.find(bySurveyNameArea);
 
     return previousSurvey;
   };
@@ -155,9 +153,8 @@ class Container extends React.Component {
       return;
     }
 
-    const existingSpeciesIds = sample.occurrences.map(
-      s => s.attrs.taxon.preferredId
-    );
+    const getTaxonPreferredId = s => s.attrs.taxon.preferredId;
+    const existingSpeciesIds = sample.occurrences.map(getTaxonPreferredId);
 
     const getNewSpeciesOnly = ({ preferredId }) =>
       !existingSpeciesIds.includes(preferredId);
@@ -168,8 +165,9 @@ class Container extends React.Component {
       sample.occurrences.push(occ);
     };
 
+    const newTaxon = occ => occ.attrs.taxon;
     const newSpeciesList = previousSurvey.occurrences
-      .map(occ => occ.attrs.taxon)
+      .map(newTaxon)
       .filter(getNewSpeciesOnly);
 
     newSpeciesList.forEach(addNewOccurrence);

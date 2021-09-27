@@ -18,9 +18,9 @@ class Controller extends React.Component {
   render() {
     const { sample, occurrence } = this.props;
 
-    const recordedTaxa = sample.occurrences.map(
-      occ => occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id
-    );
+    const getTaxon = occ =>
+      occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
+    const recordedTaxa = sample.occurrences.map(getTaxon);
 
     const onSpeciesSelected = async taxon => {
       if (occurrence) {

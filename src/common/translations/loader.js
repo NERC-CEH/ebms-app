@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+/* eslint-disable @getify/proper-arrows/name */
 import names from 'common/data/commonNames/index.json';
 import en from './interface/en.pot';
 import species_en from './species/en.pot';

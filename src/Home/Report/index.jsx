@@ -123,7 +123,7 @@ class Report extends React.Component {
 
     const speciesList = [...species].splice(0, 5);
 
-    const listComponents = speciesList.map(sp => {
+    const getSpeciesEntry = sp => {
       const scientificName = sp.key;
       const commonName = t(scientificName, null, true);
 
@@ -151,7 +151,8 @@ class Report extends React.Component {
           </IonLabel>
         </IonItem>
       );
-    });
+    };
+    const listComponents = speciesList.map(getSpeciesEntry);
 
     return (
       <>

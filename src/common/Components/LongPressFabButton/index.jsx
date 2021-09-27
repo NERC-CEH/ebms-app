@@ -58,12 +58,14 @@ class LongPressFabButton extends Component {
       clearInterval(this.action);
     }
 
-    this.action = setTimeout(() => {
+    const openLongPressButton = () => {
       if (this.longPressActive === true) {
         this.longPressActive = false;
         this.fabRef.current.click();
       }
-    }, 400);
+    };
+
+    this.action = setTimeout(openLongPressButton, 400);
   }
 
   componentWillUnmount() {

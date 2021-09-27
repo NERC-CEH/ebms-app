@@ -20,7 +20,8 @@ class Container extends React.Component {
     const { match, sample } = this.props;
 
     const occID = match.params.occId;
-    const occurrence = sample.occurrences.find(occ => occ.cid === occID);
+    const byOccId = occ => occ.cid === occID;
+    const occurrence = sample.occurrences.find(byOccId);
     const isDisabled = !!sample.metadata.synced_on;
 
     return (

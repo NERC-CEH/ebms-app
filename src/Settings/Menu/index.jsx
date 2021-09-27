@@ -43,7 +43,7 @@ async function uploadAllSamples(saveSamples, userModel, t) {
   }
 }
 
-const Container = observer(({ savedSamples, appModel, userModel, t }) => {
+const Container = ({ savedSamples, appModel, userModel, t }) => {
   const {
     useTraining,
     useExperiments,
@@ -54,6 +54,11 @@ const Container = observer(({ savedSamples, appModel, userModel, t }) => {
     speciesGroups,
   } = appModel.attrs;
 
+  const resetAppWrap = () => resetApp(savedSamples, appModel, userModel);
+  const uploadAllSamplesWrap = () =>
+    uploadAllSamples(savedSamples, userModel, t);
+  const onToggleWrap = (setting, checked) =>
+    onToggle(appModel, setting, checked);
   return (
     <Page id="settings-menu">
       <Header title="Settings" />
@@ -62,16 +67,16 @@ const Container = observer(({ savedSamples, appModel, userModel, t }) => {
         useExperiments={useExperiments}
         sendAnalytics={sendAnalytics}
         primarySurvey={primarySurvey}
-        uploadAllSamples={() => uploadAllSamples(savedSamples, userModel, t)}
-        resetApp={() => resetApp(savedSamples, appModel, userModel)}
-        onToggle={(setting, checked) => onToggle(appModel, setting, checked)}
+        uploadAllSamples={uploadAllSamplesWrap}
+        resetApp={resetAppWrap}
+        onToggle={onToggleWrap}
         language={language}
         speciesGroups={speciesGroups}
         country={country}
       />
     </Page>
   );
-});
+};
 
 Container.propTypes = {
   savedSamples: PropTypes.array.isRequired,
@@ -80,4 +85,4 @@ Container.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withTranslation()(Container);
+export default observer(withTranslation()(Container));

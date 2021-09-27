@@ -45,14 +45,19 @@ const transectLocationSchema = Yup.object().shape({
   sref_system: Yup.string().required(),
 });
 
+const validation = val => {
+  if (!val) {
+    return false;
+  }
+  transectLocationSchema.validateSync(val);
+  return true;
+};
 const transectSchema = Yup.object().shape({
-  location: Yup.mixed().test('area', 'Please select your transect.', val => {
-    if (!val) {
-      return false;
-    }
-    transectLocationSchema.validateSync(val);
-    return true;
-  }),
+  location: Yup.mixed().test(
+    'area',
+    'Please select your transect.',
+    validation
+  ),
   recorder: Yup.string().required('Recorder info is missing'),
   surveyStartTime: Yup.date().required('Start time is missing'),
   // surveyEndTime: Yup.date().required('End time is missing'), // automatically set on send

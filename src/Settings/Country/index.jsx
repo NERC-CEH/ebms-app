@@ -18,12 +18,13 @@ import './styles.scss';
 
 function SelectCountry({ appModel, hideHeader }) {
   const [secondRender, forceSecondRender] = useState(false);
-  
+
   if (hideHeader) {
+    const forceSecondRenderWrap = () => forceSecondRender(true);
     // This is an unkown issue where changing a language on the initial
     // app load screen does not update the countries labels so we force rerender
     // this screen after a timeout
-    setTimeout(() => forceSecondRender(true), 10);
+    setTimeout(forceSecondRenderWrap, 10);
 
     if (!secondRender) {
       return null;
@@ -55,18 +56,19 @@ function SelectCountry({ appModel, hideHeader }) {
   const placeElseWhereAtEnd = ([value1, country1], [, country2]) =>
     value1 === 'ELSEWHERE' ? 1 : country1.localeCompare(country2);
 
+  const getCountryOption = ([value, country]) => (
+    <React.Fragment key={value}>
+      {value === 'ELSEWHERE' && <IonItemDivider />}
+      <IonItem>
+        <IonLabel>{country}</IonLabel>
+        <IonRadio value={value} checked={currentValue === value} />
+      </IonItem>
+    </React.Fragment>
+  );
   const countriesOptions = Object.entries(countries)
     .map(translate)
     .sort(placeElseWhereAtEnd)
-    .map(([value, country]) => (
-      <React.Fragment key={value}>
-        {value === 'ELSEWHERE' && <IonItemDivider />}
-        <IonItem>
-          <IonLabel>{country}</IonLabel>
-          <IonRadio value={value} checked={currentValue === value} />
-        </IonItem>
-      </React.Fragment>
-    ));
+    .map(getCountryOption);
 
   return (
     <Page id="country-select">

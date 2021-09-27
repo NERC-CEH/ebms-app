@@ -123,14 +123,16 @@ class AppModel extends Model {
       return;
     }
 
-    const transectLocationIds = transects.map(t => t.id).join(',');
+    const getLocationsId = t => t.id;
+    const transectLocationIds = transects.map(getLocationsId).join(',');
     const sectionsList = await fetchTransectSections(
       transectLocationIds,
       userModel
     );
 
     const normalizeTransectsWithSections = section => {
-      const transect = transects.find(t => t.id === section.parent_id);
+      const byId = t => t.id === section.parent_id;
+      const transect = transects.find(byId);
       transect.sections.push(section);
     };
     sectionsList.forEach(normalizeTransectsWithSections);

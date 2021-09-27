@@ -40,13 +40,12 @@ export default function LoginContainer({ userModel, onSuccess }) {
     context.navigate('/home/report', 'root');
   };
 
+  const onSubmitWrap = details => onLogin(userModel, details, onSuccessReturn);
+  
   return (
     <Page id="user-login">
       <Header title="Login" />
-      <Main
-        schema={userModel.loginSchema}
-        onSubmit={details => onLogin(userModel, details, onSuccessReturn)}
-      />
+      <Main schema={userModel.loginSchema} onSubmit={onSubmitWrap} />
     </Page>
   );
 }

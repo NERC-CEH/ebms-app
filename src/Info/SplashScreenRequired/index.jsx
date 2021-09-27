@@ -19,6 +19,8 @@ const SplashScreen = () => {
 
   const sliderRef = React.createRef();
 
+  const nextSlide = () => next(sliderRef);
+
   return (
     <IonSlides id="welcome" pager="true" ref={sliderRef}>
       <IonSlide class="first">
@@ -30,7 +32,7 @@ const SplashScreen = () => {
           fill="outline"
           color="primary"
           strong="true"
-          onClick={() => next(sliderRef)}
+          onClick={nextSlide}
         >
           <T>Next</T>
         </IonButton>
@@ -49,12 +51,7 @@ const SplashScreen = () => {
         <IonButton class="skip" color="light" strong="true" onClick={exit}>
           <T>Skip</T>
         </IonButton>
-        <IonButton
-          class="next"
-          color="light"
-          strong="true"
-          onClick={() => next(sliderRef)}
-        >
+        <IonButton class="next" color="light" strong="true" onClick={nextSlide}>
           <T>Next</T>
         </IonButton>
 
@@ -83,7 +80,7 @@ const SplashScreen = () => {
           fill="outline"
           color="primary"
           strong="true"
-          onClick={() => next(sliderRef)}
+          onClick={nextSlide}
         >
           <T>Next</T>
         </IonButton>
@@ -117,7 +114,7 @@ const SplashScreen = () => {
 
 SplashScreen.propTypes = {};
 
-const Component = observer(props => {
+const Component = props => {
   const { showedWelcome } = appModel.attrs;
 
   if (!showedWelcome) {
@@ -125,8 +122,8 @@ const Component = observer(props => {
   }
 
   return props.children;
-});
+};
 
 Component.propTypes = {};
 
-export default Component;
+export default observer(Component);

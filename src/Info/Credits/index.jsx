@@ -7,6 +7,15 @@ import sponsorsLogo from './sponsors.png';
 import flumensLogo from './flumens.png';
 import './styles.scss';
 
+const speciesWithoutImageCopyright = s => s.image_copyright;
+const getTaxonWithImageCopyright = s => (
+  <IonItem key={s.id} lines="none">
+    <IonLabel>
+      <i>{`${s.taxon}: `}</i>
+      <span dangerouslySetInnerHTML={{ __html: s.image_copyright }} />
+    </IonLabel>
+  </IonItem>
+);
 export default () => (
   <Page id="credits">
     <Header title="Credits" />
@@ -314,15 +323,8 @@ export default () => (
           </IonLabel>
         </IonItem>
         {species
-          .filter(s => s.image_copyright)
-          .map(s => (
-            <IonItem key={s.id} lines="none">
-              <IonLabel>
-                <i>{`${s.taxon}: `}</i>
-                <span dangerouslySetInnerHTML={{ __html: s.image_copyright }} />
-              </IonLabel>
-            </IonItem>
-          ))}
+          .filter(speciesWithoutImageCopyright)
+          .map(getTaxonWithImageCopyright)}
       </IonList>
 
       <IonList>

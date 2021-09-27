@@ -6,12 +6,13 @@ import resources from './loader';
 
 const DEFAULT_LANGUAGE = 'en';
 
-window.getNewTerms = () => {
+window.getNewTerms = function getNewTermsWrap() {
   window.dic = window.dic || [];
   let all = '';
-  window.dic.forEach(word => {
+  const showUntranslatedTerms = word => {
     all += `\n# Context term \nmsgid "${word}"\nmsgstr "${word}"\n`;
-  });
+  };
+  window.dic.forEach(showUntranslatedTerms);
   console.log(all);
 };
 
@@ -51,14 +52,15 @@ i18n
     },
   });
 
-observe(appModel.attrs, 'language', ({ newValue }) => {
+const newValueWrap = ({ newValue }) => {
   if (!newValue) {
     return;
   }
 
   const newLanguageCode = newValue.replace('_', '-'); // backwards compatible
   i18n.changeLanguage(newLanguageCode);
-});
+};
+observe(appModel.attrs, 'language', newValueWrap);
 
 // backwards compatible: START
 function translate(key, isSpeciesDescription, isSpeciesName) {

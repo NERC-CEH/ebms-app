@@ -22,20 +22,19 @@ function SelectCountry({ appModel }) {
 
   const translate = ({ name, label }) => [name, t(label)];
 
-  const surveyOptions = Object.values(surveys)
-    .map(translate)
-    .map(([value, label]) => {
-      if (value === 'area') return null; // for backwards compatible
+  const surveyOption = ([value, label]) => {
+    if (value === 'area') return null; // for backwards compatible
 
-      return (
-        <React.Fragment key={value}>
-          <IonItem>
-            <IonLabel>{label}</IonLabel>
-            <IonRadio value={value} checked={currentValue === value} />
-          </IonItem>
-        </React.Fragment>
-      );
-    });
+    return (
+      <React.Fragment key={value}>
+        <IonItem>
+          <IonLabel>{label}</IonLabel>
+          <IonRadio value={value} checked={currentValue === value} />
+        </IonItem>
+      </React.Fragment>
+    );
+  };
+  const surveyOptions = Object.values(surveys).map(translate).map(surveyOption);
 
   return (
     <Page id="primary-survey">

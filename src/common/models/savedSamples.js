@@ -6,6 +6,7 @@ import { modelStore } from './store';
 Log('SavedSamples: initializing');
 const savedSamples = initStoredSamples(modelStore, Sample);
 
+// eslint-disable-next-line @getify/proper-arrows/name
 savedSamples.remoteSaveAll = async () => {
   Log('SavedSamples: setting all samples to send.');
   let affectedRecordsCount = 0;

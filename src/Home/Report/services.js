@@ -27,7 +27,8 @@ async function fetchSpeciesReport() {
   };
 
   const formData = new FormData();
-  Object.entries(body).forEach(prop => formData.append(...prop));
+  const appendProps = prop => formData.append(...prop);
+  Object.entries(body).forEach(appendProps);
 
   let response;
   try {

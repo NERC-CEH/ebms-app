@@ -5,23 +5,21 @@ import { IonLabel } from '@ionic/react';
 import { Header, Toggle } from '@apps';
 import './styles.scss';
 
-const HeaderComponent = observer(
-  ({ isGPSTracking, toggleGPStracking, isDisabled }) => {
-    const GPSToggle = (
-      <>
-        <IonLabel>GPS</IonLabel>
-        <Toggle
-          className="survey-gps-toggle"
-          color="success"
-          checked={isGPSTracking}
-          onToggle={toggleGPStracking}
-        />
-      </>
-    );
+const HeaderComponent = ({ isGPSTracking, toggleGPStracking, isDisabled }) => {
+  const GPSToggle = (
+    <>
+      <IonLabel>GPS</IonLabel>
+      <Toggle
+        className="survey-gps-toggle"
+        color="success"
+        checked={isGPSTracking}
+        onToggle={toggleGPStracking}
+      />
+    </>
+  );
 
-    return <Header title="Area" rightSlot={!isDisabled && GPSToggle} />;
-  }
-);
+  return <Header title="Area" rightSlot={!isDisabled && GPSToggle} />;
+};
 
 HeaderComponent.propTypes = {
   toggleGPStracking: PropTypes.func.isRequired,
@@ -29,4 +27,4 @@ HeaderComponent.propTypes = {
   isDisabled: PropTypes.bool,
 };
 
-export default HeaderComponent;
+export default observer(HeaderComponent);

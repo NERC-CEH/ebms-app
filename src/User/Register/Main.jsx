@@ -20,14 +20,83 @@ class Component extends React.Component {
   };
 
   togglePassword = () => {
-    this.setState(prevState => ({
+    const invertPasswordShow = prevState => ({
       showPassword: !prevState.showPassword,
-    }));
+    });
+    this.setState(invertPasswordShow);
+  };
+
+  registrationForm = props => {
+    const { showPassword } = this.state;
+    const { lang } = this.props;
+
+    return (
+      <Form>
+        <IonList lines="full">
+          <div className="rounded">
+            <InputWithValidation
+              name="email"
+              placeholder="Email"
+              icon={mailOutline}
+              type="email"
+              {...props}
+            />
+            <InputWithValidation
+              name="firstName"
+              placeholder="First Name"
+              icon={personOutline}
+              type="text"
+              {...props}
+            />
+            <InputWithValidation
+              name="secondName"
+              placeholder="Surname"
+              icon={personOutline}
+              type="text"
+              {...props}
+            />
+            <InputWithValidation
+              name="password"
+              placeholder="Password"
+              icon={keyOutline}
+              type={showPassword ? 'text' : 'password'}
+              {...props}
+            >
+              <IonButton slot="end" onClick={this.togglePassword} fill="clear">
+                <IonIcon
+                  icon={showPassword ? eyeOutline : eyeOffOutline}
+                  faint
+                  size="small"
+                />
+              </IonButton>
+            </InputWithValidation>
+          </div>
+
+          <div className="terms-info-text">
+            <T>I agree to</T>{' '}
+            <IonRouterLink
+              href={`${config.backend.url}/privacy-notice?lang=${lang}`}
+            >
+              <T>Privacy Policy</T>
+            </IonRouterLink>{' '}
+            <T>and</T>{' '}
+            <IonRouterLink
+              href={`${config.backend.url}/terms-and-conditions?lang=${lang}`}
+            >
+              <T>Terms and Conditions</T>
+            </IonRouterLink>
+          </div>
+        </IonList>
+
+        <IonButton color="primary" type="submit" expand="block">
+          <T>Register</T>
+        </IonButton>
+      </Form>
+    );
   };
 
   render() {
-    const { showPassword } = this.state;
-    const { onSubmit, schema, lang } = this.props;
+    const { onSubmit, schema } = this.props;
 
     return (
       <Main>
@@ -36,73 +105,7 @@ class Component extends React.Component {
           onSubmit={onSubmit}
           initialValues={{}}
         >
-          {props => (
-            <Form>
-              <IonList lines="full">
-                <div className="rounded">
-                  <InputWithValidation
-                    name="email"
-                    placeholder="Email"
-                    icon={mailOutline}
-                    type="email"
-                    {...props}
-                  />
-                  <InputWithValidation
-                    name="firstName"
-                    placeholder="First Name"
-                    icon={personOutline}
-                    type="text"
-                    {...props}
-                  />
-                  <InputWithValidation
-                    name="secondName"
-                    placeholder="Surname"
-                    icon={personOutline}
-                    type="text"
-                    {...props}
-                  />
-                  <InputWithValidation
-                    name="password"
-                    placeholder="Password"
-                    icon={keyOutline}
-                    type={showPassword ? 'text' : 'password'}
-                    {...props}
-                  >
-                    <IonButton
-                      slot="end"
-                      onClick={this.togglePassword}
-                      fill="clear"
-                    >
-                      <IonIcon
-                        icon={showPassword ? eyeOutline : eyeOffOutline}
-                        faint
-                        size="small"
-                      />
-                    </IonButton>
-                  </InputWithValidation>
-                </div>
-
-                <div className="terms-info-text">
-                  <T>I agree to</T>{' '}
-                  <IonRouterLink
-                    href={`${config.backend.url}/privacy-notice?lang=${lang}`}
-                  >
-                    <T>Privacy Policy</T>
-                  </IonRouterLink>{' '}
-                  <T>and</T>{' '}
-                  <IonRouterLink
-                    href={`${config.backend.url}/terms-and-conditions?lang=${lang}`}
-                  >
-                    <T>Terms and Conditions</T>
-                  </IonRouterLink>
-                </div>
-              </IonList>
-
-              <IonButton color="primary" type="submit" expand="block">
-                <T>Register</T>
-              </IonButton>
-            </Form>
-          )}
+          {this.registrationForm}
         </Formik>
       </Main>
     );

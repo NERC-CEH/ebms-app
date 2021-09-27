@@ -25,7 +25,8 @@ function byCreateTime(occ1, occ2) {
 }
 
 function getPendingSurveys(surveys) {
-  const finishedSurvey = surveys.find(sample => sample.metadata.saved);
+  const byFinishedSurvey = sample => sample.metadata.saved;
+  const finishedSurvey = surveys.find(byFinishedSurvey);
 
   if (!surveys.length) {
     return (
@@ -40,9 +41,10 @@ function getPendingSurveys(surveys) {
     );
   }
 
-  const surveysList = surveys.map(sample => (
+  const getSurveyEntry = sample => (
     <Survey key={sample.cid} sample={sample} userModel={userModel} />
-  ));
+  );
+  const surveysList = surveys.map(getSurveyEntry);
 
   if (finishedSurvey) {
     return (
@@ -78,9 +80,10 @@ function getUploadedSurveys(surveys) {
     );
   }
 
-  const surveysList = surveys.map(sample => (
+  const getUploadedSurveyEntry = sample => (
     <Survey key={sample.cid} sample={sample} />
-  ));
+  );
+  const surveysList = surveys.map(getUploadedSurveyEntry);
 
   return <IonList lines="full">{surveysList}</IonList>;
 }
@@ -102,11 +105,9 @@ class Component extends React.Component {
   getSamplesList(uploaded) {
     const { savedSamples } = this.props;
 
-    return savedSamples
-      .filter(sample =>
-        uploaded ? sample.metadata.synced_on : !sample.metadata.synced_on
-      )
-      .sort(byCreateTime);
+    const uploadedSamples = sample =>
+      uploaded ? sample.metadata.synced_on : !sample.metadata.synced_on;
+    return savedSamples.filter(uploadedSamples).sort(byCreateTime);
   }
 
   render() {

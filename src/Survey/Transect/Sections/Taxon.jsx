@@ -22,15 +22,14 @@ class Controller extends React.Component {
 
     const occID = match.params.occId;
 
-    const recordedTaxa = sectionSample.occurrences.map(
-      occ => occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id
-    );
+    const getTaxonId = occ =>
+      occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
+    const recordedTaxa = sectionSample.occurrences.map(getTaxonId);
 
     const onSpeciesSelected = async taxon => {
       if (occID) {
-        const occurrence = sectionSample.occurrences.find(
-          occ => occ.cid === occID
-        );
+        const byId = occ => occ.cid === occID;
+        const occurrence = sectionSample.occurrences.find(byId);
         occurrence.attrs.taxon = taxon;
       } else {
         const survey = sectionSample.getSurvey();

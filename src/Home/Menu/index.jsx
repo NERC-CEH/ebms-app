@@ -45,12 +45,12 @@ function showLogoutConfirmationDialog(callback) {
   });
 }
 
-const Controller = observer(props => {
+const Controller = props => {
   const { userModel, appModel, savedSamples, ...restProps } = props;
 
   function logOut() {
     Log('Info:Menu: logging out.');
-    showLogoutConfirmationDialog(async reset => {
+    const resetWrap = async reset => {
       if (reset) {
         appModel.attrs['draftId:area'] = null;
         appModel.attrs['draftId:precise-area'] = null;
@@ -61,7 +61,8 @@ const Controller = observer(props => {
       appModel.attrs.transects = [];
       appModel.save();
       userModel.logOut();
-    });
+    };
+    showLogoutConfirmationDialog(resetWrap);
   }
 
   const isLoggedIn = userModel.hasLogIn();
@@ -82,7 +83,7 @@ const Controller = observer(props => {
       />
     </Page>
   );
-});
+};
 
 Controller.propTypes = {
   userModel: PropTypes.object.isRequired,
@@ -90,4 +91,4 @@ Controller.propTypes = {
   savedSamples: PropTypes.array.isRequired,
 };
 
-export default Controller;
+export default observer(Controller);

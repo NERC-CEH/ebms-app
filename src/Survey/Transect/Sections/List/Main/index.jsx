@@ -56,7 +56,8 @@ function Sections({ sample, appModel, onTransectSelect, match }) {
     );
   }
 
-  const sections = sample.samples.map(s => getSectionItem(s, match));
+  const getSectionItemWrap = s => getSectionItem(s, match);
+  const sections = sample.samples.map(getSectionItemWrap);
 
   return (
     <Main id="transect-sections-list">

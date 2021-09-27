@@ -17,7 +17,7 @@ async function fetch() {
 }
 
 async function fetchAbundance(listID) {
-  return new Promise(resolve => {
+  const fetchAbundanceWrap = resolve => {
     const options = {
       method: 'GET',
       url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/ebms_app_species_list.xml?taxon_list_id=${listID}`,
@@ -27,31 +27,35 @@ async function fetchAbundance(listID) {
       },
     };
 
-    request(options, (error, response) => {
+    const callback = (error, response) => {
       if (error) throw new Error(error);
 
       const { data } = JSON.parse(response.body);
 
-      const latinData = data.filter(
-        s => s.language_iso === 'lat' && !s.taxon.includes('Unterfamilie')
-      );
+      const byLatinLanguageWithoutSpecificTaxon = s =>
+        s.language_iso === 'lat' && !s.taxon.includes('Unterfamilie');
+      const latinData = data.filter(byLatinLanguageWithoutSpecificTaxon);
 
       resolve(latinData);
-    });
-  });
+    };
+    request(options, callback);
+  };
+  return new Promise(fetchAbundanceWrap);
 }
 
 function save(species) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile('./index.json', JSON.stringify(species), err => {
+  const saveWrap = (resolve, reject) => {
+    const dataOption = err => {
       if (err) {
         reject(err);
         return;
       }
 
       resolve(species);
-    });
-  });
+    };
+    fs.writeFile('./index.json', JSON.stringify(species), dataOption);
+  };
+  return new Promise(saveWrap);
 }
 
 async function transformAbundance(species) {
@@ -61,18 +65,21 @@ async function transformAbundance(species) {
     const map = {};
     if (string === null) return map;
 
-    string.split(' | ').forEach(country => {
+    const transformCountryFormat = country => {
       const [key, val] = country.split('=');
       const normKey = key.replace(': ', '_');
       const normVal = val.replace('?', '');
       map[normKey] = normVal;
-    });
+    };
+    string.split(' | ').forEach(transformCountryFormat);
     return map;
   }
 
-  return species.map(sp => {
+  const getSpeciesEntry = sp => {
+    const byExternalKeyWithAttributes = s =>
+      s.external_key === sp.external_key && s.attributes !== null;
     const { attributes: countriesStr } = abundance.find(
-      s => s.external_key === sp.external_key && s.attributes !== null
+      byExternalKeyWithAttributes
     );
 
     return {
@@ -81,10 +88,12 @@ async function transformAbundance(species) {
         ...getCountryMap(countriesStr),
       },
     };
-  });
+  };
+  return species.map(getSpeciesEntry);
 }
 
 fetch()
   .then(transformAbundance)
   .then(save)
+  // eslint-disable-next-line @getify/proper-arrows/name
   .then(() => console.log('All done! 🚀'));

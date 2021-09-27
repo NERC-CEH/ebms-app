@@ -4,10 +4,11 @@ import exact from 'prop-types-exact';
 import { AttrPage } from '@apps';
 import groups from 'common/data/species/groups.json';
 
-const groupOptions = Object.entries(groups).map(([value, { label }]) => ({
+const groupOption = ([value, { label }]) => ({
   value,
   label,
-}));
+});
+const groupOptions = Object.entries(groups).map(groupOption);
 
 function SpeciesGroups({ appModel }) {
   return (

@@ -8,6 +8,26 @@ import { Formik, Form } from 'formik';
 import './styles.scss';
 
 const Component = ({ onSubmit, schema }) => {
+  const resetForm = props => (
+    <Form>
+      <IonList lines="full">
+        <div className="rounded">
+          <InputWithValidation
+            name="email"
+            placeholder="Email"
+            icon={mailOutline}
+            type="email"
+            {...props}
+          />
+        </div>
+      </IonList>
+
+      <IonButton color="primary" type="submit" expand="block">
+        <T>Reset</T>
+      </IonButton>
+    </Form>
+  );
+  
   return (
     <Main>
       <InfoMessage className="blue" icon={informationCircle}>
@@ -15,25 +35,7 @@ const Component = ({ onSubmit, schema }) => {
       </InfoMessage>
 
       <Formik validationSchema={schema} onSubmit={onSubmit} initialValues={{}}>
-        {props => (
-          <Form>
-            <IonList lines="full">
-              <div className="rounded">
-                <InputWithValidation
-                  name="email"
-                  placeholder="Email"
-                  icon={mailOutline}
-                  type="email"
-                  {...props}
-                />
-              </div>
-            </IonList>
-
-            <IonButton color="primary" type="submit" expand="block">
-              <T>Reset</T>
-            </IonButton>
-          </Form>
-        )}
+        {resetForm}
       </Formik>
     </Main>
   );

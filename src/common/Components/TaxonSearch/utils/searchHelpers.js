@@ -29,6 +29,7 @@ const helpers = {
 
     const words = phrase.split(' ');
 
+    // eslint-disable-next-line @getify/proper-arrows/name
     _.each(words, (wordOrigin, i) => {
       let word = wordOrigin;
       // check if word is ssp. var. etc

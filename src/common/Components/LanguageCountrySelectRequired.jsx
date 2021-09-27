@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import SelectLanguage from 'Settings/Language';
 import SelectCountry from 'Settings/Country';
 
-const Component = observer(({ appModel, children }) => {
+const Component = ({ appModel, children }) => {
   if (!appModel.attrs.language) {
     return <SelectLanguage appModel={appModel} hideHeader />;
   }
@@ -14,7 +14,7 @@ const Component = observer(({ appModel, children }) => {
   }
 
   return children;
-});
+};
 
 Component.propTypes = {
   appModel: PropTypes.object.isRequired,
@@ -25,4 +25,4 @@ Component.propTypes = {
   ]),
 };
 
-export default Component;
+export default observer(Component);

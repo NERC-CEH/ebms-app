@@ -15,19 +15,17 @@ const { AttrPageFromRoute } = AttrPage;
 
 const baseURL = '/survey/area';
 
+const HomeWrap = props => (
+  <Home
+    appModel={appModel}
+    userModel={userModel}
+    savedSamples={savedSamples}
+    {...props}
+  />
+);
 const routes = [
   [`${baseURL}/new`, StartNewSurvey.with(survey), true],
-  [
-    `${baseURL}/:smpId/edit`,
-    props => (
-      <Home
-        appModel={appModel}
-        userModel={userModel}
-        savedSamples={savedSamples}
-        {...props}
-      />
-    ),
-  ],
+  [`${baseURL}/:smpId/edit`, HomeWrap],
   [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/edit/area`, AreaAttr],
   [`${baseURL}/:smpId/edit/taxa`, Taxon],

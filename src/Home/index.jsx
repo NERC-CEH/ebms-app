@@ -31,6 +31,24 @@ import UserSurveys from './UserSurveys';
 import Menu from './Menu';
 import './styles.scss';
 
+const UserSurveysTab = () => <UserSurveys savedSamples={savedSamples} />;
+const ReportTab = props => <Report appModel={appModel} {...props} />;
+const SpeciesTab = () => (
+  <Species
+    appModel={appModel}
+    userModel={userModel}
+    savedSamples={savedSamples}
+  />
+);
+const MenuTab = props => (
+  <Menu
+    userModel={userModel}
+    appModel={appModel}
+    savedSamples={savedSamples}
+    {...props}
+  />
+);
+
 class Component extends React.Component {
   static contextType = NavContext;
 
@@ -44,9 +62,8 @@ class Component extends React.Component {
     const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
 
     const getOtherSurveys = () => {
-      const otherSurveys = Object.values(surveys).filter(
-        ({ name }) => name !== primarySurveyName
-      );
+      const primarySurvey = ({ name }) => name !== primarySurveyName;
+      const otherSurveys = Object.values(surveys).filter(primarySurvey);
 
       // eslint-disable-next-line
       const getSurveyButton = ({ name, label }) => {
@@ -72,39 +89,10 @@ class Component extends React.Component {
       <>
         <IonTabs>
           <IonRouterOutlet>
-            <Route
-              path="/home/report"
-              render={props => <Report appModel={appModel} {...props} />}
-              exact
-            />
-            <Route
-              path="/home/species"
-              render={() => (
-                <Species
-                  appModel={appModel}
-                  userModel={userModel}
-                  savedSamples={savedSamples}
-                />
-              )}
-              exact
-            />
-            <Route
-              path="/home/user-surveys"
-              render={() => <UserSurveys savedSamples={savedSamples} />}
-              exact
-            />
-            <Route
-              path="/home/menu"
-              render={props => (
-                <Menu
-                  userModel={userModel}
-                  appModel={appModel}
-                  savedSamples={savedSamples}
-                  {...props}
-                />
-              )}
-              exact
-            />
+            <Route path="/home/report" render={ReportTab} exact />
+            <Route path="/home/species" render={SpeciesTab} exact />
+            <Route path="/home/user-surveys" render={UserSurveysTab} exact />
+            <Route path="/home/menu" render={MenuTab} exact />
           </IonRouterOutlet>
 
           <IonTabBar slot="bottom">

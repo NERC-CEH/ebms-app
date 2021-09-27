@@ -25,22 +25,24 @@ function showNoTransects() {
 }
 
 function getTransectItem(transect, onTransectSelect) {
-  const geometries = transect.sections.map(section => {
+  const getSectionGeometry = section => {
     const geometry = toJS(section.geom);
     geometry.coordinates = transformToLatLon(geometry);
     return geometry;
-  });
+  };
+  const geometries = transect.sections.map(getSectionGeometry);
 
   const geom = {
     type: 'GeometryCollection',
     geometries,
   };
 
+  const onTransectSelectWrap = () => onTransectSelect(transect);
   return (
     <IonItem
       key={transect.id}
       className="transect"
-      onClick={() => onTransectSelect(transect)}
+      onClick={onTransectSelectWrap}
       detail
     >
       <IonLabel slot="start">{transect.name || transect.id}</IonLabel>
@@ -54,8 +56,10 @@ function Transects({ appModel, onTransectSelect }) {
   const { transects } = appModel.attrs;
 
   const hasTransects = !!transects.length;
+  const getTransectItemWrap = transect =>
+    getTransectItem(transect, onTransectSelect);
   const transectsList = hasTransects
-    ? transects.map(transect => getTransectItem(transect, onTransectSelect))
+    ? transects.map(getTransectItemWrap)
     : showNoTransects();
 
   return (

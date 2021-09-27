@@ -8,15 +8,16 @@ export default function transformToLatLon(geometry) {
     if (type === 'Point') {
       coordinates = [coordinates];
     } else if (type === 'MultiLineString') {
-      return geometry.coordinates.map(coord =>
-        transformToLatLon({ coordinates: coord })
-      );
+      const transformToLatLonWrap = coord =>
+        transformToLatLon({ coordinates: coord });
+      return geometry.coordinates.map(transformToLatLonWrap);
     }
 
-    return coordinates.map(([y, x]) => {
+    const inverseTransformToLatLon = ([y, x]) => {
       const { lat, lng } = L.Projection.SphericalMercator.unproject({ y, x });
       return [lat, lng];
-    });
+    };
+    return coordinates.map(inverseTransformToLatLon);
   } catch (e) {
     return [];
   }

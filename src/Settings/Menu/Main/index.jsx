@@ -98,6 +98,11 @@ class Component extends React.Component {
 
     const primarySurveyLabel = surveys[primarySurvey].label;
 
+    const onSendAnalyticsToggle = checked => onToggle('sendAnalytics', checked);
+    const onResetDialog = () => resetDialog(resetApp);
+    const onTrainingToggle = checked => onToggle('useTraining', checked);
+    const onSubmitAllDialog = () => uploadAllSamplesDialog(uploadAllSamples);
+
     return (
       <Main class="app-settings">
         <IonList lines="full">
@@ -105,10 +110,7 @@ class Component extends React.Component {
             <T>Records</T>
           </IonItemDivider>
           <div className="rounded">
-            <IonItem
-              id="submit-all-btn"
-              onClick={() => uploadAllSamplesDialog(uploadAllSamples)}
-            >
+            <IonItem id="submit-all-btn" onClick={onSubmitAllDialog}>
               <IonIcon icon={paperPlaneOutline} size="small" slot="start" />
               <IonLabel>
                 <T>Upload All</T>
@@ -162,10 +164,7 @@ class Component extends React.Component {
               <IonLabel>
                 <T>Training Mode</T>
               </IonLabel>
-              <Toggle
-                onToggle={checked => onToggle('useTraining', checked)}
-                checked={useTraining}
-              />
+              <Toggle onToggle={onTrainingToggle} checked={useTraining} />
             </IonItem>
             <MenuNoteItem color="medium">
               Mark any new records as &#39;training&#39; and exclude from all
@@ -189,7 +188,7 @@ class Component extends React.Component {
                 <T>Share App Analytics</T>
               </IonLabel>
               <Toggle
-                onToggle={checked => onToggle('sendAnalytics', checked)}
+                onToggle={onSendAnalyticsToggle}
                 checked={sendAnalytics}
               />
             </IonItem>
@@ -197,7 +196,7 @@ class Component extends React.Component {
               Share app crash data so we can make the app more reliable.
             </MenuNoteItem>
 
-            <IonItem id="app-reset-btn" onClick={() => resetDialog(resetApp)}>
+            <IonItem id="app-reset-btn" onClick={onResetDialog}>
               <IonIcon icon={arrowUndoOutline} size="small" slot="start" />
               <T>Reset</T>
             </IonItem>

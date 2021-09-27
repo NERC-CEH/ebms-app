@@ -97,6 +97,7 @@ function Survey({ sample, userModel }) {
     sample.upload();
   };
 
+  const deleteSurveyWrap = () => deleteSurvey(sample);
   return (
     <IonItemSliding class="survey-list-item">
       <ErrorMessage sample={sample} />
@@ -105,7 +106,7 @@ function Survey({ sample, userModel }) {
         <OnlineStatus sample={sample} onUpload={onUpload} />
       </IonItem>
       <IonItemOptions side="end">
-        <IonItemOption color="danger" onClick={() => deleteSurvey(sample)}>
+        <IonItemOption color="danger" onClick={deleteSurveyWrap}>
           <T>Delete</T>
         </IonItemOption>
       </IonItemOptions>

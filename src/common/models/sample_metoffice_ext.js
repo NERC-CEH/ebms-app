@@ -99,9 +99,10 @@ const getCloud = cloudFromService => {
 };
 
 const fetchWeatherData = ({ latitude, longitude }) => {
+  const toResponseJson = response => response.json();
   return fetch(
     `${url}?lat=${latitude}&lon=${longitude}&units=Imperial&appid=${config.weatherSiteApiKey}`
-  ).then(response => response.json());
+  ).then(toResponseJson);
 };
 
 const normaliseResponseValues = ({ main, wind, clouds }) => ({

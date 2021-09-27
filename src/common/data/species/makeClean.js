@@ -1,3 +1,4 @@
+// eslint-disable-next-line @getify/proper-arrows/name
 module.exports = (taxon, common) => {
   if (!taxon) {
     return null;

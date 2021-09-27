@@ -11,7 +11,7 @@ import Occurrence from 'occurrence';
 import { Trans as T } from 'react-i18next';
 
 async function showMergeSpeciesAlert() {
-  return new Promise(resolve => {
+  const showMergeSpeciesDialog = resolve => {
     alert({
       header: 'Species already exists',
       message: (
@@ -36,7 +36,8 @@ async function showMergeSpeciesAlert() {
         },
       ],
     });
-  });
+  };
+  return new Promise(showMergeSpeciesDialog);
 }
 
 @observer
@@ -63,15 +64,15 @@ class Controller extends React.Component {
     }
 
     if (taxa) {
-      sample.samples
-        .filter(({ occurrences }) => {
-          const [occ] = occurrences; // always one
-          return occ.attrs.taxon.warehouse_id === parseInt(taxa, 10);
-        })
-        .forEach(({ occurrences }) => {
-          const [occ] = occurrences; // always one
-          occ.attrs.taxon = taxon;
-        });
+      const selectedTaxon = ({ occurrences }) => {
+        const [occ] = occurrences; // always one
+        return occ.attrs.taxon.warehouse_id === parseInt(taxa, 10);
+      };
+      const assignTaxon = ({ occurrences }) => {
+        const [occ] = occurrences; // always one
+        occ.attrs.taxon = taxon;
+      };
+      sample.samples.filter(selectedTaxon).forEach(assignTaxon);
 
       await sample.save();
 
@@ -107,14 +108,14 @@ class Controller extends React.Component {
   render() {
     const { sample } = this.props;
 
-    const species = sample.samples.map(smp => {
+    const getTaxonId = smp => {
       const occ = smp.occurrences[0];
       return occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
-    });
+    };
+    const species = sample.samples.map(getTaxonId);
 
-    const shallowSpecies = sample.shallowSpeciesList.map(
-      taxon => taxon.preferredId || taxon.warehouse_id
-    );
+    const getShallowTaxonId = taxon => taxon.preferredId || taxon.warehouse_id;
+    const shallowSpecies = sample.shallowSpeciesList.map(getShallowTaxonId);
 
     const recordedTaxa = [...species, ...shallowSpecies];
 

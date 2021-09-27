@@ -43,10 +43,11 @@ const Species = ({ species, searchPhrase, onSelect }) => {
   const { isRecorded } = species;
   const speciesGroup = groupLabels[species.group];
 
+  const onSelectSpecies = e => onClick(e, species, onSelect);
   return (
     <IonItem
       className={`search-result ${isRecorded ? 'recorded' : ''}`}
-      onClick={e => onClick(e, species, onSelect)}
+      onClick={onSelectSpecies}
     >
       <div className="taxon">{prettyName}</div>
       <div className="group">

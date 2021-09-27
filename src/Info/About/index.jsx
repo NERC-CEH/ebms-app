@@ -7,6 +7,7 @@ import './styles.scss';
 
 const Component = ({ appModel }) => {
   const isEnglish = appModel.attrs.language === 'en';
+
   return (
     <Page id="about">
       <Header title="About" />

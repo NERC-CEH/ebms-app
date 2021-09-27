@@ -51,13 +51,12 @@ export default function Container({ userModel }) {
     context.goBack();
   };
 
+  const onSubmitWrap = details => onSubmit(userModel, details, onSuccess, t);
+
   return (
     <Page id="user-reset">
       <Header title="Reset" />
-      <Main
-        schema={userModel.resetSchema}
-        onSubmit={details => onSubmit(userModel, details, onSuccess, t)}
-      />
+      <Main schema={userModel.resetSchema} onSubmit={onSubmitWrap} />
     </Page>
   );
 }

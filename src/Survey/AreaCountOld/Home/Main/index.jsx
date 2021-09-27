@@ -94,14 +94,16 @@ class AreaCount extends Component {
       });
     }
 
+    const showOptions = () => selectOptions(this.props);
+    const navigateToTaxa = () =>
+      this.context.navigate(`/survey/area/${sample.cid}/edit/taxa`);
+
     return (
       <LongPressButton
         color="primary"
         id="add"
-        onClick={() => {
-          this.context.navigate(`/survey/area/${sample.cid}/edit/taxa`);
-        }}
-        onLongClick={() => selectOptions(this.props)}
+        onClick={navigateToTaxa}
+        onLongClick={showOptions}
       >
         <IonIcon icon={addOutline} slot="start" />
         <IonLabel>
@@ -138,24 +140,27 @@ class AreaCount extends Component {
     const getSpeciesEntry = occ => {
       const isSpeciesDisabled = !occ.attrs.count;
 
+      const deleteOccurrenceWrap = () => deleteOccurrence(occ);
+      const increaseCountWrap = () => !isDisabled && increaseCount(occ);
+      const navigateToOccurrenceWrap = () => {
+        return !isSpeciesDisabled && navigateToOccurrence(occ);
+      };
       return (
         <IonItemSliding key={occ.cid}>
           <IonItem detail={!isSpeciesDisabled}>
             <IonButton
               class="area-count-edit-count"
-              onClick={() => !isDisabled && increaseCount(occ)}
+              onClick={increaseCountWrap}
               fill="clear"
             >
               {occ.attrs.count}
             </IonButton>
-            <IonLabel
-              onClick={() => !isSpeciesDisabled && navigateToOccurrence(occ)}
-            >
+            <IonLabel onClick={navigateToOccurrenceWrap}>
               {occ.attrs.taxon[occ.attrs.taxon.found_in_name]}
             </IonLabel>
           </IonItem>
           <IonItemOptions side="end">
-            <IonItemOption color="danger" onClick={() => deleteOccurrence(occ)}>
+            <IonItemOption color="danger" onClick={deleteOccurrenceWrap}>
               <T>Delete</T>
             </IonItemOption>
           </IonItemOptions>

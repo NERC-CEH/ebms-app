@@ -64,12 +64,14 @@ export default function RegisterContainer({ userModel, appModel }) {
 
   const onSuccess = context.goBack;
 
+  const onRegisterWrap = details =>
+    onRegister(userModel, details, onSuccess, t);
   return (
     <Page id="user-register">
       <Header title="Register" />
       <Main
         schema={userModel.registerSchema}
-        onSubmit={details => onRegister(userModel, details, onSuccess, t)}
+        onSubmit={onRegisterWrap}
         lang={lang}
       />
     </Page>

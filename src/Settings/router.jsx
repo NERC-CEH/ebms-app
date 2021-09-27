@@ -9,41 +9,42 @@ import Country from './Country';
 import SpeciesGroups from './SpeciesGroups';
 import PrimarySurvey from './PrimarySurvey';
 
+const PrimarySurveyWrap = () => (
+  <PrimarySurvey userModel={userModel} appModel={appModel} />
+);
+const SpeciesGroupsWrap = () => <SpeciesGroups appModel={appModel} />;
+const CountryWrap = () => <Country userModel={userModel} appModel={appModel} />;
+const LanguageWrap = () => (
+  <Language userModel={userModel} appModel={appModel} />
+);
+const MenuWrap = () => (
+  <Menu userModel={userModel} appModel={appModel} savedSamples={savedSamples} />
+);
+
 export default [
-  <Route
-    path="/settings/menu"
-    key="/settings/menu"
-    exact
-    render={() => (
-      <Menu
-        userModel={userModel}
-        appModel={appModel}
-        savedSamples={savedSamples}
-      />
-    )}
-  />,
+  <Route path="/settings/menu" key="/settings/menu" exact render={MenuWrap} />,
   <Route
     path="/settings/language"
     key="/settings/language"
     exact
-    render={() => <Language userModel={userModel} appModel={appModel} />}
+    render={LanguageWrap}
   />,
   <Route
     path="/settings/country"
     key="/settings/country"
     exact
-    render={() => <Country userModel={userModel} appModel={appModel} />}
+    render={CountryWrap}
   />,
   <Route
     path="/settings/species"
     key="/settings/species"
     exact
-    render={() => <SpeciesGroups appModel={appModel} />}
+    render={SpeciesGroupsWrap}
   />,
   <Route
     path="/settings/primary-survey"
     key="/settings/primary-survey"
     exact
-    render={() => <PrimarySurvey userModel={userModel} appModel={appModel} />}
+    render={PrimarySurveyWrap}
   />,
 ];

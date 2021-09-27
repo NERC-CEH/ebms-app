@@ -12,7 +12,7 @@ function deDuplicateSuggestions(suggestions) {
   let previous = {};
   const results = [];
 
-  suggestions.forEach(taxon => {
+  const taxonSuggestion = taxon => {
     const name = taxon[taxon.found_in_name] || '';
     const nameNormalized = name.toLocaleLowerCase();
 
@@ -28,7 +28,8 @@ function deDuplicateSuggestions(suggestions) {
 
     results.push(taxon);
     previous = taxon;
-  });
+  };
+  suggestions.forEach(taxonSuggestion);
 
   return results;
 }
@@ -75,7 +76,7 @@ const Suggestions = ({ searchResults, searchPhrase, onSpeciesSelected }) => {
   } else {
     const deDuped = deDuplicateSuggestions(searchResults);
 
-    suggestionsList = deDuped.map(species => {
+    const getSpeciesEntry = species => {
       const key = `${species.warehouse_id}-${species.found_in_name}-${species.isFavourite}`;
       return (
         <Species
@@ -85,7 +86,8 @@ const Suggestions = ({ searchResults, searchPhrase, onSpeciesSelected }) => {
           onSelect={onSpeciesSelected}
         />
       );
-    });
+    };
+    suggestionsList = deDuped.map(getSpeciesEntry);
   }
 
   return (

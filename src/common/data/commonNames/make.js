@@ -40,14 +40,12 @@ async function fetch(listID) {
 }
 
 function turnNamesArrayIntoLangObject(array) {
+  const capitalizeFirstLetter = word =>
+    word.charAt(0).toUpperCase() + word.slice(1);
   const capitalize = str =>
-    str
-      .toLowerCase()
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
+    str.toLowerCase().split(' ').map(capitalizeFirstLetter).join(' ');
 
-  return array.reduce((agg, term) => {
+  const taxonWithLanguageMapping = (agg, term) => {
     const {
       language_iso: languageCode,
       id,
@@ -75,7 +73,8 @@ function turnNamesArrayIntoLangObject(array) {
 
     agg[language].push(species);
     return agg;
-  }, {});
+  };
+  return array.reduce(taxonWithLanguageMapping, {});
 }
 
 function saveFile(data) {
@@ -84,10 +83,11 @@ function saveFile(data) {
 }
 
 function sortAlphabetically(species) {
-  return species.sort((sp1, sp2) => sp1.taxon.localeCompare(sp2.taxon));
+  const alphabetically = (sp1, sp2) => sp1.taxon.localeCompare(sp2.taxon);
+  return species.sort(alphabetically);
 }
 
-(async () => {
+const make = async () => {
   const butterflies = await fetch(groups.butterflies.id);
   const mothsOnly = ({ taxon_group: group }) => group === groups.moths.id;
   const swedishOnly = ({ language_iso: lang }) => lang === 'swe';
@@ -103,4 +103,5 @@ function sortAlphabetically(species) {
   saveFile(structuredNames);
 
   console.log('Success! 🚀');
-})();
+};
+make();

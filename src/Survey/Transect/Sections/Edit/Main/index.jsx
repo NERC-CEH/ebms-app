@@ -78,6 +78,42 @@ class Edit extends Component {
 
     const occurrences = [...sample.occurrences].sort(sort);
 
+    const occurrenceEntry = occ => {
+      const decreaseCountWrap = () => decreaseCount(occ);
+      const increaseCountWrap = () => increaseCount(occ);
+      const deleteOccurrenceWrap = () => deleteOccurrence(occ);
+
+      return (
+        <IonItemSliding key={occ.cid}>
+          <IonItem>
+            {!isDisabled && (
+              <IonButton onClick={decreaseCountWrap} fill="clear">
+                <IonIcon icon={removeCircleOutline} slot="icon-only" />
+              </IonButton>
+            )}
+            <IonButton class="transect-edit-count" fill="clear">
+              {occ.attrs.count}
+            </IonButton>
+
+            {!isDisabled && (
+              <IonButton onClick={increaseCountWrap} fill="clear">
+                <IonIcon icon={addCircleOutline} slot="icon-only" />
+              </IonButton>
+            )}
+
+            <IonLabel>
+              {occ.attrs.taxon[occ.attrs.taxon.found_in_name]}
+            </IonLabel>
+          </IonItem>
+          <IonItemOptions side="end">
+            <IonItemOption color="danger" onClick={deleteOccurrenceWrap}>
+              <T>Delete</T>
+            </IonItemOption>
+          </IonItemOptions>
+        </IonItemSliding>
+      );
+    };
+
     return (
       <Main id="transect-section-edit">
         <div id="species-list-sort">
@@ -91,40 +127,7 @@ class Edit extends Component {
         </div>
 
         <IonList id="list" lines="full">
-          <div className="rounded">
-            {occurrences.map(occ => (
-              <IonItemSliding key={occ.cid}>
-                <IonItem>
-                  {!isDisabled && (
-                    <IonButton onClick={() => decreaseCount(occ)} fill="clear">
-                      <IonIcon icon={removeCircleOutline} slot="icon-only" />
-                    </IonButton>
-                  )}
-                  <IonButton class="transect-edit-count" fill="clear">
-                    {occ.attrs.count}
-                  </IonButton>
-
-                  {!isDisabled && (
-                    <IonButton onClick={() => increaseCount(occ)} fill="clear">
-                      <IonIcon icon={addCircleOutline} slot="icon-only" />
-                    </IonButton>
-                  )}
-
-                  <IonLabel>
-                    {occ.attrs.taxon[occ.attrs.taxon.found_in_name]}
-                  </IonLabel>
-                </IonItem>
-                <IonItemOptions side="end">
-                  <IonItemOption
-                    color="danger"
-                    onClick={() => deleteOccurrence(occ)}
-                  >
-                    <T>Delete</T>
-                  </IonItemOption>
-                </IonItemOptions>
-              </IonItemSliding>
-            ))}
-          </div>
+          <div className="rounded">{occurrences.map(occurrenceEntry)}</div>
         </IonList>
       </Main>
     );

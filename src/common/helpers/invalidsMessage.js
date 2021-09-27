@@ -4,7 +4,8 @@ const printErrors = ({ errors }) => {
   if (!errors) {
     return null;
   }
-  return errors.map(message => `• ${t(message)}`).join('<br/>');
+  const messageWithTranslation = message => `• ${t(message)}`;
+  return errors.map(messageWithTranslation).join('<br/>');
 };
 
 function getDeepErrorMessage({ attributes, samples, occurrences }) {
@@ -16,18 +17,20 @@ function getDeepErrorMessage({ attributes, samples, occurrences }) {
   }
 
   if (samples) {
+    const getDeepErrorSampleMessage = invalids => {
+      return getDeepErrorMessage(invalids);
+    };
     missing += Object.values(samples)
-      .map(invalids => {
-        return getDeepErrorMessage(invalids);
-      })
+      .map(getDeepErrorSampleMessage)
       .join('<br/>');
   }
 
   if (occurrences) {
+    const getDeepErrorOccurrenceMessage = invalids => {
+      return getDeepErrorMessage(invalids);
+    };
     missing += Object.values(occurrences)
-      .map(invalids => {
-        return getDeepErrorMessage(invalids);
-      })
+      .map(getDeepErrorOccurrenceMessage)
       .join('<br/>');
   }
 

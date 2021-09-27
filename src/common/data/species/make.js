@@ -30,23 +30,27 @@ async function fetch(listID) {
 }
 
 function saveSpeciesToFile(species) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile('./index.json', JSON.stringify(species, null, 2), err => {
+  const saveSpeciesToFileWrap = (resolve, reject) => {
+    const options = err => {
       if (err) {
         reject(err);
         return;
       }
 
       resolve(species);
-    });
-  });
+    };
+    fs.writeFile('./index.json', JSON.stringify(species, null, 2), options);
+  };
+  return new Promise(saveSpeciesToFileWrap);
 }
 
 // ideally the warehouse report should return only the latin names
 function sortAlphabetically(species) {
-  return species.sort((sp1, sp2) => sp1.taxon.localeCompare(sp2.taxon));
+  const alphabetically = (sp1, sp2) => sp1.taxon.localeCompare(sp2.taxon);
+  return species.sort(alphabetically);
 }
 
+// eslint-disable-next-line @getify/proper-arrows/name
 (async () => {
   const butterflies = await fetch(groups.butterflies.id);
   const mothsOnly = ({ taxon_group: group }) => group === groups.moths.id;

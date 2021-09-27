@@ -27,17 +27,18 @@ const locationSchema = Yup.object().shape({
   source: Yup.string().required('Please add survey area information.'),
 });
 
+const validationScheme = val => {
+  if (!val) {
+    return false;
+  }
+  locationSchema.validateSync(val);
+  return true;
+};
 const areaCountSchema = Yup.object().shape({
   location: Yup.mixed().test(
     'area',
     'Please add survey area information.',
-    val => {
-      if (!val) {
-        return false;
-      }
-      locationSchema.validateSync(val);
-      return true;
-    }
+    validationScheme
   ),
 
   surveyStartTime: Yup.date().required('Date is missing'),
@@ -47,10 +48,11 @@ const areaCountSchema = Yup.object().shape({
 });
 
 function transformToMeters(coordinates) {
-  return coordinates.map(([lng, lat]) => {
+  const covertLatLngToMeters = ([lng, lat]) => {
     const { x, y } = L.Projection.SphericalMercator.project({ lat, lng });
     return [x, y];
-  });
+  };
+  return coordinates.map(covertLatLngToMeters);
 }
 function getGeomString(shape) {
   const geoJSON = toJS(shape);

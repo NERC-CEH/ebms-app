@@ -23,14 +23,15 @@ function SelectLanguage({ appModel, hideHeader }) {
   }
 
   const alphabetically = ([, l1], [, l2]) => l1.localeCompare(l2);
+  const languageOption = ([value, language]) => (
+    <IonItem key={value}>
+      <IonLabel>{language}</IonLabel>
+      <IonRadio value={value} checked={currentValue === value} />
+    </IonItem>
+  );
   const languagesOptions = Object.entries(languages)
     .sort(alphabetically)
-    .map(([value, language]) => (
-      <IonItem key={value}>
-        <IonLabel>{language}</IonLabel>
-        <IonRadio value={value} checked={currentValue === value} />
-      </IonItem>
-    ));
+    .map(languageOption);
 
   return (
     <Page id="language-select">

@@ -279,7 +279,6 @@
       "import/no-extraneous-dependencies": 0,
       "jsx-a11y/accessible-emoji": 0,
       "sort-class-members/sort-class-members": 0,
-      "@getify/proper-arrows/name": 0,
       "@typescript-eslint/no-unused-vars": "error",
       "@typescript-eslint/no-var-requires": 0,
       "import/extensions": [

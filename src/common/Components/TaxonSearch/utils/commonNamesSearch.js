@@ -40,12 +40,11 @@ export default (normSearchPhrase, results, informalGroups = []) => {
 
   languageSpeciesNames.forEach(searchName);
 
-  commonNames = commonNames
-    .sort((sp1, sp2) => sp1.common_name.localeCompare(sp2.common_name))
-    .sort(
-      (sp1, sp2) =>
-        sp1.common_name.split(' ').length - sp2.common_name.split(' ').length
-    );
+  const alphabetically = (sp1, sp2) =>
+    sp1.common_name.localeCompare(sp2.common_name);
+  const commonNameLength = (sp1, sp2) =>
+    sp1.common_name.split(' ').length - sp2.common_name.split(' ').length;
+  commonNames = commonNames.sort(alphabetically).sort(commonNameLength);
 
   results.push(...commonNames);
   return results;

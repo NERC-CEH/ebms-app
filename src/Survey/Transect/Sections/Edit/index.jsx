@@ -66,9 +66,8 @@ class Container extends React.Component {
   getNextSectionButton = () => {
     const { sample, subSample } = this.props;
 
-    const currentSectionIndex = sample.samples.findIndex(
-      ({ cid }) => cid === subSample.cid
-    );
+    const byCid = ({ cid }) => cid === subSample.cid;
+    const currentSectionIndex = sample.samples.findIndex(byCid);
 
     const nextSectionIndex = currentSectionIndex + 1;
     const nextSectionSample = sample.samples[nextSectionIndex];
@@ -79,17 +78,17 @@ class Container extends React.Component {
 
     const nextSectionSampleId = nextSectionSample.cid;
 
+    const navigateToSection = e => {
+      e.preventDefault();
+      this.context.navigate(
+        `/survey/transect/${sample.cid}/edit/sections/${nextSectionSampleId}`,
+        'none',
+        'replace'
+      );
+    };
+
     return (
-      <IonButton
-        onClick={e => {
-          e.preventDefault();
-          this.context.navigate(
-            `/survey/transect/${sample.cid}/edit/sections/${nextSectionSampleId}`,
-            'none',
-            'replace'
-          );
-        }}
-      >
+      <IonButton onClick={navigateToSection}>
         <T>Next</T>
       </IonButton>
     );

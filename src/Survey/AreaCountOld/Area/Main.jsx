@@ -1,3 +1,4 @@
+/* eslint-disable @getify/proper-arrows/name */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -135,18 +136,20 @@ class AreaAttr extends Component {
     const map = this.map.current.leafletElement;
 
     if (shape.type === 'Polygon') {
-      const positions = shape.coordinates[0].map(coordinates =>
-        [...coordinates].reverse().map(float => Number.parseFloat(float))
-      );
+      const toFloatNumber = float => Number.parseFloat(float);
+      const reverseCoords = coordinates =>
+        [...coordinates].reverse().map(toFloatNumber);
+      const positions = shape.coordinates[0].map(reverseCoords);
       const polygon = L.polygon(positions, { color: DEFAULT_SHAPE_COLOR });
       polygon.addTo(this.drawnItems);
       this.zoomToPolygonShape(shape);
       return;
     }
 
-    const positions = shape.coordinates.map(coordinates =>
-      [...coordinates].reverse().map(float => Number.parseFloat(float))
-    );
+    const toFloatNumber = float => Number.parseFloat(float);
+    const reverseCoords = coordinates =>
+      [...coordinates].reverse().map(toFloatNumber);
+    const positions = shape.coordinates.map(reverseCoords);
 
     const polyline = L.polyline(positions, { color: DEFAULT_SHAPE_COLOR });
     polyline.addTo(this.drawnItems);
@@ -181,6 +184,7 @@ class AreaAttr extends Component {
       this.drawnItems.addLayer(e.layer);
       this.setShape(e);
     };
+
     map.on(L.Draw.Event.CREATED, this._onCreatedEventListener);
     map.on(L.Draw.Event.EDITED, this.setEditedShape);
     map.on(L.Draw.Event.DELETED, this.deleteShape);
@@ -217,7 +221,7 @@ class AreaAttr extends Component {
           reject(error);
           return;
         }
-        
+
         resolve(location);
       };
 
@@ -235,9 +239,8 @@ class AreaAttr extends Component {
 
   zoomToPolygonShape(polygon) {
     const map = this.map.current.leafletElement;
-    const positions = polygon.coordinates[0].map(coordinates =>
-      [...coordinates].reverse()
-    );
+    const reverseCoords = coordinates => [...coordinates].reverse();
+    const positions = polygon.coordinates[0].map(reverseCoords);
     map.fitBounds(positions);
   }
 
@@ -252,7 +255,10 @@ class AreaAttr extends Component {
     }
   }
 
-  setEditedShape = e => e.layers.eachLayer(layer => this.setShape({ layer }));
+  setEditedShape = e => {
+    const setShape = layer => this.setShape({ layer });
+    return e.layers.eachLayer(setShape);
+  };
 
   setShape = async e => {
     const { setLocation } = this.props;

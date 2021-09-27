@@ -34,6 +34,7 @@ class index extends Component {
 
   annotateRecordedTaxa = searchResults => {
     const recordedTaxa = this.props.recordedTaxa || [];
+    // eslint-disable-next-line @getify/proper-arrows/name
     return searchResults.map(result =>
       recordedTaxa.includes(result.preferredId || result.warehouse_id)
         ? { ...result, ...{ isRecorded: true } }
@@ -56,9 +57,9 @@ class index extends Component {
 
     searchPhrase = searchPhrase.toLowerCase();
 
+    const getGroupId = group => groups[group].id;
     // search
-    const informalGroups =
-      speciesGroups && speciesGroups.map(group => groups[group].id);
+    const informalGroups = speciesGroups && speciesGroups.map(getGroupId);
     const searchResults = await SpeciesSearchEngine.search(searchPhrase, {
       informalGroups,
     });
