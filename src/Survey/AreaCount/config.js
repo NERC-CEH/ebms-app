@@ -3,7 +3,6 @@ import config from 'config';
 import Wkt from 'wicket';
 import { toJS } from 'mobx';
 import L from 'leaflet';
-import * as Yup from 'yup';
 import {
   deviceAttr,
   deviceVersionAttr,
@@ -17,40 +16,8 @@ import {
   surveyEndTimeAttr,
   commentAttr,
   dateAttr,
+  areaCountSchema,
 } from 'Survey/common/config';
-
-const locationSchema = Yup.object().shape({
-  latitude: Yup.number().required(),
-  longitude: Yup.number().required(),
-  area: Yup.number()
-    .min(1, 'Please add survey area information.')
-    .max(20000000, 'Please select a smaller area.')
-    .required(),
-  shape: Yup.object().required(),
-  source: Yup.string().required('Please add survey area information.'),
-});
-
-const validateLocation = val => {
-  if (!val) {
-    return false;
-  }
-
-  locationSchema.validateSync(val);
-  return true;
-};
-
-const areaCountSchema = Yup.object().shape({
-  location: Yup.mixed().test(
-    'area',
-    'Please add survey area information.',
-    validateLocation
-  ),
-
-  surveyStartTime: Yup.date().required('Date is missing'),
-  location_type: Yup.string()
-    .matches(/latlon/)
-    .required('Location type is missing'),
-});
 
 function transformToMeters(coordinates) {
   const transform = ([lng, lat]) => {

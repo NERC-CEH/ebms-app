@@ -1666,3 +1666,7 @@ msgstr ""
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
+
+# Single species count survey validation message
+msgid "Please add your target species"
+msgstr ""

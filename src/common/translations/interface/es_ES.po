@@ -1658,3 +1658,6 @@ msgstr ""
 "¿Está seguro de que desea unir esta lista con la lista de especies "
 "existente?"
 
+# Single species count survey validation message
+msgid "Please add your target species"
+msgstr ""

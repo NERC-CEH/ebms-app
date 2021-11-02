@@ -1680,3 +1680,6 @@ msgstr ""
 "Sind Sie sicher, dass Sie diese Liste mit der bestehenden Artenliste "
 "zusammenfügen wollen?"
 
+# Single species count survey validation message
+msgid "Please add your target species"
+msgstr ""

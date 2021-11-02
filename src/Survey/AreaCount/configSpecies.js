@@ -1,3 +1,5 @@
+import * as Yup from 'yup';
+import { areaCountSchema } from 'Survey/common/config';
 import { merge } from 'lodash';
 import survey from './config';
 
@@ -35,6 +37,23 @@ const speciesSurvey = merge({}, survey, {
         },
       },
     },
+  },
+
+  verify(_, model) {
+    try {
+      Yup.object()
+        .shape({
+          attrs: areaCountSchema,
+          samples: Yup.array()
+            .min(1, 'Please add your target species')
+            .required('Please add your target species'),
+        })
+        .validateSync(model, { abortEarly: false });
+    } catch (attrError) {
+      return attrError;
+    }
+
+    return null;
   },
 
   create: (...args) =>

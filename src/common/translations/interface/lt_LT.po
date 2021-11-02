@@ -1617,3 +1617,7 @@ msgstr "Rūšis jau egzistuoja"
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr "Ar tikrai norite sujungti šią rūšį su jau egzistuojančia?"
+
+# Single species count survey validation message
+msgid "Please add your target species"
+msgstr "Prašome pridėti konkrečią rūšį"

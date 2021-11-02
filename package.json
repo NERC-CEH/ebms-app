@@ -3,7 +3,7 @@
   "id": "uk.ac.ceh.ebms",
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "start": "webpack serve --progress --content-base build --port 8000",
@@ -62,7 +62,7 @@
     "@bit/flumens.apps.user-feedback-request": "0.1.10",
     "@bit/flumens.apps.utils.analytics": "^0.2.0",
     "@bit/flumens.apps.utils.location": "^0.1.0",
-    "@bit/flumens.apps.utils.validation": "0.2.1",
+    "@bit/flumens.apps.utils.validation": "0.3.2",
     "@capacitor-community/background-geolocation": "^0.3.11",
     "@capacitor/android": "^2.4.2",
     "@capacitor/core": "^2.4.2",

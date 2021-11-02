@@ -1344,3 +1344,7 @@ msgstr "Species already exists"
 # Alert message  
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr "Are you sure you want to merge this list to the existing species list?"
+
+# Single species count survey validation message
+msgid "Please add your target species"
+msgstr "Please add your target species"
