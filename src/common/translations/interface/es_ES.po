@@ -1646,12 +1646,15 @@ msgstr "Desarctivar"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "Unir"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "La especie ya existe"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
+"¿Está seguro de que desea unir esta lista con la lista de especies "
+"existente?"
+

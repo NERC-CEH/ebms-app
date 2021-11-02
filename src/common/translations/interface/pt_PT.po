@@ -4,11 +4,12 @@
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
 # Eva Monteiro <evasmonteiro@gmail.com>, 2021
+# Ricardo Silva Ramirez, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Eva Monteiro <evasmonteiro@gmail.com>, 2021\n"
+"Last-Translator: Ricardo Silva Ramirez, 2021\n"
 "Language-Team: Portuguese (Portugal) (https://www.transifex.com/ceh/teams/95441/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -342,7 +343,7 @@ msgid "OK, got it"
 msgstr "OK, compreendi"
 
 msgid "Please fill in"
-msgstr ""
+msgstr "Por favor preencha"
 
 msgid "Area Count"
 msgstr "Contagem por Área"
@@ -352,7 +353,7 @@ msgstr "Área"
 
 # Location attribute label
 msgid "Location"
-msgstr ""
+msgstr "Localização"
 
 # GPS permissions message
 msgid "Location Required"
@@ -916,15 +917,15 @@ msgstr "Teias de larvas"
 
 # Butterfly stage
 msgid "Adult"
-msgstr ""
+msgstr "Adulto"
 
 # Butterfly stage
 msgid "Egg"
-msgstr ""
+msgstr "Ovo"
 
 # Butterfly stage
 msgid "Larva"
-msgstr ""
+msgstr "Lagarta"
 
 # Butterfly stage
 msgid "Larval web"
@@ -1589,7 +1590,7 @@ msgstr ""
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Borboletas"
 
 # Part of species group selection
 msgid "Moths"
@@ -1609,11 +1610,11 @@ msgstr ""
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "Tem a certeza que pretende desligar a localização por GPS?"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "Desligar"
 
 # Alert button label
 msgid "Merge"

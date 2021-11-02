@@ -1,15 +1,15 @@
 # 
 # Translators:
-# Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
 # Daniela Lehner <d.lehner@bioforschung.at>, 2021
 # Karolis, 2021
+# Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2021\n"
+"Last-Translator: Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2021\n"
 "Language-Team: German (Germany) (https://www.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -345,7 +345,7 @@ msgid "OK, got it"
 msgstr "Okay, verstanden."
 
 msgid "Please fill in"
-msgstr ""
+msgstr "Bitte ausfüllen"
 
 msgid "Area Count"
 msgstr "Viertelstundenzählung"
@@ -517,35 +517,40 @@ msgid "Incorrect password or email"
 msgstr "Falsches Passwort oder E-Mail"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
+msgstr "Geben Sie Ihre E-Mail-Adresse ein, um ein neues Passwort anzufordern."
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "Der Benutzer wurde nicht aktiviert oder ist gesperrt."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"Es sieht so aus, als ob Ihre  <1>{{userEmail}}</1> E-Mail noch nicht "
+"verifiziert wurde.<3><0>Aktualisieren</0><1>E-Mail erneut senden</1></3>  "
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
+"Eine neue Bestätigungs-E-Mail wurde gerade erfolgreich verschickt. Wenn Sie "
+"die E-Mail nicht erhalten haben, überprüfen Sie Ihren Spam- oder Junk-E"
+"-Mail-Ordner."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr ""
+msgstr "Bitte loggen Sie sich zuerst ein."
 
 # User registration error
 msgid "This email is already taken."
-msgstr ""
+msgstr "Diese E-Mail Adresse ist bereits vergeben."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "Unbekannte E-Mail Adresse."
 
 msgid "email is not valid"
 msgstr "E-Mail ist ungültig"
@@ -1178,6 +1183,12 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
+"Mit dieser App können Sie überall in Europa Schmetterlinge monitoren. Die "
+"Ergebnisse werden in die Datenbank des European Butterfly Monitoring "
+"eingegeben eingegeben und zur Entwicklung von Trends bei Schmetterlingen in "
+"ganz Europa verwendet. Um die App nutzen zu können, müssen Sie sich zunächst"
+" mit einem Benutzernamen oder einer E-Mail registrieren und ein Passwort "
+"eingeben."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1657,12 +1668,15 @@ msgstr "Ausschalten"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "zusammenfügen"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "Die Art existiert bereits"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
+"Sind Sie sicher, dass Sie diese Liste mit der bestehenden Artenliste "
+"zusammenfügen wollen?"
+
