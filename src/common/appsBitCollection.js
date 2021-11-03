@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 export { default as Router } from '@bit/flumens.apps.router';
 export { default as AttrPage } from '@bit/flumens.apps.attr-page';
+export { default as Attr } from '@bit/flumens.apps.attr';
 export { default as Header } from '@bit/flumens.apps.header';
 export { default as Main } from '@bit/flumens.apps.main';
 export { default as Page } from '@bit/flumens.apps.page';

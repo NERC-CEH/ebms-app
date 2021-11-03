@@ -288,8 +288,14 @@ div.rounded {
   overflow: hidden;
   margin-bottom: 20px;
 
-  ion-item:last-of-type {
+  > :last-child {
     --border-style: none;
+  }
+
+  div:last-child {
+    ion-item {
+      --border-style: none;
+    }
   }
 }
 
@@ -397,4 +403,16 @@ html.plt-tablet {
 .alert-message {
   text-align: left !important;
   font-size: 1em !important;
+}
+
+div.rounded .attr {
+  ion-item {
+    margin: 0 !important;
+    --border-radius: none;
+    border-radius: 0;
+  }
+}
+
+ion-datetime {
+  opacity: 0.5;
 }

@@ -1,5 +1,6 @@
+import { date as dateHelp } from '@apps';
 import { Survey } from 'common/config/surveys';
-import { eyeOutline, personOutline } from 'ionicons/icons';
+import { eyeOutline, personOutline, calendarOutline } from 'ionicons/icons';
 import { commentAttr } from 'Survey/common/config';
 
 const methodValues = [
@@ -24,6 +25,22 @@ const survey: Survey = {
   label: 'Moth survey',
 
   attrs: {
+    date: {
+      menuProps: { parse: 'date', icon: calendarOutline },
+      pageProps: {
+        attrProps: {
+          input: 'date',
+          inputProps: {
+            max: () => new Date(),
+            label: 'Date',
+            icon: calendarOutline,
+            autoFocus: false,
+          },
+        },
+      },
+      remote: { values: (date: Date) => dateHelp.print(date, false) },
+    },
+
     method: {
       menuProps: { icon: eyeOutline },
       pageProps: {
