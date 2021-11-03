@@ -19,7 +19,8 @@
       "@apps": ["./src/common/appsBitCollection"],
       "models/*": ["./src/common/models/*"],
       "helpers/*": ["src/common/helpers/*"],
-      "Components/*": ["src/common/Components/*"]
+      "Components/*": ["src/common/Components/*"],
+      "Survey/*": ["./src/Survey/*"]
     }
   },
   "include": ["src"]
