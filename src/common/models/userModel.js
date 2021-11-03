@@ -93,6 +93,12 @@ class UserModel extends DrupalUserModel {
     return true;
   }
 
+  getPrettyName = () => {
+    if (!this.hasLogIn()) return '';
+
+    return `${this.attrs.firstName} ${this.attrs.lastName}`;
+  };
+
   async getAccessToken(...args) {
     if (this.attrs.password) await this._migrateAuth();
 
