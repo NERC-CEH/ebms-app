@@ -10,6 +10,7 @@ import {
   IonFabButton,
   IonFabList,
   NavContext,
+  isPlatform,
 } from '@ionic/react';
 import {
   personOutline,
@@ -67,13 +68,18 @@ class Component extends React.Component {
 
       // eslint-disable-next-line
       const getSurveyButton = ({ name, label }) => {
+        const disableMothSurvey = name === 'moth-survey';
+
         if (name === 'area') return null; // for backwards compatible
+
+        if (name === 'moth-survey' && isPlatform('hybrid')) return null;
 
         return (
           <IonFabButton
             class="fab-button-label"
             routerLink={`/survey/${name}/new`}
             key={name}
+            disabled={disableMothSurvey}
           >
             <IonLabel>
               <T>{label}</T>
