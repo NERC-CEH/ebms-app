@@ -11,3 +11,15 @@ export default {
   [transectSurvey.name]: transectSurvey,
   [mothSurvey.name]: mothSurvey,
 };
+
+interface Attr {}
+
+export interface Survey {
+  id: number;
+  name: string;
+  label: string;
+
+  attrs: Attr;
+
+  create: (sample: any, params?: any) => any;
+}
