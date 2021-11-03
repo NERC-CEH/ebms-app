@@ -1,15 +1,15 @@
 import React, { useEffect, useContext } from 'react';
 import { NavContext } from '@ionic/react';
 import { alert } from '@apps';
-import appModel from 'appModel';
-import userModel from 'userModel';
-import Sample from 'sample';
-import savedSamples from 'savedSamples';
+import appModel from 'models/appModel';
+import userModel from 'models/userModel';
+import Sample from 'models/sample';
+import savedSamples from 'models/savedSamples';
 import { Trans as T } from 'react-i18next';
-import { withRouter } from 'react-router';
+import { Survey } from 'common/config/surveys';
 
 async function showDraftAlert() {
-  const showDraftDialog = resolve => {
+  const showDraftDialog = (resolve: any) => {
     alert({
       header: 'Draft',
       message: (
@@ -36,10 +36,10 @@ async function showDraftAlert() {
   return new Promise(showDraftDialog);
 }
 
-async function getDraft(draftIdKey) {
+async function getDraft(draftIdKey: string) {
   const draftID = appModel.attrs[draftIdKey];
   if (draftID) {
-    const draftById = ({ cid }) => cid === draftID;
+    const draftById = ({ cid }: typeof Sample) => cid === draftID;
     const draftSample = savedSamples.find(draftById);
     if (draftSample && !draftSample.isDisabled()) {
       const continueDraftRecord = await showDraftAlert();
@@ -54,7 +54,7 @@ async function getDraft(draftIdKey) {
   return null;
 }
 
-async function getNewSample(survey, draftIdKey) {
+async function getNewSample(survey: Survey, draftIdKey: string) {
   const sample = await survey.create(Sample);
   await sample.save();
 
@@ -66,7 +66,12 @@ async function getNewSample(survey, draftIdKey) {
   return sample;
 }
 
-function StartNewSurvey({ match, survey }) {
+type Props = {
+  survey: Survey;
+  match?: any;
+};
+
+function StartNewSurvey({ match, survey }: Props): null {
   const context = useContext(NavContext);
 
   const baseURL = `/survey/${survey.name}`;
@@ -99,12 +104,13 @@ function StartNewSurvey({ match, survey }) {
 
   return null;
 }
+
 // eslint-disable-next-line @getify/proper-arrows/name
-StartNewSurvey.with = survey => {
-  const StartNewSurveyWithRouter = params => (
+StartNewSurvey.with = (survey: Survey) => {
+  const StartNewSurveyWithRouter = (params: any) => (
     <StartNewSurvey survey={survey} {...params} />
   );
-  return withRouter(StartNewSurveyWithRouter);
+  return StartNewSurveyWithRouter;
 };
 
-export default withRouter(StartNewSurvey);
+export default StartNewSurvey;
