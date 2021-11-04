@@ -70,10 +70,9 @@ async function getNewSample(survey: Survey, draftIdKey: string) {
 
 type Props = {
   survey: Survey;
-  match?: any;
 };
 
-function StartNewSurvey({ match, survey }: Props): null {
+function StartNewSurvey({ survey }: Props): null {
   const context = useContext(NavContext);
 
   const baseURL = `/survey/${survey.name}`;
@@ -86,18 +85,12 @@ function StartNewSurvey({ match, survey }: Props): null {
         return;
       }
 
-      if (match.path !== `${baseURL}/new`) {
-        return;
-      }
-
       let sample = await getDraft(draftIdKey);
       if (!sample) {
         sample = await getNewSample(survey, draftIdKey);
       }
 
-      const url = match.url.replace('/new', '');
-
-      context.navigate(`${url}/${sample.cid}/edit`, 'none', 'replace');
+      context.navigate(`${baseURL}/${sample.cid}/edit`, 'none', 'replace');
     };
 
     pickDraftOrCreateSample();

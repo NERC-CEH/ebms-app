@@ -24,7 +24,7 @@ const SectionEditWrap = props => (
   <SectionsEdit {...props} appModel={appModel} />
 );
 const routes = [
-  [`${baseURL}/new`, StartNewSurvey.with(survey), true],
+  [`${baseURL}`, StartNewSurvey.with(survey), true],
   [`${baseURL}/:smpId/edit`, HomeWrap],
   [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/edit/sections`, SectionListWrap],

@@ -56,7 +56,7 @@ class Component extends React.Component {
   navigateToPrimarySurvey = () => {
     const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
 
-    this.context.navigate(`/survey/${primarySurveyName}/new`);
+    this.context.navigate(`/survey/${primarySurveyName}`);
   };
 
   render() {
@@ -75,7 +75,7 @@ class Component extends React.Component {
         return (
           <IonFabButton
             class="fab-button-label"
-            routerLink={`/survey/${name}/new`}
+            routerLink={`/survey/${name}`}
             key={name}
           >
             <IonLabel>

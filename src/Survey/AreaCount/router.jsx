@@ -32,7 +32,7 @@ const ModelLocationWrap = observer(props => (
 ));
 
 const getRoutes = (baseURL, config) => [
-  [`${baseURL}/new`, StartNewSurvey.with(config), true],
+  [`${baseURL}`, StartNewSurvey.with(config), true],
   [`${baseURL}/:smpId/edit`, HomeWrap],
   [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/edit/area`, AreaAttr],
