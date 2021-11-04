@@ -288,6 +288,12 @@ div.rounded {
   overflow: hidden;
   margin-bottom: 20px;
 
+  > ion-item-sliding:last-child {
+    ion-item {
+      --border-style: none;
+    }
+  }
+
   > :last-child {
     --border-style: none;
   }
