@@ -135,6 +135,10 @@ class AppSample extends Sample {
 
     return this.getTimerEndTime() < new Date().getTime();
   };
+
+  isDetailsComplete() {
+    return this.metadata.completedDetails;
+  }
 }
 
 export { AppSample as default };
