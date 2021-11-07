@@ -21,5 +21,10 @@ export interface Survey {
 
   attrs: Attr;
 
-  create: (sample: any, params?: any) => any;
+  create: (
+    sample: any,
+    params?: any,
+    surveyName?: any,
+    recorder?: string
+  ) => any;
 }
