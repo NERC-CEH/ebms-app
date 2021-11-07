@@ -39,6 +39,7 @@ function deleteSurvey(sample) {
 
 function Survey({ sample, userModel }) {
   const { navigate } = useContext(NavContext);
+  const { synchronising } = sample.remote;
 
   const date = new Date(sample.metadata.created_on);
   const prettyDate = date.toLocaleDateString();
@@ -54,9 +55,9 @@ function Survey({ sample, userModel }) {
     speciesCount = sample.samples.length;
   }
 
-  const href = !sample.remote.synchronising
-    ? `/survey/${survey.name}/${sample.cid}/edit`
-    : undefined;
+  const path = sample.isDetailsComplete() ? '' : '/edit';
+
+  const href = !synchronising && `/survey/${survey.name}/${sample.cid}${path}`;
 
   function getSampleInfo() {
     const label = (
