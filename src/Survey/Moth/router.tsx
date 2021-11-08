@@ -3,6 +3,7 @@ import savedSamples from 'models/savedSamples';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import Details from './Details';
 import Home from './Home';
+import Taxon from './Taxon';
 import survey from './config';
 
 const { AttrPageFromRoute } = AttrPage;
@@ -13,6 +14,7 @@ const routes = [
   [`${baseURL}/:smpId`, Home],
   [`${baseURL}/:smpId/edit`, Details],
   [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/taxon`, Taxon],
 ];
 
 export default RouteWithModels.fromArray(savedSamples, routes);

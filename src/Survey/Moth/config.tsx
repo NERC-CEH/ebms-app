@@ -1,3 +1,4 @@
+import * as Yup from 'yup';
 import { date as dateHelp } from '@apps';
 import { Survey } from 'common/config/surveys';
 import { eyeOutline, personOutline, calendarOutline } from 'ionicons/icons';
@@ -67,6 +68,40 @@ const survey: Survey = {
         },
       },
       remote: { id: 127 },
+    },
+  },
+
+  occ: {
+    attrs: {
+      taxon: {
+        remote: {
+          id: 'taxa_taxon_list_id',
+          values: (taxon: any) => taxon.warehouseId,
+        },
+      },
+    },
+
+    create(Occurrence, taxon) {
+      return new Occurrence({
+        attrs: {
+          count: 1,
+          taxon,
+        },
+      });
+    },
+
+    verify(attrs) {
+      try {
+        const occurrenceScheme = Yup.object().shape({
+          taxon: Yup.object().nullable().required('Species is missing.'),
+        });
+
+        occurrenceScheme.validateSync(attrs, { abortEarly: false });
+      } catch (attrError) {
+        return attrError;
+      }
+
+      return null;
     },
   },
 

@@ -3,6 +3,7 @@ import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
 import areaSurveyOld from 'Survey/AreaCountOld/config';
 import transectSurvey from 'Survey/Transect/config';
 import mothSurvey from 'Survey/Moth/config';
+import Occurrence from 'models/occurrence';
 
 export default {
   [areaSurvey.name]: areaSurvey,
@@ -12,14 +13,20 @@ export default {
   [mothSurvey.name]: mothSurvey,
 };
 
-interface Attr {}
+interface Attrs {}
 
 export interface Survey {
   id: number;
   name: string;
   label: string;
 
-  attrs: Attr;
+  attrs: Attrs;
+
+  occ?: {
+    attrs: Attrs | any;
+    create: (occurrence: typeof Occurrence, taxon: any) => typeof Occurrence;
+    verify?: (attrs: any) => any;
+  };
 
   create: (
     sample: any,
