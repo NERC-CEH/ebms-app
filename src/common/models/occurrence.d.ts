@@ -6,6 +6,7 @@ declare const appModel: {
   save: () => any;
 
   media: any[];
+  destroy: () => any;
 };
 
 export default appModel;

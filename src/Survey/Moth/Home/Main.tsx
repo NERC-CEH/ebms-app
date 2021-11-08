@@ -1,25 +1,39 @@
 import React, { FC, useContext } from 'react';
 import Sample from 'models/sample';
-import { Main, MenuAttrItem } from '@apps';
+import { Main, MenuAttrItem, InfoBackgroundMessage } from '@apps';
 import {
   IonList,
   IonButton,
   IonIcon,
   IonLabel,
   NavContext,
+  IonItemDivider,
+  IonItemSliding,
+  IonItem,
+  IonItemOptions,
+  IonItemOption,
 } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
-import './styles.scss';
-
+import Occurrence from 'models/occurrence';
 import { locationOutline, addCircleOutline } from 'ionicons/icons';
+import './styles.scss';
 
 type Props = {
   match: any;
   sample: typeof Sample;
+  increaseCount: any;
+  deleteSpecies: any;
+  isDisabled: boolean;
 };
 
-const HomeMain: FC<Props> = ({ match, sample }) => {
+const HomeMain: FC<Props> = ({
+  match,
+  sample,
+  increaseCount,
+  deleteSpecies,
+  isDisabled,
+}) => {
   const { navigate } = useContext(NavContext);
 
   const getSpeciesAddButton = () => {
@@ -37,6 +51,77 @@ const HomeMain: FC<Props> = ({ match, sample }) => {
     );
   };
 
+  const getSpeciesEntry = (occurrence: typeof Occurrence) => {
+    const { cid } = occurrence;
+    const { taxon, count } = occurrence.attrs;
+
+    const speciesName = taxon.scientific_name;
+
+    const increaseCountWrap = (e: any) => {
+      e.preventDefault();
+      e.stopPropagation();
+      increaseCount(occurrence);
+    };
+
+    const deleteSpeciesWrap = () => deleteSpecies(occurrence);
+
+    return (
+      <IonItemSliding key={cid}>
+        <IonItem
+          detail={!isDisabled}
+          // onClick={navigateToSpeciesOccurrencesWrap}
+        >
+          <IonButton
+            className="precise-area-count-edit-count"
+            onClick={increaseCountWrap}
+            fill="clear"
+          >
+            {count}
+            <div className="label-divider" />
+          </IonButton>
+          <IonLabel>{speciesName}</IonLabel>
+        </IonItem>
+        {!isDisabled && (
+          <IonItemOptions side="end">
+            <IonItemOption color="danger" onClick={deleteSpeciesWrap}>
+              <T>Delete</T>
+            </IonItemOption>
+          </IonItemOptions>
+        )}
+      </IonItemSliding>
+    );
+  };
+
+  const getSpeciesList = () => {
+    if (!sample.occurrences.length) {
+      return (
+        <IonList id="list" lines="full">
+          <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
+        </IonList>
+      );
+    }
+
+    const speciesList = sample.occurrences.map(getSpeciesEntry);
+
+    const count = speciesList.length > 1 ? speciesList.length : null;
+
+    return (
+      <>
+        <IonList id="list" lines="full">
+          <div className="rounded">
+            <IonItemDivider className="species-list-header">
+              <IonLabel>Count</IonLabel>
+              <IonLabel>Species</IonLabel>
+              <IonLabel>{count}</IonLabel>
+            </IonItemDivider>
+
+            {speciesList}
+          </div>
+        </IonList>
+      </>
+    );
+  };
+
   return (
     <Main>
       <IonList lines="full">
@@ -49,6 +134,8 @@ const HomeMain: FC<Props> = ({ match, sample }) => {
         </div>
 
         {getSpeciesAddButton()}
+
+        {getSpeciesList()}
       </IonList>
     </Main>
   );
