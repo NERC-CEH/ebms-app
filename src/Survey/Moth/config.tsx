@@ -36,6 +36,7 @@ const survey: Survey = {
             label: 'Date',
             icon: calendarOutline,
             autoFocus: false,
+            skipTranslation: true,
           },
         },
       },

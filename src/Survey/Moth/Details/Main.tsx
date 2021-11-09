@@ -31,8 +31,16 @@ const DetailsMain: FC<Props> = ({ sample }) => {
         <IonItemDivider>Details</IonItemDivider>
         <div className="rounded">
           <MenuAttrItemFromModel model={sample} attr="method" />
-          <MenuAttrItemFromModel model={sample} attr="recorder" />
-          <MenuAttrItemFromModel model={sample} attr="comment" />
+          <MenuAttrItemFromModel
+            model={sample}
+            attr="recorder"
+            skipTranslation
+          />
+          <MenuAttrItemFromModel
+            model={sample}
+            attr="comment"
+            skipTranslation
+          />
         </div>
       </IonList>
     </Main>
