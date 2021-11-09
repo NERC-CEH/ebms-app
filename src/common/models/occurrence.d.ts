@@ -4,6 +4,7 @@ declare const appModel: {
   _init: any;
   attrs: any;
   save: () => any;
+  metadata: any;
 
   media: any[];
   destroy: () => any;
