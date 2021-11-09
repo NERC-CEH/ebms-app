@@ -4,6 +4,7 @@ import StartNewSurvey from 'Components/StartNewSurvey';
 import Details from './Details';
 import Home from './Home';
 import Taxon from './Taxon';
+import Occurrences from './Occurrences';
 import survey from './config';
 
 const { AttrPageFromRoute } = AttrPage;
@@ -15,6 +16,8 @@ const routes = [
   [`${baseURL}/:smpId/edit`, Details],
   [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/taxon`, Taxon],
+  [`${baseURL}/:smpId/occurrences/:taxa`, Occurrences],
+  [`${baseURL}/:smpId/occurrences/:taxa/taxon`, Taxon],
 ];
 
 export default RouteWithModels.fromArray(savedSamples, routes);

@@ -65,12 +65,13 @@ const HomeMain: FC<Props> = ({
 
     const deleteSpeciesWrap = () => deleteSpecies(occurrence);
 
+    const navigateToSpeciesOccurrences = () => {
+      navigate(`${match.url}/occurrences/${taxon.warehouse_id}`);
+    };
+
     return (
       <IonItemSliding key={cid}>
-        <IonItem
-          detail={!isDisabled}
-          // onClick={navigateToSpeciesOccurrencesWrap}
-        >
+        <IonItem detail={!isDisabled} onClick={navigateToSpeciesOccurrences}>
           <IonButton
             className="precise-area-count-edit-count"
             onClick={increaseCountWrap}

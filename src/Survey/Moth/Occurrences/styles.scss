@@ -1,0 +1,17 @@
+#survey-moth-home {
+  .add {
+    width: 40%;
+    margin: 20px 0 30px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #list {
+    font-weight: bold;
+
+    .species-list-header {
+      background: #e6e6e6 !important;
+      color: #777777;
+    }
+  }
+}
