@@ -16,8 +16,22 @@ import {
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Occurrence from 'models/occurrence';
+import { toJS } from 'mobx';
 import { locationOutline, addCircleOutline } from 'ionicons/icons';
 import './styles.scss';
+
+const getDefaultTaxonCount = (taxon: any) => ({ count: 0, taxon });
+
+const buildSpeciesCount = (agg: any, occ: typeof Occurrence) => {
+  const taxon = toJS(occ.attrs.taxon);
+  const id = taxon.warehouse_id;
+
+  agg[id] = agg[id] || getDefaultTaxonCount(taxon); // eslint-disable-line
+
+  agg[id].count++; // eslint-disable-line
+
+  return agg;
+};
 
 type Props = {
   match: any;
@@ -51,33 +65,36 @@ const HomeMain: FC<Props> = ({
     );
   };
 
-  const getSpeciesEntry = (occurrence: typeof Occurrence) => {
-    const { cid } = occurrence;
-    const { taxon, count } = occurrence.attrs;
+  const getSpeciesEntry = ([id, species]: any) => {
+    const isSpeciesDisabled = !species.count;
+    const { taxon } = species;
 
-    const speciesName = taxon.scientific_name;
+    const speciesName = taxon[taxon.found_in_name];
 
     const increaseCountWrap = (e: any) => {
       e.preventDefault();
       e.stopPropagation();
-      increaseCount(occurrence);
+      increaseCount(taxon);
     };
 
-    const deleteSpeciesWrap = () => deleteSpecies(occurrence);
+    const deleteSpeciesWrap = () => deleteSpecies(taxon);
 
     const navigateToSpeciesOccurrences = () => {
       navigate(`${match.url}/occurrences/${taxon.warehouse_id}`);
     };
 
     return (
-      <IonItemSliding key={cid}>
-        <IonItem detail={!isDisabled} onClick={navigateToSpeciesOccurrences}>
+      <IonItemSliding key={id}>
+        <IonItem
+          onClick={navigateToSpeciesOccurrences}
+          detail={!isSpeciesDisabled}
+        >
           <IonButton
             className="precise-area-count-edit-count"
             onClick={increaseCountWrap}
             fill="clear"
           >
-            {count}
+            {species.count}
             <div className="label-divider" />
           </IonButton>
           <IonLabel>{speciesName}</IonLabel>
@@ -102,7 +119,9 @@ const HomeMain: FC<Props> = ({
       );
     }
 
-    const speciesList = sample.occurrences.map(getSpeciesEntry);
+    const counts = [...sample.occurrences].reduce(buildSpeciesCount, {});
+
+    const speciesList = Object.entries(counts).map(getSpeciesEntry);
 
     const count = speciesList.length > 1 ? speciesList.length : null;
 

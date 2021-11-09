@@ -12,13 +12,6 @@ import './styles.scss';
 
 const { Haptics } = Plugins;
 
-function increaseCount(occ: typeof Occurrence) {
-  isPlatform('hybrid') && Haptics.impact({ style: HapticsImpactStyle.Heavy });
-
-  occ.attrs.count++; // eslint-disable-line no-param-reassign
-  occ.save();
-}
-
 function deleteOccurrence(occ: typeof Occurrence) {
   const { scientific_name } = occ.attrs.taxon;
 
@@ -49,6 +42,20 @@ interface Props {
 const HomeController: FC<Props> = ({ sample }) => {
   const match = useRouteMatch();
   const isDisabled = sample.isDisabled();
+
+  const increaseCount = (taxon: any) => {
+    if (sample.isDisabled()) {
+      return;
+    }
+
+    const survey = sample.getSurvey();
+
+    const newOccurrence = survey.occ.create(Occurrence, taxon);
+    sample.occurrences.push(newOccurrence);
+    sample.save();
+
+    isPlatform('hybrid') && Haptics.impact({ style: HapticsImpactStyle.Heavy });
+  };
 
   return (
     <Page id="survey-moth-home">

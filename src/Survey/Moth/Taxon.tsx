@@ -55,23 +55,6 @@ const Taxon: FC<Props> = ({ sample }) => {
       }
     }
 
-    if (!taxa && isRecorded) {
-      const selectedTaxon = (occurrence: typeof Occurrence) => {
-        return occurrence.attrs.taxon.warehouse_id === taxon.warehouse_id;
-      };
-      const assignTaxon = (occurrence: typeof Occurrence) => {
-        // eslint-disable-next-line no-param-reassign
-        occurrence.attrs.count++;
-        occurrence.save();
-      };
-
-      sample.occurrences.filter(selectedTaxon).forEach(assignTaxon);
-
-      await sample.save();
-      goBack();
-      return;
-    }
-
     if (taxa) {
       const selectedTaxon = (occurrence: typeof Occurrence) => {
         return occurrence.attrs.taxon.warehouse_id === parseInt(taxa, 10);
