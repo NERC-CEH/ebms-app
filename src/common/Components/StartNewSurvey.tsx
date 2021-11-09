@@ -90,7 +90,9 @@ function StartNewSurvey({ survey }: Props): null {
         sample = await getNewSample(survey, draftIdKey);
       }
 
-      context.navigate(`${baseURL}/${sample.cid}/edit`, 'none', 'replace');
+      const path = sample.isDetailsComplete() ? '' : 'edit';
+
+      context.navigate(`${baseURL}/${sample.cid}/${path}`, 'none', 'replace');
     };
 
     pickDraftOrCreateSample();
