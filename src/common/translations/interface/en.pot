@@ -1348,3 +1348,75 @@ msgstr "Are you sure you want to merge this list to the existing species list?"
 # Single species count survey validation message
 msgid "Please add your target species"
 msgstr "Please add your target species"
+
+# Moth survey label 
+msgid "Date"
+msgstr "Date"
+
+# Moth survey label 
+msgid "Method"
+msgstr "Method"
+
+# Context term 
+msgid "Please select the medthod type"
+msgstr "Please select the medthod type"
+
+# Moth survey method type 
+msgid "MV light"
+msgstr "MV light"
+
+# Moth survey method type 
+msgid "Actinic light"
+msgstr "Actinic light"
+
+# Moth survey method type 
+msgid "LED light"
+msgstr "LED light"
+
+# Moth survey method type 
+msgid "Light trapping"
+msgstr "Light trapping"
+
+# Moth survey method type 
+msgid "Daytime observation"
+msgstr "Daytime observation"
+
+# Moth survey method type 
+msgid "Dusking"
+msgstr "Dusking"
+
+# Moth survey method type 
+msgid "Attracted to a lighted window"
+msgstr "Attracted to a lighted window"
+
+# Moth survey method type 
+msgid "Sugaring"
+msgstr "Sugaring"
+
+# Moth survey method type 
+msgid "Wine roping"
+msgstr "Wine roping"
+
+# Moth survey method type 
+msgid "Beating tray"
+msgstr "Beating tray"
+
+# Moth survey method type 
+msgid "Pheromone trap"
+msgstr "Pheromone trap"
+
+# Moth survey method type 
+msgid "Other method (add comment)"
+msgstr "Other method (add comment)"
+
+# Moth survey method type 
+msgid "Not recorded"
+msgstr "Not recorded"
+
+# Moth survey details header title
+msgid "Survey Details"
+msgstr "Survey Details"
+
+# Moth survey header title
+msgid "Moth-trap survey"
+msgstr "Moth-trap survey"
