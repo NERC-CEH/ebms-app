@@ -20,7 +20,6 @@ const DetailsMain: FC<Props> = ({ sample }) => {
           <MenuAttrItem icon={mapOutline} label="Location" disabled />
 
           <Attr
-            className="test"
             model={sample}
             attr="date"
             input="date"
