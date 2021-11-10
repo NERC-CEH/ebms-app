@@ -43,7 +43,7 @@ const OccurrencesMain: FC<Props> = ({ sample, match, deleteSpecies }) => {
     return (
       <>
         <IonItemDivider>
-          <T>Species list</T>
+          <T>Moths list</T>
         </IonItemDivider>
         {speciesList}
 

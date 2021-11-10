@@ -1432,3 +1432,11 @@ msgstr "Species list"
 # Moth survey moth details label
 msgid "Identifier"
 msgstr "Identifier"
+
+# Moth survey divider label
+msgid "Moths list"
+msgstr "Moths list"
+
+# Moth survey photo picker divider label
+msgid "Moth photo"
+msgstr "Moth photo"
