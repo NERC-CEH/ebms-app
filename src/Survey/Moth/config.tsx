@@ -21,7 +21,7 @@ const methodValues = [
 ];
 
 const survey: Survey = {
-  id: -1,
+  id: 616,
   name: 'moth',
   label: 'Moth survey',
 
