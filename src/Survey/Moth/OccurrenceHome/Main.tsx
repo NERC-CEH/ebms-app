@@ -14,7 +14,6 @@ interface Props {
 }
 
 const EditOccurrence: FC<Props> = ({ occurrence }) => {
-  const { dataPath }: any = config;
   const match = useRouteMatch();
   const species = occurrence.getTaxonName();
   const isDisabled = occurrence.isDisabled();
@@ -54,7 +53,7 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
           <PhotoPicker
             model={occurrence}
             isDisabled={isDisabled}
-            dataDirPath={dataPath}
+            dataDirPath={config.dataPath}
             ImageClass={ImageModel}
           />
         </div>

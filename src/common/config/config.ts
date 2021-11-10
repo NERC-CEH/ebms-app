@@ -13,6 +13,8 @@ const indiciaUrl =
 const isTestEnv = process.env.NODE_ENV === 'test';
 
 const config = {
+  dataPath: '',
+
   environment: process.env.NODE_ENV,
   version: process.env.APP_VERSION,
   build: process.env.APP_BUILD,
