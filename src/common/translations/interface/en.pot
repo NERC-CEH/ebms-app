@@ -1420,3 +1420,15 @@ msgstr "Survey Details"
 # Moth survey header title
 msgid "Moth-trap survey"
 msgstr "Moth-trap survey"
+
+# Moth survey header title
+msgid "Moth survey"
+msgstr "Moth survey"
+
+# Moth survey divider label
+msgid "Species list"
+msgstr "Species list"
+
+# Moth survey moth details label
+msgid "Identifier"
+msgstr "Identifier"
