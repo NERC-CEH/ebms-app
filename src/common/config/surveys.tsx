@@ -24,7 +24,11 @@ export interface Survey {
 
   occ?: {
     attrs: Attrs | any;
-    create: (occurrence: typeof Occurrence, taxon: any) => typeof Occurrence;
+    create: (
+      occurrence: typeof Occurrence,
+      taxon: any,
+      identifier: string
+    ) => typeof Occurrence;
     verify?: (attrs: any) => any;
   };
 

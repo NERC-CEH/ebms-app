@@ -25,4 +25,6 @@ export default class AppOccurrence extends Occurrence {
   validateRemote() {
     return null;
   }
+
+  isDisabled = () => this.isUploaded();
 }

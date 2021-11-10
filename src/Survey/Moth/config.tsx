@@ -80,13 +80,30 @@ const survey: Survey = {
           values: (taxon: any) => taxon.warehouseId,
         },
       },
+
+      comment: commentAttr,
+      identifier: {
+        menuProps: { icon: personOutline },
+        pageProps: {
+          attrProps: {
+            input: 'input',
+            inputProps: {
+              placeholder: 'Recorder name',
+            },
+            info: "Enter the recorder's name, if different.",
+          },
+        },
+        remote: { id: 18 },
+      },
     },
 
-    create(Occurrence, taxon) {
+    create(Occurrence, taxon, identifier) {
       return new Occurrence({
         attrs: {
           count: 1,
           taxon,
+          identifier,
+          comment: null,
         },
       });
     },

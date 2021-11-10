@@ -36,9 +36,10 @@ async function showMergeSpeciesAlert() {
 
 interface Props {
   sample: typeof Sample;
+  occurrence: typeof Occurrence;
   match: any;
 }
-const Taxon: FC<Props> = ({ sample }) => {
+const Taxon: FC<Props> = ({ sample, occurrence }) => {
   const { navigate, goBack } = useContext(NavContext);
   const match = useRouteMatch();
   const { taxa }: any = match.params;
@@ -56,27 +57,34 @@ const Taxon: FC<Props> = ({ sample }) => {
     }
 
     if (taxa) {
-      const selectedTaxon = (occurrence: typeof Occurrence) => {
-        return occurrence.attrs.taxon.warehouse_id === parseInt(taxa, 10);
+      const selectedTaxon = (occ: typeof Occurrence) => {
+        return occ.attrs.taxon.warehouse_id === parseInt(taxa, 10);
       };
 
-      const assignTaxon = (occurrence: typeof Occurrence) => {
+      const assignTaxon = (occ: typeof Occurrence) => {
         // eslint-disable-next-line no-param-reassign
-        occurrence.attrs.taxon = taxon;
-        occurrence.save();
+        occ.attrs.taxon = taxon;
+        occ.save();
       };
 
       sample.occurrences.filter(selectedTaxon).forEach(assignTaxon);
 
       await sample.save();
-      const url = match.url.replace(`/occurrences/${taxa}/taxon`, '');
-      navigate(url, 'none', 'pop');
+
+      navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
       return;
     }
 
-    const newOccurrence = survey.occ.create(Occurrence, taxon);
-    sample.occurrences.push(newOccurrence);
+    if (occurrence) {
+      // eslint-disable-next-line no-param-reassign
+      occurrence.attrs.taxon = taxon;
+      occurrence.save();
+    } else {
+      const identifier = sample.attrs.recorder;
 
+      const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
+      sample.occurrences.push(newOccurrence);
+    }
     await sample.save();
     goBack();
   };

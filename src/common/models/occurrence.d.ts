@@ -8,6 +8,11 @@ declare const appModel: {
 
   media: any[];
   destroy: () => any;
+  getTaxonName: () => any;
+  getSurvey: any;
+  attrs: any;
+  isDisabled: bool;
+  isDisabled: () => any;
 };
 
 export default appModel;

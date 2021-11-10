@@ -5,6 +5,7 @@ import Details from './Details';
 import Home from './Home';
 import Taxon from './Taxon';
 import Occurrences from './Occurrences';
+import OccurrenceHome from './OccurrenceHome';
 import survey from './config';
 
 const { AttrPageFromRoute } = AttrPage;
@@ -18,6 +19,9 @@ const routes = [
   [`${baseURL}/:smpId/taxon`, Taxon],
   [`${baseURL}/:smpId/occurrences/:taxa`, Occurrences],
   [`${baseURL}/:smpId/occurrences/:taxa/taxon`, Taxon],
+  [`${baseURL}/:smpId/occurrences/occ/:occId`, OccurrenceHome],
+  [`${baseURL}/:smpId/occurrences/occ/:occId/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/occurrences/occ/:occId/taxon`, Taxon],
 ];
 
 export default RouteWithModels.fromArray(savedSamples, routes);
