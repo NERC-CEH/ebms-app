@@ -8,24 +8,33 @@
         height: 50px;
         background: #e7e7e738;
         margin: 5px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {
           object-fit: contain;
         }
 
         ion-icon {
-          width: calc(100% - 20px);
-          height: calc(100% - 20px);
-          padding: 10px;
-
-          --ionicon-stroke-width: 20px;
+          font-size: 45px;
         }
       }
 
       .label {
         display: flex;
-        align-items: center;
-        margin: 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: baseline;
+        margin: 0 0 0 5px;
+
+        .timestamp {
+          font-size: 1.2em;
+        }
+
+        .comment {
+          color: var(--ion-color-medium);
+        }
       }
     }
   }
