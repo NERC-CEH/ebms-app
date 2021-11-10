@@ -6,9 +6,12 @@ import { NavContext } from '@ionic/react';
 import { Page, Main, Header, alert } from '@apps';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
+import { MatchParams } from 'common/types';
+
+type resolveType = (value: boolean) => void;
 
 async function showMergeSpeciesAlert() {
-  const showMergeSpeciesDialog = (resolve: any) => {
+  const showMergeSpeciesDialog = (resolve: resolveType) => {
     alert({
       header: 'Species already exists',
       message:
@@ -31,18 +34,19 @@ async function showMergeSpeciesAlert() {
       ],
     });
   };
-  return new Promise(showMergeSpeciesDialog);
+
+  return new Promise<boolean>(showMergeSpeciesDialog);
 }
 
 interface Props {
   sample: typeof Sample;
   occurrence: typeof Occurrence;
-  match: any;
 }
+
 const Taxon: FC<Props> = ({ sample, occurrence }) => {
   const { navigate, goBack } = useContext(NavContext);
-  const match = useRouteMatch();
-  const { taxa }: any = match.params;
+  const match: MatchParams = useRouteMatch();
+  const { taxa } = match.params;
 
   const onSpeciesSelected = async (taxon: any) => {
     const { isRecorded } = taxon;
@@ -86,12 +90,14 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
       sample.occurrences.push(newOccurrence);
     }
     await sample.save();
+
     goBack();
   };
 
   const getTaxonId = (occ: typeof Occurrence) => {
     return occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
   };
+
   const species = sample.occurrences.map(getTaxonId);
 
   const recordedTaxa = [...species];
