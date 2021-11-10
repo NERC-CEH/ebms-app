@@ -123,7 +123,7 @@ const survey: Survey = {
     },
   },
 
-  create(AppSample, surveyId = survey.id, surveyName = survey.name, recorder) {
+  create(AppSample, recorder, surveyId = survey.id, surveyName = survey.name) {
     const sample = new AppSample({
       metadata: {
         survey_id: surveyId,
