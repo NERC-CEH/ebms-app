@@ -1,6 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import Sample from 'models/sample';
-import { Main, MenuAttrItem } from '@apps';
+import {
+  Main,
+  MenuAttrItem,
+  InfoBackgroundMessage as InfoMessage,
+} from '@apps';
 import {
   IonList,
   IonIcon,
@@ -11,12 +15,13 @@ import {
   IonItemOptions,
   IonItemOption,
   IonItemDivider,
+  NavContext,
 } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import Occurrence from 'models/occurrence';
 import { observer } from 'mobx-react';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import butterflyIcon from 'common/images/butterfly.svg';
+import mothIcon from 'common/images/moth.svg';
 import './styles.scss';
 
 interface Props {
@@ -25,9 +30,9 @@ interface Props {
   deleteSpecies: any;
 }
 
-function getSpeciesInfo(occurrence: typeof Occurrence) {
+function getSpeciesInfo(occurrence: any) {
   const image = occurrence.media[0];
-  let avatar = <IonIcon icon={butterflyIcon} />;
+  let avatar = <IonIcon icon={mothIcon} />;
 
   if (image) {
     avatar = <img src={image.getURL()} />;
@@ -36,7 +41,8 @@ function getSpeciesInfo(occurrence: typeof Occurrence) {
   const timestamp = new Date(occurrence.metadata.created_on).toISOString();
   const hours = new Date(timestamp).getHours();
   const minutes = new Date(timestamp).getMinutes();
-  const time = `${hours}:${minutes}`;
+  const minutesWithZero = minutes < 10 ? `0${minutes}` : minutes;
+  const time = `${hours}:${minutesWithZero}`;
 
   const comment = occurrence.attrs.comment || null;
 
@@ -55,8 +61,11 @@ function getSpeciesInfo(occurrence: typeof Occurrence) {
 }
 
 const OccurrencesMain: FC<Props> = ({ sample, match, deleteSpecies }) => {
+  const { navigate } = useContext(NavContext);
   const { taxa } = match.params;
   const isDisabled = sample.isDisabled();
+
+  const urlHome = `/survey/moth/${sample.cid}`;
 
   const selectedTaxon = (occurrence: typeof Occurrence) => {
     return occurrence.attrs.taxon.warehouse_id === parseInt(taxa, 10);
@@ -64,13 +73,19 @@ const OccurrencesMain: FC<Props> = ({ sample, match, deleteSpecies }) => {
 
   const species = sample.occurrences.filter(selectedTaxon);
 
-  if (!species) return null;
-
   const getSpeciesList = () => {
     const getSpeciesEntry = (occurrence: typeof Sample) => {
-      const deleteSpeciesWrap = () => deleteSpecies(occurrence);
+      const deleteSpeciesWrap = () => {
+        deleteSpecies(occurrence);
 
-      const url = `${match.url}/occ/${occurrence.cid}`;
+        if (!species.length) {
+          navigate(urlHome);
+        }
+
+        return null;
+      };
+
+      const url = `/survey/moth/${sample.cid}/occurrences/occ/${occurrence.cid}`;
 
       return (
         <div className="rounded" key={occurrence.cid}>
@@ -105,13 +120,23 @@ const OccurrencesMain: FC<Props> = ({ sample, match, deleteSpecies }) => {
     );
   };
 
+  if (!species.length) {
+    return (
+      <Main id="area-count-occurrence-edit">
+        <IonList id="list" lines="full">
+          <InfoMessage>No species added</InfoMessage>
+        </IonList>
+      </Main>
+    );
+  }
+
   return (
     <Main>
       <IonList lines="full">
         <div className="rounded">
           <MenuAttrItem
             routerLink={`${match.url}/taxon`}
-            icon={butterflyIcon}
+            icon={mothIcon}
             label="Species"
             value={species[0].getTaxonName()}
           />

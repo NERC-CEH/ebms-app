@@ -19,24 +19,28 @@ function setSurveyEndTime(sample: typeof Sample) {
   return sample.save();
 }
 
-  alert({
-    header: 'Delete',
-    message: `Are you sure you want to delete ${scientific_name}?`,
-    buttons: [
-      {
-        text: 'Cancel',
-        role: 'cancel',
-        cssClass: 'primary',
-      },
-      {
-        text: 'Delete',
-        cssClass: 'secondary',
-        handler: () => {
-          occ.destroy();
+function showDeleteSpeciesPrompt(taxon: any) {
+  const prompt = (resolve: any) => {
+    const name = taxon.scientific_name;
+    alert({
+      header: 'Delete',
+      message: `Are you sure you want to delete ${name}?`,
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'primary',
         },
-      },
-    ],
-  });
+        {
+          text: 'Delete',
+          cssClass: 'secondary',
+          handler: resolve,
+        },
+      ],
+    });
+  };
+
+  return new Promise(prompt);
 }
 
 interface Props {
@@ -86,6 +90,19 @@ const HomeController: FC<Props> = ({ sample }) => {
     await _processSubmission();
   };
 
+  const deleteOccurrence = (taxon: any) => {
+    const deleteSpecies = () => {
+      const matchingTaxon = (occ: any) =>
+        occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
+      const occurrenceMatchingTaxon = sample.occurrences.filter(matchingTaxon);
+
+      const destroy = (s: any) => s.destroy();
+      occurrenceMatchingTaxon.forEach(destroy);
+    };
+
+    showDeleteSpeciesPrompt(taxon).then(deleteSpecies);
+  };
+
   const increaseCount = (taxon: any) => {
     if (sample.isDisabled()) {
       return;
@@ -93,7 +110,9 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     const survey = sample.getSurvey();
 
-    const newOccurrence = survey.occ.create(Occurrence, taxon);
+    const identifier = sample.attrs.recorder;
+
+    const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
     sample.occurrences.push(newOccurrence);
     sample.save();
 
