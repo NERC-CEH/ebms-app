@@ -31,7 +31,7 @@ interface Props {
 }
 
 function getSpeciesInfo(occurrence: any) {
-  const image = occurrence.media[0];
+  const image = occurrence.media.length > 1 ? occurrence.media[0] : null;
   let avatar = <IonIcon icon={mothIcon} />;
 
   if (image) {
