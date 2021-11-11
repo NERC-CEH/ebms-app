@@ -17,7 +17,7 @@ import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Occurrence from 'models/occurrence';
 import { toJS } from 'mobx';
-import { locationOutline, addCircleOutline } from 'ionicons/icons';
+import { locationOutline } from 'ionicons/icons';
 import './styles.scss';
 
 const getDefaultTaxonCount = (taxon: any) => ({ count: 0, taxon });
@@ -57,7 +57,6 @@ const HomeMain: FC<Props> = ({
 
     return (
       <IonButton color="primary" className="add" onClick={onClick}>
-        <IonIcon icon={addCircleOutline} slot="start" />
         <IonLabel>
           <T>Add species</T>
         </IonLabel>

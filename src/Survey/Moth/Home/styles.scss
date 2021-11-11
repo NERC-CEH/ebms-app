@@ -1,9 +1,14 @@
 #survey-moth-home {
   .add {
-    width: 40%;
+    max-width: 60%;
     margin: 20px 0 30px;
     margin-left: 50%;
     transform: translate(-50%, 0);
+
+    ion-label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   #list {
