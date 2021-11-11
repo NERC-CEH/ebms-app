@@ -1438,5 +1438,13 @@ msgid "Moths list"
 msgstr "Moths list"
 
 # Moth survey photo picker divider label
-msgid "Moth photo"
-msgstr "Moth photo"
+msgid "Moth Photo"
+msgstr "Moth Photo"
+
+# Context term 
+msgid "Enter the recorder's name, if different."
+msgstr "Enter the recorder's name, if different."
+
+# Context term 
+msgid "Recorder name"
+msgstr "Recorder name"
