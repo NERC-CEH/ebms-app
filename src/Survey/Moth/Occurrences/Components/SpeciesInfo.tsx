@@ -8,7 +8,7 @@ interface Props {
 }
 
 const SpeciesInfo: FC<Props> = ({ occurrence }) => {
-  const image = occurrence.media.length > 1 ? occurrence.media[0] : null;
+  const image = occurrence.media.length ? occurrence.media[0] : null;
   let avatar = <IonIcon icon={mothIcon} />;
 
   if (image) {
