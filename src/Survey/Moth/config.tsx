@@ -4,6 +4,11 @@ import { Survey } from 'common/config/surveys';
 import { eyeOutline, personOutline, calendarOutline } from 'ionicons/icons';
 import { commentAttr } from 'Survey/common/config';
 
+type MethodTypes = {
+  id: number;
+  value: string;
+};
+
 const methodValues = [
   { id: 2196, value: 'MV light' },
   { id: 2197, value: 'Actinic light' },
@@ -20,10 +25,8 @@ const methodValues = [
   { id: 17967, value: 'Not recorded' },
 ];
 
-const sortAlphabetically = (
-  methodA: { id: number; value: string },
-  methodB: { id: number; value: string }
-): number => methodA.value.localeCompare(methodB.value);
+const sortAlphabetically = (methodA: MethodTypes, methodB: MethodTypes) =>
+  methodA.value.localeCompare(methodB.value);
 const sortedMethodValues = methodValues.sort(sortAlphabetically);
 
 const survey: Survey = {
