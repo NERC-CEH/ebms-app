@@ -6,6 +6,7 @@ import { observer } from 'mobx-react';
 import { NavContext, useIonViewDidEnter } from '@ionic/react';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import { useRouteMatch } from 'react-router';
+import GPSButton from 'common/Components/GPSButton';
 import Leaflet from 'leaflet';
 import appModel from 'models/appModel';
 import Sample from 'models/sample';
@@ -27,6 +28,8 @@ const MapComponent: FC<Props> = ({ sample }) => {
   const { navigate } = useContext(NavContext);
   const [map, setMap]: any = useState(null);
   const match = useRouteMatch();
+  const isDisabled = sample.isUploaded();
+
   const refreshMap = () => map && map.invalidateSize();
   useIonViewDidEnter(refreshMap, [map]);
 
@@ -45,6 +48,16 @@ const MapComponent: FC<Props> = ({ sample }) => {
     <Marker key={point.id} point={point} updateRecord={updateRecord} />
   );
   const getMarkers = () => pointData.map(getMarker);
+
+  function recenterMapToCurrentLocation(currentLocation: any) {
+    if (!currentLocation) return;
+
+    map.setView(
+      new Leaflet.LatLng(currentLocation.latitude, currentLocation.longitude),
+      5
+    );
+  }
+
   return (
     <MapContainer
       id="moth-survey-map"
@@ -57,6 +70,14 @@ const MapComponent: FC<Props> = ({ sample }) => {
       />
       <MarkerClusterGroup>{getMarkers()}</MarkerClusterGroup>
 
+      {!isDisabled && (
+        <MapControl position="topleft" className="gps-button">
+          <GPSButton
+            onLocationChange={recenterMapToCurrentLocation}
+            map={map}
+          />
+        </MapControl>
+      )}
     </MapContainer>
   );
 };
