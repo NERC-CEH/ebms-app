@@ -1,4 +1,4 @@
-import React, { FC, useState, useContext } from 'react';
+import React, { FC, useState, useContext, useEffect } from 'react';
 import CONFIG from 'common/config/config';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import MapControl from 'common/Components/LeafletControl';
@@ -18,6 +18,7 @@ import 'leaflet.markercluster';
 import './styles.scss';
 import 'leaflet/dist/leaflet.css';
 
+const MAX_ZOOM = 18;
 let DEFAULT_ZOOM = 5;
 const DEFAULT_CENTER: any = [51.505, -0.09];
 
@@ -42,8 +43,23 @@ const MapComponent: FC<Props> = ({ sample }) => {
     sample.save();
 
     const path = match.url.replace('/location', '');
-    navigate(path);
+    navigate(path, undefined, undefined, undefined, {
+      unmount: true,
+    });
   };
+
+  const zoomToSelectedMarker = () => {
+    if (map && sample.attrs.location) {
+      map.setView(
+        new Leaflet.LatLng(
+          sample.attrs.location?.latitude,
+          sample.attrs.location?.longitude
+        ),
+        MAX_ZOOM
+      );
+    }
+  };
+  useEffect(zoomToSelectedMarker, [map]);
 
   const getMarker = (point: Point) => (
     <Marker
