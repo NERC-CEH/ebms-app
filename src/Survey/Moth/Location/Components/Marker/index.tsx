@@ -41,7 +41,9 @@ const Marker: FC<Props> = ({ point, updateRecord, sample }) => {
             <b>Method: </b>
           </p>
 
-          <IonButton onClick={showPopup}>Select</IonButton>
+          {!hasLocationMatch && (
+            <IonButton onClick={showPopup}>Select</IonButton>
+          )}
         </div>
       </Popup>
     </LeafletMarker>
