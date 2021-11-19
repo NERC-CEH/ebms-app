@@ -47,7 +47,7 @@ class AreaAttr extends Component {
       match,
     } = this.props;
 
-    const disableTapForIOS = isPlatform('ios');
+    const disableTapForIOS = !isPlatform('ios'); // TODO: https://github.com/Leaflet/Leaflet/issues/7255
 
     return (
       <Main className={`${isGPSTracking ? 'GPStracking' : ''}`}>
