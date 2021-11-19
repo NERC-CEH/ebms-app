@@ -46,7 +46,12 @@ const MapComponent: FC<Props> = ({ sample }) => {
   };
 
   const getMarker = (point: Point) => (
-    <Marker key={point.id} point={point} updateRecord={updateRecord} />
+    <Marker
+      key={point.id}
+      point={point}
+      updateRecord={updateRecord}
+      sample={sample}
+    />
   );
   const getMarkers = () => pointData.map(getMarker);
 

@@ -24,6 +24,12 @@
     }
   }
 
+  .my-custom-pin.selected {
+    span {
+      background-color: #f59c05;
+    }
+  }
+
   .marker-cluster {
     background-color: var(--ion-color-primary);
     border-radius: 50%;
