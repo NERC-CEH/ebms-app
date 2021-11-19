@@ -1,7 +1,14 @@
 import CONFIG from 'common/config/config';
+import { MapContainer, TileLayer } from 'react-leaflet';
+import MapControl from 'common/Components/LeafletControl';
 import { observer } from 'mobx-react';
+import MarkerClusterGroup from 'react-leaflet-markercluster';
 import Leaflet from 'leaflet';
 import appModel from 'models/appModel';
+import { Point } from 'common/types';
+import pointData from './dummy_points.json';
+import Marker from './Components/Marker';
+import 'leaflet.markercluster';
 import './styles.scss';
 import 'leaflet/dist/leaflet.css';
 
@@ -14,6 +21,10 @@ const MapComponent: FC= () => {
   useIonViewDidEnter(refreshMap, [map]);
 
   const assignRef = (mapRef: Leaflet.Map) => setMap(mapRef);
+  const getMarker = (point: Point) => (
+    <Marker key={point.id} point={point} />
+  );
+  const getMarkers = () => pointData.map(getMarker);
   return (
     <MapContainer
       id="moth-survey-map"
@@ -24,6 +35,8 @@ const MapComponent: FC= () => {
         url="https://api.mapbox.com/styles/v1/cehapps/cipqvo0c0000jcknge1z28ejp/tiles/256/{z}/{x}/{y}?access_token={accessToken}"
         accessToken={CONFIG.map.mapboxApiKey}
       />
+      <MarkerClusterGroup>{getMarkers()}</MarkerClusterGroup>
+
     </MapContainer>
   );
 };

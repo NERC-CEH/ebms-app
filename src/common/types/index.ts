@@ -7,3 +7,10 @@ export type MatchParams = {
   path: string;
   url: string;
 };
+
+export interface Point {
+  id: number;
+  name: string;
+  latitude: number;
+  longitude: number;
+}
