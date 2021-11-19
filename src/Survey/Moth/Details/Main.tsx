@@ -4,20 +4,29 @@ import Sample from 'models/sample';
 import { IonList, IonItemDivider } from '@ionic/react';
 import { observer } from 'mobx-react';
 import { mapOutline } from 'ionicons/icons';
+import { useRouteMatch } from 'react-router';
 
 type Props = {
   sample: typeof Sample;
 };
 
 const DetailsMain: FC<Props> = ({ sample }) => {
+  const { url } = useRouteMatch();
   const survey = sample.getSurvey();
   const surveyDateProps = survey.attrs.date.pageProps.attrProps.inputProps;
+  const isDisabled = sample.isUploaded();
 
   return (
     <Main>
       <IonList lines="full">
         <div className="rounded">
-          <MenuAttrItem icon={mapOutline} label="Location" disabled />
+          <MenuAttrItem
+            routerLink={`${url}/location`}
+            icon={mapOutline}
+            label="Location"
+            disabled={isDisabled}
+            skipValueTranslation
+          />
 
           <Attr
             model={sample}

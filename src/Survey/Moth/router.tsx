@@ -4,6 +4,7 @@ import StartNewSurvey from 'Components/StartNewSurvey';
 import Details from './Details';
 import Home from './Home';
 import Taxon from './Taxon';
+import Location from './Location';
 import Occurrences from './Occurrences';
 import OccurrenceHome from './OccurrenceHome';
 import survey from './config';
@@ -16,6 +17,7 @@ const routes = [
   [`${baseURL}/:smpId`, Home],
   [`${baseURL}/:smpId/edit`, Details],
   [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/edit/location`, Location],
   [`${baseURL}/:smpId/taxon`, Taxon],
   [`${baseURL}/:smpId/occurrences/:taxa`, Occurrences],
   [`${baseURL}/:smpId/occurrences/:taxa/taxon`, Taxon],
