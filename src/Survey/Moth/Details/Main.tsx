@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Main, MenuAttrItemFromModel, Attr, MenuAttrItem } from '@apps';
 import Sample from 'models/sample';
-import { IonList, IonItemDivider } from '@ionic/react';
+import { IonList, IonItemDivider, IonLabel } from '@ionic/react';
 import { observer } from 'mobx-react';
 import { mapOutline } from 'ionicons/icons';
 import { useRouteMatch } from 'react-router';
@@ -16,6 +16,21 @@ const DetailsMain: FC<Props> = ({ sample }) => {
   const surveyDateProps = survey.attrs.date.pageProps.attrProps.inputProps;
   const isDisabled = sample.isUploaded();
 
+  const valueLatitude =
+    sample.attrs.location &&
+    parseFloat(sample.attrs.location.latitude).toFixed(3);
+
+  const valueLongitude =
+    sample.attrs.location &&
+    parseFloat(sample.attrs.location.longitude).toFixed(3);
+
+  const value = sample.attrs.location && (
+    <IonLabel position="stacked" mode="ios">
+      <IonLabel>Latitude: {valueLatitude}</IonLabel>
+      <IonLabel>Longitude: {valueLongitude}</IonLabel>
+    </IonLabel>
+  );
+
   return (
     <Main>
       <IonList lines="full">
@@ -26,6 +41,7 @@ const DetailsMain: FC<Props> = ({ sample }) => {
             label="Location"
             disabled={isDisabled}
             skipValueTranslation
+            value={value}
           />
 
           <Attr

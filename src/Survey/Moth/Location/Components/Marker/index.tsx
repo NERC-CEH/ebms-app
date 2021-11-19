@@ -7,9 +7,10 @@ import './styles.scss';
 
 interface Props {
   point: Point;
+  updateRecord: (point: Point) => void;
 }
 
-const Marker: FC<Props> = ({ point }) => {
+const Marker: FC<Props> = ({ point, updateRecord }) => {
   const { latitude, longitude } = point;
 
   const getIcon = () =>
@@ -17,6 +18,10 @@ const Marker: FC<Props> = ({ point }) => {
       className: 'my-custom-pin',
       html: `<span />`,
     });
+
+  const showPopup = () => {
+    updateRecord(point);
+  };
 
   return (
     <LeafletMarker icon={getIcon()} position={[latitude, longitude]}>
@@ -29,7 +34,7 @@ const Marker: FC<Props> = ({ point }) => {
             <b>Method: </b>
           </p>
 
-          <IonButton>Select</IonButton>
+          <IonButton onClick={showPopup}>Select</IonButton>
         </div>
       </Popup>
     </LeafletMarker>

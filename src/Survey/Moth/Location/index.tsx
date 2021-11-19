@@ -1,12 +1,18 @@
 import React, { FC } from 'react';
 import { Page, Header, Main } from '@apps';
+import Sample from 'models/sample';
 import Map from './map';
-const Location: FC<Props> = () => {
+
+interface Props {
+  sample: typeof Sample;
+}
+
+const Location: FC<Props> = ({ sample }) => {
   return (
     <Page id="moth-survey-location">
       <Header title="Location" />
       <Main>
-        <Map />
+        <Map sample={sample} />
       </Main>
     </Page>
   );

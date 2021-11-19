@@ -1,10 +1,14 @@
+import React, { FC, useState, useContext } from 'react';
 import CONFIG from 'common/config/config';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import MapControl from 'common/Components/LeafletControl';
 import { observer } from 'mobx-react';
+import { NavContext, useIonViewDidEnter } from '@ionic/react';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
+import { useRouteMatch } from 'react-router';
 import Leaflet from 'leaflet';
 import appModel from 'models/appModel';
+import Sample from 'models/sample';
 import { Point } from 'common/types';
 import pointData from './dummy_points.json';
 import Marker from './Components/Marker';
@@ -15,14 +19,30 @@ import 'leaflet/dist/leaflet.css';
 let DEFAULT_ZOOM = 5;
 const DEFAULT_CENTER: any = [51.505, -0.09];
 
-const MapComponent: FC= () => {
+interface Props {
+  sample: typeof Sample;
+}
+
+const MapComponent: FC<Props> = ({ sample }) => {
+  const { navigate } = useContext(NavContext);
   const [map, setMap]: any = useState(null);
+  const match = useRouteMatch();
   const refreshMap = () => map && map.invalidateSize();
   useIonViewDidEnter(refreshMap, [map]);
 
   const assignRef = (mapRef: Leaflet.Map) => setMap(mapRef);
+
+  const updateRecord = (point: Point) => {
+    // eslint-disable-next-line no-param-reassign
+    sample.attrs.location = point;
+    sample.save();
+
+    const path = match.url.replace('/location', '');
+    navigate(path);
+  };
+
   const getMarker = (point: Point) => (
-    <Marker key={point.id} point={point} />
+    <Marker key={point.id} point={point} updateRecord={updateRecord} />
   );
   const getMarkers = () => pointData.map(getMarker);
   return (
