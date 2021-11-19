@@ -21,6 +21,16 @@
     }
   }
 
+  .gps-button {
+    top: 94px !important;
+    border: 0px !important;
+
+    button {
+      margin: 0 !important;
+      border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    }
+  }
+
   .leaflet-control .geolocate-btn {
     border-radius: 4px;
     background: white;
@@ -31,6 +41,9 @@
     background-clip: padding-box;
     text-align: center;
     padding: 0;
+    top: 94px;
+    left: 0;
+    margin-left: 8px;
 
     ion-icon {
       width: 21px;
