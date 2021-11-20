@@ -26,7 +26,7 @@ function showLogoutConfirmationDialog(callback) {
           <IonLabel>
             <T>Discard local data</T>
           </IonLabel>
-          <IonCheckbox checked onIonChange={onCheckboxChange} />
+          <IonCheckbox onIonChange={onCheckboxChange} />
         </IonItem>
       </>
     ),
