@@ -7,9 +7,14 @@ import { locateOutline } from 'ionicons/icons';
 interface Props {
   onLocationChange: any;
   map: Leaflet.Map;
+  isLocationCurrentlySelected?: boolean;
 }
 
-const GPSButton: FC<Props> = ({ onLocationChange, map }) => {
+const GPSButton: FC<Props> = ({
+  onLocationChange,
+  map,
+  isLocationCurrentlySelected,
+}) => {
   const [currentLocation, setCurrentLocation] = useState<any>(null);
   const [locatingJobId, setLocating] = useState<any>(false);
 
@@ -44,7 +49,11 @@ const GPSButton: FC<Props> = ({ onLocationChange, map }) => {
     setLocating(jobId);
   };
 
-  const runGPS = () => map && onGeolocate();
+  const runGPS = () => {
+    if (!map && !isLocationCurrentlySelected) return;
+    onGeolocate();
+  };
+
   useEffect(runGPS, [map]);
 
   return (

@@ -92,6 +92,9 @@ const MapComponent: FC<Props> = ({ sample }) => {
     return [countryCentroid.lat, countryCentroid.long];
   };
 
+  const isLocationCurrentlySelected =
+    sample.attrs.location?.latitude && sample.attrs.location?.longitude;
+
   return (
     <MapContainer
       id="moth-survey-map"
@@ -113,6 +116,7 @@ const MapComponent: FC<Props> = ({ sample }) => {
           <GPSButton
             onLocationChange={recenterMapToCurrentLocation}
             map={map}
+            isLocationCurrentlySelected={!!isLocationCurrentlySelected}
           />
         </MapControl>
       )}
