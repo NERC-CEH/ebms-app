@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import React, { FC, useContext } from 'react';
 import Sample from 'models/sample';
+import Occurrence from 'models/occurrence';
 import appModel from 'models/appModel';
 import { observer } from 'mobx-react';
 import { Plugins, HapticsImpactStyle } from '@capacitor/core';
@@ -8,7 +9,6 @@ import { useRouteMatch } from 'react-router';
 import { Page, Header, alert, showInvalidsMessage } from '@apps';
 import { isPlatform, IonButton, NavContext } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
-import Occurrence from 'models/occurrence';
 import Main from './Main';
 import './styles.scss';
 
@@ -19,9 +19,9 @@ function setSurveyEndTime(sample: typeof Sample) {
   return sample.save();
 }
 
-function showDeleteSpeciesPrompt(taxon: any) {
-  const prompt = (resolve: any) => {
-    const name = taxon.scientific_name;
+function showDeleteSpeciesPrompt(occ: typeof Occurrence) {
+  const prompt = () => {
+    const name = occ.attrs.taxon.scientific_name;
     alert({
       header: 'Delete',
       message: `Are you sure you want to delete ${name}?`,
@@ -34,7 +34,7 @@ function showDeleteSpeciesPrompt(taxon: any) {
         {
           text: 'Delete',
           cssClass: 'secondary',
-          handler: resolve,
+          handler: () => occ.destroy(),
         },
       ],
     });
@@ -90,31 +90,18 @@ const HomeController: FC<Props> = ({ sample }) => {
     await _processSubmission();
   };
 
-  const deleteOccurrence = (taxon: any) => {
-    const deleteSpecies = () => {
-      const matchingTaxon = (occ: any) =>
-        occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
-      const occurrenceMatchingTaxon = sample.occurrences.filter(matchingTaxon);
-
-      const destroy = (s: any) => s.destroy();
-      occurrenceMatchingTaxon.forEach(destroy);
-    };
-
-    showDeleteSpeciesPrompt(taxon).then(deleteSpecies);
+  const deleteOccurrence = (occ: typeof Occurrence) => {
+    showDeleteSpeciesPrompt(occ);
   };
 
-  const increaseCount = (taxon: any) => {
+  const increaseCount = (occ: typeof Occurrence) => {
     if (sample.isDisabled()) {
       return;
     }
 
-    const survey = sample.getSurvey();
-
-    const identifier = sample.attrs.recorder;
-
-    const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
-    sample.occurrences.push(newOccurrence);
-    sample.save();
+    // eslint-disable-next-line no-param-reassign
+    occ.attrs.count += 1;
+    occ.save();
 
     isPlatform('hybrid') && Haptics.impact({ style: HapticsImpactStyle.Heavy });
   };

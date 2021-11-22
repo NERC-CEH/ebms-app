@@ -1,10 +1,10 @@
 import React, { FC, useContext } from 'react';
 import Sample from 'models/sample';
+import Occurrence from 'models/occurrence';
 import { Main, MenuAttrItem, InfoBackgroundMessage } from '@apps';
 import {
   IonList,
   IonButton,
-  IonIcon,
   IonLabel,
   NavContext,
   IonItemDivider,
@@ -15,23 +15,8 @@ import {
 } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
-import Occurrence from 'models/occurrence';
-import { toJS } from 'mobx';
 import { locationOutline } from 'ionicons/icons';
 import './styles.scss';
-
-const getDefaultTaxonCount = (taxon: any) => ({ count: 0, taxon });
-
-const buildSpeciesCount = (agg: any, occ: typeof Occurrence) => {
-  const taxon = toJS(occ.attrs.taxon);
-  const id = taxon.warehouse_id;
-
-  agg[id] = agg[id] || getDefaultTaxonCount(taxon); // eslint-disable-line
-
-  agg[id].count++; // eslint-disable-line
-
-  return agg;
-};
 
 type Props = {
   match: any;
@@ -49,6 +34,7 @@ const HomeMain: FC<Props> = ({
   isDisabled,
 }) => {
   const { navigate } = useContext(NavContext);
+  const disabled = sample.isUploaded();
 
   const getSpeciesAddButton = () => {
     const onClick = () => {
@@ -64,36 +50,31 @@ const HomeMain: FC<Props> = ({
     );
   };
 
-  const getSpeciesEntry = ([id, species]: any) => {
-    const isSpeciesDisabled = !species.count;
-    const { taxon } = species;
-
-    const speciesName = taxon[taxon.found_in_name];
+  const getSpeciesEntry = (occ: typeof Occurrence) => {
+    const speciesName = occ.getTaxonName();
+    const speciesCount = occ.attrs.count;
 
     const increaseCountWrap = (e: any) => {
       e.preventDefault();
       e.stopPropagation();
-      increaseCount(taxon);
+      increaseCount(occ);
     };
 
-    const deleteSpeciesWrap = () => deleteSpecies(taxon);
+    const deleteSpeciesWrap = () => deleteSpecies(occ);
 
     const navigateToSpeciesOccurrences = () => {
-      navigate(`${match.url}/occurrences/${taxon.warehouse_id}`);
+      navigate(`${match.url}/occ/${occ.cid}`);
     };
 
     return (
-      <IonItemSliding key={id}>
-        <IonItem
-          onClick={navigateToSpeciesOccurrences}
-          detail={!isSpeciesDisabled}
-        >
+      <IonItemSliding key={occ.cid}>
+        <IonItem onClick={navigateToSpeciesOccurrences} detail={!disabled}>
           <IonButton
             className="precise-area-count-edit-count"
             onClick={increaseCountWrap}
             fill="clear"
           >
-            {species.count}
+            {speciesCount}
             <div className="label-divider" />
           </IonButton>
           <IonLabel>{speciesName}</IonLabel>
@@ -118,9 +99,7 @@ const HomeMain: FC<Props> = ({
       );
     }
 
-    const counts = [...sample.occurrences].reduce(buildSpeciesCount, {});
-
-    const speciesList = Object.entries(counts).map(getSpeciesEntry);
+    const speciesList = sample.occurrences.map(getSpeciesEntry);
 
     const count = speciesList.length > 1 ? speciesList.length : null;
 
