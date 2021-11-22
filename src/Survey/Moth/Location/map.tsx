@@ -49,26 +49,29 @@ const MapComponent: FC<Props> = ({ sample }) => {
   };
 
   const zoomToSelectedMarker = () => {
-    if (map && sample.attrs.location) {
-      map.setView(
-        new Leaflet.LatLng(
-          sample.attrs.location?.latitude,
-          sample.attrs.location?.longitude
-        ),
-        MAX_ZOOM
-      );
-    }
+    if (!map || !sample.attrs.location) return;
+
+    map.setView(
+      [sample.attrs.location?.latitude, sample.attrs.location?.longitude],
+      MAX_ZOOM
+    );
   };
   useEffect(zoomToSelectedMarker, [map]);
 
-  const getMarker = (point: Point) => (
-    <Marker
-      key={point.id}
-      point={point}
-      updateRecord={updateRecord}
-      sample={sample}
-    />
-  );
+  const getMarker = (point: Point) => {
+    const isCurrentlySelected =
+      sample.attrs.location?.latitude === point.latitude &&
+      sample.attrs.location?.longitude === point.longitude;
+
+    return (
+      <Marker
+        key={point.id}
+        point={point}
+        updateRecord={updateRecord}
+        isCurrentlySelected={isCurrentlySelected}
+      />
+    );
+  };
   const getMarkers = () => pointData.map(getMarker);
 
   function recenterMapToCurrentLocation(currentLocation: any) {
