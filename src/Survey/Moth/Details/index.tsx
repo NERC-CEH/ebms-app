@@ -6,6 +6,7 @@ import { IonButton, NavContext } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import Main from './Main';
+import './styles.scss';
 
 type Props = {
   sample: typeof Sample;

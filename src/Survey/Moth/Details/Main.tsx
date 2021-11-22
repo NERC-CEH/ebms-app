@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Main, MenuAttrItemFromModel, Attr, MenuAttrItem } from '@apps';
 import Sample from 'models/sample';
-import { IonList, IonItemDivider, IonLabel } from '@ionic/react';
+import { IonList, IonLabel } from '@ionic/react';
 import { observer } from 'mobx-react';
 import { mapOutline } from 'ionicons/icons';
 import { useRouteMatch } from 'react-router';
@@ -43,18 +43,12 @@ const DetailsMain: FC<Props> = ({ sample }) => {
             skipValueTranslation
             value={value}
           />
-
           <Attr
             model={sample}
             attr="date"
             input="date"
             inputProps={surveyDateProps}
           />
-        </div>
-
-        <IonItemDivider>Details</IonItemDivider>
-        <div className="rounded">
-          <MenuAttrItemFromModel model={sample} attr="method" />
           <MenuAttrItemFromModel
             model={sample}
             attr="recorder"
