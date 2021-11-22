@@ -9,7 +9,7 @@ import Main from './Main';
 import './styles.scss';
 
 function showLogoutConfirmationDialog(callback) {
-  let deleteData = true;
+  let deleteData = false;
 
   const onCheckboxChange = e => {
     deleteData = e.detail.checked;
