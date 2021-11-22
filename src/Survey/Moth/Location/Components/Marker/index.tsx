@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import L from 'leaflet';
 import { Marker as LeafletMarker, Popup } from 'react-leaflet';
-import { IonButton } from '@ionic/react';
+import { IonButton, IonIcon, IonLabel } from '@ionic/react';
+import { locationOutline, eyeOutline } from 'ionicons/icons';
 import { Point } from 'common/types';
 import './styles.scss';
 
@@ -30,17 +31,21 @@ const Marker: FC<Props> = ({ point, updateRecord, isCurrentlySelected }) => {
     <LeafletMarker icon={getIcon()} position={[latitude, longitude]}>
       <Popup>
         <div>
-          <p>
-            <b>Location: </b>
-          </p>
-          <p>
-            <b>Method: </b>
-          </p>
-
-          {!isCurrentlySelected && (
-            <IonButton onClick={showPopup}>Select</IonButton>
-          )}
+          <IonIcon icon={locationOutline} />
+          <div>
+            <IonLabel>Wallingford</IonLabel>
+          </div>
         </div>
+        <div>
+          <IonIcon icon={eyeOutline} />
+          <div>
+            <IonLabel>LED light</IonLabel>
+          </div>
+        </div>
+
+        {!isCurrentlySelected && (
+          <IonButton onClick={showPopup}>Select</IonButton>
+        )}
       </Popup>
     </LeafletMarker>
   );
