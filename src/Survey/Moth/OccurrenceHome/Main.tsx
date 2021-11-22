@@ -5,9 +5,17 @@ import { observer } from 'mobx-react';
 import Occurrence from 'models/occurrence';
 import ImageModel from 'common/models/media';
 import { Trans as T } from 'react-i18next';
-import { Main, MenuAttrItem, PhotoPicker, MenuAttrItemFromModel } from '@apps';
+import {
+  Main,
+  MenuAttrItem,
+  PhotoPicker,
+  MenuAttrItemFromModel,
+  Attr,
+} from '@apps';
 import mothIcon from 'common/images/moth.svg';
 import { useRouteMatch } from 'react-router';
+import mothOutsideBoxIcon from './images/moth-outside-icon.svg';
+import mothInsideBoxIcon from './images/moth-inside-icon.svg';
 
 interface Props {
   occurrence: typeof Occurrence;
@@ -32,6 +40,29 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
             icon={mothIcon}
             label="Species"
             value={species}
+          />
+          <Attr
+            model={occurrence}
+            input="counter"
+            inputProps={{
+              icon: mothInsideBoxIcon,
+              label: 'Count inside',
+              isDisabled,
+              min: 1,
+            }}
+            attr="count"
+          />
+
+          <Attr
+            model={occurrence}
+            input="counter"
+            inputProps={{
+              icon: mothOutsideBoxIcon,
+              label: 'Count outside',
+              isDisabled,
+              min: 1,
+            }}
+            attr="count-outside"
           />
 
           <MenuAttrItemFromModel

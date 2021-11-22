@@ -67,12 +67,21 @@ const survey: Survey = {
         },
         remote: { id: 18 },
       },
+
+      count: {
+        remote: { id: 133 },
+      },
+
+      'count-outside': {
+        remote: { id: 898 },
+      },
     },
 
     create(Occurrence, taxon, identifier) {
       return new Occurrence({
         attrs: {
           count: 1,
+          'count-outside': 1,
           taxon,
           identifier,
           comment: null,
