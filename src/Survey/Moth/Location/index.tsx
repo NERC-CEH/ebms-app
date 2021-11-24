@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Page, Header, Main } from '@apps';
 import Sample from 'models/sample';
-import Map from './map';
+import Map from './Components/Map';
 
 interface Props {
   sample: typeof Sample;
