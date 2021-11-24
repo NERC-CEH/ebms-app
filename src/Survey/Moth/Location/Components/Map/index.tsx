@@ -87,6 +87,12 @@ const MapComponent: FC<Props> = ({ sample }) => {
   const getCentroide: any = () => {
     const countryCentroid = COUNTRIES_CENTROID[appModel.attrs.country];
 
+    if (sample.attrs.location?.latitude)
+      return [
+        sample.attrs.location?.latitude,
+        sample.attrs.location?.longitude,
+      ];
+
     if (!countryCentroid) return DEFAULT_CENTER;
     DEFAULT_ZOOM = countryCentroid.zoom ? countryCentroid.zoom : 5;
 
@@ -121,8 +127,11 @@ const MapComponent: FC<Props> = ({ sample }) => {
           />
         </MapControl>
       )}
-
-      <BottomSheet />
+      <BottomSheet
+        pointData={pointData}
+        centroid={getCentroide()}
+        updateRecord={updateRecord}
+      />
     </MapContainer>
   );
 };
