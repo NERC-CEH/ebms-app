@@ -1448,3 +1448,11 @@ msgstr "Enter the recorder's name, if different."
 # Context term 
 msgid "Recorder name"
 msgstr "Recorder name"
+
+# Latitude 
+msgid "Lat"
+msgstr "Lat"
+
+# Longitude 
+msgid "Long"
+msgstr "Long"
