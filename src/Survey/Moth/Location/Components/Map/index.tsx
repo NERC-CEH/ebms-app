@@ -12,6 +12,7 @@ import appModel from 'models/appModel';
 import Sample from 'models/sample';
 import { Point } from 'common/types';
 import COUNTRIES_CENTROID from '../../country_centroide';
+import BottomSheet from '../BottomSheet';
 import pointData from '../../dummy_points.json';
 import Marker from '../Marker';
 import 'leaflet.markercluster';
@@ -120,6 +121,8 @@ const MapComponent: FC<Props> = ({ sample }) => {
           />
         </MapControl>
       )}
+
+      <BottomSheet />
     </MapContainer>
   );
 };
