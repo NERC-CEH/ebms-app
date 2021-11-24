@@ -33,7 +33,7 @@ const Marker: FC<Props> = ({ point, updateRecord, isCurrentlySelected }) => {
         <div>
           <IonIcon icon={locationOutline} />
           <div>
-            <IonLabel>Wallingford</IonLabel>
+            <IonLabel>{point.name}</IonLabel>
           </div>
         </div>
         <div>
