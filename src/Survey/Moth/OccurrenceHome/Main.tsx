@@ -78,7 +78,7 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
         </div>
 
         <IonItemDivider>
-          <T>Moth Photo</T>
+          <T>Moth Photos</T>
         </IonItemDivider>
         <div className="rounded">
           <PhotoPicker
