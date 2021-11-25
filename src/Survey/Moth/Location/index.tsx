@@ -11,7 +11,7 @@ interface Props {
 const Location: FC<Props> = ({ sample }) => {
   return (
     <Page id="moth-survey-location">
-      <Header title="Location" />
+      <Header title="Moth trap" />
       <Main>
         <Map sample={sample} />
       </Main>

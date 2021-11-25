@@ -3,7 +3,7 @@ import { Main, MenuAttrItemFromModel, Attr, MenuAttrItem } from '@apps';
 import Sample from 'models/sample';
 import { IonList, IonLabel } from '@ionic/react';
 import { observer } from 'mobx-react';
-import { mapOutline } from 'ionicons/icons';
+import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import { useRouteMatch } from 'react-router';
 
 type Props = {
@@ -37,8 +37,8 @@ const DetailsMain: FC<Props> = ({ sample }) => {
         <div className="rounded">
           <MenuAttrItem
             routerLink={`${url}/location`}
-            icon={mapOutline}
-            label="Location"
+            icon={mothInsideBoxIcon}
+            label="Moth trap"
             disabled={isDisabled}
             skipValueTranslation
             value={value}
