@@ -5,7 +5,6 @@ import MapControl from 'common/Components/LeafletControl';
 import { observer } from 'mobx-react';
 import { NavContext, useIonViewDidEnter, isPlatform } from '@ionic/react';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
-import { useRouteMatch } from 'react-router';
 import GPSButton from 'common/Components/GPSButton';
 import Leaflet from 'leaflet';
 import appModel from 'models/appModel';
@@ -28,9 +27,8 @@ interface Props {
 }
 
 const MapComponent: FC<Props> = ({ sample }) => {
-  const { navigate } = useContext(NavContext);
+  const { goBack } = useContext(NavContext);
   const [map, setMap]: any = useState(null);
-  const match = useRouteMatch();
   const isDisabled = sample.isUploaded();
 
   const refreshMap = () => map && map.invalidateSize();
@@ -43,10 +41,7 @@ const MapComponent: FC<Props> = ({ sample }) => {
     sample.attrs.location = point;
     sample.save();
 
-    const path = match.url.replace('/location', '');
-    navigate(path, undefined, undefined, undefined, {
-      unmount: true,
-    });
+    goBack();
   };
 
   const zoomToSelectedMarker = () => {
