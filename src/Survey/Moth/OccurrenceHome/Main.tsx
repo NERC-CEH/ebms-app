@@ -14,8 +14,8 @@ import {
 } from '@apps';
 import mothIcon from 'common/images/moth.svg';
 import { useRouteMatch } from 'react-router';
-import mothOutsideBoxIcon from './images/moth-outside-icon.svg';
-import mothInsideBoxIcon from './images/moth-inside-icon.svg';
+import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
+import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 
 interface Props {
   occurrence: typeof Occurrence;
