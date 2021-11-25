@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Page, Header, Main } from '@apps';
 import Sample from 'models/sample';
 import Map from './Components/Map';
+import './styles.scss';
 
 interface Props {
   sample: typeof Sample;
