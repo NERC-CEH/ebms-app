@@ -81,7 +81,7 @@ const survey: Survey = {
       return new Occurrence({
         attrs: {
           count: 1,
-          'count-outside': 1,
+          'count-outside': 0,
           taxon,
           identifier,
           comment: null,
