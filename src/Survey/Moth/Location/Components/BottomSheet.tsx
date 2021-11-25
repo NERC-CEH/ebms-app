@@ -6,7 +6,7 @@ import turf from '@turf/distance';
 import { Point } from 'common/types';
 import BottomSheetPointEntry from './BottomSheetPointEntry';
 
-const SNAP_POSITIONS = [0.8, 0.7, 0.6, 0.5, 0.4, 0.05];
+const SNAP_POSITIONS = [0.8, 0.7, 0.6, 0.5, 0.4, 0.22, 0.05];
 const DEFAULT_SNAP_POSITION = SNAP_POSITIONS.length - 2;
 
 interface Props {
@@ -27,7 +27,7 @@ const BottomSheet: FC<Props> = ({ pointData, centroid, updateRecord }) => {
   const getDistance: any = () => {
     const getPointsWithDistance: any = (point: Point) => {
       const from = [point.longitude, point.latitude]; // turf long, lat first
-      const to = centroid.reverse(); // turf long, lat first
+      const to = [...centroid].reverse(); // turf long, lat first
       const distance: number = turf(from, to, { units: 'kilometers' });
 
       return { ...point, distance: distance.toFixed(2) };
@@ -37,7 +37,7 @@ const BottomSheet: FC<Props> = ({ pointData, centroid, updateRecord }) => {
   };
 
   const getDistanceWrap = () => getDistance();
-  useEffect(getDistanceWrap, []);
+  useEffect(getDistanceWrap, [centroid]);
 
   const byDistance = (pointA: any, pointB: any) =>
     pointA?.distance - pointB?.distance;

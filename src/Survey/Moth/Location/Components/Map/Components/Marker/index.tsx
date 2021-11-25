@@ -4,28 +4,25 @@ import { Marker as LeafletMarker, Popup } from 'react-leaflet';
 import { IonButton, IonIcon, IonLabel } from '@ionic/react';
 import { locationOutline, eyeOutline } from 'ionicons/icons';
 import { Point } from 'common/types';
+import clsx from 'clsx';
 import './styles.scss';
 
 interface Props {
   point: Point;
-  updateRecord: (point: Point) => void;
-  isCurrentlySelected: boolean;
+  onSelect: (point: Point) => void;
+  isSelected: boolean;
 }
 
-const Marker: FC<Props> = ({ point, updateRecord, isCurrentlySelected }) => {
+const Marker: FC<Props> = ({ point, onSelect, isSelected }) => {
   const { latitude, longitude } = point;
-
-  const selectedMarker = isCurrentlySelected ? 'selected' : '';
 
   const getIcon = () =>
     L.divIcon({
-      className: `my-custom-pin ${selectedMarker}`,
+      className: clsx(`my-custom-pin`, isSelected && 'selected'),
       html: `<span />`,
     });
 
-  const showPopup = () => {
-    updateRecord(point);
-  };
+  const onSelectWrap = () => onSelect(point);
 
   return (
     <LeafletMarker icon={getIcon()} position={[latitude, longitude]}>
@@ -43,9 +40,7 @@ const Marker: FC<Props> = ({ point, updateRecord, isCurrentlySelected }) => {
           </div>
         </div>
 
-        {!isCurrentlySelected && (
-          <IonButton onClick={showPopup}>Select</IonButton>
-        )}
+        {!isSelected && <IonButton onClick={onSelectWrap}>Select</IonButton>}
       </Popup>
     </LeafletMarker>
   );

@@ -13,14 +13,18 @@ import { Point } from 'common/types';
 import COUNTRIES_CENTROID from '../../country_centroide';
 import BottomSheet from '../BottomSheet';
 import pointData from '../../dummy_points.json';
-import Marker from '../Marker';
+import Marker from './Components/Marker';
 import 'leaflet.markercluster';
 import './styles.scss';
 import 'leaflet/dist/leaflet.css';
 
 const MAX_ZOOM = 18;
-let DEFAULT_ZOOM = 5;
+const DEFAULT_ZOOM = 5;
 const DEFAULT_CENTER: any = [51.505, -0.09];
+
+const hasLocationMatch = (sample: typeof Sample, point: Point) =>
+  sample.attrs.location?.latitude === point.latitude &&
+  sample.attrs.location?.longitude === point.longitude;
 
 interface Props {
   sample: typeof Sample;
@@ -29,14 +33,50 @@ interface Props {
 const MapComponent: FC<Props> = ({ sample }) => {
   const { goBack } = useContext(NavContext);
   const [map, setMap]: any = useState(null);
-  const isDisabled = sample.isUploaded();
-
-  const refreshMap = () => map && map.invalidateSize();
-  useIonViewDidEnter(refreshMap, [map]);
+  const [mapZoom, setMapZoom]: any = useState(DEFAULT_ZOOM);
+  const [mapCenter, setMapCenter]: any = useState(DEFAULT_CENTER);
 
   const assignRef = (mapRef: Leaflet.Map) => setMap(mapRef);
 
-  const updateRecord = (point: Point) => {
+  const updateLayout = () => map && map.invalidateSize();
+  useIonViewDidEnter(updateLayout, [map]);
+
+  const refreshMapPositionAndZoom = () =>
+    map && map.setView(mapCenter, mapZoom);
+  useEffect(refreshMapPositionAndZoom, [map, mapCenter, mapZoom]);
+
+  const setInitialZoomAndCenter = () => {
+    const { location } = sample.attrs;
+    if (location) {
+      setMapCenter([location?.latitude, location?.longitude]);
+      setMapZoom(MAX_ZOOM);
+      return;
+    }
+
+    const country = COUNTRIES_CENTROID[appModel.attrs.country];
+    if (country.zoom) {
+      setMapCenter([country.lat, country.long]);
+      setMapZoom(country.zoom);
+    }
+  };
+  useEffect(setInitialZoomAndCenter, []);
+
+  // dynamic center when the user moves the map manually
+  const [currentMapCenter, setMapCurrentCenter]: any = useState(mapCenter);
+
+  const attachOnMove = () => {
+    if (!map) return;
+    map.on('moveend', function (s: any) {
+      const { lat, lng } = map.getCenter();
+      setMapCurrentCenter([lat, lng]);
+    });
+    // return () => {
+    //   // TODO: remove the moveend listener
+    // };
+  };
+  useEffect(attachOnMove, [map]);
+
+  const onLocationSelect = (point: Point) => {
     // eslint-disable-next-line no-param-reassign
     sample.attrs.location = point;
     sample.save();
@@ -44,65 +84,32 @@ const MapComponent: FC<Props> = ({ sample }) => {
     goBack();
   };
 
-  const zoomToSelectedMarker = () => {
-    if (!map || !sample.attrs.location) return;
-
-    map.setView(
-      [sample.attrs.location?.latitude, sample.attrs.location?.longitude],
-      MAX_ZOOM
-    );
-  };
-  useEffect(zoomToSelectedMarker, [map]);
-
-  const getMarker = (point: Point) => {
-    const isCurrentlySelected =
-      sample.attrs.location?.latitude === point.latitude &&
-      sample.attrs.location?.longitude === point.longitude;
-
-    return (
-      <Marker
-        key={point.id}
-        point={point}
-        updateRecord={updateRecord}
-        isCurrentlySelected={isCurrentlySelected}
-      />
-    );
-  };
-  const getMarkers = () => pointData.map(getMarker);
+  const getMarker = (point: Point): JSX.Element => (
+    <Marker
+      key={point.id}
+      point={point}
+      onSelect={onLocationSelect}
+      isSelected={hasLocationMatch(sample, point)}
+    />
+  );
+  const markers = pointData.map(getMarker);
 
   function recenterMapToCurrentLocation(currentLocation: any) {
     if (!currentLocation) return;
 
-    map.setView(
-      new Leaflet.LatLng(currentLocation.latitude, currentLocation.longitude),
-      5
-    );
+    setMapCenter([currentLocation.latitude, currentLocation.longitude]);
+    setMapZoom(MAX_ZOOM);
   }
-
-  const getCentroide: any = () => {
-    const countryCentroid = COUNTRIES_CENTROID[appModel.attrs.country];
-
-    if (sample.attrs.location?.latitude)
-      return [
-        sample.attrs.location?.latitude,
-        sample.attrs.location?.longitude,
-      ];
-
-    if (!countryCentroid) return DEFAULT_CENTER;
-    DEFAULT_ZOOM = countryCentroid.zoom ? countryCentroid.zoom : 5;
-
-    return [countryCentroid.lat, countryCentroid.long];
-  };
 
   const isLocationCurrentlySelected =
     sample.attrs.location?.latitude && sample.attrs.location?.longitude;
+
+  const isDisabled = sample.isUploaded();
 
   return (
     <MapContainer
       id="moth-survey-map"
       whenCreated={assignRef}
-      zoom={DEFAULT_ZOOM}
-      center={getCentroide()}
       minZoom={4}
       tap={!isPlatform('ios')} // TODO: https://github.com/Leaflet/Leaflet/issues/7255
     >
@@ -111,7 +118,7 @@ const MapComponent: FC<Props> = ({ sample }) => {
         url="https://api.mapbox.com/styles/v1/cehapps/cipqvo0c0000jcknge1z28ejp/tiles/256/{z}/{x}/{y}?access_token={accessToken}"
         accessToken={CONFIG.map.mapboxApiKey}
       />
-      <MarkerClusterGroup>{getMarkers()}</MarkerClusterGroup>
+      <MarkerClusterGroup>{markers}</MarkerClusterGroup>
 
       {!isDisabled && (
         <MapControl position="topleft" className="gps-button">
@@ -124,8 +131,8 @@ const MapComponent: FC<Props> = ({ sample }) => {
       )}
       <BottomSheet
         pointData={pointData}
-        centroid={getCentroide()}
-        updateRecord={updateRecord}
+        centroid={currentMapCenter}
+        updateRecord={onLocationSelect}
       />
     </MapContainer>
   );
