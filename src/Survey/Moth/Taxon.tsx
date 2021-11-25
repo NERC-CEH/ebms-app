@@ -80,7 +80,7 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
       occurrence.attrs.taxon = taxon;
       occurrence.save();
 
-      navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
+      goBack();
       return;
     }
 
