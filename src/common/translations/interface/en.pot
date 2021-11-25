@@ -1441,11 +1441,11 @@ msgstr "Moths list"
 msgid "Moth Photo"
 msgstr "Moth Photo"
 
-# Context term 
+# Identifier attribute info message
 msgid "Enter the recorder's name, if different."
 msgstr "Enter the recorder's name, if different."
 
-# Context term 
+# Identifier attribute placeholder 
 msgid "Recorder name"
 msgstr "Recorder name"
 
@@ -1456,3 +1456,15 @@ msgstr "Lat"
 # Longitude 
 msgid "Long"
 msgstr "Long"
+
+# Moth survey attribute label
+msgid "Count inside"
+msgstr "Count inside"
+
+# Moth survey attribute label
+msgid "Count outside"
+msgstr "Count outside"
+
+# Moth survey photo picker label
+msgid "Moth Photos"
+msgstr "Moth Photos"
