@@ -1,4 +1,8 @@
 #bottom-sheet {
+  .react-modal-sheet-header {
+    height: 30px !important;
+  }
+
   .box-container {
     height: 80px;
     border-bottom: 1px solid #e1e1e1;
