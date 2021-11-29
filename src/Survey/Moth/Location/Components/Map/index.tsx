@@ -142,8 +142,11 @@ const MapComponent: FC<Props> = ({ sample }) => {
           />
           <MarkerClusterGroup>{markers}</MarkerClusterGroup>
 
-          {!isDisabled && (
-            <MapControl position="topleft" className="gps-button">
+            <MapControl
+              position="topleft"
+              className="gps-button"
+              isDisabled={isDisabled}
+            >
               <GPSButton
                 onLocationChange={recenterMapToCurrentLocation}
                 map={map}
