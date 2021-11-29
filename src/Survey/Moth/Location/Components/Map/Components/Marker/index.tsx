@@ -3,18 +3,18 @@ import L from 'leaflet';
 import { Marker as LeafletMarker, Popup } from 'react-leaflet';
 import { IonButton, IonIcon, IonLabel } from '@ionic/react';
 import { locationOutline, eyeOutline } from 'ionicons/icons';
-import { Point } from 'common/types';
+import { MothTrap } from 'common/types';
 import clsx from 'clsx';
 import './styles.scss';
 
 interface Props {
-  point: Point;
-  onSelect: (point: Point) => void;
+  point: MothTrap;
+  onSelect: (point: MothTrap) => void;
   isSelected: boolean;
 }
 
 const Marker: FC<Props> = ({ point, onSelect, isSelected }) => {
-  const { latitude, longitude } = point;
+  const { latitude, longitude, name } = point;
 
   const getIcon = () =>
     L.divIcon({
@@ -30,7 +30,7 @@ const Marker: FC<Props> = ({ point, onSelect, isSelected }) => {
         <div>
           <IonIcon icon={locationOutline} />
           <div>
-            <IonLabel>{point.name}</IonLabel>
+            <IonLabel>{name}</IonLabel>
           </div>
         </div>
         <div>

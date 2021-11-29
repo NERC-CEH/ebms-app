@@ -1,23 +1,23 @@
 import React, { FC } from 'react';
 import { IonLabel, IonIcon } from '@ionic/react';
 import { pinOutline, arrowForwardOutline } from 'ionicons/icons';
-import { Point } from 'common/types';
+import { MothTrap } from 'common/types';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import './styles.scss';
 
 interface Props {
-  point: Point;
+  point: MothTrap;
   updateRecord: any;
+  isSelected?: boolean;
 }
 
-const PointEntry: FC<Props> = ({ point, updateRecord }) => {
-  const { name, distance, latitude, longitude } = point;
-  const currentlySelected = point.distance === '0.00';
+const PointEntry: FC<Props> = ({ point, updateRecord, isSelected }) => {
+  const { name, latitude, longitude, distance } = point;
 
   const setLocation = () => updateRecord(point);
 
-  if (currentlySelected) return null;
+  if (isSelected) return null;
 
   return (
     <div className="box-container" onClick={setLocation}>

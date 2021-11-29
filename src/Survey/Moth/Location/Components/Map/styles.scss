@@ -1,7 +1,15 @@
 #moth-survey-map {
-    height: 100%;
-    width: 100vw;
-    background-color: #5d5d5d;
+  height: 100%;
+  width: 100vw;
+  background-color: #5d5d5d;
+
+  ion-spinner {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9999999;
+    color: white;
+  }
 
   .leaflet-control-attribution.leaflet-control {
     background: transparent;

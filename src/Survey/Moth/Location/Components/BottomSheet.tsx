@@ -1,21 +1,31 @@
 import React, { FC, useEffect, useState } from 'react';
 import Sheet, { SheetRef } from 'react-modal-sheet';
+import Sample from 'models/sample';
 import { useIonViewWillLeave } from '@ionic/react';
 import { observer } from 'mobx-react';
 import turf from '@turf/distance';
-import { Point } from 'common/types';
+import { MothTrap } from 'common/types';
 import BottomSheetPointEntry from './BottomSheetPointEntry';
 
 const SNAP_POSITIONS = [0.8, 0.7, 0.6, 0.5, 0.4, 0.22, 0.05];
 const DEFAULT_SNAP_POSITION = SNAP_POSITIONS.length - 2;
 
+const hasLocationMatch = (sample: typeof Sample, point: MothTrap) =>
+  sample.attrs.location?.id === point.id;
+
 interface Props {
-  pointData: any;
+  pointData: MothTrap;
   centroid: any;
   updateRecord: any;
+  sample: typeof Sample;
 }
 
-const BottomSheet: FC<Props> = ({ pointData, centroid, updateRecord }) => {
+const BottomSheet: FC<Props> = ({
+  pointData,
+  centroid,
+  updateRecord,
+  sample,
+}) => {
   const pointDataWrap: any = pointData;
   const [unmountState, setUnmount] = useState<boolean>(false);
   const [pointsWithDistance, setDistance] = useState<any>([]);
@@ -25,8 +35,10 @@ const BottomSheet: FC<Props> = ({ pointData, centroid, updateRecord }) => {
   const onClose = () => () => snapTo;
 
   const getDistance: any = () => {
-    const getPointsWithDistance: any = (point: Point) => {
-      const from = [point.longitude, point.latitude]; // turf long, lat first
+    const getPointsWithDistance = (point: MothTrap) => {
+      const { latitude, longitude } = point;
+
+      const from = [longitude, latitude]; // turf long, lat first
       const to = [...centroid].reverse(); // turf long, lat first
       const distance: number = turf(from, to, { units: 'kilometers' });
 
@@ -42,11 +54,12 @@ const BottomSheet: FC<Props> = ({ pointData, centroid, updateRecord }) => {
   const byDistance = (pointA: any, pointB: any) =>
     pointA?.distance - pointB?.distance;
 
-  const getPoint = (point: Point) => (
+  const getPoint = (point: MothTrap) => (
     <BottomSheetPointEntry
       key={point.id}
       point={point}
       updateRecord={updateRecord}
+      isSelected={hasLocationMatch(sample, point)}
     />
   );
 
