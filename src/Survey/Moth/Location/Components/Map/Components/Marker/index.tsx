@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import L from 'leaflet';
 import { Marker as LeafletMarker, Popup } from 'react-leaflet';
 import { IonButton, IonIcon, IonLabel } from '@ionic/react';
-import { locationOutline, eyeOutline } from 'ionicons/icons';
+import { locationOutline } from 'ionicons/icons';
 import { MothTrap } from 'common/types';
 import clsx from 'clsx';
 import './styles.scss';
@@ -31,12 +31,6 @@ const Marker: FC<Props> = ({ point, onSelect, isSelected }) => {
           <IonIcon icon={locationOutline} />
           <div>
             <IonLabel>{name}</IonLabel>
-          </div>
-        </div>
-        <div>
-          <IonIcon icon={eyeOutline} />
-          <div>
-            <IonLabel>LED light</IonLabel>
           </div>
         </div>
 
