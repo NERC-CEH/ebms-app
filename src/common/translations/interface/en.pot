@@ -1470,5 +1470,5 @@ msgid "Moth Photos"
 msgstr "Moth Photos"
 
 # Moth survey details label
-msgid "Moth trap"
-msgstr "Moth trap"
+msgid "Moth traps"
+msgstr "Moth traps"
