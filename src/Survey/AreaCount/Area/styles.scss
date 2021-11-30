@@ -21,42 +21,6 @@
     }
   }
 
-  .gps-button {
-    top: 94px !important;
-    border: 0px !important;
-
-    button {
-      margin: 0 !important;
-      border: 1px solid rgba(0, 0, 0, 0.2) !important;
-    }
-  }
-
-  .leaflet-control .geolocate-btn {
-    border-radius: 4px;
-    background: white;
-    width: 42px;
-    height: 42px;
-    margin-left: 1px;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    background-clip: padding-box;
-    text-align: center;
-    padding: 0;
-    top: 94px;
-    left: 0;
-    margin-left: 8px;
-
-    ion-icon {
-      width: 21px;
-      height: 21px;
-      margin-top: 4px;
-    }
-  }
-  .leaflet-control .geolocate-btn.spin ion-icon {
-    -webkit-animation: spin 4s linear infinite;
-    -moz-animation: spin 4s linear infinite;
-    animation: spin 4s linear infinite;
-  }
-
   @-moz-keyframes spin {
     100% {
       -moz-transform: rotate(360deg);

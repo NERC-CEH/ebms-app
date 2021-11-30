@@ -338,7 +338,7 @@ class MapInfo extends React.Component {
 
   render() {
     return (
-      <MapControl position="topleft" className="gps-button">
+      <MapControl position="topleft">
         <button
           className={`geolocate-btn ${this.state.locating ? 'spin' : ''}`}
           onClick={this.onGeolocate}
