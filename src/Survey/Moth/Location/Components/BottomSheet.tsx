@@ -15,16 +15,16 @@ const hasLocationMatch = (sample: typeof Sample, point: MothTrap) =>
 
 interface Props {
   pointData: MothTrap;
-  centroid: any;
   updateRecord: any;
   sample: typeof Sample;
+  centroid: any;
 }
 
 const BottomSheet: FC<Props> = ({
   pointData,
-  centroid,
   updateRecord,
   sample,
+  centroid,
 }) => {
   const pointDataWrap: any = pointData;
   const [unmountState, setUnmount] = useState<boolean>(false);

@@ -1,33 +1,19 @@
-import React, { FC, useState, useContext, useEffect } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import CONFIG from 'common/config/config';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import MapControl from 'common/Components/LeafletControl';
 import { observer } from 'mobx-react';
 import { device } from '@apps';
-import {
-  NavContext,
-  useIonViewDidEnter,
-  isPlatform,
-  IonSpinner,
-} from '@ionic/react';
-import { Trans as T } from 'react-i18next';
-import MarkerClusterGroup from 'react-leaflet-markercluster';
+import { useIonViewDidEnter, isPlatform, IonSpinner } from '@ionic/react';
 import GPSButton from 'common/Components/GPSButton';
 import Leaflet from 'leaflet';
 import appModel from 'models/appModel';
-import Sample from 'models/sample';
-import { MothTrap } from 'common/types';
 import COUNTRIES_CENTROID from '../../../country_centroide';
-import Marker from './Marker';
-import 'leaflet.markercluster';
-import 'leaflet/dist/leaflet.css';
+import MarkerClusterGroup from './MarkerCluster';
 
 const MAX_ZOOM = 18;
 const DEFAULT_ZOOM = 5;
-const DEFAULT_CENTER: any = [51.505, -0.09];
-
-const hasLocationMatch = (sample: typeof Sample, point: MothTrap) =>
-  sample.attrs.location?.id === point.id;
+const DEFAULT_CENTER: number[] = [51.505, -0.09];
 
 const Map: FC<any> = ({
   sample,
@@ -36,11 +22,9 @@ const Map: FC<any> = ({
   onLocationSelect,
   onMovedCoords,
 }) => {
-  const { mothTraps } = userModel.attrs;
-
   const [map, setMap]: any = useState(null);
   const [mapZoom, setMapZoom]: any = useState(DEFAULT_ZOOM);
-  const [mapCenter, setMapCenter]: any = useState(DEFAULT_CENTER);
+  const [mapCenter, setMapCenter] = useState(DEFAULT_CENTER);
 
   const assignRef = (mapRef: Leaflet.Map) => setMap(mapRef);
 
@@ -56,6 +40,7 @@ const Map: FC<any> = ({
 
     if (location) {
       setMapCenter([location?.latitude, location?.longitude]);
+      onMovedCoords([location?.latitude, location?.longitude]);
       setMapZoom(MAX_ZOOM);
       return;
     }
@@ -63,33 +48,33 @@ const Map: FC<any> = ({
     const country = COUNTRIES_CENTROID[appModel.attrs.country];
     if (country.zoom) {
       setMapCenter([country.lat, country.long]);
+      onMovedCoords([country.lat, country.long]);
+
       setMapZoom(country.zoom);
     }
   };
   useEffect(setInitialZoomAndCenter, []);
 
-  const attachOnMove = () => {
-    if (!map) return;
-    map.on('moveend', function (s: any) {
-      const { lat, lng } = map.getCenter();
-      onMovedCoords([lat, lng]);
-    });
-    // return () => {
-    //   // TODO: remove the moveend listener
-    // };
-  };
-  useEffect(attachOnMove, [map]);
+  const attachOnMoveWrap = () => {
+    const attachOnMove = () => {
+      if (!map) return;
+      const onMoveEnd = (): void => {
+        const { lat, lng } = map.getCenter();
+        onMovedCoords([lat, lng]);
+      };
 
-  const getMarker = (point: MothTrap): JSX.Element => (
-    <Marker
-      key={point.id}
-      point={point}
-      onSelect={onLocationSelect}
-      isSelected={hasLocationMatch(sample, point)}
-    />
-  );
-  if (mothTraps.length === null) return null;
-  const markers = mothTraps.map(getMarker);
+      map.on('moveend', onMoveEnd);
+    };
+    attachOnMove();
+
+    return function cleanup() {
+      if (!map) return;
+
+      map.off('moveend');
+    };
+  };
+
+  useEffect(attachOnMoveWrap, [map]);
 
   function recenterMapToCurrentLocation(currentLocation: any) {
     if (!currentLocation) return;
@@ -119,13 +104,13 @@ const Map: FC<any> = ({
             accessToken={CONFIG.map.mapboxApiKey}
           />
 
-          <MarkerClusterGroup>{markers}</MarkerClusterGroup>
+          <MarkerClusterGroup
+            onLocationSelect={onLocationSelect}
+            userModel={userModel}
+            sample={sample}
+          />
 
-          <MapControl
-            position="topleft"
-            className="gps-button"
-            isDisabled={isDisabled}
-          >
+          <MapControl position="topleft" isDisabled={isDisabled}>
             <GPSButton
               onLocationChange={recenterMapToCurrentLocation}
               map={map}
