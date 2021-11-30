@@ -1476,3 +1476,11 @@ msgstr "Moth traps"
 # Moth survey details label
 msgid "Moth trap"
 msgstr "Moth trap"
+
+# Moth survey Location Info message 
+msgid "You have not created any moth traps yet. To create one please go to the <2>website.</2>"
+msgstr "You have not created any moth traps yet. To create one please go to the <2>website.</2>"
+
+# Moth survey Location Info message
+msgid "To see the map please connect to the internet."
+msgstr "To see the map please connect to the internet."

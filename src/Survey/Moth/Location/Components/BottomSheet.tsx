@@ -1,9 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
 import Sheet, { SheetRef } from 'react-modal-sheet';
 import Sample from 'models/sample';
-import { InfoMessage } from '@apps';
+import { InfoMessage, device } from '@apps';
 import { useIonViewWillLeave } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import turf from '@turf/distance';
 import { informationCircleOutline } from 'ionicons/icons';
@@ -12,6 +11,7 @@ import BottomSheetPointEntry from './BottomSheetPointEntry';
 
 const SNAP_POSITIONS = [0.8, 0.7, 0.6, 0.5, 0.4, 0.22, 0.05];
 const DEFAULT_SNAP_POSITION = SNAP_POSITIONS.length - 2;
+const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 1;
 
 const hasLocationMatch = (sample: typeof Sample, point: MothTrap) =>
   sample.attrs.location?.id === point.id;
@@ -74,9 +74,10 @@ const BottomSheet: FC<Props> = ({
           color="black"
           className="info-message"
         >
-          You have not created any moth trap yet. To create please go to the{' '}
+          You have not created any moth traps yet. To create one please go to
+          the{' '}
           <a href="https://test-brc-ebms.pantheonsite.io/my-moth-trap-sites">
-            Moth Trap website.
+            website.
           </a>
         </InfoMessage>
       );
@@ -90,13 +91,17 @@ const BottomSheet: FC<Props> = ({
 
   if (unmountState) return null;
 
+  const defeaultPosition = device.isOnline()
+    ? DEFAULT_SNAP_POSITION
+    : DEFAULT_SNAP_POSITION_IF_NO_CONNECTION;
+
   return (
     <Sheet
       id="bottom-sheet"
       ref={ref}
       isOpen
       snapPoints={SNAP_POSITIONS}
-      initialSnap={DEFAULT_SNAP_POSITION}
+      initialSnap={defeaultPosition}
       onClose={onClose}
     >
       <Sheet.Container>

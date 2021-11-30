@@ -19,15 +19,6 @@ interface Props {
   isFetchingTraps: boolean | null;
 }
 
-const infoMessage = (
-  <div className="info-background-message-wrapper">
-    <InfoBackgroundMessage className="text-center">
-      <IonIcon icon={wifiOutline} />{' '}
-      <T>To see the map please connect to the internet.</T>
-    </InfoBackgroundMessage>
-  </div>
-);
-
 const MapComponent: FC<Props> = ({ sample, userModel, isFetchingTraps }) => {
   const { mothTraps } = userModel.attrs;
   const { goBack } = useContext(NavContext);
@@ -43,12 +34,8 @@ const MapComponent: FC<Props> = ({ sample, userModel, isFetchingTraps }) => {
     goBack();
   };
 
-  const isDeviceOnline = device.isOnline();
-
   return (
     <>
-      {!isDeviceOnline && infoMessage}
-
       <Map
         sample={sample}
         isFetchingTraps={isFetchingTraps}
