@@ -1,9 +1,12 @@
 import React, { FC, useEffect, useState } from 'react';
 import Sheet, { SheetRef } from 'react-modal-sheet';
 import Sample from 'models/sample';
+import { InfoMessage } from '@apps';
 import { useIonViewWillLeave } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import turf from '@turf/distance';
+import { informationCircleOutline } from 'ionicons/icons';
 import { MothTrap } from 'common/types';
 import BottomSheetPointEntry from './BottomSheetPointEntry';
 
@@ -63,7 +66,24 @@ const BottomSheet: FC<Props> = ({
     />
   );
 
-  const getPoints = () => pointsWithDistance.sort(byDistance).map(getPoint);
+  const getPoints = () => {
+    if (!pointsWithDistance.length) {
+      return (
+        <InfoMessage
+          icon={informationCircleOutline}
+          color="black"
+          className="info-message"
+        >
+          You have not created any moth trap yet. To create please go to the{' '}
+          <a href="https://test-brc-ebms.pantheonsite.io/my-moth-trap-sites">
+            Moth Trap website.
+          </a>
+        </InfoMessage>
+      );
+    }
+
+    return pointsWithDistance.sort(byDistance).map(getPoint);
+  };
 
   const unMountBottomSheet = () => setUnmount(true); // hack, this component is mounted as a parent with root div
   useIonViewWillLeave(unMountBottomSheet);
