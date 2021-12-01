@@ -1484,3 +1484,11 @@ msgstr "You have not created any moth traps yet. To create one please go to the 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
 msgstr "To see the map please connect to the internet."
+
+# Moth survey validation message
+msgid "Please add the moth trap"
+msgstr "Please add the moth trap"
+
+# Moth survey Location Info message  
+msgid "You have only one moth trap. To create more please go to the <2>website.</2>"
+msgstr "You have only one moth trap. To create more please go to the <2>website.</2>"
