@@ -60,7 +60,7 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
               icon: mothOutsideBoxIcon,
               label: 'Count outside',
               isDisabled,
-              min: 1,
+              min: 0,
             }}
             attr="count-outside"
           />

@@ -20,7 +20,7 @@
     "fetch:all": "npm run fetch:species:data && npm run fetch:species:profiles && npm run fetch:species:commonNames"
   },
   "dependencies": {
-    "@bit/flumens.apps.attr": "^2.2.5",
+    "@bit/flumens.apps.attr": "2.2.7",
     "@bit/flumens.apps.attr-page": "3.0.12",
     "@bit/flumens.apps.collapse": "0.2.0",
     "@bit/flumens.apps.date": "0.2.1",
