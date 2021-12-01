@@ -47,7 +47,7 @@ const DetailsMain: FC<Props> = ({ sample }) => {
             model={sample}
             attr="date"
             input="date"
-            inputProps={surveyDateProps}
+            inputProps={{ ...surveyDateProps, disabled: isDisabled }}
           />
           <MenuAttrItemFromModel
             model={sample}
