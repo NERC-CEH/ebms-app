@@ -67,6 +67,21 @@ const BottomSheet: FC<Props> = ({
   );
 
   const getPoints = () => {
+    if (pointsWithDistance.length === 1 && sample.attrs.location) {
+      return (
+        <InfoMessage
+          icon={informationCircleOutline}
+          color="black"
+          className="info-message"
+        >
+          You have only one moth trap. To create more please go to the{' '}
+          <a href="https://test-brc-ebms.pantheonsite.io/my-moth-trap-sites">
+            website.
+          </a>
+        </InfoMessage>
+      );
+    }
+
     if (!pointsWithDistance.length) {
       return (
         <InfoMessage
