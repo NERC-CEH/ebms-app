@@ -4,12 +4,51 @@ import { Survey } from 'common/config/surveys';
 import { personOutline, calendarOutline } from 'ionicons/icons';
 import { commentAttr } from 'Survey/common/config';
 
+const fixedLocationSchema = Yup.object().shape({
+  latitude: Yup.number().required(),
+  longitude: Yup.number().required(),
+  name: Yup.string().required(),
+});
+
+const validateLocation = (val: any) => {
+  try {
+    fixedLocationSchema.validateSync(val);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
+export const verifyLocationSchema = Yup.mixed().test(
+  'location',
+  'Please add the moth trap',
+  validateLocation
+);
+
+const locationAttr = {
+  remote: {
+    id: 'location_id',
+    values(location, submission) {
+      // eslint-disable-next-line
+      submission.values = {
+        ...submission.values,
+        ...{
+          entered_sref: location.centroid_sref,
+        },
+      };
+
+      return location.id;
+    },
+  },
+};
+
 const survey: Survey = {
   id: 681,
   name: 'moth',
   label: 'Moth survey',
 
   attrs: {
+    location: locationAttr,
     date: {
       menuProps: { parse: 'date', icon: calendarOutline },
       pageProps: {
@@ -88,20 +127,20 @@ const survey: Survey = {
         },
       });
     },
+  },
 
-    verify(attrs) {
-      try {
-        const occurrenceScheme = Yup.object().shape({
-          taxon: Yup.object().nullable().required('Species is missing.'),
-        });
+  verify(attrs) {
+    try {
+      const sampleSchema = Yup.object().shape({
+        location: verifyLocationSchema,
+      });
 
-        occurrenceScheme.validateSync(attrs, { abortEarly: false });
-      } catch (attrError) {
-        return attrError;
-      }
+      sampleSchema.validateSync(attrs, { abortEarly: false });
+    } catch (attrError) {
+      return attrError;
+    }
 
-      return null;
-    },
+    return null;
   },
 
   create(AppSample, recorder, surveyId = survey.id, surveyName = survey.name) {
@@ -112,6 +151,7 @@ const survey: Survey = {
       },
 
       attrs: {
+        location: null,
         comment: null,
         recorder,
       },

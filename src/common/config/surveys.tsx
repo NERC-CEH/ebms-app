@@ -32,6 +32,8 @@ export interface Survey {
     verify?: (attrs: any) => any;
   };
 
+  verify?: (attrs: any) => any;
+
   create: (
     sample: any,
     params?: any,
