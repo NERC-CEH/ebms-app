@@ -4,16 +4,22 @@ import Leaflet from 'leaflet';
 import GPS from 'helpers/GPS';
 import { locateOutline } from 'ionicons/icons';
 
+const MAX_ZOOM = 18;
+
 interface Props {
   onLocationChange: any;
   map: Leaflet.Map;
   isLocationCurrentlySelected?: boolean;
+  isDisabled?: boolean;
+  currentSelectedLocation?: any;
 }
 
 const GPSButton: FC<Props> = ({
   onLocationChange,
   map,
   isLocationCurrentlySelected,
+  isDisabled,
+  currentSelectedLocation,
 }) => {
   const [currentLocation, setCurrentLocation] = useState<any>(null);
   const [locatingJobId, setLocating] = useState<any>(false);
@@ -40,6 +46,13 @@ const GPSButton: FC<Props> = ({
   };
 
   const onGeolocate = () => {
+    if (isDisabled && currentSelectedLocation) {
+      if (!map) return;
+
+      map.setView(currentSelectedLocation, MAX_ZOOM);
+      return;
+    }
+
     if (locatingJobId) {
       stopGPS(locatingJobId);
       return;

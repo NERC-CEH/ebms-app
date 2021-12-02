@@ -100,7 +100,6 @@ const Map: FC<Props> = ({
   const isLocationCurrentlySelected =
     sample.attrs.location?.latitude && sample.attrs.location?.longitude;
 
-  const isDisabled = sample.isUploaded();
   const isDeviceOnline = device.isOnline();
 
   if (!isDeviceOnline) {
@@ -135,11 +134,13 @@ const Map: FC<Props> = ({
         isDisabled={isDisabled}
       />
 
-      <MapControl position="topleft" isDisabled={isDisabled}>
+      <MapControl position="topleft">
         <GPSButton
           onLocationChange={recenterMapToCurrentLocation}
           map={map}
           isLocationCurrentlySelected={!!isLocationCurrentlySelected}
+          isDisabled={isDisabled}
+          currentSelectedLocation={mapCenter}
         />
       </MapControl>
 
