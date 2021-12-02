@@ -41,6 +41,8 @@ const HomeMain: FC<Props> = ({
       navigate(`/survey/moth/${sample.cid}/taxon`);
     };
 
+    if (disabled) return null;
+
     return (
       <IonButton color="primary" className="add" onClick={onClick}>
         <IonLabel>
