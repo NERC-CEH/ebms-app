@@ -28,7 +28,7 @@ export const verifyLocationSchema = Yup.mixed().test(
 const locationAttr = {
   remote: {
     id: 'location_id',
-    values(location, submission) {
+    values(location: any, submission: any) {
       // eslint-disable-next-line
       submission.values = {
         ...submission.values,
