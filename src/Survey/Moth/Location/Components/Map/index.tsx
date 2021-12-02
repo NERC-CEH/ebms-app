@@ -47,12 +47,14 @@ const MapComponent: FC<Props> = ({
         isDisabled={isDisabled}
       />
 
-      <BottomSheet
-        pointData={mothTraps}
-        centroid={currentMapCenter}
-        updateRecord={onLocationSelect}
-        sample={sample}
-      />
+      {!isDisabled && (
+        <BottomSheet
+          pointData={mothTraps}
+          centroid={currentMapCenter}
+          updateRecord={onLocationSelect}
+          sample={sample}
+        />
+      )}
     </>
   );
 };
