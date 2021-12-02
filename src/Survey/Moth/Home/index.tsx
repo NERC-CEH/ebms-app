@@ -14,11 +14,6 @@ import './styles.scss';
 
 const { Haptics } = Plugins;
 
-function setSurveyEndTime(sample: typeof Sample) {
-  sample.attrs.surveyEndime = new Date(); // eslint-disable-line no-param-reassign
-  return sample.save();
-}
-
 function showDeleteSpeciesPrompt(occ: typeof Occurrence) {
   const prompt = () => {
     const name = occ.attrs.taxon.scientific_name;
@@ -63,8 +58,6 @@ const HomeController: FC<Props> = ({ sample }) => {
     await appModel.save();
 
     const saveAndReturn = () => {
-      setSurveyEndTime(sample);
-
       sample.cleanUp();
       sample.save();
       navigate(`/home/user-surveys`, 'root');
