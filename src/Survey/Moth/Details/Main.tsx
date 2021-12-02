@@ -27,7 +27,6 @@ const DetailsMain: FC<Props> = ({ sample }) => {
             routerLink={`${url}/location`}
             icon={mothInsideBoxIcon}
             label="Moth trap"
-            disabled={isDisabled}
             skipValueTranslation
             value={locationName}
           />

@@ -11,9 +11,10 @@ interface Props {
   point: MothTrap;
   onSelect: (point: MothTrap) => void;
   isSelected: boolean;
+  isDisabled?: boolean;
 }
 
-const Marker: FC<Props> = ({ point, onSelect, isSelected }) => {
+const Marker: FC<Props> = ({ point, onSelect, isSelected, isDisabled }) => {
   const { latitude, longitude, name } = point;
 
   const getIcon = () =>
@@ -34,7 +35,9 @@ const Marker: FC<Props> = ({ point, onSelect, isSelected }) => {
           </div>
         </div>
 
-        {!isSelected && <IonButton onClick={onSelectWrap}>Select</IonButton>}
+        {!isSelected && !isDisabled && (
+          <IonButton onClick={onSelectWrap}>Select</IonButton>
+        )}
       </Popup>
     </LeafletMarker>
   );

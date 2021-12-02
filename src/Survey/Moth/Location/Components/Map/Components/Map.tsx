@@ -1,6 +1,8 @@
 import React, { FC, useState, useEffect } from 'react';
 import CONFIG from 'common/config/config';
 import { MapContainer, TileLayer } from 'react-leaflet';
+import Sample from 'models/sample';
+import UserModelTypes from 'models/userModel';
 import MapControl from 'common/Components/LeafletControl';
 import { observer } from 'mobx-react';
 import { device, InfoMessage } from '@apps';
@@ -8,6 +10,7 @@ import { useIonViewDidEnter, isPlatform, IonSpinner } from '@ionic/react';
 import { wifiOutline } from 'ionicons/icons';
 import GPSButton from 'common/Components/GPSButton';
 import Leaflet from 'leaflet';
+import { MothTrap } from 'common/types';
 import appModel from 'models/appModel';
 import COUNTRIES_CENTROID from '../../../country_centroide';
 import MarkerClusterGroup from './MarkerCluster';
@@ -16,12 +19,22 @@ const MAX_ZOOM = 18;
 const DEFAULT_ZOOM = 5;
 const DEFAULT_CENTER: number[] = [51.505, -0.09];
 
-const Map: FC<any> = ({
+interface Props {
+  sample: typeof Sample;
+  userModel: typeof UserModelTypes;
+  onLocationSelect: (mothTrap: MothTrap) => void;
+  onMovedCoords: any;
+  isFetchingTraps?: boolean | null;
+  isDisabled?: boolean;
+}
+
+const Map: FC<Props> = ({
   sample,
   isFetchingTraps,
   userModel,
   onLocationSelect,
   onMovedCoords,
+  isDisabled,
 }) => {
   const [map, setMap]: any = useState(null);
   const [mapZoom, setMapZoom]: any = useState(DEFAULT_ZOOM);
@@ -119,6 +132,7 @@ const Map: FC<any> = ({
         onLocationSelect={onLocationSelect}
         mothTraps={mothTraps}
         sample={sample}
+        isDisabled={isDisabled}
       />
 
       <MapControl position="topleft" isDisabled={isDisabled}>

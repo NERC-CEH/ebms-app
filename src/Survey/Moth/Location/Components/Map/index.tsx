@@ -1,10 +1,6 @@
 import React, { FC, useContext, useState } from 'react';
 import { observer } from 'mobx-react';
-import { device, InfoBackgroundMessage } from '@apps';
-import { IonIcon, NavContext } from '@ionic/react';
-import { wifiOutline } from 'ionicons/icons';
-import { Trans as T } from 'react-i18next';
-
+import { NavContext } from '@ionic/react';
 import Sample from 'models/sample';
 import { MothTrap } from 'common/types';
 import BottomSheet from '../BottomSheet';
@@ -17,9 +13,15 @@ interface Props {
   sample: typeof Sample;
   userModel: any;
   isFetchingTraps: boolean | null;
+  isDisabled?: boolean;
 }
 
-const MapComponent: FC<Props> = ({ sample, userModel, isFetchingTraps }) => {
+const MapComponent: FC<Props> = ({
+  sample,
+  userModel,
+  isFetchingTraps,
+  isDisabled,
+}) => {
   const { mothTraps } = userModel.attrs;
   const { goBack } = useContext(NavContext);
 
@@ -42,6 +44,7 @@ const MapComponent: FC<Props> = ({ sample, userModel, isFetchingTraps }) => {
         userModel={userModel}
         onLocationSelect={onLocationSelect}
         onMovedCoords={setMapCurrentCenter}
+        isDisabled={isDisabled}
       />
 
       <BottomSheet

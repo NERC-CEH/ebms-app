@@ -13,7 +13,11 @@ interface Props {
 const Location: FC<Props> = ({ sample }) => {
   const [isFetchingTraps, setFetchingTraps] = useState<boolean | null>(null);
 
+  const isDisabled = sample.isUploaded();
+
   const refreshMothTrapsWrap = () => {
+    if (isDisabled) return;
+
     async function refreshMothTraps() {
       try {
         setFetchingTraps(true);
@@ -34,6 +38,7 @@ const Location: FC<Props> = ({ sample }) => {
           sample={sample}
           userModel={userModel}
           isFetchingTraps={isFetchingTraps}
+          isDisabled={isDisabled}
         />
       </Main>
     </Page>
