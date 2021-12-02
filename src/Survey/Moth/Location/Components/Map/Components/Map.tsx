@@ -37,7 +37,7 @@ const Map: FC<Props> = ({
   isDisabled,
 }) => {
   const [map, setMap]: any = useState(null);
-  const [mapZoom, setMapZoom]: any = useState(DEFAULT_ZOOM);
+  const [mapZoom, setMapZoom] = useState(DEFAULT_ZOOM);
   const [mapCenter, setMapCenter] = useState(DEFAULT_CENTER);
 
   const assignRef = (mapRef: Leaflet.Map) => setMap(mapRef);

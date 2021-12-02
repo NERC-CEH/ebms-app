@@ -28,5 +28,5 @@ export interface MothTrap {
   public: string;
   updated_by_id: string;
   updated_on: string;
-  distance?: number;
+  distance?: number | undefined;
 }

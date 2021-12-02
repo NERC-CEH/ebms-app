@@ -7,67 +7,70 @@ import { observer } from 'mobx-react';
 import turf from '@turf/distance';
 import { informationCircleOutline } from 'ionicons/icons';
 import { MothTrap } from 'common/types';
-import BottomSheetPointEntry from './BottomSheetPointEntry';
+import BottomSheetMothTrapEntry from './BottomSheetMothTrapEntry';
 
 const SNAP_POSITIONS = [0.8, 0.7, 0.6, 0.5, 0.4, 0.22, 0.05];
 const DEFAULT_SNAP_POSITION = SNAP_POSITIONS.length - 2;
 const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 1;
 
-const hasLocationMatch = (sample: typeof Sample, point: MothTrap) =>
-  sample.attrs.location?.id === point.id;
+const hasLocationMatch = (sample: typeof Sample, mothTrap: MothTrap) =>
+  sample.attrs.location?.id === mothTrap.id;
 
 interface Props {
-  pointData: MothTrap;
-  updateRecord: any;
+  mothTrapData: MothTrap[];
+  updateRecord: (mothTrap: MothTrap) => void;
   sample: typeof Sample;
-  centroid: any;
+  centroid: number[];
 }
 
 const BottomSheet: FC<Props> = ({
-  pointData,
+  mothTrapData,
   updateRecord,
   sample,
   centroid,
 }) => {
-  const pointDataWrap: any = pointData;
-  const [unmountState, setUnmount] = useState<boolean>(false);
-  const [pointsWithDistance, setDistance] = useState<any>([]);
+  const [unmountState, setUnmount] = useState(false);
+  const [mothTrapsWithDistance, setMothTrapsWithDistance] = useState<any>([]);
 
   const ref = React.useRef<SheetRef>();
   const snapTo = (i: number) => ref.current?.snapTo(i);
   const onClose = () => () => snapTo;
 
-  const getDistance: any = () => {
-    const getPointsWithDistance = (point: MothTrap) => {
-      const { latitude, longitude } = point;
+  const getDistance = () => {
+    const getMothTrapWithDistance = (mothTrap: MothTrap) => {
+      const { latitude, longitude } = mothTrap;
 
       const from = [longitude, latitude]; // turf long, lat first
       const to = [...centroid].reverse(); // turf long, lat first
       const distance: number = turf(from, to, { units: 'kilometers' });
 
-      return { ...point, distance: distance.toFixed(2) };
+      return { ...mothTrap, distance: distance.toFixed(2) };
     };
 
-    return setDistance(pointDataWrap.map(getPointsWithDistance));
+    return setMothTrapsWithDistance(mothTrapData.map(getMothTrapWithDistance));
   };
 
   const getDistanceWrap = () => getDistance();
   useEffect(getDistanceWrap, [centroid]);
 
-  const byDistance = (pointA: any, pointB: any) =>
-    pointA?.distance - pointB?.distance;
+  const byDistance = (mothTrapA: MothTrap, mothTrapB: MothTrap) => {
+    if (!mothTrapA?.distance) return -1;
+    if (!mothTrapB?.distance) return -1;
 
-  const getPoint = (point: MothTrap) => (
-    <BottomSheetPointEntry
-      key={point.id}
-      point={point}
+    return mothTrapA.distance - mothTrapB.distance;
+  };
+
+  const getMothTrap = (mothTrap: MothTrap) => (
+    <BottomSheetMothTrapEntry
+      key={mothTrap.id}
+      mothTrap={mothTrap}
       updateRecord={updateRecord}
-      isSelected={hasLocationMatch(sample, point)}
+      isSelected={hasLocationMatch(sample, mothTrap)}
     />
   );
 
-  const getPoints = () => {
-    if (pointsWithDistance.length === 1 && sample.attrs.location) {
+  const getMothTraps = () => {
+    if (mothTrapsWithDistance.length === 1 && sample.attrs.location) {
       return (
         <InfoMessage
           icon={informationCircleOutline}
@@ -82,7 +85,7 @@ const BottomSheet: FC<Props> = ({
       );
     }
 
-    if (!pointsWithDistance.length) {
+    if (!mothTrapsWithDistance.length) {
       return (
         <InfoMessage
           icon={informationCircleOutline}
@@ -98,7 +101,7 @@ const BottomSheet: FC<Props> = ({
       );
     }
 
-    return pointsWithDistance.sort(byDistance).map(getPoint);
+    return mothTrapsWithDistance.sort(byDistance).map(getMothTrap);
   };
 
   const unMountBottomSheet = () => setUnmount(true); // hack, this component is mounted as a parent with root div
@@ -121,7 +124,7 @@ const BottomSheet: FC<Props> = ({
     >
       <Sheet.Container>
         <Sheet.Header />
-        <Sheet.Content>{getPoints()}</Sheet.Content>
+        <Sheet.Content>{getMothTraps()}</Sheet.Content>
       </Sheet.Container>
     </Sheet>
   );

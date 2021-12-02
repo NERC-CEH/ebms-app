@@ -8,14 +8,14 @@ import clsx from 'clsx';
 import './styles.scss';
 
 interface Props {
-  point: MothTrap;
+  mothTrap: MothTrap;
   onSelect: (point: MothTrap) => void;
   isSelected: boolean;
   isDisabled?: boolean;
 }
 
-const Marker: FC<Props> = ({ point, onSelect, isSelected, isDisabled }) => {
-  const { latitude, longitude, name } = point;
+const Marker: FC<Props> = ({ mothTrap, onSelect, isSelected, isDisabled }) => {
+  const { latitude, longitude, name } = mothTrap;
 
   const getIcon = () =>
     L.divIcon({
@@ -23,7 +23,7 @@ const Marker: FC<Props> = ({ point, onSelect, isSelected, isDisabled }) => {
       html: `<span />`,
     });
 
-  const onSelectWrap = () => onSelect(point);
+  const onSelectWrap = () => onSelect(mothTrap);
 
   return (
     <LeafletMarker icon={getIcon()} position={[latitude, longitude]}>

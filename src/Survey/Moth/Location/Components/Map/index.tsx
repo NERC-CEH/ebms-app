@@ -2,6 +2,7 @@ import React, { FC, useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 import { NavContext } from '@ionic/react';
 import Sample from 'models/sample';
+import UserModelTypes from 'models/userModel';
 import { MothTrap } from 'common/types';
 import BottomSheet from '../BottomSheet';
 import Map from './Components/Map';
@@ -11,7 +12,7 @@ import 'leaflet/dist/leaflet.css';
 
 interface Props {
   sample: typeof Sample;
-  userModel: any;
+  userModel: typeof UserModelTypes;
   isFetchingTraps: boolean | null;
   isDisabled?: boolean;
 }
@@ -26,7 +27,7 @@ const MapComponent: FC<Props> = ({
   const { goBack } = useContext(NavContext);
 
   // dynamic center when the user moves the map manually
-  const [currentMapCenter, setMapCurrentCenter]: any = useState([51, -1]);
+  const [currentMapCenter, setMapCurrentCenter] = useState([51, -1]);
 
   const onLocationSelect = (point: MothTrap) => {
     // eslint-disable-next-line no-param-reassign
@@ -49,7 +50,7 @@ const MapComponent: FC<Props> = ({
 
       {!isDisabled && (
         <BottomSheet
-          pointData={mothTraps}
+          mothTrapData={mothTraps}
           centroid={currentMapCenter}
           updateRecord={onLocationSelect}
           sample={sample}

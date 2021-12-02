@@ -7,15 +7,15 @@ import { Trans as T } from 'react-i18next';
 import './styles.scss';
 
 interface Props {
-  point: MothTrap;
-  updateRecord: any;
+  mothTrap: MothTrap;
+  updateRecord: (mothTrap: MothTrap) => void;
   isSelected?: boolean;
 }
 
-const PointEntry: FC<Props> = ({ point, updateRecord, isSelected }) => {
-  const { name, latitude, longitude, distance } = point;
+const MothTrapEntry: FC<Props> = ({ mothTrap, updateRecord, isSelected }) => {
+  const { name, latitude, longitude, distance } = mothTrap;
 
-  const setLocation = () => updateRecord(point);
+  const setLocation = () => updateRecord(mothTrap);
 
   if (isSelected) return null;
 
@@ -46,4 +46,4 @@ const PointEntry: FC<Props> = ({ point, updateRecord, isSelected }) => {
   );
 };
 
-export default observer(PointEntry);
+export default observer(MothTrapEntry);

@@ -11,7 +11,7 @@ const forceSkipRefresh = (prevProps: any, nextProps: any) =>
 
 interface Props {
   mothTraps: MothTrap[];
-  onLocationSelect: any;
+  onLocationSelect: (mothTrap: MothTrap) => void;
   sample: typeof Sample;
   isDisabled?: boolean;
 }
@@ -22,15 +22,15 @@ const MarkerClusterGroupWrap: FC<Props> = ({
   sample,
   isDisabled,
 }) => {
-  const hasLocationMatch = (smp: typeof Sample, point: MothTrap) =>
-    smp.attrs.location?.id === point.id;
+  const hasLocationMatch = (smp: typeof Sample, mothTrap: MothTrap) =>
+    smp.attrs.location?.id === mothTrap.id;
 
-  const getMarker = (point: MothTrap): JSX.Element => (
+  const getMarker = (mothTrap: MothTrap): JSX.Element => (
     <Marker
-      key={point.id}
-      point={point}
+      key={mothTrap.id}
+      mothTrap={mothTrap}
       onSelect={onLocationSelect}
-      isSelected={hasLocationMatch(sample, point)}
+      isSelected={hasLocationMatch(sample, mothTrap)}
       isDisabled={isDisabled}
     />
   );
