@@ -100,6 +100,8 @@ const Map: FC<any> = ({
     );
   }
 
+  const { mothTraps } = userModel.attrs;
+
   return (
     <MapContainer
       id="moth-survey-map"
@@ -115,7 +117,7 @@ const Map: FC<any> = ({
 
       <MarkerClusterGroup
         onLocationSelect={onLocationSelect}
-        userModel={userModel}
+        mothTraps={mothTraps}
         sample={sample}
       />
 

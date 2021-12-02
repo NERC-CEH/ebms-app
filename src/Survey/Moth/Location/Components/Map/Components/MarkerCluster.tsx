@@ -2,26 +2,24 @@ import React, { FC, memo } from 'react';
 import { MothTrap } from 'common/types';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import Sample from 'models/sample';
-import UserModelTypes from 'models/userModel';
 import Marker from './Marker';
 import 'leaflet.markercluster';
 import 'leaflet/dist/leaflet.css';
 
-const forceSkipRefresh = () => true;
+const forceSkipRefresh = (prevProps: any, nextProps: any) =>
+  prevProps.mothTraps.length === nextProps.mothTraps.length;
 
 interface Props {
-  userModel: typeof UserModelTypes;
+  mothTraps: MothTrap[];
   onLocationSelect: any;
   sample: typeof Sample;
 }
 
 const MarkerClusterGroupWrap: FC<Props> = ({
-  userModel,
+  mothTraps,
   onLocationSelect,
   sample,
 }) => {
-  const { mothTraps } = userModel.attrs;
-
   const hasLocationMatch = (smp: typeof Sample, point: MothTrap) =>
     smp.attrs.location?.id === point.id;
 
