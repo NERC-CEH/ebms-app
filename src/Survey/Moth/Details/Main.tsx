@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Main, MenuAttrItemFromModel, Attr, MenuAttrItem } from '@apps';
 import Sample from 'models/sample';
-import { IonList, IonLabel } from '@ionic/react';
+import { IonList } from '@ionic/react';
 import { observer } from 'mobx-react';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import { useRouteMatch } from 'react-router';
@@ -12,24 +12,12 @@ type Props = {
 
 const DetailsMain: FC<Props> = ({ sample }) => {
   const { url } = useRouteMatch();
+  const { location } = sample.attrs;
   const survey = sample.getSurvey();
   const surveyDateProps = survey.attrs.date.pageProps.attrProps.inputProps;
   const isDisabled = sample.isUploaded();
 
-  const valueLatitude =
-    sample.attrs.location &&
-    parseFloat(sample.attrs.location.latitude).toFixed(3);
-
-  const valueLongitude =
-    sample.attrs.location &&
-    parseFloat(sample.attrs.location.longitude).toFixed(3);
-
-  const value = sample.attrs.location && (
-    <IonLabel position="stacked" mode="ios">
-      <IonLabel>Latitude: {valueLatitude}</IonLabel>
-      <IonLabel>Longitude: {valueLongitude}</IonLabel>
-    </IonLabel>
-  );
+  const locationName = location ? location.name : null;
 
   return (
     <Main>
@@ -41,7 +29,7 @@ const DetailsMain: FC<Props> = ({ sample }) => {
             label="Moth trap"
             disabled={isDisabled}
             skipValueTranslation
-            value={value}
+            value={locationName}
           />
           <Attr
             model={sample}
