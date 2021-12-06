@@ -34,14 +34,11 @@ const HomeMain: FC<Props> = ({
   isDisabled,
 }) => {
   const { navigate } = useContext(NavContext);
-  const disabled = sample.isUploaded();
 
   const getSpeciesAddButton = () => {
     const onClick = () => {
       navigate(`/survey/moth/${sample.cid}/taxon`);
     };
-
-    if (disabled) return null;
 
     return (
       <IonButton color="primary" className="add" onClick={onClick}>
@@ -70,7 +67,7 @@ const HomeMain: FC<Props> = ({
 
     return (
       <IonItemSliding key={occ.cid}>
-        <IonItem onClick={navigateToSpeciesOccurrences} detail={!disabled}>
+        <IonItem onClick={navigateToSpeciesOccurrences} detail={!isDisabled}>
           <IonButton
             className="precise-area-count-edit-count"
             onClick={increaseCountWrap}
@@ -133,7 +130,7 @@ const HomeMain: FC<Props> = ({
           />
         </div>
 
-        {getSpeciesAddButton()}
+        {!isDisabled && getSpeciesAddButton()}
 
         {getSpeciesList()}
       </IonList>
