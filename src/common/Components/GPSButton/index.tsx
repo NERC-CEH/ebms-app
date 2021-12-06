@@ -3,6 +3,7 @@ import { IonIcon } from '@ionic/react';
 import Leaflet from 'leaflet';
 import GPS from 'helpers/GPS';
 import { locateOutline } from 'ionicons/icons';
+import './styles.scss';
 
 const MAX_ZOOM = 18;
 

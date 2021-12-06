@@ -1,5 +1,6 @@
 import React from 'react';
 import type { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import './styles.scss';
 
 // Classes used by Leaflet to position controls.
 const POSITION_CLASSES = {
