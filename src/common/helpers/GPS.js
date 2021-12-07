@@ -1,7 +1,8 @@
-import { Plugins, Modals } from '@capacitor/core';
+import { Modals, registerPlugin } from '@capacitor/core';
+import { Geolocation } from '@capacitor/geolocation';
 import { isPlatform } from '@ionic/react';
 
-const { BackgroundGeolocation, Geolocation } = Plugins;
+const BackgroundGeolocation = registerPlugin('BackgroundGeolocation');
 
 const API = {
   _watchId: null,
@@ -62,8 +63,9 @@ const API = {
       return;
     }
 
+    const id = await API._watchId;
     BackgroundGeolocation.removeWatcher({
-      id: API._watchId,
+      id,
     });
 
     API._watchId = null;

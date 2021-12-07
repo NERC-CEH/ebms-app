@@ -1,17 +1,10 @@
 import React, { FC } from 'react';
 import { IonList, IonItemDivider } from '@ionic/react';
-import config from 'common/config/config';
 import { observer } from 'mobx-react';
 import Occurrence from 'models/occurrence';
-import ImageModel from 'common/models/media';
 import { Trans as T } from 'react-i18next';
-import {
-  Main,
-  MenuAttrItem,
-  PhotoPicker,
-  MenuAttrItemFromModel,
-  Attr,
-} from '@apps';
+import { Main, MenuAttrItem, MenuAttrItemFromModel, Attr } from '@apps';
+import PhotoPicker from 'common/Components/PhotoPicker';
 import mothIcon from 'common/images/moth.svg';
 import { useRouteMatch } from 'react-router';
 import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
@@ -81,12 +74,7 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
           <T>Moth Photos</T>
         </IonItemDivider>
         <div className="rounded">
-          <PhotoPicker
-            model={occurrence}
-            isDisabled={isDisabled}
-            dataDirPath={config.dataPath}
-            ImageClass={ImageModel}
-          />
+          <PhotoPicker model={occurrence} />
         </div>
       </IonList>
     </Main>

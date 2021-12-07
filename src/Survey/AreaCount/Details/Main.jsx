@@ -8,9 +8,8 @@ import {
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { Main, MenuAttrItem, PhotoPicker, MenuNoteItem } from '@apps';
-import ImageModel from 'common/models/media';
-import config from 'config';
+import { Main, MenuAttrItem, MenuNoteItem } from '@apps';
+import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
 
 @observer
@@ -22,13 +21,8 @@ class Component extends React.Component {
   render() {
     const { sample } = this.props;
     const isDisabled = sample.isDisabled();
-    const {
-      comment,
-      cloud,
-      temperature,
-      windDirection,
-      windSpeed,
-    } = sample.attrs;
+    const { comment, cloud, temperature, windDirection, windSpeed } =
+      sample.attrs;
     const baseURL = `/survey/area/${sample.cid}/edit/details`;
 
     return (
@@ -81,12 +75,7 @@ class Component extends React.Component {
             </IonLabel>
           </IonItemDivider>
           <div className="rounded">
-            <PhotoPicker
-              model={sample}
-              isDisabled={isDisabled}
-              dataDirPath={config.dataPath}
-              ImageClass={ImageModel}
-            />
+            <PhotoPicker model={sample} />
             <MenuNoteItem color="medium">
               Representative photo of where the 15 minute count was made
             </MenuNoteItem>

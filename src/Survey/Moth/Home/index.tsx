@@ -4,7 +4,7 @@ import Sample from 'models/sample';
 import Occurrence from 'models/occurrence';
 import appModel from 'models/appModel';
 import { observer } from 'mobx-react';
-import { Plugins, HapticsImpactStyle } from '@capacitor/core';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { useRouteMatch } from 'react-router';
 import { Page, Header, alert, showInvalidsMessage } from '@apps';
 import { isPlatform, IonButton, NavContext } from '@ionic/react';
@@ -12,7 +12,9 @@ import { Trans as T } from 'react-i18next';
 import Main from './Main';
 import './styles.scss';
 
-const { Haptics } = Plugins;
+const hapticsImpact = async () => {
+  await Haptics.impact({ style: ImpactStyle.Heavy });
+};
 
 function showDeleteSpeciesPrompt(occ: typeof Occurrence) {
   const prompt = () => {
@@ -96,7 +98,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     occ.attrs.count += 1;
     occ.save();
 
-    isPlatform('hybrid') && Haptics.impact({ style: HapticsImpactStyle.Heavy });
+    isPlatform('hybrid') && hapticsImpact();
   };
 
   const getFinishButton = () => {

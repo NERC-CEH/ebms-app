@@ -8,10 +8,9 @@ import {
   warningOutline,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
-import ImageModel from 'common/models/media';
-import config from 'config';
 import { Trans as T } from 'react-i18next';
-import { Main, MenuAttrItem, PhotoPicker } from '@apps';
+import PhotoPicker from 'common/Components/PhotoPicker';
+import { Main, MenuAttrItem } from '@apps';
 import GridRefValue from 'Components/GridRefValue';
 import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from './caterpillar.svg';
@@ -106,12 +105,7 @@ class EditOccurrence extends Component {
             <T>Species Photo</T>
           </IonItemDivider>
           <div className="rounded">
-            <PhotoPicker
-              model={occurrence}
-              isDisabled={isDisabled}
-              dataDirPath={config.dataPath}
-              ImageClass={ImageModel}
-            />
+            <PhotoPicker model={occurrence} />
           </div>
         </IonList>
       </Main>

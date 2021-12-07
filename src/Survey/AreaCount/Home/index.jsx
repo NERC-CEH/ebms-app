@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { withRouter } from 'react-router';
 import { toJS } from 'mobx';
-import { Plugins, HapticsImpactStyle } from '@capacitor/core';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Page, alert, toast, showInvalidsMessage } from '@apps';
 import i18n from 'i18next';
 import { NavContext, isPlatform } from '@ionic/react';
@@ -12,7 +12,9 @@ import Sample from 'sample';
 import Header from './Header';
 import Main from './Main';
 
-const { Haptics } = Plugins;
+const hapticsImpact = async () => {
+  await Haptics.impact({ style: ImpactStyle.Heavy });
+};
 
 const { success, warn } = toast;
 
@@ -256,7 +258,7 @@ class Container extends React.Component {
     newSubSample.startGPS();
     sample.save();
 
-    isPlatform('hybrid') && Haptics.impact({ style: HapticsImpactStyle.Heavy });
+    isPlatform('hybrid') && hapticsImpact();
   };
 
   render() {

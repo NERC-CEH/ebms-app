@@ -7,10 +7,10 @@ import savedSamples from 'savedSamples';
 import config from 'config';
 import { configure as mobxConfig } from 'mobx';
 import { initAnalytics, device } from '@apps';
-import { Plugins, StatusBarStyle } from '@capacitor/core';
+import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
+import { SplashScreen } from '@capacitor/splash-screen';
+import { App as AppPlugin } from '@capacitor/app';
 import App from './App';
-
-const { App: AppPlugin, StatusBar, SplashScreen } = Plugins;
 
 console.log('🚩 App starting.');
 

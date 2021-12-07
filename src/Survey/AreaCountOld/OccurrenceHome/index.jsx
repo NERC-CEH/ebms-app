@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { withRouter } from 'react-router';
-import { Page, Header, PhotoPicker } from '@apps';
+import { Page, Header } from '@apps';
+import PhotoPicker from 'common/Components/PhotoPicker';
 import { IonFooter } from '@ionic/react';
-import ImageModel from 'common/models/media';
-import config from 'config';
 import Main from './Main';
 import './styles.scss';
 
@@ -29,12 +28,7 @@ class Container extends React.Component {
         <Header title="Edit Occurrence" />
         <Main sample={sample} occurrence={occurrence} isDisabled={isDisabled} />
         <IonFooter>
-          <PhotoPicker
-            model={occurrence}
-            isDisabled={isDisabled}
-            dataDirPath={config.dataPath}
-            ImageClass={ImageModel}
-          />
+          <PhotoPicker model={occurrence} />
         </IonFooter>
       </Page>
     );
