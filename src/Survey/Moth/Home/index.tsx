@@ -25,10 +25,9 @@ const { warn } = toast;
 
 function showDeleteSpeciesPrompt(occ: typeof Occurrence) {
   const prompt = () => {
-    const name = occ.attrs.taxon?.scientific_name;
     alert({
       header: 'Delete',
-      message: `Are you sure you want to delete ${name}?`,
+      message: `Are you sure you want to delete ${occ.getTaxonName()}?`,
       buttons: [
         {
           text: 'Cancel',
