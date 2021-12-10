@@ -27,4 +27,14 @@ export default class AppOccurrence extends Occurrence {
   }
 
   isDisabled = () => this.isUploaded();
+
+  identify() {
+    const identifyAllImages = async media => {
+      if (media?.identification.identifying === true) {
+        await media.identify();
+      }
+    };
+
+    return this.media.forEach(identifyAllImages);
+  }
 }

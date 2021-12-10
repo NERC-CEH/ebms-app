@@ -48,12 +48,17 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
   const onSpeciesSelected = async (taxon: any) => {
     const { isRecorded } = taxon;
     const survey = sample.getSurvey();
+    const UNKNOWN_SPECIES_WAREHOUSE_ID = survey.UNKNOWN_OCCURRENCE.warehouse_id;
+
+    const isTaxonUnknown = taxon.warehouse_id === UNKNOWN_SPECIES_WAREHOUSE_ID;
 
     const selectedTaxon = (selectedOccurrence: typeof Occurrence) => {
-      return selectedOccurrence.attrs.taxon.warehouse_id === taxon.warehouse_id;
+      return (
+        selectedOccurrence.attrs.taxon?.warehouse_id === taxon?.warehouse_id
+      );
     };
 
-    if (occurrence && isRecorded) {
+    if (occurrence && isRecorded && !isTaxonUnknown) {
       const isSelectedSameSpecies =
         taxon.warehouse_id === occurrence.attrs.taxon.warehouse_id;
       if (isSelectedSameSpecies) {
@@ -76,7 +81,7 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
       return;
     }
 
-    if (occurrence) {
+    if (occurrence && !isTaxonUnknown) {
       occurrence.attrs.taxon = taxon;
       occurrence.save();
 
@@ -85,6 +90,17 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
     }
 
     const occ = sample.occurrences.find(selectedTaxon);
+
+    if (isTaxonUnknown) {
+      const identifier = sample.attrs.recorder;
+      const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
+      sample.occurrences.push(newOccurrence);
+
+      await sample.save();
+      goBack();
+      return;
+    }
+
     if (!occ) {
       const identifier = sample.attrs.recorder;
       const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
@@ -103,7 +119,7 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
   };
 
   const getTaxonId = (occ: typeof Occurrence) => {
-    return occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
+    return occ.attrs.taxon?.preferredId || occ.attrs.taxon?.warehouse_id;
   };
 
   const species = sample.occurrences.map(getTaxonId);

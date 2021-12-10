@@ -42,10 +42,20 @@ const locationAttr = {
   },
 };
 
+// TODO: find from the commonNames by warehouse_id
+const UNKNOWN_OCCURRENCE = {
+  warehouse_id: 538737,
+  found_in_name: 'common_name',
+  common_name: 'Unknown',
+  taxon_group: 260,
+};
+
 const survey: Survey = {
   id: 681,
   name: 'moth',
   label: 'Moth survey',
+
+  UNKNOWN_OCCURRENCE,
 
   attrs: {
     location: locationAttr,
@@ -116,8 +126,8 @@ const survey: Survey = {
       },
     },
 
-    create(Occurrence, taxon, identifier) {
-      return new Occurrence({
+    create(Occurrence, taxon, identifier, photo) {
+      const occ = new Occurrence({
         attrs: {
           count: 1,
           'count-outside': 0,
@@ -126,6 +136,12 @@ const survey: Survey = {
           comment: null,
         },
       });
+
+      if (photo) {
+        occ.media.push(photo);
+      }
+
+      return occ;
     },
   },
 

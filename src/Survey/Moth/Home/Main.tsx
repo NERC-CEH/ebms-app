@@ -5,6 +5,7 @@ import { Main, MenuAttrItem, InfoBackgroundMessage } from '@apps';
 import {
   IonList,
   IonButton,
+  IonIcon,
   IonLabel,
   NavContext,
   IonItemDivider,
@@ -15,12 +16,14 @@ import {
 } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
-import { locationOutline } from 'ionicons/icons';
+import { locationOutline, camera } from 'ionicons/icons';
+import UnidentifiedSpeciesEntry from '../Components/UnidentifiendSpeciesEntry';
 import './styles.scss';
 
 type Props = {
   match: any;
   sample: typeof Sample;
+  photoSelect: any;
   increaseCount: any;
   deleteSpecies: any;
   isDisabled: boolean;
@@ -32,8 +35,12 @@ const HomeMain: FC<Props> = ({
   increaseCount,
   deleteSpecies,
   isDisabled,
+  photoSelect,
 }) => {
   const { navigate } = useContext(NavContext);
+  const surveyConfig = sample.getSurvey();
+  const UNKNOWN_SPECIES_WAREHOUSE_ID =
+    surveyConfig.UNKNOWN_OCCURRENCE.warehouse_id;
 
   const getSpeciesAddButton = () => {
     const onClick = () => {
@@ -50,7 +57,7 @@ const HomeMain: FC<Props> = ({
   };
 
   const getSpeciesEntry = (occ: typeof Occurrence) => {
-    const speciesName = occ.getTaxonName();
+    const speciesName = occ.attrs.taxon.scientific_name;
     const speciesCount = occ.attrs.count;
 
     const increaseCountWrap = (e: any) => {
@@ -88,6 +95,56 @@ const HomeMain: FC<Props> = ({
       </IonItemSliding>
     );
   };
+  const getNewImageButton = () => {
+    return (
+      <IonButton
+        className="camera-button"
+        type="submit"
+        expand="block"
+        onClick={photoSelect}
+      >
+        <IonIcon slot="start" icon={camera} size="large" />
+      </IonButton>
+    );
+  };
+
+  const getUndentifiedspeciesList = () => {
+    const byUnknownSpecies = (occ: typeof Occurrence) =>
+      !occ.attrs.taxon ||
+      occ.attrs.taxon.warehouse_id === UNKNOWN_SPECIES_WAREHOUSE_ID;
+
+    const getUnidentifiedSpeciesEntry = (occ: typeof Occurrence) => (
+      <UnidentifiedSpeciesEntry
+        key={occ.cid}
+        occ={occ}
+        isDisabled={isDisabled}
+      />
+    );
+    const speciesList = sample.occurrences
+      .filter(byUnknownSpecies)
+      .map(getUnidentifiedSpeciesEntry);
+
+    const count = speciesList.length > 1 ? speciesList.length : null;
+
+    if (speciesList.length < 1) return null;
+
+    return (
+      <>
+        <IonList id="list" lines="full">
+          <div className="rounded">
+            <IonItemDivider className="species-list-header unknown">
+              <IonLabel>
+                <T>Unknown species</T>
+              </IonLabel>
+              <IonLabel>{count}</IonLabel>
+            </IonItemDivider>
+
+            {speciesList}
+          </div>
+        </IonList>
+      </>
+    );
+  };
 
   const getSpeciesList = () => {
     if (!sample.occurrences.length) {
@@ -98,9 +155,17 @@ const HomeMain: FC<Props> = ({
       );
     }
 
-    const speciesList = sample.occurrences.map(getSpeciesEntry);
+    const byKnownSpecies = (occ: typeof Occurrence) =>
+      occ.attrs.taxon &&
+      occ.attrs.taxon.warehouse_id !== UNKNOWN_SPECIES_WAREHOUSE_ID;
+
+    const speciesList = sample.occurrences
+      .filter(byKnownSpecies)
+      .map(getSpeciesEntry);
 
     const count = speciesList.length > 1 ? speciesList.length : null;
+
+    if (!speciesList.length) return null;
 
     return (
       <>
@@ -130,7 +195,15 @@ const HomeMain: FC<Props> = ({
           />
         </div>
 
-        {!isDisabled && getSpeciesAddButton()}
+        {!isDisabled && (
+          <div className="buttons-container">
+            {getSpeciesAddButton()}
+
+            {getNewImageButton()}
+          </div>
+        )}
+
+        {getUndentifiedspeciesList()}
 
         {getSpeciesList()}
       </IonList>

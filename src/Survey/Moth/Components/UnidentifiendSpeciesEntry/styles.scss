@@ -1,0 +1,52 @@
+.species-list-item.unknown {
+  .profile-photo {
+    position: relative;
+    height: 48px;
+    min-width: 60px;
+    max-width: 60px;
+    background-color: #f8f2e6;
+    overflow: hidden;
+    text-align: center;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  div {
+    .warning-message {
+      background: #f8f2e6;
+      margin-left: 15px;
+      padding: 1px 5px;
+      font-size: 0.8em;
+      border-radius: 10px;
+      color: #b69143;
+      margin-top: 3px;
+    }
+
+    .warning-message.ios {
+      font-size: 0.6em;
+      font-weight: 500 !important;
+    }
+  }
+
+  ion-icon {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    color: #b38b39;
+  }
+
+  ion-label.identifying {
+    color: red;
+    font-style: italic;
+  }
+
+  ion-spinner.identifying {
+    width: 15px;
+    margin-right: 2px;
+    opacity: 0.5;
+  }
+}

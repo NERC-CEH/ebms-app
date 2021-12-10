@@ -26,7 +26,16 @@ const AppPhotoPicker: FC<Props> = ({ model }) => {
       return null;
     }
 
-    return utils.getImageModel(Image, image, config.dataPath);
+    const imageModel = await utils.getImageModel(Image, image, config.dataPath);
+
+    if (model?.parent.metadata.survey !== 'moth') return imageModel;
+
+    imageModel.identification.identifying = true;
+
+    model.media.push(imageModel);
+    model.save();
+
+    await model.identify();
   }
 
   return <PhotoPicker getImage={getImage} model={model} />;

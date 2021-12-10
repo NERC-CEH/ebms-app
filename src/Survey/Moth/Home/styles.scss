@@ -1,13 +1,33 @@
 #survey-moth-home {
-  .add {
-    max-width: 60%;
-    margin: 20px 0 30px;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
+  .buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 0;
 
-    ion-label {
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .add {
+      max-width: 60%;
+
+      ion-label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .camera-button {
+      width: 60px;
+      height: 36px;
+      margin: 0;
+      --background: #707070;
+      --box-shadow: none;
+
+      ion-icon {
+        margin: 0;
+      }
+    }
+
+    .camera-button.ios {
+      height: 44.8px;
     }
   }
 
@@ -40,6 +60,17 @@
         }
         &:last-of-type {
           max-width: 50px;
+        }
+      }
+    }
+    .species-list-header.unknown {
+      ion-label {
+        width: 100%;
+
+        &:first-of-type {
+          max-width: 100%;
+          padding-left: 6px;
+          text-align: left;
         }
       }
     }

@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import areaSurvey from 'Survey/AreaCount/config';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
 import areaSurveyOld from 'Survey/AreaCountOld/config';
@@ -20,6 +21,13 @@ export interface Survey {
   name: string;
   label: string;
 
+  UNKNOWN_OCCURRENCE?: {
+    warehouse_id: number;
+    found_in_name: string;
+    common_name: string;
+    taxon_group: number;
+  };
+
   attrs: Attrs;
 
   occ?: {
@@ -27,7 +35,8 @@ export interface Survey {
     create: (
       occurrence: typeof Occurrence,
       taxon: any,
-      identifier: string
+      identifier: string,
+      photo?: any
     ) => typeof Occurrence;
     verify?: (attrs: any) => any;
   };
