@@ -83,7 +83,7 @@ const API = {
       return;
     }
 
-    API._watchId = BackgroundGeolocation.addWatcher(
+    API._watchId = await BackgroundGeolocation.addWatcher(
       {
         backgroundTitle: t('Using your location.'),
         backgroundMessage: t('Cancel to prevent battery drain.'),
