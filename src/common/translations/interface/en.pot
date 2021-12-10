@@ -1492,3 +1492,19 @@ msgstr "Please add the moth trap"
 # Moth survey Location Info message  
 msgid "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr "You have only one moth trap. To create more please go to the <2>website.</2>"
+
+# Moth survey AI loader 
+msgid "Identifying..."
+msgstr "Identifying..."
+
+# Unknown species common_name
+msgid "Unknown"
+msgstr "Unknown"
+
+# Moth survey warning message 
+msgid "Please add a photo"
+msgstr "Please add a photo"
+
+# Moth survey unknown species divider 
+msgid "Unknown species"
+msgstr "Unknown species"
