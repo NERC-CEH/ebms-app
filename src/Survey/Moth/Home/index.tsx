@@ -119,7 +119,7 @@ const HomeController: FC<Props> = ({ sample }) => {
   async function identifyPhoto(image: any, newOccurrence: typeof Occurrence) {
     await image.identify();
 
-    const identifiedSpecies = image.attrs.species[0];
+    const identifiedSpecies = image.attrs.species?.[0];
 
     if (!identifiedSpecies) {
       newOccurrence.attrs.taxon = UNKNOWN_OCCURRENCE;
