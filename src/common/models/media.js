@@ -94,24 +94,17 @@ export default class AppMedia extends Media {
     return null;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   async getRemoteURL() {
-    const dummyPromiseTimeout = resolve => setTimeout(resolve, 300);
-    await new Promise(dummyPromiseTimeout);
-
-    this.id =
-      'https://inaturalist-open-data.s3.amazonaws.com/photos/156517600/original.jpeg';
-    console.log('300ms pass', this.id);
+    return 'https://inaturalist-open-data.s3.amazonaws.com/photos/156517600/original.jpeg';
   }
 
   async identify() {
     this.identification.identifying = true;
 
-    await this.getRemoteURL();
+    const url = await this.getRemoteURL();
 
-    const data = new URLSearchParams({
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeQMqyFp1wBKJG70g_pSSV0tdEo5yRESV5Ag&usqp=CAU',
-    });
+    const data = new URLSearchParams({ image: url });
 
     const params = new URLSearchParams({
       _api_proxy_uri: 'identify-proxy/v1/?app_name=uni-jena',
