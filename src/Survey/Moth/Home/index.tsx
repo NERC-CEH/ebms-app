@@ -13,6 +13,7 @@ import Media from 'models/media';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
 import { isPlatform, IonButton, NavContext } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
+import { UNKNOWN_OCCURRENCE } from 'Survey/Moth/config';
 import Main from './Main';
 import './styles.scss';
 
@@ -56,7 +57,6 @@ const HomeController: FC<Props> = ({ sample }) => {
   const isDisabled = sample.isDisabled();
 
   const surveyConfig = sample.getSurvey();
-  const { UNKNOWN_OCCURRENCE } = surveyConfig;
 
   const isEditing = sample.metadata.saved;
 

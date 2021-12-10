@@ -21,13 +21,6 @@ export interface Survey {
   name: string;
   label: string;
 
-  UNKNOWN_OCCURRENCE?: {
-    warehouse_id: number;
-    found_in_name: string;
-    common_name: string;
-    taxon_group: number;
-  };
-
   attrs: Attrs;
 
   occ?: {

@@ -17,6 +17,7 @@ import {
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import { locationOutline, camera } from 'ionicons/icons';
+import { UNKNOWN_OCCURRENCE } from 'Survey/Moth/config';
 import UnidentifiedSpeciesEntry from '../Components/UnidentifiendSpeciesEntry';
 import './styles.scss';
 
@@ -38,9 +39,6 @@ const HomeMain: FC<Props> = ({
   photoSelect,
 }) => {
   const { navigate } = useContext(NavContext);
-  const surveyConfig = sample.getSurvey();
-  const UNKNOWN_SPECIES_WAREHOUSE_ID =
-    surveyConfig.UNKNOWN_OCCURRENCE.warehouse_id;
 
   const getSpeciesAddButton = () => {
     const onClick = () => {
@@ -111,7 +109,7 @@ const HomeMain: FC<Props> = ({
   const getUndentifiedspeciesList = () => {
     const byUnknownSpecies = (occ: typeof Occurrence) =>
       !occ.attrs.taxon ||
-      occ.attrs.taxon.warehouse_id === UNKNOWN_SPECIES_WAREHOUSE_ID;
+      occ.attrs.taxon.warehouse_id === UNKNOWN_OCCURRENCE.warehouse_id;
 
     const getUnidentifiedSpeciesEntry = (occ: typeof Occurrence) => (
       <UnidentifiedSpeciesEntry
@@ -157,7 +155,7 @@ const HomeMain: FC<Props> = ({
 
     const byKnownSpecies = (occ: typeof Occurrence) =>
       occ.attrs.taxon &&
-      occ.attrs.taxon.warehouse_id !== UNKNOWN_SPECIES_WAREHOUSE_ID;
+      occ.attrs.taxon.warehouse_id !== UNKNOWN_OCCURRENCE.warehouse_id;
 
     const speciesList = sample.occurrences
       .filter(byKnownSpecies)

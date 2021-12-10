@@ -43,7 +43,7 @@ const locationAttr = {
 };
 
 // TODO: find from the commonNames by warehouse_id
-const UNKNOWN_OCCURRENCE = {
+export const UNKNOWN_OCCURRENCE = {
   warehouse_id: 538737,
   found_in_name: 'common_name',
   common_name: 'Unknown',
@@ -54,8 +54,6 @@ const survey: Survey = {
   id: 681,
   name: 'moth',
   label: 'Moth survey',
-
-  UNKNOWN_OCCURRENCE,
 
   attrs: {
     location: locationAttr,
