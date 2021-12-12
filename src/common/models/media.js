@@ -15,6 +15,12 @@ export default class AppMedia extends Media {
   constructor(...args) {
     super(...args);
 
+    this.remote.url = `${CONFIG.backend.indicia.url}/index.php/services/rest`;
+    // eslint-disable-next-line
+    this.remote.headers = async () => ({
+      Authorization: `Bearer ${await userModel.getAccessToken()}`,
+    });
+
     this.attrs = observable({
       species: null,
       ...this.attrs,
@@ -94,15 +100,11 @@ export default class AppMedia extends Media {
     return null;
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  async getRemoteURL() {
-    return 'https://inaturalist-open-data.s3.amazonaws.com/photos/156517600/original.jpeg';
-  }
-
   async identify() {
     this.identification.identifying = true;
 
-    const url = await this.getRemoteURL();
+    await this.uploadFile();
+    const url = this.getRemoteURL();
 
     const data = new URLSearchParams({ image: url });
 
