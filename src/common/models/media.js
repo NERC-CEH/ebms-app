@@ -101,10 +101,10 @@ export default class AppMedia extends Media {
   }
 
   doesTaxonMatchParent = () => {
-    if (!this.attrs?.species.length) return null;
+    if (!this.attrs?.species.length) return false;
 
     return (
-      Number(this.attrs?.species[0]?.taxa_taxon_list_id) !==
+      Number(this.attrs?.species[0]?.taxa_taxon_list_id) ===
       this.parent.attrs?.taxon?.warehouse_id
     );
   };

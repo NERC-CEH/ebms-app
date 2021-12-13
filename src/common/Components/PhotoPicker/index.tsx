@@ -31,21 +31,9 @@ const ImageWrap = ({
   onDelete: any;
   onClick: any;
 }): JSX.Element => {
-  const { i18n } = useTranslation();
-
-  const showWarning = media.doesTaxonMatchParent(); // calculate from media.parent
+  const showWarning = !media.doesTaxonMatchParent(); // calculate from media.parent
 
   const showLoading = media.identification.identifying;
-
-  if (showWarning) {
-    const { taxon } = media.attrs.species[0];
-
-    // eslint-disable-next-line no-param-reassign
-    media.attrs.footer = i18n.t(
-      'Warning! - our image classifier has detected this is a {{taxon}} species',
-      { taxon }
-    );
-  }
 
   return (
     <div className="img">
@@ -57,7 +45,7 @@ const ImageWrap = ({
       <img src={media.attrs.thumbnail} onClick={onClick} />
 
       {showLoading && <IonSpinner slot="end" className="identifying" />}
-      {showWarning && (
+      {!showLoading && showWarning && (
         <IonIcon className="warning-icon" icon={warningOutline} />
       )}
     </div>
