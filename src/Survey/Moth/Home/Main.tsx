@@ -19,6 +19,7 @@ import { observer } from 'mobx-react';
 import { locationOutline, camera } from 'ionicons/icons';
 import { UNKNOWN_OCCURRENCE } from 'Survey/Moth/config';
 import UnidentifiedSpeciesEntry from '../Components/UnidentifiendSpeciesEntry';
+import AnimatedNumber from './Components/AnimatedNumber';
 import './styles.scss';
 
 type Props = {
@@ -57,6 +58,7 @@ const HomeMain: FC<Props> = ({
   const getSpeciesEntry = (occ: typeof Occurrence) => {
     const speciesName = occ.attrs.taxon.scientific_name;
     const speciesCount = occ.attrs.count;
+    console.log(speciesCount);
 
     const increaseCountWrap = (e: any) => {
       e.preventDefault();
@@ -78,7 +80,8 @@ const HomeMain: FC<Props> = ({
             onClick={increaseCountWrap}
             fill="clear"
           >
-            {speciesCount}
+            <AnimatedNumber value={speciesCount} />
+
             <div className="label-divider" />
           </IonButton>
           <IonLabel>{speciesName}</IonLabel>
