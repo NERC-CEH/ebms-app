@@ -51,7 +51,7 @@
     "@bit/flumens.apps.models.sample": "1.0.0",
     "@bit/flumens.apps.models.store": "0.4.0",
     "@bit/flumens.apps.page": "1.1.0",
-    "@bit/flumens.apps.photo-picker": "2.0.5",
+    "@bit/flumens.apps.photo-picker": "2.1.0",
     "@bit/flumens.apps.radio-input": "2.2.0",
     "@bit/flumens.apps.route-with-models": "1.0.0",
     "@bit/flumens.apps.router": "^0.1.1",

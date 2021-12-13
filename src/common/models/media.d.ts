@@ -6,6 +6,7 @@ declare const appModel: {
   };
   identify: () => any;
   upload: () => any;
+  doesTaxonMatchParent: () => boolean;
 };
 
 export default appModel;

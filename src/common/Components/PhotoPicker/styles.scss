@@ -1,0 +1,22 @@
+#img-array {
+  .warning-icon {
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    background: #fff1f1;
+    color: var(--ion-color-danger);
+    border-radius: 100%;
+    font-size: 1em;
+    padding: 3px;
+  }
+
+  ion-spinner {
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    background: #ffffff94;
+    border-radius: 50%;
+    height: 23px;
+    width: 23px;
+  }
+}

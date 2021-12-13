@@ -22,7 +22,7 @@ export default class AppMedia extends Media {
     });
 
     this.attrs = observable({
-      species: null,
+      species: [],
       ...this.attrs,
     });
 
@@ -99,6 +99,15 @@ export default class AppMedia extends Media {
   validateRemote() {
     return null;
   }
+
+  doesTaxonMatchParent = () => {
+    if (!this.attrs?.species.length) return null;
+
+    return (
+      Number(this.attrs?.species[0]?.taxa_taxon_list_id) !==
+      this.parent.attrs?.taxon?.warehouse_id
+    );
+  };
 
   async identify() {
     this.identification.identifying = true;
