@@ -28,7 +28,8 @@ const DetailsController: FC<Props> = ({ sample }) => {
     sample.save();
 
     const url = match.url.replace('/edit', '');
-    navigate(url, 'none', 'replace');
+
+    navigate(url, 'forward', 'pop');
   };
 
   const getNextButton = sample.metadata.completedDetails ? null : (
