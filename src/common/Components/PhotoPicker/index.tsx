@@ -56,7 +56,7 @@ const ImageWrap = ({
       )}
       <img src={media.attrs.thumbnail} onClick={onClick} />
 
-      {!showLoading && <IonSpinner slot="end" className="identifying" />}
+      {showLoading && <IonSpinner slot="end" className="identifying" />}
       {showWarning && (
         <IonIcon className="warning-icon" icon={warningOutline} />
       )}
