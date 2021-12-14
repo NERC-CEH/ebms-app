@@ -15,6 +15,7 @@ declare const appModel: {
     speciesGroups: string[];
     transects: any;
     primarySurvey: any;
+    autoImageIdentifier: boolean;
     useExperiments: boolean;
     sendAnalytics: boolean;
     appSession: any;
