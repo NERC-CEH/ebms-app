@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { IonList, IonItemDivider } from '@ionic/react';
 import { observer } from 'mobx-react';
 import Occurrence from 'models/occurrence';
+import appModel from 'models/appModel';
 import { Trans as T } from 'react-i18next';
 import { Main, MenuAttrItem, MenuAttrItemFromModel, Attr } from '@apps';
 import PhotoPicker from 'common/Components/PhotoPicker';
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const EditOccurrence: FC<Props> = ({ occurrence }) => {
+  const { autoImageIdentifier } = appModel.attrs;
   const match = useRouteMatch();
   const species = occurrence.getTaxonName();
   const isDisabled = occurrence.isDisabled();
@@ -74,7 +76,10 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
           <T>Moth Photos</T>
         </IonItemDivider>
         <div className="rounded">
-          <PhotoPicker model={occurrence} />
+          <PhotoPicker
+            model={occurrence}
+            autoImageIdentifier={autoImageIdentifier}
+          />
         </div>
       </IonList>
     </Main>
