@@ -51,6 +51,7 @@ interface Props {
 }
 
 const HomeController: FC<Props> = ({ sample }) => {
+  const { autoImageIdentifier } = appModel.attrs;
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
   const isDisabled = sample.isDisabled();
@@ -174,10 +175,16 @@ const HomeController: FC<Props> = ({ sample }) => {
       image
     );
 
-    identifyPhoto(image, newOccurrence);
-
     sample.occurrences.push(newOccurrence);
     sample.save();
+
+    if (!autoImageIdentifier) {
+      newOccurrence.attrs.taxon = UNKNOWN_OCCURRENCE;
+      newOccurrence.save();
+      return;
+    }
+
+    identifyPhoto(image, newOccurrence);
   };
 
   return (
@@ -193,6 +200,7 @@ const HomeController: FC<Props> = ({ sample }) => {
         deleteSpecies={deleteOccurrence}
         isDisabled={isDisabled}
         photoSelect={photoSelect}
+        autoImageIdentifier={autoImageIdentifier}
       />
     </Page>
   );

@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react';
 import Sample from 'models/sample';
 import Occurrence from 'models/occurrence';
-import { Main, MenuAttrItem, InfoBackgroundMessage } from '@apps';
+import { Main, MenuAttrItem, InfoBackgroundMessage, alert } from '@apps';
 import {
   IonList,
   IonButton,
@@ -16,11 +16,29 @@ import {
 } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
-import { locationOutline, camera } from 'ionicons/icons';
+import clsx from 'clsx';
+import { locationOutline, camera, warningOutline } from 'ionicons/icons';
 import { UNKNOWN_OCCURRENCE } from 'Survey/Moth/config';
 import UnidentifiedSpeciesEntry from '../Components/UnidentifiendSpeciesEntry';
 import AnimatedNumber from './Components/AnimatedNumber';
 import './styles.scss';
+
+const showDurationOfRecordsAlert = () =>
+  alert({
+    message: (
+      <T>
+        Auto image identifier is disabled. Please visit app settings page to
+        turn it on.
+      </T>
+    ),
+    buttons: [
+      {
+        text: 'OK, got it',
+        role: 'cancel',
+        cssClass: 'primary',
+      },
+    ],
+  });
 
 type Props = {
   match: any;
@@ -29,6 +47,7 @@ type Props = {
   increaseCount: any;
   deleteSpecies: any;
   isDisabled: boolean;
+  autoImageIdentifier: boolean;
 };
 
 const HomeMain: FC<Props> = ({
@@ -38,6 +57,7 @@ const HomeMain: FC<Props> = ({
   deleteSpecies,
   isDisabled,
   photoSelect,
+  autoImageIdentifier,
 }) => {
   const { navigate } = useContext(NavContext);
 
@@ -97,14 +117,25 @@ const HomeMain: FC<Props> = ({
   };
   const getNewImageButton = () => {
     return (
-      <IonButton
-        className="camera-button"
-        type="submit"
-        expand="block"
-        onClick={photoSelect}
-      >
-        <IonIcon slot="start" icon={camera} size="large" />
-      </IonButton>
+      <div className="buttons-wrapper">
+        {!autoImageIdentifier && (
+          <div onClick={showDurationOfRecordsAlert}>
+            <IonIcon
+              className="info-icon"
+              slot="icon-only"
+              icon={warningOutline}
+            />
+          </div>
+        )}
+        <IonButton
+          className={clsx(`camera-button`, !autoImageIdentifier && 'disabled')}
+          type="submit"
+          expand="block"
+          onClick={photoSelect}
+        >
+          <IonIcon slot="start" icon={camera} size="large" />
+        </IonButton>
+      </div>
     );
   };
 

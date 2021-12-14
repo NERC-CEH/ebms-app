@@ -14,20 +14,40 @@
       }
     }
 
-    .camera-button {
-      width: 60px;
-      height: 36px;
-      margin: 0;
-      --background: #707070;
-      --box-shadow: none;
+    .buttons-wrapper {
+      position: relative;
 
-      ion-icon {
-        margin: 0;
+      .info-icon {
+        position: absolute;
+        top: -10px;
+        right: -5px;
+        z-index: 999;
+        font-size: 22px;
+        border-radius: 20px;
+        background: #fff1f1;
+        padding: 3px;
+        color: var(--ion-color-danger);
       }
-    }
 
-    .camera-button.ios {
-      height: 44.8px;
+      .camera-button {
+        width: 60px;
+        height: 36px;
+        margin: 0;
+        --background: var(--ion-color-secondary);
+        --box-shadow: none;
+
+        ion-icon {
+          margin: 0;
+        }
+      }
+
+      .camera-button.disabled {
+        --background: var(--ion-color-medium);
+      }
+
+      .camera-button.ios {
+        height: 44.8px;
+      }
     }
   }
 
