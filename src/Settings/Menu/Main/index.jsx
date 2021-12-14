@@ -25,6 +25,7 @@ import config from 'config';
 import surveys from 'common/config/surveys';
 import { Main, alert, Toggle, MenuNoteItem } from '@apps';
 import butterflyIcon from 'common/images/butterfly.svg';
+import mothIcon from 'common/images/moth.svg';
 import './styles.scss';
 
 function resetDialog(resetApp) {
@@ -107,7 +108,7 @@ class Component extends React.Component {
       <Main class="app-settings">
         <IonList lines="full">
           <IonItemDivider>
-            <T>Records</T>
+            <T>Surveying</T>
           </IonItemDivider>
           <div className="rounded">
             <IonItem id="submit-all-btn" onClick={onSubmitAllDialog}>
@@ -135,6 +136,12 @@ class Component extends React.Component {
               </IonLabel>
               <IonIcon icon={butterflyIcon} size="small" slot="start" />
               <IonLabel slot="end">{speciesGroups.length}</IonLabel>
+            </IonItem>
+            <IonItem routerLink="/settings/moth-survey" detail>
+              <IonLabel>
+                <T>Moth Survey</T>
+              </IonLabel>
+              <IonIcon icon={mothIcon} size="small" slot="start" />
             </IonItem>
           </div>
 

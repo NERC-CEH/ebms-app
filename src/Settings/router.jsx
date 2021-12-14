@@ -8,6 +8,9 @@ import Language from './Language';
 import Country from './Country';
 import SpeciesGroups from './SpeciesGroups';
 import PrimarySurvey from './PrimarySurvey';
+import MothSurvey from './MothSurvey';
+
+const MothSurveyWrap = () => <MothSurvey appModel={appModel} />;
 
 const PrimarySurveyWrap = () => (
   <PrimarySurvey userModel={userModel} appModel={appModel} />
@@ -46,5 +49,11 @@ export default [
     key="/settings/primary-survey"
     exact
     render={PrimarySurveyWrap}
+  />,
+  <Route
+    path="/settings/moth-survey"
+    key="/settings/moth-survey"
+    exact
+    render={MothSurveyWrap}
   />,
 ];
