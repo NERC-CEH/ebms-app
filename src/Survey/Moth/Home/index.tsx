@@ -64,8 +64,7 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const _processDraft = async () => {
-    const surveyName = sample.getSurvey().name;
-    appModel.attrs[`draftId:${surveyName}`] = null;
+    appModel.attrs['draftId:moth'] = null;
     await appModel.save();
 
     const saveAndReturn = () => {

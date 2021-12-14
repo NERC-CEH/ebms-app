@@ -36,7 +36,7 @@ async function showDraftAlert() {
   return new Promise(showDraftDialog);
 }
 
-async function getDraft(draftIdKey: string) {
+async function getDraft(draftIdKey: keyof typeof appModel.attrs) {
   const draftID = appModel.attrs[draftIdKey];
   if (draftID) {
     const draftById = ({ cid }: typeof Sample) => cid === draftID;
@@ -54,7 +54,10 @@ async function getDraft(draftIdKey: string) {
   return null;
 }
 
-async function getNewSample(survey: Survey, draftIdKey: string) {
+async function getNewSample(
+  survey: Survey,
+  draftIdKey: keyof typeof appModel.attrs
+) {
   const recorder = userModel.getPrettyName();
 
   const sample = await survey.create(Sample, recorder);
@@ -76,7 +79,7 @@ function StartNewSurvey({ survey }: Props): null {
   const context = useContext(NavContext);
 
   const baseURL = `/survey/${survey.name}`;
-  const draftIdKey = `draftId:${survey.name}`;
+  const draftIdKey: any = `draftId:${survey.name}`;
 
   const pickDraftOrCreateSampleWrap = () => {
     const pickDraftOrCreateSample = async () => {

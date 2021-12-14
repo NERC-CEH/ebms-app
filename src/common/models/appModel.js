@@ -161,10 +161,12 @@ const defaults = {
   useTraining: false,
   feedbackGiven: false,
   areaSurveyListSortedByTime: false,
+  draftIdKey: null,
 
   'draftId:precise-area': null,
   'draftId:precise-single-species-area': null,
   'draftId:transect': null,
+  'draftId:moth': null,
 
   speciesGroups: ['butterflies'],
   transects: [],
