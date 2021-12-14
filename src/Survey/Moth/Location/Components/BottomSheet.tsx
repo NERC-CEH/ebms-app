@@ -51,7 +51,7 @@ const BottomSheet: FC<Props> = ({
   };
 
   const getDistanceWrap = () => getDistance();
-  useEffect(getDistanceWrap, [centroid]);
+  useEffect(getDistanceWrap, [centroid, mothTrapData]);
 
   const byDistance = (mothTrapA: MothTrap, mothTrapB: MothTrap) => {
     if (!mothTrapA?.distance) return -1;
