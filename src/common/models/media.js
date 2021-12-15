@@ -101,7 +101,7 @@ export default class AppMedia extends Media {
   }
 
   doesTaxonMatchParent = () => {
-    if (!this.attrs?.species.length) return false;
+    if (!this.attrs?.species.length) return 'not found';
 
     return (
       Number(this.attrs?.species[0]?.taxa_taxon_list_id) ===

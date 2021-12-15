@@ -20,3 +20,12 @@
     width: 23px;
   }
 }
+
+.swiper-zoom-container .gallery-warning-message {
+  font-weight: 400;
+
+  b {
+    color: var(--ion-color-danger);
+    font-size: 1.1em;
+  }
+}

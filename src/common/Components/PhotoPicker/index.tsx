@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { PhotoPicker, Model } from '@apps';
 import { useTranslation } from 'react-i18next';
-import { IonIcon, IonButton, IonSpinner } from '@ionic/react';
 import { observer } from 'mobx-react';
-import { warningOutline, close } from 'ionicons/icons';
 import Media from 'models/media';
 import config from 'common/config/config';
+import Gallery from './Components/Galery';
+import Image from './Components/Image';
 import utils from './imageUtils';
 import './styles.scss';
 
@@ -14,41 +14,11 @@ type Props = {
   useImageIdentifier: boolean;
 };
 
-const ImageWrap = ({
-  media,
-  isDisabled,
-  onDelete,
-  onClick,
-}: {
-  media: any;
-  isDisabled: any;
-  onDelete: any;
-  onClick: any;
-}): JSX.Element => {
-  const showWarning = !media.doesTaxonMatchParent(); // calculate from media.parent
-
-  const showLoading = media.identification.identifying;
-
-  return (
-    <div className="img">
-      {!isDisabled && (
-        <IonButton fill="clear" class="delete" onClick={onDelete}>
-          <IonIcon icon={close} />
-        </IonButton>
-      )}
-      <img src={media.attrs.thumbnail} onClick={onClick} />
-
-      {showLoading && <IonSpinner slot="end" className="identifying" />}
-      {!showLoading && showWarning && (
-        <IonIcon className="warning-icon" icon={warningOutline} />
-      )}
-    </div>
-  );
-};
-const Image: any = observer(ImageWrap);
-
 const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
   const { t } = useTranslation();
+
+  const isMothSurvey =
+    model?.parent.metadata.survey === 'moth' ? true : undefined;
 
   const promptOptions = {
     promptLabelHeader: t('Choose a method to upload a photo'),
@@ -66,14 +36,19 @@ const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
 
     const imageModel = await utils.getImageModel(Media, image, config.dataPath);
 
-    const isMothSurvey = model?.parent.metadata.survey === 'moth';
-
     if (isMothSurvey && useImageIdentifier) imageModel.identify();
 
     return imageModel;
   }
 
-  return <PhotoPicker getImage={getImage} model={model} Image={Image} />;
+  return (
+    <PhotoPicker
+      getImage={getImage}
+      model={model}
+      Image={isMothSurvey && Image}
+      Gallery={isMothSurvey && Gallery}
+    />
+  );
 };
 
 export default observer(AppPhotoPicker);

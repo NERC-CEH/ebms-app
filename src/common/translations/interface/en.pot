@@ -1509,6 +1509,14 @@ msgstr "Please add a photo"
 msgid "Unknown species"
 msgstr "Unknown species"
 
-# Moth survey image galery warning messge
-msgid "Warning! - our image classifier has detected this is a {{taxon}} species"
-msgstr "Warning! - our image classifier has detected this is a {{taxon}} species"
+# Moth survey image gallery warning message 
+msgid "<0>Warning</0> - we could not identify this species."
+msgstr "<0>Warning</0> - we could not identify this species."
+
+# Moth survey image gallery warning message  
+msgid "<0>Warning</0> - we think it is"
+msgstr "<0>Warning</0> - we think it is"
+
+# Moth survey image gallery warning message
+msgid "likely a"
+msgstr "likely a"
