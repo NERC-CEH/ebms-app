@@ -47,7 +47,7 @@ type Props = {
   increaseCount: any;
   deleteSpecies: any;
   isDisabled: boolean;
-  autoImageIdentifier: boolean;
+  useImageIdentifier: boolean;
 };
 
 const HomeMain: FC<Props> = ({
@@ -57,7 +57,7 @@ const HomeMain: FC<Props> = ({
   deleteSpecies,
   isDisabled,
   photoSelect,
-  autoImageIdentifier,
+  useImageIdentifier,
 }) => {
   const { navigate } = useContext(NavContext);
 
@@ -118,7 +118,7 @@ const HomeMain: FC<Props> = ({
   const getNewImageButton = () => {
     return (
       <div className="buttons-wrapper">
-        {!autoImageIdentifier && (
+        {!useImageIdentifier && (
           <div onClick={showDurationOfRecordsAlert}>
             <IonIcon
               className="info-icon"
@@ -128,7 +128,7 @@ const HomeMain: FC<Props> = ({
           </div>
         )}
         <IonButton
-          className={clsx(`camera-button`, !autoImageIdentifier && 'disabled')}
+          className={clsx(`camera-button`, !useImageIdentifier && 'disabled')}
           type="submit"
           expand="block"
           onClick={photoSelect}

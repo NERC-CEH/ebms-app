@@ -11,7 +11,7 @@ import './styles.scss';
 
 type Props = {
   model: Model;
-  autoImageIdentifier: boolean;
+  useImageIdentifier: boolean;
 };
 
 const ImageWrap = ({
@@ -47,7 +47,7 @@ const ImageWrap = ({
 };
 const Image: any = observer(ImageWrap);
 
-const AppPhotoPicker: FC<Props> = ({ model, autoImageIdentifier }) => {
+const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
   const { t } = useTranslation();
 
   const promptOptions = {
@@ -68,7 +68,7 @@ const AppPhotoPicker: FC<Props> = ({ model, autoImageIdentifier }) => {
 
     const isMothSurvey = model?.parent.metadata.survey === 'moth';
 
-    if (isMothSurvey && autoImageIdentifier) imageModel.identify();
+    if (isMothSurvey && useImageIdentifier) imageModel.identify();
 
     return imageModel;
   }

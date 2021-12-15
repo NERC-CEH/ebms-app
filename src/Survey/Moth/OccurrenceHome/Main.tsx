@@ -16,7 +16,7 @@ interface Props {
 }
 
 const EditOccurrence: FC<Props> = ({ occurrence }) => {
-  const { autoImageIdentifier } = appModel.attrs;
+  const { useImageIdentifier } = appModel.attrs;
   const match = useRouteMatch();
   const species = occurrence.getTaxonName();
   const isDisabled = occurrence.isDisabled();
@@ -78,7 +78,7 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
         <div className="rounded">
           <PhotoPicker
             model={occurrence}
-            autoImageIdentifier={autoImageIdentifier}
+            useImageIdentifier={useImageIdentifier}
           />
         </div>
       </IonList>

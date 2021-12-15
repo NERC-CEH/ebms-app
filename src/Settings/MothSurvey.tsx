@@ -7,7 +7,7 @@ import { Page, Main, Header, InfoMessage, Toggle } from '@apps';
 import { cameraOutline } from 'ionicons/icons';
 
 function onToggle(appModel: typeof AppModelProps, checked: boolean) {
-  appModel.attrs.autoImageIdentifier = checked; // eslint-disable-line no-param-reassign
+  appModel.attrs.useImageIdentifier = checked; // eslint-disable-line no-param-reassign
   appModel.save();
 }
 
@@ -16,7 +16,7 @@ type Props = {
 };
 
 const MothSurveySettings: FC<Props> = ({ appModel }) => {
-  const { autoImageIdentifier } = appModel.attrs;
+  const { useImageIdentifier } = appModel.attrs;
 
   const onTurnOffImageIdentifierToggle = (checked: boolean) =>
     onToggle(appModel, checked);
@@ -31,15 +31,16 @@ const MothSurveySettings: FC<Props> = ({ appModel }) => {
             <IonItem>
               <IonIcon icon={cameraOutline} size="small" slot="start" />
               <IonLabel>
-                <T>Auto image identifier</T>
+                <T>Use image identification</T>
               </IonLabel>
               <Toggle
                 onToggle={onTurnOffImageIdentifierToggle}
-                checked={autoImageIdentifier}
+                checked={useImageIdentifier}
               />
             </IonItem>
             <InfoMessage color="medium">
-              We will help you to identify species.
+              We will help you to identify species using our species image
+              classifier.
             </InfoMessage>
           </div>
         </IonList>
