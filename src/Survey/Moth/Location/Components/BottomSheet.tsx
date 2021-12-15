@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import Sheet, { SheetRef } from 'react-modal-sheet';
 import Sample from 'models/sample';
 import { InfoMessage, device } from '@apps';
@@ -30,28 +30,20 @@ const BottomSheet: FC<Props> = ({
   centroid,
 }) => {
   const [unmountState, setUnmount] = useState(false);
-  const [mothTrapsWithDistance, setMothTrapsWithDistance] = useState<any>([]);
 
   const ref = React.useRef<SheetRef>();
   const snapTo = (i: number) => ref.current?.snapTo(i);
   const onClose = () => () => snapTo;
 
-  const getDistance = () => {
-    const getMothTrapWithDistance = (mothTrap: MothTrap) => {
-      const { latitude, longitude } = mothTrap;
+  const getMothTrapWithDistance = (mothTrap: MothTrap) => {
+    const { latitude, longitude } = mothTrap;
 
-      const from = [longitude, latitude]; // turf long, lat first
-      const to = [...centroid].reverse(); // turf long, lat first
-      const distance: number = turf(from, to, { units: 'kilometers' });
+    const from = [longitude, latitude]; // turf long, lat first
+    const to = [...centroid].reverse(); // turf long, lat first
+    const distance = turf(from, to, { units: 'kilometers' });
 
-      return { ...mothTrap, distance: distance.toFixed(2) };
-    };
-
-    return setMothTrapsWithDistance(mothTrapData.map(getMothTrapWithDistance));
+    return { ...mothTrap, distance: distance.toFixed(2) };
   };
-
-  const getDistanceWrap = () => getDistance();
-  useEffect(getDistanceWrap, [centroid, mothTrapData]);
 
   const byDistance = (mothTrapA: MothTrap, mothTrapB: MothTrap) => {
     if (!mothTrapA?.distance) return -1;
@@ -70,7 +62,7 @@ const BottomSheet: FC<Props> = ({
   );
 
   const getMothTraps = () => {
-    if (mothTrapsWithDistance.length === 1 && sample.attrs.location) {
+    if (mothTrapData.length === 1 && sample.attrs.location) {
       return (
         <InfoMessage
           icon={informationCircleOutline}
@@ -85,7 +77,7 @@ const BottomSheet: FC<Props> = ({
       );
     }
 
-    if (!mothTrapsWithDistance.length) {
+    if (!mothTrapData.length) {
       return (
         <InfoMessage
           icon={informationCircleOutline}
@@ -101,7 +93,10 @@ const BottomSheet: FC<Props> = ({
       );
     }
 
-    return mothTrapsWithDistance.sort(byDistance).map(getMothTrap);
+    return mothTrapData
+      .map(getMothTrapWithDistance)
+      .sort(byDistance)
+      .map(getMothTrap);
   };
 
   const unMountBottomSheet = () => setUnmount(true); // hack, this component is mounted as a parent with root div
