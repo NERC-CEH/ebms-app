@@ -1,3 +1,10 @@
+declare const surveyDraftKeys: {
+  'draftId:precise-area'?: string;
+  'draftId:precise-single-species-area'?: string;
+  'draftId:transect'?: string;
+  'draftId:moth'?: string | null;
+};
+
 declare const appModel: {
   _init: any;
   attrs: {
@@ -7,10 +14,7 @@ declare const appModel: {
     useTraining: boolean;
     feedbackGiven: boolean;
     areaSurveyListSortedByTime: boolean;
-    'draftId:precise-area'?: string;
-    'draftId:precise-single-species-area'?: string;
-    'draftId:transect'?: string;
-    'draftId:moth'?: string | null;
+
     draftIdKey: any;
     speciesGroups: string[];
     transects: any;
@@ -23,7 +27,7 @@ declare const appModel: {
     showSurveysDeleteTip: boolean;
     showSurveyUploadTip: boolean;
     showCopySpeciesTip: boolean;
-  };
+  } & surveyDraftKeys;
   save: () => any;
 };
 
