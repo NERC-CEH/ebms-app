@@ -23,7 +23,7 @@ import UnidentifiedSpeciesEntry from '../Components/UnidentifiendSpeciesEntry';
 import AnimatedNumber from './Components/AnimatedNumber';
 import './styles.scss';
 
-const showDurationOfRecordsAlert = () =>
+const shownDisabledImageIdentifierAlert = () =>
   alert({
     message: (
       <T>
@@ -119,12 +119,8 @@ const HomeMain: FC<Props> = ({
     return (
       <div className="buttons-wrapper">
         {!useImageIdentifier && (
-          <div onClick={showDurationOfRecordsAlert}>
-            <IonIcon
-              className="info-icon"
-              slot="icon-only"
-              icon={warningOutline}
-            />
+          <div onClick={shownDisabledImageIdentifierAlert}>
+            <IonIcon className="alert-icon" icon={warningOutline} />
           </div>
         )}
         <IonButton
