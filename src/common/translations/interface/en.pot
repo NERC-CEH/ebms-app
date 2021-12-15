@@ -1520,3 +1520,11 @@ msgstr "<0>Warning</0> - we think it is"
 # Moth survey image gallery warning message
 msgid "likely a"
 msgstr "likely a"
+
+# App settings title 
+msgid "Surveying"
+msgstr "Surveying"
+
+# Moth survey label
+msgid "Moth survey (SPRING)"
+msgstr "Moth survey (SPRING)"

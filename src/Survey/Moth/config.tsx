@@ -53,7 +53,7 @@ export const UNKNOWN_OCCURRENCE = {
 const survey: Survey = {
   id: 681,
   name: 'moth',
-  label: 'Moth survey',
+  label: 'Moth survey (SPRING)',
 
   attrs: {
     location: locationAttr,
