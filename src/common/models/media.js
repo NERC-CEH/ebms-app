@@ -22,7 +22,7 @@ export default class AppMedia extends Media {
     });
 
     this.attrs = observable({
-      species: [],
+      species: null,
       ...this.attrs,
     });
 
@@ -101,7 +101,7 @@ export default class AppMedia extends Media {
   }
 
   doesTaxonMatchParent = () => {
-    if (!this.attrs?.species.length) return 'not found';
+    if (!this.attrs?.species || !this.attrs?.species.length) return false;
 
     return (
       Number(this.attrs?.species[0]?.taxa_taxon_list_id) ===

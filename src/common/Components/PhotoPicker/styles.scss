@@ -21,11 +21,27 @@
   }
 }
 
-.swiper-zoom-container .gallery-warning-message {
-  font-weight: 400;
+.swiper-zoom-container {
+  .re-identify-button {
+    --padding-start: 0;
+    --padding-end: 0;
+    background: var(--ion-color-primary);
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0px 15px;
 
-  b {
-    color: var(--ion-color-danger);
-    font-size: 1.1em;
+    ion-icon {
+      margin-right: 15px;
+    }
+  }
+
+  .gallery-warning-message {
+    font-weight: 400;
+
+    b {
+      color: var(--ion-color-danger);
+      font-size: 1.1em;
+    }
   }
 }
