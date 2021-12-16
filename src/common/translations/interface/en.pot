@@ -1528,3 +1528,23 @@ msgstr "Surveying"
 # Moth survey label
 msgid "Moth survey (SPRING)"
 msgstr "Moth survey (SPRING)"
+
+# Survey name
+msgid "Moth Survey"
+msgstr "Moth Survey"
+
+#  Moth settings page header title 
+msgid "Moth Survey Settings"
+msgstr "Moth Survey Settings"
+
+# Moth settings page label 
+msgid "Use image identification"
+msgstr "Use image identification"
+
+# Moth settings page info message 
+msgid "We will help you to identify species using our species image classifier."
+msgstr "We will help you to identify species using our species image classifier."
+
+# Moth survey image classifier disabled info message
+msgid "Auto image identifier is disabled. Please visit app settings page to turn it on."
+msgstr "Auto image identifier is disabled. Please visit app settings page to turn it on."
