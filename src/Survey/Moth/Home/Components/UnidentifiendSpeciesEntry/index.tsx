@@ -9,6 +9,7 @@ import {
   IonSpinner,
   IonIcon,
   NavContext,
+  IonButton,
 } from '@ionic/react';
 import { alert } from '@apps';
 import { observer } from 'mobx-react';
@@ -40,18 +41,26 @@ function deleteOccurrence(occ: typeof Occurrence) {
 interface Props {
   occ: typeof Occurrence;
   isDisabled: boolean;
+  hasMoreThantFiveUnIdentifiedSpecies?: boolean;
+  onIdentify: any;
 }
 
-const UnidentifiedSpeciesEntry: FC<Props> = ({ occ, isDisabled }) => {
+const UnidentifiedSpeciesEntry: FC<Props> = ({
+  occ,
+  isDisabled,
+  hasMoreThantFiveUnIdentifiedSpecies,
+  onIdentify,
+}) => {
   const { navigate } = useContext(NavContext);
   const { url } = useRouteMatch();
-  const [speciesPhoto] = occ.media;
-  const identifying = speciesPhoto?.identification?.identifying;
+  const [hasSpeciesPhoto] = occ.media;
+  const identifying = hasSpeciesPhoto?.identification?.identifying;
+  const speciesNeverBeenIdentified = !hasSpeciesPhoto?.attrs?.species;
   const speciesName = occ.getTaxonName();
 
   const getProfilePhoto = () => {
-    const photo = speciesPhoto ? (
-      <img src={speciesPhoto.getURL()} />
+    const photo = hasSpeciesPhoto ? (
+      <img src={hasSpeciesPhoto.getURL()} />
     ) : (
       <IonIcon icon={mothIcon} />
     );
@@ -61,9 +70,17 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({ occ, isDisabled }) => {
 
   const deleteOccurrenceWrap = () => deleteOccurrence(occ);
 
-  const navigateToSpeciesOccurrence = () => {
-    navigate(`${url}/occ/${occ.cid}`);
+  const navigateToSpeciesOccurrence = () =>
+    !identifying && navigate(`${url}/occ/${occ.cid}`);
+
+  const onIdentifyOccurrence = (e: any) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    return onIdentify(occ);
   };
+
+  const fillStyle = hasMoreThantFiveUnIdentifiedSpecies ? 'outline' : 'solid';
 
   return (
     <IonItemSliding className="species-list-item unknown" key={occ.cid}>
@@ -74,12 +91,18 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({ occ, isDisabled }) => {
           <div>
             <IonLabel>{speciesName}</IonLabel>
 
-            {!speciesPhoto && (
+            {!hasSpeciesPhoto && (
               <IonLabel className="warning-message">
                 <T>Please add a photo</T>
               </IonLabel>
             )}
           </div>
+        )}
+
+        {hasSpeciesPhoto && !identifying && speciesNeverBeenIdentified && (
+          <IonButton slot="end" fill={fillStyle} onClick={onIdentifyOccurrence}>
+            <T>IDENTIFY</T>
+          </IonButton>
         )}
 
         {identifying && (
