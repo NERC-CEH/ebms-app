@@ -116,41 +116,52 @@ const HomeController: FC<Props> = ({ sample }) => {
     return <IonButton onClick={onSubmit}>{label}</IonButton>;
   };
 
-  async function identifyPhoto(image: any, newOccurrence: typeof Occurrence) {
-    await image.identify();
+  const mergeOccurrence = (occ: typeof Occurrence) => {
+    const unknowSpecies =
+      occ.attrs.taxon?.warehouse_id === UNKNOWN_OCCURRENCE.warehouse_id;
 
-    const identifiedSpecies = image.attrs.species?.[0];
+    if (unknowSpecies) return;
 
-    if (!identifiedSpecies) {
-      newOccurrence.attrs.taxon = UNKNOWN_OCCURRENCE;
-      newOccurrence.save();
+    const identifiedSpecies = !occ.attrs?.taxon;
+
+    if (identifiedSpecies) {
+      occ.attrs.taxon = UNKNOWN_OCCURRENCE;
+      occ.save();
       return;
     }
 
-    const { taxa_taxon_list_id, taxon: scientific_name } = identifiedSpecies;
-
-    newOccurrence.attrs.taxon = {
-      warehouse_id: Number(taxa_taxon_list_id),
-      scientific_name,
-      found_in_name: 'scientific_name',
-    };
-    newOccurrence.save();
-
-    // let's find if user has already recorded the same species
     const selectedTaxon = (selectedOccurrence: typeof Occurrence) =>
       selectedOccurrence.attrs.taxon?.warehouse_id ===
-        newOccurrence.attrs.taxon?.warehouse_id &&
-      selectedOccurrence !== newOccurrence;
+        occ.attrs.taxon?.warehouse_id && selectedOccurrence !== occ;
     const existingOcc = sample.occurrences.find(selectedTaxon);
+
     if (!existingOcc) return;
 
     existingOcc.attrs.count += 1;
 
-    newOccurrence.media.remove(image);
-    newOccurrence.destroy();
+    while (occ.media.length) {
+      const copy = occ.media.pop();
+      existingOcc.media.push(copy);
+    }
 
-    existingOcc.media.push(image);
-  }
+    occ.destroy();
+    existingOcc.save();
+  };
+
+  const onIdentifyAllOccurrence = async () => {
+    const identifyOccurrence = async (occ: typeof Occurrence) => {
+      await occ.identify();
+      await mergeOccurrence(occ);
+    };
+
+    return sample.occurrences.forEach(identifyOccurrence);
+  };
+
+  const onIdentifyOccurrence = async (occ: typeof Occurrence) => {
+    await occ.identify();
+
+    mergeOccurrence(occ);
+  };
 
   const photoSelect = async () => {
     if (!device.isOnline()) {
@@ -185,7 +196,7 @@ const HomeController: FC<Props> = ({ sample }) => {
       return;
     }
 
-    identifyPhoto(image, newOccurrence);
+    onIdentifyOccurrence(newOccurrence);
   };
 
   return (
@@ -202,6 +213,8 @@ const HomeController: FC<Props> = ({ sample }) => {
         isDisabled={isDisabled}
         photoSelect={photoSelect}
         useImageIdentifier={useImageIdentifier}
+        onIdentifyOccurrence={onIdentifyOccurrence}
+        onIdentifyAllOccurrence={onIdentifyAllOccurrence}
       />
     </Page>
   );

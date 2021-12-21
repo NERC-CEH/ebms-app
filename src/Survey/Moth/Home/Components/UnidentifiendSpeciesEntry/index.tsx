@@ -80,10 +80,16 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
     return onIdentify(occ);
   };
 
-  const fillStyle = hasMoreThantFiveUnIdentifiedSpecies ? 'outline' : 'solid';
+  const buttonStyles = hasMoreThantFiveUnIdentifiedSpecies
+    ? 'outline'
+    : 'solid';
 
   return (
-    <IonItemSliding className="species-list-item unknown" key={occ.cid}>
+    <IonItemSliding
+      className="species-list-item unknown"
+      disabled={identifying}
+      key={occ.cid}
+    >
       <IonItem detail={!identifying} onClick={navigateToSpeciesOccurrence}>
         {getProfilePhoto()}
 
@@ -100,7 +106,11 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
         )}
 
         {hasSpeciesPhoto && !identifying && speciesNeverBeenIdentified && (
-          <IonButton slot="end" fill={fillStyle} onClick={onIdentifyOccurrence}>
+          <IonButton
+            slot="end"
+            fill={buttonStyles}
+            onClick={onIdentifyOccurrence}
+          >
             <T>IDENTIFY</T>
           </IonButton>
         )}

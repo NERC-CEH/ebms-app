@@ -28,13 +28,41 @@ export default class AppOccurrence extends Occurrence {
 
   isDisabled = () => this.isUploaded();
 
-  identify() {
-    const identifyAllImages = async media => {
-      if (media?.identification.identifying === true) {
-        await media.identify();
-      }
+  async identify() {
+    const identifyAllImages = media => media.identify();
+
+    const identifiedSpecies = await Promise.all(
+      this.media.map(identifyAllImages)
+    );
+    return this._setTaxonWithHighestProbability(identifiedSpecies);
+  }
+
+  _setTaxonWithHighestProbability(species) {
+    const getTaxonWithHighestProbability = (currentTaxon, previoustaxon) => {
+      if (!currentTaxon?.attrs?.species?.length) return previoustaxon;
+      if (!previoustaxon?.attrs?.species?.length) return currentTaxon;
+
+      return previoustaxon.attrs.species[0].probability >
+        currentTaxon.attrs.species[0].probability
+        ? previoustaxon
+        : currentTaxon;
+    };
+    const taxonWithHighestProbability = species.reduce(
+      getTaxonWithHighestProbability
+    );
+
+    if (!taxonWithHighestProbability?.attrs?.species?.length) return;
+
+    // eslint-disable-next-line camelcase
+    const { taxa_taxon_list_id, taxon: scientific_name } =
+      taxonWithHighestProbability.attrs.species[0];
+
+    this.attrs.taxon = {
+      warehouse_id: Number(taxa_taxon_list_id),
+      scientific_name,
+      found_in_name: 'scientific_name',
     };
 
-    return this.media.forEach(identifyAllImages);
+    this.save();
   }
 }

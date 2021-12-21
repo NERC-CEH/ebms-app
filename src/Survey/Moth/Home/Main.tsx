@@ -19,7 +19,7 @@ import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import { locationOutline, camera, warningOutline } from 'ionicons/icons';
 import { UNKNOWN_OCCURRENCE } from 'Survey/Moth/config';
-import UnidentifiedSpeciesEntry from '../Components/UnidentifiendSpeciesEntry';
+import UnidentifiedSpeciesEntry from './Components/UnidentifiendSpeciesEntry';
 import AnimatedNumber from './Components/AnimatedNumber';
 import './styles.scss';
 
@@ -48,6 +48,8 @@ type Props = {
   deleteSpecies: any;
   isDisabled: boolean;
   useImageIdentifier: boolean;
+  onIdentifyOccurrence: any;
+  onIdentifyAllOccurrence: any;
 };
 
 const HomeMain: FC<Props> = ({
@@ -58,6 +60,8 @@ const HomeMain: FC<Props> = ({
   isDisabled,
   photoSelect,
   useImageIdentifier,
+  onIdentifyOccurrence,
+  onIdentifyAllOccurrence,
 }) => {
   const { navigate } = useContext(NavContext);
 
@@ -87,15 +91,14 @@ const HomeMain: FC<Props> = ({
 
     const deleteSpeciesWrap = () => deleteSpecies(occ);
 
-    const navigateToSpeciesOccurrences = () => {
+    const navigateToSpeciesOccurrences = () =>
       navigate(`${match.url}/occ/${occ.cid}`);
-    };
 
     return (
       <IonItemSliding key={occ.cid}>
         <IonItem onClick={navigateToSpeciesOccurrences} detail={!isDisabled}>
           <IonButton
-            className="precise-area-count-edit-count"
+            className="moth-trap-count-button"
             onClick={increaseCountWrap}
             fill="clear"
           >
@@ -115,6 +118,7 @@ const HomeMain: FC<Props> = ({
       </IonItemSliding>
     );
   };
+
   const getNewImageButton = () => {
     return (
       <div className="buttons-wrapper">
@@ -135,16 +139,29 @@ const HomeMain: FC<Props> = ({
     );
   };
 
+  const getUnidentifiedSpeciesLength = () => {
+    const unIdentifiedSpecies = (occ: typeof Occurrence) =>
+      occ.media[0] && !occ.media[0]?.attrs?.species;
+    return sample.occurrences.filter(unIdentifiedSpecies).length;
+  };
+
   const getUndentifiedspeciesList = () => {
     const byUnknownSpecies = (occ: typeof Occurrence) =>
       !occ.attrs.taxon ||
       occ.attrs.taxon.warehouse_id === UNKNOWN_OCCURRENCE.warehouse_id;
+
+    const hasMoreThantFiveUnIdentifiedSpecies =
+      getUnidentifiedSpeciesLength() >= 5;
 
     const getUnidentifiedSpeciesEntry = (occ: typeof Occurrence) => (
       <UnidentifiedSpeciesEntry
         key={occ.cid}
         occ={occ}
         isDisabled={isDisabled}
+        onIdentify={onIdentifyOccurrence}
+        hasMoreThantFiveUnIdentifiedSpecies={
+          hasMoreThantFiveUnIdentifiedSpecies
+        }
       />
     );
     const speciesList = sample.occurrences
@@ -160,10 +177,22 @@ const HomeMain: FC<Props> = ({
         <IonList id="list" lines="full">
           <div className="rounded">
             <IonItemDivider className="species-list-header unknown">
-              <IonLabel>
+              <IonLabel
+                className={clsx(
+                  !hasMoreThantFiveUnIdentifiedSpecies && 'full-width'
+                )}
+              >
                 <T>Unknown species</T>
               </IonLabel>
-              <IonLabel>{count}</IonLabel>
+              {!hasMoreThantFiveUnIdentifiedSpecies && (
+                <IonLabel className="count">{count}</IonLabel>
+              )}
+
+              {hasMoreThantFiveUnIdentifiedSpecies && (
+                <IonButton size="small" onClick={onIdentifyAllOccurrence}>
+                  <T>Identify All</T>
+                </IonButton>
+              )}
             </IonItemDivider>
 
             {speciesList}

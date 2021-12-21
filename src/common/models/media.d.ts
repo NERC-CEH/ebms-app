@@ -4,7 +4,7 @@ declare const appModel: {
   identification: {
     identifying: boolean;
   };
-  identify: () => any;
+  identify: any;
   getURL: () => any;
   upload: () => any;
   doesTaxonMatchParent: () => boolean;

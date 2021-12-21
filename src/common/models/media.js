@@ -110,6 +110,9 @@ export default class AppMedia extends Media {
   };
 
   async identify() {
+    const hasSpeciesBeenIdentified = this.attrs.species?.length;
+    if (hasSpeciesBeenIdentified) return null;
+
     this.identification.identifying = true;
 
     await this.uploadFile();

@@ -28,7 +28,7 @@ const getFooterMessage = (image: typeof Media, identifyImage: any) => {
         onClick={identifyImage}
       >
         <IonIcon icon={mothIcon} />
-        <T>Identify</T>
+        <T>IDENTIFY</T>
       </IonButton>
     );
   }

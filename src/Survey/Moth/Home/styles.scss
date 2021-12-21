@@ -85,13 +85,23 @@
     }
     .species-list-header.unknown {
       ion-label {
-        width: 100%;
+        max-width: 50%;
+        padding-left: 6px;
+        text-align: left;
+      }
 
-        &:first-of-type {
-          max-width: 100%;
-          padding-left: 6px;
-          text-align: left;
-        }
+      ion-label.full-width {
+        max-width: 100%;
+      }
+
+      .count {
+        max-width: 50px;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      ion-button {
+        margin: 5px 0;
       }
     }
 
@@ -108,7 +118,7 @@
       --padding-start: 0;
     }
 
-    .precise-area-count-edit-count {
+    .moth-trap-count-button {
       margin: 0;
       width: 62px;
       height: 100%;

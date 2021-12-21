@@ -16,6 +16,7 @@ declare const appModel: {
   attrs: any;
   isDisabled: bool;
   isDisabled: () => any;
+  identify: () => any
 
   getTaxonName?: any;
 };
