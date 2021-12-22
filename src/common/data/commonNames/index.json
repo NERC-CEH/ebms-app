@@ -4559,6 +4559,13 @@
       "preferredId": 432304
     },
     {
+      "warehouse_id": 466982,
+      "common_name": "Black-veined Moth",
+      "scientific_name": "Siona lineata",
+      "taxon_group": 260,
+      "preferredId": 457508
+    },
+    {
       "warehouse_id": 434089,
       "common_name": "Black-veined White",
       "scientific_name": "Aporia crataegi",
@@ -4571,6 +4578,13 @@
       "scientific_name": "Erebia pharte",
       "taxon_group": 251,
       "preferredId": 432612
+    },
+    {
+      "warehouse_id": 467032,
+      "common_name": "Blood Droplet Burnet",
+      "scientific_name": "Zygaena minos",
+      "taxon_group": 260,
+      "preferredId": 455078
     },
     {
       "warehouse_id": 434092,
@@ -4622,6 +4636,13 @@
       "preferredId": 432194
     },
     {
+      "warehouse_id": 467025,
+      "common_name": "Broad-bordered Bee Hawk-moth",
+      "scientific_name": "Hemaris fuciformis",
+      "taxon_group": 260,
+      "preferredId": 457184
+    },
+    {
       "warehouse_id": 434101,
       "common_name": "Brown Argus",
       "scientific_name": "Aricia agestis",
@@ -4648,6 +4669,13 @@
       "scientific_name": "Erebia orientalis",
       "taxon_group": 251,
       "preferredId": 432614
+    },
+    {
+      "warehouse_id": 467007,
+      "common_name": "Burnet Companion",
+      "scientific_name": "Euclidia glyphica",
+      "taxon_group": 260,
+      "preferredId": 459370
     },
     {
       "warehouse_id": 434107,
@@ -4804,6 +4832,13 @@
       "preferredId": 432722
     },
     {
+      "warehouse_id": 466997,
+      "common_name": "Chimney Sweeper",
+      "scientific_name": "Odezia atrata",
+      "taxon_group": 260,
+      "preferredId": 458449
+    },
+    {
       "warehouse_id": 434133,
       "common_name": "Chios Meadow Brown",
       "scientific_name": "Maniola chia",
@@ -4874,11 +4909,32 @@
       "preferredId": 432378
     },
     {
+      "warehouse_id": 466995,
+      "common_name": "Common Heath",
+      "scientific_name": "Ematurga atomaria",
+      "taxon_group": 260,
+      "preferredId": 457702
+    },
+    {
       "warehouse_id": 434147,
       "common_name": "Common Tiger Blue",
       "scientific_name": "Tarucus theophrastus",
       "taxon_group": 251,
       "preferredId": 432287
+    },
+    {
+      "warehouse_id": 466988,
+      "common_name": "Common Wave",
+      "scientific_name": "Cabera exanthemata",
+      "taxon_group": 260,
+      "preferredId": 457395
+    },
+    {
+      "warehouse_id": 466986,
+      "common_name": "Common White Wave",
+      "scientific_name": "Cabera pusaria",
+      "taxon_group": 260,
+      "preferredId": 457391
     },
     {
       "warehouse_id": 434148,
@@ -4935,6 +4991,13 @@
       "scientific_name": "Lasiommata paramegaera",
       "taxon_group": 251,
       "preferredId": 432485
+    },
+    {
+      "warehouse_id": 466978,
+      "common_name": "Couded Buff",
+      "scientific_name": "Diacrisia sannio",
+      "taxon_group": 260,
+      "preferredId": 459005
     },
     {
       "warehouse_id": 434156,
@@ -5257,6 +5320,13 @@
       "scientific_name": "Hipparchia bacchus",
       "taxon_group": 251,
       "preferredId": 432498
+    },
+    {
+      "warehouse_id": 467021,
+      "common_name": "Emporer Moth",
+      "scientific_name": "Saturnia pavonia",
+      "taxon_group": 260,
+      "preferredId": 457146
     },
     {
       "warehouse_id": 434214,
@@ -5896,6 +5966,13 @@
       "preferredId": 432476
     },
     {
+      "warehouse_id": 466990,
+      "common_name": "Latticed Heath",
+      "scientific_name": "Chiasmia clathrata",
+      "taxon_group": 260,
+      "preferredId": 457302
+    },
+    {
       "warehouse_id": 434335,
       "common_name": "Le Cerf's Grayling",
       "scientific_name": "Hipparchia miguelensis",
@@ -6190,6 +6267,13 @@
       "preferredId": 432210
     },
     {
+      "warehouse_id": 467009,
+      "common_name": "Mother Shipton",
+      "scientific_name": "Euclidia mi",
+      "taxon_group": 260,
+      "preferredId": 459372
+    },
+    {
       "warehouse_id": 434389,
       "common_name": "Mother-of-pearl Blue",
       "scientific_name": "Polyommatus nivescens",
@@ -6246,6 +6330,27 @@
       "preferredId": 432225
     },
     {
+      "warehouse_id": 467023,
+      "common_name": "Narrow-bordered Bee Hawk-moth",
+      "scientific_name": "Hemaris tityus",
+      "taxon_group": 260,
+      "preferredId": 457182
+    },
+    {
+      "warehouse_id": 466578,
+      "common_name": "Narrow-bordered Bee Hawk-moth/broad-bordered Bee Hawk-moth",
+      "scientific_name": "Hemaris fuciformis/tityus",
+      "taxon_group": 260,
+      "preferredId": 466577
+    },
+    {
+      "warehouse_id": 467042,
+      "common_name": "Narrow-bordered Five-spot Burnet",
+      "scientific_name": "Zygaena lonicerae",
+      "taxon_group": 260,
+      "preferredId": 455123
+    },
+    {
       "warehouse_id": 434397,
       "common_name": "Nettle-tree Butterfly",
       "scientific_name": "Libythea celtis",
@@ -6265,6 +6370,20 @@
       "scientific_name": "Pseudochazara williamsi",
       "taxon_group": 251,
       "preferredId": 432547
+    },
+    {
+      "warehouse_id": 467038,
+      "common_name": "New Forest Burnet",
+      "scientific_name": "Zygaena viciae",
+      "taxon_group": 260,
+      "preferredId": 455100
+    },
+    {
+      "warehouse_id": 466580,
+      "common_name": "New Forest Burnet/narrow-bordered Five-spot Burnet",
+      "scientific_name": "Zygaena viciae/lonicera",
+      "taxon_group": 260,
+      "preferredId": 466579
     },
     {
       "warehouse_id": 434400,
@@ -6342,6 +6461,13 @@
       "scientific_name": "Lasiommata petropolitana/maera",
       "taxon_group": 251,
       "preferredId": 466594
+    },
+    {
+      "warehouse_id": 466999,
+      "common_name": "Oak Egger",
+      "scientific_name": "Lasiocampa quercus",
+      "taxon_group": 260,
+      "preferredId": 457094
     },
     {
       "warehouse_id": 462956,
@@ -6848,11 +6974,32 @@
       "preferredId": 432123
     },
     {
+      "warehouse_id": 466974,
+      "common_name": "Scarlet Tiger",
+      "scientific_name": "Callimorpha dominula",
+      "taxon_group": 260,
+      "preferredId": 459045
+    },
+    {
       "warehouse_id": 434514,
       "common_name": "Scotch Argus",
       "scientific_name": "Erebia aethiops",
       "taxon_group": 251,
       "preferredId": 432611
+    },
+    {
+      "warehouse_id": 467034,
+      "common_name": "Scotch Burnet",
+      "scientific_name": "Zygaena exulans",
+      "taxon_group": 260,
+      "preferredId": 455098
+    },
+    {
+      "warehouse_id": 466980,
+      "common_name": "Shaded Broad-bar",
+      "scientific_name": "Scotopteryx chenopodiata",
+      "taxon_group": 260,
+      "preferredId": 458114
     },
     {
       "warehouse_id": 434515,
@@ -6890,6 +7037,13 @@
       "preferredId": 432592
     },
     {
+      "warehouse_id": 467005,
+      "common_name": "Silver Y",
+      "scientific_name": "Autographa gamma",
+      "taxon_group": 260,
+      "preferredId": 459510
+    },
+    {
       "warehouse_id": 434521,
       "common_name": "Silver-spotted Skipper",
       "scientific_name": "Hesperia comma",
@@ -6916,6 +7070,13 @@
       "scientific_name": "Aricia nicias",
       "taxon_group": 251,
       "preferredId": 432342
+    },
+    {
+      "warehouse_id": 467040,
+      "common_name": "Six-spot Burnet",
+      "scientific_name": "Zygaena filipendulae",
+      "taxon_group": 260,
+      "preferredId": 455121
     },
     {
       "warehouse_id": 434657,
@@ -7282,11 +7443,32 @@
       "preferredId": 432585
     },
     {
+      "warehouse_id": 467019,
+      "common_name": "Tau Emperor",
+      "scientific_name": "Aglia tau",
+      "taxon_group": 260,
+      "preferredId": 457140
+    },
+    {
       "warehouse_id": 434591,
       "common_name": "Tessellated Skipper",
       "scientific_name": "Muschampia tessellum",
       "taxon_group": 251,
       "preferredId": 432706
+    },
+    {
+      "warehouse_id": 466976,
+      "common_name": "The Cinnabar",
+      "scientific_name": "Tyria jacobaeae",
+      "taxon_group": 260,
+      "preferredId": 459049
+    },
+    {
+      "warehouse_id": 467030,
+      "common_name": "The Forester",
+      "scientific_name": "Adscita statices",
+      "taxon_group": 260,
+      "preferredId": 455071
     },
     {
       "warehouse_id": 434592,
@@ -7373,6 +7555,13 @@
       "preferredId": 466590
     },
     {
+      "warehouse_id": 467044,
+      "common_name": "Unidentified Burnet",
+      "scientific_name": "Zygaena",
+      "taxon_group": 260,
+      "preferredId": 447456
+    },
+    {
       "warehouse_id": 467046,
       "common_name": "Unidentified Butterfly/moth",
       "scientific_name": "Lepidoptera",
@@ -7394,6 +7583,20 @@
       "preferredId": 466591
     },
     {
+      "warehouse_id": 466576,
+      "common_name": "Unidentified Geometrid",
+      "scientific_name": "Unidentified Geometrid",
+      "taxon_group": 260,
+      "preferredId": 466576
+    },
+    {
+      "warehouse_id": 466983,
+      "common_name": "Unidentified Geometrid",
+      "scientific_name": "Geometridae",
+      "taxon_group": 260,
+      "preferredId": 446300
+    },
+    {
       "warehouse_id": 466588,
       "common_name": "Unidentified Hairstreak",
       "scientific_name": "Unidentified Hairstreak",
@@ -7413,6 +7616,13 @@
       "scientific_name": "Pieridae",
       "taxon_group": 251,
       "preferredId": 431987
+    },
+    {
+      "warehouse_id": 538737,
+      "common_name": "Unknown",
+      "scientific_name": "Unknown",
+      "taxon_group": 260,
+      "preferredId": 538737
     },
     {
       "warehouse_id": 434607,
@@ -7527,6 +7737,13 @@
       "preferredId": 432724
     },
     {
+      "warehouse_id": 467036,
+      "common_name": "Woodland Burnet",
+      "scientific_name": "Zygaena osterodensis",
+      "taxon_group": 260,
+      "preferredId": 455112
+    },
+    {
       "warehouse_id": 434628,
       "common_name": "Woodland Grayling",
       "scientific_name": "Hipparchia fagi",
@@ -7539,6 +7756,13 @@
       "scientific_name": "Erebia medusa",
       "taxon_group": 251,
       "preferredId": 432610
+    },
+    {
+      "warehouse_id": 466992,
+      "common_name": "Yellow Shell",
+      "scientific_name": "Camptogramma bilineata",
+      "taxon_group": 260,
+      "preferredId": 458171
     },
     {
       "warehouse_id": 434631,

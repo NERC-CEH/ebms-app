@@ -18,6 +18,11 @@ const LANGUAGE_ISO_MAPPING = {
   rus: 'ru-RU',
 };
 
+const COUNTRIES_WITH_MOTH_COMMON_NAMES = {
+  swe: 'sv-SE',
+  eng: 'en',
+};
+
 const { APP_INDICIA_API_KEY, REPORT_USER_EMAIL, REPORT_USER_PASS } =
   process.env;
 
@@ -94,10 +99,11 @@ function sortAlphabetically(species) {
 const make = async () => {
   const butterflies = await fetch(groups.butterflies.id);
   const mothsOnly = ({ taxon_group: group }) => group === groups.moths.id;
-  const swedishOnly = ({ language_iso: lang }) => lang === 'swe';
+  const specificCountryOnly = ({ language_iso: lang }) =>
+    COUNTRIES_WITH_MOTH_COMMON_NAMES[lang];
   const moths = (await fetch(groups.moths.id))
     .filter(mothsOnly)
-    .filter(swedishOnly);
+    .filter(specificCountryOnly);
 
   const species = [...butterflies, ...moths];
   const sortedSpecies = sortAlphabetically(species);
