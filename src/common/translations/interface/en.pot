@@ -1545,9 +1545,6 @@ msgstr "Use image identification"
 msgid "We will help you to identify species using our species image classifier."
 msgstr "We will help you to identify species using our species image classifier."
 
-# Moth survey image classifier disabled info message
-msgid "Auto image identifier is disabled. Please visit app settings page to turn it on."
-msgstr "Auto image identifier is disabled. Please visit app settings page to turn it on."
 
 # Moth survey button label 
 msgid "IDENTIFY"
@@ -1556,3 +1553,11 @@ msgstr "IDENTIFY"
 # Moth survey button label 
 msgid "Identify All"
 msgstr "Identify All"
+
+# Moth survey image classifier disabled info header
+msgid "Image identification"
+msgstr "Image identification"
+
+# Moth survey image classifier disabled info message
+msgid "Image classifier is currently <1>disabled</1>. Please go to app <4>Settings</4> to turn it on."
+msgstr "Image classifier is currently <1>disabled</1>. Please go to app <4>Settings</4> to turn it on."

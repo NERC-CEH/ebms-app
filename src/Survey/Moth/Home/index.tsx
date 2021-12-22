@@ -117,44 +117,26 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const mergeOccurrence = (occ: typeof Occurrence) => {
-    const unknowSpecies =
-      occ.attrs.taxon?.warehouse_id === UNKNOWN_OCCURRENCE.warehouse_id;
-
-    if (unknowSpecies) return;
-
-    const identifiedSpecies = !occ.attrs?.taxon;
-
-    if (identifiedSpecies) {
-      occ.attrs.taxon = UNKNOWN_OCCURRENCE;
-      occ.save();
-      return;
-    }
+    const speciesIsKnown =
+      occ.attrs.taxon?.warehouse_id !== UNKNOWN_OCCURRENCE.warehouse_id;
+    if (!speciesIsKnown) return;
 
     const selectedTaxon = (selectedOccurrence: typeof Occurrence) =>
       selectedOccurrence.attrs.taxon?.warehouse_id ===
         occ.attrs.taxon?.warehouse_id && selectedOccurrence !== occ;
-    const existingOcc = sample.occurrences.find(selectedTaxon);
+    const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
 
-    if (!existingOcc) return;
+    if (!occWithSameSpecies) return;
 
-    existingOcc.attrs.count += 1;
+    occWithSameSpecies.attrs.count += 1;
 
     while (occ.media.length) {
       const copy = occ.media.pop();
-      existingOcc.media.push(copy);
+      occWithSameSpecies.media.push(copy);
     }
 
     occ.destroy();
-    existingOcc.save();
-  };
-
-  const onIdentifyAllOccurrence = async () => {
-    const identifyOccurrence = async (occ: typeof Occurrence) => {
-      await occ.identify();
-      await mergeOccurrence(occ);
-    };
-
-    return sample.occurrences.forEach(identifyOccurrence);
+    occWithSameSpecies.save();
   };
 
   const onIdentifyOccurrence = async (occ: typeof Occurrence) => {
@@ -162,6 +144,9 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     mergeOccurrence(occ);
   };
+
+  const onIdentifyAllOccurrences = () =>
+    sample.occurrences.forEach(onIdentifyOccurrence);
 
   const photoSelect = async () => {
     if (!device.isOnline()) {
@@ -178,7 +163,7 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     const identifier = sample.attrs.recorder;
 
-    const taxon = null;
+    const taxon = UNKNOWN_OCCURRENCE;
 
     const newOccurrence = surveyConfig.occ.create(
       Occurrence,
@@ -190,11 +175,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     sample.occurrences.push(newOccurrence);
     sample.save();
 
-    if (!useImageIdentifier) {
-      newOccurrence.attrs.taxon = UNKNOWN_OCCURRENCE;
-      newOccurrence.save();
-      return;
-    }
+    if (!useImageIdentifier) return;
 
     onIdentifyOccurrence(newOccurrence);
   };
@@ -214,7 +195,7 @@ const HomeController: FC<Props> = ({ sample }) => {
         photoSelect={photoSelect}
         useImageIdentifier={useImageIdentifier}
         onIdentifyOccurrence={onIdentifyOccurrence}
-        onIdentifyAllOccurrence={onIdentifyAllOccurrence}
+        onIdentifyAllOccurrences={onIdentifyAllOccurrences}
       />
     </Page>
   );

@@ -41,14 +41,14 @@ function deleteOccurrence(occ: typeof Occurrence) {
 interface Props {
   occ: typeof Occurrence;
   isDisabled: boolean;
-  hasMoreThantFiveUnIdentifiedSpecies?: boolean;
+  isUnidentifiedSpeciesLengthMoreThanFive: boolean;
   onIdentify: any;
 }
 
 const UnidentifiedSpeciesEntry: FC<Props> = ({
   occ,
   isDisabled,
-  hasMoreThantFiveUnIdentifiedSpecies,
+  isUnidentifiedSpeciesLengthMoreThanFive,
   onIdentify,
 }) => {
   const { navigate } = useContext(NavContext);
@@ -80,7 +80,7 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
     return onIdentify(occ);
   };
 
-  const buttonStyles = hasMoreThantFiveUnIdentifiedSpecies
+  const buttonStyles = isUnidentifiedSpeciesLengthMoreThanFive
     ? 'outline'
     : 'solid';
 

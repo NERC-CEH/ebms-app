@@ -25,10 +25,11 @@ import './styles.scss';
 
 const shownDisabledImageIdentifierAlert = () =>
   alert({
+    header: 'Image identification',
     message: (
       <T>
-        Auto image identifier is disabled. Please visit app settings page to
-        turn it on.
+        Image classifier is currently <b>disabled</b>. Please go to app{' '}
+        <b>Settings</b> to turn it on.
       </T>
     ),
     buttons: [
@@ -49,7 +50,7 @@ type Props = {
   isDisabled: boolean;
   useImageIdentifier: boolean;
   onIdentifyOccurrence: any;
-  onIdentifyAllOccurrence: any;
+  onIdentifyAllOccurrences: any;
 };
 
 const HomeMain: FC<Props> = ({
@@ -61,7 +62,7 @@ const HomeMain: FC<Props> = ({
   photoSelect,
   useImageIdentifier,
   onIdentifyOccurrence,
-  onIdentifyAllOccurrence,
+  onIdentifyAllOccurrences,
 }) => {
   const { navigate } = useContext(NavContext);
 
@@ -139,10 +140,10 @@ const HomeMain: FC<Props> = ({
     );
   };
 
-  const getUnidentifiedSpeciesLength = () => {
+  const isUnidentifiedSpeciesLengthMoreThanFive = () => {
     const unIdentifiedSpecies = (occ: typeof Occurrence) =>
       occ.media[0] && !occ.media[0]?.attrs?.species;
-    return sample.occurrences.filter(unIdentifiedSpecies).length;
+    return sample.occurrences.filter(unIdentifiedSpecies).length >= 5;
   };
 
   const getUndentifiedspeciesList = () => {
@@ -150,18 +151,13 @@ const HomeMain: FC<Props> = ({
       !occ.attrs.taxon ||
       occ.attrs.taxon.warehouse_id === UNKNOWN_OCCURRENCE.warehouse_id;
 
-    const hasMoreThantFiveUnIdentifiedSpecies =
-      getUnidentifiedSpeciesLength() >= 5;
-
     const getUnidentifiedSpeciesEntry = (occ: typeof Occurrence) => (
       <UnidentifiedSpeciesEntry
         key={occ.cid}
         occ={occ}
         isDisabled={isDisabled}
         onIdentify={onIdentifyOccurrence}
-        hasMoreThantFiveUnIdentifiedSpecies={
-          hasMoreThantFiveUnIdentifiedSpecies
-        }
+        isUnidentifiedSpeciesLengthMoreThanFive={isUnidentifiedSpeciesLengthMoreThanFive()}
       />
     );
     const speciesList = sample.occurrences
@@ -179,17 +175,17 @@ const HomeMain: FC<Props> = ({
             <IonItemDivider className="species-list-header unknown">
               <IonLabel
                 className={clsx(
-                  !hasMoreThantFiveUnIdentifiedSpecies && 'full-width'
+                  !isUnidentifiedSpeciesLengthMoreThanFive() && 'full-width'
                 )}
               >
                 <T>Unknown species</T>
               </IonLabel>
-              {!hasMoreThantFiveUnIdentifiedSpecies && (
+              {!isUnidentifiedSpeciesLengthMoreThanFive() && (
                 <IonLabel className="count">{count}</IonLabel>
               )}
 
-              {hasMoreThantFiveUnIdentifiedSpecies && (
-                <IonButton size="small" onClick={onIdentifyAllOccurrence}>
+              {isUnidentifiedSpeciesLengthMoreThanFive() && (
+                <IonButton size="small" onClick={onIdentifyAllOccurrences}>
                   <T>Identify All</T>
                 </IonButton>
               )}

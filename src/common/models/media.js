@@ -104,14 +104,14 @@ export default class AppMedia extends Media {
     if (!this.attrs?.species || !this.attrs?.species.length) return false;
 
     return (
-      Number(this.attrs?.species[0]?.taxa_taxon_list_id) ===
+      parseInt(this.attrs?.species[0]?.taxa_taxon_list_id, 10) ===
       this.parent.attrs?.taxon?.warehouse_id
     );
   };
 
   async identify() {
     const hasSpeciesBeenIdentified = this.attrs.species?.length;
-    if (hasSpeciesBeenIdentified) return null;
+    if (hasSpeciesBeenIdentified) return this.attrs.species[0];
 
     this.identification.identifying = true;
 
@@ -156,6 +156,6 @@ export default class AppMedia extends Media {
 
     this.identification.identifying = false;
 
-    return this;
+    return this.attrs.species[0];
   }
 }

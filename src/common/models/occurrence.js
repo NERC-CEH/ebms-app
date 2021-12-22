@@ -31,38 +31,32 @@ export default class AppOccurrence extends Occurrence {
   async identify() {
     const identifyAllImages = media => media.identify();
 
-    const identifiedSpecies = await Promise.all(
-      this.media.map(identifyAllImages)
-    );
-    return this._setTaxonWithHighestProbability(identifiedSpecies);
-  }
+    // [sp1, null, sp3, sp1 ]
+    const species = await Promise.all(this.media.map(identifyAllImages));
 
-  _setTaxonWithHighestProbability(species) {
-    const getTaxonWithHighestProbability = (currentTaxon, previoustaxon) => {
-      if (!currentTaxon?.attrs?.species?.length) return previoustaxon;
-      if (!previoustaxon?.attrs?.species?.length) return currentTaxon;
+    let highestProbSpecies = null;
+    const findHighestProbSpecies = sp => {
+      if (!highestProbSpecies) {
+        highestProbSpecies = sp;
+        return;
+      }
 
-      return previoustaxon.attrs.species[0].probability >
-        currentTaxon.attrs.species[0].probability
-        ? previoustaxon
-        : currentTaxon;
+      if (highestProbSpecies.probability < sp?.probability) {
+        highestProbSpecies = sp;
+      }
     };
-    const taxonWithHighestProbability = species.reduce(
-      getTaxonWithHighestProbability
-    );
+    species.forEach(findHighestProbSpecies);
 
-    if (!taxonWithHighestProbability?.attrs?.species?.length) return;
-
-    // eslint-disable-next-line camelcase
-    const { taxa_taxon_list_id, taxon: scientific_name } =
-      taxonWithHighestProbability.attrs.species[0];
+    if (!highestProbSpecies) return this.attrs.taxon;
 
     this.attrs.taxon = {
-      warehouse_id: Number(taxa_taxon_list_id),
-      scientific_name,
+      warehouse_id: parseInt(highestProbSpecies.taxa_taxon_list_id, 10),
+      scientific_name: highestProbSpecies.taxon,
       found_in_name: 'scientific_name',
     };
 
     this.save();
+
+    return this.attrs.taxon;
   }
 }
