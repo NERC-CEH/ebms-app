@@ -2,6 +2,7 @@ require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-
 
 const axios = require('axios'); // eslint-disable-line
 const fs = require('fs');
+const btoa = require('btoa');
 const groups = require('../species/groups.json');
 
 const LANGUAGE_ISO_MAPPING = {
@@ -17,21 +18,24 @@ const LANGUAGE_ISO_MAPPING = {
   rus: 'ru-RU',
 };
 
-const { APP_INDICIA_API_KEY, APP_INDICIA_API_USER_AUTH } = process.env;
+const { APP_INDICIA_API_KEY, REPORT_USER_EMAIL, REPORT_USER_PASS } =
+  process.env;
 
-if (!APP_INDICIA_API_KEY || !APP_INDICIA_API_USER_AUTH) {
+if (!APP_INDICIA_API_KEY && !REPORT_USER_EMAIL && REPORT_USER_PASS) {
   throw new Error(
-    'APP_INDICIA_API_KEY or APP_INDICIA_API_USER_AUTH is missing from env.'
+    'APP_INDICIA_API_KEY and REPORT_USER_EMAIL and REPORT_USER_PASS is missing from env.'
   );
 }
 
 async function fetch(listID) {
+  const userAuth = btoa(`${REPORT_USER_EMAIL}:${REPORT_USER_PASS}`);
+
   const { data } = await axios({
     method: 'GET',
     url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}`,
     headers: {
       'x-api-key': APP_INDICIA_API_KEY,
-      Authorization: `Basic ${APP_INDICIA_API_USER_AUTH}`,
+      Authorization: `Basic ${userAuth}`,
     },
   });
 
