@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { observer } from 'mobx-react';
-import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
+import { IonList } from '@ionic/react';
 import AppModelProps from 'models/appModel';
-import { Page, Main, Header, InfoMessage, Toggle } from '@apps';
+import { Page, Main, Header, InfoMessage, MenuAttrToggle } from '@apps';
 import { cameraOutline } from 'ionicons/icons';
+import './styles.scss';
 
 function onToggle(appModel: typeof AppModelProps, checked: boolean) {
   appModel.attrs.useImageIdentifier = checked; // eslint-disable-line no-param-reassign
@@ -22,22 +22,18 @@ const MothSurveySettings: FC<Props> = ({ appModel }) => {
     onToggle(appModel, checked);
 
   return (
-    <Page id="moth-survey">
+    <Page id="moth-survey-settings">
       <Header title="Moth Survey Settings" />
 
       <Main>
         <IonList lines="full">
           <div className="rounded">
-            <IonItem>
-              <IonIcon icon={cameraOutline} size="small" slot="start" />
-              <IonLabel>
-                <T>Use image identification</T>
-              </IonLabel>
-              <Toggle
-                onToggle={onTurnOffImageIdentifierToggle}
-                checked={useImageIdentifier}
-              />
-            </IonItem>
+            <MenuAttrToggle
+              icon={cameraOutline}
+              label="Use image identification"
+              value={useImageIdentifier}
+              onChange={onTurnOffImageIdentifierToggle}
+            />
             <InfoMessage color="medium">
               We will help you to identify species using our species image
               classifier.

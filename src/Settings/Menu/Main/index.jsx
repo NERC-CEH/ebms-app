@@ -10,7 +10,7 @@ import {
 } from '@ionic/react';
 import {
   arrowUndoOutline,
-  // flameOutline,
+  flameOutline,
   schoolOutline,
   flagOutline,
   globeOutline,
@@ -23,25 +23,34 @@ import languages from 'common/config/languages';
 import countries from 'common/config/countries';
 import config from 'config';
 import surveys from 'common/config/surveys';
-import { Main, alert, Toggle, MenuNoteItem } from '@apps';
+import { Main, alert, InfoMessage, MenuAttrToggle } from '@apps';
 import butterflyIcon from 'common/images/butterfly.svg';
 import mothIcon from 'common/images/moth.svg';
 import './styles.scss';
 
 function resetDialog(resetApp) {
   alert({
-    header: t('Reset'),
-    message: `${t(
-      'Are you sure you want to reset the application to its initial state?'
-    )}<p><b>${t('This will wipe all the locally stored app data!')}</b></p>`,
+    header: 'Reset',
+    message: (
+      <>
+        <T>
+          Are you sure you want to reset the application to its initial state?
+        </T>
+        <p>
+          <b>
+            <T>This will wipe all the locally stored app data!</T>
+          </b>
+        </p>
+      </>
+    ),
     buttons: [
       {
-        text: t('Cancel'),
+        text: 'Cancel',
         role: 'cancel',
         cssClass: 'primary',
       },
       {
-        text: t('Reset'),
+        text: 'Reset',
         cssClass: 'secondary',
         handler: resetApp,
       },
@@ -51,16 +60,16 @@ function resetDialog(resetApp) {
 
 function uploadAllSamplesDialog(uploadAllSamples) {
   alert({
-    header: t('Upload All'),
-    message: t('Are you sure you want to upload all finished records?'),
+    header: 'Upload All',
+    message: <T>Are you sure you want to upload all finished records?</T>,
     buttons: [
       {
-        text: t('Cancel'),
+        text: 'Cancel',
         role: 'cancel',
         cssClass: 'primary',
       },
       {
-        text: t('Upload'),
+        text: 'Upload',
         cssClass: 'secondary',
         handler: uploadAllSamples,
       },
@@ -75,7 +84,7 @@ class Component extends React.Component {
     onToggle: PropTypes.func.isRequired,
     uploadAllSamples: PropTypes.func.isRequired,
     useTraining: PropTypes.bool.isRequired,
-    // useExperiments: PropTypes.bool.isRequired,
+    useExperiments: PropTypes.bool.isRequired,
     sendAnalytics: PropTypes.bool.isRequired,
     primarySurvey: PropTypes.string,
     language: PropTypes.string,
@@ -88,7 +97,7 @@ class Component extends React.Component {
       resetApp,
       onToggle,
       useTraining,
-      // useExperiments,
+      useExperiments,
       language,
       country,
       sendAnalytics,
@@ -100,6 +109,7 @@ class Component extends React.Component {
     const primarySurveyLabel = surveys[primarySurvey].label;
 
     const onSendAnalyticsToggle = checked => onToggle('sendAnalytics', checked);
+    const onUseExperiments = checked => onToggle('useExperiments', checked);
     const onResetDialog = () => resetDialog(resetApp);
     const onTrainingToggle = checked => onToggle('useTraining', checked);
     const onSubmitAllDialog = () => uploadAllSamplesDialog(uploadAllSamples);
@@ -117,10 +127,10 @@ class Component extends React.Component {
                 <T>Upload All</T>
               </IonLabel>
             </IonItem>
-            <MenuNoteItem color="medium">
+            <InfoMessage color="medium">
               Batch upload all finished records. This does not include records
               in &#39;draft&#39; stage.
-            </MenuNoteItem>
+            </InfoMessage>
             <IonItem routerLink="/settings/primary-survey" detail>
               <IonLabel>
                 <T>Primary Survey</T>
@@ -166,42 +176,33 @@ class Component extends React.Component {
               </IonLabel>
             </IonItem>
 
-            <IonItem>
-              <IonIcon icon={schoolOutline} size="small" slot="start" />
-              <IonLabel>
-                <T>Training Mode</T>
-              </IonLabel>
-              <Toggle onToggle={onTrainingToggle} checked={useTraining} />
-            </IonItem>
-            <MenuNoteItem color="medium">
+            <MenuAttrToggle
+              icon={schoolOutline}
+              label="Training Mode"
+              value={useTraining}
+              onChange={onTrainingToggle}
+            />
+            <InfoMessage color="medium">
               Mark any new records as &#39;training&#39; and exclude from all
               reports.
-            </MenuNoteItem>
+            </InfoMessage>
 
-            {/* <IonItem>
-              <IonIcon icon={flameOutline} size="small" slot="start" />
-              <IonLabel>
-                <T>Experimental Features</T>
-              </IonLabel>
-              <Toggle
-                onToggle={checked => onToggle('useExperiments', checked)}
-                checked={useExperiments}
-              />
-            </IonItem> */}
+            <MenuAttrToggle
+              icon={flameOutline}
+              label="Experimental Features"
+              value={useExperiments}
+              onChange={onUseExperiments}
+            />
 
-            <IonItem>
-              <IonIcon icon={shareOutline} size="small" slot="start" />
-              <IonLabel>
-                <T>Share App Analytics</T>
-              </IonLabel>
-              <Toggle
-                onToggle={onSendAnalyticsToggle}
-                checked={sendAnalytics}
-              />
-            </IonItem>
-            <MenuNoteItem color="medium">
+            <MenuAttrToggle
+              icon={shareOutline}
+              label="Share App Analytics"
+              value={sendAnalytics}
+              onChange={onSendAnalyticsToggle}
+            />
+            <InfoMessage color="medium">
               Share app crash data so we can make the app more reliable.
-            </MenuNoteItem>
+            </InfoMessage>
 
             <IonItem id="app-reset-btn" onClick={onResetDialog}>
               <IonIcon icon={arrowUndoOutline} size="small" slot="start" />

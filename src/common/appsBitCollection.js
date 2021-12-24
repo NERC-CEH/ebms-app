@@ -33,6 +33,7 @@ export { default as date } from '@bit/flumens.apps.date';
 export { default as actionSheet } from '@bit/flumens.apps.helpers.action-sheet';
 export { default as initAnalytics } from '@bit/flumens.apps.utils.analytics';
 export { default as MenuAttrItemFromModel } from '@bit/flumens.apps.menu-attr-item-from-model';
+export { default as MenuAttrToggle } from '@bit/flumens.apps.menu-attr-toggle';
 export * from '@bit/flumens.apps.utils.validation';
 export * from '@bit/flumens.apps.utils.location';
 
