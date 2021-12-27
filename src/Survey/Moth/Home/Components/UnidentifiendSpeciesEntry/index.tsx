@@ -1,5 +1,6 @@
 import React, { FC, useContext } from 'react';
 import Occurrence from 'models/occurrence';
+import Media from 'models/media';
 import {
   IonItemSliding,
   IonItem,
@@ -55,8 +56,14 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
   const { url } = useRouteMatch();
   const [hasSpeciesPhoto] = occ.media;
   const identifying = hasSpeciesPhoto?.identification?.identifying;
-  const speciesNeverBeenIdentified = !hasSpeciesPhoto?.attrs?.species;
   const speciesName = occ.getTaxonName();
+
+  const hasAllSpeciesImagesBeenIdentified = () => {
+    const hasSpeciesImageBeenIdentified = (media: typeof Media) =>
+      !media.attrs.species;
+
+    return occ.media.some(hasSpeciesImageBeenIdentified);
+  };
 
   const getProfilePhoto = () => {
     const photo = hasSpeciesPhoto ? (
@@ -105,15 +112,17 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
           </div>
         )}
 
-        {hasSpeciesPhoto && !identifying && speciesNeverBeenIdentified && (
-          <IonButton
-            slot="end"
-            fill={buttonStyles}
-            onClick={onIdentifyOccurrence}
-          >
-            <T>IDENTIFY</T>
-          </IonButton>
-        )}
+        {hasSpeciesPhoto &&
+          !identifying &&
+          hasAllSpeciesImagesBeenIdentified() && (
+            <IonButton
+              slot="end"
+              fill={buttonStyles}
+              onClick={onIdentifyOccurrence}
+            >
+              <T>IDENTIFY</T>
+            </IonButton>
+          )}
 
         {identifying && (
           <>
