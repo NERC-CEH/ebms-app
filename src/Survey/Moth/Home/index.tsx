@@ -13,6 +13,7 @@ import Media from 'models/media';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
 import { isPlatform, IonButton, NavContext } from '@ionic/react';
 import { useTranslation, Trans as T } from 'react-i18next';
+import { UNKNOWN_SPECIES } from 'Survey/Moth/config';
 import Main from './Main';
 import './styles.scss';
 
@@ -117,18 +118,25 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const mergeOccurrence = (occ: typeof Occurrence) => {
+    const { comment, identifier } = occ.attrs;
+
     const speciesIsKnown =
-      occ.attrs.taxon?.warehouse_id !== UNKNOWN_OCCURRENCE.warehouse_id;
+      occ.attrs.taxon?.warehouse_id !==
+      UNKNOWN_SPECIES.preferred_taxa_taxon_list_id;
     if (!speciesIsKnown) return;
 
     const selectedTaxon = (selectedOccurrence: typeof Occurrence) =>
       selectedOccurrence.attrs.taxon?.warehouse_id ===
-        occ.attrs.taxon?.warehouse_id && selectedOccurrence !== occ;
+        occ.attrs.taxon?.warehouse_id &&
+      selectedOccurrence !== occ &&
+      selectedOccurrence.attrs.comment === comment &&
+      selectedOccurrence.attrs.identifier === identifier;
     const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
 
     if (!occWithSameSpecies) return;
 
-    occWithSameSpecies.attrs.count += 1;
+    occWithSameSpecies.attrs.count += occ.attrs.count;
+    occWithSameSpecies.attrs['count-outside'] += occ.attrs['count-outside'];
 
     while (occ.media.length) {
       const copy = occ.media.pop();
@@ -169,7 +177,7 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     const identifier = sample.attrs.recorder;
 
-    const taxon = UNKNOWN_OCCURRENCE;
+    const taxon = UNKNOWN_SPECIES;
 
     const newOccurrence = surveyConfig.occ.create(
       Occurrence,

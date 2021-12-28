@@ -18,7 +18,7 @@ import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import { locationOutline, camera, warningOutline } from 'ionicons/icons';
-import { UNKNOWN_OCCURRENCE } from 'Survey/Moth/config';
+import { UNKNOWN_SPECIES } from 'Survey/Moth/config';
 import UnidentifiedSpeciesEntry from './Components/UnidentifiendSpeciesEntry';
 import AnimatedNumber from './Components/AnimatedNumber';
 import './styles.scss';
@@ -142,14 +142,19 @@ const HomeMain: FC<Props> = ({
 
   const isUnidentifiedSpeciesLengthMoreThanFive = () => {
     const unIdentifiedSpecies = (occ: typeof Occurrence) =>
-      occ.media[0] && !occ.media[0]?.attrs?.species;
+      occ.media[0] &&
+      !occ.media[0]?.attrs?.species &&
+      occ.attrs?.taxon.warehouse_id ===
+        UNKNOWN_SPECIES.preferred_taxa_taxon_list_id;
+
     return sample.occurrences.filter(unIdentifiedSpecies).length >= 5;
   };
 
   const getUndentifiedspeciesList = () => {
     const byUnknownSpecies = (occ: typeof Occurrence) =>
       !occ.attrs.taxon ||
-      occ.attrs.taxon.warehouse_id === UNKNOWN_OCCURRENCE.warehouse_id;
+      occ.attrs?.taxon.warehouse_id ===
+        UNKNOWN_SPECIES.preferred_taxa_taxon_list_id;
 
     const getUnidentifiedSpeciesEntry = (occ: typeof Occurrence) => (
       <UnidentifiedSpeciesEntry
@@ -209,7 +214,8 @@ const HomeMain: FC<Props> = ({
 
     const byKnownSpecies = (occ: typeof Occurrence) =>
       occ.attrs.taxon &&
-      occ.attrs.taxon.warehouse_id !== UNKNOWN_OCCURRENCE.warehouse_id;
+      occ.attrs.taxon.warehouse_id !==
+        UNKNOWN_SPECIES.preferred_taxa_taxon_list_id;
 
     const speciesList = sample.occurrences
       .filter(byKnownSpecies)

@@ -6,7 +6,7 @@ import { NavContext } from '@ionic/react';
 import { Page, Main, Header, alert } from '@apps';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
-import { UNKNOWN_OCCURRENCE } from 'Survey/Moth/config';
+import { UNKNOWN_SPECIES } from 'Survey/Moth/config';
 
 type resolveType = (value: boolean) => void;
 
@@ -51,15 +51,33 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
     const survey = sample.getSurvey();
 
     const isTaxonUnknown =
-      taxon.warehouse_id === UNKNOWN_OCCURRENCE.warehouse_id;
-
-    const selectedTaxon = (selectedOccurrence: typeof Occurrence) => {
-      return (
-        selectedOccurrence.attrs.taxon?.warehouse_id === taxon?.warehouse_id
-      );
-    };
+      taxon.warehouse_id === UNKNOWN_SPECIES.preferred_taxa_taxon_list_id;
+    if (occurrence && isTaxonUnknown) {
+      occurrence.attrs.taxon = taxon;
+      occurrence.save();
+      navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
+      return;
+    }
 
     if (occurrence && isRecorded && !isTaxonUnknown) {
+      const selectedTaxon = (selectedOccurrence: typeof Occurrence) => {
+        return (
+          occurrence.attrs.taxon?.warehouse_id &&
+          selectedOccurrence !== occurrence &&
+          selectedOccurrence.attrs.comment === occurrence?.attrs?.comment &&
+          selectedOccurrence.attrs.identifier === occurrence?.attrs?.identifier
+        );
+      };
+
+      const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
+
+      if (!occWithSameSpecies) {
+        occurrence.attrs.taxon = taxon;
+        occurrence.save();
+        navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
+        return;
+      }
+
       const isSelectedSameSpecies =
         taxon.warehouse_id === occurrence.attrs.taxon.warehouse_id;
       if (isSelectedSameSpecies) {
@@ -71,10 +89,15 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
 
       if (!mergeSpecies) return;
 
-      const existedOcc = sample.occurrences.find(selectedTaxon);
+      occWithSameSpecies.attrs.count += occurrence.attrs.count;
+      occWithSameSpecies.attrs['count-outside'] +=
+        occurrence.attrs['count-outside'];
 
-      existedOcc.attrs.count += occurrence.attrs.count;
-      existedOcc.save();
+      while (occurrence.media.length) {
+        const copy = occurrence.media.pop();
+        occWithSameSpecies.media.push(copy);
+      }
+      occWithSameSpecies.save();
 
       occurrence.destroy();
 
@@ -90,6 +113,11 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
       return;
     }
 
+    const selectedTaxon = (selectedOccurrence: typeof Occurrence) => {
+      return (
+        selectedOccurrence.attrs.taxon?.warehouse_id === taxon?.warehouse_id
+      );
+    };
     const occ = sample.occurrences.find(selectedTaxon);
 
     if (isTaxonUnknown) {
