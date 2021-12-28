@@ -21,6 +21,7 @@ const LANGUAGE_ISO_MAPPING = {
 const COUNTRIES_WITH_MOTH_COMMON_NAMES = {
   swe: 'sv-SE',
   eng: 'en',
+  nld: 'nl-NL',
 };
 
 const { APP_INDICIA_API_KEY, REPORT_USER_EMAIL, REPORT_USER_PASS } =
