@@ -53,6 +53,12 @@ type Props = {
   onIdentifyAllOccurrences: any;
 };
 
+function byCreateTime(occ1: typeof Occurrence, occ2: typeof Occurrence) {
+  const date1 = new Date(occ1.metadata.created_on);
+  const date2 = new Date(occ2.metadata.created_on);
+  return date2.getTime() - date1.getTime();
+}
+
 const HomeMain: FC<Props> = ({
   match,
   sample,
@@ -167,6 +173,7 @@ const HomeMain: FC<Props> = ({
     );
     const speciesList = sample.occurrences
       .filter(byUnknownSpecies)
+      .sort(byCreateTime)
       .map(getUnidentifiedSpeciesEntry);
 
     const count = speciesList.length > 1 ? speciesList.length : null;
