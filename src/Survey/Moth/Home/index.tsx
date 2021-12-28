@@ -12,8 +12,7 @@ import { Page, Header, alert, showInvalidsMessage, device, toast } from '@apps';
 import Media from 'models/media';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
 import { isPlatform, IonButton, NavContext } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
-import { UNKNOWN_OCCURRENCE } from 'Survey/Moth/config';
+import { useTranslation, Trans as T } from 'react-i18next';
 import Main from './Main';
 import './styles.scss';
 
@@ -51,6 +50,7 @@ interface Props {
 }
 
 const HomeController: FC<Props> = ({ sample }) => {
+  const { t } = useTranslation();
   const { useImageIdentifier } = appModel.attrs;
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
@@ -154,7 +154,13 @@ const HomeController: FC<Props> = ({ sample }) => {
       return;
     }
 
-    const photo = await ImageHelp.getImage();
+    const promptOptions = {
+      promptLabelHeader: t('Choose a method to upload a photo'),
+      promptLabelPhoto: t('Gallery'),
+      promptLabelPicture: t('Camera'),
+      promptLabelCancel: t('Cancel'),
+    };
+    const photo = await ImageHelp.getImage(promptOptions);
     if (!photo) return;
 
     const dataDirPath = CONFIG.dataPath;
