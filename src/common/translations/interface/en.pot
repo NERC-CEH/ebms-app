@@ -1561,3 +1561,28 @@ msgstr "Image identification"
 # Moth survey image classifier disabled info message
 msgid "Image classifier is currently <1>disabled</1>. Please go to app <4>Settings</4> to turn it on."
 msgstr "Image classifier is currently <1>disabled</1>. Please go to app <4>Settings</4> to turn it on."
+
+# Whats new message title
+msgid "What's New"
+msgstr "What's New"
+
+# Version 1.15 whats new message
+msgid "Added a new Moth survey"
+msgstr "Added a new Moth survey"
+
+# Version 1.15 whats new message
+msgid "Added option to identify moths with image classifier"
+msgstr "Added option to identify moths with image classifier"
+
+# Version 1.15 whats new message
+msgid "Added App setting option to disable image classifier"
+msgstr "Added App setting option to disable image classifier"
+
+# Version 1.15 whats new message
+msgid "Added option to create Moth trap"
+msgstr "Added option to create Moth trap"
+
+# Version 1.15 whats new message
+msgid "Bug fixes"
+msgstr "Bug fixes"
+

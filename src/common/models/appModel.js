@@ -172,8 +172,8 @@ const defaults = {
 
   primarySurvey: 'precise-area',
 
-  useImageIdentifier: true,
-
+  autoImageIdentifier: true,
+  showWhatsNewInVersion115: true,
   useExperiments: false,
   sendAnalytics: true,
   appSession: 0,

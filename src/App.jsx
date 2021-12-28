@@ -4,6 +4,7 @@ import { IonApp, IonRouterOutlet, NavContext } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import appModel from 'appModel';
 import { observer } from 'mobx-react';
+import WhatsNewDialog from 'common/Components/WhatsNewDialog';
 import LanguageCountrySelectRequired from 'Components/LanguageCountrySelectRequired';
 import SplashScreenRequired from './Info/SplashScreenRequired';
 import Home from './Home';
@@ -34,23 +35,28 @@ const HomeRedirect = () => {
   return null;
 };
 
-const App = () => (
-  <IonApp lang={appModel.attrs.language}>
-    <IonReactRouter>
-      <LanguageCountrySelectRequired appModel={appModel}>
-        <SplashScreenRequired appModel={appModel}>
-          <IonRouterOutlet id="main">
-            <Route path="/home" component={Home} />
-            {Info}
-            {User}
-            {Survey}
-            {Settings}
-            <Route exact path="/" component={HomeRedirect} />
-          </IonRouterOutlet>
-        </SplashScreenRequired>
-      </LanguageCountrySelectRequired>
-    </IonReactRouter>
-  </IonApp>
-);
+const App = () => {
+  const { showWhatsNewInVersion115, language } = appModel.attrs;
+
+  return (
+    <IonApp lang={language}>
+      <IonReactRouter>
+        <LanguageCountrySelectRequired appModel={appModel}>
+          <SplashScreenRequired appModel={appModel}>
+            {showWhatsNewInVersion115 && <WhatsNewDialog appModel={appModel} />}
+            <IonRouterOutlet id="main">
+              <Route path="/home" component={Home} />
+              {Info}
+              {User}
+              {Survey}
+              {Settings}
+              <Route exact path="/" component={HomeRedirect} />
+            </IonRouterOutlet>
+          </SplashScreenRequired>
+        </LanguageCountrySelectRequired>
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default observer(App);

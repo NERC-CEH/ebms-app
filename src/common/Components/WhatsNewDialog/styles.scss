@@ -1,0 +1,93 @@
+#whats-new-dialog {
+  ion-backdrop {
+    opacity: 0.6;
+    z-index: 100;
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    z-index: 1000;
+    background: white;
+    border-radius: 20px;
+
+    .header {
+      width: 100%;
+
+      .butterfly-icon {
+        fill: var(--ion-color-primary);
+        --ionicon-stroke-width: 24px;
+        position: absolute;
+        font-size: 26px;
+      }
+
+      .b1 {
+        top: 43px;
+        transform: rotate(-13deg);
+        left: 10px;
+      }
+
+      .b2 {
+        top: 10px;
+        transform: rotate(47deg);
+        left: 20px;
+      }
+
+      .b3 {
+        top: 10px;
+        transform: rotate(47deg);
+        right: 20px;
+      }
+
+      .b4 {
+        top: 43px;
+        transform: rotate(-13deg);
+        right: 10px;
+      }
+
+      .header-icon {
+        border-radius: 100%;
+        position: absolute;
+        background: var(--ion-color-primary);
+        top: -55px;
+        left: 50%;
+        font-size: 64px;
+        color: white;
+        padding: 5px;
+        --ionicon-stroke-width: 24px;
+        transform: translateX(-50%);
+        border: 3px solid white;
+      }
+
+      h1 {
+        color: var(--ion-color-primary);
+        max-width: 60%;
+        text-align: center;
+        margin: 35px auto 10px;
+      }
+    }
+
+    .message {
+      width: 100%;
+      overflow: scroll;
+      max-height: 55vh;
+      border-bottom: 1px solid #f4f4f4;
+      padding: 0 10px;
+
+      ul li {
+        margin: 10px 0;
+      }
+    }
+
+    ion-button {
+      display: flex;
+      width: 80%;
+      height: 40px;
+      margin: 20px auto;
+      --border-radius: 5px;
+    }
+  }
+}
