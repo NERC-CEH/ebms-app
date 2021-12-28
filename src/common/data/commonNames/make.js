@@ -18,6 +18,18 @@ const LANGUAGE_ISO_MAPPING = {
   rus: 'ru-RU',
 };
 
+const UNKNOWN_SPECIES = {
+  id: '538737',
+  taxon_group: 260,
+  taxon: 'Unknown',
+  language_iso: 'eng',
+  preferred: 't',
+  parent_id: null,
+  external_key: null,
+  preferred_taxa_taxon_list_id: '538737',
+  preferred_taxon: 'Unknown',
+};
+
 const COUNTRIES_WITH_MOTH_COMMON_NAMES = {
   swe: 'sv-SE',
   eng: 'en',
@@ -105,6 +117,15 @@ const make = async () => {
   const moths = (await fetch(groups.moths.id))
     .filter(mothsOnly)
     .filter(specificCountryOnly);
+
+  const hasUnknownSpeciesMatch = moth =>
+    JSON.stringify(moth) === JSON.stringify(UNKNOWN_SPECIES);
+  const UNKNOWN_MOTH_SPECIES = moths.find(hasUnknownSpeciesMatch);
+
+  if (!UNKNOWN_MOTH_SPECIES) {
+    console.error('FAILED!  ⛔️ UNKNOW_SPECIES dont match');
+    return;
+  }
 
   const species = [...butterflies, ...moths];
   const sortedSpecies = sortAlphabetically(species);

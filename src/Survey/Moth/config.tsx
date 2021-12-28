@@ -3,6 +3,9 @@ import { date as dateHelp } from '@apps';
 import { Survey } from 'common/config/surveys';
 import { personOutline, calendarOutline } from 'ionicons/icons';
 import { commentAttr } from 'Survey/common/config';
+import config from 'common/data/commonNames/config.json';
+
+export const UNKNOWN_SPECIES = config;
 
 const fixedLocationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
@@ -40,14 +43,6 @@ const locationAttr = {
       return location.id;
     },
   },
-};
-
-// TODO: find from the commonNames by warehouse_id
-export const UNKNOWN_OCCURRENCE = {
-  warehouse_id: 538737,
-  found_in_name: 'common_name',
-  common_name: 'Unknown',
-  taxon_group: 260,
 };
 
 const survey: Survey = {
