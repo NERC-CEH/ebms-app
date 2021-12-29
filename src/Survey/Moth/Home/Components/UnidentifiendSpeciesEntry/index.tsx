@@ -58,7 +58,7 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
   const identifying = hasSpeciesPhoto?.identification?.identifying;
   const speciesName = occ.getTaxonName();
 
-  const hasAllSpeciesImagesBeenIdentified = () => {
+  const canBeIdentified = function hasAllSpeciesImagesBeenIdentified() {
     const hasSpeciesImageBeenIdentified = (media: typeof Media) =>
       !media.attrs.species;
 
@@ -112,17 +112,15 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
           </div>
         )}
 
-        {hasSpeciesPhoto &&
-          !identifying &&
-          hasAllSpeciesImagesBeenIdentified() && (
-            <IonButton
-              slot="end"
-              fill={buttonStyles}
-              onClick={onIdentifyOccurrence}
-            >
-              <T>IDENTIFY</T>
-            </IonButton>
-          )}
+        {hasSpeciesPhoto && !identifying && canBeIdentified && (
+          <IonButton
+            slot="end"
+            fill={buttonStyles}
+            onClick={onIdentifyOccurrence}
+          >
+            <T>IDENTIFY</T>
+          </IonButton>
+        )}
 
         {identifying && (
           <>
