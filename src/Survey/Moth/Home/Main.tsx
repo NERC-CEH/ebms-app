@@ -87,7 +87,7 @@ const HomeMain: FC<Props> = ({
   };
 
   const getSpeciesEntry = (occ: typeof Occurrence) => {
-    const speciesName = occ.attrs.taxon.scientific_name;
+    const speciesName = occ.getTaxonName();
     const speciesCount = occ.attrs.count;
 
     const increaseCountWrap = (e: any) => {
