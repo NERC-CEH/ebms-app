@@ -110,7 +110,8 @@ export default class AppMedia extends Media {
   };
 
   async identify() {
-    const hasSpeciesBeenIdentified = this.attrs.species?.length;
+    const hasSpeciesBeenIdentified = !!this.attrs.species;
+
     if (hasSpeciesBeenIdentified) return this.attrs.species[0];
 
     this.identification.identifying = true;
