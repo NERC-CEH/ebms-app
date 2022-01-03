@@ -55,18 +55,20 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
   const { navigate } = useContext(NavContext);
   const { url } = useRouteMatch();
   const [hasSpeciesPhoto] = occ.media;
-  const identifying = hasSpeciesPhoto?.identification?.identifying;
   const speciesName = occ.getTaxonName();
 
   const isIdentifying = (media: typeof Media) =>
     media?.identification?.identifying;
   const identifying = occ.media.some(isIdentifying);
 
+  function hasAllSpeciesImagesBeenIdentified() {
     const hasSpeciesImageBeenIdentified = (media: typeof Media) =>
       !media.attrs.species;
 
     return occ.media.some(hasSpeciesImageBeenIdentified);
-  };
+  }
+
+  const canBeIdentified = () => hasAllSpeciesImagesBeenIdentified();
 
   const getProfilePhoto = () => {
     const photo = hasSpeciesPhoto ? (
