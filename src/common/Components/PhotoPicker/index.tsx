@@ -15,6 +15,7 @@ type Props = {
 };
 
 const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
+  const isUploaded = model.isUploaded();
   const { t } = useTranslation();
 
   const isMothSurvey =
@@ -47,6 +48,7 @@ const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
       model={model}
       Image={isMothSurvey && Image}
       Gallery={isMothSurvey && Gallery}
+      isDisabled={isUploaded}
     />
   );
 };
