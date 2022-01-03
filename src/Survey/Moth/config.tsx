@@ -3,9 +3,6 @@ import { date as dateHelp } from '@apps';
 import { Survey } from 'common/config/surveys';
 import { personOutline, calendarOutline } from 'ionicons/icons';
 import { commentAttr } from 'Survey/common/config';
-import config from 'common/data/commonNames/config.json';
-
-export const UNKNOWN_SPECIES = config;
 
 const fixedLocationSchema = Yup.object().shape({
   latitude: Yup.number().required(),

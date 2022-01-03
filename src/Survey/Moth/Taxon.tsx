@@ -6,7 +6,6 @@ import { NavContext } from '@ionic/react';
 import { Page, Main, Header, alert } from '@apps';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
-import { UNKNOWN_SPECIES } from 'Survey/Moth/config';
 
 type resolveType = (value: boolean) => void;
 
@@ -45,13 +44,13 @@ interface Props {
 
 const Taxon: FC<Props> = ({ sample, occurrence }) => {
   const { navigate, goBack } = useContext(NavContext);
+  const UNKNOWN_SPECIES = sample.GET_UNKNOWN_SPECIES();
 
   const onSpeciesSelected = async (taxon: any) => {
     const { isRecorded } = taxon;
     const survey = sample.getSurvey();
 
-    const isTaxonUnknown =
-      taxon.warehouse_id === UNKNOWN_SPECIES.preferred_taxa_taxon_list_id;
+    const isTaxonUnknown = taxon.warehouse_id === UNKNOWN_SPECIES.preferredId;
     if (occurrence && isTaxonUnknown) {
       occurrence.attrs.taxon = taxon;
       occurrence.save();

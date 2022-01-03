@@ -13,7 +13,6 @@ import Media from 'models/media';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
 import { isPlatform, IonButton, NavContext } from '@ionic/react';
 import { useTranslation, Trans as T } from 'react-i18next';
-import { UNKNOWN_SPECIES } from 'Survey/Moth/config';
 import Main from './Main';
 import './styles.scss';
 
@@ -51,6 +50,8 @@ interface Props {
 }
 
 const HomeController: FC<Props> = ({ sample }) => {
+  const UNKNOWN_SPECIES = sample.GET_UNKNOWN_SPECIES();
+
   const { t } = useTranslation();
   const { useImageIdentifier } = appModel.attrs;
   const { navigate } = useContext(NavContext);
@@ -121,8 +122,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     const { comment, identifier } = occ.attrs;
 
     const speciesIsKnown =
-      occ.attrs.taxon?.warehouse_id !==
-      UNKNOWN_SPECIES.preferred_taxa_taxon_list_id;
+      occ.attrs.taxon?.warehouse_id !== UNKNOWN_SPECIES.preferredId;
     if (!speciesIsKnown) return;
 
     const selectedTaxon = (selectedOccurrence: typeof Occurrence) =>
