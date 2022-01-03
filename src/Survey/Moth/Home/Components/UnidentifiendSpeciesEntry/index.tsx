@@ -58,7 +58,10 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
   const identifying = hasSpeciesPhoto?.identification?.identifying;
   const speciesName = occ.getTaxonName();
 
-  const canBeIdentified = function hasAllSpeciesImagesBeenIdentified() {
+  const isIdentifying = (media: typeof Media) =>
+    media?.identification?.identifying;
+  const identifying = occ.media.some(isIdentifying);
+
     const hasSpeciesImageBeenIdentified = (media: typeof Media) =>
       !media.attrs.species;
 
