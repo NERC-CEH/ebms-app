@@ -61,14 +61,12 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
     media?.identification?.identifying;
   const identifying = occ.media.some(isIdentifying);
 
-  function hasAllSpeciesImagesBeenIdentified() {
+  function canBeIdentified() {
     const hasSpeciesImageBeenIdentified = (media: typeof Media) =>
       !media.attrs.species;
 
     return occ.media.some(hasSpeciesImageBeenIdentified);
   }
-
-  const canBeIdentified = () => hasAllSpeciesImagesBeenIdentified();
 
   const getProfilePhoto = () => {
     const photo = hasSpeciesPhoto ? (
@@ -117,7 +115,7 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
           </div>
         )}
 
-        {hasSpeciesPhoto && !identifying && canBeIdentified && (
+        {hasSpeciesPhoto && !identifying && canBeIdentified() && (
           <IonButton
             slot="end"
             fill={buttonStyles}
