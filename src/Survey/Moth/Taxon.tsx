@@ -114,7 +114,9 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
 
     const selectedTaxon = (selectedOccurrence: typeof Occurrence) => {
       return (
-        selectedOccurrence.attrs.taxon?.warehouse_id === taxon?.warehouse_id
+        (selectedOccurrence.attrs.taxon?.preferredId ||
+          selectedOccurrence.attrs.taxon?.warehouse_id) ===
+        (taxon?.preferredId || taxon?.warehouse_id)
       );
     };
     const occ = sample.occurrences.find(selectedTaxon);

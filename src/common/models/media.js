@@ -105,7 +105,9 @@ export default class AppMedia extends Media {
 
     return (
       parseInt(this.attrs?.species[0]?.taxa_taxon_list_id, 10) ===
-      this.parent.attrs?.taxon?.warehouse_id
+        this.parent.attrs?.taxon?.warehouse_id ||
+      parseInt(this.attrs?.species[0]?.taxa_taxon_list_id, 10) ===
+        this.parent.attrs?.taxon?.preferredId
     );
   };
 

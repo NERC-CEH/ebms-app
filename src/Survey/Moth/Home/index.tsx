@@ -126,8 +126,9 @@ const HomeController: FC<Props> = ({ sample }) => {
     if (!speciesIsKnown) return;
 
     const selectedTaxon = (selectedOccurrence: typeof Occurrence) =>
-      selectedOccurrence.attrs.taxon?.warehouse_id ===
-        occ.attrs.taxon?.warehouse_id &&
+      (selectedOccurrence.attrs.taxon?.preferredId ||
+        selectedOccurrence.attrs.taxon?.warehouse_id) ===
+        (occ?.attrs.taxon?.preferredId || occ?.attrs.taxon?.warehouse_id) &&
       selectedOccurrence !== occ &&
       selectedOccurrence.attrs.comment === comment &&
       selectedOccurrence.attrs.identifier === identifier;
