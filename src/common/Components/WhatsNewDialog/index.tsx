@@ -12,7 +12,14 @@ type Props = {
 };
 
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
-  const { showWhatsNewInVersion115 } = appModel.attrs;
+  const { showWhatsNewInVersion115, appSession } = appModel.attrs;
+
+  if (!appSession) {
+    appModel.attrs.showWhatsNewInVersion115 = false; // eslint-disable-line
+    appModel.save();
+    return null;
+  }
+
   if (!showWhatsNewInVersion115) return null;
 
   const closeDialog = () => {
