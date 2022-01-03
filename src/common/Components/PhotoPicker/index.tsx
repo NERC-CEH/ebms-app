@@ -18,7 +18,7 @@ const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
   const { t } = useTranslation();
 
   const isMothSurvey =
-    model?.parent.metadata.survey === 'moth' ? true : undefined;
+    model?.parent?.metadata?.survey === 'moth' ? true : undefined;
 
   const promptOptions = {
     promptLabelHeader: t('Choose a method to upload a photo'),
