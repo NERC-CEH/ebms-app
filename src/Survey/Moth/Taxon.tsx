@@ -50,7 +50,8 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
     const { isRecorded } = taxon;
     const survey = sample.getSurvey();
 
-    const isTaxonUnknown = taxon.warehouse_id === UNKNOWN_SPECIES.preferredId;
+    const isTaxonUnknown = taxon.warehouse_id === UNKNOWN_SPECIES.warehouse_id;
+
     if (occurrence && isTaxonUnknown) {
       occurrence.attrs.taxon = taxon;
       occurrence.save();
