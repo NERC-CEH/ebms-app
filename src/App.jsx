@@ -36,14 +36,14 @@ const HomeRedirect = () => {
 };
 
 const App = () => {
-  const { showWhatsNewInVersion115, language } = appModel.attrs;
+  const { language } = appModel.attrs;
 
   return (
     <IonApp lang={language}>
       <IonReactRouter>
         <LanguageCountrySelectRequired appModel={appModel}>
           <SplashScreenRequired appModel={appModel}>
-            {showWhatsNewInVersion115 && <WhatsNewDialog appModel={appModel} />}
+            <WhatsNewDialog appModel={appModel} />
             <IonRouterOutlet id="main">
               <Route path="/home" component={Home} />
               {Info}

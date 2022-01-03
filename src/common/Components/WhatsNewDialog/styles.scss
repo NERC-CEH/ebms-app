@@ -9,7 +9,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 75%;
     z-index: 1000;
     background: white;
     border-radius: 20px;
@@ -66,7 +66,11 @@
         color: var(--ion-color-primary);
         max-width: 60%;
         text-align: center;
-        margin: 35px auto 10px;
+        margin: 40px auto 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 1.5em;
       }
     }
 
