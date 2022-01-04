@@ -60,7 +60,6 @@ class Component extends React.Component {
 
   render() {
     const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
-    const { useExperiments } = appModel.attrs;
 
     const getOtherSurveys = () => {
       const primarySurvey = ({ name }) => name !== primarySurveyName;
@@ -69,8 +68,6 @@ class Component extends React.Component {
       // eslint-disable-next-line
       const getSurveyButton = ({ name, label }) => {
         if (name === 'area') return null; // for backwards compatible
-
-        if (name === 'moth' && !useExperiments) return null;
 
         return (
           <IonFabButton
