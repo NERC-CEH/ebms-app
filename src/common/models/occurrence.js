@@ -55,7 +55,7 @@ export default class AppOccurrence extends Occurrence {
       spName.preferredId ===
       parseInt(highestProbSpecies?.taxa_taxon_list_id, 10);
 
-    const taxon = speciesDataBySpecificLanguage.find(
+    const taxon = speciesDataBySpecificLanguage?.find(
       byTaxonWithHighestProbability
     );
 
