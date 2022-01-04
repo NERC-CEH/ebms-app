@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import appModelTypes from 'common/models/appModel';
@@ -11,16 +11,17 @@ type Props = {
   appModel: typeof appModelTypes;
 };
 
-const START_SESSION = 1;
-
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
   const { showWhatsNewInVersion115, appSession } = appModel.attrs;
 
-  if (appSession <= START_SESSION) {
-    appModel.attrs.showWhatsNewInVersion115 = false; // eslint-disable-line
-    appModel.save();
-    return null;
-  }
+  const skipShowingDialogOnFreshInstall = () => {
+    const isFreshInstall = appSession <= 1;
+    if (isFreshInstall) {
+      appModel.attrs.showWhatsNewInVersion115 = false; // eslint-disable-line
+      appModel.save();
+    }
+  };
+  useEffect(skipShowingDialogOnFreshInstall, [appSession]);
 
   if (!showWhatsNewInVersion115) return null;
 
