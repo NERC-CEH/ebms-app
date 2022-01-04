@@ -8,6 +8,7 @@ import CONFIG from 'common/config/config';
 import { observer } from 'mobx-react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { useRouteMatch } from 'react-router';
+import { getUnkownSpecies } from 'Survey/Moth/config';
 import { Page, Header, alert, showInvalidsMessage, device, toast } from '@apps';
 import Media from 'models/media';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
@@ -50,7 +51,7 @@ interface Props {
 }
 
 const HomeController: FC<Props> = ({ sample }) => {
-  const UNKNOWN_SPECIES = sample.GET_UNKNOWN_SPECIES();
+  const UNKNOWN_SPECIES = getUnkownSpecies();
 
   const { t } = useTranslation();
   const { useImageIdentifier } = appModel.attrs;

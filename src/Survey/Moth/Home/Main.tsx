@@ -17,6 +17,7 @@ import {
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
+import { getUnkownSpecies } from 'Survey/Moth/config';
 import { locationOutline, camera, warningOutline } from 'ionicons/icons';
 import UnidentifiedSpeciesEntry from './Components/UnidentifiendSpeciesEntry';
 import AnimatedNumber from './Components/AnimatedNumber';
@@ -69,7 +70,7 @@ const HomeMain: FC<Props> = ({
   onIdentifyOccurrence,
   onIdentifyAllOccurrences,
 }) => {
-  const UNKNOWN_SPECIES_PREFFERD_ID = sample.GET_UNKNOWN_SPECIES().warehouse_id;
+  const UNKNOWN_SPECIES_PREFFERD_ID = getUnkownSpecies().warehouse_id;
 
   const { navigate } = useContext(NavContext);
 

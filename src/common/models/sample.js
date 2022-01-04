@@ -16,23 +16,6 @@ import MetOfficeExtension from './sample_metoffice_ext';
 
 const { warn, error } = toast;
 
-const UNKNOWN_SPECIES_BY_LANGUAGE = {
-  en: {
-    warehouse_id: 538737,
-    taxon_group: 260,
-    common_name: 'Unknown',
-    preferredId: 538737,
-    found_in_name: 'common_name',
-  },
-  'nl-NL': {
-    warehouse_id: 541352,
-    common_name: 'Onbekend',
-    scientific_name: 'Unknown',
-    taxon_group: 260,
-    preferredId: 538737,
-  },
-};
-
 // eslint-disable-next-line
 class AppSample extends Sample {
   static fromJSON(json) {
@@ -155,16 +138,6 @@ class AppSample extends Sample {
 
   isDetailsComplete() {
     return this.metadata.completedDetails;
-  }
-
-  // eslint-disable-next-line class-methods-use-this
-  GET_UNKNOWN_SPECIES() {
-    const UNKNOWN_SPECIES =
-      UNKNOWN_SPECIES_BY_LANGUAGE[appModel.attrs.language];
-
-    if (!UNKNOWN_SPECIES) return UNKNOWN_SPECIES_BY_LANGUAGE.en;
-
-    return { ...UNKNOWN_SPECIES, found_in_name: 'common_name' };
   }
 }
 

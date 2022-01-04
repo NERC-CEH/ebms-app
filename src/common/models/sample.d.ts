@@ -33,7 +33,6 @@ declare const appModel: {
   GPS: (callback?: any) => any;
   stopGPS: () => any;
   isGPSRunning: () => boolean;
-  GET_UNKNOWN_SPECIES: () => any;
 };
 
 export default appModel;

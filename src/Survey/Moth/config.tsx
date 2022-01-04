@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
 import { date as dateHelp } from '@apps';
 import { Survey } from 'common/config/surveys';
+import appModel from 'models/appModel';
 import { personOutline, calendarOutline } from 'ionicons/icons';
 import { commentAttr } from 'Survey/common/config';
 
@@ -168,3 +169,24 @@ const survey: Survey = {
 };
 
 export default survey;
+
+type UnknownSpeciesObject = { [key: string]: any };
+const UNKNOWN_SPECIES: UnknownSpeciesObject = {
+  en: {
+    warehouse_id: 538737,
+    taxon_group: 260,
+    common_name: 'Unknown',
+    preferredId: 538737,
+    found_in_name: 'common_name',
+  },
+  'nl-NL': {
+    warehouse_id: 541352,
+    common_name: 'Onbekend',
+    taxon_group: 260,
+    preferredId: 538737,
+    found_in_name: 'common_name',
+  },
+};
+
+export const getUnkownSpecies = () =>
+  UNKNOWN_SPECIES[appModel.attrs.language] || UNKNOWN_SPECIES.en;

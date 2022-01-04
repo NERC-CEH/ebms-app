@@ -4,6 +4,7 @@ import { observer } from 'mobx-react';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
 import { Page, Main, Header, alert } from '@apps';
+import { getUnkownSpecies } from 'Survey/Moth/config';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 
@@ -44,7 +45,7 @@ interface Props {
 
 const Taxon: FC<Props> = ({ sample, occurrence }) => {
   const { navigate, goBack } = useContext(NavContext);
-  const UNKNOWN_SPECIES = sample.GET_UNKNOWN_SPECIES();
+  const UNKNOWN_SPECIES = getUnkownSpecies();
 
   const onSpeciesSelected = async (taxon: any) => {
     const { isRecorded } = taxon;
