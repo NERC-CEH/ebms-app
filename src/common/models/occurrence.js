@@ -51,15 +51,13 @@ export default class AppOccurrence extends Occurrence {
     const { language } = appModel.attrs;
     const speciesDataBySpecificLanguage = speciesCommonNamesData[language];
 
-    const byTaxonWithHighestProbability = spName =>
-      spName.preferredId ===
-      parseInt(highestProbSpecies?.taxa_taxon_list_id, 10);
-
-    const taxon = speciesDataBySpecificLanguage?.find(
-      byTaxonWithHighestProbability
-    );
-
     if (!highestProbSpecies) return this.attrs.taxon;
+
+    const byId = spName =>
+      spName.preferredId ===
+      parseInt(highestProbSpecies.taxa_taxon_list_id, 10);
+
+    const taxon = speciesDataBySpecificLanguage?.find(byId);
 
     if (taxon) {
       this.attrs.taxon = {
