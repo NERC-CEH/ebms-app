@@ -357,21 +357,23 @@ msgstr "Localização"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "A sua localização é necessária"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Esta aplicação necessita da sua localizão, mas não tem permissão. Deseja ir "
+"para as definições agora?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Cancele para prevenir o descarregamento da bateria."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "A usar a sua localização."
 
 msgid "Add"
 msgstr "Adicionar"
@@ -513,34 +515,39 @@ msgstr "Palavra-passe ou email incorreto"
 
 msgid "Enter your email address to request a password reset."
 msgstr ""
+"Introduza o seu endereço de email para solicitar a mudança de palavra-chave."
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "O utilizador não foi ativado ou está bloqueado."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"O seu email <1>{{userEmail}}</1> ainda não foi "
+"verificado.<3><0>Refresh</0><1>Resend Email</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
+"Um novo email de verificação acabou de ser enviado. Se não o recebeu "
+"verifique as suas pastas de Spam ou Lixo."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr ""
+msgstr "Por favor inicie a sessão primeiro."
 
 # User registration error
 msgid "This email is already taken."
-msgstr ""
+msgstr "Este endereço de email já existe."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "Endereço de email não reconhecido."
 
 msgid "email is not valid"
 msgstr "o email não é válido"
@@ -890,6 +897,8 @@ msgstr "Partilhe as análises da App"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
+"Partilhe os dados do mal-funcionamento da aplicação para que a possamos "
+"tornar mais estável."
 
 msgid "Save Draft"
 msgstr "Guardar Rascunho"
@@ -929,11 +938,11 @@ msgstr "Lagarta"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr ""
+msgstr "Teia larval"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr ""
+msgstr "Pupa"
 
 msgid "Transect"
 msgstr "Contagem"
@@ -1062,7 +1071,7 @@ msgid "15min Count"
 msgstr "Contagem Cronometrada"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "Contagem de 15 minutos de espécie única"
 
 msgid "eBMS Transect"
 msgstr "Transecto eBMS"
@@ -1158,6 +1167,10 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
+"Pode usar esta aplicação para monitorizar borboletas em toda a Europa. Os "
+"resultados serão inseridos na base de dados de Monitorização de Borboletas "
+"Europeias e usados para analizar padrões em toda a Europa. Para usar a "
+"aplicação deve primeiro criar uma conta. "
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1417,66 +1430,73 @@ msgstr "Identificação do erro: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr ""
+msgstr "Detalhes adicionais"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Condições Meteorológicas"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr ""
+msgstr "Condições meteorológicas"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr ""
+msgstr "Tem a certeza que pretende apagar {{taxon}} ?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
+"Os valores meteorológicos atuais são automaticamente preenchidos usando o "
+"serviço OpenWeatherMap API."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Copiar espécie"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
 msgstr ""
+"Tem a certeza que pretende copiar a lista de espécies da amostragem "
+"anterior?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Copiar"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Desculpe, não foram encontradas espécies para copiar."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "A cópia da espécie {{speciesCount}} foi bem sucedida."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Desculpe, não existe uma amostragem anterior para copiar espécies. "
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Arménia"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Para apagar qualquer amostragem deslize com o dedo para a esquerda."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Por favor verifique que a área de registo está correta antes de enviar o "
+"registo."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
 msgstr ""
+"Por favor não se esqueça de fazer o upload de nenhuma amostragem pendente."
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
@@ -1486,107 +1506,112 @@ msgstr ""
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Dica: Encontrar ajuda"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Por vafor visite as páginas Guia <2></2> e Ajuda <5></5> antes de usar a "
+"aplicação!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Mais informações"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Dica: adicionar espécies"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Pode copiar em massa as suas listas de espécies anteriores pressionando o "
+"botão Adicionar Espécies durante algum tempo."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Esconder"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Amostragem primária"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Todas as amostragens"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
 msgstr ""
+"Foto representativa do local onde a contagem de 15 minutos foi efetuada"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Nenhuma foto foi adicionada"
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Pressione <1></1> para adicionar"
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "Contagem precisa de 15 minutos"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Ocorrências"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr ""
+msgstr "Tempo"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Tem a certeza que pretende apagar esta ocorrência?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Entendi"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Nenhuma amostragem carregada</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "Esta conta já existe"
 
 # A survey label
 msgid "Details"
-msgstr ""
+msgstr "Detalhes"
 
 # A survey label
 msgid "Species Photo"
-msgstr ""
+msgstr "Foto da espécies"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "Selecione o estádio de vida"
 
 # A survey label
 msgid "Weather"
-msgstr ""
+msgstr "Condições meteorológicas"
 
 # A survey label
 msgid "Photo"
-msgstr ""
+msgstr "Foto"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Grupos de espécies"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "Por favor selecione os grupos de espécies que regista frequentemente"
 
 # Part of species group selection
 msgid "Butterflies"
@@ -1594,19 +1619,19 @@ msgstr "Borboletas"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Borboletas noturnas"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Abelhões"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Libélulas"
 
 # Alert label
 msgid "Warning"
-msgstr ""
+msgstr "Aviso"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
@@ -1618,16 +1643,18 @@ msgstr "Desligar"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "Fundir"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "Esta espécie já existe"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
+"Tem a certeza que pretende fundir esta lista com a lista de espécies já "
+"existente?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr ""
+msgstr "Por favor adicione a sua espécie alvo"

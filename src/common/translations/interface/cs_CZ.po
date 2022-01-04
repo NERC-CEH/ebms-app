@@ -509,7 +509,7 @@ msgid "Incorrect password or email"
 msgstr "Nesprávné heslo nebo e-mail"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
+msgstr "Pro reset hesla zadejte emailovou adresu."
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
