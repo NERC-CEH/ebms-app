@@ -49,23 +49,18 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
         </div>
 
         <div className="message">
-          <ul>
-            <li>
-              <T>Added a new Moth survey</T>{' '}
-            </li>
-            <li>
-              <T>Added option to identify moths with image classifier</T>
-            </li>
-            <li>
-              <T>Added App setting option to disable image classifier</T>
-            </li>
-            <li>
-              <T>Added option to create Moth trap</T>
-            </li>
-            <li>
-              <T>Bug fixes</T>
-            </li>
-          </ul>
+          <h3>
+            <T>Moth survey</T>
+          </h3>
+          <p>
+            <T>
+              Record moths with the help of automatic identification in
+              real-time.
+            </T>
+          </p>
+          <h3>
+            <T>Bug fixes and improvements</T>
+          </h3>
         </div>
 
         <IonButton onClick={closeDialog}>

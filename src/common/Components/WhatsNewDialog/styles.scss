@@ -79,10 +79,15 @@
       overflow: scroll;
       max-height: 55vh;
       border-bottom: 1px solid #f4f4f4;
-      padding: 0 10px;
+      padding: 0 20px 20px;
 
-      ul li {
-        margin: 10px 0;
+      h3 {
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 0;
       }
     }
 
