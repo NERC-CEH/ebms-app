@@ -11,10 +11,12 @@ type Props = {
   appModel: typeof appModelTypes;
 };
 
+const START_SESSION = 1;
+
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
   const { showWhatsNewInVersion115, appSession } = appModel.attrs;
 
-  if (!appSession) {
+  if (appSession <= START_SESSION) {
     appModel.attrs.showWhatsNewInVersion115 = false; // eslint-disable-line
     appModel.save();
     return null;
