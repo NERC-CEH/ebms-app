@@ -1,5 +1,9 @@
 #survey-moth-detail {
-  .attr.attr-date {
+  .attr.attr-date ion-item.ios {
+    border-bottom: 0.55px solid #cccccc !important;
+  }
+
+  .attr.attr-date ion-item.md {
     border-bottom: 1px solid #cccccc !important;
   }
 }
