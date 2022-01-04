@@ -39,12 +39,12 @@ const DetailsMain: FC<Props> = ({ sample }) => {
           <MenuAttrItemFromModel
             model={sample}
             attr="recorder"
-            skipTranslation
+            skipValueTranslation
           />
           <MenuAttrItemFromModel
             model={sample}
             attr="comment"
-            skipTranslation
+            skipValueTranslation
           />
         </div>
       </IonList>
