@@ -70,7 +70,7 @@ const BottomSheet: FC<Props> = ({
           className="info-message"
         >
           You have only one moth trap. To create more please go to the{' '}
-          <a href="https://test-brc-ebms.pantheonsite.io/my-moth-trap-sites">
+          <a href="https://butterfly-monitoring.net/my-moth-trap-sites">
             website.
           </a>
         </InfoMessage>
@@ -86,7 +86,7 @@ const BottomSheet: FC<Props> = ({
         >
           You have not created any moth traps yet. To create one please go to
           the{' '}
-          <a href="https://test-brc-ebms.pantheonsite.io/my-moth-trap-sites">
+          <a href="https://butterfly-monitoring.net/my-moth-trap-sites">
             website.
           </a>
         </InfoMessage>
