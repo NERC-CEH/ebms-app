@@ -1,3 +1,7 @@
+## 1.16.0
+
+Increased allowed transects limit.
+
 ## 1.15.0
 
 Added Moth trap survey.

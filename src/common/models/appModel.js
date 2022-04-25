@@ -47,6 +47,7 @@ async function fetchUserTransects(userModel) {
       userID: userModel.attrs.id,
       location_type_id: '',
       locattrs: '',
+      limit: 3000,
     },
     headers: {
       Authorization: `Bearer ${await userModel.getAccessToken()}`,
@@ -90,6 +91,7 @@ async function fetchTransectSections(transectLocationIds, userModel) {
       website_id: CONFIG.backend.websiteId,
       userID: userModel.attrs.id,
       location_list: transectLocationIds,
+      limit: 3000,
     },
     headers: {
       Authorization: `Bearer ${await userModel.getAccessToken()}`,
