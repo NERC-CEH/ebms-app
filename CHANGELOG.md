@@ -1,3 +1,7 @@
+## 1.16.1
+
+Updated translations.
+
 ## 1.16.0
 
 Increased allowed transects limit.
