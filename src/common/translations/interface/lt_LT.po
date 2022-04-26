@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
-# Egle Viciuviene <eviciuviene@gmail.com>, 2021
+# Vilius Stankaitis <vilius@flumens.io>, 2021
+# Egle Viciuviene <eviciuviene@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Egle Viciuviene <eviciuviene@gmail.com>, 2021\n"
+"Last-Translator: Egle Viciuviene <eviciuviene@gmail.com>, 2022\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1621,3 +1621,258 @@ msgstr "Ar tikrai norite sujungti šią rūšį su jau egzistuojančia?"
 # Single species count survey validation message
 msgid "Please add your target species"
 msgstr "Prašome pridėti konkrečią rūšį"
+
+# Moth survey label
+msgid "Date"
+msgstr "Data"
+
+# Moth survey label
+msgid "Method"
+msgstr "Metodas"
+
+# Context term
+msgid "Please select the medthod type"
+msgstr "Prašome pasirinkti metodą"
+
+# Moth survey method type
+msgid "MV light"
+msgstr "Gyvsidabrio lempa"
+
+# Moth survey method type
+msgid "Actinic light"
+msgstr "Aktininė lempa"
+
+# Moth survey method type
+msgid "LED light"
+msgstr "LED lempa"
+
+# Moth survey method type
+msgid "Light trapping"
+msgstr "Šviesinė gaudyklė"
+
+# Moth survey method type
+msgid "Daytime observation"
+msgstr "Stebėta dienos metu"
+
+# Moth survey method type
+msgid "Dusking"
+msgstr "Gaudymas pievoje tinkleliu prieblandoje"
+
+# Moth survey method type
+msgid "Attracted to a lighted window"
+msgstr "Atskrido į apšviestą langą"
+
+# Moth survey method type
+msgid "Sugaring"
+msgstr "Viliojimas saldžiais skysčiais"
+
+# Moth survey method type
+msgid "Wine roping"
+msgstr "Vyne mirkyta virvė"
+
+# Moth survey method type
+msgid "Beating tray"
+msgstr "Purtiklis - nupurtyti nuo medžių ant paklodės"
+
+# Moth survey method type
+msgid "Pheromone trap"
+msgstr "Feromoninė gaudyklė"
+
+# Moth survey method type
+msgid "Other method (add comment)"
+msgstr "Kitas metodas (aprašykite komentaruose)"
+
+# Moth survey method type
+msgid "Not recorded"
+msgstr "Neužfiksuota"
+
+# Moth survey details header title
+msgid "Survey Details"
+msgstr "Detalesnė informacija"
+
+# Moth survey header title
+msgid "Moth-trap survey"
+msgstr "Naktinių drugių gaudyklės tyrimas"
+
+# Moth survey header title
+msgid "Moth survey"
+msgstr "Naktinių drugių stebėjimas"
+
+# Moth survey divider label
+msgid "Species list"
+msgstr "Rūšių sąrašas"
+
+# Moth survey moth details label
+msgid "Identifier"
+msgstr "Identifikavo"
+
+# Moth survey divider label
+msgid "Moths list"
+msgstr "Naktinių drugių sąrašas"
+
+# Moth survey photo picker divider label
+msgid "Moth Photo"
+msgstr "Naktinio drugio nuotrauka"
+
+# Identifier attribute info message
+msgid "Enter the recorder's name, if different."
+msgstr "Įrašykite stebėtojo vardą, jei stebėjote ne jūs"
+
+# Identifier attribute placeholder
+msgid "Recorder name"
+msgstr "Stebėtojo vardas"
+
+# Latitude
+msgid "Lat"
+msgstr "Platuma"
+
+# Longitude
+msgid "Long"
+msgstr "Ilguma"
+
+# Moth survey attribute label
+msgid "Count inside"
+msgstr "Skaičius gaudyklės viduje"
+
+# Moth survey attribute label
+msgid "Count outside"
+msgstr "Skaičius už gaudyklės"
+
+# Moth survey photo picker label
+msgid "Moth Photos"
+msgstr "Naktinių drugių nuotraukos "
+
+# Moth survey details label
+msgid "Moth traps"
+msgstr "Gaudyklės"
+
+# Moth survey details label
+msgid "Moth trap"
+msgstr "Gaudyklė"
+
+# Moth survey Location Info message
+msgid ""
+"You have not created any moth traps yet. To create one please go to the "
+"<2>website.</2>"
+msgstr ""
+"Jūs dar nesukūrėte gaudyklės. Norėdami sukurti savo naktinių drugių "
+"gaudyklę, eikite į <2>svetainę</2>"
+
+# Moth survey Location Info message
+msgid "To see the map please connect to the internet."
+msgstr "Prisijunkite prie interneto jei norite matyti žemėlapį."
+
+# Moth survey validation message
+msgid "Please add the moth trap"
+msgstr "Prašome pridėti naktinių drugių gaudyklę"
+
+# Moth survey Location Info message
+msgid ""
+"You have only one moth trap. To create more please go to the <2>website.</2>"
+msgstr ""
+"Jūs turite tik vieną gaudyklę, Norėdami sukurti daugiau, eikite į "
+"<2>svetainę.</2>"
+
+# Moth survey AI loader
+msgid "Identifying..."
+msgstr "Identifikuojama..."
+
+# Unknown species common_name
+msgid "Unknown"
+msgstr "Nežinoma"
+
+# Moth survey warning message
+msgid "Please add a photo"
+msgstr "Prašome pridėti nuotrauką"
+
+# Moth survey unknown species divider
+msgid "Unknown species"
+msgstr "Nežinoma rūšis"
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we could not identify this species."
+msgstr "<0>Dėmesio</0> - negalime nustatyti šios rūšies."
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we think it is"
+msgstr "<0>Dėmesio</0> - manome, kad tai"
+
+# Moth survey image gallery warning message
+msgid "likely a"
+msgstr "tikėtina"
+
+# App settings title
+msgid "Surveying"
+msgstr "Stebėjimai"
+
+# Moth survey label
+msgid "Moth survey (SPRING)"
+msgstr "Naktinių drugių stebėjimas (SPRING)"
+
+# Survey name
+msgid "Moth Survey"
+msgstr "Naktinių drugių stebėjimas"
+
+#  Moth settings page header title
+msgid "Moth Survey Settings"
+msgstr "Naktinių drugių stebėjimų nustatymai"
+
+# Moth settings page label
+msgid "Use image identification"
+msgstr "Nustatyti rūšis pagal nuotraukas"
+
+# Moth settings page info message
+msgid ""
+"We will help you to identify species using our species image classifier."
+msgstr "Padėsime jums nustatyti rūšis su rūšių nuotraukų klasifikatoriumi"
+
+# Moth survey button label
+msgid "IDENTIFY"
+msgstr "IDENTIFIKUOTI"
+
+# Moth survey button label
+msgid "Identify All"
+msgstr "Identifikuoti visus"
+
+# Moth survey image classifier disabled info header
+msgid "Image identification"
+msgstr "Nustatymas pagal nuotraukas"
+
+# Moth survey image classifier disabled info message
+msgid ""
+"Image classifier is currently <1>disabled</1>. Please go to app "
+"<4>Settings</4> to turn it on."
+msgstr ""
+"Identifikavimas pagal nuotraukas šiuo metu <1>išjungtas</1>. Norėdami "
+"įjungti šią funkciją, eikite į programėlės <4>Nustatymus</4>."
+
+# Whats new message title
+msgid "What's New"
+msgstr "Kas naujo"
+
+# Version 1.15 whats new message
+msgid "Record moths with the help of automatic identification in real-time."
+msgstr ""
+"Naktinių drugių rūšių registravimas su realaus laiko identifikavimo pagalba"
+
+# Version 1.15 whats new message
+msgid "Bug fixes and improvements"
+msgstr "Ištaisytos klaidos ir įdiegti patobulinimai"
+
+# Version 1.15 whats new message
+msgid "Added option to identify moths with image classifier"
+msgstr ""
+"Pridėta galimybė nustatyti naktinių drugių rūšis su nuotraukų "
+"klasifikatoriumi"
+
+# Version 1.15 whats new message
+msgid "Added App setting option to disable image classifier"
+msgstr "Pridėta galimybė išjungti nuotraukų klasifikatorių"
+
+# Version 1.15 whats new message
+msgid "Added option to create Moth trap"
+msgstr "Pridėta galimybė sukurti naktinių drugių gaudyklę"
+
+# Version 1.15 whats new message
+msgid "Bug fixes"
+msgstr "Ištaisytos klaidos"

@@ -1,14 +1,15 @@
 # 
 # Translators:
+# Karolis, 2020
 # Carin Kullberg <carin@ckg.se>, 2020
-# Lars Pettersson <lars.pettersson@biol.lu.se>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Karolis, 2021
+# Georg, 2022
+# Lars Pettersson <lars.pettersson@biol.lu.se>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2021\n"
+"Last-Translator: Lars Pettersson <lars.pettersson@biol.lu.se>, 2022\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,10 +151,10 @@ msgid "Slovakia"
 msgstr "Slovakien"
 
 msgid "Turkey (Europe)"
-msgstr ""
+msgstr "Turkiet: Europa"
 
 msgid "Turkey (Asia)"
-msgstr ""
+msgstr "Turkiet: Asien"
 
 msgid "Ukraine"
 msgstr "Ukraina"
@@ -343,7 +344,7 @@ msgid "OK, got it"
 msgstr "OK, jag förstår"
 
 msgid "Please fill in"
-msgstr ""
+msgstr "Vänligen fyll i."
 
 msgid "Area Count"
 msgstr "Områdesinventering"
@@ -353,31 +354,33 @@ msgstr "Område"
 
 # Location attribute label
 msgid "Location"
-msgstr ""
+msgstr "Plats"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "Din position krävs"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Den här appen behöver veta din position, men har inte rättigheter till det. "
+"Vill du öppna Inställningar nu?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Avbryt för att undvika att batteriet laddas ur."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "Använder din position."
 
 msgid "Add"
 msgstr "Lägg till"
 
 msgid "Add species"
-msgstr "Lägg till"
+msgstr "Lägg till art"
 
 msgid "Duration"
 msgstr "Tidsintervall"
@@ -511,35 +514,39 @@ msgid "Incorrect password or email"
 msgstr "Felaktigt lösenord eller e-post"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
+msgstr "Fyll i din e-postadress för att begära återställning av lösenordet."
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "Användaren har inte aktiverats eller har blockerats."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"Det verkar som om din <1>{{userEmail}}</1> e-post inte har verifierats än "
+"<3><0>Uppdatera</0><1>Skicka e-post igen</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
+"Ett nytt mejl med verifieringslänk skickades nu. Om du inte ser något mejl "
+"bör du titta bland papperskorgen, spamkorgen eller andra mejl-mappar."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr ""
+msgstr "Logga in först."
 
 # User registration error
 msgid "This email is already taken."
-msgstr ""
+msgstr "Denna e-postadress används redan."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "Okänd e-postadress."
 
 msgid "email is not valid"
 msgstr "e-postadressen är inte giltig"
@@ -620,7 +627,7 @@ msgid "To start a new survey you can press the plus button"
 msgstr "För att starta en ny inventering kan du klicka på plus-knappen"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
-msgstr "i sidfoten på startsidan . Då börjar en ny 15 minuters-inventering"
+msgstr "i sidfoten på startsidan . Då börjar en ny 15-min öppen inventering"
 
 msgid "Selecting species"
 msgstr "Välja art"
@@ -862,8 +869,8 @@ msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
 msgstr ""
-"Organisation specialiserad på att skapa skräddarsydda dataorienterade "
-"lösningar"
+"En teknisk konsultbyrå som är specialiserad på skräddarsydda lösningar för "
+"natur, miljö och samhälle"
 
 msgid "For suggestions and feedback please do not hesitate to"
 msgstr "Har du förslag och synpunkter är du välkommen att"
@@ -886,6 +893,8 @@ msgstr "Tillåt delning av appens analysresultat"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
+"Dela uppgifter om appen kraschar, för att hjälpa till att göra den mer "
+"stabil."
 
 msgid "Save Draft"
 msgstr "Spara utkastet"
@@ -913,23 +922,23 @@ msgstr "Larvnät"
 
 # Butterfly stage
 msgid "Adult"
-msgstr ""
+msgstr "Vuxen"
 
 # Butterfly stage
 msgid "Egg"
-msgstr ""
+msgstr "Ägg"
 
 # Butterfly stage
 msgid "Larva"
-msgstr ""
+msgstr "Puppa"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr ""
+msgstr "Larvspinn"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr ""
+msgstr "Puppa"
 
 msgid "Transect"
 msgstr "Slinga"
@@ -1055,10 +1064,10 @@ msgid "Unable to survey"
 msgstr "Kan ej inventeras"
 
 msgid "15min Count"
-msgstr "15-min inventering"
+msgstr "15-min öppen inventering"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "15-min enarts-inventering"
 
 msgid "eBMS Transect"
 msgstr "eBMS-slinga"
@@ -1153,6 +1162,10 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
+"Du kan använda den här appen för att övervaka fjärilar var som helst i "
+"Europa. Resultaten kommer att föras in i European Butterfly Monitoring-"
+"databasen och kan användas för att utforska trender hos fjärilspopulationer "
+"i hela Europa. För att använda appen måste du först registrera ett konto."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1166,13 +1179,12 @@ msgstr ""
 "eller punktlokaler. Både slingor och punktlokaler kan i denna version av "
 "appen inventeras som fjärilsslingor. Du kan också göra en inventering på "
 "valfri plats under 15 minuter närsomhelst fjärilarna är aktiva (dvs. när det"
-" är varmt och helst soligt).  Denna metod kallas 15-min inventering. Senare "
-"under 2020 kommer appen  också att kunna registrera tillfälliga "
-"observationer. Nedan följer beskrivningar om hur man använder de olika "
-"metoderna."
+" är varmt och helst soligt).  Denna metod kallas 15-min öppen inventering. "
+"Längre fram kommer appen även kunna användas för tillfälliga observationer. "
+"Nedan följer beskrivningar om hur man använder de olika metoderna."
 
 msgid "How to do a 15-minute Count"
-msgstr "Hur du gör en 15-minutersinventering"
+msgstr "Hur du gör en 15-min öppen inventering"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1226,7 +1238,7 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"När du avslutat din 15-minutersinventering och kontrollerat de arter och "
+"När du avslutat din 15-min öppna inventering och kontrollerat de arter och "
 "antal som observerats trycker du på SÄND-knappen för att skicka in "
 "resultaten. Detta är viktigt för att dina data ska kunna lagras på ett "
 "säkert sätt i eBMS-databasen. Värdena lagras både på din enhet, som grund "
@@ -1271,15 +1283,16 @@ msgid ""
 msgstr ""
 "För att börja en slinginventering trycker du på plus-knappen (en lång "
 "tryckning) längst ner på skärmen och väljer eBMS Slinga. Sidan för slingor "
-"visas, med alla uppgifter som ska anges. Först väljer du dina slingor (du "
-"måste vara inloggad för att kunna göra det, och för att slingornas "
-"sträckning ska länkas till ditt användarkonto). När du valt din slinglokal "
-"kan du fylla i väderuppgifter (t.ex temperatur, vindstyrka mm.) och annan "
-"obligatorisk information (t.ex starttid) på Sling-sidan. Sedan kan du på "
-"samma sätt som vid en 15-minutersinvertering lägga till en lista på de arter"
-" du sett och antalet individer för varje segment av slingan. När du har "
-"avslutat din slinginventering och kontrollerat att arter och antal stämmer, "
-"trycker du på knappen KLART för att skicka iväg uppgifterna."
+"visas, med alla uppgifter som ska anges. Först väljer du din slinga (du "
+"måste vara inloggad för att kunna göra det, och för att observationerna "
+"längs slingan ska länkas till ditt användarkonto). När du valt din "
+"fjärilsslinga kan du fylla i väderuppgifter (t.ex temperatur, vindstyrka "
+"mm.) och annan obligatorisk information (t.ex starttid) på sling-sidan. "
+"Sedan kan du på samma sätt som vid en  15-min öppen inventering lägga till "
+"en lista på de arter du sett och antalet individer för varje segment av "
+"slingan. När du har avslutat din slinginventering och kontrollerat att arter"
+" och antal stämmer, trycker du på knappen KLART för att skicka iväg "
+"uppgifterna."
 
 msgid "Survey section"
 msgstr "Slingsegment"
@@ -1380,7 +1393,7 @@ msgstr "Det här resultatet har redan sänts in och kan inte ändras i appen."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr "Andra sätt att registrera data"
+msgstr "Klicka på Andra sätt att registrera data från listan nedan"
 
 # A note in app settings page
 msgid ""
@@ -1406,7 +1419,7 @@ msgstr[1] "Sänder in {{count}} inventeringar"
 
 # Part of a page error
 msgid "Oops! Something went wrong."
-msgstr "Oj då! Något gick fel."
+msgstr "Hoppsan! Något gick på tok."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
@@ -1414,216 +1427,481 @@ msgstr "Detta är fel nr (error event id): {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr ""
+msgstr "Ytterligare information."
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Väderförhållanden"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr ""
+msgstr "Väderförhållanden"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr ""
+msgstr "Är du säker på att du vill radera {{taxon}} ?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
-msgstr ""
+msgstr "Vädret just nu är förifyllt via vädertjänsten OpenWeatherMap API."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Kopiera art"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
 msgstr ""
+"Är du säker på att du vill kopiera artlistan från föregående inventering?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Kopiera"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Tyvärr hittades inga arter att kopiera."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "Kopieringen av  {{speciesCount}} arter lyckades."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Tyvärr finns inga tidigare inventeringar att kopiera arter från."
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Armenien"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "För att radera en inventering, svep den åt vänster."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Du måste kolla att ditt undersökningsområde är korrekt innan du kan skicka "
+"in data."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "Glöm inte att ladda upp avslutade inventeringar!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
+"Inga väntande avslutade inventeringar. <br/><br/>Tryck<4></4>för att lägga "
+"till."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Tips: Hitta hjälp"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Använd gärna Guide- <2></2> och Hjälp- <5></5> sidorna innan du använder "
+"appen!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Mer information"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Tips: Lägg till arter"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Du kan kopiera flera eller alla av dina föregående artlistor genom att  "
+"hålla inne Lägg till Art-knappen länge."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Dölj"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Huvudinventering"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Alla inventeringar"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr ""
+msgstr "Representativt foto av lokalen där 15-min öppna inventeringen gjordes"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Inget foto har lagts till."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Tryck <1></1> för att lägga till."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "15-min punktinventering"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Observationer"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr ""
+msgstr "Tid"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Är du säker på att du vill radera den här observationen?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Uppfattat"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Inga uppladdade inventeringar</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "Kontot finns redan."
 
 # A survey label
 msgid "Details"
-msgstr ""
+msgstr "Detaljer"
 
 # A survey label
 msgid "Species Photo"
-msgstr ""
+msgstr "Bild på art"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "Välj livsstadie"
 
 # A survey label
 msgid "Weather"
-msgstr ""
+msgstr "Väder"
 
 # A survey label
 msgid "Photo"
-msgstr ""
+msgstr "Foto"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Artgrupper"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "Välj den artgrupp du alltid observerar."
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Dagfjärilar"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Nattfjärilar"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Humlor"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Trollsländor"
 
 # Alert label
 msgid "Warning"
-msgstr ""
+msgstr "Varning"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "Är du säker på att du vill stänga av GPS-spårning"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "Stäng av"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "Sammanfoga"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "Arten finns redan."
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
+"Är du säker på att du vill sammanfoga denna lista till den befintliga "
+"artlistan?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
+msgstr "Lägg till målart."
+
+# Moth survey label
+msgid "Date"
+msgstr "Datum"
+
+# Moth survey label
+msgid "Method"
+msgstr "Metod"
+
+# Context term
+msgid "Please select the medthod type"
+msgstr "Välj typ av metod."
+
+# Moth survey method type
+msgid "MV light"
+msgstr "Kvicksilverlampa"
+
+# Moth survey method type
+msgid "Actinic light"
+msgstr "UV-lysrör"
+
+# Moth survey method type
+msgid "LED light"
+msgstr "LED-ljus"
+
+# Moth survey method type
+msgid "Light trapping"
+msgstr "Ljusfällor"
+
+# Moth survey method type
+msgid "Daytime observation"
+msgstr "Observation dagtid"
+
+# Moth survey method type
+msgid "Dusking"
+msgstr "Skymning"
+
+# Moth survey method type
+msgid "Attracted to a lighted window"
+msgstr "Lockats till ett upplyst fönster"
+
+# Moth survey method type
+msgid "Sugaring"
+msgstr "Fångst med sockerbete"
+
+# Moth survey method type
+msgid "Wine roping"
+msgstr "Fångst med vinsnöre"
+
+# Moth survey method type
+msgid "Beating tray"
+msgstr "Bankningsskärm"
+
+# Moth survey method type
+msgid "Pheromone trap"
+msgstr "Feromonfälla"
+
+# Moth survey method type
+msgid "Other method (add comment)"
+msgstr "Annan metod (lägg till kommentar)"
+
+# Moth survey method type
+msgid "Not recorded"
+msgstr "Ej registrerad"
+
+# Moth survey details header title
+msgid "Survey Details"
+msgstr "Inventeringsdetaljer"
+
+# Moth survey header title
+msgid "Moth-trap survey"
+msgstr "Inventering med nattfjärilsfälla"
+
+# Moth survey header title
+msgid "Moth survey"
+msgstr "Nattfjärilsinventering"
+
+# Moth survey divider label
+msgid "Species list"
+msgstr "Artlista"
+
+# Moth survey moth details label
+msgid "Identifier"
+msgstr "Bildigenkännare"
+
+# Moth survey divider label
+msgid "Moths list"
+msgstr "Nattfjärilslista"
+
+# Moth survey photo picker divider label
+msgid "Moth Photo"
+msgstr "Nattfjärilsbild"
+
+# Identifier attribute info message
+msgid "Enter the recorder's name, if different."
+msgstr "Fyll i observatörens namn, om någon annan gjort observationen"
+
+# Identifier attribute placeholder
+msgid "Recorder name"
+msgstr "Observatörens namn"
+
+# Latitude
+msgid "Lat"
+msgstr "Latitud"
+
+# Longitude
+msgid "Long"
+msgstr "Longitud"
+
+# Moth survey attribute label
+msgid "Count inside"
+msgstr "Antal innanför"
+
+# Moth survey attribute label
+msgid "Count outside"
+msgstr "Antal utanför"
+
+# Moth survey photo picker label
+msgid "Moth Photos"
+msgstr "Nattfjärilsbilder"
+
+# Moth survey details label
+msgid "Moth traps"
+msgstr "Nattfjärilsfällor"
+
+# Moth survey details label
+msgid "Moth trap"
+msgstr "Nattfjärilsfälla"
+
+# Moth survey Location Info message
+msgid ""
+"You have not created any moth traps yet. To create one please go to the "
+"<2>website.</2>"
 msgstr ""
+"Du har inte skapat någon nattfjärilsfälla än. För att skapa en gå till "
+"<2>websidan.</2>"
+
+# Moth survey Location Info message
+msgid "To see the map please connect to the internet."
+msgstr "Anslut till internet för att se kartan."
+
+# Moth survey validation message
+msgid "Please add the moth trap"
+msgstr "Lägg till nattfjärilsfällan"
+
+# Moth survey Location Info message
+msgid ""
+"You have only one moth trap. To create more please go to the <2>website.</2>"
+msgstr ""
+"Du har bara en nattfjärilsfälla. Gå till <2>websidan.</2>för att lägga till "
+"fler"
+
+# Moth survey AI loader
+msgid "Identifying..."
+msgstr "Identifierar..."
+
+# Unknown species common_name
+msgid "Unknown"
+msgstr "Okänd"
+
+# Moth survey warning message
+msgid "Please add a photo"
+msgstr "Lägg till bild"
+
+# Moth survey unknown species divider
+msgid "Unknown species"
+msgstr "Okänd art"
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we could not identify this species."
+msgstr "<0>Varning</0> - vi kunde inte identifiera den här arten."
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we think it is"
+msgstr "<0>Varning</0> - vi tror det här är"
+
+# Moth survey image gallery warning message
+msgid "likely a"
+msgstr "troligtvis en"
+
+# App settings title
+msgid "Surveying"
+msgstr "Inventerar"
+
+# Moth survey label
+msgid "Moth survey (SPRING)"
+msgstr "Nattfjärilsinventering (SPRING)"
+
+# Survey name
+msgid "Moth Survey"
+msgstr "Nattfjärilsinventering"
+
+#  Moth settings page header title
+msgid "Moth Survey Settings"
+msgstr "Inställningar för nattfjärilsinventering"
+
+# Moth settings page label
+msgid "Use image identification"
+msgstr "Använd bildigenkänning"
+
+# Moth settings page info message
+msgid ""
+"We will help you to identify species using our species image classifier."
+msgstr "Vi hjälper dig artbestämma med vår bildigenkännare"
+
+# Moth survey button label
+msgid "IDENTIFY"
+msgstr "IDENTIFIERA"
+
+# Moth survey button label
+msgid "Identify All"
+msgstr "Identifiera Alla"
+
+# Moth survey image classifier disabled info header
+msgid "Image identification"
+msgstr "Bildidentifikation"
+
+# Moth survey image classifier disabled info message
+msgid ""
+"Image classifier is currently <1>disabled</1>. Please go to app "
+"<4>Settings</4> to turn it on."
+msgstr ""
+"Bildigenkännaren är för närvarande <1>inaktiverad</1>.\n"
+"Aktivera den i appens <4>Inställningar</4>."
+
+# Whats new message title
+msgid "What's New"
+msgstr "Vad är Nytt"
+
+# Version 1.15 whats new message
+msgid "Record moths with the help of automatic identification in real-time."
+msgstr ""
+"Registrera nattfjärilar med hjälp av automatisk identifiering i realtid."
+
+# Version 1.15 whats new message
+msgid "Bug fixes and improvements"
+msgstr "Bug-fixar och förbättringar"
+
+# Version 1.15 whats new message
+msgid "Added option to identify moths with image classifier"
+msgstr ""
+"Lade till alternativ för att identifiera nattfjärilar med bildigenkännare"
+
+# Version 1.15 whats new message
+msgid "Added App setting option to disable image classifier"
+msgstr "Lade till Appinställning för att inaktivera bildigenkännare"
+
+# Version 1.15 whats new message
+msgid "Added option to create Moth trap"
+msgstr "Lade till alternativ för att skapa Nattfjärilsfälla"
+
+# Version 1.15 whats new message
+msgid "Bug fixes"
+msgstr "Bug-fixar"

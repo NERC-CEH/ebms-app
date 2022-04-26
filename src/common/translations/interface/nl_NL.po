@@ -1,16 +1,16 @@
 # 
 # Translators:
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2020
 # Ineke <ineke.radstaat@vlinderstichting.nl>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
 # Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2021
-# Jurrien van Deijk <jurrien.vandeijk@vlinderstichting.nl>, 2021
+# Jurrien van Deijk <jurrien.vandeijk@vlinderstichting.nl>, 2022
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Jurrien van Deijk <jurrien.vandeijk@vlinderstichting.nl>, 2021\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/ceh/teams/95441/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -321,7 +321,7 @@ msgstr "Weet u zeker dat u zich wilt afmelden?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr "Negeer locale data"
+msgstr "Verwijder locale data"
 
 msgid "This will delete all the records on this device."
 msgstr "Dit zal alle waarnemingen van uw apparaat verwijderen"
@@ -1233,6 +1233,14 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
+"Je kan de app gebruiken om waarnemingen te doen op bestaande "
+"dagvlinderroutes. Deze transecten zijn al ingesteld door het nationale "
+"vlindermeetnet en kunnen het beste worden uitgevoerd door ervaren "
+"waarnemers. Voor het opnemen van bestaande routes in de app moet uw account "
+"al gekoppeld zijn aan een route dat in het eBMS-systeem is ingesteld. Neem "
+"contact op met uw nationale coördinator als er geen locaties van routes "
+"worden weergegeven nadat u in de app bent ingelogd. (stuur een email naar "
+"{{helpEmail}} voor advies)."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1247,6 +1255,18 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
+"Om een telling op het transect te beginnen, houd de + toets ingedrukt (een "
+"lange druk op de toets) onderaan het scherm en selecteer de eBMS route. De "
+"route-pagina zal verschijnen met alle opties die moeten worden ingevuld. "
+"Eerst moet u uw routes selecteren (u moet hiervoor ingelogd zijn, en de "
+"transectroutes moeten aan uw gebruikersaccount gekoppeld zijn). Zodra u uw "
+"route hebt geselecteerd, kunt u de nodige weersgegevens (bv. temperatuur, "
+"windsnelheid, enz.) en andere vereiste informatie (bv. starttijd) invullen "
+"op de routepagina. Vervolgens voegt u een lijst van waargenomen soorten en "
+"het getelde aantal exemplaren toe voor elk transectgedeelte, op dezelfde "
+"manier als voor een 15-minutentelling. Zodra u klaar bent met uw route en "
+"gecontroleerd hebt of de getelde soorten en aantallen correct zijn, drukt u "
+"op de knop FINISH om te verzenden."
 
 msgid "Survey section"
 msgstr "Sectie"
@@ -1377,7 +1397,7 @@ msgstr "Oeps. Hier ging iets mis."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr ""
+msgstr "Dit is de error event id: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
@@ -1393,7 +1413,7 @@ msgstr "Weersomstandigheden"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr ""
+msgstr "Weet je zeker dat je {{taxon}} wilt verwijderen?"
 
 # Credits page text
 msgid ""
@@ -1421,7 +1441,7 @@ msgstr "Sorry, er werden geen soorten gevonden om te kopiëren. "
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "Je hebt {{speciesCount}} met succes gekopieerd."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
@@ -1459,6 +1479,8 @@ msgstr "Tip: Gebruik Help"
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Kijk op de handleiding <2></2> en Help <5></5> pagina's voordat je de app "
+"gebruikt!"
 
 # Link inside Guide page
 msgid "More Information"
@@ -1582,20 +1604,277 @@ msgstr "Weet u zeker dat u de GPS wilt uitschakelen?"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "Uitschakelen"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "Samenvoegen"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "Soort bestaat al"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
+"Weet je zeker dat je deze lijst wilt samenvoegen met de bestaande "
+"soortenlijst?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
+msgstr "Voeg doelsoorten toe"
+
+# Moth survey label
+msgid "Date"
+msgstr "Datum"
+
+# Moth survey label
+msgid "Method"
+msgstr "Methode"
+
+# Context term
+msgid "Please select the medthod type"
+msgstr "Selecteer methode"
+
+# Moth survey method type
+msgid "MV light"
+msgstr "Kwikdamplamp"
+
+# Moth survey method type
+msgid "Actinic light"
+msgstr "Actine"
+
+# Moth survey method type
+msgid "LED light"
+msgstr "LED"
+
+# Moth survey method type
+msgid "Light trapping"
+msgstr "Lakenopstelling"
+
+# Moth survey method type
+msgid "Daytime observation"
+msgstr "Overdag"
+
+# Moth survey method type
+msgid "Dusking"
+msgstr "Schemering"
+
+# Moth survey method type
+msgid "Attracted to a lighted window"
+msgstr "Verlicht raam"
+
+# Moth survey method type
+msgid "Sugaring"
+msgstr "Smeren"
+
+# Moth survey method type
+msgid "Wine roping"
+msgstr "Wijntouw"
+
+# Moth survey method type
+msgid "Beating tray"
+msgstr "Smeerval"
+
+# Moth survey method type
+msgid "Pheromone trap"
+msgstr "Feromoonval"
+
+# Moth survey method type
+msgid "Other method (add comment)"
+msgstr "Andere methode (voeg commentaar toe)"
+
+# Moth survey method type
+msgid "Not recorded"
+msgstr "Niet opgenomen"
+
+# Moth survey details header title
+msgid "Survey Details"
+msgstr "Onderzoeksdetails"
+
+# Moth survey header title
+msgid "Moth-trap survey"
+msgstr "Nachtvlinderval onderzoek"
+
+# Moth survey header title
+msgid "Moth survey"
+msgstr "Nachtvlinderonderzoek"
+
+# Moth survey divider label
+msgid "Species list"
+msgstr "Soortenlijst"
+
+# Moth survey moth details label
+msgid "Identifier"
+msgstr "Identificator"
+
+# Moth survey divider label
+msgid "Moths list"
+msgstr "Nachtvlinderlijst"
+
+# Moth survey photo picker divider label
+msgid "Moth Photo"
+msgstr "Nachtvlinderfoto"
+
+# Identifier attribute info message
+msgid "Enter the recorder's name, if different."
+msgstr "Voeg waarnemer toe, indien anders."
+
+# Identifier attribute placeholder
+msgid "Recorder name"
+msgstr "Naam waarnemer"
+
+# Latitude
+msgid "Lat"
+msgstr "lat"
+
+# Longitude
+msgid "Long"
+msgstr "Long"
+
+# Moth survey attribute label
+msgid "Count inside"
+msgstr "Aantal binnen"
+
+# Moth survey attribute label
+msgid "Count outside"
+msgstr "Aantal buiten"
+
+# Moth survey photo picker label
+msgid "Moth Photos"
+msgstr "Nachtvlinderfoto's"
+
+# Moth survey details label
+msgid "Moth traps"
+msgstr "Nachtvlindervallen"
+
+# Moth survey details label
+msgid "Moth trap"
+msgstr "Nachtvlinderval"
+
+# Moth survey Location Info message
+msgid ""
+"You have not created any moth traps yet. To create one please go to the "
+"<2>website.</2>"
 msgstr ""
+"Je hebt nog geen nachtvlinderval toegevoegd. Ga naar de <2>website </2> om "
+"er één toe te voegen."
+
+# Moth survey Location Info message
+msgid "To see the map please connect to the internet."
+msgstr "Maak verbinding met internet om de kaart te zien."
+
+# Moth survey validation message
+msgid "Please add the moth trap"
+msgstr "Voeg nachtvlinderval toe"
+
+# Moth survey Location Info message
+msgid ""
+"You have only one moth trap. To create more please go to the <2>website.</2>"
+msgstr ""
+"je hebt één nachtvlinderval. Om er nog één aan te maken ga naar de "
+"<2>website.</2>"
+
+# Moth survey AI loader
+msgid "Identifying..."
+msgstr "Wordt op naam gebracht..."
+
+# Unknown species common_name
+msgid "Unknown"
+msgstr "Onbekend"
+
+# Moth survey warning message
+msgid "Please add a photo"
+msgstr "Voeg een foto toe"
+
+# Moth survey unknown species divider
+msgid "Unknown species"
+msgstr "Onbekende soort"
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we could not identify this species."
+msgstr "<0>Waarschuwing</0> - we kunnen deze soort niet op naam brengen"
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we think it is"
+msgstr "<0>Waarschuwing</0> - we denken dat het de volgende soort is"
+
+# Moth survey image gallery warning message
+msgid "likely a"
+msgstr "waarschijnlijk een"
+
+# App settings title
+msgid "Surveying"
+msgstr "Onderzoeken"
+
+# Moth survey label
+msgid "Moth survey (SPRING)"
+msgstr "Nachtvlinderonderzoek (SPRING)"
+
+# Survey name
+msgid "Moth Survey"
+msgstr "Nachtvlinderonderzoek"
+
+#  Moth settings page header title
+msgid "Moth Survey Settings"
+msgstr "Nachtvlinderonderzoek Instellingen"
+
+# Moth settings page label
+msgid "Use image identification"
+msgstr "Gebruik beeldherkenning"
+
+# Moth settings page info message
+msgid ""
+"We will help you to identify species using our species image classifier."
+msgstr ""
+"We helpen je om de soorten op naam te brengen met behulp van onze "
+"beeldherkenning."
+
+# Moth survey button label
+msgid "IDENTIFY"
+msgstr "Breng op naam"
+
+# Moth survey button label
+msgid "Identify All"
+msgstr "Breng alles op naam"
+
+# Moth survey image classifier disabled info header
+msgid "Image identification"
+msgstr "Foto identificatie"
+
+# Moth survey image classifier disabled info message
+msgid ""
+"Image classifier is currently <1>disabled</1>. Please go to app "
+"<4>Settings</4> to turn it on."
+msgstr ""
+"Beeldherkenning is momenteel <1>uitgeschakeld</1>. Ga naar app "
+"<4>Instellingen</4> om hem aan te zetten."
+
+# Whats new message title
+msgid "What's New"
+msgstr "Recent toegevoegd"
+
+# Version 1.15 whats new message
+msgid "Record moths with the help of automatic identification in real-time."
+msgstr "Breng nachtvlinders op naam met automatische beeldherkenning"
+
+# Version 1.15 whats new message
+msgid "Bug fixes and improvements"
+msgstr "Foutcorrecties en verbeteringen"
+
+# Version 1.15 whats new message
+msgid "Added option to identify moths with image classifier"
+msgstr ""
+"Toegevoegde optie om nachtvlinders op naam te brengen met beeldherkenning"
+
+# Version 1.15 whats new message
+msgid "Added App setting option to disable image classifier"
+msgstr "App setting optie toegevoegd om beeldherkenning uit te schakelen"
+
+# Version 1.15 whats new message
+msgid "Added option to create Moth trap"
+msgstr "Optie toegevoegd om nachtvlinderval toe te voegen"
+
+# Version 1.15 whats new message
+msgid "Bug fixes"
+msgstr "Foutcorrecties"
