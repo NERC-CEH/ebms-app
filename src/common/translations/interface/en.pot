@@ -164,7 +164,6 @@ msgstr "Get Started"
 msgid "Please sign in with your eBMS account or register."
 msgstr "Please sign in with your eBMS account or register."
 
-
 msgid "Password"
 msgstr "Password"
 
@@ -216,7 +215,6 @@ msgstr "I agree to"
 msgid "Terms and Conditions"
 msgstr "Terms and Conditions"
 
-
 msgid "Reset"
 msgstr "Reset"
 
@@ -259,8 +257,10 @@ msgstr "Menu"
 msgid "App"
 msgstr "App"
 
-msgid "We are very grateful for all the people that helped to create this app:"
-msgstr "We are very grateful for all the people that helped to create this app:"
+msgid ""
+"We are very grateful for all the people that helped to create this app:"
+msgstr ""
+"We are very grateful for all the people that helped to create this app:"
 
 msgid "Home"
 msgstr "Home"
@@ -322,8 +322,12 @@ msgstr "Cancel"
 msgid "Welcome aboard!"
 msgstr "Welcome aboard!"
 
-msgid "Before submitting any records please check your email and click on the verification link."
-msgstr "Before submitting any records please check your email and click on the verification link."
+msgid ""
+"Before submitting any records please check your email and click on the "
+"verification link."
+msgstr ""
+"Before submitting any records please check your email and click on the "
+"verification link."
 
 msgid "OK, got it"
 msgstr "OK, got it"
@@ -346,8 +350,12 @@ msgid "Location Required"
 msgstr "Location Required"
 
 # GPS permissions message
-msgid "This app needs your location, but does not have permission. Open settings now?"
-msgstr "This app needs your location, but does not have permission. Open settings now?"
+msgid ""
+"This app needs your location, but does not have permission. Open settings "
+"now?"
+msgstr ""
+"This app needs your location, but does not have permission. Open settings "
+"now?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
@@ -372,8 +380,12 @@ msgstr "Species"
 msgid "Species name"
 msgstr "Species name"
 
-msgid "For quicker searching of the taxa you can use different shortcuts. For example, to find"
-msgstr "For quicker searching of the taxa you can use different shortcuts. For example, to find"
+msgid ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
+msgstr ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
 
 msgid "you can type in the search bar"
 msgstr "you can type in the search bar"
@@ -497,13 +509,21 @@ msgstr "Enter your email address to request a password reset."
 msgid "The user has not been activated or is blocked."
 msgstr "The user has not been activated or is blocked."
 
-# Unverified account note message 
-msgid "Looks like your <1>{{userEmail}}</1> email hasn't been verified yet.<3><0>Refresh</0><1>Resend Email</1></3>"
-msgstr "Looks like your <1>{{userEmail}}</1> email hasn't been verified yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 
 # Verification resend success message
-msgid "A new verification email was successfully sent now. If you did not receive the email, then check your Spam or Junk email folders."
-msgstr "A new verification email was successfully sent now. If you did not receive the email, then check your Spam or Junk email folders."
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
@@ -520,20 +540,44 @@ msgstr "Unrecognized email address."
 msgid "email is not valid"
 msgstr "email is not valid"
 
-msgid "Butterflies are captivating insects, but they are in decline in many parts of Europe. As shown by this graph of The Grassland Butterfly Indicator for the EU."
-msgstr "Butterflies are captivating insects, but they are in decline in many parts of Europe. As shown by this graph of The Grassland Butterfly Indicator for the EU."
+msgid ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
+msgstr ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
 
-msgid "Data collected by this app can greatly improve knowledge of the status of butterflies and their habitats."
-msgstr "Data collected by this app can greatly improve knowledge of the status of butterflies and their habitats."
+msgid ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
+msgstr ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
 
-msgid "We lack information on butterfly numbers in many parts of Europe, as shown by the density of records currently available to assess butterfly status."
-msgstr "We lack information on butterfly numbers in many parts of Europe, as shown by the density of records currently available to assess butterfly status."
+msgid ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
+msgstr ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
 
-msgid "It has never been easier to contribute high quality data for research to support conservation of these fascinating and vital insects. You can get started straight away"
-msgstr "It has never been easier to contribute high quality data for research to support conservation of these fascinating and vital insects. You can get started straight away"
+msgid ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects. You can get "
+"started straight away"
+msgstr ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects. You can get "
+"started straight away"
 
-msgid "The app was developed as part of the Assessing Butterflies in Europe (ABLE) project."
-msgstr "The app was developed as part of the Assessing Butterflies in Europe (ABLE) project."
+msgid ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
+msgstr ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
 
 msgid "The ABLE project is a partnership between"
 msgstr "The ABLE project is a partnership between"
@@ -541,14 +585,22 @@ msgstr "The ABLE project is a partnership between"
 msgid "and"
 msgstr "and"
 
-msgid "ABLE is funded by a service contract from the European Union Directorate for the Environment, for an initial period of two years from 2019-20."
-msgstr "ABLE is funded by a service contract from the European Union Directorate for the Environment, for an initial period of two years from 2019-20."
+msgid ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
+msgstr ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
 
 msgid "ABLE partners:"
 msgstr "ABLE partners:"
 
-msgid "This app contributes data to the European Butterfly Monitoring Scheme (eBMS)."
-msgstr "This app contributes data to the European Butterfly Monitoring Scheme (eBMS)."
+msgid ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
+msgstr ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
 msgstr "In June 2019, the following organisations are partners in eBMS:"
@@ -571,32 +623,58 @@ msgstr "Selecting species"
 msgid "Please press the Add"
 msgstr "Please press the Add"
 
-msgid "button in your new survey edit page. This will bring you to the taxa search page. After selecting the species, this will add it to your survey list."
-msgstr "button in your new survey edit page. This will bring you to the taxa search page. After selecting the species, this will add it to your survey list."
+msgid ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
+msgstr ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
 
 msgid "Note"
 msgstr "Note"
 
-msgid "you can increment the species count by tapping on the number next to the species name in the list."
-msgstr "you can increment the species count by tapping on the number next to the species name in the list."
+msgid ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
+msgstr ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
 
-msgid "To delete a species from your survey list your can swipe it left and click the delete button."
-msgstr "To delete a species from your survey list your can swipe it left and click the delete button."
+msgid ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
+msgstr ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
 
-msgid "To add more information to your species occurrence, you can open the species entry by clicking on it."
-msgstr "To add more information to your species occurrence, you can open the species entry by clicking on it."
+msgid ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
+msgstr ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr "To finish a record you should also fill in the details of the area."
 
-msgid "When finished, set for submission by pressing the Finish button in the header."
-msgstr "When finished, set for submission by pressing the Finish button in the header."
+msgid ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
+msgstr ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
 
 msgid "Searching for species"
 msgstr "Searching for species"
 
-msgid "The application holds around 500 butterfly species list and all the associated taxonomy ranks. For quicker searching of the taxa you can use different shortcuts. For example, to find"
-msgstr "The application holds around 500 butterfly species list and all the associated taxonomy ranks. For quicker searching of the taxa you can use different shortcuts. For example, to find"
+msgid ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
+msgstr ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
 
 msgid "Sync. with the website"
 msgstr "Sync. with the website"
@@ -604,8 +682,14 @@ msgstr "Sync. with the website"
 msgid "All your saved surveys will be shown on your account page."
 msgstr "All your saved surveys will be shown on your account page."
 
-msgid "By default a survey is in a 'draft' mode which will not be sent to the database until the 'Finish' button in the header is clicked. The application will try to submit your record once there is a good network connection."
-msgstr "By default a survey is in a 'draft' mode which will not be sent to the database until the 'Finish' button in the header is clicked. The application will try to submit your record once there is a good network connection."
+msgid ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
+msgstr ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
 
 msgid "If the record has reached the database a red"
 msgstr "If the record has reached the database a red"
@@ -616,14 +700,24 @@ msgstr "(set for submission & saved locally) will become green"
 msgid "synced to the database"
 msgstr "synced to the database"
 
-msgid "you have to be signed in to your website account and have a network connection, for the records to be automatically synchronised in the background"
-msgstr "you have to be signed in to your website account and have a network connection, for the records to be automatically synchronised in the background"
+msgid ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
+msgstr ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
 
 msgid "Delete a record"
 msgstr "Delete a record"
 
-msgid "To delete a record, swipe it left in your account page and click the delete button."
-msgstr "To delete a record, swipe it left in your account page and click the delete button."
+msgid ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
+msgstr ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
 
 msgid "User"
 msgstr "User"
@@ -631,14 +725,22 @@ msgstr "User"
 msgid "Sign in/out or register"
 msgstr "Sign in/out or register"
 
-msgid "To login, open the main menu page click Login or Register buttons and follow the instructions."
-msgstr "To login, open the main menu page click Login or Register buttons and follow the instructions."
+msgid ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
+msgstr ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
 
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr "To logout, visit the main menu page and click the logout button."
 
-msgid "after registering a new account you must verify your email address by clicking on a verification link sent to your email"
-msgstr "after registering a new account you must verify your email address by clicking on a verification link sent to your email"
+msgid ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
+msgstr ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
 
 msgid "Other"
 msgstr "Other"
@@ -664,11 +766,19 @@ msgstr "Allow Sample Edit"
 msgid "Upload"
 msgstr "Upload"
 
-msgid "This app supports butterfly monitoring and conservation. Click on the + button below to starting counting butterflies."
-msgstr "This app supports butterfly monitoring and conservation. Click on the + button below to starting counting butterflies."
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
 
-msgid "You will see lots of enhancements to this app as we add in new features over the coming months."
-msgstr "You will see lots of enhancements to this app as we add in new features over the coming months."
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
 
 msgid "Are you sure you want to reset the application to its initial state?"
 msgstr "Are you sure you want to reset the application to its initial state?"
@@ -724,12 +834,15 @@ msgstr "Icons made by"
 msgid "from"
 msgstr "from"
 
-
 msgid "We've sent an email to you"
 msgstr "We've sent an email to you"
 
-msgid "Click the link in the email to reset your password. If you don't see the email, check other places like your junk, spam or other folders."
-msgstr "Click the link in the email to reset your password. If you don't see the email, check other places like your junk, spam or other folders."
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
 
 msgid "App Development"
 msgstr "App Development"
@@ -737,8 +850,12 @@ msgstr "App Development"
 msgid "This app was hand crafted with love by"
 msgstr "This app was hand crafted with love by"
 
-msgid "A technical consultancy that excels at building bespoke environmental science and community focussed solutions."
-msgstr "A technical consultancy that excels at building bespoke environmental science and community focussed solutions."
+msgid ""
+"A technical consultancy that excels at building bespoke environmental "
+"science and community focussed solutions."
+msgstr ""
+"A technical consultancy that excels at building bespoke environmental "
+"science and community focussed solutions."
 
 msgid "For suggestions and feedback please do not hesitate to"
 msgstr "For suggestions and feedback please do not hesitate to"
@@ -785,23 +902,23 @@ msgstr "Pupae"
 msgid "Larval webs"
 msgstr "Larval webs"
 
-# Butterfly stage 
+# Butterfly stage
 msgid "Adult"
 msgstr "Adult"
 
-# Butterfly stage 
+# Butterfly stage
 msgid "Egg"
 msgstr "Egg"
 
-# Butterfly stage 
+# Butterfly stage
 msgid "Larva"
 msgstr "Larva"
 
-# Butterfly stage 
+# Butterfly stage
 msgid "Larval web"
 msgstr "Larval web"
 
-# Butterfly stage 
+# Butterfly stage
 msgid "Pupa"
 msgstr "Pupa"
 
@@ -967,8 +1084,14 @@ msgstr "Recorder info is missing"
 msgid "Please select your transect."
 msgstr "Please select your transect."
 
-msgid "This guide is still in development. It covers {{countrySpeciesCount}} butterfly species out of the {{totalSpeciesCountryCount}} species in your selected country."
-msgstr "This guide is still in development. It covers {{countrySpeciesCount}} butterfly species out of the {{totalSpeciesCountryCount}} species in your selected country."
+msgid ""
+"This guide is still in development. It covers {{countrySpeciesCount}} "
+"butterfly species out of the {{totalSpeciesCountryCount}} species in your "
+"selected country."
+msgstr ""
+"This guide is still in development. It covers {{countrySpeciesCount}} "
+"butterfly species out of the {{totalSpeciesCountryCount}} species in your "
+"selected country."
 
 msgid "Status"
 msgstr "Status"
@@ -1000,8 +1123,14 @@ msgstr "Counts"
 msgid "Species descriptions"
 msgstr "Species descriptions"
 
-msgid "Species descriptions included as part of the guide are based on those produced for the Climatic Risk Atlas of European Butterflies. We thank Josef Settele for making these available."
-msgstr "Species descriptions included as part of the guide are based on those produced for the Climatic Risk Atlas of European Butterflies. We thank Josef Settele for making these available."
+msgid ""
+"Species descriptions included as part of the guide are based on those "
+"produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
+" Settele for making these available."
+msgstr ""
+"Species descriptions included as part of the guide are based on those "
+"produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
+" Settele for making these available."
 
 msgid "Photo credits"
 msgstr "Photo credits"
@@ -1009,38 +1138,150 @@ msgstr "Photo credits"
 msgid "How to use the app"
 msgstr "How to use the app"
 
-msgid "You can use this app to monitor butterflies anywhere in Europe. The results will be entered into the European Butterfly Monitoring database and used to develop trends of butterflies across Europe. To use the app you will first have to register an account."
-msgstr "You can use this app to monitor butterflies anywhere in Europe. The results will be entered into the European Butterfly Monitoring database and used to develop trends of butterflies across Europe. To use the app you will first have to register an account."
+msgid ""
+"You can use this app to monitor butterflies anywhere in Europe. The results "
+"will be entered into the European Butterfly Monitoring database and used to "
+"develop trends of butterflies across Europe. To use the app you will first "
+"have to register an account."
+msgstr ""
+"You can use this app to monitor butterflies anywhere in Europe. The results "
+"will be entered into the European Butterfly Monitoring database and used to "
+"develop trends of butterflies across Europe. To use the app you will first "
+"have to register an account."
 
-msgid "The preferred method is to conduct a 15-minute Count. This can be done at any place and at any time when butterflies are active (i.e. when the weather is warm and preferably sunny). You can also use the app to record your established butterfly transects. Later in 2020, the app will also include the ability to submit casual records. The notes below tell you how to use the currently available methods."
-msgstr "The preferred method is to conduct a 15-minute Count. This can be done at any place and at any time when butterflies are active (i.e. when the weather is warm and preferably sunny). You can also use the app to record your established butterfly transects. Later in 2020, the app will also include the ability to submit casual records. The notes below tell you how to use the currently available methods."
+msgid ""
+"The preferred method is to conduct a 15-minute Count. This can be done at "
+"any place and at any time when butterflies are active (i.e. when the weather"
+" is warm and preferably sunny). You can also use the app to record your "
+"established butterfly transects. Later in 2020, the app will also include "
+"the ability to submit casual records. The notes below tell you how to use "
+"the currently available methods."
+msgstr ""
+"The preferred method is to conduct a 15-minute Count. This can be done at "
+"any place and at any time when butterflies are active (i.e. when the weather"
+" is warm and preferably sunny). You can also use the app to record your "
+"established butterfly transects. Later in 2020, the app will also include "
+"the ability to submit casual records. The notes below tell you how to use "
+"the currently available methods."
 
 msgid "How to do a 15-minute Count"
 msgstr "How to do a 15-minute Count"
 
-msgid "This is the default method on the app. Simply count butterflies for a 15 minute period, either in a defined area such as a field, or while walking along, or standing on a fixed point counting butterflies that fly past. There is no need to draw the route as the app will know your route, provided you have the GPS tracking facility switched on in your Settings. Otherwise you will have to draw the area searched on a map, using the app. To start, touch the + button at the bottom of the screen. The app counts down the 15 minutes once you have started, but you can pause at any time (for example to identify a butterfly) by pressing the pause button. At the end of the survey you can review your records and make sure the totals are correct before submitting."
-msgstr "This is the default method on the app. Simply count butterflies for a 15 minute period, either in a defined area such as a field, or while walking along, or standing on a fixed point counting butterflies that fly past. There is no need to draw the route as the app will know your route, provided you have the GPS tracking facility switched on in your Settings. Otherwise you will have to draw the area searched on a map, using the app. To start, touch the + button at the bottom of the screen. The app counts down the 15 minutes once you have started, but you can pause at any time (for example to identify a butterfly) by pressing the pause button. At the end of the survey you can review your records and make sure the totals are correct before submitting."
+msgid ""
+"This is the default method on the app. Simply count butterflies for a 15 "
+"minute period, either in a defined area such as a field, or while walking "
+"along, or standing on a fixed point counting butterflies that fly past. "
+"There is no need to draw the route as the app will know your route, provided"
+" you have the GPS tracking facility switched on in your Settings. Otherwise "
+"you will have to draw the area searched on a map, using the app. To start, "
+"touch the + button at the bottom of the screen. The app counts down the 15 "
+"minutes once you have started, but you can pause at any time (for example to"
+" identify a butterfly) by pressing the pause button. At the end of the "
+"survey you can review your records and make sure the totals are correct "
+"before submitting."
+msgstr ""
+"This is the default method on the app. Simply count butterflies for a 15 "
+"minute period, either in a defined area such as a field, or while walking "
+"along, or standing on a fixed point counting butterflies that fly past. "
+"There is no need to draw the route as the app will know your route, provided"
+" you have the GPS tracking facility switched on in your Settings. Otherwise "
+"you will have to draw the area searched on a map, using the app. To start, "
+"touch the + button at the bottom of the screen. The app counts down the 15 "
+"minutes once you have started, but you can pause at any time (for example to"
+" identify a butterfly) by pressing the pause button. At the end of the "
+"survey you can review your records and make sure the totals are correct "
+"before submitting."
 
-msgid "Add species you see by pressing the + ADD button and start typing a species name. The selection of species will then appear as a drop down menu. You can use either scientific or English names. Select the species you see and once in your list of butterflies, touch the left hand number to increase the count of how many you have seen. You can review this number and amend at the end as well. You can also add photos if you want and add comments."
-msgstr "Add species you see by pressing the + ADD button and start typing a species name. The selection of species will then appear as a drop down menu. You can use either scientific or English names. Select the species you see and once in your list of butterflies, touch the left hand number to increase the count of how many you have seen. You can review this number and amend at the end as well. You can also add photos if you want and add comments."
+msgid ""
+"Add species you see by pressing the + ADD button and start typing a species "
+"name. The selection of species will then appear as a drop down menu. You can"
+" use either scientific or English names. Select the species you see and once"
+" in your list of butterflies, touch the left hand number to increase the "
+"count of how many you have seen. You can review this number and amend at the"
+" end as well. You can also add photos if you want and add comments."
+msgstr ""
+"Add species you see by pressing the + ADD button and start typing a species "
+"name. The selection of species will then appear as a drop down menu. You can"
+" use either scientific or English names. Select the species you see and once"
+" in your list of butterflies, touch the left hand number to increase the "
+"count of how many you have seen. You can review this number and amend at the"
+" end as well. You can also add photos if you want and add comments."
 
-msgid "Once you have finished your 15-minute Count and checked that the species and numbers seen are correct, press the UPLOAD button to submit. This is important to make sure your data is stored securely in the eBMS database. A record of the count will be held on your device for future reference as well as on your online account."
-msgstr "Once you have finished your 15-minute Count and checked that the species and numbers seen are correct, press the UPLOAD button to submit. This is important to make sure your data is stored securely in the eBMS database. A record of the count will be held on your device for future reference as well as on your online account."
+msgid ""
+"Once you have finished your 15-minute Count and checked that the species and"
+" numbers seen are correct, press the UPLOAD button to submit. This is "
+"important to make sure your data is stored securely in the eBMS database. A "
+"record of the count will be held on your device for future reference as well"
+" as on your online account."
+msgstr ""
+"Once you have finished your 15-minute Count and checked that the species and"
+" numbers seen are correct, press the UPLOAD button to submit. This is "
+"important to make sure your data is stored securely in the eBMS database. A "
+"record of the count will be held on your device for future reference as well"
+" as on your online account."
 
 msgid "How to record along an existing transect"
 msgstr "How to record along an existing transect"
 
-msgid "You can also use the app to submit records while walking an existing butterfly monitoring transect. These have already been established by country Butterfly Monitoring Schemes and are best completed by experienced recorders. Recording existing transects within the app requires that your account is already linked to a transect setup within the eBMS system. If no transect sites are listed once you are logged into the app, please contact your national co-ordinator (please email {{helpEmail}} for advice)."
-msgstr "You can also use the app to submit records while walking an existing butterfly monitoring transect. These have already been established by country Butterfly Monitoring Schemes and are best completed by experienced recorders. Recording existing transects within the app requires that your account is already linked to a transect setup within the eBMS system. If no transect sites are listed once you are logged into the app, please contact your national co-ordinator (please email {{helpEmail}} for advice)."
+msgid ""
+"You can also use the app to submit records while walking an existing "
+"butterfly monitoring transect. These have already been established by "
+"country Butterfly Monitoring Schemes and are best completed by experienced "
+"recorders. Recording existing transects within the app requires that your "
+"account is already linked to a transect setup within the eBMS system. If no "
+"transect sites are listed once you are logged into the app, please contact "
+"your national co-ordinator (please email {{helpEmail}} for advice)."
+msgstr ""
+"You can also use the app to submit records while walking an existing "
+"butterfly monitoring transect. These have already been established by "
+"country Butterfly Monitoring Schemes and are best completed by experienced "
+"recorders. Recording existing transects within the app requires that your "
+"account is already linked to a transect setup within the eBMS system. If no "
+"transect sites are listed once you are logged into the app, please contact "
+"your national co-ordinator (please email {{helpEmail}} for advice)."
 
-msgid "To start with the transect count, hold down the + button (a long-press) at the bottom of the screen and select eBMS Transect. The Transect page will appear with all the options to be completed. First, you have to select your transects (you will need to be logged in for this, and for transect routes to be linked to your user account). Once you have selected your transect site, you can fill out the necessary weather details (e.g. temperature, wind speed etc) and other required information (e.g. start time) on the Transect page. You then add a list of species seen and the number counted for each transect section, in the same way as for a 15-minute count. Once you have finished your Transect and checked that the species and numbers seen are correct, press the FINISH button to submit."
-msgstr "To start with the transect count, hold down the + button (a long-press) at the bottom of the screen and select eBMS Transect. The Transect page will appear with all the options to be completed. First, you have to select your transects (you will need to be logged in for this, and for transect routes to be linked to your user account). Once you have selected your transect site, you can fill out the necessary weather details (e.g. temperature, wind speed etc) and other required information (e.g. start time) on the Transect page. You then add a list of species seen and the number counted for each transect section, in the same way as for a 15-minute count. Once you have finished your Transect and checked that the species and numbers seen are correct, press the FINISH button to submit."
+msgid ""
+"To start with the transect count, hold down the + button (a long-press) at "
+"the bottom of the screen and select eBMS Transect. The Transect page will "
+"appear with all the options to be completed. First, you have to select your "
+"transects (you will need to be logged in for this, and for transect routes "
+"to be linked to your user account). Once you have selected your transect "
+"site, you can fill out the necessary weather details (e.g. temperature, wind"
+" speed etc) and other required information (e.g. start time) on the Transect"
+" page. You then add a list of species seen and the number counted for each "
+"transect section, in the same way as for a 15-minute count. Once you have "
+"finished your Transect and checked that the species and numbers seen are "
+"correct, press the FINISH button to submit."
+msgstr ""
+"To start with the transect count, hold down the + button (a long-press) at "
+"the bottom of the screen and select eBMS Transect. The Transect page will "
+"appear with all the options to be completed. First, you have to select your "
+"transects (you will need to be logged in for this, and for transect routes "
+"to be linked to your user account). Once you have selected your transect "
+"site, you can fill out the necessary weather details (e.g. temperature, wind"
+" speed etc) and other required information (e.g. start time) on the Transect"
+" page. You then add a list of species seen and the number counted for each "
+"transect section, in the same way as for a 15-minute count. Once you have "
+"finished your Transect and checked that the species and numbers seen are "
+"correct, press the FINISH button to submit."
 
 msgid "Survey section"
 msgstr "Survey section"
 
-msgid "In this tab, on the right part of the + Button, you can see the PENDING counts, your records that have not been submitted and the UPLOADED counts, the ones submitted to the eBMS database. The Pending counts can be submitted to the system by clicking on it and pressing the Upload option. You could see the species list that you recorded for Uploaded counts. All your records can also be viewed and edited on the {{eBMSWebsiteLink}}"
-msgstr "In this tab, on the right part of the + Button, you can see the PENDING counts, your records that have not been submitted and the UPLOADED counts, the ones submitted to the eBMS database. The Pending counts can be submitted to the system by clicking on it and pressing the Upload option. You could see the species list that you recorded for Uploaded counts. All your records can also be viewed and edited on the {{eBMSWebsiteLink}}"
+msgid ""
+"In this tab, on the right part of the + Button, you can see the PENDING "
+"counts, your records that have not been submitted and the UPLOADED counts, "
+"the ones submitted to the eBMS database. The Pending counts can be submitted"
+" to the system by clicking on it and pressing the Upload option. You could "
+"see the species list that you recorded for Uploaded counts. All your records"
+" can also be viewed and edited on the {{eBMSWebsiteLink}}"
+msgstr ""
+"In this tab, on the right part of the + Button, you can see the PENDING "
+"counts, your records that have not been submitted and the UPLOADED counts, "
+"the ones submitted to the eBMS database. The Pending counts can be submitted"
+" to the system by clicking on it and pressing the Upload option. You could "
+"see the species list that you recorded for Uploaded counts. All your records"
+" can also be viewed and edited on the {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
 msgstr "eBMS website"
@@ -1048,11 +1289,21 @@ msgstr "eBMS website"
 msgid "App Settings"
 msgstr "App Settings"
 
-msgid "Go to the application setting page to change the language and the country. The selected country is important in order to see different species in the Picture Guide, you will see only the species occurring in that country."
-msgstr "Go to the application setting page to change the language and the country. The selected country is important in order to see different species in the Picture Guide, you will see only the species occurring in that country."
+msgid ""
+"Go to the application setting page to change the language and the country. "
+"The selected country is important in order to see different species in the "
+"Picture Guide, you will see only the species occurring in that country."
+msgstr ""
+"Go to the application setting page to change the language and the country. "
+"The selected country is important in order to see different species in the "
+"Picture Guide, you will see only the species occurring in that country."
 
-msgid "You can also switch on the Training Mode, when you are still learning to identify butterflies."
-msgstr "You can also switch on the Training Mode, when you are still learning to identify butterflies."
+msgid ""
+"You can also switch on the Training Mode, when you are still learning to "
+"identify butterflies."
+msgstr ""
+"You can also switch on the Training Mode, when you are still learning to "
+"identify butterflies."
 
 # This is part of mapping functionality
 msgid "Delete last point"
@@ -1111,13 +1362,17 @@ msgstr "Yesterday"
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr "This record has been submitted and cannot be edited within this App."
 
-# Refers to surveys list when long-pressing plus button 
+# Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
 msgstr "Click on other recording options from list below"
 
 # A note in app settings page
-msgid "Batch upload all finished records. This does not include records in 'draft' stage."
-msgstr "Batch upload all finished records. This does not include records in 'draft' stage."
+msgid ""
+"Batch upload all finished records. This does not include records in 'draft' "
+"stage."
+msgstr ""
+"Batch upload all finished records. This does not include records in 'draft' "
+"stage."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
@@ -1129,7 +1384,7 @@ msgstr "Please log in first to upload the records."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
-msgid_plural "Uploading {{count}} records" 
+msgid_plural "Uploading {{count}} records"
 msgstr[0] "Uploading {{count}} record"
 msgstr[1] "Uploading {{count}} records"
 
@@ -1153,35 +1408,39 @@ msgstr "Weather Conditions"
 msgid "Weather conditions"
 msgstr "Weather conditions"
 
-# Alert message 
+# Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
 msgstr "Are you sure you want to delete {{taxon}} ?"
 
-# Credits page text 
-msgid "The current weather values are prepopulated using the OpenWeatherMap API weather service."
-msgstr "The current weather values are prepopulated using the OpenWeatherMap API weather service."
+# Credits page text
+msgid ""
+"The current weather values are prepopulated using the OpenWeatherMap API "
+"weather service."
+msgstr ""
+"The current weather values are prepopulated using the OpenWeatherMap API "
+"weather service."
 
-# Species list copy functionality 
+# Species list copy functionality
 msgid "Copy species"
 msgstr "Copy species"
 
-# Species list copy functionality 
+# Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
 msgstr "Are you sure want to copy previous survey species list?"
 
-# Species list copy functionality 
+# Species list copy functionality
 msgid "Copy"
 msgstr "Copy"
 
-# Species list copy functionality 
+# Species list copy functionality
 msgid "Sorry, no species were found to copy."
 msgstr "Sorry, no species were found to copy."
 
-# Species list copy functionality 
+# Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
 msgstr "You have successfully copied {{speciesCount}} species."
 
-# Species list copy functionality 
+# Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
 msgstr "Sorry, no previous survey to copy species from."
 
@@ -1189,29 +1448,35 @@ msgstr "Sorry, no previous survey to copy species from."
 msgid "Armenia"
 msgstr "Armenia"
 
-# Survey page additional information note 
+# Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
 msgstr "To delete any surveys swipe it to the left."
 
 # 15min survey additional information note after survey is finished
-msgid "Please check if the recording area is correct before sending the record."
-msgstr "Please check if the recording area is correct before sending the record."
+msgid ""
+"Please check if the recording area is correct before sending the record."
+msgstr ""
+"Please check if the recording area is correct before sending the record."
 
-# Survey page additional information note 
+# Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
 msgstr "Please do not forget to upload any pending surveys!"
 
-# Survey page additional information note  
+# Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr "No finished pending surveys.<br/><br/>Press <4></4> to add."
 
-# Pop-up tip title when the user has installed the app and finished the onboarding screens
+# Pop-up tip title when the user has installed the app and finished the
+# onboarding screens
 msgid "Tip: Finding Help"
 msgstr "Tip: Finding Help"
 
-# Pop-up content  when the user has installed the app and finished the onboarding screens
-msgid "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
-msgstr "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
+# Pop-up content  when the user has installed the app and finished the
+# onboarding screens
+msgid ""
+"Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
+msgstr ""
+"Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 
 # Link inside Guide page
 msgid "More Information"
@@ -1222,30 +1487,34 @@ msgid "Tip: Adding Species"
 msgstr "Tip: Adding Species"
 
 # Pop-up alert tip content
-msgid "You can bulk copy your previous species lists by long-pressing the Add Species button."
-msgstr "You can bulk copy your previous species lists by long-pressing the Add Species button."
+msgid ""
+"You can bulk copy your previous species lists by long-pressing the Add "
+"Species button."
+msgstr ""
+"You can bulk copy your previous species lists by long-pressing the Add "
+"Species button."
 
 # Button
 msgid "Hide"
 msgstr "Hide"
 
-# App settings labels for primary survey change 
+# App settings labels for primary survey change
 msgid "Primary Survey"
 msgstr "Primary Survey"
 
-# App settings labels for primary survey change 
+# App settings labels for primary survey change
 msgid "All Surveys"
 msgstr "All Surveys"
 
-# Part of a photo picker element 
+# Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
 msgstr "Representative photo of where the 15 minute count was made"
 
-# Part of a photo picker element 
+# Part of a photo picker element
 msgid "No photo has been added."
 msgstr "No photo has been added."
 
-# Part of a photo picker element 
+# Part of a photo picker element
 msgid "Press <1></1> to add."
 msgstr "Press <1></1> to add."
 
@@ -1265,7 +1534,7 @@ msgstr "Time"
 msgid "Are you sure you want to delete this occurrence?"
 msgstr "Are you sure you want to delete this occurrence?"
 
-# alert confirmation button 
+# alert confirmation button
 msgid "Got it"
 msgstr "Got it"
 
@@ -1285,7 +1554,7 @@ msgstr "Details"
 msgid "Species Photo"
 msgstr "Species Photo"
 
-# Info message for species stage picker 
+# Info message for species stage picker
 msgid "Pick the life stage"
 msgstr "Pick the life stage"
 
@@ -1297,39 +1566,39 @@ msgstr "Weather"
 msgid "Photo"
 msgstr "Photo"
 
-# Part of species group selection 
+# Part of species group selection
 msgid "Species groups"
 msgstr "Species groups"
 
-# Part of species group selection 
+# Part of species group selection
 msgid "Please select the species groups that you always record."
 msgstr "Please select the species groups that you always record."
 
-# Part of species group selection 
+# Part of species group selection
 msgid "Butterflies"
 msgstr "Butterflies"
 
-# Part of species group selection 
+# Part of species group selection
 msgid "Moths"
 msgstr "Moths"
 
-# Part of species group selection 
+# Part of species group selection
 msgid "Bumblebees"
 msgstr "Bumblebees"
 
-# Part of species group selection 
+# Part of species group selection
 msgid "Dragonflies"
 msgstr "Dragonflies"
 
-# Alert label 
+# Alert label
 msgid "Warning"
 msgstr "Warning"
 
-# Alert message when turning GPS off 
+# Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
 msgstr "Are you sure you want to turn off the GPS tracking?"
 
-# Alert button option 
+# Alert button option
 msgid "Turn off"
 msgstr "Turn off"
 
@@ -1337,79 +1606,80 @@ msgstr "Turn off"
 msgid "Merge"
 msgstr "Merge"
 
-# Alert header 
+# Alert header
 msgid "Species already exists"
 msgstr "Species already exists"
 
-# Alert message  
+# Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
-msgstr "Are you sure you want to merge this list to the existing species list?"
+msgstr ""
+"Are you sure you want to merge this list to the existing species list?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
 msgstr "Please add your target species"
 
-# Moth survey label 
+# Moth survey label
 msgid "Date"
 msgstr "Date"
 
-# Moth survey label 
+# Moth survey label
 msgid "Method"
 msgstr "Method"
 
-# Context term 
+# Context term
 msgid "Please select the medthod type"
 msgstr "Please select the medthod type"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "MV light"
 msgstr "MV light"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Actinic light"
 msgstr "Actinic light"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "LED light"
 msgstr "LED light"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Light trapping"
 msgstr "Light trapping"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Daytime observation"
 msgstr "Daytime observation"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Dusking"
 msgstr "Dusking"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Attracted to a lighted window"
 msgstr "Attracted to a lighted window"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Sugaring"
 msgstr "Sugaring"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Wine roping"
 msgstr "Wine roping"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Beating tray"
 msgstr "Beating tray"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Pheromone trap"
 msgstr "Pheromone trap"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Other method (add comment)"
 msgstr "Other method (add comment)"
 
-# Moth survey method type 
+# Moth survey method type
 msgid "Not recorded"
 msgstr "Not recorded"
 
@@ -1445,15 +1715,15 @@ msgstr "Moth Photo"
 msgid "Enter the recorder's name, if different."
 msgstr "Enter the recorder's name, if different."
 
-# Identifier attribute placeholder 
+# Identifier attribute placeholder
 msgid "Recorder name"
 msgstr "Recorder name"
 
-# Latitude 
+# Latitude
 msgid "Lat"
 msgstr "Lat"
 
-# Longitude 
+# Longitude
 msgid "Long"
 msgstr "Long"
 
@@ -1477,9 +1747,13 @@ msgstr "Moth traps"
 msgid "Moth trap"
 msgstr "Moth trap"
 
-# Moth survey Location Info message 
-msgid "You have not created any moth traps yet. To create one please go to the <2>website.</2>"
-msgstr "You have not created any moth traps yet. To create one please go to the <2>website.</2>"
+# Moth survey Location Info message
+msgid ""
+"You have not created any moth traps yet. To create one please go to the "
+"<2>website.</2>"
+msgstr ""
+"You have not created any moth traps yet. To create one please go to the "
+"<2>website.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
@@ -1489,11 +1763,13 @@ msgstr "To see the map please connect to the internet."
 msgid "Please add the moth trap"
 msgstr "Please add the moth trap"
 
-# Moth survey Location Info message  
-msgid "You have only one moth trap. To create more please go to the <2>website.</2>"
-msgstr "You have only one moth trap. To create more please go to the <2>website.</2>"
+# Moth survey Location Info message
+msgid ""
+"You have only one moth trap. To create more please go to the <2>website.</2>"
+msgstr ""
+"You have only one moth trap. To create more please go to the <2>website.</2>"
 
-# Moth survey AI loader 
+# Moth survey AI loader
 msgid "Identifying..."
 msgstr "Identifying..."
 
@@ -1501,19 +1777,19 @@ msgstr "Identifying..."
 msgid "Unknown"
 msgstr "Unknown"
 
-# Moth survey warning message 
+# Moth survey warning message
 msgid "Please add a photo"
 msgstr "Please add a photo"
 
-# Moth survey unknown species divider 
+# Moth survey unknown species divider
 msgid "Unknown species"
 msgstr "Unknown species"
 
-# Moth survey image gallery warning message 
+# Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
 msgstr "<0>Warning</0> - we could not identify this species."
 
-# Moth survey image gallery warning message  
+# Moth survey image gallery warning message
 msgid "<0>Warning</0> - we think it is"
 msgstr "<0>Warning</0> - we think it is"
 
@@ -1521,7 +1797,7 @@ msgstr "<0>Warning</0> - we think it is"
 msgid "likely a"
 msgstr "likely a"
 
-# App settings title 
+# App settings title
 msgid "Surveying"
 msgstr "Surveying"
 
@@ -1533,24 +1809,25 @@ msgstr "Moth survey (SPRING)"
 msgid "Moth Survey"
 msgstr "Moth Survey"
 
-#  Moth settings page header title 
+#  Moth settings page header title
 msgid "Moth Survey Settings"
 msgstr "Moth Survey Settings"
 
-# Moth settings page label 
+# Moth settings page label
 msgid "Use image identification"
 msgstr "Use image identification"
 
-# Moth settings page info message 
-msgid "We will help you to identify species using our species image classifier."
-msgstr "We will help you to identify species using our species image classifier."
+# Moth settings page info message
+msgid ""
+"We will help you to identify species using our species image classifier."
+msgstr ""
+"We will help you to identify species using our species image classifier."
 
-
-# Moth survey button label 
+# Moth survey button label
 msgid "IDENTIFY"
 msgstr "IDENTIFY"
 
-# Moth survey button label 
+# Moth survey button label
 msgid "Identify All"
 msgstr "Identify All"
 
@@ -1559,8 +1836,12 @@ msgid "Image identification"
 msgstr "Image identification"
 
 # Moth survey image classifier disabled info message
-msgid "Image classifier is currently <1>disabled</1>. Please go to app <4>Settings</4> to turn it on."
-msgstr "Image classifier is currently <1>disabled</1>. Please go to app <4>Settings</4> to turn it on."
+msgid ""
+"Image classifier is currently <1>disabled</1>. Please go to app "
+"<4>Settings</4> to turn it on."
+msgstr ""
+"Image classifier is currently <1>disabled</1>. Please go to app "
+"<4>Settings</4> to turn it on."
 
 # Whats new message title
 msgid "What's New"
@@ -1589,4 +1870,3 @@ msgstr "Added option to create Moth trap"
 # Version 1.15 whats new message
 msgid "Bug fixes"
 msgstr "Bug fixes"
-
