@@ -57,7 +57,7 @@ workflows:
           title: Create app artifact
           inputs:
             - notify_user_groups: none
-      - deploy-to-itunesconnect-application-loader@0:
+      - deploy-to-itunesconnect-application-loader@1:
           inputs:
             - password: $ITUNES_CONNECT_PASS
             - app_password: $ITUNES_CONNECT_APP_PASS
