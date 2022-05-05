@@ -9,7 +9,7 @@ import { informationCircleOutline } from 'ionicons/icons';
 import { MothTrap } from 'common/types';
 import BottomSheetMothTrapEntry from './BottomSheetMothTrapEntry';
 
-const SNAP_POSITIONS = [0.8, 0.7, 0.6, 0.5, 0.4, 0.22, 0.05];
+const SNAP_POSITIONS = [0.8, 0.5, 0.22, 0.05];
 const DEFAULT_SNAP_POSITION = SNAP_POSITIONS.length - 2;
 const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 1;
 
