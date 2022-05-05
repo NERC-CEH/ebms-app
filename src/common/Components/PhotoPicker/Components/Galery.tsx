@@ -43,10 +43,10 @@ const getFooterMessage = (image: typeof Media, identifyImage: any) => {
     );
   }
 
-  if (!doesTaxonMatchParent) {
-    const { taxon } = image.attrs.species[0];
-    const probability = (image.attrs.species[0].probability * 100).toFixed(0);
+  const { taxon } = image.attrs.species[0];
+  const probability = (image.attrs.species[0]?.probability * 100).toFixed(0);
 
+  if (!doesTaxonMatchParent) {
     return (
       <IonLabel className="gallery-warning-message">
         <T>
@@ -57,7 +57,12 @@ const getFooterMessage = (image: typeof Media, identifyImage: any) => {
     );
   }
 
-  return null;
+  return (
+    <IonLabel className="gallery-warning-message">
+      <T>We think it is</T> {probability}% <T>likely a</T> <i>{taxon}</i>{' '}
+      <T>species</T>.
+    </IonLabel>
+  );
 };
 
 const GalleryComponent: FC<Props> = ({ model, showGallery, hideGallery }) => {
