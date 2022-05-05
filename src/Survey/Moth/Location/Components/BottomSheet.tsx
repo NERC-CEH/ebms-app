@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import Sheet, { SheetRef } from 'react-modal-sheet';
 import Sample from 'models/sample';
+import CONFIG from 'common/config/config';
 import { InfoMessage, device } from '@apps';
 import { useIonViewWillLeave } from '@ionic/react';
 import { observer } from 'mobx-react';
@@ -70,9 +71,7 @@ const BottomSheet: FC<Props> = ({
           className="info-message"
         >
           You have only one moth trap. To create more please go to the{' '}
-          <a href="https://butterfly-monitoring.net/my-moth-trap-sites">
-            website.
-          </a>
+          <a href={`${CONFIG.backend.url}/my-moth-trap-sites`}>website.</a>
         </InfoMessage>
       );
     }
@@ -85,10 +84,7 @@ const BottomSheet: FC<Props> = ({
           className="info-message"
         >
           You have not created any moth traps yet. To create one please go to
-          the{' '}
-          <a href="https://butterfly-monitoring.net/my-moth-trap-sites">
-            website.
-          </a>
+          the <a href={`${CONFIG.backend.url}/my-moth-trap-sites`}>website.</a>
         </InfoMessage>
       );
     }
