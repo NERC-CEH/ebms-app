@@ -54,12 +54,12 @@
         background: var(--ion-color-primary);
         top: -55px;
         left: 50%;
-        font-size: 64px;
+        font-size: 59px;
         color: white;
-        padding: 5px;
-        --ionicon-stroke-width: 24px;
+        padding: 12px;
         transform: translateX(-50%);
         border: 3px solid white;
+        overflow: hidden;
       }
 
       h1 {
