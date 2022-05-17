@@ -2,6 +2,7 @@ import React, { FC, memo } from 'react';
 import { MothTrap } from 'common/types';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import Sample from 'models/sample';
+import hasLocationMatch from 'Survey/common/hasLocationMatch';
 import Marker from './Marker';
 import 'leaflet.markercluster';
 import 'leaflet/dist/leaflet.css';
@@ -22,9 +23,6 @@ const MarkerClusterGroupWrap: FC<Props> = ({
   sample,
   isDisabled,
 }) => {
-  const hasLocationMatch = (smp: typeof Sample, mothTrap: MothTrap) =>
-    smp.attrs.location?.id === mothTrap.id;
-
   const getMarker = (mothTrap: MothTrap): JSX.Element => (
     <Marker
       key={mothTrap.id}
