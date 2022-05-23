@@ -14,7 +14,19 @@ export default {
   [mothSurvey.name]: mothSurvey,
 };
 
-interface Attrs {}
+export type AttrConfig = {
+  remote: {
+    id?: number | string;
+    values?: { id: number; value: string }[];
+  };
+};
+
+// TODO:
+// interface Attrs {
+//   [key: string]: AttrConfig;
+// }
+
+type Attrs = any;
 
 export interface Survey {
   id: number;
@@ -24,7 +36,7 @@ export interface Survey {
   attrs: Attrs;
 
   occ?: {
-    attrs: Attrs | any;
+    attrs: Attrs;
     create: (
       occurrence: typeof Occurrence,
       taxon: any,

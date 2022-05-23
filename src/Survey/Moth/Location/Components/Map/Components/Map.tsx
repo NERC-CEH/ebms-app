@@ -2,7 +2,6 @@ import React, { FC, useState, useEffect } from 'react';
 import CONFIG from 'common/config/config';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import Sample from 'models/sample';
-import UserModelTypes from 'models/userModel';
 import MapControl from 'common/Components/LeafletControl';
 import { observer } from 'mobx-react';
 import { device, InfoMessage } from '@apps';
@@ -10,8 +9,8 @@ import { useIonViewDidEnter, isPlatform, IonSpinner } from '@ionic/react';
 import { wifiOutline } from 'ionicons/icons';
 import GPSButton from 'common/Components/GPSButton';
 import Leaflet from 'leaflet';
-import { MothTrap } from 'common/types';
 import appModel from 'models/appModel';
+import locationsCollection from 'models/collections/locations';
 import COUNTRIES_CENTROID from '../../../country_centroide';
 import MarkerClusterGroup from './MarkerCluster';
 
@@ -21,8 +20,8 @@ const DEFAULT_CENTER: number[] = [51.505, -0.09];
 
 interface Props {
   sample: typeof Sample;
-  userModel: typeof UserModelTypes;
-  onLocationSelect: (mothTrap: MothTrap) => void;
+  mothTraps: typeof locationsCollection;
+  onLocationSelect: any;
   onMovedCoords: any;
   isFetchingTraps?: boolean | null;
   isDisabled?: boolean;
@@ -31,7 +30,7 @@ interface Props {
 const Map: FC<Props> = ({
   sample,
   isFetchingTraps,
-  userModel,
+  mothTraps,
   onLocationSelect,
   onMovedCoords,
   isDisabled,
@@ -53,8 +52,10 @@ const Map: FC<Props> = ({
     const { location } = sample.attrs;
 
     if (location) {
-      setMapCenter([location?.latitude, location?.longitude]);
-      onMovedCoords([location?.latitude, location?.longitude]);
+      if (!location?.attrs?.latitude || !location?.attrs?.longitude) return;
+
+      setMapCenter([location?.attrs?.latitude, location?.attrs?.longitude]);
+      onMovedCoords([location?.attrs?.latitude, location?.attrs?.longitude]);
       setMapZoom(MAX_ZOOM);
       return;
     }
@@ -111,8 +112,6 @@ const Map: FC<Props> = ({
       </div>
     );
   }
-
-  const { mothTraps } = userModel.attrs;
 
   return (
     <MapContainer

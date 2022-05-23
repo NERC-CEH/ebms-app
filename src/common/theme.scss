@@ -345,6 +345,12 @@ ion-radio-group {
   --border-color: transparent;
 }
 
+.auto-suggest-input-attr {
+  ion-input {
+    --padding-top: 0;
+  }
+}
+
 .error-container .error-message {
   background: white;
 }
@@ -423,8 +429,6 @@ div.rounded .attr {
 ion-datetime {
   opacity: 0.5;
 }
-
-
 
 a {
   text-decoration: none;

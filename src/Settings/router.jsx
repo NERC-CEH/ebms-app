@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import appModel from 'appModel';
 import userModel from 'userModel';
+import locations from 'models/collections/locations';
 import savedSamples from 'savedSamples';
 import Menu from './Menu';
 import Language from './Language';
@@ -21,7 +22,12 @@ const LanguageWrap = () => (
   <Language userModel={userModel} appModel={appModel} />
 );
 const MenuWrap = () => (
-  <Menu userModel={userModel} appModel={appModel} savedSamples={savedSamples} />
+  <Menu
+    userModel={userModel}
+    appModel={appModel}
+    savedSamples={savedSamples}
+    locations={locations}
+  />
 );
 
 export default [

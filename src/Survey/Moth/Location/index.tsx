@@ -1,8 +1,11 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Page, Header, Main } from '@apps';
+import locations from 'common/models/collections/locations';
+import { IonButton } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Sample from 'models/sample';
-import userModel from 'models/userModel';
+import appModel from 'models/appModel';
 import Map from './Components/Map';
 import './styles.scss';
 
@@ -11,33 +14,27 @@ interface Props {
 }
 
 const Location: FC<Props> = ({ sample }) => {
-  const [isFetchingTraps, setFetchingTraps] = useState<boolean | null>(null);
-
   const isDisabled = sample.isUploaded();
 
   const refreshMothTrapsWrap = () => {
-    if (isDisabled) return;
-
-    async function refreshMothTraps() {
-      try {
-        setFetchingTraps(true);
-        await userModel.refreshMothTraps();
-      } finally {
-        setFetchingTraps(false);
-      }
-    }
-    refreshMothTraps();
+    !isDisabled && locations.fetch();
   };
   useEffect(refreshMothTrapsWrap, []);
 
+  const newTrapButton = appModel.attrs.useExperiments && (
+    <IonButton routerLink="/location">
+      <T>Add New</T>
+    </IonButton>
+  );
+
   return (
     <Page id="moth-survey-location">
-      <Header title="Moth traps" />
+      <Header title="Moth traps" rightSlot={!isDisabled && newTrapButton} />
       <Main>
         <Map
           sample={sample}
-          userModel={userModel}
-          isFetchingTraps={isFetchingTraps}
+          locations={locations}
+          isFetchingTraps={locations.fetching.isFetching}
           isDisabled={isDisabled}
         />
       </Main>

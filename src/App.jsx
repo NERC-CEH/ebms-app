@@ -12,6 +12,7 @@ import Info from './Info/router';
 import User from './User/router';
 import Settings from './Settings/router';
 import Survey from './Survey/router';
+import Location from './Location/router';
 import 'common/translations/translator';
 
 /* Core CSS required for Ionic components to work properly */
@@ -49,6 +50,7 @@ const App = () => {
               {Info}
               {User}
               {Survey}
+              {Location}
               {Settings}
               <Route exact path="/" component={HomeRedirect} />
             </IonRouterOutlet>

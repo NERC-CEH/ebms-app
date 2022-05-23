@@ -3,7 +3,7 @@ import L from 'leaflet';
 import { Marker as LeafletMarker, Popup } from 'react-leaflet';
 import { IonButton, IonIcon, IonLabel } from '@ionic/react';
 import { locationOutline } from 'ionicons/icons';
-import { MothTrap } from 'common/types';
+import MothTrap from 'common/models/location';
 import clsx from 'clsx';
 import './styles.scss';
 
@@ -15,7 +15,9 @@ interface Props {
 }
 
 const Marker: FC<Props> = ({ mothTrap, onSelect, isSelected, isDisabled }) => {
-  const { latitude, longitude, name } = mothTrap;
+  if (!mothTrap.attrs.location?.latitude) return null;
+
+  const { latitude, longitude, name } = mothTrap.attrs?.location;
 
   const getIcon = () =>
     L.divIcon({

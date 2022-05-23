@@ -1,0 +1,73 @@
+#moth-trap-setup {
+  #add {
+    width: 40%;
+    margin: 10px 0 20px 0;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+
+    ion-label {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  .species-list-header {
+    background: #e6e6e6 !important;
+    color: #777777;
+    font-size: 0.9em;
+    padding-left: 7px;
+    --inner-padding-end: 0;
+    &.ios {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    ion-label {
+      width: 100%;
+      text-align: center;
+      font-weight: normal;
+
+      &:nth-of-type(2) {
+        padding-left: 16px;
+        text-align: left;
+      }
+      &:first-of-type {
+        text-align: left;
+      }
+      &:last-of-type.md {
+        max-width: 56px;
+      }
+      &:last-of-type.ios {
+        max-width: 40px;
+      }
+    }
+  }
+
+  ion-item {
+    --padding-start: 10px;
+
+    .title {
+      font-weight: 500;
+      font-size: 1.2em;
+      white-space: normal;
+
+      span {
+        font-weight: normal;
+        font-size: 1em;
+      }
+      .lamp-name {
+        margin-left: 5px;
+        font-weight: 500;
+        font-size: 1em;
+      }
+    }
+
+    .badge {
+      text-align: right;
+      ion-badge {
+        margin: 13px 3px;
+        float: left;
+      }
+    }
+  }
+}

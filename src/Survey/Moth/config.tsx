@@ -13,7 +13,7 @@ const fixedLocationSchema = Yup.object().shape({
 
 const validateLocation = (val: any) => {
   try {
-    fixedLocationSchema.validateSync(val);
+    fixedLocationSchema.validateSync(val.attrs.location);
     return true;
   } catch (e) {
     return false;

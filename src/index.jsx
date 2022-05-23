@@ -4,6 +4,7 @@ import { setupConfig, isPlatform } from '@ionic/react';
 import appModel from 'appModel';
 import userModel from 'userModel';
 import savedSamples from 'savedSamples';
+import locations from 'common/models/collections/locations';
 import config from 'config';
 import { configure as mobxConfig } from 'mobx';
 import { initAnalytics, device } from '@apps';
@@ -25,6 +26,7 @@ mobxConfig({ enforceActions: 'never' });
   await appModel._init;
   await userModel._init;
   await savedSamples._init;
+  await locations.ready;
 
   appModel.attrs.sendAnalytics &&
     initAnalytics({

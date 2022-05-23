@@ -4,60 +4,11 @@
 import Log from 'helpers/log';
 import CONFIG from 'config';
 import { DrupalUserModel, loader, toast } from '@apps';
-import axios from 'axios';
 import * as Yup from 'yup';
 import i18n from 'i18next';
 import { genericStore } from './store';
 
 const { warn, error, success } = toast;
-
-let requestCancelToken;
-
-const fetchMothTraps = async token => {
-  if (requestCancelToken) {
-    requestCancelToken.cancel();
-  }
-
-  requestCancelToken = axios.CancelToken.source();
-
-  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/locations`;
-
-  const options = {
-    params: {
-      location_type_id: 18879,
-      public: false,
-    },
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-    cancelToken: requestCancelToken.token,
-    timeout: 80000,
-  };
-
-  let res;
-
-  try {
-    res = await axios.get(url, options);
-  } catch (e) {
-    if (axios.isCancel(e)) {
-      return null;
-    }
-
-    throw e;
-  }
-
-  const flattenData = mothtrap => {
-    const { lat: latitude, lon: longitude, ...rest } = mothtrap.values;
-
-    return {
-      ...rest,
-      latitude: parseFloat(latitude),
-      longitude: parseFloat(longitude),
-    };
-  };
-
-  return res.data.map(flattenData);
-};
 
 class UserModel extends DrupalUserModel {
   registerSchema = Yup.object().shape({
@@ -170,23 +121,11 @@ class UserModel extends DrupalUserModel {
     await this._refreshAccessToken();
     return this.save();
   }
-
-  async refreshMothTraps() {
-    const token = await this.getAccessToken();
-    const mothTraps = await fetchMothTraps(token);
-
-    if (!mothTraps) return;
-
-    this.attrs.mothTraps = mothTraps;
-    this.save();
-  }
 }
 
 const defaults = {
   firstName: '',
   lastName: '',
-
-  mothTraps: [],
 };
 
 Log('UserModel: initializing');

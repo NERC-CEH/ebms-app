@@ -14,6 +14,7 @@ export { default as Collapse } from '@bit/flumens.apps.collapse';
 export { default as Toggle } from '@bit/flumens.apps.toggle';
 export { default as Input } from '@bit/flumens.apps.input';
 export { default as Textarea } from '@bit/flumens.apps.textarea';
+export { default as CounterInput } from '@bit/flumens.apps.counter-input';
 export { default as RadioInput } from '@bit/flumens.apps.radio-input';
 export { default as SliderInput } from '@bit/flumens.apps.slider-input';
 export { default as ModalHeader } from '@bit/flumens.apps.modal-header';
@@ -37,7 +38,7 @@ export { default as MenuAttrToggle } from '@bit/flumens.apps.menu-attr-toggle';
 export * from '@bit/flumens.apps.utils.validation';
 export * from '@bit/flumens.apps.utils.location';
 
-export { default as Model } from '@bit/flumens.apps.models.model';
+export { default as OldModel } from '@bit/flumens.apps.models.model';
 export { default as Sample } from '@bit/flumens.apps.models.sample';
 export { default as Occurrence } from '@bit/flumens.apps.models.occurrence';
 export { default as Media } from '@bit/flumens.apps.models.media';

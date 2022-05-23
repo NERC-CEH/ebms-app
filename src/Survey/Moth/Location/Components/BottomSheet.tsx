@@ -1,14 +1,19 @@
 import React, { FC, useState } from 'react';
 import Sheet, { SheetRef } from 'react-modal-sheet';
 import Sample from 'models/sample';
-import CONFIG from 'common/config/config';
+import appModel from 'models/appModel';
+import locations from 'models/collections/locations';
+import MothTrap from 'models/location';
 import { InfoMessage, device } from '@apps';
-import { useIonViewWillLeave } from '@ionic/react';
+import {
+  useIonViewWillLeave,
+  useIonViewWillEnter,
+  IonButton,
+} from '@ionic/react';
 import { observer } from 'mobx-react';
 import turf from '@turf/distance';
 import hasLocationMatch from 'Survey/common/hasLocationMatch';
 import { informationCircleOutline } from 'ionicons/icons';
-import { MothTrap } from 'common/types';
 import BottomSheetMothTrapEntry from './BottomSheetMothTrapEntry';
 
 const SNAP_POSITIONS = [0.8, 0.5, 0.22, 0.05];
@@ -16,87 +21,91 @@ const DEFAULT_SNAP_POSITION = SNAP_POSITIONS.length - 2;
 const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 1;
 
 interface Props {
-  mothTrapData: MothTrap[];
+  mothTraps: typeof locations;
   updateRecord: (mothTrap: MothTrap) => void;
+  deleteTrap: (mothTrap: MothTrap) => void;
+  uploadTrap: (mothTrap: MothTrap) => void;
   sample: typeof Sample;
   centroid: number[];
 }
 
 const BottomSheet: FC<Props> = ({
-  mothTrapData,
+  mothTraps,
   updateRecord,
+  deleteTrap,
+  uploadTrap,
   sample,
   centroid,
 }) => {
-  const [unmountState, setUnmount] = useState(false);
+  const [isMounted, setUnmount] = useState(true);
 
   const ref = React.useRef<SheetRef>();
   const snapTo = (i: number) => ref.current?.snapTo(i);
-  const onClose = () => () => snapTo;
+  const onClose = () => snapTo(SNAP_POSITIONS.length - 1); // prevent full closure
 
-  const getMothTrapWithDistance = (mothTrap: MothTrap) => {
-    const { latitude, longitude } = mothTrap;
+  type MothTrapWithDistance = [MothTrap, number];
+
+  const getMothTrapWithDistance = (
+    mothTrap: MothTrap
+  ): MothTrapWithDistance => {
+    if (!mothTrap.attrs.location?.latitude) return [mothTrap, 0];
+
+    const { latitude, longitude } = mothTrap.attrs?.location;
 
     const from = [longitude, latitude]; // turf long, lat first
     const to = [...centroid].reverse(); // turf long, lat first
     const distance = turf(from, to, { units: 'kilometers' });
 
-    return { ...mothTrap, distance: distance.toFixed(2) };
+    return [mothTrap, parseFloat(distance.toFixed(2))];
   };
 
-  const byDistance = (mothTrapA: MothTrap, mothTrapB: MothTrap) => {
-    if (!mothTrapA?.distance) return -1;
-    if (!mothTrapB?.distance) return -1;
+  const byDistance = (
+    [, distanceA]: MothTrapWithDistance,
+    [, distanceB]: MothTrapWithDistance
+  ) => distanceA - distanceB;
 
-    return mothTrapA.distance - mothTrapB.distance;
-  };
+  const byUploadStatus = ([trap]: MothTrapWithDistance) =>
+    trap.isDraft() ? -1 : 1;
 
-  const getMothTrap = (mothTrap: MothTrap) => (
+  const getMothTrap = ([mothTrap, distance]: any) => (
     <BottomSheetMothTrapEntry
-      key={mothTrap.id}
+      key={mothTrap.id || mothTrap.cid}
       mothTrap={mothTrap}
       updateRecord={updateRecord}
+      deleteTrap={deleteTrap}
+      onUpload={uploadTrap}
+      distance={distance}
       isSelected={hasLocationMatch(sample, mothTrap)}
     />
   );
 
   const getMothTraps = () => {
-    if (mothTrapData.length === 1 && sample.attrs.location) {
+    if (!mothTraps.length) {
       return (
         <InfoMessage
           icon={informationCircleOutline}
           color="black"
           className="info-message"
         >
-          You have only one moth trap. To create more please go to the{' '}
-          <a href={`${CONFIG.backend.url}/my-moth-trap-sites`}>website.</a>
+          You do not have any moth traps yet.
+          {appModel.attrs.useExperiments && (
+            <IonButton routerLink="/location">Create first moth trap</IonButton>
+          )}
         </InfoMessage>
       );
     }
 
-    if (!mothTrapData.length) {
-      return (
-        <InfoMessage
-          icon={informationCircleOutline}
-          color="black"
-          className="info-message"
-        >
-          You have not created any moth traps yet. To create one please go to
-          the <a href={`${CONFIG.backend.url}/my-moth-trap-sites`}>website.</a>
-        </InfoMessage>
-      );
-    }
-
-    return mothTrapData
+    return [...mothTraps]
       .map(getMothTrapWithDistance)
       .sort(byDistance)
+      .sort(byUploadStatus)
       .map(getMothTrap);
   };
 
-  const unMountBottomSheet = () => setUnmount(true); // hack, this component is mounted as a parent with root div
+  const unMountBottomSheet = () => setUnmount(false); // hack, this component is mounted as a parent with root div
+  const mountBottomSheet = () => setUnmount(true); // hack, this component is mounted as a parent with root div
   useIonViewWillLeave(unMountBottomSheet);
-
-  if (unmountState) return null;
+  useIonViewWillEnter(mountBottomSheet);
 
   const defeaultPosition = device.isOnline()
     ? DEFAULT_SNAP_POSITION
@@ -106,10 +115,10 @@ const BottomSheet: FC<Props> = ({
     <Sheet
       id="bottom-sheet"
       ref={ref}
-      isOpen
+      isOpen={isMounted}
+      onClose={onClose}
       snapPoints={SNAP_POSITIONS}
       initialSnap={defeaultPosition}
-      onClose={onClose}
     >
       <Sheet.Container>
         <Sheet.Header />

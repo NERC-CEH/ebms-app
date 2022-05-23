@@ -1,7 +1,7 @@
 /** ****************************************************************************
  * App model. Persistent.
  **************************************************************************** */
-import { Model } from '@apps';
+import { OldModel as Model } from '@apps';
 import { observable } from 'mobx';
 import axios from 'axios';
 import CONFIG from 'config';

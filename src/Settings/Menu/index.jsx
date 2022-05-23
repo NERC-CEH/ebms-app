@@ -6,12 +6,13 @@ import Main from './Main';
 
 const { success, warn, error } = toast;
 
-async function resetApp(saveSamples, appModel, userModel) {
+async function resetApp(saveSamples, appModel, userModel, locations) {
   Log('Settings:Menu:Controller: resetting the application!', 'w');
   try {
     await appModel.resetDefaults();
     await userModel.resetDefaults();
     await saveSamples.resetDefaults();
+    await locations.resetDefaults();
 
     success('Done');
   } catch (e) {
@@ -41,7 +42,7 @@ const onToggleWrap = (appModel, setting, checked) => {
   appModel.save();
 };
 
-const Container = ({ savedSamples, appModel, userModel }) => {
+const Container = ({ savedSamples, appModel, userModel, locations }) => {
   const {
     useTraining,
     useExperiments,
@@ -52,7 +53,8 @@ const Container = ({ savedSamples, appModel, userModel }) => {
     speciesGroups,
   } = appModel.attrs;
 
-  const resetAppWrap = () => resetApp(savedSamples, appModel, userModel);
+  const resetAppWrap = () =>
+    resetApp(savedSamples, appModel, userModel, locations);
   const uploadAllSamplesWrap = () => uploadAllSamples(savedSamples, userModel);
 
   const onToggle = (...args) => onToggleWrap(appModel, ...args);

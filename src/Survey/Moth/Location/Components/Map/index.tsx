@@ -2,8 +2,8 @@ import React, { FC, useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 import { NavContext } from '@ionic/react';
 import Sample from 'models/sample';
-import UserModelTypes from 'models/userModel';
-import { MothTrap } from 'common/types';
+import locationsCollection from 'models/collections/locations';
+import MothTrap, { useValidateCheck } from 'models/location';
 import BottomSheet from '../BottomSheet';
 import Map from './Components/Map';
 import 'leaflet.markercluster';
@@ -12,19 +12,19 @@ import 'leaflet/dist/leaflet.css';
 
 interface Props {
   sample: typeof Sample;
-  userModel: typeof UserModelTypes;
   isFetchingTraps: boolean | null;
   isDisabled?: boolean;
+  locations: typeof locationsCollection;
 }
 
 const MapComponent: FC<Props> = ({
   sample,
-  userModel,
+  locations: mothTraps,
   isFetchingTraps,
   isDisabled,
 }) => {
-  const { mothTraps } = userModel.attrs;
   const { goBack } = useContext(NavContext);
+  const validateLocation = useValidateCheck();
 
   // dynamic center when the user moves the map manually
   const [currentMapCenter, setMapCurrentCenter] = useState([51, -1]);
@@ -37,12 +37,23 @@ const MapComponent: FC<Props> = ({
     goBack();
   };
 
+  const onLocationDelete = (location: MothTrap) => {
+    location.destroy();
+  };
+
+  const onLocationUpload = (location: MothTrap) => {
+    const invalids = validateLocation(location);
+    if (invalids) return;
+
+    location.saveRemote();
+  };
+
   return (
     <>
       <Map
         sample={sample}
         isFetchingTraps={isFetchingTraps}
-        userModel={userModel}
+        mothTraps={mothTraps}
         onLocationSelect={onLocationSelect}
         onMovedCoords={setMapCurrentCenter}
         isDisabled={isDisabled}
@@ -50,9 +61,11 @@ const MapComponent: FC<Props> = ({
 
       {!isDisabled && (
         <BottomSheet
-          mothTrapData={mothTraps}
+          mothTraps={mothTraps}
           centroid={currentMapCenter}
           updateRecord={onLocationSelect}
+          deleteTrap={onLocationDelete}
+          uploadTrap={onLocationUpload}
           sample={sample}
         />
       )}

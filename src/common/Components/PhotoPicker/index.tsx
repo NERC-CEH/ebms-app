@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { PhotoPicker, Model } from '@apps';
+import { PhotoPicker, OldModel as Model } from '@apps';
 import { useTranslation } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Media from 'models/media';

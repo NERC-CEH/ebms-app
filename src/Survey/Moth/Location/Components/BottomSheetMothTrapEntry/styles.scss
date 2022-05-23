@@ -1,4 +1,6 @@
 #bottom-sheet {
+  z-index: 10000 !important;
+
   .react-modal-sheet-header {
     height: 30px !important;
   }
@@ -6,13 +8,16 @@
   .box-container {
     height: 80px;
     border-bottom: 1px solid #e1e1e1;
+    --inner-border-width: 0;
+    --padding-start: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
 
     .box {
-      margin: 10px;
       display: flex;
-      justify-content: center;
-      align-items: stretch;
-      height: 75px;
+      width: 100%;
 
       .icon {
         flex: 1;
@@ -23,6 +28,8 @@
         display: flex;
         margin: 5px 13px 5px 0;
         border-radius: 10px;
+        max-width: 70px;
+        width: 100%;
 
         ion-icon {
           justify-content: center;
@@ -32,9 +39,12 @@
       }
 
       .label {
-        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
         h4 {
-          margin: 10px 0 0 0;
+          margin: auto 0;
           font-weight: 900;
           max-width: 50vw;
           color: #3b2354;
@@ -53,12 +63,14 @@
           border-bottom: none;
         }
       }
-      .distance {
+
+      .right-slot {
         flex: 1;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-end;
         flex-direction: column;
+        margin-bottom: 12px;
 
         ion-icon {
           font-size: 1.2em;
@@ -71,6 +83,20 @@
           color: #3c2354;
           white-space: nowrap;
         }
+
+        &.selected ion-icon {
+          height: 100%;
+          padding-top: 20px;
+          font-size: 2em;
+        }
+      }
+
+      .draft {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
       }
     }
   }
