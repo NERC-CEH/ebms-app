@@ -28,7 +28,7 @@ type Props = {
 };
 
 const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
-  const { type, lamps } = location.attrs;
+  const { type, lamps, location: loc } = location.attrs;
   const { url } = useRouteMatch();
 
   const value = (
@@ -36,7 +36,7 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
       <IonLabel>
         <GridRefValue sample={location} />
       </IonLabel>
-      <IonLabel>{location.attrs.location.name || 'No site name'}</IonLabel>
+      <IonLabel>{loc?.name || 'No site name'}</IonLabel>
     </IonLabel>
   );
 
