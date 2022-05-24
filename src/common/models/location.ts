@@ -322,21 +322,19 @@ class LocationModel extends Model {
     const lat = parseFloat(`${location.latitude}`).toFixed(7);
     const lon = parseFloat(`${location.longitude}`).toFixed(7);
 
-    // use scheme get keys
+    // TODO: se scheme get keys
     const submission: any = {
       values: {
         external_key: this.cid,
-        public: 'f', // ??
         location_type_id: MOTH_TRAP_TYPE,
         name: location.name,
-        lat,
-        lon,
 
-        centroid_sref: `${lat} ${lon}`, // ??
-        centroid_sref_system: 4326, // ??
+        centroid_sref: `${lat} ${lon}`,
+        centroid_sref_system: 4326,
 
         'locAttr:306': stringifiedLamps,
         'locAttr:330': trapType,
+        'locAttr:234': userModel.attrs.id,
       },
     };
 
