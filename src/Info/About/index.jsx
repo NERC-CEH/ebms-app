@@ -1,8 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
-import { Page, Main, Header } from '@apps';
+import { Page, Main, Header } from '@flumens';
 import './styles.scss';
 
 const Component = ({ appModel }) => {

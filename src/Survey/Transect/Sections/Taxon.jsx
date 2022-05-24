@@ -1,15 +1,15 @@
-import React from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { withRouter } from 'react-router';
-import { Page, Main, Header } from '@apps';
-import appModel from 'appModel';
+import { Page, Main, Header } from '@flumens';
+import appModel from 'models/app';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
-import Occurrence from 'occurrence';
+import Occurrence from 'models/occurrence';
 
 @observer
-class Controller extends React.Component {
+class Controller extends Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
     subSample: PropTypes.object.isRequired,

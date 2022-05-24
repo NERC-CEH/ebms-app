@@ -1,12 +1,12 @@
-import React from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { Page, Header, } from '@apps';
+import { Page, Header } from '@flumens';
 
 import Main from './Main';
 
 @observer
-class Controller extends React.Component {
+class Controller extends Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
   };

@@ -1,5 +1,5 @@
 import { isPlatform } from '@ionic/react';
-import config from 'config';
+import config from 'common/config';
 import Wkt from 'wicket';
 import { toJS } from 'mobx';
 import L from 'leaflet';

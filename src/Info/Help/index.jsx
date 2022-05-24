@@ -1,6 +1,5 @@
-import React from 'react';
 import { IonList, IonItemDivider, IonIcon } from '@ionic/react';
-import { Page, Main, Header, Collapse } from '@apps';
+import { Page, Main, Header, Collapse } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import {
   settingsOutline,
@@ -14,7 +13,7 @@ import './styles.scss';
 export default () => (
   <Page id="help">
     <Header title="Help" />
-    <Main class="ion-padding">
+    <Main className="ion-padding">
       <IonList lines="none">
         <IonItemDivider>
           <T>Surveys</T>

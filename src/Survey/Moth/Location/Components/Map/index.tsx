@@ -1,4 +1,4 @@
-import React, { FC, useContext, useState } from 'react';
+import { FC, useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 import { NavContext } from '@ionic/react';
 import Sample from 'models/sample';
@@ -11,7 +11,7 @@ import './styles.scss';
 import 'leaflet/dist/leaflet.css';
 
 interface Props {
-  sample: typeof Sample;
+  sample: Sample;
   isFetchingTraps: boolean | null;
   isDisabled?: boolean;
   locations: typeof locationsCollection;

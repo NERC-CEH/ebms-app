@@ -2,15 +2,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "userModel": ["src/common/models/userModel"],
-      "appModel": ["src/common/models/appModel"],
-      "savedSamples": ["src/common/models/savedSamples"],
-      "occurrence": ["src/common/models/occurrence"],
-      "sample": ["src/common/models/sample"],
       "common/*": ["src/common/*"],
       "helpers/*": ["src/common/helpers/*"],
+      "models/*": ["src/common/models/*"],
       "Components/*": ["src/common/Components/*"],
-      "@apps": ["src/common/appsBitCollection"]
+w      "@flumens": ["src/common/flumens"]
     },
     "experimentalDecorators": true
   },

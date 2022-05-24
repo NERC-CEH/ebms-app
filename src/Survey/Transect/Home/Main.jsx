@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   IonList,
@@ -8,7 +8,7 @@ import {
   IonButton,
   IonItemDivider,
 } from '@ionic/react';
-import { Main, MenuAttrItem, InfoMessage } from '@apps';
+import { Main, MenuAttrItem, InfoMessage } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import {
   personOutline,
@@ -21,7 +21,7 @@ import {
   informationCircle,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
-import config from 'config';
+import config from 'common/config';
 import windIcon from 'common/images/wind.svg';
 import './styles.scss';
 

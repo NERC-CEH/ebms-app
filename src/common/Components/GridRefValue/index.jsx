@@ -1,8 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { IonSpinner } from '@ionic/react';
 import { observer } from 'mobx-react';
-import { prettyPrintLocation } from '@bit/flumens.apps.utils.location';
+import { prettyPrintLocation } from '@flumens';
 import './styles.scss';
 
 function getValue(sample) {

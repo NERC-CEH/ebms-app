@@ -1,11 +1,10 @@
-import React from 'react';
-import savedSamples from 'savedSamples';
-import appModel from 'appModel';
-import userModel from 'userModel';
-import { AttrPage, RouteWithModels, ModelLocation } from '@apps';
+import savedSamples from 'models/collections/samples';
+import appModel from 'models/app';
+import userModel from 'models/user';
+import { AttrPage, RouteWithModels, ModelLocationMap } from '@flumens';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import { observer } from 'mobx-react';
-import appConfig from 'config';
+import appConfig from 'common/config';
 import Home from './Home';
 import OccurrenceHome from './OccurrenceHome';
 import SpeciesOccurrences from './SpeciesOccurrences';
@@ -28,7 +27,10 @@ const HomeWrap = props => (
 
 // eslint-disable-next-line @getify/proper-arrows/name
 const ModelLocationWrap = observer(props => (
-  <ModelLocation model={props.subSample} mapProviderOptions={appConfig.map} />
+  <ModelLocationMap
+    model={props.subSample}
+    mapProviderOptions={appConfig.map}
+  />
 ));
 
 const getRoutes = (baseURL, config) => [

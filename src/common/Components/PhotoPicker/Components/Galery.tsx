@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Gallery } from '@apps';
+import { FC } from 'react';
+import { Gallery } from '@flumens';
 import Occurrence from 'models/occurrence';
 import Media from 'models/media';
 import { Trans as T } from 'react-i18next';
@@ -9,12 +9,12 @@ import { observer } from 'mobx-react';
 import '../styles.scss';
 
 type Props = {
-  model: typeof Occurrence;
+  model: Occurrence;
   showGallery: any;
   hideGallery: () => boolean;
 };
 
-const getFooterMessage = (image: typeof Media, identifyImage: any) => {
+const getFooterMessage = (image: Media, identifyImage: any) => {
   const doesTaxonMatchParent = image.doesTaxonMatchParent();
   const identifierWasNotUsed = !image.attrs.species;
   const identifierFoundNoSpecies = !image.attrs?.species?.length;
@@ -68,7 +68,7 @@ const getFooterMessage = (image: typeof Media, identifyImage: any) => {
 const GalleryComponent: FC<Props> = ({ model, showGallery, hideGallery }) => {
   const { media } = model;
 
-  const getItem = (image: typeof Media) => {
+  const getItem = (image: Media) => {
     const identifyImage = async () => {
       hideGallery();
       await image.identify();

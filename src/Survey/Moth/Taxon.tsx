@@ -1,51 +1,56 @@
 /* eslint-disable no-param-reassign */
-import React, { FC, useContext } from 'react';
+import { FC, useContext } from 'react';
 import { observer } from 'mobx-react';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
-import { Page, Main, Header, alert } from '@apps';
+import { Page, Main, Header, useAlert } from '@flumens';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 
-type resolveType = (value: boolean) => void;
+function useMergeSpeciesAlert() {
+  const alert = useAlert();
 
-async function showMergeSpeciesAlert() {
-  const showMergeSpeciesDialog = (resolve: resolveType) => {
-    alert({
-      header: 'Species already exists',
-      message:
-        'Are you sure you want to merge this list to the existing species list?',
-      backdropDismiss: false,
-      buttons: [
-        {
-          text: 'Cancel',
-          handler: () => {
-            resolve(false);
+  function showMergeSpeciesAlert() {
+    const showAlert = (resolve: any) => {
+      alert({
+        header: 'Species already exists',
+        message:
+          'Are you sure you want to merge this list to the existing species list?',
+        backdropDismiss: false,
+        buttons: [
+          {
+            text: 'Cancel',
+            handler: () => {
+              resolve(false);
+            },
           },
-        },
-        {
-          text: 'Merge',
-          cssClass: 'primary',
-          handler: () => {
-            resolve(true);
+          {
+            text: 'Merge',
+            cssClass: 'primary',
+            handler: () => {
+              resolve(true);
+            },
           },
-        },
-      ],
-    });
-  };
+        ],
+      });
+    };
 
-  return new Promise<boolean>(showMergeSpeciesDialog);
+    return new Promise<boolean>(showAlert);
+  }
+
+  return showMergeSpeciesAlert;
 }
 
 interface Props {
-  sample: typeof Sample;
-  occurrence: typeof Occurrence;
+  sample: Sample;
+  occurrence: Occurrence;
 }
 
 const Taxon: FC<Props> = ({ sample, occurrence }) => {
   const { navigate, goBack } = useContext(NavContext);
   const UNKNOWN_SPECIES = getUnkownSpecies();
+  const showMergeSpeciesAlert = useMergeSpeciesAlert();
 
   const onSpeciesSelected = async (taxon: any) => {
     const { isRecorded } = taxon;
@@ -61,7 +66,7 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
     }
 
     if (occurrence && isRecorded && !isTaxonUnknown) {
-      const selectedTaxon = (selectedOccurrence: typeof Occurrence) => {
+      const selectedTaxon = (selectedOccurrence: Occurrence) => {
         return (
           occurrence.attrs.taxon?.warehouse_id &&
           selectedOccurrence !== occurrence &&
@@ -87,7 +92,6 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
       }
 
       const mergeSpecies = await showMergeSpeciesAlert();
-
       if (!mergeSpecies) return;
 
       occWithSameSpecies.attrs.count += occurrence.attrs.count;
@@ -114,7 +118,7 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
       return;
     }
 
-    const selectedTaxon = (selectedOccurrence: typeof Occurrence) => {
+    const selectedTaxon = (selectedOccurrence: Occurrence) => {
       return (
         (selectedOccurrence.attrs.taxon?.preferredId ||
           selectedOccurrence.attrs.taxon?.warehouse_id) ===
@@ -150,7 +154,7 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
     goBack();
   };
 
-  const getTaxonId = (occ: typeof Occurrence) => {
+  const getTaxonId = (occ: Occurrence) => {
     return occ.attrs.taxon?.preferredId || occ.attrs.taxon?.warehouse_id;
   };
 

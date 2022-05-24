@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { IonLabel, IonChip, IonButton, IonSpinner } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import Location from 'models/location';

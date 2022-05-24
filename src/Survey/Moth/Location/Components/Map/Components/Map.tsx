@@ -1,15 +1,15 @@
-import React, { FC, useState, useEffect } from 'react';
-import CONFIG from 'common/config/config';
+import { FC, useState, useEffect } from 'react';
+import CONFIG from 'common/config';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import Sample from 'models/sample';
 import MapControl from 'common/Components/LeafletControl';
 import { observer } from 'mobx-react';
-import { device, InfoMessage } from '@apps';
+import { device, InfoMessage } from '@flumens';
 import { useIonViewDidEnter, isPlatform, IonSpinner } from '@ionic/react';
 import { wifiOutline } from 'ionicons/icons';
 import GPSButton from 'common/Components/GPSButton';
 import Leaflet from 'leaflet';
-import appModel from 'models/appModel';
+import appModel from 'models/app';
 import locationsCollection from 'models/collections/locations';
 import COUNTRIES_CENTROID from '../../../country_centroide';
 import MarkerClusterGroup from './MarkerCluster';
@@ -19,7 +19,7 @@ const DEFAULT_ZOOM = 5;
 const DEFAULT_CENTER: number[] = [51.505, -0.09];
 
 interface Props {
-  sample: typeof Sample;
+  sample: Sample;
   mothTraps: typeof locationsCollection;
   onLocationSelect: any;
   onMovedCoords: any;
@@ -101,7 +101,7 @@ const Map: FC<Props> = ({
   const isLocationCurrentlySelected =
     sample.attrs.location?.latitude && sample.attrs.location?.longitude;
 
-  const isDeviceOnline = device.isOnline();
+  const isDeviceOnline = device.isOnline;
 
   if (!isDeviceOnline) {
     return (

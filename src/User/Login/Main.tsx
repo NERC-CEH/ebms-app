@@ -1,6 +1,6 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
-import { Main, InputWithValidation, InfoMessage } from '@apps';
+import { Main, InputWithValidation, InfoMessage } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import {
   keyOutline,

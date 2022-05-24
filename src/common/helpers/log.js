@@ -12,7 +12,7 @@
  *
  * Levels values defined in core app module.
  **************************************************************************** */
-import CONFIG from 'config';
+import CONFIG from 'common/config';
 
 const ERROR = 'e';
 const WARNING = 'w';

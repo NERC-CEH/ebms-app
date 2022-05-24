@@ -1,4 +1,3 @@
-import React from 'react';
 import { IonItemDivider, IonLabel } from '@ionic/react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';

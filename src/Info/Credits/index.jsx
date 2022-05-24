@@ -1,6 +1,5 @@
-import React from 'react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
-import { Page, Main, Header } from '@apps';
+import { Page, Main, Header } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import species from 'common/data/profiles/index.json';
 import sponsorsLogo from './sponsors.png';
@@ -19,7 +18,7 @@ const getTaxonWithImageCopyright = s => (
 export default () => (
   <Page id="credits">
     <Header title="Credits" />
-    <Main class="ion-padding">
+    <Main className="ion-padding">
       <IonList lines="none">
         <IonItem>
           <img src={sponsorsLogo} alt="" />

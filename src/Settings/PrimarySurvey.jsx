@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import {
@@ -8,7 +8,7 @@ import {
   IonRadio,
   IonLabel,
 } from '@ionic/react';
-import { Page, Main, Header } from '@apps';
+import { Page, Main, Header } from '@flumens';
 import surveys from 'common/config/surveys';
 
 function SelectCountry({ appModel }) {
@@ -26,12 +26,12 @@ function SelectCountry({ appModel }) {
     if (value === 'area') return null; // for backwards compatible
 
     return (
-      <React.Fragment key={value}>
+      <Fragment key={value}>
         <IonItem>
           <IonLabel>{label}</IonLabel>
           <IonRadio value={value} checked={currentValue === value} />
         </IonItem>
-      </React.Fragment>
+      </Fragment>
     );
   };
   const surveyOptions = Object.values(surveys).map(translate).map(surveyOption);

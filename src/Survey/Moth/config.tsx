@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
-import { date as dateHelp } from '@apps';
+import { date as dateHelp } from '@flumens';
 import { Survey } from 'common/config/surveys';
-import appModel from 'models/appModel';
+import appModel from 'models/app';
 import { personOutline, calendarOutline } from 'ionicons/icons';
 import { commentAttr } from 'Survey/common/config';
 
@@ -189,4 +189,4 @@ const UNKNOWN_SPECIES: UnknownSpeciesObject = {
 };
 
 export const getUnkownSpecies = () =>
-  UNKNOWN_SPECIES[appModel.attrs.language] || UNKNOWN_SPECIES.en;
+  UNKNOWN_SPECIES[appModel.attrs.language as any] || UNKNOWN_SPECIES.en;

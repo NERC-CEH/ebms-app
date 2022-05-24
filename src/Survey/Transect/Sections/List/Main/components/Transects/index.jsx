@@ -1,9 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
-import { Main, InfoMessage } from '@apps';
+import { Main, InfoMessage } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import { informationCircle } from 'ionicons/icons';
 import transformToLatLon from 'helpers/location';

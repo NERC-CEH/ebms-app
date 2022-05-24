@@ -2,7 +2,7 @@ require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-
 
 const axios = require('axios'); // eslint-disable-line
 const fs = require('fs');
-const btoa = require('btoa');
+const btoa = require('btoa'); // eslint-disable-line
 const groups = require('../species/groups.json');
 
 const LANGUAGE_ISO_MAPPING = {

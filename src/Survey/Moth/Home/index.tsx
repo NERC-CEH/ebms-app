@@ -1,15 +1,15 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable camelcase */
-import React, { FC, useContext } from 'react';
-import Sample from 'models/sample';
+import { FC, useContext } from 'react';
+import Sample, { useValidateCheck } from 'models/sample';
 import Occurrence from 'models/occurrence';
-import appModel from 'models/appModel';
-import CONFIG from 'common/config/config';
+import appModel, { SurveyDraftKeys } from 'models/app';
+import CONFIG from 'common/config';
 import { observer } from 'mobx-react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { useRouteMatch } from 'react-router';
 import { getUnkownSpecies } from 'Survey/Moth/config';
-import { Page, Header, alert, showInvalidsMessage, device, toast } from '@apps';
+import { Page, Header, useAlert, device, useToast } from '@flumens';
 import Media from 'models/media';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
 import { isPlatform, IonButton, NavContext } from '@ionic/react';
@@ -21,42 +21,50 @@ const hapticsImpact = async () => {
   await Haptics.impact({ style: ImpactStyle.Heavy });
 };
 
-const { warn } = toast;
+function useDeleteSpeciesPrompt() {
+  const alert = useAlert();
 
-function showDeleteSpeciesPrompt(occ: typeof Occurrence) {
-  const prompt = () => {
-    alert({
-      header: 'Delete',
-      message: `Are you sure you want to delete ${occ.getTaxonName()}?`,
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'primary',
-        },
-        {
-          text: 'Delete',
-          cssClass: 'secondary',
-          handler: () => occ.destroy(),
-        },
-      ],
-    });
-  };
+  function showDeleteSpeciesPrompt(occ: Occurrence) {
+    const prompt = () => {
+      alert({
+        header: 'Delete',
+        message: `Are you sure you want to delete ${occ.getTaxonName()}?`,
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            cssClass: 'primary',
+          },
+          {
+            text: 'Delete',
+            cssClass: 'secondary',
+            handler: () => occ.destroy(),
+          },
+        ],
+      });
+    };
 
-  return new Promise(prompt);
+    return new Promise(prompt);
+  }
+
+  return showDeleteSpeciesPrompt;
 }
 
 interface Props {
-  sample: typeof Sample;
+  sample: Sample;
 }
 
 const HomeController: FC<Props> = ({ sample }) => {
-  const UNKNOWN_SPECIES = getUnkownSpecies();
-
+  const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
+  const toast = useToast();
   const { t } = useTranslation();
-  const { useImageIdentifier } = appModel.attrs;
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
+  const checkSampleStatus = useValidateCheck(sample);
+
+  const UNKNOWN_SPECIES = getUnkownSpecies();
+
+  const { useImageIdentifier } = appModel.attrs;
   const isDisabled = sample.isDisabled();
 
   const surveyConfig = sample.getSurvey();
@@ -69,7 +77,8 @@ const HomeController: FC<Props> = ({ sample }) => {
 
   const _processDraft = async () => {
     const surveyName = sample.getSurvey().name;
-    appModel.attrs[`draftId:${surveyName}`] = null;
+    const draftKey = `draftId:${surveyName}` as keyof SurveyDraftKeys;
+    appModel.attrs[draftKey] = '';
     await appModel.save();
 
     const saveAndReturn = () => {
@@ -78,11 +87,8 @@ const HomeController: FC<Props> = ({ sample }) => {
       navigate(`/home/user-surveys`, 'root');
     };
 
-    const invalids = sample.validateRemote();
-    if (invalids) {
-      showInvalidsMessage(invalids, saveAndReturn);
-      return;
-    }
+    const isValid = checkSampleStatus();
+    if (!isValid) return;
 
     // eslint-disable-next-line no-param-reassign
     sample.metadata.saved = true;
@@ -98,11 +104,11 @@ const HomeController: FC<Props> = ({ sample }) => {
     await _processSubmission();
   };
 
-  const deleteOccurrence = (occ: typeof Occurrence) => {
+  const deleteOccurrence = (occ: Occurrence) => {
     showDeleteSpeciesPrompt(occ);
   };
 
-  const increaseCount = (occ: typeof Occurrence) => {
+  const increaseCount = (occ: Occurrence) => {
     if (sample.isDisabled()) {
       return;
     }
@@ -119,14 +125,14 @@ const HomeController: FC<Props> = ({ sample }) => {
     return <IonButton onClick={onSubmit}>{label}</IonButton>;
   };
 
-  const mergeOccurrence = (occ: typeof Occurrence) => {
+  const mergeOccurrence = (occ: Occurrence) => {
     const { comment, identifier } = occ.attrs;
 
     const speciesIsKnown =
       occ.attrs.taxon?.warehouse_id !== UNKNOWN_SPECIES.preferredId;
     if (!speciesIsKnown) return;
 
-    const selectedTaxon = (selectedOccurrence: typeof Occurrence) =>
+    const selectedTaxon = (selectedOccurrence: Occurrence) =>
       (selectedOccurrence.attrs.taxon?.preferredId ||
         selectedOccurrence.attrs.taxon?.warehouse_id) ===
         (occ?.attrs.taxon?.preferredId || occ?.attrs.taxon?.warehouse_id) &&
@@ -149,7 +155,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     occWithSameSpecies.save();
   };
 
-  const onIdentifyOccurrence = async (occ: typeof Occurrence) => {
+  const onIdentifyOccurrence = async (occ: Occurrence) => {
     await occ.identify();
 
     mergeOccurrence(occ);
@@ -159,8 +165,8 @@ const HomeController: FC<Props> = ({ sample }) => {
     sample.occurrences.forEach(onIdentifyOccurrence);
 
   const photoSelect = async () => {
-    if (!device.isOnline()) {
-      warn('Looks like you are offline!');
+    if (!device.isOnline) {
+      toast.warn('Looks like you are offline!');
       return;
     }
 

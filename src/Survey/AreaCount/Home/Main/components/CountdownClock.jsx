@@ -1,9 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Countdown, { zeroPad } from 'react-countdown-now';
 import { IonLabel } from '@ionic/react';
 
 function CountdownClock({ isPaused, countdown }) {
+  // eslint-disable-next-line react/no-unstable-nested-components
   const CountdownRenderer = ({ minutes, seconds, completed }) => {
     if (completed) {
       return t(`Time's up!`);

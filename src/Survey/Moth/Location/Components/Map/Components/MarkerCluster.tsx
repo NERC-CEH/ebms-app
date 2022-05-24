@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react';
+import { FC, memo } from 'react';
 import MothTrap from 'common/models/location';
 import locationsCollection from 'models/collections/locations';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
@@ -14,7 +14,7 @@ const forceSkipRefresh = (prevProps: any, nextProps: any) =>
 interface Props {
   mothTraps: typeof locationsCollection;
   onLocationSelect: (mothTrap: MothTrap) => void;
-  sample: typeof Sample;
+  sample: Sample;
   isDisabled?: boolean;
 }
 

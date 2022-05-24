@@ -1,13 +1,13 @@
-import React from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { withRouter } from 'react-router';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
-import { Page, Main, Header, alert } from '@apps';
-import appModel from 'appModel';
-import Sample from 'sample';
-import Occurrence from 'occurrence';
+import { Page, Main, Header, alert } from '@flumens';
+import appModel from 'models/app';
+import Sample from 'models/sample';
+import Occurrence from 'models/occurrence';
 import { Trans as T } from 'react-i18next';
 
 async function showMergeSpeciesAlert() {
@@ -41,7 +41,7 @@ async function showMergeSpeciesAlert() {
 }
 
 @observer
-class Controller extends React.Component {
+class Controller extends Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
     sample: PropTypes.object.isRequired,

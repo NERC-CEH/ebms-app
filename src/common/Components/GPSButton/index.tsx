@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { IonIcon } from '@ionic/react';
 import Leaflet from 'leaflet';
 import GPS from 'helpers/GPS';

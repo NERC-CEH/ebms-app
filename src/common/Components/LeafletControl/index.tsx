@@ -1,4 +1,3 @@
-import React from 'react';
 import type { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 import './styles.scss';
 

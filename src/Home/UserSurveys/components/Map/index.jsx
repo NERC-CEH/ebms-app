@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
-import CONFIG from 'config';
-import { date as dateHelp } from '@apps';
+import CONFIG from 'common/config';
+import { date as dateHelp } from '@flumens';
 import L from 'leaflet';
 import 'leaflet/dist/images/marker-icon-2x.png';
 import 'leaflet/dist/images/marker-shadow.png';

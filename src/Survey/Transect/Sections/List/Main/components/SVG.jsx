@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { createRef, Component } from 'react';
 import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 
@@ -9,10 +9,10 @@ class SVG extends Component {
 
   constructor(props) {
     super(props);
-    this.ref = React.createRef();
+    this.ref = createRef();
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     const geoLineString = this.props.geom;
 
     const size = {
@@ -53,7 +53,7 @@ class SVG extends Component {
       .attr('stroke-width', 2)
       .attr('fill', 'none')
       .attr('d', path);
-  };
+  }
 
   render() {
     return <svg ref={this.ref} />;

@@ -1,10 +1,10 @@
-import React, { FC, useState } from 'react';
+import { useRef, FC, useState } from 'react';
 import Sheet, { SheetRef } from 'react-modal-sheet';
 import Sample from 'models/sample';
-import appModel from 'models/appModel';
+import appModel from 'models/app';
 import locations from 'models/collections/locations';
 import MothTrap from 'models/location';
-import { InfoMessage, device } from '@apps';
+import { InfoMessage, device } from '@flumens';
 import {
   useIonViewWillLeave,
   useIonViewWillEnter,
@@ -25,7 +25,7 @@ interface Props {
   updateRecord: (mothTrap: MothTrap) => void;
   deleteTrap: (mothTrap: MothTrap) => void;
   uploadTrap: (mothTrap: MothTrap) => void;
-  sample: typeof Sample;
+  sample: Sample;
   centroid: number[];
 }
 
@@ -39,7 +39,7 @@ const BottomSheet: FC<Props> = ({
 }) => {
   const [isMounted, setUnmount] = useState(true);
 
-  const ref = React.useRef<SheetRef>();
+  const ref = useRef<SheetRef>();
   const snapTo = (i: number) => ref.current?.snapTo(i);
   const onClose = () => snapTo(SNAP_POSITIONS.length - 1); // prevent full closure
 
@@ -107,7 +107,7 @@ const BottomSheet: FC<Props> = ({
   useIonViewWillLeave(unMountBottomSheet);
   useIonViewWillEnter(mountBottomSheet);
 
-  const defeaultPosition = device.isOnline()
+  const defeaultPosition = device.isOnline
     ? DEFAULT_SNAP_POSITION
     : DEFAULT_SNAP_POSITION_IF_NO_CONNECTION;
 

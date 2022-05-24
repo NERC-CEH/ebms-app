@@ -1,4 +1,3 @@
-import React from 'react';
 import { IonList, IonItem } from '@ionic/react';
 import PropTypes from 'prop-types';
 import Species from './components/Species';

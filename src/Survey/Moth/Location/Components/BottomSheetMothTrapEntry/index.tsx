@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import {
   IonLabel,
   IonIcon,
@@ -7,7 +7,7 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
-import { alert } from '@apps';
+import { useAlert } from '@flumens';
 import {
   pinOutline,
   arrowForwardOutline,
@@ -21,6 +21,7 @@ import './styles.scss';
 
 function useDeleteTrapPrompt(onDelete: any) {
   const { t } = useTranslation();
+  const alert = useAlert();
 
   const showPrompt = () =>
     alert({

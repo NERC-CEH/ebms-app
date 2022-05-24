@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { IonIcon, IonButton, IonList, IonRouterLink } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
-import { Main, InputWithValidation } from '@apps';
+import { Main, InputWithValidation } from '@flumens';
 import {
   personOutline,
   mailOutline,
@@ -11,7 +11,7 @@ import {
   eyeOffOutline,
 } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
-import config from 'config';
+import config from 'common/config';
 import './styles.scss';
 
 class Component extends React.Component {

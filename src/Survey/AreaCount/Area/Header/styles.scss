@@ -1,3 +1,18 @@
-.ios .survey-gps-toggle {
-  margin-left: 8px;
+.survey-gps-toggle {
+  --border-style: none;
+  --inner-padding-end: 0;
+  --background: none;
+
+  ion-label {
+    color: var(--ion-color-primary-contrast) !important;
+    font-weight: 500;
+  }
+
+  ion-toggle.md {
+    --handle-background-checked: var(--ion-color-success);
+  }
+
+  &.ios {
+    margin-left: 8px;
+  }
 }

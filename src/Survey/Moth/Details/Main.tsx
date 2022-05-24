@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Main, MenuAttrItemFromModel, Attr, MenuAttrItem } from '@apps';
+import { FC } from 'react';
+import { Main, MenuAttrItemFromModel, Attr, MenuAttrItem } from '@flumens';
 import Sample from 'models/sample';
 import { IonList } from '@ionic/react';
 import { observer } from 'mobx-react';
@@ -7,7 +7,7 @@ import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import { useRouteMatch } from 'react-router';
 
 type Props = {
-  sample: typeof Sample;
+  sample: Sample;
 };
 
 const DetailsMain: FC<Props> = ({ sample }) => {

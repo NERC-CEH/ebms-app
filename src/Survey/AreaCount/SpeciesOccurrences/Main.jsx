@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import {
@@ -15,7 +15,7 @@ import {
 import { warningOutline } from 'ionicons/icons';
 import GridRefValue from 'Components/GridRefValue';
 import { observer } from 'mobx-react';
-import { Main, MenuAttrItem, InfoBackgroundMessage } from '@apps';
+import { Main, MenuAttrItem, InfoBackgroundMessage } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import butterflyIcon from 'common/images/butterfly.svg';
 import './styles.scss';
@@ -31,12 +31,8 @@ class EditOccurrence extends Component {
   };
 
   getSamplesList = () => {
-    const {
-      deleteSample,
-      samples,
-      navigateToOccurrence,
-      isDisabled,
-    } = this.props;
+    const { deleteSample, samples, navigateToOccurrence, isDisabled } =
+      this.props;
 
     const getOccurrence = smp => {
       const occ = smp.occurrences[0];

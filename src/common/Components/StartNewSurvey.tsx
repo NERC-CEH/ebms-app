@@ -1,14 +1,14 @@
-import React, { useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { NavContext } from '@ionic/react';
-import { alert } from '@apps';
-import appModel from 'models/appModel';
-import userModel from 'models/userModel';
+import { useAlert } from '@flumens';
+import appModel, { SurveyDraftKeys } from 'models/app';
+import userModel from 'models/user';
 import Sample from 'models/sample';
-import savedSamples from 'models/savedSamples';
+import savedSamples from 'models/collections/samples';
 import { Trans as T } from 'react-i18next';
 import { Survey } from 'common/config/surveys';
 
-async function showDraftAlert() {
+async function showDraftAlert(alert: any) {
   const showDraftDialog = (resolve: any) => {
     alert({
       header: 'Draft',
@@ -36,15 +36,13 @@ async function showDraftAlert() {
   return new Promise(showDraftDialog);
 }
 
-async function getDraft(
-  draftIdKey: keyof typeof appModel.attrs.surveyDraftKeys
-) {
+async function getDraft(draftIdKey: keyof SurveyDraftKeys, alert: any) {
   const draftID = appModel.attrs[draftIdKey];
   if (draftID) {
-    const draftById = ({ cid }: typeof Sample) => cid === draftID;
+    const draftById = ({ cid }: Sample) => cid === draftID;
     const draftSample = savedSamples.find(draftById);
     if (draftSample && !draftSample.isDisabled()) {
-      const continueDraftRecord = await showDraftAlert();
+      const continueDraftRecord = await showDraftAlert(alert);
       if (continueDraftRecord) {
         return draftSample;
       }
@@ -56,10 +54,7 @@ async function getDraft(
   return null;
 }
 
-async function getNewSample(
-  survey: Survey,
-  draftIdKey: keyof typeof appModel.attrs.surveyDraftKeys
-) {
+async function getNewSample(survey: Survey, draftIdKey: keyof SurveyDraftKeys) {
   const recorder = userModel.getPrettyName();
 
   const sample = await survey.create(Sample, recorder);
@@ -79,9 +74,10 @@ type Props = {
 
 function StartNewSurvey({ survey }: Props): null {
   const context = useContext(NavContext);
+  const alert = useAlert();
 
   const baseURL = `/survey/${survey.name}`;
-  const draftIdKey = `draftId:${survey.name}`;
+  const draftIdKey = `draftId:${survey.name}` as keyof SurveyDraftKeys;
 
   const pickDraftOrCreateSampleWrap = () => {
     const pickDraftOrCreateSample = async () => {
@@ -90,7 +86,7 @@ function StartNewSurvey({ survey }: Props): null {
         return;
       }
 
-      let sample = await getDraft(draftIdKey);
+      let sample = await getDraft(draftIdKey, alert);
       if (!sample) {
         sample = await getNewSample(survey, draftIdKey);
       }

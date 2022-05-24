@@ -1,9 +1,8 @@
-import React from 'react';
 import { Trans as T } from 'react-i18next';
-import { Page, Main, Header, Section } from '@apps';
+import { Page, Main, Header, Section } from '@flumens';
 import { IonButton, IonIcon, IonList } from '@ionic/react';
 import { openOutline } from 'ionicons/icons';
-import config from 'config';
+import config from 'common/config';
 import './styles.scss';
 
 const { P, H } = Section;
@@ -14,7 +13,7 @@ const eBMSWebsiteLink = ''; // backwards compatible
 const Component = () => (
   <Page id="guide">
     <Header title="Guide" />
-    <Main class="ion-padding">
+    <Main className="ion-padding">
       <Section>
         <H>How to use the app</H>
         <P>

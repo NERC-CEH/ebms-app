@@ -1,7 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { Page, Main, Header } from '@apps';
+import { Page, Main, Header } from '@flumens';
 import {
   IonIcon,
   IonList,

@@ -1,4 +1,4 @@
-import userModel from 'userModel';
+import userModel from 'models/user';
 import * as Yup from 'yup';
 import {
   deviceAttr,

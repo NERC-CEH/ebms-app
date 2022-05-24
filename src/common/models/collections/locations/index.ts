@@ -1,7 +1,6 @@
-import userModel from 'models/userModel';
-import { reaction, observable, observe, autorun } from 'mobx';
-import { device, Store } from '@apps';
-import Collection from '../collection';
+import userModel from 'models/user';
+import { reaction, observable, observe } from 'mobx';
+import { device, Store, Collection } from '@flumens';
 import { locationsStore as store } from '../../store';
 import Location from '../../location';
 import fetchLocations from './service';
@@ -82,7 +81,7 @@ export class Locations extends Collection<Location> {
     const requiresSync = !this.length && !this._fetchedFirstTime;
     if (
       !requiresSync ||
-      !device.isOnline() ||
+      !device.isOnline ||
       !userModel.attrs.email ||
       this.fetching.isFetching
     )

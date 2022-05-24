@@ -1,7 +1,7 @@
-import React, { FC, useContext } from 'react';
+import { FC, useContext } from 'react';
 import Sample from 'models/sample';
 import Occurrence from 'models/occurrence';
-import { Main, MenuAttrItem, InfoBackgroundMessage, alert } from '@apps';
+import { Main, MenuAttrItem, InfoBackgroundMessage, useAlert } from '@flumens';
 import {
   IonList,
   IonButton,
@@ -23,27 +23,33 @@ import UnidentifiedSpeciesEntry from './Components/UnidentifiendSpeciesEntry';
 import AnimatedNumber from './Components/AnimatedNumber';
 import './styles.scss';
 
-const shownDisabledImageIdentifierAlert = () =>
-  alert({
-    header: 'Image identification',
-    message: (
-      <T>
-        Image classifier is currently <b>disabled</b>. Please go to app{' '}
-        <b>Settings</b> to turn it on.
-      </T>
-    ),
-    buttons: [
-      {
-        text: 'OK, got it',
-        role: 'cancel',
-        cssClass: 'primary',
-      },
-    ],
-  });
+function useDisabledImageIdentifierAlert() {
+  const alert = useAlert();
+
+  const shownDisabledImageIdentifierAlert = () =>
+    alert({
+      header: 'Image identification',
+      message: (
+        <T>
+          Image classifier is currently <b>disabled</b>. Please go to app{' '}
+          <b>Settings</b> to turn it on.
+        </T>
+      ),
+      buttons: [
+        {
+          text: 'OK, got it',
+          role: 'cancel',
+          cssClass: 'primary',
+        },
+      ],
+    });
+
+  return shownDisabledImageIdentifierAlert;
+}
 
 type Props = {
   match: any;
-  sample: typeof Sample;
+  sample: Sample;
   photoSelect: any;
   increaseCount: any;
   deleteSpecies: any;
@@ -53,7 +59,7 @@ type Props = {
   onIdentifyAllOccurrences: any;
 };
 
-function byCreateTime(occ1: typeof Occurrence, occ2: typeof Occurrence) {
+function byCreateTime(occ1: Occurrence, occ2: Occurrence) {
   const date1 = new Date(occ1.metadata.created_on);
   const date2 = new Date(occ2.metadata.created_on);
   return date2.getTime() - date1.getTime();
@@ -70,9 +76,10 @@ const HomeMain: FC<Props> = ({
   onIdentifyOccurrence,
   onIdentifyAllOccurrences,
 }) => {
-  const UNKNOWN_SPECIES_PREFFERD_ID = getUnkownSpecies().warehouse_id;
-
   const { navigate } = useContext(NavContext);
+  const shownDisabledImageIdentifierAlert = useDisabledImageIdentifierAlert();
+
+  const UNKNOWN_SPECIES_PREFFERD_ID = getUnkownSpecies().warehouse_id;
 
   const getSpeciesAddButton = () => {
     const onClick = () => {
@@ -88,7 +95,7 @@ const HomeMain: FC<Props> = ({
     );
   };
 
-  const getSpeciesEntry = (occ: typeof Occurrence) => {
+  const getSpeciesEntry = (occ: Occurrence) => {
     const speciesName = occ.getTaxonName();
     const speciesCount = occ.attrs.count;
 
@@ -149,7 +156,7 @@ const HomeMain: FC<Props> = ({
   };
 
   const isUnidentifiedSpeciesLengthMoreThanFive = () => {
-    const unIdentifiedSpecies = (occ: typeof Occurrence) =>
+    const unIdentifiedSpecies = (occ: Occurrence) =>
       occ.media[0] &&
       !occ.media[0]?.attrs?.species &&
       occ.attrs?.taxon.warehouse_id === UNKNOWN_SPECIES_PREFFERD_ID;
@@ -158,11 +165,11 @@ const HomeMain: FC<Props> = ({
   };
 
   const getUndentifiedspeciesList = () => {
-    const byUnknownSpecies = (occ: typeof Occurrence) =>
+    const byUnknownSpecies = (occ: Occurrence) =>
       !occ.attrs.taxon ||
       occ.attrs?.taxon.warehouse_id === UNKNOWN_SPECIES_PREFFERD_ID;
 
-    const getUnidentifiedSpeciesEntry = (occ: typeof Occurrence) => (
+    const getUnidentifiedSpeciesEntry = (occ: Occurrence) => (
       <UnidentifiedSpeciesEntry
         key={occ.cid}
         occ={occ}
@@ -219,7 +226,7 @@ const HomeMain: FC<Props> = ({
       );
     }
 
-    const byKnownSpecies = (occ: typeof Occurrence) =>
+    const byKnownSpecies = (occ: Occurrence) =>
       occ.attrs.taxon &&
       occ.attrs.taxon.warehouse_id !== UNKNOWN_SPECIES_PREFFERD_ID;
 

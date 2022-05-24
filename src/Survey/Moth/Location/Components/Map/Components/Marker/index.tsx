@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import L from 'leaflet';
 import { Marker as LeafletMarker, Popup } from 'react-leaflet';
 import { IonButton, IonIcon, IonLabel } from '@ionic/react';

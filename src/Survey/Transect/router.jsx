@@ -1,8 +1,7 @@
-import React from 'react';
-import savedSamples from 'savedSamples';
-import appModel from 'appModel';
-import userModel from 'userModel';
-import { AttrPage, RouteWithModels } from '@apps';
+import savedSamples from 'models/collections/samples';
+import appModel from 'models/app';
+import userModel from 'models/user';
+import { AttrPage, RouteWithModels } from '@flumens';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import Home from './Home';
 import SectionsList from './Sections/List';

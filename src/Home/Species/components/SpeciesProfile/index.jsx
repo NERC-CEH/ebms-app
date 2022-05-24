@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
   IonCardHeader,
   IonCardSubtitle,
@@ -8,7 +8,7 @@ import {
   IonChip,
 } from '@ionic/react';
 import PropTypes from 'prop-types';
-import { Main, Gallery } from '@apps';
+import { Main, Gallery } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import './styles.scss';
 
@@ -43,10 +43,6 @@ class Component extends React.Component {
     const { species } = this.props;
     const { showGallery } = this.state;
 
-    if (!showGallery) {
-      return null;
-    }
-
     const items = [
       {
         src: `/images/${species.image}_image.jpg`,
@@ -55,7 +51,12 @@ class Component extends React.Component {
     ];
 
     return (
-      <Gallery isOpen items={items} onClose={this.closeGallery} mode="md" />
+      <Gallery
+        isOpen={showGallery}
+        items={items}
+        onClose={this.closeGallery}
+        mode="md"
+      />
     );
   };
 

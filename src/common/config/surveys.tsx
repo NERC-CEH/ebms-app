@@ -1,15 +1,14 @@
 /* eslint-disable camelcase */
 import areaSurvey from 'Survey/AreaCount/config';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
-import areaSurveyOld from 'Survey/AreaCountOld/config';
 import transectSurvey from 'Survey/Transect/config';
 import mothSurvey from 'Survey/Moth/config';
 import Occurrence from 'models/occurrence';
+import Sample from 'models/sample';
 
 export default {
   [areaSurvey.name]: areaSurvey,
   [areaSingleSpeciesSurvey.name]: areaSingleSpeciesSurvey,
-  [areaSurveyOld.name]: areaSurveyOld,
   [transectSurvey.name]: transectSurvey,
   [mothSurvey.name]: mothSurvey,
 };
@@ -42,14 +41,14 @@ export interface Survey {
       taxon: any,
       identifier: string,
       photo?: any
-    ) => typeof Occurrence;
+    ) => Occurrence;
     verify?: (attrs: any) => any;
   };
 
   verify?: (attrs: any) => any;
 
   create: (
-    sample: any,
+    sample: typeof Sample,
     params?: any,
     surveyName?: any,
     recorder?: string

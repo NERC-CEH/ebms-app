@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonList, IonIcon, IonItemDivider } from '@ionic/react';
 import { withRouter } from 'react-router';
@@ -10,7 +10,7 @@ import {
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import PhotoPicker from 'common/Components/PhotoPicker';
-import { Main, MenuAttrItem } from '@apps';
+import { Main, MenuAttrItem } from '@flumens';
 import GridRefValue from 'Components/GridRefValue';
 import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from './caterpillar.svg';

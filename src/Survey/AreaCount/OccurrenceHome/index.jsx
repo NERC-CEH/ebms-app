@@ -1,12 +1,12 @@
-import React from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { Page, Header } from '@apps';
+import { Page, Header } from '@flumens';
 import Main from './Main';
 import './styles.scss';
 
 @observer
-class Container extends React.Component {
+class Container extends Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
     subSample: PropTypes.object.isRequired,

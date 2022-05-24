@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Occurrence from 'models/occurrence';
 import { observer } from 'mobx-react';
-import { Page, Header } from '@apps';
+import { Page, Header } from '@flumens';
 import Main from './Main';
 
 interface Props {
-  occurrence: typeof Occurrence;
+  occurrence: Occurrence;
 }
 
 const OccurrenceHome: FC<Props> = ({ occurrence }) => {

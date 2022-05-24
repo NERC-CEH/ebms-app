@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { IonList, IonItemDivider } from '@ionic/react';
 import { observer } from 'mobx-react';
 import Occurrence from 'models/occurrence';
-import appModel from 'models/appModel';
+import appModel from 'models/app';
 import { Trans as T } from 'react-i18next';
-import { Main, MenuAttrItem, MenuAttrItemFromModel, Attr } from '@apps';
+import { Main, MenuAttrItem, MenuAttrItemFromModel, Attr } from '@flumens';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import mothIcon from 'common/images/moth.svg';
 import { useRouteMatch } from 'react-router';
@@ -12,7 +12,7 @@ import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 
 interface Props {
-  occurrence: typeof Occurrence;
+  occurrence: Occurrence;
 }
 
 const EditOccurrence: FC<Props> = ({ occurrence }) => {

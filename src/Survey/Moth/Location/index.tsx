@@ -1,16 +1,16 @@
-import React, { FC, useEffect } from 'react';
-import { Page, Header, Main } from '@apps';
+import { FC, useEffect } from 'react';
+import { Page, Header, Main } from '@flumens';
 import locations from 'common/models/collections/locations';
 import { IonButton } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Sample from 'models/sample';
-import appModel from 'models/appModel';
+import appModel from 'models/app';
 import Map from './Components/Map';
 import './styles.scss';
 
 interface Props {
-  sample: typeof Sample;
+  sample: Sample;
 }
 
 const Location: FC<Props> = ({ sample }) => {

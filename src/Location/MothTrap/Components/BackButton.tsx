@@ -1,9 +1,9 @@
-import React, { FC, useContext } from 'react';
-import { alert } from '@apps';
+import { FC, useContext } from 'react';
+import { useAlert } from '@flumens';
 import { IonButtons, IonButton, NavContext, IonBackButton } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 
-function showDeleteSurveyAlertMessage() {
+function showDeleteSurveyAlertMessage(alert: any) {
   const deleteSurveyPromt = (resolve: (param: boolean) => void) => {
     alert({
       header: 'Delete Survey',
@@ -34,9 +34,10 @@ interface Props {
 
 const CancelButton: FC<Props> = ({ location }) => {
   const { goBack } = useContext(NavContext);
+  const alert = useAlert();
 
   const onDeleteSurvey = async () => {
-    const change = await showDeleteSurveyAlertMessage();
+    const change = await showDeleteSurveyAlertMessage(alert);
 
     if (change) {
       await location.destroy();

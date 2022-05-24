@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
   IonList,
   IonSegment,
@@ -7,8 +7,8 @@ import {
   IonBadge,
   IonIcon,
 } from '@ionic/react';
-import { Page, Main } from '@apps';
-import userModel from 'userModel';
+import { Page, Main } from '@flumens';
+import userModel from 'models/user';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import { Trans as T } from 'react-i18next';
 import { addOutline } from 'ionicons/icons';
@@ -123,7 +123,7 @@ class Component extends React.Component {
 
     return (
       <Page id="surveys-list">
-        <Main class="ion-padding">
+        <Main className="ion-padding">
           <IonSegment onIonChange={this.onSegmentClick} value={segment}>
             <IonSegmentButton value="pending" checked={showingPending}>
               <IonLabel className="ion-text-wrap">

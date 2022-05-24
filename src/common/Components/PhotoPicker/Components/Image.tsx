@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+import { FC } from 'react';
 import { IonIcon, IonButton, IonSpinner } from '@ionic/react';
 import { observer } from 'mobx-react';
 import { warningOutline, close } from 'ionicons/icons';
@@ -6,16 +7,14 @@ import Media from 'models/media';
 import '../styles.scss';
 
 type Props = {
-  media: typeof Media;
+  media: Media;
   isDisabled: boolean;
   onDelete: any;
   onClick: any;
 };
 
 const Image: FC<Props> = ({ media, isDisabled, onDelete, onClick }) => {
-  const showWarning =
-    !media.doesTaxonMatchParent() ||
-    typeof media.doesTaxonMatchParent() === 'string'; // calculate from media.parent
+  const showWarning = !media.doesTaxonMatchParent();
 
   const showLoading = media.identification.identifying;
 

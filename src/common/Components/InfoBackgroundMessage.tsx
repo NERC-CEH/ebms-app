@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { InfoBackgroundMessage } from '@apps';
-import appModel from 'models/appModel';
+import { InfoBackgroundMessage } from '@flumens';
+import appModel, { Attrs } from 'models/app';
 
 interface Props {
-  name?: string;
+  name?: keyof Attrs;
   children: any;
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { useMap } from 'react-leaflet';
 import { withIonLifeCycle, IonIcon, NavContext } from '@ionic/react';
 import { locateOutline } from 'ionicons/icons';
@@ -58,6 +58,8 @@ class MapInfo extends React.Component {
   state = {
     locating: false,
   };
+
+  _recordMarkers = [];
 
   setExistingShape(shape) {
     const { map } = this.props;
@@ -139,8 +141,6 @@ class MapInfo extends React.Component {
     return drawnItems;
   }
 
-  _recordMarkers = [];
-
   updateRecords = () => {
     const updateMarker = ([marker, smp]) => {
       const { latitude, longitude } = smp.attrs.location || {};
@@ -152,25 +152,6 @@ class MapInfo extends React.Component {
     };
 
     this._recordMarkers.forEach(updateMarker);
-  };
-
-  addRecords = () => {
-    const { sample, map } = this.props;
-
-    const addSurveyMarkerToMap = smp => {
-      const marker = getAreaCountMarker(smp);
-
-      if (!marker) {
-        return;
-      }
-
-      this._recordMarkers.push([marker, smp]);
-
-      this.addRecordsPopup(smp, marker);
-      marker.addTo(map);
-    };
-
-    sample.samples.forEach(addSurveyMarkerToMap);
   };
 
   addRecordsPopup = (sample, marker) => {

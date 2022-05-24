@@ -1,11 +1,11 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable camelcase */
-import React, { FC, useContext } from 'react';
+import { FC, useContext } from 'react';
 import Location, { Lamp, useValidateCheck } from 'models/location';
 import UUID from 'common/helpers/UUID';
 import { useRouteMatch } from 'react-router';
 import { observer } from 'mobx-react';
-import { Page, Header, alert } from '@apps';
+import { Page, Header, useAlert } from '@flumens';
 import { IonButton, NavContext } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 // import BackButton from '../Components/BackButton';
@@ -16,42 +16,48 @@ interface Props {
   sample: Location;
 }
 
-function showDeleteLampAlertMessage() {
-  const deleteLampMessage = (resolve: (param: boolean) => void) => {
-    alert({
-      header: 'Delete Moth Trap',
-      message:
-        'Warning - This will discard the trap information you have entered so far.',
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: () => resolve(false),
-        },
-        {
-          text: 'Discard',
-          cssClass: 'primary',
-          handler: () => resolve(true),
-        },
-      ],
-    });
+function useDeleteLampPrompt() {
+  const alert = useAlert();
+
+  const showDeletePrompt = () => {
+    const showPrompt = (resolve: any) => {
+      alert({
+        header: 'Delete Moth Trap',
+        message:
+          'Warning - This will discard the trap information you have entered so far.',
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            cssClass: 'secondary',
+            handler: () => resolve(false),
+          },
+          {
+            text: 'Discard',
+            cssClass: 'primary',
+            handler: () => resolve(true),
+          },
+        ],
+      });
+    };
+
+    return new Promise(showPrompt);
   };
 
-  return new Promise(deleteLampMessage);
+  return showDeletePrompt;
 }
 
 const MothTrapSetup: FC<Props> = ({ sample: location }) => {
   const { navigate, goBack } = useContext(NavContext);
   const validateLocation = useValidateCheck();
   const { url } = useRouteMatch();
+  const showDeleteLampPrompt = useDeleteLampPrompt();
 
   const deleteLamp = async (entry: Lamp) => {
     const byLamp = (lamp: Lamp) => lamp.cid === entry.cid;
     const lampIndex = location.attrs.lamps.findIndex(byLamp);
 
-    const change = await showDeleteLampAlertMessage();
-
+    const change = await showDeleteLampPrompt();
     if (change) {
       location.attrs.lamps.splice(lampIndex, 1); // 2nd parameter means remove one item only
       location.save();

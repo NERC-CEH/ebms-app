@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import {
@@ -19,7 +19,7 @@ import {
   thumbsUpOutline,
   cloudyOutline,
 } from 'ionicons/icons';
-import { Main, MenuAttrItem } from '@apps';
+import { Main, MenuAttrItem } from '@flumens';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';

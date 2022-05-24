@@ -1,10 +1,10 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable camelcase */
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Location, { Lamp } from 'models/location';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
-import { Page, Header } from '@apps';
+import { Page, Header } from '@flumens';
 import Main from './Main';
 
 interface Props {

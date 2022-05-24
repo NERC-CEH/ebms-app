@@ -1,21 +1,21 @@
-import React, { FC, useEffect, useContext } from 'react';
-import { RouteWithModels, AttrPage, ModelLocation } from '@apps';
+import { FC, useEffect, useContext } from 'react';
+import { RouteWithModels, AttrPage, ModelLocationMap } from '@flumens';
 import { observer } from 'mobx-react';
 import MothTrap from 'models/location';
 import locations from 'models/collections/locations';
 import { useRouteMatch } from 'react-router';
 import { NavContext } from '@ionic/react';
-import config from 'common/config/config';
+import config from 'common/config';
 import MothTrapNew from './Home';
 import MothTrapLamp from './Lamp';
 import LampAttr from './LampAttr';
 
 const ModelLocationWithProps = ({ sample: location }: any) => (
-  <ModelLocation
+  <ModelLocationMap
     model={location}
     mapProviderOptions={config.map}
     useGridMap
-    onLocationNameChange={ModelLocation.utils.onLocationNameChange}
+    onLocationNameChange={ModelLocationMap.utils.onLocationNameChange}
     namePlaceholder="Moth trap name"
   />
 );

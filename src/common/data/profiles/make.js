@@ -3,7 +3,7 @@ require('dotenv').config({ silent: true, path: '../../../../.env' }); // eslint-
 const fs = require('fs');
 const request = require('request'); // eslint-disable-line
 const csv = require('csvtojson'); // eslint-disable-line
-const btoa = require('btoa');
+const btoa = require('btoa'); // eslint-disable-line
 
 const { APP_INDICIA_API_KEY, REPORT_USER_EMAIL, REPORT_USER_PASS } =
   process.env;

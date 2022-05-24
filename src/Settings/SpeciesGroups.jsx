@@ -1,7 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
-import { AttrPage } from '@apps';
+import { AttrPage } from '@flumens';
 import groups from 'common/data/species/groups.json';
 
 const groupOption = ([value, { label }]) => ({

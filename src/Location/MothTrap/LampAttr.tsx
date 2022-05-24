@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { observer } from 'mobx-react';
 import Location from 'models/location';
 import { useRouteMatch } from 'react-router';
-import { AttrPage } from '@apps';
+import { AttrPage } from '@flumens';
 
 interface Props {
   sample: Location;

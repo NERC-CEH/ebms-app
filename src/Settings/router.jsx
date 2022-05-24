@@ -1,9 +1,8 @@
-import React from 'react';
 import { Route } from 'react-router-dom';
-import appModel from 'appModel';
-import userModel from 'userModel';
+import appModel from 'models/app';
+import userModel from 'models/user';
 import locations from 'models/collections/locations';
-import savedSamples from 'savedSamples';
+import savedSamples from 'models/collections/samples';
 import Menu from './Menu';
 import Language from './Language';
 import Country from './Country';

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   NavContext,
@@ -8,8 +8,8 @@ import {
   withIonLifeCycle,
 } from '@ionic/react';
 import { withRouter } from 'react-router';
-import { Main } from '@apps';
-import CONFIG from 'config';
+import { Main } from '@flumens';
+import CONFIG from 'common/config';
 import L from 'leaflet';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet-draw';

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Route } from 'react-router-dom';
 import {
   IonTabs,
@@ -18,9 +18,9 @@ import {
   menuOutline,
   homeOutline,
 } from 'ionicons/icons';
-import savedSamples from 'savedSamples';
-import appModel from 'appModel';
-import userModel from 'userModel';
+import savedSamples from 'models/collections/samples';
+import appModel from 'models/app';
+import userModel from 'models/user';
 import LongPressFabButton from 'Components/LongPressFabButton';
 import { Trans as T } from 'react-i18next';
 import PendingSurveysBadge from 'common/Components/PendingSurveysBadge';
@@ -38,14 +38,6 @@ const SpeciesTab = () => (
     appModel={appModel}
     userModel={userModel}
     savedSamples={savedSamples}
-  />
-);
-const MenuTab = props => (
-  <Menu
-    userModel={userModel}
-    appModel={appModel}
-    savedSamples={savedSamples}
-    {...props}
   />
 );
 
@@ -92,7 +84,7 @@ class Component extends React.Component {
             <Route path="/home/report" render={ReportTab} exact />
             <Route path="/home/species" render={SpeciesTab} exact />
             <Route path="/home/user-surveys" render={UserSurveysTab} exact />
-            <Route path="/home/menu" render={MenuTab} exact />
+            <Route path="/home/menu" component={Menu} exact />
           </IonRouterOutlet>
 
           <IonTabBar slot="bottom">

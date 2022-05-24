@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { IonItem } from '@ionic/react';
 import groups from 'common/data/species/groups.json';

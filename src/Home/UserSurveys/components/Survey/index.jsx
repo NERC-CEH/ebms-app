@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
@@ -12,33 +12,40 @@ import {
   IonBadge,
   NavContext,
 } from '@ionic/react';
-import { alert } from '@apps';
+import { useAlert } from '@flumens';
 import butterflyIcon from 'common/images/butterfly.svg';
 import OnlineStatus from './components/OnlineStatus';
 import ErrorMessage from './components/ErrorMessage';
 import './styles.scss';
 
-function deleteSurvey(sample) {
-  alert({
-    header: t('Delete'),
-    message: t('Are you sure you want to delete this survey?'),
-    buttons: [
-      {
-        text: t('Cancel'),
-        role: 'cancel',
-        cssClass: 'primary',
-      },
-      {
-        text: t('Delete'),
-        cssClass: 'secondary',
-        handler: () => sample.destroy(),
-      },
-    ],
-  });
+function useDeleteSurveyPrompt(sample) {
+  const alert = useAlert();
+
+  function deleteSurvey() {
+    alert({
+      header: 'Delete',
+      message: 'Are you sure you want to delete this survey?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'primary',
+        },
+        {
+          text: 'Delete',
+          cssClass: 'secondary',
+          handler: () => sample.destroy(),
+        },
+      ],
+    });
+  }
+  return deleteSurvey;
 }
 
 function Survey({ sample, userModel }) {
   const { navigate } = useContext(NavContext);
+  const showDeleteSurveyPrompt = useDeleteSurveyPrompt(sample);
+
   const { synchronising } = sample.remote;
 
   const date = new Date(sample.metadata.created_on);
@@ -98,7 +105,6 @@ function Survey({ sample, userModel }) {
     sample.upload();
   };
 
-  const deleteSurveyWrap = () => deleteSurvey(sample);
   return (
     <IonItemSliding class="survey-list-item">
       <ErrorMessage sample={sample} />
@@ -107,7 +113,7 @@ function Survey({ sample, userModel }) {
         <OnlineStatus sample={sample} onUpload={onUpload} />
       </IonItem>
       <IonItemOptions side="end">
-        <IonItemOption color="danger" onClick={deleteSurveyWrap}>
+        <IonItemOption color="danger" onClick={showDeleteSurveyPrompt}>
           <T>Delete</T>
         </IonItemOption>
       </IonItemOptions>

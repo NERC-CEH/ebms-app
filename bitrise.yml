@@ -85,6 +85,7 @@ workflows:
             - export_method: app-store
   web:
     steps:
+      - nvm@1: {}
       - get-npm-package-version@1: {}
       - npm@1:
           title: Config Bit.dev

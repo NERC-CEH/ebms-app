@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Main, MenuAttrItem } from '@apps';
+import { FC } from 'react';
+import { Main, MenuAttrItem } from '@flumens';
 import { pinOutline } from 'ionicons/icons';
 import {
   IonList,

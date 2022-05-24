@@ -1,4 +1,4 @@
-import { Store } from '@apps';
+import { Store } from '@flumens';
 
 export const genericStore = new Store({
   storeName: 'generic',

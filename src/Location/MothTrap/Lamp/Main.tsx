@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Main, MenuAttrItem, CounterInput } from '@apps';
+import { FC } from 'react';
+import { Main, MenuAttrItem, CounterInput } from '@flumens';
 import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { IonList, IonItemDivider } from '@ionic/react';
 import { observer } from 'mobx-react';

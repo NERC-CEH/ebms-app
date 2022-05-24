@@ -1,7 +1,7 @@
-import React, { FC, useContext } from 'react';
-import Sample from 'models/sample';
+import { FC, useContext } from 'react';
+import Sample, { useValidateCheck } from 'models/sample';
 import { observer } from 'mobx-react';
-import { Page, Header, showInvalidsMessage } from '@apps';
+import { Page, Header } from '@flumens';
 import { IonButton, NavContext } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -9,20 +9,17 @@ import Main from './Main';
 import './styles.scss';
 
 type Props = {
-  sample: typeof Sample;
+  sample: Sample;
 };
 
 const DetailsController: FC<Props> = ({ sample }) => {
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
+  const checkSampleStatus = useValidateCheck(sample);
 
   const onFinish = () => {
-    const invalids = sample.validateRemote();
-
-    if (invalids) {
-      showInvalidsMessage(invalids);
-      return;
-    }
+    const isValid = checkSampleStatus();
+    if (!isValid) return;
 
     sample.metadata.completedDetails = true; // eslint-disable-line
     sample.save();

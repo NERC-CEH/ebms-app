@@ -1,5 +1,5 @@
-import { RouteWithModels, AttrPage } from '@apps';
-import savedSamples from 'models/savedSamples';
+import { RouteWithModels, AttrPage } from '@flumens';
+import savedSamples from 'models/collections/samples';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import Details from './Details';
 import Home from './Home';

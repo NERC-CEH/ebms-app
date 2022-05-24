@@ -1,6 +1,5 @@
-import React from 'react';
 import { Route } from 'react-router-dom';
-import appModel from 'appModel';
+import appModel from 'models/app';
 import Credits from './Credits';
 import About from './About';
 import Help from './Help';

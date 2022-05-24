@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import { date as dateHelp } from '@apps';
+import { date as dateHelp } from '@flumens';
 import { chatboxOutline } from 'ionicons/icons';
 
 export const deviceAttr = {

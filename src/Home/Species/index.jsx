@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { IonModal, IonGrid, IonRow, IonCol } from '@ionic/react';
@@ -9,9 +9,9 @@ import {
   ModalHeader,
   UserFeedbackRequest,
   InfoMessage,
-} from '@apps';
+} from '@flumens';
 import speciesProfiles from 'common/data/profiles/index.json';
-import config from 'config';
+import config from 'common/config';
 import SpeciesProfile from './components/SpeciesProfile';
 import './images';
 import './thumbnails';
@@ -144,7 +144,7 @@ class Component extends React.Component {
 
     return (
       <Page id="home-species">
-        <Main class="ion-padding">
+        <Main className="ion-padding">
           <InfoMessage className="blue" icon={informationCircle}>
             This guide is still in development. It covers{' '}
             {{ countrySpeciesCount }} butterfly species out of the{' '}

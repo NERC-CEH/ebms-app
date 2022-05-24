@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { createRef, Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonSearchbar, withIonLifeCycle } from '@ionic/react';
 import groups from 'common/data/species/groups.json';
@@ -22,7 +22,7 @@ class index extends Component {
     speciesGroups: PropTypes.array,
   };
 
-  input = React.createRef();
+  input = createRef();
 
   constructor(props) {
     super(props);

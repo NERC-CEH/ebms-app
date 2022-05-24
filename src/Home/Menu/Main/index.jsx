@@ -1,4 +1,3 @@
-import React from 'react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import {
@@ -21,8 +20,8 @@ import {
   openOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Main, InfoMessage } from '@apps';
-import config from 'config';
+import { Main, InfoMessage } from '@flumens';
+import config from 'common/config';
 import './styles.scss';
 import logo from './logo.png';
 
@@ -47,7 +46,7 @@ const Component = ({
   const userEmail = user.email;
 
   return (
-    <Main class="app-menu">
+    <Main className="app-menu">
       <img src={logo} alt="app logo" />
 
       <IonList lines="full">

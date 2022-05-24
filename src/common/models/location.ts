@@ -1,15 +1,22 @@
-import { Store, validateRemoteModel, getDeepErrorMessage, alert } from '@apps';
-import CONFIG from 'common/config/config';
+import {
+  Store,
+  validateRemoteModel,
+  getDeepErrorMessage,
+  useAlert,
+  Model,
+  ModelMetadata,
+  ModelAttrs,
+  Collection,
+} from '@flumens';
+import CONFIG from 'common/config';
 import * as Yup from 'yup';
-import userModel from 'models/userModel';
+import userModel from 'models/user';
 import UUID from 'common/helpers/UUID';
 import { observable } from 'mobx';
 import axios from 'axios';
 import { Location } from './collections/locations/service';
 import { locationsStore } from './store';
-import Model, { Metadata as ModelMetadata, Attrs as ModelAttrs } from './model';
 import { getLocalAttributes } from './utils';
-import Collection from './collections/collection';
 
 type Metadata = ModelMetadata & {
   saved?: boolean;
@@ -358,6 +365,8 @@ class LocationModel extends Model {
 }
 
 export const useValidateCheck = () => {
+  const alert = useAlert();
+
   const validate = (location: LocationModel) => {
     const invalids = location.validateRemote();
     if (invalids) {

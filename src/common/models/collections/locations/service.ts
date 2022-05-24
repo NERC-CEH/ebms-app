@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
-import CONFIG from 'common/config/config';
+import CONFIG from 'common/config';
 import axios from 'axios';
-import userModel from 'models/userModel';
+import userModel from 'models/user';
 import { MOTH_TRAP_TYPE } from '../../location';
 
 export type Response = Location[];

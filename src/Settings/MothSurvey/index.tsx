@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { IonList } from '@ionic/react';
-import AppModelProps from 'models/appModel';
-import { Page, Main, Header, InfoMessage, MenuAttrToggle } from '@apps';
+import AppModelProps from 'models/app';
+import { Page, Main, Header, InfoMessage, MenuAttrToggle } from '@flumens';
 import { cameraOutline } from 'ionicons/icons';
 import './styles.scss';
 

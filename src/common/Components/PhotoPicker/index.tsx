@@ -1,17 +1,19 @@
-import React, { FC } from 'react';
-import { PhotoPicker, OldModel as Model } from '@apps';
+import { FC } from 'react';
+import { PhotoPicker } from '@flumens';
+import Sample from 'models/sample';
+import Occurrence from 'models/occurrence';
 import { useTranslation } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Media from 'models/media';
-import config from 'common/config/config';
+import config from 'common/config';
 import Gallery from './Components/Galery';
 import Image from './Components/Image';
 import utils from './imageUtils';
 import './styles.scss';
 
 type Props = {
-  model: Model;
-  useImageIdentifier: boolean;
+  model: Sample | Occurrence;
+  useImageIdentifier?: boolean;
 };
 
 const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {

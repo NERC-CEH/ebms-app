@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { createRef, Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   IonFab,
@@ -16,9 +16,9 @@ class LongPressFabButton extends Component {
     icon: PropTypes.any.isRequired,
   };
 
-  buttonRef = React.createRef();
+  buttonRef = createRef();
 
-  fabRef = React.createRef();
+  fabRef = createRef();
 
   componentDidMount() {
     const { onClick } = this.props;

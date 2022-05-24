@@ -1,7 +1,6 @@
-import React from 'react';
 import { Route } from 'react-router-dom';
-import appModel from 'appModel';
-import userModel from 'userModel';
+import appModel from 'models/app';
+import userModel from 'models/user';
 import Login from './Login';
 import Register from './Register';
 import Reset from './Reset';

@@ -1,7 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { IonButton, IonList } from '@ionic/react';
-import { Main, InputWithValidation, InfoMessage } from '@apps';
+import { Main, InputWithValidation, InfoMessage } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import { informationCircle, mailOutline } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
@@ -27,7 +26,7 @@ const Component = ({ onSubmit, schema }) => {
       </IonButton>
     </Form>
   );
-  
+
   return (
     <Main>
       <InfoMessage className="blue" icon={informationCircle}>
