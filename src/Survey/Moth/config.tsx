@@ -22,7 +22,7 @@ const validateLocation = (val: any) => {
 
 export const verifyLocationSchema = Yup.mixed().test(
   'location',
-  'Please add the moth trap',
+  'Please add the moth trap.',
   validateLocation
 );
 

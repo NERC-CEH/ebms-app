@@ -73,7 +73,7 @@ export const MOTH_TRAP_TYPE = 18879;
 
 export const verifyLocationSchema = Yup.mixed().test(
   'location',
-  'Please add the moth trap location and name',
+  'Please add the moth trap location and name.',
   validateLocation
 );
 
