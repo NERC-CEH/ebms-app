@@ -1,6 +1,7 @@
 #main {
   ion-tab-bar {
     contain: none;
+    --background: white;
 
     ion-tab-button {
       max-width: 20vw;

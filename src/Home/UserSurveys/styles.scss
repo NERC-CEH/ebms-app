@@ -4,7 +4,7 @@
   }
 
   ion-segment {
-    max-width: 90%;
+    max-width: calc(100% - 20px); // padding for lists
     margin: 8px auto;
     z-index: 100000000;
 
@@ -28,5 +28,11 @@
       align-items: center;
       margin-left: 1px;
     }
+  }
+}
+
+html.plt-tablet {
+  #surveys-list.ion-page ion-segment {
+    max-width: calc(600px - 20px);
   }
 }

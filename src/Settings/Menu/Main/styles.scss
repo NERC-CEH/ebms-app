@@ -5,6 +5,11 @@
     text-align: right;
     padding: 10px;
     margin: 0;
+
+    // tablet friendly
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   ion-icon {

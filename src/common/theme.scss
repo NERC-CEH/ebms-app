@@ -1,28 +1,13 @@
-/* Ionic Variables and Theming. For more information, please see
-// https://beta.ionicframework.com/docs/theming/
-// The app direction is used to include
-// rtl styles in your app. For more information, please see
-// https://beta.ionicframework.com/docs/layout/rtl
-// $app-direction: ltr;
-// Ionic Colors
-// --------------------------------------------------
-// Named colors makes it easy to reuse colors on various components.
-// It's highly recommended to change the default colors
-// to match your app's branding. Ionic provides eight layered colors
-// that can be changed to theme an app. Additional colors can be
-// added as well (see below). For more information, please see
-// https://beta.ionicframework.com/docs/theming/advanced
-// To easily create custom color palettes for your app’s UI,
-// check out our color generator:
-// https://beta.ionicframework.com/docs/theming/color-generator
-*/
+@import './roundedTheme.scss';
+
 :root {
   --ion-color-primary: #745a8f;
-  --ion-color-primary-rgb: 165, 106, 3;
+  --ion-color-primary-rgb: 116, 90, 143;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #5f4779;
   --ion-color-primary-tint: #a98fc4;
+  --ion-color-primary-dark: #170030;
 
   --ion-color-secondary: #008eec;
   --ion-color-secondary-rgb: 0, 142, 236;
@@ -30,6 +15,7 @@
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
   --ion-color-secondary-shade: #007dd0;
   --ion-color-secondary-tint: #1a99ee;
+  --ion-color-secondary-dark: #001a2c;
 
   --ion-color-tertiary: #7044ff;
   --ion-color-tertiary-rgb: 112, 68, 255;
@@ -37,6 +23,7 @@
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
   --ion-color-tertiary-shade: #633ce0;
   --ion-color-tertiary-tint: #7e57ff;
+  --ion-color-tertiary-dark: #0b002e;
 
   --ion-color-success: #00bd1a;
   --ion-color-success-rgb: 0, 189, 26;
@@ -44,27 +31,30 @@
   --ion-color-success-contrast-rgb: 255, 255, 255;
   --ion-color-success-shade: #00a617;
   --ion-color-success-tint: #1ac431;
+  --ion-color-success-dark: #002b06;
 
   --ion-color-warning: #df9100;
-  --ion-color-warning-rgb: 255, 206, 0;
+  --ion-color-warning-rgb: 223, 145, 0;
   --ion-color-warning-contrast: #ffffff;
   --ion-color-warning-contrast-rgb: 255, 255, 255;
   --ion-color-warning-shade: #af7201;
   --ion-color-warning-tint: #fdc45b;
+  --ion-color-warning-dark: #3a2600;
 
   --ion-color-danger: #f04141;
-  --ion-color-danger-rgb: 245, 61, 61;
+  --ion-color-danger-rgb: 240, 65, 65;
   --ion-color-danger-contrast: #ffffff;
   --ion-color-danger-contrast-rgb: 255, 255, 255;
   --ion-color-danger-shade: #d33939;
   --ion-color-danger-tint: #f25454;
+  --ion-color-danger-dark: #300000;
 
-  --ion-color-dark: #312a38;
-  --ion-color-dark-rgb: 34, 34, 34;
+  --ion-color-dark: var(--ion-color-primary-dark);
+  --ion-color-dark-rgb: 49, 42, 56;
   --ion-color-dark-contrast: #ffffff;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
-  --ion-color-dark-shade: #1e2023;
-  --ion-color-dark-tint: #383a3e;
+  --ion-color-dark-shade: var(--ion-color-primary-dark);
+  --ion-color-dark-tint: var(--ion-color-primary-dark);
 
   --ion-color-medium: #989aa2;
   --ion-color-medium-rgb: 152, 154, 162;
@@ -81,149 +71,17 @@
   --ion-color-light-tint: #f5f6f9;
 
   --ion-page-background: #f4f5f8;
-}
 
-/* Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the CSS variables found in Ionic's source files.
-// To view all the possible Ionic variables, see:
-// https://beta.ionicframework.com/docs/theming/css-variables#ionic-variables
-*/
-
-:root {
   --ion-headings-font-weight: 300;
   // --ion-item-border-color: red;
   --ion-item-border-color: rgb(0, 0, 0, 0.2);
-}
 
-.ios,
-.md {
   --ion-toolbar-background: var(--ion-color-primary);
   --ion-toolbar-color: #fff;
   --ion-toolbar-color-activated: #fff;
 }
 
-ion-toolbar {
-  --min-height: 54px;
-}
-
-.sc-ion-back-button-ios-h {
-  --color: var(--ion-toolbar-color);
-}
-
-ion-icon[faint] {
-  opacity: 0.6;
-}
-
-.info-background-message {
-  --background: white;
-  margin-bottom: 40px;
-}
-
-.attr-page .info-message,
-.info-message.blue {
-  --background: #d9ecf8;
-
-  ion-note {
-    color: #00395c;
-    font-size: 1em;
-  }
-  ion-icon {
-    color: #00395c !important;
-  }
-}
-
-ion-label[slot='end'] {
-  text-align: right;
-  opacity: 0.5;
-  max-width: 45%;
-}
-
-button.alert-button.secondary {
-  font-weight: normal !important;
-}
-button.alert-button.primary {
-  font-weight: 700;
-}
-
-button.alert-button.danger {
-  color: var(--ion-color-danger) !important;
-  font-weight: normal !important;
-}
-
-ion-label {
-  &.warn {
-    color: var(--ion-color-warning) !important;
-    opacity: 1;
-  }
-  &.error {
-    color: var(--ion-color-danger) !important;
-    opacity: 1;
-  }
-}
-
-html[mode='ios'] ion-toolbar {
-  ion-button {
-    color: var(--ion-color-primary-contrast);
-  }
-}
-
-html[mode='ios'] ion-input,
-html[mode='ios'] ion-textarea {
-  --padding-start: 7px;
-}
-
-html[mode='ios'] .tabs-inner {
-  margin-top: var(--ion-safe-area-top);
-}
-
-html[mode='md'] .action-sheet-group-cancel button {
-  font-weight: bold;
-}
-
-html[mode='md'] ion-item ion-label[slot='end'] {
-  margin-right: 5px;
-}
-
-ion-label.ion-text-wrap.normal-font-size {
-  font-size: inherit;
-}
-
-ion-button[type='submit'] {
-  width: 40%;
-  margin: 20px auto 40px;
-}
-
-ion-alert {
-  ion-list,
-  ion-item {
-    background: none;
-    --background: none;
-  }
-}
-
-ion-item.locked {
-  ion-label[slot='end'] {
-    color: var(--ion-color-secondary);
-  }
-}
-
-ion-spinner.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-}
-
-.collapse-block {
-  visibility: visible;
-  --inner-border-width: 0;
-}
-
-.ion-no-padding {
-  padding: 0;
-}
-
+// status bar
 html.ios.plt-hybrid #status-bar-background {
   background: #443553;
   width: 100vw;
@@ -233,206 +91,22 @@ html.ios.plt-hybrid #status-bar-background {
   z-index: 1000;
 }
 
-.gallery-modal {
-  z-index: 300000;
-}
+// info messages
+.attr-page .info-message,
+.info-message.blue {
+  --background: rgba(var(--ion-color-secondary-rgb), 0.1);
+  background: white; // above is transparent
 
-/* ROUND-THEME START */
-body {
-  background-color: var(--ion-page-background);
-}
-
-ion-content {
-  --background: var(--ion-page-background);
-}
-
-ion-content > ion-list > ion-item-divider:first-of-type,
-ion-content > ion-list > .rounded:first-of-type:first-child {
-  margin-top: 10px;
-}
-
-*:not(.rounded) > .info-message {
-  border-radius: 10px;
-  margin: 10px;
-  --border-color: transparent;
-}
-
-ion-item-divider {
-  border: 0;
-  font-weight: normal;
-}
-
-ion-input,
-ion-textarea {
-  margin: 10px auto !important;
-  max-width: 95%;
-  border-radius: 10px;
-}
-
-.item-datetime,
-.checkbox-input-attr ion-item,
-ion-radio-group ion-item {
-  --border-style: none;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-.info-background-message {
-  border-radius: 10px;
-
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.05),
-    0 2px 9px 0 rgba(62, 57, 107, 0.05);
-}
-
-div.rounded {
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 20px;
-
-  > ion-item-sliding:last-child {
-    ion-item {
-      --border-style: none;
-    }
+  ion-note {
+    color: var(--ion-color-secondary-dark);
+    font-size: 1em;
   }
-
-  > :last-child {
-    --border-style: none;
-  }
-
-  div:last-child {
-    ion-item {
-      --border-style: none;
-    }
+  ion-icon {
+    color: var(--ion-color-secondary-dark) !important;
   }
 }
 
-ion-list {
-  padding: 0 10px !important;
-}
-
-ion-list,
-ion-item-divider {
-  background: transparent !important;
-}
-
-.attr-page {
-  ion-input,
-  ion-textarea {
-    background: var(--ion-color-light) !important;
-    padding: 0 10px;
-  }
-}
-
-.apps-section * {
-  --background: transparent;
-}
-
-ion-radio-group {
-  .item-radio-checked:not(.radio-input-default-option) {
-    --background: var(--ion-color-primary-tint);
-    color: var(--ion-color-light);
-    --color-activated: var(--ion-color-light);
-  }
-
-  ion-label {
-    font-weight: 500;
-  }
-}
-
-.slider-input-attr {
-  margin: 0 10px;
-  border-radius: 10px;
-  --border-color: transparent;
-}
-
-.auto-suggest-input-attr {
-  ion-input {
-    --padding-top: 0;
-  }
-}
-
-.error-container .error-message {
-  background: white;
-  color: var(--ion-color-danger);
-  font-size: 0.8em;
-  padding-left: 10px;
-}
-
-.apps-section * {
-  --background: transparent;
-}
-
-.info-background-message {
-  ion-button {
-    margin-left: 10px;
-
-    color: var(--ion-color-medium);
-    --border-color: var(--ion-color-medium);
-  }
-  span {
-    text-align: left;
-  }
-}
-
-/* ROUND-THEME END */
-
-.radio-input-attr ion-item ion-label {
-  font-weight: 500;
-}
-
-/* Tablet-friendly */
-html.plt-tablet {
-  .info-message,
-  .item-datetime,
-  ion-list,
-  ion-textarea {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.photo-picker {
-  --inner-padding-end: 0;
-
-  #img-picker-array .img {
-    margin-right: 5px;
-    .delete {
-      background-color: #80808085;
-    }
-  }
-
-  #img-picker-array .img-picker {
-    border-right: none;
-
-    ion-button {
-      background: #745a8f4f;
-      margin: 5px;
-      height: calc(80px - 10px);
-      width: calc(80px - 10px);
-      border-radius: 15px;
-      transform: none;
-    }
-  }
-}
-
-.alert-message {
-  text-align: left !important;
-  font-size: 1em !important;
-}
-
-div.rounded .attr {
-  ion-item {
-    margin: 0 !important;
-    --border-radius: none;
-    border-radius: 0;
-  }
-}
-
-a {
-  text-decoration: none;
-}
-
-.item-disabled {
-  opacity: 1;
+// ??
+html[mode='ios'] .tabs-inner {
+  margin-top: var(--ion-safe-area-top);
 }

@@ -8,6 +8,11 @@
   .info-message {
     border-radius: 0;
     margin: 0;
+    max-width: 100%; // for tablet overwrite
+  }
+
+  .ion-no-padding {
+    padding: 0;
   }
 
   &,

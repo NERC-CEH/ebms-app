@@ -29,7 +29,6 @@ class Component extends React.Component {
   registrationForm = props => {
     const { showPassword } = this.state;
     const { lang } = this.props;
-    console.log(props);
     return (
       <Form>
         <IonList lines="full">

@@ -1,10 +1,12 @@
-import { IonList, IonItem, IonLabel } from '@ionic/react';
-import { Page, Main, Header } from '@flumens';
+import { IonItem, IonLabel } from '@ionic/react';
+import { Page, Main, Header, Section } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import species from 'common/data/profiles/index.json';
 import sponsorsLogo from './sponsors.png';
 import flumensLogo from './flumens.png';
 import './styles.scss';
+
+const { P, H } = Section;
 
 const speciesWithoutImageCopyright = s => s.image_copyright;
 const getTaxonWithImageCopyright = s => (
@@ -19,23 +21,15 @@ export default () => (
   <Page id="credits">
     <Header title="Credits" />
     <Main className="ion-padding">
-      <IonList lines="none">
-        <IonItem>
-          <img src={sponsorsLogo} alt="" />
-        </IonItem>
-      </IonList>
+      <Section>
+        <img src={sponsorsLogo} alt="" />
+      </Section>
 
-      <IonList lines="none">
-        <IonItem lines="inset">
-          <IonLabel>
-            <b>
-              <T>
-                We are very grateful for all the people that helped to create
-                this app:
-              </T>
-            </b>
-          </IonLabel>
-        </IonItem>
+      <Section>
+        <H>
+          We are very grateful for all the people that helped to create this
+          app:
+        </H>
 
         <IonItem>
           <IonLabel>
@@ -74,54 +68,39 @@ export default () => (
             <b>Biren Rathod</b> (the UK Centre for Ecology & Hydrology)
           </IonLabel>
         </IonItem>
-      </IonList>
+      </Section>
 
-      <IonList>
-        <IonItem lines="none">
-          <IonLabel>
-            <T>
-              ABLE is funded by a service contract from the European Union
-              Directorate for the Environment, for an initial period of two
-              years from 2019-20.
-            </T>
-          </IonLabel>
-        </IonItem>
-      </IonList>
-
-      <IonList lines="none">
+      <Section>
+        <P>
+          ABLE is funded by a service contract from the European Union
+          Directorate for the Environment, for an initial period of two years
+          from 2019-20.
+        </P>
         <IonItem>
           <a href="https://flumens.io">
             <img className="flumens-logo" src={flumensLogo} alt="" />
           </a>
         </IonItem>
-        <IonItem>
-          <IonLabel>
-            <T>This app was hand crafted with love by</T>
-            <a href="https://flumens.io" style={{ whiteSpace: 'nowrap' }}>
-              {' '}
-              Flumens.
-            </a>{' '}
-            <T>
-              A technical consultancy that excels at building bespoke
-              environmental science and community focussed solutions.
-            </T>{' '}
-            <T>For suggestions and feedback please do not hesitate to</T>{' '}
-            <a href="mailto:apps%40ceh.ac.uk?subject=eBMS%20App">
-              <T>contact us</T>
-            </a>
-            .
-          </IonLabel>
-        </IonItem>
-      </IonList>
+        <P skipTranslation>
+          <T>This app was hand crafted with love by</T>
+          <a href="https://flumens.io" style={{ whiteSpace: 'nowrap' }}>
+            {' '}
+            Flumens.
+          </a>{' '}
+          <T>
+            A technical consultancy that excels at building bespoke
+            environmental science and community focussed solutions.
+          </T>{' '}
+          <T>For suggestions and feedback please do not hesitate to</T>{' '}
+          <a href="mailto:apps%40ceh.ac.uk?subject=eBMS%20App">
+            <T>contact us</T>
+          </a>
+          .
+        </P>
+      </Section>
 
-      <IonList lines="none">
-        <IonItem lines="inset">
-          <IonLabel>
-            <b>
-              <T>ABLE partners:</T>
-            </b>
-          </IonLabel>
-        </IonItem>
+      <Section>
+        <H>ABLE partners:</H>
 
         <IonItem>
           <IonLabel>
@@ -160,16 +139,10 @@ export default () => (
             <b>Butterfly Conservation UK</b> – Nigel Bourn, Emily Dennis
           </IonLabel>
         </IonItem>
-      </IonList>
+      </Section>
 
-      <IonList lines="none">
-        <IonItem lines="inset">
-          <b>
-            <T>
-              In June 2019, the following organisations are partners in eBMS:
-            </T>
-          </b>
-        </IonItem>
+      <Section>
+        <H>In June 2019, the following organisations are partners in eBMS:</H>
         <IonItem>
           <IonLabel>
             <b>UKCEH</b>, David Roy
@@ -274,66 +247,34 @@ export default () => (
             Portugal BMS, Eva Monteiro
           </IonLabel>
         </IonItem>
-      </IonList>
+      </Section>
 
-      <IonList>
-        <IonItem>
-          <IonLabel>
-            <b>
-              <T>Species descriptions</T>:
-            </b>
-          </IonLabel>
-        </IonItem>
-        <IonItem lines="none">
-          <IonLabel>
-            <T>
-              Species descriptions included as part of the guide are based on
-              those produced for the Climatic Risk Atlas of European
-              Butterflies. We thank Josef Settele for making these available.
-            </T>
-          </IonLabel>
-        </IonItem>
-      </IonList>
+      <Section>
+        <H>Species descriptions </H>
+        <P>
+          Species descriptions included as part of the guide are based on those
+          produced for the Climatic Risk Atlas of European Butterflies. We thank
+          Josef Settele for making these available.
+        </P>
+      </Section>
 
-      <IonList>
-        <IonItem>
-          <IonLabel>
-            <b>
-              <T>Weather conditions</T>:
-            </b>
-          </IonLabel>
-        </IonItem>
-        <IonItem lines="none">
-          <IonLabel>
-            <T>
-              The current weather values are prepopulated using the
-              OpenWeatherMap API weather service.
-            </T>
-          </IonLabel>
-        </IonItem>
-      </IonList>
+      <Section>
+        <H>Weather conditions</H>
+        <P>
+          The current weather values are prepopulated using the OpenWeatherMap
+          API weather service.
+        </P>
+      </Section>
 
-      <IonList>
-        <IonItem>
-          <IonLabel>
-            <b>
-              <T>Photo credits</T>:
-            </b>
-          </IonLabel>
-        </IonItem>
+      <Section>
+        <H>Photo credits</H>
         {species
           .filter(speciesWithoutImageCopyright)
           .map(getTaxonWithImageCopyright)}
-      </IonList>
+      </Section>
 
-      <IonList>
-        <IonItem>
-          <IonLabel>
-            <b>
-              <T>Icons made by</T>:
-            </b>
-          </IonLabel>
-        </IonItem>
+      <Section>
+        <H>Icons made by</H>
         <IonItem lines="none">
           <IonLabel>
             <a
@@ -359,7 +300,7 @@ export default () => (
             </a>
           </IonLabel>
         </IonItem>
-      </IonList>
+      </Section>
     </Main>
   </Page>
 );

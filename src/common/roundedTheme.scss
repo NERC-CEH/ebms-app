@@ -1,0 +1,135 @@
+// app background
+body {
+  background-color: var(--ion-page-background);
+
+  ion-content {
+    --background: var(--ion-page-background);
+  }
+}
+
+// increased toolbar size
+ion-toolbar {
+  --min-height: 54px; //
+}
+
+// info message style
+*:not(.rounded) > .info-message {
+  border-radius: 10px;
+  margin: 10px;
+  --border-color: transparent;
+}
+
+// info background message style
+.info-background-message {
+  border-radius: 10px;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.05),
+    0 2px 9px 0 rgba(62, 57, 107, 0.05);
+}
+
+// dividers style
+ion-content > ion-list > ion-item-divider:first-of-type,
+ion-content > ion-list > .rounded:first-of-type:first-child {
+  margin-top: 10px;
+}
+ion-item-divider {
+  border: 0;
+  font-weight: normal;
+}
+
+// generic rounded block style
+div.rounded {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  ion-item:not(.counter-input-attr-item):last-of-type {
+    --border-style: none;
+  }
+
+  .attr {
+    ion-item {
+      margin: 0 !important;
+      --border-radius: none;
+      border-radius: 0;
+    }
+  }
+}
+
+// section style
+.apps-section {
+  border-radius: 10px;
+}
+
+// lists style
+:not(.attr) > ion-list:not([slot='content']):not(.apps-section) {
+  padding: 0 10px !important;
+}
+:not(.attr) ion-list:not([slot='content']):not(.apps-section),
+ion-item-divider {
+  background: transparent !important;
+}
+
+// info button alignment
+ion-item-divider div {
+  display: flex;
+  align-items: center;
+}
+
+// submit button alignment
+ion-button[type='submit'] {
+  width: fit-content;
+  margin: 20px auto 40px;
+}
+
+// no underlined links
+a {
+  text-decoration: none;
+}
+
+/**
+* INPUTS
+*/
+ion-input,
+ion-textarea {
+  margin: 10px auto !important;
+  max-width: 95%;
+  border-radius: 10px;
+}
+
+.item-datetime,
+.checkbox-input-attr ion-item,
+ion-radio-group ion-item {
+  --border-style: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.slider-input-attr {
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+ion-radio-group .item-radio-checked:not(.radio-input-default-option) {
+  --background: rgb(var(--ion-color-primary-rgb), 0.1);
+
+  ion-label {
+    color: var(--ion-color-dark);
+  }
+
+  ion-radio {
+    --color-checked: var(--ion-color-dark);
+    --color-activated: var(--ion-color-dark);
+  }
+}
+
+// Tablet-friendly style
+html.plt-tablet {
+  .info-message,
+  ion-searchbar,
+  ion-segment,
+  ion-list {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

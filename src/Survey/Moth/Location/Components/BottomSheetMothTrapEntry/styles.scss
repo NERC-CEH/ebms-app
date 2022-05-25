@@ -1,6 +1,10 @@
 #bottom-sheet {
   z-index: 10000 !important;
 
+  // tablet-friendly
+  max-width: 600px;
+  margin: 0 auto;
+
   .react-modal-sheet-header {
     height: 30px !important;
   }

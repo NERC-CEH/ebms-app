@@ -35,7 +35,7 @@ function useDeleteOccurrencePrompt(occ: Occurrence) {
         },
         {
           text: 'Delete',
-          cssClass: 'danger',
+          role: 'destructive',
           handler: () => occ.destroy(),
         },
       ],
