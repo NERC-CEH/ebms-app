@@ -353,6 +353,9 @@ ion-radio-group {
 
 .error-container .error-message {
   background: white;
+  color: var(--ion-color-danger);
+  font-size: 0.8em;
+  padding-left: 10px;
 }
 
 .apps-section * {

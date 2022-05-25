@@ -29,7 +29,7 @@ class Component extends React.Component {
   registrationForm = props => {
     const { showPassword } = this.state;
     const { lang } = this.props;
-
+    console.log(props);
     return (
       <Form>
         <IonList lines="full">
@@ -88,6 +88,8 @@ class Component extends React.Component {
           </div>
         </IonList>
 
+        {/** https://github.com/formium/formik/issues/1418 */}
+        <input type="submit" style={{ display: 'none' }} />
         <IonButton color="primary" type="submit" expand="block">
           <T>Register</T>
         </IonButton>
@@ -103,7 +105,12 @@ class Component extends React.Component {
         <Formik
           validationSchema={schema}
           onSubmit={onSubmit}
-          initialValues={{}}
+          initialValues={{
+            email: '',
+            firstName: '',
+            secondName: '',
+            password: '',
+          }}
         >
           {this.registrationForm}
         </Formik>

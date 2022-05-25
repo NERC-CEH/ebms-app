@@ -21,6 +21,8 @@ const Component = ({ onSubmit, schema }) => {
         </div>
       </IonList>
 
+      {/** https://github.com/formium/formik/issues/1418 */}
+      <input type="submit" style={{ display: 'none' }} />
       <IonButton color="primary" type="submit" expand="block">
         <T>Reset</T>
       </IonButton>
@@ -33,7 +35,13 @@ const Component = ({ onSubmit, schema }) => {
         Enter your email address to request a password reset.
       </InfoMessage>
 
-      <Formik validationSchema={schema} onSubmit={onSubmit} initialValues={{}}>
+      <Formik
+        validationSchema={schema}
+        onSubmit={onSubmit}
+        initialValues={{
+          email: '',
+        }}
+      >
         {resetForm}
       </Formik>
     </Main>

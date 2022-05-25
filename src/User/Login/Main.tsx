@@ -28,7 +28,14 @@ const LoginMain: FC<Props> = ({ onSubmit, schema }) => {
         Please sign in with your eBMS account or register.
       </InfoMessage>
 
-      <Formik validationSchema={schema} onSubmit={onSubmit} initialValues={{}}>
+      <Formik
+        validationSchema={schema}
+        onSubmit={onSubmit}
+        initialValues={{
+          email: '',
+          password: '',
+        }}
+      >
         {({ values, errors, touched, handleChange, handleBlur }) => (
           <Form>
             <IonList lines="full">
