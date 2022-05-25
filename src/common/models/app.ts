@@ -42,7 +42,7 @@ async function fetchUserTransects(userModel: UserModel) {
   const options = {
     params: {
       website_id: CONFIG.backend.websiteId,
-      userID: userModel.attrs.id,
+      userID: userModel.id,
       location_type_id: '',
       locattrs: '',
       limit: 3000,
@@ -90,7 +90,7 @@ async function fetchTransectSections(
   const options = {
     params: {
       website_id: CONFIG.backend.websiteId,
-      userID: userModel.attrs.id,
+      userID: userModel.id,
       location_list: transectLocationIds,
       limit: 3000,
     },

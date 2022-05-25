@@ -341,7 +341,7 @@ class LocationModel extends Model {
 
         'locAttr:306': stringifiedLamps,
         'locAttr:330': trapType,
-        'locAttr:234': userModel.attrs.id,
+        'locAttr:234': userModel.id,
       },
     };
 
