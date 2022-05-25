@@ -59,7 +59,7 @@ const Report: FC = () => {
     try {
       const sp = await fetchSpeciesReport();
       appModel.speciesReport = [...sp] as any;
-      setSpecies(species);
+      setSpecies([...appModel.speciesReport]);
       setRefreshing(false);
     } catch (err) {
       setRefreshing(false);
@@ -69,7 +69,6 @@ const Report: FC = () => {
 
   useEffect(() => {
     showInfoGuideTip();
-
     if (!appModel.speciesReport.length && device.isOnline) {
       refreshReport();
       return;
@@ -180,7 +179,7 @@ const Report: FC = () => {
     }
 
     return (
-      <IonList lines="none" className={refreshing ? 'refreshing' : ''}>
+      <IonList lines="none">
         {showEmptyDataMessage()}
 
         {getUsersReportList()}
