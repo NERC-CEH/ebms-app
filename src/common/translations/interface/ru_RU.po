@@ -1559,3 +1559,249 @@ msgstr ""
 # Single species count survey validation message
 msgid "Please add your target species"
 msgstr ""
+
+# Moth survey label
+msgid "Date"
+msgstr ""
+
+# Moth survey label
+msgid "Method"
+msgstr ""
+
+# Context term
+msgid "Please select the medthod type"
+msgstr ""
+
+# Moth survey method type
+msgid "MV light"
+msgstr ""
+
+# Moth survey method type
+msgid "Actinic light"
+msgstr ""
+
+# Moth survey method type
+msgid "LED light"
+msgstr ""
+
+# Moth survey method type
+msgid "Light trapping"
+msgstr ""
+
+# Moth survey method type
+msgid "Daytime observation"
+msgstr ""
+
+# Moth survey method type
+msgid "Dusking"
+msgstr ""
+
+# Moth survey method type
+msgid "Attracted to a lighted window"
+msgstr ""
+
+# Moth survey method type
+msgid "Sugaring"
+msgstr ""
+
+# Moth survey method type
+msgid "Wine roping"
+msgstr ""
+
+# Moth survey method type
+msgid "Beating tray"
+msgstr ""
+
+# Moth survey method type
+msgid "Pheromone trap"
+msgstr ""
+
+# Moth survey method type
+msgid "Other method (add comment)"
+msgstr ""
+
+# Moth survey method type
+msgid "Not recorded"
+msgstr ""
+
+# Moth survey details header title
+msgid "Survey Details"
+msgstr ""
+
+# Moth survey header title
+msgid "Moth-trap survey"
+msgstr ""
+
+# Moth survey header title
+msgid "Moth survey"
+msgstr ""
+
+# Moth survey divider label
+msgid "Species list"
+msgstr ""
+
+# Moth survey moth details label
+msgid "Identifier"
+msgstr ""
+
+# Moth survey divider label
+msgid "Moths list"
+msgstr ""
+
+# Moth survey photo picker divider label
+msgid "Moth Photo"
+msgstr ""
+
+# Identifier attribute info message
+msgid "Enter the recorder's name, if different."
+msgstr ""
+
+# Identifier attribute placeholder
+msgid "Recorder name"
+msgstr ""
+
+# Latitude
+msgid "Lat"
+msgstr ""
+
+# Longitude
+msgid "Long"
+msgstr ""
+
+# Moth survey attribute label
+msgid "Count inside"
+msgstr ""
+
+# Moth survey attribute label
+msgid "Count outside"
+msgstr ""
+
+# Moth survey photo picker label
+msgid "Moth Photos"
+msgstr ""
+
+# Moth survey details label
+msgid "Moth traps"
+msgstr ""
+
+# Moth survey details label
+msgid "Moth trap"
+msgstr ""
+
+# Moth survey Location Info message
+msgid ""
+"You have not created any moth traps yet. To create one please go to the "
+"<2>website.</2>"
+msgstr ""
+
+# Moth survey Location Info message
+msgid "To see the map please connect to the internet."
+msgstr ""
+
+# Moth survey validation message
+msgid "Please add the moth trap"
+msgstr ""
+
+# Moth survey Location Info message
+msgid ""
+"You have only one moth trap. To create more please go to the <2>website.</2>"
+msgstr ""
+
+# Moth survey AI loader
+msgid "Identifying..."
+msgstr ""
+
+# Unknown species common_name
+msgid "Unknown"
+msgstr ""
+
+# Moth survey warning message
+msgid "Please add a photo"
+msgstr ""
+
+# Moth survey unknown species divider
+msgid "Unknown species"
+msgstr ""
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we could not identify this species."
+msgstr ""
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we think it is"
+msgstr ""
+
+# Moth survey image gallery warning message
+msgid "likely a"
+msgstr ""
+
+# App settings title
+msgid "Surveying"
+msgstr ""
+
+# Moth survey label
+msgid "Moth survey (SPRING)"
+msgstr ""
+
+# Survey name
+msgid "Moth Survey"
+msgstr ""
+
+#  Moth settings page header title
+msgid "Moth Survey Settings"
+msgstr ""
+
+# Moth settings page label
+msgid "Use image identification"
+msgstr ""
+
+# Moth settings page info message
+msgid ""
+"We will help you to identify species using our species image classifier."
+msgstr ""
+
+# Moth survey button label
+msgid "IDENTIFY"
+msgstr ""
+
+# Moth survey button label
+msgid "Identify All"
+msgstr ""
+
+# Moth survey image classifier disabled info header
+msgid "Image identification"
+msgstr ""
+
+# Moth survey image classifier disabled info message
+msgid ""
+"Image classifier is currently <1>disabled</1>. Please go to app "
+"<4>Settings</4> to turn it on."
+msgstr ""
+
+# Whats new message title
+msgid "What's New"
+msgstr ""
+
+# Version 1.15 whats new message
+msgid "Record moths with the help of automatic identification in real-time."
+msgstr ""
+
+# Version 1.15 whats new message
+msgid "Bug fixes and improvements"
+msgstr ""
+
+# Version 1.15 whats new message
+msgid "Added option to identify moths with image classifier"
+msgstr ""
+
+# Version 1.15 whats new message
+msgid "Added App setting option to disable image classifier"
+msgstr ""
+
+# Version 1.15 whats new message
+msgid "Added option to create Moth trap"
+msgstr ""
+
+# Version 1.15 whats new message
+msgid "Bug fixes"
+msgstr ""

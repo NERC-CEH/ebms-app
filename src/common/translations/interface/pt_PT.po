@@ -1,21 +1,21 @@
 # 
 # Translators:
-# Renata Santos <renatailsantos@gmail.com>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
 # Eva Monteiro <evasmonteiro@gmail.com>, 2021
 # Ricardo Silva Ramirez, 2022
+# Renata Santos <renatailsantos@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Ricardo Silva Ramirez, 2022\n"
+"Last-Translator: Renata Santos <renatailsantos@gmail.com>, 2022\n"
 "Language-Team: Portuguese (Portugal) (https://www.transifex.com/ceh/teams/95441/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_PT\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
@@ -1419,6 +1419,7 @@ msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
 msgstr[0] "A carregar registo de {{contagem}}"
 msgstr[1] "A carregar registos de {{contagem}}"
+msgstr[2] "A carregar registos de {{contagem}}"
 
 # Part of a page error
 msgid "Oops! Something went wrong."

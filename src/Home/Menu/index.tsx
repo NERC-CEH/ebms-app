@@ -1,36 +1,24 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
 import Log from 'helpers/log';
-import { IonItem, IonLabel, IonCheckbox } from '@ionic/react';
 import { Page, useAlert } from '@flumens';
 import appModel from 'models/app';
 import userModel from 'models/user';
-import savedSamples from 'models/collections/samples';
 import { Trans as T } from 'react-i18next';
 import Main from './Main';
 import './styles.scss';
 
 function showLogoutConfirmationDialog(callback: any, alert: any) {
-  let deleteData = false;
-
-  const onCheckboxChange = (e: any) => {
-    deleteData = e.detail.checked;
-  };
-
   alert({
     header: 'Logout',
     message: (
-      <>
-        <T>Are you sure you want to logout?</T>
+      <T>
+        Are you sure you want to logout?
         <br />
         <br />
-        <IonItem lines="none" className="log-out-checkbox">
-          <IonLabel>
-            <T>Discard local data</T>
-          </IonLabel>
-          <IonCheckbox onIonChange={onCheckboxChange} />
-        </IonItem>
-      </>
+        Your pending and uploaded <b>records will not be deleted </b> from this
+        device.
+      </T>
     ),
     buttons: [
       {
@@ -41,7 +29,7 @@ function showLogoutConfirmationDialog(callback: any, alert: any) {
       {
         text: 'Logout',
         cssClass: 'primary',
-        handler: () => callback(deleteData),
+        handler: () => callback(),
       },
     ],
   });
@@ -52,15 +40,7 @@ const Controller: FC = ({ ...restProps }) => {
 
   function logOut() {
     Log('Info:Menu: logging out.');
-    const resetWrap = async (reset: any) => {
-      if (reset) {
-        appModel.attrs['draftId:precise-area'] = '';
-        appModel.attrs['draftId:transect'] = '';
-        await savedSamples.resetDefaults();
-      }
-
-      appModel.attrs.transects = [];
-      appModel.save();
+    const resetWrap = async () => {
       userModel.logOut();
     };
     showLogoutConfirmationDialog(resetWrap, alert);

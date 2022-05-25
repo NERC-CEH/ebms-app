@@ -1668,7 +1668,7 @@ msgstr "Viliojimas saldžiais skysčiais"
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr "Vyne mirkyta virvė"
+msgstr "Viliojimas masalu (vyno masalas)"
 
 # Moth survey method type
 msgid "Beating tray"
