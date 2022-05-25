@@ -8,6 +8,10 @@
     font-weight: 500;
   }
 
+  ion-toggle.ios {
+    --background-checked: var(--ion-color-success);
+  }
+
   ion-toggle.md {
     --handle-background-checked: var(--ion-color-success);
   }
