@@ -24,21 +24,19 @@
 
     ion-label {
       width: 100%;
-      text-align: center;
       font-weight: normal;
 
-      &:nth-of-type(2) {
-        padding-left: 16px;
-        text-align: left;
+      &:nth-of-type(2).ios {
+        padding-right: 16px;
+      }
+      &:nth-of-type(2).md {
+        padding-right: 22px;
       }
       &:first-of-type {
         text-align: left;
       }
-      &:last-of-type.md {
-        max-width: 56px;
-      }
-      &:last-of-type.ios {
-        max-width: 40px;
+      &:last-of-type {
+        max-width: min-content;
       }
     }
   }
