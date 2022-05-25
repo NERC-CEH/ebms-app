@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Main, MenuAttrItem } from '@flumens';
-import { pinOutline } from 'ionicons/icons';
+import { pinOutline, chatboxOutline } from 'ionicons/icons';
 import {
   IonList,
   IonItem,
@@ -28,7 +28,13 @@ type Props = {
 };
 
 const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
-  const { type, lamps, location: loc } = location.attrs;
+  const {
+    type,
+    lamps,
+    location: loc,
+    'type-other': typeOther,
+  } = location.attrs;
+
   const { url } = useRouteMatch();
 
   const value = (
@@ -106,6 +112,8 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
     );
   };
 
+  const isOtherTypeSelected = type === 'Other trap';
+
   return (
     <Main>
       <IonList lines="full">
@@ -125,6 +133,16 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
             label="Type"
             value={type}
           />
+
+          {isOtherTypeSelected && (
+            <MenuAttrItem
+              routerLink={`/location/${location.cid}/type-other`}
+              routerOptions={{ unmount: true }}
+              icon={chatboxOutline}
+              label="Other Type"
+              value={typeOther}
+            />
+          )}
         </div>
 
         {getLampAddButton()}

@@ -92,6 +92,7 @@ export type Lamp = {
 
 interface Attrs extends ModelAttrs {
   type: number;
+  'type-other': string | null;
   description: string;
   lamps: Lamp[];
   location: {
@@ -110,9 +111,9 @@ class LocationModel extends Model {
       remote: { id: 330, values: trapTypes },
     },
 
-    typeComment: {
+    'type-other': {
       input: 'textarea',
-      info: 'Additional description of lamp.',
+      info: 'What type of trap was it?',
       remote: { id: 288 },
     },
 
@@ -191,7 +192,11 @@ class LocationModel extends Model {
           centroid_sref_system: doc.centroid_sref_system,
         },
 
-        ...getLocalAttributes(doc, LocationModel.schema, ['type', 'lamps']),
+        ...getLocalAttributes(doc, LocationModel.schema, [
+          'type',
+          'lamps',
+          'type-other',
+        ]),
       },
 
       metadata: {
@@ -227,7 +232,7 @@ class LocationModel extends Model {
 
   attrs: Attrs = Model.extendAttrs(this.attrs, {
     location: this.attrs.location || {},
-
+    'type-other': null,
     lamps: [],
   });
 
@@ -320,7 +325,7 @@ class LocationModel extends Model {
   }
 
   toRemoteJSON() {
-    const { lamps, location, type } = this.attrs;
+    const { lamps, location, type, 'type-other': typeOther } = this.attrs;
     const stringifyLamp = (lamp: any) => JSON.stringify(lamp);
     const getLampType = (lamp: any) => {
       const { type: lampTypeTerm, description, quantity } = lamp.attrs;
@@ -357,6 +362,7 @@ class LocationModel extends Model {
         'locAttr:306': stringifiedLamps,
         'locAttr:330': trapType,
         'locAttr:234': userModel.id,
+        'locAttr:288': typeOther,
       },
     };
 
