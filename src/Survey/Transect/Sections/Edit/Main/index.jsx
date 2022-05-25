@@ -148,7 +148,13 @@ class Edit extends Component {
     };
 
     return (
-      <IonButton color="primary" id="add" onClick={onClick}>
+      <IonButton
+        color="primary"
+        type="submit"
+        expand="full"
+        id="add"
+        onClick={onClick}
+      >
         <IonIcon icon={addCircleOutline} slot="start" />
         <IonLabel>
           <T>Add species</T>
@@ -166,7 +172,7 @@ class Edit extends Component {
     const baseURL = `/survey/transect/${sample.cid}/edit/sections/${sectionSample.cid}`;
 
     return (
-      <Main id="area-count-edit">
+      <Main id="transect-section-edit">
         <IonList lines="full">
           <div className="rounded">
             <MenuAttrItem
