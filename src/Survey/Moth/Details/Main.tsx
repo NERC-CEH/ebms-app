@@ -14,7 +14,7 @@ const DetailsMain: FC<Props> = ({ sample }) => {
   const { url } = useRouteMatch();
   const { location } = sample.attrs;
   const survey = sample.getSurvey();
-  const surveyDateProps = survey.attrs.date.pageProps.attrProps.inputProps;
+  const surveyDateProps = survey.attrs.date.pageProps.attrProps.inputProps();
   const isDisabled = sample.isUploaded();
 
   const locationName = location ? location.attrs?.location?.name : null;

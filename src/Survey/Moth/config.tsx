@@ -55,13 +55,14 @@ const survey: Survey = {
       pageProps: {
         attrProps: {
           input: 'date',
-          inputProps: {
+          inputProps: () => ({
             max: () => new Date(),
             label: 'Date',
             icon: calendarOutline,
             autoFocus: false,
-            skipTranslation: true,
-          },
+            presentation: 'date',
+            locale: appModel.attrs.language || undefined,
+          }),
         },
       },
       remote: { values: (date: Date) => dateHelp.print(date, false) },

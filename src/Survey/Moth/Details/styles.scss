@@ -1,9 +1,9 @@
 #survey-moth-detail {
-  .attr.attr-date ion-item.ios {
-    border-bottom: 0.55px solid #cccccc !important;
+  .attr.attr-date ion-item[slot='content'].ios {
+    border-bottom: 0.55px solid var(--ion-item-border-color) !important;
   }
 
-  .attr.attr-date ion-item.md {
-    border-bottom: 1px solid #cccccc !important;
+  .attr.attr-date ion-item[slot='content'].md {
+    border-bottom: 1px solid var(--ion-item-border-color) !important;
   }
 }
