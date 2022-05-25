@@ -160,7 +160,9 @@ export const surveyStartTimeAttr = {
     headerProps: { title: 'Start Time' },
     attrProps: {
       input: 'time',
-      inputProps: { format: 'HH:mm' },
+      inputProps: {
+        presentation: 'time',
+      },
     },
   },
   remote: {
@@ -175,7 +177,9 @@ export const surveyEndTimeAttr = {
     headerProps: { title: 'End Time' },
     attrProps: {
       input: 'time',
-      inputProps: { format: 'HH:mm' },
+      inputProps: {
+        presentation: 'time',
+      },
     },
   },
   remote: {
