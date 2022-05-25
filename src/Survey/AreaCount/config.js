@@ -51,7 +51,7 @@ const survey = {
   id: 565,
   name: 'precise-area',
   label: '15min Count',
-  webForm: 'enter-app-record',
+  webForm: 'mydata/samples/edit',
 
   attrs: {
     device: deviceAttr,

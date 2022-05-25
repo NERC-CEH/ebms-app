@@ -367,7 +367,7 @@ const AreaCount: FC<Props> = ({
               App.
             </T>
             <IonButton
-              href={`${config.backend.url}`}
+              href={`${config.backend.url}/mydata/samples/edit?sample_id=${sample.id}`}
               expand="block"
               color="dark"
               fill="outline"
