@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
@@ -10,9 +9,10 @@ import {
   IonItemOption,
   IonIcon,
   IonBadge,
-  NavContext,
 } from '@ionic/react';
-import { useAlert } from '@flumens';
+import { useAlert, useToast } from '@flumens';
+import { useUserStatusCheck } from 'models/user';
+import { useValidateCheck } from 'models/sample';
 import butterflyIcon from 'common/images/butterfly.svg';
 import OnlineStatus from './components/OnlineStatus';
 import ErrorMessage from './components/ErrorMessage';
@@ -42,8 +42,11 @@ function useDeleteSurveyPrompt(sample) {
   return deleteSurvey;
 }
 
-function Survey({ sample, userModel }) {
-  const { navigate } = useContext(NavContext);
+function Survey({ sample }) {
+  const toast = useToast();
+  const checkSampleStatus = useValidateCheck(sample);
+  const checkUserStatus = useUserStatusCheck();
+
   const showDeleteSurveyPrompt = useDeleteSurveyPrompt(sample);
 
   const { synchronising } = sample.remote;
@@ -92,17 +95,17 @@ function Survey({ sample, userModel }) {
     return <IonLabel class="ion-text-wrap">{label}</IonLabel>;
   }
 
-  const onUpload = e => {
+  const onUpload = async e => {
     e.preventDefault();
     e.stopPropagation();
 
-    const isLoggedIn = !!userModel.attrs.email;
-    if (!isLoggedIn) {
-      navigate(`/user/login`);
-      return;
-    }
+    const isUserOK = await checkUserStatus();
+    if (!isUserOK) return;
 
-    sample.upload();
+    const isValid = checkSampleStatus();
+    if (!isValid) return;
+
+    sample.upload().catch(toast.error);
   };
 
   return (
@@ -123,7 +126,6 @@ function Survey({ sample, userModel }) {
 
 Survey.propTypes = {
   sample: PropTypes.object.isRequired,
-  userModel: PropTypes.object.isRequired,
 };
 
 export default observer(Survey);

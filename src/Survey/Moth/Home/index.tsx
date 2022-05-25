@@ -11,6 +11,7 @@ import { useRouteMatch } from 'react-router';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import { Page, Header, useAlert, device, useToast } from '@flumens';
 import Media from 'models/media';
+import { useUserStatusCheck } from 'models/user';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
 import { isPlatform, IonButton, NavContext } from '@ionic/react';
 import { useTranslation, Trans as T } from 'react-i18next';
@@ -56,11 +57,12 @@ interface Props {
 
 const HomeController: FC<Props> = ({ sample }) => {
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
-  const toast = useToast();
   const { t } = useTranslation();
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
+  const toast = useToast();
   const checkSampleStatus = useValidateCheck(sample);
+  const checkUserStatus = useUserStatusCheck();
 
   const UNKNOWN_SPECIES = getUnkownSpecies();
 
@@ -72,7 +74,15 @@ const HomeController: FC<Props> = ({ sample }) => {
   const isEditing = sample.metadata.saved;
 
   const _processSubmission = async () => {
-    if (await sample.upload()) navigate(`/home/user-surveys`, 'root');
+    const isUserOK = await checkUserStatus();
+    if (!isUserOK) return;
+
+    const isValid = checkSampleStatus();
+    if (!isValid) return;
+
+    sample.upload().catch(toast.error);
+
+    navigate(`/home/user-surveys`, 'root');
   };
 
   const _processDraft = async () => {

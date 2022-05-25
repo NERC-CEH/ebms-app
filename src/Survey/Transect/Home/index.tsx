@@ -3,7 +3,8 @@ import { observer } from 'mobx-react';
 import { NavContext } from '@ionic/react';
 import appModel from 'models/app';
 import Sample, { useValidateCheck } from 'models/sample';
-import { Page } from '@flumens';
+import { Page, useToast } from '@flumens';
+import { useUserStatusCheck } from 'models/user';
 import Header from './Header';
 import Main from './Main';
 
@@ -13,10 +14,20 @@ type Props = {
 
 const TransectHomeController: FC<Props> = ({ sample }) => {
   const { navigate } = useContext(NavContext);
+  const toast = useToast();
   const checkSampleStatus = useValidateCheck(sample);
+  const checkUserStatus = useUserStatusCheck();
 
   const _processSubmission = async () => {
-    if (await sample.upload()) navigate(`/home/user-surveys`, 'root');
+    const isUserOK = await checkUserStatus();
+    if (!isUserOK) return;
+
+    const isValid = checkSampleStatus();
+    if (!isValid) return;
+
+    sample.upload().catch(toast.error);
+
+    navigate(`/home/user-surveys`, 'root');
   };
 
   const _processDraft = async () => {
