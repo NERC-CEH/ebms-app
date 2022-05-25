@@ -243,8 +243,12 @@ const HomeMain: FC<Props> = ({
         <IonList id="list" lines="full">
           <div className="rounded">
             <IonItemDivider className="species-list-header">
-              <IonLabel>Count</IonLabel>
-              <IonLabel>Species</IonLabel>
+              <IonLabel>
+                <T>Count</T>
+              </IonLabel>
+              <IonLabel>
+                <T>Species</T>
+              </IonLabel>
               <IonLabel>{count}</IonLabel>
             </IonItemDivider>
 

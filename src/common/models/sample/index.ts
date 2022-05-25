@@ -10,6 +10,7 @@ import {
   SampleAttrs,
   SampleOptions,
 } from '@flumens';
+import { useTranslation } from 'react-i18next';
 import surveys from 'common/config/surveys';
 import Occurrence from '../occurrence';
 import Media from '../media';
@@ -166,16 +167,18 @@ export default class AppSample extends Sample {
 
 export const useValidateCheck = (sample: AppSample) => {
   const alert = useAlert();
+  const { t } = useTranslation();
 
   return () => {
     const invalids = sample.validateRemote();
     if (invalids) {
       alert({
-        header: 'Survey incomplete',
+        header: t('Survey incomplete'),
+        skipTranslation: true,
         message: getDeepErrorMessage(invalids),
         buttons: [
           {
-            text: 'Got it',
+            text: t('Got it'),
             role: 'cancel',
           },
         ],
