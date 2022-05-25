@@ -1,5 +1,6 @@
 import { FC, useContext, useState } from 'react';
 import { observer } from 'mobx-react';
+import { device, useToast } from '@flumens';
 import { NavContext } from '@ionic/react';
 import Sample from 'models/sample';
 import locationsCollection from 'models/collections/locations';
@@ -44,6 +45,11 @@ const MapComponent: FC<Props> = ({
   };
 
   const onLocationUpload = (location: MothTrap) => {
+    if (!device.isOnline) {
+      toast.warn("Sorry, looks like you're offline.");
+      return;
+    }
+
     const invalids = validateLocation(location);
     if (invalids) return;
 
