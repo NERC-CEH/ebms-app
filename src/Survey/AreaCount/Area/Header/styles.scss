@@ -13,7 +13,8 @@
   }
 
   ion-toggle.md {
-    --handle-background-checked: var(--ion-color-success);
+    --background-checked: var(--ion-color-success) !important;
+    --handle-background-checked: #fff;
   }
 
   &.ios {
