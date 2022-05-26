@@ -44,10 +44,7 @@ const TransectHomeController: FC<Props> = ({ sample }) => {
     };
 
     const isValid = checkSampleStatus();
-    if (!isValid) {
-      saveAndReturn();
-      return;
-    }
+    if (!isValid) return;
 
     // eslint-disable-next-line no-param-reassign
     sample.metadata.saved = true;
