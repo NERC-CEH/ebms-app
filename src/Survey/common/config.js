@@ -162,6 +162,7 @@ export const surveyStartTimeAttr = {
       input: 'time',
       inputProps: {
         presentation: 'time',
+        format: 'HH:mm',
       },
     },
   },
@@ -179,6 +180,7 @@ export const surveyEndTimeAttr = {
       input: 'time',
       inputProps: {
         presentation: 'time',
+        format: 'HH:mm',
       },
     },
   },

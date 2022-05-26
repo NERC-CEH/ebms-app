@@ -186,7 +186,7 @@ const config = {
         date: now,
         location: null,
         sample_method_id: 22,
-        surveyStartTime: now,
+        surveyStartTime: new Date(),
         recorder,
       },
     });
