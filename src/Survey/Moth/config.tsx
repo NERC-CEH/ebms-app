@@ -34,7 +34,7 @@ const locationAttr = {
       submission.values = {
         ...submission.values,
         ...{
-          entered_sref: location.centroid_sref,
+          entered_sref: location.attrs.location.centroid_sref,
         },
       };
 
