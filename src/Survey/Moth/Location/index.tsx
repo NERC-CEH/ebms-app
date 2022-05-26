@@ -7,6 +7,8 @@ import { observer } from 'mobx-react';
 import Sample from 'models/sample';
 import appModel from 'models/app';
 import Map from './Components/Map';
+import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
+
 import './styles.scss';
 
 interface Props {
@@ -29,7 +31,11 @@ const Location: FC<Props> = ({ sample }) => {
 
   return (
     <Page id="moth-survey-location">
-      <Header title="Moth traps" rightSlot={!isDisabled && newTrapButton} />
+      <Header
+        title="Moth traps"
+        rightSlot={!isDisabled && newTrapButton}
+        subheader={<GPSPermissionSubheader appModel={appModel} />}
+      />
       <Main>
         <Map
           sample={sample}

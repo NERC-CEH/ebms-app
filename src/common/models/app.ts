@@ -144,6 +144,7 @@ export type Attrs = ModelAttrs & {
   showSurveyUploadTip: boolean;
   showCopySpeciesTip: boolean;
   showWhatsNewInVersion115: boolean;
+  hasGPSPermission: boolean | null;
 } & SurveyDraftKeys;
 
 const defaults: Attrs = {
@@ -153,6 +154,7 @@ const defaults: Attrs = {
   useTraining: false,
   feedbackGiven: false,
   areaSurveyListSortedByTime: false,
+  hasGPSPermission: null,
 
   'draftId:precise-area': '',
   'draftId:precise-single-species-area': '',

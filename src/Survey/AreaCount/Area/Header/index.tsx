@@ -1,7 +1,8 @@
 import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
-import { IonLabel } from '@ionic/react';
+import appModel from 'models/app';
 import { Header, MenuAttrToggle, useAlert } from '@flumens';
+import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import './styles.scss';
 
 type Props = {
@@ -56,7 +57,13 @@ const HeaderComponent: FC<Props> = ({
     />
   );
 
-  return <Header title="Area" rightSlot={!isDisabled && GPSToggle} />;
+  return (
+    <Header
+      title="Area"
+      rightSlot={!isDisabled && GPSToggle}
+      subheader={<GPSPermissionSubheader appModel={appModel} />}
+    />
+  );
 };
 
 export default observer(HeaderComponent);
