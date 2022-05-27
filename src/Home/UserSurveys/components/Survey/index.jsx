@@ -111,7 +111,7 @@ function Survey({ sample }) {
   return (
     <IonItemSliding class="survey-list-item">
       <ErrorMessage sample={sample} />
-      <IonItem routerLink={href}>
+      <IonItem routerLink={href} detail={!synchronising}>
         {getSampleInfo()}
         <OnlineStatus sample={sample} onUpload={onUpload} />
       </IonItem>
