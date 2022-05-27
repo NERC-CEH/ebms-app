@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Main, MenuAttrItem } from '@flumens';
-import { pinOutline, chatboxOutline } from 'ionicons/icons';
+import { pinOutline } from 'ionicons/icons';
 import {
   IonList,
   IonItem,
@@ -138,8 +138,8 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
             <MenuAttrItem
               routerLink={`/location/${location.cid}/type-other`}
               routerOptions={{ unmount: true }}
-              icon={chatboxOutline}
-              label="Other Type"
+              icon={mothTrapIcon}
+              label="Other type"
               value={typeOther}
             />
           )}
