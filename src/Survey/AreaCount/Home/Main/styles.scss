@@ -96,20 +96,6 @@
     ion-item {
       --padding-start: 0;
     }
-
-    .precise-area-count-edit-count {
-      margin: 0;
-      width: 62px;
-      height: 100%;
-      font-size: 1.3em;
-
-      div.label-divider {
-        height: 75%;
-        border-right: 1px solid rgba(0, 0, 0, 0.13);
-        position: absolute;
-        right: -11px;
-      }
-    }
   }
 
   .location-spinner {

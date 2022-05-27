@@ -19,8 +19,8 @@ import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import { locationOutline, camera, warningOutline } from 'ionicons/icons';
-import UnidentifiedSpeciesEntry from './Components/UnidentifiendSpeciesEntry';
-import AnimatedNumber from './Components/AnimatedNumber';
+import IncrementalButton from 'Survey/common/IncrementalButton';
+import UnidentifiedSpeciesEntry from './Components/UnidentifiedSpeciesEntry';
 import './styles.scss';
 
 function useDisabledImageIdentifierAlert() {
@@ -99,12 +99,7 @@ const HomeMain: FC<Props> = ({
     const speciesName = occ.getTaxonName();
     const speciesCount = occ.attrs.count;
 
-    const increaseCountWrap = (e: any) => {
-      e.preventDefault();
-      e.stopPropagation();
-      increaseCount(occ);
-    };
-
+    const increaseCountWrap = () => increaseCount(occ);
     const deleteSpeciesWrap = () => deleteSpecies(occ);
 
     const navigateToSpeciesOccurrences = () =>
@@ -113,15 +108,11 @@ const HomeMain: FC<Props> = ({
     return (
       <IonItemSliding key={occ.cid}>
         <IonItem onClick={navigateToSpeciesOccurrences} detail={!isDisabled}>
-          <IonButton
-            className="moth-trap-count-button"
+          <IncrementalButton
             onClick={increaseCountWrap}
-            fill="clear"
-          >
-            <AnimatedNumber value={speciesCount} />
-
-            <div className="label-divider" />
-          </IonButton>
+            value={speciesCount}
+            disabled={isDisabled}
+          />
           <IonLabel>{speciesName}</IonLabel>
         </IonItem>
         {!isDisabled && (

@@ -2,10 +2,9 @@ import { FC, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { toJS } from 'mobx';
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Page, useAlert, useToast } from '@flumens';
 import i18n from 'i18next';
-import { NavContext, isPlatform } from '@ionic/react';
+import { NavContext } from '@ionic/react';
 import Occurrence from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import savedSamples from 'models/collections/samples';
@@ -14,10 +13,6 @@ import { useUserStatusCheck } from 'models/user';
 import { getGPSPermissionStatus } from 'Survey/common/GPSPermissionSubheader';
 import Header from './Header';
 import Main from './Main';
-
-const hapticsImpact = async () => {
-  await Haptics.impact({ style: ImpactStyle.Heavy });
-};
 
 const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
@@ -257,9 +252,9 @@ const HomeController: FC<Props> = ({ sample }) => {
     sample.samples.push(newSubSample);
     newSubSample.startGPS();
     sample.save();
-
-    isPlatform('hybrid') && hapticsImpact();
   };
+
+  const isDisabled = !!sample.metadata.synced_on;
 
   const checkGPSPermissionStatus = () => {
     if (isDisabled) return;
@@ -271,7 +266,6 @@ const HomeController: FC<Props> = ({ sample }) => {
   const { areaSurveyListSortedByTime } = appModel.attrs;
   const isTraining = !!sample.metadata.training;
   const isEditing = sample.metadata.saved;
-  const isDisabled = !!sample.metadata.synced_on;
 
   const previousSurvey = getPreviousSurvey();
 

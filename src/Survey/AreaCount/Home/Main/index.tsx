@@ -37,6 +37,7 @@ import {
   InfoMessage,
 } from '@flumens';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import IncrementalButton from 'Survey/common/IncrementalButton';
 import { Trans as T } from 'react-i18next';
 import CountdownClock from './components/CountdownClock';
 import './styles.scss';
@@ -169,11 +170,7 @@ const AreaCount: FC<Props> = ({
     const speciesName = taxon[taxon.found_in_name];
 
     const isShallow = !species.count;
-    const increaseCountWrap = (e: any) => {
-      e.preventDefault();
-      e.stopPropagation();
-      increaseCount(taxon, isShallow);
-    };
+    const increaseCountWrap = () => increaseCount(taxon, isShallow);
 
     const navigateToSpeciesOccurrencesWrap = () =>
       !isSpeciesDisabled && navigateToSpeciesOccurrences(taxon);
@@ -196,19 +193,16 @@ const AreaCount: FC<Props> = ({
           detail={!isSpeciesDisabled && !hasZeroAbundance}
           onClick={navigateToSpeciesOccurrencesWrap}
         >
-          <IonButton
-            className="precise-area-count-edit-count"
+          <IncrementalButton
             onClick={increaseCountWrap}
-            fill="clear"
-          >
-            {species.count}
-            <div className="label-divider" />
-          </IonButton>
+            value={species.count}
+          />
           <IonLabel>{speciesName}</IonLabel>
           <IonLabel slot="end" className="location-spinner">
             {location}
           </IonLabel>
         </IonItem>
+
         {!isDisabled && (
           <IonItemOptions side="end">
             <IonItemOption color="danger" onClick={deleteSpeciesWrap}>

@@ -6,21 +6,16 @@ import Occurrence from 'models/occurrence';
 import appModel, { SurveyDraftKeys } from 'models/app';
 import CONFIG from 'common/config';
 import { observer } from 'mobx-react';
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { useRouteMatch } from 'react-router';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import { Page, Header, useAlert, device, useToast } from '@flumens';
 import Media from 'models/media';
 import { useUserStatusCheck } from 'models/user';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
-import { isPlatform, IonButton, NavContext } from '@ionic/react';
+import { IonButton, NavContext } from '@ionic/react';
 import { useTranslation, Trans as T } from 'react-i18next';
 import Main from './Main';
 import './styles.scss';
-
-const hapticsImpact = async () => {
-  await Haptics.impact({ style: ImpactStyle.Heavy });
-};
 
 function useDeleteSpeciesPrompt() {
   const alert = useAlert();
@@ -119,15 +114,8 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const increaseCount = (occ: Occurrence) => {
-    if (sample.isDisabled()) {
-      return;
-    }
-
-    // eslint-disable-next-line no-param-reassign
     occ.attrs.count += 1;
     occ.save();
-
-    isPlatform('hybrid') && hapticsImpact();
   };
 
   const getFinishButton = () => {

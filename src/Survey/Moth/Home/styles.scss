@@ -118,22 +118,5 @@
     ion-item {
       --padding-start: 0;
     }
-
-    .moth-trap-count-button {
-      margin: 0;
-      width: 62px;
-      height: 100%;
-      font-size: 1.3em;
-      --padding-end: 0;
-      --padding-start: 0;
-      --border-radius: 0;
-
-      div.label-divider {
-        height: 75%;
-        border-right: 1px solid rgba(0, 0, 0, 0.13);
-        position: absolute;
-        right: 0;
-      }
-    }
   }
 }
