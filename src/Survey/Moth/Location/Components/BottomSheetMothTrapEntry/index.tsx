@@ -17,6 +17,7 @@ import MothTrap from 'common/models/location';
 import { observer } from 'mobx-react';
 import { Trans as T, useTranslation } from 'react-i18next';
 import OnlineStatus from './OnlineStatus';
+import mothTrapIcon from 'common/images/moth-inside-icon.svg';
 import './styles.scss';
 
 function useDeleteTrapPrompt(onDelete: any) {
@@ -84,20 +85,18 @@ const MothTrapEntry: FC<Props> = ({
         detail={false}
         disabled={isUploading || isSelected}
       >
-        <div className="info">
-          <div className="avatar">
-            <IonIcon icon={pinOutline} slot="start" />
+        <div className="box">
+          <div className="icon">
+            <IonIcon icon={mothTrapIcon} slot="start" />
           </div>
 
           <div className="label">
             <h4>{label}</h4>
 
             {location?.latitude && (
-              <IonLabel position="stacked" mode="ios">
-                <IonLabel>
-                  <T>Lat</T>: {location.latitude.toFixed(3)}, <T>Long</T>:{' '}
-                  {location.longitude.toFixed(3)}
-                </IonLabel>
+              <IonLabel>
+                <IonIcon icon={pinOutline} />
+                {location.latitude.toFixed(3)}, {location.longitude.toFixed(3)}
               </IonLabel>
             )}
           </div>
