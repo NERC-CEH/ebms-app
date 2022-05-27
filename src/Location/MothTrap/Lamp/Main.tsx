@@ -5,6 +5,7 @@ import { IonList, IonItemDivider } from '@ionic/react';
 import { observer } from 'mobx-react';
 import numberIcon from 'common/images/number.svg';
 import Location, { Lamp } from 'models/location';
+import './styles.scss';
 
 type Props = {
   location: Location;

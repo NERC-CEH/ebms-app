@@ -18,7 +18,7 @@ const MothTrapSetup: FC<Props> = ({ sample: location }) => {
   const lamp = location.attrs.lamps.find(byId) as Lamp;
 
   return (
-    <Page id="moth-trap-setup">
+    <Page id="moth-trap-setup-lamp">
       <Header title="Lamp Details" />
       <Main location={location} lamp={lamp} />
     </Page>
