@@ -1,7 +1,8 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useEffect } from 'react';
 import Sample, { useValidateCheck } from 'models/sample';
+import { getGPSPermissionStatus } from 'Survey/common/GPSPermissionSubheader';
 import { observer } from 'mobx-react';
-import { Page, Header } from '@flumens';
+import { Page, Header, useToast } from '@flumens';
 import { IonButton, NavContext } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -13,6 +14,8 @@ type Props = {
 };
 
 const DetailsController: FC<Props> = ({ sample }) => {
+  const isDisabled = sample.isUploaded();
+  const toast = useToast();
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
   const checkSampleStatus = useValidateCheck(sample);
@@ -28,6 +31,14 @@ const DetailsController: FC<Props> = ({ sample }) => {
 
     navigate(url, 'forward', 'pop');
   };
+
+  const checkGPSPermissionStatus = () => {
+    if (isDisabled) return;
+
+    getGPSPermissionStatus(toast);
+  };
+
+  useEffect(checkGPSPermissionStatus, []);
 
   const getNextButton = sample.metadata.completedDetails ? null : (
     <IonButton onClick={onFinish}>

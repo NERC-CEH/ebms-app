@@ -7,7 +7,7 @@ import { observer } from 'mobx-react';
 import Sample from 'models/sample';
 import appModel from 'models/app';
 import Map from './Components/Map';
-import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
+import gpsPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 
 import './styles.scss';
 
@@ -34,7 +34,7 @@ const Location: FC<Props> = ({ sample }) => {
       <Header
         title="Moth traps"
         rightSlot={!isDisabled && newTrapButton}
-        subheader={<GPSPermissionSubheader appModel={appModel} />}
+        subheader={!isDisabled && gpsPermissionSubheader()}
       />
       <Main>
         <Map

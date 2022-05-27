@@ -1,8 +1,7 @@
 import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
-import appModel from 'models/app';
 import { Header, MenuAttrToggle, useAlert } from '@flumens';
-import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
+import gpsPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import './styles.scss';
 
 type Props = {
@@ -61,7 +60,7 @@ const HeaderComponent: FC<Props> = ({
     <Header
       title="Area"
       rightSlot={!isDisabled && GPSToggle}
-      subheader={<GPSPermissionSubheader appModel={appModel} />}
+      subheader={!isDisabled && gpsPermissionSubheader()}
     />
   );
 };
