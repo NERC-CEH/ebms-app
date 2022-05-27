@@ -37,7 +37,7 @@ const TransectHomeController: FC<Props> = ({ sample }) => {
     const saveAndReturn = () => {
       if (!sample.attrs.surveyEndTime) {
         // eslint-disable-next-line no-param-reassign
-        sample.attrs.surveyEndTime = new Date();
+        sample.attrs.surveyEndTime = new Date().toISOString();
       }
       sample.save();
       navigate(`/home/user-surveys`, 'root');

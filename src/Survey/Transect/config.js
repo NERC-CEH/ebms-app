@@ -175,7 +175,7 @@ const config = {
 
   create(Sample) {
     const recorder = `${userModel.attrs.firstName} ${userModel.attrs.lastName}`;
-    const now = new Date();
+    const now = new Date().toISOString();
 
     const sample = new Sample({
       metadata: {
@@ -186,7 +186,7 @@ const config = {
         date: now,
         location: null,
         sample_method_id: 22,
-        surveyStartTime: new Date(),
+        surveyStartTime: now,
         recorder,
       },
     });
