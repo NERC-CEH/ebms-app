@@ -5,7 +5,6 @@ import { NavContext } from '@ionic/react';
 import Sample from 'models/sample';
 import locationsCollection from 'models/collections/locations';
 import MothTrap, { useValidateCheck } from 'models/location';
-import { useToast } from '@flumens';
 import 'leaflet.markercluster'; // eslint-disable-line
 import 'leaflet/dist/leaflet.css';
 import BottomSheet from '../BottomSheet';
