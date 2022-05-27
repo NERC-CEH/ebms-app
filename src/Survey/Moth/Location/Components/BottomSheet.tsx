@@ -1,5 +1,4 @@
-import { useRef, FC, useState } from 'react';
-import Sheet, { SheetRef } from 'react-modal-sheet';
+import { FC, useState } from 'react';
 import Sample from 'models/sample';
 import appModel from 'models/app';
 import locations from 'models/collections/locations';
@@ -9,6 +8,8 @@ import {
   useIonViewWillLeave,
   useIonViewWillEnter,
   IonButton,
+  IonContent,
+  IonModal,
 } from '@ionic/react';
 import { observer } from 'mobx-react';
 import turf from '@turf/distance';
@@ -16,9 +17,9 @@ import hasLocationMatch from 'Survey/common/hasLocationMatch';
 import { informationCircleOutline } from 'ionicons/icons';
 import BottomSheetMothTrapEntry from './BottomSheetMothTrapEntry';
 
-const SNAP_POSITIONS = [0.8, 0.5, 0.22, 0.05];
-const DEFAULT_SNAP_POSITION = SNAP_POSITIONS.length - 2;
-const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 1;
+const SNAP_POSITIONS = [0.05, 0.22, 0.5, 0.8];
+const DEFAULT_SNAP_POSITION = 0.22;
+const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 0.05;
 
 interface Props {
   mothTraps: typeof locations;
@@ -39,10 +40,6 @@ const BottomSheet: FC<Props> = ({
 }) => {
   const [isMounted, setUnmount] = useState(true);
 
-  const ref = useRef<SheetRef>();
-  const snapTo = (i: number) => ref.current?.snapTo(i);
-  const onClose = () => snapTo(SNAP_POSITIONS.length - 1); // prevent full closure
-
   type MothTrapWithDistance = [MothTrap, number];
 
   const getMothTrapWithDistance = (
@@ -50,7 +47,7 @@ const BottomSheet: FC<Props> = ({
   ): MothTrapWithDistance => {
     if (!mothTrap.attrs.location?.latitude) return [mothTrap, 0];
 
-    const { latitude, longitude } = mothTrap.attrs?.location;
+    const { latitude, longitude } = mothTrap.attrs?.location || {};
 
     const from = [longitude, latitude]; // turf long, lat first
     const to = [...centroid].reverse(); // turf long, lat first
@@ -112,19 +109,17 @@ const BottomSheet: FC<Props> = ({
     : DEFAULT_SNAP_POSITION_IF_NO_CONNECTION;
 
   return (
-    <Sheet
+    <IonModal
       id="bottom-sheet"
-      ref={ref}
       isOpen={isMounted}
-      onClose={onClose}
-      snapPoints={SNAP_POSITIONS}
-      initialSnap={defeaultPosition}
+      showBackdrop={false}
+      backdropDismiss={false}
+      backdropBreakpoint={0.5}
+      breakpoints={SNAP_POSITIONS}
+      initialBreakpoint={defeaultPosition}
     >
-      <Sheet.Container>
-        <Sheet.Header />
-        <Sheet.Content>{getMothTraps()}</Sheet.Content>
-      </Sheet.Container>
-    </Sheet>
+      <IonContent>{getMothTraps()}</IonContent>
+    </IonModal>
   );
 };
 

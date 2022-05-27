@@ -78,7 +78,6 @@
     "react-i18next": "11.13.0",
     "react-leaflet": "3.2.2",
     "react-leaflet-control": "^2.1.2",
-    "react-modal-sheet": "^1.4.1",
     "react-router": "5.2.1",
     "react-router-dom": "5.3.0",
     "swiper": "^8.1.5",

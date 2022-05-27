@@ -78,14 +78,14 @@ const MothTrapEntry: FC<Props> = ({
   return (
     <IonItemSliding>
       <IonItem
-        className="box-container"
+        className="moth-trap"
         onClick={onClick}
         routerLink={link}
         detail={false}
         disabled={isUploading || isSelected}
       >
-        <div className="box">
-          <div className="icon">
+        <div className="info">
+          <div className="avatar">
             <IonIcon icon={pinOutline} slot="start" />
           </div>
 
