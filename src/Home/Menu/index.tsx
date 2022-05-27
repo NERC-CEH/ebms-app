@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
 import Log from 'helpers/log';
-import { Page, useAlert } from '@flumens';
+import { Page, useAlert, useLoader, useToast } from '@flumens';
 import appModel from 'models/app';
 import userModel from 'models/user';
 import { Trans as T } from 'react-i18next';
@@ -37,6 +37,8 @@ function showLogoutConfirmationDialog(callback: any, alert: any) {
 
 const Controller: FC = ({ ...restProps }) => {
   const alert = useAlert();
+  const loader = useLoader();
+  const toast = useToast();
 
   function logOut() {
     Log('Info:Menu: logging out.');
@@ -48,8 +50,31 @@ const Controller: FC = ({ ...restProps }) => {
 
   const isLoggedIn = userModel.hasLogIn();
 
-  const checkActivation = () => userModel.checkActivation();
-  const resendVerificationEmail = () => userModel.resendVerificationEmail();
+  const checkActivation = async () => {
+    await loader.show('Please wait...');
+    try {
+      await userModel.checkActivation();
+      if (!userModel.attrs.verified) {
+        toast.warn('The user has not been activated or is blocked.');
+      }
+    } catch (err: any) {
+      toast.error(err);
+    }
+    loader.hide();
+  };
+
+  const resendVerificationEmail = async () => {
+    await loader.show('Please wait...');
+    try {
+      await userModel.resendVerificationEmail();
+      toast.success(
+        'A new verification email was successfully sent now. If you did not receive the email, then check your Spam or Junk email folders.'
+      );
+    } catch (err: any) {
+      toast.error(err);
+    }
+    loader.hide();
+  };
 
   return (
     <Page id="info-menu">

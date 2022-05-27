@@ -1878,3 +1878,15 @@ msgstr "Optie toegevoegd om nachtvlinderval toe te voegen"
 # Version 1.15 whats new message
 msgid "Bug fixes"
 msgstr "Foutcorrecties"
+
+# User account action
+msgid "Resend"
+msgstr ""
+
+# User account action
+msgid "Looks like your email hasn't been verified yet."
+msgstr ""
+
+# User account action
+msgid "Should we resend the verification email?"
+msgstr ""

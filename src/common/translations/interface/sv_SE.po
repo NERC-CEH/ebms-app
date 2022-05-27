@@ -1905,3 +1905,15 @@ msgstr "Lade till alternativ för att skapa Nattfjärilsfälla"
 # Version 1.15 whats new message
 msgid "Bug fixes"
 msgstr "Bug-fixar"
+
+# User account action
+msgid "Resend"
+msgstr ""
+
+# User account action
+msgid "Looks like your email hasn't been verified yet."
+msgstr ""
+
+# User account action
+msgid "Should we resend the verification email?"
+msgstr ""

@@ -1921,3 +1921,15 @@ msgstr "Opzioni aggiuntive per create una trappola per falene"
 # Version 1.15 whats new message
 msgid "Bug fixes"
 msgstr "Risoluzione problemi"
+
+# User account action
+msgid "Resend"
+msgstr ""
+
+# User account action
+msgid "Looks like your email hasn't been verified yet."
+msgstr ""
+
+# User account action
+msgid "Should we resend the verification email?"
+msgstr ""
