@@ -353,6 +353,8 @@ const AreaCount: FC<Props> = ({
     areaPretty = area ? `${area} m²` : '';
   }
 
+  const { webForm } = sample.getSurvey();
+
   return (
     <Main id="precise-area-count-edit">
       {isDisabled && (
@@ -367,7 +369,7 @@ const AreaCount: FC<Props> = ({
               App.
             </T>
             <IonButton
-              href={`${config.backend.url}/mydata/samples/edit?sample_id=${sample.id}`}
+              href={`${config.backend.url}/${webForm}?sample_id=${sample.id}`}
               expand="block"
               color="dark"
               fill="outline"

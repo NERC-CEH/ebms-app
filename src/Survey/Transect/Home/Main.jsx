@@ -72,6 +72,8 @@ class Edit extends Component {
 
     const baseURL = `/survey/transect/${sample.cid}/edit`;
 
+    const { webForm } = sample.getSurvey();
+
     return (
       <Main id="transect-edit">
         {isDisabled && (
@@ -85,7 +87,7 @@ class Edit extends Component {
               App.
             </T>
             <IonButton
-              href={`${config.backend.url}/mydata/samples/edit?sample_id=${sample.id}`}
+              href={`${config.backend.url}/${webForm}?sample_id=${sample.id}`}
               expand="block"
               color="dark"
               fill="outline"
