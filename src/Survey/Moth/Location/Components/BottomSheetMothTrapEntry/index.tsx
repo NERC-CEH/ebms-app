@@ -85,8 +85,8 @@ const MothTrapEntry: FC<Props> = ({
         detail={false}
         disabled={isUploading || isSelected}
       >
-        <div className="box">
-          <div className="icon">
+        <div className="info">
+          <div className="avatar">
             <IonIcon icon={mothTrapIcon} slot="start" />
           </div>
 
