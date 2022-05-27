@@ -18,4 +18,10 @@
   .transect svg {
     margin: 5px;
   }
+
+  ion-item {
+    ion-label[slot='start'] {
+      white-space: normal;
+    }
+  }
 }
