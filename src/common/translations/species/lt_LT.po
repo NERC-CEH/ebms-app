@@ -1,12 +1,12 @@
 # 
 # Translators:
 # Karolis, 2020
-# Egle Viciuviene <eviciuviene@gmail.com>, 2021
+# Egle Viciuviene <eviciuviene@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Egle Viciuviene <eviciuviene@gmail.com>, 2021\n"
+"Last-Translator: Egle Viciuviene <eviciuviene@gmail.com>, 2022\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 msgid "Erynnis-tages-description"
 msgstr ""
-"Juodoji hesperija - nedidelis, tamsių spalvų drugelis. Gyvena gerai "
+"Juodoji hesperija yra nedidelis, tamsių spalvų druys. Gyvena gerai "
 "įšildomose, atvirose pievose, kuriose auga gargždeniai (Lotus sp.), raženiai"
 " (Securigera sp.), liucerna (Medicago sp.). Patelės kiaušinius po vieną deda"
 " ant mitybinių augalų. Šviežus kiaušinis būna šviesiai žalios spalvos, o po "

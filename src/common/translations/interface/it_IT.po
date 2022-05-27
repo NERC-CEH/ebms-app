@@ -1698,11 +1698,11 @@ msgstr "Osservazione diurna"
 
 # Moth survey method type
 msgid "Dusking"
-msgstr ""
+msgstr "imbrunire"
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr ""
+msgstr "Attratte da una finestra illuminata"
 
 # Moth survey method type
 msgid "Sugaring"
@@ -1718,194 +1718,206 @@ msgstr ""
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr ""
+msgstr "Trappola a feromoni"
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr ""
+msgstr "Altri metodi (aggiungere un commento)"
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr ""
+msgstr "Non registrato"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr ""
+msgstr "Dettagli del campionamento"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr ""
+msgstr "Campionamento delle trappole per falene"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr ""
+msgstr "Campionamento falene"
 
 # Moth survey divider label
 msgid "Species list"
-msgstr ""
+msgstr "Lista specie"
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr ""
+msgstr "Operatore"
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr ""
+msgstr "Lista falene"
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr ""
+msgstr "Foto della falena"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr ""
+msgstr "Inserire il nome dell'operatore, se è differente"
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr ""
+msgstr "Nome dell'operatore"
 
 # Latitude
 msgid "Lat"
-msgstr ""
+msgstr "Latitudine"
 
 # Longitude
 msgid "Long"
-msgstr ""
+msgstr "Longitudine"
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr ""
+msgstr "Conteggio interno"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr ""
+msgstr "Conteggio esterno"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr ""
+msgstr "Foto Falene"
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr ""
+msgstr "Trappole per falene"
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr ""
+msgstr "Trappola per falene"
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
+"Non hai ancora creato trappole per falene. Per crearne una vai su "
+"<2>website</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr ""
+msgstr "Per vedere la mappa, per favore, connettiti ad internet."
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr ""
+msgstr "Per favore, aggiungi la trappola per falene"
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
+"Hai solo una trappola per falene. Per crearne altre, per favore, vai su "
+"<2>website</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr ""
+msgstr "Identificazione..."
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr ""
+msgstr "Sconosciuto"
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr ""
+msgstr "Per favore, aggiungi una foto"
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr ""
+msgstr "Specie sconosciuta"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr ""
+msgstr "<0>Warning</0> - non riusciamo ad identificare questa specie"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we think it is"
-msgstr ""
+msgstr "<0>Warning</0> - pensiamo che sia"
 
 # Moth survey image gallery warning message
 msgid "likely a"
-msgstr ""
+msgstr "probabilmente un"
 
 # App settings title
 msgid "Surveying"
-msgstr ""
+msgstr "Campionamento"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr ""
+msgstr "Campionamento falene (SPRING)"
 
 # Survey name
 msgid "Moth Survey"
-msgstr ""
+msgstr "Campionamento falene"
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr ""
+msgstr "Impostazioni campionamento falene"
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr ""
+msgstr "Usa l'identificazione per immagini"
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
 msgstr ""
+"Ti aiuteremo ad identificare le specie usando il nostro catalogo fotografico"
+" delle specie"
 
 # Moth survey button label
 msgid "IDENTIFY"
-msgstr ""
+msgstr "IDENTIFICA"
 
 # Moth survey button label
 msgid "Identify All"
-msgstr ""
+msgstr "Identifica tutto"
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr ""
+msgstr "Identificazione immagine"
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
+"Il catalogo fotografico è al momento <1>disable</1>. Per favore, vai a "
+"<4>Setting</4> dell'applicazione per abilitarlo."
 
 # Whats new message title
 msgid "What's New"
-msgstr ""
+msgstr "Cosa c'è di nuovo"
 
 # Version 1.15 whats new message
 msgid "Record moths with the help of automatic identification in real-time."
 msgstr ""
+"Registra le falene con l'aiuto dell'identificazione automatica in tempo "
+"reale."
 
 # Version 1.15 whats new message
 msgid "Bug fixes and improvements"
-msgstr ""
+msgstr "Risoluzione problemi e miglioramenti"
 
 # Version 1.15 whats new message
 msgid "Added option to identify moths with image classifier"
-msgstr ""
+msgstr "Opzioni aggiuntive per identificare le falene tramite immagine"
 
 # Version 1.15 whats new message
 msgid "Added App setting option to disable image classifier"
 msgstr ""
+"Opzioni aggiuntive di configurazione dell'applicazione per disabilitare il "
+"catalogo fotografico"
 
 # Version 1.15 whats new message
 msgid "Added option to create Moth trap"
-msgstr ""
+msgstr "Opzioni aggiuntive per create una trappola per falene"
 
 # Version 1.15 whats new message
 msgid "Bug fixes"
-msgstr ""
+msgstr "Risoluzione problemi"
