@@ -61,7 +61,16 @@ const AttrPageFromRoute: FC<Props> = ({ sample: location }: any) => {
     return null;
   }
 
-  return <AttrPage model={location} attr={attr} attrProps={attrProps} />;
+  const { headerProps } = attrProps;
+
+  return (
+    <AttrPage
+      model={location}
+      attr={attr}
+      attrProps={attrProps}
+      headerProps={headerProps}
+    />
+  );
 };
 
 const routes = [

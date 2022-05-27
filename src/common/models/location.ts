@@ -112,6 +112,9 @@ class LocationModel extends Model {
     },
 
     'type-other': {
+      headerProps: {
+        title: 'Other type',
+      },
       input: 'textarea',
       info: 'What type of trap was it?',
       remote: { id: 288 },
