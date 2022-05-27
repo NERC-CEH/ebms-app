@@ -5,7 +5,7 @@ import Location, { Lamp, useValidateCheck } from 'models/location';
 import UUID from 'common/helpers/UUID';
 import { useRouteMatch } from 'react-router';
 import { observer } from 'mobx-react';
-import { Page, Header, useAlert } from '@flumens';
+import { Page, Header, useAlert, useToast } from '@flumens';
 import { IonButton, NavContext } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 // import BackButton from '../Components/BackButton';
@@ -51,6 +51,7 @@ const MothTrapSetup: FC<Props> = ({ sample: location }) => {
   const { navigate, goBack } = useContext(NavContext);
   const validateLocation = useValidateCheck();
   const { url } = useRouteMatch();
+  const toast = useToast();
   const showDeleteLampPrompt = useDeleteLampPrompt();
 
   const deleteLamp = async (entry: Lamp) => {
@@ -64,7 +65,7 @@ const MothTrapSetup: FC<Props> = ({ sample: location }) => {
     }
   };
 
-  const onSubmit = async () => {
+  const onSubmit = () => {
     const invalids = validateLocation(location);
     if (invalids) return;
 
@@ -73,7 +74,7 @@ const MothTrapSetup: FC<Props> = ({ sample: location }) => {
 
     goBack();
 
-    location.saveRemote();
+    location.saveRemote().catch(toast.error);
   };
 
   const addNewLamp = () => {

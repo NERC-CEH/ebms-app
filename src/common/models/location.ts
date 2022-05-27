@@ -13,7 +13,7 @@ import * as Yup from 'yup';
 import userModel from 'models/user';
 import UUID from 'common/helpers/UUID';
 import { observable } from 'mobx';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { Location } from './collections/locations/service';
 import { locationsStore } from './store';
 import { getLocalAttributes } from './utils';
@@ -265,7 +265,6 @@ class LocationModel extends Model {
         data: submission,
       };
 
-      // await new Promise(res => setTimeout(res, 3000));
       const { data: dataRaw, status } = await axios(options);
       let data = dataRaw;
 
@@ -280,8 +279,6 @@ class LocationModel extends Model {
         }
       }
 
-      console.log(data);
-
       // update metadata
       const uploadTime = new Date(data.values.updated_on).getTime();
       this.metadata.updatedOn = uploadTime;
@@ -294,9 +291,27 @@ class LocationModel extends Model {
 
       console.log('Location uploading done');
       return this;
-    } catch (error: any) {
+    } catch (e: any) {
       this.remote.synchronising = false;
-      throw error;
+
+      const err = e as AxiosError;
+
+      const serverMessage = err.response?.data?.message;
+      if (!serverMessage) {
+        throw e;
+      }
+
+      if (typeof serverMessage === 'object') {
+        const getErrorMessageFromObject = (errors: any) =>
+          Object.entries(errors).reduce(
+            (string, val: any) => `${string}${val[0]} ${val[1]}\n`,
+            ''
+          );
+
+        throw new Error(getErrorMessageFromObject(serverMessage));
+      }
+
+      throw new Error(serverMessage);
     }
   }
 

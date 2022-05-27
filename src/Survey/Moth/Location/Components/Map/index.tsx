@@ -4,11 +4,12 @@ import { NavContext } from '@ionic/react';
 import Sample from 'models/sample';
 import locationsCollection from 'models/collections/locations';
 import MothTrap, { useValidateCheck } from 'models/location';
+import { useToast } from '@flumens';
+import 'leaflet.markercluster'; // eslint-disable-line
+import 'leaflet/dist/leaflet.css';
 import BottomSheet from '../BottomSheet';
 import Map from './Components/Map';
-import 'leaflet.markercluster';
 import './styles.scss';
-import 'leaflet/dist/leaflet.css';
 
 interface Props {
   sample: Sample;
@@ -25,6 +26,7 @@ const MapComponent: FC<Props> = ({
 }) => {
   const { goBack } = useContext(NavContext);
   const validateLocation = useValidateCheck();
+  const toast = useToast();
 
   // dynamic center when the user moves the map manually
   const [currentMapCenter, setMapCurrentCenter] = useState([51, -1]);
@@ -45,7 +47,7 @@ const MapComponent: FC<Props> = ({
     const invalids = validateLocation(location);
     if (invalids) return;
 
-    location.saveRemote();
+    location.saveRemote().catch(toast.error);
   };
 
   return (
