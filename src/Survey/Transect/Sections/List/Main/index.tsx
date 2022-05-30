@@ -66,8 +66,8 @@ const Sections: FC<Props> = ({ sample, appModel, onTransectSelect }) => {
 
   const getSectionItemWrap = (s: Sample) => getSectionItem(s, match);
   const byCode = (smp1: Sample, smp2: Sample) => {
-    const sectionCodeNumberIndex1 = smp1.attrs.location.code.match(/\d+/)[0];
-    const sectionCodeNumberIndex2 = smp2.attrs.location.code.match(/\d+/)[0];
+    const sectionCodeNumberIndex1 = smp1.attrs.location.code.match(/\d+$/)?.[0];
+    const sectionCodeNumberIndex2 = smp2.attrs.location.code.match(/\d+$/)?.[0];
     return sectionCodeNumberIndex1 - sectionCodeNumberIndex2;
   };
   const sections = sample.samples.slice().sort(byCode).map(getSectionItemWrap);
