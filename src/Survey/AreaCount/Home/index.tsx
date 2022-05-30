@@ -264,7 +264,10 @@ const HomeController: FC<Props> = ({ sample }) => {
   const isDisabled = !!sample.metadata.synced_on;
 
   const checkGPSPermissionStatus = () => {
-    if (isDisabled) return;
+    const isTimerPaused = sample.isTimerPaused();
+    const isTimerFinished = sample.isTimerFinished();
+    if (isDisabled || isTimerPaused || isTimerFinished) return;
+
     getGPSPermissionStatus(toast);
   };
 
