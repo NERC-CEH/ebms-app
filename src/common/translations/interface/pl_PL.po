@@ -1,35 +1,36 @@
 # 
 # Translators:
-# Vilius Stankaitis <vilius@flumens.io>, 2020
-# Karolis, 2021
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
+# Aleksandra Magdziarek <aleksandra.magdziarek@biol.lu.se>, 2020
+# Izabela Dziekańska <dzika200@interia.pl>, 2021
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
+# Michał Kochanowski, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022\n"
-"Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
+"Last-Translator: Michał Kochanowski, 2022\n"
+"Language-Team: Polish (Poland) (https://www.transifex.com/ceh/teams/95441/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Seleccione su país"
+msgstr "Wybierz kraj"
 
 msgid "United Kingdom"
-msgstr "Reino Unido"
+msgstr "Wielka Brytania"
 
 msgid "Lithuania"
-msgstr "Lituania"
+msgstr "Litwa"
 
 msgid "Spain"
-msgstr "España"
+msgstr "Hiszpania"
 
 msgid "Andorra"
-msgstr "Andorra"
+msgstr "Andora"
 
 msgid "Albania"
 msgstr "Albania"
@@ -38,1132 +39,1124 @@ msgid "Austria"
 msgstr "Austria"
 
 msgid "Bosnia and Herzegovina"
-msgstr "Bosnia y Herzegovina"
+msgstr "Bośnia i Hercegowina"
 
 msgid "Belgium"
-msgstr "Bélgica"
+msgstr "Belgia"
 
 msgid "Bulgaria"
-msgstr "Bulgaria"
+msgstr "Bułgaria"
 
 msgid "Belarus"
-msgstr "Bielorrusia"
+msgstr "Białoruś"
 
 msgid "Switzerland"
-msgstr "Suiza"
+msgstr "Szwajcaria"
 
 msgid "Cyprus"
-msgstr "Chipre "
+msgstr "Cypr"
 
 msgid "Czechia"
-msgstr "República Checa"
+msgstr "Czechy"
 
 msgid "Germany"
-msgstr "Alemania"
+msgstr "Niemcy"
 
 msgid "Denmark"
-msgstr "Dinamarca"
+msgstr "Dania"
 
 msgid "Estonia"
-msgstr "Estonia "
+msgstr "Estonia"
 
 msgid "Spain (Canary Islands)"
-msgstr "España (Islas Canarias)"
+msgstr "Hiszpania (Wyspy Kanaryjskie)"
 
 msgid "Finland"
 msgstr "Finlandia"
 
 msgid "France"
-msgstr "Francia"
+msgstr "Francja"
 
 msgid "Greece"
-msgstr "Grecia"
+msgstr "Grecja"
 
 msgid "Croatia"
-msgstr "Croacia"
+msgstr "Chorwacja"
 
 msgid "Hungary"
-msgstr "Hungría"
+msgstr "Węgry"
 
 msgid "Ireland"
-msgstr "Irlanda"
+msgstr "Irlandia"
 
 msgid "Iceland"
 msgstr "Islandia"
 
 msgid "Italy"
-msgstr "Italia"
+msgstr "Włochy"
 
 msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
 msgid "Luxembourg"
-msgstr "Luxemburgo"
+msgstr "Luksemburg"
 
 msgid "Latvia"
-msgstr "Letonia"
+msgstr "Łotwa"
 
 msgid "Moldova"
-msgstr "Moldavia"
+msgstr "Mołdawia"
 
 msgid "Montenegro"
-msgstr "Montenegro"
+msgstr "Czarnogóra"
 
 msgid "North Macedonia"
-msgstr "Macedonia del norte"
+msgstr "Macedonia Północna"
 
 msgid "Malta"
 msgstr "Malta"
 
 msgid "Netherlands"
-msgstr "Países Bajos"
+msgstr "Holandia"
 
 msgid "Norway"
-msgstr "Noruega"
+msgstr "Norwegia"
 
 msgid "Poland"
-msgstr "Polonia"
+msgstr "Polska"
 
 msgid "Portugal"
-msgstr "Portugal"
+msgstr "Portugalia"
 
 msgid "Portugal (Azores)"
-msgstr "Portugal (Azores)"
+msgstr "Portugalia (Azory)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugal (Islas de Madeira)"
+msgstr "Portugalia (Madera)"
 
 msgid "Romania"
-msgstr "Rumanía"
+msgstr "Rumunia"
 
 msgid "Serbia"
 msgstr "Serbia"
 
 msgid "Russian Federation"
-msgstr "Federación Rusa"
+msgstr "Rosja"
 
 msgid "Slovenia"
-msgstr "Eslovenia"
+msgstr "Słowenia"
 
 msgid "Slovakia"
-msgstr "Eslovaquia"
+msgstr "Słowacja"
 
 msgid "Turkey (Europe)"
-msgstr "Turkía (Europa)"
+msgstr "Turcja (Europa)"
 
 msgid "Turkey (Asia)"
-msgstr "Turkía (Asia)"
+msgstr "Turcja (Azja)"
 
 msgid "Ukraine"
-msgstr "Ucrania"
+msgstr "Ukraina"
 
 msgid "Elsewhere"
-msgstr "En otro lugar"
+msgstr "Gdzie indziej"
 
 msgid "Skip"
-msgstr "Omitir"
+msgstr "Pomiń"
 
 msgid "Next"
-msgstr "Siguiente"
+msgstr "Następny"
 
 msgid "Get Started"
-msgstr "Empezar"
+msgstr "Rozpocznij"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr "Por favor inicie sesión con su cuenta de eBMS o regístrese."
+msgstr "Zaloguj się na swoje konto eBMS lub zarejestruj."
 
 msgid "Password"
-msgstr "Contraseña"
+msgstr "Hasło"
 
 msgid "Sign in"
-msgstr "Registrarse"
+msgstr "Zaloguj się"
 
 msgid "Register"
-msgstr "Registro"
+msgstr "Zarejestruj się"
 
 msgid "Forgot password?"
-msgstr "¿Se te olvidó tu contraseña?"
+msgstr "Zapomniałeś hasło?"
 
 msgid "User not found."
-msgstr "Usuario no encontrado"
+msgstr "Użytkownik nie został znaleziony."
 
 msgid "Login"
-msgstr "Iniciar sesión"
+msgstr "Login"
 
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "Ustawienia"
 
 msgid "Info"
-msgstr "Información"
+msgstr "Informacje"
 
 msgid "About"
-msgstr "Acerca de"
+msgstr "o"
 
 msgid "Help"
-msgstr "Ayuda"
+msgstr "Pomoc"
 
 msgid "Privacy Policy"
-msgstr "Política de privacidad"
+msgstr "Polityka prywatności"
 
 msgid "Credits"
-msgstr "Créditos"
+msgstr ""
 
 msgid "Email"
-msgstr "Correo Electrónico"
+msgstr "E-mail"
 
 msgid "First Name"
-msgstr "Nombre "
+msgstr "Imię"
 
 msgid "Surname"
-msgstr "Apellido"
+msgstr "Nazwisko"
 
 msgid "I agree to"
-msgstr "Estoy de acuerdo con"
+msgstr "Zgadzam się"
 
 msgid "Terms and Conditions"
-msgstr "Términos y Condiciones"
+msgstr "Regulamin"
 
 msgid "Reset"
-msgstr "Reiniciar"
+msgstr "Zrestartuj"
 
 msgid "Records"
-msgstr "Registros"
+msgstr "Rekordy"
 
 msgid "Upload All"
-msgstr "Enviar todo"
+msgstr "Dodaj wszystko"
 
 msgid "Remove All Saved"
-msgstr "Eliminar todos los guardados"
+msgstr "Usuń wszystkie zapisane"
 
 msgid "Application"
-msgstr "Aplicación "
+msgstr "Aplikacja"
 
 msgid "Training Mode"
-msgstr "Modo de entrenamiento"
+msgstr "Tryb szkoleniowy"
 
 msgid "Experimental Features"
-msgstr "Características experimentales"
+msgstr "Właściwości eksperymentalne"
 
 msgid "Welcome"
-msgstr "Bienvenido"
+msgstr "Witamy"
 
 msgid "Lets start!"
-msgstr "¡Empecemos!"
+msgstr "Zaczynamy!"
 
 msgid "TOP RECORDERS"
-msgstr "MEJORES REGISTRADORES"
+msgstr "NAJLEPSZE ODSERWACJE"
 
 msgid "Top Species from all timed counts"
-msgstr "Especies más vistas en todos los Recuentos de 15 minutos"
+msgstr "Gatunki o największej liczbie obserwacji"
 
 msgid "Back"
-msgstr "Atrás"
+msgstr "Wróć"
 
 msgid "Menu"
 msgstr "Menu"
 
 msgid "App"
-msgstr "Aplicación"
+msgstr "Aplikacja"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
-"Estamos muy agradecidos a todas las personas que ayudaron a crear esta "
-"aplicación:"
+"Jesteśmy bardzo wdzięczni wszystkim, którzy pomogli stworzyć tę aplikację:"
 
 msgid "Home"
-msgstr "Inicio"
+msgstr "Home"
 
 msgid "Guide"
-msgstr "Guía"
+msgstr "Przewodnik"
 
 msgid "Account"
-msgstr "Cuenta"
+msgstr "Konto"
 
 msgid "Offline"
-msgstr "Desconectado"
+msgstr "Offline"
 
 msgid "Sorry, looks like you're offline."
-msgstr "Lo siento, parece que estás desconectado."
+msgstr "Przepraszamy, wygląda na to, że jesteś offline."
 
 msgid "OK"
-msgstr "DE ACUERDO"
+msgstr "OK"
 
 msgid "Sorry"
-msgstr "Lo siento"
+msgstr "Przepraszamy"
 
 msgid "Please wait..."
-msgstr "Por favor espera..."
+msgstr "Proszę poczekaj"
 
 msgid "name is a required field"
-msgstr "nombre es un campo obligatorio"
+msgstr "imię jest wymaganym polem"
 
 msgid "password is a required field"
-msgstr "La contraseña es un campo obligatorio"
+msgstr "Hasło jest wymaganym polem"
 
 msgid "Login error:"
-msgstr "Error de inicio de sesión:"
+msgstr "Błąd logowania"
 
 msgid "Failed to fetch"
-msgstr "Fallo en recuperar"
+msgstr "Nie udało się pobrać danych"
 
 msgid "Incorrect password or email."
-msgstr "Contraseña o correo electrónico incorrecto."
+msgstr "Niepoprawne hasło albo e-mail"
 
 # Part of logout process
 msgid "Logout"
-msgstr "Cerrar sesión"
+msgstr "Wyloguj się"
 
 # Part of logout process
 msgid "Are you sure you want to logout?"
-msgstr "¿Estás seguro de que quieres cerrar sesión?"
+msgstr "Czy jesteś pewny, że chcesz się wylogować?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr "Descartar datos locales"
+msgstr "Odrzuć lokalne dane"
 
 msgid "This will delete all the records on this device."
-msgstr "Esto borrará todos los registros en este dispositivo."
+msgstr "Spowoduje to usunięcie wszystkich rekordów na tym urządzeniu."
 
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anuluj"
 
 msgid "Welcome aboard!"
-msgstr "¡Bienvenido a bordo!"
+msgstr "Witaj!"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Antes de enviar cualquier registro, revise su correo electrónico y haga clic"
-" en el enlace de verificación."
+"Zanim prześlesz jakichkolwiek rekordy sprawdź swoją pocztę e-mail i kliknij link weryfikacyjny.\n"
+" "
 
 msgid "OK, got it"
-msgstr "Ok, lo tengo"
+msgstr "OK, rozumiem"
 
 msgid "Please fill in"
-msgstr "Por favor rellenalo"
+msgstr "Proszę uzupełnij"
 
 msgid "Area Count"
-msgstr "Área de Conteo"
+msgstr "Obszar zliczeń"
 
 msgid "Area"
-msgstr "Área"
+msgstr "Obszar"
 
 # Location attribute label
 msgid "Location"
-msgstr "Lugar"
+msgstr "Lokalizacja"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr "Ubicación requerida"
+msgstr "Lokalizacja wymagana"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
-"Esta aplicación necesita su ubicación, pero no tiene permiso. ¿Abrir "
-"configuración ahora?"
+"Aplikacja potrzebuje twojej lokalizacji, ale nie ma do niej dostępu. "
+"Otworzyć ustawienia?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr "Cancele para evitar que se agote la batería."
+msgstr "Zamknij, żeby oszczędzać baterię."
 
 # GPS message
 msgid "Using your location."
-msgstr "Usando su ubicación."
+msgstr "Twoja lokalizacja jest wykorzystywana."
 
 msgid "Add"
-msgstr "Añadir"
+msgstr "Dodaj"
 
 msgid "Add species"
-msgstr "Añadir especies"
+msgstr "Dodaj gatunek"
 
 msgid "Duration"
-msgstr "Duración"
+msgstr "Czas trwania"
 
 msgid "Species"
-msgstr "Especies"
+msgstr "Gatunki"
 
 msgid "Species name"
-msgstr "Nombre de la especie"
+msgstr "Nazwa gatunku"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
-"Para una búsqueda más rápida de los taxones puede utilizar diferentes "
-"atajos. Por ejemplo, para encontrar"
+"Aby przyspieszyć wyszukiwanie taksonów, możesz użyć różnych skrótów. Na "
+"przykład, aby znaleźć"
 
 msgid "you can type in the search bar"
-msgstr "puedes escribir en la barra de búsqueda"
+msgstr "możesz wpisać w pasku wyszukiwania"
 
 msgid "Edit Occurrence"
-msgstr "Editar presencia"
+msgstr "Edytuj występowanie"
 
 msgid "Count"
-msgstr "Registro"
+msgstr "Policz"
 
 msgid "Comment"
-msgstr "Comentario"
+msgstr "Komentarz"
 
 msgid "Draft"
-msgstr "Borrador"
+msgstr "Wersja robocza"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Existe un borrador de un muestreo anterior, ¿te gustaría continuarlo?"
+msgstr ""
+"Istnieje poprzednia wersja robocza formularza, czy chcesz kontynuować jej "
+"wypełnianie? "
 
 msgid "Discard"
-msgstr "Descartar"
+msgstr "Odrzuć"
 
 msgid "Continue"
-msgstr "Continuar"
+msgstr "Kontynuuj"
 
 msgid "Finish"
-msgstr "Terminar"
+msgstr "Koniec"
 
 msgid "minutes"
-msgstr "minutos"
+msgstr "minut"
 
 msgid "No species added"
-msgstr "Sin especies añadidas"
+msgstr "Nie dodano żadnego gatunku"
 
 msgid "Please draw your area on the map"
-msgstr "Por favor dibuje su área en el mapa"
+msgstr "Narysuj swój obszar na mapie"
 
 msgid "Draw an area"
-msgstr "Dibujar un area"
+msgstr "Narysuj obszar "
 
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Usuń"
 
 msgid "Surveys"
-msgstr "Muestreos"
+msgstr "Formularz"
 
 msgid "Reports"
-msgstr "Informes"
+msgstr "Raport"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Lo sentimos, no hay datos de informes disponibles en este momento."
+msgstr "Przepraszamy, w tej chwili żadne dane protokołu nie są dostępne."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "¿Seguro que quieres borrar este muestreo?"
+msgstr "Czy na pewno chcesz usunąć ten formularz?"
 
 msgid "No finished surveys"
-msgstr "No hay muestreos terminados"
+msgstr "Nieskończony formularz"
 
 msgid "Finished surveys"
-msgstr "Muestreos terminados"
+msgstr "Formularz skończony"
 
 msgid "Selected area"
-msgstr "Area seleccionada"
+msgstr "Wybrany obszar"
 
 msgid "Use survey create time"
-msgstr "Utilice el tiempo para crear el muestreo"
+msgstr "Użyj czasu utworzenia badania"
 
 msgid "Use survey finish time"
-msgstr "Utilice el tiempo de finalización del muestreo"
+msgstr "Użyj czasu zakończenia badania"
 
 msgid "species"
-msgstr "especies"
+msgstr "gatunek"
 
 msgid "Done"
-msgstr "Hecho"
+msgstr "Gotowe"
 
 msgid "Time's up!"
-msgstr "¡Se acabó el tiempo!"
+msgstr "Koniec czasu!"
 
 msgid "Survey incomplete"
-msgstr "Muestreo incompleto"
+msgstr "Protokół niekompletny "
 
 msgid "The survey is not complete yet."
-msgstr "El muestreo aún no está completo."
+msgstr "Ankieta nie jest jeszcze zakończona. "
 
 msgid "Please select a smaller area."
-msgstr "Por favor, selecciona un área más pequeña"
+msgstr "Wybierz mniejszy obszar"
 
 msgid "Please add survey area information."
-msgstr "Por favor, añade información del área de muestreo"
+msgstr "Proszę, dodaj informację o obszarze badania."
 
 msgid "Choose a method to upload a photo"
-msgstr "Elige un método para subir la foto"
+msgstr "Wybierz metodę przesyłania zdjęć"
 
 msgid "Gallery"
-msgstr "Galería"
+msgstr "Galeria"
 
 msgid "Camera"
-msgstr "Cámara"
+msgstr "Aparat"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "¿Estás seguro que quieres eliminar esta foto de la muestra?"
+msgstr "Czy jesteś pewny, że chcesz usunąć te zdjęcie?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Nota: permanecerá en la galería"
+msgstr "Uwaga: pozostanie on w galerii."
 
 msgid "No photo has been added"
-msgstr "No se ha añadido ninguna foto"
+msgstr "Żadne zdjęcie nie zostało dodane"
 
 msgid "Registration error:"
-msgstr "Error de registro:"
+msgstr "Błąd rejestracji:"
 
 # Login error message
 msgid "Incorrect password or email"
-msgstr "Contraseña o correo incorrecto"
+msgstr "Niepoprawne hasło lub e-mail"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
-"Ingrese su dirección de correo electrónico para solicitar un "
-"restablecimiento de su contraseña."
+msgstr "Podaj adres email, żeby zresetować hasło."
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr "El usuario no se ha activado o está bloqueado."
+msgstr "Użytkownik nie został zaktywowany lub jest zablokowany."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
-"Parece que su <1>{{userEmail}}</1> email no ha sido verificado "
-"aún.<3><0>Actualizar </0><1>Reenviar correo electrónico</1></3>"
+"Wygląda, że twój <1>{{userEmail}}</1> email nie został jeszcze "
+"zweryfikowany.<3><0>odśwież</0><1>Wyślij jeszcze raz maila</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
-"Se envió correctamente un nuevo correo electrónico de verificación. Si no "
-"recibió el correo electrónico, revise sus carpetas de correo no deseado o "
-"spam."
+"Nowy email weryfikacyjny został pomyślnie wysłany. Jeśli nie otrzymałeś "
+"wiadomości email, sprawdź folder ze spamem."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr "Por favor inicie sesión primero."
+msgstr "Proszę się najpierw zalogować."
 
 # User registration error
 msgid "This email is already taken."
-msgstr "Este correo electrónico ya está en uso."
+msgstr "Ten email jest już zajęty."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr "Dirección de correo electrónico no reconocida."
+msgstr "Nieprawidłowy adres email."
 
 msgid "email is not valid"
-msgstr "el correo no es válido"
+msgstr "E-mail jest nieprawidłowy"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Las mariposas son insectos cautivadores, pero están disminuyendo en muchas "
-"partes de Europa. Como se muestra en este gráfico de del Indicador de "
-"Mariposas de Praderas para la UE."
+"Motyle są urzekającymi owadami, ale w wielu częściach Europy ich liczba "
+"spada. Jak pokazuje ten wykres wskaźnika motyli łąkowych dla UE."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
-"Los datos recopilados por esta aplicación pueden mejorar considerablemente "
-"el conocimiento del estado de las mariposas y sus hábitats."
+"Dane zebrane przez tę aplikację mogą znacznie poprawić wiedzę o stanie "
+"motyli i ich siedliskach. "
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
-"Carecemos de información sobre los números de mariposas en muchas partes de "
-"Europa, como lo muestra la densidad de registros disponibles actualmente "
-"para poder evaluar el estado de las mariposas."
+"Brakuje nam informacji na temat liczebności motyli w wielu częściach Europy,"
+" o czym świadczy gęstość dostępnych obecnie danych umożliwiających ocenę "
+"stanu motyli."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Nunca ha sido tan fácil aportar datos de alta calidad para investigaciones "
-"que apoyen la conservación de estos insectos fascinantes y vitales. Puedes "
-"empezar de inmediato"
+"Dostarczanie wysokiej jakości danych do badań wspierających ochronę tych "
+"fascynujących i istotnych owadów nigdy nie było łatwiejsze. Możesz zacząć od"
+" razu "
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"La applicación fue desarrollada como parte del projecto Assesing Butterflies"
-" in Europe (ABLE)"
+"Aplikacja powstała w ramach projektu Assessing Butterflies in Europe (ABLE)."
+" "
 
 msgid "The ABLE project is a partnership between"
-msgstr "El projecto ABLE es una asociación entre"
+msgstr "Projekt ABLE to partnerstwo pomiędzy"
 
 msgid "and"
-msgstr "y"
+msgstr "i"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
-"ABLE está financiado por un contrato de servicio de la Dirección de Medio "
-"Ambiente de la Unión Europea, por un período inicial de dos años, desde "
-"2019-20."
+"ABLE jest finansowane na podstawie umowy zawartej z Dyrekcją ds. Środowiska "
+"Unii Europejskiej na początkowy okres dwóch lat od 2019-2020. "
 
 msgid "ABLE partners:"
-msgstr "Socios de ABLE:"
+msgstr "Partnerzy ABLE:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
-"Esta aplicación recoge datos para el Programa Europeo de Seguimiento de "
-"Mariposas (eBMS por sus siglas en inglés)."
+"Ta aplikacja dostarcza danych do Europejskiego Systemu Monitorowania Motyli "
+"(eBMS)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr "En Junio de 2019, las siguientes organizaciones son socios de eBMS:"
+msgstr "W czerwcu 2019 r. partnerami eBMS są następujące organizacje:"
 
 msgid "Not enough data yet"
-msgstr "No hay datos suficientes"
+msgstr "Za mało danych"
 
 msgid "How to start a survey"
-msgstr "Cómo empezar un muestreo"
+msgstr "Jak zacząć wypełniać protokół"
 
 msgid "To start a new survey you can press the plus button"
-msgstr "Para empezar un nuevo muestreo puedes presionar el botón más"
+msgstr "Aby zacząć wypełniać nowy formularz naciśnij przycisk \"plus\""
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
-"en el pie de la página de inicio. Esto empezará un nuevo muestreo de 15 "
-"minutos."
+"w stopce strony głównej. W ten sposób rozpoczniesz nową 15-minutową ankietę."
 
 msgid "Selecting species"
-msgstr "Selección de especies"
+msgstr "Wybór gatunku"
 
 msgid "Please press the Add"
-msgstr "Por favor presiona \"Añadir\""
+msgstr "Naciśnij dodaj"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"Botón en su nueva página de edición del muestreo. Esto te llevará a la "
-"página de búsqueda de taxones. Después de seleccionar la especie, esto lo "
-"agregará a su lista de muestreos."
+"przycisk na twojej nowej stronie do edycji badania. Przeniesie cię do strony"
+" wyszukiwania taksonów. Wybranie gatunku, spowoduje dodanie go do twojej "
+"listy badania. "
 
 msgid "Note"
-msgstr "Nota"
+msgstr "Uwaga"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
-"Puede aumentar el recuento de especies tocando el número junto al nombre de "
-"la especie en la lista."
+"możesz zwiększyć ilość gatunków, naciskając na liczbę obok nazwy gatunku na "
+"liście."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Para elimiar una especie de su lista de muestreo puede deslizarlo a la "
-"izquierda y hacer clic en el botón de Eliminar"
+"Aby usunąć gatunek z formularza przeciągnij palcem w lewo i kliknąć przycisk"
+" Usuń."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"Para añadir más información a tu presencia de especies, puede abrir la "
-"entrada de especies haciendo clic en ella."
+"Aby dodać więcej informacji na temat występowania twojego gatunku, możesz "
+"otworzyć wpis gatunku, klikając na niego. "
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr ""
-"Para finalizar un registro debe también rellenar los detalles del área"
+"Aby zakończyć zapis, należy również wypełnić szczegóły dotyczące obszaru."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
-msgstr ""
-"Cuando termine, configure el envío presionando el botón Finalizar en el "
-"encabezado."
+msgstr "Po zakończeniu ustaw do wysłania, naciskając przycisk Zakończ."
 
 msgid "Searching for species"
-msgstr "Buscando especies"
+msgstr "Wyszukiwanie gatunków"
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"La aplicación contiene alrededor de 500 especies de mariposas y todos los "
-"rangos de taxonomía asociados. Para una búsqueda más rápida de los taxones "
-"puede utilizar diferentes atajos. Por ejemplo, para encontrar"
+"Aplikacja zawiera listę około 500 gatunków motyli i wszystkie powiązane "
+"rangi taksonomiczne. Aby przyspieszyć wyszukiwanie taksonów, możesz "
+"skorzystać z różnych skrótów. Na przykład, aby znaleźć "
 
 msgid "Sync. with the website"
-msgstr "Sincronización con la website"
+msgstr "Synchronizuj ze stroną internetową"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr "Todos tus muestreos guardados se mostrarán en la página de su cuenta"
+msgstr ""
+"Wszystkie zapisane przez Ciebie formularze będą widoczne na stronie Twojego "
+"konta."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Por defecto, un muestreo está en modo 'borrador' que no se enviará a la base"
-" de datos hasta que se haga clic en el botón 'Terminar' en el encabezado. La"
-" aplicación intentará enviar su registro una vez que haya una buena conexión"
-" de red."
+"Formularz domyślnie jest w trybie 'wersja robocza' i zostanie wysłana do "
+"bazy danych dopóki nie zostanie kliknięty przycisk 'Zakończ' w nagłówku. "
+"Aplikacja podejmie próbę wysłania Twojich danych, gdy tylko będzie dobre "
+"połączenie z siecią."
 
 msgid "If the record has reached the database a red"
-msgstr "Si el registro ha llegado a la base de datos aparecerá en rojo"
+msgstr ""
 
 msgid "(set for submission & saved locally) will become green"
-msgstr "(configurado para envío y guardado localmente). Se volverá verde "
+msgstr "(ustawiony do wysłania i zapisany lokalnie) stanie się zielony"
 
 msgid "synced to the database"
-msgstr "cuando esté sincronizado con la base de datos."
+msgstr "zsynchronizowano z bazą danych "
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
-"debe iniciar sesión en su cuenta del sitio web y tener una conexión de red "
-"para que los registros se sincronicen automáticamente en segundo plano"
+"musisz być zalogowany na swoje konto w serwisie i mieć połączenie z siecią, "
+"aby rekordy były automatycznie synchronizowane w tle"
 
 msgid "Delete a record"
-msgstr "Eliminar un registro"
+msgstr "Usuń rekord"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Para eliminar un registro, deslícelo hacia la izquierda en la página de su "
-"cuenta y haga clic en el botón Eliminar."
+"Aby usunąć rekord, przesuń palcem w lewo na stronie swojego konta i kliknij "
+"przycisk Usuń."
 
 msgid "User"
-msgstr "Usuario"
+msgstr "Użytkownik"
 
 msgid "Sign in/out or register"
-msgstr "Iniciar/salir sesión o registrarse"
+msgstr "Zaloguj się / wyloguj lub zarejestruj "
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"Para iniciar sesión, abre la página del menu principal, haga click en el "
-"botón Iniciar sesión o Registrarse y siga las instrucciones"
+"Aby się zalogować, otwórz stronę menu głównego, kliknij przycisk Zaloguj się"
+" lub Zarejestruj i postępuj zgodnie z instrukcjami."
 
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr ""
-"Para salir de la sesión, visita la página del menu principal y haga clic en "
-"el botón de Cerrar sesión"
+"Aby się wylogować, wejdź na stronę menu głównego i kliknij przycisk "
+"wylogowania."
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
-"Después de registrar una nueva cuenta, debe verificar su dirección de correo"
-" electrónico haciendo clic en el enlace de verificación enviado a su correo "
-"electrónico"
+"po zarejestrowaniu nowego konta musisz zweryfikować swój adres e-mail "
+"poprzez kliknięcie na link weryfikacyjny wysłany na Twój adres e-mail"
 
 msgid "Other"
-msgstr "Otro"
+msgstr "Inne"
 
 msgid "Reset the application"
-msgstr "Restaurar la aplicación"
+msgstr "Zresetuj aplikacje"
 
 msgid "Go to the application settings page"
-msgstr "Ir a la página de configuración de la aplicación"
+msgstr "Przejdź do strony z ustawieniami aplikacji"
 
 msgid "and click on the Reset"
-msgstr "y haga clic en el Reinicio"
+msgstr "i kliknij \"Resetuj\""
 
 msgid "button"
-msgstr "botón"
+msgstr "przycisk"
 
 msgid "No species found with this name"
-msgstr "No hay especies encontradas con este nombre"
+msgstr "Nie znaleziono gatunków o tej nazwie"
 
 msgid "Allow Sample Edit"
-msgstr "Permitir edición de muestra"
+msgstr "Zezwól na edycję próbki"
 
 msgid "Upload"
-msgstr "Enviar"
+msgstr "Załaduj"
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Esta aplicación apoya el monitoreo de mariposas y su conservación. Haga clic"
-" en el botón más de abajo para empezar a contar mariposas."
+"Ta aplikacja wspiera monitorowanie motyli i ich ochronę. Kliknij na przycisk"
+" + poniżej, aby rozpocząć liczenie motyli."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
-"Verá muchas mejoras en esta aplicación a medida que agreguemos nuevas "
-"funciones en los próximos meses."
+"Zobaczysz wiele ulepszeń tej aplikacji, w nadchodzących miesiącach dodamy do"
+" niej nowe funkcje."
 
 msgid "Are you sure you want to reset the application to its initial state?"
-msgstr ""
-"¿Estás seguro que quieres reiniciar la aplicación a su estado inicial?"
+msgstr "Czy na pewno chcesz zresetować aplikację do stanu początkowego?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr "Esto borrará todos los datos de la aplicación almacenados localmente!"
+msgstr "To spowoduje usunięcie wszystkich przechowywanych w aplikacji danych!"
 
 msgid "Sweden"
-msgstr "Suecia"
+msgstr "Szwecja"
 
 msgid "Paused"
-msgstr "Pausa"
+msgstr "Wstrzymano"
 
 msgid "Pending"
-msgstr "Pendientes"
+msgstr "Oczekujące"
 
 msgid "Uploaded"
-msgstr "Enviados"
+msgstr "Załadowano"
 
 msgid "No finished pending surveys"
-msgstr "No hay muestreos terminados"
+msgstr "Brak zakończonych, oczekujących na rozpatrzenie ankiet"
 
 msgid "No uploaded surveys"
-msgstr "No hay muestreos enviados"
+msgstr "Niewysłane badania"
 
 msgid "Enjoying the app?"
-msgstr "¿Estás disfrutando de la aplicación?"
+msgstr "Podoba ci się aplikacja?"
 
 msgid "Not really"
-msgstr "No realmente"
+msgstr "Nie całkiem"
 
 msgid "Yes!"
-msgstr "¡Si!"
+msgstr "Tak!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr "¿Te importaría darnos algún comentario?"
+msgstr "Czy chcesz przekazać nam swoją opinię?"
 
 msgid "No, thanks"
-msgstr "No, gracias"
+msgstr "Nie, dziękuję"
 
 msgid "OK, sure"
-msgstr "Sí, claro"
+msgstr "Tak, oczywiście"
 
 msgid "How about a rating on the App Store then?"
-msgstr "¿Qué tal una calificación en la App Store?"
+msgstr "Co powiesz na ocenienie aplikacji w App Store?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "¿Qué tal una calificación en Play Store?"
+msgstr "Co powiesz na ocenie aplikacji w Sklepie Play?"
 
 msgid "Icons made by"
-msgstr "Iconos hechos por"
+msgstr "Ikony stworzone przez"
 
 msgid "from"
-msgstr "desde"
+msgstr "z"
 
 msgid "We've sent an email to you"
-msgstr "Te hemos enviado un correo electrónico"
+msgstr "Wysłaliśmy do Ciebie wiadomość e-mail"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
-"Haga clic en el enlace del correo electrónico para restablecer su "
-"contraseña. Si no ve el correo electrónico, revise otros lugares como el "
-"spam, su correo no deseado u otras carpetas."
+"Kliknij link w wiadomości e-mail, aby zresetować hasło. Jeśli nie widzisz "
+"wiadomości, sprawdź inne miejsca, takie jak kosz, spam lub inne foldery."
 
 msgid "App Development"
-msgstr "Desarrollo de aplicaciones"
+msgstr "Rozwój aplikacji"
 
 msgid "This app was hand crafted with love by"
-msgstr "Esta aplicación hecha a mano con amor por "
+msgstr "Ta aplikacja została stworzona z miłością przez"
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
 msgstr ""
-"Agencia especializada en la construcción de soluciones a medida orientadas a"
-" datos."
+"Doradztwo techniczne, które wyróżnia się w tworzeniu dostosowanych do "
+"potrzeb nauk o środowisku i rozwiązań zorientowanych na społeczność."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr "Para sugerencias o comentarios por favor no dude en"
+msgstr "W sprawie sugestii i opinii prosimy o kontakt z"
 
 msgid "contact us"
-msgstr "contáctarnos"
+msgstr "Skontaktuj się z nami"
 
 msgid "Language"
-msgstr "Idioma"
+msgstr "Język"
 
 msgid "Country"
-msgstr "País"
+msgstr "Kraj"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
-"Marca cualquier nuevo registro como \"entrenamiento\" y excluyeló de todos "
-"los informes."
+"Oznacz wszystkie nowe rekordy jako „szkoleniowe” i wyklucz je ze wszystkich "
+"raportów. "
 
 msgid "Share App Analytics"
-msgstr "Compartir análisis de aplicaciones"
+msgstr "Share App Analytics"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
-"Comparta datos de problemasd de la aplicación para que podamos hacerla más "
-"confiable."
+"Udostępniaj dane o awariach aplikacji, abyśmy mogli uczynić ją bardziej "
+"niezawodną."
 
 msgid "Save Draft"
-msgstr "Guardar borrador"
+msgstr "Zapisz wersję roboczą"
 
 msgid "Stage"
-msgstr "Estado"
+msgstr "Stadium"
 
 msgid "Not Recorded"
-msgstr "No registrado"
+msgstr "Nie zapisane"
 
 msgid "Adults"
-msgstr "Adultos"
+msgstr "Osobniki dorosłe"
 
 msgid "Larvae"
-msgstr "Orugas"
+msgstr "Gąsienice"
 
 msgid "Eggs"
-msgstr "Huevos"
+msgstr "Jaja"
 
 msgid "Pupae"
-msgstr "Pupa/crisálida"
+msgstr "Poczwarki"
 
 msgid "Larval webs"
-msgstr "Seda de oruga"
+msgstr "Oprzędy"
 
 # Butterfly stage
 msgid "Adult"
-msgstr "Adulto"
+msgstr "Dorosły"
 
 # Butterfly stage
 msgid "Egg"
-msgstr "Huevo"
+msgstr "Jajo"
 
 # Butterfly stage
 msgid "Larva"
-msgstr "Larva"
+msgstr "Larwa"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr "Red larval"
+msgstr "Oprzęd larwy"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr "Pupa"
+msgstr "Poczwarka"
 
 msgid "Transect"
-msgstr "Transecto"
+msgstr "Motylowego Spaceru"
 
 msgid "Sections"
-msgstr "Secciones"
+msgstr "Odcinki"
 
 msgid "No transect"
-msgstr "Sin transecto"
+msgstr "Brak transektu"
 
 msgid "Start Time"
-msgstr "Hora de Inicio"
+msgstr "Czas początkowy"
 
 msgid "End Time"
-msgstr "Hora de finalización"
+msgstr "Czas końcowy"
 
 msgid "Temperature"
 msgstr "Temperatura"
 
 msgid "Cloud"
-msgstr "Nubes"
+msgstr "Zachmurzenie"
 
 msgid "Wind Direction"
-msgstr "Dirección del Viento"
+msgstr "Kierunek wiatru"
 
 msgid "Wind Speed"
-msgstr "Velocidad del Viento"
+msgstr "Szybkość wiatru"
 
 msgid "Recorder"
-msgstr "Censador"
+msgstr "Obserwator"
 
 msgid "Refresh"
-msgstr "Actualizar"
+msgstr "Odśwież "
 
 msgid "Please select your transect first."
-msgstr "Por favor,  seleccione su transecto primero"
+msgstr "Proszę wybierz najpierw swój transekt."
 
 msgid "Invalid server response."
-msgstr "Respuesta inválida del servidor."
+msgstr "Błędna odpowiedź serwera. "
 
 msgid "Not recorded/no data"
-msgstr "No registrado/sin datos"
+msgstr "Brak rekordów/brak daty"
 
 msgid "Please specify the temperature C°."
-msgstr "Por favor especifique la temperatura en grados C°."
+msgstr "Proszę podać temperaturę C °."
 
 msgid "S"
-msgstr "Sur"
+msgstr "Południowy"
 
 msgid "SW"
-msgstr "Suroeste"
+msgstr "Południowy-zachodni"
 
 msgid "W"
-msgstr "Oeste"
+msgstr "Zachodni"
 
 msgid "NW"
-msgstr "Noroeste"
+msgstr "Północno-zachodni"
 
 msgid "N"
-msgstr "Norte"
+msgstr "Północny"
 
 msgid "NE"
-msgstr "Noreste"
+msgstr "Północno-wschodni"
 
 msgid "E"
-msgstr "Este"
+msgstr "Wschodni"
 
 msgid "SE"
-msgstr "Sureste"
+msgstr "Południowo-wschodni"
 
 msgid "No direction"
-msgstr "Sin dirección"
+msgstr "Kierunek nieokreślony "
 
 msgid "Please specify the wind direction."
-msgstr "Por favor especifique la dirección del viento"
+msgstr "Określ kierunek wiatru."
 
 msgid "Smoke rises vertically"
-msgstr "Humo asciende vertical"
+msgstr "Dym unosi się pionowo"
 
 msgid "Slight smoke drift"
-msgstr "Ligera deriva del humo"
+msgstr "Lekkie pochylenie strużki dymu"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr "Viento se siente en la cara y el susurro de las hojas"
+msgstr "Wiatr wyczuwany na skórze. Liście szeleszczą."
 
 msgid "Leaves and twigs in slight motion"
-msgstr "Hojas y ramitas en ligero movimiento."
+msgstr "Liście i gałązki lekko się poruszają"
 
 msgid "Dust raised and small branches move"
-msgstr "Polvo y pequeñas ramas se mueven"
+msgstr "Kurz unosi się i gałęzie zaczynają się poruszać."
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Pequeños árboles se tambalean"
+msgstr "Małe drzewa zaczynają się poruszać."
 
 msgid "Large branches move and trees sway"
-msgstr "Grandes ramas se mueven y los árboles se balancean"
+msgstr "Duże gałęzie się poruszają i drzewa się kołyszą."
 
 msgid "Please specify the wind speed."
-msgstr "Por favor especifique la velocidad del viento"
+msgstr "Proszę podaj prędkość wiatru."
 
 msgid "Transects"
-msgstr "Transectos"
+msgstr "Transekty "
 
 msgid "Transect list was successfully updated."
-msgstr "Lista de transectos actualizados correctamente"
+msgstr "Lista transektów została pomyślnie zaktualizowana."
 
 msgid "Section"
-msgstr "Sección"
+msgstr "Odcinek"
 
 msgid "Reliability"
-msgstr "Veracidad"
+msgstr "Niezawodność"
 
 msgid "Please specify the reliability of the section count."
-msgstr "Especifique la veracidad en los recuentos por secciones"
+msgstr "Proszę określ wiarygodność liczby obserwacji na danym fragmencie."
 
 msgid "Suitable conditions"
-msgstr "Condiciones adecuadas"
+msgstr "Odpowiednie warunki "
 
 msgid "Unsuitable conditions"
-msgstr "Condiciones inadecuadas"
+msgstr "Nieodpowiednie warunki"
 
 msgid "Unable to survey"
-msgstr "No se puede realizar el muestreo"
+msgstr "Nie można wypełnić formularza"
 
 msgid "15min Count"
-msgstr "Recuento 15 minutos"
+msgstr "Motylowy Kwadrans"
 
 msgid "15min Single Species Count"
-msgstr "Recuento de 15 min única especie"
+msgstr "15 min zliczanie jednego gatunku"
 
 msgid "eBMS Transect"
-msgstr "Transecto eBMS"
+msgstr "Transekt eBMS"
 
 msgid "Please add any extra info about this record."
-msgstr "Por favor añada cualquier otra información extra sobre este recuento"
+msgstr "Dodaj dodatkowe informacje o tym rekordzie."
 
 msgid "Enter more information here..."
-msgstr "Introducir más información aquí..."
+msgstr "Wprowadź więcej informacji tutaj ..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr "Especifique la persona responsable para identificar las especies."
+msgstr "Proszę podać osobę odpowiedzialną za identyfikację gatunków. "
 
 msgid "HH:mm"
-msgstr "HH:mm"
+msgstr "GG:mm"
 
 msgid "Please specify the % of cloud cover."
-msgstr "Especifique el % de cobertura de nubes."
+msgstr "Podaj procentowe zachmurzenie."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "No tiene ningún transecto. Por favor actualice la lista."
+msgstr "Nie masz żadnych transektów. Spróbuj odświeżyć listę."
 
 msgid "Wind speed info is missing"
-msgstr "Falta velocidad del viento"
+msgstr "Brak informacji o prędkości wiatru"
 
 msgid "Temperature info is missing"
-msgstr "Falta información de temperatura"
+msgstr "Brak informacji o temperaturze"
 
 msgid "Recorder info is missing"
-msgstr "Falta información del censador"
+msgstr "Brak informacji o obserwatorze"
 
 msgid "Please select your transect."
-msgstr "Seleccione su transecto."
+msgstr "Proszę, wybierz swój transekt."
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Esta guía esta aún en desarrollo. Cubre {{countrySpeciesCount}} especies de "
-"mariposas de {{totalSpeciesCountryCount}} especies totales del país "
-"selecionado. "
+"Przewodnik jest nadal w fazie rozwoju. Opisanych jest w nim "
+"{{countrySpeciesCount}} gatunków z {{totalSpeciesCountryCount}} liczby "
+"gatunków w twoim kraju."
 
 msgid "Status"
-msgstr "Estado"
+msgstr "Status"
 
 msgid "Absent"
-msgstr "Ausente"
+msgstr "Nie występuje "
 
 msgid "Present"
-msgstr "Presente"
+msgstr "Występuje"
 
 msgid "Possibly present"
-msgstr "Posiblemente presente"
+msgstr "Prawdopodobnie obecny "
 
 msgid "Regular migrant"
-msgstr "Migrante regular"
+msgstr "Regularny migrant"
 
 msgid "Irregular vagrant"
-msgstr "Nómada irregular"
+msgstr "Nieregularny spacer"
 
 msgid "Regionally extinct"
-msgstr "Regionalmente extinto"
+msgstr "Wymarły w skali regionu"
 
 msgid "Description"
-msgstr "Descripción"
+msgstr "Opis"
 
 msgid "Counts"
-msgstr "Recuentos"
+msgstr "Liczenia"
 
 msgid "Species descriptions"
-msgstr "Descripciones de las especies"
+msgstr "Opisy gatunków"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Las descripciones de las especies incluidas como parte de la guía se basan "
-"en las producidas en el Atlas de Riesgo Climático de las mariposas europeas."
-" Agradecemos a Josef Settele por hacerlos disponibles."
+"Opisy gatunków zawarte w przewodniku są oparte na opisach opracowanych w "
+"\"Climatic Risk Atlas of European Butterflies\". Dziękujemy Josefowi "
+"Settele'owi za ich udostępnienie."
 
 msgid "Photo credits"
-msgstr "Créditos fotográficos"
+msgstr "Zdjęcie autorstwa"
 
 msgid "How to use the app"
-msgstr "Como usar la applicación "
+msgstr "Jak korzystać z aplikacji"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1171,11 +1164,10 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Puede usar esta aplicación para el seguimiento de mariposas en cualquier "
-"lugar de Europa. Los resultados se introducirán en la base de datos Europea "
-"de seguimiento de mariposas y se utilizarán para desarrollar tendencias de "
-"mariposas en toda Europa. Para utilizar la aplicación, primero deberá "
-"registrar una cuenta."
+"Możesz używać tej aplikacji do monitorowania motyli w całej Europie. Wyniki "
+"zostaną wprowadzone do bazy danych European Butterfly Monitoring i "
+"wykorzystane do opracowywania trendów motyli w całej Europie. Aby korzystać "
+"z aplikacji, musisz najpierw zarejestrować konto."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1185,16 +1177,15 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"El método predilecto es realizar un recuento de 15 minutos. Esto se puede "
-"hacer en cualquier lugar y en cualquier momento cuando las mariposas están "
-"activas (es decir, cuando el clima es cálido y preferiblemente soleado). "
-"También puede usar la aplicación para registrar sus transectos de mariposa "
-"establecidos. Más adelante en 2020, la aplicación también incluirá la "
-"posibilidad de enviar registros oportunistas. Las notas a continuación le "
-"indican cómo usar los métodos disponibles actualmente."
+"Preferowaną metodą jest przeprowadzenie 15-minutowego liczenia. Można to "
+"zrobić w dowolnym miejscu i czasie, gdy motyle są aktywne (tzn. gdy jest "
+"ciepło i najlepiej słonecznie). Można również używać aplikacji do "
+"rejestrowania motyli na wytyczonych transektach. W 2020 roku, aplikacja "
+"będzie również zawierała możliwość przesyłania przypadkowych zapisów. "
+"Poniższe uwagi wyjaśniają, jak korzystać z aktualnie dostępnych metod. "
 
 msgid "How to do a 15-minute Count"
-msgstr "Como hacer un Registro de 15 minutos"
+msgstr "Jak wykonać Motylowy Kwadrans"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1209,19 +1200,17 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Este es el método predeterminado en la aplicación. Simplemente cuente las "
-"mariposas durante un período de 15 minutos, ya sea en un área definida, como"
-" un campo, o mientras camina, o de pie en un punto fijo contando las "
-"mariposas que pasan volando. No es necesario dibujar la ruta ya que la "
-"aplicación sabrá su ruta, siempre que tenga activada la función de rastreo "
-"GPS en su Configuración. De lo contrario, deberá dibujar el área a "
-"monitorear en un mapa, utilizando la aplicación. Para comenzar, toque el "
-"botón + en la parte inferior de la pantalla. La aplicación empieza una "
-"cuenta regresiva de los 15 minutos una vez que haya comenzado, pero puede "
-"hacer una pausa en cualquier momento (por ejemplo, para identificar una "
-"mariposa) presionando el botón de pausa. Al final de la encuesta, puede "
-"revisar sus registros y asegurarse de que los totales sean correctos antes "
-"de enviarlos."
+"Jest to domyślna metoda w aplikacji. Po prostu licz motyle przez 15 minut w "
+"określonym obszarze, takim jak pole, spacerując lub stojąc na stałym "
+"punkcie, licząc motyle, które przelatują obok. Nie ma potrzeby rysowania "
+"trasy, ponieważ aplikacja będzie znała Twoją trasę, pod warunkiem, że masz "
+"włączoną funkcję śledzenia GPS w ustawieniach. W przeciwnym razie będziesz "
+"musiał narysować wyszukiwany obszar na mapie za pomocą aplikacji. Aby "
+"rozpocząć, kliknij przycisk + u dołu ekranu. Aplikacja odlicza 15 minut po "
+"uruchomieniu, ale możesz wstrzymać w dowolnym momencie (na przykład w celu "
+"zidentyfikowania motyla), naciskając przycisk pauzy. Pod koniec badania "
+"możesz przejrzeć swoje obserwacje przed wysłaniem i upewnić się, że wszystko"
+" się zgadza."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1231,13 +1220,12 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
-"Agregue las especies que ve presionando el botón + AÑADIR y comience a "
-"escribir el nombre de una especie. La selección de especies aparecerá como "
-"una lista desplegable. Puede usar nombres científicos o ingleses. Seleccione"
-" las especies que ve y una vez en su lista de mariposas, toque el número de "
-"la izquierda para aumentar el recuento de cuántas ha visto. También puede "
-"revisar este número y modificarlo al final. También puede agregar fotos si "
-"lo desea y agregar comentarios."
+"Aby dodać gatunki, które widzisz, naciśnij przycisk + DODAJ i zacznij "
+"wpisywać nazwę gatunku. Możesz użyć nazwy naukowej lub angielskiej. Wybór "
+"gatunków pojawi się automatycznie w formie rozwijanego menu. Wybierz z listy"
+" gatunki, które widzisz, następnie aby określić ile liczbę, naciśnij cyfrę "
+"po lewej stronie. Na końcu możesz zweryfikować i poprawić tę liczbę. Jeśli "
+"chcesz możesz również dodać zdjęcia i komentarze."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1246,15 +1234,14 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"Una vez que haya terminado su Recuento de 15 minutos y haya verificado que "
-"las especies y los números registrados son correctos, presione el botón "
-"TERMINAR para enviar su recuento. Esto es importante para asegurarse de que "
-"sus datos se almacenen de forma segura en la base de datos eBMS. Se "
-"mantendrá el registro del recuento en su dispositivo para una referencia "
-"futura, así como en su cuenta en línea"
+"Po zakończeniu 15-minutowego liczenia i sprawdzeniu, czy widoczne gatunki i "
+"liczby są prawidłowe, naciśnij przycisk PRZEŚLIJ, aby wysłać dane. Jest to "
+"ważne, aby być pewnym, że Twoje dane są bezpiecznie przechowywane w bazie "
+"danych eBMS. Zapis zliczenia będzie przechowywany na Twoim urządzeniu do "
+"wykorzystania w przyszłości, a także na Twoim koncie online. "
 
 msgid "How to record along an existing transect"
-msgstr "Cómo registrar visitas de un transecto existente"
+msgstr "Jak dokonywać zliczeń wzdłuż istniejącego transektu"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1265,15 +1252,15 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
-"También puede usar la aplicación para enviar registros mientras recorre un "
-"transecto de seguimiento de mariposas existente. Estos ya han sido "
-"establecidos por los Programas de Seguimiento de Mariposas (BMS) de cada "
-"país y se realizan mejor con censadores experimentados. El registro de "
-"transectos existentes dentro de la aplicación requiere que su cuenta ya esté"
-" vinculada a un transecto dentro del sistema eBMS. Si no se enumeran sitios "
-"de transectos una vez que haya iniciado sesión en la aplicación, comuníquese"
-" con su coordinador nacional (envíe un correo electrónico a {{helpEmail}} "
-"para obtener asesoramiento)."
+"Możesz także użyć aplikacji do przesyłania obserwacji podczas spaceru po "
+"istniejącym już transekcie, na którym monitorowane są motyle. Zostały one "
+"ustanowione przez krajowe systemy monitorowania motyli i najlepiej aby były "
+"uzupełniane przez doświadczonych obserwatorów. Prowadzenie obserwacji na "
+"istniejących w aplikacji transektach wymaga, aby twoje konto było już "
+"połączone poprzez ustawieniami transektu w systemie eBMS. Jeśli po "
+"zalogowaniu się do aplikacji nie ma żadnych transektów, skontaktuj się z "
+"krajowym koordynatorem (wyślij e-mail na adres {{helpEmail}}, aby uzyskać "
+"poradę)."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1288,22 +1275,21 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"Para comenzar con el recuento de transectos, mantenga presionado el botón + "
-"(una pulsación larga) en la parte inferior de la pantalla y seleccione eBMS "
-"Transect. La página  Transecto aparecerá con todas las opciones para "
-"completar. Primero, debe seleccionar su transecto (deberá iniciar sesión "
-"para esto y para que las rutas de transectos se vinculen a su cuenta de "
-"usuario). Una vez que haya seleccionado su sitio de transecto, puede "
-"completar los detalles climáticos necesarios (por ejemplo, temperatura, "
-"velocidad del viento, etc.) y otra información requerida (por ejemplo, hora "
-"de inicio) en la página Transecto. Luego puede empezar a añadir una lista de"
-" especies vistas y el número contado para cada sección del transecto, de la "
-"misma manera que para un recuento de 15 minutos. Una vez que haya terminado "
-"su Transecto y verifique que las especies y los números vistos son "
-"correctos, presione el botón TERMINAR para enviar el transecto."
+"Aby rozpocząć liczenie na transekcie, przytrzymaj przycisk + (długie "
+"naciśnięcie) u dołu ekranu i wybierz eBMS Transect. Pojawi się strona "
+"Transect z wszystkimi opcjami do wypełnienia. Po pierwsze, musisz wybrać "
+"swoje transekty (w tym celu musisz być zalogowany, a trasy transektów muszą "
+"być powiązane z Twoim kontem użytkownika). Po wybraniu miejsca transektu, na"
+" stronie Transekt możesz wypełnić niezbędne dane pogodowe (np. temperatura, "
+"prędkość wiatru itp.) oraz inne wymagane informacje (np. czas rozpoczęcia). "
+"Następnie dodajesz listę zaobserwowanych gatunków i liczbę zliczonych "
+"osobników dla każdego odcinka transektu, w taki sam sposób jak w przypadku "
+"liczenia 15-minutowego. Po zakończeniu transektu i sprawdzeniu, że gatunki i"
+" liczba zaobserwowanych osobników są poprawne, naciśnij przycisk ZAKOŃCZ, "
+"aby wysłać dane."
 
 msgid "Survey section"
-msgstr "Sección Muestreos"
+msgstr "Formularz odcinka"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1313,176 +1299,179 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
-"En esta pestaña, en la parte derecha del botón +, puede ver los muestreos "
-"PENDIENTES, sus registros que no se han enviado y los recuentos ENVIADOS, "
-"los enviados a la base de datos eBMS. Los recuentos pendientes se pueden "
-"enviar al sistema haciendo clic en él y presionando la opción Terminar. "
-"Puede ver la lista de especies que registró para los recuentos cargados. "
-"Todos sus registros también se pueden ver y editar en el {{eBMSWebsiteLink}}"
+"W zakładce, po prawej stronie przycisku +, możesz zobaczyć zliczenia "
+"OCZEKUJĄCE, twoje obserwacje, które nie zostały przesłane oraz zliczenia "
+"PRZESŁANE, które zostały przesłane do bazy danych eBMS. Oczekujące zliczenia"
+" można przesłać do systemu, klikając je i naciskając opcję prześlij. Możesz "
+"zobaczyć listę gatunków, którą zarejestrowałeś dla przesłanych zliczeń. "
+"Wszystkie Twoje dane można również przeglądać i edytować na "
+"{{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
-msgstr "Página web de eBMS"
+msgstr "strona eBMS"
 
 msgid "App Settings"
-msgstr "Configuración de la Applicación"
+msgstr "Ustawienia aplikacji"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
-"Vaya a la página de configuración de la aplicación para cambiar el idioma y "
-"el país. El país seleccionado es importante para poder ver diferentes "
-"especies en la Guía de imágenes, solo verá las especies que ocurren en ese "
-"país."
+"Przejdź do strony ustawień aplikacji, aby zmienić język i kraj. Wybór kraju "
+"jest ważny, ponieważ w 'Przewodniku zdjęciowym', zobaczysz tylko gatunki "
+"występujące w danym kraju."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
-"Puede también activar el modo de Entrenamiento cuando aún esta aprendiendo a"
-" identificar mariposas"
+"Możesz także włączyć tryb treningowy, gdy dopiero uczysz się rozpoznawać "
+"motyle."
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr "Eliminar el último punto"
+msgstr "Usuń ostatni punkt"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr "Guardar"
+msgstr "Zapisz"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr "Borrar todo"
+msgstr "Wyczyść wszystko"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr "Haga clic para comenzar a dibujar "
+msgstr "Kliknij aby rozpocząć rysowanie kształtu."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr "Haga clic para continuar dibujando"
+msgstr "Kliknij, aby kontynuować rysowanie kształtu."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr "Haga clic en el primer punto para cerrar la figura"
+msgstr "Kliknij pierwszy punkt, aby zamknąć ten kształt."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr "Haga clic para empezar a dibujar una línea"
+msgstr "Kliknij, aby rozpocząć rysowanie linii."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr "Haga clic para continuar dibujando una línea"
+msgstr "Kliknij, aby kontynuować rysowanie linii."
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr "Haga clic para dibujar terminar la línea"
+msgstr "Kliknij ostatni punkt, aby zakończyć linię."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr "Arrastre puntos o marcadores para editar las figuras."
+msgstr "Przeciągnij uchwyty lub znaczniki, aby edytować elementy."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr "Haga clic en cancelar para deshacer los cambios."
+msgstr "Kliknij \"Anuluj\", aby cofnąć zmiany."
 
 msgid "Map"
 msgstr "Mapa"
 
 msgid "Today"
-msgstr "Hoy"
+msgstr "Dzisiaj"
 
 msgid "Yesterday"
-msgstr "Ayer"
+msgstr "Wczoraj"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
-msgstr ""
-"Este registro ha sido enviado y no puede ser editado dentro de esta app."
+msgstr "Te dane zostały przesłane i nie może ich edytować w tej aplikacji."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr "Otras opciones de registro"
+msgstr "Kliknij na inne opcje obserwacji z poniżesz listy"
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
-"Carga por lotes todos los registros terminados. Esto no incluye registros en"
-" estado 'borrador'."
+"Prześlij zbiorczo wszystkie gotowe rekordy. Nie obejmuje to rekordów w "
+"„wersji roboczej”. "
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr "¿Seguro que quieres subir todos los registros terminados?"
+msgstr "Czy jesteś pewien że chcesz przesłać zakończone obserwacje?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr "Por favor registrese primero para enviar registros"
+msgstr "Zanim wyślesz rekordy zaloguj się"
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] "Cargando {{count}} muestreo"
-msgstr[1] "Cargando {{count}} muestreos"
-msgstr[2] "Cargando {{count}} muestreos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 # Part of a page error
 msgid "Oops! Something went wrong."
-msgstr "Ups! Algo salió mal."
+msgstr "Ups! Coś poszło nie tak..."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr "Este es el ID del suceso error: {{eventId}}"
+msgstr "To jest identyfikator błędu: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr "Detalles opcionales"
+msgstr "Dodatkowe szczegóły"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr "Condiciones climáticas"
+msgstr "Warunki pogodowe"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr "Condiciones climáticas"
+msgstr "Warunki pogodowe"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr "¿Estás seguro de que quieres eliminar {{taxon}} ?"
+msgstr "Czy jesteś pewny, że chcesz usunąć  {{taxon}}?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
-"Los valores climáticos actuales se rellenan previamente utilizando el "
-"servicio meteorológico API OpenWeatherMap."
+"Aktualne warunki pogodowe są wstępnie wypełniane za pomocą usługi pogodowej "
+"OpenWeatherMap API."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr "Copiar especies"
+msgstr "Kopiuj gatunki"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr "¿Seguro que desea copiar la lista de especies del muestreo anterior?"
+msgstr ""
+"Czy na pewno chcesz skopiować listę gatunków z poprzedniego zliczenia?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr "Copiar"
+msgstr "Kopiuj "
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr "Lo sentimos, no se encontraron especies para copiar."
+msgstr "Niestety, nie znaleziono gatunków do skopiowania."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr "Ha copiado con éxito {{speciesCount}} especies."
+msgstr "Pomyślnie skopiowałeś {{speciesCount}} gatunków."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr "Lo sentimos, no hay un muestreo previo para copiar especies."
+msgstr ""
+"Niestety, nie ma danych z poprzednich zliczeń, z których można by skopiować "
+"gatunki."
 
 # Country name
 msgid "Armenia"
@@ -1490,446 +1479,445 @@ msgstr "Armenia"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Para eliminar cualquier muestreo, deslícela hacia la izquierda."
+msgstr "Aby usunąć dowolny formularz, przesuń palcem w lewo."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
-msgstr ""
-"Verifique si el área de muestreo es correcta antes de enviar el registro."
+msgstr "Przed wysłaniem danych sprawdź, czy obszar zliczeń jest prawidłowy. "
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr "¡Por favor, no olvide subir los muestreos pendientes!"
+msgstr "Nie zapomnij przesłać wszystkich oczekujących danych ze zliczeń!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
-"No hay muestreos pendientes terminadas<br/><br/>Presione  <4></4> para "
-"agregar."
+"Brak zakończonych, oczekujących na rozpatrzenie formularzy. "
+"<br/><br/>Naciśnij <4></4>, aby dodać."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr "Consejo: Cómo encontrar ayuda"
+msgstr "Wskazówka: Szukanie pomocy"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
-"¡Por favor visite las páginas de Guía <2></2> y Ayuda <5></5> en el Menu "
-"antes de usar la aplicación!"
+"Przed rozpoczęciem korzystania z aplikacji należy odwiedzić strony "
+"Przewodnik<2> </2>  i Pomoc <5></5> !"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr "Más información"
+msgstr "Więcej informacji"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr "Consejo: Añadir especies"
+msgstr "Wskazówka: Dodawanie gatunków"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
-"Puede copiar toda su lista de especies anteriores presionando "
-"prolongadamente el botón Añadir especies."
+"Możesz zbiorczo skopiować swoje poprzednie listy gatunków, naciskając długo "
+"przycisk Dodaj gatunki. "
 
 # Button
 msgid "Hide"
-msgstr "Ocultar"
+msgstr "Ukryj"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Muestreo Principal"
+msgstr "Formularz podstawowy"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr "Todos los muestreos"
+msgstr "Wszystkie formularze"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr "Foto representativa donde el recuento de 15 minutos se hizo"
+msgstr ""
+"Reprezentatywne zdjęcie miejsca, w którym przeprowadzono 15-minutowe "
+"liczenie"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr "Ninguna foto se ha añadido."
+msgstr "Nie dodano żadnego zdjęcia."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr "Presiona <1></1> para añadir."
+msgstr "Naciśnij <1></1> aby dodać."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr "Recuento 15-min preciso"
+msgstr "Dokładne zliczanie w trakcie 15 min"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr "Presencias"
+msgstr "Występowanie"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr "Tiempo"
+msgstr "Czas"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr "¿Está seguro de que desea eliminar esta presencia?"
+msgstr "Czy na pewno chcesz usunąć to wystąpienie?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr "Entendido"
+msgstr "Mamy to!"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr "<0>No hay muestreos enviados </0>"
+msgstr "<0>Brak wysłanych obserwacji</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr "La cuenta ya existe."
+msgstr "Konto już istnieje."
 
 # A survey label
 msgid "Details"
-msgstr "Detalles"
+msgstr "Szczegóły"
 
 # A survey label
 msgid "Species Photo"
-msgstr "Fotos de especie"
+msgstr "Zdjęcie gatunku"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr "Elige la fase de la vida"
+msgstr "Wybierz stadium rozwoju"
 
 # A survey label
 msgid "Weather"
-msgstr "Condiciones climáticas"
+msgstr "Pogoda"
 
 # A survey label
 msgid "Photo"
-msgstr "Foto"
+msgstr "Zdjęcie"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr "Grupos de especies"
+msgstr "Grupy gatunków"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr "Por favor seleccione el grupo de especies que siempre registra."
+msgstr "Wybierz grupy gatunków, które zawsze obserwujesz."
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr "Mariposas"
+msgstr "Motyle"
 
 # Part of species group selection
 msgid "Moths"
-msgstr "Polillas"
+msgstr "Ćmy"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr "Abejorros"
+msgstr "Trzmiele"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr "Libélulas"
+msgstr "Ważki"
 
 # Alert label
 msgid "Warning"
-msgstr "Advertencia"
+msgstr "Ostrzeżenie"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr "¿Estás seguro de que quieres desactivar el seguimiento GPS?"
+msgstr "Czy na pewno chcesz wyłączyć śledzenie GPS?"
 
 # Alert button option
 msgid "Turn off"
-msgstr "Desarctivar"
+msgstr "Wyłącz"
 
 # Alert button label
 msgid "Merge"
-msgstr "Unir"
+msgstr "Połącz"
 
 # Alert header
 msgid "Species already exists"
-msgstr "La especie ya existe"
+msgstr "Gatunek już istnieje"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
-"¿Está seguro de que desea unir esta lista con la lista de especies "
-"existente?"
+"Czy na pewno chcesz połączyć te listę z już istniejącą listą gatunków?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr "Agregue su especie objetivo"
+msgstr "Dodaj swój gatunek docelowy "
 
 # Moth survey label
 msgid "Date"
-msgstr "Fecha"
+msgstr "Data"
 
 # Moth survey label
 msgid "Method"
-msgstr "Método"
+msgstr "Metoda"
 
 # Context term
 msgid "Please select the medthod type"
-msgstr "Por favor seleccione el tipo de método"
+msgstr "Wybierz typ metody"
 
 # Moth survey method type
 msgid "MV light"
-msgstr "Luz MV"
+msgstr "Światło z lampy rtęciowej"
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr "Luz actínica"
+msgstr "Światło słoneczne"
 
 # Moth survey method type
 msgid "LED light"
-msgstr "Luz LED"
+msgstr "Światło LED"
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr "Trampa de luz"
+msgstr "Pułapka świetlna"
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr "Observación diurna"
+msgstr "Obserwacja w trakcie dnia"
 
 # Moth survey method type
 msgid "Dusking"
-msgstr "Anochecer"
+msgstr "Zmierzch"
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr "Atraído por una ventana iluminada"
+msgstr "Przyciągnięte do oświetlonego okna"
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr "Con azúcar"
+msgstr ""
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr "Tiras de vino"
+msgstr ""
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr "Método de golpeteo"
+msgstr ""
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr "Trampa de feromonas"
+msgstr "Pułapka feromonowa"
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr "Otros métodos (añadir comentario)"
+msgstr "Inna metoda (dodaj komentarz)"
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr "No está registrado"
+msgstr "Nie zaobserwowano"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr "Detalles del muestreo"
+msgstr "Szczegóły obserwacji"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr "Muestreo trampa de polillas"
+msgstr "Badanie przy pomocy pułapek na ćmy"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr "Muestreo de polillas"
+msgstr "Badanie ciem"
 
 # Moth survey divider label
 msgid "Species list"
-msgstr "Lista de especies"
+msgstr "Lista gatunków"
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr "Identificador"
+msgstr "Osoba identyfikująca"
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr "Lista de polillas"
+msgstr "Lista ciem"
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr "Fotos de polilla"
+msgstr "Zdjęcie ćmy"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr "Introduzca el nombre del registrador, si es diferente."
+msgstr "Wpisz imię i nazwisko obserwatora, jeżeli są inne."
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr "Nombre del censador"
+msgstr "Imię i nazwisko obserwatora"
 
 # Latitude
 msgid "Lat"
-msgstr "Latitud"
+msgstr "Szer"
 
 # Longitude
 msgid "Long"
-msgstr "Longitud"
+msgstr "Dł"
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr "Conteo dentro"
+msgstr "Liczba wewnątrz"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr "Conteo fuera\t"
+msgstr "Liczba na zewnątrz"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr "Fotos de polilla"
+msgstr "Zdjęcia ciem"
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr "Trampas de polilla"
+msgstr "Pułapki na ćmy"
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr "Trampa de polillas"
+msgstr "Pułapki na ćmy"
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
-"Todavía no has creado ninguna trampa para polillas. Para crear una, por "
-"favor vaya a la <2>página web.</2>"
+"Nie stworzyłeś jeszcze żadnych pułapek na ćmy. Aby ją utworzyć, przejdź do "
+"strony <2>internetowej.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr "Para ver el mapa por favor conéctese a Internet."
+msgstr "Aby zobaczyć mapę, połącz się z Internetem."
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr "Por favor añada la trampa de polilla"
+msgstr "Dodaj pułapkę na ćmy"
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
-"Sólo tienes una trampa para polillas. Para crear más, diríjase a la página "
-"<2>página web.</2>"
+"Masz jedną pułapkę na ćmy. Aby stworzyć więcej przejdź do <2>strony "
+"internetowej.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr "Identificando..."
+msgstr "Identyfikacja..."
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr "Desconocido"
+msgstr "Nieznany"
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr "Por favor añada una foto"
+msgstr "Dodaj zdjęcie"
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr "Specie desconocida"
+msgstr "Nieznany gatunek"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr "<0>Aviso</0> - no pudimos identificar esta especie."
+msgstr "<0>Uwaga</0> - nie mogliśmy zidentyfikować tego gatunku."
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we think it is"
-msgstr "<0>Aviso</0> - creemos que es"
+msgstr "<0>Uwaga</0> - wydaje nam się, że to jest"
 
 # Moth survey image gallery warning message
 msgid "likely a"
-msgstr "probablemente un(a)"
+msgstr "prawdopodobnie to"
 
 # App settings title
 msgid "Surveying"
-msgstr "Muestreando"
+msgstr "Badanie"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr "Muestreo de polillas (SPRING)"
+msgstr "Badanie ciem (WIOSNA)"
 
 # Survey name
 msgid "Moth Survey"
-msgstr "Muestreo de polillas"
+msgstr "Badanie ciem"
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr "Configuración Muestreo de polillas"
+msgstr "Ustawienia badania ciem"
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr "Usar la identificación de imágenes"
+msgstr "Identyfikuj obraz"
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
 msgstr ""
-"Le ayudaremos a identificar las especies utilizando nuestro clasificador de "
-"imágenes de especies."
+"Pomożemy ci zidentyfikować gatunek przy pomocy oprogramowania "
+"identyfikującego obrazy."
 
 # Moth survey button label
 msgid "IDENTIFY"
-msgstr "IDENTIFICAR"
+msgstr "ZIDENTYFIKUJ"
 
 # Moth survey button label
 msgid "Identify All"
-msgstr "Identificar todo"
+msgstr "Zidentyfikuj wszystko"
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr "Identificación de imágenes"
+msgstr "Identyfikacja obrazu"
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
-"El clasificador de imágenes está actualmente <1>desactivado</1>. Por favor "
-"vaya a la app <4>Configuración</4>para activarlo"
+"Oprogramowanie identyfikujące obrazy jest obecnie <1>wyłączone</1>. Przejdź "
+"do <4>Ustawień</4> aplikacji, aby je włączyć."
 
 # Whats new message title
 msgid "What's New"
-msgstr "Novedades"
+msgstr "Co nowego"
 
 # Version 1.15 whats new message
 msgid "Record moths with the help of automatic identification in real-time."
-msgstr ""
-"Registra polillas con la ayuda de la identificación automática en tiempo "
-"real."
+msgstr "Obserwuj ćmy przy pomocy automatycznego identyfikowania na żywo."
 
 # Version 1.15 whats new message
 msgid "Bug fixes and improvements"
-msgstr "Corrección de errores y mejoras"
+msgstr "Poprawki błędów i ulepszenia"
 
 # Version 1.15 whats new message
 msgid "Added option to identify moths with image classifier"
 msgstr ""
-"Añadida la opción de identificar polillas con el clasificador de imágenes"
+"Dodano opcję umożliwiającą rozpoznawanie ciem przy pomocy oprogramowania "
+"rozpoznającego obrazy"
 
 # Version 1.15 whats new message
 msgid "Added App setting option to disable image classifier"
 msgstr ""
-"Se ha añadido la opción de configuración de la aplicación para desactivar el"
-" clasificador de imágenes"
+"W aplikacji dodano opcję, umożliwiającą wyłączenie oprogramowania "
+"rozpoznającego obrazy"
 
 # Version 1.15 whats new message
 msgid "Added option to create Moth trap"
-msgstr "Añadida la opción de crear Trampa de polillas"
+msgstr "Dodano opcję do tworzenia pułapek na ćmy."
 
 # Version 1.15 whats new message
 msgid "Bug fixes"
-msgstr "Corrección de errores"
+msgstr "Naprawa błędów"
 
 # User account action
 msgid "Resend"
-msgstr "Reenviar"
+msgstr ""
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr "Parece que tu correo no ha sido verificado aún."
+msgstr ""
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr "¿Debemos volver a enviar el correo electrónico de verificación?"
+msgstr ""

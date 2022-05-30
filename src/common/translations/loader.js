@@ -52,6 +52,12 @@ import species_sl_SI from './species/sl_SI.po';
 import tr_TR from './interface/tr_TR.po';
 import species_tr_TR from './species/tr_TR.po';
 
+import pl_PL from './interface/pl_PL.po';
+import species_pl_PL from './species/pl_PL.po';
+
+import ro_RO from './interface/ro_RO.po';
+import species_ro_RO from './species/ro_RO.po';
+
 const flatNames = { ...names };
 Object.keys(flatNames).forEach(lang => {
   flatNames[lang] = flatNames[lang].reduce((agg, term) => {
@@ -178,5 +184,15 @@ export default {
     interface: rawToKeyVal(tr_TR),
     species: rawToKeyVal(species_tr_TR),
     names: flatNames['tr-TR'],
+  },
+  'pl-PL': {
+    interface: rawToKeyVal(pl_PL),
+    species: rawToKeyVal(species_pl_PL),
+    names: flatNames['pl-PL'],
+  },
+  'ro-RO': {
+    interface: rawToKeyVal(ro_RO),
+    species: rawToKeyVal(species_ro_RO),
+    names: flatNames['ro-RO'],
   },
 };

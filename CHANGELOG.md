@@ -1,6 +1,7 @@
-## 1.16.1
+## 1.17.0
 
 Updated translations.
+Added Polish and Romanian languages.
 
 ## 1.16.0
 

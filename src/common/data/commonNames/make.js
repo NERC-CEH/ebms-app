@@ -16,6 +16,11 @@ const LANGUAGE_ISO_MAPPING = {
   fin: 'fi-FI',
   ces: 'cs-CZ',
   rus: 'ru-RU',
+  bul: 'bg-BG',
+  slv: 'sl-SL',
+  pol: 'pl-PL',
+  cat: 'ca-ES',
+  dan: 'da-DK',
 };
 
 const UNKNOWN_SPECIES = {
@@ -83,6 +88,9 @@ function turnNamesArrayIntoLangObject(array) {
     }
 
     const language = LANGUAGE_ISO_MAPPING[languageCode];
+    if (!language)
+      throw new Error(`${language} is missing from LANGUAGE_ISO_MAPPING`);
+
     agg[language] || (agg[language] = []); // eslint-disable-line
 
     const species = {

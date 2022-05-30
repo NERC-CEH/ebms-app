@@ -1,35 +1,33 @@
 # 
 # Translators:
-# Vilius Stankaitis <vilius@flumens.io>, 2020
-# Karolis, 2021
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
+# Cristina Costache, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022\n"
-"Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
+"Last-Translator: Cristina Costache, 2022\n"
+"Language-Team: Romanian (Romania) (https://www.transifex.com/ceh/teams/95441/ro_RO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language: ro_RO\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Seleccione su país"
+msgstr "‭Selecteaz‭ă țara"
 
 msgid "United Kingdom"
-msgstr "Reino Unido"
+msgstr "Marea Britanie"
 
 msgid "Lithuania"
 msgstr "Lituania"
 
 msgid "Spain"
-msgstr "España"
+msgstr "Spania"
 
 msgid "Andorra"
-msgstr "Andorra"
+msgstr "Andora"
 
 msgid "Albania"
 msgstr "Albania"
@@ -38,58 +36,58 @@ msgid "Austria"
 msgstr "Austria"
 
 msgid "Bosnia and Herzegovina"
-msgstr "Bosnia y Herzegovina"
+msgstr "Bosnia și Herțegovina"
 
 msgid "Belgium"
-msgstr "Bélgica"
+msgstr "Belgia"
 
 msgid "Bulgaria"
 msgstr "Bulgaria"
 
 msgid "Belarus"
-msgstr "Bielorrusia"
+msgstr "Belarus"
 
 msgid "Switzerland"
-msgstr "Suiza"
+msgstr "Elveția"
 
 msgid "Cyprus"
-msgstr "Chipre "
+msgstr "Cipru"
 
 msgid "Czechia"
-msgstr "República Checa"
+msgstr "Cehia"
 
 msgid "Germany"
-msgstr "Alemania"
+msgstr "Germania"
 
 msgid "Denmark"
-msgstr "Dinamarca"
+msgstr "Danemarca"
 
 msgid "Estonia"
-msgstr "Estonia "
+msgstr "Estonia"
 
 msgid "Spain (Canary Islands)"
-msgstr "España (Islas Canarias)"
+msgstr "Spania (Insulele Canare)"
 
 msgid "Finland"
-msgstr "Finlandia"
+msgstr "Finlanda"
 
 msgid "France"
-msgstr "Francia"
+msgstr "Franța"
 
 msgid "Greece"
 msgstr "Grecia"
 
 msgid "Croatia"
-msgstr "Croacia"
+msgstr "Croația"
 
 msgid "Hungary"
-msgstr "Hungría"
+msgstr "Ungaria"
 
 msgid "Ireland"
 msgstr "Irlanda"
 
 msgid "Iceland"
-msgstr "Islandia"
+msgstr "Islanda"
 
 msgid "Italy"
 msgstr "Italia"
@@ -98,844 +96,840 @@ msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
 msgid "Luxembourg"
-msgstr "Luxemburgo"
+msgstr "Luxemburg"
 
 msgid "Latvia"
 msgstr "Letonia"
 
 msgid "Moldova"
-msgstr "Moldavia"
+msgstr "Moldova"
 
 msgid "Montenegro"
-msgstr "Montenegro"
+msgstr "Muntenegru"
 
 msgid "North Macedonia"
-msgstr "Macedonia del norte"
+msgstr "Macedonia de Nord"
 
 msgid "Malta"
 msgstr "Malta"
 
 msgid "Netherlands"
-msgstr "Países Bajos"
+msgstr "Olanda"
 
 msgid "Norway"
-msgstr "Noruega"
+msgstr "Norvegia"
 
 msgid "Poland"
 msgstr "Polonia"
 
 msgid "Portugal"
-msgstr "Portugal"
+msgstr "Portugalia"
 
 msgid "Portugal (Azores)"
-msgstr "Portugal (Azores)"
+msgstr "Portugalia (Insulele Azore)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugal (Islas de Madeira)"
+msgstr "Portugalia (Insulele Madeira)"
 
 msgid "Romania"
-msgstr "Rumanía"
+msgstr "Romania"
 
 msgid "Serbia"
 msgstr "Serbia"
 
 msgid "Russian Federation"
-msgstr "Federación Rusa"
+msgstr "Federația Rusă"
 
 msgid "Slovenia"
-msgstr "Eslovenia"
+msgstr "Slovenia"
 
 msgid "Slovakia"
-msgstr "Eslovaquia"
+msgstr "Slovacia"
 
 msgid "Turkey (Europe)"
-msgstr "Turkía (Europa)"
+msgstr "Turcia (Europa)"
 
 msgid "Turkey (Asia)"
-msgstr "Turkía (Asia)"
+msgstr "Turcia (Asia)"
 
 msgid "Ukraine"
-msgstr "Ucrania"
+msgstr "Ucraina"
 
 msgid "Elsewhere"
-msgstr "En otro lugar"
+msgstr "Altă țară"
 
 msgid "Skip"
-msgstr "Omitir"
+msgstr "Sări peste"
 
 msgid "Next"
-msgstr "Siguiente"
+msgstr "Următorul"
 
 msgid "Get Started"
-msgstr "Empezar"
+msgstr "Începe"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr "Por favor inicie sesión con su cuenta de eBMS o regístrese."
+msgstr "Vă rugăm să vă conectați la contul eBMS sau să vă înregistrați."
 
 msgid "Password"
-msgstr "Contraseña"
+msgstr "Parola"
 
 msgid "Sign in"
-msgstr "Registrarse"
+msgstr "Conectare"
 
 msgid "Register"
-msgstr "Registro"
+msgstr "Înregistrează-te"
 
 msgid "Forgot password?"
-msgstr "¿Se te olvidó tu contraseña?"
+msgstr "Ați uitat parola?"
 
 msgid "User not found."
-msgstr "Usuario no encontrado"
+msgstr "Utilizatorul nu a fost găsit."
 
 msgid "Login"
-msgstr "Iniciar sesión"
+msgstr "Autentificare"
 
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "Setări"
 
 msgid "Info"
-msgstr "Información"
+msgstr "Informații"
 
 msgid "About"
-msgstr "Acerca de"
+msgstr "Despre"
 
 msgid "Help"
-msgstr "Ayuda"
+msgstr "Ajutor"
 
 msgid "Privacy Policy"
-msgstr "Política de privacidad"
+msgstr "Politica de confidențialitate"
 
 msgid "Credits"
-msgstr "Créditos"
+msgstr "Credite"
 
 msgid "Email"
-msgstr "Correo Electrónico"
+msgstr "Email"
 
 msgid "First Name"
-msgstr "Nombre "
+msgstr "Prenume"
 
 msgid "Surname"
-msgstr "Apellido"
+msgstr "Nume de familie"
 
 msgid "I agree to"
-msgstr "Estoy de acuerdo con"
+msgstr "Sunt de acord să"
 
 msgid "Terms and Conditions"
-msgstr "Términos y Condiciones"
+msgstr "Termeni și condiții"
 
 msgid "Reset"
-msgstr "Reiniciar"
+msgstr "Resetează"
 
 msgid "Records"
-msgstr "Registros"
+msgstr "Înregistrări"
 
 msgid "Upload All"
-msgstr "Enviar todo"
+msgstr "Încărcați tot"
 
 msgid "Remove All Saved"
-msgstr "Eliminar todos los guardados"
+msgstr "Eliminați tot ce este salvat"
 
 msgid "Application"
-msgstr "Aplicación "
+msgstr "Aplicație"
 
 msgid "Training Mode"
-msgstr "Modo de entrenamiento"
+msgstr "Mod de antrenament"
 
 msgid "Experimental Features"
-msgstr "Características experimentales"
+msgstr "Caracteristici experimentale"
 
 msgid "Welcome"
-msgstr "Bienvenido"
+msgstr "Bine ați venit"
 
 msgid "Lets start!"
-msgstr "¡Empecemos!"
+msgstr "Să începem!"
 
 msgid "TOP RECORDERS"
-msgstr "MEJORES REGISTRADORES"
+msgstr "Topul înregistrărilor"
 
 msgid "Top Species from all timed counts"
-msgstr "Especies más vistas en todos los Recuentos de 15 minutos"
+msgstr "Topul speciilor din toate numărătorile cronometrate"
 
 msgid "Back"
-msgstr "Atrás"
+msgstr "Înapoi"
 
 msgid "Menu"
-msgstr "Menu"
+msgstr "Meniu"
 
 msgid "App"
-msgstr "Aplicación"
+msgstr "Aplicație"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
-"Estamos muy agradecidos a todas las personas que ayudaron a crear esta "
-"aplicación:"
+"Suntem foarte recunoscători pentru toți oamenii care au ajutat la crearea "
+"acestei aplicații:"
 
 msgid "Home"
-msgstr "Inicio"
+msgstr "Acasă"
 
 msgid "Guide"
-msgstr "Guía"
+msgstr "Ghid"
 
 msgid "Account"
-msgstr "Cuenta"
+msgstr "Cont"
 
 msgid "Offline"
-msgstr "Desconectado"
+msgstr "Deconectare"
 
 msgid "Sorry, looks like you're offline."
-msgstr "Lo siento, parece que estás desconectado."
+msgstr "Ne pare rău, se pare că ești offline."
 
 msgid "OK"
-msgstr "DE ACUERDO"
+msgstr "OK"
 
 msgid "Sorry"
-msgstr "Lo siento"
+msgstr "Ne pare rău"
 
 msgid "Please wait..."
-msgstr "Por favor espera..."
+msgstr "Vă rugăm așteptați"
 
 msgid "name is a required field"
-msgstr "nombre es un campo obligatorio"
+msgstr "numele este un câmp obligatoriu"
 
 msgid "password is a required field"
-msgstr "La contraseña es un campo obligatorio"
+msgstr "parola este un câmp obligatoriu"
 
 msgid "Login error:"
-msgstr "Error de inicio de sesión:"
+msgstr "Eroare de conectare:"
 
 msgid "Failed to fetch"
-msgstr "Fallo en recuperar"
+msgstr "Preluare eșuată"
 
 msgid "Incorrect password or email."
-msgstr "Contraseña o correo electrónico incorrecto."
+msgstr "Parolă sau email incorecte."
 
 # Part of logout process
 msgid "Logout"
-msgstr "Cerrar sesión"
+msgstr "Deconectare"
 
 # Part of logout process
 msgid "Are you sure you want to logout?"
-msgstr "¿Estás seguro de que quieres cerrar sesión?"
+msgstr "Sunteți sigur că doriți să vă deconectați?"
 
 # Part of logout process
 msgid "Discard local data"
-msgstr "Descartar datos locales"
+msgstr "Anulează datele locale"
 
 msgid "This will delete all the records on this device."
-msgstr "Esto borrará todos los registros en este dispositivo."
+msgstr "Acesta va șterge toate înregistrările de pe acest dispozitiv."
 
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anulare"
 
 msgid "Welcome aboard!"
-msgstr "¡Bienvenido a bordo!"
+msgstr "Bun venit la bord!"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Antes de enviar cualquier registro, revise su correo electrónico y haga clic"
-" en el enlace de verificación."
+"Înainte de a trimite orice înregistrări, vă rugăm să vă verificați e-mailul "
+"și să faceți clic pe linkul de verificare."
 
 msgid "OK, got it"
-msgstr "Ok, lo tengo"
+msgstr "OK, am înțeles"
 
 msgid "Please fill in"
-msgstr "Por favor rellenalo"
+msgstr "Vă rugăm completați"
 
 msgid "Area Count"
-msgstr "Área de Conteo"
+msgstr "Zona numărării"
 
 msgid "Area"
-msgstr "Área"
+msgstr "Zona"
 
 # Location attribute label
 msgid "Location"
-msgstr "Lugar"
+msgstr "Locația"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr "Ubicación requerida"
+msgstr "Locația Necesară"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
-"Esta aplicación necesita su ubicación, pero no tiene permiso. ¿Abrir "
-"configuración ahora?"
+"Această aplicație are nevoie de locația dumneavoastră, dar nu are "
+"permisiunea dvs. Deschideți setările acum?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr "Cancele para evitar que se agote la batería."
+msgstr "Anulați pentru a preveni descărcarea bateriei."
 
 # GPS message
 msgid "Using your location."
-msgstr "Usando su ubicación."
+msgstr "Folosind locația dumneavoastră."
 
 msgid "Add"
-msgstr "Añadir"
+msgstr "Adaugă"
 
 msgid "Add species"
-msgstr "Añadir especies"
+msgstr "Adaugă specii"
 
 msgid "Duration"
-msgstr "Duración"
+msgstr "Durata"
 
 msgid "Species"
-msgstr "Especies"
+msgstr "Specii"
 
 msgid "Species name"
-msgstr "Nombre de la especie"
+msgstr "Denumirea speciei"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
-"Para una búsqueda más rápida de los taxones puede utilizar diferentes "
-"atajos. Por ejemplo, para encontrar"
+"Pentru o căutare mai rapidă a taxonilor, puteți utiliza diferite comenzi "
+"rapide. De exemplu, pentru a găsi"
 
 msgid "you can type in the search bar"
-msgstr "puedes escribir en la barra de búsqueda"
+msgstr "puteți introduce în bara de căutare"
 
 msgid "Edit Occurrence"
-msgstr "Editar presencia"
+msgstr "Editați Semnalarea"
 
 msgid "Count"
-msgstr "Registro"
+msgstr "Numără"
 
 msgid "Comment"
-msgstr "Comentario"
+msgstr "Comentariu"
 
 msgid "Draft"
-msgstr "Borrador"
+msgstr "Schiță"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Existe un borrador de un muestreo anterior, ¿te gustaría continuarlo?"
+msgstr "Există o schiță anterioară a sondajului, doriți să o continuați?"
 
 msgid "Discard"
-msgstr "Descartar"
+msgstr "Anulează"
 
 msgid "Continue"
-msgstr "Continuar"
+msgstr "Continuați"
 
 msgid "Finish"
-msgstr "Terminar"
+msgstr "Finalizare"
 
 msgid "minutes"
-msgstr "minutos"
+msgstr "minute"
 
 msgid "No species added"
-msgstr "Sin especies añadidas"
+msgstr "Nicio specie adăugată"
 
 msgid "Please draw your area on the map"
-msgstr "Por favor dibuje su área en el mapa"
+msgstr "Vă rugăm să schițați zona dumneavoastră pe hartă"
 
 msgid "Draw an area"
-msgstr "Dibujar un area"
+msgstr "Desenați o zonă"
 
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Șterge"
 
 msgid "Surveys"
-msgstr "Muestreos"
+msgstr "Sondaje"
 
 msgid "Reports"
-msgstr "Informes"
+msgstr "Raportări"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Lo sentimos, no hay datos de informes disponibles en este momento."
+msgstr "Ne pare rău, nu sunt disponibile date despre raportări momentan."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "¿Seguro que quieres borrar este muestreo?"
+msgstr "Sunteți sigur că doriți să ștergeti acest sondaj?"
 
 msgid "No finished surveys"
-msgstr "No hay muestreos terminados"
+msgstr "Niciun sondaj terminat"
 
 msgid "Finished surveys"
-msgstr "Muestreos terminados"
+msgstr "Sondaje terminate"
 
 msgid "Selected area"
-msgstr "Area seleccionada"
+msgstr "Zona selectată"
 
 msgid "Use survey create time"
-msgstr "Utilice el tiempo para crear el muestreo"
+msgstr "Utilizați timpul de creare al sondajului"
 
 msgid "Use survey finish time"
-msgstr "Utilice el tiempo de finalización del muestreo"
+msgstr "Utilizați timpul de finalizare al sonajului"
 
 msgid "species"
-msgstr "especies"
+msgstr "specii"
 
 msgid "Done"
-msgstr "Hecho"
+msgstr "Terminat"
 
 msgid "Time's up!"
-msgstr "¡Se acabó el tiempo!"
+msgstr "Timpul a expirat!"
 
 msgid "Survey incomplete"
-msgstr "Muestreo incompleto"
+msgstr "Sondaj incomplet"
 
 msgid "The survey is not complete yet."
-msgstr "El muestreo aún no está completo."
+msgstr "Sondajul nu este încă finalizat."
 
 msgid "Please select a smaller area."
-msgstr "Por favor, selecciona un área más pequeña"
+msgstr "Vă rugăm să selectați o zonă mai mică."
 
 msgid "Please add survey area information."
-msgstr "Por favor, añade información del área de muestreo"
+msgstr "Vă rugăm să adăugați informații despre zona sondajului."
 
 msgid "Choose a method to upload a photo"
-msgstr "Elige un método para subir la foto"
+msgstr "Alegeți o metodă de a încărca o fotografie."
 
 msgid "Gallery"
-msgstr "Galería"
+msgstr "Galerie"
 
 msgid "Camera"
-msgstr "Cámara"
+msgstr "Camera"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "¿Estás seguro que quieres eliminar esta foto de la muestra?"
+msgstr "Sunteți sigur că doriți să ștergeți fotografia?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Nota: permanecerá en la galería"
+msgstr "Observație: va rămâne în galerie."
 
 msgid "No photo has been added"
-msgstr "No se ha añadido ninguna foto"
+msgstr "Nu a fost adăugată nicio fotografie"
 
 msgid "Registration error:"
-msgstr "Error de registro:"
+msgstr "Eroare de înregistrare:"
 
 # Login error message
 msgid "Incorrect password or email"
-msgstr "Contraseña o correo incorrecto"
+msgstr "Parolă sau email incprect"
 
 msgid "Enter your email address to request a password reset."
 msgstr ""
-"Ingrese su dirección de correo electrónico para solicitar un "
-"restablecimiento de su contraseña."
+"Introduceți adresa dumneavoastră de email pentru a solicita resetarea "
+"parolei."
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr "El usuario no se ha activado o está bloqueado."
+msgstr "Utilizatorul nu a fost activat sau este blocat."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
-"Parece que su <1>{{userEmail}}</1> email no ha sido verificado "
-"aún.<3><0>Actualizar </0><1>Reenviar correo electrónico</1></3>"
+"Se pare că emailul <1>{{userEmail}}</1> dumneavoastră nu a fost verificat "
+"încă.<3><0>Refresh</0><1>Resend Email</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
-"Se envió correctamente un nuevo correo electrónico de verificación. Si no "
-"recibió el correo electrónico, revise sus carpetas de correo no deseado o "
-"spam."
+"Un nou email de verificare a fost trimis cu succes acum. Dacă nu ați primit "
+"emailul, verificați folderele Spam și Junk."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr "Por favor inicie sesión primero."
+msgstr "Vă rugăm să vă conectați mai întâi."
 
 # User registration error
 msgid "This email is already taken."
-msgstr "Este correo electrónico ya está en uso."
+msgstr "Această adresă de email este luată deja."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr "Dirección de correo electrónico no reconocida."
+msgstr "Adresă de email nerecunoscută."
 
 msgid "email is not valid"
-msgstr "el correo no es válido"
+msgstr "emailul nu este valid"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Las mariposas son insectos cautivadores, pero están disminuyendo en muchas "
-"partes de Europa. Como se muestra en este gráfico de del Indicador de "
-"Mariposas de Praderas para la UE."
+"Fluturii sunt insecte captivante, dar sunt în declin în multe părți ale "
+"Europei. Cum se observă în graficul Indicatorului Fluturilor de Pajiști "
+"pentru UE."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
-"Los datos recopilados por esta aplicación pueden mejorar considerablemente "
-"el conocimiento del estado de las mariposas y sus hábitats."
+"Datele colectate de pe această aplicație pot îmbunătăți considerabil "
+"cunoștinșele despre starea fluturilor și a habitatelor acestora."
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
-"Carecemos de información sobre los números de mariposas en muchas partes de "
-"Europa, como lo muestra la densidad de registros disponibles actualmente "
-"para poder evaluar el estado de las mariposas."
+"Ne lispsesc informațiile despre numărul de fluturi în multe părți ale "
+"Europei, așa cum arată densitatea înregistrărilor disponibile în prezent "
+"pentru a evalua starea fluturilor. "
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Nunca ha sido tan fácil aportar datos de alta calidad para investigaciones "
-"que apoyen la conservación de estos insectos fascinantes y vitales. Puedes "
-"empezar de inmediato"
+"Nu a fost niciodată mai ușor să contribui cu date de înaltă calitate pentru "
+"cercetare pentru a sprijini conservarea acestor insecte fascinante și "
+"vitale. Puteți începe imediat"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"La applicación fue desarrollada como parte del projecto Assesing Butterflies"
-" in Europe (ABLE)"
+"Aplicația a fost dezvoltată ca parte a proiectului Assessing Butterflies in "
+"Europe (ABLE)."
 
 msgid "The ABLE project is a partnership between"
-msgstr "El projecto ABLE es una asociación entre"
+msgstr "Proiectul ABLE este un parteneriat între"
 
 msgid "and"
-msgstr "y"
+msgstr "și"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
-"ABLE está financiado por un contrato de servicio de la Dirección de Medio "
-"Ambiente de la Unión Europea, por un período inicial de dos años, desde "
-"2019-20."
+"ABLE este finanțat printr-un contract de prestări servicii de la Direcția "
+"pentru Mediu a Uniunii Europene, pe o perioadă inițială de 2 ani din "
+"2019-2020."
 
 msgid "ABLE partners:"
-msgstr "Socios de ABLE:"
+msgstr "Partenerii ABLE:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
-"Esta aplicación recoge datos para el Programa Europeo de Seguimiento de "
-"Mariposas (eBMS por sus siglas en inglés)."
+"Această aplicație contribuie cu date la European Butterfly Monitoring Scheme"
+" (eBMS)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr "En Junio de 2019, las siguientes organizaciones son socios de eBMS:"
+msgstr "În iunie 2019, următoarele organizații sunt parteneri în eBMS:"
 
 msgid "Not enough data yet"
-msgstr "No hay datos suficientes"
+msgstr "Nu sunt suficiente date încă"
 
 msgid "How to start a survey"
-msgstr "Cómo empezar un muestreo"
+msgstr "Cum să începeți sondajul"
 
 msgid "To start a new survey you can press the plus button"
-msgstr "Para empezar un nuevo muestreo puedes presionar el botón más"
+msgstr "Pentru a începe un sondaj nou puteți apăsa butonul plus"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
-"en el pie de la página de inicio. Esto empezará un nuevo muestreo de 15 "
-"minutos."
+"în subsolul paginii start. Acesta va începe un nou sondaj de 15 minute."
 
 msgid "Selecting species"
-msgstr "Selección de especies"
+msgstr "Selectați specia"
 
 msgid "Please press the Add"
-msgstr "Por favor presiona \"Añadir\""
+msgstr "Vă rugăm să apăsați pe Adăugare"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"Botón en su nueva página de edición del muestreo. Esto te llevará a la "
-"página de búsqueda de taxones. Después de seleccionar la especie, esto lo "
-"agregará a su lista de muestreos."
+"butonul din noua pagină de editare a sondajului. Acest lucru vă va duce la "
+"pagina de căutare a taxonilor. După selectarea speciilor, acesta o va adăuga"
+" la lista de sondaj."
 
 msgid "Note"
-msgstr "Nota"
+msgstr "Observație"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
-"Puede aumentar el recuento de especies tocando el número junto al nombre de "
-"la especie en la lista."
+"puteți crește numărul de specii atingând numărul de lângă denumirea speciei "
+"din listă."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Para elimiar una especie de su lista de muestreo puede deslizarlo a la "
-"izquierda y hacer clic en el botón de Eliminar"
+"Pentru a șterge o specie din lista de sondaj, puteți glisa spre stânga și "
+"faceți clic pe butonul de ștergere."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"Para añadir más información a tu presencia de especies, puede abrir la "
-"entrada de especies haciendo clic en ella."
+"Pentru a adăuga mai multe informații la observarea speciei dumneavoastră, "
+"puteți deschide intrarea speciei făcând clic pe ea."
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr ""
-"Para finalizar un registro debe también rellenar los detalles del área"
+"Pentru a termina o înregistrare, trebuie să completați și detaliile zonei."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
 msgstr ""
-"Cuando termine, configure el envío presionando el botón Finalizar en el "
-"encabezado."
+"Când ați terminat, setați pentru trimitere prin apăsarea butonului Terminare"
+" din antet."
 
 msgid "Searching for species"
-msgstr "Buscando especies"
+msgstr "Căutare specii"
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"La aplicación contiene alrededor de 500 especies de mariposas y todos los "
-"rangos de taxonomía asociados. Para una búsqueda más rápida de los taxones "
-"puede utilizar diferentes atajos. Por ejemplo, para encontrar"
+"Aplicația deține aproximativ 500 specii de fluturi rangurile taxonomiei "
+"asociate. Pentru o căutare mai rapidă a taxonilor puteți utiliza diferite "
+"comenzi rapide. De exemplu, pentru a găsi"
 
 msgid "Sync. with the website"
-msgstr "Sincronización con la website"
+msgstr "Sincronizare cu siteul web"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr "Todos tus muestreos guardados se mostrarán en la página de su cuenta"
+msgstr ""
+"Toate sondajele salvate vor fi afișate pe pagina contului dumneavoastră."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Por defecto, un muestreo está en modo 'borrador' que no se enviará a la base"
-" de datos hasta que se haga clic en el botón 'Terminar' en el encabezado. La"
-" aplicación intentará enviar su registro una vez que haya una buena conexión"
-" de red."
+"În mod, un sondaj este într-un mod „schiță”, care nu va fi trimis în baza de"
+" date până nu se face clic pe butonul „Terminare” din antet. Aplicația va "
+"încerca să vă trimită înregistrarea odată ce esită o conexiune bună la "
+"rețea."
 
 msgid "If the record has reached the database a red"
-msgstr "Si el registro ha llegado a la base de datos aparecerá en rojo"
+msgstr "Dacă înregistrarea a ajuns în baza de date un punct roșu"
 
 msgid "(set for submission & saved locally) will become green"
-msgstr "(configurado para envío y guardado localmente). Se volverá verde "
+msgstr "(setat pentru trimitere și salvat local) va deveni verde"
 
 msgid "synced to the database"
-msgstr "cuando esté sincronizado con la base de datos."
+msgstr "sincronizat cu baza de date"
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
-"debe iniciar sesión en su cuenta del sitio web y tener una conexión de red "
-"para que los registros se sincronicen automáticamente en segundo plano"
+"trebuie să fiți conectat la contul de pe site și să aveți o conexiune la "
+"rețea, pentru ca înregistrările să fie sincronizate automat pe fundal "
 
 msgid "Delete a record"
-msgstr "Eliminar un registro"
+msgstr "Ștergeți o înregistrare"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Para eliminar un registro, deslícelo hacia la izquierda en la página de su "
-"cuenta y haga clic en el botón Eliminar."
+"Pentru a șterge o înregistrare, glisați stânga în pagina contului dvs. și "
+"faceți clic pe butonul de ștergere."
 
 msgid "User"
-msgstr "Usuario"
+msgstr "Utilizator"
 
 msgid "Sign in/out or register"
-msgstr "Iniciar/salir sesión o registrarse"
+msgstr "Conectare/Deconectare sau înregistrare"
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"Para iniciar sesión, abre la página del menu principal, haga click en el "
-"botón Iniciar sesión o Registrarse y siga las instrucciones"
+"Pentru a vă autentifica, deschideți pagina meniului principal, faceți clic "
+"pe butoanele Autentificare sau Înregistrare și urmați instrucțiunile."
 
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr ""
-"Para salir de la sesión, visita la página del menu principal y haga clic en "
-"el botón de Cerrar sesión"
+"Pentru a vă deconecta, vizitați pagina meniului principal și facți clic pe "
+"butonul de deconectare."
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
-"Después de registrar una nueva cuenta, debe verificar su dirección de correo"
-" electrónico haciendo clic en el enlace de verificación enviado a su correo "
-"electrónico"
+"după înregistrarea unui cont nou, trebuie să vă verificați adresa de email "
+"făcând clic pe un link de verificare trimis pe adresa dvs. de email"
 
 msgid "Other"
-msgstr "Otro"
+msgstr "Altele"
 
 msgid "Reset the application"
-msgstr "Restaurar la aplicación"
+msgstr "Resetați aplicația"
 
 msgid "Go to the application settings page"
-msgstr "Ir a la página de configuración de la aplicación"
+msgstr "Accesați pagina de setări a aplicației"
 
 msgid "and click on the Reset"
-msgstr "y haga clic en el Reinicio"
+msgstr "și faceți clic pe Resetare"
 
 msgid "button"
-msgstr "botón"
+msgstr "buton"
 
 msgid "No species found with this name"
-msgstr "No hay especies encontradas con este nombre"
+msgstr "Nu s-a găsit nicio specie cu acest nume"
 
 msgid "Allow Sample Edit"
-msgstr "Permitir edición de muestra"
+msgstr "Permiteți Editarea Eșantionului"
 
 msgid "Upload"
-msgstr "Enviar"
+msgstr "Încărcați"
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Esta aplicación apoya el monitoreo de mariposas y su conservación. Haga clic"
-" en el botón más de abajo para empezar a contar mariposas."
+"Această aplicație susține monitorizarea fluturilor și conservarea naturii. "
+"Dați clic pe butonul + de mai jos pentru a începe să numărați fluturii."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
-"Verá muchas mejoras en esta aplicación a medida que agreguemos nuevas "
-"funciones en los próximos meses."
+"Veți vedea o mulțime de îmbunătățiri ale acestei aplicații pe măsură ce vom "
+"adăuga noi funcții în lunille următoare."
 
 msgid "Are you sure you want to reset the application to its initial state?"
-msgstr ""
-"¿Estás seguro que quieres reiniciar la aplicación a su estado inicial?"
+msgstr "Sigur doriți să resetați aplicația la starea inițială?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr "Esto borrará todos los datos de la aplicación almacenados localmente!"
+msgstr "Acest lucru va șterge toate datele aplicației stocate local!"
 
 msgid "Sweden"
-msgstr "Suecia"
+msgstr "Suedia"
 
 msgid "Paused"
-msgstr "Pausa"
+msgstr "Întrerupt"
 
 msgid "Pending"
-msgstr "Pendientes"
+msgstr "În așteptare"
 
 msgid "Uploaded"
-msgstr "Enviados"
+msgstr "Încărcat"
 
 msgid "No finished pending surveys"
-msgstr "No hay muestreos terminados"
+msgstr "Niciun sondaj în asteptare finalizat"
 
 msgid "No uploaded surveys"
-msgstr "No hay muestreos enviados"
+msgstr "Niciun sondaj încărcat"
 
 msgid "Enjoying the app?"
-msgstr "¿Estás disfrutando de la aplicación?"
+msgstr "Îți place aplicația?"
 
 msgid "Not really"
-msgstr "No realmente"
+msgstr "Nu chiar"
 
 msgid "Yes!"
-msgstr "¡Si!"
+msgstr "Da!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr "¿Te importaría darnos algún comentario?"
+msgstr "Ați dori să ne lăsați un feedback?"
 
 msgid "No, thanks"
-msgstr "No, gracias"
+msgstr "Nu, mulțumesc"
 
 msgid "OK, sure"
-msgstr "Sí, claro"
+msgstr "OK, sigur"
 
 msgid "How about a rating on the App Store then?"
-msgstr "¿Qué tal una calificación en la App Store?"
+msgstr "Ce zici atunci de un rating pe App Store?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "¿Qué tal una calificación en Play Store?"
+msgstr "Ce zici atunci de un rating pe Play Store?"
 
 msgid "Icons made by"
-msgstr "Iconos hechos por"
+msgstr "Iconițe realizate de"
 
 msgid "from"
-msgstr "desde"
+msgstr "de la "
 
 msgid "We've sent an email to you"
-msgstr "Te hemos enviado un correo electrónico"
+msgstr "V-am trimis un email"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
-"Haga clic en el enlace del correo electrónico para restablecer su "
-"contraseña. Si no ve el correo electrónico, revise otros lugares como el "
-"spam, su correo no deseado u otras carpetas."
+"Faceți clic pe linkul din email pentru a vă reseta parola. Dacă nu vedeți "
+"emailul, verificați alte foldere, precum junk, spam sau altele."
 
 msgid "App Development"
-msgstr "Desarrollo de aplicaciones"
+msgstr "Dezvoltarea aplicației"
 
 msgid "This app was hand crafted with love by"
-msgstr "Esta aplicación hecha a mano con amor por "
+msgstr "Această aplicație a fost realizată cu drag de"
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
 msgstr ""
-"Agencia especializada en la construcción de soluciones a medida orientadas a"
-" datos."
+"O consultanță tehnică care excelează în construirea de soluții personalizate"
+" pentru știința mediului și axate pe comunitate."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr "Para sugerencias o comentarios por favor no dude en"
+msgstr "Pentru sugestii și feedback, vă rugăm nu ezitați să"
 
 msgid "contact us"
-msgstr "contáctarnos"
+msgstr "ne contactezi"
 
 msgid "Language"
-msgstr "Idioma"
+msgstr "Limbă"
 
 msgid "Country"
-msgstr "País"
+msgstr "Țara"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
-"Marca cualquier nuevo registro como \"entrenamiento\" y excluyeló de todos "
-"los informes."
+"Marcați orice înregistrări noi ca „antrenament” și excludeți-le din toate "
+"rapoartele."
 
 msgid "Share App Analytics"
-msgstr "Compartir análisis de aplicaciones"
+msgstr "Partajați aplicația Analytics"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
-"Comparta datos de problemasd de la aplicación para que podamos hacerla más "
-"confiable."
+"Partajați datele despre blocarea aplicației, astfel încât să putem face "
+"aplicația mai fiabilă."
 
 msgid "Save Draft"
-msgstr "Guardar borrador"
+msgstr "Salvați schița"
 
 msgid "Stage"
-msgstr "Estado"
+msgstr "Stadiu"
 
 msgid "Not Recorded"
-msgstr "No registrado"
+msgstr "Neînregistrat"
 
 msgid "Adults"
-msgstr "Adultos"
+msgstr "Adulți"
 
 msgid "Larvae"
-msgstr "Orugas"
+msgstr "Larve"
 
 msgid "Eggs"
-msgstr "Huevos"
+msgstr "Ouă"
 
 msgid "Pupae"
-msgstr "Pupa/crisálida"
+msgstr "Pupe"
 
 msgid "Larval webs"
-msgstr "Seda de oruga"
+msgstr "Pânze larvare"
 
 # Butterfly stage
 msgid "Adult"
-msgstr "Adulto"
+msgstr "Adult"
 
 # Butterfly stage
 msgid "Egg"
-msgstr "Huevo"
+msgstr "Ou"
 
 # Butterfly stage
 msgid "Larva"
@@ -943,227 +937,231 @@ msgstr "Larva"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr "Red larval"
+msgstr "Pânză larvară"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr "Pupa"
+msgstr "Pupă"
 
 msgid "Transect"
-msgstr "Transecto"
+msgstr "Transect"
 
 msgid "Sections"
-msgstr "Secciones"
+msgstr "Secțiuni"
 
 msgid "No transect"
-msgstr "Sin transecto"
+msgstr "Niciun transect"
 
 msgid "Start Time"
-msgstr "Hora de Inicio"
+msgstr "Ora începerii"
 
 msgid "End Time"
-msgstr "Hora de finalización"
+msgstr "Sfârșitul Timpului"
 
 msgid "Temperature"
 msgstr "Temperatura"
 
 msgid "Cloud"
-msgstr "Nubes"
+msgstr "Nori"
 
 msgid "Wind Direction"
-msgstr "Dirección del Viento"
+msgstr "Direcția vântului"
 
 msgid "Wind Speed"
-msgstr "Velocidad del Viento"
+msgstr "Viteza vântului"
 
 msgid "Recorder"
-msgstr "Censador"
+msgstr "Înregistrator"
 
 msgid "Refresh"
-msgstr "Actualizar"
+msgstr "Refresh"
 
 msgid "Please select your transect first."
-msgstr "Por favor,  seleccione su transecto primero"
+msgstr "Vă rugăm să selectați mai întâi transectul."
 
 msgid "Invalid server response."
-msgstr "Respuesta inválida del servidor."
+msgstr "Răspuns server nevalid."
 
 msgid "Not recorded/no data"
-msgstr "No registrado/sin datos"
+msgstr "Neînregistrat/nu există date"
 
 msgid "Please specify the temperature C°."
-msgstr "Por favor especifique la temperatura en grados C°."
+msgstr "Vă rugăm să specificați temperatura C°."
 
 msgid "S"
-msgstr "Sur"
+msgstr "S"
 
 msgid "SW"
-msgstr "Suroeste"
+msgstr "SV"
 
 msgid "W"
-msgstr "Oeste"
+msgstr "V"
 
 msgid "NW"
-msgstr "Noroeste"
+msgstr "NV"
 
 msgid "N"
-msgstr "Norte"
+msgstr "N"
 
 msgid "NE"
-msgstr "Noreste"
+msgstr "NE"
 
 msgid "E"
-msgstr "Este"
+msgstr "E"
 
 msgid "SE"
-msgstr "Sureste"
+msgstr "SE"
 
 msgid "No direction"
-msgstr "Sin dirección"
+msgstr "Fără direcție"
 
 msgid "Please specify the wind direction."
-msgstr "Por favor especifique la dirección del viento"
+msgstr "Vă rugăm să specificați direcția vântului."
 
 msgid "Smoke rises vertically"
-msgstr "Humo asciende vertical"
+msgstr "Fumul se ridică vertical"
 
 msgid "Slight smoke drift"
-msgstr "Ligera deriva del humo"
+msgstr "Ușoară derivă de fum"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr "Viento se siente en la cara y el susurro de las hojas"
+msgstr "Se simte văntul pe față, frunzele foșnesc"
 
 msgid "Leaves and twigs in slight motion"
-msgstr "Hojas y ramitas en ligero movimiento."
+msgstr "Frunze și crenguțe într-o mișcare ușoară"
 
 msgid "Dust raised and small branches move"
-msgstr "Polvo y pequeñas ramas se mueven"
+msgstr "Praf ridicat și ramurile mici se mișcă"
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Pequeños árboles se tambalean"
+msgstr "Arborii mici în frunze încep să se legene"
 
 msgid "Large branches move and trees sway"
-msgstr "Grandes ramas se mueven y los árboles se balancean"
+msgstr "Ramurile mari se mișcă și arborii se leagănă"
 
 msgid "Please specify the wind speed."
-msgstr "Por favor especifique la velocidad del viento"
+msgstr "Vă rugăm să specificați viteza vântului."
 
 msgid "Transects"
-msgstr "Transectos"
+msgstr "Transecte"
 
 msgid "Transect list was successfully updated."
-msgstr "Lista de transectos actualizados correctamente"
+msgstr "Lista transectelor a fost actualiză cu succes."
 
 msgid "Section"
-msgstr "Sección"
+msgstr "Secțiune"
 
 msgid "Reliability"
-msgstr "Veracidad"
+msgstr "Exactitate"
 
 msgid "Please specify the reliability of the section count."
-msgstr "Especifique la veracidad en los recuentos por secciones"
+msgstr "Vă rugăm să specificați fiabiliatea numărului de secțiuni."
 
 msgid "Suitable conditions"
-msgstr "Condiciones adecuadas"
+msgstr "Condiții potrivite"
 
 msgid "Unsuitable conditions"
-msgstr "Condiciones inadecuadas"
+msgstr "Condiții nepotrivite"
 
 msgid "Unable to survey"
-msgstr "No se puede realizar el muestreo"
+msgstr "Nu se poate face sondajul"
 
 msgid "15min Count"
-msgstr "Recuento 15 minutos"
+msgstr "Numărare de 15 minute"
 
 msgid "15min Single Species Count"
-msgstr "Recuento de 15 min única especie"
+msgstr "15min Numărarea unei singure specii"
 
 msgid "eBMS Transect"
-msgstr "Transecto eBMS"
+msgstr "Transectul eBMS"
 
 msgid "Please add any extra info about this record."
-msgstr "Por favor añada cualquier otra información extra sobre este recuento"
+msgstr ""
+"Vă rugăm să adăugați orice informații suplimentare despre această "
+"înregistrare."
 
 msgid "Enter more information here..."
-msgstr "Introducir más información aquí..."
+msgstr "Introduceți mai multe informații aici..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr "Especifique la persona responsable para identificar las especies."
+msgstr ""
+"Vă rugăm să specificați persoana responsabilă pentru identificarea "
+"speciilor."
 
 msgid "HH:mm"
 msgstr "HH:mm"
 
 msgid "Please specify the % of cloud cover."
-msgstr "Especifique el % de cobertura de nubes."
+msgstr "Vă rugăm să specificați procentul de acoperire cu nori."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "No tiene ningún transecto. Por favor actualice la lista."
+msgstr ""
+"Nu aveți nicun transect. Vă rugăm să încercați să dați un refresh listei"
 
 msgid "Wind speed info is missing"
-msgstr "Falta velocidad del viento"
+msgstr "Lipsesc informații despre viteza vântului"
 
 msgid "Temperature info is missing"
-msgstr "Falta información de temperatura"
+msgstr "Lipsesc informații despre temperatură"
 
 msgid "Recorder info is missing"
-msgstr "Falta información del censador"
+msgstr "Lipsesc informații despre înregistrator"
 
 msgid "Please select your transect."
-msgstr "Seleccione su transecto."
+msgstr "Vă rugăm selectați transectul."
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Esta guía esta aún en desarrollo. Cubre {{countrySpeciesCount}} especies de "
-"mariposas de {{totalSpeciesCountryCount}} especies totales del país "
-"selecionado. "
+"Acest ghid este încă în dezvoltare. Acoperă {{countrySpeciesCount}} specii "
+"de fluturi din {{totalSpeciesCountryCount}} specii din țara selectată."
 
 msgid "Status"
-msgstr "Estado"
+msgstr "Stare"
 
 msgid "Absent"
-msgstr "Ausente"
+msgstr "Absent"
 
 msgid "Present"
-msgstr "Presente"
+msgstr "Prezent"
 
 msgid "Possibly present"
-msgstr "Posiblemente presente"
+msgstr "Posibil prezent"
 
 msgid "Regular migrant"
-msgstr "Migrante regular"
+msgstr "Migrant obișnuit"
 
 msgid "Irregular vagrant"
-msgstr "Nómada irregular"
+msgstr "Migrator neregulat"
 
 msgid "Regionally extinct"
-msgstr "Regionalmente extinto"
+msgstr "Extinct la nivel regional"
 
 msgid "Description"
-msgstr "Descripción"
+msgstr "Descriere"
 
 msgid "Counts"
-msgstr "Recuentos"
+msgstr "Număratori"
 
 msgid "Species descriptions"
-msgstr "Descripciones de las especies"
+msgstr "Descrierea speciilor"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Las descripciones de las especies incluidas como parte de la guía se basan "
-"en las producidas en el Atlas de Riesgo Climático de las mariposas europeas."
-" Agradecemos a Josef Settele por hacerlos disponibles."
+"Descrierile speciilor incluse ca parte a ghidului se bazează pe cele "
+"realizate pentru Atlasul Riscului Climatic al Fluturilor Europeni. Îi "
+"mulțumim lui Josef Settele pentru că le-a pus la dispoziție."
 
 msgid "Photo credits"
-msgstr "Créditos fotográficos"
+msgstr "Credite foto"
 
 msgid "How to use the app"
-msgstr "Como usar la applicación "
+msgstr "Cum să folosiți aplicația"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1171,11 +1169,10 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Puede usar esta aplicación para el seguimiento de mariposas en cualquier "
-"lugar de Europa. Los resultados se introducirán en la base de datos Europea "
-"de seguimiento de mariposas y se utilizarán para desarrollar tendencias de "
-"mariposas en toda Europa. Para utilizar la aplicación, primero deberá "
-"registrar una cuenta."
+"Puteți folosi aplicația pentru monitorizarea fluturilor oriunde în Europa. "
+"Rezultatele vor fi introduse în baza de date European Butterfly Monitoring "
+"și utilizate pentru a dezvolta tendințele fluturilor din întreaga Europă. "
+"Pentru a utiliza aplicația va trebui mai întâi să vă înregistrați un cont."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1185,16 +1182,16 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"El método predilecto es realizar un recuento de 15 minutos. Esto se puede "
-"hacer en cualquier lugar y en cualquier momento cuando las mariposas están "
-"activas (es decir, cuando el clima es cálido y preferiblemente soleado). "
-"También puede usar la aplicación para registrar sus transectos de mariposa "
-"establecidos. Más adelante en 2020, la aplicación también incluirá la "
-"posibilidad de enviar registros oportunistas. Las notas a continuación le "
-"indican cómo usar los métodos disponibles actualmente."
+"Metoda preferată este efectuare unei numărări de 15 minute. Acest lucru se "
+"poate face în orice loc și în orice moment când fluturii sunt activi (adică "
+"atunci când vremea este caldă și de referat însorită). De asemena, puteți "
+"utilia aplicația pentru a înregistra transecte de fluturi stabilite. În "
+"2020, aplicația a inclus și posibiliatea de a trimite înregistrări "
+"ocazionale. Notele de mai jos vă spun cum să utilizați metodele disponibile "
+"în prezent."
 
 msgid "How to do a 15-minute Count"
-msgstr "Como hacer un Registro de 15 minutos"
+msgstr "Cum să faceți o număratoare de 15 minute"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1209,19 +1206,17 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Este es el método predeterminado en la aplicación. Simplemente cuente las "
-"mariposas durante un período de 15 minutos, ya sea en un área definida, como"
-" un campo, o mientras camina, o de pie en un punto fijo contando las "
-"mariposas que pasan volando. No es necesario dibujar la ruta ya que la "
-"aplicación sabrá su ruta, siempre que tenga activada la función de rastreo "
-"GPS en su Configuración. De lo contrario, deberá dibujar el área a "
-"monitorear en un mapa, utilizando la aplicación. Para comenzar, toque el "
-"botón + en la parte inferior de la pantalla. La aplicación empieza una "
-"cuenta regresiva de los 15 minutos una vez que haya comenzado, pero puede "
-"hacer una pausa en cualquier momento (por ejemplo, para identificar una "
-"mariposa) presionando el botón de pausa. Al final de la encuesta, puede "
-"revisar sus registros y asegurarse de que los totales sean correctos antes "
-"de enviarlos."
+"Aceasta este medoda implicită din aplicație. Pur și simplu numărați fluturii"
+" timp de 15 minute, fie într-o zonă definită, cum ar fi un câmp, fie în timp"
+" ce mergeți de-a lungul sau stând într-un punct fix, numărând fluturii care "
+"zboară în jurul dumneavoastră. Nu este nevoie să desenați traseul, cu "
+"condiția să aveți funcția GPS activată în Setări. În caz contrar va trebui "
+"să desenați căutată pe o hartă, folosind aplicația. Pentru a începe, "
+"atingeți butonul + din partea de jos a ecranului. Aplicația numără invers "
+"cele 15 minute după ce ați ănceput, dar puteți face o pauză în orice moment "
+"(de exemplu pentru a identifica un fluture) apăsând pauză. La sfârșitul "
+"sondajului, vă puteți revizui înregistrările și vă puteți asigura că că "
+"totalurile sunt corecte înainte de a trimite."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1231,13 +1226,13 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
-"Agregue las especies que ve presionando el botón + AÑADIR y comience a "
-"escribir el nombre de una especie. La selección de especies aparecerá como "
-"una lista desplegable. Puede usar nombres científicos o ingleses. Seleccione"
-" las especies que ve y una vez en su lista de mariposas, toque el número de "
-"la izquierda para aumentar el recuento de cuántas ha visto. También puede "
-"revisar este número y modificarlo al final. También puede agregar fotos si "
-"lo desea y agregar comentarios."
+"Adăugați speciile pe care le vedeți apăsând butonul + ADAUGĂ și începeți să "
+"introduceți denumirea unei specii. Selecția speciilor va apărea poi ca un "
+"meniu derulant. Puteți folosi denumiri științifice sau englezești. Selectați"
+" speciile pe care le vedeți și, odată în lista de fluturi, atingeți numărul "
+"din stânga pentru a crește numarul fluturi observați. Puteți revizui acest "
+"număr și puteți modifica și la sfârșit. De asemena, puteți adăuga dacă "
+"dpriți fotografii și comentarii."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1246,15 +1241,15 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"Una vez que haya terminado su Recuento de 15 minutos y haya verificado que "
-"las especies y los números registrados son correctos, presione el botón "
-"TERMINAR para enviar su recuento. Esto es importante para asegurarse de que "
-"sus datos se almacenen de forma segura en la base de datos eBMS. Se "
-"mantendrá el registro del recuento en su dispositivo para una referencia "
-"futura, así como en su cuenta en línea"
+"După ce ați terminat numărătoare de 15 minute și ați verificat dacă speciile"
+" și numerele văzute sunt corecte, apăsați butonul ÎNCĂRCARE pentru a "
+"trimite. Acest lucru este important pentru a vă asigura că datele "
+"dumneavoastră sunt stocate în siguranță în baza de date eBMS. O înregistrare"
+" a numărării va fi pe dispozitivul dvs. pentru referințe viitoare, precum și"
+" pe contul dumneavoastră online."
 
 msgid "How to record along an existing transect"
-msgstr "Cómo registrar visitas de un transecto existente"
+msgstr "Cum să realizați înregistrări de-a lungul unui transect existent"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1265,15 +1260,15 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
-"También puede usar la aplicación para enviar registros mientras recorre un "
-"transecto de seguimiento de mariposas existente. Estos ya han sido "
-"establecidos por los Programas de Seguimiento de Mariposas (BMS) de cada "
-"país y se realizan mejor con censadores experimentados. El registro de "
-"transectos existentes dentro de la aplicación requiere que su cuenta ya esté"
-" vinculada a un transecto dentro del sistema eBMS. Si no se enumeran sitios "
-"de transectos una vez que haya iniciado sesión en la aplicación, comuníquese"
-" con su coordinador nacional (envíe un correo electrónico a {{helpEmail}} "
-"para obtener asesoramiento)."
+"De asemenea, puteți utiliza aplicația pentru a trimite înregistrări în timp "
+"ce parcurgeți un transect de monitorizare a fluturilor existent. Acestea au "
+"fost deja stabilite de Sistemele de Monitorizare a Fluturilor din țară și "
+"sunt cel mai bine completate de înregistratori experimentați. Înregistrarea "
+"transectelor existente în aplcație necesită ca contul dumneavoastră să fie "
+"deja conectat la o configurație de transect în cadrul sistemului eBMS. Dacă "
+"nu apare nicio zonă a transectului odată ce v-ați conectat la aplicație, vă "
+"rugăm să contactați coordonatorul național (vă rugăm să trimiteți un email "
+"{{helpEmail}} pentru sfaturi)."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1288,22 +1283,22 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"Para comenzar con el recuento de transectos, mantenga presionado el botón + "
-"(una pulsación larga) en la parte inferior de la pantalla y seleccione eBMS "
-"Transect. La página  Transecto aparecerá con todas las opciones para "
-"completar. Primero, debe seleccionar su transecto (deberá iniciar sesión "
-"para esto y para que las rutas de transectos se vinculen a su cuenta de "
-"usuario). Una vez que haya seleccionado su sitio de transecto, puede "
-"completar los detalles climáticos necesarios (por ejemplo, temperatura, "
-"velocidad del viento, etc.) y otra información requerida (por ejemplo, hora "
-"de inicio) en la página Transecto. Luego puede empezar a añadir una lista de"
-" especies vistas y el número contado para cada sección del transecto, de la "
-"misma manera que para un recuento de 15 minutos. Una vez que haya terminado "
-"su Transecto y verifique que las especies y los números vistos son "
-"correctos, presione el botón TERMINAR para enviar el transecto."
+"Pentru a începe cu transectele de numărare, țineți apăsat butonul + (o "
+"apăsare lungă) din partea de jos a ecranului și selectați Transect eBMS. Va "
+"apărea pagina Transect cu toate opțiunile de completat. În primul rând, "
+"trebuie să vă selectați transectele (va trebui să fiți autentificat pentru "
+"aceasta, iar rutele transectelor să fie conectate la contul dvs. de "
+"utilizator). După ce ați selectat zona transectului puteți completa "
+"detaliile meteo necesare (de exemplu, temperatura, viteza vântului etc.) și "
+"alte informații necesare (de exemplu, ora începerii) pe pagina zonei de "
+"transect. Apoi adăugați o listă de specii observate și numărul acestora "
+"pentru fiecare secțiune de transect, în același mod ca pentru o numărare de "
+"15-minute. Odată ce ați terminat transectul și ați verificat toate speciile "
+"observate și numerele sunt corecte, apăsați butonul Finalizare pentru a "
+"trimite."
 
 msgid "Survey section"
-msgstr "Sección Muestreos"
+msgstr "Secțiunea de sondaje"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1313,176 +1308,178 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
-"En esta pestaña, en la parte derecha del botón +, puede ver los muestreos "
-"PENDIENTES, sus registros que no se han enviado y los recuentos ENVIADOS, "
-"los enviados a la base de datos eBMS. Los recuentos pendientes se pueden "
-"enviar al sistema haciendo clic en él y presionando la opción Terminar. "
-"Puede ver la lista de especies que registró para los recuentos cargados. "
-"Todos sus registros también se pueden ver y editar en el {{eBMSWebsiteLink}}"
+"În această filă, în partea dreaptă a butonului +, puteți vedea numărătorile "
+"ÎN AȘTEPTARE, înregistrările dumneavoastră care nu au fost trimise și "
+"numărătorile ÎNCĂRCATE, cele trimise în baza de date eBMS. Numărătorile în "
+"așteptare pot fi trimisesistemului făcând clic pe el și apăsând opțiunea "
+"Încărcare. Puteți vedea lista de specii pe care ați înregistrat-o pentru "
+"numărătorile încărcate. Toate înregistrările dumneavoastră pot fi, de "
+"asemena, vizualizate și editate pe {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
-msgstr "Página web de eBMS"
+msgstr "Website eBMS"
 
 msgid "App Settings"
-msgstr "Configuración de la Applicación"
+msgstr "Setările Aplicației"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
-"Vaya a la página de configuración de la aplicación para cambiar el idioma y "
-"el país. El país seleccionado es importante para poder ver diferentes "
-"especies en la Guía de imágenes, solo verá las especies que ocurren en ese "
-"país."
+"Accesați pagina de setări pentu a schimba limba și țara. Țara selectată este"
+" importantă pentru a vedea diferite specii în ghidul de imagini, veți vedea "
+"doar speciile care apar în acea țară."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
-"Puede también activar el modo de Entrenamiento cuando aún esta aprendiendo a"
-" identificar mariposas"
+"De asemena, puteți activa Modul Antrenament, când încă învățați să "
+"identificați fluturii. "
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr "Eliminar el último punto"
+msgstr "Șterge ultimul punct"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr "Guardar"
+msgstr "Salvează"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr "Borrar todo"
+msgstr "Șterge tot"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr "Haga clic para comenzar a dibujar "
+msgstr "Faceți clic pentru a începe să desenați forma."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr "Haga clic para continuar dibujando"
+msgstr "Faceți clic pentru a continua să desenați forma."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr "Haga clic en el primer punto para cerrar la figura"
+msgstr "Faceți clic pe primul punct pentru a închide această formă."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr "Haga clic para empezar a dibujar una línea"
+msgstr "Faceți clic pentru a desena o linie."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr "Haga clic para continuar dibujando una línea"
+msgstr "Faceți clic pentru a continua desenarea liniei."
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr "Haga clic para dibujar terminar la línea"
+msgstr "Clic pe ultimul punct pentru a termina linia."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr "Arrastre puntos o marcadores para editar las figuras."
+msgstr "Trageți marcatoarele pentru a edita caracteristicile."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr "Haga clic en cancelar para deshacer los cambios."
+msgstr "Clic Anulare pentru a anula modificările."
 
 msgid "Map"
-msgstr "Mapa"
+msgstr "Hartă"
 
 msgid "Today"
-msgstr "Hoy"
+msgstr "Astăzi"
 
 msgid "Yesterday"
-msgstr "Ayer"
+msgstr "Ieri"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr ""
-"Este registro ha sido enviado y no puede ser editado dentro de esta app."
+"Această înregistrare a fost trimisă si nu poate fi editată în această "
+"aplicație."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr "Otras opciones de registro"
+msgstr "Faceți clic pe alte opțiuni de înregistrare din lista de mai jos."
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
-"Carga por lotes todos los registros terminados. Esto no incluye registros en"
-" estado 'borrador'."
+"Încărcați toate înregistrările comune. Nu va include înregesitrările din "
+"etapa „schiță”."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr "¿Seguro que quieres subir todos los registros terminados?"
+msgstr "Sigur doriți să încărcați toate înregistrările finalizate?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr "Por favor registrese primero para enviar registros"
+msgstr "Vă rugăm să vă conectați mai întâi pentru a încărca înregistrările."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] "Cargando {{count}} muestreo"
-msgstr[1] "Cargando {{count}} muestreos"
-msgstr[2] "Cargando {{count}} muestreos"
+msgstr[0] "Se încarcă {{count}} înregistrarea"
+msgstr[1] "Se încarcă {{count}} înregistrările"
+msgstr[2] "Se încarcă {{count}} înregistrările"
 
 # Part of a page error
 msgid "Oops! Something went wrong."
-msgstr "Ups! Algo salió mal."
+msgstr "Oops! Ceva nu a mers bine."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr "Este es el ID del suceso error: {{eventId}}"
+msgstr "Acesta este ID-ul erorii: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr "Detalles opcionales"
+msgstr "Detalii suplimentare"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr "Condiciones climáticas"
+msgstr "Condiții meteorologice"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr "Condiciones climáticas"
+msgstr "Condiții meteorologice"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr "¿Estás seguro de que quieres eliminar {{taxon}} ?"
+msgstr "Sigur doriți să ștergeți {{taxon}} ?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
-"Los valores climáticos actuales se rellenan previamente utilizando el "
-"servicio meteorológico API OpenWeatherMap."
+"Valorile meteo actuale sunt prepopulate folosind serviciul meteo "
+"OpenWeatherMap API."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr "Copiar especies"
+msgstr "Copiază specia"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr "¿Seguro que desea copiar la lista de especies del muestreo anterior?"
+msgstr "Sigur doriți să copiați lista de specii din sondajul anterior?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr "Copiar"
+msgstr "Copiază"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr "Lo sentimos, no se encontraron especies para copiar."
+msgstr "Ne pare rău, nu au fost găsit specii de copiat."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr "Ha copiado con éxito {{speciesCount}} especies."
+msgstr "Ați copiat cu succes {{speciesCount}} specii."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr "Lo sentimos, no hay un muestreo previo para copiar especies."
+msgstr ""
+"Ne pare rău, nu există un studiu anterior din care să copiați speciile."
 
 # Country name
 msgid "Armenia"
@@ -1490,120 +1487,123 @@ msgstr "Armenia"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Para eliminar cualquier muestreo, deslícela hacia la izquierda."
+msgstr "Pentru a șterge orice sondaj, glisați spre stânga."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
-"Verifique si el área de muestreo es correcta antes de enviar el registro."
+"Vă rugăm să verificați dacă zona de înregistrare este corectă înainte de a "
+"trimite înregistrarea."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr "¡Por favor, no olvide subir los muestreos pendientes!"
+msgstr "Vă rugăm să nu uitați să încărcați orice sondaj în așteptare!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
-"No hay muestreos pendientes terminadas<br/><br/>Presione  <4></4> para "
-"agregar."
+"Niciun sondaj în așteptare finalizat.<br/><br/>Apăsați <4></4> pentru a "
+"adăuga."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr "Consejo: Cómo encontrar ayuda"
+msgstr "Sfat: Găsiți ajutor"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
-"¡Por favor visite las páginas de Guía <2></2> y Ayuda <5></5> en el Menu "
-"antes de usar la aplicación!"
+"Vă rugăm să vizitați paginilie Ghidului <2></2> și Ajutor <5></5> înainte de"
+" a utiliza aplicația!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr "Más información"
+msgstr "Mai multe informații"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr "Consejo: Añadir especies"
+msgstr "Sfat: Adăugarea speciilor"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
-"Puede copiar toda su lista de especies anteriores presionando "
-"prolongadamente el botón Añadir especies."
+"Puteți copia în bloc listele anterioare de specii apăsând lung pe butonul "
+"Adăugați specii."
 
 # Button
 msgid "Hide"
-msgstr "Ocultar"
+msgstr "Ascunde"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Muestreo Principal"
+msgstr "Sondajul Primar"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr "Todos los muestreos"
+msgstr "Toate sondajele"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr "Foto representativa donde el recuento de 15 minutos se hizo"
+msgstr ""
+"Fotografie reprezentativă a locului în care a fost realizată numărarea "
+"speciilor în 15 minute"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr "Ninguna foto se ha añadido."
+msgstr "Nu a fost adăugată nicio fotografie."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr "Presiona <1></1> para añadir."
+msgstr "Apăsați <1></1> pentru adăugare."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr "Recuento 15-min preciso"
+msgstr "Număratoare de 15 minute precisă"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr "Presencias"
+msgstr "Observări"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr "Tiempo"
+msgstr "Timpul"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr "¿Está seguro de que desea eliminar esta presencia?"
+msgstr "Sigur doriți să ștergeți această observare?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr "Entendido"
+msgstr "Am înțeles"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr "<0>No hay muestreos enviados </0>"
+msgstr "<0>Niciun sondaj încărcat</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr "La cuenta ya existe."
+msgstr "Contul există deja."
 
 # A survey label
 msgid "Details"
-msgstr "Detalles"
+msgstr "Detalii"
 
 # A survey label
 msgid "Species Photo"
-msgstr "Fotos de especie"
+msgstr "Foto speciei"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr "Elige la fase de la vida"
+msgstr "Alege stadiul de viață"
 
 # A survey label
 msgid "Weather"
-msgstr "Condiciones climáticas"
+msgstr "Vremea"
 
 # A survey label
 msgid "Photo"
@@ -1611,325 +1611,326 @@ msgstr "Foto"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr "Grupos de especies"
+msgstr "Grupele de specii"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr "Por favor seleccione el grupo de especies que siempre registra."
+msgstr ""
+"Vă rugăm să selectați grupurile de specii pe care le înregistrați "
+"întotdeauna."
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr "Mariposas"
+msgstr "Fluturi"
 
 # Part of species group selection
 msgid "Moths"
-msgstr "Polillas"
+msgstr "Molii"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr "Abejorros"
+msgstr "Bondari"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr "Libélulas"
+msgstr "Libelule"
 
 # Alert label
 msgid "Warning"
-msgstr "Advertencia"
+msgstr "Avertizare"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr "¿Estás seguro de que quieres desactivar el seguimiento GPS?"
+msgstr "Sigur dorți să dezactivați urmărirea GPS?"
 
 # Alert button option
 msgid "Turn off"
-msgstr "Desarctivar"
+msgstr "Opriți"
 
 # Alert button label
 msgid "Merge"
-msgstr "Unir"
+msgstr "Unește"
 
 # Alert header
 msgid "Species already exists"
-msgstr "La especie ya existe"
+msgstr "Specia există deja"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
-msgstr ""
-"¿Está seguro de que desea unir esta lista con la lista de especies "
-"existente?"
+msgstr "Sigur doriți să îmbinați această listă cu lista de specii existentă?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr "Agregue su especie objetivo"
+msgstr "Vă rugăm să adăugați specia țintă."
 
 # Moth survey label
 msgid "Date"
-msgstr "Fecha"
+msgstr "Data"
 
 # Moth survey label
 msgid "Method"
-msgstr "Método"
+msgstr "Metoda"
 
 # Context term
 msgid "Please select the medthod type"
-msgstr "Por favor seleccione el tipo de método"
+msgstr "Vă rugăm selectați tipul metodei"
 
 # Moth survey method type
 msgid "MV light"
-msgstr "Luz MV"
+msgstr "Lumină MV"
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr "Luz actínica"
+msgstr "Lumină actinică"
 
 # Moth survey method type
 msgid "LED light"
-msgstr "Luz LED"
+msgstr "Lumină LED"
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr "Trampa de luz"
+msgstr "Capcană de lumină"
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr "Observación diurna"
+msgstr "Observare pe timp de zi"
 
 # Moth survey method type
 msgid "Dusking"
-msgstr "Anochecer"
+msgstr "Înserare"
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr "Atraído por una ventana iluminada"
+msgstr "Atras de o fereastră luminată"
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr "Con azúcar"
+msgstr "Sugaring"
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr "Tiras de vino"
+msgstr "Wine roping"
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr "Método de golpeteo"
+msgstr "Beating tray"
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr "Trampa de feromonas"
+msgstr "Capcană cu feromoni"
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr "Otros métodos (añadir comentario)"
+msgstr "Altă metodă (adăugați comentariu)"
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr "No está registrado"
+msgstr "Neînregistrat"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr "Detalles del muestreo"
+msgstr "Detaliile sondajului"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr "Muestreo trampa de polillas"
+msgstr "Sondaj cu capcane pentru molii"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr "Muestreo de polillas"
+msgstr "Sondaj molii"
 
 # Moth survey divider label
 msgid "Species list"
-msgstr "Lista de especies"
+msgstr "Lista speciilor"
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr "Identificador"
+msgstr "Identificator"
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr "Lista de polillas"
+msgstr "Lista fluturilor de noapte"
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr "Fotos de polilla"
+msgstr "Fotografia fluturelui de noapte"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr "Introduzca el nombre del registrador, si es diferente."
+msgstr "Introduceți numele înregistratorului, dacă este diferit."
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr "Nombre del censador"
+msgstr "Numele înregistratorului"
 
 # Latitude
 msgid "Lat"
-msgstr "Latitud"
+msgstr "Lat"
 
 # Longitude
 msgid "Long"
-msgstr "Longitud"
+msgstr "Long"
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr "Conteo dentro"
+msgstr "Numărați în interior"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr "Conteo fuera\t"
+msgstr "Numărați în exterior"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr "Fotos de polilla"
+msgstr "Fotografii fluturi de noapte"
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr "Trampas de polilla"
+msgstr "Capcane fluturi de noapte"
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr "Trampa de polillas"
+msgstr "Capcană fluturi de noapte"
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
-"Todavía no has creado ninguna trampa para polillas. Para crear una, por "
-"favor vaya a la <2>página web.</2>"
+"Nu ați creat încă nicio capcană pentru fluturii de noapte. Pentru a crea "
+"una, vă rugăm să accesați <2>site-ul web.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr "Para ver el mapa por favor conéctese a Internet."
+msgstr "Pentru a vedea harta, vă rugăm să vă conectați la internet."
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr "Por favor añada la trampa de polilla"
+msgstr "Vă rugăm să adăugați capcana pentru fluturii de noapte"
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
-"Sólo tienes una trampa para polillas. Para crear más, diríjase a la página "
-"<2>página web.</2>"
+"Aveți doar o singură capcană pentru fluturii de noapte. Pentru a crea mai "
+"multe, vă rugăm să accesați <2>site-ul web.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr "Identificando..."
+msgstr "Identificare..."
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr "Desconocido"
+msgstr "Necunoscut"
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr "Por favor añada una foto"
+msgstr "Vă rugăm adaugați o fotografie"
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr "Specie desconocida"
+msgstr "Specie necunoscută"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr "<0>Aviso</0> - no pudimos identificar esta especie."
+msgstr "<0>Atenție</0> - nu am putut identifica această specie."
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we think it is"
-msgstr "<0>Aviso</0> - creemos que es"
+msgstr "<0>Atenție</0> - credem că este"
 
 # Moth survey image gallery warning message
 msgid "likely a"
-msgstr "probablemente un(a)"
+msgstr "probabil un"
 
 # App settings title
 msgid "Surveying"
-msgstr "Muestreando"
+msgstr "Măsurători"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr "Muestreo de polillas (SPRING)"
+msgstr "Studiu privind fluturii de noapte (Primăvara)"
 
 # Survey name
 msgid "Moth Survey"
-msgstr "Muestreo de polillas"
+msgstr "Studiu privind fluturii de noapte"
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr "Configuración Muestreo de polillas"
+msgstr "Setări pentru studiul fluturilor de noapte"
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr "Usar la identificación de imágenes"
+msgstr "Utilizați identificarea imaginii"
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
 msgstr ""
-"Le ayudaremos a identificar las especies utilizando nuestro clasificador de "
-"imágenes de especies."
+"Vă vom ajuta să identificați speciile cu ajutorul clasificatorului nostru de"
+" imagini de specii."
 
 # Moth survey button label
 msgid "IDENTIFY"
-msgstr "IDENTIFICAR"
+msgstr "IDENTIFICĂ"
 
 # Moth survey button label
 msgid "Identify All"
-msgstr "Identificar todo"
+msgstr "Identificați toți"
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr "Identificación de imágenes"
+msgstr "Identificarea imaginii"
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
-"El clasificador de imágenes está actualmente <1>desactivado</1>. Por favor "
-"vaya a la app <4>Configuración</4>para activarlo"
+"Clasificatorul de imagini este în prezent <1>dezactivat</1>. Vă rugăm să "
+"accesați <4>Setările</4>aplicației pentru a-l activa."
 
 # Whats new message title
 msgid "What's New"
-msgstr "Novedades"
+msgstr "Noutăți"
 
 # Version 1.15 whats new message
 msgid "Record moths with the help of automatic identification in real-time."
 msgstr ""
-"Registra polillas con la ayuda de la identificación automática en tiempo "
+"Înregistrați fluturii de noapte cu ajutorul identificării automate în timp "
 "real."
 
 # Version 1.15 whats new message
 msgid "Bug fixes and improvements"
-msgstr "Corrección de errores y mejoras"
+msgstr "Corectarea erorilor și îmbunătățiri"
 
 # Version 1.15 whats new message
 msgid "Added option to identify moths with image classifier"
 msgstr ""
-"Añadida la opción de identificar polillas con el clasificador de imágenes"
+"A fost adăugată opțiunea de identificare a fluturilor de noapte cu ajutorul "
+"clasificatorului de imagini"
 
 # Version 1.15 whats new message
 msgid "Added App setting option to disable image classifier"
 msgstr ""
-"Se ha añadido la opción de configuración de la aplicación para desactivar el"
-" clasificador de imágenes"
+"A fost adăugată opțiunea de setare a aplicației pentru a dezactiva "
+"clasificatorul de imagini"
 
 # Version 1.15 whats new message
 msgid "Added option to create Moth trap"
-msgstr "Añadida la opción de crear Trampa de polillas"
+msgstr "A fost adăugată opțiunea de a crea capcană de fluturi de noapte"
 
 # Version 1.15 whats new message
 msgid "Bug fixes"
-msgstr "Corrección de errores"
+msgstr "Corectarea erorilor"
 
 # User account action
 msgid "Resend"
-msgstr "Reenviar"
+msgstr ""
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr "Parece que tu correo no ha sido verificado aún."
+msgstr ""
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr "¿Debemos volver a enviar el correo electrónico de verificación?"
+msgstr ""
