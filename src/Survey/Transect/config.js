@@ -14,6 +14,7 @@ import {
   commentAttr,
   dateAttr,
 } from 'Survey/common/config';
+import { chatboxOutline } from 'ionicons/icons';
 
 const reliabilityValues = [
   { value: 'Suitable conditions', id: 16590 },
@@ -100,6 +101,15 @@ const config = {
       date: dateAttr,
       location: locationAttr,
       cloud: cloudAttr,
+      comment: {
+        menuProps: { icon: chatboxOutline, skipValueTranslation: true },
+        pageProps: {
+          attrProps: {
+            input: 'textarea',
+            info: 'Please add any extra info about this section.',
+          },
+        },
+      },
 
       reliability: {
         pageProps: {
@@ -147,6 +157,7 @@ const config = {
         attrs: {
           sample_method_id: 776,
           location,
+          comment: null,
         },
       });
 

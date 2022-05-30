@@ -11,6 +11,7 @@ import {
   IonItemOptions,
   IonItemOption,
   NavContext,
+  IonItemDivider,
 } from '@ionic/react';
 import {
   addCircleOutline,
@@ -19,8 +20,9 @@ import {
   thumbsUpOutline,
   cloudyOutline,
 } from 'ionicons/icons';
-import { Main, MenuAttrItem } from '@flumens';
+import { Main, MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import PhotoPicker from 'common/Components/PhotoPicker';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import './styles.scss';
@@ -185,6 +187,19 @@ class Edit extends Component {
               label="Reliability"
               value={reliability}
             />
+
+            <MenuAttrItemFromModel
+              attr="comment"
+              model={sectionSample}
+              skipValueTranslation
+            />
+          </div>
+
+          <IonItemDivider>
+            <T>Section Photos</T>
+          </IonItemDivider>
+          <div className="rounded">
+            <PhotoPicker model={sectionSample} />
           </div>
 
           {this.getSpeciesAddButton()}
