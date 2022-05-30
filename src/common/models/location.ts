@@ -183,7 +183,7 @@ class LocationModel extends Model {
 
   static parseRemoteJSON({ values: doc }: Location) {
     const parsedRemoteJSON = {
-      cid: UUID(),
+      cid: doc.external_key || UUID(),
       id: doc.id,
 
       attrs: {

@@ -58,19 +58,27 @@ export class Locations extends Collection<Location> {
   }
 
   fetch = async () => {
-    const newModelsFromRemote = await this._fetch();
+    const remoteDocs = await this._fetchDocs();
+    const remoteExternalKeys = remoteDocs.map(({ cid }) => cid);
+
     const drafts: Location[] = [];
 
     while (this.length) {
       const model = this.pop();
-      if (!model) return;
+      if (!model) continue; // eslint-disable-line no-continue
 
-      if (model.isDraft()) {
-        drafts.push(model);
-      } else {
+      const wasUploaded = !model.isDraft();
+      const isLocalDuplicate =
+        !wasUploaded && remoteExternalKeys.includes(model.cid); // can happen if uploaded but not reflected back in the app
+      if (wasUploaded || isLocalDuplicate) {
         model.destroy();
+      } else {
+        drafts.push(model);
       }
     }
+
+    const initModel = (doc: any) => new this.Model(doc) as Location;
+    const newModelsFromRemote = remoteDocs.map(initModel);
 
     this.push(...newModelsFromRemote, ...drafts);
   };
@@ -89,7 +97,10 @@ export class Locations extends Collection<Location> {
 
     console.log(`📚 Collection: ${this.id} collection fetching first time`);
 
-    const models = await this._fetch();
+    const docs = await this._fetchDocs();
+    const initModel = (doc: any) => new this.Model(doc) as Location;
+    const models = docs.map(initModel);
+
     this.push(...models);
 
     this._fetchedFirstTime = true;
@@ -97,27 +108,19 @@ export class Locations extends Collection<Location> {
     return this;
   };
 
-  private _fetch = async () => {
+  private _fetchDocs = async () => {
     console.log(`📚 Collection: ${this.id} collection fetching`);
     this.fetching.isFetching = true;
 
     const docs = await fetchLocations();
 
-    const initModel = (doc: any) => {
-      const { Model } = this;
-
-      const parsedDoc = Model.parseRemoteJSON(doc);
-
-      return new Model(parsedDoc) as Location;
-    };
-    const models = docs.map(initModel);
-
     this.fetching.isFetching = false;
 
     console.log(
-      `📚 Collection: ${this.id} collection fetching done ${models.length} documents`
+      `📚 Collection: ${this.id} collection fetching done ${docs.length} documents`
     );
-    return models;
+
+    return docs.map(this.Model.parseRemoteJSON);
   };
 
   resetDefaults = () => {
