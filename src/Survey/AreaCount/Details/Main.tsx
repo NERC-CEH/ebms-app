@@ -9,7 +9,12 @@ import {
 import { useRouteMatch } from 'react-router-dom';
 import { Trans as T } from 'react-i18next';
 import Sample from 'models/sample';
-import { Main, MenuAttrItem, InfoMessage } from '@flumens';
+import {
+  Main,
+  MenuAttrItem,
+  InfoMessage,
+  MenuAttrItemFromModel,
+} from '@flumens';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
 
@@ -95,6 +100,8 @@ const AreaCountDetails: FC<Props> = ({ sample }) => {
             value={comment}
             skipValueTranslation
           />
+
+          <MenuAttrItemFromModel attr="recorders" model={sample} />
         </div>
       </IonList>
     </Main>
