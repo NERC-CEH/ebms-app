@@ -10,10 +10,7 @@ export const getGPSPermissionStatus = async (toast: any) => {
   if (permission.coarseLocation !== 'granted') {
     toast.warn(
       'Your Location Services (GPS) seems to be disabled. You can enable this in your device settings.',
-      {
-        duration: 3000,
-        position: 'middle',
-      }
+      { duration: 3000, position: 'bottom' }
     );
   }
 };
