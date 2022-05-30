@@ -17,7 +17,7 @@ interface Props {
 const Marker: FC<Props> = ({ mothTrap, onSelect, isSelected, isDisabled }) => {
   if (!mothTrap.attrs.location?.latitude) return null;
 
-  const { latitude, longitude, name } = mothTrap.attrs?.location;
+  const { latitude, longitude, name } = mothTrap.attrs?.location || {};
 
   const getIcon = () =>
     L.divIcon({

@@ -43,8 +43,8 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
     );
   }
 
-  const { taxon } = image.attrs.species[0];
-  const probability = (image.attrs.species[0]?.probability * 100).toFixed(0);
+  const { taxon, probability: prob } = image.attrs.species[0];
+  const probability = ((prob || 0) * 100).toFixed(0);
 
   if (!doesTaxonMatchParent) {
     return (

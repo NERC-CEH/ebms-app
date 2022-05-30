@@ -16,8 +16,8 @@ import {
 import MothTrap from 'common/models/location';
 import { observer } from 'mobx-react';
 import { Trans as T, useTranslation } from 'react-i18next';
-import OnlineStatus from './OnlineStatus';
 import mothTrapIcon from 'common/images/moth-inside-icon.svg';
+import OnlineStatus from './OnlineStatus';
 import './styles.scss';
 
 function useDeleteTrapPrompt(onDelete: any) {

@@ -6,8 +6,8 @@ import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Sample from 'models/sample';
 import appModel from 'models/app';
-import Map from './Components/Map';
 import gpsPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
+import Map from './Components/Map';
 
 import './styles.scss';
 

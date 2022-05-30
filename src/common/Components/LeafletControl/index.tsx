@@ -10,7 +10,7 @@ const POSITION_CLASSES = {
 } as const;
 
 const MapCustomControl = (props: MapCustomControlProps): JSX.Element | null => {
-  const { position, containerProps, children, isDisabled } = props;
+  const { position = 'topleft', containerProps, children, isDisabled } = props;
 
   if (isDisabled) return null;
 
@@ -31,12 +31,6 @@ export type MapCustomControlProps = {
   >;
   children: ReactNode;
   isDisabled?: boolean;
-};
-
-MapCustomControl.defaultProps = {
-  position: 'topleft' as MapCustomControlProps['position'],
-  containerProps: {},
-  children: null,
 };
 
 export default MapCustomControl;

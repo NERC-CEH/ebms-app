@@ -5,7 +5,7 @@ import MarkerClusterGroup from 'react-leaflet-markercluster';
 import Sample from 'models/sample';
 import hasLocationMatch from 'Survey/common/hasLocationMatch';
 import Marker from './Marker';
-import 'leaflet.markercluster';
+import 'leaflet.markercluster'; // eslint-disable-line
 import 'leaflet/dist/leaflet.css';
 
 const forceSkipRefresh = (prevProps: any, nextProps: any) =>

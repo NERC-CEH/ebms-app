@@ -19,9 +19,9 @@ const GPSPermissionSubheader = () => {
 
   useEffect(() => {
     const hasPermission = async () => {
-      const permission = await Geolocation.checkPermissions();
+      const perm = await Geolocation.checkPermissions();
 
-      if (permission.coarseLocation === 'granted') {
+      if (perm.coarseLocation === 'granted') {
         setPermission(true);
       }
 
