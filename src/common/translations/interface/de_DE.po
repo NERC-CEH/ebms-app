@@ -513,6 +513,10 @@ msgstr "Falsches Passwort oder E-Mail"
 msgid "Enter your email address to request a password reset."
 msgstr "Gib deine E-Mail ein, um ein neues Passwort anzufordern."
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "Der Benutzer wurde nicht aktiviert oder ist gesperrt."

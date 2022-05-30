@@ -506,6 +506,10 @@ msgstr "Nesprávné heslo nebo e-mail"
 msgid "Enter your email address to request a password reset."
 msgstr "Pro reset hesla zadejte emailovou adresu."
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr ""

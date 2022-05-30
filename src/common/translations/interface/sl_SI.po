@@ -504,6 +504,10 @@ msgstr "Nepravilno geslo ali e-naslov"
 msgid "Enter your email address to request a password reset."
 msgstr ""
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr ""

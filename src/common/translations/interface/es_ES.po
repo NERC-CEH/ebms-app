@@ -511,6 +511,10 @@ msgstr ""
 "Ingrese su dirección de correo electrónico para solicitar un "
 "restablecimiento de su contraseña."
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "El usuario no se ha activado o está bloqueado."

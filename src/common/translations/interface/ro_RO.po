@@ -509,6 +509,10 @@ msgstr ""
 "Introduceți adresa dumneavoastră de email pentru a solicita resetarea "
 "parolei."
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "Utilizatorul nu a fost activat sau este blocat."

@@ -510,6 +510,10 @@ msgstr "Yanlış şifre ya da email"
 msgid "Enter your email address to request a password reset."
 msgstr "Şifre değişikliği için email adresinizi girin"
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "Kullanıcı aktif değil ya da engellenmiş"

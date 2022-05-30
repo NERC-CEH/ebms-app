@@ -510,6 +510,10 @@ msgstr "Fout wachtwoord of e-mailadres"
 msgid "Enter your email address to request a password reset."
 msgstr "Voer uw emailadres in om uw wachtwoord te resetten."
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "De gebruikersnaam is niet geactiveerd of is geblokkeerd."

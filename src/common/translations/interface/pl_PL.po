@@ -511,6 +511,10 @@ msgstr "Niepoprawne hasło lub e-mail"
 msgid "Enter your email address to request a password reset."
 msgstr "Podaj adres email, żeby zresetować hasło."
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "Użytkownik nie został zaktywowany lub jest zablokowany."

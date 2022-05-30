@@ -512,6 +512,10 @@ msgid "Enter your email address to request a password reset."
 msgstr ""
 "Introduza o seu endereço de email para solicitar a mudança de palavra-chave."
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "O utilizador não foi ativado ou está bloqueado."

@@ -3,6 +3,7 @@ import Log from 'helpers/log';
 import { Page, Header, useToast } from '@flumens';
 import appModel, { Attrs } from 'models/app';
 import userModel from 'models/user';
+import { useTranslation } from 'react-i18next';
 import savedSamples from 'models/collections/samples';
 import locations from 'models/collections/locations';
 import Main from './Main';
@@ -21,7 +22,7 @@ async function resetApp(toast: any) {
   }
 }
 
-async function uploadAllSamples(toast: any) {
+async function uploadAllSamples(toast: any, t: any) {
   Log('Settings:Menu:Controller: sending all samples.');
 
   if (!userModel.hasLogIn()) {
@@ -31,9 +32,10 @@ async function uploadAllSamples(toast: any) {
 
   try {
     const affectedRecordsCount = await savedSamples.remoteSaveAll();
-    toast.success('Uploading {{count}} record', {
-      count: affectedRecordsCount,
-    });
+    toast.success(
+      t('Uploading {{count}} record', { count: affectedRecordsCount }),
+      { skipTranslation: true }
+    );
   } catch (e: any) {
     toast.error(e);
   }
@@ -47,6 +49,7 @@ const onToggle = (setting: keyof Attrs, checked: boolean) => {
 
 const Container: FC = () => {
   const toast = useToast();
+  const { t } = useTranslation();
 
   const {
     useTraining,
@@ -59,7 +62,7 @@ const Container: FC = () => {
   } = appModel.attrs;
 
   const resetAppWrap = () => resetApp(toast);
-  const uploadAllSamplesWrap = () => uploadAllSamples(toast);
+  const uploadAllSamplesWrap = () => uploadAllSamples(toast, t);
 
   return (
     <Page id="settings-menu">

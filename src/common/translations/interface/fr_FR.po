@@ -514,6 +514,10 @@ msgstr ""
 "Veuillez renseigner votre adresse mail pour réinitialiser votre mot de "
 "passe."
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr ""
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "L'utilisateur n'a pas été activé ou est bloqué."

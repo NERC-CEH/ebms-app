@@ -509,6 +509,10 @@ msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
 msgid "Enter your email address to request a password reset."
 msgstr "Įveskite savo el. paštą norėdami atnaujinti savo slaptažodį"
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr "Sėkmingai prisijungėte kaip: {{email}}"
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "Vartotojas dar nėra aktyvuotas arba buvo užblokuotas"

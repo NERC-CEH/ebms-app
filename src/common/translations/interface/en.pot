@@ -498,6 +498,10 @@ msgstr "Incorrect password or email"
 msgid "Enter your email address to request a password reset."
 msgstr "Enter your email address to request a password reset."
 
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr "Successfully logged in as: {{email}}"
+
 # Unverified account message
 msgid "The user has not been activated or is blocked."
 msgstr "The user has not been activated or is blocked."
