@@ -115,6 +115,7 @@ export class UserModel extends DrupalUserModel {
 
   resetDefaults() {
     super.resetDefaults();
+
     set(this.attrs, JSON.parse(JSON.stringify(defaults)));
     return this.save();
   }

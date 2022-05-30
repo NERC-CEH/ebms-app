@@ -222,6 +222,8 @@ export class AppModel extends Model {
   }
 
   resetDefaults() {
+    super.resetDefaults();
+
     set(this.attrs, JSON.parse(JSON.stringify(defaults)));
     return this.save();
   }
