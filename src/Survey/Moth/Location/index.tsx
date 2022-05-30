@@ -5,7 +5,6 @@ import { IonButton } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Sample from 'models/sample';
-import appModel from 'models/app';
 import userModel from 'models/user';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import Map from './Components/Map';
@@ -27,7 +26,7 @@ const Location: FC<Props> = ({ sample }) => {
   };
   useEffect(refreshMothTrapsWrap, []);
 
-  const newTrapButton = !isDisabled && appModel.attrs.useExperiments && (
+  const newTrapButton = !isDisabled && (
     <IonButton routerLink="/location">
       <T>Add New</T>
     </IonButton>

@@ -1,6 +1,5 @@
 import { FC, useState } from 'react';
 import Sample from 'models/sample';
-import appModel from 'models/app';
 import locations from 'models/collections/locations';
 import MothTrap from 'models/location';
 import { InfoMessage, device } from '@flumens';
@@ -85,9 +84,7 @@ const BottomSheet: FC<Props> = ({
           className="info-message"
         >
           You do not have any moth traps yet.
-          {appModel.attrs.useExperiments && (
-            <IonButton routerLink="/location">Create first moth trap</IonButton>
-          )}
+          <IonButton routerLink="/location">Create first moth trap</IonButton>
         </InfoMessage>
       );
     }
