@@ -9,8 +9,11 @@ export const getGPSPermissionStatus = async (toast: any) => {
 
   if (permission.coarseLocation !== 'granted') {
     toast.warn(
-      'Warning! GPS permissions is disabled, please turn it on manually!',
-      { duration: 3000, position: 'middle' }
+      'Your Location Services (GPS) seems to be disabled. You can enable this in your device settings.',
+      {
+        duration: 3000,
+        position: 'middle',
+      }
     );
   }
 };
@@ -36,7 +39,7 @@ const GPSPermissionSubheader = () => {
 
   return (
     <IonTitle className="gps-permission">
-      <T>GPS permission denied</T>
+      <T>Location Services (GPS) are disabled</T>
     </IonTitle>
   );
 };

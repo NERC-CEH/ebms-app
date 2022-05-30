@@ -314,15 +314,10 @@ msgid "Logout"
 msgstr "Odjavi se"
 
 # Part of logout process
-msgid "Are you sure you want to logout?"
-msgstr "Da li si siguran da se želiš odjaviti?"
-
-# Part of logout process
-msgid "Discard local data"
-msgstr "Odbaci lokalne podatke"
-
-msgid "This will delete all the records on this device."
-msgstr "To će obrisati sve podatke na ovom uređaju."
+msgid ""
+"Are you sure you want to logout?<br/><br/>Your pending and uploaded "
+"<4>records will not be deleted </4> from this device."
+msgstr ""
 
 msgid "Cancel"
 msgstr "Odustani"
@@ -1879,4 +1874,102 @@ msgstr ""
 
 # User account action
 msgid "Should we resend the verification email?"
+msgstr ""
+
+# GPS permissions warning
+msgid ""
+"Your Location Services (GPS) seems to be disabled. You can enable this in "
+"your device settings."
+msgstr ""
+
+# GPS permissions warning
+msgid "Location Services (GPS) are disabled"
+msgstr ""
+
+# Moth trap survey
+msgid "Add New"
+msgstr ""
+
+# Moth trap survey
+msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
+msgstr ""
+
+# Moth trap survey
+msgid "Moth Trap"
+msgstr ""
+
+# Moth trap survey
+msgid "Type"
+msgstr ""
+
+# Moth trap survey
+msgid "Other type"
+msgstr ""
+
+# Moth trap survey
+msgid "Add lamp"
+msgstr ""
+
+# Moth trap survey
+msgid "What type of trap was it?"
+msgstr ""
+
+# Moth trap survey
+msgid "No lamps added"
+msgstr ""
+
+# Moth trap survey
+msgid "What is the lamp type?"
+msgstr ""
+
+# Moth trap survey
+msgid "What is the moth trap type?"
+msgstr ""
+
+# Moth trap survey
+msgid "LED funnel trap"
+msgstr ""
+
+# Moth trap survey
+msgid "Other funnel trap"
+msgstr ""
+
+# Moth trap survey
+msgid "Trap with 2 sheets"
+msgstr ""
+
+# Moth trap survey
+msgid "Other trap"
+msgstr ""
+
+# Moth trap survey
+msgid "Lamp"
+msgstr ""
+
+# Moth trap survey
+msgid "Lamp Details"
+msgstr ""
+
+# Moth trap survey
+msgid "Quantity"
+msgstr ""
+
+# Moth trap survey
+msgid "No moth trap name"
+msgstr ""
+
+# Moth trap survey
+msgid "Moth trap name"
+msgstr ""
+
+# Moth trap survey
+msgid "Are you sure you want to delete this moth trap?"
+msgstr ""
+
+# Moth trap survey
+msgid "Additional description of lamp."
+msgstr ""
+
+# Moth trap survey
+msgid "Select"
 msgstr ""

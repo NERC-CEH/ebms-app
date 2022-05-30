@@ -12,7 +12,7 @@ import {
   IonItemOption,
   IonBadge,
 } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
+import { Trans as T, useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Lamp } from 'models/location';
 import mothTrapIcon from 'common/images/moth-inside-icon.svg';
@@ -35,6 +35,8 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
     'type-other': typeOther,
   } = location.attrs;
 
+  const { t } = useTranslation();
+
   const { url } = useRouteMatch();
 
   const value = (
@@ -42,7 +44,7 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
       <IonLabel>
         <GridRefValue sample={location} />
       </IonLabel>
-      <IonLabel>{loc?.name || 'No site name'}</IonLabel>
+      <IonLabel>{loc?.name || t('No moth trap name')}</IonLabel>
     </IonLabel>
   );
 

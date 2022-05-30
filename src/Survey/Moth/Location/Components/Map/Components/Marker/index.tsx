@@ -4,6 +4,7 @@ import { Marker as LeafletMarker, Popup } from 'react-leaflet';
 import { IonButton, IonIcon, IonLabel } from '@ionic/react';
 import { locationOutline } from 'ionicons/icons';
 import MothTrap from 'common/models/location';
+import { Trans as T } from 'react-i18next';
 import clsx from 'clsx';
 import './styles.scss';
 
@@ -38,7 +39,9 @@ const Marker: FC<Props> = ({ mothTrap, onSelect, isSelected, isDisabled }) => {
         </div>
 
         {!isSelected && !isDisabled && (
-          <IonButton onClick={onSelectWrap}>Select</IonButton>
+          <IonButton onClick={onSelectWrap}>
+            <T>Select</T>
+          </IonButton>
         )}
       </Popup>
     </LeafletMarker>

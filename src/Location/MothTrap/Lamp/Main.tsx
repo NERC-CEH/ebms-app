@@ -3,6 +3,7 @@ import { Main, MenuAttrItem, CounterInput } from '@flumens';
 import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { IonList, IonItemDivider } from '@ionic/react';
 import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
 import numberIcon from 'common/images/number.svg';
 import Location, { Lamp } from 'models/location';
 import './styles.scss';
@@ -23,7 +24,9 @@ const MothTrapSetupMain: FC<Props> = ({ location, lamp }) => {
   return (
     <Main>
       <IonList lines="full">
-        <IonItemDivider>Lamp details</IonItemDivider>
+        <IonItemDivider>
+          <T>Lamp Details</T>
+        </IonItemDivider>
 
         <div className="rounded">
           <MenuAttrItem
