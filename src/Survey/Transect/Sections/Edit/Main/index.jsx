@@ -148,13 +148,7 @@ class Edit extends Component {
     };
 
     return (
-      <IonButton
-        color="primary"
-        type="submit"
-        expand="full"
-        id="add"
-        onClick={onClick}
-      >
+      <IonButton color="primary" id="add" onClick={onClick}>
         <IonIcon icon={addCircleOutline} slot="start" />
         <IonLabel>
           <T>Add species</T>
