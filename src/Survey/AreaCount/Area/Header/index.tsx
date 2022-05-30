@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Header, MenuAttrToggle, useAlert } from '@flumens';
-import gpsPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
+import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import './styles.scss';
 
 type Props = {
@@ -46,7 +46,7 @@ const HeaderComponent: FC<Props> = ({
     toggleGPStracking(on);
   };
 
-  const GPSToggle = (
+  const GPSToggle = !isDisabled && (
     <MenuAttrToggle
       label="GPS"
       className="survey-gps-toggle"
@@ -56,11 +56,13 @@ const HeaderComponent: FC<Props> = ({
     />
   );
 
+  const gpsPermissionSubheader = !isDisabled && <GPSPermissionSubheader />;
+
   return (
     <Header
       title="Area"
-      rightSlot={!isDisabled && GPSToggle}
-      subheader={!isDisabled && gpsPermissionSubheader()}
+      rightSlot={GPSToggle}
+      subheader={gpsPermissionSubheader}
     />
   );
 };

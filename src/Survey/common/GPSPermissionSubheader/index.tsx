@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { IonTitle } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { Geolocation } from '@capacitor/geolocation';
 import './styles.scss';
@@ -34,9 +35,9 @@ const GPSPermissionSubheader = () => {
   if (permission) return null;
 
   return (
-    <div className="gps-permission">
+    <IonTitle className="gps-permission">
       <T>GPS permission denied</T>
-    </div>
+    </IonTitle>
   );
 };
 
