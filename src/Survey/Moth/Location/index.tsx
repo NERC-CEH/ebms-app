@@ -6,6 +6,7 @@ import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Sample from 'models/sample';
 import appModel from 'models/app';
+import userModel from 'models/user';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import Map from './Components/Map';
 
@@ -19,7 +20,10 @@ const Location: FC<Props> = ({ sample }) => {
   const isDisabled = sample.isUploaded();
 
   const refreshMothTrapsWrap = () => {
-    !isDisabled && locations.fetch();
+    if (isDisabled || !userModel.isLoggedIn() || !userModel.attrs.verified)
+      return;
+
+    locations.fetch();
   };
   useEffect(refreshMothTrapsWrap, []);
 

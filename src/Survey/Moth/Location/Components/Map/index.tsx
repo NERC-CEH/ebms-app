@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import { device, useToast } from '@flumens';
 import { NavContext } from '@ionic/react';
 import Sample from 'models/sample';
+import { useUserStatusCheck } from 'models/user';
 import locationsCollection from 'models/collections/locations';
 import MothTrap, { useValidateCheck } from 'models/location';
 import 'leaflet.markercluster'; // eslint-disable-line
@@ -26,6 +27,7 @@ const MapComponent: FC<Props> = ({
 }) => {
   const { goBack } = useContext(NavContext);
   const validateLocation = useValidateCheck();
+  const checkUserStatus = useUserStatusCheck();
   const toast = useToast();
 
   // dynamic center when the user moves the map manually
@@ -43,11 +45,14 @@ const MapComponent: FC<Props> = ({
     location.destroy();
   };
 
-  const onLocationUpload = (location: MothTrap) => {
+  const onLocationUpload = async (location: MothTrap) => {
     if (!device.isOnline) {
       toast.warn("Sorry, looks like you're offline.");
       return;
     }
+
+    const isUserOK = await checkUserStatus();
+    if (!isUserOK) return;
 
     const invalids = validateLocation(location);
     if (invalids) return;
