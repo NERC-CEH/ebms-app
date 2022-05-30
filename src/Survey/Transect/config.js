@@ -69,7 +69,7 @@ const config = {
   id: 562,
   name: 'transect',
   label: 'eBMS Transect',
-  webForm: 'mydata/samples/edit',
+  webForm: 'ebms-input-data',
   attrs: {
     date: dateAttr,
     location: locationAttr,
