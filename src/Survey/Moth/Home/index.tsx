@@ -113,8 +113,9 @@ const HomeController: FC<Props> = ({ sample }) => {
     showDeleteSpeciesPrompt(occ);
   };
 
-  const increaseCount = (occ: Occurrence) => {
-    occ.attrs.count += 1;
+  const increaseCount = (occ: Occurrence, is5x: boolean) => {
+    occ.attrs.count += is5x ? 5 : 1;
+
     occ.save();
   };
 

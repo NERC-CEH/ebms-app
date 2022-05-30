@@ -100,6 +100,8 @@ const HomeMain: FC<Props> = ({
     const speciesCount = occ.attrs.count;
 
     const increaseCountWrap = () => increaseCount(occ);
+    const increase5xCountWrap = () => increaseCount(occ, true);
+
     const deleteSpeciesWrap = () => deleteSpecies(occ);
 
     const navigateToSpeciesOccurrences = () =>
@@ -110,6 +112,7 @@ const HomeMain: FC<Props> = ({
         <IonItem onClick={navigateToSpeciesOccurrences} detail={!isDisabled}>
           <IncrementalButton
             onClick={increaseCountWrap}
+            onLongClick={increase5xCountWrap}
             value={speciesCount}
             disabled={isDisabled}
           />

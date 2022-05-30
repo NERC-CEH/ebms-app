@@ -229,7 +229,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     showDeleteSpeciesPrompt(taxon).then(destroyWrap);
   };
 
-  const increaseCount = (taxon: any, isShallow: boolean) => {
+  const increaseCount = (taxon: any, isShallow: boolean, is5x: boolean) => {
     if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
       // eslint-disable-next-line no-param-reassign
       sample.samples[0].occurrences[0].attrs.zero_abundance = null;
@@ -238,9 +238,7 @@ const HomeController: FC<Props> = ({ sample }) => {
       return;
     }
 
-    if (sample.isDisabled()) {
-      return;
-    }
+    if (sample.isDisabled()) return;
 
     if (isShallow) {
       deleteFromShallowList(taxon);
@@ -248,9 +246,18 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     const survey = sample.getSurvey();
 
-    const newSubSample = survey.smp.create(Sample, Occurrence, taxon, null);
-    sample.samples.push(newSubSample);
-    newSubSample.startGPS();
+    const addOneCount = () => {
+      const newSubSample = survey.smp.create(Sample, Occurrence, taxon, null);
+      sample.samples.push(newSubSample);
+      newSubSample.startGPS();
+    };
+
+    if (is5x) {
+      [...Array(5)].forEach(addOneCount);
+    } else {
+      addOneCount();
+    }
+
     sample.save();
   };
 

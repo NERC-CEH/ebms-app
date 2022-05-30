@@ -171,6 +171,7 @@ const AreaCount: FC<Props> = ({
 
     const isShallow = !species.count;
     const increaseCountWrap = () => increaseCount(taxon, isShallow);
+    const increase5xCountWrap = () => increaseCount(taxon, isShallow, true);
 
     const navigateToSpeciesOccurrencesWrap = () =>
       !isSpeciesDisabled && navigateToSpeciesOccurrences(taxon);
@@ -195,6 +196,7 @@ const AreaCount: FC<Props> = ({
         >
           <IncrementalButton
             onClick={increaseCountWrap}
+            onLongClick={increase5xCountWrap}
             value={species.count}
             disabled={isDisabled}
           />
