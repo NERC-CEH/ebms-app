@@ -28,12 +28,7 @@ type Props = {
 };
 
 const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
-  const {
-    type,
-    lamps,
-    location: loc,
-    'type-other': typeOther,
-  } = location.attrs;
+  const { type, lamps, location: loc, typeOther } = location.attrs;
 
   const { t } = useTranslation();
 
@@ -138,7 +133,7 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
 
           {isOtherTypeSelected && (
             <MenuAttrItem
-              routerLink={`/location/${location.cid}/type-other`}
+              routerLink={`/location/${location.cid}/typeOther`}
               routerOptions={{ unmount: true }}
               icon={mothTrapIcon}
               label="Other type"

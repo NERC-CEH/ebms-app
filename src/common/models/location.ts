@@ -92,7 +92,7 @@ export type Lamp = {
 
 interface Attrs extends ModelAttrs {
   type: number;
-  'type-other': string | null;
+  typeOther: string | null;
   description: string;
   lamps: Lamp[];
   location: {
@@ -109,9 +109,17 @@ class LocationModel extends Model {
       info: 'What is the moth trap type?',
       inputProps: { options: trapTypes },
       remote: { id: 330, values: trapTypes },
+      set: (value: string, model: any) => {
+        if (model.attrs.type !== 'Other trap') {
+          model.attrs.typeOther = null;
+        }
+
+        model.attrs.type = value;
+        model.save();
+      },
     },
 
-    'type-other': {
+    typeOther: {
       headerProps: {
         title: 'Other type',
       },
@@ -198,7 +206,7 @@ class LocationModel extends Model {
         ...getLocalAttributes(doc, LocationModel.schema, [
           'type',
           'lamps',
-          'type-other',
+          'typeOther',
         ]),
       },
 
@@ -235,7 +243,7 @@ class LocationModel extends Model {
 
   attrs: Attrs = Model.extendAttrs(this.attrs, {
     location: this.attrs.location || {},
-    'type-other': null,
+    typeOther: null,
     lamps: [],
   });
 
@@ -328,7 +336,7 @@ class LocationModel extends Model {
   }
 
   toRemoteJSON() {
-    const { lamps, location, type, 'type-other': typeOther } = this.attrs;
+    const { lamps, location, type, typeOther } = this.attrs;
     const stringifyLamp = (lamp: any) => JSON.stringify(lamp);
     const getLampType = (lamp: any) => {
       const { type: lampTypeTerm, description, quantity } = lamp.attrs;
