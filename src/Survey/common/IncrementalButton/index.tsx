@@ -29,6 +29,11 @@ const IncrementalButton: FC<Props> = ({
   const onLongClick = () => {
     if (disabled) return;
 
+    if (!onLongClickProp) {
+      onClickProp();
+      return;
+    }
+
     onLongClickProp();
 
     isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Heavy });

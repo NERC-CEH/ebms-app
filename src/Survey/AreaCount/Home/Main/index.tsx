@@ -196,6 +196,7 @@ const AreaCount: FC<Props> = ({
           <IncrementalButton
             onClick={increaseCountWrap}
             value={species.count}
+            disabled={isDisabled}
           />
           <IonLabel>{speciesName}</IonLabel>
           <IonLabel slot="end" className="location-spinner">
