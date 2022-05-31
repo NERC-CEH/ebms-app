@@ -67,7 +67,7 @@ const Edit: FC<Props> = ({
   const { navigate } = useContext(NavContext);
 
   const getSpeciesList = () => {
-    if (!sample.occurrences.length) {
+    if (!sectionSample.occurrences.length) {
       return (
         <IonList id="list" lines="full">
           <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
@@ -79,7 +79,7 @@ const Edit: FC<Props> = ({
       ? speciesOccAddedTimeSort
       : speciesNameSort;
 
-    const occurrences = [...sample.occurrences].sort(sort);
+    const occurrences = [...sectionSample.occurrences].sort(sort);
 
     const getOccurrenceEntry = (occ: Occurrence) => {
       const speciesName = occ.getTaxonName();
@@ -113,7 +113,7 @@ const Edit: FC<Props> = ({
       );
     };
 
-    const speciesListLength = sample.occurrences.length;
+    const speciesListLength = sectionSample.occurrences.length;
 
     const count = speciesListLength > 1 ? speciesListLength : null;
 
