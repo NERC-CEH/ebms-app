@@ -13,7 +13,7 @@ import PhotoPicker from 'common/Components/PhotoPicker';
 import { Main, MenuAttrItem } from '@flumens';
 import GridRefValue from 'Components/GridRefValue';
 import butterflyIcon from 'common/images/butterfly.svg';
-import caterpillarIcon from './caterpillar.svg';
+import caterpillarIcon from 'common/images/caterpillar.svg';
 import './styles.scss';
 
 @observer

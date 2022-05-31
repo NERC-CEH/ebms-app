@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
 import { date as dateHelp } from '@flumens';
 import { chatboxOutline } from 'ionicons/icons';
+import caterpillarIcon from 'common/images/caterpillar.svg';
 
 export const deviceAttr = {
   remote: {
@@ -231,3 +232,24 @@ export const areaCountSchema = Yup.object().shape({
     .matches(/latlon/)
     .required('Location type is missing'),
 });
+
+const stageValues = [
+  { value: null, isDefault: true, label: 'Not Recorded' },
+  { value: 'Adult', id: 3929 },
+  { value: 'Egg', id: 3932 },
+  { value: 'Larva', id: 3931 },
+  { value: 'Larval web', id: 14079 },
+  { value: 'Pupa', id: 3930 },
+];
+
+export const stageAttr = {
+  menuProps: { icon: caterpillarIcon },
+  pageProps: {
+    attrProps: {
+      input: 'radio',
+      info: 'Pick the life stage',
+      inputProps: { options: stageValues },
+    },
+  },
+  remote: { id: 293, values: stageValues },
+};

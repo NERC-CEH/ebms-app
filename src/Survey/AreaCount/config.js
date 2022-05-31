@@ -18,6 +18,7 @@ import {
   commentAttr,
   dateAttr,
   areaCountSchema,
+  stageAttr,
 } from 'Survey/common/config';
 
 function transformToMeters(coordinates) {
@@ -38,15 +39,6 @@ function getGeomString(shape) {
   const wkt = new Wkt.Wkt(geoJSON);
   return wkt.write();
 }
-
-const stageValues = [
-  { value: null, isDefault: true, label: 'Not Recorded' },
-  { value: 'Adult', id: 3929 },
-  { value: 'Egg', id: 3932 },
-  { value: 'Larva', id: 3931 },
-  { value: 'Larval web', id: 14079 },
-  { value: 'Pupa', id: 3930 },
-];
 
 const survey = {
   id: 565,
@@ -183,16 +175,7 @@ const survey = {
 
         count: { remote: { id: 780 } },
 
-        stage: {
-          pageProps: {
-            attrProps: {
-              input: 'radio',
-              info: 'Pick the life stage',
-              inputProps: { options: stageValues },
-            },
-          },
-          remote: { id: 293, values: stageValues },
-        },
+        stage: stageAttr,
       },
 
       create(Occurrence, taxon) {
