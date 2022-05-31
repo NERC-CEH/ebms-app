@@ -5,16 +5,12 @@ import {
   clipboardOutline,
   thermometerOutline,
   cloudyOutline,
+  personOutline,
 } from 'ionicons/icons';
 import { useRouteMatch } from 'react-router-dom';
 import { Trans as T } from 'react-i18next';
 import Sample from 'models/sample';
-import {
-  Main,
-  MenuAttrItem,
-  InfoMessage,
-  MenuAttrItemFromModel,
-} from '@flumens';
+import { Main, MenuAttrItem, InfoMessage, CounterInput } from '@flumens';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
 
@@ -27,8 +23,14 @@ const AreaCountDetails: FC<Props> = ({ sample }) => {
   const baseURL = match.url;
 
   const isDisabled = sample.isDisabled();
-  const { comment, cloud, temperature, windDirection, windSpeed } =
+  const { recorders, comment, cloud, temperature, windDirection, windSpeed } =
     sample.attrs;
+
+  const getCounterOnChange = (value: number) => {
+    // eslint-disable-next-line no-param-reassign
+    sample.attrs.recorders = value;
+    sample.save();
+  };
 
   return (
     <Main>
@@ -101,7 +103,17 @@ const AreaCountDetails: FC<Props> = ({ sample }) => {
             skipValueTranslation
           />
 
-          <MenuAttrItemFromModel attr="recorders" model={sample} />
+          <CounterInput
+            label="Recorders"
+            onChange={getCounterOnChange}
+            value={recorders}
+            icon={personOutline}
+            min={1}
+          />
+          <InfoMessage color="medium">
+            Enter the number of recorders of anyone who helped with this record
+            - including your own.
+          </InfoMessage>
         </div>
       </IonList>
     </Main>

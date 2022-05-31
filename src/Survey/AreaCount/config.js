@@ -3,7 +3,6 @@ import config from 'common/config';
 import Wkt from 'wicket';
 import { toJS } from 'mobx';
 import L from 'leaflet';
-import { personOutline } from 'ionicons/icons';
 import {
   deviceAttr,
   deviceVersionAttr,
@@ -59,19 +58,7 @@ const survey = {
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,
     recorders: {
-      menuProps: { icon: personOutline },
-      pageProps: {
-        attrProps: {
-          input: 'slider',
-          inputProps: {
-            min: 1,
-            max: 100,
-            step: 1,
-          },
-          info: 'Enter the number of recorders of anyone who helped with this record - including your own.',
-        },
-      },
-      remote: { id: -1 },
+      remote: { id: 688 },
     },
 
     location: {
