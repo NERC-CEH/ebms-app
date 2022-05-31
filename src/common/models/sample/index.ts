@@ -115,7 +115,13 @@ export default class AppSample extends Sample {
   }
 
   async upload() {
-    if (this.remote.synchronising || this.isUploaded()) return true;
+    if (
+      this.remote.synchronising ||
+      this.isUploaded() ||
+      this.getSurvey().deprecated
+    ) {
+      return true;
+    }
 
     const invalids = this.validateRemote();
     if (invalids) return false;

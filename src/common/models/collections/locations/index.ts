@@ -90,7 +90,7 @@ export class Locations extends Collection<Location> {
     if (
       !requiresSync ||
       !device.isOnline ||
-      !userModel.attrs.email ||
+      !userModel.isLoggedIn() ||
       this.fetching.isFetching
     )
       return null;

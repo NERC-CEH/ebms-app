@@ -1,0 +1,765 @@
+{
+  "genericStore": {
+    "app": {
+      "attrs": {
+        "showedWelcome": true,
+        "language": "en",
+        "country": "AM",
+        "useTraining": true,
+        "feedbackGiven": false,
+        "areaSurveyListSortedByTime": false,
+        "draftId:area": "49465c2b-8c95-4c79-aa7b-897502b86161",
+        "draftId:transect": "9a9f900f-6cbc-4e09-af83-a3abf3ccae1f",
+        "transects": [
+          {
+            "id": "222878",
+            "name": "Botan, Lund",
+            "centroid_sref": "62.64623N 10.69891E",
+            "sref_system": "4326",
+            "sections": [
+              {
+                "parent_id": "222878",
+                "id": "222879",
+                "name": "Sørytjørna - S1",
+                "code": "S1",
+                "centroid_sref": "62.646N, 10.696E",
+                "sref_system": "4326",
+                "geom": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [1190999.8631596, 9013999.5265558],
+                    [1190916.2601599, 9013954.1420702],
+                    [1190808.7705889, 9013772.6041281],
+                    [1190663.0625038, 9013834.7092136],
+                    [1190460.0266474, 9013841.875185],
+                    [1190378.8123049, 9013839.4865278]
+                  ]
+                }
+              },
+              {
+                "parent_id": "222878",
+                "id": "222880",
+                "name": "Sørytjørna - S2",
+                "code": "S2",
+                "centroid_sref": "62.646N, 10.691E",
+                "sref_system": "4326",
+                "geom": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [1190378.8123049, 9013841.875185],
+                    [1190197.2743627, 9013825.154585],
+                    [1190073.0641918, 9013791.7133852],
+                    [1190025.2910491, 9013849.0411564],
+                    [1189999.0158206, 9013944.5874417],
+                    [1189932.1334209, 9013920.7008704],
+                    [1189908.2468496, 9013920.7008704]
+                  ]
+                }
+              },
+              {
+                "parent_id": "222878",
+                "id": "222881",
+                "name": "Sørytjørna - S3",
+                "code": "S3",
+                "centroid_sref": "62.646N, 10.692E",
+                "sref_system": "4326",
+                "geom": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [1189929.7447638, 9014071.1862698],
+                    [1190068.2868775, 9014068.7976127],
+                    [1190068.2868775, 9013956.5307274],
+                    [1190242.6588483, 9014018.6358128],
+                    [1190261.7681053, 9014064.0202984],
+                    [1190450.4720189, 9014071.1862698],
+                    [1190409.8648476, 9014001.9152129],
+                    [1190493.4678473, 9014001.9152129]
+                  ]
+                }
+              },
+              {
+                "parent_id": "222878",
+                "id": "222882",
+                "name": "Sørytjørna - S4",
+                "code": "S4",
+                "centroid_sref": "62.646N, 10.696E",
+                "sref_system": "4326",
+                "geom": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [1190488.690533, 9013999.5265558],
+                    [1190620.0666754, 9013999.5265558],
+                    [1190620.0666754, 9013925.4781846],
+                    [1190691.7263894, 9014018.6358128],
+                    [1190789.6613319, 9014102.2388125],
+                    [1190789.6613319, 9014080.7408983],
+                    [1190820.7138746, 9014150.0119552]
+                  ]
+                }
+              },
+              {
+                "parent_id": "222878",
+                "id": "222883",
+                "name": "Sørytjørna - S5",
+                "code": "S5",
+                "centroid_sref": "62.647N, 10.695E",
+                "sref_system": "4326",
+                "geom": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [1190789.6613319, 9014350.6591544],
+                    [1190684.560418, 9014350.6591544],
+                    [1190665.4511609, 9014305.2746689],
+                    [1190514.9657615, 9014376.9343829],
+                    [1190436.1400761, 9014281.3880975],
+                    [1190428.9741047, 9014281.3880975]
+                  ]
+                }
+              },
+              {
+                "parent_id": "222878",
+                "id": "222884",
+                "name": "Sørytjørna - S6",
+                "code": "S6",
+                "centroid_sref": "62.647N, 10.692E",
+                "sref_system": "4326",
+                "geom": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [1190428.9741047, 9014286.1654118],
+                    [1190309.541248, 9014353.0478115],
+                    [1190216.3836198, 9014238.3922691],
+                    [1190163.8331629, 9014267.0561547],
+                    [1190161.4445057, 9014269.4448119]
+                  ]
+                }
+              },
+              {
+                "parent_id": "222878",
+                "id": "222885",
+                "name": "Sørytjørna - S7",
+                "code": "S7",
+                "centroid_sref": "62.647N, 10.690E",
+                "sref_system": "4326",
+                "geom": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [1190149.5012201, 9014267.0561547],
+                    [1190049.1776204, 9014267.0561547],
+                    [1190020.5137348, 9014212.1170407],
+                    [1189979.9065636, 9014281.3880975],
+                    [1189936.9107352, 9014288.5540689]
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "primarySurvey": "transect",
+        "useExperiments": true,
+        "sendAnalytics": true,
+        "appSession": 2,
+        "showGuideHelpTip": false,
+        "showSurveysDeleteTip": true,
+        "showSurveyUploadTip": true,
+        "showCopySpeciesTip": true
+      }
+    },
+    "user": {
+      "attrs": {
+        "isLoggedIn": true,
+        "drupalID": 1275,
+        "name": "test@flumens.io",
+        "firstname": "Flumens",
+        "secondname": "Test",
+        "email": "test@flumens.io",
+        "password": ""
+      }
+    }
+  },
+  "modelStore": {
+    "49465c2b-8c95-4c79-aa7b-897502b86161": {
+      "cid": "49465c2b-8c95-4c79-aa7b-897502b86161",
+      "metadata": {
+        "training": true,
+        "saved": null,
+        "survey": "area",
+        "survey_id": null,
+        "input_form": null,
+        "created_on": "2022-05-31T16:51:48.701Z",
+        "updated_on": "2022-05-31T16:51:48.701Z",
+        "synced_on": null,
+        "server_on": null,
+        "pausedTime": 0
+      },
+      "attrs": {
+        "date": "2022-05-31T16:51:48.701Z",
+        "location_type": "latlon",
+        "surveyStartTime": "2022-05-31T16:51:48.701Z",
+        "location": {
+          "latitude": 58.193871,
+          "longitude": 1.845703,
+          "area": 469168,
+          "shape": {
+            "type": "LineString",
+            "coordinates": [
+              [1.845703, 58.193871],
+              [1.757813, 57.774518]
+            ]
+          },
+          "source": "map"
+        },
+        "temperature": 10,
+        "windDirection": "NE",
+        "windSpeed": "Leaves and twigs in slight motion",
+        "cloud": 20,
+        "comment": "test"
+      },
+      "occurrences": [
+        {
+          "cid": "14f33cf3-062d-451c-8e7b-3f0d70bd79e4",
+          "metadata": {
+            "training": null,
+            "created_on": "2022-05-31T16:52:05.398Z",
+            "updated_on": "2022-05-31T16:52:05.398Z",
+            "synced_on": null,
+            "server_on": null
+          },
+          "attrs": {
+            "count": 3,
+            "comment": "test",
+            "stage": "Larvae",
+            "taxon": {
+              "found_in_name": "common_name",
+              "warehouse_id": 434093,
+              "common_name": "Blue-spot Hairstreak",
+              "scientific_name": "Satyrium spini",
+              "preferredId": 432278
+            }
+          },
+          "media": []
+        },
+        {
+          "cid": "ac8f7f43-c690-45d5-a08d-1c34b68e8dce",
+          "metadata": {
+            "training": null,
+            "created_on": "2022-05-31T16:52:21.145Z",
+            "updated_on": "2022-05-31T16:52:21.145Z",
+            "synced_on": null,
+            "server_on": null
+          },
+          "attrs": {
+            "count": 1,
+            "comment": "test",
+            "stage": "Larvae",
+            "taxon": {
+              "found_in_name": "common_name",
+              "warehouse_id": 434138,
+              "common_name": "Clouded Yellow",
+              "scientific_name": "Colias crocea",
+              "preferredId": 432207
+            }
+          },
+          "media": []
+        }
+      ],
+      "samples": [],
+      "media": []
+    },
+    "9a9f900f-6cbc-4e09-af83-a3abf3ccae1f": {
+      "cid": "9a9f900f-6cbc-4e09-af83-a3abf3ccae1f",
+      "metadata": {
+        "training": true,
+        "saved": null,
+        "survey": "transect",
+        "survey_id": null,
+        "input_form": null,
+        "created_on": "2022-05-31T16:52:37.423Z",
+        "updated_on": "2022-05-31T16:52:37.423Z",
+        "synced_on": null,
+        "server_on": null
+      },
+      "attrs": {
+        "date": "2022-05-31T16:52:37.422Z",
+        "location_type": "latlon",
+        "survey_id": 562,
+        "sample_method_id": 22,
+        "surveyStartTime": "2022-05-31T16:52:37.422Z",
+        "recorder": "Flumens Test",
+        "location": {
+          "id": "222878",
+          "name": "Botan, Lund",
+          "centroid_sref": "62.64623N 10.69891E",
+          "sref_system": "4326",
+          "sections": [
+            {
+              "parent_id": "222878",
+              "id": "222879",
+              "name": "Sørytjørna - S1",
+              "code": "S1",
+              "centroid_sref": "62.646N, 10.696E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190999.8631596, 9013999.5265558],
+                  [1190916.2601599, 9013954.1420702],
+                  [1190808.7705889, 9013772.6041281],
+                  [1190663.0625038, 9013834.7092136],
+                  [1190460.0266474, 9013841.875185],
+                  [1190378.8123049, 9013839.4865278]
+                ]
+              }
+            },
+            {
+              "parent_id": "222878",
+              "id": "222880",
+              "name": "Sørytjørna - S2",
+              "code": "S2",
+              "centroid_sref": "62.646N, 10.691E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190378.8123049, 9013841.875185],
+                  [1190197.2743627, 9013825.154585],
+                  [1190073.0641918, 9013791.7133852],
+                  [1190025.2910491, 9013849.0411564],
+                  [1189999.0158206, 9013944.5874417],
+                  [1189932.1334209, 9013920.7008704],
+                  [1189908.2468496, 9013920.7008704]
+                ]
+              }
+            },
+            {
+              "parent_id": "222878",
+              "id": "222881",
+              "name": "Sørytjørna - S3",
+              "code": "S3",
+              "centroid_sref": "62.646N, 10.692E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1189929.7447638, 9014071.1862698],
+                  [1190068.2868775, 9014068.7976127],
+                  [1190068.2868775, 9013956.5307274],
+                  [1190242.6588483, 9014018.6358128],
+                  [1190261.7681053, 9014064.0202984],
+                  [1190450.4720189, 9014071.1862698],
+                  [1190409.8648476, 9014001.9152129],
+                  [1190493.4678473, 9014001.9152129]
+                ]
+              }
+            },
+            {
+              "parent_id": "222878",
+              "id": "222882",
+              "name": "Sørytjørna - S4",
+              "code": "S4",
+              "centroid_sref": "62.646N, 10.696E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190488.690533, 9013999.5265558],
+                  [1190620.0666754, 9013999.5265558],
+                  [1190620.0666754, 9013925.4781846],
+                  [1190691.7263894, 9014018.6358128],
+                  [1190789.6613319, 9014102.2388125],
+                  [1190789.6613319, 9014080.7408983],
+                  [1190820.7138746, 9014150.0119552]
+                ]
+              }
+            },
+            {
+              "parent_id": "222878",
+              "id": "222883",
+              "name": "Sørytjørna - S5",
+              "code": "S5",
+              "centroid_sref": "62.647N, 10.695E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190789.6613319, 9014350.6591544],
+                  [1190684.560418, 9014350.6591544],
+                  [1190665.4511609, 9014305.2746689],
+                  [1190514.9657615, 9014376.9343829],
+                  [1190436.1400761, 9014281.3880975],
+                  [1190428.9741047, 9014281.3880975]
+                ]
+              }
+            },
+            {
+              "parent_id": "222878",
+              "id": "222884",
+              "name": "Sørytjørna - S6",
+              "code": "S6",
+              "centroid_sref": "62.647N, 10.692E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190428.9741047, 9014286.1654118],
+                  [1190309.541248, 9014353.0478115],
+                  [1190216.3836198, 9014238.3922691],
+                  [1190163.8331629, 9014267.0561547],
+                  [1190161.4445057, 9014269.4448119]
+                ]
+              }
+            },
+            {
+              "parent_id": "222878",
+              "id": "222885",
+              "name": "Sørytjørna - S7",
+              "code": "S7",
+              "centroid_sref": "62.647N, 10.690E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190149.5012201, 9014267.0561547],
+                  [1190049.1776204, 9014267.0561547],
+                  [1190020.5137348, 9014212.1170407],
+                  [1189979.9065636, 9014281.3880975],
+                  [1189936.9107352, 9014288.5540689]
+                ]
+              }
+            }
+          ]
+        },
+        "surveyEndTime": "2022-05-31T16:52:59.839Z",
+        "temperature": "11",
+        "cloud": 48,
+        "windDirection": "S",
+        "windSpeed": "Wind felt on face, leaves rustle",
+        "comment": "test"
+      },
+      "occurrences": [],
+      "samples": [
+        {
+          "cid": "daecc213-cb0b-4e0f-b890-1fc35a2bcc6e",
+          "metadata": {
+            "training": true,
+            "saved": null,
+            "survey": "transect",
+            "survey_id": null,
+            "input_form": null,
+            "created_on": "2022-05-31T16:52:46.821Z",
+            "updated_on": "2022-05-31T16:52:46.821Z",
+            "synced_on": null,
+            "server_on": null
+          },
+          "attrs": {
+            "date": "2022-05-31T16:52:46.821Z",
+            "location_type": "latlon",
+            "survey_id": 562,
+            "sample_method_id": 776,
+            "location": {
+              "parent_id": "222878",
+              "id": "222879",
+              "name": "Sørytjørna - S1",
+              "code": "S1",
+              "centroid_sref": "62.646N, 10.696E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190999.8631596, 9013999.5265558],
+                  [1190916.2601599, 9013954.1420702],
+                  [1190808.7705889, 9013772.6041281],
+                  [1190663.0625038, 9013834.7092136],
+                  [1190460.0266474, 9013841.875185],
+                  [1190378.8123049, 9013839.4865278]
+                ]
+              }
+            },
+            "cloud": 57,
+            "reliability": "Suitable conditions"
+          },
+          "occurrences": [
+            {
+              "cid": "68dd4e21-496a-4ed4-ab4b-2fc6ffd83555",
+              "metadata": {
+                "training": null,
+                "created_on": "2022-05-31T16:52:53.444Z",
+                "updated_on": "2022-05-31T16:52:53.444Z",
+                "synced_on": null,
+                "server_on": null
+              },
+              "attrs": {
+                "count": 2,
+                "taxon": {
+                  "array_id": 122,
+                  "species_id": 0,
+                  "found_in_name": "scientific_name",
+                  "warehouse_id": 458448,
+                  "scientific_name": "Amygdaloptera testaria"
+                }
+              },
+              "media": []
+            }
+          ],
+          "samples": [],
+          "media": []
+        },
+        {
+          "cid": "a51e0980-ae6d-4581-b99c-2033fa5e91bd",
+          "metadata": {
+            "training": true,
+            "saved": null,
+            "survey": "transect",
+            "survey_id": null,
+            "input_form": null,
+            "created_on": "2022-05-31T16:52:46.821Z",
+            "updated_on": "2022-05-31T16:52:46.821Z",
+            "synced_on": null,
+            "server_on": null
+          },
+          "attrs": {
+            "date": "2022-05-31T16:52:46.821Z",
+            "location_type": "latlon",
+            "survey_id": 562,
+            "sample_method_id": 776,
+            "location": {
+              "parent_id": "222878",
+              "id": "222880",
+              "name": "Sørytjørna - S2",
+              "code": "S2",
+              "centroid_sref": "62.646N, 10.691E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190378.8123049, 9013841.875185],
+                  [1190197.2743627, 9013825.154585],
+                  [1190073.0641918, 9013791.7133852],
+                  [1190025.2910491, 9013849.0411564],
+                  [1189999.0158206, 9013944.5874417],
+                  [1189932.1334209, 9013920.7008704],
+                  [1189908.2468496, 9013920.7008704]
+                ]
+              }
+            }
+          },
+          "occurrences": [],
+          "samples": [],
+          "media": []
+        },
+        {
+          "cid": "7abe7301-5061-468d-851d-6292a1e9f899",
+          "metadata": {
+            "training": true,
+            "saved": null,
+            "survey": "transect",
+            "survey_id": null,
+            "input_form": null,
+            "created_on": "2022-05-31T16:52:46.821Z",
+            "updated_on": "2022-05-31T16:52:46.821Z",
+            "synced_on": null,
+            "server_on": null
+          },
+          "attrs": {
+            "date": "2022-05-31T16:52:46.821Z",
+            "location_type": "latlon",
+            "survey_id": 562,
+            "sample_method_id": 776,
+            "location": {
+              "parent_id": "222878",
+              "id": "222881",
+              "name": "Sørytjørna - S3",
+              "code": "S3",
+              "centroid_sref": "62.646N, 10.692E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1189929.7447638, 9014071.1862698],
+                  [1190068.2868775, 9014068.7976127],
+                  [1190068.2868775, 9013956.5307274],
+                  [1190242.6588483, 9014018.6358128],
+                  [1190261.7681053, 9014064.0202984],
+                  [1190450.4720189, 9014071.1862698],
+                  [1190409.8648476, 9014001.9152129],
+                  [1190493.4678473, 9014001.9152129]
+                ]
+              }
+            }
+          },
+          "occurrences": [],
+          "samples": [],
+          "media": []
+        },
+        {
+          "cid": "1e05ca70-c902-414f-a175-86eacd104024",
+          "metadata": {
+            "training": true,
+            "saved": null,
+            "survey": "transect",
+            "survey_id": null,
+            "input_form": null,
+            "created_on": "2022-05-31T16:52:46.821Z",
+            "updated_on": "2022-05-31T16:52:46.821Z",
+            "synced_on": null,
+            "server_on": null
+          },
+          "attrs": {
+            "date": "2022-05-31T16:52:46.821Z",
+            "location_type": "latlon",
+            "survey_id": 562,
+            "sample_method_id": 776,
+            "location": {
+              "parent_id": "222878",
+              "id": "222882",
+              "name": "Sørytjørna - S4",
+              "code": "S4",
+              "centroid_sref": "62.646N, 10.696E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190488.690533, 9013999.5265558],
+                  [1190620.0666754, 9013999.5265558],
+                  [1190620.0666754, 9013925.4781846],
+                  [1190691.7263894, 9014018.6358128],
+                  [1190789.6613319, 9014102.2388125],
+                  [1190789.6613319, 9014080.7408983],
+                  [1190820.7138746, 9014150.0119552]
+                ]
+              }
+            }
+          },
+          "occurrences": [],
+          "samples": [],
+          "media": []
+        },
+        {
+          "cid": "3a78528a-f3d7-410b-a2a1-7555151ebcab",
+          "metadata": {
+            "training": true,
+            "saved": null,
+            "survey": "transect",
+            "survey_id": null,
+            "input_form": null,
+            "created_on": "2022-05-31T16:52:46.821Z",
+            "updated_on": "2022-05-31T16:52:46.821Z",
+            "synced_on": null,
+            "server_on": null
+          },
+          "attrs": {
+            "date": "2022-05-31T16:52:46.821Z",
+            "location_type": "latlon",
+            "survey_id": 562,
+            "sample_method_id": 776,
+            "location": {
+              "parent_id": "222878",
+              "id": "222883",
+              "name": "Sørytjørna - S5",
+              "code": "S5",
+              "centroid_sref": "62.647N, 10.695E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190789.6613319, 9014350.6591544],
+                  [1190684.560418, 9014350.6591544],
+                  [1190665.4511609, 9014305.2746689],
+                  [1190514.9657615, 9014376.9343829],
+                  [1190436.1400761, 9014281.3880975],
+                  [1190428.9741047, 9014281.3880975]
+                ]
+              }
+            }
+          },
+          "occurrences": [],
+          "samples": [],
+          "media": []
+        },
+        {
+          "cid": "d7db3794-e376-48fe-9595-8f023669f62b",
+          "metadata": {
+            "training": true,
+            "saved": null,
+            "survey": "transect",
+            "survey_id": null,
+            "input_form": null,
+            "created_on": "2022-05-31T16:52:46.821Z",
+            "updated_on": "2022-05-31T16:52:46.821Z",
+            "synced_on": null,
+            "server_on": null
+          },
+          "attrs": {
+            "date": "2022-05-31T16:52:46.821Z",
+            "location_type": "latlon",
+            "survey_id": 562,
+            "sample_method_id": 776,
+            "location": {
+              "parent_id": "222878",
+              "id": "222884",
+              "name": "Sørytjørna - S6",
+              "code": "S6",
+              "centroid_sref": "62.647N, 10.692E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190428.9741047, 9014286.1654118],
+                  [1190309.541248, 9014353.0478115],
+                  [1190216.3836198, 9014238.3922691],
+                  [1190163.8331629, 9014267.0561547],
+                  [1190161.4445057, 9014269.4448119]
+                ]
+              }
+            }
+          },
+          "occurrences": [],
+          "samples": [],
+          "media": []
+        },
+        {
+          "cid": "30a697f4-0418-4aee-aff8-eda465694763",
+          "metadata": {
+            "training": true,
+            "saved": null,
+            "survey": "transect",
+            "survey_id": null,
+            "input_form": null,
+            "created_on": "2022-05-31T16:52:46.821Z",
+            "updated_on": "2022-05-31T16:52:46.821Z",
+            "synced_on": null,
+            "server_on": null
+          },
+          "attrs": {
+            "date": "2022-05-31T16:52:46.821Z",
+            "location_type": "latlon",
+            "survey_id": 562,
+            "sample_method_id": 776,
+            "location": {
+              "parent_id": "222878",
+              "id": "222885",
+              "name": "Sørytjørna - S7",
+              "code": "S7",
+              "centroid_sref": "62.647N, 10.690E",
+              "sref_system": "4326",
+              "geom": {
+                "type": "LineString",
+                "coordinates": [
+                  [1190149.5012201, 9014267.0561547],
+                  [1190049.1776204, 9014267.0561547],
+                  [1190020.5137348, 9014212.1170407],
+                  [1189979.9065636, 9014281.3880975],
+                  [1189936.9107352, 9014288.5540689]
+                ]
+              }
+            }
+          },
+          "occurrences": [],
+          "samples": [],
+          "media": []
+        }
+      ],
+      "media": []
+    }
+  }
+}

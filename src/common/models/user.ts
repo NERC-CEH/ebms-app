@@ -51,10 +51,6 @@ export class UserModel extends DrupalUserModel {
     password: Yup.string().required('Please fill in'),
   });
 
-  hasLogIn() {
-    return !!this.attrs.email;
-  }
-
   async checkActivation() {
     if (!this.isLoggedIn()) return false;
 
@@ -81,7 +77,7 @@ export class UserModel extends DrupalUserModel {
 
   // eslint-disable-next-line @getify/proper-arrows/name
   getPrettyName = () => {
-    if (!this.hasLogIn()) return '';
+    if (!this.isLoggedIn()) return '';
 
     return `${this.attrs.firstName} ${this.attrs.lastName}`;
   };
@@ -192,4 +188,5 @@ export const useUserStatusCheck = () => {
   return check;
 };
 
+(window as any).userModel = userModel;
 export default userModel;

@@ -6,8 +6,8 @@ import { observer } from 'mobx-react';
 import './styles.scss';
 
 function Component({ sample, onUpload }) {
-  const isOldSurvey = !sample.getSurvey();
-  if (isOldSurvey) return null;
+  const { deprecated } = sample.getSurvey();
+  if (deprecated) return null;
 
   const { saved } = sample.metadata;
   if (!saved) {

@@ -54,8 +54,11 @@ class Component extends React.Component {
     const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
 
     const getOtherSurveys = () => {
-      const primarySurvey = ({ name }) => name !== primarySurveyName;
-      const otherSurveys = Object.values(surveys).filter(primarySurvey);
+      const notPrimarySurvey = ({ name }) => name !== primarySurveyName;
+      const notDeprecatedSurvey = ({ deprecated }) => !deprecated;
+      const otherSurveys = Object.values(surveys)
+        .filter(notPrimarySurvey)
+        .filter(notDeprecatedSurvey);
 
       // eslint-disable-next-line
       const getSurveyButton = ({ name, label }) => {

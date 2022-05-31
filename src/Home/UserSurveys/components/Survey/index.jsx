@@ -53,7 +53,7 @@ function Survey({ sample }) {
 
   const date = new Date(sample.metadata.created_on);
   const prettyDate = date.toLocaleDateString();
-  const survey = sample.getSurvey() || { label: 'Survey' }; // backwards compatible for old surveys
+  const survey = sample.getSurvey();
 
   let speciesCount = sample.occurrences.length;
   if (survey.name === 'area') {
@@ -67,7 +67,7 @@ function Survey({ sample }) {
 
   const path = sample.isDetailsComplete() ? '' : '/edit';
 
-  const canShowLink = !synchronising && survey.name;
+  const canShowLink = !synchronising && !survey.deprecated;
   const href = canShowLink && `/survey/${survey.name}/${sample.cid}${path}`;
 
   function getSampleInfo() {

@@ -25,7 +25,7 @@ async function resetApp(toast: any) {
 async function uploadAllSamples(toast: any, t: any) {
   Log('Settings:Menu:Controller: sending all samples.');
 
-  if (!userModel.hasLogIn()) {
+  if (!userModel.isLoggedIn()) {
     toast.warn('Please log in first to upload the records.');
     return;
   }

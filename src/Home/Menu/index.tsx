@@ -48,7 +48,7 @@ const Controller: FC = ({ ...restProps }) => {
     showLogoutConfirmationDialog(resetWrap, alert);
   }
 
-  const isLoggedIn = userModel.hasLogIn();
+  const isLoggedIn = userModel.isLoggedIn();
 
   const checkActivation = async () => {
     await loader.show('Please wait...');

@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import areaSurvey from 'Survey/AreaCount/config';
+import areaOldSurvey from 'Survey/AreaCount/configOld';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
 import transectSurvey from 'Survey/Transect/config';
 import mothSurvey from 'Survey/Moth/config';
@@ -8,6 +9,7 @@ import Sample from 'models/sample';
 
 export default {
   [areaSurvey.name]: areaSurvey,
+  [areaOldSurvey.name]: areaOldSurvey, // deprecated
   [areaSingleSpeciesSurvey.name]: areaSingleSpeciesSurvey,
   [transectSurvey.name]: transectSurvey,
   [mothSurvey.name]: mothSurvey,
@@ -31,6 +33,7 @@ export interface Survey {
   id: number;
   name: string;
   label: string;
+  deprecated?: boolean;
 
   attrs: Attrs;
 

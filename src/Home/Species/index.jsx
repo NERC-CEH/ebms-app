@@ -120,7 +120,7 @@ class Component extends React.Component {
       return false;
     }
 
-    if (!userModel.hasLogIn()) {
+    if (!userModel.isLoggedIn()) {
       return false;
     }
 
