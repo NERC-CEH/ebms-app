@@ -13,6 +13,7 @@ import {
   surveyEndTimeAttr,
   commentAttr,
   dateAttr,
+  stageAttr,
 } from 'Survey/common/config';
 import { chatboxOutline } from 'ionicons/icons';
 
@@ -130,7 +131,8 @@ const config = {
             id: 780,
           },
         },
-
+        comment: commentAttr,
+        stage: stageAttr,
         taxon: taxonAttr,
       },
 
@@ -138,6 +140,8 @@ const config = {
         return new Occurrence({
           attrs: {
             count: 1,
+            stage: 'Adult',
+            comment: null,
             taxon: {
               scientific_name: null,
               warehouse_id: null,

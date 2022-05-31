@@ -1,28 +1,23 @@
 #transect-section-edit {
-  ion-list {
-    margin-bottom: 0;
+  ion-item {
+    --border-style: solid;
   }
 
-  #countdown {
-    opacity: 1;
-  }
-
-  #countdown span {
-    width: 50px;
-    display: inline-block;
-    text-align: left;
-    opacity: 0.5;
-
-    &.paused {
-      opacity: 1;
-      width: inherit;
-      padding: 0 10px;
-      color: var(--ion-color-tertiary);
+  div.rounded {
+    > ion-item-sliding:last-child {
+      ion-item {
+        --border-style: none;
+      }
     }
 
-    &.warn {
-      opacity: 1;
-      color: var(--ion-color-danger);
+    > :last-child {
+      --border-style: none;
+    }
+
+    div:last-child {
+      ion-item {
+        --border-style: none;
+      }
     }
   }
 
@@ -50,16 +45,47 @@
   #list {
     font-weight: bold;
 
-    ion-label {
-      margin-left: 8px;
+    .species-list-header {
+      background: #e6e6e6 !important;
+      color: #777777;
+      padding-left: 7px;
+      --inner-padding-end: 0;
+
+      &.ios {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      ion-label {
+        width: 100%;
+        text-align: center;
+        font-weight: normal;
+        font-size: 0.9em;
+
+        &:nth-of-type(2) {
+          padding-left: 16px;
+          text-align: left;
+        }
+        &:first-of-type {
+          max-width: 54px;
+        }
+        &:last-of-type {
+          max-width: 50px;
+        }
+      }
     }
 
-    .transect-edit-count {
-      margin: 0;
-      max-width: 40px;
-      font-size: 1.3em;
-      // border-right: 1px solid rgba(0, 0, 0, 0.13);
-      padding-right: 8px;
+    ion-item {
+      --padding-start: 0;
+
+      ion-label {
+        margin-left: 16px;
+        font-weight: 700;
+      }
+    }
+
+    ion-item {
+      --padding-start: 0;
     }
   }
 }

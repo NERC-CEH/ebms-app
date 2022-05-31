@@ -58,6 +58,19 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
   const { t } = useTranslation();
   const alert = useAlert();
 
+  const increaseCount = (occ: any, is5x: boolean) => {
+    if (sample.isDisabled()) return;
+
+    if (is5x) {
+      // eslint-disable-next-line no-param-reassign
+      occ.attrs.count += 5;
+      occ.save();
+    } else {
+      occ.attrs.count += 1;
+      occ.save();
+    }
+  };
+
   const deleteOccurrenceWrap = (occ: Occurrence) =>
     deleteOccurrence(occ, alert);
 
@@ -113,7 +126,6 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
         subSample={subSample}
         deleteOccurrence={deleteOccurrenceWrap}
         increaseCount={increaseCount}
-        decreaseCount={decreaseCount}
         areaSurveyListSortedByTime={areaSurveyListSortedByTime}
         onToggleSpeciesSort={toggleSpeciesSort}
         isDisabled={isDisabled}

@@ -7,6 +7,7 @@ import Home from './Home';
 import SectionsList from './Sections/List';
 import SectionsEdit from './Sections/Edit';
 import SectionsEditTaxa from './Sections/Taxon';
+import OccurrenceEdit from './OccurrenceEdit';
 import survey from './config';
 
 const { AttrPageFromRoute } = AttrPage;
@@ -30,6 +31,16 @@ const routes = [
   [`${baseURL}/:smpId/edit/sections/:subSmpId`, SectionEditWrap],
   [`${baseURL}/:smpId/edit/sections/:subSmpId/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/edit/sections/:subSmpId/taxa`, SectionsEditTaxa],
+
+  [`${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit`, OccurrenceEdit],
+  [
+    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/:attr`,
+    AttrPageFromRoute,
+  ],
+  [
+    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/taxa`,
+    SectionsEditTaxa,
+  ],
 ];
 
 export default RouteWithModels.fromArray(savedSamples, routes);

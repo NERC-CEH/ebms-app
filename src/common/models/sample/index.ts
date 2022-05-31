@@ -30,6 +30,7 @@ type Attrs = SampleAttrs & {
   temperature?: any;
   windDirection?: any;
   windSpeed?: any;
+  reliability?: string;
 };
 
 export default class AppSample extends Sample {
