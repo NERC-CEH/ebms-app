@@ -66,7 +66,7 @@ const Edit: FC<Props> = ({
 
   const { navigate } = useContext(NavContext);
 
-  const getSpeciesList = (sample: Sample) => {
+  const getSpeciesList = () => {
     if (!sample.occurrences.length) {
       return (
         <IonList id="list" lines="full">

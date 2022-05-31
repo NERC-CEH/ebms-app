@@ -111,9 +111,10 @@ class LocationModel extends Model {
       remote: { id: 330, values: trapTypes },
       set: (value: string, model: any) => {
         if (model.attrs.type !== 'Other trap') {
+          // eslint-disable-next-line
           model.attrs.typeOther = null;
         }
-
+        // eslint-disable-next-line
         model.attrs.type = value;
         model.save();
       },

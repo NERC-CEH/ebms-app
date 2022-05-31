@@ -9,21 +9,6 @@ import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 import Main from './Main';
 
-function increaseCount(occ: Occurrence) {
-  occ.attrs.count++; // eslint-disable-line no-param-reassign
-  occ.save();
-}
-
-function decreaseCount(occ: Occurrence) {
-  const { count } = occ.attrs;
-  if (count <= 1) {
-    return;
-  }
-
-  occ.attrs.count--; // eslint-disable-line no-param-reassign
-  occ.save();
-}
-
 function deleteOccurrence(occ: Occurrence, alert: any) {
   const taxon = occ.attrs.taxon.scientific_name;
   alert({
@@ -66,6 +51,7 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
       occ.attrs.count += 5;
       occ.save();
     } else {
+      // eslint-disable-next-line no-param-reassign
       occ.attrs.count += 1;
       occ.save();
     }
