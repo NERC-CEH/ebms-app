@@ -6,8 +6,10 @@ import { observer } from 'mobx-react';
 import './styles.scss';
 
 function Component({ sample, onUpload }) {
-  const { saved } = sample.metadata;
+  const isOldSurvey = !sample.getSurvey();
+  if (isOldSurvey) return null;
 
+  const { saved } = sample.metadata;
   if (!saved) {
     return (
       <IonChip slot="end" class="record-status">
@@ -20,9 +22,7 @@ function Component({ sample, onUpload }) {
     return <IonSpinner class="record-status" color="primary" />;
   }
 
-  if (sample.isUploaded()) {
-    return null;
-  }
+  if (sample.isUploaded()) return null;
 
   return (
     <IonButton class="survey-status-upload" onClick={onUpload}>

@@ -53,7 +53,7 @@ function Survey({ sample }) {
 
   const date = new Date(sample.metadata.created_on);
   const prettyDate = date.toLocaleDateString();
-  const survey = sample.getSurvey();
+  const survey = sample.getSurvey() || { label: 'Survey' }; // backwards compatible for old surveys
 
   let speciesCount = sample.occurrences.length;
   if (survey.name === 'area') {
@@ -67,7 +67,8 @@ function Survey({ sample }) {
 
   const path = sample.isDetailsComplete() ? '' : '/edit';
 
-  const href = !synchronising && `/survey/${survey.name}/${sample.cid}${path}`;
+  const canShowLink = !synchronising && survey.name;
+  const href = canShowLink && `/survey/${survey.name}/${sample.cid}${path}`;
 
   function getSampleInfo() {
     const label = (
@@ -111,7 +112,7 @@ function Survey({ sample }) {
   return (
     <IonItemSliding class="survey-list-item">
       <ErrorMessage sample={sample} />
-      <IonItem routerLink={href} detail={!synchronising}>
+      <IonItem routerLink={href} detail={canShowLink}>
         {getSampleInfo()}
         <OnlineStatus sample={sample} onUpload={onUpload} />
       </IonItem>

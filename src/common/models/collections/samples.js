@@ -15,7 +15,8 @@ savedSamples.remoteSaveAll = async () => {
 
     const isNotInDraftStage = sample.metadata.saved;
     const isAlreadyUploaded = !!sample.id;
-    if (isNotInDraftStage && !isAlreadyUploaded) {
+    const isOldSurvey = !sample.getSurvey();
+    if (isNotInDraftStage && !isAlreadyUploaded && !isOldSurvey) {
       const invalids = sample.validateRemote(); // eslint-disable-line
       if (!invalids) {
         affectedRecordsCount++;

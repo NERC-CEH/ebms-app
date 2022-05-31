@@ -59,7 +59,7 @@ class Component extends React.Component {
 
       // eslint-disable-next-line
       const getSurveyButton = ({ name, label }) => {
-        if (name === 'area') return null; // for backwards compatible
+        if (!surveys[name]) return null; // for backwards compatible
 
         return (
           <IonFabButton

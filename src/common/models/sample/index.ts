@@ -85,7 +85,7 @@ export default class AppSample extends Sample {
       ...this.metadata,
     });
 
-    const surveyName = this.metadata.survey || 'area'; // !survey - for backwards compatibility
+    const surveyName = this.metadata.survey;
     this.survey = surveys[surveyName];
 
     Object.assign(this, VibrateExtension);
