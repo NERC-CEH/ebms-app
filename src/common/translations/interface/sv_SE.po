@@ -3,13 +3,13 @@
 # Karolis, 2020
 # Carin Kullberg <carin@ckg.se>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Georg, 2022
 # Lars Pettersson <lars.pettersson@biol.lu.se>, 2022
+# Georg, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Lars Pettersson <lars.pettersson@biol.lu.se>, 2022\n"
+"Last-Translator: Georg, 2022\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -321,6 +321,8 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Är du säker på att du vill logga ut?<br/><br/>Dina väntande och uppladdade "
+"<4>inventeringar kommer inte att raderas </4> från denna enhet."
 
 msgid "Cancel"
 msgstr "Avbryt"
@@ -513,7 +515,7 @@ msgstr "Fyll i din e-postadress för att begära återställning av lösenordet.
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Lyckad inloggning som: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
@@ -1907,110 +1909,113 @@ msgstr "Bug-fixar"
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "Skicka igen"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "Verkar som om din e-post inte blivit verifierad än."
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "Ska vi skicka verifierings-e-posten igen?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Din Platstjänst (GPS) verkar vara inaktiverad. Du kan aktivera den i din "
+"enhets inställningar."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Platstjänster (GPS) är inaktiverade."
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Lägg till Ny"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"Du har inga nattfjärilsfällor än.<1>Skapa din första nattfjärilsfälla</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Nattfjärilsfälla"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Annan typ"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Lägg till lampa"
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "Vilken typ av fälla var det?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Inga lampor tillagda"
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "Vilken lamptyp är det?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "Vilken typ av nattfjärilsfälla är det?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "LED trattfälla"
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Annan trattfälla"
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Fälla med 2 lakan"
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Annan fälla"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Lampa"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Lampdetaljer"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Kvantitet"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Inget namn på nattfjärilsfälla"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Nattfjärilsfällnamn"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "Är du säker på att du vill radera denna nattfjärilsfälla?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Ytterligare beskrivning av lampa."
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Välj"
