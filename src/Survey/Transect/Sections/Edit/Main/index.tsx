@@ -211,7 +211,7 @@ const Edit: FC<Props> = ({
         {getSpeciesAddButton()}
       </IonList>
 
-      {getSpeciesList(sectionSample)}
+      {getSpeciesList()}
     </Main>
   );
 };
