@@ -68,7 +68,7 @@ workflows:
             - content: |
                 #!/usr/bin/env bash
 
-                git tag -a "v$NPM_PACKAGE_VERSION-$BITRISE_BUILD_NUMBER" -m "Demo link: $DEMO_URL" -m "Build link: $BITRISE_BUILD_URL" "$BITRISE_GIT_COMMIT"
+                git tag -a "v$NPM_PACKAGE_VERSION-$BITRISE_BUILD_NUMBER" -m "* Demo link: $DEMO_URL" -m "* Build link: $BITRISE_BUILD_URL" "$BITRISE_GIT_COMMIT"
 
       - git-tag-project-version-and-build-number@1:
           inputs:
