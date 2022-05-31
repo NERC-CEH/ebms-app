@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { IonTitle } from '@ionic/react';
+import { IonTitle, IonToolbar } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { Geolocation } from '@capacitor/geolocation';
 import './styles.scss';
@@ -35,9 +35,11 @@ const GPSPermissionSubheader = () => {
   if (permission) return null;
 
   return (
-    <IonTitle className="gps-permission">
-      <T>Location Services (GPS) are disabled</T>
-    </IonTitle>
+    <IonToolbar className="gps-subheader">
+      <IonTitle className="gps-permission">
+        <T>Location Services (GPS) are disabled</T>
+      </IonTitle>
+    </IonToolbar>
   );
 };
 

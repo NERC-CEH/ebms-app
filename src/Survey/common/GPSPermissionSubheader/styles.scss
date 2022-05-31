@@ -1,7 +1,13 @@
-.gps-permission {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 0.8em;
-  background: var(--ion-color-warning);
-  color: var(--ion-color-warning-contrast);
+.gps-subheader {
+  --background: var(--ion-color-warning);
+  padding: 5px;
+  --min-height: 16px !important;
+
+  .gps-permission {
+    padding: 0 5px;
+    font-size: 0.8em;
+    text-align: center;
+    background: var(--ion-color-warning);
+    color: var(--ion-color-warning-contrast);
+  }
 }
