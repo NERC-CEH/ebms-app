@@ -18,5 +18,7 @@ export default {
   'tr-TR': 'Türkçe',
   'pl-PL': 'Polski',
   'ro-RO': 'Română',
+  'ca-ES': 'Català',
+  'da-DK': 'Dansk',
   // 'fr-FR': 'Français',
 };
