@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import Occurrence from 'models/occurrence';
 import { useRouteMatch } from 'react-router';
 import { IonItemDivider, IonLabel, IonList } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
+import { Trans as T, useTranslation } from 'react-i18next';
 import {
   Page,
   Header,
@@ -23,6 +23,7 @@ type Props = {
 
 const TransectHomeController: FC<Props> = ({ occurrence }) => {
   const { url } = useRouteMatch();
+  const { t } = useTranslation();
 
   const species = occurrence.getTaxonName();
   const isDisabled = occurrence.isUploaded();
@@ -53,7 +54,7 @@ const TransectHomeController: FC<Props> = ({ occurrence }) => {
             <MenuAttrItemFromModel attr="comment" model={occurrence} />
 
             <CounterInput
-              label="Abundance"
+              label={t('Count')}
               onChange={getCounterOnChange}
               value={count}
               icon={numberIcon}
@@ -63,7 +64,7 @@ const TransectHomeController: FC<Props> = ({ occurrence }) => {
 
           <IonItemDivider>
             <IonLabel>
-              <T>Species photo</T>
+              <T>Species Photo</T>
             </IonLabel>
           </IonItemDivider>
           <div className="rounded">
