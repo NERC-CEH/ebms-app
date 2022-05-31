@@ -1,14 +1,21 @@
+import { isPlatform } from '@ionic/react';
 import { Store } from '@flumens';
+
+const isDemo = !isPlatform('hybrid');
 
 export const genericStore = new Store({
   storeName: 'generic',
-  debugging: process.env.NODE_ENV === 'development',
+  debugging: isDemo,
 });
 export const modelStore = new Store({
   storeName: 'models',
-  debugging: process.env.NODE_ENV === 'development',
+  debugging: isDemo,
 });
 export const locationsStore = new Store({
   storeName: 'locations',
-  debugging: process.env.NODE_ENV === 'development',
+  debugging: isDemo,
 });
+
+if (isDemo) {
+  Object.assign(window, { genericStore, modelStore, locationsStore });
+}
