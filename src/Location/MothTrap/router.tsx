@@ -55,14 +55,14 @@ const AttrPageFromRoute: FC<Props> = ({ sample: location }: any) => {
 
   const surveyConfig = location.getSchema();
 
-  const attrProps = surveyConfig[attr];
+  const { pageProps } = surveyConfig[attr];
+
+  const { headerProps, attrProps } = pageProps;
+
   if (!attrProps) {
     console.error(`No such config attribute ${attr}`);
     return null;
   }
-
-  const { headerProps } = attrProps;
-
   return (
     <AttrPage
       model={location}

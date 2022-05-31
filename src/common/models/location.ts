@@ -105,27 +105,35 @@ interface Attrs extends ModelAttrs {
 class LocationModel extends Model {
   static schema = {
     type: {
-      input: 'radio',
-      info: 'What is the moth trap type?',
-      inputProps: { options: trapTypes },
-      remote: { id: 330, values: trapTypes },
-      set: (value: string, model: any) => {
-        if (model.attrs.type !== 'Other trap') {
-          // eslint-disable-next-line
-          model.attrs.typeOther = null;
-        }
-        // eslint-disable-next-line
-        model.attrs.type = value;
-        model.save();
+      pageProps:{
+        attrProps: {
+          input: 'radio',
+          info: 'What is the moth trap type?',
+          inputProps: { options: trapTypes },
+          set: (value: string, model: any) => {
+            if (model.attrs.type !== 'Other trap') {
+              // eslint-disable-next-line
+              model.attrs.typeOther = null;
+            }
+            // eslint-disable-next-line
+            model.attrs.type = value;
+            model.save();
+          },
+        },
       },
+      remote: { id: 330, values: trapTypes },
     },
 
     typeOther: {
-      headerProps: {
-        title: 'Other type',
+      pageProps: {
+        headerProps: {
+          title: 'Other type',
+        },
+        attrProps: {
+          input: 'textarea',
+          info: 'What type of trap was it?',
+        },
       },
-      input: 'textarea',
-      info: 'What type of trap was it?',
       remote: { id: 288 },
     },
 
