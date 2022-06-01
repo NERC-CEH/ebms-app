@@ -12,6 +12,15 @@
     margin-right: auto;
   }
 
+  ion-label:not([slot='end']) {
+    white-space: normal;
+  }
+
+  ion-label[slot='end'] {
+    max-width: 45%;
+    text-overflow: ellipsis;
+  }
+
   ion-icon {
     font-size: 18px !important;
   }
