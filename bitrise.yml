@@ -76,7 +76,9 @@ workflows:
             - content: |
                 #!/usr/bin/env bash
 
-                git tag -a "v$NPM_PACKAGE_VERSION-$BITRISE_BUILD_NUMBER" -m "* Demo link: $DEMO_URL" -m "* Build link: $BITRISE_BUILD_URL" "$BITRISE_GIT_COMMIT"
+                TAG_NAME="v$NPM_PACKAGE_VERSION-$BITRISE_BUILD_NUMBER"
+                git tag -a "$TAG_NAME" -m "* Demo link: $DEMO_URL" -m "* Build link: $BITRISE_BUILD_URL" "$BITRISE_GIT_COMMIT"
+                git push origin "$TAG_NAME"
   ios:
     steps:
       - certificate-and-profile-installer@1: {}
