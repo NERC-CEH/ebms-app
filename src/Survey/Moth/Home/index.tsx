@@ -10,7 +10,7 @@ import { useRouteMatch } from 'react-router';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import { Page, Header, useAlert, device, useToast } from '@flumens';
 import Media from 'models/media';
-import { useUserStatusCheck } from 'models/user';
+import userModel, { useUserStatusCheck } from 'models/user';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
 import { IonButton, NavContext } from '@ionic/react';
 import { useTranslation, Trans as T } from 'react-i18next';
@@ -155,6 +155,11 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const onIdentifyOccurrence = async (occ: Occurrence) => {
+    if (!userModel.isLoggedIn()) {
+      toast.warn('User is not logged in.');
+      return;
+    }
+
     await occ.identify();
 
     mergeOccurrence(occ);

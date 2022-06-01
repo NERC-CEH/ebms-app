@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { Gallery } from '@flumens';
+import { Gallery, useToast } from '@flumens';
 import Occurrence from 'models/occurrence';
+import userModel from 'models/user';
 import Media from 'models/media';
 import { Trans as T } from 'react-i18next';
 import { IonLabel, IonButton, IonIcon } from '@ionic/react';
@@ -67,9 +68,14 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
 
 const GalleryComponent: FC<Props> = ({ model, showGallery, hideGallery }) => {
   const { media } = model;
+  const toast = useToast();
 
   const getItem = (image: Media) => {
     const identifyImage = async () => {
+      if (!userModel.isLoggedIn()) {
+        toast.warn('User is not logged in.');
+        return;
+      }
       hideGallery();
       await image.identify();
     };

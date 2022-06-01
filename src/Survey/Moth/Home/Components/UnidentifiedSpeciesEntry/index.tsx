@@ -1,6 +1,7 @@
 import { FC, useContext } from 'react';
 import Occurrence from 'models/occurrence';
 import Media from 'models/media';
+import userModel from 'models/user';
 import {
   IonItemSliding,
   IonItem,
@@ -12,7 +13,7 @@ import {
   NavContext,
   IonButton,
 } from '@ionic/react';
-import { useAlert } from '@flumens';
+import { useAlert, useToast } from '@flumens';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -58,6 +59,8 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
   isUnidentifiedSpeciesLengthMoreThanFive,
   onIdentify,
 }) => {
+  const toast = useToast();
+
   const { navigate } = useContext(NavContext);
   const { url } = useRouteMatch();
   const showDeleteOccurrencePrompt = useDeleteOccurrencePrompt(occ);
@@ -93,6 +96,11 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
   const onIdentifyOccurrence = (e: any) => {
     e.preventDefault();
     e.stopPropagation();
+
+    if (!userModel.isLoggedIn()) {
+      toast.warn('User is not logged in.');
+      return null;
+    }
 
     return onIdentify(occ);
   };
