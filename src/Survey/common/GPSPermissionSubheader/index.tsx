@@ -24,6 +24,8 @@ const GPSPermissionSubheader = () => {
 
       if (perm.coarseLocation === 'granted') {
         setPermission(true);
+      } else {
+        setPermission(false);
       }
 
       return null;
@@ -34,12 +36,17 @@ const GPSPermissionSubheader = () => {
 
   if (permission) return null;
 
+  const permissionDisabled = permission === false;
   return (
-    <IonToolbar className="gps-subheader">
-      <IonTitle className="gps-permission">
-        <T>Location Services (GPS) are disabled</T>
-      </IonTitle>
-    </IonToolbar>
+    <>
+      {permissionDisabled && (
+        <IonToolbar className="gps-subheader">
+          <IonTitle className="gps-permission">
+            <T>Location Services (GPS) are disabled</T>
+          </IonTitle>
+        </IonToolbar>
+      )}
+    </>
   );
 };
 
