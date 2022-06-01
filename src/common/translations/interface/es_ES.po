@@ -896,6 +896,10 @@ msgstr ""
 "Marca cualquier nuevo registro como \"entrenamiento\" y excluyeló de todos "
 "los informes."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Compartir análisis de aplicaciones"
 

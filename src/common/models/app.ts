@@ -145,6 +145,7 @@ export type Attrs = ModelAttrs & {
   showCopySpeciesTip: boolean;
   showWhatsNewInVersion115: boolean;
   hasGPSPermission: boolean | null;
+  showCommonNamesInGuide: boolean;
 } & SurveyDraftKeys;
 
 const defaults: Attrs = {
@@ -171,6 +172,7 @@ const defaults: Attrs = {
   useExperiments: false,
   sendAnalytics: true,
   appSession: 0,
+  showCommonNamesInGuide: true,
 
   // tips
   showGuideHelpTip: true,

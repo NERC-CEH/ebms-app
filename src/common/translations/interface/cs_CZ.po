@@ -866,6 +866,10 @@ msgstr "Země"
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr "Označte jakýkoli záznam jako \"simulaci\" a vyjměte ho ze všech zpráv."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Sdílejte analýzy aplikace"
 

@@ -59,6 +59,7 @@ const Container: FC = () => {
     country,
     primarySurvey,
     speciesGroups,
+    showCommonNamesInGuide,
   } = appModel.attrs;
 
   const resetAppWrap = () => resetApp(toast);
@@ -72,6 +73,7 @@ const Container: FC = () => {
         useExperiments={useExperiments}
         sendAnalytics={sendAnalytics}
         primarySurvey={primarySurvey}
+        showCommonNamesInGuide={showCommonNamesInGuide}
         uploadAllSamples={uploadAllSamplesWrap}
         resetApp={resetAppWrap}
         onToggle={onToggle}

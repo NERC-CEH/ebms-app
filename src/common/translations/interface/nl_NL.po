@@ -880,6 +880,10 @@ msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
 "Markeer een nieuwe telling als 'training' en sluit uit van alle rapporten."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Deel app analysedata"
 

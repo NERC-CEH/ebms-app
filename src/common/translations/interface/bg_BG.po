@@ -902,6 +902,10 @@ msgstr ""
 "Маркирай всички нови наблюдения като \"тренировка\" и ги изключи от всички "
 "доклади."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Сподели данни за анализ на приложението"
 

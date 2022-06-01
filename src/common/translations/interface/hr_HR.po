@@ -875,6 +875,10 @@ msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
 "Svaki novi zapis označite kao \"trening\" i isključi ga iz svih izvještaja."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Dijelite analitiku aplikacije"
 

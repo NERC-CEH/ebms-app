@@ -890,6 +890,10 @@ msgstr ""
 "Marcați orice înregistrări noi ca „antrenament” și excludeți-le din toate "
 "rapoartele."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Partajați aplicația Analytics"
 

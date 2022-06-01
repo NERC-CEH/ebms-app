@@ -83,6 +83,7 @@ type Props = {
   useTraining: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;
+  showCommonNamesInGuide: boolean;
   primarySurvey?: string;
   language?: string;
   country?: string;
@@ -99,6 +100,7 @@ const MenuMain: FC<Props> = ({
   primarySurvey,
   language,
   country,
+  showCommonNamesInGuide,
   speciesGroups,
 }) => {
   const alert = useAlert();
@@ -108,6 +110,8 @@ const MenuMain: FC<Props> = ({
     onToggle('sendAnalytics', checked);
   const onUseExperiments = (checked: boolean) =>
     onToggle('useExperiments', checked);
+  const onShowCommonNamesInGuide = (checked: boolean) =>
+    onToggle('showCommonNamesInGuide', checked);
   const onResetDialog = () => resetDialog(resetApp, alert);
   const onTrainingToggle = (checked: boolean) =>
     onToggle('useTraining', checked);
@@ -178,6 +182,12 @@ const MenuMain: FC<Props> = ({
             </IonLabel>
           </IonItem>
 
+          <MenuAttrToggle
+            icon={butterflyIcon}
+            label="Show common names in guide"
+            value={showCommonNamesInGuide}
+            onChange={onShowCommonNamesInGuide}
+          />
           <MenuAttrToggle
             icon={schoolOutline}
             label="Training Mode"

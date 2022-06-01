@@ -70,10 +70,19 @@ class Component extends React.Component {
   };
 
   getSpeciesGrid(speciesList) {
+    const { appModel } = this.props;
+    const { showCommonNamesInGuide } = appModel.attrs;
+
     const getSpeciesElement = sp => {
       const { id, taxon, image } = sp;
 
+      let label = taxon;
+      if (showCommonNamesInGuide) {
+        label = t(taxon, null, true) || label; // might not have translation
+      }
+
       const onClick = () => this.showSpeciesModal(id);
+
       return (
         <IonCol
           key={id}
@@ -88,7 +97,7 @@ class Component extends React.Component {
               backgroundImage: `url('/images/${image}_thumbnail.jpg')`,
             }}
           >
-            <span className="label">{t(taxon, null, true) || taxon}</span>
+            <span className="label">{label}</span>
           </div>
         </IonCol>
       );

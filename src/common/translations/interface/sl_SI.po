@@ -868,6 +868,10 @@ msgstr ""
 "Vse nove zapise označite kot \"usposabljanje\" in jih izključite iz vseh "
 "poročil."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Delitev analize aplikacije"
 

@@ -902,6 +902,10 @@ msgstr ""
 "Markiere alle neuen Meldungen als \"Training\" und schließe sie von allen "
 "Berichten aus."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "App Analytics teilen"
 

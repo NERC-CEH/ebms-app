@@ -888,6 +888,10 @@ msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
 "Yeni kayıtları 'eğitim' olarak işaretleyin ve tüm raporlardan çıkarın."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Uygulama analitiğini paylaş"
 

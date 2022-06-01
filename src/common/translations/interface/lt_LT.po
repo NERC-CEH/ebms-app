@@ -877,6 +877,10 @@ msgstr "Šalis"
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr "Pažymėti naujus įrašus 'testavimui' ir nerodyti jokiuose reportuose."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr "Rodyti bendrinius rušių pavadinimus gide"
+
 msgid "Share App Analytics"
 msgstr "Dalintis naudojimosi duomenimis"
 

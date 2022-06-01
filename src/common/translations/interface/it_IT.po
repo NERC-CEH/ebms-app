@@ -893,6 +893,10 @@ msgstr ""
 "Contrassegna tutti i nuovi record come \"allenamento\" ed escludili da tutti"
 " i report."
 
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Condividi le statistiche dell'app"
 
