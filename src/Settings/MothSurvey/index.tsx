@@ -22,7 +22,7 @@ const MothSurveySettings: FC<Props> = ({ appModel }) => {
   const onTurnOffImageIdentifierToggle = (checked: boolean) => {
     onToggle(appModel, checked);
 
-    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Medium });
+    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
   };
 
   return (

@@ -21,7 +21,7 @@ const HeaderComponent: FC<Props> = ({
   const alert = useAlert();
 
   const onToggle = (on: boolean) => {
-    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Medium });
+    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
 
     if (on === isGPSTracking) {
       return;

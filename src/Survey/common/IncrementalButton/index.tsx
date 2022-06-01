@@ -23,7 +23,7 @@ const IncrementalButton: FC<Props> = ({
 
     onClickProp();
 
-    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Medium });
+    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
   };
 
   const onLongClick = () => {
@@ -36,7 +36,7 @@ const IncrementalButton: FC<Props> = ({
 
     onLongClickProp();
 
-    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Heavy });
+    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
   };
 
   return (

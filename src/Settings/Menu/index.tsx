@@ -47,7 +47,7 @@ const onToggle = (setting: keyof Attrs, checked: boolean) => {
   appModel.attrs[setting] = checked; // eslint-disable-line no-param-reassign
   appModel.save();
 
-  isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Medium });
+  isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
 };
 
 const Container: FC = () => {
