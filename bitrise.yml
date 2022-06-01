@@ -109,10 +109,6 @@ workflows:
                 uname -av
       - get-npm-package-version@1: {}
       - npm@1:
-          title: Config Bit.dev
-          inputs:
-            - command: config set @bit:registry https://node.bit.dev
-      - npm@1:
           title: Install
           timeout: 360
           inputs:
