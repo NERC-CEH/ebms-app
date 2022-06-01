@@ -1979,3 +1979,13 @@ msgstr "Additional description of lamp."
 # Moth trap survey 
 msgid "Select"
 msgstr "Select"
+
+# Additional details attribute, 15min count survey
+msgid "Recorders"
+msgstr "Recorders"
+
+# Additional details attribute, 15min count survey
+msgid "Enter the number of recorders of anyone who helped with this record - including your own."
+msgstr "Enter the number of recorders of anyone who helped with this record - including your own."
+
+
