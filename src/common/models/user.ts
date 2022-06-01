@@ -93,19 +93,35 @@ export class UserModel extends DrupalUserModel {
    */
   async _migrateAuth() {
     console.log('Migrating user auth.');
+    if (!this.attrs.email) {
+      // email might not exist
+      delete this.attrs.password;
+      return this.save();
+    }
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    const tokens = await this._exchangePasswordToTokens(
-      this.attrs.email,
-      this.attrs.password
-    );
-    this.attrs.tokens = tokens;
-    delete this.attrs.password;
+    try {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      const tokens = await this._exchangePasswordToTokens(
+        this.attrs.email,
+        this.attrs.password
+      );
+      this.attrs.tokens = tokens;
+      delete this.attrs.password;
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    await this._refreshAccessToken();
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      await this._refreshAccessToken();
+    } catch (e: any) {
+      if (e.message === 'Incorrect password or email') {
+        console.log('Removing invalid old user credentials');
+        delete this.attrs.password;
+        this.logOut();
+      }
+      console.error(e);
+      throw e;
+    }
+
     return this.save();
   }
 
@@ -188,5 +204,4 @@ export const useUserStatusCheck = () => {
   return check;
 };
 
-(window as any).userModel = userModel;
 export default userModel;
