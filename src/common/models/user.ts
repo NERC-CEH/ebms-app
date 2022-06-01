@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { NavContext } from '@ionic/react';
-import Log from 'helpers/log';
 import CONFIG from 'common/config';
 import {
   DrupalUserModel,
@@ -140,7 +139,7 @@ export class UserModel extends DrupalUserModel {
   }
 }
 
-Log('UserModel: initializing');
+console.log('UserModel: initializing');
 
 const userModel = new UserModel({
   cid: 'user',

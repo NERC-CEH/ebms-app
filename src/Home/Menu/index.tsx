@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import Log from 'helpers/log';
 import { Page, useAlert, useLoader, useToast } from '@flumens';
 import appModel from 'models/app';
 import userModel from 'models/user';
@@ -41,7 +40,7 @@ const Controller: FC = ({ ...restProps }) => {
   const toast = useToast();
 
   function logOut() {
-    Log('Info:Menu: logging out.');
+    console.log('Info:Menu: logging out.');
     const resetWrap = async () => {
       userModel.logOut();
     };

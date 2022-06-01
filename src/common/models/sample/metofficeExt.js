@@ -1,4 +1,3 @@
-import Log from 'helpers/log';
 import { device } from '@flumens';
 import config from 'common/config';
 import { observe } from 'mobx';
@@ -131,7 +130,7 @@ function setNewWeatherValues(sample, newWeatherValues) {
 
 const extension = {
   startMetOfficePull() {
-    Log('SampleModel:MetOffice: start.');
+    console.log('SampleModel:MetOffice: start.');
 
     let stopLocationObserver;
 

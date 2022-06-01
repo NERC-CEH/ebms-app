@@ -2,7 +2,6 @@ import { createRef } from 'react';
 import { observer } from 'mobx-react';
 import { IonSlides, IonSlide, IonButton } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
-import Log from 'helpers/log';
 import appModel from 'models/app';
 import './styles.scss';
 
@@ -12,7 +11,7 @@ function next(sliderRef) {
 
 const SplashScreen = () => {
   function exit() {
-    Log('Info:Welcome:Controller: exit.');
+    console.log('Info:Welcome:Controller: exit.');
     appModel.attrs.showedWelcome = true;
     appModel.save();
   }

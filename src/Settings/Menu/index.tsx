@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import Log from 'helpers/log';
 import { Page, Header, useToast } from '@flumens';
 import appModel, { Attrs } from 'models/app';
 import userModel from 'models/user';
@@ -9,7 +8,7 @@ import locations from 'models/collections/locations';
 import Main from './Main';
 
 async function resetApp(toast: any) {
-  Log('Settings:Menu:Controller: resetting the application!', 'w');
+  console.log('Settings:Menu:Controller: resetting the application!');
   try {
     await appModel.resetDefaults();
     await userModel.resetDefaults();
@@ -23,7 +22,7 @@ async function resetApp(toast: any) {
 }
 
 async function uploadAllSamples(toast: any, t: any) {
-  Log('Settings:Menu:Controller: sending all samples.');
+  console.log('Settings:Menu:Controller: sending all samples.');
 
   if (!userModel.isLoggedIn()) {
     toast.warn('Please log in first to upload the records.');
@@ -42,7 +41,7 @@ async function uploadAllSamples(toast: any, t: any) {
 }
 
 const onToggle = (setting: keyof Attrs, checked: boolean) => {
-  Log('Settings:Menu:Controller: setting toggled.');
+  console.log('Settings:Menu:Controller: setting toggled.');
   appModel.attrs[setting] = checked; // eslint-disable-line no-param-reassign
   appModel.save();
 };

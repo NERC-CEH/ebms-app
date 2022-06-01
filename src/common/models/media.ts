@@ -1,6 +1,5 @@
 import { Media, MediaAttrs } from '@flumens';
 import axios from 'axios';
-import Log from 'helpers/log';
 import { observable } from 'mobx';
 import CONFIG from 'common/config';
 import { isPlatform } from '@ionic/react';
@@ -38,7 +37,7 @@ export default class AppMedia extends Media {
   }
 
   async destroy(silent?: boolean) {
-    Log('MediaModel: destroying.');
+    console.log('MediaModel: destroying.');
 
     // remove from internal storage
     if (!isPlatform('hybrid')) {
@@ -78,7 +77,7 @@ export default class AppMedia extends Media {
 
       return this.parent.save();
     } catch (err) {
-      Log(err, 'e');
+      console.error(err);
     }
 
     return null;
