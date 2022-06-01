@@ -8,7 +8,6 @@ export {
   default as Sample,
   Attrs as SampleAttrs,
   Options as SampleOptions,
-  createImage,
 } from '@flumens/ionic/dist/models/Sample';
 export {
   default as Media,
