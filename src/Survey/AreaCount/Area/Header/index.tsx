@@ -2,6 +2,8 @@ import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Header, MenuAttrToggle, useAlert } from '@flumens';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
+import { isPlatform } from '@ionic/react';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import './styles.scss';
 
 type Props = {
@@ -19,6 +21,8 @@ const HeaderComponent: FC<Props> = ({
   const alert = useAlert();
 
   const onToggle = (on: boolean) => {
+    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Medium });
+
     if (on === isGPSTracking) {
       return;
     }

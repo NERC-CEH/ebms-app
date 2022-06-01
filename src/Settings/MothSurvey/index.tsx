@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { IonList } from '@ionic/react';
+import { IonList, isPlatform } from '@ionic/react';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import AppModelProps from 'models/app';
 import { Page, Main, Header, InfoMessage, MenuAttrToggle } from '@flumens';
 import { cameraOutline } from 'ionicons/icons';
@@ -18,8 +19,11 @@ type Props = {
 const MothSurveySettings: FC<Props> = ({ appModel }) => {
   const { useImageIdentifier } = appModel.attrs;
 
-  const onTurnOffImageIdentifierToggle = (checked: boolean) =>
+  const onTurnOffImageIdentifierToggle = (checked: boolean) => {
     onToggle(appModel, checked);
+
+    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Medium });
+  };
 
   return (
     <Page id="moth-survey-settings">

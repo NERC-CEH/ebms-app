@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import { isPlatform } from '@ionic/react';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Page, Header, useToast } from '@flumens';
 import appModel, { Attrs } from 'models/app';
 import userModel from 'models/user';
@@ -44,6 +46,8 @@ const onToggle = (setting: keyof Attrs, checked: boolean) => {
   console.log('Settings:Menu:Controller: setting toggled.');
   appModel.attrs[setting] = checked; // eslint-disable-line no-param-reassign
   appModel.save();
+
+  isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Medium });
 };
 
 const Container: FC = () => {
