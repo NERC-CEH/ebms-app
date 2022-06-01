@@ -1,5 +1,5 @@
 import { Model, ModelAttrs } from '@flumens';
-import { observable, set } from 'mobx';
+import { observable } from 'mobx';
 import axios from 'axios';
 import CONFIG from 'common/config';
 import * as Yup from 'yup';
@@ -224,10 +224,7 @@ export class AppModel extends Model {
   }
 
   resetDefaults() {
-    super.resetDefaults();
-
-    set(this.attrs, JSON.parse(JSON.stringify(defaults)));
-    return this.save();
+    return super.resetDefaults(defaults);
   }
 }
 

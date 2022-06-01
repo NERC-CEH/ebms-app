@@ -10,7 +10,6 @@ import {
   useAlert,
   DrupalUserModelAttrs,
 } from '@flumens';
-import { set } from 'mobx';
 import * as Yup from 'yup';
 import { genericStore } from './store';
 
@@ -18,7 +17,6 @@ export interface Attrs extends DrupalUserModelAttrs {
   firstName?: string;
   lastName?: string;
   email?: string;
-  id?: number;
 
   /**
    * @deprecated
@@ -126,10 +124,7 @@ export class UserModel extends DrupalUserModel {
   }
 
   resetDefaults() {
-    super.resetDefaults();
-
-    set(this.attrs, JSON.parse(JSON.stringify(defaults)));
-    return this.save();
+    return super.resetDefaults(defaults);
   }
 }
 
