@@ -49,6 +49,18 @@ export class UserModel extends DrupalUserModel {
     password: Yup.string().required('Please fill in'),
   });
 
+  constructor(options: any) {
+    super(options);
+
+    const checkForValidation = () => {
+      if (this.isLoggedIn() && !this.attrs.verified) {
+        console.log('User: refreshing profile for validation');
+        this.refreshProfile();
+      }
+    };
+    this.ready?.then(checkForValidation);
+  }
+
   async checkActivation() {
     if (!this.isLoggedIn()) return false;
 
