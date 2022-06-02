@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from 'react';
+import { FC, useContext } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { toJS } from 'mobx';
@@ -10,7 +10,6 @@ import Sample, { useValidateCheck } from 'models/sample';
 import savedSamples from 'models/collections/samples';
 import appModel, { SurveyDraftKeys } from 'models/app';
 import { useUserStatusCheck } from 'models/user';
-import { getGPSPermissionStatus } from 'Survey/common/GPSPermissionSubheader';
 import Header from './Header';
 import Main from './Main';
 
@@ -262,16 +261,6 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const isDisabled = !!sample.metadata.synced_on;
-
-  const checkGPSPermissionStatus = () => {
-    const isTimerPaused = sample.isTimerPaused();
-    const isTimerFinished = sample.isTimerFinished();
-    if (isDisabled || isTimerPaused || isTimerFinished) return;
-
-    getGPSPermissionStatus(toast);
-  };
-
-  useEffect(checkGPSPermissionStatus, []);
 
   const { areaSurveyListSortedByTime } = appModel.attrs;
   const isTraining = !!sample.metadata.training;
