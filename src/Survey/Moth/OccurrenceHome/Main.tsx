@@ -35,6 +35,7 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
             icon={mothIcon}
             label="Species"
             value={species}
+            skipValueTranslation
           />
           <Attr
             model={occurrence}
