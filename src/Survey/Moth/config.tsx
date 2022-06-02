@@ -47,6 +47,7 @@ const survey: Survey = {
   id: 681,
   name: 'moth',
   label: 'Moth survey (SPRING)',
+  webForm: 'enter-moth-trap-records',
 
   attrs: {
     location: locationAttr,

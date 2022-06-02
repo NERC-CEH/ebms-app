@@ -34,6 +34,7 @@ export interface Survey {
   name: string;
   label: string;
   deprecated?: boolean;
+  webForm?: string;
 
   attrs: Attrs;
 

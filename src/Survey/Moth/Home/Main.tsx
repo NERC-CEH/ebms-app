@@ -1,7 +1,14 @@
 import { FC, useContext } from 'react';
 import Sample from 'models/sample';
 import Occurrence from 'models/occurrence';
-import { Main, MenuAttrItem, InfoBackgroundMessage, useAlert } from '@flumens';
+import config from 'common/config';
+import {
+  Main,
+  MenuAttrItem,
+  InfoBackgroundMessage,
+  useAlert,
+  InfoMessage,
+} from '@flumens';
 import {
   IonList,
   IonButton,
@@ -18,7 +25,12 @@ import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import { getUnkownSpecies } from 'Survey/Moth/config';
-import { locationOutline, camera, warningOutline } from 'ionicons/icons';
+import {
+  informationCircle,
+  locationOutline,
+  camera,
+  warningOutline,
+} from 'ionicons/icons';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import UnidentifiedSpeciesEntry from './Components/UnidentifiedSpeciesEntry';
 import './styles.scss';
@@ -253,8 +265,35 @@ const HomeMain: FC<Props> = ({
     );
   };
 
+  const { webForm } = sample.getSurvey();
+
   return (
     <Main>
+      {isDisabled && (
+        <>
+          <InfoMessage
+            className="blue"
+            icon={informationCircle}
+            skipTranslation
+          >
+            <T>
+              This record has been submitted and cannot be edited within this
+              App.
+            </T>
+            <IonButton
+              href={`${config.backend.url}/${webForm}?sample_id=${sample.id}`}
+              expand="block"
+              color="dark"
+              fill="outline"
+              size="small"
+              className="website-link"
+            >
+              <T>eBMS website</T>
+            </IonButton>
+          </InfoMessage>
+        </>
+      )}
+
       <IonList lines="full">
         <div className="rounded">
           <MenuAttrItem
