@@ -319,6 +319,8 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"¿Estás seguro de que quieres cerrar la sesión?<br/><br/>Sus registros "
+"pendientes y cargados <4>no se borrarán  </4> de este dispositivo"
 
 msgid "Cancel"
 msgstr "Cancelar"
@@ -513,7 +515,7 @@ msgstr ""
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Ha iniciado con éxito como: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
@@ -898,7 +900,7 @@ msgstr ""
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "Mostrar los nombres comunes en la guía"
 
 msgid "Share App Analytics"
 msgstr "Compartir análisis de aplicaciones"
@@ -1942,95 +1944,99 @@ msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Los servicios de localización (GPS) parecen estar desactivados. Puedes "
+"activarlo en la configuración de su dispositivo."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Los servicios de localización (GPS) están desactivados. "
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Añadir nuevo"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"No tiene una trampa de polillas aún <1>Registre primero una trampa de "
+"polillas</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Trampa de polillas"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Otro tipo"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Añadir lámpara"
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "¿Qué tipo de trampa era?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Lámparas no añadidas"
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "¿Qué tipo de lámpara es?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "¿Cúal es el tipo de trampa para polillas?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "Trampa de embudo LED "
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Otra trampa de embudo"
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Trampa con 2 sábanas"
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Otra trampa"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Lámpara"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Detalles de la lámpara"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Cantidad"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Trampa de polillas sin nombre"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Nombre trampa de polillas"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "¿Está seguro de que quiere eliminar esta trampa para polillas?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Descripción adicional de la lámpara."
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Seleccionar"
