@@ -16,21 +16,16 @@ import windIcon from 'common/images/wind.svg';
 
 type Props = {
   sample: Sample;
+  onChangeCounter: (value: number) => void;
 };
 
-const AreaCountDetails: FC<Props> = ({ sample }) => {
+const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
   const match = useRouteMatch<any>();
   const baseURL = match.url;
 
   const isDisabled = sample.isDisabled();
   const { recorders, comment, cloud, temperature, windDirection, windSpeed } =
     sample.attrs;
-
-  const getCounterOnChange = (value: number) => {
-    // eslint-disable-next-line no-param-reassign
-    sample.attrs.recorders = value;
-    sample.save();
-  };
 
   return (
     <Main>
@@ -105,7 +100,7 @@ const AreaCountDetails: FC<Props> = ({ sample }) => {
 
           <CounterInput
             label="Recorders"
-            onChange={getCounterOnChange}
+            onChange={onChangeCounter}
             value={recorders}
             icon={personOutline}
             min={1}
