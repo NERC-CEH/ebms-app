@@ -65,7 +65,7 @@ const HomeController: FC<Props> = ({ sample }) => {
 
   const UNKNOWN_SPECIES = getUnkownSpecies();
 
-  const { useImageIdentifier } = appModel.attrs;
+  const { useImageIdentifier, useTraining } = appModel.attrs;
   const isDisabled = sample.isDisabled();
 
   const surveyConfig = sample.getSurvey();
@@ -210,11 +210,18 @@ const HomeController: FC<Props> = ({ sample }) => {
     onIdentifyOccurrence(newOccurrence);
   };
 
+  const trainingModeSubheader = useTraining && (
+    <div className="training-survey">
+      <T>Training Mode</T>
+    </div>
+  );
+
   return (
     <Page id="survey-moth-home">
       <Header
         title="Moth-trap survey"
         rightSlot={!isDisabled && getFinishButton()}
+        subheader={trainingModeSubheader}
       />
       <Main
         match={match}

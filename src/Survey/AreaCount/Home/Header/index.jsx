@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { IonButton } from '@ionic/react';
 import { Header } from '@flumens';
 import { Trans as T } from 'react-i18next';
-import './styles.scss';
 
 function getFinishButton(onSubmit, isEditing) {
   const label = isEditing ? <T>Upload</T> : <T>Finish</T>;
