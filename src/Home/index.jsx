@@ -14,9 +14,8 @@ import {
 import {
   personOutline,
   addOutline,
-  bookOutline,
   menuOutline,
-  homeOutline,
+  statsChartOutline,
 } from 'ionicons/icons';
 import savedSamples from 'models/collections/samples';
 import appModel from 'models/app';
@@ -25,6 +24,7 @@ import LongPressFabButton from 'Components/LongPressFabButton';
 import { Trans as T } from 'react-i18next';
 import PendingSurveysBadge from 'common/Components/PendingSurveysBadge';
 import surveys from 'common/config/surveys';
+import butterflyIcon from 'common/images/butterfly.svg';
 import Report from './Report';
 import Species from './Species';
 import UserSurveys from './UserSurveys';
@@ -91,17 +91,17 @@ class Component extends React.Component {
           </IonRouterOutlet>
 
           <IonTabBar slot="bottom">
-            <IonTabButton tab="home/report" href="/home/report">
-              <IonIcon icon={homeOutline} />
+            <IonTabButton tab="home/species" href="/home/species">
+              <IonIcon icon={butterflyIcon} />
               <IonLabel>
-                <T>Home</T>
+                <T>Guide</T>
               </IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab="home/species" href="/home/species">
-              <IonIcon icon={bookOutline} />
+            <IonTabButton tab="home/report" href="/home/report">
+              <IonIcon icon={statsChartOutline} />
               <IonLabel>
-                <T>Guide</T>
+                <T>Reports</T>
               </IonLabel>
             </IonTabButton>
 

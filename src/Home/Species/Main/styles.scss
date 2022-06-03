@@ -1,14 +1,17 @@
-#home-species.ion-page ion-content {
+#home-species ion-content.guide {
   --padding-start: 0;
   --padding-end: 0;
   --padding-top: 0;
   --padding-bottom: 0;
-  --background: var(--ion-color-dark);
 
   .info-message {
     border-radius: 0;
     margin: 0;
     max-width: 100%; // for tablet overwrite
+
+    ion-label {
+      padding-bottom: 20px;
+    }
   }
 
   .ion-no-padding {

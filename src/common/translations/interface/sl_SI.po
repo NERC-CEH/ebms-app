@@ -434,6 +434,14 @@ msgstr "Popisi"
 msgid "Reports"
 msgstr "Poročila"
 
+# Species filter input
+msgid "Species name or filter..."
+msgstr ""
+
+# Species filter label
+msgid "family"
+msgstr ""
+
 msgid "Sorry, no report data is available at the moment."
 msgstr "Se opravičujemo, trenutno ni na voljo nobenih podatkov o popisih."
 
@@ -1964,4 +1972,14 @@ msgstr ""
 
 # Moth trap survey
 msgid "Select"
+msgstr ""
+
+# Additional details attribute, 15min count survey
+msgid "Recorders"
+msgstr ""
+
+# Additional details attribute, 15min count survey
+msgid ""
+"Enter the number of recorders of anyone who helped with this record - "
+"including your own."
 msgstr ""

@@ -441,6 +441,14 @@ msgstr "Muestreos"
 msgid "Reports"
 msgstr "Informes"
 
+# Species filter input
+msgid "Species name or filter..."
+msgstr ""
+
+# Species filter label
+msgid "family"
+msgstr ""
+
 msgid "Sorry, no report data is available at the moment."
 msgstr "Lo sentimos, no hay datos de informes disponibles en este momento."
 
@@ -2040,3 +2048,15 @@ msgstr "Descripción adicional de la lámpara."
 # Moth trap survey
 msgid "Select"
 msgstr "Seleccionar"
+
+# Additional details attribute, 15min count survey
+msgid "Recorders"
+msgstr "Registradores"
+
+# Additional details attribute, 15min count survey
+msgid ""
+"Enter the number of recorders of anyone who helped with this record - "
+"including your own."
+msgstr ""
+"Introduzca el número de registradores de cualquier persona que haya "
+"colaborado con este registro, incluido el suyo propio."

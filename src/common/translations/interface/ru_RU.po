@@ -438,6 +438,14 @@ msgstr "Исследования"
 msgid "Reports"
 msgstr "Отчеты"
 
+# Species filter input
+msgid "Species name or filter..."
+msgstr ""
+
+# Species filter label
+msgid "family"
+msgstr ""
+
 msgid "Sorry, no report data is available at the moment."
 msgstr "Извините, на данный момент нет доступных данных отчета"
 
@@ -1917,4 +1925,14 @@ msgstr ""
 
 # Moth trap survey
 msgid "Select"
+msgstr ""
+
+# Additional details attribute, 15min count survey
+msgid "Recorders"
+msgstr ""
+
+# Additional details attribute, 15min count survey
+msgid ""
+"Enter the number of recorders of anyone who helped with this record - "
+"including your own."
 msgstr ""

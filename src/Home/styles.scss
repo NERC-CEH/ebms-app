@@ -5,6 +5,10 @@
 
     ion-tab-button {
       max-width: 20vw;
+
+      ion-icon {
+        --ionicon-stroke-width: 24px;
+      }
     }
   }
 

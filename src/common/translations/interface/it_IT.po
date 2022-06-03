@@ -441,6 +441,14 @@ msgstr "Campionamenti"
 msgid "Reports"
 msgstr "Rapporti"
 
+# Species filter input
+msgid "Species name or filter..."
+msgstr ""
+
+# Species filter label
+msgid "family"
+msgstr ""
+
 msgid "Sorry, no report data is available at the moment."
 msgstr "Siamo spiacenti, al momento i dati dei transetti non sono disponibili"
 
@@ -2033,4 +2041,14 @@ msgstr ""
 
 # Moth trap survey
 msgid "Select"
+msgstr ""
+
+# Additional details attribute, 15min count survey
+msgid "Recorders"
+msgstr ""
+
+# Additional details attribute, 15min count survey
+msgid ""
+"Enter the number of recorders of anyone who helped with this record - "
+"including your own."
 msgstr ""

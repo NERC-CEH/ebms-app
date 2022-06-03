@@ -428,6 +428,14 @@ msgstr "Surveys"
 msgid "Reports"
 msgstr "Reports"
 
+# Species filter input
+msgid "Species name or filter..."
+msgstr "Species name or filter..."
+
+# Species filter label
+msgid "family"
+msgstr "family"
+
 msgid "Sorry, no report data is available at the moment."
 msgstr "Sorry, no report data is available at the moment."
 

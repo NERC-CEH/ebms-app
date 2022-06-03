@@ -1,501 +1,501 @@
-id,sort_id,warehouse_id,external_key,taxon,descriptionKey,image,image_width,image_height,image_copyright
-1,1,432127,eBMS147,Papilio hospiton,Papilio-hospiton-description,,,,
-2,2,432128,eBMS148,Parnassius mnemosyne,Parnassius-mnemosyne-description,36,1024,683,Kars Veling
-3,3,432129,eBMS149,Parnassius phoebus,Parnassius-phoebus-description,,,,
-4,4,432130,eBMS150,Parnassius apollo,Parnassius-apollo-description,37,1024,681,Albert Vliegenthart
-5,5,432131,eBMS151,Archon apollinus,Archon-apollinus-description,,,,
-6,6,432132,eBMS152,Zerynthia cerisy,Zerynthia-cerisy-description,35,1024,681,Albert Vliegenthart
-7,7,432165,eBMS185,Carcharodus stauderi,Carcharodus-stauderi-description,,,,
-8,8,432166,eBMS186,Carcharodus baeticus,Carcharodus-baeticus-description,7,1024,676,Albert Vliegenthart
-9,9,432167,eBMS187,Erynnis tages,Erynnis-tages-description,1,1024,681,Albert Vliegenthart
-10,10,432168,eBMS188,Erynnis marloyi,Erynnis-marloyi-description,2,1024,681,Albert Vliegenthart
-11,11,432133,eBMS153,Zerynthia cretica,Zerynthia-cretica-description,,,,
-12,12,432134,eBMS154,Zerynthia caucasica,Zerynthia-caucasica-description,,,,
-13,13,432135,eBMS155,Zerynthia rumina,Zerynthia-rumina-description,33,1024,683,Kars Veling
-14,14,432136,eBMS156,Zerynthia polyxena,Zerynthia-polyxena-description,34,1024,681,Albert Vliegenthart
-15,15,432137,eBMS157,Zerynthia cassandra,Zerynthia-cassandra-description,,,,
-16,16,432704,eBMS158,Heteropterus morpheus,Heteropterus-morpheus-description,26,1024,681,Albert Vliegenthart
-17,17,432139,eBMS159,Carterocephalus silvicola,Carterocephalus-silvicola-description,,,,
-18,18,432140,eBMS160,Carterocephalus palaemon,Carterocephalus-palaemon-description,27,1024,693,Kars Veling
-19,19,432141,eBMS161,Pelopidas thrax,Pelopidas-thrax-description,,,,
-20,20,432142,eBMS162,Borbo borbonica,Borbo-borbonica-description,,,,
-21,21,432705,eBMS163,Gegenes pumilio,Gegenes-pumilio-description,32,1024,681,Albert Vliegenthart
-22,22,432144,eBMS164,Gegenes nostrodamus,Gegenes-nostrodamus-description,,,,
-23,23,432145,eBMS165,Ochlodes sylvanus,Ochlodes-sylvanus-description,,,,
-24,24,432146,eBMS166,Hesperia comma,Hesperia-comma-description,31,1024,693,Chris Van Swaay
-25,25,432147,eBMS167,Thymelicus christi,Thymelicus-christi-description,,,,
-26,26,432148,eBMS168,Thymelicus acteon,Thymelicus-acteon-description,30,1024,681,Albert Vliegenthart
-27,27,432149,eBMS169,Thymelicus hyrax,Thymelicus-hyrax-description,,,,
-28,28,432150,eBMS170,Thymelicus sylvestris,Thymelicus-sylvestris-description,29,1024,724,Chris Van Swaay
-29,29,432151,eBMS171,Thymelicus lineola,Thymelicus-lineola-description,28,1024,755,Chris Van Swaay
-30,30,432152,eBMS172,Spialia phlomidis,Spialia-phlomidis-description,8,1024,683,Rudi Verovnik
-31,31,432153,eBMS173,Spialia sertorius,Spialia-sertorius-description,9,1024,1377,Chris Van Swaay
-32,32,432154,eBMS174,Spialia therapne,Spialia-therapne-description,,,,
-33,33,432155,eBMS175,Spialia rosae,Spialia-rosae-description,,,,
-34,34,432156,eBMS176,Spialia orbifer,Spialia-orbifer-description,10,1024,771,Chris Van Swaay
-35,35,432157,eBMS177,Carcharodus tripolinus,Carcharodus-tripolinus-description,,,,
-36,36,432158,eBMS178,Carcharodus alceae,Carcharodus-alceae-description,3,1024,682,Chris Van Swaay
-37,37,432159,eBMS179,Muschampia cribrellum,Muschampia-cribrellum-description,,,,
-38,38,432706,eBMS180,Muschampia tessellum,Muschampia-tessellum-description,12,1024,681,Albert Vliegenthart
-39,39,432161,eBMS181,Muschampia proto,Muschampia-proto-description,11,1024,681,Albert Vliegenthart
-40,40,432162,eBMS182,Carcharodus lavatherae,Carcharodus-lavatherae-description,4,1024,683,Kars Veling
-41,41,432163,eBMS183,Carcharodus orientalis,Carcharodus-orientalis-description,6,1024,681,Albert Vliegenthart
-42,42,432164,eBMS184,Carcharodus floccifera,Carcharodus-floccifera-description,5,1024,734,Rudi Verovnik
-43,43,432123,eBMS143,Iphiclides podalirius,Iphiclides-podalirius-description,38,1024,809,Chris Van Swaay
-44,44,432124,eBMS144,Iphiclides feisthamelii,Iphiclides-feisthamelii-description,,,,
-45,45,432125,eBMS145,Papilio alexanor,Papilio-alexanor-description,,,,
-46,46,432126,eBMS146,Papilio machaon,Papilio-machaon-description,,,,
-47,47,432169,eBMS189,Pyrgus malvoides,Pyrgus-malvoides-description,,,,
-48,48,432170,eBMS190,Pyrgus malvae,Pyrgus-malvae-description,17,1024,683,Rudi Verovnik
-49,49,432171,eBMS191,Pyrgus carthami,Pyrgus-carthami-description,13,1024,683,Rudi Verovnik
-50,50,432172,eBMS192,Pyrgus sidae,Pyrgus-sidae-description,14,1024,681,Albert Vliegenthart
-51,51,432173,eBMS193,Pyrgus centaureae,Pyrgus-centaureae-description,,,,
-52,52,432174,eBMS194,Pyrgus cacaliae,Pyrgus-cacaliae-description,16,1024,683,Kars Veling
-53,53,432175,eBMS195,Pyrgus andromedae,Pyrgus-andromedae-description,15,1024,682,Kars Veling
-54,54,432176,eBMS196,Pyrgus serratulae,Pyrgus-serratulae-description,18,1024,768,Chris Van Swaay
-55,55,432178,eBMS198,Pyrgus armoricanus/serratulae,Pyrgus-armoricanus/serratulae-description,,,,
-56,56,432177,eBMS197,Pyrgus armoricanus,Pyrgus-armoricanus-description,22,1024,768,Chris Van Swaay
-58,58,432180,eBMS199,Pyrgus alveus,Pyrgus-alveus-description,23,1024,768,Chris Van Swaay
-59,59,432181,eBMS200,Pyrgus warrenensis,Pyrgus-warrenensis-description,25,1024,661,Kars Veling
-60,60,432182,eBMS201,Pyrgus foulquieri,Pyrgus-foulquieri-description,24,1024,683,Kars Veling
-61,61,432183,eBMS202,Pyrgus onopordi,Pyrgus-onopordi-description,19,1024,786,Chris Van Swaay
-62,62,432184,eBMS203,Pyrgus carlinae,Pyrgus-carlinae-description,20,1024,637,Albert Vliegenthart
-63,63,432185,eBMS204,Pyrgus cirsii,Pyrgus-cirsii-description,21,1024,1540,Albert Vliegenthart
-64,64,432186,eBMS205,Pyrgus cinarae,Pyrgus-cinarae-description,,,,
-65,65,432707,eBMS206,Leptidea duponcheli,Leptidea-duponcheli-description,40,1024,681,Albert Vliegenthart
-66,66,432188,eBMS207,Leptidea morsei,Leptidea-morsei-description,,,,
-67,67,432708,eBMS208,Leptidea juvernica,Leptidea-juvernica-description,,,,
-68,68,432190,eBMS209,Leptidea sinapis,Leptidea-sinapis-description,39,1024,683,Kars Veling
-70,70,432191,eBMS210,Leptidea sinapis/juvernica,Leptidea-sinapis/juvernica-description,,,,
-71,71,432193,eBMS211,Leptidea reali,Leptidea-reali-description,,,,
-72,72,432194,eBMS212,Gonepteryx rhamni,Gonepteryx-rhamni-description,,,,
-73,73,432195,eBMS213,Gonepteryx cleobule,Gonepteryx-cleobule-description,,,,
-74,74,432196,eBMS214,Gonepteryx cleopatra,Gonepteryx-cleopatra-description,,,,
-75,75,432197,eBMS215,Gonepteryx maderensis,Gonepteryx-maderensis-description,,,,
-76,76,432709,eBMS216,Gonepteryx farinosa,Gonepteryx-farinosa-description,,,,
-77,77,432199,eBMS217,Catopsilia florella,Catopsilia-florella-description,,,,
-78,78,432710,eBMS218,Colias hyale,Colias-hyale-description,61,1024,683,Rudi Verovnik
-79,79,432712,eBMS220,Colias hyale/alfacariensis,Colias-hyale/alfacariensis-description,,,,
-80,80,432711,eBMS219,Colias alfacariensis,Colias-alfacariensis-description,62,1024,678,Kars Veling
-82,82,432203,eBMS221,Colias phicomone,Colias-phicomone-description,55,1024,681,Albert Vliegenthart
-83,83,432204,eBMS222,Colias aurorina,Colias-aurorina-description,,,,
-84,84,432205,eBMS223,Colias chrysotheme,Colias-chrysotheme-description,60,1024,728,Chris Van Swaay
-85,85,432206,eBMS224,Colias erate,Colias-erate-description,57,1024,678,Kars Veling
-86,86,432207,eBMS225,Colias crocea,Colias-crocea-description,58,1024,823,Chris Van Swaay
-87,87,432208,eBMS226,Colias myrmidone,Colias-myrmidone-description,59,1024,668,Martin Wiemers
-88,88,432209,eBMS227,Colias caucasica,Colias-caucasica-description,,,,
-89,89,432210,eBMS228,Colias palaeno,Colias-palaeno-description,56,1024,681,Albert Vliegenthart
-90,90,432211,eBMS229,Colias tyche,Colias-tyche-description,,,,
-91,91,432212,eBMS230,Colias hecla,Colias-hecla-description,,,,
-92,92,432213,eBMS231,Colotis evagore,Colotis-evagore-description,,,,
-93,93,432214,eBMS232,Aporia crataegi,Aporia-crataegi-description,46,1024,683,Kars Veling
-94,94,432215,eBMS233,Pontia chloridice,Pontia-chloridice-description,,,,
-95,95,432216,eBMS234,Pontia callidice,Pontia-callidice-description,54,1024,668,Kars Veling
-96,96,432217,eBMS235,Pontia edusa,Pontia-edusa-description,,,,
-97,97,432218,eBMS236,Pontia daplidice,Pontia-daplidice-description,,,,
-98,98,432219,eBMS237,Pieris krueperi,Pieris-krueperi-description,48,1024,683,Rudi Verovnik
-99,99,432220,eBMS238,Pieris brassicae,Pieris-brassicae-description,47,1024,681,Albert Vliegenthart
-100,100,432221,eBMS239,Pieris wollastoni,Pieris-wollastoni-description,,,,
-101,101,432222,eBMS240,Pieris cheiranthi,Pieris-cheiranthi-description,,,,
-102,102,432223,eBMS241,Pieris rapae,Pieris-rapae-description,50,1024,732,Chris Van Swaay
-103,103,432224,eBMS242,Pieris mannii,Pieris-mannii-description,49,1024,683,Martin Wiemers
-104,104,432225,eBMS243,Pieris ergane,Pieris-ergane-description,51,1024,683,Rudi Verovnik
-105,105,432226,eBMS244,Pieris bryoniae,Pieris-bryoniae-description,53,1024,683,Kars Veling
-106,106,432227,eBMS245,Pieris napi,Pieris-napi-description,52,1024,742,Chris Van Swaay
-107,107,432714,eBMS246,Pieris balcana,Pieris-balcana-description,,,,
-108,108,432229,eBMS247,Euchloe tagis,Euchloe-tagis-description,,,,
-109,109,432230,eBMS248,Euchloe eversi,Euchloe-eversi-description,,,,
-110,110,432231,eBMS249,Euchloe grancanariensis,Euchloe-grancanariensis-description,,,,
-111,111,432232,eBMS250,Euchloe hesperidum,Euchloe-hesperidum-description,,,,
-112,112,432233,eBMS251,Euchloe belemia,Euchloe-belemia-description,44,1024,681,Albert Vliegenthart
-113,113,432234,eBMS252,Euchloe insularis,Euchloe-insularis-description,,,,
-114,114,432235,eBMS253,Euchloe crameri,Euchloe-crameri-description,,,,
-115,115,432236,eBMS254,Euchloe simplonia,Euchloe-simplonia-description,,,,
-116,116,432237,eBMS255,Euchloe ausonia,Euchloe-ausonia-description,45,1024,703,Chris Van Swaay
-117,117,432238,eBMS256,Euchloe charlonia,Euchloe-charlonia-description,,,,
-118,118,432239,eBMS257,Euchloe penia,Euchloe-penia-description,,,,
-119,119,432240,eBMS258,Euchloe bazae,Euchloe-bazae-description,,,,
-120,120,432241,eBMS259,Zegris pyrothoe,Zegris-pyrothoe-description,,,,
-121,121,432242,eBMS260,Zegris eupheme,Zegris-eupheme-description,,,,
-122,122,432243,eBMS261,Anthocharis euphenoides,Anthocharis-euphenoides-description,42,1024,681,Albert Vliegenthart
-123,123,432244,eBMS262,Anthocharis cardamines,Anthocharis-cardamines-description,41,1024,746,Chris Van Swaay
-124,124,432245,eBMS263,Anthocharis gruneri,Anthocharis-gruneri-description,43,1024,681,Albert Vliegenthart
-125,125,432246,eBMS264,Anthocharis damone,Anthocharis-damone-description,,,,
-126,126,432247,eBMS265,Hamearis lucina,Hamearis-lucina-description,131,1024,722,Chris Van Swaay
-127,127,432248,eBMS266,Lycaena dimorpha,Lycaena-dimorpha-description,,,,
-128,128,432249,eBMS267,Lycaena helle,Lycaena-helle-description,64,1024,681,Albert Vliegenthart
-129,129,432250,eBMS268,Lycaena alciphron,Lycaena-alciphron-description,69,1024,683,Kars Veling
-130,130,432251,eBMS269,Lycaena thetis,Lycaena-thetis-description,,,,
-131,131,432252,eBMS270,Lycaena thersamon,Lycaena-thersamon-description,72,1024,683,Kars Veling
-132,132,432253,eBMS271,Lycaena dispar,Lycaena-dispar-description,65,1024,683,Josef Settele
-133,133,432254,eBMS272,Lycaena hippothoe,Lycaena-hippothoe-description,70,1024,678,Albert Vliegenthart
-134,134,432295,eBMS313,Pseudophilotes barbagiae,Pseudophilotes-barbagiae-description,,,,
-135,135,432296,eBMS314,Pseudophilotes abencerragus,Pseudophilotes-abencerragus-description,,,,
-136,136,432297,eBMS315,Pseudophilotes panoptes,Pseudophilotes-panoptes-description,,,,
-137,137,432298,eBMS316,Pseudophilotes vicrama,Pseudophilotes-vicrama-description,95,1024,681,Albert Vliegenthart
-138,138,432299,eBMS317,Pseudophilotes baton,Pseudophilotes-baton-description,94,1024,678,Kars Veling
-139,139,432300,eBMS318,Scolitantides orion,Scolitantides-orion-description,97,1024,824,Chris Van Swaay
-140,140,432301,eBMS319,Praephilotes anthracias,Praephilotes-anthracias-description,,,,
-141,141,432302,eBMS320,Iolana iolas,Iolana-iolas-description,100,1024,683,Rudi Verovnik
-142,142,432303,eBMS321,Iolana debilitata,Iolana-debilitata-description,,,,
-143,143,432304,eBMS322,Glaucopsyche melanops,Glaucopsyche-melanops-description,99,1024,681,Albert Vliegenthart
-144,144,432305,eBMS323,Glaucopsyche paphos,Glaucopsyche-paphos-description,,,,
-145,145,432306,eBMS324,Glaucopsyche alexis,Glaucopsyche-alexis-description,98,1024,681,Albert Vliegenthart
-146,146,432497,eBMS514,Hipparchia tilosi,Hipparchia-tilosi-description,,,,
-147,147,432498,eBMS515,Hipparchia bacchus,Hipparchia-bacchus-description,,,,
-148,148,432499,eBMS516,Hipparchia wyssii,Hipparchia-wyssii-description,,,,
-149,149,432500,eBMS517,Hipparchia tamadabae,Hipparchia-tamadabae-description,,,,
-150,150,432501,eBMS518,Hipparchia gomera,Hipparchia-gomera-description,,,,
-151,151,432502,eBMS519,Hipparchia fidia,Hipparchia-fidia-description,231,1024,704,Chris Van Swaay
-152,152,432503,eBMS520,Hipparchia neomiris,Hipparchia-neomiris-description,,,,
-153,153,432504,eBMS521,Hipparchia autonoe,Hipparchia-autonoe-description,,,,
-154,154,432505,eBMS522,Hipparchia hermione,Hipparchia-hermione-description,225,1024,731,Chris Van Swaay
-155,155,432506,eBMS523,Hipparchia syriaca,Hipparchia-syriaca-description,226,1024,669,Josef Settele
-156,156,432726,eBMS524,Hipparchia fagi,Hipparchia-fagi-description,224,1024,683,Rudi Verovnik
-157,157,432508,eBMS525,Hipparchia mersina,Hipparchia-mersina-description,,,,
-158,158,432509,eBMS526,Hipparchia miguelensis,Hipparchia-miguelensis-description,,,,
-159,159,432255,eBMS273,Lycaena candens,Lycaena-candens-description,71,1024,681,Albert Vliegenthart
-160,160,432256,eBMS274,Lycaena ottomana,Lycaena-ottomana-description,67,1024,879,Chris Van Swaay
-161,161,432257,eBMS275,Lycaena bleusei,Lycaena-bleusei-description,,,,
-162,162,432258,eBMS276,Lycaena phlaeas,Lycaena-phlaeas-description,63,1024,681,Albert Vliegenthart
-163,163,432259,eBMS277,Lycaena virgaureae,Lycaena-virgaureae-description,66,1024,681,Albert Vliegenthart
-164,164,432260,eBMS278,Lycaena tityrus,Lycaena-tityrus-description,68,1024,681,Albert Vliegenthart
-165,165,432261,eBMS279,Cigaritis acamas,Cigaritis-acamas-description,,,,
-166,166,432262,eBMS280,Thecla betulae,Thecla-betulae-description,73,1024,654,Kars Veling
-167,167,432263,eBMS281,Favonius quercus,Favonius-quercus-description,74,1024,681,Albert Vliegenthart
-168,168,432264,eBMS282,Laeosopis roboris,Laeosopis-roboris-description,75,1024,679,Kars Veling
-169,169,432265,eBMS283,Tomares ballus,Tomares-ballus-description,76,1024,681,Albert Vliegenthart
-170,170,432266,eBMS284,Tomares nogelii,Tomares-nogelii-description,,,,
-171,171,432267,eBMS285,Tomares callimachus,Tomares-callimachus-description,,,,
-172,172,432268,eBMS286,Callophrys avis,Callophrys-avis-description,77,1024,678,Kars Veling
-173,173,432269,eBMS287,Callophrys suaveola,Callophrys-suaveola-description,,,,
-174,174,432270,eBMS288,Callophrys rubi,Callophrys-rubi-description,,,,
-175,175,432271,eBMS289,Callophrys chalybeitincta,Callophrys-chalybeitincta-description,,,,
-176,176,432272,eBMS290,Neolycaena rhymnus,Neolycaena-rhymnus-description,,,,
-177,177,432715,eBMS291,Satyrium pruni,Satyrium-pruni-description,79,1024,736,Chris Van Swaay
-178,178,432274,eBMS292,Satyrium ilicis,Satyrium-ilicis-description,81,1024,681,Albert Vliegenthart
-179,179,432275,eBMS293,Satyrium esculi,Satyrium-esculi-description,82,1024,678,Kars Veling
-180,180,432276,eBMS294,Satyrium ledereri,Satyrium-ledereri-description,,,,
-181,181,432277,eBMS295,Satyrium w-album,Satyrium-w-album-description,78,1024,741,Kars Veling
-182,182,432278,eBMS296,Satyrium spini,Satyrium-spini-description,80,1024,681,Albert Vliegenthart
-183,183,432279,eBMS297,Satyrium acaciae,Satyrium-acaciae-description,83,1024,768,Martin Wiemers
-184,184,432280,eBMS298,Leptotes pirithous,Leptotes-pirithous-description,86,1024,681,Albert Vliegenthart
-185,185,432281,eBMS299,Cyclyrius webbianus,Cyclyrius-webbianus-description,,,,
-186,186,432282,eBMS300,Azanus ubaldus,Azanus-ubaldus-description,,,,
-187,187,432283,eBMS301,Azanus jesous,Azanus-jesous-description,,,,
-188,188,432284,eBMS302,Lampides boeticus,Lampides-boeticus-description,84,1024,681,Albert Vliegenthart
-189,189,432716,eBMS303,Cacyreus marshalli,Cacyreus-marshalli-description,85,1024,866,Chris Van Swaay
-190,190,432286,eBMS304,Celastrina argiolus,Celastrina-argiolus-description,93,1024,681,Albert Vliegenthart
-191,191,432287,eBMS305,Tarucus theophrastus,Tarucus-theophrastus-description,,,,
-192,192,432288,eBMS306,Tarucus balkanicus,Tarucus-balkanicus-description,,,,
-193,193,432289,eBMS307,Phengaris alcon,Phengaris-alcon-description,104,1024,775,Chris Van Swaay
-194,194,432290,eBMS308,Phengaris arion,Phengaris-arion-description,101,1024,802,Chris Van Swaay
-195,195,432291,eBMS309,Phengaris teleius,Phengaris-teleius-description,102,1024,768,Chris Van Swaay
-196,196,432292,eBMS310,Phengaris nausithous,Phengaris-nausithous-description,103,1024,683,Josef Settele
-197,197,432293,eBMS311,Turanana taygetica,Turanana-taygetica-description,,,,
-198,198,432294,eBMS312,Pseudophilotes bavius,Pseudophilotes-bavius-description,96,1024,681,Albert Vliegenthart
-199,199,432307,eBMS325,Zizeeria knysna,Zizeeria-knysna-description,87,1024,681,Albert Vliegenthart
-200,200,432308,eBMS326,Zizeeria karsandra,Zizeeria-karsandra-description,,,,
-201,201,432309,eBMS327,Tongeia fischeri,Tongeia-fischeri-description,,,,
-202,202,432310,eBMS328,Cupido argiades,Cupido-argiades-description,90,1024,683,Josef Settele
-203,203,432311,eBMS329,Cupido decoloratus,Cupido-decoloratus-description,91,1024,722,Chris Van Swaay
-204,204,432312,eBMS330,Cupido alcetas,Cupido-alcetas-description,92,1024,678,Kars Veling
-205,205,432313,eBMS331,Cupido osiris,Cupido-osiris-description,89,1024,1410,Chris Van Swaay
-206,206,432314,eBMS332,Cupido minimus,Cupido-minimus-description,88,1024,681,Albert Vliegenthart
-207,207,432315,eBMS333,Cupido lorquinii,Cupido-lorquinii-description,,,,
-208,208,432316,eBMS334,Luthrodes galba,Luthrodes-galba-description,,,,
-209,209,432317,eBMS335,Freyeria trochylus,Freyeria-trochylus-description,,,,
-210,210,432318,eBMS336,Plebejus argus,Plebejus-argus-description,,,,
-211,211,432319,eBMS337,Plebejus idas,Plebejus-idas-description,105,1024,729,Kars Veling
-212,212,432320,eBMS338,Plebejus bellieri,Plebejus-bellieri-description,,,,
-213,213,432321,eBMS339,Plebejus argyrognomon,Plebejus-argyrognomon-description,106,1024,681,Albert Vliegenthart
-214,214,432322,eBMS340,Agriades orbitulus,Agriades-orbitulus-description,109,1024,768,Martin Wiemers
-215,215,432323,eBMS341,Agriades optilete,Agriades-optilete-description,107,1024,681,Albert Vliegenthart
-216,216,432324,eBMS342,Agriades pyrenaicus,Agriades-pyrenaicus-description,,,,
-217,217,432325,eBMS343,Agriades dardanus,Agriades-dardanus-description,,,,
-218,218,432326,eBMS344,Agriades zullichi,Agriades-zullichi-description,,,,
-219,219,432327,eBMS345,Agriades glandon,Agriades-glandon-description,108,1024,681,Albert Vliegenthart
-220,220,432328,eBMS346,Agriades aquilo,Agriades-aquilo-description,,,,
-221,221,432329,eBMS347,Plebejidea loewii,Plebejidea-loewii-description,,,,
-222,222,432330,eBMS348,Eumedonia eumedon,Eumedonia-eumedon-description,111,1024,681,Albert Vliegenthart
-223,223,432331,eBMS349,Kretania psylorita,Kretania-psylorita-description,,,,
-224,224,432332,eBMS350,Kretania hesperica,Kretania-hesperica-description,,,,
-225,225,432333,eBMS351,Kretania eurypilus,Kretania-eurypilus-description,,,,
-226,226,432334,eBMS352,Kretania trappi,Kretania-trappi-description,,,,
-227,227,432335,eBMS353,Kretania sephirus,Kretania-sephirus-description,110,1024,674,Kars Veling
-228,228,432336,eBMS354,Kretania pylaon,Kretania-pylaon-description,,,,
-229,229,432337,eBMS355,Cyaniris semiargus,Cyaniris-semiargus-description,116,1024,755,Chris Van Swaay
-230,230,432338,eBMS356,Glabroculus cyane,Glabroculus-cyane-description,,,,
-231,231,432339,eBMS357,Aricia morronensis,Aricia-morronensis-description,,,,
-232,232,432340,eBMS358,Aricia anteros,Aricia-anteros-description,115,1024,683,Rudi Verovnik
-233,233,432341,eBMS359,Aricia cramera,Aricia-cramera-description,112,1024,681,Albert Vliegenthart
-234,234,432342,eBMS360,Aricia nicias,Aricia-nicias-description,,,,
-235,235,432343,eBMS361,Aricia artaxerxes,Aricia-artaxerxes-description,114,1024,681,Albert Vliegenthart
-236,236,432344,eBMS362,Aricia montensis,Aricia-montensis-description,,,,
-237,237,432345,eBMS363,Aricia agestis,Aricia-agestis-description,113,1024,703,Chris Van Swaay
-238,238,432346,eBMS364,Neolysandra coelestina,Neolysandra-coelestina-description,,,,
-239,239,432347,eBMS365,Lysandra hispana,Lysandra-hispana-description,125,1024,740,Kars Veling
-240,240,432348,eBMS366,Lysandra corydonius,Lysandra-corydonius-description,,,,
-241,241,432349,eBMS367,Lysandra bellargus,Lysandra-bellargus-description,,,,
-242,242,432350,eBMS368,Lysandra coridon,Lysandra-coridon-description,124,1024,683,Kars Veling
-243,243,432351,eBMS369,Lysandra caelestissima,Lysandra-caelestissima-description,,,,
-244,244,432352,eBMS370,Lysandra albicans,Lysandra-albicans-description,126,1024,682,Kars Veling
-245,245,432353,eBMS371,Polyommatus escheri,Polyommatus-escheri-description,117,1024,806,Chris Van Swaay
-246,246,432717,eBMS372,Polyommatus thersites,Polyommatus-thersites-description,120,1024,681,Albert Vliegenthart
-247,247,432355,eBMS373,Polyommatus daphnis,Polyommatus-daphnis-description,123,1024,681,Albert Vliegenthart
-248,248,432356,eBMS374,Polyommatus amandus,Polyommatus-amandus-description,119,1024,683,Kars Veling
-249,249,432357,eBMS375,Polyommatus golgus,Polyommatus-golgus-description,,,,
-250,250,432358,eBMS376,Polyommatus nivescens,Polyommatus-nivescens-description,,,,
-251,251,432359,eBMS377,Polyommatus dorylas,Polyommatus-dorylas-description,118,1024,768,Chris Van Swaay
-252,252,432360,eBMS378,Polyommatus celina,Polyommatus-celina-description,,,,
-253,253,432361,eBMS379,Polyommatus icarus,Polyommatus-icarus-description,121,1024,683,Martin Wiemers
-254,254,432362,eBMS380,Polyommatus eros,Polyommatus-eros-description,122,1024,681,Albert Vliegenthart
-255,255,432363,eBMS381,Polyommatus damon,Polyommatus-damon-description,130,1024,681,Albert Vliegenthart
-256,256,432364,eBMS382,Polyommatus damone,Polyommatus-damone-description,,,,
-257,257,432365,eBMS383,Polyommatus damocles,Polyommatus-damocles-description,,,,
-258,258,432366,eBMS384,Polyommatus admetus,Polyommatus-admetus-description,127,1024,768,Chris Van Swaay
-259,259,432718,eBMS385,Polyommatus ripartii,Polyommatus-ripartii-description,128,1024,1287,Chris Van Swaay
-260,260,432368,eBMS386,Polyommatus nephohiptamenos,Polyommatus-nephohiptamenos-description,,,,
-261,261,432369,eBMS387,Polyommatus iphigenia,Polyommatus-iphigenia-description,,,,
-262,262,432370,eBMS388,Polyommatus violetae,Polyommatus-violetae-description,,,,
-263,263,432371,eBMS389,Polyommatus fulgens,Polyommatus-fulgens-description,,,,
-264,264,432372,eBMS390,Polyommatus fabressei,Polyommatus-fabressei-description,,,,
-265,265,432373,eBMS391,Polyommatus dolus,Polyommatus-dolus-description,129,1024,681,Kars Veling
-266,266,432374,eBMS392,Polyommatus humedasae,Polyommatus-humedasae-description,,,,
-267,267,432375,eBMS393,Polyommatus timfristos,Polyommatus-timfristos-description,,,,
-268,268,432376,eBMS394,Polyommatus orphicus,Polyommatus-orphicus-description,,,,
-269,269,432377,eBMS395,Polyommatus aroaniensis,Polyommatus-aroaniensis-description,,,,
-270,270,432378,eBMS396,Neptis sappho,Neptis-sappho-description,171,1024,820,Chris Van Swaay
-271,271,432719,eBMS397,Neptis rivularis,Neptis-rivularis-description,172,1024,768,Chris Van Swaay
-272,272,432720,eBMS398,Limenitis reducta,Limenitis-reducta-description,,,,
-273,273,432381,eBMS399,Limenitis populi,Limenitis-populi-description,169,1024,683,Rudi Verovnik
-274,274,432382,eBMS400,Limenitis camilla,Limenitis-camilla-description,170,1024,684,Chris Van Swaay
-275,275,432383,eBMS401,Issoria lathonia,Issoria-lathonia-description,138,1024,768,Martin Wiemers
-276,276,432384,eBMS402,Issoria eugenia,Issoria-eugenia-description,,,,
-277,277,432385,eBMS403,Brenthis hecate,Brenthis-hecate-description,141,1024,683,Rudi Verovnik
-278,278,432386,eBMS404,Brenthis ino,Brenthis-ino-description,139,1024,870,Chris Van Swaay
-279,279,432387,eBMS405,Brenthis daphne,Brenthis-daphne-description,140,1024,687,Kars Veling
-280,280,432388,eBMS406,Argynnis paphia,Argynnis-paphia-description,133,1024,683,Kars Veling
-281,281,432389,eBMS407,Argynnis pandora,Argynnis-pandora-description,134,1024,768,Chris Van Swaay
-282,282,432390,eBMS408,Argynnis laodice,Argynnis-laodice-description,137,1024,812,Chris Van Swaay
-283,283,432391,eBMS409,Speyeria aglaja,Speyeria-aglaja-description,135,1024,681,Albert Vliegenthart
-284,284,432392,eBMS410,Fabriciana elisa,Fabriciana-elisa-description,,,,
-285,285,432393,eBMS411,Fabriciana niobe,Fabriciana-niobe-description,136,1024,681,Albert Vliegenthart
-286,286,432394,eBMS412,Fabriciana adippe,Fabriciana-adippe-description,,,,
-287,287,432395,eBMS413,Boloria eunomia,Boloria-eunomia-description,142,1024,678,Chris Van Swaay
-288,288,432396,eBMS414,Boloria graeca,Boloria-graeca-description,148,1024,661,Kars Veling
-289,289,432397,eBMS415,Boloria pales,Boloria-pales-description,147,1024,639,Kars Veling
-290,290,432398,eBMS416,Boloria alaskensis,Boloria-alaskensis-description,,,,
-291,291,432399,eBMS417,Boloria napaea,Boloria-napaea-description,,,,
-292,292,432400,eBMS418,Boloria aquilonaris,Boloria-aquilonaris-description,,,,
-293,293,432401,eBMS419,Boloria tritonia,Boloria-tritonia-description,,,,
-294,294,432402,eBMS420,Boloria polaris,Boloria-polaris-description,,,,
-295,295,432721,eBMS421,Boloria thore,Boloria-thore-description,146,1024,683,Rudi Verovnik
-296,296,432404,eBMS422,Boloria selene,Boloria-selene-description,145,1024,717,Chris Van Swaay
-297,297,432405,eBMS423,Boloria euphrosyne,Boloria-euphrosyne-description,143,1024,665,Albert Vliegenthart
-298,298,432406,eBMS424,Boloria dia,Boloria-dia-description,,,,
-299,299,432407,eBMS425,Boloria improba,Boloria-improba-description,,,,
-300,300,432408,eBMS426,Boloria frigga,Boloria-frigga-description,,,,
-301,301,432409,eBMS427,Boloria freija,Boloria-freija-description,,,,
-302,302,432410,eBMS428,Boloria selenis,Boloria-selenis-description,,,,
-303,303,432411,eBMS429,Boloria oscarus,Boloria-oscarus-description,,,,
-304,304,432412,eBMS430,Boloria titania,Boloria-titania-description,144,1024,668,Albert Vliegenthart
-305,305,432413,eBMS431,Boloria chariclea,Boloria-chariclea-description,,,,
-306,306,432414,eBMS432,Boloria angarensis,Boloria-angarensis-description,,,,
-307,307,432415,eBMS433,Apatura iris,Apatura-iris-description,176,1024,681,Albert Vliegenthart
-308,308,432416,eBMS434,Apatura metis,Apatura-metis-description,174,1024,693,Albert Vliegenthart
-309,309,432417,eBMS435,Apatura ilia,Apatura-ilia-description,175,1024,683,Kars Veling
-311,311,432418,eBMS436,Apatura ilia/iris,Apatura-ilia/iris-description,,,,
-312,312,432420,eBMS437,Araschnia levana,Araschnia-levana-description,154,1024,788,Chris Van Swaay
-313,313,432421,eBMS438,Vanessa virginiensis,Vanessa-virginiensis-description,,,,
-314,314,432422,eBMS439,Vanessa cardui,Vanessa-cardui-description,149,1024,681,Albert Vliegenthart
-315,315,432423,eBMS440,Vanessa vulcania,Vanessa-vulcania-description,,,,
-316,316,432424,eBMS441,Vanessa atalanta,Vanessa-atalanta-description,,,,
-317,317,432425,eBMS442,Aglais io,Aglais-io-description,,,,
-318,318,432426,eBMS443,Aglais urticae,Aglais-urticae-description,150,1024,664,Kars Veling
-319,319,432427,eBMS444,Aglais ichnusa,Aglais-ichnusa-description,,,,
-320,320,432428,eBMS445,Polygonia egea,Polygonia-egea-description,152,1024,681,Albert Vliegenthart
-321,321,432429,eBMS446,Polygonia c-album,Polygonia-c-album-description,151,1024,782,Chris Van Swaay
-322,322,432430,eBMS447,Nymphalis vaualbum,Nymphalis-vaualbum-description,,,,
-323,323,432431,eBMS448,Nymphalis polychloros,Nymphalis-polychloros-description,153,1024,681,Albert Vliegenthart
-324,324,432432,eBMS449,Nymphalis xanthomelas,Nymphalis-xanthomelas-description,,,,
-325,325,432433,eBMS450,Nymphalis antiopa,Nymphalis-antiopa-description,,,,
-326,326,432434,eBMS451,Hypolimnas misippus,Hypolimnas-misippus-description,,,,
-327,327,432435,eBMS452,Euphydryas desfontainii,Euphydryas-desfontainii-description,,,,
-328,328,432436,eBMS453,Euphydryas aurinia,Euphydryas-aurinia-description,,,,
-329,329,432437,eBMS454,Euphydryas cynthia,Euphydryas-cynthia-description,155,1024,681,Albert Vliegenthart
-330,330,432438,eBMS455,Euphydryas iduna,Euphydryas-iduna-description,,,,
-331,331,432439,eBMS456,Euphydryas maturna,Euphydryas-maturna-description,157,1024,683,Rudi Verovnik
-332,332,432440,eBMS457,Euphydryas intermedia,Euphydryas-intermedia-description,156,1024,681,Albert Vliegenthart
-333,333,432441,eBMS458,Melitaea trivia,Melitaea-trivia-description,161,1024,710,Chris Van Swaay
-334,334,432442,eBMS459,Melitaea didyma,Melitaea-didyma-description,162,1024,768,Chris Van Swaay
-335,335,432443,eBMS460,Melitaea arduinna,Melitaea-arduinna-description,,,,
-336,336,432444,eBMS461,Melitaea aetherie,Melitaea-aetherie-description,160,1024,681,Albert Vliegenthart
-337,337,432445,eBMS462,Melitaea phoebe,Melitaea-phoebe-description,159,1024,681,Albert Vliegenthart
-338,338,432446,eBMS463,Melitaea ornata,Melitaea-ornata-description,,,,
-339,339,432447,eBMS464,Melitaea cinxia,Melitaea-cinxia-description,158,1024,738,Chris Van Swaay
-340,340,432448,eBMS465,Melitaea diamina,Melitaea-diamina-description,163,1024,681,Albert Vliegenthart
-341,341,432449,eBMS466,Melitaea celadussa,Melitaea-celadussa-description,,,,
-342,342,432450,eBMS467,Melitaea deione,Melitaea-deione-description,164,1024,668,Martin Wiemers
-343,343,432451,eBMS468,Melitaea britomartis,Melitaea-britomartis-description,167,1024,667,Albert Vliegenthart
-344,344,432452,eBMS469,Melitaea athalia,Melitaea-athalia-description,168,1024,768,Chris Van Swaay
-345,345,432453,eBMS470,Melitaea varia,Melitaea-varia-description,165,1024,683,Kars Veling
-346,346,432454,eBMS471,Melitaea parthenoides,Melitaea-parthenoides-description,,,,
-347,347,432455,eBMS472,Melitaea aurelia,Melitaea-aurelia-description,166,1024,768,Martin Wiemers
-348,348,432456,eBMS473,Melitaea asteria,Melitaea-asteria-description,,,,
-349,349,432457,eBMS474,Libythea celtis,Libythea-celtis-description,132,1024,761,Chris Van Swaay
-350,350,432458,eBMS475,Danaus plexippus,Danaus-plexippus-description,,,,
-351,351,432459,eBMS476,Danaus chrysippus,Danaus-chrysippus-description,238,1024,676,Kars Veling
-352,352,432460,eBMS477,Charaxes jasius,Charaxes-jasius-description,173,1024,687,Chris Van Swaay
-353,353,432461,eBMS478,Coenonympha phryne,Coenonympha-phryne-description,,,,
-354,354,432462,eBMS479,Coenonympha oedippus,Coenonympha-oedippus-description,182,1024,683,Kars Veling
-355,355,432463,eBMS480,Coenonympha dorus,Coenonympha-dorus-description,187,1024,681,Albert Vliegenthart
-356,356,432464,eBMS481,Coenonympha thyrsis,Coenonympha-thyrsis-description,,,,
-357,357,432465,eBMS482,Coenonympha pamphilus,Coenonympha-pamphilus-description,190,1024,681,Albert Vliegenthart
-358,358,432466,eBMS483,Coenonympha tullia,Coenonympha-tullia-description,181,1024,727,Chris Van Swaay
-359,359,432467,eBMS484,Coenonympha rhodopensis,Coenonympha-rhodopensis-description,183,1024,682,Kars Veling
-360,360,432468,eBMS485,Coenonympha amaryllis,Coenonympha-amaryllis-description,,,,
-361,361,432722,eBMS486,Coenonympha glycerion,Coenonympha-glycerion-description,185,1024,710,Kars Veling
-362,362,432470,eBMS487,Coenonympha corinna,Coenonympha-corinna-description,,,,
-363,363,432471,eBMS488,Coenonympha leander,Coenonympha-leander-description,189,1024,768,Chris Van Swaay
-364,364,432472,eBMS489,Coenonympha hero,Coenonympha-hero-description,188,1024,672,Kars Veling
-365,365,432473,eBMS490,Coenonympha gardetta,Coenonympha-gardetta-description,186,1024,681,Albert Vliegenthart
-366,366,432474,eBMS491,Coenonympha orientalis,Coenonympha-orientalis-description,,,,
-367,367,432475,eBMS492,Coenonympha arcania,Coenonympha-arcania-description,184,1024,681,Albert Vliegenthart
-368,368,432476,eBMS493,Kirinia roxelana,Kirinia-roxelana-description,,,,
-369,369,432723,eBMS494,Kirinia climene,Kirinia-climene-description,,,,
-370,370,432724,eBMS495,Lopinga achine,Lopinga-achine-description,,,,
-371,371,432479,eBMS496,Pararge xiphia,Pararge-xiphia-description,,,,
-372,372,432480,eBMS497,Pararge xiphioides,Pararge-xiphioides-description,,,,
-373,373,432481,eBMS498,Pararge aegeria,Pararge-aegeria-description,177,1024,729,Chris Van Swaay
-374,374,432482,eBMS499,Lasiommata maera,Lasiommata-maera-description,180,1024,683,Rudi Verovnik
-375,375,432483,eBMS500,Lasiommata deidamia,Lasiommata-deidamia-description,,,,
-376,376,432484,eBMS501,Lasiommata petropolitana,Lasiommata-petropolitana-description,179,1024,681,Albert Vliegenthart
-377,377,432485,eBMS502,Lasiommata paramegaera,Lasiommata-paramegaera-description,,,,
-378,378,432486,eBMS503,Lasiommata megera,Lasiommata-megera-description,178,1024,791,Chris Van Swaay
-379,379,432487,eBMS504,Melanargia russiae,Melanargia-russiae-description,216,1024,681,Albert Vliegenthart
-380,380,432488,eBMS505,Melanargia larissa,Melanargia-larissa-description,218,1024,681,Albert Vliegenthart
-381,381,432489,eBMS506,Melanargia lachesis,Melanargia-lachesis-description,217,1024,679,Kars Veling
-382,382,432490,eBMS507,Melanargia galathea,Melanargia-galathea-description,,,,
-383,383,432491,eBMS508,Melanargia ines,Melanargia-ines-description,220,1024,681,Albert Vliegenthart
-384,384,432492,eBMS509,Melanargia arge,Melanargia-arge-description,,,,
-385,385,432493,eBMS510,Melanargia pherusa,Melanargia-pherusa-description,,,,
-386,386,432494,eBMS511,Melanargia occitanica,Melanargia-occitanica-description,219,1024,668,Martin Wiemers
-387,387,432725,eBMS512,Hipparchia fatua,Hipparchia-fatua-description,230,1024,682,Kars Veling
-388,388,432496,eBMS513,Hipparchia statilinus,Hipparchia-statilinus-description,229,1024,681,Albert Vliegenthart
-389,389,432510,eBMS527,Hipparchia azorina,Hipparchia-azorina-description,,,,
-390,390,432511,eBMS528,Hipparchia senthes,Hipparchia-senthes-description,,,,
-391,391,432512,eBMS529,Hipparchia maderensis,Hipparchia-maderensis-description,,,,
-392,392,432727,eBMS530,Hipparchia semele,Hipparchia-semele-description,227,1024,768,Chris Van Swaay
-393,393,432514,eBMS531,Hipparchia blachieri,Hipparchia-blachieri-description,,,,
-394,394,432515,eBMS532,Hipparchia aristaeus,Hipparchia-aristaeus-description,,,,
-395,395,432516,eBMS533,Hipparchia volgensis,Hipparchia-volgensis-description,228,1024,681,Albert Vliegenthart
-396,396,432517,eBMS534,Hipparchia neapolitana,Hipparchia-neapolitana-description,,,,
-397,397,432518,eBMS535,Hipparchia leighebi,Hipparchia-leighebi-description,,,,
-398,398,432519,eBMS536,Hipparchia pellucida,Hipparchia-pellucida-description,,,,
-399,399,432520,eBMS537,Hipparchia sbordonii,Hipparchia-sbordonii-description,,,,
-400,400,432521,eBMS538,Hipparchia cypriensis,Hipparchia-cypriensis-description,,,,
-401,401,432522,eBMS539,Hipparchia cretica,Hipparchia-cretica-description,,,,
-402,402,432523,eBMS540,Hipparchia christenseni,Hipparchia-christenseni-description,,,,
-403,403,432524,eBMS541,Minois dryas,Minois-dryas-description,223,1024,768,Martin Wiemers
-404,404,432525,eBMS542,Brintesia circe,Brintesia-circe-description,233,1024,1341,Chris Van Swaay
-405,405,432526,eBMS543,Arethusana arethusa,Arethusana-arethusa-description,232,1024,768,Chris Van Swaay
-406,406,432527,eBMS544,Oeneis tarpeia,Oeneis-tarpeia-description,,,,
-407,407,432528,eBMS545,Oeneis bore,Oeneis-bore-description,,,,
-408,408,432529,eBMS546,Oeneis ammon,Oeneis-ammon-description,,,,
-409,409,432530,eBMS547,Oeneis melissa,Oeneis-melissa-description,,,,
-410,410,432531,eBMS548,Oeneis magna,Oeneis-magna-description,,,,
-411,411,432532,eBMS549,Oeneis jutta,Oeneis-jutta-description,237,1024,825,Chris Van Swaay
-412,412,432533,eBMS550,Oeneis norna,Oeneis-norna-description,,,,
-413,413,432534,eBMS551,Oeneis polixenes,Oeneis-polixenes-description,,,,
-414,414,432535,eBMS552,Oeneis glacialis,Oeneis-glacialis-description,236,1024,693,Kars Veling
-415,415,432536,eBMS553,Satyrus ferula,Satyrus-ferula-description,221,1024,753,Chris Van Swaay
-416,416,432537,eBMS554,Satyrus virbius,Satyrus-virbius-description,,,,
-417,417,432538,eBMS555,Satyrus actaea,Satyrus-actaea-description,222,1024,681,Albert Vliegenthart
-418,418,432539,eBMS556,Chazara briseis,Chazara-briseis-description,234,1024,681,Albert Vliegenthart
-419,419,432540,eBMS557,Chazara prieuri,Chazara-prieuri-description,,,,
-420,420,432541,eBMS558,Chazara persephone,Chazara-persephone-description,,,,
-421,421,432542,eBMS559,Pseudochazara geyeri,Pseudochazara-geyeri-description,,,,
-422,422,432543,eBMS560,Pseudochazara graeca,Pseudochazara-graeca-description,,,,
-423,423,432544,eBMS561,Pseudochazara amymone,Pseudochazara-amymone-description,,,,
-424,424,432545,eBMS562,Pseudochazara anthelea,Pseudochazara-anthelea-description,235,1024,681,Albert Vliegenthart
-425,425,432546,eBMS563,Pseudochazara amalthea,Pseudochazara-amalthea-description,,,,
-426,426,432547,eBMS564,Pseudochazara williamsi,Pseudochazara-williamsi-description,,,,
-427,427,432548,eBMS565,Pseudochazara euxina,Pseudochazara-euxina-description,,,,
-428,428,432549,eBMS566,Pseudochazara mercurius,Pseudochazara-mercurius-description,,,,
-429,429,432550,eBMS567,Pseudochazara cingovskii,Pseudochazara-cingovskii-description,,,,
-430,430,432551,eBMS568,Pseudochazara tisiphone,Pseudochazara-tisiphone-description,,,,
-431,431,432552,eBMS569,Pseudochazara orestes,Pseudochazara-orestes-description,,,,
-432,432,432553,eBMS570,Ypthima asterope,Ypthima-asterope-description,,,,
-433,433,432554,eBMS571,Proterebia phegea,Proterebia-phegea-description,,,,
-434,434,432555,eBMS572,Hyponephele huebneri,Hyponephele-huebneri-description,,,,
-435,435,432556,eBMS573,Hyponephele lycaon,Hyponephele-lycaon-description,195,1024,681,Albert Vliegenthart
-436,436,432728,eBMS574,Hyponephele lupina,Hyponephele-lupina-description,196,1024,678,Kars Veling
-437,437,432558,eBMS575,Aphantopus hyperantus,Aphantopus-hyperantus-description,,,,
-438,438,432729,eBMS576,Pyronia cecilia,Pyronia-cecilia-description,192,1024,679,Kars Veling
-439,439,432560,eBMS577,Pyronia tithonus,Pyronia-tithonus-description,191,1024,681,Albert Vliegenthart
-440,440,432561,eBMS578,Pyronia bathseba,Pyronia-bathseba-description,193,1024,681,Albert Vliegenthart
-441,441,432562,eBMS579,Maniola jurtina,Maniola-jurtina-description,194,1024,681,Albert Vliegenthart
-442,442,432563,eBMS580,Maniola nurag,Maniola-nurag-description,,,,
-443,443,432564,eBMS581,Maniola chia,Maniola-chia-description,,,,
-444,444,432565,eBMS582,Maniola megala,Maniola-megala-description,,,,
-445,445,432566,eBMS583,Maniola cypricola,Maniola-cypricola-description,,,,
-446,446,432567,eBMS584,Maniola telmessia,Maniola-telmessia-description,,,,
-447,447,432568,eBMS585,Maniola halicarnassus,Maniola-halicarnassus-description,,,,
-448,448,432569,eBMS586,Erebia edda,Erebia-edda-description,,,,
-449,449,432570,eBMS587,Erebia fasciata,Erebia-fasciata-description,,,,
-450,450,432571,eBMS588,Erebia discoidalis,Erebia-discoidalis-description,,,,
-451,451,432572,eBMS589,Erebia rossii,Erebia-rossii-description,,,,
-452,452,432573,eBMS590,Erebia cyclopius,Erebia-cyclopius-description,,,,
-453,453,432574,eBMS591,Erebia embla,Erebia-embla-description,,,,
-454,454,432575,eBMS592,Erebia disa,Erebia-disa-description,,,,
-455,455,432576,eBMS593,Erebia meolans,Erebia-meolans-description,214,1024,717,Kars Veling
-456,456,432577,eBMS594,Erebia dabanensis,Erebia-dabanensis-description,,,,
-457,457,432578,eBMS595,Erebia jeniseiensis,Erebia-jeniseiensis-description,,,,
-458,458,432579,eBMS596,Erebia claudina,Erebia-claudina-description,,,,
-459,459,432730,eBMS597,Erebia manto,Erebia-manto-description,,,,
-460,460,432581,eBMS598,Erebia ottomana,Erebia-ottomana-description,208,1024,674,Kars Veling
-461,461,432582,eBMS599,Erebia hispania,Erebia-hispania-description,,,,
-462,462,432583,eBMS600,Erebia rondoui,Erebia-rondoui-description,,,,
-463,463,432584,eBMS601,Erebia callias,Erebia-callias-description,,,,
-464,464,432585,eBMS602,Erebia tyndarus,Erebia-tyndarus-description,209,1024,683,Kars Veling
-465,465,432586,eBMS603,Erebia cassioides,Erebia-cassioides-description,210,1024,678,Kars Veling
-466,466,432587,eBMS604,Erebia nivalis,Erebia-nivalis-description,,,,
-467,467,432588,eBMS605,Erebia neleus,Erebia-neleus-description,,,,
-468,468,432589,eBMS606,Erebia calcarius,Erebia-calcarius-description,,,,
-469,469,432590,eBMS607,Erebia arvernensis,Erebia-arvernensis-description,,,,
-470,470,432591,eBMS608,Erebia oeme,Erebia-oeme-description,213,1024,683,Rudi Verovnik
-471,471,432592,eBMS609,Erebia gorge,Erebia-gorge-description,206,1024,683,Kars Veling
-472,472,432593,eBMS610,Erebia sthennyo,Erebia-sthennyo-description,,,,
-473,473,432594,eBMS611,Erebia pandrose,Erebia-pandrose-description,215,1024,683,Rudi Verovnik
-474,474,432595,eBMS612,Erebia eriphyle,Erebia-eriphyle-description,,,,
-475,475,432596,eBMS613,Erebia epistygne,Erebia-epistygne-description,,,,
-476,476,432597,eBMS614,Erebia euryale,Erebia-euryale-description,198,1024,683,Rudi Verovnik
-477,477,432598,eBMS615,Erebia palarica,Erebia-palarica-description,,,,
-478,478,432599,eBMS616,Erebia ligea,Erebia-ligea-description,197,1024,683,Martin Wiemers
-479,479,432600,eBMS617,Erebia pluto,Erebia-pluto-description,205,1024,679,Kars Veling
-480,480,432601,eBMS618,Erebia aethiopellus,Erebia-aethiopellus-description,,,,
-481,481,432602,eBMS619,Erebia gorgone,Erebia-gorgone-description,,,,
-482,482,432603,eBMS620,Erebia rhodopensis,Erebia-rhodopensis-description,,,,
-483,483,432604,eBMS621,Erebia mnestra,Erebia-mnestra-description,207,1024,668,Martin Wiemers
-484,484,432605,eBMS622,Erebia albergana,Erebia-albergana-description,204,1024,746,Kars Veling
-485,485,432606,eBMS623,Erebia sudetica,Erebia-sudetica-description,,,,
-486,486,432607,eBMS624,Erebia melampus,Erebia-melampus-description,201,1024,683,Martin Wiemers
-487,487,432608,eBMS625,Erebia triarius,Erebia-triarius-description,,,,
-488,488,432609,eBMS626,Erebia polaris,Erebia-polaris-description,,,,
-489,489,432610,eBMS627,Erebia medusa,Erebia-medusa-description,203,1024,781,Chris Van Swaay
-490,490,432611,eBMS628,Erebia aethiops,Erebia-aethiops-description,202,1024,683,Kars Veling
-491,491,432612,eBMS629,Erebia pharte,Erebia-pharte-description,200,1024,678,Kars Veling
-492,492,432613,eBMS630,Erebia christi,Erebia-christi-description,,,,
-493,493,432614,eBMS631,Erebia orientalis,Erebia-orientalis-description,,,,
-494,494,432615,eBMS632,Erebia epiphron,Erebia-epiphron-description,199,1024,683,Rudi Verovnik
-495,495,432616,eBMS633,Erebia flavofasciata,Erebia-flavofasciata-description,,,,
-496,496,432617,eBMS634,Erebia montana,Erebia-montana-description,,,,
-497,497,432618,eBMS635,Erebia styx,Erebia-styx-description,212,1024,668,Martin Wiemers
-498,498,432619,eBMS636,Erebia stiria,Erebia-stiria-description,,,,
-499,499,432620,eBMS637,Erebia scipio,Erebia-scipio-description,,,,
-500,500,432621,eBMS638,Erebia pronoe,Erebia-pronoe-description,211,1024,681,Albert Vliegenthart
-501,501,432622,eBMS639,Erebia melas,Erebia-melas-description,,,,
-502,502,432623,eBMS640,Erebia lefebvrei,Erebia-lefebvrei-description,,,,
-503,503,432624,eBMS641,Erebia zapateri,Erebia-zapateri-description,,,,
-504,504,432625,eBMS642,Erebia neoridas,Erebia-neoridas-description,,,,
+id,sort_id,warehouse_id,external_key,taxon,family,descriptionKey,image,image_width,image_height,image_copyright
+1,1,432127,eBMS147,Papilio hospiton,Papilionidae,Papilio-hospiton-description,,,,
+2,2,432128,eBMS148,Parnassius mnemosyne,Papilionidae,Parnassius-mnemosyne-description,36,1024,683,Kars Veling
+3,3,432129,eBMS149,Parnassius phoebus,Papilionidae,Parnassius-phoebus-description,,,,
+4,4,432130,eBMS150,Parnassius apollo,Papilionidae,Parnassius-apollo-description,37,1024,681,Albert Vliegenthart
+5,5,432131,eBMS151,Archon apollinus,Papilionidae,Archon-apollinus-description,,,,
+6,6,432132,eBMS152,Zerynthia cerisy,Papilionidae,Zerynthia-cerisy-description,35,1024,681,Albert Vliegenthart
+7,7,432165,eBMS185,Carcharodus stauderi,Hesperiidae,Carcharodus-stauderi-description,,,,
+8,8,432166,eBMS186,Carcharodus baeticus,Hesperiidae,Carcharodus-baeticus-description,7,1024,676,Albert Vliegenthart
+9,9,432167,eBMS187,Erynnis tages,Hesperiidae,Erynnis-tages-description,1,1024,681,Albert Vliegenthart
+10,10,432168,eBMS188,Erynnis marloyi,Hesperiidae,Erynnis-marloyi-description,2,1024,681,Albert Vliegenthart
+11,11,432133,eBMS153,Zerynthia cretica,Papilionidae,Zerynthia-cretica-description,,,,
+12,12,432134,eBMS154,Zerynthia caucasica,Papilionidae,Zerynthia-caucasica-description,,,,
+13,13,432135,eBMS155,Zerynthia rumina,Papilionidae,Zerynthia-rumina-description,33,1024,683,Kars Veling
+14,14,432136,eBMS156,Zerynthia polyxena,Papilionidae,Zerynthia-polyxena-description,34,1024,681,Albert Vliegenthart
+15,15,432137,eBMS157,Zerynthia cassandra,Papilionidae,Zerynthia-cassandra-description,,,,
+16,16,432704,eBMS158,Heteropterus morpheus,Hesperiidae,Heteropterus-morpheus-description,26,1024,681,Albert Vliegenthart
+17,17,432139,eBMS159,Carterocephalus silvicola,Hesperiidae,Carterocephalus-silvicola-description,,,,
+18,18,432140,eBMS160,Carterocephalus palaemon,Hesperiidae,Carterocephalus-palaemon-description,27,1024,693,Kars Veling
+19,19,432141,eBMS161,Pelopidas thrax,Hesperiidae,Pelopidas-thrax-description,,,,
+20,20,432142,eBMS162,Borbo borbonica,Hesperiidae,Borbo-borbonica-description,,,,
+21,21,432705,eBMS163,Gegenes pumilio,Hesperiidae,Gegenes-pumilio-description,32,1024,681,Albert Vliegenthart
+22,22,432144,eBMS164,Gegenes nostrodamus,Hesperiidae,Gegenes-nostrodamus-description,,,,
+23,23,432145,eBMS165,Ochlodes sylvanus,Hesperiidae,Ochlodes-sylvanus-description,,,,
+24,24,432146,eBMS166,Hesperia comma,Hesperiidae,Hesperia-comma-description,31,1024,693,Chris Van Swaay
+25,25,432147,eBMS167,Thymelicus christi,Hesperiidae,Thymelicus-christi-description,,,,
+26,26,432148,eBMS168,Thymelicus acteon,Hesperiidae,Thymelicus-acteon-description,30,1024,681,Albert Vliegenthart
+27,27,432149,eBMS169,Thymelicus hyrax,Hesperiidae,Thymelicus-hyrax-description,,,,
+28,28,432150,eBMS170,Thymelicus sylvestris,Hesperiidae,Thymelicus-sylvestris-description,29,1024,724,Chris Van Swaay
+29,29,432151,eBMS171,Thymelicus lineola,Hesperiidae,Thymelicus-lineola-description,28,1024,755,Chris Van Swaay
+30,30,432152,eBMS172,Spialia phlomidis,Hesperiidae,Spialia-phlomidis-description,8,1024,683,Rudi Verovnik
+31,31,432153,eBMS173,Spialia sertorius,Hesperiidae,Spialia-sertorius-description,9,1024,1377,Chris Van Swaay
+32,32,432154,eBMS174,Spialia therapne,Hesperiidae,Spialia-therapne-description,,,,
+33,33,432155,eBMS175,Spialia rosae,Hesperiidae,Spialia-rosae-description,,,,
+34,34,432156,eBMS176,Spialia orbifer,Hesperiidae,Spialia-orbifer-description,10,1024,771,Chris Van Swaay
+35,35,432157,eBMS177,Carcharodus tripolinus,Hesperiidae,Carcharodus-tripolinus-description,,,,
+36,36,432158,eBMS178,Carcharodus alceae,Hesperiidae,Carcharodus-alceae-description,3,1024,682,Chris Van Swaay
+37,37,432159,eBMS179,Muschampia cribrellum,Hesperiidae,Muschampia-cribrellum-description,,,,
+38,38,432706,eBMS180,Muschampia tessellum,Hesperiidae,Muschampia-tessellum-description,12,1024,681,Albert Vliegenthart
+39,39,432161,eBMS181,Muschampia proto,Hesperiidae,Muschampia-proto-description,11,1024,681,Albert Vliegenthart
+40,40,432162,eBMS182,Carcharodus lavatherae,Hesperiidae,Carcharodus-lavatherae-description,4,1024,683,Kars Veling
+41,41,432163,eBMS183,Carcharodus orientalis,Hesperiidae,Carcharodus-orientalis-description,6,1024,681,Albert Vliegenthart
+42,42,432164,eBMS184,Carcharodus floccifera,Hesperiidae,Carcharodus-floccifera-description,5,1024,734,Rudi Verovnik
+43,43,432123,eBMS143,Iphiclides podalirius,Papilionidae,Iphiclides-podalirius-description,38,1024,809,Chris Van Swaay
+44,44,432124,eBMS144,Iphiclides feisthamelii,Papilionidae,Iphiclides-feisthamelii-description,,,,
+45,45,432125,eBMS145,Papilio alexanor,Papilionidae,Papilio-alexanor-description,,,,
+46,46,432126,eBMS146,Papilio machaon,Papilionidae,Papilio-machaon-description,,,,
+47,47,432169,eBMS189,Pyrgus malvoides,Hesperiidae,Pyrgus-malvoides-description,,,,
+48,48,432170,eBMS190,Pyrgus malvae,Hesperiidae,Pyrgus-malvae-description,17,1024,683,Rudi Verovnik
+49,49,432171,eBMS191,Pyrgus carthami,Hesperiidae,Pyrgus-carthami-description,13,1024,683,Rudi Verovnik
+50,50,432172,eBMS192,Pyrgus sidae,Hesperiidae,Pyrgus-sidae-description,14,1024,681,Albert Vliegenthart
+51,51,432173,eBMS193,Pyrgus centaureae,Hesperiidae,Pyrgus-centaureae-description,,,,
+52,52,432174,eBMS194,Pyrgus cacaliae,Hesperiidae,Pyrgus-cacaliae-description,16,1024,683,Kars Veling
+53,53,432175,eBMS195,Pyrgus andromedae,Hesperiidae,Pyrgus-andromedae-description,15,1024,682,Kars Veling
+54,54,432176,eBMS196,Pyrgus serratulae,Hesperiidae,Pyrgus-serratulae-description,18,1024,768,Chris Van Swaay
+55,55,432178,eBMS198,Pyrgus armoricanus/serratulae,Hesperiidae,Pyrgus-armoricanus/serratulae-description,,,,
+56,56,432177,eBMS197,Pyrgus armoricanus,Hesperiidae,Pyrgus-armoricanus-description,22,1024,768,Chris Van Swaay
+58,58,432180,eBMS199,Pyrgus alveus,Hesperiidae,Pyrgus-alveus-description,23,1024,768,Chris Van Swaay
+59,59,432181,eBMS200,Pyrgus warrenensis,Hesperiidae,Pyrgus-warrenensis-description,25,1024,661,Kars Veling
+60,60,432182,eBMS201,Pyrgus foulquieri,Hesperiidae,Pyrgus-foulquieri-description,24,1024,683,Kars Veling
+61,61,432183,eBMS202,Pyrgus onopordi,Hesperiidae,Pyrgus-onopordi-description,19,1024,786,Chris Van Swaay
+62,62,432184,eBMS203,Pyrgus carlinae,Hesperiidae,Pyrgus-carlinae-description,20,1024,637,Albert Vliegenthart
+63,63,432185,eBMS204,Pyrgus cirsii,Hesperiidae,Pyrgus-cirsii-description,21,1024,1540,Albert Vliegenthart
+64,64,432186,eBMS205,Pyrgus cinarae,Hesperiidae,Pyrgus-cinarae-description,,,,
+65,65,432707,eBMS206,Leptidea duponcheli,Pieridae,Leptidea-duponcheli-description,40,1024,681,Albert Vliegenthart
+66,66,432188,eBMS207,Leptidea morsei,Pieridae,Leptidea-morsei-description,,,,
+67,67,432708,eBMS208,Leptidea juvernica,Pieridae,Leptidea-juvernica-description,,,,
+68,68,432190,eBMS209,Leptidea sinapis,Pieridae,Leptidea-sinapis-description,39,1024,683,Kars Veling
+70,70,432191,eBMS210,Leptidea sinapis/juvernica,Pieridae,Leptidea-sinapis/juvernica-description,,,,
+71,71,432193,eBMS211,Leptidea reali,Pieridae,Leptidea-reali-description,,,,
+72,72,432194,eBMS212,Gonepteryx rhamni,Pieridae,Gonepteryx-rhamni-description,,,,
+73,73,432195,eBMS213,Gonepteryx cleobule,Pieridae,Gonepteryx-cleobule-description,,,,
+74,74,432196,eBMS214,Gonepteryx cleopatra,Pieridae,Gonepteryx-cleopatra-description,,,,
+75,75,432197,eBMS215,Gonepteryx maderensis,Pieridae,Gonepteryx-maderensis-description,,,,
+76,76,432709,eBMS216,Gonepteryx farinosa,Pieridae,Gonepteryx-farinosa-description,,,,
+77,77,432199,eBMS217,Catopsilia florella,Pieridae,Catopsilia-florella-description,,,,
+78,78,432710,eBMS218,Colias hyale,Pieridae,Colias-hyale-description,61,1024,683,Rudi Verovnik
+79,79,432712,eBMS220,Colias hyale/alfacariensis,Pieridae,Colias-hyale/alfacariensis-description,,,,
+80,80,432711,eBMS219,Colias alfacariensis,Pieridae,Colias-alfacariensis-description,62,1024,678,Kars Veling
+82,82,432203,eBMS221,Colias phicomone,Pieridae,Colias-phicomone-description,55,1024,681,Albert Vliegenthart
+83,83,432204,eBMS222,Colias aurorina,Pieridae,Colias-aurorina-description,,,,
+84,84,432205,eBMS223,Colias chrysotheme,Pieridae,Colias-chrysotheme-description,60,1024,728,Chris Van Swaay
+85,85,432206,eBMS224,Colias erate,Pieridae,Colias-erate-description,57,1024,678,Kars Veling
+86,86,432207,eBMS225,Colias crocea,Pieridae,Colias-crocea-description,58,1024,823,Chris Van Swaay
+87,87,432208,eBMS226,Colias myrmidone,Pieridae,Colias-myrmidone-description,59,1024,668,Martin Wiemers
+88,88,432209,eBMS227,Colias caucasica,Pieridae,Colias-caucasica-description,,,,
+89,89,432210,eBMS228,Colias palaeno,Pieridae,Colias-palaeno-description,56,1024,681,Albert Vliegenthart
+90,90,432211,eBMS229,Colias tyche,Pieridae,Colias-tyche-description,,,,
+91,91,432212,eBMS230,Colias hecla,Pieridae,Colias-hecla-description,,,,
+92,92,432213,eBMS231,Colotis evagore,Pieridae,Colotis-evagore-description,,,,
+93,93,432214,eBMS232,Aporia crataegi,Pieridae,Aporia-crataegi-description,46,1024,683,Kars Veling
+94,94,432215,eBMS233,Pontia chloridice,Pieridae,Pontia-chloridice-description,,,,
+95,95,432216,eBMS234,Pontia callidice,Pieridae,Pontia-callidice-description,54,1024,668,Kars Veling
+96,96,432217,eBMS235,Pontia edusa,Pieridae,Pontia-edusa-description,,,,
+97,97,432218,eBMS236,Pontia daplidice,Pieridae,Pontia-daplidice-description,,,,
+98,98,432219,eBMS237,Pieris krueperi,Pieridae,Pieris-krueperi-description,48,1024,683,Rudi Verovnik
+99,99,432220,eBMS238,Pieris brassicae,Pieridae,Pieris-brassicae-description,47,1024,681,Albert Vliegenthart
+100,100,432221,eBMS239,Pieris wollastoni,Pieridae,Pieris-wollastoni-description,,,,
+101,101,432222,eBMS240,Pieris cheiranthi,Pieridae,Pieris-cheiranthi-description,,,,
+102,102,432223,eBMS241,Pieris rapae,Pieridae,Pieris-rapae-description,50,1024,732,Chris Van Swaay
+103,103,432224,eBMS242,Pieris mannii,Pieridae,Pieris-mannii-description,49,1024,683,Martin Wiemers
+104,104,432225,eBMS243,Pieris ergane,Pieridae,Pieris-ergane-description,51,1024,683,Rudi Verovnik
+105,105,432226,eBMS244,Pieris bryoniae,Pieridae,Pieris-bryoniae-description,53,1024,683,Kars Veling
+106,106,432227,eBMS245,Pieris napi,Pieridae,Pieris-napi-description,52,1024,742,Chris Van Swaay
+107,107,432714,eBMS246,Pieris balcana,Pieridae,Pieris-balcana-description,,,,
+108,108,432229,eBMS247,Euchloe tagis,Pieridae,Euchloe-tagis-description,,,,
+109,109,432230,eBMS248,Euchloe eversi,Pieridae,Euchloe-eversi-description,,,,
+110,110,432231,eBMS249,Euchloe grancanariensis,Pieridae,Euchloe-grancanariensis-description,,,,
+111,111,432232,eBMS250,Euchloe hesperidum,Pieridae,Euchloe-hesperidum-description,,,,
+112,112,432233,eBMS251,Euchloe belemia,Pieridae,Euchloe-belemia-description,44,1024,681,Albert Vliegenthart
+113,113,432234,eBMS252,Euchloe insularis,Pieridae,Euchloe-insularis-description,,,,
+114,114,432235,eBMS253,Euchloe crameri,Pieridae,Euchloe-crameri-description,,,,
+115,115,432236,eBMS254,Euchloe simplonia,Pieridae,Euchloe-simplonia-description,,,,
+116,116,432237,eBMS255,Euchloe ausonia,Pieridae,Euchloe-ausonia-description,45,1024,703,Chris Van Swaay
+117,117,432238,eBMS256,Euchloe charlonia,Pieridae,Euchloe-charlonia-description,,,,
+118,118,432239,eBMS257,Euchloe penia,Pieridae,Euchloe-penia-description,,,,
+119,119,432240,eBMS258,Euchloe bazae,Pieridae,Euchloe-bazae-description,,,,
+120,120,432241,eBMS259,Zegris pyrothoe,Pieridae,Zegris-pyrothoe-description,,,,
+121,121,432242,eBMS260,Zegris eupheme,Pieridae,Zegris-eupheme-description,,,,
+122,122,432243,eBMS261,Anthocharis euphenoides,Pieridae,Anthocharis-euphenoides-description,42,1024,681,Albert Vliegenthart
+123,123,432244,eBMS262,Anthocharis cardamines,Pieridae,Anthocharis-cardamines-description,41,1024,746,Chris Van Swaay
+124,124,432245,eBMS263,Anthocharis gruneri,Pieridae,Anthocharis-gruneri-description,43,1024,681,Albert Vliegenthart
+125,125,432246,eBMS264,Anthocharis damone,Pieridae,Anthocharis-damone-description,,,,
+126,126,432247,eBMS265,Hamearis lucina,Riodinidae,Hamearis-lucina-description,131,1024,722,Chris Van Swaay
+127,127,432248,eBMS266,Lycaena dimorpha,Lycaenidae,Lycaena-dimorpha-description,,,,
+128,128,432249,eBMS267,Lycaena helle,Lycaenidae,Lycaena-helle-description,64,1024,681,Albert Vliegenthart
+129,129,432250,eBMS268,Lycaena alciphron,Lycaenidae,Lycaena-alciphron-description,69,1024,683,Kars Veling
+130,130,432251,eBMS269,Lycaena thetis,Lycaenidae,Lycaena-thetis-description,,,,
+131,131,432252,eBMS270,Lycaena thersamon,Lycaenidae,Lycaena-thersamon-description,72,1024,683,Kars Veling
+132,132,432253,eBMS271,Lycaena dispar,Lycaenidae,Lycaena-dispar-description,65,1024,683,Josef Settele
+133,133,432254,eBMS272,Lycaena hippothoe,Lycaenidae,Lycaena-hippothoe-description,70,1024,678,Albert Vliegenthart
+134,134,432295,eBMS313,Pseudophilotes barbagiae,Lycaenidae,Pseudophilotes-barbagiae-description,,,,
+135,135,432296,eBMS314,Pseudophilotes abencerragus,Lycaenidae,Pseudophilotes-abencerragus-description,,,,
+136,136,432297,eBMS315,Pseudophilotes panoptes,Lycaenidae,Pseudophilotes-panoptes-description,,,,
+137,137,432298,eBMS316,Pseudophilotes vicrama,Lycaenidae,Pseudophilotes-vicrama-description,95,1024,681,Albert Vliegenthart
+138,138,432299,eBMS317,Pseudophilotes baton,Lycaenidae,Pseudophilotes-baton-description,94,1024,678,Kars Veling
+139,139,432300,eBMS318,Scolitantides orion,Lycaenidae,Scolitantides-orion-description,97,1024,824,Chris Van Swaay
+140,140,432301,eBMS319,Praephilotes anthracias,Lycaenidae,Praephilotes-anthracias-description,,,,
+141,141,432302,eBMS320,Iolana iolas,Lycaenidae,Iolana-iolas-description,100,1024,683,Rudi Verovnik
+142,142,432303,eBMS321,Iolana debilitata,Lycaenidae,Iolana-debilitata-description,,,,
+143,143,432304,eBMS322,Glaucopsyche melanops,Lycaenidae,Glaucopsyche-melanops-description,99,1024,681,Albert Vliegenthart
+144,144,432305,eBMS323,Glaucopsyche paphos,Lycaenidae,Glaucopsyche-paphos-description,,,,
+145,145,432306,eBMS324,Glaucopsyche alexis,Lycaenidae,Glaucopsyche-alexis-description,98,1024,681,Albert Vliegenthart
+146,146,432497,eBMS514,Hipparchia tilosi,Nymphalidae,Hipparchia-tilosi-description,,,,
+147,147,432498,eBMS515,Hipparchia bacchus,Nymphalidae,Hipparchia-bacchus-description,,,,
+148,148,432499,eBMS516,Hipparchia wyssii,Nymphalidae,Hipparchia-wyssii-description,,,,
+149,149,432500,eBMS517,Hipparchia tamadabae,Nymphalidae,Hipparchia-tamadabae-description,,,,
+150,150,432501,eBMS518,Hipparchia gomera,Nymphalidae,Hipparchia-gomera-description,,,,
+151,151,432502,eBMS519,Hipparchia fidia,Nymphalidae,Hipparchia-fidia-description,231,1024,704,Chris Van Swaay
+152,152,432503,eBMS520,Hipparchia neomiris,Nymphalidae,Hipparchia-neomiris-description,,,,
+153,153,432504,eBMS521,Hipparchia autonoe,Nymphalidae,Hipparchia-autonoe-description,,,,
+154,154,432505,eBMS522,Hipparchia hermione,Nymphalidae,Hipparchia-hermione-description,225,1024,731,Chris Van Swaay
+155,155,432506,eBMS523,Hipparchia syriaca,Nymphalidae,Hipparchia-syriaca-description,226,1024,669,Josef Settele
+156,156,432726,eBMS524,Hipparchia fagi,Nymphalidae,Hipparchia-fagi-description,224,1024,683,Rudi Verovnik
+157,157,432508,eBMS525,Hipparchia mersina,Nymphalidae,Hipparchia-mersina-description,,,,
+158,158,432509,eBMS526,Hipparchia miguelensis,Nymphalidae,Hipparchia-miguelensis-description,,,,
+159,159,432255,eBMS273,Lycaena candens,Lycaenidae,Lycaena-candens-description,71,1024,681,Albert Vliegenthart
+160,160,432256,eBMS274,Lycaena ottomana,Lycaenidae,Lycaena-ottomana-description,67,1024,879,Chris Van Swaay
+161,161,432257,eBMS275,Lycaena bleusei,Lycaenidae,Lycaena-bleusei-description,,,,
+162,162,432258,eBMS276,Lycaena phlaeas,Lycaenidae,Lycaena-phlaeas-description,63,1024,681,Albert Vliegenthart
+163,163,432259,eBMS277,Lycaena virgaureae,Lycaenidae,Lycaena-virgaureae-description,66,1024,681,Albert Vliegenthart
+164,164,432260,eBMS278,Lycaena tityrus,Lycaenidae,Lycaena-tityrus-description,68,1024,681,Albert Vliegenthart
+165,165,432261,eBMS279,Cigaritis acamas,Lycaenidae,Cigaritis-acamas-description,,,,
+166,166,432262,eBMS280,Thecla betulae,Lycaenidae,Thecla-betulae-description,73,1024,654,Kars Veling
+167,167,432263,eBMS281,Favonius quercus,Lycaenidae,Favonius-quercus-description,74,1024,681,Albert Vliegenthart
+168,168,432264,eBMS282,Laeosopis roboris,Lycaenidae,Laeosopis-roboris-description,75,1024,679,Kars Veling
+169,169,432265,eBMS283,Tomares ballus,Lycaenidae,Tomares-ballus-description,76,1024,681,Albert Vliegenthart
+170,170,432266,eBMS284,Tomares nogelii,Lycaenidae,Tomares-nogelii-description,,,,
+171,171,432267,eBMS285,Tomares callimachus,Lycaenidae,Tomares-callimachus-description,,,,
+172,172,432268,eBMS286,Callophrys avis,Lycaenidae,Callophrys-avis-description,77,1024,678,Kars Veling
+173,173,432269,eBMS287,Callophrys suaveola,Lycaenidae,Callophrys-suaveola-description,,,,
+174,174,432270,eBMS288,Callophrys rubi,Lycaenidae,Callophrys-rubi-description,,,,
+175,175,432271,eBMS289,Callophrys chalybeitincta,Lycaenidae,Callophrys-chalybeitincta-description,,,,
+176,176,432272,eBMS290,Neolycaena rhymnus,Lycaenidae,Neolycaena-rhymnus-description,,,,
+177,177,432715,eBMS291,Satyrium pruni,Lycaenidae,Satyrium-pruni-description,79,1024,736,Chris Van Swaay
+178,178,432274,eBMS292,Satyrium ilicis,Lycaenidae,Satyrium-ilicis-description,81,1024,681,Albert Vliegenthart
+179,179,432275,eBMS293,Satyrium esculi,Lycaenidae,Satyrium-esculi-description,82,1024,678,Kars Veling
+180,180,432276,eBMS294,Satyrium ledereri,Lycaenidae,Satyrium-ledereri-description,,,,
+181,181,432277,eBMS295,Satyrium w-album,Lycaenidae,Satyrium-w-album-description,78,1024,741,Kars Veling
+182,182,432278,eBMS296,Satyrium spini,Lycaenidae,Satyrium-spini-description,80,1024,681,Albert Vliegenthart
+183,183,432279,eBMS297,Satyrium acaciae,Lycaenidae,Satyrium-acaciae-description,83,1024,768,Martin Wiemers
+184,184,432280,eBMS298,Leptotes pirithous,Lycaenidae,Leptotes-pirithous-description,86,1024,681,Albert Vliegenthart
+185,185,432281,eBMS299,Cyclyrius webbianus,Lycaenidae,Cyclyrius-webbianus-description,,,,
+186,186,432282,eBMS300,Azanus ubaldus,Lycaenidae,Azanus-ubaldus-description,,,,
+187,187,432283,eBMS301,Azanus jesous,Lycaenidae,Azanus-jesous-description,,,,
+188,188,432284,eBMS302,Lampides boeticus,Lycaenidae,Lampides-boeticus-description,84,1024,681,Albert Vliegenthart
+189,189,432716,eBMS303,Cacyreus marshalli,Lycaenidae,Cacyreus-marshalli-description,85,1024,866,Chris Van Swaay
+190,190,432286,eBMS304,Celastrina argiolus,Lycaenidae,Celastrina-argiolus-description,93,1024,681,Albert Vliegenthart
+191,191,432287,eBMS305,Tarucus theophrastus,Lycaenidae,Tarucus-theophrastus-description,,,,
+192,192,432288,eBMS306,Tarucus balkanicus,Lycaenidae,Tarucus-balkanicus-description,,,,
+193,193,432289,eBMS307,Phengaris alcon,Lycaenidae,Phengaris-alcon-description,104,1024,775,Chris Van Swaay
+194,194,432290,eBMS308,Phengaris arion,Lycaenidae,Phengaris-arion-description,101,1024,802,Chris Van Swaay
+195,195,432291,eBMS309,Phengaris teleius,Lycaenidae,Phengaris-teleius-description,102,1024,768,Chris Van Swaay
+196,196,432292,eBMS310,Phengaris nausithous,Lycaenidae,Phengaris-nausithous-description,103,1024,683,Josef Settele
+197,197,432293,eBMS311,Turanana taygetica,Lycaenidae,Turanana-taygetica-description,,,,
+198,198,432294,eBMS312,Pseudophilotes bavius,Lycaenidae,Pseudophilotes-bavius-description,96,1024,681,Albert Vliegenthart
+199,199,432307,eBMS325,Zizeeria knysna,Lycaenidae,Zizeeria-knysna-description,87,1024,681,Albert Vliegenthart
+200,200,432308,eBMS326,Zizeeria karsandra,Lycaenidae,Zizeeria-karsandra-description,,,,
+201,201,432309,eBMS327,Tongeia fischeri,Lycaenidae,Tongeia-fischeri-description,,,,
+202,202,432310,eBMS328,Cupido argiades,Lycaenidae,Cupido-argiades-description,90,1024,683,Josef Settele
+203,203,432311,eBMS329,Cupido decoloratus,Lycaenidae,Cupido-decoloratus-description,91,1024,722,Chris Van Swaay
+204,204,432312,eBMS330,Cupido alcetas,Lycaenidae,Cupido-alcetas-description,92,1024,678,Kars Veling
+205,205,432313,eBMS331,Cupido osiris,Lycaenidae,Cupido-osiris-description,89,1024,1410,Chris Van Swaay
+206,206,432314,eBMS332,Cupido minimus,Lycaenidae,Cupido-minimus-description,88,1024,681,Albert Vliegenthart
+207,207,432315,eBMS333,Cupido lorquinii,Lycaenidae,Cupido-lorquinii-description,,,,
+208,208,432316,eBMS334,Luthrodes galba,Lycaenidae,Luthrodes-galba-description,,,,
+209,209,432317,eBMS335,Freyeria trochylus,Lycaenidae,Freyeria-trochylus-description,,,,
+210,210,432318,eBMS336,Plebejus argus,Lycaenidae,Plebejus-argus-description,,,,
+211,211,432319,eBMS337,Plebejus idas,Lycaenidae,Plebejus-idas-description,105,1024,729,Kars Veling
+212,212,432320,eBMS338,Plebejus bellieri,Lycaenidae,Plebejus-bellieri-description,,,,
+213,213,432321,eBMS339,Plebejus argyrognomon,Lycaenidae,Plebejus-argyrognomon-description,106,1024,681,Albert Vliegenthart
+214,214,432322,eBMS340,Agriades orbitulus,Lycaenidae,Agriades-orbitulus-description,109,1024,768,Martin Wiemers
+215,215,432323,eBMS341,Agriades optilete,Lycaenidae,Agriades-optilete-description,107,1024,681,Albert Vliegenthart
+216,216,432324,eBMS342,Agriades pyrenaicus,Lycaenidae,Agriades-pyrenaicus-description,,,,
+217,217,432325,eBMS343,Agriades dardanus,Lycaenidae,Agriades-dardanus-description,,,,
+218,218,432326,eBMS344,Agriades zullichi,Lycaenidae,Agriades-zullichi-description,,,,
+219,219,432327,eBMS345,Agriades glandon,Lycaenidae,Agriades-glandon-description,108,1024,681,Albert Vliegenthart
+220,220,432328,eBMS346,Agriades aquilo,Lycaenidae,Agriades-aquilo-description,,,,
+221,221,432329,eBMS347,Plebejidea loewii,Lycaenidae,Plebejidea-loewii-description,,,,
+222,222,432330,eBMS348,Eumedonia eumedon,Lycaenidae,Eumedonia-eumedon-description,111,1024,681,Albert Vliegenthart
+223,223,432331,eBMS349,Kretania psylorita,Lycaenidae,Kretania-psylorita-description,,,,
+224,224,432332,eBMS350,Kretania hesperica,Lycaenidae,Kretania-hesperica-description,,,,
+225,225,432333,eBMS351,Kretania eurypilus,Lycaenidae,Kretania-eurypilus-description,,,,
+226,226,432334,eBMS352,Kretania trappi,Lycaenidae,Kretania-trappi-description,,,,
+227,227,432335,eBMS353,Kretania sephirus,Lycaenidae,Kretania-sephirus-description,110,1024,674,Kars Veling
+228,228,432336,eBMS354,Kretania pylaon,Lycaenidae,Kretania-pylaon-description,,,,
+229,229,432337,eBMS355,Cyaniris semiargus,Lycaenidae,Cyaniris-semiargus-description,116,1024,755,Chris Van Swaay
+230,230,432338,eBMS356,Glabroculus cyane,Lycaenidae,Glabroculus-cyane-description,,,,
+231,231,432339,eBMS357,Aricia morronensis,Lycaenidae,Aricia-morronensis-description,,,,
+232,232,432340,eBMS358,Aricia anteros,Lycaenidae,Aricia-anteros-description,115,1024,683,Rudi Verovnik
+233,233,432341,eBMS359,Aricia cramera,Lycaenidae,Aricia-cramera-description,112,1024,681,Albert Vliegenthart
+234,234,432342,eBMS360,Aricia nicias,Lycaenidae,Aricia-nicias-description,,,,
+235,235,432343,eBMS361,Aricia artaxerxes,Lycaenidae,Aricia-artaxerxes-description,114,1024,681,Albert Vliegenthart
+236,236,432344,eBMS362,Aricia montensis,Lycaenidae,Aricia-montensis-description,,,,
+237,237,432345,eBMS363,Aricia agestis,Lycaenidae,Aricia-agestis-description,113,1024,703,Chris Van Swaay
+238,238,432346,eBMS364,Neolysandra coelestina,Lycaenidae,Neolysandra-coelestina-description,,,,
+239,239,432347,eBMS365,Lysandra hispana,Lycaenidae,Lysandra-hispana-description,125,1024,740,Kars Veling
+240,240,432348,eBMS366,Lysandra corydonius,Lycaenidae,Lysandra-corydonius-description,,,,
+241,241,432349,eBMS367,Lysandra bellargus,Lycaenidae,Lysandra-bellargus-description,,,,
+242,242,432350,eBMS368,Lysandra coridon,Lycaenidae,Lysandra-coridon-description,124,1024,683,Kars Veling
+243,243,432351,eBMS369,Lysandra caelestissima,Lycaenidae,Lysandra-caelestissima-description,,,,
+244,244,432352,eBMS370,Lysandra albicans,Lycaenidae,Lysandra-albicans-description,126,1024,682,Kars Veling
+245,245,432353,eBMS371,Polyommatus escheri,Lycaenidae,Polyommatus-escheri-description,117,1024,806,Chris Van Swaay
+246,246,432717,eBMS372,Polyommatus thersites,Lycaenidae,Polyommatus-thersites-description,120,1024,681,Albert Vliegenthart
+247,247,432355,eBMS373,Polyommatus daphnis,Lycaenidae,Polyommatus-daphnis-description,123,1024,681,Albert Vliegenthart
+248,248,432356,eBMS374,Polyommatus amandus,Lycaenidae,Polyommatus-amandus-description,119,1024,683,Kars Veling
+249,249,432357,eBMS375,Polyommatus golgus,Lycaenidae,Polyommatus-golgus-description,,,,
+250,250,432358,eBMS376,Polyommatus nivescens,Lycaenidae,Polyommatus-nivescens-description,,,,
+251,251,432359,eBMS377,Polyommatus dorylas,Lycaenidae,Polyommatus-dorylas-description,118,1024,768,Chris Van Swaay
+252,252,432360,eBMS378,Polyommatus celina,Lycaenidae,Polyommatus-celina-description,,,,
+253,253,432361,eBMS379,Polyommatus icarus,Lycaenidae,Polyommatus-icarus-description,121,1024,683,Martin Wiemers
+254,254,432362,eBMS380,Polyommatus eros,Lycaenidae,Polyommatus-eros-description,122,1024,681,Albert Vliegenthart
+255,255,432363,eBMS381,Polyommatus damon,Lycaenidae,Polyommatus-damon-description,130,1024,681,Albert Vliegenthart
+256,256,432364,eBMS382,Polyommatus damone,Lycaenidae,Polyommatus-damone-description,,,,
+257,257,432365,eBMS383,Polyommatus damocles,Lycaenidae,Polyommatus-damocles-description,,,,
+258,258,432366,eBMS384,Polyommatus admetus,Lycaenidae,Polyommatus-admetus-description,127,1024,768,Chris Van Swaay
+259,259,432718,eBMS385,Polyommatus ripartii,Lycaenidae,Polyommatus-ripartii-description,128,1024,1287,Chris Van Swaay
+260,260,432368,eBMS386,Polyommatus nephohiptamenos,Lycaenidae,Polyommatus-nephohiptamenos-description,,,,
+261,261,432369,eBMS387,Polyommatus iphigenia,Lycaenidae,Polyommatus-iphigenia-description,,,,
+262,262,432370,eBMS388,Polyommatus violetae,Lycaenidae,Polyommatus-violetae-description,,,,
+263,263,432371,eBMS389,Polyommatus fulgens,Lycaenidae,Polyommatus-fulgens-description,,,,
+264,264,432372,eBMS390,Polyommatus fabressei,Lycaenidae,Polyommatus-fabressei-description,,,,
+265,265,432373,eBMS391,Polyommatus dolus,Lycaenidae,Polyommatus-dolus-description,129,1024,681,Kars Veling
+266,266,432374,eBMS392,Polyommatus humedasae,Lycaenidae,Polyommatus-humedasae-description,,,,
+267,267,432375,eBMS393,Polyommatus timfristos,Lycaenidae,Polyommatus-timfristos-description,,,,
+268,268,432376,eBMS394,Polyommatus orphicus,Lycaenidae,Polyommatus-orphicus-description,,,,
+269,269,432377,eBMS395,Polyommatus aroaniensis,Lycaenidae,Polyommatus-aroaniensis-description,,,,
+270,270,432378,eBMS396,Neptis sappho,Nymphalidae,Neptis-sappho-description,171,1024,820,Chris Van Swaay
+271,271,432719,eBMS397,Neptis rivularis,Nymphalidae,Neptis-rivularis-description,172,1024,768,Chris Van Swaay
+272,272,432720,eBMS398,Limenitis reducta,Nymphalidae,Limenitis-reducta-description,,,,
+273,273,432381,eBMS399,Limenitis populi,Nymphalidae,Limenitis-populi-description,169,1024,683,Rudi Verovnik
+274,274,432382,eBMS400,Limenitis camilla,Nymphalidae,Limenitis-camilla-description,170,1024,684,Chris Van Swaay
+275,275,432383,eBMS401,Issoria lathonia,Nymphalidae,Issoria-lathonia-description,138,1024,768,Martin Wiemers
+276,276,432384,eBMS402,Issoria eugenia,Nymphalidae,Issoria-eugenia-description,,,,
+277,277,432385,eBMS403,Brenthis hecate,Nymphalidae,Brenthis-hecate-description,141,1024,683,Rudi Verovnik
+278,278,432386,eBMS404,Brenthis ino,Nymphalidae,Brenthis-ino-description,139,1024,870,Chris Van Swaay
+279,279,432387,eBMS405,Brenthis daphne,Nymphalidae,Brenthis-daphne-description,140,1024,687,Kars Veling
+280,280,432388,eBMS406,Argynnis paphia,Nymphalidae,Argynnis-paphia-description,133,1024,683,Kars Veling
+281,281,432389,eBMS407,Argynnis pandora,Nymphalidae,Argynnis-pandora-description,134,1024,768,Chris Van Swaay
+282,282,432390,eBMS408,Argynnis laodice,Nymphalidae,Argynnis-laodice-description,137,1024,812,Chris Van Swaay
+283,283,432391,eBMS409,Speyeria aglaja,Nymphalidae,Speyeria-aglaja-description,135,1024,681,Albert Vliegenthart
+284,284,432392,eBMS410,Fabriciana elisa,Nymphalidae,Fabriciana-elisa-description,,,,
+285,285,432393,eBMS411,Fabriciana niobe,Nymphalidae,Fabriciana-niobe-description,136,1024,681,Albert Vliegenthart
+286,286,432394,eBMS412,Fabriciana adippe,Nymphalidae,Fabriciana-adippe-description,,,,
+287,287,432395,eBMS413,Boloria eunomia,Nymphalidae,Boloria-eunomia-description,142,1024,678,Chris Van Swaay
+288,288,432396,eBMS414,Boloria graeca,Nymphalidae,Boloria-graeca-description,148,1024,661,Kars Veling
+289,289,432397,eBMS415,Boloria pales,Nymphalidae,Boloria-pales-description,147,1024,639,Kars Veling
+290,290,432398,eBMS416,Boloria alaskensis,Nymphalidae,Boloria-alaskensis-description,,,,
+291,291,432399,eBMS417,Boloria napaea,Nymphalidae,Boloria-napaea-description,,,,
+292,292,432400,eBMS418,Boloria aquilonaris,Nymphalidae,Boloria-aquilonaris-description,,,,
+293,293,432401,eBMS419,Boloria tritonia,Nymphalidae,Boloria-tritonia-description,,,,
+294,294,432402,eBMS420,Boloria polaris,Nymphalidae,Boloria-polaris-description,,,,
+295,295,432721,eBMS421,Boloria thore,Nymphalidae,Boloria-thore-description,146,1024,683,Rudi Verovnik
+296,296,432404,eBMS422,Boloria selene,Nymphalidae,Boloria-selene-description,145,1024,717,Chris Van Swaay
+297,297,432405,eBMS423,Boloria euphrosyne,Nymphalidae,Boloria-euphrosyne-description,143,1024,665,Albert Vliegenthart
+298,298,432406,eBMS424,Boloria dia,Nymphalidae,Boloria-dia-description,,,,
+299,299,432407,eBMS425,Boloria improba,Nymphalidae,Boloria-improba-description,,,,
+300,300,432408,eBMS426,Boloria frigga,Nymphalidae,Boloria-frigga-description,,,,
+301,301,432409,eBMS427,Boloria freija,Nymphalidae,Boloria-freija-description,,,,
+302,302,432410,eBMS428,Boloria selenis,Nymphalidae,Boloria-selenis-description,,,,
+303,303,432411,eBMS429,Boloria oscarus,Nymphalidae,Boloria-oscarus-description,,,,
+304,304,432412,eBMS430,Boloria titania,Nymphalidae,Boloria-titania-description,144,1024,668,Albert Vliegenthart
+305,305,432413,eBMS431,Boloria chariclea,Nymphalidae,Boloria-chariclea-description,,,,
+306,306,432414,eBMS432,Boloria angarensis,Nymphalidae,Boloria-angarensis-description,,,,
+307,307,432415,eBMS433,Apatura iris,Nymphalidae,Apatura-iris-description,176,1024,681,Albert Vliegenthart
+308,308,432416,eBMS434,Apatura metis,Nymphalidae,Apatura-metis-description,174,1024,693,Albert Vliegenthart
+309,309,432417,eBMS435,Apatura ilia,Nymphalidae,Apatura-ilia-description,175,1024,683,Kars Veling
+311,311,432418,eBMS436,Apatura ilia/iris,Nymphalidae,Apatura-ilia/iris-description,,,,
+312,312,432420,eBMS437,Araschnia levana,Nymphalidae,Araschnia-levana-description,154,1024,788,Chris Van Swaay
+313,313,432421,eBMS438,Vanessa virginiensis,Nymphalidae,Vanessa-virginiensis-description,,,,
+314,314,432422,eBMS439,Vanessa cardui,Nymphalidae,Vanessa-cardui-description,149,1024,681,Albert Vliegenthart
+315,315,432423,eBMS440,Vanessa vulcania,Nymphalidae,Vanessa-vulcania-description,,,,
+316,316,432424,eBMS441,Vanessa atalanta,Nymphalidae,Vanessa-atalanta-description,,,,
+317,317,432425,eBMS442,Aglais io,Nymphalidae,Aglais-io-description,,,,
+318,318,432426,eBMS443,Aglais urticae,Nymphalidae,Aglais-urticae-description,150,1024,664,Kars Veling
+319,319,432427,eBMS444,Aglais ichnusa,Nymphalidae,Aglais-ichnusa-description,,,,
+320,320,432428,eBMS445,Polygonia egea,Nymphalidae,Polygonia-egea-description,152,1024,681,Albert Vliegenthart
+321,321,432429,eBMS446,Polygonia c-album,Nymphalidae,Polygonia-c-album-description,151,1024,782,Chris Van Swaay
+322,322,432430,eBMS447,Nymphalis vaualbum,Nymphalidae,Nymphalis-vaualbum-description,,,,
+323,323,432431,eBMS448,Nymphalis polychloros,Nymphalidae,Nymphalis-polychloros-description,153,1024,681,Albert Vliegenthart
+324,324,432432,eBMS449,Nymphalis xanthomelas,Nymphalidae,Nymphalis-xanthomelas-description,,,,
+325,325,432433,eBMS450,Nymphalis antiopa,Nymphalidae,Nymphalis-antiopa-description,,,,
+326,326,432434,eBMS451,Hypolimnas misippus,Nymphalidae,Hypolimnas-misippus-description,,,,
+327,327,432435,eBMS452,Euphydryas desfontainii,Nymphalidae,Euphydryas-desfontainii-description,,,,
+328,328,432436,eBMS453,Euphydryas aurinia,Nymphalidae,Euphydryas-aurinia-description,,,,
+329,329,432437,eBMS454,Euphydryas cynthia,Nymphalidae,Euphydryas-cynthia-description,155,1024,681,Albert Vliegenthart
+330,330,432438,eBMS455,Euphydryas iduna,Nymphalidae,Euphydryas-iduna-description,,,,
+331,331,432439,eBMS456,Euphydryas maturna,Nymphalidae,Euphydryas-maturna-description,157,1024,683,Rudi Verovnik
+332,332,432440,eBMS457,Euphydryas intermedia,Nymphalidae,Euphydryas-intermedia-description,156,1024,681,Albert Vliegenthart
+333,333,432441,eBMS458,Melitaea trivia,Nymphalidae,Melitaea-trivia-description,161,1024,710,Chris Van Swaay
+334,334,432442,eBMS459,Melitaea didyma,Nymphalidae,Melitaea-didyma-description,162,1024,768,Chris Van Swaay
+335,335,432443,eBMS460,Melitaea arduinna,Nymphalidae,Melitaea-arduinna-description,,,,
+336,336,432444,eBMS461,Melitaea aetherie,Nymphalidae,Melitaea-aetherie-description,160,1024,681,Albert Vliegenthart
+337,337,432445,eBMS462,Melitaea phoebe,Nymphalidae,Melitaea-phoebe-description,159,1024,681,Albert Vliegenthart
+338,338,432446,eBMS463,Melitaea ornata,Nymphalidae,Melitaea-ornata-description,,,,
+339,339,432447,eBMS464,Melitaea cinxia,Nymphalidae,Melitaea-cinxia-description,158,1024,738,Chris Van Swaay
+340,340,432448,eBMS465,Melitaea diamina,Nymphalidae,Melitaea-diamina-description,163,1024,681,Albert Vliegenthart
+341,341,432449,eBMS466,Melitaea celadussa,Nymphalidae,Melitaea-celadussa-description,,,,
+342,342,432450,eBMS467,Melitaea deione,Nymphalidae,Melitaea-deione-description,164,1024,668,Martin Wiemers
+343,343,432451,eBMS468,Melitaea britomartis,Nymphalidae,Melitaea-britomartis-description,167,1024,667,Albert Vliegenthart
+344,344,432452,eBMS469,Melitaea athalia,Nymphalidae,Melitaea-athalia-description,168,1024,768,Chris Van Swaay
+345,345,432453,eBMS470,Melitaea varia,Nymphalidae,Melitaea-varia-description,165,1024,683,Kars Veling
+346,346,432454,eBMS471,Melitaea parthenoides,Nymphalidae,Melitaea-parthenoides-description,,,,
+347,347,432455,eBMS472,Melitaea aurelia,Nymphalidae,Melitaea-aurelia-description,166,1024,768,Martin Wiemers
+348,348,432456,eBMS473,Melitaea asteria,Nymphalidae,Melitaea-asteria-description,,,,
+349,349,432457,eBMS474,Libythea celtis,Nymphalidae,Libythea-celtis-description,132,1024,761,Chris Van Swaay
+350,350,432458,eBMS475,Danaus plexippus,Nymphalidae,Danaus-plexippus-description,,,,
+351,351,432459,eBMS476,Danaus chrysippus,Nymphalidae,Danaus-chrysippus-description,238,1024,676,Kars Veling
+352,352,432460,eBMS477,Charaxes jasius,Nymphalidae,Charaxes-jasius-description,173,1024,687,Chris Van Swaay
+353,353,432461,eBMS478,Coenonympha phryne,Nymphalidae,Coenonympha-phryne-description,,,,
+354,354,432462,eBMS479,Coenonympha oedippus,Nymphalidae,Coenonympha-oedippus-description,182,1024,683,Kars Veling
+355,355,432463,eBMS480,Coenonympha dorus,Nymphalidae,Coenonympha-dorus-description,187,1024,681,Albert Vliegenthart
+356,356,432464,eBMS481,Coenonympha thyrsis,Nymphalidae,Coenonympha-thyrsis-description,,,,
+357,357,432465,eBMS482,Coenonympha pamphilus,Nymphalidae,Coenonympha-pamphilus-description,190,1024,681,Albert Vliegenthart
+358,358,432466,eBMS483,Coenonympha tullia,Nymphalidae,Coenonympha-tullia-description,181,1024,727,Chris Van Swaay
+359,359,432467,eBMS484,Coenonympha rhodopensis,Nymphalidae,Coenonympha-rhodopensis-description,183,1024,682,Kars Veling
+360,360,432468,eBMS485,Coenonympha amaryllis,Nymphalidae,Coenonympha-amaryllis-description,,,,
+361,361,432722,eBMS486,Coenonympha glycerion,Nymphalidae,Coenonympha-glycerion-description,185,1024,710,Kars Veling
+362,362,432470,eBMS487,Coenonympha corinna,Nymphalidae,Coenonympha-corinna-description,,,,
+363,363,432471,eBMS488,Coenonympha leander,Nymphalidae,Coenonympha-leander-description,189,1024,768,Chris Van Swaay
+364,364,432472,eBMS489,Coenonympha hero,Nymphalidae,Coenonympha-hero-description,188,1024,672,Kars Veling
+365,365,432473,eBMS490,Coenonympha gardetta,Nymphalidae,Coenonympha-gardetta-description,186,1024,681,Albert Vliegenthart
+366,366,432474,eBMS491,Coenonympha orientalis,Nymphalidae,Coenonympha-orientalis-description,,,,
+367,367,432475,eBMS492,Coenonympha arcania,Nymphalidae,Coenonympha-arcania-description,184,1024,681,Albert Vliegenthart
+368,368,432476,eBMS493,Kirinia roxelana,Nymphalidae,Kirinia-roxelana-description,,,,
+369,369,432723,eBMS494,Kirinia climene,Nymphalidae,Kirinia-climene-description,,,,
+370,370,432724,eBMS495,Lopinga achine,Nymphalidae,Lopinga-achine-description,,,,
+371,371,432479,eBMS496,Pararge xiphia,Nymphalidae,Pararge-xiphia-description,,,,
+372,372,432480,eBMS497,Pararge xiphioides,Nymphalidae,Pararge-xiphioides-description,,,,
+373,373,432481,eBMS498,Pararge aegeria,Nymphalidae,Pararge-aegeria-description,177,1024,729,Chris Van Swaay
+374,374,432482,eBMS499,Lasiommata maera,Nymphalidae,Lasiommata-maera-description,180,1024,683,Rudi Verovnik
+375,375,432483,eBMS500,Lasiommata deidamia,Nymphalidae,Lasiommata-deidamia-description,,,,
+376,376,432484,eBMS501,Lasiommata petropolitana,Nymphalidae,Lasiommata-petropolitana-description,179,1024,681,Albert Vliegenthart
+377,377,432485,eBMS502,Lasiommata paramegaera,Nymphalidae,Lasiommata-paramegaera-description,,,,
+378,378,432486,eBMS503,Lasiommata megera,Nymphalidae,Lasiommata-megera-description,178,1024,791,Chris Van Swaay
+379,379,432487,eBMS504,Melanargia russiae,Nymphalidae,Melanargia-russiae-description,216,1024,681,Albert Vliegenthart
+380,380,432488,eBMS505,Melanargia larissa,Nymphalidae,Melanargia-larissa-description,218,1024,681,Albert Vliegenthart
+381,381,432489,eBMS506,Melanargia lachesis,Nymphalidae,Melanargia-lachesis-description,217,1024,679,Kars Veling
+382,382,432490,eBMS507,Melanargia galathea,Nymphalidae,Melanargia-galathea-description,,,,
+383,383,432491,eBMS508,Melanargia ines,Nymphalidae,Melanargia-ines-description,220,1024,681,Albert Vliegenthart
+384,384,432492,eBMS509,Melanargia arge,Nymphalidae,Melanargia-arge-description,,,,
+385,385,432493,eBMS510,Melanargia pherusa,Nymphalidae,Melanargia-pherusa-description,,,,
+386,386,432494,eBMS511,Melanargia occitanica,Nymphalidae,Melanargia-occitanica-description,219,1024,668,Martin Wiemers
+387,387,432725,eBMS512,Hipparchia fatua,Nymphalidae,Hipparchia-fatua-description,230,1024,682,Kars Veling
+388,388,432496,eBMS513,Hipparchia statilinus,Nymphalidae,Hipparchia-statilinus-description,229,1024,681,Albert Vliegenthart
+389,389,432510,eBMS527,Hipparchia azorina,Nymphalidae,Hipparchia-azorina-description,,,,
+390,390,432511,eBMS528,Hipparchia senthes,Nymphalidae,Hipparchia-senthes-description,,,,
+391,391,432512,eBMS529,Hipparchia maderensis,Nymphalidae,Hipparchia-maderensis-description,,,,
+392,392,432727,eBMS530,Hipparchia semele,Nymphalidae,Hipparchia-semele-description,227,1024,768,Chris Van Swaay
+393,393,432514,eBMS531,Hipparchia blachieri,Nymphalidae,Hipparchia-blachieri-description,,,,
+394,394,432515,eBMS532,Hipparchia aristaeus,Nymphalidae,Hipparchia-aristaeus-description,,,,
+395,395,432516,eBMS533,Hipparchia volgensis,Nymphalidae,Hipparchia-volgensis-description,228,1024,681,Albert Vliegenthart
+396,396,432517,eBMS534,Hipparchia neapolitana,Nymphalidae,Hipparchia-neapolitana-description,,,,
+397,397,432518,eBMS535,Hipparchia leighebi,Nymphalidae,Hipparchia-leighebi-description,,,,
+398,398,432519,eBMS536,Hipparchia pellucida,Nymphalidae,Hipparchia-pellucida-description,,,,
+399,399,432520,eBMS537,Hipparchia sbordonii,Nymphalidae,Hipparchia-sbordonii-description,,,,
+400,400,432521,eBMS538,Hipparchia cypriensis,Nymphalidae,Hipparchia-cypriensis-description,,,,
+401,401,432522,eBMS539,Hipparchia cretica,Nymphalidae,Hipparchia-cretica-description,,,,
+402,402,432523,eBMS540,Hipparchia christenseni,Nymphalidae,Hipparchia-christenseni-description,,,,
+403,403,432524,eBMS541,Minois dryas,Nymphalidae,Minois-dryas-description,223,1024,768,Martin Wiemers
+404,404,432525,eBMS542,Brintesia circe,Nymphalidae,Brintesia-circe-description,233,1024,1341,Chris Van Swaay
+405,405,432526,eBMS543,Arethusana arethusa,Nymphalidae,Arethusana-arethusa-description,232,1024,768,Chris Van Swaay
+406,406,432527,eBMS544,Oeneis tarpeia,Nymphalidae,Oeneis-tarpeia-description,,,,
+407,407,432528,eBMS545,Oeneis bore,Nymphalidae,Oeneis-bore-description,,,,
+408,408,432529,eBMS546,Oeneis ammon,Nymphalidae,Oeneis-ammon-description,,,,
+409,409,432530,eBMS547,Oeneis melissa,Nymphalidae,Oeneis-melissa-description,,,,
+410,410,432531,eBMS548,Oeneis magna,Nymphalidae,Oeneis-magna-description,,,,
+411,411,432532,eBMS549,Oeneis jutta,Nymphalidae,Oeneis-jutta-description,237,1024,825,Chris Van Swaay
+412,412,432533,eBMS550,Oeneis norna,Nymphalidae,Oeneis-norna-description,,,,
+413,413,432534,eBMS551,Oeneis polixenes,Nymphalidae,Oeneis-polixenes-description,,,,
+414,414,432535,eBMS552,Oeneis glacialis,Nymphalidae,Oeneis-glacialis-description,236,1024,693,Kars Veling
+415,415,432536,eBMS553,Satyrus ferula,Nymphalidae,Satyrus-ferula-description,221,1024,753,Chris Van Swaay
+416,416,432537,eBMS554,Satyrus virbius,Nymphalidae,Satyrus-virbius-description,,,,
+417,417,432538,eBMS555,Satyrus actaea,Nymphalidae,Satyrus-actaea-description,222,1024,681,Albert Vliegenthart
+418,418,432539,eBMS556,Chazara briseis,Nymphalidae,Chazara-briseis-description,234,1024,681,Albert Vliegenthart
+419,419,432540,eBMS557,Chazara prieuri,Nymphalidae,Chazara-prieuri-description,,,,
+420,420,432541,eBMS558,Chazara persephone,Nymphalidae,Chazara-persephone-description,,,,
+421,421,432542,eBMS559,Pseudochazara geyeri,Nymphalidae,Pseudochazara-geyeri-description,,,,
+422,422,432543,eBMS560,Pseudochazara graeca,Nymphalidae,Pseudochazara-graeca-description,,,,
+423,423,432544,eBMS561,Pseudochazara amymone,Nymphalidae,Pseudochazara-amymone-description,,,,
+424,424,432545,eBMS562,Pseudochazara anthelea,Nymphalidae,Pseudochazara-anthelea-description,235,1024,681,Albert Vliegenthart
+425,425,432546,eBMS563,Pseudochazara amalthea,Nymphalidae,Pseudochazara-amalthea-description,,,,
+426,426,432547,eBMS564,Pseudochazara williamsi,Nymphalidae,Pseudochazara-williamsi-description,,,,
+427,427,432548,eBMS565,Pseudochazara euxina,Nymphalidae,Pseudochazara-euxina-description,,,,
+428,428,432549,eBMS566,Pseudochazara mercurius,Nymphalidae,Pseudochazara-mercurius-description,,,,
+429,429,432550,eBMS567,Pseudochazara cingovskii,Nymphalidae,Pseudochazara-cingovskii-description,,,,
+430,430,432551,eBMS568,Pseudochazara tisiphone,Nymphalidae,Pseudochazara-tisiphone-description,,,,
+431,431,432552,eBMS569,Pseudochazara orestes,Nymphalidae,Pseudochazara-orestes-description,,,,
+432,432,432553,eBMS570,Ypthima asterope,Nymphalidae,Ypthima-asterope-description,,,,
+433,433,432554,eBMS571,Proterebia phegea,Nymphalidae,Proterebia-phegea-description,,,,
+434,434,432555,eBMS572,Hyponephele huebneri,Nymphalidae,Hyponephele-huebneri-description,,,,
+435,435,432556,eBMS573,Hyponephele lycaon,Nymphalidae,Hyponephele-lycaon-description,195,1024,681,Albert Vliegenthart
+436,436,432728,eBMS574,Hyponephele lupina,Nymphalidae,Hyponephele-lupina-description,196,1024,678,Kars Veling
+437,437,432558,eBMS575,Aphantopus hyperantus,Nymphalidae,Aphantopus-hyperantus-description,,,,
+438,438,432729,eBMS576,Pyronia cecilia,Nymphalidae,Pyronia-cecilia-description,192,1024,679,Kars Veling
+439,439,432560,eBMS577,Pyronia tithonus,Nymphalidae,Pyronia-tithonus-description,191,1024,681,Albert Vliegenthart
+440,440,432561,eBMS578,Pyronia bathseba,Nymphalidae,Pyronia-bathseba-description,193,1024,681,Albert Vliegenthart
+441,441,432562,eBMS579,Maniola jurtina,Nymphalidae,Maniola-jurtina-description,194,1024,681,Albert Vliegenthart
+442,442,432563,eBMS580,Maniola nurag,Nymphalidae,Maniola-nurag-description,,,,
+443,443,432564,eBMS581,Maniola chia,Nymphalidae,Maniola-chia-description,,,,
+444,444,432565,eBMS582,Maniola megala,Nymphalidae,Maniola-megala-description,,,,
+445,445,432566,eBMS583,Maniola cypricola,Nymphalidae,Maniola-cypricola-description,,,,
+446,446,432567,eBMS584,Maniola telmessia,Nymphalidae,Maniola-telmessia-description,,,,
+447,447,432568,eBMS585,Maniola halicarnassus,Nymphalidae,Maniola-halicarnassus-description,,,,
+448,448,432569,eBMS586,Erebia edda,Nymphalidae,Erebia-edda-description,,,,
+449,449,432570,eBMS587,Erebia fasciata,Nymphalidae,Erebia-fasciata-description,,,,
+450,450,432571,eBMS588,Erebia discoidalis,Nymphalidae,Erebia-discoidalis-description,,,,
+451,451,432572,eBMS589,Erebia rossii,Nymphalidae,Erebia-rossii-description,,,,
+452,452,432573,eBMS590,Erebia cyclopius,Nymphalidae,Erebia-cyclopius-description,,,,
+453,453,432574,eBMS591,Erebia embla,Nymphalidae,Erebia-embla-description,,,,
+454,454,432575,eBMS592,Erebia disa,Nymphalidae,Erebia-disa-description,,,,
+455,455,432576,eBMS593,Erebia meolans,Nymphalidae,Erebia-meolans-description,214,1024,717,Kars Veling
+456,456,432577,eBMS594,Erebia dabanensis,Nymphalidae,Erebia-dabanensis-description,,,,
+457,457,432578,eBMS595,Erebia jeniseiensis,Nymphalidae,Erebia-jeniseiensis-description,,,,
+458,458,432579,eBMS596,Erebia claudina,Nymphalidae,Erebia-claudina-description,,,,
+459,459,432730,eBMS597,Erebia manto,Nymphalidae,Erebia-manto-description,,,,
+460,460,432581,eBMS598,Erebia ottomana,Nymphalidae,Erebia-ottomana-description,208,1024,674,Kars Veling
+461,461,432582,eBMS599,Erebia hispania,Nymphalidae,Erebia-hispania-description,,,,
+462,462,432583,eBMS600,Erebia rondoui,Nymphalidae,Erebia-rondoui-description,,,,
+463,463,432584,eBMS601,Erebia callias,Nymphalidae,Erebia-callias-description,,,,
+464,464,432585,eBMS602,Erebia tyndarus,Nymphalidae,Erebia-tyndarus-description,209,1024,683,Kars Veling
+465,465,432586,eBMS603,Erebia cassioides,Nymphalidae,Erebia-cassioides-description,210,1024,678,Kars Veling
+466,466,432587,eBMS604,Erebia nivalis,Nymphalidae,Erebia-nivalis-description,,,,
+467,467,432588,eBMS605,Erebia neleus,Nymphalidae,Erebia-neleus-description,,,,
+468,468,432589,eBMS606,Erebia calcarius,Nymphalidae,Erebia-calcarius-description,,,,
+469,469,432590,eBMS607,Erebia arvernensis,Nymphalidae,Erebia-arvernensis-description,,,,
+470,470,432591,eBMS608,Erebia oeme,Nymphalidae,Erebia-oeme-description,213,1024,683,Rudi Verovnik
+471,471,432592,eBMS609,Erebia gorge,Nymphalidae,Erebia-gorge-description,206,1024,683,Kars Veling
+472,472,432593,eBMS610,Erebia sthennyo,Nymphalidae,Erebia-sthennyo-description,,,,
+473,473,432594,eBMS611,Erebia pandrose,Nymphalidae,Erebia-pandrose-description,215,1024,683,Rudi Verovnik
+474,474,432595,eBMS612,Erebia eriphyle,Nymphalidae,Erebia-eriphyle-description,,,,
+475,475,432596,eBMS613,Erebia epistygne,Nymphalidae,Erebia-epistygne-description,,,,
+476,476,432597,eBMS614,Erebia euryale,Nymphalidae,Erebia-euryale-description,198,1024,683,Rudi Verovnik
+477,477,432598,eBMS615,Erebia palarica,Nymphalidae,Erebia-palarica-description,,,,
+478,478,432599,eBMS616,Erebia ligea,Nymphalidae,Erebia-ligea-description,197,1024,683,Martin Wiemers
+479,479,432600,eBMS617,Erebia pluto,Nymphalidae,Erebia-pluto-description,205,1024,679,Kars Veling
+480,480,432601,eBMS618,Erebia aethiopellus,Nymphalidae,Erebia-aethiopellus-description,,,,
+481,481,432602,eBMS619,Erebia gorgone,Nymphalidae,Erebia-gorgone-description,,,,
+482,482,432603,eBMS620,Erebia rhodopensis,Nymphalidae,Erebia-rhodopensis-description,,,,
+483,483,432604,eBMS621,Erebia mnestra,Nymphalidae,Erebia-mnestra-description,207,1024,668,Martin Wiemers
+484,484,432605,eBMS622,Erebia albergana,Nymphalidae,Erebia-albergana-description,204,1024,746,Kars Veling
+485,485,432606,eBMS623,Erebia sudetica,Nymphalidae,Erebia-sudetica-description,,,,
+486,486,432607,eBMS624,Erebia melampus,Nymphalidae,Erebia-melampus-description,201,1024,683,Martin Wiemers
+487,487,432608,eBMS625,Erebia triarius,Nymphalidae,Erebia-triarius-description,,,,
+488,488,432609,eBMS626,Erebia polaris,Nymphalidae,Erebia-polaris-description,,,,
+489,489,432610,eBMS627,Erebia medusa,Nymphalidae,Erebia-medusa-description,203,1024,781,Chris Van Swaay
+490,490,432611,eBMS628,Erebia aethiops,Nymphalidae,Erebia-aethiops-description,202,1024,683,Kars Veling
+491,491,432612,eBMS629,Erebia pharte,Nymphalidae,Erebia-pharte-description,200,1024,678,Kars Veling
+492,492,432613,eBMS630,Erebia christi,Nymphalidae,Erebia-christi-description,,,,
+493,493,432614,eBMS631,Erebia orientalis,Nymphalidae,Erebia-orientalis-description,,,,
+494,494,432615,eBMS632,Erebia epiphron,Nymphalidae,Erebia-epiphron-description,199,1024,683,Rudi Verovnik
+495,495,432616,eBMS633,Erebia flavofasciata,Nymphalidae,Erebia-flavofasciata-description,,,,
+496,496,432617,eBMS634,Erebia montana,Nymphalidae,Erebia-montana-description,,,,
+497,497,432618,eBMS635,Erebia styx,Nymphalidae,Erebia-styx-description,212,1024,668,Martin Wiemers
+498,498,432619,eBMS636,Erebia stiria,Nymphalidae,Erebia-stiria-description,,,,
+499,499,432620,eBMS637,Erebia scipio,Nymphalidae,Erebia-scipio-description,,,,
+500,500,432621,eBMS638,Erebia pronoe,Nymphalidae,Erebia-pronoe-description,211,1024,681,Albert Vliegenthart
+501,501,432622,eBMS639,Erebia melas,Nymphalidae,Erebia-melas-description,,,,
+502,502,432623,eBMS640,Erebia lefebvrei,Nymphalidae,Erebia-lefebvrei-description,,,,
+503,503,432624,eBMS641,Erebia zapateri,Nymphalidae,Erebia-zapateri-description,,,,
+504,504,432625,eBMS642,Erebia neoridas,Nymphalidae,Erebia-neoridas-description,,,,

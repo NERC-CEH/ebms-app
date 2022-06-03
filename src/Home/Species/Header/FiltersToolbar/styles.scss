@@ -1,0 +1,18 @@
+ion-toolbar.species-searchbar {
+  display: none;
+
+  &.searching {
+    display: block;
+  }
+
+  ion-searchbar {
+    height: 44px;
+    padding: 0 5px;
+    text-align: left;
+    --cancel-button-color: var(--ion-color-dark);
+
+    &.ios {
+      margin-top: 4px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+ion-toolbar.filterbar {
+  --padding-top: 0;
+  --min-height: 2em;
+  max-height: 2em;
+
+  > div {
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    ion-chip {
+      height: 1.5em;
+      margin: 0 5px 0;
+
+      &:not(.text) {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

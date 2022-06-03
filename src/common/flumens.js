@@ -45,6 +45,7 @@ export { default as InfoButton } from '@flumens/ionic/dist/components/InfoButton
 export { default as PhotoPicker } from '@flumens/ionic/dist/components/PhotoPicker';
 export { default as MenuAttrItem } from '@flumens/ionic/dist/components/MenuAttrItem';
 export { default as MenuAttrItemFromModel } from '@flumens/ionic/dist/components/MenuAttrItemFromModel';
+export { default as UserFeedbackRequest } from '@flumens/ionic/dist/components/UserFeedbackRequest';
 export { default as ModelLocationMap } from '@flumens/ionic/dist/components/ModelLocationMap';
 export { useToast, useAlert, useLoader } from '@flumens/ionic/dist/hooks';
 export * from '@flumens/ionic/dist/utils/validation';

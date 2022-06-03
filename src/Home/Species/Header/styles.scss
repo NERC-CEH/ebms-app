@@ -1,0 +1,51 @@
+#home-species {
+  .app-name {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 49px;
+    text-align: center;
+    color: black;
+
+    &.md {
+      padding: 0;
+    }
+
+    b {
+      color: var(--ion-color-primary);
+    }
+  }
+
+  ion-toolbar {
+    --ion-toolbar-background: white;
+    --color: black;
+  }
+
+  ion-toolbar.species-toolbar {
+    ion-icon.md {
+      font-size: 2.3em;
+    }
+    ion-icon.ios {
+      font-size: 1.9em;
+    }
+
+    ion-buttons {
+      max-width: 50px;
+    }
+
+    ion-button {
+      &.md.search {
+        --padding-bottom: 0;
+        --padding-end: 0;
+        --padding-start: 0;
+        --padding-top: 0;
+      }
+
+      ion-icon {
+        color: black;
+        --ionicon-stroke-width: 20px;
+        margin-top: 5px;
+        padding: 0 4px;
+      }
+    }
+  }
+}
