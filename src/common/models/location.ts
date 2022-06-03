@@ -105,7 +105,7 @@ interface Attrs extends ModelAttrs {
 class LocationModel extends Model {
   static schema = {
     type: {
-      pageProps:{
+      pageProps: {
         attrProps: {
           input: 'radio',
           info: 'What is the moth trap type?',
@@ -320,6 +320,15 @@ class LocationModel extends Model {
       this.remote.synchronising = false;
 
       const err = e as AxiosError;
+
+      if (err.response?.status === 409 && err.response?.data.duplicate_of) {
+        console.log('Location uploading duplicate was found');
+        const uploadTime = new Date().getTime();
+        this.metadata.updatedOn = uploadTime;
+        this.metadata.syncedOn = uploadTime;
+        this.id = err.response?.data.duplicate_of.id;
+        return this;
+      }
 
       const serverMessage = err.response?.data?.message;
       if (!serverMessage) {
