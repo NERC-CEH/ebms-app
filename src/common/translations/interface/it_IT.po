@@ -506,8 +506,9 @@ msgstr "Sei sicuro di voler eliminare questa foto dal campione? "
 msgid "Note: it will remain in the gallery."
 msgstr "Nota: rimarrà in galleria "
 
-msgid "No photo has been added"
-msgstr "Nessuna foto è stata aggiunta "
+# Photo picker
+msgid "No photo has been added.<br/>Press <3></3> to add."
+msgstr "Šis įrašas neturi jokių nuotraukų.<br/>Spauskite <3></3> pridėti."
 
 msgid "Registration error:"
 msgstr "Errore di registrazione:"
@@ -1847,12 +1848,15 @@ msgid "<0>Warning</0> - we could not identify this species."
 msgstr "<0>Warning</0> - non riusciamo ad identificare questa specie"
 
 # Moth survey image gallery warning message
-msgid "<0>Warning</0> - we think it is"
-msgstr "<0>Warning</0> - pensiamo che sia"
+msgid ""
+"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species."
+msgstr "<0>Įspėjimas</0> - mes manome, kad tai yra {{probability}}% likely a <5>{{taxon}}</5> "
+"rūšis."
 
 # Moth survey image gallery warning message
-msgid "likely a"
-msgstr "probabilmente un"
+msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
+msgstr "Mes manome, kad tai {{probability}}% yra <3>{{taxon}}</3> rūšis."
 
 # App settings title
 msgid "Surveying"
@@ -1882,8 +1886,8 @@ msgstr ""
 " delle specie"
 
 # Moth survey button label
-msgid "IDENTIFY"
-msgstr "IDENTIFICA"
+msgid "Identify"
+msgstr "Identifikuoti"
 
 # Moth survey button label
 msgid "Identify All"

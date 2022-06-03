@@ -501,8 +501,9 @@ msgstr "Opravdu chcete odebrat tuto fotografii?"
 msgid "Note: it will remain in the gallery."
 msgstr "Poznámka: fotografie zůstane v galerii"
 
-msgid "No photo has been added"
-msgstr "Žádná fotografie nebyla vložena"
+# Photo picker
+msgid "No photo has been added.<br/>Press <3></3> to add."
+msgstr ""
 
 msgid "Registration error:"
 msgstr "Chyba registrace"
@@ -1793,11 +1794,13 @@ msgid "<0>Warning</0> - we could not identify this species."
 msgstr ""
 
 # Moth survey image gallery warning message
-msgid "<0>Warning</0> - we think it is"
+msgid ""
+"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species."
 msgstr ""
 
 # Moth survey image gallery warning message
-msgid "likely a"
+msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
 msgstr ""
 
 # App settings title
@@ -1826,7 +1829,7 @@ msgid ""
 msgstr ""
 
 # Moth survey button label
-msgid "IDENTIFY"
+msgid "Identify"
 msgstr ""
 
 # Moth survey button label

@@ -505,8 +505,9 @@ msgstr "Weet u zeker dat u de foto wilt verwijderen"
 msgid "Note: it will remain in the gallery."
 msgstr "Notitie: deze zal in de galerij blijven staan"
 
-msgid "No photo has been added"
-msgstr "Er is nog geen foto geupload"
+# Photo picker
+msgid "No photo has been added.<br/>Press <3></3> to add."
+msgstr ""
 
 msgid "Registration error:"
 msgstr "Registratiefout:"
@@ -1807,12 +1808,14 @@ msgid "<0>Warning</0> - we could not identify this species."
 msgstr "<0>Waarschuwing</0> - we kunnen deze soort niet op naam brengen"
 
 # Moth survey image gallery warning message
-msgid "<0>Warning</0> - we think it is"
-msgstr "<0>Waarschuwing</0> - we denken dat het de volgende soort is"
+msgid ""
+"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species."
+msgstr ""
 
 # Moth survey image gallery warning message
-msgid "likely a"
-msgstr "waarschijnlijk een"
+msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
+msgstr ""
 
 # App settings title
 msgid "Surveying"
@@ -1842,8 +1845,8 @@ msgstr ""
 "beeldherkenning."
 
 # Moth survey button label
-msgid "IDENTIFY"
-msgstr "Breng op naam"
+msgid "Identify"
+msgstr ""
 
 # Moth survey button label
 msgid "Identify All"

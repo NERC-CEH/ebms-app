@@ -1,7 +1,27 @@
 import { Occurrence, OccurrenceOptions, OccurrenceAttrs } from '@flumens';
 import appModel from 'models/app';
-import speciesCommonNamesData from 'common/data/commonNames/index.json';
+import { MachineInvolvement } from 'Survey/Moth/config';
 import Media from './media';
+
+export type Taxon = {
+  // species: OptionalExcept<
+  //   Species,
+  //   'commonNames' | 'scientificNameWithoutAuthor'
+  // >;
+  // suggestions?: ResultWithWarehouseID[];
+
+  version?: string;
+
+  machineInvolvement?: MachineInvolvement;
+  suggestions?: any;
+
+  array_id?: number;
+  found_in_name?: string;
+  group?: number;
+  scientific_name?: string;
+  species_id?: number;
+  warehouse_id: number;
+};
 
 type Attrs = OccurrenceAttrs & {
   taxon: any;
@@ -28,9 +48,9 @@ export default class AppOccurrence extends Occurrence {
 
   getTaxonName() {
     const { taxon } = this.attrs;
-    if (!taxon || !taxon.found_in_name) {
-      return null;
-    }
+    if (!taxon) return null;
+
+    if (!taxon.found_in_name) return taxon.scientific_name;
 
     return taxon[taxon.found_in_name];
   }
@@ -45,8 +65,12 @@ export default class AppOccurrence extends Occurrence {
   async identify() {
     const identifyAllImages = (media: Media) => media.identify();
 
-    // [sp1, null, sp3, sp1 ]
-    const species = await Promise.all(this.media.map(identifyAllImages));
+    // [sp1, null, sp2, sp3 ]
+    const allSuggestions = await Promise.all(this.media.map(identifyAllImages));
+
+    // [sp1, sp2, sp3 ]
+    const hasValue = (val: any) => !!val;
+    const suggestions = allSuggestions.filter(hasValue);
 
     let highestProbSpecies: any = null;
     const findHighestProbSpecies = (sp: any) => {
@@ -59,33 +83,16 @@ export default class AppOccurrence extends Occurrence {
         highestProbSpecies = sp;
       }
     };
-    species.forEach(findHighestProbSpecies);
-
-    const { language } = appModel.attrs;
-    const speciesDataBySpecificLanguage = (speciesCommonNamesData as any)[
-      language as any
-    ];
+    suggestions.forEach(findHighestProbSpecies);
 
     if (!highestProbSpecies) return this.attrs.taxon;
 
-    const byId = (spName: any) =>
-      spName.preferredId ===
-      parseInt(highestProbSpecies.taxa_taxon_list_id, 10);
-
-    const taxon = speciesDataBySpecificLanguage?.find(byId);
-
-    if (taxon) {
-      this.attrs.taxon = {
-        ...taxon,
-        found_in_name: 'common_name',
-      };
-    } else {
-      this.attrs.taxon = {
-        warehouse_id: parseInt(highestProbSpecies.taxa_taxon_list_id, 10),
-        scientific_name: highestProbSpecies.taxon,
-        found_in_name: 'scientific_name',
-      };
-    }
+    this.attrs.taxon = {
+      ...highestProbSpecies,
+      machineInvolvement: MachineInvolvement.MACHINE,
+      version: '1',
+      suggestions,
+    };
 
     this.save();
 

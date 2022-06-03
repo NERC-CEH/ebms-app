@@ -1,5 +1,4 @@
 import { Media, MediaAttrs } from '@flumens';
-import axios from 'axios';
 import { observable } from 'mobx';
 import CONFIG from 'common/config';
 import { isPlatform } from '@ionic/react';
@@ -9,6 +8,7 @@ import {
   Filesystem,
   Directory as FilesystemDirectory,
 } from '@capacitor/filesystem';
+import identifyImage from 'common/services/waarneming';
 
 export type URL = string;
 
@@ -106,60 +106,36 @@ export default class AppMedia extends Media {
   }
 
   doesTaxonMatchParent = () => {
-    if (!this.attrs?.species || !this.attrs?.species.length) return false;
+    const species = this.attrs?.species?.[0];
+    if (!species) return false;
+
+    const speciesId = species.warehouse_id;
+    const parentTaxon = this.parent.attrs?.taxon;
 
     return (
-      parseInt(this.attrs?.species[0]?.taxa_taxon_list_id, 10) ===
-        this.parent.attrs?.taxon?.warehouse_id ||
-      parseInt(this.attrs?.species[0]?.taxa_taxon_list_id, 10) ===
-        this.parent.attrs?.taxon?.preferredId
+      speciesId === parentTaxon?.warehouse_id ||
+      speciesId === parentTaxon?.preferredId
     );
   };
 
   async identify() {
     const hasSpeciesBeenIdentified = !!this.attrs.species;
-
     if (hasSpeciesBeenIdentified) return this.attrs.species[0];
 
     this.identification.identifying = true;
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    await this.uploadFile();
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    const url = this.getRemoteURL();
-
-    const data = new URLSearchParams({ image: url });
-
-    const params = new URLSearchParams({
-      _api_proxy_uri: 'identify-proxy/v1/?app_name=uni-jena',
-    });
-
-    const options: any = {
-      method: 'post',
-      params,
-      // url: `${CONFIG.backend.url}/api-proxy/waarneming`,
-      url: 'https://butterfly-monitoring.net/api-proxy/waarneming',
-      headers: {
-        Authorization: `Bearer ${await userModel.getAccessToken()}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      data,
-      timeout: 80000,
-    };
-
     try {
-      const species = await axios(options);
-      const withValidData = (sp: any) => sp.taxa_taxon_list_id && sp.taxon;
-      const normalizeName = (sp: any) => ({
-        ...sp,
-        found_in_name: 'scientific_name',
-      });
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      await this.uploadFile();
 
-      this.attrs.species = species.data
-        .filter(withValidData)
-        .map(normalizeName);
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      const url = this.getRemoteURL();
+
+      const suggestions = await identifyImage(url);
+
+      this.attrs.species = suggestions;
 
       this.parent.save();
     } catch (error) {
@@ -168,6 +144,6 @@ export default class AppMedia extends Media {
 
     this.identification.identifying = false;
 
-    return this.attrs.species[0];
+    return this.attrs.species?.[0];
   }
 }

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { PhotoPicker } from '@flumens';
+import { PhotoPicker, device } from '@flumens';
 import Sample from 'models/sample';
 import userModel from 'models/user';
 import Occurrence from 'models/occurrence';
@@ -40,7 +40,12 @@ const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
 
     const imageModel = await utils.getImageModel(Media, image, config.dataPath);
 
-    if (isMothSurvey && useImageIdentifier && userModel.isLoggedIn())
+    if (
+      isMothSurvey &&
+      useImageIdentifier &&
+      userModel.isLoggedIn() &&
+      device.isOnline
+    )
       imageModel.identify();
 
     return imageModel;

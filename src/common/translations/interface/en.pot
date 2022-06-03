@@ -493,8 +493,9 @@ msgstr "Are you sure you want to remove this photo?"
 msgid "Note: it will remain in the gallery."
 msgstr "Note: it will remain in the gallery."
 
-msgid "No photo has been added"
-msgstr "No photo has been added"
+# Photo picker 
+msgid "No photo has been added.<br/>Press <3></3> to add."
+msgstr "No photo has been added.<br/>Press <3></3> to add."
 
 msgid "Registration error:"
 msgstr "Registration error:"
@@ -1799,12 +1800,12 @@ msgid "<0>Warning</0> - we could not identify this species."
 msgstr "<0>Warning</0> - we could not identify this species."
 
 # Moth survey image gallery warning message
-msgid "<0>Warning</0> - we think it is"
-msgstr "<0>Warning</0> - we think it is"
+msgid "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species."
+msgstr "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species."
 
 # Moth survey image gallery warning message
-msgid "likely a"
-msgstr "likely a"
+msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
+msgstr "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
 
 # App settings title
 msgid "Surveying"
@@ -1833,8 +1834,8 @@ msgstr ""
 "We will help you to identify species using our species image classifier."
 
 # Moth survey button label
-msgid "IDENTIFY"
-msgstr "IDENTIFY"
+msgid "Identify"
+msgstr "Identify"
 
 # Moth survey button label
 msgid "Identify All"

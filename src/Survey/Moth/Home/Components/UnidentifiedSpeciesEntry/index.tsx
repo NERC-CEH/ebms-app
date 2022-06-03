@@ -136,7 +136,7 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
             fill={buttonStyles}
             onClick={onIdentifyOccurrence}
           >
-            <T>IDENTIFY</T>
+            <T>Identify</T>
           </IonButton>
         )}
 

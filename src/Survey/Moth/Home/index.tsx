@@ -24,7 +24,11 @@ function useDeleteSpeciesPrompt() {
     const prompt = () => {
       alert({
         header: 'Delete',
-        message: `Are you sure you want to delete ${occ.getTaxonName()}?`,
+        message: (
+          <T>
+            Are you sure you want to delete {{ taxon: occ.getTaxonName() }} ?
+          </T>
+        ),
         buttons: [
           {
             text: 'Cancel',

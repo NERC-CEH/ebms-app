@@ -191,3 +191,30 @@ const UNKNOWN_SPECIES: UnknownSpeciesObject = {
 
 export const getUnkownSpecies = () =>
   UNKNOWN_SPECIES[appModel.attrs.language as any] || UNKNOWN_SPECIES.en;
+
+export enum MachineInvolvement {
+  /**
+   * No involvement.
+   */
+  NONE = 0,
+  /**
+   * Human determined, machine suggestions were ignored.
+   */
+  HUMAN = 1,
+  /**
+   * Human chose a machine suggestion given a very low probability.
+   */
+  HUMAN_ACCEPTED_LESS_PREFERRED_LOW = 2,
+  /**
+   * Human chose a machine suggestion that was less-preferred.
+   */
+  HUMAN_ACCEPTED_LESS_PREFERRED = 3,
+  /**
+   * Human chose a machine suggestion that was the preferred choice.
+   */
+  HUMAN_ACCEPTED_PREFERRED = 4,
+  /**
+   * Machine determined with no human involvement.
+   */
+  MACHINE = 5,
+}

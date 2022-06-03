@@ -29,14 +29,14 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
         onClick={identifyImage}
       >
         <IonIcon icon={mothIcon} />
-        <T>IDENTIFY</T>
+        <T>Identify</T>
       </IonButton>
     );
   }
 
   if (identifierFoundNoSpecies) {
     return (
-      <IonLabel className="gallery-warning-message">
+      <IonLabel className="gallery-ai-message">
         <T>
           <b>Warning</b> - we could not identify this species.
         </T>
@@ -49,19 +49,20 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
 
   if (!doesTaxonMatchParent) {
     return (
-      <IonLabel className="gallery-warning-message">
+      <IonLabel className="gallery-ai-message">
         <T>
-          <b>Warning</b> - we think it is
-        </T>{' '}
-        {probability}% <T>likely a</T> <i>{taxon}</i> <T>species</T>.
+          <b>Warning</b> - we think it is {{ probability }}% likely a{' '}
+          <i>{{ taxon }}</i> species.
+        </T>
       </IonLabel>
     );
   }
 
   return (
-    <IonLabel className="gallery-warning-message">
-      <T>We think it is</T> {probability}% <T>likely a</T> <i>{taxon}</i>{' '}
-      <T>species</T>.
+    <IonLabel className="gallery-ai-message">
+      <T>
+        We think it is {{ probability }}% likely a <i>{{ taxon }}</i> species.
+      </T>
     </IonLabel>
   );
 };
