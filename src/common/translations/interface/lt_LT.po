@@ -2000,6 +2000,14 @@ msgid "Additional description of lamp."
 msgstr "Papildoma informacija apie lempą."
 
 # Moth trap survey
+msgid "Please add the moth trap location and name."
+msgstr "Prašome įvesti gaudyklės vietą ir pavadinimą."
+
+# Survey validation
+msgid "Incomplete"
+msgstr "Neužbaigta"
+
+# Moth trap survey
 msgid "Select"
 msgstr "Pasirinkti"
 

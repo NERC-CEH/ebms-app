@@ -2046,6 +2046,14 @@ msgid "Additional description of lamp."
 msgstr "Descripción adicional de la lámpara."
 
 # Moth trap survey
+msgid "Please add the moth trap location and name."
+msgstr ""
+
+# Survey validation
+msgid "Incomplete"
+msgstr "Incompleto"
+
+# Moth trap survey
 msgid "Select"
 msgstr "Seleccionar"
 
