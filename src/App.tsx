@@ -38,7 +38,7 @@ const IonApp = IonAppPlain as any as FC<{ lang: any }>; // IonApp has 'lang' pro
 
 const HomeRedirect = () => {
   const { navigate } = useContext(NavContext);
-  navigate('/home/report', 'root'); // simple redirect component doesn't work when back from login
+  navigate('/home/species', 'root'); // simple redirect component doesn't work when back from login
   return null;
 };
 

@@ -7,11 +7,9 @@ import {
   IonRefresher,
   IonRefresherContent,
   IonSpinner,
-  IonIcon,
 } from '@ionic/react';
-import { bookOutline, helpBuoyOutline } from 'ionicons/icons';
 import appModel from 'models/app';
-import { Page, Main, device, useAlert, useToast } from '@flumens';
+import { Page, Main, device, useToast } from '@flumens';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import { Trans as T } from 'react-i18next';
 import { fetchSpeciesReport } from './services';
@@ -21,37 +19,6 @@ const Report: FC = () => {
   const [species, setSpecies] = useState<any[]>([]);
   const [refreshing, setRefreshing] = useState(false);
   const toast = useToast();
-  const alert = useAlert();
-
-  const showInfoGuideTip = () => {
-    if (!appModel.attrs.showGuideHelpTip) {
-      return;
-    }
-
-    alert({
-      header: 'Tip: Finding Help',
-      message: (
-        <>
-          <T>
-            Please visit the Guide{' '}
-            <IonIcon icon={bookOutline} style={{ marginBottom: '-3px' }} /> and
-            Help{' '}
-            <IonIcon icon={helpBuoyOutline} style={{ marginBottom: '-3px' }} />{' '}
-            pages before using the app!
-          </T>
-        </>
-      ),
-      buttons: [
-        {
-          text: 'OK, got it',
-          role: 'cancel',
-          cssClass: 'primary',
-        },
-      ],
-    });
-    appModel.attrs.showGuideHelpTip = false;
-    appModel.save();
-  };
 
   const refreshReport = async () => {
     setRefreshing(true);
@@ -68,7 +35,6 @@ const Report: FC = () => {
   };
 
   useEffect(() => {
-    showInfoGuideTip();
     if (!appModel.speciesReport.length && device.isOnline) {
       refreshReport();
       return;
@@ -207,8 +173,6 @@ const Report: FC = () => {
         </IonRefresher>
 
         {getReport()}
-
-        {showInfoGuideTip()}
       </Main>
     </Page>
   );
