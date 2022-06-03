@@ -1,10 +1,6 @@
-import { FC, useContext } from 'react';
-import { Route } from 'react-router-dom';
-import {
-  IonApp as IonAppPlain,
-  IonRouterOutlet,
-  NavContext,
-} from '@ionic/react';
+import { FC } from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import { IonApp as IonAppPlain, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import appModel from 'models/app';
 import { observer } from 'mobx-react';
@@ -36,11 +32,7 @@ import 'common/theme.scss';
 
 const IonApp = IonAppPlain as any as FC<{ lang: any }>; // IonApp has 'lang' prop missing.
 
-const HomeRedirect = () => {
-  const { navigate } = useContext(NavContext);
-  navigate('/home/species', 'root'); // simple redirect component doesn't work when back from login
-  return null;
-};
+const HomeRedirect = () => <Redirect to="home" />;
 
 const App = () => {
   const { language } = appModel.attrs;
@@ -52,13 +44,13 @@ const App = () => {
           <SplashScreenRequired>
             <WhatsNewDialog appModel={appModel} />
             <IonRouterOutlet id="main">
+              <Route exact path="/" component={HomeRedirect} />
               <Route path="/home" component={Home} />
               {Info}
               {User}
               {Survey}
               {Location}
               {Settings}
-              <Route exact path="/" component={HomeRedirect} />
             </IonRouterOutlet>
           </SplashScreenRequired>
         </LanguageCountrySelectRequired>

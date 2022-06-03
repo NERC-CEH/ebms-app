@@ -1,21 +1,18 @@
 import * as Yup from 'yup';
+import userModel from 'models/user';
 import config from 'common/config';
 import axios from 'axios';
 import surveys from 'common/config/surveys';
 
 const speciesSchemaBackend = Yup.object().shape({
-  aggregations: Yup.object()
+  by_species: Yup.object()
     .shape({
-      by_species: Yup.object()
-        .shape({
-          buckets: Yup.array().required(),
-        })
-        .required(),
+      buckets: Yup.array().required(),
     })
     .required(),
 });
 
-async function fetchSpeciesReport() {
+export async function fetchSpeciesReport() {
   const url = `${config.backend.url}/iform/esproxy/rawsearch/1`;
 
   const body = {
@@ -34,7 +31,12 @@ async function fetchSpeciesReport() {
   try {
     response = await axios.post(url, formData);
     response = response.data;
-    const isValidResponse = await speciesSchemaBackend.isValid(response);
+
+    if (!response.aggregations) return [];
+
+    const isValidResponse = await speciesSchemaBackend.isValid(
+      response.aggregations
+    );
 
     if (!isValidResponse) {
       throw new Error('Invalid server response.');
@@ -46,4 +48,87 @@ async function fetchSpeciesReport() {
   }
 }
 
-export { fetchSpeciesReport }; // eslint-disable-line
+export async function fetchUserSpeciesReport(showLastMontOnly) {
+  const url = `${config.backend.indicia.url}/index.php/services/rest/es-occurrences/_search`;
+
+  const date = new Date();
+  date.setDate(1); // reset to start of the month
+  const thisMonth = date.toISOString().split('T')[0];
+  const lastMonthQuery = showLastMontOnly
+    ? [
+        {
+          range: {
+            'metadata.updated_on': {
+              gte: `${thisMonth} 00:00:00`,
+            },
+          },
+        },
+      ]
+    : [];
+
+  const data = JSON.stringify({
+    size: 0,
+    query: {
+      bool: {
+        must: [
+          {
+            bool: {
+              should: [
+                {
+                  match: {
+                    'metadata.website.id': 118,
+                  },
+                },
+              ],
+            },
+          },
+
+          ...lastMonthQuery,
+        ],
+      },
+    },
+    aggs: {
+      by_species: {
+        terms: {
+          field: 'taxon.accepted_name.keyword',
+        },
+        aggs: {
+          sample_count: {
+            cardinality: {
+              field: 'event.event_id',
+            },
+          },
+        },
+      },
+    },
+  });
+
+  const options = {
+    method: 'post',
+    url,
+    headers: {
+      Authorization: `Bearer ${await userModel.getAccessToken()}`,
+      'Content-Type': 'application/json',
+    },
+    data,
+  };
+
+  let response;
+  try {
+    response = await axios(options);
+    response = response.data;
+
+    if (!response.aggregations) return [];
+
+    const isValidResponse = await speciesSchemaBackend.isValid(
+      response.aggregations
+    );
+    if (!isValidResponse) {
+      throw new Error('Invalid server response.');
+    }
+
+    return response.aggregations.by_species.buckets;
+  } catch (e) {
+    throw new Error(e.message);
+  }
+}

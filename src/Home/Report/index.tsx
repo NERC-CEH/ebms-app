@@ -1,181 +1,83 @@
 import { FC, useState, useEffect } from 'react';
-import {
-  IonList,
-  IonItem,
-  IonItemDivider,
-  IonLabel,
-  IonRefresher,
-  IonRefresherContent,
-  IonSpinner,
-} from '@ionic/react';
 import appModel from 'models/app';
-import { Page, Main, device, useToast } from '@flumens';
-import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import { Trans as T } from 'react-i18next';
-import { fetchSpeciesReport } from './services';
+import userModel from 'models/user';
+import { Page, device, useToast } from '@flumens';
+import { observer } from 'mobx-react';
+import { fetchSpeciesReport, fetchUserSpeciesReport } from './services';
+import Main from './Main';
 import './styles.scss';
 
 const Report: FC = () => {
-  const [species, setSpecies] = useState<any[]>([]);
+  const [species, setSpecies] = useState<any>(appModel.speciesReport);
+  const [userSpecies, setUserSpecies] = useState<any>(
+    userModel.userSpeciesReport
+  );
+  const [userSpeciesLastMonth, setUserSpeciesLastMonth] = useState<any>(
+    userModel.userSpeciesLastMonthReport
+  );
   const [refreshing, setRefreshing] = useState(false);
   const toast = useToast();
 
-  const refreshReport = async () => {
+  const isLoggedIn = userModel.isLoggedIn();
+
+  const refreshReport = () => {
+    if (!device.isOnline) {
+      toast.warn("Sorry, looks like you're offline.");
+      return;
+    }
+
     setRefreshing(true);
 
-    try {
-      const sp = await fetchSpeciesReport();
-      appModel.speciesReport = [...sp] as any;
+    const requests = [];
+
+    let promise = fetchSpeciesReport().then(data => {
+      appModel.speciesReport = [...data] as any;
       setSpecies([...appModel.speciesReport]);
-      setRefreshing(false);
-    } catch (err) {
-      setRefreshing(false);
-      throw err;
+    });
+
+    requests.push(promise);
+
+    if (userModel.isLoggedIn()) {
+      promise = fetchUserSpeciesReport().then(data => {
+        userModel.userSpeciesReport = [...data] as any;
+        setUserSpecies([...userModel.userSpeciesReport]);
+      });
+
+      requests.push(promise);
+
+      promise = fetchUserSpeciesReport(true).then(data => {
+        userModel.userSpeciesLastMonthReport = [...data] as any;
+        setUserSpeciesLastMonth([...userModel.userSpeciesLastMonthReport]);
+      });
+      requests.push(promise);
     }
+
+    Promise.all(requests)
+      .catch(toast.error)
+      .finally(() => setRefreshing(false));
   };
 
   useEffect(() => {
-    if (!appModel.speciesReport.length && device.isOnline) {
-      refreshReport();
-      return;
-    }
+    const reportDataMissing =
+      !appModel.speciesReport.length ||
+      !userModel.userSpeciesReport.length ||
+      !userModel.userSpeciesLastMonthReport.length;
+    if (!reportDataMissing || !device.isOnline) return;
 
-    setSpecies([...appModel.speciesReport]);
-  }, []);
-
-  const onListRefreshPull = async (e: any) => {
-    if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
-      e && e.detail.complete(); // refresh pull update
-      return;
-    }
-
-    try {
-      await refreshReport();
-    } catch (err: any) {
-      toast.error(err);
-    }
-    e && e.detail.complete(); // refresh pull update
-  };
-
-  const getUsersReportList = () => {
-    // {/* <IonItemDivider>
-    //           <IonLabel>{t('TOP RECORDERS')}</IonLabel>
-    //         </IonItemDivider>
-    //         <IonItem>
-    //           <small>{t('Not enough data yet')}</small>
-    //         </IonItem> */}
-  };
-
-  const getSpeciesReportList = () => {
-    if (!species.length) {
-      return null;
-    }
-
-    const speciesList = [...species].splice(0, 5);
-
-    const getSpeciesEntry = (sp: any) => {
-      const scientificName = sp.key;
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      const commonName = t(scientificName, null, true);
-
-      return (
-        <IonItem key={sp.key}>
-          <IonLabel style={{ margin: 0, padding: '7px 0' }}>
-            {commonName && (
-              <IonLabel
-                class="ion-text-wrap report-common-name-label"
-                position="stacked"
-              >
-                <b style={{ fontSize: '1.1em' }}>{commonName}</b>
-              </IonLabel>
-            )}
-
-            <IonLabel
-              class="ion-text-wrap report-taxon-label"
-              position="stacked"
-            >
-              <i>{scientificName}</i>
-            </IonLabel>
-          </IonLabel>
-          <IonLabel slot="end" class="report-count-label">
-            {sp.doc_count}
-          </IonLabel>
-        </IonItem>
-      );
-    };
-    const listComponents = speciesList.map(getSpeciesEntry);
-
-    return (
-      <>
-        <IonItemDivider>
-          <IonLabel className="home-report-label">
-            <T>Top Species from all timed counts</T>
-          </IonLabel>
-        </IonItemDivider>
-        <div className="rounded">
-          <IonItem lines="full" className="list-header-labels">
-            <IonLabel>
-              <small>
-                <T>Species</T>
-              </small>
-            </IonLabel>
-            <IonLabel class="ion-text-right">
-              <small>
-                <T>Counts</T>
-              </small>
-            </IonLabel>
-          </IonItem>
-          {listComponents}
-        </div>
-      </>
-    );
-  };
-
-  const showEmptyDataMessage = () => null;
-
-  const getReport = () => {
-    if (!species.length && !refreshing) {
-      return (
-        <InfoBackgroundMessage>
-          Sorry, no report data is available at the moment.
-        </InfoBackgroundMessage>
-      );
-    }
-
-    return (
-      <IonList lines="none">
-        {showEmptyDataMessage()}
-
-        {getUsersReportList()}
-
-        {getSpeciesReportList()}
-      </IonList>
-    );
-  };
-
-  if (!species.length && refreshing) {
-    return (
-      <Page id="home-report">
-        <Main>
-          <IonSpinner class="centered" />
-        </Main>
-      </Page>
-    );
-  }
+    refreshReport();
+  }, [isLoggedIn]);
 
   return (
     <Page id="home-report">
-      <Main>
-        <IonRefresher slot="fixed" onIonRefresh={onListRefreshPull}>
-          <IonRefresherContent />
-        </IonRefresher>
-
-        {getReport()}
-      </Main>
+      <Main
+        species={species}
+        userSpecies={userSpecies}
+        userSpeciesLastMonth={userSpeciesLastMonth}
+        refreshing={refreshing}
+        refreshReport={refreshReport}
+      />
     </Page>
   );
 };
 
-export default Report;
+export default observer(Report);

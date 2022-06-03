@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import {
   IonTabs,
   IonTabButton,
@@ -84,8 +84,9 @@ class Component extends React.Component {
       <>
         <IonTabs>
           <IonRouterOutlet>
-            <Route path="/home/report" render={ReportTab} exact />
+            <Redirect exact path="/home" to="/home/species" />
             <Route path="/home/species" render={SpeciesTab} exact />
+            <Route path="/home/report" render={ReportTab} exact />
             <Route path="/home/user-surveys" render={UserSurveysTab} exact />
             <Route path="/home/menu" component={Menu} exact />
           </IonRouterOutlet>

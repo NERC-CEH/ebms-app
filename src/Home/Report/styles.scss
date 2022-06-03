@@ -1,8 +1,10 @@
 #home-report.ion-page ion-content {
   .home-report-label {
+    width: 100%;
     text-transform: uppercase;
     white-space: normal;
     padding: 10px 0;
+    --padding-start: 4px;
   }
 
   ion-spinner.centered {

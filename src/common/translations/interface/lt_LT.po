@@ -2012,3 +2012,18 @@ msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+
+msgid "Network Error"
+msgstr "Tinklo klaida"
+
+# Report label
+msgid "Please login to see your own data report."
+msgstr "Prisijungus prie sąskaitos rodoma daugiau informacijos."
+
+# Report label
+msgid "Your top species this month"
+msgstr "Jūsų populiariausios rūšys šį mėnesį"
+
+# Report label
+msgid "Your top species"
+msgstr "Jūsų populiariausios rūšys"

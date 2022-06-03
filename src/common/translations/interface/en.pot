@@ -1996,4 +1996,17 @@ msgstr "Recorders"
 msgid "Enter the number of recorders of anyone who helped with this record - including your own."
 msgstr "Enter the number of recorders of anyone who helped with this record - including your own."
 
+msgid "Network Error"
+msgstr "Network Error"
 
+# Report label
+msgid "Please login to see your own data report."
+msgstr "Please login to see your own data report."
+
+# Report label
+msgid "Your top species this month"
+msgstr "Your top species this month"
+
+# Report label
+msgid "Your top species"
+msgstr "Your top species"

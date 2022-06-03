@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { NavContext } from '@ionic/react';
+import { observable, set } from 'mobx';
 import CONFIG from 'common/config';
 import {
   DrupalUserModel,
@@ -31,6 +32,10 @@ const defaults: Attrs = {
 
 export class UserModel extends DrupalUserModel {
   attrs: Attrs = DrupalUserModel.extendAttrs(this.attrs, defaults);
+
+  userSpeciesReport = observable([]);
+
+  userSpeciesLastMonthReport = observable([]);
 
   registerSchema = Yup.object().shape({
     email: Yup.string().email('email is not valid').required('Please fill in'),
@@ -82,6 +87,13 @@ export class UserModel extends DrupalUserModel {
     await this._sendVerificationEmail();
 
     return true;
+  }
+
+  logOut() {
+    set(this.userSpeciesReport, []);
+    set(this.userSpeciesLastMonthReport, []);
+
+    return super.logOut();
   }
 
   // eslint-disable-next-line @getify/proper-arrows/name

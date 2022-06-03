@@ -1979,3 +1979,18 @@ msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+
+msgid "Network Error"
+msgstr ""
+
+# Report label
+msgid "Please login to see your own data report."
+msgstr ""
+
+# Report label
+msgid "Your top species this month"
+msgstr ""
+
+# Report label
+msgid "Your top species"
+msgstr ""

@@ -2060,3 +2060,18 @@ msgid ""
 msgstr ""
 "Introduzca el número de registradores de cualquier persona que haya "
 "colaborado con este registro, incluido el suyo propio."
+
+msgid "Network Error"
+msgstr ""
+
+# Report label
+msgid "Please login to see your own data report."
+msgstr ""
+
+# Report label
+msgid "Your top species this month"
+msgstr ""
+
+# Report label
+msgid "Your top species"
+msgstr ""
