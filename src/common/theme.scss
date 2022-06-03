@@ -105,6 +105,11 @@ html.ios.plt-hybrid #status-bar-background {
   }
 }
 
+// don't know why this is needed but it fixed location name being off
+.location-name-attr .auto-suggest-input-attr ion-input {
+  height: 25px;
+}
+
 // ??
 html[mode='ios'] .tabs-inner {
   margin-top: var(--ion-safe-area-top);
