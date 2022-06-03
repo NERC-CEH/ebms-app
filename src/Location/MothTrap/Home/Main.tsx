@@ -12,6 +12,7 @@ import {
   IonItemOption,
   IonBadge,
 } from '@ionic/react';
+import clsx from 'clsx';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Lamp } from 'models/location';
@@ -34,12 +35,18 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
 
   const { url } = useRouteMatch();
 
-  const value = (
-    <IonLabel>
-      <IonLabel>
+  const hasLocation = loc.latitude;
+  const hasName = loc.name;
+  const empty = !hasLocation || !hasName;
+
+  const locationValue = (
+    <IonLabel position="stacked" mode="ios">
+      <IonLabel color={clsx(empty && hasLocation && 'dark')}>
         <GridRefValue sample={location} />
       </IonLabel>
-      <IonLabel>{loc?.name || t('No moth trap name')}</IonLabel>
+      <IonLabel color={clsx(empty && hasName && 'dark')}>
+        {loc?.name || t('No moth trap name')}
+      </IonLabel>
     </IonLabel>
   );
 
@@ -119,7 +126,9 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
             routerLink={`/location/${location.cid}/location`}
             icon={pinOutline}
             label="Location"
-            value={value}
+            required
+            className={clsx({ empty })}
+            value={locationValue}
             skipValueTranslation
           />
 
@@ -128,6 +137,7 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
             routerOptions={{ unmount: true }}
             icon={mothTrapIcon}
             label="Type"
+            required
             value={type}
           />
 
