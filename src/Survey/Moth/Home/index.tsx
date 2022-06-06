@@ -8,9 +8,9 @@ import CONFIG from 'common/config';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { getUnkownSpecies } from 'Survey/Moth/config';
-import { Page, Header, useAlert, device, useToast } from '@flumens';
+import { Page, Header, useAlert, useToast } from '@flumens';
 import Media from 'models/media';
-import userModel, { useUserStatusCheck } from 'models/user';
+import { useUserStatusCheck } from 'models/user';
 import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
 import { IonButton, NavContext } from '@ionic/react';
 import { useTranslation, Trans as T } from 'react-i18next';
@@ -159,10 +159,8 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const onIdentifyOccurrence = async (occ: Occurrence) => {
-    if (!userModel.isLoggedIn()) {
-      toast.warn('User is not logged in.');
-      return;
-    }
+    const isUserOK = await checkUserStatus();
+    if (!isUserOK) return;
 
     await occ.identify();
 
@@ -173,10 +171,8 @@ const HomeController: FC<Props> = ({ sample }) => {
     sample.occurrences.forEach(onIdentifyOccurrence);
 
   const photoSelect = async () => {
-    if (!device.isOnline) {
-      toast.warn('Looks like you are offline!');
-      return;
-    }
+    const isUserOK = await checkUserStatus();
+    if (!isUserOK) return;
 
     const promptOptions = {
       promptLabelHeader: t('Choose a method to upload a photo'),

@@ -1,7 +1,7 @@
 import { FC, useContext } from 'react';
 import Occurrence from 'models/occurrence';
 import Media from 'models/media';
-import userModel from 'models/user';
+import { useUserStatusCheck } from 'models/user';
 import {
   IonItemSliding,
   IonItem,
@@ -13,7 +13,7 @@ import {
   NavContext,
   IonButton,
 } from '@ionic/react';
-import { useAlert, useToast } from '@flumens';
+import { useAlert } from '@flumens';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -59,7 +59,7 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
   isUnidentifiedSpeciesLengthMoreThanFive,
   onIdentify,
 }) => {
-  const toast = useToast();
+  const checkUserStatus = useUserStatusCheck();
 
   const { navigate } = useContext(NavContext);
   const { url } = useRouteMatch();
@@ -93,14 +93,12 @@ const UnidentifiedSpeciesEntry: FC<Props> = ({
   const navigateToSpeciesOccurrence = () =>
     !identifying && navigate(`${url}/occ/${occ.cid}`);
 
-  const onIdentifyOccurrence = (e: any) => {
+  const onIdentifyOccurrence = async (e: any) => {
     e.preventDefault();
     e.stopPropagation();
 
-    if (!userModel.isLoggedIn()) {
-      toast.warn('User is not logged in.');
-      return null;
-    }
+    const isUserOK = await checkUserStatus();
+    if (!isUserOK) return null;
 
     return onIdentify(occ);
   };
