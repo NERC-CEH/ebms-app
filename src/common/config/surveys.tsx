@@ -47,6 +47,7 @@ export interface Survey {
       photo?: any
     ) => Occurrence;
     verify?: (attrs: any) => any;
+    modifySubmission?: (submission: any, model: any) => any;
   };
 
   verify?: (attrs: any) => any;
@@ -57,4 +58,5 @@ export interface Survey {
     surveyName?: any,
     recorder?: string
   ) => any;
+  modifySubmission?: (submission: any, model: any) => any;
 }

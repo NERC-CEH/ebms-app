@@ -1,9 +1,98 @@
 import * as Yup from 'yup';
 import { date as dateHelp } from '@flumens';
 import { Survey } from 'common/config/surveys';
+import config from 'common/config';
 import appModel from 'models/app';
+import Occurrence from 'models/occurrence';
 import { personOutline, calendarOutline } from 'ionicons/icons';
 import { commentAttr } from 'Survey/common/config';
+
+export enum MachineInvolvement {
+  /**
+   * No involvement.
+   */
+  NONE = 0,
+  /**
+   * Human determined, machine suggestions were ignored.
+   */
+  HUMAN = 1,
+  /**
+   * Human chose a machine suggestion given a very low probability.
+   */
+  HUMAN_ACCEPTED_LESS_PREFERRED_LOW = 2,
+  /**
+   * Human chose a machine suggestion that was less-preferred.
+   */
+  HUMAN_ACCEPTED_LESS_PREFERRED = 3,
+  /**
+   * Human chose a machine suggestion that was the preferred choice.
+   */
+  HUMAN_ACCEPTED_PREFERRED = 4,
+  /**
+   * Machine determined with no human involvement.
+   */
+  MACHINE = 5,
+}
+
+function attachClassifierResults(submission: any, occ: Occurrence) {
+  const { taxon } = occ.attrs;
+  const classifierVersion = taxon?.version || '';
+
+  const getMediaPath = (media: any) => media.values.queued;
+  const mediaPaths = submission.media.map(getMediaPath);
+
+  const getSuggestion = (
+    { probability, taxon: taxon_name_given, warehouse_id }: any,
+    index: number
+  ) => {
+    const topSpecies = index === 0;
+    const classifierChosen = topSpecies ? 't' : 'f';
+    const humanChosen = warehouse_id === taxon?.warehouse_id ? 't' : 'f';
+
+    return {
+      values: {
+        taxon_name_given,
+        probability_given: probability,
+        taxa_taxon_list_id: warehouse_id,
+        classifier_chosen: classifierChosen,
+        human_chosen: humanChosen,
+      },
+    };
+  };
+
+  const classifierSuggestions =
+    occ.attrs.taxon?.suggestions?.map(getSuggestion) || [];
+
+  const hasSuggestions = classifierSuggestions.length;
+  if (!hasSuggestions) {
+    // don't set anything yet because this requires below structure to be valid
+    // submission.values.machine_involvement = MachineInvolvement.NONE;
+    return submission;
+  }
+
+  if (Number.isFinite(taxon?.machineInvolvement)) {
+    // eslint-disable-next-line no-param-reassign
+    submission.values.machine_involvement = taxon?.machineInvolvement;
+  }
+
+  return {
+    ...submission,
+
+    classification_event: {
+      values: { created_by_id: null },
+      classification_results: [
+        {
+          values: {
+            classifier_id: config.classifierID,
+            classifier_version: classifierVersion,
+          },
+          classification_suggestions: classifierSuggestions,
+          metaFields: { mediaPaths },
+        },
+      ],
+    },
+  };
+}
 
 const fixedLocationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
@@ -128,8 +217,8 @@ const survey: Survey = {
       },
     },
 
-    create(Occurrence, taxon, identifier, photo) {
-      const occ = new Occurrence({
+    create(AppOccurrence, taxon, identifier, photo) {
+      const occ = new AppOccurrence({
         attrs: {
           count: 1,
           'count-outside': 0,
@@ -144,6 +233,10 @@ const survey: Survey = {
       }
 
       return occ;
+    },
+
+    modifySubmission(submission: any, occ: Occurrence) {
+      return attachClassifierResults(submission, occ);
     },
   },
 
@@ -201,30 +294,3 @@ const UNKNOWN_SPECIES: UnknownSpeciesObject = {
 
 export const getUnkownSpecies = () =>
   UNKNOWN_SPECIES[appModel.attrs.language as any] || UNKNOWN_SPECIES.en;
-
-export enum MachineInvolvement {
-  /**
-   * No involvement.
-   */
-  NONE = 0,
-  /**
-   * Human determined, machine suggestions were ignored.
-   */
-  HUMAN = 1,
-  /**
-   * Human chose a machine suggestion given a very low probability.
-   */
-  HUMAN_ACCEPTED_LESS_PREFERRED_LOW = 2,
-  /**
-   * Human chose a machine suggestion that was less-preferred.
-   */
-  HUMAN_ACCEPTED_LESS_PREFERRED = 3,
-  /**
-   * Human chose a machine suggestion that was the preferred choice.
-   */
-  HUMAN_ACCEPTED_PREFERRED = 4,
-  /**
-   * Machine determined with no human involvement.
-   */
-  MACHINE = 5,
-}

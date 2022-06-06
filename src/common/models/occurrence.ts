@@ -4,12 +4,6 @@ import { MachineInvolvement } from 'Survey/Moth/config';
 import Media from './media';
 
 export type Taxon = {
-  // species: OptionalExcept<
-  //   Species,
-  //   'commonNames' | 'scientificNameWithoutAuthor'
-  // >;
-  // suggestions?: ResultWithWarehouseID[];
-
   version?: string;
 
   machineInvolvement?: MachineInvolvement;
@@ -31,6 +25,7 @@ type Attrs = OccurrenceAttrs & {
   identifier?: any;
   count?: any;
   'count-outside'?: any;
+  machineInvolvement?: MachineInvolvement;
 };
 
 export default class AppOccurrence extends Occurrence {
@@ -72,7 +67,33 @@ export default class AppOccurrence extends Occurrence {
     const hasValue = (val: any) => !!val;
     const suggestions = allSuggestions.filter(hasValue);
 
-    let highestProbSpecies: any = null;
+    const highestProbSpecies: any = this.getTopSuggestion(suggestions);
+    if (!highestProbSpecies) return this.attrs.taxon;
+
+    this.attrs.taxon = {
+      found_in_name: highestProbSpecies.found_in_name,
+      common_name: highestProbSpecies.common_name,
+      group: highestProbSpecies.group,
+      probability: highestProbSpecies.probability,
+      scientific_name: highestProbSpecies.scientific_name,
+      warehouse_id: highestProbSpecies.warehouse_id,
+
+      machineInvolvement: MachineInvolvement.MACHINE,
+      version: '1',
+      suggestions,
+    };
+
+    this.save();
+
+    return this.attrs.taxon;
+  }
+
+  getTopSuggestion(suggestions?: any) {
+    // eslint-disable-next-line no-param-reassign
+    suggestions = suggestions || this.attrs.taxon?.suggestions;
+
+    let highestProbSpecies: any;
+
     const findHighestProbSpecies = (sp: any) => {
       if (!highestProbSpecies) {
         highestProbSpecies = sp;
@@ -83,19 +104,8 @@ export default class AppOccurrence extends Occurrence {
         highestProbSpecies = sp;
       }
     };
-    suggestions.forEach(findHighestProbSpecies);
+    suggestions?.forEach(findHighestProbSpecies);
 
-    if (!highestProbSpecies) return this.attrs.taxon;
-
-    this.attrs.taxon = {
-      ...highestProbSpecies,
-      machineInvolvement: MachineInvolvement.MACHINE,
-      version: '1',
-      suggestions,
-    };
-
-    this.save();
-
-    return this.attrs.taxon;
+    return highestProbSpecies;
   }
 }

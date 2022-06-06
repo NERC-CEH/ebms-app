@@ -4,7 +4,8 @@ import { observer } from 'mobx-react';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
 import { Page, Main, Header, useAlert } from '@flumens';
-import { getUnkownSpecies } from 'Survey/Moth/config';
+import { getUnkownSpecies, MachineInvolvement } from 'Survey/Moth/config';
+
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 
@@ -44,7 +45,7 @@ function useMergeSpeciesAlert() {
 
 interface Props {
   sample: Sample;
-  occurrence: Occurrence;
+  occurrence?: Occurrence;
 }
 
 const Taxon: FC<Props> = ({ sample, occurrence }) => {
@@ -56,10 +57,22 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
     const { isRecorded } = taxon;
     const survey = sample.getSurvey();
 
+    let machineInvolvement = MachineInvolvement.HUMAN;
+    const topAISuggestion = occurrence?.getTopSuggestion();
+    if (topAISuggestion) {
+      const selectedTopSuggestion =
+        topAISuggestion.warehouse_id === taxon.warehouse_id;
+      if (selectedTopSuggestion) {
+        machineInvolvement = MachineInvolvement.HUMAN_ACCEPTED_PREFERRED;
+      } else {
+        machineInvolvement = MachineInvolvement.HUMAN_ACCEPTED_LESS_PREFERRED;
+      }
+    }
+
     const isTaxonUnknown = taxon.warehouse_id === UNKNOWN_SPECIES.warehouse_id;
 
     if (occurrence && isTaxonUnknown) {
-      occurrence.attrs.taxon = taxon;
+      Object.assign(occurrence.attrs.taxon, taxon, { machineInvolvement });
       occurrence.save();
       navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
       return;
@@ -76,9 +89,8 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
       };
 
       const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
-
       if (!occWithSameSpecies) {
-        occurrence.attrs.taxon = taxon;
+        Object.assign(occurrence.attrs.taxon, taxon, { machineInvolvement });
         occurrence.save();
         navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
         return;
@@ -111,44 +123,40 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
     }
 
     if (occurrence && !isTaxonUnknown) {
-      occurrence.attrs.taxon = taxon;
+      Object.assign(occurrence.attrs.taxon, taxon, { machineInvolvement });
       occurrence.save();
 
       goBack();
       return;
     }
 
-    const selectedTaxon = (selectedOccurrence: Occurrence) => {
-      return (
-        (selectedOccurrence.attrs.taxon?.preferredId ||
-          selectedOccurrence.attrs.taxon?.warehouse_id) ===
-        (taxon?.preferredId || taxon?.warehouse_id)
-      );
-    };
-    const occ = sample.occurrences.find(selectedTaxon);
-
     if (isTaxonUnknown) {
+      // we allow multiple unknown entries
       const identifier = sample.attrs.recorder;
       const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
+      newOccurrence.attrs.taxon.machineInvolvement = machineInvolvement;
       sample.occurrences.push(newOccurrence);
-
       await sample.save();
       goBack();
       return;
     }
 
-    if (!occ) {
-      const identifier = sample.attrs.recorder;
-      const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
-      sample.occurrences.push(newOccurrence);
-
+    const selectedTaxon = (occ: Occurrence) =>
+      (occ.attrs.taxon?.preferredId || occ.attrs.taxon?.warehouse_id) ===
+      (taxon?.preferredId || taxon?.warehouse_id);
+    const existingOccurrence = sample.occurrences.find(selectedTaxon);
+    if (existingOccurrence) {
+      existingOccurrence.attrs.count += 1;
+      existingOccurrence.save();
       await sample.save();
       goBack();
       return;
     }
 
-    occ.attrs.count += 1;
-    occ.save();
+    const identifier = sample.attrs.recorder;
+    const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
+    newOccurrence.attrs.taxon.machineInvolvement = machineInvolvement;
+    sample.occurrences.push(newOccurrence);
 
     await sample.save();
     goBack();

@@ -20,6 +20,9 @@ const config = {
   version: process.env.APP_VERSION as string,
   build: process.env.APP_BUILD as string,
 
+  // AI classifier
+  classifierID: 20098,
+
   sentryDNS: process.env.APP_SENTRY_KEY as string,
 
   feedbackEmail: 'apps%40ceh.ac.uk',
