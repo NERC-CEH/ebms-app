@@ -17,7 +17,13 @@ const DetailsMain: FC<Props> = ({ sample }) => {
   const surveyDateProps = survey.attrs.date.pageProps.attrProps.inputProps();
   const isDisabled = sample.isUploaded();
 
-  const locationName = location ? location.attrs?.location?.name : null;
+  // TODO: Backwards compatibility
+  const locationNameSupportedBackwardsCompatibility =
+    location?.name || location?.attrs?.location?.name;
+
+  const locationName = location
+    ? locationNameSupportedBackwardsCompatibility
+    : null;
 
   return (
     <Main>

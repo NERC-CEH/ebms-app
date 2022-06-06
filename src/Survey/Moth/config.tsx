@@ -13,7 +13,12 @@ const fixedLocationSchema = Yup.object().shape({
 
 const validateLocation = (val: any) => {
   try {
-    fixedLocationSchema.validateSync(val.attrs.location);
+    // TODO: Backwards compatibility
+    if (val.name) {
+      fixedLocationSchema.validateSync(val);
+    } else {
+      fixedLocationSchema.validateSync(val.attrs.location);
+    }
     return true;
   } catch (e) {
     return false;
@@ -30,11 +35,15 @@ const locationAttr = {
   remote: {
     id: 'location_id',
     values(location: any, submission: any) {
+      // TODO: Backwards compatibility
+      const centroidSref =
+        location?.centroid_sref || location?.attrs?.location?.centroid_sref;
+
       // eslint-disable-next-line
       submission.values = {
         ...submission.values,
         ...{
-          entered_sref: location.attrs.location.centroid_sref,
+          entered_sref: centroidSref,
         },
       };
 
