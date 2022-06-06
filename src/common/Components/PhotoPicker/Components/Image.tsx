@@ -18,6 +18,8 @@ const Image: FC<Props> = ({ media, isDisabled, onDelete, onClick }) => {
 
   const showLoading = media.identification.identifying;
 
+  const onClickWrap = () => !showLoading && onClick();
+
   return (
     <div className="img">
       {!isDisabled && (
@@ -25,7 +27,7 @@ const Image: FC<Props> = ({ media, isDisabled, onDelete, onClick }) => {
           <IonIcon icon={close} />
         </IonButton>
       )}
-      <img src={media.attrs.thumbnail} onClick={onClick} />
+      <img src={media.attrs.thumbnail} onClick={onClickWrap} />
 
       {showLoading && <IonSpinner slot="end" className="identifying" />}
       {!showLoading && showWarning && (

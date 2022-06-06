@@ -19,6 +19,9 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
   const identifierWasNotUsed = !image.attrs.species;
   const identifierFoundNoSpecies = !image.attrs?.species?.length;
 
+  const showLoading = image.identification.identifying;
+  if (showLoading) return null;
+
   if (identifierWasNotUsed) {
     return (
       <IonButton
