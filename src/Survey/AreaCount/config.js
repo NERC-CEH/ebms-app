@@ -163,6 +163,12 @@ const survey = {
         count: { remote: { id: 780 } },
 
         stage: stageAttr,
+
+        timeOfSighting: {
+          remote: {
+            id: 912,
+          },
+        },
       },
 
       create(Occurrence, taxon) {
@@ -172,6 +178,7 @@ const survey = {
             stage: 'Adult',
             taxon,
             count: 1,
+            timeOfSighting: new Date().toISOString(),
           },
         });
       },
