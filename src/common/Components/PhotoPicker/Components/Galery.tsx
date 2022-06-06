@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Gallery, useToast } from '@flumens';
-import Occurrence from 'models/occurrence';
 import userModel from 'models/user';
 import Media from 'models/media';
 import { Trans as T } from 'react-i18next';
@@ -10,8 +9,8 @@ import { observer } from 'mobx-react';
 import '../styles.scss';
 
 type Props = {
-  model: Occurrence;
-  showGallery: any;
+  items: Media[];
+  showGallery: number;
   hideGallery: () => boolean;
 };
 
@@ -69,8 +68,7 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
   );
 };
 
-const GalleryComponent: FC<Props> = ({ model, showGallery, hideGallery }) => {
-  const { media } = model;
+const GalleryComponent: FC<Props> = ({ items, showGallery, hideGallery }) => {
   const toast = useToast();
 
   const getItem = (image: Media) => {
@@ -88,13 +86,12 @@ const GalleryComponent: FC<Props> = ({ model, showGallery, hideGallery }) => {
       footer: getFooterMessage(image, identifyImage),
     };
   };
-  const items = media.map(getItem);
 
   return (
     <Gallery
-      isOpen={!!showGallery}
-      items={items}
-      initialSlide={showGallery - 1}
+      isOpen={Number.isFinite(showGallery)}
+      items={items.map(getItem)}
+      initialSlide={showGallery}
       onClose={hideGallery}
     />
   );
