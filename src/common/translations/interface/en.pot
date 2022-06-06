@@ -1787,6 +1787,10 @@ msgstr "Identifying..."
 msgid "Unknown"
 msgstr "Unknown"
 
+# Report table button
+msgid "Show more"
+msgstr "Show more"
+
 # Moth survey warning message
 msgid "Please add a photo"
 msgstr "Please add a photo"

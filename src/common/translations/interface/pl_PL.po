@@ -1823,6 +1823,10 @@ msgstr "Identyfikacja..."
 msgid "Unknown"
 msgstr "Nieznany"
 
+# Report table button
+msgid "Show more"
+msgstr ""
+
 # Moth survey warning message
 msgid "Please add a photo"
 msgstr "Dodaj zdjęcie"
@@ -2065,4 +2069,22 @@ msgstr ""
 
 # Report label
 msgid "Your top species"
+msgstr ""
+
+# Transect survey section photo picker divider label
+msgid "Section Photos"
+msgstr ""
+
+# Moth survey species identifying
+msgid "User is not logged in."
+msgstr ""
+
+# Context term
+msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
+msgstr ""
+
+# Context term
+msgid ""
+"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species"
 msgstr ""

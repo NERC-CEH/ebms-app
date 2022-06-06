@@ -14,6 +14,7 @@ import { Main } from '@flumens';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import { Trans as T } from 'react-i18next';
 import SpeciesEntry from './SpeciesEntry';
+import ExpandableList from './ExpandableList';
 
 interface Props {
   species: any;
@@ -48,7 +49,7 @@ const MainReport: FC<Props> = ({
   const getReportTable = (data: any, label: string) => {
     if (!data.length) return null;
 
-    const speciesList = [...data].splice(0, 6);
+    const speciesList = [...data];
 
     const getSpeciesEntry = (sp: any) => (
       <SpeciesEntry key={sp.key} species={sp} />
@@ -76,7 +77,8 @@ const MainReport: FC<Props> = ({
               </small>
             </IonLabel>
           </IonItem>
-          {listComponents}
+
+          <ExpandableList items={listComponents} />
         </div>
       </>
     );

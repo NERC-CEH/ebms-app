@@ -508,7 +508,7 @@ msgstr "Nota: rimarrà in galleria "
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr "Šis įrašas neturi jokių nuotraukų.<br/>Spauskite <3></3> pridėti."
+msgstr ""
 
 msgid "Registration error:"
 msgstr "Errore di registrazione:"
@@ -1835,6 +1835,10 @@ msgstr "Identificazione..."
 msgid "Unknown"
 msgstr "Sconosciuto"
 
+# Report table button
+msgid "Show more"
+msgstr ""
+
 # Moth survey warning message
 msgid "Please add a photo"
 msgstr "Per favore, aggiungi una foto"
@@ -1851,12 +1855,11 @@ msgstr "<0>Warning</0> - non riusciamo ad identificare questa specie"
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species."
-msgstr "<0>Įspėjimas</0> - mes manome, kad tai yra {{probability}}% likely a <5>{{taxon}}</5> "
-"rūšis."
+msgstr ""
 
 # Moth survey image gallery warning message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
-msgstr "Mes manome, kad tai {{probability}}% yra <3>{{taxon}}</3> rūšis."
+msgstr ""
 
 # App settings title
 msgid "Surveying"
@@ -1887,7 +1890,7 @@ msgstr ""
 
 # Moth survey button label
 msgid "Identify"
-msgstr "Identifikuoti"
+msgstr ""
 
 # Moth survey button label
 msgid "Identify All"
@@ -2078,4 +2081,22 @@ msgstr ""
 
 # Report label
 msgid "Your top species"
+msgstr ""
+
+# Transect survey section photo picker divider label
+msgid "Section Photos"
+msgstr ""
+
+# Moth survey species identifying
+msgid "User is not logged in."
+msgstr ""
+
+# Context term
+msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
+msgstr ""
+
+# Context term
+msgid ""
+"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species"
 msgstr ""
