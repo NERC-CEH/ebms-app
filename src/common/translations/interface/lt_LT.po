@@ -506,7 +506,7 @@ msgstr "Pastaba: ištrynus nuotrauka liks telefono galerijoje."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr ""
+msgstr "Šis yrašas neturi nuotraukų.<br/>Spausti <3></3> pridėti nuotraukai."
 
 msgid "Registration error:"
 msgstr "Nepavyko prisiregistruoti:"
