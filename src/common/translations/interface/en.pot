@@ -2019,3 +2019,11 @@ msgstr "Your top species this month"
 # Report label
 msgid "Your top species"
 msgstr "Your top species"
+
+# Transect survey section photo picker divider label
+msgid "Section Photos"
+msgstr "Section Photos"
+
+# Moth survey species identifying 
+msgid "User is not logged in."
+msgstr "User is not logged in."
