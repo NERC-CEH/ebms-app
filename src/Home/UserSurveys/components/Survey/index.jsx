@@ -78,7 +78,7 @@ function Survey({ sample }) {
             <T>{survey.label}</T>
           </b>
         </h3>
-        <h3>{prettyDate}</h3>
+        <IonLabel className="pretty-date">{prettyDate}</IonLabel>
       </>
     );
 
