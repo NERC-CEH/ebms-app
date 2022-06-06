@@ -2027,3 +2027,11 @@ msgstr "Section Photos"
 # Moth survey species identifying 
 msgid "User is not logged in."
 msgstr "User is not logged in."
+
+# Context term 
+msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
+msgstr "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
+
+ # Context term 
+msgid "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species"
+msgstr "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species"

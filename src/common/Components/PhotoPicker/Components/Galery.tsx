@@ -52,17 +52,19 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
       <IonLabel className="gallery-ai-message">
         <T>
           <b>Warning</b> - we think it is {{ probability }}% likely a{' '}
-          <i>{{ taxon }}</i> species.
+          <i>{{ taxon }}</i> species
         </T>
+        .
       </IonLabel>
     );
   }
 
   return (
-    <IonLabel className="gallery-ai-message">
+    <IonLabel className="gallery-warning-message">
       <T>
-        We think it is {{ probability }}% likely a <i>{{ taxon }}</i> species.
+        We think it is {{ probability }}% likely a <i>{{ taxon }}</i> species
       </T>
+      .
     </IonLabel>
   );
 };
