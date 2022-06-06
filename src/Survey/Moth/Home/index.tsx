@@ -65,12 +65,14 @@ const HomeController: FC<Props> = ({ sample }) => {
 
   const UNKNOWN_SPECIES = getUnkownSpecies();
 
-  const { useImageIdentifier, useTraining } = appModel.attrs;
+  const { useImageIdentifier } = appModel.attrs;
   const isDisabled = sample.isDisabled();
 
   const surveyConfig = sample.getSurvey();
 
   const isEditing = sample.metadata.saved;
+
+  const isTraining = !!sample.metadata.training;
 
   const _processSubmission = async () => {
     const isUserOK = await checkUserStatus();
@@ -206,7 +208,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     onIdentifyOccurrence(newOccurrence);
   };
 
-  const trainingModeSubheader = useTraining && (
+  const trainingModeSubheader = isTraining && (
     <div className="training-survey">
       <T>Training Mode</T>
     </div>
