@@ -104,6 +104,7 @@ const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
             value={recorders}
             icon={personOutline}
             min={1}
+            isDisabled={isDisabled}
           />
           <InfoMessage color="medium">
             Enter the number of recorders of anyone who helped with this record
