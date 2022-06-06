@@ -9,8 +9,7 @@
     --border-color: transparent;
   }
 
-  .pretty-date {
+  h3:not(:first-of-type) {
     margin-bottom: 10px;
-    font-size: 0.8em;
   }
 }

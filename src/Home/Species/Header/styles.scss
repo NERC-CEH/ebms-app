@@ -1,17 +1,16 @@
 #home-species {
   .app-name {
     font-size: 32px;
+    font-weight: 300;
     line-height: 49px;
     text-align: center;
     color: black;
-    font-family: 'Quicksand' !important;
 
     &.md {
       padding: 0;
     }
 
     b {
-      font-weight: bold;
       color: var(--ion-color-primary);
     }
   }
