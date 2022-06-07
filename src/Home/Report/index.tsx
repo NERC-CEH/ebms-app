@@ -8,19 +8,15 @@ import Main from './Main';
 import './styles.scss';
 
 const Report: FC = () => {
-  const [species, setSpecies] = useState<any>(appModel.speciesReport);
-  const [userSpecies, setUserSpecies] = useState<any>(
-    userModel.userSpeciesReport
-  );
-  const [userSpeciesLastMonth, setUserSpeciesLastMonth] = useState<any>(
-    userModel.userSpeciesLastMonthReport
-  );
+  const [species, setSpecies] = useState<any>([]);
+  const [userSpecies, setUserSpecies] = useState<any>([]);
+  const [userSpeciesLastMonth, setUserSpeciesLastMonth] = useState<any>([]);
   const [refreshing, setRefreshing] = useState(false);
   const toast = useToast();
 
   const isLoggedIn = userModel.isLoggedIn();
 
-  const refreshReport = () => {
+  const refreshReport = async () => {
     if (!device.isOnline) {
       toast.warn("Sorry, looks like you're offline.");
       return;
@@ -37,16 +33,19 @@ const Report: FC = () => {
 
     requests.push(promise);
 
-    if (userModel.isLoggedIn()) {
+    const isVerified = await userModel.checkActivation();
+    if (userModel.isLoggedIn() && isVerified) {
       promise = fetchUserSpeciesReport().then(data => {
-        userModel.userSpeciesReport = [...data] as any;
+        userModel.userSpeciesReport.clear();
+        userModel.userSpeciesReport.push(...data);
         setUserSpecies([...userModel.userSpeciesReport]);
       });
 
       requests.push(promise);
 
       promise = fetchUserSpeciesReport(true).then(data => {
-        userModel.userSpeciesLastMonthReport = [...data] as any;
+        userModel.userSpeciesLastMonthReport.clear();
+        userModel.userSpeciesLastMonthReport.push(...data);
         setUserSpeciesLastMonth([...userModel.userSpeciesLastMonthReport]);
       });
       requests.push(promise);
@@ -58,11 +57,14 @@ const Report: FC = () => {
   };
 
   useEffect(() => {
-    const reportDataMissing =
-      !appModel.speciesReport.length ||
-      !userModel.userSpeciesReport.length ||
-      !userModel.userSpeciesLastMonthReport.length;
-    if (!reportDataMissing || !device.isOnline) return;
+    setSpecies(appModel.speciesReport);
+    setUserSpecies(userModel.userSpeciesReport);
+    setUserSpeciesLastMonth(userModel.userSpeciesLastMonthReport);
+
+    const hasAllReportData =
+      species.length && userSpecies.length && userSpeciesLastMonth.length;
+
+    if (hasAllReportData || !device.isOnline) return;
 
     refreshReport();
   }, [isLoggedIn]);

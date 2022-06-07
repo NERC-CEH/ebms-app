@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { NavContext } from '@ionic/react';
-import { observable, set } from 'mobx';
+import { observable } from 'mobx';
 import CONFIG from 'common/config';
 import {
   DrupalUserModel,
@@ -33,9 +33,9 @@ const defaults: Attrs = {
 export class UserModel extends DrupalUserModel {
   attrs: Attrs = DrupalUserModel.extendAttrs(this.attrs, defaults);
 
-  userSpeciesReport = observable([]);
+  userSpeciesReport = observable([]) as any;
 
-  userSpeciesLastMonthReport = observable([]);
+  userSpeciesLastMonthReport = observable([]) as any;
 
   registerSchema = Yup.object().shape({
     email: Yup.string().email('email is not valid').required('Please fill in'),
@@ -90,8 +90,8 @@ export class UserModel extends DrupalUserModel {
   }
 
   logOut() {
-    set(this.userSpeciesReport, []);
-    set(this.userSpeciesLastMonthReport, []);
+    this.userSpeciesReport.clear();
+    this.userSpeciesLastMonthReport.clear();
 
     return super.logOut();
   }
@@ -221,5 +221,7 @@ export const useUserStatusCheck = () => {
 
   return check;
 };
+
+(window as any).userModel = userModel;
 
 export default userModel;
