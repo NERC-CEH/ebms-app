@@ -12,21 +12,21 @@ type Props = {
 };
 
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
-  const { showWhatsNewInVersion115, appSession } = appModel.attrs;
+  const { showWhatsNewInVersion117, appSession } = appModel.attrs;
 
   const skipShowingDialogOnFreshInstall = () => {
     const isFreshInstall = appSession <= 1;
     if (isFreshInstall) {
-      appModel.attrs.showWhatsNewInVersion115 = false; // eslint-disable-line
+      appModel.attrs.showWhatsNewInVersion117 = false; // eslint-disable-line
       appModel.save();
     }
   };
   useEffect(skipShowingDialogOnFreshInstall, [appSession]);
 
-  if (!showWhatsNewInVersion115) return null;
+  if (!showWhatsNewInVersion117) return null;
 
   const closeDialog = () => {
-    appModel.attrs.showWhatsNewInVersion115 = false; // eslint-disable-line
+    appModel.attrs.showWhatsNewInVersion117 = false; // eslint-disable-line
     appModel.save();
   };
 
@@ -47,20 +47,75 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
             <T>What's New</T>
           </h1>
         </div>
-
         <div className="message">
-          <h3>
-            <T>Moth survey</T>
-          </h3>
           <p>
-            <T>
-              Record moths with the help of automatic identification in
-              real-time.
-            </T>
+            <h3>
+              <T>Added Polish and Romanian languages</T>
+            </h3>
           </p>
-          <h3>
-            <T>Bug fixes and improvements</T>
-          </h3>
+
+          <p>
+            <h3>
+              <T>Added Moth trap location setup</T>
+            </h3>
+          </p>
+          <p>
+            <h3>
+              <T>Increase temperature range selection from -0 to +40</T>
+            </h3>
+          </p>
+          <p>
+            <h3>
+              <T>Added a day-flying moths filter setting</T>
+            </h3>
+          </p>
+
+          <p>
+            <h3>
+              <T>Added +5 species count shortcut</T>
+            </h3>
+          </p>
+
+          <p>
+            <h3>
+              <T>Added species guide search and filters</T>
+            </h3>
+          </p>
+          <p>
+            <h3>
+              <T>Updated species common names</T>
+            </h3>
+          </p>
+          <p>
+            <h3>
+              <T>Added Catalan and Danish species common names</T>
+            </h3>
+          </p>
+          <p>
+            <h3>
+              <T>Added new survey fields</T>
+            </h3>
+          </p>
+          <p>
+            <h3>
+              <T>Improved user reports</T>
+            </h3>
+          </p>
+          <p>
+            <h3>
+              <T>Updated UI design</T>
+            </h3>
+          </p>
+          <p>
+            <h3>
+              <T>Various bug fixes</T>
+            </h3>
+          </p>
+          <p>
+            <h3>
+              <T>Updated translations</T>
+            </h3>
+          </p>
         </div>
 
         <IonButton onClick={closeDialog}>

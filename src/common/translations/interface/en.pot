@@ -1857,29 +1857,57 @@ msgstr ""
 msgid "What's New"
 msgstr "What's New"
 
-# Version 1.15 whats new message
-msgid "Record moths with the help of automatic identification in real-time."
-msgstr "Record moths with the help of automatic identification in real-time."
+# Version 1.17 whats new message
+msgid "Added Polish and Romanian languages"
+msgstr "Added Polish and Romanian languages"
 
-# Version 1.15 whats new message
-msgid "Bug fixes and improvements"
-msgstr "Bug fixes and improvements"
+# Version 1.17 whats new message
+msgid "Added Moth trap location setup"
+msgstr "Added Moth trap location setup"
 
-# Version 1.15 whats new message
-msgid "Added option to identify moths with image classifier"
-msgstr "Added option to identify moths with image classifier"
+# Version 1.17 whats new message
+msgid "Increase temperature range selection from -0 to +40"
+msgstr "Increase temperature range selection from -0 to +40"
 
-# Version 1.15 whats new message
-msgid "Added App setting option to disable image classifier"
-msgstr "Added App setting option to disable image classifier"
+# Version 1.17 whats new message
+msgid "Added a day-flying moths filter setting"
+msgstr "Added a day-flying moths filter setting"
 
-# Version 1.15 whats new message
-msgid "Added option to create Moth trap"
-msgstr "Added option to create Moth trap"
+# Version 1.17 whats new message
+msgid "Added +5 species count shortcut"
+msgstr "Added +5 species count shortcut"
 
-# Version 1.15 whats new message
-msgid "Bug fixes"
-msgstr "Bug fixes"
+# Version 1.17 whats new message
+msgid "Added species guide search and filters"
+msgstr "Added species guide search and filters"
+
+# Version 1.17 whats new message
+msgid "Updated species common names"
+msgstr "Updated species common names"
+
+# Version 1.17 whats new message
+msgid "Added Catalan and Danish species common names"
+msgstr "Added Catalan and Danish species common names"
+
+# Version 1.17 whats new message
+msgid "Added new survey fields"
+msgstr "Added new survey fields"
+
+# Version 1.17 whats new message
+msgid "Improved user reports"
+msgstr "Improved user reports"
+
+# Version 1.17 whats new message
+msgid "Updated UI design"
+msgstr "Updated UI design"
+
+# Version 1.17 whats new message
+msgid "Various bug fixes"
+msgstr "Various bug fixes"
+
+# Version 1.17 whats new message
+msgid "Updated translations"
+msgstr "Updated translations"
 
 # User account action
 msgid "Resend"
