@@ -443,11 +443,11 @@ msgstr "Informes"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Nombre de la especie o filtro..."
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "familia"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr "Lo sentimos, no hay datos de informes disponibles en este momento."
@@ -508,7 +508,7 @@ msgstr "Nota: permanecerá en la galería"
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr ""
+msgstr "Ninguna foto se ha añadido.<br/>Pulsa <3></3> para añadir."
 
 msgid "Registration error:"
 msgstr "Error de registro:"
@@ -1838,7 +1838,7 @@ msgstr "Desconocido"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Mostrar más"
 
 # Moth survey warning message
 msgid "Please add a photo"
@@ -1857,10 +1857,14 @@ msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species."
 msgstr ""
+"<0>Advertencia</0> - creemos que es {{probabilidad}}% probable que sea la "
+"especie<5>{{taxon}}</5>."
 
 # Moth survey image gallery warning message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
 msgstr ""
+"Creemos que es {{probabilidad}}% probable que sea la especie "
+"<3>{{taxon}}</3>."
 
 # App settings title
 msgid "Surveying"
@@ -1891,7 +1895,7 @@ msgstr ""
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Identificar"
 
 # Moth survey button label
 msgid "Identify All"
@@ -2054,7 +2058,7 @@ msgstr "Descripción adicional de la lámpara."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Por favor, añada la ubicación y el nombre de la trampa para poiillas."
 
 # Survey validation
 msgid "Incomplete"
@@ -2077,19 +2081,19 @@ msgstr ""
 "colaborado con este registro, incluido el suyo propio."
 
 msgid "Network Error"
-msgstr ""
+msgstr "Error en la red."
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "Por favor, inicie sesión para ver su propio informe de datos."
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "Sus principales especies este mes"
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "Sus especies principales"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
@@ -2102,9 +2106,13 @@ msgstr "El usuario no está conectado."
 # Context term
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
+"Creemos que es {{probabilidad}}% probable que sea la especie "
+"<3>{{taxon}}</3>"
 
 # Context term
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Advertencia</0> - creemos que es {{probabilidad}}% probable que sea la "
+"especie <5>{{taxon}}</5>"
