@@ -106,17 +106,19 @@ const BottomSheet: FC<Props> = ({
     : DEFAULT_SNAP_POSITION_IF_NO_CONNECTION;
 
   return (
-    <IonModal
-      id="bottom-sheet"
-      isOpen={isMounted}
-      showBackdrop={false}
-      backdropDismiss={false}
-      backdropBreakpoint={0.5}
-      breakpoints={SNAP_POSITIONS}
-      initialBreakpoint={defeaultPosition}
-    >
-      <IonContent>{getMothTraps()}</IonContent>
-    </IonModal>
+    <div>
+      <IonModal
+        id="bottom-sheet"
+        isOpen={isMounted}
+        showBackdrop={false}
+        backdropDismiss={false}
+        backdropBreakpoint={0.5}
+        breakpoints={SNAP_POSITIONS}
+        initialBreakpoint={defeaultPosition}
+      >
+        <IonContent>{getMothTraps()}</IonContent>
+      </IonModal>
+    </div>
   );
 };
 
