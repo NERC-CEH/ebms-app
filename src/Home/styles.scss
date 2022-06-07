@@ -10,6 +10,12 @@
         --ionicon-stroke-width: 24px;
       }
     }
+
+    // default 12px
+    ion-tab-button.md {
+      --padding-start: 5px;
+      --padding-end: 5px;
+    }
   }
 
   £ > ion-router-outlet > div > div {
