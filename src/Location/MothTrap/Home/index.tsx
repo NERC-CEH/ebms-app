@@ -22,9 +22,12 @@ function useDeleteLampPrompt() {
   const showDeletePrompt = () => {
     const showPrompt = (resolve: any) => {
       alert({
-        header: 'Delete Moth Trap',
-        message:
-          'Warning - This will discard the trap information you have entered so far.',
+        header: 'Delete',
+        message: (
+          <T>
+            Are you sure you want to delete this lamp entry from the moth trap?
+          </T>
+        ),
         buttons: [
           {
             text: 'Cancel',

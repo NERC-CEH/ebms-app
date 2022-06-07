@@ -250,7 +250,7 @@ export default () => (
       </Section>
 
       <Section>
-        <H>Species descriptions </H>
+        <H>Species descriptions</H>
         <P>
           Species descriptions included as part of the guide are based on those
           produced for the Climatic Risk Atlas of European Butterflies. We thank

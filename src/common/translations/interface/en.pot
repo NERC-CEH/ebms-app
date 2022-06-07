@@ -1807,14 +1807,6 @@ msgstr "Unknown species"
 msgid "<0>Warning</0> - we could not identify this species."
 msgstr "<0>Warning</0> - we could not identify this species."
 
-# Moth survey image gallery warning message
-msgid "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species."
-msgstr "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species."
-
-# Moth survey image gallery warning message
-msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
-msgstr "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
-
 # App settings title
 msgid "Surveying"
 msgstr "Surveying"
@@ -2036,10 +2028,30 @@ msgstr "Section Photos"
 msgid "User is not logged in."
 msgstr "User is not logged in."
 
-# Context term 
+# Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 
- # Context term 
+ # Gallery message
 msgid "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species"
 msgstr "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species"
+
+# Divider label moth trap setup 
+msgid "Lamps"
+msgstr "Lamps"
+
+# Moth trap setup delete lamp entry alert message
+msgid "Are you sure you want to delete this lamp entry from the moth trap?"
+msgstr "Are you sure you want to delete this lamp entry from the moth trap?"
+
+# Moth trap setup submitting the record alert message
+msgid "Trap type is a required field."
+msgstr "Trap type is a required field."
+
+# Successful registration pop-up 
+msgid "Welcome aboard"
+msgstr "Welcome aboard"
+
+# Successful registration pop-up 
+msgid "Before starting any surveys please check your email and click on the verification link."
+msgstr "Before starting any surveys please check your email and click on the verification link."

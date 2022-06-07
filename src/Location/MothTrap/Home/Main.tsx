@@ -105,7 +105,9 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
         <IonList id="list" lines="full">
           <div className="rounded">
             <IonItemDivider className="species-list-header">
-              <IonLabel>Lamps</IonLabel>
+              <IonLabel>
+                <T>Lamps</T>
+              </IonLabel>
               <IonLabel slot="end">{lampList.length}</IonLabel>
             </IonItemDivider>
 
