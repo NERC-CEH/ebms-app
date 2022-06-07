@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Vilius Stankaitis <vilius@flumens.io>, 2021
 # Egle Viciuviene <eviciuviene@gmail.com>, 2022
 # Karolis, 2022
+# Vilius Stankaitis <vilius@flumens.io>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2022\n"
+"Last-Translator: Vilius Stankaitis <vilius@flumens.io>, 2022\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1303,6 +1303,10 @@ msgstr "eBMS puslapyje"
 msgid "App Settings"
 msgstr "Programėlės nustatymai"
 
+# Settings label
+msgid "Use only day-flying moths"
+msgstr "Rodyti tik dieną skraidančius naktinius drugius"
+
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
@@ -1848,7 +1852,7 @@ msgstr "Padėsime jums nustatyti rūšis su rūšių nuotraukų klasifikatoriumi
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Identifikuoti"
 
 # Moth survey button label
 msgid "Identify All"
@@ -2020,7 +2024,7 @@ msgstr "Pasirinkti"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Registratoriai"
 
 # Additional details attribute, 15min count survey
 msgid ""
@@ -2045,11 +2049,11 @@ msgstr "Jūsų populiariausios rūšys"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Ruožo nuotrauka"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "Vartotojas nėra prisijungęs."
 
 # Context term
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"

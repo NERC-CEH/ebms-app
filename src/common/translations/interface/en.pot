@@ -1299,6 +1299,10 @@ msgstr "eBMS website"
 msgid "App Settings"
 msgstr "App Settings"
 
+# Settings label
+msgid "Use only day-flying moths"
+msgstr "Use only day-flying moths"
+
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
