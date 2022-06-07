@@ -3,8 +3,8 @@ import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import Sample from 'models/sample';
 import appModel from 'models/app';
-import userModel from 'models/user';
-import { Page, useToast, useLoader, device } from '@flumens';
+import userModel, { useUserStatusCheck } from 'models/user';
+import { Page, useToast, useLoader } from '@flumens';
 import Header from './Header';
 import Main from './Main';
 
@@ -13,19 +13,13 @@ type Props = {
 };
 
 const SectionListController: FC<Props> = ({ sample }) => {
+  const checkUserStatus = useUserStatusCheck();
   const loader = useLoader();
   const toast = useToast();
 
   const refreshUserTransects = async () => {
-    if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
-      return;
-    }
-
-    const isActivated = await userModel.checkActivation();
-    if (!isActivated) {
-      return;
-    }
+    const isUserOK = await checkUserStatus();
+    if (!isUserOK) return;
 
     await loader.show('Please wait...');
 
