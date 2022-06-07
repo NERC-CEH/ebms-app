@@ -8,6 +8,7 @@ const GENUS_TAXON_INDEX = 2;
 const GENUS_SPECIES_INDEX = 3;
 const SPECIES_ID_INDEX = 0;
 const SPECIES_TAXON_INDEX = 1;
+const SPECIES_EXTRA_ATTRS_INDEX = 2;
 
 function normalizeValue(value) {
   // check if int
@@ -129,6 +130,8 @@ function addSpecies(optimised, taxa) {
   const species = [];
   species[SPECIES_ID_INDEX] = id;
   species[SPECIES_TAXON_INDEX] = taxonClean;
+  const isDayFlying = !!taxa.attr_taxa_taxon_list_194;
+  if (isDayFlying) species[SPECIES_EXTRA_ATTRS_INDEX] = { isDayFlying };
 
   speciesArray.push(species);
 }

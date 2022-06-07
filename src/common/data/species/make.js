@@ -15,11 +15,12 @@ if (!APP_INDICIA_API_KEY && !REPORT_USER_EMAIL && REPORT_USER_PASS) {
   );
 }
 
+const DAY_FLYING_MOTHS_ATTR = 194;
 async function fetch(listID) {
   const userAuth = btoa(`${REPORT_USER_EMAIL}:${REPORT_USER_PASS}`);
   const { data } = await axios({
     method: 'GET',
-    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}`,
+    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}&taxattrs=${DAY_FLYING_MOTHS_ATTR}`,
     headers: {
       'x-api-key': APP_INDICIA_API_KEY,
       Authorization: `Basic ${userAuth}`,

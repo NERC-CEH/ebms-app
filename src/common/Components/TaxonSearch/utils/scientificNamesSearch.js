@@ -20,7 +20,8 @@ function search(
   results = [],
   maxResults,
   hybridRun,
-  informalGroups = []
+  informalGroups = [],
+  attrFilter = {}
 ) {
   const searchWords = searchPhrase.split(' ');
 
@@ -41,7 +42,15 @@ function search(
 
   // check if hybrid eg. X Cupressocyparis
   if (!hybridRun && searchPhrase.match(/X\s.*/i)) {
-    search(species, searchPhrase, results, maxResults, true, informalGroups);
+    search(
+      species,
+      searchPhrase,
+      results,
+      maxResults,
+      true,
+      informalGroups,
+      attrFilter
+    );
   }
 
   // find first match in array
@@ -104,6 +113,13 @@ function search(
           speciesIndex++
         ) {
           const speciesInArray = speciesArray[speciesIndex];
+
+          // check if species matches attr filters
+          if (attrFilter) {
+            const hasMatchingAttrs = attrFilter(speciesEntry, speciesInArray);
+            if (!hasMatchingAttrs) continue; // eslint-disable-line
+          }
+
           if (otherWordsRegex) {
             // if search through species
             // check if matches
@@ -148,7 +164,8 @@ const searchScientificSpeciesName = (
   results,
   maxResults,
   hybridRun,
-  informalGroups
+  informalGroups,
+  attrFilter
 ) =>
   search(
     species,
@@ -156,7 +173,8 @@ const searchScientificSpeciesName = (
     results,
     maxResults,
     hybridRun,
-    informalGroups
+    informalGroups,
+    attrFilter
   );
 
 export default function searchMulti(
@@ -165,9 +183,18 @@ export default function searchMulti(
   results = [],
   maxResults,
   hybridRun,
-  informalGroups = []
+  informalGroups = [],
+  attrFilter
 ) {
-  search(species, searchPhrase, results, maxResults, hybridRun, informalGroups);
+  search(
+    species,
+    searchPhrase,
+    results,
+    maxResults,
+    hybridRun,
+    informalGroups,
+    attrFilter
+  );
 
   const isOneWord = searchPhrase.split(' ').length;
   if (isOneWord) {
@@ -177,7 +204,8 @@ export default function searchMulti(
       results,
       maxResults,
       hybridRun,
-      informalGroups
+      informalGroups,
+      attrFilter
     );
   }
 
@@ -193,7 +221,8 @@ export default function searchMulti(
       results,
       maxResults,
       hybridRun,
-      informalGroups
+      informalGroups,
+      attrFilter
     );
   }
 }

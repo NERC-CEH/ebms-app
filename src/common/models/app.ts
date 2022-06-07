@@ -132,6 +132,7 @@ export type Attrs = ModelAttrs & {
   areaSurveyListSortedByTime: boolean;
 
   speciesGroups: string[];
+  useDayFlyingMothsOnly: boolean;
   transects: any;
   taxonGroupFilters?: any;
   primarySurvey: any;
@@ -163,6 +164,7 @@ const defaults: Attrs = {
   'draftId:moth': '',
 
   speciesGroups: ['butterflies'],
+  useDayFlyingMothsOnly: false,
   transects: [],
 
   primarySurvey: 'precise-area',

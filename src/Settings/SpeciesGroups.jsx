@@ -18,6 +18,14 @@ function SpeciesGroups({ appModel }) {
         input: 'checkbox',
         info: 'Please select the species groups that you always record.',
         inputProps: { options: groupOptions },
+        set: (value, model) => {
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.speciesGroups = value;
+          if (!value?.includes('moths')) {
+            // eslint-disable-next-line no-param-reassign
+            model.attrs.useDayFlyingMothsOnly = false;
+          }
+        },
       }}
       headerProps={{ title: 'Species groups' }}
     />

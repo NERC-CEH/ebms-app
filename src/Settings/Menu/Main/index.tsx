@@ -83,6 +83,7 @@ type Props = {
   useTraining: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;
+  useDayFlyingMothsOnly: boolean;
   showCommonNamesInGuide: boolean;
   primarySurvey?: string;
   language?: string;
@@ -102,10 +103,13 @@ const MenuMain: FC<Props> = ({
   country,
   showCommonNamesInGuide,
   speciesGroups,
+  useDayFlyingMothsOnly,
 }) => {
   const alert = useAlert();
   const primarySurveyLabel = surveys[primarySurvey as string].label;
 
+  const onUseDayFlyingMothsOnly = (checked: boolean) =>
+    onToggle('useDayFlyingMothsOnly', checked);
   const onSendAnalyticsToggle = (checked: boolean) =>
     onToggle('sendAnalytics', checked);
   const onUseExperiments = (checked: boolean) =>
@@ -117,6 +121,8 @@ const MenuMain: FC<Props> = ({
     onToggle('useTraining', checked);
   const onSubmitAllDialog = () =>
     uploadAllSamplesDialog(uploadAllSamples, alert);
+
+  const isUsingMothsGroup = speciesGroups?.includes('moths');
 
   return (
     <Main className="app-settings">
@@ -151,6 +157,14 @@ const MenuMain: FC<Props> = ({
             <IonIcon icon={butterflyIcon} size="small" slot="start" />
             <IonLabel slot="end">{speciesGroups?.length}</IonLabel>
           </IonItem>
+          {isUsingMothsGroup && (
+            <MenuAttrToggle
+              icon={butterflyIcon}
+              label="Use only day-flying moths"
+              value={useDayFlyingMothsOnly}
+              onChange={onUseDayFlyingMothsOnly}
+            />
+          )}
           <IonItem routerLink="/settings/moth-survey" detail>
             <IonLabel>
               <T>Moth Survey</T>

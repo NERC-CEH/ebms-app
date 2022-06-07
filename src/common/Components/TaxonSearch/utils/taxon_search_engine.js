@@ -49,6 +49,7 @@ const API = {
 
     const maxResults = options.maxResults || MAX;
     const informalGroups = options.informalGroups || [];
+    const { attrFilter } = options;
 
     // normalize the search phrase
     const normSearchPhrase = searchPhrase.toLowerCase();
@@ -62,7 +63,8 @@ const API = {
       results,
       maxResults,
       null,
-      informalGroups
+      informalGroups,
+      attrFilter
     );
 
     // return results in the order

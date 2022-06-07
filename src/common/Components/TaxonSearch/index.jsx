@@ -1,10 +1,13 @@
 import { createRef, Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonSearchbar, withIonLifeCycle } from '@ionic/react';
+import appModel from 'models/app';
 import groups from 'common/data/species/groups.json';
 import SpeciesSearchEngine from './utils/taxon_search_engine';
 import Suggestions from './components/Suggestions';
 import './styles.scss';
+
+const SPECIES_EXTRA_ATTRS_INDEX = 2; // in genera and above
 
 const MIN_SEARCH_LENGTH = 2;
 
@@ -42,6 +45,14 @@ class index extends Component {
     );
   };
 
+  filterDayFlyingMoths = (speciesEntry, taxa) => {
+    if (speciesEntry[1] !== groups.moths.id) return true;
+
+    return appModel.attrs.useDayFlyingMothsOnly
+      ? taxa[SPECIES_EXTRA_ATTRS_INDEX]?.isDayFlying
+      : true;
+  };
+
   onInputKeystroke = async e => {
     const { speciesGroups } = this.props;
 
@@ -62,6 +73,7 @@ class index extends Component {
     const informalGroups = speciesGroups && speciesGroups.map(getGroupId);
     const searchResults = await SpeciesSearchEngine.search(searchPhrase, {
       informalGroups,
+      attrFilter: this.filterDayFlyingMoths,
     });
     const annotatedSearchResults = this.annotateRecordedTaxa(searchResults);
 

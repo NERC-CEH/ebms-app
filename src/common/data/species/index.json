@@ -6,7 +6,10 @@
     [
       [
         457232,
-        "grossulariata"
+        "grossulariata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         457236,
@@ -1725,7 +1728,10 @@
     [
       [
         457140,
-        "tau"
+        "tau",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -3739,7 +3745,10 @@
       ],
       [
         460629,
-        "myrtilli"
+        "myrtilli",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         460612,
@@ -5754,19 +5763,19 @@
     "Argynnis",
     [
       [
-        434663,
-        "adippe"
-      ],
-      [
         466539,
         "adippe"
       ],
       [
-        434653,
-        "aglaja"
+        434663,
+        "adippe"
       ],
       [
         466540,
+        "aglaja"
+      ],
+      [
+        434653,
         "aglaja"
       ],
       [
@@ -5774,11 +5783,11 @@
         "laodice"
       ],
       [
-        466541,
+        434654,
         "niobe"
       ],
       [
-        434654,
+        466541,
         "niobe"
       ],
       [
@@ -7000,7 +7009,10 @@
       ],
       [
         459510,
-        "gamma"
+        "gamma",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         459517,
@@ -9322,7 +9334,10 @@
     [
       [
         457723,
-        "piniaria"
+        "piniaria",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -9370,7 +9385,10 @@
     [
       [
         457395,
-        "exanthemata"
+        "exanthemata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         457393,
@@ -9378,7 +9396,10 @@
       ],
       [
         457391,
-        "pusaria"
+        "pusaria",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -9566,7 +9587,10 @@
     [
       [
         459045,
-        "dominula"
+        "dominula",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -9996,7 +10020,10 @@
     [
       [
         458171,
-        "bilineata"
+        "bilineata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         458173,
@@ -10308,13 +10335,13 @@
     []
   ],
   [
-    432026,
+    432028,
     251,
     "Carcharodus",
     []
   ],
   [
-    432028,
+    432026,
     251,
     "Carcharodus",
     [
@@ -11598,7 +11625,10 @@
     [
       [
         460602,
-        "graminis"
+        "graminis",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -12385,7 +12415,10 @@
       ],
       [
         457302,
-        "clathrata"
+        "clathrata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         457306,
@@ -19702,7 +19735,10 @@
       ],
       [
         459005,
-        "sannio"
+        "sannio",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -22962,7 +22998,10 @@
     [
       [
         457702,
-        "atomaria"
+        "atomaria",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -23832,7 +23871,7 @@
     ]
   ],
   [
-    446477,
+    446478,
     260,
     "Epichnopteriginae",
     []
@@ -23844,19 +23883,19 @@
     []
   ],
   [
-    446478,
+    446477,
     260,
     "Epichnopteriginae",
     []
   ],
   [
-    446712,
+    446710,
     260,
     "Epichnopterigini",
     []
   ],
   [
-    446710,
+    446712,
     260,
     "Epichnopterigini",
     []
@@ -23874,13 +23913,13 @@
     []
   ],
   [
-    446815,
+    446816,
     260,
     "Epichnopterix",
     []
   ],
   [
-    446816,
+    446815,
     260,
     "Epichnopterix",
     [
@@ -23931,12 +23970,6 @@
     ]
   ],
   [
-    446480,
-    260,
-    "Epichnopteryginae",
-    []
-  ],
-  [
     446481,
     260,
     "Epichnopteryginae",
@@ -23949,13 +23982,19 @@
     []
   ],
   [
-    446714,
+    446480,
+    260,
+    "Epichnopteryginae",
+    []
+  ],
+  [
+    446715,
     260,
     "Epichnopterygini",
     []
   ],
   [
-    446715,
+    446714,
     260,
     "Epichnopterygini",
     []
@@ -24298,7 +24337,10 @@
     [
       [
         458182,
-        "alternata"
+        "alternata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         458192,
@@ -25749,11 +25791,17 @@
       ],
       [
         459370,
-        "glyphica"
+        "glyphica",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         459372,
-        "mi"
+        "mi",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         459375,
@@ -27412,7 +27460,10 @@
     [
       [
         459047,
-        "quadripunctaria"
+        "quadripunctaria",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -30845,7 +30896,10 @@
       ],
       [
         457184,
-        "fuciformis"
+        "fuciformis",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         466577,
@@ -30853,7 +30907,10 @@
       ],
       [
         457182,
-        "tityus"
+        "tityus",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -31866,7 +31923,10 @@
       ],
       [
         457199,
-        "gallii"
+        "gallii",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         457205,
@@ -33780,7 +33840,10 @@
       ],
       [
         457781,
-        "putata"
+        "putata",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -34595,7 +34658,10 @@
       ],
       [
         457094,
-        "quercus"
+        "quercus",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         457096,
@@ -35668,7 +35734,10 @@
       ],
       [
         457239,
-        "marginata"
+        "marginata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         457241,
@@ -36357,7 +36426,10 @@
     [
       [
         458083,
-        "cruentaria"
+        "cruentaria",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         458079,
@@ -36488,7 +36560,10 @@
     [
       [
         457187,
-        "stellatarum"
+        "stellatarum",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -36525,7 +36600,10 @@
       ],
       [
         457098,
-        "rubi"
+        "rubi",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -41144,7 +41222,10 @@
     [
       [
         458449,
-        "atrata"
+        "atrata",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -41976,7 +42057,10 @@
       ],
       [
         458947,
-        "antiqua"
+        "antiqua",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         458942,
@@ -43007,7 +43091,10 @@
     [
       [
         459627,
-        "tenebrata"
+        "tenebrata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         459630,
@@ -44787,7 +44874,10 @@
       ],
       [
         458534,
-        "albulata"
+        "albulata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         458521,
@@ -44852,7 +44942,10 @@
     [
       [
         457312,
-        "chlorosata"
+        "chlorosata",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -46537,7 +46630,10 @@
     [
       [
         448693,
-        "hecta"
+        "hecta",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -46556,7 +46652,10 @@
       ],
       [
         459227,
-        "viridaria"
+        "viridaria",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -47477,11 +47576,11 @@
         "alibali"
       ],
       [
-        467131,
+        466909,
         "altivagans"
       ],
       [
-        466909,
+        467131,
         "altivagans"
       ],
       [
@@ -47505,11 +47604,11 @@
         "artvinensis"
       ],
       [
-        467133,
+        466910,
         "aserbeidschanus"
       ],
       [
-        466910,
+        467133,
         "aserbeidschanus"
       ],
       [
@@ -47623,11 +47722,11 @@
         "dezinus"
       ],
       [
-        467109,
+        467110,
         "diana"
       ],
       [
-        467110,
+        467109,
         "diana"
       ],
       [
@@ -47747,11 +47846,11 @@
         "mithridates"
       ],
       [
-        467114,
+        466917,
         "myrrha"
       ],
       [
-        466917,
+        467114,
         "myrrha"
       ],
       [
@@ -47759,11 +47858,11 @@
         "nephohiptamenos"
       ],
       [
-        467147,
+        466918,
         "ninae"
       ],
       [
-        466918,
+        467147,
         "ninae"
       ],
       [
@@ -47811,11 +47910,11 @@
         "sigberti"
       ],
       [
-        467153,
+        466919,
         "surakovi"
       ],
       [
-        466919,
+        467153,
         "surakovi"
       ],
       [
@@ -47843,11 +47942,11 @@
         "turcicolus"
       ],
       [
-        467157,
+        466920,
         "turcicus"
       ],
       [
-        466920,
+        467157,
         "turcicus"
       ],
       [
@@ -48858,7 +48957,10 @@
     [
       [
         457334,
-        "macularia"
+        "macularia",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -50091,7 +50193,7 @@
     ]
   ],
   [
-    446824,
+    446825,
     260,
     "Rebelia",
     []
@@ -50103,7 +50205,7 @@
     []
   ],
   [
-    446825,
+    446824,
     260,
     "Rebelia",
     [
@@ -50390,7 +50492,10 @@
     [
       [
         458393,
-        "hastata"
+        "hastata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         458395,
@@ -51059,7 +51164,10 @@
       ],
       [
         457146,
-        "pavonia"
+        "pavonia",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         457148,
@@ -51887,7 +51995,10 @@
       ],
       [
         458114,
-        "chenopodiata"
+        "chenopodiata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         458092,
@@ -53408,7 +53519,10 @@
       ],
       [
         457657,
-        "brunnearia"
+        "brunnearia",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         457664,
@@ -53697,7 +53811,10 @@
     [
       [
         457508,
-        "lineata"
+        "lineata",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -54857,13 +54974,13 @@
     []
   ],
   [
-    446830,
+    446829,
     260,
     "Stichobasis",
     []
   ],
   [
-    446829,
+    446830,
     260,
     "Stichobasis",
     [
@@ -58373,7 +58490,10 @@
     [
       [
         459049,
-        "jacobaeae"
+        "jacobaeae",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -59141,7 +59261,10 @@
       ],
       [
         458149,
-        "montanata"
+        "montanata",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         458130,
@@ -60169,7 +60292,10 @@
       ],
       [
         455121,
-        "filipendulae"
+        "filipendulae",
+        {
+          "isDayFlying": true
+        }
       ],
       [
         455092,

@@ -63,6 +63,7 @@ const Container: FC = () => {
     primarySurvey,
     speciesGroups,
     showCommonNamesInGuide,
+    useDayFlyingMothsOnly,
   } = appModel.attrs;
 
   const resetAppWrap = () => resetApp(toast);
@@ -73,6 +74,7 @@ const Container: FC = () => {
       <Header title="Settings" />
       <Main
         useTraining={useTraining}
+        useDayFlyingMothsOnly={useDayFlyingMothsOnly}
         useExperiments={useExperiments}
         sendAnalytics={sendAnalytics}
         primarySurvey={primarySurvey}
