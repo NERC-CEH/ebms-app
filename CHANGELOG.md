@@ -2,6 +2,17 @@
 
 Updated translations.
 Added Polish and Romanian languages.
+Added Moth trap location setup.
+Increase temperature range selection from -0 to +40.
+Added a day-flying moths filter setting.
+Added +5 species count shortcut.
+Added species guide search and filters.
+Updated species common names.
+Added Catalan and Danish species common names.
+Added new survey fields.
+Improved user reports.
+Updated UI design.
+Various bug fixes.
 
 ## 1.16.0
 
