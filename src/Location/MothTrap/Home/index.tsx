@@ -5,6 +5,7 @@ import Location, { Lamp, useValidateCheck } from 'models/location';
 import UUID from 'common/helpers/UUID';
 import { useRouteMatch } from 'react-router';
 import { observer } from 'mobx-react';
+import { useUserStatusCheck } from 'models/user';
 import { Page, Header, useAlert, useToast } from '@flumens';
 import { IonButton, NavContext } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
@@ -51,6 +52,8 @@ function useDeleteLampPrompt() {
 }
 
 const MothTrapSetup: FC<Props> = ({ sample: location }) => {
+  const checkUserStatus = useUserStatusCheck();
+
   const { navigate, goBack } = useContext(NavContext);
   const validateLocation = useValidateCheck();
   const { url } = useRouteMatch();
@@ -68,7 +71,10 @@ const MothTrapSetup: FC<Props> = ({ sample: location }) => {
     }
   };
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
+    const isUserOK = await checkUserStatus();
+    if (!isUserOK) return;
+
     const invalids = validateLocation(location);
     if (invalids) return;
 
