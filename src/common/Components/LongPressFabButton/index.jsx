@@ -29,6 +29,8 @@ class LongPressFabButton extends Component {
       passive: false,
       gestureName: 'long-press',
       onStart: ev => {
+        this.usingMouse = ev.event?.type.includes('mouse');
+
         ev.event.preventDefault();
         ev.event.stopPropagation();
         ev.event.stopImmediatePropagation();
@@ -43,6 +45,9 @@ class LongPressFabButton extends Component {
 
         if (this.longPressActive) {
           this.longPressActive = false;
+
+          if (this.usingMouse) this.fabRef.current.lastChild.hidden = true; // hide the list when clicked with mouse
+
           onClick();
           return;
         }
@@ -61,6 +66,9 @@ class LongPressFabButton extends Component {
     const openLongPressButton = () => {
       if (this.longPressActive === true) {
         this.longPressActive = false;
+
+        if (this.usingMouse) return; // 'mouseend' will trigger it
+
         this.fabRef.current.click();
       }
     };
