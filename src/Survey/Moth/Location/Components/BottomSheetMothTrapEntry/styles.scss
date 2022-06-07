@@ -1,5 +1,6 @@
 #bottom-sheet {
   z-index: 10000 !important;
+  --height: 80vh;
 
   // tablet-friendly
   max-width: 600px;
@@ -9,9 +10,17 @@
     margin-top: 7px;
   }
 
+  ion-toolbar {
+    --background: white;
+    --min-height: 35px;
+  }
+
+  ion-toolbar.ios {
+    --min-height: 20px;
+  }
+
   ion-content {
     --background: white;
-    --padding-top: 30px;
   }
 
   ion-item.moth-trap {

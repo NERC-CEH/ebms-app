@@ -9,6 +9,8 @@ import {
   IonButton,
   IonContent,
   IonModal,
+  IonHeader,
+  IonToolbar,
 } from '@ionic/react';
 import { observer } from 'mobx-react';
 import turf from '@turf/distance';
@@ -16,7 +18,7 @@ import hasLocationMatch from 'Survey/common/hasLocationMatch';
 import { informationCircleOutline } from 'ionicons/icons';
 import BottomSheetMothTrapEntry from './BottomSheetMothTrapEntry';
 
-const SNAP_POSITIONS = [0.05, 0.22, 0.5, 0.8];
+const SNAP_POSITIONS = [0.05, 0.22, 0.5, 1];
 const DEFAULT_SNAP_POSITION = 0.22;
 const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 0.05;
 
@@ -110,12 +112,14 @@ const BottomSheet: FC<Props> = ({
       <IonModal
         id="bottom-sheet"
         isOpen={isMounted}
-        showBackdrop={false}
         backdropDismiss={false}
         backdropBreakpoint={0.5}
         breakpoints={SNAP_POSITIONS}
         initialBreakpoint={defeaultPosition}
       >
+        <IonHeader class="ion-no-border">
+          <IonToolbar />
+        </IonHeader>
         <IonContent>{getMothTraps()}</IonContent>
       </IonModal>
     </div>
