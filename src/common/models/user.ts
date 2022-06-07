@@ -222,6 +222,4 @@ export const useUserStatusCheck = () => {
   return check;
 };
 
-(window as any).userModel = userModel;
-
 export default userModel;
