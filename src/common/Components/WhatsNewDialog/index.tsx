@@ -5,6 +5,7 @@ import appModelTypes from 'common/models/app';
 import { IonBackdrop, IonIcon, IonButton } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import appLogo from 'common/images/icon.svg';
+import ExpandableList from 'Components/ExpandableList';
 import './styles.scss';
 
 type Props = {
@@ -48,74 +49,49 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
           </h1>
         </div>
         <div className="message">
-          <p>
-            <h3>
-              <T>Added Polish and Romanian languages</T>
-            </h3>
-          </p>
-
-          <p>
-            <h3>
-              <T>Added Moth trap location setup</T>
-            </h3>
-          </p>
-          <p>
-            <h3>
-              <T>Increase temperature range selection from -0 to +40</T>
-            </h3>
-          </p>
-          <p>
-            <h3>
-              <T>Added a day-flying moths filter setting</T>
-            </h3>
-          </p>
-
-          <p>
-            <h3>
-              <T>Added +5 species count shortcut</T>
-            </h3>
-          </p>
-
-          <p>
-            <h3>
-              <T>Added species guide search and filters</T>
-            </h3>
-          </p>
-          <p>
-            <h3>
-              <T>Updated species common names</T>
-            </h3>
-          </p>
-          <p>
-            <h3>
-              <T>Added Catalan and Danish species common names</T>
-            </h3>
-          </p>
-          <p>
-            <h3>
-              <T>Added new survey fields</T>
-            </h3>
-          </p>
-          <p>
-            <h3>
-              <T>Improved user reports</T>
-            </h3>
-          </p>
-          <p>
-            <h3>
-              <T>Updated UI design</T>
-            </h3>
-          </p>
-          <p>
-            <h3>
-              <T>Various bug fixes</T>
-            </h3>
-          </p>
-          <p>
-            <h3>
-              <T>Updated translations</T>
-            </h3>
-          </p>
+          <ul>
+            <ExpandableList>
+              <li>
+                <T>Improved user reports</T>
+              </li>
+              <li>
+                <T>Added species guide search and filters</T>
+              </li>
+              <li>
+                <T>Added Moth trap location setup</T>
+              </li>
+              <li>
+                <T>Added new survey fields</T>
+              </li>
+              <li>
+                <T>Increase temperature range selection from -0 to +40</T>
+              </li>
+              <li>
+                <T>Added +5 species count shortcut</T>
+              </li>
+              <li>
+                <T>Added a day-flying moths filter setting</T>
+              </li>
+              <li>
+                <T>Updated species common names</T>
+              </li>
+              <li>
+                <T>Added Polish and Romanian languages</T>
+              </li>
+              <li>
+                <T>Added Catalan and Danish species common names</T>
+              </li>
+              <li>
+                <T>Updated UI design</T>
+              </li>
+              <li>
+                <T>Various bug fixes</T>
+              </li>
+              <li>
+                <T>Updated translations</T>
+              </li>
+            </ExpandableList>
+          </ul>
         </div>
 
         <IonButton onClick={closeDialog}>

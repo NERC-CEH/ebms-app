@@ -9,7 +9,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 75%;
+    width: 85%;
+    max-width: 400px;
     z-index: 1000;
     background: white;
     border-radius: 20px;
@@ -80,6 +81,22 @@
       max-height: 55vh;
       border-bottom: 1px solid #f4f4f4;
       padding: 0 20px 20px;
+
+      ul {
+        padding-left: 14px;
+
+        .expandable-list {
+          --padding-start: 0;
+
+          ion-label {
+            text-align: left;
+          }
+        }
+        li {
+          margin-bottom: 20px;
+          font-weight: 300;
+        }
+      }
 
       h3 {
         font-size: 0.9em;
