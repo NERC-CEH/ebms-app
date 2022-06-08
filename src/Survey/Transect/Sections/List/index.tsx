@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import Sample from 'models/sample';
 import appModel from 'models/app';
 import userModel, { useUserStatusCheck } from 'models/user';
-import { Page, useToast, useLoader } from '@flumens';
+import { Page, useToast, useLoader, device } from '@flumens';
 import Header from './Header';
 import Main from './Main';
 
@@ -51,12 +51,11 @@ const SectionListController: FC<Props> = ({ sample }) => {
     addSectionSubSamples();
   };
 
-  // componentDidMount() {
-  //   const { appModel } = props;
-  //   if (!appModel.attrs.transects.length && device.isOnline) {
-  //     refreshUserTransects();
-  //   }
-  // }
+  useEffect(() => {
+    if (!appModel.attrs.transects.length && device.isOnline) {
+      refreshUserTransects();
+    }
+  }, []);
 
   const transect = sample.attrs.location;
 
