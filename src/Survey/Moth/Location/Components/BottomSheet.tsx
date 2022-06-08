@@ -108,7 +108,7 @@ const BottomSheet: FC<Props> = ({
     : DEFAULT_SNAP_POSITION_IF_NO_CONNECTION;
 
   return (
-    <div>
+    <div className="wrap-to-prevent-modal-from-crashing">
       <IonModal
         id="bottom-sheet"
         isOpen={isMounted}
