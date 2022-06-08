@@ -1815,16 +1815,6 @@ msgstr "Nežinoma rūšis"
 msgid "<0>Warning</0> - we could not identify this species."
 msgstr "<0>Dėmesio</0> - negalime nustatyti šios rūšies."
 
-# Moth survey image gallery warning message
-msgid ""
-"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
-"species."
-msgstr ""
-
-# Moth survey image gallery warning message
-msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
-msgstr ""
-
 # App settings title
 msgid "Surveying"
 msgstr "Stebėjimai"
@@ -1874,32 +1864,57 @@ msgstr ""
 msgid "What's New"
 msgstr "Kas naujo"
 
-# Version 1.15 whats new message
-msgid "Record moths with the help of automatic identification in real-time."
+# Version 1.17 whats new message
+msgid "Added Polish and Romanian languages"
 msgstr ""
-"Naktinių drugių rūšių registravimas su realaus laiko identifikavimo pagalba"
 
-# Version 1.15 whats new message
-msgid "Bug fixes and improvements"
-msgstr "Ištaisytos klaidos ir įdiegti patobulinimai"
-
-# Version 1.15 whats new message
-msgid "Added option to identify moths with image classifier"
+# Version 1.17 whats new message
+msgid "Added Moth trap location setup"
 msgstr ""
-"Pridėta galimybė nustatyti naktinių drugių rūšis su nuotraukų "
-"klasifikatoriumi"
 
-# Version 1.15 whats new message
-msgid "Added App setting option to disable image classifier"
-msgstr "Pridėta galimybė išjungti nuotraukų klasifikatorių"
+# Version 1.17 whats new message
+msgid "Increase temperature range selection from -0 to +40"
+msgstr ""
 
-# Version 1.15 whats new message
-msgid "Added option to create Moth trap"
-msgstr "Pridėta galimybė sukurti naktinių drugių gaudyklę"
+# Version 1.17 whats new message
+msgid "Added a day-flying moths filter setting"
+msgstr ""
 
-# Version 1.15 whats new message
-msgid "Bug fixes"
-msgstr "Ištaisytos klaidos"
+# Version 1.17 whats new message
+msgid "Added +5 species count shortcut"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Added species guide search and filters"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Updated species common names"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Added Catalan and Danish species common names"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Added new survey fields"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Improved user reports"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Updated UI design"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Various bug fixes"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Updated translations"
+msgstr ""
 
 # User account action
 msgid "Resend"
@@ -2055,12 +2070,36 @@ msgstr "Ruožo nuotrauka"
 msgid "User is not logged in."
 msgstr "Vartotojas nėra prisijungęs."
 
-# Context term
+# Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
 
-# Context term
+# Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+
+# Divider label moth trap setup
+msgid "Lamps"
+msgstr "Lempos"
+
+# Moth trap setup delete lamp entry alert message
+msgid "Are you sure you want to delete this lamp entry from the moth trap?"
+msgstr "Ar tikrai norite ištrinti šią lempą iš gaudyklės?"
+
+# Moth trap setup submitting the record alert message
+msgid "Trap type is a required field."
+msgstr "Prašome pasirinkti gaudyklės tipą."
+
+# Successful registration pop-up
+msgid "Welcome aboard"
+msgstr "Sveiki prisijungę"
+
+# Successful registration pop-up
+msgid ""
+"Before starting any surveys please check your email and click on the "
+"verification link."
+msgstr ""
+"Iki naudodamiesi aplikacija prašome patvirtinti savo el.paštą - paspausdami "
+"nuorodą išsiųstą jūsų adresu."

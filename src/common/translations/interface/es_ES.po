@@ -251,7 +251,7 @@ msgid "Lets start!"
 msgstr "¡Empecemos!"
 
 msgid "TOP RECORDERS"
-msgstr "MEJORES REGISTRADORES"
+msgstr "MEJORES CENSADORES"
 
 msgid "Top Species from all timed counts"
 msgstr "Especies más vistas en todos los Recuentos de 15 minutos"
@@ -439,7 +439,7 @@ msgid "Surveys"
 msgstr "Muestreos"
 
 msgid "Reports"
-msgstr "Informes"
+msgstr "Informe"
 
 # Species filter input
 msgid "Species name or filter..."
@@ -1342,7 +1342,7 @@ msgstr "Configuración de la Applicación"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Utilizar sólo polillas diurnas"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1775,7 +1775,7 @@ msgstr "Fotos de polilla"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr "Introduzca el nombre del registrador, si es diferente."
+msgstr "Introduzca el nombre del censador, si es diferente."
 
 # Identifier attribute placeholder
 msgid "Recorder name"
@@ -1856,20 +1856,6 @@ msgstr "Specie desconocida"
 msgid "<0>Warning</0> - we could not identify this species."
 msgstr "<0>Aviso</0> - no pudimos identificar esta especie."
 
-# Moth survey image gallery warning message
-msgid ""
-"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
-"species."
-msgstr ""
-"<0>Advertencia</0> - creemos que es {{probabilidad}}% probable que sea la "
-"especie<5>{{taxon}}</5>."
-
-# Moth survey image gallery warning message
-msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
-msgstr ""
-"Creemos que es {{probabilidad}}% probable que sea la especie "
-"<3>{{taxon}}</3>."
-
 # App settings title
 msgid "Surveying"
 msgstr "Muestreando"
@@ -1921,34 +1907,57 @@ msgstr ""
 msgid "What's New"
 msgstr "Novedades"
 
-# Version 1.15 whats new message
-msgid "Record moths with the help of automatic identification in real-time."
+# Version 1.17 whats new message
+msgid "Added Polish and Romanian languages"
 msgstr ""
-"Registra polillas con la ayuda de la identificación automática en tiempo "
-"real."
 
-# Version 1.15 whats new message
-msgid "Bug fixes and improvements"
-msgstr "Corrección de errores y mejoras"
-
-# Version 1.15 whats new message
-msgid "Added option to identify moths with image classifier"
+# Version 1.17 whats new message
+msgid "Added Moth trap location setup"
 msgstr ""
-"Añadida la opción de identificar polillas con el clasificador de imágenes"
 
-# Version 1.15 whats new message
-msgid "Added App setting option to disable image classifier"
+# Version 1.17 whats new message
+msgid "Increase temperature range selection from -0 to +40"
 msgstr ""
-"Se ha añadido la opción de configuración de la aplicación para desactivar el"
-" clasificador de imágenes"
 
-# Version 1.15 whats new message
-msgid "Added option to create Moth trap"
-msgstr "Añadida la opción de crear Trampa de polillas"
+# Version 1.17 whats new message
+msgid "Added a day-flying moths filter setting"
+msgstr ""
 
-# Version 1.15 whats new message
-msgid "Bug fixes"
-msgstr "Corrección de errores"
+# Version 1.17 whats new message
+msgid "Added +5 species count shortcut"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Added species guide search and filters"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Updated species common names"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Added Catalan and Danish species common names"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Added new survey fields"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Improved user reports"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Updated UI design"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Various bug fixes"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Updated translations"
+msgstr ""
 
 # User account action
 msgid "Resend"
@@ -2074,15 +2083,15 @@ msgstr "Seleccionar"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr "Registradores"
+msgstr "Censadores"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
-"Introduzca el número de registradores de cualquier persona que haya "
-"colaborado con este registro, incluido el suyo propio."
+"Introduzca el número de censadores, cualquier persona que haya colaborado "
+"con este registro, incluido el suyo propio."
 
 msgid "Network Error"
 msgstr "Error en la red."
@@ -2107,16 +2116,38 @@ msgstr "Fotos de la sección"
 msgid "User is not logged in."
 msgstr "El usuario no está conectado."
 
-# Context term
+# Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
 "Creemos que es {{probabilidad}}% probable que sea la especie "
 "<3>{{taxon}}</3>"
 
-# Context term
+# Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
 "<0>Advertencia</0> - creemos que es {{probabilidad}}% probable que sea la "
 "especie <5>{{taxon}}</5>"
+
+# Divider label moth trap setup
+msgid "Lamps"
+msgstr ""
+
+# Moth trap setup delete lamp entry alert message
+msgid "Are you sure you want to delete this lamp entry from the moth trap?"
+msgstr ""
+
+# Moth trap setup submitting the record alert message
+msgid "Trap type is a required field."
+msgstr ""
+
+# Successful registration pop-up
+msgid "Welcome aboard"
+msgstr ""
+
+# Successful registration pop-up
+msgid ""
+"Before starting any surveys please check your email and click on the "
+"verification link."
+msgstr ""

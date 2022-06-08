@@ -1334,6 +1334,10 @@ msgstr "Website eBMS"
 msgid "App Settings"
 msgstr "Setările Aplicației"
 
+# Settings label
+msgid "Use only day-flying moths"
+msgstr ""
+
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
@@ -1850,16 +1854,6 @@ msgstr "Specie necunoscută"
 msgid "<0>Warning</0> - we could not identify this species."
 msgstr "<0>Atenție</0> - nu am putut identifica această specie."
 
-# Moth survey image gallery warning message
-msgid ""
-"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
-"species."
-msgstr ""
-
-# Moth survey image gallery warning message
-msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species."
-msgstr ""
-
 # App settings title
 msgid "Surveying"
 msgstr "Măsurători"
@@ -1911,35 +1905,57 @@ msgstr ""
 msgid "What's New"
 msgstr "Noutăți"
 
-# Version 1.15 whats new message
-msgid "Record moths with the help of automatic identification in real-time."
+# Version 1.17 whats new message
+msgid "Added Polish and Romanian languages"
 msgstr ""
-"Înregistrați fluturii de noapte cu ajutorul identificării automate în timp "
-"real."
 
-# Version 1.15 whats new message
-msgid "Bug fixes and improvements"
-msgstr "Corectarea erorilor și îmbunătățiri"
-
-# Version 1.15 whats new message
-msgid "Added option to identify moths with image classifier"
+# Version 1.17 whats new message
+msgid "Added Moth trap location setup"
 msgstr ""
-"A fost adăugată opțiunea de identificare a fluturilor de noapte cu ajutorul "
-"clasificatorului de imagini"
 
-# Version 1.15 whats new message
-msgid "Added App setting option to disable image classifier"
+# Version 1.17 whats new message
+msgid "Increase temperature range selection from -0 to +40"
 msgstr ""
-"A fost adăugată opțiunea de setare a aplicației pentru a dezactiva "
-"clasificatorul de imagini"
 
-# Version 1.15 whats new message
-msgid "Added option to create Moth trap"
-msgstr "A fost adăugată opțiunea de a crea capcană de fluturi de noapte"
+# Version 1.17 whats new message
+msgid "Added a day-flying moths filter setting"
+msgstr ""
 
-# Version 1.15 whats new message
-msgid "Bug fixes"
-msgstr "Corectarea erorilor"
+# Version 1.17 whats new message
+msgid "Added +5 species count shortcut"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Added species guide search and filters"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Updated species common names"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Added Catalan and Danish species common names"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Added new survey fields"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Improved user reports"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Updated UI design"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Various bug fixes"
+msgstr ""
+
+# Version 1.17 whats new message
+msgid "Updated translations"
+msgstr ""
 
 # User account action
 msgid "Resend"
@@ -2092,12 +2108,34 @@ msgstr ""
 msgid "User is not logged in."
 msgstr ""
 
-# Context term
+# Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
 
-# Context term
+# Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
+msgstr ""
+
+# Divider label moth trap setup
+msgid "Lamps"
+msgstr ""
+
+# Moth trap setup delete lamp entry alert message
+msgid "Are you sure you want to delete this lamp entry from the moth trap?"
+msgstr ""
+
+# Moth trap setup submitting the record alert message
+msgid "Trap type is a required field."
+msgstr ""
+
+# Successful registration pop-up
+msgid "Welcome aboard"
+msgstr ""
+
+# Successful registration pop-up
+msgid ""
+"Before starting any surveys please check your email and click on the "
+"verification link."
 msgstr ""
