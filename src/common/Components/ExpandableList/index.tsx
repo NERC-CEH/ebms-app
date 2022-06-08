@@ -5,7 +5,7 @@ import './styles.scss';
 
 const MAX_ITEMS = 5;
 
-const ExpandableList: FC<any> = ({ items: itemsProp }: any) => {
+const ExpandableList: FC<any> = ({ children: itemsProp }: any) => {
   const [showMore, setShowMore] = useState(false);
   const items = itemsProp.slice(0, MAX_ITEMS);
   const restItems = itemsProp.slice(MAX_ITEMS, itemsProp.length);

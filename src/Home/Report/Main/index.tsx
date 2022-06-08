@@ -12,9 +12,9 @@ import { observer } from 'mobx-react';
 import userModel from 'models/user';
 import { Main } from '@flumens';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import ExpandableList from 'Components/ExpandableList';
 import { Trans as T } from 'react-i18next';
 import SpeciesEntry from './SpeciesEntry';
-import ExpandableList from './ExpandableList';
 
 interface Props {
   species: any;
@@ -78,7 +78,7 @@ const MainReport: FC<Props> = ({
             </IonLabel>
           </IonItem>
 
-          <ExpandableList items={listComponents} />
+          <ExpandableList>{listComponents}</ExpandableList>
         </div>
       </>
     );
