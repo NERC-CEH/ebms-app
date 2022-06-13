@@ -26,6 +26,7 @@ const temperatureValues = [
     value: '',
     label: 'Not recorded/no data',
     isDefault: true,
+    id: 20167,
   },
   { value: '-0', id: 20124 },
   { value: 0, id: 20166 },
