@@ -59,23 +59,20 @@ const FiltersToolbar: FC<Props> = ({
   }
 
   const focusSearch = () => {
+    if (!isOpen) return;
     setTappedSearchEnd(false);
-    isOpen && searchInput.current.setFocus();
+    searchInput.current.setFocus();
   };
   useEffect(focusSearch, [isOpen, searchInput.current]);
 
   function onSearchEnd() {
     setTappedSearchEnd(true);
     onSearchEndProp();
+    isPlatform('hybrid') && Keyboard.hide();
   }
 
   function onKeyUp({ keyCode }: { keyCode: number }) {
-    // 13 = Enter
-    if (keyCode === 13) {
-      onSearchEndProp();
-
-      isPlatform('hybrid') && Keyboard.hide();
-    }
+    if (keyCode === 13) onSearchEnd(); // 13 = Enter
   }
 
   const selectFilter = (type: FilterGroup, value: Filter) => {
