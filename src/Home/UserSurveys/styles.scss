@@ -1,6 +1,11 @@
 #surveys-list.ion-page {
   .text-center span {
     text-align: center;
+
+    ion-icon {
+      background: var(--ion-color-primary);
+      border-radius: 50%;
+    }
   }
 
   ion-segment {
