@@ -2083,3 +2083,7 @@ msgstr "Welcome aboard"
 # Successful registration pop-up 
 msgid "Before starting any surveys please check your email and click on the verification link."
 msgstr "Before starting any surveys please check your email and click on the verification link."
+
+# Species guide search 
+msgid "Sorry, no species were found."
+msgstr "Sorry, no species were found."

@@ -2103,3 +2103,7 @@ msgid ""
 msgstr ""
 "Iki naudodamiesi aplikacija prašome patvirtinti savo el.paštą - paspausdami "
 "nuorodą išsiųstą jūsų adresu."
+
+# Species guide search
+msgid "Sorry, no species were found."
+msgstr "Rūšių nerasta."

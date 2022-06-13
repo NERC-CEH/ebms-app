@@ -1953,3 +1953,7 @@ msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
+
+# Species guide search
+msgid "Sorry, no species were found."
+msgstr ""

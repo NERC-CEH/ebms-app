@@ -2155,3 +2155,7 @@ msgid ""
 msgstr ""
 "Antes de empezar cualquier muestreo, comprueba tu correo electrónico y haz "
 "clic en el enlace de verificación."
+
+# Species guide search
+msgid "Sorry, no species were found."
+msgstr ""
