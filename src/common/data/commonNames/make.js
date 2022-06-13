@@ -5,6 +5,8 @@ const fs = require('fs');
 const btoa = require('btoa'); // eslint-disable-line
 const groups = require('../species/groups.json');
 
+const DAY_FLYING_MOTHS_ATTR = 194;
+
 const LANGUAGE_ISO_MAPPING = {
   nld: 'nl-NL',
   hrv: 'hr-HR',
@@ -33,6 +35,8 @@ const UNKNOWN_SPECIES = {
   external_key: null,
   preferred_taxa_taxon_list_id: '538737',
   preferred_taxon: 'Unknown',
+  attr_id_taxa_taxon_list_194: null,
+  attr_taxa_taxon_list_194: null,
 };
 
 const COUNTRIES_WITH_MOTH_COMMON_NAMES = {
@@ -55,7 +59,7 @@ async function fetch(listID) {
 
   const { data } = await axios({
     method: 'GET',
-    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}`,
+    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}&taxattrs=${DAY_FLYING_MOTHS_ATTR}`,
     headers: {
       'x-api-key': APP_INDICIA_API_KEY,
       Authorization: `Basic ${userAuth}`,
@@ -80,6 +84,7 @@ function turnNamesArrayIntoLangObject(array) {
       preferred_taxon: taxon,
       taxon_group: group,
       preferred_taxa_taxon_list_id: preferredId,
+      attr_taxa_taxon_list_194: isDayFlying,
     } = term;
 
     if (languageCode === 'lat') {
@@ -100,6 +105,8 @@ function turnNamesArrayIntoLangObject(array) {
       taxon_group: group,
       preferredId: parseInt(preferredId, 10),
     };
+
+    if (isDayFlying) species.isDayFlying = true;
 
     agg[language].push(species);
     return agg;

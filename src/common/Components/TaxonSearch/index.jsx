@@ -7,8 +7,6 @@ import SpeciesSearchEngine from './utils/taxon_search_engine';
 import Suggestions from './components/Suggestions';
 import './styles.scss';
 
-const SPECIES_EXTRA_ATTRS_INDEX = 2; // in genera and above
-
 const MIN_SEARCH_LENGTH = 2;
 
 function getDefaultState() {
@@ -45,12 +43,10 @@ class index extends Component {
     );
   };
 
-  filterDayFlyingMoths = (speciesEntry, taxa) => {
-    if (speciesEntry[1] !== groups.moths.id) return true;
+  filterDayFlyingMoths = ({ isDayFlying, group }) => {
+    if (group !== groups.moths.id) return true;
 
-    return appModel.attrs.useDayFlyingMothsOnly
-      ? taxa[SPECIES_EXTRA_ATTRS_INDEX]?.isDayFlying
-      : true;
+    return appModel.attrs.useDayFlyingMothsOnly ? isDayFlying : true;
   };
 
   onInputKeystroke = async e => {

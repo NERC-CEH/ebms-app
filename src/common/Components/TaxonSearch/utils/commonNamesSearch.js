@@ -3,7 +3,7 @@ import speciesNames from 'common/data/commonNames/index.json';
 
 const MAX_RESULTS = 200;
 
-export default (normSearchPhrase, results, informalGroups = []) => {
+export default (normSearchPhrase, results, informalGroups = [], attrFilter) => {
   const { language } = appModel.attrs;
   const languageSpeciesNames = speciesNames[language];
   if (!languageSpeciesNames) {
@@ -18,6 +18,7 @@ export default (normSearchPhrase, results, informalGroups = []) => {
     common_name, // eslint-disable-line
     preferredId,
     taxon_group, // eslint-disable-line
+    ...extraAttrs
   }) => {
     const matches = common_name.match(new RegExp(normSearchPhrase, 'i'));
     const informalGroupMatches = informalGroups.includes(taxon_group);
@@ -27,6 +28,15 @@ export default (normSearchPhrase, results, informalGroups = []) => {
       results.length + commonNames.length <= MAX_RESULTS &&
       informalGroupMatches
     ) {
+      // check if species matches attr filters
+      if (attrFilter) {
+        const hasMatchingAttrs = attrFilter({
+          group: taxon_group,
+          ...extraAttrs,
+        });
+        if (!hasMatchingAttrs) return;
+      }
+
       commonNames.push({
         found_in_name: 'common_name',
         warehouse_id,

@@ -7,6 +7,7 @@ const WAREHOUSE_INDEX = 0;
 const GROUP_INDEX = 1; // in genera and above
 const SCI_NAME_INDEX = 2; // in genera and above
 const SPECIES_SCI_NAME_INDEX = 1; // in species and bellow
+const SPECIES_EXTRA_ATTRS_INDEX = 2;
 
 /**
  * Search Scientific names
@@ -116,7 +117,12 @@ function search(
 
           // check if species matches attr filters
           if (attrFilter) {
-            const hasMatchingAttrs = attrFilter(speciesEntry, speciesInArray);
+            const extraAttrs = speciesInArray[SPECIES_EXTRA_ATTRS_INDEX];
+            const hasMatchingAttrs = attrFilter({
+              group: speciesEntry[GROUP_INDEX],
+              ...extraAttrs,
+            });
+
             if (!hasMatchingAttrs) continue; // eslint-disable-line
           }
 

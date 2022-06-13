@@ -708,18 +708,18 @@
       "preferredId": 450440
     },
     {
-      "warehouse_id": 539368,
-      "common_name": "Berkenplatlijf",
-      "scientific_name": "Semioscopis strigulana",
-      "taxon_group": 260,
-      "preferredId": 451169
-    },
-    {
       "warehouse_id": 539365,
       "common_name": "Berkenplatlijf",
       "scientific_name": "Semioscopis avellanella",
       "taxon_group": 260,
       "preferredId": 451165
+    },
+    {
+      "warehouse_id": 539368,
+      "common_name": "Berkenplatlijf",
+      "scientific_name": "Semioscopis strigulana",
+      "taxon_group": 260,
+      "preferredId": 451169
     },
     {
       "warehouse_id": 540649,
@@ -1300,14 +1300,16 @@
       "common_name": "Bonte Beer",
       "scientific_name": "Callimorpha dominula",
       "taxon_group": 260,
-      "preferredId": 459045
+      "preferredId": 459045,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538763,
       "common_name": "Bonte Bessenvlinder",
       "scientific_name": "Abraxas grossulariata",
       "taxon_group": 260,
-      "preferredId": 457232
+      "preferredId": 457232,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540487,
@@ -1356,7 +1358,8 @@
       "common_name": "Bonte Grasuil",
       "scientific_name": "Cerapteryx graminis",
       "taxon_group": 260,
-      "preferredId": 460602
+      "preferredId": 460602,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540090,
@@ -1643,7 +1646,8 @@
       "common_name": "Boterbloempje",
       "scientific_name": "Pseudopanthera macularia",
       "taxon_group": 260,
-      "preferredId": 457334
+      "preferredId": 457334,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539451,
@@ -1751,18 +1755,18 @@
       "preferredId": 449088
     },
     {
-      "warehouse_id": 540428,
-      "common_name": "Brede Vlakjesmot",
-      "scientific_name": "Catoptria myella",
-      "taxon_group": 260,
-      "preferredId": 456560
-    },
-    {
       "warehouse_id": 540427,
       "common_name": "Brede Vlakjesmot",
       "scientific_name": "Catoptria permutatellus",
       "taxon_group": 260,
       "preferredId": 456557
+    },
+    {
+      "warehouse_id": 540428,
+      "common_name": "Brede Vlakjesmot",
+      "scientific_name": "Catoptria myella",
+      "taxon_group": 260,
+      "preferredId": 456560
     },
     {
       "warehouse_id": 539670,
@@ -1930,7 +1934,8 @@
       "common_name": "Bruinbandspanner",
       "scientific_name": "Scotopteryx chenopodiata",
       "taxon_group": 260,
-      "preferredId": 458114
+      "preferredId": 458114,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538917,
@@ -1979,7 +1984,8 @@
       "common_name": "Bruine Daguil",
       "scientific_name": "Euclidia glyphica",
       "taxon_group": 260,
-      "preferredId": 459370
+      "preferredId": 459370,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540520,
@@ -2056,7 +2062,8 @@
       "common_name": "Bruine Grijsbandspanner",
       "scientific_name": "Cabera exanthemata",
       "taxon_group": 260,
-      "preferredId": 457395
+      "preferredId": 457395,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541337,
@@ -2080,18 +2087,19 @@
       "preferredId": 460640
     },
     {
+      "warehouse_id": 540635,
+      "common_name": "Bruine Heispanner",
+      "scientific_name": "Selidosema brunnearia",
+      "taxon_group": 260,
+      "preferredId": 457657,
+      "isDayFlying": true
+    },
+    {
       "warehouse_id": 540636,
       "common_name": "Bruine Heispanner",
       "scientific_name": "Selidosema plumaria",
       "taxon_group": 260,
       "preferredId": 457660
-    },
-    {
-      "warehouse_id": 540635,
-      "common_name": "Bruine Heispanner",
-      "scientific_name": "Selidosema brunnearia",
-      "taxon_group": 260,
-      "preferredId": 457657
     },
     {
       "warehouse_id": 541125,
@@ -2574,7 +2582,8 @@
       "common_name": "Dennenspanner",
       "scientific_name": "Bupalus piniaria",
       "taxon_group": 260,
-      "preferredId": 457723
+      "preferredId": 457723,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540533,
@@ -3032,18 +3041,18 @@
       "preferredId": 452801
     },
     {
-      "warehouse_id": 538826,
-      "common_name": "Dotterbloemoermot",
-      "scientific_name": "Micropterix calthella",
-      "taxon_group": 260,
-      "preferredId": 448613
-    },
-    {
       "warehouse_id": 538827,
       "common_name": "Dotterbloemoermot",
       "scientific_name": "Micropterix isobasella",
       "taxon_group": 260,
       "preferredId": 448629
+    },
+    {
+      "warehouse_id": 538826,
+      "common_name": "Dotterbloemoermot",
+      "scientific_name": "Micropterix calthella",
+      "taxon_group": 260,
+      "preferredId": 448613
     },
     {
       "warehouse_id": 541325,
@@ -3088,18 +3097,18 @@
       "preferredId": 448600
     },
     {
-      "warehouse_id": 539471,
-      "common_name": "Driekleurige Bremkokermot",
-      "scientific_name": "Coleophora bilineatella",
-      "taxon_group": 260,
-      "preferredId": 451596
-    },
-    {
       "warehouse_id": 539467,
       "common_name": "Driekleurige Bremkokermot",
       "scientific_name": "Coleophora saturatella",
       "taxon_group": 260,
       "preferredId": 451586
+    },
+    {
+      "warehouse_id": 539471,
+      "common_name": "Driekleurige Bremkokermot",
+      "scientific_name": "Coleophora bilineatella",
+      "taxon_group": 260,
+      "preferredId": 451596
     },
     {
       "warehouse_id": 539701,
@@ -3428,7 +3437,8 @@
       "common_name": "Dwerghuismoeder",
       "scientific_name": "Panemeria tenebrata",
       "taxon_group": 260,
-      "preferredId": 459627
+      "preferredId": 459627,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538954,
@@ -4124,18 +4134,18 @@
       "preferredId": 450408
     },
     {
-      "warehouse_id": 539057,
-      "common_name": "Fijnzandvleugeltje",
-      "scientific_name": "Bucculatrix artemisiella",
-      "taxon_group": 260,
-      "preferredId": 449851
-    },
-    {
       "warehouse_id": 539680,
       "common_name": "Fijnzandvleugeltje",
       "scientific_name": "Scrobipalpa artemisiella",
       "taxon_group": 260,
       "preferredId": 453010
+    },
+    {
+      "warehouse_id": 539057,
+      "common_name": "Fijnzandvleugeltje",
+      "scientific_name": "Bucculatrix artemisiella",
+      "taxon_group": 260,
+      "preferredId": 449851
     },
     {
       "warehouse_id": 541082,
@@ -4338,7 +4348,8 @@
       "common_name": "Gamma-uil",
       "scientific_name": "Autographa gamma",
       "taxon_group": 260,
-      "preferredId": 459510
+      "preferredId": 459510,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539630,
@@ -4719,39 +4730,11 @@
       "preferredId": 456817
     },
     {
-      "warehouse_id": 539007,
-      "common_name": "Geen Nederlandse Naam",
-      "scientific_name": "Dryadaula pactolia",
-      "taxon_group": 260,
-      "preferredId": 449569
-    },
-    {
-      "warehouse_id": 539232,
-      "common_name": "Geen Nederlandse Naam",
-      "scientific_name": "Argyresthia buvati",
-      "taxon_group": 260,
-      "preferredId": 450429
-    },
-    {
-      "warehouse_id": 539182,
-      "common_name": "Geen Nederlandse Naam",
-      "scientific_name": "Zelleria oleastrella",
-      "taxon_group": 260,
-      "preferredId": 450219
-    },
-    {
       "warehouse_id": 539935,
       "common_name": "Geen Nederlandse Naam",
       "scientific_name": "Endothenia lapideana",
       "taxon_group": 260,
       "preferredId": 454141
-    },
-    {
-      "warehouse_id": 540332,
-      "common_name": "Geen Nederlandse Naam",
-      "scientific_name": "Sciota fumella",
-      "taxon_group": 260,
-      "preferredId": 456035
     },
     {
       "warehouse_id": 539273,
@@ -4761,11 +4744,39 @@
       "preferredId": 450592
     },
     {
+      "warehouse_id": 539007,
+      "common_name": "Geen Nederlandse Naam",
+      "scientific_name": "Dryadaula pactolia",
+      "taxon_group": 260,
+      "preferredId": 449569
+    },
+    {
       "warehouse_id": 539391,
       "common_name": "Geen Nederlandse Naam",
       "scientific_name": "Agonopterix oinochroa",
       "taxon_group": 260,
       "preferredId": 451261
+    },
+    {
+      "warehouse_id": 539182,
+      "common_name": "Geen Nederlandse Naam",
+      "scientific_name": "Zelleria oleastrella",
+      "taxon_group": 260,
+      "preferredId": 450219
+    },
+    {
+      "warehouse_id": 539232,
+      "common_name": "Geen Nederlandse Naam",
+      "scientific_name": "Argyresthia buvati",
+      "taxon_group": 260,
+      "preferredId": 450429
+    },
+    {
+      "warehouse_id": 540332,
+      "common_name": "Geen Nederlandse Naam",
+      "scientific_name": "Sciota fumella",
+      "taxon_group": 260,
+      "preferredId": 456035
     },
     {
       "warehouse_id": 539454,
@@ -5097,18 +5108,18 @@
       "preferredId": 456586
     },
     {
-      "warehouse_id": 539360,
-      "common_name": "Gelijnde Zeggemineermot",
-      "scientific_name": "Biselachista fulgens",
-      "taxon_group": 260,
-      "preferredId": 451151
-    },
-    {
       "warehouse_id": 539364,
       "common_name": "Gelijnde Zeggemineermot",
       "scientific_name": "Biselachista arnoldi",
       "taxon_group": 260,
       "preferredId": 451161
+    },
+    {
+      "warehouse_id": 539360,
+      "common_name": "Gelijnde Zeggemineermot",
+      "scientific_name": "Biselachista fulgens",
+      "taxon_group": 260,
+      "preferredId": 451151
     },
     {
       "warehouse_id": 541219,
@@ -5220,7 +5231,8 @@
       "common_name": "Geoogde Bandspanner",
       "scientific_name": "Xanthorhoe montanata",
       "taxon_group": 260,
-      "preferredId": 458149
+      "preferredId": 458149,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538944,
@@ -5290,7 +5302,8 @@
       "common_name": "Gerande Spanner",
       "scientific_name": "Lomaspilis marginata",
       "taxon_group": 260,
-      "preferredId": 457239
+      "preferredId": 457239,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 462187,
@@ -5409,7 +5422,8 @@
       "common_name": "Gestreepte Goudspanner",
       "scientific_name": "Camptogramma bilineata",
       "taxon_group": 260,
-      "preferredId": 458171
+      "preferredId": 458171,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539482,
@@ -5601,18 +5615,18 @@
       "preferredId": 457528
     },
     {
-      "warehouse_id": 539702,
-      "common_name": "Gevlekte Kustmot",
-      "scientific_name": "Caryocolum huebneri",
-      "taxon_group": 260,
-      "preferredId": 453143
-    },
-    {
       "warehouse_id": 539703,
       "common_name": "Gevlekte Kustmot",
       "scientific_name": "Caryocolum kroesmanniella",
       "taxon_group": 260,
       "preferredId": 453144
+    },
+    {
+      "warehouse_id": 539702,
+      "common_name": "Gevlekte Kustmot",
+      "scientific_name": "Caryocolum huebneri",
+      "taxon_group": 260,
+      "preferredId": 453143
     },
     {
       "warehouse_id": 538958,
@@ -5717,7 +5731,8 @@
       "common_name": "Gewone Bandspanner",
       "scientific_name": "Epirrhoe alternata",
       "taxon_group": 260,
-      "preferredId": 458182
+      "preferredId": 458182,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539925,
@@ -5843,7 +5858,8 @@
       "common_name": "Gewone Heispanner",
       "scientific_name": "Ematurga atomaria",
       "taxon_group": 260,
-      "preferredId": 457702
+      "preferredId": 457702,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539387,
@@ -6042,18 +6058,18 @@
       "preferredId": 456776
     },
     {
-      "warehouse_id": 539325,
-      "common_name": "Gierstgrasmineermot",
-      "scientific_name": "Elachista cingillella",
-      "taxon_group": 260,
-      "preferredId": 450942
-    },
-    {
       "warehouse_id": 539329,
       "common_name": "Gierstgrasmineermot",
       "scientific_name": "Elachista metella",
       "taxon_group": 260,
       "preferredId": 450962
+    },
+    {
+      "warehouse_id": 539325,
+      "common_name": "Gierstgrasmineermot",
+      "scientific_name": "Elachista cingillella",
+      "taxon_group": 260,
+      "preferredId": 450942
     },
     {
       "warehouse_id": 539914,
@@ -6088,7 +6104,8 @@
       "common_name": "Glasvleugelpijlstaart",
       "scientific_name": "Hemaris fuciformis",
       "taxon_group": 260,
-      "preferredId": 457184
+      "preferredId": 457184,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539787,
@@ -6259,18 +6276,18 @@
       "preferredId": 453329
     },
     {
-      "warehouse_id": 541286,
-      "common_name": "Graanworteluil",
-      "scientific_name": "Euxoa tritici",
-      "taxon_group": 260,
-      "preferredId": 460882
-    },
-    {
       "warehouse_id": 541287,
       "common_name": "Graanworteluil",
       "scientific_name": "Euxoa nigrofusca",
       "taxon_group": 260,
       "preferredId": 460884
+    },
+    {
+      "warehouse_id": 541286,
+      "common_name": "Graanworteluil",
+      "scientific_name": "Euxoa tritici",
+      "taxon_group": 260,
+      "preferredId": 460882
     },
     {
       "warehouse_id": 539967,
@@ -7369,7 +7386,8 @@
       "common_name": "Hageheld",
       "scientific_name": "Lasiocampa quercus",
       "taxon_group": 260,
-      "preferredId": 457094
+      "preferredId": 457094,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541215,
@@ -7670,7 +7688,8 @@
       "common_name": "Heidewortelboorder",
       "scientific_name": "Phymatopus hecta",
       "taxon_group": 260,
-      "preferredId": 448693
+      "preferredId": 448693,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 462197,
@@ -7862,18 +7881,18 @@
       "preferredId": 449958
     },
     {
-      "warehouse_id": 539688,
-      "common_name": "Hoefbladpalpmot",
-      "scientific_name": "Scrobipalpula psilella",
-      "taxon_group": 260,
-      "preferredId": 453053
-    },
-    {
       "warehouse_id": 539689,
       "common_name": "Hoefbladpalpmot",
       "scientific_name": "Scrobipalpula tussilaginis",
       "taxon_group": 260,
       "preferredId": 453057
+    },
+    {
+      "warehouse_id": 539688,
+      "common_name": "Hoefbladpalpmot",
+      "scientific_name": "Scrobipalpula psilella",
+      "taxon_group": 260,
+      "preferredId": 453053
     },
     {
       "warehouse_id": 539741,
@@ -7950,7 +7969,8 @@
       "common_name": "Hommelvlinder",
       "scientific_name": "Hemaris tityus",
       "taxon_group": 260,
-      "preferredId": 457182
+      "preferredId": 457182,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538807,
@@ -8226,18 +8246,18 @@
       "preferredId": 453970
     },
     {
-      "warehouse_id": 540147,
-      "common_name": "Jeneverbesdwergbladroller",
-      "scientific_name": "Pammene juniperana",
-      "taxon_group": 260,
-      "preferredId": 454711
-    },
-    {
       "warehouse_id": 540149,
       "common_name": "Jeneverbesdwergbladroller",
       "scientific_name": "Pammene oxycedrana",
       "taxon_group": 260,
       "preferredId": 454714
+    },
+    {
+      "warehouse_id": 540147,
+      "common_name": "Jeneverbesdwergbladroller",
+      "scientific_name": "Pammene juniperana",
+      "taxon_group": 260,
+      "preferredId": 454711
     },
     {
       "warehouse_id": 540833,
@@ -8436,18 +8456,18 @@
       "preferredId": 454227
     },
     {
-      "warehouse_id": 539176,
-      "common_name": "Kardinaalsmutsstippelmot",
-      "scientific_name": "Yponomeuta mahalebella",
-      "taxon_group": 260,
-      "preferredId": 450204
-    },
-    {
       "warehouse_id": 539175,
       "common_name": "Kardinaalsmutsstippelmot",
       "scientific_name": "Yponomeuta cagnagella",
       "taxon_group": 260,
       "preferredId": 450202
+    },
+    {
+      "warehouse_id": 539176,
+      "common_name": "Kardinaalsmutsstippelmot",
+      "scientific_name": "Yponomeuta mahalebella",
+      "taxon_group": 260,
+      "preferredId": 450204
     },
     {
       "warehouse_id": 539590,
@@ -8629,7 +8649,8 @@
       "common_name": "Klaverspanner",
       "scientific_name": "Chiasmia clathrata",
       "taxon_group": 260,
-      "preferredId": 457302
+      "preferredId": 457302,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539126,
@@ -8639,18 +8660,18 @@
       "preferredId": 450089
     },
     {
-      "warehouse_id": 540187,
-      "common_name": "Klaverwespvlinder",
-      "scientific_name": "Bembecia scopigera",
-      "taxon_group": 260,
-      "preferredId": 454918
-    },
-    {
       "warehouse_id": 540186,
       "common_name": "Klaverwespvlinder",
       "scientific_name": "Bembecia ichneumoniformis",
       "taxon_group": 260,
       "preferredId": 454912
+    },
+    {
+      "warehouse_id": 540187,
+      "common_name": "Klaverwespvlinder",
+      "scientific_name": "Bembecia scopigera",
+      "taxon_group": 260,
+      "preferredId": 454918
     },
     {
       "warehouse_id": 540560,
@@ -9164,13 +9185,6 @@
       "preferredId": 432558
     },
     {
-      "warehouse_id": 538779,
-      "common_name": "Kokermot Spec.",
-      "scientific_name": "Coleophoridae",
-      "taxon_group": 260,
-      "preferredId": 446289
-    },
-    {
       "warehouse_id": 538797,
       "common_name": "Kokermot Spec.",
       "scientific_name": "Coleophora",
@@ -9178,11 +9192,19 @@
       "preferredId": 447083
     },
     {
+      "warehouse_id": 538779,
+      "common_name": "Kokermot Spec.",
+      "scientific_name": "Coleophoridae",
+      "taxon_group": 260,
+      "preferredId": 446289
+    },
+    {
       "warehouse_id": 540553,
       "common_name": "Kolibrievlinder",
       "scientific_name": "Macroglossum stellatarum",
       "taxon_group": 260,
-      "preferredId": 457187
+      "preferredId": 457187,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541279,
@@ -10291,18 +10313,18 @@
       "preferredId": 449883
     },
     {
-      "warehouse_id": 540158,
-      "common_name": "Margrietwortelmot",
-      "scientific_name": "Dichrorampha acuminatana",
-      "taxon_group": 260,
-      "preferredId": 454748
-    },
-    {
       "warehouse_id": 540153,
       "common_name": "Margrietwortelmot",
       "scientific_name": "Dichrorampha alpigenana",
       "taxon_group": 260,
       "preferredId": 454726
+    },
+    {
+      "warehouse_id": 540158,
+      "common_name": "Margrietwortelmot",
+      "scientific_name": "Dichrorampha acuminatana",
+      "taxon_group": 260,
+      "preferredId": 454748
     },
     {
       "warehouse_id": 539769,
@@ -10519,7 +10541,8 @@
       "common_name": "Mi-vlinder",
       "scientific_name": "Euclidia mi",
       "taxon_group": 260,
-      "preferredId": 459372
+      "preferredId": 459372,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540462,
@@ -10848,7 +10871,8 @@
       "common_name": "Nachtpauwoog",
       "scientific_name": "Saturnia pavonia",
       "taxon_group": 260,
-      "preferredId": 457146
+      "preferredId": 457146,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540620,
@@ -12157,7 +12181,8 @@
       "common_name": "Purperuiltje",
       "scientific_name": "Phytometra viridaria",
       "taxon_group": 260,
-      "preferredId": 459227
+      "preferredId": 459227,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541293,
@@ -12220,7 +12245,8 @@
       "common_name": "Ratelaarspanner",
       "scientific_name": "Perizoma albulata",
       "taxon_group": 260,
-      "preferredId": 458534
+      "preferredId": 458534,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538868,
@@ -12549,21 +12575,16 @@
       "common_name": "Roodbandbeer",
       "scientific_name": "Diacrisia sannio",
       "taxon_group": 260,
-      "preferredId": 459005
+      "preferredId": 459005,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541238,
       "common_name": "Roodbont Heide-uiltje",
       "scientific_name": "Anarta myrtilli",
       "taxon_group": 260,
-      "preferredId": 460629
-    },
-    {
-      "warehouse_id": 541128,
-      "common_name": "Roodbruine Herfstuil",
-      "scientific_name": "Agrochola pistacinoides",
-      "taxon_group": 260,
-      "preferredId": 460134
+      "preferredId": 460629,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541129,
@@ -12571,6 +12592,13 @@
       "scientific_name": "Agrochola nitida",
       "taxon_group": 260,
       "preferredId": 460135
+    },
+    {
+      "warehouse_id": 541128,
+      "common_name": "Roodbruine Herfstuil",
+      "scientific_name": "Agrochola pistacinoides",
+      "taxon_group": 260,
+      "preferredId": 460134
     },
     {
       "warehouse_id": 539964,
@@ -12710,7 +12738,8 @@
       "common_name": "Rouwspanner",
       "scientific_name": "Odezia atrata",
       "taxon_group": 260,
-      "preferredId": 458449
+      "preferredId": 458449,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539833,
@@ -12811,18 +12840,18 @@
       "preferredId": 460445
     },
     {
-      "warehouse_id": 539332,
-      "common_name": "Ruwe-smelemineermot",
-      "scientific_name": "Elachista revinctella",
-      "taxon_group": 260,
-      "preferredId": 450969
-    },
-    {
       "warehouse_id": 539322,
       "common_name": "Ruwe-smelemineermot",
       "scientific_name": "Elachista adscitella",
       "taxon_group": 260,
       "preferredId": 450934
+    },
+    {
+      "warehouse_id": 539332,
+      "common_name": "Ruwe-smelemineermot",
+      "scientific_name": "Elachista revinctella",
+      "taxon_group": 260,
+      "preferredId": 450969
     },
     {
       "warehouse_id": 541120,
@@ -12993,18 +13022,18 @@
       "preferredId": 458622
     },
     {
-      "warehouse_id": 540030,
-      "common_name": "Scherp Distelknoopvlekje",
-      "scientific_name": "Eucosma fulvana",
-      "taxon_group": 260,
-      "preferredId": 454400
-    },
-    {
       "warehouse_id": 540029,
       "common_name": "Scherp Distelknoopvlekje",
       "scientific_name": "Eucosma hohenwartiana",
       "taxon_group": 260,
       "preferredId": 454399
+    },
+    {
+      "warehouse_id": 540030,
+      "common_name": "Scherp Distelknoopvlekje",
+      "scientific_name": "Eucosma fulvana",
+      "taxon_group": 260,
+      "preferredId": 454400
     },
     {
       "warehouse_id": 539882,
@@ -13375,7 +13404,8 @@
       "common_name": "Sint-jacobsvlinder",
       "scientific_name": "Tyria jacobaeae",
       "taxon_group": 260,
-      "preferredId": 459049
+      "preferredId": 459049,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539394,
@@ -13410,7 +13440,8 @@
       "common_name": "Sint-jansvlinder",
       "scientific_name": "Zygaena filipendulae",
       "taxon_group": 260,
-      "preferredId": 455121
+      "preferredId": 455121,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539790,
@@ -13616,18 +13647,18 @@
       "preferredId": 456543
     },
     {
-      "warehouse_id": 539610,
-      "common_name": "Smalle Zilverbandboegsprietmot",
-      "scientific_name": "Eulamprotes superbella",
-      "taxon_group": 260,
-      "preferredId": 452666
-    },
-    {
       "warehouse_id": 539611,
       "common_name": "Smalle Zilverbandboegsprietmot",
       "scientific_name": "Eulamprotes libertinella",
       "taxon_group": 260,
       "preferredId": 452668
+    },
+    {
+      "warehouse_id": 539610,
+      "common_name": "Smalle Zilverbandboegsprietmot",
+      "scientific_name": "Eulamprotes superbella",
+      "taxon_group": 260,
+      "preferredId": 452666
     },
     {
       "warehouse_id": 539956,
@@ -13637,18 +13668,18 @@
       "preferredId": 454185
     },
     {
-      "warehouse_id": 539484,
-      "common_name": "Smallijnige Tijmkokermot",
-      "scientific_name": "Coleophora serpylletorum",
-      "taxon_group": 260,
-      "preferredId": 451641
-    },
-    {
       "warehouse_id": 539483,
       "common_name": "Smallijnige Tijmkokermot",
       "scientific_name": "Coleophora virgatella",
       "taxon_group": 260,
       "preferredId": 451636
+    },
+    {
+      "warehouse_id": 539484,
+      "common_name": "Smallijnige Tijmkokermot",
+      "scientific_name": "Coleophora serpylletorum",
+      "taxon_group": 260,
+      "preferredId": 451641
     },
     {
       "warehouse_id": 539640,
@@ -13770,18 +13801,18 @@
       "preferredId": 451351
     },
     {
-      "warehouse_id": 540388,
-      "common_name": "Sobere Restjesmot",
-      "scientific_name": "Ephestia parasitella",
-      "taxon_group": 260,
-      "preferredId": 456386
-    },
-    {
       "warehouse_id": 540389,
       "common_name": "Sobere Restjesmot",
       "scientific_name": "Ephestia woodiella",
       "taxon_group": 260,
       "preferredId": 456387
+    },
+    {
+      "warehouse_id": 540388,
+      "common_name": "Sobere Restjesmot",
+      "scientific_name": "Ephestia parasitella",
+      "taxon_group": 260,
+      "preferredId": 456386
     },
     {
       "warehouse_id": 539641,
@@ -13809,14 +13840,16 @@
       "common_name": "Spaanse Vlag",
       "scientific_name": "Euplagia quadripunctaria",
       "taxon_group": 260,
-      "preferredId": 459047
+      "preferredId": 459047,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540661,
       "common_name": "Spaansgroene Zomervlinder",
       "scientific_name": "Jodis putata",
       "taxon_group": 260,
-      "preferredId": 457781
+      "preferredId": 457781,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538781,
@@ -13886,7 +13919,8 @@
       "common_name": "Speerpuntspanner",
       "scientific_name": "Rheumaptera hastata",
       "taxon_group": 260,
-      "preferredId": 458393
+      "preferredId": 458393,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 462227,
@@ -14327,7 +14361,8 @@
       "common_name": "Tauvlinder",
       "scientific_name": "Aglia tau",
       "taxon_group": 260,
-      "preferredId": 457140
+      "preferredId": 457140,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540633,
@@ -14680,18 +14715,18 @@
       "preferredId": 457398
     },
     {
-      "warehouse_id": 539752,
-      "common_name": "Tweevlekvedermot",
-      "scientific_name": "Stenoptilia bipunctidactyla",
-      "taxon_group": 260,
-      "preferredId": 453424
-    },
-    {
       "warehouse_id": 539753,
       "common_name": "Tweevlekvedermot",
       "scientific_name": "Stenoptilia succisae",
       "taxon_group": 260,
       "preferredId": 453430
+    },
+    {
+      "warehouse_id": 539752,
+      "common_name": "Tweevlekvedermot",
+      "scientific_name": "Stenoptilia bipunctidactyla",
+      "taxon_group": 260,
+      "preferredId": 453424
     },
     {
       "warehouse_id": 538783,
@@ -14817,7 +14852,8 @@
       "common_name": "Vals Witje",
       "scientific_name": "Siona lineata",
       "taxon_group": 260,
-      "preferredId": 457508
+      "preferredId": 457508,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539260,
@@ -14838,7 +14874,8 @@
       "common_name": "Varenspanner",
       "scientific_name": "Petrophora chlorosata",
       "taxon_group": 260,
-      "preferredId": 457312
+      "preferredId": 457312,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541076,
@@ -15062,7 +15099,8 @@
       "common_name": "Veelvraat",
       "scientific_name": "Macrothylacia rubi",
       "taxon_group": 260,
-      "preferredId": 457098
+      "preferredId": 457098,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539136,
@@ -15506,18 +15544,18 @@
       "preferredId": 458335
     },
     {
-      "warehouse_id": 539311,
-      "common_name": "Vroege Zaksikkelmot",
-      "scientific_name": "Agnoea flavifrontella",
-      "taxon_group": 260,
-      "preferredId": 450889
-    },
-    {
       "warehouse_id": 539310,
       "common_name": "Vroege Zaksikkelmot",
       "scientific_name": "Agnoea latipennella",
       "taxon_group": 260,
       "preferredId": 450888
+    },
+    {
+      "warehouse_id": 539311,
+      "common_name": "Vroege Zaksikkelmot",
+      "scientific_name": "Agnoea flavifrontella",
+      "taxon_group": 260,
+      "preferredId": 450889
     },
     {
       "warehouse_id": 539921,
@@ -15643,7 +15681,8 @@
       "common_name": "Walstropijlstaart",
       "scientific_name": "Hyles gallii",
       "taxon_group": 260,
-      "preferredId": 457199
+      "preferredId": 457199,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540726,
@@ -16301,7 +16340,8 @@
       "common_name": "Witte Grijsbandspanner",
       "scientific_name": "Cabera pusaria",
       "taxon_group": 260,
-      "preferredId": 457391
+      "preferredId": 457391,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540079,
@@ -16325,18 +16365,18 @@
       "preferredId": 449842
     },
     {
-      "warehouse_id": 540492,
-      "common_name": "Witte Kruidenmot",
-      "scientific_name": "Udea elutalis",
-      "taxon_group": 260,
-      "preferredId": 456913
-    },
-    {
       "warehouse_id": 540491,
       "common_name": "Witte Kruidenmot",
       "scientific_name": "Udea lutealis",
       "taxon_group": 260,
       "preferredId": 456912
+    },
+    {
+      "warehouse_id": 540492,
+      "common_name": "Witte Kruidenmot",
+      "scientific_name": "Udea elutalis",
+      "taxon_group": 260,
+      "preferredId": 456913
     },
     {
       "warehouse_id": 539961,
@@ -16448,7 +16488,8 @@
       "common_name": "Witvlakvlinder",
       "scientific_name": "Orgyia antiqua",
       "taxon_group": 260,
-      "preferredId": 458947
+      "preferredId": 458947,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541263,
@@ -16808,18 +16849,18 @@
       "preferredId": 451917
     },
     {
-      "warehouse_id": 539685,
-      "common_name": "Zeekraalzandvleugeltje",
-      "scientific_name": "Scrobipalpa salinella",
-      "taxon_group": 260,
-      "preferredId": 453039
-    },
-    {
       "warehouse_id": 539686,
       "common_name": "Zeekraalzandvleugeltje",
       "scientific_name": "Scrobipalpa salicorniae",
       "taxon_group": 260,
       "preferredId": 453041
+    },
+    {
+      "warehouse_id": 539685,
+      "common_name": "Zeekraalzandvleugeltje",
+      "scientific_name": "Scrobipalpa salinella",
+      "taxon_group": 260,
+      "preferredId": 453039
     },
     {
       "warehouse_id": 539693,
@@ -16843,18 +16884,18 @@
       "preferredId": 451744
     },
     {
-      "warehouse_id": 539608,
-      "common_name": "Zeeuwse Boegsprietmot",
-      "scientific_name": "Monochroa niphognatha",
-      "taxon_group": 260,
-      "preferredId": 452650
-    },
-    {
       "warehouse_id": 539604,
       "common_name": "Zeeuwse Boegsprietmot",
       "scientific_name": "Monochroa moyses",
       "taxon_group": 260,
       "preferredId": 452642
+    },
+    {
+      "warehouse_id": 539608,
+      "common_name": "Zeeuwse Boegsprietmot",
+      "scientific_name": "Monochroa niphognatha",
+      "taxon_group": 260,
+      "preferredId": 452650
     },
     {
       "warehouse_id": 541208,
@@ -17358,7 +17399,8 @@
       "common_name": "Zuringspanner",
       "scientific_name": "Lythria cruentaria",
       "taxon_group": 260,
-      "preferredId": 458083
+      "preferredId": 458083,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540705,
@@ -17816,18 +17858,18 @@
       "preferredId": 454166
     },
     {
-      "warehouse_id": 540470,
-      "common_name": "Zwartwitte Tijmmot",
-      "scientific_name": "Pyrausta rectefascialis",
-      "taxon_group": 260,
-      "preferredId": 456851
-    },
-    {
       "warehouse_id": 540469,
       "common_name": "Zwartwitte Tijmmot",
       "scientific_name": "Pyrausta cingulata",
       "taxon_group": 260,
       "preferredId": 456850
+    },
+    {
+      "warehouse_id": 540470,
+      "common_name": "Zwartwitte Tijmmot",
+      "scientific_name": "Pyrausta rectefascialis",
+      "taxon_group": 260,
+      "preferredId": 456851
     },
     {
       "warehouse_id": 539270,
@@ -23295,11 +23337,60 @@
       "preferredId": 432444
     },
     {
+      "warehouse_id": 548746,
+      "common_name": "African Albatross",
+      "scientific_name": "Appias epaphia",
+      "taxon_group": 251,
+      "preferredId": 548744
+    },
+    {
       "warehouse_id": 434031,
       "common_name": "African Babul Blue",
       "scientific_name": "Azanus jesous",
       "taxon_group": 251,
       "preferredId": 432283
+    },
+    {
+      "warehouse_id": 549225,
+      "common_name": "African Blue Tiger",
+      "scientific_name": "Tirumala petiverana",
+      "taxon_group": 251,
+      "preferredId": 549223
+    },
+    {
+      "warehouse_id": 549146,
+      "common_name": "African Blue-banded Swallowtail",
+      "scientific_name": "Papilio nireus",
+      "taxon_group": 251,
+      "preferredId": 549143
+    },
+    {
+      "warehouse_id": 548768,
+      "common_name": "African Caper",
+      "scientific_name": "Belenois creona",
+      "taxon_group": 251,
+      "preferredId": 548766
+    },
+    {
+      "warehouse_id": 548888,
+      "common_name": "African Clouded Yellow",
+      "scientific_name": "Colias electo",
+      "taxon_group": 251,
+      "preferredId": 548887
+    },
+    {
+      "warehouse_id": 548767,
+      "common_name": "African Common White",
+      "scientific_name": "Belenois creona",
+      "taxon_group": 251,
+      "preferredId": 548766
+    },
+    {
+      "warehouse_id": 548895,
+      "common_name": "African Golden Arab",
+      "scientific_name": "Colotis aurigineus",
+      "taxon_group": 251,
+      "preferredId": 548894
     },
     {
       "warehouse_id": 434032,
@@ -23309,11 +23400,32 @@
       "preferredId": 432307
     },
     {
+      "warehouse_id": 549186,
+      "common_name": "African Leaf Butterfly",
+      "scientific_name": "Precis tugela",
+      "taxon_group": 251,
+      "preferredId": 549185
+    },
+    {
+      "warehouse_id": 549162,
+      "common_name": "African Leopard Fritillary",
+      "scientific_name": "Phalanta eurytis",
+      "taxon_group": 251,
+      "preferredId": 549159
+    },
+    {
       "warehouse_id": 434033,
       "common_name": "African Migrant",
       "scientific_name": "Catopsilia florella",
       "taxon_group": 251,
       "preferredId": 432199
+    },
+    {
+      "warehouse_id": 549047,
+      "common_name": "African Pansy",
+      "scientific_name": "Junonia artaxia",
+      "taxon_group": 251,
+      "preferredId": 549046
     },
     {
       "warehouse_id": 434034,
@@ -23323,11 +23435,67 @@
       "preferredId": 432553
     },
     {
+      "warehouse_id": 548956,
+      "common_name": "African Small White",
+      "scientific_name": "Dixeia charina",
+      "taxon_group": 251,
+      "preferredId": 548955
+    },
+    {
+      "warehouse_id": 549082,
+      "common_name": "African Snout Butterfly",
+      "scientific_name": "Libythea labdaca",
+      "taxon_group": 251,
+      "preferredId": 549081
+    },
+    {
+      "warehouse_id": 549130,
+      "common_name": "African Swallowtail",
+      "scientific_name": "Papilio dardanus",
+      "taxon_group": 251,
+      "preferredId": 549129
+    },
+    {
+      "warehouse_id": 548770,
+      "common_name": "African Veined White",
+      "scientific_name": "Belenois gidica",
+      "taxon_group": 251,
+      "preferredId": 548769
+    },
+    {
+      "warehouse_id": 549075,
+      "common_name": "African Wood White",
+      "scientific_name": "Leptosia alcesta",
+      "taxon_group": 251,
+      "preferredId": 549074
+    },
+    {
       "warehouse_id": 434035,
       "common_name": "Alaskan Fritillary",
       "scientific_name": "Boloria alaskensis",
       "taxon_group": 251,
       "preferredId": 432398
+    },
+    {
+      "warehouse_id": 548752,
+      "common_name": "Albatross White",
+      "scientific_name": "Appias sabina",
+      "taxon_group": 251,
+      "preferredId": 548750
+    },
+    {
+      "warehouse_id": 548688,
+      "common_name": "Albatrosses",
+      "scientific_name": "Appias",
+      "taxon_group": 251,
+      "preferredId": 548686
+    },
+    {
+      "warehouse_id": 549115,
+      "common_name": "Albizia Sailer",
+      "scientific_name": "Neptis laeta",
+      "taxon_group": 251,
+      "preferredId": 549113
     },
     {
       "warehouse_id": 434027,
@@ -23400,6 +23568,20 @@
       "preferredId": 432370
     },
     {
+      "warehouse_id": 548997,
+      "common_name": "Angola White Lady",
+      "scientific_name": "Graphium angolanus",
+      "taxon_group": 251,
+      "preferredId": 548996
+    },
+    {
+      "warehouse_id": 549022,
+      "common_name": "Angular Glider",
+      "scientific_name": "Harma theobene",
+      "taxon_group": 251,
+      "preferredId": 549021
+    },
+    {
       "warehouse_id": 434047,
       "common_name": "Anomalous Blue",
       "scientific_name": "Polyommatus admetus",
@@ -23407,11 +23589,32 @@
       "preferredId": 432366
     },
     {
+      "warehouse_id": 548960,
+      "common_name": "Ant-heap Small White",
+      "scientific_name": "Dixeia pigea",
+      "taxon_group": 251,
+      "preferredId": 548959
+    },
+    {
+      "warehouse_id": 548961,
+      "common_name": "Ant-heap White",
+      "scientific_name": "Dixeia pigea",
+      "taxon_group": 251,
+      "preferredId": 548959
+    },
+    {
       "warehouse_id": 434048,
       "common_name": "Apollo",
       "scientific_name": "Parnassius apollo",
       "taxon_group": 251,
       "preferredId": 432130
+    },
+    {
+      "warehouse_id": 549150,
+      "common_name": "Apple-green Swallowtail",
+      "scientific_name": "Papilio phorcas",
+      "taxon_group": 251,
+      "preferredId": 549149
     },
     {
       "warehouse_id": 434050,
@@ -23470,11 +23673,25 @@
       "preferredId": 432451
     },
     {
+      "warehouse_id": 548966,
+      "common_name": "Autumn Leaf Vagrant",
+      "scientific_name": "Eronia leda",
+      "taxon_group": 251,
+      "preferredId": 548964
+    },
+    {
       "warehouse_id": 434063,
       "common_name": "Autumn Ringlet",
       "scientific_name": "Erebia neoridas",
       "taxon_group": 251,
       "preferredId": 432625
+    },
+    {
+      "warehouse_id": 548705,
+      "common_name": "Axehead Skipper",
+      "scientific_name": "Acada biseriatus",
+      "taxon_group": 251,
+      "preferredId": 548704
     },
     {
       "warehouse_id": 434064,
@@ -23561,6 +23778,13 @@
       "preferredId": 432570
     },
     {
+      "warehouse_id": 548908,
+      "common_name": "Banded Gold Tip",
+      "scientific_name": "Colotis eris",
+      "taxon_group": 251,
+      "preferredId": 548907
+    },
+    {
       "warehouse_id": 434077,
       "common_name": "Bath White",
       "scientific_name": "Pontia daplidice",
@@ -23596,6 +23820,13 @@
       "preferredId": 432711
     },
     {
+      "warehouse_id": 549158,
+      "common_name": "Black Branded Swift",
+      "scientific_name": "Pelopidas mathias",
+      "taxon_group": 251,
+      "preferredId": 549154
+    },
+    {
       "warehouse_id": 434084,
       "common_name": "Black Hairstreak",
       "scientific_name": "Satyrium pruni",
@@ -23617,6 +23848,34 @@
       "preferredId": 432538
     },
     {
+      "warehouse_id": 549002,
+      "common_name": "Black Swordtail",
+      "scientific_name": "Graphium colonna",
+      "taxon_group": 251,
+      "preferredId": 549001
+    },
+    {
+      "warehouse_id": 548909,
+      "common_name": "Black-barred Gold Tip",
+      "scientific_name": "Colotis eris",
+      "taxon_group": 251,
+      "preferredId": 548907
+    },
+    {
+      "warehouse_id": 548719,
+      "common_name": "Black-blotched Acraea",
+      "scientific_name": "Acraea insignis",
+      "taxon_group": 251,
+      "preferredId": 548718
+    },
+    {
+      "warehouse_id": 548847,
+      "common_name": "Black-bordered Charaxes",
+      "scientific_name": "Charaxes pollux",
+      "taxon_group": 251,
+      "preferredId": 548846
+    },
+    {
       "warehouse_id": 434088,
       "common_name": "Black-eyed Blue",
       "scientific_name": "Glaucopsyche melanops",
@@ -23624,11 +23883,26 @@
       "preferredId": 432304
     },
     {
+      "warehouse_id": 548903,
+      "common_name": "Black-marked Orange Tip",
+      "scientific_name": "Colotis daira",
+      "taxon_group": 251,
+      "preferredId": 548902
+    },
+    {
+      "warehouse_id": 549037,
+      "common_name": "Black-tipped Diadem",
+      "scientific_name": "Hypolimnas monteironis",
+      "taxon_group": 251,
+      "preferredId": 549036
+    },
+    {
       "warehouse_id": 466982,
       "common_name": "Black-veined Moth",
       "scientific_name": "Siona lineata",
       "taxon_group": 260,
-      "preferredId": 457508
+      "preferredId": 457508,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434089,
@@ -23645,11 +23919,25 @@
       "preferredId": 432612
     },
     {
+      "warehouse_id": 548947,
+      "common_name": "Blonde Glider Or Coast Glider",
+      "scientific_name": "Cymothoe coronus",
+      "taxon_group": 251,
+      "preferredId": 548945
+    },
+    {
       "warehouse_id": 467032,
       "common_name": "Blood Droplet Burnet",
       "scientific_name": "Zygaena minos",
       "taxon_group": 260,
       "preferredId": 455078
+    },
+    {
+      "warehouse_id": 549062,
+      "common_name": "Blue Argus",
+      "scientific_name": "Junonia orythia",
+      "taxon_group": 251,
+      "preferredId": 549059
     },
     {
       "warehouse_id": 434092,
@@ -23659,6 +23947,62 @@
       "preferredId": 432340
     },
     {
+      "warehouse_id": 549040,
+      "common_name": "Blue Diadem",
+      "scientific_name": "Hypolimnas salmacis",
+      "taxon_group": 251,
+      "preferredId": 549039
+    },
+    {
+      "warehouse_id": 549224,
+      "common_name": "Blue Monarch",
+      "scientific_name": "Tirumala petiverana",
+      "taxon_group": 251,
+      "preferredId": 549223
+    },
+    {
+      "warehouse_id": 549029,
+      "common_name": "Blue Moon Butterfly",
+      "scientific_name": "Hypolimnas bolina",
+      "taxon_group": 251,
+      "preferredId": 549026
+    },
+    {
+      "warehouse_id": 549209,
+      "common_name": "Blue Mother-of-pearl",
+      "scientific_name": "Salamis temora",
+      "taxon_group": 251,
+      "preferredId": 549207
+    },
+    {
+      "warehouse_id": 549060,
+      "common_name": "Blue Pansy",
+      "scientific_name": "Junonia orythia",
+      "taxon_group": 251,
+      "preferredId": 549059
+    },
+    {
+      "warehouse_id": 549057,
+      "common_name": "Blue Pansy",
+      "scientific_name": "Junonia oenone",
+      "taxon_group": 251,
+      "preferredId": 549056
+    },
+    {
+      "warehouse_id": 548836,
+      "common_name": "Blue-spangled Charaxes",
+      "scientific_name": "Charaxes guderiana",
+      "taxon_group": 251,
+      "preferredId": 548833
+    },
+    {
+      "warehouse_id": 548834,
+      "common_name": "Blue-spangled Emperor",
+      "scientific_name": "Charaxes guderiana",
+      "taxon_group": 251,
+      "preferredId": 548833
+    },
+    {
       "warehouse_id": 434093,
       "common_name": "Blue-spot Hairstreak",
       "scientific_name": "Satyrium spini",
@@ -23666,11 +24010,39 @@
       "preferredId": 432278
     },
     {
+      "warehouse_id": 548822,
+      "common_name": "Blue-spotted Charaxes",
+      "scientific_name": "Charaxes cithaeron",
+      "taxon_group": 251,
+      "preferredId": 548820
+    },
+    {
+      "warehouse_id": 548821,
+      "common_name": "Blue-spotted Emperor",
+      "scientific_name": "Charaxes cithaeron",
+      "taxon_group": 251,
+      "preferredId": 548820
+    },
+    {
       "warehouse_id": 434094,
       "common_name": "Bog Fritillary",
       "scientific_name": "Boloria eunomia",
       "taxon_group": 251,
       "preferredId": 432395
+    },
+    {
+      "warehouse_id": 549189,
+      "common_name": "Boisduval's False Acraea",
+      "scientific_name": "Pseudacraea boisduvali",
+      "taxon_group": 251,
+      "preferredId": 549188
+    },
+    {
+      "warehouse_id": 549216,
+      "common_name": "Boisduval's Tree Nymph",
+      "scientific_name": "Sallya boisduvali",
+      "taxon_group": 251,
+      "preferredId": 549214
     },
     {
       "warehouse_id": 434096,
@@ -23701,11 +24073,19 @@
       "preferredId": 432194
     },
     {
+      "warehouse_id": 548710,
+      "common_name": "Broad-bordered Acraea",
+      "scientific_name": "Acraea anemosa",
+      "taxon_group": 251,
+      "preferredId": 548709
+    },
+    {
       "warehouse_id": 467025,
       "common_name": "Broad-bordered Bee Hawk-moth",
       "scientific_name": "Hemaris fuciformis",
       "taxon_group": 260,
-      "preferredId": 457184
+      "preferredId": 457184,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434101,
@@ -23722,11 +24102,25 @@
       "preferredId": 432262
     },
     {
+      "warehouse_id": 549055,
+      "common_name": "Brown Pansy",
+      "scientific_name": "Junonia natalica",
+      "taxon_group": 251,
+      "preferredId": 549053
+    },
+    {
       "warehouse_id": 434105,
       "common_name": "Brown's Grayling",
       "scientific_name": "Pseudochazara amymone",
       "taxon_group": 251,
       "preferredId": 432544
+    },
+    {
+      "warehouse_id": 548659,
+      "common_name": "Buckeyes",
+      "scientific_name": "Junonia",
+      "taxon_group": 251,
+      "preferredId": 548658
     },
     {
       "warehouse_id": 434106,
@@ -23736,11 +24130,54 @@
       "preferredId": 432614
     },
     {
+      "warehouse_id": 549104,
+      "common_name": "Buquet's Vagrant",
+      "scientific_name": "Nepheronia buquetii",
+      "taxon_group": 251,
+      "preferredId": 549101
+    },
+    {
       "warehouse_id": 467007,
       "common_name": "Burnet Companion",
       "scientific_name": "Euclidia glyphica",
       "taxon_group": 260,
-      "preferredId": 459370
+      "preferredId": 459370,
+      "isDayFlying": true
+    },
+    {
+      "warehouse_id": 548799,
+      "common_name": "Bush Charaxes",
+      "scientific_name": "Charaxes achaemeres",
+      "taxon_group": 251,
+      "preferredId": 548797
+    },
+    {
+      "warehouse_id": 548798,
+      "common_name": "Bushveld Emperor",
+      "scientific_name": "Charaxes achaemeres",
+      "taxon_group": 251,
+      "preferredId": 548797
+    },
+    {
+      "warehouse_id": 548925,
+      "common_name": "Bushveld Purple Tip",
+      "scientific_name": "Colotis ione",
+      "taxon_group": 251,
+      "preferredId": 548924
+    },
+    {
+      "warehouse_id": 548765,
+      "common_name": "Calypso Caper White",
+      "scientific_name": "Belenois calypso",
+      "taxon_group": 251,
+      "preferredId": 548763
+    },
+    {
+      "warehouse_id": 548764,
+      "common_name": "Calypso White",
+      "scientific_name": "Belenois calypso",
+      "taxon_group": 251,
+      "preferredId": 548763
     },
     {
       "warehouse_id": 434107,
@@ -23748,6 +24185,13 @@
       "scientific_name": "Nymphalis antiopa",
       "taxon_group": 251,
       "preferredId": 432433
+    },
+    {
+      "warehouse_id": 549107,
+      "common_name": "Cambridge Vagrant",
+      "scientific_name": "Nepheronia thalassina",
+      "taxon_group": 251,
+      "preferredId": 549106
     },
     {
       "warehouse_id": 434109,
@@ -23804,6 +24248,20 @@
       "scientific_name": "Pararge xiphioides",
       "taxon_group": 251,
       "preferredId": 432480
+    },
+    {
+      "warehouse_id": 548762,
+      "common_name": "Caper White",
+      "scientific_name": "Belenois aurota",
+      "taxon_group": 251,
+      "preferredId": 548759
+    },
+    {
+      "warehouse_id": 548690,
+      "common_name": "Caper Whites",
+      "scientific_name": "Belenois",
+      "taxon_group": 251,
+      "preferredId": 548689
     },
     {
       "warehouse_id": 434117,
@@ -23897,11 +24355,19 @@
       "preferredId": 432722
     },
     {
+      "warehouse_id": 548715,
+      "common_name": "Chic Acraea",
+      "scientific_name": "Acraea cuva",
+      "taxon_group": 251,
+      "preferredId": 548714
+    },
+    {
       "warehouse_id": 466997,
       "common_name": "Chimney Sweeper",
       "scientific_name": "Odezia atrata",
       "taxon_group": 260,
-      "preferredId": 458449
+      "preferredId": 458449,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434133,
@@ -23911,11 +24377,32 @@
       "preferredId": 432564
     },
     {
+      "warehouse_id": 549135,
+      "common_name": "Christmas Butterfly",
+      "scientific_name": "Papilio demodocus",
+      "taxon_group": 251,
+      "preferredId": 549133
+    },
+    {
       "warehouse_id": 434134,
       "common_name": "Cinquefoil Skipper",
       "scientific_name": "Pyrgus cirsii",
       "taxon_group": 251,
       "preferredId": 432185
+    },
+    {
+      "warehouse_id": 549134,
+      "common_name": "Citrus Swallowtail",
+      "scientific_name": "Papilio demodocus",
+      "taxon_group": 251,
+      "preferredId": 549133
+    },
+    {
+      "warehouse_id": 548733,
+      "common_name": "Clear Wing Acraea",
+      "scientific_name": "Acraea rabbaiae",
+      "taxon_group": 251,
+      "preferredId": 548732
     },
     {
       "warehouse_id": 434135,
@@ -23932,11 +24419,46 @@
       "preferredId": 432128
     },
     {
+      "warehouse_id": 549199,
+      "common_name": "Clouded Mother-of-pearl",
+      "scientific_name": "Salamis anacardii",
+      "taxon_group": 251,
+      "preferredId": 549197
+    },
+    {
       "warehouse_id": 434138,
       "common_name": "Clouded Yellow",
       "scientific_name": "Colias crocea",
       "taxon_group": 251,
       "preferredId": 432207
+    },
+    {
+      "warehouse_id": 548872,
+      "common_name": "Club-tailed Charaxes",
+      "scientific_name": "Charaxes zoolina",
+      "taxon_group": 251,
+      "preferredId": 548870
+    },
+    {
+      "warehouse_id": 548871,
+      "common_name": "Club-tailed Emperor",
+      "scientific_name": "Charaxes zoolina",
+      "taxon_group": 251,
+      "preferredId": 548870
+    },
+    {
+      "warehouse_id": 548885,
+      "common_name": "Coast Policeman",
+      "scientific_name": "Coeliades sejunta",
+      "taxon_group": 251,
+      "preferredId": 548884
+    },
+    {
+      "warehouse_id": 549018,
+      "common_name": "Coastal Swordtail",
+      "scientific_name": "Graphium porthaon",
+      "taxon_group": 251,
+      "preferredId": 549017
     },
     {
       "warehouse_id": 434140,
@@ -23953,11 +24475,53 @@
       "preferredId": 432429
     },
     {
+      "warehouse_id": 549048,
+      "common_name": "Commodore",
+      "scientific_name": "Junonia artaxia",
+      "taxon_group": 251,
+      "preferredId": 549046
+    },
+    {
+      "warehouse_id": 548671,
+      "common_name": "Commodores",
+      "scientific_name": "Precis",
+      "taxon_group": 251,
+      "preferredId": 548670
+    },
+    {
+      "warehouse_id": 548661,
+      "common_name": "Commodores",
+      "scientific_name": "Junonia",
+      "taxon_group": 251,
+      "preferredId": 548658
+    },
+    {
+      "warehouse_id": 548755,
+      "common_name": "Common Albatross",
+      "scientific_name": "Appias sylvia",
+      "taxon_group": 251,
+      "preferredId": 548753
+    },
+    {
+      "warehouse_id": 548796,
+      "common_name": "Common Black Sprite",
+      "scientific_name": "Celaenorrhinus proxima",
+      "taxon_group": 251,
+      "preferredId": 548795
+    },
+    {
       "warehouse_id": 434143,
       "common_name": "Common Blue",
       "scientific_name": "Polyommatus icarus",
       "taxon_group": 251,
       "preferredId": 432361
+    },
+    {
+      "warehouse_id": 548855,
+      "common_name": "Common Blue Charaxes",
+      "scientific_name": "Charaxes tiridates",
+      "taxon_group": 251,
+      "preferredId": 548854
     },
     {
       "warehouse_id": 434145,
@@ -23967,6 +24531,48 @@
       "preferredId": 432586
     },
     {
+      "warehouse_id": 548786,
+      "common_name": "Common Bush Brown",
+      "scientific_name": "Bicyclus safitza",
+      "taxon_group": 251,
+      "preferredId": 548785
+    },
+    {
+      "warehouse_id": 549091,
+      "common_name": "Common Dotted Border",
+      "scientific_name": "Mylothris agathina",
+      "taxon_group": 251,
+      "preferredId": 549089
+    },
+    {
+      "warehouse_id": 549028,
+      "common_name": "Common Eggfly",
+      "scientific_name": "Hypolimnas bolina",
+      "taxon_group": 251,
+      "preferredId": 549026
+    },
+    {
+      "warehouse_id": 548977,
+      "common_name": "Common Euptera",
+      "scientific_name": "Euptera elabontas",
+      "taxon_group": 251,
+      "preferredId": 548976
+    },
+    {
+      "warehouse_id": 549086,
+      "common_name": "Common Evening Brown",
+      "scientific_name": "Melanitis leda",
+      "taxon_group": 251,
+      "preferredId": 549085
+    },
+    {
+      "warehouse_id": 548731,
+      "common_name": "Common Glassy Acraea",
+      "scientific_name": "Acraea quirina",
+      "taxon_group": 251,
+      "preferredId": 548730
+    },
+    {
       "warehouse_id": 434146,
       "common_name": "Common Glider",
       "scientific_name": "Neptis sappho",
@@ -23974,11 +24580,96 @@
       "preferredId": 432378
     },
     {
+      "warehouse_id": 549009,
+      "common_name": "Common Graphium",
+      "scientific_name": "Graphium leonidas",
+      "taxon_group": 251,
+      "preferredId": 549006
+    },
+    {
+      "warehouse_id": 548981,
+      "common_name": "Common Grass Yellow",
+      "scientific_name": "Eurema hecabe",
+      "taxon_group": 251,
+      "preferredId": 548980
+    },
+    {
+      "warehouse_id": 548830,
+      "common_name": "Common Green Charaxes",
+      "scientific_name": "Charaxes eupale",
+      "taxon_group": 251,
+      "preferredId": 548829
+    },
+    {
       "warehouse_id": 466995,
       "common_name": "Common Heath",
       "scientific_name": "Ematurga atomaria",
       "taxon_group": 260,
-      "preferredId": 457702
+      "preferredId": 457702,
+      "isDayFlying": true
+    },
+    {
+      "warehouse_id": 548789,
+      "common_name": "Common Joker",
+      "scientific_name": "Byblia anvatara",
+      "taxon_group": 251,
+      "preferredId": 548788
+    },
+    {
+      "warehouse_id": 549164,
+      "common_name": "Common Leopard",
+      "scientific_name": "Phalanta phalantha",
+      "taxon_group": 251,
+      "preferredId": 549163
+    },
+    {
+      "warehouse_id": 549206,
+      "common_name": "Common Mother-of-pearl",
+      "scientific_name": "Salamis parhassus",
+      "taxon_group": 251,
+      "preferredId": 549203
+    },
+    {
+      "warehouse_id": 548918,
+      "common_name": "Common Orange Tip",
+      "scientific_name": "Colotis evenina",
+      "taxon_group": 251,
+      "preferredId": 548917
+    },
+    {
+      "warehouse_id": 548758,
+      "common_name": "Common Palm Forester",
+      "scientific_name": "Bebearia cocalia",
+      "taxon_group": 251,
+      "preferredId": 548757
+    },
+    {
+      "warehouse_id": 548926,
+      "common_name": "Common Purple Tip",
+      "scientific_name": "Colotis ione",
+      "taxon_group": 251,
+      "preferredId": 548924
+    },
+    {
+      "warehouse_id": 549114,
+      "common_name": "Common Sailer",
+      "scientific_name": "Neptis laeta",
+      "taxon_group": 251,
+      "preferredId": 549113
+    },
+    {
+      "warehouse_id": 548787,
+      "common_name": "Common Savanna Bush Brown",
+      "scientific_name": "Bicyclus safitza",
+      "taxon_group": 251,
+      "preferredId": 548785
+    },
+    {
+      "warehouse_id": 549013,
+      "common_name": "Common Swordtail",
+      "scientific_name": "Graphium policenes",
+      "taxon_group": 251,
+      "preferredId": 549012
     },
     {
       "warehouse_id": 434147,
@@ -23992,14 +24683,23 @@
       "common_name": "Common Wave",
       "scientific_name": "Cabera exanthemata",
       "taxon_group": 260,
-      "preferredId": 457395
+      "preferredId": 457395,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 466986,
       "common_name": "Common White Wave",
       "scientific_name": "Cabera pusaria",
       "taxon_group": 260,
-      "preferredId": 457391
+      "preferredId": 457391,
+      "isDayFlying": true
+    },
+    {
+      "warehouse_id": 549128,
+      "common_name": "Constantine's Swallowtail",
+      "scientific_name": "Papilio constantinus",
+      "taxon_group": 251,
+      "preferredId": 549127
     },
     {
       "warehouse_id": 434148,
@@ -24062,7 +24762,8 @@
       "common_name": "Couded Buff",
       "scientific_name": "Diacrisia sannio",
       "taxon_group": 260,
-      "preferredId": 459005
+      "preferredId": 459005,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434156,
@@ -24077,6 +24778,27 @@
       "scientific_name": "Boloria aquilonaris",
       "taxon_group": 251,
       "preferredId": 432400
+    },
+    {
+      "warehouse_id": 548824,
+      "common_name": "Cream-bordered Charaxes",
+      "scientific_name": "Charaxes epijasius",
+      "taxon_group": 251,
+      "preferredId": 548823
+    },
+    {
+      "warehouse_id": 549019,
+      "common_name": "Cream-striped Swordtail",
+      "scientific_name": "Graphium porthaon",
+      "taxon_group": 251,
+      "preferredId": 549017
+    },
+    {
+      "warehouse_id": 548958,
+      "common_name": "Creamy Small White",
+      "scientific_name": "Dixeia orbona",
+      "taxon_group": 251,
+      "preferredId": 548957
     },
     {
       "warehouse_id": 434160,
@@ -24105,6 +24827,13 @@
       "scientific_name": "Coenonympha thyrsis",
       "taxon_group": 251,
       "preferredId": 432464
+    },
+    {
+      "warehouse_id": 548905,
+      "common_name": "Crimson Tip",
+      "scientific_name": "Colotis danae",
+      "taxon_group": 251,
+      "preferredId": 548904
     },
     {
       "warehouse_id": 434164,
@@ -24156,11 +24885,32 @@
       "preferredId": 432434
     },
     {
+      "warehouse_id": 549016,
+      "common_name": "Dancing Swordtail",
+      "scientific_name": "Graphium polistratus",
+      "taxon_group": 251,
+      "preferredId": 549015
+    },
+    {
       "warehouse_id": 434174,
       "common_name": "Danube Clouded Yellow",
       "scientific_name": "Colias myrmidone",
       "taxon_group": 251,
       "preferredId": 432208
+    },
+    {
+      "warehouse_id": 549226,
+      "common_name": "Dappled Monarch",
+      "scientific_name": "Tirumala petiverana",
+      "taxon_group": 251,
+      "preferredId": 549223
+    },
+    {
+      "warehouse_id": 549058,
+      "common_name": "Dark Blue Pansy",
+      "scientific_name": "Junonia oenone",
+      "taxon_group": 251,
+      "preferredId": 549056
     },
     {
       "warehouse_id": 434175,
@@ -24191,6 +24941,27 @@
       "preferredId": 432541
     },
     {
+      "warehouse_id": 549155,
+      "common_name": "Dark Small-branded Swift",
+      "scientific_name": "Pelopidas mathias",
+      "taxon_group": 251,
+      "preferredId": 549154
+    },
+    {
+      "warehouse_id": 549020,
+      "common_name": "Dark Swordtail",
+      "scientific_name": "Graphium porthaon",
+      "taxon_group": 251,
+      "preferredId": 549017
+    },
+    {
+      "warehouse_id": 549174,
+      "common_name": "Darker Commodore",
+      "scientific_name": "Precis antilope",
+      "taxon_group": 251,
+      "preferredId": 549173
+    },
+    {
       "warehouse_id": 434180,
       "common_name": "De Lesse's Brassy Ringlet",
       "scientific_name": "Erebia nivalis",
@@ -24205,6 +24976,20 @@
       "preferredId": 432608
     },
     {
+      "warehouse_id": 549032,
+      "common_name": "Deceptive Diadem",
+      "scientific_name": "Hypolimnas deceptor",
+      "taxon_group": 251,
+      "preferredId": 549030
+    },
+    {
+      "warehouse_id": 549031,
+      "common_name": "Deceptive Eggfly",
+      "scientific_name": "Hypolimnas deceptor",
+      "taxon_group": 251,
+      "preferredId": 549030
+    },
+    {
       "warehouse_id": 434182,
       "common_name": "Delattin's Grayling",
       "scientific_name": "Hipparchia volgensis",
@@ -24212,11 +24997,25 @@
       "preferredId": 432516
     },
     {
+      "warehouse_id": 548914,
+      "common_name": "Desert Orange Tip",
+      "scientific_name": "Colotis evagore",
+      "taxon_group": 251,
+      "preferredId": 548913
+    },
+    {
       "warehouse_id": 434183,
       "common_name": "Desert Orange-tip",
       "scientific_name": "Colotis evagore",
       "taxon_group": 251,
       "preferredId": 432213
+    },
+    {
+      "warehouse_id": 549137,
+      "common_name": "Desmond's Green-banded Swallowtail",
+      "scientific_name": "Papilio desmondi",
+      "taxon_group": 251,
+      "preferredId": 549136
     },
     {
       "warehouse_id": 434184,
@@ -24240,6 +25039,27 @@
       "preferredId": 432167
     },
     {
+      "warehouse_id": 548809,
+      "common_name": "Divebomber Charaxes",
+      "scientific_name": "Charaxes bohemani",
+      "taxon_group": 251,
+      "preferredId": 548806
+    },
+    {
+      "warehouse_id": 548745,
+      "common_name": "Diverse White",
+      "scientific_name": "Appias epaphia",
+      "taxon_group": 251,
+      "preferredId": 548744
+    },
+    {
+      "warehouse_id": 548699,
+      "common_name": "Dotted Borders",
+      "scientific_name": "Mylothris",
+      "taxon_group": 251,
+      "preferredId": 548698
+    },
+    {
       "warehouse_id": 434189,
       "common_name": "Dryad",
       "scientific_name": "Minois dryas",
@@ -24252,6 +25072,13 @@
       "scientific_name": "Hamearis lucina",
       "taxon_group": 251,
       "preferredId": 432247
+    },
+    {
+      "warehouse_id": 549097,
+      "common_name": "Dusky Dotted Border",
+      "scientific_name": "Mylothris sagala",
+      "taxon_group": 251,
+      "preferredId": 549096
     },
     {
       "warehouse_id": 434192,
@@ -24289,6 +25116,20 @@
       "preferredId": 432407
     },
     {
+      "warehouse_id": 549187,
+      "common_name": "Eared Commodore",
+      "scientific_name": "Precis tugela",
+      "taxon_group": 251,
+      "preferredId": 549185
+    },
+    {
+      "warehouse_id": 548735,
+      "common_name": "East Coast Acraea",
+      "scientific_name": "Acraea satis",
+      "taxon_group": 251,
+      "preferredId": 548734
+    },
+    {
       "warehouse_id": 434198,
       "common_name": "Eastern Bath White",
       "scientific_name": "Pontia edusa",
@@ -24303,6 +25144,20 @@
       "preferredId": 432298
     },
     {
+      "warehouse_id": 549073,
+      "common_name": "Eastern Blotched Leopard",
+      "scientific_name": "Lachnoptera ayresii",
+      "taxon_group": 251,
+      "preferredId": 549072
+    },
+    {
+      "warehouse_id": 549210,
+      "common_name": "Eastern Blue Beauty",
+      "scientific_name": "Salamis temora",
+      "taxon_group": 251,
+      "preferredId": 549207
+    },
+    {
       "warehouse_id": 434201,
       "common_name": "Eastern Brown Argus",
       "scientific_name": "Kretania eurypilus",
@@ -24315,6 +25170,13 @@
       "scientific_name": "Euchloe ausonia",
       "taxon_group": 251,
       "preferredId": 432237
+    },
+    {
+      "warehouse_id": 549090,
+      "common_name": "Eastern Dotted Border",
+      "scientific_name": "Mylothris agathina",
+      "taxon_group": 251,
+      "preferredId": 549089
     },
     {
       "warehouse_id": 434204,
@@ -24359,6 +25221,13 @@
       "preferredId": 432206
     },
     {
+      "warehouse_id": 548923,
+      "common_name": "Eastern Purple Tip",
+      "scientific_name": "Colotis hetaera",
+      "taxon_group": 251,
+      "preferredId": 548922
+    },
+    {
       "warehouse_id": 434210,
       "common_name": "Eastern Rock Grayling",
       "scientific_name": "Hipparchia syriaca",
@@ -24371,6 +25240,13 @@
       "scientific_name": "Cupido decoloratus",
       "taxon_group": 251,
       "preferredId": 432311
+    },
+    {
+      "warehouse_id": 549011,
+      "common_name": "Eastern White-lady Swordtail",
+      "scientific_name": "Graphium philonoe",
+      "taxon_group": 251,
+      "preferredId": 549010
     },
     {
       "warehouse_id": 434212,
@@ -24387,11 +25263,26 @@
       "preferredId": 432498
     },
     {
+      "warehouse_id": 548717,
+      "common_name": "Elegant Acraea",
+      "scientific_name": "Acraea egina",
+      "taxon_group": 251,
+      "preferredId": 548716
+    },
+    {
+      "warehouse_id": 549148,
+      "common_name": "Emperor Swallowtail",
+      "scientific_name": "Papilio ophidicephalus",
+      "taxon_group": 251,
+      "preferredId": 549147
+    },
+    {
       "warehouse_id": 467021,
       "common_name": "Emporer Moth",
       "scientific_name": "Saturnia pavonia",
       "taxon_group": 260,
-      "preferredId": 457146
+      "preferredId": 457146,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434214,
@@ -24436,6 +25327,34 @@
       "preferredId": 432151
     },
     {
+      "warehouse_id": 548794,
+      "common_name": "Evans' Orange Sprite",
+      "scientific_name": "Celaenorrhinus ovalis",
+      "taxon_group": 251,
+      "preferredId": 548793
+    },
+    {
+      "warehouse_id": 548983,
+      "common_name": "Even-bordered Grass Yellow",
+      "scientific_name": "Eurema regularis",
+      "taxon_group": 251,
+      "preferredId": 548982
+    },
+    {
+      "warehouse_id": 549061,
+      "common_name": "Eyed Pansy",
+      "scientific_name": "Junonia orythia",
+      "taxon_group": 251,
+      "preferredId": 549059
+    },
+    {
+      "warehouse_id": 548673,
+      "common_name": "False Acraeas",
+      "scientific_name": "Pseudacraea",
+      "taxon_group": 251,
+      "preferredId": 548672
+    },
+    {
       "warehouse_id": 434221,
       "common_name": "False Apollo",
       "scientific_name": "Archon apollinus",
@@ -24457,6 +25376,13 @@
       "preferredId": 432348
     },
     {
+      "warehouse_id": 549195,
+      "common_name": "False Chief",
+      "scientific_name": "Pseudacraea lucretia",
+      "taxon_group": 251,
+      "preferredId": 549193
+    },
+    {
       "warehouse_id": 434224,
       "common_name": "False Comma",
       "scientific_name": "Nymphalis vaualbum",
@@ -24469,6 +25395,20 @@
       "scientific_name": "Erebia sthennyo",
       "taxon_group": 251,
       "preferredId": 432593
+    },
+    {
+      "warehouse_id": 549194,
+      "common_name": "False Diadem",
+      "scientific_name": "Pseudacraea lucretia",
+      "taxon_group": 251,
+      "preferredId": 549193
+    },
+    {
+      "warehouse_id": 548779,
+      "common_name": "False Dotted Border",
+      "scientific_name": "Belenois thysa",
+      "taxon_group": 251,
+      "preferredId": 548778
     },
     {
       "warehouse_id": 434227,
@@ -24520,6 +25460,27 @@
       "preferredId": 432462
     },
     {
+      "warehouse_id": 548675,
+      "common_name": "False Sergeants",
+      "scientific_name": "Pseudathyma",
+      "taxon_group": 251,
+      "preferredId": 548674
+    },
+    {
+      "warehouse_id": 549192,
+      "common_name": "False Wanderer",
+      "scientific_name": "Pseudacraea eurytus",
+      "taxon_group": 251,
+      "preferredId": 549191
+    },
+    {
+      "warehouse_id": 549184,
+      "common_name": "Fashion Commodore",
+      "scientific_name": "Precis pelarga",
+      "taxon_group": 251,
+      "preferredId": 549183
+    },
+    {
       "warehouse_id": 434235,
       "common_name": "Fenton's Wood White",
       "scientific_name": "Leptidea morsei",
@@ -24541,11 +25502,130 @@
       "preferredId": 432309
     },
     {
+      "warehouse_id": 548850,
+      "common_name": "Flame-bordered Charaxes",
+      "scientific_name": "Charaxes protoclea",
+      "taxon_group": 251,
+      "preferredId": 548848
+    },
+    {
+      "warehouse_id": 548849,
+      "common_name": "Flame-bordered Emperor",
+      "scientific_name": "Charaxes protoclea",
+      "taxon_group": 251,
+      "preferredId": 548848
+    },
+    {
+      "warehouse_id": 548637,
+      "common_name": "Flats",
+      "scientific_name": "Celaenorrhinus",
+      "taxon_group": 251,
+      "preferredId": 548635
+    },
+    {
+      "warehouse_id": 549076,
+      "common_name": "Flip Flop",
+      "scientific_name": "Leptosia alcesta",
+      "taxon_group": 251,
+      "preferredId": 549074
+    },
+    {
+      "warehouse_id": 549132,
+      "common_name": "Flying Handkerchief",
+      "scientific_name": "Papilio dardanus",
+      "taxon_group": 251,
+      "preferredId": 549129
+    },
+    {
+      "warehouse_id": 548784,
+      "common_name": "Forest Caper White",
+      "scientific_name": "Belenois zochalia",
+      "taxon_group": 251,
+      "preferredId": 548782
+    },
+    {
+      "warehouse_id": 548986,
+      "common_name": "Forest Green Butterfly",
+      "scientific_name": "Euryphura achlys",
+      "taxon_group": 251,
+      "preferredId": 548985
+    },
+    {
+      "warehouse_id": 548867,
+      "common_name": "Forest King Charaxes",
+      "scientific_name": "Charaxes xiphares",
+      "taxon_group": 251,
+      "preferredId": 548865
+    },
+    {
+      "warehouse_id": 548866,
+      "common_name": "Forest King Emperor",
+      "scientific_name": "Charaxes xiphares",
+      "taxon_group": 251,
+      "preferredId": 548865
+    },
+    {
+      "warehouse_id": 549160,
+      "common_name": "Forest Leopard",
+      "scientific_name": "Phalanta eurytis",
+      "taxon_group": 251,
+      "preferredId": 549159
+    },
+    {
+      "warehouse_id": 549161,
+      "common_name": "Forest Leopard Fritillary",
+      "scientific_name": "Phalanta eurytis",
+      "taxon_group": 251,
+      "preferredId": 549159
+    },
+    {
+      "warehouse_id": 549205,
+      "common_name": "Forest Mother-of-pearl",
+      "scientific_name": "Salamis parhassus",
+      "taxon_group": 251,
+      "preferredId": 549203
+    },
+    {
+      "warehouse_id": 548832,
+      "common_name": "Forest Pearl Charaxes",
+      "scientific_name": "Charaxes fulvescens",
+      "taxon_group": 251,
+      "preferredId": 548831
+    },
+    {
+      "warehouse_id": 548656,
+      "common_name": "Forest Queen",
+      "scientific_name": "Euxanthe",
+      "taxon_group": 251,
+      "preferredId": 548655
+    },
+    {
+      "warehouse_id": 548992,
+      "common_name": "Forest Queen",
+      "scientific_name": "Euxanthe wakefieldi",
+      "taxon_group": 251,
+      "preferredId": 548991
+    },
+    {
+      "warehouse_id": 548783,
+      "common_name": "Forest White",
+      "scientific_name": "Belenois zochalia",
+      "taxon_group": 251,
+      "preferredId": 548782
+    },
+    {
       "warehouse_id": 434238,
       "common_name": "Foulquier's Grizzled Skipper",
       "scientific_name": "Pyrgus foulquieri",
       "taxon_group": 251,
       "preferredId": 432182
+    },
+    {
+      "warehouse_id": 548852,
+      "common_name": "Foxy Charaxes",
+      "scientific_name": "Charaxes saturnus",
+      "taxon_group": 251,
+      "preferredId": 548851
     },
     {
       "warehouse_id": 434239,
@@ -24576,6 +25656,13 @@
       "preferredId": 432416
     },
     {
+      "warehouse_id": 548741,
+      "common_name": "Friar",
+      "scientific_name": "Amauris niavius",
+      "taxon_group": 251,
+      "preferredId": 548740
+    },
+    {
       "warehouse_id": 434244,
       "common_name": "Frigga's Fritillary",
       "scientific_name": "Boloria frigga",
@@ -24595,6 +25682,13 @@
       "scientific_name": "Pyronia tithonus",
       "taxon_group": 251,
       "preferredId": 432560
+    },
+    {
+      "warehouse_id": 549182,
+      "common_name": "Gaudy Commodore",
+      "scientific_name": "Precis octavia",
+      "taxon_group": 251,
+      "preferredId": 549181
     },
     {
       "warehouse_id": 434249,
@@ -24625,6 +25719,20 @@
       "preferredId": 432716
     },
     {
+      "warehouse_id": 548818,
+      "common_name": "Giant Charaxes",
+      "scientific_name": "Charaxes castor",
+      "taxon_group": 251,
+      "preferredId": 548816
+    },
+    {
+      "warehouse_id": 548817,
+      "common_name": "Giant Emperor",
+      "scientific_name": "Charaxes castor",
+      "taxon_group": 251,
+      "preferredId": 548816
+    },
+    {
       "warehouse_id": 434255,
       "common_name": "Glandon Blue",
       "scientific_name": "Agriades glandon",
@@ -24637,6 +25745,34 @@
       "scientific_name": "Melitaea cinxia",
       "taxon_group": 251,
       "preferredId": 432447
+    },
+    {
+      "warehouse_id": 548649,
+      "common_name": "Gliders",
+      "scientific_name": "Cymothoe",
+      "taxon_group": 251,
+      "preferredId": 548648
+    },
+    {
+      "warehouse_id": 548971,
+      "common_name": "Gold Banded Forester",
+      "scientific_name": "Euphaedra neophron",
+      "taxon_group": 251,
+      "preferredId": 548970
+    },
+    {
+      "warehouse_id": 549050,
+      "common_name": "Golden Pansy",
+      "scientific_name": "Junonia chorimene",
+      "taxon_group": 251,
+      "preferredId": 549049
+    },
+    {
+      "warehouse_id": 548989,
+      "common_name": "Golden Piper",
+      "scientific_name": "Eurytela dryope",
+      "taxon_group": 251,
+      "preferredId": 548988
     },
     {
       "warehouse_id": 434258,
@@ -24672,6 +25808,13 @@
       "scientific_name": "Brintesia circe",
       "taxon_group": 251,
       "preferredId": 432525
+    },
+    {
+      "warehouse_id": 549027,
+      "common_name": "Great Eggfly",
+      "scientific_name": "Hypolimnas bolina",
+      "taxon_group": 251,
+      "preferredId": 549026
     },
     {
       "warehouse_id": 434264,
@@ -24716,6 +25859,27 @@
       "preferredId": 432270
     },
     {
+      "warehouse_id": 549151,
+      "common_name": "Green-banded Swallowtail",
+      "scientific_name": "Papilio phorcas",
+      "taxon_group": 251,
+      "preferredId": 549149
+    },
+    {
+      "warehouse_id": 549144,
+      "common_name": "Green-banded Swallowtail",
+      "scientific_name": "Papilio nireus",
+      "taxon_group": 251,
+      "preferredId": 549143
+    },
+    {
+      "warehouse_id": 549105,
+      "common_name": "Green-eyed Monster",
+      "scientific_name": "Nepheronia buquetii",
+      "taxon_group": 251,
+      "preferredId": 549101
+    },
+    {
       "warehouse_id": 434271,
       "common_name": "Green-striped White",
       "scientific_name": "Euchloe belemia",
@@ -24728,6 +25892,20 @@
       "scientific_name": "Glaucopsyche alexis",
       "taxon_group": 251,
       "preferredId": 432306
+    },
+    {
+      "warehouse_id": 548815,
+      "common_name": "Green-veined Charaxes",
+      "scientific_name": "Charaxes candiope",
+      "taxon_group": 251,
+      "preferredId": 548813
+    },
+    {
+      "warehouse_id": 548814,
+      "common_name": "Green-veined Emperor",
+      "scientific_name": "Charaxes candiope",
+      "taxon_group": 251,
+      "preferredId": 548813
     },
     {
       "warehouse_id": 434274,
@@ -24779,11 +25957,32 @@
       "preferredId": 432245
     },
     {
+      "warehouse_id": 548835,
+      "common_name": "Guderian's Charaxes",
+      "scientific_name": "Charaxes guderiana",
+      "taxon_group": 251,
+      "preferredId": 548833
+    },
+    {
+      "warehouse_id": 549045,
+      "common_name": "Hannington's Fritillary",
+      "scientific_name": "Issoria hanningtoni",
+      "taxon_group": 251,
+      "preferredId": 549044
+    },
+    {
       "warehouse_id": 434282,
       "common_name": "Heath Fritillary",
       "scientific_name": "Melitaea athalia",
       "taxon_group": 251,
       "preferredId": 432452
+    },
+    {
+      "warehouse_id": 548949,
+      "common_name": "Herminia Glider",
+      "scientific_name": "Cymothoe herminia",
+      "taxon_group": 251,
+      "preferredId": 548948
     },
     {
       "warehouse_id": 434284,
@@ -24800,11 +25999,46 @@
       "preferredId": 432394
     },
     {
+      "warehouse_id": 549110,
+      "common_name": "High Sailer",
+      "scientific_name": "Neptis alta",
+      "taxon_group": 251,
+      "preferredId": 549108
+    },
+    {
+      "warehouse_id": 549093,
+      "common_name": "Hilara Dotted Border",
+      "scientific_name": "Mylothris hilara",
+      "taxon_group": 251,
+      "preferredId": 549092
+    },
+    {
+      "warehouse_id": 548951,
+      "common_name": "Hobart's Red Glider",
+      "scientific_name": "Cymothoe horbarti",
+      "taxon_group": 251,
+      "preferredId": 548950
+    },
+    {
       "warehouse_id": 434287,
       "common_name": "Holly Blue",
       "scientific_name": "Celastrina argiolus",
       "taxon_group": 251,
       "preferredId": 432286
+    },
+    {
+      "warehouse_id": 549140,
+      "common_name": "Horniman's Swallowtail",
+      "scientific_name": "Papilio hornimani",
+      "taxon_group": 251,
+      "preferredId": 549138
+    },
+    {
+      "warehouse_id": 549139,
+      "common_name": "Hornimans Green-banded Swallowtail",
+      "scientific_name": "Papilio hornimani",
+      "taxon_group": 251,
+      "preferredId": 549138
     },
     {
       "warehouse_id": 434289,
@@ -24856,6 +26090,20 @@
       "preferredId": 432274
     },
     {
+      "warehouse_id": 549080,
+      "common_name": "Immaculate Spirit",
+      "scientific_name": "Leptosia nupta",
+      "taxon_group": 251,
+      "preferredId": 549077
+    },
+    {
+      "warehouse_id": 549078,
+      "common_name": "Immaculate Wood White",
+      "scientific_name": "Leptosia nupta",
+      "taxon_group": 251,
+      "preferredId": 549077
+    },
+    {
       "warehouse_id": 434298,
       "common_name": "Inky Skipper",
       "scientific_name": "Erynnis marloyi",
@@ -24891,11 +26139,88 @@
       "preferredId": 432492
     },
     {
+      "warehouse_id": 549095,
+      "common_name": "Jackson's Dotted Border",
+      "scientific_name": "Mylothris jacksoni",
+      "taxon_group": 251,
+      "preferredId": 549094
+    },
+    {
+      "warehouse_id": 549084,
+      "common_name": "Jackson's Leaf Butterfly",
+      "scientific_name": "Mallika jacksoni",
+      "taxon_group": 251,
+      "preferredId": 549083
+    },
+    {
+      "warehouse_id": 549142,
+      "common_name": "Jackson's Swallowtail",
+      "scientific_name": "Papilio jacksoni",
+      "taxon_group": 251,
+      "preferredId": 549141
+    },
+    {
+      "warehouse_id": 548994,
+      "common_name": "Johnston's Ranger",
+      "scientific_name": "Gorgyra johnstoni",
+      "taxon_group": 251,
+      "preferredId": 548993
+    },
+    {
+      "warehouse_id": 548995,
+      "common_name": "Johnston's Skipper",
+      "scientific_name": "Gorgyra johnstoni",
+      "taxon_group": 251,
+      "preferredId": 548993
+    },
+    {
+      "warehouse_id": 548792,
+      "common_name": "Joker",
+      "scientific_name": "Byblia ilithyia",
+      "taxon_group": 251,
+      "preferredId": 548790
+    },
+    {
+      "warehouse_id": 548647,
+      "common_name": "Jokers",
+      "scientific_name": "Byblia",
+      "taxon_group": 251,
+      "preferredId": 548646
+    },
+    {
+      "warehouse_id": 548858,
+      "common_name": "Karkloof Emperor",
+      "scientific_name": "Charaxes varanes",
+      "taxon_group": 251,
+      "preferredId": 548856
+    },
+    {
       "warehouse_id": 434303,
       "common_name": "Karpathos Grayling",
       "scientific_name": "Hipparchia christenseni",
       "taxon_group": 251,
       "preferredId": 432523
+    },
+    {
+      "warehouse_id": 548729,
+      "common_name": "Kenyan Fiery Acraea",
+      "scientific_name": "Acraea pudorina",
+      "taxon_group": 251,
+      "preferredId": 548728
+    },
+    {
+      "warehouse_id": 549005,
+      "common_name": "Kirby's Swordtail",
+      "scientific_name": "Graphium kirbyi",
+      "taxon_group": 251,
+      "preferredId": 549004
+    },
+    {
+      "warehouse_id": 548684,
+      "common_name": "Kite Swallowtails",
+      "scientific_name": "Graphium",
+      "taxon_group": 251,
+      "preferredId": 548682
     },
     {
       "warehouse_id": 434304,
@@ -24912,6 +26237,13 @@
       "preferredId": 432376
     },
     {
+      "warehouse_id": 548853,
+      "common_name": "Koppie Charaxes",
+      "scientific_name": "Charaxes saturnus",
+      "taxon_group": 251,
+      "preferredId": 548851
+    },
+    {
       "warehouse_id": 434306,
       "common_name": "Krueper's Small White",
       "scientific_name": "Pieris krueperi",
@@ -24924,6 +26256,13 @@
       "scientific_name": "Hipparchia tilosi",
       "taxon_group": 251,
       "preferredId": 432497
+    },
+    {
+      "warehouse_id": 548685,
+      "common_name": "Ladies",
+      "scientific_name": "Graphium",
+      "taxon_group": 251,
+      "preferredId": 548682
     },
     {
       "warehouse_id": 434308,
@@ -24959,6 +26298,20 @@
       "scientific_name": "Phengaris arion",
       "taxon_group": 251,
       "preferredId": 432290
+    },
+    {
+      "warehouse_id": 548808,
+      "common_name": "Large Blue Charaxes",
+      "scientific_name": "Charaxes bohemani",
+      "taxon_group": 251,
+      "preferredId": 548806
+    },
+    {
+      "warehouse_id": 548807,
+      "common_name": "Large Blue Emperor",
+      "scientific_name": "Charaxes bohemani",
+      "taxon_group": 251,
+      "preferredId": 548806
     },
     {
       "warehouse_id": 434316,
@@ -25003,11 +26356,53 @@
       "preferredId": 432145
     },
     {
+      "warehouse_id": 548737,
+      "common_name": "Large Spotted Acraea",
+      "scientific_name": "Acraea zetes",
+      "taxon_group": 251,
+      "preferredId": 548736
+    },
+    {
+      "warehouse_id": 548999,
+      "common_name": "Large Striped Swordtail",
+      "scientific_name": "Graphium antheus",
+      "taxon_group": 251,
+      "preferredId": 548998
+    },
+    {
       "warehouse_id": 434328,
       "common_name": "Large Tortoiseshell",
       "scientific_name": "Nymphalis polychloros",
       "taxon_group": 251,
       "preferredId": 432431
+    },
+    {
+      "warehouse_id": 549100,
+      "common_name": "Large Vagrant",
+      "scientific_name": "Nepheronia argia",
+      "taxon_group": 251,
+      "preferredId": 549099
+    },
+    {
+      "warehouse_id": 549034,
+      "common_name": "Large Variable Diadem",
+      "scientific_name": "Hypolimnas dinarcha",
+      "taxon_group": 251,
+      "preferredId": 549033
+    },
+    {
+      "warehouse_id": 549035,
+      "common_name": "Large Variable Eggfly",
+      "scientific_name": "Hypolimnas dinarcha",
+      "taxon_group": 251,
+      "preferredId": 549033
+    },
+    {
+      "warehouse_id": 548935,
+      "common_name": "Large Violet Tip",
+      "scientific_name": "Colotis regina",
+      "taxon_group": 251,
+      "preferredId": 548932
     },
     {
       "warehouse_id": 434330,
@@ -25024,6 +26419,27 @@
       "preferredId": 432220
     },
     {
+      "warehouse_id": 549000,
+      "common_name": "Larger Striped Swordtail",
+      "scientific_name": "Graphium antheus",
+      "taxon_group": 251,
+      "preferredId": 548998
+    },
+    {
+      "warehouse_id": 548748,
+      "common_name": "Last's Albatross",
+      "scientific_name": "Appias lasti",
+      "taxon_group": 251,
+      "preferredId": 548747
+    },
+    {
+      "warehouse_id": 548749,
+      "common_name": "Last's Albatross White",
+      "scientific_name": "Appias lasti",
+      "taxon_group": 251,
+      "preferredId": 548747
+    },
+    {
       "warehouse_id": 434334,
       "common_name": "Lattice Brown",
       "scientific_name": "Kirinia roxelana",
@@ -25035,7 +26451,8 @@
       "common_name": "Latticed Heath",
       "scientific_name": "Chiasmia clathrata",
       "taxon_group": 260,
-      "preferredId": 457302
+      "preferredId": 457302,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434335,
@@ -25050,6 +26467,20 @@
       "scientific_name": "Erebia lefebvrei",
       "taxon_group": 251,
       "preferredId": 432623
+    },
+    {
+      "warehouse_id": 549098,
+      "common_name": "Lemon Dotted Border",
+      "scientific_name": "Mylothris sagala",
+      "taxon_group": 251,
+      "preferredId": 549096
+    },
+    {
+      "warehouse_id": 548668,
+      "common_name": "Leopards",
+      "scientific_name": "Phalanta",
+      "taxon_group": 251,
+      "preferredId": 548667
     },
     {
       "warehouse_id": 434337,
@@ -25085,6 +26516,13 @@
       "scientific_name": "Brenthis ino",
       "taxon_group": 251,
       "preferredId": 432386
+    },
+    {
+      "warehouse_id": 549157,
+      "common_name": "Lesser Millet Skipper",
+      "scientific_name": "Pelopidas mathias",
+      "taxon_group": 251,
+      "preferredId": 549154
     },
     {
       "warehouse_id": 434343,
@@ -25129,11 +26567,53 @@
       "preferredId": 432149
     },
     {
+      "warehouse_id": 549202,
+      "common_name": "Lilac Beauty",
+      "scientific_name": "Salamis cacta",
+      "taxon_group": 251,
+      "preferredId": 549200
+    },
+    {
+      "warehouse_id": 549201,
+      "common_name": "Lilac Mother-of-pearl",
+      "scientific_name": "Salamis cacta",
+      "taxon_group": 251,
+      "preferredId": 549200
+    },
+    {
+      "warehouse_id": 548900,
+      "common_name": "Lilac Tip",
+      "scientific_name": "Colotis celimene",
+      "taxon_group": 251,
+      "preferredId": 548899
+    },
+    {
+      "warehouse_id": 549213,
+      "common_name": "Lilac Tree Nymph",
+      "scientific_name": "Sallya amulia",
+      "taxon_group": 251,
+      "preferredId": 549211
+    },
+    {
+      "warehouse_id": 549064,
+      "common_name": "Little Commodore",
+      "scientific_name": "Junonia sophia",
+      "taxon_group": 251,
+      "preferredId": 549063
+    },
+    {
       "warehouse_id": 434351,
       "common_name": "Little Fritillary",
       "scientific_name": "Melitaea asteria",
       "taxon_group": 251,
       "preferredId": 432456
+    },
+    {
+      "warehouse_id": 549065,
+      "common_name": "Little Pansy",
+      "scientific_name": "Junonia sophia",
+      "taxon_group": 251,
+      "preferredId": 549063
     },
     {
       "warehouse_id": 434352,
@@ -25171,11 +26651,25 @@
       "preferredId": 432315
     },
     {
+      "warehouse_id": 548889,
+      "common_name": "Lucerne Butterfly",
+      "scientific_name": "Colias electo",
+      "taxon_group": 251,
+      "preferredId": 548887
+    },
+    {
       "warehouse_id": 434359,
       "common_name": "Lulworth Skipper",
       "scientific_name": "Thymelicus acteon",
       "taxon_group": 251,
       "preferredId": 432148
+    },
+    {
+      "warehouse_id": 548953,
+      "common_name": "Lurid Glider",
+      "scientific_name": "Cymothoe lurida",
+      "taxon_group": 251,
+      "preferredId": 548952
     },
     {
       "warehouse_id": 434360,
@@ -25213,11 +26707,25 @@
       "preferredId": 432479
     },
     {
+      "warehouse_id": 548901,
+      "common_name": "Magenta Tip",
+      "scientific_name": "Colotis celimene",
+      "taxon_group": 251,
+      "preferredId": 548899
+    },
+    {
       "warehouse_id": 434365,
       "common_name": "Mallow Skipper",
       "scientific_name": "Carcharodus alceae",
       "taxon_group": 251,
       "preferredId": 432158
+    },
+    {
+      "warehouse_id": 549003,
+      "common_name": "Mamba Swordtail",
+      "scientific_name": "Graphium colonna",
+      "taxon_group": 251,
+      "preferredId": 549001
     },
     {
       "warehouse_id": 434366,
@@ -25255,11 +26763,25 @@
       "preferredId": 432490
     },
     {
+      "warehouse_id": 549176,
+      "common_name": "Marsh Commodore",
+      "scientific_name": "Precis ceryne",
+      "taxon_group": 251,
+      "preferredId": 549175
+    },
+    {
       "warehouse_id": 434373,
       "common_name": "Marsh Fritillary",
       "scientific_name": "Euphydryas aurinia",
       "taxon_group": 251,
       "preferredId": 432436
+    },
+    {
+      "warehouse_id": 548723,
+      "common_name": "Marvelous Acraea",
+      "scientific_name": "Acraea mirabilis",
+      "taxon_group": 251,
+      "preferredId": 548722
     },
     {
       "warehouse_id": 434375,
@@ -25281,6 +26803,13 @@
       "scientific_name": "Melitaea parthenoides",
       "taxon_group": 251,
       "preferredId": 432454
+    },
+    {
+      "warehouse_id": 549172,
+      "common_name": "Meadow White",
+      "scientific_name": "Pontia helice",
+      "taxon_group": 251,
+      "preferredId": 549171
     },
     {
       "warehouse_id": 434380,
@@ -25318,6 +26847,13 @@
       "preferredId": 432604
     },
     {
+      "warehouse_id": 549131,
+      "common_name": "Mocker Swallowtail",
+      "scientific_name": "Papilio dardanus",
+      "taxon_group": 251,
+      "preferredId": 549129
+    },
+    {
       "warehouse_id": 434385,
       "common_name": "Monarch",
       "scientific_name": "Danaus plexippus",
@@ -25332,11 +26868,19 @@
       "preferredId": 432210
     },
     {
+      "warehouse_id": 549120,
+      "common_name": "Morose Sailer",
+      "scientific_name": "Neptis morosa",
+      "taxon_group": 251,
+      "preferredId": 549118
+    },
+    {
       "warehouse_id": 467009,
       "common_name": "Mother Shipton",
       "scientific_name": "Euclidia mi",
       "taxon_group": 260,
-      "preferredId": 459372
+      "preferredId": 459372,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434389,
@@ -25344,6 +26888,20 @@
       "scientific_name": "Polyommatus nivescens",
       "taxon_group": 251,
       "preferredId": 432358
+    },
+    {
+      "warehouse_id": 548677,
+      "common_name": "Mother-of-pearls",
+      "scientific_name": "Salamis",
+      "taxon_group": 251,
+      "preferredId": 548676
+    },
+    {
+      "warehouse_id": 548987,
+      "common_name": "Mottled-green Nymph",
+      "scientific_name": "Euryphura achlys",
+      "taxon_group": 251,
+      "preferredId": 548985
     },
     {
       "warehouse_id": 434390,
@@ -25381,6 +26939,13 @@
       "preferredId": 432226
     },
     {
+      "warehouse_id": 548802,
+      "common_name": "Mountain Pearl Charaxes",
+      "scientific_name": "Charaxes acuminatus",
+      "taxon_group": 251,
+      "preferredId": 548800
+    },
+    {
       "warehouse_id": 434395,
       "common_name": "Mountain Ringlet",
       "scientific_name": "Erebia epiphron",
@@ -25395,11 +26960,19 @@
       "preferredId": 432225
     },
     {
+      "warehouse_id": 549145,
+      "common_name": "Narrow-banded Blue Swallowtail",
+      "scientific_name": "Papilio nireus",
+      "taxon_group": 251,
+      "preferredId": 549143
+    },
+    {
       "warehouse_id": 467023,
       "common_name": "Narrow-bordered Bee Hawk-moth",
       "scientific_name": "Hemaris tityus",
       "taxon_group": 260,
-      "preferredId": 457182
+      "preferredId": 457182,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 466578,
@@ -25414,6 +26987,34 @@
       "scientific_name": "Zygaena lonicerae",
       "taxon_group": 260,
       "preferredId": 455123
+    },
+    {
+      "warehouse_id": 548725,
+      "common_name": "Natal Acraea",
+      "scientific_name": "Acraea natalica",
+      "taxon_group": 251,
+      "preferredId": 548724
+    },
+    {
+      "warehouse_id": 549054,
+      "common_name": "Natal Pansy",
+      "scientific_name": "Junonia natalica",
+      "taxon_group": 251,
+      "preferredId": 549053
+    },
+    {
+      "warehouse_id": 549219,
+      "common_name": "Natal Tree Nymph",
+      "scientific_name": "Sallya natalensis",
+      "taxon_group": 251,
+      "preferredId": 549217
+    },
+    {
+      "warehouse_id": 549112,
+      "common_name": "Neave's Sailer",
+      "scientific_name": "Neptis conspicua",
+      "taxon_group": 251,
+      "preferredId": 549111
     },
     {
       "warehouse_id": 434397,
@@ -25472,6 +27073,13 @@
       "preferredId": 432393
     },
     {
+      "warehouse_id": 548938,
+      "common_name": "No Patch Tip",
+      "scientific_name": "Colotis venosus",
+      "taxon_group": 251,
+      "preferredId": 548936
+    },
+    {
       "warehouse_id": 434404,
       "common_name": "Nogel's Hairstreak",
       "scientific_name": "Tomares nogelii",
@@ -25528,18 +27136,19 @@
       "preferredId": 466594
     },
     {
+      "warehouse_id": 548743,
+      "common_name": "Novice",
+      "scientific_name": "Amauris ochlea",
+      "taxon_group": 251,
+      "preferredId": 548742
+    },
+    {
       "warehouse_id": 466999,
       "common_name": "Oak Egger",
       "scientific_name": "Lasiocampa quercus",
       "taxon_group": 260,
-      "preferredId": 457094
-    },
-    {
-      "warehouse_id": 462956,
-      "common_name": "Oberthür's Anomalous Blue",
-      "scientific_name": "Polyommatus fabressei",
-      "taxon_group": 251,
-      "preferredId": 432372
+      "preferredId": 457094,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434421,
@@ -25549,14 +27158,21 @@
       "preferredId": 432372
     },
     {
-      "warehouse_id": 434417,
+      "warehouse_id": 462956,
+      "common_name": "Oberthür's Anomalous Blue",
+      "scientific_name": "Polyommatus fabressei",
+      "taxon_group": 251,
+      "preferredId": 432372
+    },
+    {
+      "warehouse_id": 462989,
       "common_name": "Oberthür's Grizzled Skipper",
       "scientific_name": "Pyrgus armoricanus",
       "taxon_group": 251,
       "preferredId": 432177
     },
     {
-      "warehouse_id": 462989,
+      "warehouse_id": 434417,
       "common_name": "Oberthür's Grizzled Skipper",
       "scientific_name": "Pyrgus armoricanus",
       "taxon_group": 251,
@@ -25570,11 +27186,39 @@
       "preferredId": 432178
     },
     {
+      "warehouse_id": 549178,
+      "common_name": "Ocellated Commodore",
+      "scientific_name": "Precis coelestina",
+      "taxon_group": 251,
+      "preferredId": 549177
+    },
+    {
+      "warehouse_id": 549222,
+      "common_name": "Ochreous Tree Nymph",
+      "scientific_name": "Sallya umbrina",
+      "taxon_group": 251,
+      "preferredId": 549220
+    },
+    {
+      "warehouse_id": 548886,
+      "common_name": "Ochreous-banded Policeman",
+      "scientific_name": "Coeliades sejunta",
+      "taxon_group": 251,
+      "preferredId": 548884
+    },
+    {
       "warehouse_id": 434422,
       "common_name": "Odd-spot Blue",
       "scientific_name": "Turanana taygetica",
       "taxon_group": 251,
       "preferredId": 432293
+    },
+    {
+      "warehouse_id": 549109,
+      "common_name": "Old Sailer",
+      "scientific_name": "Neptis alta",
+      "taxon_group": 251,
+      "preferredId": 549108
     },
     {
       "warehouse_id": 434423,
@@ -25589,6 +27233,34 @@
       "scientific_name": "Pyrgus armoricanus/serratulae",
       "taxon_group": 251,
       "preferredId": 432178
+    },
+    {
+      "warehouse_id": 548874,
+      "common_name": "One-pip Policeman",
+      "scientific_name": "Coeliades anchises",
+      "taxon_group": 251,
+      "preferredId": 548873
+    },
+    {
+      "warehouse_id": 548973,
+      "common_name": "Orange Forester",
+      "scientific_name": "Euphaedra orientalis",
+      "taxon_group": 251,
+      "preferredId": 548972
+    },
+    {
+      "warehouse_id": 548929,
+      "common_name": "Orange Patch Tip",
+      "scientific_name": "Colotis pleione",
+      "taxon_group": 251,
+      "preferredId": 548928
+    },
+    {
+      "warehouse_id": 548967,
+      "common_name": "Orange-and-lemon",
+      "scientific_name": "Eronia leda",
+      "taxon_group": 251,
+      "preferredId": 548964
     },
     {
       "warehouse_id": 434426,
@@ -25675,6 +27347,13 @@
       "preferredId": 432297
     },
     {
+      "warehouse_id": 548660,
+      "common_name": "Pansies",
+      "scientific_name": "Junonia",
+      "taxon_group": 251,
+      "preferredId": 548658
+    },
+    {
       "warehouse_id": 434443,
       "common_name": "Paphos Blue",
       "scientific_name": "Glaucopsyche paphos",
@@ -25696,11 +27375,39 @@
       "preferredId": 432216
     },
     {
+      "warehouse_id": 548859,
+      "common_name": "Pearl Charaxes",
+      "scientific_name": "Charaxes varanes",
+      "taxon_group": 251,
+      "preferredId": 548856
+    },
+    {
+      "warehouse_id": 548857,
+      "common_name": "Pearl Emperor",
+      "scientific_name": "Charaxes varanes",
+      "taxon_group": 251,
+      "preferredId": 548856
+    },
+    {
+      "warehouse_id": 548839,
+      "common_name": "Pearl Spotted Charaxes",
+      "scientific_name": "Charaxes jahlusa",
+      "taxon_group": 251,
+      "preferredId": 548837
+    },
+    {
       "warehouse_id": 434448,
       "common_name": "Pearl-bordered Fritillary",
       "scientific_name": "Boloria euphrosyne",
       "taxon_group": 251,
       "preferredId": 432405
+    },
+    {
+      "warehouse_id": 548838,
+      "common_name": "Pearl-spotted Emperor",
+      "scientific_name": "Charaxes jahlusa",
+      "taxon_group": 251,
+      "preferredId": 548837
     },
     {
       "warehouse_id": 434450,
@@ -25717,6 +27424,13 @@
       "preferredId": 432152
     },
     {
+      "warehouse_id": 549079,
+      "common_name": "Petite Wood White",
+      "scientific_name": "Leptosia nupta",
+      "taxon_group": 251,
+      "preferredId": 549077
+    },
+    {
       "warehouse_id": 434453,
       "common_name": "Piedmont Anomalous Blue",
       "scientific_name": "Polyommatus humedasae",
@@ -25731,11 +27445,53 @@
       "preferredId": 432576
     },
     {
+      "warehouse_id": 548760,
+      "common_name": "Pioneer",
+      "scientific_name": "Belenois aurota",
+      "taxon_group": 251,
+      "preferredId": 548759
+    },
+    {
+      "warehouse_id": 548761,
+      "common_name": "Pioneer White",
+      "scientific_name": "Belenois aurota",
+      "taxon_group": 251,
+      "preferredId": 548759
+    },
+    {
+      "warehouse_id": 548654,
+      "common_name": "Pipers",
+      "scientific_name": "Eurytela",
+      "taxon_group": 251,
+      "preferredId": 548653
+    },
+    {
       "warehouse_id": 434455,
       "common_name": "Plain Tiger",
       "scientific_name": "Danaus chrysippus",
       "taxon_group": 251,
       "preferredId": 432459
+    },
+    {
+      "warehouse_id": 549103,
+      "common_name": "Plain Vagrant",
+      "scientific_name": "Nepheronia buquetii",
+      "taxon_group": 251,
+      "preferredId": 549101
+    },
+    {
+      "warehouse_id": 548771,
+      "common_name": "Pointed Caper",
+      "scientific_name": "Belenois gidica",
+      "taxon_group": 251,
+      "preferredId": 548769
+    },
+    {
+      "warehouse_id": 548801,
+      "common_name": "Pointed Pearl Charaxes",
+      "scientific_name": "Charaxes acuminatus",
+      "taxon_group": 251,
+      "preferredId": 548800
     },
     {
       "warehouse_id": 434456,
@@ -25745,11 +27501,25 @@
       "preferredId": 432402
     },
     {
+      "warehouse_id": 548639,
+      "common_name": "Policemen",
+      "scientific_name": "Coeliades",
+      "taxon_group": 251,
+      "preferredId": 548638
+    },
+    {
       "warehouse_id": 434458,
       "common_name": "Polixenes Arctic",
       "scientific_name": "Oeneis polixenes",
       "taxon_group": 251,
       "preferredId": 432534
+    },
+    {
+      "warehouse_id": 549153,
+      "common_name": "Polka Dot",
+      "scientific_name": "Pardopsis punctatissima",
+      "taxon_group": 251,
+      "preferredId": 549152
     },
     {
       "warehouse_id": 434459,
@@ -25822,6 +27592,13 @@
       "preferredId": 432243
     },
     {
+      "warehouse_id": 548687,
+      "common_name": "Puffins",
+      "scientific_name": "Appias",
+      "taxon_group": 251,
+      "preferredId": 548686
+    },
+    {
       "warehouse_id": 434470,
       "common_name": "Purple Emperor",
       "scientific_name": "Apatura iris",
@@ -25871,6 +27648,27 @@
       "preferredId": 432383
     },
     {
+      "warehouse_id": 548933,
+      "common_name": "Queen Purple Tip",
+      "scientific_name": "Colotis regina",
+      "taxon_group": 251,
+      "preferredId": 548932
+    },
+    {
+      "warehouse_id": 548773,
+      "common_name": "Raffray's White",
+      "scientific_name": "Belenois raffrayi",
+      "taxon_group": 251,
+      "preferredId": 548772
+    },
+    {
+      "warehouse_id": 548712,
+      "common_name": "Rainforest Acraea",
+      "scientific_name": "Acraea boopis",
+      "taxon_group": 251,
+      "preferredId": 548711
+    },
+    {
       "warehouse_id": 434482,
       "common_name": "Rätzer's Ringlet",
       "scientific_name": "Erebia christi",
@@ -25892,11 +27690,39 @@
       "preferredId": 432424
     },
     {
+      "warehouse_id": 548845,
+      "common_name": "Red Coast Charaxes",
+      "scientific_name": "Charaxes macclounii",
+      "taxon_group": 251,
+      "preferredId": 548843
+    },
+    {
+      "warehouse_id": 549042,
+      "common_name": "Red Spot Diadem",
+      "scientific_name": "Hypolimnas usambara",
+      "taxon_group": 251,
+      "preferredId": 549041
+    },
+    {
+      "warehouse_id": 548893,
+      "common_name": "Red Tip",
+      "scientific_name": "Colotis antevippe",
+      "taxon_group": 251,
+      "preferredId": 548892
+    },
+    {
       "warehouse_id": 434486,
       "common_name": "Red-disked Alpine",
       "scientific_name": "Erebia discoidalis",
       "taxon_group": 251,
       "preferredId": 432571
+    },
+    {
+      "warehouse_id": 548881,
+      "common_name": "Red-tab Policeman",
+      "scientific_name": "Coeliades keithloa",
+      "taxon_group": 251,
+      "preferredId": 548880
     },
     {
       "warehouse_id": 434487,
@@ -25906,11 +27732,32 @@
       "preferredId": 432153
     },
     {
+      "warehouse_id": 548934,
+      "common_name": "Regal Purple Tip",
+      "scientific_name": "Colotis regina",
+      "taxon_group": 251,
+      "preferredId": 548932
+    },
+    {
+      "warehouse_id": 548984,
+      "common_name": "Regular Grass Yellow",
+      "scientific_name": "Eurema regularis",
+      "taxon_group": 251,
+      "preferredId": 548982
+    },
+    {
       "warehouse_id": 434488,
       "common_name": "Reverdin's Blue",
       "scientific_name": "Plebejus argyrognomon",
       "taxon_group": 251,
       "preferredId": 432321
+    },
+    {
+      "warehouse_id": 548721,
+      "common_name": "Ribbe's Glassy Acraea",
+      "scientific_name": "Acraea leucographa",
+      "taxon_group": 251,
+      "preferredId": 548720
     },
     {
       "warehouse_id": 434490,
@@ -25925,6 +27772,13 @@
       "scientific_name": "Polyommatus ripartii",
       "taxon_group": 251,
       "preferredId": 432718
+    },
+    {
+      "warehouse_id": 549126,
+      "common_name": "River Sailer",
+      "scientific_name": "Neptis serena",
+      "taxon_group": 251,
+      "preferredId": 549124
     },
     {
       "warehouse_id": 434493,
@@ -25962,6 +27816,13 @@
       "preferredId": 432471
     },
     {
+      "warehouse_id": 548751,
+      "common_name": "Sabine Albatross",
+      "scientific_name": "Appias sabina",
+      "taxon_group": 251,
+      "preferredId": 548750
+    },
+    {
       "warehouse_id": 434499,
       "common_name": "Safflower Skipper",
       "scientific_name": "Pyrgus carthami",
@@ -25974,6 +27835,13 @@
       "scientific_name": "Muschampia proto",
       "taxon_group": 251,
       "preferredId": 432161
+    },
+    {
+      "warehouse_id": 548825,
+      "common_name": "Sahel Charaxes",
+      "scientific_name": "Charaxes epijasius",
+      "taxon_group": 251,
+      "preferredId": 548823
     },
     {
       "warehouse_id": 434501,
@@ -26004,11 +27872,46 @@
       "preferredId": 432563
     },
     {
+      "warehouse_id": 548861,
+      "common_name": "Savanna Demon Charaxes",
+      "scientific_name": "Charaxes viola",
+      "taxon_group": 251,
+      "preferredId": 548860
+    },
+    {
+      "warehouse_id": 549119,
+      "common_name": "Savanna Sailer",
+      "scientific_name": "Neptis morosa",
+      "taxon_group": 251,
+      "preferredId": 549118
+    },
+    {
+      "warehouse_id": 548827,
+      "common_name": "Savannah Charaxes",
+      "scientific_name": "Charaxes etesipe",
+      "taxon_group": 251,
+      "preferredId": 548826
+    },
+    {
+      "warehouse_id": 549038,
+      "common_name": "Scarce Blue Diadem",
+      "scientific_name": "Hypolimnas monteironis",
+      "taxon_group": 251,
+      "preferredId": 549036
+    },
+    {
       "warehouse_id": 434505,
       "common_name": "Scarce Copper",
       "scientific_name": "Lycaena virgaureae",
       "taxon_group": 251,
       "preferredId": 432259
+    },
+    {
+      "warehouse_id": 548828,
+      "common_name": "Scarce Forest Emperor",
+      "scientific_name": "Charaxes etesipe",
+      "taxon_group": 251,
+      "preferredId": 548826
     },
     {
       "warehouse_id": 434507,
@@ -26043,7 +27946,15 @@
       "common_name": "Scarlet Tiger",
       "scientific_name": "Callimorpha dominula",
       "taxon_group": 260,
-      "preferredId": 459045
+      "preferredId": 459045,
+      "isDayFlying": true
+    },
+    {
+      "warehouse_id": 548906,
+      "common_name": "Scarlet Tip",
+      "scientific_name": "Colotis danae",
+      "taxon_group": 251,
+      "preferredId": 548904
     },
     {
       "warehouse_id": 434514,
@@ -26060,11 +27971,19 @@
       "preferredId": 455098
     },
     {
+      "warehouse_id": 549125,
+      "common_name": "Serene Sailer",
+      "scientific_name": "Neptis serena",
+      "taxon_group": 251,
+      "preferredId": 549124
+    },
+    {
       "warehouse_id": 466980,
       "common_name": "Shaded Broad-bar",
       "scientific_name": "Scotopteryx chenopodiata",
       "taxon_group": 260,
-      "preferredId": 458114
+      "preferredId": 458114,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434515,
@@ -26106,7 +28025,8 @@
       "common_name": "Silver Y",
       "scientific_name": "Autographa gamma",
       "taxon_group": 260,
-      "preferredId": 459510
+      "preferredId": 459510,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434521,
@@ -26114,6 +28034,13 @@
       "scientific_name": "Hesperia comma",
       "taxon_group": 251,
       "preferredId": 432146
+    },
+    {
+      "warehouse_id": 548842,
+      "common_name": "Silver-striped Charaxes",
+      "scientific_name": "Charaxes lasti",
+      "taxon_group": 251,
+      "preferredId": 548841
     },
     {
       "warehouse_id": 434523,
@@ -26141,7 +28068,8 @@
       "common_name": "Six-spot Burnet",
       "scientific_name": "Zygaena filipendulae",
       "taxon_group": 260,
-      "preferredId": 455121
+      "preferredId": 455121,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434657,
@@ -26179,6 +28107,13 @@
       "preferredId": 432314
     },
     {
+      "warehouse_id": 549156,
+      "common_name": "Small Branded Swift",
+      "scientific_name": "Pelopidas mathias",
+      "taxon_group": 251,
+      "preferredId": 549154
+    },
+    {
       "warehouse_id": 434535,
       "common_name": "Small Copper",
       "scientific_name": "Lycaena phlaeas",
@@ -26193,11 +28128,32 @@
       "preferredId": 432316
     },
     {
+      "warehouse_id": 548979,
+      "common_name": "Small Grass Yellow",
+      "scientific_name": "Eurema brigitta",
+      "taxon_group": 251,
+      "preferredId": 548978
+    },
+    {
       "warehouse_id": 434538,
       "common_name": "Small Heath",
       "scientific_name": "Coenonympha pamphilus",
       "taxon_group": 251,
       "preferredId": 432465
+    },
+    {
+      "warehouse_id": 549170,
+      "common_name": "Small Meadow White",
+      "scientific_name": "Pontia distorta",
+      "taxon_group": 251,
+      "preferredId": 549169
+    },
+    {
+      "warehouse_id": 548915,
+      "common_name": "Small Orange Tip",
+      "scientific_name": "Colotis evagore",
+      "taxon_group": 251,
+      "preferredId": 548913
     },
     {
       "warehouse_id": 434540,
@@ -26214,11 +28170,25 @@
       "preferredId": 466592
     },
     {
+      "warehouse_id": 548891,
+      "common_name": "Small Salmon Arab",
+      "scientific_name": "Colotis amata",
+      "taxon_group": 251,
+      "preferredId": 548890
+    },
+    {
       "warehouse_id": 434542,
       "common_name": "Small Skipper",
       "scientific_name": "Thymelicus sylvestris",
       "taxon_group": 251,
       "preferredId": 432150
+    },
+    {
+      "warehouse_id": 549014,
+      "common_name": "Small Striped Swordtail",
+      "scientific_name": "Graphium policenes",
+      "taxon_group": 251,
+      "preferredId": 549012
     },
     {
       "warehouse_id": 434544,
@@ -26233,6 +28203,27 @@
       "scientific_name": "Pieris rapae",
       "taxon_group": 251,
       "preferredId": 432223
+    },
+    {
+      "warehouse_id": 548692,
+      "common_name": "Small Whites",
+      "scientific_name": "Dixeia",
+      "taxon_group": 251,
+      "preferredId": 548691
+    },
+    {
+      "warehouse_id": 549068,
+      "common_name": "Soldier Commodore",
+      "scientific_name": "Junonia terea",
+      "taxon_group": 251,
+      "preferredId": 549066
+    },
+    {
+      "warehouse_id": 549067,
+      "common_name": "Soldier Pansy",
+      "scientific_name": "Junonia terea",
+      "taxon_group": 251,
+      "preferredId": 549066
     },
     {
       "warehouse_id": 434548,
@@ -26459,6 +28450,27 @@
       "preferredId": 432442
     },
     {
+      "warehouse_id": 548791,
+      "common_name": "Spotted Joker",
+      "scientific_name": "Byblia ilithyia",
+      "taxon_group": 251,
+      "preferredId": 548790
+    },
+    {
+      "warehouse_id": 549165,
+      "common_name": "Spotted Rustic",
+      "scientific_name": "Phalanta phalantha",
+      "taxon_group": 251,
+      "preferredId": 549163
+    },
+    {
+      "warehouse_id": 549123,
+      "common_name": "Spotted Sailer",
+      "scientific_name": "Neptis saclava",
+      "taxon_group": 251,
+      "preferredId": 549122
+    },
+    {
       "warehouse_id": 434583,
       "common_name": "Spring Ringlet",
       "scientific_name": "Erebia epistygne",
@@ -26466,11 +28478,25 @@
       "preferredId": 432596
     },
     {
+      "warehouse_id": 548636,
+      "common_name": "Sprites",
+      "scientific_name": "Celaenorrhinus",
+      "taxon_group": 251,
+      "preferredId": 548635
+    },
+    {
       "warehouse_id": 434584,
       "common_name": "Striped Grayling",
       "scientific_name": "Hipparchia fidia",
       "taxon_group": 251,
       "preferredId": 432502
+    },
+    {
+      "warehouse_id": 548876,
+      "common_name": "Striped Policeman",
+      "scientific_name": "Coeliades forestan",
+      "taxon_group": 251,
+      "preferredId": 548875
     },
     {
       "warehouse_id": 434585,
@@ -26487,11 +28513,25 @@
       "preferredId": 432619
     },
     {
+      "warehouse_id": 548777,
+      "common_name": "Sudan Caper White",
+      "scientific_name": "Belenois sudanensis",
+      "taxon_group": 251,
+      "preferredId": 548776
+    },
+    {
       "warehouse_id": 434587,
       "common_name": "Sudeten Ringlet",
       "scientific_name": "Erebia sudetica",
       "taxon_group": 251,
       "preferredId": 432606
+    },
+    {
+      "warehouse_id": 548898,
+      "common_name": "Sulphur Orange Tip",
+      "scientific_name": "Colotis auxo",
+      "taxon_group": 251,
+      "preferredId": 548896
     },
     {
       "warehouse_id": 434588,
@@ -26508,11 +28548,26 @@
       "preferredId": 432585
     },
     {
+      "warehouse_id": 548683,
+      "common_name": "Swordtails",
+      "scientific_name": "Graphium",
+      "taxon_group": 251,
+      "preferredId": 548682
+    },
+    {
+      "warehouse_id": 548944,
+      "common_name": "Tailed Meadow Blue",
+      "scientific_name": "Cupidopsis iobates",
+      "taxon_group": 251,
+      "preferredId": 548943
+    },
+    {
       "warehouse_id": 467019,
       "common_name": "Tau Emperor",
       "scientific_name": "Aglia tau",
       "taxon_group": 260,
-      "preferredId": 457140
+      "preferredId": 457140,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434591,
@@ -26526,7 +28581,8 @@
       "common_name": "The Cinnabar",
       "scientific_name": "Tyria jacobaeae",
       "taxon_group": 260,
-      "preferredId": 459049
+      "preferredId": 459049,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 467030,
@@ -26557,6 +28613,27 @@
       "preferredId": 432721
     },
     {
+      "warehouse_id": 548878,
+      "common_name": "Three Pip Policeman",
+      "scientific_name": "Coeliades hanno",
+      "taxon_group": 251,
+      "preferredId": 548877
+    },
+    {
+      "warehouse_id": 548912,
+      "common_name": "Three Spot Crimson Tip",
+      "scientific_name": "Colotis eunoma",
+      "taxon_group": 251,
+      "preferredId": 548911
+    },
+    {
+      "warehouse_id": 548916,
+      "common_name": "Tiny Orange Tip",
+      "scientific_name": "Colotis evagore",
+      "taxon_group": 251,
+      "preferredId": 548913
+    },
+    {
       "warehouse_id": 434597,
       "common_name": "Titania's Fritillary",
       "scientific_name": "Boloria titania",
@@ -26569,6 +28646,13 @@
       "scientific_name": "Hipparchia statilinus",
       "taxon_group": 251,
       "preferredId": 432496
+    },
+    {
+      "warehouse_id": 548680,
+      "common_name": "Tree Nymphs",
+      "scientific_name": "Sallya",
+      "taxon_group": 251,
+      "preferredId": 548678
     },
     {
       "warehouse_id": 434600,
@@ -26597,6 +28681,13 @@
       "scientific_name": "Brenthis hecate",
       "taxon_group": 251,
       "preferredId": 432385
+    },
+    {
+      "warehouse_id": 548883,
+      "common_name": "Two-pip Policeman",
+      "scientific_name": "Coeliades pisistratus",
+      "taxon_group": 251,
+      "preferredId": 548882
     },
     {
       "warehouse_id": 434605,
@@ -26690,6 +28781,90 @@
       "preferredId": 538737
     },
     {
+      "warehouse_id": 549043,
+      "common_name": "Usambara Diadem",
+      "scientific_name": "Hypolimnas usambara",
+      "taxon_group": 251,
+      "preferredId": 549041
+    },
+    {
+      "warehouse_id": 548701,
+      "common_name": "Vagrants",
+      "scientific_name": "Nepheronia",
+      "taxon_group": 251,
+      "preferredId": 548700
+    },
+    {
+      "warehouse_id": 548694,
+      "common_name": "Vagrants",
+      "scientific_name": "Eronia",
+      "taxon_group": 251,
+      "preferredId": 548693
+    },
+    {
+      "warehouse_id": 549025,
+      "common_name": "Variable Diadem",
+      "scientific_name": "Hypolimnas anthedon",
+      "taxon_group": 251,
+      "preferredId": 549023
+    },
+    {
+      "warehouse_id": 549024,
+      "common_name": "Variable Eggfly",
+      "scientific_name": "Hypolimnas anthedon",
+      "taxon_group": 251,
+      "preferredId": 549023
+    },
+    {
+      "warehouse_id": 548942,
+      "common_name": "Veined Golden Arab",
+      "scientific_name": "Colotis vesta",
+      "taxon_group": 251,
+      "preferredId": 548939
+    },
+    {
+      "warehouse_id": 548941,
+      "common_name": "Veined Orange",
+      "scientific_name": "Colotis vesta",
+      "taxon_group": 251,
+      "preferredId": 548939
+    },
+    {
+      "warehouse_id": 549008,
+      "common_name": "Veined Swallowtail",
+      "scientific_name": "Graphium leonidas",
+      "taxon_group": 251,
+      "preferredId": 549006
+    },
+    {
+      "warehouse_id": 549007,
+      "common_name": "Veined Swordtail",
+      "scientific_name": "Graphium leonidas",
+      "taxon_group": 251,
+      "preferredId": 549006
+    },
+    {
+      "warehouse_id": 548940,
+      "common_name": "Veined Tip",
+      "scientific_name": "Colotis vesta",
+      "taxon_group": 251,
+      "preferredId": 548939
+    },
+    {
+      "warehouse_id": 548781,
+      "common_name": "Victoria White",
+      "scientific_name": "Belenois victoria",
+      "taxon_group": 251,
+      "preferredId": 548780
+    },
+    {
+      "warehouse_id": 548963,
+      "common_name": "Vine-leaf Vagrant",
+      "scientific_name": "Eronia cleodora",
+      "taxon_group": 251,
+      "preferredId": 548962
+    },
+    {
       "warehouse_id": 434607,
       "common_name": "Violet Copper",
       "scientific_name": "Lycaena helle",
@@ -26697,11 +28872,53 @@
       "preferredId": 432249
     },
     {
+      "warehouse_id": 548927,
+      "common_name": "Violet Tip",
+      "scientific_name": "Colotis ione",
+      "taxon_group": 251,
+      "preferredId": 548924
+    },
+    {
+      "warehouse_id": 549088,
+      "common_name": "Violet-eyed Evening Brown",
+      "scientific_name": "Melanitis libya",
+      "taxon_group": 251,
+      "preferredId": 549087
+    },
+    {
+      "warehouse_id": 548864,
+      "common_name": "Violet-spotted Charaxes",
+      "scientific_name": "Charaxes violetta",
+      "taxon_group": 251,
+      "preferredId": 548862
+    },
+    {
+      "warehouse_id": 548863,
+      "common_name": "Violet-spotted Emperor",
+      "scientific_name": "Charaxes violetta",
+      "taxon_group": 251,
+      "preferredId": 548862
+    },
+    {
       "warehouse_id": 434609,
       "common_name": "Wall Brown",
       "scientific_name": "Lasiommata megera",
       "taxon_group": 251,
       "preferredId": 432486
+    },
+    {
+      "warehouse_id": 548708,
+      "common_name": "Wanderer",
+      "scientific_name": "Acraea aganice",
+      "taxon_group": 251,
+      "preferredId": 548706
+    },
+    {
+      "warehouse_id": 548727,
+      "common_name": "Wandering Donkey Acraea",
+      "scientific_name": "Acraea neobule",
+      "taxon_group": 251,
+      "preferredId": 548726
     },
     {
       "warehouse_id": 434611,
@@ -26725,6 +28942,13 @@
       "preferredId": 432406
     },
     {
+      "warehouse_id": 549071,
+      "common_name": "Western Blotched Leopard",
+      "scientific_name": "Lachnoptera anticlia",
+      "taxon_group": 251,
+      "preferredId": 549070
+    },
+    {
       "warehouse_id": 434615,
       "common_name": "Western Brassy Ringlet",
       "scientific_name": "Erebia arvernensis",
@@ -26744,6 +28968,13 @@
       "scientific_name": "Melanargia occitanica",
       "taxon_group": 251,
       "preferredId": 432494
+    },
+    {
+      "warehouse_id": 548879,
+      "common_name": "Western Policeman",
+      "scientific_name": "Coeliades hanno",
+      "taxon_group": 251,
+      "preferredId": 548877
     },
     {
       "warehouse_id": 434618,
@@ -26774,11 +29005,46 @@
       "preferredId": 432545
     },
     {
+      "warehouse_id": 548812,
+      "common_name": "White-barred Charaxes",
+      "scientific_name": "Charaxes brutus",
+      "taxon_group": 251,
+      "preferredId": 548810
+    },
+    {
+      "warehouse_id": 548811,
+      "common_name": "White-barred Emperor",
+      "scientific_name": "Charaxes brutus",
+      "taxon_group": 251,
+      "preferredId": 548810
+    },
+    {
       "warehouse_id": 434622,
       "common_name": "White-letter Hairstreak",
       "scientific_name": "Satyrium w-album",
       "taxon_group": 251,
       "preferredId": 432277
+    },
+    {
+      "warehouse_id": 549180,
+      "common_name": "White-spotted Commodore",
+      "scientific_name": "Precis limnoria",
+      "taxon_group": 251,
+      "preferredId": 549179
+    },
+    {
+      "warehouse_id": 548969,
+      "common_name": "Widespread Forester",
+      "scientific_name": "Euphaedra medon",
+      "taxon_group": 251,
+      "preferredId": 548968
+    },
+    {
+      "warehouse_id": 548844,
+      "common_name": "Wild-bamboo Charaxes",
+      "scientific_name": "Charaxes macclounii",
+      "taxon_group": 251,
+      "preferredId": 548843
     },
     {
       "warehouse_id": 434624,
@@ -26795,11 +29061,25 @@
       "preferredId": 432191
     },
     {
+      "warehouse_id": 548697,
+      "common_name": "Wood Whites",
+      "scientific_name": "Leptosia",
+      "taxon_group": 251,
+      "preferredId": 548696
+    },
+    {
       "warehouse_id": 462839,
       "common_name": "Wood/cryptic Wood White",
       "scientific_name": "Leptidea sinapis/juvernica",
       "taxon_group": 251,
       "preferredId": 432191
+    },
+    {
+      "warehouse_id": 548754,
+      "common_name": "Woodland Albatross White",
+      "scientific_name": "Appias sylvia",
+      "taxon_group": 251,
+      "preferredId": 548753
     },
     {
       "warehouse_id": 434626,
@@ -26830,11 +29110,54 @@
       "preferredId": 432610
     },
     {
+      "warehouse_id": 548775,
+      "common_name": "Yellow Caper White",
+      "scientific_name": "Belenois solilucis",
+      "taxon_group": 251,
+      "preferredId": 548774
+    },
+    {
+      "warehouse_id": 548897,
+      "common_name": "Yellow Orange Tip",
+      "scientific_name": "Colotis auxo",
+      "taxon_group": 251,
+      "preferredId": 548896
+    },
+    {
+      "warehouse_id": 549052,
+      "common_name": "Yellow Pansy",
+      "scientific_name": "Junonia hierta",
+      "taxon_group": 251,
+      "preferredId": 549051
+    },
+    {
+      "warehouse_id": 548920,
+      "common_name": "Yellow Patch Tip",
+      "scientific_name": "Colotis halimede",
+      "taxon_group": 251,
+      "preferredId": 548919
+    },
+    {
+      "warehouse_id": 548921,
+      "common_name": "Yellow Patch White",
+      "scientific_name": "Colotis halimede",
+      "taxon_group": 251,
+      "preferredId": 548919
+    },
+    {
       "warehouse_id": 466992,
       "common_name": "Yellow Shell",
       "scientific_name": "Camptogramma bilineata",
       "taxon_group": 260,
-      "preferredId": 458171
+      "preferredId": 458171,
+      "isDayFlying": true
+    },
+    {
+      "warehouse_id": 548931,
+      "common_name": "Yellow Splendour Tip",
+      "scientific_name": "Colotis protomedia",
+      "taxon_group": 251,
+      "preferredId": 548930
     },
     {
       "warehouse_id": 434631,
@@ -26849,6 +29172,13 @@
       "scientific_name": "Pyrgus sidae",
       "taxon_group": 251,
       "preferredId": 432172
+    },
+    {
+      "warehouse_id": 549117,
+      "common_name": "Yellow-base Sailer",
+      "scientific_name": "Neptis metella",
+      "taxon_group": 251,
+      "preferredId": 549116
     },
     {
       "warehouse_id": 434633,
@@ -26870,6 +29200,20 @@
       "scientific_name": "Erebia zapateri",
       "taxon_group": 251,
       "preferredId": 432624
+    },
+    {
+      "warehouse_id": 549168,
+      "common_name": "Zebra White",
+      "scientific_name": "Pinacopteryx eriphia",
+      "taxon_group": 251,
+      "preferredId": 549167
+    },
+    {
+      "warehouse_id": 548869,
+      "common_name": "Zelica Untailed Charaxes",
+      "scientific_name": "Charaxes zelica",
+      "taxon_group": 251,
+      "preferredId": 548868
     },
     {
       "warehouse_id": 434637,
@@ -28077,7 +30421,8 @@
       "common_name": "Ängsmätare",
       "scientific_name": "Ematurga atomaria",
       "taxon_group": 260,
-      "preferredId": 457702
+      "preferredId": 457702,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 467029,
@@ -28308,7 +30653,8 @@
       "common_name": "Ekspinnare",
       "scientific_name": "Lasiocampa quercus",
       "taxon_group": 260,
-      "preferredId": 457094
+      "preferredId": 457094,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434104,
@@ -28371,7 +30717,8 @@
       "common_name": "Fläckig Glansspinnare",
       "scientific_name": "Callimorpha dominula",
       "taxon_group": 260,
-      "preferredId": 459045
+      "preferredId": 459045,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434240,
@@ -28392,7 +30739,8 @@
       "common_name": "Gammaeule",
       "scientific_name": "Autographa gamma",
       "taxon_group": 260,
-      "preferredId": 459510
+      "preferredId": 459510,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434199,
@@ -28420,7 +30768,8 @@
       "common_name": "Gulbrokigt Slåtterfly",
       "scientific_name": "Euclidia glyphica",
       "taxon_group": 260,
-      "preferredId": 459370
+      "preferredId": 459370,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434130,
@@ -28448,14 +30797,16 @@
       "common_name": "Gulvingad Fältmätare",
       "scientific_name": "Camptogramma bilineata",
       "taxon_group": 260,
-      "preferredId": 458171
+      "preferredId": 458171,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 466987,
       "common_name": "Gulvit Streckmätare",
       "scientific_name": "Cabera exanthemata",
       "taxon_group": 260,
-      "preferredId": 457395
+      "preferredId": 457395,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434090,
@@ -28504,7 +30855,8 @@
       "common_name": "Humledagsvärmare",
       "scientific_name": "Hemaris fuciformis",
       "taxon_group": 260,
-      "preferredId": 457184
+      "preferredId": 457184,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 467028,
@@ -28532,7 +30884,8 @@
       "common_name": "Karminspinnare",
       "scientific_name": "Tyria jacobaeae",
       "taxon_group": 260,
-      "preferredId": 459049
+      "preferredId": 459049,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434319,
@@ -28707,7 +31060,8 @@
       "common_name": "Mindre Påfågelspinnare",
       "scientific_name": "Saturnia pavonia",
       "taxon_group": 260,
-      "preferredId": 457146
+      "preferredId": 457146,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434220,
@@ -28756,7 +31110,8 @@
       "common_name": "Nagelspinnare",
       "scientific_name": "Aglia tau",
       "taxon_group": 260,
-      "preferredId": 457140
+      "preferredId": 457140,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434545,
@@ -28896,7 +31251,8 @@
       "common_name": "Rödfransad Björnspinnare",
       "scientific_name": "Diacrisia sannio",
       "taxon_group": 260,
-      "preferredId": 459005
+      "preferredId": 459005,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434139,
@@ -28917,7 +31273,8 @@
       "common_name": "Rutig Buskmätare",
       "scientific_name": "Chiasmia clathrata",
       "taxon_group": 260,
-      "preferredId": 457302
+      "preferredId": 457302,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434471,
@@ -28959,7 +31316,8 @@
       "common_name": "Sexfläckig Bastardsvärmare",
       "scientific_name": "Zygaena filipendulae",
       "taxon_group": 260,
-      "preferredId": 455121
+      "preferredId": 455121,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434044,
@@ -29057,7 +31415,8 @@
       "common_name": "Snövit Streckmätare",
       "scientific_name": "Cabera pusaria",
       "taxon_group": 260,
-      "preferredId": 457391
+      "preferredId": 457391,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434108,
@@ -29078,7 +31437,8 @@
       "common_name": "Sotmätare",
       "scientific_name": "Odezia atrata",
       "taxon_group": 260,
-      "preferredId": 458449
+      "preferredId": 458449,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434229,
@@ -29113,7 +31473,8 @@
       "common_name": "Större Dagsvärmare",
       "scientific_name": "Macroglossum stellatarum",
       "taxon_group": 260,
-      "preferredId": 457187
+      "preferredId": 457187,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434543,
@@ -29148,7 +31509,8 @@
       "common_name": "Svartribbad Vitvingemätare",
       "scientific_name": "Siona lineata",
       "taxon_group": 260,
-      "preferredId": 457508
+      "preferredId": 457508,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434095,
@@ -29169,7 +31531,8 @@
       "common_name": "Svävflugedagsvärmare",
       "scientific_name": "Hemaris tityus",
       "taxon_group": 260,
-      "preferredId": 457182
+      "preferredId": 457182,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434610,
@@ -29267,7 +31630,8 @@
       "common_name": "Vickerbackmätare",
       "scientific_name": "Scotopteryx chenopodiata",
       "taxon_group": 260,
-      "preferredId": 458114
+      "preferredId": 458114,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434634,
@@ -29323,7 +31687,8 @@
       "common_name": "Vitbrokigt Slåtterfly",
       "scientific_name": "Euclidia mi",
       "taxon_group": 260,
-      "preferredId": 459372
+      "preferredId": 459372,
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434506,
