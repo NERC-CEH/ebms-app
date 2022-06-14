@@ -49,6 +49,21 @@ class index extends Component {
     return appModel.attrs.useDayFlyingMothsOnly ? isDayFlying : true;
   };
 
+  isPresent = taxon => {
+    if (taxon.group !== groups.butterflies.id) return true; // abundance available only for butterflies
+
+    let { country } = appModel.attrs;
+    country = country === 'UK' ? 'GB' : country;
+
+    if (country === 'ELSEWHERE') return true;
+
+    const abundanceStatus = taxon[country];
+    return !['A', 'Ex'].includes(abundanceStatus);
+  };
+
+  attrFilter = options =>
+    this.isPresent(options) && this.filterDayFlyingMoths(options);
+
   onInputKeystroke = async e => {
     const { speciesGroups } = this.props;
 
@@ -69,7 +84,7 @@ class index extends Component {
     const informalGroups = speciesGroups && speciesGroups.map(getGroupId);
     const searchResults = await SpeciesSearchEngine.search(searchPhrase, {
       informalGroups,
-      attrFilter: this.filterDayFlyingMoths,
+      attrFilter: this.attrFilter,
     });
     const annotatedSearchResults = this.annotateRecordedTaxa(searchResults);
 

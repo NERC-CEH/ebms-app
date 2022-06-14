@@ -130,8 +130,29 @@ function addSpecies(optimised, taxa) {
   const species = [];
   species[SPECIES_ID_INDEX] = id;
   species[SPECIES_TAXON_INDEX] = taxonClean;
-  const isDayFlying = (taxa.attributes || '').includes('Day-active=Dominant');
-  if (isDayFlying) species[SPECIES_EXTRA_ATTRS_INDEX] = { isDayFlying };
+
+  const attributes = {};
+  const transformCountryFormat = country => {
+    const [key, val] = country.split('=');
+    if (!key || !val) return;
+
+    const normKey = key.replace(': ', '_');
+    const normVal = val.replace('?', '');
+    attributes[normKey] = normVal;
+  };
+  (taxa.attributes || '').split(' | ').forEach(transformCountryFormat);
+
+  const hasAttributes = Object.keys(attributes).length;
+  if (hasAttributes) {
+    species[SPECIES_EXTRA_ATTRS_INDEX] = {};
+
+    if (attributes['Day-active']) {
+      species[SPECIES_EXTRA_ATTRS_INDEX].isDayFlying = true;
+      delete attributes['Day-active'];
+    }
+
+    Object.assign(species[SPECIES_EXTRA_ATTRS_INDEX], attributes);
+  }
 
   speciesArray.push(species);
 }
