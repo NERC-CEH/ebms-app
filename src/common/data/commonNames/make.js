@@ -5,8 +5,6 @@ const fs = require('fs');
 const btoa = require('btoa'); // eslint-disable-line
 const groups = require('../species/groups.json');
 
-const DAY_FLYING_MOTHS_ATTR = 194;
-
 const LANGUAGE_ISO_MAPPING = {
   nld: 'nl-NL',
   hrv: 'hr-HR',
@@ -26,17 +24,16 @@ const LANGUAGE_ISO_MAPPING = {
 };
 
 const UNKNOWN_SPECIES = {
-  id: '538737',
-  taxon_group: 260,
-  taxon: 'Unknown',
-  language_iso: 'eng',
-  preferred: 't',
-  parent_id: null,
-  external_key: null,
+  taxa_taxon_list_id: '538737',
   preferred_taxa_taxon_list_id: '538737',
+  taxon_meaning_id: '243426',
+  taxon_id: '488903',
+  external_key: null,
+  taxon: 'Unknown',
   preferred_taxon: 'Unknown',
-  attr_id_taxa_taxon_list_194: null,
-  attr_taxa_taxon_list_194: null,
+  attributes: null,
+  language_iso: 'eng',
+  taxon_group: 260,
 };
 
 const COUNTRIES_WITH_MOTH_COMMON_NAMES = {
@@ -59,7 +56,7 @@ async function fetch(listID) {
 
   const { data } = await axios({
     method: 'GET',
-    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}&taxattrs=${DAY_FLYING_MOTHS_ATTR}`,
+    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/ebms_app_species_list.xml?taxon_list_id=${listID}`,
     headers: {
       'x-api-key': APP_INDICIA_API_KEY,
       Authorization: `Basic ${userAuth}`,
@@ -79,14 +76,15 @@ function turnNamesArrayIntoLangObject(array) {
   const taxonWithLanguageMapping = (agg, term) => {
     const {
       language_iso: languageCode,
-      id,
+      taxa_taxon_list_id: id,
       taxon: name,
       preferred_taxon: taxon,
       taxon_group: group,
       preferred_taxa_taxon_list_id: preferredId,
-      attr_taxa_taxon_list_194: isDayFlying,
+      attributes,
     } = term;
 
+    const isDayFlying = (attributes || '').includes('Day-active=Dominant');
     if (languageCode === 'lat') {
       // no need for latin - see data/species/index.json file
       return agg;
@@ -120,7 +118,11 @@ function saveFile(data) {
 }
 
 function sortAlphabetically(species) {
-  const alphabetically = (sp1, sp2) => sp1.taxon.localeCompare(sp2.taxon);
+  const alphabetically = (sp1, sp2) => {
+    if (sp1.taxon === sp2.taxon)
+      return sp1.preferred_taxon.localeCompare(sp2.preferred_taxon);
+    return sp1.taxon.localeCompare(sp2.taxon);
+  };
   return species.sort(alphabetically);
 }
 
