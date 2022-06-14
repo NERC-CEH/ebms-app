@@ -15,12 +15,16 @@ if (!APP_INDICIA_API_KEY && !REPORT_USER_EMAIL && REPORT_USER_PASS) {
   );
 }
 
-const DAY_FLYING_MOTHS_ATTR = 194;
+// filtering out butterflies needed as the moths report currently also returns
+// butterflies - TODO: remove once the report is fixed
+const currentTaxons = [];
+const uniqueOnly = ({ taxon }) => !currentTaxons.includes(taxon);
+
 async function fetch(listID) {
   const userAuth = btoa(`${REPORT_USER_EMAIL}:${REPORT_USER_PASS}`);
   const { data } = await axios({
     method: 'GET',
-    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/taxa_list_for_app.xml?taxon_list_id=${listID}&taxattrs=${DAY_FLYING_MOTHS_ATTR}`,
+    url: `https://butterfly-monitoring.net/api/v1/reports/projects/ebms/ebms_app_species_list.xml?taxon_list_id=${listID}`,
     headers: {
       'x-api-key': APP_INDICIA_API_KEY,
       Authorization: `Basic ${userAuth}`,
@@ -57,10 +61,11 @@ function sortAlphabetically(species) {
 // eslint-disable-next-line @getify/proper-arrows/name
 (async () => {
   const butterflies = await fetch(groups.butterflies.id);
-  const mothsOnly = ({ taxon_group: group }) => group === groups.moths.id;
-  const moths = (await fetch(groups.moths.id)).filter(mothsOnly);
-  const bumblebees = await fetch(groups.bumblebees.id);
-  const dragonflies = await fetch(groups.dragonflies.id);
+  currentTaxons.push(...butterflies.map(sp => sp.taxon));
+
+  const moths = (await fetch(groups.moths.id)).filter(uniqueOnly);
+  const bumblebees = (await fetch(groups.bumblebees.id)).filter(uniqueOnly);
+  const dragonflies = (await fetch(groups.dragonflies.id)).filter(uniqueOnly);
   const species = [...butterflies, ...moths, ...bumblebees, ...dragonflies];
 
   const sortedSpecies = await sortAlphabetically(species);

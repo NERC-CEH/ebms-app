@@ -1,7 +1,7 @@
 const taxonCleaner = require('./makeClean');
 
 const TAXON = 'taxon';
-const ID = 'id';
+const ID = 'taxa_taxon_list_id';
 const GENUS_ID_INDEX = 0;
 const GENUS_GROUP_INDEX = 1;
 const GENUS_TAXON_INDEX = 2;
@@ -130,7 +130,7 @@ function addSpecies(optimised, taxa) {
   const species = [];
   species[SPECIES_ID_INDEX] = id;
   species[SPECIES_TAXON_INDEX] = taxonClean;
-  const isDayFlying = !!taxa.attr_taxa_taxon_list_194;
+  const isDayFlying = (taxa.attributes || '').includes('Day-active=Dominant');
   if (isDayFlying) species[SPECIES_EXTRA_ATTRS_INDEX] = { isDayFlying };
 
   speciesArray.push(species);
