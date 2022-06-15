@@ -1,4 +1,5 @@
 const taxonCleaner = require('./makeClean');
+const { getAttrs } = require('../helpers');
 
 const TAXON = 'taxon';
 const ID = 'taxa_taxon_list_id';
@@ -131,16 +132,7 @@ function addSpecies(optimised, taxa) {
   species[SPECIES_ID_INDEX] = id;
   species[SPECIES_TAXON_INDEX] = taxonClean;
 
-  const attributes = {};
-  const transformCountryFormat = country => {
-    const [key, val] = country.split('=');
-    if (!key || !val) return;
-
-    const normKey = key.replace(': ', '_');
-    const normVal = val.replace('?', '');
-    attributes[normKey] = normVal;
-  };
-  (taxa.attributes || '').split(' | ').forEach(transformCountryFormat);
+  const attributes = getAttrs(taxa.attributes);
 
   const hasAttributes = Object.keys(attributes).length;
   if (hasAttributes) {
