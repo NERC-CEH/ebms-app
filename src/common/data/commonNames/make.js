@@ -4,6 +4,7 @@ const axios = require('axios'); // eslint-disable-line
 const fs = require('fs');
 const btoa = require('btoa'); // eslint-disable-line
 const groups = require('../species/groups.json');
+const { getAttrs } = require('../helpers');
 
 const LANGUAGE_ISO_MAPPING = {
   nld: 'nl-NL',
@@ -81,10 +82,8 @@ function turnNamesArrayIntoLangObject(array) {
       preferred_taxon: taxon,
       taxon_group: group,
       preferred_taxa_taxon_list_id: preferredId,
-      attributes,
     } = term;
 
-    const isDayFlying = (attributes || '').includes('Day-active=Dominant');
     if (languageCode === 'lat') {
       // no need for latin - see data/species/index.json file
       return agg;
@@ -104,7 +103,8 @@ function turnNamesArrayIntoLangObject(array) {
       preferredId: parseInt(preferredId, 10),
     };
 
-    if (isDayFlying) species.isDayFlying = true;
+    const attributes = getAttrs(term.attributes);
+    Object.assign(species, attributes);
 
     agg[language].push(species);
     return agg;
