@@ -17,7 +17,7 @@ const API = {
     const clientCallbacks = Object.values(API._clientCallbacks);
 
     if (err) {
-      if (err.code === 'NOT_AUTHORIZED') {
+      if (err.code === 'NOT_AUTHORIZED' && isPlatform('hybrid')) {
         const openSettings = ({ value }) =>
           value && BackgroundGeolocation.openSettings();
         Modals.confirm({
