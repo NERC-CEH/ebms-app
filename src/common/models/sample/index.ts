@@ -106,6 +106,18 @@ export default class AppSample extends Sample {
     this.stopVibrateCounter();
   };
 
+  getSurvey() {
+    let survey;
+    try {
+      survey = super.getSurvey();
+    } catch (error) {
+      console.error(`Survey config was missing ${this.metadata.survey}`);
+      return {};
+    }
+
+    return survey;
+  }
+
   getPrettyName() {
     if (!this.parent || this.metadata.survey !== 'precise-area') {
       return '';
