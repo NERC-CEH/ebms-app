@@ -140,7 +140,12 @@ const extension = {
     // eslint-disable-next-line
     const onPosition = (error, location) => {
       if (error) {
-        console.error('GPS: error', error);
+        const permissionsError = error?.message === 'User denied Geolocation';
+        if (permissionsError) {
+          console.log('GPS: error', error);
+        } else {
+          console.error('GPS: error', error);
+        }
 
         this.stopGPS();
         return;

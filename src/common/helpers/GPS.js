@@ -28,7 +28,6 @@ const API = {
         }).then(openSettings);
       }
 
-      console.error(err);
       // eslint-disable-next-line @getify/proper-arrows/name
       clientCallbacks.forEach(callback => callback(err));
       return;
