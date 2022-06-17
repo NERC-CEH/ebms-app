@@ -10,7 +10,7 @@ import {
   IonIcon,
   IonBadge,
 } from '@ionic/react';
-import { useAlert, useToast } from '@flumens';
+import { useAlert, useToast, date as dateHelp } from '@flumens';
 import { useUserStatusCheck } from 'models/user';
 import { useValidateCheck } from 'models/sample';
 import butterflyIcon from 'common/images/butterfly.svg';
@@ -51,8 +51,7 @@ function Survey({ sample }) {
 
   const { synchronising } = sample.remote;
 
-  const date = new Date(sample.metadata.created_on);
-  const prettyDate = date.toLocaleDateString();
+  const prettyDate = dateHelp.print(sample.metadata.created_on, true);
   const survey = sample.getSurvey();
 
   let speciesCount = sample.occurrences.length;
