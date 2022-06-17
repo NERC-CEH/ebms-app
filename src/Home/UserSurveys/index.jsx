@@ -73,9 +73,7 @@ function getUploadedSurveys(surveys) {
   if (!surveys.length) {
     return (
       <IonList lines="full">
-        <InfoBackgroundMessage>
-          <T>No uploaded surveys</T>
-        </InfoBackgroundMessage>
+        <InfoBackgroundMessage>No uploaded surveys</InfoBackgroundMessage>
       </IonList>
     );
   }

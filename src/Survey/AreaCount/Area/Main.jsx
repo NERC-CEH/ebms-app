@@ -29,7 +29,7 @@ class AreaAttr extends Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
     sample: PropTypes.object.isRequired,
-    shape: PropTypes.object.isRequired,
+    shape: PropTypes.object,
     setLocation: PropTypes.func.isRequired,
     areaPretty: PropTypes.string.isRequired,
     isGPSTracking: PropTypes.bool.isRequired,

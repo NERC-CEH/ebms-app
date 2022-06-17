@@ -57,6 +57,7 @@ const HeaderComponent: FC<Props> = ({
       value={isGPSTracking}
       onChange={onToggle}
       disabled={isDisabled}
+      skipTranslation
     />
   );
 

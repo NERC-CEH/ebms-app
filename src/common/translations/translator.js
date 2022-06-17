@@ -21,9 +21,11 @@ window.getNewTerms = function getNewTermsWrap() {
 function saveMissingKey(key) {
   window.dic = window.dic || [];
 
-  if (window.dic.includes(key)) {
-    return;
-  }
+  if (window.dic.includes(key)) return;
+
+  if (!`${key}`.trim()) return;
+
+  if (Number.isFinite(parseInt(key, 10))) return;
 
   console.warn(`🇬🇧: ${key}`);
   window.dic.push(key);
