@@ -137,6 +137,9 @@ msgstr "Russian Federation"
 msgid "Slovenia"
 msgstr "Slovenia"
 
+msgid "Japan"
+msgstr "Japan"
+
 msgid "Slovakia"
 msgstr "Slovakia"
 

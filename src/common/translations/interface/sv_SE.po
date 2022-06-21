@@ -147,6 +147,9 @@ msgstr "Ryssland"
 msgid "Slovenia"
 msgstr "Slovenien"
 
+msgid "Japan"
+msgstr ""
+
 msgid "Slovakia"
 msgstr "Slovakien"
 

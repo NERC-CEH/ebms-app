@@ -25,6 +25,7 @@ export default {
   IE: 'Ireland',
   IS: 'Iceland',
   IT: 'Italy',
+  JP: 'Japan',
   LI: 'Liechtenstein',
   LU: 'Luxembourg',
   LV: 'Latvia',

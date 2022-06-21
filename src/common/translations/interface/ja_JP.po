@@ -1,322 +1,317 @@
 # 
 # Translators:
-# Светлана Соболева <sv.goloshchapova@gmail.com>, 2020
-# Karolis, 2020
-# Vilius Stankaitis <vilius@flumens.io>, 2020
+# Yasuhiro Nakamura, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Vilius Stankaitis <vilius@flumens.io>, 2020\n"
-"Language-Team: Russian (Russia) (https://www.transifex.com/ceh/teams/95441/ru_RU/)\n"
+"Last-Translator: Yasuhiro Nakamura, 2022\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/ceh/teams/95441/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Выберите вашу страну"
+msgstr "国を選んでください。"
 
 msgid "United Kingdom"
-msgstr "Великобритания"
+msgstr "英国"
 
 msgid "Lithuania"
-msgstr "Литва"
+msgstr "リトアニア"
 
 msgid "Spain"
-msgstr "Испания"
+msgstr "スペイン"
 
 msgid "Andorra"
-msgstr "Андорра"
+msgstr "アンドラ"
 
 msgid "Albania"
-msgstr "Албания"
+msgstr "アルバニア"
 
 msgid "Austria"
-msgstr "Австрия"
+msgstr ""
 
 msgid "Bosnia and Herzegovina"
-msgstr "Босния и Герцеговина"
+msgstr ""
 
 msgid "Belgium"
-msgstr "Бельгия"
+msgstr ""
 
 msgid "Bulgaria"
-msgstr "Болгария"
+msgstr ""
 
 msgid "Belarus"
-msgstr "Беларусь"
+msgstr ""
 
 msgid "Switzerland"
-msgstr "Швейцария"
+msgstr ""
 
 msgid "Cyprus"
-msgstr "Кипр"
+msgstr ""
 
 msgid "Czechia"
-msgstr "Чехия"
+msgstr ""
 
 msgid "Germany"
-msgstr "Германия"
+msgstr ""
 
 msgid "Denmark"
-msgstr "Дания"
+msgstr ""
 
 msgid "Estonia"
-msgstr "Эстония"
+msgstr ""
 
 msgid "Spain (Canary Islands)"
-msgstr "Испания: Канарские острова"
+msgstr ""
 
 msgid "Finland"
-msgstr "Финляндия"
+msgstr ""
 
 msgid "France"
-msgstr "Франция"
+msgstr ""
 
 msgid "Greece"
-msgstr "Греция"
+msgstr ""
 
 msgid "Croatia"
-msgstr "Хорватия"
+msgstr ""
 
 msgid "Hungary"
-msgstr "Венгрия"
+msgstr ""
 
 msgid "Ireland"
-msgstr "Ирландия"
+msgstr ""
 
 msgid "Iceland"
-msgstr "Исландия"
+msgstr ""
 
 msgid "Italy"
-msgstr "Италия"
+msgstr ""
 
 msgid "Liechtenstein"
-msgstr "Лихтенштейн"
+msgstr ""
 
 msgid "Luxembourg"
-msgstr "Люксембург"
+msgstr ""
 
 msgid "Latvia"
-msgstr "Латвия"
+msgstr ""
 
 msgid "Moldova"
-msgstr "Молдова"
+msgstr ""
 
 msgid "Montenegro"
-msgstr "Черногория"
+msgstr ""
 
 msgid "North Macedonia"
-msgstr "Македония"
+msgstr ""
 
 msgid "Malta"
-msgstr "Мальта"
+msgstr ""
 
 msgid "Netherlands"
-msgstr "Нидерланды"
+msgstr ""
 
 msgid "Norway"
-msgstr "Норвегия"
+msgstr ""
 
 msgid "Poland"
-msgstr "Польша"
+msgstr ""
 
 msgid "Portugal"
-msgstr "Португалия"
+msgstr ""
 
 msgid "Portugal (Azores)"
-msgstr "Португалия: Азорские острова"
+msgstr ""
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Португалия: Мадейра"
+msgstr ""
 
 msgid "Romania"
-msgstr "Румыния"
+msgstr ""
 
 msgid "Serbia"
-msgstr "Сербия"
+msgstr ""
 
 msgid "Russian Federation"
-msgstr "Россия"
+msgstr ""
 
 msgid "Slovenia"
-msgstr "Словения"
+msgstr ""
 
 msgid "Japan"
 msgstr ""
 
 msgid "Slovakia"
-msgstr "Словакия"
+msgstr "スロバキア"
 
 msgid "Turkey (Europe)"
 msgstr ""
 
 msgid "Turkey (Asia)"
-msgstr ""
+msgstr "トルコ（アジア）"
 
 msgid "Ukraine"
-msgstr "Украина"
+msgstr "ウクライナ"
 
 msgid "Elsewhere"
-msgstr "Другое место"
+msgstr "その他の国"
 
 msgid "Skip"
-msgstr "Пропустить"
+msgstr "スキップする"
 
 msgid "Next"
-msgstr "Следующее"
+msgstr "次へ"
 
 msgid "Get Started"
-msgstr "Начнем"
+msgstr "始める"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr ""
-"Пожалуйста, войдите, используя Ваш eBMS аккаунт или зарегистрируйтесь."
+msgstr "あなたのeBMSのアカウントでサインイン、または登録してください。"
 
 msgid "Password"
-msgstr "Пароль"
+msgstr "パスワード"
 
 msgid "Sign in"
-msgstr "Войти"
+msgstr "サインイン"
 
 msgid "Register"
-msgstr "Зарегистрироваться"
+msgstr "登録する"
 
 msgid "Forgot password?"
-msgstr "Забыли пароль?"
+msgstr "パスワードを忘れた場合？"
 
 msgid "User not found."
-msgstr "Пользователь не найден"
+msgstr "ユーザーが見つかりません"
 
 msgid "Login"
-msgstr "Логин"
+msgstr "ログイン"
 
 msgid "Settings"
-msgstr "Настройки"
+msgstr "セッティング"
 
 msgid "Info"
-msgstr "Информация"
+msgstr "情報"
 
 msgid "About"
-msgstr "О"
+msgstr "このアプリについて"
 
 msgid "Help"
-msgstr "Помощь"
+msgstr "ヘルプ"
 
 msgid "Privacy Policy"
-msgstr "Политика конфиденциальности"
+msgstr "プライバシーポリシー"
 
 msgid "Credits"
-msgstr "Цитирование"
+msgstr "クレジット"
 
 msgid "Email"
-msgstr "Электронная почта"
+msgstr "Eメール"
 
 msgid "First Name"
-msgstr "Имя"
+msgstr "名前"
 
 msgid "Surname"
-msgstr "Фамилия"
+msgstr "名字"
 
 msgid "I agree to"
-msgstr "Я принимаю"
+msgstr ""
 
 msgid "Terms and Conditions"
-msgstr "Условия и правила использования"
+msgstr ""
 
 msgid "Reset"
-msgstr "Сбросить"
+msgstr "リセット"
 
 msgid "Records"
-msgstr "Записи"
+msgstr ""
 
 msgid "Upload All"
-msgstr "Загрузить все"
+msgstr ""
 
 msgid "Remove All Saved"
-msgstr "Удалить все сохраненные"
+msgstr ""
 
 msgid "Application"
-msgstr "Заявка"
+msgstr ""
 
 msgid "Training Mode"
-msgstr "Режим тренировки"
+msgstr ""
 
 msgid "Experimental Features"
-msgstr "Характеристики условий"
+msgstr ""
 
 msgid "Welcome"
-msgstr "Добро пожаловать"
+msgstr ""
 
 msgid "Lets start!"
-msgstr "Начнем!"
+msgstr ""
 
 msgid "TOP RECORDERS"
-msgstr "Ведущие регистраторы"
+msgstr ""
 
 msgid "Top Species from all timed counts"
-msgstr "Ведущие виды"
+msgstr ""
 
 msgid "Back"
-msgstr "Назад"
+msgstr ""
 
 msgid "Menu"
-msgstr "Меню"
+msgstr ""
 
 msgid "App"
-msgstr "Приложение"
+msgstr ""
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
-"Мы выражаем благодарность всем, кто принял участие в создании данного "
-"приложения"
 
 msgid "Home"
-msgstr "Домашняя страница"
+msgstr ""
 
 msgid "Guide"
-msgstr "Руководство"
+msgstr ""
 
 msgid "Account"
-msgstr "Учетная запись"
+msgstr ""
 
 msgid "Offline"
-msgstr "Офлайн"
+msgstr ""
 
 msgid "Sorry, looks like you're offline."
-msgstr "Извините, вы находитесь не в сети."
+msgstr ""
 
 msgid "OK"
-msgstr "Ок"
+msgstr ""
 
 msgid "Sorry"
-msgstr "Извините"
+msgstr ""
 
 msgid "Please wait..."
-msgstr "Пожалуйста, ожидайте."
+msgstr ""
 
 msgid "name is a required field"
-msgstr "Имя является обязательным полем для заполнения"
+msgstr ""
 
 msgid "password is a required field"
-msgstr "Пароль является обязательным полем для заполнения"
+msgstr ""
 
 msgid "Login error:"
-msgstr "Неправильный пароль"
+msgstr ""
 
 msgid "Failed to fetch"
-msgstr "Не удалось получить"
+msgstr ""
 
 msgid "Incorrect password or email."
-msgstr "Неправильный пароль или логин."
+msgstr ""
 
 # Part of logout process
 msgid "Logout"
-msgstr "Выход"
+msgstr ""
 
 # Part of logout process
 msgid ""
@@ -325,29 +320,27 @@ msgid ""
 msgstr ""
 
 msgid "Cancel"
-msgstr "Отмена"
+msgstr ""
 
 msgid "Welcome aboard!"
-msgstr "Добро пожаловать!"
+msgstr ""
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Перед отправкой записей, подтвердите адрес электронной почты, перейдя по "
-"ссылке."
 
 msgid "OK, got it"
-msgstr "Хорошо, спасибо."
+msgstr ""
 
 msgid "Please fill in"
 msgstr ""
 
 msgid "Area Count"
-msgstr "Площадка учета"
+msgstr ""
 
 msgid "Area"
-msgstr "Площадка"
+msgstr ""
 
 # Location attribute label
 msgid "Location"
@@ -372,74 +365,72 @@ msgid "Using your location."
 msgstr ""
 
 msgid "Add"
-msgstr "Добавить"
+msgstr ""
 
 msgid "Add species"
-msgstr "Добавить"
+msgstr ""
 
 msgid "Duration"
-msgstr "Продолжительность"
+msgstr ""
 
 msgid "Species"
-msgstr "Вид"
+msgstr ""
 
 msgid "Species name"
-msgstr "Название вида"
+msgstr ""
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
-"Для быстрого поиска таксонов Вы можете использовать различные сокращения. "
-"Например, чтобы найти"
 
 msgid "you can type in the search bar"
-msgstr "Вы можете ввести в строке поиска"
+msgstr ""
 
 msgid "Edit Occurrence"
-msgstr "Изменить местоположение"
+msgstr ""
 
 msgid "Count"
-msgstr "Учет"
+msgstr ""
 
 msgid "Comment"
-msgstr "Комментарий"
+msgstr ""
 
 msgid "Draft"
-msgstr "Черновик"
+msgstr ""
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Продолжить предыдущий учет, сохраненный в черновике?"
+msgstr ""
 
 msgid "Discard"
-msgstr "Сбросить"
+msgstr ""
 
 msgid "Continue"
-msgstr "Продолжить"
+msgstr ""
 
 msgid "Finish"
-msgstr "Закончить"
+msgstr ""
 
 msgid "minutes"
-msgstr "Минуты"
+msgstr ""
 
 msgid "No species added"
-msgstr "Виды не добавлены"
+msgstr ""
 
 msgid "Please draw your area on the map"
-msgstr "Пожалуйста, нарисуйте Вашу площадку на карте"
+msgstr ""
 
 msgid "Draw an area"
-msgstr "Нарисуйте площадку"
+msgstr ""
 
 msgid "Delete"
-msgstr "Удалить"
+msgstr ""
 
 msgid "Surveys"
-msgstr "Исследования"
+msgstr ""
 
 msgid "Reports"
-msgstr "Отчеты"
+msgstr ""
 
 # Species filter input
 msgid "Species name or filter..."
@@ -450,72 +441,72 @@ msgid "family"
 msgstr ""
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Извините, на данный момент нет доступных данных отчета"
+msgstr ""
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "Вы уверены, что ходите удалить данное исследование?"
+msgstr ""
 
 msgid "No finished surveys"
-msgstr "Нет законченных исследований"
+msgstr ""
 
 msgid "Finished surveys"
-msgstr "Законченные исследования"
+msgstr ""
 
 msgid "Selected area"
-msgstr "Выбранная площадка"
+msgstr ""
 
 msgid "Use survey create time"
-msgstr "Использовать время начала исследования"
+msgstr ""
 
 msgid "Use survey finish time"
-msgstr "Использовать время окончания исследования"
+msgstr ""
 
 msgid "species"
-msgstr "Вид"
+msgstr ""
 
 msgid "Done"
-msgstr "Сделано"
+msgstr ""
 
 msgid "Time's up!"
-msgstr "Время вышло"
+msgstr ""
 
 msgid "Survey incomplete"
-msgstr "Исследование не закончено"
+msgstr ""
 
 msgid "The survey is not complete yet."
-msgstr "Данное исследование еще не закончено."
+msgstr ""
 
 msgid "Please select a smaller area."
-msgstr "Пожалуйста, выберите площадку меньше."
+msgstr ""
 
 msgid "Please add survey area information."
-msgstr "Пожалуйста, добавьте информацию о районе исследования."
+msgstr ""
 
 msgid "Choose a method to upload a photo"
-msgstr "Выберите способ загрузки фотографии"
+msgstr ""
 
 msgid "Gallery"
-msgstr "Галерея"
+msgstr ""
 
 msgid "Camera"
-msgstr "Камера"
+msgstr ""
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "Вы уверены, что хотите удалить эту фотографию?"
+msgstr ""
 
 msgid "Note: it will remain in the gallery."
-msgstr "Обратите внимание, что фото будет сохранено в галерее."
+msgstr ""
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
 msgstr ""
 
 msgid "Registration error:"
-msgstr "Ошибка при регистрации"
+msgstr ""
 
 # Login error message
 msgid "Incorrect password or email"
-msgstr "Неправильный пароль или адрес электронной почты"
+msgstr ""
 
 msgid "Enter your email address to request a password reset."
 msgstr ""
@@ -553,377 +544,324 @@ msgid "Unrecognized email address."
 msgstr ""
 
 msgid "email is not valid"
-msgstr "Адрес электронной почты не действителен"
+msgstr ""
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Бабочки - удивительные насекомые, но их численность сокращается во многих "
-"частях Европы.  Как представлено на данном графике луговые виды бабочек на "
-"территории ЕС."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
-"Данные, собранные с использованием данного приложения, представляют собой "
-"замечательную возможность расширить знания о бабочках, категориях их охраны "
-"и местообитаниях."
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
-"Нам не хватает данных о численности бабочек во многих регионах Европы, о чем"
-" свидетельствует количество записей, доступных в настоящее время для оценки "
-"категории охраны бабочек."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Никогда еще не было так легко представить высококачественные данные для "
-"исследований, чтобы сохранить этих удивительных и важных насекомых. Вы "
-"можете начать прямо сейчас"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"Данное приложение было разработано в рамках проекта «Изучение бабочек "
-"Европы» (ABLE)."
 
 msgid "The ABLE project is a partnership between"
-msgstr "ABLE - это партнерский проект"
+msgstr ""
 
 msgid "and"
-msgstr "и"
+msgstr ""
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
-"ABLE финансируется Департаментом окружающей среды Европейского союза на "
-"период 2019-2020 гг."
 
 msgid "ABLE partners:"
-msgstr "Партнеры ABLE:"
+msgstr ""
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
-"Данное приложение является источником данных для Европейской схемы "
-"мониторинга бабочек (eBMS)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr "В июне 2019 представленные организации являлись партнерами eBMS:"
+msgstr ""
 
 msgid "Not enough data yet"
-msgstr "Недостаточно данных"
+msgstr ""
 
 msgid "How to start a survey"
-msgstr "Как начать исследование"
+msgstr ""
 
 msgid "To start a new survey you can press the plus button"
-msgstr "Для начала нового исследования Вы можете нажать на кнопку \"добавить\""
+msgstr ""
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
-"в нижней части главной страницы. Начнется новое 15-ти минутное исследование."
 
 msgid "Selecting species"
-msgstr "Выбранный вид"
+msgstr ""
 
 msgid "Please press the Add"
-msgstr "Пожалуйста, нажмите Добавить"
+msgstr ""
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"кнопку на странице редактирования Вашего нового исследования. Это направит "
-"Вас на страницу поиска таксона. После выбора вида, он будет добавлен в "
-"список Вашего исследования."
 
 msgid "Note"
-msgstr "Имейте ввиду"
+msgstr ""
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
-"Вы можете увеличить число особей вида, нажимая на цифру, рядом с названием "
-"вида в списке."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Для удаления вида из списка, Вы можете провести влево и нажать кнопку "
-"\"удалить\"."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"Чтобы добавить больше информации о распространении Вашего вида, вы можете "
-"открыть статью о виде, нажав на нее."
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr ""
-"Для завершения записи Вам будет необходимо добавить информацию о площадке "
-"исследования."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
 msgstr ""
-"После окончания исследования, нажмите кнопку \"Завершить\" в верхней части "
-"страницы."
 
 msgid "Searching for species"
-msgstr "Поиск вида"
+msgstr ""
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"В приложение включено около 500 видов бабочек согласно таксономическому "
-"принципу. Для быстрого поиска таксона Вы можете использовать любые "
-"сокращения. Например, чтобы найти "
 
 msgid "Sync. with the website"
-msgstr "Синхронизация с сайтом"
+msgstr ""
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr "Все сохраненные данные будут показаны на странице Вашего аккаунта."
+msgstr ""
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"По умолчанию исследование находится в режиме \"черновика\", который не будет"
-" отправлен в базу данных до тех пор, пока Вы не нажмете кнопку «Готово» в "
-"верхней части страницы. Приложение отправит Вашу запись, как только будет "
-"установлено хорошее подключение к Интернету."
 
 msgid "If the record has reached the database a red"
-msgstr "Если запись отправлена в базу данных красный"
+msgstr ""
 
 msgid "(set for submission & saved locally) will become green"
-msgstr "(отправляется и локально сохранен) станет зеленым"
+msgstr ""
 
 msgid "synced to the database"
-msgstr "синхронизируется с базой данных"
+msgstr ""
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
-"Вы должны войти в свою учетную запись на сайте и подключиться к интернету, "
-"чтобы записи автоматически синхронизировались в фоновом режиме"
 
 msgid "Delete a record"
-msgstr "Удалить запись"
+msgstr ""
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Для удаления записи, проведите влево на странице своей учетной записи и "
-"нажмите кнопку \"удалить\"."
 
 msgid "User"
-msgstr "Пользователь"
+msgstr ""
 
 msgid "Sign in/out or register"
-msgstr "Войти/выйти или зарегистрироваться"
+msgstr ""
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"Для входа откройте страницу главного меню и нажмите кнопку \"Войти\" или "
-"\"Зарегистрироваться\" и следуйте инструкциям."
 
 msgid "To logout, visit the main menu page and click the logout button."
-msgstr "Для выхода, откройте страницу главного меню и нажмите кнопку \"Выход\"."
+msgstr ""
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
-"после регистрации новой учетной записи Вы должны подтвердить Ваш адрес "
-"электронной почты, перейдя по ссылке в отправленном Вам письме"
 
 msgid "Other"
-msgstr "Другое"
+msgstr ""
 
 msgid "Reset the application"
-msgstr "Переустановка приложения"
+msgstr ""
 
 msgid "Go to the application settings page"
-msgstr "Перейдите на страницу \"Настройки\""
+msgstr ""
 
 msgid "and click on the Reset"
-msgstr "И нажмите \"Переустановить\""
+msgstr ""
 
 msgid "button"
-msgstr "кнопка"
+msgstr ""
 
 msgid "No species found with this name"
-msgstr "Вид не найден"
+msgstr ""
 
 msgid "Allow Sample Edit"
-msgstr "Разрешить редактирование"
+msgstr ""
 
 msgid "Upload"
-msgstr "Загрузить"
+msgstr ""
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Данное приложение создано для мониторинга и сохранения бабочек. Нажмите на "
-"кнопку \"+\" ниже, чтобы начать подсчет бабочек."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
-msgstr "Мы улучшим приложение в ближайшие месяцы, добавив новые функции."
+msgstr ""
 
 msgid "Are you sure you want to reset the application to its initial state?"
 msgstr ""
-"Вы уверены в том, что хотите вернуть приложение к его первоначальным "
-"настройкам?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr "Это удалит все сохраненные данные на данном устройстве!"
+msgstr ""
 
 msgid "Sweden"
-msgstr "Швеция"
+msgstr ""
 
 msgid "Paused"
-msgstr "Пауза"
+msgstr ""
 
 msgid "Pending"
-msgstr "В ожидании"
+msgstr ""
 
 msgid "Uploaded"
-msgstr "Загружено"
+msgstr ""
 
 msgid "No finished pending surveys"
-msgstr "Нет незаконченных исследований"
+msgstr ""
 
 msgid "No uploaded surveys"
-msgstr "Нет загруженных исследований"
+msgstr ""
 
 msgid "Enjoying the app?"
-msgstr "Нравится приложение?"
+msgstr ""
 
 msgid "Not really"
-msgstr "Нет"
+msgstr ""
 
 msgid "Yes!"
-msgstr "Да"
+msgstr ""
 
 msgid "Would you mind giving us some feedback?"
-msgstr "Не могли бы Вы дать нам обратную связь?"
+msgstr ""
 
 msgid "No, thanks"
-msgstr "Нет, спасибо"
+msgstr ""
 
 msgid "OK, sure"
-msgstr "Да, конечно"
+msgstr ""
 
 msgid "How about a rating on the App Store then?"
-msgstr "Хотите оценить приложение в App Store?"
+msgstr ""
 
 msgid "How about a rating on the Play Store then?"
-msgstr "Хотите оценить приложение в Play Store?"
+msgstr ""
 
 msgid "Icons made by"
-msgstr "Иконки сделаны"
+msgstr ""
 
 msgid "from"
-msgstr "С"
+msgstr ""
 
 msgid "We've sent an email to you"
-msgstr "Вам было отправлено письмо на электронную почту"
+msgstr ""
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
-"Нажмите на ссылку в письме для восстановления пароля. Если Вы не получили "
-"письмо проверьте другие папки, как, например, \"спам\"."
 
 msgid "App Development"
-msgstr "Разработка приложения"
+msgstr ""
 
 msgid "This app was hand crafted with love by"
-msgstr "Это приложение было сделано вручную с любовью"
+msgstr ""
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
-msgstr "Разработано Агентством "
+msgstr ""
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr "В случае имеющейся у Вас обратной связи"
+msgstr ""
 
 msgid "contact us"
-msgstr "Свяжитесь с нами"
+msgstr ""
 
 msgid "Language"
-msgstr "Язык"
+msgstr ""
 
 msgid "Country"
-msgstr "Страна"
+msgstr ""
 
 msgid "Mark any new records as 'training' and exclude from all reports."
-msgstr "Пометить новые записи как \"тренировочные\" и исключить из всех отчетов."
+msgstr ""
 
 # App setting label
 msgid "Show common names in guide"
 msgstr ""
 
 msgid "Share App Analytics"
-msgstr "Поделиться статистикой"
+msgstr ""
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
 
 msgid "Save Draft"
-msgstr "Сохранить черновик"
+msgstr ""
 
 msgid "Stage"
-msgstr "Стадия"
+msgstr ""
 
 msgid "Not Recorded"
-msgstr "Не указано"
+msgstr ""
 
 msgid "Adults"
-msgstr "Взрослая особь"
+msgstr ""
 
 msgid "Larvae"
-msgstr "Личинка"
+msgstr ""
 
 msgid "Eggs"
-msgstr "Яйца"
+msgstr ""
 
 msgid "Pupae"
-msgstr "Куколка"
+msgstr ""
 
 msgid "Larval webs"
-msgstr "Сети личинок"
+msgstr ""
 
 # Butterfly stage
 msgid "Adult"
@@ -946,218 +884,211 @@ msgid "Pupa"
 msgstr ""
 
 msgid "Transect"
-msgstr "Трансекта"
+msgstr ""
 
 msgid "Sections"
-msgstr "Секции"
+msgstr ""
 
 msgid "No transect"
-msgstr "Нет трансекты"
+msgstr ""
 
 msgid "Start Time"
-msgstr "Время начала"
+msgstr ""
 
 msgid "End Time"
-msgstr "Время окончания"
+msgstr ""
 
 msgid "Temperature"
-msgstr "Температура"
+msgstr ""
 
 msgid "Cloud"
-msgstr "Облачность"
+msgstr ""
 
 msgid "Wind Direction"
-msgstr "Направление ветра"
+msgstr "風向き"
 
 msgid "Wind Speed"
-msgstr "Скорость ветра"
+msgstr "風力"
 
 msgid "Recorder"
-msgstr "Исследователь"
+msgstr ""
 
 msgid "Refresh"
-msgstr "Обновить"
+msgstr ""
 
 msgid "Please select your transect first."
-msgstr "Пожалуйста, выберите трансекту"
+msgstr ""
 
 msgid "Invalid server response."
-msgstr "Ошибка сервера"
+msgstr ""
 
 msgid "Not recorded/no data"
-msgstr "Нет записей/нет данных"
+msgstr ""
 
 msgid "Please specify the temperature C°."
-msgstr "Пожалуйста, укажите температуру в градусах Цельсия."
+msgstr ""
 
 msgid "S"
-msgstr "Южный"
+msgstr ""
 
 msgid "SW"
-msgstr "Юго-западный"
+msgstr ""
 
 msgid "W"
-msgstr "Западный"
+msgstr ""
 
 msgid "NW"
-msgstr "Северо-западный"
+msgstr ""
 
 msgid "N"
-msgstr "Северный"
+msgstr ""
 
 msgid "NE"
-msgstr "Северо-восточный"
+msgstr ""
 
 msgid "E"
-msgstr "Восточный"
+msgstr ""
 
 msgid "SE"
-msgstr "Юго-восточный"
+msgstr ""
 
 msgid "No direction"
-msgstr "Штиль"
+msgstr ""
 
 msgid "Please specify the wind direction."
-msgstr "Пожалуйста, укажите направление ветра."
+msgstr ""
 
 msgid "Smoke rises vertically"
-msgstr "Дым поднимается вертикально"
+msgstr ""
 
 msgid "Slight smoke drift"
-msgstr "Дым отклоняется в сторону"
+msgstr ""
 
 msgid "Wind felt on face, leaves rustle"
-msgstr "Дуновение ветра ощущается лицом, листья шелестят"
+msgstr ""
 
 msgid "Leaves and twigs in slight motion"
-msgstr "Листья и тонкие ветви деревьев колышутся"
+msgstr ""
 
 msgid "Dust raised and small branches move"
-msgstr "Поднимается пыль, колышутся тонкие веточки деревьев"
+msgstr ""
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Небольшие деревья колышутся"
+msgstr ""
 
 msgid "Large branches move and trees sway"
-msgstr "Качаются толстые сучья и стволы деревьев"
+msgstr ""
 
 msgid "Please specify the wind speed."
-msgstr "Пожалуйста, укажите скорость ветра"
+msgstr ""
 
 msgid "Transects"
-msgstr "Трансекты"
+msgstr ""
 
 msgid "Transect list was successfully updated."
-msgstr "Данные трансекты обновлены"
+msgstr ""
 
 msgid "Section"
-msgstr "Секция"
+msgstr ""
 
 msgid "Reliability"
-msgstr "Достоверность"
+msgstr ""
 
 msgid "Please specify the reliability of the section count."
-msgstr "Пожалуйста, укажите достоверность выделения секций."
+msgstr ""
 
 msgid "Suitable conditions"
-msgstr "Подходящие условия"
+msgstr ""
 
 msgid "Unsuitable conditions"
-msgstr "Неподходящие условия"
+msgstr ""
 
 msgid "Unable to survey"
-msgstr "Не возможно провести исследование"
+msgstr ""
 
 msgid "15min Count"
-msgstr "Временной учет"
+msgstr ""
 
 msgid "15min Single Species Count"
 msgstr ""
 
 msgid "eBMS Transect"
-msgstr "eBMS трансекта"
+msgstr ""
 
 msgid "Please add any extra info about this record."
 msgstr ""
-"Пожалуйста, добавьте необходимую дополнительную информацию о данной записи."
 
 msgid "Enter more information here..."
-msgstr "Введите необходимую информацию здесь"
+msgstr ""
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr "Пожалуйста, укажите лицо, ответственное за определение видов."
+msgstr ""
 
 msgid "HH:mm"
-msgstr "ЧЧ:ММ"
+msgstr ""
 
 msgid "Please specify the % of cloud cover."
-msgstr "Пожалуйста, укажите % облачности."
+msgstr ""
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "Записи не обнаружены. Пожалуйста, обновите список."
+msgstr ""
 
 msgid "Wind speed info is missing"
-msgstr "Нет информации о скорости ветра"
+msgstr ""
 
 msgid "Temperature info is missing"
-msgstr "Нет информации о температуре"
+msgstr ""
 
 msgid "Recorder info is missing"
-msgstr "Нет информации о записи"
+msgstr ""
 
 msgid "Please select your transect."
-msgstr "Пожалуйста, выберите Вашу трансекту."
+msgstr ""
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Руководство находится в разработке.  Оно несет информацию в "
-"{{countrySpeciesCount}} о видах бабочек в {{totalSpeciesCountryCount}} в "
-"выбранной стране."
 
 msgid "Status"
-msgstr "Статус"
+msgstr ""
 
 msgid "Absent"
-msgstr "Отсутствие"
+msgstr ""
 
 msgid "Present"
-msgstr "Присутствие"
+msgstr ""
 
 msgid "Possibly present"
-msgstr "Возможно присутствие"
+msgstr ""
 
 msgid "Regular migrant"
-msgstr "Регулярный мигрант"
+msgstr ""
 
 msgid "Irregular vagrant"
-msgstr "Нерегулярный мигрант"
+msgstr ""
 
 msgid "Regionally extinct"
-msgstr "Вымерший в регионе"
+msgstr ""
 
 msgid "Description"
-msgstr "Описание"
+msgstr ""
 
 msgid "Counts"
-msgstr "Учеты"
+msgstr ""
 
 msgid "Species descriptions"
-msgstr "Описание видов"
+msgstr ""
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Описания видов, включенные в руководство, основаны на заметках, "
-"подготовленных для Атласа климатических рисков бабочек Европы. Мы благодарим"
-" Джозефа Сеттела за эту возможность"
 
 msgid "Photo credits"
-msgstr "Авторы фотографий"
+msgstr ""
 
 msgid "How to use the app"
 msgstr ""
@@ -1351,9 +1282,6 @@ msgstr ""
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
 msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 # Part of a page error
 msgid "Oops! Something went wrong."
@@ -1585,7 +1513,7 @@ msgstr ""
 
 # Moth survey label
 msgid "Method"
-msgstr ""
+msgstr "方法"
 
 # Context term
 msgid "Please select the medthod type"

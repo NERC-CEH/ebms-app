@@ -22,6 +22,7 @@ const LANGUAGE_ISO_MAPPING = {
   pol: 'pl-PL',
   cat: 'ca-ES',
   dan: 'da-DK',
+  jpn: 'ja-JP',
 };
 
 const UNKNOWN_SPECIES = {
@@ -91,7 +92,7 @@ function turnNamesArrayIntoLangObject(array) {
 
     const language = LANGUAGE_ISO_MAPPING[languageCode];
     if (!language)
-      throw new Error(`${language} is missing from LANGUAGE_ISO_MAPPING`);
+      throw new Error(`${languageCode} is missing from LANGUAGE_ISO_MAPPING`);
 
     agg[language] || (agg[language] = []); // eslint-disable-line
 

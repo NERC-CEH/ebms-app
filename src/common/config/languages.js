@@ -1,4 +1,6 @@
-export default {
+import { isPlatform } from '@ionic/react';
+
+const languages = {
   // disabled - under-translated (< 80%)
   'bg-BG': 'Български',
   'sr-RS': 'Cрпски',
@@ -22,3 +24,12 @@ export default {
   'da-DK': 'Dansk',
   // 'fr-FR': 'Français',
 };
+
+const isDemo = !isPlatform('hybrid');
+if (isDemo) {
+  Object.assign(languages, {
+    'ja-JP': '日本語',
+  });
+}
+
+export default languages;
