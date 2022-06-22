@@ -7,7 +7,9 @@ import {
   ModelMetadata,
   ModelAttrs,
   Collection,
+  updateModelLocation,
 } from '@flumens';
+import { Geolocation } from '@capacitor/geolocation';
 import CONFIG from 'common/config';
 import * as Yup from 'yup';
 import userModel from 'models/user';
@@ -242,7 +244,7 @@ class LocationModel extends Model {
 
   validateRemote = validateRemoteModel;
 
-  gps: { locating: null | number } = observable({ locating: null });
+  gps: { locating: null | string } = observable({ locating: null });
 
   _store = locationsStore;
 
@@ -267,7 +269,7 @@ class LocationModel extends Model {
   getSurvey = () => this.getSchema();
 
   isGPSRunning() {
-    return !!(this.gps.locating || this.gps.locating === 0);
+    return !!(this.gps.locating || this.gps.locating === '0');
   }
 
   async saveRemote() {
@@ -410,7 +412,82 @@ class LocationModel extends Model {
 
   cleanUp() {
     // TODO:
-    // this.stopGPS();
+    this.stopGPS();
+  }
+
+  async startGPS(accuracyLimit = 50) {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const that = this;
+    const options = {
+      accuracyLimit,
+
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
+      onUpdate() {},
+
+      callback(error: any, location: any) {
+        if (error) {
+          that.stopGPS();
+          return;
+        }
+        if (location.accuracy <= options.accuracyLimit) {
+          that.stopGPS();
+        }
+
+        updateModelLocation(that, location);
+      },
+    };
+
+    this.gps.locating = await this.start(options);
+  }
+
+  stopGPS() {
+    if (!this.gps.locating) {
+      return;
+    }
+
+    this.stop(this.gps.locating);
+    this.gps.locating = null;
+  }
+
+  start(options = {}) {
+    const { callback, onUpdate }: any = options;
+    const accuracyLimit = 100;
+
+    // geolocation config
+    const GPSoptions = {
+      enableHighAccuracy: true,
+    };
+
+    const onPosition = (position: any, err: any) => {
+      if (err) {
+        callback && callback(new Error(err.message));
+        return;
+      }
+
+      const location = {
+        latitude: parseInt(position.coords.latitude, 8),
+        longitude: parseInt(position.coords.longitude, 8),
+        accuracy: parseInt(position.coords.accuracy, 10),
+        altitude: parseInt(position.coords.altitude, 10),
+        altitudeAccuracy: parseInt(position.coords.altitudeAccuracy, 10),
+      };
+
+      if (location.accuracy <= accuracyLimit) {
+        callback && callback(null, location);
+      } else {
+        onUpdate && onUpdate(location);
+      }
+    };
+
+    return Geolocation.watchPosition(GPSoptions, onPosition);
+  }
+
+  stop(id: string) {
+    if (!id) {
+      return;
+    }
+
+    Geolocation.clearWatch({ id });
   }
 }
 

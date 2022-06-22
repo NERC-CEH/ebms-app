@@ -17,6 +17,7 @@ const ModelLocationWithProps = ({ sample: location }: any) => (
     useGridMap
     onLocationNameChange={ModelLocationMap.utils.onLocationNameChange}
     namePlaceholder="Moth trap name"
+    onGPSClick={ModelLocationMap.utils.onGPSClick}
   />
 );
 const ModelLocationWrap = observer(ModelLocationWithProps);
@@ -28,6 +29,7 @@ function AddNewMothTrap() {
     // eslint-disable-next-line
     const pickDraftOrCreateNew = async () => {
       const model = new MothTrap({});
+      model.startGPS();
 
       await model.save();
       locations.push(model);
