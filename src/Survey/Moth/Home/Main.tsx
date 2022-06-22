@@ -238,6 +238,7 @@ const HomeMain: FC<Props> = ({
 
     const speciesList = sample.occurrences
       .filter(byKnownSpecies)
+      .sort(byCreateTime)
       .map(getSpeciesEntry);
 
     const count = speciesList.length > 1 ? speciesList.length : null;
