@@ -210,8 +210,6 @@ class LocationModel extends Model {
           name: doc.name,
           latitude: Number(doc.lat),
           longitude: Number(doc.lon),
-          centroid_sref: doc.centroid_sref,
-          centroid_sref_system: doc.centroid_sref_system,
         },
 
         ...getLocalAttributes(doc, LocationModel.schema, [

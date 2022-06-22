@@ -126,13 +126,15 @@ const locationAttr = {
     values(location: any, submission: any) {
       // TODO: Backwards compatibility
       const centroidSref =
-        location?.centroid_sref || location?.attrs?.location?.centroid_sref;
+        location?.centroid_sref ||
+        `${location.attrs.location.latitude} ${location.attrs.location.longitude}`;
 
       // eslint-disable-next-line
       submission.values = {
         ...submission.values,
         ...{
           entered_sref: centroidSref,
+          centroid_sref_system: 4326,
         },
       };
 
