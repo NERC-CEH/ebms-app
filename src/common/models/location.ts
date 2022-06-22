@@ -465,8 +465,8 @@ class LocationModel extends Model {
       }
 
       const location = {
-        latitude: parseInt(position.coords.latitude, 8),
-        longitude: parseInt(position.coords.longitude, 8),
+        latitude: Number(position.coords.latitude.toFixed(8)),
+        longitude: Number(position.coords.longitude.toFixed(8)),
         accuracy: parseInt(position.coords.accuracy, 10),
         altitude: parseInt(position.coords.altitude, 10),
         altitudeAccuracy: parseInt(position.coords.altitudeAccuracy, 10),
