@@ -167,16 +167,19 @@ const HomeController: FC<Props> = ({ sample }) => {
     }
 
     const getSpeciesId = (s: Sample) =>
-      s.occurrences[0].attrs.taxon.preferredId;
+      s.occurrences[0].attrs.taxon.preferredId ||
+      s.occurrences[0].attrs.taxon.warehouse_id;
     const existingSpeciesIds = sample.samples.map(getSpeciesId);
 
     const uniqueSpeciesList: any = [];
-    const getNewSpeciesOnly = ({ preferredId }: any) => {
-      if (uniqueSpeciesList.includes(preferredId)) {
+    const getNewSpeciesOnly = ({ warehouse_id, preferredId }: any) => {
+      const speciesID = preferredId || warehouse_id;
+
+      if (uniqueSpeciesList.includes(speciesID)) {
         return false;
       }
-      uniqueSpeciesList.push(preferredId);
-      return !existingSpeciesIds.includes(preferredId);
+      uniqueSpeciesList.push(speciesID);
+      return !existingSpeciesIds.includes(speciesID);
     };
 
     const getTaxon = (s: Sample) => toJS(s.occurrences[0].attrs.taxon);
@@ -203,9 +206,15 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const deleteFromShallowList = (taxon: any) => {
-    const withSamePreferredId = (t: any) => t.preferredId === taxon.preferredId;
-    const taxonIndexInShallowList =
-      sample.shallowSpeciesList.findIndex(withSamePreferredId);
+    const withSamePreferredIdOrWarehouseId = (t: any) => {
+      if (t.preferredId) return t.preferredId === taxon.preferredId;
+
+      return t.warehouse_id === taxon.warehouse_id;
+    };
+
+    const taxonIndexInShallowList = sample.shallowSpeciesList.findIndex(
+      withSamePreferredIdOrWarehouseId
+    );
 
     sample.shallowSpeciesList.splice(taxonIndexInShallowList, 1);
   };
