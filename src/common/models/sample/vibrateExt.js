@@ -1,8 +1,8 @@
 import { isPlatform } from '@ionic/react';
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
+import { Haptics } from '@capacitor/haptics';
 
-const hapticsImpact = async () => {
-  await Haptics.impact({ style: ImpactStyle.Heavy });
+const hapticsVibrate = async () => {
+  await Haptics.vibrate({ duration: 2000 });
 };
 
 const extension = {
@@ -17,7 +17,7 @@ const extension = {
         this._timeoutVibrated = true;
         this.stopVibrateCounter();
 
-        isPlatform('hybrid') && hapticsImpact();
+        isPlatform('hybrid') && hapticsVibrate();
         return;
       }
 
@@ -28,7 +28,7 @@ const extension = {
 
         console.log('SampleModel:Vibrate: vibrating!');
         this._below3minsVibrated = true;
-        isPlatform('hybrid') && hapticsImpact();
+        isPlatform('hybrid') && hapticsVibrate();
       }
     };
     this.counterId = setInterval(vibrateOnThresholds, 1000);
