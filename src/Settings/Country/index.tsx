@@ -1,4 +1,4 @@
-import { FC, Fragment, useState } from 'react';
+import { FC, Fragment, useState, useContext } from 'react';
 import { observer } from 'mobx-react';
 import {
   IonIcon,
@@ -8,6 +8,7 @@ import {
   IonRadio,
   IonLabel,
   IonItemDivider,
+  NavContext,
 } from '@ionic/react';
 import { Page, Main, Header, useAlert } from '@flumens';
 import { flagOutline } from 'ionicons/icons';
@@ -24,6 +25,9 @@ const SelectCountry: FC<Props> = ({ hideHeader }) => {
   const [secondRender, forceSecondRender] = useState(false);
   const alert = useAlert();
   const { t } = useTranslation();
+  const { goBack } = useContext(NavContext);
+
+  const isSettingsPage = !hideHeader;
 
   if (hideHeader) {
     const forceSecondRenderWrap = () => forceSecondRender(true);
@@ -56,6 +60,8 @@ const SelectCountry: FC<Props> = ({ hideHeader }) => {
     }
     appModel.attrs.country = newCountry; // eslint-disable-line no-param-reassign
     appModel.save();
+
+    if (isSettingsPage) goBack();
   }
 
   const translate = ([value, country]: any) => [value, t(country)];
