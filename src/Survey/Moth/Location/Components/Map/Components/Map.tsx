@@ -61,7 +61,7 @@ const Map: FC<Props> = ({
     }
 
     const country = COUNTRIES_CENTROID[appModel.attrs.country];
-    if (country.zoom) {
+    if (country?.zoom) {
       setMapCenter([country.lat, country.long]);
       onMovedCoords([country.lat, country.long]);
 

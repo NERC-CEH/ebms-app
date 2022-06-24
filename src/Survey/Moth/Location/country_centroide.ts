@@ -218,6 +218,20 @@ const COUNTRIES_CENTROID: Types = {
     country: 'Portugal azores',
     zoom: 7,
   },
+
+  JP: {
+    lat: 36.204824,
+    long: 138.252924,
+    country: 'Japan',
+    zoom: 5,
+  },
+
+  KE: {
+    lat: -0.023559,
+    long: 37.906193,
+    country: 'Kenya',
+    zoom: 6,
+  },
 };
 
 export default COUNTRIES_CENTROID;
