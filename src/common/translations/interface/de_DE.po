@@ -149,7 +149,7 @@ msgid "Slovenia"
 msgstr "Slowenien"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japan"
 
 msgid "Slovakia"
 msgstr "Slowakei"
@@ -325,6 +325,8 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Bist Du sicher, dass Du Dich abmelden möchten? <br/><br/>Deine ausstehenden "
+"und hochgeladenen Datensätze <4>werden nicht von diesem Gerät gelöscht</4>."
 
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -395,7 +397,7 @@ msgid ""
 "example, to find"
 msgstr ""
 "Für eine schnellere Suche der Art kannst Du verschiedene Tastenkombinationen"
-" verwenden. Zum Beispiel, um zu finden"
+" verwenden. Zum Beispiel"
 
 msgid "you can type in the search bar"
 msgstr "kannst du in der Suchleiste eingeben"
@@ -448,11 +450,11 @@ msgstr "Berichte"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Artname oder Filter..."
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "Familie"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr "Zur Zeit sind leider keine Berichtsdaten verfügbar."
@@ -514,6 +516,7 @@ msgstr "Hinweis: Es bleibt in der Galerie."
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
 msgstr ""
+"Es wurde noch kein Foto hinzugefügt. <br/>Drücke <3></3> zum Hinzufügen."
 
 msgid "Registration error:"
 msgstr "Fehler bei der Registrierung:"
@@ -527,7 +530,7 @@ msgstr "Gib deine E-Mail ein, um ein neues Passwort anzufordern."
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Erfolgreich angemeldet als: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
@@ -916,7 +919,7 @@ msgstr ""
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "Deutsche Namen im Leitfaden anzeigen"
 
 msgid "Share App Analytics"
 msgstr "App Analytics teilen"
@@ -1351,7 +1354,7 @@ msgstr "App-Einstellungen"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Verwende nur tagaktive Nachtfalter"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1829,7 +1832,7 @@ msgid ""
 "<2>website.</2>"
 msgstr ""
 "Du hast bisher noch keine Nachtfalter-Fallen erstellt. Um eine zu erstellen,"
-" gehe bitte auf die Webseite"
+" gehe bitte auf die <2>Webseite.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
@@ -1844,7 +1847,7 @@ msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
 "Du hast nur eine Nachtfalter-Falle. Um mehr zu erstellen, gehe bitte zur "
-"Webseite."
+"<2>Webseite.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
@@ -1856,7 +1859,7 @@ msgstr "Unbekannt"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Mehr anzeigen"
 
 # Moth survey warning message
 msgid "Please add a photo"
@@ -1868,7 +1871,7 @@ msgstr "Unbekannte Art"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr "Warnung - wir konnten diese Art nicht bestimmen."
+msgstr "<0>Warnung</0> - wir konnten diese Art nicht bestimmen."
 
 # App settings title
 msgid "Surveying"
@@ -1899,7 +1902,7 @@ msgstr ""
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Identifiziere"
 
 # Moth survey button label
 msgid "Identify All"
@@ -1914,8 +1917,8 @@ msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
-"Die automatische Bilderkennung ist derzeit deaktiviert. Bitte gehe zu den "
-"App-Einstellungen, um sie zu aktivieren."
+"Die automatische Bilderkennung ist derzeit <1>deaktiviert</1>. Bitte gehe zu"
+" den <4>App-Einstellungen</4>, um sie zu aktivieren."
 
 # Whats new message title
 msgid "What's New"
@@ -1923,239 +1926,253 @@ msgstr "Was gibt es Neues?"
 
 # Version 1.17 whats new message
 msgid "Added Polish and Romanian languages"
-msgstr ""
+msgstr "Polnisch und Rumänisch hinzugefügt"
 
 # Version 1.17 whats new message
 msgid "Added Moth trap location setup"
-msgstr ""
+msgstr "Standort für Nachtfalter-Fallen hinzugefügt"
 
 # Version 1.17 whats new message
 msgid "Increase temperature range selection from -0 to +40"
-msgstr ""
+msgstr "Auswahl des Temperaturbereichs von -0 bis +40 erhöhen"
 
 # Version 1.17 whats new message
 msgid "Added a day-flying moths filter setting"
-msgstr ""
+msgstr "Filtereinstellung für tagaktive Nachtfalter hinzugefügt"
 
 # Version 1.17 whats new message
 msgid "Added +5 species count shortcut"
-msgstr ""
+msgstr "Tastaturkürzel +5 Artenzahl hinzugefügt"
 
 # Version 1.17 whats new message
 msgid "Added species guide search and filters"
-msgstr ""
+msgstr "Suche und Filter für Artenkatalog hinzugefügt"
 
 # Version 1.17 whats new message
 msgid "Updated species common names"
-msgstr ""
+msgstr "Aktualisierte deutsche Artnamen"
 
 # Version 1.17 whats new message
 msgid "Added Catalan and Danish species common names"
-msgstr ""
+msgstr "katalanische und dänische Artnamen hinzugefügt"
 
 # Version 1.17 whats new message
 msgid "Added new survey fields"
-msgstr ""
+msgstr "Neue Beobachtungsfelder hinzugefügt"
 
 # Version 1.17 whats new message
 msgid "Improved user reports"
-msgstr ""
+msgstr "Verbesserte Nutzerberichte"
 
 # Version 1.17 whats new message
 msgid "Updated UI design"
-msgstr ""
+msgstr "Aktualisiertes UI-Design"
 
 # Version 1.17 whats new message
 msgid "Various bug fixes"
-msgstr ""
+msgstr "Verschiedene Fehlerkorrekturen"
 
 # Version 1.17 whats new message
 msgid "Updated translations"
-msgstr ""
+msgstr "Aktualisierte Übersetzung"
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "Erneut senden"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "Deine E-Mail wurde noch nicht verifiziert."
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "Sollen wir die Bestätigungs-E-Mail erneut senden?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Deine Standortdienste (GPS) sind deaktiviert. Du kannst sie in den "
+"Geräteeinstellungen aktivieren."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Deine Standortdienste (GPS) sind deaktiviert. "
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Neu hinzufügen"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"Du hast noch keine registrierten Standorte für Nachtfalter-fallen. "
+"<1>Erstelle Deinen erste Nachtfalter-Fallenstandort</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Nachtfalter-Falle"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Anderer Typ"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Füge Lampe hinzu"
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "Welche Art von Falle war es?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Keine Lampen hinzugefügt"
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "Welcher Lampentyp?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "Welcher Typ von Nachtfalter-Falle?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "LED-Trichterfalle"
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Andere Trichterfalle"
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Falle mit 2 Decken"
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Andere Falle"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Lampe"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Lampen-Details"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Anzahl"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Kein Nachtfalterfallen-Name"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Nachtfalterfallen-Name"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "Bist Du sicher, dass Du diese Nachtfalter-falle löschen willst?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Weitere Beschreibung der Lampe."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Bitte gib Standort und Name der Nachtfalter-Falle an."
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "Unvollständig"
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Auswählen"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Melder"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+"Gib die Anzahl der Meldungen aller Personen an, die an diesem Datensatz "
+"mitgewirkt haben - einschließlich Deiner eigenen."
 
 msgid "Network Error"
-msgstr ""
+msgstr "Netzwerkfehler"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "Bitte melde Dich an, um Deinen eigenen Datenbericht zu sehen."
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "Deine Top-Arten in diesem Monat"
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "Deine Top-Arten"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Bereich Fotos"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "Nutzer ist nicht eingeloggt."
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
+"Wir denken, dass es sich mit {{Wahrscheinlichkeit}}% Wahrscheinlichkeit um "
+"eine <3>{{Taxon}}</3> Art handelt"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Warning </0>- we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr ""
+msgstr "Lampen"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
 msgstr ""
+"Bist Du sicher, dass Du diesen diesen Lampeneintrag aus der Nachtfalter-"
+"Falle löschen willst?"
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr ""
+msgstr "Fallen-Typ ist ein Pflichtfeld."
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "Willkommen"
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
+"Bevor Du eine Erfassung startest, überprüfe bitte Deine E-Mail und klicke "
+"auf den Bestätigungslink."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr ""
+msgstr "Es wurden leider keine Arten gefunden."
