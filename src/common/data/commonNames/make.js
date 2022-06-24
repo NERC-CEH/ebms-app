@@ -105,6 +105,10 @@ function turnNamesArrayIntoLangObject(array) {
     };
 
     const attributes = getAttrs(term.attributes);
+    if (attributes['Day-active']) {
+      delete attributes['Day-active'];
+      attributes.isDayFlying = true;
+    }
     Object.assign(species, attributes);
 
     agg[language].push(species);

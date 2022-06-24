@@ -1595,7 +1595,7 @@
       "scientific_name": "Callimorpha dominula",
       "taxon_group": 260,
       "preferredId": 459045,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538763,
@@ -1603,7 +1603,7 @@
       "scientific_name": "Abraxas grossulariata",
       "taxon_group": 260,
       "preferredId": 457232,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540487,
@@ -1653,7 +1653,7 @@
       "scientific_name": "Cerapteryx graminis",
       "taxon_group": 260,
       "preferredId": 460602,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540090,
@@ -2139,7 +2139,7 @@
       "scientific_name": "Pseudopanthera macularia",
       "taxon_group": 260,
       "preferredId": 457334,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539451,
@@ -2672,7 +2672,7 @@
       "scientific_name": "Scotopteryx chenopodiata",
       "taxon_group": 260,
       "preferredId": 458114,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538917,
@@ -2722,7 +2722,7 @@
       "scientific_name": "Euclidia glyphica",
       "taxon_group": 260,
       "preferredId": 459370,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540520,
@@ -2849,7 +2849,7 @@
       "scientific_name": "Cabera exanthemata",
       "taxon_group": 260,
       "preferredId": 457395,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541337,
@@ -2878,7 +2878,7 @@
       "scientific_name": "Selidosema brunnearia",
       "taxon_group": 260,
       "preferredId": 457657,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540636,
@@ -3566,7 +3566,7 @@
       "scientific_name": "Bupalus piniaria",
       "taxon_group": 260,
       "preferredId": 457723,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540533,
@@ -4619,7 +4619,7 @@
       "scientific_name": "Panemeria tenebrata",
       "taxon_group": 260,
       "preferredId": 459627,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538954,
@@ -5579,7 +5579,7 @@
       "scientific_name": "Autographa gamma",
       "taxon_group": 260,
       "preferredId": 459510,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539630,
@@ -6659,7 +6659,7 @@
       "scientific_name": "Xanthorhoe montanata",
       "taxon_group": 260,
       "preferredId": 458149,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538944,
@@ -6730,7 +6730,7 @@
       "scientific_name": "Lomaspilis marginata",
       "taxon_group": 260,
       "preferredId": 457239,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 462187,
@@ -6898,7 +6898,7 @@
       "scientific_name": "Camptogramma bilineata",
       "taxon_group": 260,
       "preferredId": 458171,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539482,
@@ -7207,7 +7207,7 @@
       "scientific_name": "Epirrhoe alternata",
       "taxon_group": 260,
       "preferredId": 458182,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539925,
@@ -7334,7 +7334,7 @@
       "scientific_name": "Ematurga atomaria",
       "taxon_group": 260,
       "preferredId": 457702,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539387,
@@ -7580,7 +7580,7 @@
       "scientific_name": "Hemaris fuciformis",
       "taxon_group": 260,
       "preferredId": 457184,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539787,
@@ -9256,7 +9256,7 @@
       "scientific_name": "Lasiocampa quercus",
       "taxon_group": 260,
       "preferredId": 457094,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541215,
@@ -9608,7 +9608,7 @@
       "scientific_name": "Phymatopus hecta",
       "taxon_group": 260,
       "preferredId": 448693,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 462197,
@@ -9937,7 +9937,7 @@
       "scientific_name": "Hemaris tityus",
       "taxon_group": 260,
       "preferredId": 457182,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538807,
@@ -10912,7 +10912,7 @@
       "scientific_name": "Chiasmia clathrata",
       "taxon_group": 260,
       "preferredId": 457302,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539126,
@@ -11908,7 +11908,7 @@
       "scientific_name": "Macroglossum stellatarum",
       "taxon_group": 260,
       "preferredId": 457187,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541279,
@@ -13393,7 +13393,7 @@
       "scientific_name": "Euclidia mi",
       "taxon_group": 260,
       "preferredId": 459372,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540462,
@@ -13723,7 +13723,7 @@
       "scientific_name": "Saturnia pavonia",
       "taxon_group": 260,
       "preferredId": 457146,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540620,
@@ -15426,7 +15426,7 @@
       "scientific_name": "Phytometra viridaria",
       "taxon_group": 260,
       "preferredId": 459227,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541293,
@@ -15490,7 +15490,7 @@
       "scientific_name": "Perizoma albulata",
       "taxon_group": 260,
       "preferredId": 458534,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538868,
@@ -15820,7 +15820,7 @@
       "scientific_name": "Diacrisia sannio",
       "taxon_group": 260,
       "preferredId": 459005,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541238,
@@ -15828,7 +15828,7 @@
       "scientific_name": "Anarta myrtilli",
       "taxon_group": 260,
       "preferredId": 460629,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541129,
@@ -16033,7 +16033,7 @@
       "scientific_name": "Odezia atrata",
       "taxon_group": 260,
       "preferredId": 458449,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539833,
@@ -16747,7 +16747,7 @@
       "scientific_name": "Tyria jacobaeae",
       "taxon_group": 260,
       "preferredId": 459049,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539385,
@@ -16783,7 +16783,7 @@
       "scientific_name": "Zygaena filipendulae",
       "taxon_group": 260,
       "preferredId": 455121,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539790,
@@ -17232,7 +17232,7 @@
       "scientific_name": "Euplagia quadripunctaria",
       "taxon_group": 260,
       "preferredId": 459047,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540661,
@@ -17240,7 +17240,7 @@
       "scientific_name": "Jodis putata",
       "taxon_group": 260,
       "preferredId": 457781,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 538781,
@@ -17311,7 +17311,7 @@
       "scientific_name": "Rheumaptera hastata",
       "taxon_group": 260,
       "preferredId": 458393,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 462227,
@@ -17851,7 +17851,7 @@
       "scientific_name": "Aglia tau",
       "taxon_group": 260,
       "preferredId": 457140,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540633,
@@ -18392,7 +18392,7 @@
       "scientific_name": "Siona lineata",
       "taxon_group": 260,
       "preferredId": 457508,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539260,
@@ -18414,7 +18414,7 @@
       "scientific_name": "Petrophora chlorosata",
       "taxon_group": 260,
       "preferredId": 457312,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541076,
@@ -18639,7 +18639,7 @@
       "scientific_name": "Macrothylacia rubi",
       "taxon_group": 260,
       "preferredId": 457098,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 539136,
@@ -19414,7 +19414,7 @@
       "scientific_name": "Hyles gallii",
       "taxon_group": 260,
       "preferredId": 457199,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540726,
@@ -20073,7 +20073,7 @@
       "scientific_name": "Cabera pusaria",
       "taxon_group": 260,
       "preferredId": 457391,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540079,
@@ -20221,7 +20221,7 @@
       "scientific_name": "Orgyia antiqua",
       "taxon_group": 260,
       "preferredId": 458947,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 541263,
@@ -21180,7 +21180,7 @@
       "scientific_name": "Lythria cruentaria",
       "taxon_group": 260,
       "preferredId": 458083,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 540705,
@@ -67847,7 +67847,7 @@
       "scientific_name": "Siona lineata",
       "taxon_group": 260,
       "preferredId": 457508,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434089,
@@ -68485,7 +68485,7 @@
       "scientific_name": "Hemaris fuciformis",
       "taxon_group": 260,
       "preferredId": 457184,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434101,
@@ -68738,7 +68738,7 @@
       "scientific_name": "Euclidia glyphica",
       "taxon_group": 260,
       "preferredId": 459370,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 548799,
@@ -70037,7 +70037,7 @@
       "scientific_name": "Odezia atrata",
       "taxon_group": 260,
       "preferredId": 458449,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434133,
@@ -70786,7 +70786,7 @@
       "scientific_name": "Ematurga atomaria",
       "taxon_group": 260,
       "preferredId": 457702,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 548789,
@@ -70922,7 +70922,7 @@
       "scientific_name": "Cabera exanthemata",
       "taxon_group": 260,
       "preferredId": 457395,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 466986,
@@ -70930,7 +70930,7 @@
       "scientific_name": "Cabera pusaria",
       "taxon_group": 260,
       "preferredId": 457391,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 549128,
@@ -71386,7 +71386,7 @@
       "scientific_name": "Diacrisia sannio",
       "taxon_group": 260,
       "preferredId": 459005,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434156,
@@ -74163,7 +74163,7 @@
       "scientific_name": "Saturnia pavonia",
       "taxon_group": 260,
       "preferredId": 457146,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434214,
@@ -79771,7 +79771,7 @@
       "scientific_name": "Chiasmia clathrata",
       "taxon_group": 260,
       "preferredId": 457302,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434335,
@@ -82255,7 +82255,7 @@
       "scientific_name": "Euclidia mi",
       "taxon_group": 260,
       "preferredId": 459372,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434389,
@@ -82688,7 +82688,7 @@
       "scientific_name": "Hemaris tityus",
       "taxon_group": 260,
       "preferredId": 457182,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 466578,
@@ -83500,7 +83500,7 @@
       "scientific_name": "Lasiocampa quercus",
       "taxon_group": 260,
       "preferredId": 457094,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434421,
@@ -83558,118 +83558,7 @@
       "UA": "A"
     },
     {
-      "warehouse_id": 462956,
-      "common_name": "Oberthür's Anomalous Blue",
-      "scientific_name": "Polyommatus fabressei",
-      "taxon_group": 251,
-      "preferredId": 432372,
-      "AD": "A",
-      "AL": "A",
-      "AT": "A",
-      "BA": "A",
-      "BE": "A",
-      "BG": "A",
-      "BY": "A",
-      "CH": "A",
-      "CY": "A",
-      "CZ": "A",
-      "DE": "A",
-      "DK": "A",
-      "EE": "A",
-      "ES": "P",
-      "ES_CA": "A",
-      "Europe": "P",
-      "FI": "A",
-      "FR": "A",
-      "GB": "A",
-      "GR": "A",
-      "HR": "A",
-      "HU": "A",
-      "IE": "A",
-      "IS": "A",
-      "IT": "A",
-      "LI": "A",
-      "LT": "A",
-      "LU": "A",
-      "LV": "A",
-      "MD": "A",
-      "ME": "A",
-      "MK": "A",
-      "MT": "A",
-      "NL": "A",
-      "NO": "A",
-      "PL": "A",
-      "PT": "A",
-      "PT_AZ": "A",
-      "PT_MA": "A",
-      "RO": "A",
-      "RS": "A",
-      "RU": "A",
-      "SE": "A",
-      "SI": "A",
-      "SK": "A",
-      "TR": "A",
-      "TRA": "A",
-      "UA": "A"
-    },
-    {
       "warehouse_id": 434417,
-      "common_name": "Oberthür's Grizzled Skipper",
-      "scientific_name": "Pyrgus armoricanus",
-      "taxon_group": 251,
-      "preferredId": 432177,
-      "AD": "A",
-      "AL": "P",
-      "AM": "P",
-      "AT": "P",
-      "BA": "P",
-      "BE": "Ex",
-      "BG": "P",
-      "BY": "A",
-      "CH": "P",
-      "CY": "A",
-      "CZ": "P",
-      "DE": "P",
-      "DK": "P",
-      "EE": "A",
-      "ES": "P",
-      "ES_CA": "A",
-      "Europe": "P",
-      "FI": "A",
-      "FR": "P",
-      "GB": "A",
-      "GR": "P",
-      "HR": "P",
-      "HU": "P",
-      "IE": "A",
-      "IS": "A",
-      "IT": "P",
-      "LI": "A",
-      "LT": "A",
-      "LU": "P",
-      "LV": "A",
-      "MD": "P",
-      "ME": "P",
-      "MK": "P",
-      "MT": "A",
-      "NL": "I",
-      "NO": "A",
-      "PL": "P",
-      "PT": "P",
-      "PT_AZ": "A",
-      "PT_MA": "A",
-      "RO": "P",
-      "RS": "P",
-      "RU": "P",
-      "SE": "P",
-      "SI": "P",
-      "SK": "P",
-      "TR": "P",
-      "TRA": "P",
-      "UA": "P"
-    },
-    {
-      "warehouse_id": 462989,
       "common_name": "Oberthür's Grizzled Skipper",
       "scientific_name": "Pyrgus armoricanus",
       "taxon_group": 251,
@@ -87827,7 +87716,7 @@
       "scientific_name": "Callimorpha dominula",
       "taxon_group": 260,
       "preferredId": 459045,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 548906,
@@ -87914,7 +87803,7 @@
       "scientific_name": "Scotopteryx chenopodiata",
       "taxon_group": 260,
       "preferredId": 458114,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434515,
@@ -88199,7 +88088,7 @@
       "scientific_name": "Autographa gamma",
       "taxon_group": 260,
       "preferredId": 459510,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434521,
@@ -88440,7 +88329,7 @@
       "scientific_name": "Zygaena filipendulae",
       "taxon_group": 260,
       "preferredId": 455121,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434657,
@@ -91375,7 +91264,7 @@
       "scientific_name": "Aglia tau",
       "taxon_group": 260,
       "preferredId": 457140,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434591,
@@ -91439,7 +91328,7 @@
       "scientific_name": "Tyria jacobaeae",
       "taxon_group": 260,
       "preferredId": 459049,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 467030,
@@ -93399,7 +93288,7 @@
       "scientific_name": "Camptogramma bilineata",
       "taxon_group": 260,
       "preferredId": 458171,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 548931,
@@ -103287,7 +103176,7 @@
       "scientific_name": "Ematurga atomaria",
       "taxon_group": 260,
       "preferredId": 457702,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 467029,
@@ -104882,7 +104771,7 @@
       "scientific_name": "Lasiocampa quercus",
       "taxon_group": 260,
       "preferredId": 457094,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434104,
@@ -105237,7 +105126,7 @@
       "scientific_name": "Callimorpha dominula",
       "taxon_group": 260,
       "preferredId": 459045,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434240,
@@ -105356,7 +105245,7 @@
       "scientific_name": "Autographa gamma",
       "taxon_group": 260,
       "preferredId": 459510,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434078,
@@ -105531,7 +105420,7 @@
       "scientific_name": "Euclidia glyphica",
       "taxon_group": 260,
       "preferredId": 459370,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434130,
@@ -105706,7 +105595,7 @@
       "scientific_name": "Camptogramma bilineata",
       "taxon_group": 260,
       "preferredId": 458171,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 466987,
@@ -105714,7 +105603,7 @@
       "scientific_name": "Cabera exanthemata",
       "taxon_group": 260,
       "preferredId": 457395,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434090,
@@ -106057,7 +105946,7 @@
       "scientific_name": "Hemaris fuciformis",
       "taxon_group": 260,
       "preferredId": 457184,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 467028,
@@ -106185,7 +106074,7 @@
       "scientific_name": "Tyria jacobaeae",
       "taxon_group": 260,
       "preferredId": 459049,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434319,
@@ -107390,7 +107279,7 @@
       "scientific_name": "Saturnia pavonia",
       "taxon_group": 260,
       "preferredId": 457146,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434220,
@@ -107732,7 +107621,7 @@
       "scientific_name": "Aglia tau",
       "taxon_group": 260,
       "preferredId": 457140,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434545,
@@ -108313,7 +108202,7 @@
       "scientific_name": "Diacrisia sannio",
       "taxon_group": 260,
       "preferredId": 459005,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434139,
@@ -108434,7 +108323,7 @@
       "scientific_name": "Chiasmia clathrata",
       "taxon_group": 260,
       "preferredId": 457302,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434471,
@@ -108718,7 +108607,7 @@
       "scientific_name": "Zygaena filipendulae",
       "taxon_group": 260,
       "preferredId": 455121,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434044,
@@ -109406,7 +109295,7 @@
       "scientific_name": "Cabera pusaria",
       "taxon_group": 260,
       "preferredId": 457391,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434108,
@@ -109527,7 +109416,7 @@
       "scientific_name": "Odezia atrata",
       "taxon_group": 260,
       "preferredId": 458449,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434229,
@@ -109757,7 +109646,7 @@
       "scientific_name": "Macroglossum stellatarum",
       "taxon_group": 260,
       "preferredId": 457187,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434543,
@@ -109989,7 +109878,7 @@
       "scientific_name": "Siona lineata",
       "taxon_group": 260,
       "preferredId": 457508,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434095,
@@ -110109,7 +109998,7 @@
       "scientific_name": "Hemaris tityus",
       "taxon_group": 260,
       "preferredId": 457182,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434610,
@@ -110843,7 +110732,7 @@
       "scientific_name": "Scotopteryx chenopodiata",
       "taxon_group": 260,
       "preferredId": 458114,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434634,
@@ -111241,7 +111130,7 @@
       "scientific_name": "Euclidia mi",
       "taxon_group": 260,
       "preferredId": 459372,
-      "Day-active": "Dominant"
+      "isDayFlying": true
     },
     {
       "warehouse_id": 434506,
