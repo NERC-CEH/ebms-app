@@ -50,11 +50,13 @@ export default (normSearchPhrase, results, informalGroups = [], attrFilter) => {
 
   languageSpeciesNames.forEach(searchName);
 
+  const firstWordRegex = new RegExp(`^${normSearchPhrase}.*`, 'i');
   const alphabetically = (sp1, sp2) =>
     sp1.common_name.localeCompare(sp2.common_name);
-  const commonNameLength = (sp1, sp2) =>
-    sp1.common_name.split(' ').length - sp2.common_name.split(' ').length;
-  commonNames = commonNames.sort(alphabetically).sort(commonNameLength);
+  const byWordOccurrence = (sp1, sp2) =>
+    (sp2.common_name.match(firstWordRegex) ? 1 : 0) -
+    (sp1.common_name.match(firstWordRegex) ? 1 : 0);
+  commonNames = commonNames.sort(alphabetically).sort(byWordOccurrence);
 
   results.push(...commonNames);
   return results;
