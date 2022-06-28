@@ -124,10 +124,13 @@ const locationAttr = {
   remote: {
     id: 'location_id',
     values(location: any, submission: any) {
-      // TODO: Backwards compatibility
-      const centroidSref =
-        `${location?.latitude} ${location?.longitude}` ||
-        `${location.attrs.location.latitude} ${location.attrs.location.longitude}`;
+      let centroidSref;
+      if (location?.latitude) {
+        // TODO: Backwards compatibility
+        centroidSref = `${location?.latitude} ${location?.longitude}`;
+      } else {
+        centroidSref = `${location.attrs.location.latitude} ${location.attrs.location.longitude}`;
+      }
 
       // eslint-disable-next-line
       submission.values = {
