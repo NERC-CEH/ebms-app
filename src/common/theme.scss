@@ -123,21 +123,3 @@ html[mode='ios'] .tabs-inner {
   color: white;
   font-size: 0.8em;
 }
-
-.counter-input-attr-item {
-  --inner-padding-end: 0;
-
-  div[slot='end'] ion-button.md {
-    --padding-start: 17px;
-    --padding-end: 17px;
-  }
-
-  div[slot='end'] ion-button.ios {
-    --padding-start: 9px;
-    --padding-end: 9px;
-  }
-
-  input {
-    width: 2em !important;
-  }
-}
