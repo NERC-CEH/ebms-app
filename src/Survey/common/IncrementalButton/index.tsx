@@ -45,7 +45,7 @@ const IncrementalButton: FC<Props> = ({
       onClick={onClick}
       fill="clear"
       onLongClick={onLongClick}
-      longClickDuration={700}
+      longClickDuration={600}
     >
       <AnimatedNumber value={value} />
       <div className="label-divider" />
