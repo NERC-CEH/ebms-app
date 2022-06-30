@@ -33,11 +33,10 @@ function useDeleteSpeciesPrompt() {
           {
             text: 'Cancel',
             role: 'cancel',
-            cssClass: 'primary',
           },
           {
             text: 'Delete',
-            cssClass: 'secondary',
+            role: 'destructive',
             handler: () => occ.destroy(),
           },
         ],

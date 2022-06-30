@@ -32,11 +32,10 @@ function useDeleteTrapPrompt(onDelete: any) {
         {
           text: t('Cancel'),
           role: 'cancel',
-          cssClass: 'primary',
         },
         {
           text: t('Delete'),
-          cssClass: 'secondary',
+          role: 'destructive',
           handler: onDelete,
         },
       ],

@@ -13,12 +13,11 @@ function showDeleteSurveyAlertMessage(alert: any) {
         {
           text: 'Cancel',
           role: 'cancel',
-          cssClass: 'secondary',
           handler: () => resolve(false),
         },
         {
           text: 'Discard',
-          cssClass: 'primary',
+          role: 'destructive',
           handler: () => resolve(true),
         },
       ],

@@ -19,13 +19,13 @@ async function showDraftAlert(alert: any) {
       buttons: [
         {
           text: 'Discard',
+          role: 'destructive',
           handler: () => {
             resolve(false);
           },
         },
         {
           text: 'Continue',
-          cssClass: 'primary',
           handler: () => {
             resolve(true);
           },

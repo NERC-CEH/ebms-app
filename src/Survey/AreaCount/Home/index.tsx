@@ -28,11 +28,10 @@ const useDeleteSpeciesPrompt = () => {
           {
             text: 'Cancel',
             role: 'cancel',
-            cssClass: 'primary',
           },
           {
             text: 'Delete',
-            cssClass: 'secondary',
+            role: 'destructive',
             handler: resolve,
           },
         ],

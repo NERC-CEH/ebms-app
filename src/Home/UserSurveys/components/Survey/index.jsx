@@ -29,11 +29,10 @@ function useDeleteSurveyPrompt(sample) {
         {
           text: 'Cancel',
           role: 'cancel',
-          cssClass: 'primary',
         },
         {
           text: 'Delete',
-          cssClass: 'secondary',
+          role: 'destructive',
           handler: () => sample.destroy(),
         },
       ],

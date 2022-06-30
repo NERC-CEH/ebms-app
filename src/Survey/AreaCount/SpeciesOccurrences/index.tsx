@@ -15,11 +15,10 @@ function deleteSamplePrompt(cb: any, alert: any) {
       {
         text: 'Cancel',
         role: 'cancel',
-        cssClass: 'primary',
       },
       {
         text: 'Delete',
-        cssClass: 'secondary',
+        role: 'destructive',
         handler: cb,
       },
     ],

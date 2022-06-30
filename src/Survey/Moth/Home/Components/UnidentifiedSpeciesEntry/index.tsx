@@ -32,7 +32,6 @@ function useDeleteOccurrencePrompt(occ: Occurrence) {
         {
           text: 'Cancel',
           role: 'cancel',
-          cssClass: 'primary',
         },
         {
           text: 'Delete',

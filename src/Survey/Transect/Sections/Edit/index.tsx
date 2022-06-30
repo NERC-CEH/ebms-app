@@ -20,11 +20,10 @@ function deleteOccurrence(occ: Occurrence, alert: any) {
       {
         text: 'Cancel',
         role: 'cancel',
-        cssClass: 'primary',
       },
       {
         text: 'Delete',
-        cssClass: 'secondary',
+        role: 'destructive',
         handler: () => {
           occ.destroy();
         },
