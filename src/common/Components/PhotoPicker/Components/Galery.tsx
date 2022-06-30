@@ -11,7 +11,7 @@ import '../styles.scss';
 type Props = {
   items: Media[];
   showGallery: number;
-  hideGallery: () => boolean;
+  onClose: () => boolean;
 };
 
 const getFooterMessage = (image: Media, identifyImage: any) => {
@@ -71,7 +71,7 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
   );
 };
 
-const GalleryComponent: FC<Props> = ({ items, showGallery, hideGallery }) => {
+const GalleryComponent: FC<Props> = ({ items, showGallery, onClose }) => {
   const toast = useToast();
 
   const getItem = (image: Media) => {
@@ -80,7 +80,7 @@ const GalleryComponent: FC<Props> = ({ items, showGallery, hideGallery }) => {
         toast.warn('User is not logged in.');
         return;
       }
-      hideGallery();
+      onClose();
       await image.identify();
     };
 
@@ -95,7 +95,7 @@ const GalleryComponent: FC<Props> = ({ items, showGallery, hideGallery }) => {
       isOpen={Number.isFinite(showGallery)}
       items={items.map(getItem)}
       initialSlide={showGallery}
-      onClose={hideGallery}
+      onClose={onClose}
     />
   );
 };
