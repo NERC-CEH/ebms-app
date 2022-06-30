@@ -2082,3 +2082,6 @@ msgstr ""
 # Species guide search
 msgid "Sorry, no species were found."
 msgstr ""
+
+msgid "Kenya"
+msgstr ""
