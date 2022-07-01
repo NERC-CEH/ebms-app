@@ -14,11 +14,25 @@ if (!APP_INDICIA_API_KEY && !REPORT_USER_EMAIL && REPORT_USER_PASS) {
   );
 }
 
-async function fetch() {
+function getCountryMap(string) {
+  const map = {};
+  if (string === null) return map;
+
+  const transformCountryFormat = country => {
+    const [key, val] = country.split('=');
+    const normKey = key.replace(': ', '_');
+    const normVal = val.replace('?', '');
+    map[normKey] = normVal;
+  };
+  string.split(' | ').forEach(transformCountryFormat);
+  return map;
+}
+
+async function fetchSpeciesProfileInfo() {
   return csv({ checkType: true }).fromFile('./cache/species.profiles.csv');
 }
 
-async function fetchAbundance(listID) {
+async function fetchSpecies(listID) {
   const userAuth = btoa(`${REPORT_USER_EMAIL}:${REPORT_USER_PASS}`);
   const fetchAbundanceWrap = resolve => {
     const options = {
@@ -34,10 +48,22 @@ async function fetchAbundance(listID) {
       if (error) throw new Error(error);
 
       const { data } = JSON.parse(response.body);
+      const parseAttributes = ({ attributes, ...sp }) => ({
+        ...sp,
+        abundance: getCountryMap(attributes),
+      });
 
       const byLatinLanguageWithoutSpecificTaxon = s =>
         s.language_iso === 'lat' && !s.taxon.includes('Unterfamilie');
-      const latinData = data.filter(byLatinLanguageWithoutSpecificTaxon);
+      const hasAttributes = s => !!s.attributes;
+      const isNotAggregate = s => !!s.external_key;
+      const isPreferred = s => s.preferred_taxon === s.taxon;
+      const latinData = data
+        .filter(byLatinLanguageWithoutSpecificTaxon)
+        .filter(hasAttributes)
+        .filter(isNotAggregate)
+        .filter(isPreferred)
+        .map(parseAttributes);
 
       resolve(latinData);
     };
@@ -61,42 +87,31 @@ function save(species) {
   return new Promise(saveWrap);
 }
 
-async function transformAbundance(species) {
-  const abundance = await fetchAbundance(251);
+async function attachProfileInfo(species) {
+  const speciesInfoList = await fetchSpeciesProfileInfo();
 
-  function getCountryMap(string) {
-    const map = {};
-    if (string === null) return map;
+  const getSpeciesWithInfo = sp => {
+    const byTaxon = spInfo =>
+      spInfo.taxon === sp.taxon || spInfo.taxon === sp.preferred_taxon;
 
-    const transformCountryFormat = country => {
-      const [key, val] = country.split('=');
-      const normKey = key.replace(': ', '_');
-      const normVal = val.replace('?', '');
-      map[normKey] = normVal;
-    };
-    string.split(' | ').forEach(transformCountryFormat);
-    return map;
-  }
-
-  const getSpeciesEntry = sp => {
-    const byExternalKeyWithAttributes = s =>
-      s.external_key === sp.external_key && s.attributes !== null;
-    const { attributes: countriesStr } = abundance.find(
-      byExternalKeyWithAttributes
-    );
+    const speciesInfo = speciesInfoList.find(byTaxon);
 
     return {
-      ...sp,
-      abundance: {
-        ...getCountryMap(countriesStr),
-      },
+      ...speciesInfo,
+      warehouse_id: parseInt(sp.taxa_taxon_list_id, 10),
+      external_key: sp.external_key,
+      taxon: sp.taxon,
+      abundance: sp.abundance,
     };
   };
-  return species.map(getSpeciesEntry);
+
+  const hasValue = sp => !!sp;
+  const byId = (s1, s2) => (!s1.id || !s2.id ? -1 : s1.id - s2.id);
+  return species.map(getSpeciesWithInfo).filter(hasValue).sort(byId);
 }
 
-fetch()
-  .then(transformAbundance)
+fetchSpecies(251)
+  .then(attachProfileInfo)
   .then(save)
   // eslint-disable-next-line @getify/proper-arrows/name
   .then(() => console.log('All done! 🚀'));

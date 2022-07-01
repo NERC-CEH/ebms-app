@@ -3,6 +3,7 @@ import { IonModal, IonGrid, IonRow, IonCol } from '@ionic/react';
 import appModel from 'models/app';
 import savedSamples from 'models/collections/samples';
 import userModel from 'models/user';
+import { observer } from 'mobx-react';
 import { useTranslation } from 'react-i18next';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
 import config from 'common/config';
@@ -203,4 +204,4 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
   );
 };
 
-export default MainComponent;
+export default observer(MainComponent);
