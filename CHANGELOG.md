@@ -1,3 +1,7 @@
+## 1.17.1
+
+Fixed species guide maximum species count.
+
 ## 1.17.0
 
 Updated translations.
