@@ -61,6 +61,7 @@ workflows:
           inputs:
             - notify_user_groups: none
       - google-play-deploy@3:
+          run_if: enveq "BUILD_ONLY" ""
           inputs:
             - package_name: $BITRISE_PROJECT_NAME
             - service_account_json_key_path: $BITRISEIO_GOOGLE_SERVICE_KEY_URL
@@ -95,6 +96,7 @@ workflows:
             - export_method: app-store
   web:
     steps:
+      - nvm@1: {}
       - script@1:
           title: Print system info
           inputs:
