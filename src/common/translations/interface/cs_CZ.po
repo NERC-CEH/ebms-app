@@ -2,12 +2,12 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
-# Zdenek Faltynek Fric <fric@entu.cas.cz>, 2021
+# Zdenek Faltynek Fric <fric@entu.cas.cz>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Zdenek Faltynek Fric <fric@entu.cas.cz>, 2021\n"
+"Last-Translator: Zdenek Faltynek Fric <fric@entu.cas.cz>, 2022\n"
 "Language-Team: Czech (Czech Republic) (https://www.transifex.com/ceh/teams/95441/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -146,7 +146,7 @@ msgid "Slovenia"
 msgstr "Slovinsko"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japonsko"
 
 msgid "Slovakia"
 msgstr "Slovensko"
@@ -320,6 +320,8 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Opravdu se chcete odhlásit?<br/><br/>Vaše čekající i uložené <4>záznamy "
+"nebudou smazány </4> z tohoto zařízení."
 
 msgid "Cancel"
 msgstr "Zrušit"
@@ -441,11 +443,11 @@ msgstr "Zprávy"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Název druhu nebo filtrujte.."
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "čeleď"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr "Omlouváme se, nejsou k dispozici žádná data k vytvoření zprávy"
@@ -2091,4 +2093,22 @@ msgid "Sorry, no species were found."
 msgstr ""
 
 msgid "Kenya"
+msgstr ""
+
+# GPS permission button label
+msgid "Deny"
+msgstr ""
+
+# GPS permission button label
+msgid "Accept"
+msgstr ""
+
+# GPS permission alert title
+msgid "Location permission"
+msgstr ""
+
+# GPS permission alert message
+msgid ""
+"To automatically set species locations and track your route, even if the "
+"device is locked. Allow the app to use your location."
 msgstr ""

@@ -147,7 +147,7 @@ msgid "Slovenia"
 msgstr "Słowenia"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japonia"
 
 msgid "Slovakia"
 msgstr "Słowacja"
@@ -210,7 +210,7 @@ msgid "Privacy Policy"
 msgstr "Polityka prywatności"
 
 msgid "Credits"
-msgstr ""
+msgstr "Kredyty"
 
 msgid "Email"
 msgstr "E-mail"
@@ -322,6 +322,8 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Czy jesteś pewny, że chcesz się wylogować?<br/><br/>Twoje oczekujące i "
+"przesłane<4>obserwacje nie zostaną usunięte</4>z tego urządzenia."
 
 msgid "Cancel"
 msgstr "Anuluj"
@@ -446,11 +448,11 @@ msgstr "Raport"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Nazwa gatunku lub filtr..."
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "rodzina"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr "Przepraszamy, w tej chwili żadne dane protokołu nie są dostępne."
@@ -511,7 +513,7 @@ msgstr "Uwaga: pozostanie on w galerii."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr ""
+msgstr "Brak dodanego zdjęcia.<br/>Wciśnij,<3></3>żeby dodać."
 
 msgid "Registration error:"
 msgstr "Błąd rejestracji:"
@@ -525,7 +527,7 @@ msgstr "Podaj adres email, żeby zresetować hasło."
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Pomyślnie zalogowano jako: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
@@ -718,7 +720,7 @@ msgstr ""
 "połączenie z siecią."
 
 msgid "If the record has reached the database a red"
-msgstr ""
+msgstr "Jeżeli obserwacja dotarła do bazy danych - czerwony"
 
 msgid "(set for submission & saved locally) will become green"
 msgstr "(ustawiony do wysłania i zapisany lokalnie) stanie się zielony"
@@ -903,7 +905,7 @@ msgstr ""
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "Pokaż nazwy zwyczajowe w przewodniku"
 
 msgid "Share App Analytics"
 msgstr "Share App Analytics"
@@ -1330,7 +1332,7 @@ msgstr "Ustawienia aplikacji"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Użyj tylko ćmy, które latają w dzień"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1428,10 +1430,10 @@ msgstr "Zanim wyślesz rekordy zaloguj się"
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Ładowanie {{count}} obserwacji"
+msgstr[1] "Ładowanie {{count}} obserwacji"
+msgstr[2] "Ładowanie {{count}} obserwacji"
+msgstr[3] "Ładowanie {{count}} obserwacji"
 
 # Part of a page error
 msgid "Oops! Something went wrong."
@@ -1713,15 +1715,15 @@ msgstr "Przyciągnięte do oświetlonego okna"
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr ""
+msgstr "Pułapka cukrowa"
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr ""
+msgstr "Winne sznurki"
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr ""
+msgstr "Wytrząsanie na tacę"
 
 # Moth survey method type
 msgid "Pheromone trap"
@@ -1832,7 +1834,7 @@ msgstr "Nieznany"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Pokaż więcej"
 
 # Moth survey warning message
 msgid "Please add a photo"
@@ -1875,7 +1877,7 @@ msgstr ""
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Rozpoznaj"
 
 # Moth survey button label
 msgid "Identify All"
@@ -1899,242 +1901,272 @@ msgstr "Co nowego"
 
 # Version 1.17 whats new message
 msgid "Added Polish and Romanian languages"
-msgstr ""
+msgstr "Dodano język polski i rumuński"
 
 # Version 1.17 whats new message
 msgid "Added Moth trap location setup"
-msgstr ""
+msgstr "Dodano konfigurację lokalizacji pułapki na ćmy"
 
 # Version 1.17 whats new message
 msgid "Increase temperature range selection from -0 to +40"
-msgstr ""
+msgstr "Zwiększono wybór zakresu temperatury od -0 do +40"
 
 # Version 1.17 whats new message
 msgid "Added a day-flying moths filter setting"
-msgstr ""
+msgstr "Dodano opcję filtrowania ciem latających w dzień"
 
 # Version 1.17 whats new message
 msgid "Added +5 species count shortcut"
-msgstr ""
+msgstr "Dodano skrót do liczenia gatunków +5"
 
 # Version 1.17 whats new message
 msgid "Added species guide search and filters"
-msgstr ""
+msgstr "Dodano wyszukiwanie i filtry w przewodniku po gatunkach"
 
 # Version 1.17 whats new message
 msgid "Updated species common names"
-msgstr ""
+msgstr "Uaktualniono nazwy zwyczajowe gatunków"
 
 # Version 1.17 whats new message
 msgid "Added Catalan and Danish species common names"
-msgstr ""
+msgstr "Dodano duńskie i katalońskie nazwy zwyczajowe gatunków"
 
 # Version 1.17 whats new message
 msgid "Added new survey fields"
-msgstr ""
+msgstr "Dodano nowe pola w formularzu"
 
 # Version 1.17 whats new message
 msgid "Improved user reports"
-msgstr ""
+msgstr "Ulepszono raporty użytkowników"
 
 # Version 1.17 whats new message
 msgid "Updated UI design"
-msgstr ""
+msgstr "Zaktualizowano projekt interfejsu użytkownika"
 
 # Version 1.17 whats new message
 msgid "Various bug fixes"
-msgstr ""
+msgstr "Usunięto wiele błędów"
 
 # Version 1.17 whats new message
 msgid "Updated translations"
-msgstr ""
+msgstr "Zaktualizowano tłumaczenia"
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "Wyślij ponownie"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "Wygląda na to, że twój email nie został jeszcze zweryfikowany."
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "Czy powinniśmy wysłać ponownie maila weryfikującego?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Wygląda na to, że Twoje usługi lokalizacyjne (GPS) są wyłączone. Możesz je "
+"włączyć w ustawieniach urządzenia"
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Usługi lokalizacyjne (GPS) są wyłączone"
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Dodaj nowe"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"Nie masz jeszcze żadnych pułapek na ćmy.<1>Stwórz pierwszą pułapkę na "
+"ćmy</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Pułapki na ćmy"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Inny typ"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Dadaj lampę"
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "Jakiego typu była to pułapka?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Nie dodano lamp"
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "Jaki jest typ lampy?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "Jaki to typ pułapki na ćmy?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "Pułapka lejkowa z lampą LED"
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Inna pułapka lejkowa"
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Pułapka z 2 kartkami"
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Inna pułapka"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Lampa"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Szczegóły lampy"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Ilość"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Brak nazwy pułapki na ćmy"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Nazwa pułapki na ćmy"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "Jesteś pewny, że chcesz usunąć te pułapkę na ćmy?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Dodatkowy opis lampy."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Proszę dodaj lokalizację i nazwę pułapki na ćmy."
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "Niekompletne"
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Wybierz"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Obserwatorzy"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+"Wprowadź liczbę osób obserwujących, które pomogły przy przeprowadzeniu tej "
+"obserwacji - wliczając ciebie. "
 
 msgid "Network Error"
-msgstr ""
+msgstr "Błąd sieci"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "Proszę zaloguj się, aby zobaczyć raport o twoich danych."
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "Twój najczęstszy gatunek w tym miesiącu"
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "Twój najczęstszy gatunek"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Sekcja Zdjęcia"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "Użytkownik nie jest zalogowany."
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
+"Wydaję nam się, że z prawdopodobieństwem {{probability}}% to gatunek: "
+"<3>{{taxon}}</3>"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Uwaga</0> - wydaję nam się, że z prawdopodobieństwem {{probability}}% "
+"jest to gatunek: <5>{{taxon}}</5>"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr ""
+msgstr "Lampy"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
-msgstr ""
+msgstr "Czy na pewno chcesz usunąć to wprowadzenie lampy z pułapki na ćmy?"
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr ""
+msgstr "Typ pułapki jest wymaganym polem."
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "Witaj za granicą"
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
+"Zanim zaczniesz jakiekolwiek badanie proszę sprawdź swoją skrzynkę mailową i"
+" kliknij w link weryfikacyjny."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr ""
+msgstr "Przykro mi, nie znaleziono takiego gatunku."
 
 msgid "Kenya"
+msgstr "Kenia"
+
+# GPS permission button label
+msgid "Deny"
+msgstr ""
+
+# GPS permission button label
+msgid "Accept"
+msgstr ""
+
+# GPS permission alert title
+msgid "Location permission"
+msgstr ""
+
+# GPS permission alert message
+msgid ""
+"To automatically set species locations and track your route, even if the "
+"device is locked. Allow the app to use your location."
 msgstr ""

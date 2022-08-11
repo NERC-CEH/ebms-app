@@ -2126,3 +2126,21 @@ msgstr "Sorry, er zijn geen soorten gevonden"
 
 msgid "Kenya"
 msgstr "Kenya"
+
+# GPS permission button label
+msgid "Deny"
+msgstr ""
+
+# GPS permission button label
+msgid "Accept"
+msgstr ""
+
+# GPS permission alert title
+msgid "Location permission"
+msgstr ""
+
+# GPS permission alert message
+msgid ""
+"To automatically set species locations and track your route, even if the "
+"device is locked. Allow the app to use your location."
+msgstr ""

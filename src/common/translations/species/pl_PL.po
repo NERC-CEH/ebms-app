@@ -678,7 +678,7 @@ msgid "Phengaris-nausithous-description"
 msgstr ""
 
 msgid "Turanana-taygetica-description"
-msgstr ""
+msgstr "Turanana-taygetica-opis"
 
 msgid "Pseudophilotes-bavius-description"
 msgstr ""
@@ -687,10 +687,10 @@ msgid "Zizeeria-knysna-description"
 msgstr ""
 
 msgid "Zizeeria-karsandra-description"
-msgstr ""
+msgstr "Zizeeria-karsandra-opis"
 
 msgid "Tongeia-fischeri-description"
-msgstr ""
+msgstr "Tongeia-fischeri-opis"
 
 msgid "Cupido-argiades-description"
 msgstr ""
@@ -1527,7 +1527,7 @@ msgid "Erebia-aethiopellus-description"
 msgstr ""
 
 msgid "Erebia-gorgone-description"
-msgstr ""
+msgstr "Erebia-gorgone-opis"
 
 msgid "Erebia-rhodopensis-description"
 msgstr ""

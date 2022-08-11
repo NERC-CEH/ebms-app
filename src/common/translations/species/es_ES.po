@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
 # Karolis, 2022
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2022\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -899,6 +899,16 @@ msgstr ""
 
 msgid "Glaucopsyche-alexis-description"
 msgstr ""
+"Glaucopsyche alexis es un bonito espectáculo tanto en la vegetación herbácea"
+" seca como en la húmeda y rica en flores, como los prados y los claros de "
+"los bosques. Pueden verse en gran número. Las hembras ponen sus huevos entre"
+" las flores de todo tipo de leguminosas, como las retamas (Cytisus spp.), "
+"las vezas (Vicia spp.), la coronilla rosa (Coronilla varia), Genista spp. y "
+"los tréboles de olor (Melilotus spp.). Las orugas se alimentan de las hojas "
+"y con frecuencia son atendidas por las obreras de diversas hormigas. La "
+"hibernación tiene lugar en la capa de hojarasca antes de que las orugas "
+"crezcan completamente. Manchas verdes o alexis es una mariposa de una sola "
+"genreación."
 
 msgid "Hipparchia-tilosi-description"
 msgstr ""
@@ -1307,6 +1317,15 @@ msgstr ""
 
 msgid "Argynnis-pandora-description"
 msgstr ""
+"Pandora es una mariposa de bosque que aparece en los bordes del bosque y en "
+"los claros con arbustos y vegetación herbácea rica en flores. Al igual que "
+"la mariposas Argynnis (A. paphia), estas mariposas se ven a menudo en "
+"lugares donde abundan las plantas ricas en néctar, como los cardos. La "
+"mariposa Pandora es de vuelo rápido y potente, observándose a veces "
+"ejemplares vagabundos fuera de su área de distribución. Los huevos los pone "
+"individualmente en las hojas de las violetas (Viola spp.). Hiberna como una "
+"pequeña oruga y pupa en la primavera, suspendida a baja altura en la planta "
+"de alimentación o en la vegetación cercana. Es de una solo generación."
 
 msgid "Argynnis-laodice-description"
 msgstr ""

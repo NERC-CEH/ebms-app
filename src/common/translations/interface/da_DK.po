@@ -1,7 +1,11 @@
 # 
+# Translators:
+# Anna Mei Dichmann Melskens, 2022
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
+"Last-Translator: Anna Mei Dichmann Melskens, 2022\n"
 "Language-Team: Danish (Denmark) (https://www.transifex.com/ceh/teams/95441/da_DK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -11,1083 +15,1165 @@ msgstr ""
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr ""
+msgstr "Vælg dit land"
 
 msgid "United Kingdom"
-msgstr ""
+msgstr "Storbritannien"
 
 msgid "Lithuania"
-msgstr ""
+msgstr "Litauen"
 
 msgid "Spain"
-msgstr ""
+msgstr "Spanien"
 
 msgid "Andorra"
-msgstr ""
+msgstr "Andorra"
 
 msgid "Albania"
-msgstr ""
+msgstr "Albanien"
 
 msgid "Austria"
-msgstr ""
+msgstr "Østrig"
 
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "Bosnien-Hercegovina"
 
 msgid "Belgium"
-msgstr ""
+msgstr "Belgien"
 
 msgid "Bulgaria"
-msgstr ""
+msgstr "Bulgarien"
 
 msgid "Belarus"
-msgstr ""
+msgstr "Hviderusland (Belarus)"
 
 msgid "Switzerland"
-msgstr ""
+msgstr "Schweiz"
 
 msgid "Cyprus"
-msgstr ""
+msgstr "Cypern"
 
 msgid "Czechia"
-msgstr ""
+msgstr "Tjekkiet"
 
 msgid "Germany"
-msgstr ""
+msgstr "Tyskland"
 
 msgid "Denmark"
-msgstr ""
+msgstr "Danmark"
 
 msgid "Estonia"
-msgstr ""
+msgstr "Estland"
 
 msgid "Spain (Canary Islands)"
-msgstr ""
+msgstr "Spanien (De Kanariske Øer)"
 
 msgid "Finland"
-msgstr ""
+msgstr "Finland"
 
 msgid "France"
-msgstr ""
+msgstr "Frankrig"
 
 msgid "Greece"
-msgstr ""
+msgstr "Grækenland"
 
 msgid "Croatia"
-msgstr ""
+msgstr "Kroatien"
 
 msgid "Hungary"
-msgstr ""
+msgstr "Ungarn"
 
 msgid "Ireland"
-msgstr ""
+msgstr "Irland"
 
 msgid "Iceland"
-msgstr ""
+msgstr "Island"
 
 msgid "Italy"
-msgstr ""
+msgstr "Italien"
 
 msgid "Liechtenstein"
-msgstr ""
+msgstr "Liechtenstein"
 
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luxembourg"
 
 msgid "Latvia"
-msgstr ""
+msgstr "Letland"
 
 msgid "Moldova"
-msgstr ""
+msgstr "Moldova"
 
 msgid "Montenegro"
-msgstr ""
+msgstr "Montenegro"
 
 msgid "North Macedonia"
-msgstr ""
+msgstr "Nordmakedonien"
 
 msgid "Malta"
-msgstr ""
+msgstr "Malta"
 
 msgid "Netherlands"
-msgstr ""
+msgstr "Holland"
 
 msgid "Norway"
-msgstr ""
+msgstr "Norge"
 
 msgid "Poland"
-msgstr ""
+msgstr "Polen"
 
 msgid "Portugal"
-msgstr ""
+msgstr "Portugal"
 
 msgid "Portugal (Azores)"
-msgstr ""
+msgstr "Portugal (Azorerne)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr ""
+msgstr "Portugal (Madeira)"
 
 msgid "Romania"
-msgstr ""
+msgstr "Rumænien"
 
 msgid "Serbia"
-msgstr ""
+msgstr "Serbien"
 
 msgid "Russian Federation"
-msgstr ""
+msgstr "Rusland"
 
 msgid "Slovenia"
-msgstr ""
+msgstr "Slovenien"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japan"
 
 msgid "Slovakia"
-msgstr ""
+msgstr "Slovakiet"
 
 msgid "Turkey (Europe)"
-msgstr ""
+msgstr "Tyrkiet (Europa)"
 
 msgid "Turkey (Asia)"
-msgstr ""
+msgstr "Tyrkiet (Asien)"
 
 msgid "Ukraine"
-msgstr ""
+msgstr "Ukraine"
 
 msgid "Elsewhere"
-msgstr ""
+msgstr "Et andet sted"
 
 msgid "Skip"
-msgstr ""
+msgstr "Spring over"
 
 msgid "Next"
-msgstr ""
+msgstr "Næste"
 
 msgid "Get Started"
-msgstr ""
+msgstr "Start nu"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr ""
+msgstr "Log ind med din eBMS konto eller opret en ny konto."
 
 msgid "Password"
-msgstr ""
+msgstr "Kodeord"
 
 msgid "Sign in"
-msgstr ""
+msgstr "Log ind"
 
 msgid "Register"
-msgstr ""
+msgstr "Opret ny konto"
 
 msgid "Forgot password?"
-msgstr ""
+msgstr "Har du glemt dit kodeord?"
 
 msgid "User not found."
-msgstr ""
+msgstr "Kontoen blev ikke fundet."
 
 msgid "Login"
-msgstr ""
+msgstr "Log ind"
 
 msgid "Settings"
-msgstr ""
+msgstr "Indstillinger"
 
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 msgid "About"
-msgstr ""
+msgstr "Om denne app"
 
 msgid "Help"
-msgstr ""
+msgstr "Hjælp"
 
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Privatlivspolitik"
 
 msgid "Credits"
-msgstr ""
+msgstr "Tak til"
 
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 msgid "First Name"
-msgstr ""
+msgstr "Fornavn"
 
 msgid "Surname"
-msgstr ""
+msgstr "Efternavn"
 
 msgid "I agree to"
-msgstr ""
+msgstr "Jeg accepterer"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Vilkår og Betingelser"
 
 msgid "Reset"
-msgstr ""
+msgstr "Nulstil"
 
 msgid "Records"
-msgstr ""
+msgstr "Observationer"
 
 msgid "Upload All"
-msgstr ""
+msgstr "Upload alt"
 
 msgid "Remove All Saved"
-msgstr ""
+msgstr "Slet alle gemte observationer"
 
 msgid "Application"
-msgstr ""
+msgstr "Applikation"
 
 msgid "Training Mode"
-msgstr ""
+msgstr "Træningstilstand"
 
 msgid "Experimental Features"
-msgstr ""
+msgstr "Eksperimentelle funktioner"
 
 msgid "Welcome"
-msgstr ""
+msgstr "Velkommen"
 
 msgid "Lets start!"
-msgstr ""
+msgstr "Lad os begynde!"
 
 msgid "TOP RECORDERS"
-msgstr ""
+msgstr "BEDSTE OBSERVATØRER"
 
 msgid "Top Species from all timed counts"
-msgstr ""
+msgstr "Hyppigst fundne arter ud fra alle tidsbestemte observationer"
 
 msgid "Back"
-msgstr ""
+msgstr "Tilbage"
 
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 msgid "App"
-msgstr ""
+msgstr "App"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
-msgstr ""
+msgstr "Vi takker alle dem, der har været med til at lave denne app:"
 
 msgid "Home"
-msgstr ""
+msgstr "Hjem"
 
 msgid "Guide"
-msgstr ""
+msgstr "Vejledning"
 
 msgid "Account"
-msgstr ""
+msgstr "Konto"
 
 msgid "Offline"
-msgstr ""
+msgstr "Offline"
 
 msgid "Sorry, looks like you're offline."
-msgstr ""
+msgstr "Beklager, det lader til at du er offline."
 
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 msgid "Sorry"
-msgstr ""
+msgstr "Beklager"
 
 msgid "Please wait..."
-msgstr ""
+msgstr "Vent venligst ..."
 
 msgid "name is a required field"
-msgstr ""
+msgstr "indtastning af navn påkrævet"
 
 msgid "password is a required field"
-msgstr ""
+msgstr "indtastning af kodeord påkrævet"
 
 msgid "Login error:"
-msgstr ""
+msgstr "Log ind fejl:"
 
 msgid "Failed to fetch"
-msgstr ""
+msgstr "Kunne ikke hente"
 
 msgid "Incorrect password or email."
-msgstr ""
+msgstr "Forkert kodeord eller e-mail."
 
 # Part of logout process
 msgid "Logout"
-msgstr ""
+msgstr "Log ud"
 
 # Part of logout process
 msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Er du sikker på at du vil logge ud?<br/><br/>Dine ventende og uploadede "
+"<4>observationer vil ikke blive slettet </4> fra denne enhed."
 
 msgid "Cancel"
-msgstr ""
+msgstr "Annuller"
 
 msgid "Welcome aboard!"
-msgstr ""
+msgstr "Velkommen ombord!"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
+"Inden du uploader dine observationer, bedes du verificere din konto ved at "
+"trykke på linket sendt til din e-mail."
 
 msgid "OK, got it"
-msgstr ""
+msgstr "Ok, forstået"
 
 msgid "Please fill in"
-msgstr ""
+msgstr "Udfyld venligst"
 
 msgid "Area Count"
-msgstr ""
+msgstr "Område observation"
 
 msgid "Area"
-msgstr ""
+msgstr "Område"
 
 # Location attribute label
 msgid "Location"
-msgstr ""
+msgstr "Placering"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "Placering påkrævet"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Denne app skal kende din placering, men har ikke din tilladelse. Vil du åbne"
+" indstillingerne nu?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Afslut for at spare strøm."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "Bruger din placering."
 
 msgid "Add"
-msgstr ""
+msgstr "Tilføj"
 
 msgid "Add species"
-msgstr ""
+msgstr "Tilføj arter"
 
 msgid "Duration"
-msgstr ""
+msgstr "Varighed"
 
 msgid "Species"
-msgstr ""
+msgstr "Arter"
 
 msgid "Species name"
-msgstr ""
+msgstr "Artsnavn"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
+"Du kan bruge genveje til hurtigere at kunne søge i en taksonomisk gruppe. "
+"For eksempel, for at finde"
 
 msgid "you can type in the search bar"
-msgstr ""
+msgstr "kan du skrive dette i søgefeltet"
 
 msgid "Edit Occurrence"
-msgstr ""
+msgstr "Rediger forekomst"
 
 msgid "Count"
-msgstr ""
+msgstr "Antal"
 
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 msgid "Draft"
-msgstr ""
+msgstr "Udkast"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr ""
+msgstr "Der findes et udkast til en observation, vil du fortsætte med det?"
 
 msgid "Discard"
-msgstr ""
+msgstr "Forkast"
 
 msgid "Continue"
-msgstr ""
+msgstr "Fortsæt"
 
 msgid "Finish"
-msgstr ""
+msgstr "Afslut"
 
 msgid "minutes"
-msgstr ""
+msgstr "minutter"
 
 msgid "No species added"
-msgstr ""
+msgstr "Ingen arter tilføjet"
 
 msgid "Please draw your area on the map"
-msgstr ""
+msgstr "Tegn venligst dit område på kortet"
 
 msgid "Draw an area"
-msgstr ""
+msgstr "Tegn et område"
 
 msgid "Delete"
-msgstr ""
+msgstr "Slet"
 
 msgid "Surveys"
-msgstr ""
+msgstr "Observationer"
 
 msgid "Reports"
-msgstr ""
+msgstr "Rapporter"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Artsnavn eller filter ..."
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "familie"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr ""
+msgstr "Beklager, rapport data er ikke tilgængeligt i øjeblikket."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr ""
+msgstr "Er du sikker på at du vil slette denne observation?"
 
 msgid "No finished surveys"
-msgstr ""
+msgstr "Ingen afsluttede observationer"
 
 msgid "Finished surveys"
-msgstr ""
+msgstr "Afsluttede observationer"
 
 msgid "Selected area"
-msgstr ""
+msgstr "Valgt område"
 
 msgid "Use survey create time"
-msgstr ""
+msgstr "Anvend oprettelsestidspunktet for observationen"
 
 msgid "Use survey finish time"
-msgstr ""
+msgstr "Anvend afslutningstidspunktet for observationen"
 
 msgid "species"
-msgstr ""
+msgstr "arter"
 
 msgid "Done"
-msgstr ""
+msgstr "Færdig"
 
 msgid "Time's up!"
-msgstr ""
+msgstr "Tiden er gået!"
 
 msgid "Survey incomplete"
-msgstr ""
+msgstr "Observation ufærdig"
 
 msgid "The survey is not complete yet."
-msgstr ""
+msgstr "Observationen er ikke færdig endnu."
 
 msgid "Please select a smaller area."
-msgstr ""
+msgstr "Vælg venligst et mindre område."
 
 msgid "Please add survey area information."
-msgstr ""
+msgstr "Tilføj venligst observationsområde."
 
 msgid "Choose a method to upload a photo"
-msgstr ""
+msgstr "Vælg hvordan du vil uploade billedet"
 
 msgid "Gallery"
-msgstr ""
+msgstr "Galleri"
 
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr ""
+msgstr "Er du sikker på at du vil fjerne billedet?"
 
 msgid "Note: it will remain in the gallery."
-msgstr ""
+msgstr "Bemærk: det vil forblive i galleriet."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
 msgstr ""
+"Der er ikke tilføjet noget billede.<br/>Tryk på <3></3> for at tilføje et "
+"billede."
 
 msgid "Registration error:"
-msgstr ""
+msgstr "Registreringsfejl:"
 
 # Login error message
 msgid "Incorrect password or email"
-msgstr ""
+msgstr "Forkert kodeord eller e-mail"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
+msgstr "Indtast din e-mail for at anmode om at nulstille dit kodeord."
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Logget ind som: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "Kontoen er ikke blevet aktiveret eller er blevet blokkeret."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"Din konto tilknyttet e-mailen <1>{{userEmail}}</1> er ikke blevet "
+"verificeret endnu.<3><0>Genindlæs siden</0><1>Send e-mail igen</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
+"En ny verifikations e-mail er blevet sent. Hvis du ikke har modtaget den, "
+"bedes du tjekke din spam-mappe eller mappen med uønskede e-mails."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr ""
+msgstr "Log venligst ind først."
 
 # User registration error
 msgid "This email is already taken."
-msgstr ""
+msgstr "Denne e-mail er allerede i brug."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "Ukendt e-mail adresse."
 
 msgid "email is not valid"
-msgstr ""
+msgstr "e-mail adressen er ikke gyldig"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
+"Sommerfugle er betagende insekter, men deres bestand er i nedgang mange "
+"steder i Europa. Dette kan ses på grafen, der indikerer bestandsudviklingen "
+"hos græsmark sommerfugle i Europa."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
+"Data indsamlet via denne app kan være med til at betydeligt øge den "
+"kendskab, vi har om tilstanden på vores sommerfugle og deres levesteder."
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
+"Vi mangler viden om bestanden af sommerfugle i mange dele af Europa. Dette "
+"kan ses på den nuværende mængde af tilgængelige observationer, der bliver "
+"brugt til at vurdere sommerfuglenes bestand."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
+"Det har dog aldrig været nemmere at være med til at bidrage med "
+"observationer af høj kvalitet, der kan hjælpe med bevarelse af disse "
+"fascinerende og essentielle insekter. Dit bidrag kan starte her og nu"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
+"Denne app er udviklet som led i vurderingen af sommerfuglebestandene i "
+"Europa via \"the Assessing Butterflies in Europe (ABLE)\" projekt."
 
 msgid "The ABLE project is a partnership between"
-msgstr ""
+msgstr "ABLE projektet er et samarbejde mellem"
 
 msgid "and"
-msgstr ""
+msgstr "og"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
+"ABLE bliver finansieret via en servicekontrakt med EU's miljø direktorat i "
+"en foreløbig tidsperiode på to år fra 2019-20."
 
 msgid "ABLE partners:"
-msgstr ""
+msgstr "ABLE samarbejdspartnere:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
+"Denne app bidrager med observationer til \"the European Butterfly Monitoring"
+" Scheme (eBMS)\", der samler sommerfugle observationsdata fra forskellige "
+"lande til en samlet database."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr ""
+msgstr "I juni 2019 er følgende organisationer samarbejdspartnere i eBMS:"
 
 msgid "Not enough data yet"
-msgstr ""
+msgstr "Nuværende data utilstrækkeligt"
 
 msgid "How to start a survey"
-msgstr ""
+msgstr "Sådan starter du en observation"
 
 msgid "To start a new survey you can press the plus button"
-msgstr ""
+msgstr "For at starte en ny observation skal du trykke på plus knappen"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
+"i midten af sidefoden. Dette vil påbegynde en ny 15-minuts observation."
 
 msgid "Selecting species"
-msgstr ""
+msgstr "Valg af arter"
 
 msgid "Please press the Add"
-msgstr ""
+msgstr "Tryk venligst på Tilføj"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
+"knappen i din nye observations redigeringsside. Dette vil føre dig til den "
+"taksonomiske søgeside. Efter du har valgt arten, vil den blive tilføjet til "
+"din observationsliste."
 
 msgid "Note"
-msgstr ""
+msgstr "Bemærk"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
+"du kan øge det antal af sommerfugle af samme art observeret ved at trykke på"
+" tallet ved siden af artsnavnet på listen."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
+"For at slette en art fra din observationsliste kan du swipe den mod venstre "
+"og klikke på Slet knappen."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
+"For at tilføje yderligere information til din artsforekomst kan du åbne "
+"artens kommentarfelt ved at klikke på den."
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr ""
+"For at afslutte din observation burde du også indtaste oplysninger om "
+"observationsområdet."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
 msgstr ""
+"Når du er færdig klargør observationen til indsendelse ved at trykke på "
+"Afslut knappen på sidehovedet."
 
 msgid "Searching for species"
-msgstr ""
+msgstr "Artssøgning"
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
+"Applikationen indeholder en database med en liste på omkring 500 "
+"sommerfuglearter og deres medhørende taksonomiske grupperinger. Du kan bruge"
+" genveje til hurtigere at kunne søge i en taksonomisk gruppe. For eksempel, "
+"for at finde"
 
 msgid "Sync. with the website"
-msgstr ""
+msgstr "Synkroniser med hjemmesiden"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr ""
+msgstr "Alle dine gemte observationer vil blive vist på din konto side."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
+"Som standard er en observation gemt som \"udkast\" og vil ikke blive "
+"tilføjet til databasen indtil, der trykkes på \"Afslut\" knappen på "
+"sidehovedet. Applikationen vil indsende din observation, så snart der er god"
+" netværksforbindelse."
 
 msgid "If the record has reached the database a red"
-msgstr ""
+msgstr "Hvis observationen er blevet indsendt til databasen vil en rød"
 
 msgid "(set for submission & saved locally) will become green"
-msgstr ""
+msgstr "(klar til indsendelse og gemt lokalt) blive en grøn"
 
 msgid "synced to the database"
-msgstr ""
+msgstr "synkroniseret med databasen"
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
+"Du bliver nødt til at være logget ind på din konto på hjemmesiden og have en"
+" god netværksforbindelse, for at observationerne automatisk synkroniserer i "
+"baggrunden."
 
 msgid "Delete a record"
-msgstr ""
+msgstr "Sletning af en observation"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
+"For at slette en observation skal du swipe den mod venstre på din konto side"
+" og klikke på slet knappen."
 
 msgid "User"
-msgstr ""
+msgstr "Bruger"
 
 msgid "Sign in/out or register"
-msgstr ""
+msgstr "Log ind/ud eller opret ny konto"
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
+"For at logge ind skal du åbne hovedmenu siden, klikke på log ind eller opret"
+" ny konto knappen og følge instrukserne."
 
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr ""
+"For at logge ud skal du åbne hovedmenu siden og klikke på log ud knappen."
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
+"Efter din konto er oprettet, skal du verificere din e-mail adresse ved at "
+"klikke på det verifikationslink, der er blevet sendt til den."
 
 msgid "Other"
-msgstr ""
+msgstr "Andet"
 
 msgid "Reset the application"
-msgstr ""
+msgstr "Nulstil applikationen"
 
 msgid "Go to the application settings page"
-msgstr ""
+msgstr "Gå til applikationens indstillingsside"
 
 msgid "and click on the Reset"
-msgstr ""
+msgstr "og klik på Nulstil"
 
 msgid "button"
-msgstr ""
+msgstr "knappen"
 
 msgid "No species found with this name"
-msgstr ""
+msgstr "Ingen arter fundet med dette navn"
 
 msgid "Allow Sample Edit"
-msgstr ""
+msgstr "Tillad observations redigering"
 
 msgid "Upload"
-msgstr ""
+msgstr "Upload"
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
+"Denne app bidrager til overvågning og bevaring af sommerfugle. Klik på + "
+"knappen herunder for at starte med at tælle sommerfugle."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
+"Der vil komme en masse forbedringer til appen i takt med, at vi tilføjer nye"
+" funktioner i løbet af de næste måneder."
 
 msgid "Are you sure you want to reset the application to its initial state?"
 msgstr ""
+"Er du sikker på at du vil nulstille applikationen til dens starttilstand?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr ""
+msgstr "Dette vil slette alt data gemt lokalt på appen!"
 
 msgid "Sweden"
-msgstr ""
+msgstr "Sverige"
 
 msgid "Paused"
-msgstr ""
+msgstr "Sat på pause"
 
 msgid "Pending"
-msgstr ""
+msgstr "Venter"
 
 msgid "Uploaded"
-msgstr ""
+msgstr "Uploadet"
 
 msgid "No finished pending surveys"
-msgstr ""
+msgstr "Ingen afsluttede observationer venter"
 
 msgid "No uploaded surveys"
-msgstr ""
+msgstr "Ingen uploadede observationer"
 
 msgid "Enjoying the app?"
-msgstr ""
+msgstr "Elsker du denne app?"
 
 msgid "Not really"
-msgstr ""
+msgstr "Ikke rigtig"
 
 msgid "Yes!"
-msgstr ""
+msgstr "Ja!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr ""
+msgstr "Ville du have noget imod at give os feedback på den?"
 
 msgid "No, thanks"
-msgstr ""
+msgstr "Nej, ellers tak"
 
 msgid "OK, sure"
-msgstr ""
+msgstr "Ja, Ok"
 
 msgid "How about a rating on the App Store then?"
-msgstr ""
+msgstr "Hvad med at bedømme den på App Storen?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr ""
+msgstr "Hvad med at bedømme den på App Storen?"
 
 msgid "Icons made by"
-msgstr ""
+msgstr "Ikoner lavet af"
 
 msgid "from"
-msgstr ""
+msgstr "fra"
 
 msgid "We've sent an email to you"
-msgstr ""
+msgstr "Vi har sendt en e-mail til dig"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
+"Klik på linket i e-mailen for at nulstille dit kodeord. Hvis du ikke kan se "
+"e-mailen, bedes du tjekke din spam-mappe, mappen med uønskede e-mails eller "
+"andre mapper i din e-mail."
 
 msgid "App Development"
-msgstr ""
+msgstr "Udvikling af Appen"
 
 msgid "This app was hand crafted with love by"
-msgstr ""
+msgstr "Denne app er blevet lavet med kærlig hånd af"
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
 msgstr ""
+"Et teknisk konsulentfirma, der udmærker sig ved at bygge skræddersyede "
+"miljøvidenskabelige og samfundsfokuserede løsninger."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr ""
+msgstr "Angående forslag og feedback så tøv ikke med at "
 
 msgid "contact us"
-msgstr ""
+msgstr "kontakte os"
 
 msgid "Language"
-msgstr ""
+msgstr "Sprog"
 
 msgid "Country"
-msgstr ""
+msgstr "Land"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
+"Markerer alle nye observationer som \"træner\" og undtager dem fra alle "
+"rapporter."
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "Vis danske navne for arter i vejledningen"
 
 msgid "Share App Analytics"
-msgstr ""
+msgstr "Del App Analytics"
 
 msgid "Share app crash data so we can make the app more reliable."
-msgstr ""
+msgstr "Del data om app nedbrud, så vi kan gøre appen mere stabil."
 
 msgid "Save Draft"
-msgstr ""
+msgstr "Gem udkast"
 
 msgid "Stage"
-msgstr ""
+msgstr "Livsstadie"
 
 msgid "Not Recorded"
-msgstr ""
+msgstr "Ikke observeret"
 
 msgid "Adults"
-msgstr ""
+msgstr "Voksen"
 
 msgid "Larvae"
-msgstr ""
+msgstr "Larve"
 
 msgid "Eggs"
-msgstr ""
+msgstr "Æg"
 
 msgid "Pupae"
-msgstr ""
+msgstr "Puppe"
 
 msgid "Larval webs"
-msgstr ""
+msgstr "Larvespind"
 
 # Butterfly stage
 msgid "Adult"
-msgstr ""
+msgstr "Voksen"
 
 # Butterfly stage
 msgid "Egg"
-msgstr ""
+msgstr "Æg"
 
 # Butterfly stage
 msgid "Larva"
-msgstr ""
+msgstr "Larve"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr ""
+msgstr "Larvespind"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr ""
+msgstr "Puppe"
 
 msgid "Transect"
-msgstr ""
+msgstr "Transekt"
 
 msgid "Sections"
-msgstr ""
+msgstr "Sektioner"
 
 msgid "No transect"
-msgstr ""
+msgstr "Intet transekt"
 
 msgid "Start Time"
-msgstr ""
+msgstr "Starttidspunkt"
 
 msgid "End Time"
-msgstr ""
+msgstr "Sluttidspunkt"
 
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatur"
 
 msgid "Cloud"
-msgstr ""
+msgstr "Skydække"
 
 msgid "Wind Direction"
-msgstr ""
+msgstr "Vindretning"
 
 msgid "Wind Speed"
-msgstr ""
+msgstr "Vindhastighed"
 
 msgid "Recorder"
-msgstr ""
+msgstr "Observatør"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Genindlæs"
 
 msgid "Please select your transect first."
-msgstr ""
+msgstr "Vælg venligst dit transekt først."
 
 msgid "Invalid server response."
-msgstr ""
+msgstr "Ugyldigt serversvar."
 
 msgid "Not recorded/no data"
-msgstr ""
+msgstr "Ikke optaget/ingen data"
 
 msgid "Please specify the temperature C°."
-msgstr ""
+msgstr "Angiv venligst temperaturen i °C."
 
 msgid "S"
-msgstr ""
+msgstr "Syd"
 
 msgid "SW"
-msgstr ""
+msgstr "Sydvest"
 
 msgid "W"
-msgstr ""
+msgstr "Vest"
 
 msgid "NW"
-msgstr ""
+msgstr "Nordvest"
 
 msgid "N"
-msgstr ""
+msgstr "Nord"
 
 msgid "NE"
-msgstr ""
+msgstr "Nordøst"
 
 msgid "E"
-msgstr ""
+msgstr "Øst"
 
 msgid "SE"
-msgstr ""
+msgstr "Sydøst"
 
 msgid "No direction"
-msgstr ""
+msgstr "Ingen retning"
 
 msgid "Please specify the wind direction."
-msgstr ""
+msgstr "Angiv venligst vindretningen."
 
 msgid "Smoke rises vertically"
-msgstr ""
+msgstr "Røg stiger lige op"
 
 msgid "Slight smoke drift"
-msgstr ""
+msgstr "Røgen viser netop vindens retning"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr ""
+msgstr "Vinden kan mærkes i ansigtet, bladene rasler"
 
 msgid "Leaves and twigs in slight motion"
-msgstr ""
+msgstr "Blade og kviste bevæger sig en smule"
 
 msgid "Dust raised and small branches move"
-msgstr ""
+msgstr "Støv løftes og små grene bevæger sig"
 
 msgid "Small trees in leaf begin to sway"
-msgstr ""
+msgstr "Små løvtræer svajer en smule"
 
 msgid "Large branches move and trees sway"
-msgstr ""
+msgstr "Store grene bevæger sig og træer svajer"
 
 msgid "Please specify the wind speed."
-msgstr ""
+msgstr "Angiv venligst vindhastighed."
 
 msgid "Transects"
-msgstr ""
+msgstr "Transekter"
 
 msgid "Transect list was successfully updated."
-msgstr ""
+msgstr "Transektliste opdateret."
 
 msgid "Section"
-msgstr ""
+msgstr "Sektion"
 
 msgid "Reliability"
-msgstr ""
+msgstr "Pålidelighed"
 
 msgid "Please specify the reliability of the section count."
-msgstr ""
+msgstr "Angiv venligst pålideligheden af observationen i denne sektion."
 
 msgid "Suitable conditions"
-msgstr ""
+msgstr "Egnede forhold"
 
 msgid "Unsuitable conditions"
-msgstr ""
+msgstr "Uegnede forhold"
 
 msgid "Unable to survey"
-msgstr ""
+msgstr "Ude af stand til at starte observation"
 
 msgid "15min Count"
-msgstr ""
+msgstr "15min observation"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "15min Enkeltartsobservation"
 
 msgid "eBMS Transect"
-msgstr ""
+msgstr "eBMS Transekt"
 
 msgid "Please add any extra info about this record."
-msgstr ""
+msgstr "Tilføj venligst yderligere oplysninger om denne observation."
 
 msgid "Enter more information here..."
-msgstr ""
+msgstr "Indtast oplysninger her ..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr ""
+msgstr "Angiv venligst den ansvarlige for artsbestemmelsen af observationen."
 
 msgid "HH:mm"
-msgstr ""
+msgstr "TT:mm"
 
 msgid "Please specify the % of cloud cover."
-msgstr ""
+msgstr "Angiv venligst det procentmæssige skydække."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr ""
+msgstr "Du har ikke nogle transekter. Prøv venligst at genindlæse listen."
 
 msgid "Wind speed info is missing"
-msgstr ""
+msgstr "Vindhastighed ikke angivet"
 
 msgid "Temperature info is missing"
-msgstr ""
+msgstr "Temperatur ikke angivet"
 
 msgid "Recorder info is missing"
-msgstr ""
+msgstr "Observatør oplysninger ikke angivet"
 
 msgid "Please select your transect."
-msgstr ""
+msgstr "Vælg venligst dit transekt."
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
+"Denne vejledning er stadig under udvikling. Den dækker "
+"{{countrySpeciesCount}} sommerfuglearter ud af de "
+"{{totalSpeciesCountryCount}} arter i dit land."
 
 msgid "Status"
-msgstr ""
+msgstr "Tilstedeværelse"
 
 msgid "Absent"
-msgstr ""
+msgstr "Fraværende"
 
 msgid "Present"
-msgstr ""
+msgstr "Tilstedeværende "
 
 msgid "Possibly present"
-msgstr ""
+msgstr "Muligvis tilstedeværende"
 
 msgid "Regular migrant"
-msgstr ""
+msgstr "Regelmæssig gæst"
 
 msgid "Irregular vagrant"
-msgstr ""
+msgstr "Uregelmæssig gæst"
 
 msgid "Regionally extinct"
-msgstr ""
+msgstr "Regionalt uddød"
 
 msgid "Description"
-msgstr ""
+msgstr "Beskrivelse"
 
 msgid "Counts"
-msgstr ""
+msgstr "Antal"
 
 msgid "Species descriptions"
-msgstr ""
+msgstr "Artsbeskrivelse"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
+"Artsbeskrivelserne, der indgår i vejledningen, er baseret på dem, der er "
+"produceret til \"the Climatic Risk Atlas of European Butterflies\". Vi "
+"takker Josef Settele for at stille dem til rådighed."
 
 msgid "Photo credits"
-msgstr ""
+msgstr "Billedkreditter"
 
 msgid "How to use the app"
-msgstr ""
+msgstr "Sådan bruger du appen"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1095,6 +1181,11 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
+"Du kan bruge denne app til at overvåge sommerfugle overalt i Europa. "
+"Resultaterne vil blive lagt op på \"the European Butterfly Monitoring "
+"database\" (eBMS-databasen) og brugt til at bestemme bestandsudviklingen af "
+"sommerfugle i hele Europa. For at bruge appen skal du først oprette en "
+"konto."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1104,9 +1195,16 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
+"Den foretrukne metode for observatører er at lave en 15-minuts Observation. "
+"Denne metode kan startes hvor som helst og når som helst, i så fald at "
+"sommerfuglene er aktive (dvs. når vejret er varmt og helst også solrigt). Du"
+" kan også bruge appen til at observere på dine etablerede "
+"sommerfugletransekter. Senere i 2020 vil appen også give dig mulighed for at"
+" indsende mere uformelle observationer. Punkterne nedenfor viser, hvordan du"
+" bruger de tilgængelige metoder i appen."
 
 msgid "How to do a 15-minute Count"
-msgstr ""
+msgstr "Sådan laver du en 15-minuts Observation"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1121,6 +1219,17 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
+"Dette er standardmetoden brugt i appen. Du skal blot tælle sommerfugle 15 "
+"minutter, enten i et afgrænset område, såsom en mark, mens du går eller mens"
+" du står stille og tæller forbi flyvende sommerfugle. Du behøver ikke selv "
+"at tegne din rute, da appen kan følge den selv, forudsat at du har GPS-"
+"placeringen slået til i dine indstillinger. Ellers bliver du nødt til at "
+"tegne det observerede område selv på kortet i appen. For at starte "
+"observationen skal du trykke på + knappen nederst på skærmen. Appen starter "
+"med nedtællingen af de 15 minutter, når du trykker, men tiden kan pauses når"
+" som helst (for eksempel mens du identificerer en sommerfugl) ved at trykke "
+"på pauseknappen. Til sidst ​​kan du gennemgå dine observationer for at "
+"sikre, at du har talt rigtigt, inden du indsender den."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1130,6 +1239,14 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
+"Tilføj de arter, du ser, ved at trykke på + TILFØJ knappen og begynd at "
+"skrive artens navn. Arterne fundet via søgningen vil vises som en listemenu."
+" Du kan enten bruge det videnskabelige eller danske navn for arten i din "
+"søgning. Vælg den art, du har set, for at tilføje den til din "
+"sommerfugleliste. Tryk på tallet til venstre for artsnavnet for at øge "
+"antallet af gange, du har set arten. Antallet af gange en art er observeret,"
+" kan også noteres til sidst i din observation. Du kan også tilføje billeder "
+"og kommentarer til dine enkelte observationer."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1138,9 +1255,15 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
+"Når du er færdig med din 15-minuts observation og har tjekket, at de "
+"noterede arter og antal er korrekte, skal du trykke på UPLOAD-knappen for at"
+" indsende din observation. Dette trin er vigtigt, da det sikrer, at dine "
+"data opbevares beskyttet i eBMS-databasen. En version af observationen vil "
+"blive gemt på din enhed og på din onlinekonto, for at du kan gennemse den i "
+"fremtiden."
 
 msgid "How to record along an existing transect"
-msgstr ""
+msgstr "Sådan laver du observationer langs et eksisterende transekt"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1151,6 +1274,14 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
+"Du kan også bruge appen til at indsende observationer, mens du går langs et "
+"eksisterende sommerfugletransekt. Da de er lavet af landets officielle "
+"sommerfugleovervågningsordninger, er det bedst at de udføres af erfarne "
+"observatører. Observationer langs eksisterende transekter i appen kræver, at"
+" din konto allerede er knyttet til en transektopsætning i eBMS-systemet. "
+"Hvis der ikke er angivet nogle transekter, når du er logget ind på appen, "
+"bedes du kontakte din nationale koordinator (e-mail venligst {{helpEmail}} "
+"for at få vejledning)."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1165,9 +1296,21 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
+"For at starte med transektobservationen skal du holde + knappen nede "
+"(længere tryk) nederst på skærmen og vælge eBMS Transekt. Transekt-siden "
+"viser alle de oplysninger for observationen, der skal udfyldes. Først skal "
+"du vælge dine transekter (du skal være logget ind, og dine transektruter "
+"skal være knyttet til din brugerkonto). Når du har valgt dit transektområde,"
+" kan du udfylde de nødvendige vejroplysninger (f.eks. temperatur, "
+"vindhastighed osv.) og andre nødvendige oplysninger (f.eks. starttidspunkt) "
+"på Transekt-siden. Du tilføjer derefter en liste over sete arter og antallet"
+" optalt for hver transektsektion, på samme måde som for 15-minuts "
+"observationen. Når du har afsluttet dit Transekt og tjekket, at de sete "
+"arter og antal er korrekte, skal du trykke på AFSLUT-knappen for at indsende"
+" observationen."
 
 msgid "Survey section"
-msgstr ""
+msgstr "Observationssektionen"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1177,789 +1320,850 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
+"I denne fane, til højre for + knappen, kan du se dine VENTENDE "
+"observationer, der ikke er blevet indsendt, og de UPLOADEDE observationer, "
+"der er indsendt til eBMS-databasen. De ventende observationer kan sendes til"
+" databasen ved at klikke på Upload knappen. Du kan se artslisten for alle de"
+" uploadede observationer. Alle dine observationer kan også vises og "
+"redigeres på {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
-msgstr ""
+msgstr "eBMS hjemmesiden"
 
 msgid "App Settings"
-msgstr ""
+msgstr "Appindstillinger"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Brug kun dagflyvende natsværmere"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
+"Gå til applikationsindstillingerne for at ændre dit valgte sprog og land. "
+"Det valgte land er vigtigt, da det påvirker arterne vist i "
+"billedvejledningen, da du kun vil se dem, der forekommer i dit valgte land."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
+"Du kan også skifte til Træningstilstand, mens du stadig øver dig i at "
+"identificere sommerfugle."
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr ""
+msgstr "Slet sidste punkt"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr ""
+msgstr "Gem"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr ""
+msgstr "Ryd alt"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "Klik for at begynde at tegne."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "Klik for at forsætte med at tegne områdeformen."
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "Klik på det første punkt igen for at fastlåse områdeformen."
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "Klik for at begynde at tegne en streg."
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "Klik for at fortsætte med at tegne streger."
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "Klik på det første punkt igen for at afslutte streg. "
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr ""
+msgstr "Hiv i punkterne eller markørerne for redigere område."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr ""
+msgstr "Klik på annuller for a fortryde ændringerne."
 
 msgid "Map"
-msgstr ""
+msgstr "Kort"
 
 msgid "Today"
-msgstr ""
+msgstr "I dag"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "I går"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr ""
+"Denne observation er blevet indsendt og kan ikke længere redigeres i Appen."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr ""
+msgstr "Vælg andre observationsmuligheder fra nedenstående liste"
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
+"Masseupload alle afsluttede observationer. Dette inkluderer ikke  "
+"observationer klassificeret som 'udkast'."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr ""
+msgstr "Er du sikker på, at du vil uploade alle afsluttede observationer?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "Log venligst ind for at kunne uploade dine observationer."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Uploader {{count}} observation"
+msgstr[1] "Uploader {{count}} observationer"
 
 # Part of a page error
 msgid "Oops! Something went wrong."
-msgstr ""
+msgstr "Hov! Noget gik galt."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr ""
+msgstr "Dette er fejlhændelses-id'et: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr ""
+msgstr "Yderligere oplysninger"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr ""
+msgstr "Vejrforhold"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr ""
+msgstr "Vejrforhold"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr ""
+msgstr "Er du sikker på at du vil slette {{taxon}}?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
+"De aktuelle vejrforhold er indsat ved hjælp af OpenWeatherMap API "
+"vejrtjenesten."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr ""
+msgstr "Kopier arter"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr ""
+msgstr "Er du sikker på at du vil kopiere den forrige observations artsliste?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr ""
+msgstr "Beklager, der blev ikke fundet nogle arter at kopiere."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "Du har kopieret {{speciesCount}} arter."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr ""
+msgstr "Beklager, ingen tidligere observationer at kopiere artslisten fra."
 
 # Country name
 msgid "Armenia"
-msgstr ""
+msgstr "Armenien"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "Swipe mod venstre for at slette observationer."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
+"Tjek venligst at observationsområdet er vist korrekt før observationen "
+"indsendes."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr ""
+msgstr "Glem venligst ikke at uploade ventende observationer!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
+"Ingen afsluttede observationer.<br/><br/>Tryk på<4></4>for at tilføje."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "Tip: Find Hjælp"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
+"Besøg venligst Vejledningen <2></2> og Hjælpe <5></5> siderne før du "
+"begynder at bruge appen!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "Flere oplysninger"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "Tip: Tilføj arter"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
+"Du kan massekopiere en tidligere artsliste ved at holde Tilføj Art knappen "
+"nede i længere tid."
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "Skjul"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "Foretrukken metode"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "Alle Observationer"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
 msgstr ""
+"Repræsentativt billede af område hvor 15-minuts observationen blev udført"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Intet billede tilføjet."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Tryk på <1></1> for at tilføje."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "15-minuts Punktobservation"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Forekomster"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr ""
+msgstr "Tid"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Er du sikker på, at du vil slette denne forekomst?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Forstået"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Ingen uploadede observationer</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "Konto eksisterer allerede."
 
 # A survey label
 msgid "Details"
-msgstr ""
+msgstr "Detaljer"
 
 # A survey label
 msgid "Species Photo"
-msgstr ""
+msgstr "Artsbillede"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "Vælg livsstadie"
 
 # A survey label
 msgid "Weather"
-msgstr ""
+msgstr "Vejr"
 
 # A survey label
 msgid "Photo"
-msgstr ""
+msgstr "Billede"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Artsgrupper"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "Vælg venligst de artsgrupper du altid observerer."
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Sommerfugle"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Natsværmere"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Humlebier"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Guldsmede"
 
 # Alert label
 msgid "Warning"
-msgstr ""
+msgstr "Advarsel"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "Er du sikker på at du vil slukke for GPS-placeringen?"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "Sluk"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "Sammensæt"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "Arten eksisterer allerede"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
+"Er du sikker på, at du vil sammensætte denne artsliste med den eksisterende "
+"artsliste?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr ""
+msgstr "Vælg venligst din fokusart"
 
 # Moth survey label
 msgid "Date"
-msgstr ""
+msgstr "Dato"
 
 # Moth survey label
 msgid "Method"
-msgstr ""
+msgstr "Metode"
 
 # Context term
 msgid "Please select the medthod type"
-msgstr ""
+msgstr "Vælg venligst din metode"
 
 # Moth survey method type
 msgid "MV light"
-msgstr ""
+msgstr "Kviksølvlampe (MV lampe)"
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr ""
+msgstr "UV-lys"
 
 # Moth survey method type
 msgid "LED light"
-msgstr ""
+msgstr "LED-lys"
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr ""
+msgstr "Lysfælde"
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr ""
+msgstr "Dagobservation"
 
 # Moth survey method type
 msgid "Dusking"
-msgstr ""
+msgstr "Skumringsobservation"
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr ""
+msgstr "Tiltrækning via belyst vindue"
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr ""
+msgstr "Sukkerlokning"
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr ""
+msgstr "Vinlokning"
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr ""
+msgstr "Slagskærm"
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr ""
+msgstr "Feromonfælde"
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr ""
+msgstr "Anden metode (tilføj kommentar)"
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr ""
+msgstr "Metode ikke specificeret"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr ""
+msgstr "Observationsdetaljer"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr ""
+msgstr "Natsværmerfældeobservation"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr ""
+msgstr "Natsværmerobservation"
 
 # Moth survey divider label
 msgid "Species list"
-msgstr ""
+msgstr "Artsliste"
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr ""
+msgstr "Artsbestemmer"
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr ""
+msgstr "Natsværmerliste"
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr ""
+msgstr "Natsværmerbillede"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr ""
+msgstr "Indtast observatørens navn, hvis det er en anden."
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr ""
+msgstr "Observatørens navn"
 
 # Latitude
 msgid "Lat"
-msgstr ""
+msgstr "Breddegrad"
 
 # Longitude
 msgid "Long"
-msgstr ""
+msgstr "Længdegrad"
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr ""
+msgstr "Antal indeni"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr ""
+msgstr "Antal udenfor"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr ""
+msgstr "Natsværmerbilleder"
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr ""
+msgstr "Natsværmerfælder"
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr ""
+msgstr "Natsværmerfælde"
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
+"Du har ikke tilføjet nogle natsværmerfælder endnu. Lav en ved at besøge "
+"<2>hjemmesiden.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr ""
+msgstr "Forbind til internettet for at se kortet."
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr ""
+msgstr "Tilføj natsværmerfælde"
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
+"Du har kun en natsværmerfælde. Lav venligst en mere ved at besøge "
+"<2>hjemmesiden.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr ""
+msgstr "Identificerer ..."
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr ""
+msgstr "Ukendt"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Vis mere"
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr ""
+msgstr "Tilføj venligst et billede"
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr ""
+msgstr "Ukendt art"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr ""
+msgstr "<0>Advarsel</0> - vi kunne ikke bestemme denne art."
 
 # App settings title
 msgid "Surveying"
-msgstr ""
+msgstr "Observationer"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr ""
+msgstr "Natsværmerobservation (FORÅR)"
 
 # Survey name
 msgid "Moth Survey"
-msgstr ""
+msgstr "Natsværmerobservation"
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr ""
+msgstr "Natsværmerobservations-indstillinger"
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr ""
+msgstr "Brug billedgenkendelse"
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
 msgstr ""
+"Vi kan hjælpe dig med at identificere dine arter ved hjælp af vores "
+"billedgenkendelse. "
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Identificer"
 
 # Moth survey button label
 msgid "Identify All"
-msgstr ""
+msgstr "Identificer alle"
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr ""
+msgstr "Billedgenkendelse"
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
+"Billedgenkendelse er i øjeblikket <1>deaktiveret</1>. Gå til app "
+"<4>Indstillinger</4> for at aktivere billedgenkendelse."
 
 # Whats new message title
 msgid "What's New"
-msgstr ""
+msgstr "Nyheder"
 
 # Version 1.17 whats new message
 msgid "Added Polish and Romanian languages"
-msgstr ""
+msgstr "Polsk og Rumænsk er tilføjet som sprog"
 
 # Version 1.17 whats new message
 msgid "Added Moth trap location setup"
-msgstr ""
+msgstr "Natsværmerfældeplacerings opsætning tilføjet"
 
 # Version 1.17 whats new message
 msgid "Increase temperature range selection from -0 to +40"
-msgstr ""
+msgstr "Temperaturområde udvidet, vælg fra -0 til +40"
 
 # Version 1.17 whats new message
 msgid "Added a day-flying moths filter setting"
-msgstr ""
+msgstr "Dagnatsværmerfilter-indstilling tilføjet"
 
 # Version 1.17 whats new message
 msgid "Added +5 species count shortcut"
-msgstr ""
+msgstr "+5 genveje til antal arter tilføjet"
 
 # Version 1.17 whats new message
 msgid "Added species guide search and filters"
-msgstr ""
+msgstr "Artsvejledningssøgning og filtre tilføjet"
 
 # Version 1.17 whats new message
 msgid "Updated species common names"
-msgstr ""
+msgstr "Almene artsnavne opdateret"
 
 # Version 1.17 whats new message
 msgid "Added Catalan and Danish species common names"
-msgstr ""
+msgstr "Catalanske og danske artsnavne tilføjet"
 
 # Version 1.17 whats new message
 msgid "Added new survey fields"
-msgstr ""
+msgstr "Nye observationsmetoder tilføjet"
 
 # Version 1.17 whats new message
 msgid "Improved user reports"
-msgstr ""
+msgstr "Bruger rapporter forbedret"
 
 # Version 1.17 whats new message
 msgid "Updated UI design"
-msgstr ""
+msgstr "Brugergrænseflade design opdateret"
 
 # Version 1.17 whats new message
 msgid "Various bug fixes"
-msgstr ""
+msgstr "Diverse fejl fikset"
 
 # Version 1.17 whats new message
 msgid "Updated translations"
-msgstr ""
+msgstr "Oversættelser opdateret"
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "Gensend"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "Hov, det ligner at din e-mail ikke er verificeret endnu."
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "Skal vi gensende verifikationse-mailen?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Dine lokalitetstjenester (GPS) lader til at være deaktiveret. Du kan "
+"aktivere den i din enhedsindstillinger."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Lokalitetstjenester (GPS) er deaktiverede"
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Tilføj ny"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"Du har ikke nogle natsværmerfælder endnu. <1>Lav din første "
+"natsværmerfælde</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Natsværmerfælde"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Anden type"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Tilføj lampe"
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "Hvilken type fælde var det?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Ingen lamper tilføjet"
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "Hvilken type lampe er det?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "Hvilken type natsværmerfælde er det?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "LED-tragt fælde"
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Anden type tragtfælde"
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Fælde lavet med 2 lagener"
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Anden fældetype"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Lampe"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Lampedetaljer"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Antal"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Natsværmerfældenavn mangler"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Natsværmerfældenavn"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "Er du sikker på at du vil slette denne natsværmerfælde?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Yderligere lampedetaljer."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Tilføj venligst natsværmerfældeplacering og navn."
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "Uafsluttet"
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Vælg"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Observatører"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+"Angiv antallet af observatører, der hjælper med denne observation - inklusiv"
+" dig selv. "
 
 msgid "Network Error"
-msgstr ""
+msgstr "Forbindelsesfejl"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "Log venligst ind for at se din egen data rapport."
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "Dine top arter denne måned"
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "Dine top arter"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Sektionsbillede"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "Bruger ikke logget ind."
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
-msgstr ""
+msgstr "Vi tror at det {{probability}}% er en <3>{{taxon}}</3> art"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Advarsel</0> - Vi tror at det {{probability}}% er en <5>{{taxon}}</5> art"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr ""
+msgstr "Lamper"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
-msgstr ""
+msgstr "Er du sikker på at du vil slette denne lampe fra natsværmerfælden?"
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr ""
+msgstr "Fældetype skal udfyldes."
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "Velkommen ombord"
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
+"Tjek venligst din e-mail og klik på det sendte verifikationslink, inden du "
+"starter med at lave observationer."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr ""
+msgstr "Beklager, ingen arter blev fundet."
 
 msgid "Kenya"
+msgstr "Kenya"
+
+# GPS permission button label
+msgid "Deny"
+msgstr ""
+
+# GPS permission button label
+msgid "Accept"
+msgstr ""
+
+# GPS permission alert title
+msgid "Location permission"
+msgstr ""
+
+# GPS permission alert message
+msgid ""
+"To automatically set species locations and track your route, even if the "
+"device is locked. Allow the app to use your location."
 msgstr ""

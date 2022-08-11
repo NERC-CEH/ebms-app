@@ -2,14 +2,14 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
-# Marta Depetris, 2022
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
 # Federica Paradiso <fedediso94@gmail.com>, 2022
+# Marta Depetris, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2022\n"
+"Last-Translator: Marta Depetris, 2022\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -148,7 +148,7 @@ msgid "Slovenia"
 msgstr "Slovenia "
 
 msgid "Japan"
-msgstr ""
+msgstr "Giappone"
 
 msgid "Slovakia"
 msgstr "Slovacchia "
@@ -2158,7 +2158,25 @@ msgstr ""
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr ""
+msgstr "Scusa, nessuna specie trovata"
 
 msgid "Kenya"
+msgstr "Kenya"
+
+# GPS permission button label
+msgid "Deny"
+msgstr ""
+
+# GPS permission button label
+msgid "Accept"
+msgstr ""
+
+# GPS permission alert title
+msgid "Location permission"
+msgstr ""
+
+# GPS permission alert message
+msgid ""
+"To automatically set species locations and track your route, even if the "
+"device is locked. Allow the app to use your location."
 msgstr ""
