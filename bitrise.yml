@@ -47,6 +47,7 @@ workflows:
   deploy:
     steps:
       - npm@1:
+          run_if: enveq "BUILD_ONLY" ""
           title: Deploy to demo site
           inputs:
             - command: run deploy
@@ -66,11 +67,13 @@ workflows:
             - package_name: $BITRISE_PROJECT_NAME
             - service_account_json_key_path: $BITRISEIO_GOOGLE_SERVICE_KEY_URL
       - deploy-to-itunesconnect-application-loader@1:
+          run_if: enveq "BUILD_ONLY" ""
           inputs:
             - password: $ITUNES_CONNECT_PASS
             - app_password: $ITUNES_CONNECT_APP_PASS
             - itunescon_user: $ITUNES_CONNECT_USER
       - script@1:
+          run_if: enveq "BUILD_ONLY" ""
           title: Git Tag
           inputs:
             - content: |
