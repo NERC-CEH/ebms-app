@@ -56,7 +56,8 @@ export interface Survey {
     sample: typeof Sample,
     params?: any,
     surveyName?: any,
-    recorder?: string
+    recorder?: string,
+    hasGrantedGPS?: boolean
   ) => any;
   modifySubmission?: (submission: any, model: any) => any;
 }

@@ -195,7 +195,13 @@ const survey = {
     return null;
   },
 
-  create(AppSample, _, surveyId = survey.id, surveyName = survey.name) {
+  create(
+    AppSample,
+    _,
+    surveyId = survey.id,
+    surveyName = survey.name,
+    hasGPSPermission
+  ) {
     const sample = new AppSample({
       metadata: {
         survey_id: surveyId,
@@ -225,7 +231,9 @@ const survey = {
     }
 
     sample.attrs.surveyStartTime = sample.metadata.created_on; // this can't be done in defaults
-    sample.toggleGPStracking();
+    if (hasGPSPermission) {
+      sample.toggleGPStracking();
+    }
     sample.startVibrateCounter();
     sample.startMetOfficePull();
 
