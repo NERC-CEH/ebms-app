@@ -51,7 +51,7 @@ const survey = {
     app_version: appVersionAttr,
     date: dateAttr,
     surveyStartTime: surveyStartTimeAttr,
-    surveyEndime: surveyEndTimeAttr,
+    surveyEndTime: surveyEndTimeAttr,
     comment: commentAttr,
     temperature: temperatureAttr,
     cloud: cloudAttr,
