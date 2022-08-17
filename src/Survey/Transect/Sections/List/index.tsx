@@ -12,6 +12,8 @@ type Props = {
   sample: Sample;
 };
 
+const TWENTY_FOURTH_HOURS = 24 * 60 * 60 * 1000;
+
 const SectionListController: FC<Props> = ({ sample }) => {
   const checkUserStatus = useUserStatusCheck();
   const loader = useLoader();
@@ -54,7 +56,21 @@ const SectionListController: FC<Props> = ({ sample }) => {
   useEffect(() => {
     if (!appModel.attrs.transects.length && device.isOnline) {
       refreshUserTransects();
+      appModel.attrs.transectsRefreshTimestamp = new Date().getTime();
+      return;
     }
+
+    const lastSyncTime = appModel.attrs.transectsRefreshTimestamp;
+    if (!lastSyncTime) return;
+
+    const shouldSyncWait =
+      new Date().getTime() - lastSyncTime < TWENTY_FOURTH_HOURS;
+
+    const isTransectSelected = sample.attrs.location;
+    if (shouldSyncWait || isTransectSelected) return;
+
+    refreshUserTransects();
+    appModel.attrs.transectsRefreshTimestamp = new Date().getTime();
   }, []);
 
   const transect = sample.attrs.location;
