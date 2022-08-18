@@ -1,3 +1,7 @@
+## 1.17.2
+
+Small bug fixes.
+
 ## 1.17.1
 
 Fixed species guide maximum species count.
