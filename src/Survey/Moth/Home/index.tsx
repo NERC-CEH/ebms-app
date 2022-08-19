@@ -2,18 +2,19 @@
 /* eslint-disable camelcase */
 import { FC, useContext } from 'react';
 import Sample, { useValidateCheck } from 'models/sample';
+import { Capacitor } from '@capacitor/core';
 import Occurrence from 'models/occurrence';
 import appModel, { SurveyDraftKeys } from 'models/app';
 import CONFIG from 'common/config';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { getUnkownSpecies } from 'Survey/Moth/config';
-import { Page, Header, useAlert, useToast } from '@flumens';
+import { Page, Header, useAlert, useToast, captureImage } from '@flumens';
 import Media from 'models/media';
 import { useUserStatusCheck } from 'models/user';
-import ImageHelp from 'common/Components/PhotoPicker/imageUtils';
-import { IonButton, NavContext } from '@ionic/react';
-import { useTranslation, Trans as T } from 'react-i18next';
+import { IonButton, NavContext, isPlatform } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
+import { usePromptImageSource } from 'common/Components/PhotoPicker';
 import Main from './Main';
 import './styles.scss';
 
@@ -55,12 +56,13 @@ interface Props {
 
 const HomeController: FC<Props> = ({ sample }) => {
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
-  const { t } = useTranslation();
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
   const toast = useToast();
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
+
+  const promptImageSource = usePromptImageSource();
 
   const UNKNOWN_SPECIES = getUnkownSpecies();
 
@@ -175,36 +177,48 @@ const HomeController: FC<Props> = ({ sample }) => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
-    const promptOptions = {
-      promptLabelHeader: t('Choose a method to upload a photo'),
-      promptLabelPhoto: t('Gallery'),
-      promptLabelPicture: t('Camera'),
-      promptLabelCancel: t('Cancel'),
-    };
-    const photo = await ImageHelp.getImage(promptOptions);
-    if (!photo) return;
+    async function getImage() {
+      const shouldUseCamera = await promptImageSource();
+      const cancelled = shouldUseCamera === null;
+      if (cancelled) return [];
 
-    const dataDirPath = CONFIG.dataPath;
+      const images = await captureImage(
+        shouldUseCamera ? { camera: true } : { multiple: true }
+      );
+      if (!images.length) return [];
 
-    const image = await ImageHelp.getImageModel(Media, photo, dataDirPath);
+      const getImageModel = (image: any) => {
+        const imageModel = Media.getImageModel(
+          isPlatform('hybrid') ? Capacitor.convertFileSrc(image) : image,
+          CONFIG.dataPath
+        );
+
+        return imageModel;
+      };
+      const imageModels = images.map(getImageModel);
+      return Promise.all(imageModels);
+    }
+
+    const images = await getImage();
+    if (!images.length) return;
 
     const identifier = sample.attrs.recorder;
 
     const taxon = UNKNOWN_SPECIES;
 
-    const newOccurrence = surveyConfig.occ.create(
-      Occurrence,
-      taxon,
-      identifier,
-      image
-    );
+    images.forEach((imgModel: any) => {
+      const newOccurrence = surveyConfig.occ.create(
+        Occurrence,
+        taxon,
+        identifier,
+        imgModel
+      );
 
-    sample.occurrences.push(newOccurrence);
-    sample.save();
-
-    if (!useImageIdentifier) return;
-
-    onIdentifyOccurrence(newOccurrence);
+      sample.occurrences.push(newOccurrence);
+      sample.save();
+      if (!useImageIdentifier) return;
+      onIdentifyOccurrence(newOccurrence);
+    });
   };
 
   const trainingModeSubheader = isTraining && (

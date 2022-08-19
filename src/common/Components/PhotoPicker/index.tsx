@@ -1,7 +1,9 @@
 import { FC } from 'react';
-import { PhotoPicker, device } from '@flumens';
+import { PhotoPicker, captureImage, device } from '@flumens';
 import Sample from 'models/sample';
 import userModel from 'models/user';
+import { useIonActionSheet, isPlatform } from '@ionic/react';
+import { Capacitor } from '@capacitor/core';
 import Occurrence from 'models/occurrence';
 import { useTranslation } from 'react-i18next';
 import { observer } from 'mobx-react';
@@ -9,8 +11,27 @@ import Media from 'models/media';
 import config from 'common/config';
 import Gallery from './Components/Galery';
 import Image from './Components/Image';
-import utils from './imageUtils';
 import './styles.scss';
+
+export function usePromptImageSource() {
+  const { t } = useTranslation();
+  const [presentActionSheet] = useIonActionSheet();
+
+  const promptImageSource = (resolve: any) => {
+    presentActionSheet({
+      buttons: [
+        { text: t('Gallery'), handler: () => resolve(false) },
+        { text: t('Camera'), handler: () => resolve(true) },
+        { text: t('Cancel'), role: 'cancel', handler: () => resolve(null) },
+      ],
+      header: t('Choose a method to upload a photo'),
+    });
+  };
+  const promptImageSourceWrap = () =>
+    new Promise<boolean | null>(promptImageSource);
+
+  return promptImageSourceWrap;
+}
 
 type Props = {
   model: Sample | Occurrence;
@@ -18,37 +39,40 @@ type Props = {
 };
 
 const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
+  const promptImageSource = usePromptImageSource();
   const isUploaded = model.isUploaded();
-  const { t } = useTranslation();
 
   const isMothSurvey =
     model?.parent?.metadata?.survey === 'moth' ? true : undefined;
 
-  const promptOptions = {
-    promptLabelHeader: t('Choose a method to upload a photo'),
-    promptLabelPhoto: t('Gallery'),
-    promptLabelPicture: t('Camera'),
-    promptLabelCancel: t('Cancel'),
-  };
-
   async function getImage() {
-    const image = await utils.getImage(promptOptions);
+    const shouldUseCamera = await promptImageSource();
+    const cancelled = shouldUseCamera === null;
+    if (cancelled) return null;
 
-    if (!image) {
-      return null;
-    }
+    const images = await captureImage(
+      shouldUseCamera ? { camera: true } : { multiple: true }
+    );
+    if (!images.length) return null;
 
-    const imageModel = await utils.getImageModel(Media, image, config.dataPath);
+    const getImageModel = (image: any) => {
+      const imageModel: any = Media.getImageModel(
+        isPlatform('hybrid') ? Capacitor.convertFileSrc(image) : image,
+        config.dataPath
+      );
 
-    if (
-      isMothSurvey &&
-      useImageIdentifier &&
-      userModel.isLoggedIn() &&
-      device.isOnline
-    )
-      imageModel.identify();
+      if (
+        isMothSurvey &&
+        useImageIdentifier &&
+        userModel.isLoggedIn() &&
+        device.isOnline
+      )
+        imageModel.identify();
 
-    return imageModel;
+      return imageModel;
+    };
+    const imageModels = images.map(getImageModel);
+    return Promise.all(imageModels);
   }
 
   return (
