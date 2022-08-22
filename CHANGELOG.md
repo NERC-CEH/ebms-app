@@ -1,3 +1,7 @@
+## 1.18.0
+
+Added ability to select multiple photos from the gallery.
+
 ## 1.17.2
 
 Small bug fixes.
