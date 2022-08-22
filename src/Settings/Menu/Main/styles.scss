@@ -24,4 +24,23 @@
   ion-icon {
     font-size: 18px !important;
   }
+
+  .destructive-item {
+    ion-item ion-icon,
+    ion-item:not(.info-message) ion-label {
+      color: var(--ion-color-danger);
+    }
+  }
+}
+
+ion-alert .info-message.destructive-warning {
+  margin: 10px 0 !important;
+
+  ion-label {
+    margin-right: 0;
+  }
+
+  ion-icon {
+    padding: 0px 12px 0px 12px;
+  }
 }

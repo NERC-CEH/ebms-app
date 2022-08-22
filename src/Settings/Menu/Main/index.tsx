@@ -8,6 +8,7 @@ import {
   IonLabel,
 } from '@ionic/react';
 import {
+  warningOutline,
   arrowUndoOutline,
   flameOutline,
   schoolOutline,
@@ -16,6 +17,7 @@ import {
   shareOutline,
   paperPlaneOutline,
   addCircleOutline,
+  personRemoveOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import languages from 'common/config/languages';
@@ -26,6 +28,44 @@ import { Main, useAlert, InfoMessage, MenuAttrToggle } from '@flumens';
 import butterflyIcon from 'common/images/butterfly.svg';
 import mothIcon from 'common/images/moth.svg';
 import './styles.scss';
+
+function useUserDeleteDialog(deleteUser: any) {
+  const alert = useAlert();
+
+  const showUserDeleteDialog = () => {
+    alert({
+      header: 'Account delete',
+      message: (
+        <>
+          Are you sure you want to delete your account?
+          <InfoMessage
+            color="danger"
+            icon={warningOutline}
+            className="destructive-warning"
+          >
+            This will remove your account on the{' '}
+            <b>{{ url: config.backend.url }}</b> website. You will lose access
+            to any records that you have previously submitted using the app or
+            website.
+          </InfoMessage>
+        </>
+      ),
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+        },
+        {
+          text: 'Delete',
+          role: 'destructive',
+          handler: deleteUser,
+        },
+      ],
+    });
+  };
+
+  return showUserDeleteDialog;
+}
 
 function resetDialog(resetApp: any, alert: any) {
   alert({
@@ -85,6 +125,8 @@ type Props = {
   sendAnalytics: boolean;
   useDayFlyingMothsOnly: boolean;
   showCommonNamesInGuide: boolean;
+  isLoggedIn: boolean;
+  deleteUser: any;
   primarySurvey?: string;
   language?: string;
   country?: string;
@@ -94,6 +136,8 @@ type Props = {
 const MenuMain: FC<Props> = ({
   resetApp,
   onToggle,
+  isLoggedIn,
+  deleteUser,
   uploadAllSamples,
   useTraining,
   useExperiments,
@@ -106,6 +150,8 @@ const MenuMain: FC<Props> = ({
   useDayFlyingMothsOnly,
 }) => {
   const alert = useAlert();
+  const showUserDeleteDialog = useUserDeleteDialog(deleteUser);
+
   const primarySurveyLabel = surveys[primarySurvey as string].label;
 
   const onUseDayFlyingMothsOnly = (checked: boolean) =>
@@ -229,11 +275,32 @@ const MenuMain: FC<Props> = ({
           <InfoMessage color="medium">
             Share app crash data so we can make the app more reliable.
           </InfoMessage>
+        </div>
 
-          <IonItem id="app-reset-btn" onClick={onResetDialog}>
+        <div className="rounded destructive-item">
+          <IonItem onClick={onResetDialog}>
             <IonIcon icon={arrowUndoOutline} size="small" slot="start" />
-            <T>Reset</T>
+            <IonLabel>
+              <T>Reset</T>
+            </IonLabel>
           </IonItem>
+          <InfoMessage color="medium">
+            You can reset the app data to its default settings.
+          </InfoMessage>
+
+          {isLoggedIn && (
+            <>
+              <IonItem onClick={showUserDeleteDialog}>
+                <IonIcon icon={personRemoveOutline} size="small" slot="start" />
+                <IonLabel>
+                  <T>Delete account</T>
+                </IonLabel>
+              </IonItem>
+              <InfoMessage color="medium">
+                You can delete your user account from the system.
+              </InfoMessage>
+            </>
+          )}
         </div>
       </IonList>
 

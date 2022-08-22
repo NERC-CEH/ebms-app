@@ -2109,3 +2109,24 @@ msgstr "Location permission"
 # GPS permission alert message
 msgid "To automatically set species locations and track your route, even if the device is locked. Allow the app to use your location."
 msgstr "To automatically set species locations and track your route, even if the device is locked. Allow the app to use your location."
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr "You can reset the app data to its default settings."
+
+# Delete account 
+msgid "Delete account"
+msgstr "Delete account"
+
+# Delete account 
+msgid "You can delete your user account from the system."
+msgstr "You can delete your user account from the system."
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "Account delete"
+
+# Delete account alert message
+# Context term 
+msgid "This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website."
+msgstr "This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website."

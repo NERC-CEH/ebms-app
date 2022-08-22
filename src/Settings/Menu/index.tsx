@@ -1,13 +1,37 @@
-import { FC } from 'react';
-import { isPlatform } from '@ionic/react';
+import { FC, useContext } from 'react';
+import { isPlatform, NavContext } from '@ionic/react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { Page, Header, useToast } from '@flumens';
+import { Page, Header, useToast, useLoader } from '@flumens';
 import appModel, { Attrs } from 'models/app';
 import userModel from 'models/user';
 import { useTranslation } from 'react-i18next';
 import savedSamples from 'models/collections/samples';
 import locations from 'models/collections/locations';
 import Main from './Main';
+
+const useDeleteUser = () => {
+  const toast = useToast();
+  const loader = useLoader();
+  const { goBack } = useContext(NavContext);
+
+  const deleteUser = async () => {
+    console.log('Settings:Menu:Controller: deleting the user!');
+
+    await loader.show('Please wait...');
+
+    try {
+      await userModel.delete();
+      goBack();
+      toast.success('Done');
+    } catch (err: any) {
+      toast.error(err);
+    }
+
+    loader.hide();
+  };
+
+  return deleteUser;
+};
 
 async function resetApp(toast: any) {
   console.log('Settings:Menu:Controller: resetting the application!');
@@ -54,6 +78,8 @@ const Container: FC = () => {
   const toast = useToast();
   const { t } = useTranslation();
 
+  const deleteUser = useDeleteUser();
+
   const {
     useTraining,
     useExperiments,
@@ -73,6 +99,8 @@ const Container: FC = () => {
     <Page id="settings-menu">
       <Header title="Settings" />
       <Main
+        isLoggedIn={userModel.isLoggedIn()}
+        deleteUser={deleteUser}
         useTraining={useTraining}
         useDayFlyingMothsOnly={useDayFlyingMothsOnly}
         useExperiments={useExperiments}
