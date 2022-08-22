@@ -4,13 +4,13 @@
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
 # Eva Monteiro <evasmonteiro@gmail.com>, 2021
-# Ricardo Silva Ramirez, 2022
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
+# Ricardo Silva Ramirez, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022\n"
+"Last-Translator: Ricardo Silva Ramirez, 2022\n"
 "Language-Team: Portuguese (Portugal) (https://www.transifex.com/ceh/teams/95441/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -149,7 +149,7 @@ msgid "Slovenia"
 msgstr "Eslovénia"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japão"
 
 msgid "Slovakia"
 msgstr "Eslováquia"
@@ -324,6 +324,8 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Tem a certeza que pretende fazer logout?<br/><br/>Os seus <4>registos "
+"submetidos e pendentes não serão eliminados </4> deste dispositivo."
 
 msgid "Cancel"
 msgstr "Cancelar"
@@ -446,11 +448,11 @@ msgstr "Relatórios"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Nome da espécie ou filtrar"
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "família"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr ""
@@ -512,7 +514,7 @@ msgstr "Nota: vai permanecer na galeria."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr ""
+msgstr "Nenhuma foto adicionada.<br/>Pressione <3></3> para adicionar."
 
 msgid "Registration error:"
 msgstr "Erro de registo:"
@@ -527,7 +529,7 @@ msgstr ""
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Login efectuado com sucesso como: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
@@ -906,7 +908,7 @@ msgstr "Marque os novos registos como \"treino\" e exclua-os dos relatórios."
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "Mostrar nomes comuns no guia"
 
 msgid "Share App Analytics"
 msgstr "Partilhe as análises da App"
@@ -1338,7 +1340,7 @@ msgstr "Configurações da App"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Usar apenas traças que voam durante o dia"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1841,7 +1843,7 @@ msgstr "Desconhecido"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Mostrar mais"
 
 # Moth survey warning message
 msgid "Please add a photo"
@@ -1884,7 +1886,7 @@ msgstr ""
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Identificar"
 
 # Moth survey button label
 msgid "Identify All"
@@ -1908,11 +1910,11 @@ msgstr "O que há de novo"
 
 # Version 1.17 whats new message
 msgid "Added Polish and Romanian languages"
-msgstr ""
+msgstr "Adicionados os idiomas polaco e romeno."
 
 # Version 1.17 whats new message
 msgid "Added Moth trap location setup"
-msgstr ""
+msgstr "Adicionadas definições de localização para a armadilha de traças."
 
 # Version 1.17 whats new message
 msgid "Increase temperature range selection from -0 to +40"
@@ -1960,7 +1962,7 @@ msgstr ""
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "Reenviar"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
@@ -2146,15 +2148,15 @@ msgid "Sorry, no species were found."
 msgstr ""
 
 msgid "Kenya"
-msgstr ""
+msgstr "Quénia"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Recusar"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Aceitar"
 
 # GPS permission alert title
 msgid "Location permission"

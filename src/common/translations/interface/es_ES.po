@@ -1075,7 +1075,7 @@ msgid "Section"
 msgstr "Sección"
 
 msgid "Reliability"
-msgstr "Veracidad"
+msgstr "Fiabilidad"
 
 msgid "Please specify the reliability of the section count."
 msgstr "Especifique la veracidad en los recuentos por secciones"
@@ -2168,18 +2168,21 @@ msgstr "Kenia"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Rechazar"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Aceptar"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Permiso de localización"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
+"Para establecer automáticamente las ubicaciones de las especies y seguir su "
+"ruta, incluso si el dispositivo está bloqueado. Permite que la app utilice "
+"tu ubicación."
