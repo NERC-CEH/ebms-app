@@ -123,7 +123,6 @@ type Props = {
   useTraining: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;
-  useDayFlyingMothsOnly: boolean;
   showCommonNamesInGuide: boolean;
   isLoggedIn: boolean;
   deleteUser: any;
@@ -165,7 +164,9 @@ const MenuMain: FC<Props> = ({
   const onSubmitAllDialog = () =>
     uploadAllSamplesDialog(uploadAllSamples, alert);
 
-  const isUsingMothsGroup = speciesGroups?.includes('moths');
+  const nonDayFlyingMoths = (group: any) => group !== 'day-flying-moths';
+  const speciesGroupExcludedDayFlyingMothGroup =
+    speciesGroups?.filter(nonDayFlyingMoths);
 
   return (
     <Main className="app-settings">
@@ -198,7 +199,9 @@ const MenuMain: FC<Props> = ({
               <T>Species groups</T>
             </IonLabel>
             <IonIcon icon={butterflyIcon} size="small" slot="start" />
-            <IonLabel slot="end">{speciesGroups?.length}</IonLabel>
+            <IonLabel slot="end">
+              {speciesGroupExcludedDayFlyingMothGroup?.length}
+            </IonLabel>
           </IonItem>
 
           <IonItem routerLink="/settings/moth-survey" detail>
