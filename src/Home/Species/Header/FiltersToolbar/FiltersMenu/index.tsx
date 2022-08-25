@@ -30,7 +30,7 @@ const Menu: FC<Props> = ({ searchPhrase, values, onSelect, options }) => {
       !values[type] || !values[type]?.includes(value);
     const matchesSearchString = (value: string) =>
       searchPhrase
-        ? value.toLowerCase().includes(searchPhrase.toLowerCase())
+        ? value?.toLowerCase().includes(searchPhrase.toLowerCase())
         : true;
 
     filterOptions = filterOptions

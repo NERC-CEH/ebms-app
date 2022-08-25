@@ -74,7 +74,7 @@ const Species: FC = () => {
         filters={filters}
         filterOptions={filterOptions}
       />
-      <Main searchPhrase={searchPhrase} filters={filters.family} />
+      <Main searchPhrase={searchPhrase} filters={[...filters.family]} />
     </Page>
   );
 };
