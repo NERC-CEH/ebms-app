@@ -14,7 +14,7 @@ import App from './App';
 
 console.log('🚩 App starting.');
 
-setupIonicReact({ hardwareBackButton: false, swipeBackEnabled: false });
+setupIonicReact({ swipeBackEnabled: false });
 
 mobxConfig({ enforceActions: 'never' });
 

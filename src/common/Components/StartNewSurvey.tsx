@@ -1,6 +1,6 @@
 import { useEffect, useContext } from 'react';
 import { NavContext, isPlatform } from '@ionic/react';
-import { useAlert } from '@flumens';
+import { useAlert, useDisableBackButton } from '@flumens';
 import appModel, { SurveyDraftKeys } from 'models/app';
 import userModel from 'models/user';
 import Sample from 'models/sample';
@@ -135,6 +135,8 @@ const useShowGPSPermissionDialog = () => {
 function StartNewSurvey({ survey }: Props): null {
   const context = useContext(NavContext);
   const alert = useAlert();
+
+  useDisableBackButton();
 
   const showGPSPermissionDialog = useShowGPSPermissionDialog();
 

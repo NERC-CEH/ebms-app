@@ -198,7 +198,13 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
 
       <IonModal isOpen={!!species} backdropDismiss={false}>
         <ModalHeader title={t('Species')} onClose={hideSpeciesModal} />
-        {species && <SpeciesProfile species={species} country={country} />}
+        {species && (
+          <SpeciesProfile
+            species={species}
+            country={country}
+            hideSpeciesModal={hideSpeciesModal}
+          />
+        )}
       </IonModal>
     </Main>
   );

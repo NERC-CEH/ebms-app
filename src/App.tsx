@@ -39,10 +39,10 @@ const App = () => {
 
   return (
     <IonApp lang={language}>
-      <IonReactRouter>
-        <LanguageCountrySelectRequired appModel={appModel}>
-          <SplashScreenRequired>
-            <WhatsNewDialog appModel={appModel} />
+      <LanguageCountrySelectRequired appModel={appModel}>
+        <SplashScreenRequired>
+          <WhatsNewDialog appModel={appModel} />
+          <IonReactRouter>
             <IonRouterOutlet id="main">
               <Route exact path="/" component={HomeRedirect} />
               <Route path="/home" component={Home} />
@@ -52,9 +52,9 @@ const App = () => {
               {Location}
               {Settings}
             </IonRouterOutlet>
-          </SplashScreenRequired>
-        </LanguageCountrySelectRequired>
-      </IonReactRouter>
+          </IonReactRouter>
+        </SplashScreenRequired>
+      </LanguageCountrySelectRequired>
     </IonApp>
   );
 };

@@ -22,7 +22,7 @@ const ResetController: FC<Props> = ({ userModel }) => {
   const loader = useLoader();
 
   const onSuccess = () => {
-    context.navigate('/home/menu', 'root');
+    context.navigate('/home/menu', 'root', 'replace');
   };
 
   async function onSubmit(details: Details) {

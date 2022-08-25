@@ -1,15 +1,16 @@
-import * as React from 'react';
+/* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
+
+import { useState } from 'react';
 import {
   IonCardHeader,
   IonCardSubtitle,
   IonCardContent,
   IonCardTitle,
-  IonLifeCycleContext,
   IonChip,
 } from '@ionic/react';
-import PropTypes from 'prop-types';
-import { Main, Gallery } from '@flumens';
+import { Main, useOnBackButton } from '@flumens';
 import { Trans as T } from 'react-i18next';
+import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
 
 const statuses = {
@@ -21,98 +22,64 @@ const statuses = {
   Ex: 'Regionally extinct',
 };
 
-class Component extends React.Component {
-  static contextType = IonLifeCycleContext;
+const SpeciesProfile = ({ species, country, hideSpeciesModal }) => {
+  const [showGallery, setGallery] = useState(false);
 
-  state = {
-    showGallery: false,
-  };
+  const closeGallery = () => setGallery(false);
 
-  constructor(props) {
-    super(props);
+  const openGallery = () => setGallery(true);
 
-    this.map = React.createRef();
-    this.speciesMap = React.createRef();
-  }
+  useOnBackButton(hideSpeciesModal);
 
-  closeGallery = () => this.setState({ showGallery: false });
+  const status = statuses[species.abundance[country]];
 
-  openGallery = () => this.setState({ showGallery: 1 });
-
-  getFullScreenPhotoViewer = () => {
-    const { species } = this.props;
-    const { showGallery } = this.state;
-
-    const items = [
-      {
-        src: `/images/${species.image}_image.jpg`,
-        footer: `© ${species.image_copyright}`,
-      },
-    ];
-
-    return (
-      <Gallery
-        isOpen={showGallery}
-        items={items}
-        onClose={this.closeGallery}
-        mode="md"
+  /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
+  return (
+    <>
+      <FullScreenPhotoViewer
+        species={species}
+        onClose={closeGallery}
+        showGallery={showGallery}
       />
-    );
-  };
 
-  render() {
-    const { species, country } = this.props;
+      <Main id="species-profile" className="ion-padding">
+        <img
+          src={`/images/${species.image}_image.jpg`}
+          alt="species"
+          onClick={openGallery}
+        />
 
-    const status = statuses[species.abundance[country]];
+        <IonCardHeader>
+          <IonCardTitle>{t(species.taxon, null, true)}</IonCardTitle>
+          <IonCardSubtitle>
+            <i>{species.taxon}</i>
+          </IonCardSubtitle>
+        </IonCardHeader>
 
-    /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
-    return (
-      <>
-        {this.getFullScreenPhotoViewer()}
-
-        <Main id="species-profile" class="ion-padding">
-          <img
-            src={`/images/${species.image}_image.jpg`}
-            alt="species"
-            onClick={this.openGallery}
-          />
-
-          <IonCardHeader>
-            <IonCardTitle>{t(species.taxon, null, true)}</IonCardTitle>
-            <IonCardSubtitle>
-              <i>{species.taxon}</i>
-            </IonCardSubtitle>
-          </IonCardHeader>
-
-          {status && (
-            <IonCardContent>
-              <h3 className="species-label inline-label">
-                <T>Status</T>:
-              </h3>
-              <span>
-                <IonChip className="species-status" outline>
-                  <T>{status}</T>
-                </IonChip>
-              </span>
-            </IonCardContent>
-          )}
-
+        {status && (
           <IonCardContent>
-            <h3 className="species-label">
-              <T>Description</T>:
+            <h3 className="species-label inline-label">
+              <T>Status</T>:
             </h3>
-            {t(species.descriptionKey, true)}
+            <span>
+              <IonChip className="species-status" outline>
+                <T>{status}</T>
+              </IonChip>
+            </span>
           </IonCardContent>
-        </Main>
-      </>
-    );
-    /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
-  }
-}
+        )}
 
-Component.propTypes = {
-  species: PropTypes.object.isRequired,
-  country: PropTypes.string.isRequired,
+        <IonCardContent>
+          <h3 className="species-label">
+            <T>Description</T>:
+          </h3>
+
+          {t(species.descriptionKey, true)}
+        </IonCardContent>
+      </Main>
+    </>
+  );
 };
+/* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 
-export default Component;
+export default SpeciesProfile;

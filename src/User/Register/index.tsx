@@ -24,7 +24,7 @@ const RegisterContainer: FC<Props> = ({ userModel }) => {
   const loader = useLoader();
 
   const onSuccess = () => {
-    context.navigate('/home/user-surveys', 'root');
+    context.navigate('/home/user-surveys', 'root', 'replace');
   };
 
   async function onRegister(details: Details) {
