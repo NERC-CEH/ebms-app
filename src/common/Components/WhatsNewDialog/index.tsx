@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import appModelTypes from 'common/models/app';
-import { IonBackdrop, IonIcon, IonButton } from '@ionic/react';
+import { IonBackdrop, IonIcon, IonButton, isPlatform } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import appLogo from 'common/images/icon.svg';
 import ExpandableList from 'Components/ExpandableList';
@@ -13,21 +13,21 @@ type Props = {
 };
 
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
-  const { showWhatsNewInVersion117, appSession } = appModel.attrs;
+  const { showWhatsNewInVersion118, appSession } = appModel.attrs;
 
   const skipShowingDialogOnFreshInstall = () => {
     const isFreshInstall = appSession <= 1;
     if (isFreshInstall) {
-      appModel.attrs.showWhatsNewInVersion117 = false; // eslint-disable-line
+      appModel.attrs.showWhatsNewInVersion118 = false; // eslint-disable-line
       appModel.save();
     }
   };
   useEffect(skipShowingDialogOnFreshInstall, [appSession]);
 
-  if (!showWhatsNewInVersion117) return null;
+  if (!showWhatsNewInVersion118) return null;
 
   const closeDialog = () => {
-    appModel.attrs.showWhatsNewInVersion117 = false; // eslint-disable-line
+    appModel.attrs.showWhatsNewInVersion118 = false; // eslint-disable-line
     appModel.save();
   };
 
@@ -51,44 +51,39 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
         <div className="message">
           <ul>
             <ExpandableList>
+              {isPlatform('android') && (
+                <li>
+                  <summary>
+                    <T>Enabled Android back button</T>
+                  </summary>
+                </li>
+              )}
               <li>
-                <T>Improved user reports</T>
+                <summary>
+                  <T> Added user account delete option</T>
+                </summary>
               </li>
               <li>
-                <T>Added species guide search and filters</T>
+                <summary>
+                  <T>
+                    Added ability to select multiple photos from the gallery
+                  </T>
+                </summary>
               </li>
               <li>
-                <T>Added Moth trap location setup</T>
+                <summary>
+                  <T>Move day-flying moths option to species group page</T>
+                </summary>
               </li>
               <li>
-                <T>Added new survey fields</T>
+                <summary>
+                  <T>Various bug fixes</T>
+                </summary>
               </li>
               <li>
-                <T>Increase temperature range selection from -0 to +40</T>
-              </li>
-              <li>
-                <T>Added +5 species count shortcut</T>
-              </li>
-              <li>
-                <T>Added a day-flying moths filter setting</T>
-              </li>
-              <li>
-                <T>Updated species common names</T>
-              </li>
-              <li>
-                <T>Added Polish and Romanian languages</T>
-              </li>
-              <li>
-                <T>Added Catalan and Danish species common names</T>
-              </li>
-              <li>
-                <T>Updated UI design</T>
-              </li>
-              <li>
-                <T>Various bug fixes</T>
-              </li>
-              <li>
-                <T>Updated translations</T>
+                <summary>
+                  <T>Updated translations</T>
+                </summary>
               </li>
             </ExpandableList>
           </ul>

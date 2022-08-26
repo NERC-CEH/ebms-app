@@ -1860,55 +1860,27 @@ msgstr ""
 msgid "What's New"
 msgstr "What's New"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr "Added Polish and Romanian languages"
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr "Enabled Android back button"
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr "Added Moth trap location setup"
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr " Added user account delete option"
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
-msgstr "Increase temperature range selection from -0 to +40"
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
+msgstr "Added ability to select multiple photos from the gallery"
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
-msgstr "Added a day-flying moths filter setting"
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
+msgstr "Move day-flying moths option to species group page"
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr "Added +5 species count shortcut"
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr "Added species guide search and filters"
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr "Updated species common names"
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr "Added Catalan and Danish species common names"
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr "Added new survey fields"
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr "Improved user reports"
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr "Updated UI design"
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
 msgstr "Various bug fixes"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
 msgstr "Updated translations"
 
@@ -2129,3 +2101,5 @@ msgstr "Account delete"
 # Delete account alert message
 msgid "Are you sure you want to delete your account?<1>This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website.</1>"
 msgstr "Are you sure you want to delete your account?<1>This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website.</1>"
+
+
