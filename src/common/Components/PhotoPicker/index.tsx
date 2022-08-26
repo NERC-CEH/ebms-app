@@ -55,8 +55,8 @@ const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
     );
     if (!images.length) return null;
 
-    const getImageModel = (image: any) => {
-      const imageModel: any = Media.getImageModel(
+    const getImageModel = async (image: any) => {
+      const imageModel: any = await Media.getImageModel(
         isPlatform('hybrid') ? Capacitor.convertFileSrc(image) : image,
         config.dataPath
       );
