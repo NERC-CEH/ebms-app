@@ -28,7 +28,7 @@ const LoginController: FC<Props> = ({ userModel }) => {
       skipTranslation: true,
     });
 
-    context.navigate('/home/user-surveys', 'root', 'replace');
+    context.navigate('/home/user-surveys', 'root');
   };
 
   async function onLogin(details: Details) {

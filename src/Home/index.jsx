@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useContext, useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import {
   IonTabs,
@@ -10,6 +10,7 @@ import {
   IonFabButton,
   IonFabList,
   NavContext,
+  useIonRouter,
 } from '@ionic/react';
 import {
   personOutline,
@@ -20,6 +21,8 @@ import {
 import savedSamples from 'models/collections/samples';
 import appModel from 'models/app';
 import userModel from 'models/user';
+import { App as AppPlugin } from '@capacitor/app';
+
 import LongPressFabButton from 'Components/LongPressFabButton';
 import { Trans as T } from 'react-i18next';
 import PendingSurveysBadge from 'common/Components/PendingSurveysBadge';
@@ -41,105 +44,118 @@ const SpeciesTab = () => (
   />
 );
 
-class Component extends React.Component {
-  static contextType = NavContext;
+const HomeController = () => {
+  const { navigate } = useContext(NavContext);
+  const ionRouter = useIonRouter();
 
-  navigateToPrimarySurvey = () => {
+  const exitApp = () => {
+    const onExitApp = () => !ionRouter.canGoBack() && AppPlugin.exitApp();
+
+    // eslint-disable-next-line @getify/proper-arrows/name
+    document.addEventListener('ionBackButton', ev =>
+      ev.detail.register(-1, onExitApp)
+    );
+
+    const removeEventListener = () =>
+      document.addEventListener('ionBackButton', onExitApp);
+    return removeEventListener;
+  };
+  useEffect(exitApp, []);
+
+  const navigateToPrimarySurvey = () => {
     const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
 
-    this.context.navigate(`/survey/${primarySurveyName}`);
+    navigate(`/survey/${primarySurveyName}`);
   };
 
-  render() {
-    const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
+  const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
 
-    const getOtherSurveys = () => {
-      const notPrimarySurvey = ({ name }) => name !== primarySurveyName;
-      const notDeprecatedSurvey = ({ deprecated }) => !deprecated;
-      const otherSurveys = Object.values(surveys)
-        .filter(notPrimarySurvey)
-        .filter(notDeprecatedSurvey);
+  const getOtherSurveys = () => {
+    const notPrimarySurvey = ({ name }) => name !== primarySurveyName;
+    const notDeprecatedSurvey = ({ deprecated }) => !deprecated;
+    const otherSurveys = Object.values(surveys)
+      .filter(notPrimarySurvey)
+      .filter(notDeprecatedSurvey);
 
-      // eslint-disable-next-line
-      const getSurveyButton = ({ name, label }) => {
-        if (!surveys[name]) return null; // for backwards compatible
+    // eslint-disable-next-line
+    const getSurveyButton = ({ name, label }) => {
+      if (!surveys[name]) return null; // for backwards compatible
 
-        return (
-          <IonFabButton
-            class="fab-button-label"
-            routerLink={`/survey/${name}`}
-            key={name}
-          >
-            <IonLabel>
-              <T>{label}</T>
-            </IonLabel>
-          </IonFabButton>
-        );
-      };
-
-      return otherSurveys.map(getSurveyButton);
+      return (
+        <IonFabButton
+          class="fab-button-label"
+          routerLink={`/survey/${name}`}
+          key={name}
+        >
+          <IonLabel>
+            <T>{label}</T>
+          </IonLabel>
+        </IonFabButton>
+      );
     };
 
-    return (
-      <>
-        <IonTabs>
-          <IonRouterOutlet>
-            <Redirect exact path="/home" to="/home/species" />
-            <Route path="/home/species" render={SpeciesTab} exact />
-            <Route path="/home/report" render={ReportTab} exact />
-            <Route path="/home/user-surveys" render={UserSurveysTab} exact />
-            <Route path="/home/menu" component={Menu} exact />
-          </IonRouterOutlet>
+    return otherSurveys.map(getSurveyButton);
+  };
 
-          <IonTabBar slot="bottom">
-            <IonTabButton tab="home/species" href="/home/species">
-              <IonIcon icon={butterflyIcon} />
-              <IonLabel>
-                <T>Guide</T>
-              </IonLabel>
-            </IonTabButton>
+  return (
+    <>
+      <IonTabs>
+        <IonRouterOutlet>
+          <Redirect exact path="/home" to="/home/species" />
+          <Route path="/home/species" render={SpeciesTab} exact />
+          <Route path="/home/report" render={ReportTab} exact />
+          <Route path="/home/user-surveys" render={UserSurveysTab} exact />
+          <Route path="/home/menu" component={Menu} exact />
+        </IonRouterOutlet>
 
-            <IonTabButton tab="home/report" href="/home/report">
-              <IonIcon icon={statsChartOutline} />
-              <IonLabel>
-                <T>Reports</T>
-              </IonLabel>
-            </IonTabButton>
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="home/species" href="/home/species">
+            <IonIcon icon={butterflyIcon} />
+            <IonLabel>
+              <T>Guide</T>
+            </IonLabel>
+          </IonTabButton>
 
-            <IonTabButton>
-              <LongPressFabButton
-                onClick={this.navigateToPrimarySurvey}
-                icon={addOutline}
-              >
-                <IonFabList side="top">
-                  {getOtherSurveys()}
+          <IonTabButton tab="home/report" href="/home/report">
+            <IonIcon icon={statsChartOutline} />
+            <IonLabel>
+              <T>Reports</T>
+            </IonLabel>
+          </IonTabButton>
 
-                  <div className="long-press-surveys-label">
-                    <T>Click on other recording options from list below</T>
-                  </div>
-                </IonFabList>
-              </LongPressFabButton>
-            </IonTabButton>
+          <IonTabButton>
+            <LongPressFabButton
+              onClick={navigateToPrimarySurvey}
+              icon={addOutline}
+            >
+              <IonFabList side="top">
+                {getOtherSurveys()}
 
-            <IonTabButton tab="/home/user-surveys" href="/home/user-surveys">
-              <IonIcon icon={personOutline} />
-              <IonLabel>
-                <T>Surveys</T>
-              </IonLabel>
-              <PendingSurveysBadge savedSamples={savedSamples} />
-            </IonTabButton>
+                <div className="long-press-surveys-label">
+                  <T>Click on other recording options from list below</T>
+                </div>
+              </IonFabList>
+            </LongPressFabButton>
+          </IonTabButton>
 
-            <IonTabButton tab="menu" href="/home/menu">
-              <IonIcon icon={menuOutline} />
-              <IonLabel>
-                <T>Menu</T>
-              </IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
-      </>
-    );
-  }
-}
+          <IonTabButton tab="/home/user-surveys" href="/home/user-surveys">
+            <IonIcon icon={personOutline} />
+            <IonLabel>
+              <T>Surveys</T>
+            </IonLabel>
+            <PendingSurveysBadge savedSamples={savedSamples} />
+          </IonTabButton>
 
-export default Component;
+          <IonTabButton tab="menu" href="/home/menu">
+            <IonIcon icon={menuOutline} />
+            <IonLabel>
+              <T>Menu</T>
+            </IonLabel>
+          </IonTabButton>
+        </IonTabBar>
+      </IonTabs>
+    </>
+  );
+};
+
+export default HomeController;
