@@ -56,8 +56,14 @@ const speciesSurvey = merge({}, survey, {
     return null;
   },
 
-  create: (...args) =>
-    survey.create(...args, speciesSurvey.id, speciesSurvey.name),
+  create: (AppSample, _, _surveyID, __surveyName, hasGPSPermission) =>
+    survey.create(
+      AppSample,
+      _,
+      speciesSurvey.id,
+      speciesSurvey.name,
+      hasGPSPermission
+    ),
 });
 
 export default speciesSurvey;
