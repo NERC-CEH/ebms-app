@@ -36,17 +36,17 @@ const SpeciesGroups: FC<Props> = ({ appModel }) => {
           model.attrs.speciesGroups = newValues;
           model.save();
         },
-        inputProps: (model: AppModel) => {
-          const nonDayFlyingMoths = (group: any) =>
-            group.value !== 'day-flying-moths';
+        get(model) {
+          const speciesGroups = [...model.attrs.speciesGroups];
 
+          return speciesGroups;
+        },
+        inputProps: (model: AppModel) => {
           const groupOption = ([value, { label }]: any) => ({
             value,
             label,
           });
-          const options: any = Object.entries(groups)
-            .map(groupOption)
-            .filter(nonDayFlyingMoths);
+          const options: any = Object.entries(groups).map(groupOption);
 
           if (model.attrs.speciesGroups?.includes('moths')) {
             options.splice(2, 0, {

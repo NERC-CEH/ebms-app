@@ -78,7 +78,7 @@ class index extends Component {
 
     searchPhrase = searchPhrase.toLowerCase();
 
-    const getGroupId = group => groups[group].id;
+    const getGroupId = group => groups[group]?.id;
     // search
     const informalGroups = speciesGroups && speciesGroups.map(getGroupId);
     const searchResults = await SpeciesSearchEngine.search(searchPhrase, {
