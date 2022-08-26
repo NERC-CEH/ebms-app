@@ -37,17 +37,20 @@ function useUserDeleteDialog(deleteUser: any) {
       header: 'Account delete',
       message: (
         <>
-          Are you sure you want to delete your account?
-          <InfoMessage
-            color="danger"
-            icon={warningOutline}
-            className="destructive-warning"
-          >
-            This will remove your account on the{' '}
-            <b>{{ url: config.backend.url }}</b> website. You will lose access
-            to any records that you have previously submitted using the app or
-            website.
-          </InfoMessage>
+          <T>
+            Are you sure you want to delete your account?
+            <InfoMessage
+              color="danger"
+              icon={warningOutline}
+              className="destructive-warning"
+              skipTranslation
+            >
+              This will remove your account on the{' '}
+              <b>{{ url: config.backend.url }}</b> website. You will lose access
+              to any records that you have previously submitted using the app or
+              website.
+            </InfoMessage>
+          </T>
         </>
       ),
       buttons: [

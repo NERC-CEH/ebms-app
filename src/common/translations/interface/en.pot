@@ -2127,6 +2127,5 @@ msgid "Account delete"
 msgstr "Account delete"
 
 # Delete account alert message
-# Context term 
-msgid "This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website."
-msgstr "This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website."
+msgid "Are you sure you want to delete your account?<1>This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website.</1>"
+msgstr "Are you sure you want to delete your account?<1>This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website.</1>"
