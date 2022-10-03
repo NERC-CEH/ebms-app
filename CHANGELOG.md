@@ -3,6 +3,7 @@
 Enabled Android back button.
 Added user account delete option.
 Added ability to select multiple photos from the gallery.
+Updated the species dictionary.
 Various bug fixes.
 
 ## 1.17.2
