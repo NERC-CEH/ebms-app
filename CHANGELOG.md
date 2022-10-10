@@ -1,3 +1,7 @@
+## 1.18.1
+
+Small bug fixes.
+
 ## 1.18.0
 
 Enabled Android back button.
