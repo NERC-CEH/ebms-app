@@ -47,6 +47,7 @@ export { default as MenuAttrItem } from '@flumens/ionic/dist/components/MenuAttr
 export { default as MenuAttrItemFromModel } from '@flumens/ionic/dist/components/MenuAttrItemFromModel';
 export { default as UserFeedbackRequest } from '@flumens/ionic/dist/components/UserFeedbackRequest';
 export { default as ModelLocationMap } from '@flumens/ionic/dist/components/ModelLocationMap';
+export { default as LongPressFabButton } from '@flumens/ionic/dist/components/LongPressFabButton';
 export { useToast, useAlert, useLoader } from '@flumens/ionic/dist/hooks';
 export * from '@flumens/ionic/dist/utils/validation';
 export * from '@flumens/ionic/dist/utils/image';
