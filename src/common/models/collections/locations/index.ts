@@ -124,8 +124,7 @@ export class Locations extends Collection<Location> {
   };
 
   resetDefaults = () => {
-    const destroyLocation = (location: Location): Promise<Location> =>
-      location.destroy();
+    const destroyLocation = (location: Location) => location.destroy();
     const destroyAllLocations = this.map(destroyLocation);
     return Promise.all(destroyAllLocations);
   };

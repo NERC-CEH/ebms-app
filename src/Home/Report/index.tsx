@@ -1,13 +1,18 @@
 import { FC, useState, useEffect } from 'react';
-import appModel from 'models/app';
-import userModel from 'models/user';
+import { AppModel } from 'models/app';
+import { UserModel } from 'models/user';
 import { Page, device, useToast } from '@flumens';
 import { observer } from 'mobx-react';
 import { fetchSpeciesReport, fetchUserSpeciesReport } from './services';
 import Main from './Main';
 import './styles.scss';
 
-const Report: FC = () => {
+type Props = {
+  appModel: AppModel;
+  userModel: UserModel;
+};
+
+const Report: FC<Props> = ({ appModel, userModel }) => {
   const [species, setSpecies] = useState<any>([]);
   const [userSpecies, setUserSpecies] = useState<any>([]);
   const [userSpeciesLastMonth, setUserSpeciesLastMonth] = useState<any>([]);
@@ -27,6 +32,7 @@ const Report: FC = () => {
     const requests = [];
 
     let promise = fetchSpeciesReport().then(data => {
+      // eslint-disable-next-line no-param-reassign
       appModel.speciesReport = [...data] as any;
       setSpecies([...appModel.speciesReport]);
     });

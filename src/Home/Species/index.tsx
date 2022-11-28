@@ -2,7 +2,7 @@ import { FC, useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Page, useAlert } from '@flumens';
 import { IonIcon } from '@ionic/react';
-import appModel from 'models/app';
+import { AppModel } from 'models/app';
 import { bookOutline, helpBuoyOutline } from 'ionicons/icons';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
 import { Trans as T } from 'react-i18next';
@@ -13,7 +13,11 @@ const getFamily = (sp: SpeciesType) => sp.family;
 const families = speciesProfiles.map(getFamily);
 const filterOptions = [{ type: 'family', values: [...new Set(families)] }];
 
-const Species: FC = () => {
+type Props = {
+  appModel: AppModel;
+};
+
+const Species: FC<Props> = ({ appModel }) => {
   const [searchPhrase, setSearchPhrase] = useState('');
   const alert = useAlert();
 
@@ -41,6 +45,7 @@ const Species: FC = () => {
         },
       ],
     });
+    // eslint-disable-next-line no-param-reassign
     appModel.attrs.showGuideHelpTip = false;
     appModel.save();
   };
