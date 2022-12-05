@@ -219,7 +219,7 @@ msgid "Surname"
 msgstr "名字"
 
 msgid "I agree to"
-msgstr ""
+msgstr "これに賛成します。"
 
 msgid "Terms and Conditions"
 msgstr "利用規約"
@@ -243,7 +243,7 @@ msgid "Training Mode"
 msgstr "トレーニングモード"
 
 msgid "Experimental Features"
-msgstr ""
+msgstr "試験的な機能"
 
 msgid "Welcome"
 msgstr "ようこそ"
@@ -255,20 +255,20 @@ msgid "TOP RECORDERS"
 msgstr "トップの記録者"
 
 msgid "Top Species from all timed counts"
-msgstr ""
+msgstr "すべてのタイムカウントのトップ種"
 
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 msgid "Menu"
 msgstr "メニュー"
 
 msgid "App"
-msgstr ""
+msgstr "アプリケーション"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
-msgstr ""
+msgstr "このアプリの作成に協力してくれたすべての人々に感謝します。"
 
 msgid "Home"
 msgstr "ホーム"
@@ -283,19 +283,19 @@ msgid "Offline"
 msgstr "オフライン"
 
 msgid "Sorry, looks like you're offline."
-msgstr ""
+msgstr "すみません。あなたはオフラインになっているようです。"
 
 msgid "OK"
 msgstr "OK"
 
 msgid "Sorry"
-msgstr ""
+msgstr "すみません"
 
 msgid "Please wait..."
 msgstr "少しお待ちください..."
 
 msgid "name is a required field"
-msgstr ""
+msgstr "名前は必須項目です"
 
 msgid "password is a required field"
 msgstr "パスワードは必須項目です"
@@ -304,7 +304,7 @@ msgid "Login error:"
 msgstr "ログインエラー"
 
 msgid "Failed to fetch"
-msgstr ""
+msgstr "取得に失敗しました"
 
 msgid "Incorrect password or email."
 msgstr "誤ったパスワードまたはEメール"
@@ -323,18 +323,18 @@ msgid "Cancel"
 msgstr "キャンセル"
 
 msgid "Welcome aboard!"
-msgstr ""
+msgstr "ようこそ！"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
-msgstr ""
+msgstr "記録を送信する前に、電子メールを確認し、確認リンクをクリックしてください。"
 
 msgid "OK, got it"
-msgstr ""
+msgstr "はい、わかりました"
 
 msgid "Please fill in"
-msgstr ""
+msgstr "入力してください"
 
 msgid "Area Count"
 msgstr "エリアカウント"
@@ -348,7 +348,7 @@ msgstr "場所"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "場所が必要です"
 
 # GPS permissions message
 msgid ""
@@ -358,11 +358,11 @@ msgstr "このアプリには現在地が必要ですが、権限がありませ
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "バッテリーの消耗を防ぐためにキャンセルします。"
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "現在地の使用。"
 
 msgid "Add"
 msgstr "追加"
@@ -382,28 +382,28 @@ msgstr "種の名前"
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
-msgstr ""
+msgstr "種をすばやく検索するには、さまざまなショートカットを使用できます。 たとえば、"
 
 msgid "you can type in the search bar"
-msgstr ""
+msgstr "検索バーに入力できます"
 
 msgid "Edit Occurrence"
-msgstr ""
+msgstr "オカレンスの編集"
 
 msgid "Count"
-msgstr ""
+msgstr "カウント"
 
 msgid "Comment"
 msgstr "コメント"
 
 msgid "Draft"
-msgstr ""
+msgstr "下書き"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr ""
+msgstr "以前の調査の下書きが存在します。続行しますか?"
 
 msgid "Discard"
-msgstr ""
+msgstr "破棄する"
 
 msgid "Continue"
 msgstr "続ける"
@@ -434,17 +434,17 @@ msgstr "レポート"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "種の名前またはフィルター"
 
 # Species filter label
 msgid "family"
 msgstr "科"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr ""
+msgstr "申し訳ありませんが、現在利用できる報告データはありません。"
 
 msgid "Are you sure you want to delete this survey?"
-msgstr ""
+msgstr "この調査を削除してもよろしいですか?"
 
 msgid "No finished surveys"
 msgstr "終了した調査がない"
@@ -456,7 +456,7 @@ msgid "Selected area"
 msgstr "選択されたエリア"
 
 msgid "Use survey create time"
-msgstr ""
+msgstr "調査作成時間を使用する"
 
 msgid "Use survey finish time"
 msgstr "調査の終了時間を使用する"
@@ -465,10 +465,10 @@ msgid "species"
 msgstr "種"
 
 msgid "Done"
-msgstr ""
+msgstr "終わり"
 
 msgid "Time's up!"
-msgstr ""
+msgstr "時間切れ！"
 
 msgid "Survey incomplete"
 msgstr "調査が不完全"
@@ -483,7 +483,7 @@ msgid "Please add survey area information."
 msgstr "調査エリアの情報を追加してください。"
 
 msgid "Choose a method to upload a photo"
-msgstr ""
+msgstr "写真のアップロード方法を選択する"
 
 msgid "Gallery"
 msgstr "ギャラリー"
@@ -492,14 +492,14 @@ msgid "Camera"
 msgstr "カメラ"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr ""
+msgstr "この写真を削除してもよろしいですか？"
 
 msgid "Note: it will remain in the gallery."
-msgstr ""
+msgstr "注：ギャラリーに残ります。"
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr ""
+msgstr "写真が追加されていません。<br/><3></3>をクリックして追加してください。"
 
 msgid "Registration error:"
 msgstr "登録エラー"
@@ -509,7 +509,7 @@ msgid "Incorrect password or email"
 msgstr "誤ったパスワードまたはEメール"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
+msgstr "メールアドレスを入力して、パスワードのリセットをリクエストしてください。"
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
@@ -517,19 +517,21 @@ msgstr "{{email}}のメールでログインできました"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "ユーザーがアクティブ化されていないか、ブロックされています。"
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"<1>{{userEmail}} "
+"</1>の電子メールはまだ確認されていないようです。<3><0>電子メールを更新して</0><1>再送してください</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
-msgstr ""
+msgstr "新しい確認メールが正常に送信されました。 電子メールを受信していない場合は、スパムまたは迷惑メール フォルダを確認してください。"
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
@@ -541,7 +543,7 @@ msgstr "このメールアドレスはすでに登録されています"
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "認識されない電子メール アドレス。"
 
 msgid "email is not valid"
 msgstr "Eメールが無効です"
@@ -550,53 +552,53 @@ msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
-msgstr ""
+msgstr "チョウは魅惑的な昆虫ですが、EUの草原チョウ類指標の図が示すように、ヨーロッパの多くの地域で減少しています。"
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
-msgstr ""
+msgstr "このアプリによって収集されたデータは、チョウとその生息地の状態に関する知識を大幅に向上させることができます。"
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
-msgstr ""
+msgstr "チョウの状態を評価するために現在利用可能な記録の密度が示すように、ヨーロッパの多くの地域でチョウの個体数に関する情報が不足しています。"
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
-msgstr ""
+msgstr "これらの魅力的な昆虫の保全をサポートするための研究に、高品質のデータを提供することはかつてないほど容易になりました。 すぐに始められます"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
-msgstr ""
+msgstr "このアプリは、ヨーロッパのチョウの評価(ABLE)プロジェクトの一環として開発されました。"
 
 msgid "The ABLE project is a partnership between"
-msgstr ""
+msgstr "ABLE プロジェクトは、パートナーシップ"
 
 msgid "and"
-msgstr ""
+msgstr "と"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
-msgstr ""
+msgstr "ABLEは、2019-2020年までの最初の2年間、欧州連合環境局からのサービス契約によって資金提供されています。"
 
 msgid "ABLE partners:"
-msgstr ""
+msgstr "ABLEプロジェクトのパートナー:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
-msgstr ""
+msgstr "このアプリは、ヨーロッパチョウ類モニタリングスキーム(eBMS) にデータを提供します。"
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr ""
+msgstr "2019 年 6 月には、次の組織がeBMSのパートナーになっています。"
 
 msgid "Not enough data yet"
-msgstr ""
+msgstr "まだ十分なデータがありません"
 
 msgid "How to start a survey"
 msgstr "調査の始め方"
@@ -629,12 +631,12 @@ msgstr "リスト内の種名の横にある番号をタップすると、種数
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
-msgstr ""
+msgstr "調査リストから種を削除するには、左にスワイプして削除ボタンをクリックします。"
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
-msgstr ""
+msgstr "種が出現に関する情報をさらに追加するには、種のエントリーをクリックして開きます。"
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr "記録を終了させるために、エリアの詳細を記入します。"
@@ -642,7 +644,7 @@ msgstr "記録を終了させるために、エリアの詳細を記入します
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
-msgstr ""
+msgstr "終了したら、ヘッダーの「完了」ボタンを押して送信を設定します。"
 
 msgid "Searching for species"
 msgstr "種を探す"
@@ -656,31 +658,32 @@ msgstr ""
 " たとえば、"
 
 msgid "Sync. with the website"
-msgstr ""
+msgstr "ウェブサイトと同期。"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr ""
+msgstr "保存した調査はすべてアカウントページに表示されます。"
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
+"デフォルトでは、調査は「ドラフト」モードになっており、ヘッダーの「終了」ボタンがクリックされるまでデータベースに送信されません。良好なネットワーク接続が確立されると、アプリケーションはレコードを送信しようとします。"
 
 msgid "If the record has reached the database a red"
-msgstr ""
+msgstr "レコードがデータベースに到達した場合は赤"
 
 msgid "(set for submission & saved locally) will become green"
-msgstr ""
+msgstr "（提出用に設定され、ローカルに保存されます）は緑色になります"
 
 msgid "synced to the database"
-msgstr ""
+msgstr "データベースに同期"
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
-msgstr ""
+msgstr "記録がバックグラウンドで自動的に同期されるようにするには、ウェブサイトアカウントにサインインし、ネットワークに接続する必要があります。"
 
 msgid "Delete a record"
 msgstr "記録を削除"
@@ -688,7 +691,7 @@ msgstr "記録を削除"
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
-msgstr ""
+msgstr "レコードを削除するには、アカウント ページで左にスワイプし、削除ボタンをクリックします。"
 
 msgid "User"
 msgstr "ユーザー"
@@ -699,27 +702,27 @@ msgstr "サインイン/アウトまたは登録"
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
-msgstr ""
+msgstr "ログインするには、メインメニュー ページを開き、「ログイン」または「登録」ボタンをクリックして、指示に従います。"
 
 msgid "To logout, visit the main menu page and click the logout button."
-msgstr ""
+msgstr "ログアウトするには、メインメニューページにアクセスし、ログアウトボタンをクリックします。"
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
-msgstr ""
+msgstr "新しいアカウントを登録したら、電子メールに送信された確認リンクをクリックして、電子メールアドレスを確認する必要があります。"
 
 msgid "Other"
-msgstr ""
+msgstr "他のもの"
 
 msgid "Reset the application"
-msgstr ""
+msgstr "アプリケーションをリセットする"
 
 msgid "Go to the application settings page"
 msgstr "アプリケーションの設定ページに行く"
 
 msgid "and click on the Reset"
-msgstr ""
+msgstr "そしてリセットをクリック"
 
 msgid "button"
 msgstr "ボタン"
@@ -728,7 +731,7 @@ msgid "No species found with this name"
 msgstr "この名前の種は見つかりません"
 
 msgid "Allow Sample Edit"
-msgstr ""
+msgstr "サンプル編集を許可"
 
 msgid "Upload"
 msgstr "アップロード"
@@ -736,18 +739,18 @@ msgstr "アップロード"
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
-msgstr ""
+msgstr "このアプリは、チョウのモニタリングと保全をサポートします。 下の + ボタンをクリックして、チョウの個体数を数え始めます。"
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
-msgstr ""
+msgstr "今後数ヵ月で新機能が追加されるため、このアプリには多くの拡張機能が追加されます。"
 
 msgid "Are you sure you want to reset the application to its initial state?"
-msgstr ""
+msgstr "アプリケーションを初期状態にリセットしてもよろしいですか?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr ""
+msgstr "これにより、ローカルに保存されているすべてのアプリデータが消去されます。"
 
 msgid "Sweden"
 msgstr "スウェーデン"
@@ -759,68 +762,69 @@ msgid "Pending"
 msgstr "保留"
 
 msgid "Uploaded"
-msgstr ""
+msgstr "アップロード済み"
 
 msgid "No finished pending surveys"
 msgstr "保留中の調査は完了していない"
 
 msgid "No uploaded surveys"
-msgstr ""
+msgstr "アップロードされた調査はありません"
 
 msgid "Enjoying the app?"
-msgstr ""
+msgstr "アプリを楽しんでいますか？"
 
 msgid "Not really"
-msgstr ""
+msgstr "そうでもない"
 
 msgid "Yes!"
 msgstr "はい！"
 
 msgid "Would you mind giving us some feedback?"
-msgstr ""
+msgstr "フィードバックをいただけませんか？"
 
 msgid "No, thanks"
-msgstr ""
+msgstr "結構です"
 
 msgid "OK, sure"
-msgstr ""
+msgstr "わかりました"
 
 msgid "How about a rating on the App Store then?"
-msgstr ""
+msgstr "では、App Store での評価はどうでしょうか。"
 
 msgid "How about a rating on the Play Store then?"
-msgstr ""
+msgstr "Playストアでの評価はどうですか？"
 
 msgid "Icons made by"
-msgstr ""
+msgstr "アイコン作成者"
 
 msgid "from"
-msgstr ""
+msgstr "から"
 
 msgid "We've sent an email to you"
-msgstr ""
+msgstr "メールを送信しました"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
+"メール内のリンクをクリックして、パスワードをリセットします。メールが見つからない場合は、迷惑メール、スパム、その他のフォルダーなどを確認してください。"
 
 msgid "App Development"
-msgstr ""
+msgstr "アプリ開発"
 
 msgid "This app was hand crafted with love by"
-msgstr ""
+msgstr "このアプリは、愛情を込めて手作りされました"
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
-msgstr ""
+msgstr "環境科学とコミュニティに焦点を当てた解決の構築に優れた技術コンサルタントです。"
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr ""
+msgstr "提案やフィードバックについては、お気軽に"
 
 msgid "contact us"
-msgstr ""
+msgstr "お問い合わせ"
 
 msgid "Language"
 msgstr "言語"
@@ -829,20 +833,20 @@ msgid "Country"
 msgstr "国名"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
-msgstr ""
+msgstr "新しいレコードを「トレーニング」としてマークし、すべてのレポートから除外します。"
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "一般名をガイドに表示する"
 
 msgid "Share App Analytics"
-msgstr ""
+msgstr "アプリ分析を共有する"
 
 msgid "Share app crash data so we can make the app more reliable."
-msgstr ""
+msgstr "アプリのクラッシュ データを共有して、アプリの信頼性を高めます。"
 
 msgid "Save Draft"
-msgstr ""
+msgstr "下書きを保存"
 
 msgid "Stage"
 msgstr "生育段階"
@@ -892,7 +896,7 @@ msgid "Sections"
 msgstr "セクション数"
 
 msgid "No transect"
-msgstr ""
+msgstr "トランセクトなし"
 
 msgid "Start Time"
 msgstr "開始時間"
@@ -916,7 +920,7 @@ msgid "Recorder"
 msgstr "記録者"
 
 msgid "Refresh"
-msgstr ""
+msgstr "きれいにする"
 
 msgid "Please select your transect first."
 msgstr "あなたのトランセクト調査地を最初に選択してください。"
@@ -988,7 +992,7 @@ msgid "Transects"
 msgstr "トランセクト調査地"
 
 msgid "Transect list was successfully updated."
-msgstr ""
+msgstr "トランセクトのリストが正常に更新されました。"
 
 msgid "Section"
 msgstr "セクション"
@@ -1012,7 +1016,7 @@ msgid "15min Count"
 msgstr "15分カウント"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "15 分間の単一種カウント"
 
 msgid "eBMS Transect"
 msgstr "eBMSトランセクト"
@@ -1021,7 +1025,7 @@ msgid "Please add any extra info about this record."
 msgstr "この記録に関する追加情報を追加してください。"
 
 msgid "Enter more information here..."
-msgstr ""
+msgstr "ここに詳細情報を入力してください..."
 
 msgid "Please specify the person responsible for identifying the species."
 msgstr "種の識別を行った調査責任者を入力してください。"
@@ -1033,7 +1037,7 @@ msgid "Please specify the % of cloud cover."
 msgstr "雲のカバー率を記入してください。"
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr ""
+msgstr "トランセクト調査がありません。リストを更新してみてください。"
 
 msgid "Wind speed info is missing"
 msgstr "風力の情報が欠けています"
@@ -1052,48 +1056,52 @@ msgid ""
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
+"このガイドはまだ開発中です。 選択した国の {{totalSpeciesCountryCount}} 種のうち "
+"{{countrySpeciesCount}} 種のチョウをカバーしています。"
 
 msgid "Status"
-msgstr ""
+msgstr "状態"
 
 msgid "Absent"
-msgstr ""
+msgstr "不在"
 
 msgid "Present"
-msgstr ""
+msgstr "現在"
 
 msgid "Possibly present"
-msgstr ""
+msgstr "存在する可能性がある"
 
 msgid "Regular migrant"
-msgstr ""
+msgstr "定期的な移住者"
 
 msgid "Irregular vagrant"
-msgstr ""
+msgstr "不規則な放浪"
 
 msgid "Regionally extinct"
-msgstr ""
+msgstr "地域的に絶滅した"
 
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 msgid "Counts"
 msgstr "カウント"
 
 msgid "Species descriptions"
-msgstr ""
+msgstr "種の説明"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
+"ガイドの一部として含まれる種の説明は、ヨーロッパチョウ類気候リスクアトラス用に作成されたものに基づいています。 これらを提供してくれた Josef "
+"Settele氏に感謝します。"
 
 msgid "Photo credits"
-msgstr ""
+msgstr "写真のクレジット"
 
 msgid "How to use the app"
-msgstr ""
+msgstr "アプリの使い方"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1144,6 +1152,8 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
+"+ ADD "
+"ボタンを押して表示する種を追加し、種名の入力を開始します。種の選択は、ドロップダウンメニューとして表示されます。学名または英語名を使用できます。観察した種を選択し、チョウのリストに表示されたら、左側の数字をタッチして、観察した数のカウントを増やします。この番号を確認して、最後に修正することもできます。必要に応じて写真を追加し、コメントを追加することもできます。"
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1206,7 +1216,7 @@ msgstr "アプリケーションの設定"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "昼行性のガのみ利用"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1222,60 +1232,60 @@ msgstr "チョウの種の識別をまだ学んでいるときには、トレー
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr ""
+msgstr "最後のポイントを削除"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr ""
+msgstr "すべてをクリア"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr ""
+msgstr "クリックして図の描画を開始します。"
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr ""
+msgstr "クリックして図の描画を続行します。"
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr ""
+msgstr "この図を閉じるには、最初の点をクリックしてください。"
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr ""
+msgstr "クリックして線の描画を開始します。"
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr ""
+msgstr "クリックして線を引き続けます。"
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr ""
+msgstr "最後の点をクリックして線の描画を終了します。"
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr ""
+msgstr "ハンドルまたはマーカーをドラッグして、図を編集します。"
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr ""
+msgstr "変更を元に戻すには、キャンセルをクリックします。"
 
 msgid "Map"
-msgstr ""
+msgstr "地図"
 
 msgid "Today"
-msgstr ""
+msgstr "今日"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "昨日"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
-msgstr ""
+msgstr "この記録は提出されており、このアプリ内で編集することはできません。"
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
@@ -1285,7 +1295,7 @@ msgstr "下記のリストから他の記録オプションをクリックする
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
-msgstr ""
+msgstr "完了したすべての記録を一括アップロードします。 これには、「下書き」段階の記録は含まれません。"
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
@@ -1293,20 +1303,20 @@ msgstr "終了したすべての記録をアップロードしてもよろしい
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr ""
+msgstr "ログインをしてから、記録をアップロードしてください。"
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] ""
+msgstr[0] "{{count}} 件の記録をアップロードしています"
 
 # Part of a page error
 msgid "Oops! Something went wrong."
-msgstr ""
+msgstr "エラーが発生しました。"
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr ""
+msgstr "これはエラー イベント ID です: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
@@ -1328,7 +1338,7 @@ msgstr "この種を本当に削除してもよろしいですか？"
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
-msgstr ""
+msgstr "現在の気象値は、OpenWeatherMap API 気象サービスを使用して事前に入力されています。"
 
 # Species list copy functionality
 msgid "Copy species"
@@ -1348,7 +1358,7 @@ msgstr "すみません、コピーする種がみつかりませんでした。
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr ""
+msgstr "{{speciesCount}}種のコピーに成功しました。"
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
@@ -1360,7 +1370,7 @@ msgstr "アルメニア"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr ""
+msgstr "調査を削除するには、左にスワイプします。"
 
 # 15min survey additional information note after survey is finished
 msgid ""
@@ -1378,59 +1388,59 @@ msgstr "保留中の調査は完了していません。ボタンを押して追
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr ""
+msgstr "ヒント：ヘルプを探す"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
-msgstr ""
+msgstr "アプリを使用する前に、ガイド<2></2>とヘルプページ<5></5>をご覧ください。"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr ""
+msgstr "追加情報"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr ""
+msgstr "ヒント：種の追加"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
-msgstr ""
+msgstr "「種の追加」ボタンを長押しすると、以前の種リストを一括コピーできます。"
 
 # Button
 msgid "Hide"
-msgstr ""
+msgstr "隠れる"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr ""
+msgstr "一次調査"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr ""
+msgstr "すべての調査"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr ""
+msgstr "15分のカウントが行われた場所の代表的な写真"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "写真は追加されていません。"
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "<1></1>を押して追加します。"
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "正確な15分カウント"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "出現"
 
 # part of Precise 15min count survey
 msgid "Time"
@@ -1438,23 +1448,23 @@ msgstr "時間"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "この出現記録を削除してもよろしいですか?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "今それを得ました"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>アップロードされた調査はありません</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "アカウントはすでに存在しています。"
 
 # A survey label
 msgid "Details"
-msgstr ""
+msgstr "詳細"
 
 # A survey label
 msgid "Species Photo"
@@ -1462,7 +1472,7 @@ msgstr "種の写真"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "生活史の段階を選ぶ"
 
 # A survey label
 msgid "Weather"
@@ -1478,7 +1488,7 @@ msgstr "種のグループ"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "いつも記録している種群を選択してください。"
 
 # Part of species group selection
 msgid "Butterflies"
@@ -1502,31 +1512,31 @@ msgstr "警告"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "GPS追跡をオフにしてもよろしいですか？"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "消す"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "統合する"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "種はすでに存在します"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
-msgstr ""
+msgstr "このリストを既存の種のリストに統合してもよろしいですか?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr ""
+msgstr "対象種を追加してください"
 
 # Moth survey label
 msgid "Date"
-msgstr ""
+msgstr "日付"
 
 # Moth survey label
 msgid "Method"
@@ -1534,15 +1544,15 @@ msgstr "方法"
 
 # Context term
 msgid "Please select the medthod type"
-msgstr ""
+msgstr "方法の種類を選択してください"
 
 # Moth survey method type
 msgid "MV light"
-msgstr ""
+msgstr "MVライト"
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr ""
+msgstr "化学光"
 
 # Moth survey method type
 msgid "LED light"
@@ -1554,19 +1564,19 @@ msgstr "ライトトラップ"
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr ""
+msgstr "昼間の観察"
 
 # Moth survey method type
 msgid "Dusking"
-msgstr ""
+msgstr "夕暮れ"
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr ""
+msgstr "明かりのついた窓に惹かれて"
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr ""
+msgstr "砂糖づけ"
 
 # Moth survey method type
 msgid "Wine roping"
@@ -1574,7 +1584,7 @@ msgstr ""
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr ""
+msgstr "叩き台"
 
 # Moth survey method type
 msgid "Pheromone trap"
@@ -1582,11 +1592,11 @@ msgstr "フェロモントラップ"
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr ""
+msgstr "その他の方法 (コメントを追加)"
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr ""
+msgstr "未記録"
 
 # Moth survey details header title
 msgid "Survey Details"
@@ -1606,7 +1616,7 @@ msgstr "種のリスト"
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr ""
+msgstr "識別機能"
 
 # Moth survey divider label
 msgid "Moths list"
@@ -1618,7 +1628,7 @@ msgstr "ガの写真"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr ""
+msgstr "記録者の名前が異なる場合は入力します。"
 
 # Identifier attribute placeholder
 msgid "Recorder name"
@@ -1626,19 +1636,19 @@ msgstr "記録者の氏名"
 
 # Latitude
 msgid "Lat"
-msgstr ""
+msgstr "緯度"
 
 # Longitude
 msgid "Long"
-msgstr ""
+msgstr "経度"
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr ""
+msgstr "内側で数える"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr ""
+msgstr "外側で数える"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
@@ -1660,7 +1670,7 @@ msgstr "あなたはガのトラップを何も作っていません。一つ作
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr ""
+msgstr "地図を表示するには、インターネットに接続してください。"
 
 # Moth survey validation message
 msgid "Please add the moth trap"
@@ -1673,35 +1683,35 @@ msgstr "あなたは一つのみガのトラップを持っています。もっ
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr ""
+msgstr "識別中..."
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr ""
+msgstr "不明"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "もっと表示する"
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr ""
+msgstr "写真を追加してください"
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr ""
+msgstr "不明な種"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr ""
+msgstr "<0>警告</0> - この種を特定できませんでした。"
 
 # App settings title
 msgid "Surveying"
-msgstr ""
+msgstr "調査"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr ""
+msgstr "ガの調査（春）"
 
 # Survey name
 msgid "Moth Survey"
@@ -1709,28 +1719,28 @@ msgstr "ガの調査"
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr ""
+msgstr "ガの調査のセッティング"
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr ""
+msgstr "画像識別を使用する"
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
-msgstr ""
+msgstr "種の画像分類が種を識別するのに役立ちます。"
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "識別する"
 
 # Moth survey button label
 msgid "Identify All"
-msgstr ""
+msgstr "すべてを識別"
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr ""
+msgstr "画像による識別"
 
 # Moth survey image classifier disabled info message
 msgid ""
@@ -1740,85 +1750,57 @@ msgstr "画像の分類が現在無効になっています。アプリの設定
 
 # Whats new message title
 msgid "What's New"
-msgstr ""
+msgstr "新着情報"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr "アンドロイドの戻るボタンを有効にしました"
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr "ガのトラップの場所のセットアップを追加する"
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr "ユーザー アカウントの削除オプションを追加"
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
-msgstr "気温の選択の幅（0℃から40℃）を増やす"
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
+msgstr "ギャラリーから複数の写真を選択する機能を追加"
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
+msgstr "昼行性のガのオプションを種グループのページに移動させる"
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr ""
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
-msgstr ""
+msgstr "さまざまなバグの修正"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
-msgstr ""
+msgstr "更新された翻訳"
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "再送する"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "メールアドレスがまだ確認されていないようです。"
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "確認メールを再送信する必要がありますか?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
-msgstr ""
+msgstr "位置情報サービス (GPS) が無効になっているようです。 デバイスの設定で有効にすることができます。"
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "位置情報サービス (GPS) が無効になっています"
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "新しいものを追加"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
@@ -1830,7 +1812,7 @@ msgstr "ガのトラップ"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "タイプ"
 
 # Moth trap survey
 msgid "Other type"
@@ -1906,7 +1888,7 @@ msgstr "ガのトラップの場所と名前を追加してください。"
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "不完全です"
 
 # Moth trap survey
 msgid "Select"
@@ -1920,14 +1902,14 @@ msgstr "記録者"
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
-msgstr ""
+msgstr "あなた自身も含めて、この記録に協力した人の記録者の数を入力してください。"
 
 msgid "Network Error"
 msgstr "ネットワークエラー"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "あなたのデータのレポートを見るためにログインしてください。"
 
 # Report label
 msgid "Your top species this month"
@@ -1943,17 +1925,17 @@ msgstr "セクションの写真"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "ユーザーがログインされていません。"
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
-msgstr ""
+msgstr "これは{{probability}}% の可能性で<3> {{taxon}} </3>であると考えます"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
-msgstr ""
+msgstr "<0>警告</0> -これは {{probability}}% の可能性で<5> {{taxon}} </5>であると考えます"
 
 # Divider label moth trap setup
 msgid "Lamps"
@@ -1969,13 +1951,13 @@ msgstr "トラップのタイプは必ず入力する項目です。"
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "ようこそ"
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
-msgstr ""
+msgstr "調査を開始する前に、電子メールを確認し、確認リンクをクリックしてください。"
 
 # Species guide search
 msgid "Sorry, no species were found."
@@ -1986,18 +1968,43 @@ msgstr "ケニア"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "拒否します"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "受け入れます"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "場所の許可"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
+msgstr "デバイスがロックされている場合でも、種の位置を自動的に設定し、ルートを追跡します。 アプリが位置情報を使用することを許可します。"
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr "デフォルトでセットされたアプリケーションのデータをリセットできます。"
+
+# Delete account
+msgid "Delete account"
+msgstr "アカウントの削除"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "あなたのアカウントをこのシステムから削除できます。"
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "アカウントの削除"
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
 msgstr ""
+"アカウントを削除してもよろしいですか?　<1>これにより、<2>{{url}} "
+"</2>ウェブサイトのアカウントが削除されます。アプリまたはウェブサイトを使用して以前に提出した記録にはアクセスできなくなります。</1>"

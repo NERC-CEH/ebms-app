@@ -1910,55 +1910,29 @@ msgstr ""
 msgid "What's New"
 msgstr "Novedades"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr "Añadidos los idiomas polaco y rumano"
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr "Botón de retroceso habilitado en Android"
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr "Añadida la configuración de la ubicación de la trampa para polillas"
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr "Se ha añadido la opción de eliminar la cuenta de usuario"
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
-msgstr "La selección del rango de temperatura se ha aumentado de -0 a +40"
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
+msgstr ""
+"Se ha añadido la posibilidad de seleccionar varias fotos de la galería"
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
-msgstr "Se ha añadido un ajuste de filtro de polillas diurnas"
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
+msgstr ""
+"Movida la opción de polillas diurnas a la página del grupo de especies"
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr "Añadido el acceso directo al recuento de especies +5"
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr "Añadida la búsqueda y los filtros de la guía de especies"
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr "Actualización de los nombres comunes de las especies"
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr "Añadidos los nombres comunes de las especies catalanas y danesas"
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr "Se han añadido nuevos campos en el muestreo"
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr "Mejora de los informes de los usuarios"
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr "Diseño actualizado de la interfaz de usuario"
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
 msgstr "Varias correcciones de errores"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
@@ -2186,3 +2160,31 @@ msgstr ""
 "Para establecer automáticamente las ubicaciones de las especies y seguir su "
 "ruta, incluso si el dispositivo está bloqueado. Permite que la app utilice "
 "tu ubicación."
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr ""
+"Puedes restablecer los datos de la aplicación a su configuración "
+"predeterminada."
+
+# Delete account
+msgid "Delete account"
+msgstr "Eliminar cuenta"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "Puede eliminar su cuenta de usuario del sistema."
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "Cuenta eliminada"
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+"¿Seguro que quieres eliminar tu cuenta?<1>Esto eliminará su cuenta en el "
+"<2>{{url}}</2> página web. Perderá el acceso a cualquier registro que haya "
+"presentado previamente utilizando la aplicación o el sitio web.</1>"

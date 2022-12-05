@@ -1,13 +1,13 @@
 # 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Zdravko Kolev <zkolev72@gmail.com>, 2020
 # Karolis, 2021
+# Zdravko Kolev <zkolev72@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2021\n"
+"Last-Translator: Zdravko Kolev <zkolev72@gmail.com>, 2022\n"
 "Language-Team: Bulgarian (Bulgaria) (https://www.transifex.com/ceh/teams/95441/bg_BG/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -146,7 +146,7 @@ msgid "Slovenia"
 msgstr "Словения"
 
 msgid "Japan"
-msgstr ""
+msgstr "Япония"
 
 msgid "Slovakia"
 msgstr "Словакия"
@@ -230,7 +230,7 @@ msgid "Reset"
 msgstr "Нулиране на настройките"
 
 msgid "Records"
-msgstr "Доклади"
+msgstr "Данни от отброяванията"
 
 msgid "Upload All"
 msgstr "Изпращане на всички"
@@ -277,7 +277,7 @@ msgid "Home"
 msgstr "Начало"
 
 msgid "Guide"
-msgstr "Определител"
+msgstr "Упътване"
 
 msgid "Account"
 msgstr "Профил"
@@ -321,6 +321,9 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Сигурни ли сте, че искате да излезете от профила си? <br/><br/> Вашите данни"
+" от отброявания - както вече качени, така и тези още в изчакване - <4> няма "
+"да бъдат изтрити </4> от това устройство."
 
 msgid "Cancel"
 msgstr "Отмяна"
@@ -339,7 +342,7 @@ msgid "OK, got it"
 msgstr "Добре, разбрах"
 
 msgid "Please fill in"
-msgstr ""
+msgstr "Моля попълнете"
 
 msgid "Area Count"
 msgstr "Преброяване на дадена територия"
@@ -349,31 +352,33 @@ msgstr "Територия"
 
 # Location attribute label
 msgid "Location"
-msgstr ""
+msgstr "Местоположение"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "Местоположението е задължително"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Това приложение се нуждае от вашето местоположение, но няма разрешение. "
+"Отваряне на настройките сега?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Отменете, за да предотвратите изтощаването на батерията."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "Използва се Вашето местоположение."
 
 msgid "Add"
 msgstr "Добави"
 
 msgid "Add species"
-msgstr "Добави"
+msgstr "Добави вид"
 
 msgid "Duration"
 msgstr "Продължителност"
@@ -382,7 +387,7 @@ msgid "Species"
 msgstr "Вид"
 
 msgid "Species name"
-msgstr "Видово име"
+msgstr "Име на вида"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
@@ -407,8 +412,7 @@ msgid "Draft"
 msgstr "Чернова"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr ""
-"Съществува предишна чернова на преброяване, искате ли да продължите там?"
+msgstr "Съществува предишна чернова на отброяване, искате ли да я завършите?"
 
 msgid "Discard"
 msgstr "Премахване"
@@ -442,14 +446,14 @@ msgstr "Доклади"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Име на вид или филтриране..."
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "семейство"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Съжаляваме, в момента няма информация за доклади."
+msgstr "Съжаляваме, в момента няма данни от доклади."
 
 msgid "Are you sure you want to delete this survey?"
 msgstr "Сигурни ли сте, че искате да изтриете това преброяване?"
@@ -507,7 +511,7 @@ msgstr "Внимание - снимката ще остане във фотог�
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr ""
+msgstr "Няма добавена снимка.<br/> Натиснете <3></3>, за да добавите."
 
 msgid "Registration error:"
 msgstr "Грешка при регистрацията:"
@@ -518,38 +522,43 @@ msgstr "Невярна парола или имейл адрес"
 
 msgid "Enter your email address to request a password reset."
 msgstr ""
+"Въведете Вашия имейл адрес, за да заявите повторно задаване на парола."
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Успешно влизане като: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "Потребителят не е активиран или е блокиран."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"Изглежда, че Вашият <1>{{userEmail}}</1> имейл все още не е потвърден.<3><0>"
+" Опресняване</0><1>Повторно изпращане на имейл</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
+"Нов имейл за потвърждение беше изпратен успешно. Ако не сте получили имейла,"
+" проверете папките за спам или нежелана поща."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr ""
+msgstr "Моля, първо влезте в профила си."
 
 # User registration error
 msgid "This email is already taken."
-msgstr ""
+msgstr "Този имейл вече е зает."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "Неразпознат имейл адрес."
 
 msgid "email is not valid"
 msgstr "невалиден имейл адрес"
@@ -916,19 +925,21 @@ msgstr ""
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "Показване на българските имена в определителя"
 
 msgid "Share App Analytics"
 msgstr "Сподели данни за анализ на приложението"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
+"Споделете данни за сривове на приложението, за да можем да го направим по-"
+"надеждно."
 
 msgid "Save Draft"
 msgstr "Запиши черновата"
 
 msgid "Stage"
-msgstr "Стадий"
+msgstr "Стадий на развитие"
 
 msgid "Not Recorded"
 msgstr "Не е отбелязан"
@@ -950,23 +961,23 @@ msgstr "Паяжинести гнезда на гъсеници"
 
 # Butterfly stage
 msgid "Adult"
-msgstr ""
+msgstr "Възрастна пеперуда (имаго)"
 
 # Butterfly stage
 msgid "Egg"
-msgstr ""
+msgstr "Яйце"
 
 # Butterfly stage
 msgid "Larva"
-msgstr ""
+msgstr "Гъсеница"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr ""
+msgstr "Мрежа с гъсеници"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr ""
+msgstr "Какавида"
 
 msgid "Transect"
 msgstr "Трансект"
@@ -975,13 +986,13 @@ msgid "Sections"
 msgstr "Участъци"
 
 msgid "No transect"
-msgstr "Без трансект"
+msgstr "Няма трансект"
 
 msgid "Start Time"
-msgstr "Начално време"
+msgstr "Начален час"
 
 msgid "End Time"
-msgstr "Крайно време"
+msgstr "Краен час"
 
 msgid "Temperature"
 msgstr "Температура"
@@ -999,7 +1010,7 @@ msgid "Recorder"
 msgstr "Наблюдател"
 
 msgid "Refresh"
-msgstr "Обнови"
+msgstr "Опресняване"
 
 msgid "Please select your transect first."
 msgstr "Първо изберете Вашия трансект."
@@ -1008,7 +1019,7 @@ msgid "Invalid server response."
 msgstr "Невалиден отговор от сървъра."
 
 msgid "Not recorded/no data"
-msgstr "Няма наблюдение/данни"
+msgstr "Няма наблюдения/данни"
 
 msgid "Please specify the temperature C°."
 msgstr "Посочете температурата в C°."
@@ -1041,7 +1052,7 @@ msgid "No direction"
 msgstr "Без посока"
 
 msgid "Please specify the wind direction."
-msgstr "Уточнете посоката на вятъра."
+msgstr "Моля уточнете посоката на вятъра."
 
 msgid "Smoke rises vertically"
 msgstr "Димът се издига право нагоре"
@@ -1056,16 +1067,16 @@ msgid "Leaves and twigs in slight motion"
 msgstr "Листата и тънките клонки се раздвиждват леко"
 
 msgid "Dust raised and small branches move"
-msgstr "Вдига се прах и по-дебелите клони се клатят"
+msgstr "Вдига се прах, малко по-дебелите клони се разклащат"
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Млади дървета с листа започват да се люлеят"
+msgstr "Млади дървета с листа започват да се разклащат"
 
 msgid "Large branches move and trees sway"
-msgstr "Големи клони се раздвижват и дърветата се люлеят"
+msgstr "Дебели клони се раздвижват, дърветата се разлюляват"
 
 msgid "Please specify the wind speed."
-msgstr "Уточнете скоростта на вятъра."
+msgstr "Моля уточнете скоростта на вятъра."
 
 msgid "Transects"
 msgstr "Трансекти"
@@ -1077,10 +1088,10 @@ msgid "Section"
 msgstr "Участък"
 
 msgid "Reliability"
-msgstr "Достоверност"
+msgstr "Надеждност"
 
 msgid "Please specify the reliability of the section count."
-msgstr "Уточнете достоверността на преброяването на участъка."
+msgstr "Моля уточнете надеждността на преброяването на участъка."
 
 msgid "Suitable conditions"
 msgstr "Подходящи условия"
@@ -1095,7 +1106,7 @@ msgid "15min Count"
 msgstr "15-минутно преброяване"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "15-минутно преброяване на единичен вид"
 
 msgid "eBMS Transect"
 msgstr "Трансект на eBMS"
@@ -1113,10 +1124,10 @@ msgid "HH:mm"
 msgstr "ЧЧ:мм"
 
 msgid "Please specify the % of cloud cover."
-msgstr "Уточнете процентното покритие на облачността."
+msgstr "Моля уточнете процентното покритие на облаците."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "Нямате никакви трансекти. Опитайте да актуализирате списъка."
+msgstr "Нямате никакви трансекти. Моля опитайте да актуализирате списъка."
 
 msgid "Wind speed info is missing"
 msgstr "Липсват данни за скоростта на вятъра"
@@ -1125,7 +1136,7 @@ msgid "Temperature info is missing"
 msgstr "Липсват данни за температурата"
 
 msgid "Recorder info is missing"
-msgstr "Липсват данни за лицето, извършващо преброяването"
+msgstr "Липсват данни за наблюдателя"
 
 msgid "Please select your transect."
 msgstr "Изберете Вашия трансект."
@@ -1149,7 +1160,7 @@ msgid "Present"
 msgstr "Среща се"
 
 msgid "Possibly present"
-msgstr "Вероятно се среща"
+msgstr "Възможно е да се среща"
 
 msgid "Regular migrant"
 msgstr "Редовен мигрант"
@@ -1174,15 +1185,15 @@ msgid ""
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Видовите описания, включени като част от този Определител, се базират на "
+"Видовите описания, включени като част от този определител, се базират на "
 "описанията от Атласа на климатичния риск за дневните пеперуди в Европа. "
-"Благодарни сме на Josef Settele за това, че ни ги предостави."
+"Благодарим на Josef Settele за това, че ни ги предостави."
 
 msgid "Photo credits"
 msgstr "Автори на снимките"
 
 msgid "How to use the app"
-msgstr "Как да ползвате приложението"
+msgstr "Как да ползвате това приложение"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1190,6 +1201,12 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
+"Можете да използвате това приложение, за да записвате своите наблюдения на "
+"пеперуди навсякъде в Европа. Резултатите, изпратени през приложението, биват"
+" въвеждани в Европейската база данни за мониторинг на пеперудите и ще бъдат "
+"използвани за изчисляване на тенденции в популациите на пеперудите в цяла "
+"Европа. За да използвате приложението, първо трябва да регистрирате свой "
+"профил."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1225,15 +1242,15 @@ msgid ""
 msgstr ""
 "Това е методът по подразбиране в приложението. Просто бройте и записвайте "
 "дневни пеперуди за период от 15 минути - или в определена територия, напр. "
-"поле, или докато вървите по маршрут, или докато стоите в една фиксирана "
-"точка, като броите пеперуди, които прелитат покрай Вас. При условие, че в "
-"настройките ви е разрешена/включена функцията за следване на "
+"поле, или докато вървите по някакъв маршрут, или докато стоите в една "
+"фиксирана точка и броите пеперуди, които прелитат покрай Вас. При условие, "
+"че в настройките ви е разрешена/включена функцията за определяне на "
 "местоположението Ви чрез GPS-приемника на устройството, то тогава не е "
 "необходимо да очертавате маршрута, тъй като приложението автоматично ще "
 "записва маршрута Ви. В противен случай ще трябва да очертаете територията на"
 " карта, като използвате приложението. За да започнете преброяването, "
-"докоснете бутона + в долната част на екрана. Приложението ще отброи 15 "
-"минути, след като започнете, но можете да спрете брояча по всяко време "
+"докоснете кръглия бутон + в долната част на екрана. Приложението ще отброи "
+"15 минути, след като започнете, но можете да спрете брояча по всяко време "
 "(например за идентифициране на някой екземпляр пеперуда), като натиснете "
 "бутона за пауза. След приключване на времето за преброяването можете да "
 "прегледате своите записи и да се уверите, че сумите са правилни, преди да ги"
@@ -1269,7 +1286,7 @@ msgstr ""
 "изпратите доклад от преброяването към базата данни. Това е важно, за да е "
 "сигурно, че вашите данни ще се съхраняват надеждно в базата данни на eBMS. "
 "Докладът от преброяването ще се съхранява и на Вашето устройство за бъдеща "
-"справка, както и на Вашия онлайн профил."
+"справка, както и във Вашия онлайн профил."
 
 msgid "How to record along an existing transect"
 msgstr "Как да наблюдаваме пеперуди по съществуващ трансект"
@@ -1306,22 +1323,23 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"За да започнете броенето на трансект, натиснете и задръжте бутона + (дълго "
-"натискане) в долната част на екрана и изберете Трансект BMS. Ще се появи "
-"страницата „Трансект“ с всички опции, които трябва да бъдат избрани или "
-"попълнени. Първо, трябва да изберете трансекта си (за това ще трябва да "
-"влезете в профила си и маршрутите на трансектите трябва предварително да "
-"бъдат свързани с потребителския ви профил). След като сте избрали трансект, "
-"попълнете необходимите данни за времето (напр. температура, скорост на "
-"вятъра и т.н.) и друга необходима информация (например начален час) на "
-"страницата „Трансект“. След това добавете наблюдаваните видове и броя "
-"екземпляри от всеки вид за всеки участък от трансекта, по същия начин като "
-"за 15-минутното броене. След като приключите преброяването на трансекта и "
+"За да започнете преброяването на даден трансект, натиснете и задръжте бутона"
+" + (дълго натискане) в долната част на екрана и изберете Трансект на еBMS. "
+"Ще се появи страницата „Трансект“ с всички опции, които трябва да бъдат "
+"избрани или попълнени. Първо, трябва да изберете трансекта си (за това ще "
+"трябва да влезете в профила си, а трансектите трябва предварително да бъдат "
+"добавени в базата данни и да бъдат свързани с потребителския ви профил от "
+"националния координатор). След като сте избрали трансект, попълнете "
+"необходимите данни за времето (напр. температура, скорост на вятъра и т.н.) "
+"и друга необходима информация (например начален час) на страницата "
+"„Трансект“. След това добавете наблюдаваните видове и броя екземпляри от "
+"всеки вид за всеки участък от трансекта - по същия начин, както за "
+"15-минутното броене. След като приключите преброяването на трансекта и "
 "проверите дали видовете и бройките са верни, натиснете бутона ЗАВЪРШВАНЕ, за"
-" да изпратите доклада с данните."
+" да изпратите доклада с данните от преброяването."
 
 msgid "Survey section"
-msgstr "Раздел Преброяване"
+msgstr "Преброяване на участък"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1347,7 +1365,7 @@ msgstr "Настройки на приложението"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Използвай само дневноактивни нощни пеперуди"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1355,14 +1373,14 @@ msgid ""
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
 "Отворете страницата за настройки на приложението, за да промените езика и "
-"държавата. Избраната страна е важна, за да видите в Ръководството със "
-"снимките само видовете, срещащи се в тази държава."
+"държавата. Избраната страна е от значение, за да можете да видите в "
+"илюстрирания определител само видовете, срещащи се в тази държава."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
-"Можете също да включите Режим \"тренировка\", ако още се учите да определяте"
+"Можете също да включите режим \"тренировка\", ако още се учите да определяте"
 " дневни пеперуди."
 
 # This is part of mapping functionality
@@ -1517,19 +1535,20 @@ msgstr "Армения"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Да да изтриете което и да е преброяване, плъзнете го наляво."
+msgstr "За да изтриете дадено преброяване, плъзнете го наляво."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
-"Проверете дали територията на преброяването е вярна, преди да изпратите "
-"наблюденията."
+"Проверете дали територията на преброяването е вярно очертана, преди да "
+"изпратите наблюденията."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
 msgstr ""
-"Не забравяйте да завършите и изпратите всички недовършени преброявания!"
+"Не забравяйте да завършите и изпратите всички недовършени преброявания в "
+"изчакване!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
@@ -1547,8 +1566,8 @@ msgstr "Съвет: Търсене на помощ"
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
-"Прегледайте страниците Определител <2></2> и Помощ <5></5>, преди да почнете"
-" да използвате приложението!"
+"Прегледайте страниците Упътване <2></2> и Помощ <5></5>, преди да почнете да"
+" използвате приложението!"
 
 # Link inside Guide page
 msgid "More Information"
@@ -1563,8 +1582,8 @@ msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
-"Можете да копирате цели Ваши предишни списъци с видове, като натисхете и "
-"задържите бутона Добави видове"
+"Можете да копирате цели Ваши предишни списъци с видове, като натиснете и "
+"задържите бутона Добави вид"
 
 # Button
 msgid "Hide"
@@ -1581,222 +1600,226 @@ msgstr "Всички преброявания"
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
 msgstr ""
+"Представителна снимка на мястото, където е извършено 15-минутното "
+"преброяване"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Не е добавена снимка"
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Натиснете <1></1>, за да добавите снимка."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "15-минутно преброяване"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Записи на индивиди от вида"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr ""
+msgstr "Време"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Сигурни ли сте, че искате да изтриете този запис?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Разбрах"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Няма изпратени преброявания</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "Този профил вече съществува."
 
 # A survey label
 msgid "Details"
-msgstr ""
+msgstr "Подробности"
 
 # A survey label
 msgid "Species Photo"
-msgstr ""
+msgstr "Снимка на вида"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "Изберете стадия на развитие"
 
 # A survey label
 msgid "Weather"
-msgstr ""
+msgstr "Метеорологични условия"
 
 # A survey label
 msgid "Photo"
-msgstr ""
+msgstr "Снимка"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Групи насекоми"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "Моля изберете групите насекоми, които винаги преброявате. "
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Дневни пеперуди"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Нощни пеперуди"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Земни пчели"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Водни кончета"
 
 # Alert label
 msgid "Warning"
-msgstr ""
+msgstr "Внимание"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "Сигурни ли сте, че искате да изключите GPS проследяването?"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "Изключи"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "Обедини"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "Видът вече съществува"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
+"Сигурни ли сте, че искате да обедините този списък със съществуващия списък "
+"с видове?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr ""
+msgstr "Моля добавете Вашия целеви вид"
 
 # Moth survey label
 msgid "Date"
-msgstr ""
+msgstr "Дата"
 
 # Moth survey label
 msgid "Method"
-msgstr ""
+msgstr "Метод"
 
 # Context term
 msgid "Please select the medthod type"
-msgstr ""
+msgstr "Моля, изберете типа метод"
 
 # Moth survey method type
 msgid "MV light"
-msgstr ""
+msgstr "Живачна лампа"
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr ""
+msgstr "Флуоресцентна лампа"
 
 # Moth survey method type
 msgid "LED light"
-msgstr ""
+msgstr "Светодиодна LED лампа "
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr ""
+msgstr "Привличане с изкуствена светлина"
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr ""
+msgstr "Наблюдения през деня"
 
 # Moth survey method type
 msgid "Dusking"
-msgstr ""
+msgstr "Търсене по здрач с ентомологичен сак и фенерче "
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr ""
+msgstr "Привличане на осветен прозорец"
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr ""
+msgstr "Привличане с примамка от захар, меласа и бира"
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr ""
+msgstr "Привличане с примамка - въже, напоено със смес от вино и захар"
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr ""
+msgstr "Изтръскване от растителността върху бяла подложка"
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr ""
+msgstr "Привличане с феромонна примамка"
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr ""
+msgstr "Друг метод (добавете в коментар)"
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr ""
+msgstr "Не е отбелязан"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr ""
+msgstr "Подробности за преброяването"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr ""
+msgstr "Преброяване с ловилка за нощни пеперуди"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr ""
+msgstr "Преброяване на нощни пеперуди"
 
 # Moth survey divider label
 msgid "Species list"
-msgstr ""
+msgstr "Списък на видовете"
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr ""
+msgstr "Идентификатор"
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr ""
+msgstr "Списък с нощни пеперуди"
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr ""
+msgstr "Снимка на нощна пеперуда"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr ""
+msgstr "Въведете името на наблюдателя, ако е друго лице."
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr ""
+msgstr "Име на наблюдателя"
 
 # Latitude
 msgid "Lat"
-msgstr ""
+msgstr "Географска ширина"
 
 # Longitude
 msgid "Long"
-msgstr ""
+msgstr "Географска дължина"
 
 # Moth survey attribute label
 msgid "Count inside"
@@ -1808,58 +1831,62 @@ msgstr ""
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr ""
+msgstr "Снимки на нощна пеперуда"
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr ""
+msgstr "Ловилки за нощни пеперуди"
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr ""
+msgstr "Ловилка за нощни пеперуди"
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
+"Още не сте създали никакви ловилки за нощни пеперуди. За да създадете "
+"такава, моля посетете <2>интернет страницата.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr ""
+msgstr "За да видите картата, моля свържете се към интернет."
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr ""
+msgstr "Моля добавете ловилката за нощни пеперуди"
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
+"Имате само една ловилка за нощни пеперуди. За да създадете повече, моля "
+"посетете <2>интернет страницата.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr ""
+msgstr "Извършва се определяне на вида..."
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr ""
+msgstr "Неизвестно"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Покажи повече"
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr ""
+msgstr "Моля добавете снимка"
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr ""
+msgstr "Неизвестен вид"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr ""
+msgstr "<0>Внимание</0> - определянето на този вид беше неуспешно."
 
 # App settings title
 msgid "Surveying"
@@ -1867,303 +1894,329 @@ msgstr ""
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr ""
+msgstr "Преброяване на нощни пеперуди (по проекта SPRING)"
 
 # Survey name
 msgid "Moth Survey"
-msgstr ""
+msgstr "Преброяване на нощни пеперуди"
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr ""
+msgstr "Настройки на преброяването на нощни пеперуди "
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr ""
+msgstr "Използвай определяне на вида по снимка"
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
 msgstr ""
+"Ще ви помогнем да идентифицирате видовете с помощта на нашия алгоритъм за "
+"определяне на видове по снимки."
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Определи вида"
 
 # Moth survey button label
 msgid "Identify All"
-msgstr ""
+msgstr "Определи всички"
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr ""
+msgstr "Определяне по снимка"
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
+"Алгоритъмът за определяне на видове по снимки е <1>изключен</1>. Моля влезте"
+" в <4>настройките</4> на приложението, за да го включите."
 
 # Whats new message title
 msgid "What's New"
-msgstr ""
+msgstr "Какво ново"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr "Активиран e бутонът за връщане назад на устройствата с Android"
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr ""
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr "Добавена е опция за изтриване на потребителски профил"
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
 msgstr ""
+"Добавена е възможност за едновременен избор на повече от една снимки от "
+"галерията"
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
 msgstr ""
+"Опцията за дневноактивни нощни пеперуди е преместена на страницата за избор "
+"на различните групи видове"
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr ""
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
-msgstr ""
+msgstr "Отстранени са различни бъгове"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
-msgstr ""
+msgstr "Актуализирани са преводите"
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "Изпрати отново"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "Изглежда, че вашият имейл все още не е потвърден."
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "Да изпратим ли повторно имейла за потвърждение?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Вашата функция за установяване на местоположението (GPS) изглежда е "
+"деактивирана. Можете да я активирате в настройките на вашето устройство."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Функцията за установяване на местоположението (GPS) е деактивирана"
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Добави нова"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"Нямате никакви ловилки за нощни пеперуди. <1>Създайте първата си ловилка за "
+"нощни пеперуди</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Ловилка за нощни пеперуди"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Вид"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Друг вид"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Добави лампа"
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "Какъв е видът на ловилката за нощни пеперуди?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Няма добавени лампи"
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "Какъв вид е лампата?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "Какъв вид е ловилката за нощни пеперуди?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "Ловилка с фуния и LED лампа"
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Друг вид ловилка с фуния "
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Ловилка с два чаршафа "
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Друга ловилка"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Лампа"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Подробности за лампата"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Количество"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Няма име на ловилката за нощни пеперуди"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Име на ловилката за нощни пеперуди"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "Сигурни ли сте, че искате да изтриете тази ловилка за нощни пеперуди?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Допълнително описание на лампата."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Моля добавете местоположение и име на ловилката за нощни пеперуди."
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "Непълно"
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Избери"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Наблюдатели"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+"Въведете броя на наблюдателите, включващ всеки, който е имал принос към това"
+" наблюдение - включително Вие."
 
 msgid "Network Error"
-msgstr ""
+msgstr "Мрежова грешка"
 
 # Report label
 msgid "Please login to see your own data report."
 msgstr ""
+"Моля влезте в профила си, за да видите вашия собствен отчет с данните от "
+"преброяванията."
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "Вашите най-многобройни видове през този месец"
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "Вашите най-многобройни видове"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Снимки на участъка"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "Потребителят не е влязъл в профила си."
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
+"Смятаме, че с {{probability}}% вероятност това е видът <3>{{taxon}}</3>"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Внимание</0> - смятаме, че с {{probability}}% вероятност това е видът "
+"<5>{{taxon}}</5>"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr ""
+msgstr "Лампи"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
 msgstr ""
+"Сигурни ли сте, че искате да изтриете този запис за лампа от ловилката за "
+"нощни пеперуди?"
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr ""
+msgstr "Полето за вида на ловилката е задължително за попълване."
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "Добре дошли на борда!"
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
+"Преди да започнете първото си преброяване, моля проверете имейла си и "
+"кликнете върху линка за потвърждаване на Вашия имейл адрес."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr ""
+msgstr "За съжаление, не са намерени никакви видове."
 
 msgid "Kenya"
-msgstr ""
+msgstr "Кения"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Отхвърли"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Приеми"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Разрешено е установяването на местоположението"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
+"За автоматично установяване на местоположенията на отбелязваните видове и "
+"проследяване на вашия маршрут, дори ако устройството е заключено. Разрешете "
+"на приложението да използва вашето местоположение."
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr ""
+"Можете да нулирате данните и настройките на приложението, като върнете "
+"настройките по подразбиране."
+
+# Delete account
+msgid "Delete account"
+msgstr "Изтрий профила"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "Можете да изтриете потребителския си профил от системата."
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "Потребителският профил е изтрит."
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+"Сигурни ли сте, че искате да изтриете профила си?<1> Това ще премахне "
+"профила Ви от уебсайта <2>{{url}}</2>. Ще загубите достъп до всички записи, "
+"които сте изпратили преди това чрез приложението или уебсайта.</1>"

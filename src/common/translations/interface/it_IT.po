@@ -28,7 +28,7 @@ msgid "Lithuania"
 msgstr "Lituania "
 
 msgid "Spain"
-msgstr "Spania "
+msgstr "Spagna "
 
 msgid "Andorra"
 msgstr "Andorra "
@@ -70,7 +70,7 @@ msgid "Estonia"
 msgstr "Estonia "
 
 msgid "Spain (Canary Islands)"
-msgstr "Spagna: Isole Canarie "
+msgstr "Spagna (Isole Canarie) "
 
 msgid "Finland"
 msgstr "Finlandia "
@@ -256,10 +256,10 @@ msgid "Lets start!"
 msgstr "Iniziamo!"
 
 msgid "TOP RECORDERS"
-msgstr "MIGLIOR CAMPIONATORE "
+msgstr "MIGLIORI CAMPIONATORI "
 
 msgid "Top Species from all timed counts"
-msgstr "MIGLIORE SPECIE"
+msgstr "Le specie più trovate nei conteggi a tempo"
 
 msgid "Back"
 msgstr "Indietro"
@@ -366,7 +366,7 @@ msgid ""
 "now?"
 msgstr ""
 "Questa app necessita necessita della tua posizione, ma non dispone "
-"dell'autorizzazione. Apri le impostazioni ora? "
+"dell'autorizzazione. Aprire le impostazioni ora? "
 
 # GPS message
 msgid "Cancel to prevent battery drain."
@@ -380,7 +380,7 @@ msgid "Add"
 msgstr "Aggiungi"
 
 msgid "Add species"
-msgstr "Aggiungi"
+msgstr "Aggiungi specie"
 
 msgid "Duration"
 msgstr "Durata"
@@ -396,7 +396,7 @@ msgid ""
 "example, to find"
 msgstr ""
 "Per una ricerca veloce dei taxa puoi usare differenti scorciatoie. Ad "
-"esempio, per trovare "
+"esempio, trovare "
 
 msgid "you can type in the search bar"
 msgstr "puoi digitare nella nella barra di ricerca "
@@ -455,7 +455,7 @@ msgid "family"
 msgstr "famiglia"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Siamo spiacenti, al momento i dati dei transetti non sono disponibili"
+msgstr "Siamo spiacenti, al momento non ci sono dati disponibili"
 
 msgid "Are you sure you want to delete this survey?"
 msgstr "Sei sicuro di voler eliminare questo campionamento?"
@@ -506,7 +506,7 @@ msgid "Camera"
 msgstr "Fotocamera "
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "Sei sicuro di voler eliminare questa foto dal campione? "
+msgstr "Sei sicuro di voler eliminare questa foto? "
 
 msgid "Note: it will remain in the gallery."
 msgstr "Nota: rimarrà in galleria "
@@ -520,7 +520,7 @@ msgstr "Errore di registrazione:"
 
 # Login error message
 msgid "Incorrect password or email"
-msgstr "Password o email scorrette "
+msgstr "Password o email non corrette"
 
 msgid "Enter your email address to request a password reset."
 msgstr ""
@@ -595,8 +595,8 @@ msgid ""
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Non è mai semplice fornire dati di buona per la ricerca a supporto della "
-"conservazione di questi affascinanti insetti. Puoi iniziare subito "
+"Non è mai semplice fornire dati di buona qualità per la ricerca a supporto "
+"della conservazione di questi affascinanti insetti. Puoi iniziare subito "
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
@@ -1911,55 +1911,27 @@ msgstr ""
 msgid "What's New"
 msgstr "Cosa c'è di nuovo"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr "Lingue Polacco e Rumeno aggiunte"
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr "Pulsante posteriore Android abilitato"
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr "Posizionamento della trappola per falene aggiunto"
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr "Aggiunta l'opzione di cancellazione dell'account utente"
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
-msgstr "Aumenta la selezione dell'intervallo di temperatura da -0 a +40"
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
+msgstr "Aggiunta la possibilità di selezionare più foto dalla galleria"
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
-msgstr "Aggiunto il filtro falena diurna nelle impostazioni"
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
+msgstr "Spostare l'opzione falene diurne nella pagina del gruppo delle specie"
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr "Aggiunta scorciatoia +5 al conteggio delle specie "
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr "Aggiunti la rirca nella guida delle specie e i filtri"
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr "Aggiornati i nome comune delle specie "
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr "Aggiunti i nomi comuni Catalani e Danesi"
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr "Aggiunti nuovi campi di osservazione "
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr "Report utente migliorati"
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr "UI design aggiornato"
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
 msgstr "Diversi bug corretti"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
 msgstr "Traduzioni aggiornate "
 
@@ -2165,18 +2137,47 @@ msgstr "Kenya"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Rifiutare"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Accettare"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Permesso di localizzazione"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
+"Per impostare automaticamente le posizioni delle specie e tracciare il "
+"percorso, anche se il dispositivo è bloccato. Consentire all'applicazione di"
+" utilizzare la propria posizione."
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr "Puoi ripristinare le impostazioni predefinite dei dati dell'app."
+
+# Delete account
+msgid "Delete account"
+msgstr "Cancella account"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "Puoi cancellare il tuo account utente dal sistema"
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "Account cancellato"
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+"Sei sicuro di voler eliminare il tuo account? <1> Questo eliminerà il tuo "
+"account sul <2>{{url}}</2> sito. Perderai l'accesso a ogni dato che hai "
+"precedentemente inserito usando l'app o il sito. </1>"

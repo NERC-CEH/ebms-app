@@ -4,13 +4,13 @@
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
 # Daniela Lehner <d.lehner@bioforschung.at>, 2021
 # Karolis, 2021
-# Elisabeth Kühn, 2022
 # Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2022
+# Elisabeth Kühn, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2022\n"
+"Last-Translator: Elisabeth Kühn, 2022\n"
 "Language-Team: German (Germany) (https://www.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -281,7 +281,7 @@ msgid "Home"
 msgstr "Startseite"
 
 msgid "Guide"
-msgstr "Handbuch"
+msgstr "Artenübersicht"
 
 msgid "Account"
 msgstr "Account"
@@ -1140,7 +1140,7 @@ msgid ""
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Dieses Handbuch befindet sich noch in der Entwicklung. Es umfasst "
+"Diese Artenübersicht befindet sich noch in der Entwicklung. Es umfasst "
 "{{countrySpeciesCount}} Schmetterlingsarten von den "
 "{{totalSpeciesCountryCount}} Arten in dem von Dir ausgewählten Land."
 
@@ -1179,9 +1179,9 @@ msgid ""
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Die im Handbuch enthaltenen Artbeschreibungen basieren auf dem Klima-Risiko-"
-"Atlas der Europäischen Schmetterlinge. Wir danken Josef Settele für die "
-"Bereitstellung."
+"Die in der Artenübersicht enthaltenen Artbeschreibungen basieren auf dem "
+"Klima-Risiko-Atlas der Europäischen Schmetterlinge. Wir danken Josef Settele"
+" für die Bereitstellung."
 
 msgid "Photo credits"
 msgstr "Fotoquellen"
@@ -1362,8 +1362,8 @@ msgid ""
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
 "Gehe zu Einstellungen, um die Sprache und das Land zu ändern. Das "
-"ausgewählte Land ist wichtig, um verschiedene Arten im Handbuch zu sehen. Du"
-" kannst nur die Arten sehen, die in diesem Land vorkommen."
+"ausgewählte Land ist wichtig, um verschiedene Arten in der Artenübersicht zu"
+" sehen. Du kannst nur die Arten sehen, die in diesem Land vorkommen."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
@@ -1553,8 +1553,8 @@ msgstr "Tipp: Hilfe finden"
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
-"Bitte besuche die Anleitung <2></2> und die Hilfeseite <5></5> bevor du die "
-"App verwendest!"
+"Bitte besuche die Artenübersicht <2></2> und die Hilfeseite <5></5> bevor du"
+" die App verwendest!"
 
 # Link inside Guide page
 msgid "More Information"
@@ -1924,55 +1924,27 @@ msgstr ""
 msgid "What's New"
 msgstr "Was gibt es Neues?"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr "Polnisch und Rumänisch hinzugefügt"
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr ""
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr "Standort für Nachtfalter-Fallen hinzugefügt"
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr ""
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
-msgstr "Auswahl des Temperaturbereichs von -0 bis +40 erhöhen"
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
+msgstr ""
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
-msgstr "Filtereinstellung für tagaktive Nachtfalter hinzugefügt"
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
+msgstr ""
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr "Tastaturkürzel +5 Artenzahl hinzugefügt"
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr "Suche und Filter für Artenkatalog hinzugefügt"
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr "Aktualisierte deutsche Artnamen"
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr "katalanische und dänische Artnamen hinzugefügt"
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr "Neue Beobachtungsfelder hinzugefügt"
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr "Verbesserte Nutzerberichte"
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr "Aktualisiertes UI-Design"
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
 msgstr "Verschiedene Fehlerkorrekturen"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
 msgstr "Aktualisierte Übersetzung"
 
@@ -2196,4 +2168,27 @@ msgstr ""
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
+msgstr ""
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr ""
+
+# Delete account
+msgid "Delete account"
+msgstr ""
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr ""
+
+# Delete account alert header
+msgid "Account delete"
+msgstr ""
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
 msgstr ""

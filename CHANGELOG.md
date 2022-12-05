@@ -1,3 +1,7 @@
+## 1.18.2
+
+Added Japanese.
+
 ## 1.18.1
 
 Small bug fixes.

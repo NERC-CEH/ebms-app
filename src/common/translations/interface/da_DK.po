@@ -1899,55 +1899,28 @@ msgstr ""
 msgid "What's New"
 msgstr "Nyheder"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr "Polsk og Rumænsk er tilføjet som sprog"
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr "Tillader brug af Androids tilbage knap"
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr "Natsværmerfældeplacerings opsætning tilføjet"
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr "Tilføjet muligheden for at slette en brugerkonto"
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
-msgstr "Temperaturområde udvidet, vælg fra -0 til +40"
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
+msgstr "Nu muligt at vælge flere billeder fra galleriet på en gang"
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
-msgstr "Dagnatsværmerfilter-indstilling tilføjet"
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
+msgstr ""
+"Muligheden for at vælge dagflyvende natsværmere flyttet til artsgruppesiden"
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr "+5 genveje til antal arter tilføjet"
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr "Artsvejledningssøgning og filtre tilføjet"
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr "Almene artsnavne opdateret"
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr "Catalanske og danske artsnavne tilføjet"
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr "Nye observationsmetoder tilføjet"
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr "Bruger rapporter forbedret"
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr "Brugergrænseflade design opdateret"
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
 msgstr "Diverse fejl fikset"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
 msgstr "Oversættelser opdateret"
 
@@ -2152,18 +2125,47 @@ msgstr "Kenya"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Afvis"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Accepter"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Tillad placeringsdata"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
+"For automatisk at kunne bestemme artsfundsplaceringer og for at kunne følge "
+"din rute, selv mens skærmen er låst, skal du tillade, at appen kan bruge din"
+" placering."
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr "Du kan nulstille appen til dens standardindstillinger."
+
+# Delete account
+msgid "Delete account"
+msgstr "Slet konto"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "Du kan slette din brugerkonto fra systemet."
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "Slet konto"
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+"Er du sikker på, at du vil slette din konto?<1>Dette vil fjerne din konto "
+"fra <2>{{url}}</2> hjemmesiden. Du vil miste adgangen til de observationer, "
+"du tidligere har indsendt vha. appen eller hjemmesdien.</1>"

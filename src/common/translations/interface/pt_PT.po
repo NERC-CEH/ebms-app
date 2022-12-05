@@ -1908,57 +1908,29 @@ msgstr ""
 msgid "What's New"
 msgstr "O que há de novo"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr "Adicionados os idiomas polaco e romeno."
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr "Adicionado o botão retroceder do Android "
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr "Adicionadas definições de localização para a armadilha de traças."
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr "Adicionada a opção de eliminar contas de utilizador"
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
+msgstr "Adicionada a capacidade de selecionar múltiplas fotos da galeria."
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
+msgstr "Opção das traças diurnas movida para a página do grupo de espécies."
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr ""
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
-msgstr ""
+msgstr "Correção de vários erros"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
-msgstr ""
+msgstr "Traduções atualizadas"
 
 # User account action
 msgid "Resend"
@@ -1966,186 +1938,199 @@ msgstr "Reenviar"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "Parece que o seu email ainda não foi verificado."
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "Deseja que reenviemos o email de confirmação?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Os serviços de localização (GPS) parecem estar desativados. Pode ativá-los "
+"nas defenições do seu dispositivo."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Serviços de localização (GPS) desativados."
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Adicionar novo"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"Ainda não tem armadilhas de traças. <1>Crie a primeira armadilha de "
+"traças</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Armadilha de traças"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Outro tipo"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Adicionar lâmpada"
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "Que tipo de armadilha era?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Sem Lâmpadas adicionadas"
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "Qual é o tipo de lâmpada?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "Qual é o tipo de armadilha de traças?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "Armadilha de funil LED."
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Outra armadilha de funil"
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Armadilha com 2 folhas"
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Outra armadilha"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Lampâda"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Detalhes da lâmpada"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Quantidade"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Sem nome para a armadilha de traças."
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Nome da armadilha de traças"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "Tem a certeza que pretende eliminar esta armadilha de traças?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Descrição adicional da lâmpada."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Por favor adicione a localização e nome da armadilha de traças."
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "incompleto"
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Selecionar"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Registadores"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+"Insira o número de registadores de todos os que ajudaram com este registo - "
+"incluindo os seus próprios."
 
 msgid "Network Error"
-msgstr ""
+msgstr "Erro de rede"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "Faça o login para ver os seus relatórios de dados."
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "As suas espécies mais vistas este mês "
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "As sua espécies mais vistas"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Fotos da secção"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "O utilizador não está logado."
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
+"Há uma probabilidade de {{probabilidade}}% que seja uma espécie do "
+"<3>{{taxon}}</3>"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Aviso</0> - Há uma probabilidade de {{probabilidade}}% que seja uma "
+"espécie do <5>{{taxon}}</5>"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr ""
+msgstr "Lâmpadas"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
 msgstr ""
+"Tem a certeza que pretende eliminar esta lâmpada da armadilha de traças?"
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr ""
+msgstr "O tipo de armadilha é um campo de preenchimento obrigatório."
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "Bem-vindo a bordo"
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
+"Antes de começar qualquer amostragem por favor verifique o seu email e "
+"clique no link de verificação."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr ""
+msgstr "Desculpe, não foram encontradas espécies."
 
 msgid "Kenya"
 msgstr "Quénia"
@@ -2160,10 +2145,39 @@ msgstr "Aceitar"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Permissão de localização"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
+"Para definir automaticamente a localização de espécies e gravar o seu "
+"percurso, mesmo com o dispositivo bloqueado. Autorize a aplicação a usar a "
+"sua localização."
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr "Pode repor os dados da aplicação para as suas definições originais."
+
+# Delete account
+msgid "Delete account"
+msgstr "eliminar a conta"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "Pode eliminar a sua conta de utilizador do sistema."
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "eliminação da conta"
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+"Tem a certeza que quer eliminar a sua conta? <1>Isto irá remover a sua conta"
+" no website <2>{{url}}</2>. Perderá acesso a quaisquer registos que tenha "
+"previamente submetido usando a aplicação ou o website.</1>"

@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Kaja Vukotić <kaja.vukotic@gmail.com>, 2021
 # Karolis, 2021
+# Kaja Vukotić <kaja.vukotic@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2021\n"
+"Last-Translator: Kaja Vukotić <kaja.vukotic@gmail.com>, 2022\n"
 "Language-Team: Slovenian (Slovenia) (https://www.transifex.com/ceh/teams/95441/sl_SI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -145,7 +145,7 @@ msgid "Slovenia"
 msgstr "Slovenija"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japonska"
 
 msgid "Slovakia"
 msgstr "Slovaška"
@@ -319,6 +319,8 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Ste prepričani, da se želite odjaviti? <br/><br/> Vaši čakajoči in naloženi "
+"<4> popisi ne bodo izbrisani </4>iz te naprave."
 
 msgid "Cancel"
 msgstr "Prekliči"
@@ -337,7 +339,7 @@ msgid "OK, got it"
 msgstr "V redu, razumem"
 
 msgid "Please fill in"
-msgstr ""
+msgstr "Prosimo, izpolnite"
 
 msgid "Area Count"
 msgstr "Območje štetja"
@@ -347,25 +349,27 @@ msgstr "Območje"
 
 # Location attribute label
 msgid "Location"
-msgstr ""
+msgstr "Lokacija"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "Zahtevana lokacija"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Ta aplikacija potrebuje vašo lokacijo, vendar za to potrebuje vaše "
+"dovoljenje. Odprite nastavitve?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Prekličite, da preprečite praznjenje baterije."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "Uporaba vaše lokacije."
 
 msgid "Add"
 msgstr "Dodaj"
@@ -439,11 +443,11 @@ msgstr "Poročila"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Ime vrste ali filter..."
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "družina"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr "Se opravičujemo, trenutno ni na voljo nobenih podatkov o popisih."
@@ -505,6 +509,7 @@ msgstr "Opomba: ostalo bo v galeriji."
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
 msgstr ""
+"Nobena fotografija ni bila dodana. <br/> Pritisnite <3></3>za dodajanje."
 
 msgid "Registration error:"
 msgstr "Napaka pri registraciji:"
@@ -514,39 +519,43 @@ msgid "Incorrect password or email"
 msgstr "Nepravilno geslo ali e-naslov"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
+msgstr "Za ponastavitev gesla vnesite svoj e-poštni naslov."
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Uspešno prijavljeni kot: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "Uporabnik ni bil aktiviran ali je blokiran."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"Izgleda, da vaš <1>{{userEmail}}</1> e-poštni naslov še ni bil preverjen. "
+"<3><0>Osveži</0><1>Ponovni pošlji e-poštno sporočilo</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
+"Poslano je bilo novo potrditveno e-poštno sporočilo. V primeru, da ga niste "
+"prejeli preverite še v mapi vsiljena pošta."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr ""
+msgstr "Najprej se prijavite."
 
 # User registration error
 msgid "This email is already taken."
-msgstr ""
+msgstr "To e-poštno sporočilo je že zasedeno."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "Neprepoznan e-poštni naslov."
 
 msgid "email is not valid"
 msgstr "e-naslov ni veljaven"
@@ -882,13 +891,15 @@ msgstr ""
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "V vodniku prikaži pogoste vrste"
 
 msgid "Share App Analytics"
 msgstr "Delitev analize aplikacije"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
+"Za izboljšanje aplikacije delite z nami napake, ki ste jih opazili med "
+"uporabo."
 
 msgid "Save Draft"
 msgstr "Shrani osnutek"
@@ -916,23 +927,23 @@ msgstr "Zapredki gosenic"
 
 # Butterfly stage
 msgid "Adult"
-msgstr ""
+msgstr "Imago"
 
 # Butterfly stage
 msgid "Egg"
-msgstr ""
+msgstr "Jajčece"
 
 # Butterfly stage
 msgid "Larva"
-msgstr ""
+msgstr "Gosenica"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr ""
+msgstr "Zapredek"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr ""
+msgstr "Buba"
 
 msgid "Transect"
 msgstr "Transekt"
@@ -1061,7 +1072,7 @@ msgid "15min Count"
 msgstr "15min Popis"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "Enkratni 15-minutni popis vrst"
 
 msgid "eBMS Transect"
 msgstr "eBMS Transekt"
@@ -1154,6 +1165,10 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
+"S to aplikacijo lahko izvajate monitoring metuljev kjerkoli v Evropi. "
+"Rezultati bodo vneseni v Evropsko Podatkovno Zbirko za monitoring metuljev "
+"in uporabljeni kot kazalnik trendov sprememb pri metuljih v Evropi. Če "
+"želite uporabljati aplikacijo, se morate najprej registrirati."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1296,7 +1311,7 @@ msgstr "Nastavitve aplikacije"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Prikaži samo vrste dnevnih metuljev"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1536,7 +1551,7 @@ msgstr "Pojavljanja"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr ""
+msgstr "Čas"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
@@ -1556,550 +1571,572 @@ msgstr "Račun že obstaja."
 
 # A survey label
 msgid "Details"
-msgstr ""
+msgstr "Podrobnosti"
 
 # A survey label
 msgid "Species Photo"
-msgstr ""
+msgstr "Fotografija vrste"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "Izberi življenjski stadij"
 
 # A survey label
 msgid "Weather"
-msgstr ""
+msgstr "Vreme"
 
 # A survey label
 msgid "Photo"
-msgstr ""
+msgstr "Fotografija"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Skupina vrst"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "Izberite skupino vrst, ki jih največkrat popisujete."
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Dnevni metulji"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Nočni metulji"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Črmlji"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Kačji pastirji"
 
 # Alert label
 msgid "Warning"
-msgstr ""
+msgstr "Opozorilo"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "Ste prepričani, da želite izklopiti GPS sledenje?"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "Izklopi"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "Združi"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "Vrsta že obstaja"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
+"Ali ste prepričani, da želite ta seznam združiti z obstoječim seznamom vrst?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr ""
+msgstr "Dodajte svoje ciljne vrste"
 
 # Moth survey label
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 # Moth survey label
 msgid "Method"
-msgstr ""
+msgstr "Metoda"
 
 # Context term
 msgid "Please select the medthod type"
-msgstr ""
+msgstr "Izberite tip metode"
 
 # Moth survey method type
 msgid "MV light"
-msgstr ""
+msgstr "MV luč"
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr ""
+msgstr "Aktinska luč"
 
 # Moth survey method type
 msgid "LED light"
-msgstr ""
+msgstr "LED luč"
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr ""
+msgstr "Svetlobna vaba"
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr ""
+msgstr "Dnevno opazovanje"
 
 # Moth survey method type
 msgid "Dusking"
-msgstr ""
+msgstr "Lovljenje z mrežo"
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr ""
+msgstr "Osvetljeno okno"
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr ""
+msgstr "Sladkorna vaba"
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr ""
+msgstr "Vinska vrv"
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr ""
+msgstr "Vzorčni pladenj"
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr ""
+msgstr "Feromonska past"
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr ""
+msgstr "Druga metoda (dodaj opombo)"
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr ""
+msgstr "Ni zabeleženo"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr ""
+msgstr "Podrobnosti popisa"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr ""
+msgstr "Popis z živolovnimi pastmi"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr ""
+msgstr "Popis nočnih metuljev"
 
 # Moth survey divider label
 msgid "Species list"
-msgstr ""
+msgstr "Seznam vrst"
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr ""
+msgstr "Določevalec"
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr ""
+msgstr "Seznam nočnih metuljev"
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr ""
+msgstr "Fotografija nočnega metulja"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr ""
+msgstr "Vpišite ime popisovalca, če je različno."
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr ""
+msgstr "Ime popisovalca"
 
 # Latitude
 msgid "Lat"
-msgstr ""
+msgstr "Lat"
 
 # Longitude
 msgid "Long"
-msgstr ""
+msgstr "Long"
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr ""
+msgstr "Število znotraj"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr ""
+msgstr "Število zunaj"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr ""
+msgstr "Fotografije nočnih metuljev"
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr ""
+msgstr "Pasti za nočne metulje"
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr ""
+msgstr "Past za nočne metulje"
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
+"Niste vnesli še nobene pasti za nočne metulje. Če jo želite ustvariti, "
+"obiščite <2>spletno stran.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr ""
+msgstr "Če si želite ogledati zemljevid, se povežite z internetom."
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr ""
+msgstr "Dodajte tip pasti za nočne metulje"
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
+"Dodan imate le en tip pasti za nočne metulje. Če jih želite dodati več, "
+"obiščite <2>spletno stran.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr ""
+msgstr "Prepoznavanje..."
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr ""
+msgstr "Neznano"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Prikaži več"
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr ""
+msgstr "Dodajte fotografijo"
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr ""
+msgstr "Neznana vrsta"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr ""
+msgstr "<0>Opozorilo</0> - te vrste ni bilo mogoče določiti."
 
 # App settings title
 msgid "Surveying"
-msgstr ""
+msgstr "Popisi"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr ""
+msgstr "Popis nočnih metuljev (POMLAD)"
 
 # Survey name
 msgid "Moth Survey"
-msgstr ""
+msgstr "Popis nočnih metuljev"
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr ""
+msgstr "Nastavitve popisa nočnih metuljev"
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr ""
+msgstr "Uporabi slikovno identifikacijo"
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
 msgstr ""
+"Pri prepoznavanju vrst vam bomo pomagali z našim določevalcem slik vrst."
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Določi"
 
 # Moth survey button label
 msgid "Identify All"
-msgstr ""
+msgstr "Določi vse"
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr ""
+msgstr "Določitev vrste po fotografiji"
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
+"Klasifikator slik je trenutno <1>onemogočen</1>. Če ga želite vklopiti, "
+"pojdite v <4>Nastavitve</4> aplikacije."
 
 # Whats new message title
 msgid "What's New"
-msgstr ""
+msgstr "Kaj je novega"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr "Gumb za nazaj je omogočen v sistemu Android"
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr ""
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr "Dodana možnost izbrisa uporabniškega računa"
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
+msgstr "Dodana možnost izbire več fotografij iz galerije"
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
+msgstr "Možnost dnevno aktivnih metuljev prestavite na stran skupin vrst"
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr ""
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
-msgstr ""
+msgstr "Odprava številnih napak"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
-msgstr ""
+msgstr "Posodobljeni prevodi"
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "Ponovno pošiljanje"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "Izgleda, da vaš e-naslov še ni bil preverjen."
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "Ali naj ponovno pošljemo potrditveno e-poštno sporočilo?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Vaše lokacijske storitve (GPS) so onemogočene. To lahko omogočite v "
+"nastavitvah naprave."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Lokacijske storitve (GPS) so onemogočene."
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Dodaj novo"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"Dodane nimate še nobene pasti za nočne metulje. <1>Vnos tipa pasti za nočne "
+"metulje</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Past za nočne metulje"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Drugi tip"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Dodaj tip luči"
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "Katera vrsta pasti je bila?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Ni dodanih svetilk"
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "Kakšen je tip svetilke?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "Kakšen je tip pasti za nočne metulje?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "Past z LED lučjo in lijakom"
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Druge pasti s pomočjo lijaka"
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Past z 2 pregrinjaloma"
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Druga past"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Luč"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Podrobnosti o svetilki"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Količina"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Past za nočne metulje brez imena"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Ime pasti za nočne metulje"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "Ste prepričani, da želite izbrisati to past za nočne metulje?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Dodaten opis svetilke."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Dodajte lokacijo in ime pasti za nočne metulje."
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "Nepopolno"
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Izberi"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Popisovalci"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+"Vpišite število vseh popisovalcev, ki so sodelovali pri tem popisu - "
+"vključno z vašim."
 
 msgid "Network Error"
-msgstr ""
+msgstr "Napaka v povezavi"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "Če si želite ogledati svoje poročilo o podatkih, se prijavite."
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "Vaše najpogosteje opažene vrste ta mesec"
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "Vaše najpogosteje opažene vrste"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Fotografije odseka"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "Uporabnik ni prijavljen."
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
+"Menimo, da je {{možnost}}% po vsej verjetnosti <3>{{takson}}</3> vrste"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Opozorilo</0> - menimo, da je {{možnost}}% po vsej verjetnosti "
+"<5>{{takson}}</5> vrste"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr ""
+msgstr "Luči"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
 msgstr ""
+"Ali ste prepričani, da želite izbrisati vnos tega tipa svetilke pri pasti za"
+" nočne metulje?"
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr ""
+msgstr "Tip pasti je obvezno polje."
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "Dobrodošli"
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
+"Preden začnete izvajati popise, preverite svoje e-poštno sporočilo in "
+"kliknite na potrditveno povezavo."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr ""
+msgstr "Žal nismo našli nobene vrste."
 
 msgid "Kenya"
-msgstr ""
+msgstr "Kenija"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Zavrni"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Sprejmi"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Dovoljenje za uporabo lokacije"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
+"Za samodejno določanje lokacij popisanih vrst in sledenje poti transekta, "
+"tudi če je naprava zaklenjena, dovolite aplikaciji uporabo vaše lokacije."
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr "Podatke aplikacije lahko ponastavite na privzete nastavitve."
+
+# Delete account
+msgid "Delete account"
+msgstr "Izbriši račun"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "Svoj uporabniški račun lahko izbrišete iz sistema."
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "Brisanje računa"
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+"Ste prepričani, da želite izbrisati svoj račun? <1>S tem boste odstranili "
+"svoj račun na spletnem mestu <2>{{url}}</2>. Izgubili boste dostop do vseh "
+"popisov, ki ste jih predhodno naložili z uporabo aplikacije ali spletnega "
+"mesta.</1>"

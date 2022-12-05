@@ -1797,55 +1797,27 @@ msgstr ""
 msgid "What's New"
 msgstr ""
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
 msgstr ""
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
+# Version 1.18 whats new message
+msgid " Added user account delete option"
 msgstr ""
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
 msgstr ""
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
 msgstr ""
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr ""
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
 msgstr ""
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
 msgstr ""
 
@@ -2055,4 +2027,27 @@ msgstr ""
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
+msgstr ""
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr ""
+
+# Delete account
+msgid "Delete account"
+msgstr ""
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr ""
+
+# Delete account alert header
+msgid "Account delete"
+msgstr ""
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
 msgstr ""

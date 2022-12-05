@@ -1,14 +1,15 @@
 # 
 # Translators:
 # Ahmet Furkan TON <afurkanton@gmail.com>, 2020
-# Evrim <ekaracetin@hotmail.com>, 2021
 # Karolis, 2022
 # Merve Kurt, 2022
+# Alperen Yayla, 2022
+# Evrim <ekaracetin@hotmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Merve Kurt, 2022\n"
+"Last-Translator: Evrim <ekaracetin@hotmail.com>, 2022\n"
 "Language-Team: Turkish (Turkey) (https://www.transifex.com/ceh/teams/95441/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -155,10 +156,10 @@ msgstr "Zerynthia-cassandra-tanım"
 msgid "Heteropterus-morpheus-description"
 msgstr ""
 "Bu kelebeğin kanatlarının alt tarafındaki göze çarpan desen, diğer Avrupa "
-"kelebeğininkinden farklıdır. Ayrıca bitki örtüsünün aşağısında zıplayan "
-"karakteristik bir uçuşa sahiptir. Çayırlar, yol kenarları, akarsu kenarları "
-"gibi nemli, engebeli, çimenli yerlerde, yükseltilmiş bataklıkların "
-"kenarlarında ve ormanlık açıklıklarda meydana gelir. Yumurtalar,  (Molinea "
+"kelebeğlerinden farklıdır. Ayrıca bitki örtüsünün aşağısında, zıplayarak "
+"uçan karakteristik bir uçuşa sahiptir. Çayırlar, yol kenarları, akarsu "
+"kenarları gibi nemli, engebeli, çimenli yerlerde, yükseltilmiş bataklıkların"
+" kenarlarında ve ormanlık açıklıklarda meydana gelir. Yumurtalar,  (Molinea "
 "caerulea) veya Purple Smallreed (Calamagrostis canescens) gibi çimenlerin "
 "bıçaklarına tek başına veya küçük gruplar halinde serilir. Tırtıl, önce "
 "katlanmış bir bıçak kullanarak ve daha sonra eğrilmiş çim bıçakları "
@@ -1508,6 +1509,17 @@ msgstr ""
 
 msgid "Cacyreus-marshalli-description"
 msgstr ""
+"Aslen güney Afrika'dan bir tür olan Sardunya Zebrası muhtemelen sıradan veya"
+" bahçe sardunyaları olan Pelargonium çeşitlerinde ithal edilmişti. Oradan, "
+"bu bitkilerin büyük popülaritesi nedeniyle, örn. İspanya ve Fransa'da, ancak"
+" Pelargonium çeşitlerini gıda bitkisi olarak kullanarak Avrupa'nın daha "
+"büyük bölgelerini kolonileştirmek üzere. Tırtıllar çoğunlukla Pelargonium'un"
+" çiçeklerini ve tomurcuklarını yerler, aynı zamanda bitkilerin geri kalanını"
+" da yerler. Güney Afrika'da Sardunya Zebrası, yabani Sardunya türlerini "
+"besin bitkisi olarak kullanır ve bu kelebeğin Avrupa'nın sıcak bölgelerinde "
+"vahşi doğada yerleşmesini çok olası kılar. Ancak daha serin bölgelerde "
+"diyapoz olmadığı ve kışı yaşayamadığı için kalıcı olarak yerleşmesi imkansız"
+" olurdu. Sıcaklığa bağlı olarak yılda çok sayıda nesil oluşturabilir."
 
 msgid "Celastrina-argiolus-description"
 msgstr ""

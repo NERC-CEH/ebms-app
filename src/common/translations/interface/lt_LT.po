@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Egle Viciuviene <eviciuviene@gmail.com>, 2022
-# Vilius Stankaitis <vilius@flumens.io>, 2022
 # Karolis, 2022
+# Vilius Stankaitis <vilius@flumens.io>, 2022
+# Egle Viciuviene <eviciuviene@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2022\n"
+"Last-Translator: Egle Viciuviene <eviciuviene@gmail.com>, 2022\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1867,57 +1867,29 @@ msgstr ""
 msgid "What's New"
 msgstr "Kas naujo"
 
-# Version 1.17 whats new message
-msgid "Added Polish and Romanian languages"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Enabled Android back button"
+msgstr "Įjungtas „Android“ grįžimo mygtukas"
 
-# Version 1.17 whats new message
-msgid "Added Moth trap location setup"
-msgstr ""
+# Version 1.18 whats new message
+msgid " Added user account delete option"
+msgstr "Pridėta galimybė ištrinti anketą"
 
-# Version 1.17 whats new message
-msgid "Increase temperature range selection from -0 to +40"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Added ability to select multiple photos from the gallery"
+msgstr "Pridėta galimybė pridėti keletą nuotraukų iš galerijos"
 
-# Version 1.17 whats new message
-msgid "Added a day-flying moths filter setting"
-msgstr ""
+# Version 1.18 whats new message
+msgid "Move day-flying moths option to species group page"
+msgstr "Perkelkite dieną skraidančių drugių parinktį į rūšių grupės puslapį"
 
-# Version 1.17 whats new message
-msgid "Added +5 species count shortcut"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added species guide search and filters"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added Catalan and Danish species common names"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Added new survey fields"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Improved user reports"
-msgstr ""
-
-# Version 1.17 whats new message
-msgid "Updated UI design"
-msgstr ""
-
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Various bug fixes"
-msgstr ""
+msgstr "Įvairūs klaidų pataisymai"
 
-# Version 1.17 whats new message
+# Version 1.18 whats new message
 msgid "Updated translations"
-msgstr ""
+msgstr "Atnaujinti vertimai"
 
 # User account action
 msgid "Resend"
@@ -2048,7 +2020,7 @@ msgstr "Registratoriai"
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
-msgstr ""
+msgstr "Įveskite visų prisidėjusių stebėtojų skaičių, įskaitant ir save"
 
 msgid "Network Error"
 msgstr "Tinklo klaida"
@@ -2075,13 +2047,14 @@ msgstr "Vartotojas nėra prisijungęs."
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
-msgstr ""
+msgstr "Mes manome, kad tai {{probability}}%<3>{{taxon}}</3> rūšis"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Dėmesio</0> - mes manome, kad tai {{probability}}% <5>{{taxon}}</5>rūšis"
 
 # Divider label moth trap setup
 msgid "Lamps"
@@ -2116,18 +2089,47 @@ msgstr "Kenija"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Nesutinku"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Sutinku"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Leisti naudoti vietovės nustatymą"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
+"Norėdami, kad būdamas ir užrakintas prietaisas automatiškai sektų jūsų "
+"maršrutą ir registruotų rūšių vietoves, leiskite programėlei naudoti "
+"prietaiso buvimo vietą."
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr "Galite grįžti į numatytuosius programėlės nustatymus."
+
+# Delete account
+msgid "Delete account"
+msgstr "Ištrinti anketą"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "Galite savo anketą ištrinti iš sistemos."
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "Anketos panaikinimas"
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+"Ar esatę įsitikinę, kad norite panaikinti savo anketą? <1>Jūsų anketa bus "
+"pašalinta iš <2>{{url}}</2>svetainės. Jūs daugiau neturėsi prieigos prie "
+"savo, programėle ar svetainėje, užfiksuotų stebėjimų.</1>"
