@@ -87,7 +87,6 @@ const SpeciesOccurrences: FC<Props> = ({ sample }) => {
     <Page id="precise-area-count-edit-taxon-group">
       <Header title="Occurrences" />
       <Main
-        sample={sample}
         samples={getSamples()}
         isDisabled={isDisabled}
         deleteSample={deleteSample}

@@ -62,7 +62,6 @@ function getAreaCountPosition(sample) {
   return [latitude, longitude];
 }
 
-@observer
 class Component extends React.Component {
   static propTypes = {
     savedSamples: PropTypes.array.isRequired,
@@ -180,4 +179,4 @@ class Component extends React.Component {
   }
 }
 
-export default Component;
+export default observer(Component);

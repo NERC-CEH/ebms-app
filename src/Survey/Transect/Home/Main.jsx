@@ -30,7 +30,6 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   minute: 'numeric',
 });
 
-@observer
 class Edit extends Component {
   static propTypes = {
     sample: PropTypes.object.isRequired,
@@ -198,4 +197,4 @@ class Edit extends Component {
   }
 }
 
-export default Edit;
+export default observer(Edit);

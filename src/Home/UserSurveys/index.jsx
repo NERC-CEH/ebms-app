@@ -86,7 +86,6 @@ function getUploadedSurveys(surveys) {
   return <IonList lines="full">{surveysList}</IonList>;
 }
 
-@observer
 class Component extends React.Component {
   static propTypes = {
     savedSamples: PropTypes.array.isRequired,
@@ -166,4 +165,4 @@ class Component extends React.Component {
   }
 }
 
-export default Component;
+export default observer(Component);

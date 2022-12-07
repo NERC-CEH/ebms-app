@@ -1,6 +1,4 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
+import { FC } from 'react';
 import {
   IonList,
   IonItem,
@@ -12,7 +10,9 @@ import {
   IonBadge,
   IonIcon,
 } from '@ionic/react';
+import Sample from 'models/sample';
 import { warningOutline } from 'ionicons/icons';
+import { useRouteMatch } from 'react-router';
 import GridRefValue from 'Components/GridRefValue';
 import { observer } from 'mobx-react';
 import { Main, MenuAttrItem, InfoBackgroundMessage } from '@flumens';
@@ -20,21 +20,23 @@ import { Trans as T } from 'react-i18next';
 import butterflyIcon from 'common/images/butterfly.svg';
 import './styles.scss';
 
-@observer
-class EditOccurrence extends Component {
-  static propTypes = {
-    match: PropTypes.object.isRequired,
-    samples: PropTypes.array.isRequired,
-    navigateToOccurrence: PropTypes.func.isRequired,
-    deleteSample: PropTypes.func.isRequired,
-    isDisabled: PropTypes.bool,
-  };
+type Props = {
+  samples: Sample[];
+  navigateToOccurrence: (smp: Sample) => void;
+  deleteSample: (smp: Sample) => void;
+  isDisabled?: boolean;
+};
 
-  getSamplesList = () => {
-    const { deleteSample, samples, navigateToOccurrence, isDisabled } =
-      this.props;
+const EditOccurrence: FC<Props> = ({
+  samples,
+  navigateToOccurrence,
+  deleteSample,
+  isDisabled,
+}) => {
+  const match = useRouteMatch();
 
-    const getOccurrence = smp => {
+  const getSamplesList = () => {
+    const getOccurrence = (smp: Sample) => {
       const occ = smp.occurrences[0];
       const prettyTime = new Date(smp.metadata.created_on)
         .toLocaleTimeString()
@@ -78,53 +80,49 @@ class EditOccurrence extends Component {
     return samples.map(getOccurrence);
   };
 
-  render() {
-    const { samples, isDisabled, match } = this.props;
-
-    if (!samples[0]) {
-      return (
-        <Main id="area-count-occurrence-edit">
-          <IonList id="list" lines="full">
-            <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
-          </IonList>
-        </Main>
-      );
-    }
-
-    const species = samples[0].occurrences[0].getTaxonName();
-
-    const count = samples.length > 1 ? samples.length : null;
-
+  if (!samples[0]) {
     return (
       <Main id="area-count-occurrence-edit">
-        <IonList lines="full">
-          <div className="rounded">
-            <MenuAttrItem
-              routerLink={`${match.url}/taxon`}
-              disabled={isDisabled}
-              icon={butterflyIcon}
-              label="Species"
-              value={species}
-            />
-          </div>
-
-          <div className="rounded">
-            <IonItemDivider className="species-list-header">
-              <IonLabel>
-                <T>Time</T>
-              </IonLabel>
-              <IonLabel>
-                <T>Stage</T>
-              </IonLabel>
-              <IonLabel>{count}</IonLabel>
-            </IonItemDivider>
-
-            {this.getSamplesList()}
-          </div>
+        <IonList id="list" lines="full">
+          <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
         </IonList>
       </Main>
     );
   }
-}
 
-export default withRouter(EditOccurrence);
+  const species = samples[0].occurrences[0].getTaxonName();
+
+  const count = samples.length > 1 ? samples.length : null;
+
+  return (
+    <Main id="area-count-occurrence-edit">
+      <IonList lines="full">
+        <div className="rounded">
+          <MenuAttrItem
+            routerLink={`${match.url}/taxon`}
+            disabled={isDisabled}
+            icon={butterflyIcon}
+            label="Species"
+            value={species}
+          />
+        </div>
+
+        <div className="rounded">
+          <IonItemDivider className="species-list-header">
+            <IonLabel>
+              <T>Time</T>
+            </IonLabel>
+            <IonLabel>
+              <T>Stage</T>
+            </IonLabel>
+            <IonLabel>{count}</IonLabel>
+          </IonItemDivider>
+
+          {getSamplesList()}
+        </div>
+      </IonList>
+    </Main>
+  );
+};
+
+export default observer(EditOccurrence);
