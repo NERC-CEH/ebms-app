@@ -11,10 +11,9 @@ ion-tab-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
     contain: none;
-    --background: white;
     padding-bottom: var(--ion-safe-area-bottom, 0);
+    --background: white;
 
     ion-button {
       --padding-start: 0px;
@@ -38,9 +37,26 @@ ion-tab-bar {
       --padding-end: 3;
     }
 
-    .long-press-fab-button .fab-button {
-      margin-left: 0px !important;
-      margin-bottom: 0px !important;
+    .long-press-fab-button {
+      // padding needed for iOS with no toolbar
+      padding-bottom: 0;
+
+      .fab-button {
+        margin-left: 0px !important;
+        margin-bottom: 0px !important;
+        margin-right: 0px !important;
+      }
+
+      .fab-options {
+        position: fixed;
+        z-index: 1000;
+        left: 50%;
+        transform: translate(-50%, 0%) !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: var(--ion-safe-area-bottom, 0);
+      }
     }
   }
 
