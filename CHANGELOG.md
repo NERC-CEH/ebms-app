@@ -2,6 +2,7 @@
 
 Added Japanese.
 Small bug fixes.
+Updated the species dictionary.
 
 ## 1.18.1
 
