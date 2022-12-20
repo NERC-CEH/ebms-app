@@ -87,7 +87,13 @@ const useShowGPSPermissionDialog = () => {
   const alert = useAlert();
 
   const showGPSPermissionDialog = async () => {
-    const gpsPermission = await Geolocation.checkPermissions();
+    //  Try block is required. If Device location is disabled Geolocation.checkPermissions() returns Error(Location services are not enabled) it will stop navigation to surveys page
+    let gpsPermission;
+    try {
+      gpsPermission = await Geolocation.checkPermissions();
+    } catch (err) {
+      return null;
+    }
 
     const { showGPSPermissionTip } = appModel.attrs;
 
