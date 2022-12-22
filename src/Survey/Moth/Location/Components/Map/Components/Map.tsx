@@ -46,6 +46,10 @@ const Map: FC<Props> = ({
   const [mapZoom, setMapZoom] = useState(DEFAULT_ZOOM);
   const [mapCenter, setMapCenter] = useState(DEFAULT_CENTER);
 
+  const { location } = sample.attrs;
+  const { latitude, longitude } =
+    sample?.attrs?.location?.attrs?.location || {};
+
   const assignTileSet = (mapRef: Leaflet.Map) => {
     setMap(mapRef);
 
@@ -80,13 +84,11 @@ const Map: FC<Props> = ({
   useEffect(refreshMapPositionAndZoom, [map, mapCenter, mapZoom]);
 
   const setInitialZoomAndCenter = () => {
-    const { location } = sample.attrs;
-
     if (location) {
-      if (!location?.attrs?.latitude || !location?.attrs?.longitude) return;
+      if (!latitude || !longitude) return;
 
-      setMapCenter([location?.attrs?.latitude, location?.attrs?.longitude]);
-      onMovedCoords([location?.attrs?.latitude, location?.attrs?.longitude]);
+      setMapCenter([latitude, longitude]);
+      onMovedCoords([latitude, longitude]);
       setMapZoom(MAX_ZOOM);
       return;
     }
@@ -129,8 +131,7 @@ const Map: FC<Props> = ({
     setMapZoom(MAX_ZOOM);
   }
 
-  const isLocationCurrentlySelected =
-    sample.attrs.location?.latitude && sample.attrs.location?.longitude;
+  const isLocationCurrentlySelected = latitude && longitude;
 
   const isDeviceOnline = device.isOnline;
 
