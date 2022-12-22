@@ -96,6 +96,9 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const _processDraft = async () => {
+    const isValid = checkSampleStatus();
+    if (!isValid) return;
+
     const surveyName = sample.getSurvey().name;
     const draftKey = `draftId:${surveyName}` as keyof SurveyDraftKeys;
     appModel.attrs[draftKey] = '';
@@ -108,9 +111,6 @@ const HomeController: FC<Props> = ({ sample }) => {
       sample.save();
       navigate(`/home/user-surveys`, 'root');
     };
-
-    const isValid = checkSampleStatus();
-    if (!isValid) return;
 
     // eslint-disable-next-line no-param-reassign
     sample.metadata.saved = true;
