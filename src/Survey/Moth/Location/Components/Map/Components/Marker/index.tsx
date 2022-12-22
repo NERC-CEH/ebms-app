@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import L from 'leaflet';
+import { observer } from 'mobx-react';
 import { Marker as LeafletMarker, Popup } from 'react-leaflet';
 import { IonButton, IonIcon, IonLabel } from '@ionic/react';
 import { locationOutline } from 'ionicons/icons';
@@ -48,4 +49,4 @@ const Marker: FC<Props> = ({ mothTrap, onSelect, isSelected, isDisabled }) => {
   );
 };
 
-export default Marker;
+export default observer(Marker);

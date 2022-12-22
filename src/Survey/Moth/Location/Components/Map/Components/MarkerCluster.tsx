@@ -1,5 +1,6 @@
 import { FC, memo } from 'react';
 import MothTrap from 'common/models/location';
+import { observer } from 'mobx-react';
 import locationsCollection from 'models/collections/locations';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import Sample from 'models/sample';
@@ -40,4 +41,4 @@ const MarkerClusterGroupWrap: FC<Props> = ({
   return <MarkerClusterGroup>{markers}</MarkerClusterGroup>;
 };
 
-export default memo(MarkerClusterGroupWrap, forceSkipRefresh);
+export default memo(observer(MarkerClusterGroupWrap), forceSkipRefresh);
