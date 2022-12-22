@@ -19,6 +19,8 @@ interface Props {
 const Marker: FC<Props> = ({ mothTrap, onSelect, isSelected, isDisabled }) => {
   if (!mothTrap.attrs.location?.latitude) return null;
 
+  const isDraft = !mothTrap?.id;
+
   const { latitude, longitude, name } = mothTrap.attrs?.location || {};
 
   const getIcon = () =>
@@ -39,7 +41,7 @@ const Marker: FC<Props> = ({ mothTrap, onSelect, isSelected, isDisabled }) => {
           </div>
         </div>
 
-        {!isSelected && !isDisabled && (
+        {!isDraft && !isSelected && !isDisabled && (
           <IonButton onClick={onSelectWrap}>
             <T>Select</T>
           </IonButton>
