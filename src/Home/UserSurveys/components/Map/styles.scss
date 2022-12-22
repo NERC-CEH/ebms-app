@@ -23,6 +23,17 @@
     background: transparent;
     padding: 0;
   }
+
+  .leaflet-control-attribution.leaflet-control {
+    background: transparent;
+    padding: 0;
+
+    > a,
+    span:first-of-type {
+      display: none;
+    }
+  }
+
   #toggle-info {
     display: none;
   }

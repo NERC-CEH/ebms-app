@@ -157,8 +157,10 @@ class Component extends React.Component {
 
           {showingPending && getPendingSurveys(pendingSurveys)}
           {showingUploaded && getUploadedSurveys(uploadedSurveys)}
-          {/* have to keep mounted because can't detect a mount to fit map bounds */}
-          <Map savedSamples={savedSamples} showingMap={showingMap} />
+
+          {showingMap && (
+            <Map savedSamples={savedSamples} showingMap={showingMap} />
+          )}
         </Main>
       </Page>
     );

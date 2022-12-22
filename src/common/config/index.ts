@@ -32,7 +32,6 @@ const config = {
 
   map: {
     mapboxApiKey: process.env.APP_MAPBOX_MAP_KEY as string,
-    mapboxSatelliteId: 'cehapps/cipqvo0c0000jcknge1z28ejp',
   },
 
   weatherSiteApiKey: process.env.APP_WEATHER_SITE_API_KEY as string,
