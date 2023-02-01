@@ -1,1159 +1,1175 @@
 # 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Karolis, 2021
-# Zdenek Faltynek Fric <fric@entu.cas.cz>, 2022
+# András Szabadfalvi <meggypej@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Zdenek Faltynek Fric <fric@entu.cas.cz>, 2022\n"
-"Language-Team: Czech (Czech Republic) (https://www.transifex.com/ceh/teams/95441/cs_CZ/)\n"
+"Last-Translator: András Szabadfalvi <meggypej@gmail.com>, 2023\n"
+"Language-Team: Hungarian (Hungary) (https://www.transifex.com/ceh/teams/95441/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs_CZ\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Vyber svou zemi"
+msgstr "Válaszd ki az országot!"
 
 msgid "United Kingdom"
-msgstr "Velká Británie"
+msgstr "Egyesült Királyság"
 
 msgid "Lithuania"
-msgstr "Litva"
+msgstr "Litvánia"
 
 msgid "Spain"
-msgstr "Španělsko"
+msgstr "Spanyolország"
 
 msgid "Andorra"
-msgstr "Andora"
+msgstr "Andorra"
 
 msgid "Albania"
-msgstr "Albánie"
+msgstr "Albánia"
 
 msgid "Austria"
-msgstr "Rakousko"
+msgstr "Ausztria"
 
 msgid "Bosnia and Herzegovina"
-msgstr "Bosna a Hercegovina"
+msgstr "Bosznia-Hercegovina"
 
 msgid "Belgium"
-msgstr "Belgie"
+msgstr "Belgium"
 
 msgid "Bulgaria"
-msgstr "Bulharsko"
+msgstr "Bulgária"
 
 msgid "Belarus"
-msgstr "Bělorusko"
+msgstr "Fehéroroszország (Belarusz)"
 
 msgid "Switzerland"
-msgstr "Švýcarsko"
+msgstr "Svájc"
 
 msgid "Cyprus"
-msgstr "Kypr"
+msgstr "Ciprus"
 
 msgid "Czechia"
-msgstr "Česká republika"
+msgstr "Csehország"
 
 msgid "Germany"
-msgstr "Německo"
+msgstr "Németország"
 
 msgid "Denmark"
-msgstr "Dánsko"
+msgstr "Dánia"
 
 msgid "Estonia"
-msgstr "Estonsko"
+msgstr "Észtország"
 
 msgid "Spain (Canary Islands)"
-msgstr "Španělsko (Kanárské ostrovy)"
+msgstr "Spanyolország: Kanári-szigetek"
 
 msgid "Finland"
-msgstr "Finsko"
+msgstr "Finnország"
 
 msgid "France"
-msgstr "Francie"
+msgstr "Franciaország"
 
 msgid "Greece"
-msgstr "Řecko"
+msgstr "Görögország"
 
 msgid "Croatia"
-msgstr "Chorvatsko"
+msgstr "Horvátország"
 
 msgid "Hungary"
-msgstr "Maďarsko"
+msgstr "Magyarország"
 
 msgid "Ireland"
-msgstr "Irsko"
+msgstr "Írország"
 
 msgid "Iceland"
-msgstr "Island"
+msgstr "Izland"
 
 msgid "Italy"
-msgstr "Itálie"
+msgstr "Olaszország"
 
 msgid "Liechtenstein"
-msgstr "Lichtenštejnsko"
+msgstr "Liechtenstein"
 
 msgid "Luxembourg"
-msgstr "Lucembursko"
+msgstr "Luxemburg"
 
 msgid "Latvia"
-msgstr "Lotyšsko"
+msgstr "Lettország"
 
 msgid "Moldova"
-msgstr "Moldávie"
+msgstr "Moldova"
 
 msgid "Montenegro"
-msgstr "Černá Hora"
+msgstr "Montenegró"
 
 msgid "North Macedonia"
-msgstr "Severní Makedonie"
+msgstr "Észak-Macedónia"
 
 msgid "Malta"
-msgstr "Malta"
+msgstr "Málta"
 
 msgid "Netherlands"
-msgstr "Nizozemí"
+msgstr "Hollandia"
 
 msgid "Norway"
-msgstr "Norsko"
+msgstr "Norvégia"
 
 msgid "Poland"
-msgstr "Polsko"
+msgstr "Lengyelország"
 
 msgid "Portugal"
-msgstr "Portugalsko"
+msgstr "Portugália"
 
 msgid "Portugal (Azores)"
-msgstr "Portugalsko (Azory)"
+msgstr "Portugália: Azori-szigetek"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugalsko (Madeira)"
+msgstr "Portugália: Madeira-szigetek"
 
 msgid "Romania"
-msgstr "Rumunsko"
+msgstr "Románia"
 
 msgid "Serbia"
-msgstr "Srbsko"
+msgstr "Szerbia"
 
 msgid "Russian Federation"
-msgstr "Rusko"
+msgstr "Oroszország"
 
 msgid "Slovenia"
-msgstr "Slovinsko"
+msgstr "Szlovénia"
 
 msgid "Japan"
-msgstr "Japonsko"
+msgstr "Japán"
 
 msgid "Slovakia"
-msgstr "Slovensko"
+msgstr "Szlovákia"
 
 msgid "Turkey (Europe)"
-msgstr "Turecko (evropská část)"
+msgstr "Törökország: európai rész"
 
 msgid "Turkey (Asia)"
-msgstr "Turecko (asijská část)"
+msgstr "Törökország: ázsiai rész"
 
 msgid "Ukraine"
-msgstr "Ukrajina"
+msgstr "Ukrajna"
 
 msgid "Elsewhere"
-msgstr "Kdekoli"
+msgstr "Egyéb ország"
 
 msgid "Skip"
-msgstr "Přeskočit"
+msgstr "Kihagy"
 
 msgid "Next"
-msgstr "Další"
+msgstr "Tovább"
 
 msgid "Get Started"
-msgstr "Začít"
+msgstr "Kezdés"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr "Přihlašte se do Vašeho eBMS účtu nebo se zaregistrujte"
+msgstr "Jelentkezz be az eBMS felhasználói fiókodba vagy regisztrálj!"
 
 msgid "Password"
-msgstr "Heslo"
+msgstr "Jelszó"
 
 msgid "Sign in"
-msgstr "Přihlášení"
+msgstr "Bejelentkezés"
 
 msgid "Register"
-msgstr "Registrace"
+msgstr "Regisztráció"
 
 msgid "Forgot password?"
-msgstr "Zapomenuté heslo?"
+msgstr "Elfelejtetted a jelszavad?"
 
 msgid "User not found."
-msgstr "Uživatel nenalezen"
+msgstr "Ismeretlen felhasználó"
 
 msgid "Login"
-msgstr "Uživatelské jméno"
+msgstr "Bejelentkezés"
 
 msgid "Settings"
-msgstr "Nastavení"
+msgstr "Beállítások"
 
 msgid "Info"
-msgstr "Informace"
+msgstr "Tájékoztató"
 
 msgid "About"
-msgstr "O aplikaci"
+msgstr "Névjegy"
 
 msgid "Help"
-msgstr "Nápověda"
+msgstr "Segítség"
 
 msgid "Privacy Policy"
-msgstr "Nastavení soukromí"
+msgstr "Adatvédelem"
 
 msgid "Credits"
-msgstr "Zásluha"
+msgstr "Közreműködők"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "E-mail cím"
 
 msgid "First Name"
-msgstr "Jméno"
+msgstr "Utónév (Keresztnév)"
 
 msgid "Surname"
-msgstr "Příjmení"
+msgstr "Vezetéknév"
 
 msgid "I agree to"
-msgstr "Souhlasím s"
+msgstr "Elfogadom"
 
 msgid "Terms and Conditions"
-msgstr "Všeobecné podmínky"
+msgstr "Felhasználási feltételek"
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Alapállapot"
 
 msgid "Records"
-msgstr "Záznamy"
+msgstr "Rekordok"
 
 msgid "Upload All"
-msgstr "Nahraj všechno"
+msgstr "Összes feltöltése"
 
 msgid "Remove All Saved"
-msgstr "Odstraň všechny uložené"
+msgstr "Összes mentett eltávolítása"
 
 msgid "Application"
-msgstr "Aplikace"
+msgstr "Alkalmazás"
 
 msgid "Training Mode"
-msgstr "Simulace"
+msgstr "Tréning-mód"
 
 msgid "Experimental Features"
-msgstr "Experimentální funkce"
+msgstr "Kísérleti funkciók"
 
 msgid "Welcome"
-msgstr "Vítejte"
+msgstr "Üdvözlünk!"
 
 msgid "Lets start!"
-msgstr "Začněme!"
+msgstr "Vágjunk bele!"
 
 msgid "TOP RECORDERS"
-msgstr "Nejlepší mapovatelé"
+msgstr "A LEGAKTÍVABB ADATBEKÜLDŐK"
 
 msgid "Top Species from all timed counts"
-msgstr "Top druhy ze všech časových záznamů"
+msgstr "Leggyakoribb fajok (15-perces számlálások)"
 
 msgid "Back"
-msgstr "Zpět"
+msgstr "Vissza"
 
 msgid "Menu"
-msgstr "Menu"
+msgstr "Menü"
 
 msgid "App"
-msgstr "Aplikace"
+msgstr "Alkalmazás"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
-msgstr "Jsme zavázáni všem lidem, kteří pomohli vytvořit tuto aplikaci:"
+msgstr "Köszönjük mindazoknak, akik segítettek az alkalmazás létrejöttében:"
 
 msgid "Home"
-msgstr "Domů"
+msgstr "Kezdőlap"
 
 msgid "Guide"
-msgstr "Průvodce"
+msgstr "Lepkehatározó"
 
 msgid "Account"
-msgstr "Účet"
+msgstr "Felhasználói fiók"
 
 msgid "Offline"
 msgstr "Offline"
 
 msgid "Sorry, looks like you're offline."
-msgstr "Pardon, zdá se, že jste offline"
+msgstr "Hoppá! Nincs internetkapcsolat."
 
 msgid "OK"
 msgstr "OK"
 
 msgid "Sorry"
-msgstr "Omlouváme se"
+msgstr "Hoppá!"
 
 msgid "Please wait..."
-msgstr "Počkejte, prosím..."
+msgstr "Türelem lepkét terem..."
 
 msgid "name is a required field"
-msgstr "Jméno musí být zadáno"
+msgstr "a \"név\" megadása kötelező"
 
 msgid "password is a required field"
-msgstr "Heslo musí být zadáno"
+msgstr "a \"jelszó\" megadása kötelező"
 
 msgid "Login error:"
-msgstr "Chyba přihlášení"
+msgstr "Bejelentkezési hiba:"
 
 msgid "Failed to fetch"
-msgstr "Chyba v natažení dat"
+msgstr "Sikertelen"
 
 msgid "Incorrect password or email."
-msgstr "Nesprávné heslo nebo e-mail"
+msgstr "Hibás jelszó vagy e-mail cím"
 
 # Part of logout process
 msgid "Logout"
-msgstr "Odhlášení"
+msgstr "Kijelentkezés"
 
 # Part of logout process
 msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
-"Opravdu se chcete odhlásit?<br/><br/>Vaše čekající i uložené <4>záznamy "
-"nebudou smazány </4> z tohoto zařízení."
+"Biztos, hogy kijelentkezel?<br/><br/>A még függőben lévő és a már feltöltött"
+" <4>rekordok nem fognak törlődni </4> a készülékről."
 
 msgid "Cancel"
-msgstr "Zrušit"
+msgstr "Mégse"
 
 msgid "Welcome aboard!"
-msgstr "Vítejte na palubě!"
+msgstr "Üdvözlünk az Európai Lepkemonitoring Programban!"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Před odesláním jakéhokoli záznamu zkontrolujte e-mail a klikněte na "
-"potvrzující odkaz"
+"Addig nem tudsz adatokat beküldeni, míg meg nem nyitod az e-mailben kapott "
+"megerősítő-linket!"
 
 msgid "OK, got it"
-msgstr "OK, pochopil jsem"
+msgstr "OK, megértettem."
 
 msgid "Please fill in"
-msgstr "Prosím vyplňte"
+msgstr "Kérlek, töltsd ki!"
 
 msgid "Area Count"
-msgstr "Počet na plochu"
+msgstr "Területi számlálás"
 
 msgid "Area"
-msgstr "Plocha"
+msgstr "Terület"
 
 # Location attribute label
 msgid "Location"
-msgstr "Místo"
+msgstr "Helyhozzáférés"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr "Zadání místa je nezbytné"
+msgstr "Helyhozzáférés szükséges"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
-"Tato aplikace potřebuje znát Vaši pozici, ale chybí jí k tomu oprávnění. "
-"Chcete otevřít nastavení teď?"
+"Az alkalmazás GPS-adatokat használ, de nincs helyhozzáférési engedélye. "
+"Engedélyezi a beállításokban?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr "Zrušit kvůli zabránění vybití baterie."
+msgstr "Mégse, az akku kímélése érdekében."
 
 # GPS message
 msgid "Using your location."
-msgstr "Používám Vaší pozici."
+msgstr "Helyadatok használata"
 
 msgid "Add"
-msgstr "Vložit"
+msgstr "Hozzáad"
 
 msgid "Add species"
-msgstr "Vložte druh"
+msgstr "Hozzáad"
 
 msgid "Duration"
-msgstr "Doba"
+msgstr "Stopper"
 
 msgid "Species"
-msgstr "Druh"
+msgstr "Fajlista"
 
 msgid "Species name"
-msgstr "Název druhu"
+msgstr "Fajnév"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
-"Pro rychlejší hledání druhů můžete použít různé zkratky. Například najít"
+"A fajválasztólistában való kereséshez a szövegmezőbe beírhatsz rövidítéseket"
+" is. Pl. ha a"
 
 msgid "you can type in the search bar"
-msgstr "můžete zadat ve hledacím políčku"
+msgstr "fajt keresed, a következők bármelyikét beírhatod:"
 
 msgid "Edit Occurrence"
-msgstr "Editovat výskyt"
+msgstr "Adat módosítása"
 
 msgid "Count"
-msgstr "Počet"
+msgstr "Egyedszám"
 
 msgid "Comment"
-msgstr "Poznámka"
+msgstr "Megjegyzés"
 
 msgid "Draft"
-msgstr "Návrh"
+msgstr "Piszkozat"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Existuje předchozí verze návrhu. Chcete s ní pokračovat?"
+msgstr "Van korábbi felmérés-piszkozat. Szeretnéd folytatni?"
 
 msgid "Discard"
-msgstr "Zahodit změny"
+msgstr "Elvet"
 
 msgid "Continue"
-msgstr "Pokračovat"
+msgstr "Folytat"
 
 msgid "Finish"
-msgstr "Dokončit"
+msgstr "Befejez"
 
 msgid "minutes"
-msgstr "minuty"
+msgstr "perc"
 
 msgid "No species added"
-msgstr "Žádný druh nebyl přidán"
+msgstr "Nincs hozzáadott faj"
 
 msgid "Please draw your area on the map"
-msgstr "Prosím, nakreslete vaši plochu do mapy"
+msgstr "Rajzold meg a felmért területet!"
 
 msgid "Draw an area"
-msgstr "Zakreslit plochu"
+msgstr "Határold le a területet!"
 
 msgid "Delete"
-msgstr "Smazat"
+msgstr "Töröl"
 
 msgid "Surveys"
-msgstr "Průzkumy"
+msgstr "Felmérések"
 
 msgid "Reports"
-msgstr "Zprávy"
+msgstr "Jelentések"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr "Název druhu nebo filtrujte.."
+msgstr "Fajnév vagy szűrés..."
 
 # Species filter label
 msgid "family"
-msgstr "čeleď"
+msgstr "család"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Omlouváme se, nejsou k dispozici žádná data k vytvoření zprávy"
+msgstr "Hoppá! Nincs elérhető jelentés."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "Opravdu chcete smazat tento průzkum?"
+msgstr "Biztos, hogy törölni akarod ezt a felmérést?"
 
 msgid "No finished surveys"
-msgstr "Nedokončené průzkumy"
+msgstr "Nincs befejezett felmérés"
 
 msgid "Finished surveys"
-msgstr "Dokončené průzkumy"
+msgstr "Befejezett felmérések"
 
 msgid "Selected area"
-msgstr "Vybrané území"
+msgstr "Lehatárolt terület"
 
 msgid "Use survey create time"
-msgstr "Použij čas vytvoření průzkumu"
+msgstr "Felmérés kezdési idejének használata"
 
 msgid "Use survey finish time"
-msgstr "Použij čas dokončení průzkumu"
+msgstr "Felmérés befejezési idejének használata"
 
 msgid "species"
-msgstr "druh"
+msgstr "faj"
 
 msgid "Done"
-msgstr "Hotovo"
+msgstr "Kész"
 
 msgid "Time's up!"
-msgstr "Čas vypršel!"
+msgstr "Lejárt az idő!"
 
 msgid "Survey incomplete"
-msgstr "Průzkum není kompletní"
+msgstr "Befejezetlen felmérés"
 
 msgid "The survey is not complete yet."
-msgstr "Průzkum ještě není dokončen"
+msgstr "Ez a felmérés még befejezetlen."
 
 msgid "Please select a smaller area."
-msgstr "Vyberte, prosím, menší území"
+msgstr "Válassz kisebb területet!"
 
 msgid "Please add survey area information."
-msgstr "Vložte, prosím, informace o území"
+msgstr "Add meg a felmért területet!"
 
 msgid "Choose a method to upload a photo"
-msgstr "Vyberte metodu k nahrání fotografie"
+msgstr "Fotó csatolása innét:"
 
 msgid "Gallery"
-msgstr "Galerie"
+msgstr "Galéria"
 
 msgid "Camera"
-msgstr "Fotoaparát"
+msgstr "Kamera"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "Opravdu chcete odebrat tuto fotografii?"
+msgstr "Biztos, hogy törlöd ezt a fotót?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Poznámka: fotografie zůstane v galerii"
+msgstr "Megjegyzés: a galériából nem törlődik."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr "Žádná fotka nebyla vložena. <br/>Zmáčkněte <3></3> pro vložení."
+msgstr "Még nincs fotó. Fotó csatolásához <br/>Koppints ide <3></3>!"
 
 msgid "Registration error:"
-msgstr "Chyba registrace"
+msgstr "Regisztrációs hiba:"
 
 # Login error message
 msgid "Incorrect password or email"
-msgstr "Nesprávné heslo nebo e-mail"
+msgstr "Hibás jelszó vagy e-mail cím"
 
 msgid "Enter your email address to request a password reset."
-msgstr "Pro reset hesla zadejte emailovou adresu."
+msgstr "A jelszó visszaállításához add meg az e-mail címed!"
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr "Ůspěšně přihlášen jako: {{email}}"
+msgstr "Sikeresen bejelentkezve {{email}}-ként"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr "Uživatel nebyl přihlášen, nebo je blokován."
+msgstr "A felhasználó még nincs aktiválva vagy le van tiltva."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
-"Vypadá to, že Váš <1>{{userEmail}}</1> email nebyl stále ověřen.<3><0>Znovu "
-"načíst </0><1>Znovu odeslat email</1></3>"
+"A megadott <1>{{userEmail}}</1> e-mail cím még nincs "
+"ellenőrizve.<3><0>Frissít</0><1>E-mail újraküldése</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
-"Nový ověřovací email byl úspěšně odeslán. Pokud ho neobdržíte, zpontrolujte "
-"záložky se spamy."
+"Elküldtük az ellenőrző e-mail-t. Ha nem érkezik meg, nézd meg a "
+"\"levélszemét\" (Junk vagy Spam) mappában!"
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr "Napřed se, prosím, přihlašte."
+msgstr "Előbb be kell jelentkezned."
 
 # User registration error
 msgid "This email is already taken."
-msgstr "Tento email je již použit."
+msgstr "Ez az e-mail cím már foglalt."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr "Nerozeznaná emailová adresa."
+msgstr "Ismeretlen e-mail cím."
 
 msgid "email is not valid"
-msgstr "E-mail není platný"
+msgstr "érvénytelen e-mail cím"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Motýli patří mezi oblíbenou hmyzí skupinu, ale v mnoha evropských částech "
-"ubývají. Tak jako ukazuje tento Indikátor lučních motýlů v EU"
+"A lepkék varázslatos rovarok. Sajnos, Európa nagy részén pusztulóban vannak."
+" Ezt mutatja a Gyepi Lepkeközösségek Indikátorának (Grassland Butterfly "
+"Indicator) uniós alakulása is az alábbi grafikonon."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
-"Sběr dat touto aplikací pomůže velice zlepšit znalosti o stavu motýlů a "
-"jejich životního prostředí."
+"Az alkalmazással gyűjtött adatok nagyban segítik a lepkék és élőhelyeik "
+"állapotának megismerését."
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
-"Z mnoha evropských míst nemáme dostatek informací o počtech motýlů, jak "
-"ilustruje hustota záznamů, které jsou aktuálně k dispozici"
+"Európa sok részéről még nincs elegendő információnk a lepkék egyedszámára "
+"(abundancia) vonatkozóan, ahogy ez az adatsűrűséget ábrázoló ábrán is "
+"látszik."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Nikdy nebylo jednodušší přispět velice kvalitními daty pro výzkum, který "
-"podpoří ochranu tohoto fasicnujícího a důležitého hmyzu. Můžete začít právě "
-"teď"
+"Ma már Te is könnyen hozzájárulhatsz gyűjtött adataiddal a lepkék "
+"kutatásához, segítve e csodás és fontos rovarok (beporzók, más állatok "
+"táplálékai) megőrzését. Erre való ez az alkalmazás."
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"Tato aplikace byla zhotovena jako součást Projektu pro vyhodnocení stavu "
-"evropských motýlů (Assessing Butterflies in Europe, ABLE)"
+"Az alkalmazás az Assessing Butterflies in Europe (ABLE) projekt részeként "
+"került kifejlesztésre."
 
 msgid "The ABLE project is a partnership between"
-msgstr "Projekt ABLE představuje partnerství mezi"
+msgstr "Az ABLE projekt partneri együttműködés az alábbi szervezetek között:"
 
 msgid "and"
-msgstr "a"
+msgstr "és"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
-"ABLE je smluvně podpořena z ředitelství Evropské unie pro životní prostředí "
-"pro počáteční dvouleté období od 2019-2020"
+"Az ABLE projektet, 2019-től 2020-ig szóló szolgáltatási megállapodás "
+"keretében, az Európai Unió Környezetvédelmi Igazgatósága finanszírozta."
 
 msgid "ABLE partners:"
-msgstr "Partneři ABLE:"
+msgstr "ABLE-partnerek:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
-"Tato aplikace přispívá daty pro Evropské motýlí monitorovací schema (eBMS)."
+"Az alkalmazás az Európai Lepkemonitoring Program (eBMS) számára szolgáltat "
+"adatokat."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr "Následující organizace jsou partnery eBMS od června 2019:"
+msgstr "2019 júniusában, az eBMS partnerszervezetei a következők:"
 
 msgid "Not enough data yet"
-msgstr "Zatím není dostatek dat"
+msgstr "Még nincs elég adat"
 
 msgid "How to start a survey"
-msgstr "Jak začít průzkum"
+msgstr "Új felmérés indítása"
 
 msgid "To start a new survey you can press the plus button"
-msgstr "Pro začátek nového průzkumu zmáčkněte tlačítko plus"
+msgstr "Új felmérés indításához koppints a \"plusz\" gombra"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
-msgstr "Na záložce hlavního panelu. Toto vytvoří nový 15 minutový průzkum"
+msgstr "a kezdőlap alsó ikonsávjában. Ezzel új 15 perces felmérés indul."
 
 msgid "Selecting species"
-msgstr "Vybírám druhy"
+msgstr "Faj kiválasztása"
 
 msgid "Please press the Add"
-msgstr "Prosím, zmáčkněte tlačítko Vložit"
+msgstr "Koppints a \"Hozzáad\""
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"tlačítko na Vaší editační stránce nového průzkumu. To vás přenese na stránku"
-" pro hledání druhů. Druh bude po vybrání přidán do průzkumového seznamu."
+"gombra a megkezdett felmérésben, megnyitva ezzel a dinamikus fajválasztó "
+"listát. A kiválasztott faj hozzáadódik az aktuális fajlistához."
 
 msgid "Note"
-msgstr "Poznámka"
+msgstr "Megjegyzés:"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
-"můžete zvýšit počet jedinců kliknutím na číslo vedle názvu druhu v seznamu."
+"Az egyedszám növeléséhez koppints a megfelelő faj melletti számlálóra!"
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Pro smazání druhu z průzkumového seznamu ho můžete odsunout doleva a "
-"zmáčknout tlačítko pro smazání."
+"Egy faj törléséhez, koppints a fajra, húzd el az ujjad jobbról-balra, és "
+"koppints a jobboldalt megjelenő piros \"Törlés\" gombra!"
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"Pro vložení více informací o výskytu druhu, otevřete dialog kliknutím na "
-"druh."
+"Ha az előfordulási adathoz további információt szeretnél hozzáadni, koppints"
+"  a fajra, majd a kívánt előfordulási adatra!"
 
 msgid "To finish a record you should also fill in the details of the area."
-msgstr "Pro dokončení záznamu vyplňte také detaily o území."
+msgstr ""
+"A felmérés befejezéséhez a felmért útvonalat (track) vagy területet is "
+"rögzíteni kell. Ez manuálisan is megrajzolható, ha a telefon valamiért nem "
+"vagy rosszul rögzítette."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
-msgstr "Až skončíte, zmáčkněte tlačítko Dokončit nahoře pro odeslání dat."
+msgstr ""
+"Ha minden adatot megadtál, a felmérés befejezéséhez koppints a címsáv jobb "
+"oldalán a \"Befejez\" gombra!"
 
 msgid "Searching for species"
-msgstr "Hledání druhu"
+msgstr "Faj keresése"
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"Aplikace obsahuje seznam zhruba 500 druhů se všemi taxonomickými úrovněmi. "
-"Pro rychlejší hledání druhů můžete použít různé klávesové zkratky. Např. "
-"abyste našli"
+"Az alkalmazás közel 500 nappalilepke-fajt és rendszertani csoportot "
+"tartalmaz. A gyorsabb kereséshez használhatsz rövidítéseket. Pl. ha azt "
+"keresed, hogy"
 
 msgid "Sync. with the website"
-msgstr "Synchronizace s webovým rozhraním"
+msgstr "Adatok feltöltése"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr "Všechny uložené průzkumy budou zobrazeny na stránce Vašeho účtu"
+msgstr ""
+"A feltöltött felméréseid megjelennek az eBMS-honlapon a felhasználói "
+"fiókodban."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Průzkum je od začátku prováděn v 'návrhovém' modu a nebude odeslán do "
-"databáze, dokud nezmačknete tlačítko Dokončit nahoře. Aplikace se pokusí "
-"odeslat Vaše údaje hned, jak bude na dobrém síťovém připojení."
+"Alapbeállításként, a felmérés \"piszkozat\"-ként szerepel. Ez nem töltődik "
+"fel az adatbázisba, amíg nem koppintottál a címsávban lévő \"Befejez\" "
+"gombra. Az alkalmazás a befejezett felméréseket, megfelelő hálózati "
+"kapcsolatnál (pl. WiFi), megpróbálja feltölteni az adatbázisba."
 
 msgid "If the record has reached the database a red"
-msgstr "Pokud bude záznam odeslán do databáze, červené"
+msgstr "Ha a felmérés sikeresen fel lett töltve az adatbázisba, a piros nyíl"
 
 msgid "(set for submission & saved locally) will become green"
-msgstr ""
-"(nastavený pro odeslání a lokálně uložený) označení se změní na zelené"
+msgstr "(beküldésre vár, helyi eszközön) zöldre vált"
 
 msgid "synced to the database"
-msgstr "synchronizováno s databází"
+msgstr "(adatbázisba feltöltve)"
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
-"musíte být přihlášen do webového rozhraní a musíte být připojen na síť, aby "
-"se Vaše záznamy automaticky synchronizovaly na pozadí"
+"az adatok eBMS-adatbázisba való beküldéséhez (\"Feltöltés\") az szükséges, "
+"hogy be légy jelentkezve a felhasználói fiókodba és legyen megfelelő "
+"internetkapcsolat."
 
 msgid "Delete a record"
-msgstr "Smazat záznam"
+msgstr "Felmérés törlése"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Abyste smazali záznam, odsuňte ho doleva na stránce Vašeho účtu a zmáčkněte "
-"tlačítko Smazat"
+"A kiválasztott felmérés törléséhez húzd az ujjad balról jobbra, és koppints "
+"a megjelenő piros \"Töröl\" gombra!"
 
 msgid "User"
-msgstr "Uživatel"
+msgstr "Felhasználó"
 
 msgid "Sign in/out or register"
-msgstr "Přihlašte se/odhlašte se a nebo se zaregistrujte"
+msgstr "Be- és kijelentkezés, regisztráció"
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"K přihlášení se otevřete hlavní nabídku, klikněte na Přihlášení nebo "
-"Registraci a následujte instrukce."
+"Bejelentkezéshez nyisd meg a \"Menü\"-t (alsó ikonsáv jobb szélén), koppints"
+" a \"Bejelentkezés\" vagy \"Regisztráció\" gombra, és kövesd az "
+"utasításokat!"
 
 msgid "To logout, visit the main menu page and click the logout button."
-msgstr "K odhlášení se přejděte na hlavní nabídku a klikněte na Odhlášení."
+msgstr ""
+"Kijelentkezéshez nyisd meg a \"Menü\"-t (alsó ikonsáv jobb szélén), és "
+"koppints a \"Kijelentkezés\" gombra!"
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
-"po registraci nového účtu musíte potvrdit Vaši e-mailovou adresu kliknutím "
-"na potvrzující odkaz, který Vám byl zaslán na e-mail"
+"új regisztráció aktiválásához ellenőriznünk kell az e-mail címedet. Ehhez "
+"nyisd meg az e-mailben kapott megerősítő-linket!"
 
 msgid "Other"
-msgstr "Jiné"
+msgstr "Egyéb"
 
 msgid "Reset the application"
-msgstr "Reset aplikace"
+msgstr "Az alkalmazás alapállapotba állítása"
 
 msgid "Go to the application settings page"
-msgstr "Přejděte na nastavení aplikace"
+msgstr "A \"Menü\"-ben nyisd meg a \"Beállítások\"-at"
 
 msgid "and click on the Reset"
-msgstr "a klikněte na Reset"
+msgstr "és koppints az \"Alapállapot\""
 
 msgid "button"
-msgstr "tlačítko"
+msgstr "gombra!"
 
 msgid "No species found with this name"
-msgstr "Nebyl nalezen žádný druh s tímto názvem"
+msgstr "Nem találjuk ezt a fajt"
 
 msgid "Allow Sample Edit"
-msgstr "Umožněte úpravu vzorku"
+msgstr "Rekordok módosításának engedélyezése"
 
 msgid "Upload"
-msgstr "Nahrát"
+msgstr "Feltölt"
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Tato aplikace podporuje monitoring a ochranu motýlů. Klikněte na tlačítko + "
-"dole, abyste mohli začít s počítáním motýlů."
+"Az alkalmazás segít a lepkék monitorozásában (a lepketrendek "
+"nyomonkövetésében) és a biológiai sokféleség megőrzésében. Koppints a \"+\" "
+"(plusz) gombra a lepkeszámlálás megkezdéséhez!"
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
-"Uvidíte spoustu vylepšení této aplikace. V příštích měsících přidáme nové "
-"funkce."
 
 msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Opravdu chcete aplikaci resetovat do původního stavu?"
+msgstr "Biztos, hogy visszaállítod az alkalmazást alapállapotba?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr "Toto odstraní všechna lokálně uložená data aplikace!"
+msgstr "Le fogsz törölni minden az az eszközön tárolt lepkeadatot!"
 
 msgid "Sweden"
-msgstr "Švédsko"
+msgstr "Svédország"
 
 msgid "Paused"
-msgstr "Pozastaveno"
+msgstr "Folytat"
 
 msgid "Pending"
-msgstr "Čekám"
+msgstr "Nem feltöltött"
 
 msgid "Uploaded"
-msgstr "Nahráno"
+msgstr "Feltöltött"
 
 msgid "No finished pending surveys"
-msgstr "Žádný dokončený průzkum ve frontě"
+msgstr "Nincs fel nem töltött befejezett felmérés"
 
 msgid "No uploaded surveys"
-msgstr "Žádný průzkum nebyl nahrán"
+msgstr "Nincs feltöltött felmérés"
 
 msgid "Enjoying the app?"
-msgstr "Líbí se Vám aplikace?"
+msgstr "Tetszik az alkalmazás?"
 
 msgid "Not really"
-msgstr "Ani ne"
+msgstr "Nem annyira."
 
 msgid "Yes!"
-msgstr "Ano!"
+msgstr "Igen!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr "Nebude Vám vadit nám dát zpětnou vazbu?"
+msgstr "Küldesz nekünk visszajelzést?"
 
 msgid "No, thanks"
-msgstr "Ne, díky"
+msgstr "Nem, kösz."
 
 msgid "OK, sure"
-msgstr "Ano, jistě"
+msgstr "Igen, naná!"
 
 msgid "How about a rating on the App Store then?"
-msgstr "Co aplikaci ohodnotit na App Store?"
+msgstr "Értékeled az alkalmazást az App Store-ban?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "Co aplikaci ohodnotit na Play Store?"
+msgstr "Értékeled az alkalmazást a Játékáruházban (Play Store)?"
 
 msgid "Icons made by"
-msgstr "Ikonky vyrobeny"
+msgstr "Ikonok:"
 
 msgid "from"
-msgstr "z"
+msgstr ""
 
 msgid "We've sent an email to you"
-msgstr "Zaslali jsme Vám e-mail"
+msgstr "Elküldtük címedre az e-mailt a visszaállító-linkkel."
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
-"Klikněte na odkaz v e-mailu pro resetování hesla. Pokud e-mail nevidíte, "
-"prohledejte také místa jako nevyžádanou poštu či jiné záložky."
+"Új jelszavad beállításához nyisd meg az e-mailben kapott linket! Ha nincs az"
+" e-mail a \"bejövő levelek\" közt, nézd meg más mappákban is (pl. "
+"levélszemét/junk vagy spam)!"
 
 msgid "App Development"
-msgstr "Vývoj aplikace"
+msgstr "Alkalmazásfejlesztés"
 
 msgid "This app was hand crafted with love by"
-msgstr "Tato aplikace byla vytvořena ručně a s láskou "
+msgstr "Neked fejlesztettük ezt az alkalmazást:"
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
-msgstr "Agentura specializovaná na zakázková datově orientovaná řešení."
+msgstr ""
+"Műszaki tanácsadás, amely feladatra szabott környezettudományi és "
+"közösségközpontú megoldásokra szakosodott."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr "Pokud máte nápady či cítíte potřebu zpětné vazby, neváhejte "
+msgstr "Ha javaslatod vagy visszajelzésed van,"
 
 msgid "contact us"
-msgstr "nás kontaktovat"
+msgstr "küldd el nekünk:"
 
 msgid "Language"
-msgstr "Jazyk"
+msgstr "Nyelv"
 
 msgid "Country"
-msgstr "Země"
+msgstr "Ország"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
-msgstr "Označte jakýkoli záznam jako \"simulaci\" a vyjměte ho ze všech zpráv."
+msgstr "A \"tréning-módban\" felvett adatok, nem kerülnek be a jelentésekbe."
 
 # App setting label
 msgid "Show common names in guide"
-msgstr "V průvodci použij české názvy"
+msgstr "Magyar lepkenevek engedélyezése a határozóban"
 
 msgid "Share App Analytics"
-msgstr "Sdílejte analýzy aplikace"
+msgstr "Alkalmazás-analitika engedélyezése"
 
 msgid "Share app crash data so we can make the app more reliable."
-msgstr ""
-"Sdílejte data hlášení dat, abychom mohli udělat tuto aplikaci "
-"důvěryhodnější."
+msgstr "Hibajelentések küldése. Segíts, hogy az alkalmazás még jobb legyen!"
 
 msgid "Save Draft"
-msgstr "Uložte návrh"
+msgstr "Mentés piszkozatként"
 
 msgid "Stage"
-msgstr "Stadium"
+msgstr "Fejlődési alak"
 
 msgid "Not Recorded"
-msgstr "Nezaznamenáno"
+msgstr "Nincs megadva"
 
 msgid "Adults"
-msgstr "Dospělci"
+msgstr "Imágó"
 
 msgid "Larvae"
-msgstr "Housenky"
+msgstr "Hernyó"
 
 msgid "Eggs"
-msgstr "Vajíčka"
+msgstr "Pete"
 
 msgid "Pupae"
-msgstr "Kukly"
+msgstr "Báb"
 
 msgid "Larval webs"
-msgstr "Hnízda housenek"
+msgstr "Hernyófészek"
 
 # Butterfly stage
 msgid "Adult"
-msgstr "Dospělec"
+msgstr "Imágó"
 
 # Butterfly stage
 msgid "Egg"
-msgstr "Vajíčko"
+msgstr "Pete"
 
 # Butterfly stage
 msgid "Larva"
-msgstr "Housenka"
+msgstr "Hernyó"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr "Hnízdo housenek"
+msgstr "Hernyófészek"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr "Kukla"
+msgstr "Báb"
 
 msgid "Transect"
-msgstr "Transekt"
+msgstr "Transzekt"
 
 msgid "Sections"
-msgstr "Sekce"
+msgstr "Szakaszok"
 
 msgid "No transect"
-msgstr "Žádný transekt"
+msgstr "Nincs transzekt"
 
 msgid "Start Time"
-msgstr "Čas začátku"
+msgstr "Kezdési idő"
 
 msgid "End Time"
-msgstr "Čas konce"
+msgstr "Befejezési idő"
 
 msgid "Temperature"
-msgstr "Teplota"
+msgstr "Hőmérséklet"
 
 msgid "Cloud"
-msgstr "Oblačnost"
+msgstr "Felhőzet"
 
 msgid "Wind Direction"
-msgstr "Směr větru"
+msgstr "Szélirány"
 
 msgid "Wind Speed"
-msgstr "Rychlost větru"
+msgstr "Szélerősség"
 
 msgid "Recorder"
-msgstr "Mapovatel"
+msgstr "Felmérő"
 
 msgid "Refresh"
-msgstr "Obnovit"
+msgstr "Frissít"
 
 msgid "Please select your transect first."
-msgstr "Vyberte, prosím, napřed Váš transekt."
+msgstr "Előbb válaszd ki a transzektet!"
 
 msgid "Invalid server response."
-msgstr "Neplatná odpověď serveru."
+msgstr "Érvénytelen szerverválasz."
 
 msgid "Not recorded/no data"
-msgstr "Nezaznamenáno/žádná data"
+msgstr "Nem elérhető/nincs adat"
 
 msgid "Please specify the temperature C°."
-msgstr "Prosím, specifikujte teplotu v °C"
+msgstr "Add meg a hőmérsékletet (C°)!"
 
 msgid "S"
-msgstr "J"
+msgstr "D"
 
 msgid "SW"
-msgstr "JZ"
+msgstr "DNy"
 
 msgid "W"
-msgstr "Z"
+msgstr "Ny"
 
 msgid "NW"
-msgstr "SZ"
+msgstr "ÉNy"
 
 msgid "N"
-msgstr "S"
+msgstr "É"
 
 msgid "NE"
-msgstr "SV"
+msgstr "ÉK"
 
 msgid "E"
-msgstr "V"
+msgstr "K"
 
 msgid "SE"
-msgstr "JV"
+msgstr "DK"
 
 msgid "No direction"
-msgstr "Žádný směr"
+msgstr "Nincs szélirány"
 
 msgid "Please specify the wind direction."
-msgstr "Prosím, specifikujte směr větru"
+msgstr "Add meg a jellemző szélirányt!"
 
 msgid "Smoke rises vertically"
-msgstr "Kouř stoupá vzhůru"
+msgstr "A füst függőlegesen felfelé száll."
 
 msgid "Slight smoke drift"
-msgstr "Kouř je lehce unášen pryč"
+msgstr "A felszálló füst gyengén ingadozik, a szél alig érezhető."
 
 msgid "Wind felt on face, leaves rustle"
-msgstr "Vítr je cítit na tváři, listy ševelí"
+msgstr "A fák levelei zizegnek, az arcon érezhető a légmozgás."
 
 msgid "Leaves and twigs in slight motion"
-msgstr "Listy a větvičky se lehce pohybují"
+msgstr "A szél a fák leveleit, vékony hajtásait mozgatja."
 
 msgid "Dust raised and small branches move"
-msgstr "Zvedá se prach a menší větve se hýbají"
+msgstr "A szél a fák gallyait, kisebb ágait állandóan mozgatja."
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Malé stromky s listím se začínají houpat"
+msgstr "A nagyobb faágak is mozognak, a levegő mozgása jól hallható."
 
 msgid "Large branches move and trees sway"
-msgstr "Velké větve se hýbají, stromy se houpají"
+msgstr ""
+"A legvastagabb ágak is mozognak; a drótkötelek, villanyvezetékek zúgnak."
 
 msgid "Please specify the wind speed."
-msgstr "Prosím, specifikujte rychlost větru"
+msgstr "Add meg a szélerősséget!"
 
 msgid "Transects"
-msgstr "Transekty"
+msgstr "Transzektek"
 
 msgid "Transect list was successfully updated."
-msgstr "Seznam transektů byl úspěšně aktualizován"
+msgstr "A transzekt-lista sikeresen frissült."
 
 msgid "Section"
-msgstr "Sekce"
+msgstr "Szakasz"
 
 msgid "Reliability"
-msgstr "Věrohodnost"
+msgstr "Megfelelőség"
 
 msgid "Please specify the reliability of the section count."
-msgstr "Prosím, specifikujte věrohodnost v sekci početnosti"
+msgstr "Az adott szakaszon mennyire voltak megfelelőek a feltételek?"
 
 msgid "Suitable conditions"
-msgstr "Vhodné podmínky"
+msgstr "Megfelelő feltételek"
 
 msgid "Unsuitable conditions"
-msgstr "Nevhodné podmínky"
+msgstr "Nem megfelelő feltételek"
 
 msgid "Unable to survey"
-msgstr "Průzkum nebylo možné provést"
+msgstr "Nem lehetett felmérni"
 
 msgid "15min Count"
-msgstr "15 minutový Součet"
+msgstr "Általános 15-perces számlálás"
 
 msgid "15min Single Species Count"
-msgstr "15 minutový záznam jednoho druhu"
+msgstr "Egyfajos 15-perces számlálás"
 
 msgid "eBMS Transect"
-msgstr "Transekt eBMS"
+msgstr "eBMS transzekt"
 
 msgid "Please add any extra info about this record."
-msgstr "Vložte, prosím, další informace k tomuto záznamu"
+msgstr "Adj meg további információkat erről a felmérésről!"
 
 msgid "Enter more information here..."
-msgstr "Vložte víc informací zde"
+msgstr "Bármi egyéb, ami fontos..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr "Specifikujte, prosím, osobu zodpovědnou za určení druhů"
+msgstr "Add meg a határozó személy nevét!"
 
 msgid "HH:mm"
-msgstr "HH:mm"
+msgstr "ÓÓ:pp"
 
 msgid "Please specify the % of cloud cover."
-msgstr "Specifikujte, prosím, % oblačnosti."
+msgstr "Add meg a ⁒-os felhőborítottságot!"
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "Nemáte žádné transekty. Zkuste znovu načíst seznam."
+msgstr "Nincs választható transzekted. Frissítsd a listát!"
 
 msgid "Wind speed info is missing"
-msgstr "Chybí informace o rychlosti větru"
+msgstr "Szélerősség nincs megadva"
 
 msgid "Temperature info is missing"
-msgstr "Chybí informace o teplotě"
+msgstr "Hőmérséklet nincs megadva"
 
 msgid "Recorder info is missing"
-msgstr "Chybí informace o mapovateli"
+msgstr "Határozó nincs megadva"
 
 msgid "Please select your transect."
-msgstr "Vyberte,  prosím, svůj transekt"
+msgstr "Válaszd ki a transzekted!"
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Tento průvodce je pořád ve vývoji. Pokrývá {{countrySpeciesCount}}  druhů z "
-"{{totalSpeciesCountryCount}} motýlů ve Vaší vybrané zemi."
+"A lepkehatározó még fejlesztés alatt áll. Jelenleg {{countrySpeciesCount}} "
+"lepkefajt tartalmaz az általad kiválasztott országban található "
+"{{totalSpeciesCountryCount}} fajból."
 
 msgid "Status"
-msgstr "Stav"
+msgstr "Hazai státusz"
 
 msgid "Absent"
-msgstr "Nepřítomný"
+msgstr "Nem él"
 
 msgid "Present"
-msgstr "Přítomný"
+msgstr "Él"
 
 msgid "Possibly present"
-msgstr "Pravděpodobný výskyt"
+msgstr "Valószínűleg él"
 
 msgid "Regular migrant"
-msgstr "Pravidelný migrant"
+msgstr "Rendszeres vándor"
 
 msgid "Irregular vagrant"
-msgstr "Nepravidelný migrant"
+msgstr "Alkalmi kóborló"
 
 msgid "Regionally extinct"
-msgstr "Vyhynulý"
+msgstr "Kipusztult"
 
 msgid "Description"
-msgstr "Popis"
+msgstr "Leírás"
 
 msgid "Counts"
-msgstr "Počty"
+msgstr "Egyedszámok"
 
 msgid "Species descriptions"
-msgstr "Popisy druhů"
+msgstr "Fajleírások"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Popisy druhů použité jako část tohoto průvodce vycházejí z Climatic Risk "
-"Atlas of European Butterflies. Děkujeme Josefu Settelemu za možnost jejich "
-"použití."
+"A határozóban szereplő fajismertetések a \"Climatic Risk Atlas of European "
+"Butterflies\" kiadványban megjelentek alapján készültek. Köszönet Josef "
+"Settelének, hogy rendelkezésünkre bocsátotta őket."
 
 msgid "Photo credits"
-msgstr "Autoři fotografií"
+msgstr "Fotók:"
 
 msgid "How to use the app"
-msgstr "Jak použít tuto aplikaci"
+msgstr "Az alkalmazás használata"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1161,10 +1177,12 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Tuto aplikaci můžete použít pro monitoring motýlů kdekoli v Evropě. Výsledky"
-" budou vloženy do databáze Evropského monitoringu motýlů a budou použity pro"
-" zhodnocení trendů motýlů napříč Evropou. Pro používání aplikace si musíte "
-"napřed zaregistrovat účet."
+"Az alkalmazás Európában bárhol használható a lepkék monitorozására. A "
+"feltöltött adatok az Európai Lepkemonitoring Program (eBMS) adatbázisába "
+"kerülnek, hogy belőlük trendeket és indikátorokat állapítsunk meg. Ez azért "
+"is fontos, mert a lepkék fontos beporzók és érzékenyen jelzik a környezet "
+"változását. Az alkalmazás használatához először regisztrálnod kell az eBMS "
+"honlapján."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1174,15 +1192,15 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"Preferovanou metodou je 15 minutový Součet. To můžete provádět kdekoli a "
-"kdykoli, když jsou motýli aktivní (tedy pokud je dostatečně teplo a "
-"slunečno). Aplikaci také můžete použít pro již probíhající transektové "
-"sčítání motýlů Pozdějí během roku 2020 bude aplikace také umožňovat vkládání"
-" nahodilých záznamů. Poznámka dole Vám řekne, jak použít metody, které jsou "
-"v současnosti dostupné."
+"A legegyszerűbb felmérési módszer (alapbeállítás) az \"Általános 15-perces "
+"számlálás\". Ezt bárhol, bármikor végezheted, ha a nappali lepkék épp "
+"aktívak (pl. elég meleg, lehetőleg napsütéses időben). Ezen felül, az "
+"alkalmazással a regisztrált transzekjeid lejárásait is rögzíteni tudod. "
+"(Kísérleti jelleggel, éjszakailepke-felmérésekre is alkalmas.) Az alábbi "
+"ismertető röviden leírja a jelenleg kínált felmérési módokat."
 
 msgid "How to do a 15-minute Count"
-msgstr "Jak provést 15 minutové Sčítání"
+msgstr "15-perces számlálások"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1197,16 +1215,19 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Toto je základní metoda této aplikace. Jednoduše sečtěte motýly během  15 "
-"minutové periody, buď na jasně definovaném území (např. pole), nebo během "
-"procházky či jako bodové sčítání motýlů, kteří proletí kolem. Pokud máte "
-"zapnuté sledování pomocí GPS, tak není potřeba zakreslit Vaši přesnou trasu,"
-" protože ji zakreslí tato aplikace. Jinak musíte Vaši trasu či území "
-"zakreslit na mapě pomocí této aplikace. Pro zapnutí se dotkněte tlačítka + "
-"dole na displeji. Hned jak začnete, aplikace bude odpočítávat  15 minut, ale"
-" kdykoli můžete odpočet přerušit pomocí tlačítka Pauza, pokud například "
-"potřebujete určit nějakoho motýla,. Na konci průzkumu můžete Váš záznam "
-"zkontrolovat, jestli jsou před odesláním součty správně."
+"Ez a felmérési mód az alkalmazás alapbeállítása. Számold a lepkéket 15 "
+"percig, feljegyezve a látott fajokat és egyedszámaikat! Ezt teheted mozogva,"
+" nem lehatárolt területen, pl. egy tetszőleges útvonalat bejárva, séta "
+"közben; de akár egy helyben maradva, lehatárolt területen, pl. egy tisztáson"
+" vagy a kertedben ülve is. Az alkalmazás automatikusan rögzíti a bejárt "
+"útvonalat, ha a telefonod beállításaiban a GPS (helymeghatározás) "
+"engedélyezve van. Ha ez valamiért nem működik, vagy pontosítani akarsz, a "
+"bejárt útvonalat vagy a felmért területet kézzel is megrajzolhatod az "
+"alkalmazás térképén. A felmérés megkezdéséhez koppints a \"+\" (pluszjel) "
+"gombra, és elindul a 15-perces visszaszámlálás. A stoppert a "
+"pillanatmegállítóval bármikor megállíthatod (pl. lepkehatározáskor). Ha "
+"lejárt az idő, feltöltés előtt ellenőrizheted, hogy helyesen írtad-e be a "
+"fajokat és az egyedszámokat."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1216,11 +1237,6 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
-"Vložte druh, který vidíte, zmáčknutím tlačítka + Přidat a začněte psát "
-"druhové jméno. Výběr druhů se objeví jako nabídka seznamu. Můžete použít "
-"vědecký nebo český název. Vyberte druh a jak se objeví ve Vašem seznamu, "
-"zvolte vlevo počet pozorovaných jedinců. Na konci pak můžete jednotlivé "
-"počty zkontrolovat. Můžete i přiložit forky a vložit poznámku."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1229,13 +1245,15 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"Až zkončíte 15 minutové Sčítání a zkontrolujete druhy a jejich počty, "
-"zmáčkněte tlačítko Nahrát pro jejich odeslání. Je to důležité, aby Vaše data"
-" byla bezpečně uložena v databází eBMS. Záznam o sčítání bude uchován pro "
-"pozdější doklad na Vašem zařízení i online účtu."
+"Miután befejezted a 15-perces Számlálást, és leellenőrizted, hogy a fajokat "
+"és az egyedszámokat helyesen írtad be, koppints az ELKÜLD gombra. Ekkor az "
+"alkalmazás feltölti adataidat az eBMS adatbázisába, ahonnét már nem tudnak "
+"véletlenül kitörlődni vagy elveszni. Az elküldött felmérésről egy másolat a "
+"készülékeden marad, s itt később bármikor megnézheted, ahogy az online "
+"felhasználói fiókodba belépve, az eBMS honlapon is."
 
 msgid "How to record along an existing transect"
-msgstr "Jak zaznamenávat motýly na existujícím transektu"
+msgstr ""
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1246,13 +1264,14 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
-"Aplikaci také můžete použít pro zasílání záznamů při procházení již "
-"existujícího transektového monitoringu. Transektový monitoring byl založen "
-"na národní úrovni koordinátorem při AOPK a je prováděn zkušenými mapovateli."
-" Záznam existujícího transektového sčítání vyžaduje, aby Váš účet byl spojen"
-" s Vaším  transektovým nastavením v systému eBMS. Pokud při přihlášení se "
-"žádný transekt nenajdete, kontaktujte Vašeho národního koordinátora (e-mail "
-"{{helpEmail}}  pro pomoc)."
+"Az alkalmazással \"transzektlejárások\" adatait is beküldheted. Ezek a "
+"kijelölt állandó transzektek a helyi lepkemonitoring program (Magyarországon"
+" MLMH) részeként működnek, és célszerű, ha erre felkészített felmérők végzik"
+" az adatgyűjtést. Az ilyen transzektes adatgyűjtésnél felhasználói fiókod "
+"(eBMS account) a helyi transzekthálózat része kell hogy legyen az eBMS "
+"rendszerében. Ha a mobilalkalmazásba bejelentkezve nem látod a "
+"transzektjeidet, lépj kapcsolatba a területi koordinátorral (e-mail: "
+"{{helpEmail}})."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1267,20 +1286,19 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"Abyste mohli začít s transektovým sčítáním, podržte tlačítko + (dlouhé "
-"stisknutí) vespodu displeje a vyberte eBMS Transekt. Objeví se Transektová "
-"stránka se všemi možnostmi k vyplnění. Zaprvé, musíte vybrat Váš transekt "
-"(na to musíte být přihlášeni a transektové trasy musí být propojeny s Vaším "
-"účtem). Jakmile vyberete Vaše transektové místo, vyplňte na Transektové "
-"stránce všechna nezbytná data o počasí (např. teplotu, rychlost větru atd.) "
-"a další požadované informace (čas na začátku). Pak vložte seznam "
-"pozorovaných druhů a jejich počty pro každý úsek Vašeho tranektu, podobně "
-"jako u 15 minutového Sčítání. Až Váš transekt dokončíte a zkontrolujete "
-"druhy a počty pozorovaných motýlů, stiskněte tlačítko Dokončit pro odeslání "
-"dat."
+"A transzekt menti számlálás megkezdéséhez koppints az alsó ikonsor közepén "
+"lévő \"+\" (plusz) gombra, majd az \"eBMS Transzekt\" feliratra! Ezután "
+"válaszd ki a kívánt transzektet (ezt csak bejelentkezve tudod megtenni, és "
+"csak a felhasználói fiókodhoz hozzárendelt a transzktekkel). Ekkor "
+"megjelenik a kiválasztott transzekt adatlapja a kitöltendő mezőkkel. Töltsd "
+"ki a szükséges adatokat (hőmérséklet, szélerősség, kezdési- és befejezési "
+"idő, stb.)! Ezután, transzekt-szakaszonként add hozzá az észlelt fajokat a "
+"fajlistához, a megfelelő egyedszámokkal - ugyanúgy, mint a 15-perces "
+"Számlálásnál. Miután befejezted a Transzektet, és leellenőrizted, hogy a "
+"fajokat és az egyedszámokat helyesen írtad be, koppints az ELKÜLD gombra."
 
 msgid "Survey section"
-msgstr "Průzkumová část"
+msgstr ""
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1290,841 +1308,811 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
-"V této tabulce na pravé straně tlačítka + můžete vidět vaše čekající "
-"(neodeslané) počty, tedy záznamy, které ještě nebyly odeslány a odeslané "
-"počty, tedy záznamy, které již byly odeslány do databáze eBMS. Čekající "
-"počty mohou být odeslány do systému kliknutím na ně a zmáčknutím možnosti "
-"Odeslat. Můžete vidět seznam Vašich zaznamenaných druhů v Odeslaných "
-"záznamech. Všechny Vaše záznamy také můžete vidět a upravovat na "
-"{{eBMSWebsiteLink}}"
+"Ezen a lapon láthatod, a megfelelő gombra koppintva, a NEM ELKÜLDÖTT, még "
+"csak a telefonodon tárolt; illetve az ELKÜLDÖTT, az eBMS adatbázisba már "
+"feltöltött felméréseket. Az el nem küldött felmérések feltöltéséhez koppints"
+" a kívánt felmérésre, majd az Elküld opcióra. Az elküldött felmérések "
+"fajlistáit is megnézheted. Ezen kívül, minden feltöltött adatodat láthatod "
+"és, ha kell, módosíthatod az eBMS honlapon is: {{eBMSWebsiteLink}}."
 
 msgid "eBMS website"
-msgstr "eBMS web"
+msgstr "eBMS honlap"
 
 msgid "App Settings"
-msgstr "Nastavení aplikace"
+msgstr "Beállítások"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr "Použijte pouze druhy nočních motýlů aktivních i ve dne"
+msgstr "Csak nappal (is) aktív éjszakai lepkék"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
-"Pro změnu jazyka a země běžte dńa nastavení aplikace. Vybráná země je "
-"důležitá pro obrázkovou galerii, uvidíte jen druhy vyskytující se v této "
-"zemi."
+"Koppints a \"Beállítások\" alatt az \"Alkalmazás\" gombra a nyelv és az "
+"ország beállításához. A fényképes \"Határozó\" a kiválasztott országban "
+"előforduló nappalilepke-fajokat jeleníti meg."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
-"Můžete také aplikaci přepnout na Simulaci, pokud se stále učíte určovat "
-"motýly."
 
 # This is part of mapping functionality
 msgid "Delete last point"
-msgstr "Smažte poslední bod"
+msgstr "Utolsó pont törlése"
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr "Uložit"
+msgstr "Mentés"
 
 # This is part of mapping functionality
 msgid "Clear All"
-msgstr "Smazat vše"
+msgstr "Minden törlése"
 
 # This is part of mapping functionality
 msgid "Click to start drawing shape."
-msgstr "Klikněte pro začátek zakreslování plochy"
+msgstr "Poligon rajzolásához koppints !"
 
 # This is part of mapping functionality
 msgid "Click to continue drawing shape."
-msgstr "Klikněte pro pokračování v kreslení plochy"
+msgstr "Koppints a poligon folytatásához!"
 
 # This is part of mapping functionality
 msgid "Click first point to close this shape."
-msgstr "Klikněte na první bod pro uzavření plochy"
+msgstr "Koppints az első pontra a poligon befejezéséhez!"
 
 # This is part of mapping functionality
 msgid "Click to start drawing line."
-msgstr "Klikněte pro začátek zakreslení linie"
+msgstr "Vonal rajzolásához koppints!"
 
 # This is part of mapping functionality
 msgid "Click to continue drawing line."
-msgstr "Klikněte pro pokračování v kreslení linie."
+msgstr "Koppints a vonal folytatásához!"
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr "Klikněte na poslední bod pro ukončení linie."
+msgstr "Koppints az utolsó pontra a vonal befejezéséhez!"
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
-msgstr "Přetáhněte vodítka nebo značky pro editaci tvaru."
+msgstr "Az alakzatok szerkesztéséhez mozgasd el a fogópontokat!"
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr "Klikněte pro zrušení změn."
+msgstr "Visszavonáshoz koppints a \"Mégse\" gombra!"
 
 msgid "Map"
-msgstr "Mapa"
+msgstr "Térkép"
 
 msgid "Today"
-msgstr "Dnes"
+msgstr "Ma"
 
 msgid "Yesterday"
-msgstr "Včera"
+msgstr "Tegnap"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
-msgstr "Tento záznam již byl odeslán a  nemůže být touto aplikací změněn."
+msgstr "Ez a rekord már fel lett töltve, nem módosítható az alkalmazásban."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr "Klikněte na další možnosti pro záznam ze seznamu dole"
+msgstr ""
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
-msgstr ""
-"Dávkové odeslání všech hotových záznamů. Neobsahuje záznamy ve fázi návrhu."
+msgstr "Minden befejezett felmérés elküldése. A \"piszkozatokat\" nem érinti. "
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr "Opravdu chcete odeslat všechny ukončené záznamy?"
+msgstr "Biztos, hogy beküldöd minden befejezett felmérésedet?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr "Pro odeslání záznamů se napřed přihlašte."
+msgstr "Előbb jelentkezz be az adatok elküldéséhez!"
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] "Nahrávám {{count}} záznam"
-msgstr[1] "Nahrávám {{count}} záznamů"
-msgstr[2] "Nahrávám {{count}} záznamů"
-msgstr[3] "Nahrávání {{count}} záznamů"
+msgstr[0] "{{count}} adatrekord feltöltése"
+msgstr[1] "{{count}} felmérés adatainak feltöltése"
 
 # Part of a page error
 msgid "Oops! Something went wrong."
-msgstr "Pozor! Něco je špatně."
+msgstr "Hoppá! Valami nem működik."
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr "Toto je chyba č.: {{eventId}}"
+msgstr "Hibakód: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr "Další podrobnosti"
+msgstr "További részletek"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr "Podmínky počasí"
+msgstr "Időjárás"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr "Podmínky počasí"
+msgstr "Időjárás"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr "Opravdu chcete smazat {{taxon}} ?"
+msgstr "Biztos, hogy törlöd ezt: {{taxon}}?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
-"Hodnoty současného počasí jsou předvyplněny pomocí meteorologické služby "
-"OpenWeatherMap API."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr "Zkopírovat druh"
+msgstr "Fajok másolása"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr "Opravdu chcete zkopírovat seznam druhů z předchozího průzkumu?"
+msgstr "Biztos, hogy bemásolod az előző felmérés fajlistáját?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr "Zkopírovat"
+msgstr "Másol"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr "Pardon, nebyl nalezen žádný druh ke kopírování."
+msgstr ""
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr "Úspěšně jste zkopírovali {{speciesCount}} druhů."
+msgstr ""
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
 msgstr ""
-"Pardon, není žádný předchozí průzkum, ze kterého by se dalo kopírovat."
 
 # Country name
 msgid "Armenia"
-msgstr "Arménie"
+msgstr "Örményország"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Pro smazání jakéhokoli průzkumu ho přetáhněte doleva."
+msgstr ""
+"Felmérés törléséhez koppints a kiválasztott felmérésre, húzd az ujjad "
+"jobbról-balra, majd koppints a megjelenő \"Töröl\" gombra!"
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
-"Zkontrolujte prosím před odesláním záznamů, zda je správně zadaná "
-"monitorovaná plocha"
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr "Prosím, nezapomeňte nahrát jakékoli neodeslané průzkumy!"
+msgstr ""
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
-"Nejsou žádné nenahrané průzkumy.<br/><br/>Zmáčkněte <4></4> pro jejich "
-"vložení."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr "Tip: Hledání nápovědy"
+msgstr "Tipp: Segítség"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
-"Prosím, navštivte před použitím této aplikace Průvodce <2></2> a Nápovědu "
-"<5></5>!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr "Více informací"
+msgstr "További információ"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr "Tip: Vložení druhu"
+msgstr "Tipp: fajok hozzáadása"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
-"Dlouhým stiskem tlačítka Vložit druh můžete dávkově skopírovat předchozí "
-"seznam druhů."
+"Bemásolhatod az előző felmérés fajlistáját, tartósan nyomva tartva a \"Faj "
+"hozzáadása\" gombot."
 
 # Button
 msgid "Hide"
-msgstr "Schovat"
+msgstr "Elrejt"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Původní průzkum"
+msgstr "Alapértelmezett felmérési mód"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr "Všechny průzkumy"
+msgstr "Minden felmérés"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr "Reprezentační fotografie místa, kde byl 15-minutový součet prováděn"
+msgstr ""
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr "Žádná fotografie nebyla vložena."
+msgstr "Még nincs fotó."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr "Zmáčkněte <1></1> pro vložení."
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr "Přesný 15minutový součet"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr "Výskyt"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr "Čas"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr "Opravdu chcete smazat tento výskyt?"
+msgstr "Biztos, hogy törlöd ezt az előfordulási rekordot?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr "Pochopil jsem."
+msgstr "Értem."
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr "<0>Žádné nahrané průzkumy</0>"
+msgstr "<0>Nincs feltöltött felmérés</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr "Účet již existuje."
+msgstr "Ez a felhasználói fiók már létezik."
 
 # A survey label
 msgid "Details"
-msgstr "Podrobnosti"
+msgstr "Részletek"
 
 # A survey label
 msgid "Species Photo"
-msgstr "Fotografie druhů"
+msgstr "Fotó a fajról"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr "Vyberte stadium"
+msgstr "Add meg az életszakaszt!"
 
 # A survey label
 msgid "Weather"
-msgstr "Počasí"
+msgstr "Időjárás"
 
 # A survey label
 msgid "Photo"
-msgstr "Fotografie"
+msgstr "Fotó"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr "Skupiny"
+msgstr "Taxonok"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr "Vyberte, prosím, skupinu, kterou vždy zaznamenáváte."
+msgstr "Válaszd ki a felmért taxonokat!"
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr "Denní motýli"
+msgstr "Nappali lepkék"
 
 # Part of species group selection
 msgid "Moths"
-msgstr "Noční motýli"
+msgstr "Éjjeli lepkék"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr "Čmeláci"
+msgstr "Poszméhek"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr "Vážky"
+msgstr "Szitakötők"
 
 # Alert label
 msgid "Warning"
-msgstr "Varování"
+msgstr "Figyelem!"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr "Opravdu chcete vypnout sledování GPS?"
+msgstr "Biztos, hogy kikapcsolod a GPS-t?"
 
 # Alert button option
 msgid "Turn off"
-msgstr "Vypnout"
+msgstr "Kikapcsol"
 
 # Alert button label
 msgid "Merge"
-msgstr "Sloučit"
+msgstr "Összevon"
 
 # Alert header
 msgid "Species already exists"
-msgstr "Tyto druhy již existují"
+msgstr "A faj már rajta van a listán"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
-msgstr "Opravdu chcete sloučit tento seznam s již existujícím seznamem druhů?"
+msgstr "Biztos, hogy összevonod ezt a fajlistát a már létező fajlistával?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr "Vložte, prosím, cílový druh"
+msgstr "Add meg a célfajt!"
 
 # Moth survey label
 msgid "Date"
-msgstr "Datum"
+msgstr "Dátum"
 
 # Moth survey label
 msgid "Method"
-msgstr "Metoda"
+msgstr "Módszer"
 
 # Context term
 msgid "Please select the medthod type"
-msgstr "Vyberte, prosím, typ metody"
+msgstr "Válaszd ki a felmérési módszert!"
 
 # Moth survey method type
 msgid "MV light"
-msgstr "Světlo s MV"
+msgstr "HGL izzó"
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr "Aktinické světlo"
+msgstr "UV fény"
 
 # Moth survey method type
 msgid "LED light"
-msgstr "LED světlo"
+msgstr "LED"
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr "Lov na světlo"
+msgstr "Fénycsapda"
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr "Denní pozorování"
+msgstr "Nappali megfigyelés"
 
 # Moth survey method type
 msgid "Dusking"
-msgstr "Sběr za soumraku"
+msgstr ""
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr "Přilákáno k osvětlenému oknu"
+msgstr "Kivilágított ablakban"
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr "Vnadidlo"
+msgstr ""
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr "Vinný knot"
+msgstr "Alkoholos csali"
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr "Sklepávadlo"
+msgstr "Kopogtatás"
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr "Lov na feromon"
+msgstr "Feromoncsapda"
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr "Jiná metoda (vložte poznámku)"
+msgstr "Egyéb módszer (részletezd!)"
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr "Nezaznamenáno"
+msgstr "Nem lett rögzítve"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr "Detaily průzkumu"
+msgstr "Felmérés részletei"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr "Lapačový průzkum"
+msgstr "Éjjelilepke-csapda felmérés"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr "Průzkum nočních motýlů"
+msgstr "Éjjelilepke-felmérés"
 
 # Moth survey divider label
 msgid "Species list"
-msgstr "Seznam druhů"
+msgstr "Fajlista"
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr "Údaj"
+msgstr "Határozó"
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr "Seznam nočních druhů"
+msgstr "Fajlista"
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr "Fotka nočního motýla"
+msgstr "Lepkefotó"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr "V případě odlišnosti uveďte jméno zapisovatele."
+msgstr "Add meg a felmérő nevét, ha más személy!"
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr "Jméno zapisovatele"
+msgstr "Felmérő neve"
 
 # Latitude
 msgid "Lat"
-msgstr "Zeměpisná šířka"
+msgstr "Sz. (Lat)"
 
 # Longitude
 msgid "Long"
-msgstr "Zeměpisná délka"
+msgstr "H. (Long)"
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr "Počet uvnitř"
+msgstr "Egyedszám belül"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr "Počet venku"
+msgstr "Egyedszám kívül"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr "Fotky nočních motýlů"
+msgstr "Lepkefotók"
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr "Lapače"
+msgstr "Éjjelilepke-csapdák"
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr "Lapač"
+msgstr "Csapda"
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
-"Zatím nemáte žádný lapač. Pro vytvoření jednoho lapače prosím navštivte "
-"<2>website.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr "Pro zobrazení mapy se připojte k internetu."
+msgstr ""
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr "Vložte, prosím, lapač"
+msgstr ""
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
-"Máte pouze jeden lapač. Pro vytvoření více lapačů navštivte <2>website.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr "Určuji..."
+msgstr ""
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr "Neznámý"
+msgstr ""
 
 # Report table button
 msgid "Show more"
-msgstr "Ukaž více"
+msgstr ""
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr "Vložte, prosím, fotku"
+msgstr ""
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr "Neznámý druh"
+msgstr ""
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr "<0>Pozor</0> - tento druh nedokážeme určit."
+msgstr ""
 
 # App settings title
 msgid "Surveying"
-msgstr "Prozkoumávám"
+msgstr ""
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr "Průzkum nočních motýlů (SPRING)"
+msgstr ""
 
 # Survey name
 msgid "Moth Survey"
-msgstr "Průzkum nočních motýlů"
+msgstr ""
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr "Nastavení průzkumu nočních motýlů"
+msgstr ""
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr "Použijte určování podle obrázku"
+msgstr ""
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
-msgstr "Pomůžeme Vám určit druh podle obrázku"
+msgstr ""
 
 # Moth survey button label
 msgid "Identify"
-msgstr "Urči"
+msgstr ""
 
 # Moth survey button label
 msgid "Identify All"
-msgstr "Urči vše"
+msgstr ""
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr "Určování podle obrázku"
+msgstr ""
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
-"Určování pomocí fotky je teď <1>vypnuto</1>. Pro jeho zapnutí běžte do "
-"<4>nastavení</4> aplikace."
 
 # Whats new message title
 msgid "What's New"
-msgstr "Co je nového"
+msgstr ""
 
 # Version 1.18 whats new message
 msgid "Enabled Android back button"
-msgstr "Tlačitko \"zpět\" na androidu je umožněno"
+msgstr ""
 
 # Version 1.18 whats new message
 msgid " Added user account delete option"
-msgstr "Vložena funkce smazání uživatelského účtu"
+msgstr ""
 
 # Version 1.18 whats new message
 msgid "Added ability to select multiple photos from the gallery"
-msgstr "Vložena možnost vybrat více fotek z galerie"
+msgstr ""
 
 # Version 1.18 whats new message
 msgid "Move day-flying moths option to species group page"
 msgstr ""
-"Přesuňte možnost ve dne aktivních nočních motýlů na stránku druhových skupin"
 
 # Version 1.18 whats new message
 msgid "Various bug fixes"
-msgstr "Opraveny různé chyby"
+msgstr ""
 
 # Version 1.18 whats new message
 msgid "Updated translations"
-msgstr "Aktualizace překladů"
+msgstr ""
 
 # User account action
 msgid "Resend"
-msgstr "Znovu odeslat"
+msgstr ""
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr "Zdá se, že Váš email ještě nebyl ověřen"
+msgstr ""
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr "Chcete znovu odeslat ověřující email?"
+msgstr ""
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
-"Vaše lokační služby (GPS) vypadají vypnuté. Můžete je zapnout v nastavení "
-"Vašeho zařízení."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr "Lokační služby (GPS) jsou vypnuté"
+msgstr ""
 
 # Moth trap survey
 msgid "Add New"
-msgstr "Vložte nový"
+msgstr ""
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
-msgstr "Zatím nemáte žádný lapač.<1>Vytvořte první světelný lapač </1>"
+msgstr ""
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr "Lapač"
+msgstr ""
 
 # Moth trap survey
 msgid "Type"
-msgstr "Typ"
+msgstr ""
 
 # Moth trap survey
 msgid "Other type"
-msgstr "Jiný typ"
+msgstr ""
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr "Vložte lampu"
+msgstr ""
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr "Jaký typ lapače to je?"
+msgstr ""
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr "Žádná lampa nebyla vložena"
+msgstr ""
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr "Jaký je to typ lampy?"
+msgstr ""
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr "Jaký je to typ lapače?"
+msgstr ""
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr "LED truchtýřová past"
+msgstr ""
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr "Jiná truchtýřová past"
+msgstr ""
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr "Lapač se 2 plátny"
+msgstr ""
 
 # Moth trap survey
 msgid "Other trap"
-msgstr "Jiný typ"
+msgstr ""
 
 # Moth trap survey
 msgid "Lamp"
-msgstr "Lampa"
+msgstr ""
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr "Detail lampy"
+msgstr ""
 
 # Moth trap survey
 msgid "Quantity"
-msgstr "Množství"
+msgstr ""
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr "Žádný název lapače"
+msgstr ""
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr "Název lapače"
+msgstr ""
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr "Opravdu chcete smazat tento lapač?"
+msgstr ""
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr "Další popis lampy."
+msgstr ""
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr "Vložte, prosím, umístění a název lapače."
+msgstr ""
 
 # Survey validation
 msgid "Incomplete"
-msgstr "Nedokončené"
+msgstr "Befejezetlen"
 
 # Moth trap survey
 msgid "Select"
-msgstr "Vyber"
+msgstr "Kiválaszt"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr "Zapisovatelé"
+msgstr "Felmérő(k)"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
-"Vložte počet zapisovatelů, kteří Vám s tímto záznamem pomohli - včetně Vás."
 
 msgid "Network Error"
-msgstr "Chyba připojení"
+msgstr "Hálózati hiba"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr "Pro shlédnutí vlastního záznamu se, prosím, přihlašte."
+msgstr "Jelentkezz be jelentéseid megtekintéséhez!"
 
 # Report label
 msgid "Your top species this month"
-msgstr "Váš nejpočetnější druh tento měsíc"
+msgstr "Leggyakoribb fajaid ebben a hónapban"
 
 # Report label
 msgid "Your top species"
-msgstr "Váš nejpočetnější druh"
+msgstr "Leggyakoribb fajaid"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr "Sekce fotek"
+msgstr ""
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr "Uživatel není přihlášen."
+msgstr ""
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
-"Myslíme, že to je s  {{probability}}% pravděpodobností tento druh: "
-"<3>{{taxon}}</3>"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
-"<0>Varování</0> - myslíme, že je to s  {{probability}}% pravděpodobností "
-"tento druh: <5>{{taxon}}</5> "
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr "Lampy"
+msgstr ""
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
-msgstr "Opravdu chcete smazat tento typ lampy z tohoto lapače?"
+msgstr ""
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr "Typ lapače je povinný údaj."
+msgstr ""
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr "Vítejte na palubu"
+msgstr ""
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
-"Před začátkem jakéhokoli průzkumu zkontrolujte emaily a klikněte na "
-"potvrzující odkaz."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr "Pardon, žádný druh nebyl nalezen."
+msgstr ""
 
 msgid "Kenya"
-msgstr "Keňa"
+msgstr "Kenya"
 
 # GPS permission button label
 msgid "Deny"
-msgstr "Odmítnout"
+msgstr "Elutasít"
 
 # GPS permission button label
 msgid "Accept"
-msgstr "Přijmout"
+msgstr "Elfogad"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr "Souhlas se zjištěním pozice"
+msgstr "Helyhozzáférés engedélyezése"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
-"Automatické nastavení zjišťování polohy druhu a zaznamenání trasy i při "
-"zamknutí zařízení. Povolte aplikaci zaznamenání Vaší polohy."
 
 # Reset app info message
 msgid "You can reset the app data to its default settings."
-msgstr "Můžete vrátit data aplikace do základního nastavení."
+msgstr ""
 
 # Delete account
 msgid "Delete account"
-msgstr "Smazat účet"
+msgstr ""
 
 # Delete account
 msgid "You can delete your user account from the system."
-msgstr "Můžete smazat Váš uživatelský účet ze systému."
+msgstr ""
 
 # Delete account alert header
 msgid "Account delete"
-msgstr "Smazání účtu"
+msgstr ""
 
 # Delete account alert message
 msgid ""
@@ -2132,6 +2120,3 @@ msgid ""
 "account on the <2>{{url}}</2> website. You will lose access to any records "
 "that you have previously submitted using the app or website.</1>"
 msgstr ""
-"Opravdu chcete smazat Váš uživatelský účet?<1>Toto smaže Váš účet na této "
-"<2>{{url}}</2> stránce. Ztratíte přístup k jakýmkoli datům, které jste kdy "
-"poskytli touto aplikací či webovou stránkou.</1>"

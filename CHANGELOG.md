@@ -1,3 +1,7 @@
+## 1.19.0
+
+Added French, Hungarian languages.
+
 ## 1.18.2
 
 Added Japanese.

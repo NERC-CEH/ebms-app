@@ -1239,7 +1239,7 @@ msgstr ""
 
 msgid "Argynnis-laodice-description"
 msgstr ""
-"Østlig perlemorsommerfugl kan let genkendes på dens markante takkede hvide "
+"Østlig perlemorsommerfugl kan let genkendes på den markante takkede hvide "
 "linje, der løber gennem undersiden af bagvingen. Den kan ses på fugtige "
 "blomsterrige græsmarker i åbne skove, løvskove eller blandede skove. Både "
 "hanner og hunner er glade for at suge nektar fra brombærblomster. Larverne "
