@@ -67,6 +67,9 @@ import species_da_DK from './species/da_DK.po';
 import ja_JP from './interface/ja_JP.po';
 import species_ja_JP from './species/ja_JP.po';
 
+import hu_HU from './interface/hu_HU.po';
+import species_hu_HU from './species/hu_HU.po';
+
 const flatNames = { ...names };
 Object.keys(flatNames).forEach(lang => {
   flatNames[lang] = flatNames[lang].reduce((agg, term) => {
@@ -218,5 +221,10 @@ export default {
     interface: rawToKeyVal(ja_JP),
     species: rawToKeyVal(species_ja_JP),
     names: flatNames['ja-JP'],
+  },
+  'hu-HU': {
+    interface: rawToKeyVal(hu_HU),
+    species: rawToKeyVal(species_hu_HU),
+    names: flatNames['hu-HU'],
   },
 };
