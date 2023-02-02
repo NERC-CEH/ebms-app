@@ -336,7 +336,7 @@ msgstr ""
 "l'enllaç de verificació."
 
 msgid "OK, got it"
-msgstr "Ok, ho tinc"
+msgstr "Ok, entesos"
 
 msgid "Please fill in"
 msgstr "Omple-ho"
@@ -397,7 +397,7 @@ msgid "you can type in the search bar"
 msgstr "pots escriure a la barra de búsqueda"
 
 msgid "Edit Occurrence"
-msgstr "Editar ocurrència"
+msgstr "Editar Cita"
 
 msgid "Count"
 msgstr "Comptatge"
@@ -566,7 +566,7 @@ msgid ""
 "the EU."
 msgstr ""
 "Les papallones són insectes fascinants, però es troben en declivi a moltes "
-"parts d'Euopra. Tal i com es mostra en aquest gràfic de l'Indicador de "
+"parts d'Europa. Tal i com es mostra en aquest gràfic de l'Indicador de "
 "Papallones de Prat de la UE."
 
 msgid ""
@@ -590,8 +590,8 @@ msgid ""
 "started straight away"
 msgstr ""
 "Mai ha estat tant fàcil contribuïr amb dades de qualitat per a la recerca "
-"donant suport a la conservació d'aquests fascinants i vitals insectes. Pots "
-"començar ara mateix"
+"donant suport a la conservació d'aquests fascinants insectes. Pots començar "
+"ara mateix"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
@@ -611,7 +611,7 @@ msgid ""
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
 "El projecte ABLE està finançat per un contracte de l'Agència Europea de Medi"
-" Ambient, per un període inicial de dos anys des del 2019-20."
+" Ambient, per un període inicial de dos anys els 2019-2020."
 
 msgid "ABLE partners:"
 msgstr "Socis de ABLE:"
@@ -644,7 +644,7 @@ msgid "Selecting species"
 msgstr "Selecció d'espècies"
 
 msgid "Please press the Add"
-msgstr "Si us plau apreta el botó Afegir"
+msgstr "Si us plau apreta el botó Afegir "
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
@@ -675,11 +675,13 @@ msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"Per afegir més informació a l'ocurrència de les teves espècies, pots obrir "
-"l'entrada d'espècies clicant en sobre ella."
+"Per afegir més informació a les cites de les teves espècies, pots clicar "
+"sobre l'espècie per fer-ho."
 
 msgid "To finish a record you should also fill in the details of the area."
-msgstr "Per acabar un registre també hauries d'omplir els detalls de l'àrea."
+msgstr ""
+"Per acabar un registre també hauries d'omplir els detalls de l'àrea "
+"estudiada."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
@@ -689,7 +691,7 @@ msgstr ""
 "capçalera."
 
 msgid "Searching for species"
-msgstr "Buscant espècies"
+msgstr "Per buscar espècies"
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
@@ -697,7 +699,7 @@ msgid ""
 "different shortcuts. For example, to find"
 msgstr ""
 "L'aplicació conté una llista d'unes 500 espècies de papallones i tots els "
-"tangs taxonòmics associats. Per una búsqueda més ràpida dels tàxons pots "
+"rangs taxonòmics associats. Per una búsqueda més ràpida dels tàxons pots "
 "utilitzar diferents dreceres. Per exemple, per trobar"
 
 msgid "Sync. with the website"
@@ -712,7 +714,7 @@ msgid ""
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Per defecte un mostreig és en mode \"esborrador\" que no serà enviat a la "
+"Per defecte un mostreig resta com a \"esborrador\" que no serà enviat a la "
 "base de dades fins que el botó \"Acaba\" de la capçalera no es cliqui. "
 "L'aplicació intentarà enviar els teus registres quan hi hagi bona connexió a"
 " la xarxa."
@@ -827,7 +829,7 @@ msgid "Uploaded"
 msgstr "Carregat"
 
 msgid "No finished pending surveys"
-msgstr "Mostrejos pendents, no acabats"
+msgstr "Comptatges pendents, no acabats"
 
 msgid "No uploaded surveys"
 msgstr "Mostrejos no enviats"
@@ -907,7 +909,7 @@ msgid "Show common names in guide"
 msgstr "Veure els noms comuns a la guia"
 
 msgid "Share App Analytics"
-msgstr "Compartir les analítiques de l'aplicació"
+msgstr "Comparteix les analítiques de l'aplicació"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
@@ -1082,10 +1084,10 @@ msgid "Unable to survey"
 msgstr "No possible de mostrejar"
 
 msgid "15min Count"
-msgstr "Comptatge 15min"
+msgstr "Comptatge 15-min"
 
 msgid "15min Single Species Count"
-msgstr "Comptatge 15min d'una espècie"
+msgstr "Comptatge 15-min d'una espècie"
 
 msgid "eBMS Transect"
 msgstr "Transsecte eBMS"
@@ -1171,7 +1173,7 @@ msgstr ""
 "Europees. Agraïm a Josef Settele per a fer-les disponibles."
 
 msgid "Photo credits"
-msgstr "Crèdits de la fotografia"
+msgstr "Crèdits de les fotografies"
 
 msgid "How to use the app"
 msgstr "Com utilitzar l'aplicació"
@@ -1182,11 +1184,10 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Pots utilitzar aquesta aplicació per a monitorejar papallones a qualsevol "
-"lloc d'Europa. Els resultats formaran part de la base de dades de la "
-"European Butterfly Monitoring i usades per desenvolupar tendències de les "
-"papallones arreu d'Europa. Per utilitzar l'aplicació primer hauràs de "
-"registrar-te. "
+"Pots utilitzar aquesta aplicació per a comptar papallones a qualsevol lloc "
+"d'Europa. Els resultats formaran part de la base de dades de la European "
+"Butterfly Monitoring i usades per desenvolupar tendències de les papallones "
+"arreu d'Europa. Per fer servir l'aplicació primer hauràs de registrar-te. "
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1204,7 +1205,7 @@ msgstr ""
 " està descrit com usar els mètodes disponibles actualment."
 
 msgid "How to do a 15-minute Count"
-msgstr "Com fer un Comptatge 15min"
+msgstr "Com fer un Comptatge 15-min"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1219,18 +1220,18 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Aquest és el mètode per defecte a l'aplicació. Simplement compta papallones "
-"durant 15 minuts, ja sigui en una àrea definida com un camp, mentre camines,"
-" o estant a un punt fixe un observes les papallones que passen davant teu. "
-"No hi ha necessitat de dibuixar la ruta que has fet ja que l'aplicació la "
-"guardarà, comptant que tens disponible l'accés al teu GPS a la teva "
-"configuració. D'altra banda hauràs de dibuixar l'àrea recorreguda en un "
-"mapa, usant l'aplicació. Per començar, apreta el botó + als peus de la "
-"pantalla. L'aplicació fa una compta enrere de 15 minuts des de que has "
-"començat, però la pots pausar en qualsevol moment (per exemple per "
-"identificar una papallona) apretant el botó de pausa. Al final del mostreig "
-"pots revisar els teus registres i assegurar-te de que els nombres totals són"
-" correctes abans d'enviar-los."
+"Aquest és el mètode per defecte a l'aplicació. Simplement, compta papallones"
+" durant 15 minuts, ja sigui en una àrea definida com un camp, mentre "
+"camines, o estant a un punt fix mentre observes les papallones que passen "
+"davant teu. No hi ha necessitat de dibuixar la ruta que has fet, ja que "
+"l'aplicació la guardarà, comptant que tens disponible l'accés al teu GPS a "
+"la teva configuració. D'altra banda hauràs de dibuixar l'àrea recorreguda en"
+" un mapa, usant l'aplicació. Per començar, prem el botó + als peus de la "
+"pantalla. L'aplicació fa un compte enrere de 15 minuts des de que has "
+"començat, però la pots aturar en qualsevol moment (per exemple per "
+"identificar una papallona) prement el botó de pausa. Al final del mostreig "
+"pots revisar els teus registres i assegurar-te que els nombres totals són "
+"correctes abans d'enviar-los."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1250,14 +1251,14 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"Quan hagis acabat el teu Comptatge 15min i comprovat que les espècies i els "
-"seus nombres són correctes, apreta el botó de Carregar per enviar-lo. Això "
+"Quan hagis acabat el teu Comptatge 15-min i comprovat que les espècies i els"
+" seus nombres són correctes, apreta el botó de Carregar per enviar-lo. Això "
 "és important per assegurar que les teves dades estan correctament "
 "registrades a la base de dades de l'eBMS. Una còpia quedarà registrada al "
 "teu dispositiu com a referència futura així com al teu compte online. "
 
 msgid "How to record along an existing transect"
-msgstr "Com registrar al llarg d'un transsecte existent."
+msgstr "Com registrar observacions al llarg d'un transsecte existent."
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1499,12 +1500,14 @@ msgstr "Si us plau no t'oblidis d'enviar els mostrejos que tens pendents!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
-msgstr "Mostrejos pendents no acabats. <br/><br/> Apreta<4></4> per afegir."
+msgstr ""
+"Mostrejos pendents no acabats. <br/><br/> Apreta<4></4> per afegir un nou "
+"comptatge."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr "Consell: Trobant Ajuda"
+msgstr "Consell: per trobar ajuda"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
@@ -1555,7 +1558,7 @@ msgstr "Apreta <1></1> per afegir."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr "Comptatge 15min precís"
+msgstr "Comptatge 15-min precís"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
@@ -1764,11 +1767,11 @@ msgstr "Long"
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr "Comptatge per dins"
+msgstr "Comptatge dins la trampa"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr "Comptatge per fora"
+msgstr "Comptatge fora la trampa"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
@@ -2047,11 +2050,11 @@ msgstr "Si us plau inicia sessió per veure l'informe de les teves dades."
 
 # Report label
 msgid "Your top species this month"
-msgstr "La teva arna destacada del mes"
+msgstr "Les teves espècies destacades del mes"
 
 # Report label
 msgid "Your top species"
-msgstr "La teva espècie destacada"
+msgstr "La teves espècies més destacades"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
