@@ -624,7 +624,7 @@ msgstr ""
 "Scheme (eBMS)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr "Al juny de 2019, les següents organitzacions són socis de l'eBMS:"
+msgstr "A juny de 2019, les següents organitzacions són socis de l'eBMS:"
 
 msgid "Not enough data yet"
 msgstr "Encara no hi ha prou dades"

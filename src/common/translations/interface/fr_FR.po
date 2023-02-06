@@ -3,11 +3,12 @@
 # Xavier Mestdagh <xavier.mestdagh@list.lu>, 2019
 # Le Quellec, 2022
 # Tanguy Loïs, 2023
+# de Flores Mathieu, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Tanguy Loïs, 2023\n"
+"Last-Translator: de Flores Mathieu, 2023\n"
 "Language-Team: French (France) (https://www.transifex.com/ceh/teams/95441/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -197,10 +198,10 @@ msgid "Settings"
 msgstr "Paramètres "
 
 msgid "Info"
-msgstr "Information"
+msgstr "Informations"
 
 msgid "About"
-msgstr "A propos "
+msgstr "À propos "
 
 msgid "Help"
 msgstr "Aide"
@@ -224,7 +225,7 @@ msgid "I agree to"
 msgstr "J'accepte"
 
 msgid "Terms and Conditions"
-msgstr "Modalités et Conditions"
+msgstr "Conditions d'utilisation"
 
 msgid "Reset"
 msgstr "Réinitialisation"
@@ -254,10 +255,10 @@ msgid "Lets start!"
 msgstr "Commencer"
 
 msgid "TOP RECORDERS"
-msgstr "Observateurs principaux"
+msgstr "Observateurs les plus actifs"
 
 msgid "Top Species from all timed counts"
-msgstr "Espèces les plus comptées dans tous les comptages chronométrés"
+msgstr "Espèces les plus observées dans les comptages chronométrés"
 
 msgid "Back"
 msgstr "Précédent"
@@ -335,8 +336,8 @@ msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Avant de soumettre des participations, merci de vérifier votre e-mail et de "
-"cliquer sur le lien de vérification."
+"Avant de soumettre des observations, merci de vérifier votre e-mail et de "
+"cliquer sur le lien envoyé."
 
 msgid "OK, got it"
 msgstr "OK, j'ai compris"
@@ -364,7 +365,7 @@ msgid ""
 "now?"
 msgstr ""
 "Cette application nécessite d'accéder à votre position, mais n'a pas votre "
-"permission. Souhaitez-vous ouvrir les préférences maintenant ? "
+"permission. Souhaitez-vous ouvrir les préférences ? "
 
 # GPS message
 msgid "Cancel to prevent battery drain."
@@ -400,7 +401,7 @@ msgid "you can type in the search bar"
 msgstr "vous pouvez écrire dans la barre de recherche"
 
 msgid "Edit Occurrence"
-msgstr "Editer l'observation"
+msgstr "Éditer l'observation"
 
 msgid "Count"
 msgstr "Comptage"
@@ -412,7 +413,7 @@ msgid "Draft"
 msgstr "Brouillon"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Il existe une brouillon de comptage, voulez-vous le poursuivre ?"
+msgstr "Il existe un comptage non finalisé, voulez-vous le poursuivre ?"
 
 msgid "Discard"
 msgstr "Supprimer"
@@ -450,7 +451,7 @@ msgstr "Nom de l'espèce ou filtre..."
 
 # Species filter label
 msgid "family"
-msgstr "famille"
+msgstr "Famille"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr ""
@@ -548,8 +549,8 @@ msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
-"Un nouvel e-mail de vérification vous a été envoyé. Si vous n'avez pas reçu "
-"cet e-mail, veuillez vérifier votre boîte de courrier indésirable."
+"Un nouvel e-mail de vérification vous a été envoyé. Si vous ne l'avez pas "
+"reçu, vérifiez votre boîte de courriers indésirables."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
@@ -557,30 +558,31 @@ msgstr "Veuillez d'abord vous identifier. "
 
 # User registration error
 msgid "This email is already taken."
-msgstr "Cette adresse e-mail est déjà inscrite."
+msgstr "Cette adresse e-mail est déjà utilisée."
 
 # User password reset error
 msgid "Unrecognized email address."
 msgstr "Adresse e-mail non reconnue. "
 
 msgid "email is not valid"
-msgstr " adresse e-mail invalide"
+msgstr " Adresse e-mail invalide"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Les papillons sont des insectes fascinants, mais ils sont en déclin dans de "
-"nombreuses parties de l'Europe, comme illustré par ce graphique de "
-"l'Indicateur européen des papillons de prairie. "
+"Les papillons sont des insectes emblématiques et fascinants.\n"
+"Cependant, leurs populations sont menacées ! \n"
+"Ce graphique, issu de l'Indicateur européen des papillons de prairie, illustre leur déclin. "
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
-"Les données collectées par cette application peuvent grandement améliorer "
-"les connaissances sur les statuts des papillons et de leurs habitats. "
+"Grâce à cette application, vous pouvez récolter des informations sur le "
+"terrain et contribuer à améliorer les connaissances sur les papillons et "
+"leurs habitats. "
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
@@ -595,16 +597,15 @@ msgid ""
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Il n'a jamais été aussi simple de fournir des données de haute qualité à la "
-"recherche pour aider à la conservation de ces insectes fascinants et vitaux."
-" Vous pouvez démarrer dès à présent. "
+"Vous pouvez dès aujourd'hui fournir des données précieuses pour aider au suivi et à la conservation de ces insectes fascinants et vitaux. \n"
+"C'est parti !  "
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"L'application a été développée dans le cadre du projet Evaluation des "
-"papillons en Europe (Assessing Butterflies in Europe; ABLE). "
+"L'application a été développée dans le cadre du projet ABLE (\"Assessing "
+"Butterflies in Europe\", Évaluation des papillons en Europe). "
 
 msgid "The ABLE project is a partnership between"
 msgstr "Le projet ABLE est un partenariat entre"
@@ -710,7 +711,7 @@ msgstr ""
 "différents raccourcis. Par exemple, pour trouver"
 
 msgid "Sync. with the website"
-msgstr "Syncronisation avec le site web"
+msgstr "Synchronisation avec le site web"
 
 msgid "All your saved surveys will be shown on your account page."
 msgstr "Tous vos comptages enregistrés seront visibles sur votre profil."
@@ -1413,7 +1414,7 @@ msgstr "Faites glisser les poignées ou marqueurs pour modifier les éléments."
 
 # This is part of mapping functionality
 msgid "Click cancel to undo changes."
-msgstr "Cliquez sur \"annuler\" pour revenir en arrière."
+msgstr "Cliquez sur \"Annuler\" pour revenir en arrière."
 
 msgid "Map"
 msgstr "Carte"
@@ -1942,7 +1943,7 @@ msgstr "Déplacez les hétérocères diurnes à la page des groupes d'espèces"
 
 # Version 1.18 whats new message
 msgid "Various bug fixes"
-msgstr "Divers problèmes résolus"
+msgstr "Résolution de divers problèmes"
 
 # Version 1.18 whats new message
 msgid "Updated translations"
@@ -2091,11 +2092,11 @@ msgstr "Veuillez vous connecter pour voir vos statistiques de participation"
 
 # Report label
 msgid "Your top species this month"
-msgstr "Votre espèce la plus observée ce mois-ci"
+msgstr "L'espèce que vous avez le plus observé ce mois-ci"
 
 # Report label
 msgid "Your top species"
-msgstr "Votre espèce la plus observée"
+msgstr "L'espèce que vous avez le plus observé"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
@@ -2162,7 +2163,7 @@ msgstr "Accepter"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr "Autorisation de position"
+msgstr "Autorisation de géolocalisation"
 
 # GPS permission alert message
 msgid ""
