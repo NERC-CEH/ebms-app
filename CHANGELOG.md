@@ -1,6 +1,7 @@
 ## 1.19.0
 
 Added French, Hungarian languages.
+Updated the species dictionary.
 
 ## 1.18.2
 
