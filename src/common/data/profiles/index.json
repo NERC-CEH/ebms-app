@@ -20178,6 +20178,7 @@
       "IE": "A",
       "IS": "A",
       "IT": "A",
+      "JP": "P",
       "LI": "A",
       "LT": "A",
       "LU": "A",
@@ -31725,1884 +31726,6 @@
     }
   },
   {
-    "warehouse_id": 549599,
-    "external_key": "1921648",
-    "taxon": "Spalgis epeus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549601,
-    "external_key": "5883052",
-    "taxon": "Arhopala japonica",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549603,
-    "external_key": "1927034",
-    "taxon": "Arhopala bazalus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549607,
-    "external_key": "1931774",
-    "taxon": "Artopoetes pryeri",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549611,
-    "external_key": "1925347",
-    "taxon": "Coreana raphaelis",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549613,
-    "external_key": "1928732",
-    "taxon": "Araragi enthea",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549615,
-    "external_key": "1924037",
-    "taxon": "Antigius butleri",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549617,
-    "external_key": "1924044",
-    "taxon": "Antigius attilia",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549619,
-    "external_key": "1923833",
-    "taxon": "Wagimo signata",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549621,
-    "external_key": "8782891",
-    "taxon": "Japonica lutea",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549625,
-    "external_key": "1922713",
-    "taxon": "Japonica saepestriata",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549629,
-    "external_key": "1922808",
-    "taxon": "Shirozua jonasi",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549633,
-    "external_key": "1929103",
-    "taxon": "Chrysozephyrus smaragdina",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549639,
-    "external_key": "1929072",
-    "taxon": "Chrysozephyrus hisamatsusanus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549641,
-    "external_key": "1929067",
-    "taxon": "Chrysozephyrus ataxus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549645,
-    "external_key": "1921901",
-    "taxon": "Neozephyrus taxila",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549655,
-    "external_key": "10243863",
-    "taxon": "Sibataniozephyrus fujisanus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549659,
-    "external_key": "1932560",
-    "taxon": "Iratsume orsedice",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549661,
-    "external_key": "1932043",
-    "taxon": "Artipe eryx",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549663,
-    "external_key": "1920996",
-    "taxon": "Rapala arata",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549675,
-    "external_key": "1924008",
-    "taxon": "Niphanda fusca",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549677,
-    "external_key": "4708995",
-    "taxon": "Euchrysops cnejus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549679,
-    "external_key": "1931956",
-    "taxon": "Nacaduba kurava",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549681,
-    "external_key": "1928908",
-    "taxon": "Jamides bochus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549683,
-    "external_key": "1926448",
-    "taxon": "Prosotas nora",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549687,
-    "external_key": "1928849",
-    "taxon": "Jamides alecto",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549689,
-    "external_key": "1932159",
-    "taxon": "Catochrysops panormus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549691,
-    "external_key": "1921150",
-    "taxon": "Pseudozizeeria maha",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549695,
-    "external_key": "1933655",
-    "taxon": "Zizina otis",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549697,
-    "external_key": "1922244",
-    "taxon": "Zizula hylax",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549701,
-    "external_key": "1925820",
-    "taxon": "Celastrina sugitanii",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549703,
-    "external_key": "1924298",
-    "taxon": "Acytolepis puspa",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549705,
-    "external_key": "7578318",
-    "taxon": "Udara albocaeruleus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549709,
-    "external_key": "1924193",
-    "taxon": "Megisba malaya",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549711,
-    "external_key": "1926800",
-    "taxon": "Neopithecops zalmora",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549713,
-    "external_key": "1927404",
-    "taxon": "Pithecops fulgens",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549715,
-    "external_key": "1927393",
-    "taxon": "Pithecops corvus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549717,
-    "external_key": "5138850",
-    "taxon": "Cupido lacturnus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549721,
-    "external_key": "5792094",
-    "taxon": "Phengaris arionides",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549723,
-    "external_key": "1924057",
-    "taxon": "Glaucopsyche lycormas",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549725,
-    "external_key": "1926809",
-    "taxon": "Shijimiaeoides divina",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549727,
-    "external_key": "5714713",
-    "taxon": "Albulina optilete",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549733,
-    "external_key": "1923809",
-    "taxon": "Luthrodes pandava",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549735,
-    "external_key": "7346434",
-    "taxon": "Tongeia filicaudis",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549737,
-    "external_key": "5139050",
-    "taxon": "Freyeria putli",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549739,
-    "external_key": "1909865",
-    "taxon": "Libythea lepita",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549741,
-    "external_key": "1897664",
-    "taxon": "Parantica sita",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549743,
-    "external_key": "1897678",
-    "taxon": "Parantica swinhoei",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549745,
-    "external_key": "10797716",
-    "taxon": "Parantica aglea",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549747,
-    "external_key": "1908702",
-    "taxon": "Ideopsis similis",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549749,
-    "external_key": "7346301",
-    "taxon": "Tirumala limniace",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549751,
-    "external_key": "1909216",
-    "taxon": "Tirumala hamata",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549753,
-    "external_key": "5806167",
-    "taxon": "Danaus genutia",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549755,
-    "external_key": "5136681",
-    "taxon": "Euploea mulciber",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549757,
-    "external_key": "5137244",
-    "taxon": "Euploea eunice",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549759,
-    "external_key": "5137051",
-    "taxon": "Euploea camaralzeman",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549761,
-    "external_key": "1893266",
-    "taxon": "Idea leuconoe",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549763,
-    "external_key": "10626035",
-    "taxon": "Boloria iphigenia",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549769,
-    "external_key": "1909369",
-    "taxon": "Argynnis anadyomene",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549771,
-    "external_key": "9970573",
-    "taxon": "Argynnis sagana",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549773,
-    "external_key": "10317736",
-    "taxon": "Argynnis ruslana",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549777,
-    "external_key": "10656625",
-    "taxon": "Argynnis hyperbius",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549781,
-    "external_key": "1913105",
-    "taxon": "Cupha erymanthis",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549783,
-    "external_key": "5133689",
-    "taxon": "Ariadne ariadne",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549789,
-    "external_key": "7346316",
-    "taxon": "Athyma selenophora",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549791,
-    "external_key": "1901404",
-    "taxon": "Athyma perius",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549793,
-    "external_key": "5131293",
-    "taxon": "Neptis pryeri",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549795,
-    "external_key": "5131121",
-    "taxon": "Neptis philyra",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549797,
-    "external_key": "5131585",
-    "taxon": "Neptis alwina",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549799,
-    "external_key": "5131339",
-    "taxon": "Neptis hylas",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549803,
-    "external_key": "1904948",
-    "taxon": "Cyrestis thyodamas",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549805,
-    "external_key": "5130058",
-    "taxon": "Melitaea scotosia",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549807,
-    "external_key": "5129818",
-    "taxon": "Melitaea ambigua",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549809,
-    "external_key": "7768674",
-    "taxon": "Melitaea protomedia",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549811,
-    "external_key": "1902543",
-    "taxon": "Araschnia burejana",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549815,
-    "external_key": "5129417",
-    "taxon": "Polygonia c-aureum",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549819,
-    "external_key": "5714374",
-    "taxon": "Nymphalis l-album",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549821,
-    "external_key": "7346344",
-    "taxon": "Kaniska canace",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549823,
-    "external_key": "5129293",
-    "taxon": "Vanessa indica",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549825,
-    "external_key": "1898991",
-    "taxon": "Symbrenthia lilaea",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549827,
-    "external_key": "5130476",
-    "taxon": "Junonia hedonia",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549829,
-    "external_key": "5130471",
-    "taxon": "Junonia almana",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549831,
-    "external_key": "5130464",
-    "taxon": "Junonia orithya",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549833,
-    "external_key": "1909607",
-    "taxon": "Kallima inachus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549835,
-    "external_key": "1904996",
-    "taxon": "Doleschallia bisaltide",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549837,
-    "external_key": "1910662",
-    "taxon": "Hypolimnas anomala",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549841,
-    "external_key": "1905079",
-    "taxon": "Dichorragia nesimachus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549843,
-    "external_key": "1898441",
-    "taxon": "Hestina assimilis",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549845,
-    "external_key": "1898434",
-    "taxon": "Hestina persimilis",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549847,
-    "external_key": "5128519",
-    "taxon": "Sasakia charonda",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549849,
-    "external_key": "5127893",
-    "taxon": "Polyura eudamippus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549853,
-    "external_key": "10549727",
-    "taxon": "Ninguta schrenckii",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549857,
-    "external_key": "1918467",
-    "taxon": "Lethe sicelis",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549859,
-    "external_key": "1918411",
-    "taxon": "Lethe diana",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549861,
-    "external_key": "1918563",
-    "taxon": "Lethe marginalis",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549865,
-    "external_key": "1918554",
-    "taxon": "Lethe europa",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549867,
-    "external_key": "1914701",
-    "taxon": "Neope goschkevitschii",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549873,
-    "external_key": "1918385",
-    "taxon": "Lethe callipteris",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549875,
-    "external_key": "1893943",
-    "taxon": "Mycalesis madjicosa",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549877,
-    "external_key": "1893546",
-    "taxon": "Mycalesis gotama",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549879,
-    "external_key": "1893923",
-    "taxon": "Mycalesis francisca",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549881,
-    "external_key": "1895992",
-    "taxon": "Melanitis phedima",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549885,
-    "external_key": "9915028",
-    "taxon": "Erebia neriene",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549889,
-    "external_key": "1907625",
-    "taxon": "Ypthima argus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549921,
-    "external_key": "1947626",
-    "taxon": "Isoteinon lamprospilus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549923,
-    "external_key": "1945815",
-    "taxon": "Aeromachus inachus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549925,
-    "external_key": "5142725",
-    "taxon": "Notocrypta curvifascia",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549927,
-    "external_key": "1949336",
-    "taxon": "Udaspes folus",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549929,
-    "external_key": "4689929",
-    "taxon": "Suastus gremius",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549931,
-    "external_key": "1942697",
-    "taxon": "Thoressa varia",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549933,
-    "external_key": "1946845",
-    "taxon": "Ochlodes ochracea",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549935,
-    "external_key": "1946874",
-    "taxon": "Ochlodes venata",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549939,
-    "external_key": "1947740",
-    "taxon": "Potanthus flava",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549941,
-    "external_key": "1946850",
-    "taxon": "Ochlodes subhyalina",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549943,
-    "external_key": "1947492",
-    "taxon": "Telicota colon",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549945,
-    "external_key": "1944060",
-    "taxon": "Thymelicus leonina",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549947,
-    "external_key": "1944030",
-    "taxon": "Thymelicus sylvatica",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 549951,
-    "external_key": "1946695",
-    "taxon": "Borbo cinnara",
-    "abundance": { "JP": "P" }
-  },
-  {
-    "warehouse_id": 467101,
-    "external_key": "eBMS758",
-    "taxon": "Aricia teberdina",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467176,
-    "external_key": "eBMS833",
-    "taxon": "Chazara bischo",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467102,
-    "external_key": "eBMS759",
-    "taxon": "Aricia torulensis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467168,
-    "external_key": "eBMS825",
-    "taxon": "Melanargia titea",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466911,
-    "external_key": "eBMS692",
-    "taxon": "Polyommatus cyaneus",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466897,
-    "external_key": "eBMS678",
-    "taxon": "Melitaea abbas",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466935,
-    "external_key": "eBMS718",
-    "taxon": "Tomares romanovi",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467186,
-    "external_key": "eBMS843",
-    "taxon": "Hyponephele naricoides",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467094,
-    "external_key": "eBMS751",
-    "taxon": "Glaucopsyche astraea",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467126,
-    "external_key": "eBMS783",
-    "taxon": "Polyommatus dantchenkoi",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467177,
-    "external_key": "eBMS834",
-    "taxon": "Chazara egina",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467181,
-    "external_key": "eBMS838",
-    "taxon": "Pseudochazara guriensis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466910,
-    "external_key": "eBMS691",
-    "taxon": "Polyommatus aserbeidschanus",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467185,
-    "external_key": "eBMS842",
-    "taxon": "Hyponephele wagneri",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466912,
-    "external_key": "eBMS693",
-    "taxon": "﻿Polyommatus damonides",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467125,
-    "external_key": "eBMS782",
-    "taxon": "Polyommatus karacetinae",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467127,
-    "external_key": "eBMS784",
-    "taxon": "Polyommatus bilgini",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466894,
-    "external_key": "eBMS675",
-    "taxon": "Lycaena asabinus",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467085,
-    "external_key": "eBMS742",
-    "taxon": "Tomares nesimachus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467138,
-    "external_key": "eBMS795",
-    "taxon": "Polyommatus dama",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467163,
-    "external_key": "eBMS820",
-    "taxon": "Euapatura mirza",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467096,
-    "external_key": "eBMS753",
-    "taxon": "Plebejus alcedo",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467134,
-    "external_key": "eBMS791",
-    "taxon": "Polyommatus baytopi",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467189,
-    "external_key": "eBMS846",
-    "taxon": "Erebia melancholica",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467095,
-    "external_key": "eBMS752",
-    "taxon": "Cupido staudingeri",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467077,
-    "external_key": "eBMS734",
-    "taxon": "Pyrgus aladaghensis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467154,
-    "external_key": "eBMS811",
-    "taxon": "Polyommatus tankeri",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467090,
-    "external_key": "eBMS747",
-    "taxon": "Satyrium marcidum",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467172,
-    "external_key": "eBMS829",
-    "taxon": "Hipparchia pisidice",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467159,
-    "external_key": "eBMS816",
-    "taxon": "Polyommatus zapvadi",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466927,
-    "external_key": "eBMS709",
-    "taxon": "Pseudochazara thelephassa",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466899,
-    "external_key": "eBMS680",
-    "taxon": "Melitaea phoebe ssp. pseudosibina",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466924,
-    "external_key": "eBMS705",
-    "taxon": "Pseudochazara daghestana",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467087,
-    "external_key": "eBMS744",
-    "taxon": "Callophrys herculeana",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466902,
-    "external_key": "eBMS683",
-    "taxon": "Muschampia poggei",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466883,
-    "external_key": "eBMS663",
-    "taxon": "Coenonympha symphyta",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467142,
-    "external_key": "eBMS799",
-    "taxon": "Polyommatus iphicarmon",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467139,
-    "external_key": "eBMS796",
-    "taxon": "Polyommatus erzindjanensis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467071,
-    "external_key": "eBMS727",
-    "taxon": "Parnassius nordmanni",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467187,
-    "external_key": "eBMS844",
-    "taxon": "Erebia hewitsonii",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467167,
-    "external_key": "eBMS824",
-    "taxon": "Lasiommata menava",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467151,
-    "external_key": "eBMS808",
-    "taxon": "Polyommatus putnami",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467144,
-    "external_key": "eBMS801",
-    "taxon": "Polyommatus lycius",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467129,
-    "external_key": "eBMS786",
-    "taxon": "Polyommatus interjectus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467117,
-    "external_key": "eBMS774",
-    "taxon": "Polyommatus actis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467106,
-    "external_key": "eBMS763",
-    "taxon": "Polyommatus ossmar",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467103,
-    "external_key": "eBMS760",
-    "taxon": "Aricia crassipunctus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467091,
-    "external_key": "eBMS748",
-    "taxon": "Satyrium myrtale",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467074,
-    "external_key": "eBMS730",
-    "taxon": "Thymelicus novus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466926,
-    "external_key": "eBMS708",
-    "taxon": "Pseudochazara mamurra",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466906,
-    "external_key": "eBMS687",
-    "taxon": "Pieris bowdeni",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466888,
-    "external_key": "eBMS669",
-    "taxon": "Hipparchia parisatis",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466887,
-    "external_key": "eBMS668",
-    "taxon": "Erebia graucasica",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466885,
-    "external_key": "eBMS665",
-    "taxon": "Colias thisoa",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467105,
-    "external_key": "eBMS762",
-    "taxon": "Polyommatus dezinus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466884,
-    "external_key": "eBMS664",
-    "taxon": "Colias chlorocoma",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467182,
-    "external_key": "eBMS839",
-    "taxon": "Hyponephele kocaki",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467072,
-    "external_key": "eBMS728",
-    "taxon": "Archon apollinaris",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466904,
-    "external_key": "eBMS685",
-    "taxon": "Muschampia nomas ssp. tersa",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467140,
-    "external_key": "eBMS797",
-    "taxon": "Polyommatus guezelmavi",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466886,
-    "external_key": "eBMS666",
-    "taxon": "Cyaniris semiargus ssp. bellis",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466938,
-    "external_key": "eBMS656",
-    "taxon": "Afarsia morgiana",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467112,
-    "external_key": "eBMS769",
-    "taxon": "Polyommatus cornelia",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467092,
-    "external_key": "eBMS749",
-    "taxon": "Satyrium hyrcanicum",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467100,
-    "external_key": "eBMS757",
-    "taxon": "Aricia isauricus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466914,
-    "external_key": "eBMS695",
-    "taxon": "Polyommatus eriwanensis",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467099,
-    "external_key": "eBMS756",
-    "taxon": "Aricia hyacinthus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467123,
-    "external_key": "eBMS780",
-    "taxon": "Polyommatus sigberti",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466916,
-    "external_key": "eBMS697",
-    "taxon": "Polyommatus huberti",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466921,
-    "external_key": "eBMS702",
-    "taxon": "Polyommatus vanensis",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466920,
-    "external_key": "eBMS701",
-    "taxon": "Polyommatus turcicus",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466880,
-    "external_key": "eBMS659",
-    "taxon": "Boloria caucasica",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466909,
-    "external_key": "eBMS690",
-    "taxon": "Polyommatus altivagans",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467192,
-    "external_key": "eBMS733",
-    "taxon": "Pyrgus bolkariensis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467076,
-    "external_key": "eBMS732",
-    "taxon": "Muschampia plurimacula",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467174,
-    "external_key": "eBMS831",
-    "taxon": "Satyrus favonius",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467107,
-    "external_key": "eBMS764",
-    "taxon": "Polyommatus syriacus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467160,
-    "external_key": "eBMS817",
-    "taxon": "Brenthis mofidii",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467155,
-    "external_key": "eBMS812",
-    "taxon": "Polyommatus theresiae",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467148,
-    "external_key": "eBMS805",
-    "taxon": "Polyommatus phyllis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467109,
-    "external_key": "eBMS766",
-    "taxon": "Polyommatus diana",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466900,
-    "external_key": "eBMS681",
-    "taxon": "Melitaea caucasogenita",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466913,
-    "external_key": "eBMS694",
-    "taxon": "Polyommatus demavendi",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466905,
-    "external_key": "eBMS686",
-    "taxon": "Neolysandra diana",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466889,
-    "external_key": "eBMS670",
-    "taxon": "Hyponephele lycaonoides",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466898,
-    "external_key": "eBMS679",
-    "taxon": "Melitaea persea",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466944,
-    "external_key": "eBMS667",
-    "taxon": "Eogenes alcides",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466945,
-    "external_key": "eBMS707",
-    "taxon": "Pseudochazara mamurra ssp. schahrudensis",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466947,
-    "external_key": "eBMS717",
-    "taxon": "Thaleropis ionia",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466942,
-    "external_key": "eBMS661",
-    "taxon": "Chazara bischoffi",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466949,
-    "external_key": "eBMS720",
-    "taxon": "Coenonympha pamphilus ssp. lyllus",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466940,
-    "external_key": "eBMS658",
-    "taxon": "Albulina morgiana",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466936,
-    "external_key": "eBMS719",
-    "taxon": "Turanana endymion",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466542,
-    "external_key": "eBMS453.1",
-    "taxon": "Euphydryas aurinia beckeri",
-    "abundance": { "ES": "P", "Europe": "P" }
-  },
-  {
-    "warehouse_id": 467082,
-    "external_key": "eBMS739",
-    "taxon": "Lycaena lampon",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467111,
-    "external_key": "eBMS768",
-    "taxon": "Polyommatus fatima",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467121,
-    "external_key": "eBMS778",
-    "taxon": "Polyommatus haigi",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 548757,
-    "external_key": "1904240",
-    "taxon": "Bebearia cocalia",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548759,
-    "external_key": "1919181",
-    "taxon": "Belenois aurota",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548763,
-    "external_key": "1919210",
-    "taxon": "Belenois calypso",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548766,
-    "external_key": "1919213",
-    "taxon": "Belenois creona",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548795,
-    "external_key": "1950912",
-    "taxon": "Celaenorrhinus proxima",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 570518,
-    "external_key": "1938069",
-    "taxon": "Papilio demoleus",
-    "abundance": { "CY": "P", "Europe": "P", "TR": "P" }
-  },
-  {
-    "warehouse_id": 466881,
-    "external_key": "eBMS660",
-    "taxon": "Callophrys paulae",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467183,
-    "external_key": "eBMS840",
-    "taxon": "Hyponephele cadusia",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466903,
-    "external_key": "eBMS684",
-    "taxon": "Muschampia nomas",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466929,
-    "external_key": "eBMS711",
-    "taxon": "Pyrgus melotis",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466923,
-    "external_key": "eBMS704",
-    "taxon": "Pseudochazara beroe",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466891,
-    "external_key": "eBMS672",
-    "taxon": "Hyponephele naricina ssp. naricoides",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467075,
-    "external_key": "eBMS731",
-    "taxon": "Spialia osthelderi",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466907,
-    "external_key": "eBMS688",
-    "taxon": "Pieris pseudorapae",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466932,
-    "external_key": "eBMS714",
-    "taxon": "Satyrus amasinus",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466931,
-    "external_key": "eBMS713",
-    "taxon": "Satyrium hyrcanica",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466925,
-    "external_key": "eBMS706",
-    "taxon": "Pseudochazara pelopea",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467080,
-    "external_key": "eBMS737",
-    "taxon": "Lycaena euphratica",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467158,
-    "external_key": "eBMS815",
-    "taxon": "Polyommatus wagneri",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467136,
-    "external_key": "eBMS793",
-    "taxon": "Polyommatus carmon",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467113,
-    "external_key": "eBMS770",
-    "taxon": "Polyommatus aedon",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466908,
-    "external_key": "eBMS689",
-    "taxon": "Plebejus christophi",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467191,
-    "external_key": "eBMS848",
-    "taxon": "Neolycaena soezen",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467122,
-    "external_key": "eBMS779",
-    "taxon": "Polyommatus sertavulensis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467188,
-    "external_key": "eBMS845",
-    "taxon": "Erebia iranica",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467081,
-    "external_key": "eBMS738",
-    "taxon": "Lycaena phoenicurus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467132,
-    "external_key": "eBMS789",
-    "taxon": "Polyommatus anticarmon",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467119,
-    "external_key": "eBMS776",
-    "taxon": "Polyommatus cilicius",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467190,
-    "external_key": "eBMS847",
-    "taxon": "Polyommatus alibali",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467179,
-    "external_key": "eBMS836",
-    "taxon": "Pseudochazara mniszechii",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467084,
-    "external_key": "eBMS741",
-    "taxon": "Cigaritis maxima",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467108,
-    "external_key": "eBMS765",
-    "taxon": "Polyommatus buzulmavi",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 548704,
-    "external_key": "1944234",
-    "taxon": "Acada biseriatus",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548709,
-    "external_key": "5135772",
-    "taxon": "Acraea anemosa",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548711,
-    "external_key": "5135594",
-    "taxon": "Acraea boopis",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548713,
-    "external_key": "5135786",
-    "taxon": "Acraea chilo",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548716,
-    "external_key": "5136215",
-    "taxon": "Acraea egina",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548718,
-    "external_key": "5136012",
-    "taxon": "Acraea insignis",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548722,
-    "external_key": "5135801",
-    "taxon": "Acraea mirabilis",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548724,
-    "external_key": "5135760",
-    "taxon": "Acraea natalica",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548734,
-    "external_key": "5135683",
-    "taxon": "Acraea satis",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548736,
-    "external_key": "5136131",
-    "taxon": "Acraea zetes",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548738,
-    "external_key": "5135925",
-    "taxon": "Acraea zonata",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548740,
-    "external_key": "1906030",
-    "taxon": "Amauris niavius",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548742,
-    "external_key": "1906006",
-    "taxon": "Amauris ochlea",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548803,
-    "external_key": "5129245",
-    "taxon": "Charaxes aubyni",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548804,
-    "external_key": "5128952",
-    "taxon": "Charaxes berkeleyi",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548805,
-    "external_key": "5128875",
-    "taxon": "Charaxes blanda",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548806,
-    "external_key": "5128796",
-    "taxon": "Charaxes bohemani",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548810,
-    "external_key": "5128597",
-    "taxon": "Charaxes brutus",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548813,
-    "external_key": "5129091",
-    "taxon": "Charaxes candiope",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548816,
-    "external_key": "5128984",
-    "taxon": "Charaxes castor",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548820,
-    "external_key": "5129190",
-    "taxon": "Charaxes cithaeron",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548823,
-    "external_key": "5129118",
-    "taxon": "Charaxes epijasius",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548826,
-    "external_key": "5128985",
-    "taxon": "Charaxes etesipe",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548848,
-    "external_key": "5128957",
-    "taxon": "Charaxes protoclea",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548851,
-    "external_key": "5128679",
-    "taxon": "Charaxes saturnus",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548854,
-    "external_key": "5128781",
-    "taxon": "Charaxes tiridates",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548860,
-    "external_key": "5128685",
-    "taxon": "Charaxes viola",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548877,
-    "external_key": "1947115",
-    "taxon": "Coeliades hanno",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548880,
-    "external_key": "1947116",
-    "taxon": "Coeliades keithloa",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548882,
-    "external_key": "1947112",
-    "taxon": "Coeliades pisistratus",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548907,
-    "external_key": "1920348",
-    "taxon": "Colotis eris",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548910,
-    "external_key": "1920370",
-    "taxon": "Colotis euippe",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548911,
-    "external_key": "1920351",
-    "taxon": "Colotis eunoma",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548917,
-    "external_key": "1920378",
-    "taxon": "Colotis evenina",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548939,
-    "external_key": "1920381",
-    "taxon": "Colotis vesta",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548948,
-    "external_key": "5132713",
-    "taxon": "Cymothoe herminia",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548952,
-    "external_key": "5132693",
-    "taxon": "Cymothoe lurida",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548954,
-    "external_key": "5132551",
-    "taxon": "Cymothoe teita",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548955,
-    "external_key": "1919924",
-    "taxon": "Dixeia charina",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548957,
-    "external_key": "1919921",
-    "taxon": "Dixeia orbona",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548959,
-    "external_key": "1919930",
-    "taxon": "Dixeia pigea",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548962,
-    "external_key": "1920815",
-    "taxon": "Eronia cleodora",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548964,
-    "external_key": "1920816",
-    "taxon": "Eronia leda",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548991,
-    "external_key": "10873137",
-    "taxon": "Euxanthe wakefieldi",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549046,
-    "external_key": "5130396",
-    "taxon": "Junonia artaxia",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549049,
-    "external_key": "5130335",
-    "taxon": "Junonia chorimene",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549051,
-    "external_key": "5130542",
-    "taxon": "Junonia hierta",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549053,
-    "external_key": "5130448",
-    "taxon": "Junonia natalica",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549077,
-    "external_key": "5137869",
-    "taxon": "Leptosia nupta",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549081,
-    "external_key": "1909851",
-    "taxon": "Libythea labdaca",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549085,
-    "external_key": "1895956",
-    "taxon": "Melanitis leda",
-    "abundance": { "JP": "P", "KE": "P" }
-  },
-  {
-    "warehouse_id": 549087,
-    "external_key": "1896015",
-    "taxon": "Melanitis libya",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549106,
-    "external_key": "1919660",
-    "taxon": "Nepheronia thalassina",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549141,
-    "external_key": "1937941",
-    "taxon": "Papilio jacksoni",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549143,
-    "external_key": "1937702",
-    "taxon": "Papilio nireus",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549147,
-    "external_key": "1937959",
-    "taxon": "Papilio ophidicephalus",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549149,
-    "external_key": "1937849",
-    "taxon": "Papilio phorcas",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549152,
-    "external_key": "1915499",
-    "taxon": "Pardopsis punctatissima",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549154,
-    "external_key": "1945878",
-    "taxon": "Pelopidas mathias",
-    "abundance": { "JP": "P", "KE": "P" }
-  },
-  {
-    "warehouse_id": 549108,
-    "external_key": "5131594",
-    "taxon": "Neptis alta",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549113,
-    "external_key": "5131442",
-    "taxon": "Neptis laeta",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549116,
-    "external_key": "5131523",
-    "taxon": "Neptis metella",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549118,
-    "external_key": "5131196",
-    "taxon": "Neptis morosa",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549163,
-    "external_key": "5127747",
-    "taxon": "Phalanta phalantha",
-    "abundance": { "JP": "P", "KE": "P" }
-  },
-  {
-    "warehouse_id": 549166,
-    "external_key": "1908358",
-    "taxon": "Physcaeneura leda",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 549167,
-    "external_key": "1920181",
-    "taxon": "Pinacopteryx eriphia",
-    "abundance": { "KE": "P" }
-  },
-  {
     "warehouse_id": 549169,
     "external_key": "5137789",
     "taxon": "Pontia distorta",
@@ -33660,6 +31783,36 @@
     "warehouse_id": 549101,
     "external_key": "1919663",
     "taxon": "Nepheronia buquetii",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548795,
+    "external_key": "1950912",
+    "taxon": "Celaenorrhinus proxima",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548766,
+    "external_key": "1919213",
+    "taxon": "Belenois creona",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548763,
+    "external_key": "1919210",
+    "taxon": "Belenois calypso",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548759,
+    "external_key": "1919181",
+    "taxon": "Belenois aurota",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548757,
+    "external_key": "1904240",
+    "taxon": "Bebearia cocalia",
     "abundance": { "KE": "P" }
   },
   {
@@ -33801,54 +31954,6 @@
     "abundance": { "KE": "P" }
   },
   {
-    "warehouse_id": 467098,
-    "external_key": "eBMS755",
-    "taxon": "Plebejus rosei",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466892,
-    "external_key": "eBMS673",
-    "taxon": "Kretania alcedo",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467166,
-    "external_key": "eBMS823",
-    "taxon": "Melitaea collina",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466890,
-    "external_key": "eBMS671",
-    "taxon": "Hyponephele naricina",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467165,
-    "external_key": "eBMS822",
-    "taxon": "Melitaea telona",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467143,
-    "external_key": "eBMS800",
-    "taxon": "Polyommatus kurdistanicus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467169,
-    "external_key": "eBMS826",
-    "taxon": "Melanargia syriaca",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467086,
-    "external_key": "eBMS743",
-    "taxon": "Tomares desinens",
-    "abundance": { "TRA": "P" }
-  },
-  {
     "warehouse_id": 549891,
     "external_key": "1907498",
     "taxon": "Ypthima multistriata",
@@ -33933,196 +32038,106 @@
     "abundance": { "JP": "P" }
   },
   {
-    "warehouse_id": 467104,
-    "external_key": "eBMS761",
-    "taxon": "Aricia bassoni",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466915,
-    "external_key": "eBMS696",
-    "taxon": "Polyommatus firdussii",
+    "warehouse_id": 466884,
+    "external_key": "eBMS664",
+    "taxon": "Colias chlorocoma",
     "abundance": { "AM": "P", "TRA": "P" }
   },
   {
-    "warehouse_id": 466882,
-    "external_key": "eBMS662",
-    "taxon": "Coenonympha saadi",
+    "warehouse_id": 467187,
+    "external_key": "eBMS844",
+    "taxon": "Erebia hewitsonii",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467167,
+    "external_key": "eBMS824",
+    "taxon": "Lasiommata menava",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467151,
+    "external_key": "eBMS808",
+    "taxon": "Polyommatus putnami",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467144,
+    "external_key": "eBMS801",
+    "taxon": "Polyommatus lycius",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467129,
+    "external_key": "eBMS786",
+    "taxon": "Polyommatus interjectus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467117,
+    "external_key": "eBMS774",
+    "taxon": "Polyommatus actis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467106,
+    "external_key": "eBMS763",
+    "taxon": "Polyommatus ossmar",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467103,
+    "external_key": "eBMS760",
+    "taxon": "Aricia crassipunctus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467091,
+    "external_key": "eBMS748",
+    "taxon": "Satyrium myrtale",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467074,
+    "external_key": "eBMS730",
+    "taxon": "Thymelicus novus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466926,
+    "external_key": "eBMS708",
+    "taxon": "Pseudochazara mamurra",
     "abundance": { "AM": "P", "TRA": "P" }
   },
   {
-    "warehouse_id": 467130,
-    "external_key": "eBMS787",
-    "taxon": "Polyommatus antidolus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467152,
-    "external_key": "eBMS809",
-    "taxon": "Polyommatus schuriani",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467078,
-    "external_key": "eBMS735",
-    "taxon": "Colotis fausta",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467115,
-    "external_key": "eBMS772",
-    "taxon": "Polyommatus bollandi",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466922,
-    "external_key": "eBMS703",
-    "taxon": "Polyommatus zarathustra",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467180,
-    "external_key": "eBMS837",
-    "taxon": "Pseudochazara schakuhensis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466930,
-    "external_key": "eBMS712",
-    "taxon": "Satyrium abdominalis",
+    "warehouse_id": 466906,
+    "external_key": "eBMS687",
+    "taxon": "Pieris bowdeni",
     "abundance": { "AM": "P", "TRA": "P" }
   },
   {
-    "warehouse_id": 466928,
-    "external_key": "eBMS710",
-    "taxon": "Pyrgus jupei",
+    "warehouse_id": 466888,
+    "external_key": "eBMS669",
+    "taxon": "Hipparchia parisatis",
     "abundance": { "AM": "P", "TRA": "P" }
   },
   {
-    "warehouse_id": 467164,
-    "external_key": "eBMS821",
-    "taxon": "Euphydryas orientalis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467124,
-    "external_key": "eBMS781",
-    "taxon": "Polyommatus alcestis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467083,
-    "external_key": "eBMS740",
-    "taxon": "Cigaritis cilissa",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467170,
-    "external_key": "eBMS827",
-    "taxon": "Melanargia hylata",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466933,
-    "external_key": "eBMS715",
-    "taxon": "Satyrus effendi",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467146,
-    "external_key": "eBMS803",
-    "taxon": "Polyommatus mithridates",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467097,
-    "external_key": "eBMS754",
-    "taxon": "Plebejus morgianus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467079,
-    "external_key": "eBMS736",
-    "taxon": "Pieris persis",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466950,
-    "external_key": "eBMS725",
-    "taxon": "Polyommatus icarus/celina",
-    "abundance": { "ES": "P", "Europe": "P", "PT": "P" }
-  },
-  {
-    "warehouse_id": 467093,
-    "external_key": "eBMS750",
-    "taxon": "Satyrium zabni",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466901,
-    "external_key": "eBMS682",
-    "taxon": "​Muschampia proteides",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467175,
-    "external_key": "eBMS832",
-    "taxon": "Satyrus parthicus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466895,
-    "external_key": "eBMS676",
-    "taxon": "Lycaena ochimus",
+    "warehouse_id": 466887,
+    "external_key": "eBMS668",
+    "taxon": "Erebia graucasica",
     "abundance": { "AM": "P", "TRA": "P" }
   },
   {
-    "warehouse_id": 466896,
-    "external_key": "eBMS677",
-    "taxon": "Lycaena phoenicura",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467153,
-    "external_key": "eBMS810",
-    "taxon": "Polyommatus surakovi",
+    "warehouse_id": 466885,
+    "external_key": "eBMS665",
+    "taxon": "Colias thisoa",
     "abundance": { "AM": "P", "TRA": "P" }
   },
   {
-    "warehouse_id": 466893,
-    "external_key": "eBMS674",
-    "taxon": "Kretania zephyrinus",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 466934,
-    "external_key": "eBMS716",
-    "taxon": "Speyeria alexandra",
-    "abundance": { "AM": "P" }
-  },
-  {
-    "warehouse_id": 467171,
-    "external_key": "eBMS828",
-    "taxon": "Melanargia grumi ",
+    "warehouse_id": 467105,
+    "external_key": "eBMS762",
+    "taxon": "Polyommatus dezinus",
     "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466918,
-    "external_key": "eBMS699",
-    "taxon": "Polyommatus ninae",
-    "abundance": { "AM": "P", "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467089,
-    "external_key": "eBMS746",
-    "taxon": "Callophrys mystaphia",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466917,
-    "external_key": "eBMS698",
-    "taxon": "Polyommatus myrrha",
-    "abundance": { "AM": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 548726,
@@ -34683,81 +32698,69 @@
     "abundance": { "JP": "P" }
   },
   {
-    "warehouse_id": 467178,
-    "external_key": "eBMS835",
-    "taxon": "Pseudochazara lydia",
+    "warehouse_id": 467182,
+    "external_key": "eBMS839",
+    "taxon": "Hyponephele kocaki",
     "abundance": { "TRA": "P" }
   },
   {
-    "warehouse_id": 467184,
-    "external_key": "eBMS841",
-    "taxon": "Hyponephele urartua",
+    "warehouse_id": 467072,
+    "external_key": "eBMS728",
+    "taxon": "Archon apollinaris",
     "abundance": { "TRA": "P" }
   },
   {
-    "warehouse_id": 467073,
-    "external_key": "eBMS729",
-    "taxon": "Zerynthia deyrollei",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467116,
-    "external_key": "eBMS773",
-    "taxon": "Polyommatus ciloicus",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467150,
-    "external_key": "eBMS807",
-    "taxon": "Polyommatus poseidon",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 466879,
-    "external_key": "eBMS657",
-    "taxon": "​​Polyommatus belovi",
+    "warehouse_id": 466904,
+    "external_key": "eBMS685",
+    "taxon": "Muschampia nomas ssp. tersa",
     "abundance": { "AM": "P" }
   },
   {
-    "warehouse_id": 467145,
-    "external_key": "eBMS802",
-    "taxon": "Polyommatus merhaba",
+    "warehouse_id": 467140,
+    "external_key": "eBMS797",
+    "taxon": "Polyommatus guezelmavi",
     "abundance": { "TRA": "P" }
   },
   {
-    "warehouse_id": 467149,
-    "external_key": "eBMS806",
-    "taxon": "Polyommatus pierceae",
+    "warehouse_id": 466886,
+    "external_key": "eBMS666",
+    "taxon": "Cyaniris semiargus ssp. bellis",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466938,
+    "external_key": "eBMS656",
+    "taxon": "Afarsia morgiana",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467112,
+    "external_key": "eBMS769",
+    "taxon": "Polyommatus cornelia",
     "abundance": { "TRA": "P" }
   },
   {
-    "warehouse_id": 467156,
-    "external_key": "eBMS813",
-    "taxon": "Polyommatus turcicolus",
+    "warehouse_id": 467092,
+    "external_key": "eBMS749",
+    "taxon": "Satyrium hyrcanicum",
     "abundance": { "TRA": "P" }
   },
   {
-    "warehouse_id": 467118,
-    "external_key": "eBMS775",
-    "taxon": "Polyommatus artvinensis",
+    "warehouse_id": 467100,
+    "external_key": "eBMS757",
+    "taxon": "Aricia isauricus",
     "abundance": { "TRA": "P" }
   },
   {
-    "warehouse_id": 467135,
-    "external_key": "eBMS792",
-    "taxon": "Polyommatus caeruleus",
-    "abundance": { "TRA": "P" }
+    "warehouse_id": 466914,
+    "external_key": "eBMS695",
+    "taxon": "Polyommatus eriwanensis",
+    "abundance": { "AM": "P", "TRA": "P" }
   },
   {
-    "warehouse_id": 467088,
-    "external_key": "eBMS745",
-    "taxon": "Callophrys danchenkoi",
-    "abundance": { "TRA": "P" }
-  },
-  {
-    "warehouse_id": 467173,
-    "external_key": "eBMS830",
-    "taxon": "Satyrus iranicus",
+    "warehouse_id": 467099,
+    "external_key": "eBMS756",
+    "taxon": "Aricia hyacinthus",
     "abundance": { "TRA": "P" }
   },
   {
@@ -34969,5 +32972,2003 @@
     "external_key": "1921163",
     "taxon": "Taraka hamada",
     "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549599,
+    "external_key": "1921648",
+    "taxon": "Spalgis epeus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549601,
+    "external_key": "5883052",
+    "taxon": "Arhopala japonica",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549603,
+    "external_key": "1927034",
+    "taxon": "Arhopala bazalus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549607,
+    "external_key": "1931774",
+    "taxon": "Artopoetes pryeri",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549611,
+    "external_key": "1925347",
+    "taxon": "Coreana raphaelis",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549613,
+    "external_key": "1928732",
+    "taxon": "Araragi enthea",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549615,
+    "external_key": "1924037",
+    "taxon": "Antigius butleri",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549617,
+    "external_key": "1924044",
+    "taxon": "Antigius attilia",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549619,
+    "external_key": "1923833",
+    "taxon": "Wagimo signata",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549621,
+    "external_key": "8782891",
+    "taxon": "Japonica lutea",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549625,
+    "external_key": "1922713",
+    "taxon": "Japonica saepestriata",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549629,
+    "external_key": "1922808",
+    "taxon": "Shirozua jonasi",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549633,
+    "external_key": "1929103",
+    "taxon": "Chrysozephyrus smaragdina",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549639,
+    "external_key": "1929072",
+    "taxon": "Chrysozephyrus hisamatsusanus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549641,
+    "external_key": "1929067",
+    "taxon": "Chrysozephyrus ataxus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549645,
+    "external_key": "1921901",
+    "taxon": "Neozephyrus taxila",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549655,
+    "external_key": "10243863",
+    "taxon": "Sibataniozephyrus fujisanus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549659,
+    "external_key": "1932560",
+    "taxon": "Iratsume orsedice",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549661,
+    "external_key": "1932043",
+    "taxon": "Artipe eryx",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549663,
+    "external_key": "1920996",
+    "taxon": "Rapala arata",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549675,
+    "external_key": "1924008",
+    "taxon": "Niphanda fusca",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549677,
+    "external_key": "4708995",
+    "taxon": "Euchrysops cnejus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549679,
+    "external_key": "1931956",
+    "taxon": "Nacaduba kurava",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549681,
+    "external_key": "1928908",
+    "taxon": "Jamides bochus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549683,
+    "external_key": "1926448",
+    "taxon": "Prosotas nora",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549687,
+    "external_key": "1928849",
+    "taxon": "Jamides alecto",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549689,
+    "external_key": "1932159",
+    "taxon": "Catochrysops panormus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549691,
+    "external_key": "1921150",
+    "taxon": "Pseudozizeeria maha",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549695,
+    "external_key": "1933655",
+    "taxon": "Zizina otis",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549697,
+    "external_key": "1922244",
+    "taxon": "Zizula hylax",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549701,
+    "external_key": "1925820",
+    "taxon": "Celastrina sugitanii",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549703,
+    "external_key": "1924298",
+    "taxon": "Acytolepis puspa",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549705,
+    "external_key": "7578318",
+    "taxon": "Udara albocaeruleus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549709,
+    "external_key": "1924193",
+    "taxon": "Megisba malaya",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549711,
+    "external_key": "1926800",
+    "taxon": "Neopithecops zalmora",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549713,
+    "external_key": "1927404",
+    "taxon": "Pithecops fulgens",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549715,
+    "external_key": "1927393",
+    "taxon": "Pithecops corvus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549717,
+    "external_key": "5138850",
+    "taxon": "Cupido lacturnus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549721,
+    "external_key": "5792094",
+    "taxon": "Phengaris arionides",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549723,
+    "external_key": "1924057",
+    "taxon": "Glaucopsyche lycormas",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549725,
+    "external_key": "1926809",
+    "taxon": "Shijimiaeoides divina",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549727,
+    "external_key": "5714713",
+    "taxon": "Albulina optilete",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549733,
+    "external_key": "1923809",
+    "taxon": "Luthrodes pandava",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549735,
+    "external_key": "7346434",
+    "taxon": "Tongeia filicaudis",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549737,
+    "external_key": "5139050",
+    "taxon": "Freyeria putli",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549739,
+    "external_key": "1909865",
+    "taxon": "Libythea lepita",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549741,
+    "external_key": "1897664",
+    "taxon": "Parantica sita",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549743,
+    "external_key": "1897678",
+    "taxon": "Parantica swinhoei",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549745,
+    "external_key": "10797716",
+    "taxon": "Parantica aglea",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549747,
+    "external_key": "1908702",
+    "taxon": "Ideopsis similis",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549749,
+    "external_key": "7346301",
+    "taxon": "Tirumala limniace",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549751,
+    "external_key": "1909216",
+    "taxon": "Tirumala hamata",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549753,
+    "external_key": "5806167",
+    "taxon": "Danaus genutia",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549755,
+    "external_key": "5136681",
+    "taxon": "Euploea mulciber",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549757,
+    "external_key": "5137244",
+    "taxon": "Euploea eunice",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549759,
+    "external_key": "5137051",
+    "taxon": "Euploea camaralzeman",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549761,
+    "external_key": "1893266",
+    "taxon": "Idea leuconoe",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549763,
+    "external_key": "10626035",
+    "taxon": "Boloria iphigenia",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549769,
+    "external_key": "1909369",
+    "taxon": "Argynnis anadyomene",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549771,
+    "external_key": "9970573",
+    "taxon": "Argynnis sagana",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549773,
+    "external_key": "10317736",
+    "taxon": "Argynnis ruslana",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549777,
+    "external_key": "10656625",
+    "taxon": "Argynnis hyperbius",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549781,
+    "external_key": "1913105",
+    "taxon": "Cupha erymanthis",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549783,
+    "external_key": "5133689",
+    "taxon": "Ariadne ariadne",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549789,
+    "external_key": "7346316",
+    "taxon": "Athyma selenophora",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549791,
+    "external_key": "1901404",
+    "taxon": "Athyma perius",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549793,
+    "external_key": "5131293",
+    "taxon": "Neptis pryeri",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549795,
+    "external_key": "5131121",
+    "taxon": "Neptis philyra",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549797,
+    "external_key": "5131585",
+    "taxon": "Neptis alwina",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549799,
+    "external_key": "5131339",
+    "taxon": "Neptis hylas",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549803,
+    "external_key": "1904948",
+    "taxon": "Cyrestis thyodamas",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549805,
+    "external_key": "5130058",
+    "taxon": "Melitaea scotosia",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549807,
+    "external_key": "5129818",
+    "taxon": "Melitaea ambigua",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549809,
+    "external_key": "7768674",
+    "taxon": "Melitaea protomedia",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549811,
+    "external_key": "1902543",
+    "taxon": "Araschnia burejana",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549815,
+    "external_key": "5129417",
+    "taxon": "Polygonia c-aureum",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549821,
+    "external_key": "7346344",
+    "taxon": "Kaniska canace",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549823,
+    "external_key": "5129293",
+    "taxon": "Vanessa indica",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549825,
+    "external_key": "1898991",
+    "taxon": "Symbrenthia lilaea",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549827,
+    "external_key": "5130476",
+    "taxon": "Junonia hedonia",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549829,
+    "external_key": "5130471",
+    "taxon": "Junonia almana",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549831,
+    "external_key": "5130464",
+    "taxon": "Junonia orithya",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549833,
+    "external_key": "1909607",
+    "taxon": "Kallima inachus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549835,
+    "external_key": "1904996",
+    "taxon": "Doleschallia bisaltide",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549837,
+    "external_key": "1910662",
+    "taxon": "Hypolimnas anomala",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549841,
+    "external_key": "1905079",
+    "taxon": "Dichorragia nesimachus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549843,
+    "external_key": "1898441",
+    "taxon": "Hestina assimilis",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549845,
+    "external_key": "1898434",
+    "taxon": "Hestina persimilis",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549847,
+    "external_key": "5128519",
+    "taxon": "Sasakia charonda",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549849,
+    "external_key": "5127893",
+    "taxon": "Polyura eudamippus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549853,
+    "external_key": "10549727",
+    "taxon": "Ninguta schrenckii",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549857,
+    "external_key": "1918467",
+    "taxon": "Lethe sicelis",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549859,
+    "external_key": "1918411",
+    "taxon": "Lethe diana",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549861,
+    "external_key": "1918563",
+    "taxon": "Lethe marginalis",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549865,
+    "external_key": "1918554",
+    "taxon": "Lethe europa",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549867,
+    "external_key": "1914701",
+    "taxon": "Neope goschkevitschii",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549873,
+    "external_key": "1918385",
+    "taxon": "Lethe callipteris",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549875,
+    "external_key": "1893943",
+    "taxon": "Mycalesis madjicosa",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549877,
+    "external_key": "1893546",
+    "taxon": "Mycalesis gotama",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549879,
+    "external_key": "1893923",
+    "taxon": "Mycalesis francisca",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549881,
+    "external_key": "1895992",
+    "taxon": "Melanitis phedima",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549885,
+    "external_key": "9915028",
+    "taxon": "Erebia neriene",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549889,
+    "external_key": "1907625",
+    "taxon": "Ypthima argus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549921,
+    "external_key": "1947626",
+    "taxon": "Isoteinon lamprospilus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549923,
+    "external_key": "1945815",
+    "taxon": "Aeromachus inachus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549925,
+    "external_key": "5142725",
+    "taxon": "Notocrypta curvifascia",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549927,
+    "external_key": "1949336",
+    "taxon": "Udaspes folus",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549929,
+    "external_key": "4689929",
+    "taxon": "Suastus gremius",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549931,
+    "external_key": "1942697",
+    "taxon": "Thoressa varia",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549933,
+    "external_key": "1946845",
+    "taxon": "Ochlodes ochracea",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549935,
+    "external_key": "1946874",
+    "taxon": "Ochlodes venata",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549939,
+    "external_key": "1947740",
+    "taxon": "Potanthus flava",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549941,
+    "external_key": "1946850",
+    "taxon": "Ochlodes subhyalina",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549943,
+    "external_key": "1947492",
+    "taxon": "Telicota colon",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549945,
+    "external_key": "1944060",
+    "taxon": "Thymelicus leonina",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549947,
+    "external_key": "1944030",
+    "taxon": "Thymelicus sylvatica",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 549951,
+    "external_key": "1946695",
+    "taxon": "Borbo cinnara",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 467123,
+    "external_key": "eBMS780",
+    "taxon": "Polyommatus sigberti",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466916,
+    "external_key": "eBMS697",
+    "taxon": "Polyommatus huberti",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466921,
+    "external_key": "eBMS702",
+    "taxon": "Polyommatus vanensis",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466920,
+    "external_key": "eBMS701",
+    "taxon": "Polyommatus turcicus",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466880,
+    "external_key": "eBMS659",
+    "taxon": "Boloria caucasica",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466909,
+    "external_key": "eBMS690",
+    "taxon": "Polyommatus altivagans",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467192,
+    "external_key": "eBMS733",
+    "taxon": "Pyrgus bolkariensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467076,
+    "external_key": "eBMS732",
+    "taxon": "Muschampia plurimacula",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467174,
+    "external_key": "eBMS831",
+    "taxon": "Satyrus favonius",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467107,
+    "external_key": "eBMS764",
+    "taxon": "Polyommatus syriacus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467160,
+    "external_key": "eBMS817",
+    "taxon": "Brenthis mofidii",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467155,
+    "external_key": "eBMS812",
+    "taxon": "Polyommatus theresiae",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467148,
+    "external_key": "eBMS805",
+    "taxon": "Polyommatus phyllis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467109,
+    "external_key": "eBMS766",
+    "taxon": "Polyommatus diana",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466900,
+    "external_key": "eBMS681",
+    "taxon": "Melitaea caucasogenita",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466913,
+    "external_key": "eBMS694",
+    "taxon": "Polyommatus demavendi",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466905,
+    "external_key": "eBMS686",
+    "taxon": "Neolysandra diana",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466889,
+    "external_key": "eBMS670",
+    "taxon": "Hyponephele lycaonoides",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466898,
+    "external_key": "eBMS679",
+    "taxon": "Melitaea persea",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466944,
+    "external_key": "eBMS667",
+    "taxon": "Eogenes alcides",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466945,
+    "external_key": "eBMS707",
+    "taxon": "Pseudochazara mamurra ssp. schahrudensis",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466947,
+    "external_key": "eBMS717",
+    "taxon": "Thaleropis ionia",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466942,
+    "external_key": "eBMS661",
+    "taxon": "Chazara bischoffi",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466949,
+    "external_key": "eBMS720",
+    "taxon": "Coenonympha pamphilus ssp. lyllus",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466940,
+    "external_key": "eBMS658",
+    "taxon": "Albulina morgiana",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466936,
+    "external_key": "eBMS719",
+    "taxon": "Turanana endymion",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466542,
+    "external_key": "eBMS453.1",
+    "taxon": "Euphydryas aurinia beckeri",
+    "abundance": { "ES": "P", "Europe": "P" }
+  },
+  {
+    "warehouse_id": 467082,
+    "external_key": "eBMS739",
+    "taxon": "Lycaena lampon",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467111,
+    "external_key": "eBMS768",
+    "taxon": "Polyommatus fatima",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467121,
+    "external_key": "eBMS778",
+    "taxon": "Polyommatus haigi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466881,
+    "external_key": "eBMS660",
+    "taxon": "Callophrys paulae",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467183,
+    "external_key": "eBMS840",
+    "taxon": "Hyponephele cadusia",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466903,
+    "external_key": "eBMS684",
+    "taxon": "Muschampia nomas",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466929,
+    "external_key": "eBMS711",
+    "taxon": "Pyrgus melotis",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466923,
+    "external_key": "eBMS704",
+    "taxon": "Pseudochazara beroe",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466891,
+    "external_key": "eBMS672",
+    "taxon": "Hyponephele naricina ssp. naricoides",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467075,
+    "external_key": "eBMS731",
+    "taxon": "Spialia osthelderi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466907,
+    "external_key": "eBMS688",
+    "taxon": "Pieris pseudorapae",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466932,
+    "external_key": "eBMS714",
+    "taxon": "Satyrus amasinus",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466931,
+    "external_key": "eBMS713",
+    "taxon": "Satyrium hyrcanica",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466925,
+    "external_key": "eBMS706",
+    "taxon": "Pseudochazara pelopea",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467080,
+    "external_key": "eBMS737",
+    "taxon": "Lycaena euphratica",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467158,
+    "external_key": "eBMS815",
+    "taxon": "Polyommatus wagneri",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467136,
+    "external_key": "eBMS793",
+    "taxon": "Polyommatus carmon",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467113,
+    "external_key": "eBMS770",
+    "taxon": "Polyommatus aedon",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466908,
+    "external_key": "eBMS689",
+    "taxon": "Plebejus christophi",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467191,
+    "external_key": "eBMS848",
+    "taxon": "Neolycaena soezen",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467122,
+    "external_key": "eBMS779",
+    "taxon": "Polyommatus sertavulensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467188,
+    "external_key": "eBMS845",
+    "taxon": "Erebia iranica",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467081,
+    "external_key": "eBMS738",
+    "taxon": "Lycaena phoenicurus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467132,
+    "external_key": "eBMS789",
+    "taxon": "Polyommatus anticarmon",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467119,
+    "external_key": "eBMS776",
+    "taxon": "Polyommatus cilicius",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467190,
+    "external_key": "eBMS847",
+    "taxon": "Polyommatus alibali",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467179,
+    "external_key": "eBMS836",
+    "taxon": "Pseudochazara mniszechii",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467084,
+    "external_key": "eBMS741",
+    "taxon": "Cigaritis maxima",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467108,
+    "external_key": "eBMS765",
+    "taxon": "Polyommatus buzulmavi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467098,
+    "external_key": "eBMS755",
+    "taxon": "Plebejus rosei",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466892,
+    "external_key": "eBMS673",
+    "taxon": "Kretania alcedo",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467166,
+    "external_key": "eBMS823",
+    "taxon": "Melitaea collina",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466890,
+    "external_key": "eBMS671",
+    "taxon": "Hyponephele naricina",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467165,
+    "external_key": "eBMS822",
+    "taxon": "Melitaea telona",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467143,
+    "external_key": "eBMS800",
+    "taxon": "Polyommatus kurdistanicus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467169,
+    "external_key": "eBMS826",
+    "taxon": "Melanargia syriaca",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467086,
+    "external_key": "eBMS743",
+    "taxon": "Tomares desinens",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467104,
+    "external_key": "eBMS761",
+    "taxon": "Aricia bassoni",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466915,
+    "external_key": "eBMS696",
+    "taxon": "Polyommatus firdussii",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466882,
+    "external_key": "eBMS662",
+    "taxon": "Coenonympha saadi",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467130,
+    "external_key": "eBMS787",
+    "taxon": "Polyommatus antidolus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467152,
+    "external_key": "eBMS809",
+    "taxon": "Polyommatus schuriani",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467078,
+    "external_key": "eBMS735",
+    "taxon": "Colotis fausta",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467115,
+    "external_key": "eBMS772",
+    "taxon": "Polyommatus bollandi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466922,
+    "external_key": "eBMS703",
+    "taxon": "Polyommatus zarathustra",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467180,
+    "external_key": "eBMS837",
+    "taxon": "Pseudochazara schakuhensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466930,
+    "external_key": "eBMS712",
+    "taxon": "Satyrium abdominalis",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466928,
+    "external_key": "eBMS710",
+    "taxon": "Pyrgus jupei",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467164,
+    "external_key": "eBMS821",
+    "taxon": "Euphydryas orientalis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467124,
+    "external_key": "eBMS781",
+    "taxon": "Polyommatus alcestis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467083,
+    "external_key": "eBMS740",
+    "taxon": "Cigaritis cilissa",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467170,
+    "external_key": "eBMS827",
+    "taxon": "Melanargia hylata",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466933,
+    "external_key": "eBMS715",
+    "taxon": "Satyrus effendi",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467146,
+    "external_key": "eBMS803",
+    "taxon": "Polyommatus mithridates",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467097,
+    "external_key": "eBMS754",
+    "taxon": "Plebejus morgianus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467079,
+    "external_key": "eBMS736",
+    "taxon": "Pieris persis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466950,
+    "external_key": "eBMS725",
+    "taxon": "Polyommatus icarus/celina",
+    "abundance": { "ES": "P", "Europe": "P", "PT": "P" }
+  },
+  {
+    "warehouse_id": 467093,
+    "external_key": "eBMS750",
+    "taxon": "Satyrium zabni",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466901,
+    "external_key": "eBMS682",
+    "taxon": "​Muschampia proteides",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467175,
+    "external_key": "eBMS832",
+    "taxon": "Satyrus parthicus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466895,
+    "external_key": "eBMS676",
+    "taxon": "Lycaena ochimus",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466896,
+    "external_key": "eBMS677",
+    "taxon": "Lycaena phoenicura",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467153,
+    "external_key": "eBMS810",
+    "taxon": "Polyommatus surakovi",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466893,
+    "external_key": "eBMS674",
+    "taxon": "Kretania zephyrinus",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466934,
+    "external_key": "eBMS716",
+    "taxon": "Speyeria alexandra",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467171,
+    "external_key": "eBMS828",
+    "taxon": "Melanargia grumi ",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466918,
+    "external_key": "eBMS699",
+    "taxon": "Polyommatus ninae",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467089,
+    "external_key": "eBMS746",
+    "taxon": "Callophrys mystaphia",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466917,
+    "external_key": "eBMS698",
+    "taxon": "Polyommatus myrrha",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467178,
+    "external_key": "eBMS835",
+    "taxon": "Pseudochazara lydia",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467184,
+    "external_key": "eBMS841",
+    "taxon": "Hyponephele urartua",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467073,
+    "external_key": "eBMS729",
+    "taxon": "Zerynthia deyrollei",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467116,
+    "external_key": "eBMS773",
+    "taxon": "Polyommatus ciloicus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467150,
+    "external_key": "eBMS807",
+    "taxon": "Polyommatus poseidon",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466879,
+    "external_key": "eBMS657",
+    "taxon": "​​Polyommatus belovi",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467145,
+    "external_key": "eBMS802",
+    "taxon": "Polyommatus merhaba",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467149,
+    "external_key": "eBMS806",
+    "taxon": "Polyommatus pierceae",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467156,
+    "external_key": "eBMS813",
+    "taxon": "Polyommatus turcicolus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467118,
+    "external_key": "eBMS775",
+    "taxon": "Polyommatus artvinensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467135,
+    "external_key": "eBMS792",
+    "taxon": "Polyommatus caeruleus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467088,
+    "external_key": "eBMS745",
+    "taxon": "Callophrys danchenkoi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467173,
+    "external_key": "eBMS830",
+    "taxon": "Satyrus iranicus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467101,
+    "external_key": "eBMS758",
+    "taxon": "Aricia teberdina",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 570518,
+    "external_key": "1938069",
+    "taxon": "Papilio demoleus",
+    "abundance": { "CY": "P", "Europe": "P", "TR": "P" }
+  },
+  {
+    "warehouse_id": 467176,
+    "external_key": "eBMS833",
+    "taxon": "Chazara bischo",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467102,
+    "external_key": "eBMS759",
+    "taxon": "Aricia torulensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467168,
+    "external_key": "eBMS825",
+    "taxon": "Melanargia titea",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466911,
+    "external_key": "eBMS692",
+    "taxon": "Polyommatus cyaneus",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466897,
+    "external_key": "eBMS678",
+    "taxon": "Melitaea abbas",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466935,
+    "external_key": "eBMS718",
+    "taxon": "Tomares romanovi",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467186,
+    "external_key": "eBMS843",
+    "taxon": "Hyponephele naricoides",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467094,
+    "external_key": "eBMS751",
+    "taxon": "Glaucopsyche astraea",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467126,
+    "external_key": "eBMS783",
+    "taxon": "Polyommatus dantchenkoi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467177,
+    "external_key": "eBMS834",
+    "taxon": "Chazara egina",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467181,
+    "external_key": "eBMS838",
+    "taxon": "Pseudochazara guriensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466910,
+    "external_key": "eBMS691",
+    "taxon": "Polyommatus aserbeidschanus",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467185,
+    "external_key": "eBMS842",
+    "taxon": "Hyponephele wagneri",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466912,
+    "external_key": "eBMS693",
+    "taxon": "﻿Polyommatus damonides",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467125,
+    "external_key": "eBMS782",
+    "taxon": "Polyommatus karacetinae",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467127,
+    "external_key": "eBMS784",
+    "taxon": "Polyommatus bilgini",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466894,
+    "external_key": "eBMS675",
+    "taxon": "Lycaena asabinus",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 571830,
+    "external_key": "10656713",
+    "taxon": "Deudorix livia",
+    "abundance": { "CY": "I", "GR": "I" }
+  },
+  {
+    "warehouse_id": 467085,
+    "external_key": "eBMS742",
+    "taxon": "Tomares nesimachus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467138,
+    "external_key": "eBMS795",
+    "taxon": "Polyommatus dama",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467163,
+    "external_key": "eBMS820",
+    "taxon": "Euapatura mirza",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467096,
+    "external_key": "eBMS753",
+    "taxon": "Plebejus alcedo",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467134,
+    "external_key": "eBMS791",
+    "taxon": "Polyommatus baytopi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467189,
+    "external_key": "eBMS846",
+    "taxon": "Erebia melancholica",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467095,
+    "external_key": "eBMS752",
+    "taxon": "Cupido staudingeri",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467077,
+    "external_key": "eBMS734",
+    "taxon": "Pyrgus aladaghensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467154,
+    "external_key": "eBMS811",
+    "taxon": "Polyommatus tankeri",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467090,
+    "external_key": "eBMS747",
+    "taxon": "Satyrium marcidum",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467172,
+    "external_key": "eBMS829",
+    "taxon": "Hipparchia pisidice",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467159,
+    "external_key": "eBMS816",
+    "taxon": "Polyommatus zapvadi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466927,
+    "external_key": "eBMS709",
+    "taxon": "Pseudochazara thelephassa",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466899,
+    "external_key": "eBMS680",
+    "taxon": "Melitaea phoebe ssp. pseudosibina",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 466924,
+    "external_key": "eBMS705",
+    "taxon": "Pseudochazara daghestana",
+    "abundance": { "AM": "P" }
+  },
+  {
+    "warehouse_id": 467087,
+    "external_key": "eBMS744",
+    "taxon": "Callophrys herculeana",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466902,
+    "external_key": "eBMS683",
+    "taxon": "Muschampia poggei",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 466883,
+    "external_key": "eBMS663",
+    "taxon": "Coenonympha symphyta",
+    "abundance": { "AM": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467142,
+    "external_key": "eBMS799",
+    "taxon": "Polyommatus iphicarmon",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467139,
+    "external_key": "eBMS796",
+    "taxon": "Polyommatus erzindjanensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 467071,
+    "external_key": "eBMS727",
+    "taxon": "Parnassius nordmanni",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 548704,
+    "external_key": "1944234",
+    "taxon": "Acada biseriatus",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548709,
+    "external_key": "5135772",
+    "taxon": "Acraea anemosa",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548711,
+    "external_key": "5135594",
+    "taxon": "Acraea boopis",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548713,
+    "external_key": "5135786",
+    "taxon": "Acraea chilo",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548716,
+    "external_key": "5136215",
+    "taxon": "Acraea egina",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548718,
+    "external_key": "5136012",
+    "taxon": "Acraea insignis",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548722,
+    "external_key": "5135801",
+    "taxon": "Acraea mirabilis",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548724,
+    "external_key": "5135760",
+    "taxon": "Acraea natalica",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548734,
+    "external_key": "5135683",
+    "taxon": "Acraea satis",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548736,
+    "external_key": "5136131",
+    "taxon": "Acraea zetes",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548738,
+    "external_key": "5135925",
+    "taxon": "Acraea zonata",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548740,
+    "external_key": "1906030",
+    "taxon": "Amauris niavius",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548742,
+    "external_key": "1906006",
+    "taxon": "Amauris ochlea",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548803,
+    "external_key": "5129245",
+    "taxon": "Charaxes aubyni",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548804,
+    "external_key": "5128952",
+    "taxon": "Charaxes berkeleyi",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548805,
+    "external_key": "5128875",
+    "taxon": "Charaxes blanda",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548806,
+    "external_key": "5128796",
+    "taxon": "Charaxes bohemani",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548810,
+    "external_key": "5128597",
+    "taxon": "Charaxes brutus",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548813,
+    "external_key": "5129091",
+    "taxon": "Charaxes candiope",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548816,
+    "external_key": "5128984",
+    "taxon": "Charaxes castor",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548820,
+    "external_key": "5129190",
+    "taxon": "Charaxes cithaeron",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548823,
+    "external_key": "5129118",
+    "taxon": "Charaxes epijasius",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548826,
+    "external_key": "5128985",
+    "taxon": "Charaxes etesipe",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548848,
+    "external_key": "5128957",
+    "taxon": "Charaxes protoclea",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548851,
+    "external_key": "5128679",
+    "taxon": "Charaxes saturnus",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548854,
+    "external_key": "5128781",
+    "taxon": "Charaxes tiridates",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548860,
+    "external_key": "5128685",
+    "taxon": "Charaxes viola",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548877,
+    "external_key": "1947115",
+    "taxon": "Coeliades hanno",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548880,
+    "external_key": "1947116",
+    "taxon": "Coeliades keithloa",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548882,
+    "external_key": "1947112",
+    "taxon": "Coeliades pisistratus",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548907,
+    "external_key": "1920348",
+    "taxon": "Colotis eris",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548910,
+    "external_key": "1920370",
+    "taxon": "Colotis euippe",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548911,
+    "external_key": "1920351",
+    "taxon": "Colotis eunoma",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548917,
+    "external_key": "1920378",
+    "taxon": "Colotis evenina",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548939,
+    "external_key": "1920381",
+    "taxon": "Colotis vesta",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548948,
+    "external_key": "5132713",
+    "taxon": "Cymothoe herminia",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548952,
+    "external_key": "5132693",
+    "taxon": "Cymothoe lurida",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548954,
+    "external_key": "5132551",
+    "taxon": "Cymothoe teita",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548955,
+    "external_key": "1919924",
+    "taxon": "Dixeia charina",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548957,
+    "external_key": "1919921",
+    "taxon": "Dixeia orbona",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548959,
+    "external_key": "1919930",
+    "taxon": "Dixeia pigea",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548962,
+    "external_key": "1920815",
+    "taxon": "Eronia cleodora",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548964,
+    "external_key": "1920816",
+    "taxon": "Eronia leda",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548991,
+    "external_key": "10873137",
+    "taxon": "Euxanthe wakefieldi",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549046,
+    "external_key": "5130396",
+    "taxon": "Junonia artaxia",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549049,
+    "external_key": "5130335",
+    "taxon": "Junonia chorimene",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549051,
+    "external_key": "5130542",
+    "taxon": "Junonia hierta",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549053,
+    "external_key": "5130448",
+    "taxon": "Junonia natalica",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549077,
+    "external_key": "5137869",
+    "taxon": "Leptosia nupta",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549081,
+    "external_key": "1909851",
+    "taxon": "Libythea labdaca",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549085,
+    "external_key": "1895956",
+    "taxon": "Melanitis leda",
+    "abundance": { "JP": "P", "KE": "P" }
+  },
+  {
+    "warehouse_id": 549087,
+    "external_key": "1896015",
+    "taxon": "Melanitis libya",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549106,
+    "external_key": "1919660",
+    "taxon": "Nepheronia thalassina",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549141,
+    "external_key": "1937941",
+    "taxon": "Papilio jacksoni",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549143,
+    "external_key": "1937702",
+    "taxon": "Papilio nireus",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549147,
+    "external_key": "1937959",
+    "taxon": "Papilio ophidicephalus",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549149,
+    "external_key": "1937849",
+    "taxon": "Papilio phorcas",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549152,
+    "external_key": "1915499",
+    "taxon": "Pardopsis punctatissima",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549154,
+    "external_key": "1945878",
+    "taxon": "Pelopidas mathias",
+    "abundance": { "JP": "P", "KE": "P" }
+  },
+  {
+    "warehouse_id": 549108,
+    "external_key": "5131594",
+    "taxon": "Neptis alta",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549113,
+    "external_key": "5131442",
+    "taxon": "Neptis laeta",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549116,
+    "external_key": "5131523",
+    "taxon": "Neptis metella",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549118,
+    "external_key": "5131196",
+    "taxon": "Neptis morosa",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549163,
+    "external_key": "5127747",
+    "taxon": "Phalanta phalantha",
+    "abundance": { "JP": "P", "KE": "P" }
+  },
+  {
+    "warehouse_id": 549166,
+    "external_key": "1908358",
+    "taxon": "Physcaeneura leda",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 549167,
+    "external_key": "1920181",
+    "taxon": "Pinacopteryx eriphia",
+    "abundance": { "KE": "P" }
   }
 ]

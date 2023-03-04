@@ -141,7 +141,7 @@ const make = async () => {
     .filter(specificCountryOnly);
 
   const hasUnknownSpeciesMatch = moth =>
-    JSON.stringify(moth) === JSON.stringify(UNKNOWN_SPECIES);
+    moth.taxa_taxon_list_id === UNKNOWN_SPECIES.taxa_taxon_list_id;
   const UNKNOWN_MOTH_SPECIES = moths.find(hasUnknownSpeciesMatch);
 
   if (!UNKNOWN_MOTH_SPECIES) {
