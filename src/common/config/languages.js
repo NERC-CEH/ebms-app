@@ -23,14 +23,13 @@ const languages = {
   'ca-ES': 'Català',
   'da-DK': 'Dansk',
   'ja-JP': '日本語',
+  'hu-HU': 'Magyar',
+  'fr-FR': 'Français',
 };
 
 const isDemo = !isPlatform('hybrid');
 if (isDemo) {
-  Object.assign(languages, {
-    'hu-HU': 'Magyar',
-    'fr-FR': 'Français',
-  });
+  Object.assign(languages, {});
 }
 
 export default languages;
