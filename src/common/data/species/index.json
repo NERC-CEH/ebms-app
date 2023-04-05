@@ -324,6 +324,10 @@
         "aspersana"
       ],
       [
+        572318,
+        "aspersana/ferrugana"
+      ],
+      [
         453872,
         "bergmanniana"
       ],
@@ -354,6 +358,10 @@
       [
         453902,
         "ferrugana"
+      ],
+      [
+        572186,
+        "ferrugana/notana"
       ],
       [
         453914,
@@ -396,6 +404,14 @@
         "laterana"
       ],
       [
+        572061,
+        "laterana / comariana"
+      ],
+      [
+        572319,
+        "laterana/comariana"
+      ],
+      [
         453911,
         "lipsiana"
       ],
@@ -426,6 +442,10 @@
       [
         453903,
         "notana"
+      ],
+      [
+        572062,
+        "notana/ferrugana"
       ],
       [
         453900,
@@ -470,6 +490,10 @@
       [
         453880,
         "sparsana"
+      ],
+      [
+        572063,
+        "spec."
       ],
       [
         453887,
@@ -781,6 +805,10 @@
         "advenella"
       ],
       [
+        572238,
+        "advenella/suavella"
+      ],
+      [
         456206,
         "bithynella"
       ],
@@ -855,6 +883,10 @@
       [
         456210,
         "sodalella"
+      ],
+      [
+        572064,
+        "spec."
       ],
       [
         456217,
@@ -1009,6 +1041,10 @@
         "cuspis"
       ],
       [
+        572055,
+        "cuspis / tridens / psi"
+      ],
+      [
         459616,
         "euphorbiae"
       ],
@@ -1033,6 +1069,10 @@
         "psi"
       ],
       [
+        572180,
+        "psi/tridens"
+      ],
+      [
         459614,
         "rumicis"
       ],
@@ -1043,6 +1083,10 @@
       [
         459603,
         "tridens"
+      ],
+      [
+        572065,
+        "tridens / psi"
       ],
       [
         459624,
@@ -1212,6 +1256,10 @@
       [
         449071,
         "repetitella"
+      ],
+      [
+        572066,
+        "spec."
       ],
       [
         449059,
@@ -1615,6 +1663,10 @@
         "rubigana"
       ],
       [
+        572320,
+        "rubigana/cnicana"
+      ],
+      [
         453829,
         "rubiginana"
       ],
@@ -1637,6 +1689,10 @@
       [
         453801,
         "smeathmanniana"
+      ],
+      [
+        572067,
+        "spec."
       ],
       [
         453802,
@@ -2365,6 +2421,10 @@
         "ciliella"
       ],
       [
+        572240,
+        "ciliella/heracliana"
+      ],
+      [
         451289,
         "cinerariae"
       ],
@@ -2443,6 +2503,10 @@
       [
         451242,
         "heracliana"
+      ],
+      [
+        572068,
+        "heracliana / ciliella"
       ],
       [
         451263,
@@ -2615,6 +2679,14 @@
       [
         451288,
         "socerbi"
+      ],
+      [
+        572276,
+        "spec."
+      ],
+      [
+        572069,
+        "spec."
       ],
       [
         451206,
@@ -3058,6 +3130,10 @@
         "aurantiaria"
       ],
       [
+        572302,
+        "aurantiaria / marginaria"
+      ],
+      [
         457576,
         "bajaria"
       ],
@@ -3076,6 +3152,10 @@
       [
         457580,
         "marginaria"
+      ],
+      [
+        572070,
+        "spec."
       ]
     ]
   ],
@@ -3121,6 +3201,10 @@
         "deliella"
       ],
       [
+        572242,
+        "deliella/selasella"
+      ],
+      [
         456552,
         "geniculea"
       ],
@@ -3147,6 +3231,10 @@
       [
         456543,
         "selasella"
+      ],
+      [
+        572071,
+        "spec."
       ],
       [
         456545,
@@ -3501,6 +3589,10 @@
       [
         460930,
         "simplonia"
+      ],
+      [
+        572072,
+        "spec."
       ],
       [
         460965,
@@ -4088,12 +4180,20 @@
         "fucosa"
       ],
       [
+        572226,
+        "fucosa/lucens/oculea"
+      ],
+      [
         460399,
         "lucens"
       ],
       [
         460401,
         "oculea"
+      ],
+      [
+        572073,
+        "spec."
       ]
     ]
   ],
@@ -4105,6 +4205,14 @@
       [
         459804,
         "berbera"
+      ],
+      [
+        572052,
+        "berbera / pyramidea"
+      ],
+      [
+        572196,
+        "berbera/pyramidea"
       ],
       [
         459799,
@@ -4133,6 +4241,10 @@
       [
         459802,
         "pyramidea"
+      ],
+      [
+        572074,
+        "pyramidea/berbera"
       ],
       [
         459812,
@@ -4268,8 +4380,16 @@
         "populella"
       ],
       [
+        572296,
+        "populella / blattariella"
+      ],
+      [
         453241,
         "scintillella"
+      ],
+      [
+        572075,
+        "spec."
       ],
       [
         453242,
@@ -6262,6 +6382,14 @@
         "efformata"
       ],
       [
+        572076,
+        "efformata/plagiata"
+      ],
+      [
+        572218,
+        "efformata/plagiata"
+      ],
+      [
         458459,
         "plagiata"
       ],
@@ -6272,6 +6400,10 @@
       [
         458467,
         "simpliciata"
+      ],
+      [
+        572077,
+        "spec."
       ],
       [
         458461,
@@ -6590,6 +6722,10 @@
       [
         454172,
         "sororculana"
+      ],
+      [
+        572078,
+        "spec."
       ],
       [
         454166,
@@ -6937,6 +7073,13 @@
       [
         457223,
         "parthenias"
+      ],
+      [
+        572333,
+        "parthenias/Boudinotiana notha",
+        {
+          "isDayFlying": true
+        }
       ]
     ]
   ],
@@ -7003,6 +7146,10 @@
       [
         454037,
         "rosana"
+      ],
+      [
+        572079,
+        "spec."
       ],
       [
         454036,
@@ -7932,6 +8079,10 @@
       [
         450442,
         "sorbiella"
+      ],
+      [
+        572080,
+        "spec."
       ],
       [
         450450,
@@ -9563,6 +9714,10 @@
       [
         459513,
         "pulchrina"
+      ],
+      [
+        572051,
+        "pulchrina / buraetica"
       ]
     ]
   ],
@@ -9847,8 +10002,16 @@
         "lacteana"
       ],
       [
+        572254,
+        "lacteana/lancealana"
+      ],
+      [
         454126,
         "lancealana"
+      ],
+      [
+        572081,
+        "lancealana/lacteana"
       ],
       [
         454133,
@@ -9865,6 +10028,10 @@
       [
         454135,
         "simpliciana"
+      ],
+      [
+        572082,
+        "spec."
       ],
       [
         454129,
@@ -13267,6 +13434,10 @@
         "raptricula"
       ],
       [
+        572053,
+        "raptricula / felina"
+      ],
+      [
         459915,
         "ravula"
       ],
@@ -13416,6 +13587,10 @@
         "similis"
       ],
       [
+        572083,
+        "spec."
+      ],
+      [
         452714,
         "sutteri"
       ],
@@ -13459,6 +13634,10 @@
       [
         449839,
         "ainsliella"
+      ],
+      [
+        572268,
+        "ainsliella / ulmella"
       ],
       [
         449841,
@@ -13806,6 +13985,10 @@
         }
       ],
       [
+        572210,
+        "exanthemata/pusaria"
+      ],
+      [
         457393,
         "leptographa"
       ],
@@ -13815,6 +13998,10 @@
         {
           "isDayFlying": true
         }
+      ],
+      [
+        572084,
+        "spec."
       ]
     ]
   ],
@@ -14457,6 +14644,10 @@
         "alchimiella"
       ],
       [
+        572200,
+        "alchimiella/robustella"
+      ],
+      [
         449913,
         "aurantiaca"
       ],
@@ -14467,6 +14658,14 @@
       [
         449916,
         "betulicola"
+      ],
+      [
+        572252,
+        "betulicola/elongella"
+      ],
+      [
+        572278,
+        "betulicola/populetorum"
       ],
       [
         449917,
@@ -14487,6 +14686,10 @@
       [
         449923,
         "elongella"
+      ],
+      [
+        572085,
+        "elongella/betulicola"
       ],
       [
         449924,
@@ -14559,6 +14762,10 @@
       [
         449940,
         "semifascia"
+      ],
+      [
+        572086,
+        "spec."
       ],
       [
         449942,
@@ -15993,6 +16200,10 @@
         "siculum"
       ],
       [
+        572087,
+        "spec."
+      ],
+      [
         453124,
         "srnkai"
       ],
@@ -16639,6 +16850,10 @@
         "osthelderi"
       ],
       [
+        572194,
+        "osthelderi/permutatellus"
+      ],
+      [
         456579,
         "pauperellus"
       ],
@@ -16649,6 +16864,10 @@
       [
         456557,
         "permutatellus"
+      ],
+      [
+        572088,
+        "permutatellus/osthelderi"
       ],
       [
         456603,
@@ -16673,6 +16892,10 @@
       [
         456566,
         "spatulellus"
+      ],
+      [
+        572089,
+        "spec."
       ],
       [
         456564,
@@ -16964,6 +17187,10 @@
       [
         454185,
         "rufana"
+      ],
+      [
+        572314,
+        "rufana/rosaceana"
       ],
       [
         454188,
@@ -17329,6 +17556,14 @@
       [
         454995,
         "empiformis"
+      ],
+      [
+        572264,
+        "empiformis/tenthrediniformis"
+      ],
+      [
+        572090,
+        "empiformis/tenthrediniformis"
       ],
       [
         454989,
@@ -19471,6 +19706,10 @@
         "incertana"
       ],
       [
+        572248,
+        "incertana/stephensiana"
+      ],
+      [
         453998,
         "josebai"
       ],
@@ -21224,6 +21463,10 @@
         "badiipennella"
       ],
       [
+        572290,
+        "badiipennella / limosipennella"
+      ],
+      [
         451961,
         "bagorella"
       ],
@@ -21718,6 +21961,14 @@
       [
         451476,
         "flavipennella"
+      ],
+      [
+        572091,
+        "flavipennella/lutipennella"
+      ],
+      [
+        572234,
+        "flavipennella/lutipennella"
       ],
       [
         451884,
@@ -22942,6 +23193,10 @@
       [
         452065,
         "spartana"
+      ],
+      [
+        572092,
+        "spec."
       ],
       [
         451488,
@@ -24758,6 +25013,10 @@
         "marginea"
       ],
       [
+        572093,
+        "marginea/heinemanni"
+      ],
+      [
         449146,
         "szoecsi"
       ],
@@ -24894,6 +25153,10 @@
       [
         459039,
         "bifasciata"
+      ],
+      [
+        571910,
+        "chrysocephala"
       ],
       [
         459036,
@@ -25102,7 +25365,12 @@
     446322,
     260,
     "Crambidae",
-    []
+    [
+      [
+        572094,
+        "indet."
+      ]
+    ]
   ],
   [
     446463,
@@ -25713,6 +25981,14 @@
       [
         459718,
         "scrophulariae"
+      ],
+      [
+        572095,
+        "scrophulariae/verbasci"
+      ],
+      [
+        572224,
+        "scrophulariae/verbasci"
       ],
       [
         459711,
@@ -26435,6 +26711,10 @@
         "serveti"
       ],
       [
+        572096,
+        "spec."
+      ],
+      [
         458069,
         "suppunctaria"
       ]
@@ -26740,6 +27020,10 @@
       [
         454642,
         "servillana"
+      ],
+      [
+        572097,
+        "spec."
       ],
       [
         454648,
@@ -27983,6 +28267,10 @@
         "sordidatella"
       ],
       [
+        572334,
+        "spec."
+      ],
+      [
         451335,
         "subalbipunctella"
       ],
@@ -28260,6 +28548,10 @@
       [
         461154,
         "florida"
+      ],
+      [
+        572332,
+        "florida/rubi"
       ],
       [
         461156,
@@ -28634,6 +28926,10 @@
         "aeratana"
       ],
       [
+        572188,
+        "aeratana/sedatana"
+      ],
+      [
         454776,
         "agilana"
       ],
@@ -28846,6 +29142,10 @@
         "simpliciana"
       ],
       [
+        572098,
+        "spec."
+      ],
+      [
         454756,
         "sylvicolana"
       ],
@@ -29052,6 +29352,10 @@
       [
         456105,
         "simplicella"
+      ],
+      [
+        572099,
+        "spec."
       ],
       [
         456110,
@@ -29881,6 +30185,10 @@
         "citrata"
       ],
       [
+        572228,
+        "citrata/truncata"
+      ],
+      [
         458307,
         "infuscata"
       ],
@@ -29895,6 +30203,10 @@
       [
         458305,
         "truncata"
+      ],
+      [
+        572100,
+        "truncata/citrata"
       ]
     ]
   ],
@@ -30120,6 +30432,10 @@
         "albifasciella"
       ],
       [
+        572280,
+        "albifasciella/heringi"
+      ],
+      [
         448957,
         "algeriensis"
       ],
@@ -30268,6 +30584,10 @@
         "rufifrontella"
       ],
       [
+        572101,
+        "spec."
+      ],
+      [
         448995,
         "spinosella"
       ],
@@ -30278,6 +30598,10 @@
       [
         448969,
         "subbimaculella"
+      ],
+      [
+        572102,
+        "subbimaculella/heringi"
       ],
       [
         448977,
@@ -30389,6 +30713,10 @@
       [
         459082,
         "complana"
+      ],
+      [
+        572050,
+        "complana / caniola / pseudocomplana"
       ],
       [
         459086,
@@ -31204,6 +31532,10 @@
         "sobiella"
       ],
       [
+        572103,
+        "spec."
+      ],
+      [
         451035,
         "spumella"
       ],
@@ -31630,6 +31962,10 @@
         "gentianaeana"
       ],
       [
+        572104,
+        "gentianaeana/marginana"
+      ],
+      [
         454147,
         "hebesana"
       ],
@@ -31664,6 +32000,10 @@
       [
         454145,
         "sororiana"
+      ],
+      [
+        572105,
+        "spec."
       ],
       [
         454140,
@@ -32165,6 +32505,10 @@
         "elutella"
       ],
       [
+        572315,
+        "elutella/unicorella"
+      ],
+      [
         456382,
         "inquietella"
       ],
@@ -32179,6 +32523,10 @@
       [
         456386,
         "parasitella"
+      ],
+      [
+        572106,
+        "spec."
       ],
       [
         456379,
@@ -32266,6 +32614,10 @@
         "cirsiana"
       ],
       [
+        572176,
+        "cirsiana/scutulana/sticticana"
+      ],
+      [
         454470,
         "cnicicolana"
       ],
@@ -32338,8 +32690,16 @@
         "simploniana"
       ],
       [
+        572107,
+        "spec."
+      ],
+      [
         454466,
         "sticticana"
+      ],
+      [
+        572108,
+        "sticticana/scutulana/cirsiana"
       ],
       [
         454476,
@@ -32615,6 +32975,10 @@
         "cinereana"
       ],
       [
+        572262,
+        "cinereana/nisella"
+      ],
+      [
         454321,
         "crenana"
       ],
@@ -32725,6 +33089,10 @@
       [
         454301,
         "sordidana"
+      ],
+      [
+        572109,
+        "spec."
       ],
       [
         454325,
@@ -32906,12 +33274,24 @@
         "christyi"
       ],
       [
+        572047,
+        "christyi / dilutata"
+      ],
+      [
+        572206,
+        "christyi/dilutata/autumnata"
+      ],
+      [
         458363,
         "dilutata"
       ],
       [
         458370,
         "filigrammaria"
+      ],
+      [
+        572110,
+        "spec."
       ],
       [
         458365,
@@ -36453,6 +36833,10 @@
       [
         448664,
         "sparrmannella"
+      ],
+      [
+        572111,
+        "spec."
       ]
     ]
   ],
@@ -36768,6 +37152,14 @@
       [
         448935,
         "sericopeza"
+      ],
+      [
+        572292,
+        "sericopeza/louisella"
+      ],
+      [
+        572112,
+        "sericopeza/louisella"
       ]
     ]
   ],
@@ -38248,6 +38640,10 @@
         "scorzonerana"
       ],
       [
+        572113,
+        "spec."
+      ],
+      [
         454435,
         "sublucidana"
       ],
@@ -38510,6 +38906,10 @@
         "porphyrana"
       ],
       [
+        572324,
+        "porphyrana/profundana"
+      ],
+      [
         454150,
         "profundana"
       ]
@@ -38611,6 +39011,10 @@
       [
         456473,
         "shafferi"
+      ],
+      [
+        572114,
+        "spec."
       ],
       [
         456461,
@@ -39848,6 +40252,10 @@
         "pulchellata"
       ],
       [
+        572115,
+        "pulchellata / linariata"
+      ],
+      [
         458612,
         "pusillata"
       ],
@@ -39942,6 +40350,10 @@
       [
         458751,
         "spadiceata"
+      ],
+      [
+        572116,
+        "spec."
       ],
       [
         458673,
@@ -40168,6 +40580,10 @@
       [
         458918,
         "chrysorrhoea"
+      ],
+      [
+        572220,
+        "chrysorrhoea/similis"
       ],
       [
         458920,
@@ -40644,6 +41060,18 @@
         "obelisca"
       ],
       [
+        572232,
+        "obelisca/tritici"
+      ],
+      [
+        572330,
+        "obelisca/tritici/vitta"
+      ],
+      [
+        572331,
+        "obelisca/vitta"
+      ],
+      [
         460862,
         "ochrogaster"
       ],
@@ -40698,6 +41126,10 @@
       [
         460882,
         "tritici"
+      ],
+      [
+        572060,
+        "tritici / nigrofusca / eruta"
       ],
       [
         460874,
@@ -42050,7 +42482,12 @@
     446292,
     260,
     "Gelechiidae",
-    []
+    [
+      [
+        572117,
+        "indet."
+      ]
+    ]
   ],
   [
     446380,
@@ -42085,7 +42522,12 @@
     446300,
     260,
     "Geometridae",
-    []
+    [
+      [
+        572118,
+        "indet."
+      ]
+    ]
   ],
   [
     446390,
@@ -43589,6 +44031,10 @@
         "pallifrontana"
       ],
       [
+        572119,
+        "spec."
+      ],
+      [
         454588,
         "tenebrosana"
       ]
@@ -43750,6 +44196,10 @@
       [
         453752,
         "vectisana"
+      ],
+      [
+        572270,
+        "vectisana / alismana"
       ]
     ]
   ],
@@ -43827,6 +44277,14 @@
       [
         454461,
         "sociana"
+      ],
+      [
+        572323,
+        "sociana/dealbana"
+      ],
+      [
+        572120,
+        "spec."
       ]
     ]
   ],
@@ -43884,6 +44342,10 @@
       [
         460727,
         "bicruris"
+      ],
+      [
+        572058,
+        "bicruris / capsincola"
       ],
       [
         460753,
@@ -45015,6 +45477,17 @@
     260,
     "Heterocampinae",
     []
+  ],
+  [
+    0,
+    260,
+    "Heterocera",
+    [
+      [
+        572040,
+        "indet."
+      ]
+    ]
   ],
   [
     447448,
@@ -47178,6 +47651,10 @@
         "ambigua"
       ],
       [
+        572230,
+        "ambigua/blanda/octogenaria"
+      ],
+      [
         460008,
         "blanda"
       ],
@@ -47192,6 +47669,10 @@
       [
         460013,
         "respersa"
+      ],
+      [
+        572121,
+        "sp."
       ],
       [
         460010,
@@ -47243,6 +47724,18 @@
       [
         458425,
         "tersata"
+      ],
+      [
+        572046,
+        "tersata / radicaria"
+      ],
+      [
+        572122,
+        "tersata/Horisme radicaria"
+      ],
+      [
+        572316,
+        "tersata/radicaria"
       ],
       [
         458421,
@@ -49445,6 +49938,10 @@
         "retusa"
       ],
       [
+        572222,
+        "retusa/subtusa"
+      ],
+      [
         460086,
         "subtusa"
       ]
@@ -49615,6 +50112,10 @@
       [
         452566,
         "robinella"
+      ],
+      [
+        572123,
+        "spec."
       ],
       [
         452573,
@@ -55451,6 +55952,10 @@
         "alternata"
       ],
       [
+        572214,
+        "alternata/notata"
+      ],
+      [
         457292,
         "artesiaria"
       ],
@@ -55481,6 +55986,10 @@
       [
         457282,
         "notata"
+      ],
+      [
+        572124,
+        "notata / alternata"
       ],
       [
         457286,
@@ -58391,8 +58900,20 @@
         "secalella"
       ],
       [
+        572182,
+        "secalella/secalis"
+      ],
+      [
         460530,
         "secalis"
+      ],
+      [
+        572125,
+        "secalis / secalella"
+      ],
+      [
+        572056,
+        "secalis / secalella"
       ],
       [
         460537,
@@ -58574,6 +59095,10 @@
       [
         450781,
         "italica"
+      ],
+      [
+        572325,
+        "italica / cinnamomea"
       ]
     ]
   ],
@@ -58871,6 +59396,10 @@
         "santolinella"
       ],
       [
+        572126,
+        "spec."
+      ],
+      [
         452592,
         "staehelinella"
       ],
@@ -58938,6 +59467,17 @@
       [
         453075,
         "rhamnifoliae"
+      ]
+    ]
+  ],
+  [
+    0,
+    260,
+    "Microlepidoptera",
+    [
+      [
+        572041,
+        "indet."
       ]
     ]
   ],
@@ -59594,6 +60134,10 @@
         "bradleyi"
       ],
       [
+        572250,
+        "bradleyi/divisella"
+      ],
+      [
         452108,
         "confusella"
       ],
@@ -59652,6 +60196,10 @@
       [
         452098,
         "sexstrigella"
+      ],
+      [
+        572127,
+        "spec."
       ],
       [
         452109,
@@ -59834,6 +60382,10 @@
         "crocicapitella"
       ],
       [
+        572244,
+        "crocicapitella/obviella"
+      ],
+      [
         449811,
         "fenestratella"
       ],
@@ -59848,6 +60400,10 @@
       [
         449800,
         "laevigella"
+      ],
+      [
+        572246,
+        "laevigella/weaverella"
       ],
       [
         449808,
@@ -59868,6 +60424,10 @@
       [
         449810,
         "pallidella"
+      ],
+      [
+        572128,
+        "spec."
       ],
       [
         449802,
@@ -60458,6 +61018,10 @@
         "impura"
       ],
       [
+        572208,
+        "impura/pallens"
+      ],
+      [
         460820,
         "l-album"
       ],
@@ -60496,6 +61060,10 @@
       [
         460795,
         "serradaguae"
+      ],
+      [
+        571911,
+        "sicula"
       ],
       [
         460804,
@@ -60568,6 +61136,10 @@
       [
         457252,
         "fasciolaria"
+      ],
+      [
+        572048,
+        "fasciolaria / tessularia"
       ],
       [
         457254,
@@ -60840,6 +61412,10 @@
         "somchetiella"
       ],
       [
+        572129,
+        "spec."
+      ],
+      [
         449653,
         "variatella"
       ]
@@ -60893,12 +61469,20 @@
         "sericinellus"
       ],
       [
+        572130,
+        "spec."
+      ],
+      [
         449094,
         "stenochlora"
       ],
       [
         449090,
         "swammerdamella"
+      ],
+      [
+        572274,
+        "swammerdamella/metaxella"
       ]
     ]
   ],
@@ -61478,7 +62062,12 @@
     446308,
     260,
     "Nepticulidae",
-    []
+    [
+      [
+        572131,
+        "indet."
+      ]
+    ]
   ],
   [
     446401,
@@ -61848,8 +62437,20 @@
         "janthe"
       ],
       [
+        572132,
+        "janthe / janthina"
+      ],
+      [
+        572178,
+        "janthe/janthina"
+      ],
+      [
         461113,
         "janthina"
+      ],
+      [
+        572059,
+        "janthina / janthe"
       ],
       [
         461102,
@@ -61885,7 +62486,12 @@
     446312,
     260,
     "Noctuidae",
-    []
+    [
+      [
+        572133,
+        "indet."
+      ]
+    ]
   ],
   [
     446427,
@@ -62109,6 +62715,14 @@
       [
         454497,
         "rosaecolana"
+      ],
+      [
+        572272,
+        "rosaecolana/trimaculana"
+      ],
+      [
+        572134,
+        "spec."
       ],
       [
         454492,
@@ -62973,6 +63587,10 @@
         "friesei"
       ],
       [
+        572282,
+        "friesei/piniariella"
+      ],
+      [
         450273,
         "piniariella"
       ]
@@ -63239,6 +63857,10 @@
       [
         450544,
         "quadripuncta"
+      ],
+      [
+        572135,
+        "spec."
       ],
       [
         450545,
@@ -63895,8 +64517,20 @@
         "latruncula"
       ],
       [
+        572057,
+        "latruncula / versicolor"
+      ],
+      [
+        572212,
+        "latruncula/strigilis/versicolor"
+      ],
+      [
         460560,
         "leuconephra"
+      ],
+      [
+        572136,
+        "spec."
       ],
       [
         460549,
@@ -64085,6 +64719,10 @@
       [
         458361,
         "brumata"
+      ],
+      [
+        572310,
+        "brumata/fagata"
       ],
       [
         458359,
@@ -65214,12 +65852,20 @@
         "regiana"
       ],
       [
+        572322,
+        "regiana/trauniana"
+      ],
+      [
         454701,
         "rhediella"
       ],
       [
         454688,
         "salvana"
+      ],
+      [
+        572137,
+        "spec."
       ],
       [
         454705,
@@ -65328,6 +65974,10 @@
       [
         454054,
         "heparana"
+      ],
+      [
+        572138,
+        "spec."
       ]
     ]
   ],
@@ -66914,6 +67564,10 @@
         "finitimella"
       ],
       [
+        572288,
+        "finitimella / torquillella"
+      ],
+      [
         449996,
         "fragilella"
       ],
@@ -66956,6 +67610,10 @@
       [
         450005,
         "scoticella"
+      ],
+      [
+        572139,
+        "spec."
       ],
       [
         450006,
@@ -68174,6 +68832,14 @@
         "manniana"
       ],
       [
+        572298,
+        "manniana/udana"
+      ],
+      [
+        572140,
+        "manniana/udana"
+      ],
+      [
         453745,
         "udana"
       ]
@@ -69165,8 +69831,20 @@
         "maritima"
       ],
       [
+        572321,
+        "maritima/binaevella"
+      ],
+      [
+        572236,
+        "maritima/saxicola"
+      ],
+      [
         456368,
         "saxicola"
+      ],
+      [
+        572141,
+        "spec."
       ],
       [
         456370,
@@ -69241,6 +69919,10 @@
         "saligna"
       ],
       [
+        572142,
+        "spec."
+      ],
+      [
         450191,
         "unipunctella"
       ],
@@ -69286,6 +69968,10 @@
       [
         457117,
         "tremulifolia"
+      ],
+      [
+        572042,
+        "tremulifolia / ilicifolia"
       ]
     ]
   ],
@@ -69824,6 +70510,10 @@
       [
         450151,
         "spartocytisi"
+      ],
+      [
+        572143,
+        "spec."
       ],
       [
         450152,
@@ -76610,7 +77300,12 @@
     446329,
     260,
     "Psychidae",
-    []
+    [
+      [
+        572144,
+        "spec"
+      ]
+    ]
   ],
   [
     446827,
@@ -76740,7 +77435,12 @@
     446321,
     260,
     "Pterophoridae",
-    []
+    [
+      [
+        572145,
+        "indet."
+      ]
+    ]
   ],
   [
     446460,
@@ -77082,7 +77782,12 @@
     446323,
     260,
     "Pyralidae",
-    []
+    [
+      [
+        572146,
+        "indet."
+      ]
+    ]
   ],
   [
     446475,
@@ -77157,6 +77862,14 @@
       [
         456842,
         "aurata"
+      ],
+      [
+        572147,
+        "aurata / purpuralis"
+      ],
+      [
+        572204,
+        "aurata/purpuralis"
       ],
       [
         456832,
@@ -79240,6 +79953,10 @@
         "buoliana"
       ],
       [
+        572260,
+        "buoliana/pinicolana"
+      ],
+      [
         454520,
         "duplana"
       ],
@@ -79266,6 +79983,10 @@
       [
         454519,
         "pinivorana"
+      ],
+      [
+        572148,
+        "spec."
       ],
       [
         454524,
@@ -79703,6 +80424,10 @@
         {
           "isDayFlying": true
         }
+      ],
+      [
+        572043,
+        "pavonia / pavoniella"
       ],
       [
         457148,
@@ -80659,6 +81384,10 @@
       [
         456032,
         "rungsi"
+      ],
+      [
+        572149,
+        "spec."
       ]
     ]
   ],
@@ -80795,6 +81524,14 @@
         "basistrigalis"
       ],
       [
+        572294,
+        "basistrigalis / ambigualis"
+      ],
+      [
+        572150,
+        "basistrigalis/ambigualis"
+      ],
+      [
         456447,
         "berytella"
       ],
@@ -80857,6 +81594,17 @@
       [
         456433,
         "subfusca"
+      ]
+    ]
+  ],
+  [
+    0,
+    260,
+    "Scoparia/Eudonia",
+    [
+      [
+        572151,
+        "spec."
       ]
     ]
   ],
@@ -81166,12 +81914,28 @@
         "luridata"
       ],
       [
+        572266,
+        "luridata/mucronata"
+      ],
+      [
         458108,
         "moeniata"
       ],
       [
         458096,
         "mucronata"
+      ],
+      [
+        572044,
+        "mucronata / luridata"
+      ],
+      [
+        572286,
+        "mucronata/luridata"
+      ],
+      [
+        572152,
+        "mucronata/luridata"
       ],
       [
         458112,
@@ -81571,6 +82335,10 @@
       [
         453003,
         "solitaria"
+      ],
+      [
+        572153,
+        "spec."
       ],
       [
         453040,
@@ -82423,6 +83191,10 @@
         "skulei"
       ],
       [
+        572154,
+        "spec."
+      ],
+      [
         452152,
         "speyeri"
       ],
@@ -82890,6 +83662,21 @@
     ]
   ],
   [
+    0,
+    260,
+    "Shargacucullia",
+    [
+      [
+        572054,
+        "scrophulariae / gozmanyi / verbasci"
+      ],
+      [
+        572155,
+        "scrophulariae/verbasci"
+      ]
+    ]
+  ],
+  [
     549461,
     251,
     "Shijimiaeoides",
@@ -83275,6 +84062,10 @@
       [
         452361,
         "rhamniella"
+      ],
+      [
+        572156,
+        "rhamniella/janiszewskae"
       ]
     ]
   ],
@@ -83927,8 +84718,16 @@
         "laricana"
       ],
       [
+        572300,
+        "laricana/ocellana"
+      ],
+      [
         454292,
         "ocellana"
+      ],
+      [
+        572157,
+        "spec."
       ]
     ]
   ],
@@ -84652,12 +85451,24 @@
         "alnetella"
       ],
       [
+        572198,
+        "alnetella/glutinosae"
+      ],
+      [
         448798,
         "amygdali"
       ],
       [
         448751,
         "anomalella"
+      ],
+      [
+        572158,
+        "anomalella/centifoliella"
+      ],
+      [
+        572202,
+        "anomalella/centifoliella"
       ],
       [
         448741,
@@ -84674,6 +85485,14 @@
       [
         448779,
         "aurella"
+      ],
+      [
+        572159,
+        "aurella/splendidissimella"
+      ],
+      [
+        572190,
+        "aurella/splendisissimella"
       ],
       [
         448780,
@@ -84702,6 +85521,10 @@
       [
         448803,
         "carpinella"
+      ],
+      [
+        572304,
+        "carpinella / floslactella"
       ],
       [
         448726,
@@ -84772,6 +85595,14 @@
         "floslactella"
       ],
       [
+        572256,
+        "floslactella/microtheriella"
+      ],
+      [
+        572160,
+        "floslactella/microtheriella"
+      ],
+      [
         448701,
         "freyella"
       ],
@@ -84782,6 +85613,10 @@
       [
         448718,
         "glutinosae"
+      ],
+      [
+        572161,
+        "glutinosae/alnetella"
       ],
       [
         448768,
@@ -84960,6 +85795,14 @@
         "ruficapitella"
       ],
       [
+        572162,
+        "ruficapitella-groep"
+      ],
+      [
+        572284,
+        "ruficapitella/samiatella"
+      ],
+      [
         448716,
         "sakhalinella"
       ],
@@ -84978,6 +85821,10 @@
       [
         448796,
         "sorbi"
+      ],
+      [
+        572163,
+        "spec."
       ],
       [
         448777,
@@ -85267,6 +86114,10 @@
         "nitidana"
       ],
       [
+        572306,
+        "nitidana/weirana"
+      ],
+      [
         454721,
         "weirana"
       ]
@@ -85392,6 +86243,17 @@
       [
         450261,
         "pyrella"
+      ]
+    ]
+  ],
+  [
+    0,
+    260,
+    "Swammerdamia/Paraswammerdamia",
+    [
+      [
+        572164,
+        "spec."
       ]
     ]
   ],
@@ -85982,6 +86844,10 @@
       [
         453227,
         "semicostella"
+      ],
+      [
+        572165,
+        "spec."
       ],
       [
         453228,
@@ -86709,6 +87575,10 @@
         "gracilaria"
       ],
       [
+        572336,
+        "lhommaria"
+      ],
+      [
         457710,
         "nuragica"
       ],
@@ -86719,6 +87589,10 @@
       [
         457708,
         "sepiaria"
+      ],
+      [
+        572049,
+        "sepiaria / lepraria"
       ],
       [
         457715,
@@ -86963,6 +87837,18 @@
         "britannica"
       ],
       [
+        572184,
+        "britannica/obeliscata/variata"
+      ],
+      [
+        572308,
+        "britannica/variata"
+      ],
+      [
+        572166,
+        "britannica/variata"
+      ],
+      [
         458262,
         "cembrae"
       ],
@@ -86983,8 +87869,16 @@
         "obeliscata"
       ],
       [
+        572167,
+        "spec."
+      ],
+      [
         458256,
         "variata"
+      ],
+      [
+        572045,
+        "variata / britannica"
       ],
       [
         458260,
@@ -87708,6 +88602,10 @@
         "comae"
       ],
       [
+        572328,
+        "comae/griseata"
+      ],
+      [
         458045,
         "griseata"
       ],
@@ -87853,7 +88751,12 @@
     446330,
     260,
     "Tineidae",
-    []
+    [
+      [
+        572168,
+        "indet."
+      ]
+    ]
   ],
   [
     446502,
@@ -87944,6 +88847,10 @@
       [
         449141,
         "ekebladoides"
+      ],
+      [
+        572169,
+        "spec."
       ]
     ]
   ],
@@ -88266,7 +89173,12 @@
     446332,
     260,
     "Tortricidae",
-    []
+    [
+      [
+        572170,
+        "indet."
+      ]
+    ]
   ],
   [
     446505,
@@ -89925,6 +90837,14 @@
         "ferrugata"
       ],
       [
+        572171,
+        "ferrugata / spadicearia"
+      ],
+      [
+        572192,
+        "ferrugata/spadicearia"
+      ],
+      [
         458125,
         "fluctuata"
       ],
@@ -90133,6 +91053,10 @@
         "ditrapezium"
       ],
       [
+        572216,
+        "ditrapezium/triangulum"
+      ],
+      [
         461193,
         "fennica"
       ],
@@ -90223,6 +91147,10 @@
       [
         461204,
         "triangulum"
+      ],
+      [
+        572172,
+        "triangulum/ditrapezium"
       ],
       [
         461215,
@@ -90361,6 +91289,10 @@
         "cagnagella"
       ],
       [
+        572258,
+        "cagnagella/malinellus"
+      ],
+      [
         450196,
         "evonymella"
       ],
@@ -90399,6 +91331,10 @@
       [
         450211,
         "sedella"
+      ],
+      [
+        572173,
+        "spec."
       ]
     ]
   ],
@@ -91359,6 +92295,10 @@
         "atrifrontella"
       ],
       [
+        572312,
+        "atrifrontella/longicaudella"
+      ],
+      [
         448943,
         "hispanica"
       ],
@@ -91373,6 +92313,10 @@
       [
         448942,
         "longicaudella"
+      ],
+      [
+        572174,
+        "longicaudella / atrifrontella"
       ],
       [
         448944,
@@ -91693,6 +92637,10 @@
       [
         455093,
         "sedi"
+      ],
+      [
+        572175,
+        "spec."
       ],
       [
         455117,
