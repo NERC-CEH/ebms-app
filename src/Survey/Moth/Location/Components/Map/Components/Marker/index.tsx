@@ -21,7 +21,11 @@ const Marker: FC<Props> = ({ mothTrap, onSelect, isSelected, isDisabled }) => {
 
   const isDraft = !mothTrap?.id;
 
-  const { latitude, longitude, name } = mothTrap.attrs?.location || {};
+  const {
+    latitude,
+    longitude,
+    name = 'Draft',
+  } = mothTrap.attrs?.location || {};
 
   const getIcon = () =>
     L.divIcon({
