@@ -67,7 +67,7 @@
     "localforage": "1.10.0",
     "localforage-cordovasqlitedriver": "1.8.0",
     "lodash": "4.17.21",
-    "mapbox-gl": "^2.13.0",
+    "mapbox-gl": "2.4.1",
     "mobx": "^6.9.0",
     "mobx-react": "^7.6.0",
     "mobx-utils": "^6.0.6",
