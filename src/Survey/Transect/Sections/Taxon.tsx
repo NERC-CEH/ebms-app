@@ -5,8 +5,8 @@ import { NavContext } from '@ionic/react';
 import { useRouteMatch } from 'react-router';
 import { observer } from 'mobx-react';
 import { Page, Main, Header } from '@flumens';
-import appModel from 'models/app';
 import TaxonSearch from 'Components/TaxonSearch';
+import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 
 type Props = {
   subSample: Sample;
@@ -38,12 +38,18 @@ const Controller: FC<Props> = ({ subSample: sectionSample }) => {
 
   return (
     <Page id="transect-sections-taxa">
-      <Header title="Species" />
+      <Header
+        title="Species"
+        rightSlot={<TaxonSearchFilters sample={sectionSample.parent} />}
+      />
       <Main>
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}
-          speciesGroups={appModel.attrs.speciesGroups}
+          speciesGroups={sectionSample?.parent.metadata.speciesGroups}
+          useDayFlyingMothsOnly={
+            sectionSample?.parent.metadata.useDayFlyingMothsOnly
+          }
         />
       </Main>
     </Page>

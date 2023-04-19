@@ -12,7 +12,8 @@ import {
 } from '@flumens';
 import { useTranslation } from 'react-i18next';
 import surveys from 'common/config/surveys';
-import Occurrence from '../occurrence';
+import groups from 'common/data/species/groups.json';
+import Occurrence, { SpeciesGroup } from '../occurrence';
 import Media from '../media';
 import { modelStore } from '../store';
 import GPSExtension from './GPSExt';
@@ -32,6 +33,7 @@ type Attrs = SampleAttrs & {
   windSpeed?: any;
   reliability?: string;
   recorders?: number;
+  speciesGroups: string[];
 };
 
 export default class AppSample extends Sample {
@@ -127,6 +129,10 @@ export default class AppSample extends Sample {
   }
 
   async upload() {
+    if (this.metadata.survey === 'precise-area') {
+      this.setMissingSpeciesGroups();
+    }
+
     if (
       this.remote.synchronising ||
       this.isUploaded() ||
@@ -182,6 +188,93 @@ export default class AppSample extends Sample {
 
   isDetailsComplete() {
     return this.metadata.completedDetails;
+  }
+
+  getSpeciesGroupList() {
+    const array: string[] = [];
+
+    const spGroups = Object.values(groups);
+    this.samples.forEach(smp => {
+      const spGroupValue = spGroups.find(
+        (group: SpeciesGroup) =>
+          group.id === smp.occurrences[0].attrs.taxon.group
+      )?.value;
+
+      if (!spGroupValue) return;
+
+      array.push(spGroupValue);
+    });
+
+    const uniqueSpeciesGroupList = [...new Set(array)];
+
+    const addDisableProperty = (value: SpeciesGroup) => {
+      const disabled = uniqueSpeciesGroupList.includes(value.value);
+
+      return {
+        ...value,
+        ...(disabled && { disabled }),
+      };
+    };
+
+    const existingSpeciesGroupsInSample = (group: SpeciesGroup) => {
+      const isUniqueGroup = uniqueSpeciesGroupList.includes(group.value);
+      const isDuplicate = [...this.metadata.speciesGroups].includes(
+        group.value
+      );
+
+      if (isUniqueGroup && !isDuplicate) {
+        return true;
+      }
+
+      return this.metadata.speciesGroups.includes(group.value);
+    };
+
+    const byDisabledProperty = (groupA: SpeciesGroup, groupB: SpeciesGroup) => {
+      if (!!groupB?.disabled < !!groupA?.disabled) {
+        return -1;
+      }
+      if (!!groupB?.disabled > !!groupA?.disabled) {
+        return 1;
+      }
+
+      return 0;
+    };
+
+    return [...Object.values(groups)]
+      .filter(existingSpeciesGroupsInSample)
+      .map(addDisableProperty)
+      .sort(byDisabledProperty);
+  }
+
+  setMissingSpeciesGroups() {
+    const formattedGroups = Object.values(groups);
+
+    const checkIfNewSpeciesGroupsAreAdded = (smp: Sample) => {
+      const byTaxonGroup = (group: SpeciesGroup) =>
+        group.id === smp.occurrences[0].attrs.taxon.group;
+      const speciesGroups = formattedGroups.find(byTaxonGroup);
+
+      if (!speciesGroups) return;
+
+      const missingSpeciesGroup = !this.attrs.speciesGroups.includes(
+        speciesGroups.value
+      );
+
+      if (missingSpeciesGroup) {
+        this.attrs.speciesGroups.push(speciesGroups.value);
+      }
+    };
+
+    this.samples.forEach(checkIfNewSpeciesGroupsAreAdded);
+    this.save();
+  }
+
+  setPreviousSpeciesGroups() {
+    if (this.metadata.survey === 'moth') return;
+
+    this.metadata.speciesGroups = appModel.attrs.speciesGroups;
+    this.metadata.useDayFlyingMothsOnly = appModel.attrs.useDayFlyingMothsOnly;
+    this.save();
   }
 }
 

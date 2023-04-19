@@ -87,7 +87,6 @@ const Container: FC = () => {
     language,
     country,
     primarySurvey,
-    speciesGroups,
     showCommonNamesInGuide,
   } = appModel.attrs;
 
@@ -109,7 +108,6 @@ const Container: FC = () => {
         resetApp={resetAppWrap}
         onToggle={onToggle}
         language={language || ''}
-        speciesGroups={speciesGroups}
         country={country}
       />
     </Page>

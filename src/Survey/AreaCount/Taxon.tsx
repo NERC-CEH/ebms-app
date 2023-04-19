@@ -1,6 +1,5 @@
 import { FC, useContext } from 'react';
 import Sample from 'models/sample';
-import appModel from 'models/app';
 import Occurrence from 'models/occurrence';
 import { observer } from 'mobx-react';
 import TaxonSearch from 'Components/TaxonSearch';
@@ -8,6 +7,7 @@ import { NavContext } from '@ionic/react';
 import { useRouteMatch } from 'react-router';
 import { Page, Main, Header, useAlert } from '@flumens';
 import { Trans as T } from 'react-i18next';
+import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 
 async function showMergeSpeciesAlert(alert: any) {
   const showMergeSpeciesDialog = (resolve: any) => {
@@ -117,12 +117,16 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
 
   return (
     <Page id="precise-area-count-edit-taxa">
-      <Header title="Species" />
+      <Header
+        title="Species"
+        rightSlot={<TaxonSearchFilters sample={sample} />}
+      />
       <Main>
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}
-          speciesGroups={appModel.attrs.speciesGroups}
+          speciesGroups={sample.metadata.speciesGroups}
+          useDayFlyingMothsOnly={sample.metadata.useDayFlyingMothsOnly}
         />
       </Main>
     </Page>

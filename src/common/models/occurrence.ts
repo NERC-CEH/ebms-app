@@ -3,6 +3,20 @@ import appModel from 'models/app';
 import { MachineInvolvement } from 'Survey/Moth/config';
 import Media from './media';
 
+export interface SpeciesGroup {
+  id: number;
+  label: string;
+  value: string;
+  disabled?: boolean;
+}
+
+export interface SpeciesGroups {
+  butterflies: SpeciesGroup;
+  moths: SpeciesGroup;
+  bumblebees: SpeciesGroup;
+  dragonflies: SpeciesGroup;
+}
+
 export type Taxon = {
   version?: string;
 

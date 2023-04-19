@@ -69,8 +69,8 @@ async function getNewSample(
     undefined,
     hasGPSPermission
   );
-  await sample.save();
 
+  sample.setPreviousSpeciesGroups();
   savedSamples.push(sample);
 
   appModel.attrs[draftIdKey] = sample.cid;

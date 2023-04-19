@@ -1,0 +1,51 @@
+#filters-dialog-form {
+  margin-top: 10px;
+
+  .info-message,
+  .info-message.blue {
+    --background: rgba(var(--ion-color-secondary-rgb), 0.1);
+    background: white; // above is transparent
+
+    ion-note {
+      color: var(--ion-color-secondary-dark);
+      font-size: 1em;
+    }
+    ion-icon {
+      color: var(--ion-color-secondary-dark) !important;
+    }
+  }
+
+  ion-item-divider {
+    z-index: 1;
+  }
+
+  .taxon-groups {
+    margin-top: 20px;
+
+    ion-item {
+      border-radius: var(--theme-border-radius);
+      --border-radius: var(--theme-border-radius);
+      --border-style: none;
+    }
+  }
+
+  .attr-speciesGroups {
+    background: var(--ion-page-background) !important;
+  }
+}
+
+ion-alert.speciesGroupAlert .alert-message {
+  padding: 0 !important;
+}
+
+ion-button.filter-button {
+  --padding-end: 20px;
+  --padding-start: 20px;
+  --border-radius: var(--theme-border-radius) !important;
+
+  b {
+    margin-left: 10px;
+    margin-right: -10px;
+    letter-spacing: 2px;
+  }
+}

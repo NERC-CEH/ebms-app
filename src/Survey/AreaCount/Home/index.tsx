@@ -2,10 +2,10 @@ import { FC, useContext } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { toJS } from 'mobx';
-import { Page, useAlert, useToast } from '@flumens';
+import { Page, useAlert, useToast, Attr } from '@flumens';
 import i18n from 'i18next';
 import { NavContext } from '@ionic/react';
-import Occurrence from 'models/occurrence';
+import Occurrence, { SpeciesGroup } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import savedSamples from 'models/collections/samples';
 import appModel, { SurveyDraftKeys } from 'models/app';
@@ -71,11 +71,83 @@ function byCreateTime(model1: Sample, model2: Sample) {
   return date2.getTime() - date1.getTime();
 }
 
+function showSpeciesGroupList(
+  sample: Sample,
+  alert: any,
+  speciesGroups: SpeciesGroup
+) {
+  let lastSpeciesGroup: string[];
+  const form = (
+    <div id="filters-dialog-form">
+      <div className="taxon-groups taxa-filter-edit-dialog-form">
+        <Attr
+          attr="speciesGroups"
+          model={sample}
+          input="checkbox"
+          set={(newValues: string[], model: Sample) => {
+            // eslint-disable-next-line no-param-reassign
+            model.attrs.speciesGroups = newValues;
+            model.save();
+
+            if (model.attrs.speciesGroups.length) {
+              lastSpeciesGroup = newValues;
+            }
+
+            if (!model.attrs.speciesGroups.length) {
+              // eslint-disable-next-line no-param-reassign, prefer-destructuring
+              model.attrs.speciesGroups = lastSpeciesGroup;
+              model.save();
+            }
+          }}
+          get={(model: Sample) => [...model.attrs.speciesGroups]}
+          inputProps={{ options: speciesGroups }}
+        />
+      </div>
+    </div>
+  );
+
+  const showSpeciesGroupDialog = (resolve: (param: boolean) => void) => {
+    alert({
+      header: 'Which species groups have you counted?',
+      cssClass: 'speciesGroupAlert',
+      message: <>{form}</>,
+
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => resolve(false),
+        },
+
+        {
+          text: 'Confirm',
+          role: 'primary',
+          handler: () => resolve(true),
+        },
+      ],
+    });
+  };
+
+  return new Promise(showSpeciesGroupDialog);
+}
+
+const shouldShowSpeciesGroupDialog = (groups: any) => {
+  if (groups.length !== 1 && ![...groups].every(gr => gr.disabled)) {
+    if (groups.length) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
 type Props = {
   sample: Sample;
 };
 
 const HomeController: FC<Props> = ({ sample }) => {
+  const alert = useAlert();
+
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch<any>();
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
@@ -90,14 +162,40 @@ const HomeController: FC<Props> = ({ sample }) => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
+    sample.setMissingSpeciesGroups();
     sample.upload().catch(toast.error);
+
+    alert({
+      message: `${sample.attrs.speciesGroups}`,
+      buttons: [
+        {
+          text: 'Ok',
+          cssClass: 'primary',
+        },
+      ],
+    });
 
     navigate(`/home/user-surveys`, 'root');
   };
 
+  const showSpeciesGroupConfirmationDialog = (speciesGroups: any) =>
+    showSpeciesGroupList(sample, alert, speciesGroups);
+
   const _processDraft = async () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
+
+    const speciesGroups = sample.getSpeciesGroupList();
+
+    // eslint-disable-next-line no-param-reassign
+    sample.attrs.speciesGroups = [...speciesGroups].map(gr => gr.value);
+    sample.save();
+
+    if (shouldShowSpeciesGroupDialog([...sample.attrs.speciesGroups])) {
+      const speciesGroupConfirmationDialog =
+        await showSpeciesGroupConfirmationDialog(speciesGroups);
+      if (!speciesGroupConfirmationDialog) return;
+    }
 
     const surveyName = sample.getSurvey().name;
     const draftKey = `draftId:${surveyName}` as keyof SurveyDraftKeys;
@@ -159,6 +257,8 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const copyPreviousSurveyTaxonList = () => {
+    if (sample.metadata.saved) return;
+
     const previousSurvey = getPreviousSurvey();
     if (!previousSurvey) {
       toast.warn('Sorry, no previous survey to copy species from.');

@@ -21,6 +21,7 @@ class index extends Component {
     onSpeciesSelected: PropTypes.func.isRequired,
     recordedTaxa: PropTypes.array,
     speciesGroups: PropTypes.array,
+    useDayFlyingMothsOnly: PropTypes.bool,
   };
 
   input = createRef();
@@ -46,7 +47,10 @@ class index extends Component {
   filterDayFlyingMoths = ({ isDayFlying, group }) => {
     if (group !== groups.moths.id) return true;
 
-    return appModel.attrs.useDayFlyingMothsOnly ? isDayFlying : true;
+    const useDayMothsFilter =
+      this.props.useDayFlyingMothsOnly || appModel.attrs.useDayFlyingMothsOnly;
+
+    return useDayMothsFilter ? isDayFlying : true;
   };
 
   // isPresent = taxon => {

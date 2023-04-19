@@ -2103,3 +2103,29 @@ msgid "Are you sure you want to delete your account?<1>This will remove your acc
 msgstr "Are you sure you want to delete your account?<1>This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website.</1>"
 
 
+
+# Part of Species Group selection
+msgid "<0>This option was moved to the species search page.</0>"
+msgstr "<0>This option was moved to the species search page.</0>"
+
+# Part of Species Group selection
+msgid "This option was moved to the species search page."
+msgstr "This option was moved to the species search page."
+
+# Part of Species Group selection
+msgid "Groups"
+msgstr "Groups"
+
+# Part of Species Group selection
+msgid "Close"
+msgstr "Close"
+
+# Part of Species Group selection
+msgid "Confirm"
+msgstr "Confirm"
+
+# Part of Species Group selection
+msgid "Which species groups have you counted?"
+msgstr "Which species groups have you counted?"
+
+

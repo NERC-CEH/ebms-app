@@ -14,6 +14,7 @@ import {
   commentAttr,
   dateAttr,
   stageAttr,
+  speciesGroupsAttr,
 } from 'Survey/common/config';
 import { chatboxOutline } from 'ionicons/icons';
 
@@ -95,6 +96,10 @@ const config = {
       },
       remote: { id: 1384 },
     },
+  },
+
+  metadata: {
+    speciesGroups: speciesGroupsAttr,
   },
 
   smp: {
@@ -196,6 +201,7 @@ const config = {
       metadata: {
         survey_id: config.id,
         survey: config.name,
+        speciesGroups: [],
       },
       attrs: {
         date: now,
@@ -203,6 +209,7 @@ const config = {
         sample_method_id: 22,
         surveyStartTime: now,
         recorder,
+        speciesGroups: [],
       },
     });
 

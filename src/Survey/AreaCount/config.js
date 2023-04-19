@@ -18,6 +18,7 @@ import {
   dateAttr,
   areaCountSchema,
   stageAttr,
+  speciesGroupsAttr,
 } from 'Survey/common/config';
 
 function transformToMeters(coordinates) {
@@ -60,6 +61,7 @@ const survey = {
     recorders: {
       remote: { id: 688 },
     },
+    speciesGroups: speciesGroupsAttr,
 
     location: {
       remote: {
@@ -84,6 +86,10 @@ const survey = {
         },
       },
     },
+  },
+
+  metadata: {
+    speciesGroups: speciesGroupsAttr,
   },
 
   smp: {
@@ -207,12 +213,13 @@ const survey = {
         survey_id: surveyId,
         survey: surveyName,
         pausedTime: 0,
+        speciesGroups: [],
       },
       attrs: {
         input_form: survey.webForm,
         device: isPlatform('android') ? 'android' : 'ios',
         app_version: config.version,
-
+        speciesGroups: [],
         surveyStartTime: null,
         location: {},
         temperature: '',

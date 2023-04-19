@@ -123,6 +123,8 @@ export type SurveyDraftKeys = {
   'draftId:moth'?: string | null;
 };
 
+export const DEFAULT_SPECIES_GROUP = ['butterflies'];
+
 export type Attrs = ModelAttrs & {
   showedWelcome: boolean;
   language: string | null;
@@ -165,7 +167,7 @@ const defaults: Attrs = {
   'draftId:transect': '',
   'draftId:moth': '',
 
-  speciesGroups: ['butterflies'],
+  speciesGroups: DEFAULT_SPECIES_GROUP,
   useDayFlyingMothsOnly: false,
   transects: [],
 

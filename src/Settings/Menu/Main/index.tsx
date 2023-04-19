@@ -132,7 +132,6 @@ type Props = {
   primarySurvey?: string;
   language?: string;
   country?: string;
-  speciesGroups?: any[];
 };
 
 const MenuMain: FC<Props> = ({
@@ -148,7 +147,6 @@ const MenuMain: FC<Props> = ({
   language,
   country,
   showCommonNamesInGuide,
-  speciesGroups,
 }) => {
   const alert = useAlert();
   const showUserDeleteDialog = useUserDeleteDialog(deleteUser);
@@ -166,10 +164,6 @@ const MenuMain: FC<Props> = ({
     onToggle('useTraining', checked);
   const onSubmitAllDialog = () =>
     uploadAllSamplesDialog(uploadAllSamples, alert);
-
-  const nonDayFlyingMoths = (group: any) => group !== 'day-flying-moths';
-  const speciesGroupExcludedDayFlyingMothGroup =
-    speciesGroups?.filter(nonDayFlyingMoths);
 
   return (
     <Main className="app-settings">
@@ -202,9 +196,6 @@ const MenuMain: FC<Props> = ({
               <T>Species groups</T>
             </IonLabel>
             <IonIcon icon={butterflyIcon} size="small" slot="start" />
-            <IonLabel slot="end">
-              {speciesGroupExcludedDayFlyingMothGroup?.length}
-            </IonLabel>
           </IonItem>
 
           <IonItem routerLink="/settings/moth-survey" detail>

@@ -2,6 +2,10 @@ import * as Yup from 'yup';
 import { date as dateHelp } from '@flumens';
 import { chatboxOutline } from 'ionicons/icons';
 import caterpillarIcon from 'common/images/caterpillar.svg';
+import groups from 'common/data/species/groups.json';
+import { Taxon } from 'common/models/occurrence';
+import Sample from 'models/sample';
+import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
 
 export const deviceAttr = {
   remote: {
@@ -84,6 +88,108 @@ export const temperatureAttr = {
   remote: { id: 1660, values: temperatureValues },
 };
 
+const DAY_FLYING_MOTHS = 'day-flying-moths';
+const MOTHS = 'moths';
+
+const speciesGroupsValues = [
+  { value: 'moths', id: 20647 },
+  { value: 'butterflies', id: 20648 },
+  { value: 'dragonflies', id: 20649 },
+  { value: 'bumblebees', id: 20650 },
+];
+
+export const speciesGroupsAttr = {
+  pageProps: {
+    attrProps: {
+      input: 'checkbox',
+      set: (newValues: string[], model: Sample) => {
+        const hasMothGroup = newValues.includes(MOTHS);
+        const hasDayFlyingMothGroup = newValues.includes(DAY_FLYING_MOTHS);
+
+        // eslint-disable-next-line no-param-reassign
+        newValues = newValues.filter(
+          (group: string) => group !== DAY_FLYING_MOTHS
+        );
+
+        appModel.attrs.useDayFlyingMothsOnly =
+          hasMothGroup && hasDayFlyingMothGroup;
+
+        // eslint-disable-next-line no-param-reassign
+        model.metadata.useDayFlyingMothsOnly =
+          hasMothGroup && hasDayFlyingMothGroup;
+
+        // eslint-disable-next-line no-param-reassign
+        model.metadata.speciesGroups = newValues;
+        model.save();
+
+        appModel.attrs.speciesGroups = model.metadata.speciesGroups;
+        appModel.save();
+
+        if (!appModel.attrs.speciesGroups.length) {
+          // eslint-disable-next-line no-param-reassign
+          model.metadata.speciesGroups = DEFAULT_SPECIES_GROUP;
+          model.save();
+        }
+      },
+
+      get: (model: Sample) => {
+        const speciesGroups = [...model.metadata.speciesGroups];
+        if (model.metadata.useDayFlyingMothsOnly) {
+          speciesGroups.push(DAY_FLYING_MOTHS);
+        }
+
+        return speciesGroups;
+      },
+
+      inputProps: (model: Sample) => {
+        const groupOption = ([value, { label }]: any) => {
+          const disabled = model.metadata.saved;
+
+          return {
+            value,
+            label,
+            disabled,
+          };
+        };
+
+        const options: any = Object.entries(groups).map(groupOption);
+
+        if (model.metadata.speciesGroups?.includes('moths')) {
+          options.splice(2, 0, {
+            value: DAY_FLYING_MOTHS,
+            label: 'Use only day-flying moths',
+            className: 'checkbox-subEntry',
+            disabled: model.metadata.saved,
+          });
+        }
+
+        return { options };
+      },
+    },
+  },
+
+  remote: {
+    id: 1735,
+    values(speciesGroups: any, submission: any) {
+      // eslint-disable-next-line
+      submission.values = {
+        ...submission.values,
+      };
+
+      const bySameGroup = (spGroupObject: any) =>
+        speciesGroups.includes(spGroupObject.value);
+      const extractID = (obj: any) => obj.id;
+
+      const speciesGroupsID = speciesGroupsValues
+        .filter(bySameGroup)
+        .map(extractID);
+
+      // eslint-disable-next-line no-param-reassign
+      submission.values['smpAttr:1735'] = speciesGroupsID;
+    },
+  },
+};
+
 const windDirectionValues = [
   { value: '', label: 'Not recorded/no data', id: 2460, isDefault: true },
   { value: 'S', id: 2461 },
@@ -158,7 +264,7 @@ export const cloudAttr = {
 export const taxonAttr = {
   remote: {
     id: 'taxa_taxon_list_id',
-    values: taxon => taxon.warehouse_id,
+    values: (taxon: Taxon) => taxon.warehouse_id,
   },
 };
 
@@ -180,7 +286,7 @@ export const surveyStartTimeAttr = {
   },
   remote: {
     id: 1385,
-    values: date => dateTimeFormat.format(new Date(date)),
+    values: (date: number) => dateTimeFormat.format(new Date(date)),
   },
 };
 
@@ -197,19 +303,19 @@ export const surveyEndTimeAttr = {
   },
   remote: {
     id: 1386,
-    values: date => dateTimeFormat.format(new Date(date)),
+    values: (date: number) => dateTimeFormat.format(new Date(date)),
   },
 };
 
 export const dateAttr = {
-  isValid: val => val && val.toString() !== 'Invalid Date', // TODO: needed?
+  isValid: (val: any) => val && val.toString() !== 'Invalid Date', // TODO: needed?
   pageProps: {
     attrProps: {
       input: 'date',
       inputProps: { max: () => new Date() },
     },
   },
-  remote: { values: date => dateHelp.print(date, false) },
+  remote: { values: (date: number) => dateHelp.print(date, false) },
 };
 
 const locationSchema = Yup.object().shape({
@@ -223,7 +329,7 @@ const locationSchema = Yup.object().shape({
   source: Yup.string().required('Please add survey area information.'),
 });
 
-const validateLocation = val => {
+const validateLocation = (val: any) => {
   if (!val) {
     return false;
   }
