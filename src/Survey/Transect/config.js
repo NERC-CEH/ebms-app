@@ -209,7 +209,6 @@ const config = {
         sample_method_id: 22,
         surveyStartTime: now,
         recorder,
-        speciesGroups: [],
       },
     });
 
