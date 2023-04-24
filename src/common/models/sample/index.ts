@@ -34,6 +34,12 @@ type Attrs = SampleAttrs & {
   reliability?: string;
   recorders?: number;
   speciesGroups: string[];
+  // PaintedLady survey
+  wing?: any;
+  behaviour?: any;
+  direction?: string | null;
+  eggLaying?: string | null;
+  otherEggLaying?: string | null;
 };
 
 export default class AppSample extends Sample {
@@ -68,6 +74,8 @@ export default class AppSample extends Sample {
   stopGPS: any; // from extension
 
   stopVibrateCounter: any; // from extension
+
+  startVibrateCounter: any; // from extension
 
   hasLoctionMissingAndIsnotLocating: any; // from extension
 
@@ -275,6 +283,19 @@ export default class AppSample extends Sample {
     this.metadata.speciesGroups = appModel.attrs.speciesGroups;
     this.metadata.useDayFlyingMothsOnly = appModel.attrs.useDayFlyingMothsOnly;
     this.save();
+  }
+
+  isPreciseSingleSpeciesSurvey() {
+    return this.metadata.survey === 'precise-single-species-area';
+  }
+
+  isPaintedLadySurvey() {
+    if (!this.samples.length) return false;
+
+    return (
+      this.metadata.survey === 'precise-single-species-area' &&
+      this.samples[0].occurrences[0].isPaintedLadySpecies()
+    );
   }
 }
 

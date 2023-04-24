@@ -97,15 +97,17 @@ const EditOccurrence: FC<Props> = ({
   return (
     <Main id="area-count-occurrence-edit">
       <IonList lines="full">
-        <div className="rounded">
-          <MenuAttrItem
-            routerLink={`${match.url}/taxon`}
-            disabled={isDisabled}
-            icon={butterflyIcon}
-            label="Species"
-            value={species}
-          />
-        </div>
+        {!samples[0].isPreciseSingleSpeciesSurvey() && (
+          <div className="rounded">
+            <MenuAttrItem
+              routerLink={`${match.url}/taxon`}
+              disabled={isDisabled}
+              icon={butterflyIcon}
+              label="Species"
+              value={species}
+            />
+          </div>
+        )}
 
         <div className="rounded">
           <IonItemDivider className="species-list-header">

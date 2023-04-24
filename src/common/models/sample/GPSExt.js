@@ -152,7 +152,7 @@ const extension = {
       }
 
       const isOverDefaultSurveyEndTime = this.isTimerFinished();
-      if (isOverDefaultSurveyEndTime) {
+      if (this.attrs.surveyStartTime && isOverDefaultSurveyEndTime) {
         console.log('SampleModel:GPS: timed out stopping!');
         this.stopGPS();
         return;

@@ -1,0 +1,21 @@
+#survey-area-count-detail-edit {
+  .text-capitalize ion-label[slot='end'] {
+    text-transform: capitalize;
+  }
+
+  .direction-icon {
+    ion-icon {
+      transform: rotate(45deg) !important;
+    }
+  }
+
+  .altitude-icon {
+    ion-icon {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+#attr-page-wing ion-label {
+  text-transform: capitalize;
+}

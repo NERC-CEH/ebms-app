@@ -13,6 +13,7 @@ import Sample from 'models/sample';
 import { Main, MenuAttrItem, InfoMessage, CounterInput } from '@flumens';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
+import PaintedLadyAttrs from './Components/PaintedLadyAttrs';
 
 type Props = {
   sample: Sample;
@@ -89,6 +90,8 @@ const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
           </IonLabel>
         </IonItemDivider>
         <div className="rounded">
+          {sample.isPaintedLadySurvey() && <PaintedLadyAttrs sample={sample} />}
+
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}

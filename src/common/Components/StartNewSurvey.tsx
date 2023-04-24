@@ -162,6 +162,23 @@ function StartNewSurvey({ survey }: Props): null {
         sample = await getNewSample(survey, draftIdKey, hasGrantedGps);
       }
 
+      if (sample.isPreciseSingleSpeciesSurvey()) {
+        const hasTargetSpecies = !!sample.samples.length;
+
+        const homeOrEditPage = sample.attrs.surveyStartTime
+          ? `/survey/${survey.name}/${sample.cid}/edit`
+          : `/survey/${survey.name}/${sample.cid}/edit/details`;
+
+        const taxonSelectPage = `/survey/${survey.name}/${sample.cid}/edit/taxon`;
+
+        const hrefPreciseSingleSpeciesSurvey = hasTargetSpecies
+          ? homeOrEditPage
+          : taxonSelectPage;
+
+        context.navigate(hrefPreciseSingleSpeciesSurvey, 'none', 'replace');
+        return;
+      }
+
       const path = sample.isDetailsComplete() ? '' : 'edit';
 
       context.navigate(`${baseURL}/${sample.cid}/${path}`, 'none', 'replace');

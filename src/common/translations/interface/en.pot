@@ -2128,4 +2128,150 @@ msgstr "Confirm"
 msgid "Which species groups have you counted?"
 msgstr "Which species groups have you counted?"
 
+# Part of Painted lady survey 
+msgid "Select Target Species"
+msgstr "Select Target Species"
 
+# Part of Painted lady survey 
+msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
+msgstr "No photo has been added.<br/>Press <4><0></0></4> to add."
+
+# Part of Painted lady survey 
+msgid "Wing"
+msgstr "Wing"
+
+# Part of Painted lady survey 
+msgid "Behaviour"
+msgstr "Behaviour"
+
+# Part of Painted lady survey 
+msgid "What is the wing condition?"
+msgstr "What is the wing condition?"
+
+# Part of Painted lady survey 
+msgid "What was the behaviour?"
+msgstr "What was the behaviour?"
+
+# Part of Painted lady survey 
+msgid "Migrating"
+msgstr "Migrating"
+
+# Part of Painted lady survey 
+msgid "Nectaring"
+msgstr "Nectaring"
+
+# Part of Painted lady survey 
+msgid "Mating"
+msgstr "Mating"
+
+# Part of Painted lady survey 
+msgid "Egg laying"
+msgstr "Egg laying"
+
+# Part of Painted lady survey 
+msgid "Direction"
+msgstr "Direction"
+
+# Part of Painted lady survey 
+msgid "Altitude"
+msgstr "Altitude"
+
+# Part of Painted lady survey 
+msgid "Compass"
+msgstr "Compass"
+
+# Part of Painted lady survey 
+msgid "Please add the direction."
+msgstr "Please add the direction."
+
+# Part of Painted lady survey 
+msgid "What was the altitude? (meters)"
+msgstr "What was the altitude? (meters)"
+
+# Painted lady survey mating options 
+msgid "What kind of mating was it?"
+msgstr "What kind of mating was it?"
+
+# Painted lady survey mating options 
+msgid "Territorial defence"
+msgstr "Territorial defence"
+
+# Painted lady survey mating options 
+msgid "Hill topping"
+msgstr "Hill topping"
+
+# Painted lady survey mating options 
+msgid "Guarding a nectar source"
+msgstr "Guarding a nectar source"
+
+# Painted lady survey mating options 
+msgid "Forest margin"
+msgstr "Forest margin"
+
+# Alert header 
+msgid "Delete Survey"
+msgstr "Delete Survey"
+
+# Alert message 
+msgid "Warning - This will discard the survey information you have entered so far."
+msgstr "Warning - This will discard the survey information you have entered so far."
+
+# Painted lady wing options
+msgid "fresh"
+msgstr "fresh"
+
+# Painted lady wing options
+msgid "worn"
+msgstr "worn"
+
+# Painted lady wing options
+msgid "normal"
+msgstr "normal"
+
+# Painted lady survey flower entry 
+msgid "Nectar"
+msgstr "Nectar"
+
+# Painted lady survey flower entry 
+msgid "What was the flower?"
+msgstr "What was the flower?"
+
+# Painted lady survey flower entry 
+msgid "Thistles"
+msgstr "Thistles"
+
+# Painted lady survey flower entry 
+msgid "Mallow"
+msgstr "Mallow"
+
+# Painted lady survey flower entry 
+msgid "Desert nettle"
+msgstr "Desert nettle"
+
+# Painted lady survey flower entry  
+msgid "Please specify the nectar source."
+msgstr "Please specify the nectar source."
+
+# Painted lady survey missing entry
+msgid "Please add the egg laying option."
+msgstr "Please add the egg laying option."
+
+# Painted lady survey missing entry
+msgid "Please add the mating option."
+msgstr "Please add the mating option."
+
+# Painted lady survey missing entry
+msgid "Nectar source"
+msgstr "Nectar source"
+
+# Painted lady survey missing entry
+msgid "Please add the nectar option."
+msgstr "Please add the nectar option."
+
+# Painted lady survey missing entry
+msgid "Please add the direction option."
+msgstr "Please add the direction option."
+
+# Painted lady survey missing entry
+msgid "Please add the altitude option."
+msgstr "Please add the altitude option."

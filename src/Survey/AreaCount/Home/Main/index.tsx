@@ -39,7 +39,7 @@ import {
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import { Trans as T } from 'react-i18next';
-import CountdownClock from './components/CountdownClock';
+import CountdownClock from '../components/CountdownClock';
 import './styles.scss';
 
 const speciesNameSort = ([, sp1]: any, [, sp2]: any) => {
@@ -133,6 +133,8 @@ const AreaCount: FC<Props> = ({
   };
 
   const getSpeciesAddButton = () => {
+    if (sample.isPreciseSingleSpeciesSurvey()) return null;
+
     if (isDisabled) {
       // placeholder
       return <div style={{ height: '44px' }} />;
@@ -146,8 +148,12 @@ const AreaCount: FC<Props> = ({
     }
 
     const navigateToSearch = () => navigate(`${match.url}/taxon`);
-    const showCopyOptionsWrap = () =>
-      !sample.isSurveyPreciseSingleSpecies() && showCopyOptions();
+    const showCopyOptionsWrap = () => {
+      if (sample.metadata.saved || sample.isSurveyPreciseSingleSpecies())
+        return;
+
+      showCopyOptions();
+    };
 
     return (
       <LongPressButton
@@ -206,7 +212,7 @@ const AreaCount: FC<Props> = ({
           </IonLabel>
         </IonItem>
 
-        {!isDisabled && (
+        {!isDisabled && !sample.isPreciseSingleSpeciesSurvey() && (
           <IonItemOptions side="end">
             <IonItemOption color="danger" onClick={deleteSpeciesWrap}>
               <T>Delete</T>

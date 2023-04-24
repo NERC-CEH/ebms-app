@@ -131,8 +131,8 @@ function showSpeciesGroupList(
   return new Promise(showSpeciesGroupDialog);
 }
 
-const shouldShowSpeciesGroupDialog = (groups: any) => {
-  if (groups.length !== 1 && ![...groups].every(gr => gr.disabled)) {
+const shouldShowSpeciesGroupDialog = (groups: SpeciesGroup[]) => {
+  if (groups.length !== 1 && !groups.every((gr: SpeciesGroup) => gr.disabled)) {
     if (groups.length) {
       return true;
     }
@@ -187,11 +187,12 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     const speciesGroups = sample.getSpeciesGroupList();
 
+    const extractValue = (group: SpeciesGroup) => group.value;
     // eslint-disable-next-line no-param-reassign
-    sample.attrs.speciesGroups = [...speciesGroups].map(gr => gr.value);
+    sample.attrs.speciesGroups = speciesGroups.map(extractValue);
     sample.save();
 
-    if (shouldShowSpeciesGroupDialog([...sample.attrs.speciesGroups])) {
+    if (shouldShowSpeciesGroupDialog(speciesGroups)) {
       const speciesGroupConfirmationDialog =
         await showSpeciesGroupConfirmationDialog(speciesGroups);
       if (!speciesGroupConfirmationDialog) return;

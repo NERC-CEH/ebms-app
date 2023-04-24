@@ -4,26 +4,36 @@ import { observer } from 'mobx-react';
 import { Page, Header, useAlert } from '@flumens';
 import { NavContext, useIonViewWillEnter } from '@ionic/react';
 import Sample from 'models/sample';
+import Occurrence from 'models/occurrence';
 import Main from './Main';
 import './styles.scss';
 
-function deleteSamplePrompt(cb: any, alert: any) {
-  alert({
-    header: 'Delete',
-    message: 'Are you sure you want to delete this occurrence?',
-    buttons: [
-      {
-        text: 'Cancel',
-        role: 'cancel',
-      },
-      {
-        text: 'Delete',
-        role: 'destructive',
-        handler: cb,
-      },
-    ],
-  });
-}
+const useDeleteConfirmation = () => {
+  const alert = useAlert();
+
+  const prompt = (resolve: any) => {
+    alert({
+      header: 'Delete',
+      message: 'Are you sure you want to delete this occurrence?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => resolve(false),
+        },
+        {
+          text: 'Delete',
+          role: 'destructive',
+          handler: () => resolve(true),
+        },
+      ],
+    });
+  };
+
+  const promptWrap = () => new Promise(prompt);
+
+  return promptWrap;
+};
 
 function byCreationDate(s1: Sample, s2: Sample) {
   const date1 = new Date(s1.metadata.updated_on);
@@ -39,7 +49,8 @@ type Props = {
 const SpeciesOccurrences: FC<Props> = ({ sample }) => {
   const { navigate, goBack } = useContext(NavContext);
   const match = useRouteMatch<any>();
-  const alert = useAlert();
+
+  const confirmDelete = useDeleteConfirmation();
 
   const { taxa } = match.params;
 
@@ -62,16 +73,38 @@ const SpeciesOccurrences: FC<Props> = ({ sample }) => {
     return samples;
   };
 
-  const deleteSample = (smp: Sample) => {
-    const destroy = async () => {
-      await smp.destroy();
-      const samples = getSamples();
-      if (!samples.length) {
-        goBack();
-      }
-    };
+  const deleteSample = async (smp: Sample) => {
+    const shouldDelete = await confirmDelete();
+    if (!shouldDelete) return;
 
-    deleteSamplePrompt(destroy, alert);
+    const taxon = { ...smp.occurrences[0].attrs.taxon };
+    await smp.destroy();
+
+    const byTaxonId = (s: Sample) =>
+      s.occurrences[0].attrs.taxon.id === taxon.id;
+
+    const isLastSampleDeleted = !sample.samples.filter(byTaxonId).length;
+
+    if (isLastSampleDeleted && !sample.isPreciseSingleSpeciesSurvey()) {
+      goBack();
+      return;
+    }
+
+    if (isLastSampleDeleted) {
+      const survey = sample.getSurvey();
+
+      const zeroAbundace = 't';
+      const newSubSample = survey.smp.create(
+        Sample,
+        Occurrence,
+        taxon,
+        zeroAbundace
+      );
+      sample.samples.push(newSubSample);
+      sample.save();
+
+      goBack();
+    }
   };
 
   useIonViewWillEnter(() => {

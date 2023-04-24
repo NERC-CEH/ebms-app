@@ -34,18 +34,27 @@
   }
 }
 
-ion-alert.speciesGroupAlert .alert-message {
-  padding: 0 !important;
-}
+#species-filter {
+  margin-right: 10px;
 
-ion-button.filter-button {
-  --padding-end: 20px;
-  --padding-start: 20px;
-  --border-radius: var(--theme-border-radius) !important;
+  ion-icon {
+    font-size: 2em;
+  }
 
-  b {
-    margin-left: 10px;
-    margin-right: -10px;
-    letter-spacing: 2px;
+  ion-badge {
+    position: absolute;
+    right: 2px;
+    top: 0px;
+  }
+
+  ion-badge.ios {
+    padding: 2px;
+  }
+
+  ion-badge.md {
+    color: var(--ion-color-light);
+    font-weight: 500;
+    border-radius: 9px;
+    padding: 3px;
   }
 }

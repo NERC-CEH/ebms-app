@@ -43,6 +43,8 @@
     <string>Allow geolocation so we can improve your records.</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>Allow Geolocation while your device is locked?</string>
+    <key>NSMotionUsageDescription</key>
+    <string>Allow motion detector so we can improve your records.</string>
     <key>UIBackgroundModes</key>
     <array>
       <string>location</string>

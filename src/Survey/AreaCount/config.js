@@ -237,11 +237,14 @@ const survey = {
       sample.metadata.survey_id = survey.id; // eslint-disable-line
     }
 
-    sample.attrs.surveyStartTime = sample.metadata.created_on; // this can't be done in defaults
+    if (!sample.isPreciseSingleSpeciesSurvey()) {
+      sample.attrs.surveyStartTime = sample.metadata.created_on; // this can't be done in defaults
+      sample.startVibrateCounter();
+    }
     if (hasGPSPermission) {
       sample.toggleGPStracking();
     }
-    sample.startVibrateCounter();
+
     sample.startMetOfficePull();
 
     return sample;

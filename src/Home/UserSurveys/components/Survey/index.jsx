@@ -66,7 +66,22 @@ function Survey({ sample }) {
   const path = sample.isDetailsComplete() ? '' : '/edit';
 
   const canShowLink = !synchronising && !survey.deprecated;
-  const href = canShowLink && `/survey/${survey.name}/${sample.cid}${path}`;
+  const hrefRemainingSurvey =
+    canShowLink && `/survey/${survey.name}/${sample.cid}${path}`;
+
+  const hasTargetSpecies = !!sample.samples.length;
+
+  const homeOrEditPage = sample.attrs.surveyStartTime
+    ? `/survey/${survey.name}/${sample.cid}/edit`
+    : `/survey/${survey.name}/${sample.cid}/edit/details`;
+
+  const taxonSelectPage = `/survey/${survey.name}/${sample.cid}/edit/taxon`;
+  const hrefPreciseSingleSpeciesSurvey =
+    canShowLink && hasTargetSpecies ? homeOrEditPage : taxonSelectPage;
+
+  const href = sample.isPreciseSingleSpeciesSurvey()
+    ? hrefPreciseSingleSpeciesSurvey
+    : hrefRemainingSurvey;
 
   function getSampleInfo() {
     const label = (

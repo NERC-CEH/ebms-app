@@ -1,11 +1,11 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useState } from 'react';
 import Sample from 'models/sample';
 import Occurrence from 'models/occurrence';
 import { observer } from 'mobx-react';
 import TaxonSearch from 'Components/TaxonSearch';
-import { NavContext } from '@ionic/react';
+import { NavContext, IonButtons, IonButton } from '@ionic/react';
 import { useRouteMatch } from 'react-router';
-import { Page, Main, Header, useAlert } from '@flumens';
+import { Page, Main, Header, useAlert, useOnBackButton } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 
@@ -39,15 +39,53 @@ async function showMergeSpeciesAlert(alert: any) {
   return new Promise(showMergeSpeciesDialog);
 }
 
+const cancelButtonWrap = (onDeleteSurvey: any) => {
+  return (
+    <IonButtons slot="start">
+      <IonButton onClick={onDeleteSurvey}>
+        <T>Cancel</T>
+      </IonButton>
+    </IonButtons>
+  );
+};
+
+function useDeleteSurveyPrompt(alert: any) {
+  const deleteSurveyPromt = (resolve: (param: boolean) => void) => {
+    alert({
+      header: 'Delete Survey',
+      message:
+        'Warning - This will discard the survey information you have entered so far.',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => resolve(false),
+        },
+        {
+          text: 'Discard',
+          role: 'destructive',
+          handler: () => resolve(true),
+        },
+      ],
+    });
+  };
+
+  const deleteSurveyPromtWrap = () => new Promise(deleteSurveyPromt);
+
+  return deleteSurveyPromtWrap;
+}
+
 type Props = {
   sample: Sample;
   occurrence: Occurrence;
 };
 
 const TaxonController: FC<Props> = ({ sample, occurrence }) => {
-  const { goBack } = useContext(NavContext);
+  const { goBack, navigate } = useContext(NavContext);
   const match = useRouteMatch();
   const alert = useAlert();
+  const [isAlertPresent, setIsAlertPresent] = useState(false);
+  const shouldDeleteSurvey = useDeleteSurveyPrompt(alert);
 
   const onSpeciesSelected = async (taxon: any) => {
     const { taxa }: any = match.params;
@@ -94,12 +132,30 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
       );
       sample.samples.push(newSample);
 
+      if (sample.isPaintedLadySurvey()) {
+        // eslint-disable-next-line no-param-reassign
+        sample.attrs.wing = [];
+        // eslint-disable-next-line no-param-reassign
+        sample.attrs.behaviour = null;
+        sample.save();
+      }
+
       if (!sample.isSurveyPreciseSingleSpecies()) {
         newSample.startGPS();
       }
     }
 
     await sample.save();
+
+    if (sample.isPreciseSingleSpeciesSurvey()) {
+      const path = match.url.replace('/taxon', '/details');
+
+      navigate(path, 'forward', 'replace', undefined, {
+        unmount: true,
+      });
+      return;
+    }
+
     goBack();
   };
 
@@ -115,12 +171,50 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
 
   const recordedTaxa = [...species, ...shallowSpecies];
 
+  const title = sample.isPreciseSingleSpeciesSurvey()
+    ? 'Select Target Species'
+    : 'Species';
+
+  const onDeleteSurvey = async () => {
+    if (!sample.isPreciseSingleSpeciesSurvey()) {
+      goBack();
+      return;
+    }
+
+    if (!sample.isPreciseSingleSpeciesSurvey() || isAlertPresent) {
+      goBack();
+      return;
+    }
+
+    setIsAlertPresent(true);
+
+    const change = await shouldDeleteSurvey();
+    if (change) {
+      await sample.destroy();
+      setIsAlertPresent(false);
+      navigate('/home/user-surveys', 'root', 'push', undefined, {
+        unmount: true,
+      });
+      return;
+    }
+
+    setIsAlertPresent(false);
+  };
+
+  useOnBackButton(onDeleteSurvey);
+
+  const showCancelButton = sample.isPreciseSingleSpeciesSurvey();
+
   return (
     <Page id="precise-area-count-edit-taxa">
       <Header
-        title="Species"
+        title={title}
         rightSlot={<TaxonSearchFilters sample={sample} />}
+        BackButton={
+          showCancelButton ? () => cancelButtonWrap(onDeleteSurvey) : undefined
+        }
       />
+
       <Main>
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}

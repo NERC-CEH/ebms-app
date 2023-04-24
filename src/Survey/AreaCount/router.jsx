@@ -5,6 +5,8 @@ import { AttrPage, RouteWithModels, ModelLocationMap } from '@flumens';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import { observer } from 'mobx-react';
 import appConfig from 'common/config';
+import EggLaying from 'Survey/common/EggLaying';
+import Direction from 'Survey/common/Direction';
 import Home from './Home';
 import OccurrenceHome from './OccurrenceHome';
 import SpeciesOccurrences from './SpeciesOccurrences';
@@ -41,6 +43,8 @@ const getRoutes = (baseURL, config) => [
   [`${baseURL}/:smpId/edit/taxon`, Taxon],
   [`${baseURL}/:smpId/edit/details`, Details],
   [`${baseURL}/:smpId/edit/details/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/edit/details/direction`, Direction],
+  [`${baseURL}/:smpId/edit/details/eggLaying`, EggLaying],
   [`${baseURL}/:smpId/edit/speciesOccurrences/:taxa`, SpeciesOccurrences],
   [`${baseURL}/:smpId/edit/speciesOccurrences/:taxa/taxon`, Taxon],
   [

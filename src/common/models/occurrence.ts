@@ -102,6 +102,14 @@ export default class AppOccurrence extends Occurrence {
     return this.attrs.taxon;
   }
 
+  isPaintedLadySpecies() {
+    // scientific name does not have preferredId
+    return (
+      this?.attrs?.taxon?.preferredId === 432422 ||
+      this?.attrs?.taxon?.warehouse_id === 432422
+    );
+  }
+
   getTopSuggestion(suggestions?: any) {
     // eslint-disable-next-line no-param-reassign
     suggestions = suggestions || this.attrs.taxon?.suggestions;
