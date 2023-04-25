@@ -1,8 +1,8 @@
 import { FC, useState } from 'react';
 import Sample from 'models/sample';
 import appModel from 'models/app';
-import { IonIcon, IonBadge } from '@ionic/react';
-import { filterOutline } from 'ionicons/icons';
+import { IonLabel, IonButton } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 import FiltersModal from './FiltersModal';
 import './styles.scss';
 
@@ -16,9 +16,9 @@ const Header: FC<Props> = ({ sample }) => {
   const toggleModal = () => setShowModal(!showModal);
 
   const { speciesGroups } = sample.metadata;
-  const speciesGroupCount = speciesGroups.length;
+  const speciesGroupCount = sample.metadata.speciesGroups.length;
 
-  const showBadge = speciesGroups.length > 1;
+  const isMultiSpeciesGroupSelected = speciesGroups.length > 1;
 
   return (
     <>
@@ -29,14 +29,12 @@ const Header: FC<Props> = ({ sample }) => {
         appModel={appModel}
       />
 
-      <div id="species-filter">
-        <IonIcon onClick={toggleModal} icon={filterOutline} />
-        {showBadge && (
-          <IonBadge color="warning" className="pending-surveys-badge">
-            {speciesGroupCount}
-          </IonBadge>
-        )}
-      </div>
+      <IonButton onClick={toggleModal} className="filter-button" fill="outline">
+        <IonLabel>
+          <T>Groups</T>
+        </IonLabel>
+        {isMultiSpeciesGroupSelected && <b>({speciesGroupCount})</b>}
+      </IonButton>
     </>
   );
 };

@@ -10,7 +10,7 @@ import {
   IonIcon,
   IonBadge,
 } from '@ionic/react';
-import { useAlert, useToast, date as dateHelp } from '@flumens';
+import { useToast, useAlert, date as dateHelp } from '@flumens';
 import { useUserStatusCheck } from 'models/user';
 import { useValidateCheck } from 'models/sample';
 import butterflyIcon from 'common/images/butterfly.svg';
@@ -118,6 +118,10 @@ function Survey({ sample }) {
 
     const isValid = checkSampleStatus();
     if (!isValid) return;
+
+    if (sample.metadata.survey === 'precise-area') {
+      sample.setMissingSpeciesGroups();
+    }
 
     sample.upload().catch(toast.error);
   };

@@ -162,18 +162,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    sample.setMissingSpeciesGroups();
     sample.upload().catch(toast.error);
-
-    alert({
-      message: `${sample.attrs.speciesGroups}`,
-      buttons: [
-        {
-          text: 'Ok',
-          cssClass: 'primary',
-        },
-      ],
-    });
 
     navigate(`/home/user-surveys`, 'root');
   };

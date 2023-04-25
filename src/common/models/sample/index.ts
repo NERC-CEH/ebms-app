@@ -137,10 +137,6 @@ export default class AppSample extends Sample {
   }
 
   async upload() {
-    if (this.metadata.survey === 'precise-area') {
-      this.setMissingSpeciesGroups();
-    }
-
     if (
       this.remote.synchronising ||
       this.isUploaded() ||
