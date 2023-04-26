@@ -11,6 +11,12 @@ type Props = {
 };
 
 const Header: FC<Props> = ({ sample }) => {
+  if (!sample.metadata.speciesGroups) {
+    // eslint-disable-next-line no-param-reassign
+    sample.metadata.speciesGroups = appModel.attrs.speciesGroups;
+    sample.save();
+  }
+
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => setShowModal(!showModal);
@@ -31,9 +37,9 @@ const Header: FC<Props> = ({ sample }) => {
 
       <IonButton onClick={toggleModal} className="filter-button" fill="outline">
         <IonLabel>
-          <T>Groups</T>
+          <T>Groups</T>{' '}
+          {isMultiSpeciesGroupSelected && <b>({speciesGroupCount})</b>}
         </IonLabel>
-        {isMultiSpeciesGroupSelected && <b>({speciesGroupCount})</b>}
       </IonButton>
     </>
   );

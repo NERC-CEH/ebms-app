@@ -221,16 +221,18 @@ export default class AppSample extends Sample {
     };
 
     const existingSpeciesGroupsInSample = (group: SpeciesGroup) => {
+      const speciesGr = this.metadata?.speciesGroups?.length
+        ? this.metadata?.speciesGroups
+        : appModel.attrs.speciesGroups;
+
       const isUniqueGroup = uniqueSpeciesGroupList.includes(group.value);
-      const isDuplicate = [...this.metadata.speciesGroups].includes(
-        group.value
-      );
+      const isDuplicate = speciesGr.includes(group.value);
 
       if (isUniqueGroup && !isDuplicate) {
         return true;
       }
 
-      return this.metadata.speciesGroups.includes(group.value);
+      return speciesGr.includes(group.value);
     };
 
     const byDisabledProperty = (groupA: SpeciesGroup, groupB: SpeciesGroup) => {

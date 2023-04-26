@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Main, Attr } from '@flumens';
 import { observer } from 'mobx-react';
 import Sample from 'models/sample';
-import { AppModel } from 'models/app';
+import appModel, { AppModel } from 'models/app';
 import {
   IonButtons,
   IonToolbar,
@@ -22,6 +22,12 @@ type Props = {
 };
 
 const FiltersModal: FC<Props> = ({ toggleModal, showModal, sample }) => {
+  if (!sample.metadata.speciesGroups) {
+    // eslint-disable-next-line no-param-reassign
+    sample.metadata.speciesGroups = appModel.attrs.speciesGroups;
+    sample.save();
+  }
+
   const sampleConfig = sample.getSurvey();
   const { attrProps } = sampleConfig.metadata.speciesGroups.pageProps;
 
