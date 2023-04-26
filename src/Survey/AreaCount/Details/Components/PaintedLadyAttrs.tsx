@@ -13,7 +13,7 @@ const PaintedLadyAttrs: FC<Props> = ({ sample }) => {
   const isDisabled = sample.isUploaded();
   const { url } = useRouteMatch();
   const migrating = sample.attrs.behaviour === 'migrating';
-  const eggLaying = sample.attrs.behaviour === 'egg laying';
+  const eggLaying = sample.attrs.behaviour === 'egg-laying hostplants';
   const nectaring = sample.attrs.behaviour === 'nectaring';
   const mating = sample.attrs.behaviour === 'mating';
   const { wing } = sample.attrs;

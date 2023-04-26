@@ -16,36 +16,40 @@ const EggLaying: FC<Props> = ({ sample }) => {
   const { attrProps: attrPropsOther } = (sampleConfig as any).attrs
     .otherEggLaying.pageProps;
 
-  const isOtherFlowerSelected = sample.attrs.eggLaying === 'other';
-
   const onChange = (value: any) => {
     // eslint-disable-next-line no-param-reassign
     sample.attrs.eggLaying = value;
 
-    if (sample.attrs.eggLaying !== 'other') {
+    const hasOtherOptionSelected =
+      sample.attrs.eggLaying && sample.attrs.eggLaying.includes('other');
+
+    if (hasOtherOptionSelected) {
+      // eslint-disable-next-line no-param-reassign
+      sample.attrs.otherEggLaying = '';
+    } else {
       // eslint-disable-next-line no-param-reassign
       sample.attrs.otherEggLaying = null;
-      sample.save();
     }
+
+    sample.save();
   };
 
   return (
     <Page id="survey-egg-laying-page">
-      <Header title="Egg laying" />
+      <Header title="Hostplants" />
 
       <Main>
         <InfoMessage className="blue" icon={informationCircleOutline}>
-          What was the flower?
+          Please select the hostplants.
         </InfoMessage>
 
         <Attr
           attr="eggLayingFlower"
-          model={sample}
           onChange={onChange}
+          model={sample}
           {...attrProps}
         />
-
-        {isOtherFlowerSelected && (
+        {sample.attrs.otherEggLaying !== null && (
           <Attr attr="otherEggLaying" model={sample} {...attrPropsOther} />
         )}
       </Main>

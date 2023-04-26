@@ -16,6 +16,20 @@
   }
 }
 
-#attr-page-wing ion-label {
+#attr-page-eggLayingFlower,
+#attr-page-wing ion-label:first-letter {
+  text-transform: capitalize;
+}
+
+.attr-eggLayingFlower {
+  ion-label:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+#attr-page-wing,
+#attr-page-behaviour,
+#attr-page-mating,
+ion-radio-group ion-label:first-letter {
   text-transform: capitalize;
 }

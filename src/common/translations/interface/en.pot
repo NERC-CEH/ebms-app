@@ -2275,3 +2275,80 @@ msgstr "Please add the direction option."
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
 msgstr "Please add the altitude option."
+
+# Part of painted lady 
+msgid "egg-laying hostplants"
+msgstr "egg-laying hostplants"
+
+# Part of painted lady 
+msgid "migrating"
+msgstr "migrating"
+
+# Part of painted lady 
+msgid "nectaring"
+msgstr "nectaring"
+
+# Part of painted lady 
+msgid "mating"
+msgstr "mating"
+
+# Painted lady compass
+msgid "Unsupported device"
+msgstr "Unsupported device"
+
+# Painted lady compass
+msgid "Unfortunately, it looks like your device doesn't have the necessary sensor for the compass to function correctly. The compass relies on this sensor to detect the earth's magnetic field and determine your device's orientation relative to magnetic north. Thus, you will not be able to use compass on this device."
+msgstr "Unfortunately, it looks like your device doesn't have the necessary sensor for the compass to function correctly. The compass relies on this sensor to detect the earth's magnetic field and determine your device's orientation relative to magnetic north. Thus, you will not be able to use compass on this device."
+
+# Painted lady mating options
+msgid "territorial defence: other"
+msgstr "territorial defence: other"
+
+# Painted lady mating options
+msgid "territorial defence: hill-topping"
+msgstr "territorial defence: hill-topping"
+
+# Painted lady nectar option
+msgid "enter the nectar source here"
+msgstr "enter the nectar source here"
+
+# Painted lady direction options
+msgid "What was the butterfly flying altitude? (meters)"
+msgstr "What was the butterfly flying altitude? (meters)"
+
+# Painted lady direction options
+msgid "Please add the behaviour option."
+msgstr "Please add the behaviour option."
+
+# Painted lady direction options
+msgid "Please add the wing option."
+msgstr "Please add the wing option."
+
+# Painted lady egg laying hostplant option
+msgid "Other hostplant"
+msgstr "Other hostplant"
+
+# Painted lady direction option
+msgid "other"
+msgstr "other"
+
+# Painted lady direction option
+msgid "desert nettle"
+msgstr "desert nettle"
+
+# Painted lady direction option
+msgid "mallow"
+msgstr "mallow"
+
+# Painted lady direction option
+msgid "thistles"
+msgstr "thistles"
+
+# Painted lady direction option
+msgid "Hostplants"
+msgstr "Hostplants"
+
+# Painted lady direction option
+msgid "Please select the hostplants."
+msgstr "Please select the hostplants."
+

@@ -1,6 +1,6 @@
 import { FC, useState, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { Page, Header, Main, Attr, InfoMessage } from '@flumens';
+import { Page, Header, Main, Attr, InfoMessage, useAlert } from '@flumens';
 import Sample from 'models/sample';
 import { Trans as T } from 'react-i18next';
 import { informationCircleOutline } from 'ionicons/icons';
@@ -8,11 +8,33 @@ import { NavContext, IonButton, isPlatform } from '@ionic/react';
 import CompassModal from './CompassModal';
 import './styles.scss';
 
+const unsupportedDevice = (alert: any) => {
+  alert({
+    header: 'Unsupported device',
+    message: (
+      <T>
+        Unfortunately, it looks like your device doesn't have the necessary
+        sensor for the compass to function correctly. The compass relies on this
+        sensor to detect the earth's magnetic field and determine your device's
+        orientation relative to magnetic north. Thus, you will not be able to
+        use compass on this device.
+      </T>
+    ),
+    buttons: [
+      {
+        text: 'OK, got it',
+        cssClass: 'primary',
+      },
+    ],
+  });
+};
+
 type Props = {
   sample: Sample;
 };
 
 const Direction: FC<Props> = ({ sample }) => {
+  const alert = useAlert();
   const { goBack } = useContext(NavContext);
   let rotation = 0;
 
@@ -57,15 +79,18 @@ const Direction: FC<Props> = ({ sample }) => {
   };
 
   const addDeviceOrientationEvent = () => {
-    const hasAccelerationSensorAndGyroscope =
-      'LinearAccelerationSensor' in window && 'Gyroscope' in window;
-
-    if (hasAccelerationSensorAndGyroscope) {
-      window.addEventListener('deviceorientationabsolute', handler);
-      return;
+    if (
+      window.DeviceOrientationEvent &&
+      (DeviceOrientationEvent as any).requestPermission
+    ) {
+      if ('absolute' in DeviceOrientationEvent) {
+        window.addEventListener('deviceorientationabsolute', handler);
+      } else {
+        unsupportedDevice(alert);
+      }
+    } else {
+      unsupportedDevice(alert);
     }
-
-    window.addEventListener('deviceorientation', handler);
   };
 
   useEffect(() => {
@@ -79,7 +104,6 @@ const Direction: FC<Props> = ({ sample }) => {
 
     // eslint-disable-next-line consistent-return
     return () => {
-      window.removeEventListener('deviceorientation', handler);
       window.removeEventListener('deviceorientationabsolute', handler);
     };
   }, [startCompass, setStartCompass]);

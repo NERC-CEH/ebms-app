@@ -55,8 +55,8 @@ const verifyAttrs = model => {
   if (model.attrs.behaviour === 'egg-laying hostplants') {
     Yup.object()
       .shape({
-        eggLaying: Yup.string()
-          .nullable()
+        eggLaying: Yup.array()
+          .min(1, 'Please add the egg-laying hostplants option.')
           .required('Please add the egg-laying hostplants option.'),
       })
       .validateSync(model.attrs, { abortEarly: false });
@@ -99,19 +99,19 @@ const behaviourValues = [
 
 const altitudeValues = [
   {
-    value: '0-0.5',
+    value: '0 - 0.5',
     id: -1,
   },
   {
-    value: '0.5-1',
+    value: '0.5 - 1',
     id: -1,
   },
   {
-    value: '1-2',
+    value: '1 - 2',
     id: -1,
   },
   {
-    value: '2-5',
+    value: '2 - 5',
     id: -1,
   },
   {
@@ -156,7 +156,7 @@ const matingValues = [
     id: -1,
   },
   {
-    value: 'territorial defence: guarding a nectar source',
+    value: 'territorial defence: other',
     id: -1,
   },
   {
@@ -240,44 +240,6 @@ const speciesSurvey = merge({}, survey, {
         attrProps: {
           input: 'radio',
           info: 'What kind of mating was it?',
-
-          // inputProps: model => {
-          //   const options = [
-          //     {
-          //       value: 'territorial defence',
-          //       label: 'Territorial defence',
-          //       id: -1,
-          //     },
-          //     { value: 'mating', label: 'Mating', id: -1 },
-          //   ];
-
-          //   if (model.attrs.mating?.includes('territorial defence')) {
-          //     options.splice(
-          //       1,
-          //       0,
-          //       {
-          //         value: 'hill topping',
-          //         label: 'Hill topping',
-          //         id: -1,
-          //         className: 'checkbox-subEntry',
-          //       },
-          //       {
-          //         value: 'guarding a nectar source',
-          //         label: 'Guarding a nectar source',
-          //         id: -1,
-          //         className: 'checkbox-subEntry',
-          //       },
-          //       {
-          //         value: 'f orest margin',
-          //         label: 'Forest margin',
-          //         id: -1,
-          //         className: 'checkbox-subEntry',
-          //       }
-          //     );
-          //   }
-
-          //   return { options };
-          // },
           inputProps: { options: matingValues },
         },
 
@@ -291,7 +253,9 @@ const speciesSurvey = merge({}, survey, {
         headerProps: { title: 'Nectar' },
         attrProps: {
           input: 'textarea',
-          info: 'Please specify the nectar source.',
+          inputProps: {
+            placeholder: 'Enter the nectar source here',
+          },
         },
       },
       // remote: { id: -1 },
@@ -300,25 +264,23 @@ const speciesSurvey = merge({}, survey, {
     eggLaying: {
       menuProps: {
         icon: caterpillarIcon,
-        label: 'Egg-laying hostplants',
-        parse: value => `${value} `,
+        label: 'Hostplants',
       },
       pageProps: {
-        headerProps: { title: 'Egg-laying hostplants ' },
+        headerProps: { title: 'Hostplants' },
         attrProps: {
-          input: 'radio',
+          input: 'checkbox',
           inputProps: { options: flowersValues },
         },
       },
       // remote: { id: -1, values: flowersValues },
     },
-
     otherEggLaying: {
       pageProps: {
         attrProps: {
           input: 'textarea',
           inputProps: {
-            placeholder: 'What was the flower?',
+            placeholder: 'Other hostplant',
           },
         },
       },
