@@ -10,6 +10,14 @@ type Props = {
 };
 
 const PaintedLadyAttrs: FC<Props> = ({ sample }) => {
+  if (!sample.attrs.behaviour && !sample.attrs.wing) {
+    // eslint-disable-next-line no-param-reassign
+    sample.attrs.behaviour = null;
+    // eslint-disable-next-line no-param-reassign
+    sample.attrs.wing = [];
+    sample.save();
+  }
+
   const isDisabled = sample.isUploaded();
   const { url } = useRouteMatch();
   const migrating = sample.attrs.behaviour === 'migrating';

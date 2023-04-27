@@ -119,10 +119,6 @@ function Survey({ sample }) {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    if (sample.metadata.survey === 'precise-area') {
-      sample.setMissingSpeciesGroups();
-    }
-
     sample.upload().catch(toast.error);
   };
 

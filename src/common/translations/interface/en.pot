@@ -2102,15 +2102,9 @@ msgstr "Account delete"
 msgid "Are you sure you want to delete your account?<1>This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website.</1>"
 msgstr "Are you sure you want to delete your account?<1>This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website.</1>"
 
-
-
 # Part of Species Group selection
-msgid "<0>This option was moved to the species search page.</0>"
-msgstr "<0>This option was moved to the species search page.</0>"
-
-# Part of Species Group selection
-msgid "This option was moved to the species search page."
-msgstr "This option was moved to the species search page."
+msgid "This option was moved to the species search page inside the surveys. When a survey starts, you can select which species group you are recording."
+msgstr "This option was moved to the species search page inside the surveys. When a survey starts, you can select which species group you are recording."
 
 # Part of Species Group selection
 msgid "Groups"
@@ -2352,3 +2346,6 @@ msgstr "Hostplants"
 msgid "Please select the hostplants."
 msgstr "Please select the hostplants."
 
+# Painted lady info message
+msgid "This is a specific survey for the migration of "
+msgstr "This is a specific survey for the migration of "

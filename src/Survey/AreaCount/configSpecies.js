@@ -31,8 +31,8 @@ const verifyAttrs = model => {
   if (model.attrs.behaviour === 'mating') {
     Yup.object()
       .shape({
-        mating: Yup.array()
-          .min(1, 'Please add the mating option.')
+        mating: Yup.string()
+          .nullable()
           .required('Please add the mating option.'),
       })
       .validateSync(model.attrs, { abortEarly: false });
@@ -66,102 +66,102 @@ const verifyAttrs = model => {
 const wingConditionValues = [
   {
     value: 'fresh',
-    id: -1,
+    id: 20687,
   },
   {
     value: 'normal',
-    id: -1,
+    id: 20688,
   },
   {
     value: 'worn',
-    id: -1,
+    id: 20689,
   },
 ];
 
 const behaviourValues = [
   {
     value: 'migrating',
-    id: -1,
+    id: 20679,
   },
   {
     value: 'nectaring',
-    id: -1,
+    id: 20680,
   },
   {
     value: 'mating',
-    id: -1,
+    id: 20681,
   },
   {
     value: 'egg-laying hostplants',
-    id: -1,
+    id: 20682,
   },
 ];
 
 const altitudeValues = [
   {
     value: '0 - 0.5',
-    id: -1,
+    id: 20671,
   },
   {
     value: '0.5 - 1',
-    id: -1,
+    id: 20672,
   },
   {
     value: '1 - 2',
-    id: -1,
+    id: 20673,
   },
   {
     value: '2 - 5',
-    id: -1,
+    id: 20674,
   },
   {
     value: '5+',
-    id: -1,
+    id: 20675,
   },
 ];
 
 const flowersValues = [
   {
     value: 'thistles',
-    id: -1,
+    id: 20683,
   },
   {
     value: 'mallow',
-    id: -1,
+    id: 20684,
   },
   {
     value: 'desert nettle',
-    id: -1,
+    id: 20685,
   },
   {
     value: 'other',
-    id: -1,
+    id: 20686,
   },
 ];
 
 const directionValues = [
-  { value: 'S', id: 2461 },
-  { value: 'SW', id: 2462 },
-  { value: 'W', id: 2463 },
-  { value: 'NW', id: 2464 },
-  { value: 'N', id: 2465 },
-  { value: 'NE', id: 2466 },
-  { value: 'E', id: 2467 },
-  { value: 'SE', id: 2468 },
+  { value: 'S', id: 20663 },
+  { value: 'SW', id: 20664 },
+  { value: 'W', id: 20665 },
+  { value: 'NW', id: 20666 },
+  { value: 'N', id: 20667 },
+  { value: 'NE', id: 20668 },
+  { value: 'E', id: 20669 },
+  { value: 'SE', id: 20670 },
 ];
 
 const matingValues = [
   {
     value: 'territorial defence: hill-topping',
-    id: -1,
+    id: 20676,
   },
   {
     value: 'territorial defence: other',
-    id: -1,
+    id: 20677,
   },
   {
     value: 'mating',
-    id: -1,
+    id: 20678,
   },
 ];
 
@@ -183,6 +183,8 @@ const speciesSurvey = merge({}, survey, {
           inputProps: { options: wingConditionValues },
         },
       },
+
+      remote: { id: 1744, values: behaviourValues },
     },
 
     behaviour: {
@@ -207,7 +209,7 @@ const speciesSurvey = merge({}, survey, {
           inputProps: { options: behaviourValues },
         },
       },
-      // remote: { id: -1, values: behaviourValues },
+      remote: { id: 1742, values: behaviourValues },
     },
 
     direction: {
@@ -219,7 +221,7 @@ const speciesSurvey = merge({}, survey, {
           inputProps: { options: directionValues },
         },
       },
-      // remote: { id: -1, values: directionValues },
+      remote: { id: 1739, values: directionValues },
     },
 
     altitude: {
@@ -231,7 +233,7 @@ const speciesSurvey = merge({}, survey, {
           inputProps: { options: altitudeValues },
         },
       },
-      // remote: { id: -1, values: altitudeValues },
+      remote: { id: 1740, values: altitudeValues },
     },
 
     mating: {
@@ -243,7 +245,7 @@ const speciesSurvey = merge({}, survey, {
           inputProps: { options: matingValues },
         },
 
-        // remote: { id: -1 },
+        remote: { id: 1741, values: matingValues },
       },
     },
 
@@ -258,7 +260,7 @@ const speciesSurvey = merge({}, survey, {
           },
         },
       },
-      // remote: { id: -1 },
+      remote: { id: 1745 },
     },
 
     eggLaying: {
@@ -273,8 +275,9 @@ const speciesSurvey = merge({}, survey, {
           inputProps: { options: flowersValues },
         },
       },
-      // remote: { id: -1, values: flowersValues },
+      remote: { id: 1743, values: flowersValues },
     },
+
     otherEggLaying: {
       pageProps: {
         attrProps: {
@@ -284,7 +287,7 @@ const speciesSurvey = merge({}, survey, {
           },
         },
       },
-      // remote: { id: -1 },
+      remote: { id: 1746 },
     },
   },
 

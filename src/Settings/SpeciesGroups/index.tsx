@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { Page, Header, Main, InfoMessage } from '@flumens';
 import { informationCircleOutline } from 'ionicons/icons';
 import { IonList } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
 import speciesGroupImage from './speciesGroupImage.jpg';
 import './styles.scss';
 
@@ -13,7 +12,9 @@ const SpeciesGroups: FC = () => {
       <Header title="Species groups" />
       <Main>
         <InfoMessage className="blue" icon={informationCircleOutline}>
-          <T>This option was moved to the species search page.</T>
+          This option was moved to the species search page inside the surveys.
+          When a survey starts, you can select which species group you are
+          recording.
         </InfoMessage>
 
         <IonList lines="none">

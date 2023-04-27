@@ -2,7 +2,7 @@ import * as Yup from 'yup';
 import { date as dateHelp } from '@flumens';
 import { chatboxOutline } from 'ionicons/icons';
 import caterpillarIcon from 'common/images/caterpillar.svg';
-import groups from 'common/data/species/groups.json';
+import groups from 'common/data/species/groups';
 import { Taxon } from 'common/models/occurrence';
 import Sample from 'models/sample';
 import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
@@ -142,10 +142,11 @@ export const speciesGroupsAttr = {
       },
 
       inputProps: (model: Sample) => {
-        const groupOption = ([value, { label }]: any) => {
+        const groupOption = ([value, { label, icon }]: any) => {
           const disabled = model.metadata.saved;
 
           return {
+            icon,
             value,
             label,
             disabled,

@@ -153,6 +153,10 @@ export default class AppSample extends Sample {
     const isActivated = await userModel.checkActivation();
     if (!isActivated) return false;
 
+    if (this.metadata.survey === 'precise-area') {
+      this.setMissingSpeciesGroups();
+    }
+
     this.cleanUp();
 
     return this.saveRemote();
@@ -253,6 +257,11 @@ export default class AppSample extends Sample {
   }
 
   setMissingSpeciesGroups() {
+    if (!this.attrs.speciesGroups) {
+      this.attrs.speciesGroups = [];
+      this.save();
+    }
+
     const formattedGroups = Object.values(groups);
 
     const checkIfNewSpeciesGroupsAreAdded = (smp: Sample) => {

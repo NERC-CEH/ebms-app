@@ -14,6 +14,8 @@ const speciesGroupImages = {
   261: bumblebeeIcon,
 };
 
+const PAINTED_LADY_OCCURRENCE = 432422;
+
 export interface SpeciesGroup {
   id: number;
   label: string;
@@ -116,8 +118,8 @@ export default class AppOccurrence extends Occurrence {
   isPaintedLadySpecies() {
     // scientific name does not have preferredId
     return (
-      this?.attrs?.taxon?.preferredId === 432422 ||
-      this?.attrs?.taxon?.warehouse_id === 432422
+      this?.attrs?.taxon?.preferredId === PAINTED_LADY_OCCURRENCE ||
+      this?.attrs?.taxon?.warehouse_id === PAINTED_LADY_OCCURRENCE
     );
   }
 
