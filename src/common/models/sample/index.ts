@@ -12,7 +12,7 @@ import {
 } from '@flumens';
 import { useTranslation } from 'react-i18next';
 import surveys from 'common/config/surveys';
-import groups from 'common/data/species/groups.json';
+import groups from 'common/data/species/groups';
 import Occurrence, { SpeciesGroup } from '../occurrence';
 import Media from '../media';
 import { modelStore } from '../store';

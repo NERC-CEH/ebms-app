@@ -2,7 +2,7 @@ import { createRef, Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonSearchbar, withIonLifeCycle } from '@ionic/react';
 import appModel from 'models/app';
-import groups from 'common/data/species/groups.json';
+import groups from 'common/data/species/groups';
 import SpeciesSearchEngine from './utils/taxon_search_engine';
 import Suggestions from './components/Suggestions';
 import './styles.scss';

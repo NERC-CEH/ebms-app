@@ -1,7 +1,18 @@
 import { Occurrence, OccurrenceOptions, OccurrenceAttrs } from '@flumens';
 import appModel from 'models/app';
 import { MachineInvolvement } from 'Survey/Moth/config';
+import butterflyIcon from 'common/images/butterfly.svg';
+import mothIcon from 'common/images/moth.svg';
+import bumblebeeIcon from 'common/images/bumblebee.svg';
+import dragonflyIcon from 'common/images/dragonfly.svg';
 import Media from './media';
+
+const speciesGroupImages = {
+  251: butterflyIcon,
+  260: mothIcon,
+  265: dragonflyIcon,
+  261: bumblebeeIcon,
+};
 
 export interface SpeciesGroup {
   id: number;
@@ -109,6 +120,9 @@ export default class AppOccurrence extends Occurrence {
       this?.attrs?.taxon?.warehouse_id === 432422
     );
   }
+
+  getSpeciesGroupIcon = () =>
+    (speciesGroupImages as any)[this.attrs.taxon.group];
 
   getTopSuggestion(suggestions?: any) {
     // eslint-disable-next-line no-param-reassign

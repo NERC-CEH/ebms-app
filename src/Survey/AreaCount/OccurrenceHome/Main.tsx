@@ -53,7 +53,7 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
             <MenuAttrItem
               routerLink={`${baseURL}/taxon`}
               disabled={isDisabled}
-              icon={butterflyIcon}
+              icon={occurrence.getSpeciesGroupIcon()}
               label="Species"
               value={species}
             />

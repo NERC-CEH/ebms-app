@@ -17,7 +17,6 @@ import GridRefValue from 'Components/GridRefValue';
 import { observer } from 'mobx-react';
 import { Main, MenuAttrItem, InfoBackgroundMessage } from '@flumens';
 import { Trans as T } from 'react-i18next';
-import butterflyIcon from 'common/images/butterfly.svg';
 import './styles.scss';
 
 type Props = {
@@ -94,6 +93,8 @@ const EditOccurrence: FC<Props> = ({
 
   const count = samples.length > 1 ? samples.length : null;
 
+  const speciesGroupImage = samples[0].occurrences[0].getSpeciesGroupIcon();
+
   return (
     <Main id="area-count-occurrence-edit">
       <IonList lines="full">
@@ -102,7 +103,7 @@ const EditOccurrence: FC<Props> = ({
             <MenuAttrItem
               routerLink={`${match.url}/taxon`}
               disabled={isDisabled}
-              icon={butterflyIcon}
+              icon={speciesGroupImage}
               label="Species"
               value={species}
             />

@@ -32,6 +32,12 @@
   .attr-speciesGroups {
     background: var(--ion-page-background) !important;
   }
+
+  ion-img {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px;
+  }
 }
 
 #species-filter {

@@ -13,7 +13,6 @@ import {
   CounterInput,
 } from '@flumens';
 import PhotoPicker from 'common/Components/PhotoPicker';
-import butterflyIcon from 'common/images/butterfly.svg';
 import numberIcon from 'common/images/number.svg';
 import './styles.scss';
 
@@ -45,7 +44,7 @@ const TransectHomeController: FC<Props> = ({ occurrence }) => {
             <MenuAttrItem
               routerLink={`${url}/taxa`}
               disabled={isDisabled}
-              icon={butterflyIcon}
+              icon={occurrence.getSpeciesGroupIcon()}
               label="Species"
               value={species}
             />
