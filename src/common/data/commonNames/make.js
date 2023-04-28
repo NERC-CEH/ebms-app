@@ -18,7 +18,7 @@ const LANGUAGE_ISO_MAPPING = {
   ces: 'cs-CZ',
   rus: 'ru-RU',
   bul: 'bg-BG',
-  slv: 'sl-SL',
+  slv: 'sl-SI',
   pol: 'pl-PL',
   cat: 'ca-ES',
   dan: 'da-DK',

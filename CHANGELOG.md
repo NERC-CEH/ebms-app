@@ -1,3 +1,7 @@
+## 1.20.0
+
+Fixed Slovenian species common names.
+
 ## 1.19.0
 
 Added French, Hungarian languages.
