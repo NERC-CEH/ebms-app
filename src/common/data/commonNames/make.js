@@ -23,6 +23,7 @@ const LANGUAGE_ISO_MAPPING = {
   cat: 'ca-ES',
   dan: 'da-DK',
   jpn: 'ja-JP',
+  fra: 'fr-FR',
 };
 
 const UNKNOWN_SPECIES = {
