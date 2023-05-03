@@ -149,6 +149,7 @@ export type Attrs = ModelAttrs & {
   showWhatsNewInVersion118: boolean;
   showGPSPermissionTip: boolean;
   showCommonNamesInGuide: boolean;
+  showCopyHelpTip: boolean;
   transectsRefreshTimestamp: number | null;
 } & SurveyDraftKeys;
 
@@ -181,6 +182,7 @@ const defaults: Attrs = {
   showCommonNamesInGuide: true,
 
   // tips
+  showCopyHelpTip: true,
   showGuideHelpTip: true,
   showSurveysDeleteTip: true,
   showSurveyUploadTip: true,

@@ -14,6 +14,7 @@ import PhotoPicker from 'common/Components/PhotoPicker';
 import { Main, MenuAttrItem } from '@flumens';
 import GridRefValue from 'Components/GridRefValue';
 import caterpillarIcon from 'common/images/caterpillar.svg';
+import PaintedLadyAttrs from './Components/PaintedLadyAttrs';
 import './styles.scss';
 
 type Props = {
@@ -41,9 +42,24 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
     location = <GridRefValue sample={subSample} />;
   }
 
+  const speciesName = occurrence.getTaxonName();
+
   return (
     <Main id="area-count-occurrence-edit">
       <IonList lines="full">
+        {occurrence.isPaintedLadySpecies() && (
+          <>
+            <IonItemDivider>
+              <T>{speciesName}</T>
+            </IonItemDivider>
+            <div className="rounded">
+              {subSample.isPaintedLadySurvey() && (
+                <PaintedLadyAttrs occurrence={occurrence} />
+              )}
+            </div>
+          </>
+        )}
+
         <IonItemDivider>
           <T>Details</T>
         </IonItemDivider>

@@ -34,12 +34,6 @@ type Attrs = SampleAttrs & {
   reliability?: string;
   recorders?: number;
   speciesGroups: string[];
-  // PaintedLady survey
-  wing?: any;
-  behaviour?: any;
-  direction?: string | null;
-  eggLaying?: string | null;
-  otherEggLaying?: string | null;
 };
 
 export default class AppSample extends Sample {
@@ -58,6 +52,8 @@ export default class AppSample extends Sample {
   media: Media[] = this.media;
 
   shallowSpeciesList = observable([]);
+
+  copyAttributes = observable({});
 
   timerPausedTime = observable<any>({ time: null });
 
@@ -297,7 +293,12 @@ export default class AppSample extends Sample {
   }
 
   isPaintedLadySurvey() {
-    if (!this.samples.length) return false;
+    if (this.parent) {
+      return (
+        this.metadata.survey === 'precise-single-species-area' &&
+        this.occurrences[0].isPaintedLadySpecies()
+      );
+    }
 
     return (
       this.metadata.survey === 'precise-single-species-area' &&

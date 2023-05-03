@@ -1,7 +1,7 @@
 import { FC, useContext } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
-import { toJS } from 'mobx';
+import { toJS, observable } from 'mobx';
 import { Page, useAlert, useToast, Attr } from '@flumens';
 import i18n from 'i18next';
 import { NavContext } from '@ionic/react';
@@ -10,6 +10,7 @@ import Sample, { useValidateCheck } from 'models/sample';
 import savedSamples from 'models/collections/samples';
 import appModel, { SurveyDraftKeys } from 'models/app';
 import { useUserStatusCheck } from 'models/user';
+import { useDeleteConfirmation } from '../SpeciesOccurrences';
 import Header from './Header';
 import Main from './Main';
 
@@ -154,6 +155,7 @@ const HomeController: FC<Props> = ({ sample }) => {
   const toast = useToast();
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
+  const confirmDelete = useDeleteConfirmation();
 
   const _processSubmission = async () => {
     const isUserOK = await checkUserStatus();
@@ -358,6 +360,70 @@ const HomeController: FC<Props> = ({ sample }) => {
     sample.save();
   };
 
+  const deleteSingleSample = async (smp: Sample) => {
+    const shouldDelete = await confirmDelete();
+    if (!shouldDelete) return;
+
+    const taxon = { ...smp.occurrences[0].attrs.taxon };
+    await smp.destroy();
+
+    const byTaxonId = (s: Sample) =>
+      s.occurrences[0].attrs.taxon.preferredId === taxon.preferredId ||
+      s.occurrences[0].attrs.taxon.warehouse_id === taxon.warehouse_id;
+
+    const isLastSampleDeleted = ![...sample.samples].filter(byTaxonId).length;
+
+    if (!isLastSampleDeleted && !sample.isPreciseSingleSpeciesSurvey()) return;
+
+    if (isLastSampleDeleted) {
+      const survey = sample.getSurvey();
+
+      const zeroAbundace = 't';
+      const newSubSample = survey.smp.create(
+        Sample,
+        Occurrence,
+        taxon,
+        zeroAbundace
+      );
+      sample.samples.push(newSubSample);
+      sample.save();
+    }
+  };
+
+  const navigateToOccurrence = (smp: Sample) => {
+    const { url } = match;
+    const occ = smp.occurrences[0];
+
+    navigate(`${url}/samples/${smp.cid}/occ/${occ.cid}`);
+  };
+
+  const cloneSubSample = async (copiedSubSample: Sample, ref: any) => {
+    // eslint-disable-next-line no-param-reassign
+    sample.copyAttributes = {};
+    sample.save();
+
+    // eslint-disable-next-line no-param-reassign
+    sample.copyAttributes = toJS(copiedSubSample.occurrences[0].attrs);
+    // eslint-disable-next-line no-param-reassign
+    (sample.copyAttributes as any).timeOfSighting = null;
+
+    const taxon = { ...copiedSubSample.occurrences[0].attrs.taxon };
+
+    const survey = sample.getSurvey();
+
+    const newSubSample = survey.smp.create(Sample, Occurrence, taxon);
+
+    newSubSample.occurrences[0].attrs = observable(
+      toJS(copiedSubSample.occurrences[0].attrs)
+    );
+
+    sample.samples.push(newSubSample);
+    newSubSample.startGPS();
+
+    await ref.current.closeOpened();
+    toast.success('Copied!');
+  };
+
   const isDisabled = !!sample.metadata.synced_on;
 
   const { areaSurveyListSortedByTime } = appModel.attrs;
@@ -386,6 +452,9 @@ const HomeController: FC<Props> = ({ sample }) => {
         onToggleSpeciesSort={toggleSpeciesSort}
         isDisabled={isDisabled}
         copyPreviousSurveyTaxonList={copyPreviousSurveyTaxonList}
+        deleteSingleSample={deleteSingleSample}
+        navigateToOccurrence={navigateToOccurrence}
+        cloneSubSample={cloneSubSample}
       />
     </Page>
   );

@@ -1,7 +1,19 @@
 #precise-area-count-edit {
+  ion-spinner {
+    width: 15px;
+  }
+
   .website-link {
     margin: 10px auto 0;
     max-width: 80%;
+  }
+
+  .info-background-message {
+    max-width: 300px;
+
+    span {
+      padding: 20px 10px;
+    }
   }
 
   ion-list {
@@ -10,6 +22,11 @@
   .item-disabled #countdown {
     opacity: 0.5;
     margin-right: 10px;
+  }
+
+  .copy-slider ion-icon {
+    margin: 0 10px;
+    font-size: 1.3em;
   }
 
   #countdown {
@@ -43,6 +60,17 @@
     transform: translate(-50%, 0);
   }
 
+  #add-single {
+    width: 40%;
+    margin: 10px 0;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+
+    ion-label {
+      margin: 0 30px;
+    }
+  }
+
   #species-list-sort {
     text-align: end;
     ion-button {
@@ -68,7 +96,7 @@
       ion-label {
         width: 100%;
         text-align: center;
-        font-weight: normal;
+        font-weight: 400;
         font-size: 0.9em;
 
         &:nth-of-type(2) {
@@ -87,9 +115,83 @@
     ion-item {
       --padding-start: 0;
 
+      .time {
+        max-width: fit-content;
+      }
+
+      .behaviour-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1 !important;
+
+        .icon {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          opacity: 1;
+        }
+
+        ion-label {
+          max-width: 90px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+
       ion-label {
-        margin-left: 16px;
+        margin: 7px;
         font-weight: 700;
+      }
+    }
+
+    .attributes {
+      max-width: 90% !important;
+
+      .wraps {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+
+        ion-badge {
+          display: flex;
+          min-width: fit-content;
+        }
+      }
+    }
+
+    .other-value,
+    .wing-value {
+      margin: 0 !important;
+    }
+
+    .other-value {
+      margin: 0 !important;
+      font-weight: 400 !important;
+      display: block !important;
+    }
+
+    .direction-wrapper {
+      display: flex;
+      ion-icon {
+        transform: rotate(45deg);
+      }
+      ion-label {
+        font-weight: 400 !important;
+      }
+    }
+
+    .direction-icon {
+      ion-icon {
+        transform: rotate(45deg) !important;
+      }
+    }
+
+    .altitude-icon {
+      ion-icon {
+        transform: rotate(135deg);
       }
     }
 
@@ -112,5 +214,23 @@
 ion-alert.speciesGroupAlert {
   .alert-message {
     padding: 0;
+  }
+}
+
+.copy-attributes-alert {
+  .alert-message div {
+    width: 30px;
+    height: 30px;
+    background: var(--ion-color-secondary);
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 5px;
+    position: relative;
+    align-items: center;
+    top: 4px;
+
+    ion-icon {
+      font-size: '1em';
+    }
   }
 }

@@ -1,9 +1,8 @@
 import { FC, useState, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { Page, Header, Main, Attr, InfoMessage, useAlert } from '@flumens';
-import Sample from 'models/sample';
+import { Page, Header, Main, Attr, useAlert } from '@flumens';
+import Occurrence from 'models/occurrence';
 import { Trans as T } from 'react-i18next';
-import { informationCircleOutline } from 'ionicons/icons';
 import { NavContext, IonButton, isPlatform } from '@ionic/react';
 import CompassModal from './CompassModal';
 import './styles.scss';
@@ -30,10 +29,10 @@ const unsupportedDevice = (alert: any) => {
 };
 
 type Props = {
-  sample: Sample;
+  occurrence: Occurrence;
 };
 
-const Direction: FC<Props> = ({ sample }) => {
+const Direction: FC<Props> = ({ occurrence }) => {
   const alert = useAlert();
   const { goBack } = useContext(NavContext);
   let rotation = 0;
@@ -60,18 +59,23 @@ const Direction: FC<Props> = ({ sample }) => {
   const [rotationValue, setRotationValue] = useState(0);
   const [startCompass, setStartCompass] = useState(false);
 
-  const sampleConfig = sample.getSurvey();
-  const { attrProps } = sampleConfig.attrs.direction.pageProps;
+  const occurrenceConfig = occurrence.getSurvey();
+  const { attrProps } = occurrenceConfig.attrs.direction.pageProps;
 
   const onValueChange = (directionValue: any) => {
     // eslint-disable-next-line no-param-reassign
-    sample.attrs.direction = directionValue;
-    sample.save();
+    occurrence.attrs.direction = directionValue;
+    occurrence.save();
 
     goBack();
   };
 
   const handler = (e: any) => {
+    if (e.alpha === null) {
+      unsupportedDevice(alert);
+      return;
+    }
+
     const direction = e.alpha >= 359 ? 359 : Math.round(e.alpha);
 
     const normalizeDirection = normalizeValue(direction);
@@ -79,6 +83,11 @@ const Direction: FC<Props> = ({ sample }) => {
   };
 
   const addDeviceOrientationEvent = () => {
+    if (isPlatform('android')) {
+      window.addEventListener('deviceorientationabsolute', handler);
+      return;
+    }
+
     if (
       window.DeviceOrientationEvent &&
       (DeviceOrientationEvent as any).requestPermission
@@ -130,13 +139,9 @@ const Direction: FC<Props> = ({ sample }) => {
         <Header title="Direction" rightSlot={showCompassModal()} />
 
         <Main>
-          <InfoMessage className="blue" icon={informationCircleOutline}>
-            Please add the direction.
-          </InfoMessage>
-
           <Attr
             attr="direction"
-            model={sample}
+            model={occurrence}
             onChange={onValueChange}
             {...attrProps}
           />

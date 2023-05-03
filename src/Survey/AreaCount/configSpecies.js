@@ -4,95 +4,46 @@ import { areaCountSchema } from 'Survey/common/config';
 import { resizeOutline, flowerOutline, arrowBackOutline } from 'ionicons/icons';
 import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from 'common/images/caterpillar.svg';
-
 import { merge } from 'lodash';
+import i18n from 'i18next';
 import survey from './config';
 
-const verifyAttrs = model => {
-  Yup.object()
-    .shape({
-      wing: Yup.array().min(1, 'Please add the wing option.').required(),
-      behaviour: Yup.string()
-        .nullable()
-        .required('Please add the behaviour option.'),
-    })
-    .validateSync(model.attrs, { abortEarly: false });
+const translateEggLayingValue = eggLayingValues => {
+  if (!eggLayingValues?.length) return null;
 
-  if (model.attrs.behaviour === 'nectaring') {
-    Yup.object()
-      .shape({
-        nectarSource: Yup.string()
-          .nullable()
-          .required('Please add the nectar option.'),
-      })
-      .validateSync(model.attrs, { abortEarly: false });
-  }
-
-  if (model.attrs.behaviour === 'mating') {
-    Yup.object()
-      .shape({
-        mating: Yup.string()
-          .nullable()
-          .required('Please add the mating option.'),
-      })
-      .validateSync(model.attrs, { abortEarly: false });
-  }
-
-  if (model.attrs.behaviour === 'migrating') {
-    Yup.object()
-      .shape({
-        direction: Yup.string()
-          .nullable()
-          .required('Please add the direction option.'),
-
-        altitude: Yup.string()
-          .nullable()
-          .required('Please add the altitude option.'),
-      })
-      .validateSync(model.attrs, { abortEarly: false });
-  }
-
-  if (model.attrs.behaviour === 'egg-laying hostplants') {
-    Yup.object()
-      .shape({
-        eggLaying: Yup.array()
-          .min(1, 'Please add the egg-laying hostplants option.')
-          .required('Please add the egg-laying hostplants option.'),
-      })
-      .validateSync(model.attrs, { abortEarly: false });
-  }
+  return eggLayingValues.map(value => i18n.t(value)).join(', ');
 };
 
 const wingConditionValues = [
   {
-    value: 'fresh',
+    value: 'Fresh',
     id: 20687,
   },
   {
-    value: 'normal',
+    value: 'Normal',
     id: 20688,
   },
   {
-    value: 'worn',
+    value: 'Worn',
     id: 20689,
   },
 ];
 
 const behaviourValues = [
   {
-    value: 'migrating',
+    value: 'Migrating',
     id: 20679,
   },
   {
-    value: 'nectaring',
+    value: 'Nectaring',
     id: 20680,
   },
   {
-    value: 'mating',
+    value: 'Mating',
     id: 20681,
   },
   {
-    value: 'egg-laying hostplants',
+    value: 'Egg-laying hostplants',
     id: 20682,
   },
 ];
@@ -122,19 +73,19 @@ const altitudeValues = [
 
 const flowersValues = [
   {
-    value: 'thistles',
+    value: 'Thistles',
     id: 20683,
   },
   {
-    value: 'mallow',
+    value: 'Mallow',
     id: 20684,
   },
   {
-    value: 'desert nettle',
+    value: 'Desert nettle',
     id: 20685,
   },
   {
-    value: 'other',
+    value: 'Other',
     id: 20686,
   },
 ];
@@ -152,15 +103,15 @@ const directionValues = [
 
 const matingValues = [
   {
-    value: 'territorial defence: hill-topping',
+    value: 'Territorial defence: hill-topping',
     id: 20676,
   },
   {
-    value: 'territorial defence: other',
+    value: 'Territorial defence: other',
     id: 20677,
   },
   {
-    value: 'mating',
+    value: 'Mating',
     id: 20678,
   },
 ];
@@ -169,127 +120,6 @@ const speciesSurvey = merge({}, survey, {
   id: 645,
   name: 'precise-single-species-area',
   label: '15min Single Species Count',
-
-  attrs: {
-    wing: {
-      menuProps: {
-        label: 'Wing',
-        icon: butterflyIcon,
-      },
-      pageProps: {
-        attrProps: {
-          info: 'What is the wing condition?',
-          input: 'checkbox',
-          inputProps: { options: wingConditionValues },
-        },
-      },
-
-      remote: { id: 1744, values: behaviourValues },
-    },
-
-    behaviour: {
-      menuProps: { icon: butterflyIcon },
-      pageProps: {
-        attrProps: {
-          input: 'radio',
-          info: 'What was the behaviour?',
-          set: (value, model) => {
-            if (model.attrs.behaviour !== value) {
-              model.attrs.direction = null;
-              model.attrs.altitude = null;
-              model.attrs.egg = null;
-              model.attrs.nectarSource = null;
-              model.attrs.eggLaying = null;
-              model.attrs.otherEggLaying = null;
-            }
-            // eslint-disable-next-line no-param-reassign
-            model.attrs.behaviour = value;
-            model.save();
-          },
-          inputProps: { options: behaviourValues },
-        },
-      },
-      remote: { id: 1742, values: behaviourValues },
-    },
-
-    direction: {
-      menuProps: { icon: arrowBackOutline },
-      pageProps: {
-        attrProps: {
-          input: 'radio',
-
-          inputProps: { options: directionValues },
-        },
-      },
-      remote: { id: 1739, values: directionValues },
-    },
-
-    altitude: {
-      menuProps: { icon: resizeOutline, parse: value => `${value} m` },
-      pageProps: {
-        attrProps: {
-          input: 'radio',
-          info: 'What was the butterfly flying altitude? (meters)',
-          inputProps: { options: altitudeValues },
-        },
-      },
-      remote: { id: 1740, values: altitudeValues },
-    },
-
-    mating: {
-      menuProps: { icon: butterflyIcon },
-      pageProps: {
-        attrProps: {
-          input: 'radio',
-          info: 'What kind of mating was it?',
-          inputProps: { options: matingValues },
-        },
-
-        remote: { id: 1741, values: matingValues },
-      },
-    },
-
-    nectarSource: {
-      menuProps: { icon: flowerOutline, label: 'Nectar source' },
-      pageProps: {
-        headerProps: { title: 'Nectar' },
-        attrProps: {
-          input: 'textarea',
-          inputProps: {
-            placeholder: 'Enter the nectar source here',
-          },
-        },
-      },
-      remote: { id: 1745 },
-    },
-
-    eggLaying: {
-      menuProps: {
-        icon: caterpillarIcon,
-        label: 'Hostplants',
-      },
-      pageProps: {
-        headerProps: { title: 'Hostplants' },
-        attrProps: {
-          input: 'checkbox',
-          inputProps: { options: flowersValues },
-        },
-      },
-      remote: { id: 1743, values: flowersValues },
-    },
-
-    otherEggLaying: {
-      pageProps: {
-        attrProps: {
-          input: 'textarea',
-          inputProps: {
-            placeholder: 'Other hostplant',
-          },
-        },
-      },
-      remote: { id: 1746 },
-    },
-  },
 
   smp: {
     create: (appSample, appOccurrence, taxon, zeroAbundance) => {
@@ -318,6 +148,185 @@ const speciesSurvey = merge({}, survey, {
             },
           },
         },
+
+        wing: {
+          menuProps: {
+            label: 'Wing',
+            icon: butterflyIcon,
+          },
+          pageProps: {
+            headerProps: { title: 'Wing condition' },
+            attrProps: {
+              input: 'checkbox',
+              inputProps: { options: wingConditionValues },
+            },
+          },
+          remote: {
+            id: 977,
+            values(wingValues, submission) {
+              // eslint-disable-next-line
+              submission.values = {
+                ...submission.values,
+              };
+
+              const bySameGroup = wingObject =>
+                wingValues.includes(wingObject.value);
+              const extractID = obj => obj.id;
+
+              const wingValueIDs = wingConditionValues
+                .filter(bySameGroup)
+                .map(extractID);
+
+              // eslint-disable-next-line no-param-reassign
+              submission.values['occAttr:977'] = wingValueIDs;
+            },
+          },
+        },
+
+        behaviour: {
+          menuProps: { icon: butterflyIcon },
+          pageProps: {
+            attrProps: {
+              input: 'radio',
+              set: (value, model) => {
+                if (model.attrs.behaviour !== value) {
+                  model.attrs.direction = null;
+                  model.attrs.altitude = null;
+                  model.attrs.egg = null;
+                  model.attrs.nectarSource = null;
+                  model.attrs.eggLaying = [];
+                  model.attrs.otherEggLaying = null;
+                  model.attrs.mating = null;
+                }
+                // eslint-disable-next-line no-param-reassign
+                model.attrs.behaviour = value;
+                model.save();
+              },
+              inputProps: { options: behaviourValues },
+            },
+          },
+          remote: { id: 978, values: behaviourValues },
+        },
+
+        direction: {
+          menuProps: { icon: arrowBackOutline },
+          pageProps: {
+            attrProps: {
+              input: 'radio',
+
+              inputProps: { options: directionValues },
+            },
+          },
+          remote: { id: 979, values: directionValues },
+        },
+
+        altitude: {
+          menuProps: { icon: resizeOutline, parse: value => `${value} m` },
+          pageProps: {
+            attrProps: {
+              input: 'radio',
+              info: 'What was the butterfly flying altitude? (meters)',
+              inputProps: { options: altitudeValues },
+            },
+          },
+          remote: { id: 980, values: altitudeValues },
+        },
+
+        mating: {
+          menuProps: { icon: butterflyIcon },
+          pageProps: {
+            attrProps: {
+              input: 'radio',
+              inputProps: { options: matingValues },
+            },
+
+            remote: { id: 981, values: matingValues },
+          },
+        },
+
+        nectarSource: {
+          menuProps: { icon: flowerOutline, label: 'Nectar' },
+          pageProps: {
+            headerProps: { title: 'Nectar source' },
+            attrProps: {
+              input: 'textarea',
+              inputProps: {
+                placeholder: 'Enter the nectar source here',
+              },
+            },
+          },
+          remote: { id: 976 },
+        },
+
+        eggLaying: {
+          menuProps: {
+            icon: caterpillarIcon,
+            label: 'Hostplants',
+            parse: translateEggLayingValue,
+          },
+          pageProps: {
+            headerProps: { title: 'Hostplants' },
+            attrProps: {
+              input: 'checkbox',
+              inputProps: { options: flowersValues },
+            },
+          },
+
+          remote: {
+            id: 982,
+            values(flowerValue, submission) {
+              // eslint-disable-next-line
+              submission.values = {
+                ...submission.values,
+              };
+
+              const bySameGroup = wingObject =>
+                flowerValue.includes(wingObject.value);
+              const extractID = obj => obj.id;
+
+              const flowersIDs = flowersValues
+                .filter(bySameGroup)
+                .map(extractID);
+
+              // eslint-disable-next-line no-param-reassign
+              submission.values['occAttr:982'] = flowersIDs;
+            },
+          },
+        },
+
+        otherEggLaying: {
+          menuProps: {
+            icon: caterpillarIcon,
+            label: 'Other species',
+          },
+          pageProps: {
+            headerProps: { title: 'Other species' },
+            attrProps: {
+              input: 'textarea',
+              inputProps: {
+                placeholder: 'Other hostplant',
+              },
+            },
+          },
+          remote: { id: 983 },
+        },
+
+        otherThistles: {
+          menuProps: {
+            icon: caterpillarIcon,
+            label: 'Thistle species',
+          },
+          pageProps: {
+            headerProps: { title: 'Thistle species' },
+            attrProps: {
+              input: 'textarea',
+              inputProps: {
+                placeholder: 'What kind of thistle was it?',
+              },
+            },
+          },
+          remote: { id: 984 },
+        },
       },
     },
   },
@@ -333,10 +342,6 @@ const speciesSurvey = merge({}, survey, {
               .required('Please add your target species'),
           })
           .validateSync(model, { abortEarly: false });
-      }
-
-      if (model.isPaintedLadySurvey()) {
-        verifyAttrs(model);
       }
     } catch (attrError) {
       return attrError;

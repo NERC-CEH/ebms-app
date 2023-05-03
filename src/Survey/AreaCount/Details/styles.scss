@@ -1,39 +1,5 @@
 #survey-area-count-detail-edit {
-  .text-capitalize ion-label[slot='end'] {
-    text-transform: capitalize;
-  }
-
-  .direction-icon {
-    ion-icon {
-      transform: rotate(45deg) !important;
-    }
-  }
-
-  .altitude-icon {
-    ion-icon {
-      transform: rotate(135deg);
-    }
-  }
-
   .paintedLady {
     margin-bottom: 0;
   }
-}
-
-#attr-page-eggLayingFlower,
-#attr-page-wing ion-label:first-letter {
-  text-transform: capitalize;
-}
-
-.attr-eggLayingFlower {
-  ion-label:first-letter {
-    text-transform: capitalize;
-  }
-}
-
-#attr-page-wing,
-#attr-page-behaviour,
-#attr-page-mating,
-ion-radio-group ion-label:first-letter {
-  text-transform: capitalize;
 }

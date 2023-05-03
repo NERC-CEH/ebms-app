@@ -2138,29 +2138,10 @@ msgstr "Wing"
 msgid "Behaviour"
 msgstr "Behaviour"
 
-# Part of Painted lady survey 
-msgid "What is the wing condition?"
-msgstr "What is the wing condition?"
 
-# Part of Painted lady survey 
-msgid "What was the behaviour?"
-msgstr "What was the behaviour?"
 
-# Part of Painted lady survey 
-msgid "Migrating"
-msgstr "Migrating"
 
-# Part of Painted lady survey 
-msgid "Nectaring"
-msgstr "Nectaring"
 
-# Part of Painted lady survey 
-msgid "Mating"
-msgstr "Mating"
-
-# Part of Painted lady survey 
-msgid "Egg laying"
-msgstr "Egg laying"
 
 # Part of Painted lady survey 
 msgid "Direction"
@@ -2175,32 +2156,11 @@ msgid "Compass"
 msgstr "Compass"
 
 # Part of Painted lady survey 
-msgid "Please add the direction."
-msgstr "Please add the direction."
-
-# Part of Painted lady survey 
 msgid "What was the altitude? (meters)"
 msgstr "What was the altitude? (meters)"
 
-# Painted lady survey mating options 
-msgid "What kind of mating was it?"
-msgstr "What kind of mating was it?"
 
-# Painted lady survey mating options 
-msgid "Territorial defence"
-msgstr "Territorial defence"
 
-# Painted lady survey mating options 
-msgid "Hill topping"
-msgstr "Hill topping"
-
-# Painted lady survey mating options 
-msgid "Guarding a nectar source"
-msgstr "Guarding a nectar source"
-
-# Painted lady survey mating options 
-msgid "Forest margin"
-msgstr "Forest margin"
 
 # Alert header 
 msgid "Delete Survey"
@@ -2211,36 +2171,17 @@ msgid "Warning - This will discard the survey information you have entered so fa
 msgstr "Warning - This will discard the survey information you have entered so far."
 
 # Painted lady wing options
-msgid "fresh"
-msgstr "fresh"
+msgid "Fresh"
+msgstr "Fresh"
 
 # Painted lady wing options
-msgid "worn"
-msgstr "worn"
+msgid "Worn"
+msgstr "Worn"
 
 # Painted lady wing options
-msgid "normal"
-msgstr "normal"
+msgid "Normal"
+msgstr "Normal"
 
-# Painted lady survey flower entry 
-msgid "Nectar"
-msgstr "Nectar"
-
-# Painted lady survey flower entry 
-msgid "What was the flower?"
-msgstr "What was the flower?"
-
-# Painted lady survey flower entry 
-msgid "Thistles"
-msgstr "Thistles"
-
-# Painted lady survey flower entry 
-msgid "Mallow"
-msgstr "Mallow"
-
-# Painted lady survey flower entry 
-msgid "Desert nettle"
-msgstr "Desert nettle"
 
 # Painted lady survey flower entry  
 msgid "Please specify the nectar source."
@@ -2271,20 +2212,20 @@ msgid "Please add the altitude option."
 msgstr "Please add the altitude option."
 
 # Part of painted lady 
-msgid "egg-laying hostplants"
-msgstr "egg-laying hostplants"
+msgid "Egg-laying hostplants"
+msgstr "Egg-laying hostplants"
 
 # Part of painted lady 
-msgid "migrating"
-msgstr "migrating"
+msgid "Migrating"
+msgstr "Migrating"
 
 # Part of painted lady 
-msgid "nectaring"
-msgstr "nectaring"
+msgid "Nectaring"
+msgstr "Nectaring"
 
 # Part of painted lady 
-msgid "mating"
-msgstr "mating"
+msgid "Mating"
+msgstr "Mating"
 
 # Painted lady compass
 msgid "Unsupported device"
@@ -2295,48 +2236,37 @@ msgid "Unfortunately, it looks like your device doesn't have the necessary senso
 msgstr "Unfortunately, it looks like your device doesn't have the necessary sensor for the compass to function correctly. The compass relies on this sensor to detect the earth's magnetic field and determine your device's orientation relative to magnetic north. Thus, you will not be able to use compass on this device."
 
 # Painted lady mating options
-msgid "territorial defence: other"
-msgstr "territorial defence: other"
+msgid "Territorial defence: other"
+msgstr "Territorial defence: other"
 
 # Painted lady mating options
-msgid "territorial defence: hill-topping"
-msgstr "territorial defence: hill-topping"
+msgid "Territorial defence: hill-topping"
+msgstr "Territorial defence: hill-topping"
 
-# Painted lady nectar option
-msgid "enter the nectar source here"
-msgstr "enter the nectar source here"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
 msgstr "What was the butterfly flying altitude? (meters)"
-
-# Painted lady direction options
-msgid "Please add the behaviour option."
-msgstr "Please add the behaviour option."
-
-# Painted lady direction options
-msgid "Please add the wing option."
-msgstr "Please add the wing option."
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
 msgstr "Other hostplant"
 
 # Painted lady direction option
-msgid "other"
-msgstr "other"
+msgid "Other"
+msgstr "Other"
 
 # Painted lady direction option
-msgid "desert nettle"
-msgstr "desert nettle"
+msgid "Desert nettle"
+msgstr "Desert nettle"
 
 # Painted lady direction option
-msgid "mallow"
-msgstr "mallow"
+msgid "Mallow"
+msgstr "Mallow"
 
 # Painted lady direction option
-msgid "thistles"
-msgstr "thistles"
+msgid "Thistles"
+msgstr "Thistles"
 
 # Painted lady direction option
 msgid "Hostplants"
@@ -2346,6 +2276,46 @@ msgstr "Hostplants"
 msgid "Please select the hostplants."
 msgstr "Please select the hostplants."
 
-# Painted lady info message
-msgid "This is a specific survey for the migration of "
-msgstr "This is a specific survey for the migration of "
+# Painted lady survey info background message
+msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
+msgstr "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
+
+# Alert title
+msgid "Tip: Copy attributes"
+msgstr "Tip: Copy attributes"
+
+# Alert message
+msgid "To copy occurrence entry swipe it to the right and press<1><0></0></1>icon."
+msgstr "To copy occurrence entry swipe it to the right and press<1><0></0></1>icon."
+
+# Part of Painted lady survey 
+msgid "Wing condition"
+msgstr "Wing condition"
+
+# Part of Painted lady survey 
+msgid "Nectar"
+msgstr "Nectar"
+
+# Part of Painted lady survey 
+msgid "Enter the nectar source here"
+msgstr "Enter the nectar source here"
+
+# Part of Painted lady survey 
+msgid "Territorial defence: hill-topping"
+msgstr "Territorial defence: hill-topping"
+
+# Part of Painted lady survey 
+msgid "Territorial defence: other"
+msgstr "Territorial defence: other"
+
+# Context term 
+msgid "Other species"
+msgstr "Other species"
+
+# Context term 
+msgid "What kind of thistle was it?"
+msgstr "What kind of thistle was it?"
+
+# Context term 
+msgid "Thistle species"
+msgstr "Thistle species"

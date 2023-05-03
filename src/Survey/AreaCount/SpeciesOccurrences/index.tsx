@@ -8,7 +8,7 @@ import Occurrence from 'models/occurrence';
 import Main from './Main';
 import './styles.scss';
 
-const useDeleteConfirmation = () => {
+export const useDeleteConfirmation = () => {
   const alert = useAlert();
 
   const prompt = (resolve: any) => {

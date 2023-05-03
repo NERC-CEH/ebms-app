@@ -13,8 +13,6 @@ import Sample from 'models/sample';
 import { Main, MenuAttrItem, InfoMessage, CounterInput } from '@flumens';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
-import butterflyIcon from 'common/images/butterfly.svg';
-import PaintedLadyAttrs from './Components/PaintedLadyAttrs';
 
 type Props = {
   sample: Sample;
@@ -29,28 +27,8 @@ const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
   const { recorders, comment, cloud, temperature, windDirection, windSpeed } =
     sample.attrs;
 
-  const showPaintedLadyName = () => {
-    const paintedLady = sample.samples[0].occurrences[0].attrs.taxon;
-
-    const hasCommonName = paintedLady.common_name;
-    if (hasCommonName) {
-      return sample.samples[0].occurrences[0].attrs.taxon.common_name;
-    }
-    return <i>{paintedLady.scientific_name}</i>;
-  };
-
   return (
     <Main>
-      {sample.isPaintedLadySurvey() && (
-        <InfoMessage
-          skipTranslation
-          className="blue paintedLady"
-          icon={butterflyIcon}
-        >
-          <T>This is a specific survey for the migration of </T>{' '}
-          <b>{showPaintedLadyName()}</b>
-        </InfoMessage>
-      )}
       <IonList lines="full">
         <IonItemDivider>
           <IonLabel>
@@ -111,8 +89,6 @@ const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
           </IonLabel>
         </IonItemDivider>
         <div className="rounded">
-          {sample.isPaintedLadySurvey() && <PaintedLadyAttrs sample={sample} />}
-
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}

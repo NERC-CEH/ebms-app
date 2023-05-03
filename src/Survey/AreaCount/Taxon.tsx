@@ -134,9 +134,9 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
 
       if (sample.isPaintedLadySurvey()) {
         // eslint-disable-next-line no-param-reassign
-        sample.attrs.wing = [];
+        sample.samples[0].occurrences[0].attrs.wing = [];
         // eslint-disable-next-line no-param-reassign
-        sample.attrs.behaviour = null;
+        sample.samples[0].occurrences[0].attrs.behaviour = null;
         sample.save();
       }
 

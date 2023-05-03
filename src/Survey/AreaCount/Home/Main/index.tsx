@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useRef } from 'react';
 import {
   IonList,
   IonItem,
@@ -11,6 +11,7 @@ import {
   NavContext,
   IonSpinner,
   IonItemDivider,
+  IonBadge,
 } from '@ionic/react';
 import { useRouteMatch } from 'react-router-dom';
 import {
@@ -23,6 +24,7 @@ import {
   warningOutline,
   informationCircle,
   flagOutline,
+  copyOutline,
 } from 'ionicons/icons';
 import { observer } from 'mobx-react';
 import { toJS } from 'mobx';
@@ -39,8 +41,40 @@ import {
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import { Trans as T } from 'react-i18next';
+import PaintedLadyBehaviour from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyBehaviour';
+import PaintedLadyDirection from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyDirection';
+import PaintedLadyWing from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyWing';
+import PaintedLadyOther from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyOther';
 import CountdownClock from '../components/CountdownClock';
 import './styles.scss';
+
+const showCopyTip = (alert: any) => {
+  if (!appModel.attrs.showCopyHelpTip) return;
+
+  alert({
+    header: 'Tip: Copy attributes',
+    cssClass: 'copy-attributes-alert',
+    message: (
+      <T>
+        To copy occurrence entry swipe it to the right and press
+        <div className="alert-icon-wrapper">
+          <IonIcon color="light" icon={copyOutline} />
+        </div>
+        icon.
+      </T>
+    ),
+    buttons: [
+      {
+        text: 'OK, got it',
+        role: 'cancel',
+        cssClass: 'primary',
+      },
+    ],
+  });
+  // eslint-disable-next-line no-param-reassign
+  appModel.attrs.showCopyHelpTip = false;
+  appModel.save();
+};
 
 const speciesNameSort = ([, sp1]: any, [, sp2]: any) => {
   const taxon1 = sp1.taxon;
@@ -55,6 +89,12 @@ const speciesNameSort = ([, sp1]: any, [, sp2]: any) => {
 const speciesOccAddedTimeSort = ([, sp1]: any, [, sp2]: any) => {
   const date1 = new Date(sp1.updatedOn);
   const date2 = new Date(sp2.updatedOn);
+  return date2.getTime() - date1.getTime();
+};
+
+const byTime = (sp1: Sample, sp2: Sample) => {
+  const date1 = new Date(sp1.metadata.created_on);
+  const date2 = new Date(sp2.metadata.created_on);
   return date2.getTime() - date1.getTime();
 };
 
@@ -98,7 +138,10 @@ type Props = {
   toggleTimer: any;
   areaSurveyListSortedByTime: boolean;
   increaseCount: any;
+  navigateToOccurrence: (smp: Sample) => void;
+  deleteSingleSample: (smp: Sample) => void;
   isDisabled?: boolean;
+  cloneSubSample: (smp: Sample, ref?: any) => void;
 };
 
 const AreaCount: FC<Props> = ({
@@ -112,10 +155,14 @@ const AreaCount: FC<Props> = ({
   increaseCount,
   isDisabled,
   copyPreviousSurveyTaxonList,
+  navigateToOccurrence,
+  deleteSingleSample,
+  cloneSubSample,
 }) => {
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch<any>();
   const alert = useAlert();
+  const ref = useRef();
 
   const showCopyOptions = () => {
     alert({
@@ -133,18 +180,33 @@ const AreaCount: FC<Props> = ({
   };
 
   const getSpeciesAddButton = () => {
-    if (sample.isPreciseSingleSpeciesSurvey()) return null;
+    if (isDisabled) return <div style={{ height: '44px' }} />;
 
-    if (isDisabled) {
-      // placeholder
-      return <div style={{ height: '44px' }} />;
-    }
+    if (sample.isPreciseSingleSpeciesSurvey()) {
+      const { taxon } = sample.samples[0]?.occurrences[0]?.attrs || {};
 
-    const isSingleSpeciesSurvey =
-      sample.metadata.survey === 'precise-single-species-area';
-    const hasAlreadySpecies = !!sample.samples.length;
-    if (isSingleSpeciesSurvey && hasAlreadySpecies) {
-      return null;
+      if (!taxon) return null;
+
+      const increaseCountWrap = () => {
+        increaseCount(taxon);
+
+        showCopyTip(alert);
+      };
+
+      const increase5xCountWrap = () => increaseCount(taxon, undefined, true);
+
+      return (
+        <LongPressButton
+          color="primary"
+          id="add-single"
+          onClick={increaseCountWrap}
+          onLongClick={increase5xCountWrap}
+        >
+          <IonLabel>
+            <T>Add</T>
+          </IonLabel>
+        </LongPressButton>
+      );
     }
 
     const navigateToSearch = () => navigate(`${match.url}/taxon`);
@@ -224,6 +286,8 @@ const AreaCount: FC<Props> = ({
   };
 
   const getSpeciesList = () => {
+    if (sample.isPreciseSingleSpeciesSurvey()) return null;
+
     if (!sample.samples.length && !sample.shallowSpeciesList.length) {
       return (
         <IonList id="list" lines="full">
@@ -274,6 +338,110 @@ const AreaCount: FC<Props> = ({
           </div>
         </IonList>
       </>
+    );
+  };
+
+  const getSpeciesSingleCountList = () => {
+    if (!sample.isPreciseSingleSpeciesSurvey()) return null;
+
+    const getOccurrence = (smp: Sample) => {
+      const occ = smp.occurrences[0];
+      const prettyTime = new Date(smp.metadata.created_on)
+        .toLocaleTimeString()
+        .replace(/(:\d{2}| [AP]M)$/, '');
+
+      const {
+        stage,
+        behaviour,
+        wing,
+        nectarSource,
+        mating,
+        eggLaying,
+        direction,
+      } = occ.attrs;
+
+      let location;
+      if (smp.hasLoctionMissingAndIsnotLocating()) {
+        location = <IonIcon icon={warningOutline} color="danger" />;
+      } else if (smp.isGPSRunning()) {
+        location = <IonSpinner />;
+      }
+
+      const navigateToOccurrenceWithSample = () => navigateToOccurrence(smp);
+
+      const deleteSubSample = () => deleteSingleSample(smp);
+
+      const cloneSubSampleWrap = () => cloneSubSample(smp, ref);
+
+      return (
+        <IonItemSliding key={smp.cid} ref={ref as any}>
+          <IonItemOptions side="start" className="copy-slider">
+            <IonItemOption color="secondary" onClick={cloneSubSampleWrap}>
+              <IonIcon icon={copyOutline} />
+            </IonItemOption>
+          </IonItemOptions>
+
+          <IonItem detail onClick={navigateToOccurrenceWithSample}>
+            <IonLabel className="time">{prettyTime}</IonLabel>
+            <IonLabel className="attributes">
+              <div className="wraps">
+                <IonBadge color="medium">
+                  <T>{stage}</T>
+                </IonBadge>
+                <PaintedLadyWing wings={wing} />
+                <PaintedLadyBehaviour behaviour={behaviour} />
+                <PaintedLadyDirection direction={direction} />
+                <PaintedLadyOther text={nectarSource || mating || eggLaying} />
+              </div>
+            </IonLabel>
+
+            {location && <IonLabel slot="end">{location}</IonLabel>}
+          </IonItem>
+          {!isDisabled && (
+            <IonItemOptions side="end">
+              <IonItemOption color="danger" onClick={deleteSubSample}>
+                <T>Delete</T>
+              </IonItemOption>
+            </IonItemOptions>
+          )}
+        </IonItemSliding>
+      );
+    };
+
+    const speciesList = [...sample.samples].sort(byTime).map(getOccurrence);
+    const count = speciesList.length > 1 ? speciesList.length : null;
+    if (!speciesList.length) return null;
+
+    const prettySpeciesName = sample.samples[0].occurrences[0].getTaxonName();
+
+    const hasZeroAbundance =
+      sample.samples.length === 1 && sample.samples[0].hasZeroAbundance();
+    if (hasZeroAbundance) {
+      return (
+        <Main id="area-count-occurrence-edit">
+          <IonList id="list" lines="full">
+            <InfoBackgroundMessage>
+              You don't have any <b>{{ prettySpeciesName }}</b> records in your
+              list.
+            </InfoBackgroundMessage>
+          </IonList>
+        </Main>
+      );
+    }
+
+    return (
+      <IonList id="list" lines="full">
+        <div className="rounded">
+          <IonItemDivider className="species-list-header">
+            <IonLabel style={{ maxWidth: 'fit-content' }}>
+              {prettySpeciesName}
+            </IonLabel>
+            <IonLabel slot="end">{count}</IonLabel>
+          </IonItemDivider>
+
+          {speciesList}
+        </div>
+      </IonList>
     );
   };
 
@@ -415,6 +583,8 @@ const AreaCount: FC<Props> = ({
       </IonList>
 
       {getSpeciesList()}
+
+      {getSpeciesSingleCountList()}
     </Main>
   );
 };

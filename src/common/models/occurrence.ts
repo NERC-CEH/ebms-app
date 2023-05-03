@@ -53,6 +53,15 @@ type Attrs = OccurrenceAttrs & {
   count?: any;
   'count-outside'?: any;
   machineInvolvement?: MachineInvolvement;
+  // PaintedLady survey
+  wing?: any;
+  behaviour?: any;
+  direction?: any;
+  eggLaying?: any;
+  otherEggLaying?: any;
+  otherThistles?: any;
+  nectarSource?: any;
+  mating?: any;
 };
 
 export default class AppOccurrence extends Occurrence {
