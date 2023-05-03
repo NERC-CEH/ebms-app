@@ -48,6 +48,8 @@ import PaintedLadyOther from 'Survey/AreaCount/OccurrenceHome/Components/Painted
 import CountdownClock from '../components/CountdownClock';
 import './styles.scss';
 
+const OCCURRENCE_THRESHOLD = 2;
+
 const showCopyTip = (alert: any) => {
   if (!appModel.attrs.showCopyHelpTip) return;
 
@@ -56,7 +58,7 @@ const showCopyTip = (alert: any) => {
     cssClass: 'copy-attributes-alert',
     message: (
       <T>
-        To copy occurrence entry swipe it to the right and press
+        To copy a list entry swipe it to the right and press
         <div className="alert-icon-wrapper">
           <IonIcon color="light" icon={copyOutline} />
         </div>
@@ -190,7 +192,11 @@ const AreaCount: FC<Props> = ({
       const increaseCountWrap = () => {
         increaseCount(taxon);
 
-        showCopyTip(alert);
+        const hasMoreThanTwoSpecies =
+          sample.samples.length > OCCURRENCE_THRESHOLD;
+        if (hasMoreThanTwoSpecies) {
+          showCopyTip(alert);
+        }
       };
 
       const increase5xCountWrap = () => increaseCount(taxon, undefined, true);
@@ -395,7 +401,11 @@ const AreaCount: FC<Props> = ({
               </div>
             </IonLabel>
 
-            {location && <IonLabel slot="end">{location}</IonLabel>}
+            {location && (
+              <IonLabel className="location-icon" slot="end">
+                {location}
+              </IonLabel>
+            )}
           </IonItem>
           {!isDisabled && (
             <IonItemOptions side="end">

@@ -269,6 +269,18 @@ const speciesSurvey = merge({}, survey, {
             attrProps: {
               input: 'checkbox',
               inputProps: { options: flowersValues },
+              set: (value, model) => {
+                if (model.attrs.otherEggLaying && !value.includes('Other')) {
+                  model.attrs.otherEggLaying = null;
+                }
+
+                if (model.attrs.otherThistles && !value.includes('Thistles')) {
+                  model.attrs.otherThistles = null;
+                }
+                // eslint-disable-next-line no-param-reassign
+                model.attrs.eggLaying = value;
+                model.save();
+              },
             },
           },
 

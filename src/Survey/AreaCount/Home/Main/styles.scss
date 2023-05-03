@@ -117,6 +117,7 @@
 
       .time {
         max-width: fit-content;
+        min-width: 50px;
       }
 
       .behaviour-label {
@@ -209,6 +210,10 @@
       width: 15px;
     }
   }
+
+  .location-icon {
+    display: flex;
+  }
 }
 
 ion-alert.speciesGroupAlert {
@@ -228,6 +233,7 @@ ion-alert.speciesGroupAlert {
     position: relative;
     align-items: center;
     top: 4px;
+    border-radius: 10px;
 
     ion-icon {
       font-size: '1em';

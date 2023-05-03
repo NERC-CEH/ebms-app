@@ -2284,10 +2284,6 @@ msgstr "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
 msgid "Tip: Copy attributes"
 msgstr "Tip: Copy attributes"
 
-# Alert message
-msgid "To copy occurrence entry swipe it to the right and press<1><0></0></1>icon."
-msgstr "To copy occurrence entry swipe it to the right and press<1><0></0></1>icon."
-
 # Part of Painted lady survey 
 msgid "Wing condition"
 msgstr "Wing condition"
@@ -2308,14 +2304,22 @@ msgstr "Territorial defence: hill-topping"
 msgid "Territorial defence: other"
 msgstr "Territorial defence: other"
 
-# Context term 
+# Part of Painted lady survey 
 msgid "Other species"
 msgstr "Other species"
 
-# Context term 
+# Part of Painted lady survey 
 msgid "What kind of thistle was it?"
 msgstr "What kind of thistle was it?"
 
-# Context term 
+# Part of Painted lady survey 
 msgid "Thistle species"
 msgstr "Thistle species"
+
+# Part of Painted lady survey 
+msgid "Copied!"
+msgstr "Copied!"
+
+# Part of Painted lady survey 
+msgid "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
+msgstr "To copy a list entry swipe it to the right and press<1><0></0></1>icon."

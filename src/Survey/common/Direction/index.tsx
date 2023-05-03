@@ -92,11 +92,7 @@ const Direction: FC<Props> = ({ occurrence }) => {
       window.DeviceOrientationEvent &&
       (DeviceOrientationEvent as any).requestPermission
     ) {
-      if ('absolute' in DeviceOrientationEvent) {
-        window.addEventListener('deviceorientationabsolute', handler);
-      } else {
-        unsupportedDevice(alert);
-      }
+      window.addEventListener('deviceorientation', handler);
     } else {
       unsupportedDevice(alert);
     }
@@ -114,6 +110,7 @@ const Direction: FC<Props> = ({ occurrence }) => {
     // eslint-disable-next-line consistent-return
     return () => {
       window.removeEventListener('deviceorientationabsolute', handler);
+      window.removeEventListener('deviceorientation', handler);
     };
   }, [startCompass, setStartCompass]);
 

@@ -183,7 +183,10 @@ const HomeController: FC<Props> = ({ sample }) => {
     sample.attrs.speciesGroups = speciesGroups.map(extractValue);
     sample.save();
 
-    if (shouldShowSpeciesGroupDialog(speciesGroups)) {
+    if (
+      shouldShowSpeciesGroupDialog(speciesGroups) &&
+      !sample.isPreciseSingleSpeciesSurvey()
+    ) {
       const speciesGroupConfirmationDialog =
         await showSpeciesGroupConfirmationDialog(speciesGroups);
       if (!speciesGroupConfirmationDialog) return;
@@ -421,7 +424,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     newSubSample.startGPS();
 
     await ref.current.closeOpened();
-    toast.success('Copied!');
+    toast.success('Copied!', { color: 'secondary' });
   };
 
   const isDisabled = !!sample.metadata.synced_on;

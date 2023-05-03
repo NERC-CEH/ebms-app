@@ -13,10 +13,10 @@ interface Type {
 }
 
 const BEHAVIOUR_COLOURS: Type = {
-  Migrating: '#0d20aa',
+  Migrating: '#4e4fff',
   Mating: '#ff4e4e',
   'Egg-laying hostplants': '#37b542',
-  Nectaring: '#c6b125',
+  Nectaring: '#ff9d4e',
 };
 
 export const PaintedLadyBehaviour: FC<Props> = ({ behaviour, showLabel }) => {
