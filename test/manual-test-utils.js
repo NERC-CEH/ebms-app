@@ -2,47 +2,87 @@
  * Manual testing functions.
  ******************************************************************** */
 import GPS from 'mock-geolocation';
-import { Plugins, FilesystemDirectory } from '@capacitor/core';
+import {
+  Filesystem,
+  Directory as FilesystemDirectory,
+} from '@capacitor/filesystem';
 import track from './track.json';
 
 window.FilesystemDirectory = FilesystemDirectory;
+window.Filesystem = Filesystem;
 
 const testing = {
   files: {
-    ls: async (path = '', directory = FilesystemDirectory.Data) => {
-      const { files } = await Plugins.Filesystem.readdir({
-        path,
-        directory,
-      });
-
-      const filesWithInfo = [];
-      files.forEach(async file => {
-        const stats = await Plugins.Filesystem.stat({
-          path: file,
+    ls: async (
+      path = '',
+      directory = FilesystemDirectory.Data,
+      recursive = false
+    ) => {
+      try {
+        const { files } = await Filesystem.readdir({
+          path,
           directory,
         });
 
-        filesWithInfo.push(stats);
-      });
+        const filesWithInfo = [];
+        files.forEach(async file => {
+          try {
+            const stats = await Filesystem.stat({
+              path: file.name,
+              directory,
+            });
 
-      return filesWithInfo;
+            const name = stats.uri.split('/');
+            const entry = [
+              name[name.length - 1]
+                ? name[name.length - 1]
+                : name[name.length - 2], // 'directories can have trailing slash /
+              new Intl.NumberFormat('en-US', {
+                style: 'decimal',
+              }).format(stats.size),
+              new Date(parseInt(stats.ctime, 10)).toLocaleString(),
+            ];
+
+            if (stats.type === 'directory') {
+              entry.push('dir');
+
+              if (recursive) {
+                const directoryContents = await testing.files.ls(
+                  entry[0],
+                  directory,
+                  recursive
+                );
+                entry.push(directoryContents);
+              }
+            }
+
+            filesWithInfo.push(entry);
+          } catch (error) {
+            filesWithInfo.push(file.name, error.message);
+          }
+        });
+
+        return filesWithInfo;
+      } catch (error) {
+        return error.message;
+      }
     },
 
     cp: async (path = '', directory = FilesystemDirectory.Data) => {
-      await Plugins.Filesystem.copy({
+      await Filesystem.copy({
         from: path,
-        to: path.split('/').pop(),
+        to: path.split('/').pop() || '',
         toDirectory: directory,
       });
 
-      return Plugins.Filesystem.stat({
-        path: path.split('/').pop(),
+      return Filesystem.stat({
+        path: path.split('/').pop() || '',
         directory,
       });
     },
 
     rm: async (path = '', directory = FilesystemDirectory.Data) => {
-      await Plugins.Filesystem.deleteFile({
+      await Filesystem.deleteFile({
         path,
         directory,
       });
