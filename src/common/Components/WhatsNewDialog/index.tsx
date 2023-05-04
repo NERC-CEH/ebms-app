@@ -13,21 +13,21 @@ type Props = {
 };
 
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
-  const { showWhatsNewInVersion121, appSession } = appModel.attrs;
+  const { showWhatsNewInVersion120, appSession } = appModel.attrs;
 
   const skipShowingDialogOnFreshInstall = () => {
     const isFreshInstall = appSession <= 1;
     if (isFreshInstall) {
-      appModel.attrs.showWhatsNewInVersion121 = false; // eslint-disable-line
+      appModel.attrs.showWhatsNewInVersion120 = false; // eslint-disable-line
       appModel.save();
     }
   };
   useEffect(skipShowingDialogOnFreshInstall, [appSession]);
 
-  if (!showWhatsNewInVersion121) return null;
+  if (!showWhatsNewInVersion120) return null;
 
   const closeDialog = () => {
-    appModel.attrs.showWhatsNewInVersion121 = false; // eslint-disable-line
+    appModel.attrs.showWhatsNewInVersion120 = false; // eslint-disable-line
     appModel.save();
   };
 
