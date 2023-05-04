@@ -400,23 +400,20 @@ const HomeController: FC<Props> = ({ sample }) => {
 
   const cloneSubSample = async (copiedSubSample: Sample, ref: any) => {
     // eslint-disable-next-line no-param-reassign
-    sample.copyAttributes = {};
+    sample.copyAttributes = {}; // clean previous copy
     sample.save();
 
     // eslint-disable-next-line no-param-reassign
     sample.copyAttributes = toJS(copiedSubSample.occurrences[0].attrs);
-    // eslint-disable-next-line no-param-reassign
-    (sample.copyAttributes as any).timeOfSighting = null;
 
     const taxon = { ...copiedSubSample.occurrences[0].attrs.taxon };
 
     const survey = sample.getSurvey();
-
     const newSubSample = survey.smp.create(Sample, Occurrence, taxon);
+    // eslint-disable-next-line no-param-reassign
+    (sample.copyAttributes as any).timeOfSighting = new Date().toISOString();
 
-    newSubSample.occurrences[0].attrs = observable(
-      toJS(copiedSubSample.occurrences[0].attrs)
-    );
+    newSubSample.occurrences[0].attrs = observable(sample.copyAttributes);
 
     sample.samples.push(newSubSample);
     newSubSample.startGPS();
