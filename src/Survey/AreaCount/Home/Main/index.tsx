@@ -372,7 +372,7 @@ const AreaCount: FC<Props> = ({
         location = <IonIcon icon={warningOutline} color="danger" />;
       } else if (smp.isGPSRunning()) {
         location = <IonSpinner />;
-      } else if (smp.attrs.location && !behaviour && !wing.length) {
+      } else if (smp.attrs.location && !behaviour && !wing?.length) {
         location = <GridRef sample={smp} />;
       }
 

@@ -149,7 +149,10 @@ export default class AppSample extends Sample {
     const isActivated = await userModel.checkActivation();
     if (!isActivated) return false;
 
-    if (this.metadata.survey === 'precise-area') {
+    if (
+      this.metadata.survey === 'precise-area' ||
+      this.metadata.survey === 'precise-single-species-area'
+    ) {
       this.setMissingSpeciesGroups();
     }
 

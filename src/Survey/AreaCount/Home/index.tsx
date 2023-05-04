@@ -176,20 +176,18 @@ const HomeController: FC<Props> = ({ sample }) => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    const speciesGroups = sample.getSpeciesGroupList();
+    if (!sample.isPreciseSingleSpeciesSurvey()) {
+      const speciesGroups = sample.getSpeciesGroupList();
+      const extractValue = (group: SpeciesGroup) => group.value;
+      // eslint-disable-next-line no-param-reassign
+      sample.attrs.speciesGroups = speciesGroups.map(extractValue);
+      sample.save();
 
-    const extractValue = (group: SpeciesGroup) => group.value;
-    // eslint-disable-next-line no-param-reassign
-    sample.attrs.speciesGroups = speciesGroups.map(extractValue);
-    sample.save();
-
-    if (
-      shouldShowSpeciesGroupDialog(speciesGroups) &&
-      !sample.isPreciseSingleSpeciesSurvey()
-    ) {
-      const speciesGroupConfirmationDialog =
-        await showSpeciesGroupConfirmationDialog(speciesGroups);
-      if (!speciesGroupConfirmationDialog) return;
+      if (shouldShowSpeciesGroupDialog(speciesGroups)) {
+        const speciesGroupConfirmationDialog =
+          await showSpeciesGroupConfirmationDialog(speciesGroups);
+        if (!speciesGroupConfirmationDialog) return;
+      }
     }
 
     const surveyName = sample.getSurvey().name;
