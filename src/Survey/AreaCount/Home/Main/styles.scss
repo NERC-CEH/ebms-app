@@ -143,12 +143,21 @@
 
       ion-label {
         margin: 7px;
+      }
+
+      ion-label.title {
         font-weight: 700;
+      }
+
+      ion-label.time {
+        margin: 7px;
+        font-weight: 400;
       }
     }
 
     .attributes {
       max-width: 90% !important;
+      margin-left: 0 !important;
 
       .wraps {
         display: flex;

@@ -41,6 +41,7 @@ import {
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import { Trans as T } from 'react-i18next';
+import GridRef from 'common/Components/GridRefValue';
 import PaintedLadyBehaviour from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyBehaviour';
 import PaintedLadyDirection from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyDirection';
 import PaintedLadyWing from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyWing';
@@ -274,7 +275,7 @@ const AreaCount: FC<Props> = ({
             value={species.count}
             disabled={isDisabled}
           />
-          <IonLabel>{speciesName}</IonLabel>
+          <IonLabel className="title">{speciesName}</IonLabel>
           <IonLabel slot="end" className="location-spinner">
             {location}
           </IonLabel>
@@ -371,6 +372,8 @@ const AreaCount: FC<Props> = ({
         location = <IonIcon icon={warningOutline} color="danger" />;
       } else if (smp.isGPSRunning()) {
         location = <IonSpinner />;
+      } else if (smp.attrs.location && !behaviour && !wing.length) {
+        location = <GridRef sample={smp} />;
       }
 
       const navigateToOccurrenceWithSample = () => navigateToOccurrence(smp);

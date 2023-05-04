@@ -76,13 +76,15 @@ function Survey({ sample }) {
     : `/survey/${survey.name}/${sample.cid}/edit/details`;
 
   const taxonSelectPage = `/survey/${survey.name}/${sample.cid}/edit/taxon`;
-  const hrefPreciseSingleSpeciesSurvey =
-    canShowLink && hasTargetSpecies ? homeOrEditPage : taxonSelectPage;
+  const hrefPreciseSingleSpeciesSurvey = hasTargetSpecies
+    ? homeOrEditPage
+    : taxonSelectPage;
 
-  const href = sample.isPreciseSingleSpeciesSurvey()
+  const surveyRoutes = sample.isPreciseSingleSpeciesSurvey()
     ? hrefPreciseSingleSpeciesSurvey
     : hrefRemainingSurvey;
 
+  const href = canShowLink && surveyRoutes;
   function getSampleInfo() {
     const label = (
       <>

@@ -90,7 +90,7 @@ const Direction: FC<Props> = ({ occurrence }) => {
 
     if (
       window.DeviceOrientationEvent &&
-      (DeviceOrientationEvent as any).requestPermission
+      (window.DeviceOrientationEvent as any)?.requestPermission
     ) {
       window.addEventListener('deviceorientation', handler);
     } else {
@@ -115,8 +115,11 @@ const Direction: FC<Props> = ({ occurrence }) => {
   }, [startCompass, setStartCompass]);
 
   const toggleModal = () => {
-    if (isPlatform('ios')) {
-      (DeviceOrientationEvent as any).requestPermission();
+    if (
+      isPlatform('ios') &&
+      (window.DeviceOrientationEvent as any)?.requestPermission
+    ) {
+      (window.DeviceOrientationEvent as any)?.requestPermission();
     }
 
     setStartCompass(!startCompass);

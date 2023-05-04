@@ -10,7 +10,10 @@ import Header from './Header';
 import Main from './Main';
 
 const getFamily = (sp: SpeciesType) => sp.family;
-const families = speciesProfiles.map(getFamily);
+
+const existFamily = (sp: SpeciesType['family']) => sp;
+const families = speciesProfiles.map(getFamily).filter(existFamily);
+
 const filterOptions = [{ type: 'family', values: [...new Set(families)] }];
 
 type Props = {

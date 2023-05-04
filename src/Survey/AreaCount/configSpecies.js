@@ -221,11 +221,15 @@ const speciesSurvey = merge({}, survey, {
         },
 
         altitude: {
-          menuProps: { icon: resizeOutline, parse: value => `${value} m` },
+          menuProps: {
+            label: 'Height',
+            icon: resizeOutline,
+            parse: value => `${value} m`,
+          },
           pageProps: {
+            headerProps: { title: 'Height above ground (meters)' },
             attrProps: {
               input: 'radio',
-              info: 'What was the butterfly flying altitude? (meters)',
               inputProps: { options: altitudeValues },
             },
           },

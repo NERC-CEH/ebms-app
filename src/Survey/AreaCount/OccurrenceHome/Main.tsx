@@ -47,18 +47,19 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
   return (
     <Main id="area-count-occurrence-edit">
       <IonList lines="full">
-        {occurrence.isPaintedLadySpecies() && (
-          <>
-            <IonItemDivider>
-              <T>{speciesName}</T>
-            </IonItemDivider>
-            <div className="rounded">
-              {subSample.isPaintedLadySurvey() && (
-                <PaintedLadyAttrs occurrence={occurrence} />
-              )}
-            </div>
-          </>
-        )}
+        {occurrence.isPaintedLadySpecies() &&
+          subSample.isSurveyPreciseSingleSpecies() && (
+            <>
+              <IonItemDivider>
+                <T>{speciesName}</T>
+              </IonItemDivider>
+              <div className="rounded">
+                {subSample.isPaintedLadySurvey() && (
+                  <PaintedLadyAttrs occurrence={occurrence} />
+                )}
+              </div>
+            </>
+          )}
 
         <IonItemDivider>
           <T>Details</T>

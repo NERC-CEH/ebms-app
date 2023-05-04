@@ -2138,11 +2138,6 @@ msgstr "Wing"
 msgid "Behaviour"
 msgstr "Behaviour"
 
-
-
-
-
-
 # Part of Painted lady survey 
 msgid "Direction"
 msgstr "Direction"
@@ -2154,13 +2149,6 @@ msgstr "Altitude"
 # Part of Painted lady survey 
 msgid "Compass"
 msgstr "Compass"
-
-# Part of Painted lady survey 
-msgid "What was the altitude? (meters)"
-msgstr "What was the altitude? (meters)"
-
-
-
 
 # Alert header 
 msgid "Delete Survey"
@@ -2323,3 +2311,11 @@ msgstr "Copied!"
 # Part of Painted lady survey 
 msgid "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
+
+# Part of Painted lady survey 
+msgid "Height above ground (meters)"
+msgstr "Height above ground (meters)"
+
+# Part of Painted lady survey 
+msgid "Height"
+msgstr "Height"
