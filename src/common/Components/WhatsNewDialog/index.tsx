@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import appModelTypes from 'common/models/app';
-import { IonBackdrop, IonIcon, IonButton, isPlatform } from '@ionic/react';
+import { IonBackdrop, IonIcon, IonButton } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import appLogo from 'common/images/icon.svg';
 import ExpandableList from 'Components/ExpandableList';
@@ -13,21 +13,21 @@ type Props = {
 };
 
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
-  const { showWhatsNewInVersion118, appSession } = appModel.attrs;
+  const { showWhatsNewInVersion121, appSession } = appModel.attrs;
 
   const skipShowingDialogOnFreshInstall = () => {
     const isFreshInstall = appSession <= 1;
     if (isFreshInstall) {
-      appModel.attrs.showWhatsNewInVersion118 = false; // eslint-disable-line
+      appModel.attrs.showWhatsNewInVersion121 = false; // eslint-disable-line
       appModel.save();
     }
   };
   useEffect(skipShowingDialogOnFreshInstall, [appSession]);
 
-  if (!showWhatsNewInVersion118) return null;
+  if (!showWhatsNewInVersion121) return null;
 
   const closeDialog = () => {
-    appModel.attrs.showWhatsNewInVersion118 = false; // eslint-disable-line
+    appModel.attrs.showWhatsNewInVersion121 = false; // eslint-disable-line
     appModel.save();
   };
 
@@ -51,28 +51,14 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
         <div className="message">
           <ul>
             <ExpandableList>
-              {isPlatform('android') && (
-                <li>
-                  <summary>
-                    <T>Enabled Android back button</T>
-                  </summary>
-                </li>
-              )}
               <li>
                 <summary>
-                  <T> Added user account delete option</T>
+                  <T>Added Painted Lady survey</T>
                 </summary>
               </li>
               <li>
                 <summary>
-                  <T>
-                    Added ability to select multiple photos from the gallery
-                  </T>
-                </summary>
-              </li>
-              <li>
-                <summary>
-                  <T>Move day-flying moths option to species group page</T>
+                  <T>Changed Species groups location and functionality</T>
                 </summary>
               </li>
               <li>

@@ -1860,29 +1860,13 @@ msgstr ""
 msgid "What's New"
 msgstr "What's New"
 
-# Version 1.18 whats new message
-msgid "Enabled Android back button"
-msgstr "Enabled Android back button"
+# Version 1.20 whats new message
+msgid "Added Painted Lady survey"
+msgstr "Added Painted Lady survey"
 
-# Version 1.18 whats new message
-msgid " Added user account delete option"
-msgstr " Added user account delete option"
-
-# Version 1.18 whats new message
-msgid "Added ability to select multiple photos from the gallery"
-msgstr "Added ability to select multiple photos from the gallery"
-
-# Version 1.18 whats new message
-msgid "Move day-flying moths option to species group page"
-msgstr "Move day-flying moths option to species group page"
-
-# Version 1.18 whats new message
-msgid "Various bug fixes"
-msgstr "Various bug fixes"
-
-# Version 1.18 whats new message
-msgid "Updated translations"
-msgstr "Updated translations"
+# Version 1.20 whats new message
+msgid "Changed Species groups location and functionality"
+msgstr "Changed Species groups location and functionality"
 
 # User account action
 msgid "Resend"

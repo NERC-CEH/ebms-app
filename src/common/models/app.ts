@@ -146,7 +146,7 @@ export type Attrs = ModelAttrs & {
   showSurveysDeleteTip: boolean;
   showSurveyUploadTip: boolean;
   showCopySpeciesTip: boolean;
-  showWhatsNewInVersion118: boolean;
+  showWhatsNewInVersion120: boolean;
   showGPSPermissionTip: boolean;
   showCommonNamesInGuide: boolean;
   showCopyHelpTip: boolean;
@@ -175,7 +175,7 @@ const defaults: Attrs = {
   primarySurvey: 'precise-area',
 
   useImageIdentifier: true,
-  showWhatsNewInVersion118: true,
+  showWhatsNewInVersion120: true,
   useExperiments: false,
   sendAnalytics: true,
   appSession: 0,

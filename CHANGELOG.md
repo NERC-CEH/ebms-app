@@ -1,6 +1,10 @@
 ## 1.20.0
 
 Fixed Slovenian species common names.
+Added Painted Lady survey.
+Changed Species groups location and functionality.
+Updated the species dictionary.
+Small bug fixes.
 
 ## 1.19.0
 

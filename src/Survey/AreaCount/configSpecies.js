@@ -192,11 +192,11 @@ const speciesSurvey = merge({}, survey, {
                 if (model.attrs.behaviour !== value) {
                   model.attrs.direction = null;
                   model.attrs.altitude = null;
-                  model.attrs.egg = null;
                   model.attrs.nectarSource = null;
                   model.attrs.eggLaying = [];
                   model.attrs.otherEggLaying = null;
                   model.attrs.mating = null;
+                  model.attrs.otherThistles = null;
                 }
                 // eslint-disable-next-line no-param-reassign
                 model.attrs.behaviour = value;
