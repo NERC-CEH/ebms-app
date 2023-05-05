@@ -58,7 +58,7 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
               </li>
               <li>
                 <summary>
-                  <T>Changed Species groups location and functionality</T>
+                  <T>Changed species groups location and functionality</T>
                 </summary>
               </li>
               <li>

@@ -1865,8 +1865,8 @@ msgid "Added Painted Lady survey"
 msgstr "Added Painted Lady survey"
 
 # Version 1.20 whats new message
-msgid "Changed Species groups location and functionality"
-msgstr "Changed Species groups location and functionality"
+msgid "Changed species groups location and functionality"
+msgstr "Changed species groups location and functionality"
 
 # User account action
 msgid "Resend"
