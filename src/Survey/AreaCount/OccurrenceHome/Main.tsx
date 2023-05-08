@@ -27,7 +27,7 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
   const match = useRouteMatch();
 
   const species = occurrence.getTaxonName();
-  const { stage, comment, eggLaying } = occurrence.attrs;
+  const { stage, comment } = occurrence.attrs;
 
   const baseURL = match.url;
   const isPreciseSurvey = subSample.isSurveyPreciseSingleSpecies();
