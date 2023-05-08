@@ -2303,3 +2303,11 @@ msgstr "Height above ground (meters)"
 # Part of Painted lady survey 
 msgid "Height"
 msgstr "Height"
+
+# 15min Single species survey detail page button label  
+msgid "Start Count"
+msgstr "Start Count"
+
+# Painted Lady guide title
+msgid "Tracking the Painted Lady migration with Butterfly Count"
+msgstr "Tracking the Painted Lady migration with Butterfly Count"
