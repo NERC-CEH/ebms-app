@@ -7,6 +7,13 @@ import caterpillarIcon from 'common/images/caterpillar.svg';
 import { merge } from 'lodash';
 import i18n from 'i18next';
 import survey from './config';
+import normal from './common/images/normal.png';
+import freshImg from './common/images/fresh.png';
+import wornImg from './common/images/worn.png';
+import thistleImg from './common/images/thistle.jpg';
+import desertNettleImg from './common/images/desertNettle.jpg';
+import mallowImg from './common/images/mallow.jpg';
+import otherImg from './common/images/other.jpg';
 
 const translateEggLayingValue = eggLayingValues => {
   if (!eggLayingValues?.length) return null;
@@ -16,14 +23,17 @@ const translateEggLayingValue = eggLayingValues => {
 
 const wingConditionValues = [
   {
+    icon: freshImg,
     value: 'Fresh',
     id: 20687,
   },
   {
+    icon: normal,
     value: 'Normal',
     id: 20688,
   },
   {
+    icon: wornImg,
     value: 'Worn',
     id: 20689,
   },
@@ -42,6 +52,7 @@ const behaviourValues = [
     value: 'Mating',
     id: 20681,
   },
+
   {
     value: 'Egg-laying hostplants',
     id: 20682,
@@ -73,18 +84,22 @@ const altitudeValues = [
 
 const flowersValues = [
   {
+    icon: thistleImg,
     value: 'Thistles',
     id: 20683,
   },
   {
+    icon: mallowImg,
     value: 'Mallow',
     id: 20684,
   },
   {
+    icon: desertNettleImg,
     value: 'Desert nettle',
     id: 20685,
   },
   {
+    icon: otherImg,
     value: 'Other',
     id: 20686,
   },
