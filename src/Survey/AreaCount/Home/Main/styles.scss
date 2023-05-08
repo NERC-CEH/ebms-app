@@ -166,8 +166,15 @@
         gap: 5px;
 
         ion-badge {
-          display: flex;
           min-width: fit-content;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          --padding-top: 4px;
+        }
+
+        .stage-badge {
+          min-width: auto;
+          max-width: 110px !important;
         }
       }
     }
@@ -236,7 +243,7 @@ ion-alert.speciesGroupAlert {
   .alert-message div {
     width: 30px;
     height: 30px;
-    background: var(--ion-color-secondary);
+    background: var(--ion-color-tertiary);
     display: inline-flex;
     justify-content: center;
     margin: 0 5px;

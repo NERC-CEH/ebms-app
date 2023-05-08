@@ -37,7 +37,7 @@ const PaintedLadyAttrs: FC<Props> = ({ occurrence }) => {
       <MenuAttrItem
         routerLink={`${url}/wing`}
         value={<PaintedLadyWing wings={wing} />}
-        label="Wing"
+        label="Wing condition"
         icon={butterflyIcon}
         className="text-capitalize wing-value"
         disabled={isDisabled}

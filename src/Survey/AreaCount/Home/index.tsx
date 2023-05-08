@@ -417,6 +417,7 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     sample.samples.push(newSubSample);
     newSubSample.startGPS();
+    sample.save();
 
     await ref.current.closeOpened();
     toast.success('Copied!', { color: 'tertiary' });

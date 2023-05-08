@@ -394,9 +394,11 @@ const AreaCount: FC<Props> = ({
             <IonLabel className="time">{prettyTime}</IonLabel>
             <IonLabel className="attributes">
               <div className="wraps">
-                <IonBadge color="medium">
-                  <T>{stage}</T>
-                </IonBadge>
+                {stage && (
+                  <IonBadge color="medium" className="stage-badge">
+                    <T>{stage}</T>
+                  </IonBadge>
+                )}
                 <PaintedLadyWing wings={wing} />
                 <PaintedLadyBehaviour behaviour={behaviour} />
                 <PaintedLadyDirection direction={direction} />
