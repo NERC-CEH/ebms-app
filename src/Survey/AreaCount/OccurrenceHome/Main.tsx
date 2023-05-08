@@ -11,7 +11,7 @@ import {
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import PhotoPicker from 'common/Components/PhotoPicker';
-import { Main, MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
+import { Main, MenuAttrItem } from '@flumens';
 import GridRefValue from 'Components/GridRefValue';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import PaintedLadyAttrs from './Components/PaintedLadyAttrs';
@@ -45,24 +45,10 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
   const speciesName = occurrence.getTaxonName();
 
   const isPaintedLadySurvey = subSample.isPaintedLadySurvey();
-  const isStageAdult = occurrence.attrs.stage === 'Adult';
-  const hasThistle = eggLaying && eggLaying.includes('Thistles');
-  const hasOther = eggLaying && eggLaying.includes('Other');
 
   return (
     <Main id="area-count-occurrence-edit">
       <IonList lines="full">
-        {isPaintedLadySurvey && isStageAdult && (
-          <>
-            <IonItemDivider>
-              <T>{speciesName}</T>
-            </IonItemDivider>
-            <div className="rounded">
-              <PaintedLadyAttrs occurrence={occurrence} />
-            </div>
-          </>
-        )}
-
         <IonItemDivider>
           <T>Details</T>
         </IonItemDivider>
@@ -91,25 +77,6 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
             label="Stage"
             value={stage}
           />
-
-          {isPaintedLadySurvey && !isStageAdult && stage && (
-            <>
-              <MenuAttrItemFromModel model={occurrence} attr="eggLaying" />
-              {hasThistle && (
-                <MenuAttrItemFromModel
-                  model={occurrence}
-                  attr="otherThistles"
-                />
-              )}
-              {hasOther && (
-                <MenuAttrItemFromModel
-                  model={occurrence}
-                  attr="otherEggLaying"
-                />
-              )}
-            </>
-          )}
-
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}
@@ -118,6 +85,17 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
             value={comment}
           />
         </div>
+
+        {isPaintedLadySurvey && (
+          <>
+            <IonItemDivider>
+              <T>{speciesName}</T>
+            </IonItemDivider>
+            <div className="rounded">
+              <PaintedLadyAttrs occurrence={occurrence} />
+            </div>
+          </>
+        )}
 
         <IonItemDivider>
           <T>Species Photo</T>

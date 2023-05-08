@@ -15,8 +15,6 @@ const PaintedLadyAttrs: FC<Props> = ({ occurrence }) => {
   const isDisabled = occurrence.isUploaded();
   const { url } = useRouteMatch();
 
-  if (occurrence.attrs.stage !== 'Adult') return null;
-
   if (!occurrence.attrs.behaviour && !occurrence.attrs.wing) {
     // eslint-disable-next-line no-param-reassign
     occurrence.attrs.behaviour = null;
@@ -34,36 +32,42 @@ const PaintedLadyAttrs: FC<Props> = ({ occurrence }) => {
   const hasThistle = eggLaying && eggLaying.includes('Thistles');
   const hasOther = eggLaying && eggLaying.includes('Other');
 
+  const isStageAdult = occurrence.attrs.stage === 'Adult';
+
   return (
     <>
-      <MenuAttrItem
-        routerLink={`${url}/wing`}
-        value={<PaintedLadyWing wings={wing} />}
-        label="Wing condition"
-        icon={butterflyIcon}
-        className="text-capitalize wing-value"
-        disabled={isDisabled}
-        skipValueTranslation
-      />
+      {isStageAdult && (
+        <MenuAttrItem
+          routerLink={`${url}/wing`}
+          value={<PaintedLadyWing wings={wing} />}
+          label="Wing condition"
+          icon={butterflyIcon}
+          className="text-capitalize wing-value"
+          disabled={isDisabled}
+          skipValueTranslation
+        />
+      )}
 
-      <MenuAttrItem
-        routerLink={`${url}/behaviour`}
-        value={<PaintedLadyBehaviour behaviour={behaviour} showLabel />}
-        label="Behaviour"
-        icon={butterflyIcon}
-        className="behaviour-value"
-        disabled={isDisabled}
-        skipValueTranslation
-      />
+      {isStageAdult && (
+        <MenuAttrItem
+          routerLink={`${url}/behaviour`}
+          value={<PaintedLadyBehaviour behaviour={behaviour} showLabel />}
+          label="Behaviour"
+          icon={butterflyIcon}
+          className="behaviour-value"
+          disabled={isDisabled}
+          skipValueTranslation
+        />
+      )}
 
-      {migrating && (
+      {migrating && isStageAdult && (
         <MenuAttrItemFromModel
           model={occurrence}
           attr="direction"
           className="direction-icon"
         />
       )}
-      {migrating && (
+      {migrating && isStageAdult && (
         <MenuAttrItemFromModel
           model={occurrence}
           attr="altitude"
@@ -71,10 +75,15 @@ const PaintedLadyAttrs: FC<Props> = ({ occurrence }) => {
           skipValueTranslation
         />
       )}
-      {nectaring && (
+      {nectaring && isStageAdult && (
         <MenuAttrItemFromModel model={occurrence} attr="nectarSource" />
       )}
-      {flowering && (
+
+      {mating && isStageAdult && (
+        <MenuAttrItemFromModel model={occurrence} attr="mating" />
+      )}
+
+      {(flowering || !isStageAdult) && (
         <MenuAttrItemFromModel model={occurrence} attr="eggLaying" />
       )}
 
@@ -85,8 +94,6 @@ const PaintedLadyAttrs: FC<Props> = ({ occurrence }) => {
       {hasOther && (
         <MenuAttrItemFromModel model={occurrence} attr="otherEggLaying" />
       )}
-
-      {mating && <MenuAttrItemFromModel model={occurrence} attr="mating" />}
     </>
   );
 };

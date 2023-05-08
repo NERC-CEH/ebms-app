@@ -1,6 +1,4 @@
 .ion-page#language-select {
-  margin-top: var(--ion-safe-area-top);
-
   .header {
     padding: 35px;
 
@@ -10,4 +8,8 @@
       text-align: center;
     }
   }
+}
+
+#language-select.safeAreaPadding {
+  padding-top: var(--ion-safe-area-top, 0);
 }

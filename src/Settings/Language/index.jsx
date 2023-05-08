@@ -41,7 +41,7 @@ function SelectLanguage({ appModel, hideHeader }) {
     .map(languageOption);
 
   return (
-    <Page id="language-select">
+    <Page id="language-select" className={hideHeader && 'safeAreaPadding'}>
       {!hideHeader && <Header title="Language" />}
 
       <Main>

@@ -18,7 +18,7 @@ import countries from 'common/config/countries';
 import './styles.scss';
 
 type Props = {
-  hideHeader?: boolean;
+  hideHeader?: any;
 };
 
 const SelectCountry: FC<Props> = ({ hideHeader }) => {
@@ -83,7 +83,7 @@ const SelectCountry: FC<Props> = ({ hideHeader }) => {
     .map(getCountryOption);
 
   return (
-    <Page id="country-select">
+    <Page id="country-select" className={hideHeader && 'safeAreaPadding'}>
       {!hideHeader && <Header title="Country" />}
 
       <Main>
