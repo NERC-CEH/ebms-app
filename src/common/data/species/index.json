@@ -404,10 +404,6 @@
         "laterana"
       ],
       [
-        572061,
-        "laterana / comariana"
-      ],
-      [
         572319,
         "laterana/comariana"
       ],
@@ -442,10 +438,6 @@
       [
         453903,
         "notana"
-      ],
-      [
-        572062,
-        "notana/ferrugana"
       ],
       [
         453900,
@@ -1083,10 +1075,6 @@
       [
         459603,
         "tridens"
-      ],
-      [
-        572065,
-        "tridens / psi"
       ],
       [
         459624,
@@ -1739,6 +1727,10 @@
     260,
     "Afriberina",
     [
+      [
+        615165,
+        "salemae"
+      ],
       [
         457630,
         "tenietaria"
@@ -2505,10 +2497,6 @@
         "heracliana"
       ],
       [
-        572068,
-        "heracliana / ciliella"
-      ],
-      [
         451263,
         "hippomarathri"
       ],
@@ -2682,10 +2670,6 @@
       ],
       [
         572276,
-        "spec."
-      ],
-      [
-        572069,
         "spec."
       ],
       [
@@ -4207,10 +4191,6 @@
         "berbera"
       ],
       [
-        572052,
-        "berbera / pyramidea"
-      ],
-      [
         572196,
         "berbera/pyramidea"
       ],
@@ -4241,10 +4221,6 @@
       [
         459802,
         "pyramidea"
-      ],
-      [
-        572074,
-        "pyramidea/berbera"
       ],
       [
         459812,
@@ -6380,10 +6356,6 @@
       [
         458462,
         "efformata"
-      ],
-      [
-        572076,
-        "efformata/plagiata"
       ],
       [
         572218,
@@ -10008,10 +9980,6 @@
       [
         454126,
         "lancealana"
-      ],
-      [
-        572081,
-        "lancealana/lacteana"
       ],
       [
         454133,
@@ -14688,10 +14656,6 @@
         "elongella"
       ],
       [
-        572085,
-        "elongella/betulicola"
-      ],
-      [
         449924,
         "falconipennella"
       ],
@@ -16866,10 +16830,6 @@
         "permutatellus"
       ],
       [
-        572088,
-        "permutatellus/osthelderi"
-      ],
-      [
         456603,
         "petrificella"
       ],
@@ -17559,10 +17519,6 @@
       ],
       [
         572264,
-        "empiformis/tenthrediniformis"
-      ],
-      [
-        572090,
         "empiformis/tenthrediniformis"
       ],
       [
@@ -19414,6 +19370,10 @@
       [
         454093,
         "dumicolana"
+      ],
+      [
+        615164,
+        "eatoniana"
       ],
       [
         454090,
@@ -21961,10 +21921,6 @@
       [
         451476,
         "flavipennella"
-      ],
-      [
-        572091,
-        "flavipennella/lutipennella"
       ],
       [
         572234,
@@ -25981,10 +25937,6 @@
       [
         459718,
         "scrophulariae"
-      ],
-      [
-        572095,
-        "scrophulariae/verbasci"
       ],
       [
         572224,
@@ -30203,10 +30155,6 @@
       [
         458305,
         "truncata"
-      ],
-      [
-        572100,
-        "truncata/citrata"
       ]
     ]
   ],
@@ -32696,10 +32644,6 @@
       [
         454466,
         "sticticana"
-      ],
-      [
-        572108,
-        "sticticana/scutulana/cirsiana"
       ],
       [
         454476,
@@ -37155,10 +37099,6 @@
       ],
       [
         572292,
-        "sericopeza/louisella"
-      ],
-      [
-        572112,
         "sericopeza/louisella"
       ]
     ]
@@ -47726,14 +47666,6 @@
         "tersata"
       ],
       [
-        572046,
-        "tersata / radicaria"
-      ],
-      [
-        572122,
-        "tersata/Horisme radicaria"
-      ],
-      [
         572316,
         "tersata/radicaria"
       ],
@@ -55988,10 +55920,6 @@
         "notata"
       ],
       [
-        572124,
-        "notata / alternata"
-      ],
-      [
         457286,
         "signaria"
       ],
@@ -58906,14 +58834,6 @@
       [
         460530,
         "secalis"
-      ],
-      [
-        572125,
-        "secalis / secalella"
-      ],
-      [
-        572056,
-        "secalis / secalella"
       ],
       [
         460537,
@@ -62437,20 +62357,12 @@
         "janthe"
       ],
       [
-        572132,
-        "janthe / janthina"
-      ],
-      [
         572178,
         "janthe/janthina"
       ],
       [
         461113,
         "janthina"
-      ],
-      [
-        572059,
-        "janthina / janthe"
       ],
       [
         461102,
@@ -68833,10 +68745,6 @@
       ],
       [
         572298,
-        "manniana/udana"
-      ],
-      [
-        572140,
         "manniana/udana"
       ],
       [
@@ -77864,10 +77772,6 @@
         "aurata"
       ],
       [
-        572147,
-        "aurata / purpuralis"
-      ],
-      [
         572204,
         "aurata/purpuralis"
       ],
@@ -81528,10 +81432,6 @@
         "basistrigalis / ambigualis"
       ],
       [
-        572150,
-        "basistrigalis/ambigualis"
-      ],
-      [
         456447,
         "berytella"
       ],
@@ -81914,10 +81814,6 @@
         "luridata"
       ],
       [
-        572266,
-        "luridata/mucronata"
-      ],
-      [
         458108,
         "moeniata"
       ],
@@ -81926,15 +81822,7 @@
         "mucronata"
       ],
       [
-        572044,
-        "mucronata / luridata"
-      ],
-      [
         572286,
-        "mucronata/luridata"
-      ],
-      [
-        572152,
         "mucronata/luridata"
       ],
       [
@@ -85463,10 +85351,6 @@
         "anomalella"
       ],
       [
-        572158,
-        "anomalella/centifoliella"
-      ],
-      [
         572202,
         "anomalella/centifoliella"
       ],
@@ -85599,10 +85483,6 @@
         "floslactella/microtheriella"
       ],
       [
-        572160,
-        "floslactella/microtheriella"
-      ],
-      [
         448701,
         "freyella"
       ],
@@ -85613,10 +85493,6 @@
       [
         448718,
         "glutinosae"
-      ],
-      [
-        572161,
-        "glutinosae/alnetella"
       ],
       [
         448768,
@@ -87845,10 +87721,6 @@
         "britannica/variata"
       ],
       [
-        572166,
-        "britannica/variata"
-      ],
-      [
         458262,
         "cembrae"
       ],
@@ -87875,10 +87747,6 @@
       [
         458256,
         "variata"
-      ],
-      [
-        572045,
-        "variata / britannica"
       ],
       [
         458260,
@@ -90837,10 +90705,6 @@
         "ferrugata"
       ],
       [
-        572171,
-        "ferrugata / spadicearia"
-      ],
-      [
         572192,
         "ferrugata/spadicearia"
       ],
@@ -91147,10 +91011,6 @@
       [
         461204,
         "triangulum"
-      ],
-      [
-        572172,
-        "triangulum/ditrapezium"
       ],
       [
         461215,
@@ -92313,10 +92173,6 @@
       [
         448942,
         "longicaudella"
-      ],
-      [
-        572174,
-        "longicaudella / atrifrontella"
       ],
       [
         448944,
