@@ -7,4 +7,19 @@
     margin: 30px;
     background: white;
   }
+
+  .painted-lady-guide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-item {
+      --inner-border-width: 0 !important;
+    }
+
+    ion-icon {
+      font-size: 2.5em;
+      margin: 0 10px;
+    }
+  }
 }
