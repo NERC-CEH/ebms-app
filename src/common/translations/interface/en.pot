@@ -2215,7 +2215,6 @@ msgstr "Territorial defence: other"
 msgid "Territorial defence: hill-topping"
 msgstr "Territorial defence: hill-topping"
 
-
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
 msgstr "What was the butterfly flying altitude? (meters)"
@@ -2223,10 +2222,6 @@ msgstr "What was the butterfly flying altitude? (meters)"
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
 msgstr "Other hostplant"
-
-# Painted lady direction option
-msgid "Other"
-msgstr "Other"
 
 # Painted lady direction option
 msgid "Desert nettle"
@@ -2267,14 +2262,6 @@ msgstr "Nectar"
 # Part of Painted lady survey 
 msgid "Enter the nectar source here"
 msgstr "Enter the nectar source here"
-
-# Part of Painted lady survey 
-msgid "Territorial defence: hill-topping"
-msgstr "Territorial defence: hill-topping"
-
-# Part of Painted lady survey 
-msgid "Territorial defence: other"
-msgstr "Territorial defence: other"
 
 # Part of Painted lady survey 
 msgid "Other species"

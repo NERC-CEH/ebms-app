@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
 "Last-Translator: Marta Depetris, 2022\n"
-"Language-Team: Italian (Italy) (https://www.transifex.com/ceh/teams/95441/it_IT/)\n"
+"Language-Team: Italian (Italy) (https://app.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1911,29 +1911,13 @@ msgstr ""
 msgid "What's New"
 msgstr "Cosa c'è di nuovo"
 
-# Version 1.18 whats new message
-msgid "Enabled Android back button"
-msgstr "Pulsante posteriore Android abilitato"
+# Version 1.20 whats new message
+msgid "Added Painted Lady survey"
+msgstr ""
 
-# Version 1.18 whats new message
-msgid " Added user account delete option"
-msgstr "Aggiunta l'opzione di cancellazione dell'account utente"
-
-# Version 1.18 whats new message
-msgid "Added ability to select multiple photos from the gallery"
-msgstr "Aggiunta la possibilità di selezionare più foto dalla galleria"
-
-# Version 1.18 whats new message
-msgid "Move day-flying moths option to species group page"
-msgstr "Spostare l'opzione falene diurne nella pagina del gruppo delle specie"
-
-# Version 1.18 whats new message
-msgid "Various bug fixes"
-msgstr "Diversi bug corretti"
-
-# Version 1.18 whats new message
-msgid "Updated translations"
-msgstr "Traduzioni aggiornate "
+# Version 1.20 whats new message
+msgid "Changed species groups location and functionality"
+msgstr ""
 
 # User account action
 msgid "Resend"
@@ -2181,3 +2165,224 @@ msgstr ""
 "Sei sicuro di voler eliminare il tuo account? <1> Questo eliminerà il tuo "
 "account sul <2>{{url}}</2> sito. Perderai l'accesso a ogni dato che hai "
 "precedentemente inserito usando l'app o il sito. </1>"
+
+# Part of Species Group selection
+msgid ""
+"This option was moved to the species search page inside the surveys. When a "
+"survey starts, you can select which species group you are recording."
+msgstr ""
+
+# Part of Species Group selection
+msgid "Groups"
+msgstr ""
+
+# Part of Species Group selection
+msgid "Close"
+msgstr ""
+
+# Part of Species Group selection
+msgid "Confirm"
+msgstr ""
+
+# Part of Species Group selection
+msgid "Which species groups have you counted?"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Select Target Species"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Wing"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Behaviour"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Direction"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Altitude"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Compass"
+msgstr ""
+
+# Alert header
+msgid "Delete Survey"
+msgstr ""
+
+# Alert message
+msgid ""
+"Warning - This will discard the survey information you have entered so far."
+msgstr ""
+
+# Painted lady wing options
+msgid "Fresh"
+msgstr ""
+
+# Painted lady wing options
+msgid "Worn"
+msgstr ""
+
+# Painted lady wing options
+msgid "Normal"
+msgstr ""
+
+# Painted lady survey flower entry
+msgid "Please specify the nectar source."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the egg laying option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the mating option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Nectar source"
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the nectar option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the direction option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the altitude option."
+msgstr ""
+
+# Part of painted lady
+msgid "Egg-laying hostplants"
+msgstr ""
+
+# Part of painted lady
+msgid "Migrating"
+msgstr ""
+
+# Part of painted lady
+msgid "Nectaring"
+msgstr ""
+
+# Part of painted lady
+msgid "Mating"
+msgstr ""
+
+# Painted lady compass
+msgid "Unsupported device"
+msgstr ""
+
+# Painted lady compass
+msgid ""
+"Unfortunately, it looks like your device doesn't have the necessary sensor "
+"for the compass to function correctly. The compass relies on this sensor to "
+"detect the earth's magnetic field and determine your device's orientation "
+"relative to magnetic north. Thus, you will not be able to use compass on "
+"this device."
+msgstr ""
+
+# Painted lady mating options
+msgid "Territorial defence: other"
+msgstr ""
+
+# Painted lady mating options
+msgid "Territorial defence: hill-topping"
+msgstr ""
+
+# Painted lady direction options
+msgid "What was the butterfly flying altitude? (meters)"
+msgstr ""
+
+# Painted lady egg laying hostplant option
+msgid "Other hostplant"
+msgstr ""
+
+# Painted lady direction option
+msgid "Desert nettle"
+msgstr ""
+
+# Painted lady direction option
+msgid "Mallow"
+msgstr ""
+
+# Painted lady direction option
+msgid "Thistles"
+msgstr ""
+
+# Painted lady direction option
+msgid "Hostplants"
+msgstr ""
+
+# Painted lady direction option
+msgid "Please select the hostplants."
+msgstr ""
+
+# Painted lady survey info background message
+msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
+msgstr ""
+
+# Alert title
+msgid "Tip: Copy attributes"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Wing condition"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Nectar"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Enter the nectar source here"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Other species"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "What kind of thistle was it?"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Thistle species"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Copied!"
+msgstr ""
+
+# Part of Painted lady survey
+msgid ""
+"To copy a list entry swipe it to the right and press<1><0></0></1>icon."
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Height above ground (meters)"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Height"
+msgstr ""
+
+# 15min Single species survey detail page button label
+msgid "Start Count"
+msgstr ""
+
+# Painted Lady guide title
+msgid "Tracking the Painted Lady migration with Butterfly Count"
+msgstr ""

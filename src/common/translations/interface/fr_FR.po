@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
 "Last-Translator: de Flores Mathieu, 2023\n"
-"Language-Team: French (France) (https://www.transifex.com/ceh/teams/95441/fr_FR/)\n"
+"Language-Team: French (France) (https://app.transifex.com/ceh/teams/95441/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -171,7 +171,7 @@ msgid "Next"
 msgstr "Suivant"
 
 msgid "Get Started"
-msgstr "Débuter"
+msgstr "Commencer"
 
 msgid "Please sign in with your eBMS account or register."
 msgstr "Veuillez vous identifier avec votre compte eBMS ou vous enregistrer. "
@@ -231,7 +231,7 @@ msgid "Reset"
 msgstr "Réinitialisation"
 
 msgid "Records"
-msgstr "Comptages"
+msgstr "Suivis"
 
 msgid "Upload All"
 msgstr "Tout télécharger"
@@ -252,13 +252,13 @@ msgid "Welcome"
 msgstr "Bienvenue"
 
 msgid "Lets start!"
-msgstr "Commencer"
+msgstr "C'est parti !"
 
 msgid "TOP RECORDERS"
 msgstr "Observateurs les plus actifs"
 
 msgid "Top Species from all timed counts"
-msgstr "Espèces les plus observées dans les comptages chronométrés"
+msgstr "Espèces les plus observées dans les suivis chronométrés"
 
 msgid "Back"
 msgstr "Précédent"
@@ -272,8 +272,8 @@ msgstr "Application"
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
-"Nous sommes très reconnaissants envers toutes les personnes qui ont "
-"contribué à la création de cette application :"
+"Un grand merci à toutes les personnes qui ont contribué à la création de "
+"cette application :"
 
 msgid "Home"
 msgstr "Accueil"
@@ -413,7 +413,7 @@ msgid "Draft"
 msgstr "Brouillon"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Il existe un comptage non finalisé, voulez-vous le poursuivre ?"
+msgstr "Il existe un suivi non finalisé, voulez-vous le poursuivre ?"
 
 msgid "Discard"
 msgstr "Supprimer"
@@ -431,16 +431,16 @@ msgid "No species added"
 msgstr "Pas d'espèce ajoutée"
 
 msgid "Please draw your area on the map"
-msgstr "Veuillez dessiner votre surface de comptage sur la carte"
+msgstr "Veuillez dessiner sur la carte la surface explorée "
 
 msgid "Draw an area"
-msgstr "Dessiner une surface de comptage"
+msgstr "Dessiner une surface"
 
 msgid "Delete"
 msgstr "Supprimer"
 
 msgid "Surveys"
-msgstr "Comptages"
+msgstr "Suivis"
 
 msgid "Reports"
 msgstr "Statistiques"
@@ -455,25 +455,25 @@ msgstr "Famille"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr ""
-"Désolé, aucune statistique de participation n'est disponible pour le moment."
+"Désolé, aucun rapport de participation n'est disponible pour le moment."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "Etes-vous certain de vouloir supprimer ce comptage ?"
+msgstr "Etes-vous certain de vouloir supprimer ce suivi ?"
 
 msgid "No finished surveys"
-msgstr "Pas de comptage terminé"
+msgstr "Aucun suivi terminé"
 
 msgid "Finished surveys"
-msgstr "Comptages terminés"
+msgstr "Suivis terminés"
 
 msgid "Selected area"
 msgstr "Surface sélectionnée"
 
 msgid "Use survey create time"
-msgstr "Utiliser l'heure de création du comptage"
+msgstr "Utiliser l'heure de création du suivi"
 
 msgid "Use survey finish time"
-msgstr "Utiliser l'heure de fin du comptage"
+msgstr "Utiliser l'heure de fin du suivi"
 
 msgid "species"
 msgstr "espèce"
@@ -485,16 +485,16 @@ msgid "Time's up!"
 msgstr "Temps écoulé !"
 
 msgid "Survey incomplete"
-msgstr "Comptage incomplet"
+msgstr "Suivi incomplet"
 
 msgid "The survey is not complete yet."
-msgstr "Le comptage n'est pas encore complet."
+msgstr "Le suivi n'est pas encore complet."
 
 msgid "Please select a smaller area."
-msgstr "Veuillez sélectionner une plus petite surface de comptage."
+msgstr "Veuillez sélectionner une plus petite surface."
 
 msgid "Please add survey area information."
-msgstr "Veuillez ajouter les informations sur votre surface de comptage."
+msgstr "Veuillez ajouter les informations sur la surface."
 
 msgid "Choose a method to upload a photo"
 msgstr "Sélectionner une méthode pour charger une photo"
@@ -506,10 +506,10 @@ msgid "Camera"
 msgstr "Appareil photo"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "Etes-vous certain de vouloir supprimer cette photo ?"
+msgstr "Supprimer cette photo ?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Note : elle restera dans la galerie."
+msgstr "Note : elle restera disponible dans la galerie."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
@@ -525,8 +525,7 @@ msgstr "Mot de passe ou e-mail incorrect "
 
 msgid "Enter your email address to request a password reset."
 msgstr ""
-"Veuillez renseigner votre adresse mail pour réinitialiser votre mot de "
-"passe."
+"Veuillez renseigner votre e-mail pour réinitialiser votre mot de passe."
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
@@ -558,14 +557,14 @@ msgstr "Veuillez d'abord vous identifier. "
 
 # User registration error
 msgid "This email is already taken."
-msgstr "Cette adresse e-mail est déjà utilisée."
+msgstr "Cette e-mail est déjà utilisé."
 
 # User password reset error
 msgid "Unrecognized email address."
 msgstr "Adresse e-mail non reconnue. "
 
 msgid "email is not valid"
-msgstr " Adresse e-mail invalide"
+msgstr " Adresse e-mail invalide."
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
@@ -638,11 +637,11 @@ msgid "Not enough data yet"
 msgstr "Pas encore assez de données"
 
 msgid "How to start a survey"
-msgstr "Comment commencer un comptage"
+msgstr "Comment se lancer dans un suivi"
 
 msgid "To start a new survey you can press the plus button"
 msgstr ""
-"Pour commencer un nouveau comptage vous pouvez cliquer sur le bouton plus"
+"Pour commencer un nouveau suivi vous pouvez cliquer sur le bouton \"plus\""
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
@@ -664,32 +663,32 @@ msgstr ""
 "ajoutée à votre liste de comptages. "
 
 msgid "Note"
-msgstr "Notez"
+msgstr "Notes"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
-"vous pouvez augmenter le nombre d'espèce en tapant sur le nombre à côté du "
-"nom d'espèce dans la liste."
+"vous pouvez augmenter le nombre d'individus en tapant sur le nombre à côté "
+"du nom d'espèce dans la liste."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Pour supprimer une espèce de votre liste de comptages vous pouvez la glisser"
-" vers la gauche et cliquer sur le bouton supprimer."
+"Pour supprimer une espèce de votre liste vous pouvez la glisser vers la "
+"gauche et cliquer sur le bouton \"Supprimer\"."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"pour ajouter plus d'informations sur votre observation d'espèce, vous pouvez"
-" ouvrir l'observation d'espèce en cliquant dessus."
+"pour ajouter des informations sur une observation, vous pouvez ouvrir "
+"l'observation d'espèce en cliquant dessus."
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr ""
-"Pour terminer une participation vous devriez aussi remplir les détails de la"
+"Pour terminer une participation vous devez compléter les informations sur la"
 " surface."
 
 msgid ""
@@ -706,31 +705,31 @@ msgid ""
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"L'application comprend quelques 500 espèces et leurs rangs taxonomiques "
-"associés. Pour une recherche plus rapide d'espèces vous pouvez utiliser "
+"L'application prend en compte environ 500 espèces et leurs rangs "
+"taxonomiques associés. Pour une recherche plus rapide, vous pouvez utiliser "
 "différents raccourcis. Par exemple, pour trouver"
 
 msgid "Sync. with the website"
 msgstr "Synchronisation avec le site web"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr "Tous vos comptages enregistrés seront visibles sur votre profil."
+msgstr "Tous vos suivis enregistrés seront visibles sur votre profil."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Par défaut, un comptage est en mode \"ébauche\" et ne sera pas envoyé dans "
-"la base de données jusqu'à ce que le bouton \"Terminer\" en tête de page "
-"n'est pas pressé. L'application va essayer de soumettre la participation une"
-" fois qu'une bonne connexion au réseau est disponible. "
+"Par défaut, un suivi est en mode \"brouillon\", et ne sera envoyé dans la "
+"base de données que lorsque vous presserez le bouton \"Terminer\" en tête de"
+" page . L'application tentera d'envoyer la participation une fois qu'une "
+"connexion correcte au réseau sera disponible. "
 
 msgid "If the record has reached the database a red"
-msgstr "Si la participation a atteint la base de données un"
+msgstr "Si les données ont bien été envoyées, "
 
 msgid "(set for submission & saved locally) will become green"
-msgstr "(préparer pour envoi & sauvegarder en local) rouge deviendra vert"
+msgstr "(préparer pour envoi & sauvegarder en local) le rouge passera au vert"
 
 msgid "synced to the database"
 msgstr "synchronisé avec la base de données"
@@ -751,8 +750,8 @@ msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Pour supprimer une participation, faites le glisser vers la gauche dans "
-"votre page de profil et cliquez sur le bouton supprimer."
+"Pour supprimer une participation, faites la glisser vers la gauche dans "
+"votre page de profil et cliquez sur le bouton \"Supprimer\"."
 
 msgid "User"
 msgstr "Utilisateur"
@@ -764,20 +763,20 @@ msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"Pour se connecter, ouvrez le menu principal, cliquez sur le bouton Connexion"
-" ou Enregistrement et suivez les instructions."
+"Pour vous connecter, ouvrez le menu principal, cliquez sur le bouton "
+"\"Connexion ou enregistrement\" et suivez les instructions."
 
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr ""
-"Pour se déconnecter, visitez le menu principal et cliquez sur le bouton "
-"Déconnexion."
+"Pour vous déconnecter, allez dans le menu principal et cliquez sur le bouton"
+" \"Déconnexion\"."
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
-"après avoir enregistré un nouveau profil, vous devez valider votre adresse "
-"e-mail en cliquant sur le lien de validation envoyé à votre adresse e-mail"
+"après avoir enregistré un nouveau compte, vous devez valider votre adresse "
+"e-mail en cliquant sur le lien de validation envoyé"
 
 msgid "Other"
 msgstr "Autre"
@@ -786,10 +785,10 @@ msgid "Reset the application"
 msgstr "Réinitialiser l'application"
 
 msgid "Go to the application settings page"
-msgstr "Rendez-vous à la page des paramètres de l'application"
+msgstr "Allez dans les paramètres de l'application"
 
 msgid "and click on the Reset"
-msgstr "et cliquez sur le bouton Réinitialisation"
+msgstr "et cliquez sur le bouton \"Réinitialiser l'application\""
 
 msgid "button"
 msgstr "bouton"
@@ -807,23 +806,22 @@ msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Cette application soutient le suivi et la conservation des papillons. "
-"Cliquez sur le bouton + ci-dessous pour commencer le comptage des papillons."
+"Cette application permets de suivre les papillons et contribue à leur "
+"préservation. Cliquez sur le bouton + ci-dessous pour commencer à les suivre"
+" !"
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
-"Vous découvrirez plusieurs améliorations et fonctionnalités de cette "
-"application au cours des prochains mois."
+"Cette application est en constante amélioration, maintenez la à jour pour "
+"bénéficier des nouvelles fonctionnalités !"
 
 msgid "Are you sure you want to reset the application to its initial state?"
-msgstr ""
-"Etes-vous certain de vouloir réinitialiser l'application à son état initial "
-"?"
+msgstr "Etes-vous sûr de vouloir réinitialiser l'application ?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr "Ceci effacera toutes les données enregistrées en local !"
+msgstr "Ceci effacera toutes les données enregistrées sur cet appareil !"
 
 msgid "Sweden"
 msgstr "Suède"
@@ -838,13 +836,13 @@ msgid "Uploaded"
 msgstr "Téléchargé"
 
 msgid "No finished pending surveys"
-msgstr "Pas de comptages terminés en attente"
+msgstr "Pas de suivis terminés en attente"
 
 msgid "No uploaded surveys"
-msgstr "Pas de comptages téléchargés"
+msgstr "Pas de suivis téléchargés"
 
 msgid "Enjoying the app?"
-msgstr "Appréciez-vous l'application ?"
+msgstr "Appréciez-vous cette application ?"
 
 msgid "Not really"
 msgstr "Pas vraiment"
@@ -853,7 +851,7 @@ msgid "Yes!"
 msgstr "Oui !"
 
 msgid "Would you mind giving us some feedback?"
-msgstr "Pourriez-vous nous donner un retour sur cette application ? "
+msgstr "Pouvez-vous nous faire un retour sur l'application ? "
 
 msgid "No, thanks"
 msgstr "Non merci"
@@ -862,10 +860,10 @@ msgid "OK, sure"
 msgstr "Oui"
 
 msgid "How about a rating on the App Store then?"
-msgstr "Avez-vous une minute pour nous évaluer sur l'App Store ?"
+msgstr "Avez-vous une minute pour la noter sur l'App Store ?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "Avez-vous une minute pour nous évaluer sur Play Store ?"
+msgstr "Avez-vous une minute pour la noter sur le Play Store ?"
 
 msgid "Icons made by"
 msgstr "Icônes créées par "
@@ -911,8 +909,8 @@ msgstr "Pays"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
-"Marquez toutes les nouvelles participations comme « entrainement » et "
-"excluez-les de toutes vos statistiques."
+"Marquez toutes les nouvelles participations comme « entrainement » et les "
+"exclure des statistiques."
 
 # App setting label
 msgid "Show common names in guide"
@@ -971,10 +969,10 @@ msgid "Pupa"
 msgstr "Chrysalide"
 
 msgid "Transect"
-msgstr "Transect"
+msgstr "Site"
 
 msgid "Sections"
-msgstr "Sections"
+msgstr "Transect"
 
 msgid "No transect"
 msgstr "Pas de transect"
@@ -1004,7 +1002,7 @@ msgid "Refresh"
 msgstr "Actualiser"
 
 msgid "Please select your transect first."
-msgstr "Veuillez d'abord sélectionner votre transect."
+msgstr "Veuillez d'abord sélectionner votre site."
 
 msgid "Invalid server response."
 msgstr "Réponse du serveur invalide."
@@ -1040,7 +1038,7 @@ msgid "SE"
 msgstr "SE"
 
 msgid "No direction"
-msgstr "Pas de direction."
+msgstr "Pas de vent."
 
 msgid "Please specify the wind direction."
 msgstr "Veuillez renseigner la direction du vent."
@@ -1070,19 +1068,19 @@ msgid "Please specify the wind speed."
 msgstr "Veuillez préciser la vitesse du vent."
 
 msgid "Transects"
-msgstr "Transects"
+msgstr "Sites"
 
 msgid "Transect list was successfully updated."
-msgstr "La liste de transect a été mise à jour avec succès."
+msgstr "La liste des sites a été mise à jour avec succès."
 
 msgid "Section"
-msgstr "Section"
+msgstr "Transect"
 
 msgid "Reliability"
 msgstr "Fiabilité"
 
 msgid "Please specify the reliability of the section count."
-msgstr "Veuillez préciser la fiabilité du comptage de section. "
+msgstr "Veuillez préciser les conditions de suivi du transect. "
 
 msgid "Suitable conditions"
 msgstr "Conditions propices"
@@ -1091,7 +1089,7 @@ msgid "Unsuitable conditions"
 msgstr "Conditions inadéquates"
 
 msgid "Unable to survey"
-msgstr "Incapable de réaliser le comptage"
+msgstr "Incapable de réaliser le suivi"
 
 msgid "15min Count"
 msgstr "Comptage de 15 min"
@@ -1100,10 +1098,10 @@ msgid "15min Single Species Count"
 msgstr "Comptage d'une seule espèce de 15 minutes "
 
 msgid "eBMS Transect"
-msgstr "Transect eBMS"
+msgstr "Suivi Sterf (eBMS)"
 
 msgid "Please add any extra info about this record."
-msgstr "Veuillez ajouter d'avantage d'informations à propos de cet comptage."
+msgstr "Veuillez préciser les informations à propos de ce suivi."
 
 msgid "Enter more information here..."
 msgstr "Renseignez plus d'information ici..."
@@ -1118,7 +1116,7 @@ msgid "Please specify the % of cloud cover."
 msgstr "Veuillez renseigner le pourcentage de couverture nuageuse."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "Vous n'avez pas de transect. Essayez actualiser la liste."
+msgstr "Vous n'avez pas de site. Essayez d'actualiser la liste."
 
 msgid "Wind speed info is missing"
 msgstr "Veuillez renseigner la vitesse du vent"
@@ -1130,14 +1128,14 @@ msgid "Recorder info is missing"
 msgstr "Veuillez remplir les informations sur l'observateur"
 
 msgid "Please select your transect."
-msgstr "Veuillez sélectionner votre transect."
+msgstr "Veuillez sélectionner votre site."
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Ce guide est en cours d'élaboration. Il couvre {{countrySpeciesCount}} "
+"Ce guide est en cours d'élaboration. Il comprend {{countrySpeciesCount}} "
 "espèces de papillon parmi les {{totalSpeciesCountryCount}} espèces présentes"
 " dans le pays que vous avez sélectionné"
 
@@ -1160,13 +1158,13 @@ msgid "Irregular vagrant"
 msgstr "Erratique rare"
 
 msgid "Regionally extinct"
-msgstr "Eteint au niveau régional"
+msgstr "Éteint au niveau régional"
 
 msgid "Description"
 msgstr "Description"
 
 msgid "Counts"
-msgstr "Comptages"
+msgstr "Suivis"
 
 msgid "Species descriptions"
 msgstr "Descriptions des espèces."
@@ -1176,9 +1174,9 @@ msgid ""
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Les descriptions d'espèces incluses dans ce guide sont basées sur celles "
-"fournies pour le \"Climatic Risk Atlas of European Butterfly\". Nous "
-"remercions Josef Settele pour nous avoir permis d'y accéder. "
+"Les descriptions d'espèces dans ce guide sont basées sur celles du "
+"\"Climatic Risk Atlas of European Butterfly\". Nous remercions Josef Settele"
+" pour l'autorisation de les utiliser. "
 
 msgid "Photo credits"
 msgstr "Crédits photo"
@@ -1193,10 +1191,10 @@ msgid ""
 "have to register an account."
 msgstr ""
 "Vous pouvez utiliser cette application pour suivre les papillons n'importe "
-"où en Europe. Les résultats seront entrés dans la base de donnée \"European "
-"Butterfly Monitoring\" et utilisés pour développer les tendances de "
-"papillons en Europe. Pour utiliser l'application, vous devez d'abord vous "
-"inscrire. "
+"où en Europe. Les informations récoltées rentrent dans la base de données "
+"\"European Butterfly Monitoring\" et sont utilisées afin de produire des "
+"statistiques comme les tendances des espèces en Europe. Pour utiliser "
+"l'application, vous devez d'abord vous inscrire. "
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1206,13 +1204,11 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"La méthode préconisée est de procéder à un comptage de 15 minutes. Celui-ci "
-"peut être effectué à n'importe quel endroit et moment, lorsque les papillons"
-" sont actifs (i.e. quand il fait chaud et que le temps est préférablement "
-"ensoleillé). Vous pouvez également utilser l'application afin de suivre vos "
-"transects de papillons déjà établis. A partir de 2020, l'application aura "
-"également une fonctionnalité permettant d'enregistrer des observations "
-"opportunistes. Les notes ci-dessous vous expliquent comment utiliser les "
+"Vous pouvez utiliser l'application afin de suivre vos transects STERF ou "
+"eBMS déjà existants, ou lancer des comptages de 15 minutes. Ces derniers "
+"peuvent être effectués à n'importe quel endroit et moment, lorsque les "
+"papillons sont actifs (i.e. quand il fait chaud et que le temps est "
+"ensoleillé). Les notes ci-dessous vous expliquent comment utiliser les "
 "méthodes actuellement disponibles."
 
 msgid "How to do a 15-minute Count"
@@ -1231,18 +1227,19 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Ceci est la méthode par défaut sur l'application. Comptez simplement les "
-"papillons pendant une période de 15 minutes, soit dans une aire "
-"d'observation définie, en marchant, ou en restant immobile et en comptant "
-"les papillons qui passent. Si vous avez activé le suivi GPS dans les "
-"réglages, il n'est pas nécessaire de dessiner votre itinéraire sur la carte,"
-" l'application l'enregistre automatiquement  Si ce n'est pas le cas, vous "
-"devrez dessiner vous-même votre itinéraire sur la carte. Pour commencer le "
-"comptage, veuillez cliquer sur le bouton + en bas de l'écran. L'application "
-"débute alors le compte à rebours de 15 minutes. Il vous est possible de "
-"mettre le comptage en pause à tout moment (par exemple pour identifier une "
-"espèce) en appuyant sur le bouton \"pause\". A la fin de votre comptage, "
-"vous pouvez vérifier vos entrées avant d'envoyer vos résultats."
+"C'est le suivi par défaut sur l'application (vous pouvez changer le type de "
+"suivi par défaut dans les paramètres). Comptez les papillons pendant une "
+"période de 15 minutes, soit dans une aire d'observation définie, en "
+"marchant, ou en restant immobile et en comptant les individus qui passent. "
+"Si vous avez activé le suivi GPS dans les réglages, il n'est pas nécessaire "
+"de dessiner votre itinéraire sur la carte, l'application l'enregistre "
+"automatiquement  Si ce n'est pas le cas, vous devrez dessiner vous-même "
+"votre itinéraire sur la carte. Pour commencer le comptage, veuillez cliquer "
+"sur le bouton \"+\" en bas de l'écran. L'application débute alors le compte "
+"à rebours de 15 minutes. Il vous est possible de mettre le comptage en pause"
+" à tout moment (par exemple pour identifier une espèce) en appuyant sur le "
+"bouton \"Pause\". À la fin de votre comptage, vous pouvez vérifier ce que "
+"vous avez renseigné avant d'envoyer vos observations."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1252,14 +1249,14 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
-"Ajoutez les espèces que vous observez en appuyant sur le bouton + AJOUTER et"
-" commencez à taper un nom d'espèce. La sélection des espèces apparaîtra "
-"alors sous forme de menu déroulant. Vous pouvez utiliser des noms "
-"scientifiques ou vernaculaires. Sélectionnez les espèces que vous voyez et, "
-"une fois dans votre liste d'espèces, touchez le nombre de gauche pour "
-"augmenter le nombre d'individus que vous avez vus. Vous pouvez vérifier ce "
-"comptage et le modifier à la fin. Vous pouvez également ajouter des photos "
-"et des commentaires si vous le souhaitez."
+"Ajoutez les espèces que vous observez en appuyant sur le bouton \"+ "
+"Ajouter\" et commencez à renseigner un nom d'espèce. La sélection des "
+"espèces apparaîtra alors sous forme de menu déroulant. Vous pouvez utiliser "
+"des noms scientifiques ou vernaculaires. Sélectionnez les espèces que vous "
+"voyez et, une fois dans votre liste d'espèces, appuyez sur nombre de gauche "
+"pour augmenter le nombre d'individus que vous avez vus. Vous pouvez vérifier"
+" ce comptage et le modifier à la fin. Vous pouvez également ajouter des "
+"photos et des commentaires."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1269,11 +1266,11 @@ msgid ""
 " as on your online account."
 msgstr ""
 "Une fois que vous avez terminé votre comptage de 15 minutes et vérifié que "
-"les espèces et les nombres entrés sont corrects, appuyez sur le bouton "
-"TÉLÉCHARGER pour soumettre. Cette étape est importante pour assurer que vos "
-"données sont stockées en toute sécurité dans la base de données eBMS. Un "
-"enregistrement du comptage sera conservé sur votre appareil pour référence "
-"future ainsi que sur votre compte en ligne."
+"les espèces et les nombres rentrés sont corrects, appuyez sur le bouton "
+"\"Télécharger\" pour envoyer votre observation. Cette étape est importante "
+"pour assurer que vos données sont stockées en toute sécurité dans la base de"
+" données eBMS. Une copie de votre comptage sera conservée sur votre appareil"
+" pour référence future ainsi que sur votre compte en ligne."
 
 msgid "How to record along an existing transect"
 msgstr "Comment compter le long d'un transect existant "
@@ -1287,16 +1284,13 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
-"Vous pouvez également utiliser l'application pour soumettre des "
-"participations tout en parcourant un transect de suivi des papillons "
-"existant. Ceux-ci ont déjà été établis par les programmes nationaux de "
-"surveillance des papillons et sont de préférence complétés par des "
-"observateurs expérimentés. L'enregistrement de transects existants dans "
-"l'application nécessite que votre compte soit déjà lié à une configuration "
-"de transect dans le système eBMS. Si aucun site de transect n'est répertorié"
-" une fois que vous êtes connecté(e) à l'application, veuillez contacter "
-"votre coordinateur national (veuillez envoyer un e-mail à {{helpEmail}} pour"
-" obtenir des conseils)."
+"Vous pouvez utiliser l'application pour suivre un site STERF-eBMS existant. "
+"Cette méthode de suivis de transects est plutôt réservée aux observateurs "
+"expérimentés. Le suivi de transects existants dans l'application nécessite "
+"que votre compte soit déjà lié à un site comprenant les transects dans le "
+"système STERF-eBMS. Si aucun site n'est répertorié lorsque que vous êtes "
+"connecté(e), merci de contacter votre coordinateur national (veuillez "
+"envoyer un e-mail à {{helpEmail}} pour obtenir des conseils)."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1311,22 +1305,23 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"Pour commencer le comptage sur un transect, maintenez enfoncé le bouton + "
-"(appui long) en bas de l'écran et sélectionnez eBMS Transect. La page "
+"Pour commencer le suivi de transect, maintenez enfoncé le bouton + (appui "
+"long) en bas de l'écran et sélectionnez Transect STERF-eBMS. La page "
 "Transect apparaîtra avec toutes les options à compléter. Tout d'abord, vous "
-"devez sélectionner vos transects (pour ce faire, assurez-vous d'être "
-"connecté(e), et les itinéraires de transects seront ainsi également liés à "
-"votre compte utilisateur). Une fois que vous avez sélectionné votre site de "
-"transect, vous pouvez remplir les détails météorologiques nécessaires (par "
-"exemple, la température, la vitesse du vent, etc.) et d'autres informations "
-"requises (par exemple, l'heure de début) sur la page Transect. Vous ajoutez "
-"ensuite une liste d'espèces vues et le nombre compté pour chaque section de "
-"transect, de la même manière que pour un comptage de 15 minutes. Une fois "
-"que vous avez terminé votre transect et vérifié que les espèces et les "
-"nombres vus sont corrects, appuyez sur le bouton FINISH pour soumettre."
+"devez sélectionner vos sites (pour ce faire, assurez-vous d'être "
+"connecté(e), et les itinéraires de transects de chaque site seront ainsi "
+"également liés à votre compte utilisateur). Une fois que vous avez "
+"sélectionné votre site de transects, vous pouvez remplir les détails "
+"météorologiques nécessaires (par exemple, la température, la vitesse du "
+"vent, etc.) et d'autres informations requises (par exemple, l'heure de "
+"début) sur la page Transect. Vous ajoutez ensuite une liste d'espèces vues "
+"et le nombre compté pour chaque transect, de la même manière que pour un "
+"comptage de 15 minutes. Une fois que vous avez terminé votre transect et "
+"vérifié que les espèces et les nombres vus sont corrects, appuyez sur le "
+"bouton \"Terminer\" pour envoyer vos observations."
 
 msgid "Survey section"
-msgstr "Section de comptages"
+msgstr "Transect"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1337,13 +1332,13 @@ msgid ""
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
 "Dans cet onglet, sur la partie droite du bouton +, vous pouvez voir les "
-"participation EN ATTENTE, correspondant à vos observations qui n'ont pas été"
-" soumises et les participations UPLOADED, qui ont eux été soumis à la base "
-"de données eBMS. Les comptages en attente peuvent être soumis au système en "
-"cliquant dessus et en appuyant sur l'option Télécharger. Vous pouvez voir la"
-" liste des espèces que vous avez enregistrée pour les participations "
-"téléchargées. Toutes vos participations peuvent également être consultées et"
-" modifiées sur le {{eBMSWebsiteLink}}"
+"participations EN ATTENTE, correspondant à vos observations qui n'ont pas "
+"été soumises et les participations UPLOADED, qui ont eux été soumis à la "
+"base de données STERF-eBMS. Les comptages en attente peuvent être soumis au "
+"système en cliquant dessus et en appuyant sur l'option Télécharger. Vous "
+"pouvez voir la liste des espèces que vous avez enregistrée pour les "
+"participations téléchargées. Toutes vos participations peuvent également "
+"être consultées et modifiées sur le {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
 msgstr "site internet de l'eBMS"
@@ -1490,7 +1485,7 @@ msgid ""
 "weather service."
 msgstr ""
 "Les valeurs météorologiques actuelles sont préremplies à l'aide du service "
-"météo de l'API OpenWeatherMap."
+"OpenWeatherMap."
 
 # Species list copy functionality
 msgid "Copy species"
@@ -1515,7 +1510,7 @@ msgstr "Vous avez copié avec succès {{speciesCount}} espèces."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr "Désolé, aucun comptage précédent à partir duquel copier des espèces."
+msgstr "Désolé, aucun suivi précédent à partir duquel copier des espèces."
 
 # Country name
 msgid "Armenia"
@@ -1523,7 +1518,7 @@ msgstr "Arménie"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Pour supprimer un comptage, balayez vers la gauche."
+msgstr "Pour supprimer un suivi, balayez vers la gauche."
 
 # 15min survey additional information note after survey is finished
 msgid ""
@@ -1534,12 +1529,12 @@ msgstr ""
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr "N'oubliez pas de télécharger les comptages en attente !"
+msgstr "N'oubliez pas de télécharger les suivis en attente !"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
-"Aucun comptage terminé en attente. <br/><br/>Appuyez <4></4>pour ajouter."
+"Aucun suivi terminé en attente. <br/><br/>Appuyez <4></4>pour ajouter."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
@@ -1556,7 +1551,7 @@ msgstr ""
 
 # Link inside Guide page
 msgid "More Information"
-msgstr "Plus d'information"
+msgstr "Plus d'informations"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
@@ -1576,11 +1571,11 @@ msgstr "Masquer"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Comptage primaire"
+msgstr "Suivi primaire"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr "Tous les comptages"
+msgstr "Tous les suivis"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
@@ -1618,7 +1613,7 @@ msgstr "Compris"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr "<0>Aucun comptage téléchargé</0>"
+msgstr "<0>Aucun suivi téléchargé</0>"
 
 # user register error message
 msgid "Account already exists."
@@ -1651,7 +1646,7 @@ msgstr "Groupes d'espèces"
 # Part of species group selection
 msgid "Please select the species groups that you always record."
 msgstr ""
-"Veuillez sélectionner les groupes d'espèces que vous observez tout le temps."
+"Veuillez sélectionner les groupes d'espèces que vous observez à chaque fois."
 
 # Part of species group selection
 msgid "Butterflies"
@@ -1659,7 +1654,7 @@ msgstr "Papillons"
 
 # Part of species group selection
 msgid "Moths"
-msgstr "Papillons de nuit"
+msgstr "Papillons \"de nuit\""
 
 # Part of species group selection
 msgid "Bumblebees"
@@ -1679,7 +1674,7 @@ msgstr "Êtes-vous sûr de vouloir désactiver le suivi GPS ?"
 
 # Alert button option
 msgid "Turn off"
-msgstr "Eteindre"
+msgstr "Éteindre"
 
 # Alert button label
 msgid "Merge"
@@ -1687,7 +1682,7 @@ msgstr "Fusionner"
 
 # Alert header
 msgid "Species already exists"
-msgstr "Cette espèce existe déjà"
+msgstr "Cette espèce est déjà mentionnée"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
@@ -1765,15 +1760,15 @@ msgstr "Non observé"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr "Détails du comptage"
+msgstr "Détails du suivi"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr "Comptage par piège à papillons de nuit"
+msgstr "Suivi par piège à papillons de nuit"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr "Comptage des papillons de nuit"
+msgstr "Suivi des papillons de nuit"
 
 # Moth survey divider label
 msgid "Species list"
@@ -1785,15 +1780,15 @@ msgstr "Identifiant"
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr "Liste des papillons de nuit"
+msgstr "Liste des papillons \"de nuit\""
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr "Photo du papillon de nuit"
+msgstr "Photo du papillon \"de nuit\""
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr "Entrez le nom de l'observateur s'il est différent."
+msgstr "Entrez le nom de l'observateur, s'il est différent."
 
 # Identifier attribute placeholder
 msgid "Recorder name"
@@ -1817,23 +1812,23 @@ msgstr "Comptage à l'extérieur"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr "Photos des papillons de nuit"
+msgstr "Photos des papillons \"de nuit\""
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr "Pièges à papillons de nuit"
+msgstr "Pièges à papillons \"de nuit\""
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr "Piège à papillons de nuit"
+msgstr "Piège à papillons \"de nuit\""
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
-"Vous n'avez pas encore créé de pièges à papillons de nuit. Pour en créer un,"
-" veuillez allez sur le <2>site internet.</2>"
+"Vous n'avez pas encore créé de pièges à papillons \"de nuit\". Pour en créer"
+" un, veuillez allez sur le <2>site internet.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
@@ -1841,14 +1836,14 @@ msgstr "Veuillez vous connecter à internet pour voir la carte."
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr "Veuillez ajouter le piège à papillon de nuit"
+msgstr "Veuillez ajouter le piège à papillon \"de nuit\""
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
-"Vous n'avez qu'un seul piège à papillon de nuit. Pour en créer au autre, "
-"veuillez aller sur le <2>site internet.</2>"
+"Vous n'avez qu'un seul piège à papillon \"de nuit\". Pour en créer au autre,"
+" veuillez aller sur le <2>site internet.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
@@ -1880,15 +1875,15 @@ msgstr "Comptage"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr "Compatge des papillons de nuit (SPRING)"
+msgstr "Suivi des papillons \"de nuit\" (SPRING)"
 
 # Survey name
 msgid "Moth Survey"
-msgstr "Comptage des papillons de nuit"
+msgstr "Suivi des papillons \"de nuit\""
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr "Détails du comptage des papillons de nuit"
+msgstr "Détails du comptage des papillons \"de nuit\""
 
 # Moth settings page label
 msgid "Use image identification"
@@ -1925,29 +1920,13 @@ msgstr ""
 msgid "What's New"
 msgstr "Quoi de neuf ?"
 
-# Version 1.18 whats new message
-msgid "Enabled Android back button"
-msgstr "Activer le Back Button (Android)"
+# Version 1.20 whats new message
+msgid "Added Painted Lady survey"
+msgstr ""
 
-# Version 1.18 whats new message
-msgid " Added user account delete option"
-msgstr "Possibilité de suppression du compte utilisateur ajoutée"
-
-# Version 1.18 whats new message
-msgid "Added ability to select multiple photos from the gallery"
-msgstr "Possibilité de sélection de plusieurs photo depuis la galerie ajoutée"
-
-# Version 1.18 whats new message
-msgid "Move day-flying moths option to species group page"
-msgstr "Déplacez les hétérocères diurnes à la page des groupes d'espèces"
-
-# Version 1.18 whats new message
-msgid "Various bug fixes"
-msgstr "Résolution de divers problèmes"
-
-# Version 1.18 whats new message
-msgid "Updated translations"
-msgstr "Traductions mises à jour"
+# Version 1.20 whats new message
+msgid "Changed species groups location and functionality"
+msgstr ""
 
 # User account action
 msgid "Resend"
@@ -1955,7 +1934,7 @@ msgstr "Ré-envoyer"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr "On dirait que votre adresse e-mail n'a pas encore été vérifiée"
+msgstr "On dirait que votre e-mail n'a pas encore été vérifié"
 
 # User account action
 msgid "Should we resend the verification email?"
@@ -1980,12 +1959,12 @@ msgstr "Ajouter"
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
-"Vous n'avez pas encore créé de piège à papillons de nuit.</1>Créez votre "
-"premier piège à papillons de nuit</1>"
+"Vous n'avez pas encore créé de piège à papillons \"de nuit\".</1>Créez votre"
+" premier piège</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr "Piège à papillon de nuit"
+msgstr "Piège à papillon \"de nuit\""
 
 # Moth trap survey
 msgid "Type"
@@ -2013,7 +1992,7 @@ msgstr "Quel est le type de lampe ?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr "De quel type est le piège à papillons de nuit ?"
+msgstr "De quel type est le piège ?"
 
 # Moth trap survey
 msgid "LED funnel trap"
@@ -2045,15 +2024,15 @@ msgstr "Quantité"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr "Pas de nom de piège à papillons de nuit"
+msgstr "Pas de nom de piège"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr "Nom du piège à papillons de nuit"
+msgstr "Nom du piège"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr "Etes-vous sûr de vouloir supprimer ce piège à papillons de nuit ?"
+msgstr "Etes-vous sûr de vouloir supprimer ce piège ?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
@@ -2061,7 +2040,7 @@ msgstr "Description complémentaire de la lampe"
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr "Veuillez ajouter le nom et la position du piège à papillon de nuit."
+msgstr "Veuillez ajouter le nom et la position du piège."
 
 # Survey validation
 msgid "Incomplete"
@@ -2081,7 +2060,7 @@ msgid ""
 "including your own."
 msgstr ""
 "Saisissez le nombre d'observateurs, incluant toutes les personnes qui ont "
-"aidé à compter, vous compris."
+"aidé à compter et identifier, vous compris."
 
 msgid "Network Error"
 msgstr "Erreur de réseau"
@@ -2126,9 +2105,7 @@ msgstr "Lampes"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
-msgstr ""
-"Etes-vous sûr de vouloir supprimer cette lampe du piège à papillons de nuit "
-"?"
+msgstr "Etes-vous sûr de vouloir supprimer cette lampe du piège ?"
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
@@ -2143,7 +2120,7 @@ msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
-"Avant de commencer un comptage veuillez confirmer votre adresse e-mail et "
+"Avant de commencer un suivi veuillez confirmer votre adresse e-mail et "
 "cliquer sur le lien de vérification."
 
 # Species guide search
@@ -2199,3 +2176,224 @@ msgstr ""
 "Etes-vous sûr de vouloir supprimer votre compte ?<1>Votre compte sera "
 "supprimé du <2>{{url}}</2> site internet. Vous perdrez l'accès à toutes vos "
 "participations enregistrées via l'application ou le site internet.</1>"
+
+# Part of Species Group selection
+msgid ""
+"This option was moved to the species search page inside the surveys. When a "
+"survey starts, you can select which species group you are recording."
+msgstr ""
+
+# Part of Species Group selection
+msgid "Groups"
+msgstr ""
+
+# Part of Species Group selection
+msgid "Close"
+msgstr ""
+
+# Part of Species Group selection
+msgid "Confirm"
+msgstr ""
+
+# Part of Species Group selection
+msgid "Which species groups have you counted?"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Select Target Species"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Wing"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Behaviour"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Direction"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Altitude"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Compass"
+msgstr ""
+
+# Alert header
+msgid "Delete Survey"
+msgstr ""
+
+# Alert message
+msgid ""
+"Warning - This will discard the survey information you have entered so far."
+msgstr ""
+
+# Painted lady wing options
+msgid "Fresh"
+msgstr ""
+
+# Painted lady wing options
+msgid "Worn"
+msgstr ""
+
+# Painted lady wing options
+msgid "Normal"
+msgstr ""
+
+# Painted lady survey flower entry
+msgid "Please specify the nectar source."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the egg laying option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the mating option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Nectar source"
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the nectar option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the direction option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the altitude option."
+msgstr ""
+
+# Part of painted lady
+msgid "Egg-laying hostplants"
+msgstr ""
+
+# Part of painted lady
+msgid "Migrating"
+msgstr ""
+
+# Part of painted lady
+msgid "Nectaring"
+msgstr ""
+
+# Part of painted lady
+msgid "Mating"
+msgstr ""
+
+# Painted lady compass
+msgid "Unsupported device"
+msgstr ""
+
+# Painted lady compass
+msgid ""
+"Unfortunately, it looks like your device doesn't have the necessary sensor "
+"for the compass to function correctly. The compass relies on this sensor to "
+"detect the earth's magnetic field and determine your device's orientation "
+"relative to magnetic north. Thus, you will not be able to use compass on "
+"this device."
+msgstr ""
+
+# Painted lady mating options
+msgid "Territorial defence: other"
+msgstr ""
+
+# Painted lady mating options
+msgid "Territorial defence: hill-topping"
+msgstr ""
+
+# Painted lady direction options
+msgid "What was the butterfly flying altitude? (meters)"
+msgstr ""
+
+# Painted lady egg laying hostplant option
+msgid "Other hostplant"
+msgstr ""
+
+# Painted lady direction option
+msgid "Desert nettle"
+msgstr ""
+
+# Painted lady direction option
+msgid "Mallow"
+msgstr ""
+
+# Painted lady direction option
+msgid "Thistles"
+msgstr ""
+
+# Painted lady direction option
+msgid "Hostplants"
+msgstr ""
+
+# Painted lady direction option
+msgid "Please select the hostplants."
+msgstr ""
+
+# Painted lady survey info background message
+msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
+msgstr ""
+
+# Alert title
+msgid "Tip: Copy attributes"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Wing condition"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Nectar"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Enter the nectar source here"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Other species"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "What kind of thistle was it?"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Thistle species"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Copied!"
+msgstr ""
+
+# Part of Painted lady survey
+msgid ""
+"To copy a list entry swipe it to the right and press<1><0></0></1>icon."
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Height above ground (meters)"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Height"
+msgstr ""
+
+# 15min Single species survey detail page button label
+msgid "Start Count"
+msgstr ""
+
+# Painted Lady guide title
+msgid "Tracking the Painted Lady migration with Butterfly Count"
+msgstr ""
