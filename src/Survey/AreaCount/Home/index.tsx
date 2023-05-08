@@ -419,7 +419,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     newSubSample.startGPS();
 
     await ref.current.closeOpened();
-    toast.success('Copied!', { color: 'secondary' });
+    toast.success('Copied!', { color: 'tertiary' });
   };
 
   const isDisabled = !!sample.metadata.synced_on;
@@ -430,6 +430,8 @@ const HomeController: FC<Props> = ({ sample }) => {
 
   const previousSurvey = getPreviousSurvey();
 
+  const isValid = !sample.validateRemote();
+
   return (
     <Page id="precise-area-count-edit">
       <Header
@@ -438,6 +440,7 @@ const HomeController: FC<Props> = ({ sample }) => {
         isTraining={isTraining}
         isEditing={isEditing}
         isDisabled={isDisabled}
+        isValid={isValid}
       />
       <Main
         sample={sample}

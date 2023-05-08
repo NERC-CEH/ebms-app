@@ -36,7 +36,13 @@ const OnlineStatus: FC<Props> = ({ location, onUpload }) => {
     onUpload();
   };
   return (
-    <IonButton class="survey-status-upload" onClick={onUploadWrap}>
+    <IonButton
+      color="secondary"
+      fill="solid"
+      shape="round"
+      className="primary-button"
+      onClick={onUploadWrap}
+    >
       <T>Upload</T>
     </IonButton>
   );

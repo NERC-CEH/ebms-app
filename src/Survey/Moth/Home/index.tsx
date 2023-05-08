@@ -128,7 +128,17 @@ const HomeController: FC<Props> = ({ sample }) => {
 
   const getFinishButton = () => {
     const label = isEditing ? <T>Upload</T> : <T>Finish</T>;
-    return <IonButton onClick={onSubmit}>{label}</IonButton>;
+    return (
+      <IonButton
+        color="secondary"
+        fill="solid"
+        shape="round"
+        className="primary-button"
+        onClick={onSubmit}
+      >
+        {label}
+      </IonButton>
+    );
   };
 
   const mergeOccurrence = (occ: Occurrence) => {

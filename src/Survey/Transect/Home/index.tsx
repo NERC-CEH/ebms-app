@@ -67,10 +67,12 @@ const TransectHomeController: FC<Props> = ({ sample }) => {
   const isTraining = sample.metadata.training;
   const isEditing = sample.metadata.saved;
   const isDisabled = !!sample.metadata.synced_on;
+  const isValid = !sample.validateRemote();
 
   return (
     <Page id="transect-edit">
       <Header
+        isValid={isValid}
         onSubmit={onSubmit}
         isTraining={isTraining}
         isEditing={isEditing}

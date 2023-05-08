@@ -114,12 +114,12 @@ const DetailsController: FC<Props> = ({ sample }) => {
   const startTimerButton = !hasTimerStarted && (
     <IonButton
       onClick={onStartTimer}
-      color={isValid ? 'primary' : 'medium'}
+      color={isValid ? 'secondary' : 'medium'}
       fill="solid"
       shape="round"
       className="start-count-button"
     >
-      Start Count
+      <T>Start Count</T>
     </IonButton>
   );
 

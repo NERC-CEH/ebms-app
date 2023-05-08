@@ -385,7 +385,7 @@ const AreaCount: FC<Props> = ({
       return (
         <IonItemSliding key={smp.cid} ref={ref as any}>
           <IonItemOptions side="start" className="copy-slider">
-            <IonItemOption color="secondary" onClick={cloneSubSampleWrap}>
+            <IonItemOption color="tertiary" onClick={cloneSubSampleWrap}>
               <IonIcon icon={copyOutline} />
             </IonItemOption>
           </IonItemOptions>

@@ -9,21 +9,21 @@
   --ion-color-primary-tint: #a98fc4;
   --ion-color-primary-dark: #170030;
 
-  --ion-color-secondary: #008eec;
-  --ion-color-secondary-rgb: 0, 142, 236;
+  --ion-color-secondary: #df9100;
+  --ion-color-secondary-rgb: 223, 145, 0;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #007dd0;
-  --ion-color-secondary-tint: #1a99ee;
-  --ion-color-secondary-dark: #001a2c;
+  --ion-color-secondary-shade: #af7201;
+  --ion-color-secondary-tint: #fdc45b;
+  --ion-color-secondary-dark: #3a2600;
 
-  --ion-color-tertiary: #7044ff;
-  --ion-color-tertiary-rgb: 112, 68, 255;
+  --ion-color-tertiary: #008eec;
+  --ion-color-tertiary-rgb: 0, 142, 236;
   --ion-color-tertiary-contrast: #ffffff;
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
-  --ion-color-tertiary-shade: #633ce0;
-  --ion-color-tertiary-tint: #7e57ff;
-  --ion-color-tertiary-dark: #0b002e;
+  --ion-color-tertiary-shade: #007dd0;
+  --ion-color-tertiary-tint: #1a99ee;
+  --ion-color-tertiary-dark: #001a2c;
 
   --ion-color-success: #00bd1a;
   --ion-color-success-rgb: 0, 189, 26;
@@ -93,15 +93,15 @@ html.ios.plt-hybrid #status-bar-background {
 // info messages
 .attr-page .info-message,
 .info-message.blue {
-  --background: rgba(var(--ion-color-secondary-rgb), 0.1);
+  --background: rgba(var(--ion-color-tertiary-rgb), 0.1);
   background: white; // above is transparent
 
   ion-note {
-    color: var(--ion-color-secondary-dark);
+    color: var(--ion-color-tertiary-dark);
     font-size: 1em;
   }
   ion-icon {
-    color: var(--ion-color-secondary-dark) !important;
+    color: var(--ion-color-tertiary-dark) !important;
   }
 }
 
@@ -130,6 +130,12 @@ html[mode='ios'] .tabs-inner {
   margin: 10px 10px 10px auto !important;
 }
 
+.item-interactive-disabled img,
 .item-interactive-disabled ion-img {
   opacity: 0.3;
+}
+
+.primary-button {
+  --padding-start: 10px !important;
+  --padding-end: 10px !important;
 }

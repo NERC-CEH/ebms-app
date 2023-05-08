@@ -3,12 +3,28 @@ import { IonButton } from '@ionic/react';
 import { Header } from '@flumens';
 import { Trans as T } from 'react-i18next';
 
-function getFinishButton(onSubmit, isEditing) {
+function getFinishButton(onSubmit, isEditing, isValid) {
   const label = isEditing ? <T>Upload</T> : <T>Finish</T>;
-  return <IonButton onClick={onSubmit}>{label}</IonButton>;
+  return (
+    <IonButton
+      color={isValid ? 'secondary' : 'medium'}
+      fill="solid"
+      shape="round"
+      className="primary-button"
+      onClick={onSubmit}
+    >
+      {label}
+    </IonButton>
+  );
 }
 
-const HeaderComponent = ({ onSubmit, isTraining, isEditing, isDisabled }) => {
+const HeaderComponent = ({
+  onSubmit,
+  isTraining,
+  isEditing,
+  isDisabled,
+  isValid,
+}) => {
   const trainingModeSubheader = isTraining && (
     <div className="training-survey">
       <T>Training Mode</T>
@@ -18,7 +34,7 @@ const HeaderComponent = ({ onSubmit, isTraining, isEditing, isDisabled }) => {
   return (
     <Header
       title="Transect"
-      rightSlot={!isDisabled && getFinishButton(onSubmit, isEditing)}
+      rightSlot={!isDisabled && getFinishButton(onSubmit, isEditing, isValid)}
       subheader={trainingModeSubheader}
       defaultHref="/home/user-surveys"
     />

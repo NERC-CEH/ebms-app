@@ -102,7 +102,19 @@ const MothTrapSetup: FC<Props> = ({ sample: location }) => {
   const getFinishButton = () => {
     const label = !saved ? <T>Save</T> : <T>Upload</T>;
 
-    return <IonButton onClick={onSubmit}>{label}</IonButton>;
+    const isValid = !location.validateRemote();
+
+    return (
+      <IonButton
+        color={isValid ? 'secondary' : 'medium'}
+        fill="solid"
+        shape="round"
+        className="primary-button"
+        onClick={onSubmit}
+      >
+        {label}
+      </IonButton>
+    );
   };
 
   // const CancelButtonWrap = () => <BackButton location={location} />;

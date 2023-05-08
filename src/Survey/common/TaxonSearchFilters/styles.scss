@@ -3,15 +3,15 @@
 
   .info-message,
   .info-message.blue {
-    --background: rgba(var(--ion-color-secondary-rgb), 0.1);
+    --background: rgba(var(--ion-color-tertiary-rgb), 0.1);
     background: white; // above is transparent
 
     ion-note {
-      color: var(--ion-color-secondary-dark);
+      color: var(--ion-color-tertiary-dark);
       font-size: 1em;
     }
     ion-icon {
-      color: var(--ion-color-secondary-dark) !important;
+      color: var(--ion-color-tertiary-dark) !important;
     }
   }
 

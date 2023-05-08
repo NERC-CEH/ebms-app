@@ -24,8 +24,16 @@ function Component({ sample, onUpload }) {
 
   if (sample.isUploaded()) return null;
 
+  const isValid = !sample.validateRemote();
+
   return (
-    <IonButton class="survey-status-upload" onClick={onUpload}>
+    <IonButton
+      color={isValid ? 'secondary' : 'medium'}
+      fill="solid"
+      shape="round"
+      className="primary-button"
+      onClick={onUpload}
+    >
       <T>Upload</T>
     </IonButton>
   );
