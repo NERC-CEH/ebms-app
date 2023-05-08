@@ -12,6 +12,11 @@ type Props = {
 };
 
 const PaintedLadyAttrs: FC<Props> = ({ occurrence }) => {
+  const isDisabled = occurrence.isUploaded();
+  const { url } = useRouteMatch();
+
+  if (occurrence.attrs.stage !== 'Adult') return null;
+
   if (!occurrence.attrs.behaviour && !occurrence.attrs.wing) {
     // eslint-disable-next-line no-param-reassign
     occurrence.attrs.behaviour = null;
@@ -19,9 +24,6 @@ const PaintedLadyAttrs: FC<Props> = ({ occurrence }) => {
     occurrence.attrs.wing = [];
     occurrence.save();
   }
-
-  const isDisabled = occurrence.isUploaded();
-  const { url } = useRouteMatch();
 
   const { behaviour, wing, eggLaying } = occurrence.attrs;
   const migrating = behaviour === 'Migrating';

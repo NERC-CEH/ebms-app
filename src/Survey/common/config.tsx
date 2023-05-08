@@ -3,7 +3,7 @@ import { date as dateHelp } from '@flumens';
 import { chatboxOutline } from 'ionicons/icons';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import groups from 'common/data/species/groups';
-import { Taxon } from 'common/models/occurrence';
+import Occurrence, { Taxon } from 'common/models/occurrence';
 import Sample from 'models/sample';
 import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
 
@@ -367,6 +367,35 @@ export const stageAttr = {
     attrProps: {
       input: 'radio',
       info: 'Pick the life stage',
+      set: (value: any, model: Occurrence) => {
+        if (model.attrs.stage !== value && model.parent.isPaintedLadySurvey()) {
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.eggLaying = null;
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.otherThistles = null;
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.otherEggLaying = null;
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.wing = [];
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.behaviour = null;
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.direction = null;
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.nectarSource = null;
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.eggLaying = [];
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.otherEggLaying = null;
+          // eslint-disable-next-line no-param-reassign
+          model.attrs.mating = null;
+        }
+
+        // eslint-disable-next-line no-param-reassign
+        model.attrs.stage = value;
+        model.save();
+      },
+      onChange: () => window.history.back(),
       inputProps: { options: stageValues },
     },
   },

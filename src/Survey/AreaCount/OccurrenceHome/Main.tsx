@@ -11,7 +11,7 @@ import {
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import PhotoPicker from 'common/Components/PhotoPicker';
-import { Main, MenuAttrItem } from '@flumens';
+import { Main, MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
 import GridRefValue from 'Components/GridRefValue';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import PaintedLadyAttrs from './Components/PaintedLadyAttrs';
@@ -27,8 +27,8 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
   const match = useRouteMatch();
 
   const species = occurrence.getTaxonName();
-  const { stage } = occurrence.attrs;
-  const { comment } = occurrence.attrs;
+  const { stage, comment, eggLaying } = occurrence.attrs;
+
   const baseURL = match.url;
   const isPreciseSurvey = subSample.isSurveyPreciseSingleSpecies();
 
@@ -44,22 +44,24 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
 
   const speciesName = occurrence.getTaxonName();
 
+  const isPaintedLadySurvey = subSample.isPaintedLadySurvey();
+  const isStageAdult = occurrence.attrs.stage === 'Adult';
+  const hasThistle = eggLaying && eggLaying.includes('Thistles');
+  const hasOther = eggLaying && eggLaying.includes('Other');
+
   return (
     <Main id="area-count-occurrence-edit">
       <IonList lines="full">
-        {occurrence.isPaintedLadySpecies() &&
-          subSample.isSurveyPreciseSingleSpecies() && (
-            <>
-              <IonItemDivider>
-                <T>{speciesName}</T>
-              </IonItemDivider>
-              <div className="rounded">
-                {subSample.isPaintedLadySurvey() && (
-                  <PaintedLadyAttrs occurrence={occurrence} />
-                )}
-              </div>
-            </>
-          )}
+        {isPaintedLadySurvey && isStageAdult && (
+          <>
+            <IonItemDivider>
+              <T>{speciesName}</T>
+            </IonItemDivider>
+            <div className="rounded">
+              <PaintedLadyAttrs occurrence={occurrence} />
+            </div>
+          </>
+        )}
 
         <IonItemDivider>
           <T>Details</T>
@@ -80,7 +82,7 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
             icon={locationOutline}
             label="Location"
             value={location}
-            skipTranslation
+            skipValueTranslation
           />
           <MenuAttrItem
             routerLink={`${baseURL}/stage`}
@@ -89,6 +91,25 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
             label="Stage"
             value={stage}
           />
+
+          {isPaintedLadySurvey && !isStageAdult && stage && (
+            <>
+              <MenuAttrItemFromModel model={occurrence} attr="eggLaying" />
+              {hasThistle && (
+                <MenuAttrItemFromModel
+                  model={occurrence}
+                  attr="otherThistles"
+                />
+              )}
+              {hasOther && (
+                <MenuAttrItemFromModel
+                  model={occurrence}
+                  attr="otherEggLaying"
+                />
+              )}
+            </>
+          )}
+
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}
