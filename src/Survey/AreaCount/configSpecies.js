@@ -165,10 +165,6 @@ const speciesSurvey = merge({}, survey, {
         },
 
         wing: {
-          menuProps: {
-            label: 'Wing',
-            icon: butterflyIcon,
-          },
           pageProps: {
             headerProps: { title: 'Wing condition' },
             attrProps: {
