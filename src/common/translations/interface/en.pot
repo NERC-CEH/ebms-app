@@ -2298,3 +2298,7 @@ msgstr "Start Count"
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
 msgstr "Tracking the Painted Lady migration with Butterfly Count"
+
+# Menu page label
+msgid "Instructions"
+msgstr "Instructions"

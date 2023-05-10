@@ -109,7 +109,7 @@ const Component = ({
         <div className="rounded">
           <IonItem routerLink="/info/guide" detail>
             <IonIcon icon={bookOutline} size="small" slot="start" />
-            <T>Guide</T>
+            <T>Instructions</T>
           </IonItem>
           <IonItem routerLink="/info/help" detail>
             <IonIcon icon={helpBuoyOutline} size="small" slot="start" />

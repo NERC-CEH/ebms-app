@@ -17,7 +17,7 @@ const Component = () => {
 
   return (
     <Page id="guide">
-      <Header title="Guide" />
+      <Header title="Instructions" />
       <Main className="ion-padding">
         <Section>
           <H>How to use the app</H>
