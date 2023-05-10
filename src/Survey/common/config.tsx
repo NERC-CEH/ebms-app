@@ -256,10 +256,21 @@ export const cloudAttr = {
     attrProps: {
       input: 'slider',
       info: 'Please specify the % of cloud cover.',
+      set: (value: any, model: any) => {
+        // eslint-disable-next-line no-param-reassign
+        model.attrs.sun = 100 - value;
+        // eslint-disable-next-line no-param-reassign
+        model.attrs.cloud = value;
+        model.save();
+      },
       inputProps: { max: 100, min: 0 },
     },
   },
   remote: { id: 1457 },
+};
+
+export const sunAttr = {
+  remote: { id: 1387 },
 };
 
 export const taxonAttr = {

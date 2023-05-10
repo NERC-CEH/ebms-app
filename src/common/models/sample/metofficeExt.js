@@ -123,6 +123,7 @@ function setNewWeatherValues(sample, newWeatherValues) {
   }
   if (!sample.attrs.cloud && newWeatherValues.clouds) {
     sample.attrs.cloud = newWeatherValues.clouds; // eslint-disable-line
+    sample.attrs.sun = 100 - sample.attrs.cloud; // eslint-disable-line
   }
 
   sample.save();

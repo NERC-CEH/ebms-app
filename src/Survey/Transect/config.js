@@ -15,6 +15,7 @@ import {
   dateAttr,
   stageAttr,
   speciesGroupsAttr,
+  sunAttr,
 } from 'Survey/common/config';
 import { chatboxOutline } from 'ionicons/icons';
 
@@ -82,6 +83,7 @@ const config = {
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
     cloud: cloudAttr,
+    sun: sunAttr,
     temperature: temperatureAttr,
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,
@@ -107,6 +109,7 @@ const config = {
       date: dateAttr,
       location: locationAttr,
       cloud: cloudAttr,
+      sun: sunAttr,
       comment: {
         menuProps: { icon: chatboxOutline, skipValueTranslation: true },
         pageProps: {

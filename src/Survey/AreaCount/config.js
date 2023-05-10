@@ -11,6 +11,7 @@ import {
   temperatureAttr,
   windDirectionAttr,
   cloudAttr,
+  sunAttr,
   taxonAttr,
   surveyStartTimeAttr,
   surveyEndTimeAttr,
@@ -56,6 +57,7 @@ const survey = {
     comment: commentAttr,
     temperature: temperatureAttr,
     cloud: cloudAttr,
+    sun: sunAttr,
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,
     recorders: {
