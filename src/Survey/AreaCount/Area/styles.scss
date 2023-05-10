@@ -123,3 +123,27 @@ html[mode='ios'] {
   background-position: 0 0;
   background-size: 65px 20px;
 }
+
+.start-flag span {
+  background-color: #0ba533;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  position: relative;
+  border-radius: 3rem 3rem 0;
+  transform: rotate(45deg);
+  border: 2px solid #ffffff;
+}
+
+.finish-flag span {
+  background: repeating-conic-gradient(#4a4a4a 0% 25%, white 0% 50%) 50% / 8px
+    8px;
+
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  position: relative;
+  border-radius: 3rem 3rem 0;
+  transform: rotate(45deg);
+  border: 2px solid #ffffff;
+}

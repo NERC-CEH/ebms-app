@@ -4,12 +4,12 @@ import { Main } from '@flumens';
 import CONFIG from 'common/config';
 import Sample from 'models/sample';
 import { useRouteMatch } from 'react-router';
-import L from 'leaflet';
+import L, { LatLngExpression } from 'leaflet';
 import 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '@flumens/ionic/dist/components/ModelLocationMap/Map/map/leaflet-mapbox-gl';
 import hasWebGL from 'common/helpers/webGLSupport';
-import { MapContainer } from 'react-leaflet';
+import { MapContainer, Marker } from 'react-leaflet';
 import 'leaflet-draw';
 import { observer } from 'mobx-react';
 import MapInfo from './MapInfo';
@@ -21,6 +21,18 @@ const URL =
   'https://api.mapbox.com/styles/v1/cehapps/cipqvo0c0000jcknge1z28ejp/tiles/256/{z}/{x}/{y}?access_token={accessToken}';
 
 L.Icon.Default.imagePath = '/images';
+
+const finishFlag = L.divIcon({
+  className: 'finish-flag',
+  html: `<span />`,
+  iconAnchor: [11, 27],
+});
+
+const startFlag = L.divIcon({
+  className: 'start-flag',
+  html: `<span />`,
+  iconAnchor: [11, 27],
+});
 
 const DEFAULT_ZOOM = 5;
 
@@ -65,6 +77,25 @@ const AreaAttr: FC<Props> = ({
   };
 
   const match = useRouteMatch();
+
+  const hasLocation =
+    sample.attrs.location?.latitude || sample.attrs.location?.longitude;
+
+  const startPointLocation: LatLngExpression = [
+    sample.attrs.location?.latitude,
+    sample.attrs.location?.longitude,
+  ];
+  const endPointLocation = sample.attrs.location?.shape?.coordinates?.length
+    ? sample.attrs.location?.shape?.coordinates?.slice().reverse()
+    : null;
+
+  const finishPosition =
+    endPointLocation && endPointLocation[0].slice().reverse();
+  const isFinished = sample.metadata.saved;
+  const shapeIsLine = sample.attrs.location?.shape?.type === 'LineString';
+  const showStartMarker = shapeIsLine && hasLocation;
+  const showFinishMarker = shapeIsLine && isFinished && endPointLocation;
+
   return (
     <Main className={`${isGPSTracking ? 'GPStracking' : ''}`}>
       <IonToolbar id="area-edit-toolbar">
@@ -76,6 +107,14 @@ const AreaAttr: FC<Props> = ({
         zoom={DEFAULT_ZOOM}
         whenCreated={setTileLayer}
       >
+        {showStartMarker && (
+          <Marker position={startPointLocation} icon={startFlag} />
+        )}
+
+        {showFinishMarker && (
+          <Marker position={finishPosition} icon={finishFlag} />
+        )}
+
         <MapInfo
           sample={sample}
           isDisabled={isDisabled}
