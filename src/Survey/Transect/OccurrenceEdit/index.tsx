@@ -49,7 +49,6 @@ const TransectHomeController: FC<Props> = ({ occurrence }) => {
               value={species}
             />
 
-            <MenuAttrItemFromModel attr="stage" model={occurrence} />
             <MenuAttrItemFromModel attr="comment" model={occurrence} />
 
             <CounterInput
