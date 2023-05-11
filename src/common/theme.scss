@@ -110,6 +110,52 @@ html.ios.plt-hybrid #status-bar-background {
   height: 30px;
 }
 
+// FONTS START
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./fonts/Quicksand-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand Bold';
+  src: url('./fonts/Quicksand-Bold.ttf');
+}
+
+ion-title,
+h1 {
+  font-family: 'Quicksand Bold' !important;
+}
+
+ion-item-divider,
+ion-badge,
+ion-label.bold,
+ion-card-title,
+b {
+  font-family: 'Quicksand Bold' !important;
+}
+
+.apps-section .apps-section-h,
+h2,
+h3,
+h4,
+h5,
+p,
+i,
+div,
+input,
+ion-button,
+button,
+span,
+ion-back-button,
+ion-item-option,
+ion-note,
+ion-label,
+ion-chip,
+ion-item {
+  font-family: 'Quicksand' !important;
+}
+// FONTS END
+
 // ??
 html[mode='ios'] .tabs-inner {
   margin-top: var(--ion-safe-area-top);
