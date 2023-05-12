@@ -5,43 +5,10 @@ import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext } from '@ionic/react';
 import { Page, Main, Header, useAlert } from '@flumens';
 import { getUnkownSpecies, MachineInvolvement } from 'Survey/Moth/config';
+import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
-
-function useMergeSpeciesAlert() {
-  const alert = useAlert();
-
-  function showMergeSpeciesAlert() {
-    const showAlert = (resolve: any) => {
-      alert({
-        header: 'Species already exists',
-        message:
-          'Are you sure you want to merge this list to the existing species list?',
-        backdropDismiss: false,
-        buttons: [
-          {
-            text: 'Cancel',
-            handler: () => {
-              resolve(false);
-            },
-          },
-          {
-            text: 'Merge',
-            cssClass: 'primary',
-            handler: () => {
-              resolve(true);
-            },
-          },
-        ],
-      });
-    };
-
-    return new Promise<boolean>(showAlert);
-  }
-
-  return showMergeSpeciesAlert;
-}
 
 interface Props {
   sample: Sample;
@@ -49,9 +16,9 @@ interface Props {
 }
 
 const Taxon: FC<Props> = ({ sample, occurrence }) => {
+  const alert = useAlert();
   const { navigate, goBack } = useContext(NavContext);
   const UNKNOWN_SPECIES = getUnkownSpecies();
-  const showMergeSpeciesAlert = useMergeSpeciesAlert();
 
   const onSpeciesSelected = async (taxon: any) => {
     const { isRecorded } = taxon;
@@ -103,7 +70,7 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
         return;
       }
 
-      const mergeSpecies = await showMergeSpeciesAlert();
+      const mergeSpecies = await showMergeSpeciesAlert(alert);
       if (!mergeSpecies) return;
 
       occWithSameSpecies.attrs.count += occurrence.attrs.count;

@@ -7,6 +7,7 @@ import { observer } from 'mobx-react';
 import { Page, Main, Header } from '@flumens';
 import TaxonSearch from 'Components/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
+import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
 type Props = {
   subSample: Sample;

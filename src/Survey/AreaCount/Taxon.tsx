@@ -8,36 +8,7 @@ import { useRouteMatch } from 'react-router';
 import { Page, Main, Header, useAlert, useOnBackButton } from '@flumens';
 import { Trans as T } from 'react-i18next';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
-
-async function showMergeSpeciesAlert(alert: any) {
-  const showMergeSpeciesDialog = (resolve: any) => {
-    alert({
-      header: 'Species already exists',
-      message: (
-        <T>
-          Are you sure you want to merge this list to the existing species list?
-        </T>
-      ),
-      backdropDismiss: false,
-      buttons: [
-        {
-          text: 'Cancel',
-          handler: () => {
-            resolve(false);
-          },
-        },
-        {
-          text: 'Merge',
-          cssClass: 'primary',
-          handler: () => {
-            resolve(true);
-          },
-        },
-      ],
-    });
-  };
-  return new Promise(showMergeSpeciesDialog);
-}
+import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
 const cancelButtonWrap = (onDeleteSurvey: any) => {
   return (
