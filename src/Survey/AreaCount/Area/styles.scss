@@ -132,12 +132,23 @@ html[mode='ios'] {
   position: relative;
   border-radius: 3rem 3rem 0;
   transform: rotate(45deg);
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.last-flag span {
+  background-color: var(--ion-color-secondary);
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  position: relative;
+  border-radius: 3rem 3rem 0;
+  transform: rotate(45deg);
+  border: 1px solid #ffffff;
 }
 
 .finish-flag span {
-  background: repeating-conic-gradient(#4a4a4a 0% 25%, white 0% 50%) 50% / 8px
-    8px;
+  background: repeating-conic-gradient(#131313 0% 25%, white 0% 50%) 50% / 7px
+    7px;
 
   width: 1.4rem;
   height: 1.4rem;
@@ -145,5 +156,5 @@ html[mode='ios'] {
   position: relative;
   border-radius: 3rem 3rem 0;
   transform: rotate(45deg);
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
 }

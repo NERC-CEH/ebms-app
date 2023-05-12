@@ -34,6 +34,12 @@ const startFlag = L.divIcon({
   iconAnchor: [11, 27],
 });
 
+const lastFlag = L.divIcon({
+  className: 'last-flag',
+  html: `<span />`,
+  iconAnchor: [11, 27],
+});
+
 const DEFAULT_ZOOM = 5;
 
 type Props = {
@@ -91,10 +97,11 @@ const AreaAttr: FC<Props> = ({
 
   const finishPosition =
     endPointLocation && endPointLocation[0].slice().reverse();
-  const isFinished = sample.metadata.saved;
-  const shapeIsLine = sample.attrs.location?.shape?.type === 'LineString';
-  const showStartMarker = shapeIsLine && hasLocation;
-  const showFinishMarker = shapeIsLine && isFinished && endPointLocation;
+  const isFinished = sample.metadata.saved || sample.isTimerFinished();
+  const isShapePolyline = sample.attrs.location?.shape?.type === 'LineString';
+  const showStartMarker = isShapePolyline && hasLocation;
+  const showLastMarker = isShapePolyline && endPointLocation;
+  const lastIcon = isFinished ? finishFlag : lastFlag;
 
   return (
     <Main className={`${isGPSTracking ? 'GPStracking' : ''}`}>
@@ -111,9 +118,7 @@ const AreaAttr: FC<Props> = ({
           <Marker position={startPointLocation} icon={startFlag} />
         )}
 
-        {showFinishMarker && (
-          <Marker position={finishPosition} icon={finishFlag} />
-        )}
+        {showLastMarker && <Marker position={finishPosition} icon={lastIcon} />}
 
         <MapInfo
           sample={sample}

@@ -42,7 +42,7 @@ function getAreaCountMarker(sample) {
 
   return L.circleMarker([latitude, longitude], {
     color: 'white',
-    fillColor: '#745a8f',
+    fillColor: '#ff9700',
     fillOpacity: 1,
     weight: 4,
   });
@@ -50,7 +50,7 @@ function getAreaCountMarker(sample) {
 
 const DEFAULT_POSITION = [51.505, -0.09];
 const DEFAULT_LOCATED_ZOOM = 18;
-const DEFAULT_SHAPE_COLOR = '#9733ff';
+const DEFAULT_SHAPE_COLOR = '#ff9700';
 
 class MapInfo extends React.Component {
   static contextType = NavContext;
@@ -82,6 +82,7 @@ class MapInfo extends React.Component {
 
     const polyline = L.polyline(positions, { color: DEFAULT_SHAPE_COLOR });
     polyline.addTo(this.drawnItems);
+    polyline.bringToBack(this.drawnItems);
     map.setView(positions[positions.length - 1], DEFAULT_LOCATED_ZOOM);
   }
 
@@ -200,6 +201,8 @@ class MapInfo extends React.Component {
       map.invalidateSize();
       if (shape) {
         this.setExistingShape(shape);
+
+        this.zoomToPolyLine(shape);
       }
     };
 
@@ -254,6 +257,8 @@ class MapInfo extends React.Component {
     if (shape.type === 'Polygon') {
       this.zoomToPolygonShape(shape);
     }
+
+    this.zoomToPolyLine(shape);
   };
 
   deleteShape = () => {
@@ -265,6 +270,17 @@ class MapInfo extends React.Component {
     const reverseCoords = coords => [...coords].reverse();
     const positions = polygon.coordinates[0].map(reverseCoords);
     map.fitBounds(positions);
+  }
+
+  zoomToPolyLine(polygon) {
+    const { sample, map } = this.props;
+
+    if (!sample.isTimerFinished() && !sample.metadata.saved) return;
+
+    const reverseCoords = coords => [...coords].reverse();
+    const positions = polygon.coordinates.map(reverseCoords);
+
+    map.fitBounds(L.polyline(positions).getBounds(), { padding: [35, 35] });
   }
 
   componentWillUnmount() {
