@@ -2302,3 +2302,7 @@ msgstr "Tracking the Painted Lady migration with Butterfly Count"
 # Menu page label
 msgid "Instructions"
 msgstr "Instructions"
+
+# Country name
+msgid "Saint Helena"
+msgstr "Saint Helena"
