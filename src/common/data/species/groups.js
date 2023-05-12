@@ -1,0 +1,18 @@
+module.exports = {
+  butterflies: {
+    id: 251,
+    label: 'Butterflies',
+    value: 'butterflies',
+  },
+  moths: { id: 260, label: 'Moths', value: 'moths' },
+  bumblebees: {
+    id: 261,
+    label: 'Bumblebees',
+    value: 'bumblebees',
+  },
+  dragonflies: {
+    id: 265,
+    label: 'Dragonflies',
+    value: 'dragonflies',
+  },
+};

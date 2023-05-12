@@ -4,7 +4,7 @@ const axios = require('axios'); // eslint-disable-line
 const fs = require('fs');
 const btoa = require('btoa'); // eslint-disable-line
 const optimise = require('./makeOptimise');
-const groups = require('./groups.json');
+const groups = require('./groups');
 
 const { APP_INDICIA_API_KEY, REPORT_USER_EMAIL, REPORT_USER_PASS } =
   process.env;
