@@ -93,7 +93,7 @@ function resetDialog(resetApp: any, alert: any) {
       },
       {
         text: 'Reset',
-        cssClass: 'secondary',
+        role: 'destructive',
         handler: resetApp,
       },
     ],
