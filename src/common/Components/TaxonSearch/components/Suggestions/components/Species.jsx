@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { IonItem } from '@ionic/react';
-import groups from 'common/data/species/groups';
+import groups from 'common/helpers/groups';
 import { Trans as T } from 'react-i18next';
 import './styles.scss';
 

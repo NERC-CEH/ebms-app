@@ -106,7 +106,8 @@ async function attachProfileInfo(species) {
   };
 
   const hasValue = sp => !!sp;
-  const byId = (s1, s2) => (!s1.id || !s2.id ? -1 : s1.id - s2.id);
+  const byId = (s1, s2) => s1.id - s2.id || s1.warehouse_id - s2.warehouse_id;
+
   return species.map(getSpeciesWithInfo).filter(hasValue).sort(byId);
 }
 
