@@ -83,7 +83,10 @@ const Edit: FC<Props> = ({
 
     const getOccurrenceEntry = (occ: Occurrence) => {
       const speciesName = occ.getTaxonName();
-      const { count } = occ.attrs;
+      const { count, taxon } = occ.attrs;
+      const { warehouse_id, preferredId } = taxon;
+
+      const taxa = warehouse_id || preferredId;
 
       const deleteOccurrenceWrap = () => deleteOccurrence(occ);
 
@@ -92,7 +95,7 @@ const Edit: FC<Props> = ({
 
       return (
         <IonItemSliding key={occ.cid}>
-          <IonItem routerLink={`${match.url}/${occ.cid}/edit`} detail>
+          <IonItem routerLink={`${match.url}/${occ.cid}/edit/${taxa}`} detail>
             <IncrementalButton
               onClick={increaseCountWrap}
               onLongClick={increase5xCountWrap}

@@ -32,13 +32,17 @@ const routes = [
   [`${baseURL}/:smpId/edit/sections/:subSmpId/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/edit/sections/:subSmpId/taxa`, SectionsEditTaxa],
 
-  [`${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit`, OccurrenceEdit],
   [
-    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/:attr`,
-    AttrPageFromRoute,
+    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/:taxa`,
+    OccurrenceEdit,
   ],
   [
-    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/taxa`,
+    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/:taxa/:attr`,
+    AttrPageFromRoute,
+  ],
+
+  [
+    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/:taxa/taxa`,
     SectionsEditTaxa,
   ],
 ];

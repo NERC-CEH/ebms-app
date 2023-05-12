@@ -35,7 +35,7 @@ export type Taxon = {
 
   machineInvolvement?: MachineInvolvement;
   suggestions?: any;
-
+  preferredId?: any;
   array_id?: number;
   found_in_name?: string;
   group?: number;

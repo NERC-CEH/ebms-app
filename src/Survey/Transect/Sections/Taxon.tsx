@@ -4,7 +4,7 @@ import Occurrence, { Taxon } from 'models/occurrence';
 import { NavContext } from '@ionic/react';
 import { useRouteMatch } from 'react-router';
 import { observer } from 'mobx-react';
-import { Page, Main, Header } from '@flumens';
+import { Page, Main, Header, useAlert } from '@flumens';
 import TaxonSearch from 'Components/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
@@ -13,25 +13,113 @@ type Props = {
   subSample: Sample;
 };
 
-const Controller: FC<Props> = ({ subSample: sectionSample }) => {
-  const { goBack } = useContext(NavContext);
+const Controller: FC<Props> = ({
+  subSample: sectionSample,
+  occurrence: sectionOccurrence,
+}: any) => {
+  const alert = useAlert();
+  const { goBack, navigate } = useContext(NavContext);
   const match: any = useRouteMatch();
-  const occID = match.params.occId;
 
   const getTaxonId = (occ: Occurrence) =>
     occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
   const recordedTaxa = sectionSample.occurrences.map(getTaxonId);
 
   const onSpeciesSelected = async (taxon: Taxon) => {
-    if (occID) {
-      const byId = (occ: Occurrence) => occ.cid === occID;
-      const occurrence = sectionSample.occurrences.find(byId);
-      occurrence!.attrs.taxon = taxon;
-    } else {
-      const survey = sectionSample.getSurvey();
-      const occurrence = survey.occ.create(Occurrence, { taxon });
-      sectionSample.occurrences.push(occurrence);
+    const { taxa }: any = match.params;
+    const { isRecorded }: any = taxon;
+
+    const isTaxonSelectedSame =
+      sectionOccurrence &&
+      (sectionOccurrence.attrs.taxon.warehouse_id === taxon.warehouse_id ||
+        sectionOccurrence.attrs.taxon.preferredId === taxon.preferredId);
+
+    const byId = (occ: Occurrence) => {
+      return (
+        occ.attrs.taxon.warehouse_id === taxon.warehouse_id ||
+        occ.attrs.taxon.preferredId === taxon.preferredId
+      );
+    };
+    const occWithSameSpecies = sectionSample.occurrences.find(byId);
+
+    const isOccurrenceEditPage = occWithSameSpecies && isRecorded && taxa;
+
+    if (isOccurrenceEditPage && isTaxonSelectedSame) {
+      const mergeSpecies = await showMergeSpeciesAlert(alert);
+      if (!mergeSpecies) return;
+
+      goBack();
+      return;
     }
+
+    if (isOccurrenceEditPage && !isTaxonSelectedSame) {
+      const mergeSpecies = await showMergeSpeciesAlert(alert);
+      if (!mergeSpecies) return;
+
+      occWithSameSpecies.attrs.count += sectionOccurrence.attrs.count;
+
+      const hasComment = sectionOccurrence.attrs.comment;
+      if (hasComment) {
+        const firstString = occWithSameSpecies.attrs.comment || '';
+        occWithSameSpecies.attrs.comment = firstString.concat(
+          ' ',
+          sectionOccurrence.attrs.comment
+        );
+      }
+
+      while (sectionOccurrence.media.length) {
+        const copy = sectionOccurrence.media.pop();
+        occWithSameSpecies.media.push(copy);
+      }
+
+      occWithSameSpecies.save();
+      sectionOccurrence.destroy();
+      sectionSample.save();
+
+      navigate(
+        `/survey/transect/${sectionSample.parent.cid}/edit/sections/${sectionSample.cid}`,
+        'none',
+        'pop'
+      );
+
+      return;
+    }
+
+    if (sectionOccurrence && isRecorded && isTaxonSelectedSame) {
+      // eslint-disable-next-line no-param-reassign
+      sectionOccurrence.attrs.count += 1;
+      sectionOccurrence.save();
+
+      navigate(
+        `/survey/transect/${sectionSample.parent.cid}/edit/sections/${sectionSample.cid}`,
+        'none',
+        'pop'
+      );
+      return;
+    }
+
+    if (!occWithSameSpecies && sectionOccurrence && taxa) {
+      Object.assign(sectionOccurrence.attrs.taxon, taxon);
+      sectionOccurrence.save();
+
+      navigate(
+        `/survey/transect/${sectionSample.parent.cid}/edit/sections/${sectionSample.cid}`,
+        'none',
+        'pop'
+      );
+      return;
+    }
+
+    if (occWithSameSpecies && !taxa) {
+      occWithSameSpecies.attrs.count += 1;
+      occWithSameSpecies.save();
+      goBack();
+      return;
+    }
+
+    const survey = sectionSample.getSurvey();
+    const occurrence = survey.occ.create(Occurrence, { taxon });
+    sectionSample.occurrences.push(occurrence);
 
     await sectionSample.save();
     goBack();
