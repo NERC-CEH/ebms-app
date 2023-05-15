@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace "uk.ac.ceh.ebms"
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "uk.ac.ceh.ebms"
