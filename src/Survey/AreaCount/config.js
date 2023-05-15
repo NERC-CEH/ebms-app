@@ -3,6 +3,7 @@ import config from 'common/config';
 import Wkt from 'wicket';
 import { toJS } from 'mobx';
 import L from 'leaflet';
+import { DRAGONFLY_GROUP } from 'models/occurrence';
 import {
   deviceAttr,
   deviceVersionAttr,
@@ -19,6 +20,7 @@ import {
   dateAttr,
   areaCountSchema,
   stageAttr,
+  dragonflyStageAttr,
   speciesGroupsAttr,
 } from 'Survey/common/config';
 
@@ -171,6 +173,7 @@ const survey = {
         count: { remote: { id: 780 } },
 
         stage: stageAttr,
+        dragonflyStage: dragonflyStageAttr,
 
         timeOfSighting: {
           remote: {
@@ -180,10 +183,13 @@ const survey = {
       },
 
       create(Occurrence, taxon) {
+        const isDragonfly = taxon.group === DRAGONFLY_GROUP;
+
         return new Occurrence({
           attrs: {
             comment: null,
-            stage: 'Adult',
+            stage: !isDragonfly && 'Adult',
+            dragonflyStage: isDragonfly && 'Adult',
             taxon,
             count: 1,
             timeOfSighting: new Date().toISOString(),

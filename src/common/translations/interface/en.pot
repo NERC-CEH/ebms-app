@@ -2306,3 +2306,19 @@ msgstr "Instructions"
 # Country name
 msgid "Saint Helena"
 msgstr "Saint Helena"
+
+# Dragonfly stage attribute
+msgid "Ovipositing"
+msgstr "Ovipositing"
+
+# Dragonfly stage attribute
+msgid "Copulating or tandem pairs"
+msgstr "Copulating or tandem pairs"
+
+# Dragonfly stage attribute
+msgid "Exuviae"
+msgstr "Exuviae"
+
+# Dragonfly stage attribute
+msgid "Emergent"
+msgstr "Emergent"

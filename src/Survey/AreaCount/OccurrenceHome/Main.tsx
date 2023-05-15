@@ -11,6 +11,7 @@ import {
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import PhotoPicker from 'common/Components/PhotoPicker';
+
 import { Main, MenuAttrItem } from '@flumens';
 import GridRefValue from 'Components/GridRefValue';
 import caterpillarIcon from 'common/images/caterpillar.svg';
@@ -27,7 +28,9 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
   const match = useRouteMatch();
 
   const species = occurrence.getTaxonName();
-  const { stage, comment } = occurrence.attrs;
+  const { dragonflyStage, stage, comment } = occurrence.attrs;
+
+  const isDragonfly = occurrence.isDragonflyTaxon();
 
   const baseURL = match.url;
   const isPreciseSurvey = subSample.isSurveyPreciseSingleSpecies();
@@ -70,13 +73,27 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
             value={location}
             skipValueTranslation
           />
-          <MenuAttrItem
-            routerLink={`${baseURL}/stage`}
-            disabled={isDisabled}
-            icon={caterpillarIcon}
-            label="Stage"
-            value={stage}
-          />
+
+          {!isDragonfly && (
+            <MenuAttrItem
+              routerLink={`${baseURL}/stage`}
+              disabled={isDisabled}
+              icon={caterpillarIcon}
+              label="Stage"
+              value={stage}
+            />
+          )}
+
+          {isDragonfly && (
+            <MenuAttrItem
+              routerLink={`${baseURL}/dragonflyStage`}
+              disabled={isDisabled}
+              icon={caterpillarIcon}
+              label="Stage"
+              value={dragonflyStage}
+            />
+          )}
+
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}

@@ -372,6 +372,28 @@ const stageValues = [
   { value: 'Pupa', id: 3930 },
 ];
 
+const dragonflyStageValues = [
+  { value: 'Adult', id: 5703 },
+  { value: 'Copulating or tandem pairs', id: 5704 },
+  { value: 'Ovipositing', id: 5705 },
+  { value: 'Larvae', id: 5706 },
+  { value: 'Exuviae', id: 5707 },
+  { value: 'Emergent', id: 5708 },
+];
+
+export const dragonflyStageAttr = {
+  menuProps: { icon: caterpillarIcon },
+  pageProps: {
+    headerProps: { title: 'Stage' },
+    attrProps: {
+      input: 'radio',
+      info: 'Pick the life stage',
+      inputProps: { options: dragonflyStageValues },
+    },
+  },
+  remote: { id: 988, values: dragonflyStageValues },
+};
+
 export const stageAttr = {
   menuProps: { icon: caterpillarIcon },
   pageProps: {

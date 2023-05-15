@@ -41,7 +41,7 @@ const EditOccurrence: FC<Props> = ({
         .toLocaleTimeString()
         .replace(/(:\d{2}| [AP]M)$/, '');
 
-      const { stage } = occ.attrs;
+      const { stage, dragonflyStage } = occ.attrs;
 
       let location;
       if (smp.hasLoctionMissingAndIsnotLocating()) {
@@ -60,7 +60,7 @@ const EditOccurrence: FC<Props> = ({
             <IonLabel className="time">{prettyTime}</IonLabel>
             <IonLabel>
               <IonBadge color="medium">
-                <T>{stage}</T>
+                <T>{stage || dragonflyStage}</T>
               </IonBadge>
             </IonLabel>
             <IonLabel slot="end">{location}</IonLabel>

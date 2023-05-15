@@ -2,10 +2,13 @@ import { Occurrence, OccurrenceOptions, OccurrenceAttrs } from '@flumens';
 import appModel from 'models/app';
 import { MachineInvolvement } from 'Survey/Moth/config';
 import butterflyIcon from 'common/images/butterfly.svg';
+import speciesGroups from 'common/helpers/groups';
 import mothIcon from 'common/images/moth.svg';
 import bumblebeeIcon from 'common/images/bumblebee.svg';
 import dragonflyIcon from 'common/images/dragonfly.svg';
 import Media from './media';
+
+export const DRAGONFLY_GROUP = speciesGroups.dragonflies.id;
 
 const speciesGroupImages = {
   251: butterflyIcon,
@@ -48,6 +51,7 @@ type Attrs = OccurrenceAttrs & {
   taxon: any;
   comment?: string;
   stage?: string;
+  dragonflyStage?: string;
   zero_abundance?: any;
   identifier?: any;
   count?: any;
@@ -92,6 +96,8 @@ export default class AppOccurrence extends Occurrence {
   }
 
   isDisabled = () => this.isUploaded();
+
+  isDragonflyTaxon = () => this.attrs.taxon.group === DRAGONFLY_GROUP;
 
   async identify() {
     const identifyAllImages = (media: Media) => media.identify();

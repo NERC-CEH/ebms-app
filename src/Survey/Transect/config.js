@@ -14,10 +14,12 @@ import {
   commentAttr,
   dateAttr,
   stageAttr,
+  dragonflyStageAttr,
   speciesGroupsAttr,
   sunAttr,
 } from 'Survey/common/config';
 import { chatboxOutline } from 'ionicons/icons';
+import { DRAGONFLY_GROUP } from 'models/occurrence';
 
 const reliabilityValues = [
   { value: 'Suitable conditions', id: 16590 },
@@ -141,14 +143,18 @@ const config = {
         },
         comment: commentAttr,
         stage: stageAttr,
+        dragonflyStage: dragonflyStageAttr,
         taxon: taxonAttr,
       },
 
       create(Occurrence, attrs) {
+        const isDragonfly = attrs.taxon.group === DRAGONFLY_GROUP;
+
         return new Occurrence({
           attrs: {
             count: 1,
-            stage: 'Adult',
+            stage: !isDragonfly && 'Adult',
+            dragonflyStage: isDragonfly && 'Adult',
             comment: null,
             taxon: {
               scientific_name: null,
