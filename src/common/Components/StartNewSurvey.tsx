@@ -1,59 +1,12 @@
 import { useEffect, useContext } from 'react';
 import { NavContext, isPlatform } from '@ionic/react';
-import { useAlert, useDisableBackButton } from '@flumens';
+import { useAlert } from '@flumens';
 import appModel, { SurveyDraftKeys } from 'models/app';
 import userModel from 'models/user';
 import Sample from 'models/sample';
 import savedSamples from 'models/collections/samples';
-import { Trans as T } from 'react-i18next';
 import { Survey } from 'common/config/surveys';
 import { Geolocation } from '@capacitor/geolocation';
-
-async function showDraftAlert(alert: any) {
-  const showDraftDialog = (resolve: any) => {
-    alert({
-      header: 'Draft',
-      message: (
-        <T>Previous survey draft exists, would you like to continue it?</T>
-      ),
-      backdropDismiss: false,
-      buttons: [
-        {
-          text: 'Discard',
-          role: 'destructive',
-          handler: () => {
-            resolve(false);
-          },
-        },
-        {
-          text: 'Continue',
-          handler: () => {
-            resolve(true);
-          },
-        },
-      ],
-    });
-  };
-  return new Promise(showDraftDialog);
-}
-
-async function getDraft(draftIdKey: keyof SurveyDraftKeys, alert: any) {
-  const draftID = appModel.attrs[draftIdKey];
-  if (draftID) {
-    const draftById = ({ cid }: Sample) => cid === draftID;
-    const draftSample = savedSamples.find(draftById);
-    if (draftSample && !draftSample.isDisabled()) {
-      const continueDraftRecord = await showDraftAlert(alert);
-      if (continueDraftRecord) {
-        return draftSample;
-      }
-
-      draftSample.destroy();
-    }
-  }
-
-  return null;
-}
 
 async function getNewSample(
   survey: Survey,
@@ -139,10 +92,7 @@ const useShowGPSPermissionDialog = () => {
 };
 
 function StartNewSurvey({ survey }: Props): null {
-  const context = useContext(NavContext);
-  const alert = useAlert();
-
-  useDisableBackButton();
+  const { navigate } = useContext(NavContext);
 
   const showGPSPermissionDialog = useShowGPSPermissionDialog();
 
@@ -152,36 +102,25 @@ function StartNewSurvey({ survey }: Props): null {
   const pickDraftOrCreateSampleWrap = () => {
     const pickDraftOrCreateSample = async () => {
       if (!userModel.isLoggedIn()) {
-        context.navigate(`/user/login`, 'none', 'replace');
+        navigate(`/user/login`, 'none', 'replace');
         return;
       }
-      let sample = await getDraft(draftIdKey, alert);
 
-      if (!sample) {
-        const hasGrantedGps = await showGPSPermissionDialog();
-        sample = await getNewSample(survey, draftIdKey, hasGrantedGps);
-      }
+      const hasGrantedGps = await showGPSPermissionDialog();
+      const sample = await getNewSample(survey, draftIdKey, hasGrantedGps);
 
       if (sample.isPreciseSingleSpeciesSurvey()) {
-        const hasTargetSpecies = !!sample.samples.length;
-
-        const homeOrEditPage = sample.attrs.surveyStartTime
-          ? `/survey/${survey.name}/${sample.cid}/edit`
-          : `/survey/${survey.name}/${sample.cid}/edit/details`;
-
-        const taxonSelectPage = `/survey/${survey.name}/${sample.cid}/edit/taxon`;
-
-        const hrefPreciseSingleSpeciesSurvey = hasTargetSpecies
-          ? homeOrEditPage
-          : taxonSelectPage;
-
-        context.navigate(hrefPreciseSingleSpeciesSurvey, 'none', 'replace');
+        navigate(
+          `/survey/${survey.name}/${sample.cid}/edit/taxon`,
+          'none',
+          'replace'
+        );
         return;
       }
 
       const path = sample.isDetailsComplete() ? '' : 'edit';
 
-      context.navigate(`${baseURL}/${sample.cid}/${path}`, 'none', 'replace');
+      navigate(`${baseURL}/${sample.cid}/${path}`, 'none', 'replace');
     };
 
     pickDraftOrCreateSample();
