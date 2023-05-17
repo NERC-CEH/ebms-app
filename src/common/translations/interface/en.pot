@@ -2322,3 +2322,7 @@ msgstr "Exuviae"
 # Dragonfly stage attribute
 msgid "Emergent"
 msgstr "Emergent"
+
+# Alert message
+msgid "Count sum must be greater than 0"
+msgstr "Count sum must be greater than 0"

@@ -1,4 +1,9 @@
-import { Occurrence, OccurrenceOptions, OccurrenceAttrs } from '@flumens';
+import {
+  Occurrence,
+  OccurrenceOptions,
+  OccurrenceAttrs,
+  validateRemoteModel,
+} from '@flumens';
 import appModel from 'models/app';
 import { MachineInvolvement } from 'Survey/Moth/config';
 import butterflyIcon from 'common/images/butterfly.svg';
@@ -75,6 +80,8 @@ export default class AppOccurrence extends Occurrence {
 
   attrs: Attrs = this.attrs;
 
+  validateRemote = validateRemoteModel;
+
   constructor(props: OccurrenceOptions) {
     super(props);
 
@@ -88,11 +95,6 @@ export default class AppOccurrence extends Occurrence {
     if (!taxon.found_in_name) return taxon.scientific_name;
 
     return taxon[taxon.found_in_name];
-  }
-
-  // eslint-disable-next-line class-methods-use-this
-  validateRemote() {
-    return null;
   }
 
   isDisabled = () => this.isUploaded();

@@ -120,6 +120,10 @@ export const verifyLocationSchema = Yup.mixed().test(
   validateLocation
 );
 
+const verifyCountSchema = (occurrenceAttr: any) => {
+  return occurrenceAttr.count + occurrenceAttr['count-outside'] > 0;
+};
+
 const locationAttr = {
   remote: {
     id: 'location_id',
@@ -220,6 +224,23 @@ const survey: Survey = {
       'count-outside': {
         remote: { id: 898 },
       },
+    },
+
+    verify(attrs) {
+      try {
+        const occurrenceSchema = Yup.object()
+          .shape({
+            count: Yup.number().required(),
+            'count-outside': Yup.number().required(),
+          })
+          .test('test', `Count sum must be greater than 0`, verifyCountSchema);
+
+        occurrenceSchema.validateSync(attrs, { abortEarly: false });
+      } catch (attrError) {
+        return attrError;
+      }
+
+      return null;
     },
 
     create(AppOccurrence, taxon, identifier, photo) {

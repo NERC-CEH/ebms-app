@@ -44,7 +44,7 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
               icon: mothInsideBoxIcon,
               label: 'Count inside',
               isDisabled,
-              min: 1,
+              min: 0,
             }}
             attr="count"
           />
