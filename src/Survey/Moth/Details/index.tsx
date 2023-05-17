@@ -30,7 +30,13 @@ const DetailsController: FC<Props> = ({ sample }) => {
   };
 
   const getNextButton = sample.metadata.completedDetails ? null : (
-    <IonButton onClick={onFinish}>
+    <IonButton
+      fill="solid"
+      shape="round"
+      className="primary-button"
+      onClick={onFinish}
+      color={!sample.validateRemote() ? 'secondary' : 'medium'}
+    >
       <T>Next</T>
     </IonButton>
   );

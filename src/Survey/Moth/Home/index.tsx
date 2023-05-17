@@ -128,9 +128,11 @@ const HomeController: FC<Props> = ({ sample }) => {
 
   const getFinishButton = () => {
     const label = isEditing ? <T>Upload</T> : <T>Finish</T>;
+
+    const isValid = !sample.validateRemote();
     return (
       <IonButton
-        color="secondary"
+        color={isValid ? 'secondary' : 'medium'}
         fill="solid"
         shape="round"
         className="primary-button"
