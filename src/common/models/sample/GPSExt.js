@@ -8,7 +8,9 @@ import GPS from 'helpers/GPS';
 import config from 'common/config';
 import { observable } from 'mobx';
 import geojsonArea from '@mapbox/geojson-area';
-import { updateModelLocation } from '@flumens';
+import { isPlatform } from '@ionic/react';
+import { updateModelLocation, device } from '@flumens';
+import { PushNotifications } from '@capacitor/push-notifications';
 
 const METERS_SINCE_LAST_LOCATION = 15;
 
@@ -136,6 +138,23 @@ const extension = {
 
   startGPS() {
     console.log('SampleModel:GPS start');
+
+    const showPushNotificationForBackgroundGPS = async () => {
+      let permStatus = await PushNotifications.checkPermissions();
+
+      if (permStatus.receive !== 'granted') {
+        permStatus = await PushNotifications.requestPermissions();
+      }
+    };
+
+    const ANDROID_12_VERSION = 12;
+    const isPlatformAndroidAndDeviceVersionAbove12 =
+      isPlatform('android') &&
+      device &&
+      Number(device.info?.osVersion) > ANDROID_12_VERSION;
+    if (isPlatformAndroidAndDeviceVersionAbove12) {
+      showPushNotificationForBackgroundGPS();
+    }
 
     // eslint-disable-next-line
     const onPosition = (error, location) => {

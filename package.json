@@ -3,7 +3,7 @@
   "id": "uk.ac.ceh.ebms",
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
-  "version": "1.20.0",
+  "version": "1.21.0",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "start": "webpack serve --progress --port 8000",
@@ -34,6 +34,7 @@
     "@capacitor/ios": "^5.0.3",
     "@capacitor/keyboard": "^5.0.2",
     "@capacitor/network": "^5.0.2",
+    "@capacitor/push-notifications": "^5.0.2",
     "@capacitor/splash-screen": "^5.0.2",
     "@capacitor/status-bar": "^5.0.2",
     "@flumens/bigu": "^0.4.0",
