@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { FC, SyntheticEvent } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import {
@@ -12,13 +12,14 @@ import {
 } from '@ionic/react';
 import { useToast, useAlert, date as dateHelp } from '@flumens';
 import { useUserStatusCheck } from 'models/user';
-import { useValidateCheck } from 'models/sample';
+import Sample, { useValidateCheck } from 'models/sample';
+import Occurrence from 'models/occurrence';
 import butterflyIcon from 'common/images/butterfly.svg';
 import OnlineStatus from './components/OnlineStatus';
 import ErrorMessage from './components/ErrorMessage';
 import './styles.scss';
 
-function useDeleteSurveyPrompt(sample) {
+function useDeleteSurveyPrompt(sample: Sample) {
   const alert = useAlert();
 
   function deleteSurvey() {
@@ -41,7 +42,12 @@ function useDeleteSurveyPrompt(sample) {
   return deleteSurvey;
 }
 
-function Survey({ sample }) {
+type Props = {
+  sample: Sample;
+  hasManyPending?: boolean;
+};
+
+const Survey: FC<Props> = ({ sample, hasManyPending }) => {
   const toast = useToast();
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
@@ -55,7 +61,7 @@ function Survey({ sample }) {
 
   let speciesCount = sample.occurrences.length;
   if (survey.name === 'area') {
-    const isNotZeroCount = occ => occ.attrs.count;
+    const isNotZeroCount = (occ: Occurrence) => occ.attrs.count;
     speciesCount = sample.occurrences.filter(isNotZeroCount).length;
   }
 
@@ -84,7 +90,7 @@ function Survey({ sample }) {
     ? hrefPreciseSingleSpeciesSurvey
     : hrefRemainingSurvey;
 
-  const href = canShowLink && surveyRoutes;
+  const href: any = canShowLink && surveyRoutes;
   function getSampleInfo() {
     const label = (
       <>
@@ -111,7 +117,7 @@ function Survey({ sample }) {
     return <IonLabel class="ion-text-wrap">{label}</IonLabel>;
   }
 
-  const onUpload = async e => {
+  const onUpload = async (e: SyntheticEvent) => {
     e.preventDefault();
     e.stopPropagation();
 
@@ -129,7 +135,11 @@ function Survey({ sample }) {
       <ErrorMessage sample={sample} />
       <IonItem routerLink={href} detail={canShowLink}>
         {getSampleInfo()}
-        <OnlineStatus sample={sample} onUpload={onUpload} />
+        <OnlineStatus
+          sample={sample}
+          onUpload={onUpload}
+          hasManyPending={hasManyPending}
+        />
       </IonItem>
       <IonItemOptions side="end">
         <IonItemOption color="danger" onClick={showDeleteSurveyPrompt}>
@@ -138,10 +148,6 @@ function Survey({ sample }) {
       </IonItemOptions>
     </IonItemSliding>
   );
-}
-
-Survey.propTypes = {
-  sample: PropTypes.object.isRequired,
 };
 
 export default observer(Survey);

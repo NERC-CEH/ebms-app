@@ -15,7 +15,6 @@ import {
   flagOutline,
   globeOutline,
   shareOutline,
-  paperPlaneOutline,
   addCircleOutline,
   personRemoveOutline,
 } from 'ionicons/icons';
@@ -100,29 +99,10 @@ function resetDialog(resetApp: any, alert: any) {
   });
 }
 
-function uploadAllSamplesDialog(uploadAllSamples: any, alert: any) {
-  alert({
-    header: 'Upload All',
-    message: <T>Are you sure you want to upload all finished records?</T>,
-    buttons: [
-      {
-        text: 'Cancel',
-        role: 'cancel',
-        cssClass: 'primary',
-      },
-      {
-        text: 'Upload',
-        cssClass: 'secondary',
-        handler: uploadAllSamples,
-      },
-    ],
-  });
-}
-
 type Props = {
   resetApp: any;
   onToggle: any;
-  uploadAllSamples: any;
+
   useTraining: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;
@@ -139,7 +119,6 @@ const MenuMain: FC<Props> = ({
   onToggle,
   isLoggedIn,
   deleteUser,
-  uploadAllSamples,
   useTraining,
   useExperiments,
   sendAnalytics,
@@ -162,8 +141,6 @@ const MenuMain: FC<Props> = ({
   const onResetDialog = () => resetDialog(resetApp, alert);
   const onTrainingToggle = (checked: boolean) =>
     onToggle('useTraining', checked);
-  const onSubmitAllDialog = () =>
-    uploadAllSamplesDialog(uploadAllSamples, alert);
 
   return (
     <Main className="app-settings">
@@ -172,16 +149,6 @@ const MenuMain: FC<Props> = ({
           <T>Surveying</T>
         </IonItemDivider>
         <div className="rounded">
-          <IonItem id="submit-all-btn" onClick={onSubmitAllDialog}>
-            <IonIcon icon={paperPlaneOutline} size="small" slot="start" />
-            <IonLabel>
-              <T>Upload All</T>
-            </IonLabel>
-          </IonItem>
-          <InfoMessage color="medium">
-            Batch upload all finished records. This does not include records in
-            &#39;draft&#39; stage.
-          </InfoMessage>
           <IonItem routerLink="/settings/primary-survey" detail>
             <IonLabel>
               <T>Primary Survey</T>

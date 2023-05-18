@@ -1,11 +1,7 @@
 #surveys-list.ion-page {
-  .text-center span {
-    text-align: center;
-
-    ion-icon {
-      background: var(--ion-color-primary);
-      border-radius: 50%;
-    }
+  .start-survey-icon {
+    background: var(--ion-color-primary);
+    border-radius: 50%;
   }
 
   ion-segment {
@@ -32,6 +28,23 @@
       justify-content: center;
       align-items: center;
       margin-left: 1px;
+    }
+  }
+
+  .upload-all-button {
+    margin: 10px auto;
+    height: 35px !important;
+    display: block;
+    position: fixed;
+    right: 17px;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: var(--theme-border-radius);
+    box-shadow: -1px 2px 7px 0 #0000001a, 0 2px 9px 0 #3e396b1a;
+    --background: var(--ion-color-secondary);
+
+    &.ios {
+      font-size: 0.9em;
     }
   }
 }

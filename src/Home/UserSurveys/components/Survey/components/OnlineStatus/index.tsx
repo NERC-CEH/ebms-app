@@ -1,11 +1,17 @@
-import PropTypes from 'prop-types';
+import { FC } from 'react';
 import { IonSpinner, IonLabel, IonChip, IonButton } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
-
+import Sample from 'models/sample';
 import { observer } from 'mobx-react';
 import './styles.scss';
 
-function Component({ sample, onUpload }) {
+type Props = {
+  sample: Sample;
+  onUpload: (e?: any) => void;
+  hasManyPending?: boolean;
+};
+
+const OnlineStatus: FC<Props> = ({ sample, onUpload, hasManyPending }) => {
   const { deprecated } = sample.getSurvey();
   if (deprecated) return null;
 
@@ -13,7 +19,9 @@ function Component({ sample, onUpload }) {
   if (!saved) {
     return (
       <IonChip slot="end" class="record-status">
-        <IonLabel>{t('Draft')}</IonLabel>
+        <IonLabel>
+          <T>Draft</T>
+        </IonLabel>
       </IonChip>
     );
   }
@@ -29,7 +37,7 @@ function Component({ sample, onUpload }) {
   return (
     <IonButton
       color={isValid ? 'secondary' : 'medium'}
-      fill="solid"
+      fill={hasManyPending ? 'outline' : 'solid'}
       shape="round"
       className="primary-button"
       onClick={onUpload}
@@ -37,11 +45,6 @@ function Component({ sample, onUpload }) {
       <T>Upload</T>
     </IonButton>
   );
-}
-
-Component.propTypes = {
-  sample: PropTypes.object.isRequired,
-  onUpload: PropTypes.func.isRequired,
 };
 
-export default observer(Component);
+export default observer(OnlineStatus);
