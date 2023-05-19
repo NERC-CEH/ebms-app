@@ -13,21 +13,21 @@ type Props = {
 };
 
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
-  const { showWhatsNewInVersion120, appSession } = appModel.attrs;
+  const { showWhatsNewInVersion121, appSession } = appModel.attrs;
 
   const skipShowingDialogOnFreshInstall = () => {
     const isFreshInstall = appSession <= 1;
     if (isFreshInstall) {
-      appModel.attrs.showWhatsNewInVersion120 = false; // eslint-disable-line
+      appModel.attrs.showWhatsNewInVersion121 = false; // eslint-disable-line
       appModel.save();
     }
   };
   useEffect(skipShowingDialogOnFreshInstall, [appSession]);
 
-  if (!showWhatsNewInVersion120) return null;
+  if (!showWhatsNewInVersion121) return null;
 
   const closeDialog = () => {
-    appModel.attrs.showWhatsNewInVersion120 = false; // eslint-disable-line
+    appModel.attrs.showWhatsNewInVersion121 = false; // eslint-disable-line
     appModel.save();
   };
 
@@ -53,22 +53,29 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
             <ExpandableList>
               <li>
                 <summary>
-                  <T>Added Painted Lady survey</T>
+                  <T>Enabled multiple drafts functionality</T>
                 </summary>
               </li>
               <li>
                 <summary>
-                  <T>Changed species groups location and functionality</T>
+                  <T>Added Saint Helena country</T>
                 </summary>
               </li>
               <li>
                 <summary>
-                  <T>Various bug fixes</T>
+                  <T>Added dragonflies-specific stages</T>
                 </summary>
               </li>
+
               <li>
                 <summary>
-                  <T>Updated translations</T>
+                  <T>Added Slovak and Turkish butterfly common names</T>
+                </summary>
+              </li>
+
+              <li>
+                <summary>
+                  <T>Added dragonfly common names</T>
                 </summary>
               </li>
             </ExpandableList>
