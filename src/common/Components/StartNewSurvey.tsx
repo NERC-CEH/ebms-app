@@ -26,6 +26,8 @@ async function getNewSample(
   sample.setPreviousSpeciesGroups();
   savedSamples.push(sample);
 
+  sample.save();
+
   appModel.attrs[draftIdKey] = sample.cid;
   await appModel.save();
 
