@@ -49,7 +49,7 @@ export default {
   UA: 'Ukraine',
   AM: 'Armenia',
   KE: 'Kenya',
-  'SH-SH': 'Saint Helena',
+  SH: 'Saint Helena',
 
   // special option
   ELSEWHERE: 'Elsewhere',
