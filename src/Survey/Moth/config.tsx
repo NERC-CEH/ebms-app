@@ -70,6 +70,10 @@ function attachClassifierResults(submission: any, occ: Occurrence) {
     return submission;
   }
 
+  if (!mediaPaths.length) {
+    return submission;
+  }
+
   if (Number.isFinite(taxon?.machineInvolvement)) {
     // eslint-disable-next-line no-param-reassign
     submission.values.machine_involvement = taxon?.machineInvolvement;
