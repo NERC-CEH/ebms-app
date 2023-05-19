@@ -66,7 +66,7 @@ const UserSurveyComponent: FC<Props> = ({ savedSamples }) => {
   };
 
   const isFinished = (sample: Sample) => sample.metadata.saved;
-  const hasManyPending = () => getSamplesList().filter(isFinished).length > 2;
+  const hasManyPending = () => getSamplesList().filter(isFinished).length > 4;
 
   const getUploadedSurveys = () => {
     const surveys = getSamplesList(true);
