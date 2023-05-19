@@ -71,7 +71,7 @@ class MapInfo extends React.Component {
       const polygon = L.polygon(positions, { color: DEFAULT_SHAPE_COLOR });
 
       polygon.addTo(this.drawnItems);
-
+      polygon.bringToBack(this.drawnItems);
       this.zoomToPolygonShape(shape);
       return;
     }
@@ -258,7 +258,9 @@ class MapInfo extends React.Component {
       this.zoomToPolygonShape(shape);
     }
 
-    this.zoomToPolyLine(shape);
+    if (shape.type === 'PolygonLine') {
+      this.zoomToPolyLine(shape);
+    }
   };
 
   deleteShape = () => {
