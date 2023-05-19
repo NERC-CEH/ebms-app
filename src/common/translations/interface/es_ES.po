@@ -2,12 +2,12 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023\n"
 "Language-Team: Spanish (Spain) (https://app.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1912,11 +1912,11 @@ msgstr "Novedades"
 
 # Version 1.20 whats new message
 msgid "Added Painted Lady survey"
-msgstr ""
+msgstr "Añadido muestreo sobre la Cardera"
 
 # Version 1.20 whats new message
 msgid "Changed species groups location and functionality"
-msgstr ""
+msgstr "Ubicación y funcionalidad de los grupos de especies modificadas"
 
 # User account action
 msgid "Resend"
@@ -2176,119 +2176,124 @@ msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Esta opción se ha trasladado a la página de búsqueda de especies dentro de "
+"los muestreos. Cuando se inicia un muestreo, puede seleccionar qué grupo de "
+"especies está registrando."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmar"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "¿Qué grupos de especies ha contado?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Seleccione las especies objetivo"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "Ninguna foto se ha añadido.<br/>Presionar <4><0></0></4> para añadir."
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Ala"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportamiento"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Dirección"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Altitud"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Brújula"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Eliminar registro"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
+"Advertencia - Esto descartará la información del muestreo que ha introducido"
+" hasta ahora."
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Nueva"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Desgastada"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Por favor, especifique la fuente de néctar."
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Por favor, añada la opción de puesta de huevos."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Por favor, añada la opción de apareamiento."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Fuente de néctar"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Por favor, añada la opción de néctar."
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Por favor, añada la opción de dirección."
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Por favor, añada la opción de altitud."
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Puesta de huevos en planta huésped"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Migrando"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Libando"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Apareándose"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Dispositivo no compatible"
 
 # Painted lady compass
 msgid ""
@@ -2298,96 +2303,103 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Desafortunadamente, parece que tu dispositivo no tiene el sensor necesario "
+"para que la brújula funcione correctamente. La brújula depende de este "
+"sensor para detectar el campo magnético terrestre y determinar la "
+"orientación de su dispositivo con respecto al norte magnético. Por lo tanto,"
+" no podrás utilizar la brújula en este dispositivo."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Defensa territorial: otra"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Defensa territorial: hill-topping"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "¿Cuál era la altitud de vuelo de la mariposa? (metros)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Otra planta huésped"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Ortiga del desierto"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Malva"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Cardos"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Planta huésped"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Seleccione la planta huésped."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "No tiene ningún registro de<1>{{prettySpeciesName}}</1> en su lista."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Consejo: Copie atributos"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Estado de las alas"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Néctar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Introduzca aquí la fuente de néctar"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Otras especies"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "¿Qué tipo de cardo era?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Especie de cardo"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "¡Copiado!"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Para copiar una entrada de la lista, deslícela hacia la derecha y pulse el "
+"icono<1><0></0></1>."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Altura sobre el suelo (metros)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Altura"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Inicio Recuento"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Seguimiento de la migración de la Cardera con ButterflyCount"

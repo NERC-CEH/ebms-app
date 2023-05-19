@@ -1884,11 +1884,11 @@ msgstr "Què hi ha de nou"
 
 # Version 1.20 whats new message
 msgid "Added Painted Lady survey"
-msgstr ""
+msgstr "Afegir mostreig de Migradora dels cards"
 
 # Version 1.20 whats new message
 msgid "Changed species groups location and functionality"
-msgstr ""
+msgstr "Ubicació de grups d'espècies i funcionalitat cambiades"
 
 # User account action
 msgid "Resend"
@@ -2143,119 +2143,122 @@ msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Aquesta opció s'ha traslladat a la pàgina de cerca d'espècies dins els mostrejos. Quan s'inicia una mostreig, pots seleccionar quin grup d'espècies estàs enregistrant.\n"
+" "
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Grups"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Tancar"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Confirma"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Quins grups d'espècies has comptat?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Selecciona l'espècie objectiu"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "No s'ha afegit cap foto. <br/>Toca <4><0></0></4> per afegir-ne."
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Estat alar"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportament"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Direcció"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Alçada"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Brúixola"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Esborrar mostreig"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
+"Avís - Això descartarà la informació del mostreig que has entrat de moment"
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Nova"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Volada - vella"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Especifica la font de nèctar"
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Afegeix l'opció d'ovoposició."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Afegeix l'opció d'aparellament."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Font de nèctar"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Afegeix la font de nèctar"
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Afegeix la direcció del vent"
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Afegeix l'alçada"
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Plantes nutrícies"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Migrant"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Libant nèctar"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Comportament reproductor"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Dispositiu no compatible"
 
 # Painted lady compass
 msgid ""
@@ -2265,96 +2268,101 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Malauradament, sembla que el teu dispositiu no té el sensor necessari perquè la brúixola funcioni correctament. La brúixola es basa en aquest sensor per detectar el camp magnètic terrestre i determinar l'orientació del dispositiu en relació al nord magnètic. Per tant, no podrràs utilitzar la brúixola en aquest dispositiu.\n"
+" "
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Comportament territorial: altres"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Comportament territorial: encimballament (hill-topping)"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "Quina era l'alçada de vol de la papallona? (metres)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Altres plantes hoste"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Ortiga del desert"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Malva"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Cards"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Plantes nutrícies"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Si us plau selecciona les plantes nutrícies"
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
 msgstr ""
+"No tens cap registre de <1>{{prettySpeciesName}}</1> a la teva llista."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Consell: copia els atributs"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Condició alar"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Font de nèctar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Entra aquí la font de nèctar"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Altres espècies"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "De quin tipus de card es tracta?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Espècie de card"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Copiat!"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Per copiar una entrada en una llista fes-la lliscar cap a la dreta i apreta "
+"l'icona <1><0></0></1>."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Alçada del terra (metres)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Alçada"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Començar comptatge"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Seguint la migració de la Migradora dels cards amb Butterfly Count"
