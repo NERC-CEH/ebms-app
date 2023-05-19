@@ -14,6 +14,7 @@ import {
 } from '@flumens';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import numberIcon from 'common/images/number.svg';
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import './styles.scss';
 
 type Props = {
@@ -24,7 +25,7 @@ const TransectHomeController: FC<Props> = ({ occurrence }) => {
   const { url } = useRouteMatch();
   const { t } = useTranslation();
 
-  const species = occurrence.getTaxonName();
+  const species = occurrence.getTaxonCommonAndScientificNames();
   const isDisabled = occurrence.isUploaded();
 
   const getCounterOnChange = (value: number) => {
@@ -46,7 +47,9 @@ const TransectHomeController: FC<Props> = ({ occurrence }) => {
               disabled={isDisabled}
               icon={occurrence.getSpeciesGroupIcon()}
               label="Species"
-              value={species}
+              value={<TaxonPrettyName name={species} />}
+              skipValueTranslation
+              className="taxon-entry"
             />
 
             <MenuAttrItemFromModel attr="comment" model={occurrence} />

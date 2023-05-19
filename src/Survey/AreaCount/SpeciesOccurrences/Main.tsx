@@ -17,6 +17,7 @@ import GridRefValue from 'Components/GridRefValue';
 import { observer } from 'mobx-react';
 import { Main, MenuAttrItem, InfoBackgroundMessage } from '@flumens';
 import { Trans as T } from 'react-i18next';
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import './styles.scss';
 
 type Props = {
@@ -89,7 +90,7 @@ const EditOccurrence: FC<Props> = ({
     );
   }
 
-  const species = samples[0].occurrences[0].getTaxonName();
+  const species = samples[0].occurrences[0].getTaxonCommonAndScientificNames();
 
   const count = samples.length > 1 ? samples.length : null;
 
@@ -105,7 +106,9 @@ const EditOccurrence: FC<Props> = ({
               disabled={isDisabled}
               icon={speciesGroupImage}
               label="Species"
-              value={species}
+              value={<TaxonPrettyName name={species} />}
+              skipValueTranslation
+              className="taxon-entry"
             />
           </div>
         )}

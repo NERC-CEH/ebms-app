@@ -10,6 +10,7 @@ import mothIcon from 'common/images/moth.svg';
 import { useRouteMatch } from 'react-router';
 import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 
 interface Props {
   occurrence: Occurrence;
@@ -18,7 +19,7 @@ interface Props {
 const EditOccurrence: FC<Props> = ({ occurrence }) => {
   const { useImageIdentifier } = appModel.attrs;
   const match = useRouteMatch();
-  const species = occurrence.getTaxonName();
+  const species = occurrence.getTaxonCommonAndScientificNames();
   const isDisabled = occurrence.isDisabled();
   const baseURL = match.url;
 
@@ -34,8 +35,9 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
             disabled={isDisabled}
             icon={mothIcon}
             label="Species"
-            value={species}
+            value={<TaxonPrettyName name={species} />}
             skipValueTranslation
+            className="taxon-entry"
           />
           <Attr
             model={occurrence}

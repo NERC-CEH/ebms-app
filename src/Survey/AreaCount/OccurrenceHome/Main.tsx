@@ -11,7 +11,7 @@ import {
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import PhotoPicker from 'common/Components/PhotoPicker';
-
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import { Main, MenuAttrItem } from '@flumens';
 import GridRefValue from 'Components/GridRefValue';
 import caterpillarIcon from 'common/images/caterpillar.svg';
@@ -27,7 +27,7 @@ type Props = {
 const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
   const match = useRouteMatch();
 
-  const species = occurrence.getTaxonName();
+  const species = occurrence.getTaxonCommonAndScientificNames();
   const { dragonflyStage, stage, comment } = occurrence.attrs;
 
   const isDragonfly = occurrence.isDragonflyTaxon();
@@ -62,7 +62,9 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
               disabled={isDisabled}
               icon={occurrence.getSpeciesGroupIcon()}
               label="Species"
-              value={species}
+              value={<TaxonPrettyName name={species} />}
+              skipValueTranslation
+              className="taxon-entry"
             />
           )}
           <MenuAttrItem

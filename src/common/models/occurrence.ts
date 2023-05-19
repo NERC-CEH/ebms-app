@@ -97,6 +97,15 @@ export default class AppOccurrence extends Occurrence {
     return taxon[taxon.found_in_name];
   }
 
+  getTaxonCommonAndScientificNames() {
+    const { taxon } = this.attrs;
+    if (!taxon) return null;
+
+    if (!taxon.common_name) return taxon.scientific_name;
+
+    return [taxon[taxon.found_in_name], taxon.scientific_name];
+  }
+
   isDisabled = () => this.isUploaded();
 
   isDragonflyTaxon = () => this.attrs.taxon.group === DRAGONFLY_GROUP;

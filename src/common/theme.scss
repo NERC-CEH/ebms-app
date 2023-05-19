@@ -185,3 +185,15 @@ html[mode='ios'] .tabs-inner {
   --padding-start: 17px !important;
   --padding-end: 17px !important;
 }
+
+// Display occurrence taxon name as Common and scientific names.
+.taxon-entry {
+  ion-label[slot='end'] {
+    white-space: inherit !important;
+    max-width: 50% !important;
+
+    ion-label {
+      white-space: nowrap !important;
+    }
+  }
+}
