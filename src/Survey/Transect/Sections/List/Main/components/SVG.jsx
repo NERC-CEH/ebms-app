@@ -40,7 +40,7 @@ class SVG extends Component {
     const strokeColor = (_, index) => {
       return index % 2
         ? 'var(--ion-color-primary-shade)'
-        : 'var(--ion-color-secondary-tint)';
+        : 'var(--ion-color-tertiary-tint)';
     };
     group
       .selectAll('path')

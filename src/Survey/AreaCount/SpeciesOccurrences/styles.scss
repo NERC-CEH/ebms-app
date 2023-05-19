@@ -13,6 +13,16 @@
     margin: 0;
   }
 
+  ion-label.stage {
+    display: flex;
+
+    ion-badge {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      --padding-top: 4px;
+    }
+  }
+
   .species-list-header {
     background: #e6e6e6 !important;
     color: #777777;
