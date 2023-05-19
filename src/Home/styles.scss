@@ -35,6 +35,10 @@ ion-tab-bar {
       max-width: 20vw;
       --padding-start: 3;
       --padding-end: 3;
+
+      ion-label.md {
+        margin-bottom: 2px;
+      }
     }
 
     .long-press-fab-button {

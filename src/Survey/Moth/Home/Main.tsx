@@ -303,19 +303,19 @@ const HomeMain: FC<Props> = ({
             label="Survey Details"
           />
         </div>
-
-        {!isDisabled && (
-          <div className="buttons-container">
-            {getSpeciesAddButton()}
-
-            {getNewImageButton()}
-          </div>
-        )}
-
-        {getUndentifiedspeciesList()}
-
-        {getSpeciesList()}
       </IonList>
+
+      {!isDisabled && (
+        <div className="buttons-container">
+          {getSpeciesAddButton()}
+
+          {getNewImageButton()}
+        </div>
+      )}
+
+      {getUndentifiedspeciesList()}
+
+      {getSpeciesList()}
     </Main>
   );
 };
