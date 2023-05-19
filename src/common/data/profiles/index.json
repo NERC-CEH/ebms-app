@@ -10913,7 +10913,7 @@
       "SI": "A",
       "SK": "A",
       "TR": "A",
-      "TRA": "A",
+      "TRA": "P",
       "UA": "A"
     }
   },
@@ -11039,8 +11039,8 @@
       "SE": "P",
       "SI": "P",
       "SK": "P",
-      "TR": "A",
-      "TRA": "A",
+      "TR": "P",
+      "TRA": "P",
       "UA": "P"
     }
   },
@@ -13017,7 +13017,7 @@
       "SI": "A",
       "SK": "A",
       "TR": "A",
-      "TRA": "A",
+      "TRA": "P",
       "UA": "A"
     }
   },
@@ -13081,7 +13081,7 @@
       "SI": "A",
       "SK": "A",
       "TR": "A",
-      "TRA": "A",
+      "TRA": "P",
       "UA": "A"
     }
   },
@@ -31738,7 +31738,7 @@
   {
     "warehouse_id": 466879,
     "external_key": "eBMS657",
-    "taxon": "​​Polyommatus belovi",
+    "taxon": "Polyommatus belovi",
     "abundance": { "AM": "P" }
   },
   {
@@ -31780,8 +31780,8 @@
   {
     "warehouse_id": 466886,
     "external_key": "eBMS666",
-    "taxon": "Cyaniris semiargus ssp. bellis",
-    "abundance": { "AM": "P" }
+    "taxon": "Cyaniris semiargus bellis",
+    "abundance": { "AM": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 466887,
@@ -31870,7 +31870,7 @@
   {
     "warehouse_id": 466901,
     "external_key": "eBMS682",
-    "taxon": "​Muschampia proteides",
+    "taxon": "Muschampia proteides",
     "abundance": { "AM": "P" }
   },
   {
@@ -31883,13 +31883,13 @@
     "warehouse_id": 466903,
     "external_key": "eBMS684",
     "taxon": "Muschampia nomas",
-    "abundance": { "AM": "P" }
+    "abundance": { "AM": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 466904,
     "external_key": "eBMS685",
-    "taxon": "Muschampia nomas ssp. tersa",
-    "abundance": { "AM": "P" }
+    "taxon": "Muschampia nomas tersa",
+    "abundance": { "AM": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 466905,
@@ -31985,7 +31985,7 @@
     "warehouse_id": 466921,
     "external_key": "eBMS702",
     "taxon": "Polyommatus vanensis",
-    "abundance": { "AM": "P" }
+    "abundance": { "AM": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 466922,
@@ -32093,13 +32093,13 @@
     "warehouse_id": 466942,
     "external_key": "eBMS661",
     "taxon": "Chazara bischoffi",
-    "abundance": { "AM": "P" }
+    "abundance": { "AM": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 466944,
     "external_key": "eBMS667",
     "taxon": "Eogenes alcides",
-    "abundance": { "AM": "P" }
+    "abundance": { "AM": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 466945,
@@ -32684,12 +32684,6 @@
     "abundance": { "TRA": "P" }
   },
   {
-    "warehouse_id": 467176,
-    "external_key": "eBMS833",
-    "taxon": "Chazara bischo",
-    "abundance": { "TRA": "P" }
-  },
-  {
     "warehouse_id": 467177,
     "external_key": "eBMS834",
     "taxon": "Chazara egina",
@@ -32909,7 +32903,7 @@
     "warehouse_id": 548759,
     "external_key": "1919181",
     "taxon": "Belenois aurota",
-    "abundance": { "KE": "P" }
+    "abundance": { "KE": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 548763,
@@ -34625,7 +34619,7 @@
     "warehouse_id": 549831,
     "external_key": "5130464",
     "taxon": "Junonia orithya",
-    "abundance": { "JP": "P" }
+    "abundance": { "JP": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 549833,
@@ -34974,5 +34968,125 @@
     "external_key": "10656713",
     "taxon": "Deudorix livia",
     "abundance": { "CY": "I", "GR": "I" }
+  },
+  {
+    "warehouse_id": 615379,
+    "external_key": "1950160",
+    "taxon": "Eogenes lesliei",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 615380,
+    "external_key": "11429522",
+    "taxon": "Polyommatus hopfferi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 615381,
+    "external_key": "1933093",
+    "taxon": "Turanana cytis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 615382,
+    "external_key": "5137790",
+    "taxon": "Pontia glauconome",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616349,
+    "external_key": "eBMS849",
+    "taxon": "Polyommatus athis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616350,
+    "external_key": "eBMS850",
+    "taxon": "Polyommatus transcaspicus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616351,
+    "external_key": "eBMS851",
+    "taxon": "Cyaniris semiargus antiochenus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616352,
+    "external_key": "eBMS852",
+    "taxon": "Kretania sephirus modicus",
+    "abundance": { "TR": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616353,
+    "external_key": "eBMS853",
+    "taxon": "Kretania sephirus nichollae",
+    "abundance": { "TR": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616354,
+    "external_key": "eBMS854",
+    "taxon": "Kretania sephirus zephyrinus",
+    "abundance": { "TR": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616355,
+    "external_key": "5772691",
+    "taxon": "Polyommatus eros eroides",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616356,
+    "external_key": "eBMS855",
+    "taxon": "Polyommatus eros erotulus",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616357,
+    "external_key": "eBMS856",
+    "taxon": "Lycaena thersamon kurdistanica",
+    "abundance": { "TR": "P", "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616358,
+    "external_key": "eBMS859",
+    "taxon": "Polyommatus damocles kanduli",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616359,
+    "external_key": "eBMS860",
+    "taxon": "Polyommatus wagneri maraschi",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616360,
+    "external_key": "eBMS857",
+    "taxon": "Polyommatus schuriani attalaensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616361,
+    "external_key": "eBMS861",
+    "taxon": "Tomares nogelli dobrogensis",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616362,
+    "external_key": "eBMS858",
+    "taxon": "Pseudochazara beroe aurantiaca",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616363,
+    "external_key": "eBMS862",
+    "taxon": "Melitaea interrupta",
+    "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 616364,
+    "external_key": "9089778",
+    "taxon": "Polyommatus menalcas",
+    "abundance": { "TRA": "P" }
   }
 ]

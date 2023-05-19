@@ -24,6 +24,10 @@ const LANGUAGE_ISO_MAPPING = {
   dan: 'da-DK',
   jpn: 'ja-JP',
   fra: 'fr-FR',
+  nor: 'no-NO',
+  ita: 'it-IT',
+  slk: 'sk-SK',
+  tur: 'tr-TR',
 };
 
 const UNKNOWN_SPECIES = {
@@ -134,6 +138,7 @@ function sortAlphabetically(species) {
 
 const make = async () => {
   const butterflies = await fetch(groups.butterflies.id);
+  const dragonflies = await fetch(groups.dragonflies.id);
   const mothsOnly = ({ taxon_group: group }) => group === groups.moths.id;
   const specificCountryOnly = ({ language_iso: lang }) =>
     COUNTRIES_WITH_MOTH_COMMON_NAMES[lang];
@@ -150,7 +155,7 @@ const make = async () => {
     return;
   }
 
-  const species = [...butterflies, ...moths];
+  const species = [...butterflies, ...moths, ...dragonflies];
   const sortedSpecies = sortAlphabetically(species);
 
   const structuredNames = turnNamesArrayIntoLangObject(sortedSpecies);
