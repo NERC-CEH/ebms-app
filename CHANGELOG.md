@@ -1,3 +1,15 @@
+## 1.21.0
+
+Enabled multiple drafts functionality.
+Added Saint Helena country.
+Added specific stage attributes for Dragonfly species.
+Added Dragonfly common names.
+Added Slovak butterfly names.
+Added Turkish butterfly names.
+Update translations.
+Changed font.
+Small bug fixes.
+
 ## 1.20.0
 
 Fixed Slovenian species common names.
