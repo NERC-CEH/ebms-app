@@ -2326,3 +2326,7 @@ msgstr "Emergent"
 # Alert message
 msgid "Count sum must be greater than 0"
 msgstr "Count sum must be greater than 0"
+
+# Report page label
+msgid "Show less"
+msgstr "Show less"

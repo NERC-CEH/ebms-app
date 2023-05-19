@@ -27,6 +27,14 @@ const ExpandableList: FC<any> = ({ children: itemsProp }: any) => {
       {!showMore && !hidingMoreThanTwo && restItems}
 
       {showMore && restItems}
+
+      {hidingMoreThanTwo && showMore && (
+        <IonItem className="expandable-list" onClick={() => setShowMore(false)}>
+          <IonLabel>
+            <T>Show less</T>
+          </IonLabel>
+        </IonItem>
+      )}
     </>
   );
 };
