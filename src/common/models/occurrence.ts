@@ -149,6 +149,15 @@ export default class AppOccurrence extends Occurrence {
     );
   }
 
+  getPrettyName() {
+    const { taxon } = this.attrs;
+    if (!taxon) return '';
+
+    if (taxon?.common_name) return taxon.common_name;
+
+    return taxon.scientific_name;
+  }
+
   getSpeciesGroupIcon = () =>
     (speciesGroupImages as any)[this.attrs.taxon.group];
 
