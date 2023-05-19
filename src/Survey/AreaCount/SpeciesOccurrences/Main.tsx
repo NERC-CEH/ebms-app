@@ -59,7 +59,7 @@ const EditOccurrence: FC<Props> = ({
         <IonItemSliding key={smp.cid}>
           <IonItem detail onClick={navigateToOccurrenceWithSample}>
             <IonLabel className="time">{prettyTime}</IonLabel>
-            <IonLabel>
+            <IonLabel className="stage">
               <IonBadge color="medium">
                 <T>{stage || dragonflyStage}</T>
               </IonBadge>

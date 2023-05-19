@@ -188,8 +188,8 @@ const survey = {
         return new Occurrence({
           attrs: {
             comment: null,
-            stage: !isDragonfly && 'Adult',
-            dragonflyStage: isDragonfly && 'Adult',
+            stage: !isDragonfly ? 'Adult' : undefined,
+            dragonflyStage: isDragonfly ? 'Adult' : undefined,
             taxon,
             count: 1,
             timeOfSighting: new Date().toISOString(),

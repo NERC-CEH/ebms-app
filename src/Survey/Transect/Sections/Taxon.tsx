@@ -1,6 +1,6 @@
 import { FC, useContext } from 'react';
 import Sample from 'models/sample';
-import Occurrence, { Taxon } from 'models/occurrence';
+import Occurrence, { Taxon, DRAGONFLY_GROUP } from 'models/occurrence';
 import { NavContext } from '@ionic/react';
 import { useRouteMatch } from 'react-router';
 import { observer } from 'mobx-react';
@@ -58,6 +58,25 @@ const Controller: FC<Props> = ({
 
       occWithSameSpecies.attrs.count += sectionOccurrence.attrs.count;
 
+      if (
+        sectionOccurrence.attrs.taxon.group !== DRAGONFLY_GROUP &&
+        taxon.group === DRAGONFLY_GROUP
+      ) {
+        // eslint-disable-next-line no-param-reassign
+        sectionOccurrence.attrs.dragonflyStage = 'Adult';
+        // eslint-disable-next-line no-param-reassign
+        sectionOccurrence.attrs.stage = undefined;
+      }
+      if (
+        sectionOccurrence.attrs.taxon.group === DRAGONFLY_GROUP &&
+        taxon.group !== DRAGONFLY_GROUP
+      ) {
+        // eslint-disable-next-line no-param-reassign
+        sectionOccurrence.attrs.stage = 'Adult';
+        // eslint-disable-next-line no-param-reassign
+        sectionOccurrence.attrs.dragonflyStage = undefined;
+      }
+
       const hasComment = sectionOccurrence.attrs.comment;
       if (hasComment) {
         const firstString = occWithSameSpecies.attrs.comment || '';
@@ -99,7 +118,27 @@ const Controller: FC<Props> = ({
     }
 
     if (!occWithSameSpecies && sectionOccurrence && taxa) {
-      Object.assign(sectionOccurrence.attrs.taxon, taxon);
+      if (
+        sectionOccurrence.attrs.taxon.group !== DRAGONFLY_GROUP &&
+        taxon.group === DRAGONFLY_GROUP
+      ) {
+        // eslint-disable-next-line no-param-reassign
+        sectionOccurrence.attrs.dragonflyStage = 'Adult';
+        // eslint-disable-next-line no-param-reassign
+        sectionOccurrence.attrs.stage = undefined;
+      }
+      if (
+        sectionOccurrence.attrs.taxon.group === DRAGONFLY_GROUP &&
+        taxon.group !== DRAGONFLY_GROUP
+      ) {
+        // eslint-disable-next-line no-param-reassign
+        sectionOccurrence.attrs.stage = 'Adult';
+        // eslint-disable-next-line no-param-reassign
+        sectionOccurrence.attrs.dragonflyStage = undefined;
+      }
+
+      // eslint-disable-next-line no-param-reassign
+      sectionOccurrence.attrs.taxon = taxon;
       sectionOccurrence.save();
 
       navigate(

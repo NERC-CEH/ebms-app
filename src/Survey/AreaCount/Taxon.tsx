@@ -1,6 +1,6 @@
 import { FC, useContext, useState } from 'react';
 import Sample from 'models/sample';
-import Occurrence from 'models/occurrence';
+import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
 import { observer } from 'mobx-react';
 import TaxonSearch from 'Components/TaxonSearch';
 import { NavContext, IonButtons, IonButton } from '@ionic/react';
@@ -77,6 +77,23 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
       };
       const assignTaxon = ({ occurrences }: Sample) => {
         const [occ] = occurrences; // always one
+
+        if (
+          occ.attrs.taxon.group === DRAGONFLY_GROUP &&
+          taxon.group !== DRAGONFLY_GROUP
+        ) {
+          occ.attrs.stage = 'Adult';
+          occ.attrs.dragonflyStage = undefined;
+        }
+
+        if (
+          occ.attrs.taxon.group === DRAGONFLY_GROUP &&
+          taxon.group !== DRAGONFLY_GROUP
+        ) {
+          occ.attrs.dragonflyStage = 'Adult';
+          occ.attrs.stage = undefined;
+        }
+
         occ.attrs.taxon = taxon;
       };
       sample.samples.filter(selectedTaxon).forEach(assignTaxon);
@@ -89,6 +106,25 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
     }
 
     if (occurrence) {
+      if (
+        occurrence.attrs.taxon.group !== DRAGONFLY_GROUP &&
+        taxon.group === DRAGONFLY_GROUP
+      ) {
+        // eslint-disable-next-line no-param-reassign
+        occurrence.attrs.dragonflyStage = 'Adult';
+        // eslint-disable-next-line no-param-reassign
+        occurrence.attrs.stage = undefined;
+      }
+      if (
+        occurrence.attrs.taxon.group === DRAGONFLY_GROUP &&
+        taxon.group !== DRAGONFLY_GROUP
+      ) {
+        // eslint-disable-next-line no-param-reassign
+        occurrence.attrs.stage = 'Adult';
+        // eslint-disable-next-line no-param-reassign
+        occurrence.attrs.dragonflyStage = undefined;
+      }
+
       // eslint-disable-next-line
       occurrence.attrs.taxon = taxon;
     } else {

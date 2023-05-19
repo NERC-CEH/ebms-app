@@ -153,8 +153,8 @@ const config = {
         return new Occurrence({
           attrs: {
             count: 1,
-            stage: !isDragonfly && 'Adult',
-            dragonflyStage: isDragonfly && 'Adult',
+            stage: !isDragonfly ? 'Adult' : undefined,
+            dragonflyStage: isDragonfly ? 'Adult' : undefined,
             comment: null,
             taxon: {
               scientific_name: null,

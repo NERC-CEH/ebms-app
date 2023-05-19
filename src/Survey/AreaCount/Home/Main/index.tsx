@@ -365,6 +365,7 @@ const AreaCount: FC<Props> = ({
         mating,
         eggLaying,
         direction,
+        dragonflyStage,
       } = occ.attrs;
 
       let location;
@@ -382,6 +383,7 @@ const AreaCount: FC<Props> = ({
 
       const cloneSubSampleWrap = () => cloneSubSample(smp, ref);
 
+      const speciesStage = stage || dragonflyStage;
       return (
         <IonItemSliding key={smp.cid} ref={ref as any}>
           <IonItemOptions side="start" className="copy-slider">
@@ -394,9 +396,9 @@ const AreaCount: FC<Props> = ({
             <IonLabel className="time">{prettyTime}</IonLabel>
             <IonLabel className="attributes">
               <div className="wraps">
-                {stage && (
+                {speciesStage && (
                   <IonBadge color="medium" className="stage-badge">
-                    <T>{stage}</T>
+                    <T>{speciesStage}</T>
                   </IonBadge>
                 )}
                 <PaintedLadyWing wings={wing} />
