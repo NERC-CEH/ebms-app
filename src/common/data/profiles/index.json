@@ -11738,7 +11738,7 @@
       "RS": "M",
       "RU": "P",
       "SE": "A",
-      "SH": "P",
+      "SH_HL": "P",
       "SI": "P",
       "SK": "I",
       "TR": "P",
@@ -16821,7 +16821,7 @@
       "SE": "A",
       "SI": "A",
       "SK": "A",
-      "TR": "A",
+      "TR": "P",
       "TRA": "A",
       "UA": "A"
     }
@@ -19684,7 +19684,7 @@
       "RS": "M",
       "RU": "M",
       "SE": "M",
-      "SH": "P",
+      "SH_HL": "P",
       "SI": "M",
       "SK": "M",
       "TR": "M",
@@ -20458,7 +20458,7 @@
       "RS": "A",
       "RU": "A",
       "SE": "A",
-      "SH": "P",
+      "SH_HL": "P",
       "SI": "A",
       "SK": "A",
       "TR": "A",
@@ -21983,7 +21983,7 @@
       "RS": "A",
       "RU": "A",
       "SE": "I",
-      "SH": "P",
+      "SH_HL": "P",
       "SI": "A",
       "SK": "A",
       "TR": "A",
@@ -31871,7 +31871,7 @@
     "warehouse_id": 466901,
     "external_key": "eBMS682",
     "taxon": "Muschampia proteides",
-    "abundance": { "AM": "P" }
+    "abundance": { "AM": "P", "TRA": "P" }
   },
   {
     "warehouse_id": 466902,
