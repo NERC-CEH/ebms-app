@@ -1,0 +1,2300 @@
+# 
+# Translators:
+# Lucia, 2023
+# Lucia Makarova, 2023
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"Last-Translator: Lucia Makarova, 2023\n"
+"Language-Team: Slovak (Slovakia) (https://app.transifex.com/ceh/teams/95441/sk_SK/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sk_SK\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Select your country"
+msgstr "Vyberte svoju krajinu"
+
+msgid "United Kingdom"
+msgstr "Veľká Británia"
+
+msgid "Lithuania"
+msgstr "Litva"
+
+msgid "Spain"
+msgstr "Španielsko"
+
+msgid "Andorra"
+msgstr "Andorra"
+
+msgid "Albania"
+msgstr "Albánsko"
+
+msgid "Austria"
+msgstr "Rakúsko"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Bosna a Hercegovina"
+
+msgid "Belgium"
+msgstr "Belgicko"
+
+msgid "Bulgaria"
+msgstr "Bulharsko"
+
+msgid "Belarus"
+msgstr "Bielorusko"
+
+msgid "Switzerland"
+msgstr "Švajčiarsko"
+
+msgid "Cyprus"
+msgstr "Cyprus"
+
+msgid "Czechia"
+msgstr "Česká republika"
+
+msgid "Germany"
+msgstr "Nemecko"
+
+msgid "Denmark"
+msgstr "Dánsko"
+
+msgid "Estonia"
+msgstr "Estónsko"
+
+msgid "Spain (Canary Islands)"
+msgstr "Španielsko (Kanárske ostrovy)"
+
+msgid "Finland"
+msgstr "Fínsko"
+
+msgid "France"
+msgstr "Francúzsko"
+
+msgid "Greece"
+msgstr "Grécko"
+
+msgid "Croatia"
+msgstr "Chorvátsko"
+
+msgid "Hungary"
+msgstr "Maďarsko"
+
+msgid "Ireland"
+msgstr "Írsko"
+
+msgid "Iceland"
+msgstr "Island"
+
+msgid "Italy"
+msgstr "Taliansko"
+
+msgid "Liechtenstein"
+msgstr "Lichtenštajnsko"
+
+msgid "Luxembourg"
+msgstr "Luxembursko"
+
+msgid "Latvia"
+msgstr "Lotyšsko"
+
+msgid "Moldova"
+msgstr "Moldavsko"
+
+msgid "Montenegro"
+msgstr "Čierna Hora"
+
+msgid "North Macedonia"
+msgstr "Severné Macedónsko"
+
+msgid "Malta"
+msgstr "Malta"
+
+msgid "Netherlands"
+msgstr "Holandsko"
+
+msgid "Norway"
+msgstr "Nórsko"
+
+msgid "Poland"
+msgstr "Poľsko"
+
+msgid "Portugal"
+msgstr "Portugalsko"
+
+msgid "Portugal (Azores)"
+msgstr "Portugalsko (Azory)"
+
+msgid "Portugal (Madeira Islands)"
+msgstr "Portugalsko (Madeira)"
+
+msgid "Romania"
+msgstr "Rumunsko"
+
+msgid "Serbia"
+msgstr "Srbsko"
+
+msgid "Russian Federation"
+msgstr "Rusko"
+
+msgid "Slovenia"
+msgstr "Slovinsko"
+
+msgid "Japan"
+msgstr "Japonsko"
+
+msgid "Slovakia"
+msgstr "Slovensko"
+
+msgid "Turkey (Europe)"
+msgstr "Turecko (európska časť)"
+
+msgid "Turkey (Asia)"
+msgstr "Turecko (ázijská časť)"
+
+msgid "Ukraine"
+msgstr "Ukrajina"
+
+msgid "Elsewhere"
+msgstr "Iná krajina"
+
+msgid "Skip"
+msgstr "Preskočiť"
+
+msgid "Next"
+msgstr "Ďalej"
+
+msgid "Get Started"
+msgstr "Začať"
+
+msgid "Please sign in with your eBMS account or register."
+msgstr "Prihláste sa do Vášho eBMS účtu alebo sa zaregistrujte."
+
+msgid "Password"
+msgstr "Heslo"
+
+msgid "Sign in"
+msgstr "Prihlásiť sa"
+
+msgid "Register"
+msgstr "Registrácia"
+
+msgid "Forgot password?"
+msgstr "Zabudli ste heslo?"
+
+msgid "User not found."
+msgstr "Užívateľ nebol nájdený."
+
+msgid "Login"
+msgstr "Prihlásenie"
+
+msgid "Settings"
+msgstr "Nastavenia"
+
+msgid "Info"
+msgstr "Informácie"
+
+msgid "About"
+msgstr "O aplikácii"
+
+msgid "Help"
+msgstr "Nápoveda"
+
+msgid "Privacy Policy"
+msgstr "Ochrana osobných údajov"
+
+msgid "Credits"
+msgstr "Zásluhy"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "First Name"
+msgstr "Meno"
+
+msgid "Surname"
+msgstr "Priezvisko"
+
+msgid "I agree to"
+msgstr "Súhlasím s"
+
+msgid "Terms and Conditions"
+msgstr "Podmienky použitia"
+
+msgid "Reset"
+msgstr "Reštart"
+
+msgid "Records"
+msgstr "Záznamy"
+
+msgid "Upload All"
+msgstr "Nahrať všetko"
+
+msgid "Remove All Saved"
+msgstr "Odstrániť všetky uložené"
+
+msgid "Application"
+msgstr "Aplikácia"
+
+msgid "Training Mode"
+msgstr "Skúšobný režim"
+
+msgid "Experimental Features"
+msgstr "Experimentálne funkcie"
+
+msgid "Welcome"
+msgstr "Vitajte"
+
+msgid "Lets start!"
+msgstr "Začnime!"
+
+msgid "TOP RECORDERS"
+msgstr "TOP PRISPIEVATELIA"
+
+msgid "Top Species from all timed counts"
+msgstr "Top druhy zo všetkých časových záznamov"
+
+msgid "Back"
+msgstr "Späť"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "App"
+msgstr "Aplikácia"
+
+msgid ""
+"We are very grateful for all the people that helped to create this app:"
+msgstr "Sme veľmi vďační všetkým, ktorí pomohli vytvoriť túto aplikáciu: "
+
+msgid "Home"
+msgstr "Domov"
+
+msgid "Guide"
+msgstr "Sprievodca"
+
+msgid "Account"
+msgstr "Účet"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Sorry, looks like you're offline."
+msgstr "Bohužiaľ, vyzerá to tak, že ste offline."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Sorry"
+msgstr "Prepáčte"
+
+msgid "Please wait..."
+msgstr "Počkajte, prosím..."
+
+msgid "name is a required field"
+msgstr "meno je povinné pole"
+
+msgid "password is a required field"
+msgstr "heslo je povinné pole"
+
+msgid "Login error:"
+msgstr "Chyba prihlásenia:"
+
+msgid "Failed to fetch"
+msgstr "Chyba pri načítaní"
+
+msgid "Incorrect password or email."
+msgstr "Nesprávne meno alebo email."
+
+# Part of logout process
+msgid "Logout"
+msgstr "Odhlásenie"
+
+# Part of logout process
+msgid ""
+"Are you sure you want to logout?<br/><br/>Your pending and uploaded "
+"<4>records will not be deleted </4> from this device."
+msgstr ""
+"Naozaj sa chcete odhlásiť? <br/><br/>Vaše čakajúce aj uložené <4>záznamy "
+"nebudú vymazané </4> z tohto zariadenia."
+
+msgid "Cancel"
+msgstr "Zrušiť"
+
+msgid "Welcome aboard!"
+msgstr "Vitajte!"
+
+msgid ""
+"Before submitting any records please check your email and click on the "
+"verification link."
+msgstr ""
+"Pred vložením akýchkoľvek záznamov skontrolujte svoj email a kliknite na "
+"overovací link."
+
+msgid "OK, got it"
+msgstr "OK, rozumiem"
+
+msgid "Please fill in"
+msgstr "Prosím, vyplňte"
+
+msgid "Area Count"
+msgstr "Plošné sčítanie"
+
+msgid "Area"
+msgstr "Plocha"
+
+# Location attribute label
+msgid "Location"
+msgstr "Poloha"
+
+# GPS permissions message
+msgid "Location Required"
+msgstr "Poloha je povinná"
+
+# GPS permissions message
+msgid ""
+"This app needs your location, but does not have permission. Open settings "
+"now?"
+msgstr ""
+"Táto aplikácia potrebuje pre svoje fungovanie Vašu polohu, ale nemá potrebné"
+" oprávnenie. Otvoriť nastavenia? "
+
+# GPS message
+msgid "Cancel to prevent battery drain."
+msgstr "Zrušiť, aby nedošlo k vybitiu batérie. "
+
+# GPS message
+msgid "Using your location."
+msgstr "Používanie Vašej polohy."
+
+msgid "Add"
+msgstr "Vložiť"
+
+msgid "Add species"
+msgstr "Vložiť druh"
+
+msgid "Duration"
+msgstr "Trvanie"
+
+msgid "Species"
+msgstr "Druhy"
+
+msgid "Species name"
+msgstr "Názov druhu"
+
+msgid ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
+msgstr ""
+"Pre rýchlejšie hľadanie druhov môžete použiť rôzne skratky. Napríklad, nájsť"
+
+msgid "you can type in the search bar"
+msgstr "môžete zadať do vyhľadávacieho políčka"
+
+msgid "Edit Occurrence"
+msgstr "Upraviť výskyt"
+
+msgid "Count"
+msgstr "Počítať"
+
+msgid "Comment"
+msgstr "Komentár"
+
+msgid "Draft"
+msgstr "Koncept"
+
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr "Existuje predchádzajúca verzia návrhu. Chcete v nej pokračovať?"
+
+msgid "Discard"
+msgstr "Zrušiť"
+
+msgid "Continue"
+msgstr "Pokračovať"
+
+msgid "Finish"
+msgstr "Dokončiť"
+
+msgid "minutes"
+msgstr "minúty"
+
+msgid "No species added"
+msgstr "Neboli pridané žiadne druhy"
+
+msgid "Please draw your area on the map"
+msgstr "Prosím, nakreslite do mapy Vašu plochu  "
+
+msgid "Draw an area"
+msgstr "Nakreslite plochu"
+
+msgid "Delete"
+msgstr "Vymazať"
+
+msgid "Surveys"
+msgstr "Prieskumy"
+
+msgid "Reports"
+msgstr "Hlásenia"
+
+# Species filter input
+msgid "Species name or filter..."
+msgstr "Názov druhu alebo filter"
+
+# Species filter label
+msgid "family"
+msgstr "čeľaď"
+
+msgid "Sorry, no report data is available at the moment."
+msgstr "Prepáčte, žiadne dáta nie sú momentálne k dispozícii."
+
+msgid "Are you sure you want to delete this survey?"
+msgstr "Naozaj chcete vymazať tento prieskum?"
+
+msgid "No finished surveys"
+msgstr "Žiadne ukončené prieskumy"
+
+msgid "Finished surveys"
+msgstr "Ukončené prieskumy"
+
+msgid "Selected area"
+msgstr "Vybraná plocha"
+
+msgid "Use survey create time"
+msgstr "Použiť čas vytvorenia prieskumu"
+
+msgid "Use survey finish time"
+msgstr "Použiť čas ukončenia prieskumu"
+
+msgid "species"
+msgstr "druhy"
+
+msgid "Done"
+msgstr "Hotovo"
+
+msgid "Time's up!"
+msgstr "Čas vypršal!"
+
+msgid "Survey incomplete"
+msgstr "Prieskum je neukončený"
+
+msgid "The survey is not complete yet."
+msgstr "Prieskum ešte nie je ukončený."
+
+msgid "Please select a smaller area."
+msgstr "Prosím, vyberte si menšiu plochu."
+
+msgid "Please add survey area information."
+msgstr "Prosím pridajte informácie o skúmanej ploche."
+
+msgid "Choose a method to upload a photo"
+msgstr "Vyberte spôsob nahratia fotky"
+
+msgid "Gallery"
+msgstr "Galéria"
+
+msgid "Camera"
+msgstr "Fotoaparát"
+
+msgid "Are you sure you want to remove this photo?"
+msgstr "Ste si istý, že chcete vymazať túto fotografiu?"
+
+msgid "Note: it will remain in the gallery."
+msgstr "Poznámka: táto fotografia ostane v galérii. "
+
+# Photo picker
+msgid "No photo has been added.<br/>Press <3></3> to add."
+msgstr "Žiadna fotografia nebola pridaná. Stlačte <3></3> pre pridanie."
+
+msgid "Registration error:"
+msgstr "Chyba registrácie: "
+
+# Login error message
+msgid "Incorrect password or email"
+msgstr "Nesprávne heslo alebo email"
+
+msgid "Enter your email address to request a password reset."
+msgstr "Pre reset hesla zadajte svoju emailovú adresu. "
+
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr "Úspešne prihlásený ako: {{email}}"
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr "Užívateľský účet nebol aktivovaný alebo je blokovaný. "
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+"Vyzerá to tak, že emailová adresa<1>{{userEmail}}</1> ešte nebola "
+"overená.<3><0>Obnoviť</0><1>Preposlať email</1></3>"
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+"Nový overovací email bol práve úspešne odoslaný. Ak Vám tento email "
+"neprišiel, skontrolujte zložku s nevyžiadanou poštou. "
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr "Najprv sa prosím prihláste."
+
+# User registration error
+msgid "This email is already taken."
+msgstr "Tento email sa už používa."
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr "Nesprávna emailová adresa."
+
+msgid "email is not valid"
+msgstr "neplatný email"
+
+msgid ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
+msgstr ""
+"Motýle sú fascinujúcim hmyzom, ale v mnohých častiach Európy sa ich počet "
+"znižuje. Tak, ako je to znázornené v tomto grafe Ukazovateľa motýľov na "
+"trvalých trávnatých porastoch pre Európsku úniu."
+
+msgid ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
+msgstr ""
+"Údaje zhromaždené v tejto aplikácii môžu výrazne zlepšiť poznatky o stave "
+"motýľov a ich biotopoch."
+
+msgid ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
+msgstr ""
+"Chýba nám informácia o počte motýľov vo viacerých častiach Európy, ako to "
+"dokazuje nízka hustota dostupných záznamov na posúdenie stavu motýľov."
+
+msgid ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects. You can get "
+"started straight away"
+msgstr ""
+"Nikdy nebolo jednoduchšie prispieť vysokokvalitnými údajmi pre výskum na "
+"podporu ochrany tohto fascinujúceho a dôležitého hmyzu. Môžete začať ihneď."
+
+msgid ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
+msgstr ""
+"Aplikácia bola vyvinutá ako súčasť projektu Hodnotenie motýľov v Európe "
+"(ABLE)."
+
+msgid "The ABLE project is a partnership between"
+msgstr "ABLE projekt je partnerstvom medzi"
+
+msgid "and"
+msgstr "a"
+
+msgid ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
+msgstr ""
+"ABLE je financovaný na základe servisnej zmluvy z prostriedkov Európskej "
+"únie, konkrétne Riaditeľstva pre životné prostredie, na počiatočné obdobie "
+"dvoch rokov od 2019-2020."
+
+msgid "ABLE partners:"
+msgstr "ABLE partneri:"
+
+msgid ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
+msgstr ""
+"Táto aplikácia prispieva údajmi do Európskej schémy monitorovania motýľov "
+"(eBMS)."
+
+msgid "In June 2019, the following organisations are partners in eBMS:"
+msgstr "V júni 2019 boli partnermi v eBMS tieto organizácie:"
+
+msgid "Not enough data yet"
+msgstr "Nie je ešte dostatok dát"
+
+msgid "How to start a survey"
+msgstr "Ako začať s prieskumom"
+
+msgid "To start a new survey you can press the plus button"
+msgstr "Na začatie nového prieskumu stlačte tlačidlo plus"
+
+msgid "in the home page footer. This will start a new 15 minute survey."
+msgstr "v pätičke domovskej stránky. Tým sa spustí nový 15-minútový prieskum."
+
+msgid "Selecting species"
+msgstr "Vybrať druhy"
+
+msgid "Please press the Add"
+msgstr "Prosím, stlačte Pridať"
+
+msgid ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
+msgstr ""
+
+msgid "Note"
+msgstr "Poznámka"
+
+msgid ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
+msgstr ""
+"počet druhov môžete navýšiť kliknutím na číslo veľa názvu druhu v zozname."
+
+msgid ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
+msgstr ""
+"Pre odstránenie druhu zo zoznamu prieskumu, potiahnite prstom doľava a "
+"kliknite na tlačidlo vymazať.  "
+
+msgid ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
+msgstr ""
+"Keď chcete pridať ďalšie informácie ohľadom výskytu druhu, môžete otvoriť "
+"záznam o druhu kliknutím naň."
+
+msgid "To finish a record you should also fill in the details of the area."
+msgstr "Na dokončenie záznamu je potrebné vyplniť aj podrobnosti o oblasti."
+
+msgid ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
+msgstr ""
+"Po dokončení nastavte odoslanie stlačením tlačidla Dokončiť v hlavičke."
+
+msgid "Searching for species"
+msgstr "Hľadanie druhov"
+
+msgid ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
+msgstr ""
+"Aplikácia obsahuje zoznam približne 500 druhov motýľov a všetky s nimi "
+"súvisiace taxonomické úrovne. Pre rýchlejšie vyhľadávanie taxónov môžete "
+"použiť rôzne skratky. Napríklad, pre nájdenie"
+
+msgid "Sync. with the website"
+msgstr "Synchronizovať s webstránkou"
+
+msgid "All your saved surveys will be shown on your account page."
+msgstr ""
+"Všetky Vaše uložené prieskumy budú zobrazené na Vašej domovskej stránke."
+
+msgid ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
+msgstr ""
+"Pôvodne je prieskum v režime \"návrhu\", ktorý sa neodošle do databázy skôr,"
+" ako kliknete na tlačidlo \"Dokončiť\" v hlavičke. Aplikácia sa pokúsi "
+"odoslať Váš záznam vtedy, keď bude k dispozícii dobré internetové "
+"pripojenie."
+
+msgid "If the record has reached the database a red"
+msgstr "Keď sa záznam uložil do databázy, zobrazí sa červená"
+
+msgid "(set for submission & saved locally) will become green"
+msgstr "(pripavený na odoslanie a uložený lokálne) sa zmení na zelenú"
+
+msgid "synced to the database"
+msgstr "synchronizované s databázou"
+
+msgid ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
+msgstr ""
+
+msgid "Delete a record"
+msgstr "Vymazať záznam"
+
+msgid ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
+msgstr ""
+"Keď chcete záznam odstrániť, potiahnite ho doľava na Vašej domovskej stránke"
+" a kliknite na tlačidlo vymazať.  "
+
+msgid "User"
+msgstr "Používateľ"
+
+msgid "Sign in/out or register"
+msgstr "Prihlásiť / odhlásiť sa alebo registrovať sa"
+
+msgid ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
+msgstr ""
+"Pre prihlásenie sa otvorte hlavnú stránku v menu, kliknite na tlačidlo "
+"Prihlásiť sa alebo Registrovať sa a postupujte podľa pokynov."
+
+msgid "To logout, visit the main menu page and click the logout button."
+msgstr ""
+"Pre odhlásenie sa, navštívte hlavnú stránku v menu a kliknite na tlačidlo "
+"odhlásiť sa."
+
+msgid ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
+msgstr ""
+"po registrácii nového účtu musíte overiť svoju e-mailovú adresu kliknutím na"
+" verifikačný link, ktorý Vám bol zaslaný na Váš email  "
+
+msgid "Other"
+msgstr "Iné"
+
+msgid "Reset the application"
+msgstr "Reštartovať aplikáciu"
+
+msgid "Go to the application settings page"
+msgstr "Ísť do nastavení"
+
+msgid "and click on the Reset"
+msgstr "a kliknite na Reset"
+
+msgid "button"
+msgstr "tlačidlo"
+
+msgid "No species found with this name"
+msgstr "Neboli nájdené žiadne druhy s týmto názvom"
+
+msgid "Allow Sample Edit"
+msgstr "Povoliť Úpravu Vzorky"
+
+msgid "Upload"
+msgstr "Nahrať"
+
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+"Táto aplikácia podporuje monitorovanie a ochranu motýľov. Keď chcete začať "
+"počítať motýle, kliknite na tlačidlo + nižšie."
+
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""
+"V nasledujúcich mesiacoch čaká aplikáciu viacero vylepšení, budeme pridávať "
+"nové funkcie."
+
+msgid "Are you sure you want to reset the application to its initial state?"
+msgstr "Ste si istý, že chcete resetovať aplikáciu na pôvodné nastavenia?"
+
+msgid "This will wipe all the locally stored app data!"
+msgstr "Týmto sa vymažú všetky dočasne uložené dáta aplikácie!"
+
+msgid "Sweden"
+msgstr "Švédsko"
+
+msgid "Paused"
+msgstr "Pozastavené"
+
+msgid "Pending"
+msgstr "Čakajúce"
+
+msgid "Uploaded"
+msgstr "Nahraté"
+
+msgid "No finished pending surveys"
+msgstr "Žiadne dokončené čakajúce prieskumy"
+
+msgid "No uploaded surveys"
+msgstr "Žiadne nahraté prieskumy"
+
+msgid "Enjoying the app?"
+msgstr "Páči sa Vám aplikácia?"
+
+msgid "Not really"
+msgstr "Nie úplne"
+
+msgid "Yes!"
+msgstr "Áno!"
+
+msgid "Would you mind giving us some feedback?"
+msgstr "Mohli by sme Vás poprosiť o spätnú väzbu?"
+
+msgid "No, thanks"
+msgstr "Nie, ďakujem"
+
+msgid "OK, sure"
+msgstr "Áno, jasné"
+
+msgid "How about a rating on the App Store then?"
+msgstr ""
+
+msgid "How about a rating on the Play Store then?"
+msgstr ""
+
+msgid "Icons made by"
+msgstr ""
+
+msgid "from"
+msgstr ""
+
+msgid "We've sent an email to you"
+msgstr "Poslali sme Vám email"
+
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+
+msgid "App Development"
+msgstr ""
+
+msgid "This app was hand crafted with love by"
+msgstr ""
+
+msgid ""
+"A technical consultancy that excels at building bespoke environmental "
+"science and community focussed solutions."
+msgstr ""
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr ""
+
+msgid "contact us"
+msgstr "kontaktujte nás"
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "Country"
+msgstr "Krajina"
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr ""
+
+# App setting label
+msgid "Show common names in guide"
+msgstr ""
+
+msgid "Share App Analytics"
+msgstr ""
+
+msgid "Share app crash data so we can make the app more reliable."
+msgstr ""
+
+msgid "Save Draft"
+msgstr ""
+
+msgid "Stage"
+msgstr ""
+
+msgid "Not Recorded"
+msgstr ""
+
+msgid "Adults"
+msgstr "Dospelí"
+
+msgid "Larvae"
+msgstr ""
+
+msgid "Eggs"
+msgstr "Vajcia"
+
+msgid "Pupae"
+msgstr ""
+
+msgid "Larval webs"
+msgstr ""
+
+# Butterfly stage
+msgid "Adult"
+msgstr "Dospelý"
+
+# Butterfly stage
+msgid "Egg"
+msgstr "Vajce"
+
+# Butterfly stage
+msgid "Larva"
+msgstr ""
+
+# Butterfly stage
+msgid "Larval web"
+msgstr ""
+
+# Butterfly stage
+msgid "Pupa"
+msgstr ""
+
+msgid "Transect"
+msgstr ""
+
+msgid "Sections"
+msgstr ""
+
+msgid "No transect"
+msgstr ""
+
+msgid "Start Time"
+msgstr ""
+
+msgid "End Time"
+msgstr ""
+
+msgid "Temperature"
+msgstr "Teplota"
+
+msgid "Cloud"
+msgstr "Oblačnosť"
+
+msgid "Wind Direction"
+msgstr "Smer vetra"
+
+msgid "Wind Speed"
+msgstr "Rýchlosť vetra"
+
+msgid "Recorder"
+msgstr ""
+
+msgid "Refresh"
+msgstr "Obnoviť"
+
+msgid "Please select your transect first."
+msgstr ""
+
+msgid "Invalid server response."
+msgstr ""
+
+msgid "Not recorded/no data"
+msgstr ""
+
+msgid "Please specify the temperature C°."
+msgstr "Prosím, špecifikujte teplotu v °C."
+
+msgid "S"
+msgstr "J"
+
+msgid "SW"
+msgstr "JZ"
+
+msgid "W"
+msgstr "Z"
+
+msgid "NW"
+msgstr "SZ"
+
+msgid "N"
+msgstr "S"
+
+msgid "NE"
+msgstr "SV"
+
+msgid "E"
+msgstr "V"
+
+msgid "SE"
+msgstr "JV"
+
+msgid "No direction"
+msgstr "Žiadny smer"
+
+msgid "Please specify the wind direction."
+msgstr "Prosím, špecifikujte smer vetra."
+
+msgid "Smoke rises vertically"
+msgstr "Dym stúpa hore"
+
+msgid "Slight smoke drift"
+msgstr "Jemné šírenie dymu"
+
+msgid "Wind felt on face, leaves rustle"
+msgstr "Vietor je cítiť na tvári, listy ševelia"
+
+msgid "Leaves and twigs in slight motion"
+msgstr "Listy a konáriky sú v jemnom pohybe"
+
+msgid "Dust raised and small branches move"
+msgstr "Dvíha sa prach a malé vetvičky sa hýbu"
+
+msgid "Small trees in leaf begin to sway"
+msgstr "Malé stromy s listami sa začínajú hýbať"
+
+msgid "Large branches move and trees sway"
+msgstr "Veľké vetvy a stromy sa hýbu"
+
+msgid "Please specify the wind speed."
+msgstr "Prosím, špecifikujte rýchlosť vetra."
+
+msgid "Transects"
+msgstr ""
+
+msgid "Transect list was successfully updated."
+msgstr ""
+
+msgid "Section"
+msgstr ""
+
+msgid "Reliability"
+msgstr ""
+
+msgid "Please specify the reliability of the section count."
+msgstr ""
+
+msgid "Suitable conditions"
+msgstr ""
+
+msgid "Unsuitable conditions"
+msgstr ""
+
+msgid "Unable to survey"
+msgstr ""
+
+msgid "15min Count"
+msgstr ""
+
+msgid "15min Single Species Count"
+msgstr ""
+
+msgid "eBMS Transect"
+msgstr ""
+
+msgid "Please add any extra info about this record."
+msgstr ""
+
+msgid "Enter more information here..."
+msgstr ""
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr ""
+
+msgid "HH:mm"
+msgstr ""
+
+msgid "Please specify the % of cloud cover."
+msgstr ""
+
+msgid "You don't have any transects. Please try to refresh the list."
+msgstr ""
+
+msgid "Wind speed info is missing"
+msgstr "Chýbajú informácie o rýchlosti vetra"
+
+msgid "Temperature info is missing"
+msgstr "Chýbajú informácie o teplote"
+
+msgid "Recorder info is missing"
+msgstr ""
+
+msgid "Please select your transect."
+msgstr ""
+
+msgid ""
+"This guide is still in development. It covers {{countrySpeciesCount}} "
+"butterfly species out of the {{totalSpeciesCountryCount}} species in your "
+"selected country."
+msgstr ""
+
+msgid "Status"
+msgstr "Stav"
+
+msgid "Absent"
+msgstr ""
+
+msgid "Present"
+msgstr ""
+
+msgid "Possibly present"
+msgstr ""
+
+msgid "Regular migrant"
+msgstr ""
+
+msgid "Irregular vagrant"
+msgstr ""
+
+msgid "Regionally extinct"
+msgstr ""
+
+msgid "Description"
+msgstr "Popis"
+
+msgid "Counts"
+msgstr ""
+
+msgid "Species descriptions"
+msgstr ""
+
+msgid ""
+"Species descriptions included as part of the guide are based on those "
+"produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
+" Settele for making these available."
+msgstr ""
+
+msgid "Photo credits"
+msgstr ""
+
+msgid "How to use the app"
+msgstr "Ako používať aplikáciu"
+
+msgid ""
+"You can use this app to monitor butterflies anywhere in Europe. The results "
+"will be entered into the European Butterfly Monitoring database and used to "
+"develop trends of butterflies across Europe. To use the app you will first "
+"have to register an account."
+msgstr ""
+
+msgid ""
+"The preferred method is to conduct a 15-minute Count. This can be done at "
+"any place and at any time when butterflies are active (i.e. when the weather"
+" is warm and preferably sunny). You can also use the app to record your "
+"established butterfly transects. Later in 2020, the app will also include "
+"the ability to submit casual records. The notes below tell you how to use "
+"the currently available methods."
+msgstr ""
+
+msgid "How to do a 15-minute Count"
+msgstr ""
+
+msgid ""
+"This is the default method on the app. Simply count butterflies for a 15 "
+"minute period, either in a defined area such as a field, or while walking "
+"along, or standing on a fixed point counting butterflies that fly past. "
+"There is no need to draw the route as the app will know your route, provided"
+" you have the GPS tracking facility switched on in your Settings. Otherwise "
+"you will have to draw the area searched on a map, using the app. To start, "
+"touch the + button at the bottom of the screen. The app counts down the 15 "
+"minutes once you have started, but you can pause at any time (for example to"
+" identify a butterfly) by pressing the pause button. At the end of the "
+"survey you can review your records and make sure the totals are correct "
+"before submitting."
+msgstr ""
+
+msgid ""
+"Add species you see by pressing the + ADD button and start typing a species "
+"name. The selection of species will then appear as a drop down menu. You can"
+" use either scientific or English names. Select the species you see and once"
+" in your list of butterflies, touch the left hand number to increase the "
+"count of how many you have seen. You can review this number and amend at the"
+" end as well. You can also add photos if you want and add comments."
+msgstr ""
+
+msgid ""
+"Once you have finished your 15-minute Count and checked that the species and"
+" numbers seen are correct, press the UPLOAD button to submit. This is "
+"important to make sure your data is stored securely in the eBMS database. A "
+"record of the count will be held on your device for future reference as well"
+" as on your online account."
+msgstr ""
+
+msgid "How to record along an existing transect"
+msgstr ""
+
+msgid ""
+"You can also use the app to submit records while walking an existing "
+"butterfly monitoring transect. These have already been established by "
+"country Butterfly Monitoring Schemes and are best completed by experienced "
+"recorders. Recording existing transects within the app requires that your "
+"account is already linked to a transect setup within the eBMS system. If no "
+"transect sites are listed once you are logged into the app, please contact "
+"your national co-ordinator (please email {{helpEmail}} for advice)."
+msgstr ""
+
+msgid ""
+"To start with the transect count, hold down the + button (a long-press) at "
+"the bottom of the screen and select eBMS Transect. The Transect page will "
+"appear with all the options to be completed. First, you have to select your "
+"transects (you will need to be logged in for this, and for transect routes "
+"to be linked to your user account). Once you have selected your transect "
+"site, you can fill out the necessary weather details (e.g. temperature, wind"
+" speed etc) and other required information (e.g. start time) on the Transect"
+" page. You then add a list of species seen and the number counted for each "
+"transect section, in the same way as for a 15-minute count. Once you have "
+"finished your Transect and checked that the species and numbers seen are "
+"correct, press the FINISH button to submit."
+msgstr ""
+
+msgid "Survey section"
+msgstr ""
+
+msgid ""
+"In this tab, on the right part of the + Button, you can see the PENDING "
+"counts, your records that have not been submitted and the UPLOADED counts, "
+"the ones submitted to the eBMS database. The Pending counts can be submitted"
+" to the system by clicking on it and pressing the Upload option. You could "
+"see the species list that you recorded for Uploaded counts. All your records"
+" can also be viewed and edited on the {{eBMSWebsiteLink}}"
+msgstr ""
+
+msgid "eBMS website"
+msgstr ""
+
+msgid "App Settings"
+msgstr "Nastavenia aplikácie"
+
+# Settings label
+msgid "Use only day-flying moths"
+msgstr ""
+
+msgid ""
+"Go to the application setting page to change the language and the country. "
+"The selected country is important in order to see different species in the "
+"Picture Guide, you will see only the species occurring in that country."
+msgstr ""
+
+msgid ""
+"You can also switch on the Training Mode, when you are still learning to "
+"identify butterflies."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Delete last point"
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Save"
+msgstr "Uložiť"
+
+# This is part of mapping functionality
+msgid "Clear All"
+msgstr "Vymazať všetko"
+
+# This is part of mapping functionality
+msgid "Click to start drawing shape."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to continue drawing shape."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click first point to close this shape."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to start drawing line."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click to continue drawing line."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click last point to finish line."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Drag handles or markers to edit features."
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Click cancel to undo changes."
+msgstr ""
+
+msgid "Map"
+msgstr "Mapa"
+
+msgid "Today"
+msgstr "Dnes"
+
+msgid "Yesterday"
+msgstr "Včera"
+
+# This is part of a saved record page
+msgid "This record has been submitted and cannot be edited within this App."
+msgstr ""
+
+# Refers to surveys list when long-pressing plus button
+msgid "Click on other recording options from list below"
+msgstr ""
+
+# A note in app settings page
+msgid ""
+"Batch upload all finished records. This does not include records in 'draft' "
+"stage."
+msgstr ""
+
+# Part of batch upload option in app settings page
+msgid "Are you sure you want to upload all finished records?"
+msgstr "Ste si istý, že chcete nahrať všetky dokončené záznamy?"
+
+# Part of batch upload option in app settings page
+msgid "Please log in first to upload the records."
+msgstr "Prosím, najprv sa prihláste, aby ste mohli nahrávať záznamy."
+
+# Part of batch upload option in app settings page
+msgid "Uploading {{count}} record"
+msgid_plural "Uploading {{count}} records"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+# Part of a page error
+msgid "Oops! Something went wrong."
+msgstr "Ups! Niečo sa pokazilo."
+
+# Part of a page error
+msgid "This is the error event id: {{eventId}}"
+msgstr "Toto je identifikátor chybovej udalosti: {{eventId}}."
+
+# Additional information button in Area-count survey
+msgid "Additional Details"
+msgstr "Doplňujúce Detaily"
+
+# Section label in Area-count survey
+msgid "Weather Conditions"
+msgstr "Poveternostné Podmienky"
+
+# Credits page heading
+msgid "Weather conditions"
+msgstr "Poveternostné podmienky"
+
+# Alert message
+msgid "Are you sure you want to delete {{taxon}} ?"
+msgstr "Ste si istý, že chcete vymazať \"{{taxon}}\"?"
+
+# Credits page text
+msgid ""
+"The current weather values are prepopulated using the OpenWeatherMap API "
+"weather service."
+msgstr ""
+"Aktuálne hodnoty počasia sú predvyplnené s použitím služby OpenWeatherMap "
+"API."
+
+# Species list copy functionality
+msgid "Copy species"
+msgstr "Kopírovať druhy"
+
+# Species list copy functionality
+msgid "Are you sure want to copy previous survey species list?"
+msgstr ""
+"Ste si istý, že chcete skopírovať zoznam druhov z predchádzajúceho "
+"prieskumu?"
+
+# Species list copy functionality
+msgid "Copy"
+msgstr "Kopírovať"
+
+# Species list copy functionality
+msgid "Sorry, no species were found to copy."
+msgstr "Prepáčte, nenašli sa žiadne druhy na kopírovanie."
+
+# Species list copy functionality
+msgid "You have successfully copied {{speciesCount}} species."
+msgstr "Úspešne ste skopírovali {{speciesCount}} druhy."
+
+# Species list copy functionality
+msgid "Sorry, no previous survey to copy species from."
+msgstr ""
+"Prepáčte, nenašli sa žiadne predchádzajúce prieskumy, z ktorých by sa dali "
+"skopírovať druhy. "
+
+# Country name
+msgid "Armenia"
+msgstr "Arménsko"
+
+# Survey page additional information note
+msgid "To delete any surveys swipe it to the left."
+msgstr "Pre vymazanie prieskumu ho potiahnite doľava."
+
+# 15min survey additional information note after survey is finished
+msgid ""
+"Please check if the recording area is correct before sending the record."
+msgstr ""
+"Pred odoslaním záznamu prosím skontrolujte, či je oblasť nahrávania správna."
+
+# Survey page additional information note
+msgid "Please do not forget to upload any pending surveys!"
+msgstr "Nezabudnite prosím nahrať všetky čakajúce prieskumy!"
+
+# Survey page additional information note
+msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
+msgstr ""
+
+# Pop-up tip title when the user has installed the app and finished the
+# onboarding screens
+msgid "Tip: Finding Help"
+msgstr "Tip: Hľadanie Pomoci"
+
+# Pop-up content  when the user has installed the app and finished the
+# onboarding screens
+msgid ""
+"Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
+msgstr ""
+
+# Link inside Guide page
+msgid "More Information"
+msgstr "Viac informácií"
+
+# Pop-up alert tip title
+msgid "Tip: Adding Species"
+msgstr "Tip: Pridanie Druhu"
+
+# Pop-up alert tip content
+msgid ""
+"You can bulk copy your previous species lists by long-pressing the Add "
+"Species button."
+msgstr ""
+"Môžete hromadne kopírovať svoje predchádzajúce zoznamy druhov dlhým "
+"stlačením tlačidla Pridať Druh."
+
+# Button
+msgid "Hide"
+msgstr "Skryť"
+
+# App settings labels for primary survey change
+msgid "Primary Survey"
+msgstr "Primárny Prieskum"
+
+# App settings labels for primary survey change
+msgid "All Surveys"
+msgstr "Všetky prieskumy"
+
+# Part of a photo picker element
+msgid "Representative photo of where the 15 minute count was made"
+msgstr ""
+
+# Part of a photo picker element
+msgid "No photo has been added."
+msgstr "Nebola pridaná žiadna fotka."
+
+# Part of a photo picker element
+msgid "Press <1></1> to add."
+msgstr ""
+
+# part of Precise 15min count survey
+msgid "Precise 15min Count"
+msgstr ""
+
+# part of Precise 15min count survey
+msgid "Occurrences"
+msgstr "Výskyty"
+
+# part of Precise 15min count survey
+msgid "Time"
+msgstr "Čas"
+
+# part of Precise 15min count survey
+msgid "Are you sure you want to delete this occurrence?"
+msgstr "Ste si istý, že chcete vymazať tento výskyt?"
+
+# alert confirmation button
+msgid "Got it"
+msgstr "Rozumiem"
+
+# surveys page background message
+msgid "<0>No uploaded surveys</0>"
+msgstr ""
+
+# user register error message
+msgid "Account already exists."
+msgstr "Účet už existuje."
+
+# A survey label
+msgid "Details"
+msgstr "Detaily"
+
+# A survey label
+msgid "Species Photo"
+msgstr "Fotografia druhu"
+
+# Info message for species stage picker
+msgid "Pick the life stage"
+msgstr "Vyberte životnú fázu"
+
+# A survey label
+msgid "Weather"
+msgstr "Počasie"
+
+# A survey label
+msgid "Photo"
+msgstr "Fotka"
+
+# Part of species group selection
+msgid "Species groups"
+msgstr ""
+
+# Part of species group selection
+msgid "Please select the species groups that you always record."
+msgstr ""
+
+# Part of species group selection
+msgid "Butterflies"
+msgstr "Motýle"
+
+# Part of species group selection
+msgid "Moths"
+msgstr "Nočné motýle"
+
+# Part of species group selection
+msgid "Bumblebees"
+msgstr "Čmeliaky"
+
+# Part of species group selection
+msgid "Dragonflies"
+msgstr ""
+
+# Alert label
+msgid "Warning"
+msgstr "Varovanie"
+
+# Alert message when turning GPS off
+msgid "Are you sure you want to turn off the GPS tracking?"
+msgstr ""
+
+# Alert button option
+msgid "Turn off"
+msgstr "Vypnúť"
+
+# Alert button label
+msgid "Merge"
+msgstr ""
+
+# Alert header
+msgid "Species already exists"
+msgstr ""
+
+# Alert message
+msgid "Are you sure you want to merge this list to the existing species list?"
+msgstr ""
+
+# Single species count survey validation message
+msgid "Please add your target species"
+msgstr ""
+
+# Moth survey label
+msgid "Date"
+msgstr "Dátum"
+
+# Moth survey label
+msgid "Method"
+msgstr ""
+
+# Context term
+msgid "Please select the medthod type"
+msgstr ""
+
+# Moth survey method type
+msgid "MV light"
+msgstr ""
+
+# Moth survey method type
+msgid "Actinic light"
+msgstr ""
+
+# Moth survey method type
+msgid "LED light"
+msgstr "LED svetlo"
+
+# Moth survey method type
+msgid "Light trapping"
+msgstr ""
+
+# Moth survey method type
+msgid "Daytime observation"
+msgstr ""
+
+# Moth survey method type
+msgid "Dusking"
+msgstr ""
+
+# Moth survey method type
+msgid "Attracted to a lighted window"
+msgstr ""
+
+# Moth survey method type
+msgid "Sugaring"
+msgstr ""
+
+# Moth survey method type
+msgid "Wine roping"
+msgstr ""
+
+# Moth survey method type
+msgid "Beating tray"
+msgstr ""
+
+# Moth survey method type
+msgid "Pheromone trap"
+msgstr ""
+
+# Moth survey method type
+msgid "Other method (add comment)"
+msgstr ""
+
+# Moth survey method type
+msgid "Not recorded"
+msgstr ""
+
+# Moth survey details header title
+msgid "Survey Details"
+msgstr "Detaily priesumu"
+
+# Moth survey header title
+msgid "Moth-trap survey"
+msgstr ""
+
+# Moth survey header title
+msgid "Moth survey"
+msgstr ""
+
+# Moth survey divider label
+msgid "Species list"
+msgstr "Zoznam druhov"
+
+# Moth survey moth details label
+msgid "Identifier"
+msgstr ""
+
+# Moth survey divider label
+msgid "Moths list"
+msgstr "Zoznam nočných motýľov"
+
+# Moth survey photo picker divider label
+msgid "Moth Photo"
+msgstr ""
+
+# Identifier attribute info message
+msgid "Enter the recorder's name, if different."
+msgstr ""
+
+# Identifier attribute placeholder
+msgid "Recorder name"
+msgstr ""
+
+# Latitude
+msgid "Lat"
+msgstr ""
+
+# Longitude
+msgid "Long"
+msgstr ""
+
+# Moth survey attribute label
+msgid "Count inside"
+msgstr ""
+
+# Moth survey attribute label
+msgid "Count outside"
+msgstr ""
+
+# Moth survey photo picker label
+msgid "Moth Photos"
+msgstr ""
+
+# Moth survey details label
+msgid "Moth traps"
+msgstr ""
+
+# Moth survey details label
+msgid "Moth trap"
+msgstr ""
+
+# Moth survey Location Info message
+msgid ""
+"You have not created any moth traps yet. To create one please go to the "
+"<2>website.</2>"
+msgstr ""
+
+# Moth survey Location Info message
+msgid "To see the map please connect to the internet."
+msgstr ""
+
+# Moth survey validation message
+msgid "Please add the moth trap"
+msgstr ""
+
+# Moth survey Location Info message
+msgid ""
+"You have only one moth trap. To create more please go to the <2>website.</2>"
+msgstr ""
+
+# Moth survey AI loader
+msgid "Identifying..."
+msgstr ""
+
+# Unknown species common_name
+msgid "Unknown"
+msgstr ""
+
+# Report table button
+msgid "Show more"
+msgstr "Ukázať viac"
+
+# Moth survey warning message
+msgid "Please add a photo"
+msgstr "Prosím pridajte fotku"
+
+# Moth survey unknown species divider
+msgid "Unknown species"
+msgstr "Neznámy druh"
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we could not identify this species."
+msgstr ""
+
+# App settings title
+msgid "Surveying"
+msgstr ""
+
+# Moth survey label
+msgid "Moth survey (SPRING)"
+msgstr ""
+
+# Survey name
+msgid "Moth Survey"
+msgstr ""
+
+#  Moth settings page header title
+msgid "Moth Survey Settings"
+msgstr ""
+
+# Moth settings page label
+msgid "Use image identification"
+msgstr ""
+
+# Moth settings page info message
+msgid ""
+"We will help you to identify species using our species image classifier."
+msgstr ""
+
+# Moth survey button label
+msgid "Identify"
+msgstr ""
+
+# Moth survey button label
+msgid "Identify All"
+msgstr ""
+
+# Moth survey image classifier disabled info header
+msgid "Image identification"
+msgstr ""
+
+# Moth survey image classifier disabled info message
+msgid ""
+"Image classifier is currently <1>disabled</1>. Please go to app "
+"<4>Settings</4> to turn it on."
+msgstr ""
+
+# Whats new message title
+msgid "What's New"
+msgstr "Čo je nové"
+
+# Version 1.21 whats new message
+msgid "Enabled multiple drafts functionality"
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added Saint Helena country"
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added specific stage attributes for Dragonfly species"
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added dragonflies-specific stages"
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added Slovak and Turkish butterfly common names"
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added dragonfly common names"
+msgstr ""
+
+# User account action
+msgid "Resend"
+msgstr "Odoslať znova"
+
+# User account action
+msgid "Looks like your email hasn't been verified yet."
+msgstr ""
+
+# User account action
+msgid "Should we resend the verification email?"
+msgstr ""
+
+# GPS permissions warning
+msgid ""
+"Your Location Services (GPS) seems to be disabled. You can enable this in "
+"your device settings."
+msgstr ""
+
+# GPS permissions warning
+msgid "Location Services (GPS) are disabled"
+msgstr ""
+
+# Moth trap survey
+msgid "Add New"
+msgstr ""
+
+# Moth trap survey
+msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
+msgstr ""
+
+# Moth trap survey
+msgid "Moth Trap"
+msgstr ""
+
+# Moth trap survey
+msgid "Type"
+msgstr "Typ"
+
+# Moth trap survey
+msgid "Other type"
+msgstr ""
+
+# Moth trap survey
+msgid "Add lamp"
+msgstr ""
+
+# Moth trap survey
+msgid "What type of trap was it?"
+msgstr ""
+
+# Moth trap survey
+msgid "No lamps added"
+msgstr ""
+
+# Moth trap survey
+msgid "What is the lamp type?"
+msgstr ""
+
+# Moth trap survey
+msgid "What is the moth trap type?"
+msgstr ""
+
+# Moth trap survey
+msgid "LED funnel trap"
+msgstr ""
+
+# Moth trap survey
+msgid "Other funnel trap"
+msgstr ""
+
+# Moth trap survey
+msgid "Trap with 2 sheets"
+msgstr ""
+
+# Moth trap survey
+msgid "Other trap"
+msgstr ""
+
+# Moth trap survey
+msgid "Lamp"
+msgstr ""
+
+# Moth trap survey
+msgid "Lamp Details"
+msgstr ""
+
+# Moth trap survey
+msgid "Quantity"
+msgstr "Množstvo"
+
+# Moth trap survey
+msgid "No moth trap name"
+msgstr ""
+
+# Moth trap survey
+msgid "Moth trap name"
+msgstr ""
+
+# Moth trap survey
+msgid "Are you sure you want to delete this moth trap?"
+msgstr ""
+
+# Moth trap survey
+msgid "Additional description of lamp."
+msgstr ""
+
+# Moth trap survey
+msgid "Please add the moth trap location and name."
+msgstr ""
+
+# Survey validation
+msgid "Incomplete"
+msgstr ""
+
+# Moth trap survey
+msgid "Select"
+msgstr "Vybrať"
+
+# Additional details attribute, 15min count survey
+msgid "Recorders"
+msgstr ""
+
+# Additional details attribute, 15min count survey
+msgid ""
+"Enter the number of recorders of anyone who helped with this record - "
+"including your own."
+msgstr ""
+
+msgid "Network Error"
+msgstr "Chyba siete"
+
+# Report label
+msgid "Please login to see your own data report."
+msgstr ""
+
+# Report label
+msgid "Your top species this month"
+msgstr ""
+
+# Report label
+msgid "Your top species"
+msgstr ""
+
+# Transect survey section photo picker divider label
+msgid "Section Photos"
+msgstr ""
+
+# Moth survey species identifying
+msgid "User is not logged in."
+msgstr "Používateľ nie je prihlásený."
+
+# Gallery message
+msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
+msgstr ""
+
+# Gallery message
+msgid ""
+"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species"
+msgstr ""
+
+# Divider label moth trap setup
+msgid "Lamps"
+msgstr "Lampy"
+
+# Moth trap setup delete lamp entry alert message
+msgid "Are you sure you want to delete this lamp entry from the moth trap?"
+msgstr ""
+
+# Moth trap setup submitting the record alert message
+msgid "Trap type is a required field."
+msgstr ""
+
+# Successful registration pop-up
+msgid "Welcome aboard"
+msgstr "Vitajte"
+
+# Successful registration pop-up
+msgid ""
+"Before starting any surveys please check your email and click on the "
+"verification link."
+msgstr ""
+
+# Species guide search
+msgid "Sorry, no species were found."
+msgstr ""
+
+msgid "Kenya"
+msgstr ""
+
+# GPS permission button label
+msgid "Deny"
+msgstr "Odmietnuť"
+
+# GPS permission button label
+msgid "Accept"
+msgstr "Prijať"
+
+# GPS permission alert title
+msgid "Location permission"
+msgstr ""
+
+# GPS permission alert message
+msgid ""
+"To automatically set species locations and track your route, even if the "
+"device is locked. Allow the app to use your location."
+msgstr ""
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr ""
+
+# Delete account
+msgid "Delete account"
+msgstr "Zmazať účet"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "Môžete vymazať svoj užívateľský účet zo systému."
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "Zmazanie účtu"
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+
+# Part of Species Group selection
+msgid ""
+"This option was moved to the species search page inside the surveys. When a "
+"survey starts, you can select which species group you are recording."
+msgstr ""
+
+# Part of Species Group selection
+msgid "Groups"
+msgstr "Skupiny"
+
+# Part of Species Group selection
+msgid "Close"
+msgstr "Zavrieť"
+
+# Part of Species Group selection
+msgid "Confirm"
+msgstr "Potvrdiť"
+
+# Part of Species Group selection
+msgid "Which species groups have you counted?"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Select Target Species"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Wing"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Behaviour"
+msgstr "Správanie"
+
+# Part of Painted lady survey
+msgid "Direction"
+msgstr "Smer"
+
+# Part of Painted lady survey
+msgid "Altitude"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Compass"
+msgstr ""
+
+# Alert header
+msgid "Delete Survey"
+msgstr "Vymazať prieskum"
+
+# Alert message
+msgid ""
+"Warning - This will discard the survey information you have entered so far."
+msgstr ""
+
+# Painted lady wing options
+msgid "Fresh"
+msgstr "Čerstvý"
+
+# Painted lady wing options
+msgid "Worn"
+msgstr ""
+
+# Painted lady wing options
+msgid "Normal"
+msgstr "Normálny"
+
+# Painted lady survey flower entry
+msgid "Please specify the nectar source."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the egg laying option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the mating option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Nectar source"
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the nectar option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the direction option."
+msgstr ""
+
+# Painted lady survey missing entry
+msgid "Please add the altitude option."
+msgstr ""
+
+# Part of painted lady
+msgid "Egg-laying hostplants"
+msgstr ""
+
+# Part of painted lady
+msgid "Migrating"
+msgstr ""
+
+# Part of painted lady
+msgid "Nectaring"
+msgstr ""
+
+# Part of painted lady
+msgid "Mating"
+msgstr ""
+
+# Painted lady compass
+msgid "Unsupported device"
+msgstr ""
+
+# Painted lady compass
+msgid ""
+"Unfortunately, it looks like your device doesn't have the necessary sensor "
+"for the compass to function correctly. The compass relies on this sensor to "
+"detect the earth's magnetic field and determine your device's orientation "
+"relative to magnetic north. Thus, you will not be able to use compass on "
+"this device."
+msgstr ""
+
+# Painted lady mating options
+msgid "Territorial defence: other"
+msgstr ""
+
+# Painted lady mating options
+msgid "Territorial defence: hill-topping"
+msgstr ""
+
+# Painted lady direction options
+msgid "What was the butterfly flying altitude? (meters)"
+msgstr ""
+
+# Painted lady egg laying hostplant option
+msgid "Other hostplant"
+msgstr ""
+
+# Painted lady direction option
+msgid "Desert nettle"
+msgstr ""
+
+# Painted lady direction option
+msgid "Mallow"
+msgstr ""
+
+# Painted lady direction option
+msgid "Thistles"
+msgstr ""
+
+# Painted lady direction option
+msgid "Hostplants"
+msgstr ""
+
+# Painted lady direction option
+msgid "Please select the hostplants."
+msgstr ""
+
+# Painted lady survey info background message
+msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
+msgstr ""
+
+# Alert title
+msgid "Tip: Copy attributes"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Wing condition"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Nectar"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Enter the nectar source here"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Other species"
+msgstr "Iné druhy"
+
+# Part of Painted lady survey
+msgid "What kind of thistle was it?"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Thistle species"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Copied!"
+msgstr "Skopírované!"
+
+# Part of Painted lady survey
+msgid ""
+"To copy a list entry swipe it to the right and press<1><0></0></1>icon."
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Height above ground (meters)"
+msgstr ""
+
+# Part of Painted lady survey
+msgid "Height"
+msgstr "Výška"
+
+# 15min Single species survey detail page button label
+msgid "Start Count"
+msgstr "Začať počítanie"
+
+# Painted Lady guide title
+msgid "Tracking the Painted Lady migration with Butterfly Count"
+msgstr ""
+
+# Menu page label
+msgid "Instructions"
+msgstr ""
+
+# Country name
+msgid "Saint Helena"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Ovipositing"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Copulating or tandem pairs"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Exuviae"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Emergent"
+msgstr ""
+
+# Alert message
+msgid "Count sum must be greater than 0"
+msgstr ""
+
+# Report page label
+msgid "Show less"
+msgstr ""
