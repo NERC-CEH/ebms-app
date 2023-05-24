@@ -29,7 +29,9 @@ const languages = {
 
 const isDemo = !isPlatform('hybrid');
 if (isDemo) {
-  Object.assign(languages, {});
+  Object.assign(languages, {
+    'sk-SK': 'Slovensky',
+  });
 }
 
 export default languages;
