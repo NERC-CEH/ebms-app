@@ -4,7 +4,7 @@ import { FC, useContext } from 'react';
 import Sample, { useValidateCheck } from 'models/sample';
 import { Capacitor } from '@capacitor/core';
 import Occurrence from 'models/occurrence';
-import appModel, { SurveyDraftKeys } from 'models/app';
+import appModel from 'models/app';
 import CONFIG from 'common/config';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
