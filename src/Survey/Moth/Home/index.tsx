@@ -91,9 +91,6 @@ const HomeController: FC<Props> = ({ sample }) => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    const surveyName = sample.getSurvey().name;
-    const draftKey = `draftId:${surveyName}` as keyof SurveyDraftKeys;
-    appModel.attrs[draftKey] = '';
     await appModel.save();
 
     const saveAndReturn = () => {

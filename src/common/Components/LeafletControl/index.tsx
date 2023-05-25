@@ -15,7 +15,7 @@ const MapCustomControl = (props: MapCustomControlProps): JSX.Element | null => {
   if (isDisabled) return null;
 
   return (
-    <div className={`${POSITION_CLASSES[position]} gps-button`}>
+    <div className={`${POSITION_CLASSES[position]} ${props.className}`}>
       <div className="leaflet-control leaflet-bar" {...containerProps}>
         {children}
       </div>
@@ -30,6 +30,7 @@ export type MapCustomControlProps = {
     HTMLDivElement
   >;
   children: ReactNode;
+  className: string;
   isDisabled?: boolean;
 };
 

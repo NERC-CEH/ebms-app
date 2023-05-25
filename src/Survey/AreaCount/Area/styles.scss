@@ -65,6 +65,17 @@ ion-content.GPStracking .leaflet-top.leaflet-right {
   --min-height: 33px;
   ion-title {
     font-size: 0.8em;
+
+    .text-with-icon-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ion-icon {
+        font-size: 16px;
+        margin-right: 5px;
+      }
+    }
   }
 }
 
@@ -157,4 +168,25 @@ html[mode='ios'] {
   border-radius: 3rem 3rem 0;
   transform: rotate(45deg);
   border: 1px solid #ffffff;
+}
+
+#bottom-sheet-tracks {
+  --height: 95vh;
+
+  .info-background-message {
+    max-width: 300px;
+
+    span {
+      padding: 20px 10px;
+    }
+  }
+
+  &::part(handle) {
+    margin-top: 10px;
+  }
+
+  ion-toolbar {
+    --background: var(--ion-page-background);
+    --min-height: 35px;
+  }
 }

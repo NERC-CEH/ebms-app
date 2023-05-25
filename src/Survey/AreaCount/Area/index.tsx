@@ -1,8 +1,10 @@
 import { FC } from 'react';
 import Sample from 'models/sample';
 import { observer } from 'mobx-react';
+import { IonIcon } from '@ionic/react';
+import { resizeOutline } from 'ionicons/icons';
 import { Page } from '@flumens';
-import { useTranslation } from 'react-i18next';
+import { Trans as T, useTranslation } from 'react-i18next';
 import Header from './Header';
 import Main from './Main';
 import './styles.scss';
@@ -28,7 +30,14 @@ const AreaController: FC<Props> = ({ sample }) => {
 
   let areaPretty;
   if (area) {
-    areaPretty = `${t('Selected area')}: ${area.toLocaleString()} m²`;
+    areaPretty = (
+      <>
+        <div className="text-with-icon-wrapper">
+          <IonIcon icon={resizeOutline} />
+          <T>Selected area</T>: {area.toLocaleString()} m²
+        </div>
+      </>
+    );
   } else {
     areaPretty = t('Please draw your area on the map');
   }

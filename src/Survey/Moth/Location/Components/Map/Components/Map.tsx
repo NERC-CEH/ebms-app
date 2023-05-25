@@ -159,7 +159,7 @@ const Map: FC<Props> = ({
         isDisabled={isDisabled}
       />
 
-      <MapControl position="topleft">
+      <MapControl position="topleft" className="gps-button">
         <GPSButton
           onLocationChange={recenterMapToCurrentLocation}
           map={map}

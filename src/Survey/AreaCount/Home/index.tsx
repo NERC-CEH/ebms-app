@@ -8,7 +8,7 @@ import { NavContext } from '@ionic/react';
 import Occurrence, { SpeciesGroup } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import savedSamples from 'models/collections/samples';
-import appModel, { SurveyDraftKeys } from 'models/app';
+import appModel from 'models/app';
 import { useUserStatusCheck } from 'models/user';
 import { useDeleteConfirmation } from '../SpeciesOccurrences';
 import Header from './Header';
@@ -190,9 +190,8 @@ const HomeController: FC<Props> = ({ sample }) => {
       }
     }
 
-    const surveyName = sample.getSurvey().name;
-    const draftKey = `draftId:${surveyName}` as keyof SurveyDraftKeys;
-    appModel.attrs[draftKey] = '';
+    appModel.setLocation(sample.attrs.location);
+
     await appModel.save();
 
     const saveAndReturn = () => {

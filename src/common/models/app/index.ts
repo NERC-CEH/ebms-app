@@ -3,8 +3,9 @@ import { observable } from 'mobx';
 import axios from 'axios';
 import CONFIG from 'common/config';
 import * as Yup from 'yup';
-import { UserModel } from './user';
-import { genericStore } from './store';
+import { UserModel } from '../user';
+import { genericStore } from '../store';
+import PastLocationsExtension from './pastLocExt';
 
 const transectsSchemaBackend = Yup.object().shape({
   data: Yup.array().of(
@@ -136,6 +137,7 @@ export type Attrs = ModelAttrs & {
   speciesGroups: string[];
   useDayFlyingMothsOnly: boolean;
   transects: any;
+  locations: any[];
   taxonGroupFilters?: any;
   primarySurvey: any;
   useImageIdentifier: boolean;
@@ -171,6 +173,7 @@ const defaults: Attrs = {
   speciesGroups: DEFAULT_SPECIES_GROUP,
   useDayFlyingMothsOnly: false,
   transects: [],
+  locations: [],
 
   primarySurvey: 'precise-area',
 
@@ -192,7 +195,17 @@ const defaults: Attrs = {
 export class AppModel extends Model {
   attrs: Attrs = Model.extendAttrs(this.attrs, defaults);
 
+  setLocation: any; // from extension
+
+  removeLocation: any; // from extension
+
   speciesReport = observable([]);
+
+  constructor(options: any) {
+    super(options);
+
+    Object.assign(this, PastLocationsExtension);
+  }
 
   async updateUserTransects(userModel: UserModel) {
     const transects = await fetchUserTransects(userModel);

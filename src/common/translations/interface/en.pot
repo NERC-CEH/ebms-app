@@ -2346,3 +2346,31 @@ msgstr "Count sum must be greater than 0"
 # Report page label
 msgid "Show less"
 msgstr "Show less"
+
+# Part of favorite track selection
+msgid "Your track name"
+msgstr "Your track name"
+
+# Part of favorite track selection
+msgid "Here you can select or swipe to edit your previous tracks"
+msgstr "Here you can select or swipe to edit your previous tracks"
+
+# Part of favorite track selection
+msgid "Edit"
+msgstr "Edit"
+
+# Part of favorite track selection
+msgid "Edit Location"
+msgstr "Edit Location"
+
+# Part of favorite track selection
+msgid "Name"
+msgstr "Name"
+
+# Part of favorite track selection
+msgid "Favourite"
+msgstr "Favourite"
+
+# Part of favorite track selection
+msgid "Are you sure you want to delete the saved track?"
+msgstr "Are you sure you want to delete the saved track?"
