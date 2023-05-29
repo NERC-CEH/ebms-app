@@ -1,11 +1,16 @@
 import * as Yup from 'yup';
 import { date as dateHelp } from '@flumens';
-import { chatboxOutline } from 'ionicons/icons';
+import {
+  chatboxOutline,
+  thermometerOutline,
+  cloudyOutline,
+} from 'ionicons/icons';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import groups from 'common/helpers/groups';
 import Occurrence, { Taxon } from 'common/models/occurrence';
 import Sample from 'models/sample';
 import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
+import windIcon from 'common/images/wind.svg';
 
 export const deviceAttr = {
   remote: {
@@ -25,7 +30,7 @@ export const deviceVersionAttr = {
 
 export const appVersionAttr = { remote: { id: 1139 } };
 
-const temperatureValues = [
+export const temperatureValues = [
   {
     value: '',
     label: 'Not recorded/no data',
@@ -78,7 +83,9 @@ const temperatureValues = [
 ];
 
 export const temperatureAttr = {
+  menuProps: { icon: thermometerOutline, label: 'Temperature' },
   pageProps: {
+    headerProps: { title: 'Temperature' },
     attrProps: {
       input: 'radio',
       info: 'Please specify the temperature C°.',
@@ -191,7 +198,7 @@ export const speciesGroupsAttr = {
   },
 };
 
-const windDirectionValues = [
+export const windDirectionValues = [
   { value: '', label: 'Not recorded/no data', id: 2460, isDefault: true },
   { value: 'S', id: 2461 },
   { value: 'SW', id: 2462 },
@@ -205,7 +212,7 @@ const windDirectionValues = [
 ];
 
 export const windDirectionAttr = {
-  menuProps: { label: 'Wind Direction' },
+  menuProps: { label: 'Wind Direction', icon: windIcon },
   pageProps: {
     headerProps: { title: 'Wind Direction' },
     attrProps: {
@@ -217,7 +224,7 @@ export const windDirectionAttr = {
   remote: { id: 1389, values: windDirectionValues },
 };
 
-const windSpeedValues = [
+export const windSpeedValues = [
   { value: '', label: 'Not recorded/no data', id: 2459, isDefault: true },
   { value: 'Smoke rises vertically', id: 2606 },
   { value: 'Slight smoke drift', id: 2453 },
@@ -229,7 +236,7 @@ const windSpeedValues = [
 ];
 
 export const windSpeedAttr = {
-  menuProps: { label: 'Wind Speed' },
+  menuProps: { label: 'Wind Speed', icon: windIcon },
   pageProps: {
     headerProps: { title: 'Wind Speed' },
     attrProps: {
@@ -252,7 +259,9 @@ export const commentAttr = {
 };
 
 export const cloudAttr = {
+  menuProps: { icon: cloudyOutline, label: 'Cloud' },
   pageProps: {
+    headerProps: { title: 'Cloud' },
     attrProps: {
       input: 'slider',
       info: 'Please specify the % of cloud cover.',

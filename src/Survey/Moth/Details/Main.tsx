@@ -1,18 +1,25 @@
 import { FC } from 'react';
 import { Main, MenuAttrItemFromModel, Attr, MenuAttrItem } from '@flumens';
+import { Trans as T } from 'react-i18next';
 import Sample from 'models/sample';
-import { IonList } from '@ionic/react';
+import { IonList, IonItemDivider } from '@ionic/react';
 import { observer } from 'mobx-react';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import { useRouteMatch } from 'react-router';
+import { timeOutline, cloudOutline } from 'ionicons/icons';
 
 type Props = {
   sample: Sample;
 };
 
+const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
+  hour: 'numeric',
+  minute: 'numeric',
+});
+
 const DetailsMain: FC<Props> = ({ sample }) => {
   const { url } = useRouteMatch();
-  const { location } = sample.attrs;
+  const { location, surveyStartTime, surveyEndTime } = sample.attrs;
   const survey = sample.getSurvey();
   const surveyDateProps = survey.attrs.date.pageProps.attrProps.inputProps();
   const isDisabled = sample.isUploaded();
@@ -24,6 +31,11 @@ const DetailsMain: FC<Props> = ({ sample }) => {
   const locationName = location
     ? locationNameSupportedBackwardsCompatibility
     : null;
+
+  const startTimePretty =
+    surveyStartTime && dateTimeFormat.format(new Date(surveyStartTime));
+  const endTimePretty =
+    surveyEndTime && dateTimeFormat.format(new Date(surveyEndTime));
 
   return (
     <Main>
@@ -47,9 +59,57 @@ const DetailsMain: FC<Props> = ({ sample }) => {
             attr="recorder"
             skipValueTranslation
           />
+
           <MenuAttrItemFromModel
             model={sample}
             attr="comment"
+            skipValueTranslation
+          />
+        </div>
+      </IonList>
+
+      <IonItemDivider>
+        <T>Trap start</T>
+      </IonItemDivider>
+      <IonList lines="full">
+        <div className="rounded">
+          <MenuAttrItem
+            routerLink={`${url}/surveyStartTime`}
+            disabled={isDisabled}
+            icon={timeOutline}
+            label="Time"
+            value={startTimePretty}
+            skipValueTranslation
+          />
+          <MenuAttrItem
+            routerLink={`${url}/startWeather`}
+            disabled={isDisabled}
+            icon={cloudOutline}
+            label="Weather"
+            skipValueTranslation
+          />
+        </div>
+      </IonList>
+
+      <IonItemDivider>
+        <T>Trap end</T>
+      </IonItemDivider>
+      <IonList lines="full">
+        <div className="rounded">
+          <MenuAttrItem
+            routerLink={`${url}/surveyEndTime`}
+            disabled={isDisabled}
+            icon={timeOutline}
+            label="Time"
+            value={endTimePretty}
+            skipValueTranslation
+          />
+
+          <MenuAttrItem
+            routerLink={`${url}/endWeather`}
+            disabled={isDisabled}
+            icon={cloudOutline}
+            label="Weather"
             skipValueTranslation
           />
         </div>

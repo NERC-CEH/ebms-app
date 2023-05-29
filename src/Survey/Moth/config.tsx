@@ -4,8 +4,20 @@ import { Survey } from 'common/config/surveys';
 import config from 'common/config';
 import appModel from 'models/app';
 import Occurrence from 'models/occurrence';
-import { personOutline, calendarOutline } from 'ionicons/icons';
-import { commentAttr } from 'Survey/common/config';
+import {
+  thermometerOutline,
+  calendarOutline,
+  personOutline,
+  cloudyOutline,
+  moonOutline,
+} from 'ionicons/icons';
+import {
+  commentAttr,
+  windDirectionValues,
+  windSpeedValues,
+  temperatureValues,
+} from 'Survey/common/config';
+import windIcon from 'common/images/wind.svg';
 
 export enum MachineInvolvement {
   /**
@@ -154,6 +166,22 @@ const locationAttr = {
   },
 };
 
+const moonPhaseValues = [
+  { id: 20827, value: 'New' },
+  { id: 20828, value: 'Waxing Crescent' },
+  { id: 20829, value: 'First Quarter' },
+  { id: 20830, value: 'Waxing Gibbous' },
+  { id: 20831, value: 'Full' },
+  { id: 20832, value: 'Waning Gibbous' },
+  { id: 20833, value: 'Last Quarter' },
+  { id: 20834, value: 'Waning Crescent' },
+];
+
+const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
+  hour: 'numeric',
+  minute: 'numeric',
+});
+
 const survey: Survey = {
   id: 681,
   name: 'moth',
@@ -162,6 +190,178 @@ const survey: Survey = {
 
   attrs: {
     location: locationAttr,
+
+    surveyStartTime: {
+      menuProps: { label: 'Start Time' },
+      pageProps: {
+        headerProps: { title: 'Start Time' },
+        attrProps: {
+          input: 'time',
+          info: 'Defaulted to sunset time',
+          format: { hour: '2-digit', minute: '2-digit' },
+          inputProps: {
+            format: { options: { hour: '2-digit', minute: '2-digit' } },
+            presentation: 'time',
+          },
+        },
+      },
+      remote: {
+        id: 1385,
+        values: (date: number) => dateTimeFormat.format(new Date(date)),
+      },
+    },
+
+    surveyEndTime: {
+      menuProps: { label: 'End Time' },
+      pageProps: {
+        headerProps: { title: 'End Time' },
+        attrProps: {
+          input: 'time',
+          info: 'Defaulted to sunrise time',
+          inputProps: {
+            format: { options: { hour: '2-digit', minute: '2-digit' } },
+            presentation: 'time',
+          },
+        },
+      },
+      remote: {
+        id: 1386,
+        values: (date: number) => dateTimeFormat.format(new Date(date)),
+      },
+    },
+
+    // start weather
+    direction: {
+      menuProps: { label: 'Wind Direction', icon: windIcon },
+      pageProps: {
+        headerProps: { title: 'Wind Direction' },
+        attrProps: {
+          input: 'radio',
+          info: 'Please specify the wind direction.',
+          inputProps: { options: windDirectionValues },
+        },
+      },
+      remote: { id: 1763, values: windDirectionValues },
+    },
+
+    wind: {
+      menuProps: { label: 'Wind Speed', icon: windIcon },
+      pageProps: {
+        headerProps: { title: 'Wind Speed' },
+        attrProps: {
+          input: 'radio',
+          info: 'Please specify the wind speed.',
+          inputProps: { options: windSpeedValues },
+        },
+      },
+      remote: { id: 1767, values: windSpeedValues },
+    },
+
+    cloud: {
+      menuProps: { icon: cloudyOutline, label: 'Cloud' },
+      pageProps: {
+        headerProps: { title: 'Cloud' },
+        attrProps: {
+          input: 'slider',
+          info: 'Please specify the % of cloud cover.',
+          inputProps: { max: 100, min: 0 },
+        },
+      },
+      remote: { id: 1765 },
+    },
+
+    moon: {
+      menuProps: { icon: moonOutline, label: 'Moon phase' },
+      pageProps: {
+        headerProps: { title: 'Moon phase' },
+        attrProps: {
+          input: 'radio',
+          info: 'Please specify the moon phase direction.',
+          inputProps: { options: moonPhaseValues },
+        },
+      },
+      remote: { id: 1760, values: moonPhaseValues },
+    },
+
+    temperature: {
+      menuProps: { icon: thermometerOutline, label: 'Temperature' },
+      pageProps: {
+        headerProps: { title: 'Temperature' },
+        attrProps: {
+          input: 'radio',
+          info: 'Please specify the temperature C°.',
+          inputProps: { options: temperatureValues },
+        },
+      },
+      remote: { id: 1761, values: temperatureValues },
+    },
+
+    // end weather
+    directionEnd: {
+      menuProps: { label: 'Wind Direction', icon: windIcon },
+      pageProps: {
+        headerProps: { title: 'Wind Direction' },
+        attrProps: {
+          input: 'radio',
+          info: 'Please specify the wind direction.',
+          inputProps: { options: windDirectionValues },
+        },
+      },
+      remote: { id: 1764, values: windDirectionValues },
+    },
+
+    windEnd: {
+      menuProps: { label: 'Wind Speed', icon: windIcon },
+      pageProps: {
+        headerProps: { title: 'Wind Speed' },
+        attrProps: {
+          input: 'radio',
+          info: 'Please specify the wind speed.',
+          inputProps: { options: windSpeedValues },
+        },
+      },
+      remote: { id: 1768, values: windSpeedValues },
+    },
+
+    moonEnd: {
+      menuProps: { icon: moonOutline, label: 'Moon phase' },
+      pageProps: {
+        headerProps: { title: 'Moon phase' },
+        attrProps: {
+          input: 'radio',
+          info: 'Please specify the moon phase direction.',
+          inputProps: { options: moonPhaseValues },
+        },
+      },
+      remote: { id: 1769, values: moonPhaseValues },
+    },
+
+    temperatureEnd: {
+      menuProps: { icon: thermometerOutline, label: 'Temperature' },
+      pageProps: {
+        headerProps: { title: 'Temperature' },
+        attrProps: {
+          input: 'radio',
+          info: 'Please specify the temperature C°.',
+          inputProps: { options: temperatureValues },
+        },
+      },
+      remote: { id: 1762, values: temperatureValues },
+    },
+
+    cloudEnd: {
+      menuProps: { icon: cloudyOutline, label: 'Cloud' },
+      pageProps: {
+        headerProps: { title: 'Cloud' },
+        attrProps: {
+          input: 'slider',
+          info: 'Please specify the % of cloud cover.',
+          inputProps: { max: 100, min: 0 },
+        },
+      },
+      remote: { id: 1766 },
+    },
+
     date: {
       menuProps: { parse: 'date', icon: calendarOutline },
       pageProps: {

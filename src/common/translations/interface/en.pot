@@ -2375,6 +2375,74 @@ msgstr "Favourite"
 msgid "Are you sure you want to delete the saved track?"
 msgstr "Are you sure you want to delete the saved track?"
 
+# Part of weather attributes
+msgid "Moon phase"
+msgstr "Moon phase"
+
+# Info message
+msgid "Please specify the moon phase direction."
+msgstr "Please specify the moon phase direction."
+
+# Moon phase values
+msgid "New"
+msgstr "New"
+
+# Moon phase values
+msgid "Waxing Crescent"
+msgstr "Waxing Crescent"
+
+# Moon phase values
+msgid "First Quarter"
+msgstr "First Quarter"
+
+# Moon phase values
+msgid "Waxing Gibbous"
+msgstr "Waxing Gibbous"
+
+# Moon phase values
+msgid "Full"
+msgstr "Full"
+
+# Moon phase values
+msgid "Waning Gibbous"
+msgstr "Waning Gibbous"
+
+# Moon phase values
+msgid "Last Quarter"
+msgstr "Last Quarter"
+
+# Moon phase values
+msgid "Waning Crescent"
+msgstr "Waning Crescent"
+
+# Info message
+msgid "Trap start"
+msgstr "Trap start"
+
+# Info message
+msgid "Trap end"
+msgstr "Trap end"
+
+# Info message
+msgid "Start Weather"
+msgstr "Start Weather"
+
+# Info message
+msgid "End Weather"
+msgstr "End Weather"
+
+# Info message
+msgid "Please add the moth trap."
+msgstr "Please add the moth trap."
+
 # Info message 
 msgid "We have noticed that your survey has <1>long sections</1>. Please make sure it is a correct <3>location</3>!"
 msgstr "We have noticed that your survey has <1>long sections</1>. Please make sure it is a correct <3>location</3>!"
+
+# Info message
+msgid "Defaulted to sunset time"
+msgstr "Defaulted to sunset time"
+
+# Info message
+msgid "Defaulted to sunrise time"
+msgstr "Defaulted to sunrise time"  
