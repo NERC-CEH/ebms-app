@@ -201,7 +201,9 @@ class MapInfo extends React.Component {
       map.invalidateSize();
       if (shape) {
         this.setExistingShape(shape);
+      }
 
+      if (shape?.type === 'LineString') {
         this.zoomToPolyLine(shape);
       }
     };
@@ -258,7 +260,7 @@ class MapInfo extends React.Component {
       this.zoomToPolygonShape(shape);
     }
 
-    if (shape.type === 'PolygonLine') {
+    if (shape.type === 'LinString') {
       this.zoomToPolyLine(shape);
     }
   };
