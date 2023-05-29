@@ -465,10 +465,19 @@ const AreaCount: FC<Props> = ({
   const showAreaWarningNote = () => {
     if (sample.metadata.saved && !sample.isDisabled()) {
       return (
-        <InfoMessage color="medium">
-          Please check if the recording area is correct before sending the
-          record.
-        </InfoMessage>
+        <>
+          <InfoMessage color="medium">
+            Please check if the recording area is correct before sending the
+            record.
+          </InfoMessage>
+
+          {sample.metadata.hasBigJump && (
+            <InfoMessage color="medium">
+              We have noticed that your survey has <b>long sections</b>. Please
+              make sure it is a correct <b>location</b>!
+            </InfoMessage>
+          )}
+        </>
       );
     }
 

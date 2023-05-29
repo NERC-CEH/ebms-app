@@ -2374,3 +2374,7 @@ msgstr "Favourite"
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
 msgstr "Are you sure you want to delete the saved track?"
+
+# Info message 
+msgid "We have noticed that your survey has <1>long sections</1>. Please make sure it is a correct <3>location</3>!"
+msgstr "We have noticed that your survey has <1>long sections</1>. Please make sure it is a correct <3>location</3>!"

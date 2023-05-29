@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { toJS, observable } from 'mobx';
@@ -8,11 +8,14 @@ import { NavContext } from '@ionic/react';
 import Occurrence, { SpeciesGroup } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import savedSamples from 'models/collections/samples';
+import distance from '@turf/distance';
 import appModel from 'models/app';
 import { useUserStatusCheck } from 'models/user';
 import { useDeleteConfirmation } from '../SpeciesOccurrences';
 import Header from './Header';
 import Main from './Main';
+
+const METERS_THRESHOLD = 200;
 
 const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
@@ -156,6 +159,59 @@ const HomeController: FC<Props> = ({ sample }) => {
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
   const confirmDelete = useDeleteConfirmation();
+
+  const validateTrackDistance = () => {
+    if (!sample.attrs.location?.shape?.coordinates.length) return;
+
+    if (!sample.metadata.saved) return;
+
+    let isValid;
+
+    const shapeCoords = [...sample.attrs.location.shape.coordinates];
+
+    for (let index = 1; index < shapeCoords.length; index++) {
+      const coords = shapeCoords[index];
+
+      const previousPoint: any = {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          type: 'Point',
+          coordinates: shapeCoords[index - 1],
+        },
+      };
+
+      const currentPoint: any = {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          type: 'Point',
+          coordinates: coords,
+        },
+      };
+
+      const sectionDistance = Number(
+        distance(previousPoint, currentPoint, {
+          units: 'meters',
+        }).toFixed(2)
+      );
+
+      if (sectionDistance > METERS_THRESHOLD) {
+        isValid = true;
+        break;
+      }
+    }
+
+    // eslint-disable-next-line no-unused-expressions
+    isValid
+      ? // eslint-disable-next-line no-param-reassign
+        (sample.metadata.hasBigJump = true)
+      : // eslint-disable-next-line no-param-reassign
+        (sample.metadata.hasBigJump = false);
+
+    sample.save();
+  };
+  useEffect(validateTrackDistance, [sample.attrs.location?.shape?.coordinates]);
 
   const _processSubmission = async () => {
     const isUserOK = await checkUserStatus();
