@@ -2379,10 +2379,6 @@ msgstr "Are you sure you want to delete the saved track?"
 msgid "Moon phase"
 msgstr "Moon phase"
 
-# Info message
-msgid "Please specify the moon phase direction."
-msgstr "Please specify the moon phase direction."
-
 # Moon phase values
 msgid "New"
 msgstr "New"

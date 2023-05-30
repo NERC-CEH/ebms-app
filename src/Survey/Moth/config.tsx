@@ -276,7 +276,6 @@ const survey: Survey = {
         headerProps: { title: 'Moon phase' },
         attrProps: {
           input: 'radio',
-          info: 'Please specify the moon phase direction.',
           inputProps: { options: moonPhaseValues },
         },
       },
@@ -329,7 +328,6 @@ const survey: Survey = {
         headerProps: { title: 'Moon phase' },
         attrProps: {
           input: 'radio',
-          info: 'Please specify the moon phase direction.',
           inputProps: { options: moonPhaseValues },
         },
       },
