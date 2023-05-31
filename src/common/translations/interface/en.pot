@@ -2380,36 +2380,37 @@ msgid "Moon phase"
 msgstr "Moon phase"
 
 # Moon phase values
-msgid "New"
-msgstr "New"
+msgid " 🌑 New"
+msgstr " 🌑 New"
 
 # Moon phase values
-msgid "Waxing Crescent"
-msgstr "Waxing Crescent"
+msgid " 🌒 Waxing crescent"
+msgstr " 🌒 Waxing crescent"
 
 # Moon phase values
-msgid "First Quarter"
-msgstr "First Quarter"
+msgid " 🌓 First quarter"
+msgstr " 🌓 First quarter"
 
 # Moon phase values
-msgid "Waxing Gibbous"
-msgstr "Waxing Gibbous"
+msgid " 🌔 Waxing gibbous"
+msgstr " 🌔 Waxing gibbous"
 
 # Moon phase values
-msgid "Full"
-msgstr "Full"
+msgid " 🌕 Full"
+msgstr " 🌕 Full"
 
 # Moon phase values
-msgid "Waning Gibbous"
-msgstr "Waning Gibbous"
+msgid " 🌖 Waning gibbous"
+msgstr " 🌖 Waning gibbous"
 
 # Moon phase values
-msgid "Last Quarter"
-msgstr "Last Quarter"
+msgid " 🌗 Last quarter"
+msgstr " 🌗 Last quarter"
 
 # Moon phase values
-msgid "Waning Crescent"
-msgstr "Waning Crescent"
+msgid " 🌘 Waning crescent"
+msgstr " 🌘 Waning crescent"
+
 
 # Info message
 msgid "Trap start"
@@ -2442,3 +2443,7 @@ msgstr "Defaulted to sunset time"
 # Info message
 msgid "Defaulted to sunrise time"
 msgstr "Defaulted to sunrise time"  
+
+# Error message 
+msgid "Location services are not enabled"
+msgstr "Location services are not enabled"

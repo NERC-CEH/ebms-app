@@ -167,14 +167,14 @@ const locationAttr = {
 };
 
 const moonPhaseValues = [
-  { id: 20827, value: 'New' },
-  { id: 20828, value: 'Waxing Crescent' },
-  { id: 20829, value: 'First Quarter' },
-  { id: 20830, value: 'Waxing Gibbous' },
-  { id: 20831, value: 'Full' },
-  { id: 20832, value: 'Waning Gibbous' },
-  { id: 20833, value: 'Last Quarter' },
-  { id: 20834, value: 'Waning Crescent' },
+  { id: 20827, value: ' 🌑 New' },
+  { id: 20828, value: ' 🌒 Waxing crescent' },
+  { id: 20829, value: ' 🌓 First quarter' },
+  { id: 20830, value: ' 🌔 Waxing gibbous' },
+  { id: 20831, value: ' 🌕 Full' },
+  { id: 20832, value: ' 🌖 Waning gibbous' },
+  { id: 20833, value: ' 🌗 Last quarter' },
+  { id: 20834, value: ' 🌘 Waning crescent' },
 ];
 
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
