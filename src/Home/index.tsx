@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import {
   IonTabs,
@@ -41,6 +41,8 @@ const SpeciesTab = () => <Species appModel={appModel} />;
 const HomeController = () => {
   const { navigate } = useContext(NavContext);
   const ionRouter = useIonRouter();
+  // prevent fast tapping
+  const [isButtonTapped, setIsButtonTapped] = useState(false);
 
   const exitApp = () => {
     const onExitApp = () => !ionRouter.canGoBack() && AppPlugin.exitApp();
@@ -59,7 +61,10 @@ const HomeController = () => {
   const navigateToPrimarySurvey = () => {
     const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
 
-    navigate(`/survey/${primarySurveyName}`);
+    if (!isButtonTapped) {
+      setIsButtonTapped(true);
+      navigate(`/survey/${primarySurveyName}`);
+    }
   };
 
   const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
