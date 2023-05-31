@@ -6,4 +6,9 @@
   .attr.attr-date ion-item.md {
     --border-width: 0 0 1px 0;
   }
+
+  ion-item-divider {
+    max-width: 600px;
+    margin: auto;
+  }
 }
