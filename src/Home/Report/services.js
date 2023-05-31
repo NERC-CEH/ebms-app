@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
 import userModel from 'models/user';
 import config from 'common/config';
+import { HandledError, isAxiosNetworkError } from '@flumens';
 import axios from 'axios';
 import surveys from 'common/config/surveys';
 
@@ -43,8 +44,13 @@ export async function fetchSpeciesReport() {
     }
 
     return response.aggregations.by_species.buckets;
-  } catch (e) {
-    throw new Error(e.message);
+  } catch (error) {
+    if (isAxiosNetworkError(error))
+      throw new HandledError(
+        'Request aborted because of a network issue (timeout or similar).'
+      );
+
+    throw error.message;
   }
 }
 
