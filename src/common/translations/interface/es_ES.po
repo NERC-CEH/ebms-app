@@ -1910,13 +1910,29 @@ msgstr ""
 msgid "What's New"
 msgstr "Novedades"
 
-# Version 1.20 whats new message
-msgid "Added Painted Lady survey"
-msgstr "Añadido muestreo sobre la Cardera"
+# Version 1.21 whats new message
+msgid "Enabled multiple drafts functionality"
+msgstr "Habilitada la función de borradores múltiples"
 
-# Version 1.20 whats new message
-msgid "Changed species groups location and functionality"
-msgstr "Ubicación y funcionalidad de los grupos de especies modificadas"
+# Version 1.21 whats new message
+msgid "Added Saint Helena country"
+msgstr "Añadido país Santa Helena"
+
+# Version 1.21 whats new message
+msgid "Added specific stage attributes for Dragonfly species"
+msgstr "Añadido específicos atributos para las especies de libélulas"
+
+# Version 1.21 whats new message
+msgid "Added dragonflies-specific stages"
+msgstr "Añadido los estados específicos para las libélulas"
+
+# Version 1.21 whats new message
+msgid "Added Slovak and Turkish butterfly common names"
+msgstr "Añadido los nombres comunes de mariposas en Eslovaco y Turco"
+
+# Version 1.21 whats new message
+msgid "Added dragonfly common names"
+msgstr "Añadidos los nombres comunes de libélulas"
 
 # User account action
 msgid "Resend"
@@ -2403,3 +2419,35 @@ msgstr "Inicio Recuento"
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
 msgstr "Seguimiento de la migración de la Cardera con ButterflyCount"
+
+# Menu page label
+msgid "Instructions"
+msgstr "Instrucciones"
+
+# Country name
+msgid "Saint Helena"
+msgstr "Santa Helena"
+
+# Dragonfly stage attribute
+msgid "Ovipositing"
+msgstr "Poniendo huevos"
+
+# Dragonfly stage attribute
+msgid "Copulating or tandem pairs"
+msgstr "Parejas copulantes o en tándem"
+
+# Dragonfly stage attribute
+msgid "Exuviae"
+msgstr "Exuvia"
+
+# Dragonfly stage attribute
+msgid "Emergent"
+msgstr "Emergente"
+
+# Alert message
+msgid "Count sum must be greater than 0"
+msgstr "La suma del recuento debe ser mayor que 0"
+
+# Report page label
+msgid "Show less"
+msgstr "Mostrar menos"

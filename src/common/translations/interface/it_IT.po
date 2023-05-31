@@ -1911,12 +1911,28 @@ msgstr ""
 msgid "What's New"
 msgstr "Cosa c'è di nuovo"
 
-# Version 1.20 whats new message
-msgid "Added Painted Lady survey"
+# Version 1.21 whats new message
+msgid "Enabled multiple drafts functionality"
 msgstr ""
 
-# Version 1.20 whats new message
-msgid "Changed species groups location and functionality"
+# Version 1.21 whats new message
+msgid "Added Saint Helena country"
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added specific stage attributes for Dragonfly species"
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added dragonflies-specific stages"
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added Slovak and Turkish butterfly common names"
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added dragonfly common names"
 msgstr ""
 
 # User account action
@@ -2385,4 +2401,36 @@ msgstr ""
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
+msgstr ""
+
+# Menu page label
+msgid "Instructions"
+msgstr ""
+
+# Country name
+msgid "Saint Helena"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Ovipositing"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Copulating or tandem pairs"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Exuviae"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Emergent"
+msgstr ""
+
+# Alert message
+msgid "Count sum must be greater than 0"
+msgstr ""
+
+# Report page label
+msgid "Show less"
 msgstr ""
