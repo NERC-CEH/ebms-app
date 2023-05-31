@@ -1,4 +1,4 @@
-import { Modals, registerPlugin } from '@capacitor/core';
+import { registerPlugin } from '@capacitor/core';
 import { Geolocation } from '@capacitor/geolocation';
 import { isPlatform } from '@ionic/react';
 
@@ -19,17 +19,6 @@ const API = {
     const clientCallbacks = Object.values(API._clientCallbacks);
 
     if (err) {
-      if (err.code === 'NOT_AUTHORIZED' && isPlatform('hybrid')) {
-        const openSettings = ({ value }) =>
-          value && BackgroundGeolocation.openSettings();
-        Modals.confirm({
-          title: t('Location Required'),
-          message: t(
-            'This app needs your location, but does not have permission. Open settings now?'
-          ),
-        }).then(openSettings);
-      }
-
       // eslint-disable-next-line @getify/proper-arrows/name
       clientCallbacks.forEach(callback => callback(err));
       return;
