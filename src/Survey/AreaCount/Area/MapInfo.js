@@ -78,7 +78,9 @@ class MapInfo extends React.Component {
 
     const reverseCoords = coords =>
       [...coords].reverse().map(Number.parseFloat);
-    const positions = shape.coordinates.map(reverseCoords);
+    const positions = shape?.coordinates?.map(reverseCoords) || [];
+
+    if (!positions.length) return;
 
     const polyline = L.polyline(positions, { color: DEFAULT_SHAPE_COLOR });
     polyline.addTo(this.drawnItems);
@@ -328,8 +330,13 @@ class MapInfo extends React.Component {
       this.stopGPS();
       return;
     }
-    const location = await this.startGPS();
+
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    const ignoreErrors = () => {};
+    const location = await this.startGPS().catch(ignoreErrors);
     const { map } = this.props;
+
+    if (!location?.latitude || !location?.longitude) return;
 
     map.setView(
       new L.LatLng(location.latitude, location.longitude),

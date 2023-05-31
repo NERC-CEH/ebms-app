@@ -1,7 +1,8 @@
 import { useEffect, useContext } from 'react';
 import { NavContext, isPlatform } from '@ionic/react';
-import { useAlert } from '@flumens';
+import { useAlert, HandledError } from '@flumens';
 import appModel, { SurveyDraftKeys } from 'models/app';
+import { GPS_DISABLED_ERROR_MESSAGE } from 'common/helpers/GPS';
 import userModel from 'models/user';
 import Sample from 'models/sample';
 import savedSamples from 'models/collections/samples';
@@ -46,8 +47,10 @@ const useShowGPSPermissionDialog = () => {
     let gpsPermission;
     try {
       gpsPermission = await Geolocation.checkPermissions();
-    } catch (err) {
-      return null;
+    } catch (err: any) {
+      if (err?.message === GPS_DISABLED_ERROR_MESSAGE) {
+        throw new HandledError(GPS_DISABLED_ERROR_MESSAGE);
+      }
     }
 
     const { showGPSPermissionTip } = appModel.attrs;
@@ -55,7 +58,7 @@ const useShowGPSPermissionDialog = () => {
     if (
       !showGPSPermissionTip ||
       isPlatform('ios') ||
-      gpsPermission.coarseLocation === 'granted'
+      gpsPermission?.coarseLocation === 'granted'
     )
       return true;
 
@@ -108,7 +111,9 @@ function StartNewSurvey({ survey }: Props): null {
         return;
       }
 
-      const hasGrantedGps = await showGPSPermissionDialog();
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
+      const ignoreError = () => {};
+      const hasGrantedGps = await showGPSPermissionDialog().catch(ignoreError);
       const sample = await getNewSample(survey, draftIdKey, hasGrantedGps);
 
       if (sample.isPreciseSingleSpeciesSurvey()) {

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { IonTitle, IonToolbar } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
+import { HandledError } from '@flumens';
+import { GPS_DISABLED_ERROR_MESSAGE } from 'helpers/GPS';
 import { Geolocation } from '@capacitor/geolocation';
 import './styles.scss';
 
@@ -9,9 +11,17 @@ const GPSPermissionSubheader = () => {
 
   useEffect(() => {
     const hasPermission = async () => {
-      const perm = await Geolocation.checkPermissions();
+      let perm;
 
-      if (perm.coarseLocation === 'granted') {
+      try {
+        perm = await Geolocation.checkPermissions();
+      } catch (error: any) {
+        if (error?.message === GPS_DISABLED_ERROR_MESSAGE) {
+          throw new HandledError(GPS_DISABLED_ERROR_MESSAGE);
+        }
+      }
+
+      if (perm?.coarseLocation === 'granted') {
         setPermission(true);
       } else {
         setPermission(false);

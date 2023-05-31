@@ -2,6 +2,8 @@ import { Modals, registerPlugin } from '@capacitor/core';
 import { Geolocation } from '@capacitor/geolocation';
 import { isPlatform } from '@ionic/react';
 
+export const GPS_DISABLED_ERROR_MESSAGE = 'Location services are not enabled';
+
 const BackgroundGeolocation = registerPlugin('BackgroundGeolocation');
 
 const API = {

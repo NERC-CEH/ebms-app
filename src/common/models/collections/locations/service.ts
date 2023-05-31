@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import CONFIG from 'common/config';
 import axios from 'axios';
+import { isAxiosNetworkError, HandledError } from '@flumens';
 import userModel from 'models/user';
 import { MOTH_TRAP_TYPE } from '../../location';
 
@@ -64,14 +65,25 @@ export default async function fetchLocations() {
     timeout: 80000,
   };
 
-  const res = await axios.get(url, options);
-  let docs: Response = res.data;
+  try {
+    const res = await axios.get(url, options);
 
-  if (typeof docs === 'string') {
-    // TODO: remove once the empty locations with verbose bug is fixed.
-    // https://github.com/Indicia-Team/warehouse/issues/430
-    docs = [];
+    let docs: Response = res.data;
+
+    if (typeof docs === 'string') {
+      // TODO: remove once the empty locations with verbose bug is fixed.
+      // https://github.com/Indicia-Team/warehouse/issues/430
+      docs = [];
+    }
+    return docs;
+  } catch (error: any) {
+    if (axios.isCancel(error)) return [];
+
+    if (isAxiosNetworkError(error))
+      throw new HandledError(
+        'Request aborted because of a network issue (timeout or similar).'
+      );
+
+    throw error;
   }
-
-  return docs;
 }
