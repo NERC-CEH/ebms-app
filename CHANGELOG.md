@@ -1,7 +1,7 @@
 ## 1.21.0
 
 Enabled multiple drafts functionality.
-Added favorite site functionality.
+Added favourite site functionality.
 Added moth trap weather attributes.
 Added the Slovak language.
 Added Saint Helena country.

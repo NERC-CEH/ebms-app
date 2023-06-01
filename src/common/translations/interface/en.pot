@@ -1861,6 +1861,18 @@ msgid "What's New"
 msgstr "What's New"
 
 # Version 1.21 whats new message 
+msgid "Added favorite site functionality."
+msgstr "Added favorite site functionality."
+
+# Version 1.21 whats new message 
+msgid "Added moth trap weather attributes."
+msgstr "Added moth trap weather attributes."
+
+# Version 1.21 whats new message 
+msgid "Added the Slovak language."
+msgstr "Added the Slovak language."
+
+# Version 1.21 whats new message 
 msgid "Enabled multiple drafts functionality"
 msgstr "Enabled multiple drafts functionality"
 

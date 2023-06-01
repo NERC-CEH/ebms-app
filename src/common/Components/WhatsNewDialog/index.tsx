@@ -58,7 +58,7 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
               </li>
 
               <li>
-                <T>Added favorite site functionality.</T>
+                <T>Added favourite site functionality.</T>
               </li>
               <li>
                 <T>Added moth trap weather attributes.</T>
