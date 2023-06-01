@@ -193,7 +193,7 @@ const AreaAttr: FC<Props> = ({
           match={match}
         />
 
-        {!isGPSTracking && (
+        {!isGPSTracking && !isDisabled && (
           <MapControl position="topleft" className="favorite-btn">
             <button
               ref={buttonRef}
@@ -213,30 +213,28 @@ const AreaAttr: FC<Props> = ({
         )}
       </MapContainer>
 
-      <div className="wrap-to-prevent-modal-from-crashing">
-        <IonModal
-          id="bottom-sheet-tracks"
-          isOpen={showPastLocations}
-          backdropDismiss={false}
-          backdropBreakpoint={0.5}
-          breakpoints={SNAP_POSITIONS}
-          initialBreakpoint={DEFAULT_SNAP_POSITION}
-          canDismiss
-          onIonModalWillDismiss={() => {
-            setShowPastLocations(false);
-          }}
-        >
-          <IonHeader class="ion-no-border">
-            <IonToolbar />
-          </IonHeader>
-          <IonContent>
-            <PastLocationsList
-              onSelect={onSelectPastLoaction}
-              position={currentMapCenter}
-            />
-          </IonContent>
-        </IonModal>
-      </div>
+      <IonModal
+        id="bottom-sheet-tracks"
+        isOpen={showPastLocations}
+        backdropDismiss={false}
+        backdropBreakpoint={0.5}
+        breakpoints={SNAP_POSITIONS}
+        initialBreakpoint={DEFAULT_SNAP_POSITION}
+        canDismiss
+        onIonModalWillDismiss={() => {
+          setShowPastLocations(false);
+        }}
+      >
+        <IonHeader class="ion-no-border">
+          <IonToolbar />
+        </IonHeader>
+        <IonContent>
+          <PastLocationsList
+            onSelect={onSelectPastLoaction}
+            position={currentMapCenter}
+          />
+        </IonContent>
+      </IonModal>
     </Main>
   );
 };
