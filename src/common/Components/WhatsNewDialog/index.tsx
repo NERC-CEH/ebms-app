@@ -56,10 +56,20 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
                   <T>Enabled multiple drafts functionality</T>
                 </summary>
               </li>
+
+              <li>
+                <T>Added favorite site functionality.</T>
+              </li>
+              <li>
+                <T>Added moth trap weather attributes.</T>
+              </li>
               <li>
                 <summary>
                   <T>Added Saint Helena country</T>
                 </summary>
+              </li>
+              <li>
+                <T>Added the Slovak language.</T>
               </li>
               <li>
                 <summary>
