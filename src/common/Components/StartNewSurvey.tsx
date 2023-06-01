@@ -29,9 +29,6 @@ async function getNewSample(
 
   sample.save();
 
-  appModel.attrs[draftIdKey] = sample.cid;
-  await appModel.save();
-
   return sample;
 }
 

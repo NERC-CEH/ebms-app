@@ -2411,7 +2411,6 @@ msgstr " 🌗 Last quarter"
 msgid " 🌘 Waning crescent"
 msgstr " 🌘 Waning crescent"
 
-
 # Info message
 msgid "Trap start"
 msgstr "Trap start"
