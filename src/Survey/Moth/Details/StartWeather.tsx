@@ -18,7 +18,12 @@ const StartWeather: FC<Props> = ({ sample }) => {
             <MenuAttrItemFromModel model={sample} attr="temperature" />
             <MenuAttrItemFromModel model={sample} attr="direction" />
             <MenuAttrItemFromModel model={sample} attr="wind" />
-            <MenuAttrItemFromModel model={sample} attr="moon" />
+            <MenuAttrItemFromModel
+              model={sample}
+              attr="moon"
+              className="moonIcon"
+              skipValueTranslation
+            />
             <MenuAttrItemFromModel model={sample} attr="cloud" />
           </div>
         </IonList>

@@ -12,3 +12,25 @@
     margin: auto;
   }
 }
+
+#moth-trap-start-weather,
+#attr-page-moonEnd,
+#attr-page-moon {
+  ion-img {
+    max-width: 25px;
+    margin: 0 10px;
+    padding: 0;
+  }
+}
+
+#moth-trap-end-weather,
+#moth-trap-start-weather {
+  .moonIcon ion-label[slot='end'] {
+    opacity: 1;
+
+    ion-img {
+      width: 30px;
+      margin: 0;
+    }
+  }
+}

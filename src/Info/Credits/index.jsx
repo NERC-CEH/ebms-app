@@ -300,6 +300,13 @@ export default () => (
             </a>
           </IonLabel>
         </IonItem>
+
+        <IonItem lines="none">
+          <IonLabel>
+            Copyright 2020 Twitter, Inc and other contributors{' '}
+            <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+          </IonLabel>
+        </IonItem>
       </Section>
     </Main>
   </Page>

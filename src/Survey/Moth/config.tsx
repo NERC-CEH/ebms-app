@@ -4,6 +4,7 @@ import { Survey } from 'common/config/surveys';
 import config from 'common/config';
 import appModel from 'models/app';
 import Occurrence from 'models/occurrence';
+import { IonImg } from '@ionic/react';
 import {
   thermometerOutline,
   calendarOutline,
@@ -18,6 +19,29 @@ import {
   temperatureValues,
 } from 'Survey/common/config';
 import windIcon from 'common/images/wind.svg';
+import newIcon from 'common/images/new-moon.svg';
+import wanningCrescentIcon from 'common/images/waning-crescent-moon.svg';
+import waxingCrescentIcon from 'common/images/waxing-crescent-moon.svg';
+import firstQuarterMoonIcon from 'common/images/first-quarter-moon.svg';
+import waxingGibbousIcon from 'common/images/waxing-gibbous-moon.svg';
+import fullIcon from 'common/images/full-moon.svg';
+import wanningGibbousIcon from 'common/images/waning-gibbous-moon.svg';
+import lastQuarterIcon from 'common/images/last-quarter-moon.svg';
+
+interface Type {
+  [key: string]: string;
+}
+
+export const moonIcons: Type = {
+  New: newIcon,
+  'Waxing crescent': waxingCrescentIcon,
+  'First quarter': firstQuarterMoonIcon,
+  'Waxing gibbous': waxingGibbousIcon,
+  Full: fullIcon,
+  'Waning gibbous': wanningGibbousIcon,
+  'Last quarter': lastQuarterIcon,
+  'Waning crescent': wanningCrescentIcon,
+};
 
 export enum MachineInvolvement {
   /**
@@ -167,14 +191,14 @@ const locationAttr = {
 };
 
 const moonPhaseValues = [
-  { id: 20827, value: ' 🌑 New' },
-  { id: 20828, value: ' 🌒 Waxing crescent' },
-  { id: 20829, value: ' 🌓 First quarter' },
-  { id: 20830, value: ' 🌔 Waxing gibbous' },
-  { id: 20831, value: ' 🌕 Full' },
-  { id: 20832, value: ' 🌖 Waning gibbous' },
-  { id: 20833, value: ' 🌗 Last quarter' },
-  { id: 20834, value: ' 🌘 Waning crescent' },
+  { id: 20827, icon: newIcon, value: 'New', className: 'moon' },
+  { id: 20828, icon: waxingCrescentIcon, value: 'Waxing crescent' },
+  { id: 20829, icon: firstQuarterMoonIcon, value: 'First quarter' },
+  { id: 20830, icon: waxingGibbousIcon, value: 'Waxing gibbous' },
+  { id: 20831, icon: fullIcon, value: 'Full' },
+  { id: 20832, icon: wanningGibbousIcon, value: 'Waning gibbous' },
+  { id: 20833, icon: lastQuarterIcon, value: 'Last quarter' },
+  { id: 20834, icon: wanningCrescentIcon, value: 'Waning crescent' },
 ];
 
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
@@ -271,7 +295,11 @@ const survey: Survey = {
     },
 
     moon: {
-      menuProps: { icon: moonOutline, label: 'Moon phase' },
+      menuProps: {
+        icon: moonOutline,
+        label: 'Moon phase',
+        parse: (moonPhase: string) => <IonImg src={moonIcons[moonPhase]} />,
+      },
       pageProps: {
         headerProps: { title: 'Moon phase' },
         attrProps: {
@@ -323,7 +351,11 @@ const survey: Survey = {
     },
 
     moonEnd: {
-      menuProps: { icon: moonOutline, label: 'Moon phase' },
+      menuProps: {
+        icon: moonOutline,
+        label: 'Moon phase',
+        parse: (moonPhase: string) => <IonImg src={moonIcons[moonPhase]} />,
+      },
       pageProps: {
         headerProps: { title: 'Moon phase' },
         attrProps: {

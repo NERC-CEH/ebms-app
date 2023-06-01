@@ -2380,36 +2380,36 @@ msgid "Moon phase"
 msgstr "Moon phase"
 
 # Moon phase values
-msgid " 🌑 New"
-msgstr " 🌑 New"
+msgid "New"
+msgstr "New"
 
-# Moon phase values
-msgid " 🌒 Waxing crescent"
-msgstr " 🌒 Waxing crescent"
+#  Moon phase values
+msgid "Waxing crescent"
+msgstr "Waxing crescent"
 
-# Moon phase values
-msgid " 🌓 First quarter"
-msgstr " 🌓 First quarter"
+#  Moon phase values
+msgid "First quarter"
+msgstr "First quarter"
 
-# Moon phase values
-msgid " 🌔 Waxing gibbous"
-msgstr " 🌔 Waxing gibbous"
+#  Moon phase values
+msgid "Waxing gibbous"
+msgstr "Waxing gibbous"
 
-# Moon phase values
-msgid " 🌕 Full"
-msgstr " 🌕 Full"
+#  Moon phase values
+msgid "Full"
+msgstr "Full"
 
-# Moon phase values
-msgid " 🌖 Waning gibbous"
-msgstr " 🌖 Waning gibbous"
+#  Moon phase values
+msgid "Waning gibbous"
+msgstr "Waning gibbous"
 
-# Moon phase values
-msgid " 🌗 Last quarter"
-msgstr " 🌗 Last quarter"
+#  Moon phase values
+msgid "Last quarter"
+msgstr "Last quarter"
 
-# Moon phase values
-msgid " 🌘 Waning crescent"
-msgstr " 🌘 Waning crescent"
+#  Moon phase values
+msgid "Waning crescent"
+msgstr "Waning crescent"
 
 # Info message
 msgid "Trap start"

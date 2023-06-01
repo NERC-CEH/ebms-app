@@ -18,7 +18,12 @@ const EndWeather: FC<Props> = ({ sample }) => {
             <MenuAttrItemFromModel model={sample} attr="temperatureEnd" />
             <MenuAttrItemFromModel model={sample} attr="directionEnd" />
             <MenuAttrItemFromModel model={sample} attr="windEnd" />
-            <MenuAttrItemFromModel model={sample} attr="moonEnd" />
+            <MenuAttrItemFromModel
+              model={sample}
+              attr="moonEnd"
+              className="moonIcon"
+              skipValueTranslation
+            />
             <MenuAttrItemFromModel model={sample} attr="cloudEnd" />
           </div>
         </IonList>
