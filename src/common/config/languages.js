@@ -25,12 +25,13 @@ const languages = {
   'ja-JP': '日本語',
   'hu-HU': 'Magyar',
   'fr-FR': 'Français',
+  'sk-SK': 'Slovensky',
 };
 
 const isDemo = !isPlatform('hybrid');
 if (isDemo) {
   Object.assign(languages, {
-    'sk-SK': 'Slovensky',
+    // only demo
   });
 }
 
