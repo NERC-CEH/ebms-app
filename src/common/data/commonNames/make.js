@@ -75,10 +75,8 @@ async function fetch(listID) {
 }
 
 function turnNamesArrayIntoLangObject(array) {
-  const capitalizeFirstLetter = word =>
-    word.charAt(0).toUpperCase() + word.slice(1);
-  const capitalize = str =>
-    str.toLowerCase().split(' ').map(capitalizeFirstLetter).join(' ');
+  // Force first letter capitalization as other languages has lowercase as first letter
+  const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 
   const taxonWithLanguageMapping = (agg, term) => {
     const {
