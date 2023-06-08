@@ -62,7 +62,7 @@ class MapInfo extends React.Component {
   _recordMarkers = [];
 
   setExistingShape(shape) {
-    const { map } = this.props;
+    const { map, sample } = this.props;
     if (shape.type === 'Polygon') {
       const reverseCoords = coords =>
         [...coords].reverse().map(Number.parseFloat);
@@ -85,6 +85,13 @@ class MapInfo extends React.Component {
     const polyline = L.polyline(positions, { color: DEFAULT_SHAPE_COLOR });
     polyline.addTo(this.drawnItems);
     polyline.bringToBack(this.drawnItems);
+
+    const isPolylineTrack = positions.length > 1;
+    if (isPolylineTrack && !sample.isGPSRunning()) {
+      map.fitBounds(positions);
+      return;
+    }
+
     map.setView(positions[positions.length - 1], DEFAULT_LOCATED_ZOOM);
   }
 

@@ -9,6 +9,23 @@ import TaxonSearch from 'Components/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
+const checkIfTaxonSelectedSame = (
+  sectionOccurrence: Occurrence,
+  taxon: Taxon
+) => {
+  if (!sectionOccurrence) return false;
+
+  const { preferredId, warehouse_id } = sectionOccurrence?.attrs?.taxon || {};
+
+  if (preferredId) {
+    return (
+      warehouse_id === taxon.warehouse_id || preferredId === taxon?.preferredId
+    );
+  }
+
+  return warehouse_id === taxon.warehouse_id;
+};
+
 type Props = {
   subSample: Sample;
 };
@@ -29,10 +46,11 @@ const Controller: FC<Props> = ({
     const { taxa }: any = match.params;
     const { isRecorded }: any = taxon;
 
-    const isTaxonSelectedSame =
-      sectionOccurrence &&
-      (sectionOccurrence.attrs.taxon.warehouse_id === taxon.warehouse_id ||
-        sectionOccurrence.attrs.taxon.preferredId === taxon.preferredId);
+    // bumblebees and dragonflies does not have preferredId
+    const isTaxonSelectedSame = checkIfTaxonSelectedSame(
+      sectionOccurrence,
+      taxon
+    );
 
     const byId = (occ: Occurrence) => {
       return (
