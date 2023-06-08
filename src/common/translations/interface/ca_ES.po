@@ -1883,6 +1883,18 @@ msgid "What's New"
 msgstr "Què hi ha de nou"
 
 # Version 1.21 whats new message
+msgid "Added favorite site functionality."
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added moth trap weather attributes."
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added the Slovak language."
+msgstr ""
+
+# Version 1.21 whats new message
 msgid "Enabled multiple drafts functionality"
 msgstr ""
 
@@ -2413,4 +2425,106 @@ msgstr ""
 
 # Report page label
 msgid "Show less"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Your track name"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Here you can select or swipe to edit your previous tracks"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Edit"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Edit Location"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Name"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Favourite"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Are you sure you want to delete the saved track?"
+msgstr ""
+
+# Part of weather attributes
+msgid "Moon phase"
+msgstr ""
+
+# Moon phase values
+msgid "New"
+msgstr ""
+
+#  Moon phase values
+msgid "Waxing crescent"
+msgstr ""
+
+#  Moon phase values
+msgid "First quarter"
+msgstr ""
+
+#  Moon phase values
+msgid "Waxing gibbous"
+msgstr ""
+
+#  Moon phase values
+msgid "Full"
+msgstr ""
+
+#  Moon phase values
+msgid "Waning gibbous"
+msgstr ""
+
+#  Moon phase values
+msgid "Last quarter"
+msgstr ""
+
+#  Moon phase values
+msgid "Waning crescent"
+msgstr ""
+
+# Info message
+msgid "Trap start"
+msgstr ""
+
+# Info message
+msgid "Trap end"
+msgstr ""
+
+# Info message
+msgid "Start Weather"
+msgstr ""
+
+# Info message
+msgid "End Weather"
+msgstr ""
+
+# Info message
+msgid "Please add the moth trap."
+msgstr ""
+
+# Info message
+msgid ""
+"We have noticed that your survey has <1>long sections</1>. Please make sure "
+"it is a correct <3>location</3>!"
+msgstr ""
+
+# Info message
+msgid "Defaulted to sunset time"
+msgstr ""
+
+# Info message
+msgid "Defaulted to sunrise time"
+msgstr ""
+
+# Error message
+msgid "Location services are not enabled"
 msgstr ""

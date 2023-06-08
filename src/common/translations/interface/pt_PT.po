@@ -4,13 +4,13 @@
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
 # Eva Monteiro <evasmonteiro@gmail.com>, 2021
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
 # Ricardo Silva Ramirez, 2022
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Ricardo Silva Ramirez, 2022\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023\n"
 "Language-Team: Portuguese (Portugal) (https://app.transifex.com/ceh/teams/95441/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1909,6 +1909,18 @@ msgid "What's New"
 msgstr "O que há de novo"
 
 # Version 1.21 whats new message
+msgid "Added favorite site functionality."
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added moth trap weather attributes."
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added the Slovak language."
+msgstr ""
+
+# Version 1.21 whats new message
 msgid "Enabled multiple drafts functionality"
 msgstr ""
 
@@ -2202,7 +2214,7 @@ msgstr ""
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Que grupos de espécies registaste?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
@@ -2433,4 +2445,106 @@ msgstr ""
 
 # Report page label
 msgid "Show less"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Your track name"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Here you can select or swipe to edit your previous tracks"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Edit"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Edit Location"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Name"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Favourite"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Are you sure you want to delete the saved track?"
+msgstr ""
+
+# Part of weather attributes
+msgid "Moon phase"
+msgstr ""
+
+# Moon phase values
+msgid "New"
+msgstr ""
+
+#  Moon phase values
+msgid "Waxing crescent"
+msgstr ""
+
+#  Moon phase values
+msgid "First quarter"
+msgstr ""
+
+#  Moon phase values
+msgid "Waxing gibbous"
+msgstr ""
+
+#  Moon phase values
+msgid "Full"
+msgstr ""
+
+#  Moon phase values
+msgid "Waning gibbous"
+msgstr ""
+
+#  Moon phase values
+msgid "Last quarter"
+msgstr ""
+
+#  Moon phase values
+msgid "Waning crescent"
+msgstr ""
+
+# Info message
+msgid "Trap start"
+msgstr ""
+
+# Info message
+msgid "Trap end"
+msgstr ""
+
+# Info message
+msgid "Start Weather"
+msgstr ""
+
+# Info message
+msgid "End Weather"
+msgstr ""
+
+# Info message
+msgid "Please add the moth trap."
+msgstr ""
+
+# Info message
+msgid ""
+"We have noticed that your survey has <1>long sections</1>. Please make sure "
+"it is a correct <3>location</3>!"
+msgstr ""
+
+# Info message
+msgid "Defaulted to sunset time"
+msgstr ""
+
+# Info message
+msgid "Defaulted to sunrise time"
+msgstr ""
+
+# Error message
+msgid "Location services are not enabled"
 msgstr ""

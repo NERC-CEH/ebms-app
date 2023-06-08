@@ -2,15 +2,15 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
-# Daniela Lehner <d.lehner@bioforschung.at>, 2021
 # Karolis, 2021
 # Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2022
 # Elisabeth Kühn, 2022
+# Daniela Lehner <daleh@gmx.at>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Elisabeth Kühn, 2022\n"
+"Last-Translator: Daniela Lehner <daleh@gmx.at>, 2023\n"
 "Language-Team: German (Germany) (https://app.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1925,6 +1925,18 @@ msgid "What's New"
 msgstr "Was gibt es Neues?"
 
 # Version 1.21 whats new message
+msgid "Added favorite site functionality."
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added moth trap weather attributes."
+msgstr ""
+
+# Version 1.21 whats new message
+msgid "Added the Slovak language."
+msgstr ""
+
+# Version 1.21 whats new message
 msgid "Enabled multiple drafts functionality"
 msgstr ""
 
@@ -2154,11 +2166,11 @@ msgstr "Kenia"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Ablehnen"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Annehmen"
 
 # GPS permission alert title
 msgid "Location permission"
@@ -2176,7 +2188,7 @@ msgstr ""
 
 # Delete account
 msgid "Delete account"
-msgstr ""
+msgstr "Konto löschen"
 
 # Delete account
 msgid "You can delete your user account from the system."
@@ -2184,7 +2196,7 @@ msgstr ""
 
 # Delete account alert header
 msgid "Account delete"
-msgstr ""
+msgstr "Konto gelöscht"
 
 # Delete account alert message
 msgid ""
@@ -2201,43 +2213,44 @@ msgstr ""
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Gruppen"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Welche Artengruppen hast Du gezählt?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Zielart auswählen"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
 msgstr ""
+"Es wurde noch kein Foto hinzugefügt. <br/>Drücke <3></3> zum Hinzufügen."
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Flügel"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Verhalten"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Richtung"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Seehöhe"
 
 # Part of Painted lady survey
 msgid "Compass"
@@ -2245,7 +2258,7 @@ msgstr ""
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Beobachtung löschen"
 
 # Alert message
 msgid ""
@@ -2254,15 +2267,15 @@ msgstr ""
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Frisch"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Abgeflogen"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
@@ -2278,7 +2291,7 @@ msgstr ""
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Nektarquelle"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
@@ -2294,7 +2307,7 @@ msgstr ""
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Eiablagepflanze"
 
 # Part of painted lady
 msgid "Migrating"
@@ -2335,7 +2348,7 @@ msgstr ""
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Andere Futterpflanze"
 
 # Painted lady direction option
 msgid "Desert nettle"
@@ -2347,15 +2360,15 @@ msgstr ""
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Disteln"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Futterpflanze"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Bitte wähle die Futterpflanzen aus"
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
@@ -2367,11 +2380,11 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Zustand der Flügel"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Nektar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
@@ -2379,7 +2392,7 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Andere Arten"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
@@ -2391,7 +2404,7 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Kopiert!"
 
 # Part of Painted lady survey
 msgid ""
@@ -2400,15 +2413,15 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Höhe über dem Boden (in Metern)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Höhe"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Erfassung starten"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
@@ -2416,7 +2429,7 @@ msgstr ""
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Anleitung"
 
 # Country name
 msgid "Saint Helena"
@@ -2424,7 +2437,7 @@ msgstr ""
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Eiablage"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
@@ -2445,3 +2458,105 @@ msgstr ""
 # Report page label
 msgid "Show less"
 msgstr ""
+
+# Part of favorite track selection
+msgid "Your track name"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Here you can select or swipe to edit your previous tracks"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Edit"
+msgstr "Beabeiten"
+
+# Part of favorite track selection
+msgid "Edit Location"
+msgstr "Standort bearbeiten"
+
+# Part of favorite track selection
+msgid "Name"
+msgstr "Name"
+
+# Part of favorite track selection
+msgid "Favourite"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Are you sure you want to delete the saved track?"
+msgstr ""
+
+# Part of weather attributes
+msgid "Moon phase"
+msgstr "Mondphase"
+
+# Moon phase values
+msgid "New"
+msgstr "Neu"
+
+#  Moon phase values
+msgid "Waxing crescent"
+msgstr ""
+
+#  Moon phase values
+msgid "First quarter"
+msgstr ""
+
+#  Moon phase values
+msgid "Waxing gibbous"
+msgstr ""
+
+#  Moon phase values
+msgid "Full"
+msgstr "Vollmond"
+
+#  Moon phase values
+msgid "Waning gibbous"
+msgstr ""
+
+#  Moon phase values
+msgid "Last quarter"
+msgstr ""
+
+#  Moon phase values
+msgid "Waning crescent"
+msgstr ""
+
+# Info message
+msgid "Trap start"
+msgstr ""
+
+# Info message
+msgid "Trap end"
+msgstr ""
+
+# Info message
+msgid "Start Weather"
+msgstr ""
+
+# Info message
+msgid "End Weather"
+msgstr ""
+
+# Info message
+msgid "Please add the moth trap."
+msgstr ""
+
+# Info message
+msgid ""
+"We have noticed that your survey has <1>long sections</1>. Please make sure "
+"it is a correct <3>location</3>!"
+msgstr ""
+
+# Info message
+msgid "Defaulted to sunset time"
+msgstr ""
+
+# Info message
+msgid "Defaulted to sunrise time"
+msgstr ""
+
+# Error message
+msgid "Location services are not enabled"
+msgstr "Deine Standortdienste sind deaktiviert. "

@@ -1911,6 +1911,18 @@ msgid "What's New"
 msgstr "Novedades"
 
 # Version 1.21 whats new message
+msgid "Added favorite site functionality."
+msgstr "Añadida la funcionalidad de sitio favorito."
+
+# Version 1.21 whats new message
+msgid "Added moth trap weather attributes."
+msgstr "Añadidos atributos meteorológicos a la trampa para polillas."
+
+# Version 1.21 whats new message
+msgid "Added the Slovak language."
+msgstr "Añadidos el idioma Eslovaco."
+
+# Version 1.21 whats new message
 msgid "Enabled multiple drafts functionality"
 msgstr "Habilitada la función de borradores múltiples"
 
@@ -2451,3 +2463,108 @@ msgstr "La suma del recuento debe ser mayor que 0"
 # Report page label
 msgid "Show less"
 msgstr "Mostrar menos"
+
+# Part of favorite track selection
+msgid "Your track name"
+msgstr "Nombre de su ruta"
+
+# Part of favorite track selection
+msgid "Here you can select or swipe to edit your previous tracks"
+msgstr ""
+"Aquí puedes seleccionar o deslizar el dedo para editar tus rutas anteriores."
+
+# Part of favorite track selection
+msgid "Edit"
+msgstr "Editar"
+
+# Part of favorite track selection
+msgid "Edit Location"
+msgstr "Editar localización"
+
+# Part of favorite track selection
+msgid "Name"
+msgstr "Nombre"
+
+# Part of favorite track selection
+msgid "Favourite"
+msgstr "Favorito"
+
+# Part of favorite track selection
+msgid "Are you sure you want to delete the saved track?"
+msgstr "¿Está seguro de que desea eliminar la ruta guardada?"
+
+# Part of weather attributes
+msgid "Moon phase"
+msgstr "Fase de la luna"
+
+# Moon phase values
+msgid "New"
+msgstr "Nueva"
+
+#  Moon phase values
+msgid "Waxing crescent"
+msgstr "Luna menguante"
+
+#  Moon phase values
+msgid "First quarter"
+msgstr "Cuarto menguante"
+
+#  Moon phase values
+msgid "Waxing gibbous"
+msgstr "Gibosa menguante"
+
+#  Moon phase values
+msgid "Full"
+msgstr "Llena"
+
+#  Moon phase values
+msgid "Waning gibbous"
+msgstr "Gibosa creciente"
+
+#  Moon phase values
+msgid "Last quarter"
+msgstr "Cuarto creciente"
+
+#  Moon phase values
+msgid "Waning crescent"
+msgstr "Luna creciente"
+
+# Info message
+msgid "Trap start"
+msgstr "Inicio de la trampa"
+
+# Info message
+msgid "Trap end"
+msgstr "Fin de la trampa"
+
+# Info message
+msgid "Start Weather"
+msgstr "Tiempo de Inicio"
+
+# Info message
+msgid "End Weather"
+msgstr "Tiempo final"
+
+# Info message
+msgid "Please add the moth trap."
+msgstr "Por favor añada la trampa de polilla"
+
+# Info message
+msgid ""
+"We have noticed that your survey has <1>long sections</1>. Please make sure "
+"it is a correct <3>location</3>!"
+msgstr ""
+"Hemos observado que su muestreo tiene <1>secciones largas</1>. Por favor, "
+"asegúrese de que es correcta <3>la ubicación</3>!"
+
+# Info message
+msgid "Defaulted to sunset time"
+msgstr "Por defecto hora de la puesta de sol"
+
+# Info message
+msgid "Defaulted to sunrise time"
+msgstr "Por defecto hora de salida del sol"
+
+# Error message
+msgid "Location services are not enabled"
+msgstr "Servicios de ubicación no están activados"
