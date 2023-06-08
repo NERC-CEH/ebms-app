@@ -2458,3 +2458,7 @@ msgstr "Defaulted to sunrise time"
 # Error message 
 msgid "Location services are not enabled"
 msgstr "Location services are not enabled"
+
+# Part of favorite track
+msgid "You have no previous tracks."
+msgstr "You have no previous tracks."
