@@ -1,6 +1,6 @@
 import { FC, useContext } from 'react';
 import { observer } from 'mobx-react';
-import { IonButton, NavContext } from '@ionic/react';
+import { IonButton, NavContext, IonLabel } from '@ionic/react';
 import i18n from 'i18next';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { Page, Header, useAlert } from '@flumens';
@@ -89,7 +89,9 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
 
     return (
       <IonButton onClick={navigateToSection}>
-        <T>Next</T>
+        <IonLabel>
+          <T>Next</T>
+        </IonLabel>
       </IonButton>
     );
   };

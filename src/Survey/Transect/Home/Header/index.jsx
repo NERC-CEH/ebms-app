@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { IonButton } from '@ionic/react';
+import { IonButton, IonLabel } from '@ionic/react';
 import { Header } from '@flumens';
 import { Trans as T } from 'react-i18next';
 
@@ -13,7 +13,7 @@ function getFinishButton(onSubmit, isEditing, isValid) {
       className="primary-button"
       onClick={onSubmit}
     >
-      {label}
+      <IonLabel>{label}</IonLabel>
     </IonButton>
   );
 }

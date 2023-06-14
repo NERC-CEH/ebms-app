@@ -184,6 +184,13 @@ html[mode='ios'] .tabs-inner {
 .primary-button {
   --padding-start: 17px !important;
   --padding-end: 17px !important;
+  max-width: 30vw;
+
+  ion-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px 0;
+  }
 }
 
 // Display occurrence taxon name as Common and scientific names.

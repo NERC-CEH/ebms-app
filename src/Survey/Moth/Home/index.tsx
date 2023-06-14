@@ -12,7 +12,7 @@ import { getUnkownSpecies } from 'Survey/Moth/config';
 import { Page, Header, useAlert, useToast, captureImage } from '@flumens';
 import Media from 'models/media';
 import { useUserStatusCheck } from 'models/user';
-import { IonButton, NavContext, isPlatform } from '@ionic/react';
+import { IonButton, NavContext, isPlatform, IonLabel } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { usePromptImageSource } from 'common/Components/PhotoPicker';
 import Main from './Main';
@@ -135,7 +135,7 @@ const HomeController: FC<Props> = ({ sample }) => {
         className="primary-button"
         onClick={onSubmit}
       >
-        {label}
+        <IonLabel>{label}</IonLabel>
       </IonButton>
     );
   };

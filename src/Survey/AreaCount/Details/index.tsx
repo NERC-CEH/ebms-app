@@ -1,7 +1,7 @@
 import { FC, useContext, useState } from 'react';
 import Sample, { useValidateCheck } from 'models/sample';
 import { observer } from 'mobx-react';
-import { IonButton, NavContext, IonButtons } from '@ionic/react';
+import { IonButton, NavContext, IonButtons, IonLabel } from '@ionic/react';
 import { useRouteMatch, useLocation } from 'react-router';
 import { Page, Header, useOnBackButton, useAlert } from '@flumens';
 import { Trans as T } from 'react-i18next';
@@ -119,7 +119,9 @@ const DetailsController: FC<Props> = ({ sample }) => {
       shape="round"
       className="start-count-button"
     >
-      <T>Start Count</T>
+      <IonLabel>
+        <T>Start Count</T>
+      </IonLabel>
     </IonButton>
   );
 

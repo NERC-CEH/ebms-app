@@ -2,7 +2,7 @@ import { FC, useContext, useEffect } from 'react';
 import Sample, { useValidateCheck } from 'models/sample';
 import { observer } from 'mobx-react';
 import { Page, Header } from '@flumens';
-import { IonButton, NavContext } from '@ionic/react';
+import { IonButton, NavContext, IonLabel } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import SunCalc from 'suncalc';
@@ -67,7 +67,9 @@ const DetailsController: FC<Props> = ({ sample }) => {
       onClick={onFinish}
       color={!sample.validateRemote() ? 'secondary' : 'medium'}
     >
-      <T>Next</T>
+      <IonLabel>
+        <T>Next</T>
+      </IonLabel>
     </IonButton>
   );
 

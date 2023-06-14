@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react';
 import { Page, Header, Main } from '@flumens';
 import locations from 'common/models/collections/locations';
-import { IonButton } from '@ionic/react';
+import { IonButton, IonLabel } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
 import Sample from 'models/sample';
@@ -27,8 +27,10 @@ const Location: FC<Props> = ({ sample }) => {
   useEffect(refreshMothTrapsWrap, []);
 
   const newTrapButton = !isDisabled && (
-    <IonButton routerLink="/location">
-      <T>Add New</T>
+    <IonButton className="primary-button" routerLink="/location">
+      <IonLabel>
+        <T>Add New</T>
+      </IonLabel>
     </IonButton>
   );
 
