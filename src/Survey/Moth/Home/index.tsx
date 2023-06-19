@@ -6,9 +6,12 @@ import { Capacitor } from '@capacitor/core';
 import Occurrence from 'models/occurrence';
 import appModel from 'models/app';
 import CONFIG from 'common/config';
+import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
+import i18n from 'i18next';
 import { useRouteMatch } from 'react-router';
 import { getUnkownSpecies } from 'Survey/Moth/config';
+import savedSamples from 'models/collections/samples';
 import { Page, Header, useAlert, useToast, captureImage } from '@flumens';
 import Media from 'models/media';
 import { useUserStatusCheck } from 'models/user';
@@ -18,27 +21,27 @@ import { usePromptImageSource } from 'common/Components/PhotoPicker';
 import Main from './Main';
 import './styles.scss';
 
-function useDeleteSpeciesPrompt() {
+const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
 
-  function showDeleteSpeciesPrompt(occ: Occurrence) {
-    const prompt = () => {
+  function showDeleteSpeciesPrompt(taxon: any) {
+    const prompt = (resolve: any) => {
+      const taxonName = taxon.scientific_name;
       alert({
-        header: 'Delete',
-        message: (
-          <T>
-            Are you sure you want to delete {{ taxon: occ.getTaxonName() }} ?
-          </T>
-        ),
+        header: i18n.t('Delete'),
+        skipTranslation: true,
+        message: i18n.t('Are you sure you want to delete {{taxon}} ?', {
+          taxon: taxonName,
+        }),
         buttons: [
           {
-            text: 'Cancel',
+            text: i18n.t('Cancel'),
             role: 'cancel',
           },
           {
-            text: 'Delete',
+            text: i18n.t('Delete'),
             role: 'destructive',
-            handler: () => occ.destroy(),
+            handler: resolve,
           },
         ],
       });
@@ -48,6 +51,12 @@ function useDeleteSpeciesPrompt() {
   }
 
   return showDeleteSpeciesPrompt;
+};
+
+function byCreateTime(model1: Sample, model2: Sample) {
+  const date1 = new Date(model1.metadata.created_on);
+  const date2 = new Date(model2.metadata.created_on);
+  return date2.getTime() - date1.getTime();
 }
 
 interface Props {
@@ -113,14 +122,75 @@ const HomeController: FC<Props> = ({ sample }) => {
     await _processSubmission();
   };
 
-  const deleteOccurrence = (occ: Occurrence) => {
-    showDeleteSpeciesPrompt(occ);
+  // const deleteOccurrence = (occ: Occurrence) => {
+  //   showDeleteSpeciesPrompt(occ);
+  // };
+
+  const deleteFromShallowList = (taxon: any) => {
+    const withSamePreferredIdOrWarehouseId = (t: any) => {
+      if (t.preferredId) return t.preferredId === taxon.preferredId;
+
+      return t.warehouse_id === taxon.warehouse_id;
+    };
+
+    const taxonIndexInShallowList = sample.shallowSpeciesList.findIndex(
+      withSamePreferredIdOrWarehouseId
+    );
+
+    sample.shallowSpeciesList.splice(taxonIndexInShallowList, 1);
   };
 
-  const increaseCount = (occ: Occurrence, is5x: boolean) => {
-    occ.attrs.count += is5x ? 5 : 1;
+  const deleteSpecies = async (taxon: any, isShallow: boolean, ref: any) => {
+    if (!sample.isSurveyPreciseSingleSpecies() && isShallow) {
+      deleteFromShallowList(taxon);
 
-    occ.save();
+      await ref.current.closeOpened();
+
+      return;
+    }
+
+    const destroyWrap = () => {
+      const matchingTaxon = (occ: Occurrence) =>
+        occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
+      const subSamplesMatchingTaxon = sample.occurrences.filter(matchingTaxon);
+
+      const destroy = (occ: Occurrence) => occ.destroy();
+      subSamplesMatchingTaxon.forEach(destroy);
+    };
+
+    showDeleteSpeciesPrompt(taxon).then(destroyWrap);
+  };
+
+  const navigateToSpeciesOccurrences = (taxon: any) => {
+    const matchingTaxon = (occ: Occurrence) =>
+      occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
+    const occ = sample.occurrences.find(matchingTaxon);
+
+    if (!occ) return;
+
+    navigate(`${match.url}/occ/${occ.cid}`);
+  };
+
+  const increaseCount = (taxon: any, isShallow: boolean, is5x: boolean) => {
+    if (isShallow) {
+      deleteFromShallowList(taxon);
+
+      const survey = sample.getSurvey();
+      const newOccurrence = survey.occ.create(Occurrence, taxon);
+      // newOccurrence.attrs.taxon.machineInvolvement = machineInvolvement;
+      sample.occurrences.push(newOccurrence);
+      sample.save();
+    } else {
+      const matchingTaxon = (occ: Occurrence) =>
+        occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
+
+      const occ = sample.occurrences.find(matchingTaxon);
+
+      if (!occ) return;
+
+      occ.attrs.count += is5x ? 5 : 1;
+      occ.save();
+    }
   };
 
   const getFinishButton = () => {
@@ -230,6 +300,73 @@ const HomeController: FC<Props> = ({ sample }) => {
     });
   };
 
+  const getPreviousSurvey = () => {
+    const sortedSavedSamples = [...savedSamples].sort(byCreateTime).reverse();
+
+    const matchingSampleId = (s: Sample) => s.cid === sample.cid;
+    const currentSampleIndex = sortedSavedSamples.findIndex(matchingSampleId);
+
+    const isFirstSurvey = !currentSampleIndex;
+    if (isFirstSurvey) return null;
+
+    const previousSurveys = sortedSavedSamples
+      .slice(0, currentSampleIndex)
+      .reverse();
+
+    const matchingSurvey = (s: Sample) => s.getSurvey().name === 'moth';
+    const previousSurvey = previousSurveys.find(matchingSurvey);
+
+    return previousSurvey;
+  };
+
+  const copyPreviousSurveyTaxonList = () => {
+    if (sample.metadata.saved) return;
+
+    const previousSurvey = getPreviousSurvey();
+    if (!previousSurvey) {
+      toast.warn('Sorry, no previous survey to copy species from.');
+      return;
+    }
+
+    const getSpeciesId = (occ: Occurrence) =>
+      occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
+    const existingSpeciesIds = sample.occurrences.map(getSpeciesId);
+
+    const uniqueSpeciesList: any = [];
+    const getNewSpeciesOnly = ({ warehouse_id, preferredId }: any) => {
+      const speciesID = preferredId || warehouse_id;
+
+      if (uniqueSpeciesList.includes(speciesID)) {
+        return false;
+      }
+      uniqueSpeciesList.push(speciesID);
+      return !existingSpeciesIds.includes(speciesID);
+    };
+
+    const getTaxon = (occ: Occurrence) => toJS(occ.attrs.taxon);
+    const newSpeciesList = previousSurvey.occurrences
+      .map(getTaxon)
+      .filter(getNewSpeciesOnly) as [];
+
+    // copy but retain old observable ref
+    sample.shallowSpeciesList.splice(
+      0,
+      sample.shallowSpeciesList.length,
+      ...newSpeciesList
+    );
+
+    if (!newSpeciesList.length) {
+      toast.warn('Sorry, no species were found to copy.');
+    } else {
+      toast.success(
+        i18n.t('You have successfully copied {{speciesCount}} species.', {
+          speciesCount: newSpeciesList.length,
+        }),
+        { skipTranslation: true }
+      );
+    }
+  };
+
   const trainingModeSubheader = isTraining && (
     <div className="training-survey">
       <T>Training Mode</T>
@@ -247,12 +384,14 @@ const HomeController: FC<Props> = ({ sample }) => {
         match={match}
         sample={sample}
         increaseCount={increaseCount}
-        deleteSpecies={deleteOccurrence}
+        deleteSpecies={deleteSpecies}
         isDisabled={isDisabled}
         photoSelect={photoSelect}
         useImageIdentifier={useImageIdentifier}
         onIdentifyOccurrence={onIdentifyOccurrence}
         onIdentifyAllOccurrences={onIdentifyAllOccurrences}
+        copyPreviousSurveyTaxonList={copyPreviousSurveyTaxonList}
+        navigateToSpeciesOccurrences={navigateToSpeciesOccurrences}
       />
     </Page>
   );

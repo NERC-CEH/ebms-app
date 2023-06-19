@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useRef } from 'react';
 import Sample from 'models/sample';
 import Occurrence from 'models/occurrence';
 import config from 'common/config';
@@ -8,6 +8,7 @@ import {
   InfoBackgroundMessage,
   useAlert,
   InfoMessage,
+  LongPressButton,
 } from '@flumens';
 import {
   IonList,
@@ -23,6 +24,7 @@ import {
 } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
+import { toJS } from 'mobx';
 import clsx from 'clsx';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import {
@@ -59,6 +61,36 @@ function useDisabledImageIdentifierAlert() {
   return shownDisabledImageIdentifierAlert;
 }
 
+const getDefaultTaxonCount = (taxon: any) => ({
+  count: 0,
+  taxon,
+});
+
+const buildSpeciesCount = (agg: any, occ: Occurrence) => {
+  const taxon = toJS(occ.attrs.taxon);
+  const id = taxon.warehouse_id;
+
+  agg[id] = agg[id] || getDefaultTaxonCount(taxon); // eslint-disable-line
+
+  agg[id].count = toJS(occ.attrs.count); // eslint-disable-line
+
+  agg[id].updated_on = new Date(occ.metadata.updated_on).getTime(); // eslint-disable-line
+
+  return agg;
+};
+
+function byCreateTime(occ1: Occurrence, occ2: Occurrence) {
+  const date1 = new Date(occ1.metadata.created_on);
+  const date2 = new Date(occ2.metadata.created_on);
+  return date2.getTime() - date1.getTime();
+}
+
+function byTime([, occ1]: any, [, occ2]: any) {
+  const date1 = new Date(occ1.updated_on);
+  const date2 = new Date(occ2.updated_on);
+  return date2.getTime() - date1.getTime();
+}
+
 type Props = {
   match: any;
   sample: Sample;
@@ -69,13 +101,9 @@ type Props = {
   useImageIdentifier: boolean;
   onIdentifyOccurrence: any;
   onIdentifyAllOccurrences: any;
+  copyPreviousSurveyTaxonList: any;
+  navigateToSpeciesOccurrences: any;
 };
-
-function byCreateTime(occ1: Occurrence, occ2: Occurrence) {
-  const date1 = new Date(occ1.metadata.created_on);
-  const date2 = new Date(occ2.metadata.created_on);
-  return date2.getTime() - date1.getTime();
-}
 
 const HomeMain: FC<Props> = ({
   match,
@@ -87,45 +115,80 @@ const HomeMain: FC<Props> = ({
   useImageIdentifier,
   onIdentifyOccurrence,
   onIdentifyAllOccurrences,
+  copyPreviousSurveyTaxonList,
+  navigateToSpeciesOccurrences,
 }) => {
   const { navigate } = useContext(NavContext);
+  const alert = useAlert();
+  const ref = useRef();
   const shownDisabledImageIdentifierAlert = useDisabledImageIdentifierAlert();
 
   const UNKNOWN_SPECIES_PREFFERD_ID = getUnkownSpecies().warehouse_id;
 
+  const showCopyOptions = () => {
+    alert({
+      header: 'Copy species',
+      message: 'Are you sure want to copy previous survey species list?',
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: 'Copy',
+          cssClass: 'danger',
+          handler: copyPreviousSurveyTaxonList,
+        },
+      ],
+    });
+  };
+
   const getSpeciesAddButton = () => {
-    const onClick = () => {
+    const navigateToTaxonSearch = () => {
       navigate(`/survey/moth/${sample.cid}/taxon`);
     };
 
+    const showCopyOptionsWrap = () => {
+      if (sample.metadata.saved) return;
+
+      showCopyOptions();
+    };
+
     return (
-      <IonButton color="primary" className="add" onClick={onClick}>
+      <LongPressButton
+        color="primary"
+        className="add"
+        onClick={navigateToTaxonSearch}
+        onLongClick={showCopyOptionsWrap}
+      >
         <IonLabel>
           <T>Add species</T>
         </IonLabel>
-      </IonButton>
+      </LongPressButton>
     );
   };
 
-  const getSpeciesEntry = (occ: Occurrence) => {
-    const speciesName = occ.getTaxonName();
-    const speciesCount = occ.attrs.count;
+  const getSpeciesEntry = ([id, species]: any) => {
+    const { taxon } = species;
 
-    const increaseCountWrap = () => increaseCount(occ);
-    const increase5xCountWrap = () => increaseCount(occ, true);
+    const speciesName = taxon[taxon.found_in_name];
 
-    const deleteSpeciesWrap = () => deleteSpecies(occ);
+    const matchingTaxon = (occ: Occurrence) =>
+      occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
+    const isShallow = !sample.occurrences.filter(matchingTaxon).length;
 
-    const navigateToSpeciesOccurrences = () =>
-      navigate(`${match.url}/occ/${occ.cid}`);
+    const increaseCountWrap = () => increaseCount(taxon, isShallow);
+
+    const increase5xCountWrap = () => increaseCount(taxon, isShallow, true);
+
+    const deleteSpeciesWrap = () => deleteSpecies(taxon, isShallow, ref);
+
+    const navigateToOccurrence = () => navigateToSpeciesOccurrences(taxon);
 
     return (
-      <IonItemSliding key={occ.cid}>
-        <IonItem onClick={navigateToSpeciesOccurrences} detail={!isDisabled}>
+      <IonItemSliding key={id} ref={ref as any}>
+        <IonItem detail={!isDisabled} onClick={navigateToOccurrence}>
           <IncrementalButton
             onClick={increaseCountWrap}
             onLongClick={increase5xCountWrap}
-            value={speciesCount}
+            value={species.count}
             disabled={isDisabled}
           />
           <IonLabel>{speciesName}</IonLabel>
@@ -224,7 +287,7 @@ const HomeMain: FC<Props> = ({
   };
 
   const getSpeciesList = () => {
-    if (!sample.occurrences.length) {
+    if (!sample.occurrences.length && !sample.shallowSpeciesList.length) {
       return (
         <IonList id="list" lines="full">
           <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
@@ -232,13 +295,25 @@ const HomeMain: FC<Props> = ({
       );
     }
 
-    const byKnownSpecies = (occ: Occurrence) =>
-      occ.attrs.taxon &&
-      occ.attrs.taxon.warehouse_id !== UNKNOWN_SPECIES_PREFFERD_ID;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const byKnownSpecies = ([, species]: any) => {
+      return (
+        species.taxon &&
+        species.taxon.warehouse_id !== UNKNOWN_SPECIES_PREFFERD_ID
+      );
+    };
 
-    const speciesList = sample.occurrences
+    const speciesCounts = [...sample.occurrences].reduce(buildSpeciesCount, {});
+    const shallowCounts = sample.shallowSpeciesList.map(getDefaultTaxonCount);
+
+    const counts = {
+      ...speciesCounts,
+      ...shallowCounts,
+    };
+
+    const speciesList = Object.entries(counts)
       .filter(byKnownSpecies)
-      .sort(byCreateTime)
+      .sort(byTime)
       .map(getSpeciesEntry);
 
     const count = speciesList.length > 1 ? speciesList.length : null;
