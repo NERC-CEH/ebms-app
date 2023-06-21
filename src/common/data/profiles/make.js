@@ -35,10 +35,6 @@ function getCountryMap(string) {
   return map;
 }
 
-async function fetchSpeciesProfileInfo() {
-  return csv({ checkType: true }).fromFile('./cache/species.profiles.csv');
-}
-
 async function fetchSpecies(listID) {
   const userAuth = btoa(`${REPORT_USER_EMAIL}:${REPORT_USER_PASS}`);
   const fetchAbundanceWrap = resolve => {
