@@ -7,7 +7,6 @@
 
   ion-card-header {
     background: var(--ion-page-background);
-    margin-top: -3px;
 
     ion-card-title {
       color: var(--ion-color-primary-shade);
@@ -29,6 +28,10 @@
     margin-top: 15px;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  ion-card-content.description {
+    padding-bottom: 15px;
   }
 
   .species-status {
@@ -61,5 +64,32 @@
     max-width: 500px;
     margin: 0 auto;
     background-color: #474c4a !important;
+  }
+
+  .swiper {
+    background: var(--ion-page-background);
+    overflow: visible;
+
+    .species-profile-photo {
+      position: relative;
+      overflow: hidden;
+      height: 240px;
+      background: var(--ion-page-background);
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: -20px;
+      background: var(--ion-page-background);
+
+      .swiper-pagination-bullet {
+        opacity: 0.5;
+        --bullet-background: var(--ion-color-medium);
+      }
+      .swiper-pagination-bullet-active {
+        opacity: 0.8;
+        background: var(--ion-color-primary);
+      }
+    }
   }
 }

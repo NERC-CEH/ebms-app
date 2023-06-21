@@ -16,6 +16,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import '@ionic/react/css/ionic-swiper.css';
 import { Trans as T } from 'react-i18next';
+import ImageWithBackground from 'common/Components/ImageWithBackground';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
 
@@ -50,17 +51,15 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }) => {
     const getSlide = (copyright, index) => {
       if (!copyright) return null;
 
+      const imageURL = `/images/${species.id}_${index}_image.jpg`;
+
       return (
         <SwiperSlide
-          // key={imageURL}
-          // onClick={showPhotoInFullScreenWrap}
+          key={imageURL}
+          onClick={openGallery}
           className="species-profile-photo"
         >
-          <img
-            src={`/images/${species.id}_${index}_image.jpg`}
-            alt="species"
-            onClick={openGallery}
-          />
+          <ImageWithBackground src={imageURL} />
         </SwiperSlide>
       );
     };
@@ -106,7 +105,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }) => {
           </IonCardContent>
         )}
 
-        <IonCardContent>
+        <IonCardContent className="description">
           <h3 className="species-label">
             <T>Description</T>:
           </h3>
