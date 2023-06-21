@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 
 import { useState } from 'react';
@@ -9,6 +10,11 @@ import {
   IonChip,
 } from '@ionic/react';
 import { Main, useOnBackButton } from '@flumens';
+import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import '@ionic/react/css/ionic-swiper.css';
 import { Trans as T } from 'react-i18next';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
@@ -33,6 +39,41 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }) => {
 
   const status = statuses[species.abundance[country]];
 
+  const getSlides = () => {
+    const { image_copyright } = species;
+
+    const slideOpts = {
+      initialSlide: 0,
+      speed: 400,
+    };
+
+    const getSlide = (copyright, index) => {
+      if (!copyright) return null;
+
+      return (
+        <SwiperSlide
+          // key={imageURL}
+          // onClick={showPhotoInFullScreenWrap}
+          className="species-profile-photo"
+        >
+          <img
+            src={`/images/${species.id}_${index}_image.jpg`}
+            alt="species"
+            onClick={openGallery}
+          />
+        </SwiperSlide>
+      );
+    };
+
+    const slideImage = image_copyright.map(getSlide);
+
+    return (
+      <Swiper modules={[Pagination]} pagination {...slideOpts}>
+        {slideImage}
+      </Swiper>
+    );
+  };
+
   /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   return (
     <>
@@ -43,11 +84,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }) => {
       />
 
       <Main id="species-profile" className="ion-padding">
-        <img
-          src={`/images/${species.image}_image.jpg`}
-          alt="species"
-          onClick={openGallery}
-        />
+        {getSlides()}
 
         <IonCardHeader>
           <IonCardTitle>{t(species.taxon, null, true)}</IonCardTitle>

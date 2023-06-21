@@ -104,6 +104,8 @@ export async function fetchUserSpeciesReport(showLastMontOnly) {
               field: 'event.event_id',
             },
           },
+
+          group_id: { min: { field: 'taxon.input_group_id' } },
         },
       },
     },

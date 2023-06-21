@@ -22,6 +22,13 @@ const speciesGroupImages = {
   261: bumblebeeIcon,
 };
 
+export const speciesListGroupImages = {
+  104: butterflyIcon,
+  114: mothIcon,
+  107: dragonflyIcon,
+  110: bumblebeeIcon,
+};
+
 const PAINTED_LADY_OCCURRENCE = 432422;
 
 export interface SpeciesGroup {

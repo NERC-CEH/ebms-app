@@ -4,6 +4,7 @@ import speciesProfiles, {
   Species as SpeciesProfile,
 } from 'common/data/profiles';
 import butterflyIcon from 'common/images/butterfly.svg';
+import { speciesListGroupImages } from 'models/occurrence';
 import './styles.scss';
 
 interface Props {
@@ -16,12 +17,19 @@ const SpeciesEntry: FC<Props> = ({ species }) => {
   // @ts-ignore
   const commonName = t(scientificName, null, true);
 
-  let avatar = <IonIcon icon={butterflyIcon} />;
+  const hasGroupId = species?.group_id?.value;
+  let avatar = hasGroupId ? (
+    <IonIcon icon={(speciesListGroupImages as any)[species?.group_id?.value]} />
+  ) : (
+    <IonIcon icon={butterflyIcon} />
+  );
 
   const byName = (sp: SpeciesProfile) => sp.taxon === scientificName;
-  const image = speciesProfiles.find(byName)?.image;
-  if (image) {
-    avatar = <img src={`/images/${image}_image.jpg`} />;
+  const image = speciesProfiles.find(byName);
+
+  const hasImage = image?.image_copyright?.length;
+  if (hasImage) {
+    avatar = <img src={`/images/${image.id}_0_image.jpg`} />;
   }
 
   return (

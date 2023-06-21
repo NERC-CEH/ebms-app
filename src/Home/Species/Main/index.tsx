@@ -57,7 +57,9 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
     };
     const byNotEmptyContent = (sp: SpeciesType) => {
       const hasDescription = (window as any).t(sp.descriptionKey, true);
-      return sp.image && hasDescription;
+      const hasImage = sp?.image_copyright?.length;
+
+      return hasImage && hasDescription;
     };
     const bySpeciesId = (sp1: SpeciesType, sp2: SpeciesType) =>
       sp1.sort_id - sp2.sort_id;
@@ -108,7 +110,7 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
     const { showCommonNamesInGuide } = appModel.attrs;
 
     const getSpeciesElement = (sp: SpeciesType) => {
-      const { id, taxon, image } = sp;
+      const { id, taxon } = sp;
 
       let label = taxon;
       if (showCommonNamesInGuide) {
@@ -128,7 +130,7 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
         >
           <div
             style={{
-              backgroundImage: `url('/images/${image}_thumbnail.jpg')`,
+              backgroundImage: `url('/images/${id}_thumbnail.jpg')`,
             }}
           >
             <span className="label">{label}</span>

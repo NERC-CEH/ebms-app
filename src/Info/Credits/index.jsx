@@ -4,7 +4,6 @@ import { Trans as T } from 'react-i18next';
 import species from 'common/data/profiles/index.json';
 import ExpandableList from 'Components/ExpandableList';
 import sponsorsLogo from './sponsors.png';
-
 import flumensLogo from './flumens.png';
 import './styles.scss';
 

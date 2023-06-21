@@ -17,12 +17,17 @@ const FullScreenPhotoViewer: FC<Props> = ({
 }) => {
   useOnHideModal(onClose);
 
-  const items = [
-    {
-      src: `/images/${species.image}_image.jpg`,
-      footer: `© ${species.image_copyright}`,
-    },
-  ];
+  const getImageSource = (_: any, index: number) => {
+    if (!species?.image_copyright) return null;
+    return {
+      src: `/images/${species.id}_${index}_image.jpg`,
+      footer: `© ${species.image_copyright[index]}`,
+    };
+  };
+
+  if (!species?.image_copyright?.length) return null;
+
+  const items = species?.image_copyright.map(getImageSource);
 
   return (
     <Gallery isOpen={showGallery} items={items} onClose={onClose} mode="md" />

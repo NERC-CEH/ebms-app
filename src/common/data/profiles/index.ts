@@ -59,10 +59,7 @@ export interface Species {
   taxon: string;
   family: string;
   descriptionKey: string;
-  image: any;
-  image_width: any;
-  image_height: any;
-  image_copyright: string;
+  image_copyright?: string[] | null;
   abundance: Abundance;
 }
 

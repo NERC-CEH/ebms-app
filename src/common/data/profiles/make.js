@@ -4,6 +4,8 @@ const fs = require('fs');
 const request = require('request'); // eslint-disable-line
 const csv = require('csvtojson'); // eslint-disable-line
 const btoa = require('btoa'); // eslint-disable-line
+const fetchSheet = require('@flumens/fetch-onedrive-excel'); // eslint-disable-line
+const speciesInfoList = require('./cache/species.json');
 
 const { APP_INDICIA_API_KEY, REPORT_USER_EMAIL, REPORT_USER_PASS } =
   process.env;
@@ -13,6 +15,11 @@ if (!APP_INDICIA_API_KEY && !REPORT_USER_EMAIL && REPORT_USER_PASS) {
     'APP_INDICIA_API_KEY and REPORT_USER_EMAIL and REPORT_USER_PASS is missing from env.'
   );
 }
+
+const drive =
+  'sites/flumensio.sharepoint.com,6230bb4b-9d52-4589-a065-9bebfdb9ce63,21520adc-6195-4b5f-91f6-7af0b129ff5c/drive';
+
+const file = '01UPL42ZUY3DX66DOFLNCJNHYIP24BVJCL';
 
 function getCountryMap(string) {
   const map = {};
@@ -87,9 +94,31 @@ function save(species) {
   return new Promise(saveWrap);
 }
 
-async function attachProfileInfo(species) {
-  const speciesInfoList = await fetchSpeciesProfileInfo();
+function saveToFile(data, name) {
+  const saveSpeciesToFileWrap = (resolve, reject) => {
+    const fileName = `./cache/${name}.json`;
+    console.log(`Writing ${fileName}`);
 
+    const dataOption = err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve(data);
+    };
+
+    fs.writeFile(fileName, JSON.stringify(data, null, 2), dataOption);
+  };
+  return new Promise(saveSpeciesToFileWrap);
+}
+
+const fetchAndSave = async sheet => {
+  const sheetData = await fetchSheet({ drive, file, sheet });
+  saveToFile(sheetData, sheet);
+};
+
+async function attachProfileInfo(species) {
   const getSpeciesWithInfo = sp => {
     const byTaxon = spInfo =>
       spInfo.taxon === sp.taxon || spInfo.taxon === sp.preferred_taxon;
@@ -111,8 +140,17 @@ async function attachProfileInfo(species) {
   return species.map(getSpeciesWithInfo).filter(hasValue).sort(byId);
 }
 
-fetchSpecies(251)
-  .then(attachProfileInfo)
-  .then(save)
-  // eslint-disable-next-line @getify/proper-arrows/name
-  .then(() => console.log('All done! 🚀'));
+const getData = async () => {
+  const species = await fetchSheet({ drive, file, sheet: 'species' });
+  saveToFile(species, 'species');
+
+  await fetchAndSave('species');
+
+  await fetchSpecies(251)
+    .then(attachProfileInfo)
+    .then(save)
+    // eslint-disable-next-line @getify/proper-arrows/name
+    .then(() => console.log('All done! 🚀'));
+};
+
+getData();
