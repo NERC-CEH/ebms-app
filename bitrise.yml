@@ -71,6 +71,7 @@ workflows:
                 npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/App.ipa
       - script@1:
           title: Git Tag
+          run_if: enveq "BUILD_ONLY" ""
           inputs:
             - content: |
                 TAG_NAME="v$NPM_PACKAGE_VERSION-$BITRISE_BUILD_NUMBER"
