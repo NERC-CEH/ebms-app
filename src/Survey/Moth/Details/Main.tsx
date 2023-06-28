@@ -1,5 +1,11 @@
 import { FC } from 'react';
-import { Main, MenuAttrItemFromModel, Attr, MenuAttrItem } from '@flumens';
+import {
+  Main,
+  MenuAttrItemFromModel,
+  Attr,
+  MenuAttrItem,
+  AttrPropsExtended,
+} from '@flumens';
 import { Trans as T } from 'react-i18next';
 import Sample from 'models/sample';
 import { IonList, IonItemDivider } from '@ionic/react';
@@ -21,7 +27,11 @@ const DetailsMain: FC<Props> = ({ sample }) => {
   const { url } = useRouteMatch();
   const { location, surveyStartTime, surveyEndTime } = sample.attrs;
   const survey = sample.getSurvey();
-  const surveyDateProps = survey.attrs.date.pageProps.attrProps.inputProps();
+
+  const dateAttrProps = survey.attrs!.date!.pageProps!
+    .attrProps as AttrPropsExtended;
+  const surveyDateProps = dateAttrProps.inputProps();
+
   const isDisabled = sample.isUploaded();
 
   // TODO: Backwards compatibility

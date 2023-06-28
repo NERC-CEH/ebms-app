@@ -319,7 +319,7 @@ class LocationModel extends Model {
     } catch (e: any) {
       this.remote.synchronising = false;
 
-      const err = e as AxiosError;
+      const err = e as AxiosError<any>;
 
       if (err.response?.status === 409 && err.response?.data.duplicate_of) {
         console.log('Location uploading duplicate was found');

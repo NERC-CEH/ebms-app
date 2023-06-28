@@ -37,8 +37,8 @@ const speciesNameSort = (occ1: Occurrence, occ2: Occurrence) => {
 };
 
 const speciesOccAddedTimeSort = (occ1: Occurrence, occ2: Occurrence) => {
-  const date1 = new Date(occ1.metadata.updated_on);
-  const date2 = new Date(occ2.metadata.updated_on);
+  const date1 = new Date(occ1.metadata.updatedOn);
+  const date2 = new Date(occ2.metadata.updatedOn);
   return date2.getTime() - date1.getTime();
 };
 

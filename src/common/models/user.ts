@@ -37,18 +37,18 @@ export class UserModel extends DrupalUserModel {
 
   userSpeciesLastMonthReport = observable([]) as any;
 
-  registerSchema = Yup.object().shape({
+  registerSchema: any = Yup.object().shape({
     email: Yup.string().email('email is not valid').required('Please fill in'),
     password: Yup.string().required('Please fill in'),
     firstName: Yup.string().required('Please fill in'),
     secondName: Yup.string().required('Please fill in'),
   });
 
-  resetSchema = Yup.object().shape({
+  resetSchema: any = Yup.object().shape({
     email: Yup.string().email('email is not valid').required('Please fill in'),
   });
 
-  loginSchema = Yup.object().shape({
+  loginSchema: any = Yup.object().shape({
     email: Yup.string().email('email is not valid').required('Please fill in'),
     password: Yup.string().required('Please fill in'),
   });

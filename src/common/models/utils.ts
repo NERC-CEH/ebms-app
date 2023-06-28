@@ -1,4 +1,4 @@
-import { AttrConfig } from 'common/config/surveys';
+import { AttrConfig } from 'Survey/common/config';
 
 export type CustomAttr = {
   attribute_id: string; // eslint-disable-line camelcase
@@ -46,6 +46,9 @@ export function getLocalAttributes(
     let localValues: any;
     const getConfigValueById = (remoteValue: CustomAttr) => {
       const byId = ({ id }: any) => remoteValue.raw_value === id;
+
+      if (!Array.isArray(localConfig.remote?.values))
+        return remoteValue.raw_value;
 
       const localValue = localConfig.remote?.values?.find(byId)?.value;
       if (!localValue) return remoteValue.raw_value;

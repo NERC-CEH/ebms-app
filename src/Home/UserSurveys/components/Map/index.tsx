@@ -89,7 +89,7 @@ const Component: FC<Props> = () => {
     const date = dateHelp.print(sample.attrs.date, true);
 
     let speciesInfo = '';
-    speciesInfo = !sample.metadata.synced_on
+    speciesInfo = !sample.metadata.syncedOn
       ? `<br/>(<i>${t('Pending')}</i>)`
       : '';
 

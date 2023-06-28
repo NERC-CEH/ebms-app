@@ -56,7 +56,7 @@ const Survey: FC<Props> = ({ sample, hasManyPending }) => {
 
   const { synchronising } = sample.remote;
 
-  const prettyDate = dateHelp.print(sample.metadata.created_on, true);
+  const prettyDate = dateHelp.print(sample.metadata.createdOn, true);
   const survey = sample.getSurvey();
 
   let speciesCount = sample.occurrences.length;

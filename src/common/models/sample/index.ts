@@ -1,4 +1,4 @@
-import { observable } from 'mobx';
+import { IObservableArray, observable } from 'mobx';
 import config from 'common/config';
 import userModel from 'models/user';
 import appModel from 'models/app';
@@ -6,12 +6,18 @@ import {
   device,
   getDeepErrorMessage,
   useAlert,
-  Sample,
+  Sample as SampleOriginal,
   SampleAttrs,
   SampleOptions,
+  SampleMetadata,
 } from '@flumens';
 import { useTranslation } from 'react-i18next';
-import surveys from 'common/config/surveys';
+import areaSurvey from 'Survey/AreaCount/config';
+import areaOldSurvey from 'Survey/AreaCount/configOld';
+import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
+import transectSurvey from 'Survey/Transect/config';
+import { Survey } from 'Survey/common/config';
+import mothSurvey from 'Survey/Moth/config';
 import groups from 'common/helpers/groups';
 import Occurrence, { SpeciesGroup } from '../occurrence';
 import Media from '../media';
@@ -23,7 +29,7 @@ import MetOfficeExtension from './metofficeExt';
 type Attrs = SampleAttrs & {
   date?: any;
   location?: any;
-  surveyStartTime?: any;
+  surveyStartTime?: string;
   surveyEndTime?: any;
   recorder?: any;
   comment?: any;
@@ -36,20 +42,58 @@ type Attrs = SampleAttrs & {
   speciesGroups: string[];
 };
 
-export default class AppSample extends Sample {
+export const surveyConfigs = {
+  [areaSurvey.name]: areaSurvey,
+  [areaOldSurvey.name]: areaOldSurvey as Survey, // deprecated
+  [areaSingleSpeciesSurvey.name]: areaSingleSpeciesSurvey,
+  [transectSurvey.name]: transectSurvey,
+  [mothSurvey.name]: mothSurvey,
+};
+
+type Metadata = SampleMetadata & {
+  /**
+   * Survey name.
+   */
+  survey: keyof typeof surveyConfigs;
+  /**
+   * If the sample was saved and ready for upload.
+   */
+  saved?: boolean;
+  /**
+   * If the sample has basic top-level details entered.
+   * Doesn't mean the details aren't changed and are valid though.
+   */
+  completedDetails?: boolean;
+
+  useDayFlyingMothsOnly?: boolean;
+
+  /**
+   * How long the survey was paused in milliseconds.
+   */
+  pausedTime?: number;
+
+  /**
+   * Has large sections in the walked trail.
+   */
+  hasBigJump?: boolean;
+
+  speciesGroups?: any[];
+};
+
+export default class Sample extends SampleOriginal<Attrs, Metadata> {
   static fromJSON(json: any) {
-    return super.fromJSON(json, Occurrence, AppSample, Media);
+    return super.fromJSON(json, Occurrence, Sample, Media);
   }
 
-  store = modelStore;
+  declare occurrences: IObservableArray<Occurrence>;
 
-  attrs: Attrs = this.attrs;
+  declare samples: IObservableArray<Sample>;
 
-  occurrences: Occurrence[] = this.occurrences;
+  declare media: IObservableArray<Media>;
 
-  samples: AppSample[] = this.samples;
+  declare parent?: Sample;
 
-  media: Media[] = this.media;
+  declare survey: Survey;
 
   shallowSpeciesList = observable([]);
 
@@ -69,6 +113,8 @@ export default class AppSample extends Sample {
 
   stopGPS: any; // from extension
 
+  startMetOfficePull: any; // from extension
+
   stopVibrateCounter: any; // from extension
 
   startVibrateCounter: any; // from extension
@@ -76,7 +122,7 @@ export default class AppSample extends Sample {
   hasLoctionMissingAndIsnotLocating: any; // from extension
 
   constructor(options: SampleOptions) {
-    super(options);
+    super({ ...options, store: modelStore });
 
     this.remote.url = `${config.backend.indicia.url}/index.php/services/rest`;
     // eslint-disable-next-line
@@ -84,15 +130,8 @@ export default class AppSample extends Sample {
       Authorization: `Bearer ${await userModel.getAccessToken()}`,
     });
 
-    this.metadata = observable({
-      training: appModel.attrs.useTraining ? 't' : null,
-      saved: null,
-      survey: null,
-      ...this.metadata,
-    });
-
     const surveyName = this.metadata.survey;
-    this.survey = surveys[surveyName];
+    this.survey = surveyConfigs[surveyName];
 
     Object.assign(this, VibrateExtension);
     Object.assign(this, MetOfficeExtension);
@@ -107,21 +146,18 @@ export default class AppSample extends Sample {
 
   cleanUp = () => {
     this.stopGPS();
-    const stopGPS = (smp: AppSample) => smp.stopGPS();
+    const stopGPS = (smp: Sample) => smp.stopGPS();
     this.samples.forEach(stopGPS);
     this.stopVibrateCounter();
   };
 
   getSurvey() {
-    let survey;
     try {
-      survey = super.getSurvey();
+      return super.getSurvey() as Survey;
     } catch (error) {
       console.error(`Survey config was missing ${this.metadata.survey}`);
-      return {};
+      return {} as Survey;
     }
-
-    return survey;
   }
 
   getPrettyName() {
@@ -178,12 +214,12 @@ export default class AppSample extends Sample {
   isTimerPaused = () => !!this.timerPausedTime.time;
 
   getTimerEndTime = () => {
-    const startTime = new Date(this.attrs.surveyStartTime);
+    const startTime = new Date(this.attrs.surveyStartTime!);
 
     return (
       startTime.getTime() +
       config.DEFAULT_SURVEY_TIME +
-      this.metadata.pausedTime
+      this.metadata.pausedTime!
     );
   };
 
@@ -310,7 +346,7 @@ export default class AppSample extends Sample {
   }
 }
 
-export const useValidateCheck = (sample: AppSample) => {
+export const useValidateCheck = (sample: Sample) => {
   const alert = useAlert();
   const { t } = useTranslation();
 

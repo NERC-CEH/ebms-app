@@ -1,10 +1,11 @@
 import { isPlatform } from '@ionic/react';
 import config from 'common/config';
-import Wkt from 'wicket';
+import wkt from 'wellknown';
 import { toJS } from 'mobx';
 import L from 'leaflet';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
 import {
+  Survey,
   deviceAttr,
   deviceVersionAttr,
   appVersionAttr,
@@ -23,15 +24,16 @@ import {
   dragonflyStageAttr,
   speciesGroupsAttr,
 } from 'Survey/common/config';
+import appModel from 'common/models/app';
 
-function transformToMeters(coordinates) {
-  const transform = ([lng, lat]) => {
+function transformToMeters(coordinates: any) {
+  const transform = ([lng, lat]: any) => {
     const { x, y } = L.Projection.SphericalMercator.project({ lat, lng });
     return [x, y];
   };
   return coordinates.map(transform);
 }
-function getGeomString(shape) {
+function getGeomString(shape: any) {
   const geoJSON = toJS(shape);
   if (geoJSON.type === 'Polygon') {
     geoJSON.coordinates[0] = transformToMeters(geoJSON.coordinates[0]);
@@ -39,11 +41,10 @@ function getGeomString(shape) {
     geoJSON.coordinates = transformToMeters(geoJSON.coordinates);
   }
 
-  const wkt = new Wkt.Wkt(geoJSON);
-  return wkt.write();
+  return wkt.stringify(geoJSON);
 }
 
-const survey = {
+const survey: Survey = {
   id: 565,
   name: 'precise-area',
   label: '15min Count',
@@ -121,15 +122,14 @@ const survey = {
       date: dateAttr,
     },
 
-    create(
-      AppSample,
+    create({
+      Sample,
       Occurrence,
       taxon,
-      _,
       surveyId = survey.id,
-      surveyName = survey.name
-    ) {
-      const sample = new AppSample({
+      surveyName = survey.name,
+    }) {
+      const sample = new Sample({
         metadata: {
           survey_id: surveyId,
           survey: surveyName,
@@ -139,15 +139,10 @@ const survey = {
         },
       });
 
-      if (!sample.metadata.survey_id) {
-        // TODO: remove this once it is known why this isn't set
-        console.error(
-          `Creating subsample had no survey_id so we are setting it to ${survey.id}`
-        );
-        sample.metadata.survey_id = survey.id; // eslint-disable-line
-      }
+      if (!Occurrence || !taxon)
+        throw new Error('Subsample create without Occurrence or taxon');
 
-      const occurrence = survey.smp.occ.create(Occurrence, taxon);
+      const occurrence = survey.smp!.occ!.create!({ Occurrence, taxon });
       sample.occurrences.push(occurrence);
 
       return sample;
@@ -182,7 +177,7 @@ const survey = {
         },
       },
 
-      create(Occurrence, taxon) {
+      create({ Occurrence, taxon }) {
         const isDragonfly = taxon.group === DRAGONFLY_GROUP;
 
         return new Occurrence({
@@ -209,14 +204,13 @@ const survey = {
     return null;
   },
 
-  create(
-    AppSample,
-    _,
+  create({
+    Sample,
     surveyId = survey.id,
     surveyName = survey.name,
-    hasGPSPermission
-  ) {
-    const sample = new AppSample({
+    hasGPSPermission,
+  }) {
+    const sample = new Sample({
       metadata: {
         survey_id: surveyId,
         survey: surveyName,
@@ -224,6 +218,7 @@ const survey = {
         speciesGroups: [],
       },
       attrs: {
+        training: appModel.attrs.useTraining,
         input_form: survey.webForm,
         device: isPlatform('android') ? 'android' : 'ios',
         app_version: config.version,
@@ -237,18 +232,12 @@ const survey = {
       },
     });
 
-    if (!sample.metadata.survey_id) {
-      // TODO: remove this once it is known why this isn't set
-      console.error(
-        `Creating sample had no survey_id so we are setting it to ${survey.id}`
-      );
-      sample.metadata.survey_id = survey.id; // eslint-disable-line
-    }
-
     if (!sample.isPreciseSingleSpeciesSurvey()) {
-      sample.attrs.surveyStartTime = sample.metadata.created_on; // this can't be done in defaults
+      const createdOnString = new Date(sample.metadata.createdOn).toISOString();
+      sample.attrs.surveyStartTime = createdOnString; // this can't be done in defaults
       sample.startVibrateCounter();
     }
+
     if (hasGPSPermission) {
       sample.toggleGPStracking();
     }
@@ -269,7 +258,7 @@ const survey = {
       submission.values.survey_id = survey.id; // eslint-disable-line
     }
 
-    const removeSubSamplesLayerIfNoLocation = subSample => {
+    const removeSubSamplesLayerIfNoLocation = (subSample: any) => {
       const locationIsMissing = !subSample.values.entered_sref;
       if (locationIsMissing) {
         submission.occurrences.push(subSample.occurrences[0]);

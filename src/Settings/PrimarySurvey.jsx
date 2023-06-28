@@ -9,7 +9,7 @@ import {
   IonLabel,
 } from '@ionic/react';
 import { Page, Main, Header } from '@flumens';
-import surveys from 'common/config/surveys';
+import { surveyConfigs as surveys } from 'common/models/sample';
 
 function SelectCountry({ appModel }) {
   const currentValue = appModel.attrs.primarySurvey;

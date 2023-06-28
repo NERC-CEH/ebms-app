@@ -61,7 +61,7 @@ function toggleTimer(sample: Sample) {
   if (sample.timerPausedTime.time) {
     const pausedTime =
       Date.now() - new Date(sample.timerPausedTime.time).getTime();
-    sample.metadata.pausedTime += pausedTime;
+    sample.metadata.pausedTime! += pausedTime;
     sample.timerPausedTime.time = null;
     sample.save();
     return;
@@ -71,8 +71,8 @@ function toggleTimer(sample: Sample) {
 /* eslint-enable no-param-reassign */
 
 function byCreateTime(model1: Sample, model2: Sample) {
-  const date1 = new Date(model1.metadata.created_on);
-  const date2 = new Date(model2.metadata.created_on);
+  const date1 = new Date(model1.metadata.createdOn);
+  const date2 = new Date(model2.metadata.createdOn);
   return date2.getTime() - date1.getTime();
 }
 
@@ -403,7 +403,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     const survey = sample.getSurvey();
 
     const addOneCount = () => {
-      const newSubSample = survey.smp.create(Sample, Occurrence, taxon, null);
+      const newSubSample = survey.smp!.create!({ Sample, Occurrence, taxon });
       sample.samples.push(newSubSample);
       newSubSample.startGPS();
     };
@@ -435,13 +435,12 @@ const HomeController: FC<Props> = ({ sample }) => {
     if (isLastSampleDeleted) {
       const survey = sample.getSurvey();
 
-      const zeroAbundace = 't';
-      const newSubSample = survey.smp.create(
+      const newSubSample = survey.smp!.create!({
         Sample,
         Occurrence,
         taxon,
-        zeroAbundace
-      );
+        zeroAbundance: 't',
+      });
       sample.samples.push(newSubSample);
       sample.save();
     }
@@ -465,11 +464,13 @@ const HomeController: FC<Props> = ({ sample }) => {
     const taxon = { ...copiedSubSample.occurrences[0].attrs.taxon };
 
     const survey = sample.getSurvey();
-    const newSubSample = survey.smp.create(Sample, Occurrence, taxon);
+    const newSubSample = survey.smp!.create!({ Sample, Occurrence, taxon });
     // eslint-disable-next-line no-param-reassign
     (sample.copyAttributes as any).timeOfSighting = new Date().toISOString();
 
-    newSubSample.occurrences[0].attrs = observable(sample.copyAttributes);
+    newSubSample.occurrences[0].attrs = observable(
+      sample.copyAttributes
+    ) as any;
 
     sample.samples.push(newSubSample);
     newSubSample.startGPS();
@@ -479,10 +480,10 @@ const HomeController: FC<Props> = ({ sample }) => {
     toast.success('Copied!', { color: 'tertiary' });
   };
 
-  const isDisabled = !!sample.metadata.synced_on;
+  const isDisabled = !!sample.metadata.syncedOn;
 
   const { areaSurveyListSortedByTime } = appModel.attrs;
-  const isTraining = !!sample.metadata.training;
+  const isTraining = !!sample.attrs.training;
   const isEditing = sample.metadata.saved;
 
   const previousSurvey = getPreviousSurvey();

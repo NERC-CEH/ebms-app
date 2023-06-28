@@ -131,12 +131,12 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
       const survey = sample.getSurvey();
       const zeroAbundance = sample.isSurveyPreciseSingleSpecies() ? 't' : null;
 
-      const newSample = survey.smp.create(
+      const newSample = survey.smp!.create!({
         Sample,
         Occurrence,
         taxon,
-        zeroAbundance
-      );
+        zeroAbundance,
+      });
       sample.samples.push(newSample);
 
       if (sample.isPaintedLadySurvey()) {

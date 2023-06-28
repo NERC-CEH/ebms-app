@@ -5,7 +5,7 @@ import { observer } from 'mobx-react';
 import './styles.scss';
 
 function getPendingCount(savedSamples) {
-  const byUploadStatus = sample => !sample.metadata.synced_on;
+  const byUploadStatus = sample => !sample.metadata.syncedOn;
 
   return savedSamples.filter(byUploadStatus).length;
 }

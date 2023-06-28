@@ -1,5 +1,10 @@
 import * as Yup from 'yup';
-import { date as dateHelp } from '@flumens';
+import {
+  date as dateHelp,
+  RemoteConfig,
+  MenuAttrItemFromModelMenuProps,
+  PageProps,
+} from '@flumens';
 import {
   chatboxOutline,
   thermometerOutline,
@@ -9,6 +14,7 @@ import caterpillarIcon from 'common/images/caterpillar.svg';
 import groups from 'common/helpers/groups';
 import Occurrence, { Taxon } from 'common/models/occurrence';
 import Sample from 'models/sample';
+import Media from 'models/media';
 import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
 import windIcon from 'common/images/wind.svg';
 
@@ -140,7 +146,7 @@ export const speciesGroupsAttr = {
       },
 
       get: (model: Sample) => {
-        const speciesGroups = [...model.metadata.speciesGroups];
+        const speciesGroups = [...model.metadata.speciesGroups!];
         if (model.metadata.useDayFlyingMothsOnly) {
           speciesGroups.push(DAY_FLYING_MOTHS);
         }
@@ -410,7 +416,10 @@ export const stageAttr = {
       input: 'radio',
       info: 'Pick the life stage',
       set: (value: any, model: Occurrence) => {
-        if (model.attrs.stage !== value && model.parent.isPaintedLadySurvey()) {
+        if (
+          model.attrs.stage !== value &&
+          model.parent!.isPaintedLadySurvey()
+        ) {
           // eslint-disable-next-line no-param-reassign
           model.attrs.eggLaying = null;
           // eslint-disable-next-line no-param-reassign
@@ -443,3 +452,84 @@ export const stageAttr = {
   },
   remote: { id: 293, values: stageValues },
 };
+
+type MenuProps = MenuAttrItemFromModelMenuProps;
+
+export type AttrConfig = {
+  menuProps?: MenuProps;
+  pageProps?: Omit<PageProps, 'attr' | 'model'>;
+  remote?: RemoteConfig;
+};
+
+interface Attrs {
+  [key: string]: AttrConfig;
+}
+
+type OccurrenceCreateOptions = {
+  Occurrence: typeof Occurrence;
+  taxon: Taxon;
+  identifier?: string;
+  photo?: Media;
+  attrs?: any;
+};
+
+type OccurrenceConfig = {
+  render?: any[] | ((model: Occurrence) => any[]);
+  attrs: Attrs;
+  create?: (options: OccurrenceCreateOptions) => Occurrence;
+  verify?: (attrs: any) => any;
+  modifySubmission?: (submission: any, model: any) => any;
+  /**
+   * Set to true if multi-species surveys shouldn't auto-increment it to 1 when adding to lists.
+   */
+  skipAutoIncrement?: boolean;
+};
+
+type SampleCreateOptions = {
+  Sample: typeof Sample;
+  Occurrence?: typeof Occurrence;
+  taxon?: Taxon;
+  surveySample?: Sample;
+  surveyId?: number;
+  surveyName?: string;
+  skipGPS?: boolean;
+  hasGPSPermission?: boolean;
+  recorder?: string;
+  location?: any;
+  zeroAbundance?: any;
+};
+
+export type SampleConfig = {
+  render?: any[] | ((model: Sample) => any[]);
+  attrs?: Attrs;
+  create?: (options: SampleCreateOptions) => Sample;
+  verify?: (attrs: any, model: any) => any;
+  modifySubmission?: (submission: any, model: any) => any;
+  smp?: SampleConfig;
+  occ?: OccurrenceConfig;
+};
+
+export interface Survey extends SampleConfig {
+  /**
+   * Remote warehouse survey ID.
+   */
+  id: number;
+  /**
+   * In-App survey code name.
+   */
+  name: string;
+  /**
+   * Pretty survey name to show in the UI.
+   */
+  label?: string;
+  deprecated?: boolean;
+  /**
+   * Remote website survey edit page path.
+   */
+  webForm?: string;
+
+  /** ? */
+  metadata?: {
+    speciesGroups: any;
+  };
+}

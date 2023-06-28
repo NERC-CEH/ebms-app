@@ -97,7 +97,6 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
   };
 
   const { areaSurveyListSortedByTime } = appModel.attrs;
-  const isDisabled = !!sample.metadata.synced_on;
 
   const sectionCode = subSample.attrs.location.code || t('Section');
 
@@ -115,7 +114,7 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
         increaseCount={increaseCount}
         areaSurveyListSortedByTime={areaSurveyListSortedByTime}
         onToggleSpeciesSort={toggleSpeciesSort}
-        isDisabled={isDisabled}
+        isDisabled={sample.isDisabled()}
       />
     </Page>
   );

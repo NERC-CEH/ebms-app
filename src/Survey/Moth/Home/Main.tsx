@@ -74,14 +74,14 @@ const buildSpeciesCount = (agg: any, occ: Occurrence) => {
 
   agg[id].count = toJS(occ.attrs.count); // eslint-disable-line
 
-  agg[id].updated_on = new Date(occ.metadata.updated_on).getTime(); // eslint-disable-line
+  agg[id].updated_on = new Date(occ.metadata.updatedOn).getTime(); // eslint-disable-line
 
   return agg;
 };
 
 function byCreateTime(occ1: Occurrence, occ2: Occurrence) {
-  const date1 = new Date(occ1.metadata.created_on);
-  const date2 = new Date(occ2.metadata.created_on);
+  const date1 = new Date(occ1.metadata.createdOn);
+  const date2 = new Date(occ2.metadata.createdOn);
   return date2.getTime() - date1.getTime();
 }
 

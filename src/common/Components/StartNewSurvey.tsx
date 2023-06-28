@@ -1,28 +1,22 @@
 import { useEffect, useContext } from 'react';
 import { NavContext, isPlatform } from '@ionic/react';
 import { useAlert, HandledError } from '@flumens';
-import appModel, { SurveyDraftKeys } from 'models/app';
+import appModel from 'models/app';
 import { GPS_DISABLED_ERROR_MESSAGE } from 'common/helpers/GPS';
 import userModel from 'models/user';
 import Sample from 'models/sample';
 import savedSamples from 'models/collections/samples';
-import { Survey } from 'common/config/surveys';
+import { Survey } from 'Survey/common/config';
 import { Geolocation } from '@capacitor/geolocation';
 
-async function getNewSample(
-  survey: Survey,
-  draftIdKey: keyof SurveyDraftKeys,
-  hasGPSPermission: any
-) {
+async function getNewSample(survey: Survey, hasGPSPermission: any) {
   const recorder = userModel.getPrettyName();
 
-  const sample = await survey.create(
+  const sample = await survey.create!({
     Sample,
     recorder,
-    undefined,
-    undefined,
-    hasGPSPermission
-  );
+    hasGPSPermission,
+  });
 
   sample.setPreviousSpeciesGroups();
   savedSamples.push(sample);
@@ -99,7 +93,6 @@ function StartNewSurvey({ survey }: Props): null {
   const showGPSPermissionDialog = useShowGPSPermissionDialog();
 
   const baseURL = `/survey/${survey.name}`;
-  const draftIdKey = `draftId:${survey.name}` as keyof SurveyDraftKeys;
 
   const pickDraftOrCreateSampleWrap = () => {
     const pickDraftOrCreateSample = async () => {
@@ -111,7 +104,7 @@ function StartNewSurvey({ survey }: Props): null {
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       const ignoreError = () => {};
       const hasGrantedGps = await showGPSPermissionDialog().catch(ignoreError);
-      const sample = await getNewSample(survey, draftIdKey, hasGrantedGps);
+      const sample = await getNewSample(survey, hasGrantedGps);
 
       if (sample.isPreciseSingleSpeciesSurvey()) {
         navigate(

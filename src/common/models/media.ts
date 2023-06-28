@@ -1,4 +1,4 @@
-import { Media, MediaAttrs } from '@flumens';
+import { Media as MediaOriginal, MediaAttrs } from '@flumens';
 import { observable } from 'mobx';
 import CONFIG from 'common/config';
 import { isPlatform } from '@ionic/react';
@@ -9,13 +9,17 @@ import {
   Directory as FilesystemDirectory,
 } from '@capacitor/filesystem';
 import identifyImage from 'common/services/waarneming';
+import Sample from './sample';
+import Occurrence from './occurrence';
 
 export type URL = string;
 
 type Attrs = MediaAttrs & { species: any };
 
-export default class AppMedia extends Media {
-  attrs: Attrs = this.attrs;
+export default class Media extends MediaOriginal<Attrs> {
+  declare parent?: Sample | Occurrence;
+
+  declare attrs: Attrs;
 
   identification = observable({ identifying: false });
 
@@ -41,17 +45,13 @@ export default class AppMedia extends Media {
 
     // remove from internal storage
     if (!isPlatform('hybrid')) {
-      if (!this.parent) {
-        return null;
-      }
+      if (!this.parent) return;
 
       this.parent.media.remove(this);
 
-      if (silent) {
-        return null;
-      }
+      if (silent) return;
 
-      return this.parent.save();
+      this.parent.save();
     }
 
     const URL = this.attrs.data;
@@ -65,22 +65,16 @@ export default class AppMedia extends Media {
         });
       }
 
-      if (!this.parent) {
-        return null;
-      }
+      if (!this.parent) return;
 
       this.parent.media.remove(this);
 
-      if (silent) {
-        return null;
-      }
+      if (silent) return;
 
-      return this.parent.save();
+      this.parent.save();
     } catch (err) {
       console.error(err);
     }
-
-    return null;
   }
 
   getURL() {
@@ -109,8 +103,13 @@ export default class AppMedia extends Media {
     const species = this.attrs?.species?.[0];
     if (!species) return false;
 
+    if (this.parent instanceof Sample)
+      throw new Error(
+        'Cannot use doesTaxonMatchParent with media part of samples'
+      );
+
     const speciesId = species.warehouse_id;
-    const parentTaxon = this.parent.attrs?.taxon;
+    const parentTaxon = this.parent!.attrs?.taxon;
 
     return (
       speciesId === parentTaxon?.warehouse_id ||
@@ -137,7 +136,7 @@ export default class AppMedia extends Media {
 
       this.attrs.species = suggestions;
 
-      this.parent.save();
+      this.parent!.save();
     } catch (error) {
       console.error(error);
     }

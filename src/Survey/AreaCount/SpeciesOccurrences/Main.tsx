@@ -38,7 +38,7 @@ const EditOccurrence: FC<Props> = ({
   const getSamplesList = () => {
     const getOccurrence = (smp: Sample) => {
       const occ = smp.occurrences[0];
-      const prettyTime = new Date(smp.metadata.created_on)
+      const prettyTime = new Date(smp.metadata.createdOn)
         .toLocaleTimeString()
         .replace(/(:\d{2}| [AP]M)$/, '');
 

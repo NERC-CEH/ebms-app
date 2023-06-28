@@ -3,7 +3,7 @@ import userModel from 'models/user';
 import config from 'common/config';
 import { HandledError, isAxiosNetworkError } from '@flumens';
 import axios from 'axios';
-import surveys from 'common/config/surveys';
+import { surveyConfigs as surveys } from 'common/models/sample';
 
 const speciesSchemaBackend = Yup.object().shape({
   by_species: Yup.object()

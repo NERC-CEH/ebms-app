@@ -36,8 +36,8 @@ export const useDeleteConfirmation = () => {
 };
 
 function byCreationDate(s1: Sample, s2: Sample) {
-  const date1 = new Date(s1.metadata.updated_on);
-  const date2 = new Date(s2.metadata.updated_on);
+  const date1 = new Date(s1.metadata.updatedOn);
+  const date2 = new Date(s2.metadata.updatedOn);
 
   return date2.getTime() - date1.getTime();
 }
@@ -93,13 +93,12 @@ const SpeciesOccurrences: FC<Props> = ({ sample }) => {
     if (isLastSampleDeleted) {
       const survey = sample.getSurvey();
 
-      const zeroAbundace = 't';
-      const newSubSample = survey.smp.create(
+      const newSubSample = survey.smp!.create!({
         Sample,
         Occurrence,
         taxon,
-        zeroAbundace
-      );
+        zeroAbundance: 't',
+      });
       sample.samples.push(newSubSample);
       sample.save();
 

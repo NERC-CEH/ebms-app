@@ -1,6 +1,7 @@
 import userModel from 'models/user';
 import * as Yup from 'yup';
 import {
+  Survey,
   deviceAttr,
   deviceVersionAttr,
   appVersionAttr,
@@ -20,6 +21,7 @@ import {
 } from 'Survey/common/config';
 import { chatboxOutline } from 'ionicons/icons';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
+import appModel from 'models/app';
 
 const reliabilityValues = [
   { value: 'Suitable conditions', id: 16590 },
@@ -30,7 +32,7 @@ const reliabilityValues = [
 const locationAttr = {
   remote: {
     id: 'location_id',
-    values(location, submission) {
+    values(location: any, submission: any) {
       // eslint-disable-next-line
       submission.values = {
         ...submission.values,
@@ -51,7 +53,7 @@ const transectLocationSchema = Yup.object().shape({
   sref_system: Yup.string().required(),
 });
 
-const validation = val => {
+const validation = (val: any) => {
   if (!val) {
     return false;
   }
@@ -71,7 +73,7 @@ const transectSchema = Yup.object().shape({
   windSpeed: Yup.string().required('Wind speed info is missing'),
 });
 
-const config = {
+const config: Survey = {
   id: 562,
   name: 'transect',
   label: 'eBMS Transect',
@@ -147,7 +149,7 @@ const config = {
         taxon: taxonAttr,
       },
 
-      create(Occurrence, attrs) {
+      create({ Occurrence, attrs }) {
         const isDragonfly = attrs.taxon.group === DRAGONFLY_GROUP;
 
         return new Occurrence({
@@ -166,13 +168,13 @@ const config = {
       },
     },
 
-    create(Sample, location) {
+    create({ Sample, location }) {
       const sample = new Sample({
         metadata: {
-          survey_id: config.id,
           survey: 'transect',
         },
         attrs: {
+          surveyId: config.id,
           sample_method_id: 776,
           location,
           comment: null,
@@ -202,7 +204,7 @@ const config = {
     return null;
   },
 
-  create(Sample) {
+  create({ Sample }) {
     const recorder = `${userModel.attrs.firstName} ${userModel.attrs.lastName}`;
     const now = new Date().toISOString();
 
@@ -213,6 +215,7 @@ const config = {
         speciesGroups: [],
       },
       attrs: {
+        training: appModel.attrs.useTraining,
         date: now,
         location: null,
         sample_method_id: 22,

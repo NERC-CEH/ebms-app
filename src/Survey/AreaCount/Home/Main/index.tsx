@@ -96,8 +96,8 @@ const speciesOccAddedTimeSort = ([, sp1]: any, [, sp2]: any) => {
 };
 
 const byTime = (sp1: Sample, sp2: Sample) => {
-  const date1 = new Date(sp1.metadata.created_on);
-  const date2 = new Date(sp2.metadata.created_on);
+  const date1 = new Date(sp1.metadata.createdOn);
+  const date2 = new Date(sp2.metadata.createdOn);
   return date2.getTime() - date1.getTime();
 };
 
@@ -121,12 +121,12 @@ const buildSpeciesCount = (agg: any, smp: Sample) => {
 
   const wasCreatedBeforeCurrent =
     new Date(agg[id].updatedOn).getTime() -
-    new Date(smp.metadata.updated_on).getTime();
+    new Date(smp.metadata.updatedOn).getTime();
 
   // eslint-disable-next-line
   agg[id].updatedOn = !wasCreatedBeforeCurrent
     ? agg[id].updatedOn
-    : smp.metadata.updated_on;
+    : smp.metadata.updatedOn;
 
   return agg;
 };
@@ -353,7 +353,7 @@ const AreaCount: FC<Props> = ({
 
     const getOccurrence = (smp: Sample) => {
       const occ = smp.occurrences[0];
-      const prettyTime = new Date(smp.metadata.created_on)
+      const prettyTime = new Date(smp.metadata.createdOn)
         .toLocaleTimeString()
         .replace(/(:\d{2}| [AP]M)$/, '');
 

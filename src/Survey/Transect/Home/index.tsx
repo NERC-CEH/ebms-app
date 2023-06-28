@@ -64,9 +64,9 @@ const TransectHomeController: FC<Props> = ({ sample }) => {
     return null;
   }
 
-  const isTraining = sample.metadata.training;
+  const isTraining = sample.attrs.training;
   const isEditing = sample.metadata.saved;
-  const isDisabled = !!sample.metadata.synced_on;
+  const isDisabled = sample.isDisabled();
   const isValid = !sample.validateRemote();
 
   return (

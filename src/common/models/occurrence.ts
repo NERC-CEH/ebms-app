@@ -1,16 +1,17 @@
 import {
-  Occurrence,
-  OccurrenceOptions,
+  Occurrence as OccurrenceOriginal,
   OccurrenceAttrs,
   validateRemoteModel,
 } from '@flumens';
-import appModel from 'models/app';
 import { MachineInvolvement } from 'Survey/Moth/config';
+import { Survey } from 'Survey/common/config';
 import butterflyIcon from 'common/images/butterfly.svg';
 import speciesGroups from 'common/helpers/groups';
 import mothIcon from 'common/images/moth.svg';
+import { IObservableArray } from 'mobx';
 import bumblebeeIcon from 'common/images/bumblebee.svg';
 import dragonflyIcon from 'common/images/dragonfly.svg';
+import Sample from './sample';
 import Media from './media';
 
 export const DRAGONFLY_GROUP = speciesGroups.dragonflies.id;
@@ -69,6 +70,7 @@ type Attrs = OccurrenceAttrs & {
   count?: any;
   'count-outside'?: any;
   machineInvolvement?: MachineInvolvement;
+
   // PaintedLady survey
   wing?: any;
   behaviour?: any;
@@ -80,20 +82,18 @@ type Attrs = OccurrenceAttrs & {
   mating?: any;
 };
 
-export default class AppOccurrence extends Occurrence {
+export default class Occurrence extends OccurrenceOriginal<Attrs> {
   static fromJSON(json: any) {
     return super.fromJSON(json, Media);
   }
 
-  attrs: Attrs = this.attrs;
+  declare media: IObservableArray<Media>;
+
+  declare parent?: Sample;
+
+  declare getSurvey: () => Survey;
 
   validateRemote = validateRemoteModel;
-
-  constructor(props: OccurrenceOptions) {
-    super(props);
-
-    this.metadata.training = appModel.attrs.useTraining ? 't' : null;
-  }
 
   getTaxonName() {
     const { taxon } = this.attrs;

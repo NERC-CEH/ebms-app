@@ -1,12 +1,12 @@
 /* eslint-disable no-param-reassign */
 import * as Yup from 'yup';
-import { areaCountSchema } from 'Survey/common/config';
+import { areaCountSchema, Survey } from 'Survey/common/config';
 import { resizeOutline, flowerOutline, arrowBackOutline } from 'ionicons/icons';
 import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import { merge } from 'lodash';
 import i18n from 'i18next';
-import survey from './config';
+import coreSurvey from './config';
 import normal from './common/images/normal.png';
 import freshImg from './common/images/fresh.png';
 import wornImg from './common/images/worn.png';
@@ -15,10 +15,10 @@ import desertNettleImg from './common/images/desertNettle.jpg';
 import mallowImg from './common/images/mallow.jpg';
 import otherImg from './common/images/other.jpg';
 
-const translateEggLayingValue = eggLayingValues => {
+const translateEggLayingValue = (eggLayingValues: any) => {
   if (!eggLayingValues?.length) return null;
 
-  return eggLayingValues.map(value => i18n.t(value)).join(', ');
+  return eggLayingValues.map((value: any) => i18n.t(value)).join(', ');
 };
 
 const wingConditionValues = [
@@ -131,21 +131,23 @@ const matingValues = [
   },
 ];
 
-const speciesSurvey = merge({}, survey, {
+const speciesConfig: Survey = {
   id: 645,
   name: 'precise-single-species-area',
   label: '15min Single Species Count',
 
   smp: {
-    create: (appSample, appOccurrence, taxon, zeroAbundance) => {
-      const subSample = survey.smp.create(
-        appSample,
-        appOccurrence,
+    create: ({ Sample, Occurrence, taxon, zeroAbundance }) => {
+      const subSample = coreSurvey.smp!.create!({
+        Sample,
+        Occurrence,
         taxon,
         zeroAbundance,
-        speciesSurvey.id,
-        speciesSurvey.name
-      );
+        // eslint-disable-next-line @typescript-eslint/no-use-before-define
+        surveyId: speciesSurvey.id,
+        // eslint-disable-next-line @typescript-eslint/no-use-before-define
+        surveyName: speciesSurvey.name,
+      });
 
       subSample.occurrences[0].attrs.zero_abundance = zeroAbundance;
       return subSample;
@@ -156,11 +158,8 @@ const speciesSurvey = merge({}, survey, {
         count: {
           remote: {
             id: 780,
-            values: (value, _, model) => {
-              const hasZeroAbundance = model.attrs.zero_abundance;
-
-              return hasZeroAbundance ? null : value;
-            },
+            values: (value: any, _: any, model: any) =>
+              model.attrs.zero_abundance ? null : value,
           },
         },
 
@@ -174,15 +173,15 @@ const speciesSurvey = merge({}, survey, {
           },
           remote: {
             id: 977,
-            values(wingValues, submission) {
+            values(wingValues: any, submission: any) {
               // eslint-disable-next-line
               submission.values = {
                 ...submission.values,
               };
 
-              const bySameGroup = wingObject =>
+              const bySameGroup = (wingObject: any) =>
                 wingValues.includes(wingObject.value);
-              const extractID = obj => obj.id;
+              const extractID = (obj: any) => obj.id;
 
               const wingValueIDs = wingConditionValues
                 .filter(bySameGroup)
@@ -199,7 +198,7 @@ const speciesSurvey = merge({}, survey, {
           pageProps: {
             attrProps: {
               input: 'radio',
-              set: (value, model) => {
+              set: (value: any, model: any) => {
                 if (model.attrs.behaviour !== value) {
                   model.attrs.direction = null;
                   model.attrs.altitude = null;
@@ -235,7 +234,7 @@ const speciesSurvey = merge({}, survey, {
           menuProps: {
             label: 'Height',
             icon: resizeOutline,
-            parse: value => `${value} m`,
+            parse: (value: any) => `${value} m`,
           },
           pageProps: {
             headerProps: { title: 'Height above ground (meters)' },
@@ -254,9 +253,8 @@ const speciesSurvey = merge({}, survey, {
               input: 'radio',
               inputProps: { options: matingValues },
             },
-
-            remote: { id: 981, values: matingValues },
           },
+          remote: { id: 981, values: matingValues },
         },
 
         nectarSource: {
@@ -284,7 +282,7 @@ const speciesSurvey = merge({}, survey, {
             attrProps: {
               input: 'checkbox',
               inputProps: { options: flowersValues },
-              set: (value, model) => {
+              set: (value: any, model: any) => {
                 if (model.attrs.otherEggLaying && !value.includes('Other')) {
                   model.attrs.otherEggLaying = null;
                 }
@@ -301,15 +299,15 @@ const speciesSurvey = merge({}, survey, {
 
           remote: {
             id: 982,
-            values(flowerValue, submission) {
+            values(flowerValue: any, submission: any) {
               // eslint-disable-next-line
               submission.values = {
                 ...submission.values,
               };
 
-              const bySameGroup = wingObject =>
+              const bySameGroup = (wingObject: any) =>
                 flowerValue.includes(wingObject.value);
-              const extractID = obj => obj.id;
+              const extractID = (obj: any) => obj.id;
 
               const flowersIDs = flowersValues
                 .filter(bySameGroup)
@@ -377,17 +375,20 @@ const speciesSurvey = merge({}, survey, {
     return null;
   },
 
-  create: (AppSample, _, _surveyID, __surveyName, hasGPSPermission) => {
-    const sample = survey.create(
-      AppSample,
-      _,
-      speciesSurvey.id,
-      speciesSurvey.name,
-      hasGPSPermission
-    );
+  create: ({ Sample, hasGPSPermission }) => {
+    const sample = coreSurvey.create!({
+      Sample,
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      surveyId: speciesSurvey.id,
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      surveyName: speciesSurvey.name,
+      hasGPSPermission,
+    });
 
     return sample;
   },
-});
+};
+
+const speciesSurvey: Survey = merge({}, coreSurvey, speciesConfig);
 
 export default speciesSurvey;

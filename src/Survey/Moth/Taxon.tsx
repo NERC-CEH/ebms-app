@@ -6,7 +6,7 @@ import { NavContext } from '@ionic/react';
 import { Page, Main, Header, useAlert } from '@flumens';
 import { getUnkownSpecies, MachineInvolvement } from 'Survey/Moth/config';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
-
+import Media from 'models/media';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 
@@ -78,7 +78,7 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
         occurrence.attrs['count-outside'];
 
       while (occurrence.media.length) {
-        const copy = occurrence.media.pop();
+        const copy = occurrence.media.pop() as Media;
         occWithSameSpecies.media.push(copy);
       }
       occWithSameSpecies.save();
@@ -100,7 +100,11 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
     if (isTaxonUnknown) {
       // we allow multiple unknown entries
       const identifier = sample.attrs.recorder;
-      const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
+      const newOccurrence = survey.occ!.create!({
+        Occurrence,
+        taxon,
+        identifier,
+      });
       newOccurrence.attrs.taxon.machineInvolvement = machineInvolvement;
       sample.occurrences.push(newOccurrence);
       await sample.save();
@@ -121,7 +125,11 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
     }
 
     const identifier = sample.attrs.recorder;
-    const newOccurrence = survey.occ.create(Occurrence, taxon, identifier);
+    const newOccurrence = survey.occ!.create!({
+      Occurrence,
+      taxon,
+      identifier,
+    });
     newOccurrence.attrs.taxon.machineInvolvement = machineInvolvement;
     sample.occurrences.push(newOccurrence);
 

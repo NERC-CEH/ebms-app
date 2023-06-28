@@ -12,19 +12,15 @@ type Props = {
   occurrence: Occurrence;
 };
 
-const Container: FC<Props> = ({ sample, subSample, occurrence }) => {
-  const isDisabled = !!sample.metadata.synced_on;
-
-  return (
-    <Page id="precise-area-count-edit-occurrence">
-      <Header title="Edit Occurrence" />
-      <Main
-        occurrence={occurrence}
-        subSample={subSample}
-        isDisabled={isDisabled}
-      />
-    </Page>
-  );
-};
+const Container: FC<Props> = ({ sample, subSample, occurrence }) => (
+  <Page id="precise-area-count-edit-occurrence">
+    <Header title="Edit Occurrence" />
+    <Main
+      occurrence={occurrence}
+      subSample={subSample}
+      isDisabled={sample.isDisabled()}
+    />
+  </Page>
+);
 
 export default observer(Container);

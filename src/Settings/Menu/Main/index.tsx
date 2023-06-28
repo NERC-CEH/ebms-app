@@ -22,7 +22,7 @@ import { Trans as T } from 'react-i18next';
 import languages from 'common/config/languages';
 import countries from 'common/config/countries';
 import config from 'common/config';
-import surveys from 'common/config/surveys';
+import { surveyConfigs as surveys } from 'models/sample';
 import { Main, useAlert, InfoMessage, MenuAttrToggle } from '@flumens';
 import butterflyIcon from 'common/images/butterfly.svg';
 import mothIcon from 'common/images/moth.svg';

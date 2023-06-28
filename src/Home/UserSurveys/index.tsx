@@ -41,8 +41,8 @@ async function uploadAllSamples(toast: any, savedSamples: any, t: any) {
 }
 
 function byCreateTime(occ1: Occurrence, occ2: Occurrence) {
-  const date1 = new Date(occ1.metadata.created_on);
-  const date2 = new Date(occ2.metadata.created_on);
+  const date1 = new Date(occ1.metadata.createdOn);
+  const date2 = new Date(occ2.metadata.createdOn);
   return date2.getTime() - date1.getTime();
 }
 
@@ -61,7 +61,7 @@ const UserSurveyComponent: FC<Props> = ({ savedSamples }) => {
 
   const getSamplesList = (uploaded?: boolean) => {
     const uploadedSamples = (sample: Sample) =>
-      uploaded ? sample.metadata.synced_on : !sample.metadata.synced_on;
+      uploaded ? sample.metadata.syncedOn : !sample.metadata.syncedOn;
     return savedSamples.filter(uploadedSamples).sort(byCreateTime);
   };
 

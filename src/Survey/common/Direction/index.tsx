@@ -1,6 +1,13 @@
 import { FC, useState, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { Page, Header, Main, Attr, useAlert } from '@flumens';
+import {
+  Page,
+  Header,
+  Main,
+  Attr,
+  useAlert,
+  AttrPropsExtended,
+} from '@flumens';
 import Occurrence from 'models/occurrence';
 import { Trans as T } from 'react-i18next';
 import { NavContext, IonButton, isPlatform } from '@ionic/react';
@@ -60,7 +67,8 @@ const Direction: FC<Props> = ({ occurrence }) => {
   const [startCompass, setStartCompass] = useState(false);
 
   const occurrenceConfig = occurrence.getSurvey();
-  const { attrProps } = occurrenceConfig.attrs.direction.pageProps;
+  const attrProps = occurrenceConfig!.attrs!.direction!.pageProps!
+    .attrProps as AttrPropsExtended;
 
   const onValueChange = (directionValue: any) => {
     // eslint-disable-next-line no-param-reassign

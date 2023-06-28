@@ -54,8 +54,8 @@ const useDeleteSpeciesPrompt = () => {
 };
 
 function byCreateTime(model1: Sample, model2: Sample) {
-  const date1 = new Date(model1.metadata.created_on);
-  const date2 = new Date(model2.metadata.created_on);
+  const date1 = new Date(model1.metadata.createdOn);
+  const date2 = new Date(model2.metadata.createdOn);
   return date2.getTime() - date1.getTime();
 }
 
@@ -81,8 +81,6 @@ const HomeController: FC<Props> = ({ sample }) => {
   const surveyConfig = sample.getSurvey();
 
   const isEditing = sample.metadata.saved;
-
-  const isTraining = !!sample.metadata.training;
 
   const _processSubmission = async () => {
     const isUserOK = await checkUserStatus();
@@ -176,7 +174,7 @@ const HomeController: FC<Props> = ({ sample }) => {
       deleteFromShallowList(taxon);
 
       const survey = sample.getSurvey();
-      const newOccurrence = survey.occ.create(Occurrence, taxon);
+      const newOccurrence = survey.occ!.create!({ Occurrence, taxon });
       // newOccurrence.attrs.taxon.machineInvolvement = machineInvolvement;
       sample.occurrences.push(newOccurrence);
       sample.save();
@@ -232,7 +230,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     occWithSameSpecies.attrs['count-outside'] += occ.attrs['count-outside'];
 
     while (occ.media.length) {
-      const copy = occ.media.pop();
+      const copy = occ.media.pop() as Media;
       occWithSameSpecies.media.push(copy);
     }
 
@@ -266,15 +264,14 @@ const HomeController: FC<Props> = ({ sample }) => {
       );
       if (!images.length) return [];
 
-      const getImageModel = (image: any) => {
-        const imageModel = Media.getImageModel(
+      const getImageModel = (image: any) =>
+        Media.getImageModel(
           isPlatform('hybrid') ? Capacitor.convertFileSrc(image) : image,
           CONFIG.dataPath
-        );
+        ) as Promise<Media>;
 
-        return imageModel;
-      };
       const imageModels = images.map(getImageModel);
+
       return Promise.all(imageModels);
     }
 
@@ -285,13 +282,13 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     const taxon = UNKNOWN_SPECIES;
 
-    images.forEach((imgModel: any) => {
-      const newOccurrence = surveyConfig.occ.create(
+    images.forEach((photo: Media) => {
+      const newOccurrence = surveyConfig.occ!.create!({
         Occurrence,
         taxon,
         identifier,
-        imgModel
-      );
+        photo,
+      });
 
       sample.occurrences.push(newOccurrence);
       sample.save();
@@ -367,6 +364,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     }
   };
 
+  const isTraining = !!sample.attrs.training;
   const trainingModeSubheader = isTraining && (
     <div className="training-survey">
       <T>Training Mode</T>

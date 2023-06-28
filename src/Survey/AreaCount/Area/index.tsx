@@ -42,7 +42,7 @@ const AreaController: FC<Props> = ({ sample }) => {
     areaPretty = t('Please draw your area on the map');
   }
 
-  const isDisabled = !!sample.metadata.synced_on;
+  const isDisabled = sample.isDisabled();
 
   return (
     <Page id="area">

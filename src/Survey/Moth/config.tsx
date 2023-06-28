@@ -1,6 +1,5 @@
 import * as Yup from 'yup';
 import { date as dateHelp } from '@flumens';
-import { Survey } from 'common/config/surveys';
 import config from 'common/config';
 import appModel from 'models/app';
 import Occurrence from 'models/occurrence';
@@ -13,6 +12,7 @@ import {
   moonOutline,
 } from 'ionicons/icons';
 import {
+  Survey,
   commentAttr,
   windDirectionValues,
   windSpeedValues,
@@ -222,7 +222,6 @@ const survey: Survey = {
         attrProps: {
           input: 'time',
           info: 'Defaulted to sunset time',
-          format: { hour: '2-digit', minute: '2-digit' },
           inputProps: {
             format: { options: { hour: '2-digit', minute: '2-digit' } },
             presentation: 'time',
@@ -477,7 +476,7 @@ const survey: Survey = {
       return null;
     },
 
-    create(AppOccurrence, taxon, identifier, photo) {
+    create({ Occurrence: AppOccurrence, taxon, identifier, photo }) {
       const occ = new AppOccurrence({
         attrs: {
           count: 1,
@@ -514,14 +513,14 @@ const survey: Survey = {
     return null;
   },
 
-  create(AppSample, recorder, surveyId = survey.id, surveyName = survey.name) {
-    const sample = new AppSample({
+  create({ Sample, recorder, surveyId = survey.id, surveyName = survey.name }) {
+    const sample = new Sample({
       metadata: {
         survey_id: surveyId,
         survey: surveyName,
       },
-
       attrs: {
+        training: appModel.attrs.useTraining,
         location: null,
         comment: null,
         recorder,

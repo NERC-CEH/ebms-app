@@ -39,7 +39,7 @@ const SectionListController: FC<Props> = ({ sample }) => {
     const transect = sample.attrs.location;
     const survey = sample.getSurvey();
     const addSection = (section: any) => {
-      const sectionSample = survey.smp.create(Sample, section);
+      const sectionSample = survey.smp!.create!({ Sample, location: section });
       sample.samples.push(sectionSample);
     };
     transect.sections.forEach(addSection);

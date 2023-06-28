@@ -28,8 +28,13 @@ const FiltersModal: FC<Props> = ({ toggleModal, showModal, sample }) => {
     sample.save();
   }
 
-  const sampleConfig = sample.getSurvey();
-  const { attrProps } = sampleConfig.metadata.speciesGroups.pageProps;
+  const survey = sample.getSurvey();
+  if (!survey.metadata)
+    throw new Error(
+      'survey.metadata.speciesGroups is missing for FiltersModal'
+    );
+
+  const { attrProps } = survey.metadata.speciesGroups.pageProps;
 
   const form = (
     <div id="filters-dialog-form">

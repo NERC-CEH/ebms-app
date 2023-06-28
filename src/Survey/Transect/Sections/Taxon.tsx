@@ -175,7 +175,7 @@ const Controller: FC<Props> = ({
     }
 
     const survey = sectionSample.getSurvey();
-    const occurrence = survey.occ.create(Occurrence, { taxon });
+    const occurrence = survey.occ.create({ Occurrence, taxon });
     sectionSample.occurrences.push(occurrence);
 
     await sectionSample.save();

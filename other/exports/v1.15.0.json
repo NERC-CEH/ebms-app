@@ -758,7 +758,7 @@
     "32431211-8d4b-4069-9069-6e16cbd15b8b": {
       "cid": "32431211-8d4b-4069-9069-6e16cbd15b8b",
       "metadata": {
-        "training": null,
+        "training": "t",
         "saved": null,
         "survey": "precise-area",
         "survey_id": 565,
