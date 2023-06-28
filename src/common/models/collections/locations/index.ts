@@ -97,13 +97,18 @@ export class Locations extends Collection<Location> {
 
     console.log(`📚 Collection: ${this.id} collection fetching first time`);
 
-    const docs = await this._fetchDocs();
-    const initModel = (doc: any) => new this.Model(doc) as Location;
-    const models = docs.map(initModel);
+    try {
+      const docs = await this._fetchDocs();
+      const initModel = (doc: any) => new this.Model(doc) as Location;
+      const models = docs.map(initModel);
 
-    this.push(...models);
+      this.push(...models);
 
-    this._fetchedFirstTime = true;
+      this._fetchedFirstTime = true;
+    } catch (error: any) {
+      if (error.isHandled) return this;
+      throw error;
+    }
 
     return this;
   };
