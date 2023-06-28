@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { IonTitle, IonToolbar } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
-import { HandledError } from '@flumens';
-import { GPS_DISABLED_ERROR_MESSAGE } from 'helpers/GPS';
 import { Geolocation } from '@capacitor/geolocation';
+import { HandledError } from '@flumens';
+import { IonTitle, IonToolbar } from '@ionic/react';
+import { GPS_DISABLED_ERROR_MESSAGE } from 'helpers/GPS';
 import './styles.scss';
 
 const GPSPermissionSubheader = () => {

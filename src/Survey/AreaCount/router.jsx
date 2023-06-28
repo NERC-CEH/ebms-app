@@ -1,17 +1,17 @@
-import savedSamples from 'models/collections/samples';
-import appModel from 'models/app';
-import userModel from 'models/user';
-import { AttrPage, RouteWithModels, ModelLocationMap } from '@flumens';
-import StartNewSurvey from 'Components/StartNewSurvey';
 import { observer } from 'mobx-react';
+import { AttrPage, RouteWithModels, ModelLocationMap } from '@flumens';
 import appConfig from 'common/config';
+import appModel from 'models/app';
+import savedSamples from 'models/collections/samples';
+import userModel from 'models/user';
+import StartNewSurvey from 'Components/StartNewSurvey';
 import Direction from 'Survey/common/Direction';
+import AreaAttr from './Area';
+import Details from './Details';
 import Home from './Home';
 import OccurrenceHome from './OccurrenceHome';
 import SpeciesOccurrences from './SpeciesOccurrences';
 import Taxon from './Taxon';
-import AreaAttr from './Area';
-import Details from './Details';
 import survey from './config';
 import surveySingleSpecies from './configSpecies';
 

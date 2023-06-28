@@ -1,9 +1,3 @@
-import * as Yup from 'yup';
-import { date as dateHelp } from '@flumens';
-import config from 'common/config';
-import appModel from 'models/app';
-import Occurrence from 'models/occurrence';
-import { IonImg } from '@ionic/react';
 import {
   thermometerOutline,
   calendarOutline,
@@ -11,6 +5,21 @@ import {
   cloudyOutline,
   moonOutline,
 } from 'ionicons/icons';
+import * as Yup from 'yup';
+import { date as dateHelp } from '@flumens';
+import { IonImg } from '@ionic/react';
+import config from 'common/config';
+import firstQuarterMoonIcon from 'common/images/first-quarter-moon.svg';
+import fullIcon from 'common/images/full-moon.svg';
+import lastQuarterIcon from 'common/images/last-quarter-moon.svg';
+import newIcon from 'common/images/new-moon.svg';
+import wanningCrescentIcon from 'common/images/waning-crescent-moon.svg';
+import wanningGibbousIcon from 'common/images/waning-gibbous-moon.svg';
+import waxingCrescentIcon from 'common/images/waxing-crescent-moon.svg';
+import waxingGibbousIcon from 'common/images/waxing-gibbous-moon.svg';
+import windIcon from 'common/images/wind.svg';
+import appModel from 'models/app';
+import Occurrence from 'models/occurrence';
 import {
   Survey,
   commentAttr,
@@ -18,15 +27,6 @@ import {
   windSpeedValues,
   temperatureValues,
 } from 'Survey/common/config';
-import windIcon from 'common/images/wind.svg';
-import newIcon from 'common/images/new-moon.svg';
-import wanningCrescentIcon from 'common/images/waning-crescent-moon.svg';
-import waxingCrescentIcon from 'common/images/waxing-crescent-moon.svg';
-import firstQuarterMoonIcon from 'common/images/first-quarter-moon.svg';
-import waxingGibbousIcon from 'common/images/waxing-gibbous-moon.svg';
-import fullIcon from 'common/images/full-moon.svg';
-import wanningGibbousIcon from 'common/images/waning-gibbous-moon.svg';
-import lastQuarterIcon from 'common/images/last-quarter-moon.svg';
 
 interface Type {
   [key: string]: string;

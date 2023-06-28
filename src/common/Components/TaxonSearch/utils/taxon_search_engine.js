@@ -2,8 +2,8 @@
  * Generates species list suggestions.
  **************************************************************************** */
 import species from 'common/data/species/index.json';
-import searchSciNames from './scientificNamesSearch';
 import searchCommonNames from './commonNamesSearch';
+import searchSciNames from './scientificNamesSearch';
 
 const loading = false;
 

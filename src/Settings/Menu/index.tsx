@@ -1,11 +1,11 @@
 import { FC, useContext } from 'react';
-import { isPlatform, NavContext } from '@ionic/react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Page, Header, useToast, useLoader } from '@flumens';
+import { isPlatform, NavContext } from '@ionic/react';
 import appModel, { Attrs } from 'models/app';
-import userModel from 'models/user';
-import savedSamples from 'models/collections/samples';
 import locations from 'models/collections/locations';
+import savedSamples from 'models/collections/samples';
+import userModel from 'models/user';
 import Main from './Main';
 
 const useDeleteUser = () => {

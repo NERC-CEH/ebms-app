@@ -1,5 +1,5 @@
-import appModel from 'models/app';
 import speciesNames from 'common/data/commonNames/index.json';
+import appModel from 'models/app';
 
 const MAX_RESULTS = 200;
 

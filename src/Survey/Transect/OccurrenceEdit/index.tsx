@@ -1,9 +1,7 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import Occurrence from 'models/occurrence';
-import { useRouteMatch } from 'react-router';
-import { IonItemDivider, IonLabel, IonList } from '@ionic/react';
 import { Trans as T, useTranslation } from 'react-i18next';
+import { useRouteMatch } from 'react-router';
 import {
   Page,
   Header,
@@ -12,8 +10,10 @@ import {
   MenuAttrItem,
   CounterInput,
 } from '@flumens';
+import { IonItemDivider, IonLabel, IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import numberIcon from 'common/images/number.svg';
+import Occurrence from 'models/occurrence';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import './styles.scss';
 

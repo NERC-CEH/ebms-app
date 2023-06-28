@@ -1,7 +1,5 @@
 import { IObservableArray, observable } from 'mobx';
-import config from 'common/config';
-import userModel from 'models/user';
-import appModel from 'models/app';
+import { useTranslation } from 'react-i18next';
 import {
   device,
   getDeepErrorMessage,
@@ -11,20 +9,22 @@ import {
   SampleOptions,
   SampleMetadata,
 } from '@flumens';
-import { useTranslation } from 'react-i18next';
+import config from 'common/config';
+import groups from 'common/helpers/groups';
+import appModel from 'models/app';
+import userModel from 'models/user';
 import areaSurvey from 'Survey/AreaCount/config';
 import areaOldSurvey from 'Survey/AreaCount/configOld';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
+import mothSurvey from 'Survey/Moth/config';
 import transectSurvey from 'Survey/Transect/config';
 import { Survey } from 'Survey/common/config';
-import mothSurvey from 'Survey/Moth/config';
-import groups from 'common/helpers/groups';
-import Occurrence, { SpeciesGroup } from '../occurrence';
 import Media from '../media';
+import Occurrence, { SpeciesGroup } from '../occurrence';
 import { modelStore } from '../store';
 import GPSExtension from './GPSExt';
-import VibrateExtension from './vibrateExt';
 import MetOfficeExtension from './metofficeExt';
+import VibrateExtension from './vibrateExt';
 
 type Attrs = SampleAttrs & {
   date?: any;

@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { Page, Header, Main, MenuAttrItemFromModel } from '@flumens';
-import Sample from 'models/sample';
-import { IonList } from '@ionic/react';
 import { observer } from 'mobx-react';
+import { Page, Header, Main, MenuAttrItemFromModel } from '@flumens';
+import { IonList } from '@ionic/react';
+import Sample from 'models/sample';
 
 type Props = {
   sample: Sample;

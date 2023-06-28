@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { IonContent, IonList, IonCol, IonRow, IonGrid } from '@ionic/react';
-import { Collapse } from '@flumens';
 import { observer } from 'mobx-react';
+import { Collapse } from '@flumens';
+import { IonContent, IonList, IonCol, IonRow, IonGrid } from '@ionic/react';
 import { Filters } from '..';
 import './styles.scss';
 

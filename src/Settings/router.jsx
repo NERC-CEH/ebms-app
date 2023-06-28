@@ -1,14 +1,14 @@
 import { Route } from 'react-router-dom';
 import appModel from 'models/app';
-import userModel from 'models/user';
 import locations from 'models/collections/locations';
 import savedSamples from 'models/collections/samples';
-import Menu from './Menu';
-import Language from './Language';
+import userModel from 'models/user';
 import Country from './Country';
-import SpeciesGroups from './SpeciesGroups';
-import PrimarySurvey from './PrimarySurvey';
+import Language from './Language';
+import Menu from './Menu';
 import MothSurvey from './MothSurvey';
+import PrimarySurvey from './PrimarySurvey';
+import SpeciesGroups from './SpeciesGroups';
 
 const MothSurveyWrap = () => <MothSurvey appModel={appModel} />;
 

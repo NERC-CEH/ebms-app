@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
-import { IonList, IonItem, IonLabel } from '@ionic/react';
-import { Main, InfoMessage } from '@flumens';
-import { Trans as T } from 'react-i18next';
 import { informationCircle } from 'ionicons/icons';
+import PropTypes from 'prop-types';
+import { Trans as T } from 'react-i18next';
+import { Main, InfoMessage } from '@flumens';
+import { IonList, IonItem, IonLabel } from '@ionic/react';
 import transformToLatLon from 'helpers/location';
 import SVG from '../SVG';
 import './styles.scss';

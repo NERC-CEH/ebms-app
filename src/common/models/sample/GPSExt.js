@@ -4,13 +4,13 @@
  * Sample geolocation events:
  * start, update, error, success, stop
  **************************************************************************** */
-import GPS from 'helpers/GPS';
-import config from 'common/config';
 import { observable } from 'mobx';
-import geojsonArea from '@mapbox/geojson-area';
-import { isPlatform } from '@ionic/react';
-import { updateModelLocation, device } from '@flumens';
 import { PushNotifications } from '@capacitor/push-notifications';
+import { updateModelLocation, device } from '@flumens';
+import { isPlatform } from '@ionic/react';
+import geojsonArea from '@mapbox/geojson-area';
+import config from 'common/config';
+import GPS from 'helpers/GPS';
 
 const METERS_SINCE_LAST_LOCATION = 15;
 

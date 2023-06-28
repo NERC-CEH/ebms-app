@@ -1,8 +1,8 @@
 import { FC, useState } from 'react';
-import Sample from 'models/sample';
-import appModel from 'models/app';
-import { IonLabel, IonButton } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
+import { IonLabel, IonButton } from '@ionic/react';
+import appModel from 'models/app';
+import Sample from 'models/sample';
 import FiltersModal from './FiltersModal';
 import './styles.scss';
 

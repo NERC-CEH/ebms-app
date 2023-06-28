@@ -1,7 +1,7 @@
-import butterflyIcon from 'common/images/butterfly.svg';
-import mothIcon from 'common/images/moth.svg';
-import dragonflyIcon from 'common/images/dragonfly.svg';
 import bumblebeeIcon from 'common/images/bumblebee.svg';
+import butterflyIcon from 'common/images/butterfly.svg';
+import dragonflyIcon from 'common/images/dragonfly.svg';
+import mothIcon from 'common/images/moth.svg';
 
 const speciesGroups = {
   butterflies: {

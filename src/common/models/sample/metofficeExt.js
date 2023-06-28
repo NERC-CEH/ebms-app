@@ -1,6 +1,6 @@
+import { observe } from 'mobx';
 import { device } from '@flumens';
 import config from 'common/config';
-import { observe } from 'mobx';
 
 // TODO get values from config
 

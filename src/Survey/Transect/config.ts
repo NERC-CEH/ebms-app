@@ -1,5 +1,8 @@
-import userModel from 'models/user';
+import { chatboxOutline } from 'ionicons/icons';
 import * as Yup from 'yup';
+import appModel from 'models/app';
+import { DRAGONFLY_GROUP } from 'models/occurrence';
+import userModel from 'models/user';
 import {
   Survey,
   deviceAttr,
@@ -19,9 +22,6 @@ import {
   speciesGroupsAttr,
   sunAttr,
 } from 'Survey/common/config';
-import { chatboxOutline } from 'ionicons/icons';
-import { DRAGONFLY_GROUP } from 'models/occurrence';
-import appModel from 'models/app';
 
 const reliabilityValues = [
   { value: 'Suitable conditions', id: 16590 },

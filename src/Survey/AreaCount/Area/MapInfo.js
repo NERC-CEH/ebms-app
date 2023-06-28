@@ -1,11 +1,11 @@
 import * as React from 'react';
+import { toJS } from 'mobx';
+import { locateOutline } from 'ionicons/icons';
+import L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import { withIonLifeCycle, IonIcon, NavContext } from '@ionic/react';
-import { locateOutline } from 'ionicons/icons';
 import MapControl from 'common/Components/LeafletControl';
 import GPS from 'helpers/GPS';
-import { toJS } from 'mobx';
-import L from 'leaflet';
 
 function translateDrawInterface() {
   L.drawLocal.draw.toolbar.actions.text = t('Cancel');

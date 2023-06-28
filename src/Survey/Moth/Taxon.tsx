@@ -1,14 +1,14 @@
 /* eslint-disable no-param-reassign */
 import { FC, useContext } from 'react';
 import { observer } from 'mobx-react';
-import TaxonSearch from 'Components/TaxonSearch';
-import { NavContext } from '@ionic/react';
 import { Page, Main, Header, useAlert } from '@flumens';
-import { getUnkownSpecies, MachineInvolvement } from 'Survey/Moth/config';
-import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
+import { NavContext } from '@ionic/react';
 import Media from 'models/media';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
+import TaxonSearch from 'Components/TaxonSearch';
+import { getUnkownSpecies, MachineInvolvement } from 'Survey/Moth/config';
+import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
 interface Props {
   sample: Sample;

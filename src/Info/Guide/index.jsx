@@ -1,7 +1,7 @@
+import { openOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Page, Main, Header, Section } from '@flumens';
 import { IonButton, IonIcon, IonList } from '@ionic/react';
-import { openOutline } from 'ionicons/icons';
 import config from 'common/config';
 import './styles.scss';
 

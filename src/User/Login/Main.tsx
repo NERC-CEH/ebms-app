@@ -1,7 +1,5 @@
 import { FC, useState } from 'react';
-import { IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
-import { Main, InputWithValidation, InfoMessage } from '@flumens';
-import { Trans as T } from 'react-i18next';
+import { Formik, Form } from 'formik';
 import {
   keyOutline,
   eyeOutline,
@@ -9,7 +7,9 @@ import {
   informationCircle,
   mailOutline,
 } from 'ionicons/icons';
-import { Formik, Form } from 'formik';
+import { Trans as T } from 'react-i18next';
+import { Main, InputWithValidation, InfoMessage } from '@flumens';
+import { IonIcon, IonButton, IonList, IonItem } from '@ionic/react';
 import './styles.scss';
 
 interface Props {

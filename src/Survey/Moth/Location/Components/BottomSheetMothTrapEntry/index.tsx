@@ -1,4 +1,12 @@
 import { FC } from 'react';
+import { observer } from 'mobx-react';
+import {
+  pinOutline,
+  arrowForwardOutline,
+  checkboxOutline,
+} from 'ionicons/icons';
+import { Trans as T, useTranslation } from 'react-i18next';
+import { useAlert } from '@flumens';
 import {
   IonLabel,
   IonIcon,
@@ -7,16 +15,8 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
-import { useAlert } from '@flumens';
-import {
-  pinOutline,
-  arrowForwardOutline,
-  checkboxOutline,
-} from 'ionicons/icons';
-import MothTrap from 'common/models/location';
-import { observer } from 'mobx-react';
-import { Trans as T, useTranslation } from 'react-i18next';
 import mothTrapIcon from 'common/images/moth-inside-icon.svg';
+import MothTrap from 'common/models/location';
 import OnlineStatus from './OnlineStatus';
 import './styles.scss';
 

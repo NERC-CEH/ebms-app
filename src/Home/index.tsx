@@ -1,5 +1,15 @@
 import { useContext, useEffect, useState } from 'react';
+import {
+  personOutline,
+  addOutline,
+  menuOutline,
+  statsChartOutline,
+} from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import { Route, Redirect } from 'react-router-dom';
+import { App as AppPlugin } from '@capacitor/app';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
+import { LongPressFabButton } from '@flumens';
 import {
   IonTabs,
   IonTabButton,
@@ -12,27 +22,17 @@ import {
   useIonRouter,
   isPlatform,
 } from '@ionic/react';
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import {
-  personOutline,
-  addOutline,
-  menuOutline,
-  statsChartOutline,
-} from 'ionicons/icons';
-import { LongPressFabButton } from '@flumens';
-import savedSamples from 'models/collections/samples';
-import appModel from 'models/app';
-import userModel from 'models/user';
-import { surveyConfigs as surveys } from 'models/sample';
-import { App as AppPlugin } from '@capacitor/app';
-import { Trans as T } from 'react-i18next';
 import PendingSurveysBadge from 'common/Components/PendingSurveysBadge';
-import { Survey } from 'Survey/common/config';
 import butterflyIcon from 'common/images/butterfly.svg';
+import appModel from 'models/app';
+import savedSamples from 'models/collections/samples';
+import { surveyConfigs as surveys } from 'models/sample';
+import userModel from 'models/user';
+import { Survey } from 'Survey/common/config';
+import Menu from './Menu';
 import Report from './Report';
 import Species from './Species';
 import UserSurveys from './UserSurveys';
-import Menu from './Menu';
 import './styles.scss';
 
 const UserSurveysTab = () => <UserSurveys savedSamples={savedSamples} />;

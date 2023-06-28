@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { IonLabel } from '@ionic/react';
 import i18n from 'i18next';
+import { IonLabel } from '@ionic/react';
 
 type Props = {
   text: string | string[];

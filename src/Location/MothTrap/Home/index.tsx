@@ -1,14 +1,15 @@
 /* eslint-disable no-param-reassign */
+
 /* eslint-disable camelcase */
 import { FC, useContext } from 'react';
-import Location, { Lamp, useValidateCheck } from 'models/location';
-import UUID from 'common/helpers/UUID';
-import { useRouteMatch } from 'react-router';
 import { observer } from 'mobx-react';
-import { useUserStatusCheck } from 'models/user';
+import { Trans as T } from 'react-i18next';
+import { useRouteMatch } from 'react-router';
 import { Page, Header, useAlert, useToast } from '@flumens';
 import { IonButton, NavContext, IonLabel } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
+import UUID from 'common/helpers/UUID';
+import Location, { Lamp, useValidateCheck } from 'models/location';
+import { useUserStatusCheck } from 'models/user';
 // import BackButton from '../Components/BackButton';
 import Main from './Main';
 import './styles.scss';

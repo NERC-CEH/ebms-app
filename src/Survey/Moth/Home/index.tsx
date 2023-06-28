@@ -1,23 +1,24 @@
 /* eslint-disable no-param-reassign */
+
 /* eslint-disable camelcase */
 import { FC, useContext } from 'react';
-import Sample, { useValidateCheck } from 'models/sample';
-import { Capacitor } from '@capacitor/core';
-import Occurrence from 'models/occurrence';
-import appModel from 'models/app';
-import CONFIG from 'common/config';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
-import { useRouteMatch } from 'react-router';
-import { getUnkownSpecies } from 'Survey/Moth/config';
-import savedSamples from 'models/collections/samples';
-import { Page, Header, useAlert, useToast, captureImage } from '@flumens';
-import Media from 'models/media';
-import { useUserStatusCheck } from 'models/user';
-import { IonButton, NavContext, isPlatform, IonLabel } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
+import { useRouteMatch } from 'react-router';
+import { Capacitor } from '@capacitor/core';
+import { Page, Header, useAlert, useToast, captureImage } from '@flumens';
+import { IonButton, NavContext, isPlatform, IonLabel } from '@ionic/react';
 import { usePromptImageSource } from 'common/Components/PhotoPicker';
+import CONFIG from 'common/config';
+import appModel from 'models/app';
+import savedSamples from 'models/collections/samples';
+import Media from 'models/media';
+import Occurrence from 'models/occurrence';
+import Sample, { useValidateCheck } from 'models/sample';
+import { useUserStatusCheck } from 'models/user';
+import { getUnkownSpecies } from 'Survey/Moth/config';
 import Main from './Main';
 import './styles.scss';
 

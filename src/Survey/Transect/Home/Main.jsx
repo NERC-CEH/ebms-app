@@ -1,15 +1,5 @@
 import { Component } from 'react';
-import PropTypes from 'prop-types';
-import {
-  IonList,
-  IonItem,
-  IonIcon,
-  IonLabel,
-  IonButton,
-  IonItemDivider,
-} from '@ionic/react';
-import { Main, MenuAttrItem, InfoMessage } from '@flumens';
-import { Trans as T } from 'react-i18next';
+import { observer } from 'mobx-react';
 import {
   personOutline,
   mapOutline,
@@ -20,7 +10,17 @@ import {
   cloudyOutline,
   informationCircle,
 } from 'ionicons/icons';
-import { observer } from 'mobx-react';
+import PropTypes from 'prop-types';
+import { Trans as T } from 'react-i18next';
+import { Main, MenuAttrItem, InfoMessage } from '@flumens';
+import {
+  IonList,
+  IonItem,
+  IonIcon,
+  IonLabel,
+  IonButton,
+  IonItemDivider,
+} from '@ionic/react';
 import config from 'common/config';
 import windIcon from 'common/images/wind.svg';
 import './styles.scss';

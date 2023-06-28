@@ -1,7 +1,6 @@
 import { FC, useState } from 'react';
-import Sample from 'models/sample';
-import locations from 'models/collections/locations';
-import MothTrap from 'models/location';
+import { observer } from 'mobx-react';
+import { informationCircleOutline } from 'ionicons/icons';
 import { InfoMessage, device } from '@flumens';
 import {
   useIonViewWillLeave,
@@ -12,10 +11,11 @@ import {
   IonHeader,
   IonToolbar,
 } from '@ionic/react';
-import { observer } from 'mobx-react';
 import turf from '@turf/distance';
+import locations from 'models/collections/locations';
+import MothTrap from 'models/location';
+import Sample from 'models/sample';
 import hasLocationMatch from 'Survey/common/hasLocationMatch';
-import { informationCircleOutline } from 'ionicons/icons';
 import BottomSheetMothTrapEntry from './BottomSheetMothTrapEntry';
 
 const SNAP_POSITIONS = [0.05, 0.22, 0.5, 1];

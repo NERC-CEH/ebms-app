@@ -1,77 +1,55 @@
 /* eslint-disable camelcase */
+
 /* eslint-disable @getify/proper-arrows/name */
 import names from 'common/data/commonNames/index.json';
-import en from './interface/en.pot';
-import species_en from './species/en.pot';
-
-import lt_LT from './interface/lt_LT.po';
-import species_lt_LT from './species/lt_LT.po';
-
-import es_ES from './interface/es_ES.po';
-import species_es_ES from './species/es_ES.po';
-
-import sv_SE from './interface/sv_SE.po';
-import species_sv_SE from './species/sv_SE.po';
-
-import fi_FI from './interface/fi_FI.po';
-import species_fi_FI from './species/fi_FI.po';
-
-import hr_HR from './interface/hr_HR.po';
-import species_hr_HR from './species/hr_HR.po';
-
-import nl_NL from './interface/nl_NL.po';
-import species_nl_NL from './species/nl_NL.po';
-
-import fr_FR from './interface/fr_FR.po';
-import species_fr_FR from './species/fr_FR.po';
-
-import ru_RU from './interface/ru_RU.po';
-import species_ru_RU from './species/ru_RU.po';
-
-import pt_PT from './interface/pt_PT.po';
-import species_pt_PT from './species/pt_PT.po';
-
-import de_DE from './interface/de_DE.po';
-import species_de_DE from './species/de_DE.po';
-
-import it_IT from './interface/it_IT.po';
-import species_it_IT from './species/it_IT.po';
-
-import cs_CZ from './interface/cs_CZ.po';
-import species_cs_CZ from './species/cs_CZ.po';
-
 import bg_BG from './interface/bg_BG.po';
-import species_bg_BG from './species/bg_BG.po';
-
-import sr_RS from './interface/sr.po';
-import species_sr_RS from './species/sr.po';
-
-import sl_SI from './interface/sl_SI.po';
-import species_sl_SI from './species/sl_SI.po';
-
-import tr_TR from './interface/tr_TR.po';
-import species_tr_TR from './species/tr_TR.po';
-
-import pl_PL from './interface/pl_PL.po';
-import species_pl_PL from './species/pl_PL.po';
-
-import ro_RO from './interface/ro_RO.po';
-import species_ro_RO from './species/ro_RO.po';
-
 import ca_ES from './interface/ca_ES.po';
-import species_ca_ES from './species/ca_ES.po';
-
+import cs_CZ from './interface/cs_CZ.po';
 import da_DK from './interface/da_DK.po';
-import species_da_DK from './species/da_DK.po';
-
-import ja_JP from './interface/ja_JP.po';
-import species_ja_JP from './species/ja_JP.po';
-
+import de_DE from './interface/de_DE.po';
+import en from './interface/en.pot';
+import es_ES from './interface/es_ES.po';
+import fi_FI from './interface/fi_FI.po';
+import fr_FR from './interface/fr_FR.po';
+import hr_HR from './interface/hr_HR.po';
 import hu_HU from './interface/hu_HU.po';
-import species_hu_HU from './species/hu_HU.po';
-
+import it_IT from './interface/it_IT.po';
+import ja_JP from './interface/ja_JP.po';
+import lt_LT from './interface/lt_LT.po';
+import nl_NL from './interface/nl_NL.po';
+import pl_PL from './interface/pl_PL.po';
+import pt_PT from './interface/pt_PT.po';
+import ro_RO from './interface/ro_RO.po';
+import ru_RU from './interface/ru_RU.po';
 import sk_SK from './interface/sk_SK.po';
+import sl_SI from './interface/sl_SI.po';
+import sr_RS from './interface/sr.po';
+import sv_SE from './interface/sv_SE.po';
+import tr_TR from './interface/tr_TR.po';
+import species_bg_BG from './species/bg_BG.po';
+import species_ca_ES from './species/ca_ES.po';
+import species_cs_CZ from './species/cs_CZ.po';
+import species_da_DK from './species/da_DK.po';
+import species_de_DE from './species/de_DE.po';
+import species_en from './species/en.pot';
+import species_es_ES from './species/es_ES.po';
+import species_fi_FI from './species/fi_FI.po';
+import species_fr_FR from './species/fr_FR.po';
+import species_hr_HR from './species/hr_HR.po';
+import species_hu_HU from './species/hu_HU.po';
+import species_it_IT from './species/it_IT.po';
+import species_ja_JP from './species/ja_JP.po';
+import species_lt_LT from './species/lt_LT.po';
+import species_nl_NL from './species/nl_NL.po';
+import species_pl_PL from './species/pl_PL.po';
+import species_pt_PT from './species/pt_PT.po';
+import species_ro_RO from './species/ro_RO.po';
+import species_ru_RU from './species/ru_RU.po';
 import species_sk_SK from './species/sk_SK.po';
+import species_sl_SI from './species/sl_SI.po';
+import species_sr_RS from './species/sr.po';
+import species_sv_SE from './species/sv_SE.po';
+import species_tr_TR from './species/tr_TR.po';
 
 const flatNames = { ...names };
 Object.keys(flatNames).forEach(lang => {

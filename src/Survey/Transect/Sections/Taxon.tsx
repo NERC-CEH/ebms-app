@@ -1,10 +1,10 @@
 import { FC, useContext } from 'react';
-import Sample from 'models/sample';
-import Occurrence, { Taxon, DRAGONFLY_GROUP } from 'models/occurrence';
-import { NavContext } from '@ionic/react';
-import { useRouteMatch } from 'react-router';
 import { observer } from 'mobx-react';
+import { useRouteMatch } from 'react-router';
 import { Page, Main, Header, useAlert } from '@flumens';
+import { NavContext } from '@ionic/react';
+import Occurrence, { Taxon, DRAGONFLY_GROUP } from 'models/occurrence';
+import Sample from 'models/sample';
 import TaxonSearch from 'Components/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';

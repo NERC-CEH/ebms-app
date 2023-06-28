@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import { IonSpinner } from '@ionic/react';
 import { observer } from 'mobx-react';
+import PropTypes from 'prop-types';
 import { prettyPrintLocation } from '@flumens';
+import { IonSpinner } from '@ionic/react';
 import './styles.scss';
 
 function getValue(sample) {

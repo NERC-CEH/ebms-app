@@ -1,7 +1,14 @@
 import { FC, useContext } from 'react';
-import Sample from 'models/sample';
-import Occurrence from 'models/occurrence';
+import { observer } from 'mobx-react';
+import {
+  addCircleOutline,
+  filterOutline,
+  thumbsUpOutline,
+  cloudyOutline,
+} from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
+import { Main, MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -14,18 +21,11 @@ import {
   NavContext,
   IonItemDivider,
 } from '@ionic/react';
-import {
-  addCircleOutline,
-  filterOutline,
-  thumbsUpOutline,
-  cloudyOutline,
-} from 'ionicons/icons';
-import { Main, MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
-import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import PhotoPicker from 'common/Components/PhotoPicker';
+import Occurrence from 'models/occurrence';
+import Sample from 'models/sample';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import IncrementalButton from 'Survey/common/IncrementalButton';
-import { observer } from 'mobx-react';
-import { Trans as T } from 'react-i18next';
 import './styles.scss';
 
 const speciesNameSort = (occ1: Occurrence, occ2: Occurrence) => {

@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import Occurrence from 'models/occurrence';
 import { observer } from 'mobx-react';
 import { Page, Header } from '@flumens';
+import Occurrence from 'models/occurrence';
 import Main from './Main';
 
 interface Props {

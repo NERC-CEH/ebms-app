@@ -1,10 +1,10 @@
-import { Model, ModelAttrs } from '@flumens';
 import { observable } from 'mobx';
 import axios from 'axios';
-import CONFIG from 'common/config';
 import * as Yup from 'yup';
-import { UserModel } from '../user';
+import { Model, ModelAttrs } from '@flumens';
+import CONFIG from 'common/config';
 import { genericStore } from '../store';
+import { UserModel } from '../user';
 import PastLocationsExtension from './pastLocExt';
 
 const transectsSchemaBackend = Yup.object().shape({

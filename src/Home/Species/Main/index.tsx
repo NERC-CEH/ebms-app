@@ -1,12 +1,7 @@
 import { FC, useState } from 'react';
-import { IonModal, IonGrid, IonRow, IonCol } from '@ionic/react';
-import appModel from 'models/app';
-import savedSamples from 'models/collections/samples';
-import userModel from 'models/user';
 import { observer } from 'mobx-react';
+import { informationCircle } from 'ionicons/icons';
 import { useTranslation } from 'react-i18next';
-import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
-import config from 'common/config';
 import {
   Main,
   ModalHeader,
@@ -14,11 +9,16 @@ import {
   UserFeedbackRequest,
   InfoBackgroundMessage,
 } from '@flumens';
-import { informationCircle } from 'ionicons/icons';
+import { IonModal, IonGrid, IonRow, IonCol } from '@ionic/react';
+import config from 'common/config';
+import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
+import appModel from 'models/app';
+import savedSamples from 'models/collections/samples';
+import userModel from 'models/user';
 import SpeciesProfile from './SpeciesProfile';
 import './images';
-import './thumbnails';
 import './styles.scss';
+import './thumbnails';
 
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters
 function escapeRegexCharacters(str: string) {

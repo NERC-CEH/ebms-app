@@ -1,7 +1,13 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 
+/* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import { useState } from 'react';
+import { Trans as T } from 'react-i18next';
+import { Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Main, useOnBackButton } from '@flumens';
 import {
   IonCardHeader,
   IonCardSubtitle,
@@ -9,13 +15,7 @@ import {
   IonCardTitle,
   IonChip,
 } from '@ionic/react';
-import { Main, useOnBackButton } from '@flumens';
-import { Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import '@ionic/react/css/ionic-swiper.css';
-import { Trans as T } from 'react-i18next';
 import ImageWithBackground from 'common/Components/ImageWithBackground';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';

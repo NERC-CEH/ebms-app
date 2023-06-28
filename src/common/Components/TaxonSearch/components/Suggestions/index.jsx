@@ -1,5 +1,5 @@
-import { IonList, IonItem } from '@ionic/react';
 import PropTypes from 'prop-types';
+import { IonList, IonItem } from '@ionic/react';
 import Species from './components/Species';
 
 /**

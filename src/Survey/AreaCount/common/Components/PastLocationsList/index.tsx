@@ -1,5 +1,15 @@
 import { FC, createRef, useState } from 'react';
 import { observer } from 'mobx-react';
+import clsx from 'clsx';
+import {
+  star,
+  starOutline,
+  informationCircleOutline,
+  resizeOutline,
+  arrowForwardOutline,
+} from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
+import { useAlert, InfoMessage } from '@flumens';
 import {
   IonList,
   IonItemOption,
@@ -9,20 +19,10 @@ import {
   IonLabel,
   IonIcon,
 } from '@ionic/react';
-import {
-  star,
-  starOutline,
-  informationCircleOutline,
-  resizeOutline,
-  arrowForwardOutline,
-} from 'ionicons/icons';
-import { useAlert, InfoMessage } from '@flumens';
+import turf from '@turf/distance';
 import appModel from 'models/app';
 import StringHelp from 'helpers/string';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import { Trans as T } from 'react-i18next';
-import turf from '@turf/distance';
-import clsx from 'clsx';
 import EditModal from './EditModal';
 import './styles.scss';
 

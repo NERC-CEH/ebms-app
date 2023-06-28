@@ -1,8 +1,8 @@
 import { FC, useState, useEffect } from 'react';
-import { IonIcon } from '@ionic/react';
-import Leaflet from 'leaflet';
-import GPS from 'helpers/GPS';
 import { locateOutline } from 'ionicons/icons';
+import Leaflet from 'leaflet';
+import { IonIcon } from '@ionic/react';
+import GPS from 'helpers/GPS';
 import './styles.scss';
 
 const MAX_ZOOM = 18;

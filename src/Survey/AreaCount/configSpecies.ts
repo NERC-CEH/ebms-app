@@ -1,19 +1,19 @@
 /* eslint-disable no-param-reassign */
-import * as Yup from 'yup';
-import { areaCountSchema, Survey } from 'Survey/common/config';
+import i18n from 'i18next';
 import { resizeOutline, flowerOutline, arrowBackOutline } from 'ionicons/icons';
+import { merge } from 'lodash';
+import * as Yup from 'yup';
 import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from 'common/images/caterpillar.svg';
-import { merge } from 'lodash';
-import i18n from 'i18next';
-import coreSurvey from './config';
-import normal from './common/images/normal.png';
-import freshImg from './common/images/fresh.png';
-import wornImg from './common/images/worn.png';
-import thistleImg from './common/images/thistle.jpg';
+import { areaCountSchema, Survey } from 'Survey/common/config';
 import desertNettleImg from './common/images/desertNettle.jpg';
+import freshImg from './common/images/fresh.png';
 import mallowImg from './common/images/mallow.jpg';
+import normal from './common/images/normal.png';
 import otherImg from './common/images/other.jpg';
+import thistleImg from './common/images/thistle.jpg';
+import wornImg from './common/images/worn.png';
+import coreSurvey from './config';
 
 const translateEggLayingValue = (eggLayingValues: any) => {
   if (!eggLayingValues?.length) return null;

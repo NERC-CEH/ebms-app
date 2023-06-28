@@ -1,8 +1,8 @@
 import { FC, useContext } from 'react';
-import { UserModel } from 'models/user';
-import { NavContext } from '@ionic/react';
-import { useToast, useLoader, Page, Header, device } from '@flumens';
 import { useTranslation } from 'react-i18next';
+import { useToast, useLoader, Page, Header, device } from '@flumens';
+import { NavContext } from '@ionic/react';
+import { UserModel } from 'models/user';
 import Main from './Main';
 import './styles.scss';
 

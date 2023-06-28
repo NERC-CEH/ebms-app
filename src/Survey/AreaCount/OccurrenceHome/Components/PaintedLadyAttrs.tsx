@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import Occurrence from 'models/occurrence';
-import { MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
 import { useRouteMatch } from 'react-router';
+import { MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
 import butterflyIcon from 'common/images/butterfly.svg';
-import PaintedLadyWing from './PaintedLadyWing';
+import Occurrence from 'models/occurrence';
 import PaintedLadyBehaviour from './PaintedLadyBehaviour';
+import PaintedLadyWing from './PaintedLadyWing';
 
 type Props = {
   occurrence: Occurrence;

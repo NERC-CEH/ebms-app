@@ -1,18 +1,18 @@
+import { IObservableArray } from 'mobx';
 import {
   Occurrence as OccurrenceOriginal,
   OccurrenceAttrs,
   validateRemoteModel,
 } from '@flumens';
+import speciesGroups from 'common/helpers/groups';
+import bumblebeeIcon from 'common/images/bumblebee.svg';
+import butterflyIcon from 'common/images/butterfly.svg';
+import dragonflyIcon from 'common/images/dragonfly.svg';
+import mothIcon from 'common/images/moth.svg';
 import { MachineInvolvement } from 'Survey/Moth/config';
 import { Survey } from 'Survey/common/config';
-import butterflyIcon from 'common/images/butterfly.svg';
-import speciesGroups from 'common/helpers/groups';
-import mothIcon from 'common/images/moth.svg';
-import { IObservableArray } from 'mobx';
-import bumblebeeIcon from 'common/images/bumblebee.svg';
-import dragonflyIcon from 'common/images/dragonfly.svg';
-import Sample from './sample';
 import Media from './media';
+import Sample from './sample';
 
 export const DRAGONFLY_GROUP = speciesGroups.dragonflies.id;
 

@@ -1,13 +1,13 @@
 import { useEffect, useContext } from 'react';
-import { NavContext, isPlatform } from '@ionic/react';
-import { useAlert, HandledError } from '@flumens';
-import appModel from 'models/app';
-import { GPS_DISABLED_ERROR_MESSAGE } from 'common/helpers/GPS';
-import userModel from 'models/user';
-import Sample from 'models/sample';
-import savedSamples from 'models/collections/samples';
-import { Survey } from 'Survey/common/config';
 import { Geolocation } from '@capacitor/geolocation';
+import { useAlert, HandledError } from '@flumens';
+import { NavContext, isPlatform } from '@ionic/react';
+import { GPS_DISABLED_ERROR_MESSAGE } from 'common/helpers/GPS';
+import appModel from 'models/app';
+import savedSamples from 'models/collections/samples';
+import Sample from 'models/sample';
+import userModel from 'models/user';
+import { Survey } from 'Survey/common/config';
 
 async function getNewSample(survey: Survey, hasGPSPermission: any) {
   const recorder = userModel.getPrettyName();

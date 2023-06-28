@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import PropTypes from 'prop-types';
+import { Page, Main, Header } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -8,7 +9,6 @@ import {
   IonRadio,
   IonLabel,
 } from '@ionic/react';
-import { Page, Main, Header } from '@flumens';
 import { surveyConfigs as surveys } from 'common/models/sample';
 
 function SelectCountry({ appModel }) {

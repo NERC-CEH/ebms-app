@@ -1,8 +1,8 @@
-import userModel from 'models/user';
-import appModel from 'models/app';
 import axios, { AxiosResponse } from 'axios';
 import config from 'common/config';
 import speciesCommonNamesData from 'common/data/commonNames/index.json';
+import appModel from 'models/app';
+import userModel from 'models/user';
 
 type Result = {
   classifier_id: string;

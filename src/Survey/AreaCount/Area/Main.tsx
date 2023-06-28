@@ -1,4 +1,15 @@
 import { FC, useEffect, useState, useRef } from 'react';
+import { observer } from 'mobx-react';
+import { starOutline } from 'ionicons/icons';
+import L, { LatLngExpression } from 'leaflet';
+import 'leaflet-draw';
+import 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { MapContainer, Marker } from 'react-leaflet';
+import { useRouteMatch } from 'react-router';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
+import { Main } from '@flumens';
+import '@flumens/ionic/dist/components/ModelLocationMap/Map/map/leaflet-mapbox-gl';
 import {
   IonToolbar,
   IonTitle,
@@ -10,23 +21,12 @@ import {
   useIonViewWillLeave,
   IonHeader,
 } from '@ionic/react';
-import { Main } from '@flumens';
-import CONFIG from 'common/config';
-import Sample from 'models/sample';
-import { useRouteMatch } from 'react-router';
-import L, { LatLngExpression } from 'leaflet';
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { starOutline } from 'ionicons/icons';
-import 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import '@flumens/ionic/dist/components/ModelLocationMap/Map/map/leaflet-mapbox-gl';
-import hasWebGL from 'common/helpers/webGLSupport';
-import { MapContainer, Marker } from 'react-leaflet';
-import 'leaflet-draw';
 import MapControl from 'common/Components/LeafletControl';
-import { observer } from 'mobx-react';
-import MapInfo from './MapInfo';
+import CONFIG from 'common/config';
+import hasWebGL from 'common/helpers/webGLSupport';
+import Sample from 'models/sample';
 import PastLocationsList from '../common/Components/PastLocationsList';
+import MapInfo from './MapInfo';
 
 const SNAP_POSITIONS = [0, 0.3, 0.5, 1];
 const DEFAULT_SNAP_POSITION = 0.3;

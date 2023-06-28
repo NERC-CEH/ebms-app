@@ -1,7 +1,8 @@
 import { FC, useContext } from 'react';
-import Occurrence from 'models/occurrence';
-import Media from 'models/media';
-import { useUserStatusCheck } from 'models/user';
+import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
+import { useRouteMatch } from 'react-router';
+import { useAlert } from '@flumens';
 import {
   IonItemSliding,
   IonItem,
@@ -13,11 +14,10 @@ import {
   NavContext,
   IonButton,
 } from '@ionic/react';
-import { useAlert } from '@flumens';
-import { observer } from 'mobx-react';
-import { Trans as T } from 'react-i18next';
-import { useRouteMatch } from 'react-router';
 import mothIcon from 'common/images/moth.svg';
+import Media from 'models/media';
+import Occurrence from 'models/occurrence';
+import { useUserStatusCheck } from 'models/user';
 import './styles.scss';
 
 function useDeleteOccurrencePrompt(occ: Occurrence) {

@@ -1,6 +1,6 @@
 import { createRef, Component } from 'react';
-import PropTypes from 'prop-types';
 import * as d3 from 'd3';
+import PropTypes from 'prop-types';
 
 class SVG extends Component {
   static propTypes = {

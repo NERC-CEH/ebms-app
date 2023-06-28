@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { Main, MenuAttrItem, CounterInput } from '@flumens';
-import { bulbOutline, chatboxOutline } from 'ionicons/icons';
-import { IonList, IonItemDivider } from '@ionic/react';
 import { observer } from 'mobx-react';
+import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
+import { Main, MenuAttrItem, CounterInput } from '@flumens';
+import { IonList, IonItemDivider } from '@ionic/react';
 import numberIcon from 'common/images/number.svg';
 import Location, { Lamp } from 'models/location';
 import './styles.scss';

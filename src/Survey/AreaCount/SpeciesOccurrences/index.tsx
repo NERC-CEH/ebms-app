@@ -1,10 +1,10 @@
 import { FC, useContext } from 'react';
-import { useRouteMatch } from 'react-router-dom';
 import { observer } from 'mobx-react';
+import { useRouteMatch } from 'react-router-dom';
 import { Page, Header, useAlert } from '@flumens';
 import { NavContext, useIonViewWillEnter } from '@ionic/react';
-import Sample from 'models/sample';
 import Occurrence from 'models/occurrence';
+import Sample from 'models/sample';
 import Main from './Main';
 import './styles.scss';
 

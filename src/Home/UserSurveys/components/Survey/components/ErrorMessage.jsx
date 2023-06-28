@@ -1,6 +1,6 @@
-import { IonItemDivider, IonLabel } from '@ionic/react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
+import { IonItemDivider, IonLabel } from '@ionic/react';
 
 function ErrorMessage({ sample }) {
   if (!sample.error.message) {

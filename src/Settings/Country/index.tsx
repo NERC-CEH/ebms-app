@@ -1,5 +1,8 @@
 import { FC, Fragment, useState, useContext } from 'react';
 import { observer } from 'mobx-react';
+import { flagOutline } from 'ionicons/icons';
+import { Trans as T, useTranslation } from 'react-i18next';
+import { Page, Main, Header, useAlert } from '@flumens';
 import {
   IonIcon,
   IonList,
@@ -10,11 +13,8 @@ import {
   IonItemDivider,
   NavContext,
 } from '@ionic/react';
-import { Page, Main, Header, useAlert } from '@flumens';
-import { flagOutline } from 'ionicons/icons';
-import appModel from 'models/app';
-import { Trans as T, useTranslation } from 'react-i18next';
 import countries from 'common/config/countries';
+import appModel from 'models/app';
 import './styles.scss';
 
 type Props = {

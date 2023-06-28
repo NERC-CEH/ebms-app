@@ -1,13 +1,13 @@
-import savedSamples from 'models/collections/samples';
-import appModel from 'models/app';
-import userModel from 'models/user';
 import { AttrPage, RouteWithModels } from '@flumens';
+import appModel from 'models/app';
+import savedSamples from 'models/collections/samples';
+import userModel from 'models/user';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import Home from './Home';
-import SectionsList from './Sections/List';
-import SectionsEdit from './Sections/Edit';
-import SectionsEditTaxa from './Sections/Taxon';
 import OccurrenceEdit from './OccurrenceEdit';
+import SectionsEdit from './Sections/Edit';
+import SectionsList from './Sections/List';
+import SectionsEditTaxa from './Sections/Taxon';
 import survey from './config';
 
 const { AttrPageFromRoute } = AttrPage;

@@ -1,8 +1,7 @@
 import { FC } from 'react';
-import { Main, Attr } from '@flumens';
 import { observer } from 'mobx-react';
-import Sample from 'models/sample';
-import appModel, { AppModel } from 'models/app';
+import { Trans as T } from 'react-i18next';
+import { Main, Attr } from '@flumens';
 import {
   IonButtons,
   IonToolbar,
@@ -11,7 +10,8 @@ import {
   IonButton,
   IonModal,
 } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
+import appModel, { AppModel } from 'models/app';
+import Sample from 'models/sample';
 import './styles.scss';
 
 type Props = {

@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import Sample from 'models/sample';
 import { observer } from 'mobx-react';
-import { IonIcon } from '@ionic/react';
 import { resizeOutline } from 'ionicons/icons';
-import { Page } from '@flumens';
 import { Trans as T, useTranslation } from 'react-i18next';
+import { Page } from '@flumens';
+import { IonIcon } from '@ionic/react';
+import Sample from 'models/sample';
 import Header from './Header';
 import Main from './Main';
 import './styles.scss';

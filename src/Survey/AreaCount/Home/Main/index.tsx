@@ -1,4 +1,27 @@
 import { FC, useContext, useRef } from 'react';
+import { toJS } from 'mobx';
+import { observer } from 'mobx-react';
+import {
+  mapOutline,
+  timeOutline,
+  pauseOutline,
+  playOutline,
+  clipboardOutline,
+  filterOutline,
+  warningOutline,
+  informationCircle,
+  flagOutline,
+  copyOutline,
+} from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
+import { useRouteMatch } from 'react-router-dom';
+import {
+  Main,
+  MenuAttrItem,
+  LongPressButton,
+  useAlert,
+  InfoMessage,
+} from '@flumens';
 import {
   IonList,
   IonItem,
@@ -13,39 +36,16 @@ import {
   IonItemDivider,
   IonBadge,
 } from '@ionic/react';
-import { useRouteMatch } from 'react-router-dom';
-import {
-  mapOutline,
-  timeOutline,
-  pauseOutline,
-  playOutline,
-  clipboardOutline,
-  filterOutline,
-  warningOutline,
-  informationCircle,
-  flagOutline,
-  copyOutline,
-} from 'ionicons/icons';
-import { observer } from 'mobx-react';
-import { toJS } from 'mobx';
+import GridRef from 'common/Components/GridRefValue';
 import config from 'common/config';
 import appModel from 'models/app';
 import Sample from 'models/sample';
-import {
-  Main,
-  MenuAttrItem,
-  LongPressButton,
-  useAlert,
-  InfoMessage,
-} from '@flumens';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import IncrementalButton from 'Survey/common/IncrementalButton';
-import { Trans as T } from 'react-i18next';
-import GridRef from 'common/Components/GridRefValue';
 import PaintedLadyBehaviour from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyBehaviour';
 import PaintedLadyDirection from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyDirection';
-import PaintedLadyWing from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyWing';
 import PaintedLadyOther from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyOther';
+import PaintedLadyWing from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyWing';
+import IncrementalButton from 'Survey/common/IncrementalButton';
 import CountdownClock from '../components/CountdownClock';
 import './styles.scss';
 

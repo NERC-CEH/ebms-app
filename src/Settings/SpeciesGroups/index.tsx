@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Page, Header, Main, InfoMessage } from '@flumens';
 import { informationCircleOutline } from 'ionicons/icons';
+import { Page, Header, Main, InfoMessage } from '@flumens';
 import { IonList } from '@ionic/react';
 import speciesGroupImage from './speciesGroupImage.jpg';
 import './styles.scss';

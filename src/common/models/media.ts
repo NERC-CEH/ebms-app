@@ -1,16 +1,16 @@
-import { Media as MediaOriginal, MediaAttrs } from '@flumens';
 import { observable } from 'mobx';
-import CONFIG from 'common/config';
-import { isPlatform } from '@ionic/react';
 import { Capacitor } from '@capacitor/core';
-import userModel from 'models/user';
 import {
   Filesystem,
   Directory as FilesystemDirectory,
 } from '@capacitor/filesystem';
+import { Media as MediaOriginal, MediaAttrs } from '@flumens';
+import { isPlatform } from '@ionic/react';
+import CONFIG from 'common/config';
 import identifyImage from 'common/services/waarneming';
-import Sample from './sample';
+import userModel from 'models/user';
 import Occurrence from './occurrence';
+import Sample from './sample';
 
 export type URL = string;
 

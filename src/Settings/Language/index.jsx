@@ -1,6 +1,7 @@
 import { useContext } from 'react';
-import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import { globeOutline } from 'ionicons/icons';
+import PropTypes from 'prop-types';
 import { Page, Main, Header } from '@flumens';
 import {
   IonIcon,
@@ -11,7 +12,6 @@ import {
   IonLabel,
   NavContext,
 } from '@ionic/react';
-import { globeOutline } from 'ionicons/icons';
 import languages from 'common/config/languages';
 import './styles.scss';
 

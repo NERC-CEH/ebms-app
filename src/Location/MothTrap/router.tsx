@@ -1,11 +1,11 @@
 import { FC, useEffect, useContext } from 'react';
-import { RouteWithModels, AttrPage, ModelLocationMap } from '@flumens';
 import { observer } from 'mobx-react';
-import MothTrap from 'models/location';
-import locations from 'models/collections/locations';
 import { useRouteMatch } from 'react-router';
+import { RouteWithModels, AttrPage, ModelLocationMap } from '@flumens';
 import { NavContext } from '@ionic/react';
 import config from 'common/config';
+import locations from 'models/collections/locations';
+import MothTrap from 'models/location';
 import MothTrapNew from './Home';
 import MothTrapLamp from './Lamp';
 import LampAttr from './LampAttr';

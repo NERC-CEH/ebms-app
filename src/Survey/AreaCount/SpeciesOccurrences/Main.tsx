@@ -1,4 +1,9 @@
 import { FC } from 'react';
+import { observer } from 'mobx-react';
+import { warningOutline } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
+import { useRouteMatch } from 'react-router';
+import { Main, MenuAttrItem, InfoBackgroundMessage } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -11,12 +16,7 @@ import {
   IonIcon,
 } from '@ionic/react';
 import Sample from 'models/sample';
-import { warningOutline } from 'ionicons/icons';
-import { useRouteMatch } from 'react-router';
 import GridRefValue from 'Components/GridRefValue';
-import { observer } from 'mobx-react';
-import { Main, MenuAttrItem, InfoBackgroundMessage } from '@flumens';
-import { Trans as T } from 'react-i18next';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import './styles.scss';
 

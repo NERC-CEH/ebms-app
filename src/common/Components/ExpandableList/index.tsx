@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
-import { IonItem, IonLabel } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
+import { IonItem, IonLabel } from '@ionic/react';
 import './styles.scss';
 
 const MAX_ITEMS = 5;

@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import L from 'leaflet';
 import { observer } from 'mobx-react';
+import clsx from 'clsx';
+import { locationOutline } from 'ionicons/icons';
+import L from 'leaflet';
+import { Trans as T } from 'react-i18next';
 import { Marker as LeafletMarker, Popup } from 'react-leaflet';
 import { IonButton, IonIcon, IonLabel } from '@ionic/react';
-import { locationOutline } from 'ionicons/icons';
 import MothTrap from 'common/models/location';
-import { Trans as T } from 'react-i18next';
-import clsx from 'clsx';
 import './styles.scss';
 
 interface Props {

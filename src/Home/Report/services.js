@@ -1,9 +1,9 @@
-import * as Yup from 'yup';
-import userModel from 'models/user';
-import config from 'common/config';
-import { HandledError, isAxiosNetworkError } from '@flumens';
 import axios from 'axios';
+import * as Yup from 'yup';
+import { HandledError, isAxiosNetworkError } from '@flumens';
+import config from 'common/config';
 import { surveyConfigs as surveys } from 'common/models/sample';
+import userModel from 'models/user';
 
 const speciesSchemaBackend = Yup.object().shape({
   by_species: Yup.object()

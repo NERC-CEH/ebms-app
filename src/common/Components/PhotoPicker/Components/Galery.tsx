@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import { Gallery, useToast } from '@flumens';
-import userModel from 'models/user';
-import Media from 'models/media';
+import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
+import { Gallery, useToast } from '@flumens';
 import { IonLabel, IonButton, IonIcon } from '@ionic/react';
 import mothIcon from 'common/images/moth.svg';
-import { observer } from 'mobx-react';
+import Media from 'models/media';
+import userModel from 'models/user';
 import '../styles.scss';
 
 type Props = {

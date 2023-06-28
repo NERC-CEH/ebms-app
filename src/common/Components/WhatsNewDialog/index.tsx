@@ -1,10 +1,10 @@
 import { FC, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import appModelTypes from 'common/models/app';
 import { IonBackdrop, IonIcon, IonButton } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import appLogo from 'common/images/icon.svg';
+import appModelTypes from 'common/models/app';
 import ExpandableList from 'Components/ExpandableList';
 import './styles.scss';
 

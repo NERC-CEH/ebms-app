@@ -1,7 +1,14 @@
 import { FC, useContext, useRef } from 'react';
-import Sample from 'models/sample';
-import Occurrence from 'models/occurrence';
-import config from 'common/config';
+import { toJS } from 'mobx';
+import { observer } from 'mobx-react';
+import clsx from 'clsx';
+import {
+  informationCircle,
+  locationOutline,
+  camera,
+  warningOutline,
+} from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import {
   Main,
   MenuAttrItem,
@@ -22,17 +29,10 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
-import { observer } from 'mobx-react';
-import { toJS } from 'mobx';
-import clsx from 'clsx';
+import config from 'common/config';
+import Occurrence from 'models/occurrence';
+import Sample from 'models/sample';
 import { getUnkownSpecies } from 'Survey/Moth/config';
-import {
-  informationCircle,
-  locationOutline,
-  camera,
-  warningOutline,
-} from 'ionicons/icons';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import UnidentifiedSpeciesEntry from './Components/UnidentifiedSpeciesEntry';
 import './styles.scss';

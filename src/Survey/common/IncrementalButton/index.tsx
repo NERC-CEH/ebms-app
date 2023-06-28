@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { isPlatform } from '@ionic/react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { LongPressButton } from '@flumens';
+import { isPlatform } from '@ionic/react';
 import AnimatedNumber from './AnimatedNumber';
 import './styles.scss';
 

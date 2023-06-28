@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
+import { searchOutline } from 'ionicons/icons';
 import {
   IonHeader,
   IonToolbar,
@@ -8,7 +9,6 @@ import {
   IonButton,
   IonTitle,
 } from '@ionic/react';
-import { searchOutline } from 'ionicons/icons';
 import FiltersToolbar from './FiltersToolbar';
 import logo from './logo.svg';
 import './styles.scss';

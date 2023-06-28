@@ -1,15 +1,15 @@
 import { FC } from 'react';
-import { IonList, IonItemDivider } from '@ionic/react';
 import { observer } from 'mobx-react';
-import Occurrence from 'models/occurrence';
-import appModel from 'models/app';
 import { Trans as T } from 'react-i18next';
-import { Main, MenuAttrItem, MenuAttrItemFromModel, Attr } from '@flumens';
-import PhotoPicker from 'common/Components/PhotoPicker';
-import mothIcon from 'common/images/moth.svg';
 import { useRouteMatch } from 'react-router';
-import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
+import { Main, MenuAttrItem, MenuAttrItemFromModel, Attr } from '@flumens';
+import { IonList, IonItemDivider } from '@ionic/react';
+import PhotoPicker from 'common/Components/PhotoPicker';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
+import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
+import mothIcon from 'common/images/moth.svg';
+import appModel from 'models/app';
+import Occurrence from 'models/occurrence';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 
 interface Props {

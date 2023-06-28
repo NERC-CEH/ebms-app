@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { IonToolbar, IonIcon, IonChip, IonLabel } from '@ionic/react';
-import { closeOutline } from 'ionicons/icons';
 import clsx from 'clsx';
+import { closeOutline } from 'ionicons/icons';
+import { IonToolbar, IonIcon, IonChip, IonLabel } from '@ionic/react';
 import {
   Filter as FilterValue,
   Filters,

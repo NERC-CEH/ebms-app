@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { IonLabel } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
+import { IonLabel } from '@ionic/react';
 
 type Props = {
   behaviour: string;

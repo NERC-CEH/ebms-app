@@ -1,8 +1,8 @@
-import userModel from 'models/user';
 import { reaction, observable, observe } from 'mobx';
 import { device, Store, Collection } from '@flumens';
-import { locationsStore as store } from '../../store';
+import userModel from 'models/user';
 import Location from '../../location';
+import { locationsStore as store } from '../../store';
 import fetchLocations from './service';
 
 type constructorOptions = {

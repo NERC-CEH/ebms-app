@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { IonList, isPlatform } from '@ionic/react';
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import AppModelProps from 'models/app';
-import { Page, Main, Header, InfoMessage, MenuAttrToggle } from '@flumens';
 import { cameraOutline } from 'ionicons/icons';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
+import { Page, Main, Header, InfoMessage, MenuAttrToggle } from '@flumens';
+import { IonList, isPlatform } from '@ionic/react';
+import AppModelProps from 'models/app';
 import './styles.scss';
 
 function onToggle(appModel: typeof AppModelProps, checked: boolean) {

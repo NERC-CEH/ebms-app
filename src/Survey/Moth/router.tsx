@@ -2,12 +2,12 @@ import { RouteWithModels, AttrPage } from '@flumens';
 import savedSamples from 'models/collections/samples';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import Details from './Details';
-import StartWeather from './Details/StartWeather';
 import EndWeather from './Details/EndWeather';
+import StartWeather from './Details/StartWeather';
 import Home from './Home';
-import Taxon from './Taxon';
 import Location from './Location';
 import OccurrenceHome from './OccurrenceHome';
+import Taxon from './Taxon';
 import survey from './config';
 
 const { AttrPageFromRoute } = AttrPage;

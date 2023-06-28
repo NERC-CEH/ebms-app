@@ -1,11 +1,11 @@
 import { FC, useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
+import { bookOutline, helpBuoyOutline } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import { Page, useAlert } from '@flumens';
 import { IonIcon } from '@ionic/react';
-import { AppModel } from 'models/app';
-import { bookOutline, helpBuoyOutline } from 'ionicons/icons';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
-import { Trans as T } from 'react-i18next';
+import { AppModel } from 'models/app';
 import Header from './Header';
 import Main from './Main';
 

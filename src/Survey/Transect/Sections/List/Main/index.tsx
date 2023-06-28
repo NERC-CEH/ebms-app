@@ -1,15 +1,15 @@
 import { FC } from 'react';
+import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
+import { Main } from '@flumens';
+import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
+import butterflyIcon from 'common/images/butterfly.svg';
 import { AppModel } from 'models/app';
 import Sample from 'models/sample';
-import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
-import { toJS } from 'mobx';
-import { Main } from '@flumens';
 import transformToLatLon from 'helpers/location';
-import butterflyIcon from 'common/images/butterfly.svg';
-import Transects from './components/Transects';
 import SVG from './components/SVG';
+import Transects from './components/Transects';
 import './styles.scss';
 
 const getSectionItem = (sectionSample: Sample, match: any) => {

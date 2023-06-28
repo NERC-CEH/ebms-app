@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { IonLabel, IonBadge } from '@ionic/react';
 import i18n from 'i18next';
+import { IonLabel, IonBadge } from '@ionic/react';
 
 type Props = {
   wings: string[];

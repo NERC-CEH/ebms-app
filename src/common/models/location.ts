@@ -1,3 +1,7 @@
+import { observable } from 'mobx';
+import axios, { AxiosError } from 'axios';
+import * as Yup from 'yup';
+import { Geolocation } from '@capacitor/geolocation';
 import {
   Store,
   validateRemoteModel,
@@ -9,13 +13,9 @@ import {
   Collection,
   updateModelLocation,
 } from '@flumens';
-import { Geolocation } from '@capacitor/geolocation';
 import CONFIG from 'common/config';
-import * as Yup from 'yup';
-import userModel from 'models/user';
 import UUID from 'common/helpers/UUID';
-import { observable } from 'mobx';
-import axios, { AxiosError } from 'axios';
+import userModel from 'models/user';
 import { Location } from './collections/locations/service';
 import { locationsStore } from './store';
 import { getLocalAttributes } from './utils';

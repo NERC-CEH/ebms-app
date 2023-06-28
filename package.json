@@ -102,6 +102,7 @@
     "@capacitor/cli": "^5.0.3",
     "@flumens/eslint-config": "^2.0.1",
     "@flumens/fetch-onedrive-excel": "^0.3.0",
+    "@flumens/prettier-config": "^0.2.3",
     "@flumens/webpack-config": "^5.0.0",
     "@types/jest": "^27.5.1",
     "@types/react": "^17.0.8",
@@ -251,13 +252,7 @@
       "t": true
     }
   },
-  "prettier": {
-    "printWidth": 80,
-    "singleQuote": true,
-    "jsxBracketSameLine": false,
-    "trailingComma": "es5",
-    "arrowParens": "avoid"
-  },
+  "prettier": "@flumens/prettier-config",
   "jest": {
     "testEnvironment": "jsdom",
     "transform": {

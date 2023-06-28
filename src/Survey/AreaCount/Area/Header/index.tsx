@@ -1,9 +1,9 @@
 import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
-import { Header, MenuAttrToggle, useAlert } from '@flumens';
-import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
-import { isPlatform } from '@ionic/react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
+import { Header, MenuAttrToggle, useAlert } from '@flumens';
+import { isPlatform } from '@ionic/react';
+import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import './styles.scss';
 
 type Props = {

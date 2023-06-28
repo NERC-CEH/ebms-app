@@ -1,6 +1,7 @@
 import { FC, SyntheticEvent } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
+import { useToast, useAlert, date as dateHelp } from '@flumens';
 import {
   IonItem,
   IonLabel,
@@ -10,13 +11,12 @@ import {
   IonIcon,
   IonBadge,
 } from '@ionic/react';
-import { useToast, useAlert, date as dateHelp } from '@flumens';
-import { useUserStatusCheck } from 'models/user';
-import Sample, { useValidateCheck } from 'models/sample';
-import Occurrence from 'models/occurrence';
 import butterflyIcon from 'common/images/butterfly.svg';
-import OnlineStatus from './components/OnlineStatus';
+import Occurrence from 'models/occurrence';
+import Sample, { useValidateCheck } from 'models/sample';
+import { useUserStatusCheck } from 'models/user';
 import ErrorMessage from './components/ErrorMessage';
+import OnlineStatus from './components/OnlineStatus';
 import './styles.scss';
 
 function useDeleteSurveyPrompt(sample: Sample) {

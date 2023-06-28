@@ -1,13 +1,14 @@
 import { FC, memo } from 'react';
-import MothTrap from 'common/models/location';
 import { observer } from 'mobx-react';
-import locationsCollection from 'models/collections/locations';
+// eslint-disable-next-line
+import 'leaflet.markercluster';
+import 'leaflet/dist/leaflet.css';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
+import MothTrap from 'common/models/location';
+import locationsCollection from 'models/collections/locations';
 import Sample from 'models/sample';
 import hasLocationMatch from 'Survey/common/hasLocationMatch';
 import Marker from './Marker';
-import 'leaflet.markercluster'; // eslint-disable-line
-import 'leaflet/dist/leaflet.css';
 
 const forceSkipRefresh = (prevProps: any, nextProps: any) =>
   prevProps.mothTraps.length === nextProps.mothTraps.length;

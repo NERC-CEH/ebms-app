@@ -1,6 +1,6 @@
-import { isPlatform } from '@ionic/react';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { Filesystem, Directory } from '@capacitor/filesystem';
+import { isPlatform } from '@ionic/react';
 
 async function getImageMeta(url) {
   const promiseWrap = (resolve, reject) => {

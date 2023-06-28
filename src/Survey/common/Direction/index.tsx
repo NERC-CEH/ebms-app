@@ -1,5 +1,6 @@
 import { FC, useState, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
 import {
   Page,
   Header,
@@ -8,9 +9,8 @@ import {
   useAlert,
   AttrPropsExtended,
 } from '@flumens';
-import Occurrence from 'models/occurrence';
-import { Trans as T } from 'react-i18next';
 import { NavContext, IonButton, isPlatform } from '@ionic/react';
+import Occurrence from 'models/occurrence';
 import CompassModal from './CompassModal';
 import './styles.scss';
 

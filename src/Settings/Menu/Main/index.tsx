@@ -1,13 +1,6 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
 import {
-  IonIcon,
-  IonList,
-  IonItemDivider,
-  IonItem,
-  IonLabel,
-} from '@ionic/react';
-import {
   warningOutline,
   arrowUndoOutline,
   flameOutline,
@@ -19,13 +12,20 @@ import {
   personRemoveOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import languages from 'common/config/languages';
-import countries from 'common/config/countries';
-import config from 'common/config';
-import { surveyConfigs as surveys } from 'models/sample';
 import { Main, useAlert, InfoMessage, MenuAttrToggle } from '@flumens';
+import {
+  IonIcon,
+  IonList,
+  IonItemDivider,
+  IonItem,
+  IonLabel,
+} from '@ionic/react';
+import config from 'common/config';
+import countries from 'common/config/countries';
+import languages from 'common/config/languages';
 import butterflyIcon from 'common/images/butterfly.svg';
 import mothIcon from 'common/images/moth.svg';
+import { surveyConfigs as surveys } from 'models/sample';
 import './styles.scss';
 
 function useUserDeleteDialog(deleteUser: any) {
@@ -231,7 +231,7 @@ const MenuMain: FC<Props> = ({
           </InfoMessage>
         </div>
 
-        <div className="rounded destructive-item">
+        <div className="destructive-item rounded">
           <IonItem onClick={onResetDialog}>
             <IonIcon icon={arrowUndoOutline} size="small" slot="start" />
             <IonLabel>

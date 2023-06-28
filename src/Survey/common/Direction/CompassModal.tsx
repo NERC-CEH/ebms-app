@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
-import { IonBackdrop, IonIcon } from '@ionic/react';
 import { closeOutline } from 'ionicons/icons';
+import { IonBackdrop, IonIcon } from '@ionic/react';
 import Compass from '../Compass';
 import './styles.scss';
 

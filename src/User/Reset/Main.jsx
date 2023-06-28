@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import { IonButton, IonList } from '@ionic/react';
-import { Main, InputWithValidation, InfoMessage } from '@flumens';
-import { Trans as T } from 'react-i18next';
-import { informationCircle, mailOutline } from 'ionicons/icons';
 import { Formik, Form } from 'formik';
+import { informationCircle, mailOutline } from 'ionicons/icons';
+import PropTypes from 'prop-types';
+import { Trans as T } from 'react-i18next';
+import { Main, InputWithValidation, InfoMessage } from '@flumens';
+import { IonButton, IonList } from '@ionic/react';
 import './styles.scss';
 
 const Component = ({ onSubmit, schema }) => {

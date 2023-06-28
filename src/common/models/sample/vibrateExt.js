@@ -1,5 +1,5 @@
-import { isPlatform } from '@ionic/react';
 import { Haptics } from '@capacitor/haptics';
+import { isPlatform } from '@ionic/react';
 
 const hapticsVibrate = async () => {
   await Haptics.vibrate({ duration: 2000 });

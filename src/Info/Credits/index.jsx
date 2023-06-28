@@ -1,10 +1,10 @@
-import { IonItem, IonLabel } from '@ionic/react';
-import { Page, Main, Header, Section } from '@flumens';
 import { Trans as T } from 'react-i18next';
+import { Page, Main, Header, Section } from '@flumens';
+import { IonItem, IonLabel } from '@ionic/react';
 import species from 'common/data/profiles/index.json';
 import ExpandableList from 'Components/ExpandableList';
-import sponsorsLogo from './sponsors.png';
 import flumensLogo from './flumens.png';
+import sponsorsLogo from './sponsors.png';
 import './styles.scss';
 
 const { P, H } = Section;

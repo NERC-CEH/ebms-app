@@ -1,6 +1,10 @@
 import { FC } from 'react';
-import { Main, MenuAttrItem } from '@flumens';
+import { observer } from 'mobx-react';
+import clsx from 'clsx';
 import { pinOutline } from 'ionicons/icons';
+import { Trans as T, useTranslation } from 'react-i18next';
+import { useRouteMatch } from 'react-router';
+import { Main, MenuAttrItem } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -12,14 +16,10 @@ import {
   IonItemOption,
   IonBadge,
 } from '@ionic/react';
-import clsx from 'clsx';
-import { Trans as T, useTranslation } from 'react-i18next';
-import { useRouteMatch } from 'react-router';
-import { Lamp } from 'models/location';
-import mothTrapIcon from 'common/images/moth-inside-icon.svg';
-import InfoBackgroundMessage from 'common/Components/InfoBackgroundMessage';
 import GridRefValue from 'common/Components/GridRefValue';
-import { observer } from 'mobx-react';
+import InfoBackgroundMessage from 'common/Components/InfoBackgroundMessage';
+import mothTrapIcon from 'common/images/moth-inside-icon.svg';
+import { Lamp } from 'models/location';
 import './styles.scss';
 
 type Props = {

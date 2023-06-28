@@ -1,17 +1,17 @@
 import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
-import CONFIG from 'common/config';
-import savedSamples from 'models/collections/samples';
-import Sample from 'models/sample';
-import { MapContainer } from 'react-leaflet';
-import { useTranslation } from 'react-i18next';
-import { useIonViewDidEnter } from '@ionic/react';
-import hasWebGL from 'common/helpers/webGLSupport';
-import { date as dateHelp } from '@flumens';
 import L, { LatLngExpression } from 'leaflet';
 import 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { useTranslation } from 'react-i18next';
+import { MapContainer } from 'react-leaflet';
+import { date as dateHelp } from '@flumens';
 import '@flumens/ionic/dist/components/ModelLocationMap/Map/map/leaflet-mapbox-gl';
+import { useIonViewDidEnter } from '@ionic/react';
+import CONFIG from 'common/config';
+import hasWebGL from 'common/helpers/webGLSupport';
+import savedSamples from 'models/collections/samples';
+import Sample from 'models/sample';
 import './styles.scss';
 
 const DEFAULT_ZOOM = 5;

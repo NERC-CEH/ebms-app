@@ -1,4 +1,8 @@
 import { FC } from 'react';
+import { observer } from 'mobx-react';
+import { timeOutline, cloudOutline } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
+import { useRouteMatch } from 'react-router';
 import {
   Main,
   MenuAttrItemFromModel,
@@ -6,13 +10,9 @@ import {
   MenuAttrItem,
   AttrPropsExtended,
 } from '@flumens';
-import { Trans as T } from 'react-i18next';
-import Sample from 'models/sample';
 import { IonList, IonItemDivider } from '@ionic/react';
-import { observer } from 'mobx-react';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
-import { useRouteMatch } from 'react-router';
-import { timeOutline, cloudOutline } from 'ionicons/icons';
+import Sample from 'models/sample';
 
 type Props = {
   sample: Sample;

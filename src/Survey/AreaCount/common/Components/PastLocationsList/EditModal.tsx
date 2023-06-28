@@ -1,4 +1,7 @@
 import { createRef, FC } from 'react';
+import { observer } from 'mobx-react';
+import { Trans as T, useTranslation } from 'react-i18next';
+import { Main, useOnHideModal } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -12,9 +15,6 @@ import {
   IonToggle,
   IonInput,
 } from '@ionic/react';
-import { observer } from 'mobx-react';
-import { Trans as T, useTranslation } from 'react-i18next';
-import { Main, useOnHideModal } from '@flumens';
 
 type Location = any;
 

@@ -1,4 +1,8 @@
 import { FC, useState, useContext } from 'react';
+import { observer } from 'mobx-react';
+import { addOutline } from 'ionicons/icons';
+import { Trans as T, useTranslation } from 'react-i18next';
+import { Page, Main, useToast } from '@flumens';
 import {
   IonList,
   IonSegment,
@@ -9,16 +13,12 @@ import {
   IonButton,
   NavContext,
 } from '@ionic/react';
-import { Page, Main, useToast } from '@flumens';
-import userModel from 'models/user';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
+import userModel from 'models/user';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import { Trans as T, useTranslation } from 'react-i18next';
-import { addOutline } from 'ionicons/icons';
-import { observer } from 'mobx-react';
-import Survey from './components/Survey';
 import Map from './components/Map';
+import Survey from './components/Survey';
 import './styles.scss';
 
 async function uploadAllSamples(toast: any, savedSamples: any, t: any) {

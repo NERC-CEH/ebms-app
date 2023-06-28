@@ -1,7 +1,6 @@
 import { useContext } from 'react';
-import { NavContext } from '@ionic/react';
 import { observable } from 'mobx';
-import CONFIG from 'common/config';
+import * as Yup from 'yup';
 import {
   DrupalUserModel,
   device,
@@ -10,7 +9,8 @@ import {
   useAlert,
   DrupalUserModelAttrs,
 } from '@flumens';
-import * as Yup from 'yup';
+import { NavContext } from '@ionic/react';
+import CONFIG from 'common/config';
 import { genericStore } from './store';
 
 export interface Attrs extends DrupalUserModelAttrs {

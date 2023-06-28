@@ -1,11 +1,11 @@
 import { createRef, Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonSearchbar, withIonLifeCycle } from '@ionic/react';
-import appModel from 'models/app';
 import groups from 'common/helpers/groups';
-import SpeciesSearchEngine from './utils/taxon_search_engine';
+import appModel from 'models/app';
 import Suggestions from './components/Suggestions';
 import './styles.scss';
+import SpeciesSearchEngine from './utils/taxon_search_engine';
 
 const MIN_SEARCH_LENGTH = 2;
 

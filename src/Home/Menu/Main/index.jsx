@@ -1,12 +1,4 @@
 import { observer } from 'mobx-react';
-import PropTypes from 'prop-types';
-import {
-  IonIcon,
-  IonList,
-  IonItem,
-  IonItemDivider,
-  IonButton,
-} from '@ionic/react';
 import {
   settingsOutline,
   exitOutline,
@@ -19,11 +11,19 @@ import {
   bookOutline,
   openOutline,
 } from 'ionicons/icons';
+import PropTypes from 'prop-types';
 import { Trans as T } from 'react-i18next';
 import { Main, InfoMessage } from '@flumens';
+import {
+  IonIcon,
+  IonList,
+  IonItem,
+  IonItemDivider,
+  IonButton,
+} from '@ionic/react';
 import config from 'common/config';
-import './styles.scss';
 import logo from './logo.png';
+import './styles.scss';
 
 const Component = ({
   isLoggedIn,

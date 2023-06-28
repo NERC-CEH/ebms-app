@@ -1,3 +1,8 @@
+import {
+  chatboxOutline,
+  thermometerOutline,
+  cloudyOutline,
+} from 'ionicons/icons';
 import * as Yup from 'yup';
 import {
   date as dateHelp,
@@ -5,18 +10,13 @@ import {
   MenuAttrItemFromModelMenuProps,
   PageProps,
 } from '@flumens';
-import {
-  chatboxOutline,
-  thermometerOutline,
-  cloudyOutline,
-} from 'ionicons/icons';
-import caterpillarIcon from 'common/images/caterpillar.svg';
 import groups from 'common/helpers/groups';
-import Occurrence, { Taxon } from 'common/models/occurrence';
-import Sample from 'models/sample';
-import Media from 'models/media';
-import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
+import caterpillarIcon from 'common/images/caterpillar.svg';
 import windIcon from 'common/images/wind.svg';
+import Occurrence, { Taxon } from 'common/models/occurrence';
+import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
+import Media from 'models/media';
+import Sample from 'models/sample';
 
 export const deviceAttr = {
   remote: {

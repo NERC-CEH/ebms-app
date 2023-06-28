@@ -1,16 +1,18 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import Location from 'models/location';
 import { useRouteMatch } from 'react-router';
 import { AttrPage } from '@flumens';
+import Location from 'models/location';
 
 interface Props {
   sample: Location;
 }
 
 const LampEntry: FC<Props> = ({ sample: location }) => {
-  const match =
-    useRouteMatch<{ attr: 'type' | 'description'; lampId: string }>();
+  const match = useRouteMatch<{
+    attr: 'type' | 'description';
+    lampId: string;
+  }>();
 
   const { attr, lampId } = match.params;
 

@@ -1,7 +1,6 @@
 /** ***************************************************************************
  * Multi media loading file
  **************************************************************************** */
-
 import './2_thumbnail.jpg?originalName';
 import './3_thumbnail.jpg?originalName';
 import './4_thumbnail.jpg?originalName';

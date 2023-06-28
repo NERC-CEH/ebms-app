@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
-import CONFIG from 'common/config';
 import axios from 'axios';
 import { isAxiosNetworkError, HandledError } from '@flumens';
+import CONFIG from 'common/config';
 import userModel from 'models/user';
 import { MOTH_TRAP_TYPE } from '../../location';
 

@@ -1,18 +1,18 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { IonList, IonItemDivider, IonLabel } from '@ionic/react';
 import {
   clipboardOutline,
   thermometerOutline,
   cloudyOutline,
   personOutline,
 } from 'ionicons/icons';
-import { useRouteMatch } from 'react-router-dom';
 import { Trans as T } from 'react-i18next';
-import Sample from 'models/sample';
+import { useRouteMatch } from 'react-router-dom';
 import { Main, MenuAttrItem, InfoMessage, CounterInput } from '@flumens';
+import { IonList, IonItemDivider, IonLabel } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
+import Sample from 'models/sample';
 
 type Props = {
   sample: Sample;

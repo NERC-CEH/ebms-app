@@ -1,10 +1,10 @@
 import { FC, useState, useEffect } from 'react';
+import { observer } from 'mobx-react';
+import { Page, device, useToast } from '@flumens';
 import { AppModel } from 'models/app';
 import { UserModel } from 'models/user';
-import { Page, device, useToast } from '@flumens';
-import { observer } from 'mobx-react';
-import { fetchSpeciesReport, fetchUserSpeciesReport } from './services';
 import Main from './Main';
+import { fetchSpeciesReport, fetchUserSpeciesReport } from './services';
 import './styles.scss';
 
 type Props = {

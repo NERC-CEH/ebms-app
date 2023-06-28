@@ -1,4 +1,7 @@
 import { FC } from 'react';
+import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
+import { Main } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -8,12 +11,9 @@ import {
   IonRefresherContent,
   IonSpinner,
 } from '@ionic/react';
-import { observer } from 'mobx-react';
 import userModel from 'models/user';
-import { Main } from '@flumens';
-import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import ExpandableList from 'Components/ExpandableList';
-import { Trans as T } from 'react-i18next';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import SpeciesEntry from './SpeciesEntry';
 
 interface Props {

@@ -1,9 +1,9 @@
 import { Route } from 'react-router-dom';
 import appModel from 'models/app';
-import Credits from './Credits';
 import About from './About';
-import Help from './Help';
+import Credits from './Credits';
 import Guide from './Guide';
+import Help from './Help';
 
 const AboutWrap = () => <About appModel={appModel} />;
 export default [

@@ -1,14 +1,13 @@
 import { FC, useEffect } from 'react';
-import { Page, Header, Main } from '@flumens';
-import locations from 'common/models/collections/locations';
-import { IonButton, IonLabel } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
 import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
+import { Page, Header, Main } from '@flumens';
+import { IonButton, IonLabel } from '@ionic/react';
+import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import userModel from 'models/user';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import Map from './Components/Map';
-
 import './styles.scss';
 
 interface Props {

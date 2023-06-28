@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import Sample from 'models/sample';
-import Occurrence from 'models/occurrence';
 import { Page, Header } from '@flumens';
+import Occurrence from 'models/occurrence';
+import Sample from 'models/sample';
 import Main from './Main';
 import './styles.scss';
 

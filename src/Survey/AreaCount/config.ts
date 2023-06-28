@@ -1,8 +1,9 @@
-import { isPlatform } from '@ionic/react';
-import config from 'common/config';
-import wkt from 'wellknown';
 import { toJS } from 'mobx';
 import L from 'leaflet';
+import wkt from 'wellknown';
+import { isPlatform } from '@ionic/react';
+import config from 'common/config';
+import appModel from 'common/models/app';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
 import {
   Survey,
@@ -24,7 +25,6 @@ import {
   dragonflyStageAttr,
   speciesGroupsAttr,
 } from 'Survey/common/config';
-import appModel from 'common/models/app';
 
 function transformToMeters(coordinates: any) {
   const transform = ([lng, lat]: any) => {

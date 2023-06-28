@@ -1,12 +1,12 @@
 import { FC, useContext, useState } from 'react';
-import Sample from 'models/sample';
-import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
 import { observer } from 'mobx-react';
-import TaxonSearch from 'Components/TaxonSearch';
-import { NavContext, IonButtons, IonButton } from '@ionic/react';
+import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Page, Main, Header, useAlert, useOnBackButton } from '@flumens';
-import { Trans as T } from 'react-i18next';
+import { NavContext, IonButtons, IonButton } from '@ionic/react';
+import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
+import Sample from 'models/sample';
+import TaxonSearch from 'Components/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 

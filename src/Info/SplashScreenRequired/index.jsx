@@ -1,7 +1,7 @@
 import { createRef } from 'react';
 import { observer } from 'mobx-react';
-import { IonSlides, IonSlide, IonButton } from '@ionic/react';
 import { Trans as T } from 'react-i18next';
+import { IonSlides, IonSlide, IonButton } from '@ionic/react';
 import appModel from 'models/app';
 import './styles.scss';
 

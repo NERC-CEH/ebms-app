@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import SelectLanguage from 'Settings/Language';
 import SelectCountry from 'Settings/Country';
+import SelectLanguage from 'Settings/Language';
+import PropTypes from 'prop-types';
 
 const Component = ({ appModel, children }) => {
   if (!appModel.attrs.language) {

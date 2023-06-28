@@ -1,20 +1,20 @@
 import { FC } from 'react';
-import { IonList, IonIcon, IonItemDivider } from '@ionic/react';
-import { useRouteMatch } from 'react-router';
-import Sample from 'models/sample';
-import Occurrence from 'models/occurrence';
+import { observer } from 'mobx-react';
 import {
   clipboardOutline,
   locationOutline,
   warningOutline,
 } from 'ionicons/icons';
-import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import PhotoPicker from 'common/Components/PhotoPicker';
-import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
+import { useRouteMatch } from 'react-router';
 import { Main, MenuAttrItem } from '@flumens';
-import GridRefValue from 'Components/GridRefValue';
+import { IonList, IonIcon, IonItemDivider } from '@ionic/react';
+import PhotoPicker from 'common/Components/PhotoPicker';
 import caterpillarIcon from 'common/images/caterpillar.svg';
+import Occurrence from 'models/occurrence';
+import Sample from 'models/sample';
+import GridRefValue from 'Components/GridRefValue';
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import PaintedLadyAttrs from './Components/PaintedLadyAttrs';
 import './styles.scss';
 

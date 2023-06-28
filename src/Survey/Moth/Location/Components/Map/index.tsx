@@ -1,13 +1,14 @@
 import { FC, useContext, useState } from 'react';
 import { observer } from 'mobx-react';
+// eslint-disable-next-line
+import 'leaflet.markercluster';
+import 'leaflet/dist/leaflet.css';
 import { device, useToast } from '@flumens';
 import { NavContext } from '@ionic/react';
-import Sample from 'models/sample';
-import { useUserStatusCheck } from 'models/user';
 import locationsCollection from 'models/collections/locations';
 import MothTrap, { useValidateCheck } from 'models/location';
-import 'leaflet.markercluster'; // eslint-disable-line
-import 'leaflet/dist/leaflet.css';
+import Sample from 'models/sample';
+import { useUserStatusCheck } from 'models/user';
 import BottomSheet from '../BottomSheet';
 import Map from './Components/Map';
 import './styles.scss';

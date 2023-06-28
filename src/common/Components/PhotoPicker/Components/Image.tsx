@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { FC } from 'react';
-import { IonIcon, IonButton, IonSpinner } from '@ionic/react';
 import { observer } from 'mobx-react';
 import { warningOutline, close } from 'ionicons/icons';
+import { IonIcon, IonButton, IonSpinner } from '@ionic/react';
 import Media from 'models/media';
 import '../styles.scss';
 

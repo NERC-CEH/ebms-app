@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { IonLabel, IonChip, IonButton, IonSpinner } from '@ionic/react';
-import { Trans as T } from 'react-i18next';
-import Location from 'models/location';
 import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
+import { IonLabel, IonChip, IonButton, IonSpinner } from '@ionic/react';
+import Location from 'models/location';
 import './styles.scss';
 
 type Props = {
