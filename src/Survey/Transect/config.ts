@@ -149,8 +149,8 @@ const config: Survey = {
         taxon: taxonAttr,
       },
 
-      create({ Occurrence, attrs }) {
-        const isDragonfly = attrs.taxon.group === DRAGONFLY_GROUP;
+      create({ Occurrence, taxon }) {
+        const isDragonfly = taxon.group === DRAGONFLY_GROUP;
 
         return new Occurrence({
           attrs: {
@@ -158,11 +158,7 @@ const config: Survey = {
             stage: !isDragonfly ? 'Adult' : undefined,
             dragonflyStage: isDragonfly ? 'Adult' : undefined,
             comment: null,
-            taxon: {
-              scientific_name: null,
-              warehouse_id: null,
-            },
-            ...attrs,
+            taxon,
           },
         });
       },

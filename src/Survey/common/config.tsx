@@ -470,7 +470,6 @@ type OccurrenceCreateOptions = {
   taxon: Taxon;
   identifier?: string;
   photo?: Media;
-  attrs?: any;
 };
 
 type OccurrenceConfig = {
