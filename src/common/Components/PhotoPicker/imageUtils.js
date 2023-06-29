@@ -94,8 +94,6 @@ const Image = {
       },
     });
 
-    await imageModel.addThumbnail();
-
     return imageModel;
   },
 };

@@ -292,7 +292,8 @@ const HomeController: FC<Props> = ({ sample }) => {
       const getImageModel = (image: any) =>
         Media.getImageModel(
           isPlatform('hybrid') ? Capacitor.convertFileSrc(image) : image,
-          CONFIG.dataPath
+          CONFIG.dataPath,
+          true
         ) as Promise<Media>;
 
       const imageModels = images.map(getImageModel);

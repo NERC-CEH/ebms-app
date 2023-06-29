@@ -27,7 +27,7 @@ const Image: FC<Props> = ({ media, isDisabled, onDelete, onClick }) => {
           <IonIcon icon={close} />
         </IonButton>
       )}
-      <img src={media.attrs.thumbnail} onClick={onClickWrap} />
+      <img src={media.getURL()} onClick={onClickWrap} />
 
       {showLoading && <IonSpinner slot="end" className="identifying" />}
       {!showLoading && showWarning && (

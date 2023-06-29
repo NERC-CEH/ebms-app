@@ -38,7 +38,7 @@
     "@capacitor/splash-screen": "^5.0.2",
     "@capacitor/status-bar": "^5.0.2",
     "@flumens/bigu": "^0.4.0",
-    "@flumens/ionic": "^1.26.3",
+    "@flumens/ionic": "^1.27.0",
     "@indicia-js/core": "^6.1.0",
     "@indicia-js/remote": "^6.2.0",
     "@ionic-native/core": "5.36.0",
