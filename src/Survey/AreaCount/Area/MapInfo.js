@@ -52,6 +52,13 @@ const DEFAULT_POSITION = [51.505, -0.09];
 const DEFAULT_LOCATED_ZOOM = 18;
 const DEFAULT_SHAPE_COLOR = '#ff9700';
 
+// TODO: REMOVE ONCE MIGRATED TO MAPBOX
+const setDefaultZoomIfZoomIsTooClose = map => {
+  if (map.getZoom() === Infinity || map.getZoom() > 24 || map.getZoom() === 0) {
+    map.setZoom(DEFAULT_LOCATED_ZOOM);
+  }
+};
+
 class MapInfo extends React.Component {
   static contextType = NavContext;
 
@@ -89,6 +96,9 @@ class MapInfo extends React.Component {
     const isPolylineTrack = positions.length > 1;
     if (isPolylineTrack && !sample.isGPSRunning()) {
       map.fitBounds(positions);
+
+      setDefaultZoomIfZoomIsTooClose(map);
+
       return;
     }
 
@@ -294,6 +304,8 @@ class MapInfo extends React.Component {
     const positions = polygon.coordinates.map(reverseCoords);
 
     map.fitBounds(L.polyline(positions).getBounds(), { padding: [35, 35] });
+
+    setDefaultZoomIfZoomIsTooClose(map);
   }
 
   componentWillUnmount() {
