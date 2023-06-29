@@ -45,6 +45,10 @@ modelStore.findAll = async () => {
     `DELETE FROM models as m WHERE json_extract(m.value, '$.metadata.syncedOn') IS NOT NULL`
   );
 
+  await execute(
+    `DELETE FROM models as m WHERE json_extract(m.value, '$.metadata.synced_on') IS NOT NULL`
+  );
+
   console.log('Fixing old pics finish');
 
   return Store.prototype.findAll.apply(modelStore);
