@@ -181,8 +181,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     showDeleteSpeciesPrompt(taxon).then(destroyWrap);
   };
   const navigateToSpeciesOccurrences = (taxon: any) => {
-    const matchingTaxon = (occ: Occurrence) =>
-      occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
+    const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
     const occ = sample.occurrences.find(matchingTaxon);
 
     if (!occ) return;

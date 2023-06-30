@@ -73,7 +73,11 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
     if (taxa) {
       const selectedTaxon = ({ occurrences }: Sample) => {
         const [occ] = occurrences; // always one
-        return occ.attrs.taxon.warehouse_id === parseInt(taxa, 10);
+
+        return (
+          occ.attrs.taxon.preferredId === parseInt(taxa, 10) ||
+          occ.attrs.taxon.warehouse_id === parseInt(taxa, 10)
+        );
       };
       const assignTaxon = ({ occurrences }: Sample) => {
         const [occ] = occurrences; // always one
@@ -87,8 +91,8 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
         }
 
         if (
-          occ.attrs.taxon.group === DRAGONFLY_GROUP &&
-          taxon.group !== DRAGONFLY_GROUP
+          occ.attrs.taxon.group !== DRAGONFLY_GROUP &&
+          taxon.group === DRAGONFLY_GROUP
         ) {
           occ.attrs.dragonflyStage = 'Adult';
           occ.attrs.stage = undefined;
@@ -106,6 +110,8 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
     }
 
     if (occurrence) {
+      console.log('her?');
+
       if (
         occurrence.attrs.taxon.group !== DRAGONFLY_GROUP &&
         taxon.group === DRAGONFLY_GROUP

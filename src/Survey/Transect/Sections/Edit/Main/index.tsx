@@ -91,8 +91,7 @@ const Edit: FC<Props> = ({
 
     const speciesName = taxon[taxon.found_in_name];
 
-    const matchingTaxon = (occ: Occurrence) =>
-      occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
+    const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
     const isShallow = !sectionSample.occurrences.filter(matchingTaxon).length;
 
     const increaseCountWrap = () => increaseCount(taxon, isShallow);

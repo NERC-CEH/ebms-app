@@ -267,8 +267,7 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
   };
 
   const navigateToSpeciesOccurrences = (taxon: Taxon) => {
-    const matchingTaxon = (occ: Occurrence) =>
-      occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
+    const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
     const occ = subSample.occurrences.find(matchingTaxon);
 
     if (!occ) return;
