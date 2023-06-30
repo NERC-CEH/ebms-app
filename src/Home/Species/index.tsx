@@ -14,7 +14,9 @@ const getFamily = (sp: SpeciesType) => sp.family;
 const existFamily = (sp: SpeciesType['family']) => sp;
 const families = speciesProfiles.map(getFamily).filter(existFamily);
 
-const filterOptions = [{ type: 'family', values: [...new Set(families)] }];
+const uniqueFamilyList = Array.from(new Set(families));
+
+const filterOptions = [{ type: 'family', values: uniqueFamilyList }];
 
 type Props = {
   appModel: AppModel;
