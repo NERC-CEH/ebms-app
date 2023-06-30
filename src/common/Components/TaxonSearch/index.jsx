@@ -47,10 +47,8 @@ class index extends Component {
   filterDayFlyingMoths = ({ isDayFlying, group }) => {
     if (group !== groups.moths.id) return true;
 
-    if (!this.props.useDayFlyingMothsOnly === false) return true;
-
     const useDayMothsFilter =
-      this.props.useDayFlyingMothsOnly || appModel.attrs.useDayFlyingMothsOnly;
+      this.props.useDayFlyingMothsOnly && appModel.attrs.useDayFlyingMothsOnly;
 
     return useDayMothsFilter ? isDayFlying : true;
   };
