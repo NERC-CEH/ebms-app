@@ -1,3 +1,11 @@
+## 1.22.0
+
+Enabled copying of the previous moth trap's species list.
+Enabled copying of the previous transect section's species list.
+Updated species guide page.
+Update translations.
+Small bug fixes.
+
 ## 1.21.0
 
 Enabled multiple drafts functionality.

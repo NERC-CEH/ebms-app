@@ -13,21 +13,21 @@ type Props = {
 };
 
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
-  const { showWhatsNewInVersion121, appSession } = appModel.attrs;
+  const { showWhatsNewInVersion122, appSession } = appModel.attrs;
 
   const skipShowingDialogOnFreshInstall = () => {
     const isFreshInstall = appSession <= 1;
     if (isFreshInstall) {
-      appModel.attrs.showWhatsNewInVersion121 = false; // eslint-disable-line
+      appModel.attrs.showWhatsNewInVersion122 = false; // eslint-disable-line
       appModel.save();
     }
   };
   useEffect(skipShowingDialogOnFreshInstall, [appSession]);
 
-  if (!showWhatsNewInVersion121) return null;
+  if (!showWhatsNewInVersion122) return null;
 
   const closeDialog = () => {
-    appModel.attrs.showWhatsNewInVersion121 = false; // eslint-disable-line
+    appModel.attrs.showWhatsNewInVersion122 = false; // eslint-disable-line
     appModel.save();
   };
 
@@ -53,39 +53,24 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
             <ExpandableList>
               <li>
                 <summary>
-                  <T>Enabled multiple drafts functionality</T>
-                </summary>
-              </li>
-
-              <li>
-                <T>Added favourite site functionality.</T>
-              </li>
-              <li>
-                <T>Added moth trap weather attributes.</T>
-              </li>
-              <li>
-                <summary>
-                  <T>Added Saint Helena country</T>
-                </summary>
-              </li>
-              <li>
-                <T>Added the Slovak language.</T>
-              </li>
-              <li>
-                <summary>
-                  <T>Added dragonflies-specific stages</T>
+                  <T>
+                    Enabled copying of the previous transect section's species
+                    list.
+                  </T>
                 </summary>
               </li>
 
               <li>
                 <summary>
-                  <T>Added Slovak and Turkish butterfly common names</T>
+                  <T>
+                    Enabled copying of the previous moth trap's species list.
+                  </T>
                 </summary>
               </li>
 
               <li>
                 <summary>
-                  <T>Added dragonfly common names</T>
+                  <T>Updated species guide page.</T>
                 </summary>
               </li>
             </ExpandableList>
