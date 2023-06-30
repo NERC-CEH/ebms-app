@@ -1,51 +1,92 @@
-#surveys-list.ion-page {
+#home-user-surveys {
   .start-survey-icon {
     background: var(--ion-color-primary);
     border-radius: 50%;
   }
 
-  ion-segment {
-    max-width: calc(100% - 20px); // padding for lists
-    margin: 8px auto;
-    z-index: 100000000;
+  ion-header ion-toolbar {
+    --background: transparent;
 
-    &[value='map'] {
-      background: rgba(255, 255, 255, 0.9);
+    ion-segment {
+      max-width: calc(
+        100% - 20px
+      ); // -20px to match the padding of the list below
+      margin: 8px auto;
+      z-index: 100000000;
+      border-radius: var(--theme-border-radius);
+      background: #fff;
+
+      box-shadow: -1px 2px 7px 0 #0000001a, 0 2px 9px 0 #3e396b1a;
+
+      &[value='map'] {
+        border-radius: var(--theme-border-radius);
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      ion-badge {
+        display: inline;
+        vertical-align: top;
+        margin: 3px;
+        margin-left: 3px;
+      }
+
+      ion-label {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1px;
+      }
+
+      ion-segment-button {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
 
-    ion-badge {
-      vertical-align: top;
-      margin: 3px;
-      margin-left: 3px;
-    }
-    .ion-badge-custom-color {
-      color: var(--ion-color-primary);
+    position: fixed;
+    color: var(--ion-color-main);
+  }
+
+  ion-content {
+    --padding-top: env(safe-area-inset-top) !important;
+    --overflow: hidden;
+
+    ion-list {
+      height: 100%;
+      width: calc(100% - 20px);
+      padding: 0 !important;
+      max-width: 600px; // ipad
+      margin: 0 auto;
     }
 
-    ion-label {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-left: 1px;
+    .upload-all-button {
+      margin: 10px auto;
+      height: 35px !important;
+      display: block;
+      position: absolute;
+      right: 17px;
+      bottom: 0;
+      overflow: hidden;
+      border-radius: var(--theme-border-radius);
+      box-shadow: -1px 2px 7px 0 #0000001a, 0 2px 9px 0 #3e396b1a;
+
+      &.ios {
+        font-size: 0.9em;
+      }
+    }
+
+    .info-background-message {
+      margin-top: 20vh;
+      margin-bottom: 10vh;
     }
   }
 
-  .upload-all-button {
-    margin: 10px auto;
-    height: 35px !important;
-    display: block;
-    position: fixed;
-    right: 17px;
-    bottom: 5px;
-    overflow: hidden;
+  ion-item-divider {
+    padding: 0px 4px 0 12px;
+    background: #dae0da !important;
+    color: #001400;
     border-radius: var(--theme-border-radius);
-    box-shadow: -1px 2px 7px 0 #0000001a, 0 2px 9px 0 #3e396b1a;
-    --background: var(--ion-color-secondary);
-
-    &.ios {
-      font-size: 0.9em;
-    }
   }
 }
 

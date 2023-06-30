@@ -76,8 +76,7 @@ function getAreaCountPosition(sample: Sample) {
 }
 
 type Props = {
-  savedSamples: typeof savedSamples;
-  showingMap: boolean;
+  showingMap?: boolean;
 };
 
 const Component: FC<Props> = () => {

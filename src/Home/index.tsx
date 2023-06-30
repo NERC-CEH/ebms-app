@@ -35,7 +35,6 @@ import Species from './Species';
 import UserSurveys from './UserSurveys';
 import './styles.scss';
 
-const UserSurveysTab = () => <UserSurveys savedSamples={savedSamples} />;
 const ReportTab = () => <Report appModel={appModel} userModel={userModel} />;
 const SpeciesTab = () => <Species appModel={appModel} />;
 
@@ -107,7 +106,7 @@ const HomeController = () => {
           <Redirect exact path="/home" to="/home/species" />
           <Route path="/home/species" render={SpeciesTab} exact />
           <Route path="/home/report" render={ReportTab} exact />
-          <Route path="/home/user-surveys" render={UserSurveysTab} exact />
+          <Route path="/home/user-surveys" component={UserSurveys} exact />
           <Route path="/home/menu" component={Menu} exact />
         </IonRouterOutlet>
 

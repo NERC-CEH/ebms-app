@@ -1,10 +1,9 @@
 import { FC, SyntheticEvent } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import { useToast, useAlert, date as dateHelp } from '@flumens';
+import { useToast, useAlert } from '@flumens';
 import {
   IonItem,
-  IonLabel,
   IonItemSliding,
   IonItemOptions,
   IonItemOption,
@@ -15,7 +14,6 @@ import butterflyIcon from 'common/images/butterfly.svg';
 import Occurrence from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
-import ErrorMessage from './components/ErrorMessage';
 import OnlineStatus from './components/OnlineStatus';
 import './styles.scss';
 
@@ -44,10 +42,11 @@ function useDeleteSurveyPrompt(sample: Sample) {
 
 type Props = {
   sample: Sample;
-  hasManyPending?: boolean;
+  uploadIsPrimary?: boolean;
+  style?: any;
 };
 
-const Survey: FC<Props> = ({ sample, hasManyPending }) => {
+const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
   const toast = useToast();
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
@@ -56,7 +55,6 @@ const Survey: FC<Props> = ({ sample, hasManyPending }) => {
 
   const { synchronising } = sample.remote;
 
-  const prettyDate = dateHelp.print(sample.metadata.createdOn, true);
   const survey = sample.getSurvey();
 
   let speciesCount = sample.occurrences.length;
@@ -91,30 +89,60 @@ const Survey: FC<Props> = ({ sample, hasManyPending }) => {
     : hrefRemainingSurvey;
 
   const href: any = canShowLink && surveyRoutes;
-  function getSampleInfo() {
-    const label = (
-      <>
-        <h3>
-          <b>
-            <T>{survey.label}</T>
-          </b>
-        </h3>
-        <IonLabel className="pretty-date">{prettyDate}</IonLabel>
-      </>
-    );
 
+  function getInfo() {
     if (survey.name === 'precise-area') {
       return (
-        <IonLabel class="ion-text-wrap">
-          {label}
-          <IonBadge color="medium">
-            <IonIcon icon={butterflyIcon} /> {speciesCount}
-          </IonBadge>
-        </IonLabel>
+        <div className="survey-info-container">
+          <h3>
+            <T>{survey.label}</T>
+          </h3>
+
+          <div className="record-details">
+            {!!speciesCount && (
+              <IonBadge color="medium">
+                <IonIcon icon={butterflyIcon} /> {speciesCount}
+              </IonBadge>
+            )}
+          </div>
+        </div>
       );
     }
 
-    return <IonLabel class="ion-text-wrap">{label}</IonLabel>;
+    if (survey.name === 'moth') {
+      const locationName = sample.attrs.location?.attrs?.location?.name;
+
+      return (
+        <div className="survey-info-container">
+          <h3>
+            <T>{survey.label}</T>
+          </h3>
+
+          <div className="record-details">
+            {!!locationName && <h4>{locationName}</h4>}
+            {!!speciesCount && (
+              <IonBadge color="medium">
+                <IonIcon icon={butterflyIcon} /> {speciesCount}
+              </IonBadge>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    const locationName = sample.attrs.location?.name;
+
+    return (
+      <div className="survey-info-container">
+        <h3>
+          <T>{survey.label}</T>
+        </h3>
+
+        <div className="record-details">
+          {!!locationName && <h4>{locationName}</h4>}
+        </div>
+      </div>
+    );
   }
 
   const onUpload = async (e: SyntheticEvent) => {
@@ -131,14 +159,14 @@ const Survey: FC<Props> = ({ sample, hasManyPending }) => {
   };
 
   return (
-    <IonItemSliding class="survey-list-item">
-      <ErrorMessage sample={sample} />
-      <IonItem routerLink={href} detail={canShowLink}>
-        {getSampleInfo()}
+    <IonItemSliding class="survey-list-item" style={style}>
+      <IonItem routerLink={href} detail={false}>
+        {getInfo()}
+
         <OnlineStatus
           sample={sample}
           onUpload={onUpload}
-          hasManyPending={hasManyPending}
+          hasManyPending={uploadIsPrimary}
         />
       </IonItem>
       <IonItemOptions side="end">
