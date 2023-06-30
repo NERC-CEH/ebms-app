@@ -1,4 +1,5 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useRef } from 'react';
+import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import {
   addCircleOutline,
@@ -8,7 +9,13 @@ import {
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Main, MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
+import {
+  Main,
+  MenuAttrItem,
+  MenuAttrItemFromModel,
+  LongPressButton,
+  useAlert,
+} from '@flumens';
 import {
   IonList,
   IonItem,
@@ -22,34 +29,43 @@ import {
   IonItemDivider,
 } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
-import Occurrence from 'models/occurrence';
+import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import IncrementalButton from 'Survey/common/IncrementalButton';
+import {
+  speciesOccAddedTimeSort,
+  speciesNameSort,
+} from 'Survey/common/taxonSortFunctions';
 import './styles.scss';
 
-const speciesNameSort = (occ1: Occurrence, occ2: Occurrence) => {
-  const foundInName1 = occ1.attrs.taxon.found_in_name;
-  const foundInName2 = occ2.attrs.taxon.found_in_name;
-  const taxon1 = occ1.attrs.taxon[foundInName1];
-  const taxon2 = occ2.attrs.taxon[foundInName2];
-  return taxon1.localeCompare(taxon2);
-};
+const getDefaultTaxonCount = (taxon: any, createdOn?: any) => ({
+  count: 0,
+  taxon,
+  createdOn,
+});
 
-const speciesOccAddedTimeSort = (occ1: Occurrence, occ2: Occurrence) => {
-  const date1 = new Date(occ1.metadata.updatedOn);
-  const date2 = new Date(occ2.metadata.updatedOn);
-  return date2.getTime() - date1.getTime();
+const buildSpeciesCount = (agg: any, occ: Occurrence) => {
+  const taxon = toJS(occ.attrs.taxon);
+  const id = taxon.preferredId || taxon.warehouse_id;
+
+  agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.metadata.createdOn); // eslint-disable-line
+
+  agg[id].count = toJS(occ.attrs.count); // eslint-disable-line
+
+  return agg;
 };
 
 type Props = {
   sample: Sample;
   subSample: Sample;
-  deleteOccurrence: (occ: Occurrence) => void;
+  deleteOccurrence: (taxon: Taxon, isShallow: boolean, ref: any) => void;
+  navigateToSpeciesOccurrences: any;
   onToggleSpeciesSort: () => void;
   areaSurveyListSortedByTime: boolean;
   increaseCount: any;
   isDisabled: boolean;
+  copyPreviousSurveyTaxonList: any;
 };
 
 const Edit: FC<Props> = ({
@@ -57,17 +73,63 @@ const Edit: FC<Props> = ({
   subSample: sectionSample,
   deleteOccurrence,
   onToggleSpeciesSort,
+  navigateToSpeciesOccurrences,
   areaSurveyListSortedByTime,
   increaseCount,
-
+  copyPreviousSurveyTaxonList,
   isDisabled,
 }) => {
+  const alert = useAlert();
+  const ref = useRef();
   const match: any = useRouteMatch();
 
   const { navigate } = useContext(NavContext);
 
+  const getSpeciesEntry = ([id, species]: [string, any]) => {
+    const isSpeciesDisabled = !species.count;
+    const { taxon } = species;
+
+    const speciesName = taxon[taxon.found_in_name];
+
+    const matchingTaxon = (occ: Occurrence) =>
+      occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
+    const isShallow = !sectionSample.occurrences.filter(matchingTaxon).length;
+
+    const increaseCountWrap = () => increaseCount(taxon, isShallow);
+    const increase5xCountWrap = () => increaseCount(taxon, isShallow, true);
+
+    const navigateToOccurrence = () => navigateToSpeciesOccurrences(taxon);
+
+    const deleteSpeciesWrap = () => deleteOccurrence(taxon, isShallow, ref);
+
+    return (
+      <IonItemSliding key={id} ref={ref as any}>
+        <IonItem detail={!isSpeciesDisabled} onClick={navigateToOccurrence}>
+          <IncrementalButton
+            onClick={increaseCountWrap}
+            onLongClick={increase5xCountWrap}
+            value={species.count}
+            disabled={isDisabled}
+          />
+          <IonLabel className="title">{speciesName}</IonLabel>
+        </IonItem>
+
+        {!isDisabled && (
+          <IonItemOptions side="end">
+            <IonItemOption color="danger" onClick={deleteSpeciesWrap}>
+              <T>Delete</T>
+            </IonItemOption>
+          </IonItemOptions>
+        )}
+      </IonItemSliding>
+    );
+  };
+
   const getSpeciesList = () => {
-    if (!sectionSample.occurrences.length) {
+    if (
+      !sectionSample.occurrences.length &&
+      !sectionSample.shallowSpeciesList.length
+    ) {
       return (
         <IonList id="list" lines="full">
           <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
@@ -75,52 +137,41 @@ const Edit: FC<Props> = ({
       );
     }
 
+    const speciesCounts = [...sectionSample.occurrences].reduce(
+      buildSpeciesCount,
+      {}
+    );
+
+    const getShallowEntry = (shallowEntry: Taxon) => {
+      const shallowEntryId =
+        shallowEntry.preferredId || shallowEntry.warehouse_id;
+
+      if (speciesCounts[shallowEntryId]) {
+        speciesCounts[shallowEntryId].createdOn = 0;
+        return null;
+      }
+
+      return getDefaultTaxonCount(shallowEntry, 0);
+    };
+
+    const notEmpty = (shallowEntry: any) => shallowEntry;
+
+    const shallowCounts = sectionSample.shallowSpeciesList
+      .map(getShallowEntry)
+      .filter(notEmpty);
+
+    const counts = {
+      ...speciesCounts,
+      ...shallowCounts,
+    };
+
     const sort = areaSurveyListSortedByTime
       ? speciesOccAddedTimeSort
       : speciesNameSort;
 
-    const occurrences = [...sectionSample.occurrences].sort(sort);
+    const speciesList = Object.entries(counts).sort(sort).map(getSpeciesEntry);
 
-    const getOccurrenceEntry = (occ: Occurrence) => {
-      const speciesName = occ.getTaxonName();
-      const { count, taxon } = occ.attrs;
-      const { warehouse_id, preferredId } = taxon;
-
-      const taxa = warehouse_id || preferredId;
-
-      const deleteOccurrenceWrap = () => deleteOccurrence(occ);
-
-      const increaseCountWrap = () => increaseCount(occ);
-      const increase5xCountWrap = () => increaseCount(occ, true);
-
-      return (
-        <IonItemSliding key={occ.cid}>
-          <IonItem routerLink={`${match.url}/${occ.cid}/edit/${taxa}`} detail>
-            <IncrementalButton
-              onClick={increaseCountWrap}
-              onLongClick={increase5xCountWrap}
-              value={count}
-              disabled={isDisabled}
-            />
-            <IonLabel>{speciesName}</IonLabel>
-          </IonItem>
-
-          {!isDisabled && (
-            <IonItemOptions side="end">
-              <IonItemOption color="danger" onClick={deleteOccurrenceWrap}>
-                <T>Delete</T>
-              </IonItemOption>
-            </IonItemOptions>
-          )}
-        </IonItemSliding>
-      );
-    };
-
-    const speciesListLength = sectionSample.occurrences.length;
-
-    const count = speciesListLength > 1 ? speciesListLength : null;
-
-    const speciesList = occurrences.map(getOccurrenceEntry);
+    const count = speciesList.length > 1 ? speciesList.length : null;
 
     return (
       <>
@@ -148,6 +199,20 @@ const Edit: FC<Props> = ({
       </>
     );
   };
+  const showCopyOptions = () => {
+    alert({
+      header: 'Copy species',
+      message: 'Are you sure want to copy previous survey species list?',
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: 'Copy',
+          cssClass: 'danger',
+          handler: copyPreviousSurveyTaxonList,
+        },
+      ],
+    });
+  };
 
   const getSpeciesAddButton = () => {
     const sectionSampleId = match.params.subSmpId;
@@ -161,13 +226,24 @@ const Edit: FC<Props> = ({
         `/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}/taxa`
       );
 
+    const showCopyOptionsWrap = () => {
+      if (sample.metadata.saved) return;
+
+      showCopyOptions();
+    };
+
     return (
-      <IonButton color="primary" id="add" onClick={onClick}>
+      <LongPressButton
+        color="primary"
+        id="add"
+        onClick={onClick}
+        onLongClick={showCopyOptionsWrap}
+      >
         <IonIcon icon={addCircleOutline} slot="start" />
         <IonLabel>
           <T>Add species</T>
         </IonLabel>
-      </IonButton>
+      </LongPressButton>
     );
   };
 

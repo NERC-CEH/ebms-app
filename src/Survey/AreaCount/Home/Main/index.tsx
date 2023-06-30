@@ -39,6 +39,7 @@ import {
 import GridRef from 'common/Components/GridRefValue';
 import config from 'common/config';
 import appModel from 'models/app';
+import { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import PaintedLadyBehaviour from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyBehaviour';
@@ -46,6 +47,10 @@ import PaintedLadyDirection from 'Survey/AreaCount/OccurrenceHome/Components/Pai
 import PaintedLadyOther from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyOther';
 import PaintedLadyWing from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyWing';
 import IncrementalButton from 'Survey/common/IncrementalButton';
+import {
+  speciesOccAddedTimeSort,
+  speciesNameSort,
+} from 'Survey/common/taxonSortFunctions';
 import CountdownClock from '../components/CountdownClock';
 import './styles.scss';
 
@@ -79,35 +84,26 @@ const showCopyTip = (alert: any) => {
   appModel.save();
 };
 
-const speciesNameSort = ([, sp1]: any, [, sp2]: any) => {
-  const taxon1 = sp1.taxon;
-  const taxonName1 = taxon1[taxon1.found_in_name];
-
-  const taxon2 = sp2.taxon;
-  const taxonName2 = taxon2[taxon2.found_in_name];
-
-  return taxonName1.localeCompare(taxonName2);
-};
-
-const speciesOccAddedTimeSort = ([, sp1]: any, [, sp2]: any) => {
-  const date1 = new Date(sp1.updatedOn);
-  const date2 = new Date(sp2.updatedOn);
-  return date2.getTime() - date1.getTime();
-};
-
 const byTime = (sp1: Sample, sp2: Sample) => {
   const date1 = new Date(sp1.metadata.createdOn);
   const date2 = new Date(sp2.metadata.createdOn);
   return date2.getTime() - date1.getTime();
 };
 
-const getDefaultTaxonCount = (taxon: any) => ({ count: 0, taxon });
+const getDefaultTaxonCount = (taxon: any, createdOn?: any) => {
+  return {
+    count: 0,
+    taxon,
+    createdOn,
+  };
+};
 
 const buildSpeciesCount = (agg: any, smp: Sample) => {
   const taxon = toJS(smp.occurrences[0].attrs.taxon);
-  const id = taxon.warehouse_id;
+  const id = taxon.preferredId || taxon.warehouse_id;
 
-  agg[id] = agg[id] || getDefaultTaxonCount(taxon); // eslint-disable-line
+  const createdOn = new Date(smp.metadata.createdOn).getTime();
+  agg[id] = agg[id] || getDefaultTaxonCount(taxon, createdOn); // eslint-disable-line
 
   if (smp.isSurveyPreciseSingleSpecies() && smp.hasZeroAbundance()) {
     return agg;
@@ -118,15 +114,6 @@ const buildSpeciesCount = (agg: any, smp: Sample) => {
   // eslint-disable-next-line
   agg[id].hasLocationMissing =
     agg[id].hasLocationMissing || smp.hasLoctionMissingAndIsnotLocating(); // eslint-disable-line
-
-  const wasCreatedBeforeCurrent =
-    new Date(agg[id].updatedOn).getTime() -
-    new Date(smp.metadata.updatedOn).getTime();
-
-  // eslint-disable-next-line
-  agg[id].updatedOn = !wasCreatedBeforeCurrent
-    ? agg[id].updatedOn
-    : smp.metadata.updatedOn;
 
   return agg;
 };
@@ -304,7 +291,24 @@ const AreaCount: FC<Props> = ({
     }
 
     const speciesCounts = [...sample.samples].reduce(buildSpeciesCount, {});
-    const shallowCounts = sample.shallowSpeciesList.map(getDefaultTaxonCount);
+
+    const getShallowEntry = (shallowEntry: Taxon) => {
+      const shallowEntryId =
+        shallowEntry.preferredId || shallowEntry.warehouse_id;
+
+      if (speciesCounts[shallowEntryId]) {
+        speciesCounts[shallowEntryId].createdOn = 0;
+        return null;
+      }
+
+      return getDefaultTaxonCount(shallowEntry, 0);
+    };
+
+    const notEmpty = (shallowEntry: any) => shallowEntry;
+
+    const shallowCounts = sample.shallowSpeciesList
+      .map(getShallowEntry)
+      .filter(notEmpty);
 
     const counts = {
       ...speciesCounts,

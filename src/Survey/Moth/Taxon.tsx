@@ -112,9 +112,10 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
       return;
     }
 
-    const selectedTaxon = (occ: Occurrence) =>
-      (occ.attrs.taxon?.preferredId || occ.attrs.taxon?.warehouse_id) ===
-      (taxon?.preferredId || taxon?.warehouse_id);
+    const selectedTaxon = (occ: Occurrence) => {
+      return occ.doesTaxonMatch(taxon);
+    };
+
     const existingOccurrence = sample.occurrences.find(selectedTaxon);
     if (existingOccurrence) {
       existingOccurrence.attrs.count += 1;
@@ -153,6 +154,7 @@ const Taxon: FC<Props> = ({ sample, occurrence }) => {
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}
           speciesGroups={['moths']}
+          useDayFlyingMothsOnly={false}
         />
       </Main>
     </Page>

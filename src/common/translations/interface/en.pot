@@ -2462,3 +2462,11 @@ msgstr "Location services are not enabled"
 # Part of favorite track
 msgid "You have no previous tracks."
 msgstr "You have no previous tracks."
+
+# Change list order toast message
+msgid "Changed list ordering to alphabetical."
+msgstr "Changed list ordering to alphabetical."
+
+# Change list order toast message
+msgid "Changed list ordering to last added."
+msgstr "Changed list ordering to last added."

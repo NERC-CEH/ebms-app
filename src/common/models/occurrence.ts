@@ -48,7 +48,6 @@ export interface SpeciesGroups {
 
 export type Taxon = {
   version?: string;
-
   machineInvolvement?: MachineInvolvement;
   suggestions?: any;
   preferredId?: any;
@@ -80,6 +79,23 @@ type Attrs = OccurrenceAttrs & {
   otherThistles?: any;
   nectarSource?: any;
   mating?: any;
+};
+
+export const doesShallowTaxonMatch = (shallowEntry: Taxon, taxon: Taxon) => {
+  if (shallowEntry.warehouse_id === taxon.warehouse_id) return true;
+  if (shallowEntry.warehouse_id === taxon.preferredId) return true;
+
+  if (shallowEntry.preferredId) {
+    if (shallowEntry.preferredId === taxon.preferredId) return true;
+    if (shallowEntry.preferredId === taxon.warehouse_id) return true;
+  }
+
+  if (taxon.preferredId) {
+    if (shallowEntry.preferredId === taxon.preferredId) return true;
+    if (shallowEntry.warehouse_id === taxon.preferredId) return true;
+  }
+
+  return false;
 };
 
 export default class Occurrence extends OccurrenceOriginal<Attrs> {
@@ -167,6 +183,23 @@ export default class Occurrence extends OccurrenceOriginal<Attrs> {
 
   getSpeciesGroupIcon = () =>
     (speciesGroupImages as any)[this.attrs.taxon.group];
+
+  doesTaxonMatch = (taxon: Taxon) => {
+    if (this.attrs.taxon.warehouse_id === taxon.warehouse_id) return true;
+    if (this.attrs.taxon.warehouse_id === taxon.preferredId) return true;
+
+    if (this.attrs.taxon.preferredId) {
+      if (this.attrs.taxon.preferredId === taxon.preferredId) return true;
+      if (this.attrs.taxon.preferredId === taxon.warehouse_id) return true;
+    }
+
+    if (taxon.preferredId) {
+      if (this.attrs.taxon.preferredId === taxon.preferredId) return true;
+      if (this.attrs.taxon.warehouse_id === taxon.preferredId) return true;
+    }
+
+    return false;
+  };
 
   getTopSuggestion(suggestions?: any) {
     // eslint-disable-next-line no-param-reassign

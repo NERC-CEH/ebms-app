@@ -8,7 +8,11 @@ import { NavContext } from '@ionic/react';
 import distance from '@turf/distance';
 import appModel from 'models/app';
 import savedSamples from 'models/collections/samples';
-import Occurrence, { SpeciesGroup } from 'models/occurrence';
+import Occurrence, {
+  SpeciesGroup,
+  Taxon,
+  doesShallowTaxonMatch,
+} from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
 import { useDeleteConfirmation } from '../SpeciesOccurrences';
@@ -16,6 +20,8 @@ import Header from './Header';
 import Main from './Main';
 
 const METERS_THRESHOLD = 200;
+
+const DUMMY_ARRAY_OF_FIVE = [1, 2, 3, 4, 5];
 
 const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
@@ -274,13 +280,27 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const navigateToSpeciesOccurrences = (taxon: any) => {
-    navigate(`${match.url}/speciesOccurrences/${taxon.warehouse_id}`);
+    const { warehouse_id, preferredId } = taxon;
+    const taxonId = preferredId || warehouse_id;
+
+    navigate(`${match.url}/speciesOccurrences/${taxonId}`);
   };
 
   const toggleSpeciesSort = () => {
     const { areaSurveyListSortedByTime } = appModel.attrs;
-    appModel.attrs.areaSurveyListSortedByTime = !areaSurveyListSortedByTime;
+    const newSort = !areaSurveyListSortedByTime;
+    appModel.attrs.areaSurveyListSortedByTime = newSort;
     appModel.save();
+
+    const prettySortName = appModel.attrs.areaSurveyListSortedByTime
+      ? 'last added'
+      : 'alphabetical';
+
+    toast.success(`Changed list ordering to ${prettySortName}.`, {
+      color: 'light',
+      position: 'bottom',
+      duration: 1000,
+    });
   };
 
   const getPreviousSurvey = () => {
@@ -342,6 +362,18 @@ const HomeController: FC<Props> = ({ sample }) => {
       ...newSpeciesList
     );
 
+    const speciesNameSort = (sp1: any, sp2: any) => {
+      const taxon1 = sp1.found_in_name;
+      const taxonName1 = sp1[taxon1];
+
+      const taxon2 = sp2.found_in_name;
+      const taxonName2 = sp2[taxon2];
+
+      return taxonName1.localeCompare(taxonName2);
+    };
+
+    sample.shallowSpeciesList.sort(speciesNameSort);
+
     if (!newSpeciesList.length) {
       toast.warn('Sorry, no species were found to copy.');
     } else {
@@ -354,38 +386,46 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const deleteFromShallowList = (taxon: any) => {
-    const withSamePreferredIdOrWarehouseId = (t: any) => {
-      if (t.preferredId) return t.preferredId === taxon.preferredId;
-
-      return t.warehouse_id === taxon.warehouse_id;
+    const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) => {
+      return doesShallowTaxonMatch(shallowEntry, taxon);
     };
 
     const taxonIndexInShallowList = sample.shallowSpeciesList.findIndex(
       withSamePreferredIdOrWarehouseId
     );
 
+    const isNotInShallowList = taxonIndexInShallowList === -1;
+    if (isNotInShallowList) return;
+
     sample.shallowSpeciesList.splice(taxonIndexInShallowList, 1);
   };
 
   const deleteSpecies = (taxon: any, isShallow: boolean) => {
-    if (!sample.isSurveyPreciseSingleSpecies() && isShallow) {
+    if (isShallow) {
       deleteFromShallowList(taxon);
       return;
     }
 
     const destroyWrap = () => {
-      const matchingTaxon = (smp: Sample) =>
-        smp.occurrences[0].attrs.taxon.warehouse_id === taxon.warehouse_id;
+      const matchingTaxon = (smp: Sample) => {
+        const [occ] = smp.occurrences;
+
+        return occ.doesTaxonMatch(taxon);
+      };
       const subSamplesMatchingTaxon = sample.samples.filter(matchingTaxon);
 
-      const destroy = (s: Sample) => s.destroy();
+      const destroy = (s: Sample) => {
+        deleteFromShallowList(taxon);
+        s.destroy();
+      };
+
       subSamplesMatchingTaxon.forEach(destroy);
     };
 
     showDeleteSpeciesPrompt(taxon).then(destroyWrap);
   };
 
-  const increaseCount = (taxon: any, isShallow: boolean, is5x: boolean) => {
+  const increaseCount = (taxon: any, _: boolean, is5x: boolean) => {
     if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
       // eslint-disable-next-line no-param-reassign
       sample.samples[0].occurrences[0].attrs.zero_abundance = null;
@@ -396,10 +436,6 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     if (sample.isDisabled()) return;
 
-    if (isShallow) {
-      deleteFromShallowList(taxon);
-    }
-
     const survey = sample.getSurvey();
 
     const addOneCount = () => {
@@ -409,7 +445,7 @@ const HomeController: FC<Props> = ({ sample }) => {
     };
 
     if (is5x) {
-      [...Array(5)].forEach(addOneCount);
+      DUMMY_ARRAY_OF_FIVE.forEach(addOneCount);
     } else {
       addOneCount();
     }

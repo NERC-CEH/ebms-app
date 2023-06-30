@@ -53,10 +53,7 @@ const Controller: FC<Props> = ({
     );
 
     const byId = (occ: Occurrence) => {
-      return (
-        occ.attrs.taxon.warehouse_id === taxon.warehouse_id &&
-        occ.attrs.taxon?.preferredId === taxon?.preferredId
-      );
+      return occ.doesTaxonMatch(taxon);
     };
     const occWithSameSpecies = sectionSample.occurrences.find(byId);
 

@@ -15,7 +15,7 @@ import CONFIG from 'common/config';
 import appModel from 'models/app';
 import savedSamples from 'models/collections/samples';
 import Media from 'models/media';
-import Occurrence from 'models/occurrence';
+import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
 import { getUnkownSpecies } from 'Survey/Moth/config';
@@ -121,45 +121,65 @@ const HomeController: FC<Props> = ({ sample }) => {
     await _processSubmission();
   };
 
+  const toggleSpeciesSort = () => {
+    const { areaSurveyListSortedByTime } = appModel.attrs;
+    const newSort = !areaSurveyListSortedByTime;
+    appModel.attrs.areaSurveyListSortedByTime = newSort;
+    appModel.save();
+
+    const prettySortName = appModel.attrs.areaSurveyListSortedByTime
+      ? 'last added'
+      : 'alphabetical';
+
+    toast.success(`Changed list ordering to ${prettySortName}.`, {
+      color: 'light',
+      position: 'bottom',
+      duration: 1000,
+    });
+  };
+
   // const deleteOccurrence = (occ: Occurrence) => {
   //   showDeleteSpeciesPrompt(occ);
   // };
 
-  const deleteFromShallowList = (taxon: any) => {
-    const withSamePreferredIdOrWarehouseId = (t: any) => {
-      if (t.preferredId) return t.preferredId === taxon.preferredId;
-
-      return t.warehouse_id === taxon.warehouse_id;
+  const deleteFromShallowList = (taxon: Taxon) => {
+    const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) => {
+      return doesShallowTaxonMatch(shallowEntry, taxon);
     };
 
     const taxonIndexInShallowList = sample.shallowSpeciesList.findIndex(
       withSamePreferredIdOrWarehouseId
     );
 
+    const isNotInShallowList = taxonIndexInShallowList === -1;
+    if (isNotInShallowList) return;
+
     sample.shallowSpeciesList.splice(taxonIndexInShallowList, 1);
   };
 
   const deleteSpecies = async (taxon: any, isShallow: boolean, ref: any) => {
-    if (!sample.isSurveyPreciseSingleSpecies() && isShallow) {
+    if (isShallow) {
       deleteFromShallowList(taxon);
-
       await ref.current.closeOpened();
 
       return;
     }
 
     const destroyWrap = () => {
-      const matchingTaxon = (occ: Occurrence) =>
-        occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
-      const subSamplesMatchingTaxon = sample.occurrences.filter(matchingTaxon);
+      const matchingTaxon = (occ: Occurrence) => {
+        return occ.doesTaxonMatch(taxon);
+      };
+      const sampleMatchingTaxon = sample.occurrences.filter(matchingTaxon);
 
-      const destroy = (occ: Occurrence) => occ.destroy();
-      subSamplesMatchingTaxon.forEach(destroy);
+      const destroy = (occ: Occurrence) => {
+        occ.destroy();
+        deleteFromShallowList(taxon);
+      };
+      sampleMatchingTaxon.forEach(destroy);
     };
 
     showDeleteSpeciesPrompt(taxon).then(destroyWrap);
   };
-
   const navigateToSpeciesOccurrences = (taxon: any) => {
     const matchingTaxon = (occ: Occurrence) =>
       occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
@@ -170,26 +190,27 @@ const HomeController: FC<Props> = ({ sample }) => {
     navigate(`${match.url}/occ/${occ.cid}`);
   };
 
-  const increaseCount = (taxon: any, isShallow: boolean, is5x: boolean) => {
+  const increaseCount = (taxa: Taxon, isShallow: boolean, is5x: boolean) => {
     if (isShallow) {
-      deleteFromShallowList(taxon);
-
       const survey = sample.getSurvey();
-      const newOccurrence = survey.occ!.create!({ Occurrence, taxon });
-      // newOccurrence.attrs.taxon.machineInvolvement = machineInvolvement;
+      const newOccurrence = survey.occ!.create!({ Occurrence, taxon: taxa });
+
+      newOccurrence.metadata.createdOn = 0;
       sample.occurrences.push(newOccurrence);
       sample.save();
-    } else {
-      const matchingTaxon = (occ: Occurrence) =>
-        occ.attrs.taxon.warehouse_id === taxon.warehouse_id;
-
-      const occ = sample.occurrences.find(matchingTaxon);
-
-      if (!occ) return;
-
-      occ.attrs.count += is5x ? 5 : 1;
-      occ.save();
+      return;
     }
+
+    const matchingTaxon = (occ: Occurrence) => {
+      return occ.doesTaxonMatch(taxa);
+    };
+
+    const occ = sample.occurrences.find(matchingTaxon);
+
+    if (!occ) return;
+
+    occ.attrs.count += is5x ? 5 : 1;
+    occ.save();
   };
 
   const getFinishButton = () => {
@@ -216,13 +237,16 @@ const HomeController: FC<Props> = ({ sample }) => {
       occ.attrs.taxon?.warehouse_id !== UNKNOWN_SPECIES.preferredId;
     if (!speciesIsKnown) return;
 
-    const selectedTaxon = (selectedOccurrence: Occurrence) =>
-      (selectedOccurrence.attrs.taxon?.preferredId ||
-        selectedOccurrence.attrs.taxon?.warehouse_id) ===
-        (occ?.attrs.taxon?.preferredId || occ?.attrs.taxon?.warehouse_id) &&
-      selectedOccurrence !== occ &&
-      selectedOccurrence.attrs.comment === comment &&
-      selectedOccurrence.attrs.identifier === identifier;
+    const selectedTaxon = (selectedOccurrence: Occurrence) => {
+      return (
+        (selectedOccurrence.attrs.taxon?.preferredId ||
+          selectedOccurrence.attrs.taxon?.warehouse_id) ===
+          (occ?.attrs.taxon?.preferredId || occ?.attrs.taxon?.warehouse_id) &&
+        selectedOccurrence !== occ &&
+        selectedOccurrence.attrs.comment === comment &&
+        selectedOccurrence.attrs.identifier === identifier
+      );
+    };
     const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
 
     if (!occWithSameSpecies) return;
@@ -353,6 +377,18 @@ const HomeController: FC<Props> = ({ sample }) => {
       ...newSpeciesList
     );
 
+    const speciesNameSort = (sp1: any, sp2: any) => {
+      const taxon1 = sp1.found_in_name;
+      const taxonName1 = sp1[taxon1];
+
+      const taxon2 = sp2.found_in_name;
+      const taxonName2 = sp2[taxon2];
+
+      return taxonName1.localeCompare(taxonName2);
+    };
+
+    sample.shallowSpeciesList.sort(speciesNameSort);
+
     if (!newSpeciesList.length) {
       toast.warn('Sorry, no species were found to copy.');
     } else {
@@ -372,6 +408,8 @@ const HomeController: FC<Props> = ({ sample }) => {
     </div>
   );
 
+  const { areaSurveyListSortedByTime } = appModel.attrs;
+
   return (
     <Page id="survey-moth-home">
       <Header
@@ -385,7 +423,9 @@ const HomeController: FC<Props> = ({ sample }) => {
         increaseCount={increaseCount}
         deleteSpecies={deleteSpecies}
         isDisabled={isDisabled}
+        onToggleSpeciesSort={toggleSpeciesSort}
         photoSelect={photoSelect}
+        areaSurveyListSortedByTime={areaSurveyListSortedByTime}
         useImageIdentifier={useImageIdentifier}
         onIdentifyOccurrence={onIdentifyOccurrence}
         onIdentifyAllOccurrences={onIdentifyAllOccurrences}

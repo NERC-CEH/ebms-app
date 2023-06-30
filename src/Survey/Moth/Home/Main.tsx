@@ -7,6 +7,7 @@ import {
   locationOutline,
   camera,
   warningOutline,
+  filterOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import {
@@ -30,10 +31,14 @@ import {
   IonItemOption,
 } from '@ionic/react';
 import config from 'common/config';
-import Occurrence from 'models/occurrence';
+import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import IncrementalButton from 'Survey/common/IncrementalButton';
+import {
+  speciesOccAddedTimeSort,
+  speciesNameSort,
+} from 'Survey/common/taxonSortFunctions';
 import UnidentifiedSpeciesEntry from './Components/UnidentifiedSpeciesEntry';
 import './styles.scss';
 
@@ -61,20 +66,19 @@ function useDisabledImageIdentifierAlert() {
   return shownDisabledImageIdentifierAlert;
 }
 
-const getDefaultTaxonCount = (taxon: any) => ({
+const getDefaultTaxonCount = (taxon: Taxon, createdOn?: any) => ({
   count: 0,
   taxon,
+  createdOn,
 });
 
 const buildSpeciesCount = (agg: any, occ: Occurrence) => {
   const taxon = toJS(occ.attrs.taxon);
-  const id = taxon.warehouse_id;
+  const id = taxon.preferredId || taxon.warehouse_id;
 
-  agg[id] = agg[id] || getDefaultTaxonCount(taxon); // eslint-disable-line
+  agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.metadata.createdOn); // eslint-disable-line
 
   agg[id].count = toJS(occ.attrs.count); // eslint-disable-line
-
-  agg[id].updated_on = new Date(occ.metadata.updatedOn).getTime(); // eslint-disable-line
 
   return agg;
 };
@@ -85,21 +89,17 @@ function byCreateTime(occ1: Occurrence, occ2: Occurrence) {
   return date2.getTime() - date1.getTime();
 }
 
-function byTime([, occ1]: any, [, occ2]: any) {
-  const date1 = new Date(occ1.updated_on);
-  const date2 = new Date(occ2.updated_on);
-  return date2.getTime() - date1.getTime();
-}
-
 type Props = {
   match: any;
   sample: Sample;
   photoSelect: any;
   increaseCount: any;
   deleteSpecies: any;
+  onToggleSpeciesSort: any;
   isDisabled: boolean;
   useImageIdentifier: boolean;
   onIdentifyOccurrence: any;
+  areaSurveyListSortedByTime: boolean;
   onIdentifyAllOccurrences: any;
   copyPreviousSurveyTaxonList: any;
   navigateToSpeciesOccurrences: any;
@@ -111,7 +111,9 @@ const HomeMain: FC<Props> = ({
   increaseCount,
   deleteSpecies,
   isDisabled,
+  onToggleSpeciesSort,
   photoSelect,
+  areaSurveyListSortedByTime,
   useImageIdentifier,
   onIdentifyOccurrence,
   onIdentifyAllOccurrences,
@@ -304,16 +306,37 @@ const HomeMain: FC<Props> = ({
     };
 
     const speciesCounts = [...sample.occurrences].reduce(buildSpeciesCount, {});
-    const shallowCounts = sample.shallowSpeciesList.map(getDefaultTaxonCount);
+
+    const getShallowEntry = (shallowEntry: Taxon) => {
+      const shallowEntryId =
+        shallowEntry.preferredId || shallowEntry.warehouse_id;
+
+      if (speciesCounts[shallowEntryId]) {
+        speciesCounts[shallowEntryId].createdOn = 0;
+        return null;
+      }
+
+      return getDefaultTaxonCount(shallowEntry, 0);
+    };
+
+    const notEmpty = (shallowEntry: any) => shallowEntry;
+
+    const shallowCounts = sample.shallowSpeciesList
+      .map(getShallowEntry)
+      .filter(notEmpty);
 
     const counts = {
       ...speciesCounts,
       ...shallowCounts,
     };
 
+    const sort = areaSurveyListSortedByTime
+      ? speciesOccAddedTimeSort
+      : speciesNameSort;
+
     const speciesList = Object.entries(counts)
       .filter(byKnownSpecies)
-      .sort(byTime)
+      .sort(sort)
       .map(getSpeciesEntry);
 
     const count = speciesList.length > 1 ? speciesList.length : null;
@@ -322,6 +345,12 @@ const HomeMain: FC<Props> = ({
 
     return (
       <>
+        <div id="species-list-sort">
+          <IonButton fill="clear" size="small" onClick={onToggleSpeciesSort}>
+            <IonIcon icon={filterOutline} mode="md" />
+          </IonButton>
+        </div>
+
         <IonList id="list" lines="full">
           <div className="rounded">
             <IonItemDivider className="species-list-header">
