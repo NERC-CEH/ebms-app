@@ -1,5 +1,4 @@
-import { createRef, FC } from 'react';
-import { observer } from 'mobx-react';
+import { createRef, FC, useState } from 'react';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { Main, useOnHideModal } from '@flumens';
 import {
@@ -25,18 +24,30 @@ type Props = {
 
 const EditModal: FC<Props> = ({ location, onLocationSave }) => {
   const { t } = useTranslation();
+
+  const [locationName, setLocationName] = useState(location.name);
+  const [locationIsFavorite, setLocationIsFavorite] = useState(
+    location.favorite
+  );
+
+  useOnHideModal(onLocationSave);
+
   const inputRef = createRef<any>();
 
   const toggleRef = createRef<any>();
 
   const closeModal = () => onLocationSave();
 
-  useOnHideModal(onLocationSave);
+  const onChangeLocationName = (event: any) => {
+    setLocationName(event.detail.value);
+  };
+
+  const onChangeFavoriteStatus = (event: any) => {
+    setLocationIsFavorite(event.detail.checked);
+  };
 
   const save = () =>
     onLocationSave(inputRef.current.value, toggleRef.current.checked);
-
-  const { name, favourite } = location || {};
 
   const form = (
     <IonList className="location-edit-form">
@@ -49,7 +60,8 @@ const EditModal: FC<Props> = ({ location, onLocationSave }) => {
             id="location-name"
             type="text"
             placeholder={t('Your track name')}
-            value={name}
+            value={locationName}
+            onIonChange={onChangeLocationName}
             ref={inputRef}
           />
         </IonItem>
@@ -60,7 +72,8 @@ const EditModal: FC<Props> = ({ location, onLocationSave }) => {
           <IonToggle
             slot="end"
             id="favourite-btn"
-            checked={favourite}
+            onIonChange={onChangeFavoriteStatus}
+            checked={locationIsFavorite}
             ref={toggleRef}
           />
         </IonItem>
@@ -69,7 +82,7 @@ const EditModal: FC<Props> = ({ location, onLocationSave }) => {
   );
 
   return (
-    <IonModal isOpen={!!location}>
+    <IonModal isOpen={!!location?.name}>
       <IonHeader translucent>
         <IonToolbar>
           <IonButtons slot="start">
@@ -92,4 +105,4 @@ const EditModal: FC<Props> = ({ location, onLocationSave }) => {
   );
 };
 
-export default observer(EditModal);
+export default EditModal;

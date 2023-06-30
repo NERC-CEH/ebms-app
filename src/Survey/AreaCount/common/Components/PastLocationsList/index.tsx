@@ -104,6 +104,9 @@ const PastLocations: FC<Props> = ({ onSelect, position }) => {
     listRef.current.closeSlidingItems();
 
     const location = locations.find(({ id }) => id === locationId);
+
+    if (!location?.name) return;
+
     setEditLocation({ ...location });
   };
 
@@ -200,7 +203,9 @@ const PastLocations: FC<Props> = ({ onSelect, position }) => {
 
   return (
     <div className="past-locations">
-      <EditModal location={editLocation} onLocationSave={onSave} />
+      {editLocation && (
+        <EditModal location={editLocation} onLocationSave={onSave} />
+      )}
 
       <InfoMessage className="blue" icon={informationCircleOutline}>
         Here you can select or swipe to edit your previous tracks
