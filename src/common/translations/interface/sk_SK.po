@@ -256,7 +256,7 @@ msgid "TOP RECORDERS"
 msgstr "TOP PRISPIEVATELIA"
 
 msgid "Top Species from all timed counts"
-msgstr "Top druhy zo všetkých časových záznamov"
+msgstr "Top druhy zo všetkých záznamov"
 
 msgid "Back"
 msgstr "Späť"
@@ -390,7 +390,7 @@ msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
-"Pre rýchlejšie hľadanie druhov môžete použiť rôzne skratky. Napríklad, nájsť"
+"Pre rýchlejšie hľadanie druhov môžete použiť rôzne skratky. Napríklad: nájsť"
 
 msgid "you can type in the search bar"
 msgstr "môžete zadať do vyhľadávacieho políčka"
@@ -442,7 +442,7 @@ msgstr "Štatistika"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr "Názov druhu alebo filter"
+msgstr "Názov druhu alebo filter..."
 
 # Species filter label
 msgid "family"
@@ -503,11 +503,13 @@ msgid "Are you sure you want to remove this photo?"
 msgstr "Ste si istý, že chcete odstrániť túto fotografiu?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Poznámka: ostane v galérii. "
+msgstr "Poznámka: fotografia ostane v galérii. "
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr "Nebola pridaná žiadna fotografia. <br/>Stlačte <3></3> pre pridanie."
+msgstr ""
+"Nebola pridaná žiadna fotografia. <br/> Pre pridanie fotografie stlačte "
+"<3></3>."
 
 msgid "Registration error:"
 msgstr "Chyba registrácie: "
@@ -521,7 +523,7 @@ msgstr "Pre reset hesla zadajte svoju emailovú adresu. "
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr "Úspešne prihlásený ako: {{email}}"
+msgstr "Ste úspešne prihlásený ako: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
@@ -533,19 +535,19 @@ msgid ""
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
 "Vyzerá to tak, že emailová adresa<1>{{userEmail}}</1> ešte nebola "
-"overená.<3><0>Obnoviť</0>Poslať nový email </1></3>"
+"overená.<3><0>Obnoviť</0><1>Poslať nový email </1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
-"Práve Vám bol odoslaný nový verifikačný email. Skontrolujte si prosím "
-"nevyžiadanú poštu v prípade, že ste ho nedostali."
+"Práve Vám bol odoslaný nový verifikačný email. Ak ste email nedostali, "
+"skontrolujte si, prosím, nevyžiadanú poštu."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr "Najprv sa prosím prihláste."
+msgstr "Najskôr sa prihláste, prosím."
 
 # User registration error
 msgid "This email is already taken."
@@ -594,7 +596,7 @@ msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"Táto aplikácia bola vyvinutá ako súčasť Projektu Hodnotenia motýľov v Európe"
+"Táto aplikácia bola vyvinutá ako súčasť Projektu Hodnotenie motýľov v Európe"
 " (Assessing Butterflies in Europe, ABLE)."
 
 msgid "The ABLE project is a partnership between"
@@ -607,9 +609,9 @@ msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
-"ABLE je financovaný na základe servisnej zmluvy z prostriedkov Európskej "
-"únie, konkrétne Riaditeľstva pre životné prostredie, na počiatočné obdobie "
-"dvoch rokov od 2019-2020."
+"ABLE je financovaný na základe zmluvy z prostriedkov Európskej únie, "
+"konkrétne Riaditeľstva pre životné prostredie, na počiatočné obdobie dvoch "
+"rokov od 2019-2020."
 
 msgid "ABLE partners:"
 msgstr "ABLE partneri:"
@@ -635,7 +637,7 @@ msgstr "Pre začatie nového pozorovania stlačte tlačidlo plus"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
-"v pätičke domovskej stránky. Toto vytvorí nový 15-minútový monitoring."
+"v pätičke domovskej stránky. Takto vytvoríte nový 15-minútový monitoring."
 
 msgid "Selecting species"
 msgstr "Vybrať druhy"
@@ -665,7 +667,7 @@ msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Pre vymazanie druhu zo zoznamu pozorovaní ho potiahnite prstom doľava a "
+"Pre vymazanie druhu zo zoznamu pozorovaní potiahnite záznam prstom doľava a "
 "kliknite na tlačidlo vymazať.  "
 
 msgid ""
@@ -681,8 +683,7 @@ msgstr "Na dokončenie záznamu vyplňte aj detaily o území."
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
-msgstr ""
-"Po dokončení nastavte odoslanie stlačením tlačidla Dokončiť v hlavičke."
+msgstr "Po skončení odošlite stlačením tlačidla Dokončiť v hlavičke."
 
 msgid "Searching for species"
 msgstr "Hľadanie druhov"
@@ -694,7 +695,7 @@ msgid ""
 msgstr ""
 "Aplikácia obsahuje zoznam približne 500 druhov motýľov so všetkými "
 "taxonomickými úrovňami. Pre rýchlejšie vyhľadávanie druhov môžete použiť "
-"rôzne klávesové skratky. Napríklad, aby ste našli"
+"rôzne klávesové skratky. Napríklad: nájsť. "
 
 msgid "Sync. with the website"
 msgstr "Synchronizácia s webovým rozhraním"
@@ -712,10 +713,10 @@ msgstr ""
 "údaje hneď, ako bude mať dobré sieťové pripojenie."
 
 msgid "If the record has reached the database a red"
-msgstr "Keď bude záznam odoslaný do databázy, červené"
+msgstr "Keď bude záznam odoslaný do databázy, červená"
 
 msgid "(set for submission & saved locally) will become green"
-msgstr "(pripavený na odoslanie a uložený lokálne) sa zmení na zelenú"
+msgstr "(pripavené na odoslanie a uložené lokálne) sa zmení na zelenú"
 
 msgid "synced to the database"
 msgstr "synchronizované s databázou"
@@ -773,7 +774,7 @@ msgid "Go to the application settings page"
 msgstr "Choďte do nastavení"
 
 msgid "and click on the Reset"
-msgstr "a kliknite na Reset"
+msgstr "a kliknite na Reštart"
 
 msgid "button"
 msgstr "tlačidlo"
@@ -782,7 +783,7 @@ msgid "No species found with this name"
 msgstr "Neboli nájdené žiadne druhy s týmto názvom"
 
 msgid "Allow Sample Edit"
-msgstr "Povoľte úpravu vzorky"
+msgstr "Povoľte úpravu"
 
 msgid "Upload"
 msgstr "Nahrať"
@@ -844,13 +845,13 @@ msgid "OK, sure"
 msgstr "Áno, jasné"
 
 msgid "How about a rating on the App Store then?"
-msgstr "Ohodnoťte apliáciu v Play Store"
+msgstr "Ohodnoťte apliáciu v App Store"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "Ohodnoťte aplikáciu v Obchod Play"
+msgstr "Ohodnoťte aplikáciu v Play Store"
 
 msgid "Icons made by"
-msgstr "Ikony vyrobili"
+msgstr "Ikony vytvorili"
 
 msgid "from"
 msgstr "od"
@@ -862,7 +863,7 @@ msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
-"Pre reset hesla kliknite na link v emaili. V prípade, že nevidíte email, "
+"Pre reset hesla kliknite na link v emaili. Ak Vám email neprišiel, "
 "skontrolujte si aj priečinok nevyžiadanej pošty, spam a ostatné zložky.  "
 
 msgid "App Development"
@@ -874,11 +875,13 @@ msgstr "Táto aplikácia bola vyvinutá ručne a s láskou"
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
-msgstr "Agentúra špecializovaná na zákazkové dátovo orientované riešenia."
+msgstr ""
+"Firma poskytujúca technické poradenstvo vynikajúca svojimi schopnosťami "
+"vytvárať individuálne riešenia zamerané na environmentálnu vedu a podporu "
+"komunity."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr ""
-"Pokiaľ máte nápady alebo cítite potrebu dať nám spätnú väzbu, neváhajte"
+msgstr "Pokiaľ máte nápady alebo nám chcete dať spätnú väzbu, neváhajte"
 
 msgid "contact us"
 msgstr "kontaktujte nás"
@@ -894,20 +897,20 @@ msgstr "V móde \"Simulácia\" sa novopridané záznamy nebudú ukladať do šta
 
 # App setting label
 msgid "Show common names in guide"
-msgstr "Zobraziť v sprievodcovi bežné názvy"
+msgstr "V sprievodcovi zobraziť bežné názvy"
 
 msgid "Share App Analytics"
 msgstr "Zdieľať analýzu aplikácie"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
-"Zdieľajte dáta o pádoch apliácie, aby sme ju mohli urobiť spoľahlivejšou."
+"Zdieľajte dáta o chybách aplikácie, aby sme ju mohli urobiť spoľahlivejšou."
 
 msgid "Save Draft"
 msgstr "Uložiť návrh"
 
 msgid "Stage"
-msgstr "Etapa"
+msgstr "Štádium"
 
 msgid "Not Recorded"
 msgstr "Nezaznamenávané"
@@ -919,13 +922,13 @@ msgid "Larvae"
 msgstr "Húsenice"
 
 msgid "Eggs"
-msgstr "Vajcia"
+msgstr "Vajíčka"
 
 msgid "Pupae"
 msgstr "Kukly"
 
 msgid "Larval webs"
-msgstr "Hniezdo húseníc"
+msgstr "Hniezda húseníc"
 
 # Butterfly stage
 msgid "Adult"
@@ -933,7 +936,7 @@ msgstr "Dospelý"
 
 # Butterfly stage
 msgid "Egg"
-msgstr "Vajce"
+msgstr "Vajíčko"
 
 # Butterfly stage
 msgid "Larva"
@@ -981,7 +984,7 @@ msgid "Refresh"
 msgstr "Obnoviť"
 
 msgid "Please select your transect first."
-msgstr "Najskôr prosím vyberte svoj transekt."
+msgstr "Najskôr, prosím, vyberte svoj transekt."
 
 msgid "Invalid server response."
 msgstr "Neplatná odpoveď zo servera."
@@ -1020,7 +1023,7 @@ msgid "No direction"
 msgstr "Žiadny smer"
 
 msgid "Please specify the wind direction."
-msgstr "Špecifikujte prosím smer vetra."
+msgstr "Špecifikujte, prosím, smer vetra."
 
 msgid "Smoke rises vertically"
 msgstr "Dym stúpa hore"
@@ -1086,16 +1089,16 @@ msgid "Enter more information here..."
 msgstr "Sem vložte viac informácií..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr "Upresnite prosím osobu zodpovednú za identifikáciu druhu.  "
+msgstr "Upresnite, prosím, osobu zodpovednú za identifikáciu druhu.  "
 
 msgid "HH:mm"
 msgstr "HH:mm"
 
 msgid "Please specify the % of cloud cover."
-msgstr "Upresnite prosím percentuálny podiel oblačnosti."
+msgstr "Upresnite, prosím, percentuálny podiel oblačnosti."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "Nemáte žiadne transekty. Skúste prosím obnoviť zoznam."
+msgstr "Nemáte žiadne transekty. Skúste obnoviť zoznam."
 
 msgid "Wind speed info is missing"
 msgstr "Chýbajú informácie o rýchlosti vetra"
@@ -1107,7 +1110,7 @@ msgid "Recorder info is missing"
 msgstr "Chýbajú informácie o zapisovateľovi"
 
 msgid "Please select your transect."
-msgstr "Prosím vyberte svoj transekt."
+msgstr "Prosím, vyberte svoj transekt."
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
@@ -1137,7 +1140,7 @@ msgid "Irregular vagrant"
 msgstr "Nepravidelný zblúdilec"
 
 msgid "Regionally extinct"
-msgstr "Regionálne vyhynuté"
+msgstr "Regionálne vyhynutý"
 
 msgid "Description"
 msgstr "Popis"
@@ -1161,7 +1164,7 @@ msgid "Photo credits"
 msgstr "Fotka"
 
 msgid "How to use the app"
-msgstr "Ako používať aplikáciu"
+msgstr "Ako používať túto aplikáciu"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1169,9 +1172,9 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Túto aplikáciu môžete použiť na monitoring motýľov kdekoľvek v Európe. "
-"Výsledky budú vložené do databázy Európskeho monitoringu motýľov a budú "
-"použité na vyhodnotenie trendov motýľov naprieč Európou. Keď chcete "
+"Aplikácia sa používa na monitoring motýľov kdekoľvek v Európe. Výsledky "
+"monitorovania budú vložené do databázy Európskeho monitoringu motýľov a budú"
+" použité na vyhodnotenie trendov motýľov naprieč Európou. Ak chcete "
 "aplikáciu používať, musíte si  vytvoriť účet."
 
 msgid ""
@@ -1182,12 +1185,12 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"Preferovanou metódou je 15-minútový monitoring. Toto je možné robiť "
-"kdekoľvek a kedykoľvek, keď sú motýle aktívne (teda keď je dostatočne teplo "
-"a slnečno). Aplikáciu môžete taktiež použiť na už prebiehajúce transektové "
-"sčítanie motýľov. Neskôr behom roku 2020 bude aplikácia umožnovať aj "
-"vkladanie náhodných záznamov. V poznámkach nižšie nájdete informácie o tom, "
-"ako použiť metódy, ktoré sú v súčasnosti dostupné."
+"Preferovanou metódou je 15-minútový monitoring. Ten môžete robiť kdekoľvek a"
+" kedykoľvek, keď sú motýle aktívne (teda keď je dostatočne teplo a slnečno)."
+" Aplikáciu môžete taktiež použiť na transektové sčítanie motýľov. Neskôr v "
+"roku 2020 bude aplikácia umožnovať aj vkladanie náhodných záznamov. Nižšie "
+"nájdete informácie o tom, ako fungujú metódy monitorovania, ktoré sú v "
+"súčasnosti dostupné."
 
 msgid "How to do a 15-minute Count"
 msgstr "Ako vykonať 15-minútový monitoring"
@@ -1205,15 +1208,16 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Toto je základná metóda tejto aplikácie. Jednoducho spočítate motýle behom "
-"15 minútového časového úseku, buď na jasne definovanom území (napr. pole) "
-"alebo počas prechádzky, či ako bodové sčítanie motýľov, ktoré preletia okolo"
-" Vás. Keď máte zapnuté sledovanie pomocou GPS, nemusíte zakreliť Vašu presnú"
-" trasu, pretože ju zakreslí aplikácia. V opačnom prípade musíte trasu alebo "
-"územie zakresliť na mape pomocou tejto aplikácie. Pre zapnutie stlačte "
-"tlačidlo + v spodnej časti obrazovky. Hneď po začatí začne aplikácia "
+"Toto je základná metóda tejto aplikácie. Jednoducho spočítate motýle v "
+"priebehu 15 minútového časového úseku. Môže to byť na jasne definovanom "
+"území, napr. na poli, alebo počas prechádzky, či ako bodové sčítanie "
+"motýľov, keď budete stát na mieste a počítať motýle, ktoré preletia okolo "
+"Vás. Keď máte zapnuté sledovanie pomocou GPS, nemusíte zakreliť Vašu presnú "
+"trasu, pretože ju zakreslí aplikácia. V opačnom prípade musíte trasu alebo "
+"územie zakresliť na mape pomocou tejto aplikácie. Pre začatie 15 minútového "
+"monitoringu stlačte tlačidlo + v spodnej časti obrazovky. Aplikácia začne "
 "odpočítavať 15 minút, ale kedykoľvek ju môžete zastaviť pomocou tlačidla "
-"PAUZA, napríklad keď potrebujete určiť nejakého motýľa. Na konci prieskumu "
+"pauza (napríklad keď potrebujete čas na určenie motýľa). Na konci prieskumu "
 "môžete Váš záznam skontrolovať a pred odoslaním sa uistiť, že sú počty "
 "správne."
 
@@ -1225,11 +1229,11 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
-"Vložte druh, ktorý uvidíte, stlačením tlačidla + Pridať a začnite písať "
-"druhové meno. Výber druhov sa objaví ako rozbaľovacie menu. Môžete použiť "
-"vedecký alebo slovenský názov. Vyberte druh a keď sa objaví vo Vašom "
-"zozname, zvoľte vľavo počet pozorovaných jedincov. Na konci si potom môžete "
-"jednotlivé počty skontrolovať. Môžete priložiť aj fotky alebo vložiť "
+"Vložte druh, ktorý uvidíte, stlačením tlačidla + Pridať druh a začnite písať"
+" druhové meno. Výber druhov sa objaví ako rozbaľovacie menu. Môžete použiť "
+"vedecký alebo slovenský názov. Následne vyberte pozorovaný druh a keď sa "
+"objaví vo Vašom zozname, vľavo zvoľte počet pozorovaných jedincov. Na konci "
+"si môžete jednotlivé počty skontrolovať, priložiť fotky alebo vložiť "
 "komentár."
 
 msgid ""
@@ -1242,10 +1246,10 @@ msgstr ""
 "Ked ukončíte 15-minútový monitoring a skontrolujete druhy a ich počty, "
 "stlačte tlačidlo NAHRAŤ na ich odoslanie. Je to dôležité najmä preto, aby "
 "boli Vaše dáta bezpečne uložené v databáze eBMS. Záznam o sčítaní bude "
-"uchovaný pre budúcnosť na Vašom zariadení, a aj vo Vašom online účte.  "
+"uchovaný pre budúcnosť vo Vašom zariadení, a aj vo Vašom online účte.  "
 
 msgid "How to record along an existing transect"
-msgstr "Ako zaznamenávať motýle na existujúcom transekte"
+msgstr "Ako monitorovať motýle na existujúcom transekte"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1256,13 +1260,13 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
-"Aplikáciu môžete použiť aj pre zasielanie záznamov pri prechádzaní už "
-"existujúceho transektového monitoringu. Transektový monitoring bol založený "
-"na národnej úrovni koordinátorom pri AOPK a pre prevádzkovaný skúsenými "
-"zapisovateľmi. Záznam už existujúceho transektového sčítaniav yžaduje, aby "
-"bol Váš účet prepojený s Vaším transektoým nastavením v systéme eBMS. Pokiaľ"
-" po prihlásení nenájdete žiadny transekt, kontaktujte Vášho národného "
-"koordinátora (email {{helpEmail}} pre pomoc)."
+"Aplikáciu môžete použiť aj pre zasielanie záznamov z monitorovania uz "
+"existujúceho transektu. Transekty sú vytvárané na úrovni jednotlivých "
+"národných schém a ich monitoring je realizovaný skúsenejšími mapovateľmi. Na"
+" monitorovanie už existujúceho transektu je potrebné, aby bol Váš účet "
+"prepojený s daným transektom v systéme eBMS. Ak po prihlásení nenájdete vo "
+"svojom účte priradený žiadny transekt, kontaktujte so žiadosťou o pomoc "
+"Vášho národného koordinátora (email {{helpEmail}})."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1277,17 +1281,16 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"Aby ste mohli začať s monitorovaním transektu, podržte tlačidlo + (dlhé "
-"stlačenie) v spodnej časti displeja a vyberte eBMS transekt. Objaví sa "
-"transektová stránka so všetkými možnosťami na vyplnenie. Najprv si musíte "
-"vybrať Váš transekt (na to musíte byť prihlásený a transektové trasy musia "
-"byť prepojené s Vaším účtom). Akonáhla si vyberiete Vaše transektové miesto,"
-" vyplňte na transektovej stránke všetky nevyhnutné dáta o počasí (napr. "
-"teplota, rýchlosť vetra, atď.) a ďalšie požadované informácie (čas na "
-"začiatku). Potom vložte zoznam pozorovaných druhov a ich počty pre každý "
-"úsek Vášho transektu, podobne ako pri 15 minútovom počítaní. Keď Váš "
-"transekt dokončíte a skontrolujete druhy a počty pozorovaných motýľov, "
-"stlačte tlačidlo Dokončiť pre odoslanie dát."
+"Ak chcete začať monitorovať transekt, podrže tlačidlo + (dlhé stlačenie) v "
+"spodnej časti displeja a vyberte eBMS transekt. Objaví sa transektová "
+"stránka so všetkými možnosťami na vyplnenie. Najprv si musíte vybrať Váš "
+"transekt (musíte byť prihlásený a transekty musia byť prepojené s Vaším "
+"účtom). Vyberte si svoj transekt a vyplňte všetky potrebné údaje o počasí "
+"(napr. teplota, rýchlosť vetra, atď.) a ďalšie požadované informácie (čas "
+"začiatku monitorovania). Potom vložte zoznam pozorovaných druhov a ich počty"
+" pre každý úsek Vášho transektu, a to rovnakým spôsobom ako pri 15 minútovom"
+" počítaní. Keď monitoring transektu dokončíte a skontrolujete druhy a počty "
+"pozorovaných motýľov, stlačte tlačidlo Dokončiť pre odoslanie dát."
 
 msgid "Survey section"
 msgstr "Pozorovania"
@@ -1300,12 +1303,13 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
-"V tejto tabuľke, na pravej strane tlačidla + môžete vidieť Vaše ČAKAJÚCE "
-"počty, teda záznamy, ktoré ešte neboli odoslané a ODOSLANÉ počty, teda "
-"záznamy, ktoré už boli odoslané do databázy eBMS. Čakajúce počty môžu byť "
-"odoslané do systému tak, že na ne kliknete a stlačíte tlačidlo Odoslať. V "
-"odoslaných záznamoch nájdete zoznam Vašich zaznamenaných druhov. Všetky Vaše"
-" záznamy nájdete a môžete upravovať na  {{eBMSWebsiteLink}}."
+"V tejto časti aplikácie, na pravej strane tlačidla + môžete vidieť počet "
+"ČAKAJÚCICH pozorovaní, teda pozorovaní, ktoré ešte neboli odoslané a NAHRATÉ"
+" pozorovania, ktoré už boli odoslané do databázy eBMS. Čakajúce položky môžu"
+" byť odoslané do systému tak, že na ne kliknete a stlačíte tlačidlo Nahrať. "
+"V nahratých záznamoch potom nájdete zoznam Vašich pozorovaní a zaznamenaných"
+" druhov. Všetky Vaše záznamy nájdete a môžete ich aj upravovať na  "
+"{{eBMSWebsiteLink}}."
 
 msgid "eBMS website"
 msgstr "stránka eBMS"
@@ -1315,7 +1319,7 @@ msgstr "Nastavenia aplikácie"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr "Použite iba nočné motýle s dennou aktivitou."
+msgstr "Použite iba nočné motýle s dennou aktivitou"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1366,7 +1370,7 @@ msgstr "Kliknite pre pokračovanie v kreslení línie."
 
 # This is part of mapping functionality
 msgid "Click last point to finish line."
-msgstr "Kliknite na prvý bod pre ukončenie."
+msgstr "Kliknite na vytvorenie posledného bodu línie."
 
 # This is part of mapping functionality
 msgid "Drag handles or markers to edit features."
@@ -1399,7 +1403,7 @@ msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
-"Dávkové odoslanie všetkých hotových záznamov. Neobsahuje záznami vo fáze "
+"Dávkové odoslanie všetkých hotových záznamov. Neobsahuje záznamy vo fáze "
 "návrhu."
 
 # Part of batch upload option in app settings page
@@ -1408,7 +1412,7 @@ msgstr "Naozaj chcete odoslať všetky dokončené záznamy?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr "Prosím, najprv sa prihláste, aby ste mohli nahrávať záznamy."
+msgstr "Prosím, najskôr sa prihláste, aby ste mohli nahrávať záznamy."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
@@ -1416,7 +1420,7 @@ msgid_plural "Uploading {{count}} records"
 msgstr[0] "Nahrávanie {{count}} záznamu"
 msgstr[1] "Nahrávanie {{count}} záznamov"
 msgstr[2] "Nahrávanie {{count}} záznamov"
-msgstr[3] "Nahrávanie {{count}} records"
+msgstr[3] "Nahrávanie {{count}} záznamov"
 
 # Part of a page error
 msgid "Oops! Something went wrong."
@@ -1432,7 +1436,7 @@ msgstr "Doplňujúce detaily"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr "Poveternostné Podmienky"
+msgstr "Poveternostné podmienky"
 
 # Credits page heading
 msgid "Weather conditions"
@@ -1470,7 +1474,7 @@ msgstr "Prepáčte, nenašli sa žiadne druhy na kopírovanie."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr "Úspešne ste skopírovali {{speciesCount}} druhy."
+msgstr "Úspešne ste skopírovali {{speciesCount}} druhy/druhov."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
@@ -1484,17 +1488,16 @@ msgstr "Arménsko"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Pre vymazanie pozorovania ho potiahnite doľava."
+msgstr "Pre vymazanie pozorovania potiahnite záznam doľava."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
-msgstr ""
-"Pred odoslaním záznamu prosím skontrolujte, či je plocha nahrávania správna."
+msgstr "Pred odoslaním záznamu, prosím, skontrolujte, či je plocha správna."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr "Nezabudnite prosím nahrať všetky neodoslané pozorovania!"
+msgstr "Nezabudnite, prosím, nahrať všetky neodoslané pozorovania!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
@@ -1550,11 +1553,11 @@ msgstr ""
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr "Nebola pridaná žiadna fotka."
+msgstr "Nebola pridaná žiadna fotografia."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr "Stlačte<1></1> pre pridanie."
+msgstr "Pre pridanie stlačte <1></1>."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
@@ -1602,7 +1605,7 @@ msgstr "Počasie"
 
 # A survey label
 msgid "Photo"
-msgstr "Fotka"
+msgstr "Fotografie"
 
 # Part of species group selection
 msgid "Species groups"
@@ -1775,7 +1778,7 @@ msgstr "Počítať vonku"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr "Fotky nočného motýľa"
+msgstr "Fotografie nočného motýľa"
 
 # Moth survey details label
 msgid "Moth traps"
@@ -1790,12 +1793,12 @@ msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
-"Zatiaľ ste nevytvorili žiadny lapač. Na  vytvorenie navštívte prosím <2> "
+"Zatiaľ ste nevytvorili žiadny lapač. Na vytvorenie navštívte, prosím, <2> "
 "stránku.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr "Pre zobrazenie mapy sa prosím pripojte k internetu."
+msgstr "Pre zobrazenie mapy sa, prosím, pripojte k internetu."
 
 # Moth survey validation message
 msgid "Please add the moth trap"
@@ -1821,7 +1824,7 @@ msgstr "Ukázať viac"
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr "Prosím pridajte fotku"
+msgstr "Pridajte fotografiu, prosím"
 
 # Moth survey unknown species divider
 msgid "Unknown species"
@@ -1873,7 +1876,7 @@ msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
-"Klasifikátor obrázkov je momentálne <1>zakázaný.</1> Choďte prosím do "
+"Klasifikátor obrázkov je momentálne <1>zakázaný.</1> Choďte, prosím, do "
 "nastavení <4>aplikácie</4> a zapnite ho."
 
 # Whats new message title
@@ -1902,7 +1905,7 @@ msgstr "Bola pridaná krajina Svätá Helena"
 
 # Version 1.21 whats new message
 msgid "Added specific stage attributes for Dragonfly species"
-msgstr "Boli pridané špecifické atribúty štádií pre druhy vážok."
+msgstr "Boli pridané špecifické atribúty štádií pre druhy vážok"
 
 # Version 1.21 whats new message
 msgid "Added dragonflies-specific stages"
@@ -1946,7 +1949,7 @@ msgstr "Pridať nový"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
-msgstr "Zatiaľ nemáte žiadne lapače. <1>Vytvorte svoj prvý</1>"
+msgstr "Zatiaľ nemáte žiadne lapače. <1>Vytvorte svoj prvý lapač </1>"
 
 # Moth trap survey
 msgid "Moth Trap"
@@ -2045,8 +2048,7 @@ msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
-"Zadajte počet zapisovateľov, ktorí pomohli s týmto záznamom, vrátane Vás "
-"samotného."
+"Zadajte počet zapisovateľov, ktorí pomohli s týmto záznamom, vrátane Vás."
 
 msgid "Network Error"
 msgstr "Chyba siete"
@@ -2057,11 +2059,11 @@ msgstr "Pre zobrazenie svojich záznamov sa prihláste."
 
 # Report label
 msgid "Your top species this month"
-msgstr "Vaše najlepšie druhy za tento mesiac"
+msgstr "Vaše najpočetnejšie druhy za tento mesiac"
 
 # Report label
 msgid "Your top species"
-msgstr "Vaše najlepšie druhy"
+msgstr "Vaše najpočetnejšie druhy"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
@@ -2074,12 +2076,15 @@ msgstr "Používateľ nie je prihlásený."
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
+"Myslíme si, že s {{probability}}% pravdepodobnosťou je to <3>{{taxon}}</3>"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Upozornenie</0> - myslíme si, že s {{probability}}% pravdepodobnosťou je "
+"to <5>{{taxon}}</5>"
 
 # Divider label moth trap setup
 msgid "Lamps"
@@ -2103,7 +2108,7 @@ msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
-"Pred začatím pozorovania si prosím skontrolujte svoj email a kliknite na "
+"Pred začatím pozorovania si, prosím, skontrolujte svoj email a kliknite na "
 "overovací link."
 
 # Species guide search
@@ -2156,7 +2161,7 @@ msgid ""
 "account on the <2>{{url}}</2> website. You will lose access to any records "
 "that you have previously submitted using the app or website.</1>"
 msgstr ""
-"Naozaj chcete zmazať Váš užívateľský účet? <1>Toto zmaže Váš účet na "
+"Naozaj chcete zmazať Váš užívateľský účet? <1>Týmto zmažete Váš účet na "
 "<2>{{url}}</2>stránke. Stratíte prístup k akýmkoľvek dátam, ktoré ste "
 "poskytli používaním tejto aplikácie alebo webovej stránky.</1>"
 
@@ -2166,7 +2171,7 @@ msgid ""
 "survey starts, you can select which species group you are recording."
 msgstr ""
 "Táto možnosť bola presunutá na stránku vyhľadávania druhov v prieskumoch. Po"
-" začatí prieskumu si môžete vybrať, ktorú skupinu druhov zaznamenávate."
+" začatí prieskumu si môžete vybrať, ktorú skupinu  zaznamenávate."
 
 # Part of Species Group selection
 msgid "Groups"
@@ -2220,7 +2225,7 @@ msgstr "Vymazať pozorovanie"
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
-"Varovanie - Týmto sa vymažú informácie o prieskume, ktoré ste doteraz "
+"Varovanie - Týmto sa vymažú informácie o pozorovaní, ktoré ste doteraz "
 "zadali."
 
 # Painted lady wing options
@@ -2241,27 +2246,27 @@ msgstr "Uveďte prosím zdroj nektáru."
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr "Pridajte prosím možnosť kladenie vajíčok."
+msgstr "Pridajte, prosím, možnosť kladenia vajíčok."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr "Pridajte prosím možnosť párenie."
+msgstr "Pridajte, prosím, možnosť párenia."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr "Zdroj nektáru."
+msgstr "Zdroj nektáru"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr "Pridajte prosím možnosť nektár."
+msgstr "Pridajte, prosím, možnosť - nektár."
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr "Pridajte prosím možnosť smer."
+msgstr "Pridajte, prosím, možnosť - smer."
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr "Pridajte prosím možnosť nadmorská výška."
+msgstr "Pridajte, prosím, možnosť - nadmorská výška."
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
@@ -2293,8 +2298,8 @@ msgid ""
 msgstr ""
 "Bohužiaľ, Vaše zariadenie zrejme nemá senzor potrebný pre správne fungovanie"
 " kompasu. Kompas potrebuje tento senzor na detekovanie magnetického poľa "
-"Zeme, a zároveň určuje orientáciu Vášho zariadenia voči magnetickému severu."
-" Preto nebudete môcť používať kompas na tomto zariadení."
+"Zeme, a zároveň určuje orientáciu Vášho zariadenia voči severu. Preto "
+"nebudete môcť používať kompas na tomto zariadení."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
@@ -2302,11 +2307,11 @@ msgstr "Ochrana územia: iné"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr "Ochrana územia: stúpanie na vrchol kopca"
+msgstr "Ochrana územia: hill-topping"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr "Aká bola výška letu motýľa? (metre)"
+msgstr "Aká bola výška letu motýľa? (v metroch)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
@@ -2314,11 +2319,11 @@ msgstr "Iná hostiteľská rastlina"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr "Púštna žihľava"
+msgstr "Žihľava"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr "Sliznatka"
+msgstr "Slez"
 
 # Painted lady direction option
 msgid "Thistles"
@@ -2389,7 +2394,7 @@ msgstr "Začať sčítanie"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr "Sledovanie migrácie Babôčky bodliakovej pomocou sčítania motýľov."
+msgstr "Sledovanie migrácie Babôčky bodliakovej pomocou aplikácie"
 
 # Menu page label
 msgid "Instructions"
@@ -2405,7 +2410,7 @@ msgstr "Kladenie vajíčok"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Kopulácia"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
@@ -2437,90 +2442,96 @@ msgstr "Upraviť"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Upraviť lokalitu"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Názov"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Obľúbené"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Ste si istý, že chcete vymazať uloženú trasu?"
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Fáza mesiaca"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Nov"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Dorastajúci kosák"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Prvá štvrť"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Dorastajúci mesiac"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Spln"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Ubúdajúci mesiac"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Posledná štvrť"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Ubúdajúci kosák"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Lapač začiatok"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Lapač koniec"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Počasie na začiatku"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Počasie na konci"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr "Pridajte prosím lapač."
+msgstr "Pridajte lapač, prosím."
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Zaregistrovali sme, že Váš prieskum má <1>dlhé sekcie</1>. Skontrolujte, "
+"prosím, či je <3>lokalita</3> správna."
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Predvolený čas zotmenia"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Predvolený čas východu slnka"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Sledovanie polohy nie je povolené"
+
+# Part of favorite track
+msgid "You have no previous tracks."
+msgstr "Nemáte žiadne predchádzajúce trasy. "

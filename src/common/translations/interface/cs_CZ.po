@@ -2,12 +2,12 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
-# Zdenek Faltynek Fric <fric@entu.cas.cz>, 2022
+# Zdenek Faltynek Fric <fric@entu.cas.cz>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Zdenek Faltynek Fric <fric@entu.cas.cz>, 2022\n"
+"Last-Translator: Zdenek Faltynek Fric <fric@entu.cas.cz>, 2023\n"
 "Language-Team: Czech (Czech Republic) (https://app.transifex.com/ceh/teams/95441/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1868,39 +1868,39 @@ msgstr "Co je nového"
 
 # Version 1.21 whats new message
 msgid "Added favorite site functionality."
-msgstr ""
+msgstr "Vložena funkce pro oblíbené místo."
 
 # Version 1.21 whats new message
 msgid "Added moth trap weather attributes."
-msgstr ""
+msgstr "Vloženy atributy pro počasí u světelného lapače."
 
 # Version 1.21 whats new message
 msgid "Added the Slovak language."
-msgstr ""
+msgstr "Vložena slovenština."
 
 # Version 1.21 whats new message
 msgid "Enabled multiple drafts functionality"
-msgstr ""
+msgstr "Umožněna funkce pro několik draftů"
 
 # Version 1.21 whats new message
 msgid "Added Saint Helena country"
-msgstr ""
+msgstr "Vložena země Svatá Helena"
 
 # Version 1.21 whats new message
 msgid "Added specific stage attributes for Dragonfly species"
-msgstr ""
+msgstr "Vloženy atributy pro specifické stadium u vážek"
 
 # Version 1.21 whats new message
 msgid "Added dragonflies-specific stages"
-msgstr ""
+msgstr "Vložena specifická stadia u vážek"
 
 # Version 1.21 whats new message
 msgid "Added Slovak and Turkish butterfly common names"
-msgstr ""
+msgstr "Přidány slovenské a turecké názvy motýlů"
 
 # Version 1.21 whats new message
 msgid "Added dragonfly common names"
-msgstr ""
+msgstr "Přidány české názvy vážek"
 
 # User account action
 msgid "Resend"
@@ -2152,119 +2152,123 @@ msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Tato možnost byla přesunuta do stránky pro vyhledávání druhů uvnitř "
+"průzkumů. Když začnete průzkum, můžete si vybrat, kterou skupinu druhů "
+"zaznamenáváte."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Skupiny"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Potvrdit"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Jakou skupinu druhů jste zaznamenávali?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Vyberte cílový druh"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "Nebyla vybrána žádná fotka.<br/>Zmáčkněte <4><0></0></4> pro přidání."
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Křídlo"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Chování"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Směr"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Nadmořská výška"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Kompas"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Smazat záznam"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
+"Upozornění - toto smaže všechny informace, které jste k průzkumu vyplnili."
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Čerstvý"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Olétaný"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normální"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Specifikujte, prosím, zdroj nektaru."
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Vložte, prosím, možnost ovipozice."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Vložte, prosím, možnost pro páření."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Zdroj nektaru"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Vložte, prosím, možnost pro nektar."
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Vložte, prosím, možnosti pro směr."
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Vložte, prosím, možnosti pro nadmořskou výšku."
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Kladení vajec na živné rostliny"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Migrace"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Nektarování"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Páření se"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Nepodporované zařízení"
 
 # Painted lady compass
 msgid ""
@@ -2274,230 +2278,241 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Bohužel to vypadá, že Vaše zařízení nemá potřebné senzory pro kompas. Kompas"
+" je závislý na senzoru pro detekci zemského magnetického pole a určuje "
+"polohu Vašeho zařízení  vzhledem k magnetickému severu. Proto nebudete moci "
+"na Vašem zařízení použít kompas."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Obrana teritoria: jiná"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Obrana teritoria: hilltopping"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "Jaká byla výška letícího motýla? (v metrech)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Jiná živná rostlina"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Pouštní kopřiva"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Sléz"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Bodláky"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Živné rostliny"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Vyberte, prosím, živné rostliny."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "Nemáte ve vašem seznamu žádné záznamy o <1>{{prettySpeciesName}}</1>."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Tip: Zkopírujte vlastnosti"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Olétanost"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Nektar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Vložte zdroj nektaru"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Další druhy"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "Jaký druh bodláku či pcháče to byl?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Druh bodláku či pcháče"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Zkopírováno!"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Pro zkopírování seznamu přetáhněte doprava a zmáčkněte ikonku<1><0></0></1>."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Výška nad zemí (v metrech)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Výška"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Začněte součet"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Sledování migrace babočky bodlákové pomocí Butterfly Count"
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Instrukce"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Svatá Helena"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Kladení"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Kopulace či tandemový let"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Svlečka"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Čerstvě svléklá"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "Součet čísel musí být větší než 0"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Ukaž méně"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Název trasy"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
-msgstr ""
+msgstr "Zde můžete vybrat či přetáhnutím editovat předchozí trasy"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Upravit místo"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Název"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Oblíbené"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Opravdu chcete smazat uložené trasy?"
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Fáze měsíce"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Nov"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Přibývající půlměsíc"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "První čtvrť"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Ubývající měsíc"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Úplněk"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Ubývající úplněk"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Poslední čtvrť"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Ubývající čtvrť"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Začátek lovu do lapače"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Konec lovu do lapače"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Počasí na začátku"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Počasí na konci"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Vložte, prosím, světelný lapač"
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Všimli jsme si, že Váš průzkum má <1>dlouhé úseky</1>. Prosím, přesvědčete "
+"se, že máte správnou <3>polohu</3>!"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Nastaveno na západ slunce"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Nastaveno na východ slunce"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Služby polohy nejsou povolené"
+
+# Part of favorite track
+msgid "You have no previous tracks."
+msgstr "Nemáte žádné předchozí trasy."

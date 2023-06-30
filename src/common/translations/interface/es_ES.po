@@ -2568,3 +2568,7 @@ msgstr "Por defecto hora de salida del sol"
 # Error message
 msgid "Location services are not enabled"
 msgstr "Servicios de ubicación no están activados"
+
+# Part of favorite track
+msgid "You have no previous tracks."
+msgstr "No tienes rutas previas."

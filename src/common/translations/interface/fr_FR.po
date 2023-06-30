@@ -2,13 +2,13 @@
 # Translators:
 # Xavier Mestdagh <xavier.mestdagh@list.lu>, 2019
 # Le Quellec, 2022
-# Tanguy Loïs, 2023
 # de Flores Mathieu, 2023
+# Tanguy Loïs, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: de Flores Mathieu, 2023\n"
+"Last-Translator: Tanguy Loïs, 2023\n"
 "Language-Team: French (France) (https://app.transifex.com/ceh/teams/95441/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1922,39 +1922,40 @@ msgstr "Quoi de neuf ?"
 
 # Version 1.21 whats new message
 msgid "Added favorite site functionality."
-msgstr ""
+msgstr "Ajout d'une fonctionnalité de site favori."
 
 # Version 1.21 whats new message
 msgid "Added moth trap weather attributes."
 msgstr ""
+"Ajout d'attributs météorologiques pour les pièges à papillons de nuit."
 
 # Version 1.21 whats new message
 msgid "Added the Slovak language."
-msgstr ""
+msgstr "Ajout du Slovaque."
 
 # Version 1.21 whats new message
 msgid "Enabled multiple drafts functionality"
-msgstr ""
+msgstr "Activation de la fonctionnalité des brouillons multiples"
 
 # Version 1.21 whats new message
 msgid "Added Saint Helena country"
-msgstr ""
+msgstr "Sainte-Hélène ajouté"
 
 # Version 1.21 whats new message
 msgid "Added specific stage attributes for Dragonfly species"
-msgstr ""
+msgstr "Ajout d'attributs de scène spécifiques pour les espèces de libellules"
 
 # Version 1.21 whats new message
 msgid "Added dragonflies-specific stages"
-msgstr ""
+msgstr "Ajout de stades spécifiques aux libellules"
 
 # Version 1.21 whats new message
 msgid "Added Slovak and Turkish butterfly common names"
-msgstr ""
+msgstr "Ajout des noms communs des papillons en slovaque et en turc"
 
 # Version 1.21 whats new message
 msgid "Added dragonfly common names"
-msgstr ""
+msgstr "Ajout des noms communs des libellules"
 
 # User account action
 msgid "Resend"
@@ -2210,119 +2211,126 @@ msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Cette option a été déplacée sur la page de recherche des espèces à "
+"l'intérieur des suivis. Lorsqu'un suivi commence, vous pouvez sélectionner "
+"le groupe d'espèces que vous observez."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Groupes"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmer"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Quels groupes d'espèces avez-vous observés ?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Sélectionner l'espèce cible"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
 msgstr ""
+"Aucune photo n'a été ajoutée.<br/>Appuyez sur <4><0></0></4> pour en "
+"ajouter."
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Aile"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportement"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Direction"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Altitude"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Boussole"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Supprimer le suivi"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
+"Avertissement - Cette opération annule les informations sur le suivi que "
+"vous avez saisies jusqu'à présent."
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Frais"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Usé"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Veuillez spécifier la source de nectar."
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Veuillez ajouter l'option de ponte."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Veuillez ajouter l'option d'accouplement."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Source de nectar"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Veuillez ajouter l'option du nectar."
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Veuillez ajouter l'option de direction."
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Veuillez ajouter l'option d'altitude."
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Plantes hôtes"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Migrateur"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Nectar"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Accouplement"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Appareil non pris en charge"
 
 # Painted lady compass
 msgid ""
@@ -2332,230 +2340,247 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Malheureusement, il semble que votre appareil ne dispose pas du capteur "
+"nécessaire au bon fonctionnement de la boussole. La boussole s'appuie sur ce"
+" capteur pour détecter le champ magnétique terrestre et déterminer "
+"l'orientation de votre appareil par rapport au nord magnétique. Vous ne "
+"pourrez donc pas utiliser la boussole sur cet appareil."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Défense territoriale : autres"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Défense territoriale : hill-topping"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "Quelle était l'altitude de vol du papillon ? (en mètres)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Autre plante hôte"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Ortie du désert"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Mauve"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Chardon"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Plantes hôtes"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Veuillez sélectionner les plantes hôtes."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
 msgstr ""
+"Vous n'avez aucune observation de <1>{{prettySpeciesName}}</1> dans votre "
+"liste."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Conseil : Copier les attributs"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Etat des ailes"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Nectar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Saisissez la source de nectar ici"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Autres espèces"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "Quelle espèce de Chardon était-ce ?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Espèce de Chardon"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Copié !"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Pour copier une entrée de liste, faites-la glisser vers la droite et appuyez"
+" sur les icônes <1><0></0></1>."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Hauteur au-dessus du sol (en mètres)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Hauteur"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Commencer le suivi"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Suivre la migration de la Belle-Dame avec Butterfly Count"
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Instructions"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Saint-Hélène"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Ponte"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Couples copulants ou en tandem"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Exuvie"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Emergent"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "La somme des comptages doit être supérieure à 0"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Réduire"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Nom du parcours"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
 msgstr ""
+"Ici, vous pouvez sélectionner ou faire glisser pour modifier vos trajets "
+"précédents."
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Modifier la localisation"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Favori"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir supprimer le trajet enregistré ?"
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Phase de la Lune"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Nouveau"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Croissant de cire"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Premier quart"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Croissante gibbeuse"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Pleine"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Gibbeuse"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Dernier quart"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Gibbeuse décroissante"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Début du piègeage"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Fin du piègeage"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Météo de début"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Météo de fin"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Veuillez ajouter le piège à papillons de nuit."
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Nous avons remarqué que votre transect comporte des sections de<1></1>. "
+"Veuillez vous assurer qu'il s'agit d'un <3>emplacement correct</3> !"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Par défaut, l'heure du coucher du soleil est utilisée"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Par défaut, l'heure du lever du soleil est utilisée"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Les services de localisation ne sont pas activés"
+
+# Part of favorite track
+msgid "You have no previous tracks."
+msgstr "Vous n'"

@@ -3,14 +3,14 @@
 # Renata Santos <renatailsantos@gmail.com>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
-# Eva Monteiro <evasmonteiro@gmail.com>, 2021
 # Ricardo Silva Ramirez, 2022
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023
+# Eva Monteiro <evasmonteiro@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023\n"
+"Last-Translator: Eva Monteiro <evasmonteiro@gmail.com>, 2023\n"
 "Language-Team: Portuguese (Portugal) (https://app.transifex.com/ceh/teams/95441/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1910,7 +1910,7 @@ msgstr "O que há de novo"
 
 # Version 1.21 whats new message
 msgid "Added favorite site functionality."
-msgstr ""
+msgstr "Funcionalidade favorita adicionada."
 
 # Version 1.21 whats new message
 msgid "Added moth trap weather attributes."
@@ -2547,4 +2547,8 @@ msgstr ""
 
 # Error message
 msgid "Location services are not enabled"
+msgstr ""
+
+# Part of favorite track
+msgid "You have no previous tracks."
 msgstr ""

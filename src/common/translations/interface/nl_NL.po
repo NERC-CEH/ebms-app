@@ -6,13 +6,13 @@
 # Karolis, 2021
 # Chris van Swaay <chris.vanswaay@bc-europe.eu>, 2021
 # Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2022
-# Rik Wever, 2022
 # Jurrien van Deijk <jurrien.vandeijk@vlinderstichting.nl>, 2022
+# Rik Wever, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Jurrien van Deijk <jurrien.vandeijk@vlinderstichting.nl>, 2022\n"
+"Last-Translator: Rik Wever, 2023\n"
 "Language-Team: Dutch (Netherlands) (https://app.transifex.com/ceh/teams/95441/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1883,7 +1883,7 @@ msgstr ""
 
 # Version 1.21 whats new message
 msgid "Added the Slovak language."
-msgstr ""
+msgstr "Slowaaks toegevoegd"
 
 # Version 1.21 whats new message
 msgid "Enabled multiple drafts functionality"
@@ -1891,7 +1891,7 @@ msgstr ""
 
 # Version 1.21 whats new message
 msgid "Added Saint Helena country"
-msgstr ""
+msgstr "Sint-Helena toegevoegd"
 
 # Version 1.21 whats new message
 msgid "Added specific stage attributes for Dragonfly species"
@@ -1907,7 +1907,7 @@ msgstr ""
 
 # Version 1.21 whats new message
 msgid "Added dragonfly common names"
-msgstr ""
+msgstr "Nederlandse libellennamen toegevoegd"
 
 # User account action
 msgid "Resend"
@@ -2117,11 +2117,11 @@ msgstr ""
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Accepteer"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Toestemming om locatie te gebruiken"
 
 # GPS permission alert message
 msgid ""
@@ -2135,15 +2135,15 @@ msgstr ""
 
 # Delete account
 msgid "Delete account"
-msgstr ""
+msgstr "Verwijder mijn account"
 
 # Delete account
 msgid "You can delete your user account from the system."
-msgstr ""
+msgstr "Je kunt je account verwijderen"
 
 # Delete account alert header
 msgid "Account delete"
-msgstr ""
+msgstr "Account verwijderen"
 
 # Delete account alert message
 msgid ""
@@ -2160,23 +2160,23 @@ msgstr ""
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Groepen"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Sluiten"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Bevestig"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Welke soortgroepen heb je geteld?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Selecteer doelsoorten"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
@@ -2188,11 +2188,11 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Gedrag"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Richting"
 
 # Part of Painted lady survey
 msgid "Altitude"
@@ -2221,7 +2221,7 @@ msgstr ""
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Standaard"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
@@ -2237,7 +2237,7 @@ msgstr ""
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Nectarplant"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
@@ -2257,11 +2257,11 @@ msgstr ""
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Migrerend"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Nectar drinkend"
 
 # Part of painted lady
 msgid "Mating"
@@ -2294,7 +2294,7 @@ msgstr ""
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Andere waardplant"
 
 # Painted lady direction option
 msgid "Desert nettle"
@@ -2310,11 +2310,11 @@ msgstr ""
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Waardplanten"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Selecteer de waardplanten a.u.b."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
@@ -2330,7 +2330,7 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Nectar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
@@ -2338,7 +2338,7 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Overige soorten"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
@@ -2350,7 +2350,7 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Gekopieerd!"
 
 # Part of Painted lady survey
 msgid ""
@@ -2363,11 +2363,11 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Hoogte"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Starttelling"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
@@ -2375,11 +2375,11 @@ msgstr ""
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Instructies"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Sint-Helena"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
@@ -2403,7 +2403,7 @@ msgstr ""
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Laat minder zien"
 
 # Part of favorite track selection
 msgid "Your track name"
@@ -2415,19 +2415,19 @@ msgstr ""
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Wijzig"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Wijzig locatie"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Favorieten"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
@@ -2435,11 +2435,11 @@ msgstr ""
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Maanstand"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Nieuw"
 
 #  Moon phase values
 msgid "Waxing crescent"
@@ -2447,7 +2447,7 @@ msgstr ""
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Eerste kwartier"
 
 #  Moon phase values
 msgid "Waxing gibbous"
@@ -2455,7 +2455,7 @@ msgstr ""
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Volle maan"
 
 #  Moon phase values
 msgid "Waning gibbous"
@@ -2463,7 +2463,7 @@ msgstr ""
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Laatste kwartier"
 
 #  Moon phase values
 msgid "Waning crescent"
@@ -2479,15 +2479,15 @@ msgstr ""
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Weer bij aanvang"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Weer aan het eind"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Voeg de val toe a.u.b."
 
 # Info message
 msgid ""
@@ -2505,4 +2505,8 @@ msgstr ""
 
 # Error message
 msgid "Location services are not enabled"
+msgstr ""
+
+# Part of favorite track
+msgid "You have no previous tracks."
 msgstr ""
