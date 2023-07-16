@@ -111,7 +111,7 @@ const Controller: FC<Props> = ({
       sectionSample.save();
 
       navigate(
-        `/survey/transect/${sectionSample.parent.cid}/edit/sections/${sectionSample.cid}`,
+        `/survey/transect/${sectionSample.parent.cid}/sections/${sectionSample.cid}`,
         'none',
         'pop'
       );
@@ -125,7 +125,7 @@ const Controller: FC<Props> = ({
       sectionOccurrence.save();
 
       navigate(
-        `/survey/transect/${sectionSample.parent.cid}/edit/sections/${sectionSample.cid}`,
+        `/survey/transect/${sectionSample.parent.cid}/sections/${sectionSample.cid}`,
         'none',
         'pop'
       );
@@ -157,7 +157,7 @@ const Controller: FC<Props> = ({
       sectionOccurrence.save();
 
       navigate(
-        `/survey/transect/${sectionSample.parent.cid}/edit/sections/${sectionSample.cid}`,
+        `/survey/transect/${sectionSample.parent.cid}/sections/${sectionSample.cid}`,
         'none',
         'pop'
       );

@@ -402,7 +402,7 @@ const HomeMain: FC<Props> = ({
       <IonList lines="full">
         <div className="rounded">
           <MenuAttrItem
-            routerLink={`${match.url}/edit`}
+            routerLink={`${match.url}/details`}
             icon={locationOutline}
             label="Survey Details"
           />

@@ -222,7 +222,7 @@ const Edit: FC<Props> = ({
 
     const onClick = () =>
       navigate(
-        `/survey/transect/${sample.cid}/edit/sections/${sectionSampleId}/taxa`
+        `/survey/transect/${sample.cid}/sections/${sectionSampleId}/taxa`
       );
 
     const showCopyOptionsWrap = () => {
@@ -249,7 +249,7 @@ const Edit: FC<Props> = ({
   const { cloud } = sectionSample.attrs;
   const { reliability } = sectionSample.attrs;
 
-  const baseURL = `/survey/transect/${sample.cid}/edit/sections/${sectionSample.cid}`;
+  const baseURL = `/survey/transect/${sample.cid}/sections/${sectionSample.cid}`;
 
   return (
     <Main id="transect-section-edit">

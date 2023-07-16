@@ -36,22 +36,19 @@ const ModelLocationWrap = observer(props => (
 
 const getRoutes = (baseURL, config) => [
   [`${baseURL}`, StartNewSurvey.with(config), true],
-  [`${baseURL}/:smpId/edit`, HomeWrap],
-  [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
-  [`${baseURL}/:smpId/edit/area`, AreaAttr],
-  [`${baseURL}/:smpId/edit/taxon`, Taxon],
-  [`${baseURL}/:smpId/edit/details`, Details],
-  [`${baseURL}/:smpId/edit/details/:attr`, AttrPageFromRoute],
-  [`${baseURL}/:smpId/edit/speciesOccurrences/:taxa`, SpeciesOccurrences],
-  [`${baseURL}/:smpId/edit/speciesOccurrences/:taxa/taxon`, Taxon],
-  [
-    `${baseURL}/:smpId/edit/samples/:subSmpId/occ/:occId/:attr`,
-    AttrPageFromRoute,
-  ],
-  [`${baseURL}/:smpId/edit/samples/:subSmpId/occ/:occId/taxon`, Taxon],
-  [`${baseURL}/:smpId/edit/samples/:subSmpId/occ/:occId/direction`, Direction],
-  [`${baseURL}/:smpId/edit/samples/:subSmpId/location`, ModelLocationWrap],
-  [`${baseURL}/:smpId/edit/samples/:subSmpId/occ/:occId`, OccurrenceHome],
+  [`${baseURL}/:smpId`, HomeWrap],
+  [`${baseURL}/:smpId/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/area`, AreaAttr],
+  [`${baseURL}/:smpId/taxon`, Taxon],
+  [`${baseURL}/:smpId/details`, Details],
+  [`${baseURL}/:smpId/details/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/speciesOccurrences/:taxa`, SpeciesOccurrences],
+  [`${baseURL}/:smpId/speciesOccurrences/:taxa/taxon`, Taxon],
+  [`${baseURL}/:smpId/samples/:subSmpId/occ/:occId/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/samples/:subSmpId/occ/:occId/taxon`, Taxon],
+  [`${baseURL}/:smpId/samples/:subSmpId/occ/:occId/direction`, Direction],
+  [`${baseURL}/:smpId/samples/:subSmpId/location`, ModelLocationWrap],
+  [`${baseURL}/:smpId/samples/:subSmpId/occ/:occId`, OccurrenceHome],
 ];
 
 const routes = [

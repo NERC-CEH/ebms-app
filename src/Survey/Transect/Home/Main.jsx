@@ -69,7 +69,7 @@ class Edit extends Component {
     const endTimePretty =
       surveyEndTime && dateTimeFormat.format(new Date(surveyEndTime));
 
-    const baseURL = `/survey/transect/${sample.cid}/edit`;
+    const baseURL = `/survey/transect/${sample.cid}`;
 
     const { webForm } = sample.getSurvey();
 

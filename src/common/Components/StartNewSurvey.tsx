@@ -108,16 +108,16 @@ function StartNewSurvey({ survey }: Props): null {
 
       if (sample.isPreciseSingleSpeciesSurvey()) {
         navigate(
-          `/survey/${survey.name}/${sample.cid}/edit/taxon`,
+          `/survey/${survey.name}/${sample.cid}/taxon`,
           'none',
           'replace'
         );
         return;
       }
 
-      const path = sample.isDetailsComplete() ? '' : 'edit';
+      const path = sample.isDetailsComplete() ? '' : '/details';
 
-      navigate(`${baseURL}/${sample.cid}/${path}`, 'none', 'replace');
+      navigate(`${baseURL}/${sample.cid}${path}`, 'none', 'replace');
     };
 
     pickDraftOrCreateSample();

@@ -25,7 +25,7 @@ const DetailsController: FC<Props> = ({ sample }) => {
     sample.metadata.completedDetails = true; // eslint-disable-line
     sample.save();
 
-    const url = match.url.replace('/edit', '');
+    const url = match.url.replace('/details', '');
 
     navigate(url, 'forward', 'pop');
   };

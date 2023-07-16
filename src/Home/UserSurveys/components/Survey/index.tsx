@@ -40,6 +40,27 @@ function useDeleteSurveyPrompt(sample: Sample) {
   return deleteSurvey;
 }
 
+const getSurveyLink = (sample: Sample) => {
+  const survey = sample.getSurvey();
+
+  if (sample.isPreciseSingleSpeciesSurvey()) {
+    const homeOrEditPage = sample.attrs.surveyStartTime
+      ? `/survey/${survey.name}/${sample.cid}`
+      : `/survey/${survey.name}/${sample.cid}/details`;
+
+    const hasTargetSpecies = !!sample.samples.length;
+    const taxonSelectPage = `/survey/${survey.name}/${sample.cid}/taxon`;
+    const hrefPreciseSingleSpeciesSurvey = hasTargetSpecies
+      ? homeOrEditPage
+      : taxonSelectPage;
+    return hrefPreciseSingleSpeciesSurvey;
+  }
+
+  const path = sample.isDetailsComplete() ? '' : '/details';
+
+  return `/survey/${survey.name}/${sample.cid}${path}`;
+};
+
 type Props = {
   sample: Sample;
   uploadIsPrimary?: boolean;
@@ -67,28 +88,8 @@ const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
     speciesCount = sample.samples.length;
   }
 
-  const path = sample.isDetailsComplete() ? '' : '/edit';
-
   const canShowLink = !synchronising && !survey.deprecated;
-  const hrefRemainingSurvey =
-    canShowLink && `/survey/${survey.name}/${sample.cid}${path}`;
-
-  const hasTargetSpecies = !!sample.samples.length;
-
-  const homeOrEditPage = sample.attrs.surveyStartTime
-    ? `/survey/${survey.name}/${sample.cid}/edit`
-    : `/survey/${survey.name}/${sample.cid}/edit/details`;
-
-  const taxonSelectPage = `/survey/${survey.name}/${sample.cid}/edit/taxon`;
-  const hrefPreciseSingleSpeciesSurvey = hasTargetSpecies
-    ? homeOrEditPage
-    : taxonSelectPage;
-
-  const surveyRoutes = sample.isPreciseSingleSpeciesSurvey()
-    ? hrefPreciseSingleSpeciesSurvey
-    : hrefRemainingSurvey;
-
-  const href: any = canShowLink && surveyRoutes;
+  const href = canShowLink ? getSurveyLink(sample) : '';
 
   function getInfo() {
     if (survey.name === 'precise-area') {

@@ -25,26 +25,20 @@ const SectionEditWrap = props => (
 );
 const routes = [
   [`${baseURL}`, StartNewSurvey.with(survey), true],
-  [`${baseURL}/:smpId/edit`, HomeWrap],
-  [`${baseURL}/:smpId/edit/:attr`, AttrPageFromRoute],
-  [`${baseURL}/:smpId/edit/sections`, SectionListWrap],
-  [`${baseURL}/:smpId/edit/sections/:subSmpId`, SectionEditWrap],
-  [`${baseURL}/:smpId/edit/sections/:subSmpId/:attr`, AttrPageFromRoute],
-  [`${baseURL}/:smpId/edit/sections/:subSmpId/taxa`, SectionsEditTaxa],
+  [`${baseURL}/:smpId`, HomeWrap],
+  [`${baseURL}/:smpId/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/sections`, SectionListWrap],
+  [`${baseURL}/:smpId/sections/:subSmpId`, SectionEditWrap],
+  [`${baseURL}/:smpId/sections/:subSmpId/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/sections/:subSmpId/taxa`, SectionsEditTaxa],
 
+  [`${baseURL}/:smpId/sections/:subSmpId/:occId/:taxa`, OccurrenceEdit],
   [
-    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/:taxa`,
-    OccurrenceEdit,
-  ],
-  [
-    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/:taxa/:attr`,
+    `${baseURL}/:smpId/sections/:subSmpId/:occId/:taxa/:attr`,
     AttrPageFromRoute,
   ],
 
-  [
-    `${baseURL}/:smpId/edit/sections/:subSmpId/:occId/edit/:taxa/taxa`,
-    SectionsEditTaxa,
-  ],
+  [`${baseURL}/:smpId/sections/:subSmpId/:occId/:taxa/taxa`, SectionsEditTaxa],
 ];
 
 export default RouteWithModels.fromArray(savedSamples, routes);

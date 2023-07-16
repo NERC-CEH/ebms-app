@@ -162,7 +162,7 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
     const navigateToSection = (e: any) => {
       e.preventDefault();
       navigate(
-        `/survey/transect/${sample.cid}/edit/sections/${nextSectionSampleId}`,
+        `/survey/transect/${sample.cid}/sections/${nextSectionSampleId}`,
         'none',
         'replace'
       );
@@ -274,7 +274,7 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
 
     const taxa = occ.attrs.taxon.warehouse_id || occ.attrs.taxon.preferredId;
 
-    navigate(`${url}/${occ.cid}/edit/${taxa}`);
+    navigate(`${url}/${occ.cid}/${taxa}`);
   };
 
   const isDisabled = !!sample.metadata.syncedOn;
