@@ -29,12 +29,17 @@ function getTransectItem(transect, onTransectSelect) {
     geometry.coordinates = transformToLatLon(geometry);
     return geometry;
   };
-  const geometries = transect.sections.map(getSectionGeometry);
+  const nonPoints = ({ type }) => type !== 'Point';
+  const geometries = transect.sections
+    .map(getSectionGeometry)
+    .filter(nonPoints);
 
   const geom = {
     type: 'GeometryCollection',
     geometries,
   };
+
+  const hasLines = !!geometries.length;
 
   const onTransectSelectWrap = () => onTransectSelect(transect);
   return (
@@ -46,7 +51,7 @@ function getTransectItem(transect, onTransectSelect) {
     >
       <IonLabel slot="start">{transect.name || transect.id}</IonLabel>
       <IonLabel slot="end">{transect.sections.length}</IonLabel>
-      <SVG geom={geom} />
+      {hasLines && <SVG geom={geom} />}
     </IonItem>
   );
 }

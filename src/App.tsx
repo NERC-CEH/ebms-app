@@ -1,10 +1,4 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
-import 'leaflet-draw/dist/images/spritesheet.svg';
-import 'leaflet-draw/dist/leaflet.draw.css';
-
-/* Leaflet */
-import 'leaflet/dist/leaflet.css';
 import { Route, Redirect } from 'react-router-dom';
 import { IonApp as IonAppPlain, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -29,7 +23,7 @@ import Settings from './Settings/router';
 import Survey from './Survey/router';
 import User from './User/router';
 
-const IonApp = IonAppPlain as any as FC<{ lang: any }>; // IonApp has 'lang' prop missing.
+const IonApp = IonAppPlain as any; // IonApp has 'lang' prop missing.
 
 const HomeRedirect = () => <Redirect to="home" />;
 
@@ -37,7 +31,7 @@ const App = () => {
   const { language } = appModel.attrs;
 
   return (
-    <IonApp lang={language}>
+    <IonApp lang={language as any}>
       <LanguageCountrySelectRequired appModel={appModel}>
         <SplashScreenRequired>
           <WhatsNewDialog appModel={appModel} />

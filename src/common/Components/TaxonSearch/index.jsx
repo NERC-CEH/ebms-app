@@ -115,7 +115,7 @@ class index extends Component {
           ref={this.input}
           placeholder={t('Species name')}
           debounce="300"
-          onIonChange={this.onInputKeystroke}
+          onIonInput={this.onInputKeystroke}
           onIonClear={this.onInputClear}
           showCancelButton="never"
         />

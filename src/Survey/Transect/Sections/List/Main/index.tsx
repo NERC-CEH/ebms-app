@@ -26,7 +26,11 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
       geometry,
     },
   ];
+
+  const isPoint = geometry.type === 'Point';
+
   const sectionSpeciesCount = sectionSample.occurrences.length;
+
   return (
     <IonItem
       key={sectionSample.cid}
@@ -34,9 +38,9 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
       routerLink={`${match.url}/${sectionSample.cid}`}
       detail
     >
-      <SVG geom={geom} />
+      {!isPoint && <SVG geom={geom} />}
 
-      <IonLabel class="ion-text-wrap" slot="start">
+      <IonLabel className="ion-text-wrap" slot="start">
         {section.name || section.id}
       </IonLabel>
       {!!sectionSpeciesCount && (

@@ -97,7 +97,7 @@ const FiltersToolbar: FC<Props> = ({
       <IonToolbar className={clsx('species-searchbar', isOpen && 'searching')}>
         <IonSearchbar
           ref={searchInput}
-          onIonChange={onSearch}
+          onIonInput={onSearch}
           slot="end"
           showCancelButton="always"
           cancelButtonText={t('Done')}

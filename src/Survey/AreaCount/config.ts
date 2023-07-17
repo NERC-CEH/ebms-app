@@ -1,7 +1,7 @@
 import { toJS } from 'mobx';
-import L from 'leaflet';
 import wkt from 'wellknown';
 import { isPlatform } from '@ionic/react';
+import SphericalMercator from '@mapbox/sphericalmercator';
 import config from 'common/config';
 import appModel from 'common/models/app';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
@@ -26,13 +26,13 @@ import {
   speciesGroupsAttr,
 } from 'Survey/common/config';
 
+const merc = new SphericalMercator();
+
 function transformToMeters(coordinates: any) {
-  const transform = ([lng, lat]: any) => {
-    const { x, y } = L.Projection.SphericalMercator.project({ lat, lng });
-    return [x, y];
-  };
+  const transform = ([lat, lng]: any) => merc.forward([lat, lng]);
   return coordinates.map(transform);
 }
+
 function getGeomString(shape: any) {
   const geoJSON = toJS(shape);
   if (geoJSON.type === 'Polygon') {

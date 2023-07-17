@@ -43,6 +43,8 @@ const config = {
     clientId: process.env.APP_BACKEND_CLIENT_ID as string,
     clientPass: process.env.APP_BACKEND_CLIENT_PASS as string,
 
+    recordsServiceURL: `${indiciaUrl}/index.php/services/rest/es-occurrences/_search`,
+
     mediaUrl: `${indiciaUrl}/upload/`,
 
     indicia: {

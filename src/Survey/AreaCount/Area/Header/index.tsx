@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Header, MenuAttrToggle, useAlert } from '@flumens';
-import { isPlatform } from '@ionic/react';
+import { IonTitle, IonToolbar, isPlatform } from '@ionic/react';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import './styles.scss';
 
@@ -10,12 +10,14 @@ type Props = {
   isGPSTracking: boolean;
   toggleGPStracking: any;
   isDisabled: boolean;
+  areaPretty: any;
 };
 
 const HeaderComponent: FC<Props> = ({
   isGPSTracking,
   toggleGPStracking,
   isDisabled,
+  areaPretty,
 }) => {
   const [id, rerender] = useState(0);
   const alert = useAlert();
@@ -61,15 +63,16 @@ const HeaderComponent: FC<Props> = ({
     />
   );
 
-  const gpsPermissionSubheader = !isDisabled && <GPSPermissionSubheader />;
-
-  return (
-    <Header
-      title="Area"
-      rightSlot={GPSToggle}
-      subheader={gpsPermissionSubheader}
-    />
+  const subheader = (
+    <>
+      {!isDisabled && <GPSPermissionSubheader />}
+      <IonToolbar id="area-edit-toolbar">
+        <IonTitle slot="start">{areaPretty}</IonTitle>
+      </IonToolbar>
+    </>
   );
+
+  return <Header title="Area" rightSlot={GPSToggle} subheader={subheader} />;
 };
 
 export default observer(HeaderComponent);

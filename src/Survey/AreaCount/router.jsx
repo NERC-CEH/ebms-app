@@ -1,11 +1,10 @@
-import { observer } from 'mobx-react';
-import { AttrPage, RouteWithModels, ModelLocationMap } from '@flumens';
-import appConfig from 'common/config';
+import { AttrPage, RouteWithModels } from '@flumens';
 import appModel from 'models/app';
 import savedSamples from 'models/collections/samples';
 import userModel from 'models/user';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import Direction from 'Survey/common/Direction';
+import ModelLocationMap from 'Survey/common/ModelLocationMap';
 import AreaAttr from './Area';
 import Details from './Details';
 import Home from './Home';
@@ -26,14 +25,6 @@ const HomeWrap = props => (
   />
 );
 
-// eslint-disable-next-line @getify/proper-arrows/name
-const ModelLocationWrap = observer(props => (
-  <ModelLocationMap
-    model={props.subSample}
-    mapProviderOptions={appConfig.map}
-  />
-));
-
 const getRoutes = (baseURL, config) => [
   [`${baseURL}`, StartNewSurvey.with(config), true],
   [`${baseURL}/:smpId`, HomeWrap],
@@ -47,7 +38,7 @@ const getRoutes = (baseURL, config) => [
   [`${baseURL}/:smpId/samples/:subSmpId/occ/:occId/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/samples/:subSmpId/occ/:occId/taxon`, Taxon],
   [`${baseURL}/:smpId/samples/:subSmpId/occ/:occId/direction`, Direction],
-  [`${baseURL}/:smpId/samples/:subSmpId/location`, ModelLocationWrap],
+  [`${baseURL}/:smpId/samples/:subSmpId/location`, ModelLocationMap],
   [`${baseURL}/:smpId/samples/:subSmpId/occ/:occId`, OccurrenceHome],
 ];
 

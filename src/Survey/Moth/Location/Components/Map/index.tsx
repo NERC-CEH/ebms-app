@@ -1,16 +1,15 @@
 import { FC, useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 // eslint-disable-next-line
-import 'leaflet.markercluster';
-import 'leaflet/dist/leaflet.css';
 import { device, useToast } from '@flumens';
-import { NavContext } from '@ionic/react';
+import { IonSpinner, NavContext } from '@ionic/react';
 import locationsCollection from 'models/collections/locations';
 import MothTrap, { useValidateCheck } from 'models/location';
 import Sample from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
 import BottomSheet from '../BottomSheet';
-import Map from './Components/Map';
+import Map from './Map';
+import Traps from './Traps';
 import './styles.scss';
 
 interface Props {
@@ -34,12 +33,22 @@ const MapComponent: FC<Props> = ({
   // dynamic center when the user moves the map manually
   const [currentMapCenter, setMapCurrentCenter] = useState([51, -1]);
 
-  const onLocationSelect = (point: MothTrap) => {
+  const onLocationSelect = (newTrap: MothTrap) => {
+    if (isDisabled) return;
+
     // eslint-disable-next-line no-param-reassign
-    sample.attrs.location = point;
+    sample.attrs.location = newTrap;
     sample.save();
 
     goBack();
+  };
+
+  const onLocationMapSelect = (point: any) => {
+    const byId = (trap: MothTrap) => trap.id === point.properties.id;
+    const newTrap = mothTraps.find(byId);
+    if (!newTrap) return;
+
+    onLocationSelect(newTrap);
   };
 
   const onLocationDelete = (location: MothTrap) => {
@@ -64,13 +73,16 @@ const MapComponent: FC<Props> = ({
   return (
     <>
       <Map
-        sample={sample}
-        isFetchingTraps={isFetchingTraps}
-        mothTraps={mothTraps}
-        onLocationSelect={onLocationSelect}
+        location={sample.attrs.location?.attrs?.location}
         onMovedCoords={setMapCurrentCenter}
-        isDisabled={isDisabled}
-      />
+      >
+        <Traps
+          onSelect={onLocationMapSelect}
+          mothTraps={mothTraps}
+          sample={sample}
+        />
+        {isFetchingTraps && <IonSpinner />}
+      </Map>
 
       {!isDisabled && (
         <BottomSheet

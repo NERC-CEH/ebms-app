@@ -82,7 +82,7 @@ const HomeController = () => {
 
       return (
         <IonFabButton
-          class="fab-button-label"
+          className="fab-button-label"
           routerLink={`/survey/${name}`}
           key={name}
         >

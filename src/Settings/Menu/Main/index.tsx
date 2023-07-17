@@ -45,9 +45,9 @@ function useUserDeleteDialog(deleteUser: any) {
               skipTranslation
             >
               This will remove your account on the{' '}
-              <b>{{ url: config.backend.url }}</b> website. You will lose access
-              to any records that you have previously submitted using the app or
-              website.
+              <b>{{ url: config.backend.url } as any}</b> website. You will lose
+              access to any records that you have previously submitted using the
+              app or website.
             </InfoMessage>
           </T>
         </>

@@ -1,5 +1,5 @@
 import { configure as mobxConfig } from 'mobx';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { App as AppPlugin } from '@capacitor/app';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
@@ -56,7 +56,9 @@ mobxConfig({ enforceActions: 'never' });
     }
   }
 
-  ReactDOM.render(<App />, document.getElementById('root'));
+  const container = document.getElementById('root');
+  const root = createRoot(container!);
+  root.render(<App />);
 
   if (isPlatform('hybrid')) {
     StatusBar.setStyle({

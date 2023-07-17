@@ -50,12 +50,11 @@ const AreaController: FC<Props> = ({ sample }) => {
         toggleGPStracking={toggleGPStracking}
         isGPSTracking={isGPSTracking}
         isDisabled={isDisabled}
+        areaPretty={areaPretty}
       />
       <Main
         sample={sample}
-        areaPretty={areaPretty}
         isGPSTracking={isGPSTracking}
-        shape={location.shape}
         setLocation={setLocation}
         isDisabled={isDisabled}
       />

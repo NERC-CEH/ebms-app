@@ -2,7 +2,7 @@ import { IObservableArray, observable } from 'mobx';
 import { useTranslation } from 'react-i18next';
 import {
   device,
-  getDeepErrorMessage,
+  ModelValidationMessage,
   useAlert,
   Sample as SampleOriginal,
   SampleAttrs,
@@ -108,6 +108,8 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   isGPSRunning: any; // from extension
 
   toggleGPStracking: any; // from extension
+
+  gps: any; // from extension
 
   startGPS: any; // from extension
 
@@ -230,7 +232,8 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   };
 
   isDetailsComplete() {
-    return this.metadata.completedDetails;
+    const isMothSurvey = this.metadata.survey === 'moth';
+    return isMothSurvey ? this.metadata.completedDetails : true;
   }
 
   getSpeciesGroupList() {
@@ -356,7 +359,7 @@ export const useValidateCheck = (sample: Sample) => {
       alert({
         header: t('Survey incomplete'),
         skipTranslation: true,
-        message: getDeepErrorMessage(invalids),
+        message: <ModelValidationMessage {...invalids} />,
         buttons: [
           {
             text: t('Got it'),

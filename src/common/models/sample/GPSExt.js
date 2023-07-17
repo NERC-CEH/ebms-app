@@ -97,11 +97,12 @@ const extension = {
     }
 
     let area;
-    let [longitude, latitude] = shape.coordinates[0];
+    let [longitude, latitude] = shape.coordinates[shape.coordinates.length - 1];
 
     if (shape.type === 'Polygon') {
       area = geojsonArea.geometry(shape);
-      [longitude, latitude] = shape.coordinates[0][0]; // eslint-disable-line
+      [longitude, latitude] =
+        shape.coordinates[0][shape.coordinates[0].length - 1]; // eslint-disable-line
     } else {
       area =
         config.DEFAULT_TRANSECT_BUFFER * calculateLineLenght(shape.coordinates);

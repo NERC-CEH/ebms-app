@@ -5,13 +5,13 @@ import { Geolocation } from '@capacitor/geolocation';
 import {
   Store,
   validateRemoteModel,
-  getDeepErrorMessage,
   useAlert,
   Model,
   ModelMetadata,
   ModelAttrs,
   Collection,
   updateModelLocation,
+  ModelValidationMessage,
 } from '@flumens';
 import CONFIG from 'common/config';
 import UUID from 'common/helpers/UUID';
@@ -497,7 +497,7 @@ export const useValidateCheck = () => {
     if (invalids) {
       alert({
         header: 'Incomplete',
-        message: getDeepErrorMessage(invalids),
+        message: <ModelValidationMessage {...invalids} />,
         buttons: [
           {
             text: 'Got it',

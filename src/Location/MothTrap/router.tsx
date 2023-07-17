@@ -1,26 +1,13 @@
 import { FC, useEffect, useContext } from 'react';
-import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
-import { RouteWithModels, AttrPage, ModelLocationMap } from '@flumens';
+import { RouteWithModels, AttrPage } from '@flumens';
 import { NavContext } from '@ionic/react';
-import config from 'common/config';
 import locations from 'models/collections/locations';
 import MothTrap from 'models/location';
+import ModelLocationMap from 'Survey/common/ModelLocationMap';
 import MothTrapNew from './Home';
 import MothTrapLamp from './Lamp';
 import LampAttr from './LampAttr';
-
-const ModelLocationWithProps = ({ sample: location }: any) => (
-  <ModelLocationMap
-    model={location}
-    mapProviderOptions={config.map}
-    useGridMap
-    onLocationNameChange={ModelLocationMap.utils.onLocationNameChange}
-    namePlaceholder="Moth trap name"
-    onGPSClick={ModelLocationMap.utils.onGPSClick}
-  />
-);
-const ModelLocationWrap = observer(ModelLocationWithProps);
 
 function AddNewMothTrap() {
   const { navigate } = useContext(NavContext);
@@ -79,7 +66,7 @@ const routes = [
   ['/location', AddNewMothTrap, true],
   [`/location/:smpId`, MothTrapNew],
   [`/location/:smpId/:attr`, AttrPageFromRoute],
-  [`/location/:smpId/location`, ModelLocationWrap],
+  [`/location/:smpId/location`, ModelLocationMap],
   [`/location/:smpId/lamps/:lampId`, MothTrapLamp],
   [`/location/:smpId/lamps/:lampId/:attr`, LampAttr],
 ];

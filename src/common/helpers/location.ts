@@ -1,6 +1,10 @@
-import L from 'leaflet';
+import SphericalMercator from '@mapbox/sphericalmercator';
 
-export default function transformToLatLon(geometry) {
+type XYPoint = [number, number];
+
+const merc = new SphericalMercator();
+
+export default function transformToLatLon(geometry: any) {
   try {
     const { type } = geometry;
     let { coordinates } = geometry;
@@ -8,15 +12,12 @@ export default function transformToLatLon(geometry) {
     if (type === 'Point') {
       coordinates = [coordinates];
     } else if (type === 'MultiLineString') {
-      const transformToLatLonWrap = coord =>
+      const transformToLatLonWrap = (coord: any) =>
         transformToLatLon({ coordinates: coord });
       return geometry.coordinates.map(transformToLatLonWrap);
     }
 
-    const inverseTransformToLatLon = ([y, x]) => {
-      const { lat, lng } = L.Projection.SphericalMercator.unproject({ y, x });
-      return [lat, lng];
-    };
+    const inverseTransformToLatLon = (point: XYPoint) => merc.inverse(point);
     return coordinates.map(inverseTransformToLatLon);
   } catch (e) {
     return [];

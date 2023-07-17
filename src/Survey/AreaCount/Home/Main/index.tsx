@@ -442,8 +442,8 @@ const AreaCount: FC<Props> = ({
         <Main id="area-count-occurrence-edit">
           <IonList id="list" lines="full">
             <InfoBackgroundMessage>
-              You don't have any <b>{{ prettySpeciesName }}</b> records in your
-              list.
+              You don't have any <b>{{ prettySpeciesName } as any}</b> records
+              in your list.
             </InfoBackgroundMessage>
           </IonList>
         </Main>
@@ -490,12 +490,12 @@ const AreaCount: FC<Props> = ({
 
   const showCopySpeciesTip = () => {
     if (!appModel.attrs.showCopySpeciesTip || !previousSurvey) {
-      return;
+      return null;
     }
 
     const hasSpeciesInOccurrence = previousSurvey.occurrences.length;
     if (!hasSpeciesInOccurrence) {
-      return;
+      return null;
     }
 
     alert({
@@ -512,6 +512,8 @@ const AreaCount: FC<Props> = ({
     });
 
     appModel.attrs.showCopySpeciesTip = false;
+
+    return null;
   };
 
   const toggleTimerWrap = () => toggleTimer(sample);

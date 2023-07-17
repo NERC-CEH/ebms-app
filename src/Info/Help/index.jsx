@@ -22,7 +22,10 @@ export default () => (
           <Collapse title="How to start a survey">
             <p>
               <T>To start a new survey you can press the plus button</T>
-              <IonIcon class="help-page-record-start-icon" icon={addOutline} />
+              <IonIcon
+                className="help-page-record-start-icon"
+                icon={addOutline}
+              />
               <T>
                 in the home page footer. This will start a new 15 minute survey.
               </T>

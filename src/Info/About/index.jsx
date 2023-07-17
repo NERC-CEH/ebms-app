@@ -11,7 +11,7 @@ const Component = ({ appModel }) => {
   return (
     <Page id="about">
       <Header title="About" />
-      <Main id="about" class="ion-padding">
+      <Main id="about" className="ion-padding">
         {isEnglish ? (
           <Section>
             <P>

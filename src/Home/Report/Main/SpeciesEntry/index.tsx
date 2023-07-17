@@ -43,12 +43,15 @@ const SpeciesEntry: FC<Props> = ({ species }) => {
           </IonLabel>
         )}
 
-        <IonLabel class="ion-text-wrap report-taxon-label" position="stacked">
+        <IonLabel
+          className="ion-text-wrap report-taxon-label"
+          position="stacked"
+        >
           <i>{scientificName}</i>
         </IonLabel>
       </IonLabel>
 
-      <IonLabel slot="end" class="report-count-label">
+      <IonLabel slot="end" className="report-count-label">
         {species.doc_count}
       </IonLabel>
     </IonItem>

@@ -36,7 +36,7 @@ const MainReport: FC<Props> = ({
   if (hasNoData && refreshing) {
     return (
       <Main>
-        <IonSpinner class="centered" />
+        <IonSpinner className="centered" />
       </Main>
     );
   }
@@ -71,7 +71,7 @@ const MainReport: FC<Props> = ({
                 <T>Species</T>
               </small>
             </IonLabel>
-            <IonLabel class="ion-text-right">
+            <IonLabel className="ion-text-right">
               <small>
                 <T>Counts</T>
               </small>

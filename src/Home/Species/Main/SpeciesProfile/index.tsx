@@ -3,9 +3,9 @@
 /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import { useState } from 'react';
 import { Trans as T } from 'react-i18next';
-import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Main, useOnBackButton } from '@flumens';
 import {
@@ -20,7 +20,7 @@ import ImageWithBackground from 'common/Components/ImageWithBackground';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
 
-const statuses = {
+const statuses: any = {
   A: 'Absent',
   P: 'Present',
   'P?': 'Possibly present',
@@ -29,7 +29,13 @@ const statuses = {
   Ex: 'Regionally extinct',
 };
 
-const SpeciesProfile = ({ species, country, hideSpeciesModal }) => {
+type Props = {
+  species: any;
+  country: string;
+  hideSpeciesModal: any;
+};
+
+const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
   const [showGallery, setGallery] = useState(false);
 
   const closeGallery = () => setGallery(false);
@@ -48,7 +54,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }) => {
       speed: 400,
     };
 
-    const getSlide = (copyright, index) => {
+    const getSlide = (copyright: string, index: number) => {
       if (!copyright) return null;
 
       const imageURL = `/images/${species.id}_${index}_image.jpg`;
@@ -86,7 +92,9 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }) => {
         {getSlides()}
 
         <IonCardHeader>
-          <IonCardTitle>{t(species.taxon, null, true)}</IonCardTitle>
+          <IonCardTitle>
+            {(window as any).t(species.taxon, null, true)}
+          </IonCardTitle>
           <IonCardSubtitle>
             <i>{species.taxon}</i>
           </IonCardSubtitle>
@@ -110,7 +118,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }) => {
             <T>Description</T>:
           </h3>
 
-          {t(species.descriptionKey, true)}
+          {(window as any).t(species.descriptionKey, true)}
         </IonCardContent>
       </Main>
     </>

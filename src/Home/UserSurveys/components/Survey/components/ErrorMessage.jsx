@@ -9,7 +9,7 @@ function ErrorMessage({ sample }) {
 
   return (
     <IonItemDivider color="danger">
-      <IonLabel class="ion-text-wrap">
+      <IonLabel className="ion-text-wrap">
         <b>{`${t('Upload')}: `}</b> {t(sample.error.message)}
       </IonLabel>
     </IonItemDivider>

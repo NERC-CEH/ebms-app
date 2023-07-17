@@ -122,11 +122,10 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
       return (
         <IonCol
           key={id}
-          className="species-list-item"
+          className="species-list-item ion-no-padding ion-no-margin"
           onClick={onClick}
           size="6"
           size-lg
-          class="ion-no-padding ion-no-margin"
         >
           <div
             style={{
@@ -142,8 +141,10 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
     const speciesColumns = speciesList.map(getSpeciesElement);
 
     return (
-      <IonGrid class="ion-no-padding ion-no-margin">
-        <IonRow class="ion-no-padding ion-no-margin">{speciesColumns}</IonRow>
+      <IonGrid className="ion-no-padding ion-no-margin">
+        <IonRow className="ion-no-padding ion-no-margin">
+          {speciesColumns}
+        </IonRow>
       </IonGrid>
     );
   };
@@ -193,8 +194,9 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
       {isNotFiltered && (
         <InfoMessage className="blue" icon={informationCircle}>
           This guide is still in development. It covers{' '}
-          {{ countrySpeciesCount }} butterfly species out of the{' '}
-          {{ totalSpeciesCountryCount }} species in your selected country.
+          {{ countrySpeciesCount } as any} butterfly species out of the{' '}
+          {{ totalSpeciesCountryCount } as any} species in your selected
+          country.
         </InfoMessage>
       )}
 

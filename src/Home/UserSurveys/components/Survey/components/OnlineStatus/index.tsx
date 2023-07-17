@@ -18,7 +18,7 @@ const OnlineStatus: FC<Props> = ({ sample, onUpload, hasManyPending }) => {
   const { saved } = sample.metadata;
   if (!saved) {
     return (
-      <IonChip slot="end" class="record-status">
+      <IonChip slot="end" className="record-status">
         <IonLabel>
           <T>Draft</T>
         </IonLabel>
@@ -27,7 +27,7 @@ const OnlineStatus: FC<Props> = ({ sample, onUpload, hasManyPending }) => {
   }
 
   if (sample.remote.synchronising) {
-    return <IonSpinner class="record-status" color="primary" />;
+    return <IonSpinner className="record-status" color="primary" />;
   }
 
   if (sample.isUploaded()) return null;
