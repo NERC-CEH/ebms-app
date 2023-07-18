@@ -1,4 +1,4 @@
-import { FC, useContext, useRef } from 'react';
+import { FC, useContext, useEffect, useRef } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import {
@@ -21,6 +21,7 @@ import {
   LongPressButton,
   useAlert,
   InfoMessage,
+  useLoader,
 } from '@flumens';
 import {
   IonList,
@@ -120,6 +121,7 @@ const buildSpeciesCount = (agg: any, smp: Sample) => {
 
 type Props = {
   sample: Sample;
+  isIncompleteSample: boolean;
   previousSurvey: any;
   deleteSpecies: any;
   copyPreviousSurveyTaxonList: any;
@@ -136,6 +138,7 @@ type Props = {
 
 const AreaCount: FC<Props> = ({
   sample,
+  isIncompleteSample,
   previousSurvey,
   deleteSpecies,
   navigateToSpeciesOccurrences,
@@ -153,6 +156,15 @@ const AreaCount: FC<Props> = ({
   const match = useRouteMatch<any>();
   const alert = useAlert();
   const ref = useRef();
+
+  const loader = useLoader();
+  useEffect(() => {
+    if (isIncompleteSample) {
+      loader.show('Please wait...');
+      return;
+    }
+    loader.hide();
+  }, [isIncompleteSample]);
 
   const showCopyOptions = () => {
     alert({
@@ -612,9 +624,9 @@ const AreaCount: FC<Props> = ({
         {getSpeciesAddButton()}
       </IonList>
 
-      {getSpeciesList()}
+      {!isIncompleteSample && getSpeciesList()}
 
-      {getSpeciesSingleCountList()}
+      {!isIncompleteSample && getSpeciesSingleCountList()}
     </Main>
   );
 };

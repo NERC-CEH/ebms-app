@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 import { toJS, observable } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
@@ -526,6 +526,18 @@ const HomeController: FC<Props> = ({ sample }) => {
 
   const isValid = !sample.validateRemote();
 
+  const [isIncompleteSample, setIsIncompleteSample] = useState(
+    sample.isRemotePartial
+  );
+
+  useEffect(() => {
+    (async () => {
+      if (!isIncompleteSample) return;
+      await sample.fetchRemoteFull();
+      setIsIncompleteSample(false);
+    })();
+  }, [isIncompleteSample]);
+
   return (
     <Page id="precise-area-count-edit">
       <Header
@@ -536,8 +548,10 @@ const HomeController: FC<Props> = ({ sample }) => {
         isDisabled={isDisabled}
         isValid={isValid}
       />
+
       <Main
         sample={sample}
+        isIncompleteSample={isIncompleteSample}
         previousSurvey={previousSurvey}
         deleteSpecies={deleteSpecies}
         increaseCount={increaseCount}

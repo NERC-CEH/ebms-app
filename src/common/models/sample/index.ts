@@ -24,6 +24,7 @@ import Occurrence, { SpeciesGroup } from '../occurrence';
 import { modelStore } from '../store';
 import GPSExtension from './GPSExt';
 import MetOfficeExtension from './metofficeExt';
+import RemoteExtension from './remoteExt';
 import VibrateExtension from './vibrateExt';
 
 type Attrs = SampleAttrs & {
@@ -121,8 +122,16 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
 
   hasLoctionMissingAndIsnotLocating: any; // from extension
 
-  constructor(options: SampleOptions) {
-    super({ ...options, store: modelStore });
+  fetchRemoteFull: any; // from extension
+
+  isRemotePartial: any; // from extension
+
+  constructor({
+    notPersistent = false,
+    ...options
+  }: SampleOptions & { notPersistent?: boolean }) {
+    const storeOption = notPersistent ? undefined : modelStore;
+    super({ store: storeOption, ...options });
 
     this.remote.url = `${config.backend.indicia.url}/index.php/services/rest`;
     // eslint-disable-next-line
@@ -136,6 +145,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
     Object.assign(this, VibrateExtension);
     Object.assign(this, MetOfficeExtension);
     Object.assign(this, GPSExtension);
+    Object.assign(this, RemoteExtension);
     this.gpsExtensionInit();
   }
 
@@ -230,7 +240,8 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   };
 
   isDetailsComplete() {
-    return this.metadata.completedDetails;
+    const isMothSurvey = this.metadata.survey === 'moth';
+    return isMothSurvey ? this.metadata.completedDetails : true;
   }
 
   getSpeciesGroupList() {
@@ -369,3 +380,12 @@ export const useValidateCheck = (sample: Sample) => {
     return true;
   };
 };
+
+export function bySurveyDate(sample1: Sample, sample2: Sample) {
+  const date1 = new Date(sample1.attrs.date);
+  const moveToTop = !date1 || date1.toString() === 'Invalid Date';
+  if (moveToTop) return -1;
+
+  const date2 = new Date(sample2.attrs.date);
+  return date2.getTime() - date1.getTime();
+}

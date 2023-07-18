@@ -19,8 +19,6 @@ type Attrs = MediaAttrs & { species: any };
 export default class Media extends MediaOriginal<Attrs> {
   declare parent?: Sample | Occurrence;
 
-  declare attrs: Attrs;
-
   identification = observable({ identifying: false });
 
   // remote: any = this.remote;
