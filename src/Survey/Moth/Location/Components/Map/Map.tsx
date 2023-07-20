@@ -1,16 +1,11 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { wifiOutline } from 'ionicons/icons';
-import {
-  device,
-  InfoMessage,
-  MapContainer,
-  useCenterMapToCurrentLocation,
-} from '@flumens';
+import { device, InfoMessage, MapContainer } from '@flumens';
+import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import { centroids as countries } from 'common/config/countries';
 import appModel from 'models/app';
-import GPS from 'helpers/GPS';
 
 interface Props {
   location?: any;
@@ -33,9 +28,6 @@ const Map: FC<Props> = ({ location, onMovedCoords, children }) => {
   const updateMapCentre = ({ viewState }: any) =>
     onMovedCoords([viewState.latitude, viewState.longitude]);
 
-  const { isLocating, centerMapToCurrentLocation } =
-    useCenterMapToCurrentLocation(GPS);
-
   if (!device.isOnline) {
     return (
       <div className="info-background-message-wrapper">
@@ -54,10 +46,7 @@ const Map: FC<Props> = ({ location, onMovedCoords, children }) => {
       initialViewState={initialViewState}
       onMoveEnd={updateMapCentre}
     >
-      <MapContainer.Control.Geolocate
-        isLocating={isLocating}
-        onClick={centerMapToCurrentLocation}
-      />
+      <GeolocateButton />
 
       {children}
     </MapContainer>

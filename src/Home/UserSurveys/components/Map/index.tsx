@@ -3,18 +3,13 @@ import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { MapRef, LngLatBounds } from 'react-map-gl';
 import { Link } from 'react-router-dom';
-import {
-  useToast,
-  device,
-  MapContainer,
-  useCenterMapToCurrentLocation,
-} from '@flumens';
+import { useToast, device, MapContainer } from '@flumens';
 import { IonSpinner } from '@ionic/react';
+import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import { centroids as countries } from 'common/config/countries';
 import appModel from 'common/models/app';
 import userModel from 'models/user';
-import GPS from 'helpers/GPS';
 import { Square, Record } from './esResponse.d';
 import { fetchRecords, fetchSquares } from './recordsService';
 import './styles.scss';
@@ -169,9 +164,6 @@ const Map = () => {
 
   const squareMarkers = squares.map(getSquareMarker);
 
-  const { isLocating, centerMapToCurrentLocation } =
-    useCenterMapToCurrentLocation(GPS);
-
   let initialViewState;
   const country = countries[appModel.attrs.country];
   if (country?.zoom) {
@@ -198,10 +190,7 @@ const Map = () => {
         </div>
       )}
 
-      <MapContainer.Control.Geolocate
-        isLocating={isLocating}
-        onClick={centerMapToCurrentLocation}
-      />
+      <GeolocateButton />
 
       {squareMarkers}
 

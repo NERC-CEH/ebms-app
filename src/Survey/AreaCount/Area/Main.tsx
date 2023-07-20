@@ -1,17 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
 import { MapRef } from 'react-map-gl';
-import {
-  Main,
-  MapContainer,
-  MapDraw,
-  useAlert,
-  useCenterMapToCurrentLocation,
-  CircleMarker,
-} from '@flumens';
+import { Main, MapContainer, MapDraw, useAlert, CircleMarker } from '@flumens';
+import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import Sample from 'models/sample';
-import GPS from 'helpers/GPS';
 import Favourites from './Favourites';
 import Records from './Records';
 
@@ -156,9 +149,6 @@ const AreaAttr = ({
 
   const toggleFavourites = () => setShowPastLocations(!showPastLocations);
 
-  const { isLocating, centerMapToCurrentLocation } =
-    useCenterMapToCurrentLocation(GPS);
-
   return (
     <Main className={`${isGPSTracking ? 'GPStracking' : ''}`}>
       <MapContainer
@@ -172,10 +162,7 @@ const AreaAttr = ({
       >
         {!isDisabled && <Favourites.Control onClick={toggleFavourites} />}
 
-        <MapContainer.Control.Geolocate
-          isLocating={isLocating}
-          onClick={centerMapToCurrentLocation}
-        />
+        <GeolocateButton />
 
         <MapDraw shape={location?.shape} onChange={onShapeChange}>
           {!isDisabled && !isGPSTracking && <MapDraw.Control line polygon />}
