@@ -807,6 +807,9 @@ msgstr "Pending"
 msgid "Uploaded"
 msgstr "Uploaded"
 
+msgid "You need to <1>login</1> to your account to be able to view the records."
+msgstr "You need to <1>login</1> to your account to be able to view the records."
+
 msgid "No finished pending surveys"
 msgstr "No finished pending surveys"
 
@@ -2326,6 +2329,10 @@ msgstr "Favourite"
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
 msgstr "Are you sure you want to delete the saved track?"
+
+# Map GPS button interface
+msgid "To resume tracking, you must first remove the drawn area from the map."
+msgstr "To resume tracking, you must first remove the drawn area from the map."
 
 # Part of weather attributes
 msgid "Moon phase"

@@ -1,6 +1,20 @@
 #user-records {
+  .login-message {
+    position: absolute;
+    top: 40%;
+    background: white;
+    width: 80%;
+    max-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    box-shadow: 0 0 13px 3px #0000004d;
+    border-radius: var(--theme-border-radius);
+    font-size: 1.1em;
+  }
+
   .mapboxgl-ctrl-top-right {
-    margin-top: 60px;
+    margin-top: 80px;
   }
 
   ion-spinner {

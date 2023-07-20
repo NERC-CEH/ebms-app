@@ -1337,48 +1337,12 @@ msgstr ""
 "Keď sa ešte stále učíte určovať motýle, môžete sa prepnúť na Simuláciu."
 
 # This is part of mapping functionality
-msgid "Delete last point"
-msgstr "Vymazať posledný bod"
+msgid "Are you sure you want to delete your current track?"
+msgstr ""
 
 # This is part of mapping functionality
 msgid "Save"
 msgstr "Uložiť"
-
-# This is part of mapping functionality
-msgid "Clear All"
-msgstr "Vymazať všetko"
-
-# This is part of mapping functionality
-msgid "Click to start drawing shape."
-msgstr "Kliknite pre začiatok zakreslenia tvaru."
-
-# This is part of mapping functionality
-msgid "Click to continue drawing shape."
-msgstr "Kliknite pre pokračovanie v kreslení tvaru."
-
-# This is part of mapping functionality
-msgid "Click first point to close this shape."
-msgstr "Kliknite na prvý bod pre ukončenie."
-
-# This is part of mapping functionality
-msgid "Click to start drawing line."
-msgstr "Kliknite pre začiatok zakreslenia línie."
-
-# This is part of mapping functionality
-msgid "Click to continue drawing line."
-msgstr "Kliknite pre pokračovanie v kreslení línie."
-
-# This is part of mapping functionality
-msgid "Click last point to finish line."
-msgstr "Kliknite na vytvorenie posledného bodu línie."
-
-# This is part of mapping functionality
-msgid "Drag handles or markers to edit features."
-msgstr "Pretiahnite vodítka alebo značky pre editáciu tvaru."
-
-# This is part of mapping functionality
-msgid "Click cancel to undo changes."
-msgstr "Kliknite pre zrušenie zmien."
 
 msgid "Map"
 msgstr "Mapa"
@@ -1883,41 +1847,17 @@ msgstr ""
 msgid "What's New"
 msgstr "Čo je nové"
 
-# Version 1.21 whats new message
-msgid "Added favorite site functionality."
-msgstr "Možnosť vybrať si obľúbené miesto"
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous transect section's species list."
+msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added moth trap weather attributes."
-msgstr "Aktuálne počasie v čase používania lapača"
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous moth trap's species list."
+msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added the Slovak language."
-msgstr "Bola pridaná Slovenčina"
-
-# Version 1.21 whats new message
-msgid "Enabled multiple drafts functionality"
-msgstr "Povolená funkcionalita viacerých návrhov"
-
-# Version 1.21 whats new message
-msgid "Added Saint Helena country"
-msgstr "Bola pridaná krajina Svätá Helena"
-
-# Version 1.21 whats new message
-msgid "Added specific stage attributes for Dragonfly species"
-msgstr "Boli pridané špecifické atribúty štádií pre druhy vážok"
-
-# Version 1.21 whats new message
-msgid "Added dragonflies-specific stages"
-msgstr "Boli pridané špecifické štádiá pre vážky"
-
-# Version 1.21 whats new message
-msgid "Added Slovak and Turkish butterfly common names"
-msgstr "Boli pridané bežné názvy motýľov pre Slovenčinu a Turečtinu"
-
-# Version 1.21 whats new message
-msgid "Added dragonfly common names"
-msgstr "Boli pridané bežné názvy pre vážky"
+# Version 1.22 whats new message
+msgid "Updated species guide page."
+msgstr ""
 
 # User account action
 msgid "Resend"
@@ -2456,6 +2396,10 @@ msgstr "Obľúbené"
 msgid "Are you sure you want to delete the saved track?"
 msgstr "Ste si istý, že chcete vymazať uloženú trasu?"
 
+# Map GPS button interface
+msgid "To resume tracking, you must first remove the drawn area from the map."
+msgstr ""
+
 # Part of weather attributes
 msgid "Moon phase"
 msgstr "Fáza mesiaca"
@@ -2535,3 +2479,11 @@ msgstr "Sledovanie polohy nie je povolené"
 # Part of favorite track
 msgid "You have no previous tracks."
 msgstr "Nemáte žiadne predchádzajúce trasy. "
+
+# Change list order toast message
+msgid "Changed list ordering to alphabetical."
+msgstr ""
+
+# Change list order toast message
+msgid "Changed list ordering to last added."
+msgstr ""

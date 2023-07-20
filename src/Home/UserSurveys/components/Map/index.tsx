@@ -133,8 +133,8 @@ const Map = () => {
   const getSquareMarker = (square: Square) => {
     const opacity = Number((square.doc_count / totalSquares).toFixed(2));
 
-    // max 80%, min 20%
-    const normalizedOpacity = Math.min(Math.max(opacity, 0.2), 0.8);
+    // max 90%, min 40%
+    const normalizedOpacity = Math.min(Math.max(opacity, 0.4), 0.9);
 
     const [longitude, latitude] = square.key.split(' ').map(parseFloat);
 
@@ -179,41 +179,38 @@ const Map = () => {
   }
 
   return (
-    <>
-      <MapContainer
-        id="user-records"
-        ref={measuredRef}
-        accessToken={config.map.mapboxApiKey}
-        mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
-        maxPitch={0}
-        maxZoom={20}
-        initialViewState={initialViewState}
-        onMoveEnd={updateMapCentre}
-      >
-        {!userIsLoggedIn && (
-          <div className="login-message">
-            <T>
-              You need to login to your{' '}
-              <Link to="/user/login">iRecord account</Link> to be able to view
-              the records.
-            </T>
-          </div>
-        )}
+    <MapContainer
+      id="user-records"
+      ref={measuredRef}
+      accessToken={config.map.mapboxApiKey}
+      mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
+      maxPitch={0}
+      maxZoom={20}
+      initialViewState={initialViewState}
+      onMoveEnd={updateMapCentre}
+    >
+      {!userIsLoggedIn && (
+        <div className="login-message">
+          <T>
+            You need to <Link to="/user/login">login</Link> to your account to
+            be able to view the records.
+          </T>
+        </div>
+      )}
 
-        <MapContainer.Control.Geolocate
-          isLocating={isLocating}
-          onClick={centerMapToCurrentLocation}
-        />
+      <MapContainer.Control.Geolocate
+        isLocating={isLocating}
+        onClick={centerMapToCurrentLocation}
+      />
 
-        {squareMarkers}
+      {squareMarkers}
 
-        {recordMarkers}
+      {recordMarkers}
 
-        <MapContainer.Control>
-          {isFetchingRecords ? <IonSpinner /> : <div />}
-        </MapContainer.Control>
-      </MapContainer>
-    </>
+      <MapContainer.Control>
+        {isFetchingRecords ? <IonSpinner /> : <div />}
+      </MapContainer.Control>
+    </MapContainer>
   );
 };
 

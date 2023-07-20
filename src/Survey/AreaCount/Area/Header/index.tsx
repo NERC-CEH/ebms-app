@@ -10,6 +10,7 @@ type Props = {
   isGPSTracking: boolean;
   toggleGPStracking: any;
   isDisabled: boolean;
+  isAreaShape: boolean;
   areaPretty: any;
 };
 
@@ -18,18 +19,17 @@ const HeaderComponent: FC<Props> = ({
   toggleGPStracking,
   isDisabled,
   areaPretty,
+  isAreaShape,
 }) => {
   const [id, rerender] = useState(0);
   const alert = useAlert();
 
-  const onToggle = (on: boolean) => {
+  const onToggle = (runGPS: boolean) => {
     isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
 
-    if (on === isGPSTracking) {
-      return;
-    }
+    if (runGPS === isGPSTracking) return;
 
-    if (isGPSTracking && !on) {
+    if (isGPSTracking && !runGPS) {
       alert({
         header: 'Warning',
         message: 'Are you sure you want to turn off the GPS tracking?',
@@ -49,7 +49,23 @@ const HeaderComponent: FC<Props> = ({
       return;
     }
 
-    toggleGPStracking(on);
+    if (!isGPSTracking && isAreaShape) {
+      alert({
+        header: 'Warning',
+        message:
+          'To resume tracking, you must first remove the drawn area from the map.',
+        buttons: [
+          {
+            text: 'OK',
+            role: 'cancel',
+            handler: () => rerender(id + 1),
+          },
+        ],
+      });
+      return;
+    }
+
+    toggleGPStracking(runGPS);
   };
 
   const GPSToggle = !isDisabled && (

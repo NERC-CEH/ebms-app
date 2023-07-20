@@ -9,11 +9,11 @@
   }
 
   ion-toggle.ios {
-    --background-checked: var(--ion-color-success);
+    --track-background-checked: var(--ion-color-success);
   }
 
   ion-toggle.md {
-    --background-checked: var(--ion-color-success) !important;
+    --track-background-checked: var(--ion-color-success) !important;
     --handle-background-checked: #fff;
   }
 

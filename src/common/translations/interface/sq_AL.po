@@ -1,1168 +1,1153 @@
 # 
 # Translators:
-# Vilius Stankaitis <vilius@flumens.io>, 2022
-# Egle Viciuviene <eviciuviene@gmail.com>, 2022
-# Karolis, 2023
+# Marko Prendi, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2023\n"
-"Language-Team: Lithuanian (Lithuania) (https://app.transifex.com/ceh/teams/95441/lt_LT/)\n"
+"Last-Translator: Marko Prendi, 2023\n"
+"Language-Team: Albanian (Albania) (https://app.transifex.com/ceh/teams/95441/sq_AL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lt_LT\n"
-"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+"Language: sq_AL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Pasirinkite šalį"
+msgstr "Zgjidh shtetin tënd"
 
 msgid "United Kingdom"
-msgstr "Jungtinė Karalystė"
+msgstr "Mbretëria e Bashkuar"
 
 msgid "Lithuania"
-msgstr "Lietuva"
+msgstr "Lituani"
 
 msgid "Spain"
-msgstr "Ispanija"
+msgstr "Spanjë"
 
 msgid "Andorra"
-msgstr "Andora"
+msgstr "Andorra"
 
 msgid "Albania"
-msgstr "Albanija"
+msgstr "Shqipëria"
 
 msgid "Austria"
-msgstr "Austrija"
+msgstr "Austri"
 
 msgid "Bosnia and Herzegovina"
-msgstr "Bosnija ir Hercegovina"
+msgstr "Bosnjë-Hercegovina"
 
 msgid "Belgium"
-msgstr "Belgija"
+msgstr "Belgjikë"
 
 msgid "Bulgaria"
-msgstr "Bulgarija"
+msgstr "Bullgaria"
 
 msgid "Belarus"
-msgstr "Baltarusija"
+msgstr "Bjellorusi"
 
 msgid "Switzerland"
-msgstr "Šveicarija"
+msgstr "Zvicër"
 
 msgid "Cyprus"
-msgstr "Kipras"
+msgstr "Cyprus"
 
 msgid "Czechia"
-msgstr "Čekija"
+msgstr "Çekia"
 
 msgid "Germany"
-msgstr "Vokietija"
+msgstr "Gjermani"
 
 msgid "Denmark"
-msgstr "Danija"
+msgstr "Danimark"
 
 msgid "Estonia"
-msgstr "Estija"
+msgstr "Estoni"
 
 msgid "Spain (Canary Islands)"
-msgstr "Ispanija (Kanarų salos)"
+msgstr "Spanje (Ishujt Kanari)"
 
 msgid "Finland"
-msgstr "Suomija"
+msgstr "Finlandë"
 
 msgid "France"
-msgstr "Prancūzija"
+msgstr "Francë"
 
 msgid "Greece"
-msgstr "Graikija"
+msgstr "Greqi"
 
 msgid "Croatia"
-msgstr "Kroatija"
+msgstr "Kroaci"
 
 msgid "Hungary"
-msgstr "Vengrija"
+msgstr "Hungari"
 
 msgid "Ireland"
-msgstr "Airija"
+msgstr "Irlanda"
 
 msgid "Iceland"
-msgstr "Islandija"
+msgstr "Islanda"
 
 msgid "Italy"
-msgstr "Italija"
+msgstr "Itali"
 
 msgid "Liechtenstein"
-msgstr "Lichtenšteinas"
+msgstr "Lihtenshtajn"
 
 msgid "Luxembourg"
-msgstr "Liuksemburgas"
+msgstr "Luksemburg"
 
 msgid "Latvia"
-msgstr "Latvija"
+msgstr "Letonia"
 
 msgid "Moldova"
-msgstr "Moldova"
+msgstr "Moldavi"
 
 msgid "Montenegro"
-msgstr "Juodkalnija"
+msgstr "Mali i Zi"
 
 msgid "North Macedonia"
-msgstr "Šiaurės Makedonija"
+msgstr "Macedonia e Veriut"
 
 msgid "Malta"
 msgstr "Malta"
 
 msgid "Netherlands"
-msgstr "Nyderlandai"
+msgstr "Hollanda"
 
 msgid "Norway"
-msgstr "Norvegija"
+msgstr "Norvegji "
 
 msgid "Poland"
-msgstr "Lenkija"
+msgstr "Poloni"
 
 msgid "Portugal"
-msgstr "Portugalija"
+msgstr "Portugali"
 
 msgid "Portugal (Azores)"
-msgstr "Portugalija (Azorai)"
+msgstr ""
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugalija (Madeiros salos)"
+msgstr ""
 
 msgid "Romania"
-msgstr "Rumunija"
+msgstr "Rumani"
 
 msgid "Serbia"
-msgstr "Serbija"
+msgstr "Serbi"
 
 msgid "Russian Federation"
-msgstr "Rusijos Federacija"
+msgstr "Federata Ruse"
 
 msgid "Slovenia"
-msgstr "Slovėnija"
+msgstr "Slloveni"
 
 msgid "Japan"
-msgstr "Japonija"
+msgstr "Japoni"
 
 msgid "Slovakia"
-msgstr "Slovakija"
+msgstr "Sllovakia"
 
 msgid "Turkey (Europe)"
-msgstr "Turkija (Europoje)"
+msgstr "Turqi (Europe)"
 
 msgid "Turkey (Asia)"
-msgstr "Turkija (Azijoje)"
+msgstr "Turqi (Azi)"
 
 msgid "Ukraine"
-msgstr "Ukraina"
+msgstr "Ukrainë"
 
 msgid "Elsewhere"
-msgstr "Kitur"
+msgstr "Diku tjetër"
 
 msgid "Skip"
-msgstr "Praleisti"
+msgstr "Kalo"
 
 msgid "Next"
-msgstr "Kitas"
+msgstr "Tjetra"
 
 msgid "Get Started"
-msgstr "Pradėti"
+msgstr "Fillo"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr "Prašome prisijungti prie eBMS paskyros arba užsiregistruoti."
+msgstr "Të lutem futu me llogarinë tënde të eBMS."
 
 msgid "Password"
-msgstr "Slaptažodis"
+msgstr "Fjalëkalimi"
 
 msgid "Sign in"
-msgstr "Prisijungti"
+msgstr "Rregjistrohu"
 
 msgid "Register"
-msgstr "Registruotis"
+msgstr "Rregjistrim"
 
 msgid "Forgot password?"
-msgstr "Pamiršote slaptažodį?"
+msgstr "Ke harruar fjalëkalimin?"
 
 msgid "User not found."
-msgstr "Vartotojas nerastas."
+msgstr "Përdoruesi nuk u gjet."
 
 msgid "Login"
-msgstr "Prisijungti"
+msgstr "Kycu"
 
 msgid "Settings"
-msgstr "Nustatymai"
+msgstr "Cilësimet"
 
 msgid "Info"
-msgstr "Informacija"
+msgstr "Info"
 
 msgid "About"
-msgstr "Apie"
+msgstr "Rreth"
 
 msgid "Help"
-msgstr "Pagalba"
+msgstr "Ndihmë"
 
 msgid "Privacy Policy"
-msgstr "Privatumo nuostatai"
+msgstr "Politika e privatësisë"
 
 msgid "Credits"
-msgstr "Padėkos"
+msgstr "Kredite"
 
 msgid "Email"
-msgstr "El.paštas"
+msgstr "Email"
 
 msgid "First Name"
-msgstr "Vardas"
+msgstr "Emri i parë"
 
 msgid "Surname"
-msgstr "Pavardė"
+msgstr "Mbiemri"
 
 msgid "I agree to"
-msgstr "Aš sutinku su"
+msgstr "Pranoj"
 
 msgid "Terms and Conditions"
-msgstr "Nuostatais"
+msgstr "Termat dhe Kushtet"
 
 msgid "Reset"
-msgstr "Atstatyti "
+msgstr "Rikthe"
 
 msgid "Records"
-msgstr "Įrašai"
+msgstr "Rregjistrime"
 
 msgid "Upload All"
-msgstr "Išsiųsti Visus"
+msgstr "Ngarko të gjitha"
 
 msgid "Remove All Saved"
-msgstr "Ištrinti Visus Išsaugotus"
+msgstr "Fshij Të Gjitha Të Ruajturat"
 
 msgid "Application"
-msgstr "Aplikacija"
+msgstr "Aplikim"
 
 msgid "Training Mode"
-msgstr "Mokymosi Režimas"
+msgstr "Modaliteti Stërvitor"
 
 msgid "Experimental Features"
-msgstr "Bandomosios funkcijos"
+msgstr "Karakteristikat Eksperimentale"
 
 msgid "Welcome"
-msgstr "Sveiki"
+msgstr "Mirësevjen"
 
 msgid "Lets start!"
-msgstr "Pirmyn"
+msgstr "Le të fillojmë!"
 
 msgid "TOP RECORDERS"
-msgstr "TOP VARTOTOJAI"
+msgstr "Numëruesit më të mirë"
 
 msgid "Top Species from all timed counts"
-msgstr "15min stebėjimo populiariausios rūšys"
+msgstr "Speciet më të mira të numëruara nga gjithë kohërat"
 
 msgid "Back"
-msgstr "Atgal"
+msgstr "Prapa"
 
 msgid "Menu"
-msgstr "Meniu"
+msgstr "Menu"
 
 msgid "App"
-msgstr "Aplikacija"
+msgstr "Aplikacion"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
-msgstr "Mes labai dėkingi šiems žmonėms prisidėjusiems prie šio projekto:"
+msgstr ""
+"Jemi shumë mirënjohës personave që ndihmuan në krijimin e këtij aplikacioni:"
 
 msgid "Home"
-msgstr "Namai"
+msgstr "Shtëpi"
 
 msgid "Guide"
-msgstr "Gidas"
+msgstr "Giudë"
 
 msgid "Account"
-msgstr "Paskyra"
+msgstr "Llogari"
 
 msgid "Offline"
-msgstr "Neprisijungęs"
+msgstr "Ofline"
 
 msgid "Sorry, looks like you're offline."
-msgstr "Įrenginys nėra prisijungęs prie interneto."
+msgstr "Na vjen keq, me sa duket je ofline."
 
 msgid "OK"
-msgstr "Gerai"
+msgstr "OK"
 
 msgid "Sorry"
-msgstr "Atsiprašome"
+msgstr "Ndjesë"
 
 msgid "Please wait..."
-msgstr "Prašome palaukti..."
+msgstr "Të lutem prit..."
 
 msgid "name is a required field"
-msgstr "vartotojo vardas negali būti tuščias"
+msgstr "emri është i nevojshëm"
 
 msgid "password is a required field"
-msgstr "slaptažodis negali būti tuščias"
+msgstr "Fjalëkalimi është i domosdoshëm"
 
 msgid "Login error:"
-msgstr "Prisijungimo klaida:"
+msgstr "Gabim në kycje:"
 
 msgid "Failed to fetch"
-msgstr "Nepavyko prisijungti"
+msgstr "Dështoi për tu kapur"
 
 msgid "Incorrect password or email."
-msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
+msgstr "Fjalëkalimi ose emaili është i gabuar."
 
 # Part of logout process
 msgid "Logout"
-msgstr "Atsijungti"
+msgstr "Shkycu"
 
 # Part of logout process
 msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
-"Ar tikrai norite atsijungti?<br/><br/>Atsijungus jūsų surinkta informacija "
-"<4>nebus pašalinta </4> iš įrenginio."
+"Je i sigurt që do të shkycesh? Vrojtimet pezull dhe të ngarkuara nuk do "
+"fshihen nga kjo pajisje."
 
 msgid "Cancel"
-msgstr "Atšaukti"
+msgstr "Fshij"
 
 msgid "Welcome aboard!"
-msgstr "Sveiki prisijungę!"
+msgstr "Mirë se vini në bord!"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Iki naudodamiesi aplikacija prašome patvirtinti savo el.paštą - paspausdami "
-"nuorodą išsiųstą jūsų adresu."
+"Përpara se të dorëzoni rregjistrimet, kontrolloni emailin dhe klikoni në "
+"linkun e verifikimit"
 
 msgid "OK, got it"
-msgstr "Supratau"
+msgstr "OK, kuptova"
 
 msgid "Please fill in"
-msgstr "Prašome užpildyti"
+msgstr "Të lutem plotësoje"
 
 msgid "Area Count"
-msgstr "Teritorijos Monitoringas"
+msgstr "Numërimi i Zonës"
 
 msgid "Area"
-msgstr "Vietovė"
+msgstr "Zonë"
 
 # Location attribute label
 msgid "Location"
-msgstr "Vieta"
+msgstr "Vendndodhja"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr "Vieta"
+msgstr "Kërkohet vendndodhja"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
-"Aplikacijai reikia naudoti GPS tačiau tam jūs turite suteikti leidimą. Ar "
-"atidaryti nustatymus?"
+"Ky aplikacion ka nevojë për vendndodhjen tënde, por nuk ka lejen tënde. Hap "
+"cilësimet tani?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr "Atšaukite jeigu norite taupyti bateriją."
+msgstr "Fshij për të parandaluar shkarkimin e baterisë."
 
 # GPS message
 msgid "Using your location."
-msgstr "Naudoja jūsų vietą"
+msgstr "Duke përdorur vendodhjen tënde."
 
 msgid "Add"
-msgstr "Pridėti"
+msgstr "Shto"
 
 msgid "Add species"
-msgstr "Pridėti rūšį"
+msgstr "Shto specie"
 
 msgid "Duration"
-msgstr "Trukmė"
+msgstr "Kohëzgjatja"
 
 msgid "Species"
-msgstr "Rūšis"
+msgstr "Speciet"
 
 msgid "Species name"
-msgstr "Rūšis"
+msgstr "Emri i species"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
-"Tam kad surastumėte rūšį greičiau, galite naudoti trumpinius. Pavyzdžiui, "
-"ieškant"
+"Për një kërkim më të shpejtë të taksonit mund të përdorni shkurtime të "
+"ndryshme. Si përshembull, për të gjetur"
 
 msgid "you can type in the search bar"
-msgstr "galite įvesti į paieškos lauką"
+msgstr "mund të shkruash në hapsirën e kërkimit "
 
 msgid "Edit Occurrence"
-msgstr "Redaguoti įrašą"
+msgstr "Redakto Ndodhjen"
 
 msgid "Count"
-msgstr "Skaičius"
+msgstr "Numërim"
 
 msgid "Comment"
-msgstr "Komentaras"
+msgstr "Komento"
 
 msgid "Draft"
-msgstr "Juodraštis"
+msgstr "Draft"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Rastas neužbaigtas įrašas, ar norėtumėte jį tęsti?"
+msgstr "Ekziston një draft vëzhgimi i mëparshëm, dëshiron ta vazhdosh?"
 
 msgid "Discard"
-msgstr "Ištrinti"
+msgstr "Elimino"
 
 msgid "Continue"
-msgstr "Tęsti"
+msgstr "Vazhdo"
 
 msgid "Finish"
-msgstr "Užbaigti"
+msgstr "Përfundo"
 
 msgid "minutes"
-msgstr "minutės"
+msgstr "minuta"
 
 msgid "No species added"
-msgstr "Rūšių sąrašas tuščias"
+msgstr "Asnjë specie e shtuar"
 
 msgid "Please draw your area on the map"
-msgstr "Prašome apibrėžti vietovę žemėlapyje"
+msgstr "Të lutem vizato zonën tënde në hartë"
 
 msgid "Draw an area"
-msgstr "Apibrėžti vietovę"
+msgstr "Vizato një zonë"
 
 msgid "Delete"
-msgstr "Ištrinti"
+msgstr "Fshij"
 
 msgid "Surveys"
-msgstr "Įrašai"
+msgstr "Vëzhgimet"
 
 msgid "Reports"
-msgstr "Ataskaitos"
+msgstr "Raportime"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr "Rūšies vardas arba filtras..."
+msgstr "Emri i species ose filteri...."
 
 # Species filter label
 msgid "family"
-msgstr "Šeima"
+msgstr "familja"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Atsiprašome, bet šią akimirką ataskaitos nėra pasiekiamos."
+msgstr "Na vjen keq, asnjë e dhënë e disponueshme për momentin."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "Ar jūs tikrai norite ištrinti šį įrašą?"
+msgstr "Je i sigurt që do të fshish këtë vëzhgim"
 
 msgid "No finished surveys"
-msgstr "Neturite užbaigtų įrašų"
+msgstr "Asnjë vëzhgim i përfunduar"
 
 msgid "Finished surveys"
-msgstr "Užbaigti įrašai"
+msgstr "Vëzhgime të përfunduara"
 
 msgid "Selected area"
-msgstr "Pasirinkta vietovė"
+msgstr "Zgjidh zonën"
 
 msgid "Use survey create time"
-msgstr "Naudoti įrašo sukūrimo laiką"
+msgstr "Përdor kohën e krijimit të vëzhgimit"
 
 msgid "Use survey finish time"
-msgstr "Naudoti įrašo užbaigimo laiką"
+msgstr "Përdor kohën e përfundimit të vëzhgimit"
 
 msgid "species"
-msgstr "rūšys"
+msgstr "specie"
 
 msgid "Done"
-msgstr "Atlikta"
+msgstr "U krye"
 
 msgid "Time's up!"
-msgstr "Laikas baigėsi!"
+msgstr "Koha mbaroi!"
 
 msgid "Survey incomplete"
-msgstr "Neužbaigta"
+msgstr "Vëzhgimi i paplotë"
 
 msgid "The survey is not complete yet."
-msgstr "Įrašui trūksta informacijos."
+msgstr "Vëzhgimi nuk është akoma i përfunduar."
 
 msgid "Please select a smaller area."
-msgstr "Prašome pasirinkti mažesnę vietovę."
+msgstr "Të lutem zgjidh një zonë më të vogël."
 
 msgid "Please add survey area information."
-msgstr "Prašome pasirinkti vietovę."
+msgstr "Të lutem shto informacion me zonën e vëzhgimit."
 
 msgid "Choose a method to upload a photo"
-msgstr "Pasirinkite metodą pridėti nuotraukai"
+msgstr "Zgjidh një metodë për të ngarkuar një foto"
 
 msgid "Gallery"
-msgstr "Galerija"
+msgstr "Galeri"
 
 msgid "Camera"
 msgstr "Kamera"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "Ar jūs tikrai norite ištrinti šią nuotrauką?"
+msgstr "Je i sigurt që do të heqësh këtë foto?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Pastaba: ištrynus nuotrauka liks telefono galerijoje."
+msgstr "Shënim: do të qëndron në galeri."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr "Šis yrašas neturi nuotraukų.<br/>Spausti <3></3> pridėti nuotraukai."
+msgstr "Asnjë foto nuk është shtuar. Kliko për të shtuar."
 
 msgid "Registration error:"
-msgstr "Nepavyko prisiregistruoti:"
+msgstr "Gabimi në rregjistrim:"
 
 # Login error message
 msgid "Incorrect password or email"
-msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
+msgstr "Fjalëkalimi ose emaili jo korrekt"
 
 msgid "Enter your email address to request a password reset."
-msgstr "Įveskite savo el. paštą norėdami atnaujinti savo slaptažodį"
+msgstr "Fut emailin tënd për të kërkuar rivendosur fjalëkalimin"
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr "Sėkmingai prisijungėte kaip: {{email}}"
+msgstr "I kycur me sukses si: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr "Vartotojas dar nėra aktyvuotas arba buvo užblokuotas"
+msgstr "Përdoruesu nuk është aktivizuar ose është i bllokuar."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
-"Atrodo, kad jūsų <1>{{userEmail}}</1> el.paštas dar nebuvo patvirtintas. "
-"<3><0>Atnaujinti</0><1>Persiųsti e. laišką</1></3>"
+"Me sa duket emaili juaj {{userEmail}} nuk është verifikuar akoma. Rifresko "
+"Ridërgo Email"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
-"Naujas patvirtinimo el. laiškas sėkmingai išsiųstas. Jei negavote el. "
-"laiško, patikrinkite šlamšto aplankus el.pašte"
+"Një email i ri verifikimi është dërguar me sukses tani. Nëse nuk e keni "
+"marrë emailin, atëherë kontrolloni dosjen Spam në email."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr "Prašome pirma prisijungti"
+msgstr "Ju lutem kycuni si fillim."
 
 # User registration error
 msgid "This email is already taken."
-msgstr "Šis el.paštas jau naudojamas"
+msgstr ""
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr "netinkamas el.pašto formatas"
+msgstr ""
 
 msgid "email is not valid"
-msgstr "negalimas el.paštas"
+msgstr "emaili nuk është i vlefshëm"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Dieniniai drugiai yra nuostabūs vabzdžiai, tačiau jie nyksta daugelyje "
-"Europos šalių. Ši grafa parodo Europos dieninių drugių populiacijų mažėjimą."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
-"Šia aplikacija renkama informacija praplečia mūsų žinias apie dieninius "
-"drugius ir jų būveines."
+"Të dhënat e mbledhura nga ky aplikacion do të përmirësojnë ndjeshëm "
+"informacionin mbi statusin e fluturave dhe habitatet e tyre."
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
-"Mums dar trūksta informacijos apie dieninių drugių būklę daugelyje Europos "
-"vietų, tai rodo šiuo metu žemėlapyje turimų pateiktų įrašų tankumas dieninių"
-" drugių būklei įvertinti."
+"Kemi mungesë informacioni mbi numrin e fluturave në shumë vende të Europës, "
+"sic shihet nga dendësia e rregjistrimeve të disponueshme deri tani për të "
+"vlerësuar statusin e fluturave."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Dar niekada nebuvo taip paprasta pateikti aukštos kokybės duomenis "
-"moksliniams tyrimams, kurie padėtų išsaugoti šiuos įspūdingus ir gyvybiškai "
-"svarbius vabzdžius. Galite pradėti jau dabar!"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"Ši aplikacija yra 'Assessing Butterflies in Europe (ABLE)' projekto dalis."
+"APlikacioni është krijuar si pjesë e projektit të Vlerësimit të Fluturave në"
+" Europë (ABLE)."
 
 msgid "The ABLE project is a partnership between"
-msgstr "ABLE projektas yra šių organizacijų partnerystė"
+msgstr "Projekti ABLE është një partnership mes"
 
 msgid "and"
-msgstr "ir"
+msgstr "dhe"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
-"ABLE yra financuojamas Europos Sąjungos Direktyvos Aplinkosaugai 2019-20 "
-"metams."
+"ABLE është themeluar nga një kontratë nga Direktiva e Bashkimit Europian për"
+" Mjedisin, për një periudhë fillestare prej dy vitesh nga 2019-20."
 
 msgid "ABLE partners:"
-msgstr "ABLE parnerystė:"
+msgstr "Partnerët ABLE:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
-"Ši aplikacija prisideda prie Europos Dieninių Drugių Monitoringo (eBMS)."
+"Ky aplikacion kontribuon me të dhëna tek Skema Europiane e Monitorimit të "
+"Fluturave (eBMS)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr "eBMS parneriai (2019 Birželis):"
+msgstr "Në Qershor 2019, organizatat e mëposhtme janë partner në eBMS: "
 
 msgid "Not enough data yet"
-msgstr "Nepakankamai surinkta įrašų"
+msgstr "Të dhëna akoma të pa mjaftueshme"
 
 msgid "How to start a survey"
-msgstr "Kaip pradėti įrašą"
+msgstr "Si të fillosh një vrojtim"
 
 msgid "To start a new survey you can press the plus button"
-msgstr "Pradėti naują įrašą galite paspaude pliuso mygtuką"
+msgstr "Për të filluar një vëzhgim tjetër mund të shypësh butonin plus"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
-msgstr "pagrindinio puslapio poraštėje. Prasidės naujas 15 minučių įrašas."
+msgstr "në fund të faqes kryesore. Kjo do të fillojë një vëzhgim 15 minutësh."
 
 msgid "Selecting species"
-msgstr "Rūšių pasirinkimas"
+msgstr "Duke zhgjedhur speciet"
 
 msgid "Please press the Add"
-msgstr "Prašome paspausti Pridėti"
+msgstr "Të lutem kliko Shto"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"mygtuką naujajame įrašo redagavimo puslapyje. Tai nuves jus į taksonų "
-"paieškos puslapį. Pasirinkus rūšį, ji bus įtraukta į jūsų įrašo sąrašą."
 
 msgid "Note"
-msgstr "Pastaba"
+msgstr "Shënim"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
-"galite padidinti rūšių skaičių, paliesdami skaičių esantį šalia rūšies "
-"pavadinimo."
+"ju mund të rrisni numërimin e specieve duke klikuar tek numri ngjitur me "
+"emrin e species tek lista."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Jei norite ištrinti rūšį iš savo įrašo sąrašo, pirštu braukite į kairę ir "
-"spustelėkite IŠTRINTI mygtuką."
+"Për të fshirë një specie nga lista e  vëzhgimit mund ta tërheqësh majtas dhe"
+" kliko butonin fshij."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"Norėdami pridėti daugiau informacijos apie jūsų rūšies įrašą, paspauskite "
-"ant rūšies įrašo. "
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr ""
-"Norėdami užbaigti įrašą, taip pat turėtumėte užpildyti vietovės duomenis."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
-msgstr "Kai baigsite, pateikimui paspauskite Užbaigti mygtuką antraštėje."
+msgstr "Kur të mbarosh, vendos për dorzim duke klikuar buton Mbaro në krye."
 
 msgid "Searching for species"
-msgstr "Rūšių pasirinkimas"
+msgstr "Duke kërkuar për speciet"
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"Aplikacija turi apie 500 dieninių drugių rūšių ir visus susijusius "
-"taksonomijos rangus. Norėdami greičiau ieškoti taksonų, galite naudoti "
-"skirtingus trumpinius. Pavyzdžiui, norėdami rasti "
+"Aplikacioni përmban rreth 500 lista të llojeve të fluturave dhe të gjitha "
+"renditjet taksonomike të lidhura. Për një kërkim më të shpejtë të taksave, "
+"mund të përdorni shkurtime të ndryshme. Për shembull, për të gjetur"
 
 msgid "Sync. with the website"
-msgstr "Sinchronizavimas su interneto svetaine"
+msgstr "Lidh me website"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr "Visi išsaugoti įrašai bus atvaizduoti interneto puslapio paskyroje."
+msgstr ""
+"Të gjitha vëzhgimet e ruajtura do të shfaqen në faqen e adresës tënde."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Pagal pradinius nustatymus įrašai yra „juodraščio“ režimu, kurie nebus "
-"siunčiami į duomenų bazę, kol nebus nuspaustas antraštėje esantis mygtukas "
-"„UŽBAIGTI“ . Aplikacija bandys išsiųsti įrašą, kai bus sukurtas geras "
-"interneto ryšys."
 
 msgid "If the record has reached the database a red"
-msgstr "Jei įrašo simbolis pasiekė duomenų bazę raudonas"
+msgstr ""
 
 msgid "(set for submission & saved locally) will become green"
-msgstr "(paruoštas pateikimui & išsaugotas įrenginyje) taps žalias"
+msgstr ""
+"( i caktuar për dorëzim dhe i ruajtur në nivel lokal) do të bëhet i gjelbër"
 
 msgid "synced to the database"
-msgstr "susinchronizuotas su duomenų baze"
+msgstr "sikronizuar me databasen "
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
-"turite būti prisijungę prie savo svetainės paskyros ir turėti interneto "
-"ryšį, kad įrašai būtų automatiškai sinchronizuojami"
+"duhet të jesh i rregjistruar në websit-in tënd dhe të kesh lidhje në "
+"internet, në mënyrë që rregjistrimet tuaja të sinkronizohen automatikisht"
 
 msgid "Delete a record"
-msgstr "Įrašo ištrynimas"
+msgstr "Fshij një rregjistrim"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Norėdami ištrinti įrašą, braukite jį į kairę Įrašai puslapyje ir "
-"spustelėkite mygtuką IŠTRINTI."
+"Për të fshirë një rregjistrim, tërhiqe majtas në faqen e adresës tënde dhe "
+"kliko butonin fshij."
 
 msgid "User"
-msgstr "Vartotojas"
+msgstr "Përdorues"
 
 msgid "Sign in/out or register"
-msgstr "Prisijungimas/Atsijungimas arba Registracija"
+msgstr "Rregistrohu/crregjistrohu"
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"Norėdami prisijungti, pagrindiniame meniu puslapyje paspauskite Prisijungti "
-"arba Registruotis mygtukus ir sekite instrukcijas."
+"Për t'u identifikuar, hapni faqen kryesore të menusë, klikoni butonat "
+"\"Identifikohu\" ose \"Regjistrohu\" dhe ndiqni udhëzimet."
 
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr ""
-"Norėdami atsijungti, pagrindiniame meniu puslapyje paspauskite Atsijungti "
-"mygtuką."
+"Për tu shkyçur, vizito faqen e menusë kryesore dhe kliko butonin shkyç. "
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
-"po naujos paskyros sukūrimo privaloma patvirtinti savo el.pašto adresą, tai "
-"galite padaryti paspausdami patvirtinimo nuorodą atsiųstą jums į el. paštą"
+"pas rregjistrimit të adresës së re duhet të verifikoni adresën e email-it "
+"duket klikuar te një link verifikimi të dërguar në email-in tënd"
 
 msgid "Other"
-msgstr "Kiti"
+msgstr "Tjetër"
 
 msgid "Reset the application"
-msgstr "Atstatyti aplikaciją"
+msgstr "Rivendos aplikacionin"
 
 msgid "Go to the application settings page"
-msgstr "Nueikite į aplikacijos nustatymų puslapį"
+msgstr "Shko te faqja e cilësive të aplikacionit"
 
 msgid "and click on the Reset"
-msgstr "ir paspauskite Atstatyti"
+msgstr "dhe kliko te Rivendos"
 
 msgid "button"
-msgstr "mygtuką"
+msgstr "buton"
 
 msgid "No species found with this name"
-msgstr "Tokiu pavadinimu rūšis nerasta"
+msgstr "Asnjë specie e gjetur me këtë emër"
 
 msgid "Allow Sample Edit"
-msgstr "Leisti Modifikuoti Įrašus"
+msgstr "Lejo editimin e kampjonit"
 
 msgid "Upload"
-msgstr "Išsiųsti"
+msgstr "Ngarko"
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Ši aplikacija palaiko dieninių drugių stebėjimą ir išsaugojimą. Paspauskite "
-"žemiau esantį  + mygtuką, kad pradėtumėte skaičiuoti dieninius drugius."
+"Ky aplikacion mbështet monitorimin dhe ruajtjen e fluturave. Klikoni në "
+"butonin + më poshtë për të filluar numërimin e fluturave."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
-"Jūs matysite daugybę atnaujinimų šiai aplikacijai per artimiausius mėnesius."
+"Do të shihni shumë përmirësime në këtë aplikacion teksa ne shtojmë veçori të"
+" reja gjatë muajve të ardhshëm."
 
 msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Ar tikrai norite atstatyti aplikaciją į pradinę būseną? "
+msgstr ""
+"Je i sigurt që do të rikthesh aplikacionin në gjendjen e tij fillestare?"
 
 msgid "This will wipe all the locally stored app data!"
-msgstr "Tai ištrins visus įrenginyje saugomus aplikacijos duomenis!"
+msgstr "Kjo do të fshijë të gjitha të dhënat lokale të ruajtura!"
 
 msgid "Sweden"
-msgstr "Švedija"
+msgstr "Suedi"
 
 msgid "Paused"
-msgstr "Pauzė"
+msgstr "I ndaluar"
 
 msgid "Pending"
-msgstr "Neišsiųsta"
+msgstr "Pezull"
 
 msgid "Uploaded"
-msgstr "Išsiųsta"
+msgstr "Ngarkuar"
 
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
-msgstr "Jeigu norite matyti savo įrašus, pirma turite <1>prisijungti</1> prie savo eBMS sąskaitos."
+msgstr ""
 
 msgid "No finished pending surveys"
-msgstr "Neturite užbaigtų neišsiųstų įrašų"
+msgstr "Asnjë vëzhgim i përfunduar pezull"
 
 msgid "No uploaded surveys"
-msgstr "Neturite išsiųstų įrašų"
+msgstr "Asnjë vëzhgim i ngarkuar"
 
 msgid "Enjoying the app?"
-msgstr "Ar tau patinka ši aplikacija?"
+msgstr "Po të pëlqen aplikacioni?"
 
 msgid "Not really"
-msgstr "Deja, ne"
+msgstr "Jo në të vërtetë"
 
 msgid "Yes!"
-msgstr "Taip!"
+msgstr "Po!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr "Gal turite kokių pasiūlymų?"
+msgstr "Dëshironi të na jepni disa komente?"
 
 msgid "No, thanks"
-msgstr "Ne, ačiū"
+msgstr "Jo, faleminderit"
 
 msgid "OK, sure"
-msgstr "Taip, žinoma"
+msgstr "OK, sigurisht"
 
 msgid "How about a rating on the App Store then?"
-msgstr "Gal galėtumėte parekomenduoti aplikaciją App Store?"
+msgstr "Po në lidhje me një vlerësim në App Store atëherë?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "Gal galėtumėte parekomenduoti aplikaciją Play Store?"
+msgstr "Si thua për një vlerësim në Play Store atëherë?"
 
 msgid "Icons made by"
-msgstr "Ikonas sukūrė"
+msgstr "Ikonat e krijuara nga"
 
 msgid "from"
-msgstr "iš"
+msgstr "nga"
 
 msgid "We've sent an email to you"
-msgstr "Mes jums išsiuntėme el.laišką"
+msgstr "Të kemi dërguar një email"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
-"Gavus laišką paspauskite ten esančią nuorodą ir sekite tolimesnes "
-"instrukcijas.  Jeigu laiško negavote, patikrinkite savo elektroninio šlamšto"
-" 'spam' arba 'junk' dėžutes."
+"Klikoni linkun në email për të rivendosur fjalëkalimin tuaj. Nëse nuk e "
+"shihni emailin, kontrolloni vende të tjera si dosjet tuaja të padëshiruara, "
+"postat e padëshiruara ose dosje të tjera."
 
 msgid "App Development"
-msgstr "Mobilios programos kūrimas"
+msgstr "Zhvillimi i aplikacionit"
 
 msgid "This app was hand crafted with love by"
-msgstr "Šią mobilią programą su meile sukūrė"
+msgstr "Ky aplikacion është krijuar me dashuri nga"
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
-msgstr "Kompanija specializuojanti progaminės įrangos kurime."
+msgstr ""
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr "Jeigu turite kokių patarimų ar pageidavimų"
+msgstr ""
 
 msgid "contact us"
-msgstr "susisiekite su mumis"
+msgstr "na kontakto"
 
 msgid "Language"
-msgstr "Kalba"
+msgstr "Gjuha"
 
 msgid "Country"
-msgstr "Šalis"
+msgstr "Shteti"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
-msgstr "Pažymėti naujus įrašus 'testavimui' ir nerodyti jokiuose reportuose."
+msgstr ""
+"Shëno cdo rregjistrim të ri si \"trajnim\" dhe përjashtoi nga të gjitha "
+"raportet."
 
 # App setting label
 msgid "Show common names in guide"
-msgstr "Rodyti bendrinius rušių pavadinimus gide"
+msgstr ""
 
 msgid "Share App Analytics"
-msgstr "Dalintis naudojimosi duomenimis"
+msgstr "Shpërndaj aplikacionin analitik"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
-"Bendrinkite programos strigčių duomenis, kad galėtume padaryti programą "
-"patikimesnę."
 
 msgid "Save Draft"
-msgstr "Išsaugoti Juodraštį"
+msgstr "Ruaj draftin"
 
 msgid "Stage"
-msgstr "Stadija"
+msgstr "Fazë"
 
 msgid "Not Recorded"
-msgstr "Nepažymėta"
+msgstr "I pa rregjistruar"
 
 msgid "Adults"
-msgstr "Suaugęs"
+msgstr "Të rritur"
 
 msgid "Larvae"
-msgstr "Vikšras"
+msgstr "Larvë"
 
 msgid "Eggs"
-msgstr "Kiaušinėlis"
+msgstr "Vezë"
 
 msgid "Pupae"
-msgstr "Lėliukė"
+msgstr "Pupë"
 
 msgid "Larval webs"
-msgstr "Vikšro tinklas"
+msgstr "Rrjetat larvare"
 
 # Butterfly stage
 msgid "Adult"
-msgstr "Suaugęs"
+msgstr ""
 
 # Butterfly stage
 msgid "Egg"
-msgstr "Kiaušinėlis"
+msgstr ""
 
 # Butterfly stage
 msgid "Larva"
-msgstr "Vikšras"
+msgstr ""
 
 # Butterfly stage
 msgid "Larval web"
-msgstr "Vikšro tinklas"
+msgstr ""
 
 # Butterfly stage
 msgid "Pupa"
-msgstr "Lėliukė"
+msgstr ""
 
 msgid "Transect"
-msgstr "Transekta"
+msgstr "Transekt"
 
 msgid "Sections"
-msgstr "Ruožai"
+msgstr "Seksione"
 
 msgid "No transect"
-msgstr "Nėra transektos"
+msgstr "Asnjë transekt"
 
 msgid "Start Time"
-msgstr "Pradžios Laikas"
+msgstr "Koha e fillimit"
 
 msgid "End Time"
-msgstr "Pabaigos Laikas"
+msgstr "Koha e përfundimit"
 
 msgid "Temperature"
-msgstr "Oro Temperatūra"
+msgstr "Temperatura"
 
 msgid "Cloud"
-msgstr "Debesuotumas"
+msgstr "Re"
 
 msgid "Wind Direction"
-msgstr "Vėjo Kryptis"
+msgstr "Drejtimi i erës"
 
 msgid "Wind Speed"
-msgstr "Vėjo Greitis"
+msgstr "Shpejtësia e Erës"
 
 msgid "Recorder"
-msgstr "Stebėtojo vardas"
+msgstr ""
 
 msgid "Refresh"
-msgstr "Atnaujinti"
+msgstr "Rifresko"
 
 msgid "Please select your transect first."
-msgstr "Prašome pirma pasirinkti savo transektą."
+msgstr "Të lutem zgjidh transektin para."
 
 msgid "Invalid server response."
-msgstr "Nesuprantamas serverio atsakymas."
+msgstr "Përgjigje e serverit jo e vlefshme."
 
 msgid "Not recorded/no data"
-msgstr "Neužfiksuota / nėra informacijos"
+msgstr "I pa rregjistruar/pa të dhëna"
 
 msgid "Please specify the temperature C°."
-msgstr "Prašome nurodyti oro temperatūrą C°."
+msgstr "Të lutem specifiko temperaturën."
 
 msgid "S"
-msgstr "Pietūs"
+msgstr "S"
 
 msgid "SW"
-msgstr "Pietvakariai"
+msgstr "SW"
 
 msgid "W"
-msgstr "Vakarai"
+msgstr "W"
 
 msgid "NW"
-msgstr "Šiaurės vakarai"
+msgstr "NW"
 
 msgid "N"
-msgstr "Šiaurė"
+msgstr "N"
 
 msgid "NE"
-msgstr "Šiaurės rytai"
+msgstr "NE"
 
 msgid "E"
-msgstr "Rytai"
+msgstr "E"
 
 msgid "SE"
-msgstr "Pietryčiai"
+msgstr "SE"
 
 msgid "No direction"
-msgstr "Jokios krypties"
+msgstr "Asnjë drejtim"
 
 msgid "Please specify the wind direction."
-msgstr "Prašome pasirinkti vėjo kryptį."
+msgstr "Të lutem specifiko drejtimin e erës."
 
 msgid "Smoke rises vertically"
-msgstr "Dūmai ore kyla vertikaliai aukštyn"
+msgstr "Tymi ngjitet vertikalisht"
 
 msgid "Slight smoke drift"
-msgstr "Dūmai ore juda į šoną"
+msgstr "Lëvizje e lehtë e tymit"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr "Vėjas jaučiamas and veido, medžių lapai kruta"
+msgstr "Era ndihet në fytyrë, gjethet vërshëllejnë"
 
 msgid "Leaves and twigs in slight motion"
-msgstr "Lapai ir mažos šakelės truputėlį linguoja"
+msgstr ""
 
 msgid "Dust raised and small branches move"
-msgstr "Sujudinamos dulkės ir mažos medžių šakelės"
+msgstr ""
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Maži sužaliavę medžio lapeliai pradeda truputį judėti"
+msgstr "Gjethe të vogla në pemë lëkunden"
 
 msgid "Large branches move and trees sway"
-msgstr "Didelės medžių šakos juda ir medžiai linguoja"
+msgstr "Degë të mëdha lëvizin dhe pemët lëkunden"
 
 msgid "Please specify the wind speed."
-msgstr "Prašome pasirinkti vėjo greitį."
+msgstr "Të lutem specifiko shpejtësinë e erës."
 
 msgid "Transects"
-msgstr "Transektos"
+msgstr "Transekt"
 
 msgid "Transect list was successfully updated."
-msgstr "Transektų sąrašas buvo sėkmingai atnaujintas."
+msgstr "Lista e transektit është përditësuar me sukses."
 
 msgid "Section"
-msgstr "Ruožas"
+msgstr "Seksion"
 
 msgid "Reliability"
-msgstr "Patikimumas"
+msgstr "Besueshmëria"
 
 msgid "Please specify the reliability of the section count."
-msgstr "Prašome pasirinkti šios dalies įrašų patikimumą."
+msgstr "Të lutem specifiko besueshmërinë e numërimit të seksionit."
 
 msgid "Suitable conditions"
-msgstr "Tinkamos sąlygos"
+msgstr ""
 
 msgid "Unsuitable conditions"
-msgstr "Netinkamos sąlygos"
+msgstr ""
 
 msgid "Unable to survey"
-msgstr "Stebėjimas negalimas"
+msgstr ""
 
 msgid "15min Count"
-msgstr "15min stebėjimas"
+msgstr ""
 
 msgid "15min Single Species Count"
-msgstr "15min Vienos Rūšies Stebėjimas"
+msgstr ""
 
 msgid "eBMS Transect"
-msgstr "eBMS Transekta"
+msgstr "Transekti eBMS"
 
 msgid "Please add any extra info about this record."
-msgstr "Prašome papildyti įrašą kita susijusia informacija."
+msgstr "Të lutem shton cdo informacion ekstra mbi këtë rregjistrim"
 
 msgid "Enter more information here..."
-msgstr "Įvesti daugiau informacijos čia..."
+msgstr "Shto më shumë informacion këtu..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr "Prašome nurodyti žmogų atpažinusį šio įrašo rūšis."
+msgstr "Të lutem specifiko personin përgjegjës për identifikimin e specieve."
 
 msgid "HH:mm"
-msgstr "VV:mm"
+msgstr ""
 
 msgid "Please specify the % of cloud cover."
-msgstr "Prašome nurodyti debesuotumą %."
+msgstr "Të lutem specifiko % e mbulimit me re."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "Nerasta eBMS transektų. Prašome pabandyti atnaujinti sąrašą."
+msgstr "Ti nuk ke asnjë transekt. Të lutem provo të rifreskosh listën."
 
 msgid "Wind speed info is missing"
-msgstr "Trūksta informacijos apie vėjo greitį"
+msgstr "Informacioni mbi shpejtësinë e erës mungon"
 
 msgid "Temperature info is missing"
-msgstr "Trūksta informacijos apie oro temperatūrą"
+msgstr "Mungon informacioni mbi temperaturën"
 
 msgid "Recorder info is missing"
-msgstr "Trūksta informacijos apie stebėtoją"
+msgstr ""
 
 msgid "Please select your transect."
-msgstr "Prašome pirma pasirinkti savo transektą"
+msgstr "Të lutem zgjidh transektin tënd"
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Šis drugelių gidas yra dar plečiamas. Šiuo metu jūs galite matyti "
-"{{countrySpeciesCount}}  iš {{totalSpeciesCountryCount}} drugelių rūšių jūsų"
-" pasirinktoje šalyje."
 
 msgid "Status"
-msgstr "Statusas"
+msgstr "Status"
 
 msgid "Absent"
-msgstr "Nėra aptinkamas"
+msgstr "Mungon"
 
 msgid "Present"
-msgstr "Randamas"
+msgstr "I pranishëm"
 
 msgid "Possibly present"
-msgstr "Galbūt randamas"
+msgstr "Me shumë mundësi i pranishëm"
 
 msgid "Regular migrant"
-msgstr "Dažnas svečias"
+msgstr "Migrator i rregullt"
 
 msgid "Irregular vagrant"
-msgstr "Retas svečias"
+msgstr ""
 
 msgid "Regionally extinct"
-msgstr "Šalyje išnykęs"
+msgstr "I zhdukur në rajon"
 
 msgid "Description"
-msgstr "Apibūdinimas"
+msgstr "Përshkrim"
 
 msgid "Counts"
-msgstr "Įrašai"
+msgstr "Numërime"
 
 msgid "Species descriptions"
-msgstr "Rūšių aprašai"
+msgstr ""
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Ačiū Josef Settele už leidimą naudoti rūšių aprašus iš Climatic Risk Atlas "
-"of European Butterflies."
 
 msgid "Photo credits"
-msgstr "Nuotraukų autoriai."
+msgstr ""
 
 msgid "How to use the app"
-msgstr "Kaip naudotis šia programėle"
+msgstr ""
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1170,11 +1155,6 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Šią programėlę galite naudoti norėdami stebėti dieninius drugius bet kurioje"
-" Europos vietoje. Rezultatai bus įrašyti į Europos dieninių drugių stebėjimo"
-" duomenų bazę ir naudojami kuriant dieninių drugių būklės tendencijas visoje"
-" Europoje. Norėdami naudoti programą, pirmiausia turėsite užregistruoti "
-"paskyrą."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1184,15 +1164,9 @@ msgid ""
 "the ability to submit casual records. The notes below tell you how to use "
 "the currently available methods."
 msgstr ""
-"Pageidautinas metodas yra 15 minučių stebėjimas. Jį galima daryti bet "
-"kurioje vietoje ir bet kuriuo metu, kai dieniniai drugiai yra aktyvūs (t. y."
-" Kai oras šiltas ir, pageidautina, saulėtas). Šią programėlę taip pat galite"
-" naudoti atliekant jau numatytas transektas. Vėliau, 2020 m., Programoje "
-"taip pat bus galimybė pateikti pavienius įrašus. Žemiau pateikta informacija"
-" kaip naudotis šiuo metu prieinamais metodais"
 
 msgid "How to do a 15-minute Count"
-msgstr "Kaip atlikti 15 minučių stebėjimą"
+msgstr ""
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1207,16 +1181,6 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Tai yra pagrindinis įrašų surinkimo metodas. Tiesiog 15 minučių skaičiuokite"
-" dieninių drugius apibrėžtoje vietoje, pavyzdžiui, lauke, eidami ar "
-"stovėdami ant fiksuoto taško, skaičiuodami drugius, kuriuos užfiksavote. "
-"Nebūtina pažymėti nueito maršruto, jei jūsų nustatymuose įjungtas GPS, kuris"
-" automatiškai seks jūsų nueitą kelią. Priešingu atveju, naudodami programą, "
-"turėsite nubrėžti ieškomą plotą žemėlapyje. Norėdami pradėti, palieskite "
-"mygtuką + ekrano apačioje. Programa skaičiuos 15 minučių, tačiau bet kuriuo "
-"metu galite pristabdyti (pavyzdžiui, pasitikslinti identifikacijai) "
-"paspausdami pauzės mygtuką. Apklausos pabaigoje galite peržiūrėti savo "
-"įrašus."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1226,12 +1190,6 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
-"Pridėkite matomas rūšis paspausdami mygtuką 'Pridėti' ir pradėkite rašyti "
-"rūšies pavadinimą. Rūšių pasirinkimas pasirodys kaip išskleidžiamasis meniu."
-" Galite naudoti mokslinius arba vietos pavadinimus. Pasirinktas rūšis ir jų "
-"kiekį galima lengvai pakeisti. Dieninių drugių sąraše spustelėjus prie "
-"rūšies vardo kairėje esantį numerį numeris padidės. Spustelėjus ant rūšies "
-"vardo taip pat galite pridėti nuotraukų ir komentarų."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1240,13 +1198,9 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"Baigę 15 minučių stebėjimą ir patikrinę, ar rūšys ir skaičiai yra teisingi, "
-"paspauskite mygtuką Įkelti. Tai svarbu norint, kad jūsų duomenys būtų įkelti"
-" į eBMS duombazę. Po įkėlimo įrašas išliks saugomas jūsų įrenginyje, kad "
-"būtų galima jį naudoti ir ateityje."
 
 msgid "How to record along an existing transect"
-msgstr "Kaip įrašyti pagal esamą transektą"
+msgstr ""
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1257,13 +1211,6 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
-"Programą taip pat galite naudoti eidami į esamas dieninių drugių stebėjimo "
-"transektas. Jas jau nustatė šalies dieninių drugių stebėjimo programos ir "
-"jas geriausiai užpildo patyrę stebėtojai. Jei norite įrašyti esamus "
-"programos segmentus, reikia, kad jūsų anketa jau būtų susieta su "
-"transektomis „eBMS“ sistemoje. Jei prisijungus prie programos nėra jokių "
-"transektų vietų, prašome susisiekti su savo šalies koordinatoriumi (patarimo"
-" prašome klausti el. Paštu {{helpEmail}})."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1278,20 +1225,9 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"Norėdami pradėti su transektų skaičiavimu, palaikykite nuspaudę mygtuką + "
-"(palaikykite ilgai) ekrano apačioje ir pasirinkite „eBMS Transekta“. "
-"Pirmiausia turite pasirinkti savo transektas (tam reikės prisijungti, o "
-"transektų maršrutus susieti su jūsų vartotojo sąskaita). Pasirinkę savo "
-"transektos vietą, puslapyje „Transekta“ galite užpildyti reikiamą aplinkos "
-"informaciją (pvz., Temperatūrą, vėjo greitį ir kt.) Ir kitą būtiną "
-"informaciją (pvz., Pradžios laiką). Tada pridėkite matytų rūšių sąrašą ir "
-"kiekvienos transektos sekcijoje suskaičiuotą individų skaičių, taip pat kaip"
-" atliekant 15 min stebėjimą. Baigę transektą ir patikrinę ar visos stebėtos "
-"rūšys suvestos ir individų skaičiai teisinga, paspauskite mygtuką UŽBAIGTI, "
-"kad pateiktumėte duomenis"
 
 msgid "Survey section"
-msgstr "Įrašų skyrius"
+msgstr ""
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1301,539 +1237,514 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
-"Šiame puslapyje, galite pamatyti visus neišsiųstus ir išsiųstus įrašus. Visi"
-" įrašai taip pat gali būti tvarkomi {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
-msgstr "eBMS puslapyje"
+msgstr ""
 
 msgid "App Settings"
-msgstr "Programėlės nustatymai"
+msgstr ""
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr "Rodyti tik dieną skraidančius naktinius drugius"
+msgstr ""
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
-"Norint pakeisti kalbą arba pasirinktą šalį eikite į programos nustatymų "
-"puslapį. Pasirinkta šalis yra svarbi tam, kad dieninių drugių vadove "
-"pamatytumėte skirtingas rūšis - matysite tik tas rūšis, kurios aptinkamos "
-"toje šalyje."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
-"Jūs taip pat galite įsijungti Mokymosi režimą su kuriuo įrašai nebus "
-"panaudoti jokiais tikslais."
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr "Ar tikrai norite ištrinti pažymėtą maršrutą?"
+msgstr ""
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr "Išsaugoti"
+msgstr ""
 
 msgid "Map"
-msgstr "Žemėlapis"
+msgstr ""
 
 msgid "Today"
-msgstr "Šiandieną"
+msgstr ""
 
 msgid "Yesterday"
-msgstr "Vakar"
+msgstr ""
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr ""
-"Šis įrašas buvo įkeltas į duomenų bazę ir šioje aplikacijoje negali būti "
-"kečiamas."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr "Kiti stebėjimai"
+msgstr ""
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
-"Vienu kartu įkelti visus užbaigtus įrašus. Šis pasirinkimas neįtraukia "
-"'juodraščių'."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr "Ar jūs tikrai norite įkelti visus užbaigtus įrašus?"
+msgstr ""
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr "Prašome pirma prisijungti prieš įkeliant įrašus."
+msgstr ""
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] "Siunčiama {{count}} įrašas"
-msgstr[1] "Siunčiama {{count}} įrašai"
-msgstr[2] "Siunčiama {{count}} įrašų"
-msgstr[3] "Siunčiama {{count}} įrašų"
+msgstr[0] ""
+msgstr[1] ""
 
 # Part of a page error
 msgid "Oops! Something went wrong."
-msgstr "O ne! Kažkur įvyko klaida."
+msgstr ""
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr "Klaidos kodas: {{eventId}}"
+msgstr ""
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr "Papildoma informacija"
+msgstr ""
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr "Orų sąlygos"
+msgstr ""
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr "Orų sąlygos"
+msgstr ""
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr "Ar tikrai norite ištrinti {{taxon}} rūšį ?"
+msgstr ""
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
-msgstr "Orų prognozės yra gaunamos naudojant OpenWeatherMap API"
+msgstr ""
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr "Kopijuoti rūšis"
+msgstr ""
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr "Ar tikrai norite kopijuoti rūšis iš praeito įrašo?"
+msgstr ""
 
 # Species list copy functionality
 msgid "Copy"
-msgstr "Kopijuoti"
+msgstr ""
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
 msgstr ""
-"Atsiprašome, nebuvo rasta jokių rūšių, kurias būtų galima nukopijuoti."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr "Sėkmingai nukopijuotos rūšys: {{speciesCount}}."
+msgstr ""
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr "Atsiprašome, nebuvo rasta jokių rūšių iš praeito įrašo."
+msgstr ""
 
 # Country name
 msgid "Armenia"
-msgstr "Armėnija"
+msgstr ""
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Norint ištrinti, įrašą braukite į kairę."
+msgstr ""
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
-msgstr "Prašome pasitikrinti ar teisingai pažymėjote nueitą atstumą."
+msgstr ""
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr "Prašome neužmiršti išsiųsti įrašų, kurie yra užbaigti!"
+msgstr ""
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
-msgstr "Nėra užbaigtų įrašų.<br/><br/>Paspauskite <4></4> norint pridėti."
+msgstr ""
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr "Patarimas: Pagalbos radimas"
+msgstr ""
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
-"Prašome aplankyti Gido <2></2>  ir Pagalbos <5></5> puslapius prieš "
-"naudojant aplikaciją!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr "Daugiau Informacijos"
+msgstr ""
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr "Patarimas: Pridėkite rūšį"
+msgstr ""
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
-"Jūs galite nukopijuoti visas rūšis iš buvusio sąrašo palaikydami Pridėti "
-"rūšį mygtuką."
 
 # Button
 msgid "Hide"
-msgstr "Paslėpti"
+msgstr ""
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Pagrindinis stebėjimas"
+msgstr ""
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr "Visi stebėjimai"
+msgstr ""
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr "Reprezentacinė nuotrauka nuo kur buvo pradėtas 15 minučių stebėjimas"
+msgstr ""
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr "Nėra pridėta jokių nuotraukų."
+msgstr ""
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr "Paspauskite <1></1> norint pridėti."
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr "Tikslusis 15 minučių stebėjimas"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr "Rūšys"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr "Laikas"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr "Ar tikrai norite ištrinti šitą rūšį?"
+msgstr ""
 
 # alert confirmation button
 msgid "Got it"
-msgstr "Supratau"
+msgstr ""
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr "<0>Nėra išsaugotų įrašų</0>"
+msgstr ""
 
 # user register error message
 msgid "Account already exists."
-msgstr "Paskyra jau egzistuoja."
+msgstr ""
 
 # A survey label
 msgid "Details"
-msgstr "Detalės"
+msgstr ""
 
 # A survey label
 msgid "Species Photo"
-msgstr "Rūšies Nuotrauka"
+msgstr ""
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr "Pasirinkite drugio gyvenimo stadiją"
+msgstr ""
 
 # A survey label
 msgid "Weather"
-msgstr "Oras"
+msgstr ""
 
 # A survey label
 msgid "Photo"
-msgstr "Nuotrauka"
+msgstr ""
 
 # Part of species group selection
 msgid "Species groups"
-msgstr "Rūšių grupės"
+msgstr ""
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr "Pasirinkite rūšių grupes kurias visada stebite."
+msgstr ""
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr "Dieniniai drugiai"
+msgstr ""
 
 # Part of species group selection
 msgid "Moths"
-msgstr "Naktiniai drugiai"
+msgstr ""
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr "Kamanės"
+msgstr ""
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr "Laumžirgiai"
+msgstr ""
 
 # Alert label
 msgid "Warning"
-msgstr "Įspėjimas"
+msgstr ""
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr "Ar tikrai norite išjungti GPS sekimą?"
+msgstr ""
 
 # Alert button option
 msgid "Turn off"
-msgstr "Išjungti"
+msgstr ""
 
 # Alert button label
 msgid "Merge"
-msgstr "Sujungti"
+msgstr ""
 
 # Alert header
 msgid "Species already exists"
-msgstr "Rūšis jau egzistuoja"
+msgstr ""
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
-msgstr "Ar tikrai norite sujungti šią rūšį su jau egzistuojančia?"
+msgstr ""
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr "Prašome pridėti konkrečią rūšį"
+msgstr ""
 
 # Moth survey label
 msgid "Date"
-msgstr "Data"
+msgstr ""
 
 # Moth survey label
 msgid "Method"
-msgstr "Metodas"
+msgstr ""
 
 # Context term
 msgid "Please select the medthod type"
-msgstr "Prašome pasirinkti metodą"
+msgstr ""
 
 # Moth survey method type
 msgid "MV light"
-msgstr "Gyvsidabrio lempa"
+msgstr ""
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr "Aktininė lempa"
+msgstr ""
 
 # Moth survey method type
 msgid "LED light"
-msgstr "LED lempa"
+msgstr ""
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr "Šviesinė gaudyklė"
+msgstr ""
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr "Stebėta dienos metu"
+msgstr ""
 
 # Moth survey method type
 msgid "Dusking"
-msgstr "Gaudymas pievoje tinkleliu prieblandoje"
+msgstr ""
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr "Atskrido į apšviestą langą"
+msgstr ""
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr "Viliojimas saldžiais skysčiais"
+msgstr ""
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr "Viliojimas masalu (vyno masalas)"
+msgstr ""
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr "Purtiklis - nupurtyti nuo medžių ant paklodės"
+msgstr ""
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr "Feromoninė gaudyklė"
+msgstr ""
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr "Kitas metodas (aprašykite komentaruose)"
+msgstr ""
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr "Neužfiksuota"
+msgstr ""
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr "Detalesnė informacija"
+msgstr ""
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr "Naktinių drugių gaudyklės tyrimas"
+msgstr ""
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr "Naktinių drugių stebėjimas"
+msgstr ""
 
 # Moth survey divider label
 msgid "Species list"
-msgstr "Rūšių sąrašas"
+msgstr ""
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr "Identifikavo"
+msgstr ""
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr "Naktinių drugių sąrašas"
+msgstr ""
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr "Naktinio drugio nuotrauka"
+msgstr ""
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr "Įrašykite stebėtojo vardą, jei stebėjote ne jūs"
+msgstr ""
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr "Stebėtojo vardas"
+msgstr ""
 
 # Latitude
 msgid "Lat"
-msgstr "Platuma"
+msgstr ""
 
 # Longitude
 msgid "Long"
-msgstr "Ilguma"
+msgstr ""
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr "Skaičius gaudyklės viduje"
+msgstr ""
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr "Skaičius už gaudyklės"
+msgstr ""
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr "Naktinių drugių nuotraukos "
+msgstr ""
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr "Gaudyklės"
+msgstr ""
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr "Gaudyklė"
+msgstr ""
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
-"Jūs dar nesukūrėte gaudyklės. Norėdami sukurti savo naktinių drugių "
-"gaudyklę, eikite į <2>svetainę</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr "Prisijunkite prie interneto jei norite matyti žemėlapį."
+msgstr ""
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr "Prašome pridėti naktinių drugių gaudyklę"
+msgstr ""
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
-"Jūs turite tik vieną gaudyklę, Norėdami sukurti daugiau, eikite į "
-"<2>svetainę.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr "Identifikuojama..."
+msgstr ""
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr "Nežinoma"
+msgstr ""
 
 # Report table button
 msgid "Show more"
-msgstr "Rodyti daugiau"
+msgstr ""
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr "Prašome pridėti nuotrauką"
+msgstr ""
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr "Nežinoma rūšis"
+msgstr ""
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr "<0>Dėmesio</0> - negalime nustatyti šios rūšies."
+msgstr ""
 
 # App settings title
 msgid "Surveying"
-msgstr "Stebėjimai"
+msgstr ""
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr "Naktinių drugių stebėjimas (SPRING)"
+msgstr ""
 
 # Survey name
 msgid "Moth Survey"
-msgstr "Naktinių drugių stebėjimas"
+msgstr ""
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr "Naktinių drugių stebėjimų nustatymai"
+msgstr ""
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr "Nustatyti rūšis pagal nuotraukas"
+msgstr ""
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
-msgstr "Padėsime jums nustatyti rūšis su rūšių nuotraukų klasifikatoriumi"
+msgstr ""
 
 # Moth survey button label
 msgid "Identify"
-msgstr "Identifikuoti"
+msgstr ""
 
 # Moth survey button label
 msgid "Identify All"
-msgstr "Identifikuoti visus"
+msgstr ""
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr "Nustatymas pagal nuotraukas"
+msgstr ""
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
-"Identifikavimas pagal nuotraukas šiuo metu <1>išjungtas</1>. Norėdami "
-"įjungti šią funkciją, eikite į programėlės <4>Nustatymus</4>."
 
 # Whats new message title
 msgid "What's New"
-msgstr "Kas naujo"
+msgstr ""
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
@@ -1849,236 +1760,227 @@ msgstr ""
 
 # User account action
 msgid "Resend"
-msgstr "Išsiųsti"
+msgstr ""
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr "Atrodo jūsų e-paštas dar nėra patvirtintas."
+msgstr ""
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr "Ar mums išsiųsti patvirtinimo el. laišką?"
+msgstr ""
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
-"Įrenginio vietos nustatymo paslaugos (GPS) yra išjungtos. Jas galite įjungti"
-" telefono nustatymuose."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr "Vietos nustatymo paslaugos (GPS) yra išjungtos"
+msgstr ""
 
 # Moth trap survey
 msgid "Add New"
-msgstr "Pridėti naują"
+msgstr ""
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
-"Jūs dar neturite jokių išsaugotų gaudyklių.<1>Pridėti pirmąją gaudyklę</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr "Gaudyklė"
+msgstr ""
 
 # Moth trap survey
 msgid "Type"
-msgstr "Tipas"
+msgstr ""
 
 # Moth trap survey
 msgid "Other type"
-msgstr "Kitoks gaudyklės tipas"
+msgstr ""
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr "Pridėti lempą"
+msgstr ""
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr "Kokio tai tipo gaudyklė?"
+msgstr ""
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr "Nepridėta jokių lempų"
+msgstr ""
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr "Koks lempos tipas?"
+msgstr ""
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr "Koks gaudyklės tipas?"
+msgstr ""
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr "LED piltuvėlio gaudyklė"
+msgstr ""
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr "Kitokia piltuvėlio gaudyklė"
+msgstr ""
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr "Gaudyklė su dviem lakštais"
+msgstr ""
 
 # Moth trap survey
 msgid "Other trap"
-msgstr "Kitoks tipas"
+msgstr ""
 
 # Moth trap survey
 msgid "Lamp"
-msgstr "Lempa"
+msgstr ""
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr "Lempos Informacija"
+msgstr ""
 
 # Moth trap survey
 msgid "Quantity"
-msgstr "Kiekis"
+msgstr ""
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr "Trūksta gaudyklės pavadinimo"
+msgstr ""
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr "Gaudyklės pavadinimas"
+msgstr ""
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr "Ar jūs tikrai norite ištrinti šį įrašą?"
+msgstr ""
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr "Papildoma informacija apie lempą."
+msgstr ""
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr "Prašome įvesti gaudyklės vietą ir pavadinimą."
+msgstr ""
 
 # Survey validation
 msgid "Incomplete"
-msgstr "Neužbaigta"
+msgstr ""
 
 # Moth trap survey
 msgid "Select"
-msgstr "Pasirinkti"
+msgstr ""
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr "Registratoriai"
+msgstr ""
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
-msgstr "Įveskite visų prisidėjusių stebėtojų skaičių, įskaitant ir save"
+msgstr ""
 
 msgid "Network Error"
-msgstr "Tinklo klaida"
+msgstr ""
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr "Prisijungus prie sąskaitos rodoma daugiau informacijos."
+msgstr ""
 
 # Report label
 msgid "Your top species this month"
-msgstr "Jūsų populiariausios rūšys šį mėnesį"
+msgstr ""
 
 # Report label
 msgid "Your top species"
-msgstr "Jūsų populiariausios rūšys"
+msgstr ""
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr "Ruožo nuotrauka"
+msgstr ""
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr "Vartotojas nėra prisijungęs."
+msgstr ""
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
-msgstr "Mes manome, kad tai {{probability}}%<3>{{taxon}}</3> rūšis"
+msgstr ""
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
-"<0>Dėmesio</0> - mes manome, kad tai {{probability}}% <5>{{taxon}}</5>rūšis"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr "Lempos"
+msgstr ""
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
-msgstr "Ar tikrai norite ištrinti šią lempą iš gaudyklės?"
+msgstr ""
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr "Prašome pasirinkti gaudyklės tipą."
+msgstr ""
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr "Sveiki prisijungę"
+msgstr ""
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
-"Iki naudodamiesi aplikacija prašome patvirtinti savo el.paštą - paspausdami "
-"nuorodą išsiųstą jūsų adresu."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr "Rūšių nerasta."
+msgstr ""
 
 msgid "Kenya"
-msgstr "Kenija"
+msgstr ""
 
 # GPS permission button label
 msgid "Deny"
-msgstr "Nesutinku"
+msgstr ""
 
 # GPS permission button label
 msgid "Accept"
-msgstr "Sutinku"
+msgstr ""
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr "Leisti naudoti vietovės nustatymą"
+msgstr ""
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
-"Norėdami, kad būdamas ir užrakintas prietaisas automatiškai sektų jūsų "
-"maršrutą ir registruotų rūšių vietoves, leiskite programėlei naudoti "
-"prietaiso buvimo vietą."
 
 # Reset app info message
 msgid "You can reset the app data to its default settings."
-msgstr "Galite grįžti į numatytuosius programėlės nustatymus."
+msgstr ""
 
 # Delete account
 msgid "Delete account"
-msgstr "Ištrinti anketą"
+msgstr ""
 
 # Delete account
 msgid "You can delete your user account from the system."
-msgstr "Galite savo anketą ištrinti iš sistemos."
+msgstr ""
 
 # Delete account alert header
 msgid "Account delete"
-msgstr "Anketos panaikinimas"
+msgstr ""
 
 # Delete account alert message
 msgid ""
@@ -2086,9 +1988,6 @@ msgid ""
 "account on the <2>{{url}}</2> website. You will lose access to any records "
 "that you have previously submitted using the app or website.</1>"
 msgstr ""
-"Ar esatę įsitikinę, kad norite panaikinti savo anketą? <1>Jūsų anketa bus "
-"pašalinta iš <2>{{url}}</2>svetainės. Jūs daugiau neturėsi prieigos prie "
-"savo, programėle ar svetainėje, užfiksuotų stebėjimų.</1>"
 
 # Part of Species Group selection
 msgid ""
@@ -2374,8 +2273,6 @@ msgstr ""
 # Map GPS button interface
 msgid "To resume tracking, you must first remove the drawn area from the map."
 msgstr ""
-"Jeigu norite tęsti automatinį maršruto įrašymą, pirma turite pašalinti "
-"dabartinę pažymėtą teritoriją iš žemėlapio."
 
 # Part of weather attributes
 msgid "Moon phase"
@@ -2453,12 +2350,12 @@ msgstr ""
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr "Jūs neturite išsaugotų maršrutų."
+msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr "Sąrašo rūšavimas pakeistas į alfabetišką."
+msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr "Sąrašo rūšavimas pakeistas į rūšies įvedimo laiką."
+msgstr ""

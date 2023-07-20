@@ -1,0 +1,2546 @@
+# 
+# Translators:
+# Konstantina Nasiou, 2023
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: temp\n"
+"Last-Translator: Konstantina Nasiou, 2023\n"
+"Language-Team: Greek (Greece) (https://app.transifex.com/ceh/teams/95441/el_GR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el_GR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: POEditor.com\n"
+
+msgid "Select your country"
+msgstr "Επιλέξτε τη χώρα σας"
+
+msgid "United Kingdom"
+msgstr "Ηνωμένο Βασίλειο"
+
+msgid "Lithuania"
+msgstr "Λιθουανία"
+
+msgid "Spain"
+msgstr "Ισπανία"
+
+msgid "Andorra"
+msgstr "Ανδόρα "
+
+msgid "Albania"
+msgstr "Αλβανία"
+
+msgid "Austria"
+msgstr "Αυστρία"
+
+msgid "Bosnia and Herzegovina"
+msgstr " Βοσνία και Ερζεγοβίνη"
+
+msgid "Belgium"
+msgstr "Βέλγιο"
+
+msgid "Bulgaria"
+msgstr "Βουλγαρία"
+
+msgid "Belarus"
+msgstr "Λευκορωσία"
+
+msgid "Switzerland"
+msgstr "Σουηδία"
+
+msgid "Cyprus"
+msgstr "Κύπρος"
+
+msgid "Czechia"
+msgstr "Τσεχία"
+
+msgid "Germany"
+msgstr "Γερμανία"
+
+msgid "Denmark"
+msgstr "Δανία"
+
+msgid "Estonia"
+msgstr "Εσθονία"
+
+msgid "Spain (Canary Islands)"
+msgstr "Ισπανία (Κανάριες Νήσοι)"
+
+msgid "Finland"
+msgstr "Φινλανδία "
+
+msgid "France"
+msgstr "Γαλλία"
+
+msgid "Greece"
+msgstr "Ελλάδα"
+
+msgid "Croatia"
+msgstr "Κροατία"
+
+msgid "Hungary"
+msgstr "Ουγγαρία"
+
+msgid "Ireland"
+msgstr "Ιρλανδία"
+
+msgid "Iceland"
+msgstr "Ισλανδία"
+
+msgid "Italy"
+msgstr "Ιταλία"
+
+msgid "Liechtenstein"
+msgstr "Λίχτενσταϊν"
+
+msgid "Luxembourg"
+msgstr "Λουξεμβούργο"
+
+msgid "Latvia"
+msgstr "Λετονία"
+
+msgid "Moldova"
+msgstr "Μολδαβία"
+
+msgid "Montenegro"
+msgstr "Μαυροβούνιο"
+
+msgid "North Macedonia"
+msgstr "Βόρεια Μακεδονία"
+
+msgid "Malta"
+msgstr "Μάλτα"
+
+msgid "Netherlands"
+msgstr "Ολλανδία"
+
+msgid "Norway"
+msgstr "Νορβηγία"
+
+msgid "Poland"
+msgstr "Πολωνία"
+
+msgid "Portugal"
+msgstr "Πορτογαλία"
+
+msgid "Portugal (Azores)"
+msgstr "Πορτογαλία (Αζόρες)"
+
+msgid "Portugal (Madeira Islands)"
+msgstr "Πορτογαλία (Μαδέρα)"
+
+msgid "Romania"
+msgstr "Ρουμανία"
+
+msgid "Serbia"
+msgstr "Σερβία"
+
+msgid "Russian Federation"
+msgstr "Ρωσία"
+
+msgid "Slovenia"
+msgstr "Σλοβενία"
+
+msgid "Japan"
+msgstr "Ιαπωνία"
+
+msgid "Slovakia"
+msgstr "Σλοβακία"
+
+msgid "Turkey (Europe)"
+msgstr "Τουρκία (Ευρώπη)"
+
+msgid "Turkey (Asia)"
+msgstr "Τουρκία (Ασία)"
+
+msgid "Ukraine"
+msgstr "Ουκρανία"
+
+msgid "Elsewhere"
+msgstr "Αλλού"
+
+msgid "Skip"
+msgstr "Παράλειψη"
+
+msgid "Next"
+msgstr "Επόμενο"
+
+msgid "Get Started"
+msgstr "Ξεκινήστε"
+
+msgid "Please sign in with your eBMS account or register."
+msgstr "Παρακαλώ συνδεθείτε με τον λογαριασμό χρήστη σας ή εγγραφείτε."
+
+msgid "Password"
+msgstr "Κωδικός πρόσβασης"
+
+msgid "Sign in"
+msgstr "Συνδεθείτε"
+
+msgid "Register"
+msgstr "Εγγραφείτε"
+
+msgid "Forgot password?"
+msgstr "Ξεχάσατε τον κωδικό πρόσβασης;"
+
+msgid "User not found."
+msgstr "Ο χρήστης δεν βρέθηκε. "
+
+msgid "Login"
+msgstr "Συνδεθείτε"
+
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "Info"
+msgstr "Πληροφορίες"
+
+msgid "About"
+msgstr "Σχετικά με την εφαρμογή"
+
+msgid "Help"
+msgstr "Βοήθεια"
+
+msgid "Privacy Policy"
+msgstr "Πολιτική Απορρήτου"
+
+msgid "Credits"
+msgstr "Ευχαριστίες"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "First Name"
+msgstr "Όνομα"
+
+msgid "Surname"
+msgstr "Επίθετο"
+
+msgid "I agree to"
+msgstr "Συμφωνώ"
+
+msgid "Terms and Conditions"
+msgstr "Όροι και Προϋποθέσεις "
+
+msgid "Reset"
+msgstr "Επαναφορά"
+
+msgid "Records"
+msgstr "Καταγραφές"
+
+msgid "Upload All"
+msgstr "Μεταφόρτωση όλων "
+
+msgid "Remove All Saved"
+msgstr "Αφαίρεση όλων των αποθηκευμένων"
+
+msgid "Application"
+msgstr "Εφαρμογή"
+
+msgid "Training Mode"
+msgstr "Εκπαιδευτική Λειτουργία"
+
+msgid "Experimental Features"
+msgstr "Δοκιμαστικές Λειτουργίες"
+
+msgid "Welcome"
+msgstr "Καλώς ήρθατε"
+
+msgid "Lets start!"
+msgstr "Ας ξεκινήσουμε!"
+
+msgid "TOP RECORDERS"
+msgstr "ΚΟΡΥΦΑΙΟΙ ΚΑΤΑΓΡΑΦΕΙΣ"
+
+msgid "Top Species from all timed counts"
+msgstr "Κορυφαία Είδη από όλα τα δεκαπεντάλεπτα σημεία "
+
+msgid "Back"
+msgstr "Πίσω"
+
+msgid "Menu"
+msgstr "Μενού"
+
+msgid "App"
+msgstr "Εφαρμογή"
+
+msgid ""
+"We are very grateful for all the people that helped to create this app:"
+msgstr ""
+"Είμαστε ευγνώμων για όλους τους ανθρώπους που βοήθησαν στη δημιουργία της "
+"εφαρμογής:"
+
+msgid "Home"
+msgstr "Αρχική σελίδα"
+
+msgid "Guide"
+msgstr "Οδηγός"
+
+msgid "Account"
+msgstr "Λογαριασμός"
+
+msgid "Offline"
+msgstr "Εκτός σύνδεσης"
+
+msgid "Sorry, looks like you're offline."
+msgstr "Συγγνώμη, φαίνεται πως είστε εκτός σύνδεσης. "
+
+msgid "OK"
+msgstr "ΕΝΤΑΞΕΙ"
+
+msgid "Sorry"
+msgstr "Συγγνώμη"
+
+msgid "Please wait..."
+msgstr "Παρακαλώ περιμένετε..."
+
+msgid "name is a required field"
+msgstr "το όνομα σας είναι απαιτούμενο πεδίο"
+
+msgid "password is a required field"
+msgstr "ο κωδικός πρόσβασης σας είναι απαιτούμενο πεδίο"
+
+msgid "Login error:"
+msgstr "Σφάλμα σύνδεσης:"
+
+msgid "Failed to fetch"
+msgstr "Αποτυχία εύρεσης"
+
+msgid "Incorrect password or email."
+msgstr "Λανθασμένος κωδικός πρόσβασης ή email. "
+
+# Part of logout process
+msgid "Logout"
+msgstr "Αποσύνδεση"
+
+# Part of logout process
+msgid ""
+"Are you sure you want to logout?<br/><br/>Your pending and uploaded "
+"<4>records will not be deleted </4> from this device."
+msgstr ""
+"Είστε σίγουροι πως θέλετε να αποσυνδεθείτε;<br/><br/>Οι εκκρεμείς και "
+"μεταφορτωμένες καταγραφές σας δεν θα διαγραφούν </4> από αυτή τη συσκευή. "
+
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+msgid "Welcome aboard!"
+msgstr "Καλώς ήρθατε!"
+
+msgid ""
+"Before submitting any records please check your email and click on the "
+"verification link."
+msgstr ""
+"Προτού υποβάλετε τις καταγραφές σας παρακαλώ ελέγξτε το email σας και κάντε "
+"κλικ στον σύνδεσμο επιβεβαίωσης.  "
+
+msgid "OK, got it"
+msgstr "Εντάξει, κατάλαβα"
+
+msgid "Please fill in"
+msgstr "Παρακαλώ συμπληρώστε"
+
+msgid "Area Count"
+msgstr "Καταμέτρηση Περιοχής"
+
+msgid "Area"
+msgstr "Περιοχή"
+
+# Location attribute label
+msgid "Location"
+msgstr "Τοποθεσία"
+
+# GPS permissions message
+msgid "Location Required"
+msgstr "Απαιτείται ενεργοποίηση τοποθεσίας"
+
+# GPS permissions message
+msgid ""
+"This app needs your location, but does not have permission. Open settings "
+"now?"
+msgstr ""
+"Αυτή η εφαρμογή χρειάζεται την τοποθεσία σας, αλλά δεν έχει άδεια. Άνοιγμα "
+"ρυθμίσεων;"
+
+# GPS message
+msgid "Cancel to prevent battery drain."
+msgstr "Ακύρωση για αποφυγή εξάντλησης της μπαταρίας."
+
+# GPS message
+msgid "Using your location."
+msgstr "Χρησιμοποιείται η τοποθεσία σας."
+
+msgid "Add"
+msgstr "Προσθήκη"
+
+msgid "Add species"
+msgstr "Προσθήκη είδους"
+
+msgid "Duration"
+msgstr "Διάρκεια"
+
+msgid "Species"
+msgstr "Είδος"
+
+msgid "Species name"
+msgstr "Όνομα είδους"
+
+msgid ""
+"For quicker searching of the taxa you can use different shortcuts. For "
+"example, to find"
+msgstr ""
+"Για μία πιο γρήγορη αναζήτηση των τάξων μπορείτε να χρησιμοποιήσετε "
+"διαφορετικές συντομεύσεις. Π.χ. για να βρείτε"
+
+msgid "you can type in the search bar"
+msgstr "μπορείτε να πληκτρολογήσετε στη μπάρα αναζήτησης"
+
+msgid "Edit Occurrence"
+msgstr "Επεξεργαστείτε Καταγραφή"
+
+msgid "Count"
+msgstr "Αριθμός"
+
+msgid "Comment"
+msgstr "Σχόλιο"
+
+msgid "Draft"
+msgstr "Προσχέδιο"
+
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr ""
+"Υπάρχει προηγούμενο προσχέδιο δειγματοληψίας, θα θέλατε να το συνεχίσετε;"
+
+msgid "Discard"
+msgstr "Απόρριψη"
+
+msgid "Continue"
+msgstr "Συνέχιση"
+
+msgid "Finish"
+msgstr "Τέλος"
+
+msgid "minutes"
+msgstr "λεπτά"
+
+msgid "No species added"
+msgstr "Καμία προσθήκη είδους"
+
+msgid "Please draw your area on the map"
+msgstr "Παρακαλώ σχεδιάστε την περιοχή σας στον χάρτη"
+
+msgid "Draw an area"
+msgstr "Σχεδιάστε μία περιοχή"
+
+msgid "Delete"
+msgstr "Διαγραφή"
+
+msgid "Surveys"
+msgstr "Δειγματοληψίες"
+
+msgid "Reports"
+msgstr "Στατιστικά"
+
+# Species filter input
+msgid "Species name or filter..."
+msgstr "Όνομα είδους ή συντόμευση"
+
+# Species filter label
+msgid "family"
+msgstr "οικογένεια"
+
+msgid "Sorry, no report data is available at the moment."
+msgstr ""
+"Συγγνώμη, τα στατιστικά δεδομένων δεν είναι διαθέσιμα αυτή τη στιγμή. "
+
+msgid "Are you sure you want to delete this survey?"
+msgstr "Είστε σίγουροι πως θέλετε να διαγράψετε αυτή τη δειγματοληψία;"
+
+msgid "No finished surveys"
+msgstr "Μη ολοκληρωμένες δειγματοληψίες"
+
+msgid "Finished surveys"
+msgstr "Ολοκληρωμένες δειγματοληψίες"
+
+msgid "Selected area"
+msgstr "Επιλεγμένη περιοχή"
+
+msgid "Use survey create time"
+msgstr "Χρήση ώρας έναρξης της δειγματοληψίας"
+
+msgid "Use survey finish time"
+msgstr "Χρήση ώρας λήξης της δειγματοληψίας"
+
+msgid "species"
+msgstr "είδος"
+
+msgid "Done"
+msgstr "Ολοκληρώθηκε"
+
+msgid "Time's up!"
+msgstr "Τέλος χρόνου!"
+
+msgid "Survey incomplete"
+msgstr "Μη ολοκληρωμένη δειγματοληψία"
+
+msgid "The survey is not complete yet."
+msgstr "Η δειγματοληψία δεν έχει ολοκληρωθεί ακόμα. "
+
+msgid "Please select a smaller area."
+msgstr "Παρακαλώ επιλέξετε μία μικρότερη περιοχή. "
+
+msgid "Please add survey area information."
+msgstr "Παρακαλώ προσθέστε πληροφορίες της περιοχής δειγματοληψίας. "
+
+msgid "Choose a method to upload a photo"
+msgstr "Επιλέξετε έναν τρόπο μεταφόρτωσης μίας φωτογραφίας."
+
+msgid "Gallery"
+msgstr "Γκαλερί"
+
+msgid "Camera"
+msgstr "Κάμερα"
+
+msgid "Are you sure you want to remove this photo?"
+msgstr "Είστε σίγουροι πως θέλετε να αφαιρέσετε αυτή τη φωτογραφία;"
+
+msgid "Note: it will remain in the gallery."
+msgstr "Σημείωση: θα παραμείνει στη γκαλερί. "
+
+# Photo picker
+msgid "No photo has been added.<br/>Press <3></3> to add."
+msgstr "Καμία προσθήκη φωτογραφίας. <br/>Πατήστε <3></3> για να προσθέσετε. "
+
+msgid "Registration error:"
+msgstr "Σφάλμα εγγραφής:"
+
+# Login error message
+msgid "Incorrect password or email"
+msgstr "Λανθασμένος κωδικός πρόσβασης ή email. "
+
+msgid "Enter your email address to request a password reset."
+msgstr "Εισάγετε το email σας για να ζητήσετε επαναφορά κωδικού πρόσβασης. "
+
+# Part of login
+msgid "Successfully logged in as: {{email}}"
+msgstr "Επιτυχής σύνδεση ως: {{email}}"
+
+# Unverified account message
+msgid "The user has not been activated or is blocked."
+msgstr "Ο χρήστης δεν έχει ενεργοποιηθεί ή είναι μπλοκαρισμένος. "
+
+# Unverified account note message
+msgid ""
+"Looks like your <1>{{userEmail}}</1> email hasn't been verified "
+"yet.<3><0>Refresh</0><1>Resend Email</1></3>"
+msgstr ""
+"Φαίνεται πως το <1>{{userEmail}}</1> email σας δεν έχει επαληθευτεί ακόμα. "
+"<3><0>Κάντε ανανέωση</0><1> Επαναποστολή Email</1></3>"
+
+# Verification resend success message
+msgid ""
+"A new verification email was successfully sent now. If you did not receive "
+"the email, then check your Spam or Junk email folders."
+msgstr ""
+"Ένα νέο email επαλήθευσης έχει αποσταλεί επιτυχώς. Εάν δεν το έχετε λάβει, "
+"ελέγξτε τους φακέλους ανεπιθύμητης αλληλογραφίας σας. "
+
+# Message when trying to upload a record without an account
+msgid "Please log in first."
+msgstr "Παρακαλώ συνδεθείτε πρώτα. "
+
+# User registration error
+msgid "This email is already taken."
+msgstr "Αυτό το email χρησιμοποιείται ήδη. "
+
+# User password reset error
+msgid "Unrecognized email address."
+msgstr "Μη αναγνωρισμένη διεύθυνση email. "
+
+msgid "email is not valid"
+msgstr "το email δεν είναι έγκυρο"
+
+msgid ""
+"Butterflies are captivating insects, but they are in decline in many parts "
+"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
+"the EU."
+msgstr ""
+"Οι πεταλούδες είναι μαγευτικά έντομα, ωστόσο εμφανίζουν πτωτικές τάσεις σε "
+"πολλά σημεία της Ευρώπης. Όπως φαίνεται από το γράφημα του Δείκτη Λιβαδικών "
+"Πεταλούδων για την ΕΕ."
+
+msgid ""
+"Data collected by this app can greatly improve knowledge of the status of "
+"butterflies and their habitats."
+msgstr ""
+"Η συλλογή δεδομένων από αυτή την εφαρμογή μπορεί να βελτιώσει σημαντικά τη "
+"γνώση για το καθεστώς των πεταλούδων και των ενδιαιτημάτων τους. "
+
+msgid ""
+"We lack information on butterfly numbers in many parts of Europe, as shown "
+"by the density of records currently available to assess butterfly status."
+msgstr ""
+"Υπάρχει έλλειψη πληροφορίας πάνω στον αριθμό πεταλούδων σε πολλές περιοχές "
+"της Ευρώπης, όπως φαίνεται από την πυκνότητα των καταγραφών που είναι αυτή "
+"τη στιγμή διαθέσιμες για την αξιολόγηση του καθεστώτος των πεταλούδων.  "
+
+msgid ""
+"It has never been easier to contribute high quality data for research to "
+"support conservation of these fascinating and vital insects. You can get "
+"started straight away"
+msgstr ""
+"Πότε δεν ήταν πιο εύκολη η συνδρομή δεδομένων υψηλής ποιότητας στην έρευνα, "
+"για την υποστήριξη της προστασίας αυτών των συναρπαστικών και σημαντικών "
+"εντόμων. Μπορείτε να ξεκινήσετε αμέσως"
+
+msgid ""
+"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
+"project."
+msgstr ""
+"Η εφαρμογή σχεδιάστηκε μέσω του προγράμματος Assessing Butterflies in Europe"
+" (ABLE). "
+
+msgid "The ABLE project is a partnership between"
+msgstr "Το πρόγραμμα ABLE είναι μία σύμπραξη μεταξύ των"
+
+msgid "and"
+msgstr "και του"
+
+msgid ""
+"ABLE is funded by a service contract from the European Union Directorate for"
+" the Environment, for an initial period of two years from 2019-20."
+msgstr ""
+"Το πρόγραμμα ABLE χρηματοδοτήθηκε από τη Γενική Διεύθυνση Περιβάλλοντος της "
+"Ευρωπαϊκής Ένωσης μέσω συμβολαίου παροχής υπηρεσιών, για μία αρχική περίοδο "
+"δύο χρόνων το 2019-2020. "
+
+msgid "ABLE partners:"
+msgstr "Εταίροι του ABLE:  "
+
+msgid ""
+"This app contributes data to the European Butterfly Monitoring Scheme "
+"(eBMS)."
+msgstr ""
+"Αυτή η εφαρμογή συνεισφέρει με τα δεδομένα της στο Ευρωπαϊκό Πρόγραμμα "
+"Παρακολούθησης Πεταλούδων (eBMS).  "
+
+msgid "In June 2019, the following organisations are partners in eBMS:"
+msgstr "Τον Ιούνιο του 2019, οι ακόλουθοι οργανισμοί είναι εταίροι στο eBMS:"
+
+msgid "Not enough data yet"
+msgstr "Δεν υπάρχουν αρκετά δεδομένα ακόμη"
+
+msgid "How to start a survey"
+msgstr "Πως να ξεκινήσετε μία δειγματοληψία"
+
+msgid "To start a new survey you can press the plus button"
+msgstr "Για να ξεκινήσετε μία νέα δειγματοληψία πατήστε στο \"+\" κουμπί"
+
+msgid "in the home page footer. This will start a new 15 minute survey."
+msgstr ""
+"στο κάτω μέρος της αρχικής σελίδας. Έπειτα θα ξεκινήσει ένα 15-λεπτο σημείο."
+" "
+
+msgid "Selecting species"
+msgstr "Επιλέγοντας είδη"
+
+msgid "Please press the Add"
+msgstr "Παρακαλώ πατήστε τη Προσθήκη"
+
+msgid ""
+"button in your new survey edit page. This will bring you to the taxa search "
+"page. After selecting the species, this will add it to your survey list."
+msgstr ""
+"το κουμπί στη σελίδα επεξεργασίας της νέας καταμέτρησης σας. Έτσι, θα "
+"μεταβιβαστείτε στη σελίδα αναζήτησης ειδών.  Επιλέξετε τα είδη σας και θα "
+"προστεθούν στη λίστα σας. "
+
+msgid "Note"
+msgstr "Σημείωση"
+
+msgid ""
+"you can increment the species count by tapping on the number next to the "
+"species name in the list."
+msgstr ""
+"μπορείτε να αυξήσετε τον αριθμό ειδών εάν πατήσετε πάνω στο αριθμό που "
+"βρίσκεται δίπλα στο όνομα του είδους στη λίστα. "
+
+msgid ""
+"To delete a species from your survey list your can swipe it left and click "
+"the delete button."
+msgstr ""
+"Για να διαγράψετε ένα είδος από τη λίστα σας, μπορείτε να σύρετε την εγγραφή"
+" του προς τα αριστερά και να κάνετε κλικ στο κουμπί διαγραφής. "
+
+msgid ""
+"To add more information to your species occurrence, you can open the species"
+" entry by clicking on it."
+msgstr ""
+"Για να προσθέσετε περαιτέρω πληροφορίες στη καταγραφή του είδους σας, "
+"μπορείτε να μεταβείτε στη καρτέλα του είδους κάνοντας κλικ πάνω στην εγγραφή"
+" του. "
+
+msgid "To finish a record you should also fill in the details of the area."
+msgstr ""
+"Για να ολοκληρώσετε μία δειγματοληψία πρέπει να συμπληρώσετε και τα στοιχεία"
+" της περιοχής. "
+
+msgid ""
+"When finished, set for submission by pressing the Finish button in the "
+"header."
+msgstr ""
+"Μόλις ολοκληρώσετε, κάντε υποβολή πατώντας το κουμπί Τέλος στο πάνω μέρος. "
+
+msgid "Searching for species"
+msgstr "Αναζήτηση ειδών"
+
+msgid ""
+"The application holds around 500 butterfly species list and all the "
+"associated taxonomy ranks. For quicker searching of the taxa you can use "
+"different shortcuts. For example, to find"
+msgstr ""
+"Η εφαρμογή περιέχει μία λίστα με γύρω στα 500 είδη πεταλούδων, μαζί με όλες "
+"τις συναφείς ταξινομικές βαθμίδες τους. Για μία πιο γρήγορη αναζήτηση τάξων,"
+" μπορείτε να χρησιμοποιήσετε διαφορετικές συντομεύσεις. Π.χ. για να βρείτε"
+
+msgid "Sync. with the website"
+msgstr "Συγχρονισμός με τη πλατφόρμα"
+
+msgid "All your saved surveys will be shown on your account page."
+msgstr ""
+"Όλες οι αποθηκευμένες δειγματοληψίες σας θα φαίνονται στη σελίδα του "
+"λογαριασμού σας. "
+
+msgid ""
+"By default a survey is in a 'draft' mode which will not be sent to the "
+"database until the 'Finish' button in the header is clicked. The application"
+" will try to submit your record once there is a good network connection."
+msgstr ""
+"Από προεπιλογή μία δειγματοληψία είναι σε λειτουργία \"προσχεδίου\" και δεν "
+"αποστέλνεται στη βάση δεδομένων μέχρι να πατηθεί το κουμπί \"Τέλος\". "
+"Έπειτα, η εφαρμογή θα προσπαθήσει να υποβάλει τις καταγραφές σας μόλις "
+"υπάρχει καλή σύνδεση δικτύου.  "
+
+msgid "If the record has reached the database a red"
+msgstr "Αν οι καταγραφές σας έχουν φτάσει στη βάση δεδομένων ένα κόκκινο"
+
+msgid "(set for submission & saved locally) will become green"
+msgstr ""
+"(έτοιμες για υποβολή & τοπικά αποθηκευμένες στην εφαρμογή) θα γίνει πράσινο"
+
+msgid "synced to the database"
+msgstr "συγχρονισμένες με τη βάση δεδομένων"
+
+msgid ""
+"you have to be signed in to your website account and have a network "
+"connection, for the records to be automatically synchronised in the "
+"background"
+msgstr ""
+"πρέπει να έχετε συνδεθεί με τον ίδιο λογαριασμό όπως στη πλατφόρμα και να "
+"έχετε σύνδεση στο δίκτυο, για να συγχρονίζονται αυτόματα οι καταγραφές με τη"
+" βάση δεδομένων "
+
+msgid "Delete a record"
+msgstr "Διαγραφή μίας δειγματοληψίας"
+
+msgid ""
+"To delete a record, swipe it left in your account page and click the delete "
+"button."
+msgstr ""
+"Για να διαγράψετε μία δειγματοληψία, σύρετε την εγγραφή της προς τα αριστερά"
+" και κάντε κλικ στο κουμπί διαγραφής. "
+
+msgid "User"
+msgstr "Χρήστης"
+
+msgid "Sign in/out or register"
+msgstr "Συνδεθείτε/Αποσυνδεθείτε ή Εγγραφείτε"
+
+msgid ""
+"To login, open the main menu page click Login or Register buttons and follow"
+" the instructions."
+msgstr ""
+"Για να συνδεθείτε, μεταβείτε στη κεντρική σελίδα μενού και κάντε κλικ στο "
+"κουμπί Συνδεθείτε ή Εγγραφείτε και ακολουθήστε τις οδηγίες. "
+
+msgid "To logout, visit the main menu page and click the logout button."
+msgstr ""
+"Για να αποσυνδεθείτε, μεταβείτε στη κεντρική σελίδα μενού και κάντε κλικ στο"
+" κουμπί αποσύνδεσης. "
+
+msgid ""
+"after registering a new account you must verify your email address by "
+"clicking on a verification link sent to your email"
+msgstr ""
+"αφού δημιουργήσετε έναν νέο λογαριασμό, πρέπει να επιβεβαιώσετε τη διεύθυνση"
+" email σας, κάνοντας κλικ στον σύνδεσμο επιβεβαίωσης που σας έχει σταλθεί"
+
+msgid "Other"
+msgstr "Άλλο"
+
+msgid "Reset the application"
+msgstr "Επαναφορά εφαρμογής"
+
+msgid "Go to the application settings page"
+msgstr "Μεταβείτε στη σελίδα των ρυθμίσεων εφαρμογής"
+
+msgid "and click on the Reset"
+msgstr "και επιλέξτε την Επαναφορά"
+
+msgid "button"
+msgstr "κουμπί"
+
+msgid "No species found with this name"
+msgstr "Δεν βρέθηκαν είδη με αυτό το όνομα"
+
+msgid "Allow Sample Edit"
+msgstr "Επιτρέψτε την Επεξεργασία Καταγραφής"
+
+msgid "Upload"
+msgstr "Μεταφόρτωση"
+
+msgid ""
+"This app supports butterfly monitoring and conservation. Click on the + "
+"button below to starting counting butterflies."
+msgstr ""
+"Αυτή η εφαρμογή υποστηρίζει τη παρακολούθηση και τη προστασία των "
+"πεταλούδων. Κάντε κλικ στο + κουμπί παρακάτω για να ξεκινήσετε την "
+"καταμέτρηση πεταλούδων. "
+
+msgid ""
+"You will see lots of enhancements to this app as we add in new features over"
+" the coming months."
+msgstr ""
+"Θα δείτε πολλές αναβαθμίσεις στην εφαρμογή, καθώς θα προστίθενται νέες "
+"λειτουργίες τους επόμενους μήνες. "
+
+msgid "Are you sure you want to reset the application to its initial state?"
+msgstr ""
+"Είστε σίγουροι πως θέλετε να επαναφέρετε την εφαρμογή στην αρχική κατάσταση "
+"της;"
+
+msgid "This will wipe all the locally stored app data!"
+msgstr "Αυτό θα σβήσει όλα τα τοπικά αποθηκευμένα δεδομένα της εφαρμογής!"
+
+msgid "Sweden"
+msgstr "Σουηδία"
+
+msgid "Paused"
+msgstr "Παύση"
+
+msgid "Pending"
+msgstr "Εκκρεμής"
+
+msgid "Uploaded"
+msgstr "Μεταφορτωμένη"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
+
+msgid "No finished pending surveys"
+msgstr "Καμία εκκρεμής δειγματοληψία"
+
+msgid "No uploaded surveys"
+msgstr "Καμία μεταφορτωμένη δειγματοληψία"
+
+msgid "Enjoying the app?"
+msgstr "Σας αρέσει η εφαρμογή;"
+
+msgid "Not really"
+msgstr "Όχι τόσο"
+
+msgid "Yes!"
+msgstr "Ναι!"
+
+msgid "Would you mind giving us some feedback?"
+msgstr "Θα σας ενδιέφερε να μας γράψετε κάποια σχόλια;"
+
+msgid "No, thanks"
+msgstr "Όχι, ευχαριστώ"
+
+msgid "OK, sure"
+msgstr "Ναι, σίγουρα"
+
+msgid "How about a rating on the App Store then?"
+msgstr "Τότε τι θα λέγατε για μία αξιολόγηση στο Κατάστημα Εφαρμογών;"
+
+msgid "How about a rating on the Play Store then?"
+msgstr "Τότε τι θα λέγατε για μία αξιολόγηση στο Κατάστημα Εφαρμογών;"
+
+msgid "Icons made by"
+msgstr "Τα εικονίδια δημιουργήθηκαν από "
+
+msgid "from"
+msgstr "από το "
+
+msgid "We've sent an email to you"
+msgstr "Σας έχει σταλθεί ένα email"
+
+msgid ""
+"Click the link in the email to reset your password. If you don't see the "
+"email, check other places like your junk, spam or other folders."
+msgstr ""
+"Κάντε κλικ στον σύνδεσμο του email για να επαναφέρετε τον κωδικό πρόσβασης "
+"σας. Αν δεν βλέπετε κάποιο email, ελέγξτε την ανεπιθύμητη αλληλογραφία σας ή"
+" άλλους φακέλους.  "
+
+msgid "App Development"
+msgstr "Ανάπτυξη Εφαρμογής"
+
+msgid "This app was hand crafted with love by"
+msgstr "Η εφαρμογή σχεδιάστηκε στο χέρι με αγάπη από το "
+
+msgid ""
+"A technical consultancy that excels at building bespoke environmental "
+"science and community focussed solutions."
+msgstr ""
+"Μία τεχνική συμβουλευτική που διαπρέπει στον σχεδιασμό εξατομικευμένων "
+"λύσεων με επίκεντρο την επιστήμη του περιβάλλοντος και το κοινό. "
+
+msgid "For suggestions and feedback please do not hesitate to"
+msgstr "Για συμβουλές και σχόλια μη διστάσετε να"
+
+msgid "contact us"
+msgstr "επικοινωνήσετε μαζί μας"
+
+msgid "Language"
+msgstr "Γλώσσα"
+
+msgid "Country"
+msgstr "Χώρα"
+
+msgid "Mark any new records as 'training' and exclude from all reports."
+msgstr ""
+"Μαρκάρετε τις νέες δειγματοληψίες σας ως \"εκπαιδευτικές\" και αποκλείστε "
+"τις από τα στατιστικά. "
+
+# App setting label
+msgid "Show common names in guide"
+msgstr "Εμφάνιση κοινών ονομάτων στον οδηγό"
+
+msgid "Share App Analytics"
+msgstr "Κοινοποίηση των Αναλυτικών στοιχειών της Εφαρμογής"
+
+msgid "Share app crash data so we can make the app more reliable."
+msgstr ""
+"Κοινοποιήστε τα σφάλματα της εφαρμογής για να καταστήσουμε πιο αξιόπιστη την"
+" εφαρμογή. "
+
+msgid "Save Draft"
+msgstr "Αποθήκευση Προσχεδίου"
+
+msgid "Stage"
+msgstr "Στάδιο"
+
+msgid "Not Recorded"
+msgstr "Δεν Καταγράφηκε"
+
+msgid "Adults"
+msgstr "Ενήλικα"
+
+msgid "Larvae"
+msgstr "Προνύμφες "
+
+msgid "Eggs"
+msgstr "Αυγά"
+
+msgid "Pupae"
+msgstr "Χρυδαλλίδες "
+
+msgid "Larval webs"
+msgstr "Προνυμφικοί ιστοί "
+
+# Butterfly stage
+msgid "Adult"
+msgstr "Ενήλικο"
+
+# Butterfly stage
+msgid "Egg"
+msgstr "Αυγό"
+
+# Butterfly stage
+msgid "Larva"
+msgstr "Προνύμφη"
+
+# Butterfly stage
+msgid "Larval web"
+msgstr "Προνυμφικός ιστός "
+
+# Butterfly stage
+msgid "Pupa"
+msgstr "Χρυσαλλίδα"
+
+msgid "Transect"
+msgstr "Διαδρομή"
+
+msgid "Sections"
+msgstr "Τμήματα"
+
+msgid "No transect"
+msgstr "Καμία διαδρομή"
+
+msgid "Start Time"
+msgstr "Ώρα Έναρξης"
+
+msgid "End Time"
+msgstr "Ώρα Λήξης"
+
+msgid "Temperature"
+msgstr "Θερμοκρασία"
+
+msgid "Cloud"
+msgstr "Νέφωση"
+
+msgid "Wind Direction"
+msgstr "Κατεύθυνση Ανέμου"
+
+msgid "Wind Speed"
+msgstr "Ένταση Ανέμου"
+
+msgid "Recorder"
+msgstr "Καταγραφέας"
+
+msgid "Refresh"
+msgstr "Ανανέωση"
+
+msgid "Please select your transect first."
+msgstr "Παρακαλώ επιλέξτε τη διαδρομή σας πρώτα."
+
+msgid "Invalid server response."
+msgstr "Λάθος απόκριση του διακομιστή."
+
+msgid "Not recorded/no data"
+msgstr "Δεν καταγράφηκε/χωρίς δεδομένα"
+
+msgid "Please specify the temperature C°."
+msgstr "Παρακαλώ προσδιορίστε τη θερμοκρασία C°."
+
+msgid "S"
+msgstr "Ν"
+
+msgid "SW"
+msgstr "ΝΔ"
+
+msgid "W"
+msgstr "Δ"
+
+msgid "NW"
+msgstr "ΒΔ"
+
+msgid "N"
+msgstr "Β"
+
+msgid "NE"
+msgstr "ΒΑ"
+
+msgid "E"
+msgstr "Α"
+
+msgid "SE"
+msgstr "ΝΑ"
+
+msgid "No direction"
+msgstr "Καμία κατεύθυνση"
+
+msgid "Please specify the wind direction."
+msgstr "Παρακαλώ προσδιορίστε την κατεύθυνση του ανέμου."
+
+msgid "Smoke rises vertically"
+msgstr "Ο καπνός ανεβαίνει κάθετα "
+
+msgid "Slight smoke drift"
+msgstr "Ο καπνός εμφανίζει μικρή παρέκκλιση "
+
+msgid "Wind felt on face, leaves rustle"
+msgstr "Ο άνεμος γίνεται αισθητός στο πρόσωπο, τα φύλλα θροΐζουν"
+
+msgid "Leaves and twigs in slight motion"
+msgstr "Φύλλα και κλαδάκια έχουν μία ελαφριά κίνηση"
+
+msgid "Dust raised and small branches move"
+msgstr "Σηκώνεται σκόνη και μικρά κλαδιά κινούνται"
+
+msgid "Small trees in leaf begin to sway"
+msgstr "Μικρά δέντρα με φύλλα αρχίζουν να λικνίζονται"
+
+msgid "Large branches move and trees sway"
+msgstr "Μεγάλα κλαδιά κινούνται και τα δέντρα λικνίζονται"
+
+msgid "Please specify the wind speed."
+msgstr "Παρακαλώ προσδιορίστε την ένταση του ανέμου."
+
+msgid "Transects"
+msgstr "Διαδρομές"
+
+msgid "Transect list was successfully updated."
+msgstr "Η λίστα της διαδρομής ενημερώθηκε επιτυχώς."
+
+msgid "Section"
+msgstr "Τμήμα"
+
+msgid "Reliability"
+msgstr "Αξιοπιστία"
+
+msgid "Please specify the reliability of the section count."
+msgstr ""
+"Παρακαλώ προσδιορίστε την αξιοπιστία για αυτό το τμήμα της διαδρομής. "
+
+msgid "Suitable conditions"
+msgstr "Κατάλληλες συνθήκες"
+
+msgid "Unsuitable conditions"
+msgstr "Ακατάλληλες συνθήκες"
+
+msgid "Unable to survey"
+msgstr "Αδυναμία διενέργειας"
+
+msgid "15min Count"
+msgstr "15-λεπτο Σημείο"
+
+msgid "15min Single Species Count"
+msgstr "15-λεπτο Σημείο Ενός Είδους"
+
+msgid "eBMS Transect"
+msgstr "Διαδρομή eBMS"
+
+msgid "Please add any extra info about this record."
+msgstr ""
+"Παρακαλώ προσθέστε οποιαδήποτε επιπλέον πληροφορία για αυτή την καταγραφή."
+
+msgid "Enter more information here..."
+msgstr "Εισάγετε επιπλέον πληροφορίες εδώ..."
+
+msgid "Please specify the person responsible for identifying the species."
+msgstr ""
+"Παρακαλώ προσδιορίστε το υπεύθυνο άτομο για την αναγνώριση του είδους."
+
+msgid "HH:mm"
+msgstr "ΩΩ:λλ"
+
+msgid "Please specify the % of cloud cover."
+msgstr "Παρακαλώ προσδιορίστε το ποσοστό % της νέφωσης."
+
+msgid "You don't have any transects. Please try to refresh the list."
+msgstr "Δεν έχετε καμία διαδρομή. Προσπαθήστε να ανανεώσετε τη λίστα."
+
+msgid "Wind speed info is missing"
+msgstr "Λείπει η πληροφορία για την ένταση του ανέμου"
+
+msgid "Temperature info is missing"
+msgstr "Λείπει η πληροφορία για τη θερμοκρασία"
+
+msgid "Recorder info is missing"
+msgstr "Λείπει η πληροφορία για τον καταγραφέα "
+
+msgid "Please select your transect."
+msgstr "Παρακαλώ επιλέξτε τη διαδρομή σας."
+
+msgid ""
+"This guide is still in development. It covers {{countrySpeciesCount}} "
+"butterfly species out of the {{totalSpeciesCountryCount}} species in your "
+"selected country."
+msgstr ""
+"Ο οδηγός είναι ακόμα υπό ανάπτυξη. Καλύπτει {{countrySpeciesCount}} είδη "
+"πεταλούδων από τα {{totalSpeciesCountryCount}} είδη της χώρας σας. "
+
+msgid "Status"
+msgstr "Καθεστώς"
+
+msgid "Absent"
+msgstr "Απουσιάζει"
+
+msgid "Present"
+msgstr "Υπάρχει"
+
+msgid "Possibly present"
+msgstr "Πιθανώς υπάρχει"
+
+msgid "Regular migrant"
+msgstr "Μεταναστευτικό "
+
+msgid "Irregular vagrant"
+msgstr "Περιπλανώμενο"
+
+msgid "Regionally extinct"
+msgstr "Τοπικά Eκλιπόν "
+
+msgid "Description"
+msgstr "Περιγραφή"
+
+msgid "Counts"
+msgstr "Αριθμοί"
+
+msgid "Species descriptions"
+msgstr "Περιγραφές ειδών"
+
+msgid ""
+"Species descriptions included as part of the guide are based on those "
+"produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
+" Settele for making these available."
+msgstr ""
+"Οι περιγραφές ειδών που περιλαμβάνονται στον οδηγό, βασίζονται στις "
+"περιγραφές του Άτλαντα Climatic Risk of European Butterflies. Ευχαριστούμε "
+"τον Josef Settele για την διάθεση τους. "
+
+msgid "Photo credits"
+msgstr "Πνευματική ιδιοκτησία φωτογραφιών"
+
+msgid "How to use the app"
+msgstr "Πως να χρησιμοποιήσετε την εφαρμογή"
+
+msgid ""
+"You can use this app to monitor butterflies anywhere in Europe. The results "
+"will be entered into the European Butterfly Monitoring database and used to "
+"develop trends of butterflies across Europe. To use the app you will first "
+"have to register an account."
+msgstr ""
+"Μπορείτε να χρησιμοποιήσετε την εφαρμογή για παρακολούθηση πεταλούδων "
+"οπουδήποτε στην Ευρώπη. Τα δεδομένα σας θα περαστούν στη βάση του Ευρωπαϊκού"
+" Προγράμματος Παρακολούθησης Πεταλούδων και θα αξιοποιηθούν για την ανάπτυξη"
+" δεικτών τάσεων των πεταλούδων σε όλη την Ευρώπη. Για να χρησιμοποιήσετε την"
+" εφαρμογή πρέπει πρώτα να δημιουργήσετε έναν λογαριασμό.  "
+
+msgid ""
+"The preferred method is to conduct a 15-minute Count. This can be done at "
+"any place and at any time when butterflies are active (i.e. when the weather"
+" is warm and preferably sunny). You can also use the app to record your "
+"established butterfly transects. Later in 2020, the app will also include "
+"the ability to submit casual records. The notes below tell you how to use "
+"the currently available methods."
+msgstr ""
+"Η πιο επιθυμητή μέθοδος είναι αυτή του 15-λεπτου Σημείου. Αυτή μπορεί να "
+"εφαρμοστεί οπουδήποτε και οποτεδήποτε, όταν οι πεταλούδες είναι ενεργές "
+"(δηλαδή όταν ο καιρός είναι ζεστός και κατά προτίμηση ηλιόλουστος). Μπορείτε"
+" επίσης να χρησιμοποιήσετε την εφαρμογή για να επισκεφτείτε τις "
+"κατοχυρωμένες διαδρομές σας. Μέσα στο 2020, η εφαρμογή θα περιλαμβάνει "
+"επίσης τη δυνατότητα υποβολής τυχαίων καταγραφών. Οι ακόλουθες οδηγίες σας "
+"εξηγούν πως να χρησιμοποιήσετε τις διαθέσιμες μεθόδους. "
+
+msgid "How to do a 15-minute Count"
+msgstr "Πως να κάνετε ένα 15-λεπτο Σημείο "
+
+msgid ""
+"This is the default method on the app. Simply count butterflies for a 15 "
+"minute period, either in a defined area such as a field, or while walking "
+"along, or standing on a fixed point counting butterflies that fly past. "
+"There is no need to draw the route as the app will know your route, provided"
+" you have the GPS tracking facility switched on in your Settings. Otherwise "
+"you will have to draw the area searched on a map, using the app. To start, "
+"touch the + button at the bottom of the screen. The app counts down the 15 "
+"minutes once you have started, but you can pause at any time (for example to"
+" identify a butterfly) by pressing the pause button. At the end of the "
+"survey you can review your records and make sure the totals are correct "
+"before submitting."
+msgstr ""
+"Αυτή είναι η προεπιλεγμένη μέθοδος της εφαρμογής. Απλά μετρήστε τις "
+"πεταλούδες που παρατηρείτε μέσα σε μία περίοδο 15 λεπτών, σε μία καθορισμένη"
+" περιοχή όπως ένα λιβάδι ή καθώς περπατάτε ή ενώ στέκεστε σε ένα σταθερό "
+"σημείο και μετράτε τις πεταλούδες που πετάνε γύρω σας. Εάν έχετε "
+"ενεργοποιημένο το GPS του κινητού σας, δεν χρειάζεται να σχεδιάσετε τη "
+"περιοχή/διαδρομή που κάνετε, καθώς η εφαρμογή θα την έχει ήδη. Διαφορετικά, "
+"θα πρέπει οι ίδιοι να σχεδιάσετε την περιοχή/διαδρομής σας, στον χάρτη της "
+"εφαρμογής. Για να ξεκινήσετε πατήστε το κουμπί + στο κάτω μέρος της οθόνης. "
+"Η εφαρμογή κάνει αντίστροφη μέτρηση των 15 λεπτών μόλις ξεκινήσετε, ωστόσο "
+"μπορείτε να πατήσετε παύση όποτε θέλετε (π.χ. για να αναγνωρίσετε μία "
+"πεταλούδα). Στο τέλος της δειγματοληψίας μπορείτε να ελέγξετε τις καταγραφές"
+" σας και να βεβαιωθείτε πως οι αριθμοί είναι σωστοί προτού την υποβάλετε."
+
+msgid ""
+"Add species you see by pressing the + ADD button and start typing a species "
+"name. The selection of species will then appear as a drop down menu. You can"
+" use either scientific or English names. Select the species you see and once"
+" in your list of butterflies, touch the left hand number to increase the "
+"count of how many you have seen. You can review this number and amend at the"
+" end as well. You can also add photos if you want and add comments."
+msgstr ""
+"Για να προσθέσετε είδη που παρατηρείτε, πατήστε το κουμπί + ΠΡΟΣΘΗΚΗ ΕΙΔΩΝ "
+"και αρχίστε να πληκτρολογείτε το όνομα του είδους. Τότε θα εμφανιστεί μία "
+"αναδυόμενη λίστα με είδη. Μπορείτε να χρησιμοποιήστε είτε επιστημονικά "
+"ονόματα είτε κοινές Αγγλικές ονομασίες. Όταν επιλέξετε το είδος που "
+"παρατηρήσατε, τότε αυτό θα περαστεί στη λίστα ειδών σας, εκεί μπορείτε να "
+"πατήσετε τον αριθμό στα αριστερά του ονόματος του όσες φορές θέλετε μέχρι να"
+" φτάσει τον αριθμό ατόμων που παρατηρήσατε. Μπορείτε να επεξεργαστείτε και "
+"να αλλάξετε τον αριθμό ατόμων και στο τέλος της δειγματοληψίας. Μπορείτε "
+"επίσης, εάν θέλετε, να προσθέσετε φωτογραφίες και σχόλια."
+
+msgid ""
+"Once you have finished your 15-minute Count and checked that the species and"
+" numbers seen are correct, press the UPLOAD button to submit. This is "
+"important to make sure your data is stored securely in the eBMS database. A "
+"record of the count will be held on your device for future reference as well"
+" as on your online account."
+msgstr ""
+"Μόλις έχετε τελειώσει το 15-λεπτο Σημείο σας και έχετε ελέγξει πως τα είδη "
+"σας και οι αριθμοί τους είναι σωστοί, πατήστε το κουμπί ΜΕΤΑΦΟΡΤΩΣΗ για να "
+"τα υποβάλετε. Αυτή η διαδικασία είναι σημαντική για να βεβαιωθείτε πως τα "
+"δεδομένα σας έχουν αποθηκευτεί με ασφάλεια στη βάση δεδομένων του eBMS. Ένα "
+"αρχείο της δειγματοληψίας σας θα διατηρηθεί στην εφαρμογή για μελλοντική "
+"αναφορά, καθώς και στον λογαριασμό σας στη πλατφόρμα. "
+
+msgid "How to record along an existing transect"
+msgstr "Πως να καταγράψετε μία επίσκεψη σε μία υπάρχουσα διαδρομή"
+
+msgid ""
+"You can also use the app to submit records while walking an existing "
+"butterfly monitoring transect. These have already been established by "
+"country Butterfly Monitoring Schemes and are best completed by experienced "
+"recorders. Recording existing transects within the app requires that your "
+"account is already linked to a transect setup within the eBMS system. If no "
+"transect sites are listed once you are logged into the app, please contact "
+"your national co-ordinator (please email {{helpEmail}} for advice)."
+msgstr ""
+"Μπορείτε επίσης να χρησιμοποιήσετε την εφαρμογή για να υποβάλετε καταγραφές "
+"από την επίσκεψη σας σε μία ήδη κατοχυρωμένη διαδρομή παρακολούθησης "
+"πεταλούδων. Αυτές οι διαδρομές έχουν ήδη σχεδιαστεί από χώρες με Προγράμματα"
+" Παρακολούθησης Πεταλούδων, τις οποίες επισκέπτονται πιο έμπειροι "
+"καταγραφείς. Για να επισκεφτείτε μία ήδη κατοχυρωμένη διαδρομή μέσω της "
+"εφαρμογής, πρέπει πρώτα να έχετε συνδέσει τον λογαριασμό σας σε μία διαδρομή"
+" μέσω της πλατφόρμας του eBMS.  Εάν δεν εμφανίζεται καμία διαδρομή στη λίστα"
+" σας στην εφαρμογή, επικοινωνήστε με τον εθνικό συντονιστή σας (στείλτε "
+"email στο {{helpEmail}} για συμβουλές)."
+
+msgid ""
+"To start with the transect count, hold down the + button (a long-press) at "
+"the bottom of the screen and select eBMS Transect. The Transect page will "
+"appear with all the options to be completed. First, you have to select your "
+"transects (you will need to be logged in for this, and for transect routes "
+"to be linked to your user account). Once you have selected your transect "
+"site, you can fill out the necessary weather details (e.g. temperature, wind"
+" speed etc) and other required information (e.g. start time) on the Transect"
+" page. You then add a list of species seen and the number counted for each "
+"transect section, in the same way as for a 15-minute count. Once you have "
+"finished your Transect and checked that the species and numbers seen are "
+"correct, press the FINISH button to submit."
+msgstr ""
+"Για να ξεκινήσετε τη διαδρομή σας, πατήστε (παρατεταμένα) το κουμπί + στο "
+"κάτω μέρος της οθόνης και επιλέξτε τη Διαδρομή eBMS. Θα εμφανιστεί η σελίδα "
+"της Διαδρομής στην οποία πρέπει να συμπληρώσετε κάποια στοιχεία. Αρχικά, "
+"πρέπει να επιλέξετε τη διαδρομή που θέλετε (πρέπει να έχετε συνδεθεί με τον "
+"ίδιο λογαριασμό με την πλατφόρμα, για να περαστούν οι διαδρομές σας στην "
+"εφαρμογή). Μόλις επιλέξετε τη διαδρομή σας, μπορείτε να συμπληρώσετε τους "
+"παράγοντες περιβάλλοντος (π.χ. θερμοκρασία, ένταση ανέμου κ.λ.π.) και άλλα "
+"απαιτούμενα στοιχεία (π.χ. ώρα έναρξης) στη σελίδα της Διαδρομής. Μετά "
+"προσθέτετε μία λίστα ειδών που παρατηρήσατε και τον αριθμό τους για κάθε "
+"τμήμα της διαδρομής σας, όπως και με το 15-λεπτο σημείο. Μόλις έχετε "
+"ολοκληρώσει τη Διαδρομή σας και ελέγξετε ότι τα είδη και οι αριθμοί τους "
+"είναι σωστοί, πατήστε το κουμπί ΤΕΛΟΣ. "
+
+msgid "Survey section"
+msgstr "Καρτέλα Δειγματοληψίες"
+
+msgid ""
+"In this tab, on the right part of the + Button, you can see the PENDING "
+"counts, your records that have not been submitted and the UPLOADED counts, "
+"the ones submitted to the eBMS database. The Pending counts can be submitted"
+" to the system by clicking on it and pressing the Upload option. You could "
+"see the species list that you recorded for Uploaded counts. All your records"
+" can also be viewed and edited on the {{eBMSWebsiteLink}}"
+msgstr ""
+"Σε αυτή την καρτέλα, στη δεξιά πλευρά από το κουμπί +, μπορείτε να δείτε τις"
+" ΕΚΚΡΕΜΕΙΣ δειγματοληψίες σας, τα δεδομένα σας που δεν έχουν υποβληθεί και "
+"τις ΜΕΤΑΦΟΡΤΩΜΕΝΕΣ δειγματοληψίες σας, τα δεδομένα σας που έχουν υποβληθεί "
+"στη βάση δεδομένων του eBMS. Μία εκκρεμής δειγματοληψία μπορεί να υποβληθεί "
+"στο σύστημα κάνοντας κλικ πάνω της, στην επιλογή Μεταφόρτωση. Μπορείτε να "
+"δείτε τη λίστα ειδών που καταγράψατε στις Μεταφορτωμένες δειγματοληψίες. "
+"Μπορείτε επίσης να δείτε και να επεξεργαστείτε όλα τα δεδομένα σας στο "
+"{{eBMSWebsiteLink}}"
+
+msgid "eBMS website"
+msgstr "πλατφόρμα eBMS"
+
+msgid "App Settings"
+msgstr "Ρυθμίσεις Εφαρμογής"
+
+# Settings label
+msgid "Use only day-flying moths"
+msgstr "Χρήση μόνο ημερόβιων λεπιδόπτερων"
+
+msgid ""
+"Go to the application setting page to change the language and the country. "
+"The selected country is important in order to see different species in the "
+"Picture Guide, you will see only the species occurring in that country."
+msgstr ""
+"Μεταβείτε στις ρυθμίσεις της εφαρμογής για να αλλάξετε τη γλώσσα και τη "
+"χώρα. Η επιλογή της χώρας είναι σημαντική για να δείτε διαφορετικά είδη στον"
+" Φωτογραφικό Οδηγό, θα δείτε μόνο είδη που υπάρχουν στη χώρα που επιλέξατε. "
+
+msgid ""
+"You can also switch on the Training Mode, when you are still learning to "
+"identify butterflies."
+msgstr ""
+"Μπορείτε επίσης να ενεργοποιήσετε την Εκπαιδευτική Λειτουργία, εάν μαθαίνετε"
+" ακόμα να αναγνωρίζετε πεταλούδες. "
+
+# This is part of mapping functionality
+msgid "Are you sure you want to delete your current track?"
+msgstr ""
+
+# This is part of mapping functionality
+msgid "Save"
+msgstr "Αποθήκευση"
+
+msgid "Map"
+msgstr "Χάρτης"
+
+msgid "Today"
+msgstr "Σήμερα"
+
+msgid "Yesterday"
+msgstr "Χθες "
+
+# This is part of a saved record page
+msgid "This record has been submitted and cannot be edited within this App."
+msgstr ""
+"Αυτό το αρχείο έχει υποβληθεί και δεν είναι δυνατή η επεξεργασία του μέσω "
+"Εφαρμογής."
+
+# Refers to surveys list when long-pressing plus button
+msgid "Click on other recording options from list below"
+msgstr "Επιλέξτε και άλλες μεθόδους στη παρακάτω λίστα."
+
+# A note in app settings page
+msgid ""
+"Batch upload all finished records. This does not include records in 'draft' "
+"stage."
+msgstr ""
+"Ομαδική μεταφόρτωση όλων των ολοκληρωμένων αρχείων.  Αυτό δεν περιλαμβάνει "
+"τα αρχεία σε στάδιο \"προσχεδίου\". "
+
+# Part of batch upload option in app settings page
+msgid "Are you sure you want to upload all finished records?"
+msgstr ""
+"Είστε σίγουροι πως θέλετε να μεταφορτώσετε όλα τα ολοκληρωμένα αρχεία;"
+
+# Part of batch upload option in app settings page
+msgid "Please log in first to upload the records."
+msgstr "Για να μεταφορτώσετε τα αρχεία σας πρέπει να συνδεθείτε πρώτα."
+
+# Part of batch upload option in app settings page
+msgid "Uploading {{count}} record"
+msgid_plural "Uploading {{count}} records"
+msgstr[0] "Μεταφόρτωση {{count}} αρχείου"
+msgstr[1] "Μεταφόρτωση {{count}} αρχείων"
+
+# Part of a page error
+msgid "Oops! Something went wrong."
+msgstr "Ουπς! Κάτι πήγε λάθος."
+
+# Part of a page error
+msgid "This is the error event id: {{eventId}}"
+msgstr "Αυτός είναι ο κωδικός του λάθους: {{eventId}}"
+
+# Additional information button in Area-count survey
+msgid "Additional Details"
+msgstr "Επιπρόσθετα Στοιχεία"
+
+# Section label in Area-count survey
+msgid "Weather Conditions"
+msgstr "Καιρικές Συνθήκες"
+
+# Credits page heading
+msgid "Weather conditions"
+msgstr "Καιρικές συνθήκες"
+
+# Alert message
+msgid "Are you sure you want to delete {{taxon}} ?"
+msgstr "Είστε σίγουροι πως θέλετε να διαγράψετε το {{taxon}} ;"
+
+# Credits page text
+msgid ""
+"The current weather values are prepopulated using the OpenWeatherMap API "
+"weather service."
+msgstr ""
+"Οι τρέχουσες καιρικές τιμές είναι προσυμπληρωμένες βάσει της μετεωρολογικής "
+"υπηρεσίας OpenWeatherMap API."
+
+# Species list copy functionality
+msgid "Copy species"
+msgstr "Αντιγραφή ειδών "
+
+# Species list copy functionality
+msgid "Are you sure want to copy previous survey species list?"
+msgstr ""
+"Είστε σίγουροι πως θέλετε να αντιγράψετε τη λίστα ειδών από τη προηγούμενη "
+"δειγματοληψία; "
+
+# Species list copy functionality
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+# Species list copy functionality
+msgid "Sorry, no species were found to copy."
+msgstr "Συγγνώμη, δεν βρέθηκαν είδη για αντιγραφή."
+
+# Species list copy functionality
+msgid "You have successfully copied {{speciesCount}} species."
+msgstr "Έχετε αντιγράψει επιτυχώς {{speciesCount}} είδη."
+
+# Species list copy functionality
+msgid "Sorry, no previous survey to copy species from."
+msgstr ""
+"Συγγνώμη, δεν υπάρχει προηγούμενη δειγματοληψία για να αντιγράψετε τα είδη "
+"της. "
+
+# Country name
+msgid "Armenia"
+msgstr "Αρμενία "
+
+# Survey page additional information note
+msgid "To delete any surveys swipe it to the left."
+msgstr ""
+"Για να διαγράψετε οποιαδήποτε δειγματοληψία σύρετε τη προς τα αριστερά."
+
+# 15min survey additional information note after survey is finished
+msgid ""
+"Please check if the recording area is correct before sending the record."
+msgstr ""
+"Παρακαλώ ελέγξτε εάν η περιοχή της δειγματοληψίας σας είναι σωστή προτού την"
+" υποβάλετε."
+
+# Survey page additional information note
+msgid "Please do not forget to upload any pending surveys!"
+msgstr "Παρακαλώ μη ξεχάσετε να υποβάλετε καμία εκκρεμή δειγματοληψία!"
+
+# Survey page additional information note
+msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
+msgstr ""
+"Καμία ολοκληρωμένη εκκρεμής δειγματοληψία. <br/><br/>Πατήστε <4></4> για "
+"προσθήκη."
+
+# Pop-up tip title when the user has installed the app and finished the
+# onboarding screens
+msgid "Tip: Finding Help"
+msgstr "Συμβουλή: Μεταβείτε στη Βοήθεια"
+
+# Pop-up content  when the user has installed the app and finished the
+# onboarding screens
+msgid ""
+"Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
+msgstr ""
+"Παρακαλώ μεταβείτε στις σελίδες του Οδηγού <2></2> και της Βοήθειας <5></5> "
+"προτού χρησιμοποιήσετε την εφαρμογή!"
+
+# Link inside Guide page
+msgid "More Information"
+msgstr "Περισσότερες πληροφορίες"
+
+# Pop-up alert tip title
+msgid "Tip: Adding Species"
+msgstr "Συμβουλή: Προσθήκη Ειδών"
+
+# Pop-up alert tip content
+msgid ""
+"You can bulk copy your previous species lists by long-pressing the Add "
+"Species button."
+msgstr ""
+"Μπορείτε να αντιγράψετε μαζικά τις προηγούμενες λίστες ειδών σας, πατώντας "
+"παρατεταμένα το κουμπί Προσθήκη Είδους. "
+
+# Button
+msgid "Hide"
+msgstr "Απόκρυψη"
+
+# App settings labels for primary survey change
+msgid "Primary Survey"
+msgstr "Κύρια Δειγματοληψία"
+
+# App settings labels for primary survey change
+msgid "All Surveys"
+msgstr "Όλες οι Δειγματοληψίες"
+
+# Part of a photo picker element
+msgid "Representative photo of where the 15 minute count was made"
+msgstr "Αντιπροσωπευτική φωτογραφία της περιοχής του 15-λεπτου σημείου"
+
+# Part of a photo picker element
+msgid "No photo has been added."
+msgstr "Δεν έχει προστεθεί καμία φωτογραφία."
+
+# Part of a photo picker element
+msgid "Press <1></1> to add."
+msgstr "Πατήστε <1></1> για προσθήκη."
+
+# part of Precise 15min count survey
+msgid "Precise 15min Count"
+msgstr "Ακριβές 15-λεπτο Σημείο"
+
+# part of Precise 15min count survey
+msgid "Occurrences"
+msgstr "Καταγραφές"
+
+# part of Precise 15min count survey
+msgid "Time"
+msgstr "Χρόνος"
+
+# part of Precise 15min count survey
+msgid "Are you sure you want to delete this occurrence?"
+msgstr "Είστε σίγουροι πως θέλετε να διαγράψετε αυτή την καταγραφή;"
+
+# alert confirmation button
+msgid "Got it"
+msgstr "Εντάξει"
+
+# surveys page background message
+msgid "<0>No uploaded surveys</0>"
+msgstr "<0>Καμία υποβληθείσα δειγματοληψία</0>"
+
+# user register error message
+msgid "Account already exists."
+msgstr "Ο λογαριασμός υπάρχει ήδη."
+
+# A survey label
+msgid "Details"
+msgstr "Επιμέρους στοιχεία"
+
+# A survey label
+msgid "Species Photo"
+msgstr "Φωτογραφία Είδους"
+
+# Info message for species stage picker
+msgid "Pick the life stage"
+msgstr "Επιλέξτε το στάδιο ανάπτυξης"
+
+# A survey label
+msgid "Weather"
+msgstr "Καιρός"
+
+# A survey label
+msgid "Photo"
+msgstr "Φωτογραφία"
+
+# Part of species group selection
+msgid "Species groups"
+msgstr "Ταξινομικές ομάδες"
+
+# Part of species group selection
+msgid "Please select the species groups that you always record."
+msgstr "Παρακαλώ επιλέξτε τις ταξινομικές ομάδες που καταγράφετε πάντα."
+
+# Part of species group selection
+msgid "Butterflies"
+msgstr "Πεταλούδες"
+
+# Part of species group selection
+msgid "Moths"
+msgstr "Νυχτοπεταλούδες "
+
+# Part of species group selection
+msgid "Bumblebees"
+msgstr "Μέλισσες"
+
+# Part of species group selection
+msgid "Dragonflies"
+msgstr "Λιβελούλες "
+
+# Alert label
+msgid "Warning"
+msgstr "Προσοχή"
+
+# Alert message when turning GPS off
+msgid "Are you sure you want to turn off the GPS tracking?"
+msgstr "Είστε σίγουροι πως θέλετε να απενεργοποιήσετε τον εντοπισμό GPS;"
+
+# Alert button option
+msgid "Turn off"
+msgstr "Απενεργοποίηση"
+
+# Alert button label
+msgid "Merge"
+msgstr "Συγχώνευση"
+
+# Alert header
+msgid "Species already exists"
+msgstr "Το είδος υπάρχει ήδη"
+
+# Alert message
+msgid "Are you sure you want to merge this list to the existing species list?"
+msgstr ""
+"Είστε σίγουροι πως θέλετε να συγχωνεύσετε αυτή τη λίστα με την υπάρχουσα "
+"λίστα ειδών;"
+
+# Single species count survey validation message
+msgid "Please add your target species"
+msgstr "Παρακαλώ προσθέστε τα είδη στόχους σας"
+
+# Moth survey label
+msgid "Date"
+msgstr "Ημερομηνία"
+
+# Moth survey label
+msgid "Method"
+msgstr "Μέθοδος"
+
+# Context term
+msgid "Please select the medthod type"
+msgstr "Παρακαλώ επιλέξτε τον τύπο της μεθόδου"
+
+# Moth survey method type
+msgid "MV light"
+msgstr "Λαμπτήρας ατμών υδραργύρου"
+
+# Moth survey method type
+msgid "Actinic light"
+msgstr "Λαμπτήρας ακτινικού φωτός"
+
+# Moth survey method type
+msgid "LED light"
+msgstr "Λαμπτήρας LED"
+
+# Moth survey method type
+msgid "Light trapping"
+msgstr "Φωτοπαγίδευση"
+
+# Moth survey method type
+msgid "Daytime observation"
+msgstr "Ημερήσια παρατήρηση"
+
+# Moth survey method type
+msgid "Dusking"
+msgstr "Διαδρομή κατά το σούρουπο"
+
+# Moth survey method type
+msgid "Attracted to a lighted window"
+msgstr "Έλξη σε φωτιζόμενο παράθυρο "
+
+# Moth survey method type
+msgid "Sugaring"
+msgstr "Παγίδα επικαλυμμένη με ζάχαρη"
+
+# Moth survey method type
+msgid "Wine roping"
+msgstr "Παγίδα επικαλυμμένη με κρασί"
+
+# Moth survey method type
+msgid "Beating tray"
+msgstr "Σεντόνι χτυπήματος"
+
+# Moth survey method type
+msgid "Pheromone trap"
+msgstr "Παγίδα φερομόνης "
+
+# Moth survey method type
+msgid "Other method (add comment)"
+msgstr "Άλλη μέθοδος (προσθέστε σχόλιο)"
+
+# Moth survey method type
+msgid "Not recorded"
+msgstr "Δεν καταγράφηκε"
+
+# Moth survey details header title
+msgid "Survey Details"
+msgstr "Στοιχεία Δειγματοληψίας"
+
+# Moth survey header title
+msgid "Moth-trap survey"
+msgstr "Δειγματοληψία παγίδας νυχτοπεταλούδων"
+
+# Moth survey header title
+msgid "Moth survey"
+msgstr "Δειγματοληψία νυχτοπεταλούδων"
+
+# Moth survey divider label
+msgid "Species list"
+msgstr "Λίστα ειδών"
+
+# Moth survey moth details label
+msgid "Identifier"
+msgstr "Αναγνώριση από"
+
+# Moth survey divider label
+msgid "Moths list"
+msgstr "Λίστα νυχτοπεταλούδων"
+
+# Moth survey photo picker divider label
+msgid "Moth Photo"
+msgstr "Φωτογραφία νυχτοπεταλούδας"
+
+# Identifier attribute info message
+msgid "Enter the recorder's name, if different."
+msgstr "Εισάγετε το όνομα του καταγραφέα, εάν είναι διαφορετικό."
+
+# Identifier attribute placeholder
+msgid "Recorder name"
+msgstr "Όνομα καταγραφέα"
+
+# Latitude
+msgid "Lat"
+msgstr "Γ. πλάτος"
+
+# Longitude
+msgid "Long"
+msgstr "Γ. μήκος"
+
+# Moth survey attribute label
+msgid "Count inside"
+msgstr "Αριθμός εσωτερικά"
+
+# Moth survey attribute label
+msgid "Count outside"
+msgstr "Αριθμός εξωτερικά"
+
+# Moth survey photo picker label
+msgid "Moth Photos"
+msgstr "Φωτογραφίες νυχτοπεταλούδων"
+
+# Moth survey details label
+msgid "Moth traps"
+msgstr "Παγίδες νυχτοπεταλούδων"
+
+# Moth survey details label
+msgid "Moth trap"
+msgstr "Παγίδα νυχτοπεταλούδων"
+
+# Moth survey Location Info message
+msgid ""
+"You have not created any moth traps yet. To create one please go to the "
+"<2>website.</2>"
+msgstr ""
+"Δεν έχετε δημιουργήσει καμία παγίδα νυχτοπεταλούδων ακόμα. Για να "
+"δημιουργήσετε μία παρακαλώ μεταβείτε στη<2>πλατφόρμα.</2>"
+
+# Moth survey Location Info message
+msgid "To see the map please connect to the internet."
+msgstr "Παρακαλώ συνδεθείτε με το διαδίκτυο για να δείτε τον χάρτη. "
+
+# Moth survey validation message
+msgid "Please add the moth trap"
+msgstr "Παρακαλώ προσθέστε τη παγίδα νυχτοπεταλούδων"
+
+# Moth survey Location Info message
+msgid ""
+"You have only one moth trap. To create more please go to the <2>website.</2>"
+msgstr ""
+"Έχετε μόνο μία παγίδα νυχτοπεταλούδων. Για να δημιουργήσετε περισσότερες "
+"παρακαλώ μεταβείτε στη <2>πλατφόρμα.</2>"
+
+# Moth survey AI loader
+msgid "Identifying..."
+msgstr "Αναγνώριση..."
+
+# Unknown species common_name
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+# Report table button
+msgid "Show more"
+msgstr "Εμφανίστε περισσότερα"
+
+# Moth survey warning message
+msgid "Please add a photo"
+msgstr "Παρακαλώ προσθέστε μία φωτογραφία"
+
+# Moth survey unknown species divider
+msgid "Unknown species"
+msgstr "Άγνωστα είδη"
+
+# Moth survey image gallery warning message
+msgid "<0>Warning</0> - we could not identify this species."
+msgstr "<0>Προσοχή</0> - δεν μπορέσαμε να αναγνωρίσουμε το είδος."
+
+# App settings title
+msgid "Surveying"
+msgstr "Δειγματοληψία"
+
+# Moth survey label
+msgid "Moth survey (SPRING)"
+msgstr "Δειγματοληψία νυχτοπεταλούδων (SPRING)"
+
+# Survey name
+msgid "Moth Survey"
+msgstr "Δειγματοληψία νυχτοπεταλούδων"
+
+#  Moth settings page header title
+msgid "Moth Survey Settings"
+msgstr "Ρυθμίσεις Δειγματοληψίας νυχτοπεταλούδων"
+
+# Moth settings page label
+msgid "Use image identification"
+msgstr "Χρήση αναγνωριστικού εικόνας"
+
+# Moth settings page info message
+msgid ""
+"We will help you to identify species using our species image classifier."
+msgstr ""
+"Θα σας βοηθήσουμε στην αναγνώριση ειδών μέσω ενός ταξινομητή εικόνων ειδών "
+"που διαθέτουμε. "
+
+# Moth survey button label
+msgid "Identify"
+msgstr "Αναγνώριση"
+
+# Moth survey button label
+msgid "Identify All"
+msgstr "Αναγνώριση Όλων"
+
+# Moth survey image classifier disabled info header
+msgid "Image identification"
+msgstr "Αναγνώριση εικόνας"
+
+# Moth survey image classifier disabled info message
+msgid ""
+"Image classifier is currently <1>disabled</1>. Please go to app "
+"<4>Settings</4> to turn it on."
+msgstr ""
+"Ο ταξινομητής εικόνων είναι προς το παρόν <1>απενεργοποιημένος</1>. Παρακαλώ"
+" μεταβείτε στην εφαρμογή <4>στις Ρυθμίσεις</4> για να τον ενεργοποιήσετε. "
+
+# Whats new message title
+msgid "What's New"
+msgstr "Τι νέο υπάρχει"
+
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous transect section's species list."
+msgstr ""
+
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous moth trap's species list."
+msgstr ""
+
+# Version 1.22 whats new message
+msgid "Updated species guide page."
+msgstr ""
+
+# User account action
+msgid "Resend"
+msgstr "Επαναποστολή "
+
+# User account action
+msgid "Looks like your email hasn't been verified yet."
+msgstr "Φαίνεται πως το email σας δεν έχει επαληθευτεί ακόμα. "
+
+# User account action
+msgid "Should we resend the verification email?"
+msgstr "Πρέπει να στείλουμε εκ νέου το email επαλήθευσης;"
+
+# GPS permissions warning
+msgid ""
+"Your Location Services (GPS) seems to be disabled. You can enable this in "
+"your device settings."
+msgstr ""
+"Ο εντοπισμός της τοποθεσίας σας (GPS) φαίνεται απενεργοποιημένος. Μπορείτε "
+"να τον ενεργοποιήσετε στις ρυθμίσεις της συσκευής σας. "
+
+# GPS permissions warning
+msgid "Location Services (GPS) are disabled"
+msgstr "Ο εντοπισμός τοποθεσίας (GPS) είναι απενεργοποιημένος"
+
+# Moth trap survey
+msgid "Add New"
+msgstr "Προσθήκη νέας"
+
+# Moth trap survey
+msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
+msgstr ""
+"Δεν έχετε καμία παγίδα νυχτοπεταλούδων ακόμη. <1>Δημιουργήστε τη πρώτη σας "
+"παγίδα</1>"
+
+# Moth trap survey
+msgid "Moth Trap"
+msgstr "Παγίδα Νυχτοπεταλούδων "
+
+# Moth trap survey
+msgid "Type"
+msgstr "Τύπος"
+
+# Moth trap survey
+msgid "Other type"
+msgstr "Άλλος τύπος"
+
+# Moth trap survey
+msgid "Add lamp"
+msgstr "Προσθήκη λαμπτήρα"
+
+# Moth trap survey
+msgid "What type of trap was it?"
+msgstr "Ποιος τύπος παγίδας ήταν;"
+
+# Moth trap survey
+msgid "No lamps added"
+msgstr "Δεν προστέθηκαν λαμπτήρες"
+
+# Moth trap survey
+msgid "What is the lamp type?"
+msgstr "Ποιος είναι ο τύπος του λαμπτήρα;"
+
+# Moth trap survey
+msgid "What is the moth trap type?"
+msgstr "Ποιος είναι ο τύπος της παγίδας νυχτοπεταλούδων;"
+
+# Moth trap survey
+msgid "LED funnel trap"
+msgstr "Παγίδα LED με χωνί"
+
+# Moth trap survey
+msgid "Other funnel trap"
+msgstr "Άλλη παγίδα χωνιού "
+
+# Moth trap survey
+msgid "Trap with 2 sheets"
+msgstr "Παγίδα με 2 σεντόνια"
+
+# Moth trap survey
+msgid "Other trap"
+msgstr "Άλλη παγίδα"
+
+# Moth trap survey
+msgid "Lamp"
+msgstr "Λαμπτήρας"
+
+# Moth trap survey
+msgid "Lamp Details"
+msgstr "Επιμέρους στοιχεία λαμπτήρα"
+
+# Moth trap survey
+msgid "Quantity"
+msgstr "Ποσότητα"
+
+# Moth trap survey
+msgid "No moth trap name"
+msgstr "Δεν υπάρχει όνομα παγίδας νυχτοπεταλούδων"
+
+# Moth trap survey
+msgid "Moth trap name"
+msgstr "Όνομα παγίδας νυχτοπεταλούδων"
+
+# Moth trap survey
+msgid "Are you sure you want to delete this moth trap?"
+msgstr ""
+"Είστε σίγουροι πως θέλετε να διαγράψετε αυτή τη παγίδα νυχτοπεταλούδων;"
+
+# Moth trap survey
+msgid "Additional description of lamp."
+msgstr "Επιπρόσθετη περιγραφή του λαμπτήρα."
+
+# Moth trap survey
+msgid "Please add the moth trap location and name."
+msgstr ""
+"Παρακαλώ προσθέστε τη τοποθεσία και το όνομα της παγίδας νυχτοπεταλούδων."
+
+# Survey validation
+msgid "Incomplete"
+msgstr "Ελλιπής"
+
+# Moth trap survey
+msgid "Select"
+msgstr "Επιλέξτε"
+
+# Additional details attribute, 15min count survey
+msgid "Recorders"
+msgstr "Καταγραφείς"
+
+# Additional details attribute, 15min count survey
+msgid ""
+"Enter the number of recorders of anyone who helped with this record - "
+"including your own."
+msgstr ""
+"Εισάγετε τον αριθμό των καταγραφέων, οποιουδήποτε βοήθησε σε αυτή τη "
+"καταγραφή - συμπεριλαμβανομένου και εσάς."
+
+msgid "Network Error"
+msgstr "Σφάλμα Δικτύου"
+
+# Report label
+msgid "Please login to see your own data report."
+msgstr "Παρακαλώ συνδεθείτε για να δείτε τα στατιστικά των δεδομένων σας."
+
+# Report label
+msgid "Your top species this month"
+msgstr "Τα κορυφαία είδη σας αυτό το μήνα"
+
+# Report label
+msgid "Your top species"
+msgstr "Τα κορυφαία είδη σας"
+
+# Transect survey section photo picker divider label
+msgid "Section Photos"
+msgstr "Φωτογραφίες τμημάτων"
+
+# Moth survey species identifying
+msgid "User is not logged in."
+msgstr "Ο χρήστης δεν έχει συνδεθεί."
+
+# Gallery message
+msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
+msgstr ""
+"Πιστεύουμε πως είναι {{probability}}% πιθανό να είναι ένα <3>{{taxon}}</3> "
+"είδος"
+
+# Gallery message
+msgid ""
+"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species"
+msgstr ""
+"<0>Προσοχή</0> - πιστεύουμε πως είναι {{probability}}% πιθανό να είναι ένα "
+"<5>{{taxon}}</5> είδος"
+
+# Divider label moth trap setup
+msgid "Lamps"
+msgstr "Λαμπτήρες"
+
+# Moth trap setup delete lamp entry alert message
+msgid "Are you sure you want to delete this lamp entry from the moth trap?"
+msgstr ""
+"Είστε σίγουροι πως θέλετε να διαγράψετε αυτή την εγγραφή λαμπτήρα από τη "
+"παγίδα νυχτοπεταλούδων;"
+
+# Moth trap setup submitting the record alert message
+msgid "Trap type is a required field."
+msgstr "Ο τύπος παγίδας είναι ένα υποχρεωτικό πεδίο."
+
+# Successful registration pop-up
+msgid "Welcome aboard"
+msgstr "Καλώς ορίσατε"
+
+# Successful registration pop-up
+msgid ""
+"Before starting any surveys please check your email and click on the "
+"verification link."
+msgstr ""
+"Προτού ξεκινήσετε κάποια δειγματοληψία, παρακαλώ ελέγξτε το email σας και "
+"κάντε κλικ στον σύνδεσμο επιβεβαίωσης. "
+
+# Species guide search
+msgid "Sorry, no species were found."
+msgstr "Συγγνώμη, δεν βρέθηκε κανένα είδος."
+
+msgid "Kenya"
+msgstr "Κένυα"
+
+# GPS permission button label
+msgid "Deny"
+msgstr "Απόρριψη"
+
+# GPS permission button label
+msgid "Accept"
+msgstr "Αποδοχή"
+
+# GPS permission alert title
+msgid "Location permission"
+msgstr "Άδεια χρήσης τοποθεσίας"
+
+# GPS permission alert message
+msgid ""
+"To automatically set species locations and track your route, even if the "
+"device is locked. Allow the app to use your location."
+msgstr ""
+"Επιτρέψτε στην εφαρμογή να χρησιμοποιεί τη τοποθεσία σας, για τον αυτόματο "
+"καθορισμό των τοποθεσιών των ειδών και τον εντοπισμό της διαδρομής σας, "
+"ακόμα και εάν η συσκευή σας είναι κλειδωμένη. "
+
+# Reset app info message
+msgid "You can reset the app data to its default settings."
+msgstr ""
+"Μπορείτε να επαναφέρετε τα δεδομένα της εφαρμογής στις προεπιλεγμένες "
+"ρυθμίσεις τους. "
+
+# Delete account
+msgid "Delete account"
+msgstr "Διαγραφή λογαριασμού"
+
+# Delete account
+msgid "You can delete your user account from the system."
+msgstr "Μπορείτε να διαγράψετε τον λογαριασμό χρήστη σας από το σύστημα."
+
+# Delete account alert header
+msgid "Account delete"
+msgstr "Διαγραφή λογαριασμού"
+
+# Delete account alert message
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+"Είστε σίγουροι πως θέλετε να διαγράψετε τον λογαριασμό σας;<1>Αυτό θα "
+"αφαιρέσει τον λογαριασμό σας από <2>{{url}}</2> την πλατφόρμα. Θα χάσετε τη "
+"πρόσβαση σε όλα τα αρχεία που είχατε υποβάλει προηγουμένως χρησιμοποιώντας "
+"την εφαρμογή ή τη πλατφόρμα.</1>"
+
+# Part of Species Group selection
+msgid ""
+"This option was moved to the species search page inside the surveys. When a "
+"survey starts, you can select which species group you are recording."
+msgstr ""
+"Αυτή η επιλογή έχει μεταφερθεί στη σελίδα αναζήτησης ειδών μέσα στις "
+"δειγματοληψίες. Όταν ξεκινάει μία δειγματοληψία, μπορείτε να επιλέξετε ποια "
+"ταξινομική ομάδα καταγράφετε."
+
+# Part of Species Group selection
+msgid "Groups"
+msgstr "Ομάδες"
+
+# Part of Species Group selection
+msgid "Close"
+msgstr "Κλείσιμο"
+
+# Part of Species Group selection
+msgid "Confirm"
+msgstr "Επιβεβαίωση"
+
+# Part of Species Group selection
+msgid "Which species groups have you counted?"
+msgstr "Ποιες ταξινομικές ομάδες έχετε μετρήσει;"
+
+# Part of Painted lady survey
+msgid "Select Target Species"
+msgstr "Επιλέξτε Είδος Στόχο"
+
+# Part of Painted lady survey
+msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
+msgstr ""
+"Καμία φωτογραφία δεν έχει προστεθεί.<br/>Πατήστε <4><0></0></4> για να "
+"προσθέσετε."
+
+# Part of Painted lady survey
+msgid "Wing"
+msgstr "Φτερό"
+
+# Part of Painted lady survey
+msgid "Behaviour"
+msgstr "Συμπεριφορά"
+
+# Part of Painted lady survey
+msgid "Direction"
+msgstr "Κατεύθυνση"
+
+# Part of Painted lady survey
+msgid "Altitude"
+msgstr "Υψόμετρο"
+
+# Part of Painted lady survey
+msgid "Compass"
+msgstr "Πυξίδα"
+
+# Alert header
+msgid "Delete Survey"
+msgstr "Διαγραφή Δειγματοληψίας"
+
+# Alert message
+msgid ""
+"Warning - This will discard the survey information you have entered so far."
+msgstr ""
+"Προσοχή - Αυτό θα αφαιρέσει τις πληροφορίες για τη δειγματοληψία που έχετε "
+"εισάγει ως τώρα. "
+
+# Painted lady wing options
+msgid "Fresh"
+msgstr "Φρέσκο"
+
+# Painted lady wing options
+msgid "Worn"
+msgstr "Φθαρμένο"
+
+# Painted lady wing options
+msgid "Normal"
+msgstr "Κανονικό"
+
+# Painted lady survey flower entry
+msgid "Please specify the nectar source."
+msgstr "Παρακαλώ προσδιορίστε τη πηγή νέκταρ. "
+
+# Painted lady survey missing entry
+msgid "Please add the egg laying option."
+msgstr "Παρακαλώ προσθέστε την επιλογή ωοτοκίας. "
+
+# Painted lady survey missing entry
+msgid "Please add the mating option."
+msgstr "Παρακαλώ προσθέστε την επιλογή ζευγαρώματος."
+
+# Painted lady survey missing entry
+msgid "Nectar source"
+msgstr "Πηγή νέκταρ"
+
+# Painted lady survey missing entry
+msgid "Please add the nectar option."
+msgstr "Παρακαλώ προσθέστε την επιλογή νέκταρ."
+
+# Painted lady survey missing entry
+msgid "Please add the direction option."
+msgstr "Παρακαλώ προσθέστε την επιλογή κατεύθυνσης."
+
+# Painted lady survey missing entry
+msgid "Please add the altitude option."
+msgstr "Παρακαλώ προσθέστε την επιλογή υψομέτρου."
+
+# Part of painted lady
+msgid "Egg-laying hostplants"
+msgstr "Φυτά ξενιστές για εναπόθεση αυγών"
+
+# Part of painted lady
+msgid "Migrating"
+msgstr "Μετανάστευση"
+
+# Part of painted lady
+msgid "Nectaring"
+msgstr "Πόση νέκταρος"
+
+# Part of painted lady
+msgid "Mating"
+msgstr "Ζευγάρωμα"
+
+# Painted lady compass
+msgid "Unsupported device"
+msgstr "Μη υποστηριζόμενη συσκευή"
+
+# Painted lady compass
+msgid ""
+"Unfortunately, it looks like your device doesn't have the necessary sensor "
+"for the compass to function correctly. The compass relies on this sensor to "
+"detect the earth's magnetic field and determine your device's orientation "
+"relative to magnetic north. Thus, you will not be able to use compass on "
+"this device."
+msgstr ""
+"Δυστυχώς, φαίνεται πως η συσκευή σας δεν διαθέτει τον απαραίτητο αισθητήρα "
+"για να λειτουργεί σωστά η πυξίδα. Η πυξίδα βασίζεται σε αυτόν τον αισθητήρα "
+"για να ανιχνεύει το μαγνητικό πεδίο της γης και να προσδιορίζει τον "
+"προσανατολισμό της συσκευής σας σε σχέση με τον μαγνητικό βορρά. Συνεπώς, "
+"δεν μπορείτε να χρησιμοποιήσετε τη πυξίδα σε αυτή τη συσκευή. "
+
+# Painted lady mating options
+msgid "Territorial defence: other"
+msgstr "Άμυνα επικράτειας: άλλο"
+
+# Painted lady mating options
+msgid "Territorial defence: hill-topping"
+msgstr "Άμυνα επικράτειας: hill-topping"
+
+# Painted lady direction options
+msgid "What was the butterfly flying altitude? (meters)"
+msgstr "Ποιο ήταν το υψόμετρο στο οποίο πετούσε η πεταλούδα; (μέτρα)"
+
+# Painted lady egg laying hostplant option
+msgid "Other hostplant"
+msgstr "Άλλο φυτό ξενιστής"
+
+# Painted lady direction option
+msgid "Desert nettle"
+msgstr "Τσουκνίδα της ερήμου - desert nettle"
+
+# Painted lady direction option
+msgid "Mallow"
+msgstr "Μολόχα"
+
+# Painted lady direction option
+msgid "Thistles"
+msgstr "Γαϊδουράγκαθα "
+
+# Painted lady direction option
+msgid "Hostplants"
+msgstr "Φυτά ξενιστές"
+
+# Painted lady direction option
+msgid "Please select the hostplants."
+msgstr "Παρακαλώ επιλέξτε τα φυτά ξενιστές."
+
+# Painted lady survey info background message
+msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
+msgstr "Δεν έχετε καμία <1>{{prettySpeciesName}}</1> καταγραφή στη λίστα σας."
+
+# Alert title
+msgid "Tip: Copy attributes"
+msgstr "Συμβουλή: Αντιγράψτε τα χαρακτηριστικά "
+
+# Part of Painted lady survey
+msgid "Wing condition"
+msgstr "Κατάσταση φτερών"
+
+# Part of Painted lady survey
+msgid "Nectar"
+msgstr "Νέκταρ"
+
+# Part of Painted lady survey
+msgid "Enter the nectar source here"
+msgstr "Εισάγετε τη πηγή νέκταρ εδώ"
+
+# Part of Painted lady survey
+msgid "Other species"
+msgstr "Άλλα είδη"
+
+# Part of Painted lady survey
+msgid "What kind of thistle was it?"
+msgstr "Τι είδος γαϊδουράγκαθου ήταν;"
+
+# Part of Painted lady survey
+msgid "Thistle species"
+msgstr "Είδη γαϊδουράγκαθου"
+
+# Part of Painted lady survey
+msgid "Copied!"
+msgstr "Αντιγράφτηκε!"
+
+# Part of Painted lady survey
+msgid ""
+"To copy a list entry swipe it to the right and press<1><0></0></1>icon."
+msgstr ""
+"Για να αντιγράψετε μία εγγραφή της λίστας σύρετε την προς τα δεξιά και "
+"πατήστε το<1><0></0></1>εικονίδιο."
+
+# Part of Painted lady survey
+msgid "Height above ground (meters)"
+msgstr "Ύψος πάνω από το έδαφος (μέτρα)"
+
+# Part of Painted lady survey
+msgid "Height"
+msgstr "Ύψος"
+
+# 15min Single species survey detail page button label
+msgid "Start Count"
+msgstr "Έναρξη Καταμέτρησης"
+
+# Painted Lady guide title
+msgid "Tracking the Painted Lady migration with Butterfly Count"
+msgstr ""
+"Παρακολούθηση της μετανάστευσης της Painted Lady με το Butterfly Count"
+
+# Menu page label
+msgid "Instructions"
+msgstr ""
+
+# Country name
+msgid "Saint Helena"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Ovipositing"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Copulating or tandem pairs"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Exuviae"
+msgstr ""
+
+# Dragonfly stage attribute
+msgid "Emergent"
+msgstr ""
+
+# Alert message
+msgid "Count sum must be greater than 0"
+msgstr ""
+
+# Report page label
+msgid "Show less"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Your track name"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Here you can select or swipe to edit your previous tracks"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Edit"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Edit Location"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Name"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Favourite"
+msgstr ""
+
+# Part of favorite track selection
+msgid "Are you sure you want to delete the saved track?"
+msgstr ""
+
+# Map GPS button interface
+msgid "To resume tracking, you must first remove the drawn area from the map."
+msgstr ""
+
+# Part of weather attributes
+msgid "Moon phase"
+msgstr ""
+
+# Moon phase values
+msgid "New"
+msgstr ""
+
+#  Moon phase values
+msgid "Waxing crescent"
+msgstr ""
+
+#  Moon phase values
+msgid "First quarter"
+msgstr ""
+
+#  Moon phase values
+msgid "Waxing gibbous"
+msgstr ""
+
+#  Moon phase values
+msgid "Full"
+msgstr ""
+
+#  Moon phase values
+msgid "Waning gibbous"
+msgstr ""
+
+#  Moon phase values
+msgid "Last quarter"
+msgstr ""
+
+#  Moon phase values
+msgid "Waning crescent"
+msgstr ""
+
+# Info message
+msgid "Trap start"
+msgstr ""
+
+# Info message
+msgid "Trap end"
+msgstr ""
+
+# Info message
+msgid "Start Weather"
+msgstr ""
+
+# Info message
+msgid "End Weather"
+msgstr ""
+
+# Info message
+msgid "Please add the moth trap."
+msgstr ""
+
+# Info message
+msgid ""
+"We have noticed that your survey has <1>long sections</1>. Please make sure "
+"it is a correct <3>location</3>!"
+msgstr ""
+
+# Info message
+msgid "Defaulted to sunset time"
+msgstr ""
+
+# Info message
+msgid "Defaulted to sunrise time"
+msgstr ""
+
+# Error message
+msgid "Location services are not enabled"
+msgstr ""
+
+# Part of favorite track
+msgid "You have no previous tracks."
+msgstr ""
+
+# Change list order toast message
+msgid "Changed list ordering to alphabetical."
+msgstr ""
+
+# Change list order toast message
+msgid "Changed list ordering to last added."
+msgstr ""

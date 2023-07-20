@@ -44,6 +44,8 @@ const AreaController: FC<Props> = ({ sample }) => {
 
   const isDisabled = sample.isDisabled();
 
+  const isAreaShape = location.shape?.type === 'Polygon';
+
   return (
     <Page id="area">
       <Header
@@ -51,6 +53,7 @@ const AreaController: FC<Props> = ({ sample }) => {
         isGPSTracking={isGPSTracking}
         isDisabled={isDisabled}
         areaPretty={areaPretty}
+        isAreaShape={isAreaShape}
       />
       <Main
         sample={sample}

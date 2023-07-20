@@ -1,11 +1,12 @@
 # 
 # Translators:
 # Cristina Costache, 2022
+# Sidor Andreia, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Costache, 2022\n"
+"Last-Translator: Sidor Andreia, 2023\n"
 "Language-Team: Romanian (Romania) (https://app.transifex.com/ceh/teams/95441/ro_RO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -144,7 +145,7 @@ msgid "Slovenia"
 msgstr "Slovenia"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japonia"
 
 msgid "Slovakia"
 msgstr "Slovacia"
@@ -320,6 +321,8 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Esti sigur ca vrei sa te deloghezi? Inregistrarile tale in asteptare si cele"
+" incarcate nu vor fi sterse de pe acest dispozitiv."
 
 msgid "Cancel"
 msgstr "Anulare"
@@ -442,11 +445,11 @@ msgstr "Raportări"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Numele speciei sau selelcteaza pe criterii"
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "familie"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr "Ne pare rău, nu sunt disponibile date despre raportări momentan."
@@ -507,7 +510,7 @@ msgstr "Observație: va rămâne în galerie."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr ""
+msgstr "Nu a fost adaugata poza. Apasa pentru a adauga. "
 
 msgid "Registration error:"
 msgstr "Eroare de înregistrare:"
@@ -523,7 +526,7 @@ msgstr ""
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Autentificare reusita cu {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
@@ -904,7 +907,7 @@ msgstr ""
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "Arata denumiri comune in ghid"
 
 msgid "Share App Analytics"
 msgstr "Partajați aplicația Analytics"
@@ -1339,7 +1342,7 @@ msgstr "Setările Aplicației"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Foloseste doar fluturii activi ziua"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1358,48 +1361,12 @@ msgstr ""
 "identificați fluturii. "
 
 # This is part of mapping functionality
-msgid "Delete last point"
-msgstr "Șterge ultimul punct"
+msgid "Are you sure you want to delete your current track?"
+msgstr ""
 
 # This is part of mapping functionality
 msgid "Save"
 msgstr "Salvează"
-
-# This is part of mapping functionality
-msgid "Clear All"
-msgstr "Șterge tot"
-
-# This is part of mapping functionality
-msgid "Click to start drawing shape."
-msgstr "Faceți clic pentru a începe să desenați forma."
-
-# This is part of mapping functionality
-msgid "Click to continue drawing shape."
-msgstr "Faceți clic pentru a continua să desenați forma."
-
-# This is part of mapping functionality
-msgid "Click first point to close this shape."
-msgstr "Faceți clic pe primul punct pentru a închide această formă."
-
-# This is part of mapping functionality
-msgid "Click to start drawing line."
-msgstr "Faceți clic pentru a desena o linie."
-
-# This is part of mapping functionality
-msgid "Click to continue drawing line."
-msgstr "Faceți clic pentru a continua desenarea liniei."
-
-# This is part of mapping functionality
-msgid "Click last point to finish line."
-msgstr "Clic pe ultimul punct pentru a termina linia."
-
-# This is part of mapping functionality
-msgid "Drag handles or markers to edit features."
-msgstr "Trageți marcatoarele pentru a edita caracteristicile."
-
-# This is part of mapping functionality
-msgid "Click cancel to undo changes."
-msgstr "Clic Anulare pentru a anula modificările."
 
 msgid "Map"
 msgstr "Hartă"
@@ -1843,7 +1810,7 @@ msgstr "Necunoscut"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Arata mai multe"
 
 # Moth survey warning message
 msgid "Please add a photo"
@@ -1886,7 +1853,7 @@ msgstr ""
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Identifica"
 
 # Moth survey button label
 msgid "Identify All"
@@ -1908,265 +1875,255 @@ msgstr ""
 msgid "What's New"
 msgstr "Noutăți"
 
-# Version 1.21 whats new message
-msgid "Added favorite site functionality."
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added moth trap weather attributes."
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added the Slovak language."
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Enabled multiple drafts functionality"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added Saint Helena country"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added specific stage attributes for Dragonfly species"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added dragonflies-specific stages"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added Slovak and Turkish butterfly common names"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added dragonfly common names"
+# Version 1.22 whats new message
+msgid "Updated species guide page."
 msgstr ""
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "Retrimite"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "Inca nu ai verificat email-ul. "
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "Retrimitem email-ul de verificare?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Serviciile locale (GPS) sunt dezactivate. Activeaza-le din setarile device-"
+"ului. "
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Coordonatele locale (GPS) dezactivate"
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Adauga nou"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"Nu ai nicio capcana pentru fluturii de noapte. 1. Intai, creeaza capcana "
+"pentru fluturii de noapte."
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Capacana pentru fluturii de noapte. "
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Alt tip"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Adauga lampa"
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "Ce fel de capcana era?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Nu ai adaugat lampi. "
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "Ce tip de lampa folosesti?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "Ce tip de capcana folosesti?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "Capcana luminoasa cu grila electrica"
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Alte modele de capcane tip palnie"
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Capcana cu 2 cearșafuri"
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Alte modele de capcane"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Lampa"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Detalii lampa"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Cantitate"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Lipsa nume capcana fluturi de noapte"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Numele capcanei pentru fluturii de noapte"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "Doresti sa stergi acest tip de capcana? "
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Detalii aditionale ale lampii."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Introduceti locatia si numele capcanei de fluturi."
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "Incomplet"
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Selecteaza"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Inregistrari"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+"Adaugati numarul de persoane care au asistat la inregistrarea datelor-"
+"inclusiv dvs. "
 
 msgid "Network Error"
-msgstr ""
+msgstr "Eroare retea"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "Logheaza-te pentru a accesa datele."
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "Specia principala din aceasta luna. "
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "Speciile principale"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Sectiune cu poze"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "Utilizatorul nu este logat"
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
-msgstr ""
+msgstr "Probabilitatea speciei este de {{ }}%"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Atenție</0> - credem că există o probabilitate de {{probability}}% ca "
+"acesta să fie specia <5>{{taxon}}</5>. "
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr ""
+msgstr "Lampi"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
 msgstr ""
+"Sunteți sigur că doriți să eliminați folosirea lămpii de la capcana pentru "
+"fluturii de noapte?"
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr ""
+msgstr " Este necesar să adăugați funcția \"Tip capcană\" "
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "Bine ati venit!"
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
+"Inainte de a incepe evaluarea, deschide si activeaza link-ul din email. "
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr ""
+msgstr "Ne pare rau, nu au fost gasita specia"
 
 msgid "Kenya"
-msgstr ""
+msgstr "Kenya"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Refuza"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Accepta"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Permite localizare"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
+"Permiteți aplicației să utilizeze locația dvs. pentru a seta automat "
+"locațiile speciilor și a urmărirea  traseului dvs, chiar dacă ecranul e "
+"blocat. "
 
 # Reset app info message
 msgid "You can reset the app data to its default settings."
-msgstr ""
+msgstr "Puteți selecta revenirea la setările implicite ale aplicației. "
 
 # Delete account
 msgid "Delete account"
-msgstr ""
+msgstr "Sterge contul"
 
 # Delete account
 msgid "You can delete your user account from the system."
-msgstr ""
+msgstr "Poti sterge contul de utilizator din sistem."
 
 # Delete account alert header
 msgid "Account delete"
-msgstr ""
+msgstr "Ștergere cont "
 
 # Delete account alert message
 msgid ""
@@ -2174,125 +2131,132 @@ msgid ""
 "account on the <2>{{url}}</2> website. You will lose access to any records "
 "that you have previously submitted using the app or website.</1>"
 msgstr ""
+"Sunteți sigur că doriți să  vă ștergeți contul?<1>Această acțiune va elina "
+"contul dvs. din pagina    <2>{{url}}</2> web. Veți pierde accesul la toate "
+"înregistrările postate anterior în aplicație sau site web.</1>"
 
 # Part of Species Group selection
 msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Această opțiune a fost mutată pe pagina de căutare a speciilor. Când "
+"începeți un sondaj, puteți selecta grupul de specii pe care îl înregistrați."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Grupuri"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Inchide"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmare"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Ce grupa de specii ai numarat?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Selecteaza speciile tinta"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "Nu a fost adăugată poza.<br/>Apăsați <4><0></0></4>pentru a adăuga. "
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Aripa"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportament"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Directie"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Altitudine"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Busola"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Sterge observatia"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
+"Atenție - Aceasta va anula informațiile pe care le-ați introdus până acum în"
+" sondaj. "
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Proaspat"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Uzat"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Specifica sursa de nectar"
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Adăugați opțiunea de depunere a ouălor"
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Adăugați opțiunea de împerechere."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Sursa de nectar"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Adăugați opțiunea de hrană cu nectar. "
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Adăugați opțiunea de direcție. "
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Adăugați opțiunea de altitudine."
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Plante gazdă pentru depunerea ouălor"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Migratie"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Hranire cu nectar"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "In copula"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Dispozitiv neacceptat"
 
 # Painted lady compass
 msgid ""
@@ -2302,22 +2266,26 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Din păcate, dispozitivul tău nu are senzorul necesar pentru ca busola să "
+"funcționeze corect. Busola folosește câmpul magnetic al Pământului pentru "
+"orientarea device-ului spre nord. Prin urmare, nu poți utiliza acest device "
+"pentru orientare spațială. "
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Apărare teritorială: altele"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Apărare teritorială: hill-topping"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "La ce altitudine zbura fluturele? (in metri)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Alte planta gazda"
 
 # Painted lady direction option
 msgid "Desert nettle"
@@ -2325,207 +2293,227 @@ msgstr ""
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Specii de nalbă"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Specii de scai"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Plante gazda"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Selecteaza plantele gazda"
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "Nu ai nicio <1>{{prettySpeciesName}}</1>înregistrare în listă.    "
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Sfat: copiază atributele"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Conditia aripii"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Sursa de nectar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Adauga sursa de nectar aici"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Alte specii"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "Ce specie de scai a fost? "
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Specii de scai"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Copiat!"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Pentru a  copia o înregistrare în listă, gilsează la dreapta și "
+"apăsați<1><0></0>pe pictogramă."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Inaltime de la sol (in metri)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Inaltime"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Incepe numararea"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Urmărirea migrației fluturelui Vanessa cardui cu Butterfly Count. "
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Instructiuni"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr " Insula Sfanta Elena"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Ovipozitare"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Perechi în copulație sau în tandem"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Exuvie"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Emergent"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "Suma numărătorilor trebuie să fie mai mare de 0"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Arata mai putin"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Numele traseului tău"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
-msgstr ""
+msgstr "Aici puteti selecta sau glisa pentru a edita inregistrarile automate"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Editeaza"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Editeaza locatia"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Nume"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Favorit"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
+msgstr "Sunteti sigur ca doriti sa stergeti inregistrarea salvata? "
+
+# Map GPS button interface
+msgid "To resume tracking, you must first remove the drawn area from the map."
 msgstr ""
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Faza luna"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Luna noua"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Semilună în creștere"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Primul pătrar"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Lună în creștere"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Lună plină"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Lună în scădere"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Ultimul pătrar"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Semilună în descreștere "
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Pornire numărătoare capcană"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Încheiere numărătoare capcană"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Începe înregistrare meteo"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Încheiere înregistrare meteo"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Adaugă capcană pentru fluturii de noapte"
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Sondajul dvs. are  1 secțiuni lungi1. Asigurați-vă că locația este "
+"2corectă3!"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Setat implicit pe ora apusului"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Setat implicit pe ora răsăritului"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Serviciile de localizare sunt inactive"
+
+# Part of favorite track
+msgid "You have no previous tracks."
+msgstr "Nu ai intrari anterioare inregistrate"
+
+# Change list order toast message
+msgid "Changed list ordering to alphabetical."
+msgstr "Lista a fost ordonata alfabetic"
+
+# Change list order toast message
+msgid "Changed list ordering to last added."
+msgstr "Lista a fost ordonata in functie de activitatea recenta."

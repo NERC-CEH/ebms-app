@@ -349,7 +349,7 @@ msgstr "Terület"
 
 # Location attribute label
 msgid "Location"
-msgstr "Helyhozzáférés"
+msgstr "Helyadatok"
 
 # GPS permissions message
 msgid "Location Required"
@@ -1092,7 +1092,7 @@ msgid "eBMS Transect"
 msgstr "eBMS transzekt"
 
 msgid "Please add any extra info about this record."
-msgstr "Adj meg további információkat erről a felmérésről!"
+msgstr "Adj meg további információkat!"
 
 msgid "Enter more information here..."
 msgstr "Bármi egyéb, ami fontos..."
@@ -1107,7 +1107,7 @@ msgid "Please specify the % of cloud cover."
 msgstr "Add meg a ⁒-os felhőborítottságot!"
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "Nincs választható transzekted. Frissítsd a listát!"
+msgstr "Még nincs választható transzekted. Frissítsd a listát!"
 
 msgid "Wind speed info is missing"
 msgstr "Szélerősség nincs megadva"
@@ -1366,48 +1366,12 @@ msgstr ""
 "adatok nem kerülnek bele a jelentésekbe!"
 
 # This is part of mapping functionality
-msgid "Delete last point"
-msgstr "Utolsó pont törlése"
+msgid "Are you sure you want to delete your current track?"
+msgstr ""
 
 # This is part of mapping functionality
 msgid "Save"
 msgstr "Mentés"
-
-# This is part of mapping functionality
-msgid "Clear All"
-msgstr "Mindent töröl"
-
-# This is part of mapping functionality
-msgid "Click to start drawing shape."
-msgstr "Poligon rajzolásához koppints!"
-
-# This is part of mapping functionality
-msgid "Click to continue drawing shape."
-msgstr "Koppints a poligon folytatásához!"
-
-# This is part of mapping functionality
-msgid "Click first point to close this shape."
-msgstr "Koppints az első pontra a poligon befejezéséhez!"
-
-# This is part of mapping functionality
-msgid "Click to start drawing line."
-msgstr "Vonal rajzolásához koppints!"
-
-# This is part of mapping functionality
-msgid "Click to continue drawing line."
-msgstr "Koppints a vonal folytatásához!"
-
-# This is part of mapping functionality
-msgid "Click last point to finish line."
-msgstr "Koppints az utolsó pontra a vonal befejezéséhez!"
-
-# This is part of mapping functionality
-msgid "Drag handles or markers to edit features."
-msgstr "Az alakzatok szerkesztéséhez mozgasd el a fogópontokat!"
-
-# This is part of mapping functionality
-msgid "Click cancel to undo changes."
-msgstr "Visszavonáshoz koppints a \"Mégse\" gombra!"
 
 msgid "Map"
 msgstr "Térkép"
@@ -1907,40 +1871,16 @@ msgstr ""
 msgid "What's New"
 msgstr "Újdonságok"
 
-# Version 1.21 whats new message
-msgid "Added favorite site functionality."
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added moth trap weather attributes."
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added the Slovak language."
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Enabled multiple drafts functionality"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added Saint Helena country"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added specific stage attributes for Dragonfly species"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added dragonflies-specific stages"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added Slovak and Turkish butterfly common names"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added dragonfly common names"
+# Version 1.22 whats new message
+msgid "Updated species guide page."
 msgstr ""
 
 # User account action
@@ -2217,7 +2157,7 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "Még nincs fotó. Fotó csatolásához <br/>koppints ide <4><0></0></4>!"
 
 # Part of Painted lady survey
 msgid "Wing"
@@ -2225,11 +2165,11 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Viselkedés"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Irány"
 
 # Part of Painted lady survey
 msgid "Altitude"
@@ -2250,19 +2190,19 @@ msgstr ""
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Friss"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Kopott"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Átlagos"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Add meg a nektárforrást!"
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
@@ -2270,15 +2210,15 @@ msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Párzáson belül, mit csinált?"
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Nektárforrás"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Válaszd ki a ”táplálkozott” opciót!"
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
@@ -2290,19 +2230,19 @@ msgstr ""
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Petenövény"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Vándorolt"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Táplálkozott"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Párzott"
 
 # Painted lady compass
 msgid "Unsupported device"
@@ -2319,11 +2259,11 @@ msgstr ""
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Territoriális viselkedés: egyéb"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Territoriális viselkedés: dombtetőzés"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
@@ -2331,59 +2271,59 @@ msgstr ""
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Milyen egyéb?"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Eucnide urens"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Mályva"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Bogáncs"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Táp- vagy petenövény"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Válszd ki a növényt!"
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "Még nincs <1>{{prettySpeciesName}}</1> észlelésed."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Tipp: Tulajdonságok másolása"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Szárnyak állapota"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Nektárforrás"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Írd be a nektárforrást!"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Egyéb növény"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "Milyen bogáncsfajon volt?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Bogáncsfaj"
 
 # Part of Painted lady survey
 msgid "Copied!"
@@ -2393,14 +2333,16 @@ msgstr ""
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Egy listaelem másolásához húzd az ujjad balról jobbra, és koppints a "
+"megjelenő <1><0></0></1>gombra!"
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Milyen magasan? (méter)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Magasság"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
@@ -2408,11 +2350,11 @@ msgstr ""
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Bogáncslepke-vándorlás felmérése"
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Az alkalmazásról"
 
 # Country name
 msgid "Saint Helena"
@@ -2468,6 +2410,10 @@ msgstr ""
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
+msgstr ""
+
+# Map GPS button interface
+msgid "To resume tracking, you must first remove the drawn area from the map."
 msgstr ""
 
 # Part of weather attributes
@@ -2542,4 +2488,16 @@ msgstr ""
 
 # Error message
 msgid "Location services are not enabled"
+msgstr ""
+
+# Part of favorite track
+msgid "You have no previous tracks."
+msgstr ""
+
+# Change list order toast message
+msgid "Changed list ordering to alphabetical."
+msgstr ""
+
+# Change list order toast message
+msgid "Changed list ordering to last added."
 msgstr ""

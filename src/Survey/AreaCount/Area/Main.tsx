@@ -83,11 +83,11 @@ const AreaAttr = ({
   const showLastMarker = isShapePolyline && endPointLocation;
 
   const centerToLastTrackPoint = () => {
-    if (isFinished) return;
+    if (isFinished || !isGPSTracking) return;
 
     const DEFAULT_LOCATED_ZOOM = 12;
 
-    if (!Number.isFinite(location?.longitude)) return;
+    if (!Number.isFinite(finishPosition?.[0])) return;
 
     const currentZoom = mapRef.current?.getZoom();
 
@@ -168,6 +168,7 @@ const AreaAttr = ({
         maxPitch={0}
         initialViewState={location}
         onMoveEnd={updateMapCentre}
+        maxZoom={19}
       >
         {!isDisabled && <Favourites.Control onClick={toggleFavourites} />}
 
@@ -177,20 +178,19 @@ const AreaAttr = ({
         />
 
         <MapDraw shape={location?.shape} onChange={onShapeChange}>
-          {!isDisabled && <MapDraw.Control line polygon />}
+          {!isDisabled && !isGPSTracking && <MapDraw.Control line polygon />}
 
           <MapDraw.Context.Consumer>
-            {({ isEditing }: any) => {
-              if (isEditing) return null;
-              return (
+            {({ isEditing }: any) =>
+              !isEditing && (
                 <>
                   <MapContainer.Marker {...location} />
                   {startingPointMarker}
                   {finishPointMarker}
                   {currentPointMarker}
                 </>
-              );
-            }}
+              )
+            }
           </MapDraw.Context.Consumer>
         </MapDraw>
 

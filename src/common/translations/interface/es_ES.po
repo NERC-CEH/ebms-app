@@ -1365,48 +1365,12 @@ msgstr ""
 " identificar mariposas"
 
 # This is part of mapping functionality
-msgid "Delete last point"
-msgstr "Eliminar el último punto"
+msgid "Are you sure you want to delete your current track?"
+msgstr ""
 
 # This is part of mapping functionality
 msgid "Save"
 msgstr "Guardar"
-
-# This is part of mapping functionality
-msgid "Clear All"
-msgstr "Borrar todo"
-
-# This is part of mapping functionality
-msgid "Click to start drawing shape."
-msgstr "Haga clic para comenzar a dibujar "
-
-# This is part of mapping functionality
-msgid "Click to continue drawing shape."
-msgstr "Haga clic para continuar dibujando"
-
-# This is part of mapping functionality
-msgid "Click first point to close this shape."
-msgstr "Haga clic en el primer punto para cerrar la figura"
-
-# This is part of mapping functionality
-msgid "Click to start drawing line."
-msgstr "Haga clic para empezar a dibujar una línea"
-
-# This is part of mapping functionality
-msgid "Click to continue drawing line."
-msgstr "Haga clic para continuar dibujando una línea"
-
-# This is part of mapping functionality
-msgid "Click last point to finish line."
-msgstr "Haga clic para dibujar terminar la línea"
-
-# This is part of mapping functionality
-msgid "Drag handles or markers to edit features."
-msgstr "Arrastre puntos o marcadores para editar las figuras."
-
-# This is part of mapping functionality
-msgid "Click cancel to undo changes."
-msgstr "Haga clic en cancelar para deshacer los cambios."
 
 msgid "Map"
 msgstr "Mapa"
@@ -1910,41 +1874,17 @@ msgstr ""
 msgid "What's New"
 msgstr "Novedades"
 
-# Version 1.21 whats new message
-msgid "Added favorite site functionality."
-msgstr "Añadida la funcionalidad de sitio favorito."
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous transect section's species list."
+msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added moth trap weather attributes."
-msgstr "Añadidos atributos meteorológicos a la trampa para polillas."
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous moth trap's species list."
+msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added the Slovak language."
-msgstr "Añadidos el idioma Eslovaco."
-
-# Version 1.21 whats new message
-msgid "Enabled multiple drafts functionality"
-msgstr "Habilitada la función de borradores múltiples"
-
-# Version 1.21 whats new message
-msgid "Added Saint Helena country"
-msgstr "Añadido país Santa Helena"
-
-# Version 1.21 whats new message
-msgid "Added specific stage attributes for Dragonfly species"
-msgstr "Añadido específicos atributos para las especies de libélulas"
-
-# Version 1.21 whats new message
-msgid "Added dragonflies-specific stages"
-msgstr "Añadido los estados específicos para las libélulas"
-
-# Version 1.21 whats new message
-msgid "Added Slovak and Turkish butterfly common names"
-msgstr "Añadido los nombres comunes de mariposas en Eslovaco y Turco"
-
-# Version 1.21 whats new message
-msgid "Added dragonfly common names"
-msgstr "Añadidos los nombres comunes de libélulas"
+# Version 1.22 whats new message
+msgid "Updated species guide page."
+msgstr ""
 
 # User account action
 msgid "Resend"
@@ -2493,6 +2433,10 @@ msgstr "Favorito"
 msgid "Are you sure you want to delete the saved track?"
 msgstr "¿Está seguro de que desea eliminar la ruta guardada?"
 
+# Map GPS button interface
+msgid "To resume tracking, you must first remove the drawn area from the map."
+msgstr ""
+
 # Part of weather attributes
 msgid "Moon phase"
 msgstr "Fase de la luna"
@@ -2572,3 +2516,11 @@ msgstr "Servicios de ubicación no están activados"
 # Part of favorite track
 msgid "You have no previous tracks."
 msgstr "No tienes rutas previas."
+
+# Change list order toast message
+msgid "Changed list ordering to alphabetical."
+msgstr "Cambiado el orden de las listas a alfabético."
+
+# Change list order toast message
+msgid "Changed list ordering to last added."
+msgstr "Cambiado el orden de la lista al último añadido."

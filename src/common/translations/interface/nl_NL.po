@@ -1332,48 +1332,12 @@ msgstr ""
 "kent."
 
 # This is part of mapping functionality
-msgid "Delete last point"
-msgstr "Verwijder laatste punt"
+msgid "Are you sure you want to delete your current track?"
+msgstr ""
 
 # This is part of mapping functionality
 msgid "Save"
 msgstr "Opslaan"
-
-# This is part of mapping functionality
-msgid "Clear All"
-msgstr "Alles leegmaken"
-
-# This is part of mapping functionality
-msgid "Click to start drawing shape."
-msgstr "Klik om te beginnen met het tekenen van een vorm."
-
-# This is part of mapping functionality
-msgid "Click to continue drawing shape."
-msgstr "Klik om door te gaan met tekenen van een vorm."
-
-# This is part of mapping functionality
-msgid "Click first point to close this shape."
-msgstr "Klik op het eerste punt om deze vorm te sluiten."
-
-# This is part of mapping functionality
-msgid "Click to start drawing line."
-msgstr "Klik om te beginnen met een lijn."
-
-# This is part of mapping functionality
-msgid "Click to continue drawing line."
-msgstr "Klik om door te gaan met het tekenen van een lijn."
-
-# This is part of mapping functionality
-msgid "Click last point to finish line."
-msgstr "Klik op het laatste punt om het tekenen van de lijn te beëindigen."
-
-# This is part of mapping functionality
-msgid "Drag handles or markers to edit features."
-msgstr "Sleep markeerpunten om ze te bewerken."
-
-# This is part of mapping functionality
-msgid "Click cancel to undo changes."
-msgstr "Klik Annuleren om veranderingen niet op te slaan."
 
 msgid "Map"
 msgstr "Kaart"
@@ -1873,41 +1837,17 @@ msgstr ""
 msgid "What's New"
 msgstr "Recent toegevoegd"
 
-# Version 1.21 whats new message
-msgid "Added favorite site functionality."
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added moth trap weather attributes."
+# Version 1.22 whats new message
+msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
 
-# Version 1.21 whats new message
-msgid "Added the Slovak language."
-msgstr "Slowaaks toegevoegd"
-
-# Version 1.21 whats new message
-msgid "Enabled multiple drafts functionality"
+# Version 1.22 whats new message
+msgid "Updated species guide page."
 msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added Saint Helena country"
-msgstr "Sint-Helena toegevoegd"
-
-# Version 1.21 whats new message
-msgid "Added specific stage attributes for Dragonfly species"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added dragonflies-specific stages"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added Slovak and Turkish butterfly common names"
-msgstr ""
-
-# Version 1.21 whats new message
-msgid "Added dragonfly common names"
-msgstr "Nederlandse libellennamen toegevoegd"
 
 # User account action
 msgid "Resend"
@@ -2433,6 +2373,10 @@ msgstr "Favorieten"
 msgid "Are you sure you want to delete the saved track?"
 msgstr ""
 
+# Map GPS button interface
+msgid "To resume tracking, you must first remove the drawn area from the map."
+msgstr ""
+
 # Part of weather attributes
 msgid "Moon phase"
 msgstr "Maanstand"
@@ -2509,4 +2453,12 @@ msgstr ""
 
 # Part of favorite track
 msgid "You have no previous tracks."
+msgstr ""
+
+# Change list order toast message
+msgid "Changed list ordering to alphabetical."
+msgstr ""
+
+# Change list order toast message
+msgid "Changed list ordering to last added."
 msgstr ""

@@ -33,7 +33,7 @@ const useDeleteSpeciesPrompt = () => {
         header: i18n.t('Delete'),
         skipTranslation: true,
         message: i18n.t('Are you sure you want to delete {{taxon}} ?', {
-          name,
+          taxon: name,
         }),
         buttons: [
           {
