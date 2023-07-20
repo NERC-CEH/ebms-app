@@ -35,8 +35,8 @@ const API = {
     if (accuracy > 50) return;
 
     const location = {
-      latitude: position.latitude.toFixed(8),
-      longitude: position.longitude.toFixed(8),
+      latitude: parseFloat(position.latitude.toFixed(8)),
+      longitude: parseFloat(position.longitude.toFixed(8)),
       accuracy,
       altitude,
       altitudeAccuracy,

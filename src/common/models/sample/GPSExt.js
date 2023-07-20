@@ -171,12 +171,6 @@ const extension = {
         return;
       }
 
-      const parsedLocation = {
-        ...location,
-        latitude: parseFloat(location.latitude),
-        longitude: parseFloat(location.longitude),
-      };
-
       const isOverDefaultSurveyEndTime = this.isTimerFinished();
       if (this.attrs.surveyStartTime && isOverDefaultSurveyEndTime) {
         console.log('SampleModel:GPS: timed out stopping!');
@@ -186,12 +180,12 @@ const extension = {
 
       const isPreciseAreaSubSample = !!this.parent;
       if (isPreciseAreaSubSample) {
-        updateModelLocation(this, parsedLocation);
+        updateModelLocation(this, location);
         this.stopGPS();
         return;
       }
 
-      updateSampleArea(this, parsedLocation);
+      updateSampleArea(this, location);
     };
 
     this.gps.locating = GPS.start(onPosition);
