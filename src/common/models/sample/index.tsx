@@ -251,7 +251,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
       array.push(spGroupValue);
     });
 
-    const uniqueSpeciesGroupList = [...new Set(array)];
+    const uniqueSpeciesGroupList = Array.from(new Set(array));
 
     const addDisableProperty = (value: SpeciesGroup) => {
       const disabled = uniqueSpeciesGroupList.includes(value.value);
