@@ -1,42 +1,55 @@
-import { createRef } from 'react';
+import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import { IonSlides, IonSlide, IonButton } from '@ionic/react';
+import SwiperCore from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { IonButton } from '@ionic/react';
+import '@ionic/react/css/ionic-swiper.css';
 import appModel from 'models/app';
 import './styles.scss';
 
-function next(sliderRef) {
-  sliderRef.current.slideNext();
-}
+const SplashScreenRequired = ({ children }: any) => {
+  const [moreSlidesExist, setMoreSlidesExist] = useState(true);
+  const [controlledSwiper, setControlledSwiper] = useState<SwiperCore>();
 
-const SplashScreen = () => {
+  const handleSlideChangeStart = async () => {
+    const isEnd = controlledSwiper && controlledSwiper.isEnd;
+    setMoreSlidesExist(!isEnd);
+  };
+
+  const slideNext = () => controlledSwiper && controlledSwiper.slideNext();
+
+  const { showedWelcome } = appModel.attrs;
+
+  if (showedWelcome) return children;
+
   function exit() {
     console.log('Info:Welcome:Controller: exit.');
     appModel.attrs.showedWelcome = true;
     appModel.save();
   }
 
-  const sliderRef = createRef();
-
-  const nextSlide = () => next(sliderRef);
-
   return (
-    <IonSlides id="welcome" pager="true" ref={sliderRef}>
-      <IonSlide className="first">
-        <IonButton
-          className="skip"
-          color="primary"
-          strong="true"
-          onClick={exit}
-        >
+    <Swiper
+      id="welcome"
+      onSwiper={setControlledSwiper}
+      modules={[Pagination]}
+      pagination={moreSlidesExist}
+      onSlideChange={handleSlideChangeStart}
+    >
+      <SwiperSlide className="first">
+        <IonButton className="skip" color="primary" strong onClick={exit}>
           <T>Skip</T>
         </IonButton>
         <IonButton
           className="next"
           fill="outline"
           color="primary"
-          strong="true"
-          onClick={nextSlide}
+          strong
+          onClick={slideNext}
         >
           <T>Next</T>
         </IonButton>
@@ -49,18 +62,13 @@ const SplashScreen = () => {
             </T>
           </p>
         </div>
-      </IonSlide>
+      </SwiperSlide>
 
-      <IonSlide className="second">
-        <IonButton className="skip" color="light" strong="true" onClick={exit}>
+      <SwiperSlide className="second">
+        <IonButton className="skip" color="light" strong onClick={exit}>
           <T>Skip</T>
         </IonButton>
-        <IonButton
-          className="next"
-          color="light"
-          strong="true"
-          onClick={nextSlide}
-        >
+        <IonButton className="next" color="light" strong onClick={slideNext}>
           <T>Next</T>
         </IonButton>
 
@@ -72,14 +80,14 @@ const SplashScreen = () => {
             </T>
           </p>
         </div>
-      </IonSlide>
+      </SwiperSlide>
 
-      <IonSlide className="third">
+      <SwiperSlide className="third">
         <IonButton
           className="skip"
           fill="outline"
           color="primary"
-          strong="true"
+          strong
           onClick={exit}
         >
           <T>Skip</T>
@@ -88,8 +96,8 @@ const SplashScreen = () => {
           className="next"
           fill="outline"
           color="primary"
-          strong="true"
-          onClick={nextSlide}
+          strong
+          onClick={slideNext}
         >
           <T>Next</T>
         </IonButton>
@@ -102,8 +110,8 @@ const SplashScreen = () => {
             </T>
           </p>
         </div>
-      </IonSlide>
-      <IonSlide className="fourth">
+      </SwiperSlide>
+      <SwiperSlide className="fourth">
         <div className="message">
           <p>
             <T>
@@ -113,26 +121,12 @@ const SplashScreen = () => {
             </T>
           </p>
         </div>
-        <IonButton color="primary" strong="true" onClick={exit}>
+        <IonButton color="primary" strong onClick={exit}>
           <T>Get Started</T>
         </IonButton>
-      </IonSlide>
-    </IonSlides>
+      </SwiperSlide>
+    </Swiper>
   );
 };
 
-SplashScreen.propTypes = {};
-
-const Component = props => {
-  const { showedWelcome } = appModel.attrs;
-
-  if (!showedWelcome) {
-    return <SplashScreen appModel={appModel} />;
-  }
-
-  return props.children;
-};
-
-Component.propTypes = {};
-
-export default observer(Component);
+export default observer(SplashScreenRequired);

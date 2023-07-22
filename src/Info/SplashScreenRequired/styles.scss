@@ -1,4 +1,4 @@
-ion-slides#welcome {
+#welcome {
   position: fixed !important;
   top: 0;
   left: 0;
@@ -57,7 +57,7 @@ ion-slides#welcome {
 
   $bottom: 16vh;
 
-  ion-slide {
+  .swiper-slide {
     &.first {
       background: url('images/welcome_1.jpg') no-repeat;
       background-position: bottom;
