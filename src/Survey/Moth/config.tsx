@@ -487,9 +487,7 @@ const survey: Survey = {
         },
       });
 
-      if (photo) {
-        occ.media.push(photo);
-      }
+      if (photo) occ.media.push(photo);
 
       return occ;
     },
@@ -513,11 +511,11 @@ const survey: Survey = {
     return null;
   },
 
-  create({ Sample, recorder, surveyId = survey.id, surveyName = survey.name }) {
+  create({ Sample, recorder, surveyId, surveyName }) {
     const sample = new Sample({
       metadata: {
-        survey_id: surveyId,
-        survey: surveyName,
+        survey_id: surveyId || survey.id,
+        survey: surveyName || survey.name,
       },
       attrs: {
         training: appModel.attrs.useTraining,

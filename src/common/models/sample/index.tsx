@@ -56,6 +56,10 @@ type Metadata = SampleMetadata & {
    */
   survey: keyof typeof surveyConfigs;
   /**
+   * Survey id.
+   */
+  survey_id: number;
+  /**
    * If the sample was saved and ready for upload.
    */
   saved?: boolean;
@@ -134,6 +138,15 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
 
     const surveyName = this.metadata.survey;
     this.survey = surveyConfigs[surveyName];
+
+    if (!this.metadata.survey) {
+      // TODO: remove in the future
+      console.error('Fixing missing config', JSON.stringify(this.metadata));
+      this.metadata.survey = areaSurvey.name;
+      this.metadata.survey_id = areaSurvey.id;
+      this.survey = areaSurvey;
+      this.save();
+    }
 
     Object.assign(this, VibrateExtension);
     Object.assign(this, MetOfficeExtension);

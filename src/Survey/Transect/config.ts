@@ -179,10 +179,10 @@ const config: Survey = {
     create({ Sample, location }) {
       const sample = new Sample({
         metadata: {
-          survey: 'transect',
+          survey: config.name,
+          survey_id: config.id,
         },
         attrs: {
-          surveyId: config.id,
           sample_method_id: 776,
           location,
           comment: null,

@@ -122,17 +122,11 @@ const survey: Survey = {
       date: dateAttr,
     },
 
-    create({
-      Sample,
-      Occurrence,
-      taxon,
-      surveyId = survey.id,
-      surveyName = survey.name,
-    }) {
+    create({ Sample, Occurrence, taxon, surveyId, surveyName }) {
       const sample = new Sample({
         metadata: {
-          survey_id: surveyId,
-          survey: surveyName,
+          survey_id: surveyId || survey.id,
+          survey: surveyName || survey.name,
         },
         attrs: {
           location: {},
@@ -204,16 +198,11 @@ const survey: Survey = {
     return null;
   },
 
-  create({
-    Sample,
-    surveyId = survey.id,
-    surveyName = survey.name,
-    hasGPSPermission,
-  }) {
+  create({ Sample, surveyId, surveyName, hasGPSPermission }) {
     const sample = new Sample({
       metadata: {
-        survey_id: surveyId,
-        survey: surveyName,
+        survey_id: surveyId || survey.id,
+        survey: surveyName || survey.name,
         pausedTime: 0,
         speciesGroups: [],
       },
