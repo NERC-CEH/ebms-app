@@ -162,6 +162,18 @@ const config: Survey = {
           },
         });
       },
+
+      verify(attrs) {
+        try {
+          Yup.object()
+            .shape({ count: Yup.number().required('Count cannot be empty') })
+            .validateSync(attrs, { abortEarly: false });
+        } catch (attrError) {
+          return attrError;
+        }
+
+        return null;
+      },
     },
 
     create({ Sample, location }) {
