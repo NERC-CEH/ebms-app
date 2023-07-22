@@ -194,8 +194,8 @@
     ]
   ],
   [446415, 260, "Acontiinae", []],
-  [446656, 260, "Acontiini", []],
   [446638, 260, "Acontiini", []],
+  [446656, 260, "Acontiini", []],
   [
     448326,
     260,
@@ -3535,7 +3535,7 @@
     "Argynnis",
     [
       [
-        434663,
+        466539,
         "adippe",
         {
           "AD": "P",
@@ -3591,7 +3591,7 @@
         }
       ],
       [
-        466539,
+        434663,
         "adippe",
         {
           "AD": "P",
@@ -4010,6 +4010,13 @@
           "SK": "P",
           "TR": "P",
           "UA": "P"
+        }
+      ],
+      [
+        617367,
+        "vorax/nagiae",
+        {
+          "JP": "P"
         }
       ]
     ]
@@ -6592,6 +6599,13 @@
         }
       ],
       [
+        617369,
+        "thore/iphigenia/freija",
+        {
+          "JP": "P"
+        }
+      ],
+      [
         432412,
         "titania",
         {
@@ -8548,6 +8562,7 @@
       [459982, "fergana"],
       [459986, "flava"],
       [459997, "flavirena"],
+      [617324, "flavirena/noctivaga"],
       [459996, "fulvafusca"],
       [459990, "fuscicornis"],
       [459971, "germainii"],
@@ -16917,16 +16932,16 @@
       [450818, "mikkolai"]
     ]
   ],
-  [446477, 260, "Epichnopteriginae", []],
-  [446478, 260, "Epichnopteriginae", []],
   [446476, 260, "Epichnopteriginae", []],
-  [446710, 260, "Epichnopterigini", []],
-  [446712, 260, "Epichnopterigini", []],
+  [446478, 260, "Epichnopteriginae", []],
+  [446477, 260, "Epichnopteriginae", []],
   [446711, 260, "Epichnopterigini", []],
-  [446814, 260, "Epichnopterix", []],
+  [446712, 260, "Epichnopterigini", []],
+  [446710, 260, "Epichnopterigini", []],
+  [446816, 260, "Epichnopterix", []],
   [446815, 260, "Epichnopterix", []],
   [
-    446816,
+    446814,
     260,
     "Epichnopterix",
     [
@@ -16943,11 +16958,11 @@
       [449412, "sieboldii"]
     ]
   ],
-  [446481, 260, "Epichnopteryginae", []],
-  [446480, 260, "Epichnopteryginae", []],
   [446479, 260, "Epichnopteryginae", []],
-  [446714, 260, "Epichnopterygini", []],
+  [446480, 260, "Epichnopteryginae", []],
+  [446481, 260, "Epichnopteryginae", []],
   [446715, 260, "Epichnopterygini", []],
+  [446714, 260, "Epichnopterygini", []],
   [447341, 260, "Epichoristodes", [[454115, "acerbella"]]],
   [447656, 260, "Epicrocis", [[456180, "neftaella"]]],
   [
@@ -35281,6 +35296,13 @@
         }
       ],
       [
+        617375,
+        "gotama/francisca",
+        {
+          "JP": "P"
+        }
+      ],
+      [
         549875,
         "madjicosa",
         {
@@ -36174,6 +36196,7 @@
       [461108, "carvalhoi"],
       [461105, "comes"],
       [461096, "fimbriata"],
+      [617323, "fimbriata/tirrenica"],
       [461109, "interjecta"],
       [461103, "interposita"],
       [461111, "janthe"],
@@ -36659,6 +36682,13 @@
           "TRA": "P",
           "UA": "P"
         }
+      ],
+      [
+        617373,
+        "xanthomelas/l-album",
+        {
+          "JP": "P"
+        }
       ]
     ]
   ],
@@ -36750,6 +36780,20 @@
       [
         549935,
         "venata",
+        {
+          "JP": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    0,
+    251,
+    "Ochlodes/Hesperia",
+    [
+      [
+        617359,
+        "sp.",
         {
           "JP": "P"
         }
@@ -38131,6 +38175,13 @@
         }
       ],
       [
+        617357,
+        "dehaanii/maackii",
+        {
+          "JP": "P"
+        }
+      ],
+      [
         549133,
         "demodocus",
         {
@@ -38356,6 +38407,13 @@
       [
         549531,
         "xuthus",
+        {
+          "JP": "P"
+        }
+      ],
+      [
+        617355,
+        "xuthus/machaon",
         {
           "JP": "P"
         }
@@ -40877,6 +40935,13 @@
           "TR": "P",
           "TRA": "P",
           "UA": "P"
+        }
+      ],
+      [
+        617361,
+        "rapae/melete/others",
+        {
+          "JP": "P"
         }
       ],
       [
@@ -45693,6 +45758,20 @@
       ]
     ]
   ],
+  [
+    0,
+    251,
+    "Pseudozizeeria/Zizina",
+    [
+      [
+        617363,
+        "sp.",
+        {
+          "JP": "P"
+        }
+      ]
+    ]
+  ],
   [447863, 260, "Psilogaster", [[457108, "loti"]]],
   [447957, 260, "Psodos", [[457483, "quadrifaria"]]],
   [
@@ -47214,10 +47293,10 @@
   [448261, 260, "Raparna", [[459229, "conicephala"]]],
   [448337, 260, "Raphia", [[459584, "hybris"]]],
   [447621, 260, "Ratasa", [[456069, "alienalis"]]],
-  [446824, 260, "Rebelia", []],
+  [446825, 260, "Rebelia", []],
   [446823, 260, "Rebelia", []],
   [
-    446825,
+    446824,
     260,
     "Rebelia",
     [
@@ -49979,11 +50058,11 @@
     ]
   ],
   [446992, 260, "Stibaromacha", [[450656, "ratella"]]],
-  [446713, 260, "Stichobasini", []],
   [446716, 260, "Stichobasini", []],
-  [446829, 260, "Stichobasis", []],
+  [446713, 260, "Stichobasini", []],
+  [446830, 260, "Stichobasis", []],
   [
-    446830,
+    446829,
     260,
     "Stichobasis",
     [
@@ -52276,6 +52355,13 @@
         }
       ],
       [
+        617371,
+        "cardui/indica",
+        {
+          "JP": "P"
+        }
+      ],
+      [
         549823,
         "indica",
         {
@@ -53512,6 +53598,20 @@
           "TR": "A",
           "TRA": "A",
           "UA": "A"
+        }
+      ]
+    ]
+  ],
+  [
+    0,
+    251,
+    "Zizeeria,Celastrina,Everes",
+    [
+      [
+        617365,
+        "sp.",
+        {
+          "JP": "P"
         }
       ]
     ]
