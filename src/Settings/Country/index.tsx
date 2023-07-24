@@ -72,8 +72,9 @@ const SelectCountry: FC<Props> = ({ hideHeader }) => {
     <Fragment key={value}>
       {value === 'ELSEWHERE' && <IonItemDivider />}
       <IonItem>
-        <IonLabel>{country}</IonLabel>
-        <IonRadio value={value} />
+        <IonRadio value={value}>
+          <IonLabel>{country}</IonLabel>
+        </IonRadio>
       </IonItem>
     </Fragment>
   );

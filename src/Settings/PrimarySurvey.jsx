@@ -28,8 +28,9 @@ function SelectCountry({ appModel }) {
     return (
       <Fragment key={value}>
         <IonItem>
-          <IonLabel>{label}</IonLabel>
-          <IonRadio value={value} checked={currentValue === value} />
+          <IonRadio value={value} checked={currentValue === value}>
+            <IonLabel>{label}</IonLabel>
+          </IonRadio>
         </IonItem>
       </Fragment>
     );
