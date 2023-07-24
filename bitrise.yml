@@ -71,6 +71,11 @@ workflows:
             - content: |
                 DIRECTORY="$BITRISE_PROJECT_NAME/$NPM_PACKAGE_VERSION"
                 npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/app-debug.aab
+      - script@1:
+          title: Upload Builds to OneDrive
+          inputs:
+            - content: |
+                DIRECTORY="$BITRISE_PROJECT_NAME/$NPM_PACKAGE_VERSION"
                 npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/App.ipa
       - script@1:
           title: Git Tag
