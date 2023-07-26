@@ -43,7 +43,7 @@ const HeaderComponent = ({
 
 HeaderComponent.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  isTraining: PropTypes.any.isRequired,
+  isTraining: PropTypes.any,
   isEditing: PropTypes.bool,
   isDisabled: PropTypes.bool,
 };

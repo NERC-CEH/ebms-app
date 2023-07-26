@@ -772,18 +772,6 @@ msgstr ""
 msgid "Other"
 msgstr "Egyéb"
 
-msgid "Reset the application"
-msgstr "Az alkalmazás visszaállítása alapállapotba"
-
-msgid "Go to the application settings page"
-msgstr "A \"Menü\"-ben nyisd meg a \"Beállítások\" >> \"Alkalmazás\" lapot,"
-
-msgid "and click on the Reset"
-msgstr "és koppints az \"Alapállapot\""
-
-msgid "button"
-msgstr "gombra!"
-
 msgid "No species found with this name"
 msgstr "Nem találjuk ezt a fajt"
 
@@ -808,11 +796,21 @@ msgstr ""
 "Folyamatosan fejlesztjük és új funkciókkal bővítjük az alkalmazást, hogy még"
 " jobb legyen."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Biztos, hogy visszaállítod az alkalmazást alapállapotba?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Le fogsz törölni minden az az eszközön tárolt lepkeadatot!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Svédország"
@@ -825,6 +823,10 @@ msgstr "Függőben"
 
 msgid "Uploaded"
 msgstr "Feltöltött"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Nincs függőben lévő befejezett felmérés"
@@ -2103,10 +2105,6 @@ msgstr ""
 "képernyőnél is -, engedélyezd a telefonon a helyhozzáférést (GPS) az "
 "alkalmazás számára!"
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "Visszaállíthatod az alkalmazást az alapállapotába."
-
 # Delete account
 msgid "Delete account"
 msgstr "Felhasználói fiók törlése"
@@ -2500,4 +2498,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

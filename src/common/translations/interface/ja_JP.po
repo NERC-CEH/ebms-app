@@ -715,18 +715,6 @@ msgstr "新しいアカウントを登録したら、電子メールに送信さ
 msgid "Other"
 msgstr "他のもの"
 
-msgid "Reset the application"
-msgstr "アプリケーションをリセットする"
-
-msgid "Go to the application settings page"
-msgstr "アプリケーションの設定ページに行く"
-
-msgid "and click on the Reset"
-msgstr "そしてリセットをクリック"
-
-msgid "button"
-msgstr "ボタン"
-
 msgid "No species found with this name"
 msgstr "この名前の種は見つかりません"
 
@@ -746,11 +734,21 @@ msgid ""
 " the coming months."
 msgstr "今後数ヵ月で新機能が追加されるため、このアプリには多くの拡張機能が追加されます。"
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "アプリケーションを初期状態にリセットしてもよろしいですか?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "これにより、ローカルに保存されているすべてのアプリデータが消去されます。"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "スウェーデン"
@@ -763,6 +761,10 @@ msgstr "保留"
 
 msgid "Uploaded"
 msgstr "アップロード済み"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "保留中の調査は完了していない"
@@ -1936,10 +1938,6 @@ msgid ""
 "device is locked. Allow the app to use your location."
 msgstr "デバイスがロックされている場合でも、種の位置を自動的に設定し、ルートを追跡します。 アプリが位置情報を使用することを許可します。"
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "デフォルトでセットされたアプリケーションのデータをリセットできます。"
-
 # Delete account
 msgid "Delete account"
 msgstr "アカウントの削除"
@@ -2330,4 +2328,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

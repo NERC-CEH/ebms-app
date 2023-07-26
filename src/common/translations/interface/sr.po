@@ -760,18 +760,6 @@ msgstr ""
 msgid "Other"
 msgstr "Остало"
 
-msgid "Reset the application"
-msgstr "Врати подешавања апликације"
-
-msgid "Go to the application settings page"
-msgstr "Идите на страницу за подешавање апликације"
-
-msgid "and click on the Reset"
-msgstr "и кликните на Врати"
-
-msgid "button"
-msgstr "дугме"
-
 msgid "No species found with this name"
 msgstr "Нису пронађене врсте са овим називом"
 
@@ -795,11 +783,21 @@ msgstr ""
 "Очекујте да ће апликација бити унапређена у наредних пар месеци, како "
 "додајемо нове могућности."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Да ли желите да вратите подешавања апликације на фабричке вредности?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Ово ће обрисати све локално сачуване податке!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Шведска"
@@ -812,6 +810,10 @@ msgstr "На чекању"
 
 msgid "Uploaded"
 msgstr "Послато"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Нема завршених обиласка на чекању"
@@ -2040,10 +2042,6 @@ msgid ""
 "device is locked. Allow the app to use your location."
 msgstr ""
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr ""
-
 # Delete account
 msgid "Delete account"
 msgstr ""
@@ -2432,4 +2430,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

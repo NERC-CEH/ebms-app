@@ -23,7 +23,7 @@ const Records = ({ sample }: Props) => {
       type: 'Feature',
       properties: {
         id: smp.cid,
-        occId: smp.occurrences[0].cid,
+        occId: smp.occurrences[0]?.cid,
         type: 'record',
       },
       geometry: {

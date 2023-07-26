@@ -1,7 +1,7 @@
 import { Route } from 'react-router-dom';
 import appModel from 'models/app';
 import locations from 'models/collections/locations';
-import savedSamples from 'models/collections/samples';
+import samplesCollection from 'models/collections/samples';
 import userModel from 'models/user';
 import Country from './Country';
 import Language from './Language';
@@ -24,7 +24,7 @@ const MenuWrap = () => (
   <Menu
     userModel={userModel}
     appModel={appModel}
-    savedSamples={savedSamples}
+    samplesCollection={samplesCollection}
     locations={locations}
   />
 );

@@ -85,7 +85,8 @@ const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
   }
 
   if (survey.name === 'precise-area') {
-    speciesCount = sample.samples.length;
+    const hasOccurrence = (smp: Sample) => smp.occurrences.length; // from remote might not have the subsample
+    speciesCount = sample.samples.filter(hasOccurrence).length;
   }
 
   const canShowLink = !synchronising && !survey.deprecated;
@@ -159,6 +160,8 @@ const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
     sample.upload().catch(toast.error);
   };
 
+  const allowDeletion = !sample.isCached();
+
   return (
     <IonItemSliding className="survey-list-item" style={style}>
       <IonItem routerLink={href} detail={false}>
@@ -170,11 +173,14 @@ const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
           hasManyPending={uploadIsPrimary}
         />
       </IonItem>
-      <IonItemOptions side="end">
-        <IonItemOption color="danger" onClick={showDeleteSurveyPrompt}>
-          <T>Delete</T>
-        </IonItemOption>
-      </IonItemOptions>
+
+      {allowDeletion && (
+        <IonItemOptions side="end">
+          <IonItemOption color="danger" onClick={showDeleteSurveyPrompt}>
+            <T>Delete</T>
+          </IonItemOption>
+        </IonItemOptions>
+      )}
     </IonItemSliding>
   );
 };

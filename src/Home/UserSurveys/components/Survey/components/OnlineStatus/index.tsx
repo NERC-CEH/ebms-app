@@ -1,7 +1,14 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
+import { cloudOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { IonSpinner, IonLabel, IonChip, IonButton } from '@ionic/react';
+import {
+  IonSpinner,
+  IonLabel,
+  IonChip,
+  IonButton,
+  IonIcon,
+} from '@ionic/react';
 import Sample from 'models/sample';
 import './styles.scss';
 
@@ -29,6 +36,11 @@ const OnlineStatus: FC<Props> = ({ sample, onUpload, hasManyPending }) => {
   if (sample.remote.synchronising) {
     return <IonSpinner className="record-status" color="primary" />;
   }
+
+  if (sample.isCached())
+    return (
+      <IonIcon slot="end" icon={cloudOutline} color="medium" size="small" />
+    );
 
   if (sample.isUploaded()) return null;
 

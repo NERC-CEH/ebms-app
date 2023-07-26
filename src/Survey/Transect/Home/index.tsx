@@ -60,10 +60,6 @@ const TransectHomeController: FC<Props> = ({ sample }) => {
     await _processSubmission();
   };
 
-  if (!sample) {
-    return null;
-  }
-
   const isTraining = sample.attrs.training;
   const isEditing = sample.metadata.saved;
   const isDisabled = sample.isDisabled();

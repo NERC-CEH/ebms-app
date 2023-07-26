@@ -770,18 +770,6 @@ msgstr ""
 msgid "Other"
 msgstr "Annat"
 
-msgid "Reset the application"
-msgstr "Återställ appen"
-
-msgid "Go to the application settings page"
-msgstr "Gå till appens inställningssida"
-
-msgid "and click on the Reset"
-msgstr "och klicka på Återställ-"
-
-msgid "button"
-msgstr "knappen"
-
 msgid "No species found with this name"
 msgstr "Hittade ingen art med det namnet"
 
@@ -805,13 +793,21 @@ msgstr ""
 "Du kommer se den här appen förbättras på många sätt när vi lägger till nya "
 "funktioner under de kommande månaderna."
 
-msgid "Are you sure you want to reset the application to its initial state?"
+# App setting for deleting cached data
+msgid "Clear cache"
 msgstr ""
-"Är du säker på att du vill återställa programmet till "
-"fabriksinställningarna?"
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Detta kommer ta bort alla dina lokalt lagrade appdata!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Sverige"
@@ -824,6 +820,10 @@ msgstr "Väntande"
 
 msgid "Uploaded"
 msgstr "Uppladdade"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Inga avslutade inventeringar som väntar på att laddas upp"
@@ -2084,10 +2084,6 @@ msgid ""
 "device is locked. Allow the app to use your location."
 msgstr ""
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr ""
-
 # Delete account
 msgid "Delete account"
 msgstr ""
@@ -2476,4 +2472,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

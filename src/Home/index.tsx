@@ -25,7 +25,7 @@ import {
 import PendingSurveysBadge from 'common/Components/PendingSurveysBadge';
 import butterflyIcon from 'common/images/butterfly.svg';
 import appModel from 'models/app';
-import savedSamples from 'models/collections/samples';
+import samplesCollection from 'models/collections/samples';
 import { surveyConfigs as surveys } from 'models/sample';
 import userModel from 'models/user';
 import { Survey } from 'Survey/common/config';
@@ -106,7 +106,7 @@ const HomeController = () => {
           <Redirect exact path="/home" to="/home/species" />
           <Route path="/home/species" render={SpeciesTab} exact />
           <Route path="/home/report" render={ReportTab} exact />
-          <Route path="/home/user-surveys" component={UserSurveys} exact />
+          <Route path="/home/user-surveys/:id?" component={UserSurveys} exact />
           <Route path="/home/menu" component={Menu} exact />
         </IonRouterOutlet>
 
@@ -144,7 +144,7 @@ const HomeController = () => {
             <IonLabel>
               <T>Surveys</T>
             </IonLabel>
-            <PendingSurveysBadge savedSamples={savedSamples} />
+            <PendingSurveysBadge samplesCollection={samplesCollection} />
           </IonTabButton>
 
           <IonTabButton tab="menu" href="/home/menu">

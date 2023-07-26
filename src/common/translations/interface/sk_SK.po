@@ -767,18 +767,6 @@ msgstr ""
 msgid "Other"
 msgstr "Iné"
 
-msgid "Reset the application"
-msgstr "Resetovať aplikáciu"
-
-msgid "Go to the application settings page"
-msgstr "Choďte do nastavení"
-
-msgid "and click on the Reset"
-msgstr "a kliknite na Reštart"
-
-msgid "button"
-msgstr "tlačidlo"
-
 msgid "No species found with this name"
 msgstr "Neboli nájdené žiadne druhy s týmto názvom"
 
@@ -802,11 +790,21 @@ msgstr ""
 "V nasledujúcich mesiacoch čaká aplikáciu viacero vylepšení, budeme pridávať "
 "nové funkcie."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Naozaj chcete aplikáciu resetovať do pôvodného stavu?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Týmto sa vymažú všetky lokálne uložené dáta aplikácie!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Švédsko"
@@ -819,6 +817,10 @@ msgstr "Čakajúce"
 
 msgid "Uploaded"
 msgstr "Nahraté"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Žiadne dokončené čakajúce pozorovania"
@@ -2079,10 +2081,6 @@ msgstr ""
 "trasy aj v prípade, že je Vaše zariadenie zamknuté, umožnite aplikácii "
 "používať Vašu polohu."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "Môžete vrátiť dáta aplikácie do pôvodných nastavení."
-
 # Delete account
 msgid "Delete account"
 msgstr "Zmazať účet"
@@ -2486,4 +2484,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

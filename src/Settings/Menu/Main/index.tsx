@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { observer } from 'mobx-react';
 import {
   warningOutline,
-  arrowUndoOutline,
   flameOutline,
   schoolOutline,
   flagOutline,
@@ -10,6 +9,7 @@ import {
   shareOutline,
   addCircleOutline,
   personRemoveOutline,
+  trashBinOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Main, useAlert, InfoMessage, MenuAttrToggle } from '@flumens';
@@ -69,21 +69,10 @@ function useUserDeleteDialog(deleteUser: any) {
   return showUserDeleteDialog;
 }
 
-function resetDialog(resetApp: any, alert: any) {
+function clearCacheDialog(resetApp: any, alert: any) {
   alert({
-    header: 'Reset',
-    message: (
-      <>
-        <T>
-          Are you sure you want to reset the application to its initial state?
-        </T>
-        <p>
-          <b>
-            <T>This will wipe all the locally stored app data!</T>
-          </b>
-        </p>
-      </>
-    ),
+    header: 'Clear cache',
+    message: ' This will delete cached data, including your uploaded surveys.',
     buttons: [
       {
         text: 'Cancel',
@@ -91,7 +80,7 @@ function resetDialog(resetApp: any, alert: any) {
         cssClass: 'primary',
       },
       {
-        text: 'Reset',
+        text: 'Clear',
         role: 'destructive',
         handler: resetApp,
       },
@@ -100,7 +89,7 @@ function resetDialog(resetApp: any, alert: any) {
 }
 
 type Props = {
-  resetApp: any;
+  clearCache: any;
   onToggle: any;
 
   useTraining: boolean;
@@ -115,7 +104,7 @@ type Props = {
 };
 
 const MenuMain: FC<Props> = ({
-  resetApp,
+  clearCache,
   onToggle,
   isLoggedIn,
   deleteUser,
@@ -138,7 +127,7 @@ const MenuMain: FC<Props> = ({
     onToggle('useExperiments', checked);
   const onShowCommonNamesInGuide = (checked: boolean) =>
     onToggle('showCommonNamesInGuide', checked);
-  const onResetDialog = () => resetDialog(resetApp, alert);
+  const onClearCacheDialog = () => clearCacheDialog(clearCache, alert);
   const onTrainingToggle = (checked: boolean) =>
     onToggle('useTraining', checked);
 
@@ -229,19 +218,19 @@ const MenuMain: FC<Props> = ({
           <InfoMessage color="medium">
             Share app crash data so we can make the app more reliable.
           </InfoMessage>
-        </div>
 
-        <div className="destructive-item rounded">
-          <IonItem onClick={onResetDialog}>
-            <IonIcon icon={arrowUndoOutline} size="small" slot="start" />
+          <IonItem onClick={onClearCacheDialog}>
+            <IonIcon icon={trashBinOutline} size="small" slot="start" />
             <IonLabel>
-              <T>Reset</T>
+              <T>Clear cache</T>
             </IonLabel>
           </IonItem>
           <InfoMessage color="medium">
-            You can reset the app data to its default settings.
+            You can free up storage used by the app.
           </InfoMessage>
+        </div>
 
+        <div className="destructive-item rounded">
           {isLoggedIn && (
             <>
               <IonItem onClick={showUserDeleteDialog}>

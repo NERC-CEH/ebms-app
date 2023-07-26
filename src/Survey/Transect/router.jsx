@@ -1,8 +1,7 @@
 import { AttrPage, RouteWithModels } from '@flumens';
-import appModel from 'models/app';
-import savedSamples from 'models/collections/samples';
-import userModel from 'models/user';
+import samplesCollection from 'models/collections/samples';
 import StartNewSurvey from 'Components/StartNewSurvey';
+import { withRemoteModels } from 'Survey/common/hooks';
 import Home from './Home';
 import OccurrenceEdit from './OccurrenceEdit';
 import SectionsEdit from './Sections/Edit';
@@ -14,21 +13,12 @@ const { AttrPageFromRoute } = AttrPage;
 
 const baseURL = '/survey/transect';
 
-const HomeWrap = props => (
-  <Home appModel={appModel} savedSamples={savedSamples} {...props} />
-);
-const SectionListWrap = props => (
-  <SectionsList {...props} appModel={appModel} userModel={userModel} />
-);
-const SectionEditWrap = props => (
-  <SectionsEdit {...props} appModel={appModel} />
-);
 const routes = [
   [`${baseURL}`, StartNewSurvey.with(survey), true],
-  [`${baseURL}/:smpId`, HomeWrap],
+  [`${baseURL}/:smpId`, withRemoteModels(Home)],
   [`${baseURL}/:smpId/:attr`, AttrPageFromRoute],
-  [`${baseURL}/:smpId/sections`, SectionListWrap],
-  [`${baseURL}/:smpId/sections/:subSmpId`, SectionEditWrap],
+  [`${baseURL}/:smpId/sections`, SectionsList],
+  [`${baseURL}/:smpId/sections/:subSmpId`, SectionsEdit],
   [`${baseURL}/:smpId/sections/:subSmpId/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/sections/:subSmpId/taxa`, SectionsEditTaxa],
 
@@ -41,4 +31,4 @@ const routes = [
   [`${baseURL}/:smpId/sections/:subSmpId/:occId/:taxa/taxa`, SectionsEditTaxa],
 ];
 
-export default RouteWithModels.fromArray(savedSamples, routes);
+export default RouteWithModels.fromArray(samplesCollection, routes);

@@ -774,18 +774,6 @@ msgstr ""
 msgid "Other"
 msgstr "Andet"
 
-msgid "Reset the application"
-msgstr "Nulstil applikationen"
-
-msgid "Go to the application settings page"
-msgstr "Gå til applikationens indstillingsside"
-
-msgid "and click on the Reset"
-msgstr "og klik på Nulstil"
-
-msgid "button"
-msgstr "knappen"
-
 msgid "No species found with this name"
 msgstr "Ingen arter fundet med dette navn"
 
@@ -809,12 +797,21 @@ msgstr ""
 "Der vil komme en masse forbedringer til appen i takt med, at vi tilføjer nye"
 " funktioner i løbet af de næste måneder."
 
-msgid "Are you sure you want to reset the application to its initial state?"
+# App setting for deleting cached data
+msgid "Clear cache"
 msgstr ""
-"Er du sikker på at du vil nulstille applikationen til dens starttilstand?"
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Dette vil slette alt data gemt lokalt på appen!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Sverige"
@@ -827,6 +824,10 @@ msgstr "Venter"
 
 msgid "Uploaded"
 msgstr "Uploadet"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Ingen afsluttede observationer venter"
@@ -2095,10 +2096,6 @@ msgstr ""
 "din rute, selv mens skærmen er låst, skal du tillade, at appen kan bruge din"
 " placering."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "Du kan nulstille appen til dens standardindstillinger."
-
 # Delete account
 msgid "Delete account"
 msgstr "Slet konto"
@@ -2490,4 +2487,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

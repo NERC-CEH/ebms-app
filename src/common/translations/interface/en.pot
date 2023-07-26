@@ -754,18 +754,6 @@ msgstr ""
 msgid "Other"
 msgstr "Other"
 
-msgid "Reset the application"
-msgstr "Reset the application"
-
-msgid "Go to the application settings page"
-msgstr "Go to the application settings page"
-
-msgid "and click on the Reset"
-msgstr "and click on the Reset"
-
-msgid "button"
-msgstr "button"
-
 msgid "No species found with this name"
 msgstr "No species found with this name"
 
@@ -789,11 +777,21 @@ msgstr ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Are you sure you want to reset the application to its initial state?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr "Clear cache"
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "This will wipe all the locally stored app data!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr "You can free up storage used by the app."
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr "Clear"
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr " This will delete cached data, including your uploaded surveys."
 
 msgid "Sweden"
 msgstr "Sweden"
@@ -2037,10 +2035,6 @@ msgstr "Location permission"
 msgid "To automatically set species locations and track your route, even if the device is locked. Allow the app to use your location."
 msgstr "To automatically set species locations and track your route, even if the device is locked. Allow the app to use your location."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "You can reset the app data to its default settings."
-
 # Delete account 
 msgid "Delete account"
 msgstr "Delete account"
@@ -2417,3 +2411,15 @@ msgstr "Changed list ordering to alphabetical."
 # Change list order toast message
 msgid "Changed list ordering to last added."
 msgstr "Changed list ordering to last added."
+
+# Record verification status 
+msgid "Unconfirmed"
+msgstr "Unconfirmed"
+
+# Record verification status 
+msgid "Accepted"
+msgstr "Accepted"
+
+# Record verification status 
+msgid "Rejected"
+msgstr "Rejected"

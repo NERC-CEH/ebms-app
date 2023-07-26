@@ -7,7 +7,7 @@ import { useRouteMatch } from 'react-router';
 import { Page, Header, useAlert, useToast } from '@flumens';
 import { IonButton, NavContext, IonLabel } from '@ionic/react';
 import appModel from 'models/app';
-import savedSamples from 'models/collections/samples';
+import samplesCollection from 'models/collections/samples';
 import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample from 'models/sample';
 import Main from './Main';
@@ -189,7 +189,9 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
     }
 
     // Previous Survey
-    const sortedSavedSamples = [...savedSamples].sort(byCreateTime).reverse();
+    const sortedSavedSamples = [...samplesCollection]
+      .sort(byCreateTime)
+      .reverse();
 
     const matchingSampleId = (s: Sample) => s.cid === sample.cid;
     const currentSampleIndex = sortedSavedSamples.findIndex(matchingSampleId);

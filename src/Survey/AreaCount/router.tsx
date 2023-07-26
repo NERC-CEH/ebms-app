@@ -1,10 +1,10 @@
 import { AttrPage, RouteWithModels } from '@flumens';
-import appModel from 'models/app';
-import savedSamples from 'models/collections/samples';
-import userModel from 'models/user';
+import samplesCollection from 'models/collections/samples';
 import StartNewSurvey from 'Components/StartNewSurvey';
 import Direction from 'Survey/common/Direction';
 import ModelLocationMap from 'Survey/common/ModelLocationMap';
+import { Survey } from 'Survey/common/config';
+import { withRemoteModels } from 'Survey/common/hooks';
 import AreaAttr from './Area';
 import Details from './Details';
 import Home from './Home';
@@ -16,18 +16,9 @@ import surveySingleSpecies from './configSpecies';
 
 const { AttrPageFromRoute } = AttrPage;
 
-const HomeWrap = props => (
-  <Home
-    appModel={appModel}
-    userModel={userModel}
-    savedSamples={savedSamples}
-    {...props}
-  />
-);
-
-const getRoutes = (baseURL, config) => [
+const getRoutes = (baseURL: string, config: Survey) => [
   [`${baseURL}`, StartNewSurvey.with(config), true],
-  [`${baseURL}/:smpId`, HomeWrap],
+  [`${baseURL}/:smpId`, withRemoteModels(Home)],
   [`${baseURL}/:smpId/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/area`, AreaAttr],
   [`${baseURL}/:smpId/taxon`, Taxon],
@@ -47,4 +38,4 @@ const routes = [
   ...getRoutes(`/survey/${surveySingleSpecies.name}`, surveySingleSpecies),
 ];
 
-export default RouteWithModels.fromArray(savedSamples, routes);
+export default RouteWithModels.fromArray(samplesCollection, routes);

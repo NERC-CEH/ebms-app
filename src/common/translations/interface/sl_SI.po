@@ -761,18 +761,6 @@ msgstr ""
 msgid "Other"
 msgstr "Drugo"
 
-msgid "Reset the application"
-msgstr "Ponastavitev aplikacije"
-
-msgid "Go to the application settings page"
-msgstr "Pojdite v nastavitve aplikacije"
-
-msgid "and click on the Reset"
-msgstr "in kliknite na gumb Ponastavitev"
-
-msgid "button"
-msgstr "gumb"
-
 msgid "No species found with this name"
 msgstr "Pod tem imenom ni najdena nobena vrsta"
 
@@ -794,11 +782,21 @@ msgid ""
 " the coming months."
 msgstr "Tekom prihajajočih mesecev bomo aplikaciji  dodajali nove izboljšave."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Ste prepričani, da želite ponastaviti aplikacijo na prvotno stanje?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "To bo izbrisalo podatke vseh shranjenih lokacij!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Švedska"
@@ -811,6 +809,10 @@ msgstr "V teku"
 
 msgid "Uploaded"
 msgstr "Naloženo"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Ni končanih popisov"
@@ -2066,10 +2068,6 @@ msgstr ""
 "Za samodejno določanje lokacij popisanih vrst in sledenje poti transekta, "
 "tudi če je naprava zaklenjena, dovolite aplikaciji uporabo vaše lokacije."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "Podatke aplikacije lahko ponastavite na privzete nastavitve."
-
 # Delete account
 msgid "Delete account"
 msgstr "Izbriši račun"
@@ -2462,4 +2460,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

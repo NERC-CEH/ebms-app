@@ -779,18 +779,6 @@ msgstr ""
 msgid "Other"
 msgstr "Otro"
 
-msgid "Reset the application"
-msgstr "Restaurar la aplicación"
-
-msgid "Go to the application settings page"
-msgstr "Ir a la página de configuración de la aplicación"
-
-msgid "and click on the Reset"
-msgstr "y haga clic en el Reinicio"
-
-msgid "button"
-msgstr "botón"
-
 msgid "No species found with this name"
 msgstr "No hay especies encontradas con este nombre"
 
@@ -814,12 +802,21 @@ msgstr ""
 "Verá muchas mejoras en esta aplicación a medida que agreguemos nuevas "
 "funciones en los próximos meses."
 
-msgid "Are you sure you want to reset the application to its initial state?"
+# App setting for deleting cached data
+msgid "Clear cache"
 msgstr ""
-"¿Estás seguro que quieres reiniciar la aplicación a su estado inicial?"
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Esto borrará todos los datos de la aplicación almacenados localmente!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Suecia"
@@ -832,6 +829,10 @@ msgstr "Pendientes"
 
 msgid "Uploaded"
 msgstr "Enviados"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "No hay muestreos terminados"
@@ -2111,12 +2112,6 @@ msgstr ""
 "ruta, incluso si el dispositivo está bloqueado. Permite que la app utilice "
 "tu ubicación."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr ""
-"Puedes restablecer los datos de la aplicación a su configuración "
-"predeterminada."
-
 # Delete account
 msgid "Delete account"
 msgstr "Eliminar cuenta"
@@ -2524,3 +2519,15 @@ msgstr "Cambiado el orden de las listas a alfabético."
 # Change list order toast message
 msgid "Changed list ordering to last added."
 msgstr "Cambiado el orden de la lista al último añadido."
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
+msgstr ""

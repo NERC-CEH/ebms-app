@@ -3,7 +3,10 @@ import {
   Occurrence as OccurrenceOriginal,
   OccurrenceAttrs,
   validateRemoteModel,
+  ElasticOccurrence,
+  ElasticOccurrenceMedia,
 } from '@flumens';
+import config from 'common/config';
 import speciesGroups from 'common/helpers/groups';
 import bumblebeeIcon from 'common/images/bumblebee.svg';
 import butterflyIcon from 'common/images/butterfly.svg';
@@ -12,7 +15,8 @@ import mothIcon from 'common/images/moth.svg';
 import { MachineInvolvement } from 'Survey/Moth/config';
 import { Survey } from 'Survey/common/config';
 import Media from './media';
-import Sample from './sample';
+import Sample, { surveyConfigsByCode } from './sample';
+import { parseRemoteAttrs } from './sample/remoteExt';
 
 export const DRAGONFLY_GROUP = speciesGroups.dragonflies.id;
 
@@ -99,6 +103,65 @@ export const doesShallowTaxonMatch = (shallowEntry: Taxon, taxon: Taxon) => {
 };
 
 export default class Occurrence extends OccurrenceOriginal<Attrs> {
+  /**
+   * Transform ES document into local structure.
+   */
+  static parseRemoteJSON({
+    id,
+    event,
+    metadata,
+    occurrence,
+    taxon,
+  }: ElasticOccurrence) {
+    const date = new Date(metadata.created_on).toISOString();
+    const updatedOn = new Date(metadata.updated_on).toISOString();
+
+    const survey = surveyConfigsByCode[metadata.survey.id];
+    const hasParent = event.parent_event_id;
+
+    let surveyAttrs = hasParent ? survey.smp?.occ?.attrs : survey.occ?.attrs;
+    if (!surveyAttrs) {
+      // sometimes we drop subSamples on upload so the structure changes
+      surveyAttrs = survey.smp.occ.attrs! || survey.occ.attrs;
+    }
+
+    const parsedAttributes = parseRemoteAttrs(
+      surveyAttrs,
+      occurrence.attributes || []
+    );
+
+    const getMedia = ({ path }: ElasticOccurrenceMedia) => ({
+      id: path,
+      metadata: { updatedOn: date, createdOn: date, syncedOn: date },
+      attrs: { data: `${config.backend.mediaUrl}${path}` },
+    });
+    const media = occurrence.media?.map(getMedia);
+
+    return {
+      id,
+      cid: event.source_system_key || id,
+      metadata: {
+        updatedOn,
+        createdOn: date,
+        syncedOn: Date.now(),
+      },
+      attrs: {
+        ...parsedAttributes,
+        taxon: {
+          warehouse_id: parseInt(taxon.taxa_taxon_list_id, 10),
+          scientific_name: taxon.accepted_name,
+          common_name: taxon.vernacular_name,
+          found_in_name: taxon.vernacular_name
+            ? 'common_name'
+            : 'scientific_name',
+        },
+        comment: occurrence.occurrence_remarks,
+      },
+
+      media,
+    };
+  }
+
   static fromJSON(json: any) {
     return super.fromJSON(json, Media);
   }

@@ -38,6 +38,7 @@ import IncrementalButton from 'Survey/common/IncrementalButton';
 import {
   speciesOccAddedTimeSort,
   speciesNameSort,
+  speciesCount,
 } from 'Survey/common/taxonSortFunctions';
 import UnidentifiedSpeciesEntry from './Components/UnidentifiedSpeciesEntry';
 import './styles.scss';
@@ -330,9 +331,13 @@ const HomeMain: FC<Props> = ({
       ...shallowCounts,
     };
 
-    const sort = areaSurveyListSortedByTime
+    let sort = areaSurveyListSortedByTime
       ? speciesOccAddedTimeSort
       : speciesNameSort;
+
+    if (isDisabled) {
+      sort = speciesCount;
+    }
 
     const speciesList = Object.entries(counts)
       .filter(byKnownSpecies)
@@ -345,11 +350,13 @@ const HomeMain: FC<Props> = ({
 
     return (
       <>
-        <div id="species-list-sort">
-          <IonButton fill="clear" size="small" onClick={onToggleSpeciesSort}>
-            <IonIcon icon={filterOutline} mode="md" />
-          </IonButton>
-        </div>
+        {!isDisabled && (
+          <div id="species-list-sort">
+            <IonButton fill="clear" size="small" onClick={onToggleSpeciesSort}>
+              <IonIcon icon={filterOutline} mode="md" />
+            </IonButton>
+          </div>
+        )}
 
         <IonList id="list" lines="full">
           <div className="rounded">

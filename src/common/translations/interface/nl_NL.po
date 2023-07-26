@@ -770,18 +770,6 @@ msgstr ""
 msgid "Other"
 msgstr "Ander"
 
-msgid "Reset the application"
-msgstr "Reset de applicatie"
-
-msgid "Go to the application settings page"
-msgstr "Ga naar de instellingen pagina"
-
-msgid "and click on the Reset"
-msgstr "en klik Reset"
-
-msgid "button"
-msgstr "knop"
-
 msgid "No species found with this name"
 msgstr "Geen soort met deze naam gevonden"
 
@@ -805,11 +793,21 @@ msgstr ""
 "U zult in de toekomst veel toevoegingen en verbeteringen zien,  die we de "
 "komende maanden gaan toevoegen."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Weet u zeker dat u de app wil resetten naar de fabrieksinstellingen?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Dit verwijdert alle lokaal opgeslagen gegevens!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Zweden"
@@ -822,6 +820,10 @@ msgstr "In afwachting"
 
 msgid "Uploaded"
 msgstr "Geupload"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Geen afgeronde afwachtende tellingen"
@@ -2069,10 +2071,6 @@ msgid ""
 "device is locked. Allow the app to use your location."
 msgstr ""
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr ""
-
 # Delete account
 msgid "Delete account"
 msgstr "Verwijder mijn account"
@@ -2461,4 +2459,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

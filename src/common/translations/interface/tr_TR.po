@@ -775,18 +775,6 @@ msgstr ""
 msgid "Other"
 msgstr "Diğer"
 
-msgid "Reset the application"
-msgstr "Uygulamayı sıfırla"
-
-msgid "Go to the application settings page"
-msgstr "Uygulama ayarlarına git"
-
-msgid "and click on the Reset"
-msgstr "ve Sıfırla tuşuna bas"
-
-msgid "button"
-msgstr "Tuş"
-
 msgid "No species found with this name"
 msgstr "Bu isimde bir tür bulunamadı."
 
@@ -810,13 +798,21 @@ msgstr ""
 "İlerleyen aylarda yeni özellikler eklendikçe uygulamada bek çok gelişme "
 "göreceksiniz. "
 
-msgid "Are you sure you want to reset the application to its initial state?"
+# App setting for deleting cached data
+msgid "Clear cache"
 msgstr ""
-"Uygulamayı ilk ayarlara dönecek şekilde sıfırlamak istediğinize emin "
-"misiniz?"
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Bu, cihazda depolanmış bütün verileri temizleyecek!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "İsveç"
@@ -829,6 +825,10 @@ msgstr "Bekleniyor"
 
 msgid "Uploaded"
 msgstr "Yüklendi"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Hiç tamamlanmış, 'bekleyen' gözlem bulunmamaktadır. "
@@ -2082,10 +2082,6 @@ msgstr ""
 "Cihaz kilitli olsa bile türlerin konumlarını otomatik olarak ayarlamak ve "
 "rotanızı izlemek için. Uygulamanın konumunuzu kullanmasına izin verin."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "Uygulama verilerini varsayılan ayarlarına sıfırlayabilirsiniz."
-
 # Delete account
 msgid "Delete account"
 msgstr "Hesabı sil"
@@ -2477,4 +2473,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

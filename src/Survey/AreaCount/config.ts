@@ -26,6 +26,13 @@ import {
   speciesGroupsAttr,
 } from 'Survey/common/config';
 
+const locationAttrs = {
+  locationArea: { remote: { id: 723 } },
+  locationAccuracy: { remote: { id: 282 } },
+  locationAltitude: { remote: { id: 283 } },
+  locationAltitudeAccuracy: { remote: { id: 284 } },
+};
+
 const merc = new SphericalMercator();
 
 function transformToMeters(coordinates: any) {
@@ -91,6 +98,7 @@ const survey: Survey = {
         },
       },
     },
+    ...locationAttrs,
   },
 
   metadata: {
@@ -119,6 +127,7 @@ const survey: Survey = {
           },
         },
       },
+      ...locationAttrs,
       date: dateAttr,
     },
 

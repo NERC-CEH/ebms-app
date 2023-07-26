@@ -13,7 +13,7 @@ import { IonButton, NavContext, isPlatform, IonLabel } from '@ionic/react';
 import { usePromptImageSource } from 'common/Components/PhotoPicker';
 import CONFIG from 'common/config';
 import appModel from 'models/app';
-import savedSamples from 'models/collections/samples';
+import samplesCollection from 'models/collections/samples';
 import Media from 'models/media';
 import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
@@ -323,7 +323,9 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const getPreviousSurvey = () => {
-    const sortedSavedSamples = [...savedSamples].sort(byCreateTime).reverse();
+    const sortedSavedSamples = [...samplesCollection]
+      .sort(byCreateTime)
+      .reverse();
 
     const matchingSampleId = (s: Sample) => s.cid === sample.cid;
     const currentSampleIndex = sortedSavedSamples.findIndex(matchingSampleId);

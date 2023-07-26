@@ -64,7 +64,9 @@ const SpeciesOccurrences: FC<Props> = ({ sample }) => {
 
   const getSamples = () => {
     const matchesTaxa = ({ occurrences }: any) => {
-      const [occ] = occurrences; // always one
+      const [occ] = occurrences;
+      if (!occ) return false;
+
       const { warehouse_id, preferredId } = occ.attrs.taxon;
       if (preferredId === parseInt(taxa, 10)) return true;
 

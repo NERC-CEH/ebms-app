@@ -14,18 +14,11 @@ import './styles.scss';
 
 const getSectionItem = (sectionSample: Sample, match: any) => {
   const section = sectionSample.attrs.location;
-  const geometry = toJS(section.geom);
+  const geometry = toJS(section.geom) || {};
 
   geometry.coordinates = transformToLatLon(geometry);
 
-  const geom = [
-    {
-      id: 4,
-      properties: {},
-      type: 'Feature',
-      geometry,
-    },
-  ];
+  const geom = [{ type: 'Feature', geometry }];
 
   const isPoint = geometry.type === 'Point';
 

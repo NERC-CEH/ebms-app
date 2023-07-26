@@ -784,18 +784,6 @@ msgstr ""
 msgid "Other"
 msgstr "Andere"
 
-msgid "Reset the application"
-msgstr "Zurücksetzen der Applikation"
-
-msgid "Go to the application settings page"
-msgstr "Geh zu Einstellungen"
-
-msgid "and click on the Reset"
-msgstr "und klicke auf die Reset"
-
-msgid "button"
-msgstr "Taste"
-
 msgid "No species found with this name"
 msgstr "Keine Art mit diesem Namen gefunden"
 
@@ -820,13 +808,21 @@ msgstr ""
 "Du wirst viele Verbesserungen an dieser App sehen, da wir in den nächsten "
 "Monaten neue Funktionen hinzufügen werden."
 
-msgid "Are you sure you want to reset the application to its initial state?"
+# App setting for deleting cached data
+msgid "Clear cache"
 msgstr ""
-"Bist du sicher, dass du die Anwendung in den Ausgangszustand zurücksetzen "
-"möchtest?"
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Hierdurch werden alle lokal gespeicherten App-Daten gelöscht!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Schweden"
@@ -839,6 +835,10 @@ msgstr "Ausstehend"
 
 msgid "Uploaded"
 msgstr "Hochgeladen"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Keine abgeschlossenen ausstehenden Erfassungen"
@@ -2125,10 +2125,6 @@ msgstr ""
 "wenn das Gerät gesperrt ist. Erlauben Sie der App, Ihren Standort zu "
 "verwenden."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "App-Daten zurücksetzen auf Standardeinstellungen ."
-
 # Delete account
 msgid "Delete account"
 msgstr "Konto löschen"
@@ -2539,4 +2535,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

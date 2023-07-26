@@ -8,7 +8,7 @@ import { setupIonicReact, isPlatform } from '@ionic/react';
 import config from 'common/config';
 import locations from 'common/models/collections/locations';
 import appModel from 'models/app';
-import savedSamples from 'models/collections/samples';
+import samplesCollection from 'models/collections/samples';
 import userModel from 'models/user';
 import App from './App';
 
@@ -21,7 +21,7 @@ mobxConfig({ enforceActions: 'never' });
 (async function () {
   await appModel.ready;
   await userModel.ready;
-  await savedSamples._init;
+  await samplesCollection._init;
   await locations.ready;
 
   appModel.attrs.sendAnalytics &&

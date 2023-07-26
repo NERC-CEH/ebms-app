@@ -59,7 +59,7 @@ const DetailsController: FC<Props> = ({ sample }) => {
   };
   useEffect(setDefaultTime, [sample.attrs.location]);
 
-  const getNextButton = sample.metadata.completedDetails ? null : (
+  const getNextButton = sample.isDetailsComplete() ? null : (
     <IonButton
       fill="solid"
       shape="round"

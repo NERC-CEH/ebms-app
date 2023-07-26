@@ -60,6 +60,7 @@ const TransectHomeController: FC<Props> = ({ occurrence }) => {
               value={count}
               icon={numberIcon}
               min={1}
+              isDisabled={isDisabled}
             />
           </div>
 

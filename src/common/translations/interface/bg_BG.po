@@ -787,18 +787,6 @@ msgstr ""
 msgid "Other"
 msgstr "Друго"
 
-msgid "Reset the application"
-msgstr "Нулиране на настройките на приложението"
-
-msgid "Go to the application settings page"
-msgstr "Отворете страницата с настройките на приложението"
-
-msgid "and click on the Reset"
-msgstr "и кликнете бутона"
-
-msgid "button"
-msgstr "Нулиране на настройките."
-
 msgid "No species found with this name"
 msgstr "Няма намерен вид с това име"
 
@@ -823,15 +811,21 @@ msgstr ""
 "През следващите месеци ще забележите много подобрения по това приложение, в "
 "резултат на нашата усилена работа по добавянето на нови функции."
 
-msgid "Are you sure you want to reset the application to its initial state?"
+# App setting for deleting cached data
+msgid "Clear cache"
 msgstr ""
-"Сигурни ли сте, че искате да върнете настройките по подразбиране на "
-"приложението?"
 
-msgid "This will wipe all the locally stored app data!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
 msgstr ""
-"Това ще изтрие всичките данни на приложението, записани локално в настоящото"
-" устройство!"
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Швеция"
@@ -844,6 +838,10 @@ msgstr "В изчакване"
 
 msgid "Uploaded"
 msgstr "Изпратено"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Няма завършени преброявания в изчакване"
@@ -2141,12 +2139,6 @@ msgstr ""
 "проследяване на вашия маршрут, дори ако устройството е заключено. Разрешете "
 "на приложението да използва вашето местоположение."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr ""
-"Можете да нулирате данните и настройките на приложението, като върнете "
-"настройките по подразбиране."
-
 # Delete account
 msgid "Delete account"
 msgstr "Изтрий профила"
@@ -2538,4 +2530,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

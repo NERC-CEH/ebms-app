@@ -1,3 +1,9 @@
-.record-status {
-  max-width: 80px;
+.survey-list-item {
+  .record-status {
+    max-width: 80px;
+  }
+
+  ion-icon[slot='end'] {
+    margin-right: 5px;
+  }
 }

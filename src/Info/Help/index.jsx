@@ -1,10 +1,4 @@
-import {
-  settingsOutline,
-  arrowUndoOutline,
-  personOutline,
-  addOutline,
-  sendOutline,
-} from 'ionicons/icons';
+import { personOutline, addOutline, sendOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Page, Main, Header, Collapse } from '@flumens';
 import { IonList, IonItemDivider, IonIcon } from '@ionic/react';
@@ -168,20 +162,6 @@ export default () => (
                 address by clicking on a verification link sent to your email
               </T>
               .
-            </p>
-          </Collapse>
-        </div>
-
-        <IonItemDivider>
-          <T>Other</T>
-        </IonItemDivider>
-        <div className="rounded">
-          <Collapse title="Reset the application">
-            <p>
-              <T>Go to the application settings page</T>{' '}
-              <IonIcon icon={settingsOutline} /> <T>and click on the Reset</T>{' '}
-              <IonIcon icon={arrowUndoOutline} />
-              <T>button</T>.
             </p>
           </Collapse>
         </div>

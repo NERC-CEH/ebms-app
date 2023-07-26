@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 import { toJS, observable } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
@@ -7,7 +7,7 @@ import { Page, useAlert, useToast, Attr } from '@flumens';
 import { NavContext } from '@ionic/react';
 import distance from '@turf/distance';
 import appModel from 'models/app';
-import savedSamples from 'models/collections/samples';
+import samplesCollection from 'models/collections/samples';
 import Occurrence, {
   SpeciesGroup,
   Taxon,
@@ -167,12 +167,11 @@ const HomeController: FC<Props> = ({ sample }) => {
   const checkUserStatus = useUserStatusCheck();
   const confirmDelete = useDeleteConfirmation();
 
-  const validateTrackDistance = () => {
+  const [hasLongSections, setHasLongSections] = useState(false);
+
+  const calculateIfHasLongSections = () => {
     if (!sample.attrs.location?.shape?.coordinates.length) return;
-
     if (!sample.metadata.saved) return;
-
-    let isValid;
 
     const shapeCoords = [...sample.attrs.location.shape.coordinates];
 
@@ -204,21 +203,17 @@ const HomeController: FC<Props> = ({ sample }) => {
       );
 
       if (sectionDistance > METERS_THRESHOLD) {
-        isValid = true;
-        break;
+        setHasLongSections(true);
+        return;
       }
     }
 
-    // eslint-disable-next-line no-unused-expressions
-    isValid
-      ? // eslint-disable-next-line no-param-reassign
-        (sample.metadata.hasBigJump = true)
-      : // eslint-disable-next-line no-param-reassign
-        (sample.metadata.hasBigJump = false);
-
-    sample.save();
+    setHasLongSections(false);
   };
-  useEffect(validateTrackDistance, [sample.attrs.location?.shape?.coordinates]);
+
+  useEffect(calculateIfHasLongSections, [
+    sample.attrs.location?.shape?.coordinates,
+  ]);
 
   const _processSubmission = async () => {
     const isUserOK = await checkUserStatus();
@@ -304,7 +299,9 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   const getPreviousSurvey = () => {
-    const sortedSavedSamples = [...savedSamples].sort(byCreateTime).reverse();
+    const sortedSavedSamples = [...samplesCollection]
+      .sort(byCreateTime)
+      .reverse();
     const matchingSampleId = (s: Sample) => s.cid === sample.cid;
 
     const currentSampleIndex = sortedSavedSamples.findIndex(matchingSampleId);
@@ -542,6 +539,7 @@ const HomeController: FC<Props> = ({ sample }) => {
         deleteSpecies={deleteSpecies}
         increaseCount={increaseCount}
         toggleTimer={toggleTimer}
+        hasLongSections={hasLongSections}
         navigateToSpeciesOccurrences={navigateToSpeciesOccurrences}
         areaSurveyListSortedByTime={areaSurveyListSortedByTime}
         onToggleSpeciesSort={toggleSpeciesSort}

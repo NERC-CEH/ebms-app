@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { useEffect } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { Page, useToast, useLoader, device } from '@flumens';
@@ -14,7 +14,7 @@ type Props = {
 
 const TWENTY_FOURTH_HOURS = 24 * 60 * 60 * 1000;
 
-const SectionListController: FC<Props> = ({ sample }) => {
+const SectionListController = ({ sample }: Props) => {
   const checkUserStatus = useUserStatusCheck();
   const loader = useLoader();
   const toast = useToast();

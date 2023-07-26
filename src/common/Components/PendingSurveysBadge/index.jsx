@@ -4,14 +4,14 @@ import exact from 'prop-types-exact';
 import { IonBadge } from '@ionic/react';
 import './styles.scss';
 
-function getPendingCount(savedSamples) {
+function getPendingCount(samplesCollection) {
   const byUploadStatus = sample => !sample.metadata.syncedOn;
 
-  return savedSamples.filter(byUploadStatus).length;
+  return samplesCollection.filter(byUploadStatus).length;
 }
 
-function PendingSurveysBadge({ savedSamples }) {
-  const count = getPendingCount(savedSamples);
+function PendingSurveysBadge({ samplesCollection }) {
+  const count = getPendingCount(samplesCollection);
 
   if (count <= 0) {
     return null;
@@ -25,7 +25,7 @@ function PendingSurveysBadge({ savedSamples }) {
 }
 
 PendingSurveysBadge.propTypes = exact({
-  savedSamples: PropTypes.array.isRequired,
+  samplesCollection: PropTypes.array.isRequired,
 });
 
 export default observer(PendingSurveysBadge);

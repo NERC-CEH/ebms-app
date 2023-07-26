@@ -50,6 +50,7 @@ import IncrementalButton from 'Survey/common/IncrementalButton';
 import {
   speciesOccAddedTimeSort,
   speciesNameSort,
+  speciesCount,
 } from 'Survey/common/taxonSortFunctions';
 import CountdownClock from '../components/CountdownClock';
 import './styles.scss';
@@ -99,7 +100,9 @@ const getDefaultTaxonCount = (taxon: any, createdOn?: any) => {
 };
 
 const buildSpeciesCount = (agg: any, smp: Sample) => {
-  const taxon = toJS(smp.occurrences[0].attrs.taxon);
+  const taxon = toJS(smp.occurrences[0]?.attrs.taxon);
+  if (!taxon) return agg;
+
   const id = taxon.preferredId || taxon.warehouse_id;
 
   const createdOn = new Date(smp.metadata.createdOn).getTime();
@@ -127,6 +130,7 @@ type Props = {
   onToggleSpeciesSort: any;
   toggleTimer: any;
   areaSurveyListSortedByTime: boolean;
+  hasLongSections: boolean;
   increaseCount: any;
   navigateToOccurrence: (smp: Sample) => void;
   deleteSingleSample: (smp: Sample) => void;
@@ -138,6 +142,7 @@ const AreaCount: FC<Props> = ({
   sample,
   previousSurvey,
   deleteSpecies,
+  hasLongSections,
   navigateToSpeciesOccurrences,
   onToggleSpeciesSort,
   toggleTimer,
@@ -315,17 +320,23 @@ const AreaCount: FC<Props> = ({
       ...shallowCounts,
     };
 
-    const sort = areaSurveyListSortedByTime
+    let sort = areaSurveyListSortedByTime
       ? speciesOccAddedTimeSort
       : speciesNameSort;
+
+    if (isDisabled) {
+      sort = speciesCount;
+    }
 
     const speciesList = Object.entries(counts).sort(sort).map(getSpeciesEntry);
 
     const count = speciesList.length > 1 ? speciesList.length : null;
 
+    const allowSorting = !!count && !isDisabled;
+
     return (
       <>
-        {count && (
+        {allowSorting && (
           <div id="species-list-sort">
             <IonButton fill="clear" size="small" onClick={onToggleSpeciesSort}>
               <IonIcon icon={filterOutline} mode="md" />
@@ -475,7 +486,7 @@ const AreaCount: FC<Props> = ({
             record.
           </InfoMessage>
 
-          {sample.metadata.hasBigJump && (
+          {hasLongSections && (
             <InfoMessage color="medium">
               We have noticed that your survey has <b>long sections</b>. Please
               make sure it is a correct <b>location</b>!

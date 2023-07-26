@@ -57,6 +57,7 @@ const DetailsMain: FC<Props> = ({ sample }) => {
             label="Moth trap"
             skipValueTranslation
             value={locationName}
+            disabled={isDisabled}
           />
           <Attr
             model={sample}
@@ -93,7 +94,6 @@ const DetailsMain: FC<Props> = ({ sample }) => {
           />
           <MenuAttrItem
             routerLink={`${url}/startWeather`}
-            disabled={isDisabled}
             icon={cloudOutline}
             label="Weather"
             skipValueTranslation
@@ -117,7 +117,6 @@ const DetailsMain: FC<Props> = ({ sample }) => {
 
           <MenuAttrItem
             routerLink={`${url}/endWeather`}
-            disabled={isDisabled}
             icon={cloudOutline}
             label="Weather"
             skipValueTranslation

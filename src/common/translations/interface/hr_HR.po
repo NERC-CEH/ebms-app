@@ -763,18 +763,6 @@ msgstr ""
 msgid "Other"
 msgstr "Drugo"
 
-msgid "Reset the application"
-msgstr "Resetirajte aplikaciju"
-
-msgid "Go to the application settings page"
-msgstr "Otiđite na stranicu postavki aplikacije"
-
-msgid "and click on the Reset"
-msgstr "i stisnite reset"
-
-msgid "button"
-msgstr "tipka"
-
 msgid "No species found with this name"
 msgstr "Nije pronađena vrsta s tim imenom"
 
@@ -798,11 +786,21 @@ msgstr ""
 "Vidjet ćete puno poboljšanja aplikacije dodavanjem novih značajki u "
 "nadolazećim mjesecima."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Jeste li sigurni da želite vratiti aplikaciju u početno stanje?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Izbrisat će se svi lokalno pohranjeni podaci aplikacije!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Švedska"
@@ -815,6 +813,10 @@ msgstr "Čekanje"
 
 msgid "Uploaded"
 msgstr "Učitano"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Nema gotovih istraživanja na čekanju"
@@ -2048,10 +2050,6 @@ msgid ""
 "device is locked. Allow the app to use your location."
 msgstr ""
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr ""
-
 # Delete account
 msgid "Delete account"
 msgstr ""
@@ -2440,4 +2438,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

@@ -1,6 +1,7 @@
 import { RouteWithModels, AttrPage } from '@flumens';
-import savedSamples from 'models/collections/samples';
+import samplesCollection from 'models/collections/samples';
 import StartNewSurvey from 'Components/StartNewSurvey';
+import { withRemoteModels } from 'Survey/common/hooks';
 import Details from './Details';
 import EndWeather from './Details/EndWeather';
 import StartWeather from './Details/StartWeather';
@@ -15,7 +16,7 @@ const baseURL = `/survey/${survey.name}`;
 
 const routes = [
   [`${baseURL}`, StartNewSurvey.with(survey), true],
-  [`${baseURL}/:smpId`, Home],
+  [`${baseURL}/:smpId`, withRemoteModels(Home)],
   [`${baseURL}/:smpId/details`, Details],
   [`${baseURL}/:smpId/details/:attr`, AttrPageFromRoute],
   [`${baseURL}/:smpId/details/endWeather`, EndWeather],
@@ -29,4 +30,4 @@ const routes = [
   [`${baseURL}/:smpId/occ/:occId/taxon`, Taxon],
 ];
 
-export default RouteWithModels.fromArray(savedSamples, routes);
+export default RouteWithModels.fromArray(samplesCollection, routes);

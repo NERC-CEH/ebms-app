@@ -13,7 +13,7 @@ import { IonModal, IonGrid, IonRow, IonCol } from '@ionic/react';
 import config from 'common/config';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
 import appModel from 'models/app';
-import savedSamples from 'models/collections/samples';
+import samplesCollection from 'models/collections/samples';
 import userModel from 'models/user';
 import SpeciesProfile from './SpeciesProfile';
 import './images';
@@ -167,7 +167,7 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
       return false;
     }
 
-    return savedSamples.length > 5;
+    return samplesCollection.length > 5;
   };
 
   let { country } = appModel.attrs;

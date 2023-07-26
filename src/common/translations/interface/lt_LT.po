@@ -764,18 +764,6 @@ msgstr ""
 msgid "Other"
 msgstr "Kiti"
 
-msgid "Reset the application"
-msgstr "Atstatyti aplikaciją"
-
-msgid "Go to the application settings page"
-msgstr "Nueikite į aplikacijos nustatymų puslapį"
-
-msgid "and click on the Reset"
-msgstr "ir paspauskite Atstatyti"
-
-msgid "button"
-msgstr "mygtuką"
-
 msgid "No species found with this name"
 msgstr "Tokiu pavadinimu rūšis nerasta"
 
@@ -798,11 +786,21 @@ msgid ""
 msgstr ""
 "Jūs matysite daugybę atnaujinimų šiai aplikacijai per artimiausius mėnesius."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Ar tikrai norite atstatyti aplikaciją į pradinę būseną? "
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr "Išvalyti failus"
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Tai ištrins visus įrenginyje saugomus aplikacijos duomenis!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr "Galite išvalyti aplikaciją ir taip atlaisvinti vietos įrenginyje."
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr "Išvalyti"
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr "Šiuo veiksmu išvalysite jau išsiųstus įrašus ir kitus laikinuosius failus."
 
 msgid "Sweden"
 msgstr "Švedija"
@@ -818,7 +816,9 @@ msgstr "Išsiųsta"
 
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
-msgstr "Jeigu norite matyti savo įrašus, pirma turite <1>prisijungti</1> prie savo eBMS sąskaitos."
+msgstr ""
+"Jeigu norite matyti savo įrašus, pirma turite <1>prisijungti</1> prie savo "
+"eBMS sąskaitos."
 
 msgid "No finished pending surveys"
 msgstr "Neturite užbaigtų neišsiųstų įrašų"
@@ -2064,10 +2064,6 @@ msgstr ""
 "maršrutą ir registruotų rūšių vietoves, leiskite programėlei naudoti "
 "prietaiso buvimo vietą."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "Galite grįžti į numatytuosius programėlės nustatymus."
-
 # Delete account
 msgid "Delete account"
 msgstr "Ištrinti anketą"
@@ -2462,3 +2458,15 @@ msgstr "Sąrašo rūšavimas pakeistas į alfabetišką."
 # Change list order toast message
 msgid "Changed list ordering to last added."
 msgstr "Sąrašo rūšavimas pakeistas į rūšies įvedimo laiką."
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
+msgstr ""

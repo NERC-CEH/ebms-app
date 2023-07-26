@@ -3,15 +3,15 @@ import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { MapRef, LngLatBounds } from 'react-map-gl';
 import { Link } from 'react-router-dom';
-import { useToast, device, MapContainer } from '@flumens';
+import { useToast, device, MapContainer, ElasticOccurrence } from '@flumens';
 import { IonSpinner } from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import { centroids as countries } from 'common/config/countries';
 import appModel from 'common/models/app';
 import userModel from 'models/user';
-import { Square, Record } from './esResponse.d';
-import { fetchRecords, fetchSquares } from './recordsService';
+import RecordProfiles from './RecordProfiles';
+import { fetchRecords, fetchSquares, Square } from './recordsService';
 import './styles.scss';
 
 /**
@@ -44,7 +44,7 @@ const Map = () => {
 
   const [totalSquares, setTotalSquares] = useState<number>(1);
   const [squares, setSquares] = useState<Square[]>([]);
-  const [records, setRecords] = useState<Record[]>([]);
+  const [records, setRecords] = useState<ElasticOccurrence[]>([]);
 
   const userIsLoggedIn = userModel.isLoggedIn();
 
@@ -99,15 +99,28 @@ const Map = () => {
 
   const updateMapCentre = () => updateRecords();
 
+  const [showRecordsInfo, setShowRecordsInfo] = useState<ElasticOccurrence[]>(
+    []
+  );
+  const closeRecordInfo = () => setShowRecordsInfo([]);
+
   const updateRecordsFirstTime = () => {
     updateRecords();
   };
   useEffect(updateRecordsFirstTime, [mapRef]);
 
-  const getRecordMarker = (record: Record) => {
+  const getRecordMarker = (record: ElasticOccurrence) => {
     const [latitude, longitude] = record.location.point
       .split(',')
       .map(parseFloat);
+
+    let fillColor = '#fcb500';
+    const status = record.identification.verification_status;
+    if (status === 'V') {
+      fillColor = '#00bd1a';
+    } else if (status === 'R') {
+      fillColor = '#f04141';
+    }
 
     return (
       <MapContainer.Marker.Circle
@@ -117,9 +130,10 @@ const Map = () => {
         latitude={latitude}
         paint={{
           'circle-stroke-color': 'white',
-          'circle-color': '#745a8f',
+          'circle-color': fillColor,
           'circle-opacity': 1,
         }}
+        onClick={() => setShowRecordsInfo([record])}
       />
     );
   };
@@ -199,6 +213,10 @@ const Map = () => {
       <MapContainer.Control>
         {isFetchingRecords ? <IonSpinner /> : <div />}
       </MapContainer.Control>
+
+      {!!showRecordsInfo?.length && (
+        <RecordProfiles records={showRecordsInfo} onClose={closeRecordInfo} />
+      )}
     </MapContainer>
   );
 };

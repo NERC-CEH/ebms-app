@@ -3,8 +3,8 @@ import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Page, Header, useToast, useLoader } from '@flumens';
 import { isPlatform, NavContext } from '@ionic/react';
 import appModel, { Attrs } from 'models/app';
-import locations from 'models/collections/locations';
-import savedSamples from 'models/collections/samples';
+import samplesCollection from 'models/collections/samples';
+import Sample from 'models/sample';
 import userModel from 'models/user';
 import Main from './Main';
 
@@ -32,13 +32,16 @@ const useDeleteUser = () => {
   return deleteUser;
 };
 
-async function resetApp(toast: any) {
-  console.log('Settings:Menu:Controller: resetting the application!');
+async function clearCache(toast: any) {
+  console.log('Settings:Menu:Controller: clearing cache!');
   try {
-    await appModel.resetDefaults();
-    await userModel.resetDefaults();
-    await savedSamples.resetDefaults();
-    await locations.resetDefaults();
+    const clearSample = (smp: Sample) => {
+      if (smp.isCached()) return null;
+      if (!smp.isDisabled()) return null;
+
+      return smp.destroy();
+    };
+    await Promise.all(samplesCollection.map(clearSample));
 
     toast.success('Done');
   } catch (e: any) {
@@ -69,7 +72,7 @@ const Container: FC = () => {
     showCommonNamesInGuide,
   } = appModel.attrs;
 
-  const resetAppWrap = () => resetApp(toast);
+  const clearCacheWrap = () => clearCache(toast);
 
   return (
     <Page id="settings-menu">
@@ -82,7 +85,7 @@ const Container: FC = () => {
         sendAnalytics={sendAnalytics}
         primarySurvey={primarySurvey}
         showCommonNamesInGuide={showCommonNamesInGuide}
-        resetApp={resetAppWrap}
+        clearCache={clearCacheWrap}
         onToggle={onToggle}
         language={language || ''}
         country={country}

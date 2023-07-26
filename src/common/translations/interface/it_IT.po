@@ -779,18 +779,6 @@ msgstr ""
 msgid "Other"
 msgstr "Altro"
 
-msgid "Reset the application"
-msgstr "Ripristina l'applicazione "
-
-msgid "Go to the application settings page"
-msgstr "Vai alla pagina delle impostazioni dell'applicazione "
-
-msgid "and click on the Reset"
-msgstr "e clicca su Reimposta "
-
-msgid "button"
-msgstr "pulsante"
-
 msgid "No species found with this name"
 msgstr "Nessuna specie trovata con questa nome "
 
@@ -815,11 +803,21 @@ msgstr ""
 "Vedrai molti miglioramenti a questa app mentre aggiungiamo nuove "
 "funzionalità nei prossimi mesi."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Sei sicuro di voler reimpostare l'applicazione al suo stato iniziale?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Questo cancellerà tutti i dati dell'app memorizzati localmente!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Svezia "
@@ -832,6 +830,10 @@ msgstr "In attesa"
 
 msgid "Uploaded"
 msgstr "Caricati"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Nessun campionamento \"in sospeso\" finito "
@@ -2108,10 +2110,6 @@ msgstr ""
 "percorso, anche se il dispositivo è bloccato. Consentire all'applicazione di"
 " utilizzare la propria posizione."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "Puoi ripristinare le impostazioni predefinite dei dati dell'app."
-
 # Delete account
 msgid "Delete account"
 msgstr "Cancella account"
@@ -2523,3 +2521,15 @@ msgstr "Elenco modificato in ordine alfabetico"
 # Change list order toast message
 msgid "Changed list ordering to last added."
 msgstr "Modificato l'ordine dell'elenco in base all'ultimo aggiunto."
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
+msgstr ""

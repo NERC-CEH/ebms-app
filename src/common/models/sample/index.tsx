@@ -1,13 +1,16 @@
 import { IObservableArray, observable } from 'mobx';
 import { useTranslation } from 'react-i18next';
+import wkt from 'wellknown';
 import {
   device,
   ModelValidationMessage,
   useAlert,
   Sample as SampleOriginal,
   SampleAttrs,
-  SampleOptions,
+  SampleOptions as SampleOptionsOriginal,
   SampleMetadata,
+  ElasticSample,
+  ElasticSampleMedia,
 } from '@flumens';
 import config from 'common/config';
 import groups from 'common/helpers/groups';
@@ -22,8 +25,9 @@ import { Survey } from 'Survey/common/config';
 import Media from '../media';
 import Occurrence, { SpeciesGroup } from '../occurrence';
 import { modelStore } from '../store';
-import GPSExtension from './GPSExt';
+import GPSExtension, { calculateArea } from './GPSExt';
 import MetOfficeExtension from './metofficeExt';
+import RemoteExtension, { parseRemoteAttrs } from './remoteExt';
 import VibrateExtension from './vibrateExt';
 
 type Attrs = SampleAttrs & {
@@ -49,6 +53,17 @@ export const surveyConfigs = {
   [transectSurvey.name]: transectSurvey,
   [mothSurvey.name]: mothSurvey,
 };
+
+export const surveyConfigsByCode = Object.values(surveyConfigs).reduce<any>(
+  (agg: any, survey: Survey) => {
+    if (survey.deprecated) return agg;
+
+    // eslint-disable-next-line no-param-reassign
+    agg[survey.id] = survey;
+    return agg;
+  },
+  {}
+);
 
 type Metadata = SampleMetadata & {
   /**
@@ -76,17 +91,66 @@ type Metadata = SampleMetadata & {
    */
   pausedTime?: number;
 
-  /**
-   * Has large sections in the walked trail.
-   */
-  hasBigJump?: boolean;
-
   speciesGroups?: any[];
 };
 
+type SampleOptions = SampleOptionsOriginal & { skipStore?: boolean };
+
 export default class Sample extends SampleOriginal<Attrs, Metadata> {
+  /**
+   * Transform ES document into local structure.
+   */
+  static parseRemoteJSON({ id, event, location, metadata }: ElasticSample) {
+    const survey = surveyConfigsByCode[metadata.survey.id];
+    const date = new Date(metadata.created_on).toISOString();
+    const updatedOn = new Date(metadata.updated_on).toISOString();
+
+    const [latitude, longitude] = location.point.split(',').map(parseFloat);
+    const shape = location.geom ? wkt.parse(location.geom) : null;
+
+    const hasParent = event.parent_event_id;
+    const parsedAttributes = parseRemoteAttrs(
+      hasParent ? survey.smp.attrs! : survey.attrs,
+      event.attributes || []
+    );
+
+    const getMedia = ({ path }: ElasticSampleMedia) => ({
+      id: path,
+      metadata: { updatedOn: date, createdOn: date, syncedOn: date },
+      attrs: { data: `${config.backend.mediaUrl}${path}` },
+    });
+    const media = event.media?.map(getMedia);
+
+    return {
+      id,
+      cid: event.source_system_key || id,
+      metadata: {
+        saved: true,
+        survey: survey.name,
+        updatedOn,
+        createdOn: date,
+        syncedOn: Date.now(),
+      },
+      attrs: {
+        ...parsedAttributes,
+        date,
+        location: {
+          code: location.code,
+          name: location.name,
+          latitude,
+          longitude,
+          shape,
+          area: calculateArea(shape),
+        },
+        comment: event.event_remarks,
+      },
+
+      media,
+    };
+  }
+
   static fromJSON(json: any) {
-    return super.fromJSON(json, Occurrence, Sample, Media);
+    return super.fromJSON(json, Occurrence, Sample, Media) as Sample;
   }
 
   declare occurrences: IObservableArray<Occurrence>;
@@ -127,8 +191,15 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
 
   hasLoctionMissingAndIsnotLocating: any; // from extension
 
-  constructor(options: SampleOptions) {
-    super({ ...options, store: modelStore });
+  fetchRemote: any; // from extension
+
+  isPartial: any; // from extension
+
+  constructor({ skipStore, ...options }: SampleOptions) {
+    super({
+      store: skipStore ? undefined : modelStore,
+      ...options,
+    });
 
     this.remote.url = `${config.backend.indicia.url}/index.php/services/rest`;
     // eslint-disable-next-line
@@ -151,8 +222,11 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
     Object.assign(this, VibrateExtension);
     Object.assign(this, MetOfficeExtension);
     Object.assign(this, GPSExtension);
+    Object.assign(this, RemoteExtension);
     this.gpsExtensionInit();
   }
+
+  isCached = () => !this._store;
 
   destroy(silent?: boolean) {
     this.cleanUp();
@@ -245,6 +319,8 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   };
 
   isDetailsComplete() {
+    if (this.isDisabled()) return true;
+
     const isMothSurvey = this.metadata.survey === 'moth';
     return isMothSurvey ? this.metadata.completedDetails : true;
   }
@@ -385,3 +461,12 @@ export const useValidateCheck = (sample: Sample) => {
     return true;
   };
 };
+
+export function bySurveyDate(sample1: Sample, sample2: Sample) {
+  const date1 = new Date(sample1.attrs.date);
+  const moveToTop = !date1 || date1.toString() === 'Invalid Date';
+  if (moveToTop) return -1;
+
+  const date2 = new Date(sample2.attrs.date);
+  return date2.getTime() - date1.getTime();
+}

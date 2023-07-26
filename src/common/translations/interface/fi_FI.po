@@ -761,18 +761,6 @@ msgstr ""
 msgid "Other"
 msgstr "Muu"
 
-msgid "Reset the application"
-msgstr "Palauta sovelluksen lähtöasetukset"
-
-msgid "Go to the application settings page"
-msgstr "Siirry sovelluksen asetuksiin"
-
-msgid "and click on the Reset"
-msgstr "ja klikkaa Uudelleenmääritä"
-
-msgid "button"
-msgstr "kuvaketta"
-
 msgid "No species found with this name"
 msgstr "Tätä lajinimeä ei löydy"
 
@@ -796,11 +784,21 @@ msgstr ""
 "Sovellukseen tulee jatkossa parannuksia, kun uusia ominaisuuksia otetaan "
 "hiljalleen käyttöön."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Haluatko varmasti palauttaa sovelluksen lähtöasetuksiinsa?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Tämä hävittää kaikki laitteelle tallentuneet tiedot!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Ruotsi"
@@ -813,6 +811,10 @@ msgstr "Käynnissä"
 
 msgid "Uploaded"
 msgstr "Ladattu"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Ei siirtämättömiä havaintokertoja"
@@ -2024,10 +2026,6 @@ msgid ""
 "device is locked. Allow the app to use your location."
 msgstr ""
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr ""
-
 # Delete account
 msgid "Delete account"
 msgstr ""
@@ -2416,4 +2414,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""

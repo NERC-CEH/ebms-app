@@ -776,18 +776,6 @@ msgstr ""
 msgid "Other"
 msgstr "Altele"
 
-msgid "Reset the application"
-msgstr "Resetați aplicația"
-
-msgid "Go to the application settings page"
-msgstr "Accesați pagina de setări a aplicației"
-
-msgid "and click on the Reset"
-msgstr "și faceți clic pe Resetare"
-
-msgid "button"
-msgstr "buton"
-
 msgid "No species found with this name"
 msgstr "Nu s-a găsit nicio specie cu acest nume"
 
@@ -811,11 +799,21 @@ msgstr ""
 "Veți vedea o mulțime de îmbunătățiri ale acestei aplicații pe măsură ce vom "
 "adăuga noi funcții în lunille următoare."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Sigur doriți să resetați aplicația la starea inițială?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Acest lucru va șterge toate datele aplicației stocate local!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Suedia"
@@ -828,6 +826,10 @@ msgstr "În așteptare"
 
 msgid "Uploaded"
 msgstr "Încărcat"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Niciun sondaj în asteptare finalizat"
@@ -2109,10 +2111,6 @@ msgstr ""
 "locațiile speciilor și a urmărirea  traseului dvs, chiar dacă ecranul e "
 "blocat. "
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr "Puteți selecta revenirea la setările implicite ale aplicației. "
-
 # Delete account
 msgid "Delete account"
 msgstr "Sterge contul"
@@ -2517,3 +2515,15 @@ msgstr "Lista a fost ordonata alfabetic"
 # Change list order toast message
 msgid "Changed list ordering to last added."
 msgstr "Lista a fost ordonata in functie de activitatea recenta."
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
+msgstr ""

@@ -774,18 +774,6 @@ msgstr ""
 msgid "Other"
 msgstr "Altres"
 
-msgid "Reset the application"
-msgstr "Resetejar l'aplicació"
-
-msgid "Go to the application settings page"
-msgstr "Ves a la la pàgina de configuracions de l'aplicació"
-
-msgid "and click on the Reset"
-msgstr "i clica el botó de Reset"
-
-msgid "button"
-msgstr "botó"
-
 msgid "No species found with this name"
 msgstr "No s'han trobat espècies amb aquest nom"
 
@@ -810,11 +798,21 @@ msgstr ""
 "Veuràs moltes millores a l'aplicació a mesura que anem incloent noves "
 "característiques els pròxims mesos."
 
-msgid "Are you sure you want to reset the application to its initial state?"
-msgstr "Segur que vols reestablir l'aplicació al seu estat inicial?"
+# App setting for deleting cached data
+msgid "Clear cache"
+msgstr ""
 
-msgid "This will wipe all the locally stored app data!"
-msgstr "Això netejarà totes les dades registrades localment!"
+# App setting for deleting cached data
+msgid "You can free up storage used by the app."
+msgstr ""
+
+# App setting for deleting cached data
+msgid "Clear"
+msgstr ""
+
+# App setting for deleting cached data
+msgid " This will delete cached data, including your uploaded surveys."
+msgstr ""
 
 msgid "Sweden"
 msgstr "Suècia"
@@ -827,6 +825,10 @@ msgstr "Pendents"
 
 msgid "Uploaded"
 msgstr "Carregat"
+
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
 
 msgid "No finished pending surveys"
 msgstr "Comptatges pendents, no acabats"
@@ -2079,11 +2081,6 @@ msgstr ""
 "seguiment de la ruta, encara que el dispositiu estigui bloquejat. Permet que"
 " l'aplicació utilitzi la teva ubicació."
 
-# Reset app info message
-msgid "You can reset the app data to its default settings."
-msgstr ""
-"Pots restablir les dades de l'aplicació a la configuració predeterminada."
-
 # Delete account
 msgid "Delete account"
 msgstr "Eliminar compte"
@@ -2483,4 +2480,16 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Record verification status
+msgid "Unconfirmed"
+msgstr ""
+
+# Record verification status
+msgid "Accepted"
+msgstr ""
+
+# Record verification status
+msgid "Rejected"
 msgstr ""
