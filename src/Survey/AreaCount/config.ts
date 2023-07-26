@@ -1,4 +1,5 @@
 import { toJS } from 'mobx';
+import { cloudyOutline } from 'ionicons/icons';
 import wkt from 'wellknown';
 import { isPlatform } from '@ionic/react';
 import SphericalMercator from '@mapbox/sphericalmercator';
@@ -13,7 +14,6 @@ import {
   windSpeedAttr,
   temperatureAttr,
   windDirectionAttr,
-  cloudAttr,
   sunAttr,
   taxonAttr,
   surveyStartTimeAttr,
@@ -66,7 +66,25 @@ const survey: Survey = {
     surveyEndTime: surveyEndTimeAttr,
     comment: commentAttr,
     temperature: temperatureAttr,
-    cloud: cloudAttr,
+    cloud: {
+      menuProps: { icon: cloudyOutline, label: 'Cloud' },
+      pageProps: {
+        headerProps: { title: 'Cloud' },
+        attrProps: {
+          input: 'slider',
+          info: 'Please specify the % of cloud cover.',
+          set: (value: any, model: any) => {
+            // eslint-disable-next-line no-param-reassign
+            model.attrs.sun = 100 - value;
+            // eslint-disable-next-line no-param-reassign
+            model.attrs.cloud = value;
+            model.save();
+          },
+          inputProps: { max: 100, min: 0 },
+        },
+      },
+      remote: { id: 1457 },
+    },
     sun: sunAttr,
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,

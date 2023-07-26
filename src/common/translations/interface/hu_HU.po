@@ -2511,3 +2511,11 @@ msgstr ""
 # Record verification status
 msgid "Rejected"
 msgstr ""
+
+# Survey verification message
+msgid "Reliability cannot be empty."
+msgstr ""
+
+# Survey verification message
+msgid "Cloud cannot be empty."
+msgstr ""

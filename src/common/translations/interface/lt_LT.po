@@ -800,7 +800,8 @@ msgstr "Išvalyti"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
-msgstr "Šiuo veiksmu išvalysite jau išsiųstus įrašus ir kitus laikinuosius failus."
+msgstr ""
+"Šiuo veiksmu išvalysite jau išsiųstus įrašus ir kitus laikinuosius failus."
 
 msgid "Sweden"
 msgstr "Švedija"
@@ -2461,12 +2462,20 @@ msgstr "Sąrašo rūšavimas pakeistas į rūšies įvedimo laiką."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Dar nepatvirtintas"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Priimtas"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Atmestas"
+
+# Survey verification message
+msgid "Reliability cannot be empty."
+msgstr "Trūksta patikimumo."
+
+# Survey verification message
+msgid "Cloud cannot be empty."
+msgstr "Trūksta debesuotumo."

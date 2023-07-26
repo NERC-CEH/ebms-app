@@ -1,4 +1,4 @@
-import { chatboxOutline } from 'ionicons/icons';
+import { chatboxOutline, cloudyOutline } from 'ionicons/icons';
 import * as Yup from 'yup';
 import appModel from 'models/app';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
@@ -11,7 +11,6 @@ import {
   windSpeedAttr,
   temperatureAttr,
   windDirectionAttr,
-  cloudAttr,
   taxonAttr,
   surveyStartTimeAttr,
   surveyEndTimeAttr,
@@ -86,8 +85,19 @@ const config: Survey = {
     app_version: appVersionAttr,
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
-    cloud: cloudAttr,
-    sun: sunAttr,
+    cloud: {
+      menuProps: { icon: cloudyOutline, label: 'Cloud' },
+      pageProps: {
+        headerProps: { title: 'Cloud' },
+        attrProps: {
+          input: 'slider',
+          info: 'Please specify the % of cloud cover.',
+          inputProps: { max: 100, min: 0 },
+        },
+      },
+      remote: { id: 1457 },
+    },
+    sun: sunAttr, // TODO: backwards compatible, remove in the future
     temperature: temperatureAttr,
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,
@@ -112,7 +122,6 @@ const config: Survey = {
     attrs: {
       date: dateAttr,
       location: locationAttr,
-      cloud: cloudAttr,
       sun: sunAttr,
       comment: {
         menuProps: { icon: chatboxOutline, skipValueTranslation: true },
@@ -123,7 +132,6 @@ const config: Survey = {
           },
         },
       },
-
       reliability: {
         pageProps: {
           attrProps: {
@@ -186,6 +194,7 @@ const config: Survey = {
           sample_method_id: 776,
           location,
           comment: null,
+          reliability: 'Suitable conditions',
         },
       });
 
@@ -199,6 +208,20 @@ const config: Survey = {
       }
 
       return submission;
+    },
+
+    verify(attrs) {
+      try {
+        Yup.object()
+          .shape({
+            reliability: Yup.string().required('Reliability cannot be empty.'),
+          })
+          .validateSync(attrs, { abortEarly: false });
+      } catch (attrError) {
+        return attrError;
+      }
+
+      return null;
     },
   },
 

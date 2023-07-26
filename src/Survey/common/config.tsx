@@ -1,8 +1,4 @@
-import {
-  chatboxOutline,
-  thermometerOutline,
-  cloudyOutline,
-} from 'ionicons/icons';
+import { chatboxOutline, thermometerOutline } from 'ionicons/icons';
 import * as Yup from 'yup';
 import {
   date as dateHelp,
@@ -262,26 +258,6 @@ export const commentAttr = {
       info: 'Please add any extra info about this record.',
     },
   },
-};
-
-export const cloudAttr = {
-  menuProps: { icon: cloudyOutline, label: 'Cloud' },
-  pageProps: {
-    headerProps: { title: 'Cloud' },
-    attrProps: {
-      input: 'slider',
-      info: 'Please specify the % of cloud cover.',
-      set: (value: any, model: any) => {
-        // eslint-disable-next-line no-param-reassign
-        model.attrs.sun = 100 - value;
-        // eslint-disable-next-line no-param-reassign
-        model.attrs.cloud = value;
-        model.save();
-      },
-      inputProps: { max: 100, min: 0 },
-    },
-  },
-  remote: { id: 1457 },
 };
 
 export const sunAttr = {

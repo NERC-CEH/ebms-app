@@ -5,7 +5,6 @@ import {
   addCircleOutline,
   filterOutline,
   thumbsUpOutline,
-  cloudyOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -253,7 +252,6 @@ const Edit: FC<Props> = ({
     );
   };
 
-  const { cloud } = sectionSample.attrs;
   const { reliability } = sectionSample.attrs;
 
   const baseURL = `/survey/transect/${sample.cid}/sections/${sectionSample.cid}`;
@@ -262,15 +260,6 @@ const Edit: FC<Props> = ({
     <Main id="transect-section-edit">
       <IonList lines="full">
         <div className="rounded">
-          <MenuAttrItem
-            routerLink={`${baseURL}/cloud`}
-            disabled={isDisabled}
-            icon={cloudyOutline}
-            label="Cloud"
-            value={cloud}
-            skipValueTranslation
-          />
-
           <MenuAttrItem
             routerLink={`${baseURL}/reliability`}
             disabled={isDisabled}

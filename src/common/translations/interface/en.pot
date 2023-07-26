@@ -2423,3 +2423,11 @@ msgstr "Accepted"
 # Record verification status 
 msgid "Rejected"
 msgstr "Rejected"
+
+# Survey verification message 
+msgid "Reliability cannot be empty."
+msgstr "Reliability cannot be empty."
+
+# Survey verification message 
+msgid "Cloud cannot be empty."
+msgstr "Cloud cannot be empty."
