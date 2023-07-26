@@ -14,7 +14,7 @@ type Props = {
 };
 
 const Image: FC<Props> = ({ media, isDisabled, onDelete, onClick }) => {
-  const showWarning = !media.doesTaxonMatchParent();
+  const showWarning = !media.isDisabled() && !media.doesTaxonMatchParent();
 
   const showLoading = media.identification.identifying;
 

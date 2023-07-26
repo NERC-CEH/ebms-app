@@ -22,6 +22,9 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
   const showLoading = image.identification.identifying;
   if (showLoading) return null;
 
+  const isDisabled = image.isDisabled();
+  if (isDisabled) return null;
+
   if (identifierWasNotUsed) {
     return (
       <IonButton
