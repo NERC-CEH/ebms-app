@@ -9,7 +9,7 @@ import {
   arrowForwardOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { useAlert, InfoMessage } from '@flumens';
+import { useAlert, InfoMessage, string as StringHelp } from '@flumens';
 import {
   IonList,
   IonItemOption,
@@ -21,7 +21,6 @@ import {
 } from '@ionic/react';
 import turf from '@turf/distance';
 import appModel from 'models/app';
-import StringHelp from 'helpers/string';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import EditModal from './EditModal';
 import './styles.scss';

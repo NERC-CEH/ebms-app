@@ -1,7 +1,7 @@
 import { createRef, Component } from 'react';
 import PropTypes from 'prop-types';
 import { IonSearchbar, withIonLifeCycle } from '@ionic/react';
-import groups from 'common/helpers/groups';
+import groups from 'common/data/groups';
 import appModel from 'models/app';
 import Suggestions from './components/Suggestions';
 import './styles.scss';

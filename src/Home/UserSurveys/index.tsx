@@ -13,9 +13,9 @@ import {
 } from '@ionic/react';
 import samplesCollection from 'models/collections/samples';
 import Sample, { bySurveyDate } from 'models/sample';
-import Map from './components/Map';
-import PendingSurveys from './components/Pending';
-import UploadedSurveys from './components/Uploaded';
+import Map from './Map';
+import PendingSurveys from './Pending';
+import UploadedSurveys from './Uploaded';
 import './styles.scss';
 
 const UserSurveyComponent: FC = () => {

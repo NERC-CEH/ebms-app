@@ -7,7 +7,7 @@ import {
   ElasticOccurrenceMedia,
 } from '@flumens';
 import config from 'common/config';
-import speciesGroups from 'common/helpers/groups';
+import speciesGroups from 'common/data/groups';
 import bumblebeeIcon from 'common/images/bumblebee.svg';
 import butterflyIcon from 'common/images/butterfly.svg';
 import dragonflyIcon from 'common/images/dragonfly.svg';

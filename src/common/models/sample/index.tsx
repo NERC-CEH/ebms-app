@@ -13,7 +13,7 @@ import {
   ElasticSampleMedia,
 } from '@flumens';
 import config from 'common/config';
-import groups from 'common/helpers/groups';
+import groups from 'common/data/groups';
 import appModel from 'models/app';
 import userModel from 'models/user';
 import areaSurvey from 'Survey/AreaCount/config';

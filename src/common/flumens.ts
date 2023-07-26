@@ -50,6 +50,7 @@ export {
   type AttrPropsExtended,
 } from '@flumens/ionic/dist/components/AttrPage';
 export { default as ModelValidationMessage } from '@flumens/ionic/dist/components/ModelValidationMessage';
+export { default as ImageWithBackground } from '@flumens/ionic/dist/components/ImageWithBackground';
 export { default as Gallery } from '@flumens/ionic/dist/components/Gallery';
 export { default as MenuAttrToggle } from '@flumens/ionic/dist/components/MenuAttrToggle';
 export { default as ModalHeader } from '@flumens/ionic/dist/components/ModalHeader';
@@ -57,6 +58,7 @@ export { default as Section } from '@flumens/ionic/dist/components/Section';
 export { default as InfoButton } from '@flumens/ionic/dist/components/InfoButton';
 export { default as PhotoPicker } from '@flumens/ionic/dist/components/PhotoPicker';
 export { default as MenuAttrItem } from '@flumens/ionic/dist/components/MenuAttrItem';
+export { default as VirtualList } from '@flumens/ionic/dist/components/VirtualList';
 export {
   default as MenuAttrItemFromModel,
   type MenuProps as MenuAttrItemFromModelMenuProps,
@@ -75,9 +77,11 @@ export { default as LongPressFabButton } from '@flumens/ionic/dist/components/Lo
 export { useToast, useAlert, useLoader } from '@flumens/ionic/dist/hooks';
 export * from '@flumens/ionic/dist/utils/image';
 export * from '@flumens/ionic/dist/utils/errors';
+export { default as UUID, hashCode } from '@flumens/ionic/dist/utils/uuid';
 export { default as date } from '@flumens/ionic/dist/utils/date';
 export { default as initAnalytics } from '@flumens/ionic/dist/utils/analytics';
 export { default as device } from '@flumens/ionic/dist/utils/device';
+export { default as string } from '@flumens/ionic/dist/utils/string';
 export {
   prettyPrintLocation,
   updateModelLocation,

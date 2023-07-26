@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Main, useOnBackButton } from '@flumens';
+import { Main, useOnBackButton, ImageWithBackground } from '@flumens';
 import {
   IonCardHeader,
   IonCardSubtitle,
@@ -16,7 +16,6 @@ import {
   IonChip,
 } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
-import ImageWithBackground from 'common/Components/ImageWithBackground';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
 

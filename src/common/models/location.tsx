@@ -12,9 +12,9 @@ import {
   Collection,
   updateModelLocation,
   ModelValidationMessage,
+  UUID,
 } from '@flumens';
 import CONFIG from 'common/config';
-import UUID from 'common/helpers/UUID';
 import userModel from 'models/user';
 import { Location } from './collections/locations/service';
 import { locationsStore } from './store';

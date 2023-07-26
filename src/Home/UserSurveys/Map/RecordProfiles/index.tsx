@@ -6,11 +6,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Gallery, ElasticOccurrence } from '@flumens';
+import { Gallery, ElasticOccurrence, ImageWithBackground } from '@flumens';
 import { IonCardHeader, IonCardContent, IonIcon } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
 import config from 'common/config';
-import ImageWithBackground from './ImageWithBackground';
 import MultiPageCustomAlert from './MultiPageCustomAlert';
 import './styles.scss';
 

@@ -6,7 +6,7 @@ import {
   MenuAttrItemFromModelMenuProps,
   PageProps,
 } from '@flumens';
-import groups from 'common/helpers/groups';
+import groups from 'common/data/groups';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import windIcon from 'common/images/wind.svg';
 import Occurrence, { Taxon } from 'common/models/occurrence';

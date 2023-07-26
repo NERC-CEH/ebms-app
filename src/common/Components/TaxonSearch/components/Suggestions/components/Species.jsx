@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Trans as T } from 'react-i18next';
 import { IonItem } from '@ionic/react';
-import groups from 'common/helpers/groups';
+import groups from 'common/data/groups';
 import './styles.scss';
 
 const reduceToIdAndLabel = (agg, { label, id }) => ({ ...agg, [id]: label });

@@ -1,7 +1,12 @@
 import { FC, useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import InfiniteLoader from 'react-window-infinite-loader';
-import { InfoBackgroundMessage, date as DateHelp, device } from '@flumens';
+import {
+  InfoBackgroundMessage,
+  date as DateHelp,
+  device,
+  VirtualList,
+} from '@flumens';
 import {
   IonItem,
   IonItemDivider,
@@ -16,7 +21,6 @@ import samplesCollection, {
 } from 'models/collections/samples';
 import Sample, { bySurveyDate } from 'models/sample';
 import userModel from 'models/user';
-import VirtualList from '../../VirtualList';
 import Survey from '../Survey';
 import fetchRemoteSamples from './service';
 import './styles.scss';

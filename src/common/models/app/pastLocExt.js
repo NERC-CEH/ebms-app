@@ -1,7 +1,7 @@
 /** ****************************************************************************
  * App Model past locations functions.
  **************************************************************************** */
-import { hashCode } from 'helpers/UUID';
+import { hashCode } from '@flumens';
 
 export const MAX_SAVED = 60;
 

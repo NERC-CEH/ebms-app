@@ -1,7 +1,12 @@
 import { FC, useContext } from 'react';
 import { addOutline } from 'ionicons/icons';
 import { useTranslation } from 'react-i18next';
-import { InfoBackgroundMessage, useToast, date as DateHelp } from '@flumens';
+import {
+  InfoBackgroundMessage,
+  useToast,
+  date as DateHelp,
+  VirtualList,
+} from '@flumens';
 import {
   IonButton,
   IonIcon,
@@ -13,7 +18,6 @@ import {
 import samplesCollection from 'models/collections/samples';
 import Sample, { bySurveyDate } from 'models/sample';
 import userModel from 'models/user';
-import VirtualList from '../VirtualList';
 import Survey from './Survey';
 
 async function uploadAllSamples(toast: any, t: any) {
