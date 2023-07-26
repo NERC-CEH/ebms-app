@@ -4,7 +4,7 @@ import StartNewSurvey from 'Components/StartNewSurvey';
 import Direction from 'Survey/common/Direction';
 import ModelLocationMap from 'Survey/common/ModelLocationMap';
 import { Survey } from 'Survey/common/config';
-import { withRemoteModels } from 'Survey/common/hooks';
+import withRemoteModels from 'Survey/common/hooks';
 import AreaAttr from './Area';
 import Details from './Details';
 import Home from './Home';
