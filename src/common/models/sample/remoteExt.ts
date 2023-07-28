@@ -167,6 +167,12 @@ export const parseRemoteAttrs = (
   return remoteAttrs.reduce(toConfig, {});
 };
 
+const byId = (agg: any, smp: Sample) => {
+  // eslint-disable-next-line no-param-reassign
+  agg[smp.id!] = smp;
+  return agg;
+};
+
 const extension: any = {
   /** If the sample originates from remote and isn't fully fetched yet. */
   isPartial: false,
@@ -185,17 +191,18 @@ const extension: any = {
       remoteOccurrencesPromise,
     ]);
 
-    const byId = (agg: any, smp: Sample) => {
-      // eslint-disable-next-line no-param-reassign
-      agg[smp.id!] = smp;
-      return agg;
-    };
     const remoteSubSamplesMap = remoteSubSamples.reduce(byId, {});
     const attachOccToSamples = ([occ, parentId]: [Occurrence, number]) => {
       if (parentId === this.id) {
         this.occurrences.push(occ);
         return;
       }
+
+      if (!remoteSubSamplesMap[parentId]) {
+        console.error(`Can't attach occ to missing ${parentId} sample`);
+        return;
+      }
+
       remoteSubSamplesMap[parentId].occurrences.push(occ);
     };
     remoteOccurrences.forEach(attachOccToSamples);
