@@ -1,12 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { observer } from 'mobx-react';
 import { MapRef } from 'react-map-gl';
-import { Main, MapContainer, MapDraw, useAlert, CircleMarker } from '@flumens';
+import { Main, MapContainer, MapDraw, useAlert, Location } from '@flumens';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import Sample from 'models/sample';
 import Favourites from './Favourites';
+import FinishPointMarker from './FinishPointMarker';
 import Records from './Records';
+import StartingPointMarker from './StartingPointMarker';
 
 const useDeletePropt = () => {
   const alert = useAlert();
@@ -46,7 +48,8 @@ const AreaAttr = ({
   isDisabled,
 }: Props) => {
   const mapRef = useRef<MapRef>(null);
-  const { location } = sample.attrs;
+  // eslint-disable-next-line prefer-destructuring
+  const location: Location | undefined = sample.attrs.location;
 
   const [mapCenter, saveMapCenter] = useState<any>([1, 1]);
   const updateMapCentre = ({ viewState }: any) =>
@@ -56,101 +59,23 @@ const AreaAttr = ({
 
   const shouldDeleteShape = useDeletePropt();
 
-  const hasLocation =
-    sample.attrs.location?.latitude || sample.attrs.location?.longitude;
+  const isFinished =
+    sample.isDisabled() || sample.metadata.saved || sample.isTimerFinished();
 
-  const endPointLocation = sample.attrs.location?.shape?.coordinates?.length
-    ? sample.attrs.location?.shape?.coordinates?.slice()
-    : null;
-
-  const finishPosition =
-    endPointLocation &&
-    endPointLocation[endPointLocation.length - 1].slice().reverse();
-
-  const startPosition =
-    endPointLocation && endPointLocation[0].slice().reverse();
-
-  const isFinished = sample.metadata.saved || sample.isTimerFinished();
-  const isShapePolyline = sample.attrs.location?.shape?.type === 'LineString';
-  const showStartMarker = isShapePolyline && hasLocation;
-  const showLastMarker = isShapePolyline && endPointLocation;
-
-  const centerToLastTrackPoint = () => {
-    if (isFinished || !isGPSTracking) return;
-
-    const DEFAULT_LOCATED_ZOOM = 12;
-
-    if (!Number.isFinite(finishPosition?.[0])) return;
-
-    const currentZoom = mapRef.current?.getZoom();
-
-    const zoom =
-      currentZoom! > DEFAULT_LOCATED_ZOOM ? currentZoom : DEFAULT_LOCATED_ZOOM;
-
-    mapRef.current?.flyTo({
-      center: [location!.longitude, location!.latitude],
-      zoom,
-      speed: 2,
-    });
-  };
-  useEffect(centerToLastTrackPoint, [
-    isFinished,
-    location?.latitude,
-    location?.longitude,
-  ]);
-
-  const startingPointMarker = showStartMarker && (
-    <CircleMarker
-      id="start"
-      latitude={startPosition[0]}
-      longitude={startPosition[1]}
-      paint={{
-        'circle-color': 'white',
-        'circle-opacity': 1,
-        'circle-stroke-color': 'white',
-      }}
-    />
-  );
-
-  const finishPointMarker = showLastMarker && isFinished && (
-    <CircleMarker
-      id="finish"
-      latitude={finishPosition[0]}
-      longitude={finishPosition[1]}
-      paint={{
-        'circle-color': 'black',
-        'circle-stroke-color': 'white',
-      }}
-    />
-  );
-
-  const currentPointMarker = showLastMarker && !isFinished && (
-    <CircleMarker
-      id="finish"
-      latitude={finishPosition[0]}
-      longitude={finishPosition[1]}
-      paint={{
-        'circle-color': '#df9100',
-        'circle-opacity': 1,
-        'circle-stroke-color': '#df9100',
-      }}
-    />
-  );
-
-  const onShapeChange = async (shape: any) => {
-    if (!shape) {
+  const onShapeChange = async (newShape: any) => {
+    if (!newShape) {
       const shouldDelete = await shouldDeleteShape();
       if (!shouldDelete) return false;
     }
 
-    setLocation(shape);
+    setLocation(newShape);
     return true;
   };
 
   const toggleFavourites = () => setShowPastLocations(!showPastLocations);
 
   return (
-    <Main className={`${isGPSTracking ? 'GPStracking' : ''}`}>
+    <Main>
       <MapContainer
         ref={mapRef}
         accessToken={config.map.mapboxApiKey}
@@ -164,17 +89,20 @@ const AreaAttr = ({
 
         <GeolocateButton />
 
-        <MapDraw shape={location?.shape} onChange={onShapeChange}>
+        <MapDraw shape={location?.shape as any} onChange={onShapeChange}>
           {!isDisabled && !isGPSTracking && <MapDraw.Control line polygon />}
 
           <MapDraw.Context.Consumer>
             {({ isEditing }: any) =>
               !isEditing && (
                 <>
-                  <MapContainer.Marker {...location} />
-                  {startingPointMarker}
-                  {finishPointMarker}
-                  {currentPointMarker}
+                  <MapContainer.Marker {...location!} />
+                  <StartingPointMarker {...location!} />
+                  <FinishPointMarker
+                    {...location!}
+                    active={!isFinished}
+                    tracked={isGPSTracking}
+                  />
                 </>
               )
             }

@@ -129,6 +129,7 @@ const Map = () => {
         longitude={longitude}
         latitude={latitude}
         paint={{
+          'circle-radius': 10,
           'circle-stroke-color': 'white',
           'circle-color': fillColor,
           'circle-opacity': 1,

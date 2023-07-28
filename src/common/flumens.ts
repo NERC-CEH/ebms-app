@@ -83,6 +83,7 @@ export { default as initAnalytics } from '@flumens/ionic/dist/utils/analytics';
 export { default as device } from '@flumens/ionic/dist/utils/device';
 export { default as string } from '@flumens/ionic/dist/utils/string';
 export {
+  type Location,
   prettyPrintLocation,
   updateModelLocation,
 } from '@flumens/ionic/dist/utils/location';
