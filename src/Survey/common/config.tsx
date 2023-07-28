@@ -1,4 +1,8 @@
-import { chatboxOutline, thermometerOutline } from 'ionicons/icons';
+import {
+  chatboxOutline,
+  cloudyOutline,
+  thermometerOutline,
+} from 'ionicons/icons';
 import * as Yup from 'yup';
 import {
   date as dateHelp,
@@ -427,6 +431,19 @@ export const stageAttr = {
     },
   },
   remote: { id: 293, values: stageValues },
+};
+
+export const cloudAttr = {
+  menuProps: { icon: cloudyOutline, label: 'Cloud' },
+  pageProps: {
+    headerProps: { title: 'Cloud' },
+    attrProps: {
+      input: 'slider',
+      info: 'Please specify the % of cloud cover.',
+      inputProps: { max: 100, min: 0 },
+    },
+  },
+  remote: { id: 1457 },
 };
 
 type MenuProps = MenuAttrItemFromModelMenuProps;

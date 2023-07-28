@@ -1,4 +1,4 @@
-import { chatboxOutline, cloudyOutline } from 'ionicons/icons';
+import { chatboxOutline } from 'ionicons/icons';
 import * as Yup from 'yup';
 import appModel from 'models/app';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
@@ -20,6 +20,7 @@ import {
   dragonflyStageAttr,
   speciesGroupsAttr,
   sunAttr,
+  cloudAttr,
 } from 'Survey/common/config';
 
 const reliabilityValues = [
@@ -85,18 +86,7 @@ const config: Survey = {
     app_version: appVersionAttr,
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
-    cloud: {
-      menuProps: { icon: cloudyOutline, label: 'Cloud' },
-      pageProps: {
-        headerProps: { title: 'Cloud' },
-        attrProps: {
-          input: 'slider',
-          info: 'Please specify the % of cloud cover.',
-          inputProps: { max: 100, min: 0 },
-        },
-      },
-      remote: { id: 1457 },
-    },
+    cloud: cloudAttr,
     sun: sunAttr, // TODO: backwards compatible, remove in the future
     temperature: temperatureAttr,
     windDirection: windDirectionAttr,
