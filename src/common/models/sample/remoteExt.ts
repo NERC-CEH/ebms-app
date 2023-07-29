@@ -155,7 +155,8 @@ export const parseRemoteAttrs = (
     }
 
     const [localAttrKey] = attrConfig;
-    const parsedValue = Number.isFinite(parseFloat(remoteAttr.value))
+    // eslint-disable-next-line no-restricted-globals
+    const parsedValue = !isNaN(remoteAttr.value)
       ? parseFloat(remoteAttr.value)
       : remoteAttr.value;
 

@@ -64,10 +64,18 @@ class Edit extends Component {
       surveyEndTime,
     } = sample.attrs;
 
-    const startTimePretty =
-      surveyStartTime && dateTimeFormat.format(new Date(surveyStartTime));
-    const endTimePretty =
-      surveyEndTime && dateTimeFormat.format(new Date(surveyEndTime));
+    function checkDateisValid(str) {
+      const date = new Date(str);
+      // eslint-disable-next-line no-restricted-globals
+      return date instanceof Date && !isNaN(date);
+    }
+    const startTimePretty = checkDateisValid(surveyStartTime)
+      ? dateTimeFormat.format(new Date(surveyStartTime))
+      : surveyStartTime;
+
+    const endTimePretty = checkDateisValid(surveyEndTime)
+      ? dateTimeFormat.format(new Date(surveyEndTime))
+      : surveyEndTime;
 
     const baseURL = `/survey/transect/${sample.cid}`;
 
