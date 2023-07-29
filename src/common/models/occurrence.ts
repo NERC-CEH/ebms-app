@@ -137,6 +137,10 @@ export default class Occurrence extends OccurrenceOriginal<Attrs> {
     });
     const media = occurrence.media?.map(getMedia);
 
+    const scientificName = taxon.species;
+    const commonName =
+      scientificName !== taxon.taxon_name ? taxon.taxon_name : '';
+
     return {
       id,
       cid: event.source_system_key || id,
@@ -149,11 +153,9 @@ export default class Occurrence extends OccurrenceOriginal<Attrs> {
         ...parsedAttributes,
         taxon: {
           warehouse_id: parseInt(taxon.taxa_taxon_list_id, 10),
-          scientific_name: taxon.accepted_name,
-          common_name: taxon.vernacular_name,
-          found_in_name: taxon.vernacular_name
-            ? 'common_name'
-            : 'scientific_name',
+          scientific_name: scientificName,
+          common_name: commonName,
+          found_in_name: commonName ? 'common_name' : 'scientific_name',
         },
         comment: occurrence.occurrence_remarks,
       },
