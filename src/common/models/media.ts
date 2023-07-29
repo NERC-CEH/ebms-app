@@ -82,6 +82,9 @@ export default class Media extends MediaOriginal<Attrs> {
       return name;
     }
 
+    const isURL = name.startsWith('https://');
+    if (isURL) return name;
+
     let pathToFile = CONFIG.dataPath;
 
     // backwards compatible
