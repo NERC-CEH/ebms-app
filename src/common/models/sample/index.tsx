@@ -106,6 +106,10 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
     const updatedOn = new Date(metadata.updated_on).toISOString();
 
     const [latitude, longitude] = location.point.split(',').map(parseFloat);
+
+    const gridref =
+      location.output_sref_system === 'OSGB' ? location.output_sref : '';
+
     const shape = location.geom ? wkt.parse(location.geom) : null;
 
     const hasParent = event.parent_event_id;
@@ -141,6 +145,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
           longitude,
           shape,
           area: calculateArea(shape),
+          gridref,
         },
         comment: event.event_remarks,
       },
