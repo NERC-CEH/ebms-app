@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useMap } from 'react-map-gl';
 import { CircleMarker, Location } from '@flumens';
 
-const DEFAULT_LOCATED_ZOOM = 14;
+const DEFAULT_LOCATED_ZOOM = 15;
 
 type Props = Location & { active: boolean; tracked: boolean };
 
@@ -39,7 +39,7 @@ const FinishPointMarker = ({ shape, active, tracked }: Props) => {
   const paint = active
     ? {
         'circle-radius': 10,
-        'circle-color': '#df9100',
+        'circle-color': '#f04141',
         'circle-opacity': 1,
         'circle-stroke-color': 'white',
       }
