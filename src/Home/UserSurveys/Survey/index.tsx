@@ -43,7 +43,7 @@ function useDeleteSurveyPrompt(sample: Sample) {
 const getSurveyLink = (sample: Sample) => {
   const survey = sample.getSurvey();
 
-  if (sample.isPreciseSingleSpeciesSurvey()) {
+  if (!sample.isCached() && sample.isPreciseSingleSpeciesSurvey()) {
     const homeOrEditPage = sample.attrs.surveyStartTime
       ? `/survey/${survey.name}/${sample.cid}`
       : `/survey/${survey.name}/${sample.cid}/details`;

@@ -233,7 +233,8 @@ export default class Occurrence extends OccurrenceOriginal<Attrs> {
     // scientific name does not have preferredId
     return (
       this?.attrs?.taxon?.preferredId === PAINTED_LADY_OCCURRENCE ||
-      this?.attrs?.taxon?.warehouse_id === PAINTED_LADY_OCCURRENCE
+      this?.attrs?.taxon?.warehouse_id === PAINTED_LADY_OCCURRENCE ||
+      this?.attrs?.taxon?.scientific_name === 'Vanessa cardui' // for remote cached
     );
   }
 
