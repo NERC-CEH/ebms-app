@@ -429,6 +429,9 @@ msgstr "Nobena vrsta ni dodana"
 msgid "Please draw your area on the map"
 msgstr "Na zemljevidu narišite območje popisa"
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "Narišite območje popisa"
 

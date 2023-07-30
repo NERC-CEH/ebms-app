@@ -434,6 +434,9 @@ msgstr "Nessuna specie aggiunta "
 msgid "Please draw your area on the map"
 msgstr "Per favore disegna la tua area sulla mappa "
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "Disegna un'area "
 

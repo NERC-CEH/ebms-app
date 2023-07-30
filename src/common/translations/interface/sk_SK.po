@@ -428,6 +428,9 @@ msgstr "Nebol pridaný žiadny druh"
 msgid "Please draw your area on the map"
 msgstr "Prosím, nakreslite Vašu plochu do mapy  "
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "Nakreslite plochu"
 

@@ -420,6 +420,9 @@ msgstr "種が追加されていない"
 msgid "Please draw your area on the map"
 msgstr "あなたの地域を地図から描いてください。"
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "エリアを描く"
 

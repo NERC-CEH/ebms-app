@@ -430,6 +430,9 @@ msgstr "Rūšių sąrašas tuščias"
 msgid "Please draw your area on the map"
 msgstr "Prašome apibrėžti vietovę žemėlapyje"
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr "Išjunkite GPS, jeigu norite matyti žemėlapio įrankius."
+
 msgid "Draw an area"
 msgstr "Apibrėžti vietovę"
 

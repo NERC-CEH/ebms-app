@@ -432,6 +432,9 @@ msgstr "Няма добавени видове"
 msgid "Please draw your area on the map"
 msgstr "Очертайте своята територия на картата"
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "Очертайте територия"
 

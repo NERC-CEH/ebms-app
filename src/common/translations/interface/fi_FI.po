@@ -425,6 +425,9 @@ msgstr "Ei lajeja lisättynä"
 msgid "Please draw your area on the map"
 msgstr "Piirrä havaintoalueesi kartalle"
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "Piirrä alue"
 

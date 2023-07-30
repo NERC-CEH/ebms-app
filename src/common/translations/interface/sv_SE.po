@@ -434,6 +434,9 @@ msgstr "Ingen art tillagd"
 msgid "Please draw your area on the map"
 msgstr "Markera ditt område på kartan"
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "Rita ett område"
 

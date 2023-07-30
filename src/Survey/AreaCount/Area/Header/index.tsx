@@ -11,14 +11,14 @@ type Props = {
   toggleGPStracking: any;
   isDisabled: boolean;
   isAreaShape: boolean;
-  areaPretty: any;
+  infoText: any;
 };
 
 const HeaderComponent: FC<Props> = ({
   isGPSTracking,
   toggleGPStracking,
   isDisabled,
-  areaPretty,
+  infoText,
   isAreaShape,
 }) => {
   const [id, rerender] = useState(0);
@@ -83,7 +83,7 @@ const HeaderComponent: FC<Props> = ({
     <>
       {!isDisabled && <GPSPermissionSubheader />}
       <IonToolbar id="area-edit-toolbar">
-        <IonTitle slot="start">{areaPretty}</IonTitle>
+        <IonTitle size="small">{infoText}</IonTitle>
       </IonToolbar>
     </>
   );

@@ -428,6 +428,9 @@ msgstr "Ingen arter tilføjet"
 msgid "Please draw your area on the map"
 msgstr "Tegn venligst dit område på kortet"
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "Tegn et område"
 

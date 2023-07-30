@@ -426,6 +426,9 @@ msgstr "Нису додате врсте"
 msgid "Please draw your area on the map"
 msgstr "Исцртајте жељену област на мапи"
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "Исцртајте област"
 

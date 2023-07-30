@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { resizeOutline } from 'ionicons/icons';
-import { Trans as T, useTranslation } from 'react-i18next';
+import { Trans as T } from 'react-i18next';
 import { Page } from '@flumens';
 import { IonIcon } from '@ionic/react';
 import Sample from 'models/sample';
@@ -14,8 +14,6 @@ type Props = {
 };
 
 const AreaController: FC<Props> = ({ sample }) => {
-  const { t } = useTranslation();
-
   const toggleGPStracking = (on: boolean) => {
     sample.toggleGPStracking(on);
   };
@@ -28,9 +26,9 @@ const AreaController: FC<Props> = ({ sample }) => {
   const isGPSTracking = sample.isGPSRunning();
   const { area } = location;
 
-  let areaPretty;
+  let infoText;
   if (area) {
-    areaPretty = (
+    infoText = (
       <>
         <div className="text-with-icon-wrapper">
           <IonIcon icon={resizeOutline} />
@@ -39,7 +37,16 @@ const AreaController: FC<Props> = ({ sample }) => {
       </>
     );
   } else {
-    areaPretty = t('Please draw your area on the map');
+    infoText = (
+      <>
+        <T>Please draw your area on the map</T>
+        {isGPSTracking && (
+          <div>
+            <T>Disable the GPS tracking to enable the drawing tools.</T>
+          </div>
+        )}
+      </>
+    );
   }
 
   const isDisabled = sample.isDisabled();
@@ -52,7 +59,7 @@ const AreaController: FC<Props> = ({ sample }) => {
         toggleGPStracking={toggleGPStracking}
         isGPSTracking={isGPSTracking}
         isDisabled={isDisabled}
-        areaPretty={areaPretty}
+        infoText={infoText}
         isAreaShape={isAreaShape}
       />
       <Main

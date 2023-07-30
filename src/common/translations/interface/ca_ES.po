@@ -429,6 +429,9 @@ msgstr "No s'han afegit espècies"
 msgid "Please draw your area on the map"
 msgstr "Dibuixa al mapa la teva àrea"
 
+msgid "Disable the GPS tracking to enable the drawing tools."
+msgstr ""
+
 msgid "Draw an area"
 msgstr "Dibuixa una àrea"
 
