@@ -54,8 +54,7 @@ export default async function fetchRemoteSamples(
 
   const getSample = (doc: ElasticSample) => {
     const parsedDoc = Sample.parseRemoteJSON(doc);
-
-    const sample = new Sample({ skipStore: true, ...parsedDoc });
+    const sample = Sample.fromJSON({ skipStore: true, ...parsedDoc });
     sample.metadata.syncedOn = syncedOn;
     sample.isPartial = true;
 
