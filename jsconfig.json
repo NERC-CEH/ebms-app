@@ -6,7 +6,7 @@
       "helpers/*": ["src/common/helpers/*"],
       "models/*": ["src/common/models/*"],
       "Components/*": ["src/common/Components/*"],
-w      "@flumens": ["src/common/flumens"]
+      "@flumens": ["src/common/flumens"]
     },
     "experimentalDecorators": true
   },
