@@ -81,7 +81,7 @@ const UserSurveyComponent: FC = () => {
         </IonToolbar>
       </IonHeader>
 
-      <Main>
+      <Main forceOverscroll={false} scrollY={false}>
         {showingPending && <PendingSurveys />}
 
         {showingUploaded && <UploadedSurveys />}

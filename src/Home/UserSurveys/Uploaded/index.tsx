@@ -13,7 +13,6 @@ import {
   IonLabel,
   IonList,
   IonRefresher,
-  IonRefresherContent,
   IonSpinner,
 } from '@ionic/react';
 import samplesCollection, {
@@ -45,7 +44,6 @@ const cachedSurveysIds = new Set();
 
 let cachedPages = 0;
 let reachedBottom = false;
-let isRefreshEnabled = true;
 
 const canFetch = () => userModel.isLoggedIn() && device.isOnline;
 
@@ -141,12 +139,11 @@ const Uploaded: FC = () => {
   const getItemSize = (index: number) =>
     dateIndices.includes(index) ? LIST_ITEM_DIVIDER_HEIGHT : LIST_ITEM_HEIGHT;
 
-  useEffect(() => {
-    isRefreshEnabled = true;
-  }, []);
+  const [reachedTopOfList, setReachedTopOfList] = useState(true);
 
   const onScroll = ({ scrollDirection, scrollOffset }: any) => {
-    isRefreshEnabled = scrollDirection === 'backward' && scrollOffset < 80;
+    const isTop = scrollDirection === 'backward' && scrollOffset < 80;
+    setReachedTopOfList(isTop);
   };
 
   const loadMoreItems = (from: number, to: number) => {
@@ -170,11 +167,6 @@ const Uploaded: FC = () => {
   }
 
   const onListRefreshPull = async (e: any) => {
-    if (!isRefreshEnabled) {
-      e?.detail?.complete();
-      return;
-    }
-
     cachedPages = 0;
     reachedBottom = false;
 
@@ -187,11 +179,12 @@ const Uploaded: FC = () => {
   return (
     <>
       <IonRefresher
+        disabled={!reachedTopOfList}
         slot="fixed"
         onIonRefresh={onListRefreshPull}
         style={{ top: LIST_PADDING / 2 }}
       >
-        <IonRefresherContent />
+        {/* No IonRefresherContent for iOS to work */}
       </IonRefresher>
 
       <IonList>
