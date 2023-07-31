@@ -2388,7 +2388,9 @@ msgid "Are you sure you want to delete the saved track?"
 msgstr ""
 
 # Map GPS button interface
-msgid "To resume tracking, you must first remove the drawn area from the map."
+msgid ""
+"To resume the GPS tracking, you must first remove the drawn area from the "
+"map."
 msgstr ""
 
 # Part of weather attributes

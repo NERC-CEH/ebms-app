@@ -433,7 +433,7 @@ msgid "Please draw your area on the map"
 msgstr "Por favor dibuje su área en el mapa"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Desactiva el seguimiento GPS para activar las herramientas de dibujo."
 
 msgid "Draw an area"
 msgstr "Dibujar un area"
@@ -807,19 +807,21 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Borrar caché"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Puedes liberar el almacenamiento utilizado por la aplicación."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Borrar"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Esto eliminará los datos almacenados en caché, incluidas las encuestas "
+"cargadas."
 
 msgid "Sweden"
 msgstr "Suecia"
@@ -836,6 +838,7 @@ msgstr "Enviados"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Necesita <1>iniciar sesión</1> en su cuenta para poder ver los registros."
 
 msgid "No finished pending surveys"
 msgstr "No hay muestreos terminados"
@@ -1370,7 +1373,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "¿Estás seguro de que quieres borrar la ruta actual?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1881,14 +1884,16 @@ msgstr "Novedades"
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
+"Permitido copiar la lista de especies de la sección anterior del transecto."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"Activada la copia de la lista de especies de polillas de la trampa anterior."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Actualizada la página de la guía de especies."
 
 # User account action
 msgid "Resend"
@@ -2432,8 +2437,10 @@ msgid "Are you sure you want to delete the saved track?"
 msgstr "¿Está seguro de que desea eliminar la ruta guardada?"
 
 # Map GPS button interface
-msgid "To resume tracking, you must first remove the drawn area from the map."
-msgstr ""
+msgid ""
+"To resume the GPS tracking, you must first remove the drawn area from the "
+"map."
+msgstr "Para reanudar el seguimiento del GPS, primero debe eliminar del mapa la zona dibujada."
 
 # Part of weather attributes
 msgid "Moon phase"
@@ -2525,20 +2532,20 @@ msgstr "Cambiado el orden de la lista al último añadido."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Sin confirmar"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Aceptado"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Rechazado"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "La fiabilidad no puede quedar vacía."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Cobertura de nubes no puede quedar vacía."

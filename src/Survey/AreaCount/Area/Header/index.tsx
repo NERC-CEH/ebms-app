@@ -53,7 +53,7 @@ const HeaderComponent: FC<Props> = ({
       alert({
         header: 'Warning',
         message:
-          'To resume tracking, you must first remove the drawn area from the map.',
+          'To resume the GPS tracking, you must first remove the drawn area from the map.',
         buttons: [
           {
             text: 'OK',

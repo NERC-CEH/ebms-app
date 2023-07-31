@@ -2,12 +2,12 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
-# Zdravko Kolev <zkolev72@gmail.com>, 2022
+# Zdravko Kolev <zkolev72@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Zdravko Kolev <zkolev72@gmail.com>, 2022\n"
+"Last-Translator: Zdravko Kolev <zkolev72@gmail.com>, 2023\n"
 "Language-Team: Bulgarian (Bulgaria) (https://app.transifex.com/ceh/teams/95441/bg_BG/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -434,6 +434,8 @@ msgstr "Очертайте своята територия на картата"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
 msgstr ""
+"Деактивирайте GPS проследяването, за да активирате инструментите за "
+"чертаене."
 
 msgid "Draw an area"
 msgstr "Очертайте територия"
@@ -816,19 +818,20 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Изтрий кеш паметта"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Можете да освободите място за данни, използвано от приложението."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Изтриване"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Това ще изтрие кешираните данни, включително вашите качени преброявания."
 
 msgid "Sweden"
 msgstr "Швеция"
@@ -845,6 +848,8 @@ msgstr "Изпратено"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Трябва да <1>влезете</1> в профила си, за да можете да преглеждате "
+"запазените данни."
 
 msgid "No finished pending surveys"
 msgstr "Няма завършени преброявания в изчакване"
@@ -1386,7 +1391,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Сигурни ли сте, че искате да изтриете настоящия маршрут?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1788,11 +1793,11 @@ msgstr "Географска дължина"
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr ""
+msgstr "Бройка отвътре"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr ""
+msgstr "Бройка отвън"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
@@ -1855,7 +1860,7 @@ msgstr "<0>Внимание</0> - определянето на този вид 
 
 # App settings title
 msgid "Surveying"
-msgstr ""
+msgstr "Преброяване"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
@@ -1907,14 +1912,15 @@ msgstr "Какво ново"
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
+"Включено е копирането на видовия списък от предишния участък на трансекта."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
-msgstr ""
+msgstr "Включено е копирането на видовия списък от предишната светоловилка."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Обновена е страницата с определителя на видовете."
 
 # User account action
 msgid "Resend"
@@ -2169,119 +2175,122 @@ msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Тази опция е преместена в страницата за търсене на вид в рамките на "
+"извършване на преброяване. Когато. стартирате преброяване, можете да "
+"изберете коя група видове ще броите."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Групи"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Затвори"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Потвърди"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Кои групи видове сте броили?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Избери целеви вид"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "Не. е добавена снимка.<br/>Натисни <4><0></0></4> за добавяне."
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Крило"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Поведение"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Посока"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Надморска височина"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Компас"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Изтрий преброяването"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
-msgstr ""
+msgstr "Внимание - това ще изтрие данните, които сте въвели досега."
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Пресен "
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Стар"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Нормален"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Моля уточнете източника на нектар."
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Моля добавете опцията за яйцеснасяне."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Моля добавете опцията за копулация."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Източник на нектар"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Моля добавете опцията за нектар."
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Моля добавете опцията за посока."
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Моля добавете опцията за надморска височина."
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Хранителни растения за яйцеснасяне"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Мигриращи"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Хранещи се с нектар"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Копулиращи"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Неподдържано устройство"
 
 # Painted lady compass
 msgid ""
@@ -2291,22 +2300,25 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"За съжаление, това устройство няма необходимия сензор за определяне на "
+"земното магнитно поле и на ориентацията на устройството спрямо магнитния "
+"север. Затова не може да използвате функцията компас на това устройство."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Териториално поведение: друго"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Териториално поведение: хилтопинг"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "На каква надморска височина (в метри) летеше пеперудата?"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Друго хранително растение"
 
 # Painted lady direction option
 msgid "Desert nettle"
@@ -2314,96 +2326,100 @@ msgstr ""
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Слез"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Паламида или Магарешки бодил"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Хранителни растения"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Моля изберете хранителните растения."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "Нямате наблюдения на <1>{{prettySpeciesName}}</1> във Вашия списък."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Съвет: Копирайте атрибутите"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Състояние на крилата"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Нектар"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Въведете източника на нектар тук"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Други видове"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "За какъв тип Паламида или Магарешки бодил става дума?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Вид Паламида или Магарешки бодил"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Копирано!"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"За да копирате даден запис от списъка, плъзнете го надясно и натиснете "
+"иконката <1><0></0></1>."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Височина над земята (метри)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Височина"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Започни броенето"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
 msgstr ""
+"Проследяване на миграцията на Дяволската пеперуда с приложението Butterfly "
+"Count"
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Указания"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Света Елена"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Яйцеснасящи"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Копулиращи или скачени двойки"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Екзувии"
 
 # Dragonfly stage attribute
 msgid "Emergent"
@@ -2411,146 +2427,152 @@ msgstr ""
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "Сборът на наблюденията трябва да е по-голям от 0"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Покажи по-малко"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Името на Вашия маршрут"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
 msgstr ""
+"Тук можете да избирате или да редактирате чрез плъзгане с пръст Вашите "
+"предишни маршрути"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Редактирай"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Редактирай мястото"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Име"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Любимо"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Сигурни ли сте, че искате да изтриете записания маршрут?"
 
 # Map GPS button interface
-msgid "To resume tracking, you must first remove the drawn area from the map."
+msgid ""
+"To resume the GPS tracking, you must first remove the drawn area from the "
+"map."
 msgstr ""
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Фаза на луната"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Новолуние"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Изгряващ полумесец"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Първа четвърт"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Растяща луна"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Пълнолуние"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Намаляваща луна"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Последна четвърт"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Залязващ полумесец"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Начален час на светоловилката"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Краен час на светоловилката"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Време в началото"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Време в края"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Моля добавете светоловилката."
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Забелязахме, че вашето преброяване има  <1>дълги участъци</1>. Моля, уверете"
+" се, че това е правилното <3>местоположение</3>!"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "По подразбиране е времето на залеза"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "По подразбиране е времето на изгрева"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Услугите за местоположение не са активирани"
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr ""
+msgstr "Нямате предишни маршрути"
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "Подреждането на списъка е променено на азбучен ред."
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr ""
+msgstr "Подреждането на списъка е променено по ред на последно въвеждане."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Непотвърдено"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Прието"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Отхвърлено"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Полето за достоверност не може да е празно."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Полето за облачност не може да е празно."
