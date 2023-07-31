@@ -1,9 +1,3 @@
-ion-tab-bar {
-  ion-tab-button ion-icon {
-    --ionicon-stroke-width: 20px;
-  }
-}
-
 #main {
   ion-tab-bar {
     padding: 3px 0;
@@ -35,6 +29,19 @@ ion-tab-bar {
       max-width: 20vw;
       --padding-start: 3;
       --padding-end: 3;
+
+      ion-icon {
+        --ionicon-stroke-width: 20px;
+      }
+
+      &.tab-selected {
+        ion-label {
+          font-family: 'Quicksand Bold' !important;
+        }
+        // ion-icon {
+        //   --ionicon-stroke-width: 30px;
+        // }
+      }
 
       ion-label.md {
         margin-bottom: 2px;
