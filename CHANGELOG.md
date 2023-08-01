@@ -1,5 +1,7 @@
 ## 1.22.0
 
+Added capability to view records that have been uploaded from other devices.
+The records map has been upgraded to display all user records.
 Enabled copying of the previous moth trap's species list.
 Enabled copying of the previous transect section's species list.
 Updated species guide page.
