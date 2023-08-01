@@ -148,6 +148,7 @@ export type Attrs = ModelAttrs & {
   showSurveysDeleteTip: boolean;
   showSurveyUploadTip: boolean;
   showCopySpeciesTip: boolean;
+  showWhatsNew: boolean;
   showWhatsNewInVersion122: boolean;
   showGPSPermissionTip: boolean;
   showCommonNamesInGuide: boolean;
@@ -183,6 +184,8 @@ const defaults: Attrs = {
   sendAnalytics: true,
   appSession: 0,
   showCommonNamesInGuide: true,
+
+  showWhatsNew: true,
 
   // tips
   showCopyHelpTip: true,

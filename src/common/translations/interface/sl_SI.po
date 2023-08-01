@@ -1836,6 +1836,19 @@ msgstr ""
 msgid "What's New"
 msgstr "Kaj je novega"
 
+# Whats new message option
+msgid "Don't show again"
+msgstr ""
+
+# Version 1.22 whats new message
+msgid ""
+"Added capability to view records that have been uploaded from other devices."
+msgstr ""
+
+# Version 1.22 whats new message
+msgid "The records map has been upgraded to display all user records."
+msgstr ""
+
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
@@ -1846,6 +1859,10 @@ msgstr ""
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
+msgstr ""
+
+# Version 1.22 whats new message
+msgid "Added option to clear uploaded cached files."
 msgstr ""
 
 # User account action

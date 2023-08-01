@@ -1828,6 +1828,18 @@ msgstr ""
 msgid "What's New"
 msgstr "What's New"
 
+# Whats new message option
+msgid "Don't show again"
+msgstr "Don't show again"
+
+# Version 1.22 whats new message 
+msgid "Added capability to view records that have been uploaded from other devices."
+msgstr "Added capability to view records that have been uploaded from other devices."
+
+# Version 1.22 whats new message 
+msgid "The records map has been upgraded to display all user records."
+msgstr "The records map has been upgraded to display all user records."
+
 # Version 1.22 whats new message 
 msgid "Enabled copying of the previous transect section's species list."
 msgstr "Enabled copying of the previous transect section's species list."
@@ -1839,6 +1851,10 @@ msgstr "Enabled copying of the previous moth trap's species list."
 # Version 1.22 whats new message 
 msgid "Updated species guide page."
 msgstr "Updated species guide page."
+
+# Version 1.22 whats new message 
+msgid "Added option to clear uploaded cached files."
+msgstr "Added option to clear uploaded cached files."
 
 # User account action
 msgid "Resend"

@@ -5,10 +5,13 @@ import './styles.scss';
 
 const MAX_ITEMS = 5;
 
-const ExpandableList: FC<any> = ({ children: itemsProp }: any) => {
+const ExpandableList: FC<any> = ({
+  children: itemsProp,
+  maxItems = MAX_ITEMS,
+}: any) => {
   const [showMore, setShowMore] = useState(false);
-  const items = itemsProp.slice(0, MAX_ITEMS);
-  const restItems = itemsProp.slice(MAX_ITEMS, itemsProp.length);
+  const items = itemsProp.slice(0, maxItems);
+  const restItems = itemsProp.slice(maxItems, itemsProp.length);
 
   const hidingMoreThanTwo = restItems.length >= 2;
 

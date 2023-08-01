@@ -1,13 +1,13 @@
 # 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Karolis, 2021
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023
+# Karolis, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023\n"
+"Last-Translator: Karolis, 2023\n"
 "Language-Team: Spanish (Spain) (https://app.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1881,6 +1881,19 @@ msgstr ""
 msgid "What's New"
 msgstr "Novedades"
 
+# Whats new message option
+msgid "Don't show again"
+msgstr ""
+
+# Version 1.22 whats new message
+msgid ""
+"Added capability to view records that have been uploaded from other devices."
+msgstr ""
+
+# Version 1.22 whats new message
+msgid "The records map has been upgraded to display all user records."
+msgstr ""
+
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
@@ -1894,6 +1907,10 @@ msgstr ""
 # Version 1.22 whats new message
 msgid "Updated species guide page."
 msgstr "Actualizada la página de la guía de especies."
+
+# Version 1.22 whats new message
+msgid "Added option to clear uploaded cached files."
+msgstr ""
 
 # User account action
 msgid "Resend"
@@ -2440,7 +2457,9 @@ msgstr "¿Está seguro de que desea eliminar la ruta guardada?"
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
-msgstr "Para reanudar el seguimiento del GPS, primero debe eliminar del mapa la zona dibujada."
+msgstr ""
+"Para reanudar el seguimiento del GPS, primero debe eliminar del mapa la zona"
+" dibujada."
 
 # Part of weather attributes
 msgid "Moon phase"

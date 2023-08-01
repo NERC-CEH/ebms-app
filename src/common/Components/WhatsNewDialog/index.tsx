@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import { IonBackdrop, IonIcon, IonButton } from '@ionic/react';
+import { IonBackdrop, IonIcon } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import appLogo from 'common/images/icon.svg';
 import appModelTypes from 'common/models/app';
@@ -13,7 +13,7 @@ type Props = {
 };
 
 const WhatsNewDialog: FC<Props> = ({ appModel }) => {
-  const { showWhatsNewInVersion122, appSession } = appModel.attrs;
+  const { showWhatsNew, showWhatsNewInVersion122, appSession } = appModel.attrs;
 
   const skipShowingDialogOnFreshInstall = () => {
     const isFreshInstall = appSession <= 1;
@@ -24,10 +24,17 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
   };
   useEffect(skipShowingDialogOnFreshInstall, [appSession]);
 
+  if (!showWhatsNew) return null;
+
   if (!showWhatsNewInVersion122) return null;
 
   const closeDialog = () => {
     appModel.attrs.showWhatsNewInVersion122 = false; // eslint-disable-line
+    appModel.save();
+  };
+
+  const hideFutureDialogs = () => {
+    appModel.attrs.showWhatsNew = false; // eslint-disable-line
     appModel.save();
   };
 
@@ -50,7 +57,25 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
         </div>
         <div className="message">
           <ul>
-            <ExpandableList>
+            <ExpandableList maxItems={3}>
+              <li>
+                <summary>
+                  <T>
+                    Added capability to view records that have been uploaded
+                    from other devices.
+                  </T>
+                </summary>
+              </li>
+
+              <li>
+                <summary>
+                  <T>
+                    The records map has been upgraded to display all user
+                    records.
+                  </T>
+                </summary>
+              </li>
+
               <li>
                 <summary>
                   <T>
@@ -73,13 +98,24 @@ const WhatsNewDialog: FC<Props> = ({ appModel }) => {
                   <T>Updated species guide page.</T>
                 </summary>
               </li>
+
+              <li>
+                <summary>
+                  <T>Added option to clear uploaded cached files.</T>
+                </summary>
+              </li>
             </ExpandableList>
           </ul>
         </div>
 
-        <IonButton onClick={closeDialog}>
-          <T>Got it</T>
-        </IonButton>
+        <div className="whats-new-dialog-buttons">
+          <div className="button" onClick={hideFutureDialogs}>
+            <T>Don't show again</T>
+          </div>
+          <div className="button" onClick={closeDialog}>
+            <T>Got it</T>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1839,17 +1839,34 @@ msgstr ""
 msgid "What's New"
 msgstr "Kas naujo"
 
+# Whats new message option
+msgid "Don't show again"
+msgstr "Daugiau neberodyti"
+
+# Version 1.22 whats new message
+msgid ""
+"Added capability to view records that have been uploaded from other devices."
+msgstr "Įdėta galimybė peržiūrėti įrašus išsiųstus iš kitų įrenginių."
+
+# Version 1.22 whats new message
+msgid "The records map has been upgraded to display all user records."
+msgstr "Atnaujintas vartotojo įrašų žemėlapis."
+
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
-msgstr ""
+msgstr "Įdėta galimybė perkopijuoti praeitos transektos rūšių sąrašą."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
-msgstr ""
+msgstr "Įdėta galimybė perkopijuoti praeitos gaudyklės rūšių sąrašą."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Atnaujintas rūšių gidas."
+
+# Version 1.22 whats new message
+msgid "Added option to clear uploaded cached files."
+msgstr "Įdėta galimybė išsivalyti išsiųstus įrašus."
 
 # User account action
 msgid "Resend"

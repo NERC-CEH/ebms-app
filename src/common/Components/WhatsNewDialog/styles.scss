@@ -108,12 +108,39 @@
       }
     }
 
-    ion-button {
+    .whats-new-dialog-buttons {
       display: flex;
-      width: 80%;
-      height: 40px;
-      margin: 20px auto;
-      --border-radius: 5px;
+      margin-top: 1px; // to avoid the the message::after blur
+      border-top: 0.5px solid var(--ion-item-border-color);
+
+      .button {
+        display: flex;
+        width: 50%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--ion-color-primary);
+        font-size: 0.9em;
+        padding: 0 10px;
+
+        &:not(:last-of-type) {
+          border-right: 0.5px solid var(--ion-item-border-color);
+        }
+
+        &:last-of-type {
+          font-weight: 700;
+        }
+      }
     }
+  }
+}
+
+.md .whats-new-dialog-buttons {
+  border-top: none !important;
+
+  .button {
+    text-transform: uppercase;
+    border-right: none !important;
   }
 }
