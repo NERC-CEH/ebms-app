@@ -141,10 +141,8 @@ const Uploaded: FC = () => {
 
   const [reachedTopOfList, setReachedTopOfList] = useState(true);
 
-  const onScroll = ({ scrollDirection, scrollOffset }: any) => {
-    const isTop = scrollDirection === 'backward' && scrollOffset < 80;
-    setReachedTopOfList(isTop);
-  };
+  const onScroll = ({ scrollOffset }: any) =>
+    setReachedTopOfList(scrollOffset < 80);
 
   const loadMoreItems = (from: number, to: number) => {
     if (cachedPages * PAGE_SIZE < to && !isLoading) {
