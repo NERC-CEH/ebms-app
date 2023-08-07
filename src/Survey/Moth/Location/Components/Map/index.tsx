@@ -1,7 +1,7 @@
 import { FC, useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 // eslint-disable-next-line
-import { device, useToast } from '@flumens';
+import { device, MapContainer, useToast } from '@flumens';
 import { IonSpinner, NavContext } from '@ionic/react';
 import locationsCollection from 'models/collections/locations';
 import MothTrap, { useValidateCheck } from 'models/location';
@@ -81,7 +81,9 @@ const MapComponent: FC<Props> = ({
           mothTraps={mothTraps}
           sample={sample}
         />
-        {isFetchingTraps && <IonSpinner />}
+        <MapContainer.Control>
+          {!isFetchingTraps ? <IonSpinner /> : <div />}
+        </MapContainer.Control>
       </Map>
 
       {!isDisabled && (

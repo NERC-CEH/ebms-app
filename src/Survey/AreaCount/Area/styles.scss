@@ -27,32 +27,6 @@ html[mode='ios'] {
   }
 }
 
-#toggle-info {
-  display: none;
-}
-#toggle-info + label {
-  font-size: 1.7em;
-  width: 20px;
-  height: 20px;
-  margin: 4px;
-  display: block;
-  background: #ffffff4d;
-  border-radius: 50%;
-}
-#toggle-info:checked + label {
-  display: none;
-}
-#toggle-info:checked + label + div {
-  background: #ccccccc7;
-  padding: 3px 5px;
-  border-radius: 6px;
-  margin: 5px;
-}
-
-#toggle-info:not(:checked) + label + div {
-  display: none;
-}
-
 #bottom-sheet-tracks {
   --height: 95vh;
 
