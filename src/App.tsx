@@ -16,7 +16,7 @@ import 'common/translations/translator';
 import appModel from 'models/app';
 import LanguageCountrySelectRequired from 'Components/LanguageCountrySelectRequired';
 import Home from './Home';
-import SplashScreenRequired from './Info/SplashScreenRequired';
+import Onboarding from './Info/Onboarding';
 import Info from './Info/router';
 import Location from './Location/router';
 import Settings from './Settings/router';
@@ -33,7 +33,7 @@ const App = () => {
   return (
     <IonApp lang={language as any}>
       <LanguageCountrySelectRequired appModel={appModel}>
-        <SplashScreenRequired>
+        <Onboarding>
           <WhatsNewDialog appModel={appModel} />
           <IonReactRouter>
             <IonRouterOutlet id="main">
@@ -46,7 +46,7 @@ const App = () => {
               {Settings}
             </IonRouterOutlet>
           </IonReactRouter>
-        </SplashScreenRequired>
+        </Onboarding>
       </LanguageCountrySelectRequired>
     </IonApp>
   );

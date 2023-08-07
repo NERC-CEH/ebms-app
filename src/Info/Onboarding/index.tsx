@@ -11,7 +11,7 @@ import '@ionic/react/css/ionic-swiper.css';
 import appModel from 'models/app';
 import './styles.scss';
 
-const SplashScreenRequired = ({ children }: any) => {
+const Onboarding = ({ children }: any) => {
   const [moreSlidesExist, setMoreSlidesExist] = useState(true);
   const [controlledSwiper, setControlledSwiper] = useState<SwiperCore>();
 
@@ -129,4 +129,4 @@ const SplashScreenRequired = ({ children }: any) => {
   );
 };
 
-export default observer(SplashScreenRequired);
+export default observer(Onboarding);
