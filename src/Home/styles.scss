@@ -67,6 +67,14 @@
         flex-direction: column;
         align-items: center;
         padding-bottom: var(--ion-safe-area-bottom, 0);
+
+        ion-fab-button {
+          height: 60px;
+
+          ion-label {
+            padding: 10px;
+          }
+        }
       }
     }
   }
@@ -93,6 +101,7 @@
     border-radius: 4px;
     font-size: 0.8rem;
     color: white;
+    height: 70px;
   }
 
   ion-fab-button:not(.fab-button-label) {
