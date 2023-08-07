@@ -1,14 +1,10 @@
-import { useEffect } from 'react';
-import { useMap } from 'react-map-gl';
 import { CircleMarker, Location } from '@flumens';
 
-const DEFAULT_LOCATED_ZOOM = 15;
-
-type Props = Location & { active: boolean; tracked: boolean };
+type Props = Location & { active: boolean };
 
 const clone = (obj: any) => JSON.parse(JSON.stringify(obj));
 
-const FinishPointMarker = ({ shape, active, tracked }: Props) => {
+const FinishPointMarker = ({ shape, active }: Props) => {
   const isShapePolyline = shape?.type === 'LineString';
 
   const endPosition = isShapePolyline ? clone(shape?.coordinates)?.at(-1) : [];
@@ -16,23 +12,6 @@ const FinishPointMarker = ({ shape, active, tracked }: Props) => {
 
   const isValidLocation =
     Number.isFinite(latitude) && Number.isFinite(longitude);
-
-  const mapRef = useMap();
-  const centerToLastTrackPoint = () => {
-    if (!isShapePolyline || !active || !tracked || !isValidLocation) return;
-
-    const currentZoom = mapRef.current?.getZoom();
-
-    const zoom =
-      currentZoom! > DEFAULT_LOCATED_ZOOM ? currentZoom : DEFAULT_LOCATED_ZOOM;
-
-    mapRef.current?.flyTo({
-      center: [longitude, latitude],
-      zoom,
-      speed: 2,
-    });
-  };
-  useEffect(centerToLastTrackPoint, [active, latitude, longitude]);
 
   if (!isShapePolyline || !isValidLocation) return null;
 

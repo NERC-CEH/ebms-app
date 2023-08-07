@@ -1,9 +1,9 @@
-import { useCenterMapToCurrentLocation, MapContainer } from '@flumens';
+import { useMapFlyToCurrentLocation, MapContainer } from '@flumens';
 import GPS from 'helpers/GPS';
 
 const GeolocateButton = () => {
   const { isLocating, centerMapToCurrentLocation } =
-    useCenterMapToCurrentLocation(GPS);
+    useMapFlyToCurrentLocation(GPS);
 
   return (
     <MapContainer.Control.Geolocate

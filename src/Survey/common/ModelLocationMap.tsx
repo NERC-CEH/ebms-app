@@ -1,5 +1,7 @@
 /* eslint-disable no-restricted-syntax */
+import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
+import { MapRef } from 'react-map-gl';
 import {
   MapContainer,
   MapHeader,
@@ -8,6 +10,7 @@ import {
   textToLocation,
   mapEventToLocation,
   toggleGPS,
+  mapFlyToLocation,
 } from '@flumens';
 import config from 'common/config';
 import Location from 'models/location';
@@ -42,6 +45,12 @@ const ModelLocationMap = ({ subSample, sample }: Props) => {
     model.attrs.location.name = name;
   };
 
+  const [mapRef, setMapRef] = useState<MapRef>();
+  const flyToLocation = () => {
+    mapFlyToLocation(mapRef, location as any);
+  };
+  useEffect(flyToLocation, [mapRef, location]);
+
   return (
     <Page id="model-location">
       <MapHeader>
@@ -60,11 +69,12 @@ const ModelLocationMap = ({ subSample, sample }: Props) => {
       </MapHeader>
       <Main>
         <MapContainer
+          onReady={setMapRef}
           onClick={onMapClick}
           accessToken={config.map.mapboxApiKey}
           mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
           maxPitch={0}
-          initialViewState={location}
+          // initialViewState // TODO: default to the current country
         >
           <MapContainer.Control.Geolocate
             isLocating={model.gps.locating}

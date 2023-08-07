@@ -1,7 +1,14 @@
-import { useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import { MapRef } from 'react-map-gl';
-import { Main, MapContainer, MapDraw, useAlert, Location } from '@flumens';
+import {
+  Main,
+  MapContainer,
+  MapDraw,
+  useAlert,
+  Location,
+  mapFlyToLocation,
+} from '@flumens';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import Sample from 'models/sample';
@@ -47,7 +54,6 @@ const AreaAttr = ({
   isGPSTracking,
   isDisabled,
 }: Props) => {
-  const mapRef = useRef<MapRef>(null);
   // eslint-disable-next-line prefer-destructuring
   const location: Location | undefined = sample.attrs.location;
 
@@ -74,10 +80,18 @@ const AreaAttr = ({
 
   const toggleFavourites = () => setShowPastLocations(!showPastLocations);
 
+  const [mapRef, setMapRef] = useState<MapRef>();
+  const flyToLocation = () => {
+    const locationToFly = { ...location };
+    if (isGPSTracking) delete locationToFly?.shape;
+    mapFlyToLocation(mapRef, locationToFly as any);
+  };
+  useEffect(flyToLocation, [mapRef, location]);
+
   return (
     <Main>
       <MapContainer
-        ref={mapRef}
+        onReady={setMapRef}
         accessToken={config.map.mapboxApiKey}
         mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
         maxPitch={0}
@@ -98,11 +112,7 @@ const AreaAttr = ({
                 <>
                   <MapContainer.Marker {...location!} />
                   <StartingPointMarker {...location!} />
-                  <FinishPointMarker
-                    {...location!}
-                    active={!isFinished}
-                    tracked={isGPSTracking}
-                  />
+                  <FinishPointMarker {...location!} active={!isFinished} />
                 </>
               )
             }
