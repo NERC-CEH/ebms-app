@@ -110,8 +110,6 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
     }
 
     if (occurrence) {
-      console.log('her?');
-
       if (
         occurrence.attrs.taxon.group !== DRAGONFLY_GROUP &&
         taxon.group === DRAGONFLY_GROUP
