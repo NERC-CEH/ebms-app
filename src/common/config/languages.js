@@ -3,6 +3,7 @@ import { isPlatform } from '@ionic/react';
 const languages = {
   // disabled - under-translated (< 80%)
   'bg-BG': 'Български',
+  'el-GR': 'Ελληνικά',
   'sr-RS': 'Cрпски',
   'cs-CZ': 'Čeština',
   'de-DE': 'Deutsch',

@@ -7,6 +7,7 @@ import ca_ES from './interface/ca_ES.po';
 import cs_CZ from './interface/cs_CZ.po';
 import da_DK from './interface/da_DK.po';
 import de_DE from './interface/de_DE.po';
+import el_GR from './interface/el_GR.po';
 import en from './interface/en.pot';
 import es_ES from './interface/es_ES.po';
 import fi_FI from './interface/fi_FI.po';
@@ -31,6 +32,7 @@ import species_ca_ES from './species/ca_ES.po';
 import species_cs_CZ from './species/cs_CZ.po';
 import species_da_DK from './species/da_DK.po';
 import species_de_DE from './species/de_DE.po';
+import species_el_GR from './species/el_GR.po';
 import species_en from './species/en.pot';
 import species_es_ES from './species/es_ES.po';
 import species_fi_FI from './species/fi_FI.po';
@@ -212,5 +214,10 @@ export default {
     interface: rawToKeyVal(sk_SK),
     species: rawToKeyVal(species_sk_SK),
     names: flatNames['sk-SK'],
+  },
+  'el-GR': {
+    interface: rawToKeyVal(el_GR),
+    species: rawToKeyVal(species_el_GR),
+    names: flatNames['el-GR'],
   },
 };

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Language-Team: Serbian (https://www.transifex.com/ceh/teams/95441/sr/)\n"
+"Language-Team: Serbian (https://app.transifex.com/ceh/teams/95441/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

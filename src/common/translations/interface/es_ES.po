@@ -1,13 +1,13 @@
 # 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023
 # Karolis, 2023
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2023\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023\n"
 "Language-Team: Spanish (Spain) (https://app.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -786,7 +786,7 @@ msgid "No species found with this name"
 msgstr "No hay especies encontradas con este nombre"
 
 msgid "Allow Sample Edit"
-msgstr "Permitir edición de muestra"
+msgstr "Permitir edición de muestreo"
 
 msgid "Upload"
 msgstr "Enviar"
@@ -1883,16 +1883,20 @@ msgstr "Novedades"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "No mostrar de nuevo"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"Se ha añadido la posibilidad de ver los registros que se han cargado desde "
+"otros dispositivos."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"El mapa de registros se ha actualizado para mostrar todos los registros del "
+"usuario."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
@@ -1910,7 +1914,7 @@ msgstr "Actualizada la página de la guía de especies."
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "Se ha añadido la opción de borrar los archivos cargados en caché."
 
 # User account action
 msgid "Resend"
