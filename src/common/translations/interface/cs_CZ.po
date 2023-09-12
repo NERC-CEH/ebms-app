@@ -430,7 +430,7 @@ msgid "Please draw your area on the map"
 msgstr "Prosím, nakreslete vaši plochu do mapy"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Pro zapnutí kreslení vypněte GPS sledování "
 
 msgid "Draw an area"
 msgstr "Zakreslit plochu"
@@ -787,15 +787,15 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Vyčištění paměti"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Můžete uvolnit paměť použitou aplikací."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Vyčistit"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
@@ -1837,7 +1837,7 @@ msgstr "Co je nového"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Již znovu neukazujte"
 
 # Version 1.22 whats new message
 msgid ""
@@ -2483,11 +2483,11 @@ msgstr "Nemáte žádné předchozí trasy."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "Změněno pořadí seznamu podle abecedy."
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr ""
+msgstr "Změněno pořadí seznamu změněno podle posledního vložení"
 
 # Record verification status
 msgid "Unconfirmed"

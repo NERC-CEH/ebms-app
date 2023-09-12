@@ -4,13 +4,13 @@
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
 # Eva Monteiro <evasmonteiro@gmail.com>, 2021
-# Ricardo Silva Ramirez, 2022
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023
+# Ricardo Silva Ramirez, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023\n"
+"Last-Translator: Ricardo Silva Ramirez, 2023\n"
 "Language-Team: Portuguese (Portugal) (https://app.transifex.com/ceh/teams/95441/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -274,7 +274,7 @@ msgstr "App"
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
-"Agradecemos imenso a todas as pessoas que participaram na criação desta app:"
+"Agradecemos muito a todas as pessoas que participaram na criação desta app:"
 
 msgid "Home"
 msgstr "Início"
@@ -435,7 +435,7 @@ msgid "Please draw your area on the map"
 msgstr "Por favor trace a sua área no mapa"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Desative a localização por GPS para usar as ferramentas de desenho"
 
 msgid "Draw an area"
 msgstr "Trace uma área"
@@ -806,19 +806,19 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Limpar cache"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Pode libertar espaço usado pela app"
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Limpar"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
-msgstr ""
+msgstr "Apagar os dados em cache, incluindo as amostragens carregadas."
 
 msgid "Sweden"
 msgstr "Suécia"
@@ -834,7 +834,7 @@ msgstr "Carregado"
 
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
-msgstr ""
+msgstr "Tem de efetuar <1>login</1> na sua conta para ver os registos."
 
 msgid "No finished pending surveys"
 msgstr "Não há amostragens terminadas pendentes"
@@ -1366,7 +1366,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Tem a certeza que pretende apagar o percurso atual?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1879,32 +1879,40 @@ msgstr "O que há de novo"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Não voltar a mostrar"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"Adicionada a capacidade de ver registos carregados a partir de outros "
+"aparelhos."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"O mapa de registos foi melhorado, mostrando agora todos os registos de "
+"utilizadores."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
+"Adicionada a capacidade de copiar as listas de espécies das secções de "
+"transeto anteriores."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"Adicionada a capacidade de copiar as listas de espécies das armadilhas para "
+"borboletas noturnas anteriores."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "A página dos guias de espécies foi modernizada."
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "Adicionada uma opção para limpar os ficheiros em cache carregados"
 
 # User account action
 msgid "Resend"
@@ -2157,18 +2165,21 @@ msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Esta opção foi movida para a página de pesquisa de espécies dentro das "
+"amostragens. Ao iniciar uma amostragem pode selecionar o grupo de espécies "
+"que pretende registar."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmar"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
@@ -2176,100 +2187,103 @@ msgstr "Que grupos de espécies registaste?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Selecionar as espécies alvo"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
 msgstr ""
+"Nenhuima foto adicionada.<br/>Pressione <4><0></0></4> para adicionar."
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Asa"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportamento"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Direção"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Altitude"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Bússola"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Apagar amostragem"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
+"Aviso - Esta opção descarta a informação da amostragem que introduziu até "
+"agora."
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Novinho em folha"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Desgastado"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Por favor especifique a fonte de néctar."
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Por favor adicione a opção de postura de ovos."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Por favor adicione a opção de acasalamento."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Fonte de néctar"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Por favor adicione a opção de néctar."
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Por favor adicione a opção de direção."
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Por favor adicione a opção de altitude."
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Plantas hospedeiras de posturas de ovos"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Em migração"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "A alimentar-se de néctar"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Em acasalamento"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Aparelho não suportado"
 
 # Painted lady compass
 msgid ""
@@ -2279,268 +2293,279 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Infelizmente o seu aparelho não parece ter o sensor necessário ao "
+"funcionamento correto da bússola. A bússola depende deste sensor para "
+"detetar o campo magnético da Terra e determinar o orientação do aparelho "
+"relativamente ao norte magnético. Assim, não é possivel utilizar a bússola "
+"neste aparelho."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Defesa de território: outra"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Defesa de território: hill-topping"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "Qual foi a altitude de voo da borboleta? (metros)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Outra planta hospedeira"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Pappostipa speciosa"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Malvas"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Cardos"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Plantas hospedeiras"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Por favor selecione as plantas hospedeiras."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "Não existem registos de <1>{{prettySpeciesName}}</1> na sua lista."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Dica: Copie atributos"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Condição da asa"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Néctar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Introduza aqui a fonte de néctar"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Outras espécies"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "Que tipo de cardo era?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Espécies de cardo"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Copiado!"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Para copiar uma linha da lista arraste-a para a direita e pressione o "
+"ícon<1><0></0></1>."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Altura acima do solo (metros)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Altura"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Iniciar contagem"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Acompanhar a migração da bela-dama com a Butterfly Count."
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Instruções"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Santa Helena"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Em oviposição"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Em copulação ou em pares tandem"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Exúvias"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Emergente"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "A soma das contagens tem de ser maior que 0"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Mostrar menos"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Nome do seu percurso"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
-msgstr ""
+msgstr "Pode selecionar ou arrastar para editar os seus percursos anteriores"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Editar localização"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Favorito"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Tem a certeza que pretende apagar o percurso guardado?"
 
 # Map GPS button interface
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"Para retomar a localização por GPS, deve primeiro remover a área desenhada "
+"do mapa."
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Fase da Lua"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Lua nova"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Lua crescente côncava"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Quarto crescente"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Lua crescente convexa"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Lua cheia"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Lua minguante convexa"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Quarto minguante"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Lua minguante côncava"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Início da armadilha"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Final da armadilha"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Condições meteorológicas iniciais"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Condições meteorológicas finais"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Por favor adicione a armadilha para borboletas noturnas."
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Reparámos que a sua amostragem tem <1>secções longas</1>. Por favor "
+"certifique-se que é a <3>localização</3> certa! "
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Revertida para a hora do pôr-do-sol"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Revertida para a hora do pôr-do-sol"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Os serviços de localização estão desativados"
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr ""
+msgstr "Não tem percursos anteriores."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "Ordem da lista alterada para ordem alfabética."
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr ""
+msgstr "Ordem da lista alterada para ordem da adição."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Sem confirmação"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Aceite"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Rejeitado"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Fiabilidade não pode estar vazio."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Nuvem não pode estar vazio"
