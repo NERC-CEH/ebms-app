@@ -71,4 +71,4 @@ const routes = [
   [`/location/:smpId/lamps/:lampId/:attr`, LampAttr],
 ];
 
-export default RouteWithModels.fromArray(locations as any, routes);
+export default RouteWithModels.fromArray(locations as any, routes, false);

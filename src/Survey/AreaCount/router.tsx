@@ -38,4 +38,4 @@ const routes = [
   ...getRoutes(`/survey/${surveySingleSpecies.name}`, surveySingleSpecies),
 ];
 
-export default RouteWithModels.fromArray(samplesCollection, routes);
+export default RouteWithModels.fromArray(samplesCollection, routes, false);

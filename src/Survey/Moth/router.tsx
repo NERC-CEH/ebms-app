@@ -30,4 +30,4 @@ const routes = [
   [`${baseURL}/:smpId/occ/:occId/taxon`, Taxon],
 ];
 
-export default RouteWithModels.fromArray(samplesCollection, routes);
+export default RouteWithModels.fromArray(samplesCollection, routes, false);

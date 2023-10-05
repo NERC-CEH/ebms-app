@@ -62,6 +62,7 @@ const AreaAttr = ({
     saveMapCenter([viewState.latitude, viewState.longitude]);
 
   const [showPastLocations, setShowPastLocations] = useState(false);
+  const toggleFavourites = () => setShowPastLocations(!showPastLocations);
 
   const shouldDeleteShape = useDeletePropt();
 
@@ -77,8 +78,6 @@ const AreaAttr = ({
     setLocation(newShape);
     return true;
   };
-
-  const toggleFavourites = () => setShowPastLocations(!showPastLocations);
 
   const [mapRef, setMapRef] = useState<MapRef>();
   const flyToLocation = () => {

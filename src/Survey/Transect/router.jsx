@@ -31,4 +31,4 @@ const routes = [
   [`${baseURL}/:smpId/sections/:subSmpId/:occId/:taxa/taxa`, SectionsEditTaxa],
 ];
 
-export default RouteWithModels.fromArray(samplesCollection, routes);
+export default RouteWithModels.fromArray(samplesCollection, routes, false);
