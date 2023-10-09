@@ -1,3 +1,7 @@
+## 1.23.0
+
+Fixed moth trap weather and moon phase prefill.
+
 ## 1.22.0
 
 Added capability to view records that have been uploaded from other devices.
