@@ -63,7 +63,7 @@ export type Taxon = {
   warehouse_id: number;
 };
 
-type Attrs = OccurrenceAttrs & {
+export type Attrs = OccurrenceAttrs & {
   taxon: any;
   comment?: string;
   stage?: string;

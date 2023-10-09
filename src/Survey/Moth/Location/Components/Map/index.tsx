@@ -1,12 +1,11 @@
-import { FC, useContext, useState } from 'react';
+import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
 // eslint-disable-next-line
-import { device, MapContainer, useToast } from '@flumens';
-import { IonSpinner, NavContext } from '@ionic/react';
-import locationsCollection from 'models/collections/locations';
-import MothTrap, { useValidateCheck } from 'models/location';
+import { MapContainer } from '@flumens';
+import { IonSpinner } from '@ionic/react';
+import { Locations } from 'models/collections/locations';
+import MothTrap from 'models/location';
 import Sample from 'models/sample';
-import { useUserStatusCheck } from 'models/user';
 import BottomSheet from '../BottomSheet';
 import Map from './Map';
 import Traps from './Traps';
@@ -16,58 +15,30 @@ interface Props {
   sample: Sample;
   isFetchingTraps: boolean | null;
   isDisabled?: boolean;
-  locations: typeof locationsCollection;
+  locations: Locations;
+  onLocationSelect: any;
+  onLocationDelete: any;
+  onLocationUpload: any;
 }
 
 const MapComponent: FC<Props> = ({
   sample,
-  locations: mothTraps,
+  locations,
   isFetchingTraps,
   isDisabled,
+  onLocationSelect,
+  onLocationDelete,
+  onLocationUpload,
 }) => {
-  const { goBack } = useContext(NavContext);
-  const validateLocation = useValidateCheck();
-  const checkUserStatus = useUserStatusCheck();
-  const toast = useToast();
-
   // dynamic center when the user moves the map manually
   const [currentMapCenter, setMapCurrentCenter] = useState([51, -1]);
 
-  const onLocationSelect = (newTrap: MothTrap) => {
-    if (isDisabled) return;
-
-    // eslint-disable-next-line no-param-reassign
-    sample.attrs.location = newTrap;
-    sample.save();
-
-    goBack();
-  };
-
   const onLocationMapSelect = (point: any) => {
     const byId = (trap: MothTrap) => trap.id === point.properties.id;
-    const newTrap = mothTraps.find(byId);
+    const newTrap = locations.find(byId);
     if (!newTrap) return;
 
     onLocationSelect(newTrap);
-  };
-
-  const onLocationDelete = (location: MothTrap) => {
-    location.destroy();
-  };
-
-  const onLocationUpload = async (location: MothTrap) => {
-    if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
-      return;
-    }
-
-    const isUserOK = await checkUserStatus();
-    if (!isUserOK) return;
-
-    const invalids = validateLocation(location);
-    if (invalids) return;
-
-    location.saveRemote().catch(toast.error);
   };
 
   return (
@@ -78,7 +49,7 @@ const MapComponent: FC<Props> = ({
       >
         <Traps
           onSelect={onLocationMapSelect}
-          mothTraps={mothTraps}
+          mothTraps={locations}
           sample={sample}
         />
         <MapContainer.Control>
@@ -88,7 +59,7 @@ const MapComponent: FC<Props> = ({
 
       {!isDisabled && (
         <BottomSheet
-          mothTraps={mothTraps}
+          mothTraps={locations}
           centroid={currentMapCenter}
           updateRecord={onLocationSelect}
           deleteTrap={onLocationDelete}

@@ -26,15 +26,14 @@ import Media from '../media';
 import Occurrence, { SpeciesGroup } from '../occurrence';
 import { modelStore } from '../store';
 import GPSExtension, { calculateArea } from './GPSExt';
-import MetOfficeExtension from './metofficeExt';
 import RemoteExtension, { parseRemoteAttrs } from './remoteExt';
 import VibrateExtension from './vibrateExt';
 
-type Attrs = SampleAttrs & {
+export type Attrs = SampleAttrs & {
   date?: any;
   location?: any;
   surveyStartTime?: string;
-  surveyEndTime?: any;
+  surveyEndTime?: string;
   recorder?: any;
   comment?: any;
   cloud?: any;
@@ -44,6 +43,13 @@ type Attrs = SampleAttrs & {
   reliability?: string;
   recorders?: number;
   speciesGroups: string[];
+
+  // moth survey attributes
+  wind: string;
+  temperatureEnd: number;
+  directionEnd: string;
+  windEnd: string;
+  cloudEnd: number;
 };
 
 export const surveyConfigs = {
@@ -188,8 +194,6 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
 
   stopGPS: any; // from extension
 
-  startMetOfficePull: any; // from extension
-
   stopVibrateCounter: any; // from extension
 
   startVibrateCounter: any; // from extension
@@ -225,7 +229,6 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
     }
 
     Object.assign(this, VibrateExtension);
-    Object.assign(this, MetOfficeExtension);
     Object.assign(this, GPSExtension);
     Object.assign(this, RemoteExtension);
     this.gpsExtensionInit();

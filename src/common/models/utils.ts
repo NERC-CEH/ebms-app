@@ -1,4 +1,6 @@
 import { AttrConfig } from 'Survey/common/config';
+import Occurrence, { Attrs as OccurrenceAttrs } from './occurrence';
+import Sample, { Attrs as SampleAttrs } from './sample';
 
 export type CustomAttr = {
   attribute_id: string; // eslint-disable-line camelcase
@@ -69,3 +71,16 @@ export function getLocalAttributes(
 
   return Object.fromEntries(localEntries);
 }
+
+export const assignIfMissing = (
+  model: Sample | Occurrence,
+  key: keyof SampleAttrs | keyof OccurrenceAttrs,
+  value: any
+) => {
+  if (Number.isFinite((model as any).attrs[key]) || (model as any).attrs[key])
+    return;
+  if (!Number.isFinite(value) && !value) return;
+
+  // eslint-disable-next-line no-param-reassign
+  (model as any).attrs[key] = value;
+};

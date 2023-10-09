@@ -1,3 +1,4 @@
+import { when } from 'mobx';
 import {
   thermometerOutline,
   calendarOutline,
@@ -5,8 +6,9 @@ import {
   cloudyOutline,
   moonOutline,
 } from 'ionicons/icons';
+import SunCalc from 'suncalc';
 import * as Yup from 'yup';
-import { date as dateHelp } from '@flumens';
+import { date as dateHelp, device, isValidLocation } from '@flumens';
 import { IonImg } from '@ionic/react';
 import config from 'common/config';
 import firstQuarterMoonIcon from 'common/images/first-quarter-moon.svg';
@@ -18,8 +20,11 @@ import wanningGibbousIcon from 'common/images/waning-gibbous-moon.svg';
 import waxingCrescentIcon from 'common/images/waxing-crescent-moon.svg';
 import waxingGibbousIcon from 'common/images/waxing-gibbous-moon.svg';
 import windIcon from 'common/images/wind.svg';
+import { assignIfMissing } from 'common/models/utils';
+import { fetchHistoricalWeather } from 'common/services/openWeather';
 import appModel from 'models/app';
 import Occurrence from 'models/occurrence';
+import AppSample from 'models/sample';
 import {
   Survey,
   commentAttr,
@@ -201,10 +206,73 @@ const moonPhaseValues = [
   { id: 20834, icon: wanningCrescentIcon, value: 'Waning crescent' },
 ];
 
+// converts UTC time to local
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
   minute: 'numeric',
 });
+
+const setDefaultTime = (sample: AppSample) => {
+  const { surveyStartTime } = sample.attrs;
+  if (surveyStartTime) return;
+
+  const { location } = sample.attrs.location?.attrs || {};
+  if (!isValidLocation(location)) return;
+
+  // end time
+  const date = new Date(sample.attrs.date);
+  const { sunrise } = SunCalc.getTimes(
+    date,
+    location.latitude,
+    location.longitude
+  );
+  // eslint-disable-next-line no-param-reassign
+  sample.attrs.surveyEndTime = new Date(sunrise).toISOString(); // UTC time
+
+  // start time
+  const oneDayBefore = new Date(date.setDate(date.getDate() - 1));
+  const { sunset } = SunCalc.getTimes(
+    oneDayBefore,
+    location.latitude,
+    location.longitude
+  );
+  // eslint-disable-next-line no-param-reassign
+  sample.attrs.surveyStartTime = new Date(sunset).toISOString(); // UTC time
+  sample.save();
+};
+
+const getSetEndWeather = (sample: AppSample) => async () => {
+  if (!device.isOnline) return;
+
+  const weatherValues = await fetchHistoricalWeather(
+    sample.attrs.location.attrs.location,
+    sample.attrs.surveyEndTime!
+  );
+
+  assignIfMissing(sample, 'temperatureEnd', weatherValues.temperature);
+  assignIfMissing(sample, 'directionEnd', weatherValues.windDirection);
+  assignIfMissing(sample, 'windEnd', weatherValues.windSpeed);
+  assignIfMissing(sample, 'cloudEnd', weatherValues.cloud);
+};
+const getHasEndTimeAndLocation = (sample: AppSample) => () =>
+  !!sample.attrs.surveyEndTime && sample.attrs.location?.id;
+
+const getSetStartWeather = (sample: AppSample) => async () => {
+  if (!device.isOnline) return;
+
+  const weatherValues = await fetchHistoricalWeather(
+    sample.attrs.location.attrs.location,
+    sample.attrs.surveyStartTime!
+  );
+
+  assignIfMissing(sample, 'temperature', weatherValues.temperature);
+  assignIfMissing(sample, 'direction', weatherValues.windDirection);
+  assignIfMissing(sample, 'wind', weatherValues.windSpeed);
+  assignIfMissing(sample, 'cloud', weatherValues.cloud);
+};
+
+const getHasStartTimeAndLocation = (sample: AppSample) => () =>
+  !!sample.attrs.surveyStartTime && sample.attrs.location?.id;
 
 const survey: Survey = {
   id: 681,
@@ -524,6 +592,14 @@ const survey: Survey = {
         recorder,
       },
     });
+
+    when(
+      () => sample.attrs.location,
+      () => setDefaultTime(sample)
+    );
+
+    when(getHasStartTimeAndLocation(sample), getSetStartWeather(sample));
+    when(getHasEndTimeAndLocation(sample), getSetEndWeather(sample));
 
     return sample;
   },

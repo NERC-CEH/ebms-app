@@ -56,7 +56,7 @@ const useDeleteSpeciesPrompt = () => {
 };
 
 function setSurveyEndTime(sample: Sample) {
-  sample.attrs.surveyEndTime = new Date(); // eslint-disable-line no-param-reassign
+  sample.attrs.surveyEndTime = new Date().toISOString(); // eslint-disable-line no-param-reassign
   return sample.save();
 }
 

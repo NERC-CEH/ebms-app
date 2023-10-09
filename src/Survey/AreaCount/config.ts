@@ -1,10 +1,14 @@
-import { toJS } from 'mobx';
+import { toJS, when } from 'mobx';
 import wkt from 'wellknown';
+import { device, isValidLocation } from '@flumens';
 import { isPlatform } from '@ionic/react';
 import SphericalMercator from '@mapbox/sphericalmercator';
 import config from 'common/config';
 import appModel from 'common/models/app';
+import { assignIfMissing } from 'common/models/utils';
+import { fetchWeather } from 'common/services/openWeather';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
+import AppSample from 'models/sample';
 import {
   Survey,
   deviceAttr,
@@ -50,6 +54,17 @@ function getGeomString(shape: any) {
 
   return wkt.stringify(geoJSON);
 }
+
+const getSetWeather = (sample: AppSample) => async () => {
+  if (!device.isOnline) return;
+
+  const weatherValues = await fetchWeather(sample.attrs.location);
+
+  assignIfMissing(sample, 'temperature', weatherValues.temperature);
+  assignIfMissing(sample, 'windDirection', weatherValues.windDirection);
+  assignIfMissing(sample, 'windSpeed', weatherValues.windSpeed);
+  assignIfMissing(sample, 'cloud', weatherValues.cloud);
+};
 
 const survey: Survey = {
   id: 565,
@@ -236,11 +251,9 @@ const survey: Survey = {
       sample.startVibrateCounter();
     }
 
-    if (hasGPSPermission) {
-      sample.toggleGPStracking();
-    }
+    if (hasGPSPermission) sample.toggleGPStracking();
 
-    sample.startMetOfficePull();
+    when(() => isValidLocation(sample.attrs.location), getSetWeather(sample));
 
     return sample;
   },

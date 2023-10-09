@@ -35,7 +35,7 @@ const config = {
   },
 
   weatherSiteApiKey: process.env.APP_WEATHER_SITE_API_KEY as string,
-  weatherSiteUrl: 'https://api.openweathermap.org/data/2.5/weather',
+  weatherSiteUrl: 'https://api.openweathermap.org',
 
   backend: {
     url: backendUrl,
