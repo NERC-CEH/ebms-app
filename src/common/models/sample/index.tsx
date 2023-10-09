@@ -50,6 +50,8 @@ export type Attrs = SampleAttrs & {
   directionEnd: string;
   windEnd: string;
   cloudEnd: number;
+  moon?: string;
+  moonEnd?: string;
 };
 
 export const surveyConfigs = {

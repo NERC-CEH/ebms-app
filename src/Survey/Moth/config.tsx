@@ -212,7 +212,7 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   minute: 'numeric',
 });
 
-const setDefaultTime = (sample: AppSample) => {
+const getSetDefaultTime = (sample: AppSample) => () => {
   const { surveyStartTime } = sample.attrs;
   if (surveyStartTime) return;
 
@@ -273,6 +273,74 @@ const getSetStartWeather = (sample: AppSample) => async () => {
 
 const getHasStartTimeAndLocation = (sample: AppSample) => () =>
   !!sample.attrs.surveyStartTime && sample.attrs.location?.id;
+
+const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
+  const LUNAR_MONTH = 29.530588853;
+  const getLunarAge = () => {
+    const normalize = (value: number) => {
+      // eslint-disable-next-line no-param-reassign
+      value -= Math.floor(value);
+      // eslint-disable-next-line no-param-reassign
+      if (value < 0) value += 1;
+      return value;
+    };
+    const getJulianDate = () => {
+      const time = date.getTime();
+      const tzoffset = date.getTimezoneOffset();
+
+      return time / 86400000 - tzoffset / 1440 + 2440587.5;
+    };
+
+    const percent = normalize((getJulianDate() - 2451550.1) / LUNAR_MONTH);
+    const age = percent * LUNAR_MONTH;
+    return age;
+  };
+
+  const age = getLunarAge();
+
+  if (!isSouthernHemisphere) {
+    if (age < 1.84566) return 'New';
+    if (age < 5.53699) return 'Waxing crescent';
+    if (age < 9.22831) return 'First quarter';
+    if (age < 12.91963) return 'Waxing gibbous';
+    if (age < 16.61096) return 'Full';
+    if (age < 20.30228) return 'Waning gibbous';
+    if (age < 23.99361) return 'Last quarter';
+    if (age < 27.68493) return 'Waning crescent';
+  } else {
+    if (age < 1.84566) return 'New';
+    if (age < 5.53699) return 'Waning crescent';
+    if (age < 9.22831) return 'Last quarter';
+    if (age < 12.91963) return 'Waning gibbous';
+    if (age < 16.61096) return 'Full';
+    if (age < 20.30228) return 'Waxing gibbous';
+    if (age < 23.99361) return 'First quarter';
+    if (age < 27.68493) return 'Waxing crescent';
+  }
+
+  return 'New';
+};
+
+const getSetStartMoonPhase = (sample: AppSample) => () => {
+  const isSouthernHemisphere =
+    sample.attrs.location?.attrs?.location?.latitude < 0;
+  const moonPhase = getMoonPhase(
+    new Date(sample.attrs.surveyStartTime!),
+    isSouthernHemisphere
+  );
+  // eslint-disable-next-line no-param-reassign
+  assignIfMissing(sample, 'moon', moonPhase);
+};
+
+const getSetStartMoonEndPhase = (sample: AppSample) => () => {
+  const isSouthernHemisphere =
+    sample.attrs.location?.attrs?.location?.latitude < 0;
+  const moonPhase = getMoonPhase(
+    new Date(sample.attrs.surveyEndTime!),
+    isSouthernHemisphere
+  );
+  assignIfMissing(sample, 'moonEnd', moonPhase);
+};
 
 const survey: Survey = {
   id: 681,
@@ -593,13 +661,13 @@ const survey: Survey = {
       },
     });
 
-    when(
-      () => sample.attrs.location,
-      () => setDefaultTime(sample)
-    );
+    when(() => !!sample.attrs.location, getSetDefaultTime(sample));
 
     when(getHasStartTimeAndLocation(sample), getSetStartWeather(sample));
     when(getHasEndTimeAndLocation(sample), getSetEndWeather(sample));
+
+    when(getHasStartTimeAndLocation(sample), getSetStartMoonPhase(sample));
+    when(getHasEndTimeAndLocation(sample), getSetStartMoonEndPhase(sample));
 
     return sample;
   },
