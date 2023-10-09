@@ -58,6 +58,36 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
   const [isAlertPresent, setIsAlertPresent] = useState(false);
   const shouldDeleteSurvey = useDeleteSurveyPrompt(alert);
 
+  const onDeleteSurvey = async () => {
+    if (!sample.isPreciseSingleSpeciesSurvey()) {
+      goBack();
+      return;
+    }
+
+    if (!sample.isPreciseSingleSpeciesSurvey() || isAlertPresent) {
+      goBack();
+      return;
+    }
+
+    setIsAlertPresent(true);
+
+    const change = await shouldDeleteSurvey();
+    if (change) {
+      await sample.destroy();
+      setIsAlertPresent(false);
+      navigate('/home/user-surveys', 'root', 'push', undefined, {
+        unmount: true,
+      });
+      return;
+    }
+
+    setIsAlertPresent(false);
+  };
+
+  useOnBackButton(onDeleteSurvey);
+
+  if (!sample) return null;
+
   const onSpeciesSelected = async (taxon: any) => {
     const { taxa }: any = match.params;
     const { isRecorded } = taxon;
@@ -185,34 +215,6 @@ const TaxonController: FC<Props> = ({ sample, occurrence }) => {
   const title = sample.isPreciseSingleSpeciesSurvey()
     ? 'Select Target Species'
     : 'Species';
-
-  const onDeleteSurvey = async () => {
-    if (!sample.isPreciseSingleSpeciesSurvey()) {
-      goBack();
-      return;
-    }
-
-    if (!sample.isPreciseSingleSpeciesSurvey() || isAlertPresent) {
-      goBack();
-      return;
-    }
-
-    setIsAlertPresent(true);
-
-    const change = await shouldDeleteSurvey();
-    if (change) {
-      await sample.destroy();
-      setIsAlertPresent(false);
-      navigate('/home/user-surveys', 'root', 'push', undefined, {
-        unmount: true,
-      });
-      return;
-    }
-
-    setIsAlertPresent(false);
-  };
-
-  useOnBackButton(onDeleteSurvey);
 
   const showCancelButton = sample.isPreciseSingleSpeciesSurvey();
 
