@@ -158,6 +158,12 @@ msgstr "Tyrkiet (Asien)"
 msgid "Ukraine"
 msgstr "Ukraine"
 
+msgid "South Africa"
+msgstr ""
+
+msgid "Botswana"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Et andet sted"
 

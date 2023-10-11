@@ -160,6 +160,12 @@ msgstr ""
 msgid "Ukraine"
 msgstr "Ukraina"
 
+msgid "South Africa"
+msgstr ""
+
+msgid "Botswana"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Muualla"
 

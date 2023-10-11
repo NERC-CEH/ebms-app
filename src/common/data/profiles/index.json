@@ -1099,6 +1099,7 @@
       "BA": "A",
       "BE": "A",
       "BG": "A",
+      "BW": "P",
       "BY": "A",
       "CH": "A",
       "CY": "P",
@@ -1140,7 +1141,8 @@
       "SK": "A",
       "TR": "A",
       "TRA": "P",
-      "UA": "A"
+      "UA": "A",
+      "ZA": "P"
     }
   },
   {
@@ -4473,6 +4475,7 @@
       "BA": "A",
       "BE": "A",
       "BG": "A",
+      "BW": "P",
       "BY": "A",
       "CH": "A",
       "CY": "I",
@@ -4515,7 +4518,8 @@
       "SK": "A",
       "TR": "A",
       "TRA": "P",
-      "UA": "A"
+      "UA": "A",
+      "ZA": "P"
     }
   },
   {
@@ -5553,7 +5557,7 @@
     "taxon": "Pontia edusa",
     "family": "Pieridae",
     "descriptionKey": "Pontia-edusa-description",
-    "image_copyright": ["Alperen Yayla", "Martin Wiemers"],
+    "image_copyright": ["Alperen Yayla"],
     "abundance": {
       "AD": "A",
       "AL": "P",
@@ -5786,7 +5790,8 @@
       "SK": "P",
       "TR": "P",
       "TRA": "P",
-      "UA": "P"
+      "UA": "P",
+      "ZA": "P"
     }
   },
   {
@@ -10982,6 +10987,7 @@
       "BA": "A",
       "BE": "A",
       "BG": "A",
+      "BW": "P",
       "BY": "A",
       "CH": "A",
       "CY": "A",
@@ -11023,7 +11029,8 @@
       "SK": "A",
       "TR": "A",
       "TRA": "A",
-      "UA": "A"
+      "UA": "A",
+      "ZA": "P"
     }
   },
   {
@@ -11041,6 +11048,7 @@
       "BA": "A",
       "BE": "A",
       "BG": "A",
+      "BW": "P",
       "BY": "A",
       "CH": "A",
       "CY": "I",
@@ -11082,7 +11090,8 @@
       "SK": "A",
       "TR": "A",
       "TRA": "P",
-      "UA": "A"
+      "UA": "A",
+      "ZA": "P"
     }
   },
   {
@@ -11102,6 +11111,7 @@
       "BA": "P",
       "BE": "I",
       "BG": "M",
+      "BW": "P",
       "BY": "A",
       "CH": "M",
       "CY": "P",
@@ -11145,7 +11155,8 @@
       "SK": "I",
       "TR": "P",
       "TRA": "P",
-      "UA": "I"
+      "UA": "I",
+      "ZA": "P"
     }
   },
   {
@@ -11164,6 +11175,7 @@
       "BA": "P",
       "BE": "A",
       "BG": "P",
+      "BW": "P",
       "BY": "A",
       "CH": "P",
       "CY": "A",
@@ -11205,7 +11217,8 @@
       "SK": "A",
       "TR": "A",
       "TRA": "P",
-      "UA": "A"
+      "UA": "A",
+      "ZA": "P"
     }
   },
   {
@@ -12378,6 +12391,7 @@
       "BA": "A",
       "BE": "A",
       "BG": "P",
+      "BW": "P",
       "BY": "A",
       "CH": "A",
       "CY": "P",
@@ -12419,7 +12433,8 @@
       "SK": "A",
       "TR": "A",
       "TRA": "P",
-      "UA": "A"
+      "UA": "A",
+      "ZA": "P"
     }
   },
   {
@@ -18635,6 +18650,7 @@
       "BA": "M",
       "BE": "M",
       "BG": "M",
+      "BW": "P",
       "BY": "M",
       "CH": "M",
       "CY": "M",
@@ -18679,7 +18695,8 @@
       "SK": "M",
       "TR": "M",
       "TRA": "P",
-      "UA": "M"
+      "UA": "M",
+      "ZA": "P"
     }
   },
   {
@@ -19372,6 +19389,7 @@
       "BA": "A",
       "BE": "A",
       "BG": "A",
+      "BW": "P",
       "BY": "A",
       "CH": "A",
       "CY": "A",
@@ -19416,7 +19434,8 @@
       "SK": "A",
       "TR": "A",
       "TRA": "P",
-      "UA": "A"
+      "UA": "A",
+      "ZA": "P"
     }
   },
   {
@@ -31123,9 +31142,9 @@
   },
   {
     "warehouse_id": 548704,
-    "external_key": "1944234",
-    "taxon": "Acada biseriatus",
-    "abundance": { "KE": "P" }
+    "external_key": "ABMS-BW23",
+    "taxon": "Acada biseriata",
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548706,
@@ -31179,7 +31198,7 @@
     "warehouse_id": 548726,
     "external_key": "5136306",
     "taxon": "Acraea neobule",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548730,
@@ -31197,7 +31216,7 @@
     "warehouse_id": 548734,
     "external_key": "5135683",
     "taxon": "Acraea satis",
-    "abundance": { "KE": "P" }
+    "abundance": { "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548736,
@@ -31245,7 +31264,7 @@
     "warehouse_id": 548759,
     "external_key": "1919181",
     "taxon": "Belenois aurota",
-    "abundance": { "KE": "P", "TRA": "P" }
+    "abundance": { "BW": "P", "KE": "P", "TRA": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548763,
@@ -31311,7 +31330,7 @@
     "warehouse_id": 548790,
     "external_key": "1892555",
     "taxon": "Byblia ilithyia",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548795,
@@ -31359,7 +31378,7 @@
     "warehouse_id": 548813,
     "external_key": "5129091",
     "taxon": "Charaxes candiope",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548816,
@@ -31449,7 +31468,7 @@
     "warehouse_id": 548851,
     "external_key": "5128679",
     "taxon": "Charaxes saturnus",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548854,
@@ -31491,7 +31510,7 @@
     "warehouse_id": 548870,
     "external_key": "5128696",
     "taxon": "Charaxes zoolina",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548873,
@@ -31509,13 +31528,13 @@
     "warehouse_id": 548880,
     "external_key": "1947116",
     "taxon": "Coeliades keithloa",
-    "abundance": { "KE": "P" }
+    "abundance": { "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548882,
     "external_key": "1947112",
     "taxon": "Coeliades pisistratus",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548887,
@@ -31605,7 +31624,7 @@
     "warehouse_id": 548924,
     "external_key": "1920363",
     "taxon": "Colotis ione",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548928,
@@ -31623,7 +31642,7 @@
     "warehouse_id": 548932,
     "external_key": "1920353",
     "taxon": "Colotis regina",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548939,
@@ -31634,7 +31653,13 @@
   {
     "warehouse_id": 548943,
     "external_key": "9894815",
-    "taxon": "Cupidopsis iobates",
+    "taxon": "Cupidopsis jobates",
+    "abundance": { "KE": "P" }
+  },
+  {
+    "warehouse_id": 548945,
+    "external_key": "5132744",
+    "taxon": "Cymothoe coranus",
     "abundance": { "KE": "P" }
   },
   {
@@ -31671,19 +31696,13 @@
     "warehouse_id": 548959,
     "external_key": "1919930",
     "taxon": "Dixeia pigea",
-    "abundance": { "KE": "P" }
+    "abundance": { "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548962,
     "external_key": "1920815",
     "taxon": "Eronia cleodora",
-    "abundance": { "KE": "P" }
-  },
-  {
-    "warehouse_id": 548964,
-    "external_key": "1920816",
-    "taxon": "Eronia leda",
-    "abundance": { "KE": "P" }
+    "abundance": { "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548968,
@@ -31743,7 +31762,7 @@
     "warehouse_id": 548985,
     "external_key": "1893355",
     "taxon": "Euryphura achlys",
-    "abundance": { "KE": "P" }
+    "abundance": { "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 548988,
@@ -31779,13 +31798,13 @@
     "warehouse_id": 548998,
     "external_key": "5141195",
     "taxon": "Graphium antheus",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 549001,
     "external_key": "5141170",
     "taxon": "Graphium colonna",
-    "abundance": { "KE": "P" }
+    "abundance": { "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 549004,
@@ -31935,7 +31954,7 @@
     "warehouse_id": 549072,
     "external_key": "1901782",
     "taxon": "Lachnoptera ayresii",
-    "abundance": { "KE": "P" }
+    "abundance": { "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 549074,
@@ -31959,7 +31978,7 @@
     "warehouse_id": 549085,
     "external_key": "1895956",
     "taxon": "Melanitis leda",
-    "abundance": { "JP": "P", "KE": "P" }
+    "abundance": { "BW": "P", "JP": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 549087,
@@ -32013,13 +32032,13 @@
     "warehouse_id": 549108,
     "external_key": "5131594",
     "taxon": "Neptis alta",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P" }
   },
   {
     "warehouse_id": 549113,
     "external_key": "5131442",
     "taxon": "Neptis laeta",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 549116,
@@ -32109,7 +32128,7 @@
     "warehouse_id": 549152,
     "external_key": "1915499",
     "taxon": "Pardopsis punctatissima",
-    "abundance": { "KE": "P" }
+    "abundance": { "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 549154,
@@ -32151,7 +32170,7 @@
     "warehouse_id": 549173,
     "external_key": "1897890",
     "taxon": "Precis antilope",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 549175,
@@ -32192,7 +32211,7 @@
   {
     "warehouse_id": 549188,
     "external_key": "10289468",
-    "taxon": "Pseudacraea boisduvali",
+    "taxon": "Pseudacraea boisduvalii",
     "abundance": { "KE": "P" }
   },
   {
@@ -32226,22 +32245,40 @@
     "abundance": { "KE": "P" }
   },
   {
+    "warehouse_id": 549203,
+    "external_key": "10569879",
+    "taxon": "Protogoniomorpha parhassus (Drury, 1782)",
+    "abundance": { "KE": "P", "ZA": "P" }
+  },
+  {
     "warehouse_id": 549207,
     "external_key": "5132835",
     "taxon": "Salamis temora",
     "abundance": { "KE": "P" }
   },
   {
+    "warehouse_id": 549211,
+    "external_key": "11817335",
+    "taxon": "Sevenia amulia",
+    "abundance": { "KE": "P" }
+  },
+  {
     "warehouse_id": 549217,
     "external_key": "5137397",
-    "taxon": "Sallya natalensis",
+    "taxon": "Sevenia natalensis",
+    "abundance": { "KE": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 549220,
+    "external_key": "5128529",
+    "taxon": "Sevenia umbrina",
     "abundance": { "KE": "P" }
   },
   {
     "warehouse_id": 549223,
     "external_key": "8727750",
     "taxon": "Tirumala petiverana",
-    "abundance": { "KE": "P" }
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 549500,
@@ -32649,7 +32686,7 @@
     "warehouse_id": 549697,
     "external_key": "1922244",
     "taxon": "Zizula hylax",
-    "abundance": { "JP": "P" }
+    "abundance": { "BW": "P", "JP": "P", "ZA": "P" }
   },
   {
     "warehouse_id": 549701,
@@ -33430,5 +33467,4871 @@
     "external_key": "9089778",
     "taxon": "Polyommatus menalcas",
     "abundance": { "TRA": "P" }
+  },
+  {
+    "warehouse_id": 619059,
+    "external_key": "ABMS-BW10",
+    "taxon": "Zophopetes dysmephila",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619061,
+    "external_key": "ABMS-BW104",
+    "taxon": "Eicochrysops hippocrates",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619063,
+    "external_key": "ABMS-BW11",
+    "taxon": "Afrogegenes hottentota",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619065,
+    "external_key": "ABMS-BW110",
+    "taxon": "Lepidochrysops chloauges",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619067,
+    "external_key": "ABMS-BW112",
+    "taxon": "Lepidochrysops letsea",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619069,
+    "external_key": "ABMS-BW113",
+    "taxon": "Lepidochrysops longifalces",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619071,
+    "external_key": "ABMS-BW114",
+    "taxon": "Lepidochrysops michellae",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619073,
+    "external_key": "ABMS-BW115",
+    "taxon": "Lepidochrysops patricia",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619075,
+    "external_key": "ABMS-BW117",
+    "taxon": "Lepidochrysops rossouwi",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619077,
+    "external_key": "ABMS-BW118",
+    "taxon": "Lepidochrysops vansoni",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619079,
+    "external_key": "ABMS-BW12",
+    "taxon": "Afrogegenes letterstedti",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619081,
+    "external_key": "ABMS-BW122",
+    "taxon": "Oraidium barberae",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619083,
+    "external_key": "ABMS-BW125",
+    "taxon": "Tuxentius calice",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619085,
+    "external_key": "ABMS-BW131",
+    "taxon": "Baliochila singularis",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619087,
+    "external_key": "ABMS-BW132",
+    "taxon": "Cnodontes pallida",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619089,
+    "external_key": "ABMS-BW133",
+    "taxon": "Cnodontes penningtoni",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619091,
+    "external_key": "ABMS-BW142",
+    "taxon": "Iolaus pallene",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619093,
+    "external_key": "ABMS-BW145",
+    "taxon": "Iolaus australis",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619095,
+    "external_key": "ABMS-BW147",
+    "taxon": "Iolaus nasisii",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619097,
+    "external_key": "ABMS-BW148",
+    "taxon": "Iolaus penningtoni",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619099,
+    "external_key": "ABMS-BW149",
+    "taxon": "Iolaus trimeni",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619101,
+    "external_key": "ABMS-BW179",
+    "taxon": "Rubraea atolmis",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619103,
+    "external_key": "ABMS-BW181",
+    "taxon": "Stephenia aglaonice",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619105,
+    "external_key": "ABMS-BW182",
+    "taxon": "Stephenia atergatis",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619107,
+    "external_key": "ABMS-BW183",
+    "taxon": "Stephenia axina",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619109,
+    "external_key": "ABMS-BW185",
+    "taxon": "Stephenia lygus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619111,
+    "external_key": "ABMS-BW186",
+    "taxon": "Stephenia natalica",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619113,
+    "external_key": "ABMS-BW188",
+    "taxon": "Stephenia stenobea",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619115,
+    "external_key": "ABMS-BW189",
+    "taxon": "Telchinia acerata",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619117,
+    "external_key": "ABMS-BW190",
+    "taxon": "Telchinia burni",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619119,
+    "external_key": "ABMS-BW193",
+    "taxon": "Telchinia serena",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619121,
+    "external_key": "ABMS-BW194",
+    "taxon": "Tildia acara",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619123,
+    "external_key": "ABMS-BW195",
+    "taxon": "Tildia anemosa",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619125,
+    "external_key": "ABMS-BW196",
+    "taxon": "Tildia barberi",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619127,
+    "external_key": "ABMS-BW197",
+    "taxon": "Tildia trimeni",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619129,
+    "external_key": "ABMS-BW199",
+    "taxon": "Hamanumida daedalus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619131,
+    "external_key": "ABMS-BW21",
+    "taxon": "Torbenlarsenia gemella",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619133,
+    "external_key": "ABMS-BW217",
+    "taxon": "Protogoniomorpha nebulosa",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619135,
+    "external_key": "ABMS-BW22",
+    "taxon": "Torbenlarsenia holtzi",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619137,
+    "external_key": "ABMS-BW226",
+    "taxon": "Brakefieldia simonsii",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619139,
+    "external_key": "ABMS-BW228",
+    "taxon": "Mashuna mashuna",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619141,
+    "external_key": "ABMS-BW229",
+    "taxon": "Paternympha narycia",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619143,
+    "external_key": "ABMS-BW230",
+    "taxon": "Stygionympha robertsoni",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619145,
+    "external_key": "ABMS-BW235",
+    "taxon": "Ypthimomorpha itonia",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619147,
+    "external_key": "ABMS-BW248",
+    "taxon": "Terias hapale",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619149,
+    "external_key": "ABMS-BW261",
+    "taxon": "Afrodryas leda",
+    "abundance": { "BW": "P", "KE": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619151,
+    "external_key": "ABMS-BW27",
+    "taxon": "Platylesches ayresii",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619153,
+    "external_key": "ABMS-BW28",
+    "taxon": "Platylesches galesa",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619155,
+    "external_key": "ABMS-BW283",
+    "taxon": "Teracolus subfasciatus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619157,
+    "external_key": "ABMS-BW29",
+    "taxon": "Platylesches moritili",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619159,
+    "external_key": "ABMS-BW30",
+    "taxon": "Platylesches tina",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619161,
+    "external_key": "ABMS-BW31",
+    "taxon": "Teniorhinus harona",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619163,
+    "external_key": "ABMS-BW32",
+    "taxon": "Willema willemi",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619165,
+    "external_key": "ABMS-BW34",
+    "taxon": "Ernsta delagoae",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619167,
+    "external_key": "ABMS-BW36",
+    "taxon": "Ernsta nanus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619169,
+    "external_key": "ABMS-BW38",
+    "taxon": "Ernsta paula",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619171,
+    "external_key": "ABMS-BW4",
+    "taxon": "Dotta callicles",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619173,
+    "external_key": "ABMS-BW43",
+    "taxon": "Alenia namaqua",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619175,
+    "external_key": "ABMS-BW44",
+    "taxon": "Eretis djaelaelae",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619177,
+    "external_key": "ABMS-BW47",
+    "taxon": "Sarangesa motozi",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619179,
+    "external_key": "ABMS-BW48",
+    "taxon": "Sarangesa phidyle",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619181,
+    "external_key": "ABMS-BW5",
+    "taxon": "Kedestes lepenula",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619183,
+    "external_key": "ABMS-BW50",
+    "taxon": "Abantis levubu",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619185,
+    "external_key": "ABMS-BW51",
+    "taxon": "Abantis tettensis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619187,
+    "external_key": "ABMS-BW52",
+    "taxon": "Abantis canopus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619189,
+    "external_key": "ABMS-BW53",
+    "taxon": "Abantis paradisea",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619191,
+    "external_key": "ABMS-BW54",
+    "taxon": "Abantis pillaana",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619193,
+    "external_key": "ABMS-BW55",
+    "taxon": "Abantis zambesiaca",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619195,
+    "external_key": "ABMS-BW6",
+    "taxon": "Kedestes macomo",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619197,
+    "external_key": "ABMS-BW60",
+    "taxon": "Aloeides namibiensis",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619199,
+    "external_key": "ABMS-BW61",
+    "taxon": "Aloeides simplex",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619201,
+    "external_key": "ABMS-BW62",
+    "taxon": "Aloeides taikosama",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619203,
+    "external_key": "ABMS-BW64",
+    "taxon": "Aphnaeus erikssoni",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619205,
+    "external_key": "ABMS-BW65",
+    "taxon": "Aphnaeus hutchinsonii",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619207,
+    "external_key": "ABMS-BW66",
+    "taxon": "Argyraspodes argyraspis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619209,
+    "external_key": "ABMS-BW69",
+    "taxon": "Chloroselas mazoensis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619211,
+    "external_key": "ABMS-BW7",
+    "taxon": "Kedestes marshalli",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619213,
+    "external_key": "ABMS-BW76",
+    "taxon": "Crudaria leroma",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619215,
+    "external_key": "ABMS-BW77",
+    "taxon": "Erikssonia acraeina",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619217,
+    "external_key": "ABMS-BW78",
+    "taxon": "Erikssonia edgei",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619219,
+    "external_key": "ABMS-BW8",
+    "taxon": "Kedestes sublineata",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619221,
+    "external_key": "ABMS-BW80",
+    "taxon": "Zeritis sorhagenii",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619223,
+    "external_key": "ABMS-BW81",
+    "taxon": "Lachnocnema bibulus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619225,
+    "external_key": "ABMS-BW82",
+    "taxon": "Lachnocnema durbani",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619227,
+    "external_key": "ABMS-BW9",
+    "taxon": "Nervia monostichus",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619229,
+    "external_key": "ABMS-BW92",
+    "taxon": "Anthene princeps",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619231,
+    "external_key": "ABMS-BW93",
+    "taxon": "Anthene talboti",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619233,
+    "external_key": "ABMS-BW98",
+    "taxon": "Brephidium metophis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619235,
+    "external_key": "ABMS-BW101",
+    "taxon": "Cacyreus virilis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619237,
+    "external_key": "ABMS-BW106",
+    "taxon": "Euchrysops malathana",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619239,
+    "external_key": "ABMS-BW107",
+    "taxon": "Euchrysops osiris",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619241,
+    "external_key": "ABMS-BW108",
+    "taxon": "Euchrysops subpallida",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619243,
+    "external_key": "ABMS-BW119",
+    "taxon": "Leptotes brevidentatus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619245,
+    "external_key": "ABMS-BW136",
+    "taxon": "Deudorix antalus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619247,
+    "external_key": "ABMS-BW137",
+    "taxon": "Deudorix dinochares",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619249,
+    "external_key": "ABMS-BW14",
+    "taxon": "Borbo fallax",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619251,
+    "external_key": "ABMS-BW156",
+    "taxon": "Sevenia morantii",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619253,
+    "external_key": "ABMS-BW16",
+    "taxon": "Borbo micans",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619255,
+    "external_key": "ABMS-BW165",
+    "taxon": "Charaxes brainei",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619257,
+    "external_key": "ABMS-BW166",
+    "taxon": "Charaxes fulgurata",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619259,
+    "external_key": "ABMS-BW169",
+    "taxon": "Charaxes phaeus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619261,
+    "external_key": "ABMS-BW170",
+    "taxon": "Charaxes vansoni",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619263,
+    "external_key": "ABMS-BW177",
+    "taxon": "Acraea machequena",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619265,
+    "external_key": "ABMS-BW18",
+    "taxon": "Parnara monasi",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619267,
+    "external_key": "ABMS-BW2",
+    "taxon": "Coeliades libeon",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619269,
+    "external_key": "ABMS-BW201",
+    "taxon": "Neptis jordani",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619271,
+    "external_key": "ABMS-BW207",
+    "taxon": "Pseudacraea poggei",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619273,
+    "external_key": "ABMS-BW221",
+    "taxon": "Physcaeneura panda",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619275,
+    "external_key": "ABMS-BW223",
+    "taxon": "Bicyclus ena",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619277,
+    "external_key": "ABMS-BW233",
+    "taxon": "Ypthima granulosa",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619279,
+    "external_key": "ABMS-BW239",
+    "taxon": "Graphium morania",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619281,
+    "external_key": "ABMS-BW255",
+    "taxon": "Dixeia spilleri",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619283,
+    "external_key": "ABMS-BW269",
+    "taxon": "Colotis doubledayi",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619285,
+    "external_key": "ABMS-BW274",
+    "taxon": "Colotis lais",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619287,
+    "external_key": "ABMS-BW275",
+    "taxon": "Colotis pallene",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619289,
+    "external_key": "ABMS-BW40",
+    "taxon": "Spialia ferax",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619291,
+    "external_key": "ABMS-BW42",
+    "taxon": "Spialia spio",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619293,
+    "external_key": "ABMS-BW57",
+    "taxon": "Tagiades flesus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619295,
+    "external_key": "ABMS-BW71",
+    "taxon": "Cigaritis brunnea",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619297,
+    "external_key": "ABMS-BW72",
+    "taxon": "Cigaritis ella",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619299,
+    "external_key": "ABMS-BW73",
+    "taxon": "Cigaritis namaquus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619301,
+    "external_key": "ABMS-BW74",
+    "taxon": "Cigaritis natalensis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619303,
+    "external_key": "ABMS-BW75",
+    "taxon": "Cigaritis phanes",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619305,
+    "external_key": "ABMS-BW95",
+    "taxon": "Azanus mirza",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619307,
+    "external_key": "ABMS-BW96",
+    "taxon": "Azanus moriqua",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619309,
+    "external_key": "ABMS-BW99",
+    "taxon": "Cacyreus lingeus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619382,
+    "external_key": "ABMS-BW24",
+    "taxon": "Acleros mackenii mackenii",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619384,
+    "external_key": "ABMS-BW25",
+    "taxon": "Andronymus neander neander",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619386,
+    "external_key": "ABMS-BW26",
+    "taxon": "Parosmodes morantii morantii",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619388,
+    "external_key": "ABMS-BW33",
+    "taxon": "Agyllia agylla agylla",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619390,
+    "external_key": "ABMS-BW35",
+    "taxon": "Ernsta depauperata australis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619392,
+    "external_key": "ABMS-BW37",
+    "taxon": "Ernsta colotes transvaaliae",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619394,
+    "external_key": "ABMS-BW39",
+    "taxon": "Gomalia elma elma",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619396,
+    "external_key": "ABMS-BW45",
+    "taxon": "Eretis umbra umbra",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619398,
+    "external_key": "ABMS-BW46",
+    "taxon": "Sarangesa lucidella lucidella",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619400,
+    "external_key": "ABMS-BW49",
+    "taxon": "Sarangesa seineri seineri",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619402,
+    "external_key": "ABMS-BW56",
+    "taxon": "Calleagris jamesoni jamesoni",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619404,
+    "external_key": "ABMS-BW58",
+    "taxon": "Aloeides damarensis damarensis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619406,
+    "external_key": "ABMS-BW59",
+    "taxon": "Aloeides molomo krooni",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619408,
+    "external_key": "ABMS-BW63",
+    "taxon": "Aloeides trimeni trimeni",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619410,
+    "external_key": "ABMS-BW67",
+    "taxon": "Axiocerses amanga amanga",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619412,
+    "external_key": "ABMS-BW68",
+    "taxon": "Axiocerses tjoane tjoane",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619414,
+    "external_key": "ABMS-BW70",
+    "taxon": "Chloroselas pseudozeritis pseudozeritis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619416,
+    "external_key": "ABMS-BW79",
+    "taxon": "Tylopaedia sardonyx sardonyx",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619418,
+    "external_key": "ABMS-BW83",
+    "taxon": "Thestor basuta capeneri",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619420,
+    "external_key": "ABMS-BW85",
+    "taxon": "Anthene amarah amarah",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619422,
+    "external_key": "ABMS-BW86",
+    "taxon": "Anthene definita definita",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619424,
+    "external_key": "ABMS-BW87",
+    "taxon": "Anthene dulcis dulcis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619426,
+    "external_key": "ABMS-BW88",
+    "taxon": "Anthene livida livida",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619428,
+    "external_key": "ABMS-BW89",
+    "taxon": "Anthene lunulata lunulata",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619430,
+    "external_key": "ABMS-BW90",
+    "taxon": "Anthene minima minima",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619432,
+    "external_key": "ABMS-BW91",
+    "taxon": "Anthene otacilia otacilia",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619434,
+    "external_key": "ABMS-BW111",
+    "taxon": "Lepidochrysops glauca glauca",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619436,
+    "external_key": "ABMS-BW116",
+    "taxon": "Lepidochrysops plebeia plebeia",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619438,
+    "external_key": "ABMS-BW123",
+    "taxon": "Pseudonacaduba sichela sichela",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619440,
+    "external_key": "ABMS-BW126",
+    "taxon": "Tuxentius melaena melaena",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619442,
+    "external_key": "ABMS-BW127",
+    "taxon": "Zintha hintza hintza",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619444,
+    "external_key": "ABMS-BW135",
+    "taxon": "Myrina silenus ficedula",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619446,
+    "external_key": "ABMS-BW138",
+    "taxon": "Hemiolaus caeculus caeculus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619448,
+    "external_key": "ABMS-BW139",
+    "taxon": "Hemiolaus caeculus tsodiloensis",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619449,
+    "external_key": "ABMS-BW140",
+    "taxon": "Hypolycaena philippus philippus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619451,
+    "external_key": "ABMS-BW141",
+    "taxon": "Leptomyrina henningi henningi",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619453,
+    "external_key": "ABMS-BW143",
+    "taxon": "Iolaus silarus silarus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619455,
+    "external_key": "ABMS-BW144",
+    "taxon": "Iolaus alienus alienus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619457,
+    "external_key": "ABMS-BW146",
+    "taxon": "Iolaus mimosae rhodosense",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619459,
+    "external_key": "ABMS-BW150",
+    "taxon": "Stugeta bowkeri tearei",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619461,
+    "external_key": "ABMS-BW151",
+    "taxon": "Stugeta subinfuscata reynoldsi",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619463,
+    "external_key": "ABMS-BW180",
+    "taxon": "Rubraea nohara nohara",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619465,
+    "external_key": "ABMS-BW184",
+    "taxon": "Stephenia caldarena caldarena",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619467,
+    "external_key": "ABMS-BW187",
+    "taxon": "Stephenia oncaea oncaea",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619469,
+    "external_key": "ABMS-BW191",
+    "taxon": "Telchinia encedon encedon",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619471,
+    "external_key": "ABMS-BW192",
+    "taxon": "Telchinia rahira rahira",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619473,
+    "external_key": "ABMS-BW218",
+    "taxon": "Catacroptera cloanthe cloanthe",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619475,
+    "external_key": "ABMS-BW225",
+    "taxon": "Brakefieldia perspicua perspicua",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619477,
+    "external_key": "ABMS-BW227",
+    "taxon": "Coenyropsis natalii natalii",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619479,
+    "external_key": "ABMS-BW247",
+    "taxon": "Terias brigitta brigitta",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619481,
+    "external_key": "ABMS-BW249",
+    "taxon": "Terias hecabe solifera",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619483,
+    "external_key": "ABMS-BW280",
+    "taxon": "Teracolus agoye agoye",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619485,
+    "external_key": "ABMS-BW281",
+    "taxon": "Teracolus agoye bowkeri",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619487,
+    "external_key": "ABMS-BW282",
+    "taxon": "Teracolus eris eris",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619489,
+    "external_key": "ABMS-BW172",
+    "taxon": "Amauris echeria lobengula",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619491,
+    "external_key": "ABMS-BW174",
+    "taxon": "Amauris tartarea tartarea",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619493,
+    "external_key": "ABMS-BW222",
+    "taxon": "Bicyclus anynana anynana",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619495,
+    "external_key": "ABMS-BW15",
+    "taxon": "Borbo fatuellus fatuellus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619497,
+    "external_key": "ABMS-BW262",
+    "taxon": "Colotis annae annae",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619499,
+    "external_key": "ABMS-BW266",
+    "taxon": "Colotis calais calais",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619501,
+    "external_key": "ABMS-BW102",
+    "taxon": "Cupidopsis cissus cissus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619503,
+    "external_key": "ABMS-BW121",
+    "taxon": "Leptotes pulchra pulchra",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619505,
+    "external_key": "ABMS-BW257",
+    "taxon": "Mylothris bernice rubricosta",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619507,
+    "external_key": "ABMS-BW258",
+    "taxon": "Mylothris rueppellii haemus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619509,
+    "external_key": "ABMS-BW214",
+    "taxon": "Precis archesia archesia",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619511,
+    "external_key": "ABMS-BW157",
+    "taxon": "Sevenia trimeni trimeni",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619513,
+    "external_key": "ABMS-BW84",
+    "taxon": "Spalgis lemolea lemolea",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619515,
+    "external_key": "ABMS-BW41",
+    "taxon": "Spialia mafa mafa",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619517,
+    "external_key": "ABMS-BW124",
+    "taxon": "Tarucus sybaris linearis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619519,
+    "external_key": "ABMS-BW231",
+    "taxon": "Ypthima antennata antennata",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619521,
+    "external_key": "ABMS-BW234",
+    "taxon": "Ypthima impura paupera",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619523,
+    "external_key": "ABMS-BW105",
+    "taxon": "Eicochrysops messapus mahallakoaena",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619525,
+    "external_key": "ABMS-BW134",
+    "taxon": "Alaena amazoula ochroma",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619548,
+    "external_key": "ABMS-BW1",
+    "taxon": "Coeliades forestan forestan",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619550,
+    "external_key": "ABMS-BW13",
+    "taxon": "Borbo borbonica borbonica",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619552,
+    "external_key": "ABMS-BW17",
+    "taxon": "Gegenes pumilio gambica",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619554,
+    "external_key": "ABMS-BW19",
+    "taxon": "Pelopidas mathias mathias",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619556,
+    "external_key": "ABMS-BW120",
+    "taxon": "Leptotes pirithous pirithous",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619558,
+    "external_key": "ABMS-BW128",
+    "taxon": "Zizeeria knysna knysna",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619560,
+    "external_key": "ABMS-BW152",
+    "taxon": "Byblia anvatara acheloia",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619562,
+    "external_key": "ABMS-BW154",
+    "taxon": "Eurytela dryope angulata",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619564,
+    "external_key": "ABMS-BW155",
+    "taxon": "Sevenia amulia intermedia",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619566,
+    "external_key": "ABMS-BW158",
+    "taxon": "Charaxes bohemani bohemani",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619568,
+    "external_key": "ABMS-BW159",
+    "taxon": "Charaxes brutus natalensis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619570,
+    "external_key": "ABMS-BW162",
+    "taxon": "Charaxes varanes varanes",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619572,
+    "external_key": "ABMS-BW163",
+    "taxon": "Charaxes varanes vologeses",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619574,
+    "external_key": "ABMS-BW167",
+    "taxon": "Charaxes guderiana guderiana",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619576,
+    "external_key": "ABMS-BW168",
+    "taxon": "Charaxes jahlusa rex",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619578,
+    "external_key": "ABMS-BW198",
+    "taxon": "Phalanta phalantha aethiopica",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619580,
+    "external_key": "ABMS-BW203",
+    "taxon": "Neptis saclava marpessa",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619582,
+    "external_key": "ABMS-BW204",
+    "taxon": "Neptis serena serena",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619584,
+    "external_key": "ABMS-BW206",
+    "taxon": "Pseudacraea lucretia expansa",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619586,
+    "external_key": "ABMS-BW209",
+    "taxon": "Junonia hierta cebrene",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619588,
+    "external_key": "ABMS-BW210",
+    "taxon": "Junonia natalica natalica",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619590,
+    "external_key": "ABMS-BW211",
+    "taxon": "Junonia oenone oenone",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619592,
+    "external_key": "ABMS-BW212",
+    "taxon": "Junonia orithya madagascariensis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619594,
+    "external_key": "ABMS-BW215",
+    "taxon": "Precis ceryne ceryne",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619596,
+    "external_key": "ABMS-BW216",
+    "taxon": "Precis octavia sesamus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619598,
+    "external_key": "ABMS-BW224",
+    "taxon": "Bicyclus safitza safitza",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619600,
+    "external_key": "ABMS-BW232",
+    "taxon": "Ypthima asterope asterope",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619602,
+    "external_key": "ABMS-BW236",
+    "taxon": "Graphium angolanus angolanus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619604,
+    "external_key": "ABMS-BW238",
+    "taxon": "Graphium leonidas leonidas",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619606,
+    "external_key": "ABMS-BW240",
+    "taxon": "Graphium porthaon porthaon",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619608,
+    "external_key": "ABMS-BW241",
+    "taxon": "Papilio constantinus constantinus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619610,
+    "external_key": "ABMS-BW242",
+    "taxon": "Papilio dardanus cenea",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619612,
+    "external_key": "ABMS-BW243",
+    "taxon": "Papilio nireus lyaeus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619614,
+    "external_key": "ABMS-BW244",
+    "taxon": "Papilio demodocus demodocus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619616,
+    "external_key": "ABMS-BW246",
+    "taxon": "Colias electo electo",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619618,
+    "external_key": "ABMS-BW250",
+    "taxon": "Nepheronia buquetii buquetii",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619620,
+    "external_key": "ABMS-BW251",
+    "taxon": "Nepheronia thalassina sinalata",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619622,
+    "external_key": "ABMS-BW253",
+    "taxon": "Belenois creona severina",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619624,
+    "external_key": "ABMS-BW254",
+    "taxon": "Belenois gidica abyssinica",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619626,
+    "external_key": "ABMS-BW256",
+    "taxon": "Mylothris agathina agathina",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619628,
+    "external_key": "ABMS-BW259",
+    "taxon": "Appias epaphia contracta",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619630,
+    "external_key": "ABMS-BW260",
+    "taxon": "Pontia helice helice",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619632,
+    "external_key": "ABMS-BW263",
+    "taxon": "Colotis antevippe gavisa",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619634,
+    "external_key": "ABMS-BW264",
+    "taxon": "Colotis auxo auxo",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619636,
+    "external_key": "ABMS-BW265",
+    "taxon": "Colotis auxo dissociatus",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619638,
+    "external_key": "ABMS-BW267",
+    "taxon": "Colotis celimene amina",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619640,
+    "external_key": "ABMS-BW268",
+    "taxon": "Colotis celimene pholoe",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619642,
+    "external_key": "ABMS-BW270",
+    "taxon": "Colotis euippe omphale",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619644,
+    "external_key": "ABMS-BW271",
+    "taxon": "Colotis evagore antigone",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619646,
+    "external_key": "ABMS-BW272",
+    "taxon": "Colotis evenina evenina",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619648,
+    "external_key": "ABMS-BW277",
+    "taxon": "Colotis vesta argillaceus",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619650,
+    "external_key": "ABMS-BW278",
+    "taxon": "Colotis vesta mutans",
+    "abundance": { "BW": "P" }
+  },
+  {
+    "warehouse_id": 619652,
+    "external_key": "ABMS-BW279",
+    "taxon": "Pinacopteryx eriphia eriphia",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619654,
+    "external_key": "ABMS-BW173",
+    "taxon": "Amauris ochlea ochlea",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619656,
+    "external_key": "ABMS-BW175",
+    "taxon": "Danaus chrysippus orientis",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619713,
+    "external_key": "ABMS-ZA7",
+    "taxon": "Artitropa erinnys erinnys",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619715,
+    "external_key": "ABMS-ZA8",
+    "taxon": "Astictopterus inornatus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619717,
+    "external_key": "ABMS-ZA16",
+    "taxon": "Moltena fiara",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619719,
+    "external_key": "ABMS-ZA21",
+    "taxon": "Trida barberae barberae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619721,
+    "external_key": "ABMS-ZA22",
+    "taxon": "Trida barberae bonsa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619723,
+    "external_key": "ABMS-ZA23",
+    "taxon": "Trida barberae bunta",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619725,
+    "external_key": "ABMS-ZA24",
+    "taxon": "Trida sarahae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619727,
+    "external_key": "ABMS-ZA25",
+    "taxon": "Tsitana dicksoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619729,
+    "external_key": "ABMS-ZA26",
+    "taxon": "Tsitana tsita",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619731,
+    "external_key": "ABMS-ZA27",
+    "taxon": "Tsitana tulbagha kaplani",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619733,
+    "external_key": "ABMS-ZA28",
+    "taxon": "Tsitana tulbagha tulbagha",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619735,
+    "external_key": "ABMS-ZA29",
+    "taxon": "Tsitana uitenhaga",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619737,
+    "external_key": "ABMS-ZA47",
+    "taxon": "Zenonia zeno",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619739,
+    "external_key": "ABMS-ZA52",
+    "taxon": "Fresna nyassae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619741,
+    "external_key": "ABMS-ZA63",
+    "taxon": "Metisella aegipan aegipan",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619743,
+    "external_key": "ABMS-ZA64",
+    "taxon": "Metisella malgacha malgacha",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619745,
+    "external_key": "ABMS-ZA65",
+    "taxon": "Metisella malgacha orina",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619747,
+    "external_key": "ABMS-ZA66",
+    "taxon": "Metisella meninx",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619749,
+    "external_key": "ABMS-ZA67",
+    "taxon": "Metisella metis metis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619751,
+    "external_key": "ABMS-ZA68",
+    "taxon": "Metisella metis paris",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619753,
+    "external_key": "ABMS-ZA69",
+    "taxon": "Metisella syrinx",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619755,
+    "external_key": "ABMS-ZA89",
+    "taxon": "Apallaga mokeezi mokeezi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619757,
+    "external_key": "ABMS-ZA90",
+    "taxon": "Apallaga mokeezi separata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619759,
+    "external_key": "ABMS-ZA93",
+    "taxon": "Kobelana kobela",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619761,
+    "external_key": "ABMS-ZA94",
+    "taxon": "Kobelana krooni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619763,
+    "external_key": "ABMS-ZA107",
+    "taxon": "Eagris nottoana knysna",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619765,
+    "external_key": "ABMS-ZA108",
+    "taxon": "Eagris nottoana nottoana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619767,
+    "external_key": "ABMS-ZA178",
+    "taxon": "Chrysoritis adonis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619769,
+    "external_key": "ABMS-ZA179",
+    "taxon": "Chrysoritis aethon",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619771,
+    "external_key": "ABMS-ZA180",
+    "taxon": "Chrysoritis amatola",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619773,
+    "external_key": "ABMS-ZA181",
+    "taxon": "Chrysoritis aridimontis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619775,
+    "external_key": "ABMS-ZA182",
+    "taxon": "Chrysoritis aridus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619777,
+    "external_key": "ABMS-ZA183",
+    "taxon": "Chrysoritis aureus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619779,
+    "external_key": "ABMS-ZA184",
+    "taxon": "Chrysoritis azurius",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619781,
+    "external_key": "ABMS-ZA185",
+    "taxon": "Chrysoritis beaufortia beaufortia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619783,
+    "external_key": "ABMS-ZA186",
+    "taxon": "Chrysoritis beaufortia charlesi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619785,
+    "external_key": "ABMS-ZA187",
+    "taxon": "Chrysoritis beaufortia sutherlandensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619787,
+    "external_key": "ABMS-ZA188",
+    "taxon": "Chrysoritis beulah",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619789,
+    "external_key": "ABMS-ZA277",
+    "taxon": "Lafron orus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619791,
+    "external_key": "ABMS-ZA189",
+    "taxon": "Chrysoritis blencathrae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619793,
+    "external_key": "ABMS-ZA190",
+    "taxon": "Chrysoritis braueri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619795,
+    "external_key": "ABMS-ZA191",
+    "taxon": "Chrysoritis brooksi brooksi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619797,
+    "external_key": "ABMS-ZA192",
+    "taxon": "Chrysoritis brooksi tearei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619799,
+    "external_key": "ABMS-ZA193",
+    "taxon": "Chrysoritis chrysantas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619801,
+    "external_key": "ABMS-ZA194",
+    "taxon": "Chrysoritis chrysaor chrysaor",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619803,
+    "external_key": "ABMS-ZA195",
+    "taxon": "Chrysoritis chrysaor midas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619805,
+    "external_key": "ABMS-ZA196",
+    "taxon": "Chrysoritis chrysaor natalensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619807,
+    "external_key": "ABMS-ZA197",
+    "taxon": "Chrysoritis daphne",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619809,
+    "external_key": "ABMS-ZA198",
+    "taxon": "Chrysoritis dicksoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619811,
+    "external_key": "ABMS-ZA199",
+    "taxon": "Chrysoritis endymion",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619813,
+    "external_key": "ABMS-ZA200",
+    "taxon": "Chrysoritis felthami dukei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619815,
+    "external_key": "ABMS-ZA201",
+    "taxon": "Chrysoritis felthami felthami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619817,
+    "external_key": "ABMS-ZA202",
+    "taxon": "Chrysoritis irene",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619819,
+    "external_key": "ABMS-ZA203",
+    "taxon": "Chrysoritis lyncurium lycegenes",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619821,
+    "external_key": "ABMS-ZA204",
+    "taxon": "Chrysoritis lyncurium lyncurium",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619823,
+    "external_key": "ABMS-ZA205",
+    "taxon": "Chrysoritis lyndseyae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619825,
+    "external_key": "ABMS-ZA206",
+    "taxon": "Chrysoritis lysander",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619827,
+    "external_key": "ABMS-ZA207",
+    "taxon": "Chrysoritis mithras",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619829,
+    "external_key": "ABMS-ZA208",
+    "taxon": "Chrysoritis nigricans",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619831,
+    "external_key": "ABMS-ZA209",
+    "taxon": "Chrysoritis oreas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619833,
+    "external_key": "ABMS-ZA210",
+    "taxon": "Chrysoritis orientalis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619835,
+    "external_key": "ABMS-ZA211",
+    "taxon": "Chrysoritis palmus margueritae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619837,
+    "external_key": "ABMS-ZA212",
+    "taxon": "Chrysoritis palmus palmus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619839,
+    "external_key": "ABMS-ZA213",
+    "taxon": "Chrysoritis pan atlantica",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619841,
+    "external_key": "ABMS-ZA214",
+    "taxon": "Chrysoritis pan henningi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619843,
+    "external_key": "ABMS-ZA215",
+    "taxon": "Chrysoritis pan pan",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619845,
+    "external_key": "ABMS-ZA216",
+    "taxon": "Chrysoritis pelion",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619847,
+    "external_key": "ABMS-ZA217",
+    "taxon": "Chrysoritis penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619849,
+    "external_key": "ABMS-ZA218",
+    "taxon": "Chrysoritis perseus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619851,
+    "external_key": "ABMS-ZA219",
+    "taxon": "Chrysoritis phosphor borealis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619853,
+    "external_key": "ABMS-ZA220",
+    "taxon": "Chrysoritis phosphor phosphor",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619855,
+    "external_key": "ABMS-ZA221",
+    "taxon": "Chrysoritis plutus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619857,
+    "external_key": "ABMS-ZA222",
+    "taxon": "Chrysoritis pyramus balli",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619859,
+    "external_key": "ABMS-ZA223",
+    "taxon": "Chrysoritis pyramus pyramus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619861,
+    "external_key": "ABMS-ZA224",
+    "taxon": "Chrysoritis pyroeis hersaleki",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619863,
+    "external_key": "ABMS-ZA225",
+    "taxon": "Chrysoritis pyroeis pyroeis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619865,
+    "external_key": "ABMS-ZA226",
+    "taxon": "Chrysoritis rileyi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619867,
+    "external_key": "ABMS-ZA227",
+    "taxon": "Chrysoritis stepheni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619869,
+    "external_key": "ABMS-ZA228",
+    "taxon": "Chrysoritis swanepoeli hyperion",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619871,
+    "external_key": "ABMS-ZA229",
+    "taxon": "Chrysoritis swanepoeli swanepoeli",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619873,
+    "external_key": "ABMS-ZA230",
+    "taxon": "Chrysoritis thysbe bamptoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619875,
+    "external_key": "ABMS-ZA231",
+    "taxon": "Chrysoritis thysbe psyche",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619877,
+    "external_key": "ABMS-ZA232",
+    "taxon": "Chrysoritis thysbe schloszae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619879,
+    "external_key": "ABMS-ZA233",
+    "taxon": "Chrysoritis thysbe thysbe",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619881,
+    "external_key": "ABMS-ZA234",
+    "taxon": "Chrysoritis trimeni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619883,
+    "external_key": "ABMS-ZA235",
+    "taxon": "Chrysoritis turneri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619885,
+    "external_key": "ABMS-ZA236",
+    "taxon": "Chrysoritis uranus schoemani",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619887,
+    "external_key": "ABMS-ZA237",
+    "taxon": "Chrysoritis uranus uranus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619889,
+    "external_key": "ABMS-ZA238",
+    "taxon": "Chrysoritis violescens",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619891,
+    "external_key": "ABMS-ZA239",
+    "taxon": "Chrysoritis whitei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619893,
+    "external_key": "ABMS-ZA240",
+    "taxon": "Chrysoritis williami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619895,
+    "external_key": "ABMS-ZA241",
+    "taxon": "Chrysoritis wykehami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619897,
+    "external_key": "ABMS-ZA242",
+    "taxon": "Chrysoritis zeuxo cottrelli",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619899,
+    "external_key": "ABMS-ZA243",
+    "taxon": "Chrysoritis zeuxo zeuxo",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619901,
+    "external_key": "ABMS-ZA244",
+    "taxon": "Chrysoritis zonarius coetzeri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619903,
+    "external_key": "ABMS-ZA245",
+    "taxon": "Chrysoritis zonarius zonarius",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619905,
+    "external_key": "ABMS-ZA246",
+    "taxon": "Chrysoritis zwartbergae rubrescens",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619907,
+    "external_key": "ABMS-ZA247",
+    "taxon": "Chrysoritis zwartbergae zwartbergae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619909,
+    "external_key": "ABMS-ZA257",
+    "taxon": "Phasis braueri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619911,
+    "external_key": "ABMS-ZA258",
+    "taxon": "Phasis clavum clavum",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619913,
+    "external_key": "ABMS-ZA259",
+    "taxon": "Phasis clavum erythema",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619915,
+    "external_key": "ABMS-ZA260",
+    "taxon": "Phasis pringlei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619917,
+    "external_key": "ABMS-ZA261",
+    "taxon": "Phasis thero cedarbergae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619919,
+    "external_key": "ABMS-ZA262",
+    "taxon": "Phasis thero thero",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619921,
+    "external_key": "ABMS-ZA263",
+    "taxon": "Trimenia argyroplaga argyroplaga",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619923,
+    "external_key": "ABMS-ZA264",
+    "taxon": "Trimenia argyroplaga cardouwae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619925,
+    "external_key": "ABMS-ZA265",
+    "taxon": "Trimenia macmasteri macmasteri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619927,
+    "external_key": "ABMS-ZA266",
+    "taxon": "Trimenia macmasteri mijburghi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619929,
+    "external_key": "ABMS-ZA267",
+    "taxon": "Trimenia malagrida cedrusmontana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619931,
+    "external_key": "ABMS-ZA268",
+    "taxon": "Trimenia malagrida malagrida",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619933,
+    "external_key": "ABMS-ZA269",
+    "taxon": "Trimenia malagrida maryae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619935,
+    "external_key": "ABMS-ZA270",
+    "taxon": "Trimenia malagrida paarlensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619937,
+    "external_key": "ABMS-ZA271",
+    "taxon": "Trimenia wallengrenii gonnemoi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619939,
+    "external_key": "ABMS-ZA272",
+    "taxon": "Trimenia wallengrenii wallengrenii",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619941,
+    "external_key": "ABMS-ZA273",
+    "taxon": "Trimenia wykehami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619943,
+    "external_key": "ABMS-ZA276",
+    "taxon": "Lafron clarki",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619945,
+    "external_key": "ABMS-ZA316",
+    "taxon": "Aslauga australis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619947,
+    "external_key": "ABMS-ZA331",
+    "taxon": "Actizera lucida",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619949,
+    "external_key": "ABMS-ZA332",
+    "taxon": "Actizera stellata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619951,
+    "external_key": "ABMS-ZA354",
+    "taxon": "Harpendyreus noquasa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619953,
+    "external_key": "ABMS-ZA355",
+    "taxon": "Harpendyreus notoba",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619955,
+    "external_key": "ABMS-ZA356",
+    "taxon": "Harpendyreus tsomo",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619957,
+    "external_key": "ABMS-ZA417",
+    "taxon": "Orachrysops ariadne",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619959,
+    "external_key": "ABMS-ZA418",
+    "taxon": "Orachrysops brinkmani",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619961,
+    "external_key": "ABMS-ZA419",
+    "taxon": "Orachrysops lacrimosa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619963,
+    "external_key": "ABMS-ZA420",
+    "taxon": "Orachrysops mijburghi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619965,
+    "external_key": "ABMS-ZA421",
+    "taxon": "Orachrysops montanus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619967,
+    "external_key": "ABMS-ZA422",
+    "taxon": "Orachrysops nasutus nasutus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619969,
+    "external_key": "ABMS-ZA423",
+    "taxon": "Orachrysops nasutus remus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619971,
+    "external_key": "ABMS-ZA424",
+    "taxon": "Orachrysops niobe",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619973,
+    "external_key": "ABMS-ZA425",
+    "taxon": "Orachrysops regalis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619975,
+    "external_key": "ABMS-ZA426",
+    "taxon": "Orachrysops subravus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619977,
+    "external_key": "ABMS-ZA427",
+    "taxon": "Orachrysops violescens",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619979,
+    "external_key": "ABMS-ZA428",
+    "taxon": "Orachrysops warreni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619981,
+    "external_key": "ABMS-ZA440",
+    "taxon": "Uranothauma nubifer nubifer",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619983,
+    "external_key": "ABMS-ZA446",
+    "taxon": "Durbania amakosa albescens",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619985,
+    "external_key": "ABMS-ZA447",
+    "taxon": "Durbania amakosa amakosa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619987,
+    "external_key": "ABMS-ZA448",
+    "taxon": "Durbania amakosa ayresi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619989,
+    "external_key": "ABMS-ZA449",
+    "taxon": "Durbania amakosa flavida",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619991,
+    "external_key": "ABMS-ZA450",
+    "taxon": "Durbania amakosa natalensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619993,
+    "external_key": "ABMS-ZA451",
+    "taxon": "Durbania amakosa penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619995,
+    "external_key": "ABMS-ZA452",
+    "taxon": "Durbania amakosa sagittata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619997,
+    "external_key": "ABMS-ZA453",
+    "taxon": "Durbania limbata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 619999,
+    "external_key": "ABMS-ZA454",
+    "taxon": "Durbaniella clarki belladonna",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620001,
+    "external_key": "ABMS-ZA455",
+    "taxon": "Durbaniella clarki clarki",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620003,
+    "external_key": "ABMS-ZA456",
+    "taxon": "Durbaniella clarki jenniferae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620005,
+    "external_key": "ABMS-ZA457",
+    "taxon": "Durbaniella clarki phaea",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620007,
+    "external_key": "ABMS-ZA458",
+    "taxon": "Durbaniopsis saga",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620009,
+    "external_key": "ABMS-ZA459",
+    "taxon": "Deloneura immaculata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620011,
+    "external_key": "ABMS-ZA460",
+    "taxon": "Deloneura millari millari",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620013,
+    "external_key": "ABMS-ZA464",
+    "taxon": "Teriomima zuluana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620015,
+    "external_key": "ABMS-ZA468",
+    "taxon": "Ornipholidotos peucetia penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620017,
+    "external_key": "ABMS-ZA469",
+    "taxon": "Pentila tropicalis fuscipunctata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620019,
+    "external_key": "ABMS-ZA470",
+    "taxon": "Pentila tropicalis tropicalis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620021,
+    "external_key": "ABMS-ZA474",
+    "taxon": "Capys alpheus alpheus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620023,
+    "external_key": "ABMS-ZA475",
+    "taxon": "Capys alpheus extentus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620025,
+    "external_key": "ABMS-ZA476",
+    "taxon": "Capys disjunctus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620027,
+    "external_key": "ABMS-ZA477",
+    "taxon": "Capys penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620029,
+    "external_key": "ABMS-ZA567",
+    "taxon": "Bematistes aganice aganice",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620031,
+    "external_key": "ABMS-ZA647",
+    "taxon": "Dingana jerinae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620033,
+    "external_key": "ABMS-ZA636",
+    "taxon": "Antanartia schaeneia schaeneia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620035,
+    "external_key": "ABMS-ZA640",
+    "taxon": "Aeropetes tulbaghia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620037,
+    "external_key": "ABMS-ZA641",
+    "taxon": "Dingana alaedeus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620039,
+    "external_key": "ABMS-ZA642",
+    "taxon": "Dingana alticola",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620041,
+    "external_key": "ABMS-ZA643",
+    "taxon": "Dingana angusta",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620043,
+    "external_key": "ABMS-ZA644",
+    "taxon": "Dingana clara",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620045,
+    "external_key": "ABMS-ZA645",
+    "taxon": "Dingana dingana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620047,
+    "external_key": "ABMS-ZA646",
+    "taxon": "Dingana fraterna",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620049,
+    "external_key": "ABMS-ZA648",
+    "taxon": "Dira clytus clytus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620051,
+    "external_key": "ABMS-ZA649",
+    "taxon": "Dira clytus eurina",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620053,
+    "external_key": "ABMS-ZA650",
+    "taxon": "Dira jansei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620055,
+    "external_key": "ABMS-ZA651",
+    "taxon": "Dira oxylus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620057,
+    "external_key": "ABMS-ZA652",
+    "taxon": "Dira swanepoeli isolata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620059,
+    "external_key": "ABMS-ZA653",
+    "taxon": "Dira swanepoeli swanepoeli",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620061,
+    "external_key": "ABMS-ZA654",
+    "taxon": "Paralethe dendrophilus albina",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620063,
+    "external_key": "ABMS-ZA655",
+    "taxon": "Paralethe dendrophilus dendrophilus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620065,
+    "external_key": "ABMS-ZA656",
+    "taxon": "Paralethe dendrophilus indosa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620067,
+    "external_key": "ABMS-ZA657",
+    "taxon": "Paralethe dendrophilus junodi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620069,
+    "external_key": "ABMS-ZA658",
+    "taxon": "Serradinga bowkeri bella",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620071,
+    "external_key": "ABMS-ZA659",
+    "taxon": "Serradinga bowkeri bowkeri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620073,
+    "external_key": "ABMS-ZA660",
+    "taxon": "Serradinga clarki amissivallis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620075,
+    "external_key": "ABMS-ZA661",
+    "taxon": "Serradinga clarki clarki",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620077,
+    "external_key": "ABMS-ZA662",
+    "taxon": "Serradinga clarki dracomontana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620079,
+    "external_key": "ABMS-ZA663",
+    "taxon": "Serradinga clarki ocra",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620081,
+    "external_key": "ABMS-ZA664",
+    "taxon": "Serradinga kammanassiensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620083,
+    "external_key": "ABMS-ZA665",
+    "taxon": "Tarsocera cassina",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620085,
+    "external_key": "ABMS-ZA666",
+    "taxon": "Tarsocera cassus cassus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620087,
+    "external_key": "ABMS-ZA667",
+    "taxon": "Tarsocera cassus outeniqua",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620089,
+    "external_key": "ABMS-ZA668",
+    "taxon": "Tarsocera dicksoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620091,
+    "external_key": "ABMS-ZA669",
+    "taxon": "Tarsocera fulvina",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620093,
+    "external_key": "ABMS-ZA670",
+    "taxon": "Tarsocera imitator",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620095,
+    "external_key": "ABMS-ZA671",
+    "taxon": "Tarsocera namaquensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620097,
+    "external_key": "ABMS-ZA672",
+    "taxon": "Tarsocera southeyae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620099,
+    "external_key": "ABMS-ZA673",
+    "taxon": "Torynesis hawequas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620101,
+    "external_key": "ABMS-ZA674",
+    "taxon": "Torynesis magna",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620103,
+    "external_key": "ABMS-ZA675",
+    "taxon": "Torynesis mintha mintha",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620105,
+    "external_key": "ABMS-ZA676",
+    "taxon": "Torynesis mintha piquetbergensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620107,
+    "external_key": "ABMS-ZA677",
+    "taxon": "Torynesis orangica",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620109,
+    "external_key": "ABMS-ZA678",
+    "taxon": "Torynesis pringlei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620111,
+    "external_key": "ABMS-ZA679",
+    "taxon": "Gnophodes diversa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620113,
+    "external_key": "ABMS-ZA686",
+    "taxon": "Cassionympha camdeboo",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620115,
+    "external_key": "ABMS-ZA687",
+    "taxon": "Cassionympha cassius",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620117,
+    "external_key": "ABMS-ZA688",
+    "taxon": "Cassionympha detecta",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620119,
+    "external_key": "ABMS-ZA689",
+    "taxon": "Cassionympha perissinottoi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620121,
+    "external_key": "ABMS-ZA690",
+    "taxon": "Coenyra aurantiaca",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620123,
+    "external_key": "ABMS-ZA691",
+    "taxon": "Coenyra hebe",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620125,
+    "external_key": "ABMS-ZA692",
+    "taxon": "Coenyra rufiplaga",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620127,
+    "external_key": "ABMS-ZA695",
+    "taxon": "Melampias huebneri huebneri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620129,
+    "external_key": "ABMS-ZA696",
+    "taxon": "Melampias huebneri steniptera",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620131,
+    "external_key": "ABMS-ZA697",
+    "taxon": "Neita durbani",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620133,
+    "external_key": "ABMS-ZA698",
+    "taxon": "Neita extensa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620135,
+    "external_key": "ABMS-ZA699",
+    "taxon": "Neita lotenia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620137,
+    "external_key": "ABMS-ZA700",
+    "taxon": "Neita neita",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620139,
+    "external_key": "ABMS-ZA703",
+    "taxon": "Pseudonympha gaika",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620141,
+    "external_key": "ABMS-ZA704",
+    "taxon": "Pseudonympha hippia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620143,
+    "external_key": "ABMS-ZA705",
+    "taxon": "Pseudonympha machacha",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620145,
+    "external_key": "ABMS-ZA706",
+    "taxon": "Pseudonympha magoides",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620147,
+    "external_key": "ABMS-ZA707",
+    "taxon": "Pseudonympha magus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620149,
+    "external_key": "ABMS-ZA708",
+    "taxon": "Pseudonympha paludis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620151,
+    "external_key": "ABMS-ZA709",
+    "taxon": "Pseudonympha paragaika",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620153,
+    "external_key": "ABMS-ZA710",
+    "taxon": "Pseudonympha penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620155,
+    "external_key": "ABMS-ZA711",
+    "taxon": "Pseudonympha poetula",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620157,
+    "external_key": "ABMS-ZA712",
+    "taxon": "Pseudonympha southeyi kamiesbergensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620159,
+    "external_key": "ABMS-ZA713",
+    "taxon": "Pseudonympha southeyi southeyi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620161,
+    "external_key": "ABMS-ZA714",
+    "taxon": "Pseudonympha southeyi wykehami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620163,
+    "external_key": "ABMS-ZA715",
+    "taxon": "Pseudonympha swanepoeli",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620165,
+    "external_key": "ABMS-ZA716",
+    "taxon": "Pseudonympha trimenii namaquana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620167,
+    "external_key": "ABMS-ZA717",
+    "taxon": "Pseudonympha trimenii nieuwveldensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620169,
+    "external_key": "ABMS-ZA718",
+    "taxon": "Pseudonympha trimenii ruthae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620171,
+    "external_key": "ABMS-ZA719",
+    "taxon": "Pseudonympha trimenii trimenii",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620173,
+    "external_key": "ABMS-ZA720",
+    "taxon": "Pseudonympha varii",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620175,
+    "external_key": "ABMS-ZA102",
+    "taxon": "Abantis bicolor",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620177,
+    "external_key": "ABMS-ZA106",
+    "taxon": "Abantis venosa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620179,
+    "external_key": "ABMS-ZA562",
+    "taxon": "Acraea boopis boopis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620181,
+    "external_key": "ABMS-ZA563",
+    "taxon": "Acraea horta",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620183,
+    "external_key": "ABMS-ZA33",
+    "taxon": "Afrogegenes ocra",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620185,
+    "external_key": "ABMS-ZA72",
+    "taxon": "Agyllia agylla bamptoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620187,
+    "external_key": "ABMS-ZA73",
+    "taxon": "Agyllia asterodia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620189,
+    "external_key": "ABMS-ZA465",
+    "taxon": "Alaena amazoula amazoula",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620191,
+    "external_key": "ABMS-ZA467",
+    "taxon": "Alaena margaritacea",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620193,
+    "external_key": "ABMS-ZA88",
+    "taxon": "Alenia sandaster",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620195,
+    "external_key": "ABMS-ZA110",
+    "taxon": "Aloeides almeida",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620197,
+    "external_key": "ABMS-ZA111",
+    "taxon": "Aloeides apicalis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620199,
+    "external_key": "ABMS-ZA112",
+    "taxon": "Aloeides aranda",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620201,
+    "external_key": "ABMS-ZA113",
+    "taxon": "Aloeides arida",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620203,
+    "external_key": "ABMS-ZA114",
+    "taxon": "Aloeides bamptoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620205,
+    "external_key": "ABMS-ZA115",
+    "taxon": "Aloeides barbarae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620207,
+    "external_key": "ABMS-ZA116",
+    "taxon": "Aloeides barklyi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620209,
+    "external_key": "ABMS-ZA117",
+    "taxon": "Aloeides braueri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620211,
+    "external_key": "ABMS-ZA118",
+    "taxon": "Aloeides caffrariae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620213,
+    "external_key": "ABMS-ZA119",
+    "taxon": "Aloeides caledoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620215,
+    "external_key": "ABMS-ZA120",
+    "taxon": "Aloeides carolynnae aurata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620217,
+    "external_key": "ABMS-ZA121",
+    "taxon": "Aloeides carolynnae carolynnae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620219,
+    "external_key": "ABMS-ZA122",
+    "taxon": "Aloeides clarki",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620221,
+    "external_key": "ABMS-ZA124",
+    "taxon": "Aloeides damarensis mashona",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620223,
+    "external_key": "ABMS-ZA125",
+    "taxon": "Aloeides dentatis dentatis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620225,
+    "external_key": "ABMS-ZA126",
+    "taxon": "Aloeides dentatis maseruna",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620227,
+    "external_key": "ABMS-ZA127",
+    "taxon": "Aloeides depicta",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620229,
+    "external_key": "ABMS-ZA128",
+    "taxon": "Aloeides dicksoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620231,
+    "external_key": "ABMS-ZA129",
+    "taxon": "Aloeides dryas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620233,
+    "external_key": "ABMS-ZA130",
+    "taxon": "Aloeides egerides",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620235,
+    "external_key": "ABMS-ZA131",
+    "taxon": "Aloeides gowani",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620237,
+    "external_key": "ABMS-ZA132",
+    "taxon": "Aloeides henningi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620239,
+    "external_key": "ABMS-ZA133",
+    "taxon": "Aloeides juana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620241,
+    "external_key": "ABMS-ZA134",
+    "taxon": "Aloeides kaplani",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620243,
+    "external_key": "ABMS-ZA135",
+    "taxon": "Aloeides lutescens",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620245,
+    "external_key": "ABMS-ZA136",
+    "taxon": "Aloeides macmasteri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620247,
+    "external_key": "ABMS-ZA137",
+    "taxon": "Aloeides maluti",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620249,
+    "external_key": "ABMS-ZA138",
+    "taxon": "Aloeides margaretae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620251,
+    "external_key": "ABMS-ZA139",
+    "taxon": "Aloeides mbuluensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620253,
+    "external_key": "ABMS-ZA140",
+    "taxon": "Aloeides merces",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620255,
+    "external_key": "ABMS-ZA142",
+    "taxon": "Aloeides molomo molomo",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620257,
+    "external_key": "ABMS-ZA143",
+    "taxon": "Aloeides monticola",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620259,
+    "external_key": "ABMS-ZA144",
+    "taxon": "Aloeides nollothi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620261,
+    "external_key": "ABMS-ZA145",
+    "taxon": "Aloeides nubilus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620263,
+    "external_key": "ABMS-ZA146",
+    "taxon": "Aloeides oreas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620265,
+    "external_key": "ABMS-ZA147",
+    "taxon": "Aloeides pallida grandis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620267,
+    "external_key": "ABMS-ZA148",
+    "taxon": "Aloeides pallida jonathani",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620269,
+    "external_key": "ABMS-ZA149",
+    "taxon": "Aloeides pallida juno",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620271,
+    "external_key": "ABMS-ZA150",
+    "taxon": "Aloeides pallida littoralis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620273,
+    "external_key": "ABMS-ZA151",
+    "taxon": "Aloeides pallida liversidgei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620275,
+    "external_key": "ABMS-ZA152",
+    "taxon": "Aloeides pallida pallida",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620277,
+    "external_key": "ABMS-ZA153",
+    "taxon": "Aloeides penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620279,
+    "external_key": "ABMS-ZA154",
+    "taxon": "Aloeides pierus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620281,
+    "external_key": "ABMS-ZA155",
+    "taxon": "Aloeides pringlei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620283,
+    "external_key": "ABMS-ZA156",
+    "taxon": "Aloeides quickelbergei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620285,
+    "external_key": "ABMS-ZA157",
+    "taxon": "Aloeides rileyi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620287,
+    "external_key": "ABMS-ZA158",
+    "taxon": "Aloeides rossouwi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620289,
+    "external_key": "ABMS-ZA160",
+    "taxon": "Aloeides stevensoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620291,
+    "external_key": "ABMS-ZA161",
+    "taxon": "Aloeides susanae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620293,
+    "external_key": "ABMS-ZA162",
+    "taxon": "Aloeides swanepoeli",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620295,
+    "external_key": "ABMS-ZA164",
+    "taxon": "Aloeides thyra orientis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620297,
+    "external_key": "ABMS-ZA165",
+    "taxon": "Aloeides thyra thyra",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620299,
+    "external_key": "ABMS-ZA166",
+    "taxon": "Aloeides titei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620301,
+    "external_key": "ABMS-ZA167",
+    "taxon": "Aloeides trimeni southeyae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620303,
+    "external_key": "ABMS-ZA169",
+    "taxon": "Aloeides vansoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620305,
+    "external_key": "ABMS-ZA554",
+    "taxon": "Amauris albimaculata albimaculata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620307,
+    "external_key": "ABMS-ZA555",
+    "taxon": "Amauris echeria echeria",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620309,
+    "external_key": "ABMS-ZA557",
+    "taxon": "Amauris niavius dominicanus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620311,
+    "external_key": "ABMS-ZA50",
+    "taxon": "Andronymus caesar philander",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620313,
+    "external_key": "ABMS-ZA318",
+    "taxon": "Anthene crawshayi juanitae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620315,
+    "external_key": "ABMS-ZA321",
+    "taxon": "Anthene larydas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620317,
+    "external_key": "ABMS-ZA322",
+    "taxon": "Anthene lemnos lemnos",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620319,
+    "external_key": "ABMS-ZA323",
+    "taxon": "Anthene lindae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620321,
+    "external_key": "ABMS-ZA324",
+    "taxon": "Anthene liodes bihe",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620323,
+    "external_key": "ABMS-ZA326",
+    "taxon": "Anthene millari",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620325,
+    "external_key": "ABMS-ZA782",
+    "taxon": "Appias sabina phoebe",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620327,
+    "external_key": "ABMS-ZA173",
+    "taxon": "Axiocerses coalescens",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620329,
+    "external_key": "ABMS-ZA174",
+    "taxon": "Axiocerses croesus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620331,
+    "external_key": "ABMS-ZA336",
+    "taxon": "Azanus natalensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620333,
+    "external_key": "ABMS-ZA461",
+    "taxon": "Baliochila aslanga",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620335,
+    "external_key": "ABMS-ZA462",
+    "taxon": "Baliochila lipara",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620337,
+    "external_key": "ABMS-ZA771",
+    "taxon": "Belenois thysa thysa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620339,
+    "external_key": "ABMS-ZA772",
+    "taxon": "Belenois zochalia zochalia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620341,
+    "external_key": "ABMS-ZA35",
+    "taxon": "Borbo detecta",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620343,
+    "external_key": "ABMS-ZA38",
+    "taxon": "Borbo ferruginea dondo",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620345,
+    "external_key": "ABMS-ZA39",
+    "taxon": "Borbo lugens",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620347,
+    "external_key": "ABMS-ZA339",
+    "taxon": "Cacyreus dicksoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620349,
+    "external_key": "ABMS-ZA340",
+    "taxon": "Cacyreus fracta fracta",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620351,
+    "external_key": "ABMS-ZA520",
+    "taxon": "Charaxes castor flavifasciatus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620353,
+    "external_key": "ABMS-ZA521",
+    "taxon": "Charaxes cithaeron cithaeron",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620355,
+    "external_key": "ABMS-ZA522",
+    "taxon": "Charaxes druceanus druceanus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620357,
+    "external_key": "ABMS-ZA523",
+    "taxon": "Charaxes druceanus entabeni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620359,
+    "external_key": "ABMS-ZA524",
+    "taxon": "Charaxes druceanus moerens",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620361,
+    "external_key": "ABMS-ZA525",
+    "taxon": "Charaxes druceanus solitaria",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620363,
+    "external_key": "ABMS-ZA526",
+    "taxon": "Charaxes pelias",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620365,
+    "external_key": "ABMS-ZA527",
+    "taxon": "Charaxes protoclea azota",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620367,
+    "external_key": "ABMS-ZA530",
+    "taxon": "Charaxes xiphares bavenda",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620369,
+    "external_key": "ABMS-ZA531",
+    "taxon": "Charaxes xiphares draconis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620371,
+    "external_key": "ABMS-ZA532",
+    "taxon": "Charaxes xiphares kenwayi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620373,
+    "external_key": "ABMS-ZA533",
+    "taxon": "Charaxes xiphares occidentalis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620375,
+    "external_key": "ABMS-ZA534",
+    "taxon": "Charaxes xiphares penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620377,
+    "external_key": "ABMS-ZA535",
+    "taxon": "Charaxes xiphares staudei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620379,
+    "external_key": "ABMS-ZA536",
+    "taxon": "Charaxes xiphares thyestes",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620381,
+    "external_key": "ABMS-ZA537",
+    "taxon": "Charaxes xiphares xiphares",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620383,
+    "external_key": "ABMS-ZA539",
+    "taxon": "Charaxes etesipe tavetensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620385,
+    "external_key": "ABMS-ZA540",
+    "taxon": "Charaxes ethalion ethalion",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620387,
+    "external_key": "ABMS-ZA542",
+    "taxon": "Charaxes jahlusa argynnides",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620389,
+    "external_key": "ABMS-ZA543",
+    "taxon": "Charaxes jahlusa jahlusa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620391,
+    "external_key": "ABMS-ZA545",
+    "taxon": "Charaxes karkloof karkloof",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620393,
+    "external_key": "ABMS-ZA546",
+    "taxon": "Charaxes karkloof trimeni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620395,
+    "external_key": "ABMS-ZA547",
+    "taxon": "Charaxes marieps",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620397,
+    "external_key": "ABMS-ZA549",
+    "taxon": "Charaxes pondoensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620399,
+    "external_key": "ABMS-ZA551",
+    "taxon": "Charaxes wakefieldi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620401,
+    "external_key": "ABMS-ZA249",
+    "taxon": "Cigaritis mozambica",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620403,
+    "external_key": "ABMS-ZA1",
+    "taxon": "Coeliades anchises anchises",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620405,
+    "external_key": "ABMS-ZA5",
+    "taxon": "Coeliades lorenzo",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620407,
+    "external_key": "ABMS-ZA694",
+    "taxon": "Coenyropsis natalii poetulodes",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620409,
+    "external_key": "ABMS-ZA793",
+    "taxon": "Colotis erone",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620411,
+    "external_key": "ABMS-ZA253",
+    "taxon": "Crudaria capensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620413,
+    "external_key": "ABMS-ZA255",
+    "taxon": "Crudaria wykehami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620415,
+    "external_key": "ABMS-ZA604",
+    "taxon": "Cymothoe alcimeda alcimeda",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620417,
+    "external_key": "ABMS-ZA605",
+    "taxon": "Cymothoe alcimeda clarki",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620419,
+    "external_key": "ABMS-ZA606",
+    "taxon": "Cymothoe alcimeda marieps",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620421,
+    "external_key": "ABMS-ZA607",
+    "taxon": "Cymothoe alcimeda transvaalica",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620423,
+    "external_key": "ABMS-ZA608",
+    "taxon": "Cymothoe alcimeda trimeni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620425,
+    "external_key": "ABMS-ZA553",
+    "taxon": "Cyrestis camillus sublineata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620427,
+    "external_key": "ABMS-ZA558",
+    "taxon": "Danaus chrysippus alcippus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620429,
+    "external_key": "ABMS-ZA559",
+    "taxon": "Danaus chrysippus dorippus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620431,
+    "external_key": "ABMS-ZA479",
+    "taxon": "Deudorix dariaves",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620433,
+    "external_key": "ABMS-ZA481",
+    "taxon": "Deudorix dinomenes dinomenes",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620435,
+    "external_key": "ABMS-ZA482",
+    "taxon": "Deudorix diocles",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620437,
+    "external_key": "ABMS-ZA483",
+    "taxon": "Deudorix vansoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620439,
+    "external_key": "ABMS-ZA773",
+    "taxon": "Dixeia charina charina",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620441,
+    "external_key": "ABMS-ZA774",
+    "taxon": "Dixeia doxo parva",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620443,
+    "external_key": "ABMS-ZA775",
+    "taxon": "Dixeia leucophanes",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620445,
+    "external_key": "ABMS-ZA348",
+    "taxon": "Eicochrysops messapus messapus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620447,
+    "external_key": "ABMS-ZA77",
+    "taxon": "Ernsta sataspes",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620449,
+    "external_key": "ABMS-ZA79",
+    "taxon": "Ernsta confusa confusa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620451,
+    "external_key": "ABMS-ZA80",
+    "taxon": "Ernsta dromus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620453,
+    "external_key": "ABMS-ZA82",
+    "taxon": "Ernsta secessus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620455,
+    "external_key": "ABMS-ZA349",
+    "taxon": "Euchrysops barkeri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620457,
+    "external_key": "ABMS-ZA350",
+    "taxon": "Euchrysops dolorosa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620459,
+    "external_key": "ABMS-ZA601",
+    "taxon": "Euphaedra neophron neophron",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620461,
+    "external_key": "ABMS-ZA512",
+    "taxon": "Eurytela hiarbas angustata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620463,
+    "external_key": "ABMS-ZA744",
+    "taxon": "Graphium policenes policenes",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620465,
+    "external_key": "ABMS-ZA620",
+    "taxon": "Hypolimnas anthedon wahlbergi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620467,
+    "external_key": "ABMS-ZA621",
+    "taxon": "Hypolimnas deceptor deceptor",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620469,
+    "external_key": "ABMS-ZA485",
+    "taxon": "Hypolycaena buxtoni buxtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620471,
+    "external_key": "ABMS-ZA486",
+    "taxon": "Hypolycaena lochmophila",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620473,
+    "external_key": "ABMS-ZA494",
+    "taxon": "Iolaus silas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620475,
+    "external_key": "ABMS-ZA495",
+    "taxon": "Iolaus aemulus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620477,
+    "external_key": "ABMS-ZA497",
+    "taxon": "Iolaus aphnaeoides",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620479,
+    "external_key": "ABMS-ZA498",
+    "taxon": "Iolaus diametra natalica",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620481,
+    "external_key": "ABMS-ZA499",
+    "taxon": "Iolaus mimosae mimosae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620483,
+    "external_key": "ABMS-ZA502",
+    "taxon": "Iolaus sidus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620485,
+    "external_key": "ABMS-ZA504",
+    "taxon": "Iolaus lulua",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620487,
+    "external_key": "ABMS-ZA623",
+    "taxon": "Junonia elgiva",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620489,
+    "external_key": "ABMS-ZA10",
+    "taxon": "Kedestes lenis alba",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620491,
+    "external_key": "ABMS-ZA11",
+    "taxon": "Kedestes lenis lenis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620493,
+    "external_key": "ABMS-ZA14",
+    "taxon": "Kedestes niveostriga niveostriga",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620495,
+    "external_key": "ABMS-ZA15",
+    "taxon": "Kedestes niveostriga schloszi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620497,
+    "external_key": "ABMS-ZA280",
+    "taxon": "Lachnocnema laches",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620499,
+    "external_key": "ABMS-ZA358",
+    "taxon": "Lepidochrysops asteris",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620501,
+    "external_key": "ABMS-ZA359",
+    "taxon": "Lepidochrysops australis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620503,
+    "external_key": "ABMS-ZA360",
+    "taxon": "Lepidochrysops bacchus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620505,
+    "external_key": "ABMS-ZA361",
+    "taxon": "Lepidochrysops badhami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620507,
+    "external_key": "ABMS-ZA362",
+    "taxon": "Lepidochrysops balli",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620509,
+    "external_key": "ABMS-ZA363",
+    "taxon": "Lepidochrysops braueri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620511,
+    "external_key": "ABMS-ZA364",
+    "taxon": "Lepidochrysops dukei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620513,
+    "external_key": "ABMS-ZA365",
+    "taxon": "Lepidochrysops frederikeae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620515,
+    "external_key": "ABMS-ZA367",
+    "taxon": "Lepidochrysops grahami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620517,
+    "external_key": "ABMS-ZA368",
+    "taxon": "Lepidochrysops gydoae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620519,
+    "external_key": "ABMS-ZA369",
+    "taxon": "Lepidochrysops hypopolia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620521,
+    "external_key": "ABMS-ZA370",
+    "taxon": "Lepidochrysops ignota",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620523,
+    "external_key": "ABMS-ZA371",
+    "taxon": "Lepidochrysops irvingi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620525,
+    "external_key": "ABMS-ZA372",
+    "taxon": "Lepidochrysops jamesi claassensi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620527,
+    "external_key": "ABMS-ZA373",
+    "taxon": "Lepidochrysops jamesi jamesi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620529,
+    "external_key": "ABMS-ZA374",
+    "taxon": "Lepidochrysops jefferyi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620531,
+    "external_key": "ABMS-ZA375",
+    "taxon": "Lepidochrysops ketsi ketsi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620533,
+    "external_key": "ABMS-ZA376",
+    "taxon": "Lepidochrysops ketsi leucomacula",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620535,
+    "external_key": "ABMS-ZA377",
+    "taxon": "Lepidochrysops lerothodi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620537,
+    "external_key": "ABMS-ZA379",
+    "taxon": "Lepidochrysops littoralis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620539,
+    "external_key": "ABMS-ZA380",
+    "taxon": "Lepidochrysops loewensteini",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620541,
+    "external_key": "ABMS-ZA381",
+    "taxon": "Lepidochrysops lotana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620543,
+    "external_key": "ABMS-ZA382",
+    "taxon": "Lepidochrysops mcgregori",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620545,
+    "external_key": "ABMS-ZA383",
+    "taxon": "Lepidochrysops methymna dicksoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620547,
+    "external_key": "ABMS-ZA384",
+    "taxon": "Lepidochrysops methymna methymna",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620549,
+    "external_key": "ABMS-ZA385",
+    "taxon": "Lepidochrysops oosthuizeni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620551,
+    "external_key": "ABMS-ZA386",
+    "taxon": "Lepidochrysops oreas junae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620553,
+    "external_key": "ABMS-ZA387",
+    "taxon": "Lepidochrysops oreas oreas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620555,
+    "external_key": "ABMS-ZA388",
+    "taxon": "Lepidochrysops ortygia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620557,
+    "external_key": "ABMS-ZA389",
+    "taxon": "Lepidochrysops outeniqua",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620559,
+    "external_key": "ABMS-ZA391",
+    "taxon": "Lepidochrysops penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620561,
+    "external_key": "ABMS-ZA392",
+    "taxon": "Lepidochrysops pephredo",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620563,
+    "external_key": "ABMS-ZA394",
+    "taxon": "Lepidochrysops poseidon",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620565,
+    "external_key": "ABMS-ZA395",
+    "taxon": "Lepidochrysops praeterita",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620567,
+    "external_key": "ABMS-ZA396",
+    "taxon": "Lepidochrysops pringlei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620569,
+    "external_key": "ABMS-ZA397",
+    "taxon": "Lepidochrysops procera",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620571,
+    "external_key": "ABMS-ZA398",
+    "taxon": "Lepidochrysops puncticilia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620573,
+    "external_key": "ABMS-ZA399",
+    "taxon": "Lepidochrysops quickelbergei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620575,
+    "external_key": "ABMS-ZA400",
+    "taxon": "Lepidochrysops robertsoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620577,
+    "external_key": "ABMS-ZA402",
+    "taxon": "Lepidochrysops southeyae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620579,
+    "external_key": "ABMS-ZA403",
+    "taxon": "Lepidochrysops swanepoeli",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620581,
+    "external_key": "ABMS-ZA404",
+    "taxon": "Lepidochrysops swartbergensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620583,
+    "external_key": "ABMS-ZA405",
+    "taxon": "Lepidochrysops tantalus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620585,
+    "external_key": "ABMS-ZA406",
+    "taxon": "Lepidochrysops titei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620587,
+    "external_key": "ABMS-ZA407",
+    "taxon": "Lepidochrysops trimeni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620589,
+    "external_key": "ABMS-ZA409",
+    "taxon": "Lepidochrysops variabilis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620591,
+    "external_key": "ABMS-ZA410",
+    "taxon": "Lepidochrysops victori",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620593,
+    "external_key": "ABMS-ZA411",
+    "taxon": "Lepidochrysops wykehami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620595,
+    "external_key": "ABMS-ZA488",
+    "taxon": "Leptomyrina gorgias gorgias",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620597,
+    "external_key": "ABMS-ZA490",
+    "taxon": "Leptomyrina hirundo",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620599,
+    "external_key": "ABMS-ZA491",
+    "taxon": "Leptomyrina lara",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620601,
+    "external_key": "ABMS-ZA763",
+    "taxon": "Leptosia alcesta inalcesta",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620603,
+    "external_key": "ABMS-ZA412",
+    "taxon": "Leptotes babaulti",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620605,
+    "external_key": "ABMS-ZA414",
+    "taxon": "Leptotes jeanneli",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620607,
+    "external_key": "ABMS-ZA600",
+    "taxon": "Libythea laius",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620609,
+    "external_key": "ABMS-ZA780",
+    "taxon": "Mylothris trimenia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620611,
+    "external_key": "ABMS-ZA471",
+    "taxon": "Myrina dermaptera dermaptera",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620613,
+    "external_key": "ABMS-ZA473",
+    "taxon": "Myrina silenus penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620615,
+    "external_key": "ABMS-ZA764",
+    "taxon": "Nepheronia argia varia",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620617,
+    "external_key": "ABMS-ZA765",
+    "taxon": "Nepheronia argia variegata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620619,
+    "external_key": "ABMS-ZA610",
+    "taxon": "Neptis goochii",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620621,
+    "external_key": "ABMS-ZA612",
+    "taxon": "Neptis kiriakoffi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620623,
+    "external_key": "ABMS-ZA615",
+    "taxon": "Neptis trigonophora trigonophora",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620625,
+    "external_key": "ABMS-ZA17",
+    "taxon": "Nervia chaca",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620627,
+    "external_key": "ABMS-ZA18",
+    "taxon": "Nervia mohozutza",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620629,
+    "external_key": "ABMS-ZA19",
+    "taxon": "Nervia nerva nerva",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620631,
+    "external_key": "ABMS-ZA20",
+    "taxon": "Nervia wallengrenii wallengrenii",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620633,
+    "external_key": "ABMS-ZA748",
+    "taxon": "Papilio echerioides echerioides",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620635,
+    "external_key": "ABMS-ZA749",
+    "taxon": "Papilio ophidicephalus ayresi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620637,
+    "external_key": "ABMS-ZA750",
+    "taxon": "Papilio ophidicephalus entabeni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620639,
+    "external_key": "ABMS-ZA751",
+    "taxon": "Papilio ophidicephalus phalusco",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620641,
+    "external_key": "ABMS-ZA752",
+    "taxon": "Papilio ophidicephalus transvaalensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620643,
+    "external_key": "ABMS-ZA753",
+    "taxon": "Papilio ophidicephalus zuluensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620645,
+    "external_key": "ABMS-ZA754",
+    "taxon": "Papilio euphranor",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620647,
+    "external_key": "ABMS-ZA701",
+    "taxon": "Paternympha loxophthalma",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620649,
+    "external_key": "ABMS-ZA598",
+    "taxon": "Phalanta eurytis eurytis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620651,
+    "external_key": "ABMS-ZA55",
+    "taxon": "Platylesches dolomitica",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620653,
+    "external_key": "ABMS-ZA58",
+    "taxon": "Platylesches neba",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620655,
+    "external_key": "ABMS-ZA59",
+    "taxon": "Platylesches picanini",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620657,
+    "external_key": "ABMS-ZA60",
+    "taxon": "Platylesches robustus robustus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620659,
+    "external_key": "ABMS-ZA632",
+    "taxon": "Precis tugela tugela",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620661,
+    "external_key": "ABMS-ZA617",
+    "taxon": "Pseudacraea eurytus imitator",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620663,
+    "external_key": "ABMS-ZA619",
+    "taxon": "Pseudacraea lucretia tarquinea",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620665,
+    "external_key": "ABMS-ZA568",
+    "taxon": "Rubraea acrita",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620667,
+    "external_key": "ABMS-ZA569",
+    "taxon": "Rubraea cerasa cerasa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620669,
+    "external_key": "ABMS-ZA570",
+    "taxon": "Rubraea egina egina",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620671,
+    "external_key": "ABMS-ZA572",
+    "taxon": "Rubraea petraea",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620673,
+    "external_key": "ABMS-ZA573",
+    "taxon": "Rubraea violarum violarum",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620675,
+    "external_key": "ABMS-ZA97",
+    "taxon": "Sarangesa ruona",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620677,
+    "external_key": "ABMS-ZA98",
+    "taxon": "Sarangesa seineri durbana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620679,
+    "external_key": "ABMS-ZA505",
+    "taxon": "Stugeta bowkeri bowkeri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620681,
+    "external_key": "ABMS-ZA506",
+    "taxon": "Stugeta bowkeri henningi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620683,
+    "external_key": "ABMS-ZA721",
+    "taxon": "Stygionympha curlei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620685,
+    "external_key": "ABMS-ZA722",
+    "taxon": "Stygionympha dicksoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620687,
+    "external_key": "ABMS-ZA723",
+    "taxon": "Stygionympha geraldi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620689,
+    "external_key": "ABMS-ZA724",
+    "taxon": "Stygionympha irrorata",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620691,
+    "external_key": "ABMS-ZA726",
+    "taxon": "Stygionympha scotina coetzeri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620693,
+    "external_key": "ABMS-ZA727",
+    "taxon": "Stygionympha scotina scotina",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620695,
+    "external_key": "ABMS-ZA728",
+    "taxon": "Stygionympha vansoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620697,
+    "external_key": "ABMS-ZA729",
+    "taxon": "Stygionympha vigilans",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620699,
+    "external_key": "ABMS-ZA730",
+    "taxon": "Stygionympha wichgrafi grisea",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620701,
+    "external_key": "ABMS-ZA731",
+    "taxon": "Stygionympha wichgrafi wichgrafi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620703,
+    "external_key": "ABMS-ZA732",
+    "taxon": "Stygionympha wichgrafi williami",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620705,
+    "external_key": "ABMS-ZA431",
+    "taxon": "Tarucus bowkeri bowkeri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620707,
+    "external_key": "ABMS-ZA432",
+    "taxon": "Tarucus bowkeri transvaalensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620709,
+    "external_key": "ABMS-ZA434",
+    "taxon": "Tarucus sybaris sybaris",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620711,
+    "external_key": "ABMS-ZA435",
+    "taxon": "Tarucus thespis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620713,
+    "external_key": "ABMS-ZA581",
+    "taxon": "Telchinia alalonga",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620715,
+    "external_key": "ABMS-ZA582",
+    "taxon": "Telchinia anacreon",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620717,
+    "external_key": "ABMS-ZA584",
+    "taxon": "Telchinia cabira",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620719,
+    "external_key": "ABMS-ZA586",
+    "taxon": "Telchinia esebria",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620721,
+    "external_key": "ABMS-ZA587",
+    "taxon": "Telchinia igola",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620723,
+    "external_key": "ABMS-ZA588",
+    "taxon": "Telchinia induna salmontana",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620725,
+    "external_key": "ABMS-ZA760",
+    "taxon": "Terias desjardinsii regularis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620727,
+    "external_key": "ABMS-ZA761",
+    "taxon": "Terias floricola floricola",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620729,
+    "external_key": "ABMS-ZA281",
+    "taxon": "Thestor barbatus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620731,
+    "external_key": "ABMS-ZA282",
+    "taxon": "Thestor basuta basuta",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620733,
+    "external_key": "ABMS-ZA284",
+    "taxon": "Thestor brachycera brachycera",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620735,
+    "external_key": "ABMS-ZA285",
+    "taxon": "Thestor brachycera dukei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620737,
+    "external_key": "ABMS-ZA286",
+    "taxon": "Thestor braunsi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620739,
+    "external_key": "ABMS-ZA287",
+    "taxon": "Thestor calviniae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620741,
+    "external_key": "ABMS-ZA288",
+    "taxon": "Thestor camdeboo",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620743,
+    "external_key": "ABMS-ZA289",
+    "taxon": "Thestor claassensi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620745,
+    "external_key": "ABMS-ZA290",
+    "taxon": "Thestor coetzeri",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620747,
+    "external_key": "ABMS-ZA291",
+    "taxon": "Thestor compassbergae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620749,
+    "external_key": "ABMS-ZA292",
+    "taxon": "Thestor dicksoni dicksoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620751,
+    "external_key": "ABMS-ZA293",
+    "taxon": "Thestor dicksoni malagas",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620753,
+    "external_key": "ABMS-ZA294",
+    "taxon": "Thestor dicksoni warreni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620755,
+    "external_key": "ABMS-ZA295",
+    "taxon": "Thestor dryburghi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620757,
+    "external_key": "ABMS-ZA296",
+    "taxon": "Thestor holmesi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620759,
+    "external_key": "ABMS-ZA297",
+    "taxon": "Thestor kaplani",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620761,
+    "external_key": "ABMS-ZA298",
+    "taxon": "Thestor montanus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620763,
+    "external_key": "ABMS-ZA299",
+    "taxon": "Thestor murrayi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620765,
+    "external_key": "ABMS-ZA300",
+    "taxon": "Thestor overbergensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620767,
+    "external_key": "ABMS-ZA301",
+    "taxon": "Thestor penningtoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620769,
+    "external_key": "ABMS-ZA302",
+    "taxon": "Thestor petra petra",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620771,
+    "external_key": "ABMS-ZA303",
+    "taxon": "Thestor petra tempe",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620773,
+    "external_key": "ABMS-ZA304",
+    "taxon": "Thestor pictus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620775,
+    "external_key": "ABMS-ZA305",
+    "taxon": "Thestor pringlei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620777,
+    "external_key": "ABMS-ZA306",
+    "taxon": "Thestor protumnus aridus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620779,
+    "external_key": "ABMS-ZA307",
+    "taxon": "Thestor protumnus protumnus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620781,
+    "external_key": "ABMS-ZA308",
+    "taxon": "Thestor protumnus terblanchei",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620783,
+    "external_key": "ABMS-ZA309",
+    "taxon": "Thestor rileyi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620785,
+    "external_key": "ABMS-ZA310",
+    "taxon": "Thestor rooibergensis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620787,
+    "external_key": "ABMS-ZA311",
+    "taxon": "Thestor rossouwi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620789,
+    "external_key": "ABMS-ZA312",
+    "taxon": "Thestor stepheni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620791,
+    "external_key": "ABMS-ZA313",
+    "taxon": "Thestor strutti",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620793,
+    "external_key": "ABMS-ZA314",
+    "taxon": "Thestor vansoni",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620795,
+    "external_key": "ABMS-ZA315",
+    "taxon": "Thestor yildizae",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620797,
+    "external_key": "ABMS-ZA594",
+    "taxon": "Tildia rabbaiae perlucida",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620799,
+    "external_key": "ABMS-ZA437",
+    "taxon": "Tuxentius hesperis",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620801,
+    "external_key": "ABMS-ZA438",
+    "taxon": "Tuxentius melaena griqua",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620803,
+    "external_key": "ABMS-ZA274",
+    "taxon": "Tylopaedia sardonyx peringueyi",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620805,
+    "external_key": "ABMS-ZA638",
+    "taxon": "Vanessa dimorphica dimorphica",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620807,
+    "external_key": "ABMS-ZA639",
+    "taxon": "Vanessa hippomene hippomene",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620809,
+    "external_key": "ABMS-ZA735",
+    "taxon": "Ypthima asterope hereroica",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620811,
+    "external_key": "ABMS-ZA736",
+    "taxon": "Ypthima condamini condamini",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620813,
+    "external_key": "ABMS-ZA443",
+    "taxon": "Zizina otis antanossa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620824,
+    "external_key": "ABMS-BW164",
+    "taxon": "Charaxes achaemenes achaemenes",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620826,
+    "external_key": "ABMS-BW205",
+    "taxon": "Pseudacraea boisduvalii trimenii",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620828,
+    "external_key": "ABMS-BW103",
+    "taxon": "Cupidopsis jobates jobates",
+    "abundance": { "BW": "P", "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620859,
+    "external_key": "ABMS-ZA609",
+    "taxon": "Cymothoe coranus coranus",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620864,
+    "external_key": "ABMS-SA516",
+    "taxon": "Sevenia rosa",
+    "abundance": { "ZA": "P" }
+  },
+  {
+    "warehouse_id": 620868,
+    "external_key": "ABMS-ZA513",
+    "taxon": "Sevenia boisduvali boisduvali",
+    "abundance": { "ZA": "P" }
   }
 ]

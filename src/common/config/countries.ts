@@ -49,6 +49,8 @@ export default {
   UA: 'Ukraine',
   AM: 'Armenia',
   KE: 'Kenya',
+  ZA: 'South Africa',
+  BW: 'Botswana',
   SH_HL: 'Saint Helena',
 
   // special option
@@ -361,9 +363,23 @@ export const centroids: Types = {
   },
 
   KE: {
-    latitude: -0.023559,
+    latitude: 0.823559,
     longitude: 37.906193,
     country: 'Kenya',
+    zoom: 6 - LEAFLET_MAPBOX_ZOOM_DIFF,
+  },
+
+  BW: {
+    latitude: -21.0690475,
+    longitude: 23.5293358,
+    country: 'Botswana',
+    zoom: 6 - LEAFLET_MAPBOX_ZOOM_DIFF,
+  },
+
+  ZA: {
+    latitude: -30.2908267,
+    longitude: 23.0195502,
+    country: 'South Africa',
     zoom: 6 - LEAFLET_MAPBOX_ZOOM_DIFF,
   },
 };

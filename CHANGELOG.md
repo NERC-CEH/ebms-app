@@ -1,6 +1,7 @@
 ## 1.23.0
 
 Fixed moth trap weather and moon phase prefill.
+Added South Africa and Botswana.
 
 ## 1.22.0
 

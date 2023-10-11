@@ -158,6 +158,12 @@ msgstr "トルコ（アジア）"
 msgid "Ukraine"
 msgstr "ウクライナ"
 
+msgid "South Africa"
+msgstr ""
+
+msgid "Botswana"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "その他の国"
 

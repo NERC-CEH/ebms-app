@@ -162,6 +162,12 @@ msgstr "Turkiet: Asien"
 msgid "Ukraine"
 msgstr "Ukraina"
 
+msgid "South Africa"
+msgstr ""
+
+msgid "Botswana"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Annan plats"
 

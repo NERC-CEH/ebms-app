@@ -160,6 +160,12 @@ msgstr "Turecko (asijská část)"
 msgid "Ukraine"
 msgstr "Ukrajina"
 
+msgid "South Africa"
+msgstr ""
+
+msgid "Botswana"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Kdekoli"
 

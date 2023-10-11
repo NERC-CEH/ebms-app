@@ -159,6 +159,12 @@ msgstr "Törökország: ázsiai rész"
 msgid "Ukraine"
 msgstr "Ukrajna"
 
+msgid "South Africa"
+msgstr ""
+
+msgid "Botswana"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Egyéb ország"
 
@@ -430,7 +436,7 @@ msgid "Please draw your area on the map"
 msgstr "Rajzold meg a felmért területet!"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Kapcsold ki a GPS-t a szerkesztéshez!"
 
 msgid "Draw an area"
 msgstr "Határold le a területet!"
@@ -801,19 +807,21 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Cache törlése"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Az app által foglalt cache-tárhely felszabadítása."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Törlés"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Törli a készülékről a cache memóriában tárolt adatokat, a már feltöltött "
+"felmérésekkel együtt (utóbbiak az eBMS honlapon elérhetőek maradnak)."
 
 msgid "Sweden"
 msgstr "Svédország"
@@ -829,7 +837,7 @@ msgstr "Feltöltött"
 
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
-msgstr ""
+msgstr "<1>Jelentkezz be</1> a feltöltött felmérések böngészéséhez!"
 
 msgid "No finished pending surveys"
 msgstr "Nincs függőben lévő befejezett felmérés"
@@ -1372,7 +1380,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Biztos, hogy törlöd az útvonalat?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1878,7 +1886,7 @@ msgstr "Újdonságok"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Ne mutasd többet"
 
 # Version 1.22 whats new message
 msgid ""
@@ -2155,23 +2163,23 @@ msgstr ""
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Fajcsoportok"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Bezárás"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Megerősítés"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Milyen fajcsoportokat mértél föl?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Válaszd ki a Célfajt!"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
@@ -2179,7 +2187,7 @@ msgstr "Még nincs fotó. Fotó csatolásához <br/>koppints ide <4><0></0></4>!
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Szárny"
 
 # Part of Painted lady survey
 msgid "Behaviour"
@@ -2191,15 +2199,15 @@ msgstr "Irány"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Magasság (föld felett)"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Irány"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Felmérés törlése"
 
 # Alert message
 msgid ""

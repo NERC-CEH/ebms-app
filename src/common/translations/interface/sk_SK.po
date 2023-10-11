@@ -159,6 +159,12 @@ msgstr "Turecko (ázijská časť)"
 msgid "Ukraine"
 msgstr "Ukrajina"
 
+msgid "South Africa"
+msgstr ""
+
+msgid "Botswana"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Iná krajina"
 
@@ -2502,28 +2508,28 @@ msgstr "Nemáte žiadne predchádzajúce trasy. "
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "Zoradené podľa abecedy."
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr ""
+msgstr "Zoradené podľa času pridania."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Nepotvrdené"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Prijaté"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Zamietnuté"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Údaje o spoľahlivosti nesmú chýbať."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Údaje o oblačnosti nesmú chýbať. "
