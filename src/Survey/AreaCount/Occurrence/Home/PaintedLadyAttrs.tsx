@@ -4,8 +4,8 @@ import { useRouteMatch } from 'react-router';
 import { MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
 import butterflyIcon from 'common/images/butterfly.svg';
 import Occurrence from 'models/occurrence';
-import PaintedLadyBehaviour from './PaintedLadyBehaviour';
-import PaintedLadyWing from './PaintedLadyWing';
+import PaintedLadyBehaviour from 'Survey/AreaCount/common/Components/PaintedLadyBehaviour';
+import PaintedLadyWing from 'Survey/AreaCount/common/Components/PaintedLadyWing';
 
 type Props = {
   occurrence: Occurrence;

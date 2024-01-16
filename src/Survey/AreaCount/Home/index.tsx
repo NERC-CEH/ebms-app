@@ -15,7 +15,7 @@ import Occurrence, {
 } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
-import { useDeleteConfirmation } from '../SpeciesOccurrences';
+import { useDeleteConfirmation } from '../Occurrence/Species';
 import Header from './Header';
 import Main from './Main';
 

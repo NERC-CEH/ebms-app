@@ -42,10 +42,10 @@ import appModel from 'models/app';
 import { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import PaintedLadyBehaviour from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyBehaviour';
-import PaintedLadyDirection from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyDirection';
-import PaintedLadyOther from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyOther';
-import PaintedLadyWing from 'Survey/AreaCount/OccurrenceHome/Components/PaintedLadyWing';
+import PaintedLadyBehaviour from 'Survey/AreaCount/common/Components/PaintedLadyBehaviour';
+import PaintedLadyDirection from 'Survey/AreaCount/common/Components/PaintedLadyDirection';
+import PaintedLadyOther from 'Survey/AreaCount/common/Components/PaintedLadyOther';
+import PaintedLadyWing from 'Survey/AreaCount/common/Components/PaintedLadyWing';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import {
   speciesOccAddedTimeSort,

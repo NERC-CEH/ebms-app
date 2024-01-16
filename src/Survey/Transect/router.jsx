@@ -1,6 +1,6 @@
 import { AttrPage, RouteWithModels } from '@flumens';
 import samplesCollection from 'models/collections/samples';
-import StartNewSurvey from 'Components/StartNewSurvey';
+import StartNewSurvey from 'Survey/common/StartNewSurvey';
 import withRemoteModels from 'Survey/common/hooks';
 import Home from './Home';
 import OccurrenceEdit from './OccurrenceEdit';

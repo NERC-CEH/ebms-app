@@ -15,7 +15,7 @@ import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 import GridRefValue from 'Components/GridRefValue';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
-import PaintedLadyAttrs from './Components/PaintedLadyAttrs';
+import PaintedLadyAttrs from './PaintedLadyAttrs';
 import './styles.scss';
 
 type Props = {
