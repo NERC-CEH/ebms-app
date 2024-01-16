@@ -1,11 +1,11 @@
 # 
 # Translators:
-# Yasuhiro Nakamura, 2022
+# Yasuhiro Nakamura, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Yasuhiro Nakamura, 2022\n"
+"Last-Translator: Yasuhiro Nakamura, 2023\n"
 "Language-Team: Japanese (Japan) (https://app.transifex.com/ceh/teams/95441/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,10 +159,10 @@ msgid "Ukraine"
 msgstr "ウクライナ"
 
 msgid "South Africa"
-msgstr ""
+msgstr "南アフリカ"
 
 msgid "Botswana"
-msgstr ""
+msgstr "ボツワナ"
 
 msgid "Elsewhere"
 msgstr "その他の国"

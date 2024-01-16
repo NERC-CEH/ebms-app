@@ -133,7 +133,7 @@ msgid "Portugal (Madeira Islands)"
 msgstr "Portugalia (Insulele Madeira)"
 
 msgid "Romania"
-msgstr "Romania"
+msgstr "România"
 
 msgid "Serbia"
 msgstr "Serbia"
@@ -160,10 +160,10 @@ msgid "Ukraine"
 msgstr "Ucraina"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Africa de Sud"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Elsewhere"
 msgstr "Altă țară"
@@ -327,8 +327,9 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
-"Esti sigur ca vrei sa te deloghezi? Inregistrarile tale in asteptare si cele"
-" incarcate nu vor fi sterse de pe acest dispozitiv."
+"Sunteți sigur că vreți să vă delogați?<br/><br/>Înregistrările tale în "
+"așteptare și cele încărcate <4>nu vor fi șterse  </4> de pe acest "
+"dispozitiv."
 
 msgid "Cancel"
 msgstr "Anulare"
@@ -361,7 +362,7 @@ msgstr "Locația"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr "Locația Necesară"
+msgstr "Locația necesară"
 
 # GPS permissions message
 msgid ""
@@ -810,19 +811,21 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Șterge cache-ul"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Puteți elibera spațiul de stocare utilizat de aplicație."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Șterge"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Această acțiune va șterge datele din memoria cache, inclusiv sondajele "
+"încărcate de dvs."
 
 msgid "Sweden"
 msgstr "Suedia"
@@ -839,6 +842,8 @@ msgstr "Încărcat"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Trebuie să vă <1>autentificați</1> în cont pentru a putea vizualiza "
+"înregistrările. "
 
 msgid "No finished pending surveys"
 msgstr "Niciun sondaj în asteptare finalizat"
@@ -1373,7 +1378,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Sunteți sigur că doriți să ștergeți înregistrarea actuală?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1888,32 +1893,40 @@ msgstr "Noutăți"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Nu mai afișa"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"A fost adăugată capacitatea de a vizualiza înregistrările care au fost "
+"uploadate de pe alte dispozitive."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"Harta înregistrărilor a fost actualizată pentru a afișa toate datele "
+"înregistrate."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
+"A fost activată opțiunea de copiere a listei de specii din transectul "
+"anterior."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"A fost activată opțiunea de copiere a listei de specii de la capcana "
+"luminoasa anterioară. "
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Pagina ghidului de specii a fost actualizată. "
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "A fost adăugată opțiunea pentru ștergerea fișierelor cache încărcate."
 
 # User account action
 msgid "Resend"
@@ -2213,7 +2226,7 @@ msgstr "Busola"
 
 # Alert header
 msgid "Delete Survey"
-msgstr "Sterge observatia"
+msgstr "Șterge observația"
 
 # Alert message
 msgid ""
@@ -2268,11 +2281,11 @@ msgstr "Plante gazdă pentru depunerea ouălor"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr "Migratie"
+msgstr "Migrație"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr "Hranire cu nectar"
+msgstr "Hrănire cu nectar"
 
 # Part of painted lady
 msgid "Mating"
@@ -2290,10 +2303,10 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
-"Din păcate, dispozitivul tău nu are senzorul necesar pentru ca busola să "
+"Din păcate, dispozitivul dvs. nu are senzorul necesar pentru ca busola să "
 "funcționeze corect. Busola folosește câmpul magnetic al Pământului pentru "
-"orientarea device-ului spre nord. Prin urmare, nu poți utiliza acest device "
-"pentru orientare spațială. "
+"orientarea device-ului spre nord. Prin urmare, nu puteți utiliza acest "
+"device pentru orientare spațială. "
 
 # Painted lady mating options
 msgid "Territorial defence: other"
@@ -2305,15 +2318,15 @@ msgstr "Apărare teritorială: hill-topping"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr "La ce altitudine zbura fluturele? (in metri)"
+msgstr "La ce altitudine zbura fluturele? (în metri)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr "Alte planta gazda"
+msgstr "Alte plante gazdă"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Urzica deșertului"
 
 # Painted lady direction option
 msgid "Mallow"
@@ -2325,11 +2338,11 @@ msgstr "Specii de scai"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr "Plante gazda"
+msgstr "Plante gazdă"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr "Selecteaza plantele gazda"
+msgstr "Selectează plantele gazdă"
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
@@ -2341,7 +2354,7 @@ msgstr "Sfat: copiază atributele"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr "Conditia aripii"
+msgstr "Condiția aripii"
 
 # Part of Painted lady survey
 msgid "Nectar"
@@ -2349,7 +2362,7 @@ msgstr "Sursa de nectar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr "Adauga sursa de nectar aici"
+msgstr "Adaugă sursa de nectar aici"
 
 # Part of Painted lady survey
 msgid "Other species"
@@ -2376,15 +2389,15 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr "Inaltime de la sol (in metri)"
+msgstr "Înălțime de la sol (în metri)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr "Inaltime"
+msgstr "Inălțime"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr "Incepe numararea"
+msgstr "Începe numărarea"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
@@ -2392,7 +2405,7 @@ msgstr "Urmărirea migrației fluturelui Vanessa cardui cu Butterfly Count. "
 
 # Menu page label
 msgid "Instructions"
-msgstr "Instructiuni"
+msgstr "Instrucțiuni"
 
 # Country name
 msgid "Saint Helena"
@@ -2420,7 +2433,7 @@ msgstr "Suma numărătorilor trebuie să fie mai mare de 0"
 
 # Report page label
 msgid "Show less"
-msgstr "Arata mai putin"
+msgstr "Arată mai puțin"
 
 # Part of favorite track selection
 msgid "Your track name"
@@ -2428,15 +2441,15 @@ msgstr "Numele traseului tău"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
-msgstr "Aici puteti selecta sau glisa pentru a edita inregistrarile automate"
+msgstr "Aici puteți selecta sau glisa pentru a edita înregistrările automate"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr "Editeaza"
+msgstr "Editează"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr "Editeaza locatia"
+msgstr "Editează locația"
 
 # Part of favorite track selection
 msgid "Name"
@@ -2448,17 +2461,19 @@ msgstr "Favorit"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr "Sunteti sigur ca doriti sa stergeti inregistrarea salvata? "
+msgstr "Sunteți sigur ca doriți să ștergeți înregistrarea salvată? "
 
 # Map GPS button interface
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"Pentru a reveni la localizarea GPS, trebuie să eliminați mai întâi zona "
+"desenată de pe hartă."
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr "Faza luna"
+msgstr "Fază lună"
 
 # Moon phase values
 msgid "New"
@@ -2510,7 +2525,7 @@ msgstr "Încheiere înregistrare meteo"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr "Adaugă capcană pentru fluturii de noapte"
+msgstr "Adaugă capcană pentru fluturii de noapte. "
 
 # Info message
 msgid ""
@@ -2534,32 +2549,32 @@ msgstr "Serviciile de localizare sunt inactive"
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr "Nu ai intrari anterioare inregistrate"
+msgstr "Nu ai intrări anterioare înregistrate."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr "Lista a fost ordonata alfabetic"
+msgstr "Lista a fost ordonată alfabetic"
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr "Lista a fost ordonata in functie de activitatea recenta."
+msgstr "Lista a fost ordonată in funcție de activitatea recentă."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Neconfirmat"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Acceptat"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Respins"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Câmpul nu poate fi gol."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Câmpul cu nori nu poate fi gol. "

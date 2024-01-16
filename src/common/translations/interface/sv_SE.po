@@ -4,12 +4,12 @@
 # Carin Kullberg <carin@ckg.se>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Lars Pettersson <lars.pettersson@biol.lu.se>, 2022
-# Georg, 2022
+# Georg, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Georg, 2022\n"
+"Last-Translator: Georg, 2023\n"
 "Language-Team: Swedish (Sweden) (https://app.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -148,7 +148,7 @@ msgid "Slovenia"
 msgstr "Slovenien"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japan"
 
 msgid "Slovakia"
 msgstr "Slovakien"
@@ -163,10 +163,10 @@ msgid "Ukraine"
 msgstr "Ukraina"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Sydafrika"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Elsewhere"
 msgstr "Annan plats"
@@ -441,7 +441,7 @@ msgid "Please draw your area on the map"
 msgstr "Markera ditt område på kartan"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Avaktivera GPS spårning för att aktivera ritverktyget"
 
 msgid "Draw an area"
 msgstr "Rita ett område"
@@ -457,11 +457,11 @@ msgstr "Rapporter"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Artnamn eller filter"
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "familj"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr "Tyvärr finns inga rapportdata tillgängliga för tillfället."
@@ -522,7 +522,7 @@ msgstr "OBS! Den kommer att ligga kvar i galleriet."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr ""
+msgstr "Inget foto tillagt.<br/>Tryck <3></3> för att lägga till."
 
 msgid "Registration error:"
 msgstr "Fel vid registrering:"
@@ -804,19 +804,19 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Rensa cache"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Du kan frigöra utrymme i appen."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
-msgstr ""
+msgstr "Detta tar bort cachad data, inklusive dina uppladdade inventeringar."
 
 msgid "Sweden"
 msgstr "Sverige"
@@ -833,6 +833,8 @@ msgstr "Uppladdade"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Du behöver <1>logga in</1> till ditt konto för att kunna se sparade "
+"observationer."
 
 msgid "No finished pending surveys"
 msgstr "Inga avslutade inventeringar som väntar på att laddas upp"
@@ -912,7 +914,7 @@ msgstr ""
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "Visa vanliga namn i din guide."
 
 msgid "Share App Analytics"
 msgstr "Tillåt delning av appens analysresultat"
@@ -1346,7 +1348,7 @@ msgstr "Inställningar"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Använd bara dagflygande nattfjärilar"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1366,7 +1368,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Är du säker att du vill radera ditt nuvarande spår."
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1807,7 +1809,7 @@ msgstr "Okänd"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Visa mer"
 
 # Moth survey warning message
 msgid "Please add a photo"
@@ -1848,7 +1850,7 @@ msgstr "Vi hjälper dig artbestämma med vår bildigenkännare"
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Identifiera"
 
 # Moth survey button label
 msgid "Identify All"
@@ -1872,32 +1874,35 @@ msgstr "Vad är Nytt"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Visa inte igen"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"Lade till möjlighet att visa poster som har laddats upp från andra enheter."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"Kartan med observationer har uppgraderats för att visa alla "
+"användarobservationer."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
-msgstr ""
+msgstr "Aktiverade kopiering av föregående slingsegmentets artlista."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
-msgstr ""
+msgstr "Aktiverade kopiering av den tidigare nattfjärilsfällans artlista."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Uppdaterade artguidesidan."
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "Lade till alternativ för att rensa uppladdade cachade filer."
 
 # User account action
 msgid "Resend"
@@ -2010,11 +2015,11 @@ msgstr "Ytterligare beskrivning av lampa."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Lägg till nattfjärilsfällans plats och namn."
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "Ofullständig"
 
 # Moth trap survey
 msgid "Select"
@@ -2022,20 +2027,22 @@ msgstr "Välj"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Rapportörer"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
+"Ange antalet observatörer, inkludera alla som hjälpt till med denna "
+"observation - inklusive dig själv."
 
 msgid "Network Error"
-msgstr ""
+msgstr "Nätverksfel"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "Logga in för att se din egen datarapport"
 
 # Report label
 msgid "Your top species this month"

@@ -639,7 +639,7 @@ msgid "Plebejus-idas-description"
 msgstr ""
 
 msgid "Plebejus-bellieri-description"
-msgstr ""
+msgstr "Plebejus-bellieri-descriere"
 
 msgid "Plebejus-argyrognomon-description"
 msgstr ""
@@ -1506,10 +1506,10 @@ msgid "Erebia-melas-description"
 msgstr ""
 
 msgid "Erebia-lefebvrei-description"
-msgstr ""
+msgstr "Erebia-lefebvrei-descriere"
 
 msgid "Erebia-zapateri-description"
-msgstr ""
+msgstr "Erebia-zapateri-descriere"
 
 msgid "Erebia-neoridas-description"
 msgstr ""

@@ -1,11 +1,12 @@
 # 
 # Translators:
 # Anna Mei Dichmann Melskens, 2022
+# Skjold Alsted Søndergaard, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Anna Mei Dichmann Melskens, 2022\n"
+"Last-Translator: Skjold Alsted Søndergaard, 2023\n"
 "Language-Team: Danish (Denmark) (https://app.transifex.com/ceh/teams/95441/da_DK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,10 +160,10 @@ msgid "Ukraine"
 msgstr "Ukraine"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Sydafrika"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Elsewhere"
 msgstr "Et andet sted"
@@ -435,7 +436,7 @@ msgid "Please draw your area on the map"
 msgstr "Tegn venligst dit område på kortet"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Deaktiver GPS-sporing for at aktivere tegneværktøjerne."
 
 msgid "Draw an area"
 msgstr "Tegn et område"
@@ -808,19 +809,20 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Ryd cache"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Du kan frigøre lagerplads, der bruges af appen."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Ryd"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Dette vil slette cachelagrede data, inklusive dine uploadede observationer."
 
 msgid "Sweden"
 msgstr "Sverige"
@@ -837,6 +839,7 @@ msgstr "Uploadet"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Du skal <1> logge </1> ind på din konto for at kunne se registreringerne."
 
 msgid "No finished pending surveys"
 msgstr "Ingen afsluttede observationer venter"
@@ -1365,7 +1368,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Er du sikker på, at du vil slette dit nuværende spor?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1875,32 +1878,36 @@ msgstr "Nyheder"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Vis ikke igen"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"Tilføjet mulighed for at se observationer, der er blevet uploadet fra andre "
+"enheder."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"Observationskortet er blevet opgraderet til at vise alle "
+"brugerobservationer."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
-msgstr ""
+msgstr "Aktiveret kopiering af den forrige transektsektions artsliste."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
-msgstr ""
+msgstr "Aktiveret kopiering af den tidligere natsommerfuglfældes artsliste."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Opdateret artsguideside."
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "Tilføjet mulighed for at rydde uploadede cachelagrede filer."
 
 # User account action
 msgid "Resend"
@@ -2149,83 +2156,89 @@ msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Denne mulighed blev flyttet til artssøgningssiden inde i undersøgelserne. "
+"Når en undersøgelse starter, kan du vælge, hvilken artsgruppe du optager."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Grupper"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Luk"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Godkend"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Hvilke artsgrupper har du talt?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Vælg målart"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
 msgstr ""
+"Der er ikke tilføjet noget billede.<br/>Tryk på <4><0></0></4> for at "
+"tilføje."
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Vinge"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Adfærd"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Retning"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Højde"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Kompas"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Slet undersøgelse"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
+"Advarsel - Dette vil kassere de undersøgelsesoplysninger, du har indtastet "
+"indtil videre."
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Frisk"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Slidt"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Venligst præciser nektarkilde"
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Tilføj venligst muligheden for æglægning."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Tilføj venligst parringsmuligheden"
 
 # Painted lady survey missing entry
 msgid "Nectar source"

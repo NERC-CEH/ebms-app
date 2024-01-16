@@ -164,10 +164,10 @@ msgid "Ukraine"
 msgstr "Ukraine"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Südafrika"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Elsewhere"
 msgstr "Anderswo"
@@ -444,6 +444,7 @@ msgstr "Bitte zeichne dein Gebiet auf der Karte."
 
 msgid "Disable the GPS tracking to enable the drawing tools."
 msgstr ""
+"Deaktivieren Sie das GPS-Tracking, um die Zeichenwerkzeuge zu aktivieren."
 
 msgid "Draw an area"
 msgstr "Zeichne einen Bereich"
@@ -819,11 +820,11 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Zwischenspeicher löschen"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Sie können den von der App verwendeten Speicherplatz freigeben."
 
 # App setting for deleting cached data
 msgid "Clear"
@@ -1899,7 +1900,7 @@ msgstr "Was gibt es Neues?"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Nicht mehr anzeigen"
 
 # Version 1.22 whats new message
 msgid ""
@@ -2567,15 +2568,15 @@ msgstr ""
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Unbestätigt"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Akzeptiert"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Abgelehnt"
 
 # Survey verification message
 msgid "Reliability cannot be empty."

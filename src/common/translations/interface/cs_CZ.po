@@ -161,10 +161,10 @@ msgid "Ukraine"
 msgstr "Ukrajina"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Jižní Afrika"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Elsewhere"
 msgstr "Kdekoli"
@@ -805,7 +805,7 @@ msgstr "Vyčistit"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
-msgstr ""
+msgstr "Smaže to všechna data z mezipaměti, včetně odeslaných průzkumů."
 
 msgid "Sweden"
 msgstr "Švédsko"
@@ -822,6 +822,7 @@ msgstr "Nahráno"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Musíte se <1>přihlásit</1> do Vašeho účtu, abyste mohli vidět záznamy."
 
 msgid "No finished pending surveys"
 msgstr "Žádný dokončený průzkum ve frontě"
@@ -1337,7 +1338,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Opravdu chcete smazat současnou trasu?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1848,27 +1849,29 @@ msgstr "Již znovu neukazujte"
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
-msgstr ""
+msgstr "Přidána schopnost vidět záznamy nahrané z jiných zařízení."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"Tato záznamová mapa byla vylepšené, aby bylo možné vidět všechny záznamy "
+"uživatele."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
-msgstr ""
+msgstr "Umožněno kopírování seznamu druhů z předchozí sekce."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
-msgstr ""
+msgstr "Umožněno kopírování seznamu druhů z předchozího lapače."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Aktualizovaná stránka s Průvodcem druhů."
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "Vložena možnost mazání odeslaných souborů z mezipaměti."
 
 # User account action
 msgid "Resend"
@@ -2406,6 +2409,8 @@ msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"Pro obnovu sledování trasy pomocí GPS musíte napřed vymazat nakreslenou "
+"plochu z mapy."
 
 # Part of weather attributes
 msgid "Moon phase"
@@ -2497,20 +2502,20 @@ msgstr "Změněno pořadí seznamu změněno podle posledního vložení"
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Nepotvrzeno"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Přijato"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Odmítnuto"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Musíte vyplnit věrohodnost."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Musíte doplnit oblačnost."

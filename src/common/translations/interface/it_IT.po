@@ -3,13 +3,13 @@
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
-# Federica Paradiso <fedediso94@gmail.com>, 2022
 # Marta Depetris, 2023
+# Federica Paradiso <fedediso94@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Marta Depetris, 2023\n"
+"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2023\n"
 "Language-Team: Italian (Italy) (https://app.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -163,10 +163,10 @@ msgid "Ukraine"
 msgstr "Ucraina "
 
 msgid "South Africa"
-msgstr ""
+msgstr "Sudafrica"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Elsewhere"
 msgstr "Altrove "
@@ -441,7 +441,7 @@ msgid "Please draw your area on the map"
 msgstr "Per favore disegna la tua area sulla mappa "
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Disabilita il GPS per abilitare gli strumenti di disegno."
 
 msgid "Draw an area"
 msgstr "Disegna un'area "
@@ -814,19 +814,21 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Pulisci la cache"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Puoi liberare lo spazio di archviazione usato dall'app"
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Pulisci"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Questo cancellerá i dati nella cache, compresi i tuoi campionamenti "
+"caricati."
 
 msgid "Sweden"
 msgstr "Svezia "
@@ -843,6 +845,7 @@ msgstr "Caricati"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Devi fare il <1>login</1> al tuo account per visualizare i campionamenti."
 
 msgid "No finished pending surveys"
 msgstr "Nessun campionamento \"in sospeso\" finito "
@@ -1372,7 +1375,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Sei sicuro di voler eliminare la traccia attuale?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1888,32 +1891,37 @@ msgstr "Cosa c'è di nuovo"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Non mostrare dinuovo"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"Aggiungi la capacità di vedere i campionamenti caricati da altri device. "
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"La mappa dei campionamenti é stata aggiunata e mostra i campionamenti di "
+"tutti gli utenti."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
-msgstr ""
+msgstr "Abilita la copia della lista delle specie del transetto precedente."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"abilita la copia della lista delle specie della precedente trappola per le "
+"falene."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Aggiorna la pagina della guida alle specie "
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "Aggiungi l'opzione per pulire i fie caricati nella cache "
 
 # User account action
 msgid "Resend"
@@ -2461,6 +2469,8 @@ msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"Per far ripartire la traccia GPS, devi prima cancellare l'area disegnata "
+"sulla mappa."
 
 # Part of weather attributes
 msgid "Moon phase"
@@ -2552,20 +2562,20 @@ msgstr "Modificato l'ordine dell'elenco in base all'ultimo aggiunto."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Non confermato"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Accettato"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Rifiutato"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Affidabilitá non puó rimanere vuota"
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Nuvole non puó rimanere vuoto."

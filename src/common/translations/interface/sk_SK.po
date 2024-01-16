@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Lucia Makarova, 2023
 # Lucia, 2023
+# Lucia Makarova, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Lucia, 2023\n"
+"Last-Translator: Lucia Makarova, 2023\n"
 "Language-Team: Slovak (Slovakia) (https://app.transifex.com/ceh/teams/95441/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -160,10 +160,10 @@ msgid "Ukraine"
 msgstr "Ukrajina"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Južná Afrika"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Elsewhere"
 msgstr "Iná krajina"
@@ -435,7 +435,7 @@ msgid "Please draw your area on the map"
 msgstr "Prosím, nakreslite Vašu plochu do mapy  "
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Zakázať sledovanie GPS, aby bolo možné používať nástroje kreslenia. "
 
 msgid "Draw an area"
 msgstr "Nakreslite plochu"
@@ -801,19 +801,21 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Vymazať cache"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Môžete uvoľniť miesto využívané aplikáciou."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Vymazať"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Týmto sa vymaže údaje vyrovnávacej pamäte, vrátane Vašich nahratých "
+"prieskumov."
 
 msgid "Sweden"
 msgstr "Švédsko"
@@ -830,6 +832,8 @@ msgstr "Nahraté"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Musíte sa <1>prihlásiť </1>do svojho účtu, aby ste si mohli prezerať "
+"záznamy."
 
 msgid "No finished pending surveys"
 msgstr "Žiadne dokončené čakajúce pozorovania"
@@ -1349,7 +1353,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Ste si istý, že chcete vymazať Vašu aktuálnu trasu?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1860,32 +1864,37 @@ msgstr "Čo je nové"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Nezobrazovať znova"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"Pridaná schopnosť zobraziť záznamy, ktoré boli nahrané z iných zariadení."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"Mapa záznamov bola aktualizovaná na zobrazenie všetkých záznamov "
+"používateľov."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
+"Povolené kopírovanie zoznamu druhov z predchádzajúcej časti transektu."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"Povolené kopírovanie z predchádzajúceho zoznamu druhov nočných motýľov.  "
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Aktualizovaný sprievodca druhov."
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "Pridaná možnosť vymazať dočasné nahrané súbory."
 
 # User account action
 msgid "Resend"
@@ -2425,6 +2434,8 @@ msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"Pre obnovenie sledovania GPS musíte najskôr odstrániť nakreslenú oblasť z "
+"mapy."
 
 # Part of weather attributes
 msgid "Moon phase"

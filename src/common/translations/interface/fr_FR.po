@@ -2,13 +2,13 @@
 # Translators:
 # Xavier Mestdagh <xavier.mestdagh@list.lu>, 2019
 # Le Quellec, 2022
-# de Flores Mathieu, 2023
 # Tanguy Loïs, 2023
+# de Flores Mathieu, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Tanguy Loïs, 2023\n"
+"Last-Translator: de Flores Mathieu, 2023\n"
 "Language-Team: French (France) (https://app.transifex.com/ceh/teams/95441/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -162,10 +162,10 @@ msgid "Ukraine"
 msgstr "Ukraine"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Afrique du Sud"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Elsewhere"
 msgstr "Ailleurs"
@@ -440,7 +440,7 @@ msgid "Please draw your area on the map"
 msgstr "Veuillez dessiner sur la carte la surface explorée "
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Arrêter le GPS pour accéder aux outils de traçage"
 
 msgid "Draw an area"
 msgstr "Dessiner une surface"
@@ -816,11 +816,11 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Vider le cache"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Vous pouvez libérer le stockage utilisé par l'application. "
 
 # App setting for deleting cached data
 msgid "Clear"
@@ -828,7 +828,7 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
-msgstr ""
+msgstr "Cela videra les données en cache, y compris vos suivis chargés."
 
 msgid "Sweden"
 msgstr "Suède"
@@ -844,7 +844,7 @@ msgstr "Téléchargé"
 
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
-msgstr ""
+msgstr "Vous devez vous <1>connecter</1> pour pouvoir visualiser les données."
 
 msgid "No finished pending surveys"
 msgstr "Pas de suivis terminés en attente"
@@ -1380,7 +1380,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Etes-vous sûr de vouloir arrêter votre suivi en cours ?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1897,7 +1897,7 @@ msgstr "Quoi de neuf ?"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Ne plus montrer"
 
 # Version 1.22 whats new message
 msgid ""

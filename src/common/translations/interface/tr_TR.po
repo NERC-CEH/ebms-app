@@ -5,14 +5,14 @@
 # Muharrem Yeni <muharremyeni@windowslive.com>, 2020
 # Ahmet Furkan TON <afurkanton@gmail.com>, 2020
 # Karolis, 2021
-# Evrim <ekaracetin@hotmail.com>, 2022
 # Merve Kurt, 2022
 # Alperen Yayla, 2023
+# Evrim <ekaracetin@hotmail.com>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Alperen Yayla, 2023\n"
+"Last-Translator: Evrim <ekaracetin@hotmail.com>, 2024\n"
 "Language-Team: Turkish (Turkey) (https://app.transifex.com/ceh/teams/95441/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,10 +166,10 @@ msgid "Ukraine"
 msgstr "Ukrayna"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Güney Amerika"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Elsewhere"
 msgstr "Diğer"
@@ -441,7 +441,7 @@ msgid "Please draw your area on the map"
 msgstr "Lütfen haritada alanınızı çiziniz"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Çizim araçlarını etkinleştirmek için GPS takibi devre dışı bırakın."
 
 msgid "Draw an area"
 msgstr "Alan çiz"
@@ -809,19 +809,20 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Önbelleği temizle"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Uygulama tarafından kullanılan depolamayı boşaltabilirsiniz"
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Temizle"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Bu, yüklediğiniz anketleri de içeren şekilde önbellek verilerini siler."
 
 msgid "Sweden"
 msgstr "İsveç"
@@ -838,6 +839,7 @@ msgstr "Yüklendi"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Hesabınızdaki kayıtları görüntüleyebilmek için <1>giriş yapmalısınız</1>."
 
 msgid "No finished pending surveys"
 msgstr "Hiç tamamlanmış, 'bekleyen' gözlem bulunmamaktadır. "
@@ -1354,7 +1356,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Mevcut rotanızı silmek istediğinizden emin misiniz?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1863,32 +1865,36 @@ msgstr "Yenilikler"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Tekrar gösterme"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
-msgstr ""
+msgstr "Diğer cihazlardan yüklenmiş kayıtları görüntüleme yeteneği eklendi."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"Kayıtlar haritası, tüm kullanıcı kayıtlarını görüntülemek için güncellendi."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
+"Önceki gözlem hattı kesitinin tür listesini kopyalama özelliği "
+"etkinleştirildi."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"Önceki güve tuzağının tür listesini kopyalama özelliği etkinleştirildi."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Tür rehberi sayfası güncellendi."
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "Yüklenen önbellek dosyalarını temizleme seçeneği eklendi."
 
 # User account action
 msgid "Resend"
@@ -2135,119 +2141,121 @@ msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Bu seçenek, anketlerin içindeki tür arama sayfasına taşındı. Bir anket "
+"başladığında, hangi tür grubunu kaydettiğinizi seçebilirsiniz."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Gruplar"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Kapat"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Onayla"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Hangi tür gruplarını saydınız?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Hedef türü seç"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "\"Hiç fotoğraf eklenmedi.<br/>Eklemek için <4><0></0></4>'e basın.\""
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Kanat"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Davranış"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Yön"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "İrtifa"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Pusula"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Anketi sil"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
-msgstr ""
+msgstr "Uyarı - Bu, şu ana kadar girdiğiniz anket bilgilerini siler."
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Taze"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Yıpranmış"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Lütfen nektar kaynağını belirtin."
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Lütfen yumurta bırakma seçeneğini ekleyin."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Lütfen çiftleşme seçeneğini ekleyin."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Nektar kaynağı"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Lütfen nektar seçeneğini ekleyin."
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Lütfen yön seçeneğini ekleyin."
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Lütfen irtifa seçeneğini işaretleyin."
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Yumurta bırakılan konukçu bitki"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Göç ediyor"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Nektarla besleniyor"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Çiftleşiyor"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Desteklenmeyen cihaz"
 
 # Painted lady compass
 msgid ""
@@ -2257,268 +2265,279 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Maalesef, cihazınızın pusulasının düzgün çalışması için gerekli sensöre "
+"sahip olmadığı görünüyor. Pusula, cihazınızın manyetik kuzeyle olan "
+"oryantasyonunu belirlemek ve dünyanın manyetik alanını algılamak için bu "
+"sensöre bağlıdır. Bu nedenle, bu cihazda pusulayı kullanamayacaksınız."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Arazi savunması: diğer"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Arazi savunması: tepe bekçiliği"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "Kelebeğin uçuş yüksekliği nedir? (metre)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Diğer konukçu bitkiler"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Setaria viridis - Yeşil Sıçansaçı"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Ebegümeci"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Devedikenleri"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Konukçu bitkiler"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Lütfen konukçu bitkileri seçiniz."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "\"Listende hiç <1>{{prettySpeciesName}}</1> kaydın bulunmuyor.\""
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "İpucu: Özellikleri Kopyala"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Kanat durumu"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Nektar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Buraya nektar kaynağını girin"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Diğer türler"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "Bu hangi tür bir devedikeni?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Devedikeni türü"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Kopyalandı"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Bir liste girdisini kopyalamak için sağa kaydırın ve <1><0></0></1> "
+"simgesine dokunun."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Yerden Yükseklik (metre)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Yükseklik"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Sayımı başlat"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Diken kelebeği göçünü Butterfly Count ile izlemek"
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Talimatlar"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Saint Helena"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Yumurtlama"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Çitleşen bireyler"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Eksuvi - Dış iskelet kalıntısı"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Pupadan yeni çıkmış"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "Sayım toplamı 0'dan büyük olmalıdır."
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Daha az göster"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Rotanızın adı"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
 msgstr ""
+"Buradan önceki rotalarınızı düzenlemek için seçebilir veya "
+"kaydırabilirsiniz."
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Düzenle"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Konumu Düzenle"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "İsim"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Favori"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Kaydedilen rotayı silmek istediğinizden emin misiniz?"
 
 # Map GPS button interface
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"GPS takibi devam ettirmek için önce çizilen alanı haritadan kaldırmalısınız."
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Ay evresi"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Yeniay"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Artan Hilâl"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "İlk Dördün"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Artan Dolunay"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Dolunay"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Azalan Dolunay"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Son Dördün"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Azalan Hilâl"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Tuzak başlangıcı"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Tuzak bitişi"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Başlangıç hava durumu"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Bitiş hava durumu"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Lütfen güve tuzağı ekleyin."
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Gözlemlenen anketinizin <1>uzun bölümler</1> içerdiğini fark ettik. Lütfen "
+"doğru bir <3>konum</3> olduğundan emin olun!"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Varsayılan olarak gün batımı saati olarak ayarlandı."
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Varsayılan olarak güneşin doğuş saati olarak ayarlandı."
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Konum hizmetleri etkin değil."
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr ""
+msgstr "Daha önceden rotanız bulunmuyor."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "Liste sıralaması alfabetik olarak değiştirildi."
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr ""
+msgstr "Liste sıralaması en son eklenene göre değiştirildi."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Onaylanmadı"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Kabul edildi"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Reddedildi"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Güvenilirlik bilgisi boş bırakılamaz"
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Bulut bilgisi boş bırakılamaz"

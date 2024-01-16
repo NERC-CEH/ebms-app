@@ -1,13 +1,13 @@
 # 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2022
-# Egle Viciuviene <eviciuviene@gmail.com>, 2022
 # Karolis, 2023
+# Egle Viciuviene <eviciuviene@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2023\n"
+"Last-Translator: Egle Viciuviene <eviciuviene@gmail.com>, 2023\n"
 "Language-Team: Lithuanian (Lithuania) (https://app.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -161,10 +161,10 @@ msgid "Ukraine"
 msgstr "Ukraina"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Pietų Afrika"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botsvana"
 
 msgid "Elsewhere"
 msgstr "Kitur"
@@ -2118,119 +2118,123 @@ msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Ši funkcija buvo perkelta į stebėjimų puslapį. Pradėję 15 min stebėjimą, "
+"galite pasirinkti kokias rūšių grupes registruosite."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Grupės"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Uždaryti"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Patvirtinti"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Kurių grupių rūšis skaičiavote?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Pasirinkite tikslines rūšis"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "Nebuvo pridėta nuotraukų. <br/>Spauskite<4><0></0></4>kad pridėti"
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Sparnas"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Elgsena"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Kryptis"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Aukštis"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Kompasas"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Ištrinti stebėjimus"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
+"Dėmesio - šis veiksmas pašalins visą iki šiol užfiksuotą stebėjimo "
+"informaciją"
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Neseniai išsiritęs"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Nusitrynęs"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normalus"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Prašome nurodyti nektaro šaltinį."
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Prašome pridėkite informaciją apie kiaušinių dėjimą"
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Prašome pridėti informaciją apie poravimasi"
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Nektaro šaltinis"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Prašome pridėti nektaro šaltinio informaciją"
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Prašome pridėti krypties informaciją."
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Prašome pridėti aukščio informaciją"
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Augalas ant kurio dėjo kiaušinius"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Migravo"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Maitinosi"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Poravosi"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Įrenginys nepalaikomas"
 
 # Painted lady compass
 msgid ""
@@ -2240,159 +2244,167 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Deja, panašu, kad jūsų prietaise nėra jutiklio, reikalingo tinkamam kompaso "
+"veikimui. Kompasas remiasi šiuo jutikliu, kad aptiktų žemės magnetinį lauką "
+"ir nustatytų jūsų prietaiso orientaciją magnetinės šiaurės platumos "
+"atžvilgiu. Taigi šiuo prietaisu negalėsite naudoti kompaso."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Teritorijos gynyba: kita"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Teritorijos gynyba: skraido kalvos viršuje"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "Kokiame aukštyje skrido stebėtas drugys? (metrais)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Kiti mitybiniai augalai"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Dykuminė dilgėlė"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Dedešva"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Usnis"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Mitybiniai augalai"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Prašome pasirinkti mitybinius augalus."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "Jūs neturi jokių <1>{{prettySpeciesName}}</1>įrašų savo sąraše."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Patarimas: Kopijuokite atributus"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Sparnų būklė"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Nektaras"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Įveskite čia nektaro šaltinį"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Kitos rūšys"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "Kokios rūšies usnis tai buvo?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Usnies rūšis"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Nukopijuota!"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Norėdami nukopijuoti įrašų sąrašą braukite į dešinę ir paspauskite "
+"<1><0></0></1>."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Aukštis virš žemės (metrais)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Aukštis"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Pradėti skaičiavimą"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Usninuko migracijos stebėjimas naudojant programą \"Butterfly Count\""
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Instrukcijos"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Šv. Elenos sala"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Kiaušinėlių dėjimas"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Kopuliacija arba skraido tandeme"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Išnara"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Išsinėręs"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "Skaičiavimo suma turi būti didesnė nei 0"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Rodyti mažiau"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Jūsų maršruto pavadinimas"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
 msgstr ""
+"Čia galite pasirinkti arba brūkštelėti pirštu ir redaguoti ankstesnius "
+"maršrutus."
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Redaguoti."
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Redaguoti vietovę"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Pavadinimas"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Mėgstamiausias"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Ar esate tikri, kad norite ištrinti išsaugotą maršrutą?"
 
 # Map GPS button interface
 msgid ""
@@ -2404,77 +2416,79 @@ msgstr ""
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Mėnulio fazė"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Jaunatis"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Priešpilnis (iki pusės mėnulio)"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Priešpilnis"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Priešpilnis (nuo pusės iki pilno mėnulio)"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Pilnatis"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Delčia (nuo pilno iki pusės mėnulio)"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Delčia"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Delčia (nuo pusės iki jauno mėnulio)"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Gauklės pradžia"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Gaudyklės pabaiga"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Oras pradžioje"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Oras pabaigoje"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Prašome pridėti naktinių drugių gaudyklę."
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Patebėjomoe, kad jūsų stebėjimas turi <1>long sections</1>. Prašome "
+"įsitikinti, kad vietovė <3>location</3> teisinga!"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Numatytasis saulėlydžio laikas"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Numatytasis saulėtekio laikas"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Įrenginio vietovės funkcija neįjungta"
 
 # Part of favorite track
 msgid "You have no previous tracks."

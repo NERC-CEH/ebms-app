@@ -164,10 +164,10 @@ msgid "Ukraine"
 msgstr "Ucrânia"
 
 msgid "South Africa"
-msgstr ""
+msgstr "África do Sul"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botsuana"
 
 msgid "Elsewhere"
 msgstr "Outro local"
@@ -1097,10 +1097,10 @@ msgid "Unable to survey"
 msgstr "Não é possível amostrar"
 
 msgid "15min Count"
-msgstr "Contagem Cronometrada"
+msgstr "Contagem 15 min"
 
 msgid "15min Single Species Count"
-msgstr "Contagem de 15 minutos de espécie única"
+msgstr "Contagem de 15 min única espécie"
 
 msgid "eBMS Transect"
 msgstr "Transecto eBMS"
@@ -1213,12 +1213,11 @@ msgstr ""
 "pode ser feito em qualquer local e em qualquer momento em que as borboletas "
 "estejam ativas (isto é, quando estiver bom tempo e, de preferência, sol). "
 "Você também pode utilizar a aplicação para registar os transectos que já "
-"estabeleceu. Mais tarde em 2020, a aplicação também permitirá submeter "
-"registos ocasionais. As notas em baixo explicam como pode por em prática as "
+"estabeleceu. As notas em baixo explicam como pode por em prática as "
 "metodologias já disponíveis. "
 
 msgid "How to do a 15-minute Count"
-msgstr "Como fazer uma Contagem de 15 minutos"
+msgstr "Como fazer uma Contagem de 15 min"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1268,7 +1267,7 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"Após ter terminado a sua contagem de 15 minutos e confirmado que as espécies"
+"Após ter terminado a sua Contagem de 15 minutos e confirmado que as espécies"
 " e números introduzidos estão corretos, pressione o botão Carregar para "
 "submeter os resultados. Isto é importante para garantir que os seus dados "
 "são devidamente guardados na base de dados eBMS. Para referência futura, um "
@@ -1320,7 +1319,7 @@ msgstr ""
 "outras informações pedidas (por ex., hora de início) na página do Transecto."
 " Depois, deverá adicionar a lista de espécies observadas e o número de "
 "indivíduos contados em cada secção do transecto, da mesma forma que o faz "
-"para as contagens de 15 minutos. Quando tiver terminado o seu Transecto e "
+"para as Contagens de 15 minutos. Quando tiver terminado o seu Transecto e "
 "confirmado que as espécies e os números estão corretos, pressione o botão "
 "Terminar para as submeter."
 
@@ -1536,7 +1535,7 @@ msgstr "Esconder"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Amostragem primária"
+msgstr "Método predefinido"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
