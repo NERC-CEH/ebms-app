@@ -1,3 +1,9 @@
+## 1.24.0
+
+Added New Zealand and Nigeria.
+Updated species guide page.
+Update translations.
+
 ## 1.23.0
 
 Fixed moth trap weather and moon phase prefill.

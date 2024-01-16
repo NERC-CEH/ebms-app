@@ -52,6 +52,8 @@ export default {
   ZA: 'South Africa',
   BW: 'Botswana',
   SH_HL: 'Saint Helena',
+  NG: 'Nigeria',
+  NZ: 'New Zealand',
 
   // special option
   ELSEWHERE: 'Elsewhere',
@@ -165,7 +167,6 @@ export const centroids: Types = {
     country: 'Germany',
     zoom: 5 - LEAFLET_MAPBOX_ZOOM_DIFF,
   },
-
   GR: {
     latitude: 39.074208,
     longitude: 21.824312,
@@ -334,14 +335,12 @@ export const centroids: Types = {
     country: 'Turkey',
     zoom: 4 - LEAFLET_MAPBOX_ZOOM_DIFF,
   },
-
   TRA: {
     latitude: 38.9637,
     longitude: 35.2433,
     country: 'Turkey',
     zoom: 4 - LEAFLET_MAPBOX_ZOOM_DIFF,
   },
-
   RU: {
     latitude: 56.2816,
     longitude: 32.842,
@@ -354,32 +353,40 @@ export const centroids: Types = {
     country: 'Portugal azores',
     zoom: 7 - LEAFLET_MAPBOX_ZOOM_DIFF,
   },
-
   JP: {
     latitude: 36.204824,
     longitude: 138.252924,
     country: 'Japan',
     zoom: 5 - LEAFLET_MAPBOX_ZOOM_DIFF,
   },
-
   KE: {
     latitude: 0.823559,
     longitude: 37.906193,
     country: 'Kenya',
     zoom: 6 - LEAFLET_MAPBOX_ZOOM_DIFF,
   },
-
   BW: {
     latitude: -21.0690475,
     longitude: 23.5293358,
     country: 'Botswana',
     zoom: 6 - LEAFLET_MAPBOX_ZOOM_DIFF,
   },
-
   ZA: {
     latitude: -30.2908267,
     longitude: 23.0195502,
     country: 'South Africa',
+    zoom: 6 - LEAFLET_MAPBOX_ZOOM_DIFF,
+  },
+  NG: {
+    latitude: 9.113174,
+    longitude: 7.688109,
+    country: 'Nigeria',
+    zoom: 6 - LEAFLET_MAPBOX_ZOOM_DIFF,
+  },
+  NZ: {
+    latitude: -41.762988,
+    longitude: 173.647554,
+    country: 'New Zealand',
     zoom: 6 - LEAFLET_MAPBOX_ZOOM_DIFF,
   },
 };

@@ -17,6 +17,7 @@ import hu_HU from './interface/hu_HU.po';
 import it_IT from './interface/it_IT.po';
 import ja_JP from './interface/ja_JP.po';
 import lt_LT from './interface/lt_LT.po';
+import mi_NZ from './interface/mi.po';
 import nl_NL from './interface/nl_NL.po';
 import pl_PL from './interface/pl_PL.po';
 import pt_PT from './interface/pt_PT.po';
@@ -42,6 +43,7 @@ import species_hu_HU from './species/hu_HU.po';
 import species_it_IT from './species/it_IT.po';
 import species_ja_JP from './species/ja_JP.po';
 import species_lt_LT from './species/lt_LT.po';
+import species_mi_NZ from './species/mi.po';
 import species_nl_NL from './species/nl_NL.po';
 import species_pl_PL from './species/pl_PL.po';
 import species_pt_PT from './species/pt_PT.po';
@@ -218,6 +220,11 @@ export default {
   'el-GR': {
     interface: rawToKeyVal(el_GR),
     species: rawToKeyVal(species_el_GR),
+    names: flatNames['el-GR'],
+  },
+  'mi-NZ': {
+    interface: rawToKeyVal(mi_NZ),
+    species: rawToKeyVal(species_mi_NZ),
     names: flatNames['el-GR'],
   },
 };

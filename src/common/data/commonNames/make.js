@@ -28,6 +28,7 @@ const LANGUAGE_ISO_MAPPING = {
   ita: 'it-IT',
   slk: 'sk-SK',
   tur: 'tr-TR',
+  mri: 'mi-NZ',
 };
 
 const UNKNOWN_SPECIES = {

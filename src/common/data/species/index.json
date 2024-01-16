@@ -5,10 +5,24 @@
     "Abantis",
     [
       [
+        624704,
+        "adelica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620175,
         "bicolor",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624706,
+        "bismarcki",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -20,11 +34,46 @@
         }
       ],
       [
+        624708,
+        "elegantula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624710,
+        "leucogaster leucogaster",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619183,
         "levubu",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624712,
+        "lucretia lucretia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624714,
+        "nigeriana nigeriana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624716,
+        "nigeriana rougeoti",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -41,6 +90,20 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624718,
+        "pseudonigeriana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624720,
+        "rubra",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -148,6 +211,13 @@
     251,
     "Acada",
     [
+      [
+        624394,
+        "annulifer",
+        {
+          "NG": "P"
+        }
+      ],
       [
         548704,
         "biseriata",
@@ -583,6 +653,27 @@
           "BW": "P",
           "ZA": "P"
         }
+      ],
+      [
+        624396,
+        "mackenii olaus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624398,
+        "nigrapex",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624400,
+        "ploetzi",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -687,13 +778,13 @@
     []
   ],
   [
-    446638,
+    446656,
     260,
     "Acontiini",
     []
   ],
   [
-    446656,
+    446638,
     260,
     "Acontiini",
     []
@@ -741,6 +832,13 @@
     "Acraea",
     [
       [
+        625880,
+        "admatha",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548706,
         "aganice",
         {
@@ -769,6 +867,13 @@
         }
       ],
       [
+        625882,
+        "camaena",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548713,
         "chilo",
         {
@@ -790,6 +895,20 @@
         }
       ],
       [
+        625884,
+        "endoscota",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625886,
+        "eugenia eugenia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620181,
         "horta",
         {
@@ -808,6 +927,20 @@
         "leucographa",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625888,
+        "leucographa jolyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625890,
+        "leucographa leucographa",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -853,6 +986,13 @@
         "quirina",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625892,
+        "quirina quirina",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -1854,6 +1994,27 @@
     ]
   ],
   [
+    624329,
+    251,
+    "Aethiopana",
+    [
+      [
+        625086,
+        "honorius divisa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625088,
+        "honorius honorius",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     466937,
     251,
     "Afarsia",
@@ -1883,6 +2044,69 @@
       [
         457629,
         "terraria"
+      ]
+    ]
+  ],
+  [
+    624387,
+    251,
+    "Afriodinia",
+    [
+      [
+        626818,
+        "cameroonensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626820,
+        "gerontes gerontes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626822,
+        "intermedia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626824,
+        "neavei latifasciata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626826,
+        "rogersi rogersi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626828,
+        "rutherfordii rutherfordii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626830,
+        "talantus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626832,
+        "tantalus caerulea",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -3862,6 +4086,13 @@
         }
       ],
       [
+        625090,
+        "exotica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620191,
         "margaritacea",
         {
@@ -4704,6 +4935,20 @@
         }
       ],
       [
+        625866,
+        "crawshayi camerunica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625868,
+        "damocles",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620307,
         "echeria echeria",
         {
@@ -4718,6 +4963,20 @@
         }
       ],
       [
+        625870,
+        "echeria occidentalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625872,
+        "hecate hecate",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548740,
         "niavius",
         {
@@ -4729,6 +4988,13 @@
         "niavius dominicanus",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625874,
+        "niavius niavius",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -4751,6 +5017,13 @@
         "tartarea tartarea",
         {
           "BW": "P"
+        }
+      ],
+      [
+        625876,
+        "vashti",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -5798,10 +6071,45 @@
     "Andronymus",
     [
       [
+        624402,
+        "caesar caesar",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620311,
         "caesar philander",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624404,
+        "evander",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624406,
+        "gander",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624408,
+        "helles",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624410,
+        "hero",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -5949,6 +6257,13 @@
     "Antanartia",
     [
       [
+        626470,
+        "delius delius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620033,
         "schaeneia schaeneia",
         {
@@ -5969,6 +6284,20 @@
     "Anthene",
     [
       [
+        624902,
+        "afra afra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624904,
+        "agumatsa nigeriensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619420,
         "amarah amarah",
         {
@@ -5981,6 +6310,13 @@
         "crawshayi juanitae",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624906,
+        "crawshayi vuattouxi",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -6000,6 +6336,13 @@
         }
       ],
       [
+        624908,
+        "irumu",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620315,
         "larydas",
         {
@@ -6014,6 +6357,27 @@
         }
       ],
       [
+        624910,
+        "leonina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624912,
+        "levis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624914,
+        "ligures ligures",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620319,
         "lindae",
         {
@@ -6025,6 +6389,13 @@
         "liodes bihe",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624916,
+        "liodes monteironis",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -6071,6 +6442,27 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624918,
+        "rubricinctus derubescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624920,
+        "rubricinctus rubricinctus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624922,
+        "sylvanus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -6551,6 +6943,69 @@
     "Apallaga",
     [
       [
+        624722,
+        "ankasa warreni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624724,
+        "boadicea boadicea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624726,
+        "brattstromi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624728,
+        "chrysoglossa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624730,
+        "elongata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624732,
+        "homeyeri homeyeri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624734,
+        "illustris",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624736,
+        "meditrina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624738,
+        "milleri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619755,
         "mokeezi mokeezi",
         {
@@ -6562,6 +7017,41 @@
         "mokeezi separata",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624740,
+        "mona",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624742,
+        "oreas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624744,
+        "ovalis ovalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624746,
+        "pooanus pooanus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624748,
+        "rutilans rutilans",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -7041,6 +7531,20 @@
     []
   ],
   [
+    624369,
+    251,
+    "Apaturopsis",
+    [
+      [
+        625670,
+        "cleochares cleochares",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448345,
     260,
     "Apaustis",
@@ -7180,6 +7684,34 @@
     "Aphnaeus",
     [
       [
+        624800,
+        "argyrocyclus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624802,
+        "asterius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624804,
+        "boormani",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624806,
+        "brahami brahami",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619203,
         "erikssoni",
         {
@@ -7192,6 +7724,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624808,
+        "orcas",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -7232,6 +7771,20 @@
       [
         455981,
         "unicolor"
+      ]
+    ]
+  ],
+  [
+    624382,
+    251,
+    "Aphysoneura",
+    [
+      [
+        626524,
+        "scapulifascia occidentalis",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -7668,6 +8221,13 @@
         }
       ],
       [
+        626706,
+        "epaphia epaphia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548747,
         "lasti",
         {
@@ -7689,6 +8249,13 @@
         }
       ],
       [
+        626708,
+        "phaola phaola",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548750,
         "sabina",
         {
@@ -7703,6 +8270,13 @@
         }
       ],
       [
+        626710,
+        "sabina sabina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549579,
         "sp.",
         {
@@ -7714,6 +8288,13 @@
         "sylvia",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626712,
+        "sylvia sylvia",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -8329,6 +8910,20 @@
           "TR": "P",
           "TRA": "P",
           "UA": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624282,
+    251,
+    "Argemma",
+    [
+      [
+        624412,
+        "argyrosticta argyrosticta",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -9069,6 +9664,20 @@
     []
   ],
   [
+    624330,
+    251,
+    "Argyrocheila",
+    [
+      [
+        625092,
+        "undifera undifera",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448308,
     260,
     "Argyrogramma",
@@ -9088,6 +9697,34 @@
     260,
     "Argyrogrammatini",
     []
+  ],
+  [
+    624260,
+    251,
+    "Argyrophenga",
+    [
+      [
+        624261,
+        "antipodum",
+        {
+          "NZ": "P"
+        }
+      ],
+      [
+        624263,
+        "harrisi",
+        {
+          "NZ": "P"
+        }
+      ],
+      [
+        624265,
+        "janitae",
+        {
+          "NZ": "P"
+        }
+      ]
+    ]
   ],
   [
     447360,
@@ -9188,10 +9825,38 @@
     "Ariadne",
     [
       [
+        625672,
+        "actisanes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625674,
+        "albifascia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549783,
         "ariadne",
         {
           "JP": "P"
+        }
+      ],
+      [
+        625676,
+        "enotrea enotrea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625678,
+        "pagenstecheri",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -9991,6 +10656,13 @@
     "Artitropa",
     [
       [
+        624414,
+        "comus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619713,
         "erinnys erinnys",
         {
@@ -10184,6 +10856,69 @@
         "australis",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624850,
+        "bella",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624852,
+        "bouyeri bouyeri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624854,
+        "camerunica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624856,
+        "ernesti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624858,
+        "kwakui",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624860,
+        "lamborni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624862,
+        "marginata marginata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624864,
+        "marshalli adamaoua",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624866,
+        "vininga",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -10380,6 +11115,20 @@
       [
         450505,
         "torquatella"
+      ]
+    ]
+  ],
+  [
+    624373,
+    251,
+    "Aterica",
+    [
+      [
+        625994,
+        "galene galene",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -10847,6 +11596,20 @@
         }
       ],
       [
+        624810,
+        "amanga borealis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624812,
+        "callaghani",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620327,
         "coalescens",
         {
@@ -10858,6 +11621,13 @@
         "croesus",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624814,
+        "harpax harpax",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -10886,6 +11656,13 @@
     251,
     "Azanus",
     [
+      [
+        624924,
+        "isis",
+        {
+          "NG": "P"
+        }
+      ],
       [
         432283,
         "jesous",
@@ -11273,6 +12050,41 @@
     "Bebearia",
     [
       [
+        625996,
+        "abesa abesa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625998,
+        "absolon absolon",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626000,
+        "barce maculata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626002,
+        "barombina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626004,
+        "carshena",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548756,
         "chriemhilda",
         {
@@ -11284,6 +12096,279 @@
         "cocalia",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626006,
+        "cocalia continentalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626008,
+        "cocalia katera",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626010,
+        "cocalioides hecqi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626012,
+        "comus comus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626014,
+        "cutteri cutteri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626016,
+        "demetra demetra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626018,
+        "eliensis scrutata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626020,
+        "elpinice",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626022,
+        "flaminia flaminia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626024,
+        "flaminia leventisi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626026,
+        "fontaineana vinula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626028,
+        "guineensis guineensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626030,
+        "innocua",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626032,
+        "laetitia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626034,
+        "lucayensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626036,
+        "maledicta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626038,
+        "mandinga mandinga",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626040,
+        "mardania",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626042,
+        "maximiana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626044,
+        "micans",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626046,
+        "nivaria nivaria",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626048,
+        "occitana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626050,
+        "octogramma",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626052,
+        "omo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626054,
+        "oshogbo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626056,
+        "oxione oxione",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626058,
+        "paludicola paludicola",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626060,
+        "phantasia phantasia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626062,
+        "phantasiella phantasiella",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626064,
+        "phantasina phantasina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626066,
+        "phranza phranza",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626068,
+        "plistonax",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626070,
+        "sophus sophus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626072,
+        "staudingeri okomu",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626074,
+        "staudingeri staudingeri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626076,
+        "tentyris",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626078,
+        "tessmanni innocuoides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626080,
+        "wojtusiaki",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626082,
+        "zonara",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -11347,10 +12432,24 @@
         }
       ],
       [
+        626714,
+        "calypso calypso",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548766,
         "creona",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626716,
+        "creona creona",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -11377,6 +12476,20 @@
         }
       ],
       [
+        626718,
+        "gidica gidica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626720,
+        "hedyle hedyle",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548772,
         "raffrayi",
         {
@@ -11391,10 +12504,38 @@
         }
       ],
       [
+        626722,
+        "solilucis solilucis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626724,
+        "subeida subeida",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548776,
         "sudanensis",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626726,
+        "theora theora",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626728,
+        "theuszi",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -11426,6 +12567,13 @@
         }
       ],
       [
+        626730,
+        "zochalia connexiva",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620339,
         "zochalia zochalia",
         {
@@ -11451,6 +12599,76 @@
         "aganice aganice",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625894,
+        "alcinoe alcinoe",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625896,
+        "consanguinea consanguinea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625898,
+        "elongata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625900,
+        "epaea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625902,
+        "epiprotea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625904,
+        "excisa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625906,
+        "obliqua",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625908,
+        "tellus tellus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625910,
+        "umbra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625912,
+        "vestalis vestalis",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -11582,6 +12800,20 @@
     ]
   ],
   [
+    624315,
+    251,
+    "Bettonula",
+    [
+      [
+        624750,
+        "bettoni bettoni",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     618995,
     251,
     "Biblidinae",
@@ -11593,6 +12825,27 @@
     "Bicyclus",
     [
       [
+        626526,
+        "analis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626528,
+        "angulosa angulosa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626530,
+        "anisops",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619493,
         "anynana anynana",
         {
@@ -11601,11 +12854,172 @@
         }
       ],
       [
+        626532,
+        "auricruda fulgida",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626534,
+        "buea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626536,
+        "campa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626538,
+        "choveti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626540,
+        "dorothea dorothea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619275,
         "ena",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626542,
+        "ephorus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626544,
+        "evadne",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626546,
+        "golo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626548,
+        "hewitsoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626550,
+        "iccius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626552,
+        "ignobilis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626554,
+        "istaris",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626556,
+        "italus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626558,
+        "jacksoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626560,
+        "madetes madetes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626562,
+        "mandanes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626564,
+        "medontias",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626566,
+        "milyas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626568,
+        "nobilis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626570,
+        "ottossoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626572,
+        "pavonis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626574,
+        "procora",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626576,
+        "rhacotis",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -11621,6 +13035,111 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626578,
+        "sambulos sambulos",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626580,
+        "sanaos",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626582,
+        "sandace",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626584,
+        "saussurei camerunia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626586,
+        "sciathis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626588,
+        "smithi smithi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626590,
+        "sophrosyne sophrosyne",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626592,
+        "sweadneri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626594,
+        "sylvicolus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626596,
+        "taenias",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626598,
+        "technatis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626600,
+        "vulgaris",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626602,
+        "xeneas occidentalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626604,
+        "xeneas xeneas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626606,
+        "xeneoides",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -13850,6 +15369,13 @@
     "Borbo",
     [
       [
+        624416,
+        "binga",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         432142,
         "borbonica",
         {
@@ -13931,6 +15457,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624418,
+        "fanta",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -14310,6 +15843,20 @@
     251,
     "Brakefieldia",
     [
+      [
+        626608,
+        "decira",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626610,
+        "peitho peitho",
+        {
+          "NG": "P"
+        }
+      ],
       [
         619475,
         "perspicua perspicua",
@@ -15213,6 +16760,13 @@
         }
       ],
       [
+        625680,
+        "anvatara crameri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548790,
         "ilithyia",
         {
@@ -15297,6 +16851,13 @@
     251,
     "Cacyreus",
     [
+      [
+        624926,
+        "audeoudi",
+        {
+          "NG": "P"
+        }
+      ],
       [
         620347,
         "dicksoni",
@@ -15417,6 +16978,69 @@
     ]
   ],
   [
+    624283,
+    251,
+    "Caenides",
+    [
+      [
+        624420,
+        "benga",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624422,
+        "dacela",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624424,
+        "dacenilla",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624426,
+        "hidaroides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624428,
+        "kangvensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624430,
+        "otilia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624432,
+        "sophia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624434,
+        "soritia",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447701,
     260,
     "Caina",
@@ -15503,6 +17127,27 @@
         "jamesoni jamesoni",
         {
           "BW": "P"
+        }
+      ],
+      [
+        624752,
+        "lacteus dannatti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624754,
+        "lacteus lacteus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624756,
+        "landbecki",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -16376,6 +18021,13 @@
         "penningtoni",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625468,
+        "stuarti",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -17690,6 +19342,13 @@
           "BW": "P",
           "ZA": "P"
         }
+      ],
+      [
+        626472,
+        "cloanthe ligata",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -18405,10 +20064,24 @@
     "Celaenorrhinus",
     [
       [
+        624758,
+        "maesseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548793,
         "ovalis",
         {
           "KE": "P"
+        }
+      ],
+      [
+        624760,
+        "plagiatus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -18601,6 +20274,90 @@
     []
   ],
   [
+    624331,
+    251,
+    "Cephetola",
+    [
+      [
+        625094,
+        "cephena cephena",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625096,
+        "collinsi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625098,
+        "daveyi occidentalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625100,
+        "mercedes mercedes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625102,
+        "nigeriae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625104,
+        "nigra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625106,
+        "obscura",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625108,
+        "pinodes budduana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625110,
+        "pinodes pinodes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625112,
+        "subcoerulea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625114,
+        "sublustris",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     446856,
     260,
     "Cephimallota",
@@ -18733,6 +20490,69 @@
     ]
   ],
   [
+    624284,
+    251,
+    "Ceratrichia",
+    [
+      [
+        624436,
+        "clara clara",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624438,
+        "flava flava",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624440,
+        "lewisi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624442,
+        "nothus enantia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624444,
+        "nothus makomensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624446,
+        "phocion phocion",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624285,
+    251,
+    "Ceratricula",
+    [
+      [
+        624448,
+        "semilutea semilutea",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     446878,
     260,
     "Ceratuncus",
@@ -18744,6 +20564,55 @@
       [
         449745,
         "dzhungaricus"
+      ]
+    ]
+  ],
+  [
+    624332,
+    251,
+    "Cerautola",
+    [
+      [
+        625116,
+        "ceraunia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625118,
+        "crowleyi crowleyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625120,
+        "legeri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625122,
+        "miranda ghanaensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625124,
+        "semibrunnea semibrunnea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625126,
+        "vidua centralis",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -19062,10 +20931,45 @@
         }
       ],
       [
+        625702,
+        "achaemenes monticola",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548800,
         "acuminatus",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625704,
+        "ameliae ameliae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625706,
+        "ameliae doumeti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625708,
+        "anticlea anticlea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625710,
+        "anticlea proadusta",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19083,10 +20987,24 @@
         }
       ],
       [
+        625712,
+        "bipunctatus bipunctatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548805,
         "blanda",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625714,
+        "bocqueti oubanguiensis",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19105,6 +21023,13 @@
         }
       ],
       [
+        625716,
+        "boueti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619255,
         "brainei",
         {
@@ -19116,6 +21041,20 @@
         "brutus",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625718,
+        "brutus angustus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625720,
+        "brutus brutus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19143,6 +21082,13 @@
         }
       ],
       [
+        625722,
+        "castor castor",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620351,
         "castor flavifasciatus",
         {
@@ -19150,10 +21096,31 @@
         }
       ],
       [
+        625724,
+        "catachrous",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625726,
+        "cedreatis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548819,
         "chepalungu",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625728,
+        "chevroti",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19168,6 +21135,34 @@
         "cithaeron cithaeron",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625730,
+        "crossleyi crossleyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625732,
+        "cynthia cynthia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625734,
+        "cynthia kinduana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625736,
+        "doubledayi",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19213,6 +21208,13 @@
         }
       ],
       [
+        625738,
+        "etesipe etesipe",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620383,
         "etesipe tavetensis",
         {
@@ -19227,10 +21229,59 @@
         }
       ],
       [
+        625740,
+        "etheocles etheocles",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625742,
+        "eudoxus boersmana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625744,
+        "eudoxus eudoxus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625746,
+        "eudoxus mechowi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548829,
         "eupale",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625748,
+        "eupale eupale",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625750,
+        "eupale latimargo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625752,
+        "eurinome eurinome",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19248,6 +21299,20 @@
         }
       ],
       [
+        625754,
+        "fulvescens fulvescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625756,
+        "fulvescens senegala",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548833,
         "guderiana",
         {
@@ -19260,6 +21325,34 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        625758,
+        "hadrianus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625760,
+        "hildebrandti gillesi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625762,
+        "hildebrandti hildebrandti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625764,
+        "imperialis albipuncta",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19361,6 +21454,13 @@
         }
       ],
       [
+        625766,
+        "kheili northcotti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548840,
         "kirki",
         {
@@ -19368,10 +21468,52 @@
         }
       ],
       [
+        625768,
+        "lactetinctus lactetinctus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548841,
         "lasti",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625770,
+        "lecerfi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625772,
+        "legeri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625774,
+        "lucretius intermedius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625776,
+        "lucretius lucretius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625778,
+        "lycurgus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19386,6 +21528,97 @@
         "marieps",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625780,
+        "mycerina mycerina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625782,
+        "mycerina nausicaa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625784,
+        "nichetes bouchei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625786,
+        "nichetes leopardinus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625788,
+        "nichetes nichetes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625790,
+        "nobilis claudei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625792,
+        "nobilis nobilis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625794,
+        "numenes aequatorialis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625796,
+        "numenes numenes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625798,
+        "obudoensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625800,
+        "ochracea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625802,
+        "paphianus falcata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625804,
+        "paphianus paphianus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19404,6 +21637,27 @@
         }
       ],
       [
+        625806,
+        "plantroui",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625808,
+        "pleione congoensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625810,
+        "pleione pleione",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548846,
         "pollux",
         {
@@ -19411,10 +21665,31 @@
         }
       ],
       [
+        625812,
+        "pollux pollux",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620397,
         "pondoensis",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625814,
+        "porthos gallayi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625816,
+        "porthos porthos",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19432,6 +21707,34 @@
         }
       ],
       [
+        625818,
+        "protoclea protoclea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625820,
+        "protoclea protonothodes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625822,
+        "pythodoris knoopae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625824,
+        "pythodoris occidens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548851,
         "saturnus",
         {
@@ -19441,10 +21744,66 @@
         }
       ],
       [
+        625826,
+        "smaragdalis smaragdalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625828,
+        "subornatus couilloudi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625830,
+        "subornatus subornatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625832,
+        "superbus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625834,
+        "tectonis tectonis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548854,
         "tiridates",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625836,
+        "tiridates tiridates",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625838,
+        "tiridates tiridatinus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625840,
+        "trajanus trajanus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19485,10 +21844,31 @@
         }
       ],
       [
+        625842,
+        "viola picta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625844,
+        "viola viola",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548862,
         "violetta",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625846,
+        "virilis virilis",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -19566,6 +21946,27 @@
         "zelica",
         {
           "KE": "P"
+        }
+      ],
+      [
+        625848,
+        "zelica rougeoti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625850,
+        "zelica zelica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625852,
+        "zingha",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -20148,10 +22549,17 @@
     ]
   ],
   [
-    0,
+    624322,
     251,
     "Chilades",
     [
+      [
+        624928,
+        "eleusis",
+        {
+          "NG": "P"
+        }
+      ],
       [
         615377,
         "galba",
@@ -20562,6 +22970,27 @@
       [
         456429,
         "luteolaris"
+      ]
+    ]
+  ],
+  [
+    624286,
+    251,
+    "Chondrolepis",
+    [
+      [
+        624450,
+        "nero",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624452,
+        "niveicornis",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -21470,6 +23899,13 @@
         }
       ],
       [
+        624816,
+        "avriko",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619295,
         "brunnea",
         {
@@ -21484,6 +23920,13 @@
         }
       ],
       [
+        624818,
+        "crustaria",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619297,
         "ella",
         {
@@ -21492,10 +23935,24 @@
         }
       ],
       [
+        624820,
+        "larseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         467084,
         "maxima",
         {
           "TRA": "P"
+        }
+      ],
+      [
+        624822,
+        "menelas",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -21519,6 +23976,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624824,
+        "nilus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -21579,6 +24043,41 @@
       [
         457954,
         "humifusaria"
+      ]
+    ]
+  ],
+  [
+    624333,
+    251,
+    "Citrinophila",
+    [
+      [
+        625128,
+        "erastus erastus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625130,
+        "marginalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625132,
+        "similis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625134,
+        "tenera",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -22447,6 +24946,20 @@
         "anchises anchises",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624388,
+        "bixana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624390,
+        "chalybe chalybe",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -26591,6 +29104,13 @@
         "hyale/alfacariensis/croceus"
       ],
       [
+        626700,
+        "manengoubensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         432208,
         "myrmidone",
         {
@@ -27010,6 +29530,13 @@
         }
       ],
       [
+        626732,
+        "antevippe antevippe",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619632,
         "antevippe gavisa",
         {
@@ -27078,10 +29605,31 @@
         }
       ],
       [
+        626734,
+        "celimene sudanicus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626736,
+        "chrysonome",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548902,
         "daira",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626738,
+        "daira stygia",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -27092,11 +29640,25 @@
         }
       ],
       [
+        626740,
+        "danae eupompe",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619283,
         "doubledayi",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626742,
+        "elgonensis glauningi",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -27118,6 +29680,13 @@
         "euippe",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626744,
+        "euippe euippe",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -27199,6 +29768,13 @@
         }
       ],
       [
+        626746,
+        "evarne",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548917,
         "evenina",
         {
@@ -27228,6 +29804,13 @@
         }
       ],
       [
+        626748,
+        "halimede halimede",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548922,
         "hetaera",
         {
@@ -27252,6 +29835,13 @@
         }
       ],
       [
+        626750,
+        "liagore",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619287,
         "pallene",
         {
@@ -27260,10 +29850,24 @@
         }
       ],
       [
+        626752,
+        "phisadia phisadia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548928,
         "pleione",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626754,
+        "pleione pleione",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -27301,6 +29905,13 @@
         "vesta",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626756,
+        "vesta amelia",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -28681,6 +31292,48 @@
     ]
   ],
   [
+    624323,
+    251,
+    "Cupidesthes",
+    [
+      [
+        624930,
+        "gabunica gabunica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624932,
+        "lithas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624934,
+        "mimetica mimetica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624936,
+        "paralithas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624938,
+        "robusta",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     432068,
     251,
     "Cupido",
@@ -29122,6 +31775,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624940,
+        "jobates mauritanica",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -29759,6 +32419,69 @@
         }
       ],
       [
+        626084,
+        "althea bobi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626086,
+        "anitorgis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626088,
+        "aramis aramis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626090,
+        "beckeri beckeri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626092,
+        "caenis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626094,
+        "capella",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626096,
+        "coccinata coccinata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626098,
+        "confusa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626100,
+        "consanguis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548945,
         "coranus",
         {
@@ -29773,10 +32496,87 @@
         }
       ],
       [
+        626102,
+        "egesta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626104,
+        "euthalioides albomarginata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626106,
+        "euthalioides euthalioides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626108,
+        "excelsa excelsa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626110,
+        "fumana balluca",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626112,
+        "fumana royi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626114,
+        "haimodia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626116,
+        "heliada heliada",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548948,
         "herminia",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626118,
+        "herminia herminia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626120,
+        "hesiodina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626122,
+        "hesiodotus nigeriensis",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -29787,6 +32587,48 @@
         }
       ],
       [
+        626124,
+        "hyarbita hyarbita",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626126,
+        "hypatha hypatha",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626128,
+        "hypatha okomu",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626130,
+        "indamora indamora",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626132,
+        "jodutta ciceronis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626134,
+        "lucasii binotorum",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548952,
         "lurida",
         {
@@ -29794,10 +32636,73 @@
         }
       ],
       [
+        626136,
+        "lurida hesione",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626138,
+        "oemilius oemilius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626140,
+        "ogova",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626142,
+        "orphnina suavis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626144,
+        "preussi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626146,
+        "reinholdi reinholdi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626148,
+        "sangaris sangaris",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548954,
         "teita",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626150,
+        "weymeri weymeri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626152,
+        "zenkeri",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -29822,6 +32727,20 @@
       [
         456731,
         "superba"
+      ]
+    ]
+  ],
+  [
+    624374,
+    251,
+    "Cynandra",
+    [
+      [
+        626154,
+        "opis opis",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -29851,6 +32770,13 @@
     251,
     "Cyrestis",
     [
+      [
+        625864,
+        "camillus camillus",
+        {
+          "NG": "P"
+        }
+      ],
       [
         620425,
         "camillus sublineata",
@@ -30359,6 +33285,13 @@
           "TRA": "A",
           "UA": "A"
         }
+      ],
+      [
+        624224,
+        "plexippus plexippus",
+        {
+          "NZ": "P"
+        }
       ]
     ]
   ],
@@ -30370,6 +33303,27 @@
       [
         457189,
         "nerii"
+      ]
+    ]
+  ],
+  [
+    624362,
+    251,
+    "Dapidodigma",
+    [
+      [
+        625470,
+        "demeter demeter",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625472,
+        "hymen",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -31088,6 +34042,13 @@
         }
       ],
       [
+        625474,
+        "caliginosa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620431,
         "dariaves",
         {
@@ -31117,11 +34078,32 @@
         }
       ],
       [
+        625476,
+        "galathea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         571830,
         "livia",
         {
           "CY": "I",
           "GR": "I"
+        }
+      ],
+      [
+        625478,
+        "lorisona lorisona",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625480,
+        "odana odana",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -32408,6 +35390,20 @@
     "Dixeia",
     [
       [
+        626758,
+        "capricornus capricornus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626760,
+        "cebron",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548955,
         "charina",
         {
@@ -32419,6 +35415,13 @@
         "charina charina",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        626762,
+        "doxo doxo",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -32440,6 +35443,13 @@
         "orbona",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626764,
+        "orbona orbona",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -32483,6 +35493,20 @@
       [
         459051,
         "albertae"
+      ]
+    ]
+  ],
+  [
+    624267,
+    251,
+    "Dodonidia",
+    [
+      [
+        624268,
+        "helmsii",
+        {
+          "NZ": "P"
+        }
       ]
     ]
   ],
@@ -33239,6 +36263,34 @@
     "Eagris",
     [
       [
+        624762,
+        "decastigma decastigma",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624764,
+        "decastigma fuscosa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624766,
+        "denuba denuba",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624768,
+        "hereus quaterna",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619763,
         "nottoana knysna",
         {
@@ -33250,6 +36302,34 @@
         "nottoana nottoana",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624770,
+        "subalbida subalbida",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624772,
+        "tetrastigma subolivescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624774,
+        "tetrastigma tetrastigma",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624776,
+        "tigris liberti",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -33696,6 +36776,13 @@
     251,
     "Eicochrysops",
     [
+      [
+        624942,
+        "dudgeoni",
+        {
+          "NG": "P"
+        }
+      ],
       [
         619061,
         "hippocrates",
@@ -34877,6 +37964,20 @@
     ]
   ],
   [
+    624383,
+    251,
+    "Elymnias",
+    [
+      [
+        626612,
+        "bammakoo bammakoo",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447707,
     260,
     "Ematheudes",
@@ -35806,6 +38907,12 @@
     ]
   ],
   [
+    446477,
+    260,
+    "Epichnopteriginae",
+    []
+  ],
+  [
     446476,
     260,
     "Epichnopteriginae",
@@ -35818,19 +38925,7 @@
     []
   ],
   [
-    446477,
-    260,
-    "Epichnopteriginae",
-    []
-  ],
-  [
     446711,
-    260,
-    "Epichnopterigini",
-    []
-  ],
-  [
-    446712,
     260,
     "Epichnopterigini",
     []
@@ -35842,6 +38937,18 @@
     []
   ],
   [
+    446712,
+    260,
+    "Epichnopterigini",
+    []
+  ],
+  [
+    446814,
+    260,
+    "Epichnopterix",
+    []
+  ],
+  [
     446816,
     260,
     "Epichnopterix",
@@ -35849,12 +38956,6 @@
   ],
   [
     446815,
-    260,
-    "Epichnopterix",
-    []
-  ],
-  [
-    446814,
     260,
     "Epichnopterix",
     [
@@ -35905,12 +39006,6 @@
     ]
   ],
   [
-    446479,
-    260,
-    "Epichnopteryginae",
-    []
-  ],
-  [
     446480,
     260,
     "Epichnopteryginae",
@@ -35918,6 +39013,12 @@
   ],
   [
     446481,
+    260,
+    "Epichnopteryginae",
+    []
+  ],
+  [
+    446479,
     260,
     "Epichnopteryginae",
     []
@@ -36530,6 +39631,69 @@
       [
         466702,
         "bimaculata"
+      ]
+    ]
+  ],
+  [
+    624334,
+    251,
+    "Epitola",
+    [
+      [
+        625136,
+        "larseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625138,
+        "posthumus",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624335,
+    251,
+    "Epitolina",
+    [
+      [
+        625140,
+        "catori catori",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625142,
+        "collinsi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625144,
+        "dispar",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625146,
+        "larseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625148,
+        "melissa",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -39761,6 +42925,20 @@
     []
   ],
   [
+    624271,
+    251,
+    "Erebiola",
+    [
+      [
+        624272,
+        "butleri",
+        {
+          "NZ": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448494,
     260,
     "Eremobia",
@@ -39829,6 +43007,118 @@
     ]
   ],
   [
+    624336,
+    251,
+    "Eresina",
+    [
+      [
+        625150,
+        "fontainei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625152,
+        "fusca",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625154,
+        "jacksoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625156,
+        "maesseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625158,
+        "pseudofusca",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625160,
+        "rougeoti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625162,
+        "saundersi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625164,
+        "schmitti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625166,
+        "theodori",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624337,
+    251,
+    "Eresiomera",
+    [
+      [
+        625168,
+        "bicolor",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625170,
+        "cornesi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625172,
+        "isca isca",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625174,
+        "isca occidentalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625176,
+        "nigeriana",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     619014,
     251,
     "Eretis",
@@ -39839,6 +43129,27 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624778,
+        "lugens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624780,
+        "melania",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624782,
+        "plistonicus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -40405,6 +43716,20 @@
       [
         452400,
         "tririvella"
+      ]
+    ]
+  ],
+  [
+    624363,
+    251,
+    "Etesiolaus",
+    [
+      [
+        625482,
+        "catori catori",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -41524,6 +44849,27 @@
     "Euchrysops",
     [
       [
+        624944,
+        "alberta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624946,
+        "albistriata greenwoodi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624948,
+        "banyo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620455,
         "barkeri",
         {
@@ -41553,11 +44899,39 @@
         }
       ],
       [
+        624950,
+        "nilotica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619239,
         "osiris",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624952,
+        "reducta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624954,
+        "sagba",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624956,
+        "sahelianus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -42485,6 +45859,34 @@
     []
   ],
   [
+    624320,
+    251,
+    "Euliphyra",
+    [
+      [
+        624868,
+        "hewitsonioides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624870,
+        "leucyania sjostedti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624872,
+        "mirifica",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448104,
     260,
     "Eulithis",
@@ -42669,10 +46071,290 @@
     "Euphaedra",
     [
       [
+        626156,
+        "acuta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626158,
+        "adonina adonina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626160,
+        "athena",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626162,
+        "aureola nitens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626164,
+        "compacta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626166,
+        "controversa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626168,
+        "crossei crossei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626170,
+        "cyparissa aurata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626172,
+        "dargeana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626174,
+        "demeter",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626176,
+        "densamacula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626178,
+        "diffusa albocoerulea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626180,
+        "diffusa diffusa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626182,
+        "edwardsii edwardsii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626184,
+        "eleus eleus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626186,
+        "exerrata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626188,
+        "extensa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626190,
+        "ferruginea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626192,
+        "fucora",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626194,
+        "gashaka",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626196,
+        "harpalyce evanescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626198,
+        "harpalyce harpalyce",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626200,
+        "hewitsoni sumptuosa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626202,
+        "imitans",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626204,
+        "imperialis gabonica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626206,
+        "imperialis hecqui",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626208,
+        "janetta janetta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626210,
+        "justicia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626212,
+        "knoopiana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626214,
+        "larseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626216,
+        "losinga knoopi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626218,
+        "losinga losinga",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626220,
+        "losinga wardi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626222,
+        "luperca",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626224,
+        "luteolucens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626226,
+        "lutescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626228,
+        "mambili",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626230,
+        "margaritifera",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548968,
         "medon",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626232,
+        "medon medon",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626234,
+        "mirabilis mirabilis",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -42690,10 +46372,38 @@
         }
       ],
       [
+        626236,
+        "nigrocilia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548972,
         "orientalis",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626238,
+        "permixtum diva",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626240,
+        "phaethusa phaethusa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626242,
+        "phaethusa proserpina",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -42704,10 +46414,122 @@
         }
       ],
       [
+        626244,
+        "preussiana protea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626246,
+        "ravola",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548975,
         "rex",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626248,
+        "rezia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626250,
+        "ruspina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626252,
+        "sarcoptera sarcoptera",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626254,
+        "semipreussiana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626256,
+        "simplex",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626258,
+        "splendens splendens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626260,
+        "themis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626262,
+        "velutina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626264,
+        "vicina longiqua",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626266,
+        "viridicaerulea viridicaerulea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626268,
+        "viridirupta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626270,
+        "wojtusiaki",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626272,
+        "xypete maritima",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626274,
+        "zaddachii elephantina",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -43839,10 +47661,80 @@
     "Euptera",
     [
       [
+        626276,
+        "amieti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626278,
+        "crowleyi crowleyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548976,
         "elabontas",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626280,
+        "elabontas elabontas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626282,
+        "hirundo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626284,
+        "knoopi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626286,
+        "mimetica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626288,
+        "neptunus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626290,
+        "nigeriensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626292,
+        "pluto pluto",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626294,
+        "zowa",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -43940,6 +47832,237 @@
     ]
   ],
   [
+    624375,
+    251,
+    "Euriphene",
+    [
+      [
+        626296,
+        "abasa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626298,
+        "amicia amicia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626300,
+        "ampedusa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626302,
+        "anaxibia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626304,
+        "aridatha aridatha",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626306,
+        "atossa atossa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626308,
+        "atropurpurea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626310,
+        "atrovirens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626312,
+        "barombina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626314,
+        "bernaudi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626316,
+        "coerulea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626318,
+        "doriclea doriclea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626320,
+        "duseni legeriana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626322,
+        "elegans",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626324,
+        "epe",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626326,
+        "ernestibaumanni ernestibaumanni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626328,
+        "gambiae gabonica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626330,
+        "glaucopis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626332,
+        "goniogramma",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626334,
+        "grosesmithi grosesmithi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626336,
+        "incerta incerta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626338,
+        "karschi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626340,
+        "kiki",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626342,
+        "lysandra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626344,
+        "milnei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626346,
+        "mundula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626348,
+        "obani",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626350,
+        "obtusangula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626352,
+        "paralysandra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626354,
+        "pavo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626356,
+        "plagiata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626358,
+        "tadema tadema",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447007,
     260,
     "Eurodachtha",
@@ -44025,6 +48148,55 @@
           "KE": "P",
           "ZA": "P"
         }
+      ],
+      [
+        626360,
+        "chalcis chalcis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626362,
+        "isuka",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626364,
+        "plautilla",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626366,
+        "porphyrion porphyrion",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626368,
+        "togoensis",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624376,
+    251,
+    "Euryphurana",
+    [
+      [
+        626370,
+        "nobilis nobilis",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -44033,6 +48205,13 @@
     251,
     "Eurytela",
     [
+      [
+        625682,
+        "alinda",
+        {
+          "NG": "P"
+        }
+      ],
       [
         548988,
         "dryope",
@@ -44049,10 +48228,24 @@
         }
       ],
       [
+        625684,
+        "dryope dryope",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620461,
         "hiarbas angustata",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625686,
+        "hiarbas hiarbas",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -44483,6 +48676,41 @@
       [
         456290,
         "vapidella"
+      ]
+    ]
+  ],
+  [
+    624377,
+    251,
+    "Evena",
+    [
+      [
+        626372,
+        "angustatum",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626374,
+        "crithea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626376,
+        "niji",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626378,
+        "oberthueri",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -44970,6 +49198,34 @@
     ]
   ],
   [
+    624338,
+    251,
+    "Falcuna",
+    [
+      [
+        625178,
+        "campimus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625180,
+        "gitte",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625182,
+        "libyssa libyssa",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447291,
     260,
     "Falseuncaria",
@@ -45215,6 +49471,27 @@
     "Fresna",
     [
       [
+        624454,
+        "carlo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624456,
+        "cojo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624458,
+        "netopha",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619739,
         "nyassae",
         {
@@ -45454,6 +49731,27 @@
     260,
     "Galleriini",
     []
+  ],
+  [
+    624287,
+    251,
+    "Gamia",
+    [
+      [
+        624460,
+        "buchholzi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624462,
+        "shelleyi",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
   ],
   [
     448105,
@@ -45831,6 +50129,48 @@
       [
         457414,
         "honoraria"
+      ]
+    ]
+  ],
+  [
+    624339,
+    251,
+    "Geritola",
+    [
+      [
+        625184,
+        "daveyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625186,
+        "frankdaveyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625188,
+        "gerina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625190,
+        "goodii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625192,
+        "virginea",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -46580,6 +50920,13 @@
         {
           "ZA": "P"
         }
+      ],
+      [
+        626614,
+        "parmeno",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -47045,10 +51392,122 @@
     "Gorgyra",
     [
       [
+        624464,
+        "aburae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624466,
+        "afikpo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624468,
+        "aretina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624470,
+        "bina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624472,
+        "bule",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624474,
+        "diversata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624476,
+        "heterochrus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548993,
         "johnstoni",
         {
           "KE": "P"
+        }
+      ],
+      [
+        624478,
+        "kalinzu",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624480,
+        "minima",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624482,
+        "mocquerysii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624484,
+        "pali",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624486,
+        "rubescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624488,
+        "sara",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624490,
+        "sola",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624492,
+        "subfacatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624494,
+        "warreni",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -47149,6 +51608,27 @@
     "Graphium",
     [
       [
+        626636,
+        "adamastor",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626638,
+        "agamedes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626640,
+        "almansor escherichi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548996,
         "angolanus",
         {
@@ -47164,12 +51644,26 @@
         }
       ],
       [
+        626642,
+        "angolanus baronis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         548998,
         "antheus",
         {
           "BW": "P",
           "KE": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626644,
+        "biokoensis",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -47188,10 +51682,24 @@
         }
       ],
       [
+        626646,
+        "illyris hamatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549004,
         "kirbyi",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626648,
+        "latreillianus theorini",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -47207,6 +51715,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626650,
+        "liponesco",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -47239,6 +51754,13 @@
         }
       ],
       [
+        626652,
+        "policenes telloi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549015,
         "polistratus",
         {
@@ -47261,10 +51783,38 @@
         }
       ],
       [
+        626654,
+        "ridleyanus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549541,
         "sarpedon",
         {
           "JP": "P"
+        }
+      ],
+      [
+        626656,
+        "simoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626658,
+        "tynderaeus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626660,
+        "ucalegon ucalegon",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -47398,6 +51948,48 @@
       [
         454509,
         "osmana"
+      ]
+    ]
+  ],
+  [
+    624288,
+    251,
+    "Gretna",
+    [
+      [
+        624496,
+        "balenge balenge",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624498,
+        "cylinda",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624500,
+        "lacida",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624502,
+        "waga",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624504,
+        "zaremba zaremba",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -47625,6 +52217,20 @@
       [
         572120,
         "spec."
+      ]
+    ]
+  ],
+  [
+    624289,
+    251,
+    "Gyrogra",
+    [
+      [
+        624506,
+        "subnotata",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -47873,6 +52479,20 @@
     []
   ],
   [
+    624384,
+    251,
+    "Hallelesis",
+    [
+      [
+        626616,
+        "asochis asochis",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     619047,
     251,
     "Hamanumida",
@@ -48036,6 +52656,20 @@
         {
           "KE": "P"
         }
+      ],
+      [
+        626380,
+        "theobene superna",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626382,
+        "theobene theobene",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -48128,6 +52762,20 @@
         "chromus",
         {
           "JP": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624385,
+    251,
+    "Haydonia",
+    [
+      [
+        626618,
+        "pythia",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -48517,6 +53165,27 @@
       [
         456797,
         "undalis"
+      ]
+    ]
+  ],
+  [
+    624340,
+    251,
+    "Helna",
+    [
+      [
+        625194,
+        "despecta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625196,
+        "modesta",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -49086,6 +53755,62 @@
       [
         458250,
         "taigana"
+      ]
+    ]
+  ],
+  [
+    624341,
+    251,
+    "Hewitsonia",
+    [
+      [
+        625198,
+        "beryllina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625200,
+        "bitjeana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625202,
+        "boisduvalii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625204,
+        "danane",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625206,
+        "inexpectata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625208,
+        "kirbyi kirbyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625210,
+        "occidentalis",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -50921,6 +55646,20 @@
     []
   ],
   [
+    624290,
+    251,
+    "Hollandus",
+    [
+      [
+        624508,
+        "xanthopeplus xanthopeplus",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     446776,
     260,
     "Holocacista",
@@ -51670,6 +56409,27 @@
     ]
   ],
   [
+    624291,
+    251,
+    "Hypoleucis",
+    [
+      [
+        624510,
+        "dacena",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624512,
+        "tripunctata truda",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     432096,
     251,
     "Hypolimnas",
@@ -51689,6 +56449,13 @@
         }
       ],
       [
+        626474,
+        "anthedon anthedon",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620465,
         "anthedon wahlbergi",
         {
@@ -51701,6 +56468,13 @@
         {
           "JP": "P",
           "KE": "P"
+        }
+      ],
+      [
+        626476,
+        "chapmani",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -51722,6 +56496,13 @@
         "dinarcha",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626478,
+        "dinarcha dinarcha",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -51791,10 +56572,24 @@
         }
       ],
       [
+        626480,
+        "monteironis monteironis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549039,
         "salmacis",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626482,
+        "salmacis salmacis",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -51819,10 +56614,73 @@
     "Hypolycaena",
     [
       [
+        625484,
+        "anara",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625486,
+        "antifaunus antifaunus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620469,
         "buxtoni buxtoni",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625488,
+        "coerulea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625490,
+        "dubia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625492,
+        "hatita hatita",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625494,
+        "kadiskos",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625496,
+        "kakumi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625498,
+        "lebona lebona",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625500,
+        "liara liara",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -51833,11 +56691,25 @@
         }
       ],
       [
+        625502,
+        "nigra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619449,
         "philippus philippus",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        625504,
+        "scintillans",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -51858,6 +56730,34 @@
       [
         457678,
         "roboraria"
+      ]
+    ]
+  ],
+  [
+    624364,
+    251,
+    "Hypomyrina",
+    [
+      [
+        625506,
+        "fournierae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625508,
+        "mimetica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625510,
+        "nomion",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -52084,6 +56984,55 @@
         "wagneri",
         {
           "TRA": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624342,
+    251,
+    "Hypophytala",
+    [
+      [
+        625212,
+        "benitensis benitensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625214,
+        "benitensis contrasta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625216,
+        "henleyi henleyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625218,
+        "hyettoides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625220,
+        "nigrescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625222,
+        "ultramarina",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -53262,10 +58211,38 @@
     "Iolaus",
     [
       [
+        625512,
+        "adorabilis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620475,
         "aemulus",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625514,
+        "aethria",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625516,
+        "agnes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625518,
+        "alcibiades",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -53277,10 +58254,24 @@
         }
       ],
       [
+        625520,
+        "alienus bicaudatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620477,
         "aphnaeoides",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625522,
+        "aurivillii",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -53291,6 +58282,41 @@
         }
       ],
       [
+        625524,
+        "bellina bellina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625526,
+        "calisto",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625528,
+        "coelestis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625530,
+        "creta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625532,
+        "cytaeis cytaeis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620479,
         "diametra natalica",
         {
@@ -53298,10 +58324,108 @@
         }
       ],
       [
+        625534,
+        "eurisus eurisus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625536,
+        "farquharsoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625538,
+        "fontainei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625540,
+        "frater kumboae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625542,
+        "gemmarius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625544,
+        "iasis iasis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625546,
+        "ismenias",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625548,
+        "iulus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625550,
+        "laon",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625552,
+        "laonides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625554,
+        "longicauda longicauda",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625556,
+        "lukabas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620485,
         "lulua",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625558,
+        "maesa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625560,
+        "menas menas",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -53328,6 +58452,34 @@
         }
       ],
       [
+        625562,
+        "neavei neavei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625564,
+        "newporti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625566,
+        "normani normani",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625568,
+        "ofere",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619091,
         "pallene",
         {
@@ -53336,10 +58488,59 @@
         }
       ],
       [
+        625570,
+        "paneperata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625572,
+        "parasilanus maesseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619097,
         "penningtoni",
         {
           "BW": "P"
+        }
+      ],
+      [
+        625574,
+        "poecilaon poecilaon",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625576,
+        "pollux pollux",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625578,
+        "sappirus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625580,
+        "scintillans",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625582,
+        "sciophilus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -53362,6 +58563,20 @@
         "silas",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625584,
+        "sudanicus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625586,
+        "timon timon",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -53518,6 +58733,41 @@
         "orsedice",
         {
           "JP": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624343,
+    251,
+    "Iridana",
+    [
+      [
+        625224,
+        "exquisita",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625226,
+        "incredibilis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625228,
+        "nigeriana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625230,
+        "rougeoti",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -53690,6 +58940,13 @@
     "Isoteinon",
     [
       [
+        624514,
+        "abjecta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549921,
         "lamprospilus",
         {
@@ -53742,6 +58999,13 @@
     251,
     "Issoria",
     [
+      [
+        625914,
+        "baumanni excelsior",
+        {
+          "NG": "P"
+        }
+      ],
       [
         432384,
         "eugenia",
@@ -54214,10 +59478,24 @@
         }
       ],
       [
+        626484,
+        "cymodoce cymodoce",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620487,
         "elgiva",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        626486,
+        "gregorii",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -54303,10 +59581,45 @@
         }
       ],
       [
+        626488,
+        "sophia sophia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626490,
+        "stygia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626492,
+        "temora temora",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549066,
         "terea",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626494,
+        "terea terea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626496,
+        "westermanni westermanni",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -54319,6 +59632,20 @@
       [
         458158,
         "consentaria"
+      ]
+    ]
+  ],
+  [
+    624344,
+    251,
+    "Kakumia",
+    [
+      [
+        625232,
+        "otlauga",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -54339,6 +59666,20 @@
         "inachus",
         {
           "JP": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624380,
+    251,
+    "Kallimoides",
+    [
+      [
+        626498,
+        "rumia jadyae",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -54399,6 +59740,26 @@
       [
         450798,
         "shardana"
+      ]
+    ]
+  ],
+  [
+    624279,
+    251,
+    "Katreinae",
+    []
+  ],
+  [
+    624313,
+    251,
+    "Katreus",
+    [
+      [
+        624694,
+        "johnstonii",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -55308,11 +60669,32 @@
     "Lachnocnema",
     [
       [
+        624874,
+        "albimacula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619223,
         "bibulus",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624876,
+        "disrupta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624878,
+        "divergens",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -55324,10 +60706,52 @@
         }
       ],
       [
+        624880,
+        "emperamus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624882,
+        "exiguus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620497,
         "laches",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624884,
+        "luna",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624886,
+        "magna",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624888,
+        "reutlingeri reutlingeri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624890,
+        "vuattouxi",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -55543,6 +60967,7 @@
           "MT": "P",
           "NL": "I",
           "NO": "A",
+          "NZ": "P",
           "PL": "I",
           "PT": "P",
           "PT_AZ": "P",
@@ -55765,6 +61190,34 @@
       [
         457584,
         "orthogrammaria"
+      ]
+    ]
+  ],
+  [
+    624345,
+    251,
+    "Larinopoda",
+    [
+      [
+        625234,
+        "aspidos",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625236,
+        "lagyra lagyra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625238,
+        "lircaea",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -56288,6 +61741,76 @@
     ]
   ],
   [
+    624292,
+    251,
+    "Lennia",
+    [
+      [
+        624516,
+        "binoevatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624518,
+        "lena",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624520,
+        "maracanda",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624293,
+    251,
+    "Leona",
+    [
+      [
+        624522,
+        "halma",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624524,
+        "leonora leonora",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624526,
+        "meloui",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624294,
+    251,
+    "Lepella",
+    [
+      [
+        624528,
+        "lepeletier",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     619030,
     251,
     "Lepidochrysops",
@@ -56346,6 +61869,13 @@
         "dukei",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624958,
+        "dunni",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -56540,6 +62070,13 @@
         }
       ],
       [
+        624960,
+        "parsimon",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619073,
         "patricia",
         {
@@ -56567,6 +62104,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624962,
+        "polydialecta",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -56605,10 +62149,24 @@
         }
       ],
       [
+        624964,
+        "quassi quassi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620573,
         "quickelbergei",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624966,
+        "ringa",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -56684,10 +62242,24 @@
         }
       ],
       [
+        624968,
+        "vera",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620591,
         "victori",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624970,
+        "victoriae occidentalis",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -57176,10 +62748,38 @@
         }
       ],
       [
+        626766,
+        "alcesta alcesta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620601,
         "alcesta inalcesta",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        626768,
+        "hybrida hybrida",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626770,
+        "marginea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626772,
+        "medusa",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -57194,6 +62794,20 @@
         "nupta",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626774,
+        "nupta nupta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626776,
+        "wigginsi pseudalcesta",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -57285,6 +62899,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624972,
+        "pulchra larseni",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -57890,7 +63511,8 @@
         549785,
         "glorifica",
         {
-          "JP": "P"
+          "JP": "P",
+          "NZ": "P"
         }
       ],
       [
@@ -58042,6 +63664,244 @@
       [
         466766,
         "tetraphylla"
+      ]
+    ]
+  ],
+  [
+    624318,
+    251,
+    "Lipaphnaeus",
+    [
+      [
+        624826,
+        "aderna aderna",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624828,
+        "leonina bitje",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624830,
+        "leonina ivoirensis",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624346,
+    251,
+    "Liptena",
+    [
+      [
+        625240,
+        "albicans",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625242,
+        "alluaudi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625244,
+        "augusta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625246,
+        "bakassi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625248,
+        "bassae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625250,
+        "boei priscilla",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625252,
+        "bolivari",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625254,
+        "brophyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625256,
+        "decipiens decipiens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625258,
+        "eketi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625260,
+        "eukrinaria",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625262,
+        "evanescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625264,
+        "fatima fatima",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625266,
+        "fatima nigeriana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625268,
+        "ferrymani ferrymani",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625270,
+        "flavicans flavicans",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625272,
+        "ilaro",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625274,
+        "opaca opaca",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625276,
+        "pearmani",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625278,
+        "rochei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625280,
+        "septistrigata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625282,
+        "similis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625284,
+        "simplicia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625286,
+        "submacula submacula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625288,
+        "titei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625290,
+        "xanthostola xanthostola",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624295,
+    251,
+    "Lissia",
+    [
+      [
+        624530,
+        "lissa lissa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624532,
+        "luehderi luehderi",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -58932,6 +64792,13 @@
         }
       ],
       [
+        624229,
+        "boldenarum",
+        {
+          "NZ": "P"
+        }
+      ],
+      [
         432255,
         "candens",
         {
@@ -59100,6 +64967,13 @@
         "euphratica",
         {
           "TRA": "P"
+        }
+      ],
+      [
+        624232,
+        "feredayi",
+        {
+          "NZ": "P"
         }
       ],
       [
@@ -59347,6 +65221,20 @@
         "phoenicurus",
         {
           "TRA": "P"
+        }
+      ],
+      [
+        624235,
+        "rauparaha",
+        {
+          "NZ": "P"
+        }
+      ],
+      [
+        624238,
+        "salustius",
+        {
+          "NZ": "P"
         }
       ],
       [
@@ -61359,6 +67247,41 @@
     ]
   ],
   [
+    624321,
+    251,
+    "Megalopalpus",
+    [
+      [
+        624892,
+        "angulosus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624894,
+        "metaleucus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624896,
+        "simplex",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624898,
+        "zymna",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     446840,
     260,
     "Megalophanes",
@@ -63033,6 +68956,62 @@
     ]
   ],
   [
+    624296,
+    251,
+    "Melphina",
+    [
+      [
+        624534,
+        "malthina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624536,
+        "melphis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624538,
+        "statira",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624297,
+    251,
+    "Melphinyet",
+    [
+      [
+        624540,
+        "flavina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624542,
+        "tarace",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624544,
+        "unistriga",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447991,
     260,
     "Menophra",
@@ -63337,6 +69316,20 @@
     ]
   ],
   [
+    624370,
+    251,
+    "Mesoxantha",
+    [
+      [
+        625688,
+        "ethosea ethoseoides",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448270,
     260,
     "Metachrostis",
@@ -63589,6 +69582,13 @@
         }
       ],
       [
+        624684,
+        "kambove gamma",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619743,
         "malgacha malgacha",
         {
@@ -63600,6 +69600,13 @@
         "malgacha orina",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624686,
+        "medea medea",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -63621,6 +69628,13 @@
         "metis paris",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624688,
+        "midas malda",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -63788,6 +69802,69 @@
     ]
   ],
   [
+    624298,
+    251,
+    "Meza",
+    [
+      [
+        624546,
+        "banda",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624548,
+        "cybeutes cybeutes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624550,
+        "cybeutes volta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624552,
+        "elba",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624554,
+        "indusiata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624556,
+        "leucophaea leucophaea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624558,
+        "mabillei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624560,
+        "meza",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447676,
     260,
     "Michaeliodes",
@@ -63876,6 +69953,69 @@
       [
         459218,
         "karsholti"
+      ]
+    ]
+  ],
+  [
+    624347,
+    251,
+    "Micropentila",
+    [
+      [
+        625292,
+        "adelgitha",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625294,
+        "adelgunda",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625296,
+        "brunnea brunnea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625298,
+        "dorothea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625300,
+        "flavopunctata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625302,
+        "fuscula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625304,
+        "nigeriana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625306,
+        "ogojae",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -64175,6 +70315,48 @@
     ]
   ],
   [
+    624348,
+    251,
+    "Mimacraea",
+    [
+      [
+        625308,
+        "apicalis apicalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625310,
+        "charmian",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625312,
+        "darwinia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625314,
+        "maesseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625316,
+        "neurata",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447881,
     260,
     "Mimas",
@@ -64182,6 +70364,55 @@
       [
         457162,
         "tiliae"
+      ]
+    ]
+  ],
+  [
+    624349,
+    251,
+    "Mimeresia",
+    [
+      [
+        625318,
+        "cellularis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625320,
+        "debora catori",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625322,
+        "debora debora",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625324,
+        "dinora dinora",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625326,
+        "drucei owerri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625328,
+        "libentina libentina",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -64604,6 +70835,20 @@
     []
   ],
   [
+    624324,
+    251,
+    "Monile",
+    [
+      [
+        624974,
+        "gemmifera maculata",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447138,
     260,
     "Monochroa",
@@ -64863,6 +71108,41 @@
       [
         449798,
         "tenuicornella"
+      ]
+    ]
+  ],
+  [
+    624299,
+    251,
+    "Monza",
+    [
+      [
+        624562,
+        "alberti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624564,
+        "cretacea",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624300,
+    251,
+    "Mopala",
+    [
+      [
+        624566,
+        "orma",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -65260,6 +71540,13 @@
     "Mylothris",
     [
       [
+        626778,
+        "aburi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549089,
         "agathina",
         {
@@ -65275,10 +71562,38 @@
         }
       ],
       [
+        626780,
+        "asphodelus asphodelus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626782,
+        "bansoana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619505,
         "bernice rubricosta",
         {
           "BW": "P"
+        }
+      ],
+      [
+        626784,
+        "chloris chloris",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626786,
+        "flaviana",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -65296,6 +71611,62 @@
         }
       ],
       [
+        626788,
+        "jaopura",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626790,
+        "josi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626792,
+        "knoopi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626794,
+        "knutssoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626796,
+        "ochracea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626798,
+        "primulina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626800,
+        "rembina rembina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626802,
+        "rhodope",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619507,
         "rueppellii haemus",
         {
@@ -65308,6 +71679,27 @@
         "sagala",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626804,
+        "schumanni schumanni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626806,
+        "sjoestedti sjoestedti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626808,
+        "sulphurea sulphurea",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -65332,6 +71724,13 @@
         }
       ],
       [
+        625588,
+        "dermaptera subornata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619444,
         "silenus ficedula",
         {
@@ -65344,6 +71743,13 @@
         "silenus penningtoni",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625590,
+        "silenus silenus",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -65634,6 +72040,20 @@
       [
         456860,
         "cilialis"
+      ]
+    ]
+  ],
+  [
+    624350,
+    251,
+    "Neaveia",
+    [
+      [
+        625330,
+        "lamborni lamborni",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -66529,6 +72949,13 @@
         }
       ],
       [
+        626810,
+        "pharis pharis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549106,
         "thalassina",
         {
@@ -66541,6 +72968,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626812,
+        "thalassina thalassina",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -66597,10 +73031,31 @@
     []
   ],
   [
+    624371,
+    251,
+    "Neptidopsis",
+    [
+      [
+        625690,
+        "ophione ophione",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     432082,
     251,
     "Neptis",
     [
+      [
+        626384,
+        "agouale",
+        {
+          "NG": "P"
+        }
+      ],
       [
         549108,
         "alta",
@@ -66617,10 +73072,45 @@
         }
       ],
       [
+        626386,
+        "biafra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626388,
+        "camarensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626390,
+        "carlsbergi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549111,
         "conspicua",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626392,
+        "constantiae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626394,
+        "continuata",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -66635,6 +73125,13 @@
         "hylas",
         {
           "JP": "P"
+        }
+      ],
+      [
+        626396,
+        "jamesoni",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -66662,6 +73159,34 @@
         }
       ],
       [
+        626398,
+        "liberti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626400,
+        "matilei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626402,
+        "melicerta melicerta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626404,
+        "metanira",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549116,
         "metella",
         {
@@ -66669,10 +73194,80 @@
         }
       ],
       [
+        626406,
+        "mildbraedi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626408,
+        "mixophyes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549118,
         "morosa",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626410,
+        "nebrodes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626412,
+        "nemetes nemetes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626414,
+        "nicobule",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626416,
+        "nicomedes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626418,
+        "nicoteles",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626420,
+        "nysiades",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626422,
+        "occidentalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626424,
+        "paula",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -66694,6 +73289,20 @@
         "pryeri",
         {
           "JP": "P"
+        }
+      ],
+      [
+        626426,
+        "puella",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626428,
+        "quintilla",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -66823,6 +73432,13 @@
         }
       ],
       [
+        626430,
+        "seeldrayersi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549124,
         "serena",
         {
@@ -66841,6 +73457,20 @@
         "sp.",
         {
           "JP": "P"
+        }
+      ],
+      [
+        626432,
+        "strigata strigata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626434,
+        "trigonophora melicertula",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -66886,6 +73516,13 @@
         }
       ],
       [
+        624568,
+        "protensa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620631,
         "wallengrenii wallengrenii",
         {
@@ -66902,6 +73539,160 @@
       [
         461157,
         "quadrangula"
+      ]
+    ]
+  ],
+  [
+    624325,
+    251,
+    "Neurellipes",
+    [
+      [
+        624976,
+        "emkopoti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624978,
+        "erythropoecilus locuples",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624980,
+        "flavomaculatus bipuncta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624982,
+        "flavomaculatus flavomaculatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624984,
+        "fulvimacula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624986,
+        "juba",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624988,
+        "kampala incerta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624990,
+        "kampala kampala",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624992,
+        "lachares lachares",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624994,
+        "lamprocles lamprocles",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624996,
+        "leptines leptines",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624998,
+        "lusones",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625000,
+        "lychnaptes lychnaptes",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625002,
+        "lychnides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625004,
+        "lysicles lysicles",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625006,
+        "lyzanius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625008,
+        "mahota",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625010,
+        "rhoko",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625012,
+        "scintillula aurea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625014,
+        "scintillula scintillula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625016,
+        "versatilis",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -67098,6 +73889,20 @@
     260,
     "Noctuini",
     []
+  ],
+  [
+    624301,
+    251,
+    "Noctulana",
+    [
+      [
+        624570,
+        "noctula",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
   ],
   [
     446251,
@@ -67939,6 +74744,76 @@
       [
         457952,
         "reaumuraria"
+      ]
+    ]
+  ],
+  [
+    624351,
+    251,
+    "Obania",
+    [
+      [
+        625332,
+        "catalina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625334,
+        "o-rubrum o-rubrum",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625336,
+        "subvariegata subvariegata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625338,
+        "tullia",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624326,
+    251,
+    "Oboronia",
+    [
+      [
+        625018,
+        "guessfeldtii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625020,
+        "ornata ornata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625022,
+        "pseudopunctatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625024,
+        "punctatus",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -69767,6 +76642,48 @@
     "Ornipholidotos",
     [
       [
+        625340,
+        "boormani",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625342,
+        "kirbyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625344,
+        "maesseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625346,
+        "nigeriae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625348,
+        "nympha",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625350,
+        "onitshae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620015,
         "peucetia penningtoni",
         {
@@ -69921,6 +76838,34 @@
     ]
   ],
   [
+    624314,
+    251,
+    "Ortholexis",
+    [
+      [
+        624696,
+        "dimidia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624698,
+        "hollandi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624700,
+        "holocausta",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448072,
     260,
     "Orthonama",
@@ -70063,6 +77008,104 @@
     []
   ],
   [
+    624302,
+    251,
+    "Osmodes",
+    [
+      [
+        624572,
+        "adon",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624574,
+        "adonia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624576,
+        "adosus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624578,
+        "costatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624580,
+        "distincta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624582,
+        "hollandi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624584,
+        "laronia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624586,
+        "lindseyi lindseyi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624588,
+        "lux",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624590,
+        "omar",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624592,
+        "thora",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624303,
+    251,
+    "Osphantes",
+    [
+      [
+        624594,
+        "ogowena ogowena",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447402,
     260,
     "Osthelderiella",
@@ -70172,6 +77215,34 @@
       [
         466798,
         "curtisii"
+      ]
+    ]
+  ],
+  [
+    624365,
+    251,
+    "Oxylides",
+    [
+      [
+        625592,
+        "albata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625594,
+        "faunus camerunica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625596,
+        "faunus faunus",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -70416,6 +77487,48 @@
       [
         456823,
         "ustrinalis"
+      ]
+    ]
+  ],
+  [
+    624372,
+    251,
+    "Palla",
+    [
+      [
+        625854,
+        "decius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625856,
+        "publius publius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625858,
+        "ussheri ussheri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625860,
+        "violinitens coniger",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625862,
+        "violinitens violinitens",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -70888,10 +78001,38 @@
         }
       ],
       [
+        626662,
+        "andronicus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626664,
+        "antimachus antimachus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549539,
         "bianor",
         {
           "JP": "P"
+        }
+      ],
+      [
+        626666,
+        "charopus charopus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626668,
+        "chrapkowskoides nurettini",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -70910,6 +78051,27 @@
         }
       ],
       [
+        626670,
+        "cynorta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626672,
+        "cyproeofila cyproeofila",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626674,
+        "cyproeofila praecyola",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549129,
         "dardanus",
         {
@@ -70922,6 +78084,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626676,
+        "dardanus dardanus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -70984,10 +78153,24 @@
         }
       ],
       [
+        626678,
+        "gallienus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549516,
         "helenus",
         {
           "JP": "P"
+        }
+      ],
+      [
+        626680,
+        "hesperus hesperus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -71135,6 +78318,13 @@
         }
       ],
       [
+        626682,
+        "menestheus menestheus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549143,
         "nireus",
         {
@@ -71147,6 +78337,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626684,
+        "nireus nireus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -71199,6 +78396,27 @@
         }
       ],
       [
+        626686,
+        "phorcas congoanus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626688,
+        "phorcas phorcas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626690,
+        "plagiatus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549524,
         "polytes",
         {
@@ -71213,10 +78431,24 @@
         }
       ],
       [
+        626692,
+        "rex schultzei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549537,
         "ryukyuensis",
         {
           "JP": "P"
+        }
+      ],
+      [
+        626694,
+        "sosia sosia",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -71238,6 +78470,20 @@
         "xuthus/machaon",
         {
           "JP": "P"
+        }
+      ],
+      [
+        626696,
+        "zalmoxis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626698,
+        "zenobia",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -71299,6 +78545,34 @@
     ]
   ],
   [
+    624304,
+    251,
+    "Paracleros",
+    [
+      [
+        624596,
+        "biguttulus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624598,
+        "maesseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624600,
+        "substrigata",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448242,
     260,
     "Paracolax",
@@ -71350,6 +78624,76 @@
       [
         457696,
         "consonaria"
+      ]
+    ]
+  ],
+  [
+    624366,
+    251,
+    "Paradeudorix",
+    [
+      [
+        625598,
+        "boormani",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625600,
+        "cobaltina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625602,
+        "eleala eleala",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625604,
+        "eleala viridis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625606,
+        "ituri ituri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625608,
+        "marginata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625610,
+        "moyambina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625612,
+        "nyanzana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625614,
+        "petersi",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -72034,6 +79378,48 @@
     ]
   ],
   [
+    624305,
+    251,
+    "Pardaleodes",
+    [
+      [
+        624602,
+        "edipus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624604,
+        "fan",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624606,
+        "incerta murcia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624608,
+        "sator sator",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624610,
+        "tibullus tibullus",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     548666,
     251,
     "Pardopsis",
@@ -72366,6 +79752,41 @@
     ]
   ],
   [
+    624306,
+    251,
+    "Paronymus",
+    [
+      [
+        624612,
+        "budonga",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624614,
+        "ligora",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624616,
+        "nevea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624618,
+        "xanthias xanthias",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447421,
     260,
     "Paropta",
@@ -72512,6 +79933,20 @@
     251,
     "Parosmodes",
     [
+      [
+        624620,
+        "lentiginosa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624622,
+        "morantii axis",
+        {
+          "NG": "P"
+        }
+      ],
       [
         619386,
         "morantii morantii",
@@ -73222,6 +80657,97 @@
     "Pentila",
     [
       [
+        625352,
+        "camerunica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625354,
+        "glagoessa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625356,
+        "hewitsoni hewitsoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625358,
+        "hewitsoni limbata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625360,
+        "maculata maculata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625362,
+        "nigeriana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625364,
+        "occidentalium occidentalium",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625366,
+        "pauli pauli",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625368,
+        "petreia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625370,
+        "picena catori",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625372,
+        "picena cydaria",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625374,
+        "pseudorotha",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625376,
+        "tachyroides tachyroides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620017,
         "tropicalis fuscipunctata",
         {
@@ -73233,6 +80759,13 @@
         "tropicalis tropicalis",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625378,
+        "umangiana prodita",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -73261,6 +80794,20 @@
       [
         456420,
         "translucidella"
+      ]
+    ]
+  ],
+  [
+    624275,
+    251,
+    "Percnodaimon",
+    [
+      [
+        624276,
+        "merula",
+        {
+          "NZ": "P"
+        }
       ]
     ]
   ],
@@ -75666,6 +83213,20 @@
     ]
   ],
   [
+    624352,
+    251,
+    "Phytala",
+    [
+      [
+        625380,
+        "elais elais",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448260,
     260,
     "Phytometra",
@@ -76244,6 +83805,7 @@
           "MT": "P",
           "NL": "P",
           "NO": "P",
+          "NZ": "P",
           "PL": "P",
           "PT": "P",
           "PT_AZ": "A",
@@ -76330,6 +83892,181 @@
     ]
   ],
   [
+    624367,
+    251,
+    "Pilodeudorix",
+    [
+      [
+        625616,
+        "anetia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625618,
+        "angelita schultzei",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625620,
+        "aruma aruma",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625622,
+        "aruma nigeriana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625624,
+        "aucta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625626,
+        "caerulea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625628,
+        "camerona camerona",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625630,
+        "catalla",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625632,
+        "catori",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625634,
+        "congoana congoana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625636,
+        "deritas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625638,
+        "dimitris dimitris",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625640,
+        "diyllus diyllus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625642,
+        "hugoi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625644,
+        "leonina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625646,
+        "mera mera",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625648,
+        "mimeta mimeta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625650,
+        "mimeta oreas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625652,
+        "otraeda genuba",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625654,
+        "pseudoderitas",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625656,
+        "ula",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625658,
+        "violetta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625660,
+        "virgatoides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625662,
+        "zela",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447646,
     260,
     "Pima",
@@ -76362,6 +84099,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626814,
+        "eriphia tritogenia",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -76497,11 +84241,32 @@
     "Platylesches",
     [
       [
+        624624,
+        "affinissima",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619151,
         "ayresii",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624626,
+        "batangae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624628,
+        "chamaeleon chamaeleon",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -76517,6 +84282,20 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624630,
+        "iva",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624632,
+        "langa",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -80323,6 +88102,13 @@
         }
       ],
       [
+        626500,
+        "ceryne ceruana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619594,
         "ceryne ceryne",
         {
@@ -80338,6 +88124,13 @@
         }
       ],
       [
+        626502,
+        "frobeniusi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549179,
         "limnoria",
         {
@@ -80345,10 +88138,24 @@
         }
       ],
       [
+        626504,
+        "milonia milonia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549181,
         "octavia",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626506,
+        "octavia octavia",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -80364,6 +88171,27 @@
         "pelarga",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626508,
+        "rauana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626510,
+        "silvicola",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626512,
+        "sinuata sinuata",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -80420,6 +88248,20 @@
       [
         458030,
         "ocellata"
+      ]
+    ]
+  ],
+  [
+    624316,
+    251,
+    "Procampta",
+    [
+      [
+        624784,
+        "rara",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -80581,6 +88423,27 @@
     ]
   ],
   [
+    624307,
+    251,
+    "Prosopalpus",
+    [
+      [
+        624634,
+        "debilis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624636,
+        "styla",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     446569,
     260,
     "Prosopolophini",
@@ -80724,11 +88587,25 @@
         }
       ],
       [
+        626514,
+        "anacardii anacardii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619133,
         "nebulosa",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626516,
+        "parhassus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -80897,10 +88774,24 @@
     "Pseudacraea",
     [
       [
+        626436,
+        "annakae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549188,
         "boisduvalii",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626438,
+        "boisduvalii boisduvalii",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -80912,10 +88803,24 @@
         }
       ],
       [
+        626440,
+        "clarkii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549190,
         "deludens",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626442,
+        "dolomena dolomena",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -80926,10 +88831,24 @@
         }
       ],
       [
+        626444,
+        "eurytus eurytus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620661,
         "eurytus imitator",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        626446,
+        "kuenowii gottbergi",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -80948,6 +88867,13 @@
         }
       ],
       [
+        626448,
+        "lucretia lucretia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620663,
         "lucretia tarquinea",
         {
@@ -80960,6 +88886,27 @@
         {
           "BW": "P"
         }
+      ],
+      [
+        626450,
+        "rubrobasalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626452,
+        "semire",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626454,
+        "warburgi",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -80971,6 +88918,83 @@
       [
         456203,
         "tergestella"
+      ]
+    ]
+  ],
+  [
+    624319,
+    251,
+    "Pseudaletis",
+    [
+      [
+        624832,
+        "agrippina agrippina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624834,
+        "antimachus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624836,
+        "catori",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624838,
+        "clymenus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624840,
+        "cornesi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624842,
+        "leonis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624844,
+        "taeniata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624846,
+        "zebra zebra",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624378,
+    251,
+    "Pseudargynnis",
+    [
+      [
+        626456,
+        "hegemone",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -80991,10 +89015,45 @@
     "Pseudathyma",
     [
       [
+        626458,
+        "callina callina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626460,
+        "falcata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626462,
+        "legeri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549196,
         "lucretioides",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626464,
+        "martini",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626466,
+        "sibyllina",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -81011,6 +89070,20 @@
       [
         460077,
         "ulicis"
+      ]
+    ]
+  ],
+  [
+    624353,
+    251,
+    "Pseuderesia",
+    [
+      [
+        625382,
+        "eleaza eleaza",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -81932,11 +90005,32 @@
     "Pseudonacaduba",
     [
       [
+        625026,
+        "aethiops",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619438,
         "sichela sichela",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624379,
+    251,
+    "Pseudoneptis",
+    [
+      [
+        626468,
+        "bugandensis ianthe",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -82455,6 +90549,26 @@
     ]
   ],
   [
+    624386,
+    251,
+    "Pseudopontia",
+    [
+      [
+        626816,
+        "paradoxa",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624280,
+    251,
+    "Pseudopontiinae",
+    []
+  ],
+  [
     446772,
     260,
     "Pseudopostega",
@@ -82799,6 +90913,20 @@
     ]
   ],
   [
+    624354,
+    251,
+    "Ptelina",
+    [
+      [
+        625384,
+        "carnuta",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448145,
     260,
     "Pterapherapteryx",
@@ -82900,6 +91028,69 @@
       [
         458816,
         "palpina"
+      ]
+    ]
+  ],
+  [
+    624308,
+    251,
+    "Pteroteinon",
+    [
+      [
+        624638,
+        "caenira",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624640,
+        "capronnieri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624642,
+        "ceucaenira",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624644,
+        "concaenira",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624646,
+        "iricolor",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624648,
+        "laterculus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624650,
+        "laufella",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624652,
+        "pruna",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -84689,6 +92880,20 @@
     ]
   ],
   [
+    624281,
+    251,
+    "Pyrrhochalcia",
+    [
+      [
+        624392,
+        "iphis iphis",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     0,
     265,
     "Pyrrhosoma",
@@ -85012,6 +93217,27 @@
       [
         454504,
         "resinella"
+      ]
+    ]
+  ],
+  [
+    624309,
+    251,
+    "Rhabdomantis",
+    [
+      [
+        624654,
+        "galatia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624656,
+        "sosia",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -85507,6 +93733,20 @@
     "Rubraea",
     [
       [
+        625916,
+        "abdera abdera",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625918,
+        "abdera eginopsis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620665,
         "acrita",
         {
@@ -85521,6 +93761,13 @@
         }
       ],
       [
+        625920,
+        "cepheus cepheus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620667,
         "cerasa cerasa",
         {
@@ -85532,6 +93779,13 @@
         "egina egina",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625922,
+        "kraka",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -85612,6 +93866,13 @@
         "cacta",
         {
           "KE": "P"
+        }
+      ],
+      [
+        626518,
+        "cacta cacta",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -85758,10 +94019,38 @@
     "Sarangesa",
     [
       [
+        624786,
+        "bouvieri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624788,
+        "brigida brigida",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624790,
+        "loelius",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619398,
         "lucidella lucidella",
         {
           "BW": "P"
+        }
+      ],
+      [
+        624792,
+        "majorella",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -85800,6 +94089,20 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624794,
+        "tertullianus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624796,
+        "thecla thecla",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -88985,6 +97288,48 @@
     ]
   ],
   [
+    624310,
+    251,
+    "Semalea",
+    [
+      [
+        624658,
+        "arela",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624660,
+        "atrio",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624662,
+        "kola",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624664,
+        "pulvina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624666,
+        "sextilis",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447056,
     260,
     "Semioscopis",
@@ -89197,6 +97542,13 @@
         }
       ],
       [
+        625692,
+        "amulia amulia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619564,
         "amulia intermedia",
         {
@@ -89218,6 +97570,20 @@
         }
       ],
       [
+        625694,
+        "boisduvali omissa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625696,
+        "garega",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619251,
         "morantii",
         {
@@ -89231,6 +97597,20 @@
         {
           "KE": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        625698,
+        "occidentalium occidentalium",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625700,
+        "pechueli sangbae",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -89705,6 +98085,13 @@
         {
           "BW": "P"
         }
+      ],
+      [
+        624900,
+        "lemolea pilos",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -89955,6 +98342,13 @@
     251,
     "Spialia",
     [
+      [
+        624702,
+        "diomus",
+        {
+          "NG": "P"
+        }
+      ],
       [
         619289,
         "ferax",
@@ -90685,6 +99079,153 @@
     ]
   ],
   [
+    624355,
+    251,
+    "Stempfferia",
+    [
+      [
+        625386,
+        "annae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625388,
+        "boormani",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625390,
+        "carcina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625392,
+        "cercene",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625394,
+        "cercenoides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625396,
+        "congoana congoana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625398,
+        "elissa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625400,
+        "francisci",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625402,
+        "gordoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625404,
+        "ife",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625406,
+        "katharinae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625408,
+        "kholifa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625410,
+        "marginata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625412,
+        "michelae centralis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625414,
+        "michelae michelae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625416,
+        "moyambina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625418,
+        "subtumescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625420,
+        "tumentia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625422,
+        "uniformis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625424,
+        "zelza",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     448374,
     260,
     "Stenoecia",
@@ -90963,6 +99504,13 @@
         }
       ],
       [
+        625924,
+        "caecilia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619465,
         "caldarena caldarena",
         {
@@ -90995,11 +99543,32 @@
         }
       ],
       [
+        625926,
+        "pseudegina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625928,
+        "rogersi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619113,
         "stenobea",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        625930,
+        "sykesi",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -91074,25 +99643,25 @@
     ]
   ],
   [
-    446716,
-    260,
-    "Stichobasini",
-    []
-  ],
-  [
     446713,
     260,
     "Stichobasini",
     []
   ],
   [
-    446830,
+    446716,
+    260,
+    "Stichobasini",
+    []
+  ],
+  [
+    446829,
     260,
     "Stichobasis",
     []
   ],
   [
-    446829,
+    446830,
     260,
     "Stichobasis",
     [
@@ -91832,6 +100401,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        625664,
+        "marmoreus marmoreus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -92804,6 +101380,27 @@
     ]
   ],
   [
+    624368,
+    251,
+    "Syrmoptera",
+    [
+      [
+        625666,
+        "amasa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625668,
+        "bonifacei",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447249,
     260,
     "Tabulaephorus",
@@ -93099,6 +101696,27 @@
         }
       ],
       [
+        625028,
+        "kiki",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625030,
+        "legrasi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625032,
+        "rosacea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619517,
         "sybaris linearis",
         {
@@ -93172,6 +101790,13 @@
         "thespis",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625034,
+        "ungemachi",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -93305,6 +101930,13 @@
         }
       ],
       [
+        625932,
+        "actinotina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620713,
         "alalonga",
         {
@@ -93312,10 +101944,31 @@
         }
       ],
       [
+        625934,
+        "alciope",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620715,
         "anacreon",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625936,
+        "aurivillii aurivillii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625938,
+        "bonasia",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -93331,6 +101984,20 @@
         "cabira",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625940,
+        "circeis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625942,
+        "encedana",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -93363,6 +102030,132 @@
         }
       ],
       [
+        625944,
+        "iturina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625946,
+        "jodutta jodutta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625948,
+        "kaduna",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625950,
+        "lycoa lycoa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625952,
+        "ntebiae nyongana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625954,
+        "oberthueri oberthueri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625956,
+        "oreas oboti",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625958,
+        "orestia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625960,
+        "orina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625962,
+        "parrhasia parrhasia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625964,
+        "parrhasia servona",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625966,
+        "peneleos peneleos",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625968,
+        "penelope derubescens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625970,
+        "penelope penelope",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625972,
+        "perenna perenna",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625974,
+        "pharsalus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625976,
+        "polis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625978,
+        "pseudepaea pseudepaea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619471,
         "rahira rahira",
         {
@@ -93376,6 +102169,48 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        625980,
+        "sotikensis karschi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625982,
+        "uvui balina",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625984,
+        "vesperalis catori",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625986,
+        "vesperalis vesperalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625988,
+        "viviana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625990,
+        "wigginsi occidentalis",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -93523,6 +102358,69 @@
     ]
   ],
   [
+    624356,
+    251,
+    "Telipna",
+    [
+      [
+        625426,
+        "acraea acraea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625428,
+        "acraea fervida",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625430,
+        "albofasciata albofasciata",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625432,
+        "cameroonensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625434,
+        "rothi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625436,
+        "rufilla",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625438,
+        "ruspinoides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625440,
+        "sanguinea sanguinea",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     447165,
     260,
     "Telphusa",
@@ -93559,6 +102457,20 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624668,
+        "ignita",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624670,
+        "watsoni",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -93673,6 +102585,20 @@
     ]
   ],
   [
+    624357,
+    251,
+    "Teratoneura",
+    [
+      [
+        625442,
+        "isabellae isabellae",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     619056,
     251,
     "Terias",
@@ -93700,6 +102626,13 @@
         }
       ],
       [
+        626702,
+        "floricola leonis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619147,
         "hapale",
         {
@@ -93712,6 +102645,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626704,
+        "senegalensis",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -93764,6 +102704,62 @@
       [
         454563,
         "langmaidi"
+      ]
+    ]
+  ],
+  [
+    624358,
+    251,
+    "Tetrarhanis",
+    [
+      [
+        625444,
+        "nubifera",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625446,
+        "ogojae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625448,
+        "okwangwo",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625450,
+        "onitshae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625452,
+        "simplex",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625454,
+        "stempfferi stempfferi",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625456,
+        "symplocus",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -94071,6 +103067,41 @@
     260,
     "Thermesiini",
     []
+  ],
+  [
+    624327,
+    251,
+    "Thermoniphas",
+    [
+      [
+        625036,
+        "alberici",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625038,
+        "fumosa",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625040,
+        "micylus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625042,
+        "togara togara",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
   ],
   [
     619026,
@@ -94983,6 +104014,13 @@
           "BW": "P",
           "ZA": "P"
         }
+      ],
+      [
+        625992,
+        "zetes zetes",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -95221,6 +104259,13 @@
     251,
     "Tirumala",
     [
+      [
+        625878,
+        "formosa morgeni",
+        {
+          "NG": "P"
+        }
+      ],
       [
         549751,
         "hamata",
@@ -95581,6 +104626,34 @@
     ]
   ],
   [
+    624359,
+    251,
+    "Torbenia",
+    [
+      [
+        625458,
+        "larseni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625460,
+        "persimilis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625462,
+        "wojtusiaki",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     619005,
     251,
     "Torbenlarsenia",
@@ -95599,6 +104672,13 @@
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624672,
+        "perobscura",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -95745,6 +104825,20 @@
     260,
     "Toxocampinae",
     []
+  ],
+  [
+    624360,
+    251,
+    "Toxochitona",
+    [
+      [
+        625464,
+        "gerda",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
   ],
   [
     448422,
@@ -95929,6 +105023,90 @@
       [
         459578,
         "ludifica"
+      ]
+    ]
+  ],
+  [
+    624328,
+    251,
+    "Triclema",
+    [
+      [
+        625044,
+        "africana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625046,
+        "coerulea",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625048,
+        "fasciatus subnitens",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625050,
+        "inconspicua inconspicua",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625052,
+        "lacides",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625054,
+        "lamias lamias",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625056,
+        "lucretilis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625058,
+        "nigeriae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625060,
+        "phoenicis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625062,
+        "rufoplagata ituriensis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625064,
+        "staudingeri",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -96285,6 +105463,20 @@
     ]
   ],
   [
+    624317,
+    251,
+    "Triskelionia",
+    [
+      [
+        624798,
+        "tricerata",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
     0,
     265,
     "Trithemis",
@@ -96356,6 +105548,20 @@
         "uitenhaga",
         {
           "ZA": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624361,
+    251,
+    "Tumerepedes",
+    [
+      [
+        625466,
+        "flava",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -96472,10 +105678,38 @@
         }
       ],
       [
+        625066,
+        "carana carana",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625068,
+        "carana kontu",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625070,
+        "cretosus nodieri",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         620799,
         "hesperis",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        625072,
+        "margaritaceus",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -96810,6 +106044,48 @@
     "Uranothauma",
     [
       [
+        625074,
+        "antinorii bamendanus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625076,
+        "cyara cyara",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625078,
+        "cyara stactalla",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625080,
+        "falkensteinii",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625082,
+        "frederikkae frederikkae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        625084,
+        "heritsia heritsia",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619981,
         "nubifer nubifer",
         {
@@ -97062,6 +106338,34 @@
         }
       ],
       [
+        626520,
+        "dimorphica mortoni",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624242,
+        "gonerilla",
+        {
+          "NZ": "P"
+        }
+      ],
+      [
+        624245,
+        "gonerilla gonerilla",
+        {
+          "NZ": "P"
+        }
+      ],
+      [
+        624248,
+        "gonerilla ida",
+        {
+          "NZ": "P"
+        }
+      ],
+      [
         620807,
         "hippomene hippomene",
         {
@@ -97073,6 +106377,13 @@
         "indica",
         {
           "JP": "P"
+        }
+      ],
+      [
+        624251,
+        "itea",
+        {
+          "NZ": "P"
         }
       ],
       [
@@ -97181,6 +106492,20 @@
           "TR": "A",
           "TRA": "A",
           "UA": "A"
+        }
+      ]
+    ]
+  ],
+  [
+    624381,
+    251,
+    "Vanessula",
+    [
+      [
+        626522,
+        "milca buechneri",
+        {
+          "NG": "P"
         }
       ]
     ]
@@ -97466,6 +106791,20 @@
     "Willema",
     [
       [
+        624690,
+        "kumbona",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624692,
+        "tsadicus",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619163,
         "willemi",
         {
@@ -97578,6 +106917,41 @@
       [
         459425,
         "albago"
+      ]
+    ]
+  ],
+  [
+    624311,
+    251,
+    "Xanthodisca",
+    [
+      [
+        624674,
+        "rega",
+        {
+          "NG": "P"
+        }
+      ]
+    ]
+  ],
+  [
+    624312,
+    251,
+    "Xanthonymus",
+    [
+      [
+        624676,
+        "astrape",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        624678,
+        "xanthioides",
+        {
+          "NG": "P"
+        }
       ]
     ]
   ],
@@ -98295,11 +107669,25 @@
     "Ypthima",
     [
       [
+        626620,
+        "albida occidentalis",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619519,
         "antennata antennata",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626622,
+        "antennata cornesi",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -98386,11 +107774,32 @@
         }
       ],
       [
+        626624,
+        "condamini nigeriae",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626626,
+        "doleta",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619277,
         "granulosa",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        626628,
+        "impura impura",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -98416,6 +107825,20 @@
         }
       ],
       [
+        626630,
+        "pulchra",
+        {
+          "NG": "P"
+        }
+      ],
+      [
+        626632,
+        "pupillaris pupillaris",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         549897,
         "riukiuana",
         {
@@ -98427,6 +107850,13 @@
         "sp.",
         {
           "JP": "P"
+        }
+      ],
+      [
+        626634,
+        "vuattouxi",
+        {
+          "NG": "P"
         }
       ],
       [
@@ -98753,6 +108183,13 @@
     251,
     "Zeritis",
     [
+      [
+        624848,
+        "neriene",
+        {
+          "NG": "P"
+        }
+      ],
       [
         619221,
         "sorhagenii",
@@ -99352,6 +108789,13 @@
         }
       ],
       [
+        624254,
+        "labradus labradus",
+        {
+          "NZ": "P"
+        }
+      ],
+      [
         549695,
         "otis",
         {
@@ -99363,6 +108807,13 @@
         "otis antanossa",
         {
           "ZA": "P"
+        }
+      ],
+      [
+        624257,
+        "oxleyi",
+        {
+          "NZ": "P"
         }
       ]
     ]
@@ -99404,11 +108855,25 @@
     "Zophopetes",
     [
       [
+        624680,
+        "cerymica",
+        {
+          "NG": "P"
+        }
+      ],
+      [
         619059,
         "dysmephila",
         {
           "BW": "P",
           "ZA": "P"
+        }
+      ],
+      [
+        624682,
+        "ganda",
+        {
+          "NG": "P"
         }
       ]
     ]

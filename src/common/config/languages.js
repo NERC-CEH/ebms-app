@@ -27,6 +27,7 @@ const languages = {
   'hu-HU': 'Magyar',
   'fr-FR': 'Français',
   'sk-SK': 'Slovensky',
+  'mi-NZ': 'Māori',
 };
 
 const isDemo = !isPlatform('hybrid');
