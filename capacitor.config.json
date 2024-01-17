@@ -1,7 +1,6 @@
 {
   "appId": "uk.ac.ceh.ebms",
   "appName": "ButterflyCount",
-  "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",
   "cordova": {}
