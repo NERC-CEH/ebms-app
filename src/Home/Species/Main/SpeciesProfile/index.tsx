@@ -17,7 +17,7 @@ import {
 } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
 import { CountryCode } from 'common/config/countries';
-import { Species, Abundance, AbundanceCode } from 'common/data/profiles';
+import { Species, AbundanceCode, abundances } from 'common/data/profiles';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
 
@@ -37,7 +37,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
   useOnBackButton(hideSpeciesModal);
 
   const abundanceCode: AbundanceCode = species.abundance[country]!;
-  const status = Abundance[abundanceCode];
+  const status = abundances[abundanceCode];
 
   const getSlides = () => {
     const { image_copyright } = species;

@@ -1,7 +1,7 @@
 import { Trans as T } from 'react-i18next';
 import { Page, Main, Header, Section } from '@flumens';
 import { IonItem, IonLabel } from '@ionic/react';
-import species from 'common/data/profiles/index.json';
+import species, { Species } from 'common/data/profiles';
 import ExpandableList from 'Components/ExpandableList';
 import flumensLogo from './flumens.png';
 import sponsorsLogo from './sponsors.png';
@@ -9,16 +9,17 @@ import './styles.scss';
 
 const { P, H } = Section;
 
-const speciesWithoutImageCopyright = s => s.image_copyright;
-const getTaxonWithImageCopyright = s => (
+const speciesWithImageCopyright = (s: Species) => s.image_copyright;
+const getTaxonWithImageCopyright = (s: Species) => (
   <IonItem key={s.id} lines="none">
     <IonLabel>
       <i>{`${s.taxon}: `}</i>
-      <span dangerouslySetInnerHTML={{ __html: s.image_copyright }} />
+      <span dangerouslySetInnerHTML={{ __html: s.image_copyright as any }} />
     </IonLabel>
   </IonItem>
 );
-export default () => (
+
+const Credits = () => (
   <Page id="credits">
     <Header title="Credits" />
     <Main className="ion-padding">
@@ -78,7 +79,7 @@ export default () => (
           from 2019-20.
         </P>
         <IonItem>
-          <a href="https://flumens.io">
+          <a href="https://flumens.io" aria-label="Flumens link">
             <img className="flumens-logo" src={flumensLogo} alt="" />
           </a>
         </IonItem>
@@ -272,7 +273,7 @@ export default () => (
 
         <ExpandableList>
           {species
-            .filter(speciesWithoutImageCopyright)
+            .filter(speciesWithImageCopyright)
             .map(getTaxonWithImageCopyright)}
         </ExpandableList>
       </Section>
@@ -315,3 +316,5 @@ export default () => (
     </Main>
   </Page>
 );
+
+export default Credits;

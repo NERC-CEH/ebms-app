@@ -4,8 +4,6 @@ import * as dotenv from 'dotenv';
 import fs from 'fs';
 // eslint-disable-next-line
 import fetchSheet from '@flumens/fetch-onedrive-excel';
-// eslint-disable-line
-import speciesInfoList from './cache/species.json';
 
 dotenv.config({ path: '../../../../.env' }); // eslint-disable-line
 
@@ -74,7 +72,7 @@ function save(species: any) {
 
       resolve(species);
     };
-    fs.writeFile('./index.json', JSON.stringify(species), dataOption);
+    fs.writeFile('./data.json', JSON.stringify(species), dataOption);
   };
   return new Promise(saveWrap);
 }
@@ -101,9 +99,10 @@ function saveToFile(data: any, name: any) {
 const fetchAndSave = async (sheet: any) => {
   const sheetData = await fetchSheet({ drive, file, sheet });
   saveToFile(sheetData, sheet);
+  return sheetData;
 };
 
-async function attachProfileInfo(species: any) {
+async function attachProfileInfo(species: any, speciesInfoList: any) {
   const getSpeciesWithInfo = (sp: any) => {
     const byTaxon = (spInfo: any) =>
       spInfo.taxon === sp.taxon || spInfo.taxon === sp.preferred_taxon;
@@ -127,13 +126,10 @@ async function attachProfileInfo(species: any) {
 }
 
 const getData = async () => {
-  const species = await fetchSheet({ drive, file, sheet: 'species' });
-  saveToFile(species, 'species');
-
-  await fetchAndSave('species');
+  const speciesInfoList = await fetchAndSave('species');
 
   await fetchSpecies(251)
-    .then(attachProfileInfo)
+    .then(sp => attachProfileInfo(sp, speciesInfoList))
     .then(save)
     // eslint-disable-next-line @getify/proper-arrows/name
     .then(() => console.log('All done! 🚀'));

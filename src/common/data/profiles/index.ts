@@ -1,16 +1,16 @@
 import { CountryCode } from 'common/config/countries';
-import species from './index.json';
+import species from './data.json';
 
-export enum Abundance {
-  A = 'Absent',
-  P = 'Present',
-  'P?' = 'Possibly present',
-  M = 'Regular migrant',
-  I = 'Irregular vagrant',
-  Ex = 'Regionally extinct',
-}
+export const abundances = {
+  A: 'Absent',
+  P: 'Present',
+  'P?': 'Possibly present',
+  M: 'Regular migrant',
+  I: 'Irregular vagrant',
+  Ex: 'Regionally extinct',
+} as const;
 
-export type AbundanceCode = keyof typeof Abundance;
+export type AbundanceCode = keyof typeof abundances;
 
 export interface Species {
   id?: number;
