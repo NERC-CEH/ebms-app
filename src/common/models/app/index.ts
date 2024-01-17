@@ -3,6 +3,8 @@ import axios from 'axios';
 import * as Yup from 'yup';
 import { Model, ModelAttrs } from '@flumens';
 import CONFIG from 'common/config';
+import { CountryCode } from 'common/config/countries';
+import { LanguageCode } from 'common/config/languages';
 import { genericStore } from '../store';
 import { UserModel } from '../user';
 import PastLocationsExtension from './pastLocExt';
@@ -128,8 +130,8 @@ export const DEFAULT_SPECIES_GROUP = ['butterflies'];
 
 export type Attrs = ModelAttrs & {
   showedWelcome: boolean;
-  language: string | null;
-  country: any;
+  language?: LanguageCode;
+  country?: CountryCode;
   useTraining: boolean;
   feedbackGiven: boolean;
   areaSurveyListSortedByTime: boolean;
@@ -158,9 +160,9 @@ export type Attrs = ModelAttrs & {
 
 const defaults: Attrs = {
   showedWelcome: false,
-  language: null,
-  country: null,
   useTraining: false,
+  language: undefined,
+  country: undefined,
   feedbackGiven: false,
   areaSurveyListSortedByTime: false,
   showGPSPermissionTip: true,

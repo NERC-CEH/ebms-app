@@ -1,5 +1,5 @@
-const taxonCleaner = require('./makeClean');
-const { getAttrs } = require('../helpers');
+import getAttrs from '../helpers';
+import taxonCleaner from './makeClean';
 
 const TAXON = 'taxon';
 const ID = 'taxa_taxon_list_id';
@@ -170,4 +170,4 @@ function optimise(speciesFlattened) {
   return optimised;
 }
 
-module.exports = optimise;
+export default optimise;

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -14,6 +15,7 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
+    "noErrorTruncation": true,
     "paths": {
       "common/*": ["./src/common/*"],
       "@flumens": ["./src/common/flumens"],

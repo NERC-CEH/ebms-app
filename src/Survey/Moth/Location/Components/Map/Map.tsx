@@ -4,7 +4,7 @@ import { wifiOutline } from 'ionicons/icons';
 import { device, InfoMessage, MapContainer } from '@flumens';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
-import { centroids as countries } from 'common/config/countries';
+import countries from 'common/config/countries';
 import appModel from 'models/app';
 
 interface Props {
@@ -19,7 +19,7 @@ const Map: FC<Props> = ({ location, onMovedCoords, children }) => {
   if (Number.isFinite(location?.latitude)) {
     initialViewState = { ...location, zoom: 12 };
   } else {
-    const country = countries[appModel.attrs.country];
+    const country = countries[appModel.attrs.country!];
     if (country?.zoom) {
       initialViewState = { ...country };
     }

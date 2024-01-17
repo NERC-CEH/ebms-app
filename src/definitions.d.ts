@@ -8,6 +8,16 @@ declare module '*.jpg' {
   export default content;
 }
 
+declare module '*.po' {
+  const content: any;
+  export default content;
+}
+
+declare module '*.pot' {
+  const content: any;
+  export default content;
+}
+
 declare module '*.png' {
   const content: any;
   export default content;

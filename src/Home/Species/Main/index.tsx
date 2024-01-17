@@ -62,7 +62,7 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
       return hasImage && hasDescription;
     };
     const bySpeciesId = (sp1: SpeciesType, sp2: SpeciesType) =>
-      sp1.sort_id - sp2.sort_id;
+      sp1.sort_id! - sp2.sort_id!;
 
     let filteredSpecies = [...speciesProfiles].filter(existInCountry);
     const totalSpeciesCountryCount = filteredSpecies.length;
@@ -88,7 +88,7 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
     }
 
     if (filters?.length) {
-      const byFamily = (sp: SpeciesType) => filters.includes(sp.family);
+      const byFamily = (sp: SpeciesType) => filters.includes(sp.family!);
       filteredSpecies = filteredSpecies.filter(byFamily);
     }
 
@@ -117,7 +117,7 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
         label = (window as any).t(taxon, null, true) || label; // might not have translation
       }
 
-      const onClick = () => showSpeciesModal(id);
+      const onClick = () => showSpeciesModal(id!);
 
       return (
         <IonCol
@@ -170,7 +170,7 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
     return samplesCollection.length > 5;
   };
 
-  let { country } = appModel.attrs;
+  let country: any = appModel.attrs.country!;
   country = country === 'UK' ? 'GB' : country;
 
   const [speciesList, countrySpeciesCount, totalSpeciesCountryCount] =

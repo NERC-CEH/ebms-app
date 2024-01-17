@@ -8945,7 +8945,7 @@
     "Argynnis",
     [
       [
-        434663,
+        466539,
         "adippe",
         {
           "AD": "P",
@@ -9001,7 +9001,7 @@
         }
       ],
       [
-        466539,
+        434663,
         "adippe",
         {
           "AD": "P",
@@ -38907,12 +38907,6 @@
     ]
   ],
   [
-    446477,
-    260,
-    "Epichnopteriginae",
-    []
-  ],
-  [
     446476,
     260,
     "Epichnopteriginae",
@@ -38925,13 +38919,13 @@
     []
   ],
   [
-    446711,
+    446477,
     260,
-    "Epichnopterigini",
+    "Epichnopteriginae",
     []
   ],
   [
-    446710,
+    446711,
     260,
     "Epichnopterigini",
     []
@@ -38943,9 +38937,9 @@
     []
   ],
   [
-    446814,
+    446710,
     260,
-    "Epichnopterix",
+    "Epichnopterigini",
     []
   ],
   [
@@ -38956,6 +38950,12 @@
   ],
   [
     446815,
+    260,
+    "Epichnopterix",
+    []
+  ],
+  [
+    446814,
     260,
     "Epichnopterix",
     [
@@ -39006,6 +39006,12 @@
     ]
   ],
   [
+    446479,
+    260,
+    "Epichnopteryginae",
+    []
+  ],
+  [
     446480,
     260,
     "Epichnopteryginae",
@@ -39013,12 +39019,6 @@
   ],
   [
     446481,
-    260,
-    "Epichnopteryginae",
-    []
-  ],
-  [
-    446479,
     260,
     "Epichnopteryginae",
     []
@@ -99643,25 +99643,25 @@
     ]
   ],
   [
-    446713,
-    260,
-    "Stichobasini",
-    []
-  ],
-  [
     446716,
     260,
     "Stichobasini",
     []
   ],
   [
-    446829,
+    446713,
+    260,
+    "Stichobasini",
+    []
+  ],
+  [
+    446830,
     260,
     "Stichobasis",
     []
   ],
   [
-    446830,
+    446829,
     260,
     "Stichobasis",
     [

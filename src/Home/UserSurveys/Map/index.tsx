@@ -7,7 +7,7 @@ import { useToast, device, MapContainer, ElasticOccurrence } from '@flumens';
 import { IonSpinner } from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
-import { centroids as countries } from 'common/config/countries';
+import countries from 'common/config/countries';
 import appModel from 'common/models/app';
 import userModel from 'models/user';
 import RecordProfiles from './RecordProfiles';
@@ -180,7 +180,7 @@ const Map = () => {
   const squareMarkers = squares.map(getSquareMarker);
 
   let initialViewState;
-  const country = countries[appModel.attrs.country];
+  const country = countries[appModel.attrs.country!];
   if (country?.zoom) {
     initialViewState = { ...country };
   }

@@ -1,66 +1,29 @@
+import { CountryCode } from 'common/config/countries';
 import species from './index.json';
 
-interface Abundance {
-  AD: string;
-  AL: string;
-  AT: string;
-  BA: string;
-  BE: string;
-  BG: string;
-  BY: string;
-  CH: string;
-  CY: string;
-  CZ: string;
-  DE: string;
-  DK: string;
-  EE: string;
-  ES: string;
-  ES_CA: string;
-  FI: string;
-  FR: string;
-  GB: string;
-  GR: string;
-  HR: string;
-  HU: string;
-  IE: string;
-  IS: string;
-  IT: string;
-  LI: string;
-  LT: string;
-  LU: string;
-  LV: string;
-  MD: string;
-  ME: string;
-  MK: string;
-  MT: string;
-  NL: string;
-  NO: string;
-  PL: string;
-  PT: string;
-  PT_AZ: string;
-  PT_MA: string;
-  RO: string;
-  RS: string;
-  RU: string;
-  SE: string;
-  SI: string;
-  SK: string;
-  TR: string;
-  TRA: string;
-  UA: string;
-  AM?: string;
+export enum Abundance {
+  A = 'Absent',
+  P = 'Present',
+  'P?' = 'Possibly present',
+  M = 'Regular migrant',
+  I = 'Irregular vagrant',
+  Ex = 'Regionally extinct',
 }
 
+export type AbundanceCode = keyof typeof Abundance;
+
 export interface Species {
-  id: number;
-  sort_id: number;
+  id?: number;
+  sort_id?: number;
   warehouse_id: number;
   external_key: string;
   taxon: string;
-  family: string;
-  descriptionKey: string;
+  family?: string;
+  descriptionKey?: string;
   image_copyright?: string[] | null;
-  abundance: Abundance;
+  abundance: {
+    [key in Exclude<CountryCode, 'UK' | 'ELSEWHERE'>]?: AbundanceCode;
+  };
 }
 
 export default species as Species[];

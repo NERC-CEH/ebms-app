@@ -16,21 +16,14 @@ import {
   IonChip,
 } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
+import { CountryCode } from 'common/config/countries';
+import { Species, Abundance, AbundanceCode } from 'common/data/profiles';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
 
-const statuses: any = {
-  A: 'Absent',
-  P: 'Present',
-  'P?': 'Possibly present',
-  M: 'Regular migrant',
-  I: 'Irregular vagrant',
-  Ex: 'Regionally extinct',
-};
-
 type Props = {
-  species: any;
-  country: string;
+  species: Species;
+  country: Exclude<CountryCode, 'UK' | 'ELSEWHERE'>;
   hideSpeciesModal: any;
 };
 
@@ -43,10 +36,12 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
 
   useOnBackButton(hideSpeciesModal);
 
-  const status = statuses[species.abundance[country]];
+  const abundanceCode: AbundanceCode = species.abundance[country]!;
+  const status = Abundance[abundanceCode];
 
   const getSlides = () => {
     const { image_copyright } = species;
+    if (!image_copyright) return null;
 
     const slideOpts = {
       initialSlide: 0,

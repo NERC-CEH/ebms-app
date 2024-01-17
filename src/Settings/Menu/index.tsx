@@ -87,8 +87,8 @@ const Container: FC = () => {
         showCommonNamesInGuide={showCommonNamesInGuide}
         clearCache={clearCacheWrap}
         onToggle={onToggle}
-        language={language || ''}
-        country={country}
+        language={language!}
+        country={country!}
       />
     </Page>
   );

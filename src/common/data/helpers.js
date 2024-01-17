@@ -1,4 +1,4 @@
-function getAttrs(str) {
+export default function getAttrs(str) {
   const attributes = {};
   const parseAttrs = country => {
     const [key, val] = country.split('=');
@@ -14,5 +14,3 @@ function getAttrs(str) {
 
   return attributes;
 }
-
-module.exports.getAttrs = getAttrs;

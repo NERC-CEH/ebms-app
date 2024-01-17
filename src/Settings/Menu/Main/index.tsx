@@ -21,8 +21,8 @@ import {
   IonLabel,
 } from '@ionic/react';
 import config from 'common/config';
-import countries from 'common/config/countries';
-import languages from 'common/config/languages';
+import countries, { CountryCode } from 'common/config/countries';
+import languages, { LanguageCode } from 'common/config/languages';
 import butterflyIcon from 'common/images/butterfly.svg';
 import mothIcon from 'common/images/moth.svg';
 import { surveyConfigs as surveys } from 'models/sample';
@@ -99,8 +99,8 @@ type Props = {
   isLoggedIn: boolean;
   deleteUser: any;
   primarySurvey?: string;
-  language?: string;
-  country?: string;
+  language: LanguageCode;
+  country: CountryCode;
 };
 
 const MenuMain: FC<Props> = ({
@@ -130,6 +130,9 @@ const MenuMain: FC<Props> = ({
   const onClearCacheDialog = () => clearCacheDialog(clearCache, alert);
   const onTrainingToggle = (checked: boolean) =>
     onToggle('useTraining', checked);
+
+  const countryLabel = countries[country].name;
+  const languageLabel = languages[language].name;
 
   return (
     <Main className="app-settings">
@@ -171,9 +174,7 @@ const MenuMain: FC<Props> = ({
               <T>Language</T>
             </IonLabel>
             <IonIcon icon={flagOutline} size="small" slot="start" />
-            <IonLabel slot="end">
-              {(languages as any)[language as any]}
-            </IonLabel>
+            <IonLabel slot="end">{languageLabel}</IonLabel>
           </IonItem>
           <IonItem routerLink="/settings/country" detail>
             <IonLabel>
@@ -181,7 +182,7 @@ const MenuMain: FC<Props> = ({
             </IonLabel>
             <IonIcon icon={globeOutline} size="small" slot="start" />
             <IonLabel slot="end">
-              <T>{(countries as any)[country as any]}</T>
+              <T>{countryLabel}</T>
             </IonLabel>
           </IonItem>
 

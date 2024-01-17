@@ -9,11 +9,10 @@ import {
   IonItem,
   IonRadioGroup,
   IonRadio,
-  IonLabel,
   IonItemDivider,
   NavContext,
 } from '@ionic/react';
-import countries from 'common/config/countries';
+import countries, { Country } from 'common/config/countries';
 import appModel from 'models/app';
 import './styles.scss';
 
@@ -64,17 +63,20 @@ const SelectCountry: FC<Props> = ({ hideHeader }) => {
     if (isSettingsPage) goBack();
   }
 
-  const translate = ([value, country]: any) => [value, t(country)];
-  const placeElseWhereAtEnd = ([value1, country1]: any, [, country2]: any) =>
-    value1 === 'ELSEWHERE' ? 1 : country1.localeCompare(country2);
+  const translate = ([value, country]: [string, Country]): [string, string] => [
+    value,
+    t(country.name),
+  ];
+  const placeElseWhereAtEnd = (
+    [value1, country1]: [string, string],
+    [, country2]: [string, string]
+  ) => (value1 === 'ELSEWHERE' ? 1 : country1.localeCompare(country2));
 
-  const getCountryOption = ([value, country]: any) => (
+  const getCountryOption = ([value, country]: [string, string]) => (
     <Fragment key={value}>
       {value === 'ELSEWHERE' && <IonItemDivider />}
       <IonItem>
-        <IonRadio value={value}>
-          <IonLabel>{country}</IonLabel>
-        </IonRadio>
+        <IonRadio value={value}>{country}</IonRadio>
       </IonItem>
     </Fragment>
   );
