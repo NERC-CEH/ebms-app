@@ -165,13 +165,15 @@ const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
   return (
     <IonItemSliding className="survey-list-item" style={style}>
       <IonItem routerLink={href} detail={false}>
-        {getInfo()}
+        <div className="flex w-full flex-nowrap justify-between">
+          {getInfo()}
 
-        <OnlineStatus
-          sample={sample}
-          onUpload={onUpload}
-          hasManyPending={uploadIsPrimary}
-        />
+          <OnlineStatus
+            sample={sample}
+            onUpload={onUpload}
+            hasManyPending={uploadIsPrimary}
+          />
+        </div>
       </IonItem>
 
       {allowDeletion && (

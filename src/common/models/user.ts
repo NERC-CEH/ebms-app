@@ -31,6 +31,8 @@ const defaults: Attrs = {
 };
 
 export class UserModel extends DrupalUserModel {
+  // eslint-disable-next-line
+  // @ts-ignore
   attrs: Attrs = DrupalUserModel.extendAttrs(this.attrs, defaults);
 
   userSpeciesReport = observable([]) as any;

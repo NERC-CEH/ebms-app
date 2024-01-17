@@ -1,74 +1,86 @@
+@import '@ionic/core/css/core.css';
+@import '@ionic/core/css/ionic.bundle.css';
+
 @import '@flumens/ionic/dist/themes/rounded.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    // change link colours
+    color: var(--ion-color-primary);
+  }
+  h1 {
+    // tailwind is loaded later than ionic so resets some of the ionic's base styles
+    @apply mt-5 text-2xl;
+  }
+}
+
 :root {
-  --ion-color-primary: #745a8f;
-  --ion-color-primary-rgb: 116, 90, 143;
-  --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #5f4779;
-  --ion-color-primary-tint: #a98fc4;
-  --ion-color-primary-dark: #170030;
+  --ion-color-primary: var(--color-primary);
+  --ion-color-primary-rgb: var(--color-primary-rgb);
+  --ion-color-primary-contrast: var(--color-primary-50);
+  --ion-color-primary-contrast-rgb: var(--color-primary-50-rgb);
+  --ion-color-primary-shade: var(--color-primary-800);
+  --ion-color-primary-tint: var(--color-primary-500);
+  --ion-color-primary-dark: var(--color-primary-950);
 
-  --ion-color-secondary: #df9100;
-  --ion-color-secondary-rgb: 223, 145, 0;
-  --ion-color-secondary-contrast: #ffffff;
-  --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #af7201;
-  --ion-color-secondary-tint: #fdc45b;
-  --ion-color-secondary-dark: #3a2600;
+  --ion-color-secondary: var(--color-secondary);
+  --ion-color-secondary-rgb: var(--color-secondary-rgb);
+  --ion-color-secondary-contrast: var(--color-secondary-50);
+  --ion-color-secondary-contrast-rgb: var(--color-secondary-50-rgb);
+  --ion-color-secondary-shade: var(--color-secondary-700);
+  --ion-color-secondary-tint: var(--color-secondary-500);
+  --ion-color-secondary-dark: var(--color-secondary-950);
 
-  --ion-color-tertiary: #008eec;
-  --ion-color-tertiary-rgb: 0, 142, 236;
-  --ion-color-tertiary-contrast: #ffffff;
-  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
-  --ion-color-tertiary-shade: #007dd0;
-  --ion-color-tertiary-tint: #1a99ee;
-  --ion-color-tertiary-dark: #001a2c;
+  --ion-color-tertiary: var(--color-tertiary);
+  --ion-color-tertiary-rgb: var(--color-tertiary-rgb);
+  --ion-color-tertiary-contrast: var(--color-tertiary-50);
+  --ion-color-tertiary-contrast-rgb: var(--color-tertiary-50-rgb);
+  --ion-color-tertiary-shade: var(--color-tertiary-700);
+  --ion-color-tertiary-tint: var(--color-tertiary-500);
+  --ion-color-tertiary-dark: var(--color-tertiary-950);
 
-  --ion-color-success: #00bd1a;
-  --ion-color-success-rgb: 0, 189, 26;
-  --ion-color-success-contrast: #ffffff;
-  --ion-color-success-contrast-rgb: 255, 255, 255;
-  --ion-color-success-shade: #00a617;
-  --ion-color-success-tint: #1ac431;
-  --ion-color-success-dark: #002b06;
+  --ion-color-success: var(--color-success);
+  --ion-color-success-rgb: var(--color-success-rgb);
+  --ion-color-success-contrast: var(--color-success-50);
+  --ion-color-success-contrast-rgb: var(--color-success-50-rgb);
+  --ion-color-success-shade: var(--color-success-700);
+  --ion-color-success-tint: var(--color-success-500);
+  --ion-color-success-dark: var(--color-success-950);
 
-  --ion-color-warning: #df9100;
-  --ion-color-warning-rgb: 223, 145, 0;
-  --ion-color-warning-contrast: #ffffff;
-  --ion-color-warning-contrast-rgb: 255, 255, 255;
-  --ion-color-warning-shade: #af7201;
-  --ion-color-warning-tint: #fdc45b;
-  --ion-color-warning-dark: #3a2600;
+  --ion-color-warning: var(--color-warning);
+  --ion-color-warning-rgb: var(--color-warning-rgb);
+  --ion-color-warning-contrast: var(--color-warning-50);
+  --ion-color-warning-contrast-rgb: var(--color-warning-50-rgb);
+  --ion-color-warning-shade: var(--color-warning-700);
+  --ion-color-warning-tint: var(--color-warning-500);
+  --ion-color-warning-dark: var(--color-warning-900);
 
-  --ion-color-danger: #f04141;
-  --ion-color-danger-rgb: 240, 65, 65;
-  --ion-color-danger-contrast: #ffffff;
-  --ion-color-danger-contrast-rgb: 255, 255, 255;
-  --ion-color-danger-shade: #d33939;
-  --ion-color-danger-tint: #f25454;
-  --ion-color-danger-dark: #300000;
+  --ion-color-danger: var(--color-danger);
+  --ion-color-danger-rgb: var(--color-danger-rgb);
+  --ion-color-danger-contrast: var(--color-danger-50);
+  --ion-color-danger-contrast-rgb: var(--color-danger-50-rgb);
+  --ion-color-danger-shade: var(--color-danger-700);
+  --ion-color-danger-tint: var(--color-danger-500);
+  --ion-color-danger-dark: var(--color-danger-950);
 
-  --ion-color-dark: var(--ion-color-primary-dark);
-  --ion-color-dark-rgb: 49, 42, 56;
-  --ion-color-dark-contrast: #ffffff;
-  --ion-color-dark-contrast-rgb: 255, 255, 255;
-  --ion-color-dark-shade: var(--ion-color-primary-dark);
-  --ion-color-dark-tint: var(--ion-color-primary-dark);
+  --ion-color-dark: var(--color-slate-900);
+  --ion-color-dark-contrast: var(--color-slate-50);
+  --ion-color-dark-shade: var(--color-slate-950);
+  --ion-color-dark-tint: var(--color-slate-800);
 
-  --ion-color-medium: #989aa2;
-  --ion-color-medium-rgb: 152, 154, 162;
-  --ion-color-medium-contrast: #ffffff;
-  --ion-color-medium-contrast-rgb: 255, 255, 255;
-  --ion-color-medium-shade: #86888f;
-  --ion-color-medium-tint: #a2a4ab;
+  --ion-color-medium: var(--color-slate-400);
+  --ion-color-medium-contrast: var(--color-slate-50);
+  --ion-color-medium-shade: var(--color-slate-500);
+  --ion-color-medium-tint: var(--color-slate-300);
 
-  --ion-color-light: #ffffff;
-  --ion-color-light-rgb: 244, 244, 244;
-  --ion-color-light-contrast: #000000;
-  --ion-color-light-contrast-rgb: 0, 0, 0;
-  --ion-color-light-shade: #d7d8da;
-  --ion-color-light-tint: #f5f6f9;
+  --ion-color-light: var(--color-white);
+  --ion-color-light-contrast: var(--color-slate-950);
+  --ion-color-light-shade: var(--color-slate-200);
+  --ion-color-light-tint: var(--color-white);
 
   --ion-page-background: #f6f4f7;
 
@@ -209,3 +221,35 @@ html[mode='ios'] .tabs-inner {
 ion-button {
   min-height: 0;
 }
+
+/** Ionic 7 fixes START **/
+
+// Fix chip outline
+.chip-outline {
+  border-width: 1px;
+  border-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.32);
+}
+
+// Fix end-slot label placement
+ion-label[slot='end'] {
+  text-align: right;
+}
+
+// Fix cropped radio button icons
+ion-radio {
+  padding-right: 1px;
+}
+
+ion-list.apps-section {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.checkbox-input-attr .hasIcon ion-checkbox {
+  max-width: 85%;
+}
+
+ion-item.menu-attr-item ion-label[slot='end'] {
+  max-width: 33%;
+}
+/** Ionic 7 fixes END **/

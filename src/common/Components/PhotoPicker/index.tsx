@@ -39,21 +39,16 @@ type Props = {
 };
 
 const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
-  const promptImageSource = usePromptImageSource();
   const isUploaded = model.isUploaded();
 
   const isMothSurvey =
     model?.parent?.metadata?.survey === 'moth' ? true : undefined;
 
-  async function getImage() {
-    const shouldUseCamera = await promptImageSource();
-    const cancelled = shouldUseCamera === null;
-    if (cancelled) return null;
-
+  async function onAdd(shouldUseCamera: boolean) {
     const images = await captureImage(
       shouldUseCamera ? { camera: true } : { multiple: true }
     );
-    if (!images.length) return null;
+    if (!images.length) return;
 
     const getImageModel = async (image: any) => {
       const imageModel: any = await Media.getImageModel(
@@ -72,14 +67,22 @@ const AppPhotoPicker: FC<Props> = ({ model, useImageIdentifier }) => {
 
       return imageModel;
     };
-    const imageModels = images.map(getImageModel);
-    return Promise.all(imageModels);
+
+    const imageModels: Media[] = await Promise.all<any>(
+      images.map(getImageModel)
+    );
+
+    model.media.push(...imageModels);
+    model.save();
   }
+
+  const onRemove = (m: any) => m.destroy();
 
   return (
     <PhotoPicker
-      getImage={getImage}
-      model={model}
+      onAdd={onAdd}
+      onRemove={onRemove}
+      value={model.media}
       Image={isMothSurvey && Image}
       Gallery={isMothSurvey && Gallery}
       isDisabled={isUploaded}

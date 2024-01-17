@@ -26,7 +26,7 @@ const OnlineStatus: FC<Props> = ({ sample, onUpload, hasManyPending }) => {
   if (!saved) {
     return (
       <IonChip slot="end" className="record-status">
-        <IonLabel>
+        <IonLabel className="overflow-hidden whitespace-nowrap">
           <T>Draft</T>
         </IonLabel>
       </IonChip>

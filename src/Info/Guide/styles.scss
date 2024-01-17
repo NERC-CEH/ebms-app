@@ -13,6 +13,10 @@
     justify-content: center;
     align-items: center;
 
+    .apps-section-h {
+      width: 100%;
+    }
+
     ion-item {
       --inner-border-width: 0 !important;
     }

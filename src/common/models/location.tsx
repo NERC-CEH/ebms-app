@@ -248,9 +248,15 @@ class LocationModel extends Model {
 
   remote = observable({ synchronising: false });
 
+  // eslint-disable-next-line
+  // @ts-ignore
   metadata: Metadata = this.metadata;
 
+  // eslint-disable-next-line
+  // @ts-ignore
   attrs: Attrs = Model.extendAttrs(this.attrs, {
+    // eslint-disable-next-line
+    // @ts-ignore
     location: this.attrs.location || {},
     typeOther: null,
     lamps: [],

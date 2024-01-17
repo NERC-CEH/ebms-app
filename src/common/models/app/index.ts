@@ -198,6 +198,8 @@ const defaults: Attrs = {
 };
 
 export class AppModel extends Model {
+  // eslint-disable-next-line
+  // @ts-ignore
   attrs: Attrs = Model.extendAttrs(this.attrs, defaults);
 
   setLocation: any; // from extension

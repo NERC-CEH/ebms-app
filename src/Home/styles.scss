@@ -112,8 +112,8 @@
     width: 240px;
     white-space: normal;
     --border-radius: 4px;
-    --background: var(--ion-color-primary-shade);
-    --color: var(--ion-color-primary-contrast);
+    --background: var(--color-primary-700);
+    --color: white;
 
     ion-label {
       font-size: 1.2em;

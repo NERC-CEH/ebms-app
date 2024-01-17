@@ -44,7 +44,7 @@ const Component = ({ appModel }) => {
 
         <Section>
           <P skipTranslation>
-            <T>The ABLE project is a partnership between</T>{' '}
+            <T>The ABLE project is a partnership between</T>: <br />
             <a href="http://www.bc-europe.eu/">Butterfly Conservation Europe</a>
             ,{' '}
             <a href="www.ceh.ac.uk">
