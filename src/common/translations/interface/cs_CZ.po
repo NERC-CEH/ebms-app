@@ -166,6 +166,12 @@ msgstr "Jižní Afrika"
 msgid "Botswana"
 msgstr "Botswana"
 
+msgid "Nigeria"
+msgstr ""
+
+msgid "New Zealand"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Kdekoli"
 

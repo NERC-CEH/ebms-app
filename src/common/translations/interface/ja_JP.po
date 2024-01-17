@@ -164,6 +164,12 @@ msgstr "南アフリカ"
 msgid "Botswana"
 msgstr "ボツワナ"
 
+msgid "Nigeria"
+msgstr ""
+
+msgid "New Zealand"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "その他の国"
 

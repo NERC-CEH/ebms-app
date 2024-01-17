@@ -166,6 +166,12 @@ msgstr "Pietų Afrika"
 msgid "Botswana"
 msgstr "Botsvana"
 
+msgid "Nigeria"
+msgstr ""
+
+msgid "New Zealand"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Kitur"
 

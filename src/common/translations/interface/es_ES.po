@@ -166,6 +166,12 @@ msgstr "Sudáfrica"
 msgid "Botswana"
 msgstr "Botsuana"
 
+msgid "Nigeria"
+msgstr ""
+
+msgid "New Zealand"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "En otro lugar"
 

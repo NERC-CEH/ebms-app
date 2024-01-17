@@ -169,6 +169,12 @@ msgstr "África do Sul"
 msgid "Botswana"
 msgstr "Botsuana"
 
+msgid "Nigeria"
+msgstr ""
+
+msgid "New Zealand"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Outro local"
 

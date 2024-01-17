@@ -165,6 +165,12 @@ msgstr ""
 msgid "Botswana"
 msgstr ""
 
+msgid "Nigeria"
+msgstr ""
+
+msgid "New Zealand"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Egyéb ország"
 
