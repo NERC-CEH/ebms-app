@@ -50,12 +50,10 @@ async function fetchSpecies(listID: any) {
   const byLatinLanguageWithoutSpecificTaxon = (s: any) =>
     s.language_iso === 'lat' && !s.taxon.includes('Unterfamilie');
   const hasAttributes = (s: any) => !!s.attributes;
-  const isNotAggregate = (s: any) => !!s.external_key;
   const isPreferred = (s: any) => s.preferred_taxon === s.taxon;
   const latinData = data.data
     .filter(byLatinLanguageWithoutSpecificTaxon)
     .filter(hasAttributes)
-    .filter(isNotAggregate)
     .filter(isPreferred)
     .map(parseAttributes);
 

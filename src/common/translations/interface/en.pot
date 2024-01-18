@@ -321,8 +321,12 @@ msgid "Logout"
 msgstr "Logout"
 
 # Part of logout process
-msgid "Are you sure you want to logout?<br/><br/>Your pending and uploaded <4>records will not be deleted </4> from this device."
-msgstr "Are you sure you want to logout?<br/><br/>Your pending and uploaded <4>records will not be deleted </4> from this device."
+msgid ""
+"Are you sure you want to logout?<br/><br/>Your pending and uploaded "
+"<4>records will not be deleted </4> from this device."
+msgstr ""
+"Are you sure you want to logout?<br/><br/>Your pending and uploaded "
+"<4>records will not be deleted </4> from this device."
 
 msgid "Cancel"
 msgstr "Cancel"
@@ -511,7 +515,7 @@ msgstr "Are you sure you want to remove this photo?"
 msgid "Note: it will remain in the gallery."
 msgstr "Note: it will remain in the gallery."
 
-# Photo picker 
+# Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
 msgstr "No photo has been added.<br/>Press <3></3> to add."
 
@@ -820,8 +824,10 @@ msgstr "Pending"
 msgid "Uploaded"
 msgstr "Uploaded"
 
-msgid "You need to <1>login</1> to your account to be able to view the records."
-msgstr "You need to <1>login</1> to your account to be able to view the records."
+msgid ""
+"You need to <1>login</1> to your account to be able to view the records."
+msgstr ""
+"You need to <1>login</1> to your account to be able to view the records."
 
 msgid "No finished pending surveys"
 msgstr "No finished pending surveys"
@@ -897,7 +903,7 @@ msgstr "Country"
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr "Mark any new records as 'training' and exclude from all reports."
 
-# App setting label 
+# App setting label
 msgid "Show common names in guide"
 msgstr "Show common names in guide"
 
@@ -1844,27 +1850,29 @@ msgstr "What's New"
 msgid "Don't show again"
 msgstr "Don't show again"
 
-# Version 1.22 whats new message 
-msgid "Added capability to view records that have been uploaded from other devices."
-msgstr "Added capability to view records that have been uploaded from other devices."
+# Version 1.22 whats new message
+msgid ""
+"Added capability to view records that have been uploaded from other devices."
+msgstr ""
+"Added capability to view records that have been uploaded from other devices."
 
-# Version 1.22 whats new message 
+# Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr "The records map has been upgraded to display all user records."
 
-# Version 1.22 whats new message 
+# Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr "Enabled copying of the previous transect section's species list."
 
-# Version 1.22 whats new message 
+# Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr "Enabled copying of the previous moth trap's species list."
 
-# Version 1.22 whats new message 
+# Version 1.22 whats new message
 msgid "Updated species guide page."
 msgstr "Updated species guide page."
 
-# Version 1.22 whats new message 
+# Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
 msgstr "Added option to clear uploaded cached files."
 
@@ -1880,11 +1888,15 @@ msgstr "Looks like your email hasn't been verified yet."
 msgid "Should we resend the verification email?"
 msgstr "Should we resend the verification email?"
 
-# GPS permissions warning 
-msgid "Your Location Services (GPS) seems to be disabled. You can enable this in your device settings."
-msgstr "Your Location Services (GPS) seems to be disabled. You can enable this in your device settings."
+# GPS permissions warning
+msgid ""
+"Your Location Services (GPS) seems to be disabled. You can enable this in "
+"your device settings."
+msgstr ""
+"Your Location Services (GPS) seems to be disabled. You can enable this in "
+"your device settings."
 
-# GPS permissions warning 
+# GPS permissions warning
 msgid "Location Services (GPS) are disabled"
 msgstr "Location Services (GPS) are disabled"
 
@@ -1960,19 +1972,19 @@ msgstr "Quantity"
 msgid "No moth trap name"
 msgstr "No moth trap name"
 
-# Moth trap survey 
+# Moth trap survey
 msgid "Moth trap name"
 msgstr "Moth trap name"
 
-# Moth trap survey 
+# Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
 msgstr "Are you sure you want to delete this moth trap?"
 
-# Moth trap survey 
+# Moth trap survey
 msgid "Additional description of lamp."
 msgstr "Additional description of lamp."
 
-# Moth trap survey 
+# Moth trap survey
 msgid "Please add the moth trap location and name."
 msgstr "Please add the moth trap location and name."
 
@@ -1980,7 +1992,7 @@ msgstr "Please add the moth trap location and name."
 msgid "Incomplete"
 msgstr "Incomplete"
 
-# Moth trap survey 
+# Moth trap survey
 msgid "Select"
 msgstr "Select"
 
@@ -1989,8 +2001,12 @@ msgid "Recorders"
 msgstr "Recorders"
 
 # Additional details attribute, 15min count survey
-msgid "Enter the number of recorders of anyone who helped with this record - including your own."
-msgstr "Enter the number of recorders of anyone who helped with this record - including your own."
+msgid ""
+"Enter the number of recorders of anyone who helped with this record - "
+"including your own."
+msgstr ""
+"Enter the number of recorders of anyone who helped with this record - "
+"including your own."
 
 msgid "Network Error"
 msgstr "Network Error"
@@ -2011,7 +2027,7 @@ msgstr "Your top species"
 msgid "Section Photos"
 msgstr "Section Photos"
 
-# Moth survey species identifying 
+# Moth survey species identifying
 msgid "User is not logged in."
 msgstr "User is not logged in."
 
@@ -2019,11 +2035,15 @@ msgstr "User is not logged in."
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 
- # Gallery message
-msgid "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species"
-msgstr "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> species"
+# Gallery message
+msgid ""
+"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species"
+msgstr ""
+"<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
+"species"
 
-# Divider label moth trap setup 
+# Divider label moth trap setup
 msgid "Lamps"
 msgstr "Lamps"
 
@@ -2035,15 +2055,19 @@ msgstr "Are you sure you want to delete this lamp entry from the moth trap?"
 msgid "Trap type is a required field."
 msgstr "Trap type is a required field."
 
-# Successful registration pop-up 
+# Successful registration pop-up
 msgid "Welcome aboard"
 msgstr "Welcome aboard"
 
-# Successful registration pop-up 
-msgid "Before starting any surveys please check your email and click on the verification link."
-msgstr "Before starting any surveys please check your email and click on the verification link."
+# Successful registration pop-up
+msgid ""
+"Before starting any surveys please check your email and click on the "
+"verification link."
+msgstr ""
+"Before starting any surveys please check your email and click on the "
+"verification link."
 
-# Species guide search 
+# Species guide search
 msgid "Sorry, no species were found."
 msgstr "Sorry, no species were found."
 
@@ -2063,14 +2087,18 @@ msgid "Location permission"
 msgstr "Location permission"
 
 # GPS permission alert message
-msgid "To automatically set species locations and track your route, even if the device is locked. Allow the app to use your location."
-msgstr "To automatically set species locations and track your route, even if the device is locked. Allow the app to use your location."
+msgid ""
+"To automatically set species locations and track your route, even if the "
+"device is locked. Allow the app to use your location."
+msgstr ""
+"To automatically set species locations and track your route, even if the "
+"device is locked. Allow the app to use your location."
 
-# Delete account 
+# Delete account
 msgid "Delete account"
 msgstr "Delete account"
 
-# Delete account 
+# Delete account
 msgid "You can delete your user account from the system."
 msgstr "You can delete your user account from the system."
 
@@ -2079,12 +2107,22 @@ msgid "Account delete"
 msgstr "Account delete"
 
 # Delete account alert message
-msgid "Are you sure you want to delete your account?<1>This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website.</1>"
-msgstr "Are you sure you want to delete your account?<1>This will remove your account on the <2>{{url}}</2> website. You will lose access to any records that you have previously submitted using the app or website.</1>"
+msgid ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
+msgstr ""
+"Are you sure you want to delete your account?<1>This will remove your "
+"account on the <2>{{url}}</2> website. You will lose access to any records "
+"that you have previously submitted using the app or website.</1>"
 
 # Part of Species Group selection
-msgid "This option was moved to the species search page inside the surveys. When a survey starts, you can select which species group you are recording."
-msgstr "This option was moved to the species search page inside the surveys. When a survey starts, you can select which species group you are recording."
+msgid ""
+"This option was moved to the species search page inside the surveys. When a "
+"survey starts, you can select which species group you are recording."
+msgstr ""
+"This option was moved to the species search page inside the surveys. When a "
+"survey starts, you can select which species group you are recording."
 
 # Part of Species Group selection
 msgid "Groups"
@@ -2102,41 +2140,43 @@ msgstr "Confirm"
 msgid "Which species groups have you counted?"
 msgstr "Which species groups have you counted?"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Select Target Species"
 msgstr "Select Target Species"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
 msgstr "No photo has been added.<br/>Press <4><0></0></4> to add."
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Wing"
 msgstr "Wing"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Behaviour"
 msgstr "Behaviour"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Direction"
 msgstr "Direction"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Altitude"
 msgstr "Altitude"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Compass"
 msgstr "Compass"
 
-# Alert header 
+# Alert header
 msgid "Delete Survey"
 msgstr "Delete Survey"
 
-# Alert message 
-msgid "Warning - This will discard the survey information you have entered so far."
-msgstr "Warning - This will discard the survey information you have entered so far."
+# Alert message
+msgid ""
+"Warning - This will discard the survey information you have entered so far."
+msgstr ""
+"Warning - This will discard the survey information you have entered so far."
 
 # Painted lady wing options
 msgid "Fresh"
@@ -2150,8 +2190,7 @@ msgstr "Worn"
 msgid "Normal"
 msgstr "Normal"
 
-
-# Painted lady survey flower entry  
+# Painted lady survey flower entry
 msgid "Please specify the nectar source."
 msgstr "Please specify the nectar source."
 
@@ -2179,19 +2218,19 @@ msgstr "Please add the direction option."
 msgid "Please add the altitude option."
 msgstr "Please add the altitude option."
 
-# Part of painted lady 
+# Part of painted lady
 msgid "Egg-laying hostplants"
 msgstr "Egg-laying hostplants"
 
-# Part of painted lady 
+# Part of painted lady
 msgid "Migrating"
 msgstr "Migrating"
 
-# Part of painted lady 
+# Part of painted lady
 msgid "Nectaring"
 msgstr "Nectaring"
 
-# Part of painted lady 
+# Part of painted lady
 msgid "Mating"
 msgstr "Mating"
 
@@ -2200,8 +2239,18 @@ msgid "Unsupported device"
 msgstr "Unsupported device"
 
 # Painted lady compass
-msgid "Unfortunately, it looks like your device doesn't have the necessary sensor for the compass to function correctly. The compass relies on this sensor to detect the earth's magnetic field and determine your device's orientation relative to magnetic north. Thus, you will not be able to use compass on this device."
-msgstr "Unfortunately, it looks like your device doesn't have the necessary sensor for the compass to function correctly. The compass relies on this sensor to detect the earth's magnetic field and determine your device's orientation relative to magnetic north. Thus, you will not be able to use compass on this device."
+msgid ""
+"Unfortunately, it looks like your device doesn't have the necessary sensor "
+"for the compass to function correctly. The compass relies on this sensor to "
+"detect the earth's magnetic field and determine your device's orientation "
+"relative to magnetic north. Thus, you will not be able to use compass on "
+"this device."
+msgstr ""
+"Unfortunately, it looks like your device doesn't have the necessary sensor "
+"for the compass to function correctly. The compass relies on this sensor to "
+"detect the earth's magnetic field and determine your device's orientation "
+"relative to magnetic north. Thus, you will not be able to use compass on "
+"this device."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
@@ -2247,47 +2296,49 @@ msgstr "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
 msgid "Tip: Copy attributes"
 msgstr "Tip: Copy attributes"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Wing condition"
 msgstr "Wing condition"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Nectar"
 msgstr "Nectar"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Enter the nectar source here"
 msgstr "Enter the nectar source here"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Other species"
 msgstr "Other species"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "What kind of thistle was it?"
 msgstr "What kind of thistle was it?"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Thistle species"
 msgstr "Thistle species"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Copied!"
 msgstr "Copied!"
 
-# Part of Painted lady survey 
-msgid "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
-msgstr "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
+# Part of Painted lady survey
+msgid ""
+"To copy a list entry swipe it to the right and press<1><0></0></1>icon."
+msgstr ""
+"To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Height above ground (meters)"
 msgstr "Height above ground (meters)"
 
-# Part of Painted lady survey 
+# Part of Painted lady survey
 msgid "Height"
 msgstr "Height"
 
-# 15min Single species survey detail page button label  
+# 15min Single species survey detail page button label
 msgid "Start Count"
 msgstr "Start Count"
 
@@ -2356,8 +2407,12 @@ msgid "Are you sure you want to delete the saved track?"
 msgstr "Are you sure you want to delete the saved track?"
 
 # Map GPS button interface
-msgid "To resume the GPS tracking, you must first remove the drawn area from the map."
-msgstr "To resume the GPS tracking, you must first remove the drawn area from the map."
+msgid ""
+"To resume the GPS tracking, you must first remove the drawn area from the "
+"map."
+msgstr ""
+"To resume the GPS tracking, you must first remove the drawn area from the "
+"map."
 
 # Part of weather attributes
 msgid "Moon phase"
@@ -2415,9 +2470,13 @@ msgstr "End Weather"
 msgid "Please add the moth trap."
 msgstr "Please add the moth trap."
 
-# Info message 
-msgid "We have noticed that your survey has <1>long sections</1>. Please make sure it is a correct <3>location</3>!"
-msgstr "We have noticed that your survey has <1>long sections</1>. Please make sure it is a correct <3>location</3>!"
+# Info message
+msgid ""
+"We have noticed that your survey has <1>long sections</1>. Please make sure "
+"it is a correct <3>location</3>!"
+msgstr ""
+"We have noticed that your survey has <1>long sections</1>. Please make sure "
+"it is a correct <3>location</3>!"
 
 # Info message
 msgid "Defaulted to sunset time"
@@ -2425,9 +2484,9 @@ msgstr "Defaulted to sunset time"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr "Defaulted to sunrise time"  
+msgstr "Defaulted to sunrise time"
 
-# Error message 
+# Error message
 msgid "Location services are not enabled"
 msgstr "Location services are not enabled"
 
@@ -2443,22 +2502,22 @@ msgstr "Changed list ordering to alphabetical."
 msgid "Changed list ordering to last added."
 msgstr "Changed list ordering to last added."
 
-# Record verification status 
+# Record verification status
 msgid "Unconfirmed"
 msgstr "Unconfirmed"
 
-# Record verification status 
+# Record verification status
 msgid "Accepted"
 msgstr "Accepted"
 
-# Record verification status 
+# Record verification status
 msgid "Rejected"
 msgstr "Rejected"
 
-# Survey verification message 
+# Survey verification message
 msgid "Reliability cannot be empty."
 msgstr "Reliability cannot be empty."
 
-# Survey verification message 
+# Survey verification message
 msgid "Cloud cannot be empty."
 msgstr "Cloud cannot be empty."

@@ -5530,5 +5530,185 @@
     "taxon": "Erebia neoridas",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-neoridas-description"
+  },
+  {
+    "id": 505,
+    "sort_id": 505,
+    "taxon": "Argyrophenga antipodum",
+    "family": "Nymphalidae",
+    "descriptionKey": "Argyrophenga-antipodum-description",
+    "image_copyright": [
+      "Chris Rickards"
+    ]
+  },
+  {
+    "id": 506,
+    "sort_id": 506,
+    "taxon": "Argyrophenga harrisi",
+    "family": "Nymphalidae",
+    "descriptionKey": "Argyrophenga-harrisi-description",
+    "image_copyright": [
+      "Chris Rickards"
+    ]
+  },
+  {
+    "id": 507,
+    "sort_id": 507,
+    "taxon": "Argyrophenga janitae",
+    "family": "Nymphalidae",
+    "descriptionKey": "Argyrophenga-janitae-description",
+    "image_copyright": [
+      "Jacqui Knight"
+    ]
+  },
+  {
+    "id": 508,
+    "sort_id": 508,
+    "taxon": "Danaus plexippus plexippus",
+    "family": "Nymphalidae",
+    "descriptionKey": "Danaus-plexippus-plexippus-description",
+    "image_copyright": [
+      "Jacqui Knight"
+    ]
+  },
+  {
+    "id": 509,
+    "sort_id": 509,
+    "taxon": "Dodonidia helmsii",
+    "family": "Nymphalidae",
+    "descriptionKey": "Dodonidia-helmsii-description",
+    "image_copyright": [
+      "Norm Twigge"
+    ]
+  },
+  {
+    "id": 510,
+    "sort_id": 510,
+    "taxon": "Erebiola butleri",
+    "family": "Nymphalidae",
+    "descriptionKey": "Erebiola-butleri-description",
+    "image_copyright": [
+      "Chris Rickards"
+    ]
+  },
+  {
+    "id": 511,
+    "sort_id": 511,
+    "taxon": "Lycaena boldenarum",
+    "family": "Lycaenidae",
+    "descriptionKey": "Lycaena-boldenarum-description",
+    "image_copyright": [
+      "Brian Patrick"
+    ]
+  },
+  {
+    "id": 512,
+    "sort_id": 512,
+    "taxon": "Lycaena feredayi",
+    "family": "Lycaenidae",
+    "descriptionKey": "Lycaena-feredayi-description",
+    "image_copyright": [
+      "Dianne Clarke Pukawa"
+    ]
+  },
+  {
+    "id": 513,
+    "sort_id": 513,
+    "taxon": "Lycaena rauparaha",
+    "family": "Lycaenidae",
+    "descriptionKey": "Lycaena-rauparaha-description",
+    "image_copyright": [
+      "Erin Hall"
+    ]
+  },
+  {
+    "id": 514,
+    "sort_id": 514,
+    "taxon": "Lycaena salustius",
+    "family": "Lycaenidae",
+    "descriptionKey": "Lycaena-salustius-description",
+    "image_copyright": [
+      "Chris Rickards"
+    ]
+  },
+  {
+    "id": 515,
+    "sort_id": 515,
+    "taxon": "Percnodaimon merula",
+    "family": "Nymphalidae",
+    "descriptionKey": "Percnodaimon-merula-description",
+    "image_copyright": [
+      "Jacqui Knight"
+    ]
+  },
+  {
+    "id": 516,
+    "sort_id": 516,
+    "taxon": "Vanessa gonerilla",
+    "family": "Nymphalidae",
+    "descriptionKey": "Vanessa-gonerilla-description",
+    "image_copyright": [
+      "Mike Lusk"
+    ]
+  },
+  {
+    "id": 517,
+    "sort_id": 517,
+    "taxon": "Vanessa gonerilla gonerilla",
+    "family": "Nymphalidae",
+    "descriptionKey": "Vanessa-gonerilla-gonerilla-description",
+    "image_copyright": [
+      "Mike Lusk"
+    ]
+  },
+  {
+    "id": 518,
+    "sort_id": 518,
+    "taxon": "Vanessa gonerilla ida",
+    "family": "Nymphalidae",
+    "descriptionKey": "Vanessa-gonerilla-ida-description",
+    "image_copyright": [
+      "Mike Lusk"
+    ]
+  },
+  {
+    "id": 519,
+    "sort_id": 519,
+    "taxon": "Vanessa itea",
+    "family": "Nymphalidae",
+    "descriptionKey": "Vanessa-itea-description",
+    "image_copyright": [
+      "Chris Rickards"
+    ]
+  },
+  {
+    "id": 520,
+    "sort_id": 520,
+    "taxon": "Zizina labradus labradus",
+    "family": "Lycaenidae",
+    "descriptionKey": "Zizina-labradus-labradus-description",
+    "image_copyright": [
+      "Cathy Casey"
+    ]
+  },
+  {
+    "id": 521,
+    "sort_id": 521,
+    "taxon": "Zizina oxleyi",
+    "family": "Lycaenidae",
+    "descriptionKey": "Zizina-oxleyi-description",
+    "image_copyright": [
+      "Jon Sullivan"
+    ]
+  },
+  {
+    "id": 522,
+    "sort_id": 522,
+    "taxon": "Limenitis glorifica",
+    "family": "Nymphalidae",
+    "descriptionKey": "Limenitis-glorifica-description",
+    "image_copyright": [
+      "Quentin Paynter"
+    ]
   }
 ]

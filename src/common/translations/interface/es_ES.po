@@ -167,10 +167,10 @@ msgid "Botswana"
 msgstr "Botsuana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigeria"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Nueva Zelanda"
 
 msgid "Elsewhere"
 msgstr "En otro lugar"

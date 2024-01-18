@@ -2040,3 +2040,57 @@ msgstr ""
 
 msgid "Erebia-neoridas-description"
 msgstr ""
+
+msgid "Argyrophenga-antipodum-description"
+msgstr ""
+
+msgid "Argyrophenga-harrisi-description"
+msgstr ""
+
+msgid "Argyrophenga-janitae-description"
+msgstr ""
+
+msgid "Danaus-plexippus-plexippus-description"
+msgstr ""
+
+msgid "Dodonidia-helmsii-description"
+msgstr ""
+
+msgid "Erebiola-butleri-description"
+msgstr ""
+
+msgid "Lycaena-boldenarum-description"
+msgstr ""
+
+msgid "Lycaena-feredayi-description"
+msgstr ""
+
+msgid "Lycaena-rauparaha-description"
+msgstr ""
+
+msgid "Lycaena-salustius-description"
+msgstr ""
+
+msgid "Percnodaimon-merula-description"
+msgstr ""
+
+msgid "Vanessa-gonerilla-description"
+msgstr ""
+
+msgid "Vanessa-gonerilla-gonerilla-description"
+msgstr ""
+
+msgid "Vanessa-gonerilla-ida-description"
+msgstr ""
+
+msgid "Vanessa-itea-description"
+msgstr ""
+
+msgid "Zizina-labradus-labradus-description"
+msgstr ""
+
+msgid "Zizina-oxleyi-description"
+msgstr ""
+
+msgid "Limenitis-glorifica-description"
+msgstr ""
