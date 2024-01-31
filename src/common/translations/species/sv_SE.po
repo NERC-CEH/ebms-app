@@ -1104,17 +1104,6 @@ msgstr ""
 
 msgid "Lampides-boeticus-description"
 msgstr ""
-"Vingundersidorna hos den långsvansade blåvingen har ett vackert mönster av "
-"tunna, vågiga linjer och två tydliga ögonfläckar nära den ganska långa "
-"svansen på bakvingarna. Dess livsmiljö karakteriseras av förekomsten av "
-"många slags ärtväxter som kan tjäna som värdväxter, och gott om nektarrika "
-"blommor för fjärilarna. Habitaten är varma, torra platser, ibland på "
-"jordbruksmark. Deras främsta värdväxt är blåsärt (<i>Colutea "
-"arborescens</i>). Larverna äter av de mognande fröna och kan ställa till "
-"problem i ärt- och bönodlingar. I mer naturliga miljöer sköts larverna om av"
-" olika arter av myror. Den långsvansade blåvingens livscykel tar fyra till "
-"sex veckor. Den går inte i diapaus, och är därför bara bofast i områden som "
-"är varma nog för att alla dess livsstadier ska kunna överleva."
 
 msgid "Cacyreus-marshalli-description"
 msgstr ""
@@ -2976,12 +2965,6 @@ msgid "Percnodaimon-merula-description"
 msgstr ""
 
 msgid "Vanessa-gonerilla-description"
-msgstr ""
-
-msgid "Vanessa-gonerilla-gonerilla-description"
-msgstr ""
-
-msgid "Vanessa-gonerilla-ida-description"
 msgstr ""
 
 msgid "Vanessa-itea-description"

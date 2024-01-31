@@ -1585,12 +1585,6 @@ msgstr ""
 msgid "Vanessa-gonerilla-description"
 msgstr ""
 
-msgid "Vanessa-gonerilla-gonerilla-description"
-msgstr ""
-
-msgid "Vanessa-gonerilla-ida-description"
-msgstr ""
-
 msgid "Vanessa-itea-description"
 msgstr ""
 

@@ -1,12 +1,12 @@
 # 
 # Translators:
 # Anna Mei Dichmann Melskens, 2022
-# Skjold Alsted Søndergaard, 2023
+# Skjold Alsted Søndergaard, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Skjold Alsted Søndergaard, 2023\n"
+"Last-Translator: Skjold Alsted Søndergaard, 2024\n"
 "Language-Team: Danish (Denmark) (https://app.transifex.com/ceh/teams/95441/da_DK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,10 +166,10 @@ msgid "Botswana"
 msgstr "Botswana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigeria"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "New Zealand"
 
 msgid "Elsewhere"
 msgstr "Et andet sted"
@@ -2248,39 +2248,39 @@ msgstr "Tilføj venligst parringsmuligheden"
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Nektarkilde"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Tilføj nektarmuligheden"
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Tilføj retningsmuligheden"
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Tilføj højdemuligheden"
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Værtsplanter til æg"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Migrerende"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Foragerer nektar"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Parrende"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Ikke-understøttet enhed"
 
 # Painted lady compass
 msgid ""
@@ -2290,10 +2290,14 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Desværre ser det ud til, at din enhed ikke har den nødvendige sensor for, at"
+" kompasset kan fungere korrekt. Kompasset er afhængig af denne sensor til at"
+" registrere jordens magnetfelt og bestemme din enheds orientering i forhold "
+"til magnetisk nord. Du vil således ikke kunne bruge kompas på denne enhed."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Territorieforsvar: andet"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"

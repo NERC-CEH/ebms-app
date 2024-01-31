@@ -347,8 +347,6 @@ import './513_thumbnail.jpg?originalName';
 import './514_thumbnail.jpg?originalName';
 import './515_thumbnail.jpg?originalName';
 import './516_thumbnail.jpg?originalName';
-import './517_thumbnail.jpg?originalName';
-import './518_thumbnail.jpg?originalName';
 import './519_thumbnail.jpg?originalName';
 import './520_thumbnail.jpg?originalName';
 import './521_thumbnail.jpg?originalName';

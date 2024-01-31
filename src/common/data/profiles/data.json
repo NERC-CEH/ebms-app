@@ -39367,6 +39367,17 @@
     "abundance": { "ZA": "P" }
   },
   {
+    "id": 508,
+    "sort_id": 508,
+    "taxon": "Danaus plexippus plexippus",
+    "family": "Nymphalidae",
+    "descriptionKey": "Danaus-plexippus-plexippus-description",
+    "image_copyright": ["Jacqui Knight"],
+    "warehouse_id": 624224,
+    "external_key": "NZBMS5",
+    "abundance": { "NZ": "P" }
+  },
+  {
     "id": 509,
     "sort_id": 509,
     "taxon": "Dodonidia helmsii",
@@ -39375,6 +39386,17 @@
     "image_copyright": ["Norm Twigge"],
     "warehouse_id": 624268,
     "external_key": "NZBMS7",
+    "abundance": { "NZ": "P" }
+  },
+  {
+    "id": 511,
+    "sort_id": 511,
+    "taxon": "Lycaena boldenarum",
+    "family": "Lycaenidae",
+    "descriptionKey": "Lycaena-boldenarum-description",
+    "image_copyright": ["Brian Patrick"],
+    "warehouse_id": 624229,
+    "external_key": "NZBMS10",
     "abundance": { "NZ": "P" }
   },
   {
@@ -39389,36 +39411,15 @@
     "abundance": { "NZ": "P" }
   },
   {
-    "id": 513,
-    "sort_id": 513,
-    "taxon": "Lycaena rauparaha",
-    "family": "Lycaenidae",
-    "descriptionKey": "Lycaena-rauparaha-description",
-    "image_copyright": ["Erin Hall"],
-    "warehouse_id": 624235,
-    "external_key": "NZBMS12",
+    "warehouse_id": 624245,
+    "external_key": "NZBMS17",
+    "taxon": "Vanessa gonerilla gonerilla",
     "abundance": { "NZ": "P" }
   },
   {
-    "id": 516,
-    "sort_id": 516,
-    "taxon": "Vanessa gonerilla",
-    "family": "Nymphalidae",
-    "descriptionKey": "Vanessa-gonerilla-description",
-    "image_copyright": ["Mike Lusk"],
-    "warehouse_id": 624242,
-    "external_key": "NZBMS16",
-    "abundance": { "NZ": "P" }
-  },
-  {
-    "id": 520,
-    "sort_id": 520,
-    "taxon": "Zizina labradus labradus",
-    "family": "Lycaenidae",
-    "descriptionKey": "Zizina-labradus-labradus-description",
-    "image_copyright": ["Cathy Casey"],
-    "warehouse_id": 624254,
-    "external_key": "NZBMS20",
+    "warehouse_id": 624248,
+    "external_key": "NZBMS18",
+    "taxon": "Vanessa gonerilla ida",
     "abundance": { "NZ": "P" }
   },
   {
@@ -39461,14 +39462,9 @@
     "abundance": { "NZ": "P" }
   },
   {
-    "id": 508,
-    "sort_id": 508,
-    "taxon": "Danaus plexippus plexippus",
-    "family": "Nymphalidae",
-    "descriptionKey": "Danaus-plexippus-plexippus-description",
-    "image_copyright": ["Jacqui Knight"],
-    "warehouse_id": 624224,
-    "external_key": "NZBMS5",
+    "warehouse_id": 624271,
+    "external_key": "NZBMS8",
+    "taxon": "Erebiola",
     "abundance": { "NZ": "P" }
   },
   {
@@ -39483,14 +39479,14 @@
     "abundance": { "NZ": "P" }
   },
   {
-    "id": 511,
-    "sort_id": 511,
-    "taxon": "Lycaena boldenarum",
+    "id": 513,
+    "sort_id": 513,
+    "taxon": "Lycaena rauparaha",
     "family": "Lycaenidae",
-    "descriptionKey": "Lycaena-boldenarum-description",
-    "image_copyright": ["Brian Patrick"],
-    "warehouse_id": 624229,
-    "external_key": "NZBMS10",
+    "descriptionKey": "Lycaena-rauparaha-description",
+    "image_copyright": ["Erin Hall"],
+    "warehouse_id": 624235,
+    "external_key": "NZBMS12",
     "abundance": { "NZ": "P" }
   },
   {
@@ -39505,14 +39501,25 @@
     "abundance": { "NZ": "P" }
   },
   {
-    "id": 518,
-    "sort_id": 518,
-    "taxon": "Vanessa gonerilla ida",
+    "id": 515,
+    "sort_id": 515,
+    "taxon": "Percnodaimon merula",
     "family": "Nymphalidae",
-    "descriptionKey": "Vanessa-gonerilla-ida-description",
+    "descriptionKey": "Percnodaimon-merula-description",
+    "image_copyright": ["Jacqui Knight"],
+    "warehouse_id": 624276,
+    "external_key": "NZBMS15",
+    "abundance": { "NZ": "P" }
+  },
+  {
+    "id": 516,
+    "sort_id": 516,
+    "taxon": "Vanessa gonerilla",
+    "family": "Nymphalidae",
+    "descriptionKey": "Vanessa-gonerilla-description",
     "image_copyright": ["Mike Lusk"],
-    "warehouse_id": 624248,
-    "external_key": "NZBMS18",
+    "warehouse_id": 624242,
+    "external_key": "NZBMS16",
     "abundance": { "NZ": "P" }
   },
   {
@@ -39527,37 +39534,14 @@
     "abundance": { "NZ": "P" }
   },
   {
-    "warehouse_id": 624267,
-    "external_key": "NZBMS6",
-    "taxon": "Dodonidia",
-    "abundance": { "NZ": "P" }
-  },
-  {
-    "warehouse_id": 624271,
-    "external_key": "NZBMS8",
-    "taxon": "Erebiola",
-    "abundance": { "NZ": "P" }
-  },
-  {
-    "id": 515,
-    "sort_id": 515,
-    "taxon": "Percnodaimon merula",
-    "family": "Nymphalidae",
-    "descriptionKey": "Percnodaimon-merula-description",
-    "image_copyright": ["Jacqui Knight"],
-    "warehouse_id": 624276,
-    "external_key": "NZBMS15",
-    "abundance": { "NZ": "P" }
-  },
-  {
-    "id": 517,
-    "sort_id": 517,
-    "taxon": "Vanessa gonerilla gonerilla",
-    "family": "Nymphalidae",
-    "descriptionKey": "Vanessa-gonerilla-gonerilla-description",
-    "image_copyright": ["Mike Lusk"],
-    "warehouse_id": 624245,
-    "external_key": "NZBMS17",
+    "id": 520,
+    "sort_id": 520,
+    "taxon": "Zizina labradus labradus",
+    "family": "Lycaenidae",
+    "descriptionKey": "Zizina-labradus-labradus-description",
+    "image_copyright": ["Cathy Casey"],
+    "warehouse_id": 624254,
+    "external_key": "NZBMS20",
     "abundance": { "NZ": "P" }
   },
   {
@@ -39569,6 +39553,12 @@
     "image_copyright": ["Jon Sullivan"],
     "warehouse_id": 624257,
     "external_key": "NZBMS21",
+    "abundance": { "NZ": "P" }
+  },
+  {
+    "warehouse_id": 624267,
+    "external_key": "NZBMS6",
+    "taxon": "Dodonidia",
     "abundance": { "NZ": "P" }
   },
   {

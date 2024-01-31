@@ -5652,26 +5652,6 @@
     ]
   },
   {
-    "id": 517,
-    "sort_id": 517,
-    "taxon": "Vanessa gonerilla gonerilla",
-    "family": "Nymphalidae",
-    "descriptionKey": "Vanessa-gonerilla-gonerilla-description",
-    "image_copyright": [
-      "Mike Lusk"
-    ]
-  },
-  {
-    "id": 518,
-    "sort_id": 518,
-    "taxon": "Vanessa gonerilla ida",
-    "family": "Nymphalidae",
-    "descriptionKey": "Vanessa-gonerilla-ida-description",
-    "image_copyright": [
-      "Mike Lusk"
-    ]
-  },
-  {
     "id": 519,
     "sort_id": 519,
     "taxon": "Vanessa itea",

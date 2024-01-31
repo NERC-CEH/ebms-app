@@ -350,8 +350,6 @@ import './513_0_image.jpg?originalName';
 import './514_0_image.jpg?originalName';
 import './515_0_image.jpg?originalName';
 import './516_0_image.jpg?originalName';
-import './517_0_image.jpg?originalName';
-import './518_0_image.jpg?originalName';
 import './519_0_image.jpg?originalName';
 import './520_0_image.jpg?originalName';
 import './521_0_image.jpg?originalName';

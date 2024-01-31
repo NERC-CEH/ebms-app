@@ -1532,18 +1532,6 @@ msgstr "Azanus-jesous-tanım - Türkiye türü"
 
 msgid "Lampides-boeticus-description"
 msgstr ""
-"Lampides'in kanatlarının alt tarafında ilgi çekici ince, dalgalı bir çizgi "
-"deseni ve arka kanatlardaki oldukça uzun küçük kuyrukların yakınında iki "
-"çarpıcı göz noktası bulunur. Habitatlar, besin bitkileri olarak hizmet eden "
-"birçok baklagil bitkisi ve kelebekler için bol miktarda nektar bakımından "
-"zengin çiçeklerin mevcudiyeti ile karakterize edilir. Yaşam alanları sıcak, "
-"kuru yerler, bazen de tarım alanlarıdır. Ana besin bitkisi yalancı "
-"sinamekidir (Colutea arborescens). Tırtıllar olgunlaşan tohumlarla beslenir,"
-" bezelye ve fasulye yetiştirilen çiftliklerde yoğun olarak görülebilirler. "
-"Doğal durumlarda, tırtıllara çeşitli karınca türleri eşlik eder. Lampides'in"
-" yaşam döngüsü dört ila altı hafta sürer. Hibernasyona girmez ve bu nedenle "
-"yalnızca tüm yaşam evrelerinde hayatta kalması için yeterince sıcak olan bir"
-" yerde yerleşik olarak bulunabilir."
 
 msgid "Cacyreus-marshalli-description"
 msgstr ""
@@ -3659,12 +3647,6 @@ msgid "Percnodaimon-merula-description"
 msgstr ""
 
 msgid "Vanessa-gonerilla-description"
-msgstr ""
-
-msgid "Vanessa-gonerilla-gonerilla-description"
-msgstr ""
-
-msgid "Vanessa-gonerilla-ida-description"
 msgstr ""
 
 msgid "Vanessa-itea-description"
