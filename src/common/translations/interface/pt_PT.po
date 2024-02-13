@@ -927,6 +927,14 @@ msgstr "Marque os novos registos como \"treino\" e exclua-os dos relatórios."
 msgid "Show common names in guide"
 msgstr "Mostrar nomes comuns no guia"
 
+# App setting label
+msgid "Use global species lists"
+msgstr ""
+
+# App setting label
+msgid "Don't restrict to local species names in survey searches."
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Partilhe as análises da App"
 

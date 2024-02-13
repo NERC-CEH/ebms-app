@@ -138,6 +138,10 @@ export type Attrs = ModelAttrs & {
 
   speciesGroups: string[];
   useDayFlyingMothsOnly: boolean;
+  /**
+   * Instead of local species show all available species names when surveying.
+   */
+  useGlobalSpeciesList: boolean;
   transects: any;
   locations: any[];
   taxonGroupFilters?: any;
@@ -175,6 +179,7 @@ const defaults: Attrs = {
 
   speciesGroups: DEFAULT_SPECIES_GROUP,
   useDayFlyingMothsOnly: false,
+  useGlobalSpeciesList: false,
   transects: [],
   locations: [],
 

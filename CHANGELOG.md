@@ -1,3 +1,8 @@
+## 1.24.1
+
+Made it show only local species names in surveys by default.
+Added an app setting to use the global species dictionary.
+
 ## 1.24.0
 
 Added New Zealand and Nigeria.

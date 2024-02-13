@@ -925,6 +925,14 @@ msgstr ""
 msgid "Show common names in guide"
 msgstr "Veure els noms comuns a la guia"
 
+# App setting label
+msgid "Use global species lists"
+msgstr ""
+
+# App setting label
+msgid "Don't restrict to local species names in survey searches."
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Comparteix les analítiques de l'aplicació"
 

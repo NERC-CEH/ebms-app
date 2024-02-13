@@ -907,6 +907,14 @@ msgstr "Mark any new records as 'training' and exclude from all reports."
 msgid "Show common names in guide"
 msgstr "Show common names in guide"
 
+# App setting label
+msgid "Use global species lists"
+msgstr "Use global species lists"
+
+# App setting label
+msgid "Don't restrict to local species names in survey searches."
+msgstr "Don't restrict to local species names in survey searches."
+
 msgid "Share App Analytics"
 msgstr "Share App Analytics"
 

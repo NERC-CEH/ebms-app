@@ -53,19 +53,19 @@ class index extends Component {
     return useDayMothsFilter ? isDayFlying : true;
   };
 
-  // isPresent = taxon => {
-  //   if (taxon.group !== groups.butterflies.id) return true; // abundance available only for butterflies
+  isPresent = taxon => {
+    if (taxon.group !== groups.butterflies.id) return true; // abundance available only for butterflies
 
-  //   let { country } = appModel.attrs;
-  //   country = country === 'UK' ? 'GB' : country;
+    const { country, useGlobalSpeciesList } = appModel.attrs;
+    if (useGlobalSpeciesList || country === 'ELSEWHERE') return true;
 
-  //   if (country === 'ELSEWHERE') return true;
+    const countryCode = country === 'UK' ? 'GB' : country;
+    const presenceStatus = taxon[countryCode];
+    return ['P', 'P?', 'M', 'I'].includes(presenceStatus);
+  };
 
-  //   const abundanceStatus = taxon[country];
-  //   return !['A', 'Ex'].includes(abundanceStatus);
-  // };
-
-  attrFilter = options => this.filterDayFlyingMoths(options); // this.isPresent(options)
+  attrFilter = options =>
+    this.filterDayFlyingMoths(options) && this.isPresent(options);
 
   onInputKeystroke = async e => {
     const { speciesGroups } = this.props;

@@ -91,9 +91,9 @@ function clearCacheDialog(resetApp: any, alert: any) {
 type Props = {
   clearCache: any;
   onToggle: any;
-
   useTraining: boolean;
   useExperiments: boolean;
+  useGlobalSpeciesList: boolean;
   sendAnalytics: boolean;
   showCommonNamesInGuide: boolean;
   isLoggedIn: boolean;
@@ -115,6 +115,7 @@ const MenuMain: FC<Props> = ({
   language,
   country,
   showCommonNamesInGuide,
+  useGlobalSpeciesList,
 }) => {
   const alert = useAlert();
   const showUserDeleteDialog = useUserDeleteDialog(deleteUser);
@@ -130,6 +131,8 @@ const MenuMain: FC<Props> = ({
   const onClearCacheDialog = () => clearCacheDialog(clearCache, alert);
   const onTrainingToggle = (checked: boolean) =>
     onToggle('useTraining', checked);
+  const onGlobalSpeciesListToggle = (checked: boolean) =>
+    onToggle('useGlobalSpeciesList', checked);
 
   const countryLabel = countries[country].name;
   const languageLabel = languages[language].name;
@@ -185,7 +188,15 @@ const MenuMain: FC<Props> = ({
               <T>{countryLabel}</T>
             </IonLabel>
           </IonItem>
-
+          <MenuAttrToggle
+            icon={butterflyIcon}
+            label="Use global species lists"
+            value={useGlobalSpeciesList}
+            onChange={onGlobalSpeciesListToggle}
+          />
+          <InfoMessage color="medium">
+            Don't restrict to local species names in survey searches.
+          </InfoMessage>
           <MenuAttrToggle
             icon={butterflyIcon}
             label="Show common names in guide"
@@ -202,14 +213,12 @@ const MenuMain: FC<Props> = ({
             Mark any new records as &#39;training&#39; and exclude from all
             reports.
           </InfoMessage>
-
           <MenuAttrToggle
             icon={flameOutline}
             label="Experimental Features"
             value={useExperiments}
             onChange={onUseExperiments}
           />
-
           <MenuAttrToggle
             icon={shareOutline}
             label="Share App Analytics"
@@ -219,7 +228,6 @@ const MenuMain: FC<Props> = ({
           <InfoMessage color="medium">
             Share app crash data so we can make the app more reliable.
           </InfoMessage>
-
           <IonItem onClick={onClearCacheDialog}>
             <IonIcon icon={trashBinOutline} size="small" slot="start" />
             <IonLabel>

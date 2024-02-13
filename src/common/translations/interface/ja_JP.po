@@ -856,6 +856,14 @@ msgstr "新しいレコードを「トレーニング」としてマークし、
 msgid "Show common names in guide"
 msgstr "一般名をガイドに表示する"
 
+# App setting label
+msgid "Use global species lists"
+msgstr ""
+
+# App setting label
+msgid "Don't restrict to local species names in survey searches."
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "アプリ分析を共有する"
 

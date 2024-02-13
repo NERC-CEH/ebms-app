@@ -910,6 +910,14 @@ msgstr ""
 msgid "Show common names in guide"
 msgstr ""
 
+# App setting label
+msgid "Use global species lists"
+msgstr ""
+
+# App setting label
+msgid "Don't restrict to local species names in survey searches."
+msgstr ""
+
 msgid "Share App Analytics"
 msgstr "Dijelite analitiku aplikacije"
 

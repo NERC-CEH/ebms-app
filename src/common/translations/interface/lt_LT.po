@@ -911,7 +911,15 @@ msgstr "Pažymėti naujus įrašus 'testavimui' ir nerodyti jokiuose reportuose.
 
 # App setting label
 msgid "Show common names in guide"
-msgstr "Rodyti bendrinius rušių pavadinimus gide"
+msgstr "Rodyti bendrinius rūšių pavadinimus gide"
+
+# App setting label
+msgid "Use global species lists"
+msgstr "Naudoti pasaulinį rūšių sąrašą"
+
+# App setting label
+msgid "Don't restrict to local species names in survey searches."
+msgstr "Monitoringo metu neapsiriboti tik vietiniu (šalies) rūšių sąrašu."
 
 msgid "Share App Analytics"
 msgstr "Dalintis naudojimosi duomenimis"

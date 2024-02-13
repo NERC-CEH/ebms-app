@@ -62,16 +62,6 @@ const Container: FC = () => {
 
   const deleteUser = useDeleteUser();
 
-  const {
-    useTraining,
-    useExperiments,
-    sendAnalytics,
-    language,
-    country,
-    primarySurvey,
-    showCommonNamesInGuide,
-  } = appModel.attrs;
-
   const clearCacheWrap = () => clearCache(toast);
 
   return (
@@ -80,15 +70,16 @@ const Container: FC = () => {
       <Main
         isLoggedIn={userModel.isLoggedIn()}
         deleteUser={deleteUser}
-        useTraining={useTraining}
-        useExperiments={useExperiments}
-        sendAnalytics={sendAnalytics}
-        primarySurvey={primarySurvey}
-        showCommonNamesInGuide={showCommonNamesInGuide}
+        useTraining={appModel.attrs.useTraining}
+        useExperiments={appModel.attrs.useExperiments}
+        sendAnalytics={appModel.attrs.sendAnalytics}
+        primarySurvey={appModel.attrs.primarySurvey}
+        showCommonNamesInGuide={appModel.attrs.showCommonNamesInGuide}
         clearCache={clearCacheWrap}
         onToggle={onToggle}
-        language={language!}
-        country={country!}
+        language={appModel.attrs.language!}
+        country={appModel.attrs.country!}
+        useGlobalSpeciesList={appModel.attrs.useGlobalSpeciesList}
       />
     </Page>
   );
