@@ -3,8 +3,10 @@ import { createRoot } from 'react-dom/client';
 import { App as AppPlugin } from '@capacitor/app';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
-import { initAnalytics, device } from '@flumens';
+import { sentryOptions, device } from '@flumens';
 import { setupIonicReact, isPlatform } from '@ionic/react';
+import * as SentryBrowser from '@sentry/browser';
+import * as Sentry from '@sentry/capacitor';
 import config from 'common/config';
 import locations from 'common/models/collections/locations';
 import appModel from 'models/app';
@@ -25,16 +27,20 @@ mobxConfig({ enforceActions: 'never' });
   await locations.ready;
 
   appModel.attrs.sendAnalytics &&
-    initAnalytics({
-      dsn: config.sentryDNS,
-      environment: config.environment,
-      build: config.build,
-      release: config.version,
-      userId: userModel.id,
-      tags: {
-        'app.appSession': appModel.attrs.appSession,
+    Sentry.init(
+      {
+        ...sentryOptions,
+        dsn: config.sentryDNS,
+        environment: config.environment,
+        release: config.version,
+        dist: config.build,
+        initialScope: {
+          user: { id: userModel.id },
+          tags: { session: appModel.attrs.appSession },
+        },
       },
-    });
+      SentryBrowser.init
+    );
 
   appModel.attrs.appSession += 1;
 
