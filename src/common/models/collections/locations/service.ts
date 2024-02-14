@@ -49,9 +49,17 @@ export interface Location {
 }
 
 export default async function fetchLocations() {
+  console.log('📚 Collection: locations collection fetchLocations()');
   const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/locations`;
 
+  console.log(
+    '📚 Collection: locations collection fetchLocations() getting access token'
+  );
+
   const token = await userModel.getAccessToken();
+  console.log(
+    '📚 Collection: locations collection fetchLocations() getting access token done'
+  );
 
   const options = {
     params: {

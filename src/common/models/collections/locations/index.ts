@@ -43,6 +43,8 @@ export class Locations extends Collection<Location> {
       await this.ready;
 
       console.log(`📚 Collection: ${this.id} collection email has changed`);
+      // console.log('📚 Collection: skipping the fetch');
+
       this._fetchFirstTime();
     };
     const getEmail = () => userModel.attrs.email;
@@ -84,6 +86,8 @@ export class Locations extends Collection<Location> {
   };
 
   private _fetchFirstTime = async () => {
+    console.log(`📚 Collection: ${this.id} collection _fetchFirstTime()`);
+
     if (!this.id) throw new Error('Collection fetching without id');
 
     const requiresSync = !this.length && !this._fetchedFirstTime;
@@ -92,8 +96,17 @@ export class Locations extends Collection<Location> {
       !device.isOnline ||
       !userModel.isLoggedIn() ||
       this.fetching.isFetching
-    )
+    ) {
+      console.log(
+        `📚 Collection: ${this.id} collection _fetchFirstTime() skip`,
+        !requiresSync,
+        !device.isOnline,
+        !userModel.isLoggedIn(),
+        this.fetching.isFetching
+      );
+
       return null;
+    }
 
     console.log(`📚 Collection: ${this.id} collection fetching first time`);
 
