@@ -110,7 +110,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
    */
   static parseRemoteJSON({ id, event, location, metadata }: ElasticSample) {
     const survey = surveyConfigsByCode[metadata.survey.id];
-    const date = new Date(metadata.created_on).toISOString();
+    const date = new Date(event.date_start).toISOString();
     const updatedOn = new Date(metadata.updated_on).toISOString();
 
     const [latitude, longitude] = location.point.split(',').map(parseFloat);

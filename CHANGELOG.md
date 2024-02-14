@@ -1,3 +1,7 @@
+## 1.24.2
+
+Small bug fixes.
+
 ## 1.24.1
 
 Made it show only local species names in surveys by default.

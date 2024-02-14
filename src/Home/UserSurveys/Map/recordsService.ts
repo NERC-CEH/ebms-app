@@ -159,8 +159,11 @@ export async function fetchSquares(
     size: squareSize,
   });
 
-  const squares =
-    records?.aggregations?.by_srid?.buckets[0]?.by_square?.buckets.map(addSize);
+  const exists = (o: any) => !!o;
+  const getSquare = (bucket: any) => bucket?.by_square?.buckets.map(addSize);
+  const squares = records?.aggregations?.by_srid?.buckets
+    .flatMap(getSquare)
+    .filter(exists);
 
   return squares || [];
 }
