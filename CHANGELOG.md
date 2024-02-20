@@ -1,3 +1,7 @@
+## 1.24.3
+
+Updated species dictionary.
+
 ## 1.24.2
 
 Small bug fixes.

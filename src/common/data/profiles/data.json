@@ -17098,7 +17098,6 @@
       "IE": "A",
       "IS": "A",
       "IT": "P",
-      "JP": "P",
       "LI": "P",
       "LT": "P",
       "LU": "P",
@@ -32449,7 +32448,7 @@
   },
   {
     "warehouse_id": 549508,
-    "taxon": "Parnassius sp.",
+    "taxon": "Parnassius citrinarius/stubbendorfii",
     "abundance": { "JP": "P" }
   },
   {
@@ -32502,7 +32501,7 @@
   },
   {
     "warehouse_id": 549526,
-    "taxon": "Papilio sp.",
+    "taxon": "Papilio protenor/others",
     "abundance": { "JP": "P" }
   },
   {
@@ -32560,7 +32559,7 @@
   },
   {
     "warehouse_id": 549547,
-    "taxon": "Leptidea sp.",
+    "taxon": "Leptidea morsei/amurensis",
     "abundance": { "JP": "P" }
   },
   {
@@ -32581,7 +32580,11 @@
     "taxon": "Eurema blanda",
     "abundance": { "JP": "P" }
   },
-  { "warehouse_id": 549555, "taxon": "Eurema sp.", "abundance": { "JP": "P" } },
+  {
+    "warehouse_id": 549555,
+    "taxon": "Eurema mandarina/others",
+    "abundance": { "JP": "P" }
+  },
   {
     "warehouse_id": 549557,
     "external_key": "1920706",
@@ -32596,7 +32599,7 @@
   },
   {
     "warehouse_id": 549561,
-    "taxon": "Gonepteryx sp.",
+    "taxon": "Gonepteryx maxima/aspasia",
     "abundance": { "JP": "P" }
   },
   {
@@ -32613,7 +32616,7 @@
   },
   {
     "warehouse_id": 549567,
-    "taxon": "Catopsilia sp.",
+    "taxon": "Catopsilia pomona/pyranthe",
     "abundance": { "JP": "P" }
   },
   {
@@ -32646,7 +32649,11 @@
     "taxon": "Appias albina",
     "abundance": { "JP": "P" }
   },
-  { "warehouse_id": 549579, "taxon": "Appias sp.", "abundance": { "JP": "P" } },
+  {
+    "warehouse_id": 549579,
+    "taxon": "Appias lyncida/paulina/albina",
+    "abundance": { "JP": "P" }
+  },
   {
     "warehouse_id": 549581,
     "external_key": "5137889",
@@ -32664,7 +32671,11 @@
     "taxon": "Pieris dulcinea",
     "abundance": { "JP": "P" }
   },
-  { "warehouse_id": 549587, "taxon": "Pieris sp.", "abundance": { "JP": "P" } },
+  {
+    "warehouse_id": 549587,
+    "taxon": "Pieris melete/nesis/dulcinea",
+    "abundance": { "JP": "P" }
+  },
   {
     "warehouse_id": 549589,
     "external_key": "5137891",
@@ -32778,7 +32789,7 @@
   },
   {
     "warehouse_id": 549627,
-    "taxon": "Japonica sp.",
+    "taxon": "Japonica lutea/onoi/saepestriata",
     "abundance": { "JP": "P" }
   },
   {
@@ -32859,7 +32870,7 @@
   },
   {
     "warehouse_id": 549657,
-    "taxon": "Neozephyrus sp.",
+    "taxon": "Neozephyrus japonica/others",
     "abundance": { "JP": "P" }
   },
   {
@@ -32892,7 +32903,7 @@
   },
   {
     "warehouse_id": 549669,
-    "taxon": "Satyrium sp.",
+    "taxon": "Satyrium w-album/mera/iyonis",
     "abundance": { "JP": "P" }
   },
   {
@@ -33000,7 +33011,7 @@
   },
   {
     "warehouse_id": 549707,
-    "taxon": "Celastrina sp.",
+    "taxon": "Celastrina/Acytolepis/Udara sp.",
     "abundance": { "JP": "P" }
   },
   {
@@ -33069,7 +33080,7 @@
   },
   {
     "warehouse_id": 549731,
-    "taxon": "Plebejus sp.",
+    "taxon": "Plebejus argus/argyrognomon/subsolanus",
     "abundance": { "JP": "P" }
   },
   {
@@ -33280,7 +33291,7 @@
   },
   {
     "warehouse_id": 549787,
-    "taxon": "Limenitis sp.",
+    "taxon": "Limenitis camilla/glorifica",
     "abundance": { "JP": "P" }
   },
   {
@@ -33319,7 +33330,11 @@
     "taxon": "Neptis hylas",
     "abundance": { "JP": "P" }
   },
-  { "warehouse_id": 549801, "taxon": "Neptis sp.", "abundance": { "JP": "P" } },
+  {
+    "warehouse_id": 549801,
+    "taxon": "Neptis sappho/others",
+    "abundance": { "JP": "P" }
+  },
   {
     "warehouse_id": 549803,
     "external_key": "1904948",
@@ -33358,7 +33373,7 @@
   },
   {
     "warehouse_id": 549817,
-    "taxon": "Polygonia sp.",
+    "taxon": "Polygonia c-aureum/c-album",
     "abundance": { "JP": "P" }
   },
   {
@@ -33417,7 +33432,7 @@
   },
   {
     "warehouse_id": 549839,
-    "taxon": "Hypolimnas sp.",
+    "taxon": "Hypolimnas bolina/misippus",
     "abundance": { "JP": "P" }
   },
   {
@@ -33502,7 +33517,11 @@
     "taxon": "Neope niphonica",
     "abundance": { "JP": "P" }
   },
-  { "warehouse_id": 549871, "taxon": "Neope sp.", "abundance": { "JP": "P" } },
+  {
+    "warehouse_id": 549871,
+    "taxon": "Neope goschkevitschii/niphonica",
+    "abundance": { "JP": "P" }
+  },
   {
     "warehouse_id": 549873,
     "external_key": "1918385",
@@ -33535,7 +33554,7 @@
   },
   {
     "warehouse_id": 549883,
-    "taxon": "Melanitis sp.",
+    "taxon": "Melanitis phedima/leda",
     "abundance": { "JP": "P" }
   },
   {
@@ -33544,7 +33563,11 @@
     "taxon": "Erebia neriene",
     "abundance": { "JP": "P" }
   },
-  { "warehouse_id": 549887, "taxon": "Erebia sp.", "abundance": { "JP": "P" } },
+  {
+    "warehouse_id": 549887,
+    "taxon": "Erebia ligea/neriene",
+    "abundance": { "JP": "P" }
+  },
   {
     "warehouse_id": 549889,
     "external_key": "1907625",
@@ -33577,7 +33600,7 @@
   },
   {
     "warehouse_id": 549899,
-    "taxon": "Ypthima sp.",
+    "taxon": "Ypthima argus/others",
     "abundance": { "JP": "P" }
   },
   {
@@ -33725,7 +33748,7 @@
   },
   {
     "warehouse_id": 549949,
-    "taxon": "Thymelicus sp.",
+    "taxon": "Thymelicus leonina/sylvatica",
     "abundance": { "JP": "P" }
   },
   {
@@ -33766,7 +33789,7 @@
   },
   {
     "warehouse_id": 549963,
-    "taxon": "Parnara/Pelopidas sp.",
+    "taxon": "Parnara/Pelopidas/Zinaida sp.",
     "abundance": { "JP": "P" }
   },
   {
@@ -34305,7 +34328,7 @@
   },
   {
     "warehouse_id": 552219,
-    "taxon": "Araschnia sp.",
+    "taxon": "Araschnia burejana/levana",
     "abundance": { "JP": "P" }
   },
   {
@@ -39367,62 +39390,6 @@
     "abundance": { "ZA": "P" }
   },
   {
-    "id": 508,
-    "sort_id": 508,
-    "taxon": "Danaus plexippus plexippus",
-    "family": "Nymphalidae",
-    "descriptionKey": "Danaus-plexippus-plexippus-description",
-    "image_copyright": ["Jacqui Knight"],
-    "warehouse_id": 624224,
-    "external_key": "NZBMS5",
-    "abundance": { "NZ": "P" }
-  },
-  {
-    "id": 509,
-    "sort_id": 509,
-    "taxon": "Dodonidia helmsii",
-    "family": "Nymphalidae",
-    "descriptionKey": "Dodonidia-helmsii-description",
-    "image_copyright": ["Norm Twigge"],
-    "warehouse_id": 624268,
-    "external_key": "NZBMS7",
-    "abundance": { "NZ": "P" }
-  },
-  {
-    "id": 511,
-    "sort_id": 511,
-    "taxon": "Lycaena boldenarum",
-    "family": "Lycaenidae",
-    "descriptionKey": "Lycaena-boldenarum-description",
-    "image_copyright": ["Brian Patrick"],
-    "warehouse_id": 624229,
-    "external_key": "NZBMS10",
-    "abundance": { "NZ": "P" }
-  },
-  {
-    "id": 512,
-    "sort_id": 512,
-    "taxon": "Lycaena feredayi",
-    "family": "Lycaenidae",
-    "descriptionKey": "Lycaena-feredayi-description",
-    "image_copyright": ["Dianne Clarke Pukawa"],
-    "warehouse_id": 624232,
-    "external_key": "NZBMS11",
-    "abundance": { "NZ": "P" }
-  },
-  {
-    "warehouse_id": 624245,
-    "external_key": "NZBMS17",
-    "taxon": "Vanessa gonerilla gonerilla",
-    "abundance": { "NZ": "P" }
-  },
-  {
-    "warehouse_id": 624248,
-    "external_key": "NZBMS18",
-    "taxon": "Vanessa gonerilla ida",
-    "abundance": { "NZ": "P" }
-  },
-  {
     "warehouse_id": 624260,
     "external_key": "NZBMS1",
     "taxon": "Argyrophenga",
@@ -39462,9 +39429,25 @@
     "abundance": { "NZ": "P" }
   },
   {
-    "warehouse_id": 624271,
-    "external_key": "NZBMS8",
-    "taxon": "Erebiola",
+    "id": 508,
+    "sort_id": 508,
+    "taxon": "Danaus plexippus plexippus",
+    "family": "Nymphalidae",
+    "descriptionKey": "Danaus-plexippus-plexippus-description",
+    "image_copyright": ["Jacqui Knight"],
+    "warehouse_id": 624224,
+    "external_key": "NZBMS5",
+    "abundance": { "NZ": "P" }
+  },
+  {
+    "id": 509,
+    "sort_id": 509,
+    "taxon": "Dodonidia helmsii",
+    "family": "Nymphalidae",
+    "descriptionKey": "Dodonidia-helmsii-description",
+    "image_copyright": ["Norm Twigge"],
+    "warehouse_id": 624268,
+    "external_key": "NZBMS7",
     "abundance": { "NZ": "P" }
   },
   {
@@ -39476,6 +39459,28 @@
     "image_copyright": ["Chris Rickards"],
     "warehouse_id": 624272,
     "external_key": "NZBMS9",
+    "abundance": { "NZ": "P" }
+  },
+  {
+    "id": 511,
+    "sort_id": 511,
+    "taxon": "Lycaena boldenarum",
+    "family": "Lycaenidae",
+    "descriptionKey": "Lycaena-boldenarum-description",
+    "image_copyright": ["Brian Patrick"],
+    "warehouse_id": 624229,
+    "external_key": "NZBMS10",
+    "abundance": { "NZ": "P" }
+  },
+  {
+    "id": 512,
+    "sort_id": 512,
+    "taxon": "Lycaena feredayi",
+    "family": "Lycaenidae",
+    "descriptionKey": "Lycaena-feredayi-description",
+    "image_copyright": ["Dianne Clarke Pukawa"],
+    "warehouse_id": 624232,
+    "external_key": "NZBMS11",
     "abundance": { "NZ": "P" }
   },
   {
@@ -39501,17 +39506,6 @@
     "abundance": { "NZ": "P" }
   },
   {
-    "id": 515,
-    "sort_id": 515,
-    "taxon": "Percnodaimon merula",
-    "family": "Nymphalidae",
-    "descriptionKey": "Percnodaimon-merula-description",
-    "image_copyright": ["Jacqui Knight"],
-    "warehouse_id": 624276,
-    "external_key": "NZBMS15",
-    "abundance": { "NZ": "P" }
-  },
-  {
     "id": 516,
     "sort_id": 516,
     "taxon": "Vanessa gonerilla",
@@ -39520,6 +39514,18 @@
     "image_copyright": ["Mike Lusk"],
     "warehouse_id": 624242,
     "external_key": "NZBMS16",
+    "abundance": { "NZ": "P" }
+  },
+  {
+    "warehouse_id": 624245,
+    "external_key": "NZBMS17",
+    "taxon": "Vanessa gonerilla gonerilla",
+    "abundance": { "NZ": "P" }
+  },
+  {
+    "warehouse_id": 624248,
+    "external_key": "NZBMS18",
+    "taxon": "Vanessa gonerilla ida",
     "abundance": { "NZ": "P" }
   },
   {
@@ -39562,9 +39568,26 @@
     "abundance": { "NZ": "P" }
   },
   {
+    "warehouse_id": 624271,
+    "external_key": "NZBMS8",
+    "taxon": "Erebiola",
+    "abundance": { "NZ": "P" }
+  },
+  {
     "warehouse_id": 624275,
     "external_key": "NZBMS14",
     "taxon": "Percnodaimon",
+    "abundance": { "NZ": "P" }
+  },
+  {
+    "id": 515,
+    "sort_id": 515,
+    "taxon": "Percnodaimon merula",
+    "family": "Nymphalidae",
+    "descriptionKey": "Percnodaimon-merula-description",
+    "image_copyright": ["Jacqui Knight"],
+    "warehouse_id": 624276,
+    "external_key": "NZBMS15",
     "abundance": { "NZ": "P" }
   },
   {
@@ -46904,5 +46927,15 @@
     "external_key": "ABMS-NG1332",
     "taxon": "Afriodinia tantalus caerulea",
     "abundance": { "NG": "P" }
+  },
+  {
+    "warehouse_id": 629116,
+    "taxon": "Argynnis vorax",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 629118,
+    "taxon": "Argynnis nagiae",
+    "abundance": { "JP": "P" }
   }
 ]
