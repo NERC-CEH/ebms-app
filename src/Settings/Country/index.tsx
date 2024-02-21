@@ -47,7 +47,13 @@ const SelectCountry: FC<Props> = ({ hideHeader }) => {
     if (appModel.attrs.country !== 'UK' && newCountry === 'UK') {
       alert({
         header: 'Note',
-        message: `This app is not for the <b>Big Butterfly Count</b>. If you want to take part in that survey please visit <a href="https://www.bigbutterflycount.org">this website</a>.`,
+        message: (
+          <>
+            This app is not for the <b>Big Butterfly Count</b>. If you want to
+            take part in that survey please visit{' '}
+            <a href="https://www.bigbutterflycount.org">this website</a>.
+          </>
+        ),
         buttons: [
           {
             text: 'Got it',
