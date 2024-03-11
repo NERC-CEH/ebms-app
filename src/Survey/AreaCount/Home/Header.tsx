@@ -3,7 +3,11 @@ import { Trans as T } from 'react-i18next';
 import { Header } from '@flumens';
 import { IonButton, IonLabel } from '@ionic/react';
 
-function getFinishButton(onSubmit, isEditing, isValid) {
+function getFinishButton(
+  onSubmit: any,
+  isEditing?: boolean,
+  isValid?: boolean
+) {
   const label = isEditing ? <T>Upload</T> : <T>Finish</T>;
 
   return (
@@ -19,6 +23,17 @@ function getFinishButton(onSubmit, isEditing, isValid) {
   );
 }
 
+type Props = {
+  onSubmit: any;
+  onProjectClick: any;
+  isTraining?: boolean;
+  isEditing?: boolean;
+  isDisabled?: boolean;
+  survey: any;
+  project?: string;
+  isValid?: boolean;
+};
+
 const HeaderComponent = ({
   onSubmit,
   isTraining,
@@ -26,11 +41,26 @@ const HeaderComponent = ({
   isDisabled,
   survey,
   isValid,
-}) => {
-  const trainingModeSubheader = isTraining && (
-    <div className="training-survey">
-      <T>Training Mode</T>
-    </div>
+  project,
+  onProjectClick,
+}: Props) => {
+  const trainingModeSubheader = (
+    <>
+      {isTraining && (
+        <div className="bg-black p-1 text-center text-sm text-white">
+          <T>Training Mode</T>
+        </div>
+      )}
+
+      {!!project && (
+        <div
+          className="bg-tertiary-600 p-1 text-center text-sm text-white"
+          onClick={onProjectClick}
+        >
+          {project}
+        </div>
+      )}
+    </>
   );
 
   return (
@@ -41,14 +71,6 @@ const HeaderComponent = ({
       defaultHref="/home/user-surveys"
     />
   );
-};
-
-HeaderComponent.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-  survey: PropTypes.object.isRequired,
-  isTraining: PropTypes.bool,
-  isEditing: PropTypes.bool,
-  isDisabled: PropTypes.bool,
 };
 
 export default HeaderComponent;

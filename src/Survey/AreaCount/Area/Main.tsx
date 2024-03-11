@@ -46,6 +46,8 @@ type Props = {
   setLocation: any;
   isGPSTracking: boolean;
   isDisabled?: boolean;
+  onCreateNewLocation: any;
+  onSelectPastLocation: any;
 };
 
 const AreaAttr = ({
@@ -53,6 +55,8 @@ const AreaAttr = ({
   setLocation,
   isGPSTracking,
   isDisabled,
+  onCreateNewLocation,
+  onSelectPastLocation,
 }: Props) => {
   // eslint-disable-next-line prefer-destructuring
   const location: Location | undefined = sample.attrs.location;
@@ -126,6 +130,8 @@ const AreaAttr = ({
         sample={sample}
         currentLocation={mapCenter}
         onClose={() => setShowPastLocations(false)}
+        onCreateNewLocation={onCreateNewLocation}
+        onSelectPastLocation={onSelectPastLocation}
       />
     </Main>
   );

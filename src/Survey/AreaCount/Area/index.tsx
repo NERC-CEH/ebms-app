@@ -1,12 +1,14 @@
-import { FC } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
 import { resizeOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Page } from '@flumens';
-import { IonIcon } from '@ionic/react';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
+import { Page, Location } from '@flumens';
+import { IonIcon, IonPage, isPlatform } from '@ionic/react';
 import Sample from 'models/sample';
 import Header from './Header';
 import Main from './Main';
+import NewLocationModal from './NewLocationModal';
 import './styles.scss';
 
 type Props = {
@@ -53,8 +55,33 @@ const AreaController: FC<Props> = ({ sample }) => {
 
   const isAreaShape = location.shape?.type === 'Polygon';
 
+  const onSelectPastLocation = (location: Location) => {
+    if (sample.isGPSRunning()) sample.stopGPS();
+
+    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
+
+    // eslint-disable-next-line no-param-reassign
+    sample.attrs.location = location;
+    sample.save();
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onCreateNewLocation = () => {
+    setIsOpen(true);
+  };
+
+  const page = useRef(null);
+
+  const [presentingElement, setPresentingElement] =
+    useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setPresentingElement(page.current);
+  }, []);
+
   return (
-    <Page id="area">
+    <IonPage id="area" ref={page}>
       <Header
         toggleGPStracking={toggleGPStracking}
         isGPSTracking={isGPSTracking}
@@ -67,8 +94,15 @@ const AreaController: FC<Props> = ({ sample }) => {
         isGPSTracking={isGPSTracking}
         setLocation={setLocation}
         isDisabled={isDisabled}
+        onSelectPastLocation={onSelectPastLocation}
+        onCreateNewLocation={onCreateNewLocation}
       />
-    </Page>
+      <NewLocationModal
+        presentingElement={presentingElement!}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      />
+    </IonPage>
   );
 };
 

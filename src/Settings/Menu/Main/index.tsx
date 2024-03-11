@@ -134,8 +134,8 @@ const MenuMain: FC<Props> = ({
   const onGlobalSpeciesListToggle = (checked: boolean) =>
     onToggle('useGlobalSpeciesList', checked);
 
-  const countryLabel = countries[country].name;
-  const languageLabel = languages[language].name;
+  const countryLabel = countries[country]?.name;
+  const languageLabel = languages[language]?.name;
 
   return (
     <Main className="app-settings">

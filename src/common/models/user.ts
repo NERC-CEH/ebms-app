@@ -169,7 +169,7 @@ export const useUserStatusCheck = () => {
 
   const check = async () => {
     if (!device.isOnline) {
-      toast.warn('Looks like you are offline!');
+      toast.warn("Sorry, looks like you're offline.");
       return false;
     }
 

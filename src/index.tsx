@@ -23,7 +23,7 @@ mobxConfig({ enforceActions: 'never' });
 (async function () {
   await appModel.ready;
   await userModel.ready;
-  await samplesCollection._init;
+  await samplesCollection.ready;
   await locations.ready;
 
   appModel.attrs.sendAnalytics &&

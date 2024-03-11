@@ -146,6 +146,7 @@ export type Attrs = ModelAttrs & {
   locations: any[];
   taxonGroupFilters?: any;
   primarySurvey: any;
+  defaultProject?: { name: string; id: string };
   useImageIdentifier: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;

@@ -1,14 +1,9 @@
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import {
-  IonModal,
-  IonHeader,
-  IonToolbar,
-  IonContent,
-  isPlatform,
-} from '@ionic/react';
+import { Location } from '@flumens';
+import { IonModal, IonHeader, IonToolbar, IonContent } from '@ionic/react';
 import Sample from 'models/sample';
 import PastLocationsList from 'Survey/AreaCount/common/Components/PastLocationsList';
 import Control from './Control';
+import './styles.scss';
 
 const SNAP_POSITIONS = [0, 0.3, 0.5, 1];
 const DEFAULT_SNAP_POSITION = 0.3;
@@ -17,19 +12,22 @@ type Props = {
   sample: Sample;
   isOpen: boolean;
   onClose: any;
+  onCreateNewLocation: any;
+  onSelectPastLocation: any;
   currentLocation: [number, number];
 };
 
-const Favourites = ({ sample, isOpen, onClose, currentLocation }: Props) => {
-  const onSelectPastLoaction = (location: any) => {
-    if (sample.isGPSRunning()) sample.stopGPS();
+const Favourites = ({
+  sample,
+  isOpen,
+  onClose,
+  currentLocation,
+  onCreateNewLocation,
+  onSelectPastLocation,
+}: Props) => {
+  const onSelectPastLocationWrap = (location: Location) => {
     onClose();
-
-    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
-
-    // eslint-disable-next-line no-param-reassign
-    sample.attrs.location = location;
-    sample.save();
+    onSelectPastLocation(location);
   };
 
   return (
@@ -44,11 +42,21 @@ const Favourites = ({ sample, isOpen, onClose, currentLocation }: Props) => {
       onIonModalWillDismiss={onClose}
     >
       <IonHeader class="ion-no-border">
-        <IonToolbar />
+        <IonToolbar>
+          <div className="flex justify-between">
+            <div className="px-2 py-1 font-semibold text-black">Locations:</div>
+            <button
+              className="rounded-lg bg-secondary px-2 py-1"
+              onClick={onCreateNewLocation}
+            >
+              Add New
+            </button>
+          </div>
+        </IonToolbar>
       </IonHeader>
       <IonContent>
         <PastLocationsList
-          onSelect={onSelectPastLoaction}
+          onSelect={onSelectPastLocationWrap}
           position={currentLocation}
         />
       </IonContent>

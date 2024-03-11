@@ -2529,3 +2529,7 @@ msgstr "Reliability cannot be empty."
 # Survey verification message
 msgid "Cloud cannot be empty."
 msgstr "Cloud cannot be empty."
+
+# Survey projects page
+msgid "Not linked to any projectLooks like you are offline"
+msgstr "Not linked to any project"
