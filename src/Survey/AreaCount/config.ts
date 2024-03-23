@@ -114,6 +114,13 @@ const survey: Survey = {
       },
     },
     ...locationAttrs,
+
+    project: {
+      remote: {
+        id: 'group_id',
+        values: (val: any) => val.id,
+      },
+    },
   },
 
   metadata: {
@@ -166,7 +173,12 @@ const survey: Survey = {
       return sample;
     },
 
-    modifySubmission(submission) {
+    modifySubmission(submission, model) {
+      if (model.parent.attrs.project?.id) {
+        // eslint-disable-next-line
+        submission.values.group_id = model.parent.attrs.project.id;
+      }
+
       if (!submission.values.survey_id) {
         // TODO: remove this once it is known why this isn't set
         console.error(
@@ -232,6 +244,7 @@ const survey: Survey = {
       },
       attrs: {
         training: appModel.attrs.useTraining,
+        project: appModel.attrs.defaultProject,
         input_form: survey.webForm,
         device: isPlatform('android') ? 'android' : 'ios',
         app_version: config.version,

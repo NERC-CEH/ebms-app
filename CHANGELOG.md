@@ -1,3 +1,7 @@
+## 1.25.0
+
+Added Projects functionality.
+
 ## 1.24.4
 
 Small bug fixes.

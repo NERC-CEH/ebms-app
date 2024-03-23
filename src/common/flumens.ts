@@ -38,7 +38,10 @@ export {
 export { default as LongPressButton } from '@flumens/ionic/dist/components/LongPressButton';
 export { default as InputWithValidation } from '@flumens/ionic/dist/components/InputWithValidation';
 export { default as CounterInput } from '@flumens/ionic/dist/components/CounterInput';
-export { default as RadioInput } from '@flumens/ionic/dist/components/RadioInput';
+export {
+  default as RadioInput,
+  type Option as RadioOption,
+} from '@flumens/ionic/dist/components/RadioInput';
 export { default as Main } from '@flumens/ionic/dist/components/Main';
 export { default as Header } from '@flumens/ionic/dist/components/Header';
 export { default as InfoMessage } from '@flumens/ionic/dist/components/InfoMessage';

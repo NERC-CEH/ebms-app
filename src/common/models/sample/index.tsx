@@ -29,6 +29,17 @@ import GPSExtension, { calculateArea } from './GPSExt';
 import RemoteExtension, { parseRemoteAttrs } from './remoteExt';
 import VibrateExtension from './vibrateExt';
 
+export type Project = {
+  /**
+   * Remote (warehouse) project ID.
+   */
+  id: string;
+  /**
+   * Project's title.
+   */
+  name: string;
+};
+
 export type Attrs = SampleAttrs & {
   date?: any;
   location?: any;
@@ -43,6 +54,7 @@ export type Attrs = SampleAttrs & {
   reliability?: string;
   recorders?: number;
   speciesGroups: string[];
+  project?: Project;
 
   // moth survey attributes
   wind: string;

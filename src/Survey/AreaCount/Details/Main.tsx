@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import {
   clipboardOutline,
   thermometerOutline,
+  peopleOutline,
   cloudyOutline,
   personOutline,
 } from 'ionicons/icons';
@@ -24,8 +25,15 @@ const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
   const baseURL = match.url;
 
   const isDisabled = sample.isDisabled();
-  const { recorders, comment, cloud, temperature, windDirection, windSpeed } =
-    sample.attrs;
+  const {
+    recorders,
+    comment,
+    cloud,
+    temperature,
+    windDirection,
+    windSpeed,
+    project,
+  } = sample.attrs;
 
   return (
     <Main>
@@ -89,6 +97,14 @@ const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
           </IonLabel>
         </IonItemDivider>
         <div className="rounded">
+          <MenuAttrItem
+            routerLink={`${baseURL}/project`}
+            disabled={isDisabled}
+            icon={peopleOutline}
+            label="Project"
+            value={project?.name}
+            skipValueTranslation
+          />
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}

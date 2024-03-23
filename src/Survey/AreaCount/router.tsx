@@ -10,6 +10,7 @@ import Home from './Home';
 import Direction from './Occurrence/Direction';
 import OccurrenceHome from './Occurrence/Home';
 import SpeciesOccurrences from './Occurrence/Species';
+import Projects from './Projects';
 import Taxon from './Taxon';
 import survey from './config';
 import surveySingleSpecies from './configSpecies';
@@ -24,6 +25,7 @@ const getRoutes = (baseURL: string, config: Survey) => [
   [`${baseURL}/:smpId/taxon`, Taxon],
   [`${baseURL}/:smpId/details`, Details],
   [`${baseURL}/:smpId/details/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/details/project`, Projects],
   [`${baseURL}/:smpId/speciesOccurrences/:taxa`, SpeciesOccurrences],
   [`${baseURL}/:smpId/speciesOccurrences/:taxa/taxon`, Taxon],
   [`${baseURL}/:smpId/samples/:subSmpId/occ/:occId/:attr`, AttrPageFromRoute],

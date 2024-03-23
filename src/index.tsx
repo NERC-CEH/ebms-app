@@ -9,6 +9,7 @@ import * as SentryBrowser from '@sentry/browser';
 import * as Sentry from '@sentry/capacitor';
 import config from 'common/config';
 import locations from 'common/models/collections/locations';
+import projects from 'common/models/collections/projects';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import userModel from 'models/user';
@@ -25,6 +26,7 @@ mobxConfig({ enforceActions: 'never' });
   await userModel.ready;
   await samplesCollection._init;
   await locations.ready;
+  await projects.ready;
 
   appModel.attrs.sendAnalytics &&
     Sentry.init(

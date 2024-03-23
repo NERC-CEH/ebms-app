@@ -2523,3 +2523,51 @@ msgstr ""
 # Survey verification message
 msgid "Cloud cannot be empty."
 msgstr ""
+
+# Survey Projects functionality
+msgid "Not linked to any project"
+msgstr ""
+
+# Survey Projects functionality
+msgid "Join"
+msgstr ""
+
+# Survey Projects functionality
+msgid "Project"
+msgstr ""
+
+# Survey Projects functionality
+msgid "Projects"
+msgstr ""
+
+# Survey Projects functionality
+msgid "My projects"
+msgstr ""
+
+# Survey Projects functionality
+msgid "All projects"
+msgstr ""
+
+# Survey Projects functionality
+msgid ""
+"You haven't joined any projects yet. Go to the \"All projects\" tab to join "
+"a project.<br/><br/>Pull the page down to refresh the list."
+msgstr ""
+
+# Survey Projects functionality
+msgid ""
+"There are currently no new projects available to join.<br/><br/>Pull the "
+"page down to refresh the list."
+msgstr ""
+
+# Survey Projects functionality
+msgid "Successfully joined the project."
+msgstr ""
+
+# Survey Projects functionality
+msgid "Leave"
+msgstr ""
+
+# Survey Projects functionality
+msgid "Successfully left the project."
+msgstr ""

@@ -3,7 +3,7 @@
   "id": "uk.ac.ceh.ebms",
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
-  "version": "1.24.4",
+  "version": "1.25.0",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "start": "webpack serve --progress --port 8000",

@@ -523,6 +523,8 @@ const HomeController: FC<Props> = ({ sample }) => {
 
   const isValid = !sample.validateRemote();
 
+  const navigateToProject = () => navigate(`${match.url}/details/project`);
+
   return (
     <Page id="precise-area-count-edit">
       <Header
@@ -531,6 +533,8 @@ const HomeController: FC<Props> = ({ sample }) => {
         isTraining={isTraining}
         isEditing={isEditing}
         isDisabled={isDisabled}
+        project={sample.attrs.project?.name}
+        onProjectClick={navigateToProject}
         isValid={isValid}
       />
       <Main
