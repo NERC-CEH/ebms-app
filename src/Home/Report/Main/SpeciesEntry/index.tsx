@@ -34,25 +34,21 @@ const SpeciesEntry: FC<Props> = ({ species }) => {
 
   return (
     <IonItem className="species-entry">
-      <div className="flex w-full flex-nowrap">
+      <div className="flex w-full flex-nowrap items-center gap-2">
         <IonAvatar>{avatar}</IonAvatar>
-        <IonLabel position="stacked" mode="ios" color="dark">
+        <div className="flex w-full flex-col justify-center">
           {commonName && (
-            <IonLabel className="report-common-name-label">
+            <div className="">
               <b style={{ fontSize: '1.1em' }}>{commonName}</b>
-            </IonLabel>
+            </div>
           )}
 
-          <IonLabel
-            className="ion-text-wrap report-taxon-label"
-            position="stacked"
-          >
+          <div className="">
             <i>{scientificName}</i>
-          </IonLabel>
-        </IonLabel>
-        <IonLabel slot="end" className="report-count-label">
-          {species.doc_count}
-        </IonLabel>
+          </div>
+        </div>
+
+        <div className="max-w:[50px]">{species.doc_count}</div>
       </div>
     </IonItem>
   );

@@ -6,9 +6,7 @@ import Sample from '.';
 import Occurrence from '../occurrence';
 import userModel from '../user';
 
-export async function fetchRemoteSubSamples(
-  parentId: string
-): Promise<Sample[]> {
+async function fetchRemoteSubSamples(parentId: string): Promise<Sample[]> {
   console.log('Fetching remote sample with parent ID', parentId);
 
   const query = JSON.stringify({

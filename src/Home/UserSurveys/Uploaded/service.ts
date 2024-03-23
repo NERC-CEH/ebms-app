@@ -53,15 +53,21 @@ export default async function fetchRemoteSamples(
   const syncedOn = new Date().getTime();
 
   const getSample = (doc: ElasticSample) => {
-    const parsedDoc = Sample.parseRemoteJSON(doc);
-    const sample = Sample.fromJSON({ skipStore: true, ...parsedDoc });
-    sample.metadata.syncedOn = syncedOn;
-    sample.isPartial = true;
-
-    return sample;
+    try {
+      const parsedDoc = Sample.parseRemoteJSON(doc);
+      const sample = Sample.fromJSON({ skipStore: true, ...parsedDoc });
+      sample.metadata.syncedOn = syncedOn;
+      sample.isPartial = true;
+      return sample;
+    } catch (error) {
+      console.warn(doc);
+      console.error(error);
+      return null;
+    }
   };
 
-  const samples = data.map(getSample);
+  const exists = (o: any) => !!o;
+  const samples = data.map(getSample).filter(exists);
 
   return samples;
 }
