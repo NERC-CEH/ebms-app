@@ -209,7 +209,7 @@ testing.GPS = {
         const [longitude, latitude] = location.shift();
 
         this.update({ latitude, longitude, accuracy: 1 });
-      }, 2000);
+      }, 4000);
       return;
     }
 

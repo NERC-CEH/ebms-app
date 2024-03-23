@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IonItem, IonLabel, IonIcon, IonAvatar } from '@ionic/react';
+import { IonItem, IonIcon, IonAvatar } from '@ionic/react';
 import speciesProfiles, {
   Species as SpeciesProfile,
 } from 'common/data/profiles';
