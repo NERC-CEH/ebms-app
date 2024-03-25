@@ -2124,7 +2124,7 @@ msgid ""
 "that you have previously submitted using the app or website.</1>"
 msgstr ""
 "Ar esatę įsitikinę, kad norite panaikinti savo anketą? <1>Jūsų anketa bus "
-"pašalinta iš <2>{{url}}</2>svetainės. Jūs daugiau neturėsi prieigos prie "
+"pašalinta iš <2>{{url}}</2> svetainės. Jūs daugiau neturėsi prieigos prie "
 "savo, programėle ar svetainėje, užfiksuotų stebėjimų.</1>"
 
 # Part of Species Group selection
