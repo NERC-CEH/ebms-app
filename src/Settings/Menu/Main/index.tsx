@@ -35,22 +35,19 @@ function useUserDeleteDialog(deleteUser: any) {
     alert({
       header: 'Account delete',
       message: (
-        <>
-          <T>
-            Are you sure you want to delete your account?
-            <InfoMessage
-              color="danger"
-              icon={warningOutline}
-              className="destructive-warning"
-              skipTranslation
-            >
-              This will remove your account on the{' '}
-              <b>{{ url: config.backend.url } as any}</b> website. You will lose
-              access to any records that you have previously submitted using the
-              app or website.
-            </InfoMessage>
-          </T>
-        </>
+        <T>
+          Are you sure you want to delete your account?
+          <InfoMessage
+            color="danger"
+            icon={<IonIcon src={warningOutline} />}
+            skipTranslation
+          >
+            This will remove your account on the{' '}
+            <b>{{ url: config.backend.url } as any}</b> website. You will lose
+            access to any records that you have previously submitted using the
+            app or website.
+          </InfoMessage>
+        </T>
       ),
       buttons: [
         {
@@ -194,7 +191,7 @@ const MenuMain: FC<Props> = ({
             value={useGlobalSpeciesList}
             onChange={onGlobalSpeciesListToggle}
           />
-          <InfoMessage color="medium">
+          <InfoMessage inline>
             Don't restrict to local species names in survey searches.
           </InfoMessage>
           <MenuAttrToggle
@@ -209,7 +206,7 @@ const MenuMain: FC<Props> = ({
             value={useTraining}
             onChange={onTrainingToggle}
           />
-          <InfoMessage color="medium">
+          <InfoMessage inline>
             Mark any new records as &#39;training&#39; and exclude from all
             reports.
           </InfoMessage>
@@ -225,7 +222,7 @@ const MenuMain: FC<Props> = ({
             value={sendAnalytics}
             onChange={onSendAnalyticsToggle}
           />
-          <InfoMessage color="medium">
+          <InfoMessage inline>
             Share app crash data so we can make the app more reliable.
           </InfoMessage>
           <IonItem onClick={onClearCacheDialog}>
@@ -234,7 +231,7 @@ const MenuMain: FC<Props> = ({
               <T>Clear cache</T>
             </IonLabel>
           </IonItem>
-          <InfoMessage color="medium">
+          <InfoMessage inline>
             You can free up storage used by the app.
           </InfoMessage>
         </div>
@@ -248,7 +245,7 @@ const MenuMain: FC<Props> = ({
                   <T>Delete account</T>
                 </IonLabel>
               </IonItem>
-              <InfoMessage color="medium">
+              <InfoMessage inline>
                 You can delete your user account from the system.
               </InfoMessage>
             </>

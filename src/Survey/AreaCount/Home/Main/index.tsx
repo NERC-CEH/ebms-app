@@ -9,7 +9,7 @@ import {
   clipboardOutline,
   filterOutline,
   warningOutline,
-  informationCircle,
+  informationCircleOutline,
   flagOutline,
   copyOutline,
 } from 'ionicons/icons';
@@ -481,13 +481,13 @@ const AreaCount: FC<Props> = ({
     if (sample.metadata.saved && !sample.isDisabled()) {
       return (
         <>
-          <InfoMessage color="medium">
+          <InfoMessage inline>
             Please check if the recording area is correct before sending the
             record.
           </InfoMessage>
 
           {hasLongSections && (
-            <InfoMessage color="medium">
+            <InfoMessage inline>
               We have noticed that your survey has <b>long sections</b>. Please
               make sure it is a correct <b>location</b>!
             </InfoMessage>
@@ -574,8 +574,8 @@ const AreaCount: FC<Props> = ({
       {isDisabled && (
         <>
           <InfoMessage
-            className="blue"
-            icon={informationCircle}
+             color="tertiary"
+            icon={<IonIcon src={informationCircleOutline} />}
             skipTranslation
           >
             <T>

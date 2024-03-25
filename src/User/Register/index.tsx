@@ -1,23 +1,15 @@
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { Trans as T } from 'react-i18next';
+import { TypeOf } from 'zod';
 import { Page, Header, device, useToast, useAlert, useLoader } from '@flumens';
 import { NavContext } from '@ionic/react';
-import { UserModel } from 'models/user';
+import appModel from 'common/models/app';
+import userModel from 'models/user';
 import Main from './Main';
-import './styles.scss';
 
-export type Details = {
-  password: string;
-  email: string;
-  firstName?: string | undefined;
-  secondName?: string | undefined;
-};
+type Details = TypeOf<typeof userModel.registerSchema>;
 
-type Props = {
-  userModel: UserModel;
-};
-
-const RegisterContainer: FC<Props> = ({ userModel }) => {
+const RegisterContainer = () => {
   const context = useContext(NavContext);
   const alert = useAlert();
   const toast = useToast();
@@ -29,11 +21,11 @@ const RegisterContainer: FC<Props> = ({ userModel }) => {
 
   async function onRegister(details: Details) {
     const email = details.email.trim();
-    const { password, firstName, secondName } = details;
+    const { password, firstName, lastName } = details;
 
     const otherDetails = {
       field_first_name: [{ value: firstName?.trim() }],
-      field_last_name: [{ value: secondName?.trim() }],
+      field_last_name: [{ value: lastName?.trim() }],
     };
 
     if (!device.isOnline) {
@@ -46,7 +38,7 @@ const RegisterContainer: FC<Props> = ({ userModel }) => {
       await userModel.register(email, password, otherDetails);
 
       userModel.attrs.firstName = firstName; // eslint-disable-line
-      userModel.attrs.lastName = secondName; // eslint-disable-line
+      userModel.attrs.lastName = lastName; // eslint-disable-line
       userModel.save();
 
       alert({
@@ -75,7 +67,7 @@ const RegisterContainer: FC<Props> = ({ userModel }) => {
   return (
     <Page id="user-register">
       <Header className="ion-no-border" title="Register" />
-      <Main schema={userModel.registerSchema} onSubmit={onRegister} />
+      <Main onSubmit={onRegister} lang={appModel.attrs.language!} />
     </Page>
   );
 };

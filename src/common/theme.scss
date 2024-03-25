@@ -103,8 +103,7 @@ html.ios.plt-hybrid #status-bar-background {
 }
 
 // info messages
-.attr-page .info-message,
-.info-message.blue {
+.attr-page .info-message {
   --background: rgba(var(--ion-color-tertiary-rgb), 0.1);
   background: white; // above is transparent
 

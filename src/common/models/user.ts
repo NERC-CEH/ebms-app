@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { observable } from 'mobx';
-import * as Yup from 'yup';
+import { z, object } from 'zod';
 import {
   DrupalUserModel,
   device,
@@ -39,20 +39,20 @@ export class UserModel extends DrupalUserModel {
 
   userSpeciesLastMonthReport = observable([]) as any;
 
-  registerSchema: any = Yup.object().shape({
-    email: Yup.string().email('email is not valid').required('Please fill in'),
-    password: Yup.string().required('Please fill in'),
-    firstName: Yup.string().required('Please fill in'),
-    secondName: Yup.string().required('Please fill in'),
+  registerSchema: any = object({
+    email: z.string().email('Please fill in'),
+    password: z.string().min(1, 'Please fill in'),
+    firstName: z.string().min(1, 'Please fill in'),
+    lastName: z.string().min(1, 'Please fill in'),
   });
 
-  resetSchema: any = Yup.object().shape({
-    email: Yup.string().email('email is not valid').required('Please fill in'),
+  resetSchema: any = object({
+    email: z.string().email('Please fill in'),
   });
 
-  loginSchema: any = Yup.object().shape({
-    email: Yup.string().email('email is not valid').required('Please fill in'),
-    password: Yup.string().required('Please fill in'),
+  loginSchema: any = object({
+    email: z.string().email('Please fill in'),
+    password: z.string().min(1, 'Please fill in'),
   });
 
   constructor(options: any) {

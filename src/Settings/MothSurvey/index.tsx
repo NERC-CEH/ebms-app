@@ -38,7 +38,7 @@ const MothSurveySettings: FC<Props> = ({ appModel }) => {
               value={useImageIdentifier}
               onChange={onTurnOffImageIdentifierToggle}
             />
-            <InfoMessage color="medium">
+            <InfoMessage inline>
               We will help you to identify species using our species image
               classifier.
             </InfoMessage>

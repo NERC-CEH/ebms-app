@@ -3,7 +3,7 @@ import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import {
-  informationCircle,
+  informationCircleOutline,
   locationOutline,
   camera,
   warningOutline,
@@ -384,8 +384,8 @@ const HomeMain: FC<Props> = ({
       {isDisabled && (
         <>
           <InfoMessage
-            className="blue"
-            icon={informationCircle}
+            color="tertiary"
+            icon={<IonIcon src={informationCircleOutline} />}
             skipTranslation
           >
             <T>

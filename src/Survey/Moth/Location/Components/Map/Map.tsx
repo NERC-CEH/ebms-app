@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { wifiOutline } from 'ionicons/icons';
 import { device, InfoMessage, MapContainer } from '@flumens';
+import { IonIcon } from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import countries from 'common/config/countries';
@@ -31,7 +32,7 @@ const Map: FC<Props> = ({ location, onMovedCoords, children }) => {
   if (!device.isOnline) {
     return (
       <div className="info-background-message-wrapper">
-        <InfoMessage icon={wifiOutline} color="light">
+        <InfoMessage icon={<IonIcon src={wifiOutline} />}>
           To see the map please connect to the internet.
         </InfoMessage>
       </div>

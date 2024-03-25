@@ -36,7 +36,6 @@ export {
   getModels as getModelsFromRoute,
 } from '@flumens/ionic/dist/components/RouteWithModels';
 export { default as LongPressButton } from '@flumens/ionic/dist/components/LongPressButton';
-export { default as InputWithValidation } from '@flumens/ionic/dist/components/InputWithValidation';
 export { default as CounterInput } from '@flumens/ionic/dist/components/CounterInput';
 export {
   default as RadioInput,
@@ -44,7 +43,6 @@ export {
 } from '@flumens/ionic/dist/components/RadioInput';
 export { default as Main } from '@flumens/ionic/dist/components/Main';
 export { default as Header } from '@flumens/ionic/dist/components/Header';
-export { default as InfoMessage } from '@flumens/ionic/dist/components/InfoMessage';
 export { default as Collapse } from '@flumens/ionic/dist/components/Collapse';
 export { default as Attr } from '@flumens/ionic/dist/components/Attr';
 export {
@@ -103,3 +101,10 @@ export {
   type default as ElasticOccurrence,
   type Media as ElasticOccurrenceMedia,
 } from '@flumens/ionic/dist/models/Indicia/ElasticOccurrence.d';
+
+export {
+  default as Input,
+  type Props as InputProps,
+} from '@flumens/tailwind/dist/components/Input';
+export { default as Button } from '@flumens/tailwind/dist/components/Button';
+export { default as InfoMessage } from '@flumens/tailwind/dist/components/InfoMessage';

@@ -86,7 +86,7 @@ const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
         </IonItemDivider>
         <div className="rounded">
           <PhotoPicker model={sample} />
-          <InfoMessage color="medium">
+          <InfoMessage inline>
             Representative photo of where the 15 minute count was made
           </InfoMessage>
         </div>
@@ -122,7 +122,7 @@ const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
             min={1}
             isDisabled={isDisabled}
           />
-          <InfoMessage color="medium">
+          <InfoMessage inline>
             Enter the number of recorders of anyone who helped with this record
             - including your own.
           </InfoMessage>

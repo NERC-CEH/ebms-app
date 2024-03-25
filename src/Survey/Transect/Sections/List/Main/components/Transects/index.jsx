@@ -1,10 +1,10 @@
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
-import { informationCircle } from 'ionicons/icons';
+import { informationCircleOutline } from 'ionicons/icons';
 import PropTypes from 'prop-types';
 import { Trans as T } from 'react-i18next';
 import { Main, InfoMessage } from '@flumens';
-import { IonList, IonItem, IonLabel } from '@ionic/react';
+import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import transformToLatLon from 'helpers/location';
 import SVG from '../SVG';
 import './styles.scss';
@@ -68,9 +68,13 @@ function Transects({ appModel, onTransectSelect }) {
 
   return (
     <Main id="transect-list">
-      <InfoMessage className="blue" icon={informationCircle}>
+      <InfoMessage
+        icon={<IonIcon src={informationCircleOutline} />}
+        color="tertiary"
+      >
         Please select your transect first.
       </InfoMessage>
+
       <IonList lines="full">
         <div className="rounded">{transectsList}</div>
       </IonList>

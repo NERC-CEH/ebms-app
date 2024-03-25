@@ -10,6 +10,7 @@ import {
   IonModal,
   IonHeader,
   IonToolbar,
+  IonIcon,
 } from '@ionic/react';
 import turf from '@turf/distance';
 import locations from 'models/collections/locations';
@@ -81,8 +82,7 @@ const BottomSheet: FC<Props> = ({
     if (!mothTraps.length) {
       return (
         <InfoMessage
-          icon={informationCircleOutline}
-          color="black"
+          icon={<IonIcon src={informationCircleOutline} />}
           className="info-message"
         >
           You do not have any moth traps yet.

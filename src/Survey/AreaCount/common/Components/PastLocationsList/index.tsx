@@ -4,12 +4,11 @@ import clsx from 'clsx';
 import {
   star,
   starOutline,
-  informationCircleOutline,
   resizeOutline,
   arrowForwardOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { useAlert, InfoMessage, string as StringHelp } from '@flumens';
+import { useAlert, string as StringHelp } from '@flumens';
 import {
   IonList,
   IonItemOption,
@@ -205,10 +204,6 @@ const PastLocations: FC<Props> = ({ onSelect, position }) => {
       {editLocation && (
         <EditModal location={editLocation} onLocationSave={onSave} />
       )}
-
-      <InfoMessage className="blue" icon={informationCircleOutline}>
-        Here you can select or swipe to edit your previous tracks
-      </InfoMessage>
 
       {getPastLocations()}
     </div>

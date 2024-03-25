@@ -2,47 +2,42 @@ import { useState } from 'react';
 import clsx from 'clsx';
 import {
   keyOutline,
+  personOutline,
   eyeOutline,
   eyeOffOutline,
   mailOutline,
-  informationCircleOutline,
 } from 'ionicons/icons';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Trans as T } from 'react-i18next';
 import { TypeOf } from 'zod';
-import { Main, Button, InfoMessage } from '@flumens';
+import { Main, Button } from '@flumens';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { IonIcon, IonItem } from '@ionic/react';
+import { IonIcon, IonRouterLink } from '@ionic/react';
+import config from 'common/config';
 import userModel from 'models/user';
 import ControlledInput from '../common/Components/ControlledInput';
 
-type Details = TypeOf<typeof userModel.loginSchema>;
+type Details = TypeOf<typeof userModel.registerSchema>;
 
 type Props = {
   onSubmit: SubmitHandler<Details>;
+  lang: string;
 };
 
-const LoginMain = ({ onSubmit }: Props) => {
+const RegisterMain = ({ onSubmit, lang }: Props) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const togglePassword = () => setShowPassword(!showPassword);
 
   const { formState, handleSubmit, control } = useForm<Details>({
-    defaultValues: { email: '', password: '' },
-    resolver: zodResolver(userModel.loginSchema),
+    defaultValues: { firstName: '', lastName: '', email: '', password: '' },
+    resolver: zodResolver(userModel.registerSchema),
   });
 
   return (
     <Main>
-      <div className="mx-auto flex max-w-md flex-col gap-8 px-3 pt-3">
-        <InfoMessage
-          color="tertiary"
-          icon={<IonIcon src={informationCircleOutline} />}
-        >
-          Please sign in with your eBMS account or register.
-        </InfoMessage>
-
-        <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="mx-auto max-w-md px-3">
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
           <div className="rounded">
             <ControlledInput
               control={control}
@@ -55,6 +50,27 @@ const LoginMain = ({ onSubmit }: Props) => {
               placeholder="Email"
               platform="ios"
             />
+            <ControlledInput
+              control={control}
+              name="firstName"
+              startAddon={
+                <IonIcon icon={personOutline} className="mx-2 opacity-60" />
+              }
+              autoComplete="off"
+              placeholder="First Name"
+              platform="ios"
+            />
+            <ControlledInput
+              control={control}
+              name="lastName"
+              startAddon={
+                <IonIcon icon={personOutline} className="mx-2 opacity-60" />
+              }
+              autoComplete="off"
+              placeholder="Surname"
+              platform="ios"
+            />
+
             <ControlledInput
               control={control}
               name="password"
@@ -75,26 +91,32 @@ const LoginMain = ({ onSubmit }: Props) => {
             />
           </div>
 
+          <div className="px-5 py-1 text-sm">
+            <T>I agree to</T>{' '}
+            <IonRouterLink
+              href={`${config.backend.url}/privacy-notice?lang=${lang}`}
+            >
+              <T>Privacy Policy</T>
+            </IonRouterLink>{' '}
+            <T>and</T>{' '}
+            <IonRouterLink
+              href={`${config.backend.url}/terms-and-conditions?lang=${lang}`}
+            >
+              <T>Terms and Conditions</T>
+            </IonRouterLink>
+          </div>
+
           <Button
-            className={clsx('mx-auto mt-7', !formState.isValid && 'opacity-50')}
+            className={clsx('mx-auto mt-8', !formState.isValid && 'opacity-50')}
             color="primary"
             type="submit"
           >
-            <T>Sign in</T>
+            <T>Register</T>
           </Button>
         </form>
-
-        <div className="mt-8 rounded">
-          <IonItem routerLink="/user/register" detail>
-            <T>Register</T>
-          </IonItem>
-          <IonItem routerLink="/user/reset" detail>
-            <T>Forgot password?</T>
-          </IonItem>
-        </div>
       </div>
     </Main>
   );
 };
 
-export default LoginMain;
+export default RegisterMain;

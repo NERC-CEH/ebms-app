@@ -8,7 +8,7 @@ import {
   openOutline,
   thermometerOutline,
   cloudyOutline,
-  informationCircle,
+  informationCircleOutline,
 } from 'ionicons/icons';
 import PropTypes from 'prop-types';
 import { Trans as T } from 'react-i18next';
@@ -85,8 +85,8 @@ class Edit extends Component {
       <Main id="transect-edit">
         {isDisabled && (
           <InfoMessage
-            className="blue"
-            icon={informationCircle}
+            color="tertiary"
+            icon={informationCircleOutline}
             skipTranslation
           >
             <T>

@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
-import { informationCircle } from 'ionicons/icons';
+import { informationCircleOutline } from 'ionicons/icons';
 import { useTranslation } from 'react-i18next';
 import {
   Main,
@@ -9,7 +9,7 @@ import {
   UserFeedbackRequest,
   InfoBackgroundMessage,
 } from '@flumens';
-import { IonModal, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonModal, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
 import config from 'common/config';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
 import appModel from 'models/app';
@@ -192,7 +192,10 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
       {getSpeciesGrid(speciesList)}
 
       {isNotFiltered && (
-        <InfoMessage className="blue" icon={informationCircle}>
+        <InfoMessage
+          icon={<IonIcon src={informationCircleOutline} />}
+          color="tertiary"
+        >
           This guide is still in development. It covers{' '}
           {{ countrySpeciesCount } as any} butterfly species out of the{' '}
           {{ totalSpeciesCountryCount } as any} species in your selected
