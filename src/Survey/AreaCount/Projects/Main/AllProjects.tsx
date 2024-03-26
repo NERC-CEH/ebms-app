@@ -32,7 +32,7 @@ const AllProjects = ({ projects, onJoin }: Props) => {
         <div className="line-clamp-2 font-bold">{project.title}</div>
 
         {!!project.description && (
-          <div className="line-clamp-3 border-t border-solid border-[var(--background)] pt-2 text-black/70">
+          <div className="line-clamp-3 text-balance border-t border-solid border-[var(--background)] pt-2 text-black/70">
             {project.description}
           </div>
         )}
