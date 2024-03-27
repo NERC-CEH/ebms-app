@@ -6,10 +6,17 @@ import {
   peopleOutline,
   cloudyOutline,
   personOutline,
+  eyeOffOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
-import { Main, MenuAttrItem, InfoMessage, CounterInput } from '@flumens';
+import {
+  Main,
+  MenuAttrItem,
+  InfoMessage,
+  CounterInput,
+  MenuAttrToggle,
+} from '@flumens';
 import { IonList, IonItemDivider, IonLabel } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
@@ -18,9 +25,14 @@ import Sample from 'models/sample';
 type Props = {
   sample: Sample;
   onChangeCounter: (value: number) => void;
+  onChangeSensitivityStatus: (value: boolean) => void;
 };
 
-const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
+const AreaCountDetails: FC<Props> = ({
+  sample,
+  onChangeCounter,
+  onChangeSensitivityStatus,
+}) => {
   const match = useRouteMatch<any>();
   const baseURL = match.url;
 
@@ -105,6 +117,17 @@ const AreaCountDetails: FC<Props> = ({ sample, onChangeCounter }) => {
             value={project?.name}
             skipValueTranslation
           />
+          <MenuAttrToggle
+            icon={eyeOffOutline}
+            label="Sensitive"
+            value={Number.isFinite(sample.attrs.privacyPrecision)}
+            onChange={onChangeSensitivityStatus}
+            disabled={isDisabled}
+          />
+          <InfoMessage inline>
+            This survey has sensitive species and should not be included in
+            public reports.
+          </InfoMessage>
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}

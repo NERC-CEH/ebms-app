@@ -179,6 +179,12 @@ const survey: Survey = {
         submission.values.group_id = model.parent.attrs.project.id;
       }
 
+      if (Number.isFinite(model.parent.attrs.privacyPrecision)) {
+        // eslint-disable-next-line
+        submission.values.privacy_precision =
+          model.parent.attrs.privacyPrecision;
+      }
+
       if (!submission.values.survey_id) {
         // TODO: remove this once it is known why this isn't set
         console.error(

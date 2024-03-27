@@ -2573,3 +2573,11 @@ msgstr "Leave"
 # Survey Projects functionality 
 msgid "Successfully left the project."
 msgstr "Successfully left the project."
+
+# Survey sensitivity attribute
+msgid "Sensitive"
+msgstr "Sensitive"
+
+# Survey sensitivity attribute
+msgid "This survey has sensitive species and should not be included in public reports."
+msgstr "This survey has sensitive species and should not be included in public reports."

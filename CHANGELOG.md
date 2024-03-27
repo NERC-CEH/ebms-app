@@ -1,3 +1,7 @@
+## 1.26.0
+
+Added Sensitivity survey option.
+
 ## 1.25.0
 
 Added Projects functionality.

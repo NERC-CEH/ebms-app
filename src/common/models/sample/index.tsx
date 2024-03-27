@@ -55,6 +55,7 @@ export type Attrs = SampleAttrs & {
   recorders?: number;
   speciesGroups: string[];
   project?: Project;
+  privacyPrecision?: number;
 
   // moth survey attributes
   wind: string;

@@ -65,6 +65,12 @@ const DetailsController: FC<Props> = ({ sample }) => {
     sample.save();
   };
 
+  const onChangeSensitivityStatus = (value: boolean) => {
+    // eslint-disable-next-line no-param-reassign
+    sample.attrs.privacyPrecision = value ? 0 : undefined;
+    sample.save();
+  };
+
   // Entering details/:attr page, but match still showing details page match.url.
   const isDetailsPage = url !== location.pathname;
 
@@ -134,7 +140,11 @@ const DetailsController: FC<Props> = ({ sample }) => {
         }
         rightSlot={startTimerButton}
       />
-      <Main sample={sample} onChangeCounter={onChangeCounter} />
+      <Main
+        sample={sample}
+        onChangeCounter={onChangeCounter}
+        onChangeSensitivityStatus={onChangeSensitivityStatus}
+      />
     </Page>
   );
 };

@@ -2588,3 +2588,14 @@ msgstr "Palikti"
 # Survey Projects functionality
 msgid "Successfully left the project."
 msgstr "Sėkmingai palikote projektą."
+
+# Survey sensitivity attribute
+msgid "Sensitive"
+msgstr "Privatus"
+
+# Survey sensitivity attribute
+msgid ""
+"This survey has sensitive species and should not be included in public "
+"reports."
+msgstr ""
+"Šis įrašas turi jautrių rūšių ir neturėtų būti rodomas viešose ataskaitose."
