@@ -5,17 +5,17 @@ const flumensTailwind = require('@flumens/tailwind/tailwind.config.js');
 const secondary = {
   // https://www.tailwindshades.com/#color=39.01345291479821%2C100%2C43.72549019607843&step-up=10&step-down=12&hue-shift=0&name=tangerine&base-stop=6&v=1&overrides=e30%3D
   DEFAULT: '#DF9100',
-  50: '#FFFDF8',
-  100: '#FFF4DF',
+  50: '#FFF7E9',
+  100: '#FFF0D5',
   200: '#FFE2AC',
-  300: '#FFD079',
-  400: '#FFBE46',
-  500: '#FFAC13',
-  600: '#DF9100',
-  700: '#A26900',
-  800: '#654100',
-  900: '#271A00',
-  950: '#090600',
+  300: '#FFD483',
+  400: '#FFC55A',
+  500: '#FFB732',
+  600: '#FFA909',
+  700: '#DF9100',
+  800: '#8D5C00',
+  900: '#3C2700',
+  950: '#130C00',
 };
 
 /** @type {import('tailwindcss').Config} */

@@ -39,7 +39,7 @@
     "@capacitor/status-bar": "5.0.6",
     "@flumens/bigu": "0.4.0",
     "@flumens/ionic": "2.0.0-alpha.35",
-    "@flumens/tailwind": "0.12.0",
+    "@flumens/tailwind": "0.13.0",
     "@hookform/resolvers": "^3.3.4",
     "@ionic-native/core": "5.36.0",
     "@ionic-native/launch-review": "5.36.0",

@@ -111,7 +111,7 @@ const RegisterMain = ({ onSubmit, lang }: Props) => {
             color="primary"
             type="submit"
           >
-            <T>Register</T>
+            Register
           </Button>
         </form>
       </div>

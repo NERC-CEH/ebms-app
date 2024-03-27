@@ -82,7 +82,7 @@ const LoginMain = ({ onSubmit }: Props) => {
             color="primary"
             type="submit"
           >
-            <T>Sign in</T>
+            Sign in
           </Button>
         </form>
 

@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import { informationCircleOutline, mailOutline } from 'ionicons/icons';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { Trans as T } from 'react-i18next';
 import { TypeOf } from 'zod';
 import { Main, Button, InfoMessage } from '@flumens';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -53,7 +52,7 @@ const ResetMain = ({ onSubmit }: Props) => {
             color="primary"
             type="submit"
           >
-            <T>Reset</T>
+            Reset
           </Button>
         </form>
       </div>
