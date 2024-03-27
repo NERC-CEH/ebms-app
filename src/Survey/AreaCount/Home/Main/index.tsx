@@ -289,7 +289,7 @@ const AreaCount: FC<Props> = ({
 
     if (!sample.samples.length && !sample.shallowSpeciesList.length) {
       return (
-        <IonList id="list" lines="full">
+        <IonList lines="full">
           <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
         </IonList>
       );
@@ -574,8 +574,8 @@ const AreaCount: FC<Props> = ({
       {isDisabled && (
         <>
           <InfoMessage
-             color="tertiary"
-            icon={<IonIcon src={informationCircleOutline} />}
+            color="tertiary"
+            startAddon={<IonIcon src={informationCircleOutline} />}
             skipTranslation
           >
             <T>

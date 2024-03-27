@@ -1,12 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import InfiniteLoader from 'react-window-infinite-loader';
-import {
-  InfoBackgroundMessage,
-  date as DateHelp,
-  device,
-  VirtualList,
-} from '@flumens';
+import { date as DateHelp, device, VirtualList } from '@flumens';
 import {
   IonItem,
   IonItemDivider,
@@ -20,6 +15,7 @@ import samplesCollection, {
 } from 'models/collections/samples';
 import Sample, { bySurveyDate } from 'models/sample';
 import userModel from 'models/user';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Survey from '../Survey';
 import fetchRemoteSamples from './service';
 import './styles.scss';
@@ -159,7 +155,9 @@ const Uploaded: FC = () => {
   if (!surveys.length && !isLoading) {
     return (
       <IonList>
-        <InfoBackgroundMessage>No uploaded surveys</InfoBackgroundMessage>
+        <InfoBackgroundMessage className="mb-[10vh] mt-[20vh]">
+          No uploaded surveys
+        </InfoBackgroundMessage>
       </IonList>
     );
   }

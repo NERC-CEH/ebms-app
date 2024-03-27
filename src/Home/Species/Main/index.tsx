@@ -2,19 +2,14 @@ import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
 import { useTranslation } from 'react-i18next';
-import {
-  Main,
-  ModalHeader,
-  InfoMessage,
-  UserFeedbackRequest,
-  InfoBackgroundMessage,
-} from '@flumens';
+import { Main, ModalHeader, InfoMessage, UserFeedbackRequest } from '@flumens';
 import { IonModal, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
 import config from 'common/config';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import userModel from 'models/user';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import SpeciesProfile from './SpeciesProfile';
 import './images';
 import './styles.scss';
@@ -193,7 +188,7 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
 
       {isNotFiltered && (
         <InfoMessage
-          icon={<IonIcon src={informationCircleOutline} />}
+          startAddon={<IonIcon src={informationCircleOutline} />}
           color="tertiary"
         >
           This guide is still in development. It covers{' '}

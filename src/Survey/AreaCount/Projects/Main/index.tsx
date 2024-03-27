@@ -16,11 +16,12 @@ import {
   IonSegmentButton,
   IonToolbar,
 } from '@ionic/react';
-import { Main, RadioOption, InfoBackgroundMessage } from 'common/flumens';
+import { Main, RadioOption } from 'common/flumens';
 import projects from 'common/models/collections/projects';
 import { RemoteProject } from 'common/models/collections/projects/service';
 import Project from 'common/models/project';
 import Sample from 'models/sample';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import AllProjects from './AllProjects';
 
 type Props = {

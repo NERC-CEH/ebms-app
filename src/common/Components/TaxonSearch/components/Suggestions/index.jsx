@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { IonList, IonItem } from '@ionic/react';
+import { IonList } from '@ionic/react';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Species from './components/Species';
 
 /**
@@ -34,26 +35,22 @@ function deDuplicateSuggestions(suggestions) {
 }
 
 const getSearchInfo = () => (
-  <IonItem className="empty">
-    <span>
-      <p>
-        {t(
-          'For quicker searching of the taxa you can use different shortcuts. For example, to find'
-        )}{' '}
-        <i>Lopinga achine</i> {t('you can type in the search bar')}
-        :
-        <br />
-        <br />
-        <i>lop ach</i>
-        <br />
-        <i>lopac</i>
-        <br />
-        <i>lop .ne</i>
-        <br />
-        <i>. achine</i>
-      </p>
-    </span>
-  </IonItem>
+  <InfoBackgroundMessage className="text-left" skipTranslation>
+    {t(
+      'For quicker searching of the taxa you can use different shortcuts. For example, to find'
+    )}{' '}
+    <i>Lopinga achine</i> {t('you can type in the search bar')}
+    :
+    <br />
+    <br />
+    <i>lop ach</i>
+    <br />
+    <i>lopac</i>
+    <br />
+    <i>lop .ne</i>
+    <br />
+    <i>. achine</i>
+  </InfoBackgroundMessage>
 );
 
 const Suggestions = ({ searchResults, searchPhrase, onSpeciesSelected }) => {
@@ -68,9 +65,9 @@ const Suggestions = ({ searchResults, searchPhrase, onSpeciesSelected }) => {
   let suggestionsList;
   if (!searchResults.length) {
     suggestionsList = (
-      <IonItem className="empty">
-        <span> {t('No species found with this name')}</span>
-      </IonItem>
+      <InfoBackgroundMessage>
+        No species found with this name
+      </InfoBackgroundMessage>
     );
   } else {
     const deDuped = deDuplicateSuggestions(searchResults);

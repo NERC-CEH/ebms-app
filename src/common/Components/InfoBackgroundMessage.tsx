@@ -1,30 +1,46 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { InfoBackgroundMessage } from '@flumens';
+import { closeCircleOutline } from 'ionicons/icons';
+import { twMerge } from 'tailwind-merge';
+import { InfoMessage, InfoMessageProps } from '@flumens';
+import { IonIcon } from '@ionic/react';
 import appModel, { Attrs } from 'models/app';
 
-interface Props {
+interface Props extends InfoMessageProps {
   name?: keyof Attrs;
-  children: any;
 }
 
-const Message: FC<Props> = ({ name, children, ...props }) => {
-  if (name && !appModel.attrs[name]) {
-    return null;
-  }
+const InfoBackgroundMessage = ({
+  name,
+  children,
+  className,
+  ...props
+}: Props) => {
+  if (name && !appModel.attrs[name]) return null;
 
-  const hideMessage = () => {
-    (appModel.attrs as any)[name as any] = false;
-    return {};
-  };
+  const onHide = name
+    ? () => ((appModel.attrs as any)[name as any] = false) // eslint-disable-line
+    : undefined;
 
-  const onHide = name ? hideMessage : undefined;
+  const hideButton = onHide ? (
+    <IonIcon
+      src={closeCircleOutline}
+      className="size-6 opacity-40"
+      onClick={onHide}
+    />
+  ) : undefined;
 
   return (
-    <InfoBackgroundMessage onHide={onHide} {...props}>
+    <InfoMessage
+      {...props}
+      className={twMerge(
+        'mx-auto my-12 w-4/5 max-w-60 bg-white text-center shadow-sm',
+        className
+      )}
+      endAddon={hideButton}
+    >
       {children}
-    </InfoBackgroundMessage>
+    </InfoMessage>
   );
 };
 
-export default observer(Message);
+export default observer(InfoBackgroundMessage);

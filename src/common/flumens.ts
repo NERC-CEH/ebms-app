@@ -30,7 +30,6 @@ export { default as Collection } from '@flumens/ionic/dist/models/Collection';
 export { default as Store } from '@flumens/ionic/dist/models/Store';
 export { default as initStoredSamples } from '@flumens/ionic/dist/models/initStoredSamples';
 export { default as Page } from '@flumens/ionic/dist/components/Page';
-export { default as InfoBackgroundMessage } from '@flumens/ionic/dist/components/InfoBackgroundMessage';
 export {
   default as RouteWithModels,
   getModels as getModelsFromRoute,
@@ -107,4 +106,7 @@ export {
   type Props as InputProps,
 } from '@flumens/tailwind/dist/components/Input';
 export { default as Button } from '@flumens/tailwind/dist/components/Button';
-export { default as InfoMessage } from '@flumens/tailwind/dist/components/InfoMessage';
+export {
+  default as InfoMessage,
+  type Props as InfoMessageProps,
+} from '@flumens/tailwind/dist/components/InfoMessage';

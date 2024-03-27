@@ -2,23 +2,19 @@ import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
 import PropTypes from 'prop-types';
-import { Trans as T } from 'react-i18next';
 import { Main, InfoMessage } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import transformToLatLon from 'helpers/location';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import SVG from '../SVG';
 import './styles.scss';
 
 function showNoTransects() {
   return (
     <IonList lines="full">
-      <IonItem className="empty">
-        <span>
-          <T>
-            You don&#39;t have any transects. Please try to refresh the list.
-          </T>
-        </span>
-      </IonItem>
+      <InfoBackgroundMessage>
+        You don&#39;t have any transects. Please try to refresh the list.
+      </InfoBackgroundMessage>
     </IonList>
   );
 }
@@ -69,7 +65,7 @@ function Transects({ appModel, onTransectSelect }) {
   return (
     <Main id="transect-list">
       <InfoMessage
-        icon={<IonIcon src={informationCircleOutline} />}
+        startAddon={<IonIcon src={informationCircleOutline} />}
         color="tertiary"
       >
         Please select your transect first.

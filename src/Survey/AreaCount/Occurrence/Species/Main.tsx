@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { warningOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Main, MenuAttrItem, InfoBackgroundMessage } from '@flumens';
+import { Main, MenuAttrItem } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -17,6 +17,7 @@ import {
 } from '@ionic/react';
 import Sample from 'models/sample';
 import GridRefValue from 'Components/GridRefValue';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import './styles.scss';
 

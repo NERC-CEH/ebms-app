@@ -1,6 +1,6 @@
 import { Trans as T } from 'react-i18next';
-import { InfoBackgroundMessage } from 'common/flumens';
 import { RemoteProject } from 'common/models/collections/projects/service';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 
 type Props = {
   projects: RemoteProject[];

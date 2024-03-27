@@ -13,7 +13,6 @@ import { Trans as T } from 'react-i18next';
 import {
   Main,
   MenuAttrItem,
-  InfoBackgroundMessage,
   useAlert,
   InfoMessage,
   LongPressButton,
@@ -33,6 +32,7 @@ import {
 import config from 'common/config';
 import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
+import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import {
@@ -385,7 +385,7 @@ const HomeMain: FC<Props> = ({
         <>
           <InfoMessage
             color="tertiary"
-            icon={<IonIcon src={informationCircleOutline} />}
+            startAddon={<IonIcon src={informationCircleOutline} />}
             skipTranslation
           >
             <T>

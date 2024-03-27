@@ -26,7 +26,9 @@ const ResetMain = ({ onSubmit }: Props) => {
       <div className="mx-auto flex max-w-md flex-col gap-6 px-3 pt-3">
         <InfoMessage
           color="tertiary"
-          icon={<IonIcon src={informationCircleOutline} />}
+          startAddon={
+            <IonIcon src={informationCircleOutline} className="size-5" />
+          }
         >
           Enter your email address to request a password reset.
         </InfoMessage>

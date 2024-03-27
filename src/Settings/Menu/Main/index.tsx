@@ -39,7 +39,7 @@ function useUserDeleteDialog(deleteUser: any) {
           Are you sure you want to delete your account?
           <InfoMessage
             color="danger"
-            icon={<IonIcon src={warningOutline} />}
+            startAddon={<IonIcon src={warningOutline} />}
             skipTranslation
           >
             This will remove your account on the{' '}

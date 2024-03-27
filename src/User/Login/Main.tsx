@@ -37,7 +37,9 @@ const LoginMain = ({ onSubmit }: Props) => {
       <div className="mx-auto flex max-w-md flex-col gap-8 px-3 pt-3">
         <InfoMessage
           color="tertiary"
-          icon={<IonIcon src={informationCircleOutline} />}
+          startAddon={
+            <IonIcon src={informationCircleOutline} className="size-5" />
+          }
         >
           Please sign in with your eBMS account or register.
         </InfoMessage>
