@@ -82,7 +82,9 @@ const BottomSheet: FC<Props> = ({
     if (!mothTraps.length) {
       return (
         <InfoMessage
-          startAddon={<IonIcon src={informationCircleOutline} />}
+          startAddon={
+            <IonIcon src={informationCircleOutline} className="size-6" />
+          }
           className="info-message"
         >
           You do not have any moth traps yet.

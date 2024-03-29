@@ -1,59 +1,5 @@
 #survey-moth-home {
-  .buttons-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 20px 0;
-
-    .add {
-      max-width: 60%;
-
-      ion-label {
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-
-    .buttons-wrapper {
-      position: relative;
-
-      .alert-icon {
-        position: absolute;
-        top: -20px;
-        right: -15px;
-        font-size: 20px;
-        z-index: 999;
-        border-radius: 20px;
-        background: #fff1f1;
-        padding: 3px;
-        color: var(--ion-color-danger);
-      }
-
-      .camera-button {
-        width: 60px;
-        height: 36px;
-        margin: 0;
-        --background: var(--ion-color-tertiary);
-        --box-shadow: none;
-
-        ion-icon {
-          margin: 0;
-        }
-      }
-
-      .camera-button.disabled {
-        --background: var(--ion-color-medium);
-      }
-
-      .camera-button.ios {
-        height: 44.8px;
-      }
-    }
-  }
-
   #list {
-    font-weight: bold;
-
     .species-list-header {
       background: #e6e6e6 !important;
       color: #777777;
@@ -77,9 +23,13 @@
         }
         &:first-of-type {
           max-width: 54px;
+          overflow: hidden;
+          white-space: nowrap;
         }
         &:last-of-type {
           max-width: 50px;
+          overflow: hidden;
+          white-space: nowrap;
         }
       }
     }

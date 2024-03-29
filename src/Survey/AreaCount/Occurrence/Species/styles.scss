@@ -42,12 +42,18 @@
       &:nth-of-type(2) {
         padding-left: 10px;
         text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
       }
       &:first-of-type {
         max-width: 65px;
+        overflow: hidden;
+        white-space: nowrap;
       }
       &:last-of-type {
         max-width: 50px;
+        overflow: hidden;
+        white-space: nowrap;
       }
     }
   }

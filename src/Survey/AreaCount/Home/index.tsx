@@ -516,26 +516,17 @@ const HomeController: FC<Props> = ({ sample }) => {
   const isDisabled = !!sample.metadata.syncedOn;
 
   const { areaSurveyListSortedByTime } = appModel.attrs;
-  const isTraining = !!sample.attrs.training;
-  const isEditing = sample.metadata.saved;
 
   const previousSurvey = getPreviousSurvey();
-
-  const isValid = !sample.validateRemote();
 
   const navigateToProject = () => navigate(`${match.url}/details/project`);
 
   return (
     <Page id="precise-area-count-edit">
       <Header
-        survey={sample.getSurvey()}
+        sample={sample}
         onSubmit={onSubmit}
-        isTraining={isTraining}
-        isEditing={isEditing}
-        isDisabled={isDisabled}
-        project={sample.attrs.project?.name}
         onProjectClick={navigateToProject}
-        isValid={isValid}
       />
       <Main
         sample={sample}

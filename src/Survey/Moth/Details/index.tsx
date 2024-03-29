@@ -1,10 +1,10 @@
 import { FC, useContext } from 'react';
 import { observer } from 'mobx-react';
-import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Page, Header } from '@flumens';
-import { IonButton, NavContext, IonLabel } from '@ionic/react';
+import { NavContext } from '@ionic/react';
 import Sample, { useValidateCheck } from 'models/sample';
+import HeaderButton from 'Survey/common/HeaderButton';
 import Main from './Main';
 import './styles.scss';
 
@@ -29,18 +29,12 @@ const DetailsController: FC<Props> = ({ sample }) => {
     navigate(url, 'forward', 'pop');
   };
 
+  const isInValid = sample.validateRemote();
+
   const getNextButton = sample.isDetailsComplete() ? null : (
-    <IonButton
-      fill="solid"
-      shape="round"
-      className="primary-button"
-      onClick={onFinish}
-      color={!sample.validateRemote() ? 'secondary' : 'medium'}
-    >
-      <IonLabel>
-        <T>Next</T>
-      </IonLabel>
-    </IonButton>
+    <HeaderButton onClick={onFinish} isInValid={isInValid}>
+      Next
+    </HeaderButton>
   );
 
   return (

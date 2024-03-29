@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
-import { IonLabel, IonBadge } from '@ionic/react';
+import { Badge } from '@flumens';
 
 type Props = {
   wings: string[];
@@ -12,11 +12,7 @@ export const PaintedLadyWing: FC<Props> = ({ wings }) => {
 
   const label = wings.map((wing: string) => `${i18n.t(wing)[0]} `);
 
-  return (
-    <IonBadge color="medium">
-      <IonLabel className="wing-value">{label}</IonLabel>
-    </IonBadge>
-  );
+  return <Badge>{label}</Badge>;
 };
 
 export default observer(PaintedLadyWing);

@@ -1,48 +1,21 @@
 import { Trans as T } from 'react-i18next';
 import { Header } from '@flumens';
-import { IonButton, IonLabel } from '@ionic/react';
-
-function getFinishButton(
-  onSubmit: any,
-  isEditing?: boolean,
-  isValid?: boolean
-) {
-  const label = isEditing ? <T>Upload</T> : <T>Finish</T>;
-
-  return (
-    <IonButton
-      color={isValid ? 'secondary' : 'medium'}
-      fill="solid"
-      shape="round"
-      className="primary-button"
-      onClick={onSubmit}
-    >
-      <IonLabel>{label}</IonLabel>
-    </IonButton>
-  );
-}
+import Sample from 'models/sample';
+import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
 
 type Props = {
+  sample: Sample;
   onSubmit: any;
   onProjectClick: any;
-  isTraining?: boolean;
-  isEditing?: boolean;
-  isDisabled?: boolean;
-  survey: any;
-  project?: string;
-  isValid?: boolean;
 };
 
-const HeaderComponent = ({
-  onSubmit,
-  isTraining,
-  isEditing,
-  isDisabled,
-  survey,
-  isValid,
-  project,
-  onProjectClick,
-}: Props) => {
+const HeaderComponent = ({ sample, onSubmit, onProjectClick }: Props) => {
+  const isTraining = !!sample.attrs.training;
+
+  const survey = sample.getSurvey();
+
+  const project = sample.attrs.project?.name;
+
   const trainingModeSubheader = (
     <>
       {isTraining && (
@@ -65,7 +38,7 @@ const HeaderComponent = ({
   return (
     <Header
       title={survey.label}
-      rightSlot={!isDisabled && getFinishButton(onSubmit, isEditing, isValid)}
+      rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
       subheader={trainingModeSubheader}
       defaultHref="/home/user-surveys"
     />

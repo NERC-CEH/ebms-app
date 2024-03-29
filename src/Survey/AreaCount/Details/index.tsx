@@ -3,10 +3,10 @@ import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch, useLocation } from 'react-router';
 import { Page, Header, useOnBackButton, useAlert } from '@flumens';
-import { IonButton, NavContext, IonButtons, IonLabel } from '@ionic/react';
+import { IonButton, NavContext, IonButtons } from '@ionic/react';
 import Sample, { useValidateCheck } from 'models/sample';
+import HeaderButton from 'Survey/common/HeaderButton';
 import Main from './Main';
-import './styles.scss';
 
 type Props = {
   sample: Sample;
@@ -115,20 +115,12 @@ const DetailsController: FC<Props> = ({ sample }) => {
     navigate(path, 'forward', 'replace');
   };
 
-  const isValid = !sample.validateRemote();
+  const isInValid = sample.validateRemote();
 
   const startTimerButton = !hasTimerStarted && (
-    <IonButton
-      onClick={onStartTimer}
-      color={isValid ? 'secondary' : 'medium'}
-      fill="solid"
-      shape="round"
-      className="start-count-button"
-    >
-      <IonLabel>
-        <T>Start Count</T>
-      </IonLabel>
-    </IonButton>
+    <HeaderButton onClick={onStartTimer} isInValid={isInValid}>
+      Start Count
+    </HeaderButton>
   );
 
   return (

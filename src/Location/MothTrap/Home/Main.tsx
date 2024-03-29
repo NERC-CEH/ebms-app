@@ -4,17 +4,15 @@ import clsx from 'clsx';
 import { pinOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Main, MenuAttrItem } from '@flumens';
+import { Button, Main, MenuAttrItem, Badge } from '@flumens';
 import {
   IonList,
   IonItem,
   IonLabel,
   IonItemDivider,
-  IonButton,
   IonItemSliding,
   IonItemOptions,
   IonItemOption,
-  IonBadge,
 } from '@ionic/react';
 import GridRefValue from 'common/Components/GridRefValue';
 import InfoBackgroundMessage from 'common/Components/InfoBackgroundMessage';
@@ -52,25 +50,19 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
 
   const getLampAddButton = () => {
     return (
-      <IonButton color="primary" id="add" onClick={addNewLamp}>
-        <IonLabel>
-          <T>Add lamp</T>
-        </IonLabel>
-      </IonButton>
+      <Button color="primary" onPress={addNewLamp} className="mx-auto my-10">
+        Add lamp
+      </Button>
     );
   };
 
   const getLampList = () => {
-    if (!lamps.length) {
-      return (
-        <IonList id="list" lines="full">
-          <InfoBackgroundMessage>No lamps added</InfoBackgroundMessage>
-        </IonList>
-      );
-    }
+    if (!lamps.length)
+      return <InfoBackgroundMessage>No lamps added</InfoBackgroundMessage>;
 
     const getLampEntry = (entry: Lamp) => {
       const { quantity } = entry.attrs;
+
       const lampValue = entry.attrs.type || <T>Lamp</T>;
 
       const path = `${url}/lamps/${entry.cid}`;
@@ -79,17 +71,20 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
 
       return (
         <IonItemSliding key={entry.cid}>
-          <IonItem detail routerLink={path}>
-            <IonLabel position="stacked" mode="ios">
-              <IonLabel className="title">
-                <span className="lamp-name">{lampValue}</span>
-              </IonLabel>
-              <IonLabel className="badge">
-                {quantity && (
-                  <IonBadge color="medium">Quantity: {quantity}</IonBadge>
+          <IonItem routerLink={path} detail={false}>
+            <div className="flex flex-col gap-1 overflow-hidden py-2">
+              <div className="overflow-hidden text-ellipsis whitespace-nowrap text-sm">
+                {lampValue}
+                {lampValue}
+              </div>
+              <div className="">
+                {!!quantity && (
+                  <Badge skipTranslation>
+                    <T>Quantity</T>: {quantity}
+                  </Badge>
                 )}
-              </IonLabel>
-            </IonLabel>
+              </div>
+            </div>
           </IonItem>
           <IonItemOptions side="end" onClick={deleteLampWrap}>
             <IonItemOption color="danger">Delete</IonItemOption>
@@ -101,20 +96,16 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
     const lampList = lamps.map(getLampEntry);
 
     return (
-      <>
-        <IonList id="list" lines="full">
-          <div className="rounded">
-            <IonItemDivider className="species-list-header">
-              <IonLabel>
-                <T>Lamps</T>
-              </IonLabel>
-              <IonLabel slot="end">{lampList.length}</IonLabel>
-            </IonItemDivider>
+      <div className="rounded">
+        <IonItemDivider className="species-list-header">
+          <IonLabel>
+            <T>Lamps</T>
+          </IonLabel>
+          <IonLabel slot="end">{lampList.length}</IonLabel>
+        </IonItemDivider>
 
-            {lampList}
-          </div>
-        </IonList>
-      </>
+        {lampList}
+      </div>
     );
   };
 

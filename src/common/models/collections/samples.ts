@@ -46,4 +46,11 @@ const onChangeUpdateMap = (change: any) => {
 };
 intercept(samplesCollection, onChangeUpdateMap);
 
+export function getPending() {
+  const byUploadStatus = (sample: Sample) =>
+    !sample.metadata.syncedOn && sample.metadata.saved;
+
+  return samplesCollection.filter(byUploadStatus);
+}
+
 export default samplesCollection;

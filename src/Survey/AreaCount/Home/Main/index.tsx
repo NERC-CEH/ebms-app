@@ -9,9 +9,9 @@ import {
   clipboardOutline,
   filterOutline,
   warningOutline,
-  informationCircleOutline,
   flagOutline,
   copyOutline,
+  addCircleOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
@@ -21,6 +21,8 @@ import {
   LongPressButton,
   useAlert,
   InfoMessage,
+  Button,
+  Badge,
 } from '@flumens';
 import {
   IonList,
@@ -34,10 +36,8 @@ import {
   NavContext,
   IonSpinner,
   IonItemDivider,
-  IonBadge,
 } from '@ionic/react';
 import GridRef from 'common/Components/GridRefValue';
-import config from 'common/config';
 import appModel from 'models/app';
 import { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
@@ -46,6 +46,7 @@ import PaintedLadyBehaviour from 'Survey/AreaCount/common/Components/PaintedLady
 import PaintedLadyDirection from 'Survey/AreaCount/common/Components/PaintedLadyDirection';
 import PaintedLadyOther from 'Survey/AreaCount/common/Components/PaintedLadyOther';
 import PaintedLadyWing from 'Survey/AreaCount/common/Components/PaintedLadyWing';
+import UploadedRecordInfoMessage from 'Survey/AreaCount/common/Components/UploadedRecordInfoMessage';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import {
   speciesOccAddedTimeSort,
@@ -217,16 +218,15 @@ const AreaCount: FC<Props> = ({
     };
 
     return (
-      <LongPressButton
+      <Button
         color="primary"
-        id="add"
-        onClick={navigateToSearch}
-        onLongClick={showCopyOptionsWrap}
+        className="mx-auto mb-5 mt-10"
+        onPress={navigateToSearch}
+        onLongPress={showCopyOptionsWrap}
+        startAddon={<IonIcon src={addCircleOutline} className="size-5" />}
       >
-        <IonLabel>
-          <T>Add species</T>
-        </IonLabel>
-      </LongPressButton>
+        Add species
+      </Button>
     );
   };
 
@@ -407,28 +407,20 @@ const AreaCount: FC<Props> = ({
             </IonItemOption>
           </IonItemOptions>
 
-          <IonItem detail onClick={navigateToOccurrenceWithSample}>
-            <IonLabel className="time">{prettyTime}</IonLabel>
-            <IonLabel className="attributes">
-              <div className="wraps">
-                {speciesStage && (
-                  <IonBadge color="medium" className="stage-badge">
-                    <T>{speciesStage}</T>
-                  </IonBadge>
-                )}
+          <IonItem detail={false} onClick={navigateToOccurrenceWithSample}>
+            <div className="flex w-full items-center justify-start gap-4 py-1 pl-4">
+              <div className="shrink-0">{prettyTime}</div>
+              <div className="flex w-full flex-wrap justify-start gap-x-3 gap-y-1 align-middle ">
+                {speciesStage && <Badge>{speciesStage}</Badge>}
                 <PaintedLadyWing wings={wing} />
                 <PaintedLadyBehaviour behaviour={behaviour} />
                 <PaintedLadyDirection direction={direction} />
                 <PaintedLadyOther text={nectarSource || mating || eggLaying} />
               </div>
-            </IonLabel>
-
-            {location && (
-              <IonLabel className="location-icon" slot="end">
-                {location}
-              </IonLabel>
-            )}
+              {location && <div className="shrink-0">{location}</div>}
+            </div>
           </IonItem>
+
           {!isDisabled && (
             <IonItemOptions side="end">
               <IonItemOption color="danger" onClick={deleteSubSample}>
@@ -567,34 +559,9 @@ const AreaCount: FC<Props> = ({
     areaPretty = area ? `${area} m²` : '';
   }
 
-  const { webForm } = sample.getSurvey();
-
   return (
     <Main id="precise-area-count-edit">
-      {isDisabled && (
-        <>
-          <InfoMessage
-            color="tertiary"
-            startAddon={<IonIcon src={informationCircleOutline} />}
-            skipTranslation
-          >
-            <T>
-              This record has been submitted and cannot be edited within this
-              App.
-            </T>
-            <IonButton
-              href={`${config.backend.url}/${webForm}?sample_id=${sample.id}`}
-              expand="block"
-              color="dark"
-              fill="outline"
-              size="small"
-              className="website-link"
-            >
-              <T>eBMS website</T>
-            </IonButton>
-          </InfoMessage>
-        </>
-      )}
+      {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">
         <IonItemDivider>

@@ -65,7 +65,9 @@ function Transects({ appModel, onTransectSelect }) {
   return (
     <Main id="transect-list">
       <InfoMessage
-        startAddon={<IonIcon src={informationCircleOutline} />}
+        startAddon={
+          <IonIcon src={informationCircleOutline} className="size-6" />
+        }
         color="tertiary"
       >
         Please select your transect first.

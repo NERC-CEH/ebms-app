@@ -7,13 +7,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Main, useOnBackButton, ImageWithBackground } from '@flumens';
+import { Main, useOnBackButton, ImageWithBackground, Badge } from '@flumens';
 import {
   IonCardHeader,
   IonCardSubtitle,
   IonCardContent,
   IonCardTitle,
-  IonChip,
 } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
 import { CountryCode } from 'common/config/countries';
@@ -99,11 +98,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
             <h3 className="species-label inline-label">
               <T>Status</T>:
             </h3>
-            <span>
-              <IonChip className="species-status" outline>
-                <T>{status}</T>
-              </IonChip>
-            </span>
+            <Badge>{status}</Badge>
           </IonCardContent>
         )}
 

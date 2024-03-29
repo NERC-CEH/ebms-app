@@ -3,20 +3,13 @@ import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import {
-  informationCircleOutline,
   locationOutline,
   camera,
-  warningOutline,
   filterOutline,
+  addCircleOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import {
-  Main,
-  MenuAttrItem,
-  useAlert,
-  InfoMessage,
-  LongPressButton,
-} from '@flumens';
+import { Main, MenuAttrItem, useAlert, Button } from '@flumens';
 import {
   IonList,
   IonButton,
@@ -29,10 +22,10 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
-import config from 'common/config';
 import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import UploadedRecordInfoMessage from 'Survey/AreaCount/common/Components/UploadedRecordInfoMessage';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import {
@@ -143,29 +136,14 @@ const HomeMain: FC<Props> = ({
     });
   };
 
-  const getSpeciesAddButton = () => {
-    const navigateToTaxonSearch = () => {
-      navigate(`/survey/moth/${sample.cid}/taxon`);
-    };
+  const navigateToTaxonSearch = () => {
+    navigate(`/survey/moth/${sample.cid}/taxon`);
+  };
 
-    const showCopyOptionsWrap = () => {
-      if (sample.metadata.saved) return;
+  const showCopyOptionsWrap = () => {
+    if (sample.metadata.saved) return;
 
-      showCopyOptions();
-    };
-
-    return (
-      <LongPressButton
-        color="primary"
-        className="add"
-        onClick={navigateToTaxonSearch}
-        onLongClick={showCopyOptionsWrap}
-      >
-        <IonLabel>
-          <T>Add species</T>
-        </IonLabel>
-      </LongPressButton>
-    );
+    showCopyOptions();
   };
 
   const getSpeciesEntry = ([id, species]: any) => {
@@ -204,26 +182,6 @@ const HomeMain: FC<Props> = ({
           </IonItemOptions>
         )}
       </IonItemSliding>
-    );
-  };
-
-  const getNewImageButton = () => {
-    return (
-      <div className="buttons-wrapper">
-        {!useImageIdentifier && (
-          <div onClick={shownDisabledImageIdentifierAlert}>
-            <IonIcon className="alert-icon" icon={warningOutline} />
-          </div>
-        )}
-        <IonButton
-          className={clsx(`camera-button`, !useImageIdentifier && 'disabled')}
-          type="submit"
-          expand="block"
-          onClick={photoSelect}
-        >
-          <IonIcon slot="start" icon={camera} size="large" />
-        </IonButton>
-      </div>
     );
   };
 
@@ -377,34 +335,9 @@ const HomeMain: FC<Props> = ({
     );
   };
 
-  const { webForm } = sample.getSurvey();
-
   return (
     <Main>
-      {isDisabled && (
-        <>
-          <InfoMessage
-            color="tertiary"
-            startAddon={<IonIcon src={informationCircleOutline} />}
-            skipTranslation
-          >
-            <T>
-              This record has been submitted and cannot be edited within this
-              App.
-            </T>
-            <IonButton
-              href={`${config.backend.url}/${webForm}?sample_id=${sample.id}`}
-              expand="block"
-              color="dark"
-              fill="outline"
-              size="small"
-              className="website-link"
-            >
-              <T>eBMS website</T>
-            </IonButton>
-          </InfoMessage>
-        </>
-      )}
+      {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">
         <div className="rounded">
@@ -417,10 +350,30 @@ const HomeMain: FC<Props> = ({
       </IonList>
 
       {!isDisabled && (
-        <div className="buttons-container">
-          {getSpeciesAddButton()}
+        <div className="mx-5 mt-5 flex items-center justify-center gap-8">
+          <Button
+            color="primary"
+            onPress={navigateToTaxonSearch}
+            onLongPress={showCopyOptionsWrap}
+            startAddon={<IonIcon src={addCircleOutline} className="size-5" />}
+          >
+            Add species
+          </Button>
 
-          {getNewImageButton()}
+          <Button
+            color="tertiary"
+            className={clsx(
+              `h-[40px] shrink-0 py-0`,
+              !useImageIdentifier && 'opacity-40'
+            )}
+            onPress={
+              useImageIdentifier
+                ? photoSelect
+                : shownDisabledImageIdentifierAlert
+            }
+          >
+            <IonIcon icon={camera} className="size-5" />
+          </Button>
         </div>
       )}
 

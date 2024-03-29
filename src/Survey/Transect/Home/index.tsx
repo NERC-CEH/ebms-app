@@ -60,20 +60,11 @@ const TransectHomeController: FC<Props> = ({ sample }) => {
     await _processSubmission();
   };
 
-  const isTraining = sample.attrs.training;
-  const isEditing = sample.metadata.saved;
   const isDisabled = sample.isDisabled();
-  const isValid = !sample.validateRemote();
 
   return (
     <Page id="transect-edit">
-      <Header
-        isValid={isValid}
-        onSubmit={onSubmit}
-        isTraining={isTraining}
-        isEditing={isEditing}
-        isDisabled={isDisabled}
-      />
+      <Header sample={sample} onSubmit={onSubmit} />
       <Main sample={sample} isDisabled={isDisabled} />
     </Page>
   );

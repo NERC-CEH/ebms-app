@@ -1,13 +1,13 @@
 import { FC, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { Trans as T } from 'react-i18next';
 import { Page, Header, Main, device, useToast } from '@flumens';
-import { IonButton, IonLabel, NavContext } from '@ionic/react';
+import { NavContext } from '@ionic/react';
 import locations from 'common/models/collections/locations';
 import MothTrap, { useValidateCheck } from 'models/location';
 import Sample from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
+import HeaderButton from 'Survey/common/HeaderButton';
 import Map from './Components/Map';
 import './styles.scss';
 
@@ -19,7 +19,7 @@ const Location: FC<Props> = ({ sample }) => {
   const validateLocation = useValidateCheck();
   const checkUserStatus = useUserStatusCheck();
   const toast = useToast();
-  const { goBack } = useContext(NavContext);
+  const { navigate, goBack } = useContext(NavContext);
 
   const isDisabled = sample.isUploaded();
 
@@ -32,11 +32,7 @@ const Location: FC<Props> = ({ sample }) => {
   useEffect(refreshMothTrapsWrap, []);
 
   const newTrapButton = !isDisabled && (
-    <IonButton className="primary-button" routerLink="/location">
-      <IonLabel>
-        <T>Add New</T>
-      </IonLabel>
-    </IonButton>
+    <HeaderButton onClick={() => navigate('/location')}>Add</HeaderButton>
   );
 
   const gpsPermissionSubheader = !isDisabled && <GPSPermissionSubheader />;

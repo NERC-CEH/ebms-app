@@ -2,17 +2,15 @@ import { FC, useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
-import { Page, Main } from '@flumens';
+import { Page, Main, Badge } from '@flumens';
 import {
   IonSegment,
   IonLabel,
   IonSegmentButton,
-  IonBadge,
   IonHeader,
   IonToolbar,
 } from '@ionic/react';
-import samplesCollection from 'models/collections/samples';
-import Sample, { bySurveyDate } from 'models/sample';
+import { getPending } from 'models/collections/samples';
 import Map from './Map';
 import PendingSurveys from './Pending';
 import UploadedSurveys from './Uploaded';
@@ -40,17 +38,19 @@ const UserSurveyComponent: FC = () => {
   const showingMap = segment === 'map';
 
   const getPendingSurveysCount = () => {
-    const notUploaded = (sample: Sample) => !sample.metadata.syncedOn;
-    const pendingSurveys = samplesCollection
-      .filter(notUploaded)
-      .sort(bySurveyDate);
-
-    if (!pendingSurveys.length) return null;
+    const pendingSurveysCount = getPending().length;
+    if (!pendingSurveysCount) return null;
 
     return (
-      <IonBadge color="warning" slot="end">
-        {pendingSurveys.length}
-      </IonBadge>
+      <Badge
+        color="warning"
+        skipTranslation
+        size="small"
+        fill="solid"
+        className="mx-1"
+      >
+        {pendingSurveysCount}
+      </Badge>
     );
   };
 

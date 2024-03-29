@@ -12,8 +12,8 @@ import {
   Main,
   MenuAttrItem,
   MenuAttrItemFromModel,
-  LongPressButton,
   useAlert,
+  Button,
 } from '@flumens';
 import {
   IonList,
@@ -129,11 +129,7 @@ const Edit: FC<Props> = ({
       !sectionSample.occurrences.length &&
       !sectionSample.shallowSpeciesList.length
     ) {
-      return (
-        <IonList id="list" lines="full">
-          <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
-        </IonList>
-      );
+      return <InfoBackgroundMessage>No species added</InfoBackgroundMessage>;
     }
 
     const speciesCounts = [...sectionSample.occurrences].reduce(
@@ -238,17 +234,15 @@ const Edit: FC<Props> = ({
     };
 
     return (
-      <LongPressButton
+      <Button
         color="primary"
-        id="add"
-        onClick={onClick}
-        onLongClick={showCopyOptionsWrap}
+        className="mx-auto mt-10"
+        onPress={onClick}
+        onLongPress={showCopyOptionsWrap}
+        startAddon={<IonIcon src={addCircleOutline} className="size-7" />}
       >
-        <IonIcon icon={addCircleOutline} slot="start" />
-        <IonLabel>
-          <T>Add species</T>
-        </IonLabel>
-      </LongPressButton>
+        Add species
+      </Button>
     );
   };
 

@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
-import { IonLabel } from '@ionic/react';
 
 type Props = {
   text: string | string[];
@@ -20,7 +19,7 @@ export const PaintedLadyOther: FC<Props> = ({ text }) => {
 
   if (!text) return null;
 
-  return <IonLabel className="other-value">{prettifyValue}</IonLabel>;
+  return <div className="line-clamp-1 max-w-[200px]">{prettifyValue}</div>;
 };
 
 export default observer(PaintedLadyOther);

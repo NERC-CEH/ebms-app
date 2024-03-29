@@ -1,7 +1,7 @@
-import { FC, SyntheticEvent } from 'react';
+import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import { useToast, useAlert } from '@flumens';
+import { useToast, useAlert, Badge } from '@flumens';
 import {
   IonItem,
   IonItemSliding,
@@ -14,7 +14,7 @@ import butterflyIcon from 'common/images/butterfly.svg';
 import Occurrence from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
-import OnlineStatus from './components/OnlineStatus';
+import OnlineStatus from './OnlineStatus';
 import './styles.scss';
 
 function useDeleteSurveyPrompt(sample: Sample) {
@@ -95,19 +95,15 @@ const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
   function getInfo() {
     if (survey.name === 'precise-area') {
       return (
-        <div className="survey-info-container">
-          <h3>
-            <T>{survey.label}</T>
-          </h3>
-
-          <div className="record-details">
-            {!!speciesCount && (
-              <IonBadge color="medium">
-                <IonIcon icon={butterflyIcon} /> {speciesCount}
-              </IonBadge>
-            )}
-          </div>
-        </div>
+        !!speciesCount && (
+          <Badge
+            skipTranslation
+            className="py-[3px]"
+            startAddon={<IonIcon icon={butterflyIcon} />}
+          >
+            {speciesCount}
+          </Badge>
+        )
       );
     }
 
@@ -115,42 +111,22 @@ const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
       const locationName = sample.attrs.location?.attrs?.location?.name;
 
       return (
-        <div className="survey-info-container">
-          <h3>
-            <T>{survey.label}</T>
-          </h3>
-
-          <div className="record-details">
-            {!!locationName && <h4>{locationName}</h4>}
-            {!!speciesCount && (
-              <IonBadge color="medium">
-                <IonIcon icon={butterflyIcon} /> {speciesCount}
-              </IonBadge>
-            )}
-          </div>
-        </div>
+        <>
+          {!!locationName && <h4>{locationName}</h4>}
+          {!!speciesCount && (
+            <IonBadge color="medium">
+              <IonIcon icon={butterflyIcon} /> {speciesCount}
+            </IonBadge>
+          )}
+        </>
       );
     }
 
     const locationName = sample.attrs.location?.name;
-
-    return (
-      <div className="survey-info-container">
-        <h3>
-          <T>{survey.label}</T>
-        </h3>
-
-        <div className="record-details">
-          {!!locationName && <h4>{locationName}</h4>}
-        </div>
-      </div>
-    );
+    return !!locationName && <h4>{locationName}</h4>;
   }
 
-  const onUpload = async (e: SyntheticEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-
+  const onUpload = async () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
@@ -165,13 +141,18 @@ const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
   return (
     <IonItemSliding className="survey-list-item" style={style}>
       <IonItem routerLink={href} detail={false}>
-        <div className="flex w-full flex-nowrap justify-between">
-          {getInfo()}
+        <div className="flex w-full flex-nowrap items-center gap-2">
+          <div className="flex w-full flex-col content-center gap-1 overflow-hidden">
+            <h3 className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap font-bold">
+              <T>{survey.label}</T>
+            </h3>
+            <div className="record-details">{getInfo()}</div>
+          </div>
 
           <OnlineStatus
             sample={sample}
             onUpload={onUpload}
-            hasManyPending={uploadIsPrimary}
+            uploadIsPrimary={uploadIsPrimary}
           />
         </div>
       </IonItem>

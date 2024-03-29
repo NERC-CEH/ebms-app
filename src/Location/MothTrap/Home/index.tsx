@@ -6,9 +6,10 @@ import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Page, Header, useAlert, useToast, UUID } from '@flumens';
-import { IonButton, NavContext, IonLabel } from '@ionic/react';
+import { NavContext } from '@ionic/react';
 import Location, { Lamp, useValidateCheck } from 'models/location';
 import { useUserStatusCheck } from 'models/user';
+import HeaderButton from 'Survey/common/HeaderButton';
 // import BackButton from '../Components/BackButton';
 import Main from './Main';
 import './styles.scss';
@@ -100,32 +101,18 @@ const MothTrapSetup: FC<Props> = ({ sample: location }) => {
   const { saved } = location.metadata;
 
   const getFinishButton = () => {
-    const label = !saved ? <T>Save</T> : <T>Upload</T>;
-
-    const isValid = !location.validateRemote();
+    const isInValid = !!location.validateRemote();
 
     return (
-      <IonButton
-        color={isValid ? 'secondary' : 'medium'}
-        fill="solid"
-        shape="round"
-        className="primary-button"
-        onClick={onSubmit}
-      >
-        <IonLabel>{label}</IonLabel>
-      </IonButton>
+      <HeaderButton isInValid={isInValid} onClick={onSubmit}>
+        {!saved ? 'Save' : 'Upload'}
+      </HeaderButton>
     );
   };
 
-  // const CancelButtonWrap = () => <BackButton location={location} />;
-
   return (
     <Page id="moth-trap-setup">
-      <Header
-        title="Moth Trap"
-        rightSlot={getFinishButton()}
-        // BackButton={CancelButtonWrap}
-      />
+      <Header title="Moth Trap" rightSlot={getFinishButton()} />
       <Main
         location={location}
         addNewLamp={addNewLamp}

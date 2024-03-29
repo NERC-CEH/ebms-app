@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
+import clsx from 'clsx';
 import {
   pinOutline,
   arrowForwardOutline,
@@ -8,7 +8,6 @@ import {
 import { Trans as T, useTranslation } from 'react-i18next';
 import { useAlert } from '@flumens';
 import {
-  IonLabel,
   IonIcon,
   IonItemSliding,
   IonItem,
@@ -53,14 +52,14 @@ interface Props {
   isSelected?: boolean;
 }
 
-const MothTrapEntry: FC<Props> = ({
+const MothTrapEntry = ({
   mothTrap,
   distance,
   updateRecord,
   isSelected,
   deleteTrap,
   onUpload,
-}) => {
+}: Props) => {
   const location = mothTrap.attrs?.location;
   const setLocation = () => updateRecord(mothTrap);
   const onDeleteWrap = () => deleteTrap(mothTrap);
@@ -78,45 +77,45 @@ const MothTrapEntry: FC<Props> = ({
   return (
     <IonItemSliding>
       <IonItem
-        className="moth-trap"
+        className={clsx(
+          'flex h-20 border-b border-solid border-neutral-100 align-middle [--inner-border-width:0] [--inner-padding-end:0] [--padding-start:5px]',
+          isSelected && 'bg-green-50 [--background:var(--color-green-50)]'
+        )}
         onClick={onClick}
-        routerLink={link}
+        routerLink={!isUploading && !isSelected ? link : undefined}
         detail={false}
-        disabled={isUploading || isSelected}
       >
-        <div className="info">
-          <div className="avatar">
-            <IonIcon icon={mothTrapIcon} slot="start" />
+        <div className="flex w-full items-center justify-start gap-4">
+          <div className="m-1 flex items-center justify-center rounded-md bg-primary-300/20">
+            <IonIcon icon={mothTrapIcon} className="size-7" />
           </div>
 
-          <div className="label">
-            <h4>{label}</h4>
+          <div className="flex w-full flex-col gap-1 py-1">
+            <h4 className="line-clamp-2">{label}</h4>
 
             {location?.latitude && (
-              <IonLabel>
+              <div className="text-xs">
                 <IonIcon icon={pinOutline} />
                 {location.latitude.toFixed(3)}, {location.longitude.toFixed(3)}
-              </IonLabel>
+              </div>
             )}
           </div>
 
           {!isDraft && !isSelected && distance && (
-            <div className="right-slot">
+            <div className="flex flex-col items-end text-primary-700">
               <IonIcon icon={arrowForwardOutline} />
-              <span>{distance} km</span>
+              <span className="whitespace-nowrap text-sm font-bold">
+                {distance} km
+              </span>
             </div>
           )}
 
           {!isDraft && isSelected && (
-            <div className="right-slot selected">
-              <IonIcon icon={checkboxOutline} />
-            </div>
+            <IonIcon icon={checkboxOutline} className="size-10 text-success" />
           )}
 
           {isDraft && (
-            <div className="draft">
-              <OnlineStatus location={mothTrap} onUpload={onUploadWrap} />
-            </div>
+            <OnlineStatus location={mothTrap} onUpload={onUploadWrap} />
           )}
         </div>
       </IonItem>

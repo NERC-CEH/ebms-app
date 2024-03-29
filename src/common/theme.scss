@@ -8,7 +8,7 @@
 @tailwind utilities;
 
 @layer base {
-  a {
+  a:not([role='button']) {
     // change link colours
     color: var(--ion-color-primary);
   }
@@ -194,18 +194,6 @@ html[mode='ios'] .tabs-inner {
   opacity: 0.3;
 }
 
-.primary-button {
-  --padding-start: 17px !important;
-  --padding-end: 17px !important;
-  max-width: 30vw;
-
-  ion-label {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 2px 0;
-  }
-}
-
 // Display occurrence taxon name as Common and scientific names.
 .taxon-entry {
   ion-label[slot='end'] {
@@ -253,4 +241,5 @@ ion-list.apps-section {
 ion-item.menu-attr-item ion-label[slot='end'] {
   max-width: 33%;
 }
+
 /** Ionic 7 fixes END **/

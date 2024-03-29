@@ -3,11 +3,6 @@
     width: 15px;
   }
 
-  .website-link {
-    margin: 10px auto 0;
-    max-width: 80%;
-  }
-
   ion-list {
     margin-bottom: 0;
   }
@@ -44,13 +39,6 @@
     }
   }
 
-  #add {
-    width: 40%;
-    margin: 10px 0;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
-  }
-
   #add-single {
     width: 40%;
     margin: 10px 0;
@@ -71,8 +59,6 @@
   }
 
   #list {
-    font-weight: bold;
-
     .species-list-header {
       background: #e6e6e6 !important;
       color: #777777;
@@ -93,23 +79,24 @@
         &:nth-of-type(2) {
           padding-left: 16px;
           text-align: left;
+          overflow: hidden;
+          white-space: nowrap;
         }
         &:first-of-type {
           max-width: 54px;
+          overflow: hidden;
+          white-space: nowrap;
         }
         &:last-of-type {
           max-width: 50px;
+          overflow: hidden;
+          white-space: nowrap;
         }
       }
     }
 
     ion-item {
       --padding-start: 0;
-
-      .time {
-        max-width: fit-content;
-        min-width: 50px;
-      }
 
       .behaviour-label {
         display: flex;
@@ -139,46 +126,6 @@
       ion-label.title {
         font-weight: 700;
       }
-
-      ion-label.time {
-        margin: 7px;
-        font-weight: 400;
-      }
-    }
-
-    .attributes {
-      max-width: 90% !important;
-      margin-left: 0 !important;
-
-      .wraps {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 5px;
-
-        ion-badge {
-          min-width: fit-content;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          --padding-top: 4px;
-        }
-
-        .stage-badge {
-          min-width: auto;
-          max-width: 110px !important;
-        }
-      }
-    }
-
-    .other-value,
-    .wing-value {
-      margin: 0 !important;
-    }
-
-    .other-value {
-      margin: 0 !important;
-      font-weight: 400 !important;
-      display: block !important;
     }
 
     .direction-wrapper {
@@ -216,11 +163,6 @@
       margin-top: -4px;
       width: 15px;
     }
-  }
-
-  .location-icon {
-    display: flex;
-    font-weight: 400;
   }
 }
 

@@ -188,7 +188,9 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
 
       {isNotFiltered && (
         <InfoMessage
-          startAddon={<IonIcon src={informationCircleOutline} />}
+          startAddon={
+            <IonIcon src={informationCircleOutline} className="size-6" />
+          }
           color="tertiary"
         >
           This guide is still in development. It covers{' '}

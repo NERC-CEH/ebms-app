@@ -2,7 +2,8 @@ import { FC } from 'react';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import { closeOutline } from 'ionicons/icons';
-import { IonToolbar, IonIcon, IonChip, IonLabel } from '@ionic/react';
+import { Badge } from '@flumens';
+import { IonToolbar, IonIcon } from '@ionic/react';
 import {
   Filter as FilterValue,
   Filters,
@@ -31,15 +32,14 @@ const CurrentFilters: FC<Props> = ({ searchPhrase, values, onRemove }) => {
     const label = isTextType ? `"${value}"` : value;
 
     return (
-      <IonChip
+      <Badge
         key={value}
         className={clsx(isTextType && 'text')}
-        outline
-        onClick={removeFilterWrap}
+        onPress={removeFilterWrap}
+        endAddon={<IonIcon icon={closeOutline} />}
       >
-        <IonLabel>{label}</IonLabel>
-        <IonIcon icon={closeOutline} />
-      </IonChip>
+        {label}
+      </Badge>
     );
   };
 
@@ -53,13 +53,11 @@ const CurrentFilters: FC<Props> = ({ searchPhrase, values, onRemove }) => {
 
   const currentFilters = flatFilters.map(getFilter);
 
-  if (!currentFilters.length) {
-    return null;
-  }
+  if (!currentFilters.length) return null;
 
   return (
     <IonToolbar className="filterbar">
-      <div>{currentFilters}</div>
+      <div className="flex gap-1">{currentFilters}</div>
     </IonToolbar>
   );
 };

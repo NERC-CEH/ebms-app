@@ -13,7 +13,9 @@ const SpeciesGroups: FC = () => {
       <Main>
         <InfoMessage
           color="tertiary"
-          startAddon={<IonIcon src={informationCircleOutline} />}
+          startAddon={
+            <IonIcon src={informationCircleOutline} className="size-6" />
+          }
         >
           This option was moved to the species search page inside the surveys.
           When a survey starts, you can select which species group you are

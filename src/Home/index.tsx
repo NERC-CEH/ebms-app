@@ -25,7 +25,6 @@ import {
 import PendingSurveysBadge from 'common/Components/PendingSurveysBadge';
 import butterflyIcon from 'common/images/butterfly.svg';
 import appModel from 'models/app';
-import samplesCollection from 'models/collections/samples';
 import { surveyConfigs as surveys } from 'models/sample';
 import userModel from 'models/user';
 import { Survey } from 'Survey/common/config';
@@ -142,9 +141,9 @@ const HomeController = () => {
           <IonTabButton tab="/home/user-surveys" href="/home/user-surveys">
             <IonIcon icon={personOutline} />
             <IonLabel>
+              <PendingSurveysBadge className="absolute bottom-1/3 left-2/4" />
               <T>Surveys</T>
             </IonLabel>
-            <PendingSurveysBadge samplesCollection={samplesCollection} />
           </IonTabButton>
 
           <IonTabButton tab="menu" href="/home/menu">

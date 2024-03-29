@@ -5,11 +5,10 @@ import { FC, useContext } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
-import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Capacitor } from '@capacitor/core';
-import { Page, Header, useAlert, useToast, captureImage } from '@flumens';
-import { IonButton, NavContext, isPlatform, IonLabel } from '@ionic/react';
+import { Page, useAlert, useToast, captureImage } from '@flumens';
+import { NavContext, isPlatform } from '@ionic/react';
 import { usePromptImageSource } from 'common/Components/PhotoPicker';
 import CONFIG from 'common/config';
 import appModel from 'models/app';
@@ -19,6 +18,7 @@ import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
 import { getUnkownSpecies } from 'Survey/Moth/config';
+import Header from './Header';
 import Main from './Main';
 import './styles.scss';
 
@@ -80,8 +80,6 @@ const HomeController: FC<Props> = ({ sample }) => {
   const isDisabled = sample.isDisabled();
 
   const surveyConfig = sample.getSurvey();
-
-  const isEditing = sample.metadata.saved;
 
   const _processSubmission = async () => {
     const isUserOK = await checkUserStatus();
@@ -210,23 +208,6 @@ const HomeController: FC<Props> = ({ sample }) => {
 
     occ.attrs.count += is5x ? 5 : 1;
     occ.save();
-  };
-
-  const getFinishButton = () => {
-    const label = isEditing ? <T>Upload</T> : <T>Finish</T>;
-
-    const isValid = !sample.validateRemote();
-    return (
-      <IonButton
-        color={isValid ? 'secondary' : 'medium'}
-        fill="solid"
-        shape="round"
-        className="primary-button"
-        onClick={onSubmit}
-      >
-        <IonLabel>{label}</IonLabel>
-      </IonButton>
-    );
   };
 
   const mergeOccurrence = (occ: Occurrence) => {
@@ -403,22 +384,11 @@ const HomeController: FC<Props> = ({ sample }) => {
     }
   };
 
-  const isTraining = !!sample.attrs.training;
-  const trainingModeSubheader = isTraining && (
-    <div className="training-survey">
-      <T>Training Mode</T>
-    </div>
-  );
-
   const { areaSurveyListSortedByTime } = appModel.attrs;
 
   return (
     <Page id="survey-moth-home">
-      <Header
-        title="Moth-trap survey"
-        rightSlot={!isDisabled && getFinishButton()}
-        subheader={trainingModeSubheader}
-      />
+      <Header sample={sample} onSubmit={onSubmit} />
       <Main
         match={match}
         sample={sample}

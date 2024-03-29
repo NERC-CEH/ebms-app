@@ -106,6 +106,7 @@ export {
   type Props as InputProps,
 } from '@flumens/tailwind/dist/components/Input';
 export { default as Button } from '@flumens/tailwind/dist/components/Button';
+export { default as Badge } from '@flumens/tailwind/dist/components/Badge';
 export {
   default as InfoMessage,
   type Props as InfoMessageProps,

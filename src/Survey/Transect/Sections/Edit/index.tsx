@@ -2,14 +2,15 @@ import { FC, useContext } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
-import { Trans as T, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Page, Header, useAlert, useToast } from '@flumens';
-import { IonButton, NavContext, IonLabel } from '@ionic/react';
+import { NavContext } from '@ionic/react';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample from 'models/sample';
+import HeaderButton from 'Survey/common/HeaderButton';
 import Main from './Main';
 
 const useDeleteSpeciesPrompt = () => {
@@ -58,7 +59,7 @@ type Props = {
 const FIRST_SECTION_INDEX = 0;
 
 const EditController: FC<Props> = ({ sample, subSample }) => {
-  const { navigate } = useContext(NavContext);
+  const { navigate, goBack } = useContext(NavContext);
   const { t } = useTranslation();
   const { url } = useRouteMatch();
 
@@ -154,27 +155,20 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
     const nextSectionSample = sample.samples[nextSectionIndex];
     const isLastSection = !nextSectionSample;
     if (isLastSection) {
-      return null;
+      return <HeaderButton onClick={() => goBack()}>Finish</HeaderButton>;
     }
 
     const nextSectionSampleId = nextSectionSample.cid;
 
-    const navigateToSection = (e: any) => {
-      e.preventDefault();
+    const navigateToSection = () => {
       navigate(
         `/survey/transect/${sample.cid}/sections/${nextSectionSampleId}`,
-        'none',
+        'forward',
         'replace'
       );
     };
 
-    return (
-      <IonButton onClick={navigateToSection}>
-        <IonLabel>
-          <T>Next</T>
-        </IonLabel>
-      </IonButton>
-    );
+    return <HeaderButton onClick={navigateToSection}>Next</HeaderButton>;
   };
 
   const getPreviousSectionOrSurvey = () => {
