@@ -5,7 +5,7 @@ import { Page, Main, Header, useAlert } from '@flumens';
 import { NavContext } from '@ionic/react';
 import Occurrence, { Taxon, DRAGONFLY_GROUP } from 'models/occurrence';
 import Sample from 'models/sample';
-import TaxonSearch from 'Components/TaxonSearch';
+import TaxonSearch from 'Survey/common/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 

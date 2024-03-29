@@ -6,8 +6,8 @@ import { NavContext } from '@ionic/react';
 import Media from 'models/media';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
-import TaxonSearch from 'Components/TaxonSearch';
 import { getUnkownSpecies, MachineInvolvement } from 'Survey/Moth/config';
+import TaxonSearch from 'Survey/common/TaxonSearch';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
 interface Props {
