@@ -150,12 +150,6 @@ const MenuMain: FC<Props> = ({
               <T>{primarySurveyLabel}</T>
             </IonLabel>
           </IonItem>
-          <IonItem routerLink="/settings/species" detail>
-            <IonLabel>
-              <T>Species groups</T>
-            </IonLabel>
-            <IonIcon icon={butterflyIcon} size="small" slot="start" />
-          </IonItem>
 
           <IonItem routerLink="/settings/moth-survey" detail>
             <IonLabel>

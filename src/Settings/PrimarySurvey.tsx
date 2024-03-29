@@ -1,6 +1,6 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import { observer } from 'mobx-react';
-import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import { Page, Main, Header } from '@flumens';
 import {
   IonList,
@@ -8,27 +8,32 @@ import {
   IonRadioGroup,
   IonRadio,
   IonLabel,
+  NavContext,
 } from '@ionic/react';
 import { surveyConfigs as surveys } from 'common/models/sample';
+import appModel from 'models/app';
 
-function SelectCountry({ appModel }) {
+function SelectCountry() {
   const currentValue = appModel.attrs.primarySurvey;
+  const { t } = useTranslation();
+  const { goBack } = useContext(NavContext);
 
-  function onSelect(e) {
+  function onSelect(e: any) {
     const survey = e.target.value;
     appModel.attrs.primarySurvey = survey; // eslint-disable-line no-param-reassign
     appModel.save();
+    goBack();
   }
 
-  const translate = ({ name, label }) => [name, t(label)];
+  const translate = ({ name, label }: any) => [name, t(label)];
 
-  const surveyOption = ([value, label]) => {
+  const surveyOption = ([value, label]: any) => {
     if (value === 'area') return null; // for backwards compatible
 
     return (
       <Fragment key={value}>
         <IonItem>
-          <IonRadio value={value} checked={currentValue === value}>
+          <IonRadio value={value}>
             <IonLabel>{label}</IonLabel>
           </IonRadio>
         </IonItem>
@@ -43,15 +48,13 @@ function SelectCountry({ appModel }) {
 
       <Main>
         <IonList>
-          <IonRadioGroup onIonChange={onSelect}>{surveyOptions}</IonRadioGroup>
+          <IonRadioGroup onIonChange={onSelect} value={currentValue}>
+            {surveyOptions}
+          </IonRadioGroup>
         </IonList>
       </Main>
     </Page>
   );
 }
-
-SelectCountry.propTypes = {
-  appModel: PropTypes.object.isRequired,
-};
 
 export default observer(SelectCountry);

@@ -1,10 +1,10 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { cameraOutline } from 'ionicons/icons';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Page, Main, Header, InfoMessage, MenuAttrToggle } from '@flumens';
 import { IonList, isPlatform } from '@ionic/react';
 import AppModelProps from 'models/app';
+import appModel from 'models/app';
 import './styles.scss';
 
 function onToggle(appModel: typeof AppModelProps, checked: boolean) {
@@ -12,11 +12,7 @@ function onToggle(appModel: typeof AppModelProps, checked: boolean) {
   appModel.save();
 }
 
-type Props = {
-  appModel: typeof AppModelProps;
-};
-
-const MothSurveySettings: FC<Props> = ({ appModel }) => {
+const MothSurveySettings = () => {
   const { useImageIdentifier } = appModel.attrs;
 
   const onTurnOffImageIdentifierToggle = (checked: boolean) => {
