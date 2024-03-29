@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import { Trans as T } from 'react-i18next';
-import { IonLabel, IonButton } from '@ionic/react';
+import { Button } from '@flumens';
+import { IonLabel } from '@ionic/react';
 import appModel from 'models/app';
 import Sample from 'models/sample';
 import FiltersModal from './FiltersModal';
@@ -35,12 +36,17 @@ const Header: FC<Props> = ({ sample }) => {
         appModel={appModel}
       />
 
-      <IonButton onClick={toggleModal} className="filter-button" fill="outline">
+      <Button
+        onPress={toggleModal}
+        className="max-w-28 whitespace-nowrap px-4 py-1"
+        fill="outline"
+        skipTranslation
+      >
         <IonLabel>
           <T>Groups</T>{' '}
           {isMultiSpeciesGroupSelected && <b>({speciesGroupCount})</b>}
         </IonLabel>
-      </IonButton>
+      </Button>
     </>
   );
 };
