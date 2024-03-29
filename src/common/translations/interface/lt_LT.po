@@ -2157,7 +2157,7 @@ msgstr "Pasirinkite tikslines rūšis"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr "Nebuvo pridėta nuotraukų. <br/>Spauskite<4><0></0></4>kad pridėti"
+msgstr "Nebuvo pridėta nuotraukų. <br/>Spauskite <4><0></0></4> kad pridėti"
 
 # Part of Painted lady survey
 msgid "Wing"
