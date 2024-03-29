@@ -3,20 +3,15 @@ import { cameraOutline } from 'ionicons/icons';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Page, Main, Header, InfoMessage, MenuAttrToggle } from '@flumens';
 import { IonList, isPlatform } from '@ionic/react';
-import AppModelProps from 'models/app';
 import appModel from 'models/app';
 import './styles.scss';
-
-function onToggle(appModel: typeof AppModelProps, checked: boolean) {
-  appModel.attrs.useImageIdentifier = checked; // eslint-disable-line no-param-reassign
-  appModel.save();
-}
 
 const MothSurveySettings = () => {
   const { useImageIdentifier } = appModel.attrs;
 
   const onTurnOffImageIdentifierToggle = (checked: boolean) => {
-    onToggle(appModel, checked);
+    appModel.attrs.useImageIdentifier = checked; // eslint-disable-line no-param-reassign
+    appModel.save();
 
     isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
   };
