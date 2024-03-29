@@ -22,6 +22,7 @@ const secondary = {
 module.exports = {
   content: [
     './src/**/*.{ts,tsx}',
+    'node_modules/@flumens/ionic/dist/**/*.{js,ts,jsx,tsx}',
     'node_modules/@flumens/tailwind/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
