@@ -1,5 +1,10 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { HandledError, isAxiosNetworkError, ElasticOccurrence } from '@flumens';
+import {
+  HandledError,
+  isAxiosNetworkError,
+  ElasticOccurrence,
+  normalizeCoords,
+} from '@flumens';
 import CONFIG from 'common/config';
 import { matchAppSurveys } from 'common/services/ES';
 import userModel from 'models/user';
@@ -51,7 +56,10 @@ export async function fetchRecords(
     },
     timeout: 80000,
     cancelToken: requestCancelToken.token,
-    data: getRecordsQuery(northWest, southEast),
+    data: getRecordsQuery(
+      normalizeCoords(northWest),
+      normalizeCoords(southEast)
+    ),
   };
 
   let records = [];
@@ -134,7 +142,11 @@ export async function fetchSquares(
     },
     timeout: 80000,
     cancelToken: requestCancelToken.token,
-    data: getSquaresQuery(northWest, southEast, squareSizeInKm),
+    data: getSquaresQuery(
+      normalizeCoords(northWest),
+      normalizeCoords(southEast),
+      squareSizeInKm
+    ),
   };
 
   let records = [];

@@ -86,6 +86,7 @@ export {
   type Location,
   prettyPrintLocation,
   updateModelLocation,
+  normalizeCoords,
 } from '@flumens/ionic/dist/utils/location';
 export {
   useDisableBackButton,
