@@ -16,7 +16,7 @@ const ExpandableList: FC<any> = ({
   const hidingMoreThanTwo = restItems.length >= 2;
 
   return (
-    <>
+    <div className="flex flex-col gap-4">
       {items}
 
       {hidingMoreThanTwo && !showMore && (
@@ -38,7 +38,7 @@ const ExpandableList: FC<any> = ({
           </IonLabel>
         </IonItem>
       )}
-    </>
+    </div>
   );
 };
 

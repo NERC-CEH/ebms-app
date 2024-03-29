@@ -64,7 +64,7 @@ const MainReport: FC<Props> = ({
             <T>{label}</T>
           </IonLabel>
         </IonItemDivider>
-        <div className="rounded">
+        <div className="rounded bg-white">
           <IonItem lines="full" className="list-header-labels">
             <IonLabel>
               <small>
