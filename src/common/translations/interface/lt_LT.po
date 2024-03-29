@@ -2301,7 +2301,7 @@ msgstr "Prašome pasirinkti mitybinius augalus."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr "Jūs neturi jokių <1>{{prettySpeciesName}}</1>įrašų savo sąraše."
+msgstr "Jūs neturi jokių <1>{{prettySpeciesName}}</1> įrašų savo sąraše."
 
 # Alert title
 msgid "Tip: Copy attributes"
