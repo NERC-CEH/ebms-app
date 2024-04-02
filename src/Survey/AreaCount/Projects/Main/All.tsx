@@ -1,9 +1,9 @@
 import { Button } from '@flumens';
-import { RemoteProject } from 'common/models/collections/projects/service';
+import { ProjectAttributes } from 'models/project';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 
 type Props = {
-  projects: RemoteProject[];
+  projects: ProjectAttributes[];
   onJoin: any;
 };
 
@@ -18,7 +18,7 @@ const AllProjects = ({ projects, onJoin }: Props) => {
       </InfoBackgroundMessage>
     );
 
-  const getProjectButton = (project: RemoteProject) => {
+  const getProjectButton = (project: ProjectAttributes) => {
     const onJoinWrap = () => onJoin(project);
 
     return (

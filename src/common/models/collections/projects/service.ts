@@ -1,26 +1,33 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
-import { isAxiosNetworkError, HandledError } from '@flumens';
+import { ZodError } from 'zod';
+import { isAxiosNetworkError, HandledError, string } from '@flumens';
 import CONFIG from 'common/config';
+import Project, { ProjectAttributes } from 'models/project';
 import userModel from 'models/user';
 
-export interface RemoteProject {
-  id: string;
-  title: string;
-  description: string;
-  group_type: string;
-  created_on: string;
-  joining_method: string;
-  website_id: string;
-  group_type_id: string;
-  from_date: any;
-  to_date: any;
-  created_by_id: string;
-}
+/**
+ * Map over all the keys of an object to return
+ * a new object
+ */
+export const mapKeys = <
+  TValue,
+  TKey extends string | number | symbol,
+  TNewKey extends string | number | symbol
+>(
+  obj: Record<TKey, TValue>,
+  mapFunc: (key: TKey, value: TValue) => TNewKey
+): Record<TNewKey, TValue> => {
+  const keys = Object.keys(obj) as TKey[];
+  return keys.reduce((acc, key) => {
+    acc[mapFunc(key as TKey, obj[key])] = obj[key];
+    return acc;
+  }, {} as Record<TNewKey, TValue>);
+};
 
 type Props = { country?: string; member?: boolean };
 
-export async function fetch({ member }: Props): Promise<RemoteProject[]> {
+export async function fetch({ member }: Props): Promise<ProjectAttributes[]> {
   const url = `${
     CONFIG.backend.indicia.url
   }/index.php/services/rest/groups?view=${member ? 'member' : 'joinable'}`;
@@ -36,8 +43,12 @@ export async function fetch({ member }: Props): Promise<RemoteProject[]> {
   try {
     const res = await axios.get(url, options);
 
-    const getValues = (doc: any) => doc.values;
-    return res.data.map(getValues);
+    const getValues = (doc: any) => mapKeys(doc.values, string.camel);
+    const entities = res.data.map(getValues);
+
+    entities.forEach(Project.schema.parse);
+
+    return entities;
   } catch (error: any) {
     if (axios.isCancel(error)) return [];
 
@@ -46,11 +57,18 @@ export async function fetch({ member }: Props): Promise<RemoteProject[]> {
         'Request aborted because of a network issue (timeout or similar).'
       );
 
+    if ('issues' in error) {
+      const err: ZodError = error;
+      throw new Error(
+        err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
+      );
+    }
+
     throw error;
   }
 }
 
-export async function join(project: RemoteProject) {
+export async function join(project: ProjectAttributes) {
   const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${project.id}/users`;
 
   const token = await userModel.getAccessToken();

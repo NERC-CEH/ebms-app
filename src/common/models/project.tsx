@@ -1,4 +1,5 @@
 import { observable } from 'mobx';
+import { z, object } from 'zod';
 import {
   validateRemoteModel,
   Model,
@@ -7,34 +8,47 @@ import {
   Collection,
   UUID,
 } from '@flumens';
-import { RemoteProject } from './collections/projects/service';
 import { locationsStore, projectsStore } from './store';
 
 type Metadata = ModelMetadata & {
   saved?: boolean;
 };
 
-interface Attrs extends ModelAttrs {
-  name: string;
-}
+export type ProjectAttributes = z.infer<typeof Project.schema>;
 
-class ProjectModel extends Model {
-  static parseRemoteJSON(doc: RemoteProject) {
+type Attrs = Omit<ProjectAttributes, 'id' | 'createdOn'> & ModelAttrs;
+
+class Project extends Model {
+  static schema = object({
+    id: z.string(),
+    title: z.string(),
+    createdOn: z.string(),
+    description: z.string().optional(),
+    groupType: z.string().optional(),
+    joiningMethod: z.string().optional(),
+    websiteId: z.string().optional(),
+    groupTypeId: z.string().optional(),
+    createdById: z.string().optional(),
+    /**
+     * Linked location ids.
+     */
+    indexedLocationIds: z.array(z.number()).optional(),
+  });
+
+  static parseRemoteJSON({ id, createdOn, ...attrs }: ProjectAttributes) {
     return {
-      id: doc.id,
+      id,
       cid: UUID(),
 
-      attrs: {
-        name: doc.title,
-      },
+      attrs,
 
       metadata: {
-        createdOn: new Date(doc.created_on).getTime(),
+        createdOn: new Date(createdOn).getTime(),
       },
     };
   }
 
-  collection?: Collection<ProjectModel>;
+  collection?: Collection<Project>;
 
   validateRemote = validateRemoteModel;
 
@@ -65,4 +79,4 @@ class ProjectModel extends Model {
   }
 }
 
-export default ProjectModel;
+export default Project;

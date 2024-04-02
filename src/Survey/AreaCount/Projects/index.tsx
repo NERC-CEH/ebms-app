@@ -14,11 +14,10 @@ import {
   fetch as fetchAllProjects,
   join,
   leave,
-  RemoteProject,
-} from 'common/models/collections/projects/service';
-import Project from 'common/models/project';
-import Sample from 'common/models/sample';
-import { useUserStatusCheck } from 'common/models/user';
+} from 'models/collections/projects/service';
+import Project, { ProjectAttributes } from 'models/project';
+import Sample from 'models/sample';
+import { useUserStatusCheck } from 'models/user';
 import Main from './Main';
 
 const device = { isOnline: true }; // TODO:
@@ -45,7 +44,7 @@ const Projects = ({ sample }: Props) => {
       // eslint-disable-next-line
       appModel.attrs.defaultProject = undefined;
     } else {
-      const simplifiedProject = { name: project!.attrs.name, id: project!.id! };
+      const simplifiedProject = { name: project.attrs.title, id: project.id! };
       // eslint-disable-next-line
       sample.attrs.project = project ? simplifiedProject : undefined;
       appModel.attrs.defaultProject = simplifiedProject;
@@ -54,15 +53,15 @@ const Projects = ({ sample }: Props) => {
     navigation.goBack();
   };
 
-  const [allProjects, setAllProjects] = useState<RemoteProject[]>([]);
+  const [allProjects, setAllProjects] = useState<ProjectAttributes[]>([]);
 
-  const joinProject = async (doc: RemoteProject) => {
+  const joinProject = async (doc: ProjectAttributes) => {
     try {
       await loader.show('Please wait...');
       await join(doc);
 
       const allProjectsWithoutTheJoined = allProjects.filter(
-        ({ id }: RemoteProject) => id !== doc.id
+        ({ id }: ProjectAttributes) => id !== doc.id
       );
       setAllProjects(allProjectsWithoutTheJoined);
       toast.success('Successfully joined the project.');
