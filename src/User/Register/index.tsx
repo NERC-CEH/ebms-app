@@ -4,10 +4,10 @@ import { TypeOf } from 'zod';
 import { Page, Header, device, useToast, useAlert, useLoader } from '@flumens';
 import { NavContext } from '@ionic/react';
 import appModel from 'common/models/app';
-import userModel from 'models/user';
+import userModel, { UserModel } from 'models/user';
 import Main from './Main';
 
-type Details = TypeOf<typeof userModel.registerSchema>;
+type Details = TypeOf<typeof UserModel.registerSchema>;
 
 const RegisterContainer = () => {
   const context = useContext(NavContext);

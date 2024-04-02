@@ -13,10 +13,10 @@ import { TypeOf } from 'zod';
 import { Main, Button, InfoMessage } from '@flumens';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { IonIcon, IonItem } from '@ionic/react';
-import userModel from 'models/user';
+import { UserModel } from 'models/user';
 import ControlledInput from '../common/Components/ControlledInput';
 
-type Details = TypeOf<typeof userModel.loginSchema>;
+type Details = TypeOf<typeof UserModel.loginSchema>;
 
 type Props = {
   onSubmit: SubmitHandler<Details>;
@@ -29,7 +29,7 @@ const LoginMain = ({ onSubmit }: Props) => {
 
   const { formState, handleSubmit, control } = useForm<Details>({
     defaultValues: { email: '', password: '' },
-    resolver: zodResolver(userModel.loginSchema),
+    resolver: zodResolver(UserModel.loginSchema),
   });
 
   return (

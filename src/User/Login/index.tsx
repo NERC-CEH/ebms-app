@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { TypeOf } from 'zod';
 import { useToast, useLoader, Page, Header, device } from '@flumens';
 import { NavContext } from '@ionic/react';
-import userModel from 'models/user';
+import userModel, { UserModel } from 'models/user';
 import Main from './Main';
 
-type Details = TypeOf<typeof userModel.loginSchema>;
+type Details = TypeOf<typeof UserModel.loginSchema>;
 
 const LoginController = () => {
   const { navigate } = useContext(NavContext);

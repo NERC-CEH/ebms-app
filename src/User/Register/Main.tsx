@@ -14,10 +14,10 @@ import { Main, Button } from '@flumens';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { IonIcon, IonRouterLink } from '@ionic/react';
 import config from 'common/config';
-import userModel from 'models/user';
+import { UserModel } from 'models/user';
 import ControlledInput from '../common/Components/ControlledInput';
 
-type Details = TypeOf<typeof userModel.registerSchema>;
+type Details = TypeOf<typeof UserModel.registerSchema>;
 
 type Props = {
   onSubmit: SubmitHandler<Details>;
@@ -31,7 +31,7 @@ const RegisterMain = ({ onSubmit, lang }: Props) => {
 
   const { formState, handleSubmit, control } = useForm<Details>({
     defaultValues: { firstName: '', lastName: '', email: '', password: '' },
-    resolver: zodResolver(userModel.registerSchema),
+    resolver: zodResolver(UserModel.registerSchema),
   });
 
   return (

@@ -5,10 +5,10 @@ import { TypeOf } from 'zod';
 import { Main, Button, InfoMessage } from '@flumens';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { IonIcon } from '@ionic/react';
-import userModel from 'models/user';
+import { UserModel } from 'models/user';
 import ControlledInput from '../common/Components/ControlledInput';
 
-type Details = TypeOf<typeof userModel.resetSchema>;
+type Details = TypeOf<typeof UserModel.resetSchema>;
 
 type Props = {
   onSubmit: SubmitHandler<Details>;
@@ -17,7 +17,7 @@ type Props = {
 const ResetMain = ({ onSubmit }: Props) => {
   const { formState, handleSubmit, control } = useForm<Details>({
     defaultValues: { email: '' },
-    resolver: zodResolver(userModel.resetSchema),
+    resolver: zodResolver(UserModel.resetSchema),
   });
 
   return (

@@ -31,6 +31,22 @@ const defaults: Attrs = {
 };
 
 export class UserModel extends DrupalUserModel {
+  static registerSchema: any = object({
+    email: z.string().email('Please fill in'),
+    password: z.string().min(1, 'Please fill in'),
+    firstName: z.string().min(1, 'Please fill in'),
+    lastName: z.string().min(1, 'Please fill in'),
+  });
+
+  static resetSchema: any = object({
+    email: z.string().email('Please fill in'),
+  });
+
+  static loginSchema: any = object({
+    email: z.string().email('Please fill in'),
+    password: z.string().min(1, 'Please fill in'),
+  });
+
   // eslint-disable-next-line
   // @ts-ignore
   attrs: Attrs = DrupalUserModel.extendAttrs(this.attrs, defaults);
@@ -38,22 +54,6 @@ export class UserModel extends DrupalUserModel {
   userSpeciesReport = observable([]) as any;
 
   userSpeciesLastMonthReport = observable([]) as any;
-
-  registerSchema: any = object({
-    email: z.string().email('Please fill in'),
-    password: z.string().min(1, 'Please fill in'),
-    firstName: z.string().min(1, 'Please fill in'),
-    lastName: z.string().min(1, 'Please fill in'),
-  });
-
-  resetSchema: any = object({
-    email: z.string().email('Please fill in'),
-  });
-
-  loginSchema: any = object({
-    email: z.string().email('Please fill in'),
-    password: z.string().min(1, 'Please fill in'),
-  });
 
   constructor(options: any) {
     super(options);
