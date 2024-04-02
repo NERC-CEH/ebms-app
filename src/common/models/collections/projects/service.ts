@@ -1,29 +1,11 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
+import { camelCase, mapKeys } from 'lodash';
 import { ZodError } from 'zod';
-import { isAxiosNetworkError, HandledError, string } from '@flumens';
+import { isAxiosNetworkError, HandledError } from '@flumens';
 import CONFIG from 'common/config';
 import Project, { ProjectAttributes } from 'models/project';
 import userModel from 'models/user';
-
-/**
- * Map over all the keys of an object to return
- * a new object
- */
-export const mapKeys = <
-  TValue,
-  TKey extends string | number | symbol,
-  TNewKey extends string | number | symbol
->(
-  obj: Record<TKey, TValue>,
-  mapFunc: (key: TKey, value: TValue) => TNewKey
-): Record<TNewKey, TValue> => {
-  const keys = Object.keys(obj) as TKey[];
-  return keys.reduce((acc, key) => {
-    acc[mapFunc(key as TKey, obj[key])] = obj[key];
-    return acc;
-  }, {} as Record<TNewKey, TValue>);
-};
 
 type Props = { country?: string; member?: boolean };
 
@@ -43,7 +25,8 @@ export async function fetch({ member }: Props): Promise<ProjectAttributes[]> {
   try {
     const res = await axios.get(url, options);
 
-    const getValues = (doc: any) => mapKeys(doc.values, string.camel);
+    const getValues = (doc: any) =>
+      mapKeys(doc.values, (_, key) => camelCase(key));
     const entities = res.data.map(getValues);
 
     entities.forEach(Project.schema.parse);
