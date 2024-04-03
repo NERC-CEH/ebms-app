@@ -1196,16 +1196,14 @@ msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
 "any place and at any time when butterflies are active (i.e. when the weather"
 " is warm and preferably sunny). You can also use the app to record your "
-"established butterfly transects. Later in 2020, the app will also include "
-"the ability to submit casual records. The notes below tell you how to use "
-"the currently available methods."
+"established butterfly transects. The notes below tell you how to use the "
+"currently available methods."
 msgstr ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
 "any place and at any time when butterflies are active (i.e. when the weather"
 " is warm and preferably sunny). You can also use the app to record your "
-"established butterfly transects. Later in 2020, the app will also include "
-"the ability to submit casual records. The notes below tell you how to use "
-"the currently available methods."
+"established butterfly transects. The notes below tell you how to use the "
+"currently available methods."
 
 msgid "How to do a 15-minute Count"
 msgstr "How to do a 15-minute Count"
@@ -2530,47 +2528,55 @@ msgstr "Reliability cannot be empty."
 msgid "Cloud cannot be empty."
 msgstr "Cloud cannot be empty."
 
-# Survey Projects functionality 
+# Survey Projects functionality
 msgid "Not linked to any project"
 msgstr "Not linked to any project"
 
-# Survey Projects functionality 
+# Survey Projects functionality
 msgid "Join"
 msgstr "Join"
 
-# Survey Projects functionality 
+# Survey Projects functionality
 msgid "Project"
 msgstr "Project"
 
-# Survey Projects functionality 
+# Survey Projects functionality
 msgid "Projects"
 msgstr "Projects"
 
-# Survey Projects functionality 
+# Survey Projects functionality
 msgid "My projects"
 msgstr "My projects"
 
-# Survey Projects functionality 
+# Survey Projects functionality
 msgid "All projects"
 msgstr "All projects"
 
-# Survey Projects functionality 
-msgid "You haven't joined any projects yet. Go to the \"All projects\" tab to join a project.<br/><br/>Pull the page down to refresh the list."
-msgstr "You haven't joined any projects yet. Go to the \"All projects\" tab to join a project.<br/><br/>Pull the page down to refresh the list."
+# Survey Projects functionality
+msgid ""
+"You haven't joined any projects yet. Go to the \"All projects\" tab to join "
+"a project.<br/><br/>Pull the page down to refresh the list."
+msgstr ""
+"You haven't joined any projects yet. Go to the \"All projects\" tab to join "
+"a project.<br/><br/>Pull the page down to refresh the list."
 
-# Survey Projects functionality 
-msgid "There are currently no new projects available to join.<br/><br/>Pull the page down to refresh the list."
-msgstr "There are currently no new projects available to join.<br/><br/>Pull the page down to refresh the list."
+# Survey Projects functionality
+msgid ""
+"There are currently no new projects available to join.<br/><br/>Pull the "
+"page down to refresh the list."
+msgstr ""
+"There are currently no new projects available to join.<br/><br/>Pull the "
+"page down to refresh the list."
 
-# Survey Projects functionality 
+# Survey Projects functionality
 msgid "Successfully joined the project."
 msgstr "Successfully joined the project."
 
-# Survey Projects functionality 
+# Survey Projects functionality
 msgid "Leave"
 msgstr "Leave"
 
-# Survey Projects functionality 
+# Survey Projects functionality
 msgid "Successfully left the project."
 msgstr "Successfully left the project."
 
@@ -2579,5 +2585,9 @@ msgid "Sensitive"
 msgstr "Sensitive"
 
 # Survey sensitivity attribute
-msgid "This survey has sensitive species and should not be included in public reports."
-msgstr "This survey has sensitive species and should not be included in public reports."
+msgid ""
+"This survey has sensitive species and should not be included in public "
+"reports."
+msgstr ""
+"This survey has sensitive species and should not be included in public "
+"reports."

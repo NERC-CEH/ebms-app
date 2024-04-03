@@ -31,14 +31,13 @@ const Component = () => {
             The preferred method is to conduct a 15-minute Count. This can be
             done at any place and at any time when butterflies are active (i.e.
             when the weather is warm and preferably sunny). You can also use the
-            app to record your established butterfly transects. Later in 2020,
-            the app will also include the ability to submit casual records. The
-            notes below tell you how to use the currently available methods.
+            app to record your established butterfly transects. The notes below
+            tell you how to use the currently available methods.
           </P>
         </Section>
 
-        <Section onClick={navigateTo}>
-          <div className="painted-lady-guide">
+        <Section>
+          <div className="painted-lady-guide" onClick={navigateTo}>
             <H>Tracking the Painted Lady migration with Butterfly Count</H>
             <IonIcon slot="end" icon={openOutline} />
           </div>
@@ -88,7 +87,7 @@ const Component = () => {
             requires that your account is already linked to a transect setup
             within the eBMS system. If no transect sites are listed once you are
             logged into the app, please contact your national co-ordinator
-            (please email {{ helpEmail }} for advice).
+            (please email {{ helpEmail } as any} for advice).
           </P>
           <P>
             To start with the transect count, hold down the + button (a
