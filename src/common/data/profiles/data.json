@@ -33181,7 +33181,7 @@
   },
   {
     "warehouse_id": 549765,
-    "taxon": "Brenthis sp.",
+    "taxon": "Brenthis daphne/ino",
     "abundance": { "JP": "P" }
   },
   {
@@ -46936,6 +46936,16 @@
   {
     "warehouse_id": 629118,
     "taxon": "Argynnis nagiae",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 629121,
+    "taxon": "Brenthis daphne 1",
+    "abundance": { "JP": "P" }
+  },
+  {
+    "warehouse_id": 629123,
+    "taxon": "Brenthis daphne 2",
     "abundance": { "JP": "P" }
   }
 ]
