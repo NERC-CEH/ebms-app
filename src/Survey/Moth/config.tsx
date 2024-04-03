@@ -24,7 +24,7 @@ import { assignIfMissing } from 'common/models/utils';
 import { fetchHistoricalWeather } from 'common/services/openWeather';
 import appModel from 'models/app';
 import Occurrence from 'models/occurrence';
-import AppSample from 'models/sample';
+import AppSample, { MothTrapLocation } from 'models/sample';
 import {
   Survey,
   commentAttr,
@@ -216,7 +216,7 @@ const getSetDefaultTime = (sample: AppSample) => () => {
   const { surveyStartTime } = sample.attrs;
   if (surveyStartTime) return;
 
-  const { location } = sample.attrs.location?.attrs || {};
+  const { location } = (sample.attrs.location as MothTrapLocation)?.attrs || {};
   if (!isValidLocation(location)) return;
 
   // end time
@@ -245,7 +245,7 @@ const getSetEndWeather = (sample: AppSample) => async () => {
   if (!device.isOnline) return;
 
   const weatherValues = await fetchHistoricalWeather(
-    sample.attrs.location.attrs.location,
+    (sample.attrs.location as MothTrapLocation).attrs.location,
     sample.attrs.surveyEndTime!
   );
 
@@ -255,13 +255,14 @@ const getSetEndWeather = (sample: AppSample) => async () => {
   assignIfMissing(sample, 'cloudEnd', weatherValues.cloud);
 };
 const getHasEndTimeAndLocation = (sample: AppSample) => () =>
-  !!sample.attrs.surveyEndTime && sample.attrs.location?.id;
+  !!sample.attrs.surveyEndTime &&
+  !!(sample.attrs.location as MothTrapLocation)?.id;
 
 const getSetStartWeather = (sample: AppSample) => async () => {
   if (!device.isOnline) return;
 
   const weatherValues = await fetchHistoricalWeather(
-    sample.attrs.location.attrs.location,
+    (sample.attrs.location as MothTrapLocation).attrs.location,
     sample.attrs.surveyStartTime!
   );
 
@@ -272,7 +273,8 @@ const getSetStartWeather = (sample: AppSample) => async () => {
 };
 
 const getHasStartTimeAndLocation = (sample: AppSample) => () =>
-  !!sample.attrs.surveyStartTime && sample.attrs.location?.id;
+  !!sample.attrs.surveyStartTime &&
+  !!(sample.attrs.location as MothTrapLocation)?.id;
 
 const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
   const LUNAR_MONTH = 29.530588853;
@@ -323,7 +325,7 @@ const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
 
 const getSetStartMoonPhase = (sample: AppSample) => () => {
   const isSouthernHemisphere =
-    sample.attrs.location?.attrs?.location?.latitude < 0;
+    (sample.attrs.location as MothTrapLocation)?.attrs?.location?.latitude < 0;
   const moonPhase = getMoonPhase(
     new Date(sample.attrs.surveyStartTime!),
     isSouthernHemisphere
@@ -334,7 +336,7 @@ const getSetStartMoonPhase = (sample: AppSample) => () => {
 
 const getSetStartMoonEndPhase = (sample: AppSample) => () => {
   const isSouthernHemisphere =
-    sample.attrs.location?.attrs?.location?.latitude < 0;
+    (sample.attrs.location as MothTrapLocation)?.attrs?.location?.latitude < 0;
   const moonPhase = getMoonPhase(
     new Date(sample.attrs.surveyEndTime!),
     isSouthernHemisphere

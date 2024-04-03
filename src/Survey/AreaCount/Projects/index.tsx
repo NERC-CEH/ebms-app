@@ -15,7 +15,7 @@ import {
   join,
   leave,
 } from 'models/collections/projects/service';
-import Project, { ProjectAttributes } from 'models/project';
+import Project, { RemoteAttributes } from 'models/project';
 import Sample from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
 import Main from './Main';
@@ -53,15 +53,17 @@ const Projects = ({ sample }: Props) => {
     navigation.goBack();
   };
 
-  const [allProjects, setAllProjects] = useState<ProjectAttributes[]>([]);
+  const [allProjects, setAllProjects] = useState<RemoteAttributes[]>([]);
 
-  const joinProject = async (doc: ProjectAttributes) => {
+  const joinProject = async (doc: RemoteAttributes) => {
+    console.log('Projects joining', doc.id);
+
     try {
       await loader.show('Please wait...');
       await join(doc);
 
       const allProjectsWithoutTheJoined = allProjects.filter(
-        ({ id }: ProjectAttributes) => id !== doc.id
+        ({ id }: RemoteAttributes) => id !== doc.id
       );
       setAllProjects(allProjectsWithoutTheJoined);
       toast.success('Successfully joined the project.');
@@ -71,13 +73,11 @@ const Projects = ({ sample }: Props) => {
 
     loader.hide();
 
-    const project = new Project(Project.parseRemoteJSON(doc));
-    project.save();
-    projects.push(project);
+    await projects.fetch();
   };
 
   const leaveProject = async (projectId: string) => {
-    console.log('leaving', projectId);
+    console.log('Projects leaving', projectId);
 
     try {
       await loader.show('Please wait...');

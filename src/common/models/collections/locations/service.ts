@@ -1,9 +1,11 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
+import { camelCase, mapKeys } from 'lodash';
+import { ZodError } from 'zod';
 import { isAxiosNetworkError, HandledError } from '@flumens';
 import CONFIG from 'common/config';
+import LocationModel, { RemoteAttributes } from 'models/location';
 import userModel from 'models/user';
-import { MOTH_TRAP_TYPE } from '../../location';
 
 export type Response = Location[];
 
@@ -48,14 +50,16 @@ export interface Location {
   };
 }
 
-export default async function fetchLocations() {
+export default async function fetch(
+  locationTypeId: number | string
+): Promise<RemoteAttributes[]> {
   const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/locations`;
 
   const token = await userModel.getAccessToken();
 
   const options = {
     params: {
-      location_type_id: MOTH_TRAP_TYPE, // TODO: move the actual params to the Location model
+      location_type_id: locationTypeId,
       public: false,
       verbose: 1,
     },
@@ -68,13 +72,14 @@ export default async function fetchLocations() {
   try {
     const res = await axios.get(url, options);
 
-    let docs: Response = res.data;
+    const getValues = (doc: any) =>
+      mapKeys(doc.values, (_, key) =>
+        key.includes(':') ? key : camelCase(key)
+      );
+    const docs = res.data.map(getValues);
 
-    if (typeof docs === 'string') {
-      // TODO: remove once the empty locations with verbose bug is fixed.
-      // https://github.com/Indicia-Team/warehouse/issues/430
-      docs = [];
-    }
+    docs.forEach(LocationModel.remoteSchema.parse);
+
     return docs;
   } catch (error: any) {
     if (axios.isCancel(error)) return [];
@@ -83,6 +88,13 @@ export default async function fetchLocations() {
       throw new HandledError(
         'Request aborted because of a network issue (timeout or similar).'
       );
+
+    if ('issues' in error) {
+      const err: ZodError = error;
+      throw new Error(
+        err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
+      );
+    }
 
     throw error;
   }

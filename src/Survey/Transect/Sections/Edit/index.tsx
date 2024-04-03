@@ -147,7 +147,11 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
     });
   };
 
+  const isDisabled = !!sample.metadata.syncedOn;
+
   const getNextSectionButton = () => {
+    if (isDisabled) return null;
+
     const byCid = ({ cid }: Sample) => cid === subSample.cid;
     const currentSectionIndex = sample.samples.findIndex(byCid);
 
@@ -273,9 +277,9 @@ const EditController: FC<Props> = ({ sample, subSample }) => {
     navigate(`${url}/${occ.cid}/${taxa}`);
   };
 
-  const isDisabled = !!sample.metadata.syncedOn;
-
-  const sectionCode = subSample.attrs.location.code || t('Section');
+  const sectionLocation = subSample.attrs.location!;
+  const sectionCode =
+    ('code' in sectionLocation && sectionLocation.code) || t('Section');
 
   const { areaSurveyListSortedByTime } = appModel.attrs;
   return (

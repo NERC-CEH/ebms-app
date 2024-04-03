@@ -9,7 +9,7 @@ type Props = {
   sample: Sample;
 };
 
-const UploadedRecordInforMesasge = ({ sample }: Props) => {
+const UploadedRecordInfoMessage = ({ sample }: Props) => {
   const { webForm } = sample.getSurvey();
 
   return (
@@ -33,4 +33,4 @@ const UploadedRecordInforMesasge = ({ sample }: Props) => {
   );
 };
 
-export default UploadedRecordInforMesasge;
+export default UploadedRecordInfoMessage;

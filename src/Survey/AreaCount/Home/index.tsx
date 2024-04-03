@@ -13,7 +13,7 @@ import Occurrence, {
   Taxon,
   doesShallowTaxonMatch,
 } from 'models/occurrence';
-import Sample, { useValidateCheck } from 'models/sample';
+import Sample, { AreaCountLocation, useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
 import { useDeleteConfirmation } from '../Occurrence/Species';
 import Header from './Header';
@@ -170,10 +170,13 @@ const HomeController: FC<Props> = ({ sample }) => {
   const [hasLongSections, setHasLongSections] = useState(false);
 
   const calculateIfHasLongSections = () => {
-    if (!sample.attrs.location?.shape?.coordinates.length) return;
+    if (
+      !(sample.attrs.location as AreaCountLocation)?.shape?.coordinates.length
+    )
+      return;
     if (!sample.metadata.saved) return;
 
-    const shapeCoords = [...sample.attrs.location.shape.coordinates];
+    const shapeCoords = [...(sample.attrs.location as any).shape.coordinates];
 
     for (let index = 1; index < shapeCoords.length; index++) {
       const coords = shapeCoords[index];
@@ -212,7 +215,7 @@ const HomeController: FC<Props> = ({ sample }) => {
   };
 
   useEffect(calculateIfHasLongSections, [
-    sample.attrs.location?.shape?.coordinates,
+    (sample.attrs.location as AreaCountLocation)?.shape?.coordinates,
   ]);
 
   const _processSubmission = async () => {

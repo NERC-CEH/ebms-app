@@ -1,26 +1,27 @@
-import { FC } from 'react';
-import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
+import wkt from 'wellknown';
 import { Main } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
+import transformToLatLon from 'common/helpers/location';
 import butterflyIcon from 'common/images/butterfly.svg';
-import { AppModel } from 'models/app';
 import Sample from 'models/sample';
-import transformToLatLon from 'helpers/location';
 import SVG from './components/SVG';
 import Transects from './components/Transects';
 import './styles.scss';
 
 const getSectionItem = (sectionSample: Sample, match: any) => {
-  const section = sectionSample.attrs.location;
-  const geometry = toJS(section.geom) || {};
+  const section = sectionSample.attrs.location!;
 
-  geometry.coordinates = transformToLatLon(geometry);
-
-  const geom = [{ type: 'Feature', geometry }];
-
-  const isPoint = geometry.type === 'Point';
+  let geom: any;
+  if ('boundaryGeom' in section) {
+    geom = wkt.parse(section.boundaryGeom!);
+    geom.coordinates = transformToLatLon(geom);
+    geom = [{ type: 'Feature', geometry: geom }];
+    if (geom?.type === 'Point') {
+      geom = null;
+    }
+  }
 
   const sectionSpeciesCount = sectionSample.occurrences.length;
 
@@ -31,10 +32,10 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
       routerLink={`${match.url}/${sectionSample.cid}`}
       detail
     >
-      {!isPoint && <SVG geom={geom} />}
+      {!!geom && <SVG geom={geom} />}
 
       <IonLabel className="ion-text-wrap" slot="start">
-        {section.name || section.id}
+        {section.name || (section as any).code}
       </IonLabel>
       {!!sectionSpeciesCount && (
         <IonLabel slot="end">
@@ -48,23 +49,23 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
 
 type Props = {
   sample: Sample;
-  appModel: AppModel;
   onTransectSelect: any;
 };
-const Sections: FC<Props> = ({ sample, appModel, onTransectSelect }) => {
+const Sections = ({ sample, onTransectSelect }: Props) => {
   const match = useRouteMatch<any>();
 
   const hasSelectedTransect = sample.attrs.location;
-  if (!hasSelectedTransect) {
-    return (
-      <Transects appModel={appModel} onTransectSelect={onTransectSelect} />
-    );
-  }
+  if (!hasSelectedTransect)
+    return <Transects onTransectSelect={onTransectSelect} />;
 
   const getSectionItemWrap = (s: Sample) => getSectionItem(s, match);
   const byCode = (smp1: Sample, smp2: Sample) => {
-    const sectionCodeNumberIndex1 = smp1.attrs.location.code.match(/\d+$/)?.[0];
-    const sectionCodeNumberIndex2 = smp2.attrs.location.code.match(/\d+$/)?.[0];
+    const sectionCodeNumberIndex1: any = (
+      smp1.attrs.location as any
+    ).code?.match(/\d+$/)?.[0];
+    const sectionCodeNumberIndex2: any = (
+      smp2.attrs.location as any
+    ).code?.match(/\d+$/)?.[0];
     return sectionCodeNumberIndex1 - sectionCodeNumberIndex2;
   };
   const sections = sample.samples.slice().sort(byCode).map(getSectionItemWrap);

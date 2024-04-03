@@ -3,8 +3,10 @@ import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { Page, useToast, useLoader, device } from '@flumens';
 import appModel from 'models/app';
+import locations, { byType } from 'models/collections/locations';
+import Location, { TRANSECT_SECTION_TYPE } from 'models/location';
 import Sample from 'models/sample';
-import userModel, { useUserStatusCheck } from 'models/user';
+import { useUserStatusCheck } from 'models/user';
 import Header from './Header';
 import Main from './Main';
 
@@ -26,7 +28,7 @@ const SectionListController = ({ sample }: Props) => {
     await loader.show('Please wait...');
 
     try {
-      await appModel.updateUserTransects(userModel);
+      await locations.fetch();
 
       toast.success('Transect list was successfully updated.');
     } catch (e: any) {
@@ -35,26 +37,33 @@ const SectionListController = ({ sample }: Props) => {
     await loader.hide();
   };
 
-  const addSectionSubSamples = () => {
-    const transect = sample.attrs.location;
+  const onTransectSelect = (transect: Location) => {
+    // eslint-disable-next-line no-param-reassign
+    sample.attrs.location = toJS(transect.attrs);
+
+    const byTransectId = (section: Location) =>
+      section.attrs.parentId === transect.id;
+
+    const sections = locations
+      .filter(byType(TRANSECT_SECTION_TYPE))
+      .filter(byTransectId);
+
     const survey = sample.getSurvey();
-    const addSection = (section: any) => {
-      const sectionSample = survey.smp!.create!({ Sample, location: section });
+    const addSectionSample = (section: any) => {
+      const sectionSample = survey.smp!.create!({
+        Sample,
+        location: toJS(section.attrs),
+      });
       sample.samples.push(sectionSample);
     };
-    transect.sections.forEach(addSection);
+
+    sections.forEach(addSectionSample);
+
     sample.save();
   };
 
-  const onTransectSelect = (transect: any) => {
-    const location = toJS(transect);
-    // eslint-disable-next-line no-param-reassign
-    sample.attrs.location = location;
-    addSectionSubSamples();
-  };
-
   useEffect(() => {
-    if (!appModel.attrs.transects.length && device.isOnline) {
+    if (!locations.length && device.isOnline) {
       refreshUserTransects();
       appModel.attrs.transectsRefreshTimestamp = new Date().getTime();
       return;
@@ -77,16 +86,8 @@ const SectionListController = ({ sample }: Props) => {
 
   return (
     <Page id="transect-sections-list">
-      <Header
-        showRefreshButton={!transect}
-        // eslint-disable-next-line @getify/proper-arrows/name
-        onRefresh={() => refreshUserTransects()}
-      />
-      <Main
-        sample={sample}
-        appModel={appModel}
-        onTransectSelect={onTransectSelect}
-      />
+      <Header showRefreshButton={!transect} onRefresh={refreshUserTransects} />
+      <Main sample={sample} onTransectSelect={onTransectSelect} />
     </Page>
   );
 };

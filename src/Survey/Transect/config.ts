@@ -37,8 +37,14 @@ const locationAttr = {
       submission.values = {
         ...submission.values,
         ...{
-          entered_sref_system: location.sref_system,
-          entered_sref: location.centroid_sref,
+          entered_sref_system:
+            location.centroidSrefSystem ||
+            // Backwards compatible
+            location.sref_system,
+          entered_sref:
+            location.centroidSref ||
+            // Backwards compatible
+            location.centroid_sref,
         },
       };
 
@@ -49,8 +55,9 @@ const locationAttr = {
 
 const transectLocationSchema = Yup.object().shape({
   id: Yup.string().required(),
-  centroid_sref: Yup.string().required(),
-  sref_system: Yup.string().required(),
+  // TODO: enable once all the old samples are uploaded
+  // centroidSref: Yup.string().required(),
+  // srefSystem: Yup.string().required(),
 });
 
 const validation = (val: any) => {

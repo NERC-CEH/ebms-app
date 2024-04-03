@@ -14,12 +14,12 @@ type Metadata = ModelMetadata & {
   saved?: boolean;
 };
 
-export type ProjectAttributes = z.infer<typeof Project.schema>;
+export type RemoteAttributes = z.infer<typeof ProjectModel.remoteSchema>;
 
-type Attrs = Omit<ProjectAttributes, 'id' | 'createdOn'> & ModelAttrs;
+type Attrs = Omit<RemoteAttributes, 'id' | 'createdOn'> & ModelAttrs;
 
-class Project extends Model {
-  static schema = object({
+class ProjectModel extends Model {
+  static remoteSchema = object({
     id: z.string(),
     title: z.string(),
     createdOn: z.string(),
@@ -35,7 +35,7 @@ class Project extends Model {
     indexedLocationIds: z.array(z.number()).optional(),
   });
 
-  static parseRemoteJSON({ id, createdOn, ...attrs }: ProjectAttributes) {
+  static parseRemoteJSON({ id, createdOn, ...attrs }: RemoteAttributes) {
     return {
       id,
       cid: UUID(),
@@ -48,7 +48,7 @@ class Project extends Model {
     };
   }
 
-  collection?: Collection<Project>;
+  collection?: Collection<ProjectModel>;
 
   validateRemote = validateRemoteModel;
 
@@ -79,4 +79,4 @@ class Project extends Model {
   }
 }
 
-export default Project;
+export default ProjectModel;

@@ -14,6 +14,7 @@ import {
   IonToggle,
   IonInput,
 } from '@ionic/react';
+import HeaderButton from 'Survey/common/HeaderButton';
 
 type Location = any;
 
@@ -87,19 +88,18 @@ const EditModal: FC<Props> = ({ location, onLocationSave }) => {
         <IonToolbar>
           <IonButtons slot="start">
             <IonButton onClick={closeModal}>
-              <T>Close</T>
+              <T>Cancel</T>
             </IonButton>
           </IonButtons>
           <IonTitle>
-            <T>Edit Location</T>
+            <T>Edit</T>
           </IonTitle>
           <IonButtons slot="end">
-            <IonButton onClick={save}>
-              <T>Save</T>
-            </IonButton>
+            <HeaderButton onClick={save}>Save</HeaderButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
+
       <Main fullscreen>{form}</Main>
     </IonModal>
   );

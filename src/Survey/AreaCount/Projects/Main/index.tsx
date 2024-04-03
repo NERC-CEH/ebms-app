@@ -10,7 +10,7 @@ import {
 } from '@ionic/react';
 import { Main } from 'common/flumens';
 import projects from 'common/models/collections/projects';
-import { ProjectAttributes } from 'common/models/project';
+import { RemoteAttributes } from 'common/models/project';
 import Sample from 'models/sample';
 import AllProjects from './All';
 import UserProjects from './User';
@@ -20,7 +20,7 @@ type Props = {
   setProject: any;
   onJoinProject: any;
   onLeaveProject: any;
-  allProjects: ProjectAttributes[];
+  allProjects: RemoteAttributes[];
   sample: Sample;
 };
 

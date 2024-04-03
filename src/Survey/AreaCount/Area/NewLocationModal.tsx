@@ -1,30 +1,40 @@
-import { forwardRef, useRef, useState } from 'react';
-import { observable, toJS } from 'mobx';
-import { observer } from 'mobx-react';
+import { forwardRef, useState } from 'react';
+import clsx from 'clsx';
 import { resizeOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
+import { z, object } from 'zod';
 import { Main } from '@flumens';
 import TextInput from '@flumens/tailwind/dist/components/Input';
+import { isPlatform } from '@ionic/core';
 import {
   IonButton,
   IonButtons,
   IonHeader,
   IonIcon,
-  IonLabel,
-  IonList,
   IonModal,
   IonTitle,
   IonToolbar,
   useIonActionSheet,
 } from '@ionic/react';
 import { Project } from 'common/models/sample';
+import HeaderButton from 'Survey/common/HeaderButton';
+
+const schema = object({
+  name: z.string().min(1, 'Please fill in'),
+  comment: z.string().optional(),
+});
+
+type FixedLocation = z.infer<typeof schema>;
 
 const useDismissHandler = (newLocation: any) => {
   const [present] = useIonActionSheet();
   const canDismiss = () =>
     new Promise<boolean>(resolve => {
       const isEmpty = !Object.values(newLocation).length;
-      if (isEmpty) return resolve(true);
+      if (isEmpty) {
+        resolve(true);
+        return;
+      }
 
       present({
         header: 'Are you sure?',
@@ -44,7 +54,7 @@ type Props = {
   presentingElement: any;
   isOpen: any;
   onCancel: any;
-  onSave: any;
+  onSave: (location: FixedLocation) => void;
   project: Project;
   location: any;
 };
@@ -53,14 +63,18 @@ const NewLocationModal = (
   { presentingElement, isOpen, onCancel, onSave, project, location }: Props,
   ref: any
 ) => {
-  const [newLocation, setNewLocation] = useState<any>({});
-  const isValidLocation = !!newLocation.name;
+  const [newLocation, setNewLocation] = useState<FixedLocation>({
+    name: '',
+    comment: '',
+  });
 
-  const canDismiss = useDismissHandler(newLocation);
+  const { success: isValidLocation } = schema.safeParse(newLocation);
+
+  const canDismiss = useDismissHandler(newLocation || {});
 
   const onSaveWrap = () => onSave(location);
 
-  const cleanUp = () => setNewLocation(observable({}));
+  const cleanUp = () => setNewLocation({ name: '', comment: '' });
 
   const { area } = location;
 
@@ -81,19 +95,17 @@ const NewLocationModal = (
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonButton onClick={dismiss}>Cancel</IonButton>
-          </IonButtons>
-          <IonTitle>New Location</IonTitle>
-          <IonButtons slot="end">
-            <IonButton
-              color={isValidLocation ? 'secondary' : 'medium'}
-              fill="solid"
-              shape="round"
-              className="primary-button"
-              onClick={onSaveWrap}
-            >
-              <IonLabel>Save</IonLabel>
+            <IonButton onClick={dismiss}>
+              <T>Cancel</T>
             </IonButton>
+          </IonButtons>
+          <IonTitle className={clsx(isPlatform('ios') && 'pr-[130px]')}>
+            <T>New Location</T>
+          </IonTitle>
+          <IonButtons slot="end">
+            <HeaderButton isInvalid={!isValidLocation} onClick={onSaveWrap}>
+              Save
+            </HeaderButton>
           </IonButtons>
         </IonToolbar>
         <IonToolbar id="area-edit-toolbar">
@@ -110,18 +122,26 @@ const NewLocationModal = (
       </IonHeader>
 
       <Main>
-        <IonList>
-          <div className="rounded">
-            <TextInput
-              value={newLocation.name}
-              label="Site name"
-              onChange={(newVal: string) =>
-                setNewLocation({ ...location, name: newVal })
-              }
-              platform="ios"
-            />
-          </div>
-        </IonList>
+        <div className="m-3 rounded">
+          <TextInput
+            value={newLocation.name}
+            label="Site name"
+            onChange={(newVal: string) =>
+              setNewLocation({ ...newLocation, name: newVal })
+            }
+            platform="ios"
+          />
+          <TextInput
+            value={newLocation.comment}
+            label="Notes"
+            onChange={(newVal: string) =>
+              setNewLocation({ ...newLocation, comment: newVal })
+            }
+            platform="ios"
+            labelPlacement="floating"
+            isMultiline
+          />
+        </div>
       </Main>
     </IonModal>
   );

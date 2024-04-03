@@ -3,25 +3,27 @@ import { observer } from 'mobx-react';
 import { Button, Badge } from '@flumens';
 import { IonSpinner } from '@ionic/react';
 import Location from 'models/location';
-import './styles.scss';
 
 type Props = {
   location: Location;
   onUpload: any;
 };
 const OnlineStatus: FC<Props> = ({ location, onUpload }) => {
-  const { saved } = location.metadata;
+  if (!location.metadata.saved)
+    return <Badge className="max-w-32">Draft</Badge>;
 
-  if (!saved) return <Badge className="max-w-32">Draft</Badge>;
-
-  if (location.remote.synchronising) {
-    return <IonSpinner class="record-status" color="primary" />;
-  }
+  if (location.remote.synchronising)
+    return <IonSpinner className="mr-2 size-4" />;
 
   if (location.isUploaded()) return null;
 
   return (
-    <Button color="secondary" shape="round" onPress={onUpload} preventDefault>
+    <Button
+      color="secondary"
+      onPress={onUpload}
+      preventDefault
+      className="max-w-28 shrink-0 whitespace-nowrap px-4 py-1"
+    >
       Upload
     </Button>
   );

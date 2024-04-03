@@ -29,10 +29,10 @@ const DetailsController: FC<Props> = ({ sample }) => {
     navigate(url, 'forward', 'pop');
   };
 
-  const isInValid = sample.validateRemote();
+  const isInvalid = sample.validateRemote();
 
   const getNextButton = sample.isDetailsComplete() ? null : (
-    <HeaderButton onClick={onFinish} isInValid={isInValid}>
+    <HeaderButton onClick={onFinish} isInvalid={isInvalid}>
       Next
     </HeaderButton>
   );

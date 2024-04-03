@@ -11,10 +11,10 @@ const SurveyHeaderButton = ({ sample, onClick }: Props) => {
   const isDisabled = sample.isUploaded();
   if (isDisabled) return null;
 
-  const isInValid = sample.validateRemote();
+  const isInvalid = sample.validateRemote();
 
   return (
-    <HeaderButton isInValid={isInValid} onClick={onClick}>
+    <HeaderButton isInvalid={isInvalid} onClick={onClick}>
       {sample.metadata.saved ? 'Upload' : 'Finish'}
     </HeaderButton>
   );

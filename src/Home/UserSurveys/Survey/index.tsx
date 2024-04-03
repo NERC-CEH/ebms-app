@@ -12,7 +12,7 @@ import {
 } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import Occurrence from 'models/occurrence';
-import Sample, { useValidateCheck } from 'models/sample';
+import Sample, { MothTrapLocation, useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
 import OnlineStatus from './OnlineStatus';
 import './styles.scss';
@@ -108,7 +108,8 @@ const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
     }
 
     if (survey.name === 'moth') {
-      const locationName = sample.attrs.location?.attrs?.location?.name;
+      const locationName = (sample.attrs.location as MothTrapLocation)?.attrs
+        ?.location?.name;
 
       return (
         <>

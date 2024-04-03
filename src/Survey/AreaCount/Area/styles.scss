@@ -30,14 +30,6 @@ html[mode='ios'] {
 #bottom-sheet-tracks {
   --height: 95vh;
 
-  .info-background-message {
-    max-width: 300px;
-
-    span {
-      padding: 20px 10px;
-    }
-  }
-
   &::part(handle) {
     margin-top: 10px;
   }

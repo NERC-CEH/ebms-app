@@ -1,7 +1,8 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
-import { InfoMessage, device } from '@flumens';
+import { Trans as T } from 'react-i18next';
+import { InfoMessage, device, Button } from '@flumens';
 import {
   useIonViewWillLeave,
   useIonViewWillEnter,
@@ -11,35 +12,37 @@ import {
   IonHeader,
   IonToolbar,
   IonIcon,
+  IonList,
 } from '@ionic/react';
 import turf from '@turf/distance';
-import locations from 'models/collections/locations';
 import MothTrap from 'models/location';
 import Sample from 'models/sample';
 import hasLocationMatch from 'Survey/common/hasLocationMatch';
-import BottomSheetMothTrapEntry from './BottomSheetMothTrapEntry';
+import Entry from './Entry';
 
 const SNAP_POSITIONS = [0.05, 0.22, 0.5, 1];
-const DEFAULT_SNAP_POSITION = 0.22;
-const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 0.05;
+const DEFAULT_SNAP_POSITION = 0.5;
+const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 1;
 
 interface Props {
-  mothTraps: typeof locations;
+  mothTraps: MothTrap[];
   updateRecord: (mothTrap: MothTrap) => void;
   deleteTrap: (mothTrap: MothTrap) => void;
   uploadTrap: (mothTrap: MothTrap) => void;
+  createTrap: () => void;
   sample: Sample;
   centroid: number[];
 }
 
-const BottomSheet: FC<Props> = ({
+const BottomSheet = ({
   mothTraps,
   updateRecord,
   deleteTrap,
   uploadTrap,
+  createTrap,
   sample,
   centroid,
-}) => {
+}: Props) => {
   const [isMounted, setUnmount] = useState(true);
 
   type MothTrapWithDistance = [MothTrap, number];
@@ -67,7 +70,7 @@ const BottomSheet: FC<Props> = ({
     trap.isDraft() ? -1 : 1;
 
   const getMothTrap = ([mothTrap, distance]: any) => (
-    <BottomSheetMothTrapEntry
+    <Entry
       key={mothTrap.id || mothTrap.cid}
       mothTrap={mothTrap}
       updateRecord={updateRecord}
@@ -105,24 +108,42 @@ const BottomSheet: FC<Props> = ({
   useIonViewWillLeave(unMountBottomSheet);
   useIonViewWillEnter(mountBottomSheet);
 
-  const defeaultPosition = device.isOnline
+  const defaultPosition = device.isOnline
     ? DEFAULT_SNAP_POSITION
     : DEFAULT_SNAP_POSITION_IF_NO_CONNECTION;
 
   return (
     <div className="wrap-to-prevent-modal-from-crashing">
       <IonModal
-        id="bottom-sheet"
         isOpen={isMounted}
         backdropDismiss={false}
         backdropBreakpoint={0.5}
         breakpoints={SNAP_POSITIONS}
-        initialBreakpoint={defeaultPosition}
+        initialBreakpoint={defaultPosition}
+        className="[&::part(handle)]:mt-2"
       >
         <IonHeader class="ion-no-border">
-          <IonToolbar />
+          <IonToolbar className="ion-no-padding !p-0 [--background:var(--ion-page-background)] [--min-height:20px]">
+            <div className="flex justify-between gap-4 px-2 py-1">
+              <div className="flex items-center px-2 font-semibold text-black">
+                <T>Moth traps</T>
+              </div>
+              <Button
+                color="secondary"
+                onPress={createTrap}
+                className="px-4 py-1"
+              >
+                Add
+              </Button>
+            </div>
+          </IonToolbar>
         </IonHeader>
-        <IonContent>{getMothTraps()}</IonContent>
+
+        <IonContent>
+          <IonList className="mt-2 flex flex-col gap-2">
+            {getMothTraps()}
+          </IonList>
+        </IonContent>
       </IonModal>
     </div>
   );

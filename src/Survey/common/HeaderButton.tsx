@@ -6,17 +6,19 @@ import { Button } from '@flumens';
 interface Props {
   children: ReactNode;
   onClick: any;
-  isInValid?: boolean;
+  isInvalid?: boolean;
+  className?: string;
 }
 
-const HeaderButton = ({ children, onClick, isInValid }: Props) => {
+const HeaderButton = ({ children, onClick, isInvalid, className }: Props) => {
   return (
     <Button
       onPress={onClick}
-      color={!isInValid ? 'secondary' : 'primary'}
+      color={!isInvalid ? 'secondary' : 'primary'}
       className={clsx(
         'max-w-28 whitespace-nowrap px-4 py-1 text-base',
-        isInValid && 'opacity-50'
+        isInvalid && 'opacity-50',
+        className
       )}
     >
       {children}

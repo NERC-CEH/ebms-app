@@ -11,6 +11,7 @@ import {
   SampleMetadata,
   ElasticSample,
   ElasticSampleMedia,
+  Location as SampleLocation,
 } from '@flumens';
 import config from 'common/config';
 import groups from 'common/data/groups';
@@ -22,6 +23,7 @@ import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
 import mothSurvey from 'Survey/Moth/config';
 import transectSurvey from 'Survey/Transect/config';
 import { Survey } from 'Survey/common/config';
+import { RemoteAttributes as LocationAttributes } from '../location';
 import Media from '../media';
 import Occurrence, { SpeciesGroup } from '../occurrence';
 import { modelStore } from '../store';
@@ -40,9 +42,32 @@ export type Project = {
   name: string;
 };
 
+export type Site = LocationAttributes;
+
+export type TransectLocation = LocationAttributes;
+
+export type MothTrapLocation = {
+  attrs: {
+    deleted: boolean;
+    type: string;
+    typeOther?: string;
+    location: { name: string; latitude: number; longitude: number };
+  };
+  name: string;
+  id: string;
+  cid: string;
+};
+
+export type AreaCountLocation = SampleLocation & {
+  name: string;
+  area?: number;
+};
+
+export type Location = AreaCountLocation | MothTrapLocation | TransectLocation;
+
 export type Attrs = SampleAttrs & {
   date?: any;
-  location?: any;
+  location?: Location;
   surveyStartTime?: string;
   surveyEndTime?: string;
   recorder?: any;
@@ -55,6 +80,7 @@ export type Attrs = SampleAttrs & {
   recorders?: number;
   speciesGroups: string[];
   project?: Project;
+  site?: Site;
   privacyPrecision?: number;
 
   // moth survey attributes

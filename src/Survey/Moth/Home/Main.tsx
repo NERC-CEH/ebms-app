@@ -25,9 +25,9 @@ import {
 import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import UploadedRecordInfoMessage from 'Survey/AreaCount/common/Components/UploadedRecordInfoMessage';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import IncrementalButton from 'Survey/common/IncrementalButton';
+import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 import {
   speciesOccAddedTimeSort,
   speciesNameSort,

@@ -1,6 +1,7 @@
 import { observable } from 'mobx';
 import axios, { AxiosError } from 'axios';
 import * as Yup from 'yup';
+import { z, object } from 'zod';
 import { Geolocation } from '@capacitor/geolocation';
 import {
   Store,
@@ -16,7 +17,6 @@ import {
 } from '@flumens';
 import CONFIG from 'common/config';
 import userModel from 'models/user';
-import { Location } from './collections/locations/service';
 import { locationsStore } from './store';
 import { getLocalAttributes } from './utils';
 
@@ -71,7 +71,10 @@ const validateLocation = (val: any) => {
   }
 };
 
-export const MOTH_TRAP_TYPE = 18879;
+export const MOTH_TRAP_TYPE = '18879';
+export const TRANSECT_TYPE = '777';
+export const TRANSECT_SECTION_TYPE = '778';
+export const PROJECT_SITE_TYPE = '14';
 
 export const verifyLocationSchema = Yup.mixed().test(
   'location',
@@ -92,7 +95,13 @@ export type Lamp = {
   attrs: { type: string; quantity: number; description: string };
 };
 
-interface Attrs extends ModelAttrs {
+export type RemoteAttributes = z.infer<typeof LocationModel.remoteSchema>;
+
+type ProjectAttrs = {
+  projectId: string;
+};
+
+type MothTrapAttrs = {
   type: number;
   typeOther: string | null;
   description: string;
@@ -102,9 +111,42 @@ interface Attrs extends ModelAttrs {
     longitude: number;
     name: string;
   };
-}
+};
+
+type Attrs = RemoteAttributes & ProjectAttrs & MothTrapAttrs & ModelAttrs;
 
 class LocationModel extends Model {
+  static remoteSchema = object({
+    /**
+     * Entity ID.
+     */
+    id: z.string(),
+    createdOn: z.string(),
+    updatedOn: z.string(),
+    lat: z.string(),
+    lon: z.string(),
+    /**
+     * Location name.
+     */
+    name: z.string(),
+    /**
+     * Location type e.g. transect = 777, transect section = 778 etc.
+     */
+    locationTypeId: z.string(),
+    parentId: z.string().nullable(),
+    boundaryGeom: z.string().nullable(),
+    code: z.string().nullable(),
+    centroidSref: z.string().optional(),
+    centroidSrefSystem: z.string().optional(),
+    createdById: z.string().optional(),
+    updatedById: z.string().optional(),
+    externalKey: z.string().nullable().optional(),
+    centroidGeom: z.string().optional(),
+    public: z.string().optional(),
+    // comment: null,
+    projectId: z.string().nullable().optional(), // we have added this for linking to projects, warehouse doesn't return it yet
+  });
+
   static schema = {
     type: {
       pageProps: {
@@ -200,19 +242,27 @@ class LocationModel extends Model {
     quantity: { remote: { id: 16 } },
   };
 
-  static parseRemoteJSON({ values: doc }: Location) {
+  static parseRemoteJSON({
+    id,
+    createdOn,
+    updatedOn,
+    externalKey,
+    ...attrs
+  }: RemoteAttributes) {
     const parsedRemoteJSON = {
-      cid: doc.external_key || UUID(),
-      id: doc.id,
+      cid: externalKey || UUID(),
+      id,
 
       attrs: {
+        id,
+        createdOn,
         location: {
-          name: doc.name,
-          latitude: Number(doc.lat),
-          longitude: Number(doc.lon),
+          name: attrs.name,
+          latitude: Number(attrs.lat),
+          longitude: Number(attrs.lon),
         },
-
-        ...getLocalAttributes(doc, LocationModel.schema, [
+        ...attrs,
+        ...getLocalAttributes(attrs, LocationModel.schema, [
           'type',
           'lamps',
           'typeOther',
@@ -220,8 +270,8 @@ class LocationModel extends Model {
       },
 
       metadata: {
-        createdOn: new Date(doc.created_on).getTime(),
-        updatedOn: new Date(doc.updated_on).getTime(),
+        createdOn: new Date(createdOn).getTime(),
+        updatedOn: new Date(updatedOn).getTime(),
       },
     };
 

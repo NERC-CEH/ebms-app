@@ -17,7 +17,6 @@ import {
 import mothTrapIcon from 'common/images/moth-inside-icon.svg';
 import MothTrap from 'common/models/location';
 import OnlineStatus from './OnlineStatus';
-import './styles.scss';
 
 function useDeleteTrapPrompt(onDelete: any) {
   const { t } = useTranslation();
@@ -75,11 +74,11 @@ const MothTrapEntry = ({
   const isUploading = mothTrap.remote.synchronising;
 
   return (
-    <IonItemSliding>
+    <IonItemSliding className="rounded-md">
       <IonItem
         className={clsx(
-          'flex h-20 border-b border-solid border-neutral-100 align-middle [--inner-border-width:0] [--inner-padding-end:0] [--padding-start:5px]',
-          isSelected && 'bg-green-50 [--background:var(--color-green-50)]'
+          'flex h-16 [--inner-border-width:0] [--inner-padding-end:0] [--background:transparent]',
+          isSelected ? 'bg-green-50' : 'bg-white'
         )}
         onClick={onClick}
         routerLink={!isUploading && !isSelected ? link : undefined}
@@ -101,7 +100,7 @@ const MothTrapEntry = ({
             )}
           </div>
 
-          {!isDraft && !isSelected && distance && (
+          {!isDraft && !isSelected && !!distance && (
             <div className="flex flex-col items-end text-primary-700">
               <IonIcon icon={arrowForwardOutline} />
               <span className="whitespace-nowrap text-sm font-bold">

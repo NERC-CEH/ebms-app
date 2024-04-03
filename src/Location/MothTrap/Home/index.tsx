@@ -101,10 +101,10 @@ const MothTrapSetup: FC<Props> = ({ sample: location }) => {
   const { saved } = location.metadata;
 
   const getFinishButton = () => {
-    const isInValid = !!location.validateRemote();
+    const isInvalid = !!location.validateRemote();
 
     return (
-      <HeaderButton isInValid={isInValid} onClick={onSubmit}>
+      <HeaderButton isInvalid={isInvalid} onClick={onSubmit}>
         {!saved ? 'Save' : 'Upload'}
       </HeaderButton>
     );

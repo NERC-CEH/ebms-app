@@ -14,7 +14,7 @@ import {
 } from '@flumens';
 import config from 'common/config';
 import Location from 'models/location';
-import Sample from 'models/sample';
+import Sample, { AreaCountLocation } from 'models/sample';
 
 type Props = {
   sample: Sample;
@@ -23,8 +23,8 @@ type Props = {
 
 const ModelLocationMap = ({ subSample, sample }: Props) => {
   const model = subSample || sample;
-  const location = model.attrs.location || {};
-  const parentLocation = model.parent?.attrs.location;
+  const location = (model.attrs.location as AreaCountLocation) || {};
+  const parentLocation = model.parent?.attrs.location as AreaCountLocation;
 
   const isMothSurvey = model instanceof Location;
 
@@ -42,7 +42,7 @@ const ModelLocationMap = ({ subSample, sample }: Props) => {
   const onGPSClick = () => toggleGPS(model);
 
   const onLocationNameChange = ({ name }: any) => {
-    model.attrs.location.name = name;
+    (model.attrs.location as AreaCountLocation).name = name;
   };
 
   const [mapRef, setMapRef] = useState<MapRef>();

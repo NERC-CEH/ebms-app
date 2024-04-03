@@ -12,7 +12,7 @@ import {
 } from '@flumens';
 import { IonList, IonItemDivider } from '@ionic/react';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
-import Sample from 'models/sample';
+import Sample, { MothTrapLocation } from 'models/sample';
 
 type Props = {
   sample: Sample;
@@ -25,7 +25,8 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
 
 const DetailsMain: FC<Props> = ({ sample }) => {
   const { url } = useRouteMatch();
-  const { location, surveyStartTime, surveyEndTime } = sample.attrs;
+  const { surveyStartTime, surveyEndTime } = sample.attrs;
+  const location = sample.attrs.location as MothTrapLocation;
   const survey = sample.getSurvey();
 
   const dateAttrProps = survey.attrs!.date!.pageProps!

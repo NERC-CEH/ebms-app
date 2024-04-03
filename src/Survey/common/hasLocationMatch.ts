@@ -1,7 +1,7 @@
 import Location from 'models/location';
-import Sample from 'models/sample';
+import Sample, { MothTrapLocation } from 'models/sample';
 
 const hasLocationMatch = (smp: Sample, mothTrap: Location) =>
-  smp.attrs.location?.id === mothTrap.id;
+  (smp.attrs.location as MothTrapLocation)?.id === mothTrap.id;
 
 export default hasLocationMatch;

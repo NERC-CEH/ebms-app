@@ -6,12 +6,12 @@ import {
   MapContainer,
   MapDraw,
   useAlert,
-  Location,
   mapFlyToLocation,
 } from '@flumens';
+import { IonSpinner } from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
-import Sample from 'models/sample';
+import Sample, { AreaCountLocation } from 'models/sample';
 import Favourites from './Favourites';
 import FinishPointMarker from './FinishPointMarker';
 import Records from './Records';
@@ -46,6 +46,10 @@ type Props = {
   setLocation: any;
   isGPSTracking: boolean;
   isDisabled?: boolean;
+  onSelectHistoricalLocation: any;
+  onCreateProjectLocation: any;
+  onSelectProjectLocation: any;
+  isFetchingLocations?: boolean;
 };
 
 const AreaAttr = ({
@@ -53,15 +57,21 @@ const AreaAttr = ({
   setLocation,
   isGPSTracking,
   isDisabled,
+  onSelectHistoricalLocation,
+  onCreateProjectLocation,
+  onSelectProjectLocation,
+  isFetchingLocations,
 }: Props) => {
   // eslint-disable-next-line prefer-destructuring
-  const location: Location | undefined = sample.attrs.location;
+  const location = sample.attrs.location as AreaCountLocation;
 
   const [mapCenter, saveMapCenter] = useState<any>([1, 1]);
   const updateMapCentre = ({ viewState }: any) =>
     saveMapCenter([viewState.latitude, viewState.longitude]);
 
-  const [showPastLocations, setShowPastLocations] = useState(false);
+  const projectId = sample.attrs.project?.id;
+  const hasProject = !!projectId && !isDisabled;
+  const [showPastLocations, setShowPastLocations] = useState(hasProject);
   const toggleFavourites = () => setShowPastLocations(!showPastLocations);
 
   const shouldDeleteShape = useDeletePropt();
@@ -86,6 +96,8 @@ const AreaAttr = ({
     mapFlyToLocation(mapRef, locationToFly as any);
   };
   useEffect(flyToLocation, [mapRef, location]);
+
+  const selectedLocationId = sample.attrs.site?.id;
 
   return (
     <Main>
@@ -118,14 +130,27 @@ const AreaAttr = ({
           </MapDraw.Context.Consumer>
         </MapDraw>
 
+        <MapContainer.Control>
+          {isFetchingLocations ? (
+            <IonSpinner color="medium" className="mx-auto block" />
+          ) : (
+            <div />
+          )}
+        </MapContainer.Control>
+
         <Records sample={sample} />
       </MapContainer>
 
       <Favourites
         isOpen={showPastLocations}
-        sample={sample}
-        currentLocation={mapCenter}
+        mapLocation={mapCenter}
         onClose={() => setShowPastLocations(false)}
+        onSelectHistoricalLocation={onSelectHistoricalLocation}
+        currentLocation={location}
+        projectId={projectId}
+        onCreateProjectLocation={onCreateProjectLocation}
+        onSelectProjectLocation={onSelectProjectLocation}
+        selectedLocationId={selectedLocationId}
       />
     </Main>
   );

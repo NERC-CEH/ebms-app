@@ -1,18 +1,27 @@
 import { reaction, observable, observe } from 'mobx';
 import { device, Store, Collection } from '@flumens';
+import {
+  PROJECT_SITE_TYPE,
+  RemoteAttributes as RemoteLocationAttributes,
+} from 'models/location';
 import userModel from 'models/user';
-import Project from '../../project';
+import ProjectModel from '../../project';
 import { projectsStore as store } from '../../store';
-import { fetch as fetchProjects } from './service';
+import locations from '../locations';
+import {
+  fetch as fetchProjects,
+  fetchLocations,
+  RemoteLocationAttributes as RemoteProjectLocationAttributes,
+} from './service';
 
 type constructorOptions = {
   id: string;
   store: Store;
-  Model: typeof Project;
+  Model: typeof ProjectModel;
 };
 
-export class Projects extends Collection<Project> {
-  Model: typeof Project;
+export class Projects extends Collection<ProjectModel> {
+  Model: typeof ProjectModel;
 
   _fetchedFirstTime = false;
 
@@ -28,7 +37,7 @@ export class Projects extends Collection<Project> {
     // eslint-disable-next-line @getify/proper-arrows/name
     observe(this, (change: any) => {
       if (change.addedCount) {
-        const attachCollection = (model: Project) => {
+        const attachCollection = (model: ProjectModel) => {
           model.collection = this; // eslint-disable-line no-param-reassign
         };
         change.added.forEach(attachCollection);
@@ -60,17 +69,19 @@ export class Projects extends Collection<Project> {
   fetch = async () => {
     const remoteDocs = await this._fetchDocs();
 
-    const drafts: Project[] = [];
+    const drafts: ProjectModel[] = [];
 
     while (this.length) {
       const model = this.pop();
       model?.destroy();
     }
 
-    const initModel = (doc: any) => new this.Model(doc) as Project;
+    const initModel = (doc: any) => new this.Model(doc) as ProjectModel;
     const newModelsFromRemote = remoteDocs.map(initModel);
 
     this.push(...newModelsFromRemote, ...drafts);
+
+    await locations.fetch();
   };
 
   private _fetchFirstTime = async () => {
@@ -89,7 +100,7 @@ export class Projects extends Collection<Project> {
 
     try {
       const docs = await this._fetchDocs();
-      const initModel = (doc: any) => new this.Model(doc) as Project;
+      const initModel = (doc: any) => new this.Model(doc) as ProjectModel;
       const models = docs.map(initModel);
 
       this.push(...models);
@@ -118,8 +129,49 @@ export class Projects extends Collection<Project> {
     return docs.map(this.Model.parseRemoteJSON);
   };
 
+  fetchLocations = async () => {
+    console.log(`📚 Collection: ${this.id} collection fetching locations`);
+    this.fetching.isFetching = true;
+
+    const transformToLocation = (
+      doc: RemoteProjectLocationAttributes
+    ): RemoteLocationAttributes => ({
+      id: doc.locationId,
+      projectId: doc.projectId,
+      createdOn: doc.locationCreatedOn,
+      updatedOn: doc.locationUpdatedOn,
+      lat: doc.locationLat,
+      lon: doc.locationLon,
+      name: doc.locationName,
+      locationTypeId: PROJECT_SITE_TYPE,
+      parentId: null,
+      boundaryGeom: doc.locationBoundaryGeom,
+      code: doc.locationCode,
+      centroidSref: doc.locationCentroidSref,
+      centroidSrefSystem: doc.locationCentroidSrefSystem,
+      createdById: doc.locationCreatedById,
+      updatedById: doc.locationUpdatedById,
+      externalKey: doc.locationExternalKey,
+      public: 'f',
+    });
+
+    const docs = await (
+      await Promise.all(this.map(({ id }) => fetchLocations(id!)))
+    )
+      .flat()
+      .map(transformToLocation);
+
+    this.fetching.isFetching = false;
+
+    console.log(
+      `📚 Collection: ${this.id} collection fetching locations done ${docs.length} documents`
+    );
+
+    return docs;
+  };
+
   resetDefaults = () => {
-    const destroyLocation = (location: Project) => location.destroy();
+    const destroyLocation = (location: ProjectModel) => location.destroy();
     const destroyAllLocations = this.map(destroyLocation);
     return Promise.all(destroyAllLocations);
   };
@@ -128,7 +180,7 @@ export class Projects extends Collection<Project> {
 const collection = new Projects({
   id: 'projects',
   store,
-  Model: Project,
+  Model: ProjectModel,
 });
 
 export default collection;

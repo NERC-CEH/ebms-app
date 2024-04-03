@@ -18,7 +18,7 @@ import {
 } from '@ionic/react';
 import windIcon from 'common/images/wind.svg';
 import Sample from 'models/sample';
-import UploadedRecordInfoMessage from 'Survey/AreaCount/common/Components/UploadedRecordInfoMessage';
+import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
@@ -33,15 +33,14 @@ type Props = {
 const Edit = ({ sample, isDisabled }: Props) => {
   const getPrettySectionsLabel = () => {
     const transect = sample.attrs.location;
-    if (!transect) {
+    if (!transect)
       return (
         <IonLabel slot="end" color="danger  ">
           <T>No transect</T>
         </IonLabel>
       );
-    }
 
-    return <IonLabel slot="end">{transect.name || transect.id}</IonLabel>;
+    return <IonLabel slot="end">{(transect as any).location.name}</IonLabel>;
   };
 
   const {

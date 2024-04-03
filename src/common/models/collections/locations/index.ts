@@ -1,9 +1,15 @@
 import { reaction, observable, observe } from 'mobx';
 import { device, Store, Collection } from '@flumens';
 import userModel from 'models/user';
-import Location from '../../location';
+import Location, {
+  MOTH_TRAP_TYPE,
+  PROJECT_SITE_TYPE,
+  TRANSECT_SECTION_TYPE,
+  TRANSECT_TYPE,
+} from '../../location';
 import { locationsStore as store } from '../../store';
-import fetchLocations from './service';
+import projects from '../projects';
+import fetch from './service';
 
 type constructorOptions = {
   id: string;
@@ -117,7 +123,17 @@ export class Locations extends Collection<Location> {
     console.log(`📚 Collection: ${this.id} collection fetching`);
     this.fetching.isFetching = true;
 
-    const docs = await fetchLocations();
+    const mothTraps = await fetch(MOTH_TRAP_TYPE);
+    const transects = await fetch(TRANSECT_TYPE);
+    const transectSections = await fetch(TRANSECT_SECTION_TYPE);
+    const projectLocations = await projects.fetchLocations();
+
+    const docs = [
+      ...mothTraps,
+      ...transects,
+      ...transectSections,
+      ...projectLocations,
+    ];
 
     this.fetching.isFetching = false;
 
@@ -140,5 +156,13 @@ const collection = new Locations({
   store,
   Model: Location,
 });
+
+type LocationType =
+  | typeof PROJECT_SITE_TYPE
+  | typeof MOTH_TRAP_TYPE
+  | typeof TRANSECT_TYPE
+  | typeof TRANSECT_SECTION_TYPE;
+export const byType = (type: LocationType) => (location: Location) =>
+  location.attrs.locationTypeId === type;
 
 export default collection;

@@ -8,7 +8,7 @@ import appModel from 'common/models/app';
 import { assignIfMissing } from 'common/models/utils';
 import { fetchWeather } from 'common/services/openWeather';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
-import AppSample from 'models/sample';
+import AppSample, { AreaCountLocation } from 'models/sample';
 import {
   Survey,
   deviceAttr,
@@ -58,7 +58,9 @@ function getGeomString(shape: any) {
 const getSetWeather = (sample: AppSample) => async () => {
   if (!device.isOnline) return;
 
-  const weatherValues = await fetchWeather(sample.attrs.location);
+  const weatherValues = await fetchWeather(
+    sample.attrs.location as AreaCountLocation
+  );
 
   assignIfMissing(sample, 'temperature', weatherValues.temperature);
   assignIfMissing(sample, 'windDirection', weatherValues.windDirection);
@@ -120,6 +122,10 @@ const survey: Survey = {
         id: 'group_id',
         values: (val: any) => val.id,
       },
+    },
+
+    site: {
+      remote: { id: 'location_id', values: site => site.id },
     },
   },
 
@@ -272,7 +278,10 @@ const survey: Survey = {
 
     if (hasGPSPermission) sample.toggleGPStracking();
 
-    when(() => isValidLocation(sample.attrs.location), getSetWeather(sample));
+    when(
+      () => isValidLocation(sample.attrs.location as AreaCountLocation),
+      getSetWeather(sample)
+    );
 
     return sample;
   },

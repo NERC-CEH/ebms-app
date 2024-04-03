@@ -115,10 +115,10 @@ const DetailsController: FC<Props> = ({ sample }) => {
     navigate(path, 'forward', 'replace');
   };
 
-  const isInValid = sample.validateRemote();
+  const isInvalid = sample.validateRemote();
 
   const startTimerButton = !hasTimerStarted && (
-    <HeaderButton onClick={onStartTimer} isInValid={isInValid}>
+    <HeaderButton onClick={onStartTimer} isInvalid={isInvalid}>
       Start Count
     </HeaderButton>
   );
