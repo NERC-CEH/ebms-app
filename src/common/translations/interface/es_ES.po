@@ -2648,10 +2648,12 @@ msgstr "Ha abandonado con éxito el proyecto."
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "Sensible"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Esta encuesta tiene especies sensibles y no debe incluirse en los informes "
+"públicos."
