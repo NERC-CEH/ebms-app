@@ -57,7 +57,7 @@ const DetailsController: FC<Props> = ({ sample }) => {
   const shouldDeleteSurvey = useDeleteSurveyPrompt(alert);
   const checkSampleStatus = useValidateCheck(sample);
 
-  const hasTimerStarted = sample.attrs.surveyStartTime;
+  const hasTimerStarted = sample?.attrs?.surveyStartTime;
 
   const onChangeCounter = (value: number) => {
     // eslint-disable-next-line no-param-reassign
@@ -115,13 +115,16 @@ const DetailsController: FC<Props> = ({ sample }) => {
     navigate(path, 'forward', 'replace');
   };
 
-  const isInvalid = sample.validateRemote();
+  const isInvalid = sample?.validateRemote();
 
   const startTimerButton = !hasTimerStarted && (
     <HeaderButton onClick={onStartTimer} isInvalid={isInvalid}>
       Start Count
     </HeaderButton>
   );
+
+  // When deleted the sample will be missing
+  if (!sample) return null;
 
   return (
     <Page id="survey-area-count-detail-edit">
