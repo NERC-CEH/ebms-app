@@ -77,8 +77,10 @@ const MothTrapEntry = ({
     <IonItemSliding className="rounded-md">
       <IonItem
         className={clsx(
-          'flex h-16 [--inner-border-width:0] [--inner-padding-end:0] [--background:transparent]',
-          isSelected ? 'bg-green-50' : 'bg-white'
+          'flex h-16 [--background:transparent] [--inner-border-width:0] [--inner-padding-end:0]',
+          isSelected
+            ? 'border border-success-700/10 bg-success-50/10 text-success-900'
+            : 'bg-white'
         )}
         onClick={onClick}
         routerLink={!isUploading && !isSelected ? link : undefined}
@@ -110,7 +112,7 @@ const MothTrapEntry = ({
           )}
 
           {!isDraft && isSelected && (
-            <IonIcon icon={checkboxOutline} className="size-10 text-success" />
+            <IonIcon icon={checkboxOutline} className="size-10" />
           )}
 
           {isDraft && (

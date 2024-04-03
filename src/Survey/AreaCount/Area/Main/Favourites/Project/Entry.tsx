@@ -16,7 +16,9 @@ const Entry = ({ location, onSelect, isSelected }: Props) => {
       onClick={() => onSelect(location)}
       className={clsx(
         'flex h-16 rounded-md [--background:transparent] [--inner-border-width:0] [--inner-padding-end:0]',
-        isSelected ? 'bg-green-50' : 'bg-white'
+        isSelected
+          ? 'border border-success-700/10 bg-success-50/10 text-success-900'
+          : 'bg-white'
       )}
     >
       <div className="flex w-full items-center justify-start gap-4">
@@ -35,7 +37,7 @@ const Entry = ({ location, onSelect, isSelected }: Props) => {
         {isSelected && (
           <IonIcon
             icon={checkboxOutline}
-            className="size-10 text-success [--ionicon-stroke-width:20px]"
+            className="size-10 [--ionicon-stroke-width:20px]"
           />
         )}
       </div>
