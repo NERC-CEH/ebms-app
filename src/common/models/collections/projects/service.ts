@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
 import { camelCase, mapKeys } from 'lodash';
-import { ZodError , z, object } from 'zod';
+import { ZodError, z, object } from 'zod';
 import { isAxiosNetworkError, HandledError } from '@flumens';
 import CONFIG from 'common/config';
 import Project, { RemoteAttributes } from 'models/project';
@@ -54,21 +54,22 @@ export async function fetch({ member }: Props): Promise<RemoteAttributes[]> {
 const remoteLocationSchema = object({
   locationId: z.string(),
   locationName: z.string(),
-  locationCode: z.string(),
   locationBoundaryGeom: z.string(),
   locationLat: z.string(),
   locationLon: z.string(),
   locationCreatedOn: z.string(),
   locationUpdatedOn: z.string(),
-  id: z.string().optional(),
-  createdOn: z.string().optional(),
-  createdById: z.string().optional(),
-  groupId: z.string().optional(),
-  groupTitle: z.string().optional(),
-  locationCentroidSref: z.string().optional(),
-  locationCentroidSrefSystem: z.string().optional(),
-  locationCreatedById: z.string().optional(),
-  locationUpdatedById: z.string().optional(),
+  locationCentroidSref: z.string(),
+  locationCentroidSrefSystem: z.string(),
+
+  id: z.string().nullable().optional(),
+  createdOn: z.string().nullable().optional(),
+  createdById: z.string().nullable().optional(),
+  groupId: z.string().nullable().optional(),
+  groupTitle: z.string().nullable().optional(),
+  locationCode: z.string().nullable().optional(),
+  locationCreatedById: z.string().nullable().optional(),
+  locationUpdatedById: z.string().nullable().optional(),
   locationComment: z.string().nullable().optional(),
   locationExternalKey: z.string().nullable().optional(),
 

@@ -133,17 +133,17 @@ class LocationModel extends Model {
      * Location type e.g. transect = 777, transect section = 778 etc.
      */
     locationTypeId: z.string(),
-    parentId: z.string().nullable(),
-    boundaryGeom: z.string().nullable(),
-    code: z.string().nullable(),
+    parentId: z.string().nullable().optional(),
+    boundaryGeom: z.string().nullable().optional(),
+    code: z.string().nullable().optional(),
     centroidSref: z.string().optional(),
     centroidSrefSystem: z.string().optional(),
-    createdById: z.string().optional(),
-    updatedById: z.string().optional(),
+    createdById: z.string().nullable().optional(),
+    updatedById: z.string().nullable().optional(),
     externalKey: z.string().nullable().optional(),
-    centroidGeom: z.string().optional(),
-    public: z.string().optional(),
-    // comment: null,
+    centroidGeom: z.string().nullable().optional(),
+    public: z.string().nullable().optional(),
+    comment: z.string().nullable().optional(),
     projectId: z.string().nullable().optional(), // we have added this for linking to projects, warehouse doesn't return it yet
   });
 
