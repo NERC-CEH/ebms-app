@@ -2618,8 +2618,8 @@ msgstr ""
 
 # Survey Projects functionality
 msgid ""
-"There are currently no new projects available to join.<br/><br/>Pull the "
-"page down to refresh the list."
+"<0>{{country}}</0>There are currently no new projects available to "
+"join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
 
 # Survey Projects functionality

@@ -2569,10 +2569,10 @@ msgstr ""
 
 # Survey Projects functionality
 msgid ""
-"There are currently no new projects available to join.<br/><br/>Pull the "
-"page down to refresh the list."
+"<0>{{country}}</0>There are currently no new projects available to "
+"join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
-"Nėre jokių projektų prie kurių galėtumėte prisijungti.<br/><br/> Pataukite "
+"<0>{{country}}</0>Nėra jokių projektų prie kurių galėtumėte prisijungti.<br/><br/> Patraukite "
 "puslapį į apačią jeigu norite atnaujinti šį sąrašą."
 
 # Survey Projects functionality

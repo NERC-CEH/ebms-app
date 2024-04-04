@@ -4,20 +4,27 @@ import { camelCase, mapKeys } from 'lodash';
 import { ZodError, z, object } from 'zod';
 import { isAxiosNetworkError, HandledError } from '@flumens';
 import CONFIG from 'common/config';
+import countries from 'common/config/countries';
+import appModel from 'common/models/app';
 import Project, { RemoteAttributes } from 'models/project';
 import userModel from 'models/user';
 
 type Props = { country?: string; member?: boolean };
 
 export async function fetch({ member }: Props): Promise<RemoteAttributes[]> {
-  const url = `${
-    CONFIG.backend.indicia.url
-  }/index.php/services/rest/groups?view=${member ? 'member' : 'joinable'}`;
+  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups`;
 
   const token = await userModel.getAccessToken();
 
+  const countryCode = appModel.attrs.country!;
+  const countryId = countries[countryCode]?.id;
+
   const options = {
-    params: { verbose: 1 },
+    params: {
+      view: member ? 'member' : 'joinable',
+      indexed_location_ids:
+        !member && Number.isFinite(countryId) ? countryId : undefined,
+    },
     headers: { Authorization: `Bearer ${token}` },
     timeout: 80000,
   };

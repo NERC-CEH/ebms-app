@@ -1229,6 +1229,12 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"El método por defecto es realizar un Recuento de 15 minutos. Esto puede "
+"hacerse en cualquier lugar y en cualquier momento en que las mariposas estén"
+" activas (es decir, cuando el tiempo sea cálido y preferiblemente soleado). "
+"También puede utilizar la aplicación para registrar los transectos de "
+"mariposas que establezcas en la web. En las notas siguientes se explica cómo"
+" utilizar los métodos disponibles actualmente."
 
 msgid "How to do a 15-minute Count"
 msgstr "Como hacer un Registro de 15 minutos"
@@ -2621,10 +2627,10 @@ msgstr ""
 
 # Survey Projects functionality
 msgid ""
-"There are currently no new projects available to join.<br/><br/>Pull the "
-"page down to refresh the list."
+"<0>{{country}}</0>There are currently no new projects available to "
+"join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
-"Actualmente no hay nuevos proyectos disponibles para "
+"<0>{{country}}</0>Actualmente no hay nuevos proyectos disponibles para "
 "unirse.<br/><br/>Deslice la página hacia abajo para actualizar la lista."
 
 # Survey Projects functionality

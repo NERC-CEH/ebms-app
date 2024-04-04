@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
 import { Button } from '@flumens';
+import countries from 'common/config/countries';
+import appModel from 'models/app';
 import { RemoteAttributes } from 'models/project';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 
@@ -8,9 +11,15 @@ type Props = {
 };
 
 const AllProjects = ({ projects, onJoin }: Props) => {
+  const { t } = useTranslation();
+
+  const countryCode = appModel.attrs.country!;
+  const country = t(countries[countryCode]?.name);
+
   if (!projects.length)
     return (
       <InfoBackgroundMessage>
+        <div className="my-3 opacity-50">{{ country } as any}</div>
         There are currently no new projects available to join.
         <br />
         <br />
