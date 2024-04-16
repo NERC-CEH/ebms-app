@@ -1,5 +1,4 @@
 /* eslint-disable @getify/proper-arrows/name */
-import { FC } from 'react';
 import { Gallery, useOnHideModal } from '@flumens';
 import { Species } from 'common/data/profiles';
 import '../styles.scss';
@@ -10,11 +9,7 @@ type Props = {
   showGallery: boolean;
 };
 
-const FullScreenPhotoViewer: FC<Props> = ({
-  species,
-  onClose,
-  showGallery,
-}) => {
+const FullScreenPhotoViewer = ({ species, onClose, showGallery }: Props) => {
   useOnHideModal(onClose);
 
   const getImageSource = (_: any, index: number) => {

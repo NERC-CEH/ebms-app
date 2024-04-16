@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
 
 /* eslint-disable camelcase */
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { Page, Header } from '@flumens';
@@ -12,7 +11,7 @@ interface Props {
   sample: Location;
 }
 
-const MothTrapSetup: FC<Props> = ({ sample: location }) => {
+const MothTrapSetup = ({ sample: location }: Props) => {
   const match: any = useRouteMatch();
 
   const byId = (lamp: Lamp) => lamp.cid === match.params.lampId;

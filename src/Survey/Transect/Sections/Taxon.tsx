@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { Page, Main, Header, useAlert } from '@flumens';
@@ -28,12 +28,13 @@ const checkIfTaxonSelectedSame = (
 
 type Props = {
   subSample: Sample;
+  occurrence: Occurrence;
 };
 
-const Controller: FC<Props> = ({
+const Controller = ({
   subSample: sectionSample,
   occurrence: sectionOccurrence,
-}: any) => {
+}: Props) => {
   const alert = useAlert();
   const { goBack, navigate } = useContext(NavContext);
   const match: any = useRouteMatch();
@@ -97,13 +98,13 @@ const Controller: FC<Props> = ({
         const firstString = occWithSameSpecies.attrs.comment || '';
         occWithSameSpecies.attrs.comment = firstString.concat(
           ' ',
-          sectionOccurrence.attrs.comment
+          sectionOccurrence.attrs.comment!
         );
       }
 
       while (sectionOccurrence.media.length) {
         const copy = sectionOccurrence.media.pop();
-        occWithSameSpecies.media.push(copy);
+        occWithSameSpecies.media.push(copy!);
       }
 
       occWithSameSpecies.save();
@@ -111,7 +112,9 @@ const Controller: FC<Props> = ({
       sectionSample.save();
 
       navigate(
-        `/survey/transect/${sectionSample.parent.cid}/sections/${sectionSample.cid}`,
+        `/survey/transect/${sectionSample.parent!.cid}/sections/${
+          sectionSample.cid
+        }`,
         'none',
         'pop'
       );
@@ -125,7 +128,9 @@ const Controller: FC<Props> = ({
       sectionOccurrence.save();
 
       navigate(
-        `/survey/transect/${sectionSample.parent.cid}/sections/${sectionSample.cid}`,
+        `/survey/transect/${sectionSample.parent!.cid}/sections/${
+          sectionSample.cid
+        }`,
         'none',
         'pop'
       );
@@ -157,7 +162,9 @@ const Controller: FC<Props> = ({
       sectionOccurrence.save();
 
       navigate(
-        `/survey/transect/${sectionSample.parent.cid}/sections/${sectionSample.cid}`,
+        `/survey/transect/${sectionSample.parent!.cid}/sections/${
+          sectionSample.cid
+        }`,
         'none',
         'pop'
       );
@@ -172,7 +179,7 @@ const Controller: FC<Props> = ({
     }
 
     const survey = sectionSample.getSurvey();
-    const occurrence = survey.occ.create({ Occurrence, taxon });
+    const occurrence = survey.occ!.create!({ Occurrence, taxon });
     sectionSample.occurrences.push(occurrence);
 
     await sectionSample.save();
@@ -183,15 +190,15 @@ const Controller: FC<Props> = ({
     <Page id="transect-sections-taxa">
       <Header
         title="Species"
-        rightSlot={<TaxonSearchFilters sample={sectionSample.parent} />}
+        rightSlot={<TaxonSearchFilters sample={sectionSample.parent!} />}
       />
       <Main>
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}
-          speciesGroups={sectionSample?.parent.metadata.speciesGroups}
+          speciesGroups={sectionSample?.parent!.metadata.speciesGroups}
           useDayFlyingMothsOnly={
-            sectionSample?.parent.metadata.useDayFlyingMothsOnly
+            sectionSample?.parent!.metadata.useDayFlyingMothsOnly
           }
         />
       </Main>

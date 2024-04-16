@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import {
   clipboardOutline,
@@ -22,11 +21,11 @@ type Props = {
   onChangeSensitivityStatus: (value: boolean) => void;
 };
 
-const AreaCountDetails: FC<Props> = ({
+const AreaCountDetails = ({
   sample,
   onChangeCounter,
   onChangeSensitivityStatus,
-}) => {
+}: Props) => {
   const match = useRouteMatch<any>();
   const baseURL = match.url;
 

@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Page, Header, useToast, useLoader } from '@flumens';
 import { isPlatform, NavContext } from '@ionic/react';
@@ -57,7 +57,7 @@ const onToggle = (setting: keyof Attrs, checked: boolean) => {
   isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
 };
 
-const Container: FC = () => {
+const Container = () => {
   const toast = useToast();
 
   const deleteUser = useDeleteUser();

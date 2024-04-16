@@ -1,4 +1,4 @@
-import { FC, useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { useRouteMatch } from 'react-router';
 import { RouteWithModels, AttrPage } from '@flumens';
 import { NavContext } from '@ionic/react';
@@ -34,10 +34,10 @@ function AddNewMothTrap() {
 }
 
 type Props = {
-  model: any;
+  sample: any;
 };
 
-const AttrPageFromRoute: FC<Props> = ({ sample: location }: any) => {
+const AttrPageFromRoute = ({ sample: location }: Props) => {
   const match = useRouteMatch<any>();
 
   const { attr } = match.params;

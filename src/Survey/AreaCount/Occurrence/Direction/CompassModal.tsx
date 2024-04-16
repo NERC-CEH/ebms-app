@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { closeOutline } from 'ionicons/icons';
 import { IonBackdrop, IonIcon } from '@ionic/react';
 import Compass from './Compass';
@@ -9,7 +9,7 @@ type Props = {
   value: any;
 };
 
-const CompassModal: FC<Props> = ({ hideCompass, value }) => {
+const CompassModal = ({ hideCompass, value }: Props) => {
   const [state, setstate] = useState(0);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { Page, Main, Header, useAlert } from '@flumens';
 import { NavContext } from '@ionic/react';
@@ -15,7 +15,7 @@ interface Props {
   occurrence?: Occurrence;
 }
 
-const Taxon: FC<Props> = ({ sample, occurrence }) => {
+const Taxon = ({ sample, occurrence }: Props) => {
   const alert = useAlert();
   const { navigate, goBack } = useContext(NavContext);
   const UNKNOWN_SPECIES = getUnkownSpecies();

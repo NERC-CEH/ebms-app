@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { MenuAttrItem, MenuAttrItemFromModel } from '@flumens';
@@ -11,7 +10,7 @@ type Props = {
   occurrence: Occurrence;
 };
 
-const PaintedLadyAttrs: FC<Props> = ({ occurrence }) => {
+const PaintedLadyAttrs = ({ occurrence }: Props) => {
   const isDisabled = occurrence.isUploaded();
   const { url } = useRouteMatch();
 

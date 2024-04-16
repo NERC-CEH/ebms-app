@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
 import { Main, ModalHeader, InfoMessage, UserFeedbackRequest } from '@flumens';
@@ -24,7 +24,7 @@ type Props = {
   searchPhrase?: string;
 };
 
-const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
+const MainComponent = ({ searchPhrase = '', filters }: Props) => {
   const [species, setSpecies] = useState<any>(null);
 
   const showSpeciesModal = (id: number) => {

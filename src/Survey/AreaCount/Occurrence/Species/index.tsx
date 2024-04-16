@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router-dom';
 import { Page, Header, useAlert } from '@flumens';
@@ -46,7 +46,7 @@ type Props = {
   sample: Sample;
 };
 
-const SpeciesOccurrences: FC<Props> = ({ sample }) => {
+const SpeciesOccurrences = ({ sample }: Props) => {
   const { navigate, goBack } = useContext(NavContext);
   const match = useRouteMatch<any>();
 

@@ -1,4 +1,4 @@
-import { FC, useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { CreateAnimation } from '@ionic/react';
 import './styles.scss';
 
@@ -6,7 +6,7 @@ type Props = {
   value: number;
 };
 
-const AnimatedNumber: FC<Props> = ({ value }: any) => {
+const AnimatedNumber = ({ value }: Props) => {
   const [initialised, setInitialised] = useState<boolean>(false);
   const first = useRef<any>();
 

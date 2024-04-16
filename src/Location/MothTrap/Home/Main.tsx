@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import { pinOutline } from 'ionicons/icons';
@@ -24,7 +23,7 @@ type Props = {
   deleteLamp: (lamp: Lamp) => void;
 };
 
-const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
+const MothTrapSetupMain = ({ location, addNewLamp, deleteLamp }: Props) => {
   const { type, lamps, location: loc, typeOther } = location.attrs;
 
   const { t } = useTranslation();

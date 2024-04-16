@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { Main, Attr } from '@flumens';
@@ -21,7 +20,7 @@ type Props = {
   appModel: AppModel;
 };
 
-const FiltersModal: FC<Props> = ({ toggleModal, showModal, sample }) => {
+const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
   if (!sample.metadata.speciesGroups) {
     // eslint-disable-next-line no-param-reassign
     sample.metadata.speciesGroups = appModel.attrs.speciesGroups;

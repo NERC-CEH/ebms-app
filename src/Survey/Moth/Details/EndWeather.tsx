@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Page, Header, Main, MenuAttrItemFromModel } from '@flumens';
 import { IonList } from '@ionic/react';
@@ -8,7 +7,7 @@ type Props = {
   sample: Sample;
 };
 
-const EndWeather: FC<Props> = ({ sample }) => {
+const EndWeather = ({ sample }: Props) => {
   return (
     <Page id="moth-trap-end-weather">
       <Header title="End Weather" />

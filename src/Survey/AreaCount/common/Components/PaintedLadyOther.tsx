@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
 
@@ -6,7 +5,7 @@ type Props = {
   text: string | string[];
 };
 
-export const PaintedLadyOther: FC<Props> = ({ text }) => {
+export const PaintedLadyOther = ({ text }: Props) => {
   let prettifyValue = text;
 
   const eggLayingValues = Array.isArray(text);

@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { IonLabel } from '@ionic/react';
@@ -19,7 +18,7 @@ const BEHAVIOUR_COLOURS: Type = {
   Nectaring: '#ff9d4e',
 };
 
-export const PaintedLadyBehaviour: FC<Props> = ({ behaviour, showLabel }) => {
+export const PaintedLadyBehaviour = ({ behaviour, showLabel }: Props) => {
   if (!behaviour) return null;
 
   const color = BEHAVIOUR_COLOURS[behaviour];

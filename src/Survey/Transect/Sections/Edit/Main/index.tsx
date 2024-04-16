@@ -1,4 +1,4 @@
-import { FC, useContext, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import {
@@ -67,7 +67,7 @@ type Props = {
   copyPreviousSurveyTaxonList: any;
 };
 
-const Edit: FC<Props> = ({
+const Edit = ({
   sample,
   subSample: sectionSample,
   deleteOccurrence,
@@ -77,7 +77,7 @@ const Edit: FC<Props> = ({
   increaseCount,
   copyPreviousSurveyTaxonList,
   isDisabled,
-}) => {
+}: Props) => {
   const alert = useAlert();
   const ref = useRef();
   const match: any = useRouteMatch();

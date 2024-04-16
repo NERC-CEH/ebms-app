@@ -1,4 +1,4 @@
-import { FC, useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -51,7 +51,7 @@ type Props = {
   occurrence: Occurrence;
 };
 
-const TaxonController: FC<Props> = ({ sample, occurrence }) => {
+const TaxonController = ({ sample, occurrence }: Props) => {
   const { goBack, navigate } = useContext(NavContext);
   const match = useRouteMatch();
   const alert = useAlert();

@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { wifiOutline } from 'ionicons/icons';
 import { device, InfoMessage, MapContainer } from '@flumens';
@@ -14,7 +13,7 @@ interface Props {
   children: any;
 }
 
-const Map: FC<Props> = ({ location, onMovedCoords, children }) => {
+const Map = ({ location, onMovedCoords, children }: Props) => {
   let initialViewState;
 
   if (Number.isFinite(location?.latitude)) {

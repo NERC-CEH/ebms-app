@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import {
   warningOutline,
@@ -94,7 +93,7 @@ type Props = {
   country: CountryCode;
 };
 
-const MenuMain: FC<Props> = ({
+const MenuMain = ({
   clearCache,
   onToggle,
   isLoggedIn,
@@ -107,7 +106,7 @@ const MenuMain: FC<Props> = ({
   country,
   showCommonNamesInGuide,
   useGlobalSpeciesList,
-}) => {
+}: Props) => {
   const alert = useAlert();
   const showUserDeleteDialog = useUserDeleteDialog(deleteUser);
 

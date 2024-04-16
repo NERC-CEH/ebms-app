@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Header, Toggle, useAlert } from '@flumens';
@@ -14,13 +14,13 @@ type Props = {
   infoText: any;
 };
 
-const HeaderComponent: FC<Props> = ({
+const HeaderComponent = ({
   isGPSTracking: isGPSTrackingProp,
   toggleGPStracking,
   isDisabled,
   infoText,
   isAreaShape,
-}) => {
+}: Props) => {
   const toggleRef = useRef<HTMLLabelElement>(null);
 
   const [isGPSTracking, setIsGPSTracking] = useState(isGPSTrackingProp);

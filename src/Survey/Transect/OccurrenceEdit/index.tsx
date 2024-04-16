@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -21,7 +20,7 @@ type Props = {
   occurrence: Occurrence;
 };
 
-const TransectHomeController: FC<Props> = ({ occurrence }) => {
+const TransectHomeController = ({ occurrence }: Props) => {
   const { url } = useRouteMatch();
 
   const species = occurrence.getTaxonCommonAndScientificNames();

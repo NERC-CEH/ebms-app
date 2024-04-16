@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { Trans as T } from 'react-i18next';
 import { useAlert } from '@flumens';
 import { IonButtons, IonButton, NavContext, IonBackButton } from '@ionic/react';
@@ -31,7 +31,7 @@ interface Props {
   location: any;
 }
 
-const CancelButton: FC<Props> = ({ location }) => {
+const CancelButton = ({ location }: Props) => {
   const { goBack } = useContext(NavContext);
   const alert = useAlert();
 

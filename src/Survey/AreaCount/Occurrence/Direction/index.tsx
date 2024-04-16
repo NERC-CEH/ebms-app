@@ -1,4 +1,4 @@
-import { FC, useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import {
@@ -39,7 +39,7 @@ type Props = {
   occurrence: Occurrence;
 };
 
-const Direction: FC<Props> = ({ occurrence }) => {
+const Direction = ({ occurrence }: Props) => {
   const alert = useAlert();
   const { goBack } = useContext(NavContext);
   let rotation = 0;

@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Button, Badge } from '@flumens';
 import { IonSpinner } from '@ionic/react';
@@ -8,7 +7,7 @@ type Props = {
   location: Location;
   onUpload: any;
 };
-const OnlineStatus: FC<Props> = ({ location, onUpload }) => {
+const OnlineStatus = ({ location, onUpload }: Props) => {
   if (!location.metadata.saved)
     return <Badge className="max-w-32">Draft</Badge>;
 

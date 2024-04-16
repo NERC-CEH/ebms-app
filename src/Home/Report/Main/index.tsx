@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { Main } from '@flumens';
@@ -23,13 +22,13 @@ interface Props {
   refreshReport: any;
 }
 
-const MainReport: FC<Props> = ({
+const MainReport = ({
   species,
   userSpecies,
   userSpeciesLastMonth,
   refreshing,
   refreshReport,
-}) => {
+}: Props) => {
   const hasNoData =
     !species.length && !userSpeciesLastMonth.length && !userSpecies.length;
   if (hasNoData && refreshing) {

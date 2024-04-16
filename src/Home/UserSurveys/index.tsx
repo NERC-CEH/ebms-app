@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
@@ -16,7 +16,7 @@ import PendingSurveys from './Pending';
 import UploadedSurveys from './Uploaded';
 import './styles.scss';
 
-const UserSurveyComponent: FC = () => {
+const UserSurveyComponent = () => {
   const [segment, setSegment] = useState('pending');
   const match = useRouteMatch<{ id?: string }>();
 

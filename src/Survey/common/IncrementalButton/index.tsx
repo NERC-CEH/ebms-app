@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Button } from '@flumens';
 import { isPlatform } from '@ionic/react';
@@ -11,12 +10,12 @@ interface Props {
   disabled?: boolean;
 }
 
-const IncrementalButton: FC<Props> = ({
+const IncrementalButton = ({
   onClick: onClickProp,
   onLongClick: onLongClickProp,
   value,
   disabled,
-}) => {
+}: Props) => {
   const onClick = () => {
     if (disabled) return;
 

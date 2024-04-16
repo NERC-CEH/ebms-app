@@ -1,4 +1,4 @@
-import { FC, useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { observer } from 'mobx-react';
 import { flagOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
@@ -12,7 +12,7 @@ type Props = {
   hideHeader?: any;
 };
 
-const SelectCountry: FC<Props> = ({ hideHeader }) => {
+const SelectCountry = ({ hideHeader }: Props) => {
   const [secondRender, forceSecondRender] = useState(false);
   const alert = useAlert();
   const { t } = useTranslation();

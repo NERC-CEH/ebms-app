@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { Page, Header } from '@flumens';
@@ -12,7 +12,7 @@ type Props = {
   sample: Sample;
 };
 
-const DetailsController: FC<Props> = ({ sample }) => {
+const DetailsController = ({ sample }: Props) => {
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
   const checkSampleStatus = useValidateCheck(sample);

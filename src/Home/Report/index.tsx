@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Page, device, useToast } from '@flumens';
 import { AppModel } from 'models/app';
@@ -12,7 +12,7 @@ type Props = {
   userModel: UserModel;
 };
 
-const Report: FC<Props> = ({ appModel, userModel }) => {
+const Report = ({ appModel, userModel }: Props) => {
   const [species, setSpecies] = useState<any>([]);
   const [userSpecies, setUserSpecies] = useState<any>([]);
   const [userSpeciesLastMonth, setUserSpeciesLastMonth] = useState<any>([]);

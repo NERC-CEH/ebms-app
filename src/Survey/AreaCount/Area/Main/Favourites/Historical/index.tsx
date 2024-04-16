@@ -1,4 +1,4 @@
-import { FC, createRef, useState } from 'react';
+import { createRef, useState } from 'react';
 import { observer } from 'mobx-react';
 import { useAlert, string as StringHelp } from '@flumens';
 import { IonList } from '@ionic/react';
@@ -57,7 +57,7 @@ type Props = {
   position?: any;
 };
 
-const HistoricalLocations: FC<Props> = ({ onSelect, position }) => {
+const HistoricalLocations = ({ onSelect, position }: Props) => {
   const [editLocation, setEditLocation] = useState<Location>(null);
 
   const showDeletePopup = useShowDeletePopup();

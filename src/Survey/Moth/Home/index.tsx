@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 
 /* eslint-disable camelcase */
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
@@ -63,7 +63,7 @@ interface Props {
   sample: Sample;
 }
 
-const HomeController: FC<Props> = ({ sample }) => {
+const HomeController = ({ sample }: Props) => {
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();

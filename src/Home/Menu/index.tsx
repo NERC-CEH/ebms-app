@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { Page, useAlert, useLoader, useToast } from '@flumens';
@@ -34,7 +33,7 @@ function showLogoutConfirmationDialog(callback: any, alert: any) {
   });
 }
 
-const Controller: FC = ({ ...restProps }) => {
+const Controller = ({ ...restProps }) => {
   const alert = useAlert();
   const loader = useLoader();
   const toast = useToast();

@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
@@ -58,7 +58,7 @@ type Props = {
 
 const FIRST_SECTION_INDEX = 0;
 
-const EditController: FC<Props> = ({ sample, subSample }) => {
+const EditController = ({ sample, subSample }: Props) => {
   const { navigate, goBack } = useContext(NavContext);
   const { t } = useTranslation();
   const { url } = useRouteMatch();

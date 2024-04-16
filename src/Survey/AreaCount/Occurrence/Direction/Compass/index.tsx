@@ -1,11 +1,10 @@
-import { FC } from 'react';
 import './styles.scss';
 
 type Props = {
   direction: any;
 };
 
-const Compass: FC<Props> = ({ direction }) => {
+const Compass = ({ direction }: Props) => {
   return (
     <div id="compass">
       <div
@@ -21,7 +20,6 @@ const Compass: FC<Props> = ({ direction }) => {
         <div className="compassMark--directionH" />
         <div className="compassMark--directionV" />
       </div>
-
       <div className="compassArrowContainer">
         <div className="compassArrow" />
       </div>

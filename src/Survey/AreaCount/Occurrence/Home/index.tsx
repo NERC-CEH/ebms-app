@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Page, Header } from '@flumens';
 import Occurrence from 'models/occurrence';
@@ -12,7 +11,7 @@ type Props = {
   occurrence: Occurrence;
 };
 
-const Container: FC<Props> = ({ sample, subSample, occurrence }) => (
+const Container = ({ sample, subSample, occurrence }: Props) => (
   <Page id="precise-area-count-edit-occurrence">
     <Header title="Edit Occurrence" />
     <Main

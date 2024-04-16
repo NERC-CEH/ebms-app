@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { IonLabel } from '@ionic/react';
@@ -7,7 +6,7 @@ type Props = {
   direction: string;
 };
 
-export const PaintedLadyDirection: FC<Props> = ({ direction }) => {
+export const PaintedLadyDirection = ({ direction }: Props) => {
   if (!direction) return null;
 
   return (

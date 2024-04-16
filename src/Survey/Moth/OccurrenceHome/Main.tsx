@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -16,7 +15,7 @@ interface Props {
   occurrence: Occurrence;
 }
 
-const EditOccurrence: FC<Props> = ({ occurrence }) => {
+const EditOccurrence = ({ occurrence }: Props) => {
   const { useImageIdentifier } = appModel.attrs;
   const match = useRouteMatch();
   const species = occurrence.getTaxonCommonAndScientificNames();

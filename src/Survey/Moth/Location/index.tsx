@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Page, Header, Main, device, useToast } from '@flumens';
 import { NavContext } from '@ionic/react';
@@ -14,7 +14,7 @@ interface Props {
   sample: Sample;
 }
 
-const Location: FC<Props> = ({ sample }) => {
+const Location = ({ sample }: Props) => {
   const validateLocation = useValidateCheck();
   const checkUserStatus = useUserStatusCheck();
   const toast = useToast();

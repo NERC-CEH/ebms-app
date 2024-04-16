@@ -1,4 +1,4 @@
-import { createRef, FC, useState } from 'react';
+import { createRef, useState } from 'react';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { Main, useOnHideModal } from '@flumens';
 import {
@@ -23,7 +23,7 @@ type Props = {
   onLocationSave: any;
 };
 
-const EditModal: FC<Props> = ({ location, onLocationSave }) => {
+const EditModal = ({ location, onLocationSave }: Props) => {
   const { t } = useTranslation();
 
   const [locationName, setLocationName] = useState(location.name);

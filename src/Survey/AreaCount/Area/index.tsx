@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
 import { resizeOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
@@ -18,7 +18,7 @@ type Props = {
   sample: Sample;
 };
 
-const AreaController: FC<Props> = ({ sample }) => {
+const AreaController = ({ sample }: Props) => {
   const { goBack } = useContext(NavContext);
 
   const toggleGPStracking = (on: boolean) => {

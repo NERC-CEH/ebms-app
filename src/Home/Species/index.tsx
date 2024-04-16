@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { bookOutline, helpBuoyOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
@@ -22,7 +22,7 @@ type Props = {
   appModel: AppModel;
 };
 
-const Species: FC<Props> = ({ appModel }) => {
+const Species = ({ appModel }: Props) => {
   const [searchPhrase, setSearchPhrase] = useState('');
   const alert = useAlert();
 

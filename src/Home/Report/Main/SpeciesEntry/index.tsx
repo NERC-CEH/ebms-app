@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { IonItem, IonIcon, IonAvatar } from '@ionic/react';
 import speciesProfiles, {
   Species as SpeciesProfile,
@@ -11,7 +10,7 @@ interface Props {
   species: any;
 }
 
-const SpeciesEntry: FC<Props> = ({ species }) => {
+const SpeciesEntry = ({ species }: Props) => {
   const scientificName = species.key;
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore

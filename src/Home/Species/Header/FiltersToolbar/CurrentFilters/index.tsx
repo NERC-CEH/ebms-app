@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import { closeOutline } from 'ionicons/icons';
@@ -24,7 +23,7 @@ type Props = {
   searchPhrase?: string;
 };
 
-const CurrentFilters: FC<Props> = ({ searchPhrase, values, onRemove }) => {
+const CurrentFilters = ({ searchPhrase, values, onRemove }: Props) => {
   const getFilter = ([type, value]: [FilterGroup, FilterValue]) => {
     const removeFilterWrap = () => onRemove(type, value);
 

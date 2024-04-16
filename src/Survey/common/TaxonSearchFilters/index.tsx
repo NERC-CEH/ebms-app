@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { Trans as T } from 'react-i18next';
 import { Button } from '@flumens';
 import { IonLabel } from '@ionic/react';
@@ -11,7 +11,7 @@ type Props = {
   sample: Sample;
 };
 
-const Header: FC<Props> = ({ sample }) => {
+const Header = ({ sample }: Props) => {
   if (!sample.metadata.speciesGroups) {
     // eslint-disable-next-line no-param-reassign
     sample.metadata.speciesGroups = appModel.attrs.speciesGroups;

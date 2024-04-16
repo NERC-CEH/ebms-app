@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { MapContainer } from '@flumens';
 import { IonSpinner } from '@ionic/react';
@@ -20,7 +20,7 @@ interface Props {
   onLocationCreate: any;
 }
 
-const MapComponent: FC<Props> = ({
+const MapComponent = ({
   sample,
   mothTraps,
   isFetchingTraps,
@@ -29,7 +29,7 @@ const MapComponent: FC<Props> = ({
   onLocationDelete,
   onLocationUpload,
   onLocationCreate,
-}) => {
+}: Props) => {
   // dynamic center when the user moves the map manually
   const [currentMapCenter, setMapCurrentCenter] = useState([51, -1]);
 

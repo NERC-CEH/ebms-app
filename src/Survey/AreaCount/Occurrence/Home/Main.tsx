@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import {
   clipboardOutline,
@@ -24,7 +23,7 @@ type Props = {
   isDisabled: boolean;
 };
 
-const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
+const EditOccurrence = ({ subSample, occurrence, isDisabled }: Props) => {
   const match = useRouteMatch();
 
   const species = occurrence.getTaxonCommonAndScientificNames();

@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { toJS, observable } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
@@ -151,7 +151,7 @@ type Props = {
   sample: Sample;
 };
 
-const HomeController: FC<Props> = ({ sample }) => {
+const HomeController = ({ sample }: Props) => {
   const alert = useAlert();
 
   const { navigate } = useContext(NavContext);

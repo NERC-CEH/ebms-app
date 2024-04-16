@@ -1,4 +1,4 @@
-import { FC, useContext, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
@@ -98,7 +98,7 @@ type Props = {
   navigateToSpeciesOccurrences: any;
 };
 
-const HomeMain: FC<Props> = ({
+const HomeMain = ({
   match,
   sample,
   increaseCount,
@@ -112,7 +112,7 @@ const HomeMain: FC<Props> = ({
   onIdentifyAllOccurrences,
   copyPreviousSurveyTaxonList,
   navigateToSpeciesOccurrences,
-}) => {
+}: Props) => {
   const { navigate } = useContext(NavContext);
   const alert = useAlert();
   const ref = useRef();

@@ -1,4 +1,4 @@
-import { FC, useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch, useLocation } from 'react-router';
@@ -48,7 +48,7 @@ const cancelButtonWrap = (onDeleteSurvey: any) => {
   );
 };
 
-const DetailsController: FC<Props> = ({ sample }) => {
+const DetailsController = ({ sample }: Props) => {
   const alert = useAlert();
   const { navigate, goBack } = useContext(NavContext);
   const { url } = useRouteMatch();

@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { warningOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
@@ -26,12 +25,12 @@ type Props = {
   isDisabled?: boolean;
 };
 
-const EditOccurrence: FC<Props> = ({
+const EditOccurrence = ({
   samples,
   navigateToOccurrence,
   deleteSample,
   isDisabled,
-}) => {
+}: Props) => {
   const match = useRouteMatch();
 
   const getSamplesList = () => {

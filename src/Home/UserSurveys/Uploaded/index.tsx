@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import InfiniteLoader from 'react-window-infinite-loader';
 import { date as DateHelp, device, VirtualList } from '@flumens';
@@ -43,7 +43,7 @@ let reachedBottom = false;
 
 const canFetch = () => userModel.isLoggedIn() && device.isOnline;
 
-const Uploaded: FC = () => {
+const Uploaded = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const uploaded = (sample: Sample) => sample.metadata.syncedOn;
@@ -105,7 +105,7 @@ const Uploaded: FC = () => {
   [...surveys].forEach(extraxtDates);
 
   // eslint-disable-next-line react/no-unstable-nested-components
-  const Item: FC<{ index: number }> = ({ index, ...itemProps }) => {
+  const Item = ({ index, ...itemProps }: { index: number }) => {
     if (dateIndices.includes(index)) {
       const { date, count } = groupedSurveys[index];
       return (

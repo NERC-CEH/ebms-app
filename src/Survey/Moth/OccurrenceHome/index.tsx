@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Page, Header } from '@flumens';
 import Occurrence from 'models/occurrence';
@@ -8,7 +7,7 @@ interface Props {
   occurrence: Occurrence;
 }
 
-const OccurrenceHome: FC<Props> = ({ occurrence }) => {
+const OccurrenceHome = ({ occurrence }: Props) => {
   return (
     <Page id="moth-survey-edit-occurrence">
       <Header title="Edit Occurrence" />

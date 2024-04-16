@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { searchOutline } from 'ionicons/icons';
 import { IonHeader, IonToolbar, IonIcon } from '@ionic/react';
@@ -14,12 +14,7 @@ type Props = {
   filterOptions: any;
 };
 
-const Header: FC<Props> = ({
-  onSearch,
-  toggleFilter,
-  filters,
-  filterOptions,
-}) => {
+const Header = ({ onSearch, toggleFilter, filters, filterOptions }: Props) => {
   const [isSearching, setIsSearching] = useState(false);
   const onSearchStart = () => setIsSearching(true);
   const onSearchEnd = () => setIsSearching(false);

@@ -1,4 +1,4 @@
-import { useContext, FC } from 'react';
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { Page, useToast } from '@flumens';
 import { NavContext } from '@ionic/react';
@@ -12,7 +12,7 @@ type Props = {
   sample: Sample;
 };
 
-const TransectHomeController: FC<Props> = ({ sample }) => {
+const TransectHomeController = ({ sample }: Props) => {
   const { navigate } = useContext(NavContext);
   const toast = useToast();
   const checkSampleStatus = useValidateCheck(sample);

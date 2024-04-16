@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 
 /* eslint-disable camelcase */
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -49,7 +49,7 @@ function useDeleteLampPrompt() {
   return showDeletePrompt;
 }
 
-const MothTrapSetup: FC<Props> = ({ sample: location }) => {
+const MothTrapSetup = ({ sample: location }: Props) => {
   const checkUserStatus = useUserStatusCheck();
 
   const { navigate, goBack } = useContext(NavContext);

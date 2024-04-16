@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
@@ -13,7 +12,7 @@ type Props = {
   lamp: Lamp;
 };
 
-const MothTrapSetupMain: FC<Props> = ({ location, lamp }) => {
+const MothTrapSetupMain = ({ location, lamp }: Props) => {
   const { description, type } = lamp.attrs;
 
   const getCounterOnChange = (value: number) => {

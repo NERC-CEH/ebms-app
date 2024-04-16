@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { addOutline } from 'ionicons/icons';
 import { useTranslation } from 'react-i18next';
 import { useToast, date as DateHelp, VirtualList } from '@flumens';
@@ -70,7 +70,7 @@ const getSurveys = (surveys: Sample[], showUploadAll?: boolean) => {
   });
 
   // eslint-disable-next-line react/no-unstable-nested-components
-  const Item: FC<{ index: number }> = ({ index, ...itemProps }) => {
+  const Item = ({ index, ...itemProps }: { index: number }) => {
     if (dateIndices.includes(index)) {
       const { date, count } = groupedSurveys[index];
       return (
@@ -109,7 +109,7 @@ const getSurveys = (surveys: Sample[], showUploadAll?: boolean) => {
   );
 };
 
-const Pending: FC = () => {
+const Pending = () => {
   const { navigate } = useContext(NavContext);
   const toast = useToast();
   const { t } = useTranslation();

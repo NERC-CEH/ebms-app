@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -52,12 +52,12 @@ interface Props {
   onIdentify: any;
 }
 
-const UnidentifiedSpeciesEntry: FC<Props> = ({
+const UnidentifiedSpeciesEntry = ({
   occ,
   isDisabled,
   isUnidentifiedSpeciesLengthMoreThanFive,
   onIdentify,
-}) => {
+}: Props) => {
   const checkUserStatus = useUserStatusCheck();
 
   const { navigate } = useContext(NavContext);

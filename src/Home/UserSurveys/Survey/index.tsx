@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useToast, useAlert, Badge } from '@flumens';
@@ -67,7 +66,7 @@ type Props = {
   style?: any;
 };
 
-const Survey: FC<Props> = ({ sample, uploadIsPrimary, style }) => {
+const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
   const toast = useToast();
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();

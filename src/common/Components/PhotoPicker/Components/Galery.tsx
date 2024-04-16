@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { Gallery, useToast } from '@flumens';
@@ -75,7 +74,7 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
   );
 };
 
-const GalleryComponent: FC<Props> = ({ items, showGallery, onClose }) => {
+const GalleryComponent = ({ items, showGallery, onClose }: Props) => {
   const toast = useToast();
 
   const getItem = (image: Media) => {

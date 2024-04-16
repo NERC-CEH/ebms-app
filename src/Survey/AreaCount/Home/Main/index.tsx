@@ -1,4 +1,4 @@
-import { FC, useContext, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import {
@@ -137,7 +137,7 @@ type Props = {
   cloneSubSample: (smp: Sample, ref?: any) => void;
 };
 
-const AreaCount: FC<Props> = ({
+const AreaCount = ({
   sample,
   previousSurvey,
   deleteSpecies,
@@ -152,7 +152,7 @@ const AreaCount: FC<Props> = ({
   navigateToOccurrence,
   deleteSingleSample,
   cloneSubSample,
-}) => {
+}: Props) => {
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch<any>();
   const alert = useAlert();

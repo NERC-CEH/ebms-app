@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { timeOutline, cloudOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
@@ -23,7 +22,7 @@ const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
   minute: 'numeric',
 });
 
-const DetailsMain: FC<Props> = ({ sample }) => {
+const DetailsMain = ({ sample }: Props) => {
   const { url } = useRouteMatch();
   const { surveyStartTime, surveyEndTime } = sample.attrs;
   const location = sample.attrs.location as MothTrapLocation;
