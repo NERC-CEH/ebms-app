@@ -34,12 +34,6 @@ export {
   default as RouteWithModels,
   getModels as getModelsFromRoute,
 } from '@flumens/ionic/dist/components/RouteWithModels';
-export { default as LongPressButton } from '@flumens/ionic/dist/components/LongPressButton';
-export { default as CounterInput } from '@flumens/ionic/dist/components/CounterInput';
-export {
-  default as RadioInput,
-  type Option as RadioOption,
-} from '@flumens/ionic/dist/components/RadioInput';
 export { default as Main } from '@flumens/ionic/dist/components/Main';
 export { default as Header } from '@flumens/ionic/dist/components/Header';
 export { default as Collapse } from '@flumens/ionic/dist/components/Collapse';
@@ -52,7 +46,6 @@ export {
 export { default as ModelValidationMessage } from '@flumens/ionic/dist/components/ModelValidationMessage';
 export { default as ImageWithBackground } from '@flumens/ionic/dist/components/ImageWithBackground';
 export { default as Gallery } from '@flumens/ionic/dist/components/Gallery';
-export { default as MenuAttrToggle } from '@flumens/ionic/dist/components/MenuAttrToggle';
 export { default as ModalHeader } from '@flumens/ionic/dist/components/ModalHeader';
 export { default as Section } from '@flumens/ionic/dist/components/Section';
 export { default as InfoButton } from '@flumens/ionic/dist/components/InfoButton';
@@ -106,9 +99,18 @@ export {
   default as Input,
   type Props as InputProps,
 } from '@flumens/tailwind/dist/components/Input';
+export { type RadioOption } from '@flumens/tailwind/dist/components/Radio';
 export { default as Button } from '@flumens/tailwind/dist/components/Button';
 export { default as Badge } from '@flumens/tailwind/dist/components/Badge';
+export { default as NumberInput } from '@flumens/tailwind/dist/components/NumberInput';
+export { default as RadioInput } from '@flumens/tailwind/dist/components/Radio';
+export { default as Toggle } from '@flumens/tailwind/dist/components/Switch';
 export {
   default as InfoMessage,
   type Props as InfoMessageProps,
 } from '@flumens/tailwind/dist/components/InfoMessage';
+export {
+  default as TailwindContext,
+  type ContextValue as TailwindContextValue,
+} from '@flumens/tailwind/dist/components/Context';
+export { default as InfoBackgroundMessage } from '@flumens/tailwind/dist/components/InfoBackgroundMessage';

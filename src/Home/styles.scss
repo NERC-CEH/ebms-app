@@ -9,20 +9,8 @@
     padding-bottom: var(--ion-safe-area-bottom, 0);
     --background: white;
 
-    ion-button {
-      --padding-start: 0px;
-      --padding-end: 0px;
-      max-width: 20vw;
-      margin-top: -20px;
-    }
-
     ion-icon {
       font-size: 2rem;
-    }
-
-    ion-button {
-      max-width: 20vw;
-      margin-top: -20px;
     }
 
     ion-tab-button {
@@ -38,85 +26,11 @@
         ion-label {
           font-family: 'Quicksand Bold' !important;
         }
-        // ion-icon {
-        //   --ionicon-stroke-width: 30px;
-        // }
       }
 
       ion-label.md {
         margin-bottom: 2px;
       }
-    }
-
-    .long-press-fab-button {
-      // padding needed for iOS with no toolbar
-      padding-bottom: 0;
-
-      .fab-button {
-        margin-left: 0px !important;
-        margin-bottom: 0px !important;
-        margin-right: 0px !important;
-      }
-
-      .fab-options {
-        position: fixed;
-        z-index: 1000;
-        left: 50%;
-        transform: translate(-50%, 0%) !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: var(--ion-safe-area-bottom, 0);
-
-        ion-fab-button {
-          height: 60px;
-
-          ion-label {
-            padding: 10px;
-          }
-        }
-      }
-    }
-  }
-
-  £ > ion-router-outlet > div > div {
-    display: inherit !important;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    contain: size layout style;
-  }
-
-  .long-press-surveys-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #424242;
-    padding: 20px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    color: white;
-    height: 70px;
-  }
-
-  ion-fab-button:not(.fab-button-label) {
-    --box-shadow: 1px 2px 14px 0px rgb(0 0 0 / 42%);
-  }
-
-  ion-fab-button.fab-button-label {
-    width: 240px;
-    white-space: normal;
-    --border-radius: 4px;
-    --background: var(--color-primary-700);
-    --color: white;
-
-    ion-label {
-      font-size: 1.2em;
     }
   }
 }

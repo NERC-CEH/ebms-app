@@ -12,14 +12,8 @@ import {
   trashBinOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Main, useAlert, InfoMessage, MenuAttrToggle } from '@flumens';
-import {
-  IonIcon,
-  IonList,
-  IonItemDivider,
-  IonItem,
-  IonLabel,
-} from '@ionic/react';
+import { Main, useAlert, InfoMessage, Toggle } from '@flumens';
+import { IonIcon, IonList, IonItem, IonLabel } from '@ionic/react';
 import config from 'common/config';
 import countries, { CountryCode } from 'common/config/countries';
 import languages, { LanguageCode } from 'common/config/languages';
@@ -39,7 +33,7 @@ function useUserDeleteDialog(deleteUser: any) {
           Are you sure you want to delete your account?
           <InfoMessage
             color="danger"
-            startAddon={<IonIcon src={warningOutline} />}
+            prefix={<IonIcon src={warningOutline} />}
             skipTranslation
           >
             This will remove your account on the{' '}
@@ -137,10 +131,10 @@ const MenuMain: FC<Props> = ({
   return (
     <Main className="app-settings">
       <IonList lines="full">
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Surveying</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <IonItem routerLink="/settings/primary-survey" detail>
             <IonLabel>
               <T>Primary Survey</T>
@@ -159,10 +153,10 @@ const MenuMain: FC<Props> = ({
           </IonItem>
         </div>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Application</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <IonItem routerLink="/settings/language" detail>
             <IonLabel>
               <T>Language</T>
@@ -179,41 +173,41 @@ const MenuMain: FC<Props> = ({
               <T>{countryLabel}</T>
             </IonLabel>
           </IonItem>
-          <MenuAttrToggle
-            icon={butterflyIcon}
+          <Toggle
+            prefix={<IonIcon src={butterflyIcon} className="size-6" />}
             label="Use global species lists"
-            value={useGlobalSpeciesList}
+            defaultSelected={useGlobalSpeciesList}
             onChange={onGlobalSpeciesListToggle}
           />
           <InfoMessage inline>
             Don't restrict to local species names in survey searches.
           </InfoMessage>
-          <MenuAttrToggle
-            icon={butterflyIcon}
+          <Toggle
+            prefix={<IonIcon src={butterflyIcon} className="size-6" />}
             label="Show common names in guide"
-            value={showCommonNamesInGuide}
+            defaultSelected={showCommonNamesInGuide}
             onChange={onShowCommonNamesInGuide}
           />
-          <MenuAttrToggle
-            icon={schoolOutline}
+          <Toggle
+            prefix={<IonIcon src={schoolOutline} className="size-6" />}
             label="Training Mode"
-            value={useTraining}
+            defaultSelected={useTraining}
             onChange={onTrainingToggle}
           />
           <InfoMessage inline>
             Mark any new records as &#39;training&#39; and exclude from all
             reports.
           </InfoMessage>
-          <MenuAttrToggle
-            icon={flameOutline}
+          <Toggle
+            prefix={<IonIcon src={flameOutline} className="size-6" />}
             label="Experimental Features"
-            value={useExperiments}
+            defaultSelected={useExperiments}
             onChange={onUseExperiments}
           />
-          <MenuAttrToggle
-            icon={shareOutline}
+          <Toggle
+            prefix={<IonIcon src={shareOutline} className="size-6" />}
             label="Share App Analytics"
-            value={sendAnalytics}
+            defaultSelected={sendAnalytics}
             onChange={onSendAnalyticsToggle}
           />
           <InfoMessage inline>
@@ -230,7 +224,10 @@ const MenuMain: FC<Props> = ({
           </InfoMessage>
         </div>
 
-        <div className="destructive-item rounded">
+        <h3 className="list-title">
+          <T>Account</T>
+        </h3>
+        <div className="destructive-item rounded-list">
           {isLoggedIn && (
             <>
               <IonItem onClick={showUserDeleteDialog}>

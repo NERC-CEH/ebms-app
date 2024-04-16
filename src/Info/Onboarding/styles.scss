@@ -1,109 +1,114 @@
-#welcome {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: white;
+#welcome-page {
+  #welcome {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
 
-  --bullet-background-active: white;
+    --bullet-background-active: white;
 
-  ion-button {
+    button {
+      position: absolute;
+      bottom: 7%;
+
+      &.skip {
+        left: 9%;
+      }
+      &.next {
+        right: 9%;
+      }
+    }
+
+    .message {
+      position: absolute;
+      width: 70%;
+
+      @apply overflow-hidden rounded-md border border-solid border-primary-200 bg-white/70 px-6 py-3 text-lg font-light text-primary-900 backdrop-blur-sm backdrop-filter;
+
+      // Hack around the tablet hidden message issue
+      @media only screen and (min-width: 650px) {
+        margin-left: -325px !important;
+        left: 50% !important;
+      }
+    }
+
+    .swiper-pagination-bullets {
+      bottom: 3%;
+
+      .swiper-pagination-bullet {
+        background: black;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--ion-color-primary);
+      }
+    }
+
+    $bottom: 16vh;
+
+    .swiper-slide {
+      &.first {
+        background: url('images/welcome_1.jpg') no-repeat;
+        background-position: bottom;
+        background-size: contain;
+
+        .message {
+          text-align: left;
+          top: 14vh;
+        }
+      }
+
+      &.second {
+        background: url('images/welcome_2.jpg') no-repeat;
+        background-position: left;
+        background-size: cover;
+
+        .message {
+          text-align: left;
+          left: 10vw;
+          bottom: 20vh;
+        }
+
+        ion-button {
+          --ion-color-contrast: var(--ion-color-primary) !important;
+        }
+      }
+
+      &.third {
+        background: url('images/welcome_3.jpg') no-repeat;
+        background-position: left;
+        background-size: contain;
+        .message {
+          text-align: left;
+          bottom: 13vh;
+        }
+      }
+
+      &.fourth {
+        background: url('images/welcome_4.jpg') no-repeat;
+        background-position: left;
+        background-size: cover;
+        .message {
+          text-align: left;
+          right: 10vw;
+          bottom: $bottom;
+        }
+      }
+    }
+  }
+
+  ion-footer ion-toolbar {
+    --background: transparent;
+    --border-color: transparent;
     position: absolute;
-    bottom: 7%;
+    bottom: 0;
 
-    &.skip {
-      left: 9%;
-    }
-    &.next {
-      right: 9%;
-    }
-  }
-
-  .message {
-    position: absolute;
-    width: 70%;
-    padding-left: 10px;
-
-    // Hack around the tablet hidden message issue
-    @media only screen and (min-width: 650px) {
-      margin-left: -325px !important;
-      left: 50% !important;
-    }
-  }
-
-  .message p,
-  .message h2 {
-    padding: 10px;
-    color: whitesmoke;
-    background-color: var(--ion-color-primary-tint);
-  }
-
-  .swiper-pagination-bullets {
-    bottom: 3%;
-
-    .swiper-pagination-bullet {
-      background: black;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: var(--ion-color-primary);
-    }
-  }
-
-  .message p {
-    font-size: 0.9em;
-  }
-
-  $bottom: 16vh;
-
-  .swiper-slide {
-    &.first {
-      background: url('images/welcome_1.jpg') no-repeat;
-      background-position: bottom;
-      background-size: contain;
-
-      .message {
-        text-align: left;
-        top: 14vh;
-      }
-    }
-
-    &.second {
-      background: url('images/welcome_2.jpg') no-repeat;
-      background-position: left;
-      background-size: cover;
-
-      .message {
-        text-align: left;
-        left: 10vw;
-        bottom: 20vh;
-      }
-
-      ion-button {
-        --ion-color-contrast: var(--ion-color-primary) !important;
-      }
-    }
-
-    &.third {
-      background: url('images/welcome_3.jpg') no-repeat;
-      background-position: left;
-      background-size: contain;
-      .message {
-        text-align: left;
-        bottom: 13vh;
-      }
-    }
-
-    &.fourth {
-      background: url('images/welcome_4.jpg') no-repeat;
-      background-position: left;
-      background-size: cover;
-      .message {
-        text-align: left;
-        right: 10vw;
-        bottom: $bottom;
-      }
+    ion-button {
+      height: 50px;
+      width: 50px;
+      margin: 10px;
     }
   }
 }

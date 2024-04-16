@@ -16,7 +16,6 @@ import {
   IonIcon,
   IonLabel,
   NavContext,
-  IonItemDivider,
   IonItemSliding,
   IonItem,
   IonItemOptions,
@@ -220,25 +219,29 @@ const HomeMain: FC<Props> = ({
     return (
       <>
         <IonList id="list" lines="full">
-          <div className="rounded">
-            <IonItemDivider className="species-list-header unknown">
-              <IonLabel
+          <div className="rounded-list">
+            <div className="list-divider">
+              <div
                 className={clsx(
                   !isUnidentifiedSpeciesLengthMoreThanFive() && 'full-width'
                 )}
               >
                 <T>Unknown species</T>
-              </IonLabel>
+              </div>
               {!isUnidentifiedSpeciesLengthMoreThanFive() && (
-                <IonLabel className="count">{count}</IonLabel>
+                <div className="count">{count}</div>
               )}
 
               {isUnidentifiedSpeciesLengthMoreThanFive() && (
-                <IonButton size="small" onClick={onIdentifyAllOccurrences}>
+                <Button
+                  onPress={onIdentifyAllOccurrences}
+                  color="secondary"
+                  className="py-1 text-sm"
+                >
                   <T>Identify All</T>
-                </IonButton>
+                </Button>
               )}
-            </IonItemDivider>
+            </div>
 
             {speciesList}
           </div>
@@ -317,16 +320,16 @@ const HomeMain: FC<Props> = ({
         )}
 
         <IonList id="list" lines="full">
-          <div className="rounded">
-            <IonItemDivider className="species-list-header">
-              <IonLabel>
+          <div className="rounded-list">
+            <div className="list-divider">
+              <div>
                 <T>Count</T>
-              </IonLabel>
-              <IonLabel>
+              </div>
+              <div>
                 <T>Species</T>
-              </IonLabel>
-              <IonLabel>{count}</IonLabel>
-            </IonItemDivider>
+              </div>
+              <div>{count}</div>
+            </div>
 
             {speciesList}
           </div>
@@ -340,7 +343,7 @@ const HomeMain: FC<Props> = ({
       {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">
-        <div className="rounded">
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${match.url}/details`}
             icon={locationOutline}
@@ -355,7 +358,7 @@ const HomeMain: FC<Props> = ({
             color="primary"
             onPress={navigateToTaxonSearch}
             onLongPress={showCopyOptionsWrap}
-            startAddon={<IonIcon src={addCircleOutline} className="size-5" />}
+            prefix={<IonIcon src={addCircleOutline} className="size-5" />}
           >
             Add species
           </Button>

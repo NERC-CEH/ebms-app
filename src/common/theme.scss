@@ -1,6 +1,4 @@
-@import '@ionic/core/css/core.css';
 @import '@ionic/core/css/ionic.bundle.css';
-
 @import '@flumens/ionic/dist/themes/rounded.css';
 
 @tailwind base;
@@ -91,7 +89,7 @@
   --ion-toolbar-color: #fff;
   --ion-toolbar-color-activated: #fff;
 
-  --form-value-color: var(--color-primary-700);
+  --form-value-color: rgba(var(--color-tertiary-800-rgb), 0.85);
 }
 
 // status bar
@@ -106,16 +104,7 @@ html.ios.plt-hybrid #status-bar-background {
 
 // info messages
 .attr-page .info-message {
-  --background: rgba(var(--ion-color-tertiary-rgb), 0.1);
-  background: white; // above is transparent
-
-  ion-note {
-    color: var(--ion-color-tertiary-dark);
-    font-size: 1em;
-  }
-  ion-icon {
-    color: var(--ion-color-tertiary-dark) !important;
-  }
+  @apply border-tertiary-300/40 bg-tertiary-50 text-tertiary-900;
 }
 
 // don't know why this is needed but it fixed location name being off
@@ -183,12 +172,6 @@ html[mode='ios'] .tabs-inner {
   font-size: 0.8em;
 }
 
-// checkbox input subEntry
-.checkbox-subEntry {
-  width: 85%;
-  margin: 10px 10px 10px auto !important;
-}
-
 .item-interactive-disabled img,
 .item-interactive-disabled ion-img {
   opacity: 0.3;
@@ -243,3 +226,41 @@ ion-item.menu-attr-item ion-label[slot='end'] {
 }
 
 /** Ionic 7 fixes END **/
+
+// list item picture
+.list-avatar {
+  @apply flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-md bg-neutral-100;
+}
+
+// top of the list title
+.list-title {
+  @apply mx-2 mb-3 mt-5 flex items-center text-[1.0625rem] text-primary-950;
+}
+
+// top of the list item
+.list-divider {
+  @apply flex items-center justify-between bg-neutral-200/70 p-1 px-2 text-sm text-neutral-600;
+}
+
+// Make Android icons dark, same as iOS
+ion-icon[slot='start'].md {
+  color: var(--ion-text-color, #000);
+}
+
+// Makes iOS menu items same height as Android
+ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+// Add padding to pages
+ion-content {
+  --padding-top: 5px;
+  --padding-bottom: 30px;
+}
+
+// Make menu item value colours same as form values, e.g. Settings page
+ion-item .sc-ion-label-md-h.sc-ion-label-md-s.md[slot='end'],
+ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios[slot='end'] {
+  color: var(--form-value-color);
+}

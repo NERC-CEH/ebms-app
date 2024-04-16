@@ -8,7 +8,7 @@ import {
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Main, MenuAttrItem } from '@flumens';
-import { IonList, IonIcon, IonItemDivider } from '@ionic/react';
+import { IonList, IonIcon } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import Occurrence from 'models/occurrence';
@@ -52,10 +52,10 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
   return (
     <Main id="area-count-occurrence-edit">
       <IonList lines="full">
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Details</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           {!isPreciseSurvey && (
             <MenuAttrItem
               routerLink={`${baseURL}/taxon`}
@@ -107,19 +107,19 @@ const EditOccurrence: FC<Props> = ({ subSample, occurrence, isDisabled }) => {
 
         {isPaintedLadySurvey && (
           <>
-            <IonItemDivider>
+            <h3 className="list-title">
               <T>{speciesName}</T>
-            </IonItemDivider>
-            <div className="rounded">
+            </h3>
+            <div className="rounded-list">
               <PaintedLadyAttrs occurrence={occurrence} />
             </div>
           </>
         )}
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Species Photo</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <PhotoPicker model={occurrence} />
         </div>
       </IonList>

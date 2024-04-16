@@ -9,7 +9,6 @@ import {
   IonList,
   IonItem,
   IonLabel,
-  IonItemDivider,
   IonItemSliding,
   IonItemOptions,
   IonItemOption,
@@ -18,7 +17,6 @@ import GridRefValue from 'common/Components/GridRefValue';
 import InfoBackgroundMessage from 'common/Components/InfoBackgroundMessage';
 import mothTrapIcon from 'common/images/moth-inside-icon.svg';
 import { Lamp } from 'models/location';
-import './styles.scss';
 
 type Props = {
   location: any;
@@ -96,13 +94,13 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
     const lampList = lamps.map(getLampEntry);
 
     return (
-      <div className="rounded">
-        <IonItemDivider className="species-list-header">
+      <div className="rounded-list">
+        <h3 className="list-title">
           <IonLabel>
             <T>Lamps</T>
           </IonLabel>
           <IonLabel slot="end">{lampList.length}</IonLabel>
-        </IonItemDivider>
+        </h3>
 
         {lampList}
       </div>
@@ -114,7 +112,7 @@ const MothTrapSetupMain: FC<Props> = ({ location, addNewLamp, deleteLamp }) => {
   return (
     <Main>
       <IonList lines="full">
-        <div className="rounded">
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`/location/${location.cid}/location`}
             icon={pinOutline}

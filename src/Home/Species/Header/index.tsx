@@ -1,14 +1,8 @@
 import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
 import { searchOutline } from 'ionicons/icons';
-import {
-  IonHeader,
-  IonToolbar,
-  IonButtons,
-  IonIcon,
-  IonButton,
-  IonTitle,
-} from '@ionic/react';
+import { IonHeader, IonToolbar, IonIcon } from '@ionic/react';
+import { Button } from 'common/flumens';
 import FiltersToolbar from './FiltersToolbar';
 import logo from './logo.svg';
 import './styles.scss';
@@ -34,22 +28,25 @@ const Header: FC<Props> = ({
     <IonHeader id="species-search-header">
       {!isSearching && (
         <IonToolbar className="species-toolbar">
-          <IonButtons slot="start">
-            {/* mode=md because md isn't flashing when tapped */}
-            <IonButton mode="md">
-              <IonIcon src={logo} />
-            </IonButton>
-          </IonButtons>
+          <div className="flex items-center justify-between">
+            <img src={logo} className="m-2 size-8" />
 
-          <IonTitle size="large" className="app-name">
-            <b>Butterfly</b> Count
-          </IonTitle>
+            <div className="app-name w-fit">
+              <b>Butterfly</b> Count
+            </div>
 
-          <IonButtons slot="end">
-            <IonButton onClick={onSearchStart} className="search">
-              <IonIcon slot="icon-only" icon={searchOutline} />
-            </IonButton>
-          </IonButtons>
+            <Button
+              onPress={onSearchStart}
+              className="p-2"
+              fill="clear"
+              skipTranslation
+            >
+              <IonIcon
+                icon={searchOutline}
+                className="size-8 [--ionicon-stroke-width:20px]"
+              />
+            </Button>
+          </div>
         </IonToolbar>
       )}
 

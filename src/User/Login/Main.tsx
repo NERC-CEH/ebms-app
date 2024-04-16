@@ -37,43 +37,33 @@ const LoginMain = ({ onSubmit }: Props) => {
       <div className="mx-auto flex max-w-md flex-col gap-8 px-3 pt-3">
         <InfoMessage
           color="tertiary"
-          startAddon={
-            <IonIcon src={informationCircleOutline} className="size-5" />
-          }
+          prefix={<IonIcon src={informationCircleOutline} className="size-5" />}
         >
           Please sign in with your eBMS account or register.
         </InfoMessage>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="rounded">
+          <div className="rounded-list">
             <ControlledInput
               control={control}
               name="email"
-              startAddon={
-                <IonIcon icon={mailOutline} className="mx-2 opacity-60" />
-              }
+              prefix={<IonIcon icon={mailOutline} className="size-5" />}
               type="email"
-              autoComplete="off"
               placeholder="Email"
-              platform="ios"
             />
             <ControlledInput
               control={control}
               name="password"
-              startAddon={
-                <IonIcon icon={keyOutline} className="mx-2 opacity-60" />
-              }
-              endAddon={
+              prefix={<IonIcon icon={keyOutline} className="size-5" />}
+              suffix={
                 <IonIcon
                   icon={showPassword ? eyeOutline : eyeOffOutline}
-                  className="opacity-60"
+                  className="size-5 opacity-50"
                   onClick={togglePassword}
                 />
               }
               type={showPassword ? 'text' : 'password'}
-              autoComplete="off"
               placeholder="Password"
-              platform="ios"
             />
           </div>
 
@@ -86,11 +76,15 @@ const LoginMain = ({ onSubmit }: Props) => {
           </Button>
         </form>
 
-        <div className="mt-8 rounded">
+        <div className="rounded-list mt-8">
           <IonItem routerLink="/user/register" detail>
             <T>Register</T>
           </IonItem>
-          <IonItem routerLink="/user/reset" detail>
+          <IonItem
+            routerLink="/user/reset"
+            detail
+            className="[--ion-item-border-color:transparent]"
+          >
             <T>Forgot password?</T>
           </IonItem>
         </div>

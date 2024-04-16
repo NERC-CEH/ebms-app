@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { useTranslation, Trans as T } from 'react-i18next';
+import { RadioOption } from '@flumens';
 import {
   IonList,
   IonRadioGroup,
@@ -9,7 +10,6 @@ import {
   IonItemSliding,
   IonRadio,
 } from '@ionic/react';
-import { RadioOption } from 'common/flumens';
 import projects from 'common/models/collections/projects';
 import Project from 'common/models/project';
 import Sample from 'models/sample';
@@ -34,23 +34,31 @@ const UserProjects = ({ sample, onSelect, onLeave }: Props) => {
   projectOptions.unshift({
     value: '',
     label: t('Not linked to any project'),
-    isDefault: true,
   });
 
   const getProjectOption = (p: any) => {
     const onLeaveProjectWrap = () => onLeave(p?.value);
 
+    const isSelected = sample.attrs.project?.id === p.value;
+
     return (
       <IonItemSliding
         key={p.value}
         className={clsx(
-          'my-3 rounded-[var(--theme-border-radius)]',
-          p.isDefault && 'opacity-70'
+          'my-3 rounded-md border border-solid',
+          !p.value && 'opacity-70',
+          isSelected ? 'border-[var(--form-value-color)]' : 'border-neutral-300'
         )}
-        disabled={p.isDefault}
+        disabled={!p.value}
       >
-        <IonItem className="!m-0 !rounded-none ![--border-radius:0]">
-          <IonRadio labelPlacement="start" value={p.value}>
+        <IonItem
+          className={clsx(
+            '!m-0 !rounded-none ![--border-radius:0]',
+            isSelected &&
+              'bg-white text-[var(--form-value-color)] [--background:rgba(var(--color-tertiary-900-rgb),0.02)] [--ion-color-primary:var(--form-value-color)]'
+          )}
+        >
+          <IonRadio labelPlacement="start" value={p.value} mode="ios">
             {p.label}
           </IonRadio>
         </IonItem>

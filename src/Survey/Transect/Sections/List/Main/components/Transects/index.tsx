@@ -70,16 +70,14 @@ function Transects({ onTransectSelect }: Props) {
   return (
     <Main id="transect-list">
       <InfoMessage
-        startAddon={
-          <IonIcon src={informationCircleOutline} className="size-6" />
-        }
+        prefix={<IonIcon src={informationCircleOutline} className="size-6" />}
         color="tertiary"
       >
         Please select your transect first.
       </InfoMessage>
 
       <IonList lines="full">
-        <div className="rounded">
+        <div className="rounded-list">
           {hasTransects ? (
             transectsList
           ) : (

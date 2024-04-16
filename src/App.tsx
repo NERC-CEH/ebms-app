@@ -1,6 +1,11 @@
 import { observer } from 'mobx-react';
 import { Route, Redirect } from 'react-router-dom';
-import { IonApp as IonAppPlain, IonRouterOutlet } from '@ionic/react';
+import { TailwindContext, TailwindContextValue } from '@flumens';
+import {
+  IonApp as IonAppPlain,
+  IonRouterOutlet,
+  isPlatform,
+} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import WhatsNewDialog from 'common/Components/WhatsNewDialog';
 import 'common/theme.scss';
@@ -17,6 +22,9 @@ import User from './User/router';
 
 const IonApp = IonAppPlain as any; // IonApp has 'lang' prop missing.
 
+const platform = isPlatform('android') ? 'android' : 'ios';
+const tailwindContext: TailwindContextValue = { platform };
+
 const HomeRedirect = () => <Redirect to="home" />;
 
 const App = () => {
@@ -25,20 +33,22 @@ const App = () => {
   return (
     <IonApp lang={language as any}>
       <LanguageCountrySelectRequired appModel={appModel}>
-        <Onboarding>
-          <WhatsNewDialog appModel={appModel} />
-          <IonReactRouter>
-            <IonRouterOutlet id="main">
-              <Route exact path="/" component={HomeRedirect} />
-              <Route path="/home" component={Home} />
-              {Info}
-              {User}
-              {Survey}
-              {Location}
-              {Settings}
-            </IonRouterOutlet>
-          </IonReactRouter>
-        </Onboarding>
+        <TailwindContext.Provider value={tailwindContext}>
+          <Onboarding>
+            <WhatsNewDialog appModel={appModel} />
+            <IonReactRouter>
+              <IonRouterOutlet id="main">
+                <Route exact path="/" component={HomeRedirect} />
+                <Route path="/home" component={Home} />
+                {Info}
+                {User}
+                {Survey}
+                {Location}
+                {Settings}
+              </IonRouterOutlet>
+            </IonReactRouter>
+          </Onboarding>
+        </TailwindContext.Provider>
       </LanguageCountrySelectRequired>
     </IonApp>
   );

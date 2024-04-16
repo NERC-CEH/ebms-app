@@ -25,7 +25,6 @@ import {
   IonItemOptions,
   IonItemOption,
   NavContext,
-  IonItemDivider,
 } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import Occurrence, { Taxon } from 'models/occurrence';
@@ -183,16 +182,16 @@ const Edit: FC<Props> = ({
         )}
 
         <IonList id="list" lines="full">
-          <div className="rounded">
-            <IonItemDivider className="species-list-header">
-              <IonLabel>
+          <div className="rounded-list">
+            <div className="list-divider">
+              <div>
                 <T>Count</T>
-              </IonLabel>
-              <IonLabel>
+              </div>
+              <div>
                 <T>Species</T>
-              </IonLabel>
-              <IonLabel>{count}</IonLabel>
-            </IonItemDivider>
+              </div>
+              <div>{count}</div>
+            </div>
 
             {speciesList}
           </div>
@@ -239,7 +238,7 @@ const Edit: FC<Props> = ({
         className="mx-auto mt-10"
         onPress={onClick}
         onLongPress={showCopyOptionsWrap}
-        startAddon={<IonIcon src={addCircleOutline} className="size-7" />}
+        prefix={<IonIcon src={addCircleOutline} className="size-7" />}
       >
         Add species
       </Button>
@@ -253,7 +252,7 @@ const Edit: FC<Props> = ({
   return (
     <Main id="transect-section-edit">
       <IonList lines="full">
-        <div className="rounded">
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${baseURL}/reliability`}
             disabled={isDisabled}
@@ -269,10 +268,10 @@ const Edit: FC<Props> = ({
           />
         </div>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Section Photos</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <PhotoPicker model={sectionSample} />
         </div>
 

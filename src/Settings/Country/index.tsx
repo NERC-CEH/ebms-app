@@ -1,17 +1,9 @@
-import { FC, Fragment, useState, useContext } from 'react';
+import { FC, useState, useContext } from 'react';
 import { observer } from 'mobx-react';
 import { flagOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
-import { Page, Main, Header, useAlert } from '@flumens';
-import {
-  IonIcon,
-  IonList,
-  IonItem,
-  IonRadioGroup,
-  IonRadio,
-  IonItemDivider,
-  NavContext,
-} from '@ionic/react';
+import { Page, Main, Header, useAlert, RadioInput } from '@flumens';
+import { IonIcon, IonList, NavContext } from '@ionic/react';
 import countries, { Country } from 'common/config/countries';
 import appModel from 'models/app';
 import './styles.scss';
@@ -42,8 +34,7 @@ const SelectCountry: FC<Props> = ({ hideHeader }) => {
 
   const currentValue = appModel.attrs.country;
 
-  function onSelect(e: any) {
-    const newCountry = e.target.value;
+  function onSelect(newCountry: any) {
     if (appModel.attrs.country !== 'UK' && newCountry === 'UK') {
       alert({
         header: 'Note',
@@ -78,14 +69,12 @@ const SelectCountry: FC<Props> = ({ hideHeader }) => {
     [, country2]: [string, string]
   ) => (value1 === 'ELSEWHERE' ? 1 : country1.localeCompare(country2));
 
-  const getCountryOption = ([value, country]: [string, string]) => (
-    <Fragment key={value}>
-      {value === 'ELSEWHERE' && <IonItemDivider />}
-      <IonItem>
-        <IonRadio value={value}>{country}</IonRadio>
-      </IonItem>
-    </Fragment>
-  );
+  const getCountryOption = ([value, country]: [string, string]) => ({
+    className: value === 'ELSEWHERE' ? 'mt-5' : '',
+    value,
+    label: country,
+  });
+
   const countriesOptions = Object.entries(countries)
     .map(translate)
     .sort(placeElseWhereAtEnd)
@@ -98,16 +87,20 @@ const SelectCountry: FC<Props> = ({ hideHeader }) => {
       <Main>
         <IonList>
           {hideHeader && (
-            <div className="header">
-              <IonIcon icon={flagOutline} size="large" />
-              <h4>
+            <div className="mx-auto my-10 flex flex-col items-center text-primary-900">
+              <IonIcon icon={flagOutline} className="size-10" />
+              <h1>
                 <T>Select your country</T>
-              </h4>
+              </h1>
             </div>
           )}
-          <IonRadioGroup onIonChange={onSelect} value={currentValue}>
-            {countriesOptions}
-          </IonRadioGroup>
+          <RadioInput
+            onChange={onSelect}
+            value={currentValue}
+            options={countriesOptions}
+            platform="ios"
+            skipTranslation
+          />
         </IonList>
       </Main>
     </Page>

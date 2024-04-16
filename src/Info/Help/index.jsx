@@ -1,7 +1,7 @@
 import { personOutline, addOutline, sendOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Page, Main, Header, Collapse } from '@flumens';
-import { IonList, IonItemDivider, IonIcon } from '@ionic/react';
+import { IonList, IonIcon } from '@ionic/react';
 import './styles.scss';
 
 export default () => (
@@ -9,10 +9,10 @@ export default () => (
     <Header title="Help" />
     <Main className="ion-padding">
       <IonList lines="none">
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Surveys</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <Collapse title="How to start a survey">
             <p>
               <T>To start a new survey you can press the plus button</T>
@@ -136,10 +136,10 @@ export default () => (
           </Collapse>
         </div>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>User</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <Collapse title="Sign in/out or register">
             <p>
               <T>

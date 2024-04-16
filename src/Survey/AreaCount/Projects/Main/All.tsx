@@ -32,7 +32,7 @@ const AllProjects = ({ projects, onJoin }: Props) => {
 
     return (
       <div
-        className="border-1 flex max-w-sm flex-col gap-2 rounded-md bg-white p-3"
+        className="flex max-w-sm flex-col gap-2 rounded-md border border-solid border-neutral-300 bg-white p-3"
         key={project.id}
       >
         <div className="line-clamp-2 font-bold">{project.title}</div>

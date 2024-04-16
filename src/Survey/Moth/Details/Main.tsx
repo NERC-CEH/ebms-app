@@ -10,7 +10,7 @@ import {
   MenuAttrItem,
   AttrPropsExtended,
 } from '@flumens';
-import { IonList, IonItemDivider } from '@ionic/react';
+import { IonList } from '@ionic/react';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import Sample, { MothTrapLocation } from 'models/sample';
 
@@ -51,7 +51,7 @@ const DetailsMain: FC<Props> = ({ sample }) => {
   return (
     <Main>
       <IonList lines="full">
-        <div className="rounded">
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${url}/location`}
             icon={mothInsideBoxIcon}
@@ -80,11 +80,11 @@ const DetailsMain: FC<Props> = ({ sample }) => {
         </div>
       </IonList>
 
-      <IonItemDivider>
+      <h3 className="list-title">
         <T>Trap start</T>
-      </IonItemDivider>
+      </h3>
       <IonList lines="full">
-        <div className="rounded">
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${url}/surveyStartTime`}
             disabled={isDisabled}
@@ -102,11 +102,11 @@ const DetailsMain: FC<Props> = ({ sample }) => {
         </div>
       </IonList>
 
-      <IonItemDivider>
+      <h3 className="list-title">
         <T>Trap end</T>
-      </IonItemDivider>
+      </h3>
       <IonList lines="full">
-        <div className="rounded">
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${url}/surveyEndTime`}
             disabled={isDisabled}

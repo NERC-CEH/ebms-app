@@ -122,7 +122,7 @@ const NewLocationModal = (
       </IonHeader>
 
       <Main>
-        <div className="m-3 rounded">
+        <div className="rounded-list m-3">
           <TextInput
             value={newLocation.name}
             label="Site name"

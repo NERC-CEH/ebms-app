@@ -20,7 +20,6 @@ import { useUserStatusCheck } from 'models/user';
 import { getUnkownSpecies } from 'Survey/Moth/config';
 import Header from './Header';
 import Main from './Main';
-import './styles.scss';
 
 const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();

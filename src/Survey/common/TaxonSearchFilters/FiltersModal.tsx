@@ -36,19 +36,6 @@ const FiltersModal: FC<Props> = ({ toggleModal, showModal, sample }) => {
 
   const { attrProps } = survey.metadata.speciesGroups.pageProps;
 
-  const form = (
-    <div id="filters-dialog-form">
-      <div className="taxon-groups taxa-filter-edit-dialog-form">
-        <Attr
-          metadata="speciesGroups"
-          model={sample}
-          {...attrProps}
-          info="Please select the species groups that you always record."
-        />
-      </div>
-    </div>
-  );
-
   return (
     <IonModal isOpen={showModal}>
       <IonHeader>
@@ -63,7 +50,15 @@ const FiltersModal: FC<Props> = ({ toggleModal, showModal, sample }) => {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <Main fullscreen>{form}</Main>
+      <Main fullscreen>
+        <Attr
+          metadata="speciesGroups"
+          model={sample}
+          {...attrProps}
+          className="mt-5 px-3"
+          info="Please select the species groups that you always record."
+        />
+      </Main>
     </IonModal>
   );
 };

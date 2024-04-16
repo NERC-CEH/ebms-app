@@ -10,14 +10,8 @@ import {
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
-import {
-  Main,
-  MenuAttrItem,
-  InfoMessage,
-  CounterInput,
-  MenuAttrToggle,
-} from '@flumens';
-import { IonList, IonItemDivider, IonLabel } from '@ionic/react';
+import { Main, MenuAttrItem, InfoMessage, NumberInput, Toggle } from '@flumens';
+import { IonList, IonIcon } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
 import Sample from 'models/sample';
@@ -50,12 +44,10 @@ const AreaCountDetails: FC<Props> = ({
   return (
     <Main>
       <IonList lines="full">
-        <IonItemDivider>
-          <IonLabel>
-            <T>Weather Conditions</T>
-          </IonLabel>
-        </IonItemDivider>
-        <div className="rounded">
+        <h3 className="list-title">
+          <T>Weather Conditions</T>
+        </h3>
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${baseURL}/temperature`}
             disabled={isDisabled}
@@ -91,24 +83,20 @@ const AreaCountDetails: FC<Props> = ({
           />
         </div>
 
-        <IonItemDivider>
-          <IonLabel>
-            <T>Photo</T>
-          </IonLabel>
-        </IonItemDivider>
-        <div className="rounded">
+        <h3 className="list-title">
+          <T>Photo</T>
+        </h3>
+        <div className="rounded-list">
           <PhotoPicker model={sample} />
           <InfoMessage inline>
             Representative photo of where the 15 minute count was made
           </InfoMessage>
         </div>
 
-        <IonItemDivider>
-          <IonLabel>
-            <T>Other</T>
-          </IonLabel>
-        </IonItemDivider>
-        <div className="rounded">
+        <h3 className="list-title">
+          <T>Other</T>
+        </h3>
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${baseURL}/project`}
             disabled={isDisabled}
@@ -117,12 +105,12 @@ const AreaCountDetails: FC<Props> = ({
             value={project?.name}
             skipValueTranslation
           />
-          <MenuAttrToggle
-            icon={eyeOffOutline}
+          <Toggle
+            prefix={<IonIcon src={eyeOffOutline} className="size-6" />}
             label="Sensitive"
-            value={Number.isFinite(sample.attrs.privacyPrecision)}
+            defaultSelected={Number.isFinite(sample.attrs.privacyPrecision)}
             onChange={onChangeSensitivityStatus}
-            disabled={isDisabled}
+            isDisabled={isDisabled}
           />
           <InfoMessage inline>
             This survey has sensitive species and should not be included in
@@ -137,12 +125,12 @@ const AreaCountDetails: FC<Props> = ({
             skipValueTranslation
           />
 
-          <CounterInput
+          <NumberInput
             label="Recorders"
             onChange={onChangeCounter}
             value={recorders}
-            icon={personOutline}
-            min={1}
+            prefix={<IonIcon src={personOutline} className="size-6" />}
+            minValue={1}
             isDisabled={isDisabled}
           />
           <InfoMessage inline>

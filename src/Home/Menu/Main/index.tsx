@@ -11,28 +11,31 @@ import {
   bookOutline,
   openOutline,
 } from 'ionicons/icons';
-import PropTypes from 'prop-types';
 import { Trans as T } from 'react-i18next';
 import { Main, InfoMessage } from '@flumens';
-import {
-  IonIcon,
-  IonList,
-  IonItem,
-  IonItemDivider,
-  IonButton,
-} from '@ionic/react';
+import { IonIcon, IonList, IonItem, IonButton } from '@ionic/react';
 import config from 'common/config';
+import AppModelType from 'models/app';
 import logo from './logo.png';
 import './styles.scss';
 
-const Component = ({
+type Props = {
+  isLoggedIn: boolean;
+  user: any;
+  logOut: any;
+  appModel: typeof AppModelType;
+  refreshAccount: any;
+  resendVerificationEmail: any;
+};
+
+const MenuMain = ({
   isLoggedIn,
   user,
   logOut,
   appModel,
   refreshAccount,
   resendVerificationEmail,
-}) => {
+}: Props) => {
   const lang = appModel.attrs.language;
 
   let userName = `${user.firstName} ${user.lastName}`;
@@ -50,10 +53,10 @@ const Component = ({
       <img src={logo} alt="app logo" />
 
       <IonList lines="full">
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>User</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           {isLoggedIn && (
             <IonItem detail id="logout-button" onClick={logOut}>
               <IonIcon icon={exitOutline} size="small" slot="start" />
@@ -65,8 +68,8 @@ const Component = ({
 
           {isLoggedIn && isNotVerified && (
             <InfoMessage className="verification-warning">
-              Looks like your <b>{{ userEmail }}</b> email hasn't been verified
-              yet.
+              Looks like your <b>{{ userEmail } as any}</b> email hasn't been
+              verified yet.
               <div>
                 <IonButton fill="outline" onClick={refreshAccount}>
                   Refresh
@@ -93,20 +96,20 @@ const Component = ({
           )}
         </div>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Settings</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <IonItem routerLink="/settings/menu" detail>
             <IonIcon icon={settingsOutline} size="small" slot="start" />
             <T>App</T>
           </IonItem>
         </div>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Info</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <IonItem routerLink="/info/guide" detail>
             <IonIcon icon={bookOutline} size="small" slot="start" />
             <T>Instructions</T>
@@ -142,12 +145,4 @@ const Component = ({
   );
 };
 
-Component.propTypes = {
-  logOut: PropTypes.func,
-  refreshAccount: PropTypes.func,
-  resendVerificationEmail: PropTypes.func,
-  isLoggedIn: PropTypes.bool.isRequired,
-  user: PropTypes.object,
-};
-
-export default observer(Component);
+export default observer(MenuMain);

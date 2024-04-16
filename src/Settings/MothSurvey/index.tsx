@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react';
 import { cameraOutline } from 'ionicons/icons';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { Page, Main, Header, InfoMessage, MenuAttrToggle } from '@flumens';
-import { IonList, isPlatform } from '@ionic/react';
+import { Page, Main, Header, InfoMessage, Toggle } from '@flumens';
+import { IonIcon, IonList, isPlatform } from '@ionic/react';
 import appModel from 'models/app';
 import './styles.scss';
 
@@ -22,11 +22,11 @@ const MothSurveySettings = () => {
 
       <Main>
         <IonList lines="full">
-          <div className="rounded">
-            <MenuAttrToggle
-              icon={cameraOutline}
+          <div className="rounded-list">
+            <Toggle
+              prefix={<IonIcon src={cameraOutline} className="size-6" />}
               label="Use image identification"
-              value={useImageIdentifier}
+              defaultSelected={useImageIdentifier}
               onChange={onTurnOffImageIdentifierToggle}
             />
             <InfoMessage inline>

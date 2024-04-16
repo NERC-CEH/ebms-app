@@ -1,7 +1,7 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { Header, MenuAttrToggle, useAlert } from '@flumens';
+import { Header, Toggle, useAlert } from '@flumens';
 import { IonTitle, IonToolbar, isPlatform } from '@ionic/react';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import './styles.scss';
@@ -15,13 +15,18 @@ type Props = {
 };
 
 const HeaderComponent: FC<Props> = ({
-  isGPSTracking,
+  isGPSTracking: isGPSTrackingProp,
   toggleGPStracking,
   isDisabled,
   infoText,
   isAreaShape,
 }) => {
-  const [id, rerender] = useState(0);
+  const toggleRef = useRef<HTMLLabelElement>(null);
+
+  const [isGPSTracking, setIsGPSTracking] = useState(isGPSTrackingProp);
+  useEffect(() => {
+    setIsGPSTracking(isGPSTrackingProp);
+  }, [isGPSTrackingProp]);
   const alert = useAlert();
 
   const onToggle = (runGPS: boolean) => {
@@ -37,12 +42,17 @@ const HeaderComponent: FC<Props> = ({
           {
             text: 'Cancel',
             role: 'cancel',
-            handler: () => rerender(id + 1),
+            handler: () => {
+              setIsGPSTracking(true);
+            },
           },
           {
             text: 'Turn off',
             cssClass: 'secondary',
-            handler: () => toggleGPStracking(false),
+            handler: () => {
+              setIsGPSTracking(false);
+              toggleGPStracking(false);
+            },
           },
         ],
       });
@@ -58,23 +68,25 @@ const HeaderComponent: FC<Props> = ({
           {
             text: 'OK',
             role: 'cancel',
-            handler: () => rerender(id + 1),
+            handler: () => setIsGPSTracking(false),
           },
         ],
       });
       return;
     }
 
+    setIsGPSTracking(runGPS);
     toggleGPStracking(runGPS);
   };
 
   const GPSToggle = !isDisabled && (
-    <MenuAttrToggle
+    <Toggle
+      ref={toggleRef}
       label="GPS"
-      className="survey-gps-toggle"
-      value={isGPSTracking}
+      className="border-none bg-transparent [--form-value-color:var(--ion-color-success)] [&>div>label]:text-white"
+      isSelected={isGPSTracking}
       onChange={onToggle}
-      disabled={isDisabled}
+      isDisabled={isDisabled}
       skipTranslation
     />
   );

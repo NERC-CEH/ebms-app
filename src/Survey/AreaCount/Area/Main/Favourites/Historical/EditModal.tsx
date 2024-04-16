@@ -52,7 +52,7 @@ const EditModal: FC<Props> = ({ location, onLocationSave }) => {
 
   const form = (
     <IonList className="location-edit-form">
-      <div className="rounded">
+      <div className="rounded-list">
         <IonItem>
           <IonLabel>
             <T>Name</T>

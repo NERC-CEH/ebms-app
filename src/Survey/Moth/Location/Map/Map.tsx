@@ -32,7 +32,7 @@ const Map: FC<Props> = ({ location, onMovedCoords, children }) => {
   if (!device.isOnline) {
     return (
       <div className="info-background-message-wrapper">
-        <InfoMessage startAddon={<IonIcon src={wifiOutline} />}>
+        <InfoMessage prefix={<IonIcon src={wifiOutline} />}>
           To see the map please connect to the internet.
         </InfoMessage>
       </div>

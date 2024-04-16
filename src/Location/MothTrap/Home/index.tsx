@@ -10,9 +10,7 @@ import { NavContext } from '@ionic/react';
 import Location, { Lamp, useValidateCheck } from 'models/location';
 import { useUserStatusCheck } from 'models/user';
 import HeaderButton from 'Survey/common/HeaderButton';
-// import BackButton from '../Components/BackButton';
 import Main from './Main';
-import './styles.scss';
 
 interface Props {
   sample: Location;

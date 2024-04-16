@@ -43,42 +43,6 @@
   }
 
   #list {
-    .species-list-header {
-      background: #e6e6e6 !important;
-      color: #777777;
-      padding-left: 7px;
-      --inner-padding-end: 0;
-
-      &.ios {
-        padding-top: 5px;
-        padding-bottom: 5px;
-      }
-
-      ion-label {
-        width: 100%;
-        text-align: center;
-        font-weight: normal;
-        font-size: 0.9em;
-
-        &:nth-of-type(2) {
-          padding-left: 16px;
-          text-align: left;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-        &:first-of-type {
-          max-width: 54px;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-        &:last-of-type {
-          max-width: 50px;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-      }
-    }
-
     ion-item {
       --padding-start: 0;
 

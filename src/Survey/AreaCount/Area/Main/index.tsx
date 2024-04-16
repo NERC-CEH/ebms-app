@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
-import { MapRef } from 'react-map-gl';
 import {
   Main,
   MapContainer,
@@ -89,7 +88,7 @@ const AreaAttr = ({
     return true;
   };
 
-  const [mapRef, setMapRef] = useState<MapRef>();
+  const [mapRef, setMapRef] = useState<any>();
   const flyToLocation = () => {
     const locationToFly = { ...location };
     if (isGPSTracking) delete locationToFly?.shape;
@@ -100,7 +99,7 @@ const AreaAttr = ({
   const selectedLocationId = sample.attrs.site?.id;
 
   return (
-    <Main>
+    <Main className="[--padding-bottom:0] [--padding-top:0]">
       <MapContainer
         onReady={setMapRef}
         accessToken={config.map.mapboxApiKey}

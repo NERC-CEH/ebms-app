@@ -14,7 +14,7 @@ const StartWeather: FC<Props> = ({ sample }) => {
       <Header title="Start Weather" />
       <Main>
         <IonList lines="full">
-          <div className="rounded">
+          <div className="rounded-list">
             <MenuAttrItemFromModel model={sample} attr="temperature" />
             <MenuAttrItemFromModel model={sample} attr="direction" />
             <MenuAttrItemFromModel model={sample} attr="wind" />

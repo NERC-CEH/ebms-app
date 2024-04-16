@@ -73,7 +73,7 @@ const Sections = ({ sample, onTransectSelect }: Props) => {
   return (
     <Main id="transect-sections-list">
       <IonList lines="full">
-        <div className="rounded">{sections}</div>
+        <div className="rounded-list">{sections}</div>
       </IonList>
     </Main>
   );

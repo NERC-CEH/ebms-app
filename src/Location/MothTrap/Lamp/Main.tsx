@@ -2,8 +2,8 @@ import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Main, MenuAttrItem, CounterInput } from '@flumens';
-import { IonList, IonItemDivider } from '@ionic/react';
+import { Main, MenuAttrItem, NumberInput } from '@flumens';
+import { IonList, IonIcon } from '@ionic/react';
 import numberIcon from 'common/images/number.svg';
 import Location, { Lamp } from 'models/location';
 import './styles.scss';
@@ -24,11 +24,11 @@ const MothTrapSetupMain: FC<Props> = ({ location, lamp }) => {
   return (
     <Main>
       <IonList lines="full">
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Lamp Details</T>
-        </IonItemDivider>
+        </h3>
 
-        <div className="rounded">
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`/location/${location.cid}/lamps/${lamp.cid}/type`}
             routerOptions={{ unmount: true }}
@@ -45,12 +45,12 @@ const MothTrapSetupMain: FC<Props> = ({ location, lamp }) => {
             value={description}
           />
 
-          <CounterInput
+          <NumberInput
             label="Quantity"
             onChange={getCounterOnChange}
             value={lamp.attrs.quantity}
-            icon={numberIcon}
-            min={1}
+            prefix={<IonIcon src={numberIcon} className="size-6" />}
+            minValue={1}
           />
         </div>
       </IonList>

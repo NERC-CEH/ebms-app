@@ -28,8 +28,16 @@ const AnimatedNumber: FC<Props> = ({ value }: any) => {
       duration={2500}
       ref={first}
       fromTo={[
-        { property: 'color', fromValue: 'green', toValue: '' },
-        { property: 'background', fromValue: '#00800024', toValue: '' },
+        {
+          property: 'color',
+          fromValue: 'var(--color-tertiary-950)',
+          toValue: 'var(--color-tertiary-800)',
+        },
+        {
+          property: 'background',
+          fromValue: 'rgba(var(--color-tertiary-800-rgb),0.1)',
+          toValue: '',
+        },
       ]}
     >
       <span className="animated-number">{value}</span>

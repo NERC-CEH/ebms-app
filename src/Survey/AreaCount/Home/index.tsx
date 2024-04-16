@@ -88,9 +88,12 @@ function showSpeciesGroupList(
   speciesGroups: SpeciesGroup
 ) {
   let lastSpeciesGroup: string[];
-  const form = (
-    <div id="filters-dialog-form">
-      <div className="taxon-groups taxa-filter-edit-dialog-form">
+
+  const showSpeciesGroupDialog = (resolve: (param: boolean) => void) => {
+    alert({
+      header: 'Which species groups have you counted?',
+      cssClass: 'speciesGroupAlert',
+      message: (
         <Attr
           attr="speciesGroups"
           model={sample}
@@ -113,15 +116,7 @@ function showSpeciesGroupList(
           get={(model: Sample) => [...model.attrs.speciesGroups]}
           inputProps={{ options: speciesGroups }}
         />
-      </div>
-    </div>
-  );
-
-  const showSpeciesGroupDialog = (resolve: (param: boolean) => void) => {
-    alert({
-      header: 'Which species groups have you counted?',
-      cssClass: 'speciesGroupAlert',
-      message: <>{form}</>,
+      ),
 
       buttons: [
         {

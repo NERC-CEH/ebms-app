@@ -9,7 +9,7 @@ import {
 import SunCalc from 'suncalc';
 import * as Yup from 'yup';
 import { date as dateHelp, device, isValidLocation } from '@flumens';
-import { IonImg } from '@ionic/react';
+import { IonIcon, IonImg } from '@ionic/react';
 import config from 'common/config';
 import firstQuarterMoonIcon from 'common/images/first-quarter-moon.svg';
 import fullIcon from 'common/images/full-moon.svg';
@@ -196,14 +196,46 @@ const locationAttr = {
 };
 
 const moonPhaseValues = [
-  { id: 20827, icon: newIcon, value: 'New', className: 'moon' },
-  { id: 20828, icon: waxingCrescentIcon, value: 'Waxing crescent' },
-  { id: 20829, icon: firstQuarterMoonIcon, value: 'First quarter' },
-  { id: 20830, icon: waxingGibbousIcon, value: 'Waxing gibbous' },
-  { id: 20831, icon: fullIcon, value: 'Full' },
-  { id: 20832, icon: wanningGibbousIcon, value: 'Waning gibbous' },
-  { id: 20833, icon: lastQuarterIcon, value: 'Last quarter' },
-  { id: 20834, icon: wanningCrescentIcon, value: 'Waning crescent' },
+  {
+    id: 20827,
+    prefix: <IonIcon src={newIcon} className="size-6" />,
+    value: 'New',
+  },
+  {
+    id: 20828,
+    prefix: <IonIcon src={waxingCrescentIcon} className="size-6" />,
+    value: 'Waxing crescent',
+  },
+  {
+    id: 20829,
+    prefix: <IonIcon src={firstQuarterMoonIcon} className="size-6" />,
+    value: 'First quarter',
+  },
+  {
+    id: 20830,
+    prefix: <IonIcon src={waxingGibbousIcon} className="size-6" />,
+    value: 'Waxing gibbous',
+  },
+  {
+    id: 20831,
+    prefix: <IonIcon src={fullIcon} className="size-6" />,
+    value: 'Full',
+  },
+  {
+    id: 20832,
+    prefix: <IonIcon src={wanningGibbousIcon} className="size-6" />,
+    value: 'Waning gibbous',
+  },
+  {
+    id: 20833,
+    prefix: <IonIcon src={lastQuarterIcon} className="size-6" />,
+    value: 'Last quarter',
+  },
+  {
+    id: 20834,
+    prefix: <IonIcon src={wanningCrescentIcon} className="size-6" />,
+    value: 'Waning crescent',
+  },
 ];
 
 // converts UTC time to local

@@ -1,3 +1,4 @@
+import { IonIcon } from '@ionic/react';
 import bumblebeeIcon from 'common/images/bumblebee.svg';
 import butterflyIcon from 'common/images/butterfly.svg';
 import dragonflyIcon from 'common/images/dragonfly.svg';
@@ -8,20 +9,25 @@ const speciesGroups = {
     id: 251,
     label: 'Butterflies',
     value: 'butterflies',
-    icon: butterflyIcon,
+    prefix: <IonIcon src={butterflyIcon} className="size-8" />,
   },
-  moths: { id: 260, label: 'Moths', value: 'moths', icon: mothIcon },
+  moths: {
+    id: 260,
+    label: 'Moths',
+    value: 'moths',
+    prefix: <IonIcon src={mothIcon} className="size-8" />,
+  },
   bumblebees: {
     id: 261,
     label: 'Bumblebees',
     value: 'bumblebees',
-    icon: bumblebeeIcon,
+    prefix: <IonIcon src={bumblebeeIcon} className="size-8" />,
   },
   dragonflies: {
     id: 265,
     label: 'Dragonflies',
     value: 'dragonflies',
-    icon: dragonflyIcon,
+    prefix: <IonIcon src={dragonflyIcon} className="size-8" />,
   },
 };
 

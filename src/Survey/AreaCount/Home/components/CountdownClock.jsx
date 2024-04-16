@@ -9,9 +9,9 @@ function CountdownClock({ isPaused, countdown }) {
       return t(`Time's up!`);
     }
     return (
-      <span className={minutes < 3 ? 'warn' : ''}>
-        {`${zeroPad(minutes)}:${zeroPad(seconds)}`}
-      </span>
+      <span className={minutes < 3 ? 'warn' : ''}>{`${zeroPad(
+        minutes
+      )}:${zeroPad(seconds)}`}</span>
     );
   };
 

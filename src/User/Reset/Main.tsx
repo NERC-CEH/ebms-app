@@ -25,25 +25,19 @@ const ResetMain = ({ onSubmit }: Props) => {
       <div className="mx-auto flex max-w-md flex-col gap-6 px-3 pt-3">
         <InfoMessage
           color="tertiary"
-          startAddon={
-            <IonIcon src={informationCircleOutline} className="size-5" />
-          }
+          prefix={<IonIcon src={informationCircleOutline} className="size-5" />}
         >
           Enter your email address to request a password reset.
         </InfoMessage>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="rounded">
+          <div className="rounded-list">
             <ControlledInput
               control={control}
               name="email"
-              startAddon={
-                <IonIcon icon={mailOutline} className="mx-2 opacity-60" />
-              }
+              prefix={<IonIcon icon={mailOutline} className="size-5" />}
               type="email"
-              autoComplete="off"
               placeholder="Email"
-              platform="ios"
             />
           </div>
 

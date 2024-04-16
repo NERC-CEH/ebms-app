@@ -18,7 +18,6 @@ import { useRouteMatch } from 'react-router-dom';
 import {
   Main,
   MenuAttrItem,
-  LongPressButton,
   useAlert,
   InfoMessage,
   Button,
@@ -35,7 +34,6 @@ import {
   IonItemOption,
   NavContext,
   IonSpinner,
-  IonItemDivider,
 } from '@ionic/react';
 import GridRef from 'common/Components/GridRefValue';
 import appModel from 'models/app';
@@ -196,16 +194,14 @@ const AreaCount: FC<Props> = ({
       const increase5xCountWrap = () => increaseCount(taxon, undefined, true);
 
       return (
-        <LongPressButton
+        <Button
           color="primary"
-          id="add-single"
-          onClick={increaseCountWrap}
-          onLongClick={increase5xCountWrap}
+          className="mx-auto mb-5 mt-10"
+          onPress={increaseCountWrap}
+          onLongPress={increase5xCountWrap}
         >
-          <IonLabel>
-            <T>Add</T>
-          </IonLabel>
-        </LongPressButton>
+          Add
+        </Button>
       );
     }
 
@@ -223,7 +219,7 @@ const AreaCount: FC<Props> = ({
         className="mx-auto mb-5 mt-10"
         onPress={navigateToSearch}
         onLongPress={showCopyOptionsWrap}
-        startAddon={<IonIcon src={addCircleOutline} className="size-5" />}
+        prefix={<IonIcon src={addCircleOutline} className="size-5" />}
       >
         Add species
       </Button>
@@ -345,16 +341,18 @@ const AreaCount: FC<Props> = ({
         )}
 
         <IonList id="list" lines="full">
-          <div className="rounded">
-            <IonItemDivider className="species-list-header">
-              <IonLabel>
+          <div className="rounded-list">
+            <div className="list-divider gap-6">
+              <div>
                 <T>Count</T>
-              </IonLabel>
-              <IonLabel>
-                <T>Species</T>
-              </IonLabel>
-              <IonLabel>{count}</IonLabel>
-            </IonItemDivider>
+              </div>
+              <div className="flex w-full justify-between">
+                <div>
+                  <T>Species</T>
+                </div>
+                <div>{count}</div>
+              </div>
+            </div>
 
             {speciesList}
           </div>
@@ -455,13 +453,11 @@ const AreaCount: FC<Props> = ({
 
     return (
       <IonList id="list" lines="full">
-        <div className="rounded">
-          <IonItemDivider className="species-list-header">
-            <IonLabel style={{ maxWidth: 'fit-content' }}>
-              {prettySpeciesName}
-            </IonLabel>
-            <IonLabel slot="end">{count}</IonLabel>
-          </IonItemDivider>
+        <div className="rounded-list">
+          <div className="list-divider">
+            <div style={{ maxWidth: 'fit-content' }}>{prettySpeciesName}</div>
+            <div slot="end">{count}</div>
+          </div>
 
           {speciesList}
         </div>
@@ -571,10 +567,10 @@ const AreaCount: FC<Props> = ({
       {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Details</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${match.url}/area`}
             icon={mapOutline}

@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { warningOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Main, MenuAttrItem } from '@flumens';
+import { Badge, Main, MenuAttrItem } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -11,8 +11,6 @@ import {
   IonItemOption,
   IonItemOptions,
   IonItemSliding,
-  IonItemDivider,
-  IonBadge,
   IonIcon,
 } from '@ionic/react';
 import Sample from 'models/sample';
@@ -61,9 +59,7 @@ const EditOccurrence: FC<Props> = ({
           <IonItem detail onClick={navigateToOccurrenceWithSample}>
             <IonLabel className="time">{prettyTime}</IonLabel>
             <IonLabel className="stage">
-              <IonBadge color="medium">
-                <T>{stage || dragonflyStage}</T>
-              </IonBadge>
+              <Badge>{stage || dragonflyStage}</Badge>
             </IonLabel>
             <IonLabel slot="end">{location}</IonLabel>
           </IonItem>
@@ -101,7 +97,7 @@ const EditOccurrence: FC<Props> = ({
     <Main id="area-count-occurrence-edit">
       <IonList lines="full">
         {!samples[0].isPreciseSingleSpeciesSurvey() && (
-          <div className="rounded">
+          <div className="rounded-list">
             <MenuAttrItem
               routerLink={`${match.url}/taxon`}
               disabled={isDisabled}
@@ -114,16 +110,18 @@ const EditOccurrence: FC<Props> = ({
           </div>
         )}
 
-        <div className="rounded">
-          <IonItemDivider className="species-list-header">
-            <IonLabel>
+        <div className="rounded-list mt-5">
+          <div className="list-divider gap-10">
+            <div>
               <T>Time</T>
-            </IonLabel>
-            <IonLabel>
-              <T>Stage</T>
-            </IonLabel>
-            <IonLabel>{count}</IonLabel>
-          </IonItemDivider>
+            </div>
+            <div className="flex w-full justify-between">
+              <div>
+                <T>Stage</T>
+              </div>
+              <div>{count}</div>
+            </div>
+          </div>
 
           {getSamplesList()}
         </div>

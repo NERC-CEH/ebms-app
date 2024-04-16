@@ -35,14 +35,14 @@ const SpeciesEntry: FC<Props> = ({ species }) => {
   return (
     <IonItem className="species-entry">
       <div className="flex w-full flex-nowrap items-center gap-2">
-        <IonAvatar>{avatar}</IonAvatar>
+        <IonAvatar className="[--border-radius:5px]">{avatar}</IonAvatar>
 
         <div className="flex w-full flex-col justify-center">
           {commonName && <div className="">{commonName}</div>}
           <div className="text-base italic opacity-70">{scientificName}</div>
         </div>
 
-        <div className="max-w:[50px] font-semibold">{species.doc_count}</div>
+        <div className="max-w:[50px] text-lg">{species.doc_count}</div>
       </div>
     </IonItem>
   );

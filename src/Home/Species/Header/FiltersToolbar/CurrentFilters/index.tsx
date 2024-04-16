@@ -36,7 +36,7 @@ const CurrentFilters: FC<Props> = ({ searchPhrase, values, onRemove }) => {
         key={value}
         className={clsx(isTextType && 'text')}
         onPress={removeFilterWrap}
-        endAddon={<IonIcon icon={closeOutline} />}
+        suffix={<IonIcon icon={closeOutline} />}
       >
         {label}
       </Badge>

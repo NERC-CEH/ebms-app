@@ -1,7 +1,6 @@
 import { FC, useState } from 'react';
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
-import { useTranslation } from 'react-i18next';
 import { Main, ModalHeader, InfoMessage, UserFeedbackRequest } from '@flumens';
 import { IonModal, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
 import config from 'common/config';
@@ -27,7 +26,6 @@ type Props = {
 
 const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
   const [species, setSpecies] = useState<any>(null);
-  const { t } = useTranslation();
 
   const showSpeciesModal = (id: number) => {
     const bySpeciesId = (sp: SpeciesType) => sp.id === id;
@@ -188,10 +186,9 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
 
       {isNotFiltered && (
         <InfoMessage
-          startAddon={
-            <IonIcon src={informationCircleOutline} className="size-6" />
-          }
+          prefix={<IonIcon src={informationCircleOutline} className="size-6" />}
           color="tertiary"
+          inline
         >
           This guide is still in development. It covers{' '}
           {{ countrySpeciesCount } as any} butterfly species out of the{' '}
@@ -201,7 +198,7 @@ const MainComponent: FC<Props> = ({ searchPhrase = '', filters }) => {
       )}
 
       <IonModal isOpen={!!species} backdropDismiss={false}>
-        <ModalHeader title={t('Species')} onClose={hideSpeciesModal} />
+        <ModalHeader title="Species" onClose={hideSpeciesModal} />
         {species && (
           <SpeciesProfile
             species={species}

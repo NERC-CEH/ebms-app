@@ -9,13 +9,7 @@ import {
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Main, MenuAttrItem } from '@flumens';
-import {
-  IonList,
-  IonItem,
-  IonIcon,
-  IonLabel,
-  IonItemDivider,
-} from '@ionic/react';
+import { IonList, IonItem, IonIcon, IonLabel } from '@ionic/react';
 import windIcon from 'common/images/wind.svg';
 import Sample from 'models/sample';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
@@ -74,7 +68,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
       {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">
-        <div className="rounded">
+        <div className="rounded-list">
           <IonItem routerLink={`${baseURL}/sections`} detail>
             <IonIcon icon={mapOutline} slot="start" mode="md" />
             <IonLabel>
@@ -102,10 +96,10 @@ const Edit = ({ sample, isDisabled }: Props) => {
           />
         </div>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Weather</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${baseURL}/temperature`}
             disabled={isDisabled}
@@ -141,10 +135,10 @@ const Edit = ({ sample, isDisabled }: Props) => {
           />
         </div>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Other</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${baseURL}/recorder`}
             disabled={isDisabled}

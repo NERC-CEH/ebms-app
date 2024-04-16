@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { observer } from 'mobx-react';
-import { Trans as T, useTranslation } from 'react-i18next';
+import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import {
   Page,
@@ -8,9 +8,9 @@ import {
   Main,
   MenuAttrItemFromModel,
   MenuAttrItem,
-  CounterInput,
+  NumberInput,
 } from '@flumens';
-import { IonItemDivider, IonLabel, IonList } from '@ionic/react';
+import { IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import numberIcon from 'common/images/number.svg';
 import Occurrence from 'models/occurrence';
@@ -23,7 +23,6 @@ type Props = {
 
 const TransectHomeController: FC<Props> = ({ occurrence }) => {
   const { url } = useRouteMatch();
-  const { t } = useTranslation();
 
   const species = occurrence.getTaxonCommonAndScientificNames();
   const isDisabled = occurrence.isUploaded();
@@ -41,7 +40,7 @@ const TransectHomeController: FC<Props> = ({ occurrence }) => {
       <Header title="Edit Occurrence" />
       <Main>
         <IonList lines="full">
-          <div className="rounded">
+          <div className="rounded-list">
             <MenuAttrItem
               routerLink={`${url}/taxa`}
               disabled={isDisabled}
@@ -54,22 +53,20 @@ const TransectHomeController: FC<Props> = ({ occurrence }) => {
 
             <MenuAttrItemFromModel attr="comment" model={occurrence} />
 
-            <CounterInput
-              label={t('Count')}
+            <NumberInput
+              label="Count"
               onChange={getCounterOnChange}
               value={count}
-              icon={numberIcon}
-              min={1}
+              prefix={numberIcon}
+              minValue={1}
               isDisabled={isDisabled}
             />
           </div>
 
-          <IonItemDivider>
-            <IonLabel>
-              <T>Species Photo</T>
-            </IonLabel>
-          </IonItemDivider>
-          <div className="rounded">
+          <h3 className="list-title">
+            <T>Species Photo</T>
+          </h3>
+          <div className="rounded-list">
             <PhotoPicker model={occurrence} />
           </div>
         </IonList>

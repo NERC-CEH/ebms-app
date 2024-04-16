@@ -1,7 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
-import { MapRef } from 'react-map-gl';
 import {
   MapContainer,
   MapHeader,
@@ -45,7 +44,7 @@ const ModelLocationMap = ({ subSample, sample }: Props) => {
     (model.attrs.location as AreaCountLocation).name = name;
   };
 
-  const [mapRef, setMapRef] = useState<MapRef>();
+  const [mapRef, setMapRef] = useState<any>();
   const flyToLocation = () => {
     mapFlyToLocation(mapRef, location as any);
   };
@@ -67,7 +66,7 @@ const ModelLocationMap = ({ subSample, sample }: Props) => {
           />
         )}
       </MapHeader>
-      <Main>
+      <Main className="[--padding-bottom:0] [--padding-top:0]">
         <MapContainer
           onReady={setMapRef}
           onClick={onMapClick}

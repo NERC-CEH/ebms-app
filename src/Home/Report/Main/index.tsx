@@ -5,7 +5,6 @@ import { Main } from '@flumens';
 import {
   IonList,
   IonItem,
-  IonItemDivider,
   IonLabel,
   IonRefresher,
   IonRefresherContent,
@@ -59,12 +58,10 @@ const MainReport: FC<Props> = ({
 
     return (
       <>
-        <IonItemDivider>
-          <IonLabel className="home-report-label" color="dark">
-            <T>{label}</T>
-          </IonLabel>
-        </IonItemDivider>
-        <div className="rounded bg-white">
+        <h3 className="list-title">
+          <T>{label}</T>
+        </h3>
+        <div className="rounded-list bg-white">
           <IonItem lines="full" className="list-header-labels">
             <IonLabel>
               <small>

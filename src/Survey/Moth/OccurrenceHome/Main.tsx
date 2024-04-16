@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Main, MenuAttrItem, MenuAttrItemFromModel, Attr } from '@flumens';
-import { IonList, IonItemDivider } from '@ionic/react';
+import { IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
@@ -26,10 +26,10 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
   return (
     <Main id="area-count-occurrence-edit">
       <IonList lines="full">
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Details</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${baseURL}/taxon`}
             disabled={isDisabled}
@@ -75,10 +75,10 @@ const EditOccurrence: FC<Props> = ({ occurrence }) => {
           />
         </div>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Moth Photos</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <PhotoPicker
             model={occurrence}
             useImageIdentifier={useImageIdentifier}

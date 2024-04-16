@@ -24,33 +24,4 @@
 
     padding-top: 0;
   }
-
-  ion-toolbar.species-toolbar {
-    ion-icon.md {
-      font-size: 2.3em;
-    }
-    ion-icon.ios {
-      font-size: 1.9em;
-    }
-
-    ion-buttons {
-      max-width: 50px;
-    }
-
-    ion-button {
-      &.md.search {
-        --padding-bottom: 0;
-        --padding-end: 0;
-        --padding-start: 0;
-        --padding-top: 0;
-      }
-
-      ion-icon {
-        color: black;
-        --ionicon-stroke-width: 20px;
-        margin-top: 5px;
-        padding: 0 4px;
-      }
-    }
-  }
 }

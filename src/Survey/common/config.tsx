@@ -155,15 +155,10 @@ export const speciesGroupsAttr = {
       },
 
       inputProps: (model: Sample) => {
-        const groupOption = ([value, { label, icon }]: any) => {
+        const groupOption = ([value, { label, prefix }]: any) => {
           const disabled = model.metadata.saved;
 
-          return {
-            icon,
-            value,
-            label,
-            disabled,
-          };
+          return { prefix, value, label, disabled };
         };
 
         const options: any = Object.entries(groups).map(groupOption);
@@ -172,7 +167,7 @@ export const speciesGroupsAttr = {
           options.splice(2, 0, {
             value: DAY_FLYING_MOTHS,
             label: 'Use only day-flying moths',
-            className: 'checkbox-subEntry',
+            className: 'w-[85%] ml-auto',
             disabled: model.metadata.saved,
           });
         }
