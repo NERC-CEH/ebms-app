@@ -8,12 +8,6 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Main, useOnBackButton, ImageWithBackground, Badge } from '@flumens';
-import {
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardContent,
-  IonCardTitle,
-} from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
 import { CountryCode } from 'common/config/countries';
 import { Species, AbundanceCode, abundances } from 'common/data/profiles';
@@ -72,6 +66,8 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
     );
   };
 
+  const commonName = (window as any).t(species.taxon, null, true);
+
   /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   return (
     <>
@@ -84,31 +80,29 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
       <Main id="species-profile" className="ion-padding">
         {getSlides()}
 
-        <IonCardHeader>
-          <IonCardTitle>
-            {(window as any).t(species.taxon, null, true)}
-          </IonCardTitle>
-          <IonCardSubtitle>
-            <i>{species.taxon}</i>
-          </IonCardSubtitle>
-        </IonCardHeader>
+        <div className="flex flex-col gap-2 bg-[var(--ion-page-background)] p-4">
+          {commonName && (
+            <h2 className="text-xl font-bold text-primary-900">{commonName}</h2>
+          )}
+          <h3 className="text-xl italic">{species.taxon}</h3>
+        </div>
 
-        {status && (
-          <IonCardContent>
-            <h3 className="species-label inline-label">
-              <T>Status</T>:
-            </h3>
-            <Badge>{status}</Badge>
-          </IonCardContent>
-        )}
+        <div className="p-4">
+          {status && (
+            <div>
+              <h3 className="species-label mr-3 inline">
+                <T>Status</T>:
+              </h3>
+              <Badge>{status}</Badge>
+            </div>
+          )}
 
-        <IonCardContent className="description">
-          <h3 className="species-label">
+          <h3 className="species-label mb-2 mt-5">
             <T>Description</T>:
           </h3>
 
-          {(window as any).t(species.descriptionKey, true)}
-        </IonCardContent>
+          <p>{(window as any).t(species.descriptionKey, true)}</p>
+        </div>
       </Main>
     </>
   );
