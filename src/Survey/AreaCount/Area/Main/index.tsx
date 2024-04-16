@@ -147,6 +147,7 @@ const AreaAttr = ({
         onSelectHistoricalLocation={onSelectHistoricalLocation}
         currentLocation={location}
         projectId={projectId}
+        isGPSTracking={isGPSTracking}
         onCreateProjectLocation={onCreateProjectLocation}
         onSelectProjectLocation={onSelectProjectLocation}
         selectedLocationId={selectedLocationId}

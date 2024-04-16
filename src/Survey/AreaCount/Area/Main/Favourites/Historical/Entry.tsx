@@ -25,7 +25,7 @@ const Entry = ({ location, onSelect, onDelete, onEdit, distance }: Props) => {
   const { id, name, favourite, area } = location;
 
   return (
-    <IonItemSliding className="rounded-md">
+    <IonItemSliding className="rounded-md border border-solid border-neutral-200">
       <IonItem
         detail={false}
         onClick={() => onSelect(id)}

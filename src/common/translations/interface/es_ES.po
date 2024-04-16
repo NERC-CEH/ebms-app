@@ -1,13 +1,13 @@
 # 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Karolis, 2023
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2024
+# Karolis, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2024\n"
+"Last-Translator: Karolis, 2024\n"
 "Language-Team: Spanish (Spain) (https://app.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -449,6 +449,50 @@ msgstr "Desactiva el seguimiento GPS para activar las herramientas de dibujo."
 
 msgid "Draw an area"
 msgstr "Dibujar un area"
+
+# Survey area page
+msgid "Locations"
+msgstr ""
+
+# Survey area page
+msgid "Previous"
+msgstr ""
+
+# Survey area page
+msgid "New location"
+msgstr ""
+
+# Survey area page
+msgid "Site name"
+msgstr ""
+
+# Survey area page
+msgid "Comments"
+msgstr ""
+
+# Survey area page
+msgid "The survey area is still being tracked."
+msgstr ""
+
+# Survey area page
+msgid "Successfully saved a location."
+msgstr ""
+
+# Survey area page
+msgid "Are you sure?"
+msgstr ""
+
+# Survey area page
+msgid "This will discard the form data."
+msgstr ""
+
+# Survey area page
+msgid "Yes"
+msgstr ""
+
+# Survey area page
+msgid "No"
+msgstr ""
 
 msgid "Delete"
 msgstr "Borrar"

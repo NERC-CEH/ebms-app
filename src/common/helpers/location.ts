@@ -1,3 +1,5 @@
+import { toJS } from 'mobx';
+import wkt from 'wellknown';
 import SphericalMercator from '@mapbox/sphericalmercator';
 
 type XYPoint = [number, number];
@@ -22,4 +24,20 @@ export default function transformToLatLon(geometry: any) {
   } catch (e) {
     return [];
   }
+}
+
+function transformToMeters(coordinates: any) {
+  const transform = ([lat, lng]: any) => merc.forward([lat, lng]);
+  return coordinates.map(transform);
+}
+
+export function getGeomString(shape: any) {
+  const geoJSON = toJS(shape);
+  if (geoJSON.type === 'Polygon') {
+    geoJSON.coordinates[0] = transformToMeters(geoJSON.coordinates[0]);
+  } else {
+    geoJSON.coordinates = transformToMeters(geoJSON.coordinates);
+  }
+
+  return wkt.stringify(geoJSON);
 }

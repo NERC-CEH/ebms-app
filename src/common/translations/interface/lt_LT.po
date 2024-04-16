@@ -448,6 +448,50 @@ msgstr "Išjunkite GPS, jeigu norite matyti žemėlapio įrankius."
 msgid "Draw an area"
 msgstr "Apibrėžti vietovę"
 
+# Survey area page
+msgid "Locations"
+msgstr "Vietovės"
+
+# Survey area page
+msgid "Previous"
+msgstr "Preities"
+
+# Survey area page
+msgid "New location"
+msgstr "Nauja vietovė"
+
+# Survey area page
+msgid "Site name"
+msgstr "Vietovės vardas"
+
+# Survey area page
+msgid "Comments"
+msgstr "Komentarai"
+
+# Survey area page
+msgid "The survey area is still being tracked."
+msgstr "Įrašo nueitas maršrutas yra dar neužbaigtas."
+
+# Survey area page
+msgid "Successfully saved a location."
+msgstr "Vietovė sėkmingai išsaugota."
+
+# Survey area page
+msgid "Are you sure?"
+msgstr "Ar tikrai?"
+
+# Survey area page
+msgid "This will discard the form data."
+msgstr "Šis veiksmas panaikins iki šiol įvestą informaciją."
+
+# Survey area page
+msgid "Yes"
+msgstr "Taip"
+
+# Survey area page
+msgid "No"
+msgstr "Ne"
+
 msgid "Delete"
 msgstr "Ištrinti"
 
@@ -2572,8 +2616,9 @@ msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
-"<0>{{country}}</0>Nėra jokių projektų prie kurių galėtumėte prisijungti.<br/><br/> Patraukite "
-"puslapį į apačią jeigu norite atnaujinti šį sąrašą."
+"<0>{{country}}</0>Nėra jokių projektų prie kurių galėtumėte "
+"prisijungti.<br/><br/> Patraukite puslapį į apačią jeigu norite atnaujinti "
+"šį sąrašą."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."

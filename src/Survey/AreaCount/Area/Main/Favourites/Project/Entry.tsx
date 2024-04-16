@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { checkboxOutline, pinOutline } from 'ionicons/icons';
-import { IonItem, IonIcon } from '@ionic/react';
+import { checkmarkOutline, pinOutline } from 'ionicons/icons';
+import { IonIcon } from '@ionic/react';
 import Location from 'models/location';
 
 type Props = {
@@ -11,16 +11,23 @@ type Props = {
 
 const Entry = ({ location, onSelect, isSelected }: Props) => {
   return (
-    <IonItem
-      detail={false}
+    <div
       onClick={() => onSelect(location)}
       className={clsx(
-        'flex h-16 rounded-md [--background:transparent] [--inner-border-width:0] [--inner-padding-end:0]',
+        'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2',
         isSelected
-          ? 'border border-success-700/10 bg-success-50/10 text-success-900'
-          : 'bg-white'
+          ? 'border-[var(--form-value-color)] text-[var(--form-value-color)]'
+          : 'border-neutral-200'
       )}
     >
+      <div
+        className={clsx(
+          'absolute left-0 top-0 h-full w-full opacity-0',
+          'bg-[var(--form-value-color)]',
+          isSelected && 'opacity-[2%]',
+          'transition-[opacity] duration-150'
+        )}
+      />
       <div className="flex w-full items-center justify-start gap-4">
         <div className="flex w-full flex-col gap-1 py-1">
           <h4 className="line-clamp-2">{location.attrs.location.name}</h4>
@@ -36,12 +43,12 @@ const Entry = ({ location, onSelect, isSelected }: Props) => {
 
         {isSelected && (
           <IonIcon
-            icon={checkboxOutline}
+            icon={checkmarkOutline}
             className="size-10 [--ionicon-stroke-width:20px]"
           />
         )}
       </div>
-    </IonItem>
+    </div>
   );
 };
 

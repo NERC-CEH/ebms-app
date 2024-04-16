@@ -1,9 +1,8 @@
-import { toJS, when } from 'mobx';
-import wkt from 'wellknown';
+import { when } from 'mobx';
 import { device, isValidLocation } from '@flumens';
 import { isPlatform } from '@ionic/react';
-import SphericalMercator from '@mapbox/sphericalmercator';
 import config from 'common/config';
+import { getGeomString } from 'common/helpers/location';
 import appModel from 'common/models/app';
 import { assignIfMissing } from 'common/models/utils';
 import { fetchWeather } from 'common/services/openWeather';
@@ -36,24 +35,6 @@ const locationAttrs = {
   locationAltitude: { remote: { id: 283 } },
   locationAltitudeAccuracy: { remote: { id: 284 } },
 };
-
-const merc = new SphericalMercator();
-
-function transformToMeters(coordinates: any) {
-  const transform = ([lat, lng]: any) => merc.forward([lat, lng]);
-  return coordinates.map(transform);
-}
-
-function getGeomString(shape: any) {
-  const geoJSON = toJS(shape);
-  if (geoJSON.type === 'Polygon') {
-    geoJSON.coordinates[0] = transformToMeters(geoJSON.coordinates[0]);
-  } else {
-    geoJSON.coordinates = transformToMeters(geoJSON.coordinates);
-  }
-
-  return wkt.stringify(geoJSON);
-}
 
 const getSetWeather = (sample: AppSample) => async () => {
   if (!device.isOnline) return;

@@ -452,6 +452,50 @@ msgstr "Desative a localização por GPS para usar as ferramentas de desenho"
 msgid "Draw an area"
 msgstr "Trace uma área"
 
+# Survey area page
+msgid "Locations"
+msgstr ""
+
+# Survey area page
+msgid "Previous"
+msgstr ""
+
+# Survey area page
+msgid "New location"
+msgstr ""
+
+# Survey area page
+msgid "Site name"
+msgstr ""
+
+# Survey area page
+msgid "Comments"
+msgstr ""
+
+# Survey area page
+msgid "The survey area is still being tracked."
+msgstr ""
+
+# Survey area page
+msgid "Successfully saved a location."
+msgstr ""
+
+# Survey area page
+msgid "Are you sure?"
+msgstr ""
+
+# Survey area page
+msgid "This will discard the form data."
+msgstr ""
+
+# Survey area page
+msgid "Yes"
+msgstr ""
+
+# Survey area page
+msgid "No"
+msgstr ""
+
 msgid "Delete"
 msgstr "Apagar"
 

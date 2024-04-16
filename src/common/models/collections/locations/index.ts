@@ -141,7 +141,11 @@ export class Locations extends Collection<Location> {
       `📚 Collection: ${this.id} collection fetching done ${docs.length} documents`
     );
 
-    return docs.map(this.Model.parseRemoteJSON);
+    return docs.map(doc =>
+      Array.isArray(doc)
+        ? this.Model.parseRemoteJSON(doc[0], doc[1]) // with metadata
+        : this.Model.parseRemoteJSON(doc)
+    );
   };
 
   resetDefaults = () => {

@@ -3,10 +3,12 @@ import { observer } from 'mobx-react';
 import { resizeOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { Location } from '@flumens';
+import { device, Location, useLoader, useToast } from '@flumens';
 import { IonIcon, IonPage, isPlatform, NavContext } from '@ionic/react';
+import projects from 'common/models/collections/projects';
+import ProjectModel from 'common/models/project';
 import locations from 'models/collections/locations';
-import LocationModel from 'models/location';
+import LocationModel, { RemoteAttributes } from 'models/location';
 import Sample, { AreaCountLocation } from 'models/sample';
 import userModel from 'models/user';
 import Header from './Header';
@@ -20,6 +22,8 @@ type Props = {
 
 const AreaController = ({ sample }: Props) => {
   const { goBack } = useContext(NavContext);
+  const loader = useLoader();
+  const toast = useToast();
 
   const toggleGPStracking = (on: boolean) => {
     sample.toggleGPStracking(on);
@@ -69,7 +73,7 @@ const AreaController = ({ sample }: Props) => {
     goBack();
   };
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isNewLocationModalOpen, setNewLocationModalOpen] = useState(false);
 
   const modal = useRef<HTMLIonModalElement>(null);
   const onCreateProjectLocation = () => modal.current?.present();
@@ -99,17 +103,55 @@ const AreaController = ({ sample }: Props) => {
   }, []);
 
   const refreshLocations = () => {
-    if (isDisabled || !userModel.isLoggedIn() || !userModel.attrs.verified)
+    if (
+      isDisabled ||
+      !userModel.isLoggedIn() ||
+      !userModel.attrs.verified ||
+      !device.isOnline
+    )
       return;
 
     locations.fetch();
   };
   useEffect(refreshLocations, []);
 
-  const onCloseLocationModal = () => setIsOpen(false);
+  const onCloseLocationModal = () => setNewLocationModalOpen(false);
 
-  const onSaveNewLocation = (newLocation: any) => {
-    console.log('onSave', newLocation);
+  const onSaveNewLocation = async (newSiteAttrs: RemoteAttributes) => {
+    if (
+      !userModel.isLoggedIn() ||
+      !userModel.attrs.verified ||
+      !device.isOnline
+    )
+      return false;
+
+    console.log('Saving location', newSiteAttrs);
+
+    try {
+      await loader.show('Please wait...');
+
+      const byId = (p: ProjectModel) => p.id === sample.attrs.project?.id;
+      const project = projects.find(byId);
+      if (!project) throw new Error('Project was not found');
+
+      const newSite = new LocationModel({
+        skipStore: true,
+        attrs: newSiteAttrs as any, // any - to fix Moth trap attrs
+      });
+      await newSite.saveRemote();
+
+      await project.addLocation(newSite);
+      await refreshLocations();
+
+      toast.success('Successfully saved a location.');
+    } catch (err: any) {
+      toast.error(err);
+      loader.hide();
+      return false;
+    }
+
+    loader.hide();
+    return true;
   };
 
   return (
@@ -134,7 +176,7 @@ const AreaController = ({ sample }: Props) => {
       <NewLocationModal
         ref={modal}
         presentingElement={presentingElement}
-        isOpen={isOpen}
+        isOpen={isNewLocationModalOpen}
         onCancel={onCloseLocationModal}
         onSave={onSaveNewLocation}
         project={sample.attrs.project!}

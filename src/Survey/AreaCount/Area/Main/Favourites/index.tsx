@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Trans as T } from 'react-i18next';
-import { isValidLocation, Location, useToast } from '@flumens';
+import { device, isValidLocation, Location, useToast } from '@flumens';
 import {
   IonModal,
   IonHeader,
@@ -22,6 +22,7 @@ const DEFAULT_SNAP_POSITION = 0.3;
 
 type Props = {
   isOpen: boolean;
+  isGPSTracking: boolean;
   currentLocation?: AreaCountLocation;
   onClose: any;
   mapLocation: [number, number];
@@ -42,6 +43,7 @@ const Favourites = ({
   onSelectProjectLocation,
   projectId,
   selectedLocationId,
+  isGPSTracking,
 }: Props) => {
   const toast = useToast();
 
@@ -55,8 +57,22 @@ const Favourites = ({
   };
 
   const area = currentLocation?.area || 0;
-  const isInvalid = !isValidLocation(currentLocation) || area <= 0;
+  const isInvalid =
+    !isValidLocation(currentLocation) ||
+    area <= 0 ||
+    !device.isOnline ||
+    isGPSTracking;
   const onCreateProjectLocationWrap = () => {
+    if (!device.isOnline) {
+      toast.warn("Sorry, looks like you're offline.");
+      return;
+    }
+
+    if (isGPSTracking) {
+      toast.warn('The survey area is still being tracked.');
+      return;
+    }
+
     if (isInvalid) {
       toast.warn('Your survey does not have a valid location to save.');
       return;
@@ -96,7 +112,7 @@ const Favourites = ({
               <HeaderButton
                 onClick={onCreateProjectLocationWrap}
                 isInvalid={isInvalid}
-                className="hidden text-sm"
+                className="text-sm"
               >
                 Add
               </HeaderButton>

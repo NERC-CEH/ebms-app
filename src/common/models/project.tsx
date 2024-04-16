@@ -1,4 +1,5 @@
 import { observable } from 'mobx';
+import axios, { AxiosError } from 'axios';
 import { z, object } from 'zod';
 import {
   validateRemoteModel,
@@ -8,7 +9,10 @@ import {
   Collection,
   UUID,
 } from '@flumens';
+import CONFIG from 'common/config';
+import LocationModel from './location';
 import { locationsStore, projectsStore } from './store';
+import userModel from './user';
 
 type Metadata = ModelMetadata & {
   saved?: boolean;
@@ -76,6 +80,61 @@ class ProjectModel extends Model {
     }
 
     return super.destroy();
+  }
+
+  async addLocation(location: LocationModel) {
+    console.log('Project location uploading');
+
+    const submission = { values: { id: location.id } };
+
+    const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${this.id}/locations`;
+
+    try {
+      this.remote.synchronising = true;
+
+      const token = await userModel.getAccessToken();
+
+      const options: any = {
+        url,
+        method: 'post',
+        headers: { Authorization: `Bearer ${token}` },
+        timeout: 80000,
+        data: submission,
+      };
+
+      await axios(options);
+
+      this.remote.synchronising = false;
+
+      console.log('Project location uploading done');
+      return this;
+    } catch (e: any) {
+      this.remote.synchronising = false;
+
+      const err = e as AxiosError<any>;
+
+      if (err.response?.status === 409) {
+        console.log('Location uploading duplicate was found');
+        return this;
+      }
+
+      const serverMessage = err.response?.data?.message;
+      if (!serverMessage) {
+        throw e;
+      }
+
+      if (typeof serverMessage === 'object') {
+        const getErrorMessageFromObject = (errors: any) =>
+          Object.entries(errors).reduce(
+            (string, val: any) => `${string}${val[0]} ${val[1]}\n`,
+            ''
+          );
+
+        throw new Error(getErrorMessageFromObject(serverMessage));
+      }
+
+      throw new Error(serverMessage);
+    }
   }
 }
 

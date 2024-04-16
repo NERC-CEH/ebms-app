@@ -26,7 +26,7 @@ const ProjectLocations = ({
   );
 
   const byProject = (location: Location) =>
-    location.attrs.projectId === projectId;
+    location.metadata.projectId === projectId;
 
   const entries = locations
     .filter(byType(PROJECT_SITE_TYPE))

@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { z, object } from 'zod';
 import { Geolocation } from '@capacitor/geolocation';
 import {
-  Store,
+  ModelOptions,
   validateRemoteModel,
   useAlert,
   Model,
@@ -22,6 +22,7 @@ import { getLocalAttributes } from './utils';
 
 type Metadata = ModelMetadata & {
   saved?: boolean;
+  projectId?: string;
 };
 
 const trapTypes = [
@@ -82,13 +83,7 @@ export const verifyLocationSchema = Yup.mixed().test(
   validateLocation
 );
 
-type ModelOptions<T = any> = {
-  id?: string;
-  cid?: string;
-  attrs?: T;
-  metadata?: any;
-  store?: Store;
-};
+type LocationOptions = ModelOptions<Attrs> & { skipStore?: boolean };
 
 export type Lamp = {
   cid: string;
@@ -97,11 +92,7 @@ export type Lamp = {
 
 export type RemoteAttributes = z.infer<typeof LocationModel.remoteSchema>;
 
-type ProjectAttrs = {
-  projectId: string;
-};
-
-type MothTrapAttrs = {
+export type MothTrapAttrs = {
   type: number;
   typeOther: string | null;
   description: string;
@@ -113,7 +104,7 @@ type MothTrapAttrs = {
   };
 };
 
-type Attrs = RemoteAttributes & ProjectAttrs & MothTrapAttrs & ModelAttrs;
+export type Attrs = RemoteAttributes & MothTrapAttrs & ModelAttrs;
 
 class LocationModel extends Model {
   static remoteSchema = object({
@@ -144,7 +135,6 @@ class LocationModel extends Model {
     centroidGeom: z.string().nullable().optional(),
     public: z.string().nullable().optional(),
     comment: z.string().nullable().optional(),
-    projectId: z.string().nullable().optional(), // we have added this for linking to projects, warehouse doesn't return it yet
   });
 
   static schema = {
@@ -242,13 +232,10 @@ class LocationModel extends Model {
     quantity: { remote: { id: 16 } },
   };
 
-  static parseRemoteJSON({
-    id,
-    createdOn,
-    updatedOn,
-    externalKey,
-    ...attrs
-  }: RemoteAttributes) {
+  static parseRemoteJSON(
+    { id, createdOn, updatedOn, externalKey, ...attrs }: RemoteAttributes,
+    metadata?: Partial<Metadata>
+  ) {
     const parsedRemoteJSON = {
       cid: externalKey || UUID(),
       id,
@@ -270,6 +257,7 @@ class LocationModel extends Model {
       },
 
       metadata: {
+        ...metadata,
         createdOn: new Date(createdOn).getTime(),
         updatedOn: new Date(updatedOn).getTime(),
       },
@@ -294,8 +282,6 @@ class LocationModel extends Model {
 
   gps: { locating: null | string } = observable({ locating: null });
 
-  _store = locationsStore;
-
   remote = observable({ synchronising: false });
 
   // eslint-disable-next-line
@@ -312,8 +298,11 @@ class LocationModel extends Model {
     lamps: [],
   });
 
-  constructor(options: ModelOptions) {
-    super({ ...options, store: locationsStore });
+  constructor({ skipStore, ...options }: LocationOptions) {
+    super({
+      store: skipStore ? undefined : locationsStore,
+      ...options,
+    });
   }
 
   isDraft = () => !this.id;
@@ -368,7 +357,7 @@ class LocationModel extends Model {
 
       this.remote.synchronising = false;
 
-      this.save();
+      this._store && this.save();
 
       console.log('Location uploading done');
       return this;
@@ -409,8 +398,9 @@ class LocationModel extends Model {
     return !!this.metadata.syncedOn;
   }
 
-  toRemoteJSON() {
-    const { lamps, location, type, typeOther } = this.attrs;
+  private toRemoteMothTrapJSON() {
+    const { lamps, type, typeOther, location } = this.attrs;
+
     const stringifyLamp = (lamp: any) => JSON.stringify(lamp);
     const getLampType = (lamp: any) => {
       const { type: lampTypeTerm, description, quantity } = lamp.attrs;
@@ -419,35 +409,48 @@ class LocationModel extends Model {
       const typeRemoteId =
         LocationModel.lampSchema.type.remote.values.find(byId)?.id;
 
+      const lat = parseFloat(`${location.latitude}`).toFixed(7);
+      const lon = parseFloat(`${location.longitude}`).toFixed(7);
+
       return {
+        centroid_sref: `${lat} ${lon}`,
         type_term: lampTypeTerm,
         type: typeRemoteId,
         description,
         quantity,
       };
     };
-    const stringifiedLamps = lamps.map(getLampType).map(stringifyLamp);
+    const stringifiedLamps = lamps?.map(getLampType).map(stringifyLamp);
 
-    const byId = ({ value }: any) => value === type;
-    const trapType = LocationModel.schema.type.remote.values.find(byId)?.id;
+    const byValue = ({ value }: any) => value === type;
+    const trapType = LocationModel.schema.type.remote.values.find(byValue)?.id;
 
-    const lat = parseFloat(`${location.latitude}`).toFixed(7);
-    const lon = parseFloat(`${location.longitude}`).toFixed(7);
+    return {
+      location_type_id: MOTH_TRAP_TYPE,
+      name: location.name,
+      'locAttr:306': stringifiedLamps,
+      'locAttr:330': trapType,
+      'locAttr:234': userModel.id,
+      'locAttr:288': typeOther,
+    };
+  }
 
-    // TODO: se scheme get keys
+  toRemoteJSON() {
+    const { name, comment, lat, lon, boundaryGeom } = this.attrs;
+
+    const customAttrs = this.attrs.type ? this.toRemoteMothTrapJSON() : {};
+
     const submission: any = {
       values: {
+        name,
         external_key: this.cid,
-        location_type_id: MOTH_TRAP_TYPE,
-        name: location.name,
-
+        location_type_id: this.attrs.locationTypeId,
         centroid_sref: `${lat} ${lon}`,
         centroid_sref_system: 4326,
+        boundary_geom: boundaryGeom,
+        comment,
 
-        'locAttr:306': stringifiedLamps,
-        'locAttr:330': trapType,
-        'locAttr:234': userModel.id,
-        'locAttr:288': typeOther,
+        ...customAttrs,
       },
     };
 

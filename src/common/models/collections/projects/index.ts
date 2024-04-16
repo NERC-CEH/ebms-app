@@ -135,25 +135,29 @@ export class Projects extends Collection<ProjectModel> {
 
     const transformToLocation = (
       doc: RemoteProjectLocationAttributes
-    ): RemoteLocationAttributes => ({
-      id: doc.locationId,
-      projectId: doc.projectId,
-      createdOn: doc.locationCreatedOn,
-      updatedOn: doc.locationUpdatedOn,
-      lat: doc.locationLat,
-      lon: doc.locationLon,
-      name: doc.locationName,
-      locationTypeId: PROJECT_SITE_TYPE,
-      parentId: null,
-      boundaryGeom: doc.locationBoundaryGeom,
-      code: doc.locationCode,
-      centroidSref: doc.locationCentroidSref,
-      centroidSrefSystem: doc.locationCentroidSrefSystem,
-      createdById: doc.locationCreatedById,
-      updatedById: doc.locationUpdatedById,
-      externalKey: doc.locationExternalKey,
-      public: 'f',
-    });
+    ): [RemoteLocationAttributes, { projectId: any }] => {
+      const transformedDoc = {
+        id: doc.locationId,
+        createdOn: doc.locationCreatedOn,
+        updatedOn: doc.locationUpdatedOn,
+        lat: doc.locationLat,
+        lon: doc.locationLon,
+        name: doc.locationName,
+        locationTypeId: PROJECT_SITE_TYPE,
+        parentId: null,
+        boundaryGeom: doc.locationBoundaryGeom,
+        code: doc.locationCode,
+        centroidSref: doc.locationCentroidSref,
+        centroidSrefSystem: doc.locationCentroidSrefSystem,
+        createdById: doc.locationCreatedById,
+        updatedById: doc.locationUpdatedById,
+        externalKey: doc.locationExternalKey,
+        public: 'f',
+      };
+
+      const metadata = { projectId: doc.projectId };
+      return [transformedDoc, metadata];
+    };
 
     const docs = await (
       await Promise.all(this.map(({ id }) => fetchLocations(id!)))
