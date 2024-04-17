@@ -3,7 +3,7 @@ import { useRouteMatch } from 'react-router';
 import { RouteWithModels, AttrPage } from '@flumens';
 import { NavContext } from '@ionic/react';
 import locations from 'models/collections/locations';
-import MothTrap from 'models/location';
+import MothTrap, { MOTH_TRAP_TYPE } from 'models/location';
 import ModelLocationMap from 'Survey/common/ModelLocationMap';
 import MothTrapNew from './Home';
 import MothTrapLamp from './Lamp';
@@ -15,7 +15,11 @@ function AddNewMothTrap() {
   const pickDraftOrCreateNewWrap = () => {
     // eslint-disable-next-line
     const pickDraftOrCreateNew = async () => {
-      const model = new MothTrap({});
+      const model = new MothTrap({
+        attrs: {
+          locationTypeId: MOTH_TRAP_TYPE,
+        } as any,
+      });
       model.startGPS();
 
       await model.save();

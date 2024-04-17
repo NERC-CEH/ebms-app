@@ -94,11 +94,11 @@ const MothTrapSetupMain = ({ location, addNewLamp, deleteLamp }: Props) => {
 
     return (
       <div className="rounded-list">
-        <h3 className="list-title">
-          <IonLabel>
+        <h3 className="list-divider">
+          <div>
             <T>Lamps</T>
-          </IonLabel>
-          <IonLabel slot="end">{lampList.length}</IonLabel>
+          </div>
+          <div>{lampList.length}</div>
         </h3>
 
         {lampList}

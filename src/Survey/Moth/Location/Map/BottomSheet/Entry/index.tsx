@@ -1,18 +1,19 @@
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import {
   pinOutline,
   arrowForwardOutline,
-  checkboxOutline,
+  checkmarkOutline,
 } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { useAlert } from '@flumens';
 import {
   IonIcon,
   IonItemSliding,
-  IonItem,
   IonItemOptions,
   IonItemOption,
+  NavContext,
 } from '@ionic/react';
 import mothTrapIcon from 'common/images/moth-inside-icon.svg';
 import MothTrap from 'common/models/location';
@@ -59,6 +60,8 @@ const MothTrapEntry = ({
   deleteTrap,
   onUpload,
 }: Props) => {
+  const { navigate } = useContext(NavContext);
+
   const location = mothTrap.attrs?.location;
   const setLocation = () => updateRecord(mothTrap);
   const onDeleteWrap = () => deleteTrap(mothTrap);
@@ -68,25 +71,38 @@ const MothTrapEntry = ({
   const isDraft = mothTrap.isDraft();
   const label = location?.name || <T>Draft</T>;
 
-  const link = isDraft ? `/location/${mothTrap.cid}` : undefined;
-  const onClick = !isDraft ? setLocation : undefined;
-
   const isUploading = mothTrap.remote.synchronising;
+
+  const onClick = () => {
+    if (!isDraft) {
+      setLocation();
+      return;
+    }
+
+    if (!isUploading && !isSelected) navigate(`/location/${mothTrap.cid}`);
+  };
 
   return (
     <IonItemSliding className="rounded-md">
-      <IonItem
+      <div
         className={clsx(
-          'flex h-16 [--background:transparent] [--inner-border-width:0] [--inner-padding-end:0]',
+          'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2',
           isSelected
-            ? 'border border-success-700/10 bg-success-50/10 text-success-900'
-            : 'bg-white'
+            ? 'border-[var(--form-value-color)] text-[var(--form-value-color)]'
+            : 'border-neutral-200'
         )}
         onClick={onClick}
-        routerLink={!isUploading && !isSelected ? link : undefined}
-        detail={false}
       >
-        <div className="flex w-full items-center justify-start gap-4">
+        <div
+          className={clsx(
+            'absolute left-0 top-0 h-full w-full opacity-0',
+            'bg-[var(--form-value-color)]',
+            isSelected && 'opacity-[2%]',
+            'transition-[opacity] duration-150'
+          )}
+        />
+
+        <div className="z-10 flex w-full items-center justify-start gap-4">
           <div className="m-1 flex items-center justify-center rounded-md bg-primary-300/20">
             <IonIcon icon={mothTrapIcon} className="size-7" />
           </div>
@@ -112,14 +128,14 @@ const MothTrapEntry = ({
           )}
 
           {!isDraft && isSelected && (
-            <IonIcon icon={checkboxOutline} className="size-10" />
+            <IonIcon icon={checkmarkOutline} className="size-10" />
           )}
 
           {isDraft && (
             <OnlineStatus location={mothTrap} onUpload={onUploadWrap} />
           )}
         </div>
-      </IonItem>
+      </div>
 
       {isDraft && (
         <IonItemOptions side="end">

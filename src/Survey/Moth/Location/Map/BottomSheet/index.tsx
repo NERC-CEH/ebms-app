@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
@@ -6,13 +6,13 @@ import { InfoMessage, device, Button } from '@flumens';
 import {
   useIonViewWillLeave,
   useIonViewWillEnter,
-  IonButton,
   IonContent,
   IonModal,
   IonHeader,
   IonToolbar,
   IonIcon,
   IonList,
+  NavContext,
 } from '@ionic/react';
 import turf from '@turf/distance';
 import MothTrap from 'models/location';
@@ -43,6 +43,7 @@ const BottomSheet = ({
   sample,
   centroid,
 }: Props) => {
+  const { navigate } = useContext(NavContext);
   const [isMounted, setUnmount] = useState(true);
 
   type MothTrapWithDistance = [MothTrap, number];
@@ -89,7 +90,12 @@ const BottomSheet = ({
           className="info-message"
         >
           You do not have any moth traps yet.
-          <IonButton routerLink="/location">Create first moth trap</IonButton>
+          <Button
+            onPress={() => navigate('/location')}
+            className="mx-auto my-2 px-4 py-1"
+          >
+            Create first moth trap
+          </Button>
         </InfoMessage>
       );
     }

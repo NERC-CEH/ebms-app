@@ -8,7 +8,6 @@ import Sample, { MothTrapLocation } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import Map from './Map';
-import './styles.scss';
 
 interface Props {
   sample: Sample;
@@ -67,7 +66,7 @@ const Location = ({ sample }: Props) => {
   return (
     <Page id="moth-survey-location">
       <Header title="Moth traps" subheader={gpsPermissionSubheader} />
-      <Main>
+      <Main className="[--padding-bottom:0] [--padding-top:0]">
         <Map
           sample={sample}
           mothTraps={mothTraps}

@@ -426,8 +426,9 @@ class LocationModel extends Model {
     const trapType = LocationModel.schema.type.remote.values.find(byValue)?.id;
 
     return {
-      location_type_id: MOTH_TRAP_TYPE,
+      location_type_id: MOTH_TRAP_TYPE, // the model already has this, so probably not needed
       name: location.name,
+      centroid_sref: `${location.latitude} ${location.longitude}`,
       'locAttr:306': stringifiedLamps,
       'locAttr:330': trapType,
       'locAttr:234': userModel.id,
