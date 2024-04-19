@@ -7,7 +7,6 @@ import {
   IonItemOptions,
   IonItemOption,
   IonIcon,
-  IonBadge,
 } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import Occurrence from 'models/occurrence';
@@ -92,18 +91,18 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
   const href = canShowLink ? getSurveyLink(sample) : '';
 
   function getInfo() {
+    const speciesCountBadge = (
+      <Badge
+        skipTranslation
+        className="py-[3px]"
+        prefix={<IonIcon icon={butterflyIcon} />}
+      >
+        {speciesCount}
+      </Badge>
+    );
+
     if (survey.name === 'precise-area') {
-      return (
-        !!speciesCount && (
-          <Badge
-            skipTranslation
-            className="py-[3px]"
-            prefix={<IonIcon icon={butterflyIcon} />}
-          >
-            {speciesCount}
-          </Badge>
-        )
-      );
+      return !!speciesCount && speciesCountBadge;
     }
 
     if (survey.name === 'moth') {
@@ -113,11 +112,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
       return (
         <>
           {!!locationName && <h4>{locationName}</h4>}
-          {!!speciesCount && (
-            <IonBadge color="medium">
-              <IonIcon icon={butterflyIcon} /> {speciesCount}
-            </IonBadge>
-          )}
+          {!!speciesCount && speciesCountBadge}
         </>
       );
     }
