@@ -171,6 +171,12 @@ msgstr "Nigeria"
 msgid "New Zealand"
 msgstr "New Zealand"
 
+msgid "Montserrat"
+msgstr ""
+
+msgid "Anguilla"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Et andet sted"
 

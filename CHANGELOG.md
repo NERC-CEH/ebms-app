@@ -1,6 +1,8 @@
 ## 1.26.0
 
 Added Sensitivity survey option.
+Added Project sites.
+Added Anguilla and Montserrat.
 
 ## 1.25.0
 

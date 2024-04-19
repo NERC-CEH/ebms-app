@@ -1,13 +1,13 @@
 # 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2024
 # Karolis, 2024
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2024\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2024\n"
 "Language-Team: Spanish (Spain) (https://app.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -171,6 +171,12 @@ msgstr "Nigeria"
 
 msgid "New Zealand"
 msgstr "Nueva Zelanda"
+
+msgid "Montserrat"
+msgstr ""
+
+msgid "Anguilla"
+msgstr ""
 
 msgid "Elsewhere"
 msgstr "En otro lugar"
@@ -364,7 +370,7 @@ msgstr "Área"
 
 # Location attribute label
 msgid "Location"
-msgstr "Lugar"
+msgstr "Ubicación"
 
 # GPS permissions message
 msgid "Location Required"
@@ -452,47 +458,47 @@ msgstr "Dibujar un area"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Ubicaciones"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 # Survey area page
 msgid "New location"
-msgstr ""
+msgstr "Nueva ubicación"
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Nombre del lugar"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Comentarios"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "La zona de muestreo se sigue rastreando."
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Se ha guardado con éxito una ubicación."
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "¿Está seguro?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Esto descartará los datos del formulario."
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "No"
 
 msgid "Delete"
 msgstr "Borrar"
@@ -2193,7 +2199,7 @@ msgstr "Aceptar"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr "Permiso de localización"
+msgstr "Permiso de ubicación"
 
 # GPS permission alert message
 msgid ""
@@ -2506,7 +2512,7 @@ msgstr "Editar"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr "Editar localización"
+msgstr "Editar ubicación"
 
 # Part of favorite track selection
 msgid "Name"

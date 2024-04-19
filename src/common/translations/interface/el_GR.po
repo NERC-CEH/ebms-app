@@ -159,15 +159,21 @@ msgid "Ukraine"
 msgstr "Ουκρανία"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Νότια Αφρική"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Μποτσουάνα"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Νιγηρία"
 
 msgid "New Zealand"
+msgstr "Νέα Ζηλανδία"
+
+msgid "Montserrat"
+msgstr ""
+
+msgid "Anguilla"
 msgstr ""
 
 msgid "Elsewhere"
@@ -444,54 +450,54 @@ msgid "Please draw your area on the map"
 msgstr "Παρακαλώ σχεδιάστε την περιοχή σας στον χάρτη"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Απενεργοποιήστε το GPS για να ενεργοποιήσετε τα εργαλεία σχεδίασης."
 
 msgid "Draw an area"
 msgstr "Σχεδιάστε μία περιοχή"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Τοποθεσίες"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Προηγούμενο"
 
 # Survey area page
 msgid "New location"
-msgstr ""
+msgstr "Νέα τοποθεσία"
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Όνομα τοποθεσίας"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Σχόλια"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "Υπάρχει ακόμα στίγμα GPS για την περιοχή δειγματοληψίας. "
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Η τοποθεσία αποθηκεύτηκε επιτυχώς"
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "Είστε σίγουροι;"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Αυτή η επιλογή θα διαγράψει τα δεδομένα της φόρμας. "
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Ναι"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "Όχι"
 
 msgid "Delete"
 msgstr "Διαγραφή"
@@ -865,19 +871,23 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Καθάρισε τη προσωρινή μνήμη"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
 msgstr ""
+"Μπορείτε να απελευθερώσετε τον αποθηκευτικό χώρο που χρησιμοποιείται από την"
+" εφαρμογή. "
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Καθάρισε"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Αυτή η επιλογή θα διαγράψει τα προσωρινά αποθηκευμένα δεδομένα, "
+"συμπεριλαμβανομένων των μεταφορτωμένων δειγματοληψιών σας. "
 
 msgid "Sweden"
 msgstr "Σουηδία"
@@ -894,6 +904,8 @@ msgstr "Μεταφορτωμένη"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Πρέπει να <1>συνδεθείτε</1> στον λογαριασμό σας για να μπορείτε να βλέπετε "
+"τις καταγραφές σας. "
 
 msgid "No finished pending surveys"
 msgstr "Καμία εκκρεμής δειγματοληψία"
@@ -978,11 +990,13 @@ msgstr "Εμφάνιση κοινών ονομάτων στον οδηγό"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Χρησιμοποιήστε παγκόσμιες λίστες ειδών"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
 msgstr ""
+"Η αναζήτηση να μην περιορίζεται σε τοπικά είδη κατά τη προσθήκη "
+"δειγματοληψιών."
 
 msgid "Share App Analytics"
 msgstr "Κοινοποίηση των Αναλυτικών στοιχειών της Εφαρμογής"
@@ -1273,6 +1287,13 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"Η μέθοδος που προτιμάται είναι η καταγραφή ενός 15-λεπτου σημείου. Αυτό "
+"μπορεί να γίνει σε οποιοδήποτε μέρος και οποιαδήποτε στιγμή όταν οι "
+"πεταλούδες είναι ενεργές (δηλαδή όταν ο καιρός είναι ζεστός και κατά "
+"προτίμηση ηλιόλουστος). Μπορείτε επίσης να χρησιμοποιήσετε την εφαρμογή για "
+"να πραγματοποιήσετε τις διαδρομές πεταλούδων σας που έχετε ήδη ορίσει στην "
+"ιστοσελίδα. Οι παρακάτω οδηγίες σας ενημερώνουν για το πως να "
+"χρησιμοποιήσετε τις διαθέσιμες μεθόδους."
 
 msgid "How to do a 15-minute Count"
 msgstr "Πως να κάνετε ένα 15-λεπτο Σημείο "
@@ -1431,7 +1452,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Είστε σίγουροι πως θέλετε να διαγράψετε την τρέχουσα πορεία σας;"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1948,32 +1969,42 @@ msgstr "Τι νέο υπάρχει"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Να μην προβληθεί ξανά"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"Προστέθηκε η δυνατότητα προβολής καταγραφών που έχουν μεταφορτωθεί από άλλες"
+" συσκευές."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"Ο χάρτης έχει αναβαθμιστεί ώστε να εμφανίζει τις καταγραφές όλων των "
+"παρατηρητών. "
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
+"Έχει ενεργοποιηθεί η δυνατότητα αντιγραφής της λίστας ειδών του προηγούμενου"
+" τμήματος της διαδρομής."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"Έχει ενεργοποιηθεί η δυνατότητα αντιγραφής της λίστας ειδών της προηγούμενης"
+" παγίδας νυχτοπεταλούδων. "
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Αναβαθμισμένη σελίδα του οδηγού ειδών. "
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
 msgstr ""
+"Έχει προστεθεί η επιλογή να καθαρίσετε την εφαρμογή από μεταφορτωμένα "
+"αρχεία. "
 
 # User account action
 msgid "Resend"
@@ -2199,8 +2230,8 @@ msgid ""
 "device is locked. Allow the app to use your location."
 msgstr ""
 "Επιτρέψτε στην εφαρμογή να χρησιμοποιεί τη τοποθεσία σας, για τον αυτόματο "
-"καθορισμό των τοποθεσιών των ειδών και τον εντοπισμό της διαδρομής σας, "
-"ακόμα και εάν η συσκευή σας είναι κλειδωμένη. "
+"καθορισμό των τοποθεσιών των ειδών και τον εντοπισμό της πορείας σας, ακόμα "
+"και εάν η συσκευή σας είναι κλειδωμένη. "
 
 # Delete account
 msgid "Delete account"
@@ -2467,226 +2498,242 @@ msgstr "Οδηγίες"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Αγία Ελένη"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Ωοτοκία"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Ζευγάρωμα ή συνδεδεμένα ζεύγη ατόμων"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Έκδυμα"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Αναδυόμενο άτομο"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "Το άθροισμα των ατόμων πρέπει να είναι μεγαλύτερο από 0"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Εμφάνιση λιγότερων"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Το όνομα της πορείας σας"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
 msgstr ""
+"Εδώ μπορείτε να επιλέξετε ή να σύρετε για να επεξεργαστείτε τις προηγούμενες"
+" πορείες σας"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Επεξεργασία"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Επεξεργασία τοποθεσίας"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Όνομα"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Αγαπημένη"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Είστε σίγουροι πως θέλετε να διαγράψετε την αποθηκευμένη πορεία σας;"
 
 # Map GPS button interface
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"Για να συνεχίσετε την καταγραφή της πορείας σας με GPS, πρέπει πρώτα να "
+"αφαιρέσετε την περιοχή που σχεδιάσατε από τον χάρτη."
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Σεληνιακή φάση"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Νέα σελήνη"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Αύξων μηνίσκος"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Πρώτο τέταρτο"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Αύξων αμφίκυρτος"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Πανσέληνος"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Φθίνων αμφίκυρτος"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Τελευταίο τέταρτο"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr " Φθίνουσα ημισέληνος"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Αρχή παγίδας"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Τέλος παγίδας"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Καιρός στην αρχή"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Καιρός στο τέλος"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Παρακαλώ προσθέστε τη παγίδα νυχτοπεταλούδων."
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Έχουμε προσέξει πως η δειγματοληψία σας έχει <1>μεγάλα τμήματα</1>. "
+"Βεβαιωθείτε πως είναι σε μία σωστή <3>τοποθεσία</3>!"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Προκαθορισμένη ώρα ηλιοβασιλέματος"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Προκαθορισμένη ώρα ανατολής ηλίου"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Οι ρυθμίσεις τοποθεσίας δεν είναι ενεργοποιημένες"
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr ""
+msgstr "Δεν εχέτε προηγούμενες καταγεγραμμένες πορείες."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "Αλλαγή της ταξινόμησης της λίστας σε αλφαβητική."
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
 msgstr ""
+"Αλλαγή της ταξινόμησης της λίστας σε χρονική, με πρώτες τις τελευταίες "
+"προσθήκες."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Μη επιβεβαιωμένη"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Αποδεκτή"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Απορριφθείσα"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Η αξιοπιστία δεν μπορεί να είναι κενή."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Η συννεφιά δεν μπορεί να είναι κενή."
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "Δεν συνδέεται με κανένα έργο"
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "Γίνετε μέλος"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Πρόγραμμα"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Προγράμματα"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "Τα προγράμματα μου"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "Όλα τα προγράμματα μου"
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"Δεν έχετε γίνει μέλος σε κάποιο πρόγραμμα ακόμα. Μεταβείτε στην καρτέλα "
+"\"Όλα τα προγράμματα μου\" για να συνδεθείτε σε κάποιο "
+"πρόγραμμα.<br/><br/>Σύρετε τη σελίδα προς τα κάτω για να ανανεώσετε τη "
+"λίστα."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"<0>{{country}}</0>Προς το παρόν δεν υπάρχουν νέα προγράμματα διαθέσιμα για "
+"ένταξη.<br/><br/>Σύρετε τη σελίδα προς τα κάτω για να ανανεώσετε τη λίστα."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "Ενταχθήκατε επιτυχώς στο πρόγραμμα."
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "Αποχωρήστε"
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr ""
+msgstr "Αποχωρήσατε επιτυχώς από το πρόγραμμα."
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "Ευαίσθητη"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Αυτή η δειγματοληψία περιλαμβάνει ευαίσθητα είδη και δεν θα πρέπει να "
+"περιλαμβάνεται σε δημόσιες αναφορές."

@@ -1,175 +1,168 @@
 # 
 # Translators:
-# Vildan Acar <vildanacr@gmail.com>, 2020
-# Gozde Atag <atag.gozde@outlook.com>, 2020
-# Muharrem Yeni <muharremyeni@windowslive.com>, 2020
-# Ahmet Furkan TON <afurkanton@gmail.com>, 2020
-# Karolis, 2021
-# Merve Kurt, 2022
-# Alperen Yayla, 2023
-# Evrim <ekaracetin@hotmail.com>, 2024
+# Miloš Popović <gpopac@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Evrim <ekaracetin@hotmail.com>, 2024\n"
-"Language-Team: Turkish (Turkey) (https://app.transifex.com/ceh/teams/95441/tr_TR/)\n"
+"Last-Translator: Miloš Popović <gpopac@gmail.com>, 2020\n"
+"Language-Team: Serbian (Latin) (https://app.transifex.com/ceh/teams/95441/sr@latin/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr_TR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: sr@latin\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Ülkenizi seçin"
+msgstr "Izaberite vašu državu"
 
 msgid "United Kingdom"
-msgstr "Birleşik Krallık"
+msgstr "Ujedinjeno kraljevstvo"
 
 msgid "Lithuania"
-msgstr "Litvanya"
+msgstr "Litvanija"
 
 msgid "Spain"
-msgstr "İspanya"
+msgstr "Španija"
 
 msgid "Andorra"
-msgstr "Andorra"
+msgstr "Andora"
 
 msgid "Albania"
-msgstr "Arnavutluk"
+msgstr "Albanija"
 
 msgid "Austria"
-msgstr "Avusturya"
+msgstr "Austrija"
 
 msgid "Bosnia and Herzegovina"
-msgstr "Bosna Hersek"
+msgstr "Bosna i Hercegovina"
 
 msgid "Belgium"
-msgstr "Belçika"
+msgstr "Belgija"
 
 msgid "Bulgaria"
-msgstr "Bulgaristan"
+msgstr "Bugarska"
 
 msgid "Belarus"
-msgstr "Belarus"
+msgstr "Belorusija"
 
 msgid "Switzerland"
-msgstr "İsviçre"
+msgstr "Švajcarska"
 
 msgid "Cyprus"
-msgstr "Kıbrıs"
+msgstr "Kipar"
 
 msgid "Czechia"
-msgstr "Çekya"
+msgstr "Češka"
 
 msgid "Germany"
-msgstr "Almanya"
+msgstr "Nemačka"
 
 msgid "Denmark"
-msgstr "Danimarka"
+msgstr "Danska"
 
 msgid "Estonia"
-msgstr "Estonya"
+msgstr "Estonija"
 
 msgid "Spain (Canary Islands)"
-msgstr "İspanya (Kanarya Adaları)"
+msgstr "Španija (Kanarska ostrva)"
 
 msgid "Finland"
-msgstr "Finlandiya"
+msgstr "Finska"
 
 msgid "France"
-msgstr "Fransa"
+msgstr "Francuska"
 
 msgid "Greece"
-msgstr "Yunanistan"
+msgstr "Grčka"
 
 msgid "Croatia"
-msgstr "Hırvatistan"
+msgstr "Hrvatska"
 
 msgid "Hungary"
-msgstr "Macaristan"
+msgstr "Mađarska"
 
 msgid "Ireland"
-msgstr "İrlanda"
+msgstr "Irska"
 
 msgid "Iceland"
-msgstr "İzlanda"
+msgstr "Island"
 
 msgid "Italy"
-msgstr "İtalya"
+msgstr "Italija"
 
 msgid "Liechtenstein"
-msgstr "Lihtenştayn"
+msgstr "Lihenštajn"
 
 msgid "Luxembourg"
-msgstr "Lüksemburg"
+msgstr "Luksemburg"
 
 msgid "Latvia"
-msgstr "Letonya"
+msgstr "Letonija"
 
 msgid "Moldova"
-msgstr "Moldova"
+msgstr "Moldavija"
 
 msgid "Montenegro"
-msgstr "Karadağ"
+msgstr "Crna Gora"
 
 msgid "North Macedonia"
-msgstr "Kuzey Makedonya"
+msgstr "Severna Makedonija"
 
 msgid "Malta"
 msgstr "Malta"
 
 msgid "Netherlands"
-msgstr "Hollanda"
+msgstr "Holadija"
 
 msgid "Norway"
-msgstr "Norveç"
+msgstr "Norveška"
 
 msgid "Poland"
-msgstr "Polonya"
+msgstr "Poljska"
 
 msgid "Portugal"
-msgstr "Portekiz"
+msgstr "Portugalija"
 
 msgid "Portugal (Azores)"
-msgstr "Portekiz (Azores)"
+msgstr "Portugalija (Azorska ostrva)"
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portekiz (Madeira Adaları)"
+msgstr "Portugalija (Ostrva Madeire)"
 
 msgid "Romania"
-msgstr "Romanya"
+msgstr "Rumunija"
 
 msgid "Serbia"
-msgstr "Sırbistan"
+msgstr "Srbija"
 
 msgid "Russian Federation"
-msgstr "Rusya Federasyonu"
+msgstr "Ruska Federacija"
 
 msgid "Slovenia"
-msgstr "Slovenya"
+msgstr "Slovenija"
 
 msgid "Japan"
-msgstr "Japonya"
+msgstr ""
 
 msgid "Slovakia"
-msgstr "Slovakya"
+msgstr "Slovačka"
 
 msgid "Turkey (Europe)"
-msgstr "Türkiye (Avrupa)"
+msgstr "Turska (Evropa)"
 
 msgid "Turkey (Asia)"
-msgstr "Türkiye (Asya)"
+msgstr "Turska (Azija)"
 
 msgid "Ukraine"
-msgstr "Ukrayna"
+msgstr "Ukrajina"
 
 msgid "South Africa"
-msgstr "Güney Amerika"
+msgstr ""
 
 msgid "Botswana"
-msgstr "Botswana"
+msgstr ""
 
 msgid "Nigeria"
 msgstr ""
@@ -184,279 +177,277 @@ msgid "Anguilla"
 msgstr ""
 
 msgid "Elsewhere"
-msgstr "Diğer"
+msgstr "Negde drugde"
 
 msgid "Skip"
-msgstr "Geç"
+msgstr "Preskoči"
 
 msgid "Next"
-msgstr "Sonraki"
+msgstr "Naredno"
 
 msgid "Get Started"
-msgstr "Başla"
+msgstr "Započni"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr "Lütfen eBMS hesabınızla oturum açın veya kaydolun."
+msgstr "Prijavite se na postojeći eBMS nalog ili se registrujte."
 
 msgid "Password"
-msgstr "Şifre"
+msgstr "Lozinka"
 
 msgid "Sign in"
-msgstr "Oturum aç"
+msgstr "Prijavi se"
 
 msgid "Register"
-msgstr "Kayıt ol"
+msgstr "Registracija"
 
 msgid "Forgot password?"
-msgstr "Şifremi unuttum"
+msgstr "Zaboravili ste lozinku?"
 
 msgid "User not found."
-msgstr "Kullanıcı adı bulunamadı"
+msgstr "Korisnik nije pronađen."
 
 msgid "Login"
-msgstr "Giriş yap"
+msgstr "Prijava"
 
 msgid "Settings"
-msgstr "Ayarlar"
+msgstr "Podešavanja"
 
 msgid "Info"
-msgstr "Bilgi"
+msgstr "Podaci"
 
 msgid "About"
-msgstr "Hakkında"
+msgstr "O programu"
 
 msgid "Help"
-msgstr "Yardım"
+msgstr "Pomoć"
 
 msgid "Privacy Policy"
-msgstr "Gizlilik Politikası"
+msgstr "Politika privatnosti"
 
 msgid "Credits"
-msgstr "Emeği geçenler"
+msgstr "Zasluge"
 
 msgid "Email"
-msgstr "E-posta"
+msgstr "E-pošta"
 
 msgid "First Name"
-msgstr "İsim"
+msgstr "Ime"
 
 msgid "Surname"
-msgstr "Soyisim"
+msgstr "Prezime"
 
 msgid "I agree to"
-msgstr "Kabul ediyorum"
+msgstr "Slažem se da"
 
 msgid "Terms and Conditions"
-msgstr "Şartlar ve koşullar"
+msgstr "Uslovi korišćenja"
 
 msgid "Reset"
-msgstr "Sıfırla"
+msgstr "Povrati"
 
 msgid "Records"
-msgstr "Kayıtlar"
+msgstr "Nalazi"
 
 msgid "Upload All"
-msgstr "Hepsini Yükle"
+msgstr "Pošalji sve"
 
 msgid "Remove All Saved"
-msgstr "Tüm Kaydedilenleri Silin"
+msgstr "Ukloni sve sačuvane"
 
 msgid "Application"
-msgstr "Uygulama"
+msgstr "Aplikacija"
 
 msgid "Training Mode"
-msgstr "Eğitim Modu"
+msgstr "Režim za trening"
 
 msgid "Experimental Features"
-msgstr "Deneysel Özellikler"
+msgstr "Eksperimentalne mogućnosti"
 
 msgid "Welcome"
-msgstr "Hoşgeldiniz"
+msgstr "Dobrodošli"
 
 msgid "Lets start!"
-msgstr "Hadi Başlayalım"
+msgstr "Hajde da počnemo!"
 
 msgid "TOP RECORDERS"
-msgstr "EN ÇOK KAYIT GÖNDERENLER"
+msgstr "ISTAKNUTI KORISNICI"
 
 msgid "Top Species from all timed counts"
-msgstr "Tüm zamanların en çok gözlemlenen türleri"
+msgstr "Najbrojnije vrste iz vremenskih brojanja"
 
 msgid "Back"
-msgstr "Geri"
+msgstr "Nazad"
 
 msgid "Menu"
-msgstr "Menü"
+msgstr "Meni"
 
 msgid "App"
-msgstr "Uygulama"
+msgstr "Aplikacija"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
-msgstr "Bu uygulamaya oluşturmaya yardımcı olan herkese minnetarız"
+msgstr ""
+"Zahvalni smo svim ljudima koji su pomogli da napravimo ovu aplikaciju:"
 
 msgid "Home"
-msgstr "Ana Sayfa"
+msgstr "Početna"
 
 msgid "Guide"
-msgstr "Kılavuz"
+msgstr "Uputstvo"
 
 msgid "Account"
-msgstr "Hesabım"
+msgstr "Nalog"
 
 msgid "Offline"
-msgstr "Çevirimdışı"
+msgstr "Van mreže"
 
 msgid "Sorry, looks like you're offline."
-msgstr "Üzgünüz, çevirimdışı görünüyorsunuz. "
+msgstr "Izvinjavamo se, izgleda da ste van mreže."
 
 msgid "OK"
-msgstr "Tamam"
+msgstr "U redu"
 
 msgid "Sorry"
-msgstr "Üzgünüz"
+msgstr "Izvinjavamo se"
 
 msgid "Please wait..."
-msgstr "Lütfen bekleyin"
+msgstr "Sačekajte…"
 
 msgid "name is a required field"
-msgstr "İsim alanının doldurulması zorunludur"
+msgstr "morate uneti ime"
 
 msgid "password is a required field"
-msgstr "Şifre alanının doldurulması zorunludur"
+msgstr "morate uneti lozinku"
 
 msgid "Login error:"
-msgstr "Giriş hatası"
+msgstr "Greška u prijavi:"
 
 msgid "Failed to fetch"
-msgstr "Cevap vermekte başarısız olundu"
+msgstr "Ne mogu da preuzmem"
 
 msgid "Incorrect password or email."
-msgstr "Yanlış şifre ya da email"
+msgstr "Neispravna lozinka ili e-adresa."
 
 # Part of logout process
 msgid "Logout"
-msgstr "Oturumu kapatın"
+msgstr "Odjavi me"
 
 # Part of logout process
 msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
-"Oturumu kapatmak istediğinizden emin misiniz? Bekleyen ve yüklenen "
-"kayıtlarınız bu cihazdan silinmeyecek."
 
 msgid "Cancel"
-msgstr "İptal"
+msgstr "Otkaži"
 
 msgid "Welcome aboard!"
-msgstr "Hoşgeldiniz"
+msgstr "Dobro nam došli!"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Herhangi bir kayıt göndermeden önce lütfen e-postanızı kontrol edin ve "
-"doğrulama bağlantısını tıklayın."
+"Pre nego što pošaljete nalaze proverite vašu e-poštu i kliknite na vezu za "
+"potvrdu adrese."
 
 msgid "OK, got it"
-msgstr "Tamam, anladım"
+msgstr "Shvatio sam"
 
 msgid "Please fill in"
-msgstr "Lütfen doldurun"
+msgstr ""
 
 msgid "Area Count"
-msgstr "Alan sayımı"
+msgstr "Brojanje u oblasti"
 
 msgid "Area"
-msgstr "Alan Büyüklüğü "
+msgstr "Oblast"
 
 # Location attribute label
 msgid "Location"
-msgstr "Konum"
+msgstr ""
 
 # GPS permissions message
 msgid "Location Required"
-msgstr "Konum bilgisi gereklidir"
+msgstr ""
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
-"Bu uygulama konum bilginize ihtiyaç duymakta ama erişim izni "
-"bulunmamaktadır. Ayarları erişmek ister misiniz?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr "Şarjınızın bitmemesi için iptal edin."
+msgstr ""
 
 # GPS message
 msgid "Using your location."
-msgstr "Konum bilginizi kullanıyor. "
+msgstr ""
 
 msgid "Add"
-msgstr "Ekle"
+msgstr "Dodaj"
 
 msgid "Add species"
-msgstr "Tür ekle"
+msgstr "Dodaj"
 
 msgid "Duration"
-msgstr "Süre"
+msgstr "Trajanje"
 
 msgid "Species"
-msgstr "Tür"
+msgstr "Vrste"
 
 msgid "Species name"
-msgstr "Tür ismi"
+msgstr "Ime vrste"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
-"Taksayı daha hızlı aramak için farklı kısayollar kullanabilirsiniz. Örneğin,"
+"Možete korisiti različite prečice za brže nalaženje taksona. Na primer, da "
+"bi pronašli"
 
 msgid "you can type in the search bar"
-msgstr "Arama çubuğuna yazabilirsiniz"
+msgstr "možete ukucati u polje za pretragu"
 
 msgid "Edit Occurrence"
-msgstr "Olayı Düzenle"
+msgstr "Uredi nalaz"
 
 msgid "Count"
-msgstr "Sayım"
+msgstr "Broj"
 
 msgid "Comment"
-msgstr "Yorum"
+msgstr "Komentar"
 
 msgid "Draft"
-msgstr "Taslak"
+msgstr "Nacrt"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Önceki gözlem taslağı mevcut, ona devam etmek ister misiniz?"
+msgstr "Već postoji nacrt od prethodnog obilaska, da li želite da nastavite?"
 
 msgid "Discard"
-msgstr "Çöpe at"
+msgstr "Zanemari"
 
 msgid "Continue"
-msgstr "Devam et"
+msgstr "Nastavi"
 
 msgid "Finish"
-msgstr "Bitir"
+msgstr "Završi"
 
 msgid "minutes"
-msgstr "dakika"
+msgstr "minuta"
 
 msgid "No species added"
-msgstr "Hiç tür eklenmedi"
+msgstr "Nisu dodate vrste"
 
 msgid "Please draw your area on the map"
-msgstr "Lütfen haritada alanınızı çiziniz"
+msgstr "Iscrtajte željenu oblast na mapi"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr "Çizim araçlarını etkinleştirmek için GPS takibi devre dışı bırakın."
+msgstr ""
 
 msgid "Draw an area"
-msgstr "Alan çiz"
+msgstr "Iscrtajte oblast"
 
 # Survey area page
 msgid "Locations"
@@ -503,478 +494,471 @@ msgid "No"
 msgstr ""
 
 msgid "Delete"
-msgstr "Sil"
+msgstr "Obriši"
 
 msgid "Surveys"
-msgstr "Gözlemler"
+msgstr "Obilasci"
 
 msgid "Reports"
-msgstr "Raporlar"
+msgstr "Izveštaji"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr "Tür adı veya filtresi..."
+msgstr ""
 
 # Species filter label
 msgid "family"
-msgstr "Aile"
+msgstr ""
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Üzgünüz, şu anda hiç rapor verisi bulunmamaktadır"
+msgstr "Još uvek nisu dostupni podaci za izveštaj."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "Bu gözlemi silmek istediğinizden emin misiniz?"
+msgstr "Da li da obrišem ovaj obilazak?"
 
 msgid "No finished surveys"
-msgstr "Hiç tamamlanmış gözlem bulunmamaktadır"
+msgstr "Nema završenih obilazaka"
 
 msgid "Finished surveys"
-msgstr "Tamamlanmış gözlemler"
+msgstr "Završeni obilasci"
 
 msgid "Selected area"
-msgstr "Seçilmiş alan"
+msgstr "Izabrana oblast"
 
 msgid "Use survey create time"
-msgstr "Gözlem başlangıç zamanını kullan"
+msgstr "Koristi vreme početka obilaska"
 
 msgid "Use survey finish time"
-msgstr "Gözlem bitiş zamanını kullan"
+msgstr "Korisni vreme završetka obilaska"
 
 msgid "species"
-msgstr "tür"
+msgstr "vrste"
 
 msgid "Done"
-msgstr "Tamamlandı"
+msgstr "Gotovo"
 
 msgid "Time's up!"
-msgstr "Süre doldu!"
+msgstr "Vreme je isteklo!"
 
 msgid "Survey incomplete"
-msgstr "Tamamlanmamış gözlem"
+msgstr "Obilazak nije potpun"
 
 msgid "The survey is not complete yet."
-msgstr "Gözlem henüz tamamlanmadı."
+msgstr "Ovaj obilazak još uvek nije završen."
 
 msgid "Please select a smaller area."
-msgstr "Lütfen daha küçük bir alan seçiniz."
+msgstr "Izaberite neku manju oblast."
 
 msgid "Please add survey area information."
-msgstr "Lütfen gözlem yapılan bölgenin bilgilerini girin."
+msgstr "Dodajte podatke o oblasti koju ste obišli."
 
 msgid "Choose a method to upload a photo"
-msgstr "Fotoğraf yükleme yönteminizi seçiniz"
+msgstr "Izaberite način za dodavanje slika"
 
 msgid "Gallery"
-msgstr "Galeri"
+msgstr "Galerija"
 
 msgid "Camera"
 msgstr "Kamera"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "Bu fotoğrafı silmek istediğinizden emin misiniz?"
+msgstr "Da li zaista želite da uklonite ovu sliku?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Not: Galeride saklı kalacak."
+msgstr "Napomena: ostaće u galeriji."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr "Fotoğraf eklenmedi. Eklemek için tıklayın"
+msgstr ""
 
 msgid "Registration error:"
-msgstr "Kayıt hatası:"
+msgstr "Greška prilikom registracije:"
 
 # Login error message
 msgid "Incorrect password or email"
-msgstr "Yanlış şifre ya da email"
+msgstr "Neispravna lozinka ili e-pošta"
 
 msgid "Enter your email address to request a password reset."
-msgstr "Şifre değişikliği için email adresinizi girin"
+msgstr ""
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr "Başarıyla oturum açıldı: {{email}}"
+msgstr ""
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr "Kullanıcı aktif değil ya da engellenmiş"
+msgstr ""
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
-"Görünüşe göre {{userEmail}} e-postanız henüz doğrulanmadı. E-postayı Yenile "
-"Yeniden Gönder"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
-"Onay emaili başarı ile gönderildi. Emaili almadıysanız Spam ya da Junk "
-"emaillerinize bakınız."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr "Lütfen önce oturum açınız"
+msgstr ""
 
 # User registration error
 msgid "This email is already taken."
-msgstr "Bu email adresi sistemde zaten kayıtlı"
+msgstr ""
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr "Tanımlayamamayan email adresi"
+msgstr ""
 
 msgid "email is not valid"
-msgstr "e-posta geçerli değil"
+msgstr "e-pošta nije ispravna"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Kelebekler büyüleyici böceklerdir. Ancak,  Avrupa Birliği için hazırlanan AB"
-" Çayır Kelebekleri Göstergesi grağinde gösterildiği üzere, Avrupa'nın pek "
-"çok bölgesinde sayıları azalmaktadır.  "
+"Dnevni leptiri su upadljivi insekti, ali njihov broj opada u mnogim delovima"
+" Evrope. To možete videti sa ovog grafika indikatora za travnata staništa "
+"EU."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
-"Bu uygulama sayesinde elde edilen veriler, kelebekler ve yaşam alanlarıyla "
-"ilgili bilgilerin geliştirilmesine çok büyük katkılar sağlayabilir. "
+"Podaci koje prikuplja ova aplikacija doprinose boljem poznavanju stanja "
+"dnevnih leptira i njihovih staništa."
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
-"Kelebeklerin durumunu belirlemek için yapılmış yoğunluk kayıtlarına göre, "
-"Avrupa'nın pek çok bölgesinde yaşayan kelebeklerin sayısıyla ilgili bilgimiz"
-" bulunmamaktadır.  "
+"Podaci o brojnosti leptira nam nedostaju u mnogim delovima Evrope, kao što "
+"možete videti iz prikaza gustine nalaza koji su nam dostupni za procenu "
+"stanja dnevnih leptira."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Bu muhteşem böceklerin korunması için yürütülen bilimsel araştırmalarda "
-"kullanılacak yüksek nitelikli verilerin elde edilmesine katkı sağlamak daha "
-"önce hiç bu kadar kolay olmamıştı! Siz de hemen şimdi katkıda bulunmaya "
-"başlayabilirsiniz"
+"Nikada nije bilo lakše da pošaljete kvalitetne podatke za naša istraživanja "
+"i pomognete u očuvanju ovih neverovatnih insekata. A možete početi već sada"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"Bu uygulama Avrupa'daki Kelebeklerin Durumunu Belirleme (ABLE) Projesi "
-"kapsamında geliştirilmiştir."
+"Aplikacija je razvijena kao deo projekta Procene dnevnih leptira u Evropi "
+"(ABLE projekat)"
 
 msgid "The ABLE project is a partnership between"
-msgstr "ABLE Projesi'ne aşağıdaki ortaktır:"
+msgstr "ABLE projekat se sprovodi u saradnji sa"
 
 msgid "and"
-msgstr "ve"
+msgstr "i"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
-"ABLE Projesi,  Avrupa Birliği Çevre Genel Müdürlüğü tarafınca imzalanmış "
-"hizmet sözleşmesi kapsamında ilk aşamada 2019-2020 yılları boyunca "
-"fonlanmaktadır. "
+"ABLE se finansira sredstvima Direktorata za životnu sredinu Evropske Unije, "
+"na početni period od dve godine, 2019-20."
 
 msgid "ABLE partners:"
-msgstr "ABLE Proje ortakları: "
+msgstr "ABLE partneri:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
-"Bu uygulama Avrupa Kelebek İzleme Sistemi (eBMS) verilerine katkıda bulunur."
-" "
+"Ova aplikacija doprinosi prikupljanju podataka u okviru Evropske šeme za "
+"praćenje stanja (eBMS)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr ""
-"Haziran 2019 itibariyle eBMS Avrupa Kelebek İzleme Sistemi eBMS ortağı olan "
-"organizasyonlar: "
+msgstr "Juna 2019, sledeće organizacije su postale partneri eBMS-a:"
 
 msgid "Not enough data yet"
-msgstr "Henüz yeterli veri yok"
+msgstr "Još uvek nema podataka"
 
 msgid "How to start a survey"
-msgstr "Bir gözlemi nasıl başlatabilirim?"
+msgstr "Kako da počnete obilazak"
 
 msgid "To start a new survey you can press the plus button"
-msgstr "Yeni bir gözlem başlatmak için \"+\" butonuna basabilirsiniz"
+msgstr "Da započnete novi obilazak pritisnite dugme sa plusom"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
-msgstr "anasayfa altbaşlığında. Bu, 15 dakikalık yeni bir gözlem başlatır."
+msgstr ""
+"i podnožju naslovne strane. Ovo će pokrenuti novo 15-to minutno brojanje."
 
 msgid "Selecting species"
-msgstr "Tür seçimi"
+msgstr "Odabir vrsta"
 
 msgid "Please press the Add"
-msgstr "Lütfen Ekle'ye basın"
+msgstr "Pritisnite Dodaj"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"yeni gözlem düzenleme sayfanızdaki tuş. Bu, sizi takson arama sayfasına "
-"getirecektir. Türleri seçtikten sonra ise, gözem listenize eklenecektir. "
+"dugme na stranici za uređivanje novog obilaska. To će vam prikazati stranicu"
+" za pretragu taksona. Nakon što izaberete vrstu, ona će biti dodata na "
+"spisak sa vašeg obilaska."
 
 msgid "Note"
-msgstr "Notlar"
+msgstr "Napomena"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
-"Kelebek sayısını listenizdeki tür isminin yanındaki sayıya tıklayarak "
-"arttırabilirsiniz."
+"možete povećati broj jedinki tako što kliknete na broj koji se nalazi pored "
+"vrste unutar spiska."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Bir türü gözlem listenizden çıkarmak için sola kaydırıp sil tuşuna "
-"basabilirsiniz."
+"Možete prevući nalaz ulevo i kliknuti na dugme za brisanje, kako bi obrisali"
+" vrstu sa spiska."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"Gördüğünüz türle ilgili ayrıntılı bilgi eklemek isterseniz, tür ismine "
-"tıklayarak ilgili tür kaydını detaylandırabilirsiniz. "
+"Ako kliknete na vrstu sa spiska, možete urediti taj unos i dodati još "
+"podataka o nalazu."
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr ""
-"Kaydı tamamlamak için gözlem yaptığınız bölge ile ilgili bilgileri de "
-"eklemelisiniz. "
+"Za uspešno popunjen unos morate uneti i podatke o oblasti koju ste obišli."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
 msgstr ""
-"Bitirdiğinizde, başlıktaki 'Bitir' tuşuna basarak göndermeye hazır hale "
-"getirin."
+"Kada završite, označite da je unos spreman za slanje tako što ćete kliknuti "
+"na dugme Gotovo u zaglavlju aplikacije."
 
 msgid "Searching for species"
-msgstr "Tür aranıyor"
+msgstr "Tražim vrste"
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"Uygulamada yaklaşık 500 kelebek türü listesi ve ilgili tüm taksonomi "
-"birimleri bulunur. Taksayı daha hızlı aramak için farklı kısayollar "
-"kullanabilirsiniz. Örneğin,"
+"Unutar aplikacije je spisak oko 500 vrsta dnevnih leptira sa njihovom "
+"taksonomskom pripadnošću. Za bržu pretragu taksona možete iskoristiti "
+"različite prečice. Na primer, da pronađete"
 
 msgid "Sync. with the website"
-msgstr "İnternet sitesiyle senkronize et"
+msgstr "Osveži sa veba"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr "Kaydettiğiniz tüm gözlemler profilinizde görüntülenecek."
+msgstr ""
+"Svi sačuvani podaci sa obilazaka će biti prikazani na stranici vašeg naloga."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Bitir tuşuna basana kadar gözleminiz \"taslak\" olarak görünür. Uygulama "
-"uygun internet bağlantısı bulunduğunda gözlem kaydınızı sisteme yükler."
+"Podrazumevano obilasci se čuvaju u vidu „nacrta“, koji neće biti poslati u "
+"bazu podataka dok ne pritisnete dugme „Završi“ u zaglavlju aplikacije. Kada "
+"budete povezani sa stabilnom mrežom, podaci će biti poslati."
 
 msgid "If the record has reached the database a red"
-msgstr "Gözlem kaydı veri tabanına ulaştıysa kırmızı"
+msgstr "Crvena ukoliko je nalaz stigao do baze podataka"
 
 msgid "(set for submission & saved locally) will become green"
-msgstr "(yüklenmek için hazırlandı ve cihazda kaydedildi) yeşile dönecek"
+msgstr "(stavljeno za slanje i sačuvano lokalno) će postati zeleno"
 
 msgid "synced to the database"
-msgstr "veritabanıyla eşleştirildi"
+msgstr "sinhronizovano sa bazom podataka"
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
-"Kayıtların arkaplanda otomatik olarak senkronize edilebilmesi için internet "
-"bağlantısına erişim olmalı ve internet sitesinden hesabınıza giriş yapmış "
-"olmalısınız "
+"prijavili ste se na vaš veb nalog i povezani ste na mrežu, tako da će nalazi"
+" automatski biti poslati u pozadini"
 
 msgid "Delete a record"
-msgstr "Kaydı sil"
+msgstr "Obriši nalaz"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Gözlem kaydını silmek için, profil sayfanızda görünen kaydı sola kaydırın ve"
-" sil butonuna basın."
+"Da obrišete nalaz, prevucite levo na stranici vašeg naloga i pritisnite "
+"dugme obriši."
 
 msgid "User"
-msgstr "Kullanıcı"
+msgstr "Korisnik"
 
 msgid "Sign in/out or register"
-msgstr "Giriş/Çıkış yap ya da Kayıt ol"
+msgstr "Prijava/odjava i registracija"
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"Giriş yapmak için ana menüyü açın ve Giriş Yap ya da Kayıt Ol tuşlarına "
-"tıklayarak yönergeleri takip edin."
+"Da se prijavite, otvorite stranicu glavnog menija, pritisnite dugme Prijavi "
+"me ili Registracija i pratite dalja uputstva."
 
 msgid "To logout, visit the main menu page and click the logout button."
-msgstr "Çıkış yapmak için ana menüyü açın ve Çıkış Yap tuşuna basın."
+msgstr ""
+"Da se odjavite, idite na meni glavne strane i pritisnite dugme Odjavi me."
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
-"Yeni bir hesap oluşturduğunuzda mailinize gönderilmiş aktifleştirme "
-"bağlantısına tıklayarak e-posta adresinizi doğrulamanız gerekmektedir. "
+"nakon što registrujete novi nalog, morate da potvrdite adresu e-pošte, tako "
+"što ćete posetiti vezu koju dobijete u e-porukom"
 
 msgid "Other"
-msgstr "Diğer"
+msgstr "Ostalo"
 
 msgid "No species found with this name"
-msgstr "Bu isimde bir tür bulunamadı."
+msgstr "Nisu pronađene vrste sa ovim nazivom"
 
 msgid "Allow Sample Edit"
-msgstr "Örnek düzenlemeye izin ver"
+msgstr "Dozvoli uređivanje uzorka"
 
 msgid "Upload"
-msgstr "Yükle"
+msgstr "Pošalji"
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Bu uygulama kelebek izlenmesi ve korunmasına katkı sağlar.  Alttaki \"+\" "
-"tuşuna basarak kelebekleri saymaya başlayın."
+"Aplikacija podržava praćenje stanja dnevnih leptira i njihovu zaštitu. "
+"Kliknite na + dugme i pomozite leptirima."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
-"İlerleyen aylarda yeni özellikler eklendikçe uygulamada bek çok gelişme "
-"göreceksiniz. "
+"Očekujte da će aplikacija biti unapređena u narednih par meseci, kako "
+"dodajemo nove mogućnosti."
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr "Önbelleği temizle"
+msgstr ""
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr "Uygulama tarafından kullanılan depolamayı boşaltabilirsiniz"
+msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr "Temizle"
+msgstr ""
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
-"Bu, yüklediğiniz anketleri de içeren şekilde önbellek verilerini siler."
 
 msgid "Sweden"
-msgstr "İsveç"
+msgstr "Švedska"
 
 msgid "Paused"
-msgstr "Durduruldu"
+msgstr "Zaustavljeno"
 
 msgid "Pending"
-msgstr "Bekleniyor"
+msgstr "Na čekanju"
 
 msgid "Uploaded"
-msgstr "Yüklendi"
+msgstr "Poslato"
 
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
-"Hesabınızdaki kayıtları görüntüleyebilmek için <1>giriş yapmalısınız</1>."
 
 msgid "No finished pending surveys"
-msgstr "Hiç tamamlanmış, 'bekleyen' gözlem bulunmamaktadır. "
+msgstr "Nema završenih obilaska na čekanju"
 
 msgid "No uploaded surveys"
-msgstr "Hiç yüklenmiş gözlem bulunmamaktadır"
+msgstr "Nema poslatih obilaska"
 
 msgid "Enjoying the app?"
-msgstr "Uygulamayı beğendiniz mi?"
+msgstr "Sviđa vam se aplikacija?"
 
 msgid "Not really"
-msgstr "Pek sayılmaz"
+msgstr "Ne baš"
 
 msgid "Yes!"
-msgstr "Evet!"
+msgstr "Da!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr "Bize geri bildirim vermek ister misiniz?"
+msgstr "Da li želite da nam kažete šta vam se dopalo?"
 
 msgid "No, thanks"
-msgstr "Hayır, teşekkürler."
+msgstr "Ne, hvala"
 
 msgid "OK, sure"
-msgstr "Tamam"
+msgstr "Da, naravno"
 
 msgid "How about a rating on the App Store then?"
-msgstr "Uygulamayı App Store üzerinden puanlamak ister misiniz?"
+msgstr "Da li bi ocenili ovu aplikaciju u App Prodavnici?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "Uygulamayı Play Store üzerinden puanlamak ister misiniz?"
+msgstr "Da li bi ocenili ovu aplikaciju u Play prodavnici?"
 
 msgid "Icons made by"
-msgstr "Simgeleri tasarlayan:"
+msgstr "Ikonice napravio"
 
 msgid "from"
-msgstr "itibaren"
+msgstr "iz"
 
 msgid "We've sent an email to you"
-msgstr "Size bir e-posta gönderdik"
+msgstr "Poslali smo vam e-poruku"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
-"Parolanızı sıfırlamak için size gönderdiğimiz e-postadaki bağlantıya "
-"tıklayın. Eğer e-postayı göremiyorsanız spam klasörünü kontrol edin. "
+"Kliknite na adresu koju smo vam poslali e-poštom kako bi povratili lozinku. "
+"Ukoliko ne dobijete e-poruku, proverite da nije završila među neželjenom "
+"poštom."
 
 msgid "App Development"
-msgstr "Uygulama geliştirme"
+msgstr "Razvoj aplikacije"
 
 msgid "This app was hand crafted with love by"
-msgstr "Bu uygulamayı içine sevgi de katarak el emeğiyle yapan: "
+msgstr "Aplikaciju su ručno izradili, s ljubavlju, "
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
 msgstr ""
-"Duruma özel çevre bilimi inşa etmede ve topluluk odaklı çözümler "
-"geliştirmede öne çıkan bir teknik danışmanlık."
+"Agencija za tehničko savetovanje koja je specijalizovana za izradu rešenja "
+"iz oblasti zaštite životne sredine i rada u okviru zajednica."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr "Öneri ve geribildirimleriniz için "
+msgstr "Za predloge i sugestije možete slobodno da"
 
 msgid "contact us"
-msgstr "bizimle iletişime geçin"
+msgstr "kontaktirajte nas"
 
 msgid "Language"
-msgstr "Dil"
+msgstr "Jezik"
 
 msgid "Country"
-msgstr "Ülke"
+msgstr "Država"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
-"Yeni kayıtları 'eğitim' olarak işaretleyin ve tüm raporlardan çıkarın."
+"Označite bilo koji novi nalaz kao „vežbu“ i isključite ga iz svih izveštaja."
 
 # App setting label
 msgid "Show common names in guide"
-msgstr "Kılavuzdaki yaygın adları göster"
+msgstr ""
 
 # App setting label
 msgid "Use global species lists"
@@ -985,272 +969,269 @@ msgid "Don't restrict to local species names in survey searches."
 msgstr ""
 
 msgid "Share App Analytics"
-msgstr "Uygulama analitiğini paylaş"
+msgstr "Podelite analitiku aplikacije"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
-"Uygulama kilitlenme verilerini paylaşın, böylece uygulamayı daha güvenilir "
-"hale getirebiliriz."
 
 msgid "Save Draft"
-msgstr "Taslağı Kaydet"
+msgstr "Sačuvaj nacrt"
 
 msgid "Stage"
-msgstr "Evre"
+msgstr "Stadijum"
 
 msgid "Not Recorded"
-msgstr "Kaydedilmedi"
+msgstr "Nije zabeleženo"
 
 msgid "Adults"
-msgstr "Yetişkinler"
+msgstr "Odrasli"
 
 msgid "Larvae"
-msgstr "Larvalar"
+msgstr "Larva"
 
 msgid "Eggs"
-msgstr "Yumurtalar"
+msgstr "Jaja"
 
 msgid "Pupae"
-msgstr "Pupalar"
+msgstr "Lutka"
 
 msgid "Larval webs"
-msgstr "Larva ağları"
+msgstr "Mreža gusenica"
 
 # Butterfly stage
 msgid "Adult"
-msgstr "Erişkin"
+msgstr ""
 
 # Butterfly stage
 msgid "Egg"
-msgstr "Yumurta"
+msgstr ""
 
 # Butterfly stage
 msgid "Larva"
-msgstr "Larva"
+msgstr ""
 
 # Butterfly stage
 msgid "Larval web"
-msgstr "Larva ağı"
+msgstr ""
 
 # Butterfly stage
 msgid "Pupa"
-msgstr "Koza"
+msgstr ""
 
 msgid "Transect"
-msgstr "Gözlem Hattı"
+msgstr "Transekt"
 
 msgid "Sections"
-msgstr "Kısımlar"
+msgstr "Sekcije"
 
 msgid "No transect"
-msgstr "Gözlem Hattı Bulunmamakta"
+msgstr "Nema transekta"
 
 msgid "Start Time"
-msgstr "Başlangıç zamanı"
+msgstr "Vreme početka"
 
 msgid "End Time"
-msgstr "Bitiş zamanı"
+msgstr "Vreme završetka"
 
 msgid "Temperature"
-msgstr "Sıcaklık"
+msgstr "Temperatura"
 
 msgid "Cloud"
-msgstr "Bulut"
+msgstr "Oblačnost"
 
 msgid "Wind Direction"
-msgstr "Rüzgar Yönü"
+msgstr "Pravac vetra"
 
 msgid "Wind Speed"
-msgstr "Rüzgar Hızı"
+msgstr "Brzina vetra"
 
 msgid "Recorder"
-msgstr "Kaydeden"
+msgstr "Snimač"
 
 msgid "Refresh"
-msgstr "Yenile"
+msgstr "Osveži"
 
 msgid "Please select your transect first."
-msgstr "Lütfen önce gözlem hattınızı seçin."
+msgstr "Najpre izaberite transekt."
 
 msgid "Invalid server response."
-msgstr "Sunucu yanıtı geçersiz"
+msgstr "Neispravan odgovor sa servera."
 
 msgid "Not recorded/no data"
-msgstr "Kaydedilmedi/Veri yok"
+msgstr "Nije snimljeno/nema podataka"
 
 msgid "Please specify the temperature C°."
-msgstr "Lütfen hava sıcaklığını C° cinsinden belirtiniz."
+msgstr "Unesite temperaturu u C°."
 
 msgid "S"
-msgstr "G"
+msgstr "J"
 
 msgid "SW"
-msgstr "GB"
+msgstr "JZ"
 
 msgid "W"
-msgstr "B"
+msgstr "Z"
 
 msgid "NW"
-msgstr "KB"
+msgstr "SZ"
 
 msgid "N"
-msgstr "K"
+msgstr "S"
 
 msgid "NE"
-msgstr "KD"
+msgstr "SI"
 
 msgid "E"
-msgstr "D"
+msgstr "I"
 
 msgid "SE"
-msgstr "GD"
+msgstr "JI"
 
 msgid "No direction"
-msgstr "Yön yok"
+msgstr "Bez smera"
 
 msgid "Please specify the wind direction."
-msgstr "Lütfen rüzgar yönünü belirtiniz"
+msgstr "Odaberite pravac vetra."
 
 msgid "Smoke rises vertically"
-msgstr "Duman dik bir şekilde yükselir"
+msgstr "Dim ide naviše"
 
 msgid "Slight smoke drift"
-msgstr "Duman hafifçe sürüklenir"
+msgstr "Dim se malo krivi"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr "Rüzgar yüzde hissedilir, yapraklar hışırdar"
+msgstr "Vetar se oseća na licu, šuštanje lišća"
 
 msgid "Leaves and twigs in slight motion"
-msgstr "Yapraklar ve ince dallar hafifçe kıpırdar"
+msgstr "Lišće na granama se polako klati"
 
 msgid "Dust raised and small branches move"
-msgstr "Toz kalkmıştır ve küçük dallar hareket eder"
+msgstr "Prašina se diže, a manje grane se klate"
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Küçük ağaçlar yapraklarıyla sallanmaya başlar."
+msgstr "Manja stabla sa lišćem počinju da se njišu"
 
 msgid "Large branches move and trees sway"
-msgstr "Büyük dallar hareket eder ve ağaçlar salınır"
+msgstr "Velike grane se pomeraju i drveće se klati"
 
 msgid "Please specify the wind speed."
-msgstr "Lütfen rüzgar hızını belirtiniz."
+msgstr "Unesite brzinu vetra."
 
 msgid "Transects"
-msgstr "Gözlem Hatları"
+msgstr "Transekti"
 
 msgid "Transect list was successfully updated."
-msgstr "Gözlem hattı listesi başarılı bir biçimde güncellendi."
+msgstr "Spisak transekta je uspešno ažuriran."
 
 msgid "Section"
-msgstr "Kesit"
+msgstr "Sekcija"
 
 msgid "Reliability"
-msgstr "Güvenilirlik"
+msgstr "Pouzdanost"
 
 msgid "Please specify the reliability of the section count."
-msgstr "Lütfen kesit sayımının güvenilirliğini açıklayın."
+msgstr "Iaberite pouzadanost brojanja unutar sekcije."
 
 msgid "Suitable conditions"
-msgstr "Uygun koşullar"
+msgstr "Odgovarajući uslovi"
 
 msgid "Unsuitable conditions"
-msgstr "Uygun olmayan koşullar"
+msgstr "Neodgovarajući uslovi"
 
 msgid "Unable to survey"
-msgstr "Gözlem yapmaya uygun değil"
+msgstr "Obilazak nije moguć"
 
 msgid "15min Count"
-msgstr "15 dakikalık sayım"
+msgstr "Brojanje u 15 minuta"
 
 msgid "15min Single Species Count"
-msgstr "15 dakikalık Tek Tür Sayımı"
+msgstr ""
 
 msgid "eBMS Transect"
-msgstr "eBMS Gözlem Hattı"
+msgstr "eBMS transekt"
 
 msgid "Please add any extra info about this record."
-msgstr "Lütfen bu kayıtla ilgili ilave bilgi girin."
+msgstr "Unesite dodatne podatke uz ovaj nalaz."
 
 msgid "Enter more information here..."
-msgstr "Buraya daha fazla bilgi girin..."
+msgstr "Ovde unesite dodatne podatke…"
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr "Lütfen türü tanımlayan kişiyi belirtiniz."
+msgstr "Unesite osobu koja je odgovorna za identifikaciju vrsta."
 
 msgid "HH:mm"
-msgstr "SS:dd"
+msgstr "HH:mm"
 
 msgid "Please specify the % of cloud cover."
-msgstr "Lütfen bulut örtüsü yüzdesini belirtin."
+msgstr "Unesite % oblačnosti."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr ""
-"Hiç gözlem hattınız bulunmamaktadır. Lütfen listeyi yenilemeyi deneyin."
+msgstr "Nemate transekte. Pokušajte da osvežite slisak."
 
 msgid "Wind speed info is missing"
-msgstr "Rüzgar hızı bilgisi eksik"
+msgstr "Nedostaje brzina vetra"
 
 msgid "Temperature info is missing"
-msgstr "Sıcaklık bilgisi eksik"
+msgstr "Nedostaje temperatura"
 
 msgid "Recorder info is missing"
-msgstr "Kaydedici bilgisi eksik"
+msgstr "Nedostaju podaci o autoru nalaza"
 
 msgid "Please select your transect."
-msgstr "Lütfen gözlem hattınızı seçin."
+msgstr "Izaberite vaš transekt."
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Bu rehber hala geliştirilmektedir. Ülkenizdeki {{countrySpeciesCount}} türün"
-" {{totalSpeciesCountryCount}} tanesini kapsar. "
+"Ovaj priručnik je još uvek u fazi razvoja. Pokriva {{countrySpeciesCount}} "
+"vrsta leptira od kojih {{totalSpeciesCountryCount}} živi u vašoj državi."
 
 msgid "Status"
-msgstr "Durum"
+msgstr "Status"
 
 msgid "Absent"
-msgstr "Yok"
+msgstr "Nije prisutna"
 
 msgid "Present"
-msgstr "Var"
+msgstr "Prisutna"
 
 msgid "Possibly present"
-msgstr "Belki bulunuyor"
+msgstr "Verovatno prisutna"
 
 msgid "Regular migrant"
-msgstr "Düzenli göçmen"
+msgstr "Uobičajeni migrant"
 
 msgid "Irregular vagrant"
-msgstr "Düzensiz göçmen"
+msgstr "Povremeni migrant"
 
 msgid "Regionally extinct"
-msgstr "Soyu bölgesel olarak tükenmiş"
+msgstr "Iščezla u regionu"
 
 msgid "Description"
-msgstr "Tanım"
+msgstr "Opis"
 
 msgid "Counts"
-msgstr "Sayımlar"
+msgstr "Brojanja"
 
 msgid "Species descriptions"
-msgstr "Tür tanımları"
+msgstr "Opisi vrsta"
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Rehberdeki tür tanımları Avrupa Kelebeklerinin İklimsel Risk Atlası temel "
-"alınarak yapılmıştır. Bunları erişimimize açtığı için Josef Settele'ye "
-"teşekkür ediyoruz. "
+"Opisi vrsta uključeni u ovaj priručnik su preuzeti iz Atlasa rizika od "
+"klimatskih promena za leptire Evrope. Zahvaljujemo se Jožefu Seteleu što je "
+"učinio ove tekstove dostupnim."
 
 msgid "Photo credits"
-msgstr "Fotoğraf sahipleri"
+msgstr "Zasluge za slike"
 
 msgid "How to use the app"
-msgstr "Uygulama nasıl kullanılır"
+msgstr "Kako se koristiti aplikacija"
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1258,10 +1239,6 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Avrupa'nın herhangi bir yerindeki kelebekleri izlemek için bu uygulamayı "
-"kullanabilirsiniz. Sonuçlar, Avrupa Kelebek İzleme veritabanına girilecek ve"
-" Avrupa genelinde kelebek trendlerini geliştirmek için kullanılacak. "
-"Uygulamayı kullanmak için önce bir hesap açmanız gerekir."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1272,7 +1249,7 @@ msgid ""
 msgstr ""
 
 msgid "How to do a 15-minute Count"
-msgstr "15 dakikalık sayım nasıl yapılır?"
+msgstr "Kako da sprovedete brojanje u 15 minuta"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1287,16 +1264,17 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Uygulamadaki varsayılan yöntem budur. Belirli bir alanda, yürürken, ya da "
-"belirli bir noktada dururken yanınızdan geçen kelebekleri 15 dakika boyunca "
-"sayın. Ayarlardan GPS takip özelliğini açarsanız rotanızı çizmenize gerek "
-"kalmaz. Diğer türlü uygulamayı kullanarak bir haritadan alanı çizmeniz "
-"gerekir. Başlamak için ekranın altındaki + butonuna dokunun. Uygulama "
-"başladığınız andan itibaren 15 dakikadan geri saymaya başlar, ama "
-"istediğiniz zaman (mesela bir kelebeği tanımlarken) duraklat butonuna "
-"basarak süreyi duraklatabilirsiniz. Gözlemin sonunda kayıtlarınıza tekrar "
-"bakabilir ve göndermeden önce toplam sayıların doğru olup olmadığını kontrol"
-" edebilirsiniz."
+"Ovo je podrazumevan način za brojanje leptira. Jednostavno beležite leptire "
+"koje vidite tokom 15 minuta, unutar zadatog područja. To možete raditi dok "
+"se šetate unaokolo ili stojite u jednoj tački, prateći leptire koji prolaze "
+"kraj vas. Nema potrebe da crtate vašu putanju, pošto će aplikacija znati gde"
+" se krećete kada omogućite Lokaciju na vašem uređaju. Ukoliko Lokacija nije "
+"dostupna možete upotrebiti aplikaciju da nacrtate oblast na mapi. Za početak"
+" kliknite na dugme + u donjem delu ekrana. Aplikacija će odbrojati 15 minuta"
+" kada počnete, ali možete pauzirati vreme bilo kada (npr. da bi detaljnije "
+"pogledali i odredili neku vrstu). Na kraju obilaska terena možete pregledati"
+" unose i proveriti da li su svi podaci pravilno uneti, a zatim ih poslati na"
+" server."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1306,12 +1284,12 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
-"Gördüğünüz türleri +EKLE tuşuna basarak ekleyin ve tür ismini yazmaya "
-"başlayın. Tür seçimleri aşağı doğru açılan menü olarak gözükecektir. "
-"Bilimsel ya da yaygın isimler kullanabilirsiniz. Gördüğünüz türleri seçin, "
-"kelebek listenize eklendiğinde sol taraftaki numaraya dokunarak görülen "
-"sayıyı arttırabilirsiniz. Bu sayıya sonradan bakıp düzeltebilirsiniz. "
-"İsterseniz fotoğraf ya da yorum da ekleyebilirsiniz. "
+"Dodajte vrste koje ste videli pritiskom na dugme + i unosom imena vrste. "
+"Izabrane vrste će se pojaviti u padajućem meniju. Možete koristiti latinska "
+"ili engleska imena leptira. Izaberite vrstu koju ste videli, a zatim samo "
+"kliknite na broj jedinki koji se nalazi levo da bi dodali nova posmatranja "
+"iste vrste. Na kraju unosa možete proveriti da li su brojevi pravilno uneti."
+" Ukoliko želite, možete dodati i fotografije vrsta ili beleške."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1320,14 +1298,13 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"15 dakikalık sayımı bitirip türleri ve sayılarını kontrol ettikten sonra "
-"kaydı göndermek için YÜKLE tuşuna basın. Böylece, verinizin güvenli bir "
-"şekilde eBMS veritabanında saklandığından emin olabilirsiniz. Sayımınızın "
-"bir kaydı da gelecek referanslar için cihazınızda ve çevrimiçi hesabınızda "
-"tutulur. "
+"Nakon završenom brojanja u 15 minuta i provere unetih vrsta i broja jedinki,"
+" pritisnite dugme za slanje podataka. Važno je da vaši podaci budu sačuvani "
+"u bazi podataka na serveru. Zapis unosa će ostati na vašem uređaju za dalje "
+"provere, kao i na vašem nalogu na veb sajtu."
 
 msgid "How to record along an existing transect"
-msgstr "Var olan bir gözlem hattı boyunca nasıl kayıt yapılır?"
+msgstr "Kako da brojite leptire duž transekta"
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1338,8 +1315,13 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
-"Uygulamayı, daha önceden var olan bir kelebek izleme transektinde yürürken kayıt yüklemek için de kullanabilirsiniz. Bu kayıtlar ülke Kelebek İzleme Sistemi tarafından saptanmış ve tecrübeli kayıtçılar tarafından en iyi şekilde tamamlanmıştır. Uygulama üzerinden, var olan transektlerde kayıt yapmak, hesabınızın halihazırda Avrupa Kelebek İzleme Planı sisteminde bulunan bir transekt kurulumuna bağlı olmasını gerektirir. Eğer uygulamaya giriş yaptıığınızda hiçbir transekt alanı listelenmiyorsa, lütfen ulusal koooordinatörünüzle iletişime geçin. \n"
-"(Lütfen tavsiyelerinizi  email ile bize iletin {{helpEmail}})."
+"Možete koristiti aplikaciju da pošaljete unose dok šetate zadatom linijom "
+"transekta. Transekti su odavno uspostavljeni u okviru evropske šeme za "
+"praćenje promena brojnosti dnevnih leptira i daju najbolje rezultate ukoliko"
+" su ljudi koji sprovode brojanje iskusniji. Potrebno je da već imate otvoren"
+" korisnički nalog i zadate transekte unutar našeg veb sistema. Ukoliko još "
+"uvek nemate trensekte, kontaktirajte koordinatora u vašoj državi (pošaljite "
+"e-poruku na {{helpEmail}} za savet)."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1354,20 +1336,19 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"Gözlem hattında sayıma başlamak için ekranın altında bulunan + tuşuna uzun "
-"basın ve eBMS Gözlem Hattı'nı seçin. Diğer seçenekleri de içeren Gözlem "
-"Hattı sayfası karşınıza çıkacak. İlk olarak, hattınızı seçmelisiniz (Gözlem "
-"hattı rotalarınızın kullanıcı hesabınızla eşleştirilmesi için oturumu açmış "
-"olmanız gerekiyor). Gözlem hattınızın bulunduğu alanı seçtikten sonra "
-"gerekli hava durumu detaylarını (sıcaklık, rüzgar hızı gibi) ve diğer "
-"bilgileri (başlangıç zamanı gibi) Gözlem Hattı sayfasında girebilirsiniz. "
-"Sonrasında, aynı 15 dakikalık sayımda olduğu gibi, görülen türlerin bir "
-"listesini ve sayılarını her gözlem hattındaki kesitlere ekleyin. Gözlem "
-"hattını yürümeyi tamamlayıp türlerin ve sayılarının doğruluğunu kontrol "
-"ettiğinizde, göndermek için TAMAMLA butonuna basın.  "
+"Da bi počeli brojanje duž transekta, pritisnite dugme + malo duže i "
+"odaberite Transekt. Pojaviće se stranica za unos transekta sa potrebnim "
+"poljima za popunjavanje. Najpre je potrebno da izaberete vaš transekt (za "
+"šta je neophodno da budete prijavljeni i da imate otvorene rute transekta u "
+"našem sistemu). Kada izaberete lokaciju transekta, možete popuniti potrebne "
+"podatke o vremenskim prilikama (kao što je temperatura ili brzina vetra) i "
+"ostale podatke (vreme početka transekta). Zatim možete dodavati vrste na "
+"svakoj deonici transekta, na isti način kao što ste to radili kod brojanja u"
+" 15 minuta. Kada završite transekt i proverite nazive vrsta i broj jedinki "
+"kliknite na dugme za kraj i pošaljite podatke na server."
 
 msgid "Survey section"
-msgstr "Gözlem bölümü"
+msgstr "Obilazak deonice"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1377,810 +1358,785 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
-"Bu sekmede, + tuşunun sağ tarafında, eBMS veritabanına gönderilmemiş "
-"BEKLEYEN sayımları ve sisteme gönderilmiş YÜKLENEN sayımları görebilirsiniz."
-" Bekleyen sayımları, üstüne tıklayıp Yükle seçeneğine basarak sisteme "
-"gönderebilirsiniz. Yüklenen sayımlar için kaydettiğiniz türlerin listesini "
-"görebilirsiniz. Tüm kayıtlarınızı  {{eBMSWebsiteLink}}  sitesinden de "
-"görebilir ve düzenleyebilirsiniz. "
+"Na ovoj kartici, sa desne strane od dugmeta +, možete videti brojanja koja "
+"su na čekanju, nalaze koje niste poslali i one koji su poslati u eBMS bazu. "
+"Nalazi na čekanju se mogu poslati ako kliknete na njih i izaberete opciju za"
+" slanje. Možete videti spisak vrsta za one nalaze koji su već poslati. "
+"Možete pogledati i izmeniti sve vaše podatke na {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
-msgstr "eBMS internet sitesi"
+msgstr "eBMS veb stranica"
 
 msgid "App Settings"
-msgstr "Uygulama Ayarları"
+msgstr "Podešavanje aplikacije"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr "Sadece gündüz uçan güveler kullanın"
+msgstr ""
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
-"Dil ve ülkeyi değiştirmek için uygulama ayarları sayfasına gidin. Seçilen "
-"ülke Resim Rehberindeki türleri görmek için önemlidir, çünkü sadece "
-"seçtiğiniz ülkede bulunan kelebekleri görebilirsiniz."
+"Idite na stranicu za podešavanje aplikacije da bi promenili jezik ili "
+"državu. Izabrana država je važna, kako bi dobili pravi spisak vrsta u "
+"priručniku za njihovo raspoznavanje i tokom pretrage u programu."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
-"Kelebek tanımlamayı öğrenme aşamasındaysanız Eğitim Modu'na da "
-"geçebilirsiniz."
+"Možete preći u režim za treniranje dok ne naučite da razlikujete sve dnevne "
+"leptire iz vašeg kraja."
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr "Mevcut rotanızı silmek istediğinizden emin misiniz?"
+msgstr ""
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr "Kaydet"
+msgstr "Sačuvaj"
 
 msgid "Map"
-msgstr "Harita"
+msgstr "Karta"
 
 msgid "Today"
-msgstr "Bugün"
+msgstr "Danas"
 
 msgid "Yesterday"
-msgstr "Dün"
+msgstr "Juče"
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
-msgstr "Bu kayıt yüklenmiş olup bu uygulamayla düzenlenemez."
+msgstr "Nalaz je poslat i ne može biti izmenjen preko aplikacije."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr "Aşağıdaki listeden diğer kayıt seçeneklerini tıklayın"
+msgstr "Ostale opcije za beleženje"
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
-"Tüm tamamlanmış kayıtları toplu halde yükle. 'taslak' halinde bulunan "
-"kayıtlar dahil değildir."
+"Grupno pošalji sve završene unose. Ovo ne obuhvata nalaze koji su označeni "
+"kao „nacrti“."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr ""
-"Tamamlanmış kayıtlarınızın hepsini yüklemek istediğinize emin misiniz?"
+msgstr "Da li zaista želite da pošaljete sve popunjene nalaze?"
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr "Kayıtları yüklemek için lütfen önce oturum açın."
+msgstr "Najpre se prijavite kako bi poslali nalaze."
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] "{{sayım}} tane kayıt yükleniyor"
-msgstr[1] "{{count}} tane kayıt yükleniyor"
+msgstr[0] "Šaljem {{count}} nalaz"
+msgstr[1] "Šaljem {{count}} nalaza"
+msgstr[2] "Šaljem {{count}} nalaza"
 
 # Part of a page error
 msgid "Oops! Something went wrong."
-msgstr "Haydii! Bir şeyler yanlış gitti."
+msgstr ""
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr "Bu hata kaydı numarasıdır : {{eventId}}"
+msgstr "Ovo je greška događaja broj: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr "Ek detaylar"
+msgstr "Više detalja"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr "Hava Koşulları"
+msgstr "Vremenske prilike"
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr "Hava koşulları"
+msgstr "Vremenske prilike"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr "{{taxon}}'u silmek istediğinize emin misiniz?"
+msgstr "Da li ste sigurni da želite da obrišete {{taxon}} ?"
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
-"Güncel hava değerleri, OpenWeatherMap API hava hizmeti kullanılarak "
-"oluşturulmuştur. "
+"Trenutni podaci o vremenskim prilikama su popunjeni koristeći OpenWeatherMap"
+" servis."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr "Türleri kopyala"
+msgstr "Kopiraj vrste"
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr "Önceki gözlemin tür listesini kopyalamak istediğinize emin misiniz?"
+msgstr ""
+"Da li želite da prekopirate spisak vrsta iz prethodnog obilaska terena?"
 
 # Species list copy functionality
 msgid "Copy"
-msgstr "Kopyala"
+msgstr "Kopiraj"
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr "Üzgünüz, kopyalanacak bir tür bulunamadı."
+msgstr "Nisu pronađene vrste za kopiranje."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr "{{speciesCount}}  tane türü başarılı bir şekilde kopyaladınız."
+msgstr ""
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr "Üzgünüz, tür listesi kopyalanabilecek eski gözlem kaydı bulunamadı. "
+msgstr "Nema prethodnih obilaska terena iz kojih možete kopirati vrste."
 
 # Country name
 msgid "Armenia"
-msgstr "Ermenistan"
+msgstr "Jermenija"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Herhangi bir gözlem kaydını silmek için sola kaydırın. "
+msgstr "Prevucite nalevo da obrišete neki obilazak."
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
-"Lütfen gözleminizi kaydetmeden önce gözlem alanıyla ilgili bilgilerin "
-"doğruluğunu kontrol edin. "
+"Proverite da li je izabrana prava oblast pre nego što pošaljete nalaz."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr "Lütfen bekleyen gözlemleri yüklemeyi unutmayın!"
+msgstr "Ne zaboravite da pošaljete nalaze koji su na čekanju!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
-"Tamamlanmış bekleyen gözlem bulunmamaktadır. <br/><br/> Eklemek için <4></4>"
-" e basın."
+"Nema završenih obilaska na čekanju.<br/><br/>Pritisnite <4></4> da dodate."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr "İpucu: Yardım bulma"
+msgstr "Savet: Traženje pomoći"
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
-"Lütfen uygulamayı kullanmadan önce Rehber <2></2> ve Yardım <5></5> "
-"sayfalarını inceleyin!"
+"Posetite stranice sa Uputstvom <2></2> i Pomoć <5></5> pre upotrebe ove "
+"aplikacije!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr "Daha fazla bilgi"
+msgstr "Više podataka"
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr "İpucu: Tür ekleme"
+msgstr "Savet: Dodavanje vrsta"
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
-"Önceki tür listelerinizi Tür Ekle tuşuna uzun basarak topluca "
-"kopyalayabilirsiniz."
+"Možete kopirati listu svih prethodno zabeleženih vrsta ako duže pritisnete "
+"dugme Dodaj vrstu."
 
 # Button
 msgid "Hide"
-msgstr "Gizle"
+msgstr "Sakrij"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Birincil gözlem"
+msgstr "Osnovni obilasci"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr "Tüm Gözlemler"
+msgstr "Svi obilasci"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr "15 dakikalık sayımın yapıldığı yerin temsili fotoğrafı"
+msgstr ""
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr "Hiçbir fotoğraf eklenmedi."
+msgstr ""
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr "Eklemek için <1> </1> tuşlarına basınız."
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr "15 dakikalık kesin sayım"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr "Kayıtlar"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr "Zaman"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr "Bu kaydı silmek istediğinizden emin misiniz?"
+msgstr ""
 
 # alert confirmation button
 msgid "Got it"
-msgstr "Anladım"
+msgstr ""
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr "<0> Yüklenmiş anket yok </0>"
+msgstr ""
 
 # user register error message
 msgid "Account already exists."
-msgstr "Bu hesap zaten mevcut."
+msgstr ""
 
 # A survey label
 msgid "Details"
-msgstr "Detaylar"
+msgstr ""
 
 # A survey label
 msgid "Species Photo"
-msgstr "Tür fotoğrafı"
+msgstr ""
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr "Yaşam evresini seçiniz."
+msgstr ""
 
 # A survey label
 msgid "Weather"
-msgstr "Hava durumu"
+msgstr ""
 
 # A survey label
 msgid "Photo"
-msgstr "Fotoğraf"
+msgstr ""
 
 # Part of species group selection
 msgid "Species groups"
-msgstr "Tür grupları"
+msgstr ""
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr "Lütfen her zaman kaydettiğiniz tür gruplarını seçin."
+msgstr ""
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr "Kelebekler"
+msgstr ""
 
 # Part of species group selection
 msgid "Moths"
-msgstr "Güveler"
+msgstr ""
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr "Bal arıları"
+msgstr ""
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr "Yusufçuklar"
+msgstr ""
 
 # Alert label
 msgid "Warning"
-msgstr "Uyarı"
+msgstr ""
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr "GPS takibini kapatmak istediğinizden emin misiniz?"
+msgstr ""
 
 # Alert button option
 msgid "Turn off"
-msgstr "Kapat"
+msgstr ""
 
 # Alert button label
 msgid "Merge"
-msgstr "Birleştir"
+msgstr ""
 
 # Alert header
 msgid "Species already exists"
-msgstr "Bu tür zaten var"
+msgstr ""
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
-"Bu listeyi var olan liste ile birleştirmek istediğinizden emin misiniz?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr "Lütfen hedef türünüzü seçiniz"
+msgstr ""
 
 # Moth survey label
 msgid "Date"
-msgstr "Tarih"
+msgstr ""
 
 # Moth survey label
 msgid "Method"
-msgstr "Yöntem"
+msgstr ""
 
 # Context term
 msgid "Please select the medthod type"
-msgstr "Lütfen yöntem tipini seçin"
+msgstr ""
 
 # Moth survey method type
 msgid "MV light"
-msgstr "MV ışığı"
+msgstr ""
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr "Aktinik ışık"
+msgstr ""
 
 # Moth survey method type
 msgid "LED light"
-msgstr "LED ışık"
+msgstr ""
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr "Işık tuzağı"
+msgstr ""
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr "Gündüz gözlemi"
+msgstr ""
 
 # Moth survey method type
 msgid "Dusking"
-msgstr "Alacakaranlık"
+msgstr ""
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr "Işıklı pencereye takılan"
+msgstr ""
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr "Şekerleme"
+msgstr ""
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr "Şarapla şekerleme"
+msgstr ""
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr "Çırpma tepsisi"
+msgstr ""
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr "Feromon tuzağı"
+msgstr ""
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr "Diğer metot (yorum ekle)"
+msgstr ""
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr "Kaydedilmedi"
+msgstr ""
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr "Araştırma detayları"
+msgstr ""
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr "Güve tuzağı anketi"
+msgstr ""
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr "Güve anketi"
+msgstr ""
 
 # Moth survey divider label
 msgid "Species list"
-msgstr "Tür listesi"
+msgstr ""
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr "Tanımlayıcı"
+msgstr ""
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr "Güve listesi"
+msgstr ""
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr "Güve fotoğrafı"
+msgstr ""
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr "Farklı ise kaydedicinin adını girin."
+msgstr ""
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr "Kaydedicinin adı"
+msgstr ""
 
 # Latitude
 msgid "Lat"
-msgstr "Enlem"
+msgstr ""
 
 # Longitude
 msgid "Long"
-msgstr "Uzunluk"
+msgstr ""
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr "İçeride say"
+msgstr ""
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr "Dışarıda say"
+msgstr ""
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr "Güve fotoğrafları"
+msgstr ""
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr "Güve tuzakları"
+msgstr ""
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr "Güve tuzağı"
+msgstr ""
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
-"Henüz bir güve tuzağı oluşturmadınız. Bir tane oluşturmak için lütfen web "
-"sitesine gidin."
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr "Haritayı görüntülemek için internete bağlanın."
+msgstr ""
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr "Lütfen güve tuzağı ekleyin."
+msgstr ""
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
-"Sadece bir güve tuzağınız var. Daha fazlasını oluşturmak için lütfen web "
-"sitesine gidin."
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr "Tanımlanıyor..."
+msgstr ""
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr "Bilinmeyen"
+msgstr ""
 
 # Report table button
 msgid "Show more"
-msgstr "Daha fazla göster"
+msgstr ""
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr "Lütfen fotoğraf ekleyin."
+msgstr ""
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr "Bilinmeyen tür"
+msgstr ""
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr "Uyarı - Bu türü tanımlayamadık."
+msgstr ""
 
 # App settings title
 msgid "Surveying"
-msgstr "Ölçme"
+msgstr ""
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr "Güve anketi (SPRING Projesi)"
+msgstr ""
 
 # Survey name
 msgid "Moth Survey"
-msgstr "Güve Anketi"
+msgstr ""
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr "Güve Anketi Ayarları"
+msgstr ""
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr "Görüntü tanımlamayı kullan"
+msgstr ""
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
 msgstr ""
-"Tür görüntü sınıflandırıcımızı kullanarak türleri belirlemenize yardımcı "
-"olacağız."
 
 # Moth survey button label
 msgid "Identify"
-msgstr "Tanımlama"
+msgstr ""
 
 # Moth survey button label
 msgid "Identify All"
-msgstr "Tümünü Tanımla"
+msgstr ""
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr "Görüntü tanımlama"
+msgstr ""
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
-"Görüntü sınıflandırıcı şu anda devre dışı. Açmak için lütfen uygulama "
-"ayarlarına gidin."
 
 # Whats new message title
 msgid "What's New"
-msgstr "Yenilikler"
+msgstr ""
 
 # Whats new message option
 msgid "Don't show again"
-msgstr "Tekrar gösterme"
+msgstr ""
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
-msgstr "Diğer cihazlardan yüklenmiş kayıtları görüntüleme yeteneği eklendi."
+msgstr ""
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
-"Kayıtlar haritası, tüm kullanıcı kayıtlarını görüntülemek için güncellendi."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
-"Önceki gözlem hattı kesitinin tür listesini kopyalama özelliği "
-"etkinleştirildi."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
-"Önceki güve tuzağının tür listesini kopyalama özelliği etkinleştirildi."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr "Tür rehberi sayfası güncellendi."
+msgstr ""
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr "Yüklenen önbellek dosyalarını temizleme seçeneği eklendi."
+msgstr ""
 
 # User account action
 msgid "Resend"
-msgstr "Yeniden gönder"
+msgstr ""
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr "Görünüşe göre e-postanız henüz doğrulanmadı."
+msgstr ""
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr "Doğrulama e-postasını tekrar göndermeli miyiz?"
+msgstr ""
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
-"Konum Hizmetleriniz (GPS) devre dışı görünüyor. Bunu cihaz ayarlarınızdan "
-"etkinleştirebilirsiniz."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr "Konum Servisleri (GPS) devre dışı bırakıldı"
+msgstr ""
 
 # Moth trap survey
 msgid "Add New"
-msgstr "Yeni ekle"
+msgstr ""
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
-msgstr "Henüz güve tuzağınız yok.İlk güve tuzağını oluştur"
+msgstr ""
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr "Güve tuzağı"
+msgstr ""
 
 # Moth trap survey
 msgid "Type"
-msgstr "Tür"
+msgstr ""
 
 # Moth trap survey
 msgid "Other type"
-msgstr "Diğer tür"
+msgstr ""
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr "Lamba ekle"
+msgstr ""
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr "Ne tür bir tuzaktı?"
+msgstr ""
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr "Lamba eklenmedi"
+msgstr ""
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr "Lamba tipi nedir?"
+msgstr ""
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr "Güve tuzağı türü nedir?"
+msgstr ""
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr "LED huni tuzağı"
+msgstr ""
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr "Diğer huni tuzağı"
+msgstr ""
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr "2 örtülü tuzak"
+msgstr ""
 
 # Moth trap survey
 msgid "Other trap"
-msgstr "Diğer tuzak"
+msgstr ""
 
 # Moth trap survey
 msgid "Lamp"
-msgstr "Lamba"
+msgstr ""
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr "Lamba detayları"
+msgstr ""
 
 # Moth trap survey
 msgid "Quantity"
-msgstr "Miktar"
+msgstr ""
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr "Güve tuzağı adı yok"
+msgstr ""
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr "Güve tuzağı adı"
+msgstr ""
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr "Bu güve tuzağını silmek istediğinizden emin misiniz?"
+msgstr ""
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr "Lambanın ek açıklaması."
+msgstr ""
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr "Lütfen güve tuzağının yerini ve adını ekleyin."
+msgstr ""
 
 # Survey validation
 msgid "Incomplete"
-msgstr "Tamamlanmamış"
+msgstr ""
 
 # Moth trap survey
 msgid "Select"
-msgstr "Seç"
+msgstr ""
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr "Kayıtçılar"
+msgstr ""
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
-"Sizinki de dahil olmak üzere bu kayıtta yardımcı olan herkesin kayıt cihazı "
-"sayısını girin."
 
 msgid "Network Error"
-msgstr "Ağ hatası"
+msgstr ""
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr "Kendi veri raporunuzu görmek için lütfen giriş yapın."
+msgstr ""
 
 # Report label
 msgid "Your top species this month"
-msgstr "Bu ayki en çok gördüğünüz tür"
+msgstr ""
 
 # Report label
 msgid "Your top species"
-msgstr "En çok gördüğünüz tür"
+msgstr ""
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr "Kesit Fotoğrafları"
+msgstr ""
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr "Kullanıcı giriş yapmadı."
+msgstr ""
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
-"Bir {{taxon}} türü olma ihtimalinin %{{probability}} olduğunu düşünüyoruz"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
-"Uyarı - %{{probability}} olasılıkla bir {{taxon}} türü olduğunu düşünüyoruz"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr "Lambalar"
+msgstr ""
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
-msgstr "Bu lamba girişini güve tuzağından silmek istediğinizden emin misiniz?"
+msgstr ""
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr "Tuzak türü zorunlu bir alandır."
+msgstr ""
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr " Hoşgeldiniz"
+msgstr ""
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
-"Herhangi bir ankete başlamadan önce lütfen e-postanızı kontrol edin ve "
-"doğrulama bağlantısını tıklayın."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr "Üzgünüz, hiçbir tür bulunamadı."
+msgstr ""
 
 msgid "Kenya"
-msgstr "Kenya"
+msgstr ""
 
 # GPS permission button label
 msgid "Deny"
-msgstr "Reddet"
+msgstr ""
 
 # GPS permission button label
 msgid "Accept"
-msgstr "Kabul et"
+msgstr ""
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr "Konum izni"
+msgstr ""
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
-"Cihaz kilitli olsa bile türlerin konumlarını otomatik olarak ayarlamak ve "
-"rotanızı izlemek için. Uygulamanın konumunuzu kullanmasına izin verin."
 
 # Delete account
 msgid "Delete account"
-msgstr "Hesabı sil"
+msgstr ""
 
 # Delete account
 msgid "You can delete your user account from the system."
-msgstr "Kullanıcı hesabınızı sistemden silebilirsiniz."
+msgstr ""
 
 # Delete account alert header
 msgid "Account delete"
-msgstr "Hesap silme"
+msgstr ""
 
 # Delete account alert message
 msgid ""
@@ -2188,130 +2144,125 @@ msgid ""
 "account on the <2>{{url}}</2> website. You will lose access to any records "
 "that you have previously submitted using the app or website.</1>"
 msgstr ""
-"Hesabınızı silmek istediğinizden emin misiniz? Bu, hesabınızı {{url}} web "
-"sitesinden kaldıracaktır. Daha önce uygulamayı veya web sitesini kullanarak "
-"gönderdiğiniz tüm kayıtlara erişiminizi kaybedersiniz."
 
 # Part of Species Group selection
 msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
-"Bu seçenek, anketlerin içindeki tür arama sayfasına taşındı. Bir anket "
-"başladığında, hangi tür grubunu kaydettiğinizi seçebilirsiniz."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr "Gruplar"
+msgstr ""
 
 # Part of Species Group selection
 msgid "Close"
-msgstr "Kapat"
+msgstr ""
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr "Onayla"
+msgstr ""
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr "Hangi tür gruplarını saydınız?"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr "Hedef türü seç"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr "\"Hiç fotoğraf eklenmedi.<br/>Eklemek için <4><0></0></4>'e basın.\""
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr "Kanat"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr "Davranış"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr "Yön"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr "İrtifa"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr "Pusula"
+msgstr ""
 
 # Alert header
 msgid "Delete Survey"
-msgstr "Anketi sil"
+msgstr ""
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
-msgstr "Uyarı - Bu, şu ana kadar girdiğiniz anket bilgilerini siler."
+msgstr ""
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr "Taze"
+msgstr ""
 
 # Painted lady wing options
 msgid "Worn"
-msgstr "Yıpranmış"
+msgstr ""
 
 # Painted lady wing options
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr "Lütfen nektar kaynağını belirtin."
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr "Lütfen yumurta bırakma seçeneğini ekleyin."
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr "Lütfen çiftleşme seçeneğini ekleyin."
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr "Nektar kaynağı"
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr "Lütfen nektar seçeneğini ekleyin."
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr "Lütfen yön seçeneğini ekleyin."
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr "Lütfen irtifa seçeneğini işaretleyin."
+msgstr ""
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr "Yumurta bırakılan konukçu bitki"
+msgstr ""
 
 # Part of painted lady
 msgid "Migrating"
-msgstr "Göç ediyor"
+msgstr ""
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr "Nektarla besleniyor"
+msgstr ""
 
 # Part of painted lady
 msgid "Mating"
-msgstr "Çiftleşiyor"
+msgstr ""
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr "Desteklenmeyen cihaz"
+msgstr ""
 
 # Painted lady compass
 msgid ""
@@ -2321,282 +2272,271 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
-"Maalesef, cihazınızın pusulasının düzgün çalışması için gerekli sensöre "
-"sahip olmadığı görünüyor. Pusula, cihazınızın manyetik kuzeyle olan "
-"oryantasyonunu belirlemek ve dünyanın manyetik alanını algılamak için bu "
-"sensöre bağlıdır. Bu nedenle, bu cihazda pusulayı kullanamayacaksınız."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr "Arazi savunması: diğer"
+msgstr ""
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr "Arazi savunması: tepe bekçiliği"
+msgstr ""
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr "Kelebeğin uçuş yüksekliği nedir? (metre)"
+msgstr ""
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr "Diğer konukçu bitkiler"
+msgstr ""
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr "Setaria viridis - Yeşil Sıçansaçı"
+msgstr ""
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr "Ebegümeci"
+msgstr ""
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr "Devedikenleri"
+msgstr ""
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr "Konukçu bitkiler"
+msgstr ""
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr "Lütfen konukçu bitkileri seçiniz."
+msgstr ""
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr "\"Listende hiç <1>{{prettySpeciesName}}</1> kaydın bulunmuyor.\""
+msgstr ""
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr "İpucu: Özellikleri Kopyala"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr "Kanat durumu"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr "Nektar"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr "Buraya nektar kaynağını girin"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr "Diğer türler"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr "Bu hangi tür bir devedikeni?"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr "Devedikeni türü"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr "Kopyalandı"
+msgstr ""
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
-"Bir liste girdisini kopyalamak için sağa kaydırın ve <1><0></0></1> "
-"simgesine dokunun."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr "Yerden Yükseklik (metre)"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr "Yükseklik"
+msgstr ""
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr "Sayımı başlat"
+msgstr ""
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr "Diken kelebeği göçünü Butterfly Count ile izlemek"
+msgstr ""
 
 # Menu page label
 msgid "Instructions"
-msgstr "Talimatlar"
+msgstr ""
 
 # Country name
 msgid "Saint Helena"
-msgstr "Saint Helena"
+msgstr ""
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr "Yumurtlama"
+msgstr ""
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr "Çitleşen bireyler"
+msgstr ""
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr "Eksuvi - Dış iskelet kalıntısı"
+msgstr ""
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr "Pupadan yeni çıkmış"
+msgstr ""
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr "Sayım toplamı 0'dan büyük olmalıdır."
+msgstr ""
 
 # Report page label
 msgid "Show less"
-msgstr "Daha az göster"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr "Rotanızın adı"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
 msgstr ""
-"Buradan önceki rotalarınızı düzenlemek için seçebilir veya "
-"kaydırabilirsiniz."
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr "Düzenle"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr "Konumu Düzenle"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Name"
-msgstr "İsim"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr "Favori"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr "Kaydedilen rotayı silmek istediğinizden emin misiniz?"
+msgstr ""
 
 # Map GPS button interface
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
-"GPS takibi devam ettirmek için önce çizilen alanı haritadan kaldırmalısınız."
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr "Ay evresi"
+msgstr ""
 
 # Moon phase values
 msgid "New"
-msgstr "Yeniay"
+msgstr ""
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr "Artan Hilâl"
+msgstr ""
 
 #  Moon phase values
 msgid "First quarter"
-msgstr "İlk Dördün"
+msgstr ""
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr "Artan Dolunay"
+msgstr ""
 
 #  Moon phase values
 msgid "Full"
-msgstr "Dolunay"
+msgstr ""
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr "Azalan Dolunay"
+msgstr ""
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr "Son Dördün"
+msgstr ""
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr "Azalan Hilâl"
+msgstr ""
 
 # Info message
 msgid "Trap start"
-msgstr "Tuzak başlangıcı"
+msgstr ""
 
 # Info message
 msgid "Trap end"
-msgstr "Tuzak bitişi"
+msgstr ""
 
 # Info message
 msgid "Start Weather"
-msgstr "Başlangıç hava durumu"
+msgstr ""
 
 # Info message
 msgid "End Weather"
-msgstr "Bitiş hava durumu"
+msgstr ""
 
 # Info message
 msgid "Please add the moth trap."
-msgstr "Lütfen güve tuzağı ekleyin."
+msgstr ""
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
-"Gözlemlenen anketinizin <1>uzun bölümler</1> içerdiğini fark ettik. Lütfen "
-"doğru bir <3>konum</3> olduğundan emin olun!"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr "Varsayılan olarak gün batımı saati olarak ayarlandı."
+msgstr ""
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr "Varsayılan olarak güneşin doğuş saati olarak ayarlandı."
+msgstr ""
 
 # Error message
 msgid "Location services are not enabled"
-msgstr "Konum hizmetleri etkin değil."
+msgstr ""
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr "Daha önceden rotanız bulunmuyor."
+msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr "Liste sıralaması alfabetik olarak değiştirildi."
+msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr "Liste sıralaması en son eklenene göre değiştirildi."
+msgstr ""
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr "Onaylanmadı"
+msgstr ""
 
 # Record verification status
 msgid "Accepted"
-msgstr "Kabul edildi"
+msgstr ""
 
 # Record verification status
 msgid "Rejected"
-msgstr "Reddedildi"
+msgstr ""
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr "Güvenilirlik bilgisi boş bırakılamaz"
+msgstr ""
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr "Bulut bilgisi boş bırakılamaz"
+msgstr ""
 
 # Survey Projects functionality
 msgid "Not linked to any project"

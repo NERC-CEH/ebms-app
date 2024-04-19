@@ -1,4 +1,11 @@
 const countries = {
+  AI: {
+    name: 'Anguilla',
+    latitude: 18.213363,
+    longitude: -63.0513729,
+    zoom: 10,
+    id: 215964,
+  },
   AL: {
     name: 'Albania',
     latitude: 41.153332,
@@ -201,6 +208,13 @@ const countries = {
     longitude: 19.37439,
     zoom: 5,
     id: 216104,
+  },
+  MS: {
+    name: 'Montserrat',
+    latitude: 16.7369858,
+    longitude: -62.19,
+    zoom: 11,
+    id: 216075,
   },
   NL: {
     name: 'Netherlands',

@@ -172,6 +172,12 @@ msgstr ""
 msgid "New Zealand"
 msgstr ""
 
+msgid "Montserrat"
+msgstr "Montseratas"
+
+msgid "Anguilla"
+msgstr "Angilija"
+
 msgid "Elsewhere"
 msgstr "Kitur"
 
