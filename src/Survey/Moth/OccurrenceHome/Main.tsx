@@ -23,7 +23,7 @@ const EditOccurrence = ({ occurrence }: Props) => {
   const baseURL = match.url;
 
   return (
-    <Main id="area-count-occurrence-edit">
+    <Main id="moth-occurrence-edit">
       <IonList lines="full">
         <h3 className="list-title">
           <T>Details</T>

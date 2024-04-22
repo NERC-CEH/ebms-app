@@ -76,26 +76,20 @@ const EditOccurrence = ({
     return samples.map(getOccurrence);
   };
 
-  if (!samples[0]) {
+  const firstSubSample = samples[0];
+
+  const getSpecies = () => {
+    const species =
+      firstSubSample.occurrences[0].getTaxonCommonAndScientificNames();
+
+    const count = samples.length > 1 ? samples.length : null;
+
+    const speciesGroupImage =
+      firstSubSample.occurrences[0].getSpeciesGroupIcon();
+
     return (
-      <Main id="area-count-occurrence-edit">
-        <IonList id="list" lines="full">
-          <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
-        </IonList>
-      </Main>
-    );
-  }
-
-  const species = samples[0].occurrences[0].getTaxonCommonAndScientificNames();
-
-  const count = samples.length > 1 ? samples.length : null;
-
-  const speciesGroupImage = samples[0].occurrences[0].getSpeciesGroupIcon();
-
-  return (
-    <Main id="area-count-occurrence-edit">
       <IonList lines="full">
-        {!samples[0].isPreciseSingleSpeciesSurvey() && (
+        {!firstSubSample.isPreciseSingleSpeciesSurvey() && (
           <div className="rounded-list">
             <MenuAttrItem
               routerLink={`${match.url}/taxon`}
@@ -125,6 +119,16 @@ const EditOccurrence = ({
           {getSamplesList()}
         </div>
       </IonList>
+    );
+  };
+
+  return (
+    <Main>
+      {!firstSubSample && (
+        <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
+      )}
+
+      {firstSubSample && getSpecies()}
     </Main>
   );
 };
