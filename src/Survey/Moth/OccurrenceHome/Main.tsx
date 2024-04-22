@@ -2,7 +2,7 @@ import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Main, MenuAttrItem, MenuAttrItemFromModel, Attr } from '@flumens';
-import { IonList } from '@ionic/react';
+import { IonIcon, IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
@@ -42,7 +42,7 @@ const EditOccurrence = ({ occurrence }: Props) => {
             model={occurrence}
             input="counter"
             inputProps={{
-              icon: mothInsideBoxIcon,
+              prefix: <IonIcon src={mothInsideBoxIcon} className="size-6" />,
               label: 'Count inside',
               isDisabled,
               min: 0,
@@ -54,7 +54,7 @@ const EditOccurrence = ({ occurrence }: Props) => {
             model={occurrence}
             input="counter"
             inputProps={{
-              icon: mothOutsideBoxIcon,
+              prefix: <IonIcon src={mothOutsideBoxIcon} className="size-6" />,
               label: 'Count outside',
               isDisabled,
               min: 0,
