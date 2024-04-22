@@ -195,6 +195,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
           gridref,
         },
         comment: event.event_remarks,
+        training: metadata.trial === 'true',
       },
 
       media,
