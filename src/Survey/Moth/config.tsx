@@ -8,7 +8,7 @@ import {
 } from 'ionicons/icons';
 import SunCalc from 'suncalc';
 import * as Yup from 'yup';
-import { date as dateHelp, device, isValidLocation } from '@flumens';
+import { device, isValidLocation, timeFormat } from '@flumens';
 import { IonIcon, IonImg } from '@ionic/react';
 import config from 'common/config';
 import firstQuarterMoonIcon from 'common/images/first-quarter-moon.svg';
@@ -31,6 +31,7 @@ import {
   windDirectionValues,
   windSpeedValues,
   temperatureValues,
+  dateAttr,
 } from 'Survey/common/config';
 
 interface Type {
@@ -238,12 +239,6 @@ const moonPhaseValues = [
   },
 ];
 
-// converts UTC time to local
-const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
-  hour: 'numeric',
-  minute: 'numeric',
-});
-
 const getSetDefaultTime = (sample: AppSample) => () => {
   const { surveyStartTime } = sample.attrs;
   if (surveyStartTime) return;
@@ -400,7 +395,7 @@ const survey: Survey = {
       },
       remote: {
         id: 1385,
-        values: (date: number) => dateTimeFormat.format(new Date(date)),
+        values: (date: number) => timeFormat.format(new Date(date)),
       },
     },
 
@@ -419,7 +414,7 @@ const survey: Survey = {
       },
       remote: {
         id: 1386,
-        values: (date: number) => dateTimeFormat.format(new Date(date)),
+        values: (date: number) => timeFormat.format(new Date(date)),
       },
     },
 
@@ -576,7 +571,7 @@ const survey: Survey = {
           }),
         },
       },
-      remote: { values: (date: Date) => dateHelp.print(date, false) },
+      remote: dateAttr.remote,
     },
 
     comment: commentAttr,

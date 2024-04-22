@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { addOutline } from 'ionicons/icons';
 import { useTranslation } from 'react-i18next';
-import { useToast, date as DateHelp, VirtualList } from '@flumens';
+import { useToast, getRelativeDate, VirtualList } from '@flumens';
 import {
   IonButton,
   IonIcon,
@@ -75,7 +75,7 @@ const getSurveys = (surveys: Sample[], showUploadAll?: boolean) => {
       const { date, count } = groupedSurveys[index];
       return (
         <IonItemDivider key={date} style={(itemProps as any).style} mode="ios">
-          <IonLabel>{DateHelp.print(date, true)}</IonLabel>
+          <IonLabel>{getRelativeDate(date)}</IonLabel>
           {count > 1 && <IonLabel slot="end">{count}</IonLabel>}
         </IonItemDivider>
       );

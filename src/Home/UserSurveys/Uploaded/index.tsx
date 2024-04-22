@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import InfiniteLoader from 'react-window-infinite-loader';
-import { date as DateHelp, device, VirtualList } from '@flumens';
+import { device, getRelativeDate, VirtualList } from '@flumens';
 import {
   IonItem,
   IonItemDivider,
@@ -110,7 +110,7 @@ const Uploaded = () => {
       const { date, count } = groupedSurveys[index];
       return (
         <IonItemDivider key={date} style={(itemProps as any).style} mode="ios">
-          <IonLabel>{DateHelp.print(date, true)}</IonLabel>
+          <IonLabel>{getRelativeDate(date)}</IonLabel>
           {count > 1 && <IonLabel slot="end">{count}</IonLabel>}
         </IonItemDivider>
       );

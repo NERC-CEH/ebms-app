@@ -8,16 +8,11 @@ import {
   cloudyOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Main, MenuAttrItem } from '@flumens';
+import { Main, MenuAttrItem, timeFormat } from '@flumens';
 import { IonList, IonItem, IonIcon, IonLabel } from '@ionic/react';
 import windIcon from 'common/images/wind.svg';
 import Sample from 'models/sample';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
-
-const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
-  hour: 'numeric',
-  minute: 'numeric',
-});
 
 type Props = {
   sample: Sample;
@@ -54,11 +49,11 @@ const Edit = ({ sample, isDisabled }: Props) => {
     return date instanceof Date && !isNaN(date as any);
   }
   const startTimePretty = checkDateisValid(surveyStartTime!)
-    ? dateTimeFormat.format(new Date(surveyStartTime!))
+    ? timeFormat.format(new Date(surveyStartTime!))
     : surveyStartTime;
 
   const endTimePretty = checkDateisValid(surveyEndTime!)
-    ? dateTimeFormat.format(new Date(surveyEndTime!))
+    ? timeFormat.format(new Date(surveyEndTime!))
     : surveyEndTime;
 
   const baseURL = `/survey/transect/${sample.cid}`;

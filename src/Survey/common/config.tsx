@@ -5,10 +5,11 @@ import {
 } from 'ionicons/icons';
 import * as Yup from 'yup';
 import {
-  date as dateHelp,
   RemoteConfig,
   MenuAttrItemFromModelMenuProps,
   PageProps,
+  timeFormat,
+  dateFormat,
 } from '@flumens';
 import groups from 'common/data/groups';
 import caterpillarIcon from 'common/images/caterpillar.svg';
@@ -270,11 +271,6 @@ export const taxonAttr = {
   },
 };
 
-const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
-  hour: 'numeric',
-  minute: 'numeric',
-});
-
 export const surveyStartTimeAttr = {
   menuProps: { label: 'Start Time' },
   pageProps: {
@@ -288,7 +284,7 @@ export const surveyStartTimeAttr = {
   },
   remote: {
     id: 1385,
-    values: (date: number) => dateTimeFormat.format(new Date(date)),
+    values: (date: number) => timeFormat.format(new Date(date)),
   },
 };
 
@@ -305,19 +301,12 @@ export const surveyEndTimeAttr = {
   },
   remote: {
     id: 1386,
-    values: (date: number) => dateTimeFormat.format(new Date(date)),
+    values: (date: number) => timeFormat.format(new Date(date)),
   },
 };
 
 export const dateAttr = {
-  isValid: (val: any) => val && val.toString() !== 'Invalid Date', // TODO: needed?
-  pageProps: {
-    attrProps: {
-      input: 'date',
-      inputProps: { max: () => new Date() },
-    },
-  },
-  remote: { values: (date: number) => dateHelp.print(date, false) },
+  remote: { values: (date: number) => dateFormat.format(new Date(date)) },
 };
 
 const locationSchema = Yup.object().shape({

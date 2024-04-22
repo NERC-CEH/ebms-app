@@ -8,6 +8,7 @@ import {
   Attr,
   MenuAttrItem,
   AttrPropsExtended,
+  timeFormat,
 } from '@flumens';
 import { IonList } from '@ionic/react';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
@@ -16,11 +17,6 @@ import Sample, { MothTrapLocation } from 'models/sample';
 type Props = {
   sample: Sample;
 };
-
-const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
-  hour: 'numeric',
-  minute: 'numeric',
-});
 
 const DetailsMain = ({ sample }: Props) => {
   const { url } = useRouteMatch();
@@ -43,9 +39,9 @@ const DetailsMain = ({ sample }: Props) => {
     : null;
 
   const startTimePretty =
-    surveyStartTime && dateTimeFormat.format(new Date(surveyStartTime));
+    surveyStartTime && timeFormat.format(new Date(surveyStartTime));
   const endTimePretty =
-    surveyEndTime && dateTimeFormat.format(new Date(surveyEndTime));
+    surveyEndTime && timeFormat.format(new Date(surveyEndTime));
 
   return (
     <Main>
