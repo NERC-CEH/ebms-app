@@ -183,14 +183,16 @@ const Edit = ({
 
         <IonList id="list" lines="full">
           <div className="rounded-list">
-            <div className="list-divider">
+            <div className="list-divider gap-4">
               <div>
                 <T>Count</T>
               </div>
-              <div>
-                <T>Species</T>
+              <div className="flex w-full justify-between">
+                <div>
+                  <T>Species</T>
+                </div>
+                <div>{count}</div>
               </div>
-              <div>{count}</div>
             </div>
 
             {speciesList}
@@ -238,7 +240,7 @@ const Edit = ({
         className="mx-auto mt-10"
         onPress={onClick}
         onLongPress={showCopyOptionsWrap}
-        prefix={<IonIcon src={addCircleOutline} className="size-7" />}
+        prefix={<IonIcon src={addCircleOutline} className="size-5" />}
       >
         Add species
       </Button>

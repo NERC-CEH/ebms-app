@@ -321,14 +321,16 @@ const HomeMain = ({
 
         <IonList id="list" lines="full">
           <div className="rounded-list">
-            <div className="list-divider">
+            <div className="list-divider gap-4">
               <div>
                 <T>Count</T>
               </div>
-              <div>
-                <T>Species</T>
+              <div className="flex w-full justify-between">
+                <div>
+                  <T>Species</T>
+                </div>
+                <div>{count}</div>
               </div>
-              <div>{count}</div>
             </div>
 
             {speciesList}
@@ -353,9 +355,10 @@ const HomeMain = ({
       </IonList>
 
       {!isDisabled && (
-        <div className="mx-5 mt-5 flex items-center justify-center gap-8">
+        <div className="mx-5 mt-8 flex items-center justify-center gap-8">
           <Button
             color="primary"
+            className="py-2"
             onPress={navigateToTaxonSearch}
             onLongPress={showCopyOptionsWrap}
             prefix={<IonIcon src={addCircleOutline} className="size-5" />}
@@ -366,7 +369,7 @@ const HomeMain = ({
           <Button
             color="tertiary"
             className={clsx(
-              `h-[40px] shrink-0 py-0`,
+              `shrink-0 py-2`,
               !useImageIdentifier && 'opacity-40'
             )}
             onPress={
@@ -375,7 +378,7 @@ const HomeMain = ({
                 : shownDisabledImageIdentifierAlert
             }
           >
-            <IonIcon icon={camera} className="size-5" />
+            <IonIcon icon={camera} className="size-6" />
           </Button>
         </div>
       )}

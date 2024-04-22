@@ -456,7 +456,7 @@ const AreaCount = ({
         <div className="rounded-list">
           <div className="list-divider">
             <div style={{ maxWidth: 'fit-content' }}>{prettySpeciesName}</div>
-            <div slot="end">{count}</div>
+            <div>{count}</div>
           </div>
 
           {speciesList}
