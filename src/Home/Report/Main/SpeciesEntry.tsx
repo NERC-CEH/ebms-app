@@ -1,10 +1,9 @@
-import { IonItem, IonIcon, IonAvatar } from '@ionic/react';
+import { IonItem, IonIcon } from '@ionic/react';
 import speciesProfiles, {
   Species as SpeciesProfile,
 } from 'common/data/profiles';
 import butterflyIcon from 'common/images/butterfly.svg';
 import { speciesListGroupImages } from 'models/occurrence';
-import './styles.scss';
 
 interface Props {
   species: any;
@@ -16,25 +15,38 @@ const SpeciesEntry = ({ species }: Props) => {
   // @ts-ignore
   const commonName = t(scientificName, null, true);
 
-  const hasGroupId = species?.group_id?.value;
-  let avatar = hasGroupId ? (
-    <IonIcon icon={(speciesListGroupImages as any)[species?.group_id?.value]} />
-  ) : (
-    <IonIcon icon={butterflyIcon} />
-  );
+  const speciesGroupId = species?.group_id?.value;
 
   const byName = (sp: SpeciesProfile) => sp.taxon === scientificName;
   const image = speciesProfiles.find(byName);
 
+  let avatar: any;
   const hasImage = image?.image_copyright?.length;
   if (hasImage) {
-    avatar = <img src={`/images/${image.id}_0_image.jpg`} />;
+    avatar = (
+      <img
+        src={`/images/${image.id}_0_image.jpg`}
+        className="h-full w-full object-cover"
+      />
+    );
+  } else {
+    avatar = (
+      <IonIcon
+        icon={
+          speciesGroupId
+            ? (speciesListGroupImages as any)[speciesGroupId]
+            : butterflyIcon
+        }
+        className="size-8 opacity-75"
+      />
+    );
   }
 
   return (
-    <IonItem className="species-entry">
-      <div className="flex w-full flex-nowrap items-center gap-2">
-        <IonAvatar className="[--border-radius:5px]">{avatar}</IonAvatar>
+    <IonItem className="[--inner-padding-end:0] [--padding-start:0]">
+      <div className="flex w-full flex-nowrap items-center gap-2 py-1.5 pl-2 pr-4">
+        <div className="list-avatar">{avatar}</div>
+        {/* <IonAvatar className="[--border-radius:5px]">{avatar}</IonAvatar> */}
 
         <div className="flex w-full flex-col justify-center">
           {commonName && <div className="">{commonName}</div>}

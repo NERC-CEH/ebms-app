@@ -16,7 +16,7 @@ const ExpandableList: FC<any> = ({
   const hidingMoreThanTwo = restItems.length >= 2;
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-1 py-2">
       {items}
 
       {hidingMoreThanTwo && !showMore && (
