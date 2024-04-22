@@ -51,7 +51,7 @@ import {
   speciesNameSort,
   speciesCount,
 } from 'Survey/common/taxonSortFunctions';
-import CountdownClock from '../components/CountdownClock';
+import CountdownClock from './CountdownClock';
 import './styles.scss';
 
 const OCCURRENCE_THRESHOLD = 2;
@@ -283,6 +283,17 @@ const AreaCount = ({
   const getSpeciesList = () => {
     if (sample.isPreciseSingleSpeciesSurvey()) return null;
 
+    // For remote-fetched records don't have sub-sample layer, only occurrences, so this is a temporary workaround.
+    if (sample.occurrences.length)
+      return (
+        <div className="m-2">
+          <div className="flex w-full justify-between rounded-md border-b-[0.5px] border-solid border-neutral-300 bg-white px-4 py-3">
+            <div>{sample.occurrences[0].getPrettyName()}</div>
+            {sample.occurrences.length}
+          </div>
+        </div>
+      );
+
     if (!sample.samples.length && !sample.shallowSpeciesList.length) {
       return (
         <IonList lines="full">
@@ -452,14 +463,10 @@ const AreaCount = ({
       sample.samples.length === 1 && sample.samples[0].hasZeroAbundance();
     if (hasZeroAbundance) {
       return (
-        <Main id="area-count-occurrence-edit">
-          <IonList id="list" lines="full">
-            <InfoBackgroundMessage>
-              You don't have any <b>{{ prettySpeciesName } as any}</b> records
-              in your list.
-            </InfoBackgroundMessage>
-          </IonList>
-        </Main>
+        <InfoBackgroundMessage>
+          You don't have any <b>{{ prettySpeciesName } as any}</b> records in
+          your list.
+        </InfoBackgroundMessage>
       );
     }
 
