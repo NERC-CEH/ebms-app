@@ -22,7 +22,7 @@ import User from './User/router';
 
 const IonApp = IonAppPlain as any; // IonApp has 'lang' prop missing.
 
-const platform = isPlatform('android') ? 'android' : 'ios';
+const platform = isPlatform('ios') ? 'ios' : 'android';
 const tailwindContext: TailwindContextValue = { platform };
 
 const HomeRedirect = () => <Redirect to="home" />;
