@@ -364,6 +364,17 @@ const AreaCount = ({
   const getSpeciesSingleCountList = () => {
     if (!sample.isPreciseSingleSpeciesSurvey()) return null;
 
+    // For remote-fetched records don't have sub-sample layer, only occurrences, so this is a temporary workaround.
+    if (sample.occurrences.length)
+      return (
+        <div className="m-2">
+          <div className="flex w-full justify-between rounded-md border-b-[0.5px] border-solid border-neutral-300 bg-white px-4 py-3">
+            <div>{sample.occurrences[0].getPrettyName()}</div>
+            {sample.occurrences.length}
+          </div>
+        </div>
+      );
+
     const getOccurrence = (smp: Sample) => {
       const occ = smp.occurrences[0];
       const prettyTime = new Date(smp.metadata.createdOn)
@@ -397,8 +408,9 @@ const AreaCount = ({
       const cloneSubSampleWrap = () => cloneSubSample(smp, ref);
 
       const speciesStage = stage || dragonflyStage;
+
       return (
-        <IonItemSliding key={smp.cid} ref={ref as any}>
+        <IonItemSliding key={occ.cid} ref={ref as any}>
           <IonItemOptions side="start" className="copy-slider">
             <IonItemOption color="tertiary" onClick={cloneSubSampleWrap}>
               <IonIcon icon={copyOutline} />
