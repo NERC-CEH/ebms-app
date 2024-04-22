@@ -98,7 +98,7 @@ const survey: Survey = {
     },
     ...locationAttrs,
 
-    project: {
+    group: {
       remote: {
         id: 'group_id',
         values: (val: any) => val.id,
@@ -161,9 +161,9 @@ const survey: Survey = {
     },
 
     modifySubmission(submission, model) {
-      if (model.parent.attrs.project?.id) {
+      if (model.parent.attrs.group?.id) {
         // eslint-disable-next-line
-        submission.values.group_id = model.parent.attrs.project.id;
+        submission.values.group_id = model.parent.attrs.group.id;
       }
 
       if (Number.isFinite(model.parent.attrs.privacyPrecision)) {
@@ -237,7 +237,7 @@ const survey: Survey = {
       },
       attrs: {
         training: appModel.attrs.useTraining,
-        project: appModel.attrs.defaultProject,
+        group: appModel.attrs.defaultGroup,
         input_form: survey.webForm,
         device: isPlatform('android') ? 'android' : 'ios',
         app_version: config.version,

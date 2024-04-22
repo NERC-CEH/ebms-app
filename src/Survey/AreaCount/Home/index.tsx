@@ -517,14 +517,15 @@ const HomeController = ({ sample }: Props) => {
 
   const previousSurvey = getPreviousSurvey();
 
-  const navigateToProject = () => navigate(`${match.url}/details/project`);
+  const navigateToGroup = () =>
+    !isDisabled && navigate(`${match.url}/details/group`);
 
   return (
     <Page id="precise-area-count-edit">
       <Header
         sample={sample}
         onSubmit={onSubmit}
-        onProjectClick={navigateToProject}
+        onGroupClick={navigateToGroup}
       />
       <Main
         sample={sample}

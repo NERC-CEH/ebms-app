@@ -2,21 +2,21 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@flumens';
 import countries from 'common/config/countries';
 import appModel from 'models/app';
-import { RemoteAttributes } from 'models/project';
+import { RemoteAttributes } from 'models/group';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 
 type Props = {
-  projects: RemoteAttributes[];
+  groups: RemoteAttributes[];
   onJoin: any;
 };
 
-const AllProjects = ({ projects, onJoin }: Props) => {
+const AllGroups = ({ groups, onJoin }: Props) => {
   const { t } = useTranslation();
 
   const countryCode = appModel.attrs.country!;
   const country = t(countries[countryCode]?.name);
 
-  if (!projects.length)
+  if (!groups.length)
     return (
       <InfoBackgroundMessage>
         <div className="my-3 opacity-50">{{ country } as any}</div>
@@ -27,19 +27,19 @@ const AllProjects = ({ projects, onJoin }: Props) => {
       </InfoBackgroundMessage>
     );
 
-  const getProjectButton = (project: RemoteAttributes) => {
-    const onJoinWrap = () => onJoin(project);
+  const getGroupButton = (group: RemoteAttributes) => {
+    const onJoinWrap = () => onJoin(group);
 
     return (
       <div
         className="flex max-w-sm flex-col gap-2 rounded-md border border-solid border-neutral-300 bg-white p-3"
-        key={project.id}
+        key={group.id}
       >
-        <div className="line-clamp-2 font-bold">{project.title}</div>
+        <div className="line-clamp-2 font-bold">{group.title}</div>
 
-        {!!project.description && (
+        {!!group.description && (
           <div className="line-clamp-3 text-balance border-t border-solid border-[var(--background)] pt-2 text-black/70">
-            {project.description}
+            {group.description}
           </div>
         )}
 
@@ -54,9 +54,9 @@ const AllProjects = ({ projects, onJoin }: Props) => {
 
   return (
     <div className="m-3 flex flex-col items-center gap-4">
-      {projects.map(getProjectButton)}
+      {groups.map(getGroupButton)}
     </div>
   );
 };
 
-export default AllProjects;
+export default AllGroups;

@@ -14,8 +14,8 @@ import {
 import { AreaCountLocation } from 'common/models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
 import Control from './Control';
+import GroupLocations from './Group';
 import HistoricalLocations from './Historical';
-import ProjectLocations from './Project';
 
 const SNAP_POSITIONS = [0, 0.3, 0.5, 1];
 const DEFAULT_SNAP_POSITION = 0.3;
@@ -27,10 +27,10 @@ type Props = {
   onClose: any;
   mapLocation: [number, number];
   onSelectHistoricalLocation: any;
-  projectId?: string | number;
+  groupId?: string | number;
   selectedLocationId?: string | number;
-  onCreateProjectLocation: any;
-  onSelectProjectLocation: any;
+  onCreateGroupLocation: any;
+  onSelectGroupLocation: any;
 };
 
 const Favourites = ({
@@ -38,18 +38,18 @@ const Favourites = ({
   onClose,
   mapLocation,
   currentLocation,
-  onCreateProjectLocation,
+  onCreateGroupLocation,
   onSelectHistoricalLocation,
-  onSelectProjectLocation,
-  projectId,
+  onSelectGroupLocation,
+  groupId,
   selectedLocationId,
   isGPSTracking,
 }: Props) => {
   const toast = useToast();
 
-  const hasProject = !!projectId;
-  const [segment, setSegment] = useState<'project' | 'historical'>(
-    hasProject ? 'project' : 'historical'
+  const hasGroup = !!groupId;
+  const [segment, setSegment] = useState<'group' | 'historical'>(
+    hasGroup ? 'group' : 'historical'
   );
   const onSegmentClick = (e: any) => {
     const newSegment = e.detail.value;
@@ -62,7 +62,7 @@ const Favourites = ({
     area <= 0 ||
     !device.isOnline ||
     isGPSTracking;
-  const onCreateProjectLocationWrap = () => {
+  const onCreateGroupLocationWrap = () => {
     if (!device.isOnline) {
       toast.warn("Sorry, looks like you're offline.");
       return;
@@ -78,7 +78,7 @@ const Favourites = ({
       return;
     }
 
-    onCreateProjectLocation();
+    onCreateGroupLocation();
   };
 
   const onSelectPastLocationWrap = (location: Location) => {
@@ -95,7 +95,7 @@ const Favourites = ({
       backdropBreakpoint={0.5}
       breakpoints={SNAP_POSITIONS}
       initialBreakpoint={
-        hasProject && !selectedLocationId ? 0.5 : DEFAULT_SNAP_POSITION
+        hasGroup && !selectedLocationId ? 0.5 : DEFAULT_SNAP_POSITION
       }
       canDismiss
       onIonModalWillDismiss={onClose}
@@ -108,9 +108,9 @@ const Favourites = ({
               <T>Locations</T>
             </div>
 
-            {segment === 'project' && (
+            {segment === 'group' && (
               <HeaderButton
-                onClick={onCreateProjectLocationWrap}
+                onClick={onCreateGroupLocationWrap}
                 isInvalid={isInvalid}
                 className="text-sm"
               >
@@ -120,10 +120,10 @@ const Favourites = ({
           </div>
         </IonToolbar>
 
-        {hasProject && (
+        {hasGroup && (
           <IonToolbar className=" !p-0 text-black [--background:var(--ion-page-background)]">
             <IonSegment onIonChange={onSegmentClick} value={segment}>
-              <IonSegmentButton value="project">
+              <IonSegmentButton value="group">
                 <IonLabel className="ion-text-wrap">
                   <T>Project</T>
                 </IonLabel>
@@ -146,10 +146,10 @@ const Favourites = ({
             position={mapLocation}
           />
         )}
-        {segment === 'project' && (
-          <ProjectLocations
-            onSelect={onSelectProjectLocation}
-            projectId={projectId!}
+        {segment === 'group' && (
+          <GroupLocations
+            onSelect={onSelectGroupLocation}
+            groupId={groupId!}
             selectedLocationId={selectedLocationId}
           />
         )}

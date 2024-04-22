@@ -9,28 +9,28 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import { Main } from 'common/flumens';
-import projects from 'common/models/collections/projects';
-import { RemoteAttributes } from 'common/models/project';
+import groups from 'common/models/collections/groups';
+import { RemoteAttributes } from 'common/models/group';
 import Sample from 'models/sample';
-import AllProjects from './All';
-import UserProjects from './User';
+import AllGroups from './All';
+import UserGroups from './User';
 
 type Props = {
   onRefresh: any;
-  setProject: any;
-  onJoinProject: any;
-  onLeaveProject: any;
-  allProjects: RemoteAttributes[];
+  setGroup: any;
+  onJoinGroup: any;
+  onLeaveGroup: any;
+  allGroups: RemoteAttributes[];
   sample: Sample;
 };
 
-const ProjectsMain = ({
+const GroupsMain = ({
   sample,
-  setProject,
+  setGroup,
   onRefresh,
-  allProjects,
-  onJoinProject,
-  onLeaveProject,
+  allGroups,
+  onJoinGroup,
+  onLeaveGroup,
 }: Props) => {
   const [segment, setSegment] = useState<'joined' | 'all'>('joined');
 
@@ -38,18 +38,18 @@ const ProjectsMain = ({
     const newSegment = e.detail.value;
     setSegment(newSegment);
 
-    if (newSegment === 'all' && !allProjects.length) onRefresh('all');
-    if (newSegment === 'joined' && !projects.length) onRefresh('all');
+    if (newSegment === 'all' && !allGroups.length) onRefresh('all');
+    if (newSegment === 'joined' && !groups.length) onRefresh('all');
   };
 
-  const refreshProjects = async (e: any) => {
+  const refreshGroups = async (e: any) => {
     e?.detail?.complete(); // refresh pull update
     onRefresh(segment);
   };
 
   return (
     <Main>
-      <IonRefresher slot="fixed" onIonRefresh={refreshProjects}>
+      <IonRefresher slot="fixed" onIonRefresh={refreshGroups}>
         <IonRefresherContent />
       </IonRefresher>
 
@@ -70,18 +70,18 @@ const ProjectsMain = ({
       </IonToolbar>
 
       {segment === 'joined' && (
-        <UserProjects
+        <UserGroups
           sample={sample}
-          onSelect={setProject}
-          onLeave={onLeaveProject}
+          onSelect={setGroup}
+          onLeave={onLeaveGroup}
         />
       )}
 
       {segment === 'all' && (
-        <AllProjects projects={allProjects} onJoin={onJoinProject} />
+        <AllGroups groups={allGroups} onJoin={onJoinGroup} />
       )}
     </Main>
   );
 };
 
-export default ProjectsMain;
+export default GroupsMain;

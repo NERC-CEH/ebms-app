@@ -10,8 +10,8 @@ import {
   IonItemSliding,
   IonRadio,
 } from '@ionic/react';
-import projects from 'common/models/collections/projects';
-import Project from 'common/models/project';
+import groups from 'common/models/collections/groups';
+import Group from 'common/models/group';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 
@@ -21,25 +21,25 @@ type Props = {
   onLeave: any;
 };
 
-const UserProjects = ({ sample, onSelect, onLeave }: Props) => {
+const UserGroups = ({ sample, onSelect, onLeave }: Props) => {
   const { t } = useTranslation();
 
-  const getOption = (project: Project) => ({
-    value: project.id!,
-    label: project.attrs.title,
+  const getOption = (group: Group) => ({
+    value: group.id!,
+    label: group.attrs.title,
   });
 
-  const projectOptions: RadioOption[] = projects.map(getOption);
+  const groupOptions: RadioOption[] = groups.map(getOption);
 
-  projectOptions.unshift({
+  groupOptions.unshift({
     value: '',
     label: t('Not linked to any project'),
   });
 
-  const getProjectOption = (p: any) => {
-    const onLeaveProjectWrap = () => onLeave(p?.value);
+  const getGroupOption = (p: any) => {
+    const onLeaveGroupWrap = () => onLeave(p?.value);
 
-    const isSelected = sample.attrs.project?.id === p.value;
+    const isSelected = sample.attrs.group?.id === p.value;
 
     return (
       <IonItemSliding
@@ -64,7 +64,7 @@ const UserProjects = ({ sample, onSelect, onLeave }: Props) => {
         </IonItem>
 
         <IonItemOptions side="end">
-          <IonItemOption color="danger" onClick={onLeaveProjectWrap}>
+          <IonItemOption color="danger" onClick={onLeaveGroupWrap}>
             <T>Leave</T>
           </IonItemOption>
         </IonItemOptions>
@@ -72,7 +72,7 @@ const UserProjects = ({ sample, onSelect, onLeave }: Props) => {
     );
   };
 
-  if (!projects.length)
+  if (!groups.length)
     return (
       <InfoBackgroundMessage>
         You haven't joined any projects yet. Go to the "All projects" tab to
@@ -86,13 +86,13 @@ const UserProjects = ({ sample, onSelect, onLeave }: Props) => {
   return (
     <IonList lines="full" className="radio-input-attr">
       <IonRadioGroup
-        value={sample.attrs.project?.id}
+        value={sample.attrs.group?.id}
         onIonChange={(e: any) => onSelect(e.detail.value)}
       >
-        {projectOptions.map(getProjectOption)}
+        {groupOptions.map(getGroupOption)}
       </IonRadioGroup>
     </IonList>
   );
 };
 
-export default UserProjects;
+export default UserGroups;

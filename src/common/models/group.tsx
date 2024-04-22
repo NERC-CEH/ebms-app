@@ -11,18 +11,18 @@ import {
 } from '@flumens';
 import CONFIG from 'common/config';
 import LocationModel from './location';
-import { locationsStore, projectsStore } from './store';
+import { locationsStore, groupsStore } from './store';
 import userModel from './user';
 
 type Metadata = ModelMetadata & {
   saved?: boolean;
 };
 
-export type RemoteAttributes = z.infer<typeof ProjectModel.remoteSchema>;
+export type RemoteAttributes = z.infer<typeof GroupModel.remoteSchema>;
 
 type Attrs = Omit<RemoteAttributes, 'id' | 'createdOn'> & ModelAttrs;
 
-class ProjectModel extends Model {
+class GroupModel extends Model {
   static remoteSchema = object({
     id: z.string(),
     title: z.string(),
@@ -52,11 +52,11 @@ class ProjectModel extends Model {
     };
   }
 
-  collection?: Collection<ProjectModel>;
+  collection?: Collection<GroupModel>;
 
   validateRemote = validateRemoteModel;
 
-  _store = projectsStore;
+  _store = groupsStore;
 
   remote = observable({ synchronising: false });
 
@@ -83,7 +83,7 @@ class ProjectModel extends Model {
   }
 
   async addLocation(location: LocationModel) {
-    console.log('Project location uploading');
+    console.log('Group location uploading');
 
     const submission = { values: { id: location.id } };
 
@@ -106,7 +106,7 @@ class ProjectModel extends Model {
 
       this.remote.synchronising = false;
 
-      console.log('Project location uploading done');
+      console.log('Group location uploading done');
       return this;
     } catch (e: any) {
       this.remote.synchronising = false;
@@ -138,4 +138,4 @@ class ProjectModel extends Model {
   }
 }
 
-export default ProjectModel;
+export default GroupModel;

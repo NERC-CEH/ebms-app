@@ -8,8 +8,8 @@ import { setupIonicReact, isPlatform } from '@ionic/react';
 import * as SentryBrowser from '@sentry/browser';
 import * as Sentry from '@sentry/capacitor';
 import config from 'common/config';
+import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
-import projects from 'common/models/collections/projects';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import userModel from 'models/user';
@@ -26,7 +26,7 @@ mobxConfig({ enforceActions: 'never' });
   await userModel.ready;
   await samplesCollection.ready;
   await locations.ready;
-  await projects.ready;
+  await groups.ready;
 
   appModel.attrs.sendAnalytics &&
     Sentry.init(

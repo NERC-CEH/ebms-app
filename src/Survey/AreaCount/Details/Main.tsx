@@ -37,7 +37,7 @@ const AreaCountDetails = ({
     temperature,
     windDirection,
     windSpeed,
-    project,
+    group,
   } = sample.attrs;
 
   return (
@@ -97,11 +97,11 @@ const AreaCountDetails = ({
         </h3>
         <div className="rounded-list">
           <MenuAttrItem
-            routerLink={`${baseURL}/project`}
+            routerLink={`${baseURL}/group`}
             disabled={isDisabled}
             icon={peopleOutline}
             label="Project"
-            value={project?.name}
+            value={group?.title}
             skipValueTranslation
           />
           <Toggle

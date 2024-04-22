@@ -17,8 +17,8 @@ import {
   useIonActionSheet,
 } from '@ionic/react';
 import { getGeomString } from 'common/helpers/location';
-import { PROJECT_SITE_TYPE } from 'common/models/location';
-import { AreaCountLocation, Project } from 'common/models/sample';
+import { GROUP_SITE_TYPE } from 'common/models/location';
+import { AreaCountLocation, Group } from 'common/models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
 
 const schema = object({
@@ -63,7 +63,7 @@ const useDismissHandler = (newLocation: any) => {
 
 const getNewLocationSeed = (location?: AreaCountLocation) => ({
   id: '',
-  locationTypeId: PROJECT_SITE_TYPE,
+  locationTypeId: GROUP_SITE_TYPE,
   createdOn: new Date().toISOString(),
   updatedOn: new Date().toISOString(),
   boundaryGeom: location?.shape ? getGeomString(location?.shape) : '',
@@ -78,12 +78,12 @@ type Props = {
   isOpen: any;
   onCancel: any;
   onSave: (location: FixedLocation) => Promise<boolean>;
-  project: Project;
+  group: Group;
   location: AreaCountLocation;
 };
 
 const NewLocationModal = (
-  { presentingElement, isOpen, onCancel, onSave, project, location }: Props,
+  { presentingElement, isOpen, onCancel, onSave, group, location }: Props,
   ref: any
 ) => {
   const [newLocation, setNewLocation] = useState<FixedLocation>(
@@ -146,7 +146,7 @@ const NewLocationModal = (
           </IonTitle>
         </IonToolbar>
         <div className="bg-tertiary-600 p-1 text-center text-sm text-white">
-          {project?.name}
+          {group?.title}
         </div>
       </IonHeader>
 

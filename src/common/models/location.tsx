@@ -22,7 +22,7 @@ import { getLocalAttributes } from './utils';
 
 type Metadata = ModelMetadata & {
   saved?: boolean;
-  projectId?: string;
+  groupId?: string;
 };
 
 const trapTypes = [
@@ -75,7 +75,7 @@ const validateLocation = (val: any) => {
 export const MOTH_TRAP_TYPE = '18879';
 export const TRANSECT_TYPE = '777';
 export const TRANSECT_SECTION_TYPE = '778';
-export const PROJECT_SITE_TYPE = '14';
+export const GROUP_SITE_TYPE = '14';
 
 export const verifyLocationSchema = Yup.mixed().test(
   'location',

@@ -1,27 +1,27 @@
 import { reaction, observable, observe } from 'mobx';
 import { device, Store, Collection } from '@flumens';
 import {
-  PROJECT_SITE_TYPE,
+  GROUP_SITE_TYPE,
   RemoteAttributes as RemoteLocationAttributes,
 } from 'models/location';
 import userModel from 'models/user';
-import ProjectModel from '../../project';
-import { projectsStore as store } from '../../store';
+import GroupModel from '../../group';
+import { groupsStore as store } from '../../store';
 import locations from '../locations';
 import {
-  fetch as fetchProjects,
+  fetch as fetchGroups,
   fetchLocations,
-  RemoteLocationAttributes as RemoteProjectLocationAttributes,
+  RemoteLocationAttributes as RemoteGroupLocationAttributes,
 } from './service';
 
 type constructorOptions = {
   id: string;
   store: Store;
-  Model: typeof ProjectModel;
+  Model: typeof GroupModel;
 };
 
-export class Projects extends Collection<ProjectModel> {
-  Model: typeof ProjectModel;
+export class Groups extends Collection<GroupModel> {
+  Model: typeof GroupModel;
 
   _fetchedFirstTime = false;
 
@@ -37,7 +37,7 @@ export class Projects extends Collection<ProjectModel> {
     // eslint-disable-next-line @getify/proper-arrows/name
     observe(this, (change: any) => {
       if (change.addedCount) {
-        const attachCollection = (model: ProjectModel) => {
+        const attachCollection = (model: GroupModel) => {
           model.collection = this; // eslint-disable-line no-param-reassign
         };
         change.added.forEach(attachCollection);
@@ -69,14 +69,14 @@ export class Projects extends Collection<ProjectModel> {
   fetch = async () => {
     const remoteDocs = await this._fetchDocs();
 
-    const drafts: ProjectModel[] = [];
+    const drafts: GroupModel[] = [];
 
     while (this.length) {
       const model = this.pop();
       model?.destroy();
     }
 
-    const initModel = (doc: any) => new this.Model(doc) as ProjectModel;
+    const initModel = (doc: any) => new this.Model(doc) as GroupModel;
     const newModelsFromRemote = remoteDocs.map(initModel);
 
     this.push(...newModelsFromRemote, ...drafts);
@@ -100,7 +100,7 @@ export class Projects extends Collection<ProjectModel> {
 
     try {
       const docs = await this._fetchDocs();
-      const initModel = (doc: any) => new this.Model(doc) as ProjectModel;
+      const initModel = (doc: any) => new this.Model(doc) as GroupModel;
       const models = docs.map(initModel);
 
       this.push(...models);
@@ -118,7 +118,7 @@ export class Projects extends Collection<ProjectModel> {
     console.log(`📚 Collection: ${this.id} collection fetching`);
     this.fetching.isFetching = true;
 
-    const docs = await fetchProjects({ member: true });
+    const docs = await fetchGroups({ member: true });
 
     this.fetching.isFetching = false;
 
@@ -134,8 +134,8 @@ export class Projects extends Collection<ProjectModel> {
     this.fetching.isFetching = true;
 
     const transformToLocation = (
-      doc: RemoteProjectLocationAttributes
-    ): [RemoteLocationAttributes, { projectId: any }] => {
+      doc: RemoteGroupLocationAttributes
+    ): [RemoteLocationAttributes, { groupId: any }] => {
       const transformedDoc = {
         id: doc.locationId,
         createdOn: doc.locationCreatedOn,
@@ -143,7 +143,7 @@ export class Projects extends Collection<ProjectModel> {
         lat: doc.locationLat,
         lon: doc.locationLon,
         name: doc.locationName,
-        locationTypeId: PROJECT_SITE_TYPE,
+        locationTypeId: GROUP_SITE_TYPE,
         parentId: null,
         boundaryGeom: doc.locationBoundaryGeom,
         code: doc.locationCode,
@@ -155,7 +155,7 @@ export class Projects extends Collection<ProjectModel> {
         public: 'f',
       };
 
-      const metadata = { projectId: doc.projectId };
+      const metadata = { groupId: doc.groupId };
       return [transformedDoc, metadata];
     };
 
@@ -175,16 +175,16 @@ export class Projects extends Collection<ProjectModel> {
   };
 
   resetDefaults = () => {
-    const destroyLocation = (location: ProjectModel) => location.destroy();
+    const destroyLocation = (location: GroupModel) => location.destroy();
     const destroyAllLocations = this.map(destroyLocation);
     return Promise.all(destroyAllLocations);
   };
 }
 
-const collection = new Projects({
-  id: 'projects',
+const collection = new Groups({
+  id: 'groups',
   store,
-  Model: ProjectModel,
+  Model: GroupModel,
 });
 
 export default collection;

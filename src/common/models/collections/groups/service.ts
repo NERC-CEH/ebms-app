@@ -6,7 +6,7 @@ import { isAxiosNetworkError, HandledError } from '@flumens';
 import CONFIG from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'common/models/app';
-import Project, { RemoteAttributes } from 'models/project';
+import Group, { RemoteAttributes } from 'models/group';
 import userModel from 'models/user';
 
 type Props = { country?: string; member?: boolean };
@@ -36,7 +36,7 @@ export async function fetch({ member }: Props): Promise<RemoteAttributes[]> {
       mapKeys(doc.values, (_, key) => camelCase(key));
     const docs = res.data.map(getValues);
 
-    docs.forEach(Project.remoteSchema.parse);
+    docs.forEach(Group.remoteSchema.parse);
 
     return docs;
   } catch (error: any) {
@@ -79,16 +79,14 @@ const remoteLocationSchema = object({
   locationUpdatedById: z.string().nullable().optional(),
   locationComment: z.string().nullable().optional(),
   locationExternalKey: z.string().nullable().optional(),
-
-  projectId: z.string(), // we have added this for linking to projects, warehouse doesn't return it yet
 });
 
 export type RemoteLocationAttributes = z.infer<typeof remoteLocationSchema>;
 
 export async function fetchLocations(
-  projectId: string | number
+  groupId: string | number
 ): Promise<RemoteLocationAttributes[]> {
-  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${projectId}/locations`;
+  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${groupId}/locations`;
 
   const token = await userModel.getAccessToken();
 
@@ -102,8 +100,7 @@ export async function fetchLocations(
 
     const getValues = (doc: any) =>
       mapKeys(doc.values, (_, key) => camelCase(key));
-    const addProjectId = (doc: any) => ({ ...doc, projectId });
-    const docs = res.data.map(getValues).map(addProjectId);
+    const docs = res.data.map(getValues);
 
     docs.forEach(remoteLocationSchema.parse);
 
@@ -127,8 +124,8 @@ export async function fetchLocations(
   }
 }
 
-export async function join(project: RemoteAttributes) {
-  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${project.id}/users`;
+export async function join(group: RemoteAttributes) {
+  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${group.id}/users`;
 
   const token = await userModel.getAccessToken();
 
@@ -157,8 +154,8 @@ export async function join(project: RemoteAttributes) {
   }
 }
 
-export async function leave(projectId: string) {
-  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${projectId}/users/${userModel.attrs.indiciaUserId}`;
+export async function leave(groupId: string) {
+  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${groupId}/users/${userModel.attrs.indiciaUserId}`;
 
   const token = await userModel.getAccessToken();
 

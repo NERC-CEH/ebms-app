@@ -3,12 +3,12 @@ import { device, Store, Collection } from '@flumens';
 import userModel from 'models/user';
 import Location, {
   MOTH_TRAP_TYPE,
-  PROJECT_SITE_TYPE,
+  GROUP_SITE_TYPE,
   TRANSECT_SECTION_TYPE,
   TRANSECT_TYPE,
 } from '../../location';
 import { locationsStore as store } from '../../store';
-import projects from '../projects';
+import groups from '../groups';
 import fetch from './service';
 
 type constructorOptions = {
@@ -126,13 +126,13 @@ export class Locations extends Collection<Location> {
     const mothTraps = await fetch(MOTH_TRAP_TYPE);
     const transects = await fetch(TRANSECT_TYPE);
     const transectSections = await fetch(TRANSECT_SECTION_TYPE);
-    const projectLocations = await projects.fetchLocations();
+    const groupLocations = await groups.fetchLocations();
 
     const docs = [
       ...mothTraps,
       ...transects,
       ...transectSections,
-      ...projectLocations,
+      ...groupLocations,
     ];
 
     this.fetching.isFetching = false;
@@ -162,7 +162,7 @@ const collection = new Locations({
 });
 
 type LocationType =
-  | typeof PROJECT_SITE_TYPE
+  | typeof GROUP_SITE_TYPE
   | typeof MOTH_TRAP_TYPE
   | typeof TRANSECT_TYPE
   | typeof TRANSECT_SECTION_TYPE;

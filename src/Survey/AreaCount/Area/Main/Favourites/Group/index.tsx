@@ -1,21 +1,17 @@
 import { observer } from 'mobx-react';
 import { IonList } from '@ionic/react';
 import locations, { byType } from 'models/collections/locations';
-import Location, { PROJECT_SITE_TYPE } from 'models/location';
+import Location, { GROUP_SITE_TYPE } from 'models/location';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Entry from './Entry';
 
 type Props = {
   onSelect: () => void;
-  projectId: string | number;
+  groupId: string | number;
   selectedLocationId?: string | number;
 };
 
-const ProjectLocations = ({
-  onSelect,
-  projectId,
-  selectedLocationId,
-}: Props) => {
+const GroupLocations = ({ onSelect, groupId, selectedLocationId }: Props) => {
   const getEntry = (location: Location) => (
     <Entry
       key={location.cid}
@@ -25,12 +21,11 @@ const ProjectLocations = ({
     />
   );
 
-  const byProject = (location: Location) =>
-    location.metadata.projectId === projectId;
+  const byGroup = (location: Location) => location.metadata.groupId === groupId;
 
   const entries = locations
-    .filter(byType(PROJECT_SITE_TYPE))
-    .filter(byProject)
+    .filter(byType(GROUP_SITE_TYPE))
+    .filter(byGroup)
     .map(getEntry);
 
   return (
@@ -46,4 +41,4 @@ const ProjectLocations = ({
   );
 };
 
-export default observer(ProjectLocations);
+export default observer(GroupLocations);

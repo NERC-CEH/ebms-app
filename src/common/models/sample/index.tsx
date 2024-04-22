@@ -31,15 +31,15 @@ import GPSExtension, { calculateArea } from './GPSExt';
 import RemoteExtension, { parseRemoteAttrs } from './remoteExt';
 import VibrateExtension from './vibrateExt';
 
-export type Project = {
+export type Group = {
   /**
-   * Remote (warehouse) project ID.
+   * Remote (warehouse) group ID.
    */
   id: string;
   /**
-   * Project's title.
+   * Group's title.
    */
-  name: string;
+  title: string;
 };
 
 export type Site = LocationAttributes;
@@ -79,7 +79,7 @@ export type Attrs = SampleAttrs & {
   reliability?: string;
   recorders?: number;
   speciesGroups: string[];
-  project?: Project;
+  group?: Group;
   site?: Site;
   privacyPrecision?: number;
 
@@ -194,6 +194,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
           area: calculateArea(shape),
           gridref,
         },
+        group: metadata.group,
         comment: event.event_remarks,
         training: metadata.trial === 'true',
       },

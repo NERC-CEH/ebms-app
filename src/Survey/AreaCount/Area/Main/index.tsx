@@ -46,8 +46,8 @@ type Props = {
   isGPSTracking: boolean;
   isDisabled?: boolean;
   onSelectHistoricalLocation: any;
-  onCreateProjectLocation: any;
-  onSelectProjectLocation: any;
+  onCreateGroupLocation: any;
+  onSelectGroupLocation: any;
   isFetchingLocations?: boolean;
 };
 
@@ -57,8 +57,8 @@ const AreaAttr = ({
   isGPSTracking,
   isDisabled,
   onSelectHistoricalLocation,
-  onCreateProjectLocation,
-  onSelectProjectLocation,
+  onCreateGroupLocation,
+  onSelectGroupLocation,
   isFetchingLocations,
 }: Props) => {
   // eslint-disable-next-line prefer-destructuring
@@ -68,9 +68,9 @@ const AreaAttr = ({
   const updateMapCentre = ({ viewState }: any) =>
     saveMapCenter([viewState.latitude, viewState.longitude]);
 
-  const projectId = sample.attrs.project?.id;
-  const hasProject = !!projectId && !isDisabled;
-  const [showPastLocations, setShowPastLocations] = useState(hasProject);
+  const groupId = sample.attrs.group?.id;
+  const hasGroup = !!groupId && !isDisabled;
+  const [showPastLocations, setShowPastLocations] = useState(hasGroup);
   const toggleFavourites = () => setShowPastLocations(!showPastLocations);
 
   const shouldDeleteShape = useDeletePropt();
@@ -146,10 +146,10 @@ const AreaAttr = ({
         onClose={() => setShowPastLocations(false)}
         onSelectHistoricalLocation={onSelectHistoricalLocation}
         currentLocation={location}
-        projectId={projectId}
+        groupId={groupId}
         isGPSTracking={isGPSTracking}
-        onCreateProjectLocation={onCreateProjectLocation}
-        onSelectProjectLocation={onSelectProjectLocation}
+        onCreateGroupLocation={onCreateGroupLocation}
+        onSelectGroupLocation={onSelectGroupLocation}
         selectedLocationId={selectedLocationId}
       />
     </Main>

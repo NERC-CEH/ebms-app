@@ -6,15 +6,15 @@ import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
 type Props = {
   sample: Sample;
   onSubmit: any;
-  onProjectClick: any;
+  onGroupClick: any;
 };
 
-const HeaderComponent = ({ sample, onSubmit, onProjectClick }: Props) => {
+const HeaderComponent = ({ sample, onSubmit, onGroupClick }: Props) => {
   const isTraining = !!sample.attrs.training;
 
   const survey = sample.getSurvey();
 
-  const project = sample.attrs.project?.name;
+  const group = sample.attrs.group?.title;
 
   const trainingModeSubheader = (
     <>
@@ -24,12 +24,12 @@ const HeaderComponent = ({ sample, onSubmit, onProjectClick }: Props) => {
         </div>
       )}
 
-      {!!project && (
+      {!!group && (
         <div
           className="line-clamp-1 bg-tertiary-600 p-1 text-center text-sm text-white"
-          onClick={onProjectClick}
+          onClick={onGroupClick}
         >
-          {project}
+          {group}
         </div>
       )}
     </>

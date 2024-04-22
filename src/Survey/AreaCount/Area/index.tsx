@@ -5,8 +5,8 @@ import { Trans as T } from 'react-i18next';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { device, Location, useLoader, useToast } from '@flumens';
 import { IonIcon, IonPage, isPlatform, NavContext } from '@ionic/react';
-import projects from 'common/models/collections/projects';
-import ProjectModel from 'common/models/project';
+import groups from 'common/models/collections/groups';
+import GroupModel from 'common/models/group';
 import locations from 'models/collections/locations';
 import LocationModel, { RemoteAttributes } from 'models/location';
 import Sample, { AreaCountLocation } from 'models/sample';
@@ -76,8 +76,8 @@ const AreaController = ({ sample }: Props) => {
   const [isNewLocationModalOpen, setNewLocationModalOpen] = useState(false);
 
   const modal = useRef<HTMLIonModalElement>(null);
-  const onCreateProjectLocation = () => modal.current?.present();
-  const onSelectProjectLocation = (loc: LocationModel) => {
+  const onCreateGroupLocation = () => modal.current?.present();
+  const onSelectGroupLocation = (loc: LocationModel) => {
     if (!sample.attrs.location) {
       sample.attrs.location = {} as any; // eslint-disable-line
     }
@@ -130,9 +130,9 @@ const AreaController = ({ sample }: Props) => {
     try {
       await loader.show('Please wait...');
 
-      const byId = (p: ProjectModel) => p.id === sample.attrs.project?.id;
-      const project = projects.find(byId);
-      if (!project) throw new Error('Project was not found');
+      const byId = (p: GroupModel) => p.id === sample.attrs.group?.id;
+      const group = groups.find(byId);
+      if (!group) throw new Error('Group was not found');
 
       const newSite = new LocationModel({
         skipStore: true,
@@ -140,7 +140,7 @@ const AreaController = ({ sample }: Props) => {
       });
       await newSite.saveRemote();
 
-      await project.addLocation(newSite);
+      await group.addLocation(newSite);
       await refreshLocations();
 
       toast.success('Successfully saved a location.');
@@ -169,8 +169,8 @@ const AreaController = ({ sample }: Props) => {
         setLocation={setLocation}
         isDisabled={isDisabled}
         onSelectHistoricalLocation={onSelectHistoricalLocation}
-        onCreateProjectLocation={onCreateProjectLocation}
-        onSelectProjectLocation={onSelectProjectLocation}
+        onCreateGroupLocation={onCreateGroupLocation}
+        onSelectGroupLocation={onSelectGroupLocation}
         isFetchingLocations={locations.fetching.isFetching}
       />
       <NewLocationModal
@@ -179,7 +179,7 @@ const AreaController = ({ sample }: Props) => {
         isOpen={isNewLocationModalOpen}
         onCancel={onCloseLocationModal}
         onSave={onSaveNewLocation}
-        project={sample.attrs.project!}
+        group={sample.attrs.group!}
         location={location}
       />
     </IonPage>

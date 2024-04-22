@@ -18,8 +18,8 @@ export const locationsStore = new Store({
   debugging: isDemo,
 });
 
-export const projectsStore = new Store({
-  storeName: 'projects',
+export const groupsStore = new Store({
+  storeName: 'groups',
   debugging: isDemo,
 });
 
@@ -28,6 +28,6 @@ if (isDemo) {
     genericStore,
     modelStore,
     locationsStore,
-    projectsStore,
+    groupsStore,
   });
 }
