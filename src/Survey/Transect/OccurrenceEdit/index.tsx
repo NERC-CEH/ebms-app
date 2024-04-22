@@ -9,7 +9,7 @@ import {
   MenuAttrItem,
   NumberInput,
 } from '@flumens';
-import { IonList } from '@ionic/react';
+import { IonIcon, IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import numberIcon from 'common/images/number.svg';
 import Occurrence from 'models/occurrence';
@@ -56,7 +56,7 @@ const TransectHomeController = ({ occurrence }: Props) => {
               label="Count"
               onChange={getCounterOnChange}
               value={count}
-              prefix={numberIcon}
+              prefix={<IonIcon src={numberIcon} className="size-6" />}
               minValue={1}
               isDisabled={isDisabled}
             />

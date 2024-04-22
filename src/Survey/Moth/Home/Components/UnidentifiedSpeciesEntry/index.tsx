@@ -1,8 +1,7 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
-import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { useAlert } from '@flumens';
+import { Badge, Button, useAlert } from '@flumens';
 import {
   IonItemSliding,
   IonItem,
@@ -12,7 +11,6 @@ import {
   IonSpinner,
   IonIcon,
   NavContext,
-  IonButton,
 } from '@ionic/react';
 import mothIcon from 'common/images/moth.svg';
 import Media from 'models/media';
@@ -92,10 +90,7 @@ const UnidentifiedSpeciesEntry = ({
   const navigateToSpeciesOccurrence = () =>
     !identifying && navigate(`${url}/occ/${occ.cid}`);
 
-  const onIdentifyOccurrence = async (e: any) => {
-    e.preventDefault();
-    e.stopPropagation();
-
+  const onIdentifyOccurrence = async () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return null;
 
@@ -115,36 +110,29 @@ const UnidentifiedSpeciesEntry = ({
       <IonItem detail={!identifying} onClick={navigateToSpeciesOccurrence}>
         {getProfilePhoto()}
 
-        {!identifying && (
-          <div>
-            <IonLabel>{speciesName}</IonLabel>
+        <div className="flex w-full items-center justify-between gap-2">
+          <IonLabel>{speciesName}</IonLabel>
+          {!identifying && (
+            <div className="flex w-full items-center justify-between gap-2">
+              {!hasSpeciesPhoto && (
+                <Badge color="warning">Please add a photo</Badge>
+              )}
 
-            {!hasSpeciesPhoto && (
-              <IonLabel className="warning-message">
-                <T>Please add a photo</T>
-              </IonLabel>
-            )}
-          </div>
-        )}
+              {hasSpeciesPhoto && !isDisabled && canBeIdentified() && (
+                <Button
+                  fill={buttonStyles}
+                  onPress={onIdentifyOccurrence}
+                  className="px-2 py-1 text-sm"
+                  preventDefault
+                >
+                  Identify
+                </Button>
+              )}
+            </div>
+          )}
 
-        {hasSpeciesPhoto && !identifying && canBeIdentified() && (
-          <IonButton
-            slot="end"
-            fill={buttonStyles}
-            onClick={onIdentifyOccurrence}
-          >
-            <T>Identify</T>
-          </IonButton>
-        )}
-
-        {identifying && (
-          <>
-            <IonLabel slot="end">
-              <T>Identifying...</T>
-            </IonLabel>
-            <IonSpinner slot="end" className="identifying" />
-          </>
-        )}
+          {identifying && <IonSpinner className="mr-2 size-5" />}
+        </div>
       </IonItem>
 
       {!isDisabled && (
