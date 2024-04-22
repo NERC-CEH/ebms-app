@@ -8,7 +8,7 @@ import {
   cloudyOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Main, MenuAttrItem, timeFormat } from '@flumens';
+import { isValidDate, Main, MenuAttrItem, timeFormat } from '@flumens';
 import { IonList, IonItem, IonIcon, IonLabel } from '@ionic/react';
 import windIcon from 'common/images/wind.svg';
 import Sample from 'models/sample';
@@ -21,7 +21,7 @@ type Props = {
 
 const Edit = ({ sample, isDisabled }: Props) => {
   const getPrettySectionsLabel = () => {
-    const transect = sample.attrs.location;
+    const transect: any = sample.attrs.location;
     if (!transect)
       return (
         <IonLabel slot="end" color="danger  ">
@@ -29,7 +29,12 @@ const Edit = ({ sample, isDisabled }: Props) => {
         </IonLabel>
       );
 
-    return <IonLabel slot="end">{(transect as any).location.name}</IonLabel>;
+    const name =
+      transect.location?.name ||
+      // for remote locations
+      transect.name;
+
+    return <IonLabel slot="end">{name}</IonLabel>;
   };
 
   const {
@@ -43,16 +48,11 @@ const Edit = ({ sample, isDisabled }: Props) => {
     surveyEndTime,
   } = sample.attrs;
 
-  function checkDateisValid(str: string) {
-    const date = new Date(str);
-    // eslint-disable-next-line no-restricted-globals
-    return date instanceof Date && !isNaN(date as any);
-  }
-  const startTimePretty = checkDateisValid(surveyStartTime!)
+  const startTimePretty = isValidDate(surveyStartTime!)
     ? timeFormat.format(new Date(surveyStartTime!))
     : surveyStartTime;
 
-  const endTimePretty = checkDateisValid(surveyEndTime!)
+  const endTimePretty = isValidDate(surveyEndTime!)
     ? timeFormat.format(new Date(surveyEndTime!))
     : surveyEndTime;
 

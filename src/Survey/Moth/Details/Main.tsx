@@ -9,6 +9,7 @@ import {
   MenuAttrItem,
   AttrPropsExtended,
   timeFormat,
+  isValidDate,
 } from '@flumens';
 import { IonList } from '@ionic/react';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
@@ -38,10 +39,14 @@ const DetailsMain = ({ sample }: Props) => {
     ? locationNameSupportedBackwardsCompatibility
     : null;
 
-  const startTimePretty =
-    surveyStartTime && timeFormat.format(new Date(surveyStartTime));
-  const endTimePretty =
-    surveyEndTime && timeFormat.format(new Date(surveyEndTime));
+  const startTimePretty = isValidDate(surveyStartTime!)
+    ? timeFormat.format(new Date(surveyStartTime!))
+    : // remote dates
+      surveyStartTime;
+  const endTimePretty = isValidDate(surveyEndTime!)
+    ? timeFormat.format(new Date(surveyEndTime!))
+    : // remote dates
+      surveyEndTime;
 
   return (
     <Main>
