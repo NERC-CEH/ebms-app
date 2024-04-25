@@ -19,7 +19,6 @@ import languages, { LanguageCode } from 'common/config/languages';
 import butterflyIcon from 'common/images/butterfly.svg';
 import mothIcon from 'common/images/moth.svg';
 import { surveyConfigs as surveys } from 'models/sample';
-import './styles.scss';
 
 function useUserDeleteDialog(deleteUser: any) {
   const alert = useAlert();
@@ -226,10 +225,10 @@ const MenuMain = ({
         <h3 className="list-title">
           <T>Account</T>
         </h3>
-        <div className="destructive-item rounded-list">
+        <div className="rounded-list">
           {isLoggedIn && (
             <>
-              <IonItem onClick={showUserDeleteDialog}>
+              <IonItem onClick={showUserDeleteDialog} className="!text-danger">
                 <IonIcon icon={personRemoveOutline} size="small" slot="start" />
                 <IonLabel>
                   <T>Delete account</T>
@@ -243,7 +242,7 @@ const MenuMain = ({
         </div>
       </IonList>
 
-      <p className="app-version">{`v${config.version} (${config.build})`}</p>
+      <p className="m-0 mx-auto w-full max-w-2xl p-2.5 text-right opacity-60">{`v${config.version} (${config.build})`}</p>
     </Main>
   );
 };
