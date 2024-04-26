@@ -3,14 +3,14 @@
 # Renata Santos <renatailsantos@gmail.com>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
-# Eva Monteiro <evasmonteiro@gmail.com>, 2021
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023
 # Ricardo Silva Ramirez, 2023
+# Eva Monteiro <evasmonteiro@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Ricardo Silva Ramirez, 2023\n"
+"Last-Translator: Eva Monteiro <evasmonteiro@gmail.com>, 2024\n"
 "Language-Team: Portuguese (Portugal) (https://app.transifex.com/ceh/teams/95441/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -170,10 +170,10 @@ msgid "Botswana"
 msgstr "Botsuana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigéria"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Nova Zelândia"
 
 msgid "Montserrat"
 msgstr ""
@@ -460,47 +460,51 @@ msgstr "Trace uma área"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Localizações"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 # Survey area page
 msgid "New location"
+msgstr "Nova localização"
+
+# Survey area page
+msgid "No location"
 msgstr ""
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Nome do sítio"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Comentários"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "A área de amostragem ainda está a ser calculada."
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Localização guardada com sucesso."
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "Tem a certeza?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Esta opcão irá rejeitar o formulário de dados."
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 msgid "Delete"
 msgstr "Apagar"
@@ -979,11 +983,11 @@ msgstr "Mostrar nomes comuns no guia"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Usar a lista total de espécies"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr ""
+msgstr "Não restringir a procura a nomes de espécies locais."
 
 msgid "Share App Analytics"
 msgstr "Partilhe as análises da App"
@@ -1272,6 +1276,13 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"O método definido por defeito é a contagem de 15 minutos. Este método pode "
+"ser realizado em qualquer local e a qualquer hora em que as borboletas "
+"estejam ativas (ex. quando o tempo está quente e, de preferência, com sol). "
+"Também pode usar a app para registar borboletas nos transectos já "
+"introduzidos na plataforma. No texto abaixo encontrará mais informações "
+"sobre como usar a app para registar borboletas com os diferentes métodos "
+"disponíveis."
 
 msgid "How to do a 15-minute Count"
 msgstr "Como fazer uma Contagem de 15 min"
@@ -2634,58 +2645,65 @@ msgstr "Nuvem não pode estar vazio"
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "Não relacionado com nenhum projeto"
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "Adicionar"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Projeto"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Projetos"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "Os meus projetos"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "Todos os projetos"
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"Ainda não adicionou nenhum projeto. Carregue em \"Todos os projetos\" para "
+"adicionar um projeto. 1 2 Puxe a página para baixo para fazer refresh na "
+"lista."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"1 {{Portugal}} 1 Atualmente não há novos projetos disponíveis para "
+"adicionar. 2 3 Puxe a página para baixo para fazer refresh na lista."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "O projeto foi adicionado com sucesso."
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "Sair"
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr ""
+msgstr "Saiu do projeto com êxito."
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "Sensível"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Esta amostragem tem espécies sensíveis que não devem ser incluídas em "
+"relatórios públicos."

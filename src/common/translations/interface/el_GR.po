@@ -468,6 +468,10 @@ msgid "New location"
 msgstr "Νέα τοποθεσία"
 
 # Survey area page
+msgid "No location"
+msgstr ""
+
+# Survey area page
 msgid "Site name"
 msgstr "Όνομα τοποθεσίας"
 

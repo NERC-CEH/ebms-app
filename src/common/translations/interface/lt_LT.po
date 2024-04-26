@@ -467,6 +467,10 @@ msgid "New location"
 msgstr "Nauja vietovė"
 
 # Survey area page
+msgid "No location"
+msgstr "Jokios vietovės"
+
+# Survey area page
 msgid "Site name"
 msgstr "Vietovės vardas"
 

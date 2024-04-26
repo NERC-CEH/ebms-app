@@ -474,6 +474,10 @@ msgid "New location"
 msgstr ""
 
 # Survey area page
+msgid "No location"
+msgstr ""
+
+# Survey area page
 msgid "Site name"
 msgstr ""
 

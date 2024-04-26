@@ -173,10 +173,10 @@ msgid "New Zealand"
 msgstr "Nueva Zelanda"
 
 msgid "Montserrat"
-msgstr ""
+msgstr "Montserrat"
 
 msgid "Anguilla"
-msgstr ""
+msgstr "Anguila"
 
 msgid "Elsewhere"
 msgstr "En otro lugar"
@@ -467,6 +467,10 @@ msgstr "Anterior"
 # Survey area page
 msgid "New location"
 msgstr "Nueva ubicación"
+
+# Survey area page
+msgid "No location"
+msgstr ""
 
 # Survey area page
 msgid "Site name"

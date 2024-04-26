@@ -4,12 +4,12 @@
 # Carin Kullberg <carin@ckg.se>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Lars Pettersson <lars.pettersson@biol.lu.se>, 2022
-# Georg, 2023
+# Georg, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Georg, 2023\n"
+"Last-Translator: Georg, 2024\n"
 "Language-Team: Swedish (Sweden) (https://app.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -169,10 +169,10 @@ msgid "Botswana"
 msgstr "Botswana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigeria"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Nya Zeeland"
 
 msgid "Montserrat"
 msgstr ""
@@ -460,47 +460,51 @@ msgstr "Rita ett område"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Platser"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Föregående"
 
 # Survey area page
 msgid "New location"
+msgstr "Ny plats"
+
+# Survey area page
+msgid "No location"
 msgstr ""
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Lokalnamn"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Kommentarer"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "Undersökningsområdet spåras fortfarande "
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Sparade en plats"
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "Är du säker?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Detta kasserar formulärdata"
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "Nej"
 
 msgid "Delete"
 msgstr "Radera"
@@ -974,11 +978,11 @@ msgstr "Visa vanliga namn i din guide."
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Använd global artlista"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr ""
+msgstr "Begränsa inte till lokala artnamn i inventeringssökningar"
 
 msgid "Share App Analytics"
 msgstr "Tillåt delning av appens analysresultat"
@@ -1266,6 +1270,11 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"Den föredragna metoden är 15-min öppen inventering. Den kan genomföras "
+"närsomhelst när fjärilarna är aktiva (dvs. när det är varmt och helst "
+"soligt). Du kan också använda appen för att registrera de etablerade "
+"fjärilsslingorna. Nedan följer beskrivningar om hur man använder de olika "
+"metoderna."
 
 msgid "How to do a 15-minute Count"
 msgstr "Hur du gör en 15-min öppen inventering"
@@ -2102,33 +2111,36 @@ msgstr "Logga in för att se din egen datarapport"
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "Dina vanligaste arter denna månad"
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "Dina vanligaste arter"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Segmentbilder"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "Användaren är inte inloggad."
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
 msgstr ""
+"Vi tror det är med {{probability}}% sannolikhet är en <3>{{taxon}}</3> "
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Warning</0> - vi tror det är med {{probability}}% sannolikhet är en "
+"<5>{{taxon}}</5> "
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr ""
+msgstr "Lampor"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
@@ -2140,7 +2152,7 @@ msgstr ""
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "Välkommen"
 
 # Successful registration pop-up
 msgid ""
@@ -2153,7 +2165,7 @@ msgid "Sorry, no species were found."
 msgstr ""
 
 msgid "Kenya"
-msgstr ""
+msgstr "Kanya"
 
 # GPS permission button label
 msgid "Deny"
@@ -2161,7 +2173,7 @@ msgstr ""
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Acceptera"
 
 # GPS permission alert title
 msgid "Location permission"
@@ -2175,11 +2187,11 @@ msgstr ""
 
 # Delete account
 msgid "Delete account"
-msgstr ""
+msgstr "Ta bort konto"
 
 # Delete account
 msgid "You can delete your user account from the system."
-msgstr ""
+msgstr "Du kan ta bort ditt användarkonto från systemet."
 
 # Delete account alert header
 msgid "Account delete"
@@ -2200,19 +2212,19 @@ msgstr ""
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Grupper"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Bekräfta"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Vilka artgrupper har du räknat?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
@@ -2224,11 +2236,11 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Vinge"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Beteende"
 
 # Part of Painted lady survey
 msgid "Direction"
@@ -2236,15 +2248,15 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Altitud"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Kompass"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Ta bort inventeringen"
 
 # Alert message
 msgid ""
@@ -2253,23 +2265,23 @@ msgstr ""
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Ny"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Sliten"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Specificera näktarkällan."
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Lägg till äggläggningalternativ."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
@@ -2277,7 +2289,7 @@ msgstr ""
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Näktarkälla"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
@@ -2297,7 +2309,7 @@ msgstr ""
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Migration"
 
 # Part of painted lady
 msgid "Nectaring"
@@ -2309,7 +2321,7 @@ msgstr ""
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Enhet som inte stöds"
 
 # Painted lady compass
 msgid ""
@@ -2334,7 +2346,7 @@ msgstr ""
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Annan värdväxt"
 
 # Painted lady direction option
 msgid "Desert nettle"
@@ -2350,7 +2362,7 @@ msgstr ""
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Värdväxt"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
@@ -2370,7 +2382,7 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Näktar"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
@@ -2378,7 +2390,7 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Andra arter"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
@@ -2386,11 +2398,11 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Tistelarter"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Kopierad!"
 
 # Part of Painted lady survey
 msgid ""
@@ -2399,15 +2411,15 @@ msgstr ""
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Höjd över marken (meter)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Höjd"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Starta räkning"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
@@ -2415,7 +2427,7 @@ msgstr ""
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Instruktioner"
 
 # Country name
 msgid "Saint Helena"
@@ -2423,7 +2435,7 @@ msgstr ""
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Äggläggning"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
@@ -2463,11 +2475,11 @@ msgstr ""
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Favorit"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
@@ -2481,11 +2493,11 @@ msgstr ""
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Månfas"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Ny"
 
 #  Moon phase values
 msgid "Waxing crescent"
@@ -2501,7 +2513,7 @@ msgstr ""
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Full"
 
 #  Moon phase values
 msgid "Waning gibbous"
@@ -2595,19 +2607,19 @@ msgstr ""
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Projekt"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Projekt"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "Mitt projekt"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "Alla projekt"
 
 # Survey Projects functionality
 msgid ""
@@ -2627,7 +2639,7 @@ msgstr ""
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "Lämna"
 
 # Survey Projects functionality
 msgid "Successfully left the project."

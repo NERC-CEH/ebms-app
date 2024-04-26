@@ -4,12 +4,12 @@
 # Karolis, 2021
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
 # Marta Depetris, 2023
-# Federica Paradiso <fedediso94@gmail.com>, 2023
+# Federica Paradiso <fedediso94@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2023\n"
+"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2024\n"
 "Language-Team: Italian (Italy) (https://app.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -169,16 +169,16 @@ msgid "Botswana"
 msgstr "Botswana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigeria"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Nuova Zelanda"
 
 msgid "Montserrat"
-msgstr ""
+msgstr "Montserrat"
 
 msgid "Anguilla"
-msgstr ""
+msgstr "Anguilla"
 
 msgid "Elsewhere"
 msgstr "Altrove "
@@ -460,47 +460,51 @@ msgstr "Disegna un'area "
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Posizioni"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Precedente"
 
 # Survey area page
 msgid "New location"
+msgstr "Nuova posizione"
+
+# Survey area page
+msgid "No location"
 msgstr ""
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Nome del sito"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Commenti"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "L'area del campionamento è ancora in fase di monitoraggio."
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Una posizione salvata con successo"
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "Sei sicuro?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Questo verrà eliminato dai dati."
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "No"
 
 msgid "Delete"
 msgstr "Cancella "
@@ -983,11 +987,12 @@ msgstr "Mostra i nomi comuni nella guida"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Utilizza elenchi di specie globali"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
 msgstr ""
+"Non limitarti ai nomi delle specie locali nelle ricerche dei campionamenti."
 
 msgid "Share App Analytics"
 msgstr "Condividi le statistiche dell'app"
@@ -1278,6 +1283,11 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"Il metodo preferito è quello del conteggio 15 minuti. Questo puó essere "
+"fatto in ogni luogo e orario quanndo sono attive le farfalle (e.g. in "
+"giornate miti  e soleggiate). Puoi utilizzare l'app anche per monitorare il "
+"tuo transetto fisso. Le note seguenti spiegano come utilizzare i metodi "
+"attualmente disponibili."
 
 msgid "How to do a 15-minute Count"
 msgstr "Come effettuare un conteggio di 15 minuti (Conteggio a tempo)"
@@ -2638,51 +2648,57 @@ msgstr "Nuvole non puó rimanere vuoto."
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "Non collegato a nessun progetto"
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "Unisciti"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Progetto"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Progetti"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "I miei progetti"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "Tutti i progetti"
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"Non ti sei ancora unito a nessun progetto. Vai a \"Tutti i progetti\" per "
+"unirti a un progetto. <br/><br/>Trascina la pagina verso il basso per "
+"ricaricare la lista."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"<0>{{nazione}}</0> Non ci sono nuovi progetti disponibili al "
+"momento.<br/><br/> Trascina la pagina verso il basso per ricaricare la "
+"lista.  "
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "Ti sei unito al progetto con successo. "
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "Abbandona"
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr ""
+msgstr "Hai abbandonato il progetto con successo."
 
 # Survey sensitivity attribute
 msgid "Sensitive"

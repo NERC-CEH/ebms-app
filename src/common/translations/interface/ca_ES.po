@@ -1,11 +1,11 @@
 # 
 # Translators:
-# Andreu Ubach Permanyer, 2023
+# Andreu Ubach Permanyer, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Andreu Ubach Permanyer, 2023\n"
+"Last-Translator: Andreu Ubach Permanyer, 2024\n"
 "Language-Team: Catalan (Spain) (https://app.transifex.com/ceh/teams/95441/ca_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,22 +159,22 @@ msgid "Ukraine"
 msgstr "Ucraïna"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Sudàfrica"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Botswana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigèria"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Nova Zelanda"
 
 msgid "Montserrat"
-msgstr ""
+msgstr "Montserrat"
 
 msgid "Anguilla"
-msgstr ""
+msgstr "Anguila"
 
 msgid "Elsewhere"
 msgstr "Altres llocs"
@@ -448,54 +448,58 @@ msgid "Please draw your area on the map"
 msgstr "Dibuixa al mapa la teva àrea"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Desactiva el GPS per poder activar l'eina de dibuix."
 
 msgid "Draw an area"
 msgstr "Dibuixa una àrea"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Localitats"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Prèvies"
 
 # Survey area page
 msgid "New location"
+msgstr "Nova localitat"
+
+# Survey area page
+msgid "No location"
 msgstr ""
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Nom del lloc"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Comentaris"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "L'àrea de mostreig encara està sent registrada."
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Localitat guardada amb èxit."
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "N'estàs segur/a?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Això ho descartarà de les dades."
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "No"
 
 msgid "Delete"
 msgstr "Elimina"
@@ -865,19 +869,19 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Neteja memòria cau"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Pots alliberar emmagatzematge utilitzat per l'aplicació."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Neteja"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
-msgstr ""
+msgstr "Eliminaràs la memòria cau, incloent els teus mostrejos carregats."
 
 msgid "Sweden"
 msgstr "Suècia"
@@ -894,6 +898,7 @@ msgstr "Carregat"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Necessites <1>entrar</1> al teu compte per a poder veure els registres."
 
 msgid "No finished pending surveys"
 msgstr "Comptatges pendents, no acabats"
@@ -977,11 +982,11 @@ msgstr "Veure els noms comuns a la guia"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Utilitza les llistes d'espècies globals"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr ""
+msgstr "No ho restringeixis a espècies locals en búsquedes de mostrejos."
 
 msgid "Share App Analytics"
 msgstr "Comparteix les analítiques de l'aplicació"
@@ -1271,6 +1276,11 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"El mètode preferit és fer un recompte de 15 minuts. Això es pot fer en "
+"qualsevol lloc i en qualsevol moment quan les papallones estiguin actives "
+"(és a dir, quan el clima és càlid i preferiblement assolellat). També podeu "
+"utilitzar l'aplicació per registrar els vostres transectes BMS. Les notes a "
+"continuació s'explica com utilitzar els mètodes disponibles actualment."
 
 msgid "How to do a 15-minute Count"
 msgstr "Com fer un Comptatge 15-min"
@@ -1409,7 +1419,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Segur que vols eliminar la pista en curs?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1916,32 +1926,40 @@ msgstr "Què hi ha de nou"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "No ensenyis altre cop"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"S'ha afegit la capacitat per veure els registres que s'han penjat des "
+"d'altres dispositius."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"El mapa de registres s'ha actualitzat per mostrar tots els registres "
+"d'usuari."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
+"S'ha activat la còpia de la llista d'espècies de la secció de transecte "
+"anterior."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"S'ha activat la còpia de la llista d'espècies de la trampa d'arnes anterior."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Pàgina de la Guia d'Espècies actualitzada"
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
 msgstr ""
+"S'ha afegit una opció per esborrar els fitxers penjats a la memòria cau."
 
 # User account action
 msgid "Resend"
@@ -2417,230 +2435,243 @@ msgstr "Seguint la migració de la Migradora dels cards amb Butterfly Count"
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Instruccions"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Santa Helena"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Ponent ous"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Copulant o parelles en tàndem"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Exúvia"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Emergent"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "Suma dels comptatges ha de ser major que 0"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Ensenya'n menys"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Nom de la teva pista"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
 msgstr ""
+"Aquí podeu seleccionar o fer lliscar el dit per editar les vostres pistes "
+"anteriors"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Edita"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Edita localitat"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Preferit"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Segur que vols eliminar la pista guardada?"
 
 # Map GPS button interface
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"Per reprendre el seguiment GPS, primer heu d'eliminar l'àrea dibuixada del "
+"mapa."
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Fase lunar"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Nou"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Nova creixent"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Quart creixent"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Gibosa creixent"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Lluna plena"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Gibosa minvant"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Quart minvant"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Lluna minvant"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Inici de la trampa"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Final de la trampa"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Iniciar meteorologia"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Finalitzar meteorologia"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Si us plau afegeix la trampa d'arnes."
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Ens hem adonat que el teu transsecte té <1>seccions llargues</1>. Si us plau"
+" assegura't de que la <3>localització</3> és correcta."
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Per defecte a l'hora de la posta de sol"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Per defecte a l'hora de la sortida del sol"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Els serveis d'ubicació no estan activats"
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr ""
+msgstr "No tens pistes anteriors."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "S'ha canviat l'ordre de la llista per alfabètic."
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr ""
+msgstr "S'ha canviat l'ordre de la llista al darrer afegit."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "No confirmat"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Acceptat"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Rebutjat"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "La fiabilitat no pot estar buida."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Núvols no pot estar buit."
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "No vinculat a cap projecte"
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "Unir-se"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Projecte"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Projectes"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "Els meus projectes"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "Tots els projectes"
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"Encara no t'has unit a cap projecte. Ves a la pestanya \"Tots els "
+"projectes\" per unir-te a un projecte. <br/><br/> Estira la pàgina cap avall"
+" per actualitzar la llista."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"<0>{{país}}</0> Actualment no hi ha nous projectes per unir-s'hi. <br/><br/>"
+" Estira la pàgina cap avall per actualitzar la llista."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "T'has unit amb èxit al projecte."
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "Sortir"
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr ""
+msgstr "Has deixat amb èxit el projecte."
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "Sensible"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Aquest mostreig té espècies sensibles i no s'ha d'incloure als informes "
+"públics."
