@@ -1,27 +1,43 @@
-import clsx from 'clsx';
 import { checkmarkOutline, pinOutline } from 'ionicons/icons';
+import { twMerge } from 'tailwind-merge';
+import { isValidLocation } from '@flumens/ionic/dist';
 import { IonIcon } from '@ionic/react';
-import Location from 'models/location';
 
 type Props = {
-  location: Location;
-  onSelect: any;
+  name?: string;
+  longitude?: number;
+  latitude?: number;
+  onClick: any;
   isSelected: boolean;
+  className?: string;
 };
 
-const Entry = ({ location, onSelect, isSelected }: Props) => {
+const Entry = ({
+  name,
+  latitude,
+  longitude,
+  onClick,
+  isSelected,
+  className,
+}: Props) => {
+  const isValid = isValidLocation({
+    latitude: latitude!,
+    longitude: longitude!,
+  });
+
   return (
     <div
-      onClick={() => onSelect(location)}
-      className={clsx(
+      onClick={onClick}
+      className={twMerge(
         'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2',
         isSelected
           ? 'border-[var(--form-value-color)] text-[var(--form-value-color)]'
-          : 'border-neutral-200'
+          : 'border-neutral-200',
+        className
       )}
     >
       <div
-        className={clsx(
+        className={twMerge(
           'absolute left-0 top-0 h-full w-full opacity-0',
           'bg-[var(--form-value-color)]',
           isSelected && 'opacity-[2%]',
@@ -30,13 +46,12 @@ const Entry = ({ location, onSelect, isSelected }: Props) => {
       />
       <div className="flex w-full items-center justify-start gap-4">
         <div className="flex w-full flex-col gap-1 py-1">
-          <h4 className="line-clamp-2">{location.attrs.location.name}</h4>
+          <h4 className="line-clamp-2">{name}</h4>
 
-          {location.attrs.location.latitude && (
+          {isValid && (
             <div className="text-xs">
               <IonIcon icon={pinOutline} />
-              {location.attrs.location.latitude.toFixed(3)},{' '}
-              {location.attrs.location.longitude.toFixed(3)}
+              {latitude!.toFixed(3)}, {longitude!.toFixed(3)}
             </div>
           )}
         </div>

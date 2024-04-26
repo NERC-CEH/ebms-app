@@ -77,12 +77,12 @@ const AreaController = ({ sample }: Props) => {
 
   const modal = useRef<HTMLIonModalElement>(null);
   const onCreateGroupLocation = () => modal.current?.present();
-  const onSelectGroupLocation = (loc: LocationModel) => {
+  const onSelectGroupLocation = (loc?: LocationModel) => {
     if (!sample.attrs.location) {
       sample.attrs.location = {} as any; // eslint-disable-line
     }
 
-    const shouldUnselect = sample.attrs.site?.id === loc.id;
+    const shouldUnselect = !loc || sample.attrs.site?.id === loc.id;
     if (shouldUnselect) {
       sample.attrs.site = undefined; // eslint-disable-line
     } else {

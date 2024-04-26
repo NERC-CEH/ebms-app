@@ -460,6 +460,10 @@ msgid "New location"
 msgstr "New location"
 
 # Survey area page
+msgid "No location"
+msgstr "No location"
+
+# Survey area page
 msgid "Site name"
 msgstr "Site name"
 
