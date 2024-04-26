@@ -22,18 +22,6 @@
   #countdown span {
     width: 50px;
     text-align: left;
-
-    &.paused {
-      opacity: 1;
-      width: inherit;
-      padding: 0 10px;
-      color: var(--ion-color-tertiary);
-    }
-
-    &.warn {
-      opacity: 1;
-      color: var(--ion-color-danger);
-    }
   }
 
   #species-list-sort {

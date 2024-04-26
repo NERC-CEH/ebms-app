@@ -15,7 +15,7 @@ function CountdownClock({ isPaused, countdown }: Props) {
     if (completed) return t(`Time's up!`);
 
     return (
-      <span className={minutes < 3 ? 'warn' : ''}>{`${zeroPad(
+      <span className={minutes < 3 ? 'text-danger' : ''}>{`${zeroPad(
         minutes
       )}:${zeroPad(seconds)}`}</span>
     );
@@ -24,7 +24,7 @@ function CountdownClock({ isPaused, countdown }: Props) {
   return (
     <IonLabel id="countdown" slot="end">
       {isPaused ? (
-        <span className="paused">{t('Paused')}</span>
+        <span className="text-warning">{t('Paused')}</span>
       ) : (
         <Countdown date={countdown} renderer={countdownRenderer} />
       )}

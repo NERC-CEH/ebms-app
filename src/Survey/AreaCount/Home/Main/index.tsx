@@ -574,7 +574,7 @@ const AreaCount = ({
     areaPretty = (
       <div className="flex flex-col overflow-hidden">
         <div>{area ? `${area} m²` : ''}</div>
-        <div className="max-w-28 overflow-hidden text-ellipsis whitespace-nowrap text-sm">
+        <div className="max-w-28 overflow-hidden text-ellipsis whitespace-nowrap">
           {sample.attrs.site?.name || sample.attrs.location?.name}
         </div>
       </div>
