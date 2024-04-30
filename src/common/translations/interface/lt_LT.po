@@ -290,6 +290,32 @@ msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr "Mes labai dėkingi šiems žmonėms prisidėjusiems prie šio projekto:"
 
+# Credits page
+msgid ""
+"In the UGP+ project*, citizens, policy makers and scientists work together "
+"to develop future plans for urban nature in Europe. Counting butterflies in "
+"cities is not only a great way to keep track of biodiversity and the quality"
+" of urban green spaces, but also to empower all of us to engage with "
+"questions of biodiversity, nature policy, and propose new actions for people"
+" and the city. The data contributed by participants will be analysed to "
+"inform urban biodiversity conservation actions across Europe."
+msgstr ""
+"UGP+ projekte*  piliečiai, politikos formuotojai ir mokslininkai "
+"bendradarbiauja kurdami būsimus Europos miestų gamtos planus. Drugelių "
+"skaičiavimas miestuose yra ne tik puikus būdas stebėti biologinę įvairovę ir"
+" miestų žaliųjų erdvių kokybę, bet ir įgalinti mus visus įsitraukti į "
+"biologinės įvairovės, gamtos politikos klausimus ir siūlyti naujus veiksmus "
+"miestui. Dalyvių pateikti duomenys bus analizuojami siekiant informuoti apie"
+" miestų biologinės įvairovės išsaugojimo veiksmus visoje Europoje."
+
+# Credits page
+msgid ""
+"UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
+" Society, and is a project funded by the European Union"
+msgstr ""
+"UGP+ - tai Europos Sąjungos finansuojamas projektas \"Enhancing Urban "
+"Greening Plans to Mainstream Biodiversity in Society\"."
+
 msgid "Home"
 msgstr "Namai"
 

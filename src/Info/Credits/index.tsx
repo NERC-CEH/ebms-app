@@ -32,7 +32,6 @@ const Credits = () => (
           We are very grateful for all the people that helped to create this
           app:
         </H>
-
         <IonItem>
           <IonLabel>
             <b>David Roy</b> (UK Centre for Ecology & Hydrology)
@@ -67,7 +66,13 @@ const Credits = () => (
         </IonItem>
         <IonItem>
           <IonLabel>
-            <b>Biren Rathod</b> (the UK Centre for Ecology & Hydrology)
+            <b>Guy Pe’er</b> (German Centre for Integrative Biodiversity
+            Research)
+          </IonLabel>
+        </IonItem>
+        <IonItem>
+          <IonLabel>
+            <b>Biren Rathod</b> (UK Centre for Ecology & Hydrology)
           </IonLabel>
         </IonItem>
       </Section>
@@ -77,6 +82,16 @@ const Credits = () => (
           ABLE is funded by a service contract from the European Union
           Directorate for the Environment, for an initial period of two years
           from 2019-20.
+        </P>
+        <P>
+          In the UGP+ project*, citizens, policy makers and scientists work
+          together to develop future plans for urban nature in Europe. Counting
+          butterflies in cities is not only a great way to keep track of
+          biodiversity and the quality of urban green spaces, but also to
+          empower all of us to engage with questions of biodiversity, nature
+          policy, and propose new actions for people and the city. The data
+          contributed by participants will be analysed to inform urban
+          biodiversity conservation actions across Europe.
         </P>
         <IonItem>
           <a href="https://flumens.io" aria-label="Flumens link">
@@ -312,6 +327,16 @@ const Credits = () => (
             <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
           </IonLabel>
         </IonItem>
+      </Section>
+      <Section>
+        <P skipTranslation className="text-sm opacity-70">
+          *{' '}
+          <T>
+            UGP+ stands for Enhancing Urban Greening Plans to Mainstream
+            Biodiversity in Society, and is a project funded by the European
+            Union
+          </T>
+        </P>
       </Section>
     </Main>
   </Page>

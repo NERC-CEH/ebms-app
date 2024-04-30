@@ -294,6 +294,23 @@ msgstr ""
 "Vi är mycket tacksamma för bidragen från alla er som som hjälpt oss att "
 "skapa den här appen:"
 
+# Credits page
+msgid ""
+"In the UGP+ project*, citizens, policy makers and scientists work together "
+"to develop future plans for urban nature in Europe. Counting butterflies in "
+"cities is not only a great way to keep track of biodiversity and the quality"
+" of urban green spaces, but also to empower all of us to engage with "
+"questions of biodiversity, nature policy, and propose new actions for people"
+" and the city. The data contributed by participants will be analysed to "
+"inform urban biodiversity conservation actions across Europe."
+msgstr ""
+
+# Credits page
+msgid ""
+"UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
+" Society, and is a project funded by the European Union"
+msgstr ""
+
 msgid "Home"
 msgstr "Start"
 
