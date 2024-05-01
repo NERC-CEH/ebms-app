@@ -1,4 +1,6 @@
 #home-user-surveys {
+  margin-top: 0; // to counter the ion-safe-area-top which is calculated in JS
+
   .start-survey-icon {
     background: var(--ion-color-primary);
     border-radius: 50%;

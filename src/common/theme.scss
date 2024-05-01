@@ -102,6 +102,11 @@ html.ios.plt-hybrid #status-bar-background {
   z-index: 1000;
 }
 
+// Fixes the tabbed page top safe area
+html[mode='ios'] .tabs-inner .ion-page {
+  margin-top: var(--ion-safe-area-top);
+}
+
 // info messages
 .attr-page .info-message {
   @apply border-tertiary-300/40 bg-tertiary-50 text-tertiary-900;
