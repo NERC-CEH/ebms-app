@@ -6,7 +6,6 @@ import { Page, Main, Header, RadioInput } from '@flumens';
 import { IonIcon, IonList, NavContext } from '@ionic/react';
 import languages, { Language } from 'common/config/languages';
 import appModel from 'models/app';
-import './styles.scss';
 
 type Props = { hideHeader?: boolean };
 
@@ -40,7 +39,7 @@ function SelectLanguage({ hideHeader }: Props) {
   return (
     <Page
       id="language-select"
-      className={clsx(hideHeader && 'safeAreaPadding')}
+      className={clsx(hideHeader && 'pt-[var(--ion-safe-area-top,0)]')}
     >
       {!hideHeader && <Header title="Language" />}
 

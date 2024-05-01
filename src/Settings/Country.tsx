@@ -82,7 +82,7 @@ const SelectCountry = ({ hideHeader }: Props) => {
   return (
     <Page
       id="country-select"
-      className={hideHeader && 'bg-red-100 pt-[var(--ion-safe-area-top,0)]'}
+      className={hideHeader && 'pt-[var(--ion-safe-area-top,0)]'}
     >
       {!hideHeader && <Header title="Country" />}
 
