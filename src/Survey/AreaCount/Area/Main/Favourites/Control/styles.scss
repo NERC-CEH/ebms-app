@@ -1,13 +1,16 @@
 .map-control-favourites {
   height: 41px;
   width: 41px;
-  margin: 10px;
-  --padding-end: 3px;
-  --padding-start: 3px;
-
-  --box-shadow: 0 0 17px #0000003b, 0 0 7px #00000063;
-
+  margin: 15px 10px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 17px #0000003b, 0 0 7px #00000063;
+  padding: 3px;
   transition-duration: 0.4s;
+
   &:active {
     transform: scale(90%);
   }
