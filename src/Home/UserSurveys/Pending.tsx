@@ -1,9 +1,8 @@
 import { useContext } from 'react';
 import { addOutline } from 'ionicons/icons';
 import { useTranslation } from 'react-i18next';
-import { useToast, getRelativeDate, VirtualList } from '@flumens';
+import { useToast, getRelativeDate, VirtualList, Button } from '@flumens';
 import {
-  IonButton,
   IonIcon,
   IonItemDivider,
   IonLabel,
@@ -149,14 +148,14 @@ const Pending = () => {
       {getSurveys(surveys, showUploadAll)}
 
       {showUploadAll && (
-        <IonButton
-          expand="block"
-          size="small"
-          className="upload-all-button"
-          onClick={onUploadAll}
+        <Button
+          className="absolute bottom-0 right-0 mx-auto my-2.5 px-5 py-2 shadow-xl"
+          color="secondary"
+          onPress={onUploadAll}
+          preventDefault
         >
           Upload All
-        </IonButton>
+        </Button>
       )}
     </IonList>
   );

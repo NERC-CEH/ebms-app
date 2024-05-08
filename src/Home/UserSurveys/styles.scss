@@ -64,22 +64,6 @@
       max-width: 600px; // ipad
       margin: 0 auto;
     }
-
-    .upload-all-button {
-      margin: 10px auto;
-      height: 35px !important;
-      display: block;
-      position: absolute;
-      right: 17px;
-      bottom: 0;
-      overflow: hidden;
-      border-radius: var(--theme-border-radius);
-      box-shadow: -1px 2px 7px 0 #0000001a, 0 2px 9px 0 #3e396b1a;
-
-      &.ios {
-        font-size: 0.9em;
-      }
-    }
   }
 
   ion-item-divider {
