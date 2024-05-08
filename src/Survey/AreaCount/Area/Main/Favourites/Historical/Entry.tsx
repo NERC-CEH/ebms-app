@@ -29,7 +29,7 @@ const Entry = ({ location, onSelect, onDelete, onEdit, distance }: Props) => {
       <IonItem
         detail={false}
         onClick={() => onSelect(id)}
-        className="flex h-16 bg-white [--background:transparent] [--inner-border-width:0] [--inner-padding-end:0]"
+        className="flex h-16 bg-white [--background:transparent] [--inner-border-width:0] [--inner-padding-end:8px]"
       >
         <div className="flex w-full items-center justify-start gap-4">
           <div className="flex w-full flex-col gap-1 py-1">
