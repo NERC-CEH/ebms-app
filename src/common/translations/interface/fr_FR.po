@@ -811,15 +811,6 @@ msgstr ""
 " page . L'application tentera d'envoyer la participation une fois qu'une "
 "connexion correcte au réseau sera disponible. "
 
-msgid "If the record has reached the database a red"
-msgstr "Si les données ont bien été envoyées, "
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(préparer pour envoi & sauvegarder en local) le rouge passera au vert"
-
-msgid "synced to the database"
-msgstr "synchronisé avec la base de données"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

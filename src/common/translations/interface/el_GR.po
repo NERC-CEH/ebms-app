@@ -809,16 +809,6 @@ msgstr ""
 "Έπειτα, η εφαρμογή θα προσπαθήσει να υποβάλει τις καταγραφές σας μόλις "
 "υπάρχει καλή σύνδεση δικτύου.  "
 
-msgid "If the record has reached the database a red"
-msgstr "Αν οι καταγραφές σας έχουν φτάσει στη βάση δεδομένων ένα κόκκινο"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr ""
-"(έτοιμες για υποβολή & τοπικά αποθηκευμένες στην εφαρμογή) θα γίνει πράσινο"
-
-msgid "synced to the database"
-msgstr "συγχρονισμένες με τη βάση δεδομένων"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

@@ -781,15 +781,6 @@ msgstr ""
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 
-msgid "If the record has reached the database a red"
-msgstr "If the record has reached the database a red"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(set for submission & saved locally) will become green"
-
-msgid "synced to the database"
-msgstr "synced to the database"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

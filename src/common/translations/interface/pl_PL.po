@@ -805,15 +805,6 @@ msgstr ""
 "Aplikacja podejmie próbę wysłania Twojich danych, gdy tylko będzie dobre "
 "połączenie z siecią."
 
-msgid "If the record has reached the database a red"
-msgstr "Jeżeli obserwacja dotarła do bazy danych - czerwony"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(ustawiony do wysłania i zapisany lokalnie) stanie się zielony"
-
-msgid "synced to the database"
-msgstr "zsynchronizowano z bazą danych "
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

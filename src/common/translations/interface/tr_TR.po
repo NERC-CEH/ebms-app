@@ -807,15 +807,6 @@ msgstr ""
 "Bitir tuşuna basana kadar gözleminiz \"taslak\" olarak görünür. Uygulama "
 "uygun internet bağlantısı bulunduğunda gözlem kaydınızı sisteme yükler."
 
-msgid "If the record has reached the database a red"
-msgstr "Gözlem kaydı veri tabanına ulaştıysa kırmızı"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(yüklenmek için hazırlandı ve cihazda kaydedildi) yeşile dönecek"
-
-msgid "synced to the database"
-msgstr "veritabanıyla eşleştirildi"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

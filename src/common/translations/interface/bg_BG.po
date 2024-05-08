@@ -817,17 +817,6 @@ msgstr ""
 "горната част на екрана. Приложението ще пробва да изпрати вашия доклад, щом "
 "се появи достатъчно добра връзка с интернет."
 
-msgid "If the record has reached the database a red"
-msgstr "Щом доклада за преброяване пристигне в базата данни, червеният знак"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr ""
-"(докладът е предназначен за изпращане и записан на устройството) ще стане "
-"зелен"
-
-msgid "synced to the database"
-msgstr "докладът е синхронизиран с базата данни"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

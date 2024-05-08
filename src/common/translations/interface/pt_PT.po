@@ -811,15 +811,6 @@ msgstr ""
 "cabeçalho. A aplicação tentará submeter o seu registo assim que tiver uma "
 "boa ligação à rede."
 
-msgid "If the record has reached the database a red"
-msgstr "Se o registo tiver chegado à base de dados, o vermelho"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(submetido e gravado localmente) passará a verde"
-
-msgid "synced to the database"
-msgstr "sincronizado com a base de dados"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

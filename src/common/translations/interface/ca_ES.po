@@ -805,15 +805,6 @@ msgstr ""
 "L'aplicació intentarà enviar els teus registres quan hi hagi bona connexió a"
 " la xarxa."
 
-msgid "If the record has reached the database a red"
-msgstr "Si el registre ha arribat a la base de dades el vermell"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(preparat per a enviar i guardar localment) es tornarà verd"
-
-msgid "synced to the database"
-msgstr "sincronitzat a la base de dades"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

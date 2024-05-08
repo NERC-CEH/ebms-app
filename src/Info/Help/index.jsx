@@ -1,4 +1,4 @@
-import { personOutline, addOutline, sendOutline } from 'ionicons/icons';
+import { personOutline, addOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Page, Main, Header, Collapse } from '@flumens';
 import { IonList, IonIcon } from '@ionic/react';
@@ -104,14 +104,6 @@ export default () => (
                 header is clicked. The application will try to submit your
                 record once there is a good network connection.
               </T>
-              <br />
-              <br />
-              <T>If the record has reached the database a red</T>{' '}
-              <IonIcon icon={sendOutline} style={{ color: 'red' }} />
-              <T>(set for submission & saved locally) will become green</T>{' '}
-              <IonIcon icon={sendOutline} style={{ color: 'green' }} /> (
-              <T>synced to the database</T>
-              ).
               <br />
               <br />
               <b>

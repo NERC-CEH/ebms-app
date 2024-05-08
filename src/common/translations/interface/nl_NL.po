@@ -802,15 +802,6 @@ msgstr ""
 "app probeert dan uw telling in te dienen zodra er een goede "
 "internetverbinding is."
 
-msgid "If the record has reached the database a red"
-msgstr "Als de telling is ontvangen door de database, zal een rood"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(klaar voor indienen en lokaal opgeslagen) wordt groen"
-
-msgid "synced to the database"
-msgstr "gesynchroniseerd met de database"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

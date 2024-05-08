@@ -747,15 +747,6 @@ msgid ""
 " will try to submit your record once there is a good network connection."
 msgstr ""
 
-msgid "If the record has reached the database a red"
-msgstr ""
-
-msgid "(set for submission & saved locally) will become green"
-msgstr ""
-
-msgid "synced to the database"
-msgstr ""
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

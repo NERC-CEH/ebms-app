@@ -802,15 +802,6 @@ msgstr ""
 "förrän man klickat på knappen Klart högst upp på sidan. Appen sänder dina "
 "data när den har en bra internet-anslutning."
 
-msgid "If the record has reached the database a red"
-msgstr "Om uppgifterna har nått databasen kommer den röda markeringen"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(klart för sändning & sparat på enheten) att bli grön"
-
-msgid "synced to the database"
-msgstr "synkroniserad med databasen"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

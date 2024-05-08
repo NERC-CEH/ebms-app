@@ -806,15 +806,6 @@ msgstr ""
 "sidehovedet. Applikationen vil indsende din observation, så snart der er god"
 " netværksforbindelse."
 
-msgid "If the record has reached the database a red"
-msgstr "Hvis observationen er blevet indsendt til databasen vil en rød"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(klar til indsendelse og gemt lokalt) blive en grøn"
-
-msgid "synced to the database"
-msgstr "synkroniseret med databasen"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

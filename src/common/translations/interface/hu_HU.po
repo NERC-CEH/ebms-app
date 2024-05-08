@@ -802,15 +802,6 @@ msgstr ""
 "gombra. Az alkalmazás a befejezett felméréseket, megfelelő hálózati "
 "kapcsolatnál (pl. WiFi), megpróbálja feltölteni az adatbázisba."
 
-msgid "If the record has reached the database a red"
-msgstr "Ha a felmérés sikeresen fel lett töltve az adatbázisba, a piros nyíl"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(feltöltésre vár, helyi eszközön) zöldre vált"
-
-msgid "synced to the database"
-msgstr "(adatbázisba feltöltve)"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

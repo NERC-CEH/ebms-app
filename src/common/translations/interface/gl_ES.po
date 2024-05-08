@@ -814,15 +814,6 @@ msgstr ""
 "de datos até premer no botón Rematar da cabeceira. A aplicación tentará "
 "enviar os rexistros en canto haxa unha boa conexión a Internet."
 
-msgid "If the record has reached the database a red"
-msgstr "Se o rexistro chegou á base de datos un vermello"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(configurado para o envío e gardado local) volverase verde"
-
-msgid "synced to the database"
-msgstr "sincronizado coa base de datos"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

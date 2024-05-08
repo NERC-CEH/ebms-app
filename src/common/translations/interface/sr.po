@@ -792,15 +792,6 @@ msgstr ""
 "базу података док не притиснете дугме „Заврши“ у заглављу апликације. Када "
 "будете повезани са стабилном мрежом, подаци ће бити послати."
 
-msgid "If the record has reached the database a red"
-msgstr "Црвена уколико је налаз стигао до базе података"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(стављено за слање и сачувано локално) ће постати зелено"
-
-msgid "synced to the database"
-msgstr "синхронизовано са базом података"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

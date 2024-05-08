@@ -791,16 +791,6 @@ msgstr ""
 "databáze, dokud nezmačknete tlačítko Dokončit nahoře. Aplikace se pokusí "
 "odeslat Vaše údaje hned, jak bude na dobrém síťovém připojení."
 
-msgid "If the record has reached the database a red"
-msgstr "Pokud bude záznam odeslán do databáze, červené"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr ""
-"(nastavený pro odeslání a lokálně uložený) označení se změní na zelené"
-
-msgid "synced to the database"
-msgstr "synchronizováno s databází"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

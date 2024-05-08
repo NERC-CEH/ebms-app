@@ -799,15 +799,6 @@ msgstr ""
 "верхней части страницы. Приложение отправит Вашу запись, как только будет "
 "установлено хорошее подключение к Интернету."
 
-msgid "If the record has reached the database a red"
-msgstr "Если запись отправлена в базу данных красный"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(отправляется и локально сохранен) станет зеленым"
-
-msgid "synced to the database"
-msgstr "синхронизируется с базой данных"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

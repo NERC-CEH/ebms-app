@@ -822,15 +822,6 @@ msgstr ""
 " aplicación intentará enviar su registro una vez que haya una buena conexión"
 " de red."
 
-msgid "If the record has reached the database a red"
-msgstr "Si el registro ha llegado a la base de datos aparecerá en rojo"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(configurado para envío y guardado localmente). Se volverá verde "
-
-msgid "synced to the database"
-msgstr "cuando esté sincronizado con la base de datos."
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

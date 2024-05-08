@@ -794,15 +794,6 @@ msgstr ""
 " bazu podataka dok se ne stisne tipka „Završi“ u zaglavlju. Aplikacija će "
 "vam pokušati poslati podatke kad postoji dobra mrežna veza."
 
-msgid "If the record has reached the database a red"
-msgstr "Ako je zapis dospio u bazu podataka crveno"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(priprema za predaju i lokalna pohrana) će postati zeleno"
-
-msgid "synced to the database"
-msgstr "sinhronizirano s bazom podataka"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

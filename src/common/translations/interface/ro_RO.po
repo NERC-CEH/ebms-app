@@ -808,15 +808,6 @@ msgstr ""
 "încerca să vă trimită înregistrarea odată ce esită o conexiune bună la "
 "rețea."
 
-msgid "If the record has reached the database a red"
-msgstr "Dacă înregistrarea a ajuns în baza de date un punct roșu"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(setat pentru trimitere și salvat local) va deveni verde"
-
-msgid "synced to the database"
-msgstr "sincronizat cu baza de date"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

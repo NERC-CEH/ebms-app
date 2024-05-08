@@ -794,15 +794,6 @@ msgstr ""
 "stisnite gumb 'Končaj' desno zgoraj. Aplikacija bo shranila popis takoj, ko "
 "bo na voljo internetna povezava."
 
-msgid "If the record has reached the database a red"
-msgstr "Ko je popis shranjen v bazo podatkov se iz rdeče barve"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(pripravljeno za oddajo) spremeni v zeleno"
-
-msgid "synced to the database"
-msgstr "sinhronizirano z bazo podatkov"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

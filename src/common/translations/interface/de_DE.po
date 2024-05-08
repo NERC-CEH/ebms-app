@@ -815,15 +815,6 @@ msgstr ""
 "\"Fertigstellen\" in der Kopfzeile geklickt wird. Die Anwendung wird Deine "
 "Meldung übertragen, sobald es eine gute Netzwerkverbindung gibt."
 
-msgid "If the record has reached the database a red"
-msgstr "Wenn die Meldung die Datenbank erreicht hat, wird sie von rot"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(zur Einreichung eingestellt und lokal gespeichert) zu grün wechseln."
-
-msgid "synced to the database"
-msgstr "mit der Datenbank synchronisiert"
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "

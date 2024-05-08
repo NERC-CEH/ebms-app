@@ -820,15 +820,6 @@ msgstr ""
 "L'applicazione proverà a sottomettere il tuo campionamento quando ci sarà "
 "una buona connessione internet. "
 
-msgid "If the record has reached the database a red"
-msgstr "Se l'osservazione è stata caricata sul database è in rosso"
-
-msgid "(set for submission & saved locally) will become green"
-msgstr "(impostato per l'invio e salvato localmente) diventerà verde"
-
-msgid "synced to the database"
-msgstr "sincronizzato con il database "
-
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
