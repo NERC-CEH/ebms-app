@@ -23,6 +23,11 @@
 
       box-shadow: -1px 2px 7px 0 #0000001a, 0 2px 9px 0 #3e396b1a;
 
+      ion-segment-button.md {
+        --padding-end: 5px;
+        --padding-start: 5px;
+      }
+
       &[value='map'] {
         border-radius: var(--theme-border-radius);
         background: rgba(255, 255, 255, 0.9);

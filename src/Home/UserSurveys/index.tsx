@@ -5,7 +5,6 @@ import { useRouteMatch } from 'react-router-dom';
 import { Page, Main, Badge } from '@flumens';
 import {
   IonSegment,
-  IonLabel,
   IonSegmentButton,
   IonHeader,
   IonToolbar,
@@ -60,22 +59,24 @@ const UserSurveyComponent = () => {
         <IonToolbar>
           <IonSegment onIonChange={onSegmentClick} value={segment}>
             <IonSegmentButton value="pending">
-              <IonLabel className="ion-text-wrap">
-                <T>Pending</T>
+              <div className="w-full flex-col py-1">
+                <div className="line-clamp-2 text-wrap">
+                  <T>Pending</T>
+                </div>
                 {getPendingSurveysCount()}
-              </IonLabel>
+              </div>
             </IonSegmentButton>
 
             <IonSegmentButton value="uploaded">
-              <IonLabel className="ion-text-wrap">
+              <div className="line-clamp-2 w-full text-wrap py-1">
                 <T>Uploaded</T>
-              </IonLabel>
+              </div>
             </IonSegmentButton>
 
             <IonSegmentButton value="map">
-              <IonLabel className="ion-text-wrap">
+              <div className="line-clamp-2 w-full text-wrap py-1">
                 <T>Map</T>
-              </IonLabel>
+              </div>
             </IonSegmentButton>
           </IonSegment>
         </IonToolbar>
