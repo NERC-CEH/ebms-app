@@ -197,10 +197,10 @@ msgid "Password"
 msgstr "Contraseña"
 
 msgid "Sign in"
-msgstr "Registrarse"
+msgstr "Iniciar sesión"
 
 msgid "Register"
-msgstr "Registro"
+msgstr "Registrarse"
 
 msgid "Forgot password?"
 msgstr "¿Se te olvidó tu contraseña?"
@@ -302,12 +302,25 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
+"En el proyecto UGP+*, ciudadanos, responsables políticos y científicos "
+"trabajan juntos para desarrollar planes de futuro para la naturaleza urbana "
+"en Europa. El recuento de mariposas en las ciudades no sólo es una excelente"
+" manera de hacer un seguimiento de la biodiversidad y la calidad de los "
+"espacios verdes urbanos, sino también de capacitarnos a todos para abordar "
+"cuestiones relacionadas con la biodiversidad y la política de la naturaleza,"
+" y proponer nuevas medidas para las personas y la ciudad. Los datos "
+"aportados por los participantes se analizarán para fundamentar acciones de "
+"conservación de la biodiversidad urbana en toda Europa.m"
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
+"UGP+ (de sus siglas en inglés, Enhancing Urban Greening Plans to Mainstream "
+"Biodiversity in Society) significa potenciar los planes de ecologización "
+"urbana para integrar la biodiversidad en la sociedad  y es un proyecto "
+"financiado por la Unión Europea"
 
 msgid "Home"
 msgstr "Inicio"
@@ -487,7 +500,7 @@ msgstr "Nueva ubicación"
 
 # Survey area page
 msgid "No location"
-msgstr ""
+msgstr "Sin ubicación"
 
 # Survey area page
 msgid "Site name"

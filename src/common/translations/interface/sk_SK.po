@@ -1,12 +1,12 @@
 # 
 # Translators:
 # Lucia, 2023
-# Lucia Makarova, 2023
+# Lucia Makarova, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Lucia Makarova, 2023\n"
+"Last-Translator: Lucia Makarova, 2024\n"
 "Language-Team: Slovak (Slovakia) (https://app.transifex.com/ceh/teams/95441/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,16 +166,16 @@ msgid "Botswana"
 msgstr "Botswana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigéria"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Nový Zéland"
 
 msgid "Montserrat"
-msgstr ""
+msgstr "Montserrat"
 
 msgid "Anguilla"
-msgstr ""
+msgstr "Anguilla"
 
 msgid "Elsewhere"
 msgstr "Iná krajina"
@@ -299,12 +299,21 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
+"V projekte UGP+ spolupracujú občania, tvorcovia politík a vedci na vývoji "
+"budúcich plánov pre mestskú prírodu v Európe. Počítanie motýľov v mestách "
+"nie je len skvelým spôsobom, ako sledovať biodiverzitu a kvalitu mestských "
+"zelených priestorov, ale zároveň nás všetkých nabáda k tomu, aby sme sa "
+"zapájali do otázok biodiverzity, politiky prírody a navrhli nové akcie pre "
+"ľudí a mestá. Údaje prispievateľov budú analyzované na informovanie akcií na"
+" ochranu mestskej biodiverzity v celej Európe."
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
+"UGP+ znamená \"Posilňovanie plánov zelenej urbanizácie na zahrnutie "
+"biodiverzity do spoločnosti\", a je to projekt financovaný Európskou úniou."
 
 msgid "Home"
 msgstr "Domov"
@@ -471,51 +480,51 @@ msgstr "Nakreslite plochu"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Lokality"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Predošlý"
 
 # Survey area page
 msgid "New location"
-msgstr ""
+msgstr "Nová lokalita"
 
 # Survey area page
 msgid "No location"
-msgstr ""
+msgstr "Žiadna lokalita"
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Názov lokality"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Komentáre"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "Pozorovaná oblasť je stále trekovaná."
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Lokalita bola úspešne uložená."
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "Ste si istý?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Týmto sa vymažú údaje z formulárov."
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Áno"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "Nie"
 
 msgid "Delete"
 msgstr "Vymazať"
@@ -993,11 +1002,12 @@ msgstr "V sprievodcovi zobraziť bežné názvy"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Použite zoznam globálnych druhov"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
 msgstr ""
+"Pri vyhľadávaní v prieskumoch sa neobmedzujte len na miestne názvy druhov.  "
 
 msgid "Share App Analytics"
 msgstr "Zdieľať analýzu aplikácie"
@@ -1284,6 +1294,8 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"Uprednostňovanou metódou je vykonať 15-minútové sčítanie. To môžete urobiť na akomkoľvek mieste a kedykoľvek, kedy sú motýle aktívne (t.j. keď je teplé počasie a najlepšie slnečno). Môžete tiež použiť aplikáciu na zaznamenanie Vašich stanovených motýlích transektov. Nižšie uvedené poznámky Vám napovedia, ako používať momentálne dostupné metódy.\n"
+" "
 
 msgid "How to do a 15-minute Count"
 msgstr "Ako vykonať 15-minútový monitoring"
@@ -2625,58 +2637,64 @@ msgstr "Údaje o oblačnosti nesmú chýbať. "
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "Nie je priradené k žiadnemu projektu"
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "Zúčastniť sa"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Projekt"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Projekty"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "Moje projekty"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "Všetky projekty"
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"Zatiaľ nie ste súčasťou žiadneho projektu. Chodťe na \"Všetky projekty\" a "
+"vyberte si niektorý <br/><br/>Potiahnutím dole obnovíte zoznam."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"<0>{{krajina}}</0>Momentálne nie sú k dispozícii žiadne nové projekty. "
+"<br/><br/> Potiahnutím dole obnovíte zoznam."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "Úspešne ste sa pridali k projektu."
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "Opustiť"
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr ""
+msgstr "Úspešne ste opustili projekt"
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "Citlivý"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Tento prieskum obsahuje citlivé druhy a nemal by byť zahrnutý do verejných "
+"štatistík."

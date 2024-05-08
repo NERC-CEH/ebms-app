@@ -304,12 +304,23 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
+"Nel progetto UGP+, i cittadini, le amministrazioni e gli scienziati lavorano"
+" insieme per sviluppare piani futuri per la natura urbana in Europa. Contare"
+" farfalle nelle città non è solo un ottimo modo per tenere traccia della "
+"biodiversità e della qualità degli spazi verdi urbani, ma anche importante "
+"per sentirsi parte di questioni relative alla biodiversità, alle politiche "
+"sulla natura e di proporre nuove azioni per le persone e la città. I dat "
+"raccolti dai partecipanti saranno analizzati e utilizzati per plasmare "
+"azioni di conservazione della biodiversità in Europa."
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
+"UGP+ sta per \"Enhancing Urban Greening Plans to Mainstream Biodiversity in "
+"Society\"-migliorare i piani di inverdimento urbano per integrare la "
+"biodiversità nella società- ed è un progetto finanziato dall’Unione Europea"
 
 msgid "Home"
 msgstr "Home "
@@ -489,7 +500,7 @@ msgstr "Nuova posizione"
 
 # Survey area page
 msgid "No location"
-msgstr ""
+msgstr "Nessuna posizione "
 
 # Survey area page
 msgid "Site name"
@@ -2719,10 +2730,12 @@ msgstr "Hai abbandonato il progetto con successo."
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "Sensibile"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Questo campionamento contiene specie sensibili e non dovrebbe essere inclusa"
+" nei report pubblici"
