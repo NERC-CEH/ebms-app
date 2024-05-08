@@ -24,7 +24,7 @@ const Credits = () => (
     <Header title="Credits" />
     <Main className="ion-padding">
       <Section>
-        <img src={sponsorsLogo} alt="" />
+        <img src={sponsorsLogo} alt="" className="mx-auto" />
       </Section>
 
       <Section>
