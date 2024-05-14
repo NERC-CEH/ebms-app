@@ -39,7 +39,7 @@ const IncrementalButton = ({
 
   return (
     <Button
-      className="relative m-0 h-full w-[62px] rounded-none p-0 text-[1.3em] text-[var(--color-tertiary-800)]"
+      className="relative m-0 h-full w-[62px] shrink-0 rounded-none p-0 text-[1.3em] text-[var(--color-tertiary-800)]"
       onPress={onClick}
       fill="clear"
       onLongPress={onLongClick}
