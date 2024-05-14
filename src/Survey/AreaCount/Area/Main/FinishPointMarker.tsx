@@ -2,13 +2,13 @@ import { CircleMarker, Location } from '@flumens';
 
 type Props = Location & { active: boolean };
 
-const clone = (obj: any) => JSON.parse(JSON.stringify(obj));
-
 const FinishPointMarker = ({ shape, active }: Props) => {
-  const isShapePolyline = shape?.type === 'LineString';
+  const isShapePolyline =
+    shape?.type === 'LineString' && Array.isArray(shape?.coordinates);
 
-  const endPosition = isShapePolyline ? clone(shape?.coordinates)?.at(-1) : [];
-  const [longitude, latitude] = endPosition || [];
+  const [longitude, latitude] = isShapePolyline
+    ? shape.coordinates.at(-1)!
+    : [];
 
   const isValidLocation =
     Number.isFinite(latitude) && Number.isFinite(longitude);
