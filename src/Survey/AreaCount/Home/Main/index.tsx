@@ -90,13 +90,12 @@ const byTime = (sp1: Sample, sp2: Sample) => {
   return date2.getTime() - date1.getTime();
 };
 
-const getDefaultTaxonCount = (taxon: any, createdOn?: any) => {
-  return {
-    count: 0,
-    taxon,
-    createdOn,
-  };
-};
+const getDefaultTaxonCount = (taxon: any, createdOn?: any) => ({
+  count: 0,
+  taxon,
+  createdOn,
+  isDisabled: false, // for remote occurrences without samples, don't let open any pages
+});
 
 const buildSpeciesCount = (agg: any, smp: Sample) => {
   const taxon = toJS(smp.occurrences[0]?.attrs.taxon);
@@ -227,7 +226,7 @@ const AreaCount = ({
   };
 
   const getSpeciesEntry = ([id, species]: any) => {
-    const isSpeciesDisabled = !species.count;
+    const isSpeciesDisabled = !species.count || species.isDisabled;
     const { taxon } = species;
 
     const speciesName = taxon[taxon.found_in_name];
@@ -283,18 +282,11 @@ const AreaCount = ({
   const getSpeciesList = () => {
     if (sample.isPreciseSingleSpeciesSurvey()) return null;
 
-    // For remote-fetched records don't have sub-sample layer, only occurrences, so this is a temporary workaround.
-    if (sample.occurrences.length)
-      return (
-        <div className="m-2">
-          <div className="flex w-full justify-between rounded-md border-b-[0.5px] border-solid border-neutral-300 bg-white px-4 py-3">
-            <div>{sample.occurrences[0].getPrettyName()}</div>
-            {sample.occurrences.length}
-          </div>
-        </div>
-      );
-
-    if (!sample.samples.length && !sample.shallowSpeciesList.length) {
+    const hasNoSpecies =
+      !sample.samples.length &&
+      !sample.occurrences.length &&
+      !sample.shallowSpeciesList.length;
+    if (hasNoSpecies) {
       return (
         <IonList lines="full">
           <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
@@ -341,6 +333,18 @@ const AreaCount = ({
 
     const allowSorting = !!count && !isDisabled;
 
+    // For remote-fetched records don't have sub-sample layer, only occurrences, so this is a temporary workaround.
+    const occSpeciesList = sample.occurrences
+      .map(occ => [
+        occ.id,
+        {
+          ...getDefaultTaxonCount(occ.attrs.taxon),
+          count: 1,
+          isDisabled: true,
+        },
+      ])
+      .map(getSpeciesEntry);
+
     return (
       <>
         {allowSorting && (
@@ -366,6 +370,7 @@ const AreaCount = ({
             </div>
 
             {speciesList}
+            {occSpeciesList}
           </div>
         </IonList>
       </>

@@ -12,6 +12,7 @@ const Records = ({ sample }: Props) => {
 
   const onRecordClick = (feature: any) => {
     const { id, occId } = feature.properties;
+    if (!id || !occId) return; // in case occ was not fetched from remote
 
     const url = match.url.split('/area');
     url.pop();
