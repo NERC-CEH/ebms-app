@@ -225,7 +225,7 @@ const AreaCount = ({
     );
   };
 
-  const getSpeciesEntry = ([id, species]: any) => {
+  const getSpeciesEntry = ([, species]: any) => {
     const isSpeciesDisabled = !species.count || species.isDisabled;
     const { taxon } = species;
 
@@ -251,7 +251,7 @@ const AreaCount = ({
       sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance();
 
     return (
-      <IonItemSliding key={id}>
+      <IonItemSliding key={species.taxon.warehouse_id}>
         <IonItem
           detail={!isSpeciesDisabled && !hasZeroAbundance}
           onClick={navigateToSpeciesOccurrencesWrap}

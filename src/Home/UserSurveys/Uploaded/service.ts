@@ -60,7 +60,7 @@ export default async function fetchRemoteSamples(
       sample.isPartial = true;
       return sample;
     } catch (error) {
-      console.warn(doc);
+      console.warn(JSON.stringify(doc));
       console.error(error);
       return null;
     }

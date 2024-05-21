@@ -1,3 +1,7 @@
+## 1.26.1
+
+Fixed incremental species button bug.
+
 ## 1.26.0
 
 Added Sensitivity survey option.
