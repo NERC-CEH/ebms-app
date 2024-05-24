@@ -100,11 +100,6 @@ export async function fetch(
   }
 }
 
-const convertSrefSystem = (loc: any) => ({
-  ...loc,
-  centroidSrefSystem: loc.srefSystem || loc.centroidSrefSystem, // TODO: remove once the report supports this
-});
-
 export async function fetchTransects(): Promise<RemoteAttributes[]> {
   const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/reports/projects/ebms/ebms_app_sites_list_2.xml`;
 
@@ -129,7 +124,7 @@ export async function fetchTransects(): Promise<RemoteAttributes[]> {
     const getValues = (doc: any) =>
       mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
 
-    const docs = res.data.data.map(getValues).map(convertSrefSystem);
+    const docs = res.data.data.map(getValues);
     docs.forEach(LocationModel.remoteSchema.parse);
 
     return docs;
@@ -177,7 +172,7 @@ export async function fetchTransectSections(
     const getValues = (doc: any) =>
       mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
 
-    const docs = res.data.data.map(getValues).map(convertSrefSystem);
+    const docs = res.data.data.map(getValues);
     const remoteSchema = LocationModel.remoteSchema.extend({
       parentId: z.string(), // this is required to join with transects
     });
