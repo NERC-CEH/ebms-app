@@ -59,16 +59,8 @@ const Sections = ({ sample, onTransectSelect }: Props) => {
     return <Transects onTransectSelect={onTransectSelect} />;
 
   const getSectionItemWrap = (s: Sample) => getSectionItem(s, match);
-  const byCode = (smp1: Sample, smp2: Sample) => {
-    const sectionCodeNumberIndex1: any = (
-      smp1.attrs.location as any
-    ).code?.match(/\d+$/)?.[0];
-    const sectionCodeNumberIndex2: any = (
-      smp2.attrs.location as any
-    ).code?.match(/\d+$/)?.[0];
-    return sectionCodeNumberIndex1 - sectionCodeNumberIndex2;
-  };
-  const sections = sample.samples.slice().sort(byCode).map(getSectionItemWrap);
+
+  const sections = sample.samples.map(getSectionItemWrap);
 
   return (
     <Main id="transect-sections-list">

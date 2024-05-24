@@ -44,9 +44,16 @@ const SectionListController = ({ sample }: Props) => {
     const byTransectId = (section: Location) =>
       section.attrs.parentId === transect.id;
 
+    const byCode = (loc1: Location, loc2: Location) => {
+      const sectionCodeNumberIndex1: any = loc1.attrs.code?.match(/\d+$/)?.[0];
+      const sectionCodeNumberIndex2: any = loc2.attrs.code?.match(/\d+$/)?.[0];
+      return sectionCodeNumberIndex1 - sectionCodeNumberIndex2;
+    };
+
     const sections = locations
       .filter(byType(TRANSECT_SECTION_TYPE))
-      .filter(byTransectId);
+      .filter(byTransectId)
+      .sort(byCode);
 
     const survey = sample.getSurvey();
     const addSectionSample = (section: any) => {
