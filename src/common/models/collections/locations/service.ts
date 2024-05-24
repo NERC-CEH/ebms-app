@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
 import { camelCase, mapKeys } from 'lodash';
-import { ZodError } from 'zod';
+import { z, ZodError } from 'zod';
 import { isAxiosNetworkError, HandledError } from '@flumens';
 import CONFIG from 'common/config';
 import LocationModel, { RemoteAttributes } from 'models/location';
@@ -50,7 +50,7 @@ export interface Location {
   };
 }
 
-export default async function fetch(
+export async function fetch(
   locationTypeId: number | string
 ): Promise<RemoteAttributes[]> {
   const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/locations`;
@@ -79,6 +79,110 @@ export default async function fetch(
     const docs = res.data.map(getValues);
 
     docs.forEach(LocationModel.remoteSchema.parse);
+
+    return docs;
+  } catch (error: any) {
+    if (axios.isCancel(error)) return [];
+
+    if (isAxiosNetworkError(error))
+      throw new HandledError(
+        'Request aborted because of a network issue (timeout or similar).'
+      );
+
+    if ('issues' in error) {
+      const err: ZodError = error;
+      throw new Error(
+        err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
+      );
+    }
+
+    throw error;
+  }
+}
+
+const convertSrefSystem = (loc: any) => ({
+  ...loc,
+  centroidSrefSystem: loc.srefSystem || loc.centroidSrefSystem, // TODO: remove once the report supports this
+});
+
+export async function fetchTransects(): Promise<RemoteAttributes[]> {
+  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/reports/projects/ebms/ebms_app_sites_list_2.xml`;
+
+  const token = await userModel.getAccessToken();
+
+  const options = {
+    params: {
+      location_type_id: '',
+      locattrs: '',
+      website_id: 118,
+      userID: userModel.id,
+    },
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    timeout: 80000,
+  };
+
+  try {
+    const res = await axios.get(url, options);
+
+    const getValues = (doc: any) =>
+      mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
+
+    const docs = res.data.data.map(getValues).map(convertSrefSystem);
+    docs.forEach(LocationModel.remoteSchema.parse);
+
+    return docs;
+  } catch (error: any) {
+    if (axios.isCancel(error)) return [];
+
+    if (isAxiosNetworkError(error))
+      throw new HandledError(
+        'Request aborted because of a network issue (timeout or similar).'
+      );
+
+    if ('issues' in error) {
+      const err: ZodError = error;
+      throw new Error(
+        err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
+      );
+    }
+
+    throw error;
+  }
+}
+
+export async function fetchTransectSections(
+  locationList: string[]
+): Promise<RemoteAttributes[]> {
+  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/reports/projects/ebms/ebms_app_sections_list_2.xml`;
+
+  const token = await userModel.getAccessToken();
+
+  const options = {
+    params: {
+      website_id: 118,
+      userID: userModel.id,
+      location_list: locationList?.join(','),
+    },
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    timeout: 80000,
+  };
+
+  try {
+    const res = await axios.get(url, options);
+
+    const getValues = (doc: any) =>
+      mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
+
+    const docs = res.data.data.map(getValues).map(convertSrefSystem);
+    const remoteSchema = LocationModel.remoteSchema.extend({
+      parentId: z.string(), // this is required to join with transects
+    });
+
+    docs.forEach(remoteSchema.parse);
 
     return docs;
   } catch (error: any) {

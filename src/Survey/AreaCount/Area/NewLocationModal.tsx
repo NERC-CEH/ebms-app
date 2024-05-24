@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { resizeOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
@@ -29,6 +29,8 @@ const schema = object({
   name: z.string().min(1, 'Please fill in'),
   lat: z.string(),
   lon: z.string(),
+  centroidSref: z.string(),
+  centroidSrefSystem: z.string(),
   boundaryGeom: z.string(),
   comment: z.string().optional(),
 });
@@ -69,6 +71,8 @@ const getNewLocationSeed = (location?: AreaCountLocation) => ({
   boundaryGeom: location?.shape ? getGeomString(location?.shape) : '',
   lat: `${location?.latitude}`,
   lon: `${location?.longitude}`,
+  centroidSref: `${location?.latitude} ${location?.longitude}`,
+  centroidSrefSystem: '4326',
   name: '',
   comment: '',
 });
@@ -89,6 +93,11 @@ const NewLocationModal = (
   const [newLocation, setNewLocation] = useState<FixedLocation>(
     getNewLocationSeed(location)
   );
+
+  useEffect(() => {
+    // we don't care of overwriting the form values as the location shouldn't change while the GPS is off
+    setNewLocation(getNewLocationSeed(location));
+  }, [location]);
 
   const { success: isValidLocation } = schema.safeParse(newLocation);
 

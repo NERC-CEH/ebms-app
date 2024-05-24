@@ -124,11 +124,11 @@ class LocationModel extends Model {
      * Location type e.g. transect = 777, transect section = 778 etc.
      */
     locationTypeId: z.string(),
+    centroidSref: z.string(),
+    centroidSrefSystem: z.string(),
     parentId: z.string().nullable().optional(),
     boundaryGeom: z.string().nullable().optional(),
     code: z.string().nullable().optional(),
-    centroidSref: z.string().optional(),
-    centroidSrefSystem: z.string().optional(),
     createdById: z.string().nullable().optional(),
     updatedById: z.string().nullable().optional(),
     externalKey: z.string().nullable().optional(),
@@ -437,7 +437,8 @@ class LocationModel extends Model {
   }
 
   toRemoteJSON() {
-    const { name, comment, lat, lon, boundaryGeom } = this.attrs;
+    const { name, comment, boundaryGeom, centroidSref, centroidSrefSystem } =
+      this.attrs;
 
     const customAttrs = this.attrs.type ? this.toRemoteMothTrapJSON() : {};
 
@@ -446,8 +447,8 @@ class LocationModel extends Model {
         name,
         external_key: this.cid,
         location_type_id: this.attrs.locationTypeId,
-        centroid_sref: `${lat} ${lon}`,
-        centroid_sref_system: 4326,
+        centroid_sref: centroidSref,
+        centroid_sref_system: centroidSrefSystem,
         boundary_geom: boundaryGeom,
         comment,
 

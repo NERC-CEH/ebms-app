@@ -9,7 +9,7 @@ import Location, {
 } from '../../location';
 import { locationsStore as store } from '../../store';
 import groups from '../groups';
-import fetch from './service';
+import { fetch, fetchTransects, fetchTransectSections } from './service';
 
 type constructorOptions = {
   id: string;
@@ -124,8 +124,9 @@ export class Locations extends Collection<Location> {
     this.fetching.isFetching = true;
 
     const mothTraps = await fetch(MOTH_TRAP_TYPE);
-    const transects = await fetch(TRANSECT_TYPE);
-    const transectSections = await fetch(TRANSECT_SECTION_TYPE);
+    const transects = await fetchTransects();
+    const locationList = transects.map(({ id }) => id);
+    const transectSections = await fetchTransectSections(locationList);
     const groupLocations = await groups.fetchLocations();
 
     const docs = [
