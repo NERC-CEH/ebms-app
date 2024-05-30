@@ -111,6 +111,7 @@ export async function fetchTransects(): Promise<RemoteAttributes[]> {
       locattrs: '',
       website_id: 118,
       userID: userModel.id,
+      limit: 10000,
     },
     headers: {
       Authorization: `Bearer ${token}`,
@@ -159,6 +160,7 @@ export async function fetchTransectSections(
       website_id: 118,
       userID: userModel.id,
       location_list: locationList?.join(','),
+      limit: 10000,
     },
     headers: {
       Authorization: `Bearer ${token}`,

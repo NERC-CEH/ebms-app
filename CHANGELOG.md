@@ -1,3 +1,7 @@
+## 1.26.3
+
+Fixed transect locations.
+
 ## 1.26.2
 
 Fixed transect locations.
