@@ -3,7 +3,7 @@
   "id": "uk.ac.ceh.ebms",
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
-  "version": "1.26.3",
+  "version": "1.26.4",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "prepare": "husky",

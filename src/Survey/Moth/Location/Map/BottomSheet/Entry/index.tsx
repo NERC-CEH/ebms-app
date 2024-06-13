@@ -14,6 +14,7 @@ import {
   IonItemOptions,
   IonItemOption,
   NavContext,
+  IonItem,
 } from '@ionic/react';
 import mothTrapIcon from 'common/images/moth-inside-icon.svg';
 import MothTrap from 'common/models/location';
@@ -84,9 +85,9 @@ const MothTrapEntry = ({
 
   return (
     <IonItemSliding className="rounded-md">
-      <div
+      <IonItem
         className={clsx(
-          'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2',
+          'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2 [--border-style:none] [--inner-padding-end:0] [--padding-start:0]',
           isSelected
             ? 'border-[var(--form-value-color)] text-[var(--form-value-color)]'
             : 'border-neutral-200'
@@ -135,7 +136,7 @@ const MothTrapEntry = ({
             <OnlineStatus location={mothTrap} onUpload={onUploadWrap} />
           )}
         </div>
-      </div>
+      </IonItem>
 
       {isDraft && (
         <IonItemOptions side="end">

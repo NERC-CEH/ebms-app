@@ -151,6 +151,8 @@ export async function fetchTransects(): Promise<RemoteAttributes[]> {
 export async function fetchTransectSections(
   locationList: string[]
 ): Promise<RemoteAttributes[]> {
+  if (!locationList?.length) return [];
+
   const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/reports/projects/ebms/ebms_app_sections_list_2.xml`;
 
   const token = await userModel.getAccessToken();
@@ -159,7 +161,7 @@ export async function fetchTransectSections(
     params: {
       website_id: 118,
       userID: userModel.id,
-      location_list: locationList?.join(','),
+      location_list: locationList.join(','),
       limit: 10000,
     },
     headers: {

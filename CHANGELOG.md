@@ -1,3 +1,7 @@
+## 1.26.4
+
+Fixed user locations.
+
 ## 1.26.3
 
 Fixed transect locations.
