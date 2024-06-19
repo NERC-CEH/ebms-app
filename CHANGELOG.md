@@ -1,3 +1,7 @@
+## 1.26.5
+
+Fixed moth trap locations.
+
 ## 1.26.4
 
 Fixed user locations.

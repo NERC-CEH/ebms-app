@@ -18,6 +18,7 @@ function AddNewMothTrap() {
       const model = new MothTrap({
         attrs: {
           locationTypeId: MOTH_TRAP_TYPE,
+          centroidSrefSystem: '4326',
         } as any,
       });
       model.startGPS();
