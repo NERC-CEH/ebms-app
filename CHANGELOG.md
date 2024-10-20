@@ -1,3 +1,7 @@
+## 1.26.6
+
+Fixed moth trap edit form.
+
 ## 1.26.5
 
 Fixed moth trap locations.

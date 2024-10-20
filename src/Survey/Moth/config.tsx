@@ -684,6 +684,7 @@ const survey: Survey = {
       },
       attrs: {
         training: appModel.attrs.useTraining,
+        inputForm: survey.webForm,
         location: null,
         comment: null,
         recorder,
