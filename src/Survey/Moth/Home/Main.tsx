@@ -355,7 +355,7 @@ const HomeMain = ({
       </IonList>
 
       {!isDisabled && (
-        <div className="mx-5 mt-8 flex items-center justify-center gap-8">
+        <div className="mx-5 my-8 flex items-center justify-center gap-8">
           <Button
             color="primary"
             className="py-2"
