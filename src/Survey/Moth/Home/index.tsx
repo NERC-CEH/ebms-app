@@ -227,8 +227,19 @@ const HomeController = ({ sample }: Props) => {
       );
     };
     const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
-
     if (!occWithSameSpecies) return;
+
+    const isAlreadyMerged =
+      occWithSameSpecies.cid === occ.cid ||
+      occWithSameSpecies.metadata.mergedOccurrences?.includes(occ.cid);
+    if (isAlreadyMerged) {
+      // Don't know how this can happen yet
+      console.error('Moth occ duplicate was rejected for merging.');
+      return;
+    }
+
+    occWithSameSpecies.metadata.mergedOccurrences ??= [];
+    occWithSameSpecies.metadata.mergedOccurrences.push(occ.cid);
 
     occWithSameSpecies.attrs.count += occ.attrs.count;
     occWithSameSpecies.attrs['count-outside'] += occ.attrs['count-outside'];

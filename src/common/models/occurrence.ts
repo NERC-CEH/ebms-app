@@ -2,6 +2,7 @@ import { IObservableArray } from 'mobx';
 import {
   Occurrence as OccurrenceOriginal,
   OccurrenceAttrs,
+  OccurrenceMetadata,
   validateRemoteModel,
   ElasticOccurrence,
   ElasticOccurrenceMedia,
@@ -63,6 +64,11 @@ export type Taxon = {
   warehouse_id: number;
 };
 
+export type Metadata = OccurrenceMetadata & {
+  // moth survey
+  mergedOccurrences?: string[];
+};
+
 export type Attrs = OccurrenceAttrs & {
   taxon: any;
   comment?: string;
@@ -102,7 +108,7 @@ export const doesShallowTaxonMatch = (shallowEntry: Taxon, taxon: Taxon) => {
   return false;
 };
 
-export default class Occurrence extends OccurrenceOriginal<Attrs> {
+export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
   /**
    * Transform ES document into local structure.
    */
