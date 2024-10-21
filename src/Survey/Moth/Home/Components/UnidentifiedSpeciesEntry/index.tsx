@@ -113,7 +113,7 @@ const UnidentifiedSpeciesEntry = ({
         <div className="flex w-full items-center justify-between gap-2">
           <IonLabel>{speciesName}</IonLabel>
           {!identifying && (
-            <div className="flex w-full items-center justify-between gap-2">
+            <div className="flex w-full items-center justify-end gap-2">
               {!hasSpeciesPhoto && (
                 <Badge color="warning">Please add a photo</Badge>
               )}
