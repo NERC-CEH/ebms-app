@@ -55,11 +55,6 @@ const useDeleteSpeciesPrompt = () => {
   return showDeleteSpeciesPrompt;
 };
 
-function setSurveyEndTime(sample: Sample) {
-  sample.attrs.surveyEndTime = new Date().toISOString(); // eslint-disable-line no-param-reassign
-  return sample.save();
-}
-
 /* eslint-disable no-param-reassign */
 function toggleTimer(sample: Sample) {
   if (sample.isTimerFinished()) return;
@@ -250,17 +245,13 @@ const HomeController = ({ sample }: Props) => {
 
     await appModel.save();
 
-    const saveAndReturn = () => {
-      setSurveyEndTime(sample);
-
-      sample.cleanUp();
-      sample.save();
-      navigate(`/home/user-surveys`, 'root');
-    };
-
     // eslint-disable-next-line no-param-reassign
     sample.metadata.saved = true;
-    saveAndReturn();
+    sample.attrs.surveyEndTime = new Date().toISOString(); // eslint-disable-line no-param-reassign
+
+    sample.cleanUp();
+    sample.save();
+    navigate(`/home/user-surveys`, 'root');
   };
 
   const onSubmit = async () => {
