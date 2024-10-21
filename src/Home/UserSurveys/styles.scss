@@ -11,6 +11,8 @@
 
   ion-header ion-toolbar {
     --background: transparent;
+    position: fixed;
+    color: var(--ion-color-main);
 
     ion-segment {
       max-width: calc(
@@ -48,9 +50,6 @@
         margin: 0;
       }
     }
-
-    position: fixed;
-    color: var(--ion-color-main);
   }
 
   ion-content {

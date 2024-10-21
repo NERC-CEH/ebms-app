@@ -18,12 +18,13 @@
 
     ion-button {
       font-size: 0.9em;
-      &.md {
-        font-size: 0.7em;
-      }
       float: right;
       color: #000000;
       --border-color: #000000;
+
+      &.md {
+        font-size: 0.7em;
+      }
     }
   }
 }
