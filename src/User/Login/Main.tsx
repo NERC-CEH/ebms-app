@@ -43,6 +43,9 @@ const LoginMain = ({ onSubmit }: Props) => {
         </InfoMessage>
 
         <form onSubmit={handleSubmit(onSubmit)}>
+           {/* Fake onSubmit on Enter */}
+          <input type="submit" className="hidden" />
+
           <div className="rounded-list">
             <ControlledInput
               control={control}
@@ -70,7 +73,7 @@ const LoginMain = ({ onSubmit }: Props) => {
           <Button
             className={clsx('mx-auto mt-7', !formState.isValid && 'opacity-50')}
             color="primary"
-            type="submit"
+            onPress={() => handleSubmit(onSubmit)()}
           >
             Sign in
           </Button>

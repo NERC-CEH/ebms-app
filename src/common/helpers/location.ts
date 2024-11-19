@@ -1,6 +1,6 @@
 import { toJS } from 'mobx';
 import wkt from 'wellknown';
-import SphericalMercator from '@mapbox/sphericalmercator';
+import { SphericalMercator } from '@mapbox/sphericalmercator';
 
 type XYPoint = [number, number];
 

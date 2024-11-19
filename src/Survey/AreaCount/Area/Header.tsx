@@ -83,7 +83,7 @@ const HeaderComponent = ({
     <Toggle
       ref={toggleRef}
       label="GPS"
-      className="border-none bg-transparent [--form-value-color:var(--ion-color-success)] [&>div>label]:text-white"
+      className="border-none bg-transparent [--form-value-color:var(--ion-color-success)] [&>div>div>label]:text-white"
       isSelected={isGPSTracking}
       onChange={onToggle}
       isDisabled={isDisabled}
