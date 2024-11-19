@@ -275,3 +275,8 @@ ion-item .sc-ion-label-md-h.sc-ion-label-md-s.md[slot='end'],
 ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios[slot='end'] {
   color: var(--form-value-color);
 }
+
+// menu date picker opacity match other input value colors
+.date-input-attr ion-accordion:last-of-type ion-item[slot='header'] ion-label[slot='end']{
+  opacity: 1 !important;
+}

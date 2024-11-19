@@ -70,7 +70,14 @@ export { useToast, useAlert, useLoader } from '@flumens/ionic/dist/hooks';
 export * from '@flumens/ionic/dist/utils/image';
 export * from '@flumens/ionic/dist/utils/errors';
 export { default as UUID, hashCode } from '@flumens/ionic/dist/utils/uuid';
+
 export * from '@flumens/ionic/dist/utils/date';
+// TODO: temp fix
+export const isValidDate = (date: string | number | Date) => {
+  const d = new Date(date);
+  return d instanceof Date && !isNaN(d as any); // eslint-disable-line no-restricted-globals
+};
+
 export { options as sentryOptions } from '@flumens/ionic/dist/utils/sentry';
 export { default as device } from '@flumens/ionic/dist/utils/device';
 export { default as string } from '@flumens/ionic/dist/utils/string';

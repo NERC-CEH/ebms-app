@@ -152,7 +152,7 @@ export const fetchHistoricalWeather = async (
 
   try {
     const res = await axios(
-      `${url}/data/2.5/onecall/timemachine?lat=${latitude}&lon=${longitude}&dt=${unixTimestamp}&appid=${config.weatherSiteApiKey}&only_current=true&units=metric`
+      `${url}/data/3.0/onecall/timemachine?lat=${latitude}&lon=${longitude}&dt=${unixTimestamp}&appid=${config.weatherSiteApiKey}&only_current=true&units=metric`
     );
 
     const normaliseResponseValues = ({
