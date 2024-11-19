@@ -247,6 +247,17 @@ ion-icon[slot='start'].md {
   color: var(--ion-text-color, #000);
 }
 
+// unify icon strokes and widths
+ion-icon.size-5,
+ion-icon.size-6,
+.menu-attr-item ion-icon[slot='start'],
+ion-item > ion-icon[slot='start'],
+.single-photo-picker ion-icon[slot='start'] {
+  --ionicon-stroke-width: 24px;
+  width: 24px;
+  height: 24px;
+}
+
 // Makes iOS menu items same height as Android
 ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios {
   margin-top: 12px;
