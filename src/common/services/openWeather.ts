@@ -38,29 +38,38 @@ type Weather = {
   windSpeed: string | null;
 };
 
+type HistoricalWeatherData = {
+  dt: number;
+  sunrise: number;
+  sunset: number;
+  temp: number;
+  feels_like: number;
+  pressure: number;
+  humidity: number;
+  dew_point: number;
+  uvi: number;
+  clouds: number;
+  visibility: number;
+  wind_speed: number;
+  wind_deg: number;
+  wind_gust: number;
+  weather: {
+    id: number;
+    main: string;
+    description: string;
+    icon: string;
+  }[];
+  rain: {
+    '1h': number;
+  };
+};
+
 export interface HistoricalWeatherRemoteRes {
   lat: number;
   lon: number;
   timezone: string;
   timezone_offset: number;
-  current: {
-    dt: number;
-    sunrise: number;
-    sunset: number;
-    temp: number;
-    feels_like: number;
-    pressure: number;
-    humidity: number;
-    dew_point: number;
-    uvi: number;
-    clouds: number;
-    visibility: number;
-    wind_speed: number;
-    wind_deg: number;
-    wind_gust: number;
-    weather: { id: number; main: string; description: string; icon: string }[];
-    rain: { '1h': number };
-  };
+  data: HistoricalWeatherData[]
 }
 
 const url = config.weatherSiteUrl;
@@ -151,20 +160,18 @@ export const fetchHistoricalWeather = async (
   const unixTimestamp = Math.floor(new Date(date).getTime() / 1000);
 
   try {
-    const res = await axios(
+    const res = await axios<HistoricalWeatherRemoteRes>(
       `${url}/data/3.0/onecall/timemachine?lat=${latitude}&lon=${longitude}&dt=${unixTimestamp}&appid=${config.weatherSiteApiKey}&only_current=true&units=metric`
     );
 
-    const normaliseResponseValues = ({
-      current,
-    }: HistoricalWeatherRemoteRes): Weather => ({
+    const normaliseResponseValues = (current:HistoricalWeatherData): Weather => ({
       temperature: getTemperature(current?.temp),
       windSpeed: getWindSpeed(current?.wind_speed),
       windDirection: getWindDirection(current?.wind_deg),
       cloud: getCloud(current.clouds),
     });
 
-    return normaliseResponseValues(res.data);
+    return normaliseResponseValues(res.data.data?.[0]);
   } catch (error) {
     console.error(error);
   }
