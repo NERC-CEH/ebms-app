@@ -49,7 +49,7 @@ const MenuMain = ({
   const userEmail = user.email;
 
   return (
-    <Main className="app-menu">
+    <Main className="app-menu [--padding-top:env(safe-area-inset-top)]">
       <img src={logo} alt="app logo" />
 
       <IonList lines="full">

@@ -91,7 +91,7 @@ const MainReport = ({
   const isLoggedIn = userModel.isLoggedIn();
 
   return (
-    <Main>
+    <Main className="[--padding-top:env(safe-area-inset-top)]">
       <IonRefresher slot="fixed" onIonRefresh={onListRefreshPull}>
         <IonRefresherContent />
       </IonRefresher>

@@ -22,6 +22,6 @@
     --ion-toolbar-background: white;
     --color: black;
 
-    padding-top: 0;
+    padding-top: env(safe-area-inset-top);
   }
 }
