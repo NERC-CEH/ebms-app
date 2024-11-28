@@ -33,8 +33,8 @@ export const habitatAttr = {
     { title: 'Lawn', data_name: '23581' },
     { title: 'Flowering strip', data_name: '23583' },
     { title: 'Built-up area', data_name: '23585' },
-    { title: 'Fallow land, abandonned area (urban)', data_name: '23587' },
-    { title: 'Fallow land, abandonned field  (rural)', data_name: '23589' },
+    { title: 'Fallow land, abandoned area (urban)', data_name: '23587' },
+    { title: 'Fallow land, abandoned field  (rural)', data_name: '23589' },
     { title: 'Field edge', data_name: '23591' },
     { title: 'Arable field', data_name: '23593' },
     { title: 'Grassland / Meadow / Pasture', data_name: '23595' },
@@ -260,8 +260,7 @@ export const landNumberAttr = {
 export const landscapeFeaturesAttr = {
   id: 'locAttr:364',
   type: 'choice_input',
-  title:
-    'What landscape features are located in your observation location and/or within a radius of 50 meters?',
+  title: 'Landscape features',
   multiple: true,
   appearance: 'button',
   choices: [
