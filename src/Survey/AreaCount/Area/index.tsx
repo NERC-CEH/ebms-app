@@ -7,6 +7,7 @@ import { device, Location, useLoader, useToast } from '@flumens';
 import { IonIcon, IonPage, isPlatform, NavContext } from '@ionic/react';
 import groups from 'common/models/collections/groups';
 import GroupModel from 'common/models/group';
+import Media from 'common/models/media';
 import locations from 'models/collections/locations';
 import LocationModel, { RemoteAttributes } from 'models/location';
 import Sample, { AreaCountLocation } from 'models/sample';
@@ -117,15 +118,16 @@ const AreaController = ({ sample }: Props) => {
 
   const onCloseLocationModal = () => setNewLocationModalOpen(false);
 
-  const onSaveNewLocation = async (newSiteAttrs: RemoteAttributes) => {
+  const onSaveNewLocation = async (
+    newSiteAttrs: RemoteAttributes,
+    media: Media[]
+  ) => {
     if (
       !userModel.isLoggedIn() ||
       !userModel.attrs.verified ||
       !device.isOnline
     )
       return false;
-
-    console.log('Saving location', newSiteAttrs);
 
     try {
       await loader.show('Please wait...');
@@ -137,9 +139,9 @@ const AreaController = ({ sample }: Props) => {
       const newSite = new LocationModel({
         skipStore: true,
         attrs: newSiteAttrs as any, // any - to fix Moth trap attrs
+        media,
       });
       await newSite.saveRemote();
-
       await group.addLocation(newSite);
       await refreshLocations();
 
@@ -180,7 +182,7 @@ const AreaController = ({ sample }: Props) => {
         onCancel={onCloseLocationModal}
         onSave={onSaveNewLocation}
         group={sample.attrs.group!}
-        location={location}
+        shape={location.shape}
       />
     </IonPage>
   );

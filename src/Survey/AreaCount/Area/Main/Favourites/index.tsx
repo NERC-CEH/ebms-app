@@ -121,7 +121,7 @@ const Favourites = ({
         </IonToolbar>
 
         {hasGroup && (
-          <IonToolbar className=" !p-0 text-black [--background:var(--ion-page-background)]">
+          <IonToolbar className="!p-0 text-black [--background:var(--ion-page-background)]">
             <IonSegment onIonChange={onSegmentClick} value={segment}>
               <IonSegmentButton value="group">
                 <IonLabel className="ion-text-wrap">

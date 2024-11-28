@@ -1,6 +1,11 @@
 import { observer } from 'mobx-react';
 import { Route, Redirect } from 'react-router-dom';
-import { TailwindContext, TailwindContextValue } from '@flumens';
+import {
+  TailwindBlockContext,
+  TailwindContext,
+  TailwindContextValue,
+  defaultContext,
+} from '@flumens';
 import {
   IonApp as IonAppPlain,
   IonRouterOutlet,
@@ -24,6 +29,11 @@ const IonApp = IonAppPlain as any; // IonApp has 'lang' prop missing.
 
 const platform = isPlatform('ios') ? 'ios' : 'android';
 const tailwindContext: TailwindContextValue = { platform };
+const tailwindBlockContext = {
+  ...defaultContext,
+  ...tailwindContext,
+  basePath: '',
+};
 
 const HomeRedirect = () => <Redirect to="home" />;
 
@@ -34,20 +44,22 @@ const App = () => {
     <IonApp lang={language as any}>
       <LanguageCountrySelectRequired appModel={appModel}>
         <TailwindContext.Provider value={tailwindContext}>
-          <Onboarding>
-            <WhatsNewDialog appModel={appModel} />
-            <IonReactRouter>
-              <IonRouterOutlet id="main">
-                <Route exact path="/" component={HomeRedirect} />
-                <Route path="/home" component={Home} />
-                {Info}
-                {User}
-                {Survey}
-                {Location}
-                {Settings}
-              </IonRouterOutlet>
-            </IonReactRouter>
-          </Onboarding>
+          <TailwindBlockContext.Provider value={tailwindBlockContext}>
+            <Onboarding>
+              <WhatsNewDialog appModel={appModel} />
+              <IonReactRouter>
+                <IonRouterOutlet id="main">
+                  <Route exact path="/" component={HomeRedirect} />
+                  <Route path="/home" component={Home} />
+                  {Info}
+                  {User}
+                  {Survey}
+                  {Location}
+                  {Settings}
+                </IonRouterOutlet>
+              </IonReactRouter>
+            </Onboarding>
+          </TailwindBlockContext.Provider>
         </TailwindContext.Provider>
       </LanguageCountrySelectRequired>
     </IonApp>

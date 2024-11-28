@@ -22,8 +22,8 @@ const Traps = ({ sample, onSelect, mothTraps }: Props) => {
       geometry: {
         type: 'Point',
         coordinates: [
-          trap.attrs.location.longitude,
-          trap.attrs.location.latitude,
+          trap.attrs.location?.longitude,
+          trap.attrs.location?.latitude,
           0.0,
         ],
       },

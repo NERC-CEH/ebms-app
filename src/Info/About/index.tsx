@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
 import { Trans as T } from 'react-i18next';
 import { Page, Main, Header, Section } from '@flumens';
+import appModel from 'models/app';
 import './styles.scss';
 
 const { P } = Section;
 
-const Component = ({ appModel }) => {
+const Component = () => {
   const isEnglish = appModel.attrs.language === 'en';
 
   return (
@@ -69,10 +69,6 @@ const Component = ({ appModel }) => {
       </Main>
     </Page>
   );
-};
-
-Component.propTypes = {
-  appModel: PropTypes.object.isRequired,
 };
 
 export default Component;

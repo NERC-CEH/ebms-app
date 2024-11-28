@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { Trans as T } from 'react-i18next';
 import { IonItem } from '@ionic/react';
 import groups from 'common/data/groups';
@@ -37,6 +36,11 @@ function prettifyName(species, searchPhrase) {
   );
 }
 
+// Species.propTypes = {
+//   species: PropTypes.object.isRequired,
+//   searchPhrase: PropTypes.string.isRequired,
+//   onSelect: PropTypes.func.isRequired,
+// };
 const Species = ({ species, searchPhrase, onSelect }) => {
   const prettyName = prettifyName(species, searchPhrase);
   const { isRecorded } = species;
@@ -54,12 +58,6 @@ const Species = ({ species, searchPhrase, onSelect }) => {
       </div>
     </IonItem>
   );
-};
-
-Species.propTypes = {
-  species: PropTypes.object.isRequired,
-  searchPhrase: PropTypes.string.isRequired,
-  onSelect: PropTypes.func.isRequired,
 };
 
 export default Species;

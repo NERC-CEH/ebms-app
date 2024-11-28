@@ -87,6 +87,10 @@ const MothTrapSetup = ({ sample: location }: Props) => {
   const addNewLamp = () => {
     const cid = UUID();
 
+    if (!location.attrs.lamps) {
+      location.attrs.lamps = [];
+    }
+
     location.attrs.lamps.push({
       cid,
       attrs: { type: '', quantity: 1, description: '' },

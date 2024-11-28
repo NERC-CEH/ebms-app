@@ -1,3 +1,4 @@
+export { boolToWarehouseValue } from '@flumens/ionic/dist/models/Indicia/helpers';
 export {
   default as Model,
   type Options as ModelOptions,
@@ -86,7 +87,7 @@ export {
   prettyPrintLocation,
   updateModelLocation,
   normalizeCoords,
-  isValidLocation
+  isValidLocation,
 } from '@flumens/ionic/dist/utils/location';
 export {
   useDisableBackButton,
@@ -120,4 +121,13 @@ export {
   default as TailwindContext,
   type ContextValue as TailwindContextValue,
 } from '@flumens/tailwind/dist/components/Context';
+export {
+  type Block as BlockT,
+  type ChoiceValues,
+} from '@flumens/tailwind/dist/Survey';
+export { default as Block } from '@flumens/tailwind/dist/components/Block';
+export {
+  default as TailwindBlockContext,
+  defaultContext,
+} from '@flumens/tailwind/dist/components/Block/Context';
 export { default as InfoBackgroundMessage } from '@flumens/tailwind/dist/components/InfoBackgroundMessage';

@@ -12,7 +12,7 @@ type Props = {
   lamp: Lamp;
 };
 
-const MothTrapSetupMain = ({ location, lamp }: Props) => {
+const MothTrapLampMain = ({ location, lamp }: Props) => {
   const { description, type } = lamp.attrs;
 
   const getCounterOnChange = (value: number) => {
@@ -57,4 +57,4 @@ const MothTrapSetupMain = ({ location, lamp }: Props) => {
   );
 };
 
-export default observer(MothTrapSetupMain);
+export default observer(MothTrapLampMain);

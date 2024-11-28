@@ -125,7 +125,7 @@ export class Locations extends Collection<Location> {
 
     const mothTraps = await fetch(MOTH_TRAP_TYPE);
     const transects = await fetchTransects();
-    const locationList = transects.map(({ id }) => id);
+    const locationList = transects.map(({ id }) => id!);
     const transectSections = await fetchTransectSections(locationList);
     const groupLocations = await groups.fetchLocations();
 

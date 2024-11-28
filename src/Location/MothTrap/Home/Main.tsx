@@ -23,8 +23,8 @@ type Props = {
   deleteLamp: (lamp: Lamp) => void;
 };
 
-const MothTrapSetupMain = ({ location, addNewLamp, deleteLamp }: Props) => {
-  const { type, lamps, location: loc, typeOther } = location.attrs;
+const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
+  const { type, lamps = [], location: loc = {}, typeOther } = location.attrs;
 
   const { t } = useTranslation();
 
@@ -150,4 +150,4 @@ const MothTrapSetupMain = ({ location, addNewLamp, deleteLamp }: Props) => {
   );
 };
 
-export default observer(MothTrapSetupMain);
+export default observer(MothTrapHomeMain);

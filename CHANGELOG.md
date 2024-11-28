@@ -1,6 +1,12 @@
+## 1.27.0
+
+Updated fixed site setup form.
+
 ## 1.26.6
 
 Fixed moth trap edit form.
+Updated species dictionary.
+Bug fixes.
 
 ## 1.26.5
 

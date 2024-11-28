@@ -1,5 +1,4 @@
 import { createRef, Component } from 'react';
-import PropTypes from 'prop-types';
 import { IonSearchbar, withIonLifeCycle } from '@ionic/react';
 import groups from 'common/data/groups';
 import appModel from 'models/app';
@@ -17,12 +16,12 @@ function getDefaultState() {
 }
 
 class index extends Component {
-  static propTypes = {
-    onSpeciesSelected: PropTypes.func.isRequired,
-    recordedTaxa: PropTypes.array,
-    speciesGroups: PropTypes.array,
-    useDayFlyingMothsOnly: PropTypes.bool,
-  };
+  // static propTypes = {
+  //   onSpeciesSelected: PropTypes.func.isRequired,
+  //   recordedTaxa: PropTypes.array,
+  //   speciesGroups: PropTypes.array,
+  //   useDayFlyingMothsOnly: PropTypes.bool,
+  // };
 
   input = createRef();
 

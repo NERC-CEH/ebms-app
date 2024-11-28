@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { IonList } from '@ionic/react';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Species from './components/Species';
@@ -53,6 +52,12 @@ const getSearchInfo = () => (
   </InfoBackgroundMessage>
 );
 
+// Suggestions.propTypes = {
+//   searchResults: PropTypes.array,
+//   searchPhrase: PropTypes.string.isRequired,
+//   onSpeciesSelected: PropTypes.func.isRequired,
+// };
+
 const Suggestions = ({ searchResults, searchPhrase, onSpeciesSelected }) => {
   if (!searchResults) {
     return (
@@ -91,12 +96,6 @@ const Suggestions = ({ searchResults, searchPhrase, onSpeciesSelected }) => {
       {suggestionsList}
     </IonList>
   );
-};
-
-Suggestions.propTypes = {
-  searchResults: PropTypes.array,
-  searchPhrase: PropTypes.string.isRequired,
-  onSpeciesSelected: PropTypes.func.isRequired,
 };
 
 export default Suggestions;

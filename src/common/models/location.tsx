@@ -1,5 +1,6 @@
-import { observable } from 'mobx';
+import { IObservableArray, observable } from 'mobx';
 import axios, { AxiosError } from 'axios';
+import { snakeCase } from 'lodash';
 import * as Yup from 'yup';
 import { z, object } from 'zod';
 import { Geolocation } from '@capacitor/geolocation';
@@ -14,9 +15,11 @@ import {
   updateModelLocation,
   ModelValidationMessage,
   UUID,
+  boolToWarehouseValue,
 } from '@flumens';
 import CONFIG from 'common/config';
 import userModel from 'models/user';
+import Media from './media';
 import { locationsStore } from './store';
 import { getLocalAttributes } from './utils';
 
@@ -83,7 +86,10 @@ export const verifyLocationSchema = Yup.mixed().test(
   validateLocation
 );
 
-type LocationOptions = ModelOptions<Attrs> & { skipStore?: boolean };
+type LocationOptions = ModelOptions<Attrs> & {
+  media?: any[];
+  skipStore?: boolean;
+};
 
 export type Lamp = {
   cid: string;
@@ -108,24 +114,24 @@ export type Attrs = RemoteAttributes & MothTrapAttrs & ModelAttrs;
 
 class LocationModel extends Model {
   static remoteSchema = object({
-    /**
-     * Entity ID.
-     */
-    id: z.string(),
-    createdOn: z.string(),
-    updatedOn: z.string(),
-    lat: z.string(),
-    lon: z.string(),
+    lat: z.string().min(1),
+    lon: z.string().min(1),
     /**
      * Location name.
      */
-    name: z.string(),
+    name: z.string().min(1),
     /**
      * Location type e.g. transect = 777, transect section = 778 etc.
      */
-    locationTypeId: z.string(),
-    centroidSref: z.string(),
-    centroidSrefSystem: z.string(),
+    locationTypeId: z.string().min(1),
+    centroidSref: z.string().min(1),
+    centroidSrefSystem: z.string().min(1),
+    /**
+     * Entity ID.
+     */
+    id: z.string().optional(),
+    createdOn: z.string().optional(),
+    updatedOn: z.string().optional(),
     parentId: z.string().nullable().optional(),
     boundaryGeom: z.string().nullable().optional(),
     code: z.string().nullable().optional(),
@@ -258,8 +264,8 @@ class LocationModel extends Model {
 
       metadata: {
         ...metadata,
-        createdOn: new Date(createdOn).getTime(),
-        updatedOn: new Date(updatedOn).getTime(),
+        createdOn: new Date(createdOn!).getTime(),
+        updatedOn: new Date(updatedOn!).getTime(),
       },
     };
 
@@ -290,19 +296,17 @@ class LocationModel extends Model {
 
   // eslint-disable-next-line
   // @ts-ignore
-  attrs: Attrs = Model.extendAttrs(this.attrs, {
-    // eslint-disable-next-line
-    // @ts-ignore
-    location: this.attrs.location || {},
-    typeOther: null,
-    lamps: [],
-  });
+  attrs: Attrs = Model.extendAttrs(this.attrs, {});
 
-  constructor({ skipStore, ...options }: LocationOptions) {
+  media: IObservableArray<Media>;
+
+  constructor({ skipStore, media = [], ...options }: LocationOptions) {
     super({
       store: skipStore ? undefined : locationsStore,
       ...options,
     });
+
+    this.media = observable(media);
   }
 
   isDraft = () => !this.id;
@@ -316,14 +320,12 @@ class LocationModel extends Model {
   }
 
   async saveRemote() {
-    console.log('Location uploading');
-
-    const submission = this.toRemoteJSON();
-
-    const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/locations`;
-
     try {
       this.remote.synchronising = true;
+
+      const warehouseMediaNames = await this.uploadMedia();
+      const submission = this.toRemoteJSON(warehouseMediaNames);
+      const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/locations`;
 
       const token = await userModel.getAccessToken();
 
@@ -399,7 +401,15 @@ class LocationModel extends Model {
   }
 
   private toRemoteMothTrapJSON() {
-    const { lamps, type, typeOther, location } = this.attrs;
+    const {
+      lamps,
+      type,
+      typeOther,
+      location,
+      comment,
+      boundaryGeom,
+      centroidSrefSystem,
+    } = this.attrs;
 
     const stringifyLamp = (lamp: any) => JSON.stringify(lamp);
     const getLampType = (lamp: any) => {
@@ -426,9 +436,12 @@ class LocationModel extends Model {
     const trapType = LocationModel.schema.type.remote.values.find(byValue)?.id;
 
     return {
-      location_type_id: MOTH_TRAP_TYPE, // the model already has this, so probably not needed
       name: location.name,
+      location_type_id: MOTH_TRAP_TYPE, // the model already has this, so probably not needed
+      centroid_sref_system: centroidSrefSystem,
       centroid_sref: `${location.latitude} ${location.longitude}`,
+      boundary_geom: boundaryGeom,
+      comment,
       'locAttr:306': stringifiedLamps,
       'locAttr:330': trapType,
       'locAttr:234': userModel.id,
@@ -436,25 +449,43 @@ class LocationModel extends Model {
     };
   }
 
-  toRemoteJSON() {
-    const { name, comment, boundaryGeom, centroidSref, centroidSrefSystem } =
-      this.attrs;
+  toRemoteJSON(warehouseMediaNames = {}) {
+    const toSnakeCase = (attrs: any) => {
+      return Object.entries(attrs).reduce((agg: any, [attr, value]): any => {
+        const attrModified = attr.includes('locAttr:') ? attr : snakeCase(attr);
+        agg[attrModified] = value; // eslint-disable-line no-param-reassign
+        return agg;
+      }, {});
+    };
 
-    const customAttrs = this.attrs.type ? this.toRemoteMothTrapJSON() : {};
+    const transformBoolean = (attrs: any) =>
+      Object.entries(attrs).reduce((agg: any, [attr, value]: any) => {
+        if (typeof value === 'boolean') {
+          agg[attr] = boolToWarehouseValue(value); // eslint-disable-line no-param-reassign
+        }
+        return agg;
+      }, attrs);
+
+    const attrs = this.attrs.type
+      ? this.toRemoteMothTrapJSON()
+      : transformBoolean(toSnakeCase(this.attrs));
 
     const submission: any = {
       values: {
-        name,
         external_key: this.cid,
-        location_type_id: this.attrs.locationTypeId,
-        centroid_sref: centroidSref,
-        centroid_sref_system: centroidSrefSystem,
-        boundary_geom: boundaryGeom,
-        comment,
-
-        ...customAttrs,
+        ...attrs,
       },
+      media: [],
     };
+
+    this.media.forEach(model => {
+      const modelSubmission = model.getSubmission(warehouseMediaNames);
+      if (!modelSubmission) {
+        return;
+      }
+
+      submission.media.push(modelSubmission);
+    });
 
     return submission;
   }
@@ -547,6 +578,19 @@ class LocationModel extends Model {
     }
 
     Geolocation.clearWatch({ id });
+  }
+
+  private async uploadMedia() {
+    // return bulkUploadMedia(this.media); //TODO: take it from Indicia Sample
+    await Promise.all(this.media.map(m => m.uploadFile()));
+
+    const warehouseMediaNames: any = {};
+
+    this.media.forEach(m => {
+      warehouseMediaNames[m.cid] = { name: m.attrs.queued };
+    });
+
+    return warehouseMediaNames;
   }
 }
 

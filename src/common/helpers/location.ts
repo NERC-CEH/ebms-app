@@ -1,5 +1,6 @@
 import { toJS } from 'mobx';
 import wkt from 'wellknown';
+import { Location } from '@flumens';
 import { SphericalMercator } from '@mapbox/sphericalmercator';
 
 type XYPoint = [number, number];
@@ -40,4 +41,12 @@ export function getGeomString(shape: any) {
   }
 
   return wkt.stringify(geoJSON);
+}
+
+export function getGeomCenter(shape: Location['shape']): XYPoint {
+  const geoJSON: Location['shape'] = toJS(shape)!;
+  if (geoJSON.type === 'Polygon') {
+    return [geoJSON.coordinates[0][0][0], geoJSON.coordinates[0][0][1]];
+  }
+  return [geoJSON.coordinates[0][0], geoJSON.coordinates[0][1]];
 }
