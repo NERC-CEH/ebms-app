@@ -1,296 +1,296 @@
 # 
 # Translators:
-# Andreu Ubach Permanyer, 2024
+# Marko Prendi, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Andreu Ubach Permanyer, 2024\n"
-"Language-Team: Catalan (Spain) (https://app.transifex.com/ceh/teams/95441/ca_ES/)\n"
+"Last-Translator: Marko Prendi, 2023\n"
+"Language-Team: Albanian (Albania) (https://app.transifex.com/ceh/teams/95441/sq_AL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ca_ES\n"
+"Language: sq_AL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: POEditor.com\n"
 
 msgid "Select your country"
-msgstr "Selecciona el teu país"
+msgstr "Zgjidh shtetin tënd"
 
 msgid "United Kingdom"
-msgstr "Regne Unit"
+msgstr "Mbretëria e Bashkuar"
 
 msgid "Lithuania"
-msgstr "Lituània"
+msgstr "Lituani"
 
 msgid "Spain"
-msgstr "Espanya"
+msgstr "Spanjë"
 
 msgid "Andorra"
 msgstr "Andorra"
 
 msgid "Albania"
-msgstr "Albània"
+msgstr "Shqipëria"
 
 msgid "Austria"
-msgstr "Àustria"
+msgstr "Austri"
 
 msgid "Bosnia and Herzegovina"
-msgstr "Bòsnia i Herzegovina"
+msgstr "Bosnjë-Hercegovina"
 
 msgid "Belgium"
-msgstr "Bèlgica"
+msgstr "Belgjikë"
 
 msgid "Bulgaria"
-msgstr "Bulgària"
+msgstr "Bullgaria"
 
 msgid "Belarus"
-msgstr "Bielorússia"
+msgstr "Bjellorusi"
 
 msgid "Switzerland"
-msgstr "Suïssa"
+msgstr "Zvicër"
 
 msgid "Cyprus"
-msgstr "Xipre"
+msgstr "Cyprus"
 
 msgid "Czechia"
-msgstr "República txeca"
+msgstr "Çekia"
 
 msgid "Germany"
-msgstr "Alemanya"
+msgstr "Gjermani"
 
 msgid "Denmark"
-msgstr "Dinamarca"
+msgstr "Danimark"
 
 msgid "Estonia"
-msgstr "Estònia"
+msgstr "Estoni"
 
 msgid "Spain (Canary Islands)"
-msgstr "Espanya (Illes Canàries)"
+msgstr "Spanje (Ishujt Kanari)"
 
 msgid "Finland"
-msgstr "Finlàndia"
+msgstr "Finlandë"
 
 msgid "France"
-msgstr "França"
+msgstr "Francë"
 
 msgid "Greece"
-msgstr "Grècia"
+msgstr "Greqi"
 
 msgid "Croatia"
-msgstr "Croàcia"
+msgstr "Kroaci"
 
 msgid "Hungary"
-msgstr "Hongria"
+msgstr "Hungari"
 
 msgid "Ireland"
 msgstr "Irlanda"
 
 msgid "Iceland"
-msgstr "Islàndia"
+msgstr "Islanda"
 
 msgid "Italy"
-msgstr "Itàlia"
+msgstr "Itali"
 
 msgid "Liechtenstein"
-msgstr "Liechtenstein"
+msgstr "Lihtenshtajn"
 
 msgid "Luxembourg"
-msgstr "Luxemburg"
+msgstr "Luksemburg"
 
 msgid "Latvia"
-msgstr "Letònia"
+msgstr "Letonia"
 
 msgid "Moldova"
-msgstr "Moldàvia"
+msgstr "Moldavi"
 
 msgid "Montenegro"
-msgstr "Montenegro"
+msgstr "Mali i Zi"
 
 msgid "Morocco"
 msgstr ""
 
 msgid "North Macedonia"
-msgstr "Macedònia del nord"
+msgstr "Macedonia e Veriut"
 
 msgid "Malta"
 msgstr "Malta"
 
 msgid "Netherlands"
-msgstr "Països Baixos"
+msgstr "Hollanda"
 
 msgid "Norway"
-msgstr "Noruega"
+msgstr "Norvegji "
 
 msgid "Poland"
-msgstr "Polònia"
+msgstr "Poloni"
 
 msgid "Portugal"
-msgstr "Portugal"
+msgstr "Portugali"
 
 msgid "Portugal (Azores)"
-msgstr "Portugal (Azores)"
+msgstr ""
 
 msgid "Portugal (Madeira Islands)"
-msgstr "Portugal (Illes de Madeira)"
+msgstr ""
 
 msgid "Romania"
-msgstr "Romania"
+msgstr "Rumani"
 
 msgid "Serbia"
-msgstr "Sèrbia"
+msgstr "Serbi"
 
 msgid "Russian Federation"
-msgstr "Rússia"
+msgstr "Federata Ruse"
 
 msgid "Slovenia"
-msgstr "Eslovènia"
+msgstr "Slloveni"
 
 msgid "Japan"
-msgstr "Japó"
+msgstr "Japoni"
 
 msgid "Slovakia"
-msgstr "Eslovàquia"
+msgstr "Sllovakia"
 
 msgid "Turkey (Europe)"
-msgstr "Turquia (Europa)"
+msgstr "Turqi (Europe)"
 
 msgid "Turkey (Asia)"
-msgstr "Turquia (Àsia)"
+msgstr "Turqi (Azi)"
 
 msgid "Ukraine"
-msgstr "Ucraïna"
+msgstr "Ukrainë"
 
 msgid "South Africa"
-msgstr "Sudàfrica"
+msgstr ""
 
 msgid "Botswana"
-msgstr "Botswana"
+msgstr ""
 
 msgid "Nigeria"
-msgstr "Nigèria"
+msgstr ""
 
 msgid "New Zealand"
-msgstr "Nova Zelanda"
+msgstr ""
 
 msgid "Montserrat"
-msgstr "Montserrat"
+msgstr ""
 
 msgid "Anguilla"
-msgstr "Anguila"
+msgstr ""
 
 msgid "Elsewhere"
-msgstr "Altres llocs"
+msgstr "Diku tjetër"
 
 msgid "Skip"
-msgstr "Saltar"
+msgstr "Kalo"
 
 msgid "Next"
-msgstr "Següent"
+msgstr "Tjetra"
 
 msgid "Get Started"
-msgstr "Començar"
+msgstr "Fillo"
 
 msgid "Please sign in with your eBMS account or register."
-msgstr "Si us plau, entra amb el teu compte eBMS o registra't"
+msgstr "Të lutem futu me llogarinë tënde të eBMS."
 
 msgid "Password"
-msgstr "Contrassenya"
+msgstr "Fjalëkalimi"
 
 msgid "Sign in"
-msgstr "Entra"
+msgstr "Rregjistrohu"
 
 msgid "Register"
-msgstr "Registra't"
+msgstr "Rregjistrim"
 
 msgid "Forgot password?"
-msgstr "Has oblidat la contrassenya?"
+msgstr "Ke harruar fjalëkalimin?"
 
 msgid "User not found."
-msgstr "Usuari no trobat"
+msgstr "Përdoruesi nuk u gjet."
 
 msgid "Login"
-msgstr "Iniciar sessió"
+msgstr "Kycu"
 
 msgid "Settings"
-msgstr "Configuració"
+msgstr "Cilësimet"
 
 msgid "Info"
-msgstr "Informació"
+msgstr "Info"
 
 msgid "About"
-msgstr "Sobre"
+msgstr "Rreth"
 
 msgid "Help"
-msgstr "Ajuda"
+msgstr "Ndihmë"
 
 msgid "Privacy Policy"
-msgstr "Política de privacitat"
+msgstr "Politika e privatësisë"
 
 msgid "Credits"
-msgstr "Crèdits"
+msgstr "Kredite"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "First Name"
-msgstr "Nom"
+msgstr "Emri i parë"
 
 msgid "Surname"
-msgstr "Cognoms"
+msgstr "Mbiemri"
 
 msgid "I agree to"
-msgstr "D'acord"
+msgstr "Pranoj"
 
 msgid "Terms and Conditions"
-msgstr "Termes i condicions"
+msgstr "Termat dhe Kushtet"
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Rikthe"
 
 msgid "Records"
-msgstr "Registres"
+msgstr "Rregjistrime"
 
 msgid "Upload All"
-msgstr "Carrega-ho tot"
+msgstr "Ngarko të gjitha"
 
 msgid "Remove All Saved"
-msgstr "Elimina tots els desats"
+msgstr "Fshij Të Gjitha Të Ruajturat"
 
 msgid "Application"
-msgstr "Aplicació"
+msgstr "Aplikim"
 
 msgid "Training Mode"
-msgstr "Mode d'entrenament"
+msgstr "Modaliteti Stërvitor"
 
 msgid "Experimental Features"
-msgstr "Característiques experimentals"
+msgstr "Karakteristikat Eksperimentale"
 
 msgid "Welcome"
-msgstr "Benvingut/da"
+msgstr "Mirësevjen"
 
 msgid "Lets start!"
-msgstr "Comencem!"
+msgstr "Le të fillojmë!"
 
 msgid "TOP RECORDERS"
-msgstr "Observadors Top"
+msgstr "Numëruesit më të mirë"
 
 msgid "Top Species from all timed counts"
-msgstr "Les espècies més observades"
+msgstr "Speciet më të mira të numëruara nga gjithë kohërat"
 
 msgid "Back"
-msgstr "Tornar"
+msgstr "Prapa"
 
 msgid "Menu"
-msgstr "Menú"
+msgstr "Menu"
 
 msgid "App"
-msgstr "Aplicació"
+msgstr "Aplikacion"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
 msgstr ""
-"Agraïm a totes les persones que han ajudat a la creació d'aquesta aplicació:"
+"Jemi shumë mirënjohës personave që ndihmuan në krijimin e këtij aplikacioni:"
 
 # Credits page
 msgid ""
@@ -310,180 +310,180 @@ msgid ""
 msgstr ""
 
 msgid "Home"
-msgstr "Pàgina principal"
+msgstr "Shtëpi"
 
 msgid "Guide"
-msgstr "Guia"
+msgstr "Giudë"
 
 msgid "Account"
-msgstr "Compte"
+msgstr "Llogari"
 
 msgid "Offline"
-msgstr "Sense línia"
+msgstr "Ofline"
 
 msgid "Sorry, looks like you're offline."
-msgstr "Ho sentim, sembla que estàs sense línia"
+msgstr "Na vjen keq, me sa duket je ofline."
 
 msgid "OK"
-msgstr "Ok"
+msgstr "OK"
 
 msgid "Sorry"
-msgstr "Ho sentim"
+msgstr "Ndjesë"
 
 msgid "Please wait..."
-msgstr "Si us plau, espera..."
+msgstr "Të lutem prit..."
 
 msgid "name is a required field"
-msgstr "\"nom\" és un camp requerit"
+msgstr "emri është i nevojshëm"
 
 msgid "password is a required field"
-msgstr "\"contrassenya\" és un camp requerit"
+msgstr "Fjalëkalimi është i domosdoshëm"
 
 msgid "Login error:"
-msgstr "Error en l'inici de sessió"
+msgstr "Gabim në kycje:"
 
 msgid "Failed to fetch"
-msgstr "No s'ha pogut recuperar"
+msgstr "Dështoi për tu kapur"
 
 msgid "Incorrect password or email."
-msgstr "Contrassenya o correu incorrectes"
+msgstr "Fjalëkalimi ose emaili është i gabuar."
 
 # Part of logout process
 msgid "Logout"
-msgstr "Tancar sessió"
+msgstr "Shkycu"
 
 # Part of logout process
 msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
-"Segur que vols tancar sessió? <br/><br/>Els teus registres pendents i "
-"carregats<4> no se suprimiran </4>d'aquest dispositiu"
+"Je i sigurt që do të shkycesh? Vrojtimet pezull dhe të ngarkuara nuk do "
+"fshihen nga kjo pajisje."
 
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Fshij"
 
 msgid "Welcome aboard!"
-msgstr "Benvingut a bord!"
+msgstr "Mirë se vini në bord!"
 
 msgid ""
 "Before submitting any records please check your email and click on the "
 "verification link."
 msgstr ""
-"Abans de registrar cap cita, si us plau verifica el teu correu i fes clic a "
-"l'enllaç de verificació."
+"Përpara se të dorëzoni rregjistrimet, kontrolloni emailin dhe klikoni në "
+"linkun e verifikimit"
 
 msgid "OK, got it"
-msgstr "Ok, entesos"
+msgstr "OK, kuptova"
 
 msgid "Please fill in"
-msgstr "Omple-ho"
+msgstr "Të lutem plotësoje"
 
 msgid "Area Count"
-msgstr "Comptatge per àrea"
+msgstr "Numërimi i Zonës"
 
 msgid "Area"
-msgstr "Àrea"
+msgstr "Zonë"
 
 # Location attribute label
 msgid "Location"
-msgstr "Ubicació"
+msgstr "Vendndodhja"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr "Ubicació necessària"
+msgstr "Kërkohet vendndodhja"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
-"Aquesta aplicació necessita la teva ubicació, però no en té el permís. Vols "
-"obrir la configuració?"
+"Ky aplikacion ka nevojë për vendndodhjen tënde, por nuk ka lejen tënde. Hap "
+"cilësimet tani?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr "Cancela per prevenir el malgast de la bateria"
+msgstr "Fshij për të parandaluar shkarkimin e baterisë."
 
 # GPS message
 msgid "Using your location."
-msgstr "Utilitzant la teva ubicació."
+msgstr "Duke përdorur vendodhjen tënde."
 
 msgid "Add"
-msgstr "Afegir"
+msgstr "Shto"
 
 msgid "Add species"
-msgstr "Afegir espècie"
+msgstr "Shto specie"
 
 msgid "Duration"
-msgstr "Duració"
+msgstr "Kohëzgjatja"
 
 msgid "Species"
-msgstr "Espècie"
+msgstr "Speciet"
 
 msgid "Species name"
-msgstr "Nom de l'espècie"
+msgstr "Emri i species"
 
 msgid ""
 "For quicker searching of the taxa you can use different shortcuts. For "
 "example, to find"
 msgstr ""
-"Per una cerca més ràpida dels tàxons pots utilitzar diferents dreceres. Per "
-"exemple, per trobar"
+"Për një kërkim më të shpejtë të taksonit mund të përdorni shkurtime të "
+"ndryshme. Si përshembull, për të gjetur"
 
 msgid "you can type in the search bar"
-msgstr "pots escriure a la barra de búsqueda"
+msgstr "mund të shkruash në hapsirën e kërkimit "
 
 msgid "Edit Occurrence"
-msgstr "Editar Cita"
+msgstr "Redakto Ndodhjen"
 
 msgid "Count"
-msgstr "Comptatge"
+msgstr "Numërim"
 
 msgid "Comment"
-msgstr "Comentaris"
+msgstr "Komento"
 
 msgid "Draft"
-msgstr "Esborrador"
+msgstr "Draft"
 
 msgid "Previous survey draft exists, would you like to continue it?"
-msgstr "Existeix un esborrador del mostreig anterior, voldríes continuar-lo?"
+msgstr "Ekziston një draft vëzhgimi i mëparshëm, dëshiron ta vazhdosh?"
 
 msgid "Discard"
-msgstr "Descartar"
+msgstr "Elimino"
 
 msgid "Continue"
-msgstr "Continuar"
+msgstr "Vazhdo"
 
 msgid "Finish"
-msgstr "Finalitzar"
+msgstr "Përfundo"
 
 msgid "minutes"
-msgstr "minuts"
+msgstr "minuta"
 
 msgid "No species added"
-msgstr "No s'han afegit espècies"
+msgstr "Asnjë specie e shtuar"
 
 msgid "Please draw your area on the map"
-msgstr "Dibuixa al mapa la teva àrea"
+msgstr "Të lutem vizato zonën tënde në hartë"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr "Desactiva el GPS per poder activar l'eina de dibuix."
+msgstr ""
 
 msgid "Draw an area"
-msgstr "Dibuixa una àrea"
+msgstr "Vizato një zonë"
 
 # Survey area page
 msgid "Locations"
-msgstr "Localitats"
+msgstr ""
 
 # Survey area page
 msgid "Previous"
-msgstr "Prèvies"
+msgstr ""
 
 # Survey area page
 msgid "New location"
-msgstr "Nova localitat"
+msgstr ""
 
 # Survey area page
 msgid "No location"
@@ -491,622 +491,594 @@ msgstr ""
 
 # Survey area page
 msgid "Site name"
-msgstr "Nom del lloc"
+msgstr ""
 
 # Survey area page
 msgid "Comments"
-msgstr "Comentaris"
+msgstr ""
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr "L'àrea de mostreig encara està sent registrada."
+msgstr ""
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr "Localitat guardada amb èxit."
+msgstr ""
 
 # Survey area page
 msgid "Are you sure?"
-msgstr "N'estàs segur/a?"
+msgstr ""
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr "Això ho descartarà de les dades."
+msgstr ""
 
 # Survey area page
 msgid "Yes"
-msgstr "Sí"
+msgstr ""
 
 # Survey area page
 msgid "No"
-msgstr "No"
+msgstr ""
 
 msgid "Delete"
-msgstr "Elimina"
+msgstr "Fshij"
 
 msgid "Surveys"
-msgstr "Mostrejos"
+msgstr "Vëzhgimet"
 
 msgid "Reports"
-msgstr "Informes"
+msgstr "Raportime"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr "Nom de l'espècie o filtre"
+msgstr "Emri i species ose filteri...."
 
 # Species filter label
 msgid "family"
-msgstr "família"
+msgstr "familja"
 
 msgid "Sorry, no report data is available at the moment."
-msgstr "Ho sentim, no hi ha dades d'informes disponibles en aquest moment."
+msgstr "Na vjen keq, asnjë e dhënë e disponueshme për momentin."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "Segur que vols eliminar aquest mostreig?"
+msgstr "Je i sigurt që do të fshish këtë vëzhgim"
 
 msgid "No finished surveys"
-msgstr "Mostrejos no acabats"
+msgstr "Asnjë vëzhgim i përfunduar"
 
 msgid "Finished surveys"
-msgstr "Mostrejos acabats"
+msgstr "Vëzhgime të përfunduara"
 
 msgid "Selected area"
-msgstr "Àrea seleccionada"
+msgstr "Zgjidh zonën"
 
 msgid "Use survey create time"
-msgstr "Usar el mostreig - iniciar temps"
+msgstr "Përdor kohën e krijimit të vëzhgimit"
 
 msgid "Use survey finish time"
-msgstr "Usar el mostreig - acabar temps"
+msgstr "Përdor kohën e përfundimit të vëzhgimit"
 
 msgid "species"
-msgstr "espècie"
+msgstr "specie"
 
 msgid "Done"
-msgstr "Fet"
+msgstr "U krye"
 
 msgid "Time's up!"
-msgstr "S'ha acabat el temps!"
+msgstr "Koha mbaroi!"
 
 msgid "Survey incomplete"
-msgstr "Mostreig incomplert"
+msgstr "Vëzhgimi i paplotë"
 
 msgid "The survey is not complete yet."
-msgstr "El mostreig encara no està complert."
+msgstr "Vëzhgimi nuk është akoma i përfunduar."
 
 msgid "Please select a smaller area."
-msgstr "Si us plau selecciona una àrea més petita."
+msgstr "Të lutem zgjidh një zonë më të vogël."
 
 msgid "Please add survey area information."
-msgstr "Si us plau afegeix informació de l'àrea de mostreig."
+msgstr "Të lutem shto informacion me zonën e vëzhgimit."
 
 msgid "Choose a method to upload a photo"
-msgstr "Escull un mètode per carregar una foto"
+msgstr "Zgjidh një metodë për të ngarkuar një foto"
 
 msgid "Gallery"
-msgstr "Galeria"
+msgstr "Galeri"
 
 msgid "Camera"
-msgstr "Càmera"
+msgstr "Kamera"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "Segur que vols eliminar aquesta foto?"
+msgstr "Je i sigurt që do të heqësh këtë foto?"
 
 msgid "Note: it will remain in the gallery."
-msgstr "Nota: romandrà a la galeria."
+msgstr "Shënim: do të qëndron në galeri."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr "No s'ha afegit cap foto.<br/>Prem<3></3> per afergir-ne."
+msgstr "Asnjë foto nuk është shtuar. Kliko për të shtuar."
 
 msgid "Registration error:"
-msgstr "Error de registre:"
+msgstr "Gabimi në rregjistrim:"
 
 # Login error message
 msgid "Incorrect password or email"
-msgstr "Correu o contrassenya incorrectes"
+msgstr "Fjalëkalimi ose emaili jo korrekt"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
-"Entra la teva adreça de correu per demanar que es restauri la contrassenya."
+msgstr "Fut emailin tënd për të kërkuar rivendosur fjalëkalimin"
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr "Sessió iniciada amb èxit com a: {{email}}"
+msgstr "I kycur me sukses si: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr "L'usuari no s'ha activat o està bloquejat."
+msgstr "Përdoruesu nuk është aktivizuar ose është i bllokuar."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
-"Sembla que el teu <1>{{userEmail}}</1> correu encara no ha estat verificat. "
-"<3><0>Actualitza<1>Torna a enviar un correu</1></3>"
+"Me sa duket emaili juaj {{userEmail}} nuk është verifikuar akoma. Rifresko "
+"Ridërgo Email"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
-"Un nou correu de verificació s'ha enviat amb èxit. Si no has rebut aquest "
-"correu, consulta les carpetes Spam o Brossa del correu."
+"Një email i ri verifikimi është dërguar me sukses tani. Nëse nuk e keni "
+"marrë emailin, atëherë kontrolloni dosjen Spam në email."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr "Si us plau primer inicia sessió."
+msgstr "Ju lutem kycuni si fillim."
 
 # User registration error
 msgid "This email is already taken."
-msgstr "Aquest correu ja està agafat."
+msgstr ""
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr "Adreça de correu no reconeguda."
+msgstr ""
 
 msgid "email is not valid"
-msgstr "el correu no és vàlid"
+msgstr "emaili nuk është i vlefshëm"
 
 msgid ""
 "Butterflies are captivating insects, but they are in decline in many parts "
 "of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
 "the EU."
 msgstr ""
-"Les papallones són insectes fascinants, però es troben en declivi a moltes "
-"parts d'Europa. Tal i com es mostra en aquest gràfic de l'Indicador de "
-"Papallones de Prat de la UE."
 
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
 msgstr ""
-"Les dades recollides per aquesta aplicació poden millorar de forma notable "
-"el coneixement de l'estat de les papallones i els seus hàbitats."
+"Të dhënat e mbledhura nga ky aplikacion do të përmirësojnë ndjeshëm "
+"informacionin mbi statusin e fluturave dhe habitatet e tyre."
 
 msgid ""
 "We lack information on butterfly numbers in many parts of Europe, as shown "
 "by the density of records currently available to assess butterfly status."
 msgstr ""
-"Ens falta informació de comptatges de papallones a molts llocs d'Europa, tal"
-" i com es mostra per la densitat de registres disponibles per evaluar "
-"l'estat de les papallones."
+"Kemi mungesë informacioni mbi numrin e fluturave në shumë vende të Europës, "
+"sic shihet nga dendësia e rregjistrimeve të disponueshme deri tani për të "
+"vlerësuar statusin e fluturave."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
 "support conservation of these fascinating and vital insects. You can get "
 "started straight away"
 msgstr ""
-"Mai ha estat tant fàcil contribuïr amb dades de qualitat per a la recerca "
-"donant suport a la conservació d'aquests fascinants insectes. Pots començar "
-"ara mateix"
 
 msgid ""
 "The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
 "project."
 msgstr ""
-"Aquesta aplicació ha estat desenvolupada com a part del projecte Assessing "
-"Butterflies in Europe (ABLE)."
+"APlikacioni është krijuar si pjesë e projektit të Vlerësimit të Fluturave në"
+" Europë (ABLE)."
 
 msgid "The ABLE project is a partnership between"
-msgstr "El projecte ABLE és una associació entre"
+msgstr "Projekti ABLE është një partnership mes"
 
 msgid "and"
-msgstr "i"
+msgstr "dhe"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
 " the Environment, for an initial period of two years from 2019-20."
 msgstr ""
-"El projecte ABLE està finançat per un contracte de l'Agència Europea de Medi"
-" Ambient, per un període inicial de dos anys els 2019-2020."
+"ABLE është themeluar nga një kontratë nga Direktiva e Bashkimit Europian për"
+" Mjedisin, për një periudhë fillestare prej dy vitesh nga 2019-20."
 
 msgid "ABLE partners:"
-msgstr "Socis de ABLE:"
+msgstr "Partnerët ABLE:"
 
 msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
-"Aquesta aplicació contribueix amb dades per l'European Butterfly Monitoring "
-"Scheme (eBMS)."
+"Ky aplikacion kontribuon me të dhëna tek Skema Europiane e Monitorimit të "
+"Fluturave (eBMS)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
-msgstr "A juny de 2019, les següents organitzacions són socis de l'eBMS:"
+msgstr "Në Qershor 2019, organizatat e mëposhtme janë partner në eBMS: "
 
 msgid "Not enough data yet"
-msgstr "Encara no hi ha prou dades"
+msgstr "Të dhëna akoma të pa mjaftueshme"
 
 msgid "How to start a survey"
-msgstr "Com començar un mostreig"
+msgstr "Si të fillosh një vrojtim"
 
 msgid "To start a new survey you can press the plus button"
-msgstr "Per començar un nou mostreig pots apretar el botó \"més\""
+msgstr "Për të filluar një vëzhgim tjetër mund të shypësh butonin plus"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
-msgstr ""
-"al peu de pàgina de la pàgina principal. Això iniciarà un nou mostreig de 15"
-" minuts."
+msgstr "në fund të faqes kryesore. Kjo do të fillojë një vëzhgim 15 minutësh."
 
 msgid "Selecting species"
-msgstr "Selecció d'espècies"
+msgstr "Duke zhgjedhur speciet"
 
 msgid "Please press the Add"
-msgstr "Si us plau apreta el botó Afegir "
+msgstr "Të lutem kliko Shto"
 
 msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"a la pàgina d'edició del nou mostreig. Això et portarà a la pàgina de "
-"búsqueda de tàxons. Després de seleccionar les espècies, s'afegiran a la "
-"teva llista del mostreig."
 
 msgid "Note"
-msgstr "Nota"
+msgstr "Shënim"
 
 msgid ""
 "you can increment the species count by tapping on the number next to the "
 "species name in the list."
 msgstr ""
-"pots incrementar el comptatge de les espècies tocant al nombre al costat del"
-" nom de les espècies a la llista."
+"ju mund të rrisni numërimin e specieve duke klikuar tek numri ngjitur me "
+"emrin e species tek lista."
 
 msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Per esborrar una espècie de la llista del teu mostreig pots fer-la lliscar "
-"cap a l'esquerra i clicar el botó d'eliminar."
+"Për të fshirë një specie nga lista e  vëzhgimit mund ta tërheqësh majtas dhe"
+" kliko butonin fshij."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
 " entry by clicking on it."
 msgstr ""
-"Per afegir més informació a les cites de les teves espècies, pots clicar "
-"sobre l'espècie per fer-ho."
 
 msgid "To finish a record you should also fill in the details of the area."
 msgstr ""
-"Per acabar un registre també hauries d'omplir els detalls de l'àrea "
-"estudiada."
 
 msgid ""
 "When finished, set for submission by pressing the Finish button in the "
 "header."
-msgstr ""
-"Quan estigui acabat, prepara'l per enviar apretant el botó d'Acabar a la "
-"capçalera."
+msgstr "Kur të mbarosh, vendos për dorzim duke klikuar buton Mbaro në krye."
 
 msgid "Searching for species"
-msgstr "Per buscar espècies"
+msgstr "Duke kërkuar për speciet"
 
 msgid ""
 "The application holds around 500 butterfly species list and all the "
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"L'aplicació conté una llista d'unes 500 espècies de papallones i tots els "
-"rangs taxonòmics associats. Per una búsqueda més ràpida dels tàxons pots "
-"utilitzar diferents dreceres. Per exemple, per trobar"
+"Aplikacioni përmban rreth 500 lista të llojeve të fluturave dhe të gjitha "
+"renditjet taksonomike të lidhura. Për një kërkim më të shpejtë të taksave, "
+"mund të përdorni shkurtime të ndryshme. Për shembull, për të gjetur"
 
 msgid "Sync. with the website"
-msgstr "Sincronitza amb la web"
+msgstr "Lidh me website"
 
 msgid "All your saved surveys will be shown on your account page."
 msgstr ""
-"Tots els teus mostrejos guardats es mostraran a la pàgina del teu compte"
+"Të gjitha vëzhgimet e ruajtura do të shfaqen në faqen e adresës tënde."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Per defecte un mostreig resta com a \"esborrador\" que no serà enviat a la "
-"base de dades fins que el botó \"Acaba\" de la capçalera no es cliqui. "
-"L'aplicació intentarà enviar els teus registres quan hi hagi bona connexió a"
-" la xarxa."
 
 msgid ""
 "you have to be signed in to your website account and have a network "
 "connection, for the records to be automatically synchronised in the "
 "background"
 msgstr ""
-"t'has d'haver registrat al teu compte de la pàgina web i tenir connexió a la"
-" xarxa, per tal que els registres es sincronitztin automàticament en el fons"
+"duhet të jesh i rregjistruar në websit-in tënd dhe të kesh lidhje në "
+"internet, në mënyrë që rregjistrimet tuaja të sinkronizohen automatikisht"
 
 msgid "Delete a record"
-msgstr "Esborrar un registre"
+msgstr "Fshij një rregjistrim"
 
 msgid ""
 "To delete a record, swipe it left in your account page and click the delete "
 "button."
 msgstr ""
-"Per esborrar un registre, fes-lo lliscar cap a l'esquerra a la pàgina del "
-"teu compte i clica al botó d'eliminar."
+"Për të fshirë një rregjistrim, tërhiqe majtas në faqen e adresës tënde dhe "
+"kliko butonin fshij."
 
 msgid "User"
-msgstr "Usuari"
+msgstr "Përdorues"
 
 msgid "Sign in/out or register"
-msgstr "Iniciar/tancar sessió o registrar-se"
+msgstr "Rregistrohu/crregjistrohu"
 
 msgid ""
 "To login, open the main menu page click Login or Register buttons and follow"
 " the instructions."
 msgstr ""
-"Per iniciar sessió, obre el menú principal, clica els botons Inicia sessió o"
-" Registra't i segueix les instruccions."
+"Për t'u identifikuar, hapni faqen kryesore të menusë, klikoni butonat "
+"\"Identifikohu\" ose \"Regjistrohu\" dhe ndiqni udhëzimet."
 
 msgid "To logout, visit the main menu page and click the logout button."
 msgstr ""
-"Per tancar la sessió, ves al menú principal i clica el botó de Tancar "
-"sessió."
+"Për tu shkyçur, vizito faqen e menusë kryesore dhe kliko butonin shkyç. "
 
 msgid ""
 "after registering a new account you must verify your email address by "
 "clicking on a verification link sent to your email"
 msgstr ""
-"després de registrar un nou compte has de verificar la teva adreça de correu"
-" clicant a un enllaç de verificació que se t'ha enviat al correu."
+"pas rregjistrimit të adresës së re duhet të verifikoni adresën e email-it "
+"duket klikuar te një link verifikimi të dërguar në email-in tënd"
 
 msgid "Other"
-msgstr "Altres"
+msgstr "Tjetër"
 
 msgid "No species found with this name"
-msgstr "No s'han trobat espècies amb aquest nom"
+msgstr "Asnjë specie e gjetur me këtë emër"
 
 msgid "Allow Sample Edit"
-msgstr "Permetre Edició de Mostres"
+msgstr "Lejo editimin e kampjonit"
 
 msgid "Upload"
-msgstr "Carregar"
+msgstr "Ngarko"
 
 msgid ""
 "This app supports butterfly monitoring and conservation. Click on the + "
 "button below to starting counting butterflies."
 msgstr ""
-"Aquesta aplicació dona suport al seguiment i la conservació de les "
-"papallones diürnes. Clica al botó + que hi ha a sota per començar a comptar "
-"papallones."
+"Ky aplikacion mbështet monitorimin dhe ruajtjen e fluturave. Klikoni në "
+"butonin + më poshtë për të filluar numërimin e fluturave."
 
 msgid ""
 "You will see lots of enhancements to this app as we add in new features over"
 " the coming months."
 msgstr ""
-"Veuràs moltes millores a l'aplicació a mesura que anem incloent noves "
-"característiques els pròxims mesos."
+"Do të shihni shumë përmirësime në këtë aplikacion teksa ne shtojmë veçori të"
+" reja gjatë muajve të ardhshëm."
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr "Neteja memòria cau"
+msgstr ""
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr "Pots alliberar emmagatzematge utilitzat per l'aplicació."
+msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr "Neteja"
+msgstr ""
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
-msgstr "Eliminaràs la memòria cau, incloent els teus mostrejos carregats."
+msgstr ""
 
 msgid "Sweden"
-msgstr "Suècia"
+msgstr "Suedi"
 
 msgid "Paused"
-msgstr "Pausat"
+msgstr "I ndaluar"
 
 msgid "Pending"
-msgstr "Pendents"
+msgstr "Pezull"
 
 msgid "Uploaded"
-msgstr "Carregat"
+msgstr "Ngarkuar"
 
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
-"Necessites <1>entrar</1> al teu compte per a poder veure els registres."
 
 msgid "No finished pending surveys"
-msgstr "Comptatges pendents, no acabats"
+msgstr "Asnjë vëzhgim i përfunduar pezull"
 
 msgid "No uploaded surveys"
-msgstr "Mostrejos no enviats"
+msgstr "Asnjë vëzhgim i ngarkuar"
 
 msgid "Enjoying the app?"
-msgstr "Gaudint l'aplicació?"
+msgstr "Po të pëlqen aplikacioni?"
 
 msgid "Not really"
-msgstr "No pas"
+msgstr "Jo në të vërtetë"
 
 msgid "Yes!"
-msgstr "Sí!"
+msgstr "Po!"
 
 msgid "Would you mind giving us some feedback?"
-msgstr "T'importaria donar-nos una mica de feedback?"
+msgstr "Dëshironi të na jepni disa komente?"
 
 msgid "No, thanks"
-msgstr "No, gràcies"
+msgstr "Jo, faleminderit"
 
 msgid "OK, sure"
-msgstr "Ok, vale"
+msgstr "OK, sigurisht"
 
 msgid "How about a rating on the App Store then?"
-msgstr "Què et sembla doncs puntuar-la a la App Store?"
+msgstr "Po në lidhje me një vlerësim në App Store atëherë?"
 
 msgid "How about a rating on the Play Store then?"
-msgstr "Què et sembla doncs puntuar-la a la Play Store?"
+msgstr "Si thua për një vlerësim në Play Store atëherë?"
 
 msgid "Icons made by"
-msgstr "Icones fetes per"
+msgstr "Ikonat e krijuara nga"
 
 msgid "from"
-msgstr "des de"
+msgstr "nga"
 
 msgid "We've sent an email to you"
-msgstr "T'hem enviat un correu"
+msgstr "Të kemi dërguar një email"
 
 msgid ""
 "Click the link in the email to reset your password. If you don't see the "
 "email, check other places like your junk, spam or other folders."
 msgstr ""
-"Clica el link en el correu per reestablir la teva contrassenya. Si no veus "
-"el correu, comprova altres carpetes com spam o brossa."
+"Klikoni linkun në email për të rivendosur fjalëkalimin tuaj. Nëse nuk e "
+"shihni emailin, kontrolloni vende të tjera si dosjet tuaja të padëshiruara, "
+"postat e padëshiruara ose dosje të tjera."
 
 msgid "App Development"
-msgstr "Desenvolupament de l'aplicació"
+msgstr "Zhvillimi i aplikacionit"
 
 msgid "This app was hand crafted with love by"
-msgstr "Aquesta aplicació s'ha creat artesanalment i amb amor per part de"
+msgstr "Ky aplikacion është krijuar me dashuri nga"
 
 msgid ""
 "A technical consultancy that excels at building bespoke environmental "
 "science and community focussed solutions."
 msgstr ""
-"Una consultoria tècnica que sobresurt en la creació de solucions a mida en "
-"ciències ambientals i centrades en la comunitat."
 
 msgid "For suggestions and feedback please do not hesitate to"
-msgstr "Per suggeriències i comentaris si us plau no dubtis a "
+msgstr ""
 
 msgid "contact us"
-msgstr "contactar-nos"
+msgstr "na kontakto"
 
 msgid "Language"
-msgstr "Idioma"
+msgstr "Gjuha"
 
 msgid "Country"
-msgstr "País"
+msgstr "Shteti"
 
 msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr ""
-"Marca qualsevol dels nous registres com a \"entrenament\" i exclou dels "
-"informes."
+"Shëno cdo rregjistrim të ri si \"trajnim\" dhe përjashtoi nga të gjitha "
+"raportet."
 
 # App setting label
 msgid "Show common names in guide"
-msgstr "Veure els noms comuns a la guia"
+msgstr ""
 
 # App setting label
 msgid "Use global species lists"
-msgstr "Utilitza les llistes d'espècies globals"
+msgstr ""
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr "No ho restringeixis a espècies locals en búsquedes de mostrejos."
+msgstr ""
 
 msgid "Share App Analytics"
-msgstr "Comparteix les analítiques de l'aplicació"
+msgstr "Shpërndaj aplikacionin analitik"
 
 msgid "Share app crash data so we can make the app more reliable."
 msgstr ""
-"Compartir les dades accidentades per tal que puguem fer l'aplicació més "
-"fiable."
 
 msgid "Save Draft"
-msgstr "Guardar borrador"
+msgstr "Ruaj draftin"
 
 msgid "Stage"
-msgstr "Fase"
+msgstr "Fazë"
 
 msgid "Not Recorded"
-msgstr "No registrat"
+msgstr "I pa rregjistruar"
 
 msgid "Adults"
-msgstr "Adults"
+msgstr "Të rritur"
 
 msgid "Larvae"
-msgstr "Erugues"
+msgstr "Larvë"
 
 msgid "Eggs"
-msgstr "Ous"
+msgstr "Vezë"
 
 msgid "Pupae"
-msgstr "Crisàlides"
+msgstr "Pupë"
 
 msgid "Larval webs"
-msgstr "Nius larvaris"
+msgstr "Rrjetat larvare"
 
 # Butterfly stage
 msgid "Adult"
-msgstr "Adult"
+msgstr ""
 
 # Butterfly stage
 msgid "Egg"
-msgstr "Ou"
+msgstr ""
 
 # Butterfly stage
 msgid "Larva"
-msgstr "Eruga"
+msgstr ""
 
 # Butterfly stage
 msgid "Larval web"
-msgstr "Niu larvari"
+msgstr ""
 
 # Butterfly stage
 msgid "Pupa"
-msgstr "Pupa"
+msgstr ""
 
 msgid "Transect"
-msgstr "Transsecte"
+msgstr "Transekt"
 
 msgid "Sections"
-msgstr "Seccions"
+msgstr "Seksione"
 
 msgid "No transect"
-msgstr "Sense transsecte"
+msgstr "Asnjë transekt"
 
 msgid "Start Time"
-msgstr "Iniciar temps"
+msgstr "Koha e fillimit"
 
 msgid "End Time"
-msgstr "Acabar temps"
+msgstr "Koha e përfundimit"
 
 msgid "Temperature"
 msgstr "Temperatura"
 
 msgid "Cloud"
-msgstr "Nuvolositat"
+msgstr "Re"
 
 msgid "Wind Direction"
-msgstr "Direcció del vent"
+msgstr "Drejtimi i erës"
 
 msgid "Wind Speed"
-msgstr "Velocitat del vent"
+msgstr "Shpejtësia e Erës"
 
 msgid "Recorder"
-msgstr "Observador"
+msgstr ""
 
 msgid "Refresh"
-msgstr "Actualitzar"
+msgstr "Rifresko"
 
 msgid "Please select your transect first."
-msgstr "Si us plau selecciona primer el teu transsecte."
+msgstr "Të lutem zgjidh transektin para."
 
 msgid "Invalid server response."
-msgstr "Resposta del servidor no vàlida."
+msgstr "Përgjigje e serverit jo e vlefshme."
 
 msgid "Not recorded/no data"
-msgstr "No registrat/sense dades"
+msgstr "I pa rregjistruar/pa të dhëna"
 
 msgid "Please specify the temperature C°."
-msgstr "SI us plau especifica la temperatura en ºC."
+msgstr "Të lutem specifiko temperaturën."
 
 msgid "S"
 msgstr "S"
 
 msgid "SW"
-msgstr "SO"
+msgstr "SW"
 
 msgid "W"
-msgstr "O"
+msgstr "W"
 
 msgid "NW"
-msgstr "NO"
+msgstr "NW"
 
 msgid "N"
 msgstr "N"
@@ -1121,153 +1093,145 @@ msgid "SE"
 msgstr "SE"
 
 msgid "No direction"
-msgstr "Sense direcció"
+msgstr "Asnjë drejtim"
 
 msgid "Please specify the wind direction."
-msgstr "Si us plau especifica la direcció del vent."
+msgstr "Të lutem specifiko drejtimin e erës."
 
 msgid "Smoke rises vertically"
-msgstr "El fum s'eleva verticalment"
+msgstr "Tymi ngjitet vertikalisht"
 
 msgid "Slight smoke drift"
-msgstr "El fum es mou lleugerament en una direcció"
+msgstr "Lëvizje e lehtë e tymit"
 
 msgid "Wind felt on face, leaves rustle"
-msgstr "El vent es nota a la cara, les fulles cruixen"
+msgstr "Era ndihet në fytyrë, gjethet vërshëllejnë"
 
 msgid "Leaves and twigs in slight motion"
-msgstr "Les fulles es s'aixequen en un moviment lleuger"
+msgstr ""
 
 msgid "Dust raised and small branches move"
-msgstr "La pols s'aixeca i es mouen petites branques"
+msgstr ""
 
 msgid "Small trees in leaf begin to sway"
-msgstr "Arbres petits en fulla es comencen a sacsejar"
+msgstr "Gjethe të vogla në pemë lëkunden"
 
 msgid "Large branches move and trees sway"
-msgstr "Branques grosses es sacsegen i els arbres es balancegen"
+msgstr "Degë të mëdha lëvizin dhe pemët lëkunden"
 
 msgid "Please specify the wind speed."
-msgstr "Si us plau especifica la velocitat del vent."
+msgstr "Të lutem specifiko shpejtësinë e erës."
 
 msgid "Transects"
-msgstr "Transsectes"
+msgstr "Transekt"
 
 msgid "Transect list was successfully updated."
-msgstr "La llista de transsectes s'ha actualitzat correctament."
+msgstr "Lista e transektit është përditësuar me sukses."
 
 msgid "Section"
-msgstr "Secció"
+msgstr "Seksion"
 
 msgid "Reliability"
-msgstr "Fiabilitat"
+msgstr "Besueshmëria"
 
 msgid "Please specify the reliability of the section count."
-msgstr "Si us plau especifica la fiabilitat del comptatge de la secció."
+msgstr "Të lutem specifiko besueshmërinë e numërimit të seksionit."
 
 msgid "Suitable conditions"
-msgstr "Condicions adequades"
+msgstr ""
 
 msgid "Unsuitable conditions"
-msgstr "Condicions no adequades"
+msgstr ""
 
 msgid "Unable to survey"
-msgstr "No possible de mostrejar"
+msgstr ""
 
 msgid "15min Count"
-msgstr "Comptatge 15-min"
+msgstr ""
 
 msgid "15min Single Species Count"
-msgstr "Comptatge 15-min d'una espècie"
+msgstr ""
 
 msgid "eBMS Transect"
-msgstr "Transsecte eBMS"
+msgstr "Transekti eBMS"
 
 msgid "Please add any extra info about this record."
-msgstr "Si us plau afegeix qualsevol informació extra sobre aquest registre."
+msgstr "Të lutem shton cdo informacion ekstra mbi këtë rregjistrim"
 
 msgid "Enter more information here..."
-msgstr "Entra més informació aquí..."
+msgstr "Shto më shumë informacion këtu..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr ""
-"Si us plau especifica la persona responsable de la identificació de "
-"l'espècie."
+msgstr "Të lutem specifiko personin përgjegjës për identifikimin e specieve."
 
 msgid "HH:mm"
-msgstr "HH:mm"
+msgstr ""
 
 msgid "Please specify the % of cloud cover."
-msgstr "Especifica el % de cobertura de núvols"
+msgstr "Të lutem specifiko % e mbulimit me re."
 
 msgid "You don't have any transects. Please try to refresh the list."
-msgstr "No tens cap transsecte. Si us plau intenta actualitzar la llista."
+msgstr "Ti nuk ke asnjë transekt. Të lutem provo të rifreskosh listën."
 
 msgid "Wind speed info is missing"
-msgstr "Falta informació de la velocitat del vent"
+msgstr "Informacioni mbi shpejtësinë e erës mungon"
 
 msgid "Temperature info is missing"
-msgstr "Falta informació de la temperatura"
+msgstr "Mungon informacioni mbi temperaturën"
 
 msgid "Recorder info is missing"
-msgstr "Falta informació de l'observador"
+msgstr ""
 
 msgid "Please select your transect."
-msgstr "Selecciona el teu transsecte."
+msgstr "Të lutem zgjidh transektin tënd"
 
 msgid ""
 "This guide is still in development. It covers {{countrySpeciesCount}} "
 "butterfly species out of the {{totalSpeciesCountryCount}} species in your "
 "selected country."
 msgstr ""
-"Aquesta guia encara està en desenvolupament. Cobreix {{countrySpeciesCount}}"
-" espècies de papallones de les  {{totalSpeciesCountryCount}} que hi ha al "
-"país que has seleccionat."
 
 msgid "Status"
-msgstr "Estat"
+msgstr "Status"
 
 msgid "Absent"
-msgstr "Absent"
+msgstr "Mungon"
 
 msgid "Present"
-msgstr "Present"
+msgstr "I pranishëm"
 
 msgid "Possibly present"
-msgstr "Possiblement present"
+msgstr "Me shumë mundësi i pranishëm"
 
 msgid "Regular migrant"
-msgstr "Migrant regular"
+msgstr "Migrator i rregullt"
 
 msgid "Irregular vagrant"
-msgstr "Divagant irregular"
+msgstr ""
 
 msgid "Regionally extinct"
-msgstr "Extinta regionalment"
+msgstr "I zhdukur në rajon"
 
 msgid "Description"
-msgstr "Descripció"
+msgstr "Përshkrim"
 
 msgid "Counts"
-msgstr "Comptatges"
+msgstr "Numërime"
 
 msgid "Species descriptions"
-msgstr "Descripció de les espècies"
+msgstr ""
 
 msgid ""
 "Species descriptions included as part of the guide are based on those "
 "produced for the Climatic Risk Atlas of European Butterflies. We thank Josef"
 " Settele for making these available."
 msgstr ""
-"Les descripcions de les espècies incloses com a part de la guia estan "
-"basades en les realitzades per l'Atles de Risc Climàtic de les Papallones "
-"Europees. Agraïm a Josef Settele per a fer-les disponibles."
 
 msgid "Photo credits"
-msgstr "Crèdits de les fotografies"
+msgstr ""
 
 msgid "How to use the app"
-msgstr "Com utilitzar l'aplicació"
+msgstr ""
 
 msgid ""
 "You can use this app to monitor butterflies anywhere in Europe. The results "
@@ -1275,10 +1239,6 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"Pots utilitzar aquesta aplicació per a comptar papallones a qualsevol lloc "
-"d'Europa. Els resultats formaran part de la base de dades de la European "
-"Butterfly Monitoring i usades per desenvolupar tendències de les papallones "
-"arreu d'Europa. Per fer servir l'aplicació primer hauràs de registrar-te. "
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1287,14 +1247,9 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
-"El mètode preferit és fer un recompte de 15 minuts. Això es pot fer en "
-"qualsevol lloc i en qualsevol moment quan les papallones estiguin actives "
-"(és a dir, quan el clima és càlid i preferiblement assolellat). També podeu "
-"utilitzar l'aplicació per registrar els vostres transectes BMS. Les notes a "
-"continuació s'explica com utilitzar els mètodes disponibles actualment."
 
 msgid "How to do a 15-minute Count"
-msgstr "Com fer un Comptatge 15-min"
+msgstr ""
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1309,18 +1264,6 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Aquest és el mètode per defecte a l'aplicació. Simplement, compta papallones"
-" durant 15 minuts, ja sigui en una àrea definida com un camp, mentre "
-"camines, o estant a un punt fix mentre observes les papallones que passen "
-"davant teu. No hi ha necessitat de dibuixar la ruta que has fet, ja que "
-"l'aplicació la guardarà, comptant que tens disponible l'accés al teu GPS a "
-"la teva configuració. D'altra banda hauràs de dibuixar l'àrea recorreguda en"
-" un mapa, usant l'aplicació. Per començar, prem el botó + als peus de la "
-"pantalla. L'aplicació fa un compte enrere de 15 minuts des de que has "
-"començat, però la pots aturar en qualsevol moment (per exemple per "
-"identificar una papallona) prement el botó de pausa. Al final del mostreig "
-"pots revisar els teus registres i assegurar-te que els nombres totals són "
-"correctes abans d'enviar-los."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1330,8 +1273,6 @@ msgid ""
 "count of how many you have seen. You can review this number and amend at the"
 " end as well. You can also add photos if you want and add comments."
 msgstr ""
-"Afegeix les espècies que veus apretant el botó de + Afegir i comença a escriure el nom d'una espècie. La selecció de l'espècie apareixerà com un menú desplegat. Pots usar tan noms científics com en català. Selecciona l'espècie que has vist i un cop sigui a la teva llista de papallones,  \n"
-"toca el número de l'esquerra per augmentar el recompte de quants n'has vist. També pots revisar aquest número i modificar-lo al final. També pots afegir fotos  i afegir comentaris si vols."
 
 msgid ""
 "Once you have finished your 15-minute Count and checked that the species and"
@@ -1340,14 +1281,9 @@ msgid ""
 "record of the count will be held on your device for future reference as well"
 " as on your online account."
 msgstr ""
-"Quan hagis acabat el teu Comptatge 15-min i comprovat que les espècies i els"
-" seus nombres són correctes, apreta el botó de Carregar per enviar-lo. Això "
-"és important per assegurar que les teves dades estan correctament "
-"registrades a la base de dades de l'eBMS. Una còpia quedarà registrada al "
-"teu dispositiu com a referència futura així com al teu compte online. "
 
 msgid "How to record along an existing transect"
-msgstr "Com registrar observacions al llarg d'un transsecte existent."
+msgstr ""
 
 msgid ""
 "You can also use the app to submit records while walking an existing "
@@ -1358,14 +1294,6 @@ msgid ""
 "transect sites are listed once you are logged into the app, please contact "
 "your national co-ordinator (please email {{helpEmail}} for advice)."
 msgstr ""
-"També podeu utilitzar l'aplicació per enviar registres mentre camineu per un"
-" transecte de monitoreig de papallones existent. Aquests ja s'han establert "
-"pels BMS del país i es poden completar millor per observadors experimentats."
-" El registre de transectes existents a l'aplicació requereix que el vostre "
-"compte ja estigui enllaçat a una configuració de transectes dins del sistema"
-" eBMS. Si no hi ha transectes a la llista un cop hàgiu iniciat la sessió a "
-"l'aplicació, poseu-vos en contacte amb el vostre coordinador nacional "
-"(envieu un correu electrònic a {{helpEmail}} per obtenir consell)."
 
 msgid ""
 "To start with the transect count, hold down the + button (a long-press) at "
@@ -1380,11 +1308,9 @@ msgid ""
 "finished your Transect and checked that the species and numbers seen are "
 "correct, press the FINISH button to submit."
 msgstr ""
-"Per començar amb el recompte de transectes, mantigues premut el botó + (uns segons) a la part inferior de la pantalla i selecciona Transecte eBMS. Apareixerà la pàgina Transecte amb totes les opcions a completar. En primer lloc,   selecciona els teus transectes (hauràs d'haver iniciat sessió  perquè les rutes de transectes  s'enllacin al teu compte d'usuari). Un cop hàgis seleccionat el teu lloc de transecte, pots omplir els detalls meteorològics necessaris (per exemple, temperatura, velocitat del vent, etc.) i altra informació necessària (per exemple, hora d'inici) a la pàgina Transecte. A continuació, afegeix una llista d'espècies vistes i el nombre comptat per a cada secció del transecte, de la mateixa manera que en un recompte de 15 minuts. Un cop hàgis acabat el Transecte i comprovat que les espècies i els números vists són correctes, prem el botó FINALITZAR per enviar.\n"
-" "
 
 msgid "Survey section"
-msgstr "Secció del transsecte"
+msgstr ""
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1394,816 +1320,763 @@ msgid ""
 "see the species list that you recorded for Uploaded counts. All your records"
 " can also be viewed and edited on the {{eBMSWebsiteLink}}"
 msgstr ""
-"En aquesta pestanya, a la part dreta del Botó +, pots veure els recomptes "
-"PENDENTS (els registres que no s'han enviat) i els recomptes ENVIATS (els "
-"enviats a la base de dades eBMS). Els recomptes pendents es poden enviar al "
-"sistema fent clic a sobre i prement l'opció Envia.  Podries veure la llista "
-"d'espècies que heu enregistrat per als recomptes Enviats. Tots els teus "
-"registres també es poden veure i editar a {{eBMSWebsiteLink}}"
 
 msgid "eBMS website"
-msgstr "Web de l'eBMS"
+msgstr ""
 
 msgid "App Settings"
-msgstr "Configuració de l'aplicació"
+msgstr ""
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr "Utilitzar només arnes de vol diürn"
+msgstr ""
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
 "The selected country is important in order to see different species in the "
 "Picture Guide, you will see only the species occurring in that country."
 msgstr ""
-"Ves a la pàgina de configuració de l'aplicació per canviar el país i la "
-"llengua. El país seleccionat és important per a les espècies que apareixen a"
-" la Guia d'Imatges, ja que així solament apareixeran les del que s'ha "
-"seleccionat."
 
 msgid ""
 "You can also switch on the Training Mode, when you are still learning to "
 "identify butterflies."
 msgstr ""
-"També pots activar el mode d'entrenament, quan encara estàs aprenent a "
-"identificar les papallones."
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr "Segur que vols eliminar la pista en curs?"
+msgstr ""
 
 # This is part of mapping functionality
 msgid "Save"
-msgstr "Guardar"
+msgstr ""
 
 msgid "Map"
-msgstr "Mapa"
+msgstr ""
 
 msgid "Today"
-msgstr "Avui"
+msgstr ""
 
 msgid "Yesterday"
-msgstr "Ahir"
+msgstr ""
 
 # This is part of a saved record page
 msgid "This record has been submitted and cannot be edited within this App."
 msgstr ""
-"Aquest registre ha estat enviat i no pot ser editat amb aquesta aplicació."
 
 # Refers to surveys list when long-pressing plus button
 msgid "Click on other recording options from list below"
-msgstr "Clica a altres opcions de registre de la llista de més avall."
+msgstr ""
 
 # A note in app settings page
 msgid ""
 "Batch upload all finished records. This does not include records in 'draft' "
 "stage."
 msgstr ""
-"Carrega per lots tots els registres acabats. Això no inclou els registres en"
-" la fase d'esborrany."
 
 # Part of batch upload option in app settings page
 msgid "Are you sure you want to upload all finished records?"
-msgstr "Segur que vols carregar tots els registres acabats?"
+msgstr ""
 
 # Part of batch upload option in app settings page
 msgid "Please log in first to upload the records."
-msgstr "Si us plau inicia sessió primer per carregar els registres."
+msgstr ""
 
 # Part of batch upload option in app settings page
 msgid "Uploading {{count}} record"
 msgid_plural "Uploading {{count}} records"
-msgstr[0] "Enviant {{count}} registre"
-msgstr[1] "Enviant {{count}} registres "
+msgstr[0] ""
+msgstr[1] ""
 
 # Part of a page error
 msgid "Oops! Something went wrong."
-msgstr "Vaja! Alguna cosa ha anat malament. "
+msgstr ""
 
 # Part of a page error
 msgid "This is the error event id: {{eventId}}"
-msgstr "Aquest és l'error: {{eventId}}"
+msgstr ""
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr "Detalls adicionals"
+msgstr ""
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
-msgstr "Condicions Meteorològiques"
+msgstr ""
 
 # Credits page heading
 msgid "Weather conditions"
-msgstr "Condicions meteorològiques"
+msgstr ""
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr "Segur que vols esborrar {{taxon}} ?"
+msgstr ""
 
 # Credits page text
 msgid ""
 "The current weather values are prepopulated using the OpenWeatherMap API "
 "weather service."
 msgstr ""
-"Els valors de meteorologia actuals s'emplenen prèviament mitjançant el "
-"servei meteorològic de l'API OpenWeatherMap."
 
 # Species list copy functionality
 msgid "Copy species"
-msgstr "Copiar espècie"
+msgstr ""
 
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
-msgstr "Segur que vols copiar una llista d'espècies prèvia?"
+msgstr ""
 
 # Species list copy functionality
 msgid "Copy"
-msgstr "Copiar"
+msgstr ""
 
 # Species list copy functionality
 msgid "Sorry, no species were found to copy."
-msgstr "Ho sentim, no s'han trobat espècies per a copiar."
+msgstr ""
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr "Has copiat correctament {{speciesCount}} espècies."
+msgstr ""
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
-msgstr "Perdona, no hi ha un mostreig previ d'on copiar espècies."
+msgstr ""
 
 # Country name
 msgid "Armenia"
-msgstr "Armènia"
+msgstr ""
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Per esborrar qualsevol mostreig fes-lo lliscar cap a l'esquerra."
+msgstr ""
 
 # 15min survey additional information note after survey is finished
 msgid ""
 "Please check if the recording area is correct before sending the record."
 msgstr ""
-"Si us plau comprova si l'àrea de mostreig és correcte abans d'enviar el "
-"registre."
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr "Si us plau no t'oblidis d'enviar els mostrejos que tens pendents!"
+msgstr ""
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
 msgstr ""
-"Mostrejos pendents no acabats. <br/><br/> Apreta<4></4> per afegir un nou "
-"comptatge."
 
 # Pop-up tip title when the user has installed the app and finished the
 # onboarding screens
 msgid "Tip: Finding Help"
-msgstr "Consell: per trobar ajuda"
+msgstr ""
 
 # Pop-up content  when the user has installed the app and finished the
 # onboarding screens
 msgid ""
 "Please visit the Guide <2></2> and Help <5></5> pages before using the app!"
 msgstr ""
-"Visita les pàgines de Guia<2></2> i Ajuda <5></5> abans d'usar l'aplicació!"
 
 # Link inside Guide page
 msgid "More Information"
-msgstr "Més Informació"
+msgstr ""
 
 # Pop-up alert tip title
 msgid "Tip: Adding Species"
-msgstr "Consell: Afegint Espècies"
+msgstr ""
 
 # Pop-up alert tip content
 msgid ""
 "You can bulk copy your previous species lists by long-pressing the Add "
 "Species button."
 msgstr ""
-" \n"
-"Podeu copiar de manera massiva les teves llistes d'espècies anteriors prement el botó Afegeix espècies."
 
 # Button
 msgid "Hide"
-msgstr "Amagar"
+msgstr ""
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Mostreig principal"
+msgstr ""
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr "Tots els mostrejos"
+msgstr ""
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr "Foto representativa del lloc on s'ha fet el Comptatge de 15 minuts"
+msgstr ""
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr "No s'ha afegit cap foto."
+msgstr ""
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr "Apreta <1></1> per afegir."
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr "Comptatge 15-min precís"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr "Cites"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr "Temps"
+msgstr ""
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr "Segur que vols esborrar aquesta cita?"
+msgstr ""
 
 # alert confirmation button
 msgid "Got it"
-msgstr "Ho tinc"
+msgstr ""
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr "<0>Sense mostrejos carregats</0>"
+msgstr ""
 
 # user register error message
 msgid "Account already exists."
-msgstr "El compte ja existeix."
+msgstr ""
 
 # A survey label
 msgid "Details"
-msgstr "Detalls"
+msgstr ""
 
 # A survey label
 msgid "Species Photo"
-msgstr "Foto de l'espècie"
+msgstr ""
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr "Selecciona la fase de desenvolupament"
+msgstr ""
 
 # A survey label
 msgid "Weather"
-msgstr "Meteo"
+msgstr ""
 
 # A survey label
 msgid "Photo"
-msgstr "Foto"
+msgstr ""
 
 # Part of species group selection
 msgid "Species groups"
-msgstr "Grups d'espècies"
+msgstr ""
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr "Selecciona els grups d'espècies que sempre registres."
+msgstr ""
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr "Papallones"
+msgstr ""
 
 # Part of species group selection
 msgid "Moths"
-msgstr "Arnes"
+msgstr ""
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr "Borinots"
+msgstr ""
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr "Libèl·lules"
+msgstr ""
 
 # Alert label
 msgid "Warning"
-msgstr "Perill"
+msgstr ""
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr "Segur que vols apagar el teu GPS?"
+msgstr ""
 
 # Alert button option
 msgid "Turn off"
-msgstr "Apagar"
+msgstr ""
 
 # Alert button label
 msgid "Merge"
-msgstr "Fusionar"
+msgstr ""
 
 # Alert header
 msgid "Species already exists"
-msgstr "L'espècie ja hi és"
+msgstr ""
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
-"Segur que vols fusionar aquesta llista amb la llista d'espècies existent?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr "Si us plau afegeix la teva espècie objectiu"
+msgstr ""
 
 # Moth survey label
 msgid "Date"
-msgstr "Data"
+msgstr ""
 
 # Moth survey label
 msgid "Method"
-msgstr "Mètode"
+msgstr ""
 
 # Context term
 msgid "Please select the medthod type"
-msgstr "Si us plau selecciona el mètode"
+msgstr ""
 
 # Moth survey method type
 msgid "MV light"
-msgstr "Llum MV"
+msgstr ""
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr "Llum actínica"
+msgstr ""
 
 # Moth survey method type
 msgid "LED light"
-msgstr "Llum LED"
+msgstr ""
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr "Trampa de llum"
+msgstr ""
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr "Observació diürna"
+msgstr ""
 
 # Moth survey method type
 msgid "Dusking"
-msgstr "Capvespre"
+msgstr ""
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr "Atreta per la llum d'una finestra"
+msgstr ""
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr "Bebent sucres"
+msgstr ""
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr "Corda envinada"
+msgstr ""
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr "Safata amb esquers"
+msgstr ""
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr "Trampa de feromones"
+msgstr ""
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr "Altres mètodes (afegir comentari)"
+msgstr ""
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr "No registrat"
+msgstr ""
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr "Detalls del mostreig"
+msgstr ""
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr "Mostreig amb trampa per arnes"
+msgstr ""
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr "Mostreig d'arnes"
+msgstr ""
 
 # Moth survey divider label
 msgid "Species list"
-msgstr "Llista d'espècies"
+msgstr ""
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr "Identificador"
+msgstr ""
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr "Llista d'arnes"
+msgstr ""
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr "Foto de l'Arna"
+msgstr ""
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr "Escriu el nom de l'observador, si és diferent."
+msgstr ""
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr "Nom de l'observador/a"
+msgstr ""
 
 # Latitude
 msgid "Lat"
-msgstr "Lat"
+msgstr ""
 
 # Longitude
 msgid "Long"
-msgstr "Long"
+msgstr ""
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr "Comptatge dins la trampa"
+msgstr ""
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr "Comptatge fora la trampa"
+msgstr ""
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr "Fotos d'Arnes"
+msgstr ""
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr "Trampes per arnes"
+msgstr ""
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr "Trampa per arnes"
+msgstr ""
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
-"Encara no has creat cap trampa per arnes. Per a fer-ne una si us plau ves a "
-"la <2>web.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr "Per veure el mapa si us plau connecta l'internet."
+msgstr ""
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr "Afegeix una trampa per arnes"
+msgstr ""
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
-"Només tens una trampa per arnes. Per crear-ne més si us plau ves a la "
-"<2>web.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr "Identificant..."
+msgstr ""
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr "Desconegut"
+msgstr ""
 
 # Report table button
 msgid "Show more"
-msgstr "Mostra'n més"
+msgstr ""
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr "Si us plau afegeix una foto"
+msgstr ""
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr "Espècie desconeguda"
+msgstr ""
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr "<0>Alerta</0> - no hem pogut identificar aquesta espècie."
+msgstr ""
 
 # App settings title
 msgid "Surveying"
-msgstr "Mostrejant"
+msgstr ""
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr "Mostreig d'arnes (SPRING)"
+msgstr ""
 
 # Survey name
 msgid "Moth Survey"
-msgstr "Mostreig d'arnes"
+msgstr ""
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr "Configuració del mostreig d'arnes"
+msgstr ""
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr "Usar la identificació d'imatge"
+msgstr ""
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
 msgstr ""
-"T'ajudarem a identificar l'espècie usant el nostre classificador d'imatges."
 
 # Moth survey button label
 msgid "Identify"
-msgstr "Identifica"
+msgstr ""
 
 # Moth survey button label
 msgid "Identify All"
-msgstr "Identifica-les totes"
+msgstr ""
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr "Identificació de la imatge"
+msgstr ""
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
-"El classificador d'imatges està actualment <1>deshabilitat</1>. Si us plau "
-"ves a la <4>Configuració</4> de l'aplicació per activar-lo."
 
 # Whats new message title
 msgid "What's New"
-msgstr "Què hi ha de nou"
+msgstr ""
 
 # Whats new message option
 msgid "Don't show again"
-msgstr "No ensenyis altre cop"
+msgstr ""
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
-"S'ha afegit la capacitat per veure els registres que s'han penjat des "
-"d'altres dispositius."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
-"El mapa de registres s'ha actualitzat per mostrar tots els registres "
-"d'usuari."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
-"S'ha activat la còpia de la llista d'espècies de la secció de transecte "
-"anterior."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
-"S'ha activat la còpia de la llista d'espècies de la trampa d'arnes anterior."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr "Pàgina de la Guia d'Espècies actualitzada"
+msgstr ""
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
 msgstr ""
-"S'ha afegit una opció per esborrar els fitxers penjats a la memòria cau."
 
 # User account action
 msgid "Resend"
-msgstr "Torna a enviar"
+msgstr ""
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr "Sembla que el teu correu encara no s'ha verificat."
+msgstr ""
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr "Hauríem de tornar a enviar el correu de verificació?"
+msgstr ""
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
-"El teu Servei de Localització (GPS) sembla que està desactivat. Pots "
-"activar-lo a la configuració del teu dispositiu."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr "Els Serveis de Localització (GPS) estan descativats."
+msgstr ""
 
 # Moth trap survey
 msgid "Add New"
-msgstr "Afegir Nou"
+msgstr ""
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
-"Encara no tens cap trampa per arnes. <1>Crea la teva primera trampa per "
-"arnes</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr "Trampa per Arnes"
+msgstr ""
 
 # Moth trap survey
 msgid "Type"
-msgstr "Tipus"
+msgstr ""
 
 # Moth trap survey
 msgid "Other type"
-msgstr "Un altre tipus"
+msgstr ""
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr "Afegir làmpara"
+msgstr ""
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr "Quin tipus de trampa era?"
+msgstr ""
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr "No s'han afegit làmpares"
+msgstr ""
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr "Quin tipus de làmpara és?"
+msgstr ""
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr "Quin tipus de trampa per arnes és?"
+msgstr ""
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr "Trampa d'embut LED"
+msgstr ""
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr "Altres trampes d'embut"
+msgstr ""
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr "Trampa amb 2 llençols"
+msgstr ""
 
 # Moth trap survey
 msgid "Other trap"
-msgstr "Altres trampes"
+msgstr ""
 
 # Moth trap survey
 msgid "Lamp"
-msgstr "Làmpara"
+msgstr ""
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr "Detalls de la làmpara"
+msgstr ""
 
 # Moth trap survey
 msgid "Quantity"
-msgstr "Quantitat"
+msgstr ""
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr "Trampa d'arnes sense nom"
+msgstr ""
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr "Nom de la trampa d'arnes"
+msgstr ""
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr "Segur que vols eliminar aquesta trampa d'arnes?"
+msgstr ""
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr "Descripció adicional de la làmpara."
+msgstr ""
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr "Si us plau afegeix nom i localització de la trampa d'arnes."
+msgstr ""
 
 # Survey validation
 msgid "Incomplete"
-msgstr "Incomplet"
+msgstr ""
 
 # Moth trap survey
 msgid "Select"
-msgstr "Selecciona"
+msgstr ""
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr "Observadors/es"
+msgstr ""
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
 msgstr ""
-"Entra el nombre de persones que han ajudat a aquest mostreig, incloent-te a "
-"tu."
 
 msgid "Network Error"
-msgstr "Error de Xarxa"
+msgstr ""
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr "Si us plau inicia sessió per veure l'informe de les teves dades."
+msgstr ""
 
 # Report label
 msgid "Your top species this month"
-msgstr "Les teves espècies destacades del mes"
+msgstr ""
 
 # Report label
 msgid "Your top species"
-msgstr "La teves espècies més destacades"
+msgstr ""
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr "Secció de Fotos"
+msgstr ""
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr "No s'ha iniciat sessió com a usuari."
+msgstr ""
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
-msgstr "Pensem que amb un {{probability}}% és tracta de <3>{{taxon}}"
+msgstr ""
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
-"<0>Alerta</0> - pensem que és amb un {{probability}}% l'espècie "
-"<5>{{taxon}}</5>"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr "Làmpares"
+msgstr ""
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
-msgstr "Segur que vols eliminar aquesta làmpara de la trampa d'arnes?"
+msgstr ""
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr "El tipus de trampa és un camp requerit."
+msgstr ""
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr "Benvingut/da a bord!"
+msgstr ""
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
-"Abans de començar cap mostreig comprova el teu correu i clica a l'enllaç de "
-"verificació."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr "Ho sentim, l'espècie no s'ha trobat."
+msgstr ""
 
 msgid "Kenya"
-msgstr "Kènia"
+msgstr ""
 
 # GPS permission button label
 msgid "Deny"
-msgstr "Denegar"
+msgstr ""
 
 # GPS permission button label
 msgid "Accept"
-msgstr "Acceptar"
+msgstr ""
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr "Permís d'ubicació"
+msgstr ""
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
-"Per establir automàticament les ubicacions de les espècies i fer un "
-"seguiment de la ruta, encara que el dispositiu estigui bloquejat. Permet que"
-" l'aplicació utilitzi la teva ubicació."
 
 # Delete account
 msgid "Delete account"
-msgstr "Eliminar compte"
+msgstr ""
 
 # Delete account
 msgid "You can delete your user account from the system."
-msgstr "Pots esborrar el teu compte d'usuari del sistema."
+msgstr ""
 
 # Delete account alert header
 msgid "Account delete"
-msgstr "Eliminació del compte"
+msgstr ""
 
 # Delete account alert message
 msgid ""
@@ -2211,131 +2084,125 @@ msgid ""
 "account on the <2>{{url}}</2> website. You will lose access to any records "
 "that you have previously submitted using the app or website.</1>"
 msgstr ""
-"Segur que vols esborrar el teu compte? <1>Això remourà el compte en la web "
-"<2>{{url}}</2>. Perdràs l'accés als registres que prèviament hagis enviat "
-"usant l'aplicació o la web.</1>"
 
 # Part of Species Group selection
 msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
-"Aquesta opció s'ha traslladat a la pàgina de cerca d'espècies dins els mostrejos. Quan s'inicia una mostreig, pots seleccionar quin grup d'espècies estàs enregistrant.\n"
-" "
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr "Grups"
+msgstr ""
 
 # Part of Species Group selection
 msgid "Close"
-msgstr "Tancar"
+msgstr ""
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr "Confirma"
+msgstr ""
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr "Quins grups d'espècies has comptat?"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr "Selecciona l'espècie objectiu"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr "No s'ha afegit cap foto. <br/>Toca <4><0></0></4> per afegir-ne."
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr "Estat alar"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr "Comportament"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr "Direcció"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr "Alçada"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr "Brúixola"
+msgstr ""
 
 # Alert header
 msgid "Delete Survey"
-msgstr "Esborrar mostreig"
+msgstr ""
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
-"Avís - Això descartarà la informació del mostreig que has entrat de moment"
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr "Nova"
+msgstr ""
 
 # Painted lady wing options
 msgid "Worn"
-msgstr "Volada - vella"
+msgstr ""
 
 # Painted lady wing options
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr "Especifica la font de nèctar"
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr "Afegeix l'opció d'ovoposició."
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr "Afegeix l'opció d'aparellament."
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr "Font de nèctar"
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr "Afegeix la font de nèctar"
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr "Afegeix la direcció del vent"
+msgstr ""
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr "Afegeix l'alçada"
+msgstr ""
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr "Plantes nutrícies"
+msgstr ""
 
 # Part of painted lady
 msgid "Migrating"
-msgstr "Migrant"
+msgstr ""
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr "Libant nèctar"
+msgstr ""
 
 # Part of painted lady
 msgid "Mating"
-msgstr "Comportament reproductor"
+msgstr ""
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr "Dispositiu no compatible"
+msgstr ""
 
 # Painted lady compass
 msgid ""
@@ -2345,344 +2212,326 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
-"Malauradament, sembla que el teu dispositiu no té el sensor necessari perquè la brúixola funcioni correctament. La brúixola es basa en aquest sensor per detectar el camp magnètic terrestre i determinar l'orientació del dispositiu en relació al nord magnètic. Per tant, no podrràs utilitzar la brúixola en aquest dispositiu.\n"
-" "
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr "Comportament territorial: altres"
+msgstr ""
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr "Comportament territorial: encimballament (hill-topping)"
+msgstr ""
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr "Quina era l'alçada de vol de la papallona? (metres)"
+msgstr ""
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr "Altres plantes hoste"
+msgstr ""
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr "Ortiga del desert"
+msgstr ""
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr "Malva"
+msgstr ""
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr "Cards"
+msgstr ""
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr "Plantes nutrícies"
+msgstr ""
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr "Si us plau selecciona les plantes nutrícies"
+msgstr ""
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
 msgstr ""
-"No tens cap registre de <1>{{prettySpeciesName}}</1> a la teva llista."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr "Consell: copia els atributs"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr "Condició alar"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr "Font de nèctar"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr "Entra aquí la font de nèctar"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr "Altres espècies"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr "De quin tipus de card es tracta?"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr "Espècie de card"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr "Copiat!"
+msgstr ""
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
-"Per copiar una entrada en una llista fes-la lliscar cap a la dreta i apreta "
-"l'icona <1><0></0></1>."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr "Alçada del terra (metres)"
+msgstr ""
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr "Alçada"
+msgstr ""
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr "Començar comptatge"
+msgstr ""
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr "Seguint la migració de la Migradora dels cards amb Butterfly Count"
+msgstr ""
 
 # Menu page label
 msgid "Instructions"
-msgstr "Instruccions"
+msgstr ""
 
 # Country name
 msgid "Saint Helena"
-msgstr "Santa Helena"
+msgstr ""
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr "Ponent ous"
+msgstr ""
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr "Copulant o parelles en tàndem"
+msgstr ""
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr "Exúvia"
+msgstr ""
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr "Emergent"
+msgstr ""
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr "Suma dels comptatges ha de ser major que 0"
+msgstr ""
 
 # Report page label
 msgid "Show less"
-msgstr "Ensenya'n menys"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr "Nom de la teva pista"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
 msgstr ""
-"Aquí podeu seleccionar o fer lliscar el dit per editar les vostres pistes "
-"anteriors"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr "Edita"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr "Edita localitat"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Name"
-msgstr "Nom"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr "Preferit"
+msgstr ""
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr "Segur que vols eliminar la pista guardada?"
+msgstr ""
 
 # Map GPS button interface
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
-"Per reprendre el seguiment GPS, primer heu d'eliminar l'àrea dibuixada del "
-"mapa."
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr "Fase lunar"
+msgstr ""
 
 # Moon phase values
 msgid "New"
-msgstr "Nou"
+msgstr ""
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr "Nova creixent"
+msgstr ""
 
 #  Moon phase values
 msgid "First quarter"
-msgstr "Quart creixent"
+msgstr ""
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr "Gibosa creixent"
+msgstr ""
 
 #  Moon phase values
 msgid "Full"
-msgstr "Lluna plena"
+msgstr ""
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr "Gibosa minvant"
+msgstr ""
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr "Quart minvant"
+msgstr ""
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr "Lluna minvant"
+msgstr ""
 
 # Info message
 msgid "Trap start"
-msgstr "Inici de la trampa"
+msgstr ""
 
 # Info message
 msgid "Trap end"
-msgstr "Final de la trampa"
+msgstr ""
 
 # Info message
 msgid "Start Weather"
-msgstr "Iniciar meteorologia"
+msgstr ""
 
 # Info message
 msgid "End Weather"
-msgstr "Finalitzar meteorologia"
+msgstr ""
 
 # Info message
 msgid "Please add the moth trap."
-msgstr "Si us plau afegeix la trampa d'arnes."
+msgstr ""
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
-"Ens hem adonat que el teu transsecte té <1>seccions llargues</1>. Si us plau"
-" assegura't de que la <3>localització</3> és correcta."
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr "Per defecte a l'hora de la posta de sol"
+msgstr ""
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr "Per defecte a l'hora de la sortida del sol"
+msgstr ""
 
 # Error message
 msgid "Location services are not enabled"
-msgstr "Els serveis d'ubicació no estan activats"
+msgstr ""
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr "No tens pistes anteriors."
+msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr "S'ha canviat l'ordre de la llista per alfabètic."
+msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr "S'ha canviat l'ordre de la llista al darrer afegit."
+msgstr ""
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr "No confirmat"
+msgstr ""
 
 # Record verification status
 msgid "Accepted"
-msgstr "Acceptat"
+msgstr ""
 
 # Record verification status
 msgid "Rejected"
-msgstr "Rebutjat"
+msgstr ""
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr "La fiabilitat no pot estar buida."
+msgstr ""
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr "Núvols no pot estar buit."
+msgstr ""
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr "No vinculat a cap projecte"
+msgstr ""
 
 # Survey Projects functionality
 msgid "Join"
-msgstr "Unir-se"
+msgstr ""
 
 # Survey Projects functionality
 msgid "Project"
-msgstr "Projecte"
+msgstr ""
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr "Projectes"
+msgstr ""
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr "Els meus projectes"
+msgstr ""
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr "Tots els projectes"
+msgstr ""
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
-"Encara no t'has unit a cap projecte. Ves a la pestanya \"Tots els "
-"projectes\" per unir-te a un projecte. <br/><br/> Estira la pàgina cap avall"
-" per actualitzar la llista."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
-"<0>{{país}}</0> Actualment no hi ha nous projectes per unir-s'hi. <br/><br/>"
-" Estira la pàgina cap avall per actualitzar la llista."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr "T'has unit amb èxit al projecte."
+msgstr ""
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr "Sortir"
+msgstr ""
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr "Has deixat amb èxit el projecte."
+msgstr ""
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr "Sensible"
+msgstr ""
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
-"Aquest mostreig té espècies sensibles i no s'ha d'incloure als informes "
-"públics."

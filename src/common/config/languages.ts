@@ -1,4 +1,5 @@
 const languages = {
+  'sq-AL': { name: 'Shqip', ISO_639_2: 'sqi' },
   'bg-BG': { name: 'Български', ISO_639_2: 'bul' },
   'ca-ES': { name: 'Català', ISO_639_2: 'cat' },
   'gl-ES': { name: 'Galego', ISO_639_2: 'glg' },

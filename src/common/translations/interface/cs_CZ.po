@@ -109,6 +109,9 @@ msgstr "Moldávie"
 msgid "Montenegro"
 msgstr "Černá Hora"
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr "Severní Makedonie"
 
@@ -300,12 +303,22 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
+"V projektu UGP+* dohromady spolupracují občané, vědci i úředníci, aby spolu "
+"vyvinuli plány do budoucnosti pro evropskou městskou přírodu. Počítání "
+"motýlů ve městech tak neslouží pouse pro sledování stavu biodiverzity a "
+"kvality městské zeleně, ale také nás všechny opravňuje pro zabývání se "
+"otázkami biologické rozmanitosti, přírodní politiky i pro navrhování nových "
+"opatření pro lidi a město. Údaje poskytnuté účastníky budou analyzovány s "
+"cílem informovat o akcích na ochranu městské biodiverzity v celé Evropě."
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
+"UGP+ znamená \"Enhancing Urban Greening Plans\", tj. \"Posílení plánů "
+"ozelenění měst\" jako hlavní proud podpory biodiverzity ve společnosti, je "
+"to projekt financovaný Evropskou unií."
 
 msgid "Home"
 msgstr "Domů"
@@ -472,7 +485,7 @@ msgstr "Zakreslit plochu"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Místa"
 
 # Survey area page
 msgid "Previous"
@@ -480,43 +493,43 @@ msgstr "Předchozí"
 
 # Survey area page
 msgid "New location"
-msgstr ""
+msgstr "Nové místo"
 
 # Survey area page
 msgid "No location"
-msgstr ""
+msgstr "Žádné místo"
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Název místa"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Poznámky"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "Trasa průzkumu je stále zaznamenávána."
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Lokalita je úspěšně uložena."
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "Opravdu?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Toto vymaže data z formuláře."
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Ano"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 msgid "Delete"
 msgstr "Smazat"
@@ -969,11 +982,11 @@ msgstr "V průvodci použij české názvy"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Použít celosvětový seznam"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr ""
+msgstr "Neomezujte hledání v průzkumech pouze na lokální druhy."
 
 msgid "Share App Analytics"
 msgstr "Sdílejte analýzy aplikace"
@@ -1260,6 +1273,10 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"Preferovanou metodou je 15-minutový součet. Ten může být prováděn kdekoli a "
+"kdykoli, když jsou motýli aktivní (tedy když je teplo a nejlépe i slunečno)."
+" Aplikaci také můžete použít pro Vaše založené motýlí transekty. Poznámky "
+"dole napoví, jak používat metody, které jsou v současnosti k dispozici."
 
 msgid "How to do a 15-minute Count"
 msgstr "Jak provést 15 minutové Sčítání"
@@ -2590,58 +2607,65 @@ msgstr "Musíte doplnit oblačnost."
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "Není propojeno s žádným projektem"
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "Připojit se"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Projekt"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Projekty"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "Moje projekty"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "Všechny projekty"
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"Zatím jste se nepřipojili k žádnému projektu. Pro připojení se k projektu "
+"jděte na záložku \"Všechny projekty\".<br/><br/>Pro obnovu seznamu stránku "
+"přetáhněte dolů."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"<0>{{country}}</0>Pro zapojení se zde nyní chybí nové projekty.<br/><br/>Pro"
+" obnovu seznamu přetáhněte stránku dolů."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "Úspěšně zapojeno do projektu."
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "Opustit"
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr ""
+msgstr "Projekt úspěšně opuštěn."
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "Citlivé"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Tento průzkum zahrnuje citlivé druhy a proto by neměl být součástí veřejných"
+" zpráv."

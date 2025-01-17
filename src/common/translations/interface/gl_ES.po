@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Marta Vila Taboada, 2024
 # SABA GONZÁLEZ LORENZO, 2024
+# Marta Vila Taboada, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: SABA GONZÁLEZ LORENZO, 2024\n"
+"Last-Translator: Marta Vila Taboada, 2024\n"
 "Language-Team: Galician (Spain) (https://app.transifex.com/ceh/teams/95441/gl_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -108,6 +108,9 @@ msgstr "Moldavia"
 msgid "Montenegro"
 msgstr "Montenegro"
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr "Macedonia do Norte"
 
@@ -175,7 +178,7 @@ msgid "Montserrat"
 msgstr "Monsterrat"
 
 msgid "Anguilla"
-msgstr "Anguilla"
+msgstr "Anguila"
 
 msgid "Elsewhere"
 msgstr "Noutro lugar"
@@ -199,7 +202,7 @@ msgid "Sign in"
 msgstr "Inicie sesión"
 
 msgid "Register"
-msgstr "Rexistro"
+msgstr "Rexístrese"
 
 msgid "Forgot password?"
 msgstr "Esqueceu o contrasinal?"
@@ -271,10 +274,10 @@ msgid "Lets start!"
 msgstr "Imos comezar!"
 
 msgid "TOP RECORDERS"
-msgstr "Especies con maior número de rexistros"
+msgstr "Récord de rexistros"
 
 msgid "Top Species from all timed counts"
-msgstr "Especies máis vistas nas contaxes"
+msgstr "Especies máis vistas nas contaxes cronometradas"
 
 msgid "Back"
 msgstr "Atrás"
@@ -301,22 +304,24 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
-"No proxecto UGP+, cidadáns, responsables políticos e científicos traballan "
-"conxuntamente para desenvolver plans para a ecoloxía urbana en Europa. "
-"Contar bolboretas nas cidades non so é un xeito de facer un mellor "
-"seguimento da biodiversidade e da calidade dos espazos verdes urbáns, tamén "
-"serve para implicarnos en cuestións de biodiversidade, políticas verdes e "
-"propoñer novas accións para as persoas e as cidades. Os datos aportados "
-"polas persoas voluntarias analizaranse para informar das accións de "
-"conservación da biodiversidade urbana en toda Europa."
+"No proxecto* UGP+, a cidadanía, responsables políticos e a comunidade "
+"científica traballan conxuntamente para desenvolver plans para a natureza "
+"urbana en Europa. Contar bolboretas nas cidades non so é un xeito de facer "
+"un mellor seguimento da biodiversidade e da calidade dos espazos verdes "
+"urbáns, tamén serve para animarnos a implicármonos en cuestións de "
+"biodiversidade, políticas verdes e propoñer novas accións para as persoas e "
+"as cidades. Os datos aportados polos participantes analizaranse para ser "
+"parte dos informes nos que basear as accións de conservación da "
+"biodiversidade urbana en toda Europa."
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
-"UGP+ quere dicir Enhancing Urban Greening Plans to Mainstream Biodiversity "
-"in Society, e é un proxecto financiado pola Unión Europea"
+"UGP+ quere dicir Promovendo Plans de Revexetación Urgana para Integrar a "
+"Biodiversidade na Sociedade (Enhancing Urban Greening Plans to Mainstream "
+"Biodiversity in Society), e é un proxecto financiado pola Unión Europea"
 
 msgid "Home"
 msgstr "Inicio"
@@ -457,7 +462,7 @@ msgstr "Borrador"
 
 msgid "Previous survey draft exists, would you like to continue it?"
 msgstr ""
-"Existe un borrador de batida iniciado previamente. Gustaríalle continualo?"
+"Existe un borrador de mostraxe iniciado previamente. Gustaríalle continualo?"
 
 msgid "Discard"
 msgstr "Descartar"
@@ -489,7 +494,7 @@ msgstr "Localizacións"
 
 # Survey area page
 msgid "Previous"
-msgstr "Previo"
+msgstr "Previo/a"
 
 # Survey area page
 msgid "New location"
@@ -509,7 +514,7 @@ msgstr "Observacións"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr "Estáse a rastrexar a área de mostraxe"
+msgstr "A área de mostraxe aínda está sendo rastrexada"
 
 # Survey area page
 msgid "Successfully saved a location."
@@ -521,7 +526,7 @@ msgstr "Ten a certeza de que...?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr "Elminaranse os datos da mostraxe."
+msgstr "Esta acción eliminará os datos do formulario."
 
 # Survey area page
 msgid "Yes"
@@ -529,13 +534,13 @@ msgstr "Si"
 
 # Survey area page
 msgid "No"
-msgstr "No"
+msgstr "Non"
 
 msgid "Delete"
 msgstr "Eliminar"
 
 msgid "Surveys"
-msgstr "Batidas"
+msgstr "Mostraxes"
 
 msgid "Reports"
 msgstr "Informes"
@@ -552,22 +557,22 @@ msgid "Sorry, no report data is available at the moment."
 msgstr "Sentímolo, neste intre non hai ningún informe dispoñible."
 
 msgid "Are you sure you want to delete this survey?"
-msgstr "Ten a certeza de que quere eliminar esta batida?"
+msgstr "Ten a certeza de que quere eliminar esta mostraxe?"
 
 msgid "No finished surveys"
-msgstr "Non hai batidas rematadas"
+msgstr "Non hai mostraxes rematadas"
 
 msgid "Finished surveys"
-msgstr "Batidas rematadas"
+msgstr "Mostraxes rematadas"
 
 msgid "Selected area"
 msgstr "Área seleccionada"
 
 msgid "Use survey create time"
-msgstr "Usar a hora de creación da batida"
+msgstr "Usar a hora de creación da mostraxe"
 
 msgid "Use survey finish time"
-msgstr "Usar a hora de remate da batida"
+msgstr "Usar a hora de remate da mostraxe"
 
 msgid "species"
 msgstr "especie"
@@ -579,16 +584,16 @@ msgid "Time's up!"
 msgstr "Rematou o tempo!"
 
 msgid "Survey incomplete"
-msgstr "Batida incompleta"
+msgstr "Mostraxe incompleta"
 
 msgid "The survey is not complete yet."
-msgstr "A batida aínda non se completou."
+msgstr "A mostraxe aínda non se completou."
 
 msgid "Please select a smaller area."
 msgstr "Por favor, escolla unha área máis pequena."
 
 msgid "Please add survey area information."
-msgstr "Por favor, engada información sobre a área da batida."
+msgstr "Por favor, engada información sobre a área da mostraxe."
 
 msgid "Choose a method to upload a photo"
 msgstr "Escolla a maneira de subir unha foto"
@@ -722,8 +727,8 @@ msgid ""
 "This app contributes data to the European Butterfly Monitoring Scheme "
 "(eBMS)."
 msgstr ""
-"Esta apli fornece datos ao Programa europeo de seguimento de bolboretas "
-"(eBMS, pola sigla en inglés)."
+"Esta aplicación fornece datos ao Programa europeo de seguimento de "
+"bolboretas (eBMS, pola sigla en inglés)."
 
 msgid "In June 2019, the following organisations are partners in eBMS:"
 msgstr "En xuño de 2019 eran socias do eBMS as seguintes organizacións:"
@@ -732,18 +737,18 @@ msgid "Not enough data yet"
 msgstr "Aínda non hai suficientes datos"
 
 msgid "How to start a survey"
-msgstr "Como comezar unha batida?"
+msgstr "Como comezar unha mostraxe?"
 
 msgid "To start a new survey you can press the plus button"
-msgstr "Para comezar unha nova batida, prema o botón co signo +"
+msgstr "Para comezar unha nova mostraxe, prema o botón co signo +"
 
 msgid "in the home page footer. This will start a new 15 minute survey."
 msgstr ""
-"no pé da páxina de inicio. Isto permitiralle comezar unha nova batida de 15 "
+"no pé da páxina de inicio. Isto permitiralle comezar un novo reconto de 15 "
 "minutos."
 
 msgid "Selecting species"
-msgstr "Seleccionar especies"
+msgstr "Seleccionando especies"
 
 msgid "Please press the Add"
 msgstr "Por favor, prema o botón Engadir"
@@ -752,8 +757,8 @@ msgid ""
 "button in your new survey edit page. This will bring you to the taxa search "
 "page. After selecting the species, this will add it to your survey list."
 msgstr ""
-"na páxina de edición da nova batida. Isto levarao á páxina de busca de "
-"taxons. Logo de escoller a especie, engadirase á listaxe da batida."
+"na páxina de edición da nova mostraxe. Isto levarao á páxina de busca de "
+"taxons. Logo de escoller a especie, engadirase á lista desta mostraxe."
 
 msgid "Note"
 msgstr "Nota"
@@ -769,8 +774,8 @@ msgid ""
 "To delete a species from your survey list your can swipe it left and click "
 "the delete button."
 msgstr ""
-"Para suprimir unha especie da listaxe da batida pode pasar o dedo cara á "
-"esquerda e premer no botón de eliminar."
+"Para suprimir unha especie da listaxe da mostraxe pode esvarar o dedo cara á"
+" esquerda e premer no botón de eliminar."
 
 msgid ""
 "To add more information to your species occurrence, you can open the species"
@@ -795,7 +800,7 @@ msgid ""
 "associated taxonomy ranks. For quicker searching of the taxa you can use "
 "different shortcuts. For example, to find"
 msgstr ""
-"A aplicación inclúe unha listaxe de contra 500 especies de bolboretas e "
+"A aplicación inclúe unha listaxe de arredor de 500 especies de bolboretas e "
 "todas as categorías taxonómicas asociadas. Pode empregar distintos atallos "
 "para axilizar as procuras dos taxons. Por exemplo, para atopar"
 
@@ -803,16 +808,16 @@ msgid "Sync. with the website"
 msgstr "Sincronizar co sitio web"
 
 msgid "All your saved surveys will be shown on your account page."
-msgstr "Todas as batidas que garde aparecerán na súa conta."
+msgstr "Todas as mostraxes que garde aparecerán na súa conta."
 
 msgid ""
 "By default a survey is in a 'draft' mode which will not be sent to the "
 "database until the 'Finish' button in the header is clicked. The application"
 " will try to submit your record once there is a good network connection."
 msgstr ""
-"Por defecto as batidas están nun modo de borrador e non se enviarán á base "
-"de datos até premer no botón Rematar da cabeceira. A aplicación tentará "
-"enviar os rexistros en canto haxa unha boa conexión a Internet."
+"Por defecto as mostraxes están nun modo \"borrador\" e non se enviarán á "
+"base de datos até premer no botón \"Rematar\" da cabeceira. A aplicación "
+"tentará enviar os rexistros en canto haxa unha boa conexión a Internet."
 
 msgid ""
 "you have to be signed in to your website account and have a network "
@@ -897,7 +902,7 @@ msgstr "Limpar"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
-msgstr "Isto eliminará os datos da caché, incluídas as batidas que subise."
+msgstr "Isto eliminará os datos da caché, incluídas as mostraxes que subise."
 
 msgid "Sweden"
 msgstr "Suecia"
@@ -920,7 +925,7 @@ msgid "No finished pending surveys"
 msgstr "Non hai rexistros pendentes acabados"
 
 msgid "No uploaded surveys"
-msgstr "Non hai batidas cargadas"
+msgstr "Non hai mostraxes cargadas"
 
 msgid "Enjoying the app?"
 msgstr "Está a gustarlle a apli?"
@@ -1003,7 +1008,7 @@ msgstr "Empregar listaxes globais de especies"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr "Non restrinxir as buscas a nomes de especies locais."
+msgstr "Non restrinxir as procuras a nomes de especies locais."
 
 msgid "Share App Analytics"
 msgstr "Compartir as estatísticas da apli"
@@ -1194,7 +1199,7 @@ msgid "Enter more information here..."
 msgstr "Introduza máis información aquí..."
 
 msgid "Please specify the person responsible for identifying the species."
-msgstr "Por favor, indique quen se encargou de identificar as especies."
+msgstr "Por favor, indique quen se encargou de identificar a especie."
 
 msgid "HH:mm"
 msgstr "HH:mm"
@@ -1312,17 +1317,18 @@ msgid ""
 "survey you can review your records and make sure the totals are correct "
 "before submitting."
 msgstr ""
-"Este é o método predeterminado na apli. Simplemente conta as bolboretas "
-"durante un período de 15 minutos, ben nunha zona definida, como un campo, "
-"ben mentres camiña ou ben de pé nun punto fixo a computar as bolboretas que "
-"pasan voando. Non cómpre debuxar o percorrido, xa que a apli recoñecerá a "
-"súa ruta sempre que teña o seguimento GPS activado nos axustes. En caso "
-"contrario, terá que debuxar a área onde realizou o seguimento nun mapa, "
-"usando a apli. Para comezar, toque o botón + na parte inferior da pantalla. "
-"A apli contará os 15 minutos cara a atrás. Lembre que pode facer unha pausa "
-"en calquera momento (por exemplo, para identificar unha bolboreta) premendo "
-"o botón de pausa. Ao rematar a batida, pode revisar os seus rexistros e "
-"asegurarse de que os totais son correctos antes de enviar os datos."
+"Este é o método predeterminado na aplicación. Simplemente conte as "
+"bolboretas durante un período de 15 minutos, ben nunha zona definida, como "
+"un campo, ben mentres camiña ou ben desde un punto fixo rexistrando as "
+"bolboretas que pasan voando. Non cómpre debuxar o percorrido, xa que a "
+"aplicación recoñecerá a súa ruta sempre que teña o seguimento GPS activado "
+"nos axustes. En caso contrario, terá que debuxar a área onde realizou o "
+"seguimento nun mapa, usando a aplicación. Para comezar, toque o botón + na "
+"parte inferior da pantalla. A aplicación fará unha conta atrás de  15 "
+"minutos. Lembre que pode facer unha pausa en calquera momento (por exemplo, "
+"para identificar unha bolboreta) premendo o botón de pausa. Ao rematar a "
+"mostraxe, pode revisar os seus rexistros e asegurarse de que os totais son "
+"correctos antes de enviar os datos."
 
 msgid ""
 "Add species you see by pressing the + ADD button and start typing a species "
@@ -1404,7 +1410,7 @@ msgstr ""
 "datos."
 
 msgid "Survey section"
-msgstr "Sección da batida"
+msgstr "Sección da mostraxe"
 
 msgid ""
 "In this tab, on the right part of the + Button, you can see the PENDING "
@@ -1531,7 +1537,7 @@ msgstr "Copiar especies"
 # Species list copy functionality
 msgid "Are you sure want to copy previous survey species list?"
 msgstr ""
-"Ten a certeza de que quere copiar a listaxe de especies dunha contaxe "
+"Ten a certeza de que quere copiar a listaxe de especies dunha mostraxe "
 "anterior?"
 
 # Species list copy functionality
@@ -1549,7 +1555,7 @@ msgstr "Copiáronse correctamente {{speciesCount}} especies."
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
 msgstr ""
-"Sentímolo, non hai unha batida previa da cal poida copiar as especies."
+"Sentímolo, non hai unha mostraxe previa da cal poida copiar as especies."
 
 # Country name
 msgid "Armenia"
@@ -1557,7 +1563,7 @@ msgstr "Armenia"
 
 # Survey page additional information note
 msgid "To delete any surveys swipe it to the left."
-msgstr "Para eliminar unha contaxe, pase o dedo cara á esquerda."
+msgstr "Para eliminar unha mostraxe, pase o dedo cara á esquerda."
 
 # 15min survey additional information note after survey is finished
 msgid ""
@@ -1568,7 +1574,7 @@ msgstr ""
 
 # Survey page additional information note
 msgid "Please do not forget to upload any pending surveys!"
-msgstr "Por favor, non esqueza cargar as contaxes pendentes!"
+msgstr "Por favor, non esqueza cargar as mostraxes pendentes!"
 
 # Survey page additional information note
 msgid "No finished pending surveys.<br/><br/>Press <4></4> to add."
@@ -1611,11 +1617,11 @@ msgstr "Ocultar"
 
 # App settings labels for primary survey change
 msgid "Primary Survey"
-msgstr "Batida principal"
+msgstr "Mostraxe principal"
 
 # App settings labels for primary survey change
 msgid "All Surveys"
-msgstr "Todas as batidas"
+msgstr "Todas as mostraxes"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
@@ -1653,7 +1659,7 @@ msgstr "Enténdoo!"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr "<0>Non hai batidas cargadas</0>"
+msgstr "<0>Non hai mostraxes cargadas</0>"
 
 # user register error message
 msgid "Account already exists."
@@ -1799,15 +1805,15 @@ msgstr "Non rexistrada/o"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr "Detalles da batida"
+msgstr "Detalles da mostraxe"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr "Batida para a contaxe de avelaíñas"
+msgstr "Mostraxe de avelaíñas con trampa"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr "Batida de avelaíñas"
+msgstr "Mostraxe de avelaíñas"
 
 # Moth survey divider label
 msgid "Species list"
@@ -1831,7 +1837,7 @@ msgstr "Indique a persoa que realizou o rexistro, se non foi vostede."
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr "Nome de quen fixo o rexistro"
+msgstr "Nome da persoa rexistradora"
 
 # Latitude
 msgid "Lat"
@@ -1910,19 +1916,19 @@ msgstr "<0>Atención!</0> Non puidemos identificar esta especie."
 
 # App settings title
 msgid "Surveying"
-msgstr "Facendo unha batida"
+msgstr "Facendo unha mostraxe"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr "Batida de avelaíñas (SPRING)"
+msgstr "Mostraxe de avelaíñas (SPRING)"
 
 # Survey name
 msgid "Moth Survey"
-msgstr "Batida de avelaíñas"
+msgstr "Mostraxe de avelaíñas"
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr "Axustes da batida de avelaíñas"
+msgstr "Axustes de mostraxe de avelaíñas"
 
 # Moth settings page label
 msgid "Use image identification"
@@ -2114,7 +2120,7 @@ msgstr "Incompleta"
 
 # Moth trap survey
 msgid "Select"
-msgstr "Escolla"
+msgstr "Escoller"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
@@ -2187,8 +2193,8 @@ msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
-"Antes de comezar calquera batida, por favor, comprobe o correo-e e faga clic"
-" na ligazón de verificación."
+"Antes de comezar calquera mostraxe, por favor, comprobe o correo-e e faga "
+"clic na ligazón de verificación."
 
 # Species guide search
 msgid "Sorry, no species were found."
@@ -2246,7 +2252,7 @@ msgid ""
 "survey starts, you can select which species group you are recording."
 msgstr ""
 "Esta opción trasladouse á páxina de busca de especies dentro das pescudas. "
-"Ao comezar unha batida, pode seleccionar o grupo de especies que estea a "
+"Ao comezar unha mostraxe, pode seleccionar o grupo de especies que estea a "
 "rexistrar."
 
 # Part of Species Group selection
@@ -2297,14 +2303,14 @@ msgstr "Compás"
 
 # Alert header
 msgid "Delete Survey"
-msgstr "Eliminar a batida"
+msgstr "Eliminar a mostraxe"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
-"Atención! Esta acción ha eliminar a información da batida que rexistrase ata"
-" o momento."
+"Atención! Esta acción ha eliminar a información da mostraxe que rexistrase "
+"ata o momento."
 
 # Painted lady wing options
 msgid "Fresh"
@@ -2439,7 +2445,7 @@ msgstr "Introduza a fonte de alimento aquí"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr "Outra especie"
+msgstr "Outras especies"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
@@ -2583,11 +2589,11 @@ msgstr "Lúa minguante cóncava"
 
 # Info message
 msgid "Trap start"
-msgstr "Inicio da trampa"
+msgstr "Data/hora de colocación da trampa"
 
 # Info message
 msgid "Trap end"
-msgstr "Fin da trampa"
+msgstr "Data/hora de retirada da trampa"
 
 # Info message
 msgid "Start Weather"
@@ -2606,7 +2612,7 @@ msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
-"Decatámonos de que a súa batida ten <1>seccións longas</1>. Por favor, "
+"Decatámonos de que a súa mostraxe ten <1>seccións longas</1>. Por favor, "
 "asegúrese de que a <3>localización</3> é correcta!"
 
 # Info message
@@ -2715,5 +2721,5 @@ msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
-"Esta batida contén especies sensibles e non se debería incluír en informes "
-"públicos."
+"Esta mostraxe contén especies sensibles e non se debería incluír en informes"
+" públicos."

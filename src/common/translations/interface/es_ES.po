@@ -109,6 +109,9 @@ msgstr "Moldavia"
 msgid "Montenegro"
 msgstr "Montenegro"
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr "Macedonia del norte"
 
@@ -275,7 +278,7 @@ msgid "TOP RECORDERS"
 msgstr "MEJORES CENSADORES"
 
 msgid "Top Species from all timed counts"
-msgstr "Especies más vistas en todos los Recuentos de 15 minutos"
+msgstr "Especies más registradas en todos los Recuentos de 15 minutos"
 
 msgid "Back"
 msgstr "Atrás"
@@ -2153,11 +2156,11 @@ msgstr "Por favor, inicie sesión para ver su propio informe de datos."
 
 # Report label
 msgid "Your top species this month"
-msgstr "Sus principales especies este mes"
+msgstr "Sus especies más registradas este mes"
 
 # Report label
 msgid "Your top species"
-msgstr "Sus especies principales"
+msgstr "Sus especies más registradas"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"

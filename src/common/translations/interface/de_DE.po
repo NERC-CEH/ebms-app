@@ -6,11 +6,12 @@
 # Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2022
 # Daniela Lehner <daleh@gmx.at>, 2023
 # Elisabeth Kühn, 2023
+# Henry Geres, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Elisabeth Kühn, 2023\n"
+"Last-Translator: Henry Geres, 2024\n"
 "Language-Team: German (Germany) (https://app.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,6 +113,9 @@ msgstr "Moldavien"
 msgid "Montenegro"
 msgstr "Montenegro"
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr "Nordmazedonien"
 
@@ -170,16 +174,16 @@ msgid "Botswana"
 msgstr "Botswana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigeria"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Neuseeland"
 
 msgid "Montserrat"
-msgstr ""
+msgstr "Montserrat"
 
 msgid "Anguilla"
-msgstr ""
+msgstr "Anguilla"
 
 msgid "Elsewhere"
 msgstr "Anderswo"
@@ -305,12 +309,25 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
+"Im UGP+ Projekt* arbeiten Bürger:innen, politische Entscheidungsträger:innen"
+" und Wissenschaftler:innen zusammen, um Pläne für die Zukunft von urbaner "
+"Natur in Europa zu entwickeln. Schmetterlinge in der Stadt zu zählen ist "
+"nicht nur eine tolle Möglichkeit, die biologische Artenvielfalt und die "
+"Qualität von städtischen Grünflächen im Auge zu behalten, sondern auch um "
+"uns alle darin zu bestärken, uns mit Fragen der Biodiversität "
+"auseinanderzusetzen und neue Handlungsansätze für Bevölkerung und Stadt zu "
+"finden. Die von den Teilnehmern beigetragenen Daten werden analysiert, um "
+"Informationen über Maßnahmen zur Erhaltung der biologischen Vielfalt in "
+"Städten in ganz Europa zu erhalten."
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
+"UGP+ steht zu Deutsch für 'Verbesserung der städtischen Begrünungspläne zur "
+"Einbeziehung der biologischen Vielfalt in die Gesellschaft' Das Projekt wird"
+" von der Europäischen Union gefördert."
 
 msgid "Home"
 msgstr "Startseite"
@@ -480,51 +497,51 @@ msgstr "Zeichne einen Bereich"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Standorte"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Vorherige"
 
 # Survey area page
 msgid "New location"
-msgstr ""
+msgstr "Neuer Standort"
 
 # Survey area page
 msgid "No location"
-msgstr ""
+msgstr "Kein Standort"
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Name der Ortes"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Kommentare"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "Der Bereich der Begehung wird immer noch erfasst."
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Standort erfolgreich gespeichert."
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "Bist du sicher?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Dadurch werden die Formulardaten verworfen."
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
 msgid "Delete"
 msgstr "Löschen"
@@ -896,11 +913,13 @@ msgstr "Sie können den von der App verwendeten Speicherplatz freigeben."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Leeren"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Dies wird zwischengespeicherte Daten, inbegriffen deiner hochgeladenen "
+"Formulare, löschen."
 
 msgid "Sweden"
 msgstr "Schweden"
@@ -917,6 +936,8 @@ msgstr "Hochgeladen"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Du musst dich mit deinem Konto <1>anmelden</1> , um die Datensätze einsehen "
+"zu können."
 
 msgid "No finished pending surveys"
 msgstr "Keine abgeschlossenen ausstehenden Erfassungen"
@@ -1001,11 +1022,11 @@ msgstr "Deutsche Namen im Leitfaden anzeigen"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Globale Artenliste benutzen"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr ""
+msgstr "Begehungssuche nicht auf lokale Artennamen begrenzen."
 
 msgid "Share App Analytics"
 msgstr "App Analytics teilen"
@@ -1294,6 +1315,12 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"Die bevorzugte Methode ist es, eine 15-Minuten-Zählung durchzuführen. Diese "
+"kann überall und zu jeder Zeit gemacht werden, wenn Schmetterlinge aktiv "
+"sind (z.B. bei warmem und möglichst sonnigem Wetter). Du kannst die App auch"
+" nutzen, um deine etablierten Transekte zu nutzen. Die untenstehenden "
+"Hinweise erklären dir, wie du die aktuell verfügbaren Methoden anwenden "
+"kannst."
 
 msgid "How to do a 15-minute Count"
 msgstr "Wie man eine Viertelstundenzählung durchführt"
@@ -1451,7 +1478,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Bist du sicher, dass du deine aktuelle Route löschen möchtest?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1973,26 +2000,33 @@ msgstr "Nicht mehr anzeigen"
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"Es wurde die Möglichkeit hinzugefügt, Zählungen einzusehen, die von anderen "
+"Geräten hochgeladen wurden."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"Die Karte wurde aktulisiert, und zeigt nun die Zählungen aller Benutzer an."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
 msgstr ""
+"Übernehmen der Artenliste aus dem vorherigen Transektabschnitt aktivieren"
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"Übernehmen der Artenliste aus der vorherigen Nachtfalterfalle aktivieren"
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Seite mit Artenschlüssel wurde aktualisiert."
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
 msgstr ""
+"Möglichkeit hinzugefügt, um hochgeladene zwischengespeicherte Datein zu "
+"löschen."
 
 # User account action
 msgid "Resend"
@@ -2498,7 +2532,7 @@ msgstr "Exuvie"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Aufsteigend"
 
 # Alert message
 msgid "Count sum must be greater than 0"
@@ -2543,6 +2577,8 @@ msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"Um die GPS-Ortung fortzusetzen, musst du den gezeichneten Bereich erst von "
+"der Karte entfernen."
 
 # Part of weather attributes
 msgid "Moon phase"
@@ -2627,11 +2663,11 @@ msgstr "Du hast keine vorherigen Begehungen."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "Listensortierung geändert zu: alphabetisch"
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr ""
+msgstr "Listensortierung geändert zu: zuletzt hinzugefügt"
 
 # Record verification status
 msgid "Unconfirmed"
@@ -2647,66 +2683,73 @@ msgstr "Abgelehnt"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Zuverlässigkeit darf nicht leer sein."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Bewölkung darf nicht leer sein."
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "Zu keinem Projekt zugeordnet."
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "Beitreten"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Projekt"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Projekte"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "Meine Projekte"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "Alle Projekte"
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"Du bist noch keinem Projekt beigetreten. Geh zum Reiter \"Alle Projekte\", "
+"um einem Projekt beizutreten. <br/><br/>Wische nach unten, um die Liste zu "
+"aktualisieren."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"<0>{{country}}</0> Derzeit sind keine neuen Projekte zum Beitreten "
+"verfügbar<br/><br/>Wische nach unten, um die Liste zu aktualisieren."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "Dem Projekt wurde erfolgreich beigetreten."
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "Verlassen"
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr ""
+msgstr "Projekt wurde erfolreich verlassen."
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "Sensibel"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Diese Erhebung betrifft sensible Arten und sollte nicht in öffentliche "
+"Berichte aufgenommen werden."

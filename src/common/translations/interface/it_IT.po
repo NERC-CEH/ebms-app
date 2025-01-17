@@ -111,6 +111,9 @@ msgstr "Moldavia "
 msgid "Montenegro"
 msgstr "Montenegro"
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr "Macedonia del Nord"
 

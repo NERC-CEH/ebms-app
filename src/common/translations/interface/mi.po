@@ -103,6 +103,9 @@ msgstr ""
 msgid "Montenegro"
 msgstr ""
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr ""
 

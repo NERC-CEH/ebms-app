@@ -1,6 +1,7 @@
 ## 1.28.0
 
 Added Morocco.
+Added Albanian language.
 
 ## 1.27.0
 

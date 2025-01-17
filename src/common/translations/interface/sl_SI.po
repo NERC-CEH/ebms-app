@@ -108,6 +108,9 @@ msgstr "Moldavija"
 msgid "Montenegro"
 msgstr "Črna gora"
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr "Severna Makedonija"
 

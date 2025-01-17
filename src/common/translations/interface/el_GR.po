@@ -107,6 +107,9 @@ msgstr "Μολδαβία"
 msgid "Montenegro"
 msgstr "Μαυροβούνιο"
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr "Βόρεια Μακεδονία"
 

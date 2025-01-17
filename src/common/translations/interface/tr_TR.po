@@ -114,6 +114,9 @@ msgstr "Moldova"
 msgid "Montenegro"
 msgstr "Karadağ"
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr "Kuzey Makedonya"
 

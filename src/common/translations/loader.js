@@ -26,6 +26,7 @@ import ro_RO from './interface/ro_RO.po';
 import ru_RU from './interface/ru_RU.po';
 import sk_SK from './interface/sk_SK.po';
 import sl_SI from './interface/sl_SI.po';
+import sq_AL from './interface/sq_AL.po';
 import sr_RS from './interface/sr.po';
 import sv_SE from './interface/sv_SE.po';
 import tr_TR from './interface/tr_TR.po';
@@ -53,6 +54,7 @@ import species_ro_RO from './species/ro_RO.po';
 import species_ru_RU from './species/ru_RU.po';
 import species_sk_SK from './species/sk_SK.po';
 import species_sl_SI from './species/sl_SI.po';
+import species_sq_AL from './species/sq_AL.po';
 import species_sr_RS from './species/sr.po';
 import species_sv_SE from './species/sv_SE.po';
 import species_tr_TR from './species/tr_TR.po';
@@ -233,5 +235,10 @@ export default {
     interface: rawToKeyVal(mi_NZ),
     species: rawToKeyVal(species_mi_NZ),
     names: flatNames['el-GR'],
+  },
+  'sq-AL': {
+    interface: rawToKeyVal(sq_AL),
+    species: rawToKeyVal(species_sq_AL),
+    names: flatNames['sq-AL'],
   },
 };

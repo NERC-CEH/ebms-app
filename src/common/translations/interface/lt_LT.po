@@ -109,6 +109,9 @@ msgstr "Moldova"
 msgid "Montenegro"
 msgstr "Juodkalnija"
 
+msgid "Morocco"
+msgstr ""
+
 msgid "North Macedonia"
 msgstr "Šiaurės Makedonija"
 
