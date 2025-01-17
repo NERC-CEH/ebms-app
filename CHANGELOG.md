@@ -2,6 +2,7 @@
 
 Added Morocco.
 Added Albanian language.
+Added bumblebee common names.
 
 ## 1.27.0
 

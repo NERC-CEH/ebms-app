@@ -131,6 +131,7 @@ function sortAlphabetically(species: any) {
 const make = async () => {
   const butterflies = await fetch(groups.butterflies.id);
   const dragonflies = await fetch(groups.dragonflies.id);
+  const bumblebees = await fetch(groups.bumblebees.id);
   const mothsOnly = ({ taxon_group: group }: any) => group === groups.moths.id;
   const specificCountryOnly = ({ language_iso: lang }: any) =>
     COUNTRIES_WITH_MOTH_COMMON_NAMES[lang];
@@ -147,7 +148,7 @@ const make = async () => {
     return;
   }
 
-  const species = [...butterflies, ...moths, ...dragonflies];
+  const species = [...butterflies, ...moths, ...dragonflies, ...bumblebees];
   const sortedSpecies = sortAlphabetically(species);
 
   const structuredNames = turnNamesArrayIntoLangObject(sortedSpecies);
