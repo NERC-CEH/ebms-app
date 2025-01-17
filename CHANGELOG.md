@@ -1,3 +1,7 @@
+## 1.28.0
+
+Added Morocco.
+
 ## 1.27.0
 
 Updated fixed site setup form.

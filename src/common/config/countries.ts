@@ -311,7 +311,7 @@ const countries = {
     name: 'United Kingdom',
     latitude: 55.378051,
     longitude: -3.435973,
-    zoom: 3,
+    zoom: 4,
     id: 216189,
   },
   ES_CA: {
@@ -397,6 +397,13 @@ const countries = {
     longitude: 173.647554,
     zoom: 4,
     id: 216127,
+  },
+  MA: {
+    name: 'Morocco',
+    longitude: -7.667768,
+    latitude: 27.660413,
+    zoom: 4,
+    id: 216096,
   },
 
   // special option
