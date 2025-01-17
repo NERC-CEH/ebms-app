@@ -6,10 +6,13 @@ import {
   MapDraw,
   useAlert,
   mapFlyToLocation,
+  isValidLocation,
 } from '@flumens';
 import { IonSpinner } from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
+import countries from 'common/config/countries';
+import appModel from 'common/models/app';
 import Sample, { AreaCountLocation } from 'models/sample';
 import Favourites from './Favourites';
 import FinishPointMarker from './FinishPointMarker';
@@ -64,6 +67,16 @@ const AreaAttr = ({
   // eslint-disable-next-line prefer-destructuring
   const location = sample.attrs.location as AreaCountLocation;
 
+  let initialViewState;
+  if (isValidLocation(location)) {
+    initialViewState = { ...location };
+  } else {
+    const country = countries[appModel.attrs.country!];
+    if (country?.zoom) {
+      initialViewState = { ...country };
+    }
+  }
+
   const [mapCenter, saveMapCenter] = useState<any>([1, 1]);
   const updateMapCentre = ({ viewState }: any) =>
     saveMapCenter([viewState.latitude, viewState.longitude]);
@@ -105,7 +118,7 @@ const AreaAttr = ({
         accessToken={config.map.mapboxApiKey}
         mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
         maxPitch={0}
-        initialViewState={location}
+        initialViewState={initialViewState}
         onMoveEnd={updateMapCentre}
         maxZoom={19}
       >
