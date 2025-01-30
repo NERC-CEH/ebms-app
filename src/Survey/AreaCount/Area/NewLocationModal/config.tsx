@@ -5,6 +5,8 @@ export const siteNameAttr = {
   container: 'inline',
 } as const;
 
+export const OTHER_SITE_SIZE_VALUE = '23733';
+
 export const siteAreaAttr = {
   id: 'locAttr:376',
   type: 'choice_input',
@@ -15,7 +17,7 @@ export const siteAreaAttr = {
     { title: '20 x 25 m', data_name: '23730' },
     { title: '10 x 50 m', data_name: '23731' },
     { title: '5 x 100 m', data_name: '23732' },
-    { title: 'other', data_name: '23733' },
+    { title: 'other', data_name: OTHER_SITE_SIZE_VALUE },
   ],
 } as const;
 
@@ -57,6 +59,16 @@ export const grainsNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validations: { min: 0, max: 100 },
+} as const;
+
+export const customAreaSizeAttr = {
+  id: 'locAttr:159',
+  type: 'number_input',
+  title: 'Area size',
+  appearance: 'counter',
+  placeholder: '0',
+  suffix: 'm²',
+  validations: { min: 0 },
 } as const;
 
 export const vegetablesNumberAttr = {

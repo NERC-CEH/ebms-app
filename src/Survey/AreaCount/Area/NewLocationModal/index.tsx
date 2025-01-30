@@ -29,10 +29,12 @@ import Media from 'common/models/media';
 import { Group } from 'common/models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
 import {
+  OTHER_SITE_SIZE_VALUE,
   buildingsNumberAttr,
   commentAttr,
   cornNumberAttr,
   croppingNumberAttr,
+  customAreaSizeAttr,
   fallowNumberAttr,
   fertilizedAttr,
   forestNumberAttr,
@@ -195,6 +197,9 @@ const NewLocationModal = (
     },
   });
 
+  const isOtherSiteSize =
+    (newLocation as any)[siteAreaAttr.id] === OTHER_SITE_SIZE_VALUE;
+
   return (
     <>
       <IonModal
@@ -238,6 +243,9 @@ const NewLocationModal = (
                 isUNPplus) && (
                 <>
                   <Block {...getBlockAttrs(siteAreaAttr)} />
+                  {isOtherSiteSize && (
+                    <Block {...getBlockAttrs(customAreaSizeAttr)} />
+                  )}
                   <InfoMessage inline>
                     Approximate size of your observation site.
                   </InfoMessage>
