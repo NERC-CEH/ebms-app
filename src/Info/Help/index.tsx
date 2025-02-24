@@ -71,7 +71,6 @@ export default () => (
               </T>
             </p>
           </Collapse>
-
           <Collapse title="Searching for species">
             <p>
               <T>
@@ -125,6 +124,50 @@ export default () => (
                 the delete button.
               </T>
             </p>
+          </Collapse>
+          <Collapse title="Assign a project to a count">
+            <ol className="list-decimal pl-4">
+              <T>
+                <li>Start a count.</li>
+                <li>Select "Additional Details," then “Project”.</li>
+                <li>Finally, choose the appropriate project.</li>
+              </T>
+            </ol>
+          </Collapse>
+          <Collapse title="Assign a site to a count">
+            <ol className="list-decimal pl-4">
+              <T>
+                <li>Start a count.</li>
+                <li>
+                  Assign a project to the count (see instructions on how to
+                  select a project).
+                </li>
+                <li>Turn off the GPS in the header of the “Area” page.</li>
+                <li>
+                  Select the "Site Drawing" tool on the right side of the
+                  screen.
+                </li>
+                <li>
+                  Choose an area on the map and confirm your selection on the
+                  right side of the screen.
+                </li>
+                <li>
+                  Press the "Add" button located on the favorite sites panel in
+                  the bottom right corner of the screen. If the panel is not
+                  visible, you can open it by clicking the favorite sites button
+                  (star icon) at the top right.
+                </li>
+                <li>
+                  You will be prompted to answer some questions about the site.
+                </li>
+                <li>
+                  Press "Save" in the top right corner after answering the
+                  questions. The site will be saved, and it can be selected for
+                  future counts conducted in that location.
+                </li>
+                <li>Finally, choose the site for the current count.</li>
+              </T>
+            </ol>
           </Collapse>
         </div>
 
