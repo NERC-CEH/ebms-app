@@ -5,12 +5,12 @@
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Georg, 2024
 # Harriet Arnberg, 2024
-# Lars Pettersson <lars.pettersson@biol.lu.se>, 2024
+# Lars Pettersson <lars.pettersson@biol.lu.se>, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Lars Pettersson <lars.pettersson@biol.lu.se>, 2024\n"
+"Last-Translator: Lars Pettersson <lars.pettersson@biol.lu.se>, 2025\n"
 "Language-Team: Swedish (Sweden) (https://app.transifex.com/ceh/teams/95441/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,7 +113,7 @@ msgid "Montenegro"
 msgstr "Montenegro"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Marocko"
 
 msgid "North Macedonia"
 msgstr "Nord-Makedonien"

@@ -1,11 +1,12 @@
 # 
 # Translators:
 # Daniela Lehner <daleh@gmx.at>, 2023
+# Marius Munschek, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Daniela Lehner <daleh@gmx.at>, 2023\n"
+"Last-Translator: Marius Munschek, 2024\n"
 "Language-Team: German (Germany) (https://app.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,6 +20,19 @@ msgstr "Papiliio-hospiton-Beschreibung"
 
 msgid "Parnassius-mnemosyne-description"
 msgstr ""
+"Der Schwarze Apollo kommt in Gebirgsregionen auf feuchtem bis mäßig "
+"trockenem Grasland vor, in der Regel mit Wald oder Gebüsch in der Nähe. Man "
+"kann die Falter oft dabei beobachten, wie sie rote oder violette Blüten "
+"besuchen, um den benötigten Nektar zu sammeln. Die Nahrungspflanze ist der "
+"Lerchensporn, der zur Zeit der Eiablage noch nicht oberirdisch ist. Die Eier"
+" werden an ihren vertrockneten Stängeln, an Grashalmen oder an anderen "
+"Pflanzen abgelegt, die nicht allzu weit von der Futterpflanze entfernt sind."
+" Das Ei überwintert. Im Frühjahr, sobald sie sich aus dem Ei befreit hat, "
+"macht sich die kleine Raupe auf die Suche nach einer geeigneten "
+"Futterpflanze. Wenn sie ausgewachsen ist, verpuppt sie sich in einem eng "
+"gesponnenen Kokon aus feinen Fäden, der sich über dem Boden in den Blättern "
+"der Futterpflanze befindet. Der Schwarze Apollo hat eine Generation pro "
+"Jahr."
 
 msgid "Parnassius-phoebus-description"
 msgstr ""

@@ -4,12 +4,12 @@
 # Karolis, 2021
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2022
 # Marta Depetris, 2023
-# Federica Paradiso <fedediso94@gmail.com>, 2024
+# Federica Paradiso <fedediso94@gmail.com>, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2024\n"
+"Last-Translator: Federica Paradiso <fedediso94@gmail.com>, 2025\n"
 "Language-Team: Italian (Italy) (https://app.transifex.com/ceh/teams/95441/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,7 +112,7 @@ msgid "Montenegro"
 msgstr "Montenegro"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Marocco"
 
 msgid "North Macedonia"
 msgstr "Macedonia del Nord"
