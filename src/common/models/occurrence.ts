@@ -293,4 +293,67 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
 
     return highestProbSpecies;
   }
+
+  getClassifierSubmission() {
+    const { taxon } = this.attrs;
+    const classifierVersion = taxon?.version || '';
+
+    const getMediaPath = (media: Media) => media.attrs.queued;
+    const mediaPaths = this.media.map(getMediaPath);
+
+    const getSuggestion = (
+      { probability, taxon: taxon_name_given, warehouse_id }: any,
+      index: number
+    ) => {
+      const topSpecies = index === 0;
+      const classifierChosen = topSpecies ? 't' : 'f';
+      const humanChosen = warehouse_id === taxon?.warehouse_id ? 't' : 'f';
+
+      return {
+        values: {
+          taxon_name_given,
+          probability_given: probability,
+          taxa_taxon_list_id: warehouse_id,
+          classifier_chosen: classifierChosen,
+          human_chosen: humanChosen,
+        },
+      };
+    };
+
+    const classifierSuggestions =
+      this.attrs.taxon?.suggestions?.map(getSuggestion) || [];
+
+    const hasSuggestions = classifierSuggestions.length;
+    if (!hasSuggestions) {
+      // don't set anything yet because this requires below structure to be valid
+      // submission.values.machine_involvement = MachineInvolvement.NONE;
+      return null;
+    }
+
+    if (!mediaPaths.length) return null;
+
+    const values: any = {};
+    if (Number.isFinite(taxon?.machineInvolvement)) {
+      // eslint-disable-next-line no-param-reassign
+      values.machine_involvement = taxon?.machineInvolvement;
+    }
+
+    return {
+      values,
+
+      classification_event: {
+        values: { created_by_id: null },
+        classification_results: [
+          {
+            values: {
+              classifier_id: config.classifierID,
+              classifier_version: classifierVersion,
+            },
+            classification_suggestions: classifierSuggestions,
+            metaFields: { mediaPaths },
+          },
+        ],
+      },
+    };
+  }
 }
