@@ -9,16 +9,16 @@
   }
 
   ion-label.time {
-    max-width: 66px;
     margin: 0;
+    max-width: 66px;
   }
 
   ion-label.stage {
     display: flex;
 
     ion-badge {
-      text-overflow: ellipsis;
       overflow: hidden;
+      text-overflow: ellipsis;
       --padding-top: 4px;
     }
   }

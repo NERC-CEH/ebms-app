@@ -19,7 +19,6 @@ import {
   stageAttr,
   dragonflyStageAttr,
   speciesGroupsAttr,
-  sunAttr,
   cloudAttr,
 } from 'Survey/common/config';
 
@@ -94,7 +93,6 @@ const config: Survey = {
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
     cloud: cloudAttr,
-    sun: sunAttr, // TODO: backwards compatible, remove in the future
     temperature: temperatureAttr,
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,
@@ -119,7 +117,6 @@ const config: Survey = {
     attrs: {
       date: dateAttr,
       location: locationAttr,
-      sun: sunAttr,
       comment: {
         menuProps: { icon: chatboxOutline, skipValueTranslation: true },
         pageProps: {
@@ -188,7 +185,8 @@ const config: Survey = {
           survey_id: config.id,
         },
         attrs: {
-          sample_method_id: 776,
+          surveyId: config.id,
+          sampleMethodId: 776,
           location,
           comment: null,
           reliability: 'Suitable conditions',
@@ -196,15 +194,6 @@ const config: Survey = {
       });
 
       return sample;
-    },
-
-    modifySubmission(submission) {
-      if (!submission.survey_id) {
-        // backwards compatible
-        submission.survey_id = config.id; //eslint-disable-line
-      }
-
-      return submission;
     },
 
     verify(attrs) {
@@ -233,7 +222,7 @@ const config: Survey = {
   },
 
   create({ Sample }) {
-    const recorder = `${userModel.attrs.firstName} ${userModel.attrs.lastName}`;
+    const recorder = `${userModel.data.firstName} ${userModel.data.lastName}`;
     const now = new Date().toISOString();
 
     const sample = new Sample({
@@ -243,25 +232,17 @@ const config: Survey = {
         speciesGroups: [],
       },
       attrs: {
-        training: appModel.attrs.useTraining,
+        surveyId: config.id,
         date: now,
+        training: appModel.data.useTraining,
         location: null,
-        sample_method_id: 22,
+        sampleMethodId: 22,
         surveyStartTime: now,
         recorder,
       },
     });
 
     return sample;
-  },
-
-  modifySubmission(submission) {
-    if (!submission.survey_id) {
-      // backwards compatible
-      submission.survey_id = config.id; //eslint-disable-line
-    }
-
-    return submission;
   },
 };
 

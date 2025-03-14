@@ -6,6 +6,7 @@ import {
   Header,
   Page,
   useLoader,
+  useSample,
   useToast,
 } from 'common/flumens';
 import appModel from 'common/models/app';
@@ -22,15 +23,14 @@ import Main from './Main';
 
 const device = { isOnline: true }; // TODO:
 
-type Props = {
-  sample: Sample;
-};
-
-const Groups = ({ sample }: Props) => {
+const Groups = () => {
   const toast = useToast();
   const loader = useLoader();
   const checkUserStatus = useUserStatusCheck();
   const navigation = useContext(NavContext);
+
+  const { sample } = useSample<Sample>();
+  if (!sample) throw new Error('Sample is missing');
 
   // eslint-disable-next-line
   groups.length; // to force refresh when groups list is updated
@@ -40,14 +40,14 @@ const Groups = ({ sample }: Props) => {
     const group = groups.find(byId);
     if (!group) {
       // eslint-disable-next-line
-      sample.attrs.group = undefined;
+      sample.data.group = undefined;
       // eslint-disable-next-line
-      appModel.attrs.defaultGroup = undefined;
+      appModel.data.defaultGroup = undefined;
     } else {
-      const simplifiedGroup = { title: group.attrs.title, id: group.id! };
+      const simplifiedGroup = { title: group.data.title, id: group.id! };
       // eslint-disable-next-line
-      sample.attrs.group = group ? simplifiedGroup : undefined;
-      appModel.attrs.defaultGroup = simplifiedGroup;
+      sample.data.group = group ? simplifiedGroup : undefined;
+      appModel.data.defaultGroup = simplifiedGroup;
     }
 
     navigation.goBack();
@@ -73,7 +73,7 @@ const Groups = ({ sample }: Props) => {
 
     loader.hide();
 
-    await groups.fetch();
+    await groups.fetchRemote();
   };
 
   const leaveGroup = async (groupId: string) => {
@@ -82,15 +82,15 @@ const Groups = ({ sample }: Props) => {
     try {
       await loader.show('Please wait...');
       await leave(groupId);
-      await groups.fetch();
+      await groups.fetchRemote();
 
-      if (sample.attrs.group?.id === groupId) {
+      if (sample.data.group?.id === groupId) {
         // eslint-disable-next-line
-        sample.attrs.group = undefined;
+        sample.data.group = undefined;
       }
 
-      if (appModel.attrs.defaultGroup?.id === groupId) {
-        appModel.attrs.defaultGroup = undefined;
+      if (appModel.data.defaultGroup?.id === groupId) {
+        appModel.data.defaultGroup = undefined;
       }
 
       toast.success('Successfully left the project.');
@@ -119,7 +119,7 @@ const Groups = ({ sample }: Props) => {
         const docs = await fetchAllGroups({});
         setAllGroups(docs);
       } else {
-        await groups.fetch();
+        await groups.fetchRemote();
       }
     } catch (err: any) {
       toast.error(err);

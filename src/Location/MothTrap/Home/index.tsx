@@ -5,16 +5,21 @@ import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Page, Header, useAlert, useToast, UUID } from '@flumens';
+import { Page, Header, useAlert, useToast, UUIDv7 } from '@flumens';
 import { NavContext } from '@ionic/react';
-import Location, { Lamp, useValidateCheck } from 'models/location';
+import {
+  Lamp,
+  mothTrapLampDescriptionAttr,
+  mothTrapLampQuantityAttr,
+  mothTrapLampTypeAttr,
+  mothTrapLampTypeNameAttr,
+  mothTrapLampsAttr,
+  useValidateCheck,
+} from 'models/location';
 import { useUserStatusCheck } from 'models/user';
 import HeaderButton from 'Survey/common/HeaderButton';
+import useLocation from '../useLocation';
 import Main from './Main';
-
-interface Props {
-  sample: Location;
-}
 
 function useDeleteLampPrompt() {
   const alert = useAlert();
@@ -49,7 +54,10 @@ function useDeleteLampPrompt() {
   return showDeletePrompt;
 }
 
-const MothTrapSetup = ({ sample: location }: Props) => {
+const MothTrapSetup = () => {
+  const { location } = useLocation();
+  if (!location) throw new Error('No location was found');
+
   const checkUserStatus = useUserStatusCheck();
 
   const { navigate, goBack } = useContext(NavContext);
@@ -60,11 +68,11 @@ const MothTrapSetup = ({ sample: location }: Props) => {
 
   const deleteLamp = async (entry: Lamp) => {
     const byLamp = (lamp: Lamp) => lamp.cid === entry.cid;
-    const lampIndex = location.attrs.lamps.findIndex(byLamp);
+    const lampIndex = location.data[mothTrapLampsAttr.id].findIndex(byLamp);
 
     const change = await showDeleteLampPrompt();
     if (change) {
-      location.attrs.lamps.splice(lampIndex, 1); // 2nd parameter means remove one item only
+      location.data[mothTrapLampsAttr.id].splice(lampIndex, 1); // 2nd parameter means remove one item only
       location.save();
     }
   };
@@ -85,15 +93,20 @@ const MothTrapSetup = ({ sample: location }: Props) => {
   };
 
   const addNewLamp = () => {
-    const cid = UUID();
+    const cid = UUIDv7();
 
-    if (!location.attrs.lamps) {
-      location.attrs.lamps = [];
+    if (!location.data[mothTrapLampsAttr.id]) {
+      location.data[mothTrapLampsAttr.id] = [];
     }
 
-    location.attrs.lamps.push({
+    location.data[mothTrapLampsAttr.id].push({
       cid,
-      attrs: { type: '', quantity: 1, description: '' },
+      data: {
+        [mothTrapLampTypeNameAttr.id]: '',
+        [mothTrapLampTypeAttr.id]: '',
+        [mothTrapLampQuantityAttr.id]: 1,
+        [mothTrapLampDescriptionAttr.id]: '',
+      },
     });
     location.save();
 

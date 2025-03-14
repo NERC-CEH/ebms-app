@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import { MapRef, LngLatBounds } from 'react-map-gl';
+import { MapRef, LngLatBounds } from 'react-map-gl/mapbox';
 import { Link } from 'react-router-dom';
 import { useToast, device, MapContainer, ElasticOccurrence } from '@flumens';
 import { IonSpinner } from '@ionic/react';
@@ -52,12 +52,12 @@ const Map = () => {
     if (
       !mapRef.current ||
       !userIsLoggedIn ||
-      !userModel.attrs.verified ||
+      !userModel.data.verified ||
       !device.isOnline
     )
       return;
 
-    const bounds: LngLatBounds = mapRef.current.getBounds(); // TODO: .pad(0.5); // padding +50%
+    const bounds: LngLatBounds = mapRef.current.getBounds()!; // TODO: .pad(0.5); // padding +50%
 
     const zoomLevel = mapRef.current.getZoom();
     const northWest = bounds.getNorthWest();
@@ -180,7 +180,7 @@ const Map = () => {
   const squareMarkers = squares.map(getSquareMarker);
 
   let initialViewState;
-  const country = countries[appModel.attrs.country!];
+  const country = countries[appModel.data.country!];
   if (country?.zoom) {
     initialViewState = { ...country };
   }

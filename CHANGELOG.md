@@ -1,3 +1,7 @@
+## 1.29.0
+
+Major codebase upgrade.
+
 ## 1.28.0
 
 Added Morocco.

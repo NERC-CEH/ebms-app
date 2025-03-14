@@ -37,8 +37,8 @@ const RegisterContainer = () => {
     try {
       await userModel.register(email, password, otherDetails);
 
-      userModel.attrs.firstName = firstName; // eslint-disable-line
-      userModel.attrs.lastName = lastName; // eslint-disable-line
+      userModel.data.firstName = firstName; // eslint-disable-line
+      userModel.data.lastName = lastName; // eslint-disable-line
       userModel.save();
 
       alert({
@@ -67,7 +67,7 @@ const RegisterContainer = () => {
   return (
     <Page id="user-register">
       <Header className="ion-no-border" title="Register" />
-      <Main onSubmit={onRegister} lang={appModel.attrs.language!} />
+      <Main onSubmit={onRegister} lang={appModel.data.language!} />
     </Page>
   );
 };

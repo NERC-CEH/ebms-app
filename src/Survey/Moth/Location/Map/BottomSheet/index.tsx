@@ -51,9 +51,9 @@ const BottomSheet = ({
   const getMothTrapWithDistance = (
     mothTrap: MothTrap
   ): MothTrapWithDistance => {
-    if (!mothTrap.attrs.location?.latitude) return [mothTrap, 0];
+    if (!mothTrap.data.location?.latitude) return [mothTrap, 0];
 
-    const { latitude, longitude } = mothTrap.attrs?.location || {};
+    const { latitude, longitude } = mothTrap.data?.location || {};
 
     const from = [longitude, latitude]; // turf long, lat first
     const to = [...centroid].reverse(); // turf long, lat first

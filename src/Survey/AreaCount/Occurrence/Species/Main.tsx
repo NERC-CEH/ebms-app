@@ -36,15 +36,16 @@ const EditOccurrence = ({
   const getSamplesList = () => {
     const getOccurrence = (smp: Sample) => {
       const occ = smp.occurrences[0];
-      const prettyTime = new Date(smp.metadata.createdOn)
+      const prettyTime = new Date(smp.createdAt)
         .toLocaleTimeString()
         .replace(/(:\d{2}| [AP]M)$/, '');
 
-      const { stage, dragonflyStage } = occ.attrs;
+      const { stage, dragonflyStage } = occ.data;
 
       let location;
       if (smp.hasLoctionMissingAndIsnotLocating()) {
-        location = <IonIcon icon={warningOutline} color="danger" />;
+        if (!isDisabled)
+          location = <IonIcon icon={warningOutline} color="danger" />;
       } else {
         location = <GridRefValue sample={smp} />;
       }

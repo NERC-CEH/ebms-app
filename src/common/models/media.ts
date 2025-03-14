@@ -6,7 +6,7 @@ import {
 } from '@capacitor/filesystem';
 import { Media as MediaOriginal, MediaAttrs } from '@flumens';
 import { isPlatform } from '@ionic/react';
-import CONFIG from 'common/config';
+import config from 'common/config';
 import identifyImage from 'common/services/waarneming';
 import userModel from 'models/user';
 import Occurrence from './occurrence';
@@ -21,21 +21,11 @@ export default class Media extends MediaOriginal<Attrs> {
 
   identification = observable({ identifying: false });
 
-  // remote: any = this.remote;
-
   constructor(options: any) {
     super(options);
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    this.remote.url = `${CONFIG.backend.indicia.url}/index.php/services/rest`;
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    this.remote.headers = async () => ({
-      Authorization: `Bearer ${await userModel.getAccessToken()}`,
-    });
-
-    this.attrs = observable(this.attrs);
+    this.remote.url = config.backend.indicia.url;
+    this.remote.getAccessToken = () => userModel.getAccessToken();
   }
 
   async destroy(silent?: boolean) {
@@ -52,10 +42,10 @@ export default class Media extends MediaOriginal<Attrs> {
       this.parent.save();
     }
 
-    const URL = this.attrs.data;
+    const URL = this.data.data;
 
     try {
-      if (this.attrs.path) {
+      if (this.data.path) {
         // backwards compatible - don't delete old media
         await Filesystem.deleteFile({
           path: URL,
@@ -76,20 +66,24 @@ export default class Media extends MediaOriginal<Attrs> {
   }
 
   getURL() {
-    const { data: name, path } = this.attrs;
+    const { data: name, path } = this.data;
 
-    if (!isPlatform('hybrid') || process.env.NODE_ENV === 'test') {
+    if (
+      !isPlatform('hybrid') ||
+      process.env.NODE_ENV === 'test' ||
+      name?.includes('http')
+    ) {
       return name;
     }
 
     const isURL = name.startsWith('https://');
     if (isURL) return name;
 
-    let pathToFile = CONFIG.dataPath;
+    let pathToFile = config.dataPath;
 
     // backwards compatible
     if (!path) {
-      pathToFile = CONFIG.dataPath.replace('/Documents/', '/Library/NoCloud/');
+      pathToFile = config.dataPath.replace('/Documents/', '/Library/NoCloud/');
     }
 
     return Capacitor.convertFileSrc(`${pathToFile}/${name}`);
@@ -101,7 +95,7 @@ export default class Media extends MediaOriginal<Attrs> {
   }
 
   doesTaxonMatchParent = () => {
-    const species = this.attrs?.species?.[0];
+    const species = this.data?.species?.[0];
     if (!species) return false;
 
     if (this.parent instanceof Sample)
@@ -110,7 +104,7 @@ export default class Media extends MediaOriginal<Attrs> {
       );
 
     const speciesId = species.warehouse_id;
-    const parentTaxon = this.parent!.attrs?.taxon;
+    const parentTaxon = this.parent!.data?.taxon;
 
     return (
       speciesId === parentTaxon?.warehouse_id ||
@@ -119,8 +113,8 @@ export default class Media extends MediaOriginal<Attrs> {
   };
 
   async identify() {
-    const hasSpeciesBeenIdentified = !!this.attrs.species;
-    if (hasSpeciesBeenIdentified) return this.attrs.species[0];
+    const hasSpeciesBeenIdentified = !!this.data.species;
+    if (hasSpeciesBeenIdentified) return this.data.species[0];
 
     this.identification.identifying = true;
 
@@ -135,7 +129,7 @@ export default class Media extends MediaOriginal<Attrs> {
 
       const suggestions = await identifyImage(url);
 
-      this.attrs.species = suggestions;
+      this.data.species = suggestions;
 
       this.parent!.save();
     } catch (error) {
@@ -144,6 +138,6 @@ export default class Media extends MediaOriginal<Attrs> {
 
     this.identification.identifying = false;
 
-    return this.attrs.species?.[0];
+    return this.data.species?.[0];
   }
 }

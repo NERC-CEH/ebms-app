@@ -45,7 +45,7 @@ function calculateLineLenght(lineString) {
 }
 
 function getShape(sample) {
-  const oldLocation = sample.attrs.location || {};
+  const oldLocation = sample.data.location || {};
 
   if (!oldLocation.shape) {
     return { type: 'LineString', coordinates: [] };
@@ -105,7 +105,7 @@ export const calculateArea = shape => {
 const extension = {
   setLocation(shape, accuracy, altitude, altitudeAccuracy) {
     if (!shape) {
-      this.attrs.location = null;
+      this.data.location = null;
       return this.save();
     }
 
@@ -114,7 +114,7 @@ const extension = {
         ? shape.coordinates[0][shape.coordinates[0].length - 1]
         : shape.coordinates[shape.coordinates.length - 1];
 
-    this.attrs.location = {
+    this.data.location = {
       latitude,
       longitude,
       area: calculateArea(shape),
@@ -176,7 +176,7 @@ const extension = {
       }
 
       const isOverDefaultSurveyEndTime = this.isTimerFinished();
-      if (this.attrs.surveyStartTime && isOverDefaultSurveyEndTime) {
+      if (this.data.surveyStartTime && isOverDefaultSurveyEndTime) {
         console.log('SampleModel:GPS: timed out stopping!');
         this.stopGPS();
         return;
@@ -211,7 +211,7 @@ const extension = {
 
   hasLoctionMissingAndIsnotLocating() {
     return (
-      (!this.attrs.location || !this.attrs.location.latitude) &&
+      (!this.data.location || !this.data.location.latitude) &&
       !this.isGPSRunning()
     );
   },

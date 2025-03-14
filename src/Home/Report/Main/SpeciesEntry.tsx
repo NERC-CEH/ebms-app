@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { IonItem, IonIcon } from '@ionic/react';
 import speciesProfiles, {
   Species as SpeciesProfile,
@@ -10,6 +11,8 @@ interface Props {
 }
 
 const SpeciesEntry = ({ species }: Props) => {
+  const { t } = useTranslation();
+
   const scientificName = species.key;
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore

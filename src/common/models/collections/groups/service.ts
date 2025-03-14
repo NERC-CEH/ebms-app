@@ -16,7 +16,7 @@ export async function fetch({ member }: Props): Promise<RemoteAttributes[]> {
 
   const token = await userModel.getAccessToken();
 
-  const countryCode = appModel.attrs.country!;
+  const countryCode = appModel.data.country!;
   const countryId = countries[countryCode]?.id;
 
   const options = {
@@ -131,7 +131,7 @@ export async function join(group: RemoteAttributes) {
 
   const body = {
     values: {
-      id: userModel.attrs.indiciaUserId,
+      id: userModel.data.indiciaUserId,
     },
   };
 
@@ -155,7 +155,7 @@ export async function join(group: RemoteAttributes) {
 }
 
 export async function leave(groupId: string) {
-  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${groupId}/users/${userModel.attrs.indiciaUserId}`;
+  const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/groups/${groupId}/users/${userModel.data.indiciaUserId}`;
 
   const token = await userModel.getAccessToken();
 

@@ -13,7 +13,7 @@ type Props = {
 const AllGroups = ({ groups, onJoin }: Props) => {
   const { t } = useTranslation();
 
-  const countryCode = appModel.attrs.country!;
+  const countryCode = appModel.data.country!;
   const country = t(countries[countryCode]?.name);
 
   if (!groups.length)

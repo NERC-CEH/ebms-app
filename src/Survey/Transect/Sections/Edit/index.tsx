@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Page, Header, useAlert, useToast } from '@flumens';
+import { Page, Header, useAlert, useToast, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
@@ -15,23 +15,24 @@ import Main from './Main';
 
 const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
+  const { t } = useTranslation();
 
   function showDeleteSpeciesPrompt(taxon: Taxon) {
     const prompt = (resolve: any) => {
       const taxonName = taxon.scientific_name;
       alert({
-        header: i18n.t('Delete'),
+        header: t('Delete'),
         skipTranslation: true,
-        message: i18n.t('Are you sure you want to delete {{taxon}} ?', {
+        message: t('Are you sure you want to delete {{taxon}} ?', {
           taxon: taxonName,
         }),
         buttons: [
           {
-            text: i18n.t('Cancel'),
+            text: t('Cancel'),
             role: 'cancel',
           },
           {
-            text: i18n.t('Delete'),
+            text: t('Delete'),
             role: 'destructive',
             handler: resolve,
           },
@@ -46,26 +47,23 @@ const useDeleteSpeciesPrompt = () => {
 };
 
 function byCreateTime(model1: Sample, model2: Sample) {
-  const date1 = new Date(model1.metadata.createdOn);
-  const date2 = new Date(model2.metadata.createdOn);
+  const date1 = new Date(model1.createdAt);
+  const date2 = new Date(model2.createdAt);
   return date2.getTime() - date1.getTime();
 }
 
-type Props = {
-  sample: Sample;
-  subSample: Sample;
-};
-
 const FIRST_SECTION_INDEX = 0;
 
-const EditController = ({ sample, subSample }: Props) => {
+const EditController = () => {
   const { navigate, goBack } = useContext(NavContext);
   const { t } = useTranslation();
   const { url } = useRouteMatch();
 
   const toast = useToast();
-
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
+
+  const { sample, subSample } = useSample<Sample>();
+  if (!sample || !subSample) return null;
 
   const deleteFromShallowList = (taxon: Taxon) => {
     const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) => {
@@ -112,7 +110,7 @@ const EditController = ({ sample, subSample }: Props) => {
       const survey = subSample.getSurvey();
       const newOccurrence = survey.occ!.create!({ Occurrence, taxon: taxa });
 
-      newOccurrence.metadata.createdOn = 0;
+      newOccurrence.createdAt = 0;
       subSample.occurrences.push(newOccurrence);
       subSample.save();
       return;
@@ -126,17 +124,17 @@ const EditController = ({ sample, subSample }: Props) => {
 
     if (!occ) return;
 
-    occ.attrs.count += is5x ? 5 : 1;
+    occ.data.count += is5x ? 5 : 1;
     occ.save();
   };
 
   const toggleSpeciesSort = () => {
-    const { areaSurveyListSortedByTime } = appModel.attrs;
+    const { areaSurveyListSortedByTime } = appModel.data;
     const newSort = !areaSurveyListSortedByTime;
-    appModel.attrs.areaSurveyListSortedByTime = newSort;
+    appModel.data.areaSurveyListSortedByTime = newSort;
     appModel.save();
 
-    const prettySortName = appModel.attrs.areaSurveyListSortedByTime
+    const prettySortName = appModel.data.areaSurveyListSortedByTime
       ? 'last added'
       : 'alphabetical';
 
@@ -147,7 +145,7 @@ const EditController = ({ sample, subSample }: Props) => {
     });
   };
 
-  const isDisabled = !!sample.metadata.syncedOn;
+  const isDisabled = !!sample.syncedAt;
 
   const getNextSectionButton = () => {
     if (isDisabled) return null;
@@ -216,7 +214,7 @@ const EditController = ({ sample, subSample }: Props) => {
     }
 
     const getSpeciesId = (occ: Occurrence) =>
-      occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
+      occ.data.taxon.preferredId || occ.data.taxon.warehouse_id;
     const existingSpeciesIds = subSample.occurrences.map(getSpeciesId);
 
     const uniqueSpeciesList: any = [];
@@ -230,7 +228,7 @@ const EditController = ({ sample, subSample }: Props) => {
       return !existingSpeciesIds.includes(speciesID);
     };
 
-    const getTaxon = (occurrence: Occurrence) => toJS(occurrence.attrs.taxon);
+    const getTaxon = (occurrence: Occurrence) => toJS(occurrence.data.taxon);
     const newSpeciesList = previousSectionOrSurvey
       .map(getTaxon)
       .filter(getNewSpeciesOnly) as [];
@@ -272,16 +270,16 @@ const EditController = ({ sample, subSample }: Props) => {
 
     if (!occ) return;
 
-    const taxa = occ.attrs.taxon.warehouse_id || occ.attrs.taxon.preferredId;
+    const taxa = occ.data.taxon.warehouse_id || occ.data.taxon.preferredId;
 
     navigate(`${url}/${occ.cid}/${taxa}`);
   };
 
-  const sectionLocation = subSample.attrs.location!;
+  const sectionLocation = subSample.data.location!;
   const sectionCode =
     ('code' in sectionLocation && sectionLocation.code) || t('Section');
 
-  const { areaSurveyListSortedByTime } = appModel.attrs;
+  const { areaSurveyListSortedByTime } = appModel.data;
   return (
     <Page id="transect-sections-edit">
       <Header

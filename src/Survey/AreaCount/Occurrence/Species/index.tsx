@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router-dom';
-import { Page, Header, useAlert } from '@flumens';
+import { Page, Header, useAlert, useSample } from '@flumens';
 import { NavContext, useIonViewWillEnter } from '@ionic/react';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
@@ -36,21 +36,20 @@ export const useDeleteConfirmation = () => {
 };
 
 function byCreationDate(s1: Sample, s2: Sample) {
-  const date1 = new Date(s1.metadata.updatedOn);
-  const date2 = new Date(s2.metadata.updatedOn);
+  const date1 = new Date(s1.updatedAt);
+  const date2 = new Date(s2.updatedAt);
 
   return date2.getTime() - date1.getTime();
 }
 
-type Props = {
-  sample: Sample;
-};
-
-const SpeciesOccurrences = ({ sample }: Props) => {
+const SpeciesOccurrences = () => {
   const { navigate, goBack } = useContext(NavContext);
   const match = useRouteMatch<any>();
 
   const confirmDelete = useDeleteConfirmation();
+
+  const { sample } = useSample<Sample>();
+  if (!sample) throw new Error('Sample is missing');
 
   const { taxa } = match.params;
 
@@ -67,7 +66,7 @@ const SpeciesOccurrences = ({ sample }: Props) => {
       const [occ] = occurrences;
       if (!occ) return false;
 
-      const { warehouse_id, preferredId } = occ.attrs.taxon;
+      const { warehouse_id, preferredId } = occ.data.taxon;
       if (preferredId === parseInt(taxa, 10)) return true;
 
       if (warehouse_id === parseInt(taxa, 10)) return true;
@@ -84,11 +83,11 @@ const SpeciesOccurrences = ({ sample }: Props) => {
     const shouldDelete = await confirmDelete();
     if (!shouldDelete) return;
 
-    const taxon = { ...smp.occurrences[0].attrs.taxon };
+    const taxon = { ...smp.occurrences[0].data.taxon };
     await smp.destroy();
 
     const byTaxonId = (s: Sample) =>
-      s.occurrences[0].attrs.taxon.id === taxon.id;
+      s.occurrences[0].data.taxon.id === taxon.id;
 
     const isLastSampleDeleted = !sample.samples.filter(byTaxonId).length;
 
@@ -120,7 +119,7 @@ const SpeciesOccurrences = ({ sample }: Props) => {
     }
   });
 
-  const isDisabled = sample.isDisabled();
+  const { isDisabled } = sample;
 
   return (
     <Page id="precise-area-count-edit-taxon-group">

@@ -63,7 +63,7 @@ const MothTrapEntry = ({
 }: Props) => {
   const { navigate } = useContext(NavContext);
 
-  const location = mothTrap.attrs?.location;
+  const location = mothTrap.data?.location;
   const setLocation = () => updateRecord(mothTrap);
   const onDeleteWrap = () => deleteTrap(mothTrap);
   const onUploadWrap = () => onUpload(mothTrap);

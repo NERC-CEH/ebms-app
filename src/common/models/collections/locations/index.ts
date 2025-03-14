@@ -1,4 +1,4 @@
-import { reaction, observable, observe } from 'mobx';
+import { reaction, observable } from 'mobx';
 import { device, Store, Collection } from '@flumens';
 import userModel from 'models/user';
 import Location, {
@@ -31,16 +31,6 @@ export class Locations extends Collection<Location> {
 
     this.Model = options.Model;
 
-    // eslint-disable-next-line @getify/proper-arrows/name
-    observe(this, (change: any) => {
-      if (change.addedCount) {
-        const attachCollection = (model: Location) => {
-          model.collection = this; // eslint-disable-line no-param-reassign
-        };
-        change.added.forEach(attachCollection);
-      }
-    });
-
     this.ready && this.ready.then(this._fetchFirstTime);
 
     const onLoginChange = async (newEmail: any) => {
@@ -51,7 +41,7 @@ export class Locations extends Collection<Location> {
       console.log(`📚 Collection: ${this.id} collection email has changed`);
       this._fetchFirstTime();
     };
-    const getEmail = () => userModel.attrs.email;
+    const getEmail = () => userModel.data.email;
     reaction(getEmail, onLoginChange);
 
     const superReset = this.reset;
@@ -63,7 +53,7 @@ export class Locations extends Collection<Location> {
     };
   }
 
-  fetch = async () => {
+  fetchRemote = async () => {
     const remoteDocs = await this._fetchDocs();
     const remoteExternalKeys = remoteDocs.map(({ cid }) => cid);
 
@@ -168,6 +158,6 @@ type LocationType =
   | typeof TRANSECT_TYPE
   | typeof TRANSECT_SECTION_TYPE;
 export const byType = (type: LocationType) => (location: Location) =>
-  location.attrs.locationTypeId === type;
+  location.data.locationTypeId === type;
 
 export default collection;

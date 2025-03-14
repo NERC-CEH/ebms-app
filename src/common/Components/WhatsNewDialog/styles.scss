@@ -9,11 +9,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 20px;
+    background: white;
     width: 85%;
     max-width: 400px;
-    z-index: 1000;
-    background: white;
-    border-radius: 20px;
 
     .header {
       width: 100%;
@@ -27,60 +27,60 @@
 
       .b1 {
         top: 43px;
-        transform: rotate(-13deg);
         left: 10px;
+        transform: rotate(-13deg);
       }
 
       .b2 {
         top: 10px;
-        transform: rotate(47deg);
         left: 20px;
+        transform: rotate(47deg);
       }
 
       .b3 {
         top: 10px;
-        transform: rotate(47deg);
         right: 20px;
+        transform: rotate(47deg);
       }
 
       .b4 {
         top: 43px;
-        transform: rotate(-13deg);
         right: 10px;
+        transform: rotate(-13deg);
       }
 
       .header-icon {
-        border-radius: 100%;
         position: absolute;
-        background: var(--ion-color-primary);
         top: -55px;
         left: 50%;
-        font-size: 59px;
-        color: white;
-        padding: 12px;
         transform: translateX(-50%);
         border: 3px solid white;
+        border-radius: 100%;
+        background: var(--ion-color-primary);
+        padding: 12px;
         overflow: hidden;
+        color: white;
+        font-size: 59px;
       }
 
       h1 {
-        color: var(--ion-color-primary);
-        max-width: 60%;
-        text-align: center;
         margin: 40px auto 10px;
+        max-width: 60%;
         overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        color: var(--ion-color-primary);
         font-size: 1.5em;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
 
     .message {
-      width: 100%;
-      overflow: scroll;
-      max-height: 55vh;
       border-bottom: 1px solid #f4f4f4;
       padding: 0 20px 20px;
+      width: 100%;
+      max-height: 55vh;
+      overflow: scroll;
 
       ul {
         padding-left: 14px;
@@ -99,9 +99,9 @@
       }
 
       h3 {
-        font-size: 0.9em;
-        font-weight: 500;
         margin-bottom: 0;
+        font-weight: 500;
+        font-size: 0.9em;
       }
       p {
         margin-top: 0;
@@ -115,14 +115,14 @@
 
       .button {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
         width: 50%;
         height: 50px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
         color: var(--ion-color-primary);
         font-size: 0.9em;
-        padding: 0 10px;
+        text-align: center;
 
         &:not(:last-of-type) {
           border-right: 0.5px solid var(--ion-item-border-color);
@@ -140,7 +140,7 @@
   border-top: none !important;
 
   .button {
-    text-transform: uppercase;
     border-right: none !important;
+    text-transform: uppercase;
   }
 }

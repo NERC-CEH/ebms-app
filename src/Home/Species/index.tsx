@@ -27,7 +27,7 @@ const Species = ({ appModel }: Props) => {
   const alert = useAlert();
 
   const showInfoGuideTip = () => {
-    if (!appModel.attrs.showGuideHelpTip) {
+    if (!appModel.data.showGuideHelpTip) {
       return;
     }
 
@@ -51,7 +51,7 @@ const Species = ({ appModel }: Props) => {
       ],
     });
     // eslint-disable-next-line no-param-reassign
-    appModel.attrs.showGuideHelpTip = false;
+    appModel.data.showGuideHelpTip = false;
     appModel.save();
   };
 

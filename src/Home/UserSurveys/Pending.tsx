@@ -9,13 +9,15 @@ import {
   IonList,
   NavContext,
 } from '@ionic/react';
-import samplesCollection from 'models/collections/samples';
+import samplesCollection, {
+  uploadAllSamples,
+} from 'models/collections/samples';
 import Sample, { bySurveyDate } from 'models/sample';
 import userModel from 'models/user';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Survey from './Survey';
 
-async function uploadAllSamples(toast: any, t: any) {
+async function uploadAllSamplesWrap(toast: any, t: any) {
   console.log('Settings:Menu:Controller: sending all samples.');
 
   if (!userModel.isLoggedIn()) {
@@ -24,7 +26,7 @@ async function uploadAllSamples(toast: any, t: any) {
   }
 
   try {
-    const affectedRecordsCount = await samplesCollection.remoteSaveAll();
+    const affectedRecordsCount = await uploadAllSamples();
     toast.success(
       t('Uploading {{count}} record', { count: affectedRecordsCount }),
       { skipTranslation: true }
@@ -56,7 +58,7 @@ const getSurveys = (surveys: Sample[], showUploadAll?: boolean) => {
   let counter: any = {};
 
   [...surveys].forEach(survey => {
-    const date = roundDate(new Date(survey.attrs.date).getTime()).toString();
+    const date = roundDate(new Date(survey.data.date).getTime()).toString();
     if (!dates.includes(date) && date !== 'Invalid Date') {
       dates.push(date);
       dateIndices.push(groupedSurveys.length);
@@ -113,7 +115,7 @@ const Pending = () => {
   const toast = useToast();
   const { t } = useTranslation();
 
-  const notUploaded = (sample: Sample) => !sample.metadata.syncedOn;
+  const notUploaded = (sample: Sample) => !sample.syncedAt;
   const surveys = samplesCollection.filter(notUploaded).sort(bySurveyDate);
 
   const isFinished = (sample: Sample) => sample.metadata.saved;
@@ -126,7 +128,7 @@ const Pending = () => {
       return null;
     }
 
-    return uploadAllSamples(toast, t);
+    return uploadAllSamplesWrap(toast, t);
   };
 
   if (!surveys.length) {

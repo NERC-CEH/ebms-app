@@ -31,10 +31,10 @@ const SelectCountry = ({ hideHeader }: Props) => {
     }
   }
 
-  const currentValue = appModel.attrs.country;
+  const currentValue = appModel.data.country;
 
   function onSelect(newCountry: any) {
-    if (appModel.attrs.country !== 'UK' && newCountry === 'UK') {
+    if (appModel.data.country !== 'UK' && newCountry === 'UK') {
       alert({
         header: 'Note',
         message: (
@@ -53,7 +53,7 @@ const SelectCountry = ({ hideHeader }: Props) => {
         ],
       });
     }
-    appModel.attrs.country = newCountry; // eslint-disable-line no-param-reassign
+    appModel.data.country = newCountry; // eslint-disable-line no-param-reassign
     appModel.save();
 
     if (isSettingsPage) goBack();

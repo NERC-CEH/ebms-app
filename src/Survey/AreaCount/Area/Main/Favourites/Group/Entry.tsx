@@ -1,7 +1,7 @@
 import { checkmarkOutline, pinOutline } from 'ionicons/icons';
 import { twMerge } from 'tailwind-merge';
-import { isValidLocation } from '@flumens/ionic/dist';
 import { IonIcon } from '@ionic/react';
+import { isValidLocation } from 'common/flumens';
 
 type Props = {
   name?: string;

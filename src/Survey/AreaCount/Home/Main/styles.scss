@@ -43,16 +43,16 @@
         opacity: 1 !important;
 
         .icon {
+          opacity: 1;
+          border-radius: 50%;
           width: 20px;
           height: 20px;
-          border-radius: 50%;
-          opacity: 1;
         }
 
         ion-label {
           max-width: 90px;
-          text-overflow: ellipsis;
           overflow: hidden;
+          text-overflow: ellipsis;
           white-space: nowrap;
         }
       }
@@ -94,8 +94,8 @@
   }
 
   .location-spinner {
-    max-height: 23px;
     max-width: 30px;
+    max-height: 23px;
 
     ion-spinner {
       margin-top: -4px;
@@ -112,16 +112,16 @@ ion-alert.speciesGroupAlert {
 
 .copy-attributes-alert {
   .alert-message div {
+    display: inline-flex;
+    position: relative;
+    top: 4px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    border-radius: 10px;
+    background: var(--ion-color-tertiary);
     width: 30px;
     height: 30px;
-    background: var(--ion-color-tertiary);
-    display: inline-flex;
-    justify-content: center;
-    margin: 0 5px;
-    position: relative;
-    align-items: center;
-    top: 4px;
-    border-radius: 10px;
 
     ion-icon {
       font-size: '1em';

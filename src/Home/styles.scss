@@ -1,11 +1,11 @@
 #main {
   ion-tab-bar {
-    padding: 3px 0;
-    border-top: 1px solid var(--ion-color-light-shade);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     contain: none;
+    border-top: 1px solid var(--ion-color-light-shade);
+    padding: 3px 0;
     padding-bottom: var(--ion-safe-area-bottom, 0);
     --background: white;
 

@@ -2,7 +2,14 @@ import { useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Page, Main, Header, useAlert, useOnBackButton } from '@flumens';
+import {
+  Page,
+  Main,
+  Header,
+  useAlert,
+  useOnBackButton,
+  useSample,
+} from '@flumens';
 import { NavContext, IonButtons, IonButton } from '@ionic/react';
 import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
 import Sample from 'models/sample';
@@ -46,17 +53,15 @@ function useDeleteSurveyPrompt(alert: any) {
   return deleteSurveyPromtWrap;
 }
 
-type Props = {
-  sample: Sample;
-  occurrence: Occurrence;
-};
-
-const TaxonController = ({ sample, occurrence }: Props) => {
+const TaxonController = () => {
   const { goBack, navigate } = useContext(NavContext);
   const match = useRouteMatch();
   const alert = useAlert();
   const [isAlertPresent, setIsAlertPresent] = useState(false);
   const shouldDeleteSurvey = useDeleteSurveyPrompt(alert);
+
+  const { sample, occurrence } = useSample<Sample, Occurrence>();
+  if (!sample) throw new Error('Sample is missing');
 
   const onDeleteSurvey = async () => {
     if (!sample.isPreciseSingleSpeciesSurvey()) {
@@ -86,8 +91,6 @@ const TaxonController = ({ sample, occurrence }: Props) => {
 
   useOnBackButton(onDeleteSurvey);
 
-  if (!sample) return null;
-
   const onSpeciesSelected = async (taxon: any) => {
     const { taxa }: any = match.params;
     const { isRecorded } = taxon;
@@ -105,30 +108,30 @@ const TaxonController = ({ sample, occurrence }: Props) => {
         const [occ] = occurrences; // always one
 
         return (
-          occ.attrs.taxon.preferredId === parseInt(taxa, 10) ||
-          occ.attrs.taxon.warehouse_id === parseInt(taxa, 10)
+          occ.data.taxon.preferredId === parseInt(taxa, 10) ||
+          occ.data.taxon.warehouse_id === parseInt(taxa, 10)
         );
       };
       const assignTaxon = ({ occurrences }: Sample) => {
         const [occ] = occurrences; // always one
 
         if (
-          occ.attrs.taxon.group === DRAGONFLY_GROUP &&
+          occ.data.taxon.group === DRAGONFLY_GROUP &&
           taxon.group !== DRAGONFLY_GROUP
         ) {
-          occ.attrs.stage = 'Adult';
-          occ.attrs.dragonflyStage = undefined;
+          occ.data.stage = 'Adult';
+          occ.data.dragonflyStage = undefined;
         }
 
         if (
-          occ.attrs.taxon.group !== DRAGONFLY_GROUP &&
+          occ.data.taxon.group !== DRAGONFLY_GROUP &&
           taxon.group === DRAGONFLY_GROUP
         ) {
-          occ.attrs.dragonflyStage = 'Adult';
-          occ.attrs.stage = undefined;
+          occ.data.dragonflyStage = 'Adult';
+          occ.data.stage = undefined;
         }
 
-        occ.attrs.taxon = taxon;
+        occ.data.taxon = taxon;
       };
       sample.samples.filter(selectedTaxon).forEach(assignTaxon);
 
@@ -141,26 +144,26 @@ const TaxonController = ({ sample, occurrence }: Props) => {
 
     if (occurrence) {
       if (
-        occurrence.attrs.taxon.group !== DRAGONFLY_GROUP &&
+        occurrence.data.taxon.group !== DRAGONFLY_GROUP &&
         taxon.group === DRAGONFLY_GROUP
       ) {
         // eslint-disable-next-line no-param-reassign
-        occurrence.attrs.dragonflyStage = 'Adult';
+        occurrence.data.dragonflyStage = 'Adult';
         // eslint-disable-next-line no-param-reassign
-        occurrence.attrs.stage = undefined;
+        occurrence.data.stage = undefined;
       }
       if (
-        occurrence.attrs.taxon.group === DRAGONFLY_GROUP &&
+        occurrence.data.taxon.group === DRAGONFLY_GROUP &&
         taxon.group !== DRAGONFLY_GROUP
       ) {
         // eslint-disable-next-line no-param-reassign
-        occurrence.attrs.stage = 'Adult';
+        occurrence.data.stage = 'Adult';
         // eslint-disable-next-line no-param-reassign
-        occurrence.attrs.dragonflyStage = undefined;
+        occurrence.data.dragonflyStage = undefined;
       }
 
       // eslint-disable-next-line
-      occurrence.attrs.taxon = taxon;
+      occurrence.data.taxon = taxon;
     } else {
       const survey = sample.getSurvey();
       const zeroAbundance = sample.isSurveyPreciseSingleSpecies() ? 't' : null;
@@ -175,9 +178,9 @@ const TaxonController = ({ sample, occurrence }: Props) => {
 
       if (sample.isPaintedLadySurvey()) {
         // eslint-disable-next-line no-param-reassign
-        sample.samples[0].occurrences[0].attrs.wing = [];
+        sample.samples[0].occurrences[0].data.wing = [];
         // eslint-disable-next-line no-param-reassign
-        sample.samples[0].occurrences[0].attrs.behaviour = null;
+        sample.samples[0].occurrences[0].data.behaviour = null;
         sample.save();
       }
 
@@ -202,7 +205,7 @@ const TaxonController = ({ sample, occurrence }: Props) => {
 
   const getTaxonId = (smp: Sample) => {
     const occ = smp.occurrences[0];
-    return occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
+    return occ.data.taxon.preferredId || occ.data.taxon.warehouse_id;
   };
   const species = sample.samples.map(getTaxonId);
 

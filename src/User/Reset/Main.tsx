@@ -31,7 +31,7 @@ const ResetMain = ({ onSubmit }: Props) => {
         </InfoMessage>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-           {/* Fake onSubmit on Enter */}
+          {/* Fake onSubmit on Enter */}
           <input type="submit" className="hidden" />
 
           <div className="rounded-list">

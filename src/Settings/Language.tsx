@@ -12,12 +12,12 @@ type Props = { hideHeader?: boolean };
 function SelectLanguage({ hideHeader }: Props) {
   const { goBack } = useContext(NavContext);
 
-  const currentValue = appModel.attrs.language;
+  const currentValue = appModel.data.language;
 
   const isSettingsPage = !hideHeader;
 
   function onSelect(newLanguage: any) {
-    appModel.attrs.language = newLanguage; // eslint-disable-line no-param-reassign
+    appModel.data.language = newLanguage; // eslint-disable-line no-param-reassign
     appModel.save();
 
     if (isSettingsPage) goBack();

@@ -149,7 +149,7 @@ const speciesConfig: Survey = {
         surveyName: speciesSurvey.name,
       });
 
-      subSample.occurrences[0].attrs.zero_abundance = zeroAbundance;
+      subSample.occurrences[0].data.zero_abundance = zeroAbundance;
       return subSample;
     },
 
@@ -159,7 +159,7 @@ const speciesConfig: Survey = {
           remote: {
             id: 780,
             values: (value: any, _: any, model: any) =>
-              model.attrs.zero_abundance ? null : value,
+              model.data.zero_abundance ? null : value,
           },
         },
 
@@ -199,17 +199,17 @@ const speciesConfig: Survey = {
             attrProps: {
               input: 'radio',
               set: (value: any, model: any) => {
-                if (model.attrs.behaviour !== value) {
-                  model.attrs.direction = null;
-                  model.attrs.altitude = null;
-                  model.attrs.nectarSource = null;
-                  model.attrs.eggLaying = [];
-                  model.attrs.otherEggLaying = null;
-                  model.attrs.mating = null;
-                  model.attrs.otherThistles = null;
+                if (model.data.behaviour !== value) {
+                  model.data.direction = null;
+                  model.data.altitude = null;
+                  model.data.nectarSource = null;
+                  model.data.eggLaying = [];
+                  model.data.otherEggLaying = null;
+                  model.data.mating = null;
+                  model.data.otherThistles = null;
                 }
                 // eslint-disable-next-line no-param-reassign
-                model.attrs.behaviour = value;
+                model.data.behaviour = value;
                 model.save();
               },
               inputProps: { options: behaviourValues },
@@ -283,15 +283,15 @@ const speciesConfig: Survey = {
               input: 'checkbox',
               inputProps: { options: flowersValues },
               set: (value: any, model: any) => {
-                if (model.attrs.otherEggLaying && !value.includes('Other')) {
-                  model.attrs.otherEggLaying = null;
+                if (model.data.otherEggLaying && !value.includes('Other')) {
+                  model.data.otherEggLaying = null;
                 }
 
-                if (model.attrs.otherThistles && !value.includes('Thistles')) {
-                  model.attrs.otherThistles = null;
+                if (model.data.otherThistles && !value.includes('Thistles')) {
+                  model.data.otherThistles = null;
                 }
                 // eslint-disable-next-line no-param-reassign
-                model.attrs.eggLaying = value;
+                model.data.eggLaying = value;
                 model.save();
               },
             },
@@ -358,10 +358,10 @@ const speciesConfig: Survey = {
 
   verify(_, model) {
     try {
-      if (model.attrs.surveyStartTime) {
+      if (model.data.surveyStartTime) {
         Yup.object()
           .shape({
-            attrs: areaCountSchema,
+            data: areaCountSchema,
             samples: Yup.array()
               .min(1, 'Please add your target species')
               .required('Please add your target species'),

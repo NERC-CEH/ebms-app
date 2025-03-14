@@ -24,7 +24,7 @@ import {
 import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import { getUnkownSpecies } from 'Survey/Moth/config';
+import { getUnknownSpecies } from 'Survey/Moth/config';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 import {
@@ -59,26 +59,26 @@ function useDisabledImageIdentifierAlert() {
   return shownDisabledImageIdentifierAlert;
 }
 
-const getDefaultTaxonCount = (taxon: Taxon, createdOn?: any) => ({
+const getDefaultTaxonCount = (taxon: Taxon, createdAt?: any) => ({
   count: 0,
   taxon,
-  createdOn,
+  createdAt,
 });
 
 const buildSpeciesCount = (agg: any, occ: Occurrence) => {
-  const taxon = toJS(occ.attrs.taxon);
+  const taxon = toJS(occ.data.taxon);
   const id = taxon.preferredId || taxon.warehouse_id;
 
-  agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.metadata.createdOn); // eslint-disable-line
+  agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.createdAt); // eslint-disable-line
 
-  agg[id].count = toJS(occ.attrs.count); // eslint-disable-line
+  agg[id].count = toJS(occ.data.count); // eslint-disable-line
 
   return agg;
 };
 
 function byCreateTime(occ1: Occurrence, occ2: Occurrence) {
-  const date1 = new Date(occ1.metadata.createdOn);
-  const date2 = new Date(occ2.metadata.createdOn);
+  const date1 = new Date(occ1.createdAt);
+  const date2 = new Date(occ2.createdAt);
   return date2.getTime() - date1.getTime();
 }
 
@@ -115,10 +115,10 @@ const HomeMain = ({
 }: Props) => {
   const { navigate } = useContext(NavContext);
   const alert = useAlert();
-  const ref = useRef();
+  const ref = useRef<any>(null);
   const shownDisabledImageIdentifierAlert = useDisabledImageIdentifierAlert();
 
-  const UNKNOWN_SPECIES_PREFFERD_ID = getUnkownSpecies().warehouse_id;
+  const UNKNOWN_SPECIES_PREFFERD_ID = getUnknownSpecies().warehouse_id;
 
   const showCopyOptions = () => {
     alert({
@@ -187,16 +187,16 @@ const HomeMain = ({
   const isUnidentifiedSpeciesLengthMoreThanFive = () => {
     const unIdentifiedSpecies = (occ: Occurrence) =>
       occ.media[0] &&
-      !occ.media[0]?.attrs?.species &&
-      occ.attrs?.taxon.warehouse_id === UNKNOWN_SPECIES_PREFFERD_ID;
+      !occ.media[0]?.data?.species &&
+      occ.data?.taxon.warehouse_id === UNKNOWN_SPECIES_PREFFERD_ID;
 
     return sample.occurrences.filter(unIdentifiedSpecies).length >= 5;
   };
 
   const getUndentifiedspeciesList = () => {
     const byUnknownSpecies = (occ: Occurrence) =>
-      !occ.attrs.taxon ||
-      occ.attrs?.taxon.warehouse_id === UNKNOWN_SPECIES_PREFFERD_ID;
+      !occ.data.taxon ||
+      occ.data?.taxon.warehouse_id === UNKNOWN_SPECIES_PREFFERD_ID;
 
     const getUnidentifiedSpeciesEntry = (occ: Occurrence) => (
       <UnidentifiedSpeciesEntry
@@ -274,7 +274,7 @@ const HomeMain = ({
         shallowEntry.preferredId || shallowEntry.warehouse_id;
 
       if (speciesCounts[shallowEntryId]) {
-        speciesCounts[shallowEntryId].createdOn = 0;
+        speciesCounts[shallowEntryId].createdAt = 0;
         return null;
       }
 

@@ -4,9 +4,9 @@ ion-content.filters {
   height: calc(100vh - 56px);
 
   ion-accordion {
+    border-top: 1px #ffffff45 solid;
     background: transparent;
     font-weight: bold;
-    border-top: 1px #ffffff45 solid;
 
     ion-label {
       color: #fff9c8 !important;
@@ -27,25 +27,25 @@ ion-content.filters {
   }
 
   ion-col {
-    height: 50px;
-    color: white;
+    display: flex;
     padding: 15px;
     padding-right: 0;
+    height: 50px;
+    color: white;
     text-transform: capitalize;
-    display: flex;
 
     div.colour,
     img {
       margin-right: 10px;
       border-radius: 5px;
-      height: 1em;
       width: 1em;
+      height: 1em;
     }
 
     small {
-      margin-left: 5px;
       align-self: center;
       opacity: 0.8;
+      margin-left: 5px;
     }
   }
 

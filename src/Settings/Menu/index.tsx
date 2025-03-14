@@ -1,8 +1,14 @@
+/* eslint-disable prefer-arrow-callback */
 import { useContext } from 'react';
+import writeBlob from 'capacitor-blob-writer';
+import { Directory, Filesystem } from '@capacitor/filesystem';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
+import { Share } from '@capacitor/share';
 import { Page, Header, useToast, useLoader } from '@flumens';
 import { isPlatform, NavContext } from '@ionic/react';
-import appModel, { Attrs } from 'models/app';
+import CONFIG from 'common/config';
+import { db } from 'common/models/store';
+import appModel, { Data } from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import Sample from 'models/sample';
 import userModel from 'models/user';
@@ -36,8 +42,8 @@ async function clearCache(toast: any) {
   console.log('Settings:Menu:Controller: clearing cache!');
   try {
     const clearSample = (smp: Sample) => {
-      if (smp.isCached()) return null;
-      if (!smp.isDisabled()) return null;
+      if (!smp.isStored) return null;
+      if (!smp.isDisabled) return null;
 
       return smp.destroy();
     };
@@ -49,9 +55,47 @@ async function clearCache(toast: any) {
   }
 }
 
-const onToggle = (setting: keyof Attrs, checked: boolean) => {
+const exportDatabase = async () => {
+  const blob = await db.export();
+
+  if (!isPlatform('hybrid')) {
+    window.open(window.URL.createObjectURL(blob), '_blank');
+    return;
+  }
+
+  const path = `export-app-${CONFIG.build}-${Date.now()}.db`;
+  const directory = Directory.External;
+
+  await writeBlob({ path, directory, blob });
+  const { uri: url } = await Filesystem.getUri({ directory, path });
+  await Share.share({ title: `App database`, files: [url] });
+  await Filesystem.deleteFile({ directory, path });
+};
+
+// For dev purposes only
+const importDatabase = async () => {
+  const blob = await new Promise<Blob>(resolve => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.addEventListener('change', function () {
+      const fileReader = new FileReader();
+      fileReader.onloadend = async (e: any) =>
+        resolve(
+          new Blob([e.target.result], { type: 'application/vnd.sqlite3' })
+        );
+      fileReader.readAsArrayBuffer(input.files![0]);
+    });
+    input.click();
+  });
+
+  await db.sqliteConnection.closeAllConnections();
+  await db.import(blob);
+  window.location.reload();
+};
+
+const onToggle = (setting: keyof Data, checked: boolean) => {
   console.log('Settings:Menu:Controller: setting toggled.');
-  appModel.attrs[setting] = checked; // eslint-disable-line no-param-reassign
+  appModel.data[setting] = checked; // eslint-disable-line no-param-reassign
   appModel.save();
 
   isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
@@ -70,16 +114,18 @@ const Container = () => {
       <Main
         isLoggedIn={userModel.isLoggedIn()}
         deleteUser={deleteUser}
-        useTraining={appModel.attrs.useTraining}
-        useExperiments={appModel.attrs.useExperiments}
-        sendAnalytics={appModel.attrs.sendAnalytics}
-        primarySurvey={appModel.attrs.primarySurvey}
-        showCommonNamesInGuide={appModel.attrs.showCommonNamesInGuide}
+        useTraining={appModel.data.useTraining}
+        useExperiments={appModel.data.useExperiments}
+        sendAnalytics={appModel.data.sendAnalytics}
+        primarySurvey={appModel.data.primarySurvey}
+        showCommonNamesInGuide={appModel.data.showCommonNamesInGuide}
         clearCache={clearCacheWrap}
         onToggle={onToggle}
-        language={appModel.attrs.language!}
-        country={appModel.attrs.country!}
-        useGlobalSpeciesList={appModel.attrs.useGlobalSpeciesList}
+        language={appModel.data.language!}
+        country={appModel.data.country!}
+        useGlobalSpeciesList={appModel.data.useGlobalSpeciesList}
+        exportDatabase={exportDatabase}
+        importDatabase={importDatabase}
       />
     </Page>
   );

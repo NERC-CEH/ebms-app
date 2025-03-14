@@ -13,7 +13,7 @@ type Props = {
 };
 
 const Image = ({ media, isDisabled, onDelete, onClick }: Props) => {
-  const showWarning = !media.isDisabled() && !media.doesTaxonMatchParent();
+  const showWarning = !media.isDisabled && !media.doesTaxonMatchParent();
 
   const showLoading = media.identification.identifying;
 

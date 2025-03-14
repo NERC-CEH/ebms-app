@@ -23,7 +23,7 @@ const config = {
   // AI classifier
   classifierID: 20098,
 
-  sentryDNS: process.env.APP_SENTRY_KEY as string,
+  sentryDSN: process.env.APP_SENTRY_KEY as string,
 
   feedbackEmail: 'apps%40ceh.ac.uk',
 

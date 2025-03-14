@@ -4,25 +4,24 @@ import { z, object } from 'zod';
 import {
   validateRemoteModel,
   Model,
-  ModelMetadata,
   ModelAttrs,
   Collection,
-  UUID,
+  UUIDv7,
 } from '@flumens';
 import CONFIG from 'common/config';
 import LocationModel from './location';
 import { locationsStore, groupsStore } from './store';
 import userModel from './user';
 
-type Metadata = ModelMetadata & {
+type Metadata = {
   saved?: boolean;
 };
 
 export type RemoteAttributes = z.infer<typeof GroupModel.remoteSchema>;
 
-type Attrs = Omit<RemoteAttributes, 'id' | 'createdOn'> & ModelAttrs;
+type Attrs = Omit<RemoteAttributes, 'id' | 'createdAt'> & ModelAttrs;
 
-class GroupModel extends Model {
+class GroupModel extends Model<Attrs> {
   static remoteSchema = object({
     id: z.string(),
     title: z.string(),
@@ -39,16 +38,14 @@ class GroupModel extends Model {
     indexedLocationIds: z.array(z.number()).optional(),
   });
 
-  static parseRemoteJSON({ id, createdOn, ...attrs }: RemoteAttributes) {
+  static parseRemoteJSON({ id, createdOn, ...data }: RemoteAttributes) {
     return {
       id,
-      cid: UUID(),
+      cid: UUIDv7(),
 
-      attrs,
+      data,
 
-      metadata: {
-        createdOn: new Date(createdOn).getTime(),
-      },
+      createdAt: new Date(createdOn).getTime(),
     };
   }
 
@@ -64,14 +61,13 @@ class GroupModel extends Model {
   // @ts-ignore
   metadata: Metadata = this.metadata;
 
-  // eslint-disable-next-line
-  // @ts-ignore
-  attrs: Attrs = Model.extendAttrs(this.attrs, {
-    name: '',
-  });
-
   constructor(options: any) {
-    super({ ...options, store: locationsStore });
+    const defaults = { name: '' };
+    super({
+      ...options,
+      data: { ...defaults, ...options.data },
+      store: locationsStore,
+    });
   }
 
   destroy() {

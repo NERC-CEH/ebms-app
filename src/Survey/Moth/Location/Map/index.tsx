@@ -41,12 +41,12 @@ const MapComponent = ({
     onLocationSelect(newTrap);
   };
 
-  const location = sample.attrs.location as MothTrapLocation | undefined;
+  const location = sample.data.location as MothTrapLocation | undefined;
 
   return (
     <>
       <Map
-        location={location?.attrs.location}
+        location={location?.data.location}
         onMovedCoords={setMapCurrentCenter}
       >
         <Traps

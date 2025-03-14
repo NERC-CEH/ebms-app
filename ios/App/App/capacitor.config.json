@@ -6,6 +6,7 @@
 	"cordova": {},
 	"packageClassList": [
 		"BackgroundGeolocation",
+		"CapacitorSQLitePlugin",
 		"AppPlugin",
 		"CAPCameraPlugin",
 		"DevicePlugin",
@@ -15,8 +16,9 @@
 		"KeyboardPlugin",
 		"CAPNetworkPlugin",
 		"PushNotificationsPlugin",
+		"SharePlugin",
 		"SplashScreenPlugin",
 		"StatusBarPlugin",
-		"CDVPlugin"
+		"BlobWriter"
 	]
 }

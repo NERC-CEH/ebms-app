@@ -1,7 +1,6 @@
-import { RouteWithModels, AttrPage } from '@flumens';
-import samplesCollection from 'models/collections/samples';
+import { Route } from 'react-router-dom';
+import { withSample, AttrPage } from '@flumens';
 import StartNewSurvey from 'Survey/common/StartNewSurvey';
-import withRemoteModels from 'Survey/common/hooks';
 import Details from './Details';
 import EndWeather from './Details/EndWeather';
 import StartWeather from './Details/StartWeather';
@@ -16,18 +15,23 @@ const baseURL = `/survey/${survey.name}`;
 
 const routes = [
   [`${baseURL}`, StartNewSurvey.with(survey), true],
-  [`${baseURL}/:smpId`, withRemoteModels(Home)],
+  [`${baseURL}/:smpId`, Home],
   [`${baseURL}/:smpId/details`, Details],
-  [`${baseURL}/:smpId/details/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/details/:attr`, withSample(AttrPageFromRoute)],
   [`${baseURL}/:smpId/details/endWeather`, EndWeather],
-  [`${baseURL}/:smpId/details/endWeather/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/details/endWeather/:attr`, withSample(AttrPageFromRoute)],
   [`${baseURL}/:smpId/details/startWeather`, StartWeather],
-  [`${baseURL}/:smpId/details/startWeather/:attr`, AttrPageFromRoute],
+  [
+    `${baseURL}/:smpId/details/startWeather/:attr`,
+    withSample(AttrPageFromRoute),
+  ],
   [`${baseURL}/:smpId/details/location`, Location],
   [`${baseURL}/:smpId/taxon`, Taxon],
   [`${baseURL}/:smpId/occ/:occId`, OccurrenceHome],
-  [`${baseURL}/:smpId/occ/:occId/:attr`, AttrPageFromRoute],
+  [`${baseURL}/:smpId/occ/:occId/:attr`, withSample(AttrPageFromRoute)],
   [`${baseURL}/:smpId/occ/:occId/taxon`, Taxon],
-];
+].map(([route, component]: any) => (
+  <Route key={route} path={route} component={component} exact />
+));
 
-export default RouteWithModels.fromArray(samplesCollection, routes, false);
+export default routes;

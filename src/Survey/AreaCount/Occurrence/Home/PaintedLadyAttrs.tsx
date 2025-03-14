@@ -11,18 +11,18 @@ type Props = {
 };
 
 const PaintedLadyAttrs = ({ occurrence }: Props) => {
-  const isDisabled = occurrence.isUploaded();
+  const isDisabled = occurrence.isUploaded;
   const { url } = useRouteMatch();
 
-  if (!occurrence.attrs.behaviour && !occurrence.attrs.wing) {
+  if (!occurrence.data.behaviour && !occurrence.data.wing) {
     // eslint-disable-next-line no-param-reassign
-    occurrence.attrs.behaviour = null;
+    occurrence.data.behaviour = null;
     // eslint-disable-next-line no-param-reassign
-    occurrence.attrs.wing = [];
+    occurrence.data.wing = [];
     occurrence.save();
   }
 
-  const { behaviour, wing, eggLaying } = occurrence.attrs;
+  const { behaviour, wing, eggLaying } = occurrence.data;
   const migrating = behaviour === 'Migrating';
   const flowering = behaviour === 'Egg-laying hostplants';
   const nectaring = behaviour === 'Nectaring';
@@ -31,7 +31,7 @@ const PaintedLadyAttrs = ({ occurrence }: Props) => {
   const hasThistle = eggLaying && eggLaying.includes('Thistles');
   const hasOther = eggLaying && eggLaying.includes('Other');
 
-  const isStageAdult = occurrence.attrs.stage === 'Adult';
+  const isStageAdult = occurrence.data.stage === 'Adult';
 
   return (
     <>

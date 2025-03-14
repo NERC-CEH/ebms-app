@@ -10,11 +10,11 @@ type Props = {
 };
 
 const HeaderComponent = ({ sample, onSubmit, onGroupClick }: Props) => {
-  const isTraining = !!sample.attrs.training;
+  const isTraining = !!sample.data.training;
 
   const survey = sample.getSurvey();
 
-  const group = sample.attrs.group?.title;
+  const group = sample.data.group?.title;
 
   const trainingModeSubheader = (
     <>

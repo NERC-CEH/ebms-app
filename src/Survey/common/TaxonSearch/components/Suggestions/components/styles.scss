@@ -1,23 +1,23 @@
 #suggestions .empty {
-  width: 80%;
-  max-width: 250px;
   margin: 50px auto 0;
   border-radius: 10px;
+  width: 80%;
+  max-width: 250px;
   --border-width: 0;
   --background: var(--ion-color-light);
   --color: var(--ion-color-light-contrast);
   span {
     margin: 0 auto;
-    font-weight: 200;
     padding: 15px;
+    font-weight: 200;
   }
 }
 
 #suggestions .search-result {
-  padding: 8px 8px 8px 15px;
-  font-size: 16px;
   position: relative;
+  padding: 8px 8px 8px 15px;
   overflow: hidden;
+  font-size: 16px;
   --background: none;
   padding: 0;
 
@@ -26,8 +26,8 @@
   }
 
   &:nth-child(odd) {
-    background-color: #fff;
     border-radius: 10px;
+    background-color: #fff;
   }
 
   &:hover {
@@ -35,49 +35,49 @@
   }
 
   button {
-    width: 20%;
-    max-width: 80px;
     right: 0;
+    border: none;
 
     background-color: transparent;
-    border: none;
+    width: 20%;
+    max-width: 80px;
 
     //left line
     &:after {
-      content: '';
-      background: var(--ion-color-light-shade);
       position: absolute;
       bottom: 9px;
       left: 0;
-      height: 63%;
+      background: var(--ion-color-light-shade);
       width: 1px;
+      height: 63%;
+      content: '';
     }
   }
 
   button.edit-shortcut {
-    height: 47px;
-    padding: 0 20px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    padding: 0 20px;
+    height: 47px;
   }
 
   div.taxon {
-    white-space: normal;
+    margin-top: 3px;
+    margin-bottom: 3px;
     overflow: visible;
     font-weight: normal;
-    margin-bottom: 3px;
-    margin-top: 3px;
     line-height: 20px;
+    white-space: normal;
   }
 
   div.group {
     position: absolute;
     right: 14px;
     bottom: 4px;
+    color: var(--ion-color-dark);
     font-weight: 200;
     font-size: 14px;
-    color: var(--ion-color-dark);
   }
 
   @media only screen and (min-width: 400px) {

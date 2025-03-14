@@ -2,7 +2,7 @@ import { observable } from 'mobx';
 import { Model, ModelAttrs } from '@flumens';
 import { CountryCode } from 'common/config/countries';
 import { LanguageCode } from 'common/config/languages';
-import { genericStore } from '../store';
+import { mainStore } from '../store';
 import PastLocationsExtension from './pastLocExt';
 
 export type SurveyDraftKeys = {
@@ -14,9 +14,9 @@ export type SurveyDraftKeys = {
 
 export const DEFAULT_SPECIES_GROUP = ['butterflies'];
 
-export type Attrs = ModelAttrs & {
+export type Data = ModelAttrs & {
   showedWelcome: boolean;
-  language?: LanguageCode;
+  language?: LanguageCode | null;
   country?: CountryCode;
   useTraining: boolean;
   feedbackGiven: boolean;
@@ -48,10 +48,10 @@ export type Attrs = ModelAttrs & {
   transectsRefreshTimestamp: number | null;
 } & SurveyDraftKeys;
 
-const defaults: Attrs = {
+const defaults: Data = {
   showedWelcome: false,
   useTraining: false,
-  language: undefined,
+  language: null,
   country: undefined,
   feedbackGiven: false,
   areaSurveyListSortedByTime: false,
@@ -87,11 +87,7 @@ const defaults: Attrs = {
   showCopySpeciesTip: true,
 };
 
-export class AppModel extends Model {
-  // eslint-disable-next-line
-  // @ts-ignore
-  attrs: Attrs = Model.extendAttrs(this.attrs, defaults);
-
+export class AppModel extends Model<Data> {
   setLocation: any; // from extension
 
   removeLocation: any; // from extension
@@ -99,13 +95,13 @@ export class AppModel extends Model {
   speciesReport = observable([]);
 
   constructor(options: any) {
-    super(options);
+    super({ ...options, data: { ...defaults, ...options.data } });
 
     Object.assign(this, PastLocationsExtension);
   }
 
   toggleTaxonFilter(filter: any) {
-    const { taxonGroupFilters } = this.attrs;
+    const { taxonGroupFilters } = this.data;
     const index = taxonGroupFilters.indexOf(filter);
     if (index >= 0) {
       taxonGroupFilters.splice(index, 1);
@@ -121,5 +117,5 @@ export class AppModel extends Model {
   }
 }
 
-const appModel = new AppModel({ cid: 'app', store: genericStore });
+const appModel = new AppModel({ cid: 'app', store: mainStore });
 export default appModel;

@@ -34,25 +34,25 @@
       margin-top: 5px;
 
       .label {
-        height: 100%;
         background: none;
+        height: 100%;
       }
     }
 
     div {
-      height: 50vw;
-      width: 50vw;
       background-size: cover;
+      width: 50vw;
+      height: 50vw;
     }
 
     .label {
-      width: 100%;
-      color: white;
-      border: 0;
       position: absolute;
       bottom: -1px;
-      padding: 7px 15px;
+      border: 0;
       background: #00000099;
+      padding: 7px 15px;
+      width: 100%;
+      color: white;
       font-size: 14px;
     }
   }

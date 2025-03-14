@@ -7,10 +7,10 @@ import appModel from 'models/app';
 import './styles.scss';
 
 const MothSurveySettings = () => {
-  const { useImageIdentifier } = appModel.attrs;
+  const { useImageIdentifier } = appModel.data;
 
   const onTurnOffImageIdentifierToggle = (checked: boolean) => {
-    appModel.attrs.useImageIdentifier = checked; // eslint-disable-line no-param-reassign
+    appModel.data.useImageIdentifier = checked; // eslint-disable-line no-param-reassign
     appModel.save();
 
     isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });

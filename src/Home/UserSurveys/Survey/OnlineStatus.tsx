@@ -22,10 +22,10 @@ const OnlineStatus = ({ sample, onUpload, uploadIsPrimary }: Props) => {
   if (sample.remote.synchronising)
     return <IonSpinner className="mr-2 size-4" />;
 
-  if (sample.isCached())
+  if (!sample.isStored)
     return <IonIcon icon={cloudOutline} className="mr-2 size-4 opacity-50" />;
 
-  if (sample.isUploaded()) return null;
+  if (sample.isUploaded) return null;
 
   const isValid = !sample.validateRemote();
 

@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
+import { mapOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useToast, useAlert, Badge } from '@flumens';
 import {
@@ -43,13 +44,13 @@ function useDeleteSurveyPrompt(sample: Sample) {
 const getSurveyLink = (sample: Sample) => {
   const survey = sample.getSurvey();
 
-  if (!sample.isCached() && sample.isPreciseSingleSpeciesSurvey()) {
-    const homeOrEditPage = sample.attrs.surveyStartTime
-      ? `/survey/${survey.name}/${sample.cid}`
-      : `/survey/${survey.name}/${sample.cid}/details`;
+  if (sample.isStored && sample.isPreciseSingleSpeciesSurvey()) {
+    const homeOrEditPage = sample.data.surveyStartTime
+      ? `/survey/${survey.name}/${sample.id || sample.cid}`
+      : `/survey/${survey.name}/${sample.id || sample.cid}/details`;
 
     const hasTargetSpecies = !!sample.samples.length;
-    const taxonSelectPage = `/survey/${survey.name}/${sample.cid}/taxon`;
+    const taxonSelectPage = `/survey/${survey.name}/${sample.id || sample.cid}/taxon`;
     const hrefPreciseSingleSpeciesSurvey = hasTargetSpecies
       ? homeOrEditPage
       : taxonSelectPage;
@@ -58,7 +59,7 @@ const getSurveyLink = (sample: Sample) => {
 
   const path = sample.isDetailsComplete() ? '' : '/details';
 
-  return `/survey/${survey.name}/${sample.cid}${path}`;
+  return `/survey/${survey.name}/${sample.id || sample.cid}${path}`;
 };
 
 type Props = {
@@ -81,7 +82,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
 
   let speciesCount = sample.occurrences.length;
   if (survey.name === 'area') {
-    const isNotZeroCount = (occ: Occurrence) => occ.attrs.count;
+    const isNotZeroCount = (occ: Occurrence) => occ.data.count;
     speciesCount = sample.occurrences.filter(isNotZeroCount).length;
   }
 
@@ -105,11 +106,27 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
     );
 
     if (survey.name === 'precise-area') {
-      return !!speciesCount && speciesCountBadge;
+      const { area }: any = sample.data.location || {};
+
+      return (
+        <div className="flex justify-start gap-1">
+          {!!speciesCount && speciesCountBadge}
+
+          {!!area && (
+            <Badge
+              skipTranslation
+              className="ml-2"
+              prefix={<IonIcon icon={mapOutline} />}
+            >
+              {area}m²
+            </Badge>
+          )}
+        </div>
+      );
     }
 
     if (survey.name === 'moth') {
-      const locationName = (sample.attrs.location as MothTrapLocation)?.attrs
+      const locationName = (sample.data.location as MothTrapLocation)?.data
         ?.location?.name;
 
       return (
@@ -120,7 +137,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
       );
     }
 
-    const locationName = sample.attrs.location?.name;
+    const locationName = sample.data.location?.name;
     return !!locationName && <h4>{locationName}</h4>;
   }
 
@@ -133,17 +150,24 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
     sample.upload().catch(toast.error);
   };
 
-  const allowDeletion = !sample.isCached();
+  const allowDeletion = sample.isStored;
 
   const openItem = () => {
     if (sample.remote.synchronising) return; // fixes button onPressUp and other accidental navigation
     navigate(href);
   };
 
+  const { groupId, group } = sample.data;
+  const hasGroup = !!groupId || !!group;
+
   return (
     <IonItemSliding className="survey-list-item" style={style}>
       <IonItem onClick={openItem} detail={false}>
-        <div className="flex w-full flex-nowrap items-center gap-2">
+        {hasGroup && (
+          <div className="absolute left-0 z-[1000] h-full w-[7px] bg-tertiary-600" />
+        )}
+
+        <div className="flex w-full flex-nowrap items-center gap-2 pl-4">
           <div className="flex w-full flex-col content-center gap-1 overflow-hidden">
             <h3 className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap font-bold">
               <T>{survey.label}</T>

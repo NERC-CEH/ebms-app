@@ -7,7 +7,7 @@ export const MAX_SAVED = 60;
 
 export default {
   async setLocation(origLocation, allowedMaxSaved = MAX_SAVED) {
-    let locations = [...this.attrs.locations];
+    let locations = [...this.data.locations];
     const location = JSON.parse(JSON.stringify(origLocation));
 
     if (!location.latitude) {
@@ -41,14 +41,14 @@ export default {
 
     locations = [location, ...locations];
 
-    this.attrs.locations = locations;
+    this.data.locations = locations;
     await this.save();
   },
 
   async removeLocation(locationId) {
-    const { locations } = this.attrs;
+    const { locations } = this.data;
 
-    this.attrs.locations = locations.filter(loc => loc.id !== locationId);
+    this.data.locations = locations.filter(loc => loc.id !== locationId);
     await this.save();
   },
 

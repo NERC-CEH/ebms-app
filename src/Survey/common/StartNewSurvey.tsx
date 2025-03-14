@@ -44,7 +44,7 @@ const useShowGPSPermissionDialog = () => {
       }
     }
 
-    const { showGPSPermissionTip } = appModel.attrs;
+    const { showGPSPermissionTip } = appModel.data;
 
     if (
       !showGPSPermissionTip ||
@@ -53,7 +53,7 @@ const useShowGPSPermissionDialog = () => {
     )
       return true;
 
-    appModel.attrs.showGPSPermissionTip = false; // eslint-disable-line
+    appModel.data.showGPSPermissionTip = false; // eslint-disable-line
     appModel.save();
 
     const prompt = (resolve: any) => {
@@ -108,7 +108,7 @@ function StartNewSurvey({ survey }: Props): null {
 
       if (sample.isPreciseSingleSpeciesSurvey()) {
         navigate(
-          `/survey/${survey.name}/${sample.cid}/taxon`,
+          `/survey/${survey.name}/${sample.id || sample.cid}/taxon`,
           'none',
           'replace'
         );
@@ -117,7 +117,11 @@ function StartNewSurvey({ survey }: Props): null {
 
       const path = sample.isDetailsComplete() ? '' : '/details';
 
-      navigate(`${baseURL}/${sample.cid}${path}`, 'none', 'replace');
+      navigate(
+        `${baseURL}/${sample.id || sample.cid}${path}`,
+        'none',
+        'replace'
+      );
     };
 
     pickDraftOrCreateSample();

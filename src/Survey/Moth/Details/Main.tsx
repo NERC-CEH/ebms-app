@@ -21,19 +21,19 @@ type Props = {
 
 const DetailsMain = ({ sample }: Props) => {
   const { url } = useRouteMatch();
-  const { surveyStartTime, surveyEndTime } = sample.attrs;
-  const location = sample.attrs.location as MothTrapLocation;
+  const { surveyStartTime, surveyEndTime } = sample.data;
+  const location = sample.data.location as MothTrapLocation;
   const survey = sample.getSurvey();
 
   const dateAttrProps = survey.attrs!.date!.pageProps!
     .attrProps as AttrPropsExtended;
   const surveyDateProps = dateAttrProps.inputProps();
 
-  const isDisabled = sample.isUploaded();
+  const isDisabled = sample.isUploaded;
 
   // TODO: Backwards compatibility
   const locationNameSupportedBackwardsCompatibility =
-    location?.name || location?.attrs?.location?.name;
+    location?.name || location?.data?.location?.name;
 
   const locationName = location
     ? locationNameSupportedBackwardsCompatibility

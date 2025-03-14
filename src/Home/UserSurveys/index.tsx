@@ -89,7 +89,7 @@ const UserSurveyComponent = () => {
       >
         {showingPending && <PendingSurveys />}
 
-        {showingUploaded && <UploadedSurveys />}
+        <UploadedSurveys isOpen={showingUploaded} />
 
         {showingMap && <Map />}
       </Main>

@@ -884,6 +884,18 @@ msgstr "Clear"
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr " This will delete cached data, including your uploaded surveys."
 
+# App setting  
+msgid "Export database"
+msgstr "Export database"
+
+# App setting  
+msgid "Export"
+msgstr "Export"
+
+# App setting  
+msgid "Are you sure you want to export the data?<1>This feature is intended solely for technical support and is not a supported method for exporting your data</1>"
+msgstr "Are you sure you want to export the data?<1>This feature is intended solely for technical support and is not a supported method for exporting your data</1>"
+
 msgid "Sweden"
 msgstr "Sweden"
 

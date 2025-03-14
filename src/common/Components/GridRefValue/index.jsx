@@ -8,7 +8,7 @@ function getValue(sample) {
     return <IonSpinner />;
   }
 
-  return prettyPrintLocation(sample.attrs.location);
+  return prettyPrintLocation(sample.data.location);
 }
 
 // GridRefValue.propTypes = {

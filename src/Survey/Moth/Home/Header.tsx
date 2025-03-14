@@ -9,7 +9,7 @@ type Props = {
 };
 
 const HeaderComponent = ({ sample, onSubmit }: Props) => {
-  const isTraining = !!sample.attrs.training;
+  const isTraining = !!sample.data.training;
 
   const trainingModeSubheader = isTraining && (
     <div className="training-survey">

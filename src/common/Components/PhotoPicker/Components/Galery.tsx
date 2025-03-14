@@ -15,13 +15,13 @@ type Props = {
 
 const getFooterMessage = (image: Media, identifyImage: any) => {
   const doesTaxonMatchParent = image.doesTaxonMatchParent();
-  const identifierWasNotUsed = !image.attrs.species;
-  const identifierFoundNoSpecies = !image.attrs?.species?.length;
+  const identifierWasNotUsed = !image.data.species;
+  const identifierFoundNoSpecies = !image.data?.species?.length;
 
   const showLoading = image.identification.identifying;
   if (showLoading) return null;
 
-  const isDisabled = image.isDisabled();
+  const { isDisabled } = image;
   if (isDisabled) return null;
 
   if (identifierWasNotUsed) {
@@ -48,7 +48,7 @@ const getFooterMessage = (image: Media, identifyImage: any) => {
     );
   }
 
-  const { taxon, probability: prob } = image.attrs.species[0];
+  const { taxon, probability: prob } = image.data.species[0];
   const probability = ((prob || 0) * 100).toFixed(0);
 
   if (!doesTaxonMatchParent) {

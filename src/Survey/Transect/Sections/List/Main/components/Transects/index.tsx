@@ -15,13 +15,13 @@ import './styles.scss';
 
 function getTransectItem(transect: Location, onTransectSelect: any) {
   const byTransectId = (section: Location) =>
-    section.attrs.parentId === transect.id;
+    section.data.parentId === transect.id;
   const sections = locations
     .filter(byType(TRANSECT_SECTION_TYPE))
     .filter(byTransectId);
 
   const getSectionGeometry = (section: Location) => {
-    const geometry = section.attrs.boundaryGeom;
+    const geometry = section.data.boundaryGeom;
     const shape: any = geometry ? wkt.parse(geometry) : {};
     shape.coordinates = transformToLatLon(shape);
     return shape;
@@ -47,7 +47,7 @@ function getTransectItem(transect: Location, onTransectSelect: any) {
       detail
     >
       <IonLabel slot="start">
-        {transect.attrs.location.name || transect.id}
+        {transect.data.location.name || transect.id}
       </IonLabel>
       <IonLabel slot="end">{sections.length}</IonLabel>
       {hasLines && <SVG geom={geom} />}

@@ -67,37 +67,4 @@ describe('getCustomAttributes', () => {
       customAttr: ['custom value', 'another custom value'],
     });
   });
-
-  it('should get selected custom attributes only', () => {
-    // Given
-    const schema = {
-      customAttr: {
-        remote: { id: 1, values: [{ id: 2, value: 'custom value' }] },
-      },
-    };
-    const document = {
-      'locAttr:1': { raw_value: 2 }, // only this one
-      'locAttr:2': { raw_value: 2 },
-    };
-
-    // When
-    const customAttrs = getLocalAttributes(document, schema, ['customAttr']);
-
-    // Then
-    expect(customAttrs).toStrictEqual({
-      customAttr: 'custom value',
-    });
-  });
-
-  it('should throw an error if attr config in schema is missing', () => {
-    // Given
-    const schema = {};
-    const document = {
-      'locAttr:1': { raw_value: 2 },
-    };
-
-    // When
-    // Then
-    expect(() => getLocalAttributes(document, schema)).toThrow();
-  });
 });

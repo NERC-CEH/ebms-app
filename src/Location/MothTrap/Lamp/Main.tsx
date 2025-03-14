@@ -1,25 +1,22 @@
+/* eslint-disable no-param-reassign */
 import { observer } from 'mobx-react';
-import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Main, MenuAttrItem, NumberInput } from '@flumens';
-import { IonList, IonIcon } from '@ionic/react';
-import numberIcon from 'common/images/number.svg';
-import Location, { Lamp } from 'models/location';
+import { Block, InfoMessage, Main } from '@flumens';
+import { IonList } from '@ionic/react';
+import {
+  Lamp,
+  mothTrapLampDescriptionAttr,
+  mothTrapLampQuantityAttr,
+  mothTrapLampTypeAttr,
+  mothTrapLampTypeNameAttr,
+} from 'models/location';
 import './styles.scss';
 
 type Props = {
-  location: Location;
   lamp: Lamp;
 };
 
-const MothTrapLampMain = ({ location, lamp }: Props) => {
-  const { description, type } = lamp.attrs;
-
-  const getCounterOnChange = (value: number) => {
-    // eslint-disable-next-line no-param-reassign
-    lamp.attrs.quantity = value;
-  };
-
+const MothTrapLampMain = ({ lamp }: Props) => {
   return (
     <Main>
       <IonList lines="full">
@@ -28,29 +25,20 @@ const MothTrapLampMain = ({ location, lamp }: Props) => {
         </h3>
 
         <div className="rounded-list">
-          <MenuAttrItem
-            routerLink={`/location/${location.cid}/lamps/${lamp.cid}/type`}
-            routerOptions={{ unmount: true }}
-            icon={bulbOutline}
-            label="Type"
-            value={type}
+          <Block
+            block={mothTrapLampTypeAttr}
+            record={lamp.data}
+            onChange={(val: any) => {
+              const byId = (choice: any) => choice.dataName === val;
+              const choice = mothTrapLampTypeAttr.choices.find(byId);
+              lamp.data[mothTrapLampTypeAttr.id] = val;
+              lamp.data[mothTrapLampTypeNameAttr.id] = choice?.title || '';
+              return null;
+            }}
           />
-
-          <MenuAttrItem
-            routerLink={`/location/${location.cid}/lamps/${lamp.cid}/description`}
-            routerOptions={{ unmount: true }}
-            icon={chatboxOutline}
-            label="Description"
-            value={description}
-          />
-
-          <NumberInput
-            label="Quantity"
-            onChange={getCounterOnChange}
-            value={lamp.attrs.quantity}
-            prefix={<IonIcon src={numberIcon} className="size-6" />}
-            minValue={1}
-          />
+          <Block block={mothTrapLampQuantityAttr} record={lamp.data} />
+          <Block block={mothTrapLampDescriptionAttr} record={lamp.data} />
+          <InfoMessage>Additional description of lamp.</InfoMessage>
         </div>
       </IonList>
     </Main>

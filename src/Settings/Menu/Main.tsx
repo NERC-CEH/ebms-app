@@ -9,16 +9,49 @@ import {
   addCircleOutline,
   personRemoveOutline,
   trashBinOutline,
+  cloudDownloadOutline,
+  cloudUploadOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Main, useAlert, InfoMessage, Toggle } from '@flumens';
-import { IonIcon, IonList, IonItem, IonLabel } from '@ionic/react';
+import { IonIcon, IonList, IonItem, IonLabel, isPlatform } from '@ionic/react';
 import config from 'common/config';
 import countries, { CountryCode } from 'common/config/countries';
 import languages, { LanguageCode } from 'common/config/languages';
 import butterflyIcon from 'common/images/butterfly.svg';
 import mothIcon from 'common/images/moth.svg';
 import { surveyConfigs as surveys } from 'models/sample';
+
+function useDatabaseExportDialog(exportFn: any) {
+  const alert = useAlert();
+
+  const showDatabaseExportDialog = () => {
+    alert({
+      header: 'Export',
+      message: (
+        <T>
+          Are you sure you want to export the data?
+          <p className="my-2 font-bold">
+            This feature is intended solely for technical support and is not a
+            supported method for exporting your data
+          </p>
+        </T>
+      ),
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+        },
+        {
+          text: 'Export',
+          handler: exportFn,
+        },
+      ],
+    });
+  };
+
+  return showDatabaseExportDialog;
+}
 
 function useUserDeleteDialog(deleteUser: any) {
   const alert = useAlert();
@@ -90,6 +123,8 @@ type Props = {
   primarySurvey?: string;
   language: LanguageCode;
   country: CountryCode;
+  exportDatabase: any;
+  importDatabase: any;
 };
 
 const MenuMain = ({
@@ -105,7 +140,11 @@ const MenuMain = ({
   country,
   showCommonNamesInGuide,
   useGlobalSpeciesList,
+  exportDatabase,
+  importDatabase,
 }: Props) => {
+  const showDatabaseExportDialog = useDatabaseExportDialog(exportDatabase);
+
   const alert = useAlert();
   const showUserDeleteDialog = useUserDeleteDialog(deleteUser);
 
@@ -220,6 +259,17 @@ const MenuMain = ({
           <InfoMessage inline>
             You can free up storage used by the app.
           </InfoMessage>
+          <IonItem onClick={showDatabaseExportDialog}>
+            <IonIcon icon={cloudDownloadOutline} size="small" slot="start" />
+            <T>Export database</T>
+          </IonItem>
+
+          {!isPlatform('hybrid') && (
+            <IonItem onClick={importDatabase}>
+              <IonIcon icon={cloudUploadOutline} size="small" slot="start" />
+              Import database
+            </IonItem>
+          )}
         </div>
 
         <h3 className="list-title">

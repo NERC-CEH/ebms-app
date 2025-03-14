@@ -36,7 +36,7 @@ const MenuMain = ({
   refreshAccount,
   resendVerificationEmail,
 }: Props) => {
-  const lang = appModel.attrs.language;
+  const lang = appModel.data.language;
 
   let userName = `${user.firstName} ${user.lastName}`;
   if (!user.firstName && !user.lastName) {

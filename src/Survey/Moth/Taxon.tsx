@@ -1,24 +1,22 @@
 /* eslint-disable no-param-reassign */
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
-import { Page, Main, Header, useAlert } from '@flumens';
+import { Page, Main, Header, useAlert, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
 import Media from 'models/media';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
-import { getUnkownSpecies, MachineInvolvement } from 'Survey/Moth/config';
+import { getUnknownSpecies, MachineInvolvement } from 'Survey/Moth/config';
 import TaxonSearch from 'Survey/common/TaxonSearch';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
-interface Props {
-  sample: Sample;
-  occurrence?: Occurrence;
-}
-
-const Taxon = ({ sample, occurrence }: Props) => {
+const Taxon = () => {
   const alert = useAlert();
   const { navigate, goBack } = useContext(NavContext);
-  const UNKNOWN_SPECIES = getUnkownSpecies();
+  const UNKNOWN_SPECIES = getUnknownSpecies();
+
+  const { sample, occurrence } = useSample<Sample, Occurrence>();
+  if (!sample) return null;
 
   const onSpeciesSelected = async (taxon: any) => {
     const { isRecorded } = taxon;
@@ -39,43 +37,43 @@ const Taxon = ({ sample, occurrence }: Props) => {
     const isTaxonUnknown = taxon.warehouse_id === UNKNOWN_SPECIES.warehouse_id;
 
     if (occurrence && isTaxonUnknown) {
-      Object.assign(occurrence.attrs.taxon, taxon, { machineInvolvement });
+      Object.assign(occurrence.data.taxon, taxon, { machineInvolvement });
       occurrence.save();
-      navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
+      navigate(`/survey/moth/${sample.id || sample.cid}`, 'none', 'pop');
       return;
     }
 
     if (occurrence && isRecorded && !isTaxonUnknown) {
       const selectedTaxon = (selectedOccurrence: Occurrence) => {
         return (
-          occurrence.attrs.taxon?.warehouse_id &&
+          occurrence.data.taxon?.warehouse_id &&
           selectedOccurrence !== occurrence &&
-          selectedOccurrence.attrs.comment === occurrence?.attrs?.comment &&
-          selectedOccurrence.attrs.identifier === occurrence?.attrs?.identifier
+          selectedOccurrence.data.comment === occurrence?.data?.comment &&
+          selectedOccurrence.data.identifier === occurrence?.data?.identifier
         );
       };
 
       const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
       if (!occWithSameSpecies) {
-        Object.assign(occurrence.attrs.taxon, taxon, { machineInvolvement });
+        Object.assign(occurrence.data.taxon, taxon, { machineInvolvement });
         occurrence.save();
-        navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
+        navigate(`/survey/moth/${sample.id || sample.cid}`, 'none', 'pop');
         return;
       }
 
       const isSelectedSameSpecies =
-        taxon.warehouse_id === occurrence.attrs.taxon.warehouse_id;
+        taxon.warehouse_id === occurrence.data.taxon.warehouse_id;
       if (isSelectedSameSpecies) {
-        navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
+        navigate(`/survey/moth/${sample.id || sample.cid}`, 'none', 'pop');
         return;
       }
 
       const mergeSpecies = await showMergeSpeciesAlert(alert);
       if (!mergeSpecies) return;
 
-      occWithSameSpecies.attrs.count += occurrence.attrs.count;
-      occWithSameSpecies.attrs['count-outside'] +=
-        occurrence.attrs['count-outside'];
+      occWithSameSpecies.data.count += occurrence.data.count;
+      occWithSameSpecies.data['count-outside'] +=
+        occurrence.data['count-outside'];
 
       while (occurrence.media.length) {
         const copy = occurrence.media.pop() as Media;
@@ -85,12 +83,12 @@ const Taxon = ({ sample, occurrence }: Props) => {
 
       occurrence.destroy();
 
-      navigate(`/survey/moth/${sample.cid}`, 'none', 'pop');
+      navigate(`/survey/moth/${sample.id || sample.cid}`, 'none', 'pop');
       return;
     }
 
     if (occurrence && !isTaxonUnknown) {
-      Object.assign(occurrence.attrs.taxon, taxon, { machineInvolvement });
+      Object.assign(occurrence.data.taxon, taxon, { machineInvolvement });
       occurrence.save();
 
       goBack();
@@ -99,13 +97,13 @@ const Taxon = ({ sample, occurrence }: Props) => {
 
     if (isTaxonUnknown) {
       // we allow multiple unknown entries
-      const identifier = sample.attrs.recorder;
+      const identifier = sample.data.recorder;
       const newOccurrence = survey.occ!.create!({
         Occurrence,
         taxon,
         identifier,
       });
-      newOccurrence.attrs.taxon.machineInvolvement = machineInvolvement;
+      newOccurrence.data.taxon.machineInvolvement = machineInvolvement;
       sample.occurrences.push(newOccurrence);
       await sample.save();
       goBack();
@@ -118,20 +116,20 @@ const Taxon = ({ sample, occurrence }: Props) => {
 
     const existingOccurrence = sample.occurrences.find(selectedTaxon);
     if (existingOccurrence) {
-      existingOccurrence.attrs.count += 1;
+      existingOccurrence.data.count += 1;
       existingOccurrence.save();
       await sample.save();
       goBack();
       return;
     }
 
-    const identifier = sample.attrs.recorder;
+    const identifier = sample.data.recorder;
     const newOccurrence = survey.occ!.create!({
       Occurrence,
       taxon,
       identifier,
     });
-    newOccurrence.attrs.taxon.machineInvolvement = machineInvolvement;
+    newOccurrence.data.taxon.machineInvolvement = machineInvolvement;
     sample.occurrences.push(newOccurrence);
 
     await sample.save();
@@ -139,7 +137,7 @@ const Taxon = ({ sample, occurrence }: Props) => {
   };
 
   const getTaxonId = (occ: Occurrence) => {
-    return occ.attrs.taxon?.preferredId || occ.attrs.taxon?.warehouse_id;
+    return occ.data.taxon?.preferredId || occ.data.taxon?.warehouse_id;
   };
 
   const species = sample.occurrences.map(getTaxonId);

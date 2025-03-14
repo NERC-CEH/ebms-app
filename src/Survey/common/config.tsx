@@ -125,7 +125,7 @@ export const speciesGroupsAttr = {
           (group: string) => group !== DAY_FLYING_MOTHS
         );
 
-        appModel.attrs.useDayFlyingMothsOnly =
+        appModel.data.useDayFlyingMothsOnly =
           hasMothGroup && hasDayFlyingMothGroup;
 
         // eslint-disable-next-line no-param-reassign
@@ -136,10 +136,10 @@ export const speciesGroupsAttr = {
         model.metadata.speciesGroups = newValues;
         model.save();
 
-        appModel.attrs.speciesGroups = model.metadata.speciesGroups;
+        appModel.data.speciesGroups = model.metadata.speciesGroups;
         appModel.save();
 
-        if (!appModel.attrs.speciesGroups.length) {
+        if (!appModel.data.speciesGroups.length) {
           // eslint-disable-next-line no-param-reassign
           model.metadata.speciesGroups = DEFAULT_SPECIES_GROUP;
           model.save();
@@ -260,10 +260,6 @@ export const commentAttr = {
   },
 };
 
-export const sunAttr = {
-  remote: { id: 1387 },
-};
-
 export const taxonAttr = {
   remote: {
     id: 'taxa_taxon_list_id',
@@ -337,9 +333,6 @@ export const areaCountSchema = Yup.object().shape({
   ),
 
   surveyStartTime: Yup.date().required('Date is missing'),
-  location_type: Yup.string()
-    .matches(/latlon/)
-    .required('Location type is missing'),
 });
 
 const stageValues = [
@@ -380,34 +373,31 @@ export const stageAttr = {
       input: 'radio',
       info: 'Pick the life stage',
       set: (value: any, model: Occurrence) => {
-        if (
-          model.attrs.stage !== value &&
-          model.parent!.isPaintedLadySurvey()
-        ) {
+        if (model.data.stage !== value && model.parent!.isPaintedLadySurvey()) {
           // eslint-disable-next-line no-param-reassign
-          model.attrs.eggLaying = null;
+          model.data.eggLaying = null;
           // eslint-disable-next-line no-param-reassign
-          model.attrs.otherThistles = null;
+          model.data.otherThistles = null;
           // eslint-disable-next-line no-param-reassign
-          model.attrs.otherEggLaying = null;
+          model.data.otherEggLaying = null;
           // eslint-disable-next-line no-param-reassign
-          model.attrs.wing = [];
+          model.data.wing = [];
           // eslint-disable-next-line no-param-reassign
-          model.attrs.behaviour = null;
+          model.data.behaviour = null;
           // eslint-disable-next-line no-param-reassign
-          model.attrs.direction = null;
+          model.data.direction = null;
           // eslint-disable-next-line no-param-reassign
-          model.attrs.nectarSource = null;
+          model.data.nectarSource = null;
           // eslint-disable-next-line no-param-reassign
-          model.attrs.eggLaying = [];
+          model.data.eggLaying = [];
           // eslint-disable-next-line no-param-reassign
-          model.attrs.otherEggLaying = null;
+          model.data.otherEggLaying = null;
           // eslint-disable-next-line no-param-reassign
-          model.attrs.mating = null;
+          model.data.mating = null;
         }
 
         // eslint-disable-next-line no-param-reassign
-        model.attrs.stage = value;
+        model.data.stage = value;
         model.save();
       },
       onChange: () => window.history.back(),

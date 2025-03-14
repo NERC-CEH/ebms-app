@@ -14,13 +14,13 @@ import { surveyConfigs as surveys } from 'common/models/sample';
 import appModel from 'models/app';
 
 function SelectCountry() {
-  const currentValue = appModel.attrs.primarySurvey;
+  const currentValue = appModel.data.primarySurvey;
   const { t } = useTranslation();
   const { goBack } = useContext(NavContext);
 
   function onSelect(e: any) {
     const survey = e.target.value;
-    appModel.attrs.primarySurvey = survey; // eslint-disable-line no-param-reassign
+    appModel.data.primarySurvey = survey; // eslint-disable-line no-param-reassign
     appModel.save();
     goBack();
   }

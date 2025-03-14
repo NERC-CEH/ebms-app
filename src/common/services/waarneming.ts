@@ -31,7 +31,7 @@ type ResultWithCommonName = Result & {
 };
 
 function getCommonName(sp: Result) {
-  const { language } = appModel.attrs;
+  const { language } = appModel.data;
   const speciesDataBySpecificLanguage = (speciesCommonNamesData as any)[
     language as any
   ];

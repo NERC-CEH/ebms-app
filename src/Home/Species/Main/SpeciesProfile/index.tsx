@@ -11,6 +11,10 @@ import { Main, useOnBackButton, ImageWithBackground, Badge } from '@flumens';
 import '@ionic/react/css/ionic-swiper.css';
 import { CountryCode } from 'common/config/countries';
 import { Species, AbundanceCode, abundances } from 'common/data/profiles';
+import {
+  translateSpeciesDescription,
+  translateSpeciesName,
+} from 'common/translations/translator';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
 
@@ -66,7 +70,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
     );
   };
 
-  const commonName = (window as any).t(species.taxon, null, true);
+  const commonName = translateSpeciesName(species.taxon);
 
   /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   return (
@@ -101,7 +105,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
             <T>Description</T>:
           </h3>
 
-          <p>{(window as any).t(species.descriptionKey, true)}</p>
+          <p>{translateSpeciesDescription(species.descriptionKey)}</p>
         </div>
       </Main>
     </>

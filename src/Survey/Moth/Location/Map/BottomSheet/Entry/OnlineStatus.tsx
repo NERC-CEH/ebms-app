@@ -14,7 +14,7 @@ const OnlineStatus = ({ location, onUpload }: Props) => {
   if (location.remote.synchronising)
     return <IonSpinner className="mr-2 size-4" />;
 
-  if (location.isUploaded()) return null;
+  if (location.isUploaded) return null;
 
   return (
     <Button

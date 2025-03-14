@@ -57,7 +57,7 @@ const HomeController = () => {
   useEffect(exitApp, []);
 
   const navigateToPrimarySurvey = () => {
-    const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
+    const primarySurveyName = appModel.data.primarySurvey || 'precise-area';
 
     if (!isButtonTapped) {
       setIsButtonTapped(true);
@@ -65,7 +65,7 @@ const HomeController = () => {
     }
   };
 
-  const primarySurveyName = appModel.attrs.primarySurvey || 'precise-area';
+  const primarySurveyName = appModel.data.primarySurvey || 'precise-area';
 
   const getOtherSurveys = () => {
     const notPrimarySurvey = ({ name }: Survey) => name !== primarySurveyName;

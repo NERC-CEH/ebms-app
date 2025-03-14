@@ -4,7 +4,7 @@ import appModel from 'models/app';
 const MAX_RESULTS = 200;
 
 export default (normSearchPhrase, results, informalGroups = [], attrFilter) => {
-  const { language } = appModel.attrs;
+  const { language } = appModel.data;
   const languageSpeciesNames = speciesNames[language];
   if (!languageSpeciesNames) {
     return results;

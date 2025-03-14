@@ -5,9 +5,17 @@ import { useContext } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Capacitor } from '@capacitor/core';
-import { Page, useAlert, useToast, captureImage } from '@flumens';
+import {
+  Page,
+  useAlert,
+  useToast,
+  captureImage,
+  useRemoteSample,
+  useSample,
+} from '@flumens';
 import { NavContext, isPlatform } from '@ionic/react';
 import { usePromptImageSource } from 'common/Components/PhotoPicker';
 import CONFIG from 'common/config';
@@ -16,30 +24,31 @@ import samplesCollection from 'models/collections/samples';
 import Media from 'models/media';
 import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
-import { useUserStatusCheck } from 'models/user';
-import { getUnkownSpecies } from 'Survey/Moth/config';
+import userModel, { useUserStatusCheck } from 'models/user';
+import { getUnknownSpecies } from 'Survey/Moth/config';
 import Header from './Header';
 import Main from './Main';
 
 const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
+  const { t } = useTranslation();
 
   function showDeleteSpeciesPrompt(taxon: any) {
     const prompt = (resolve: any) => {
       const taxonName = taxon.scientific_name;
       alert({
-        header: i18n.t('Delete'),
+        header: t('Delete'),
         skipTranslation: true,
-        message: i18n.t('Are you sure you want to delete {{taxon}} ?', {
+        message: t('Are you sure you want to delete {{taxon}} ?', {
           taxon: taxonName,
         }),
         buttons: [
           {
-            text: i18n.t('Cancel'),
+            text: t('Cancel'),
             role: 'cancel',
           },
           {
-            text: i18n.t('Delete'),
+            text: t('Delete'),
             role: 'destructive',
             handler: resolve,
           },
@@ -54,29 +63,31 @@ const useDeleteSpeciesPrompt = () => {
 };
 
 function byCreateTime(model1: Sample, model2: Sample) {
-  const date1 = new Date(model1.metadata.createdOn);
-  const date2 = new Date(model2.metadata.createdOn);
+  const date1 = new Date(model1.createdAt);
+  const date2 = new Date(model2.createdAt);
   return date2.getTime() - date1.getTime();
 }
 
-interface Props {
-  sample: Sample;
-}
-
-const HomeController = ({ sample }: Props) => {
+const HomeController = () => {
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
   const toast = useToast();
+
+  let { sample } = useSample<Sample>();
+  sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
+
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
 
   const promptImageSource = usePromptImageSource();
 
-  const UNKNOWN_SPECIES = getUnkownSpecies();
+  if (!sample) return null;
 
-  const { useImageIdentifier } = appModel.attrs;
-  const isDisabled = sample.isDisabled();
+  const UNKNOWN_SPECIES = getUnknownSpecies();
+
+  const { useImageIdentifier } = appModel.data;
+  const { isDisabled } = sample;
 
   const surveyConfig = sample.getSurvey();
 
@@ -119,12 +130,12 @@ const HomeController = ({ sample }: Props) => {
   };
 
   const toggleSpeciesSort = () => {
-    const { areaSurveyListSortedByTime } = appModel.attrs;
+    const { areaSurveyListSortedByTime } = appModel.data;
     const newSort = !areaSurveyListSortedByTime;
-    appModel.attrs.areaSurveyListSortedByTime = newSort;
+    appModel.data.areaSurveyListSortedByTime = newSort;
     appModel.save();
 
-    const prettySortName = appModel.attrs.areaSurveyListSortedByTime
+    const prettySortName = appModel.data.areaSurveyListSortedByTime
       ? 'last added'
       : 'alphabetical';
 
@@ -191,7 +202,7 @@ const HomeController = ({ sample }: Props) => {
       const survey = sample.getSurvey();
       const newOccurrence = survey.occ!.create!({ Occurrence, taxon: taxa });
 
-      newOccurrence.metadata.createdOn = 0;
+      newOccurrence.createdAt = 0;
       sample.occurrences.push(newOccurrence);
       sample.save();
       return;
@@ -205,25 +216,25 @@ const HomeController = ({ sample }: Props) => {
 
     if (!occ) return;
 
-    occ.attrs.count += is5x ? 5 : 1;
+    occ.data.count += is5x ? 5 : 1;
     occ.save();
   };
 
   const mergeOccurrence = (occ: Occurrence) => {
-    const { comment, identifier } = occ.attrs;
+    const { comment, identifier } = occ.data;
 
     const speciesIsKnown =
-      occ.attrs.taxon?.warehouse_id !== UNKNOWN_SPECIES.preferredId;
+      occ.data.taxon?.warehouse_id !== UNKNOWN_SPECIES.preferredId;
     if (!speciesIsKnown) return;
 
     const selectedTaxon = (selectedOccurrence: Occurrence) => {
       return (
-        (selectedOccurrence.attrs.taxon?.preferredId ||
-          selectedOccurrence.attrs.taxon?.warehouse_id) ===
-          (occ?.attrs.taxon?.preferredId || occ?.attrs.taxon?.warehouse_id) &&
+        (selectedOccurrence.data.taxon?.preferredId ||
+          selectedOccurrence.data.taxon?.warehouse_id) ===
+          (occ?.data.taxon?.preferredId || occ?.data.taxon?.warehouse_id) &&
         selectedOccurrence !== occ &&
-        selectedOccurrence.attrs.comment === comment &&
-        selectedOccurrence.attrs.identifier === identifier
+        selectedOccurrence.data.comment === comment &&
+        selectedOccurrence.data.identifier === identifier
       );
     };
     const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
@@ -241,8 +252,8 @@ const HomeController = ({ sample }: Props) => {
     occWithSameSpecies.metadata.mergedOccurrences ??= [];
     occWithSameSpecies.metadata.mergedOccurrences.push(occ.cid);
 
-    occWithSameSpecies.attrs.count += occ.attrs.count;
-    occWithSameSpecies.attrs['count-outside'] += occ.attrs['count-outside'];
+    occWithSameSpecies.data.count += occ.data.count;
+    occWithSameSpecies.data['count-outside'] += occ.data['count-outside'];
 
     while (occ.media.length) {
       const copy = occ.media.pop() as Media;
@@ -294,7 +305,7 @@ const HomeController = ({ sample }: Props) => {
     const images = await getImage();
     if (!images.length) return;
 
-    const identifier = sample.attrs.recorder;
+    const identifier = sample.data.recorder;
 
     const taxon = UNKNOWN_SPECIES;
 
@@ -344,7 +355,7 @@ const HomeController = ({ sample }: Props) => {
     }
 
     const getSpeciesId = (occ: Occurrence) =>
-      occ.attrs.taxon.preferredId || occ.attrs.taxon.warehouse_id;
+      occ.data.taxon.preferredId || occ.data.taxon.warehouse_id;
     const existingSpeciesIds = sample.occurrences.map(getSpeciesId);
 
     const uniqueSpeciesList: any = [];
@@ -358,7 +369,7 @@ const HomeController = ({ sample }: Props) => {
       return !existingSpeciesIds.includes(speciesID);
     };
 
-    const getTaxon = (occ: Occurrence) => toJS(occ.attrs.taxon);
+    const getTaxon = (occ: Occurrence) => toJS(occ.data.taxon);
     const newSpeciesList = previousSurvey.occurrences
       .map(getTaxon)
       .filter(getNewSpeciesOnly) as [];
@@ -394,7 +405,7 @@ const HomeController = ({ sample }: Props) => {
     }
   };
 
-  const { areaSurveyListSortedByTime } = appModel.attrs;
+  const { areaSurveyListSortedByTime } = appModel.data;
 
   return (
     <Page id="survey-moth-home">

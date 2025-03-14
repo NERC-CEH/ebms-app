@@ -38,7 +38,7 @@ type Props = {
 };
 
 const AppPhotoPicker = ({ model, useImageIdentifier }: Props) => {
-  const isUploaded = model.isUploaded();
+  const { isUploaded } = model;
 
   const isMothSurvey =
     model?.parent?.metadata?.survey === 'moth' ? true : undefined;

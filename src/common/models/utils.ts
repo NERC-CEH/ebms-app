@@ -1,6 +1,6 @@
 import { AttrConfig } from 'Survey/common/config';
 import Occurrence, { Attrs as OccurrenceAttrs } from './occurrence';
-import Sample, { Attrs as SampleAttrs } from './sample';
+import Sample, { Data as SampleAttrs } from './sample';
 
 export type CustomAttr = {
   attribute_id: string; // eslint-disable-line camelcase
@@ -19,29 +19,18 @@ const byAttrID =
   ([, attr]: [string, AttrConfig]) =>
     `${attr.remote?.id}` === attrId;
 
-export function getLocalAttributes(
-  doc: any,
-  schema: any,
-  onlyAttrs?: string[]
-) {
+export function getLocalAttributes(doc: any, schema: any) {
   type Entry = [string, CustomAttr | CustomAttr[]];
 
   const getLocal = ([key, values]: Entry) => {
     const isCustom = key.match(/:\d+/);
     const remoteId = isCustom ? (key.split(':').pop() as string) : `${key}`;
 
-    if (onlyAttrs) {
-      const getId = (attrKey: string): string => `${schema[attrKey].remote.id}`;
-      const skipAttribute = !onlyAttrs.map(getId).includes(remoteId);
-      if (skipAttribute) return []; // flatMap will filter out
-    }
-
     const attrConfigWithName = Object.entries<AttrConfig>(schema).find(
       byAttrID(remoteId)
     );
 
-    if (!attrConfigWithName)
-      throw new Error(`Attr config for ${remoteId} is missing`);
+    if (!attrConfigWithName) return null;
 
     const [localKey, localConfig] = attrConfigWithName;
 
@@ -67,7 +56,10 @@ export function getLocalAttributes(
     return [[localKey, localValues]];
   };
 
-  const localEntries = Object.entries<CustomAttr>(doc).flatMap(getLocal);
+  const exists = (obj: any) => !!obj;
+  const localEntries: any = Object.entries<CustomAttr>(doc)
+    .flatMap(getLocal)
+    .filter(exists);
 
   return Object.fromEntries(localEntries);
 }
@@ -77,10 +69,10 @@ export const assignIfMissing = (
   key: keyof SampleAttrs | keyof OccurrenceAttrs,
   value: any
 ) => {
-  if (Number.isFinite((model as any).attrs[key]) || (model as any).attrs[key])
+  if (Number.isFinite((model as any).data[key]) || (model as any).data[key])
     return;
   if (!Number.isFinite(value) && !value) return;
 
   // eslint-disable-next-line no-param-reassign
-  (model as any).attrs[key] = value;
+  (model as any).data[key] = value;
 };

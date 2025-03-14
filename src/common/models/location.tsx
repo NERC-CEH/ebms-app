@@ -1,5 +1,6 @@
 import { IObservableArray, observable } from 'mobx';
 import axios, { AxiosError } from 'axios';
+import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { snakeCase } from 'lodash';
 import * as Yup from 'yup';
 import { z, object } from 'zod';
@@ -9,56 +10,112 @@ import {
   validateRemoteModel,
   useAlert,
   Model,
-  ModelMetadata,
   ModelAttrs,
-  Collection,
   updateModelLocation,
   ModelValidationMessage,
-  UUID,
+  UUIDv7,
   boolToWarehouseValue,
 } from '@flumens';
+import { IonIcon } from '@ionic/react';
 import CONFIG from 'common/config';
+import mothTrap from 'common/images/moth-inside-icon.svg';
+import numberIcon from 'common/images/number.svg';
 import userModel from 'models/user';
 import Media from './media';
 import { locationsStore } from './store';
 import { getLocalAttributes } from './utils';
 
-type Metadata = ModelMetadata & {
+const mothTrapIcon = (<IonIcon src={mothTrap} className="size-6" />) as any;
+const mothTrapNumberIcon = (
+  <IonIcon src={numberIcon} className="size-6" />
+) as any;
+const mothTrapBulbIcon = (
+  <IonIcon src={bulbOutline} className="size-6" />
+) as any;
+const chatboxOutlineIcon = (
+  <IonIcon src={chatboxOutline} className="size-6" />
+) as any;
+
+export const mothTrapTypeAttr = {
+  id: 'locAttr:330',
+  type: 'choiceInput',
+  title: 'Type',
+  appearance: 'button',
+  prefix: mothTrapIcon,
+  choices: [
+    { title: 'LED funnel trap', dataName: '19306' },
+    { title: 'Other funnel trap', dataName: '19307' },
+    { title: 'Trap with 2 sheets', dataName: '19308' },
+    { title: 'Other trap', dataName: '19309' },
+  ],
+} as const;
+
+export const mothTrapOtherTypeAttr = {
+  id: 'locAttr:288',
+  type: 'textInput',
+  title: 'Other type',
+  prefix: mothTrapIcon,
+  visibility: [{ target: mothTrapTypeAttr.id, op: 'eq', value: '19309' }],
+} as const;
+
+export const mothTrapLampDescriptionAttr = {
+  id: 'description',
+  type: 'textInput',
+  title: 'Description',
+  prefix: chatboxOutlineIcon,
+} as const;
+
+export const mothTrapLampQuantityAttr = {
+  id: 'quantity',
+  type: 'numberInput',
+  title: 'Quantity',
+  prefix: mothTrapNumberIcon,
+  appearance: 'counter',
+  validations: { min: 1 },
+} as const;
+
+export const mothTrapLampsAttr = { id: 'locAttr:306' } as const;
+
+export const mothTrapUserAttr = { id: 'locAttr:234' } as const;
+
+export const mothTrapLampTypeNameAttr = { id: 'type' } as const;
+
+export const mothTrapLampTypeAttr = {
+  id: 'type_term',
+  type: 'choiceInput',
+  title: 'Type',
+  appearance: 'button',
+  prefix: mothTrapBulbIcon,
+  choices: [
+    { dataName: '19111', title: 'LED → Ledstrip → 395-405 SMD 2835' },
+    { dataName: '19112', title: 'LED → Ledstrip → 395-405 SMD 5050' },
+    { dataName: '19113', title: 'LED → PowerLED → Please describe' },
+    { dataName: '19114', title: 'LED → LepiLed → Mini' },
+    { dataName: '19115', title: 'LED → LepiLed → Standard' },
+    { dataName: '19116', title: 'LED → LepiLed → Maxi' },
+    { dataName: '19117', title: 'LED → LepiLed → Maxi switch' },
+    { dataName: '19118', title: 'LED → Other → Please describe' },
+    { dataName: '19127', title: 'TL → Actinic → 6W' },
+    { dataName: '19128', title: 'TL → Actinic → 8W' },
+    { dataName: '19129', title: 'TL → Blacklight → 18W' },
+    { dataName: '19130', title: 'TL → Other → Please describe' },
+    { dataName: '19131', title: 'E27 → Mercury vapour - ML → 160W' },
+    { dataName: '19132', title: 'E27 → Mercury vapour - ML → 250W' },
+    { dataName: '19133', title: 'E27 → Mercury vapour - ML → 500W' },
+    { dataName: '19134', title: 'E27 → Mercury vapour - HPL → 125W' },
+    { dataName: '19135', title: 'E27 → Mercury vapour - HPL → 400W' },
+    { dataName: '19136', title: 'E27 → Mercury vapour - Blacklight → 160W' },
+    { dataName: '19137', title: 'E27 → Mercury vapour - Blacklight → 400W' },
+    { dataName: '19138', title: 'E27 → Sylvana UV-A → 20W' },
+    { dataName: '19140', title: 'E27 → Other → Please describe' },
+    { dataName: '20068', title: 'Other → Other → Please describe' },
+  ],
+} as const;
+
+type Metadata = {
   saved?: boolean;
   groupId?: string;
 };
-
-const trapTypes = [
-  { value: 'LED funnel trap', id: 19306 },
-  { value: 'Other funnel trap', id: 19307 },
-  { value: 'Trap with 2 sheets', id: 19308 },
-  { value: 'Other trap', id: 19309 },
-];
-
-const lampType = [
-  { id: 19111, value: 'LED → Ledstrip → 395-405 SMD 2835' },
-  { id: 19112, value: 'LED → Ledstrip → 395-405 SMD 5050' },
-  { id: 19113, value: 'LED → PowerLED → Please describe' },
-  { id: 19114, value: 'LED → LepiLed → Mini' },
-  { id: 19115, value: 'LED → LepiLed → Standard' },
-  { id: 19116, value: 'LED → LepiLed → Maxi' },
-  { id: 19117, value: 'LED → LepiLed → Maxi switch' },
-  { id: 19118, value: 'LED → Other → Please describe' },
-  { id: 19127, value: 'TL → Actinic → 6W' },
-  { id: 19128, value: 'TL → Actinic → 8W' },
-  { id: 19129, value: 'TL → Blacklight → 18W' },
-  { id: 19130, value: 'TL → Other → Please describe' },
-  { id: 19131, value: 'E27 → Mercury vapour - ML → 160W' },
-  { id: 19132, value: 'E27 → Mercury vapour - ML → 250W' },
-  { id: 19133, value: 'E27 → Mercury vapour - ML → 500W' },
-  { id: 19134, value: 'E27 → Mercury vapour - HPL → 125W' },
-  { id: 19135, value: 'E27 → Mercury vapour - HPL → 400W' },
-  { id: 19136, value: 'E27 → Mercury vapour - Blacklight → 160W' },
-  { id: 19137, value: 'E27 → Mercury vapour - Blacklight → 400W' },
-  { id: 19138, value: 'E27 → Sylvana UV-A → 20W' },
-  { id: 19140, value: 'E27 → Other → Please describe' },
-  { id: 20068, value: 'Other → Other → Please describe' },
-];
 
 const fixedLocationSchema = Yup.object().shape({
   latitude: Yup.number().required(),
@@ -89,20 +146,25 @@ export const verifyLocationSchema = Yup.mixed().test(
 type LocationOptions = ModelOptions<Attrs> & {
   media?: any[];
   skipStore?: boolean;
+  metadata?: Metadata;
 };
 
 export type Lamp = {
   cid: string;
-  attrs: { type: string; quantity: number; description: string };
+  data: {
+    [mothTrapLampTypeNameAttr.id]: string;
+    [mothTrapLampTypeAttr.id]: string;
+    [mothTrapLampQuantityAttr.id]: number;
+    [mothTrapLampDescriptionAttr.id]: string;
+  };
 };
 
 export type RemoteAttributes = z.infer<typeof LocationModel.remoteSchema>;
 
 export type MothTrapAttrs = {
-  type: number;
-  typeOther: string | null;
-  description: string;
-  lamps: Lamp[];
+  [mothTrapTypeAttr.id]: number;
+  [mothTrapOtherTypeAttr.id]: string | null;
+  [mothTrapLampsAttr.id]: Lamp[];
   location: {
     latitude: number;
     longitude: number;
@@ -112,7 +174,7 @@ export type MothTrapAttrs = {
 
 export type Attrs = RemoteAttributes & MothTrapAttrs & ModelAttrs;
 
-class LocationModel extends Model {
+class LocationModel extends Model<Attrs> {
   static remoteSchema = object({
     lat: z.string().min(1),
     lon: z.string().min(1),
@@ -144,39 +206,6 @@ class LocationModel extends Model {
   });
 
   static schema = {
-    type: {
-      pageProps: {
-        attrProps: {
-          input: 'radio',
-          info: 'What is the moth trap type?',
-          inputProps: { options: trapTypes },
-          set: (value: string, model: any) => {
-            if (model.attrs.type !== 'Other trap') {
-              // eslint-disable-next-line
-              model.attrs.typeOther = null;
-            }
-            // eslint-disable-next-line
-            model.attrs.type = value;
-            model.save();
-          },
-        },
-      },
-      remote: { id: 330, values: trapTypes },
-    },
-
-    typeOther: {
-      pageProps: {
-        headerProps: {
-          title: 'Other type',
-        },
-        attrProps: {
-          input: 'textarea',
-          info: 'What type of trap was it?',
-        },
-      },
-      remote: { id: 288 },
-    },
-
     location: {
       remote: {
         id: 'entered_sref',
@@ -195,12 +224,10 @@ class LocationModel extends Model {
       },
     },
 
-    lamps: { remote: { id: 306 } },
-
     verify(attrs: any) {
       try {
         const lampSchema = Yup.object().shape({
-          attrs: Yup.object().shape({
+          data: Yup.object().shape({
             description: Yup.string(),
             quantity: Yup.number().min(1),
             type: Yup.string().required('Lamp type is a required field.'),
@@ -209,8 +236,10 @@ class LocationModel extends Model {
 
         const schema = Yup.object().shape({
           location: verifyLocationSchema,
-          type: Yup.string().required('Trap type is a required field.'),
-          lamps: Yup.array().of(lampSchema),
+          [mothTrapTypeAttr.id]: Yup.string().required(
+            'Trap type is a required field.'
+          ),
+          [mothTrapLampsAttr.id]: Yup.array().of(lampSchema),
         });
 
         schema.validateSync(attrs, { abortEarly: false });
@@ -222,67 +251,44 @@ class LocationModel extends Model {
     },
   };
 
-  static lampSchema = {
-    type: {
-      input: 'radio',
-      info: 'What is the lamp type?',
-      inputProps: {
-        options: lampType,
-      },
-      remote: { id: 366, values: lampType },
-    },
-    description: {
-      input: 'textarea',
-      info: 'Additional description of lamp.',
-    },
-    quantity: { remote: { id: 16 } },
-  };
-
   static parseRemoteJSON(
-    { id, createdOn, updatedOn, externalKey, ...attrs }: RemoteAttributes,
+    { id, createdOn, updatedOn, externalKey, ...data }: RemoteAttributes,
     metadata?: Partial<Metadata>
   ) {
-    const parsedRemoteJSON = {
-      cid: externalKey || UUID(),
+    const parsedRemoteJSON: any = {
+      cid: externalKey || UUIDv7(),
       id,
+      createdAt: new Date(createdOn!).getTime(),
+      updatedAt: new Date(updatedOn!).getTime(),
 
-      attrs: {
+      metadata,
+
+      data: {
         id,
-        createdOn,
+        createdAt: createdOn,
         location: {
-          name: attrs.name,
-          latitude: Number(attrs.lat),
-          longitude: Number(attrs.lon),
+          name: data.name,
+          latitude: Number(data.lat),
+          longitude: Number(data.lon),
         },
-        ...attrs,
-        ...getLocalAttributes(attrs, LocationModel.schema, [
-          'type',
-          'lamps',
-          'typeOther',
-        ]),
-      },
-
-      metadata: {
-        ...metadata,
-        createdOn: new Date(createdOn!).getTime(),
-        updatedOn: new Date(updatedOn!).getTime(),
+        ...data,
+        ...getLocalAttributes(data, LocationModel.schema),
       },
     };
 
-    const parseLamp = (lamp: string) => {
+    const parseLamp = (lamp: any) => {
       try {
-        return JSON.parse(lamp);
+        return JSON.parse(lamp.value);
       } catch (error) {
         throw new Error('Could not parse a lamp');
       }
     };
-    parsedRemoteJSON.attrs.lamps =
-      parsedRemoteJSON.attrs?.lamps?.map(parseLamp) || [];
+
+    parsedRemoteJSON.data[mothTrapLampsAttr.id] =
+      parsedRemoteJSON.data[mothTrapLampsAttr.id]?.map(parseLamp) || [];
 
     return parsedRemoteJSON;
   }
-
-  collection?: Collection<LocationModel>;
 
   validateRemote = validateRemoteModel;
 
@@ -290,21 +296,22 @@ class LocationModel extends Model {
 
   remote = observable({ synchronising: false });
 
-  // eslint-disable-next-line
-  // @ts-ignore
-  metadata: Metadata = this.metadata;
-
-  // eslint-disable-next-line
-  // @ts-ignore
-  attrs: Attrs = Model.extendAttrs(this.attrs, {});
-
   media: IObservableArray<Media>;
 
-  constructor({ skipStore, media = [], ...options }: LocationOptions) {
+  metadata: Metadata;
+
+  constructor({
+    skipStore,
+    media = [],
+    metadata = {},
+    ...options
+  }: LocationOptions) {
     super({
       store: skipStore ? undefined : locationsStore,
       ...options,
     });
+
+    this.metadata = observable(metadata);
 
     this.media = observable(media);
   }
@@ -353,13 +360,13 @@ class LocationModel extends Model {
 
       // update metadata
       const uploadTime = new Date(data.values.updated_on).getTime();
-      this.metadata.updatedOn = uploadTime;
-      this.metadata.syncedOn = uploadTime;
+      this.updatedAt = uploadTime;
+      this.syncedAt = uploadTime;
       this.id = data.values.id;
 
       this.remote.synchronising = false;
 
-      this._store && this.save();
+      this.store && this.save();
 
       console.log('Location uploading done');
       return this;
@@ -371,8 +378,8 @@ class LocationModel extends Model {
       if (err.response?.status === 409 && err.response?.data.duplicate_of) {
         console.log('Location uploading duplicate was found');
         const uploadTime = new Date().getTime();
-        this.metadata.updatedOn = uploadTime;
-        this.metadata.syncedOn = uploadTime;
+        this.updatedAt = uploadTime;
+        this.syncedAt = uploadTime;
         this.id = err.response?.data.duplicate_of.id;
         return this;
       }
@@ -396,56 +403,38 @@ class LocationModel extends Model {
     }
   }
 
-  isUploaded() {
-    return !!this.metadata.syncedOn;
+  get isUploaded() {
+    return !!this.syncedAt;
   }
 
   private toRemoteMothTrapJSON() {
-    const {
-      lamps,
-      type,
-      typeOther,
-      location,
-      comment,
-      boundaryGeom,
-      centroidSrefSystem,
-    } = this.attrs;
+    const { location, comment, boundaryGeom, centroidSrefSystem } = this.data;
 
     const stringifyLamp = (lamp: any) => JSON.stringify(lamp);
     const getLampType = (lamp: any) => {
-      const { type: lampTypeTerm, description, quantity } = lamp.attrs;
-
-      const byId = ({ value }: any) => value === lampTypeTerm;
-      const typeRemoteId =
-        LocationModel.lampSchema.type.remote.values.find(byId)?.id;
-
       const lat = parseFloat(`${location.latitude}`).toFixed(7);
       const lon = parseFloat(`${location.longitude}`).toFixed(7);
 
       return {
+        ...lamp.data,
         centroid_sref: `${lat} ${lon}`,
-        type_term: lampTypeTerm,
-        type: typeRemoteId,
-        description,
-        quantity,
       };
     };
-    const stringifiedLamps = lamps?.map(getLampType).map(stringifyLamp);
 
-    const byValue = ({ value }: any) => value === type;
-    const trapType = LocationModel.schema.type.remote.values.find(byValue)?.id;
+    const stringifiedLamps = this.data[mothTrapLampsAttr.id]
+      ?.map(getLampType)
+      .map(stringifyLamp);
 
     return {
+      ...this.data,
       name: location.name,
       location_type_id: MOTH_TRAP_TYPE, // the model already has this, so probably not needed
       centroid_sref_system: centroidSrefSystem,
       centroid_sref: `${location.latitude} ${location.longitude}`,
       boundary_geom: boundaryGeom,
       comment,
-      'locAttr:306': stringifiedLamps,
-      'locAttr:330': trapType,
-      'locAttr:234': userModel.id,
-      'locAttr:288': typeOther,
+      [mothTrapLampsAttr.id]: stringifiedLamps,
+      [mothTrapUserAttr.id]: userModel.id,
     };
   }
 
@@ -466,14 +455,14 @@ class LocationModel extends Model {
         return agg;
       }, attrs);
 
-    const attrs = this.attrs.type
+    const data = this.data[mothTrapTypeAttr.id]
       ? this.toRemoteMothTrapJSON()
-      : transformBoolean(toSnakeCase(this.attrs));
+      : transformBoolean(toSnakeCase(this.data));
 
     const submission: any = {
       values: {
         external_key: this.cid,
-        ...attrs,
+        ...data,
       },
       media: [],
     };
@@ -492,10 +481,6 @@ class LocationModel extends Model {
 
   destroy() {
     this.cleanUp();
-
-    if (this.collection) {
-      this.collection.remove(this);
-    }
 
     return super.destroy();
   }
@@ -587,7 +572,7 @@ class LocationModel extends Model {
     const warehouseMediaNames: any = {};
 
     this.media.forEach(m => {
-      warehouseMediaNames[m.cid] = { name: m.attrs.queued };
+      warehouseMediaNames[m.cid] = { name: m.data.queued };
     });
 
     return warehouseMediaNames;

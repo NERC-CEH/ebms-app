@@ -1,6 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
+import useLocation from 'Location/MothTrap/useLocation';
 import {
   MapContainer,
   MapHeader,
@@ -10,20 +11,20 @@ import {
   mapEventToLocation,
   toggleGPS,
   mapFlyToLocation,
+  useSample,
 } from '@flumens';
 import config from 'common/config';
 import Location from 'models/location';
 import Sample, { AreaCountLocation } from 'models/sample';
 
-type Props = {
-  sample: Sample;
-  subSample?: Sample;
-};
+const ModelLocationMap = () => {
+  const { sample, subSample } = useSample<Sample>();
+  const { location: locationModel } = useLocation();
 
-const ModelLocationMap = ({ subSample, sample }: Props) => {
-  const model = subSample || sample;
-  const location = (model.attrs.location as AreaCountLocation) || {};
-  const parentLocation = model.parent?.attrs.location as AreaCountLocation;
+  const model = subSample! || sample! || locationModel!;
+
+  const location = (model.data.location as AreaCountLocation) || {};
+  const parentLocation = model.parent?.data.location as AreaCountLocation;
 
   const isMothSurvey = model instanceof Location;
 
@@ -31,7 +32,7 @@ const ModelLocationMap = ({ subSample, sample }: Props) => {
     if (!newLocation) return;
     if (model.isGPSRunning()) model.stopGPS();
 
-    model.attrs.location = { ...model.attrs.location, ...newLocation };
+    model.data.location = { ...model.data.location, ...newLocation };
   };
 
   const onManuallyTypedLocationChange = (e: any) =>
@@ -41,7 +42,7 @@ const ModelLocationMap = ({ subSample, sample }: Props) => {
   const onGPSClick = () => toggleGPS(model);
 
   const onLocationNameChange = ({ name }: any) => {
-    (model.attrs.location as AreaCountLocation).name = name;
+    (model.data.location as AreaCountLocation).name = name;
   };
 
   const [mapRef, setMapRef] = useState<any>();

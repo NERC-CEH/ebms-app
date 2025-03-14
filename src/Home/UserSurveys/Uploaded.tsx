@@ -1,24 +1,20 @@
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import InfiniteLoader from 'react-window-infinite-loader';
-import { device, getRelativeDate, VirtualList } from '@flumens';
+import { device, getRelativeDate, VirtualList, useToast } from '@flumens';
 import {
   IonItem,
-  IonItemDivider,
   IonLabel,
   IonList,
   IonRefresher,
   IonSpinner,
 } from '@ionic/react';
-import samplesCollection, {
-  samplesCollectionById,
-} from 'models/collections/samples';
-import Sample, { bySurveyDate } from 'models/sample';
+import samplesCollection, { bySurveyDate } from 'models/collections/samples';
+import Sample from 'models/sample';
 import userModel from 'models/user';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import Survey from '../Survey';
-import fetchRemoteSamples from './service';
-import './styles.scss';
+import { getSurveyConfigs } from 'Survey/common/surveyConfigs';
+import Survey from './Survey';
 
 // https://stackoverflow.com/questions/47112393/getting-the-iphone-x-safe-area-using-javascript
 const rawSafeAreaTop =
@@ -43,10 +39,12 @@ let reachedBottom = false;
 
 const canFetch = () => userModel.isLoggedIn() && device.isOnline;
 
-const Uploaded = () => {
+type Props = { isOpen: boolean };
+const UploadedSurveys = ({ isOpen }: Props) => {
   const [isLoading, setIsLoading] = useState(false);
+  const toast = useToast();
 
-  const uploaded = (sample: Sample) => sample.metadata.syncedOn;
+  const uploaded = (sample: Sample) => sample.isUploaded;
   const uploadedSurveys = samplesCollection.filter(uploaded).sort(bySurveyDate);
 
   const surveys = canFetch()
@@ -58,15 +56,17 @@ const Uploaded = () => {
 
     setIsLoading(true);
     try {
-      const remoteSamples = await fetchRemoteSamples(from);
+      const surveyIDs = Object.values(getSurveyConfigs()).map(
+        ({ id }: any) => id
+      );
+
+      const remoteSamples = await samplesCollection.fetchRemote(
+        from,
+        surveyIDs
+      );
       if (remoteSamples.length < PAGE_SIZE) {
         reachedBottom = true;
       }
-      const notCached = (sample: Sample) =>
-        !samplesCollectionById.has(sample.cid);
-      const uniqueRemoteSamples = remoteSamples.filter(notCached);
-
-      samplesCollection.push(...uniqueRemoteSamples);
       cachedPages++;
     } catch (error) {
       console.error(error);
@@ -78,7 +78,7 @@ const Uploaded = () => {
     if (cachedPages) return; // if the view revisited
     fetchSurveys(0);
   };
-  useEffect(fetchRemoteSamplesFirstTime, []);
+  useEffect(fetchRemoteSamplesFirstTime, [userModel.isLoggedIn()]);
 
   const dates: any = [];
   const dateIndices: any = [];
@@ -86,12 +86,12 @@ const Uploaded = () => {
   const groupedSurveys: any = [];
   let counter: any = {};
 
-  const extraxtDates: (
+  const extractDates: (
     value: any,
     index: number,
     array: any[]
   ) => void = survey => {
-    const date = roundDate(new Date(survey.attrs.date).getTime()).toString();
+    const date = roundDate(new Date(survey.data.date).getTime()).toString();
     if (!dates.includes(date) && date !== 'Invalid Date') {
       dates.push(date);
       dateIndices.push(groupedSurveys.length);
@@ -102,25 +102,33 @@ const Uploaded = () => {
     counter.count += 1;
     groupedSurveys.push(survey);
   };
-  [...surveys].forEach(extraxtDates);
+  [...surveys].forEach(extractDates);
 
   // eslint-disable-next-line react/no-unstable-nested-components
   const Item = ({ index, ...itemProps }: { index: number }) => {
     if (dateIndices.includes(index)) {
       const { date, count } = groupedSurveys[index];
       return (
-        <IonItemDivider key={date} style={(itemProps as any).style} mode="ios">
+        <div
+          className="list-divider rounded-md"
+          key={date}
+          style={(itemProps as any).style}
+        >
           <IonLabel>{getRelativeDate(date)}</IonLabel>
           {count > 1 && <IonLabel slot="end">{count}</IonLabel>}
-        </IonItemDivider>
+        </div>
       );
     }
 
     const sample = groupedSurveys[index];
     if (!sample)
       return (
-        <IonItem detail={false} {...itemProps} className="survey-list-loader">
-          <div>
+        <IonItem
+          detail={false}
+          {...itemProps}
+          className="rounded-[var(--theme-border-radius)] bg-transparent [--background:transparent] [--border-style:0]"
+        >
+          <div className="flex h-[73px] w-full max-w-[600px] items-center justify-center">
             <IonSpinner />
           </div>
         </IonItem>
@@ -152,6 +160,8 @@ const Uploaded = () => {
     return !!sample;
   };
 
+  if (!isOpen) return null;
+
   if (!surveys.length && !isLoading) {
     return (
       <IonList>
@@ -163,6 +173,11 @@ const Uploaded = () => {
   }
 
   const onListRefreshPull = async (e: any) => {
+    if (!device.isOnline) {
+      toast.warn("Sorry, looks like you're offline.");
+      e?.detail?.complete();
+      return;
+    }
     cachedPages = 0;
     reachedBottom = false;
 
@@ -177,6 +192,7 @@ const Uploaded = () => {
       <IonRefresher
         disabled={!reachedTopOfList}
         slot="fixed"
+        className="z-10"
         onIonRefresh={onListRefreshPull}
         style={{ top: LIST_PADDING / 2 }}
       >
@@ -207,4 +223,4 @@ const Uploaded = () => {
   );
 };
 
-export default observer(Uploaded);
+export default observer(UploadedSurveys);

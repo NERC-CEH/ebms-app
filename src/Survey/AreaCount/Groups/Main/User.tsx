@@ -26,7 +26,7 @@ const UserGroups = ({ sample, onSelect, onLeave }: Props) => {
 
   const getOption = (group: Group) => ({
     value: group.id!,
-    label: group.attrs.title,
+    label: group.data.title,
   });
 
   const groupOptions: RadioOption[] = groups.map(getOption);
@@ -39,7 +39,7 @@ const UserGroups = ({ sample, onSelect, onLeave }: Props) => {
   const getGroupOption = (p: any) => {
     const onLeaveGroupWrap = () => onLeave(p?.value);
 
-    const isSelected = sample.attrs.group?.id === p.value;
+    const isSelected = sample.data.group?.id === p.value;
 
     return (
       <IonItemSliding
@@ -86,7 +86,7 @@ const UserGroups = ({ sample, onSelect, onLeave }: Props) => {
   return (
     <IonList lines="full" className="radio-input-attr">
       <IonRadioGroup
-        value={sample.attrs.group?.id}
+        value={sample.data.group?.id}
         onIonChange={(e: any) => onSelect(e.detail.value)}
       >
         {groupOptions.map(getGroupOption)}

@@ -22,13 +22,13 @@ const Onboarding = ({ children }: any) => {
     setMoreSlidesExist(!isEnd);
   };
 
-  const { showedWelcome } = appModel.attrs;
+  const { showedWelcome } = appModel.data;
 
   if (showedWelcome) return children;
 
   function exit() {
     console.log('Info:Welcome:Controller: exit.');
-    appModel.attrs.showedWelcome = true;
+    appModel.data.showedWelcome = true;
     appModel.save();
   }
 

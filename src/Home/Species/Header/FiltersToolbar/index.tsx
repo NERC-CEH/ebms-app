@@ -45,7 +45,7 @@ const FiltersToolbar = ({
 }: Props) => {
   const [searchPhrase, setSearchPhrase] = useState('');
   const [tappedSearchEnd, setTappedSearchEnd] = useState(false);
-  const searchInput: any = useRef();
+  const searchInput: any = useRef<any>(null);
   const { t } = useTranslation();
 
   function onSearch(e: any) {

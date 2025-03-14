@@ -18,9 +18,9 @@ const GroupLocations = ({ onSelect, groupId, selectedLocationId }: Props) => {
   const getEntry = (location: Location) => (
     <Entry
       key={location.cid}
-      latitude={location.attrs.location.latitude}
-      longitude={location.attrs.location.longitude}
-      name={location.attrs.location.name}
+      latitude={location.data.location.latitude}
+      longitude={location.data.location.longitude}
+      name={location.data.location.name}
       onClick={() => onSelect(location)}
       isSelected={location.id === selectedLocationId}
     />

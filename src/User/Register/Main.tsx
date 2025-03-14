@@ -38,7 +38,7 @@ const RegisterMain = ({ onSubmit, lang }: Props) => {
     <Main>
       <div className="mx-auto max-w-md px-3">
         <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
-           {/* Fake onSubmit on Enter */}
+          {/* Fake onSubmit on Enter */}
           <input type="submit" className="hidden" />
 
           <div className="rounded-list">

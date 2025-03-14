@@ -4,23 +4,23 @@
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { Page, Header } from '@flumens';
-import Location, { Lamp } from 'models/location';
+import { Lamp, mothTrapLampsAttr } from 'models/location';
+import useLocation from '../useLocation';
 import Main from './Main';
 
-interface Props {
-  sample: Location;
-}
+const MothTrapSetup = () => {
+  const { location } = useLocation();
+  if (!location) throw new Error('No location was found');
 
-const MothTrapSetup = ({ sample: location }: Props) => {
   const match: any = useRouteMatch();
 
   const byId = (lamp: Lamp) => lamp.cid === match.params.lampId;
-  const lamp = location.attrs.lamps.find(byId) as Lamp;
+  const lamp = location.data[mothTrapLampsAttr.id].find(byId) as Lamp;
 
   return (
     <Page id="moth-trap-setup-lamp">
       <Header title="Lamp Details" />
-      <Main location={location} lamp={lamp} />
+      <Main lamp={lamp} />
     </Page>
   );
 };

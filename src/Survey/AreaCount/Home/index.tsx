@@ -1,9 +1,16 @@
 import { useContext, useEffect, useState } from 'react';
 import { toJS, observable } from 'mobx';
 import { observer } from 'mobx-react';
-import i18n from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Page, useAlert, useToast, Attr } from '@flumens';
+import {
+  Page,
+  useAlert,
+  useToast,
+  Attr,
+  useSample,
+  useRemoteSample,
+} from '@flumens';
 import { NavContext } from '@ionic/react';
 import distance from '@turf/distance';
 import appModel from 'models/app';
@@ -14,7 +21,7 @@ import Occurrence, {
   doesShallowTaxonMatch,
 } from 'models/occurrence';
 import Sample, { AreaCountLocation, useValidateCheck } from 'models/sample';
-import { useUserStatusCheck } from 'models/user';
+import userModel, { useUserStatusCheck } from 'models/user';
 import { useDeleteConfirmation } from '../Occurrence/Species';
 import Header from './Header';
 import Main from './Main';
@@ -25,23 +32,24 @@ const DUMMY_ARRAY_OF_FIVE = [1, 2, 3, 4, 5];
 
 const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
+  const { t } = useTranslation();
 
   function showDeleteSpeciesPrompt(taxon: any) {
     const prompt = (resolve: any) => {
       const name = taxon.scientific_name;
       alert({
-        header: i18n.t('Delete'),
+        header: t('Delete'),
         skipTranslation: true,
-        message: i18n.t('Are you sure you want to delete {{taxon}} ?', {
+        message: t('Are you sure you want to delete {{taxon}} ?', {
           taxon: name,
         }),
         buttons: [
           {
-            text: i18n.t('Cancel'),
+            text: t('Cancel'),
             role: 'cancel',
           },
           {
-            text: i18n.t('Delete'),
+            text: t('Delete'),
             role: 'destructive',
             handler: resolve,
           },
@@ -72,8 +80,8 @@ function toggleTimer(sample: Sample) {
 /* eslint-enable no-param-reassign */
 
 function byCreateTime(model1: Sample, model2: Sample) {
-  const date1 = new Date(model1.metadata.createdOn);
-  const date2 = new Date(model2.metadata.createdOn);
+  const date1 = new Date(model1.createdAt);
+  const date2 = new Date(model2.createdAt);
   return date2.getTime() - date1.getTime();
 }
 
@@ -95,20 +103,20 @@ function showSpeciesGroupList(
           input="checkbox"
           set={(newValues: string[], model: Sample) => {
             // eslint-disable-next-line no-param-reassign
-            model.attrs.speciesGroups = newValues;
+            model.data.speciesGroups = newValues;
             model.save();
 
-            if (model.attrs.speciesGroups.length) {
+            if (model.data.speciesGroups.length) {
               lastSpeciesGroup = newValues;
             }
 
-            if (!model.attrs.speciesGroups.length) {
+            if (!model.data.speciesGroups.length) {
               // eslint-disable-next-line no-param-reassign, prefer-destructuring
-              model.attrs.speciesGroups = lastSpeciesGroup;
+              model.data.speciesGroups = lastSpeciesGroup;
               model.save();
             }
           }}
-          get={(model: Sample) => [...model.attrs.speciesGroups]}
+          get={(model: Sample) => [...model.data.speciesGroups]}
           inputProps={{ options: speciesGroups }}
         />
       ),
@@ -142,31 +150,32 @@ const shouldShowSpeciesGroupDialog = (groups: SpeciesGroup[]) => {
   return false;
 };
 
-type Props = {
-  sample: Sample;
-};
-
-const HomeController = ({ sample }: Props) => {
+const HomeController = () => {
   const alert = useAlert();
+  const { t } = useTranslation();
 
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch<any>();
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
   const toast = useToast();
+
+  const [hasLongSections, setHasLongSections] = useState(false);
+
+  let { sample } = useSample<Sample>();
+  sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
+
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
   const confirmDelete = useDeleteConfirmation();
 
-  const [hasLongSections, setHasLongSections] = useState(false);
-
   const calculateIfHasLongSections = () => {
-    if (
-      !(sample.attrs.location as AreaCountLocation)?.shape?.coordinates.length
-    )
+    if (!sample) return;
+
+    if (!(sample.data.location as AreaCountLocation)?.shape?.coordinates.length)
       return;
     if (!sample.metadata.saved) return;
 
-    const shapeCoords = [...(sample.attrs.location as any).shape.coordinates];
+    const shapeCoords = [...(sample.data.location as any).shape.coordinates];
 
     for (let index = 1; index < shapeCoords.length; index++) {
       const coords = shapeCoords[index];
@@ -205,8 +214,10 @@ const HomeController = ({ sample }: Props) => {
   };
 
   useEffect(calculateIfHasLongSections, [
-    (sample.attrs.location as AreaCountLocation)?.shape?.coordinates,
+    (sample?.data.location as AreaCountLocation)?.shape?.coordinates,
   ]);
+
+  if (!sample) return null;
 
   const _processSubmission = async () => {
     const isUserOK = await checkUserStatus();
@@ -231,7 +242,7 @@ const HomeController = ({ sample }: Props) => {
       const speciesGroups = sample.getSpeciesGroupList();
       const extractValue = (group: SpeciesGroup) => group.value;
       // eslint-disable-next-line no-param-reassign
-      sample.attrs.speciesGroups = speciesGroups.map(extractValue);
+      sample.data.speciesGroups = speciesGroups.map(extractValue);
       sample.save();
 
       if (shouldShowSpeciesGroupDialog(speciesGroups)) {
@@ -241,13 +252,13 @@ const HomeController = ({ sample }: Props) => {
       }
     }
 
-    appModel.setLocation(sample.attrs.location);
+    appModel.setLocation(sample.data.location);
 
     await appModel.save();
 
     // eslint-disable-next-line no-param-reassign
     sample.metadata.saved = true;
-    sample.attrs.surveyEndTime = new Date().toISOString(); // eslint-disable-line no-param-reassign
+    sample.data.surveyEndTime = new Date().toISOString(); // eslint-disable-line no-param-reassign
 
     sample.cleanUp();
     sample.save();
@@ -271,12 +282,12 @@ const HomeController = ({ sample }: Props) => {
   };
 
   const toggleSpeciesSort = () => {
-    const { areaSurveyListSortedByTime } = appModel.attrs;
+    const { areaSurveyListSortedByTime } = appModel.data;
     const newSort = !areaSurveyListSortedByTime;
-    appModel.attrs.areaSurveyListSortedByTime = newSort;
+    appModel.data.areaSurveyListSortedByTime = newSort;
     appModel.save();
 
-    const prettySortName = appModel.attrs.areaSurveyListSortedByTime
+    const prettySortName = appModel.data.areaSurveyListSortedByTime
       ? 'last added'
       : 'alphabetical';
 
@@ -321,8 +332,8 @@ const HomeController = ({ sample }: Props) => {
     }
 
     const getSpeciesId = (s: Sample) =>
-      s.occurrences[0].attrs.taxon.preferredId ||
-      s.occurrences[0].attrs.taxon.warehouse_id;
+      s.occurrences[0].data.taxon.preferredId ||
+      s.occurrences[0].data.taxon.warehouse_id;
     const existingSpeciesIds = sample.samples.map(getSpeciesId);
 
     const uniqueSpeciesList: any = [];
@@ -336,7 +347,7 @@ const HomeController = ({ sample }: Props) => {
       return !existingSpeciesIds.includes(speciesID);
     };
 
-    const getTaxon = (s: Sample) => toJS(s.occurrences[0].attrs.taxon);
+    const getTaxon = (s: Sample) => toJS(s.occurrences[0].data.taxon);
     const newSpeciesList = previousSurvey.samples
       .map(getTaxon)
       .filter(getNewSpeciesOnly) as [];
@@ -364,7 +375,7 @@ const HomeController = ({ sample }: Props) => {
       toast.warn('Sorry, no species were found to copy.');
     } else {
       toast.success(
-        i18n.t('You have successfully copied {{speciesCount}} species.', {
+        t('You have successfully copied {{speciesCount}} species.', {
           speciesCount: newSpeciesList.length,
         })
       );
@@ -414,13 +425,13 @@ const HomeController = ({ sample }: Props) => {
   const increaseCount = (taxon: any, _: boolean, is5x: boolean) => {
     if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
       // eslint-disable-next-line no-param-reassign
-      sample.samples[0].occurrences[0].attrs.zero_abundance = null;
+      sample.samples[0].occurrences[0].data.zero_abundance = null;
       sample.samples[0].startGPS();
       sample.save();
       return;
     }
 
-    if (sample.isDisabled()) return;
+    if (sample.isDisabled) return;
 
     const survey = sample.getSurvey();
 
@@ -443,12 +454,12 @@ const HomeController = ({ sample }: Props) => {
     const shouldDelete = await confirmDelete();
     if (!shouldDelete) return;
 
-    const taxon = { ...smp.occurrences[0].attrs.taxon };
+    const taxon = { ...smp.occurrences[0].data.taxon };
     await smp.destroy();
 
     const byTaxonId = (s: Sample) =>
-      s.occurrences[0].attrs.taxon.preferredId === taxon.preferredId ||
-      s.occurrences[0].attrs.taxon.warehouse_id === taxon.warehouse_id;
+      s.occurrences[0].data.taxon.preferredId === taxon.preferredId ||
+      s.occurrences[0].data.taxon.warehouse_id === taxon.warehouse_id;
 
     const isLastSampleDeleted = ![...sample.samples].filter(byTaxonId).length;
 
@@ -481,18 +492,16 @@ const HomeController = ({ sample }: Props) => {
     sample.save();
 
     // eslint-disable-next-line no-param-reassign
-    sample.copyAttributes = toJS(copiedSubSample.occurrences[0].attrs);
+    sample.copyAttributes = toJS(copiedSubSample.occurrences[0].data);
 
-    const taxon = { ...copiedSubSample.occurrences[0].attrs.taxon };
+    const taxon = { ...copiedSubSample.occurrences[0].data.taxon };
 
     const survey = sample.getSurvey();
     const newSubSample = survey.smp!.create!({ Sample, Occurrence, taxon });
     // eslint-disable-next-line no-param-reassign
     (sample.copyAttributes as any).timeOfSighting = new Date().toISOString();
 
-    newSubSample.occurrences[0].attrs = observable(
-      sample.copyAttributes
-    ) as any;
+    newSubSample.occurrences[0].data = observable(sample.copyAttributes) as any;
 
     sample.samples.push(newSubSample);
     newSubSample.startGPS();
@@ -502,9 +511,9 @@ const HomeController = ({ sample }: Props) => {
     toast.success('Copied!', { color: 'tertiary' });
   };
 
-  const isDisabled = !!sample.metadata.syncedOn;
+  const isDisabled = !!sample.syncedAt;
 
-  const { areaSurveyListSortedByTime } = appModel.attrs;
+  const { areaSurveyListSortedByTime } = appModel.data;
 
   const previousSurvey = getPreviousSurvey();
 

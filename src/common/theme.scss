@@ -94,12 +94,12 @@
 
 // status bar
 html.ios.plt-hybrid #status-bar-background {
-  background: #443553;
-  width: 100vw;
-  height: env(safe-area-inset-top);
   position: fixed;
   top: 0;
   z-index: 1000;
+  background: #443553;
+  width: 100vw;
+  height: env(safe-area-inset-top);
 }
 
 // Fixes the tabbed page top safe area
@@ -119,13 +119,13 @@ html[mode='ios'] .tabs-inner .ion-page {
 
 // FONTS START
 @font-face {
-  font-family: 'Quicksand';
   src: url('./fonts/Quicksand-Medium.ttf');
+  font-family: 'Quicksand';
 }
 
 @font-face {
-  font-family: 'Quicksand Bold';
   src: url('./fonts/Quicksand-Bold.ttf');
+  font-family: 'Quicksand Bold';
 }
 
 ion-title,
@@ -166,10 +166,10 @@ ion-item {
 // training subheader
 .training-survey {
   background: black;
-  text-align: center;
   padding: 4px;
   color: white;
   font-size: 0.8em;
+  text-align: center;
 }
 
 .item-interactive-disabled img,
@@ -180,8 +180,8 @@ ion-item {
 // Display occurrence taxon name as Common and scientific names.
 .taxon-entry {
   ion-label[slot='end'] {
-    white-space: inherit !important;
     max-width: 50% !important;
+    white-space: inherit !important;
 
     ion-label {
       white-space: nowrap !important;
@@ -213,8 +213,8 @@ ion-radio {
 }
 
 ion-list.apps-section {
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
 }
 
 .checkbox-input-attr .hasIcon ion-checkbox {
@@ -277,6 +277,9 @@ ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios[slot='end'] {
 }
 
 // menu date picker opacity match other input value colors
-.date-input-attr ion-accordion:last-of-type ion-item[slot='header'] ion-label[slot='end']{
+.date-input-attr
+  ion-accordion:last-of-type
+  ion-item[slot='header']
+  ion-label[slot='end'] {
   opacity: 1 !important;
 }

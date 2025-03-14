@@ -1,3 +1,4 @@
+import i18n from 'i18next';
 import { IonList } from '@ionic/react';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Species from './components/Species';
@@ -35,10 +36,10 @@ function deDuplicateSuggestions(suggestions) {
 
 const getSearchInfo = () => (
   <InfoBackgroundMessage className="text-left" skipTranslation>
-    {t(
+    {i18n.t(
       'For quicker searching of the taxa you can use different shortcuts. For example, to find'
     )}{' '}
-    <i>Lopinga achine</i> {t('you can type in the search bar')}
+    <i>Lopinga achine</i> {i18n.t('you can type in the search bar')}
     :
     <br />
     <br />

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { pinOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Button, Main, MenuAttrItem, Badge } from '@flumens';
+import { Button, Main, MenuAttrItem, Badge, Block } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -14,8 +14,12 @@ import {
 } from '@ionic/react';
 import GridRefValue from 'common/Components/GridRefValue';
 import InfoBackgroundMessage from 'common/Components/InfoBackgroundMessage';
-import mothTrapIcon from 'common/images/moth-inside-icon.svg';
-import { Lamp } from 'models/location';
+import {
+  Lamp,
+  mothTrapLampsAttr,
+  mothTrapOtherTypeAttr,
+  mothTrapTypeAttr,
+} from 'models/location';
 
 type Props = {
   location: any;
@@ -24,7 +28,9 @@ type Props = {
 };
 
 const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
-  const { type, lamps = [], location: loc = {}, typeOther } = location.attrs;
+  const { location: loc = {} } = location.data;
+
+  const lamps = location.data[mothTrapLampsAttr.id] || [];
 
   const { t } = useTranslation();
 
@@ -58,9 +64,9 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
       return <InfoBackgroundMessage>No lamps added</InfoBackgroundMessage>;
 
     const getLampEntry = (entry: Lamp) => {
-      const { quantity } = entry.attrs;
+      const { quantity } = entry.data;
 
-      const lampValue = entry.attrs.type || <T>Lamp</T>;
+      const lampValue = entry.data.type || <T>Lamp</T>;
 
       const path = `${url}/lamps/${entry.cid}`;
 
@@ -106,8 +112,6 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
     );
   };
 
-  const isOtherTypeSelected = type === 'Other trap';
-
   return (
     <Main>
       <IonList lines="full">
@@ -122,24 +126,17 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
             skipValueTranslation
           />
 
-          <MenuAttrItem
-            routerLink={`/location/${location.cid}/type`}
-            routerOptions={{ unmount: true }}
-            icon={mothTrapIcon}
-            label="Type"
-            required
-            value={type}
+          <Block
+            block={mothTrapTypeAttr}
+            record={location.data}
+            isDisabled={location.isDisabled}
           />
 
-          {isOtherTypeSelected && (
-            <MenuAttrItem
-              routerLink={`/location/${location.cid}/typeOther`}
-              routerOptions={{ unmount: true }}
-              icon={mothTrapIcon}
-              label="Other type"
-              value={typeOther}
-            />
-          )}
+          <Block
+            block={mothTrapOtherTypeAttr}
+            record={location.data}
+            isDisabled={location.isDisabled}
+          />
         </div>
 
         {getLampAddButton()}

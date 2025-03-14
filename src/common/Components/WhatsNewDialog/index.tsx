@@ -14,12 +14,12 @@ import './styles.scss';
 // };
 
 // const WhatsNewDialog: FC<Props> = ({ appModel }) => {
-//   const { showWhatsNew, showWhatsNewInVersion122, appSession } = appModel.attrs;
+//   const { showWhatsNew, showWhatsNewInVersion122, appSession } = appModel.data;
 
 //   const skipShowingDialogOnFreshInstall = () => {
 //     const isFreshInstall = appSession <= 1;
 //     if (isFreshInstall) {
-//       appModel.attrs.showWhatsNewInVersion122 = false; // eslint-disable-line
+//       appModel.data.showWhatsNewInVersion122 = false; // eslint-disable-line
 //       appModel.save();
 //     }
 //   };
@@ -30,12 +30,12 @@ import './styles.scss';
 //   if (!showWhatsNewInVersion122) return null;
 
 //   const closeDialog = () => {
-//     appModel.attrs.showWhatsNewInVersion122 = false; // eslint-disable-line
+//     appModel.data.showWhatsNewInVersion122 = false; // eslint-disable-line
 //     appModel.save();
 //   };
 
 //   const hideFutureDialogs = () => {
-//     appModel.attrs.showWhatsNew = false; // eslint-disable-line
+//     appModel.data.showWhatsNew = false; // eslint-disable-line
 //     appModel.save();
 //   };
 

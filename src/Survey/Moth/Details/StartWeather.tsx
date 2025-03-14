@@ -1,13 +1,12 @@
 import { observer } from 'mobx-react';
-import { Page, Header, Main, MenuAttrItemFromModel } from '@flumens';
+import { Page, Header, Main, MenuAttrItemFromModel, useSample } from '@flumens';
 import { IonList } from '@ionic/react';
 import Sample from 'models/sample';
 
-type Props = {
-  sample: Sample;
-};
+const StartWeather = () => {
+  const { sample } = useSample<Sample>();
+  if (!sample) return null;
 
-const StartWeather = ({ sample }: Props) => {
   return (
     <Page id="moth-trap-start-weather">
       <Header title="Start Weather" />

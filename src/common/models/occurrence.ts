@@ -4,8 +4,6 @@ import {
   OccurrenceAttrs,
   OccurrenceMetadata,
   validateRemoteModel,
-  ElasticOccurrence,
-  ElasticOccurrenceMedia,
 } from '@flumens';
 import config from 'common/config';
 import speciesGroups from 'common/data/groups';
@@ -16,8 +14,7 @@ import mothIcon from 'common/images/moth.svg';
 import { MachineInvolvement } from 'Survey/Moth/config';
 import { Survey } from 'Survey/common/config';
 import Media from './media';
-import Sample, { surveyConfigsByCode } from './sample';
-import { parseRemoteAttrs } from './sample/remoteExt';
+import Sample from './sample';
 
 export const DRAGONFLY_GROUP = speciesGroups.dragonflies.id;
 
@@ -109,71 +106,6 @@ export const doesShallowTaxonMatch = (shallowEntry: Taxon, taxon: Taxon) => {
 };
 
 export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
-  /**
-   * Transform ES document into local structure.
-   */
-  static parseRemoteJSON({
-    id,
-    event,
-    metadata,
-    occurrence,
-    taxon,
-  }: ElasticOccurrence) {
-    const date = new Date(metadata.created_on).toISOString();
-    const updatedOn = new Date(metadata.updated_on).toISOString();
-
-    const survey = surveyConfigsByCode[metadata.survey.id];
-    const hasParent = event.parent_event_id;
-
-    let surveyAttrs = hasParent ? survey.smp?.occ?.attrs : survey.occ?.attrs;
-    if (!surveyAttrs) {
-      // sometimes we drop subSamples on upload so the structure changes
-      surveyAttrs = survey.smp.occ.attrs! || survey.occ.attrs;
-    }
-
-    const parsedAttributes = parseRemoteAttrs(
-      surveyAttrs,
-      occurrence.attributes || []
-    );
-
-    const getMedia = ({ path }: ElasticOccurrenceMedia) => ({
-      id: path,
-      metadata: { updatedOn: date, createdOn: date, syncedOn: date },
-      attrs: { data: `${config.backend.mediaUrl}${path}` },
-    });
-    const media = occurrence.media?.map(getMedia);
-
-    const scientificName = taxon.species;
-    const commonName =
-      scientificName !== taxon.taxon_name ? taxon.taxon_name : '';
-
-    return {
-      id,
-      cid: event.source_system_key || id,
-      metadata: {
-        updatedOn,
-        createdOn: date,
-        syncedOn: Date.now(),
-      },
-      attrs: {
-        ...parsedAttributes,
-        taxon: {
-          warehouse_id: parseInt(taxon.taxa_taxon_list_id, 10),
-          scientific_name: scientificName,
-          common_name: commonName,
-          found_in_name: commonName ? 'common_name' : 'scientific_name',
-        },
-        comment: occurrence.occurrence_remarks,
-      },
-
-      media,
-    };
-  }
-
-  static fromJSON(json: any) {
-    return super.fromJSON(json, Media);
-  }
-
   declare media: IObservableArray<Media>;
 
   declare parent?: Sample;
@@ -182,8 +114,12 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
 
   validateRemote = validateRemoteModel;
 
+  constructor(options: any) {
+    super({ ...options, Media });
+  }
+
   getTaxonName() {
-    const { taxon } = this.attrs;
+    const { taxon } = this.data;
     if (!taxon) return null;
 
     if (!taxon.found_in_name) return taxon.scientific_name;
@@ -192,7 +128,7 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
   }
 
   getTaxonCommonAndScientificNames() {
-    const { taxon } = this.attrs;
+    const { taxon } = this.data;
     if (!taxon) return null;
 
     if (!taxon.common_name) return taxon.scientific_name;
@@ -200,9 +136,7 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
     return [taxon[taxon.found_in_name], taxon.scientific_name];
   }
 
-  isDisabled = () => this.isUploaded();
-
-  isDragonflyTaxon = () => this.attrs.taxon.group === DRAGONFLY_GROUP;
+  isDragonflyTaxon = () => this.data.taxon.group === DRAGONFLY_GROUP;
 
   async identify() {
     const identifyAllImages = (media: Media) => media.identify();
@@ -215,9 +149,9 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
     const suggestions = allSuggestions.filter(hasValue);
 
     const highestProbSpecies: any = this.getTopSuggestion(suggestions);
-    if (!highestProbSpecies) return this.attrs.taxon;
+    if (!highestProbSpecies) return this.data.taxon;
 
-    this.attrs.taxon = {
+    this.data.taxon = {
       found_in_name: highestProbSpecies.found_in_name,
       common_name: highestProbSpecies.common_name,
       group: highestProbSpecies.group,
@@ -232,20 +166,20 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
 
     this.save();
 
-    return this.attrs.taxon;
+    return this.data.taxon;
   }
 
   isPaintedLadySpecies() {
     // scientific name does not have preferredId
     return (
-      this?.attrs?.taxon?.preferredId === PAINTED_LADY_OCCURRENCE ||
-      this?.attrs?.taxon?.warehouse_id === PAINTED_LADY_OCCURRENCE ||
-      this?.attrs?.taxon?.scientific_name === 'Vanessa cardui' // for remote cached
+      this?.data?.taxon?.preferredId === PAINTED_LADY_OCCURRENCE ||
+      this?.data?.taxon?.warehouse_id === PAINTED_LADY_OCCURRENCE ||
+      this?.data?.taxon?.scientific_name === 'Vanessa cardui' // for remote cached
     );
   }
 
   getPrettyName() {
-    const { taxon } = this.attrs;
+    const { taxon } = this.data;
     if (!taxon) return '';
 
     if (taxon?.common_name) return taxon.common_name;
@@ -254,20 +188,20 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
   }
 
   getSpeciesGroupIcon = () =>
-    (speciesGroupImages as any)[this.attrs.taxon.group];
+    (speciesGroupImages as any)[this.data.taxon.group];
 
   doesTaxonMatch = (taxon: Taxon) => {
-    if (this.attrs.taxon.warehouse_id === taxon.warehouse_id) return true;
-    if (this.attrs.taxon.warehouse_id === taxon.preferredId) return true;
+    if (this.data.taxon.warehouse_id === taxon.warehouse_id) return true;
+    if (this.data.taxon.warehouse_id === taxon.preferredId) return true;
 
-    if (this.attrs.taxon.preferredId) {
-      if (this.attrs.taxon.preferredId === taxon.preferredId) return true;
-      if (this.attrs.taxon.preferredId === taxon.warehouse_id) return true;
+    if (this.data.taxon.preferredId) {
+      if (this.data.taxon.preferredId === taxon.preferredId) return true;
+      if (this.data.taxon.preferredId === taxon.warehouse_id) return true;
     }
 
     if (taxon.preferredId) {
-      if (this.attrs.taxon.preferredId === taxon.preferredId) return true;
-      if (this.attrs.taxon.warehouse_id === taxon.preferredId) return true;
+      if (this.data.taxon.preferredId === taxon.preferredId) return true;
+      if (this.data.taxon.warehouse_id === taxon.preferredId) return true;
     }
 
     return false;
@@ -275,7 +209,7 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
 
   getTopSuggestion(suggestions?: any) {
     // eslint-disable-next-line no-param-reassign
-    suggestions = suggestions || this.attrs.taxon?.suggestions;
+    suggestions = suggestions || this.data.taxon?.suggestions;
 
     let highestProbSpecies: any;
 
@@ -295,10 +229,10 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
   }
 
   getClassifierSubmission() {
-    const { taxon } = this.attrs;
+    const { taxon } = this.data;
     const classifierVersion = taxon?.version || '';
 
-    const getMediaPath = (media: Media) => media.attrs.queued;
+    const getMediaPath = (media: Media) => media.data.queued;
     const mediaPaths = this.media.map(getMediaPath);
 
     const getSuggestion = (
@@ -321,7 +255,7 @@ export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
     };
 
     const classifierSuggestions =
-      this.attrs.taxon?.suggestions?.map(getSuggestion) || [];
+      this.data.taxon?.suggestions?.map(getSuggestion) || [];
 
     const hasSuggestions = classifierSuggestions.length;
     if (!hasSuggestions) {

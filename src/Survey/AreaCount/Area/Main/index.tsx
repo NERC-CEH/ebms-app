@@ -65,13 +65,13 @@ const AreaAttr = ({
   isFetchingLocations,
 }: Props) => {
   // eslint-disable-next-line prefer-destructuring
-  const location = sample.attrs.location as AreaCountLocation;
+  const location = sample.data.location as AreaCountLocation;
 
   let initialViewState;
   if (isValidLocation(location)) {
     initialViewState = { ...location };
   } else {
-    const country = countries[appModel.attrs.country!];
+    const country = countries[appModel.data.country!];
     if (country?.zoom) {
       initialViewState = { ...country };
     }
@@ -81,7 +81,7 @@ const AreaAttr = ({
   const updateMapCentre = ({ viewState }: any) =>
     saveMapCenter([viewState.latitude, viewState.longitude]);
 
-  const groupId = sample.attrs.group?.id;
+  const groupId = sample.data.group?.id;
   const hasGroup = !!groupId && !isDisabled;
   const [showPastLocations, setShowPastLocations] = useState(hasGroup);
   const toggleFavourites = () => setShowPastLocations(!showPastLocations);
@@ -89,7 +89,7 @@ const AreaAttr = ({
   const shouldDeleteShape = useDeletePropt();
 
   const isFinished =
-    sample.isDisabled() || sample.metadata.saved || sample.isTimerFinished();
+    sample.isDisabled || sample.metadata.saved || sample.isTimerFinished();
 
   const onShapeChange = async (newShape: any) => {
     if (!newShape) {
@@ -109,7 +109,7 @@ const AreaAttr = ({
   };
   useEffect(flyToLocation, [mapRef, location]);
 
-  const selectedLocationId = sample.attrs.site?.id;
+  const selectedLocationId = sample.data.site?.id;
 
   return (
     <Main className="[--padding-bottom:0] [--padding-top:0]">

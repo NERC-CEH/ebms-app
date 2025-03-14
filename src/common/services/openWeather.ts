@@ -69,7 +69,7 @@ export interface HistoricalWeatherRemoteRes {
   lon: number;
   timezone: string;
   timezone_offset: number;
-  data: HistoricalWeatherData[]
+  data: HistoricalWeatherData[];
 }
 
 const url = config.weatherSiteUrl;
@@ -164,7 +164,9 @@ export const fetchHistoricalWeather = async (
       `${url}/data/3.0/onecall/timemachine?lat=${latitude}&lon=${longitude}&dt=${unixTimestamp}&appid=${config.weatherSiteApiKey}&only_current=true&units=metric`
     );
 
-    const normaliseResponseValues = (current:HistoricalWeatherData): Weather => ({
+    const normaliseResponseValues = (
+      current: HistoricalWeatherData
+    ): Weather => ({
       temperature: getTemperature(current?.temp),
       windSpeed: getWindSpeed(current?.wind_speed),
       windDirection: getWindDirection(current?.wind_deg),

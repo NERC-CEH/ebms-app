@@ -21,7 +21,7 @@ type Props = {
 
 const Edit = ({ sample, isDisabled }: Props) => {
   const getPrettySectionsLabel = () => {
-    const transect: any = sample.attrs.location;
+    const transect: any = sample.data.location;
     if (!transect)
       return (
         <IonLabel slot="end" color="danger  ">
@@ -46,7 +46,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
     comment,
     surveyStartTime,
     surveyEndTime,
-  } = sample.attrs;
+  } = sample.data;
 
   const startTimePretty = isValidDate(surveyStartTime!)
     ? timeFormat.format(new Date(surveyStartTime!))
@@ -56,7 +56,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
     ? timeFormat.format(new Date(surveyEndTime!))
     : surveyEndTime;
 
-  const baseURL = `/survey/transect/${sample.cid}`;
+  const baseURL = `/survey/transect/${sample.id || sample.cid}`;
 
   return (
     <Main id="transect-edit">

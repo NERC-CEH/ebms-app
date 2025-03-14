@@ -16,10 +16,10 @@ interface Props {
 }
 
 const EditOccurrence = ({ occurrence }: Props) => {
-  const { useImageIdentifier } = appModel.attrs;
+  const { useImageIdentifier } = appModel.data;
   const match = useRouteMatch();
   const species = occurrence.getTaxonCommonAndScientificNames();
-  const isDisabled = occurrence.isDisabled();
+  const { isDisabled } = occurrence;
   const baseURL = match.url;
 
   return (

@@ -14,11 +14,11 @@
   }
 
   #species-map {
-    height: 200px;
-    width: 100%;
-    max-width: 500px;
     margin: 0 auto;
     background-color: #474c4a !important;
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
   }
 
   .swiper {
@@ -27,9 +27,9 @@
 
     .species-profile-photo {
       position: relative;
-      overflow: hidden;
-      height: 240px;
       background: var(--ion-page-background);
+      height: 240px;
+      overflow: hidden;
     }
 
     .swiper-pagination {

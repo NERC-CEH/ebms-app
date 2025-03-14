@@ -39,7 +39,7 @@ const Component = () => {
         <Section>
           <div className="painted-lady-guide" onClick={navigateTo}>
             <H>Tracking the Painted Lady migration with Butterfly Count</H>
-            <IonIcon slot="end" icon={openOutline} className='size-5'/>
+            <IonIcon slot="end" icon={openOutline} className="size-5" />
           </div>
         </Section>
 
@@ -143,7 +143,11 @@ const Component = () => {
         </Section>
 
         <IonList>
-          <IonButton href={`${config.backend.url}/ebms-app`} fill="outline" className='rounded-lg'>
+          <IonButton
+            href={`${config.backend.url}/ebms-app`}
+            fill="outline"
+            className="rounded-lg"
+          >
             <IonIcon slot="end" icon={openOutline} />
             <T>More Information</T>
           </IonButton>

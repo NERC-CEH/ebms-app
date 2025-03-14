@@ -2,15 +2,11 @@ import { useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch, useLocation } from 'react-router';
-import { Page, Header, useOnBackButton, useAlert } from '@flumens';
+import { Page, Header, useOnBackButton, useAlert, useSample } from '@flumens';
 import { IonButton, NavContext, IonButtons } from '@ionic/react';
 import Sample, { useValidateCheck } from 'models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
 import Main from './Main';
-
-type Props = {
-  sample: Sample;
-};
 
 function useDeleteSurveyPrompt(alert: any) {
   const deleteSurveyPromt = (resolve: (param: boolean) => void) => {
@@ -48,26 +44,31 @@ const cancelButtonWrap = (onDeleteSurvey: any) => {
   );
 };
 
-const DetailsController = ({ sample }: Props) => {
+const DetailsController = () => {
   const alert = useAlert();
   const { navigate, goBack } = useContext(NavContext);
   const { url } = useRouteMatch();
   const location = useLocation();
   const [isAlertPresent, setIsAlertPresent] = useState(false);
   const shouldDeleteSurvey = useDeleteSurveyPrompt(alert);
+
+  const { sample } = useSample<Sample>();
+  if (!sample) throw new Error('Sample is missing');
+
   const checkSampleStatus = useValidateCheck(sample);
 
-  const hasTimerStarted = sample?.attrs?.surveyStartTime;
+  const hasTimerStarted = sample?.data?.surveyStartTime;
 
-  const onChangeCounter = (value: number) => {
+  const onChangeCounter = (value: number | null) => {
+    if (!Number.isFinite(value)) return;
     // eslint-disable-next-line no-param-reassign
-    sample.attrs.recorders = value;
+    sample.data.recorders = value as number;
     sample.save();
   };
 
   const onChangeSensitivityStatus = (value: boolean) => {
     // eslint-disable-next-line no-param-reassign
-    sample.attrs.privacyPrecision = value ? 0 : undefined;
+    sample.data.privacyPrecision = value ? 0 : undefined;
     sample.save();
   };
 
@@ -107,7 +108,7 @@ const DetailsController = ({ sample }: Props) => {
     if (!isValid) return;
 
     // eslint-disable-next-line no-param-reassign
-    sample.attrs.surveyStartTime = new Date().toISOString();
+    sample.data.surveyStartTime = new Date().toISOString();
     sample.startVibrateCounter();
     sample.save();
 

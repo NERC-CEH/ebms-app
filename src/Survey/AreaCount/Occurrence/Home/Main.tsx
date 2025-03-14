@@ -27,7 +27,7 @@ const EditOccurrence = ({ subSample, occurrence, isDisabled }: Props) => {
   const match = useRouteMatch();
 
   const species = occurrence.getTaxonCommonAndScientificNames();
-  const { dragonflyStage, stage, comment } = occurrence.attrs;
+  const { dragonflyStage, stage, comment } = occurrence.data;
 
   const isDragonfly = occurrence.isDragonflyTaxon();
 
@@ -39,7 +39,8 @@ const EditOccurrence = ({ subSample, occurrence, isDisabled }: Props) => {
 
   let location;
   if (subSample.hasLoctionMissingAndIsnotLocating()) {
-    location = <IonIcon icon={warningOutline} color="danger" />;
+    if (!isDisabled)
+      location = <IonIcon icon={warningOutline} color="danger" />;
   } else {
     location = <GridRefValue sample={subSample} />;
   }

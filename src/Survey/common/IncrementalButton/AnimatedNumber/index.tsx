@@ -8,7 +8,7 @@ type Props = {
 
 const AnimatedNumber = ({ value }: Props) => {
   const [initialised, setInitialised] = useState<boolean>(false);
-  const first = useRef<any>();
+  const first = useRef<any>(null);
 
   const playAnimation = () => {
     if (!initialised) {

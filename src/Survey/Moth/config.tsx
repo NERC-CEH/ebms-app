@@ -87,7 +87,7 @@ const validateLocation = (val: any) => {
     if (val.name) {
       fixedLocationSchema.validateSync(val);
     } else {
-      fixedLocationSchema.validateSync(val.attrs.location);
+      fixedLocationSchema.validateSync(val.data.location);
     }
     return true;
   } catch (e) {
@@ -114,16 +114,13 @@ const locationAttr = {
         // TODO: Backwards compatibility
         centroidSref = `${location?.latitude} ${location?.longitude}`;
       } else {
-        centroidSref = `${location.attrs.location.latitude} ${location.attrs.location.longitude}`;
+        centroidSref = `${location.data.location.latitude} ${location.data.location.longitude}`;
       }
 
       // eslint-disable-next-line
       submission.values = {
         ...submission.values,
-        ...{
-          entered_sref: centroidSref,
-          centroid_sref_system: 4326,
-        },
+        entered_sref: centroidSref,
       };
 
       return location.id;
@@ -175,21 +172,21 @@ const moonPhaseValues = [
 ];
 
 const getSetDefaultTime = (sample: AppSample) => () => {
-  const { surveyStartTime } = sample.attrs;
+  const { surveyStartTime } = sample.data;
   if (surveyStartTime) return;
 
-  const { location } = (sample.attrs.location as MothTrapLocation)?.attrs || {};
+  const { location } = (sample.data.location as MothTrapLocation)?.data || {};
   if (!isValidLocation(location)) return;
 
   // end time
-  const date = new Date(sample.attrs.date);
+  const date = new Date(sample.data.date);
   const { sunrise } = SunCalc.getTimes(
     date,
     location.latitude,
     location.longitude
   );
   // eslint-disable-next-line no-param-reassign
-  sample.attrs.surveyEndTime = new Date(sunrise).toISOString(); // UTC time
+  sample.data.surveyEndTime = new Date(sunrise).toISOString(); // UTC time
 
   // start time
   const oneDayBefore = new Date(date.setDate(date.getDate() - 1));
@@ -199,7 +196,7 @@ const getSetDefaultTime = (sample: AppSample) => () => {
     location.longitude
   );
   // eslint-disable-next-line no-param-reassign
-  sample.attrs.surveyStartTime = new Date(sunset).toISOString(); // UTC time
+  sample.data.surveyStartTime = new Date(sunset).toISOString(); // UTC time
   sample.save();
 };
 
@@ -207,8 +204,8 @@ const getSetEndWeather = (sample: AppSample) => async () => {
   if (!device.isOnline) return;
 
   const weatherValues = await fetchHistoricalWeather(
-    (sample.attrs.location as MothTrapLocation).attrs.location,
-    sample.attrs.surveyEndTime!
+    (sample.data.location as MothTrapLocation).data.location,
+    sample.data.surveyEndTime!
   );
 
   assignIfMissing(sample, 'temperatureEnd', weatherValues.temperature);
@@ -217,15 +214,15 @@ const getSetEndWeather = (sample: AppSample) => async () => {
   assignIfMissing(sample, 'cloudEnd', weatherValues.cloud);
 };
 const getHasEndTimeAndLocation = (sample: AppSample) => () =>
-  !!sample.attrs.surveyEndTime &&
-  !!(sample.attrs.location as MothTrapLocation)?.id;
+  !!sample.data.surveyEndTime &&
+  !!(sample.data.location as MothTrapLocation)?.id;
 
 const getSetStartWeather = (sample: AppSample) => async () => {
   if (!device.isOnline) return;
 
   const weatherValues = await fetchHistoricalWeather(
-    (sample.attrs.location as MothTrapLocation).attrs.location,
-    sample.attrs.surveyStartTime!
+    (sample.data.location as MothTrapLocation).data.location,
+    sample.data.surveyStartTime!
   );
 
   assignIfMissing(sample, 'temperature', weatherValues.temperature);
@@ -235,8 +232,8 @@ const getSetStartWeather = (sample: AppSample) => async () => {
 };
 
 const getHasStartTimeAndLocation = (sample: AppSample) => () =>
-  !!sample.attrs.surveyStartTime &&
-  !!(sample.attrs.location as MothTrapLocation)?.id;
+  !!sample.data.surveyStartTime &&
+  !!(sample.data.location as MothTrapLocation)?.id;
 
 const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
   const LUNAR_MONTH = 29.530588853;
@@ -287,9 +284,9 @@ const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
 
 const getSetStartMoonPhase = (sample: AppSample) => () => {
   const isSouthernHemisphere =
-    (sample.attrs.location as MothTrapLocation)?.attrs?.location?.latitude < 0;
+    (sample.data.location as MothTrapLocation)?.data?.location?.latitude < 0;
   const moonPhase = getMoonPhase(
-    new Date(sample.attrs.surveyStartTime!),
+    new Date(sample.data.surveyStartTime!),
     isSouthernHemisphere
   );
   // eslint-disable-next-line no-param-reassign
@@ -298,9 +295,9 @@ const getSetStartMoonPhase = (sample: AppSample) => () => {
 
 const getSetStartMoonEndPhase = (sample: AppSample) => () => {
   const isSouthernHemisphere =
-    (sample.attrs.location as MothTrapLocation)?.attrs?.location?.latitude < 0;
+    (sample.data.location as MothTrapLocation)?.data?.location?.latitude < 0;
   const moonPhase = getMoonPhase(
-    new Date(sample.attrs.surveyEndTime!),
+    new Date(sample.data.surveyEndTime!),
     isSouthernHemisphere
   );
   assignIfMissing(sample, 'moonEnd', moonPhase);
@@ -502,7 +499,7 @@ const survey: Survey = {
             icon: calendarOutline,
             autoFocus: false,
             presentation: 'date',
-            locale: appModel.attrs.language || undefined,
+            locale: appModel.data.language || undefined,
           }),
         },
       },
@@ -624,7 +621,10 @@ const survey: Survey = {
         survey: surveyName || survey.name,
       },
       attrs: {
-        training: appModel.attrs.useTraining,
+        surveyId: surveyId || survey.id,
+        date: new Date().toISOString(),
+        enteredSrefSystem: 4326,
+        training: appModel.data.useTraining,
         inputForm: survey.webForm,
         location: null,
         comment: null,
@@ -632,7 +632,7 @@ const survey: Survey = {
       },
     });
 
-    when(() => !!sample.attrs.location, getSetDefaultTime(sample));
+    when(() => !!sample.data.location, getSetDefaultTime(sample));
 
     when(getHasStartTimeAndLocation(sample), getSetStartWeather(sample));
     when(getHasEndTimeAndLocation(sample), getSetEndWeather(sample));
@@ -664,5 +664,5 @@ const UNKNOWN_SPECIES: UnknownSpeciesObject = {
   },
 };
 
-export const getUnkownSpecies = () =>
-  UNKNOWN_SPECIES[appModel.attrs.language as any] || UNKNOWN_SPECIES.en;
+export const getUnknownSpecies = () =>
+  UNKNOWN_SPECIES[appModel.data.language as any] || UNKNOWN_SPECIES.en;

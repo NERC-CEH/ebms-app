@@ -62,31 +62,26 @@ const newValueWrap = ({ newValue }) => {
   const newLanguageCode = newValue.replace('_', '-'); // backwards compatible
   i18n.changeLanguage(newLanguageCode);
 };
-observe(appModel.attrs, 'language', newValueWrap);
+observe(appModel.data, 'language', newValueWrap);
 
-// backwards compatible: START
-function translate(key, isSpeciesDescription, isSpeciesName) {
-  if (isSpeciesName) {
-    return i18n.t(key, {
-      ns: 'names',
-      lngs: [i18n.language], // don't revert to english if no local species name
-      defaultValue: '', // don't return anything if no local species name
-    });
-  }
-
-  if (isSpeciesDescription) {
-    // revert to English descriptions
-    let translation = i18n.t(key, { ns: 'species' });
-    if (!translation) {
-      translation = i18n.t(key, { ns: 'species', lng: 'en' });
-    }
-    return translation !== key ? translation : null;
-  }
-
-  return i18n.t(key);
+export function translateSpeciesName(key) {
+  return i18n.t(key, {
+    ns: 'names',
+    lngs: [i18n.language], // don't revert to english if no local species name
+    defaultValue: '', // don't return anything if no local species name
+  });
 }
 
-window.t = translate;
-// backwards compatible: END
+export function translateSpeciesDescription(key) {
+  // revert to English descriptions
+  let translation = i18n.t(key, { ns: 'species' });
+  if (!translation) {
+    translation = i18n.t(key, { ns: 'species', lng: 'en' });
+  }
+  return translation !== key ? translation : null;
+}
 
-export default translate;
+window.t = key => {
+  console.error('GLOBAL t() was used for ', key);
+  return i18n.t(key);
+};

@@ -7,8 +7,8 @@
 
   ion-badge {
     position: absolute;
-    right: 2px;
     top: 0px;
+    right: 2px;
   }
 
   ion-badge.ios {
@@ -16,10 +16,10 @@
   }
 
   ion-badge.md {
-    color: var(--ion-color-light);
-    font-weight: 500;
     border-radius: 9px;
     padding: 3px;
+    color: var(--ion-color-light);
+    font-weight: 500;
   }
 }
 
@@ -31,8 +31,8 @@ ion-button.filter-button {
 
   ion-label {
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: hidden;
+    white-space: nowrap;
 
     b {
       letter-spacing: 2px;

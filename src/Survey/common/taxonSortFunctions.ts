@@ -1,6 +1,6 @@
 export const speciesOccAddedTimeSort = ([, occ1]: any, [, occ2]: any) => {
-  if (occ1.createdOn !== 0 || occ2.createdOn !== 0)
-    return occ2.createdOn - occ1.createdOn;
+  if (occ1.createdAt !== 0 || occ2.createdAt !== 0)
+    return occ2.createdAt - occ1.createdAt;
 
   const taxon1 = occ1.taxon;
   const taxonName1 = taxon1[taxon1.found_in_name];

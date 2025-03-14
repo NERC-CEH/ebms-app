@@ -11,7 +11,7 @@ import Transects from './components/Transects';
 import './styles.scss';
 
 const getSectionItem = (sectionSample: Sample, match: any) => {
-  const section = sectionSample.attrs.location!;
+  const section = sectionSample.data.location!;
 
   let geom: any;
   if ('boundaryGeom' in section && section.boundaryGeom) {
@@ -29,7 +29,7 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
     <IonItem
       key={sectionSample.cid}
       className="transect-section"
-      routerLink={`${match.url}/${sectionSample.cid}`}
+      routerLink={`${match.url}/${sectionSample.id || sectionSample.cid}`}
       detail
     >
       {!!geom && <SVG geom={geom} />}
@@ -54,7 +54,7 @@ type Props = {
 const Sections = ({ sample, onTransectSelect }: Props) => {
   const match = useRouteMatch<any>();
 
-  const hasSelectedTransect = sample.attrs.location;
+  const hasSelectedTransect = sample.data.location;
   if (!hasSelectedTransect)
     return <Transects onTransectSelect={onTransectSelect} />;
 

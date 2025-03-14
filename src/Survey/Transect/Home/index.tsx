@@ -1,22 +1,24 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
-import { Page, useToast } from '@flumens';
+import { Page, useRemoteSample, useSample, useToast } from '@flumens';
 import { NavContext } from '@ionic/react';
 import appModel from 'models/app';
 import Sample, { useValidateCheck } from 'models/sample';
-import { useUserStatusCheck } from 'models/user';
+import userModel, { useUserStatusCheck } from 'models/user';
 import Header from './Header';
 import Main from './Main';
 
-type Props = {
-  sample: Sample;
-};
-
-const TransectHomeController = ({ sample }: Props) => {
+const TransectHomeController = () => {
   const { navigate } = useContext(NavContext);
   const toast = useToast();
+
+  let { sample } = useSample<Sample>();
+  sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
+
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
+
+  if (!sample) return null;
 
   const _processSubmission = async () => {
     const isUserOK = await checkUserStatus();
@@ -34,13 +36,13 @@ const TransectHomeController = ({ sample }: Props) => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    appModel.attrs['draftId:transect'] = '';
+    appModel.data['draftId:transect'] = '';
     await appModel.save();
 
     const saveAndReturn = () => {
-      if (!sample.attrs.surveyEndTime) {
+      if (!sample.data.surveyEndTime) {
         // eslint-disable-next-line no-param-reassign
-        sample.attrs.surveyEndTime = new Date().toISOString();
+        sample.data.surveyEndTime = new Date().toISOString();
       }
       sample.save();
       navigate(`/home/user-surveys`, 'root');
@@ -60,12 +62,10 @@ const TransectHomeController = ({ sample }: Props) => {
     await _processSubmission();
   };
 
-  const isDisabled = sample.isDisabled();
-
   return (
     <Page id="transect-edit">
       <Header sample={sample} onSubmit={onSubmit} />
-      <Main sample={sample} isDisabled={isDisabled} />
+      <Main sample={sample} isDisabled={sample.isDisabled} />
     </Page>
   );
 };

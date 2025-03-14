@@ -8,6 +8,7 @@ import {
   MenuAttrItemFromModel,
   MenuAttrItem,
   NumberInput,
+  useSample,
 } from '@flumens';
 import { IonIcon, IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
@@ -16,23 +17,22 @@ import Occurrence from 'models/occurrence';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import './styles.scss';
 
-type Props = {
-  occurrence: Occurrence;
-};
-
-const TransectHomeController = ({ occurrence }: Props) => {
+const TransectHomeController = () => {
   const { url } = useRouteMatch();
 
-  const species = occurrence.getTaxonCommonAndScientificNames();
-  const isDisabled = occurrence.isUploaded();
+  const { occurrence } = useSample<any, Occurrence>();
+  if (!occurrence) return null;
 
-  const getCounterOnChange = (value: number) => {
+  const species = occurrence.getTaxonCommonAndScientificNames();
+  const isDisabled = occurrence.isUploaded;
+
+  const getCounterOnChange = (value: number | null) => {
     // eslint-disable-next-line no-param-reassign
-    occurrence.attrs.count = value;
+    occurrence.data.count = value;
     occurrence.save();
   };
 
-  const { count } = occurrence.attrs;
+  const { count } = occurrence.data;
 
   return (
     <Page id="section-occurrence-edit">

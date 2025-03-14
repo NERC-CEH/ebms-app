@@ -8,6 +8,7 @@ import {
   Attr,
   useAlert,
   AttrPropsExtended,
+  useSample,
 } from '@flumens';
 import { NavContext, IonButton, isPlatform } from '@ionic/react';
 import Occurrence from 'models/occurrence';
@@ -35,13 +36,13 @@ const unsupportedDevice = (alert: any) => {
   });
 };
 
-type Props = {
-  occurrence: Occurrence;
-};
-
-const Direction = ({ occurrence }: Props) => {
+const Direction = () => {
   const alert = useAlert();
   const { goBack } = useContext(NavContext);
+
+  const { occurrence } = useSample<any, Occurrence>();
+  if (!occurrence) throw new Error('Occurrence is missing');
+
   let rotation = 0;
 
   function normalizeValue(newDirection: any) {
@@ -72,7 +73,7 @@ const Direction = ({ occurrence }: Props) => {
 
   const onValueChange = (directionValue: any) => {
     // eslint-disable-next-line no-param-reassign
-    occurrence.attrs.direction = directionValue;
+    occurrence.data.direction = directionValue;
     occurrence.save();
 
     goBack();

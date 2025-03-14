@@ -19,7 +19,7 @@ const Map = ({ location, onMovedCoords, children }: Props) => {
   if (Number.isFinite(location?.latitude)) {
     initialViewState = { ...location, zoom: 12 };
   } else {
-    const country = countries[appModel.attrs.country!];
+    const country = countries[appModel.data.country!];
     if (country?.zoom) {
       initialViewState = { ...country };
     }

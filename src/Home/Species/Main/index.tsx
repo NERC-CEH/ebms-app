@@ -5,6 +5,10 @@ import { Main, ModalHeader, InfoMessage, UserFeedbackRequest } from '@flumens';
 import { IonModal, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
 import config from 'common/config';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
+import {
+  translateSpeciesDescription,
+  translateSpeciesName,
+} from 'common/translations/translator';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import userModel from 'models/user';
@@ -49,7 +53,7 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
       return isPresent;
     };
     const byNotEmptyContent = (sp: SpeciesType) => {
-      const hasDescription = (window as any).t(sp.descriptionKey, true);
+      const hasDescription = translateSpeciesDescription(sp.descriptionKey);
       const hasImage = sp?.image_copyright?.length;
 
       return hasImage && hasDescription;
@@ -69,7 +73,7 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     const filterBySearchPhrase = (sp: SpeciesType) => {
       const re = new RegExp(escapeRegexCharacters(searchPhrase), 'i');
 
-      const commonName = (window as any).t(sp.taxon, null, true);
+      const commonName = translateSpeciesName(sp.taxon);
       const matchesCommonName = re.test(commonName);
       const matchesLatinName = re.test(sp.taxon);
 
@@ -100,14 +104,14 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
         </InfoBackgroundMessage>
       );
 
-    const { showCommonNamesInGuide } = appModel.attrs;
+    const { showCommonNamesInGuide } = appModel.data;
 
     const getSpeciesElement = (sp: SpeciesType) => {
       const { id, taxon } = sp;
 
       let label = taxon;
       if (showCommonNamesInGuide) {
-        label = (window as any).t(taxon, null, true) || label; // might not have translation
+        label = translateSpeciesName(taxon) || label; // might not have translation
       }
 
       const onClick = () => showSpeciesModal(id!);
@@ -143,16 +147,16 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
   };
 
   const onFeedbackDone = () => {
-    appModel.attrs.feedbackGiven = true;
+    appModel.data.feedbackGiven = true;
     appModel.save();
   };
 
   const showFeedback = () => {
-    if (appModel.attrs.feedbackGiven) {
+    if (appModel.data.feedbackGiven) {
       return false;
     }
 
-    if (appModel.attrs.useTraining) {
+    if (appModel.data.useTraining) {
       return false;
     }
 
@@ -163,7 +167,7 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     return samplesCollection.length > 5;
   };
 
-  let country: any = appModel.attrs.country!;
+  let country: any = appModel.data.country!;
   country = country === 'UK' ? 'GB' : country;
 
   const [speciesList, countrySpeciesCount, totalSpeciesCountryCount] =

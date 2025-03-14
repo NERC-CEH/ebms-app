@@ -54,7 +54,7 @@ export class Groups extends Collection<GroupModel> {
       console.log(`📚 Collection: ${this.id} collection email has changed`);
       this._fetchFirstTime();
     };
-    const getEmail = () => userModel.attrs.email;
+    const getEmail = () => userModel.data.email;
     reaction(getEmail, onLoginChange);
 
     const superReset = this.reset;
@@ -66,7 +66,7 @@ export class Groups extends Collection<GroupModel> {
     };
   }
 
-  fetch = async () => {
+  fetchRemote = async () => {
     const remoteDocs = await this._fetchDocs();
 
     const drafts: GroupModel[] = [];
@@ -81,7 +81,7 @@ export class Groups extends Collection<GroupModel> {
 
     this.push(...newModelsFromRemote, ...drafts);
 
-    await locations.fetch();
+    await locations.fetchRemote();
   };
 
   private _fetchFirstTime = async () => {

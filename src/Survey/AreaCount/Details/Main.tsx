@@ -17,7 +17,7 @@ import Sample from 'models/sample';
 
 type Props = {
   sample: Sample;
-  onChangeCounter: (value: number) => void;
+  onChangeCounter: (value: number | null) => void;
   onChangeSensitivityStatus: (value: boolean) => void;
 };
 
@@ -29,7 +29,7 @@ const AreaCountDetails = ({
   const match = useRouteMatch<any>();
   const baseURL = match.url;
 
-  const isDisabled = sample.isDisabled();
+  const { isDisabled } = sample;
   const {
     recorders,
     comment,
@@ -38,7 +38,7 @@ const AreaCountDetails = ({
     windDirection,
     windSpeed,
     group,
-  } = sample.attrs;
+  } = sample.data;
 
   return (
     <Main>
@@ -107,7 +107,7 @@ const AreaCountDetails = ({
           <Toggle
             prefix={<IonIcon src={eyeOffOutline} className="size-6" />}
             label="Sensitive"
-            defaultSelected={Number.isFinite(sample.attrs.privacyPrecision)}
+            defaultSelected={Number.isFinite(sample.data.privacyPrecision)}
             onChange={onChangeSensitivityStatus}
             isDisabled={isDisabled}
           />

@@ -1,24 +1,21 @@
 import { IObservableArray, observable } from 'mobx';
 import { useTranslation } from 'react-i18next';
-import wkt from 'wellknown';
 import {
   device,
   ModelValidationMessage,
   useAlert,
   Sample as SampleOriginal,
   SampleAttrs,
-  SampleOptions as SampleOptionsOriginal,
+  SampleOptions,
   SampleMetadata,
-  ElasticSample,
-  ElasticSampleMedia,
   Location as SampleLocation,
+  ElasticSample,
 } from '@flumens';
 import config from 'common/config';
 import groups from 'common/data/groups';
 import appModel from 'models/app';
 import userModel from 'models/user';
 import areaSurvey from 'Survey/AreaCount/config';
-import areaOldSurvey from 'Survey/AreaCount/configOld';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
 import mothSurvey from 'Survey/Moth/config';
 import transectSurvey from 'Survey/Transect/config';
@@ -26,9 +23,8 @@ import { Survey } from 'Survey/common/config';
 import { RemoteAttributes as LocationAttributes } from '../location';
 import Media from '../media';
 import Occurrence, { SpeciesGroup } from '../occurrence';
-import { modelStore } from '../store';
+import { samplesStore } from '../store';
 import GPSExtension, { calculateArea } from './GPSExt';
-import RemoteExtension, { parseRemoteAttrs } from './remoteExt';
 import VibrateExtension from './vibrateExt';
 
 export type Group = {
@@ -47,7 +43,7 @@ export type Site = LocationAttributes;
 export type TransectLocation = LocationAttributes;
 
 export type MothTrapLocation = {
-  attrs: {
+  data: {
     deleted: boolean;
     type: string;
     typeOther?: string;
@@ -65,7 +61,7 @@ export type AreaCountLocation = SampleLocation & {
 
 export type Location = AreaCountLocation | MothTrapLocation | TransectLocation;
 
-export type Attrs = SampleAttrs & {
+export type Data = SampleAttrs & {
   date?: any;
   location?: Location;
   surveyStartTime?: string;
@@ -82,6 +78,7 @@ export type Attrs = SampleAttrs & {
   group?: Group;
   site?: Site;
   privacyPrecision?: number;
+  groupId?: number;
 
   // moth survey attributes
   wind: string;
@@ -95,7 +92,6 @@ export type Attrs = SampleAttrs & {
 
 export const surveyConfigs = {
   [areaSurvey.name]: areaSurvey,
-  [areaOldSurvey.name]: areaOldSurvey as Survey, // deprecated
   [areaSingleSpeciesSurvey.name]: areaSingleSpeciesSurvey,
   [transectSurvey.name]: transectSurvey,
   [mothSurvey.name]: mothSurvey,
@@ -141,70 +137,14 @@ type Metadata = SampleMetadata & {
   speciesGroups?: any[];
 };
 
-type SampleOptions = SampleOptionsOriginal & { skipStore?: boolean };
+export default class Sample extends SampleOriginal<Data, Metadata> {
+  static parseRemoteJSON(json: ElasticSample, remoteUrl: string, survey?: any) {
+    const parsed = super.parseRemoteJSON(json, remoteUrl, survey);
+    if (parsed.data?.location?.shape) {
+      parsed.data.location.area = calculateArea(parsed.data?.location?.shape);
+    }
 
-export default class Sample extends SampleOriginal<Attrs, Metadata> {
-  /**
-   * Transform ES document into local structure.
-   */
-  static parseRemoteJSON({ id, event, location, metadata }: ElasticSample) {
-    const survey = surveyConfigsByCode[metadata.survey.id];
-    const date = new Date(event.date_start).toISOString();
-    const updatedOn = new Date(metadata.updated_on).toISOString();
-
-    const [latitude, longitude] = location.point.split(',').map(parseFloat);
-
-    const gridref =
-      location.output_sref_system === 'OSGB' ? location.output_sref : '';
-
-    const shape = location.geom ? wkt.parse(location.geom) : null;
-
-    const hasParent = event.parent_event_id;
-    const parsedAttributes = parseRemoteAttrs(
-      hasParent ? survey.smp.attrs! : survey.attrs,
-      event.attributes || []
-    );
-
-    const getMedia = ({ path }: ElasticSampleMedia) => ({
-      id: path,
-      metadata: { updatedOn: date, createdOn: date, syncedOn: date },
-      attrs: { data: `${config.backend.mediaUrl}${path}` },
-    });
-    const media = event.media?.map(getMedia);
-
-    return {
-      id,
-      cid: event.source_system_key || id,
-      metadata: {
-        saved: true,
-        survey: survey.name,
-        updatedOn,
-        createdOn: date,
-        syncedOn: Date.now(),
-      },
-      attrs: {
-        ...parsedAttributes,
-        date,
-        location: {
-          code: location.code,
-          name: location.name,
-          latitude,
-          longitude,
-          shape,
-          area: calculateArea(shape),
-          gridref,
-        },
-        group: metadata.group,
-        comment: event.event_remarks,
-        training: metadata.trial === 'true',
-      },
-
-      media,
-    };
-  }
-
-  static fromJSON(json: any) {
-    return super.fromJSON(json, Occurrence, Sample, Media) as Sample;
+    return parsed;
   }
 
   declare occurrences: IObservableArray<Occurrence>;
@@ -214,8 +154,6 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   declare media: IObservableArray<Media>;
 
   declare parent?: Sample;
-
-  declare survey: Survey;
 
   shallowSpeciesList = observable([]);
 
@@ -243,41 +181,16 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
 
   hasLoctionMissingAndIsnotLocating: any; // from extension
 
-  fetchRemote: any; // from extension
+  constructor(options: SampleOptions) {
+    super({ ...options, Sample, Occurrence, Media, store: samplesStore });
 
-  isPartial: any; // from extension
-
-  constructor({ skipStore, ...options }: SampleOptions) {
-    super({
-      store: skipStore ? undefined : modelStore,
-      ...options,
-    });
-
-    this.remote.url = `${config.backend.indicia.url}/index.php/services/rest`;
-    // eslint-disable-next-line
-    this.remote.headers = async () => ({
-      Authorization: `Bearer ${await userModel.getAccessToken()}`,
-    });
-
-    const surveyName = this.metadata.survey;
-    this.survey = surveyConfigs[surveyName];
-
-    if (!this.metadata.survey) {
-      // TODO: remove in the future
-      console.error('Fixing missing config', JSON.stringify(this.metadata));
-      this.metadata.survey = areaSurvey.name;
-      this.metadata.survey_id = areaSurvey.id;
-      this.survey = areaSurvey;
-      this.save();
-    }
+    this.remote.url = config.backend.indicia.url;
+    this.remote.getAccessToken = () => userModel.getAccessToken();
 
     Object.assign(this, VibrateExtension);
     Object.assign(this, GPSExtension);
-    Object.assign(this, RemoteExtension);
     this.gpsExtensionInit();
   }
-
-  isCached = () => !this._store;
 
   destroy(silent?: boolean) {
     this.cleanUp();
@@ -291,9 +204,18 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
     this.stopVibrateCounter();
   };
 
-  getSurvey() {
+  getSurvey(): Survey {
+    if (this.parent) return (this.parent.getSurvey().smp as Survey) || {};
+
     try {
-      return super.getSurvey() as Survey;
+      let survey = surveyConfigsByCode[this.data.surveyId as any];
+
+      if (!survey) {
+        const surveyName = this.metadata.survey;
+        survey = surveyConfigs[surveyName];
+      }
+
+      return survey;
     } catch (error) {
       console.error(`Survey config was missing ${this.metadata.survey}`);
       return {} as Survey;
@@ -311,7 +233,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   async upload() {
     if (
       this.remote.synchronising ||
-      this.isUploaded() ||
+      this.isUploaded ||
       this.getSurvey().deprecated
     ) {
       return true;
@@ -342,10 +264,10 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
 
   hasZeroAbundance = () => {
     if (this.parent) {
-      return this.parent.samples[0].occurrences[0].attrs.zero_abundance;
+      return this.parent.samples[0].occurrences[0].data.zero_abundance;
     }
 
-    return this.samples[0].occurrences[0].attrs.zero_abundance;
+    return this.samples[0].occurrences[0].data.zero_abundance;
   };
 
   /**
@@ -354,7 +276,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   isTimerPaused = () => !!this.timerPausedTime.time;
 
   getTimerEndTime = () => {
-    const startTime = new Date(this.attrs.surveyStartTime!);
+    const startTime = new Date(this.data.surveyStartTime!);
 
     return (
       startTime.getTime() +
@@ -370,7 +292,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   };
 
   isDetailsComplete() {
-    if (this.isDisabled()) return true;
+    if (this.isDisabled) return true;
 
     const isMothSurvey = this.metadata.survey === 'moth';
     return isMothSurvey ? this.metadata.completedDetails : true;
@@ -383,7 +305,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
     this.samples.forEach(smp => {
       const spGroupValue = spGroups.find(
         (group: SpeciesGroup) =>
-          group.id === smp.occurrences[0].attrs.taxon.group
+          group.id === smp.occurrences[0].data.taxon.group
       )?.value;
 
       if (!spGroupValue) return;
@@ -405,7 +327,7 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
     const existingSpeciesGroupsInSample = (group: SpeciesGroup) => {
       const speciesGr = this.metadata?.speciesGroups?.length
         ? this.metadata?.speciesGroups
-        : appModel.attrs.speciesGroups;
+        : appModel.data.speciesGroups;
 
       const isUniqueGroup = uniqueSpeciesGroupList.includes(group.value);
       const isDuplicate = speciesGr.includes(group.value);
@@ -435,8 +357,8 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   }
 
   setMissingSpeciesGroups() {
-    if (!this.attrs.speciesGroups) {
-      this.attrs.speciesGroups = [];
+    if (!this.data.speciesGroups) {
+      this.data.speciesGroups = [];
       this.save();
     }
 
@@ -444,17 +366,17 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
 
     const checkIfNewSpeciesGroupsAreAdded = (smp: Sample) => {
       const byTaxonGroup = (group: SpeciesGroup) =>
-        group.id === smp.occurrences[0].attrs.taxon.group;
+        group.id === smp.occurrences[0].data.taxon.group;
       const speciesGroups = formattedGroups.find(byTaxonGroup);
 
       if (!speciesGroups) return;
 
-      const missingSpeciesGroup = !this.attrs.speciesGroups.includes(
+      const missingSpeciesGroup = !this.data.speciesGroups.includes(
         speciesGroups.value
       );
 
       if (missingSpeciesGroup) {
-        this.attrs.speciesGroups.push(speciesGroups.value);
+        this.data.speciesGroups.push(speciesGroups.value);
       }
     };
 
@@ -465,8 +387,8 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   setPreviousSpeciesGroups() {
     if (this.metadata.survey === 'moth') return;
 
-    this.metadata.speciesGroups = appModel.attrs.speciesGroups;
-    this.metadata.useDayFlyingMothsOnly = appModel.attrs.useDayFlyingMothsOnly;
+    this.metadata.speciesGroups = appModel.data.speciesGroups;
+    this.metadata.useDayFlyingMothsOnly = appModel.data.useDayFlyingMothsOnly;
     this.save();
   }
 
@@ -489,12 +411,12 @@ export default class Sample extends SampleOriginal<Attrs, Metadata> {
   }
 }
 
-export const useValidateCheck = (sample: Sample) => {
+export const useValidateCheck = (sample?: Sample) => {
   const alert = useAlert();
   const { t } = useTranslation();
 
   return () => {
-    const invalids = sample.validateRemote();
+    const invalids = sample?.validateRemote();
     if (invalids) {
       alert({
         header: t('Survey incomplete'),
@@ -514,10 +436,10 @@ export const useValidateCheck = (sample: Sample) => {
 };
 
 export function bySurveyDate(sample1: Sample, sample2: Sample) {
-  const date1 = new Date(sample1.attrs.date);
+  const date1 = new Date(sample1.data.date);
   const moveToTop = !date1 || date1.toString() === 'Invalid Date';
   if (moveToTop) return -1;
 
-  const date2 = new Date(sample2.attrs.date);
+  const date2 = new Date(sample2.data.date);
   return date2.getTime() - date1.getTime();
 }

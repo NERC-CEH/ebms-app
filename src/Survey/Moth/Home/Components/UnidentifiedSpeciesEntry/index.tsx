@@ -69,8 +69,7 @@ const UnidentifiedSpeciesEntry = ({
   const identifying = occ.media.some(isIdentifying);
 
   function canBeIdentified() {
-    const hasSpeciesImageBeenIdentified = (media: Media) =>
-      !media.attrs.species;
+    const hasSpeciesImageBeenIdentified = (media: Media) => !media.data.species;
 
     return occ.media.some(hasSpeciesImageBeenIdentified);
   }

@@ -1,46 +1,46 @@
 $arrow-color: #cf4a40;
 
 #compass {
+  position: relative;
   width: 520px;
   height: 520px;
-  position: relative;
 
   .compassWindRose {
+    position: relative;
+    transition: transform 0.3s ease;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+    box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.05);
+    border: 5px solid var(--ion-color-light);
     border-radius: 50%;
     background-color: transparent;
-    border: 5px solid var(--ion-color-light);
-    position: relative;
-    box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
 
     &:before,
     &:after {
-      content: '';
       position: absolute;
       background-color: $arrow-color;
+      content: '';
     }
 
     &:before {
       top: -16px;
       left: calc(50% - 18px);
+      transform: rotate(45deg);
+      z-index: 1;
+      box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
+      border-radius: 1000% 50% 0 50%;
       width: 36px;
       height: 36px;
-      border-radius: 1000% 50% 0 50%;
-      transform: rotate(45deg);
-      box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
-      z-index: 1;
     }
 
     &:after {
       top: -10px;
       left: calc(50% - 30px);
-      width: 60px;
-      height: 12px;
       z-index: 10;
       border-radius: 15px 15px 0 0;
+      width: 60px;
+      height: 12px;
     }
   }
 
@@ -48,20 +48,20 @@ $arrow-color: #cf4a40;
     &,
     &--directionH,
     &--directionV {
+      position: absolute;
+      left: calc(50% - 2px);
       width: 4px;
       height: 100%;
-      left: calc(50% - 2px);
-      position: absolute;
 
       &:before,
       &:after {
-        content: '';
         position: absolute;
         left: 0;
-        width: 4px;
-        height: 4px;
         border-radius: 50px;
         background-color: var(--ion-color-light);
+        width: 4px;
+        height: 4px;
+        content: '';
       }
 
       &:before {
@@ -77,14 +77,14 @@ $arrow-color: #cf4a40;
     &--directionV {
       &:before,
       &:after {
-        width: auto;
-        height: auto;
-        font-size: 42px;
-        line-height: 42px;
         border-radius: 0;
         background: transparent;
+        width: auto;
+        height: auto;
         color: var(--ion-color-light);
         font-weight: 500;
+        font-size: 42px;
+        line-height: 42px;
       }
 
       &:before {
@@ -99,14 +99,14 @@ $arrow-color: #cf4a40;
 
     &--directionH {
       &:before {
-        content: 'N';
         left: -13px;
+        content: 'N';
         font-weight: 400;
       }
 
       &:after {
-        content: 'S';
         left: -9px;
+        content: 'S';
       }
     }
 
@@ -114,13 +114,13 @@ $arrow-color: #cf4a40;
       transform: rotate(90deg);
 
       &:before {
-        content: 'E';
         left: -11px;
+        content: 'E';
       }
 
       &:after {
-        content: 'W';
         left: -18px;
+        content: 'W';
       }
     }
   }
@@ -138,26 +138,26 @@ $arrow-color: #cf4a40;
   }
 
   .compassArrowContainer {
-    width: 48.076923%;
-    height: 48.076923%;
-    border-radius: 50%;
-    box-sizing: border-box;
+    position: absolute;
     top: 50%;
     left: 50%;
-    position: absolute;
-    z-index: 2;
     transform: translate(-50%, -50%);
+    z-index: 2;
     transition: transform 0.3s ease;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 48.076923%;
+    height: 48.076923%;
   }
 
   .compassArrow {
+    transform: rotate(45deg);
+    box-sizing: border-box;
+    margin-top: 14.5%;
+    margin-left: 14.5%;
+    border-radius: 0 50% 50% 50%;
+    background-color: #be4d45;
     width: 71%;
     height: 71%;
-    margin-left: 14.5%;
-    margin-top: 14.5%;
-    background-color: #be4d45;
-    border-radius: 0 50% 50% 50%;
-    box-sizing: border-box;
-    transform: rotate(45deg);
   }
 }

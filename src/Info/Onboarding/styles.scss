@@ -3,11 +3,13 @@
     position: fixed !important;
     top: 0;
     left: 0;
+    background: white;
     width: 100vw;
     height: 100vh;
-    background: white;
 
     --bullet-background-active: white;
+
+    $bottom: 16vh;
 
     button {
       position: absolute;
@@ -29,8 +31,8 @@
 
       // Hack around the tablet hidden message issue
       @media only screen and (min-width: 650px) {
-        margin-left: -325px !important;
         left: 50% !important;
+        margin-left: -325px !important;
       }
     }
 
@@ -46,8 +48,6 @@
       }
     }
 
-    $bottom: 16vh;
-
     .swiper-slide {
       &.first {
         background: url('images/welcome_1.jpg') no-repeat;
@@ -55,8 +55,8 @@
         background-size: contain;
 
         .message {
-          text-align: left;
           top: 14vh;
+          text-align: left;
         }
       }
 
@@ -66,9 +66,9 @@
         background-size: cover;
 
         .message {
-          text-align: left;
-          left: 10vw;
           bottom: 20vh;
+          left: 10vw;
+          text-align: left;
         }
 
         ion-button {
@@ -81,8 +81,8 @@
         background-position: left;
         background-size: contain;
         .message {
-          text-align: left;
           bottom: 13vh;
+          text-align: left;
         }
       }
 
@@ -91,9 +91,9 @@
         background-position: left;
         background-size: cover;
         .message {
-          text-align: left;
           right: 10vw;
           bottom: $bottom;
+          text-align: left;
         }
       }
     }
@@ -106,9 +106,9 @@
     bottom: 0;
 
     ion-button {
-      height: 50px;
-      width: 50px;
       margin: 10px;
+      width: 50px;
+      height: 50px;
     }
   }
 }

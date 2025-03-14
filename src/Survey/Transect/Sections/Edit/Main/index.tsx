@@ -38,19 +38,19 @@ import {
 } from 'Survey/common/taxonSortFunctions';
 import './styles.scss';
 
-const getDefaultTaxonCount = (taxon: any, createdOn?: any) => ({
+const getDefaultTaxonCount = (taxon: any, createdAt?: any) => ({
   count: 0,
   taxon,
-  createdOn,
+  createdAt,
 });
 
 const buildSpeciesCount = (agg: any, occ: Occurrence) => {
-  const taxon = toJS(occ.attrs.taxon);
+  const taxon = toJS(occ.data.taxon);
   const id = taxon.preferredId || taxon.warehouse_id;
 
-  agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.metadata.createdOn); // eslint-disable-line
+  agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.createdAt); // eslint-disable-line
 
-  agg[id].count = toJS(occ.attrs.count); // eslint-disable-line
+  agg[id].count = toJS(occ.data.count); // eslint-disable-line
 
   return agg;
 };
@@ -79,7 +79,7 @@ const Edit = ({
   isDisabled,
 }: Props) => {
   const alert = useAlert();
-  const ref = useRef();
+  const ref = useRef<any>(null);
   const match: any = useRouteMatch();
 
   const { navigate } = useContext(NavContext);
@@ -141,7 +141,7 @@ const Edit = ({
         shallowEntry.preferredId || shallowEntry.warehouse_id;
 
       if (speciesCounts[shallowEntryId]) {
-        speciesCounts[shallowEntryId].createdOn = 0;
+        speciesCounts[shallowEntryId].createdAt = 0;
         return null;
       }
 
@@ -247,7 +247,7 @@ const Edit = ({
     );
   };
 
-  const { reliability } = sectionSample.attrs;
+  const { reliability } = sectionSample.data;
 
   const baseURL = `/survey/transect/${sample.cid}/sections/${sectionSample.cid}`;
 

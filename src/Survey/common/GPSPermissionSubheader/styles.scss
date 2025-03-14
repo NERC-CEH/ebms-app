@@ -4,10 +4,10 @@
   --min-height: 16px !important;
 
   .gps-permission {
+    background: var(--ion-color-warning);
     padding: 0 5px;
+    color: var(--ion-color-warning-contrast);
     font-size: 0.8em;
     text-align: center;
-    background: var(--ion-color-warning);
-    color: var(--ion-color-warning-contrast);
   }
 }

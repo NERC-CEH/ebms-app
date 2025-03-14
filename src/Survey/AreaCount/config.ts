@@ -16,7 +16,6 @@ import {
   windSpeedAttr,
   temperatureAttr,
   windDirectionAttr,
-  sunAttr,
   taxonAttr,
   surveyStartTimeAttr,
   surveyEndTimeAttr,
@@ -40,7 +39,7 @@ const getSetWeather = (sample: AppSample) => async () => {
   if (!device.isOnline) return;
 
   const weatherValues = await fetchWeather(
-    sample.attrs.location as AreaCountLocation
+    sample.data.location as AreaCountLocation
   );
 
   assignIfMissing(sample, 'temperature', weatherValues.temperature);
@@ -65,7 +64,6 @@ const survey: Survey = {
     comment: commentAttr,
     temperature: temperatureAttr,
     cloud: cloudAttr,
-    sun: sunAttr, // TODO: backwards compatible, remove in the future
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,
     recorders: {
@@ -147,6 +145,7 @@ const survey: Survey = {
           survey: surveyName || survey.name,
         },
         attrs: {
+          surveyId: surveyId || survey.id,
           location: {},
         },
       });
@@ -161,23 +160,15 @@ const survey: Survey = {
     },
 
     modifySubmission(submission, model) {
-      if (model.parent.attrs.group?.id) {
+      if (model.parent.data.group?.id) {
         // eslint-disable-next-line
-        submission.values.group_id = model.parent.attrs.group.id;
+        submission.values.group_id = model.parent.data.group.id;
       }
 
-      if (Number.isFinite(model.parent.attrs.privacyPrecision)) {
+      if (Number.isFinite(model.parent.data.privacyPrecision)) {
         // eslint-disable-next-line
         submission.values.privacy_precision =
-          model.parent.attrs.privacyPrecision;
-      }
-
-      if (!submission.values.survey_id) {
-        // TODO: remove this once it is known why this isn't set
-        console.error(
-          `Submission subsample had no survey_id so we are setting it to ${survey.id}`
-        );
-        submission.values.survey_id = survey.id; // eslint-disable-line
+          model.parent.data.privacyPrecision;
       }
 
       return submission;
@@ -236,8 +227,11 @@ const survey: Survey = {
         speciesGroups: [],
       },
       attrs: {
-        training: appModel.attrs.useTraining,
-        group: appModel.attrs.defaultGroup,
+        surveyId: surveyId || survey.id,
+        date: new Date().toISOString(),
+        enteredSrefSystem: 4326,
+        training: appModel.data.useTraining,
+        group: appModel.data.defaultGroup,
         input_form: survey.webForm,
         device: isPlatform('android') ? 'android' : 'ios',
         app_version: config.version,
@@ -252,44 +246,19 @@ const survey: Survey = {
     });
 
     if (!sample.isPreciseSingleSpeciesSurvey()) {
-      const createdOnString = new Date(sample.metadata.createdOn).toISOString();
-      sample.attrs.surveyStartTime = createdOnString; // this can't be done in defaults
+      const createdOnString = new Date(sample.createdAt).toISOString();
+      sample.data.surveyStartTime = createdOnString; // this can't be done in defaults
       sample.startVibrateCounter();
     }
 
     if (hasGPSPermission) sample.toggleGPStracking();
 
     when(
-      () => isValidLocation(sample.attrs.location as AreaCountLocation),
+      () => isValidLocation(sample.data.location as AreaCountLocation),
       getSetWeather(sample)
     );
 
     return sample;
-  },
-
-  modifySubmission(submission) {
-    const subSamples = submission.samples;
-    submission.samples = []; // eslint-disable-line
-    if (!submission.values.survey_id) {
-      // TODO: remove this once it is known why this isn't set
-      console.error(
-        `Submission top sample had no survey_id so we are setting it to ${survey.id}`
-      );
-      submission.values.survey_id = survey.id; // eslint-disable-line
-    }
-
-    const removeSubSamplesLayerIfNoLocation = (subSample: any) => {
-      const locationIsMissing = !subSample.values.entered_sref;
-      if (locationIsMissing) {
-        submission.occurrences.push(subSample.occurrences[0]);
-        return;
-      }
-      submission.samples.push(subSample);
-    };
-
-    subSamples.forEach(removeSubSamplesLayerIfNoLocation);
-
-    return submission;
   },
 };
 

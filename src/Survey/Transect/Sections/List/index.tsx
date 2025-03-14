@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
-import { Page, useToast, useLoader, device } from '@flumens';
+import { Page, useToast, useLoader, device, useSample } from '@flumens';
 import appModel from 'models/app';
 import locations, { byType } from 'models/collections/locations';
 import Location, { TRANSECT_SECTION_TYPE } from 'models/location';
@@ -10,16 +10,15 @@ import { useUserStatusCheck } from 'models/user';
 import Header from './Header';
 import Main from './Main';
 
-type Props = {
-  sample: Sample;
-};
-
 const TWENTY_FOURTH_HOURS = 24 * 60 * 60 * 1000;
 
-const SectionListController = ({ sample }: Props) => {
+const SectionListController = () => {
   const checkUserStatus = useUserStatusCheck();
   const loader = useLoader();
   const toast = useToast();
+
+  const { sample } = useSample<Sample>();
+  if (!sample) throw new Error('Sample is missing');
 
   const refreshUserTransects = async () => {
     const isUserOK = await checkUserStatus();
@@ -28,7 +27,7 @@ const SectionListController = ({ sample }: Props) => {
     await loader.show('Please wait...');
 
     try {
-      await locations.fetch();
+      await locations.fetchRemote();
 
       toast.success('Transect list was successfully updated.');
     } catch (e: any) {
@@ -39,14 +38,14 @@ const SectionListController = ({ sample }: Props) => {
 
   const onTransectSelect = (transect: Location) => {
     // eslint-disable-next-line no-param-reassign
-    sample.attrs.location = toJS(transect.attrs);
+    sample.data.location = toJS(transect.data);
 
     const byTransectId = (section: Location) =>
-      section.attrs.parentId === transect.id;
+      section.data.parentId === transect.id;
 
     const byCode = (loc1: Location, loc2: Location) => {
-      const sectionCodeNumberIndex1: any = loc1.attrs.code?.match(/\d+$/)?.[0];
-      const sectionCodeNumberIndex2: any = loc2.attrs.code?.match(/\d+$/)?.[0];
+      const sectionCodeNumberIndex1: any = loc1.data.code?.match(/\d+$/)?.[0];
+      const sectionCodeNumberIndex2: any = loc2.data.code?.match(/\d+$/)?.[0];
       return sectionCodeNumberIndex1 - sectionCodeNumberIndex2;
     };
 
@@ -59,7 +58,7 @@ const SectionListController = ({ sample }: Props) => {
     const addSectionSample = (section: any) => {
       const sectionSample = survey.smp!.create!({
         Sample,
-        location: toJS(section.attrs),
+        location: toJS(section.data),
       });
       sample.samples.push(sectionSample);
     };
@@ -72,24 +71,24 @@ const SectionListController = ({ sample }: Props) => {
   useEffect(() => {
     if (!locations.length && device.isOnline) {
       refreshUserTransects();
-      appModel.attrs.transectsRefreshTimestamp = new Date().getTime();
+      appModel.data.transectsRefreshTimestamp = new Date().getTime();
       return;
     }
 
-    const lastSyncTime = appModel.attrs.transectsRefreshTimestamp;
+    const lastSyncTime = appModel.data.transectsRefreshTimestamp;
     if (!lastSyncTime) return;
 
     const shouldSyncWait =
       new Date().getTime() - lastSyncTime < TWENTY_FOURTH_HOURS;
 
-    const isTransectSelected = sample.attrs.location;
+    const isTransectSelected = sample.data.location;
     if (shouldSyncWait || isTransectSelected) return;
 
     refreshUserTransects();
-    appModel.attrs.transectsRefreshTimestamp = new Date().getTime();
+    appModel.data.transectsRefreshTimestamp = new Date().getTime();
   }, []);
 
-  const transect = sample.attrs.location;
+  const transect = sample.data.location;
 
   return (
     <Page id="transect-sections-list">

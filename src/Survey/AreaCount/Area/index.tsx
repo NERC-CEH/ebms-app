@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { resizeOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { device, Location, useLoader, useToast } from '@flumens';
+import { device, Location, useLoader, useSample, useToast } from '@flumens';
 import { IonIcon, IonPage, isPlatform, NavContext } from '@ionic/react';
 import groups from 'common/models/collections/groups';
 import GroupModel from 'common/models/group';
@@ -17,14 +17,13 @@ import Main from './Main';
 import NewLocationModal from './NewLocationModal';
 import './styles.scss';
 
-type Props = {
-  sample: Sample;
-};
-
-const AreaController = ({ sample }: Props) => {
+const AreaController = () => {
   const { goBack } = useContext(NavContext);
   const loader = useLoader();
   const toast = useToast();
+
+  const { sample } = useSample<Sample>();
+  if (!sample) throw new Error('Sample is missing');
 
   const toggleGPStracking = (on: boolean) => {
     sample.toggleGPStracking(on);
@@ -34,7 +33,7 @@ const AreaController = ({ sample }: Props) => {
     sample.setLocation(shape);
   };
 
-  const location = (sample.attrs.location as AreaCountLocation) || {};
+  const location = (sample.data.location as AreaCountLocation) || {};
   const isGPSTracking = sample.isGPSRunning();
   const { area } = location;
 
@@ -59,7 +58,7 @@ const AreaController = ({ sample }: Props) => {
     );
   }
 
-  const isDisabled = sample.isDisabled();
+  const { isDisabled } = sample;
 
   const isAreaShape = location.shape?.type === 'Polygon';
 
@@ -69,7 +68,7 @@ const AreaController = ({ sample }: Props) => {
     isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
 
     // eslint-disable-next-line no-param-reassign
-    sample.attrs.location = selectedLoc as AreaCountLocation;
+    sample.data.location = selectedLoc as AreaCountLocation;
     sample.save();
     goBack();
   };
@@ -79,15 +78,15 @@ const AreaController = ({ sample }: Props) => {
   const modal = useRef<HTMLIonModalElement>(null);
   const onCreateGroupLocation = () => modal.current?.present();
   const onSelectGroupLocation = (loc?: LocationModel) => {
-    if (!sample.attrs.location) {
-      sample.attrs.location = {} as any; // eslint-disable-line
+    if (!sample.data.location) {
+      sample.data.location = {} as any; // eslint-disable-line
     }
 
-    const shouldUnselect = !loc || sample.attrs.site?.id === loc.id;
+    const shouldUnselect = !loc || sample.data.site?.id === loc.id;
     if (shouldUnselect) {
-      sample.attrs.site = undefined; // eslint-disable-line
+      sample.data.site = undefined; // eslint-disable-line
     } else {
-      sample.attrs.site = JSON.parse(JSON.stringify(loc.attrs)); // eslint-disable-line
+      sample.data.site = JSON.parse(JSON.stringify(loc.data)); // eslint-disable-line
     }
 
     sample.save();
@@ -107,12 +106,12 @@ const AreaController = ({ sample }: Props) => {
     if (
       isDisabled ||
       !userModel.isLoggedIn() ||
-      !userModel.attrs.verified ||
+      !userModel.data.verified ||
       !device.isOnline
     )
       return;
 
-    locations.fetch();
+    locations.fetchRemote();
   };
   useEffect(refreshLocations, []);
 
@@ -122,17 +121,13 @@ const AreaController = ({ sample }: Props) => {
     newSiteAttrs: RemoteAttributes,
     media: Media[]
   ) => {
-    if (
-      !userModel.isLoggedIn() ||
-      !userModel.attrs.verified ||
-      !device.isOnline
-    )
+    if (!userModel.isLoggedIn() || !userModel.data.verified || !device.isOnline)
       return false;
 
     try {
       await loader.show('Please wait...');
 
-      const byId = (p: GroupModel) => p.id === sample.attrs.group?.id;
+      const byId = (p: GroupModel) => p.id === sample.data.group?.id;
       const group = groups.find(byId);
       if (!group) throw new Error('Group was not found');
 
@@ -181,7 +176,7 @@ const AreaController = ({ sample }: Props) => {
         isOpen={isNewLocationModalOpen}
         onCancel={onCloseLocationModal}
         onSave={onSaveNewLocation}
-        group={sample.attrs.group!}
+        group={sample.data.group!}
         shape={location.shape}
       />
     </IonPage>

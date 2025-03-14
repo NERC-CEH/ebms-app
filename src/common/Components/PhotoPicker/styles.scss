@@ -3,32 +3,32 @@
     position: absolute;
     right: 0px;
     bottom: 5px;
-    background: #fff1f1;
-    color: var(--ion-color-danger);
     border-radius: 100%;
-    font-size: 1em;
+    background: #fff1f1;
     padding: 3px;
+    color: var(--ion-color-danger);
+    font-size: 1em;
   }
 
   ion-spinner {
     position: absolute;
-    bottom: 4px;
     right: 0;
-    background: #ffffff94;
+    bottom: 4px;
     border-radius: 50%;
-    height: 23px;
+    background: #ffffff94;
     width: 23px;
+    height: 23px;
   }
 }
 
 .re-identify-button {
   --padding-start: 0;
   --padding-end: 0;
-  background: var(--ion-color-primary);
   border-radius: 10px;
-  font-size: 18px;
-  color: #fff;
+  background: var(--ion-color-primary);
   padding: 0px 15px;
+  color: #fff;
+  font-size: 18px;
 
   ion-icon {
     margin-right: 15px;

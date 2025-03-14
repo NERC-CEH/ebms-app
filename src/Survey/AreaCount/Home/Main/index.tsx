@@ -57,7 +57,7 @@ import './styles.scss';
 const OCCURRENCE_THRESHOLD = 2;
 
 const showCopyTip = (alert: any) => {
-  if (!appModel.attrs.showCopyHelpTip) return;
+  if (!appModel.data.showCopyHelpTip) return;
 
   alert({
     header: 'Tip: Copy attributes',
@@ -80,31 +80,31 @@ const showCopyTip = (alert: any) => {
     ],
   });
   // eslint-disable-next-line no-param-reassign
-  appModel.attrs.showCopyHelpTip = false;
+  appModel.data.showCopyHelpTip = false;
   appModel.save();
 };
 
 const byTime = (sp1: Sample, sp2: Sample) => {
-  const date1 = new Date(sp1.metadata.createdOn);
-  const date2 = new Date(sp2.metadata.createdOn);
+  const date1 = new Date(sp1.createdAt);
+  const date2 = new Date(sp2.createdAt);
   return date2.getTime() - date1.getTime();
 };
 
-const getDefaultTaxonCount = (taxon: any, createdOn?: any) => ({
+const getDefaultTaxonCount = (taxon: any, createdAt?: any) => ({
   count: 0,
   taxon,
-  createdOn,
+  createdAt,
   isDisabled: false, // for remote occurrences without samples, don't let open any pages
 });
 
 const buildSpeciesCount = (agg: any, smp: Sample) => {
-  const taxon = toJS(smp.occurrences[0]?.attrs.taxon);
+  const taxon = toJS(smp.occurrences[0]?.data.taxon);
   if (!taxon) return agg;
 
   const id = taxon.preferredId || taxon.warehouse_id;
 
-  const createdOn = new Date(smp.metadata.createdOn).getTime();
-  agg[id] = agg[id] || getDefaultTaxonCount(taxon, createdOn); // eslint-disable-line
+  const createdAt = new Date(smp.createdAt).getTime();
+  agg[id] = agg[id] || getDefaultTaxonCount(taxon, createdAt); // eslint-disable-line
 
   if (smp.isSurveyPreciseSingleSpecies() && smp.hasZeroAbundance()) {
     return agg;
@@ -155,7 +155,7 @@ const AreaCount = ({
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch<any>();
   const alert = useAlert();
-  const ref = useRef();
+  const ref = useRef<any>(null);
 
   const showCopyOptions = () => {
     alert({
@@ -176,7 +176,7 @@ const AreaCount = ({
     if (isDisabled) return <div style={{ height: '44px' }} />;
 
     if (sample.isPreciseSingleSpeciesSurvey()) {
-      const { taxon } = sample.samples[0]?.occurrences[0]?.attrs || {};
+      const { taxon } = sample.samples[0]?.occurrences[0]?.data || {};
 
       if (!taxon) return null;
 
@@ -241,7 +241,7 @@ const AreaCount = ({
     const deleteSpeciesWrap = () => deleteSpecies(taxon, isShallow);
 
     let location;
-    if (species.hasLocationMissing) {
+    if (species.hasLocationMissing && !isDisabled) {
       location = <IonIcon icon={warningOutline} color="danger" />;
     } else if (species.isGeolocating) {
       location = <IonSpinner />;
@@ -301,7 +301,7 @@ const AreaCount = ({
         shallowEntry.preferredId || shallowEntry.warehouse_id;
 
       if (speciesCounts[shallowEntryId]) {
-        speciesCounts[shallowEntryId].createdOn = 0;
+        speciesCounts[shallowEntryId].createdAt = 0;
         return null;
       }
 
@@ -338,7 +338,7 @@ const AreaCount = ({
       .map(occ => [
         occ.id,
         {
-          ...getDefaultTaxonCount(occ.attrs.taxon),
+          ...getDefaultTaxonCount(occ.data.taxon),
           count: 1,
           isDisabled: true,
         },
@@ -393,7 +393,7 @@ const AreaCount = ({
 
     const getOccurrence = (smp: Sample) => {
       const occ = smp.occurrences[0];
-      const prettyTime = new Date(smp.metadata.createdOn)
+      const prettyTime = new Date(smp.createdAt)
         .toLocaleTimeString()
         .replace(/(:\d{2}| [AP]M)$/, '');
 
@@ -406,14 +406,15 @@ const AreaCount = ({
         eggLaying,
         direction,
         dragonflyStage,
-      } = occ.attrs;
+      } = occ.data;
 
       let location;
       if (smp.hasLoctionMissingAndIsnotLocating()) {
-        location = <IonIcon icon={warningOutline} color="danger" />;
+        if (!isDisabled)
+          location = <IonIcon icon={warningOutline} color="danger" />;
       } else if (smp.isGPSRunning()) {
         location = <IonSpinner />;
-      } else if (smp.attrs.location && !behaviour && !wing?.length) {
+      } else if (smp.data.location && !behaviour && !wing?.length) {
         location = <GridRef sample={smp} />;
       }
 
@@ -436,7 +437,7 @@ const AreaCount = ({
           <IonItem detail={false} onClick={navigateToOccurrenceWithSample}>
             <div className="flex w-full items-center justify-start gap-4 py-1 pl-4">
               <div className="shrink-0">{prettyTime}</div>
-              <div className="flex w-full flex-wrap justify-start gap-x-3 gap-y-1 align-middle ">
+              <div className="flex w-full flex-wrap justify-start gap-x-3 gap-y-1 align-middle">
                 {speciesStage && <Badge>{speciesStage}</Badge>}
                 <PaintedLadyWing wings={wing} />
                 <PaintedLadyBehaviour behaviour={behaviour} />
@@ -490,7 +491,7 @@ const AreaCount = ({
   };
 
   const showAreaWarningNote = () => {
-    if (sample.metadata.saved && !sample.isDisabled()) {
+    if (sample.metadata.saved && !sample.isDisabled) {
       return (
         <>
           <InfoMessage inline>
@@ -512,7 +513,7 @@ const AreaCount = ({
   };
 
   const showCopySpeciesTip = () => {
-    if (!appModel.attrs.showCopySpeciesTip || !previousSurvey) {
+    if (!appModel.data.showCopySpeciesTip || !previousSurvey) {
       return null;
     }
 
@@ -534,7 +535,7 @@ const AreaCount = ({
       ],
     });
 
-    appModel.attrs.showCopySpeciesTip = false;
+    appModel.data.showCopySpeciesTip = false;
 
     return null;
   };
@@ -573,14 +574,14 @@ const AreaCount = ({
     );
   };
 
-  const { area } = (sample.attrs.location as AreaCountLocation) || {};
+  const { area } = (sample.data.location as AreaCountLocation) || {};
   let areaPretty: any = <IonIcon icon={warningOutline} color="danger" />;
   if (Number.isFinite(area) || sample.isGPSRunning()) {
     areaPretty = (
       <div className="flex flex-col overflow-hidden">
         <div>{area ? `${area} m²` : ''}</div>
         <div className="max-w-28 overflow-hidden text-ellipsis whitespace-nowrap">
-          {sample.attrs.site?.name || sample.attrs.location?.name}
+          {sample.data.site?.name || sample.data.location?.name}
         </div>
       </div>
     );

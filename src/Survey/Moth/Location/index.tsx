@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { Page, Header, Main, device, useToast } from '@flumens';
+import { Page, Header, Main, device, useToast, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
 import locations, { byType } from 'common/models/collections/locations';
 import MothTrap, { MOTH_TRAP_TYPE, useValidateCheck } from 'models/location';
@@ -9,25 +9,25 @@ import userModel, { useUserStatusCheck } from 'models/user';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import Map from './Map';
 
-interface Props {
-  sample: Sample;
-}
-
-const Location = ({ sample }: Props) => {
+const Location = () => {
   const validateLocation = useValidateCheck();
   const checkUserStatus = useUserStatusCheck();
   const toast = useToast();
   const { navigate, goBack } = useContext(NavContext);
 
-  const isDisabled = sample.isUploaded();
+  const { sample } = useSample<Sample>();
+
+  const isDisabled = sample?.isDisabled;
 
   const refreshMothTrapsWrap = () => {
-    if (isDisabled || !userModel.isLoggedIn() || !userModel.attrs.verified)
+    if (isDisabled || !userModel.isLoggedIn() || !userModel.data.verified)
       return;
 
-    locations.fetch();
+    locations.fetchRemote();
   };
   useEffect(refreshMothTrapsWrap, []);
+
+  if (!sample) return null;
 
   const gpsPermissionSubheader = !isDisabled && <GPSPermissionSubheader />;
 
@@ -35,7 +35,7 @@ const Location = ({ sample }: Props) => {
     if (isDisabled) return;
 
     // eslint-disable-next-line no-param-reassign
-    sample.attrs.location = newTrap as any as MothTrapLocation;
+    sample.data.location = newTrap.toJSON() as any as MothTrapLocation;
 
     goBack();
   };

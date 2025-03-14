@@ -14,7 +14,7 @@ type Props = {
 const Header = ({ sample }: Props) => {
   if (!sample.metadata.speciesGroups) {
     // eslint-disable-next-line no-param-reassign
-    sample.metadata.speciesGroups = appModel.attrs.speciesGroups;
+    sample.metadata.speciesGroups = appModel.data.speciesGroups;
     sample.save();
   }
 
