@@ -129,7 +129,7 @@ export default () => (
             <ol className="list-decimal pl-4">
               <T>
                 <li>Start a count.</li>
-                <li>Select "Additional Details," then “Project”.</li>
+                <li>Select "Additional Details" then "Project".</li>
                 <li>Finally, choose the appropriate project.</li>
               </T>
             </ol>
@@ -139,10 +139,10 @@ export default () => (
               <T>
                 <li>Start a count.</li>
                 <li>
-                  Assign a project to the count (see instructions on how to
-                  select a project).
+                  Assign a project to the count, see instructions on how to
+                  select a project.
                 </li>
-                <li>Turn off the GPS in the header of the “Area” page.</li>
+                <li>Turn off the GPS in the header of the "Area" page.</li>
                 <li>
                   Select the "Site Drawing" tool on the right side of the
                   screen.
@@ -152,10 +152,10 @@ export default () => (
                   right side of the screen.
                 </li>
                 <li>
-                  Press the "Add" button located on the favorite sites panel in
+                  Press the "Add" button located on the favourite sites panel in
                   the bottom right corner of the screen. If the panel is not
-                  visible, you can open it by clicking the favorite sites button
-                  (star icon) at the top right.
+                  visible, you can open it by clicking the favourite sites
+                  button (star icon) at the top right.
                 </li>
                 <li>
                   You will be prompted to answer some questions about the site.
