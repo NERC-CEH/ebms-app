@@ -91,7 +91,6 @@
     "tailwind-merge": "^3.0.2",
     "tailwind-variants": "^0.3.1",
     "wellknown": "0.5.0",
-    "yup": "^1.6.1",
     "zod": "^3.24.2"
   },
   "devDependencies": {

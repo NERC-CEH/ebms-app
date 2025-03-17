@@ -58,7 +58,7 @@ export const grainsNumberAttr = {
   title: 'Arable field grains (wheat, barley, rye)',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const customAreaSizeAttr = {
@@ -68,7 +68,7 @@ export const customAreaSizeAttr = {
   appearance: 'counter',
   placeholder: '0',
   suffix: 'm²',
-  validations: { min: 0 },
+  validation: { min: 0 },
 } as const;
 
 export const vegetablesNumberAttr = {
@@ -77,7 +77,7 @@ export const vegetablesNumberAttr = {
   title: 'Arable field fruits or vegetables',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const rapeseedNumberAttr = {
@@ -86,7 +86,7 @@ export const rapeseedNumberAttr = {
   title: 'Arable field rapeseed',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const cornNumberAttr = {
@@ -95,7 +95,7 @@ export const cornNumberAttr = {
   title: 'Arable field corn',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const legumesNumberAttr = {
@@ -104,7 +104,7 @@ export const legumesNumberAttr = {
   title: 'Arable legumes',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const croppingNumberAttr = {
@@ -113,7 +113,7 @@ export const croppingNumberAttr = {
   title: 'Arable multi-cropping',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const fallowNumberAttr = {
@@ -122,7 +122,7 @@ export const fallowNumberAttr = {
   title: 'Arable fallow',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const managedGrasslandNumberAttr = {
@@ -131,7 +131,7 @@ export const managedGrasslandNumberAttr = {
   title: 'Grassland homogeneous/intensively managed',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const grasslandNumberAttr = {
@@ -140,7 +140,7 @@ export const grasslandNumberAttr = {
   title: 'Grassland extensive or heterogeneous (pasture)',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const orchardNumberAttr = {
@@ -149,7 +149,7 @@ export const orchardNumberAttr = {
   title: 'Orchard, vineyard or grove (sparse, pasture among trees)',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const orchardManagedNumberAttr = {
@@ -158,7 +158,7 @@ export const orchardManagedNumberAttr = {
   title: 'Orchard, vineyard or grove (intensely managed)',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const numberAttr = {
@@ -167,7 +167,7 @@ export const numberAttr = {
   title: 'Scrubland',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const wastelandNumberAttr = {
@@ -176,7 +176,7 @@ export const wastelandNumberAttr = {
   title: 'Land laying fallow / wasteland',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const woodlandNumberAttr = {
@@ -185,7 +185,7 @@ export const woodlandNumberAttr = {
   title: 'Sparse woodland',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const forestNumberAttr = {
@@ -194,7 +194,7 @@ export const forestNumberAttr = {
   title: 'Dense woodland or forest',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const plantationNumberAttr = {
@@ -203,7 +203,7 @@ export const plantationNumberAttr = {
   title: 'Plantation',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const gardenNumberAttr = {
@@ -212,7 +212,7 @@ export const gardenNumberAttr = {
   title: 'Garden (single)',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const gardensNumberAttr = {
@@ -221,7 +221,7 @@ export const gardensNumberAttr = {
   title: 'Gardens (multiple, e.g. allotment gardens)',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const buildingsNumberAttr = {
@@ -230,7 +230,7 @@ export const buildingsNumberAttr = {
   title: 'Building(s)',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const waterNumberAttr = {
@@ -239,7 +239,7 @@ export const waterNumberAttr = {
   title: 'Pond, lake or sea',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const riverNumberAttr = {
@@ -248,7 +248,7 @@ export const riverNumberAttr = {
   title: 'River or creek',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const wetlandNumberAttr = {
@@ -257,7 +257,7 @@ export const wetlandNumberAttr = {
   title: 'Wetland',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const landNumberAttr = {
@@ -266,7 +266,7 @@ export const landNumberAttr = {
   title: 'Dunes or barren land',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const landscapeFeaturesAttr = {
@@ -313,7 +313,7 @@ export const treeNumberAttr = {
   title: 'How many trees are there in the area of your observation site?',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const grassProportionAttr = {
@@ -322,7 +322,7 @@ export const grassProportionAttr = {
   title: 'What proportion of the site is a lawn or a grassland?',
   appearance: 'counter',
   placeholder: '0',
-  validations: { min: 0, max: 100 },
+  validation: { min: 0, max: 100 },
 } as const;
 
 export const grassMownAttr = {

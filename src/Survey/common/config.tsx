@@ -3,7 +3,7 @@ import {
   cloudyOutline,
   thermometerOutline,
 } from 'ionicons/icons';
-import * as Yup from 'yup';
+import { z } from 'zod';
 import {
   RemoteConfig,
   MenuAttrItemFromModelMenuProps,
@@ -305,34 +305,31 @@ export const dateAttr = {
   remote: { values: (date: number) => dateFormat.format(new Date(date)) },
 };
 
-const locationSchema = Yup.object().shape({
-  latitude: Yup.number().required(),
-  longitude: Yup.number().required(),
-  area: Yup.number()
-    .min(1, 'Please add survey area information.')
-    .max(20000000, 'Please select a smaller area.')
-    .required(),
-  shape: Yup.object().required(),
-  source: Yup.string().required('Please add survey area information.'),
-});
+export const areaCountSchema = z.object({
+  location: z
+    .object(
+      {
+        latitude: z.number().nullable().optional(),
+        longitude: z.number().nullable().optional(),
+        shape: z.object({}).nullable().optional(),
+        area: z
+          .number({ required_error: 'Please add survey area information.' })
+          .min(1, 'Please add survey area information.')
+          .max(20000000, 'Please select a smaller area.'),
+      },
+      { required_error: 'Location is missing.' }
+    )
+    .refine(
+      (val: any) =>
+        Number.isFinite(val.latitude) &&
+        Number.isFinite(val.longitude) &&
+        val.shape,
+      'Location is missing.'
+    ),
 
-const validateLocation = (val: any) => {
-  if (!val) {
-    return false;
-  }
-
-  locationSchema.validateSync(val);
-  return true;
-};
-
-export const areaCountSchema = Yup.object().shape({
-  location: Yup.mixed().test(
-    'area',
-    'Please add survey area information.',
-    validateLocation
-  ),
-
-  surveyStartTime: Yup.date().required('Date is missing'),
+  surveyStartTime: z
+    .string({ required_error: 'Date is missing' })
+    .min(1, 'Date is missing'),
 });
 
 const stageValues = [

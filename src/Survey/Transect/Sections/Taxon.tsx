@@ -10,8 +10,8 @@ import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
 const checkIfTaxonSelectedSame = (
-  sectionOccurrence: Occurrence,
-  taxon: Taxon
+  taxon: Taxon,
+  sectionOccurrence?: Occurrence
 ) => {
   if (!sectionOccurrence) return false;
 
@@ -35,7 +35,8 @@ const Controller = () => {
     Sample,
     Occurrence
   >();
-  if (!sectionSample || !sectionOccurrence) return null;
+
+  if (!sectionSample) return null;
 
   const getTaxonId = (occ: Occurrence) =>
     occ.data.taxon.preferredId || occ.data.taxon.warehouse_id;
@@ -47,8 +48,8 @@ const Controller = () => {
 
     // bumblebees and dragonflies does not have preferredId
     const isTaxonSelectedSame = checkIfTaxonSelectedSame(
-      sectionOccurrence,
-      taxon
+      taxon,
+      sectionOccurrence
     );
 
     const byId = (occ: Occurrence) => {
@@ -66,7 +67,7 @@ const Controller = () => {
       return;
     }
 
-    if (isOccurrenceEditPage && !isTaxonSelectedSame) {
+    if (sectionOccurrence && isOccurrenceEditPage && !isTaxonSelectedSame) {
       const mergeSpecies = await showMergeSpeciesAlert(alert);
       if (!mergeSpecies) return;
 

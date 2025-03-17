@@ -1,5 +1,5 @@
 import { chatboxOutline } from 'ionicons/icons';
-import * as Yup from 'yup';
+import { z } from 'zod';
 import appModel from 'models/app';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
 import userModel from 'models/user';
@@ -51,33 +51,6 @@ const locationAttr = {
     },
   },
 };
-
-const transectLocationSchema = Yup.object().shape({
-  id: Yup.string().required(),
-  // TODO: enable once all the old samples are uploaded
-  // centroidSref: Yup.string().required(),
-  // srefSystem: Yup.string().required(),
-});
-
-const validation = (val: any) => {
-  if (!val) {
-    return false;
-  }
-  transectLocationSchema.validateSync(val);
-  return true;
-};
-const transectSchema = Yup.object().shape({
-  location: Yup.mixed().test(
-    'area',
-    'Please select your transect.',
-    validation
-  ),
-  recorder: Yup.string().required('Recorder info is missing'),
-  surveyStartTime: Yup.date().required('Start time is missing'),
-  // surveyEndTime: Yup.date().required('End time is missing'), // automatically set on send
-  temperature: Yup.string().required('Temperature info is missing'),
-  windSpeed: Yup.string().required('Wind speed info is missing'),
-});
 
 const config: Survey = {
   id: 562,
@@ -165,17 +138,15 @@ const config: Survey = {
         });
       },
 
-      verify(attrs) {
-        try {
-          Yup.object()
-            .shape({ count: Yup.number().required('Count cannot be empty') })
-            .validateSync(attrs, { abortEarly: false });
-        } catch (attrError) {
-          return attrError;
-        }
-
-        return null;
-      },
+      verify: attrs =>
+        z
+          .object({
+            count: z.number({
+              required_error: 'Count cannot be empty',
+              invalid_type_error: 'Count cannot be empty',
+            }),
+          })
+          .safeParse(attrs).error,
     },
 
     create({ Sample, location }) {
@@ -196,30 +167,40 @@ const config: Survey = {
       return sample;
     },
 
-    verify(attrs) {
-      try {
-        Yup.object()
-          .shape({
-            reliability: Yup.string().required('Reliability cannot be empty.'),
-          })
-          .validateSync(attrs, { abortEarly: false });
-      } catch (attrError) {
-        return attrError;
-      }
-
-      return null;
-    },
+    verify: attrs =>
+      z
+        .object({
+          reliability: z.string({
+            required_error: 'Reliability cannot be empty.',
+          }),
+        })
+        .safeParse(attrs).error,
   },
 
-  verify(attrs) {
-    try {
-      transectSchema.validateSync(attrs, { abortEarly: false });
-    } catch (attrError) {
-      return attrError;
-    }
-
-    return null;
-  },
+  verify: attrs =>
+    z
+      .object({
+        location: z.object(
+          {
+            id: z.string(),
+            // TODO: enable once all the old samples are uploaded
+            // centroidSref: z.string().required(),
+            // srefSystem: z.string().required(),
+          },
+          {
+            invalid_type_error: 'Please select your transect.',
+            required_error: 'Please select your transect.',
+          }
+        ),
+        recorder: z.string({ required_error: 'Recorder info is missing' }),
+        surveyStartTime: z.string({ required_error: 'Start time is missing' }),
+        // surveyEndTime: // automatically set on send
+        temperature: z.number({
+          required_error: 'Temperature info is missing',
+        }),
+        windSpeed: z.string({ required_error: 'Wind speed info is missing' }),
+      })
+      .safeParse(attrs).error,
 
   create({ Sample }) {
     const recorder = `${userModel.data.firstName} ${userModel.data.lastName}`;

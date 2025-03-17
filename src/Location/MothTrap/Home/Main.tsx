@@ -66,7 +66,11 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
     const getLampEntry = (entry: Lamp) => {
       const { quantity } = entry.data;
 
-      const lampValue = entry.data.type || <T>Lamp</T>;
+      const lampValue = entry.data.type || (
+        <div className="text-warning">
+          <T>Lamp</T>
+        </div>
+      );
 
       const path = `${url}/lamps/${entry.cid}`;
 
@@ -77,7 +81,6 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
           <IonItem routerLink={path} detail={false}>
             <div className="flex flex-col gap-1 overflow-hidden py-2">
               <div className="overflow-hidden text-ellipsis whitespace-nowrap text-sm">
-                {lampValue}
                 {lampValue}
               </div>
               <div className="">

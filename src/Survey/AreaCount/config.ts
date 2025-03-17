@@ -208,15 +208,7 @@ const survey: Survey = {
     },
   },
 
-  verify(attrs) {
-    try {
-      areaCountSchema.validateSync(attrs, { abortEarly: false });
-    } catch (attrError) {
-      return attrError;
-    }
-
-    return null;
-  },
+  verify: attrs => areaCountSchema.safeParse(attrs).error,
 
   create({ Sample, surveyId, surveyName, hasGPSPermission }) {
     const sample = new Sample({

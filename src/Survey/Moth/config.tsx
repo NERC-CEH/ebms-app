@@ -7,7 +7,7 @@ import {
   moonOutline,
 } from 'ionicons/icons';
 import SunCalc from 'suncalc';
-import * as Yup from 'yup';
+import { z } from 'zod';
 import { device, isValidLocation, timeFormat } from '@flumens';
 import { IonIcon, IonImg } from '@ionic/react';
 import firstQuarterMoonIcon from 'common/images/first-quarter-moon.svg';
@@ -74,59 +74,6 @@ export enum MachineInvolvement {
    */
   MACHINE = 5,
 }
-
-const fixedLocationSchema = Yup.object().shape({
-  latitude: Yup.number().required(),
-  longitude: Yup.number().required(),
-  name: Yup.string().required(),
-});
-
-const validateLocation = (val: any) => {
-  try {
-    // TODO: Backwards compatibility
-    if (val.name) {
-      fixedLocationSchema.validateSync(val);
-    } else {
-      fixedLocationSchema.validateSync(val.data.location);
-    }
-    return true;
-  } catch (e) {
-    return false;
-  }
-};
-
-export const verifyLocationSchema = Yup.mixed().test(
-  'location',
-  'Please add the moth trap.',
-  validateLocation
-);
-
-const verifyCountSchema = (occurrenceAttr: any) => {
-  return occurrenceAttr.count + occurrenceAttr['count-outside'] > 0;
-};
-
-const locationAttr = {
-  remote: {
-    id: 'location_id',
-    values(location: any, submission: any) {
-      let centroidSref;
-      if (location?.latitude) {
-        // TODO: Backwards compatibility
-        centroidSref = `${location?.latitude} ${location?.longitude}`;
-      } else {
-        centroidSref = `${location.data.location.latitude} ${location.data.location.longitude}`;
-      }
-
-      // eslint-disable-next-line
-      submission.values = {
-        ...submission.values,
-        entered_sref: centroidSref,
-      };
-
-      return location.id;
-    },
-  },
-};
 
 const moonPhaseValues = [
   {
@@ -310,7 +257,22 @@ const survey: Survey = {
   webForm: 'enter-moth-trap-records',
 
   attrs: {
-    location: locationAttr,
+    location: {
+      remote: {
+        id: 'location_id',
+        values(location: any, submission: any) {
+          const centroidSref = `${location.data.location.latitude} ${location.data.location.longitude}`;
+
+          // eslint-disable-next-line
+          submission.values = {
+            ...submission.values,
+            entered_sref: centroidSref,
+          };
+
+          return location.id;
+        },
+      },
+    },
 
     surveyStartTime: {
       menuProps: { label: 'Start Time' },
@@ -557,20 +519,17 @@ const survey: Survey = {
     },
 
     verify(attrs) {
-      try {
-        const occurrenceSchema = Yup.object()
-          .shape({
-            count: Yup.number().required(),
-            'count-outside': Yup.number().required(),
-          })
-          .test('test', `Count sum must be greater than 0`, verifyCountSchema);
+      const occurrenceSchema = z
+        .object({
+          count: z.number(),
+          'count-outside': z.number(),
+        })
+        .refine(
+          (val: any) => val.count + val['count-outside'] > 0,
+          `Count sum must be greater than 0`
+        );
 
-        occurrenceSchema.validateSync(attrs, { abortEarly: false });
-      } catch (attrError) {
-        return attrError;
-      }
-
-      return null;
+      return occurrenceSchema.safeParse(attrs).error;
     },
 
     create({ Occurrence: AppOccurrence, taxon, identifier, photo }) {
@@ -600,19 +559,30 @@ const survey: Survey = {
     },
   },
 
-  verify(attrs) {
-    try {
-      const sampleSchema = Yup.object().shape({
-        location: verifyLocationSchema,
-      });
-
-      sampleSchema.validateSync(attrs, { abortEarly: false });
-    } catch (attrError) {
-      return attrError;
-    }
-
-    return null;
-  },
+  verify: attrs =>
+    z
+      .object({
+        location: z.object(
+          {
+            id: z.string({ required_error: 'Location is missing.' }),
+            data: z.object({
+              location: z
+                .object({
+                  latitude: z.number().nullable().optional(),
+                  longitude: z.number().nullable().optional(),
+                })
+                .refine(
+                  (val: any) =>
+                    Number.isFinite(val.latitude) &&
+                    Number.isFinite(val.longitude),
+                  'Location is missing.'
+                ),
+            }),
+          },
+          { invalid_type_error: 'Location is missing.' }
+        ),
+      })
+      .safeParse(attrs).error,
 
   create({ Sample, recorder, surveyId, surveyName }) {
     const sample = new Sample({

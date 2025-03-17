@@ -1,16 +1,14 @@
 import axios from 'axios';
-import * as Yup from 'yup';
+import z from 'zod';
 import { HandledError, isAxiosNetworkError } from '@flumens';
 import config from 'common/config';
 import { surveyConfigs as surveys } from 'common/models/sample';
 import userModel from 'models/user';
 
-const speciesSchemaBackend = Yup.object().shape({
-  by_species: Yup.object()
-    .shape({
-      buckets: Yup.array().required(),
-    })
-    .required(),
+const speciesSchemaBackend = z.object({
+  by_species: z.object({
+    buckets: z.any().array(),
+  }),
 });
 
 export async function fetchSpeciesReport() {
@@ -35,13 +33,10 @@ export async function fetchSpeciesReport() {
 
     if (!response.aggregations) return [];
 
-    const isValidResponse = await speciesSchemaBackend.isValid(
+    const isValid = speciesSchemaBackend.safeParse(
       response.aggregations
-    );
-
-    if (!isValidResponse) {
-      throw new Error('Invalid server response.');
-    }
+    ).success;
+    if (!isValid) throw new Error('Invalid server response.');
 
     return response.aggregations.by_species.buckets;
   } catch (error) {
@@ -61,15 +56,7 @@ export async function fetchUserSpeciesReport(showLastMontOnly) {
   date.setDate(1); // reset to start of the month
   const thisMonth = date.toISOString().split('T')[0];
   const lastMonthQuery = showLastMontOnly
-    ? [
-        {
-          range: {
-            'metadata.updated_on': {
-              gte: `${thisMonth} 00:00:00`,
-            },
-          },
-        },
-      ]
+    ? [{ range: { 'metadata.updated_on': { gte: `${thisMonth} 00:00:00` } } }]
     : [];
 
   const data = JSON.stringify({
@@ -77,17 +64,7 @@ export async function fetchUserSpeciesReport(showLastMontOnly) {
     query: {
       bool: {
         must: [
-          {
-            bool: {
-              should: [
-                {
-                  match: {
-                    'metadata.website.id': 118,
-                  },
-                },
-              ],
-            },
-          },
+          { bool: { should: [{ match: { 'metadata.website.id': 118 } }] } },
 
           ...lastMonthQuery,
         ],
@@ -95,15 +72,9 @@ export async function fetchUserSpeciesReport(showLastMontOnly) {
     },
     aggs: {
       by_species: {
-        terms: {
-          field: 'taxon.accepted_name.keyword',
-        },
+        terms: { field: 'taxon.accepted_name.keyword' },
         aggs: {
-          sample_count: {
-            cardinality: {
-              field: 'event.event_id',
-            },
-          },
+          sample_count: { cardinality: { field: 'event.event_id' } },
 
           group_id: { min: { field: 'taxon.input_group_id' } },
         },
@@ -128,12 +99,10 @@ export async function fetchUserSpeciesReport(showLastMontOnly) {
 
     if (!response.aggregations) return [];
 
-    const isValidResponse = await speciesSchemaBackend.isValid(
+    const isValid = speciesSchemaBackend.safeParse(
       response.aggregations
-    );
-    if (!isValidResponse) {
-      throw new Error('Invalid server response.');
-    }
+    ).success;
+    if (!isValid) throw new Error('Invalid server response.');
 
     return response.aggregations.by_species.buckets;
   } catch (e) {

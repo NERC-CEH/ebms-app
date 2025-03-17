@@ -2,7 +2,7 @@
 import i18n from 'i18next';
 import { resizeOutline, flowerOutline, arrowBackOutline } from 'ionicons/icons';
 import { merge } from 'lodash';
-import * as Yup from 'yup';
+import z from 'zod';
 import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import { areaCountSchema, Survey } from 'Survey/common/config';
@@ -357,19 +357,17 @@ const speciesConfig: Survey = {
   },
 
   verify(_, model) {
-    try {
-      if (model.data.surveyStartTime) {
-        Yup.object()
-          .shape({
-            data: areaCountSchema,
-            samples: Yup.array()
-              .min(1, 'Please add your target species')
-              .required('Please add your target species'),
-          })
-          .validateSync(model, { abortEarly: false });
-      }
-    } catch (attrError) {
-      return attrError;
+    if (model.data.surveyStartTime) {
+      return z
+        .object({
+          data: areaCountSchema,
+          samples: z
+            .array(z.object({}), {
+              required_error: 'Please add your target species',
+            })
+            .min(1, 'Please add your target species'),
+        })
+        .safeParse(model).error;
     }
 
     return null;

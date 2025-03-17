@@ -42,6 +42,7 @@ const Location = () => {
 
   const onLocationDelete = (location: MothTrap) => {
     location.destroy();
+    locations.remove(location);
   };
 
   const onLocationUpload = async (location: MothTrap) => {

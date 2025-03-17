@@ -808,8 +808,8 @@ msgid "Assign a project to a count"
 msgstr "Assign a project to a count"
 
 # Help pages
-msgid "<0>Start a count.</0><1>Select "Additional Details," then “Project”.</1><2>Finally, choose the appropriate project.</2>"
-msgstr "<0>Start a count.</0><1>Select "Additional Details," then “Project”.</1><2>Finally, choose the appropriate project.</2>"
+msgid "<0>Start a count.</0><1>Select \"Additional Details,\" then “Project”.</1><2>Finally, choose the appropriate project.</2>"
+msgstr "<0>Start a count.</0><1>Select \"Additional Details,\" then “Project”.</1><2>Finally, choose the appropriate project.</2>"
 
 # Help pages
 msgid "Assign a site to a count"
@@ -2013,6 +2013,10 @@ msgstr "Other type"
 # Moth trap survey
 msgid "Add lamp"
 msgstr "Add lamp"
+
+# Moth trap survey
+msgid "Lamp type is a required field."
+msgstr "Lamp type is a required field."
 
 # Moth trap survey
 msgid "What type of trap was it?"

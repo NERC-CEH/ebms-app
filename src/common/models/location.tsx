@@ -2,7 +2,6 @@ import { IObservableArray, observable } from 'mobx';
 import axios, { AxiosError } from 'axios';
 import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { snakeCase } from 'lodash';
-import * as Yup from 'yup';
 import { z, object } from 'zod';
 import { Geolocation } from '@capacitor/geolocation';
 import {
@@ -71,7 +70,7 @@ export const mothTrapLampQuantityAttr = {
   title: 'Quantity',
   prefix: mothTrapNumberIcon,
   appearance: 'counter',
-  validations: { min: 1 },
+  validation: { min: 1 },
 } as const;
 
 export const mothTrapLampsAttr = { id: 'locAttr:306' } as const;
@@ -117,31 +116,10 @@ type Metadata = {
   groupId?: string;
 };
 
-const fixedLocationSchema = Yup.object().shape({
-  latitude: Yup.number().required(),
-  longitude: Yup.number().required(),
-  name: Yup.string().required(),
-});
-
-const validateLocation = (val: any) => {
-  try {
-    fixedLocationSchema.validateSync(val);
-    return true;
-  } catch (e) {
-    return false;
-  }
-};
-
 export const MOTH_TRAP_TYPE = '18879';
 export const TRANSECT_TYPE = '777';
 export const TRANSECT_SECTION_TYPE = '778';
 export const GROUP_SITE_TYPE = '14';
-
-export const verifyLocationSchema = Yup.mixed().test(
-  'location',
-  'Please add the moth trap location and name.',
-  validateLocation
-);
 
 type LocationOptions = ModelOptions<Attrs> & {
   media?: any[];
@@ -225,29 +203,43 @@ class LocationModel extends Model<Attrs> {
     },
 
     verify(attrs: any) {
-      try {
-        const lampSchema = Yup.object().shape({
-          data: Yup.object().shape({
-            description: Yup.string(),
-            quantity: Yup.number().min(1),
-            type: Yup.string().required('Lamp type is a required field.'),
+      const lampSchema = z.object({
+        data: z.object({
+          description: z.string().optional(),
+          quantity: z.number().min(1),
+          type: z
+            .string({ required_error: 'Lamp type is a required field.' })
+            .min(1, 'Lamp type is a required field.'),
+        }),
+      });
+
+      return z
+        .object({
+          location: z
+            .object(
+              {
+                latitude: z.number().nullable().optional(),
+                longitude: z.number().nullable().optional(),
+                name: z
+                  .string({ required_error: 'Location name is missing' })
+                  .min(1, 'Please add the moth trap location and name.'),
+              },
+              { required_error: 'Location is missing.' }
+            )
+            .refine(
+              (val: any) =>
+                Number.isFinite(val.latitude) && Number.isFinite(val.longitude),
+              'Location is missing.'
+            ),
+
+          [mothTrapTypeAttr.id]: z.string({
+            required_error: 'Trap type is a required field.',
           }),
-        });
-
-        const schema = Yup.object().shape({
-          location: verifyLocationSchema,
-          [mothTrapTypeAttr.id]: Yup.string().required(
-            'Trap type is a required field.'
-          ),
-          [mothTrapLampsAttr.id]: Yup.array().of(lampSchema),
-        });
-
-        schema.validateSync(attrs, { abortEarly: false });
-      } catch (attrError) {
-        return attrError;
-      }
-
-      return null;
+          [mothTrapLampsAttr.id]: z
+            .array(lampSchema, { required_error: 'No lamps added' })
+            .min(1, 'No lamps added'),
+        })
+        .safeParse(attrs).error;
     },
   };
 
