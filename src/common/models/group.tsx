@@ -38,14 +38,12 @@ class GroupModel extends Model<Attrs> {
     indexedLocationIds: z.array(z.number()).optional(),
   });
 
-  static parseRemoteJSON({ id, createdOn, ...data }: RemoteAttributes) {
+  static dto({ id, createdOn, ...data }: RemoteAttributes) {
     return {
       id,
       cid: UUIDv7(),
-
-      data,
-
       createdAt: new Date(createdOn).getTime(),
+      data,
     };
   }
 

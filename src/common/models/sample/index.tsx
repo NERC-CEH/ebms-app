@@ -138,8 +138,8 @@ type Metadata = SampleMetadata & {
 };
 
 export default class Sample extends SampleOriginal<Data, Metadata> {
-  static parseRemoteJSON(json: ElasticSample, remoteUrl: string, survey?: any) {
-    const parsed = super.parseRemoteJSON(json, remoteUrl, survey);
+  static dto(json: ElasticSample, remoteUrl: string, survey?: any) {
+    const parsed = super.dto(json, remoteUrl, survey);
     if (parsed.data?.location?.shape) {
       parsed.data.location.area = calculateArea(parsed.data?.location?.shape);
     }

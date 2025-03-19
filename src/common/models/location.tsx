@@ -243,7 +243,7 @@ class LocationModel extends Model<Attrs> {
     },
   };
 
-  static parseRemoteJSON(
+  static dto(
     { id, createdOn, updatedOn, externalKey, ...data }: RemoteAttributes,
     metadata?: Partial<Metadata>
   ) {
@@ -252,9 +252,7 @@ class LocationModel extends Model<Attrs> {
       id,
       createdAt: new Date(createdOn!).getTime(),
       updatedAt: new Date(updatedOn!).getTime(),
-
       metadata,
-
       data: {
         id,
         createdAt: createdOn,

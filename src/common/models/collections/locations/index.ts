@@ -134,8 +134,8 @@ export class Locations extends Collection<Location> {
 
     return docs.map(doc =>
       Array.isArray(doc)
-        ? this.Model.parseRemoteJSON(doc[0], doc[1]) // with metadata
-        : this.Model.parseRemoteJSON(doc)
+        ? this.Model.dto(doc[0], doc[1]) // with metadata
+        : this.Model.dto(doc)
     );
   };
 

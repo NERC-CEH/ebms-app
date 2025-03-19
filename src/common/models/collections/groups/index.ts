@@ -126,7 +126,7 @@ export class Groups extends Collection<GroupModel> {
       `📚 Collection: ${this.id} collection fetching done ${docs.length} documents`
     );
 
-    return docs.map(this.Model.parseRemoteJSON);
+    return docs.map(this.Model.dto);
   };
 
   fetchLocations = async () => {
