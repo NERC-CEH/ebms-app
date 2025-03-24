@@ -138,7 +138,7 @@ type Metadata = SampleMetadata & {
 };
 
 export default class Sample extends SampleModel<Data, Metadata> {
-  static fromElasticDto(json: ElasticSample, options: any, survey?: any) {
+  static fromElasticDTO(json: ElasticSample, options: any, survey?: any) {
     const parsed = super.fromElasticDTO(json, options, survey) as any;
     if (parsed.data?.location?.shape) {
       parsed.data.location.area = calculateArea(parsed.data?.location?.shape);
@@ -186,7 +186,6 @@ export default class Sample extends SampleModel<Data, Metadata> {
       ...options,
       url: config.backend.indicia.url,
       getAccessToken: () => userModel.getAccessToken(),
-      Sample,
       Occurrence,
       Media,
       store: samplesStore,

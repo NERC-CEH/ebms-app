@@ -59,7 +59,6 @@ const UploadedSurveys = ({ isOpen }: Props) => {
       const surveyIDs = Object.values(getSurveyConfigs()).map(
         ({ id }: any) => id
       );
-
       const remoteSamples = await samplesCollection.fetchRemote(
         from,
         surveyIDs
