@@ -16,6 +16,7 @@ import {
   LocationType,
 } from '@flumens';
 import { IonIcon } from '@ionic/react';
+import config from 'common/config';
 import mothTrap from 'common/images/moth-inside-icon.svg';
 import numberIcon from 'common/images/number.svg';
 import userModel from 'models/user';
@@ -247,6 +248,8 @@ class Location extends LocationModel<Data> {
   }: LocationOptions) {
     super({
       store: skipStore ? undefined : locationsStore,
+      url: config.backend.indicia.url,
+      getAccessToken: () => userModel.getAccessToken(),
       ...options,
     });
 
