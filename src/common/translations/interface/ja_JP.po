@@ -661,16 +661,22 @@ msgid ""
 "started straight away"
 msgstr "これらの魅力的な昆虫の保全をサポートするための研究に、高品質のデータを提供することはかつてないほど容易になりました。 すぐに始められます"
 
+# About pages
 msgid ""
-"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
-"project."
-msgstr "このアプリは、ヨーロッパのチョウの評価(ABLE)プロジェクトの一環として開発されました。"
+"This app enables you to contribute to the recording and conservation of "
+"butterflies across the world."
+msgstr ""
 
-msgid "The ABLE project is a partnership between"
-msgstr "ABLE プロジェクトは、パートナーシップ"
+# About pages
+msgid "The app was supported through several projects:"
+msgstr ""
 
-msgid "and"
-msgstr "と"
+# About pages
+msgid ""
+"The app has benefited from input from a number of butterfly experts from "
+"across the world and associated with national Butterfly Monitoring Schemes "
+"listed at:"
+msgstr ""
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"

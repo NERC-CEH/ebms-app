@@ -698,18 +698,22 @@ msgstr ""
 "изключително интересни и също така жизнено важни за околната среда насекоми."
 " И вие можете да се включите веднага!"
 
+# About pages
 msgid ""
-"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
-"project."
+"This app enables you to contribute to the recording and conservation of "
+"butterflies across the world."
 msgstr ""
-"Това приложение беше разработено в рамките на проекта Оценка Състоянието на "
-"Дневните Пеперуди в Европа - Assessing Butterflies in Europe (ABLE)."
 
-msgid "The ABLE project is a partnership between"
-msgstr "Проектът ABLE се изпълнява в партньорство между"
+# About pages
+msgid "The app was supported through several projects:"
+msgstr ""
 
-msgid "and"
-msgstr "и"
+# About pages
+msgid ""
+"The app has benefited from input from a number of butterfly experts from "
+"across the world and associated with national Butterfly Monitoring Schemes "
+"listed at:"
+msgstr ""
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"

@@ -674,18 +674,22 @@ msgid ""
 "started straight away"
 msgstr ""
 
+# About pages
 msgid ""
-"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
-"project."
+"This app enables you to contribute to the recording and conservation of "
+"butterflies across the world."
 msgstr ""
-"APlikacioni është krijuar si pjesë e projektit të Vlerësimit të Fluturave në"
-" Europë (ABLE)."
 
-msgid "The ABLE project is a partnership between"
-msgstr "Projekti ABLE është një partnership mes"
+# About pages
+msgid "The app was supported through several projects:"
+msgstr ""
 
-msgid "and"
-msgstr "dhe"
+# About pages
+msgid ""
+"The app has benefited from input from a number of butterfly experts from "
+"across the world and associated with national Butterfly Monitoring Schemes "
+"listed at:"
+msgstr ""
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"

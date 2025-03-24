@@ -682,18 +682,22 @@ msgstr ""
 "fascynujących i istotnych owadów nigdy nie było łatwiejsze. Możesz zacząć od"
 " razu "
 
+# About pages
 msgid ""
-"The app was developed as part of the Assessing Butterflies in Europe (ABLE) "
-"project."
+"This app enables you to contribute to the recording and conservation of "
+"butterflies across the world."
 msgstr ""
-"Aplikacja powstała w ramach projektu Assessing Butterflies in Europe (ABLE)."
-" "
 
-msgid "The ABLE project is a partnership between"
-msgstr "Projekt ABLE to partnerstwo pomiędzy"
+# About pages
+msgid "The app was supported through several projects:"
+msgstr ""
 
-msgid "and"
-msgstr "i"
+# About pages
+msgid ""
+"The app has benefited from input from a number of butterfly experts from "
+"across the world and associated with national Butterfly Monitoring Schemes "
+"listed at:"
+msgstr ""
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
