@@ -3,10 +3,7 @@ import { informationCircleOutline } from 'ionicons/icons';
 import wkt from 'wellknown';
 import { Main, InfoMessage } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
-import Location, {
-  TRANSECT_SECTION_TYPE,
-  TRANSECT_TYPE,
-} from 'common/models/location';
+import Location, { LocationType } from 'common/models/location';
 import locations, { byType } from 'models/collections/locations';
 import transformToLatLon from 'helpers/location';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
@@ -17,7 +14,7 @@ function getTransectItem(transect: Location, onTransectSelect: any) {
   const byTransectId = (section: Location) =>
     section.data.parentId === transect.id;
   const sections = locations
-    .filter(byType(TRANSECT_SECTION_TYPE))
+    .filter(byType(LocationType.TransectSection))
     .filter(byTransectId);
 
   const getSectionGeometry = (section: Location) => {
@@ -60,7 +57,7 @@ type Props = {
 };
 
 function Transects({ onTransectSelect }: Props) {
-  const transects = locations.filter(byType(TRANSECT_TYPE));
+  const transects = locations.filter(byType(LocationType.Transect));
 
   const hasTransects = !!transects.length;
   const getTransectItemWrap = (transect: Location) =>

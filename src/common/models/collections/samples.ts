@@ -1,4 +1,3 @@
-import { intercept } from 'mobx';
 import SampleCollection from '@flumens/models/dist/Indicia/SampleCollection';
 import config from 'common/config';
 import Sample from 'models/sample';
@@ -16,13 +15,11 @@ const samples: SampleCollection<Sample> = new SampleCollection({
   getAccessToken: () => userModel.getAccessToken(),
 }) as any;
 
-export const samplesById = new Map<string, Sample>();
-
 export async function uploadAllSamples() {
   console.log('SavedSamples: setting all samples to send.');
   let affectedRecordsCount = 0;
   for (let index = 0; index < samples.length; index++) {
-    const sample = samples[index];
+    const sample = samples.data[index];
 
     const isNotInDraftStage = sample.metadata.saved;
     const isAlreadyUploaded = !!sample.id;
@@ -38,23 +35,6 @@ export async function uploadAllSamples() {
 
   return affectedRecordsCount;
 }
-
-const onChangeUpdateMap = (change: any) => {
-  if (change.added && change.added.length) {
-    const attachToById = (model: any) => {
-      samplesById.set(model.cid, model);
-    };
-    change.added.forEach(attachToById);
-  }
-
-  if (change.removedCount > 0) {
-    const key: string = Array.from(samplesById.keys())[change.index];
-    samplesById.delete(key);
-  }
-
-  return change;
-};
-intercept(samples, onChangeUpdateMap);
 
 export function getPending() {
   const byUploadStatus = (sample: Sample) =>

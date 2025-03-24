@@ -76,7 +76,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
 
   const showDeleteSurveyPrompt = useDeleteSurveyPrompt(sample);
 
-  const { synchronising } = sample.remote;
+  const synchronising = sample.isSynchronising;
 
   const survey = sample.getSurvey();
 
@@ -153,7 +153,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
   const allowDeletion = sample.isStored;
 
   const openItem = () => {
-    if (sample.remote.synchronising) return; // fixes button onPressUp and other accidental navigation
+    if (sample.isSynchronising) return; // fixes button onPressUp and other accidental navigation
     navigate(href);
   };
 

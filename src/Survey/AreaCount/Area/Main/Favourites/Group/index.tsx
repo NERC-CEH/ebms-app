@@ -2,7 +2,7 @@ import { observer } from 'mobx-react';
 import { useTranslation } from 'react-i18next';
 import { IonList } from '@ionic/react';
 import locations, { byType } from 'models/collections/locations';
-import Location, { GROUP_SITE_TYPE } from 'models/location';
+import Location, { LocationType } from 'models/location';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Entry from './Entry';
 
@@ -29,7 +29,7 @@ const GroupLocations = ({ onSelect, groupId, selectedLocationId }: Props) => {
   const byGroup = (location: Location) => location.metadata.groupId === groupId;
 
   const entries = locations
-    .filter(byType(GROUP_SITE_TYPE))
+    .filter(byType(LocationType.GroupSite))
     .filter(byGroup)
     .map(getEntry);
 

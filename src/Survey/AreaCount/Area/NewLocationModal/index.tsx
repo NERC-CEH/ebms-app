@@ -2,7 +2,6 @@ import { forwardRef, useEffect, useState } from 'react';
 import { observable, IObservableArray } from 'mobx';
 import clsx from 'clsx';
 import { Trans as T, useTranslation } from 'react-i18next';
-import { z } from 'zod';
 import { Capacitor } from '@capacitor/core';
 import {
   Block,
@@ -24,7 +23,7 @@ import {
 } from '@ionic/react';
 import config from 'common/config';
 import { getGeomCenter, getGeomString } from 'common/helpers/location';
-import LocationModel, { GROUP_SITE_TYPE } from 'common/models/location';
+import { LocationType, Data as Site, dtoSchema } from 'common/models/location';
 import Media from 'common/models/media';
 import { Group } from 'common/models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
@@ -72,8 +71,6 @@ import {
   woodlandNumberAttr,
 } from './config';
 
-type Site = z.infer<typeof LocationModel.remoteSchema>;
-
 const useDismissHandler = (newLocation: any) => {
   const { t } = useTranslation();
   const [present] = useIonActionSheet();
@@ -101,7 +98,7 @@ const useDismissHandler = (newLocation: any) => {
 };
 
 const getNewSiteSeed = (shape?: Location['shape']): Partial<Site> => ({
-  locationTypeId: GROUP_SITE_TYPE,
+  locationTypeId: LocationType.GroupSite,
   boundaryGeom: shape ? getGeomString(shape) : undefined,
   lat: shape ? `${getGeomCenter(shape)[1]}` : undefined,
   lon: shape ? `${getGeomCenter(shape)[0]}` : undefined,
@@ -162,8 +159,7 @@ const NewLocationModal = (
   };
   useEffect(resetState, [shape]);
 
-  const { success: isValidLocation } =
-    LocationModel.remoteSchema.safeParse(newLocation);
+  const { success: isValidLocation } = dtoSchema.safeParse(newLocation);
 
   const canDismiss = useDismissHandler(newLocation || {});
 

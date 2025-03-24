@@ -9,7 +9,7 @@ import groups from 'common/models/collections/groups';
 import GroupModel from 'common/models/group';
 import Media from 'common/models/media';
 import locations from 'models/collections/locations';
-import LocationModel, { RemoteAttributes } from 'models/location';
+import LocationModel, { Data } from 'models/location';
 import Sample, { AreaCountLocation } from 'models/sample';
 import userModel from 'models/user';
 import Header from './Header';
@@ -117,10 +117,7 @@ const AreaController = () => {
 
   const onCloseLocationModal = () => setNewLocationModalOpen(false);
 
-  const onSaveNewLocation = async (
-    newSiteAttrs: RemoteAttributes,
-    media: Media[]
-  ) => {
+  const onSaveNewLocation = async (newSiteAttrs: Data, media: Media[]) => {
     if (!userModel.isLoggedIn() || !userModel.data.verified || !device.isOnline)
       return false;
 
@@ -133,11 +130,11 @@ const AreaController = () => {
 
       const newSite = new LocationModel({
         skipStore: true,
-        attrs: newSiteAttrs as any, // any - to fix Moth trap attrs
+        data: newSiteAttrs as any, // any - to fix Moth trap attrs
         media,
       });
       await newSite.saveRemote();
-      await group.addLocation(newSite);
+      await group.addRemoteLocation(newSite.id);
       await refreshLocations();
 
       toast.success('Successfully saved a location.');
@@ -168,7 +165,7 @@ const AreaController = () => {
         onSelectHistoricalLocation={onSelectHistoricalLocation}
         onCreateGroupLocation={onCreateGroupLocation}
         onSelectGroupLocation={onSelectGroupLocation}
-        isFetchingLocations={locations.fetching.isFetching}
+        isFetchingLocations={locations.isSynchronising}
       />
       <NewLocationModal
         ref={modal}

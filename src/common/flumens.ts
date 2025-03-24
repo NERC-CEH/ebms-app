@@ -1,26 +1,46 @@
-export { boolToWarehouseValue } from '@flumens/models/dist/Indicia/helpers';
 export {
   default as Model,
   type Options as ModelOptions,
   type Data as ModelAttrs,
 } from '@flumens/models/dist/Model';
 export {
-  default as Sample,
+  default as SampleModel,
   type Data as SampleAttrs,
   type Options as SampleOptions,
   type Metadata as SampleMetadata,
   type RemoteConfig,
 } from '@flumens/models/dist/Indicia/Sample';
 export {
-  default as Media,
+  default as MediaModel,
   type Data as MediaAttrs,
 } from '@flumens/models/dist/Indicia/Media';
 export {
-  default as Occurrence,
+  default as OccurrenceModel,
   type Data as OccurrenceAttrs,
   type Options as OccurrenceOptions,
   type Metadata as OccurrenceMetadata,
 } from '@flumens/models/dist/Indicia/Occurrence';
+export {
+  default as GroupCollection,
+  byGroupMembershipStatus,
+} from '@flumens/models/dist/Indicia/GroupCollection';
+export {
+  default as LocationCollection,
+  byLocationType,
+  type Options as LocationCollectionOptions,
+} from '@flumens/models/dist/Indicia/LocationCollection';
+export {
+  default as GroupModel,
+  type Data as GroupData,
+  type LocationData as GroupLocationData,
+} from '@flumens/models/dist/Indicia/Group';
+export {
+  default as LocationModel,
+  type Data as LocationData,
+  type Options as LocationOptions,
+  dtoSchema as locationDtoSchema,
+  LocationType,
+} from '@flumens/models/dist/Indicia/Location';
 export { validateRemoteModel } from '@flumens/models/dist/Indicia/helpers';
 export {
   default as DrupalUserModel,

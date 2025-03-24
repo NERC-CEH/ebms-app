@@ -1,6 +1,6 @@
 import { IObservableArray } from 'mobx';
 import {
-  Occurrence as OccurrenceOriginal,
+  OccurrenceModel,
   OccurrenceAttrs,
   OccurrenceMetadata,
   validateRemoteModel,
@@ -105,7 +105,7 @@ export const doesShallowTaxonMatch = (shallowEntry: Taxon, taxon: Taxon) => {
   return false;
 };
 
-export default class Occurrence extends OccurrenceOriginal<Attrs, Metadata> {
+export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
   declare media: IObservableArray<Media>;
 
   declare parent?: Sample;

@@ -112,8 +112,8 @@ export class AppModel extends Model<Data> {
     this.save();
   }
 
-  resetDefaults() {
-    return super.resetDefaults(defaults);
+  reset() {
+    return super.reset(defaults);
   }
 }
 

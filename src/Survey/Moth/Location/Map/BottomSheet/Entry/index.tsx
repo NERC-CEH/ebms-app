@@ -69,10 +69,10 @@ const MothTrapEntry = ({
   const onUploadWrap = () => onUpload(mothTrap);
   const showDeletePrompt = useDeleteTrapPrompt(onDeleteWrap);
 
-  const isDraft = mothTrap.isDraft();
+  const { isDraft } = mothTrap;
   const label = location?.name || <T>Draft</T>;
 
-  const isUploading = mothTrap.remote.synchronising;
+  const isUploading = mothTrap.isSynchronising;
 
   const onClick = () => {
     if (!isDraft) {

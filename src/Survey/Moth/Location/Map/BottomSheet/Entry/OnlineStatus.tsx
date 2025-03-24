@@ -11,8 +11,7 @@ const OnlineStatus = ({ location, onUpload }: Props) => {
   if (!location.metadata.saved)
     return <Badge className="max-w-32">Draft</Badge>;
 
-  if (location.remote.synchronising)
-    return <IonSpinner className="mr-2 size-4" />;
+  if (location.isSynchronising) return <IonSpinner className="mr-2 size-4" />;
 
   if (location.isUploaded) return null;
 

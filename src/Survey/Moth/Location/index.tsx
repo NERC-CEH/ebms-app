@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { Page, Header, Main, device, useToast, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
 import locations, { byType } from 'common/models/collections/locations';
-import MothTrap, { MOTH_TRAP_TYPE, useValidateCheck } from 'models/location';
+import MothTrap, { LocationType, useValidateCheck } from 'models/location';
 import Sample, { MothTrapLocation } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
@@ -62,7 +62,7 @@ const Location = () => {
 
   const onLocationCreate = () => navigate('/location');
 
-  const mothTraps = locations.filter(byType(MOTH_TRAP_TYPE));
+  const mothTraps = locations.filter(byType(LocationType.MothTrap));
 
   return (
     <Page id="moth-survey-location">
@@ -71,7 +71,7 @@ const Location = () => {
         <Map
           sample={sample}
           mothTraps={mothTraps}
-          isFetchingTraps={locations.fetching.isFetching}
+          isFetchingTraps={locations.isSynchronising}
           isDisabled={isDisabled}
           onLocationSelect={onLocationSelect}
           onLocationDelete={onLocationDelete}

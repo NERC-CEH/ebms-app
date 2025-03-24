@@ -68,7 +68,7 @@ const BottomSheet = ({
   ) => distanceA - distanceB;
 
   const byUploadStatus = ([trap]: MothTrapWithDistance) =>
-    trap.isDraft() ? -1 : 1;
+    trap.isDraft ? -1 : 1;
 
   const getMothTrap = ([mothTrap, distance]: any) => (
     <Entry

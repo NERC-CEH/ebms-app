@@ -4,7 +4,7 @@ import {
   Filesystem,
   Directory as FilesystemDirectory,
 } from '@capacitor/filesystem';
-import { Media as MediaOriginal, MediaAttrs } from '@flumens';
+import { MediaModel, MediaAttrs } from '@flumens';
 import { isPlatform } from '@ionic/react';
 import config from 'common/config';
 import identifyImage from 'common/services/waarneming';
@@ -16,16 +16,17 @@ export type URL = string;
 
 type Attrs = MediaAttrs & { species: any };
 
-export default class Media extends MediaOriginal<Attrs> {
+export default class Media extends MediaModel<Attrs> {
   declare parent?: Sample | Occurrence;
 
   identification = observable({ identifying: false });
 
   constructor(options: any) {
-    super(options);
-
-    this.remote.url = config.backend.indicia.url;
-    this.remote.getAccessToken = () => userModel.getAccessToken();
+    super({
+      ...options,
+      url: config.backend.indicia.url,
+      getAccessToken: () => userModel.getAccessToken(),
+    });
   }
 
   async destroy(silent?: boolean) {

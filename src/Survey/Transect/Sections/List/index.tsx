@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import { Page, useToast, useLoader, device, useSample } from '@flumens';
 import appModel from 'models/app';
 import locations, { byType } from 'models/collections/locations';
-import Location, { TRANSECT_SECTION_TYPE } from 'models/location';
+import Location, { LocationType } from 'models/location';
 import Sample from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
 import Header from './Header';
@@ -50,7 +50,7 @@ const SectionListController = () => {
     };
 
     const sections = locations
-      .filter(byType(TRANSECT_SECTION_TYPE))
+      .filter(byType(LocationType.TransectSection))
       .filter(byTransectId)
       .sort(byCode);
 

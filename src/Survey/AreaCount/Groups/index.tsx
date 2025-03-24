@@ -1,27 +1,21 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { NavContext } from '@ionic/react';
 import {
-  // device,
   Header,
   Page,
+  byGroupMembershipStatus,
+  device,
   useLoader,
   useSample,
   useToast,
 } from 'common/flumens';
 import appModel from 'common/models/app';
 import groups from 'common/models/collections/groups';
-import {
-  fetch as fetchAllGroups,
-  join,
-  leave,
-} from 'common/models/collections/groups/service';
-import Group, { RemoteAttributes } from 'models/group';
+import Group from 'models/group';
 import Sample from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
 import Main from './Main';
-
-const device = { isOnline: true }; // TODO:
 
 const Groups = () => {
   const toast = useToast();
@@ -35,8 +29,8 @@ const Groups = () => {
   // eslint-disable-next-line
   groups.length; // to force refresh when groups list is updated
 
-  const setGroup = (value: any) => {
-    const byId = (group: Group) => group.id === value;
+  const onSelect = (groupId: any) => {
+    const byId = (group: Group) => group.id === groupId;
     const group = groups.find(byId);
     if (!group) {
       // eslint-disable-next-line
@@ -53,43 +47,38 @@ const Groups = () => {
     navigation.goBack();
   };
 
-  const [allGroups, setAllGroups] = useState<RemoteAttributes[]>([]);
-
-  const joinGroup = async (doc: RemoteAttributes) => {
-    console.log('Projects joining', doc.id);
+  const joinGroup = async (group: Group) => {
+    console.log('Projects joining', group.id);
 
     try {
       await loader.show('Please wait...');
-      await join(doc);
+      await group.join();
+      await groups.fetchRemote({ type: 'member' });
+      await groups.fetchRemote({ type: 'joinable' });
 
-      const allGroupsWithoutTheJoined = allGroups.filter(
-        ({ id }: RemoteAttributes) => id !== doc.id
-      );
-      setAllGroups(allGroupsWithoutTheJoined);
       toast.success('Successfully joined the project.');
     } catch (err: any) {
       toast.error(err);
     }
 
     loader.hide();
-
-    await groups.fetchRemote();
   };
 
-  const leaveGroup = async (groupId: string) => {
-    console.log('Projects leaving', groupId);
+  const leaveGroup = async (group: Group) => {
+    console.log('Projects leaving', group.id);
 
     try {
       await loader.show('Please wait...');
-      await leave(groupId);
-      await groups.fetchRemote();
+      await group.leave();
+      await groups.fetchRemote({ type: 'member' });
+      await groups.fetchRemote({ type: 'joinable' });
 
-      if (sample.data.group?.id === groupId) {
+      if (sample.data.group?.id === group.id) {
         // eslint-disable-next-line
         sample.data.group = undefined;
       }
 
-      if (appModel.data.defaultGroup?.id === groupId) {
+      if (appModel.data.defaultGroup?.id === group.id) {
         appModel.data.defaultGroup = undefined;
       }
 
@@ -101,7 +90,7 @@ const Groups = () => {
     loader.hide();
   };
 
-  const refreshGroups = async (type: 'joined' | 'all') => {
+  const refreshGroups = async (type: 'member' | 'joinable') => {
     console.log('Groups refreshing', type);
 
     if (!device.isOnline) {
@@ -112,15 +101,10 @@ const Groups = () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
-    try {
-      await loader.show('Please wait...');
+    await loader.show('Please wait...');
 
-      if (type === 'all') {
-        const docs = await fetchAllGroups({});
-        setAllGroups(docs);
-      } else {
-        await groups.fetchRemote();
-      }
+    try {
+      await groups.fetchRemote({ type });
     } catch (err: any) {
       toast.error(err);
     }
@@ -128,16 +112,27 @@ const Groups = () => {
     loader.hide();
   };
 
+  const byTitle = (group1: Group, group2: Group) =>
+    group1.data.title?.localeCompare(group2.data.title);
+
+  const memberGroups = groups
+    .filter(byGroupMembershipStatus('member'))
+    .sort(byTitle);
+  const joinableGroups = groups
+    .filter(byGroupMembershipStatus('joinable'))
+    .sort(byTitle);
+
   return (
     <Page id="precise-area-count-edit-group">
       <Header title="Projects" />
 
       <Main
         sample={sample}
-        setGroup={setGroup}
+        memberGroups={memberGroups}
+        joinableGroups={joinableGroups}
+        setGroup={onSelect}
         onJoinGroup={joinGroup}
         onLeaveGroup={leaveGroup}
-        allGroups={allGroups}
         onRefresh={refreshGroups}
       />
     </Page>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import {
   IonLabel,
@@ -9,18 +10,18 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import { Main } from 'common/flumens';
-import groups from 'common/models/collections/groups';
-import { RemoteAttributes } from 'common/models/group';
+import Group from 'common/models/group';
 import Sample from 'models/sample';
 import AllGroups from './All';
 import UserGroups from './User';
 
 type Props = {
-  onRefresh: any;
-  setGroup: any;
-  onJoinGroup: any;
-  onLeaveGroup: any;
-  allGroups: RemoteAttributes[];
+  onRefresh: (type: 'member' | 'joinable') => void;
+  setGroup: (groupId: string) => void;
+  onJoinGroup: (group: Group) => void;
+  onLeaveGroup: (group: Group) => void;
+  memberGroups: Group[];
+  joinableGroups: Group[];
   sample: Sample;
 };
 
@@ -28,23 +29,29 @@ const GroupsMain = ({
   sample,
   setGroup,
   onRefresh,
-  allGroups,
+  joinableGroups,
+  memberGroups,
   onJoinGroup,
   onLeaveGroup,
 }: Props) => {
   const [segment, setSegment] = useState<'joined' | 'all'>('joined');
 
+  const onJoinGroupWrap = async (group: Group) => {
+    await onJoinGroup(group);
+    setSegment('joined');
+  };
+
   const onSegmentClick = (e: any) => {
     const newSegment = e.detail.value;
     setSegment(newSegment);
 
-    if (newSegment === 'all' && !allGroups.length) onRefresh('all');
-    if (newSegment === 'joined' && !groups.length) onRefresh('all');
+    if (newSegment === 'all' && !joinableGroups.length) onRefresh('joinable');
+    if (newSegment === 'joined' && !memberGroups.length) onRefresh('member');
   };
 
   const refreshGroups = async (e: any) => {
     e?.detail?.complete(); // refresh pull update
-    onRefresh(segment);
+    onRefresh(segment === 'joined' ? 'member' : 'joinable');
   };
 
   return (
@@ -74,14 +81,15 @@ const GroupsMain = ({
           sample={sample}
           onSelect={setGroup}
           onLeave={onLeaveGroup}
+          groups={memberGroups}
         />
       )}
 
       {segment === 'all' && (
-        <AllGroups groups={allGroups} onJoin={onJoinGroup} />
+        <AllGroups groups={joinableGroups} onJoin={onJoinGroupWrap} />
       )}
     </Main>
   );
 };
 
-export default GroupsMain;
+export default observer(GroupsMain);

@@ -4,7 +4,7 @@ import {
   device,
   ModelValidationMessage,
   useAlert,
-  Sample as SampleOriginal,
+  SampleModel,
   SampleAttrs,
   SampleOptions,
   SampleMetadata,
@@ -20,7 +20,7 @@ import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
 import mothSurvey from 'Survey/Moth/config';
 import transectSurvey from 'Survey/Transect/config';
 import { Survey } from 'Survey/common/config';
-import { RemoteAttributes as LocationAttributes } from '../location';
+import { Data as LocationAttributes } from '../location';
 import Media from '../media';
 import Occurrence, { SpeciesGroup } from '../occurrence';
 import { samplesStore } from '../store';
@@ -137,9 +137,9 @@ type Metadata = SampleMetadata & {
   speciesGroups?: any[];
 };
 
-export default class Sample extends SampleOriginal<Data, Metadata> {
-  static dto(json: ElasticSample, remoteUrl: string, survey?: any) {
-    const parsed = super.dto(json, remoteUrl, survey);
+export default class Sample extends SampleModel<Data, Metadata> {
+  static fromElasticDto(json: ElasticSample, options: any, survey?: any) {
+    const parsed = super.fromElasticDTO(json, options, survey) as any;
     if (parsed.data?.location?.shape) {
       parsed.data.location.area = calculateArea(parsed.data?.location?.shape);
     }
@@ -182,10 +182,15 @@ export default class Sample extends SampleOriginal<Data, Metadata> {
   hasLoctionMissingAndIsnotLocating: any; // from extension
 
   constructor(options: SampleOptions) {
-    super({ ...options, Sample, Occurrence, Media, store: samplesStore });
-
-    this.remote.url = config.backend.indicia.url;
-    this.remote.getAccessToken = () => userModel.getAccessToken();
+    super({
+      ...options,
+      url: config.backend.indicia.url,
+      getAccessToken: () => userModel.getAccessToken(),
+      Sample,
+      Occurrence,
+      Media,
+      store: samplesStore,
+    });
 
     Object.assign(this, VibrateExtension);
     Object.assign(this, GPSExtension);
@@ -232,7 +237,7 @@ export default class Sample extends SampleOriginal<Data, Metadata> {
 
   async upload() {
     if (
-      this.remote.synchronising ||
+      this.isSynchronising ||
       this.isUploaded ||
       this.getSurvey().deprecated
     ) {

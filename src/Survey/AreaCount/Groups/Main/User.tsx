@@ -1,6 +1,7 @@
+import { useState } from 'react';
+import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import { useTranslation, Trans as T } from 'react-i18next';
-import { RadioOption } from '@flumens';
 import {
   IonList,
   IonRadioGroup,
@@ -10,56 +11,70 @@ import {
   IonItemSliding,
   IonRadio,
 } from '@ionic/react';
-import groups from 'common/models/collections/groups';
 import Group from 'common/models/group';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 
 type Props = {
   sample: Sample;
-  onSelect: any;
-  onLeave: any;
+  onSelect: (groupId: string) => void;
+  onLeave: (group: Group) => void;
+  groups: Group[];
 };
 
-const UserGroups = ({ sample, onSelect, onLeave }: Props) => {
+const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
   const { t } = useTranslation();
 
-  const getOption = (group: Group) => ({
-    value: group.id!,
-    label: group.data.title,
-  });
+  // force update the radio styles
+  const [currentValue, forceRefresh] = useState(sample.data.group?.id);
 
-  const groupOptions: RadioOption[] = groups.map(getOption);
+  const onSelectWrap = (e: any) => {
+    onSelect(e.detail.value);
+    forceRefresh(e.detail.value);
+  };
 
-  groupOptions.unshift({
-    value: '',
-    label: t('Not linked to any project'),
-  });
+  const groupOptions: (Group | null)[] = [...groups];
+  groupOptions.unshift(null); // add
 
-  const getGroupOption = (p: any) => {
-    const onLeaveGroupWrap = () => onLeave(p?.value);
+  const getGroupOption = (group: Group | null) => {
+    let value = group?.id;
+    let label = group?.data?.title;
 
-    const isSelected = sample.data.group?.id === p.value;
+    if (!group) {
+      value = '';
+      label = t('Not linked to any project');
+    }
+
+    const onLeaveGroupWrap = () => onLeave(group!);
+
+    const isSelected = currentValue === value;
+
+    const isMembershipPending = group?.data.userIsPending === 't';
 
     return (
       <IonItemSliding
-        key={p.value}
+        key={value}
         className={clsx(
           'my-3 rounded-md border border-solid',
-          !p.value && 'opacity-70',
+          !value && 'opacity-70',
           isSelected ? 'border-[var(--form-value-color)]' : 'border-neutral-300'
         )}
-        disabled={!p.value}
+        disabled={!value}
       >
         <IonItem
           className={clsx(
-            '!m-0 !rounded-none ![--border-radius:0]',
+            '!m-0 !rounded-none !border-none ![--border-radius:0]',
             isSelected &&
               'bg-white text-[var(--form-value-color)] [--background:rgba(var(--color-tertiary-900-rgb),0.02)] [--ion-color-primary:var(--form-value-color)]'
           )}
         >
-          <IonRadio labelPlacement="start" value={p.value} mode="ios">
-            {p.label}
+          <IonRadio
+            labelPlacement="start"
+            value={value}
+            mode="ios"
+            disabled={isMembershipPending}
+          >
+            {label}
           </IonRadio>
         </IonItem>
 
@@ -87,7 +102,8 @@ const UserGroups = ({ sample, onSelect, onLeave }: Props) => {
     <IonList lines="full" className="radio-input-attr">
       <IonRadioGroup
         value={sample.data.group?.id}
-        onIonChange={(e: any) => onSelect(e.detail.value)}
+        allowEmptySelection
+        onIonChange={onSelectWrap}
       >
         {groupOptions.map(getGroupOption)}
       </IonRadioGroup>
@@ -95,4 +111,4 @@ const UserGroups = ({ sample, onSelect, onLeave }: Props) => {
   );
 };
 
-export default UserGroups;
+export default observer(UserGroups);

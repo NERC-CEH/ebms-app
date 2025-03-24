@@ -1,28 +1,29 @@
 import { IObservableArray, observable } from 'mobx';
-import axios, { AxiosError } from 'axios';
 import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { snakeCase } from 'lodash';
-import { z, object } from 'zod';
+import { z } from 'zod';
 import { Geolocation } from '@capacitor/geolocation';
 import {
-  ModelOptions,
+  LocationModel,
+  LocationData,
+  LocationOptions,
   validateRemoteModel,
   useAlert,
-  Model,
   ModelAttrs,
   updateModelLocation,
   ModelValidationMessage,
   UUIDv7,
-  boolToWarehouseValue,
+  LocationType,
 } from '@flumens';
 import { IonIcon } from '@ionic/react';
-import CONFIG from 'common/config';
 import mothTrap from 'common/images/moth-inside-icon.svg';
 import numberIcon from 'common/images/number.svg';
 import userModel from 'models/user';
 import Media from './media';
 import { locationsStore } from './store';
 import { getLocalAttributes } from './utils';
+
+export { locationDtoSchema as dtoSchema, LocationType } from '@flumens';
 
 const mothTrapIcon = (<IonIcon src={mothTrap} className="size-6" />) as any;
 const mothTrapNumberIcon = (
@@ -111,22 +112,6 @@ export const mothTrapLampTypeAttr = {
   ],
 } as const;
 
-type Metadata = {
-  saved?: boolean;
-  groupId?: string;
-};
-
-export const MOTH_TRAP_TYPE = '18879';
-export const TRANSECT_TYPE = '777';
-export const TRANSECT_SECTION_TYPE = '778';
-export const GROUP_SITE_TYPE = '14';
-
-type LocationOptions = ModelOptions<Attrs> & {
-  media?: any[];
-  skipStore?: boolean;
-  metadata?: Metadata;
-};
-
 export type Lamp = {
   cid: string;
   data: {
@@ -136,8 +121,6 @@ export type Lamp = {
     [mothTrapLampDescriptionAttr.id]: string;
   };
 };
-
-export type RemoteAttributes = z.infer<typeof LocationModel.remoteSchema>;
 
 export type MothTrapAttrs = {
   [mothTrapTypeAttr.id]: number;
@@ -150,109 +133,78 @@ export type MothTrapAttrs = {
   };
 };
 
-export type Attrs = RemoteAttributes & MothTrapAttrs & ModelAttrs;
+export type Data = LocationData & MothTrapAttrs & ModelAttrs;
 
-class LocationModel extends Model<Attrs> {
-  static remoteSchema = object({
-    lat: z.string().min(1),
-    lon: z.string().min(1),
-    /**
-     * Location name.
-     */
-    name: z.string().min(1),
-    /**
-     * Location type e.g. transect = 777, transect section = 778 etc.
-     */
-    locationTypeId: z.string().min(1),
-    centroidSref: z.string().min(1),
-    centroidSrefSystem: z.string().min(1),
-    /**
-     * Entity ID.
-     */
-    id: z.string().optional(),
-    createdOn: z.string().optional(),
-    updatedOn: z.string().optional(),
-    parentId: z.string().nullable().optional(),
-    boundaryGeom: z.string().nullable().optional(),
-    code: z.string().nullable().optional(),
-    createdById: z.string().nullable().optional(),
-    updatedById: z.string().nullable().optional(),
-    externalKey: z.string().nullable().optional(),
-    centroidGeom: z.string().nullable().optional(),
-    public: z.string().nullable().optional(),
-    comment: z.string().nullable().optional(),
-  });
+const surveyConfig = {
+  location: {
+    remote: {
+      id: 'entered_sref',
+      values(location: any, submission: any) {
+        const { latitude, longitude, name } = location;
 
-  static schema = {
-    location: {
-      remote: {
-        id: 'entered_sref',
-        values(location: any, submission: any) {
-          const { latitude, longitude, name } = location;
+        // eslint-disable-next-line
+        submission.values = {
+          ...submission.values,
+        };
 
-          // eslint-disable-next-line
-          submission.values = {
-            ...submission.values,
-          };
-
-          submission.values['lat'] = latitude; // eslint-disable-line
-          submission.values['lon'] = longitude; // eslint-disable-line
-          submission.values['name'] = name; // eslint-disable-line
-        },
+        submission.values['lat'] = latitude; // eslint-disable-line
+        submission.values['lon'] = longitude; // eslint-disable-line
+        submission.values['name'] = name; // eslint-disable-line
       },
     },
+  },
 
-    verify(attrs: any) {
-      const lampSchema = z.object({
-        data: z.object({
-          description: z.string().optional(),
-          quantity: z.number().min(1),
-          type: z
-            .string({ required_error: 'Lamp type is a required field.' })
-            .min(1, 'Lamp type is a required field.'),
+  verify(attrs: any) {
+    const lampSchema = z.object({
+      data: z.object({
+        description: z.string().optional(),
+        quantity: z.number().min(1),
+        type: z
+          .string({ required_error: 'Lamp type is a required field.' })
+          .min(1, 'Lamp type is a required field.'),
+      }),
+    });
+
+    return z
+      .object({
+        location: z
+          .object(
+            {
+              latitude: z.number().nullable().optional(),
+              longitude: z.number().nullable().optional(),
+              name: z
+                .string({ required_error: 'Location name is missing' })
+                .min(1, 'Please add the moth trap location and name.'),
+            },
+            { required_error: 'Location is missing.' }
+          )
+          .refine(
+            (val: any) =>
+              Number.isFinite(val.latitude) && Number.isFinite(val.longitude),
+            'Location is missing.'
+          ),
+
+        [mothTrapTypeAttr.id]: z.string({
+          required_error: 'Trap type is a required field.',
         }),
-      });
+        [mothTrapLampsAttr.id]: z
+          .array(lampSchema, { required_error: 'No lamps added' })
+          .min(1, 'No lamps added'),
+      })
+      .safeParse(attrs).error;
+  },
+};
 
-      return z
-        .object({
-          location: z
-            .object(
-              {
-                latitude: z.number().nullable().optional(),
-                longitude: z.number().nullable().optional(),
-                name: z
-                  .string({ required_error: 'Location name is missing' })
-                  .min(1, 'Please add the moth trap location and name.'),
-              },
-              { required_error: 'Location is missing.' }
-            )
-            .refine(
-              (val: any) =>
-                Number.isFinite(val.latitude) && Number.isFinite(val.longitude),
-              'Location is missing.'
-            ),
-
-          [mothTrapTypeAttr.id]: z.string({
-            required_error: 'Trap type is a required field.',
-          }),
-          [mothTrapLampsAttr.id]: z
-            .array(lampSchema, { required_error: 'No lamps added' })
-            .min(1, 'No lamps added'),
-        })
-        .safeParse(attrs).error;
-    },
-  };
-
-  static dto(
-    { id, createdOn, updatedOn, externalKey, ...data }: RemoteAttributes,
-    metadata?: Partial<Metadata>
+class Location extends LocationModel<Data> {
+  static fromDTO(
+    { id, createdOn, updatedOn, externalKey, ...data }: any,
+    options?: LocationOptions
   ) {
     const parsedRemoteJSON: any = {
       cid: externalKey || UUIDv7(),
       id,
       createdAt: new Date(createdOn!).getTime(),
       updatedAt: new Date(updatedOn!).getTime(),
-      metadata,
       data: {
         id,
         createdAt: createdOn,
@@ -262,8 +214,9 @@ class LocationModel extends Model<Attrs> {
           longitude: Number(data.lon),
         },
         ...data,
-        ...getLocalAttributes(data, LocationModel.schema),
+        ...getLocalAttributes(data, surveyConfig),
       },
+      ...options,
     };
 
     const parseLamp = (lamp: any) => {
@@ -277,18 +230,14 @@ class LocationModel extends Model<Attrs> {
     parsedRemoteJSON.data[mothTrapLampsAttr.id] =
       parsedRemoteJSON.data[mothTrapLampsAttr.id]?.map(parseLamp) || [];
 
-    return parsedRemoteJSON;
+    return new this(parsedRemoteJSON);
   }
 
   validateRemote = validateRemoteModel;
 
   gps: { locating: null | string } = observable({ locating: null });
 
-  remote = observable({ synchronising: false });
-
   media: IObservableArray<Media>;
-
-  metadata: Metadata;
 
   constructor({
     skipStore,
@@ -306,98 +255,9 @@ class LocationModel extends Model<Attrs> {
     this.media = observable(media);
   }
 
-  isDraft = () => !this.id;
+  getSurvey = () => surveyConfig;
 
-  getSchema = () => LocationModel.schema;
-
-  getSurvey = () => this.getSchema();
-
-  isGPSRunning() {
-    return !!(this.gps.locating || this.gps.locating === '0');
-  }
-
-  async saveRemote() {
-    try {
-      this.remote.synchronising = true;
-
-      const warehouseMediaNames = await this.uploadMedia();
-      const submission = this.toRemoteJSON(warehouseMediaNames);
-      const url = `${CONFIG.backend.indicia.url}/index.php/services/rest/locations`;
-
-      const token = await userModel.getAccessToken();
-
-      const options: any = {
-        url,
-        method: 'post',
-        headers: { Authorization: `Bearer ${token}` },
-        timeout: 80000,
-        data: submission,
-      };
-
-      const { data: dataRaw, status } = await axios(options);
-      let data = dataRaw;
-
-      // update the model and occurrences with new remote IDs
-      // remoteCreateParse(this, resp);
-      if (typeof data === 'string') {
-        if (status === 201 && data.includes('Object Moved')) {
-          // IIS issue: https://forums.iis.net/p/1209573/2082988.aspx
-          data = JSON.parse(data.slice(data.indexOf('{"values')));
-        } else {
-          throw new Error(`Can't parse server response.`);
-        }
-      }
-
-      // update metadata
-      const uploadTime = new Date(data.values.updated_on).getTime();
-      this.updatedAt = uploadTime;
-      this.syncedAt = uploadTime;
-      this.id = data.values.id;
-
-      this.remote.synchronising = false;
-
-      this.store && this.save();
-
-      console.log('Location uploading done');
-      return this;
-    } catch (e: any) {
-      this.remote.synchronising = false;
-
-      const err = e as AxiosError<any>;
-
-      if (err.response?.status === 409 && err.response?.data.duplicate_of) {
-        console.log('Location uploading duplicate was found');
-        const uploadTime = new Date().getTime();
-        this.updatedAt = uploadTime;
-        this.syncedAt = uploadTime;
-        this.id = err.response?.data.duplicate_of.id;
-        return this;
-      }
-
-      const serverMessage = err.response?.data?.message;
-      if (!serverMessage) {
-        throw e;
-      }
-
-      if (typeof serverMessage === 'object') {
-        const getErrorMessageFromObject = (errors: any) =>
-          Object.entries(errors).reduce(
-            (string, val: any) => `${string}${val[0]} ${val[1]}\n`,
-            ''
-          );
-
-        throw new Error(getErrorMessageFromObject(serverMessage));
-      }
-
-      throw new Error(serverMessage);
-    }
-  }
-
-  get isUploaded() {
-    return !!this.syncedAt;
-  }
-
-  private toRemoteMothTrapJSON() {
+  private toMothTrapDTO() {
     const { location, comment, boundaryGeom, centroidSrefSystem } = this.data;
 
     const stringifyLamp = (lamp: any) => JSON.stringify(lamp);
@@ -418,7 +278,7 @@ class LocationModel extends Model<Attrs> {
     return {
       ...this.data,
       name: location.name,
-      location_type_id: MOTH_TRAP_TYPE, // the model already has this, so probably not needed
+      location_type_id: LocationType.MothTrap, // the model already has this, so probably not needed
       centroid_sref_system: centroidSrefSystem,
       centroid_sref: `${location.latitude} ${location.longitude}`,
       boundary_geom: boundaryGeom,
@@ -428,7 +288,7 @@ class LocationModel extends Model<Attrs> {
     };
   }
 
-  toRemoteJSON(warehouseMediaNames = {}) {
+  toDTO(warehouseMediaNames = {}) {
     const toSnakeCase = (attrs: any) => {
       return Object.entries(attrs).reduce((agg: any, [attr, value]): any => {
         const attrModified = attr.includes('locAttr:') ? attr : snakeCase(attr);
@@ -440,13 +300,13 @@ class LocationModel extends Model<Attrs> {
     const transformBoolean = (attrs: any) =>
       Object.entries(attrs).reduce((agg: any, [attr, value]: any) => {
         if (typeof value === 'boolean') {
-          agg[attr] = boolToWarehouseValue(value); // eslint-disable-line no-param-reassign
+          agg[attr] = value; // eslint-disable-line no-param-reassign
         }
         return agg;
       }, attrs);
 
     const data = this.data[mothTrapTypeAttr.id]
-      ? this.toRemoteMothTrapJSON()
+      ? this.toMothTrapDTO()
       : transformBoolean(toSnakeCase(this.data));
 
     const submission: any = {
@@ -458,7 +318,7 @@ class LocationModel extends Model<Attrs> {
     };
 
     this.media.forEach(model => {
-      const modelSubmission = model.getSubmission(warehouseMediaNames);
+      const modelSubmission = model.toDTO(warehouseMediaNames);
       if (!modelSubmission) {
         return;
       }
@@ -478,6 +338,11 @@ class LocationModel extends Model<Attrs> {
   cleanUp() {
     // TODO:
     this.stopGPS();
+  }
+
+  /** GPS extension start  */
+  isGPSRunning() {
+    return !!(this.gps.locating || this.gps.locating === '0');
   }
 
   async startGPS(accuracyLimit = 50) {
@@ -554,25 +419,13 @@ class LocationModel extends Model<Attrs> {
 
     Geolocation.clearWatch({ id });
   }
-
-  private async uploadMedia() {
-    // return bulkUploadMedia(this.media); //TODO: take it from Indicia Sample
-    await Promise.all(this.media.map(m => m.uploadFile()));
-
-    const warehouseMediaNames: any = {};
-
-    this.media.forEach(m => {
-      warehouseMediaNames[m.cid] = { name: m.data.queued };
-    });
-
-    return warehouseMediaNames;
-  }
+  /** GPS extension end  */
 }
 
 export const useValidateCheck = () => {
   const alert = useAlert();
 
-  const validate = (location: LocationModel) => {
+  const validate = (location: Location) => {
     const invalids = location.validateRemote();
     if (invalids) {
       alert({
@@ -594,4 +447,4 @@ export const useValidateCheck = () => {
   return validate;
 };
 
-export default LocationModel;
+export default Location;

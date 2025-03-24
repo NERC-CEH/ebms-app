@@ -2,7 +2,7 @@ import { useEffect, useContext } from 'react';
 import { Route } from 'react-router';
 import { NavContext } from '@ionic/react';
 import locations from 'models/collections/locations';
-import MothTrap, { MOTH_TRAP_TYPE } from 'models/location';
+import MothTrap, { LocationType } from 'models/location';
 import ModelLocationMap from 'Survey/common/ModelLocationMap';
 import MothTrapNew from './Home';
 import MothTrapLamp from './Lamp';
@@ -15,7 +15,7 @@ function AddNewMothTrap() {
     const pickDraftOrCreateNew = async () => {
       const model = new MothTrap({
         data: {
-          locationTypeId: MOTH_TRAP_TYPE,
+          locationTypeId: LocationType.MothTrap,
           centroidSrefSystem: '4326',
         } as any,
       });

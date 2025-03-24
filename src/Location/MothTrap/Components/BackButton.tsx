@@ -45,7 +45,7 @@ const CancelButton = ({ location }: Props) => {
     }
   };
 
-  if (!location.isDraft()) {
+  if (!location.isDraft) {
     return (
       <IonButtons slot="start">
         <IonBackButton text="Back" data-label="back" defaultHref="/home" />

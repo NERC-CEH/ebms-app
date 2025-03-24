@@ -101,8 +101,8 @@ export class UserModel extends DrupalUserModel<Attrs> {
     return `${this.data.firstName} ${this.data.lastName}`;
   };
 
-  resetDefaults() {
-    return super.resetDefaults(defaults);
+  reset() {
+    return super.reset(defaults);
   }
 }
 
