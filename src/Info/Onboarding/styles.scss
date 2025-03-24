@@ -23,19 +23,6 @@
       }
     }
 
-    .message {
-      position: absolute;
-      width: 70%;
-
-      @apply overflow-hidden rounded-md border border-solid border-primary-200 bg-white/70 px-6 py-3 text-lg font-light text-primary-900 backdrop-blur-sm backdrop-filter;
-
-      // Hack around the tablet hidden message issue
-      @media only screen and (min-width: 650px) {
-        left: 50% !important;
-        margin-left: -325px !important;
-      }
-    }
-
     .swiper-pagination-bullets {
       bottom: 3%;
 
@@ -49,40 +36,13 @@
     }
 
     .swiper-slide {
-      &.first {
-        background: url('images/welcome_1.jpg') no-repeat;
-        background-position: bottom;
-        background-size: contain;
-
-        .message {
-          top: 14vh;
-          text-align: left;
-        }
-      }
-
       &.second {
         background: url('images/welcome_2.jpg') no-repeat;
-        background-position: left;
+        background-position: center;
         background-size: cover;
-
-        .message {
-          bottom: 20vh;
-          left: 10vw;
-          text-align: left;
-        }
 
         ion-button {
           --ion-color-contrast: var(--ion-color-primary) !important;
-        }
-      }
-
-      &.third {
-        background: url('images/welcome_3.jpg') no-repeat;
-        background-position: left;
-        background-size: contain;
-        .message {
-          bottom: 13vh;
-          text-align: left;
         }
       }
 
@@ -90,11 +50,6 @@
         background: url('images/welcome_4.jpg') no-repeat;
         background-position: left;
         background-size: cover;
-        .message {
-          right: 10vw;
-          bottom: $bottom;
-          text-align: left;
-        }
       }
     }
   }

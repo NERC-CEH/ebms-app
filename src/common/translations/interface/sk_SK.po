@@ -659,14 +659,12 @@ msgid "email is not valid"
 msgstr "neplatný email"
 
 msgid ""
-"Butterflies are captivating insects, but they are in decline in many parts "
-"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
-"the EU."
+"Butterflies are captivating insects, but they are declining in many parts of"
+" the world. For example, this graph shows the European grassland butterfly "
+"index."
 msgstr ""
-"Motýle sú fascinujúcim hmyzom, ale v mnohých častiach Európy sa ich počet "
-"znižuje. Tak, ako je to znázornené v tomto grafe Ukazovateľa motýľov na "
-"trvalých trávnatých porastoch pre Európsku úniu."
 
+# onboarding pages
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
@@ -674,13 +672,11 @@ msgstr ""
 "Údaje zhromaždené v tejto aplikácii môžu výrazne zlepšiť poznatky o stave "
 "motýľov a ich biotopoch."
 
+# onboarding pages
 msgid ""
-"We lack information on butterfly numbers in many parts of Europe, as shown "
-"by the density of records currently available to assess butterfly status."
+"We lack structured information on butterfly numbers in many parts of the "
+"world."
 msgstr ""
-"Ako ukazuje nízka hustota dostupných záznamov, na posúdenie stavu populácií "
-"motýľov nám chýbajú informácie o počte motýľov vo viacerých častiach Európy."
-" "
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -828,6 +824,36 @@ msgstr ""
 "Keď chcete záznam odstrániť, potiahnite ho doľava na stránke Vášho účtu a "
 "kliknite na tlačidlo vymazať.  "
 
+# Help pages
+msgid "Assign a project to a count"
+msgstr ""
+
+# Help pages
+msgid ""
+"<0>Start a count.</0><1>Select \"Additional Details\" then "
+"\"Project\".</1><2>Finally, choose the appropriate project.</2>"
+msgstr ""
+
+# Help pages
+msgid "Assign a site to a count"
+msgstr ""
+
+# Help pages
+msgid ""
+"<0>Start a count.</0><1>Assign a project to the count, see instructions on "
+"how to select a project.</1><2>Turn off the GPS in the header of the "
+"\"Area\" page.</2><3>Select the \"Site Drawing\" tool on the right side of "
+"the screen.</3><4>Choose an area on the map and confirm your selection on "
+"the right side of the screen.</4><5>Press the \"Add\" button located on the "
+"favourite sites panel in the bottom right corner of the screen. If the panel"
+" is not visible, you can open it by clicking the favourite sites button "
+"(star icon) at the top right.</5><6>You will be prompted to answer some "
+"questions about the site.</6><7>Press \"Save\" in the top right corner after"
+" answering the questions. The site will be saved, and it can be selected for"
+" future counts conducted in that location.</7><8>Finally, choose the site "
+"for the current count.</8>"
+msgstr ""
+
 msgid "User"
 msgstr "Používateľ"
 
@@ -896,6 +922,21 @@ msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
 "Týmto sa vymaže údaje vyrovnávacej pamäte, vrátane Vašich nahratých "
 "prieskumov."
+
+# App setting
+msgid "Export database"
+msgstr ""
+
+# App setting
+msgid "Export"
+msgstr ""
+
+# App setting
+msgid ""
+"Are you sure you want to export the data?<1>This feature is intended solely "
+"for technical support and is not a supported method for exporting your "
+"data</1>"
+msgstr ""
 
 msgid "Sweden"
 msgstr "Švédsko"
@@ -2027,6 +2068,10 @@ msgstr "Iný typ"
 # Moth trap survey
 msgid "Add lamp"
 msgstr "Pridať typ svetelného zdroja"
+
+# Moth trap survey
+msgid "Lamp type is a required field."
+msgstr ""
 
 # Moth trap survey
 msgid "What type of trap was it?"

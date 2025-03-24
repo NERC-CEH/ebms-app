@@ -4,14 +4,14 @@
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
 # Karolis, 2021
 # Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2022
-# Daniela Lehner <daleh@gmx.at>, 2023
 # Elisabeth Kühn, 2023
 # Henry Geres, 2024
+# Daniela Lehner <daleh@gmx.at>, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Henry Geres, 2024\n"
+"Last-Translator: Daniela Lehner <daleh@gmx.at>, 2025\n"
 "Language-Team: German (Germany) (https://app.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -114,7 +114,7 @@ msgid "Montenegro"
 msgstr "Montenegro"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Marokko"
 
 msgid "North Macedonia"
 msgstr "Nordmazedonien"
@@ -673,14 +673,12 @@ msgid "email is not valid"
 msgstr "E-Mail ist ungültig"
 
 msgid ""
-"Butterflies are captivating insects, but they are in decline in many parts "
-"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
-"the EU."
+"Butterflies are captivating insects, but they are declining in many parts of"
+" the world. For example, this graph shows the European grassland butterfly "
+"index."
 msgstr ""
-"Schmetterlinge sind faszinierende Insekten, aber in vielen Teilen Europas "
-"gehen sie zurück, wie aus dieser Grafik des Grassland Butterfly Indicator "
-"für die EU zu sehen ist."
 
+# onboarding pages
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
@@ -688,13 +686,11 @@ msgstr ""
 "Mit dieser App gesammelte Daten können das Wissen über den Status von "
 "Schmetterlingen und ihren Lebensräumen erheblich verbessern."
 
+# onboarding pages
 msgid ""
-"We lack information on butterfly numbers in many parts of Europe, as shown "
-"by the density of records currently available to assess butterfly status."
+"We lack structured information on butterfly numbers in many parts of the "
+"world."
 msgstr ""
-"In vielen Teilen Europas fehlen Informationen zu den Schmetterlingszahlen, "
-"wie aus der Dichte der Meldungen hervorgeht, die derzeit zur Beurteilung des"
-" Schmetterlingsstatus verfügbar sind."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -850,6 +846,51 @@ msgstr ""
 "Um eine Meldung zu löschen, wische sie auf deiner Account-Seite nach links "
 "und klicke auf die Schaltfläche Löschen."
 
+# Help pages
+msgid "Assign a project to a count"
+msgstr "Zählung einem Projekt zuweisen"
+
+# Help pages
+msgid ""
+"<0>Start a count.</0><1>Select \"Additional Details\" then "
+"\"Project\".</1><2>Finally, choose the appropriate project.</2>"
+msgstr ""
+"<0>Starte eine Zählung.</0><1>Wähle \"Weitere Details\" und  "
+"\"Projekt\".</1><2> Wähle das Projekt aus, dass du der Zählung zuordnen "
+"möchtest.</2> "
+
+# Help pages
+msgid "Assign a site to a count"
+msgstr "Zählung einem Standort zuweisen"
+
+# Help pages
+msgid ""
+"<0>Start a count.</0><1>Assign a project to the count, see instructions on "
+"how to select a project.</1><2>Turn off the GPS in the header of the "
+"\"Area\" page.</2><3>Select the \"Site Drawing\" tool on the right side of "
+"the screen.</3><4>Choose an area on the map and confirm your selection on "
+"the right side of the screen.</4><5>Press the \"Add\" button located on the "
+"favourite sites panel in the bottom right corner of the screen. If the panel"
+" is not visible, you can open it by clicking the favourite sites button "
+"(star icon) at the top right.</5><6>You will be prompted to answer some "
+"questions about the site.</6><7>Press \"Save\" in the top right corner after"
+" answering the questions. The site will be saved, and it can be selected for"
+" future counts conducted in that location.</7><8>Finally, choose the site "
+"for the current count.</8>"
+msgstr ""
+"<0>Starte eine Zählung.</0><1> Füge die Zählung zuerst einem Projekt zu.  "
+"</1><2> Schalte das GPS-Tracking in der Kopfzeile aus.</2><3> Wähle das  "
+"\"Standort zeichnen\"-Werkzeug auf der rechten Seite des Bildschirms "
+"aus.</3><4> Wähle einen Bereich auf der Karte aus und bestätige deine "
+"Auswahl auf der rechten Seite des Bildschirms. </4><5> Drücke auf "
+"\"Hinzufügen\" rechts unten, wo sich Deine favoritisierten Standorte "
+"befinden. Wenn diese nicht aufschneinen, kannst du sie über deine Favoriten "
+"(Stern-Symbol) rechts oben aktivieren. </5><6> Beantworte als nächstes einge"
+" Fragen zu deinem Standort. </6><7> Wenn Du damit fertig bist drücke rechts "
+"oben auf \"Speichern\". Nun kann der Standort für zukünftige Zählungen "
+"wieder ausgwählt werden. </7><8> Wähle abschließend einen Standort für Deine"
+" aktuelle Erhebung. </8> "
+
 msgid "User"
 msgstr "Nutzer"
 
@@ -920,6 +961,24 @@ msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
 "Dies wird zwischengespeicherte Daten, inbegriffen deiner hochgeladenen "
 "Formulare, löschen."
+
+# App setting
+msgid "Export database"
+msgstr "Exportiere Datenbank"
+
+# App setting
+msgid "Export"
+msgstr "Exportieren"
+
+# App setting
+msgid ""
+"Are you sure you want to export the data?<1>This feature is intended solely "
+"for technical support and is not a supported method for exporting your "
+"data</1>"
+msgstr ""
+"Bist Du sicher, dass du die Daten exportieren möchtest? <1> Diese Funktion "
+"dient in erster Linie dem technischen Support und nicht der bevorzugte Weg "
+"um die eigenen Daten zu sichern. </1> "
 
 msgid "Sweden"
 msgstr "Schweden"
@@ -2077,6 +2136,10 @@ msgstr "Anderer Typ"
 # Moth trap survey
 msgid "Add lamp"
 msgstr "Füge Lampe hinzu"
+
+# Moth trap survey
+msgid "Lamp type is a required field."
+msgstr "Leuchten-Typ ist ein Pflichtfeld"
 
 # Moth trap survey
 msgid "What type of trap was it?"

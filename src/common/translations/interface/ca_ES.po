@@ -1,11 +1,12 @@
 # 
 # Translators:
 # Andreu Ubach Permanyer, 2024
+# Karolis, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Andreu Ubach Permanyer, 2024\n"
+"Last-Translator: Karolis, 2025\n"
 "Language-Team: Catalan (Spain) (https://app.transifex.com/ceh/teams/95441/ca_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -650,14 +651,15 @@ msgid "email is not valid"
 msgstr "el correu no és vàlid"
 
 msgid ""
-"Butterflies are captivating insects, but they are in decline in many parts "
-"of Europe. As shown by this graph of The Grassland Butterfly Indicator for "
-"the EU."
+"Butterflies are captivating insects, but they are declining in many parts of"
+" the world. For example, this graph shows the European grassland butterfly "
+"index."
 msgstr ""
 "Les papallones són insectes fascinants, però es troben en declivi a moltes "
 "parts d'Europa. Tal i com es mostra en aquest gràfic de l'Indicador de "
 "Papallones de Prat de la UE."
 
+# onboarding pages
 msgid ""
 "Data collected by this app can greatly improve knowledge of the status of "
 "butterflies and their habitats."
@@ -665,13 +667,11 @@ msgstr ""
 "Les dades recollides per aquesta aplicació poden millorar de forma notable "
 "el coneixement de l'estat de les papallones i els seus hàbitats."
 
+# onboarding pages
 msgid ""
-"We lack information on butterfly numbers in many parts of Europe, as shown "
-"by the density of records currently available to assess butterfly status."
+"We lack structured information on butterfly numbers in many parts of the "
+"world."
 msgstr ""
-"Ens falta informació de comptatges de papallones a molts llocs d'Europa, tal"
-" i com es mostra per la densitat de registres disponibles per evaluar "
-"l'estat de les papallones."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -826,6 +826,36 @@ msgstr ""
 "Per esborrar un registre, fes-lo lliscar cap a l'esquerra a la pàgina del "
 "teu compte i clica al botó d'eliminar."
 
+# Help pages
+msgid "Assign a project to a count"
+msgstr ""
+
+# Help pages
+msgid ""
+"<0>Start a count.</0><1>Select \"Additional Details\" then "
+"\"Project\".</1><2>Finally, choose the appropriate project.</2>"
+msgstr ""
+
+# Help pages
+msgid "Assign a site to a count"
+msgstr ""
+
+# Help pages
+msgid ""
+"<0>Start a count.</0><1>Assign a project to the count, see instructions on "
+"how to select a project.</1><2>Turn off the GPS in the header of the "
+"\"Area\" page.</2><3>Select the \"Site Drawing\" tool on the right side of "
+"the screen.</3><4>Choose an area on the map and confirm your selection on "
+"the right side of the screen.</4><5>Press the \"Add\" button located on the "
+"favourite sites panel in the bottom right corner of the screen. If the panel"
+" is not visible, you can open it by clicking the favourite sites button "
+"(star icon) at the top right.</5><6>You will be prompted to answer some "
+"questions about the site.</6><7>Press \"Save\" in the top right corner after"
+" answering the questions. The site will be saved, and it can be selected for"
+" future counts conducted in that location.</7><8>Finally, choose the site "
+"for the current count.</8>"
+msgstr ""
+
 msgid "User"
 msgstr "Usuari"
 
@@ -893,6 +923,21 @@ msgstr "Neteja"
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr "Eliminaràs la memòria cau, incloent els teus mostrejos carregats."
+
+# App setting
+msgid "Export database"
+msgstr ""
+
+# App setting
+msgid "Export"
+msgstr ""
+
+# App setting
+msgid ""
+"Are you sure you want to export the data?<1>This feature is intended solely "
+"for technical support and is not a supported method for exporting your "
+"data</1>"
+msgstr ""
 
 msgid "Sweden"
 msgstr "Suècia"
@@ -2021,6 +2066,10 @@ msgstr "Un altre tipus"
 # Moth trap survey
 msgid "Add lamp"
 msgstr "Afegir làmpara"
+
+# Moth trap survey
+msgid "Lamp type is a required field."
+msgstr ""
 
 # Moth trap survey
 msgid "What type of trap was it?"
