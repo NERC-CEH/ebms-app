@@ -8,36 +8,39 @@ const hapticsVibrate = async () => {
 const extension = {
   startVibrateCounter() {
     console.log('SampleModel:Vibrate: start.');
+    const that = this as any;
 
     const vibrateOnThresholds = () => {
-      if (this.isTimerFinished()) {
-        if (this._timeoutVibrated) return;
+      if (that.isTimerFinished()) {
+        if (that._timeoutVibrated) return;
 
         console.log('SampleModel:Vibrate: vibrating!');
-        this._timeoutVibrated = true;
-        this.stopVibrateCounter();
+        that._timeoutVibrated = true;
+        that.stopVibrateCounter();
 
         isPlatform('hybrid') && hapticsVibrate();
         return;
       }
 
-      const timeLeft = (this.getTimerEndTime() - Date.now()) / 60;
+      const timeLeft = (that.getTimerEndTime() - Date.now()) / 60;
       const isBelow3mins = timeLeft <= 3000;
-      if (isBelow3mins && !this.isTimerPaused()) {
-        if (this._below3minsVibrated) return;
+      if (isBelow3mins && !that.isTimerPaused()) {
+        if (that._below3minsVibrated) return;
 
         console.log('SampleModel:Vibrate: vibrating!');
-        this._below3minsVibrated = true;
+        that._below3minsVibrated = true;
         isPlatform('hybrid') && hapticsVibrate();
       }
     };
-    this.counterId = setInterval(vibrateOnThresholds, 1000);
+    that.counterId = setInterval(vibrateOnThresholds, 1000);
   },
 
   stopVibrateCounter() {
-    if (this.counterId) {
+    const that = this as any;
+
+    if (that.counterId) {
       console.log('SampleModel:Vibrate: stop.');
-      clearInterval(this.counterId);
+      clearInterval(that.counterId);
     }
   },
 };
