@@ -3,5 +3,8 @@
 	"appName": "ButterflyCount",
 	"npmClient": "npm",
 	"webDir": "build",
-	"cordova": {}
+	"cordova": {},
+	"android": {
+		"adjustMarginsForEdgeToEdge": "force"
+	}
 }
