@@ -672,6 +672,9 @@ msgid ""
 " the world. For example, this graph shows the European grassland butterfly "
 "index."
 msgstr ""
+"Las mariposas son insectos cautivadores, pero están disminuyendo en muchas "
+"partes del mundo. Por ejemplo, este gráfico muestra el índice europeo de "
+"mariposas de pradera."
 
 # onboarding pages
 msgid ""
@@ -686,6 +689,8 @@ msgid ""
 "We lack structured information on butterfly numbers in many parts of the "
 "world."
 msgstr ""
+"Carecemos de información estructurada sobre el número de mariposas en muchas"
+" partes del mundo."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -701,10 +706,12 @@ msgid ""
 "This app enables you to contribute to the recording and conservation of "
 "butterflies across the world."
 msgstr ""
+"Esta aplicación le permite contribuir al registro y la conservación de las "
+"mariposas de todo el mundo."
 
 # About pages
 msgid "The app was supported through several projects:"
-msgstr ""
+msgstr "La aplicación contó con el apoyo de varios proyectos:"
 
 # About pages
 msgid ""
@@ -712,6 +719,9 @@ msgid ""
 "across the world and associated with national Butterfly Monitoring Schemes "
 "listed at:"
 msgstr ""
+"La aplicación se ha beneficiado de las aportaciones de varios expertos en "
+"mariposas de todo el mundo y está asociada a los programas nacionales de "
+"seguimiento de mariposas, BMS, que figuran en:"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
