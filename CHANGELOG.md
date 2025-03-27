@@ -1,6 +1,9 @@
 ## 1.29.0
 
 Major codebase upgrade.
+Updated the onboarding screens and other texts to make the app more global.
+Updated translations.
+Bug fixes.
 
 ## 1.28.0
 
