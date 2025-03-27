@@ -90,7 +90,7 @@ const Onboarding = ({ children }: any) => {
                 <img src={guidelines} alt="" />
               </a>
 
-              <div className="w-2/3 overflow-hidden rounded-md border border-solid border-primary-200 bg-white/70 px-6 py-3 text-lg font-light text-primary-900 backdrop-blur-sm backdrop-filter">
+              <div className="-mt-16 w-2/3 shrink-0 overflow-hidden rounded-md border border-solid border-primary-200 bg-white/70 px-6 py-3 text-lg font-light text-primary-900 backdrop-blur-sm backdrop-filter">
                 <p>
                   <T>
                     We lack structured information on butterfly numbers in many
