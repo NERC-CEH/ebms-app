@@ -17,7 +17,7 @@ export const siteAreaAttr = {
     { title: '20 x 25 m', dataName: '23730' },
     { title: '10 x 50 m', dataName: '23731' },
     { title: '5 x 100 m', dataName: '23732' },
-    { title: 'other', dataName: OTHER_SITE_SIZE_VALUE },
+    { title: 'Other', dataName: OTHER_SITE_SIZE_VALUE },
   ],
 } as const;
 
@@ -319,9 +319,10 @@ export const treeNumberAttr = {
 export const grassProportionAttr = {
   id: 'locAttr:366',
   type: 'numberInput',
-  title: 'What proportion of the site is a lawn or a grassland?',
+  title: 'What proportion of the site is a lawn or a grassland',
   appearance: 'counter',
   placeholder: '0',
+  suffix: '%',
   validation: { min: 0, max: 100 },
 } as const;
 

@@ -97,17 +97,28 @@ const useDismissHandler = (newLocation: any) => {
   return canDismiss;
 };
 
-const getNewSiteSeed = (shape?: Location['shape']): Partial<Site> => ({
-  locationTypeId: LocationType.GroupSite,
-  boundaryGeom: shape ? getGeomString(shape) : undefined,
-  lat: shape ? `${getGeomCenter(shape)[1]}` : undefined,
-  lon: shape ? `${getGeomCenter(shape)[0]}` : undefined,
-  centroidSrefSystem: '4326',
-  centroidSref: shape
-    ? `${getGeomCenter(shape)[1]} ${getGeomCenter(shape)[0]}`
-    : undefined,
-  name: undefined,
-});
+const getNewSiteSeed = (
+  { isVielFalterGarten, isUNPplus }: any,
+  shape?: Location['shape']
+): Partial<Site> => {
+  const seed: any = {
+    locationTypeId: LocationType.GroupSite,
+    boundaryGeom: shape ? getGeomString(shape) : undefined,
+    lat: shape ? `${getGeomCenter(shape)[1]}` : undefined,
+    lon: shape ? `${getGeomCenter(shape)[0]}` : undefined,
+    centroidSrefSystem: '4326',
+    centroidSref: shape
+      ? `${getGeomCenter(shape)[1]} ${getGeomCenter(shape)[0]}`
+      : undefined,
+    name: undefined,
+  };
+
+  if (isVielFalterGarten || isUNPplus) {
+    seed[responsibleAttr.id] = '1';
+  }
+
+  return seed;
+};
 
 type Props = {
   presentingElement: any;
@@ -122,8 +133,23 @@ const NewLocationModal = (
   { presentingElement, isOpen, onCancel, onSave, group, shape }: Props,
   ref: any
 ) => {
+  const isAgroecologyTRANSECT = group?.title.includes('Agroecology');
+  const isCAP4GI = group?.title.includes('CAP4GI');
+  const isVielFalterGarten = group?.title.includes('VielFalterGarten');
+  const isUNPplus = group?.title.includes('UNPplus');
+
   const [newLocation, setNewLocation] = useState<Partial<Site>>(
-    observable(getNewSiteSeed(shape))
+    observable(
+      getNewSiteSeed(
+        {
+          isAgroecologyTRANSECT,
+          isCAP4GI,
+          isVielFalterGarten,
+          isUNPplus,
+        },
+        shape
+      )
+    )
   );
   const [photos, setPhotos] = useState<IObservableArray<Media>>(observable([]));
 
@@ -155,7 +181,19 @@ const NewLocationModal = (
 
   const resetState = () => {
     setPhotos(observable([]));
-    setNewLocation(observable(getNewSiteSeed(shape)));
+    setNewLocation(
+      observable(
+        getNewSiteSeed(
+          {
+            isAgroecologyTRANSECT,
+            isCAP4GI,
+            isVielFalterGarten,
+            isUNPplus,
+          },
+          shape
+        )
+      )
+    );
   };
   useEffect(resetState, [shape]);
 
@@ -178,11 +216,6 @@ const NewLocationModal = (
 
     dismiss(true);
   };
-
-  const isAgroecologyTRANSECT = group?.title.includes('Agroecology');
-  const isCAP4GI = group?.title.includes('CAP4GI');
-  const isVielFalterGarten = group?.title.includes('VielFalterGarten');
-  const isUNPplus = group?.title.includes('UNPplus');
 
   const getBlockAttrs = (attrConf: any) => ({
     record: newLocation,
@@ -333,7 +366,7 @@ const NewLocationModal = (
 
             <div>
               <h3 className="list-title">
-                <T>Site photos</T>
+                <T>Please upload site photos</T>
               </h3>
               <div className="rounded-list">
                 <PhotoPicker

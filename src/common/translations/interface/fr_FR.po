@@ -389,6 +389,438 @@ msgstr "Surface de comptage"
 msgid "Area"
 msgstr "Surface"
 
+# New Site set-up page
+msgid "Site area"
+msgstr ""
+
+# New Site set-up page
+msgid "Approximate size of your observation site."
+msgstr ""
+
+# New Site set-up page
+msgid "Habitats/land uses (total should be 100%)"
+msgstr ""
+
+# New Site set-up page
+msgid "Arable field grains (wheat, barley, rye)"
+msgstr ""
+
+# New Site set-up page
+msgid "Arable field fruits or vegetables"
+msgstr ""
+
+# New Site set-up page
+msgid "Arable field rapeseed"
+msgstr ""
+
+# New Site set-up page
+msgid "Arable field corn"
+msgstr ""
+
+# New Site set-up page
+msgid "Arable legumes"
+msgstr ""
+
+# New Site set-up page
+msgid "Arable multi-cropping"
+msgstr ""
+
+# New Site set-up page
+msgid "Arable fallow"
+msgstr ""
+
+# New Site set-up page
+msgid "Grassland homogeneous/intensively managed"
+msgstr ""
+
+# New Site set-up page
+msgid "Grassland extensive or heterogeneous (pasture)"
+msgstr ""
+
+# New Site set-up page
+msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
+msgstr ""
+
+# New Site set-up page
+msgid "Orchard, vineyard or grove (intensely managed)"
+msgstr ""
+
+# New Site set-up page
+msgid "Scrubland"
+msgstr ""
+
+# New Site set-up page
+msgid "Land laying fallow / wasteland"
+msgstr ""
+
+# New Site set-up page
+msgid "Sparse woodland"
+msgstr ""
+
+# New Site set-up page
+msgid "Dense woodland or forest"
+msgstr ""
+
+# New Site set-up page
+msgid "Plantation"
+msgstr ""
+
+# New Site set-up page
+msgid "Garden (single)"
+msgstr ""
+
+# New Site set-up page
+msgid "Gardens (multiple, e.g. allotment gardens)"
+msgstr ""
+
+# New Site set-up page
+msgid "Building(s)"
+msgstr ""
+
+# New Site set-up page
+msgid "Pond, lake or sea"
+msgstr ""
+
+# New Site set-up page
+msgid "River or creek"
+msgstr ""
+
+# New Site set-up page
+msgid "Wetland"
+msgstr ""
+
+# New Site set-up page
+msgid "Dunes or barren land"
+msgstr ""
+
+# New Site set-up page
+msgid "Field edge(s)"
+msgstr ""
+
+# New Site set-up page
+msgid "Buffer-strip(s)"
+msgstr ""
+
+# New Site set-up page
+msgid "Flower-strip(s)"
+msgstr ""
+
+# New Site set-up page
+msgid "Hedge(s)"
+msgstr ""
+
+# New Site set-up page
+msgid "Scattered trees or trees in rows"
+msgstr ""
+
+# New Site set-up page
+msgid "Wooded area"
+msgstr ""
+
+# New Site set-up page
+msgid "Terraces, stone walls"
+msgstr ""
+
+# New Site set-up page
+msgid "Pond"
+msgstr ""
+
+# New Site set-up page
+msgid "Path"
+msgstr ""
+
+# New Site set-up page
+msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
+msgstr ""
+
+# New Site set-up page
+msgid "Fences or other human-made linear structures"
+msgstr ""
+
+# New Site set-up page
+msgid "Dead tree, stumps or wood"
+msgstr ""
+
+# New Site set-up page
+msgid "Landscape features"
+msgstr ""
+
+# New Site set-up page
+msgid "Features located within a 50-meter radius."
+msgstr ""
+
+# New Site set-up page
+msgid "Other landscape feature details"
+msgstr ""
+
+# New Site set-up page
+msgid "Not applicable (not a grass / lawn)"
+msgstr ""
+
+# New Site set-up page
+msgid "I don't know"
+msgstr ""
+
+# New Site set-up page
+msgid "Frequent mowing, all (relevant) area"
+msgstr ""
+
+# New Site set-up page
+msgid "Rare mowing (1-2 times a year), all area"
+msgstr ""
+
+# New Site set-up page
+msgid "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
+msgstr ""
+
+# New Site set-up page
+msgid "Extensive grazing (few grazers, not mowed)"
+msgstr ""
+
+# New Site set-up page
+msgid "Intensive grazing (not mowed)"
+msgstr ""
+
+# New Site set-up page
+msgid "How often is this lawn mown?"
+msgstr ""
+
+# New Site set-up page
+msgid "Not applicable"
+msgstr ""
+
+# New Site set-up page
+msgid "Frequent application"
+msgstr ""
+
+# New Site set-up page
+msgid "Rare application"
+msgstr ""
+
+# New Site set-up page
+msgid "No fertilizers used"
+msgstr ""
+
+# New Site set-up page
+msgid "Is the area fertilized?"
+msgstr ""
+
+# New Site set-up page
+msgid "Other fertilizer details"
+msgstr ""
+
+# New Site set-up page
+msgid "No pesticides applied"
+msgstr ""
+
+# New Site set-up page
+msgid "Are pesticides used?"
+msgstr ""
+
+# New Site set-up page
+msgid "Other pesticide details"
+msgstr ""
+
+# New Site set-up page
+msgid "Please upload site photos"
+msgstr ""
+
+# New Site set-up page
+msgid "Optimally in the direction to North, East, South and West."
+msgstr ""
+
+# New Site set-up page
+msgid "Garden"
+msgstr ""
+
+# New Site set-up page
+msgid "Allotment gardens"
+msgstr ""
+
+# New Site set-up page
+msgid "Community garden"
+msgstr ""
+
+# New Site set-up page
+msgid "Balcony"
+msgstr ""
+
+# New Site set-up page
+msgid "Park (mixed vegetation)"
+msgstr ""
+
+# New Site set-up page
+msgid "Lawn"
+msgstr ""
+
+# New Site set-up page
+msgid "Flowering strip"
+msgstr ""
+
+# New Site set-up page
+msgid "Built-up area"
+msgstr ""
+
+# New Site set-up page
+msgid "Fallow land, abandoned area (urban)"
+msgstr ""
+
+# New Site set-up page
+msgid "Fallow land, abandoned field  (rural)"
+msgstr ""
+
+# New Site set-up page
+msgid "Field edge"
+msgstr ""
+
+# New Site set-up page
+msgid "Arable field"
+msgstr ""
+
+# New Site set-up page
+msgid "Grassland / Meadow / Pasture"
+msgstr ""
+
+# New Site set-up page
+msgid "Orchard"
+msgstr ""
+
+# New Site set-up page
+msgid "Forest edge"
+msgstr ""
+
+# New Site set-up page
+msgid "Woodland/Forest"
+msgstr ""
+
+# New Site set-up page
+msgid "Coastal"
+msgstr ""
+
+# New Site set-up page
+msgid "Scrubland/Heathland"
+msgstr ""
+
+# New Site set-up page
+msgid "Sparsely vegetated"
+msgstr ""
+
+# New Site set-up page
+msgid "Desert / barren"
+msgstr ""
+
+# New Site set-up page
+msgid "Dominant habitat"
+msgstr ""
+
+# New Site set-up page
+msgid "How many trees are there in the area of your observation site?"
+msgstr ""
+
+# New Site set-up page
+msgid "What proportion of the site is a lawn or a grassland?"
+msgstr ""
+
+# New Site set-up page
+msgid "Fruit trees and shrubs"
+msgstr ""
+
+# New Site set-up page
+msgid "Unmanaged corners (natural spaces, abandoned areas)"
+msgstr ""
+
+# New Site set-up page
+msgid "Vegetable patch"
+msgstr ""
+
+# New Site set-up page
+msgid "Lavender species"
+msgstr ""
+
+# New Site set-up page
+msgid "Geraniums & Pelargoniums"
+msgstr ""
+
+# New Site set-up page
+msgid "Valeriana"
+msgstr ""
+
+# New Site set-up page
+msgid "Legumes (Clover, Lupin, Lotus,...)"
+msgstr ""
+
+# New Site set-up page
+msgid "Marigold"
+msgstr ""
+
+# New Site set-up page
+msgid "Butterfly bush (or Summer Lilac)"
+msgstr ""
+
+# New Site set-up page
+msgid "Aromatics like Thyme, Oregano, etc. ( Lamiaceae)"
+msgstr ""
+
+# New Site set-up page
+msgid "Nettle (Urtica dioica)"
+msgstr ""
+
+# New Site set-up page
+msgid "Brambles (Rubus fruticosa)"
+msgstr ""
+
+# New Site set-up page
+msgid "Ivy"
+msgstr ""
+
+# New Site set-up page
+msgid "Knappweed (Centaurea and Scabiosa spp.)"
+msgstr ""
+
+# New Site set-up page
+msgid "Fennel, Carvi or others from the Carrot family (Apiaceae)"
+msgstr ""
+
+# New Site set-up page
+msgid "Cabbage, Rucola or others Mustard-plant family (Brassicaceae)"
+msgstr ""
+
+# New Site set-up page
+msgid "Hemp-agrimony (Eupatorium spp.)"
+msgstr ""
+
+# New Site set-up page
+msgid "Are these plant species present in this location?"
+msgstr ""
+
+# New Site set-up page
+msgid "I own the site"
+msgstr ""
+
+# New Site set-up page
+msgid "Private space"
+msgstr ""
+
+# New Site set-up page
+msgid "Public space"
+msgstr ""
+
+# New Site set-up page
+msgid "Communal space"
+msgstr ""
+
+# New Site set-up page
+msgid "Prefer not to say"
+msgstr ""
+
+# New Site set-up page
+msgid "Do you know who owns the land?"
+msgstr ""
+
+# New Site set-up page
+msgid "Are you responsible for gardening activities at the site?"
+msgstr ""
+
 # Location attribute label
 msgid "Location"
 msgstr "Position"
