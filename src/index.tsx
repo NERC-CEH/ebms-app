@@ -25,7 +25,12 @@ mobxConfig({ enforceActions: 'never' });
 
 (async function () {
   if (isPlatform('hybrid') && !localStorage.getItem('sqliteMigrated')) {
-    SentryBrowser.init({ ...sentryOptions, dsn: config.sentryDSN });
+    SentryBrowser.init({
+      ...sentryOptions,
+      release: config.version,
+      dist: config.build,
+      dsn: config.sentryDSN,
+    });
     (await loadingController.create({ message: 'Upgrading...' })).present();
     await migrate();
     localStorage.setItem('sqliteMigrated', 'true');
