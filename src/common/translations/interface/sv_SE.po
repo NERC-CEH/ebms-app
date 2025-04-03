@@ -2394,7 +2394,7 @@ msgstr "Inventerar"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr "Nattfjärilsinventering (SPRING)"
+msgstr "Nattfjärilsinventering"
 
 # Survey name
 msgid "Moth Survey"
@@ -3095,6 +3095,10 @@ msgstr "Platstjänster ej aktiverade"
 # Part of favorite track
 msgid "You have no previous tracks."
 msgstr "Du har inga tidigare slingor."
+
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."

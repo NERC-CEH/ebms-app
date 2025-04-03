@@ -99,13 +99,7 @@ export const isValidDate = (date: string | number | Date) => {
 export { options as sentryOptions } from '@flumens/utils/dist/sentry';
 export { default as device } from '@flumens/utils/dist/device';
 export { default as string } from '@flumens/utils/dist/string';
-export {
-  type Location,
-  prettyPrintLocation,
-  updateModelLocation,
-  normalizeCoords,
-  isValidLocation,
-} from '@flumens/utils/dist/location';
+export * from '@flumens/utils/dist/location';
 export {
   useDisableBackButton,
   useOnBackButton,

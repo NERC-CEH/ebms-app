@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { MapContainer } from '@flumens';
 import { IonSpinner } from '@ionic/react';
 import MothTrap from 'models/location';
-import Sample, { MothTrapLocation } from 'models/sample';
+import Sample from 'models/sample';
 import BottomSheet from './BottomSheet';
 import Map from './Map';
 import Traps from './Traps';
@@ -41,12 +41,13 @@ const MapComponent = ({
     onLocationSelect(newTrap);
   };
 
-  const location = sample.data.location as MothTrapLocation | undefined;
+  const location = sample.data.location as any;
 
   return (
     <>
       <Map
-        location={location?.data.location}
+        latitude={parseFloat(location?.data?.lat)}
+        longitude={parseFloat(location?.data?.lon)}
         onMovedCoords={setMapCurrentCenter}
       >
         <Traps

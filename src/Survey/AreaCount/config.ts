@@ -1,8 +1,7 @@
 import { when } from 'mobx';
-import { device, isValidLocation } from '@flumens';
+import { device, getGeomWKT, isValidLocation } from '@flumens';
 import { isPlatform } from '@ionic/react';
 import config from 'common/config';
-import { getGeomString } from 'common/helpers/location';
 import appModel from 'common/models/app';
 import { assignIfMissing } from 'common/models/utils';
 import { fetchWeather } from 'common/services/openWeather';
@@ -80,7 +79,7 @@ const survey: Survey = {
           // eslint-disable-next-line
           submission.values = {
             ...submission.values,
-            geom: getGeomString(location.shape),
+            geom: getGeomWKT(location.shape),
           };
 
           submission.values['smpAttr:282'] = accuracy; // eslint-disable-line

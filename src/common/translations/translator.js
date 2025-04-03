@@ -27,6 +27,9 @@ function saveMissingKey(key) {
 
   if (Number.isFinite(parseInt(key, 10))) return;
 
+  if (key === '<0></0><1></1>') return;
+  if (key === '<0></0>') return;
+
   console.warn(`🇬🇧: ${key}`);
   window.dic.push(key);
 }

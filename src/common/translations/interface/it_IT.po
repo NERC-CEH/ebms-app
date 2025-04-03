@@ -3121,6 +3121,10 @@ msgstr "I sistemi di localizzazione non sono abilitati"
 msgid "You have no previous tracks."
 msgstr "Non hai tracce precedenti"
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Elenco modificato in ordine alfabetico"

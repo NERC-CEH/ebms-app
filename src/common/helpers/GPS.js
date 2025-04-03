@@ -1,3 +1,4 @@
+import i18n from 'i18next';
 import { registerPlugin } from '@capacitor/core';
 import { Geolocation } from '@capacitor/geolocation';
 import { isPlatform } from '@ionic/react';
@@ -75,8 +76,8 @@ const API = {
 
     API._watchId = await BackgroundGeolocation.addWatcher(
       {
-        backgroundTitle: t('Using your location.'),
-        backgroundMessage: t('Cancel to prevent battery drain.'),
+        backgroundTitle: i18n.t('Using your location.'),
+        backgroundMessage: i18n.t('Cancel to prevent battery drain.'),
         requestPermissions: true,
         stale: false,
       },

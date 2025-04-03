@@ -3146,6 +3146,10 @@ msgstr "Услугите за местоположение не са актив�
 msgid "You have no previous tracks."
 msgstr "Нямате предишни маршрути"
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Подреждането на списъка е променено на азбучен ред."

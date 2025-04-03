@@ -3066,6 +3066,10 @@ msgstr "Konum hizmetleri etkin değil."
 msgid "You have no previous tracks."
 msgstr "Daha önceden rotanız bulunmuyor."
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Liste sıralaması alfabetik olarak değiştirildi."

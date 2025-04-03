@@ -1,9 +1,8 @@
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import wkt from 'wellknown';
-import { Main } from '@flumens';
+import { Main, transformToLatLon } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
-import transformToLatLon from 'common/helpers/location';
 import butterflyIcon from 'common/images/butterfly.svg';
 import Sample from 'models/sample';
 import SVG from './components/SVG';
@@ -38,10 +37,13 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
         {section.name || (section as any).code}
       </IonLabel>
       {!!sectionSpeciesCount && (
-        <IonLabel slot="end">
+        <div
+          slot="end"
+          className="flex min-w-12 gap-3 text-left text-[var(--form-value-color)]"
+        >
           <IonIcon icon={butterflyIcon} /> {/* prettier-ignore */}{' '}
           {sectionSpeciesCount}
-        </IonLabel>
+        </div>
       )}
     </IonItem>
   );

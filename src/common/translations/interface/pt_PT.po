@@ -3107,6 +3107,10 @@ msgstr "Os serviços de localização estão desativados"
 msgid "You have no previous tracks."
 msgstr "Não tem percursos anteriores."
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Ordem da lista alterada para ordem alfabética."

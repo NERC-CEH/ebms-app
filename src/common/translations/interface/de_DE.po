@@ -3160,6 +3160,10 @@ msgstr "Deine Standortdienste sind deaktiviert. "
 msgid "You have no previous tracks."
 msgstr "Du hast keine vorherigen Begehungen."
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Listensortierung geändert zu: alphabetisch"

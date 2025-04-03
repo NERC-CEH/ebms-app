@@ -8,16 +8,17 @@ import countries from 'common/config/countries';
 import appModel from 'models/app';
 
 interface Props {
-  location?: any;
+  latitude?: any;
+  longitude?: any;
   onMovedCoords: any;
   children: any;
 }
 
-const Map = ({ location, onMovedCoords, children }: Props) => {
+const Map = ({ latitude, longitude, onMovedCoords, children }: Props) => {
   let initialViewState;
 
-  if (Number.isFinite(location?.latitude)) {
-    initialViewState = { ...location, zoom: 12 };
+  if (Number.isFinite(latitude)) {
+    initialViewState = { latitude, longitude, zoom: 12 };
   } else {
     const country = countries[appModel.data.country!];
     if (country?.zoom) {

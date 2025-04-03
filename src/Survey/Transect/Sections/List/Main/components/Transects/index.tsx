@@ -1,11 +1,10 @@
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
 import wkt from 'wellknown';
-import { Main, InfoMessage } from '@flumens';
+import { Main, InfoMessage, transformToLatLon } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import Location, { LocationType } from 'common/models/location';
 import locations, { byType } from 'models/collections/locations';
-import transformToLatLon from 'helpers/location';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import SVG from '../SVG';
 import './styles.scss';

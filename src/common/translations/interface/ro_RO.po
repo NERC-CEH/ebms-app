@@ -3103,6 +3103,10 @@ msgstr "Serviciile de localizare sunt inactive"
 msgid "You have no previous tracks."
 msgstr "Nu ai intrări anterioare înregistrate."
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Lista a fost ordonată alfabetic"

@@ -3093,6 +3093,10 @@ msgstr "Lokalitetstjenester er ikke slået til"
 msgid "You have no previous tracks."
 msgstr "Du har ingen tidligere spor."
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Ændrede listens rækkefølge til alfabetisk"

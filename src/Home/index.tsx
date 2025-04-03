@@ -122,7 +122,7 @@ const HomeController = () => {
           </IonLabel>
         </IonTabButton>
 
-        <IonTabButton tab="">
+        <IonTabButton>
           <LongPressFabButton
             onClick={navigateToPrimarySurvey}
             icon={addOutline}

@@ -3137,6 +3137,10 @@ msgstr "Οι ρυθμίσεις τοποθεσίας δεν είναι ενερ�
 msgid "You have no previous tracks."
 msgstr "Δεν εχέτε προηγούμενες καταγεγραμμένες πορείες."
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Αλλαγή της ταξινόμησης της λίστας σε αλφαβητική."

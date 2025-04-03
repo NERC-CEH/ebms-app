@@ -3082,6 +3082,10 @@ msgstr "Sledovanie polohy nie je povolené"
 msgid "You have no previous tracks."
 msgstr "Nemáte žiadne predchádzajúce trasy. "
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Zoradené podľa abecedy."

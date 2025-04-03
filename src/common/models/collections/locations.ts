@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 import { reaction } from 'mobx';
 import axios from 'axios';
 import { camelCase, mapKeys } from 'lodash';
@@ -90,7 +91,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       const isLocalDuplicate =
         !wasUploaded && remoteExternalKeys.includes(model.cid); // can happen if uploaded but not reflected back in the app
       if (wasUploaded || isLocalDuplicate) {
-        model.destroy();
+        await model.destroy();
       } else {
         drafts.push(model);
       }

@@ -211,19 +211,21 @@ export default class Sample extends SampleModel<Data, Metadata> {
   getSurvey(): Survey {
     if (this.parent) return (this.parent.getSurvey().smp as Survey) || {};
 
-    try {
-      let survey = surveyConfigsByCode[this.data.surveyId as any];
+    let survey = surveyConfigsByCode[this.data.surveyId as any];
 
-      if (!survey) {
-        const surveyName = this.metadata.survey;
-        survey = surveyConfigs[surveyName];
-      }
+    if (!survey) {
+      const surveyName = this.metadata.survey;
+      survey = surveyConfigs[surveyName];
+    }
 
-      return survey;
-    } catch (error) {
-      console.error(`Survey config was missing ${this.metadata.survey}`);
+    if (!survey) {
+      console.log(JSON.stringify(this.metadata));
+      console.log(JSON.stringify(this.data));
+      console.error(`Survey config was missing`);
       return {} as Survey;
     }
+
+    return survey;
   }
 
   getPrettyName() {

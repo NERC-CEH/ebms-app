@@ -3060,6 +3060,10 @@ msgstr "Služby polohy nejsou povolené"
 msgid "You have no previous tracks."
 msgstr "Nemáte žádné předchozí trasy."
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "Změněno pořadí seznamu podle abecedy."

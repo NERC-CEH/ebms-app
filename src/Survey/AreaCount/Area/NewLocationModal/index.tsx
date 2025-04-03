@@ -10,6 +10,8 @@ import {
   Main,
   PhotoPicker,
   captureImage,
+  getGeomCenter,
+  getGeomWKT,
 } from '@flumens';
 import { isPlatform } from '@ionic/core';
 import {
@@ -22,7 +24,6 @@ import {
   useIonActionSheet,
 } from '@ionic/react';
 import config from 'common/config';
-import { getGeomCenter, getGeomString } from 'common/helpers/location';
 import { LocationType, Data as Site, dtoSchema } from 'common/models/location';
 import Media from 'common/models/media';
 import { Group } from 'common/models/sample';
@@ -103,7 +104,7 @@ const getNewSiteSeed = (
 ): Partial<Site> => {
   const seed: any = {
     locationTypeId: LocationType.GroupSite,
-    boundaryGeom: shape ? getGeomString(shape) : undefined,
+    boundaryGeom: shape ? getGeomWKT(shape) : undefined,
     lat: shape ? `${getGeomCenter(shape)[1]}` : undefined,
     lon: shape ? `${getGeomCenter(shape)[0]}` : undefined,
     centroidSrefSystem: '4326',

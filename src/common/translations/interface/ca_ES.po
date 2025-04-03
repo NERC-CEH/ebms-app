@@ -3079,6 +3079,10 @@ msgstr "Els serveis d'ubicació no estan activats"
 msgid "You have no previous tracks."
 msgstr "No tens pistes anteriors."
 
+# Part of favorite track
+msgid "You have no saved sites."
+msgstr ""
+
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
 msgstr "S'ha canviat l'ordre de la llista per alfabètic."
