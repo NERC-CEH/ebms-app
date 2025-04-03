@@ -42,7 +42,7 @@
     "@capacitor/status-bar": "7.0.0",
     "@flumens/bigu": "0.4.0",
     "@flumens/ionic": "2.0.0-alpha.76",
-    "@flumens/models": "0.12.1",
+    "@flumens/models": "0.12.2",
     "@flumens/tailwind": "0.28.3",
     "@flumens/utils": "^0.3.5",
     "@heroicons/react": "^2.2.0",
