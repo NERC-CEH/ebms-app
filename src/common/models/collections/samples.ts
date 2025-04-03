@@ -24,7 +24,12 @@ export async function uploadAllSamples() {
     const isNotInDraftStage = sample.metadata.saved;
     const isAlreadyUploaded = !!sample.id;
     const isOldSurvey = !sample.getSurvey();
-    if (isNotInDraftStage && !isAlreadyUploaded && !isOldSurvey) {
+    if (
+      sample.isStored &&
+      isNotInDraftStage &&
+      !isAlreadyUploaded &&
+      !isOldSurvey
+    ) {
       const invalids = sample.validateRemote(); // eslint-disable-line
       if (!invalids) {
         affectedRecordsCount++;
