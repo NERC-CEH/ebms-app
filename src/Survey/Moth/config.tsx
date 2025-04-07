@@ -553,6 +553,7 @@ const survey: Survey = {
       if (!classifierSubmission) return submission;
 
       return {
+        ...submission,
         ...classifierSubmission,
         values: { ...submission.values, ...classifierSubmission.values },
       };
