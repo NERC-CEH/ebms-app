@@ -1,13 +1,13 @@
 # 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Miloš Popović <gpopac@gmail.com>, 2020
 # Karolis, 2021
+# Miloš Popović <gpopac@gmail.com>, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2021\n"
+"Last-Translator: Miloš Popović <gpopac@gmail.com>, 2025\n"
 "Language-Team: Serbian (https://app.transifex.com/ceh/teams/95441/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +110,7 @@ msgid "Montenegro"
 msgstr "Црна Гора"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Мароко"
 
 msgid "North Macedonia"
 msgstr "Северна Македонија"
@@ -149,7 +149,7 @@ msgid "Slovenia"
 msgstr "Словенија"
 
 msgid "Japan"
-msgstr ""
+msgstr "Јапан"
 
 msgid "Slovakia"
 msgstr "Словачка"
@@ -164,22 +164,22 @@ msgid "Ukraine"
 msgstr "Украјина"
 
 msgid "South Africa"
-msgstr ""
+msgstr "Јужноафричка република"
 
 msgid "Botswana"
-msgstr ""
+msgstr "Боцвана"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Нигерија"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Нови Зеланд"
 
 msgid "Montserrat"
-msgstr ""
+msgstr "Монтсерат"
 
 msgid "Anguilla"
-msgstr ""
+msgstr "Ангвила"
 
 msgid "Elsewhere"
 msgstr "Негде другде"
@@ -303,12 +303,21 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
+"Унутар UGP+ пројекта*, грађани, законодавци и научници раде заједно на "
+"развоју будућих планова за урбану природу Европе. Бројање лептира у "
+"градовима није само сјајан начин да пратите биодиверзитет и квалитет урбаних"
+" зелених подручја, већ може подстаћи и сваког од нас да се  позабавимо "
+"питањима биодиверзитета, закона о заштити природе и прелога нових "
+"иницијатива људи у градовима. Подаци које сарадници доставе ће бити "
+"анализирани и помоћи ће у очувању биодиверзитета широм Европе."
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
+"UGP+ скраћеница се може превести као „Побољшање урбаних зелених планова "
+"зарад биодиверзитета и друштва“, а финансиран је од стране Европске Уније"
 
 msgid "Home"
 msgstr "Почетна"
@@ -358,6 +367,8 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
+"Да ли заиста желите да се одјавите?<br/><br/>Ваши уноси на чекању и послати "
+"уноси <4>неће бити обрисани </4> са овог уређаја."
 
 msgid "Cancel"
 msgstr "Откажи"
@@ -376,7 +387,7 @@ msgid "OK, got it"
 msgstr "Схватио сам"
 
 msgid "Please fill in"
-msgstr ""
+msgstr "Попуните ово"
 
 msgid "Area Count"
 msgstr "Бројање у области"
@@ -386,457 +397,459 @@ msgstr "Област"
 
 # New Site set-up page
 msgid "Site area"
-msgstr ""
+msgstr "Величина области"
 
 # New Site set-up page
 msgid "Approximate size of your observation site."
-msgstr ""
+msgstr "Израчуната површина ваше локације."
 
 # New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
-msgstr ""
+msgstr "Станишта/употреба земљишта (збирно до 100%)"
 
 # New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
-msgstr ""
+msgstr "Поља са житарицама (жито, јечам, раж)"
 
 # New Site set-up page
 msgid "Arable field fruits or vegetables"
-msgstr ""
+msgstr "Поља са воћем или поврћем"
 
 # New Site set-up page
 msgid "Arable field rapeseed"
-msgstr ""
+msgstr "Поља са уљаном репицом"
 
 # New Site set-up page
 msgid "Arable field corn"
-msgstr ""
+msgstr "Поља са кукурузом"
 
 # New Site set-up page
 msgid "Arable legumes"
-msgstr ""
+msgstr "Поља са махунаркама"
 
 # New Site set-up page
 msgid "Arable multi-cropping"
-msgstr ""
+msgstr "Поља са више засада"
 
 # New Site set-up page
 msgid "Arable fallow"
-msgstr ""
+msgstr "Запарложена поља"
 
 # New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
-msgstr ""
+msgstr "Хомогени, интензивни травњаци"
 
 # New Site set-up page
 msgid "Grassland extensive or heterogeneous (pasture)"
-msgstr ""
+msgstr "Разноврсни, екстензивни травњаци (пашњаци)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
-msgstr ""
+msgstr "Воћњаци, виногради (редак засад, пашњаци између дрвећа)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
-msgstr ""
+msgstr "Воћњаци или виногради (интензивни засади)"
 
 # New Site set-up page
 msgid "Scrubland"
-msgstr ""
+msgstr "Жбуњаци"
 
 # New Site set-up page
 msgid "Land laying fallow / wasteland"
-msgstr ""
+msgstr "Запарложено земљиште/шут"
 
 # New Site set-up page
 msgid "Sparse woodland"
-msgstr ""
+msgstr "Ретка шума"
 
 # New Site set-up page
 msgid "Dense woodland or forest"
-msgstr ""
+msgstr "Густа шума"
 
 # New Site set-up page
 msgid "Plantation"
-msgstr ""
+msgstr "Засад"
 
 # New Site set-up page
 msgid "Garden (single)"
-msgstr ""
+msgstr "Башта (једна)"
 
 # New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
-msgstr ""
+msgstr "Баште (више, нпр. заједничке баште)"
 
 # New Site set-up page
 msgid "Building(s)"
-msgstr ""
+msgstr "Зграда(е)"
 
 # New Site set-up page
 msgid "Pond, lake or sea"
-msgstr ""
+msgstr "Бара, језеро или море"
 
 # New Site set-up page
 msgid "River or creek"
-msgstr ""
+msgstr "Река или поток"
 
 # New Site set-up page
 msgid "Wetland"
-msgstr ""
+msgstr "Влажно подручје"
 
 # New Site set-up page
 msgid "Dunes or barren land"
-msgstr ""
+msgstr "Дине или голо земљиште"
 
 # New Site set-up page
 msgid "Field edge(s)"
-msgstr ""
+msgstr "Руб(ови) поља"
 
 # New Site set-up page
 msgid "Buffer-strip(s)"
-msgstr ""
+msgstr "Тампон трака(е)"
 
 # New Site set-up page
 msgid "Flower-strip(s)"
-msgstr ""
+msgstr "Цветна трака(е)"
 
 # New Site set-up page
 msgid "Hedge(s)"
-msgstr ""
+msgstr "Ивица(е)"
 
 # New Site set-up page
 msgid "Scattered trees or trees in rows"
-msgstr ""
+msgstr "Разбацано дрвеће или засади дрвећа"
 
 # New Site set-up page
 msgid "Wooded area"
-msgstr ""
+msgstr "Подручје са шумом"
 
 # New Site set-up page
 msgid "Terraces, stone walls"
-msgstr ""
+msgstr "Терасе, камени зидови"
 
 # New Site set-up page
 msgid "Pond"
-msgstr ""
+msgstr "Бара"
 
 # New Site set-up page
 msgid "Path"
-msgstr ""
+msgstr "Стаза"
 
 # New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
-msgstr ""
+msgstr "Улица, пут или пруга (нпр. асфалт)"
 
 # New Site set-up page
 msgid "Fences or other human-made linear structures"
-msgstr ""
+msgstr "Ограде или друге људске линеарне структуре"
 
 # New Site set-up page
 msgid "Dead tree, stumps or wood"
-msgstr ""
+msgstr "Мртво дрво, пањ или дрво"
 
 # New Site set-up page
 msgid "Landscape features"
-msgstr ""
+msgstr "Карактеристике пејзажа"
 
 # New Site set-up page
 msgid "Features located within a 50-meter radius."
-msgstr ""
+msgstr "Карактеристике у пречнику од 50 метара."
 
 # New Site set-up page
 msgid "Other landscape feature details"
-msgstr ""
+msgstr "Други подаци о карактеристикама пејзажа"
 
 # New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
-msgstr ""
+msgstr "Није примењиво (није ливада или травњак)"
 
 # New Site set-up page
 msgid "I don't know"
-msgstr ""
+msgstr "Не знам"
 
 # New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
-msgstr ""
+msgstr "Често кошење, читава (релевантна) површина"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), all area"
-msgstr ""
+msgstr "Ретко кошење (1-2 пута годишње), читаво подручје"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
-msgstr ""
+msgstr "Ретко кошење (1-2 пута годишње), део подручја"
 
 # New Site set-up page
 msgid "Extensive grazing (few grazers, not mowed)"
-msgstr ""
+msgstr "Екстензивна испаша (неколико животиња, без кошења)"
 
 # New Site set-up page
 msgid "Intensive grazing (not mowed)"
-msgstr ""
+msgstr "Интензивна испаша (без кошења)"
 
 # New Site set-up page
 msgid "How often is this lawn mown?"
-msgstr ""
+msgstr "Колико често се травњак коси?"
 
 # New Site set-up page
 msgid "Not applicable"
-msgstr ""
+msgstr "Није примењиво"
 
 # New Site set-up page
 msgid "Frequent application"
-msgstr ""
+msgstr "Често"
 
 # New Site set-up page
 msgid "Rare application"
-msgstr ""
+msgstr "Ретко"
 
 # New Site set-up page
 msgid "No fertilizers used"
-msgstr ""
+msgstr "Без ђубрења"
 
 # New Site set-up page
 msgid "Is the area fertilized?"
-msgstr ""
+msgstr "Да ли се подручје ђубри?"
 
 # New Site set-up page
 msgid "Other fertilizer details"
-msgstr ""
+msgstr "Остали подаци о ђубрењу"
 
 # New Site set-up page
 msgid "No pesticides applied"
-msgstr ""
+msgstr "Без пестицида"
 
 # New Site set-up page
 msgid "Are pesticides used?"
-msgstr ""
+msgstr "Да ли се користе пестициди?"
 
 # New Site set-up page
 msgid "Other pesticide details"
-msgstr ""
+msgstr "Остали подаци о пестицидима"
 
 # New Site set-up page
 msgid "Please upload site photos"
-msgstr ""
+msgstr "Пошаљите фотографију локалитета"
 
 # New Site set-up page
 msgid "Optimally in the direction to North, East, South and West."
-msgstr ""
+msgstr "Оптимално ка северу, истоку, југу и западу."
 
 # New Site set-up page
 msgid "Garden"
-msgstr ""
+msgstr "Башта"
 
 # New Site set-up page
 msgid "Allotment gardens"
-msgstr ""
+msgstr "Градске баште"
 
 # New Site set-up page
 msgid "Community garden"
-msgstr ""
+msgstr "Заједничке баште"
 
 # New Site set-up page
 msgid "Balcony"
-msgstr ""
+msgstr "Балкон"
 
 # New Site set-up page
 msgid "Park (mixed vegetation)"
-msgstr ""
+msgstr "Парк (различита вегетација)"
 
 # New Site set-up page
 msgid "Lawn"
-msgstr ""
+msgstr "Травњак"
 
 # New Site set-up page
 msgid "Flowering strip"
-msgstr ""
+msgstr "Цветна трака"
 
 # New Site set-up page
 msgid "Built-up area"
-msgstr ""
+msgstr "Изграђено подручје"
 
 # New Site set-up page
 msgid "Fallow land, abandoned area (urban)"
-msgstr ""
+msgstr "Запарложено, напуштено земљиште (урбано)"
 
 # New Site set-up page
 msgid "Fallow land, abandoned field  (rural)"
-msgstr ""
+msgstr "Запарложено, напуштено земљиште (сеоско)"
 
 # New Site set-up page
 msgid "Field edge"
-msgstr ""
+msgstr "Ивица поља"
 
 # New Site set-up page
 msgid "Arable field"
-msgstr ""
+msgstr "Пољопривредно поље"
 
 # New Site set-up page
 msgid "Grassland / Meadow / Pasture"
-msgstr ""
+msgstr "Травњак/ливада/пашњак"
 
 # New Site set-up page
 msgid "Orchard"
-msgstr ""
+msgstr "Воћњак"
 
 # New Site set-up page
 msgid "Forest edge"
-msgstr ""
+msgstr "Ивица шуме"
 
 # New Site set-up page
 msgid "Woodland/Forest"
-msgstr ""
+msgstr "Шума"
 
 # New Site set-up page
 msgid "Coastal"
-msgstr ""
+msgstr "Обала"
 
 # New Site set-up page
 msgid "Scrubland/Heathland"
-msgstr ""
+msgstr "Жбуњак/вресиште"
 
 # New Site set-up page
 msgid "Sparsely vegetated"
-msgstr ""
+msgstr "Ретка вегетација"
 
 # New Site set-up page
 msgid "Desert / barren"
-msgstr ""
+msgstr "Пустиња/голо земљиште"
 
 # New Site set-up page
 msgid "Dominant habitat"
-msgstr ""
+msgstr "Доминантно станиште"
 
 # New Site set-up page
 msgid "How many trees are there in the area of your observation site?"
-msgstr ""
+msgstr "Колико дрвећа има у подручју унутар вашег локалитета?"
 
 # New Site set-up page
 msgid "What proportion of the site is a lawn or a grassland?"
-msgstr ""
+msgstr "Који удео подручја је травњак, ливада или пашњак?"
 
 # New Site set-up page
 msgid "Fruit trees and shrubs"
-msgstr ""
+msgstr "Стабла воћака или жбуња"
 
 # New Site set-up page
 msgid "Unmanaged corners (natural spaces, abandoned areas)"
-msgstr ""
+msgstr "Зарасли ћошкови (природна подручја, напуштена површ)"
 
 # New Site set-up page
 msgid "Vegetable patch"
-msgstr ""
+msgstr "Део са поворћем"
 
 # New Site set-up page
 msgid "Lavender species"
-msgstr ""
+msgstr "Поља с лавандом"
 
 # New Site set-up page
 msgid "Geraniums & Pelargoniums"
-msgstr ""
+msgstr "Геранијуми и мушкатле"
 
 # New Site set-up page
 msgid "Valeriana"
-msgstr ""
+msgstr "Одољен (валеријана)"
 
 # New Site set-up page
 msgid "Legumes (Clover, Lupin, Lotus,...)"
-msgstr ""
+msgstr "Махунарке (детелина, лупина, звездан,…)"
 
 # New Site set-up page
 msgid "Marigold"
-msgstr ""
+msgstr "Кадифа"
 
 # New Site set-up page
 msgid "Butterfly bush (or Summer Lilac)"
-msgstr ""
+msgstr "Летњи јоргован (будлеја)"
 
 # New Site set-up page
 msgid "Aromatics like Thyme, Oregano, etc. ( Lamiaceae)"
-msgstr ""
+msgstr "Ароматичне биљке, мајчина душица, оригано,… (Lamiaceae)"
 
 # New Site set-up page
 msgid "Nettle (Urtica dioica)"
-msgstr ""
+msgstr "Коприва (Urtica dioica)"
 
 # New Site set-up page
 msgid "Brambles (Rubus fruticosa)"
-msgstr ""
+msgstr "Багрем (Rubus fruticosa)"
 
 # New Site set-up page
 msgid "Ivy"
-msgstr ""
+msgstr "Бршљен"
 
 # New Site set-up page
 msgid "Knappweed (Centaurea and Scabiosa spp.)"
-msgstr ""
+msgstr "Различци (Centaurea и Scabiosa spp.)"
 
 # New Site set-up page
 msgid "Fennel, Carvi or others from the Carrot family (Apiaceae)"
-msgstr ""
+msgstr "Коморач, ким и друге штитоноше (Apiaceae)"
 
 # New Site set-up page
 msgid "Cabbage, Rucola or others Mustard-plant family (Brassicaceae)"
-msgstr ""
+msgstr "Гајени купус, рукола и друге врсте купуса (Brassicaceae)"
 
 # New Site set-up page
 msgid "Hemp-agrimony (Eupatorium spp.)"
-msgstr ""
+msgstr "Ресник (Eupatorium spp.)"
 
 # New Site set-up page
 msgid "Are these plant species present in this location?"
-msgstr ""
+msgstr "Да ли су ове врсте биљака присутне на локацији?"
 
 # New Site set-up page
 msgid "I own the site"
-msgstr ""
+msgstr "Ја сам власник подручја"
 
 # New Site set-up page
 msgid "Private space"
-msgstr ""
+msgstr "Приватни простор"
 
 # New Site set-up page
 msgid "Public space"
-msgstr ""
+msgstr "Јавни простор"
 
 # New Site set-up page
 msgid "Communal space"
-msgstr ""
+msgstr "Простор заједнице"
 
 # New Site set-up page
 msgid "Prefer not to say"
-msgstr ""
+msgstr "Не желим да кажем"
 
 # New Site set-up page
 msgid "Do you know who owns the land?"
-msgstr ""
+msgstr "Да ли знате ко је власник земљишта?"
 
 # New Site set-up page
 msgid "Are you responsible for gardening activities at the site?"
-msgstr ""
+msgstr "Да ли ви одржавате башту на овом подручју?"
 
 # Location attribute label
 msgid "Location"
-msgstr ""
+msgstr "Локација"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr ""
+msgstr "Локација је обавезна"
 
 # GPS permissions message
 msgid ""
 "This app needs your location, but does not have permission. Open settings "
 "now?"
 msgstr ""
+"Апликација треба да преузме вашу локацију, али нема дозволу за то. Да ли да "
+"отворим подешавања?"
 
 # GPS message
 msgid "Cancel to prevent battery drain."
-msgstr ""
+msgstr "Откажи како би сачувао батерију."
 
 # GPS message
 msgid "Using your location."
-msgstr ""
+msgstr "Користим вашу локацију."
 
 msgid "Add"
 msgstr "Додај"
@@ -894,61 +907,61 @@ msgid "No species added"
 msgstr "Нису додате врсте"
 
 msgid "Please draw your area on the map"
-msgstr "Исцртајте жељену област на мапи"
+msgstr "Исцртајте жељену област на карти"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "Искључите ГПС праћење да омогућите алате за цртање."
 
 msgid "Draw an area"
 msgstr "Исцртајте област"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "Локације"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Претходно"
 
 # Survey area page
 msgid "New location"
-msgstr ""
+msgstr "Нова локација"
 
 # Survey area page
 msgid "No location"
-msgstr ""
+msgstr "Нема локације"
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Име подручја"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Коментари"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "Још увек се прати истражена област."
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Локација је успешно сачувана."
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "Да ли сте сигурни?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Овим ћете одбацити податке из обрасца."
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "Не"
 
 msgid "Delete"
 msgstr "Обриши"
@@ -961,11 +974,11 @@ msgstr "Извештаји"
 
 # Species filter input
 msgid "Species name or filter..."
-msgstr ""
+msgstr "Име врсте или филтер…"
 
 # Species filter label
 msgid "family"
-msgstr ""
+msgstr "фамилија"
 
 msgid "Sorry, no report data is available at the moment."
 msgstr "Још увек нису доступни подаци за извештај."
@@ -1026,7 +1039,7 @@ msgstr "Напомена: остаће у галерији."
 
 # Photo picker
 msgid "No photo has been added.<br/>Press <3></3> to add."
-msgstr ""
+msgstr "Није додата фотографија.<br/>Притисните <3></3> да је додате."
 
 msgid "Registration error:"
 msgstr "Грешка приликом регистрације:"
@@ -1036,39 +1049,43 @@ msgid "Incorrect password or email"
 msgstr "Неисправна лозинка или е-пошта"
 
 msgid "Enter your email address to request a password reset."
-msgstr ""
+msgstr "Унесите адресу е-поште да поништите лозинку."
 
 # Part of login
 msgid "Successfully logged in as: {{email}}"
-msgstr ""
+msgstr "Успешно сте се пријавили као: {{email}}"
 
 # Unverified account message
 msgid "The user has not been activated or is blocked."
-msgstr ""
+msgstr "Корисник није активиран или је блокиран."
 
 # Unverified account note message
 msgid ""
 "Looks like your <1>{{userEmail}}</1> email hasn't been verified "
 "yet.<3><0>Refresh</0><1>Resend Email</1></3>"
 msgstr ""
+"Изгледа да адреса е-поште <1>{{userEmail}}</1> још није "
+"потврђена.<3><0>Освежи</0><1>Пошаљи поново е-пошту</1></3>"
 
 # Verification resend success message
 msgid ""
 "A new verification email was successfully sent now. If you did not receive "
 "the email, then check your Spam or Junk email folders."
 msgstr ""
+"Нова порука за потврду адресе е-поште је управо послата. Уколико је нисте "
+"примили, проверите непожељне поруке."
 
 # Message when trying to upload a record without an account
 msgid "Please log in first."
-msgstr ""
+msgstr "Најпре се пријавите."
 
 # User registration error
 msgid "This email is already taken."
-msgstr ""
+msgstr "Ова адреса е-поште се већ користи."
 
 # User password reset error
 msgid "Unrecognized email address."
-msgstr ""
+msgstr "Ова адреса е-поште није позната."
 
 msgid "email is not valid"
 msgstr "е-пошта није исправна"
@@ -1078,6 +1095,9 @@ msgid ""
 " the world. For example, this graph shows the European grassland butterfly "
 "index."
 msgstr ""
+"Дневни лептири су фасцинантни инсекти, али њихов број опада у многим "
+"деловима света. Овај графикон приказује европски индекс дневних лептира "
+"травнатих станишта."
 
 # onboarding pages
 msgid ""
@@ -1092,6 +1112,8 @@ msgid ""
 "We lack structured information on butterfly numbers in many parts of the "
 "world."
 msgstr ""
+"Недостају нам структуирани подаци о броју дневних лептира у многим деловима "
+"света."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -1106,10 +1128,12 @@ msgid ""
 "This app enables you to contribute to the recording and conservation of "
 "butterflies across the world."
 msgstr ""
+"Ова апликација ће вам помоћи да допринесете познавању и заштити дневних "
+"лептира широм света."
 
 # About pages
 msgid "The app was supported through several projects:"
-msgstr ""
+msgstr "Апликација је подржана кроз неколико пројеката:"
 
 # About pages
 msgid ""
@@ -1117,6 +1141,9 @@ msgid ""
 "across the world and associated with national Butterfly Monitoring Schemes "
 "listed at:"
 msgstr ""
+"Апликација је развијена захваљујући бројним експертима за дневне лептире "
+"широм света и повезана је са националним програмима за мониторинг дневних "
+"лептира у:"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
@@ -1248,17 +1275,19 @@ msgstr ""
 
 # Help pages
 msgid "Assign a project to a count"
-msgstr ""
+msgstr "Доделите пројекат овом бројању"
 
 # Help pages
 msgid ""
 "<0>Start a count.</0><1>Select \"Additional Details\" then "
 "\"Project\".</1><2>Finally, choose the appropriate project.</2>"
 msgstr ""
+"<0>Започните бројање.</0><1>Изаберите  „Додатни подаци“, па "
+"„Пројекат“.</1><2>Коначно, изаберите одговарајући пројекат.</2>"
 
 # Help pages
 msgid "Assign a site to a count"
-msgstr ""
+msgstr "Доделите локацију овом бројању"
 
 # Help pages
 msgid ""
@@ -1275,6 +1304,18 @@ msgid ""
 " future counts conducted in that location.</7><8>Finally, choose the site "
 "for the current count.</8>"
 msgstr ""
+"<0>Започните бројање.</0><1>Доделите пројекат бројању, погледајте упутство о"
+" за избор пројекта.</1><2>Искључите ГПС у заглављу странице "
+"„Област“.</2><3>Изаберите алат „Исцртавање области“ на десној страни "
+"екрана.</3><4>Изаберите област на карти и потврдите ваш избор на десној "
+"страни екрана.</4><5>Притисните дугме „Додај“ које се налази у подручју са "
+"омиљеним локацијама у доњем, десном углу екрана. Уколико не видите подручје,"
+" отворите га преко дугмета за омиљене локације (иконица звездице) у десном "
+"делу екрана.</5><6>Апликација ће вас питати да одговорите на неколико питања"
+" о локацији.</6><7>Притисните „Сачувај“ у горњем, десном углу након што "
+"одговорите на питања. Локација ће бити сачувана и можете је изабрати за "
+"будућа бројања на истом месту.</7><8>Коначно, изаберите ову локацију за "
+"тренутно бројање.</8>"
 
 msgid "User"
 msgstr "Корисник"
@@ -1328,27 +1369,29 @@ msgstr ""
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "Очисти кеш"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "Можете ослободити нешто места које апликација користи."
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "Очисти"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr ""
+"Ово ће обрисати кеширане податке, укључујући и податке које сте послали на "
+"сервер."
 
 # App setting
 msgid "Export database"
-msgstr ""
+msgstr "Извези базу података"
 
 # App setting
 msgid "Export"
-msgstr ""
+msgstr "Извези"
 
 # App setting
 msgid ""
@@ -1356,6 +1399,8 @@ msgid ""
 "for technical support and is not a supported method for exporting your "
 "data</1>"
 msgstr ""
+"Да ли желите да извезете податке?<1>Ова могућност је направљена за техничку "
+"подршку и није званично подржан начин извоза ваших података</1>"
 
 msgid "Sweden"
 msgstr "Шведска"
@@ -1372,6 +1417,7 @@ msgstr "Послато"
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
 msgstr ""
+"Потребно је да се <1>пријавите</1> како би могли да прегледате податке."
 
 msgid "No finished pending surveys"
 msgstr "Нема завршених обиласка на чекању"
@@ -1451,21 +1497,21 @@ msgstr ""
 
 # App setting label
 msgid "Show common names in guide"
-msgstr ""
+msgstr "Приказуј народне називе у упутству"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Користи глобални списак врста"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr ""
+msgstr "Не ограничавај на локалне називе врста у претрази током обиласка."
 
 msgid "Share App Analytics"
 msgstr "Поделите аналитику апликације"
 
 msgid "Share app crash data so we can make the app more reliable."
-msgstr ""
+msgstr "Поделите податке о паду апликације како би могли да је унапредимо."
 
 msgid "Save Draft"
 msgstr "Сачувај нацрт"
@@ -1493,23 +1539,23 @@ msgstr "Мрежа гусеница"
 
 # Butterfly stage
 msgid "Adult"
-msgstr ""
+msgstr "Одрасли"
 
 # Butterfly stage
 msgid "Egg"
-msgstr ""
+msgstr "Јаје"
 
 # Butterfly stage
 msgid "Larva"
-msgstr ""
+msgstr "Ларва"
 
 # Butterfly stage
 msgid "Larval web"
-msgstr ""
+msgstr "Ларвална мрежа"
 
 # Butterfly stage
 msgid "Pupa"
-msgstr ""
+msgstr "Лутка"
 
 msgid "Transect"
 msgstr "Трансект"
@@ -1638,7 +1684,7 @@ msgid "15min Count"
 msgstr "Бројање у 15 минута"
 
 msgid "15min Single Species Count"
-msgstr ""
+msgstr "Бројање једне врсте у 15 минута"
 
 msgid "eBMS Transect"
 msgstr "eBMS трансект"
@@ -1732,6 +1778,10 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
+"Можете користити апликацију за мониторинг лептира било где у Европи. "
+"Резултати ће бити унети у базу података Европског мониторинга дневних "
+"лептира и коришћени за трендове дневних лептира широм Европе. Потребно је да"
+" региструјете налог да би могли да користите апликацију."
 
 msgid ""
 "The preferred method is to conduct a 15-minute Count. This can be done at "
@@ -1740,6 +1790,11 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"Подразумевани начин је бројање током 15 минута. Ово можете да радите било "
+"где и било када, док год су лептири активни (нпр. када је топло и сунчано). "
+"Можете користити апликацију и за бележење врста дуж ваших исцртаних "
+"трансеката. Напомене испод ће вам раћи како да користите тренутно доступне "
+"методе."
 
 msgid "How to do a 15-minute Count"
 msgstr "Како да спроведете бројање у 15 минута"
@@ -1865,7 +1920,7 @@ msgstr "Подешавање апликације"
 
 # Settings label
 msgid "Use only day-flying moths"
-msgstr ""
+msgstr "Бележите само ноћне лептире који лете током дана"
 
 msgid ""
 "Go to the application setting page to change the language and the country. "
@@ -1885,7 +1940,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "Да ли желите да обришете вашу тренутну путању?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1941,7 +1996,7 @@ msgstr "Ово је грешка догађаја број: {{eventId}}"
 
 # Additional information button in Area-count survey
 msgid "Additional Details"
-msgstr "Више детаља"
+msgstr "Додатни подаци"
 
 # Section label in Area-count survey
 msgid "Weather Conditions"
@@ -1982,7 +2037,7 @@ msgstr "Нису пронађене врсте за копирање."
 
 # Species list copy functionality
 msgid "You have successfully copied {{speciesCount}} species."
-msgstr "Успешно сте прекопирали {{speciesCount}} врста."
+msgstr "Успешно сте копирали {{speciesCount}} врста."
 
 # Species list copy functionality
 msgid "Sorry, no previous survey to copy species from."
@@ -2053,586 +2108,606 @@ msgstr "Сви обиласци"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
-msgstr ""
+msgstr "Репрезентативна фотографија са бројања у 15 минута"
 
 # Part of a photo picker element
 msgid "No photo has been added."
-msgstr ""
+msgstr "Није додата фотографија."
 
 # Part of a photo picker element
 msgid "Press <1></1> to add."
-msgstr ""
+msgstr "Притисните <1></1> да додате."
 
 # part of Precise 15min count survey
 msgid "Precise 15min Count"
-msgstr ""
+msgstr "Прецизно бројање у 15 минута"
 
 # part of Precise 15min count survey
 msgid "Occurrences"
-msgstr ""
+msgstr "Уноси"
 
 # part of Precise 15min count survey
 msgid "Time"
-msgstr ""
+msgstr "Време"
 
 # part of Precise 15min count survey
 msgid "Are you sure you want to delete this occurrence?"
-msgstr ""
+msgstr "Да ли желите да обришете овај унос?"
 
 # alert confirmation button
 msgid "Got it"
-msgstr ""
+msgstr "Схватио сам"
 
 # surveys page background message
 msgid "<0>No uploaded surveys</0>"
-msgstr ""
+msgstr "<0>Нису послати обиласци</0>"
 
 # user register error message
 msgid "Account already exists."
-msgstr ""
+msgstr "Већ постоји налог."
 
 # A survey label
 msgid "Details"
-msgstr ""
+msgstr "Више"
 
 # A survey label
 msgid "Species Photo"
-msgstr ""
+msgstr "Фотографија врсте"
 
 # Info message for species stage picker
 msgid "Pick the life stage"
-msgstr ""
+msgstr "Изаберите животни стадијум"
 
 # A survey label
 msgid "Weather"
-msgstr ""
+msgstr "Време"
 
 # A survey label
 msgid "Photo"
-msgstr ""
+msgstr "Фотографија"
 
 # Part of species group selection
 msgid "Species groups"
-msgstr ""
+msgstr "Групе врста"
 
 # Part of species group selection
 msgid "Please select the species groups that you always record."
-msgstr ""
+msgstr "Изаберите групе врста које желите увек да бележите."
 
 # Part of species group selection
 msgid "Butterflies"
-msgstr ""
+msgstr "Дневни лептири"
 
 # Part of species group selection
 msgid "Moths"
-msgstr ""
+msgstr "Ноћни лептири"
 
 # Part of species group selection
 msgid "Bumblebees"
-msgstr ""
+msgstr "Бумбари"
 
 # Part of species group selection
 msgid "Dragonflies"
-msgstr ""
+msgstr "Вилински коњици"
 
 # Alert label
 msgid "Warning"
-msgstr ""
+msgstr "Упозорење"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr ""
+msgstr "Да ли желите да искључите ГПС праћење?"
 
 # Alert button option
 msgid "Turn off"
-msgstr ""
+msgstr "Искључи"
 
 # Alert button label
 msgid "Merge"
-msgstr ""
+msgstr "Споји"
 
 # Alert header
 msgid "Species already exists"
-msgstr ""
+msgstr "Врста већ постоји"
 
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
-msgstr ""
+msgstr "Да ли желите да спојите овај списак са постојећим врстама на списку?"
 
 # Single species count survey validation message
 msgid "Please add your target species"
-msgstr ""
+msgstr "Додајте ваше циљне врсте"
 
 # Moth survey label
 msgid "Date"
-msgstr ""
+msgstr "Датум"
 
 # Moth survey label
 msgid "Method"
-msgstr ""
+msgstr "Метода"
 
 # Context term
 msgid "Please select the medthod type"
-msgstr ""
+msgstr "Изаберите врсту методе"
 
 # Moth survey method type
 msgid "MV light"
-msgstr ""
+msgstr "Живина сијалица"
 
 # Moth survey method type
 msgid "Actinic light"
-msgstr ""
+msgstr "Актинична сијалица"
 
 # Moth survey method type
 msgid "LED light"
-msgstr ""
+msgstr "ЛЕД сијалица"
 
 # Moth survey method type
 msgid "Light trapping"
-msgstr ""
+msgstr "Светлосна клопка"
 
 # Moth survey method type
 msgid "Daytime observation"
-msgstr ""
+msgstr "Посматрање током дана"
 
 # Moth survey method type
 msgid "Dusking"
-msgstr ""
+msgstr "У сумрак"
 
 # Moth survey method type
 msgid "Attracted to a lighted window"
-msgstr ""
+msgstr "Привучен на осветљен прозор"
 
 # Moth survey method type
 msgid "Sugaring"
-msgstr ""
+msgstr "На шећеру"
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr ""
+msgstr "На винској клопци"
 
 # Moth survey method type
 msgid "Beating tray"
-msgstr ""
+msgstr "На клопци са мамцем"
 
 # Moth survey method type
 msgid "Pheromone trap"
-msgstr ""
+msgstr "На феромонској клопци"
 
 # Moth survey method type
 msgid "Other method (add comment)"
-msgstr ""
+msgstr "Друга метода (додај коментар)"
 
 # Moth survey method type
 msgid "Not recorded"
-msgstr ""
+msgstr "Није уписано"
 
 # Moth survey details header title
 msgid "Survey Details"
-msgstr ""
+msgstr "Подаци о узорковању"
 
 # Moth survey header title
 msgid "Moth-trap survey"
-msgstr ""
+msgstr "Узорак светлосном клопком"
 
 # Moth survey header title
 msgid "Moth survey"
-msgstr ""
+msgstr "Узорковање ноћних лептира"
 
 # Moth survey divider label
 msgid "Species list"
-msgstr ""
+msgstr "Списак врста"
 
 # Moth survey moth details label
 msgid "Identifier"
-msgstr ""
+msgstr "Идентификовао"
 
 # Moth survey divider label
 msgid "Moths list"
-msgstr ""
+msgstr "Списак ноћних лептира"
 
 # Moth survey photo picker divider label
 msgid "Moth Photo"
-msgstr ""
+msgstr "Фотографија ноћних лептира"
 
 # Identifier attribute info message
 msgid "Enter the recorder's name, if different."
-msgstr ""
+msgstr "Унесите име посматрача, уколико се разликује."
 
 # Identifier attribute placeholder
 msgid "Recorder name"
-msgstr ""
+msgstr "Посматрач"
 
 # Latitude
 msgid "Lat"
-msgstr ""
+msgstr "Г. шир."
 
 # Longitude
 msgid "Long"
-msgstr ""
+msgstr "Г. дуж."
 
 # Moth survey attribute label
 msgid "Count inside"
-msgstr ""
+msgstr "Број унутар"
 
 # Moth survey attribute label
 msgid "Count outside"
-msgstr ""
+msgstr "Број изван"
 
 # Moth survey photo picker label
 msgid "Moth Photos"
-msgstr ""
+msgstr "Фотографије ноћних лептира"
 
 # Moth survey details label
 msgid "Moth traps"
-msgstr ""
+msgstr "Клопке за ноћне лептире"
 
 # Moth survey details label
 msgid "Moth trap"
-msgstr ""
+msgstr "Клопка за ноћне лептире"
 
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
 "<2>website.</2>"
 msgstr ""
+"Нисте додали клопке за ноћне лептире. Да их додате идите на <2>веб "
+"страницу.</2>"
 
 # Moth survey Location Info message
 msgid "To see the map please connect to the internet."
-msgstr ""
+msgstr "Повежите се на интернет да видите карту."
 
 # Moth survey validation message
 msgid "Please add the moth trap"
-msgstr ""
+msgstr "Додајте клопку за ноћне лептире"
 
 # Moth survey Location Info message
 msgid ""
 "You have only one moth trap. To create more please go to the <2>website.</2>"
 msgstr ""
+"Имате само једну клопку за ноћне лептире. Да додате још, идите на <2>веб "
+"страницу.</2>"
 
 # Moth survey AI loader
 msgid "Identifying..."
-msgstr ""
+msgstr "Идентификујем…"
 
 # Unknown species common_name
 msgid "Unknown"
-msgstr ""
+msgstr "Непознато"
 
 # Report table button
 msgid "Show more"
-msgstr ""
+msgstr "Прикажи више"
 
 # Moth survey warning message
 msgid "Please add a photo"
-msgstr ""
+msgstr "Додајте фотографију"
 
 # Moth survey unknown species divider
 msgid "Unknown species"
-msgstr ""
+msgstr "Непозната врста"
 
 # Moth survey image gallery warning message
 msgid "<0>Warning</0> - we could not identify this species."
-msgstr ""
+msgstr "<0>Упозорење</0> – не можемо да идентификујемо ову врсту."
 
 # App settings title
 msgid "Surveying"
-msgstr ""
+msgstr "Истраживање"
 
 # Moth survey label
 msgid "Moth survey (SPRING)"
-msgstr ""
+msgstr "Истраживање ноћних лептира (SPRING)"
 
 # Survey name
 msgid "Moth Survey"
-msgstr ""
+msgstr "Истраживање ноћних лептира"
 
 #  Moth settings page header title
 msgid "Moth Survey Settings"
-msgstr ""
+msgstr "Подешавања истраживања ноћних лептира"
 
 # Moth settings page label
 msgid "Use image identification"
-msgstr ""
+msgstr "Користи слике за идентификацију"
 
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
 msgstr ""
+"Помоћи ћемо вам да идентификујете врсте помоћу аутоматског препознавања са "
+"слика."
 
 # Moth survey button label
 msgid "Identify"
-msgstr ""
+msgstr "Идентификуј"
 
 # Moth survey button label
 msgid "Identify All"
-msgstr ""
+msgstr "Идентификуј све"
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
-msgstr ""
+msgstr "Идентификација са слике"
 
 # Moth survey image classifier disabled info message
 msgid ""
 "Image classifier is currently <1>disabled</1>. Please go to app "
 "<4>Settings</4> to turn it on."
 msgstr ""
+"Идентификација са слике је тренутно <1>онемогућена</1>. Идите у "
+"<4>Подешавања</4> апликације да је укључите."
 
 # Whats new message title
 msgid "What's New"
-msgstr ""
+msgstr "Шта је ново"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "Не приказуј поново"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
 msgstr ""
+"Додата је могућност да видите уносе који су послати са других уређаја."
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
 msgstr ""
+"Карта са уносима је ажурирана, тако да приказује све налазе корисника."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
-msgstr ""
+msgstr "Омогућено је копирање списка врста са претходне деонице трансекта."
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
 msgstr ""
+"Омогућено је копирање списка врста са претходне клопке за ноћне лептире."
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "Ажурирана је страница са упутствима за врсте."
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "Додата је опција за чишћење кеша послатих датотека."
 
 # User account action
 msgid "Resend"
-msgstr ""
+msgstr "Поново пошаљи"
 
 # User account action
 msgid "Looks like your email hasn't been verified yet."
-msgstr ""
+msgstr "Изгледа да још увек нисте потврдили вашу адресу е-поште."
 
 # User account action
 msgid "Should we resend the verification email?"
-msgstr ""
+msgstr "Да ли да вам пошаљемо е-пошту за потврду адресе?"
 
 # GPS permissions warning
 msgid ""
 "Your Location Services (GPS) seems to be disabled. You can enable this in "
 "your device settings."
 msgstr ""
+"Изгледа да је сервис за локацију (ГПС) онемогућен. Можете да га омогућите у "
+"подешавањима уређаја."
 
 # GPS permissions warning
 msgid "Location Services (GPS) are disabled"
-msgstr ""
+msgstr "Сервис за локацију (ГПС) је онемогућен"
 
 # Moth trap survey
 msgid "Add New"
-msgstr ""
+msgstr "Додај ново"
 
 # Moth trap survey
 msgid "You do not have any moth traps yet.<1>Create first moth trap</1>"
 msgstr ""
+"Још увек немате клопке за ноћне лептире.<1>Додајте своју прву клопку</1>"
 
 # Moth trap survey
 msgid "Moth Trap"
-msgstr ""
+msgstr "Клопка за ноћне лептире"
 
 # Moth trap survey
 msgid "Type"
-msgstr ""
+msgstr "Врста"
 
 # Moth trap survey
 msgid "Other type"
-msgstr ""
+msgstr "Друга врста"
 
 # Moth trap survey
 msgid "Add lamp"
-msgstr ""
+msgstr "Додај сијалицу"
 
 # Moth trap survey
 msgid "Lamp type is a required field."
-msgstr ""
+msgstr "Врста сијалице је обавезно поље."
 
 # Moth trap survey
 msgid "What type of trap was it?"
-msgstr ""
+msgstr "Која је била врста клопке?"
 
 # Moth trap survey
 msgid "No lamps added"
-msgstr ""
+msgstr "Нису додате сијалице"
 
 # Moth trap survey
 msgid "What is the lamp type?"
-msgstr ""
+msgstr "Која сијалица је коришћена?"
 
 # Moth trap survey
 msgid "What is the moth trap type?"
-msgstr ""
+msgstr "Која је врста клопке за ноћне лептире?"
 
 # Moth trap survey
 msgid "LED funnel trap"
-msgstr ""
+msgstr "ЛЕД клопка с левком"
 
 # Moth trap survey
 msgid "Other funnel trap"
-msgstr ""
+msgstr "Друга клопка с левком"
 
 # Moth trap survey
 msgid "Trap with 2 sheets"
-msgstr ""
+msgstr "Клопка с 2 платна"
 
 # Moth trap survey
 msgid "Other trap"
-msgstr ""
+msgstr "Друга клопка"
 
 # Moth trap survey
 msgid "Lamp"
-msgstr ""
+msgstr "Сијалица"
 
 # Moth trap survey
 msgid "Lamp Details"
-msgstr ""
+msgstr "Подаци о сијалици"
 
 # Moth trap survey
 msgid "Quantity"
-msgstr ""
+msgstr "Број"
 
 # Moth trap survey
 msgid "No moth trap name"
-msgstr ""
+msgstr "Нема назива клопке за ноћне лептире"
 
 # Moth trap survey
 msgid "Moth trap name"
-msgstr ""
+msgstr "Назив клопке за ноћне лептире"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr ""
+msgstr "Да ли сигурно желите да обришете ову клопку за ноћне лептире?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
-msgstr ""
+msgstr "Додатни опис сијалице."
 
 # Moth trap survey
 msgid "Please add the moth trap location and name."
-msgstr ""
+msgstr "Користите локацију и име клопке за ноћне лепитре."
 
 # Survey validation
 msgid "Incomplete"
-msgstr ""
+msgstr "Није потпуно"
 
 # Moth trap survey
 msgid "Select"
-msgstr ""
+msgstr "Изаберите"
 
 # Additional details attribute, 15min count survey
 msgid "Recorders"
-msgstr ""
+msgstr "Посматрачи"
 
 # Additional details attribute, 15min count survey
 msgid ""
 "Enter the number of recorders of anyone who helped with this record - "
 "including your own."
-msgstr ""
+msgstr "Унесите број људи који су вам помогли са бележењем, укључујући и вас."
 
 msgid "Network Error"
-msgstr ""
+msgstr "Грешка у мрежи"
 
 # Report label
 msgid "Please login to see your own data report."
-msgstr ""
+msgstr "Пријавите се да видите ваш извештај са подацима."
 
 # Report label
 msgid "Your top species this month"
-msgstr ""
+msgstr "Ваше најчешће врсте овог месеца"
 
 # Report label
 msgid "Your top species"
-msgstr ""
+msgstr "Ваше најчешће врсте"
 
 # Transect survey section photo picker divider label
 msgid "Section Photos"
-msgstr ""
+msgstr "Фотографија деонице"
 
 # Moth survey species identifying
 msgid "User is not logged in."
-msgstr ""
+msgstr "Корисник није пријављен."
 
 # Gallery message
 msgid "We think it is {{probability}}% likely a <3>{{taxon}}</3> species"
-msgstr ""
+msgstr "{{probability}}% је вероватно да је врста <3>{{taxon}}</3>"
 
 # Gallery message
 msgid ""
 "<0>Warning</0> - we think it is {{probability}}% likely a <5>{{taxon}}</5> "
 "species"
 msgstr ""
+"<0>Упозорење</0> – {{probability}}% је вероватно да је врста "
+"<5>{{taxon}}</5>"
 
 # Divider label moth trap setup
 msgid "Lamps"
-msgstr ""
+msgstr "Сијалице"
 
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
-msgstr ""
+msgstr "Да ли желите да обришете ову сијалицу са клопке за ноћне лептире?"
 
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
-msgstr ""
+msgstr "Врста клопке је обавезно поље."
 
 # Successful registration pop-up
 msgid "Welcome aboard"
-msgstr ""
+msgstr "Добродошли"
 
 # Successful registration pop-up
 msgid ""
 "Before starting any surveys please check your email and click on the "
 "verification link."
 msgstr ""
+"Пре него што почнете истраживање, проверите е-пошту и кликните на везу за "
+"потврду адресе."
 
 # Species guide search
 msgid "Sorry, no species were found."
-msgstr ""
+msgstr "Нису пронађене врсте."
 
 msgid "Kenya"
-msgstr ""
+msgstr "Кенија"
 
 # GPS permission button label
 msgid "Deny"
-msgstr ""
+msgstr "Одбиј"
 
 # GPS permission button label
 msgid "Accept"
-msgstr ""
+msgstr "Прихвати"
 
 # GPS permission alert title
 msgid "Location permission"
-msgstr ""
+msgstr "Дозвола за локацију"
 
 # GPS permission alert message
 msgid ""
 "To automatically set species locations and track your route, even if the "
 "device is locked. Allow the app to use your location."
 msgstr ""
+"Да аутоматски преузмете локације налаза врста и пратите вашу руту, чак и "
+"када је уређај закључан. Дозволите апликацији да користи локацију."
 
 # Delete account
 msgid "Delete account"
-msgstr ""
+msgstr "Обриши налог"
 
 # Delete account
 msgid "You can delete your user account from the system."
-msgstr ""
+msgstr "Можете обрисати налог корисника са система."
 
 # Delete account alert header
 msgid "Account delete"
-msgstr ""
+msgstr "Обриши налог"
 
 # Delete account alert message
 msgid ""
@@ -2640,125 +2715,132 @@ msgid ""
 "account on the <2>{{url}}</2> website. You will lose access to any records "
 "that you have previously submitted using the app or website.</1>"
 msgstr ""
+"Да ли желите да обришете ваш налог?<1>Ово ће уклонити налог са веб странице "
+"<2>{{url}}</2>. Нећете моћи да приступите уносима које сте већ послали преко"
+" апликације или веб странице.</1>"
 
 # Part of Species Group selection
 msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
 msgstr ""
+"Ова опција је премештена у страницу за претрагу врста унутар обиласка. Када "
+"обилазак почне, можете изабрати која група врста се бележи."
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "Групе"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "Затвори"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "Потврди"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "Које групе врста сте бројали?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "Изаберите циљне врсте"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "Није додата фотографија.<br/>Притисните <4><0></0></4> да је додате."
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "Крило"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "Понашање"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "Смер"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "Надморска висина"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "Компас"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "Обриши обилазак"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
 msgstr ""
+"Упозорење – овим ћете занемарити податке о обиласцима које сте до сада "
+"унели."
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "Свежа"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "Стара"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "Уобичајена"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "Изаберите нектарску биљку"
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "Додајте податке о полагању јаја."
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "Додајте податке о парењу."
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "Нектарска биљка"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "Додајте податке о нектарским биљкама."
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "Додајте податке о смеру."
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "Додајте податке о надморској висини."
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "Биљке за полагање јаја"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "Мигрира"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "Храни се"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "Пари се"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "Уређај није подржан"
 
 # Painted lady compass
 msgid ""
@@ -2768,330 +2850,347 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"Нажалост, изгледа да ваш уређај нема неопходан сензор да би компас радио "
+"како треба. Компас се ослања на овај сензор приликом праћења магнетног поље "
+"Земље у односу на смер вашег уређаја. Због тога нећете моћи да користите "
+"компас на овом уређају."
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "Брани територију: друго"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "Брани територију: на врху брда"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "Која је надморска висина на којој лети лептир? (у метрима)"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "Друге биљке хранитељке"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "Пустињска коприва (Eucnide urens)"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "Слез"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "Чкаљ"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "Биљке хранитељке"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "Изаберите биљке хранитељке."
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "Немате уноса врсте <1>{{prettySpeciesName}}</1> у вашем списку."
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "Савет: копирајте особине"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "Стање крила"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "Нектар"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "Унесите извор нектара на овој локацији"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "Друге врсте"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "Која врста чкаља је била?"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "Врсте чкаља"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "Копирано!"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
 msgstr ""
+"Да копирајте унос са списка превуците га на десно и притисните иконицу "
+"<1><0></0></1>."
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "Висина изнад земље (у метрима)"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "Висина"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "Започни бројање"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Праћење миграције чкаљевца уз Butterfly Count"
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "Упутства"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "Света Јелена"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "Полагање јаја"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "Парење или спојене јединке"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "Егзувија"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "Излегла"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "Збир бројања мора бити већи од 0"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "Прикажи мање"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "Ваше име за праћење"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
-msgstr ""
+msgstr "Одавде можете изабрати или превући да уредите претходна праћења"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "Уреди"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "Уреди локацију"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "Име"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "Омиљено"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "Да ли желите да обришете сачувано праћење?"
 
 # Map GPS button interface
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
 msgstr ""
+"Уколико желите да наставите праћење преко ГПС-а, најпре уклоните исцртану "
+"област са карте."
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "Фаза месеца"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "Нови"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "Млад месец"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "Прва четвртина"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "Растући месец"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "Пун месец"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "Растући месец"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "Последња четвртина"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "Млад месец"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "Време постављања"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "Време уклањања"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "Временске прилике при постављању"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "Временске прилике при уклањању"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "Додајте клопку за ноћне лептире."
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
 msgstr ""
+"Приметили смо да ваш обилазак има <1>дугачке деонице</1>. Проверите да ли је"
+" ово исправна <3>локација</3>!"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "Постављено на време заласка сунца"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "Постављено на време изласка сунца"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "Нису омогућени сервиси за локацију"
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr ""
+msgstr "Немате претходне путање."
 
 # Part of favorite track
 msgid "You have no saved sites."
-msgstr ""
+msgstr "Немате сачуване локације."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "Редослед списка је промењен на азбучни."
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr ""
+msgstr "Редослед списка је промењен на време додавања."
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "Није потврђено"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "Прихваћено"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "Одбијено"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "Поузданост не може бити празна."
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "Облачност не може бити празна."
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "Није повезано с пројектом"
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "Придружи се"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Пројекат"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Пројекти"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "Моји пројекти"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "Сви пројекти"
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"Нисте се придружили ни једном пројекту. Да се придружите пројекту идите на "
+"картицу „Сви пројекти“.<br/><br/>Повуците страницу на доле да освежите "
+"списак."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"<0>{{country}}</0>Нема нових пројеката на које се можете "
+"пријавити.<br/><br/>Повуците страницу на доле да освежите списак."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "Успешно сте се пријавити на пројекат."
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "Напусти"
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr ""
+msgstr "Успешно сте напустили пројекат."
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "Осетљиво"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Овај обилазак садржи податке о осетљивим врстама које не треба укључити у "
+"јавне извештаје."

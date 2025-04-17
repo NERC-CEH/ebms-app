@@ -2,12 +2,12 @@
 # Translators:
 # Anna Mei Dichmann Melskens, 2022
 # Skjold Alsted Søndergaard, 2024
-# Andreas Bennetsen Boe, 2024
+# Andreas Bennetsen Boe, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Andreas Bennetsen Boe, 2024\n"
+"Last-Translator: Andreas Bennetsen Boe, 2025\n"
 "Language-Team: Danish (Denmark) (https://app.transifex.com/ceh/teams/95441/da_DK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,7 +47,7 @@ msgid "Bulgaria"
 msgstr "Bulgarien"
 
 msgid "Belarus"
-msgstr "Hviderusland (Belarus)"
+msgstr "Hviderusland"
 
 msgid "Switzerland"
 msgstr "Schweiz"
@@ -110,7 +110,7 @@ msgid "Montenegro"
 msgstr "Montenegro"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Marokko"
 
 msgid "North Macedonia"
 msgstr "Nordmakedonien"
@@ -401,107 +401,107 @@ msgstr ""
 
 # New Site set-up page
 msgid "Approximate size of your observation site."
-msgstr ""
+msgstr "Omtrentlig størrelse af observationsområde"
 
 # New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
-msgstr ""
+msgstr "Habitat/arealanvendelse (total bør være 100%)"
 
 # New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
-msgstr ""
+msgstr "Agerland, korn (hvede, byg, rug)"
 
 # New Site set-up page
 msgid "Arable field fruits or vegetables"
-msgstr ""
+msgstr "Agerland, frugter eller grøntsager"
 
 # New Site set-up page
 msgid "Arable field rapeseed"
-msgstr ""
+msgstr "Agerland, raps"
 
 # New Site set-up page
 msgid "Arable field corn"
-msgstr ""
+msgstr "Agerland, majs"
 
 # New Site set-up page
 msgid "Arable legumes"
-msgstr ""
+msgstr "Agerland, bælgfrugter"
 
 # New Site set-up page
 msgid "Arable multi-cropping"
-msgstr ""
+msgstr "Agerland, flere afgrøder"
 
 # New Site set-up page
 msgid "Arable fallow"
-msgstr ""
+msgstr "Agerland, brak"
 
 # New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
-msgstr ""
+msgstr "Græsland, homogent/intensivt forvaltet"
 
 # New Site set-up page
 msgid "Grassland extensive or heterogeneous (pasture)"
-msgstr ""
+msgstr "Græsland heterogent/ekstensivt forvaltet"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
-msgstr ""
+msgstr "Frugttræsplantage (græsgange blandt træer)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
-msgstr ""
+msgstr "Frugttræsplantage (intensivt forvaltet)"
 
 # New Site set-up page
 msgid "Scrubland"
-msgstr ""
+msgstr "Maki"
 
 # New Site set-up page
 msgid "Land laying fallow / wasteland"
-msgstr ""
+msgstr "Bart land"
 
 # New Site set-up page
 msgid "Sparse woodland"
-msgstr ""
+msgstr "Skovsavanne (sparsomt bevokset)"
 
 # New Site set-up page
 msgid "Dense woodland or forest"
-msgstr ""
+msgstr "Skov eller tæt skovsavanne"
 
 # New Site set-up page
 msgid "Plantation"
-msgstr ""
+msgstr "Plantage"
 
 # New Site set-up page
 msgid "Garden (single)"
-msgstr ""
+msgstr "Have (enkelt)"
 
 # New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
-msgstr ""
+msgstr "Haver (flere, f.eks. kolonihaver)"
 
 # New Site set-up page
 msgid "Building(s)"
-msgstr ""
+msgstr "Bygning(er)"
 
 # New Site set-up page
 msgid "Pond, lake or sea"
-msgstr ""
+msgstr "Vandhul, sø eller hav"
 
 # New Site set-up page
 msgid "River or creek"
-msgstr ""
+msgstr "Flod eller å"
 
 # New Site set-up page
 msgid "Wetland"
-msgstr ""
+msgstr "Vådområde"
 
 # New Site set-up page
 msgid "Dunes or barren land"
-msgstr ""
+msgstr "Klitter eller bart område"
 
 # New Site set-up page
 msgid "Field edge(s)"
-msgstr ""
+msgstr "Markskel"
 
 # New Site set-up page
 msgid "Buffer-strip(s)"
@@ -509,127 +509,128 @@ msgstr ""
 
 # New Site set-up page
 msgid "Flower-strip(s)"
-msgstr ""
+msgstr "Blomsterstribe(r)"
 
 # New Site set-up page
 msgid "Hedge(s)"
-msgstr ""
+msgstr "Hæk(ke)"
 
 # New Site set-up page
 msgid "Scattered trees or trees in rows"
-msgstr ""
+msgstr "Spredte træer eller træer på række"
 
 # New Site set-up page
 msgid "Wooded area"
-msgstr ""
+msgstr "Område med træer"
 
 # New Site set-up page
 msgid "Terraces, stone walls"
-msgstr ""
+msgstr "Dyrkningsterasser, stenvægge"
 
 # New Site set-up page
 msgid "Pond"
-msgstr ""
+msgstr "Vandhul"
 
 # New Site set-up page
 msgid "Path"
-msgstr ""
+msgstr "Sti"
 
 # New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
-msgstr ""
+msgstr "Gade, vej eller jernbaneskinner (befæstet, f.eks. asfalt)"
 
 # New Site set-up page
 msgid "Fences or other human-made linear structures"
-msgstr ""
+msgstr "Hegn eller menneskeskabte, lineære strukturer"
 
 # New Site set-up page
 msgid "Dead tree, stumps or wood"
-msgstr ""
+msgstr "Dødt træ, træstub, eller ved"
 
 # New Site set-up page
 msgid "Landscape features"
-msgstr ""
+msgstr "Landskabstræk"
 
 # New Site set-up page
 msgid "Features located within a 50-meter radius."
-msgstr ""
+msgstr "Karakterer, der befinder sig inden for en 50-meters radius."
 
 # New Site set-up page
 msgid "Other landscape feature details"
-msgstr ""
+msgstr "Andre landskabstræk"
 
 # New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
-msgstr ""
+msgstr "Ikke relevant (ikke en græsplæne)"
 
 # New Site set-up page
 msgid "I don't know"
-msgstr ""
+msgstr "Ved ikke"
 
 # New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
-msgstr ""
+msgstr "Regelmæssig slåning, alle (relevante) områder"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), all area"
-msgstr ""
+msgstr "Sjælden slåning (1-2 gange årligt), hele området"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
 msgstr ""
+"Sjælden slåning (1-2 gange årligt), delområder (striber efterlades uslåede)"
 
 # New Site set-up page
 msgid "Extensive grazing (few grazers, not mowed)"
-msgstr ""
+msgstr "Ekstensivt græsning (få græssere, ikke slået)"
 
 # New Site set-up page
 msgid "Intensive grazing (not mowed)"
-msgstr ""
+msgstr "Instensiv græsning (ikke slået)"
 
 # New Site set-up page
 msgid "How often is this lawn mown?"
-msgstr ""
+msgstr "Hvor ofte slås plænen?"
 
 # New Site set-up page
 msgid "Not applicable"
-msgstr ""
+msgstr "Ikke relevant"
 
 # New Site set-up page
 msgid "Frequent application"
-msgstr ""
+msgstr "Hyppig anvendelse"
 
 # New Site set-up page
 msgid "Rare application"
-msgstr ""
+msgstr "Sjælden anvendelse"
 
 # New Site set-up page
 msgid "No fertilizers used"
-msgstr ""
+msgstr "Ingen gødning anvendt"
 
 # New Site set-up page
 msgid "Is the area fertilized?"
-msgstr ""
+msgstr "Gødes området?"
 
 # New Site set-up page
 msgid "Other fertilizer details"
-msgstr ""
+msgstr "Yderligere gødsknings-information"
 
 # New Site set-up page
 msgid "No pesticides applied"
-msgstr ""
+msgstr "Ingen pesticider anvendes"
 
 # New Site set-up page
 msgid "Are pesticides used?"
-msgstr ""
+msgstr "Anvendes pesticider?"
 
 # New Site set-up page
 msgid "Other pesticide details"
-msgstr ""
+msgstr "Yderligere pesticid-information"
 
 # New Site set-up page
 msgid "Please upload site photos"
-msgstr ""
+msgstr "Venligst upload fotos af området"
 
 # New Site set-up page
 msgid "Optimally in the direction to North, East, South and West."
@@ -637,103 +638,103 @@ msgstr ""
 
 # New Site set-up page
 msgid "Garden"
-msgstr ""
+msgstr "Have"
 
 # New Site set-up page
 msgid "Allotment gardens"
-msgstr ""
+msgstr "Kolonihaver"
 
 # New Site set-up page
 msgid "Community garden"
-msgstr ""
+msgstr "Fælles have"
 
 # New Site set-up page
 msgid "Balcony"
-msgstr ""
+msgstr "Balkon"
 
 # New Site set-up page
 msgid "Park (mixed vegetation)"
-msgstr ""
+msgstr "Park (blandet bevoksning)"
 
 # New Site set-up page
 msgid "Lawn"
-msgstr ""
+msgstr "Plæne"
 
 # New Site set-up page
 msgid "Flowering strip"
-msgstr ""
+msgstr "Blomsterstribe"
 
 # New Site set-up page
 msgid "Built-up area"
-msgstr ""
+msgstr "Bebygget område"
 
 # New Site set-up page
 msgid "Fallow land, abandoned area (urban)"
-msgstr ""
+msgstr "Ruderat (urbant)"
 
 # New Site set-up page
 msgid "Fallow land, abandoned field  (rural)"
-msgstr ""
+msgstr "Ruderat (landligt)"
 
 # New Site set-up page
 msgid "Field edge"
-msgstr ""
+msgstr "Markskel"
 
 # New Site set-up page
 msgid "Arable field"
-msgstr ""
+msgstr "Agerland"
 
 # New Site set-up page
 msgid "Grassland / Meadow / Pasture"
-msgstr ""
+msgstr "Græsland / Eng / Overdrev"
 
 # New Site set-up page
 msgid "Orchard"
-msgstr ""
+msgstr "Frugttræsplantage"
 
 # New Site set-up page
 msgid "Forest edge"
-msgstr ""
+msgstr "Skovkant"
 
 # New Site set-up page
 msgid "Woodland/Forest"
-msgstr ""
+msgstr "Skov/Skovsavanne"
 
 # New Site set-up page
 msgid "Coastal"
-msgstr ""
+msgstr "Kyst"
 
 # New Site set-up page
 msgid "Scrubland/Heathland"
-msgstr ""
+msgstr "Hede/Maki"
 
 # New Site set-up page
 msgid "Sparsely vegetated"
-msgstr ""
+msgstr "Sparsomt bevokset"
 
 # New Site set-up page
 msgid "Desert / barren"
-msgstr ""
+msgstr "Ørken / bart"
 
 # New Site set-up page
 msgid "Dominant habitat"
-msgstr ""
+msgstr "Dominerende habitat"
 
 # New Site set-up page
 msgid "How many trees are there in the area of your observation site?"
-msgstr ""
+msgstr "Hvor mange træer er der på observationsområdet?"
 
 # New Site set-up page
 msgid "What proportion of the site is a lawn or a grassland?"
-msgstr ""
+msgstr "Hvor stor en andel af lokaliteten er plæne eller græsland?"
 
 # New Site set-up page
 msgid "Fruit trees and shrubs"
-msgstr ""
+msgstr "Frugttræer og buske"
 
 # New Site set-up page
 msgid "Unmanaged corners (natural spaces, abandoned areas)"
-msgstr ""
+msgstr "Uforvaltede hjørner"
 
 # New Site set-up page
 msgid "Vegetable patch"

@@ -403,435 +403,436 @@ msgstr "Area "
 
 # New Site set-up page
 msgid "Site area"
-msgstr ""
+msgstr "Area sito"
 
 # New Site set-up page
 msgid "Approximate size of your observation site."
-msgstr ""
+msgstr "Dimensioni approssimative del tuo sito di osservazione."
 
 # New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
-msgstr ""
+msgstr "Habitat/uso del suolo (il totale dovrebbe essere 100%)"
 
 # New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
-msgstr ""
+msgstr "Campo di cereali (grano, orzo, segale)"
 
 # New Site set-up page
 msgid "Arable field fruits or vegetables"
-msgstr ""
+msgstr "Campo di ortaggi o frutta"
 
 # New Site set-up page
 msgid "Arable field rapeseed"
-msgstr ""
+msgstr "Campo di colza"
 
 # New Site set-up page
 msgid "Arable field corn"
-msgstr ""
+msgstr "Campo di mais"
 
 # New Site set-up page
 msgid "Arable legumes"
-msgstr ""
+msgstr "Campo di legumi"
 
 # New Site set-up page
 msgid "Arable multi-cropping"
-msgstr ""
+msgstr "Multicultura"
 
 # New Site set-up page
 msgid "Arable fallow"
-msgstr ""
+msgstr "Campo a maggese"
 
 # New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
-msgstr ""
+msgstr "Prato omogeneo/gestito intensivamente"
 
 # New Site set-up page
 msgid "Grassland extensive or heterogeneous (pasture)"
-msgstr ""
+msgstr "Prato eterogeneo estensivo (pascolo)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
-msgstr ""
+msgstr "Frutteto, vigneto o bosco rado (poco gestito)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
-msgstr ""
+msgstr "Frutteto, vigneto o bosco rado (gestito intensivamente)"
 
 # New Site set-up page
 msgid "Scrubland"
-msgstr ""
+msgstr "Arbusteto"
 
 # New Site set-up page
 msgid "Land laying fallow / wasteland"
-msgstr ""
+msgstr "Terreno incloto"
 
 # New Site set-up page
 msgid "Sparse woodland"
-msgstr ""
+msgstr "Bosco rado"
 
 # New Site set-up page
 msgid "Dense woodland or forest"
-msgstr ""
+msgstr "Foresta o bosco denso"
 
 # New Site set-up page
 msgid "Plantation"
-msgstr ""
+msgstr "Piantagione di alberi"
 
 # New Site set-up page
 msgid "Garden (single)"
-msgstr ""
+msgstr "Giardino (singolo)"
 
 # New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
-msgstr ""
+msgstr "Giardini (e.g orti urbani)"
 
 # New Site set-up page
 msgid "Building(s)"
-msgstr ""
+msgstr "Palazzo(i)"
 
 # New Site set-up page
 msgid "Pond, lake or sea"
-msgstr ""
+msgstr "Stagno, lago o mare"
 
 # New Site set-up page
 msgid "River or creek"
-msgstr ""
+msgstr "Fiume o torrente"
 
 # New Site set-up page
 msgid "Wetland"
-msgstr ""
+msgstr "Zone umida"
 
 # New Site set-up page
 msgid "Dunes or barren land"
-msgstr ""
+msgstr "Dune o terreni aridi"
 
 # New Site set-up page
 msgid "Field edge(s)"
-msgstr ""
+msgstr "Bordo del campo(i)"
 
 # New Site set-up page
 msgid "Buffer-strip(s)"
-msgstr ""
+msgstr "Striscia(e) di protezione"
 
 # New Site set-up page
 msgid "Flower-strip(s)"
-msgstr ""
+msgstr "Striscia(e) di fiori"
 
 # New Site set-up page
 msgid "Hedge(s)"
-msgstr ""
+msgstr "Siepe(i)"
 
 # New Site set-up page
 msgid "Scattered trees or trees in rows"
-msgstr ""
+msgstr "Alberi sparsi o linea di alberi"
 
 # New Site set-up page
 msgid "Wooded area"
-msgstr ""
+msgstr "Zona boscosa"
 
 # New Site set-up page
 msgid "Terraces, stone walls"
-msgstr ""
+msgstr "Terrazza, muro in pietra"
 
 # New Site set-up page
 msgid "Pond"
-msgstr ""
+msgstr "Stagno"
 
 # New Site set-up page
 msgid "Path"
-msgstr ""
+msgstr "Sentiero"
 
 # New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
 msgstr ""
+"Strada, carreggiata o binari ferroviari (sigillati, ad esempio con asfalto)"
 
 # New Site set-up page
 msgid "Fences or other human-made linear structures"
-msgstr ""
+msgstr "Recinzioni o altre strutture lineari realizzate dall'uomo"
 
 # New Site set-up page
 msgid "Dead tree, stumps or wood"
-msgstr ""
+msgstr "Alberi morti, ceppi o legno"
 
 # New Site set-up page
 msgid "Landscape features"
-msgstr ""
+msgstr "Caratteristiche del paesaggio"
 
 # New Site set-up page
 msgid "Features located within a 50-meter radius."
-msgstr ""
+msgstr "Caratteristiche situate nel raggio di 50 metri"
 
 # New Site set-up page
 msgid "Other landscape feature details"
-msgstr ""
+msgstr "Altri dettagli di caratteristiche del paesaggio"
 
 # New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
-msgstr ""
+msgstr "non applicabile (non un prato)"
 
 # New Site set-up page
 msgid "I don't know"
-msgstr ""
+msgstr "Non lo so "
 
 # New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
-msgstr ""
+msgstr "Sfalciato frequentemente, in tutta l'area (rilevante)"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), all area"
-msgstr ""
+msgstr "Sfalciato raramente (1-2 volte all'anno) "
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
-msgstr ""
+msgstr "Sfalciato raramente (1-2 volte l'anno), parzialmente sfalciato "
 
 # New Site set-up page
 msgid "Extensive grazing (few grazers, not mowed)"
-msgstr ""
+msgstr "Pascolo estensivo (pochi pascolatori, non sfalciato)"
 
 # New Site set-up page
 msgid "Intensive grazing (not mowed)"
-msgstr ""
+msgstr "Pascolo intensivo (non sfalciato)"
 
 # New Site set-up page
 msgid "How often is this lawn mown?"
-msgstr ""
+msgstr "Quanto spesso è sfalciata questo prato?"
 
 # New Site set-up page
 msgid "Not applicable"
-msgstr ""
+msgstr "Non applicabile"
 
 # New Site set-up page
 msgid "Frequent application"
-msgstr ""
+msgstr "Applicazione frequente"
 
 # New Site set-up page
 msgid "Rare application"
-msgstr ""
+msgstr "Applicazione rara"
 
 # New Site set-up page
 msgid "No fertilizers used"
-msgstr ""
+msgstr "Nessun uso di fertilizzanti"
 
 # New Site set-up page
 msgid "Is the area fertilized?"
-msgstr ""
+msgstr "L'area è fertilizzata?"
 
 # New Site set-up page
 msgid "Other fertilizer details"
-msgstr ""
+msgstr "Altri dettagli sui fertilizzanti"
 
 # New Site set-up page
 msgid "No pesticides applied"
-msgstr ""
+msgstr "Nessun pesticida applicato"
 
 # New Site set-up page
 msgid "Are pesticides used?"
-msgstr ""
+msgstr "Sono usati pesticidi?"
 
 # New Site set-up page
 msgid "Other pesticide details"
-msgstr ""
+msgstr "Altri dettagli sui pesticidi"
 
 # New Site set-up page
 msgid "Please upload site photos"
-msgstr ""
+msgstr "Perfavore carica le foto del sito"
 
 # New Site set-up page
 msgid "Optimally in the direction to North, East, South and West."
-msgstr ""
+msgstr "L'orientamento ottimale è verso Nord, Est, Sud e Ovest"
 
 # New Site set-up page
 msgid "Garden"
-msgstr ""
+msgstr "Giardino"
 
 # New Site set-up page
 msgid "Allotment gardens"
-msgstr ""
+msgstr "Orto comunitario"
 
 # New Site set-up page
 msgid "Community garden"
-msgstr ""
+msgstr "Giardino comunitario"
 
 # New Site set-up page
 msgid "Balcony"
-msgstr ""
+msgstr "Balcone"
 
 # New Site set-up page
 msgid "Park (mixed vegetation)"
-msgstr ""
+msgstr "Parco (vegetazione mista)"
 
 # New Site set-up page
 msgid "Lawn"
-msgstr ""
+msgstr "Prato"
 
 # New Site set-up page
 msgid "Flowering strip"
-msgstr ""
+msgstr "Striscia fiorita"
 
 # New Site set-up page
 msgid "Built-up area"
-msgstr ""
+msgstr "Area costruita"
 
 # New Site set-up page
 msgid "Fallow land, abandoned area (urban)"
-msgstr ""
+msgstr "Area incolta, abbandonata (urbana)"
 
 # New Site set-up page
 msgid "Fallow land, abandoned field  (rural)"
-msgstr ""
+msgstr "Area incolta, abbandonata (rurale)"
 
 # New Site set-up page
 msgid "Field edge"
-msgstr ""
+msgstr "Bordo del campo"
 
 # New Site set-up page
 msgid "Arable field"
-msgstr ""
+msgstr "Campo"
 
 # New Site set-up page
 msgid "Grassland / Meadow / Pasture"
-msgstr ""
+msgstr "Prato/Pascolo"
 
 # New Site set-up page
 msgid "Orchard"
-msgstr ""
+msgstr "Frutteto"
 
 # New Site set-up page
 msgid "Forest edge"
-msgstr ""
+msgstr "Bordo della foresta"
 
 # New Site set-up page
 msgid "Woodland/Forest"
-msgstr ""
+msgstr "Bosco/foresta"
 
 # New Site set-up page
 msgid "Coastal"
-msgstr ""
+msgstr "Costiero"
 
 # New Site set-up page
 msgid "Scrubland/Heathland"
-msgstr ""
+msgstr "Macchia/brughiera"
 
 # New Site set-up page
 msgid "Sparsely vegetated"
-msgstr ""
+msgstr "Vegetazione sparsa"
 
 # New Site set-up page
 msgid "Desert / barren"
-msgstr ""
+msgstr "Deserto/arido"
 
 # New Site set-up page
 msgid "Dominant habitat"
-msgstr ""
+msgstr "Habitat dominante"
 
 # New Site set-up page
 msgid "How many trees are there in the area of your observation site?"
-msgstr ""
+msgstr "Quanti alberi ci sono nell'area del tuo sito di osservazione?"
 
 # New Site set-up page
 msgid "What proportion of the site is a lawn or a grassland?"
-msgstr ""
+msgstr "Quale percentuale del sito è coperta da prato o prateria?"
 
 # New Site set-up page
 msgid "Fruit trees and shrubs"
-msgstr ""
+msgstr "Alberi da frutta e arbusti"
 
 # New Site set-up page
 msgid "Unmanaged corners (natural spaces, abandoned areas)"
-msgstr ""
+msgstr "Angoli non gestiti (spazi naturali, aree abbandonate)"
 
 # New Site set-up page
 msgid "Vegetable patch"
-msgstr ""
+msgstr "Orto di piccole dimensioni o in cassone"
 
 # New Site set-up page
 msgid "Lavender species"
-msgstr ""
+msgstr "Specie di lavanda"
 
 # New Site set-up page
 msgid "Geraniums & Pelargoniums"
-msgstr ""
+msgstr "Gerani & Pelargoni"
 
 # New Site set-up page
 msgid "Valeriana"
-msgstr ""
+msgstr "Valeriana"
 
 # New Site set-up page
 msgid "Legumes (Clover, Lupin, Lotus,...)"
-msgstr ""
+msgstr "Leguminose (trifoglio, Lupino, Ginestrino...)"
 
 # New Site set-up page
 msgid "Marigold"
-msgstr ""
+msgstr "Tagete"
 
 # New Site set-up page
 msgid "Butterfly bush (or Summer Lilac)"
-msgstr ""
+msgstr "Albero delle farfalle (Buddleja)"
 
 # New Site set-up page
 msgid "Aromatics like Thyme, Oregano, etc. ( Lamiaceae)"
-msgstr ""
+msgstr "Aromatiche tipo Timo, Origano etc. (famiglia Lamiacee)"
 
 # New Site set-up page
 msgid "Nettle (Urtica dioica)"
-msgstr ""
+msgstr "Ortica (Urtica dioica)"
 
 # New Site set-up page
 msgid "Brambles (Rubus fruticosa)"
-msgstr ""
+msgstr "Rovo (Rubus fructicosa)"
 
 # New Site set-up page
 msgid "Ivy"
-msgstr ""
+msgstr "Edera"
 
 # New Site set-up page
 msgid "Knappweed (Centaurea and Scabiosa spp.)"
-msgstr ""
+msgstr "Centaurea Scabiosa (Centaurea e Scabiosa spp.)"
 
 # New Site set-up page
 msgid "Fennel, Carvi or others from the Carrot family (Apiaceae)"
-msgstr ""
+msgstr "Finocchio, o altri della famiglia delle Carote (Apiacee)"
 
 # New Site set-up page
 msgid "Cabbage, Rucola or others Mustard-plant family (Brassicaceae)"
-msgstr ""
+msgstr "Cavoli, Rucola, e altre (famiglia brassicacee)"
 
 # New Site set-up page
 msgid "Hemp-agrimony (Eupatorium spp.)"
-msgstr ""
+msgstr "Canapa acquatica (Eupatorium spp.)"
 
 # New Site set-up page
 msgid "Are these plant species present in this location?"
-msgstr ""
+msgstr "Queste piante sono presenti in questo sito?"
 
 # New Site set-up page
 msgid "I own the site"
-msgstr ""
+msgstr "Posseggo il sito"
 
 # New Site set-up page
 msgid "Private space"
-msgstr ""
+msgstr "Spazio privato"
 
 # New Site set-up page
 msgid "Public space"
-msgstr ""
+msgstr "Spazio pubblico"
 
 # New Site set-up page
 msgid "Communal space"
-msgstr ""
+msgstr "Spazio comune"
 
 # New Site set-up page
 msgid "Prefer not to say"
-msgstr ""
+msgstr "Preferisco non dirlo"
 
 # New Site set-up page
 msgid "Do you know who owns the land?"
-msgstr ""
+msgstr "Sai che possiede l'area?"
 
 # New Site set-up page
 msgid "Are you responsible for gardening activities at the site?"
-msgstr ""
+msgstr "Sei responsabile delle attività di giardinaggio del sito?"
 
 # Location attribute label
 msgid "Location"
@@ -1103,6 +1104,9 @@ msgid ""
 " the world. For example, this graph shows the European grassland butterfly "
 "index."
 msgstr ""
+"Le farfalle sono insetti carismatici, ma sono in declino in molte parti del "
+"mondo. Per esempio, il grafico mostra l'European grassland butterfly index- "
+"L'indice Europeo delle farfalle di prato."
 
 # onboarding pages
 msgid ""
@@ -1117,6 +1121,8 @@ msgid ""
 "We lack structured information on butterfly numbers in many parts of the "
 "world."
 msgstr ""
+"Manchiamo di informazioni sui numeri delle farfalle in molte parti del "
+"mondo."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -1131,10 +1137,12 @@ msgid ""
 "This app enables you to contribute to the recording and conservation of "
 "butterflies across the world."
 msgstr ""
+"Questa app ti consente di contribuire al campionamento e conservazione delle"
+" farfalle del mondo. "
 
 # About pages
 msgid "The app was supported through several projects:"
-msgstr ""
+msgstr "L'app è stata supportata da diversi progetti:"
 
 # About pages
 msgid ""
@@ -1142,6 +1150,9 @@ msgid ""
 "across the world and associated with national Butterfly Monitoring Schemes "
 "listed at:"
 msgstr ""
+"L'app ha beneficiato degli input di una moltitudine di esperti di farfalle "
+"nel mondo e associati Agli schemi nazionali Butterfly Monitoring Scheme "
+"elencati al:"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
@@ -1276,17 +1287,19 @@ msgstr ""
 
 # Help pages
 msgid "Assign a project to a count"
-msgstr ""
+msgstr "Assegna un progetto al conteggio"
 
 # Help pages
 msgid ""
 "<0>Start a count.</0><1>Select \"Additional Details\" then "
 "\"Project\".</1><2>Finally, choose the appropriate project.</2>"
 msgstr ""
+"<0>Inizia conteggio</0><1>Selezione \"Dettegli Aggiuntivi\" then "
+"\"Progetto\".</1><2>Insine, scegli il progetto appropriato.</2>"
 
 # Help pages
 msgid "Assign a site to a count"
-msgstr ""
+msgstr "Assegna il sito a un conteggio."
 
 # Help pages
 msgid ""
@@ -1303,6 +1316,19 @@ msgid ""
 " future counts conducted in that location.</7><8>Finally, choose the site "
 "for the current count.</8>"
 msgstr ""
+"<0>Inizia conteggio.</0><1>Assegna un progetto al conteggio, leggi le "
+"istruzioni su come selezionare un progetto</1><2>Spegni il GPS "
+"nell'intestazione della pagina \"Area\"</2><3>Seleziona lo strumento "
+"\"Disegno Sito\" nel lato destro dello schermo</3><4>Scegli un'area sulla "
+"mappa e conferma la tua selezione nel lato destro dello schermo</4><5>Premi "
+"il tasto \"Aggiungi\" situato nel panello dei siti preferiti nell'angolo in "
+"basso a destra dello schermo. Se il pannello non è visibile, puoi aprirlo "
+"cliccando il tasto dei siti favoriti (icona a stella) nell'angolo in alto a "
+"destra.</5><6>Ti verrà chiesto di rispondere ad alcune domande sul "
+"sito.</6><7>Premi \"Salva\" nell'angolo in alto a destra dopo aver risposto "
+"alla domande. Il sito sarà salvato, e potrà essere selezionato per conteggi "
+"futuri in quell'area.</7><8>Infine, scegli il sito per il conteggio "
+"attuale.</8>"
 
 msgid "User"
 msgstr "Utente"
@@ -1376,11 +1402,11 @@ msgstr ""
 
 # App setting
 msgid "Export database"
-msgstr ""
+msgstr "Esporta database"
 
 # App setting
 msgid "Export"
-msgstr ""
+msgstr "Esporta"
 
 # App setting
 msgid ""
@@ -1388,6 +1414,8 @@ msgid ""
 "for technical support and is not a supported method for exporting your "
 "data</1>"
 msgstr ""
+"Sei sicuro di voler esportare i dati?<1>Questo strumento è inteso solo per "
+"supporto tecnico e non come metodo per esportare i dati</1>"
 
 msgid "Sweden"
 msgstr "Svezia "
@@ -2540,7 +2568,7 @@ msgstr "Aggiungi lampada"
 
 # Moth trap survey
 msgid "Lamp type is a required field."
-msgstr ""
+msgstr "Il tipo di lampada è un campo obbligatorio."
 
 # Moth trap survey
 msgid "What type of trap was it?"
@@ -3123,7 +3151,7 @@ msgstr "Non hai tracce precedenti"
 
 # Part of favorite track
 msgid "You have no saved sites."
-msgstr ""
+msgstr "Non hai siti salvati"
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
