@@ -58,6 +58,11 @@ const Edit = ({ sample, isDisabled }: Props) => {
 
   const baseURL = `/survey/transect/${sample.id || sample.cid}`;
 
+  const setSurveyEndTimeIfMissing = () => {
+    if (!isDisabled && !sample.data.surveyEndTime)
+      sample.data.surveyEndTime = new Date().toISOString(); // eslint-disable-line no-param-reassign
+  };
+
   return (
     <Main id="transect-edit">
       {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
@@ -81,14 +86,16 @@ const Edit = ({ sample, isDisabled }: Props) => {
             skipValueTranslation
           />
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/surveyEndTime`}
-            disabled={isDisabled}
-            icon={timeOutline}
-            label="End Time"
-            value={endTimePretty}
-            skipValueTranslation
-          />
+          <div onClick={setSurveyEndTimeIfMissing}>
+            <MenuAttrItem
+              routerLink={`${baseURL}/surveyEndTime`}
+              disabled={isDisabled}
+              icon={timeOutline}
+              label="End Time"
+              value={endTimePretty}
+              skipValueTranslation
+            />
+          </div>
         </div>
 
         <h3 className="list-title">
