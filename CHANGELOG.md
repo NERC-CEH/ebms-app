@@ -1,3 +1,7 @@
+## 1.29.1
+
+Fixed map draw icons.
+
 ## 1.29.0
 
 Major codebase upgrade.
