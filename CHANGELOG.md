@@ -1,3 +1,7 @@
+## 1.29.2
+
+Fixed database migration.
+
 ## 1.29.1
 
 Fixed map draw icons.
