@@ -1,3 +1,7 @@
+## 1.29.3
+
+Fixed Android SQLite build.
+
 ## 1.29.2
 
 Fixed database migration.
