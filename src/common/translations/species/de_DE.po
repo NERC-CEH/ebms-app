@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Daniela Lehner <daleh@gmx.at>, 2023
-# Marius Munschek, 2024
+# Karolis, 2025
+# Daniela Lehner <daleh@gmx.at>, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Marius Munschek, 2024\n"
+"Last-Translator: Daniela Lehner <daleh@gmx.at>, 2025\n"
 "Language-Team: German (Germany) (https://app.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -307,7 +307,7 @@ msgid "Colias-hecla-description"
 msgstr ""
 
 msgid "Colotis-evagore-description"
-msgstr ""
+msgstr "Colotis evagore Beschreibung"
 
 msgid "Aporia-crataegi-description"
 msgstr ""

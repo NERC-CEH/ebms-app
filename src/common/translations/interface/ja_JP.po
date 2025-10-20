@@ -1,11 +1,11 @@
 # 
 # Translators:
-# Yasuhiro Nakamura, 2023
+# Yasuhiro Nakamura, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Yasuhiro Nakamura, 2023\n"
+"Last-Translator: Yasuhiro Nakamura, 2025\n"
 "Language-Team: Japanese (Japan) (https://app.transifex.com/ceh/teams/95441/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -108,7 +108,7 @@ msgid "Montenegro"
 msgstr "モンテネグロ"
 
 msgid "Morocco"
-msgstr ""
+msgstr "モロッコ"
 
 msgid "North Macedonia"
 msgstr "北マケドニア"
@@ -168,16 +168,16 @@ msgid "Botswana"
 msgstr "ボツワナ"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "ナイジェリア"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "ニュージーランド"
 
 msgid "Montserrat"
-msgstr ""
+msgstr "モントセラト"
 
 msgid "Anguilla"
-msgstr ""
+msgstr "アンギラ"
 
 msgid "Elsewhere"
 msgstr "その他の国"
@@ -301,12 +301,15 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
+"UGP+プロジェクトでは、市民や政策立案者や科学者がヨーロッパの都市の自然のための未来計画を発達させるためにともに働く。都市でチョウを数えることは、ただ生物多様性の追跡や都市の緑地空間の質を維持するための素晴らしい方法であるのみならず、私たち皆に生物多様性や自然政策や人々、そして都市のための新たな活動の提案への疑問と深くかかわるための力を与えてくれる方法でもある。参加者に提供されたデータは分析されてヨーロッパ中に都市の生物多様性の保護活動について知らせることになるでしょう。"
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
+"UGP+は「Enhancing Urban Greening Plans to Mainstream Biodiversity in "
+"Society」のことを表しており、EUに資金提供されているプロジェクトです。"
 
 msgid "Home"
 msgstr "ホーム"
@@ -382,435 +385,435 @@ msgstr "地域・エリア"
 
 # New Site set-up page
 msgid "Site area"
-msgstr ""
+msgstr "調査地の面積"
 
 # New Site set-up page
 msgid "Approximate size of your observation site."
-msgstr ""
+msgstr "あなたの調査地のおおよその大きさ"
 
 # New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
-msgstr ""
+msgstr "生息地または土地利用（合計で100％にする）"
 
 # New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
-msgstr ""
+msgstr "穀物用の耕地（小麦、大麦、ライ麦）"
 
 # New Site set-up page
 msgid "Arable field fruits or vegetables"
-msgstr ""
+msgstr "果物または野菜用の耕地"
 
 # New Site set-up page
 msgid "Arable field rapeseed"
-msgstr ""
+msgstr "菜種用の耕地"
 
 # New Site set-up page
 msgid "Arable field corn"
-msgstr ""
+msgstr "トウモロコシ用の耕地"
 
 # New Site set-up page
 msgid "Arable legumes"
-msgstr ""
+msgstr "マメ科植物用の耕地"
 
 # New Site set-up page
 msgid "Arable multi-cropping"
-msgstr ""
+msgstr "多毛作用の耕地"
 
 # New Site set-up page
 msgid "Arable fallow"
-msgstr ""
+msgstr "休耕地"
 
 # New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
-msgstr ""
+msgstr "均質な、あるいは徹底的に管理された草原"
 
 # New Site set-up page
 msgid "Grassland extensive or heterogeneous (pasture)"
-msgstr ""
+msgstr "広範囲にわたる、または不均質な草原（牧草地）"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
-msgstr ""
+msgstr "商用果樹園、ブドウ園、個人規模の果樹園（まばらな、木々に囲まれた牧草地）"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
-msgstr ""
+msgstr "商用果樹園、ブドウ園、個人規模の果樹園（徹底的に管理されている）"
 
 # New Site set-up page
 msgid "Scrubland"
-msgstr ""
+msgstr "低木地"
 
 # New Site set-up page
 msgid "Land laying fallow / wasteland"
-msgstr ""
+msgstr "休閑地、荒れ地"
 
 # New Site set-up page
 msgid "Sparse woodland"
-msgstr ""
+msgstr "まばらな林"
 
 # New Site set-up page
 msgid "Dense woodland or forest"
-msgstr ""
+msgstr "高密度の林や森林"
 
 # New Site set-up page
 msgid "Plantation"
-msgstr ""
+msgstr "プランテーション"
 
 # New Site set-up page
 msgid "Garden (single)"
-msgstr ""
+msgstr "庭園（単一種）"
 
 # New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
-msgstr ""
+msgstr "庭園（複数の種、例；アロットメントガーデン）"
 
 # New Site set-up page
 msgid "Building(s)"
-msgstr ""
+msgstr "建造物"
 
 # New Site set-up page
 msgid "Pond, lake or sea"
-msgstr ""
+msgstr "池、湖、海"
 
 # New Site set-up page
 msgid "River or creek"
-msgstr ""
+msgstr "川、入り江"
 
 # New Site set-up page
 msgid "Wetland"
-msgstr ""
+msgstr "湿原"
 
 # New Site set-up page
 msgid "Dunes or barren land"
-msgstr ""
+msgstr "砂丘、不毛な荒れ地"
 
 # New Site set-up page
 msgid "Field edge(s)"
-msgstr ""
+msgstr "農地の周縁部"
 
 # New Site set-up page
 msgid "Buffer-strip(s)"
-msgstr ""
+msgstr "緩衝帯"
 
 # New Site set-up page
 msgid "Flower-strip(s)"
-msgstr ""
+msgstr "花の緩衝帯"
 
 # New Site set-up page
 msgid "Hedge(s)"
-msgstr ""
+msgstr "生垣"
 
 # New Site set-up page
 msgid "Scattered trees or trees in rows"
-msgstr ""
+msgstr "乱立した木々や列状の木々"
 
 # New Site set-up page
 msgid "Wooded area"
-msgstr ""
+msgstr "木の生い茂るエリア"
 
 # New Site set-up page
 msgid "Terraces, stone walls"
-msgstr ""
+msgstr "段々畑、石垣"
 
 # New Site set-up page
 msgid "Pond"
-msgstr ""
+msgstr "池"
 
 # New Site set-up page
 msgid "Path"
-msgstr ""
+msgstr "小道"
 
 # New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
-msgstr ""
+msgstr "街路や線路（密閉された　例；アスファルト）"
 
 # New Site set-up page
 msgid "Fences or other human-made linear structures"
-msgstr ""
+msgstr "フェンスやその他の人口の直線的な構造物"
 
 # New Site set-up page
 msgid "Dead tree, stumps or wood"
-msgstr ""
+msgstr "枯死した木、切り株、材木"
 
 # New Site set-up page
 msgid "Landscape features"
-msgstr ""
+msgstr "風景の特徴"
 
 # New Site set-up page
 msgid "Features located within a 50-meter radius."
-msgstr ""
+msgstr "半径50ｍ以内の特徴"
 
 # New Site set-up page
 msgid "Other landscape feature details"
-msgstr ""
+msgstr "その他の風景の特徴の詳細"
 
 # New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
-msgstr ""
+msgstr "該当なし（草ではない、芝生）"
 
 # New Site set-up page
 msgid "I don't know"
-msgstr ""
+msgstr "分からない"
 
 # New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
-msgstr ""
+msgstr "頻繁な草刈り、すべての（関連のある）エリアで"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), all area"
-msgstr ""
+msgstr "稀な草刈り（年に１，2回）、エリア全体で"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
-msgstr ""
+msgstr "稀な草刈り（年に１，２回）、部分的なエリアで（段階的な、時間差をつけた草刈り）"
 
 # New Site set-up page
 msgid "Extensive grazing (few grazers, not mowed)"
-msgstr ""
+msgstr "広範囲にわたる放牧（少ない放牧家で、草刈りを行わない）"
 
 # New Site set-up page
 msgid "Intensive grazing (not mowed)"
-msgstr ""
+msgstr "集中的な放牧（草刈りを行わない）"
 
 # New Site set-up page
 msgid "How often is this lawn mown?"
-msgstr ""
+msgstr "この芝生の草刈りの頻度はどのくらいですか？"
 
 # New Site set-up page
 msgid "Not applicable"
-msgstr ""
+msgstr "該当なし"
 
 # New Site set-up page
 msgid "Frequent application"
-msgstr ""
+msgstr "よく該当する"
 
 # New Site set-up page
 msgid "Rare application"
-msgstr ""
+msgstr "あまり該当しない"
 
 # New Site set-up page
 msgid "No fertilizers used"
-msgstr ""
+msgstr "肥料は使われていない"
 
 # New Site set-up page
 msgid "Is the area fertilized?"
-msgstr ""
+msgstr "このエリアでは肥料が使われていますか？"
 
 # New Site set-up page
 msgid "Other fertilizer details"
-msgstr ""
+msgstr "肥料についてのその他の詳細"
 
 # New Site set-up page
 msgid "No pesticides applied"
-msgstr ""
+msgstr "殺虫剤は使われていない"
 
 # New Site set-up page
 msgid "Are pesticides used?"
-msgstr ""
+msgstr "殺虫剤は使われていますか？"
 
 # New Site set-up page
 msgid "Other pesticide details"
-msgstr ""
+msgstr "殺虫剤についてのその他の詳細"
 
 # New Site set-up page
 msgid "Please upload site photos"
-msgstr ""
+msgstr "調査地の写真をアップロードしてください"
 
 # New Site set-up page
 msgid "Optimally in the direction to North, East, South and West."
-msgstr ""
+msgstr "東西南北の最適な方向へ"
 
 # New Site set-up page
 msgid "Garden"
-msgstr ""
+msgstr "庭園"
 
 # New Site set-up page
 msgid "Allotment gardens"
-msgstr ""
+msgstr "アロットメントガーデン"
 
 # New Site set-up page
 msgid "Community garden"
-msgstr ""
+msgstr "コミュニティガーデン"
 
 # New Site set-up page
 msgid "Balcony"
-msgstr ""
+msgstr "バルコニー"
 
 # New Site set-up page
 msgid "Park (mixed vegetation)"
-msgstr ""
+msgstr "公園（混ざりあった植生の）"
 
 # New Site set-up page
 msgid "Lawn"
-msgstr ""
+msgstr "芝生"
 
 # New Site set-up page
 msgid "Flowering strip"
-msgstr ""
+msgstr "開花帯"
 
 # New Site set-up page
 msgid "Built-up area"
-msgstr ""
+msgstr "市街地"
 
 # New Site set-up page
 msgid "Fallow land, abandoned area (urban)"
-msgstr ""
+msgstr "休閑地、放棄された地域（都市部）"
 
 # New Site set-up page
 msgid "Fallow land, abandoned field  (rural)"
-msgstr ""
+msgstr "休閑地、放棄地（地方部）"
 
 # New Site set-up page
 msgid "Field edge"
-msgstr ""
+msgstr "農地の辺縁部"
 
 # New Site set-up page
 msgid "Arable field"
-msgstr ""
+msgstr "耕地"
 
 # New Site set-up page
 msgid "Grassland / Meadow / Pasture"
-msgstr ""
+msgstr "草原、牧草地"
 
 # New Site set-up page
 msgid "Orchard"
-msgstr ""
+msgstr "果樹園"
 
 # New Site set-up page
 msgid "Forest edge"
-msgstr ""
+msgstr "森林の辺縁部"
 
 # New Site set-up page
 msgid "Woodland/Forest"
-msgstr ""
+msgstr "林、森林"
 
 # New Site set-up page
 msgid "Coastal"
-msgstr ""
+msgstr "沿岸"
 
 # New Site set-up page
 msgid "Scrubland/Heathland"
-msgstr ""
+msgstr "低木地帯、広く平坦な荒れ地"
 
 # New Site set-up page
 msgid "Sparsely vegetated"
-msgstr ""
+msgstr "まばらに植生がある"
 
 # New Site set-up page
 msgid "Desert / barren"
-msgstr ""
+msgstr "砂漠化している、不毛な"
 
 # New Site set-up page
 msgid "Dominant habitat"
-msgstr ""
+msgstr "主な生息地"
 
 # New Site set-up page
 msgid "How many trees are there in the area of your observation site?"
-msgstr ""
+msgstr "あなたの調査地にはどれだけの木がありましたか？"
 
 # New Site set-up page
 msgid "What proportion of the site is a lawn or a grassland?"
-msgstr ""
+msgstr "調査地における芝生や草原の占める割合は？"
 
 # New Site set-up page
 msgid "Fruit trees and shrubs"
-msgstr ""
+msgstr "果樹と低木"
 
 # New Site set-up page
 msgid "Unmanaged corners (natural spaces, abandoned areas)"
-msgstr ""
+msgstr "管理されていない区画（手つかずの自然の空間、放棄地）"
 
 # New Site set-up page
 msgid "Vegetable patch"
-msgstr ""
+msgstr "菜園"
 
 # New Site set-up page
 msgid "Lavender species"
-msgstr ""
+msgstr "ラベンダー"
 
 # New Site set-up page
 msgid "Geraniums & Pelargoniums"
-msgstr ""
+msgstr "ゼラニウムとペラルゴニウム"
 
 # New Site set-up page
 msgid "Valeriana"
-msgstr ""
+msgstr "セイヨウカノコソウ"
 
 # New Site set-up page
 msgid "Legumes (Clover, Lupin, Lotus,...)"
-msgstr ""
+msgstr "マメ科植物（クローバー、ルピナス、ハス）"
 
 # New Site set-up page
 msgid "Marigold"
-msgstr ""
+msgstr "マリーゴールド"
 
 # New Site set-up page
 msgid "Butterfly bush (or Summer Lilac)"
-msgstr ""
+msgstr "フジウツギ（またはフサフジウツギ）"
 
 # New Site set-up page
 msgid "Aromatics like Thyme, Oregano, etc. ( Lamiaceae)"
-msgstr ""
+msgstr "タイムやオレガノなどのような芳香性のもの（シソ科）"
 
 # New Site set-up page
 msgid "Nettle (Urtica dioica)"
-msgstr ""
+msgstr "イラクサ（セイヨウイラクサ）"
 
 # New Site set-up page
 msgid "Brambles (Rubus fruticosa)"
-msgstr ""
+msgstr "棘のある低木（キイチゴ）"
 
 # New Site set-up page
 msgid "Ivy"
-msgstr ""
+msgstr "アイビー"
 
 # New Site set-up page
 msgid "Knappweed (Centaurea and Scabiosa spp.)"
-msgstr ""
+msgstr "ナップウィード（ヤグルマギク属とマツムシソウ属）"
 
 # New Site set-up page
 msgid "Fennel, Carvi or others from the Carrot family (Apiaceae)"
-msgstr ""
+msgstr "ウイキョウ、ヒメウイキョウ、またはセリ科に属するその他の植物"
 
 # New Site set-up page
 msgid "Cabbage, Rucola or others Mustard-plant family (Brassicaceae)"
-msgstr ""
+msgstr "ウイキョウ、ヒメウイキョウ、その他のアブラナ科"
 
 # New Site set-up page
 msgid "Hemp-agrimony (Eupatorium spp.)"
-msgstr ""
+msgstr "ヘンプアグリモニー（ヒヨドリバナ属）"
 
 # New Site set-up page
 msgid "Are these plant species present in this location?"
-msgstr ""
+msgstr "これらの植物種はこの場所に存在していますか？"
 
 # New Site set-up page
 msgid "I own the site"
-msgstr ""
+msgstr "私はこの調査地を所有しています。"
 
 # New Site set-up page
 msgid "Private space"
-msgstr ""
+msgstr "私的なスペース"
 
 # New Site set-up page
 msgid "Public space"
-msgstr ""
+msgstr "公的な土地"
 
 # New Site set-up page
 msgid "Communal space"
-msgstr ""
+msgstr "共有スペース"
 
 # New Site set-up page
 msgid "Prefer not to say"
-msgstr ""
+msgstr "公表しないでほしい"
 
 # New Site set-up page
 msgid "Do you know who owns the land?"
-msgstr ""
+msgstr "あなたは誰がこの土地を所有しているか知っていますか？"
 
 # New Site set-up page
 msgid "Are you responsible for gardening activities at the site?"
-msgstr ""
+msgstr "あなたはこの調査地のガーデニングの担当をしていますか？"
 
 # Location attribute label
 msgid "Location"
@@ -891,58 +894,58 @@ msgid "Please draw your area on the map"
 msgstr "あなたの地域を地図から描いてください。"
 
 msgid "Disable the GPS tracking to enable the drawing tools."
-msgstr ""
+msgstr "描画ツールを有効にするためにGPS追跡を無効化してください。"
 
 msgid "Draw an area"
 msgstr "エリアを描く"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "場所"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "以前の"
 
 # Survey area page
 msgid "New location"
-msgstr ""
+msgstr "新たな場所"
 
 # Survey area page
 msgid "No location"
-msgstr ""
+msgstr "場所がない"
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "調査地の名前"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "コメント"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "その調査地は今でも調査中です。"
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "正しく場所を保存しました。"
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "間違いないですか？"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "これにより、フォームのデータが破棄されます。"
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 msgid "Delete"
 msgstr "削除"
@@ -1073,7 +1076,7 @@ msgid ""
 "Butterflies are captivating insects, but they are declining in many parts of"
 " the world. For example, this graph shows the European grassland butterfly "
 "index."
-msgstr ""
+msgstr "チョウは魅力的な昆虫ですが、彼らは世界中の多くの場所で減少しています。例えば、このグラフはヨーロッパの草原のチョウの指数を示しています。"
 
 # onboarding pages
 msgid ""
@@ -1085,7 +1088,7 @@ msgstr "このアプリによって収集されたデータは、チョウとそ
 msgid ""
 "We lack structured information on butterfly numbers in many parts of the "
 "world."
-msgstr ""
+msgstr "私たちは世界中の多くの場所のチョウの数についての容易に取り出せるように構造化された情報が不足しています。"
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -1097,18 +1100,18 @@ msgstr "これらの魅力的な昆虫の保全をサポートするための研
 msgid ""
 "This app enables you to contribute to the recording and conservation of "
 "butterflies across the world."
-msgstr ""
+msgstr "このアプリによって、あなたは世界中のチョウの記録と保全に貢献できます。"
 
 # About pages
 msgid "The app was supported through several projects:"
-msgstr ""
+msgstr "アプリは様々なプロジェクトを通して支援されています。"
 
 # About pages
 msgid ""
 "The app has benefited from input from a number of butterfly experts from "
 "across the world and associated with national Butterfly Monitoring Schemes "
 "listed at:"
-msgstr ""
+msgstr "アプリは世界中の多数のチョウの専門家による入力によって貢献されており、次にリストされている国際チョウ類モニタリング計画と紐づいています。"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
@@ -1215,17 +1218,17 @@ msgstr "レコードを削除するには、アカウント ページで左に�
 
 # Help pages
 msgid "Assign a project to a count"
-msgstr ""
+msgstr "カウントをプロジェクトに割り振る"
 
 # Help pages
 msgid ""
 "<0>Start a count.</0><1>Select \"Additional Details\" then "
 "\"Project\".</1><2>Finally, choose the appropriate project.</2>"
-msgstr ""
+msgstr "カウントを始めて下さい。「追加の詳細」を選んで、次に「プロジェクト」を選んでください。最後に適当なプロジェクトを選んでください。"
 
 # Help pages
 msgid "Assign a site to a count"
-msgstr ""
+msgstr "サイトをプロジェクトに割り振る"
 
 # Help pages
 msgid ""
@@ -1242,6 +1245,9 @@ msgid ""
 " future counts conducted in that location.</7><8>Finally, choose the site "
 "for the current count.</8>"
 msgstr ""
+"<0>カウントを開始する。</0><1>カウントをプロジェクトに割り当てて、どのようにプロジェクトを選択するかの指示を確認してください。</1><2>「Area」のページのヘッダーからGPSを切ってください。</2><3>画面右側の「Site"
+" "
+"Drawing」を選択してください。</3><4>地図の調査地を選択して、画面右側であなたの選択を確定してください。</4><5>画面右下のお気に入りのパネルにある「Add」をクリックしてください。もしそのパネルが見えなかったら、あなたは右上のお気に入りボタン（星のアイコン）をクリックして開くことが出来ます。</5><6>あなたはその場所についていくつか質問を促されるでしょう。</6><7>右上の「Save」を質問に答えた後にクリックしてください。その場所は保存され、その場所で行われる今後のカウントで選択可能になります。</7><8>最後に、今のカウントの場所を選択してください。</8>"
 
 msgid "User"
 msgstr "ユーザー"
@@ -1286,27 +1292,27 @@ msgstr "今後数ヵ月で新機能が追加されるため、このアプリに
 
 # App setting for deleting cached data
 msgid "Clear cache"
-msgstr ""
+msgstr "キャッシュクリアしてください"
 
 # App setting for deleting cached data
 msgid "You can free up storage used by the app."
-msgstr ""
+msgstr "アプリに利用されている容量を空けることができます。"
 
 # App setting for deleting cached data
 msgid "Clear"
-msgstr ""
+msgstr "消去"
 
 # App setting for deleting cached data
 msgid " This will delete cached data, including your uploaded surveys."
-msgstr ""
+msgstr "これはあなたがアップロードした調査を含むデータをキャッシュクリアします"
 
 # App setting
 msgid "Export database"
-msgstr ""
+msgstr "データベースをエクスポートしてください"
 
 # App setting
 msgid "Export"
-msgstr ""
+msgstr "エクスポートしてください"
 
 # App setting
 msgid ""
@@ -1314,6 +1320,7 @@ msgid ""
 "for technical support and is not a supported method for exporting your "
 "data</1>"
 msgstr ""
+"データをエクスポートしてよろしいですか？<1>この特徴は技術的な支援のみを目的としており、あなたのデータをエクスポートするために支持された方法ではありません</1>"
 
 msgid "Sweden"
 msgstr "スウェーデン"
@@ -1329,7 +1336,7 @@ msgstr "アップロード済み"
 
 msgid ""
 "You need to <1>login</1> to your account to be able to view the records."
-msgstr ""
+msgstr "あなたのアカウントで記録を閲覧できるようにするためにはログインする必要があります。"
 
 msgid "No finished pending surveys"
 msgstr "保留中の調査は完了していない"
@@ -1408,11 +1415,11 @@ msgstr "一般名をガイドに表示する"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "世界の種のリストを使う"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr ""
+msgstr "調査検索で地域特有の種名に限定しないでください。"
 
 msgid "Share App Analytics"
 msgstr "アプリ分析を共有する"
@@ -1684,7 +1691,7 @@ msgid ""
 "develop trends of butterflies across Europe. To use the app you will first "
 "have to register an account."
 msgstr ""
-"このアプリケーションを使用して、ヨーロッパのどこにいてもチョウ類をモニタリングすることができます。 "
+"このアプリケーションを使用すると、ヨーロッパのどこにいてもチョウ類をモニタリングすることができます。 "
 "結果はヨーロッパチョウ類モニタリングデータベースに入力され、ヨーロッパ全体のチョウの傾向を明らかにするために使用されます。このアプリを使用するには、最初にアカウントを登録する必要があります。"
 
 msgid ""
@@ -1694,9 +1701,10 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"もっともお勧めするのは、15分間カウント調査です。この方法は、チョウが活発であるとき（例えば、気温が暖かい時、好ましくは晴れているとき）には、どんな場所でもいつの時間でも行うことができます。設定されたチョウのトランセクト調査の記録にもこのアプリを使うことができます。下記の文書に、現在実施できる調査手法が紹介されています。"
 
 msgid "How to do a 15-minute Count"
-msgstr "15分カウントの調査方法"
+msgstr "15分間カウントの調査方法"
 
 msgid ""
 "This is the default method on the app. Simply count butterflies for a 15 "
@@ -1801,7 +1809,7 @@ msgstr "チョウの種の識別をまだ学んでいるときには、トレー
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr ""
+msgstr "今の調査を消去してよろしいですか？"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -1865,7 +1873,7 @@ msgstr "気象条件"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr "この種を本当に削除してもよろしいですか？"
+msgstr "この種を削除してもよろしいですか？"
 
 # Credits page text
 msgid ""
@@ -2113,7 +2121,7 @@ msgstr "砂糖づけ"
 
 # Moth survey method type
 msgid "Wine roping"
-msgstr ""
+msgstr "ワインローピング"
 
 # Moth survey method type
 msgid "Beating tray"
@@ -2287,32 +2295,32 @@ msgstr "新着情報"
 
 # Whats new message option
 msgid "Don't show again"
-msgstr ""
+msgstr "再度提示しないでください"
 
 # Version 1.22 whats new message
 msgid ""
 "Added capability to view records that have been uploaded from other devices."
-msgstr ""
+msgstr "他のデバイスからアップロードされている記録を見る追加された機能"
 
 # Version 1.22 whats new message
 msgid "The records map has been upgraded to display all user records."
-msgstr ""
+msgstr "記録の地図はすべてのユーザーの記録を表示するためにアップグレードし続けています。"
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous transect section's species list."
-msgstr ""
+msgstr "以前のトランセクトのセクションの種リストの利用可能なコピー"
 
 # Version 1.22 whats new message
 msgid "Enabled copying of the previous moth trap's species list."
-msgstr ""
+msgstr "以前のガのトラップの種リストの利用可能なコピー"
 
 # Version 1.22 whats new message
 msgid "Updated species guide page."
-msgstr ""
+msgstr "種のガイドページがアップデートされました。"
 
 # Version 1.22 whats new message
 msgid "Added option to clear uploaded cached files."
-msgstr ""
+msgstr "アップロード済みのキャッシュファイルを削除する機能を追加しました。"
 
 # User account action
 msgid "Resend"
@@ -2362,7 +2370,7 @@ msgstr "ランプを追加"
 
 # Moth trap survey
 msgid "Lamp type is a required field."
-msgstr ""
+msgstr "ランプの種類は必須項目です"
 
 # Moth trap survey
 msgid "What type of trap was it?"
@@ -2551,120 +2559,120 @@ msgstr ""
 msgid ""
 "This option was moved to the species search page inside the surveys. When a "
 "survey starts, you can select which species group you are recording."
-msgstr ""
+msgstr "この選択肢は調査内の分類群検索ページに移されました。調査が始まると、あなたがどの種のグループを記録しているか選択することができます。"
 
 # Part of Species Group selection
 msgid "Groups"
-msgstr ""
+msgstr "グループ"
 
 # Part of Species Group selection
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 # Part of Species Group selection
 msgid "Confirm"
-msgstr ""
+msgstr "確認"
 
 # Part of Species Group selection
 msgid "Which species groups have you counted?"
-msgstr ""
+msgstr "どの種のグループをあなたは数えましたか？"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
-msgstr ""
+msgstr "目的の種を選択してください。"
 
 # Part of Painted lady survey
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
-msgstr ""
+msgstr "写真が追加されていません。<br/> <4><0></0></4> をクリックして追加してください。"
 
 # Part of Painted lady survey
 msgid "Wing"
-msgstr ""
+msgstr "翅"
 
 # Part of Painted lady survey
 msgid "Behaviour"
-msgstr ""
+msgstr "行動"
 
 # Part of Painted lady survey
 msgid "Direction"
-msgstr ""
+msgstr "方角"
 
 # Part of Painted lady survey
 msgid "Altitude"
-msgstr ""
+msgstr "高度"
 
 # Part of Painted lady survey
 msgid "Compass"
-msgstr ""
+msgstr "コンパス"
 
 # Alert header
 msgid "Delete Survey"
-msgstr ""
+msgstr "調査内容を消去する"
 
 # Alert message
 msgid ""
 "Warning - This will discard the survey information you have entered so far."
-msgstr ""
+msgstr "警告－この操作であなたがこれまでに入力した調査の情報が消去されます。"
 
 # Painted lady wing options
 msgid "Fresh"
-msgstr ""
+msgstr "新しい、羽化したての"
 
 # Painted lady wing options
 msgid "Worn"
-msgstr ""
+msgstr "擦り切れた、損傷している"
 
 # Painted lady wing options
 msgid "Normal"
-msgstr ""
+msgstr "通常の"
 
 # Painted lady survey flower entry
 msgid "Please specify the nectar source."
-msgstr ""
+msgstr "蜜源植物を特定してください。"
 
 # Painted lady survey missing entry
 msgid "Please add the egg laying option."
-msgstr ""
+msgstr "産卵の項目を追加してください。"
 
 # Painted lady survey missing entry
 msgid "Please add the mating option."
-msgstr ""
+msgstr "交配の項目を追加してください。"
 
 # Painted lady survey missing entry
 msgid "Nectar source"
-msgstr ""
+msgstr "蜜源植物"
 
 # Painted lady survey missing entry
 msgid "Please add the nectar option."
-msgstr ""
+msgstr "蜜源の項目を追加してください。"
 
 # Painted lady survey missing entry
 msgid "Please add the direction option."
-msgstr ""
+msgstr "方角の項目を追加してください。"
 
 # Painted lady survey missing entry
 msgid "Please add the altitude option."
-msgstr ""
+msgstr "高度の項目を追加してください。"
 
 # Part of painted lady
 msgid "Egg-laying hostplants"
-msgstr ""
+msgstr "産卵用の植物"
 
 # Part of painted lady
 msgid "Migrating"
-msgstr ""
+msgstr "渡り"
 
 # Part of painted lady
 msgid "Nectaring"
-msgstr ""
+msgstr "吸蜜"
 
 # Part of painted lady
 msgid "Mating"
-msgstr ""
+msgstr "交配"
 
 # Painted lady compass
 msgid "Unsupported device"
-msgstr ""
+msgstr "サポート対象外のデバイス"
 
 # Painted lady compass
 msgid ""
@@ -2674,330 +2682,333 @@ msgid ""
 "relative to magnetic north. Thus, you will not be able to use compass on "
 "this device."
 msgstr ""
+"残念ですが、あなたのデバイスはコンパスが正常に機能するために必要なセンサーを搭載していないようです。コンパスはこのセンサーによって地球の磁場を検知し、あなたのデバイスの磁北に対する相対的な方位を決定しています。そのため、あなたはこのデバイスでコンパスを利用することができないでしょう。"
 
 # Painted lady mating options
 msgid "Territorial defence: other"
-msgstr ""
+msgstr "なわばりの防衛：その他"
 
 # Painted lady mating options
 msgid "Territorial defence: hill-topping"
-msgstr ""
+msgstr "なわばりの防衛：ヒルトッピング"
 
 # Painted lady direction options
 msgid "What was the butterfly flying altitude? (meters)"
-msgstr ""
+msgstr "チョウが飛んでいる高度はどれくらいでしたか？（メートル）"
 
 # Painted lady egg laying hostplant option
 msgid "Other hostplant"
-msgstr ""
+msgstr "その他のホスト植物"
 
 # Painted lady direction option
 msgid "Desert nettle"
-msgstr ""
+msgstr "砂漠のイラクサ"
 
 # Painted lady direction option
 msgid "Mallow"
-msgstr ""
+msgstr "マロウ"
 
 # Painted lady direction option
 msgid "Thistles"
-msgstr ""
+msgstr "アザミ"
 
 # Painted lady direction option
 msgid "Hostplants"
-msgstr ""
+msgstr "ホスト植物"
 
 # Painted lady direction option
 msgid "Please select the hostplants."
-msgstr ""
+msgstr "ホスト植物を入力してください。"
 
 # Painted lady survey info background message
 msgid "You don't have any <1>{{prettySpeciesName}}</1> records in your list."
-msgstr ""
+msgstr "1つも<1>{{種の表示名}}</1>はあなたのリストに入っていません。"
 
 # Alert title
 msgid "Tip: Copy attributes"
-msgstr ""
+msgstr "ヒント：属性をコピーしてください"
 
 # Part of Painted lady survey
 msgid "Wing condition"
-msgstr ""
+msgstr "翅の状態"
 
 # Part of Painted lady survey
 msgid "Nectar"
-msgstr ""
+msgstr "蜜源"
 
 # Part of Painted lady survey
 msgid "Enter the nectar source here"
-msgstr ""
+msgstr "蜜源をこちらに入力してください"
 
 # Part of Painted lady survey
 msgid "Other species"
-msgstr ""
+msgstr "その他の種"
 
 # Part of Painted lady survey
 msgid "What kind of thistle was it?"
-msgstr ""
+msgstr "それは何の種類のアザミでしたか？"
 
 # Part of Painted lady survey
 msgid "Thistle species"
-msgstr ""
+msgstr "アザミの種"
 
 # Part of Painted lady survey
 msgid "Copied!"
-msgstr ""
+msgstr "コピーされました！"
 
 # Part of Painted lady survey
 msgid ""
 "To copy a list entry swipe it to the right and press<1><0></0></1>icon."
-msgstr ""
+msgstr "リストの項目をコピーするためそれを右にスワイプして<1><0></0></1>アイコンを押してください。"
 
 # Part of Painted lady survey
 msgid "Height above ground (meters)"
-msgstr ""
+msgstr "地面からの高さ（メートル）"
 
 # Part of Painted lady survey
 msgid "Height"
-msgstr ""
+msgstr "高さ"
 
 # 15min Single species survey detail page button label
 msgid "Start Count"
-msgstr ""
+msgstr "カウントをスタートする"
 
 # Painted Lady guide title
 msgid "Tracking the Painted Lady migration with Butterfly Count"
-msgstr ""
+msgstr "Butterfly Countによるヒメアカタテハの移動の追跡調査"
 
 # Menu page label
 msgid "Instructions"
-msgstr ""
+msgstr "使い方"
 
 # Country name
 msgid "Saint Helena"
-msgstr ""
+msgstr "セントヘレナ"
 
 # Dragonfly stage attribute
 msgid "Ovipositing"
-msgstr ""
+msgstr "産卵"
 
 # Dragonfly stage attribute
 msgid "Copulating or tandem pairs"
-msgstr ""
+msgstr "交尾しているもしくは2匹でつながっているペア"
 
 # Dragonfly stage attribute
 msgid "Exuviae"
-msgstr ""
+msgstr "脱皮殻"
 
 # Dragonfly stage attribute
 msgid "Emergent"
-msgstr ""
+msgstr "突き出ている"
 
 # Alert message
 msgid "Count sum must be greater than 0"
-msgstr ""
+msgstr "カウントの合計は0より大きい必要があります。"
 
 # Report page label
 msgid "Show less"
-msgstr ""
+msgstr "短くする"
 
 # Part of favorite track selection
 msgid "Your track name"
-msgstr ""
+msgstr "あなたのトラック名"
 
 # Part of favorite track selection
 msgid "Here you can select or swipe to edit your previous tracks"
-msgstr ""
+msgstr "こちらで選択またはスワイプしてあなたの以前の調査を編集できます。"
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 # Part of favorite track selection
 msgid "Edit Location"
-msgstr ""
+msgstr "場所を編集する"
 
 # Part of favorite track selection
 msgid "Name"
-msgstr ""
+msgstr "種名"
 
 # Part of favorite track selection
 msgid "Favourite"
-msgstr ""
+msgstr "お気に入り"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr ""
+msgstr "保存した調査を消去してもよろしいですか？"
 
 # Map GPS button interface
 msgid ""
 "To resume the GPS tracking, you must first remove the drawn area from the "
 "map."
-msgstr ""
+msgstr "GPSの追跡を再開するために、最初にマップから描画されたエリアを取り除いてください。"
 
 # Part of weather attributes
 msgid "Moon phase"
-msgstr ""
+msgstr "月齢"
 
 # Moon phase values
 msgid "New"
-msgstr ""
+msgstr "新月"
 
 #  Moon phase values
 msgid "Waxing crescent"
-msgstr ""
+msgstr "三日月"
 
 #  Moon phase values
 msgid "First quarter"
-msgstr ""
+msgstr "上弦の月"
 
 #  Moon phase values
 msgid "Waxing gibbous"
-msgstr ""
+msgstr "満ちていく月"
 
 #  Moon phase values
 msgid "Full"
-msgstr ""
+msgstr "満月"
 
 #  Moon phase values
 msgid "Waning gibbous"
-msgstr ""
+msgstr "欠けていく月"
 
 #  Moon phase values
 msgid "Last quarter"
-msgstr ""
+msgstr "下弦の月"
 
 #  Moon phase values
 msgid "Waning crescent"
-msgstr ""
+msgstr "欠けていく三日月"
 
 # Info message
 msgid "Trap start"
-msgstr ""
+msgstr "トラップの開始"
 
 # Info message
 msgid "Trap end"
-msgstr ""
+msgstr "トラップの終了"
 
 # Info message
 msgid "Start Weather"
-msgstr ""
+msgstr "開始時の天気"
 
 # Info message
 msgid "End Weather"
-msgstr ""
+msgstr "終了時の天気"
 
 # Info message
 msgid "Please add the moth trap."
-msgstr ""
+msgstr "蛾のトラップを追加してください。"
 
 # Info message
 msgid ""
 "We have noticed that your survey has <1>long sections</1>. Please make sure "
 "it is a correct <3>location</3>!"
-msgstr ""
+msgstr "あなたの調査には<1>長いセクション</1>が含まれていることを確認しました。正しい<3>場所</3>であることを確認してください！"
 
 # Info message
 msgid "Defaulted to sunset time"
-msgstr ""
+msgstr "デフォルトで日の出の時間になりました。"
 
 # Info message
 msgid "Defaulted to sunrise time"
-msgstr ""
+msgstr "デフォルトで日没の時間になりました。"
 
 # Error message
 msgid "Location services are not enabled"
-msgstr ""
+msgstr "位置情報サービスは利用できません。"
 
 # Part of favorite track
 msgid "You have no previous tracks."
-msgstr ""
+msgstr "過去の調査がありません。"
 
 # Part of favorite track
 msgid "You have no saved sites."
-msgstr ""
+msgstr "保存された調査地がありません。"
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
-msgstr ""
+msgstr "アルファベット順にリストを並び替えました。"
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
-msgstr ""
+msgstr "最後に追加された順にリストを並べ替えました。"
 
 # Record verification status
 msgid "Unconfirmed"
-msgstr ""
+msgstr "未確認の"
 
 # Record verification status
 msgid "Accepted"
-msgstr ""
+msgstr "承認されました。"
 
 # Record verification status
 msgid "Rejected"
-msgstr ""
+msgstr "却下された"
 
 # Survey verification message
 msgid "Reliability cannot be empty."
-msgstr ""
+msgstr "信頼性の欄は空欄にできません"
 
 # Survey verification message
 msgid "Cloud cannot be empty."
-msgstr ""
+msgstr "雲の欄は空欄にできません。"
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "どのプロジェクトにも紐づいていません"
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "参加"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "プロジェクト"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "プロジェクト"
 
 # Survey Projects functionality
 msgid "My projects"
-msgstr ""
+msgstr "私のプロジェクト"
 
 # Survey Projects functionality
 msgid "All projects"
-msgstr ""
+msgstr "全てのプロジェクト"
 
 # Survey Projects functionality
 msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"あなたはまだどのプロジェクトにも参加していません。「全てのプロジェクト」のタブを開いてプロジェクトに参加してください。<br/><br/>ページをスワイプしてリストを更新してください。"
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"<0>{{country}}</0>現在参加できる新規プロジェクトはありません。<br/><br/>ページをスワイプしてリストを更新してください。"
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "プロジェクトに参加できました。"
 
 # Survey Projects functionality
 msgid "Leave"
-msgstr ""
+msgstr "退出"
 
 # Survey Projects functionality
 msgid "Successfully left the project."
-msgstr ""
+msgstr "プロジェクトから退出できました。"
 
 # Survey sensitivity attribute
 msgid "Sensitive"
-msgstr ""
+msgstr "機密"
 
 # Survey sensitivity attribute
 msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
-msgstr ""
+msgstr "この調査には機密性の高い種が扱われていて、公共のレポートに取り入れられるべきではありません。"

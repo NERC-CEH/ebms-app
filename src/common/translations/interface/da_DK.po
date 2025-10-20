@@ -738,7 +738,7 @@ msgstr "Uforvaltede hjørner"
 
 # New Site set-up page
 msgid "Vegetable patch"
-msgstr ""
+msgstr "Grøntsagsbed"
 
 # New Site set-up page
 msgid "Lavender species"

@@ -1,12 +1,12 @@
 # 
 # Translators:
 # SABA GONZÁLEZ LORENZO, 2024
-# Marta Vila Taboada, 2024
+# Marta Vila Taboada, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Marta Vila Taboada, 2024\n"
+"Last-Translator: Marta Vila Taboada, 2025\n"
 "Language-Team: Galician (Spain) (https://app.transifex.com/ceh/teams/95441/gl_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -109,7 +109,7 @@ msgid "Montenegro"
 msgstr "Montenegro"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Marrocos"
 
 msgid "North Macedonia"
 msgstr "Macedonia do Norte"
@@ -401,31 +401,31 @@ msgstr "Área"
 
 # New Site set-up page
 msgid "Site area"
-msgstr ""
+msgstr "Superficie"
 
 # New Site set-up page
 msgid "Approximate size of your observation site."
-msgstr ""
+msgstr "Tamaño aproximado da área observada"
 
 # New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
-msgstr ""
+msgstr "Hábitat/usos da terra (o total debe sumar 100%)"
 
 # New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
-msgstr ""
+msgstr "Seara (trigo, cebada, centeo)"
 
 # New Site set-up page
 msgid "Arable field fruits or vegetables"
-msgstr ""
+msgstr "Horta ou nabal"
 
 # New Site set-up page
 msgid "Arable field rapeseed"
-msgstr ""
+msgstr "Agro de colza"
 
 # New Site set-up page
 msgid "Arable field corn"
-msgstr ""
+msgstr "Leira de millo"
 
 # New Site set-up page
 msgid "Arable legumes"
@@ -437,7 +437,7 @@ msgstr ""
 
 # New Site set-up page
 msgid "Arable fallow"
-msgstr ""
+msgstr "Barbeito/coita"
 
 # New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
@@ -449,63 +449,63 @@ msgstr ""
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
-msgstr ""
+msgstr "Verxel, viña ou plantío (disperso, herba entre as árbores)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
-msgstr ""
+msgstr "Verxel, viña ou plantío (intensamente traballado)"
 
 # New Site set-up page
 msgid "Scrubland"
-msgstr ""
+msgstr "Matogueira"
 
 # New Site set-up page
 msgid "Land laying fallow / wasteland"
-msgstr ""
+msgstr "Ermo/baldío"
 
 # New Site set-up page
 msgid "Sparse woodland"
-msgstr ""
+msgstr "Arboredo disperso"
 
 # New Site set-up page
 msgid "Dense woodland or forest"
-msgstr ""
+msgstr "Arboredo denso ou fraga"
 
 # New Site set-up page
 msgid "Plantation"
-msgstr ""
+msgstr "Plantación"
 
 # New Site set-up page
 msgid "Garden (single)"
-msgstr ""
+msgstr "Xardín ou horta (individual)"
 
 # New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
-msgstr ""
+msgstr "Xardíns ou hortas (múltiples, p. ex., hortas urbanas)"
 
 # New Site set-up page
 msgid "Building(s)"
-msgstr ""
+msgstr "Edificio(s)"
 
 # New Site set-up page
 msgid "Pond, lake or sea"
-msgstr ""
+msgstr "Charca, lagoa, lago ou mar"
 
 # New Site set-up page
 msgid "River or creek"
-msgstr ""
+msgstr "Río ou regato"
 
 # New Site set-up page
 msgid "Wetland"
-msgstr ""
+msgstr "Zona húmida"
 
 # New Site set-up page
 msgid "Dunes or barren land"
-msgstr ""
+msgstr "Dunas ou terras baldías"
 
 # New Site set-up page
 msgid "Field edge(s)"
-msgstr ""
+msgstr "Sebe(s)"
 
 # New Site set-up page
 msgid "Buffer-strip(s)"
@@ -525,7 +525,7 @@ msgstr ""
 
 # New Site set-up page
 msgid "Wooded area"
-msgstr ""
+msgstr "Arboredo"
 
 # New Site set-up page
 msgid "Terraces, stone walls"
@@ -533,27 +533,27 @@ msgstr ""
 
 # New Site set-up page
 msgid "Pond"
-msgstr ""
+msgstr "Charca"
 
 # New Site set-up page
 msgid "Path"
-msgstr ""
+msgstr "Camiño"
 
 # New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
-msgstr ""
+msgstr "Vía de tren, rúa ou estrada (asfaltadas)"
 
 # New Site set-up page
 msgid "Fences or other human-made linear structures"
-msgstr ""
+msgstr "Valado"
 
 # New Site set-up page
 msgid "Dead tree, stumps or wood"
-msgstr ""
+msgstr "Árbore morta, cachopa ou leña"
 
 # New Site set-up page
 msgid "Landscape features"
-msgstr ""
+msgstr "Trazos da paisaxe"
 
 # New Site set-up page
 msgid "Features located within a 50-meter radius."
@@ -561,15 +561,15 @@ msgstr ""
 
 # New Site set-up page
 msgid "Other landscape feature details"
-msgstr ""
+msgstr "Outros detalles paisaxísticos"
 
 # New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
-msgstr ""
+msgstr "Non aplicable (non é unha herbeira ou prado)"
 
 # New Site set-up page
 msgid "I don't know"
-msgstr ""
+msgstr "Non sei"
 
 # New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
@@ -597,7 +597,7 @@ msgstr ""
 
 # New Site set-up page
 msgid "Not applicable"
-msgstr ""
+msgstr "Non aplicable"
 
 # New Site set-up page
 msgid "Frequent application"
@@ -633,31 +633,31 @@ msgstr ""
 
 # New Site set-up page
 msgid "Please upload site photos"
-msgstr ""
+msgstr "Por favor, suba as fotos do lugar"
 
 # New Site set-up page
 msgid "Optimally in the direction to North, East, South and West."
-msgstr ""
+msgstr "Optimamente na dirección do Norte, Leste, Sur e Oeste"
 
 # New Site set-up page
 msgid "Garden"
-msgstr ""
+msgstr "Xardín/Horta"
 
 # New Site set-up page
 msgid "Allotment gardens"
-msgstr ""
+msgstr "Hortas urbanas"
 
 # New Site set-up page
 msgid "Community garden"
-msgstr ""
+msgstr "Xardín comunal"
 
 # New Site set-up page
 msgid "Balcony"
-msgstr ""
+msgstr "Balcón"
 
 # New Site set-up page
 msgid "Park (mixed vegetation)"
-msgstr ""
+msgstr "Parque (vexetación mixta)"
 
 # New Site set-up page
 msgid "Lawn"
@@ -685,11 +685,11 @@ msgstr ""
 
 # New Site set-up page
 msgid "Arable field"
-msgstr ""
+msgstr "Agro"
 
 # New Site set-up page
 msgid "Grassland / Meadow / Pasture"
-msgstr ""
+msgstr "Herbeira / Prado / Pradaría"
 
 # New Site set-up page
 msgid "Orchard"
@@ -701,11 +701,11 @@ msgstr ""
 
 # New Site set-up page
 msgid "Woodland/Forest"
-msgstr ""
+msgstr "Souto/Fraga"
 
 # New Site set-up page
 msgid "Coastal"
-msgstr ""
+msgstr "Costeiro"
 
 # New Site set-up page
 msgid "Scrubland/Heathland"
@@ -721,11 +721,11 @@ msgstr ""
 
 # New Site set-up page
 msgid "Dominant habitat"
-msgstr ""
+msgstr "Hábitat dominante"
 
 # New Site set-up page
 msgid "How many trees are there in the area of your observation site?"
-msgstr ""
+msgstr "Cantas árbores hai na súa área de observación?"
 
 # New Site set-up page
 msgid "What proportion of the site is a lawn or a grassland?"
@@ -733,7 +733,7 @@ msgstr ""
 
 # New Site set-up page
 msgid "Fruit trees and shrubs"
-msgstr ""
+msgstr "Arbustos e árbores froiteiras"
 
 # New Site set-up page
 msgid "Unmanaged corners (natural spaces, abandoned areas)"
@@ -745,43 +745,43 @@ msgstr ""
 
 # New Site set-up page
 msgid "Lavender species"
-msgstr ""
+msgstr "Especie de arzaia"
 
 # New Site set-up page
 msgid "Geraniums & Pelargoniums"
-msgstr ""
+msgstr "xeranios (Geranium, Pelargonium)"
 
 # New Site set-up page
 msgid "Valeriana"
-msgstr ""
+msgstr "Valeriana"
 
 # New Site set-up page
 msgid "Legumes (Clover, Lupin, Lotus,...)"
-msgstr ""
+msgstr "Leguminosas (Trifolium, Lotus, Lupinus,...)"
 
 # New Site set-up page
 msgid "Marigold"
-msgstr ""
+msgstr "Maravalla (Calendula officinalis) ou clavelón (Tagetes spp.)"
 
 # New Site set-up page
 msgid "Butterfly bush (or Summer Lilac)"
-msgstr ""
+msgstr "Lilar (Buddleja davidii)"
 
 # New Site set-up page
 msgid "Aromatics like Thyme, Oregano, etc. ( Lamiaceae)"
-msgstr ""
+msgstr "Aromáticas como o tomiño, ourego, etc. (Lamiaceae)"
 
 # New Site set-up page
 msgid "Nettle (Urtica dioica)"
-msgstr ""
+msgstr "Estrugas (Urtica dioica)"
 
 # New Site set-up page
 msgid "Brambles (Rubus fruticosa)"
-msgstr ""
+msgstr "Silva (Rubus fruticosa)"
 
 # New Site set-up page
 msgid "Ivy"
-msgstr ""
+msgstr "Hedra"
 
 # New Site set-up page
 msgid "Knappweed (Centaurea and Scabiosa spp.)"
@@ -789,11 +789,12 @@ msgstr ""
 
 # New Site set-up page
 msgid "Fennel, Carvi or others from the Carrot family (Apiaceae)"
-msgstr ""
+msgstr "Fiúncho, carvea ou outras especies da familia das cenorias (Apiaceae)"
 
 # New Site set-up page
 msgid "Cabbage, Rucola or others Mustard-plant family (Brassicaceae)"
 msgstr ""
+"Repolo, rúcula ou outras especies da familia da mostaza (Brassicaceae)"
 
 # New Site set-up page
 msgid "Hemp-agrimony (Eupatorium spp.)"
@@ -801,31 +802,31 @@ msgstr ""
 
 # New Site set-up page
 msgid "Are these plant species present in this location?"
-msgstr ""
+msgstr "Están estas plantas nesta localización?"
 
 # New Site set-up page
 msgid "I own the site"
-msgstr ""
+msgstr "É terreo da miña propiedade"
 
 # New Site set-up page
 msgid "Private space"
-msgstr ""
+msgstr "Espazo privado"
 
 # New Site set-up page
 msgid "Public space"
-msgstr ""
+msgstr "Espazo público"
 
 # New Site set-up page
 msgid "Communal space"
-msgstr ""
+msgstr "Espazo comunal"
 
 # New Site set-up page
 msgid "Prefer not to say"
-msgstr ""
+msgstr "Prefiro non dicir"
 
 # New Site set-up page
 msgid "Do you know who owns the land?"
-msgstr ""
+msgstr "Sabe a quen pertence esta terra?"
 
 # New Site set-up page
 msgid "Are you responsible for gardening activities at the site?"
@@ -1368,11 +1369,11 @@ msgstr "Isto eliminará os datos da caché, incluídas as mostraxes que subise."
 
 # App setting
 msgid "Export database"
-msgstr ""
+msgstr "Exportar base de datos"
 
 # App setting
 msgid "Export"
-msgstr ""
+msgstr "Exportar"
 
 # App setting
 msgid ""

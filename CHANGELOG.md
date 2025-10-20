@@ -1,3 +1,7 @@
+## 1.30.0
+
+Updated translations.
+
 ## 1.29.3
 
 Fixed Android SQLite build.

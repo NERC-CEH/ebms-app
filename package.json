@@ -3,7 +3,7 @@
   "id": "uk.ac.ceh.ebms",
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
-  "version": "1.29.3",
+  "version": "1.30.0",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "prepare": "husky",
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@capacitor-community/background-geolocation": "^1.2.22",
-    "@capacitor-community/sqlite": "^7.0.0",
+    "@capacitor-community/sqlite": "^7.0.1",
     "@capacitor/android": "^7.1.0",
     "@capacitor/app": "7.0.0",
     "@capacitor/camera": "^7.0.0",

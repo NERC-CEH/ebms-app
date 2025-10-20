@@ -2,12 +2,12 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
-# Zdenek Faltynek Fric <fric@entu.cas.cz>, 2024
+# Zdenek Faltynek Fric <fric@entu.cas.cz>, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Zdenek Faltynek Fric <fric@entu.cas.cz>, 2024\n"
+"Last-Translator: Zdenek Faltynek Fric <fric@entu.cas.cz>, 2025\n"
 "Language-Team: Czech (Czech Republic) (https://app.transifex.com/ceh/teams/95441/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +110,7 @@ msgid "Montenegro"
 msgstr "Černá Hora"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Maroko"
 
 msgid "North Macedonia"
 msgstr "Severní Makedonie"
@@ -398,435 +398,435 @@ msgstr "Plocha"
 
 # New Site set-up page
 msgid "Site area"
-msgstr ""
+msgstr "Plocha místa"
 
 # New Site set-up page
 msgid "Approximate size of your observation site."
-msgstr ""
+msgstr "Odhadovaná plocha pozorovacího místa."
 
 # New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
-msgstr ""
+msgstr "Biotopy/využití země (součet by měl být 100 %)"
 
 # New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
-msgstr ""
+msgstr "Orná půda s obilninami (pšenice, ječmen, žito)"
 
 # New Site set-up page
 msgid "Arable field fruits or vegetables"
-msgstr ""
+msgstr "Orná půda s ovocem či zeleninou"
 
 # New Site set-up page
 msgid "Arable field rapeseed"
-msgstr ""
+msgstr "Orná půda s řepkou"
 
 # New Site set-up page
 msgid "Arable field corn"
-msgstr ""
+msgstr "Orná půda s kukuřicí"
 
 # New Site set-up page
 msgid "Arable legumes"
-msgstr ""
+msgstr "Orná půda s luštěninami"
 
 # New Site set-up page
 msgid "Arable multi-cropping"
-msgstr ""
+msgstr "Orná půda s více plodinami"
 
 # New Site set-up page
 msgid "Arable fallow"
-msgstr ""
+msgstr "Úhor"
 
 # New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
-msgstr ""
+msgstr "Homogenní louka/intenzívní hospodaření"
 
 # New Site set-up page
 msgid "Grassland extensive or heterogeneous (pasture)"
-msgstr ""
+msgstr "Extenzivní či heterogenní louka (pastvina)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
-msgstr ""
+msgstr "Sad, vinice nebo remízek (řídký s pastvou mezi stromy)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
-msgstr ""
+msgstr "Sad, vinice nebo remízek (intenzivní)"
 
 # New Site set-up page
 msgid "Scrubland"
-msgstr ""
+msgstr "Křoví"
 
 # New Site set-up page
 msgid "Land laying fallow / wasteland"
-msgstr ""
+msgstr "Půda ležící ladem/pustina"
 
 # New Site set-up page
 msgid "Sparse woodland"
-msgstr ""
+msgstr "Řídký les"
 
 # New Site set-up page
 msgid "Dense woodland or forest"
-msgstr ""
+msgstr "Hustý les"
 
 # New Site set-up page
 msgid "Plantation"
-msgstr ""
+msgstr "Plantáž"
 
 # New Site set-up page
 msgid "Garden (single)"
-msgstr ""
+msgstr "Zahrada (jedna)"
 
 # New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
-msgstr ""
+msgstr "Zahrady (více, např. v kolonii)"
 
 # New Site set-up page
 msgid "Building(s)"
-msgstr ""
+msgstr "Výstavba"
 
 # New Site set-up page
 msgid "Pond, lake or sea"
-msgstr ""
+msgstr "Rybník, jezero nebo moře"
 
 # New Site set-up page
 msgid "River or creek"
-msgstr ""
+msgstr "Řeka nebo potok"
 
 # New Site set-up page
 msgid "Wetland"
-msgstr ""
+msgstr "Podmáčená plocha"
 
 # New Site set-up page
 msgid "Dunes or barren land"
-msgstr ""
+msgstr "Duny nebo vyprahlá zem"
 
 # New Site set-up page
 msgid "Field edge(s)"
-msgstr ""
+msgstr "Okraj pole(polí)"
 
 # New Site set-up page
 msgid "Buffer-strip(s)"
-msgstr ""
+msgstr "Travnatý lem"
 
 # New Site set-up page
 msgid "Flower-strip(s)"
-msgstr ""
+msgstr "Květnatý pás (pásy)"
 
 # New Site set-up page
 msgid "Hedge(s)"
-msgstr ""
+msgstr "Živé ploty"
 
 # New Site set-up page
 msgid "Scattered trees or trees in rows"
-msgstr ""
+msgstr "Solitérní strimy nebo stromy v řadách"
 
 # New Site set-up page
 msgid "Wooded area"
-msgstr ""
+msgstr "Zalesněná plocha"
 
 # New Site set-up page
 msgid "Terraces, stone walls"
-msgstr ""
+msgstr "Terasy, kamené zídky"
 
 # New Site set-up page
 msgid "Pond"
-msgstr ""
+msgstr "Rybník"
 
 # New Site set-up page
 msgid "Path"
-msgstr ""
+msgstr "Cesta"
 
 # New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
-msgstr ""
+msgstr "Ulice, silnice a zpevněné cesty (asfalt) nebo železniční koleje"
 
 # New Site set-up page
 msgid "Fences or other human-made linear structures"
-msgstr ""
+msgstr "Ploty nebo jiné vytvořené lineární struktury"
 
 # New Site set-up page
 msgid "Dead tree, stumps or wood"
-msgstr ""
+msgstr "Mrtvý strom, pařezy nebo dřevo"
 
 # New Site set-up page
 msgid "Landscape features"
-msgstr ""
+msgstr "Krajinné prvky"
 
 # New Site set-up page
 msgid "Features located within a 50-meter radius."
-msgstr ""
+msgstr "Prvky v perimetru 50 m"
 
 # New Site set-up page
 msgid "Other landscape feature details"
-msgstr ""
+msgstr "Další detaily ke krajinným prvkům"
 
 # New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
-msgstr ""
+msgstr "Nepoužitelné (nejde o trávník)"
 
 # New Site set-up page
 msgid "I don't know"
-msgstr ""
+msgstr "Nevím"
 
 # New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
-msgstr ""
+msgstr "Časté sečení, všechny (podstatné) plochy"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), all area"
-msgstr ""
+msgstr "Málo sečí (1-2x za rok), celoplošné"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
-msgstr ""
+msgstr "Málo sečí (1-2x za rok), mozaikovité"
 
 # New Site set-up page
 msgid "Extensive grazing (few grazers, not mowed)"
-msgstr ""
+msgstr "Extenzivní pastva (málo dobytka, nesečeno)"
 
 # New Site set-up page
 msgid "Intensive grazing (not mowed)"
-msgstr ""
+msgstr "Intenzivní pastva (nesečeno)"
 
 # New Site set-up page
 msgid "How often is this lawn mown?"
-msgstr ""
+msgstr "Jak často je trávník sečen?"
 
 # New Site set-up page
 msgid "Not applicable"
-msgstr ""
+msgstr "Nepoužitelné"
 
 # New Site set-up page
 msgid "Frequent application"
-msgstr ""
+msgstr "Časté použití"
 
 # New Site set-up page
 msgid "Rare application"
-msgstr ""
+msgstr "Vzácné použití"
 
 # New Site set-up page
 msgid "No fertilizers used"
-msgstr ""
+msgstr "Bez hnojení"
 
 # New Site set-up page
 msgid "Is the area fertilized?"
-msgstr ""
+msgstr "Je území hnojeno?"
 
 # New Site set-up page
 msgid "Other fertilizer details"
-msgstr ""
+msgstr "Další detaily k hnojení"
 
 # New Site set-up page
 msgid "No pesticides applied"
-msgstr ""
+msgstr "Bez pesticifů"
 
 # New Site set-up page
 msgid "Are pesticides used?"
-msgstr ""
+msgstr "Jsou použity pesticidy?"
 
 # New Site set-up page
 msgid "Other pesticide details"
-msgstr ""
+msgstr "Další detaily k pesticidům"
 
 # New Site set-up page
 msgid "Please upload site photos"
-msgstr ""
+msgstr "Přidejte prosím fotky místa"
 
 # New Site set-up page
 msgid "Optimally in the direction to North, East, South and West."
-msgstr ""
+msgstr "Nejlépe v orientaci k severu, východu, jihu a západu."
 
 # New Site set-up page
 msgid "Garden"
-msgstr ""
+msgstr "Zahrada"
 
 # New Site set-up page
 msgid "Allotment gardens"
-msgstr ""
+msgstr "Zahrádkářská kolonie"
 
 # New Site set-up page
 msgid "Community garden"
-msgstr ""
+msgstr "Společná zahrada"
 
 # New Site set-up page
 msgid "Balcony"
-msgstr ""
+msgstr "Balkón"
 
 # New Site set-up page
 msgid "Park (mixed vegetation)"
-msgstr ""
+msgstr "Park (různá vegetace)"
 
 # New Site set-up page
 msgid "Lawn"
-msgstr ""
+msgstr "Trávník"
 
 # New Site set-up page
 msgid "Flowering strip"
-msgstr ""
+msgstr "Květnatý pás"
 
 # New Site set-up page
 msgid "Built-up area"
-msgstr ""
+msgstr "Zastavěná plocha"
 
 # New Site set-up page
 msgid "Fallow land, abandoned area (urban)"
-msgstr ""
+msgstr "Úhor, opuštěná oblast (město)"
 
 # New Site set-up page
 msgid "Fallow land, abandoned field  (rural)"
-msgstr ""
+msgstr "Úhor, opuštěné pole (venkov)"
 
 # New Site set-up page
 msgid "Field edge"
-msgstr ""
+msgstr "Okraj pole"
 
 # New Site set-up page
 msgid "Arable field"
-msgstr ""
+msgstr "Orná půda"
 
 # New Site set-up page
 msgid "Grassland / Meadow / Pasture"
-msgstr ""
+msgstr "Travnatá plocha/louka/pastvina"
 
 # New Site set-up page
 msgid "Orchard"
-msgstr ""
+msgstr "Sad"
 
 # New Site set-up page
 msgid "Forest edge"
-msgstr ""
+msgstr "Okraj lesa"
 
 # New Site set-up page
 msgid "Woodland/Forest"
-msgstr ""
+msgstr "Les"
 
 # New Site set-up page
 msgid "Coastal"
-msgstr ""
+msgstr "Pobřežní"
 
 # New Site set-up page
 msgid "Scrubland/Heathland"
-msgstr ""
+msgstr "Křoviny/vřesoviště"
 
 # New Site set-up page
 msgid "Sparsely vegetated"
-msgstr ""
+msgstr "Řídce zarostlé"
 
 # New Site set-up page
 msgid "Desert / barren"
-msgstr ""
+msgstr "Poušť/pustina"
 
 # New Site set-up page
 msgid "Dominant habitat"
-msgstr ""
+msgstr "Dominantní biotop"
 
 # New Site set-up page
 msgid "How many trees are there in the area of your observation site?"
-msgstr ""
+msgstr "Kolik stromů je na pozorované ploše?"
 
 # New Site set-up page
 msgid "What proportion of the site is a lawn or a grassland?"
-msgstr ""
+msgstr "Jaký je na místě poměr trávníku?"
 
 # New Site set-up page
 msgid "Fruit trees and shrubs"
-msgstr ""
+msgstr "Ovocné stromy a keře"
 
 # New Site set-up page
 msgid "Unmanaged corners (natural spaces, abandoned areas)"
-msgstr ""
+msgstr "Neupravovaná zákoutí (přírodní prostory, opuštěné oblasti)"
 
 # New Site set-up page
 msgid "Vegetable patch"
-msgstr ""
+msgstr "Plocha se zeleninou"
 
 # New Site set-up page
 msgid "Lavender species"
-msgstr ""
+msgstr "Levandule"
 
 # New Site set-up page
 msgid "Geraniums & Pelargoniums"
-msgstr ""
+msgstr "Kakosty a pelargonie"
 
 # New Site set-up page
 msgid "Valeriana"
-msgstr ""
+msgstr "Kozlík"
 
 # New Site set-up page
 msgid "Legumes (Clover, Lupin, Lotus,...)"
-msgstr ""
+msgstr "Bobovité (jetel, lupina, štírovník...)"
 
 # New Site set-up page
 msgid "Marigold"
-msgstr ""
+msgstr "Měsíček"
 
 # New Site set-up page
 msgid "Butterfly bush (or Summer Lilac)"
-msgstr ""
+msgstr "Motýlí keř (nebo komule)"
 
 # New Site set-up page
 msgid "Aromatics like Thyme, Oregano, etc. ( Lamiaceae)"
-msgstr ""
+msgstr "Aromatické rostliny jako mateřídouška, dobromysl... (Lamiaceae)"
 
 # New Site set-up page
 msgid "Nettle (Urtica dioica)"
-msgstr ""
+msgstr "Kopřiva dvoudomá (Urtica dioica)"
 
 # New Site set-up page
 msgid "Brambles (Rubus fruticosa)"
-msgstr ""
+msgstr "Ostružina (Rubus fruticosa)"
 
 # New Site set-up page
 msgid "Ivy"
-msgstr ""
+msgstr "Břečťan"
 
 # New Site set-up page
 msgid "Knappweed (Centaurea and Scabiosa spp.)"
-msgstr ""
+msgstr "Chrpy a hlaváče (Centaurea a Scabiosa spp.)"
 
 # New Site set-up page
 msgid "Fennel, Carvi or others from the Carrot family (Apiaceae)"
-msgstr ""
+msgstr "Fenykl, kmín a další miříkovité (Apiaceae)"
 
 # New Site set-up page
 msgid "Cabbage, Rucola or others Mustard-plant family (Brassicaceae)"
-msgstr ""
+msgstr "Zelí, rukola nebo další brukvovité (Brassicaceae)"
 
 # New Site set-up page
 msgid "Hemp-agrimony (Eupatorium spp.)"
-msgstr ""
+msgstr "Sadec konopáč (Eupatorium spp.)"
 
 # New Site set-up page
 msgid "Are these plant species present in this location?"
-msgstr ""
+msgstr "Jsou tyto rostliny přítomné na této lokalitě?"
 
 # New Site set-up page
 msgid "I own the site"
-msgstr ""
+msgstr "Vlastním toto místo"
 
 # New Site set-up page
 msgid "Private space"
-msgstr ""
+msgstr "Soukromé místo"
 
 # New Site set-up page
 msgid "Public space"
-msgstr ""
+msgstr "Veřejná plocha"
 
 # New Site set-up page
 msgid "Communal space"
-msgstr ""
+msgstr "Společná plocha"
 
 # New Site set-up page
 msgid "Prefer not to say"
-msgstr ""
+msgstr "Raději neprozradím"
 
 # New Site set-up page
 msgid "Do you know who owns the land?"
-msgstr ""
+msgstr "Víte, kdo je majitelem pozemku?"
 
 # New Site set-up page
 msgid "Are you responsible for gardening activities at the site?"
-msgstr ""
+msgstr "Máte zodpovědnost za zahradnické aktivity na tomto místě?"
 
 # Location attribute label
 msgid "Location"
@@ -1095,6 +1095,8 @@ msgid ""
 " the world. For example, this graph shows the European grassland butterfly "
 "index."
 msgstr ""
+" \n"
+"Motýli patří mezi oblíbenou hmyzí skupinu, ale v mnoha oblastech světa ubývají. Tak jako ukazuje tento Indikátor lučních motýlů v EU."
 
 # onboarding pages
 msgid ""
@@ -1109,6 +1111,7 @@ msgid ""
 "We lack structured information on butterfly numbers in many parts of the "
 "world."
 msgstr ""
+"Nemáme strukturované informace o počtech motýlů v mnoha částech světa."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -1124,10 +1127,12 @@ msgid ""
 "This app enables you to contribute to the recording and conservation of "
 "butterflies across the world."
 msgstr ""
+"Tato aplikace Vám umožní přispět k zaznamenávání a ochraně motýlů napříč "
+"světem"
 
 # About pages
 msgid "The app was supported through several projects:"
-msgstr ""
+msgstr "Aplikace byla podpořena několika projekty:"
 
 # About pages
 msgid ""
@@ -1135,6 +1140,8 @@ msgid ""
 "across the world and associated with national Butterfly Monitoring Schemes "
 "listed at:"
 msgstr ""
+"Aplikace využila z podnětů řady odborníků na motýly z celého světa, "
+"napojených na národní schémata monitorování motýlů uvedenými na:"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
@@ -1258,17 +1265,19 @@ msgstr ""
 
 # Help pages
 msgid "Assign a project to a count"
-msgstr ""
+msgstr "Přiřaďte projekt k součtu"
 
 # Help pages
 msgid ""
 "<0>Start a count.</0><1>Select \"Additional Details\" then "
 "\"Project\".</1><2>Finally, choose the appropriate project.</2>"
 msgstr ""
+"<0>Začněte součet.</0><1>Vyberte \"Další detaily\", poté "
+"\"Projekt\".</1><2>Konečně, vyberte příslušný projekt.</2>"
 
 # Help pages
 msgid "Assign a site to a count"
-msgstr ""
+msgstr "Přiřaďte místo k součtu"
 
 # Help pages
 msgid ""
@@ -1285,6 +1294,17 @@ msgid ""
 " future counts conducted in that location.</7><8>Finally, choose the site "
 "for the current count.</8>"
 msgstr ""
+"<0>Začněte součet.</0><1>Přiřaďte projekt k součtu, koukněte na instrukce "
+"jak vybrat projekt.</1><2>Vypněte GPS v hlavičce stránky "
+"\"Plocha\".</2><3>Vyberte na pravé straně nástroj \"Zakreslení "
+"plochy\".</3><4>Vyberte plochu na mapě a potvrďte výběr na pravé straně "
+"displeje.</4><5>Zmáčkněte tlačítko \"Vložit\", umístěné na panelu s "
+"oblíbenými místy v pravém dolním rohu displeje. Pokud panel není zobrazen, "
+"můžete ho otevřít kliknutím na tlačítko s oblíbenými místy (ikonka s "
+"hvězdičkou) vpravo nahoře.</5><6>Budete dotázán na několik otázek ohledně "
+"tohoto místa.</6><7>Po zodpovězení otázek zmáčkněte \"Uložit\" v pravém "
+"horním rohu. Místo bude uloženo a může být vybráno pro příští Součty v této "
+"oblasti.</7><8>Konečně, vyberte místo pro současný Součet.</8>"
 
 msgid "User"
 msgstr "Uživatel"
@@ -1353,11 +1373,11 @@ msgstr "Smaže to všechna data z mezipaměti, včetně odeslaných průzkumů."
 
 # App setting
 msgid "Export database"
-msgstr ""
+msgstr "Export databáze"
 
 # App setting
 msgid "Export"
-msgstr ""
+msgstr "Export"
 
 # App setting
 msgid ""
@@ -1365,6 +1385,8 @@ msgid ""
 "for technical support and is not a supported method for exporting your "
 "data</1>"
 msgstr ""
+"Opravdu chcete exportovat data?<1>Tato možnost je myšlena pouze jako "
+"technická podpora a není podporovanou metodou exportování Vašich dat</1>"
 
 msgid "Sweden"
 msgstr "Švédsko"
@@ -2487,7 +2509,7 @@ msgstr "Vložte lampu"
 
 # Moth trap survey
 msgid "Lamp type is a required field."
-msgstr ""
+msgstr "Typ světla musí být uveden."
 
 # Moth trap survey
 msgid "What type of trap was it?"
@@ -3062,7 +3084,7 @@ msgstr "Nemáte žádné předchozí trasy."
 
 # Part of favorite track
 msgid "You have no saved sites."
-msgstr ""
+msgstr "Nemáte uložená žádná místa."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
