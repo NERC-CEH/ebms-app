@@ -1,5 +1,6 @@
 ## 1.30.0
 
+Added Ecuador.
 Updated translations.
 
 ## 1.29.3

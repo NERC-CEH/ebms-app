@@ -16,9 +16,7 @@
     "taxon": "Parnassius mnemosyne",
     "family": "Papilionidae",
     "descriptionKey": "Parnassius-mnemosyne-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 3,
@@ -28,9 +26,7 @@
     "taxon": "Parnassius phoebus",
     "family": "Papilionidae",
     "descriptionKey": "Parnassius-phoebus-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 4,
@@ -40,9 +36,7 @@
     "taxon": "Parnassius apollo",
     "family": "Papilionidae",
     "descriptionKey": "Zerynthia cassandra",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 5,
@@ -52,9 +46,7 @@
     "taxon": "Archon apollinus",
     "family": "Papilionidae",
     "descriptionKey": "Archon-apollinus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 6,
@@ -64,9 +56,7 @@
     "taxon": "Zerynthia cerisy",
     "family": "Papilionidae",
     "descriptionKey": "Zerynthia-cerisy-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 7,
@@ -76,9 +66,7 @@
     "taxon": "Carcharodus stauderi",
     "family": "Hesperiidae",
     "descriptionKey": "Carcharodus-stauderi-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 8,
@@ -88,9 +76,7 @@
     "taxon": "Carcharodus baeticus",
     "family": "Hesperiidae",
     "descriptionKey": "Carcharodus-baeticus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 9,
@@ -100,9 +86,7 @@
     "taxon": "Erynnis tages",
     "family": "Hesperiidae",
     "descriptionKey": "Erynnis-tages-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 10,
@@ -112,9 +96,7 @@
     "taxon": "Erynnis marloyi",
     "family": "Hesperiidae",
     "descriptionKey": "Erynnis-marloyi-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 11,
@@ -142,9 +124,7 @@
     "taxon": "Zerynthia rumina",
     "family": "Papilionidae",
     "descriptionKey": "Zerynthia-rumina-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 14,
@@ -154,9 +134,7 @@
     "taxon": "Zerynthia polyxena",
     "family": "Papilionidae",
     "descriptionKey": "Zerynthia-polyxena-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 15,
@@ -166,9 +144,7 @@
     "taxon": "Zerynthia cassandra",
     "family": "Papilionidae",
     "descriptionKey": "Zerynthia-cassandra-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 16,
@@ -178,9 +154,7 @@
     "taxon": "Heteropterus morpheus",
     "family": "Hesperiidae",
     "descriptionKey": "Heteropterus-morpheus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 17,
@@ -190,9 +164,7 @@
     "taxon": "Carterocephalus silvicola",
     "family": "Hesperiidae",
     "descriptionKey": "Carterocephalus-silvicola-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 18,
@@ -202,9 +174,7 @@
     "taxon": "Carterocephalus palaemon",
     "family": "Hesperiidae",
     "descriptionKey": "Carterocephalus-palaemon-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 19,
@@ -214,9 +184,7 @@
     "taxon": "Pelopidas thrax",
     "family": "Hesperiidae",
     "descriptionKey": "Pelopidas-thrax-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 20,
@@ -235,9 +203,7 @@
     "taxon": "Gegenes pumilio",
     "family": "Hesperiidae",
     "descriptionKey": "Gegenes-pumilio-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 22,
@@ -256,9 +222,7 @@
     "taxon": "Ochlodes sylvanus",
     "family": "Hesperiidae",
     "descriptionKey": "Ochlodes-sylvanus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 24,
@@ -268,9 +232,7 @@
     "taxon": "Hesperia comma",
     "family": "Hesperiidae",
     "descriptionKey": "Hesperia-comma-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 25,
@@ -289,9 +251,7 @@
     "taxon": "Thymelicus acteon",
     "family": "Hesperiidae",
     "descriptionKey": "Thymelicus-acteon-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 27,
@@ -301,9 +261,7 @@
     "taxon": "Thymelicus hyrax",
     "family": "Hesperiidae",
     "descriptionKey": "Thymelicus-hyrax-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 28,
@@ -313,9 +271,7 @@
     "taxon": "Thymelicus sylvestris",
     "family": "Hesperiidae",
     "descriptionKey": "Thymelicus-sylvestris-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 29,
@@ -325,9 +281,7 @@
     "taxon": "Thymelicus lineola",
     "family": "Hesperiidae",
     "descriptionKey": "Thymelicus-lineola-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 30,
@@ -337,9 +291,7 @@
     "taxon": "Spialia phlomidis",
     "family": "Hesperiidae",
     "descriptionKey": "Spialia-phlomidis-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 31,
@@ -349,9 +301,7 @@
     "taxon": "Spialia sertorius",
     "family": "Hesperiidae",
     "descriptionKey": "Spialia-sertorius-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 32,
@@ -370,9 +320,7 @@
     "taxon": "Spialia rosae",
     "family": "Hesperiidae",
     "descriptionKey": "Spialia-rosae-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 34,
@@ -382,9 +330,7 @@
     "taxon": "Spialia orbifer",
     "family": "Hesperiidae",
     "descriptionKey": "Spialia-orbifer-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 35,
@@ -403,9 +349,7 @@
     "taxon": "Carcharodus alceae",
     "family": "Hesperiidae",
     "descriptionKey": "Carcharodus-alceae-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 37,
@@ -424,9 +368,7 @@
     "taxon": "Muschampia tessellum",
     "family": "Hesperiidae",
     "descriptionKey": "Muschampia-tessellum-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 39,
@@ -436,9 +378,7 @@
     "taxon": "Muschampia proto",
     "family": "Hesperiidae",
     "descriptionKey": "Muschampia-proto-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 40,
@@ -448,9 +388,7 @@
     "taxon": "Carcharodus lavatherae",
     "family": "Hesperiidae",
     "descriptionKey": "Carcharodus-lavatherae-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 41,
@@ -460,9 +398,7 @@
     "taxon": "Carcharodus orientalis",
     "family": "Hesperiidae",
     "descriptionKey": "Carcharodus-orientalis-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 42,
@@ -472,9 +408,7 @@
     "taxon": "Carcharodus floccifera",
     "family": "Hesperiidae",
     "descriptionKey": "Carcharodus-floccifera-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 43,
@@ -484,9 +418,7 @@
     "taxon": "Iphiclides podalirius",
     "family": "Papilionidae",
     "descriptionKey": "Iphiclides-podalirius-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 44,
@@ -496,9 +428,7 @@
     "taxon": "Iphiclides feisthamelii",
     "family": "Papilionidae",
     "descriptionKey": "Iphiclides-feisthamelii-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 45,
@@ -508,9 +438,7 @@
     "taxon": "Papilio alexanor",
     "family": "Papilionidae",
     "descriptionKey": "Papilio-alexanor-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 46,
@@ -520,9 +448,7 @@
     "taxon": "Papilio machaon",
     "family": "Papilionidae",
     "descriptionKey": "Papilio-machaon-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 47,
@@ -532,9 +458,7 @@
     "taxon": "Pyrgus malvoides",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-malvoides-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 48,
@@ -544,9 +468,7 @@
     "taxon": "Pyrgus malvae",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-malvae-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 49,
@@ -556,9 +478,7 @@
     "taxon": "Pyrgus carthami",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-carthami-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 50,
@@ -568,9 +488,7 @@
     "taxon": "Pyrgus sidae",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-sidae-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 51,
@@ -589,9 +507,7 @@
     "taxon": "Pyrgus cacaliae",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-cacaliae-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 53,
@@ -601,9 +517,7 @@
     "taxon": "Pyrgus andromedae",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-andromedae-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 54,
@@ -613,9 +527,7 @@
     "taxon": "Pyrgus serratulae",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-serratulae-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 55,
@@ -634,9 +546,7 @@
     "taxon": "Pyrgus armoricanus",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-armoricanus-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 58,
@@ -646,9 +556,7 @@
     "taxon": "Pyrgus alveus",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-alveus-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 59,
@@ -658,9 +566,7 @@
     "taxon": "Pyrgus warrenensis",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-warrenensis-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 60,
@@ -670,9 +576,7 @@
     "taxon": "Pyrgus foulquieri",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-foulquieri-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 61,
@@ -682,9 +586,7 @@
     "taxon": "Pyrgus onopordi",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-onopordi-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 62,
@@ -694,9 +596,7 @@
     "taxon": "Pyrgus carlinae",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-carlinae-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 63,
@@ -706,9 +606,7 @@
     "taxon": "Pyrgus cirsii",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-cirsii-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 64,
@@ -718,9 +616,7 @@
     "taxon": "Pyrgus cinarae",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-cinarae-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 65,
@@ -730,9 +626,7 @@
     "taxon": "Leptidea duponcheli",
     "family": "Pieridae",
     "descriptionKey": "Leptidea-duponcheli-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 66,
@@ -760,9 +654,7 @@
     "taxon": "Leptidea sinapis",
     "family": "Pieridae",
     "descriptionKey": "Leptidea-sinapis-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 70,
@@ -790,9 +682,7 @@
     "taxon": "Gonepteryx rhamni",
     "family": "Pieridae",
     "descriptionKey": "Gonepteryx-rhamni-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 73,
@@ -802,9 +692,7 @@
     "taxon": "Gonepteryx cleobule",
     "family": "Pieridae",
     "descriptionKey": "Gonepteryx-cleobule-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 74,
@@ -814,9 +702,7 @@
     "taxon": "Gonepteryx cleopatra",
     "family": "Pieridae",
     "descriptionKey": "Gonepteryx-cleopatra-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 75,
@@ -844,9 +730,7 @@
     "taxon": "Catopsilia florella",
     "family": "Pieridae",
     "descriptionKey": "Catopsilia-florella-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 78,
@@ -856,9 +740,7 @@
     "taxon": "Colias hyale",
     "family": "Pieridae",
     "descriptionKey": "Colias-hyale-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 79,
@@ -877,9 +759,7 @@
     "taxon": "Colias alfacariensis",
     "family": "Pieridae",
     "descriptionKey": "Colias-alfacariensis-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 82,
@@ -889,9 +769,7 @@
     "taxon": "Colias phicomone",
     "family": "Pieridae",
     "descriptionKey": "Colias-phicomone-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 83,
@@ -910,9 +788,7 @@
     "taxon": "Colias chrysotheme",
     "family": "Pieridae",
     "descriptionKey": "Colias-chrysotheme-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 85,
@@ -922,9 +798,7 @@
     "taxon": "Colias erate",
     "family": "Pieridae",
     "descriptionKey": "Colias-erate-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 86,
@@ -934,9 +808,7 @@
     "taxon": "Colias crocea",
     "family": "Pieridae",
     "descriptionKey": "Colias-crocea-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 87,
@@ -946,9 +818,7 @@
     "taxon": "Colias myrmidone",
     "family": "Pieridae",
     "descriptionKey": "Colias-myrmidone-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 88,
@@ -967,9 +837,7 @@
     "taxon": "Colias palaeno",
     "family": "Pieridae",
     "descriptionKey": "Colias-palaeno-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 90,
@@ -997,9 +865,7 @@
     "taxon": "Colotis evagore",
     "family": "Pieridae",
     "descriptionKey": "Colotis-evagore-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 93,
@@ -1009,9 +875,7 @@
     "taxon": "Aporia crataegi",
     "family": "Pieridae",
     "descriptionKey": "Aporia-crataegi-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 94,
@@ -1021,9 +885,7 @@
     "taxon": "Pontia chloridice",
     "family": "Pieridae",
     "descriptionKey": "Pontia-chloridice-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 95,
@@ -1033,9 +895,7 @@
     "taxon": "Pontia callidice",
     "family": "Pieridae",
     "descriptionKey": "Pontia-callidice-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 96,
@@ -1045,9 +905,7 @@
     "taxon": "Pontia edusa",
     "family": "Pieridae",
     "descriptionKey": "Pontia-edusa-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 97,
@@ -1057,9 +915,7 @@
     "taxon": "Pontia daplidice",
     "family": "Pieridae",
     "descriptionKey": "Pontia-daplidice-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 98,
@@ -1069,9 +925,7 @@
     "taxon": "Pieris krueperi",
     "family": "Pieridae",
     "descriptionKey": "Pieris-krueperi-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 99,
@@ -1081,9 +935,7 @@
     "taxon": "Pieris brassicae",
     "family": "Pieridae",
     "descriptionKey": "Pieris-brassicae-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 100,
@@ -1093,9 +945,7 @@
     "taxon": "Pieris wollastoni",
     "family": "Pieridae",
     "descriptionKey": "Pieris-wollastoni-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 101,
@@ -1105,9 +955,7 @@
     "taxon": "Pieris cheiranthi",
     "family": "Pieridae",
     "descriptionKey": "Pieris-cheiranthi-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 102,
@@ -1117,9 +965,7 @@
     "taxon": "Pieris rapae",
     "family": "Pieridae",
     "descriptionKey": "Pieris-rapae-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 103,
@@ -1129,9 +975,7 @@
     "taxon": "Pieris mannii",
     "family": "Pieridae",
     "descriptionKey": "Pieris-mannii-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 104,
@@ -1141,9 +985,7 @@
     "taxon": "Pieris ergane",
     "family": "Pieridae",
     "descriptionKey": "Pieris-ergane-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 105,
@@ -1153,9 +995,7 @@
     "taxon": "Pieris bryoniae",
     "family": "Pieridae",
     "descriptionKey": "Pieris-bryoniae-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 106,
@@ -1165,9 +1005,7 @@
     "taxon": "Pieris napi",
     "family": "Pieridae",
     "descriptionKey": "Pieris-napi-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 107,
@@ -1186,10 +1024,7 @@
     "taxon": "Euchloe tagis",
     "family": "Pieridae",
     "descriptionKey": "Euchloe-tagis-description",
-    "image_copyright": [
-      "Alperen Yayla",
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla", "Alperen Yayla"]
   },
   {
     "id": 109,
@@ -1217,9 +1052,7 @@
     "taxon": "Euchloe hesperidum",
     "family": "Pieridae",
     "descriptionKey": "Euchloe-hesperidum-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 112,
@@ -1229,9 +1062,7 @@
     "taxon": "Euchloe belemia",
     "family": "Pieridae",
     "descriptionKey": "Euchloe-belemia-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 113,
@@ -1241,9 +1072,7 @@
     "taxon": "Euchloe insularis",
     "family": "Pieridae",
     "descriptionKey": "Euchloe-insularis-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 114,
@@ -1253,9 +1082,7 @@
     "taxon": "Euchloe crameri",
     "family": "Pieridae",
     "descriptionKey": "Euchloe-crameri-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 115,
@@ -1265,9 +1092,7 @@
     "taxon": "Euchloe simplonia",
     "family": "Pieridae",
     "descriptionKey": "Euchloe-simplonia-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 116,
@@ -1277,9 +1102,7 @@
     "taxon": "Euchloe ausonia",
     "family": "Pieridae",
     "descriptionKey": "Euchloe-ausonia-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 117,
@@ -1289,9 +1112,7 @@
     "taxon": "Euchloe charlonia",
     "family": "Pieridae",
     "descriptionKey": "Euchloe-charlonia-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 118,
@@ -1301,9 +1122,7 @@
     "taxon": "Euchloe penia",
     "family": "Pieridae",
     "descriptionKey": "Euchloe-penia-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 119,
@@ -1331,9 +1150,7 @@
     "taxon": "Zegris eupheme",
     "family": "Pieridae",
     "descriptionKey": "Zegris-eupheme-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 122,
@@ -1343,9 +1160,7 @@
     "taxon": "Anthocharis euphenoides",
     "family": "Pieridae",
     "descriptionKey": "Anthocharis-euphenoides-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 123,
@@ -1355,9 +1170,7 @@
     "taxon": "Anthocharis cardamines",
     "family": "Pieridae",
     "descriptionKey": "Anthocharis-cardamines-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 124,
@@ -1367,9 +1180,7 @@
     "taxon": "Anthocharis gruneri",
     "family": "Pieridae",
     "descriptionKey": "Anthocharis-gruneri-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 125,
@@ -1379,10 +1190,7 @@
     "taxon": "Anthocharis damone",
     "family": "Pieridae",
     "descriptionKey": "Anthocharis-damone-description",
-    "image_copyright": [
-      "Alperen Yayla",
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Alperen Yayla", "Martin Wiemers"]
   },
   {
     "id": 126,
@@ -1392,9 +1200,7 @@
     "taxon": "Hamearis lucina",
     "family": "Riodinidae",
     "descriptionKey": "Hamearis-lucina-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 127,
@@ -1413,9 +1219,7 @@
     "taxon": "Lycaena helle",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-helle-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 129,
@@ -1425,9 +1229,7 @@
     "taxon": "Lycaena alciphron",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-alciphron-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 130,
@@ -1437,9 +1239,7 @@
     "taxon": "Lycaena thetis",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-thetis-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 131,
@@ -1449,9 +1249,7 @@
     "taxon": "Lycaena thersamon",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-thersamon-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 132,
@@ -1461,9 +1259,7 @@
     "taxon": "Lycaena dispar",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-dispar-description",
-    "image_copyright": [
-      "Josef Settele"
-    ]
+    "image_copyright": ["Josef Settele"]
   },
   {
     "id": 133,
@@ -1473,9 +1269,7 @@
     "taxon": "Lycaena hippothoe",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-hippothoe-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 134,
@@ -1494,9 +1288,7 @@
     "taxon": "Pseudophilotes abencerragus",
     "family": "Lycaenidae",
     "descriptionKey": "Pseudophilotes-abencerragus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 136,
@@ -1506,9 +1298,7 @@
     "taxon": "Pseudophilotes panoptes",
     "family": "Lycaenidae",
     "descriptionKey": "Pseudophilotes-panoptes-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 137,
@@ -1518,9 +1308,7 @@
     "taxon": "Pseudophilotes vicrama",
     "family": "Lycaenidae",
     "descriptionKey": "Pseudophilotes-vicrama-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 138,
@@ -1530,9 +1318,7 @@
     "taxon": "Pseudophilotes baton",
     "family": "Lycaenidae",
     "descriptionKey": "Pseudophilotes-baton-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 139,
@@ -1542,9 +1328,7 @@
     "taxon": "Scolitantides orion",
     "family": "Lycaenidae",
     "descriptionKey": "Scolitantides-orion-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 140,
@@ -1563,9 +1347,7 @@
     "taxon": "Iolana iolas",
     "family": "Lycaenidae",
     "descriptionKey": "Iolana-iolas-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 142,
@@ -1584,9 +1366,7 @@
     "taxon": "Glaucopsyche melanops",
     "family": "Lycaenidae",
     "descriptionKey": "Glaucopsyche-melanops-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 144,
@@ -1605,9 +1385,7 @@
     "taxon": "Glaucopsyche alexis",
     "family": "Lycaenidae",
     "descriptionKey": "Glaucopsyche-alexis-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 146,
@@ -1617,9 +1395,7 @@
     "taxon": "Hipparchia tilosi",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-tilosi-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 147,
@@ -1629,9 +1405,7 @@
     "taxon": "Hipparchia bacchus",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-bacchus-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 148,
@@ -1641,9 +1415,7 @@
     "taxon": "Hipparchia wyssii",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-wyssii-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 149,
@@ -1653,9 +1425,7 @@
     "taxon": "Hipparchia tamadabae",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-tamadabae-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 150,
@@ -1665,9 +1435,7 @@
     "taxon": "Hipparchia gomera",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-gomera-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 151,
@@ -1677,9 +1445,7 @@
     "taxon": "Hipparchia fidia",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-fidia-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 152,
@@ -1707,9 +1473,7 @@
     "taxon": "Hipparchia hermione",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-hermione-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 155,
@@ -1719,9 +1483,7 @@
     "taxon": "Hipparchia syriaca",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-syriaca-description",
-    "image_copyright": [
-      "Josef Settele"
-    ]
+    "image_copyright": ["Josef Settele"]
   },
   {
     "id": 156,
@@ -1731,9 +1493,7 @@
     "taxon": "Hipparchia fagi",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-fagi-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 157,
@@ -1743,9 +1503,7 @@
     "taxon": "Hipparchia mersina",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-mersina-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 158,
@@ -1764,9 +1522,7 @@
     "taxon": "Lycaena candens",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-candens-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 160,
@@ -1776,9 +1532,7 @@
     "taxon": "Lycaena ottomana",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-ottomana-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 161,
@@ -1797,9 +1551,7 @@
     "taxon": "Lycaena phlaeas",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-phlaeas-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 163,
@@ -1809,9 +1561,7 @@
     "taxon": "Lycaena virgaureae",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-virgaureae-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 164,
@@ -1821,9 +1571,7 @@
     "taxon": "Lycaena tityrus",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-tityrus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 165,
@@ -1842,9 +1590,7 @@
     "taxon": "Thecla betulae",
     "family": "Lycaenidae",
     "descriptionKey": "Thecla-betulae-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 167,
@@ -1854,9 +1600,7 @@
     "taxon": "Favonius quercus",
     "family": "Lycaenidae",
     "descriptionKey": "Favonius-quercus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 168,
@@ -1866,9 +1610,7 @@
     "taxon": "Laeosopis roboris",
     "family": "Lycaenidae",
     "descriptionKey": "Laeosopis-roboris-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 169,
@@ -1878,9 +1620,7 @@
     "taxon": "Tomares ballus",
     "family": "Lycaenidae",
     "descriptionKey": "Tomares-ballus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 170,
@@ -1890,9 +1630,7 @@
     "taxon": "Tomares nogelii",
     "family": "Lycaenidae",
     "descriptionKey": "Tomares-nogelii-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 171,
@@ -1911,9 +1649,7 @@
     "taxon": "Callophrys avis",
     "family": "Lycaenidae",
     "descriptionKey": "Callophrys-avis-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 173,
@@ -1932,9 +1668,7 @@
     "taxon": "Callophrys rubi",
     "family": "Lycaenidae",
     "descriptionKey": "Callophrys-rubi-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 175,
@@ -1962,9 +1696,7 @@
     "taxon": "Satyrium pruni",
     "family": "Lycaenidae",
     "descriptionKey": "Satyrium-pruni-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 178,
@@ -1974,9 +1706,7 @@
     "taxon": "Satyrium ilicis",
     "family": "Lycaenidae",
     "descriptionKey": "Satyrium-ilicis-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 179,
@@ -1986,9 +1716,7 @@
     "taxon": "Satyrium esculi",
     "family": "Lycaenidae",
     "descriptionKey": "Satyrium-esculi-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 180,
@@ -1998,9 +1726,7 @@
     "taxon": "Satyrium ledereri",
     "family": "Lycaenidae",
     "descriptionKey": "Satyrium-ledereri-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 181,
@@ -2010,9 +1736,7 @@
     "taxon": "Satyrium w-album",
     "family": "Lycaenidae",
     "descriptionKey": "Satyrium-w-album-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 182,
@@ -2022,9 +1746,7 @@
     "taxon": "Satyrium spini",
     "family": "Lycaenidae",
     "descriptionKey": "Satyrium-spini-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 183,
@@ -2034,9 +1756,7 @@
     "taxon": "Satyrium acaciae",
     "family": "Lycaenidae",
     "descriptionKey": "Satyrium-acaciae-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 184,
@@ -2046,9 +1766,7 @@
     "taxon": "Leptotes pirithous",
     "family": "Lycaenidae",
     "descriptionKey": "Leptotes-pirithous-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 185,
@@ -2058,9 +1776,7 @@
     "taxon": "Cyclyrius webbianus",
     "family": "Lycaenidae",
     "descriptionKey": "Cyclyrius-webbianus-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 186,
@@ -2088,9 +1804,7 @@
     "taxon": "Lampides boeticus",
     "family": "Lycaenidae",
     "descriptionKey": "Lampides-boeticus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 189,
@@ -2100,9 +1814,7 @@
     "taxon": "Cacyreus marshalli",
     "family": "Lycaenidae",
     "descriptionKey": "Cacyreus-marshalli-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 190,
@@ -2112,9 +1824,7 @@
     "taxon": "Celastrina argiolus",
     "family": "Lycaenidae",
     "descriptionKey": "Celastrina-argiolus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 191,
@@ -2133,9 +1843,7 @@
     "taxon": "Tarucus balkanicus",
     "family": "Lycaenidae",
     "descriptionKey": "Tarucus-balkanicus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 193,
@@ -2145,9 +1853,7 @@
     "taxon": "Phengaris alcon",
     "family": "Lycaenidae",
     "descriptionKey": "Phengaris-alcon-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 194,
@@ -2157,9 +1863,7 @@
     "taxon": "Phengaris arion",
     "family": "Lycaenidae",
     "descriptionKey": "Phengaris-arion-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 195,
@@ -2169,9 +1873,7 @@
     "taxon": "Phengaris teleius",
     "family": "Lycaenidae",
     "descriptionKey": "Phengaris-teleius-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 196,
@@ -2181,9 +1883,7 @@
     "taxon": "Phengaris nausithous",
     "family": "Lycaenidae",
     "descriptionKey": "Phengaris-nausithous-description",
-    "image_copyright": [
-      "Josef Settele"
-    ]
+    "image_copyright": ["Josef Settele"]
   },
   {
     "id": 197,
@@ -2193,9 +1893,7 @@
     "taxon": "Turanana taygetica",
     "family": "Lycaenidae",
     "descriptionKey": "Turanana-taygetica-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 198,
@@ -2205,9 +1903,7 @@
     "taxon": "Pseudophilotes bavius",
     "family": "Lycaenidae",
     "descriptionKey": "Pseudophilotes-bavius-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 199,
@@ -2217,9 +1913,7 @@
     "taxon": "Zizeeria knysna",
     "family": "Lycaenidae",
     "descriptionKey": "Zizeeria-knysna-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 200,
@@ -2229,9 +1923,7 @@
     "taxon": "Zizeeria karsandra",
     "family": "Lycaenidae",
     "descriptionKey": "Zizeeria-karsandra-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 201,
@@ -2250,9 +1942,7 @@
     "taxon": "Cupido argiades",
     "family": "Lycaenidae",
     "descriptionKey": "Cupido-argiades-description",
-    "image_copyright": [
-      "Josef Settele"
-    ]
+    "image_copyright": ["Josef Settele"]
   },
   {
     "id": 203,
@@ -2262,9 +1952,7 @@
     "taxon": "Cupido decoloratus",
     "family": "Lycaenidae",
     "descriptionKey": "Cupido-decoloratus-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 204,
@@ -2274,9 +1962,7 @@
     "taxon": "Cupido alcetas",
     "family": "Lycaenidae",
     "descriptionKey": "Cupido-alcetas-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 205,
@@ -2286,9 +1972,7 @@
     "taxon": "Cupido osiris",
     "family": "Lycaenidae",
     "descriptionKey": "Cupido-osiris-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 206,
@@ -2298,9 +1982,7 @@
     "taxon": "Cupido minimus",
     "family": "Lycaenidae",
     "descriptionKey": "Cupido-minimus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 207,
@@ -2310,9 +1992,7 @@
     "taxon": "Cupido lorquinii",
     "family": "Lycaenidae",
     "descriptionKey": "Cupido-lorquinii-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 208,
@@ -2322,9 +2002,7 @@
     "taxon": "Luthrodes galba",
     "family": "Lycaenidae",
     "descriptionKey": "Luthrodes-galba-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 209,
@@ -2334,9 +2012,7 @@
     "taxon": "Freyeria trochylus",
     "family": "Lycaenidae",
     "descriptionKey": "Freyeria-trochylus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 210,
@@ -2346,9 +2022,7 @@
     "taxon": "Plebejus argus",
     "family": "Lycaenidae",
     "descriptionKey": "Plebejus-argus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 211,
@@ -2358,9 +2032,7 @@
     "taxon": "Plebejus idas",
     "family": "Lycaenidae",
     "descriptionKey": "Plebejus-idas-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 212,
@@ -2379,9 +2051,7 @@
     "taxon": "Plebejus argyrognomon",
     "family": "Lycaenidae",
     "descriptionKey": "Plebejus-argyrognomon-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 214,
@@ -2391,9 +2061,7 @@
     "taxon": "Agriades orbitulus",
     "family": "Lycaenidae",
     "descriptionKey": "Agriades-orbitulus-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 215,
@@ -2403,9 +2071,7 @@
     "taxon": "Agriades optilete",
     "family": "Lycaenidae",
     "descriptionKey": "Agriades-optilete-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 216,
@@ -2424,9 +2090,7 @@
     "taxon": "Agriades dardanus",
     "family": "Lycaenidae",
     "descriptionKey": "Agriades-dardanus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 218,
@@ -2445,9 +2109,7 @@
     "taxon": "Agriades glandon",
     "family": "Lycaenidae",
     "descriptionKey": "Agriades-glandon-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 220,
@@ -2466,9 +2128,7 @@
     "taxon": "Plebejidea loewii",
     "family": "Lycaenidae",
     "descriptionKey": "Plebejidea-loewii-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 222,
@@ -2478,9 +2138,7 @@
     "taxon": "Eumedonia eumedon",
     "family": "Lycaenidae",
     "descriptionKey": "Eumedonia-eumedon-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 223,
@@ -2508,9 +2166,7 @@
     "taxon": "Kretania eurypilus",
     "family": "Lycaenidae",
     "descriptionKey": "Kretania-eurypilus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 226,
@@ -2529,9 +2185,7 @@
     "taxon": "Kretania sephirus",
     "family": "Lycaenidae",
     "descriptionKey": "Kretania-sephirus-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 228,
@@ -2541,9 +2195,7 @@
     "taxon": "Kretania pylaon",
     "family": "Lycaenidae",
     "descriptionKey": "Kretania-pylaon-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 229,
@@ -2553,9 +2205,7 @@
     "taxon": "Cyaniris semiargus",
     "family": "Lycaenidae",
     "descriptionKey": "Cyaniris-semiargus-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 230,
@@ -2574,9 +2224,7 @@
     "taxon": "Aricia morronensis",
     "family": "Lycaenidae",
     "descriptionKey": "Aricia-morronensis-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 232,
@@ -2586,9 +2234,7 @@
     "taxon": "Aricia anteros",
     "family": "Lycaenidae",
     "descriptionKey": "Aricia-anteros-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 233,
@@ -2598,9 +2244,7 @@
     "taxon": "Aricia cramera",
     "family": "Lycaenidae",
     "descriptionKey": "Aricia-cramera-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 234,
@@ -2610,9 +2254,7 @@
     "taxon": "Aricia nicias",
     "family": "Lycaenidae",
     "descriptionKey": "Aricia-nicias-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 235,
@@ -2622,9 +2264,7 @@
     "taxon": "Aricia artaxerxes",
     "family": "Lycaenidae",
     "descriptionKey": "Aricia-artaxerxes-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 236,
@@ -2634,9 +2274,7 @@
     "taxon": "Aricia montensis",
     "family": "Lycaenidae",
     "descriptionKey": "Aricia-montensis-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 237,
@@ -2646,9 +2284,7 @@
     "taxon": "Aricia agestis",
     "family": "Lycaenidae",
     "descriptionKey": "Aricia-agestis-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 238,
@@ -2658,9 +2294,7 @@
     "taxon": "Neolysandra coelestina",
     "family": "Lycaenidae",
     "descriptionKey": "Neolysandra-coelestina-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 239,
@@ -2670,9 +2304,7 @@
     "taxon": "Lysandra hispana",
     "family": "Lycaenidae",
     "descriptionKey": "Lysandra-hispana-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 240,
@@ -2682,9 +2314,7 @@
     "taxon": "Lysandra corydonius",
     "family": "Lycaenidae",
     "descriptionKey": "Lysandra-corydonius-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 241,
@@ -2694,10 +2324,7 @@
     "taxon": "Lysandra bellargus",
     "family": "Lycaenidae",
     "descriptionKey": "Lysandra-bellargus-description",
-    "image_copyright": [
-      "Alperen Yayla",
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Alperen Yayla", "Martin Wiemers"]
   },
   {
     "id": 242,
@@ -2707,9 +2334,7 @@
     "taxon": "Lysandra coridon",
     "family": "Lycaenidae",
     "descriptionKey": "Lysandra-coridon-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 243,
@@ -2728,9 +2353,7 @@
     "taxon": "Lysandra albicans",
     "family": "Lycaenidae",
     "descriptionKey": "Lysandra-albicans-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 245,
@@ -2740,9 +2363,7 @@
     "taxon": "Polyommatus escheri",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-escheri-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 246,
@@ -2752,9 +2373,7 @@
     "taxon": "Polyommatus thersites",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-thersites-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 247,
@@ -2764,9 +2383,7 @@
     "taxon": "Polyommatus daphnis",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-daphnis-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 248,
@@ -2776,9 +2393,7 @@
     "taxon": "Polyommatus amandus",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-amandus-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 249,
@@ -2788,9 +2403,7 @@
     "taxon": "Polyommatus golgus",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-golgus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 250,
@@ -2809,9 +2422,7 @@
     "taxon": "Polyommatus dorylas",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-dorylas-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 252,
@@ -2821,10 +2432,7 @@
     "taxon": "Polyommatus celina",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-celina-description",
-    "image_copyright": [
-      "Alperen Yayla",
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Alperen Yayla", "Martin Wiemers"]
   },
   {
     "id": 253,
@@ -2834,9 +2442,7 @@
     "taxon": "Polyommatus icarus",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-icarus-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 254,
@@ -2846,9 +2452,7 @@
     "taxon": "Polyommatus eros",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-eros-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 255,
@@ -2858,9 +2462,7 @@
     "taxon": "Polyommatus damon",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-damon-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 256,
@@ -2888,9 +2490,7 @@
     "taxon": "Polyommatus admetus",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-admetus-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 259,
@@ -2900,9 +2500,7 @@
     "taxon": "Polyommatus ripartii",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-ripartii-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 260,
@@ -2921,10 +2519,7 @@
     "taxon": "Polyommatus iphigenia",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-iphigenia-description",
-    "image_copyright": [
-      "Alperen Yayla",
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla", "Alperen Yayla"]
   },
   {
     "id": 262,
@@ -2961,9 +2556,7 @@
     "taxon": "Polyommatus dolus",
     "family": "Lycaenidae",
     "descriptionKey": "Polyommatus-dolus-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 266,
@@ -3009,9 +2602,7 @@
     "taxon": "Neptis sappho",
     "family": "Nymphalidae",
     "descriptionKey": "Neptis-sappho-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 271,
@@ -3021,9 +2612,7 @@
     "taxon": "Neptis rivularis",
     "family": "Nymphalidae",
     "descriptionKey": "Neptis-rivularis-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 272,
@@ -3033,10 +2622,7 @@
     "taxon": "Limenitis reducta",
     "family": "Nymphalidae",
     "descriptionKey": "Limenitis-reducta-description",
-    "image_copyright": [
-      "Alperen Yayla",
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Alperen Yayla", "Martin Wiemers"]
   },
   {
     "id": 273,
@@ -3046,9 +2632,7 @@
     "taxon": "Limenitis populi",
     "family": "Nymphalidae",
     "descriptionKey": "Limenitis-populi-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 274,
@@ -3058,9 +2642,7 @@
     "taxon": "Limenitis camilla",
     "family": "Nymphalidae",
     "descriptionKey": "Limenitis-camilla-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 275,
@@ -3070,9 +2652,7 @@
     "taxon": "Issoria lathonia",
     "family": "Nymphalidae",
     "descriptionKey": "Issoria-lathonia-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 276,
@@ -3091,9 +2671,7 @@
     "taxon": "Brenthis hecate",
     "family": "Nymphalidae",
     "descriptionKey": "Brenthis-hecate-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 278,
@@ -3103,9 +2681,7 @@
     "taxon": "Brenthis ino",
     "family": "Nymphalidae",
     "descriptionKey": "Brenthis-ino-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 279,
@@ -3115,9 +2691,7 @@
     "taxon": "Brenthis daphne",
     "family": "Nymphalidae",
     "descriptionKey": "Brenthis-daphne-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 280,
@@ -3127,9 +2701,7 @@
     "taxon": "Argynnis paphia",
     "family": "Nymphalidae",
     "descriptionKey": "Argynnis-paphia-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 281,
@@ -3139,9 +2711,7 @@
     "taxon": "Argynnis pandora",
     "family": "Nymphalidae",
     "descriptionKey": "Argynnis-pandora-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 282,
@@ -3151,9 +2721,7 @@
     "taxon": "Argynnis laodice",
     "family": "Nymphalidae",
     "descriptionKey": "Argynnis-laodice-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 283,
@@ -3163,9 +2731,7 @@
     "taxon": "Speyeria aglaja",
     "family": "Nymphalidae",
     "descriptionKey": "Speyeria-aglaja-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 284,
@@ -3184,9 +2750,7 @@
     "taxon": "Fabriciana niobe",
     "family": "Nymphalidae",
     "descriptionKey": "Fabriciana-niobe-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 286,
@@ -3196,9 +2760,7 @@
     "taxon": "Fabriciana adippe",
     "family": "Nymphalidae",
     "descriptionKey": "Fabriciana-adippe-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 287,
@@ -3208,9 +2770,7 @@
     "taxon": "Boloria eunomia",
     "family": "Nymphalidae",
     "descriptionKey": "Boloria-eunomia-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 288,
@@ -3220,9 +2780,7 @@
     "taxon": "Boloria graeca",
     "family": "Nymphalidae",
     "descriptionKey": "Boloria-graeca-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 289,
@@ -3232,9 +2790,7 @@
     "taxon": "Boloria pales",
     "family": "Nymphalidae",
     "descriptionKey": "Boloria-pales-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 290,
@@ -3253,9 +2809,7 @@
     "taxon": "Boloria napaea",
     "family": "Nymphalidae",
     "descriptionKey": "Boloria-napaea-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 292,
@@ -3292,9 +2846,7 @@
     "taxon": "Boloria thore",
     "family": "Nymphalidae",
     "descriptionKey": "Boloria-thore-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 296,
@@ -3304,9 +2856,7 @@
     "taxon": "Boloria selene",
     "family": "Nymphalidae",
     "descriptionKey": "Boloria-selene-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 297,
@@ -3316,9 +2866,7 @@
     "taxon": "Boloria euphrosyne",
     "family": "Nymphalidae",
     "descriptionKey": "Boloria-euphrosyne-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 298,
@@ -3328,9 +2876,7 @@
     "taxon": "Boloria dia",
     "family": "Nymphalidae",
     "descriptionKey": "Boloria-dia-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 299,
@@ -3385,9 +2931,7 @@
     "taxon": "Boloria titania",
     "family": "Nymphalidae",
     "descriptionKey": "Boloria-titania-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 305,
@@ -3415,9 +2959,7 @@
     "taxon": "Apatura iris",
     "family": "Nymphalidae",
     "descriptionKey": "Apatura-iris-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 308,
@@ -3427,9 +2969,7 @@
     "taxon": "Apatura metis",
     "family": "Nymphalidae",
     "descriptionKey": "Apatura-metis-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 309,
@@ -3439,9 +2979,7 @@
     "taxon": "Apatura ilia",
     "family": "Nymphalidae",
     "descriptionKey": "Apatura-ilia-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 311,
@@ -3460,9 +2998,7 @@
     "taxon": "Araschnia levana",
     "family": "Nymphalidae",
     "descriptionKey": "Araschnia-levana-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 313,
@@ -3481,9 +3017,7 @@
     "taxon": "Vanessa cardui",
     "family": "Nymphalidae",
     "descriptionKey": "Vanessa-cardui-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 315,
@@ -3493,9 +3027,7 @@
     "taxon": "Vanessa vulcania",
     "family": "Nymphalidae",
     "descriptionKey": "Vanessa-vulcania-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 316,
@@ -3505,9 +3037,7 @@
     "taxon": "Vanessa atalanta",
     "family": "Nymphalidae",
     "descriptionKey": "Vanessa-atalanta-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 317,
@@ -3517,9 +3047,7 @@
     "taxon": "Aglais io",
     "family": "Nymphalidae",
     "descriptionKey": "Aglais-io-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 318,
@@ -3529,9 +3057,7 @@
     "taxon": "Aglais urticae",
     "family": "Nymphalidae",
     "descriptionKey": "Aglais-urticae-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 319,
@@ -3541,9 +3067,7 @@
     "taxon": "Aglais ichnusa",
     "family": "Nymphalidae",
     "descriptionKey": "Aglais-ichnusa-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 320,
@@ -3553,9 +3077,7 @@
     "taxon": "Polygonia egea",
     "family": "Nymphalidae",
     "descriptionKey": "Polygonia-egea-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 321,
@@ -3565,9 +3087,7 @@
     "taxon": "Polygonia c-album",
     "family": "Nymphalidae",
     "descriptionKey": "Polygonia-c-album-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 322,
@@ -3586,9 +3106,7 @@
     "taxon": "Nymphalis polychloros",
     "family": "Nymphalidae",
     "descriptionKey": "Nymphalis-polychloros-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 324,
@@ -3598,9 +3116,7 @@
     "taxon": "Nymphalis xanthomelas",
     "family": "Nymphalidae",
     "descriptionKey": "Nymphalis-xanthomelas-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 325,
@@ -3610,9 +3126,7 @@
     "taxon": "Nymphalis antiopa",
     "family": "Nymphalidae",
     "descriptionKey": "Nymphalis-antiopa-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 326,
@@ -3622,9 +3136,7 @@
     "taxon": "Hypolimnas misippus",
     "family": "Nymphalidae",
     "descriptionKey": "Hypolimnas-misippus-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 327,
@@ -3643,9 +3155,7 @@
     "taxon": "Euphydryas aurinia",
     "family": "Nymphalidae",
     "descriptionKey": "Euphydryas-aurinia-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 329,
@@ -3655,9 +3165,7 @@
     "taxon": "Euphydryas cynthia",
     "family": "Nymphalidae",
     "descriptionKey": "Euphydryas-cynthia-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 330,
@@ -3676,9 +3184,7 @@
     "taxon": "Euphydryas maturna",
     "family": "Nymphalidae",
     "descriptionKey": "Euphydryas-maturna-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 332,
@@ -3688,9 +3194,7 @@
     "taxon": "Euphydryas intermedia",
     "family": "Nymphalidae",
     "descriptionKey": "Euphydryas-intermedia-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 333,
@@ -3700,9 +3204,7 @@
     "taxon": "Melitaea trivia",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-trivia-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 334,
@@ -3712,9 +3214,7 @@
     "taxon": "Melitaea didyma",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-didyma-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 335,
@@ -3724,9 +3224,7 @@
     "taxon": "Melitaea arduinna",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-arduinna-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 336,
@@ -3736,9 +3234,7 @@
     "taxon": "Melitaea aetherie",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-aetherie-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 337,
@@ -3748,9 +3244,7 @@
     "taxon": "Melitaea phoebe",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-phoebe-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 338,
@@ -3760,9 +3254,7 @@
     "taxon": "Melitaea ornata",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-ornata-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 339,
@@ -3772,9 +3264,7 @@
     "taxon": "Melitaea cinxia",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-cinxia-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 340,
@@ -3784,9 +3274,7 @@
     "taxon": "Melitaea diamina",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-diamina-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 341,
@@ -3796,9 +3284,7 @@
     "taxon": "Melitaea celadussa",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-celadussa-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 342,
@@ -3808,9 +3294,7 @@
     "taxon": "Melitaea deione",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-deione-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 343,
@@ -3820,9 +3304,7 @@
     "taxon": "Melitaea britomartis",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-britomartis-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 344,
@@ -3832,9 +3314,7 @@
     "taxon": "Melitaea athalia",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-athalia-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 345,
@@ -3844,9 +3324,7 @@
     "taxon": "Melitaea varia",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-varia-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 346,
@@ -3865,9 +3343,7 @@
     "taxon": "Melitaea aurelia",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-aurelia-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 348,
@@ -3877,9 +3353,7 @@
     "taxon": "Melitaea asteria",
     "family": "Nymphalidae",
     "descriptionKey": "Melitaea-asteria-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 349,
@@ -3889,9 +3363,7 @@
     "taxon": "Libythea celtis",
     "family": "Nymphalidae",
     "descriptionKey": "Libythea-celtis-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 350,
@@ -3901,9 +3373,7 @@
     "taxon": "Danaus plexippus",
     "family": "Nymphalidae",
     "descriptionKey": "Danaus-plexippus-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 351,
@@ -3913,9 +3383,7 @@
     "taxon": "Danaus chrysippus",
     "family": "Nymphalidae",
     "descriptionKey": "Danaus-chrysippus-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 352,
@@ -3925,9 +3393,7 @@
     "taxon": "Charaxes jasius",
     "family": "Nymphalidae",
     "descriptionKey": "Charaxes-jasius-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 353,
@@ -3946,9 +3412,7 @@
     "taxon": "Coenonympha oedippus",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-oedippus-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 355,
@@ -3958,9 +3422,7 @@
     "taxon": "Coenonympha dorus",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-dorus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 356,
@@ -3979,9 +3441,7 @@
     "taxon": "Coenonympha pamphilus",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-pamphilus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 358,
@@ -3991,9 +3451,7 @@
     "taxon": "Coenonympha tullia",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-tullia-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 359,
@@ -4003,9 +3461,7 @@
     "taxon": "Coenonympha rhodopensis",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-rhodopensis-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 360,
@@ -4024,9 +3480,7 @@
     "taxon": "Coenonympha glycerion",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-glycerion-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 362,
@@ -4045,9 +3499,7 @@
     "taxon": "Coenonympha leander",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-leander-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 364,
@@ -4057,9 +3509,7 @@
     "taxon": "Coenonympha hero",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-hero-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 365,
@@ -4069,9 +3519,7 @@
     "taxon": "Coenonympha gardetta",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-gardetta-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 366,
@@ -4090,9 +3538,7 @@
     "taxon": "Coenonympha arcania",
     "family": "Nymphalidae",
     "descriptionKey": "Coenonympha-arcania-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 368,
@@ -4102,9 +3548,7 @@
     "taxon": "Kirinia roxelana",
     "family": "Nymphalidae",
     "descriptionKey": "Kirinia-roxelana-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 369,
@@ -4114,9 +3558,7 @@
     "taxon": "Kirinia climene",
     "family": "Nymphalidae",
     "descriptionKey": "Kirinia-climene-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 370,
@@ -4135,9 +3577,7 @@
     "taxon": "Pararge xiphia",
     "family": "Nymphalidae",
     "descriptionKey": "Pararge-xiphia-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 372,
@@ -4147,9 +3587,7 @@
     "taxon": "Pararge xiphioides",
     "family": "Nymphalidae",
     "descriptionKey": "Pararge-xiphioides-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 373,
@@ -4159,9 +3597,7 @@
     "taxon": "Pararge aegeria",
     "family": "Nymphalidae",
     "descriptionKey": "Pararge-aegeria-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 374,
@@ -4171,9 +3607,7 @@
     "taxon": "Lasiommata maera",
     "family": "Nymphalidae",
     "descriptionKey": "Lasiommata-maera-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 375,
@@ -4192,9 +3626,7 @@
     "taxon": "Lasiommata petropolitana",
     "family": "Nymphalidae",
     "descriptionKey": "Lasiommata-petropolitana-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 377,
@@ -4204,9 +3636,7 @@
     "taxon": "Lasiommata paramegaera",
     "family": "Nymphalidae",
     "descriptionKey": "Lasiommata-paramegaera-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 378,
@@ -4216,9 +3646,7 @@
     "taxon": "Lasiommata megera",
     "family": "Nymphalidae",
     "descriptionKey": "Lasiommata-megera-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 379,
@@ -4228,9 +3656,7 @@
     "taxon": "Melanargia russiae",
     "family": "Nymphalidae",
     "descriptionKey": "Melanargia-russiae-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 380,
@@ -4240,9 +3666,7 @@
     "taxon": "Melanargia larissa",
     "family": "Nymphalidae",
     "descriptionKey": "Melanargia-larissa-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 381,
@@ -4252,9 +3676,7 @@
     "taxon": "Melanargia lachesis",
     "family": "Nymphalidae",
     "descriptionKey": "Melanargia-lachesis-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 382,
@@ -4264,9 +3686,7 @@
     "taxon": "Melanargia galathea",
     "family": "Nymphalidae",
     "descriptionKey": "Melanargia-galathea-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 383,
@@ -4276,9 +3696,7 @@
     "taxon": "Melanargia ines",
     "family": "Nymphalidae",
     "descriptionKey": "Melanargia-ines-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 384,
@@ -4288,9 +3706,7 @@
     "taxon": "Melanargia arge",
     "family": "Nymphalidae",
     "descriptionKey": "Melanargia-arge-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 385,
@@ -4309,9 +3725,7 @@
     "taxon": "Melanargia occitanica",
     "family": "Nymphalidae",
     "descriptionKey": "Melanargia-occitanica-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 387,
@@ -4321,9 +3735,7 @@
     "taxon": "Hipparchia fatua",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-fatua-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 388,
@@ -4333,9 +3745,7 @@
     "taxon": "Hipparchia statilinus",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-statilinus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 389,
@@ -4345,9 +3755,7 @@
     "taxon": "Hipparchia azorina",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-azorina-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 390,
@@ -4366,9 +3774,7 @@
     "taxon": "Hipparchia maderensis",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-maderensis-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 392,
@@ -4378,9 +3784,7 @@
     "taxon": "Hipparchia semele",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-semele-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 393,
@@ -4399,9 +3803,7 @@
     "taxon": "Hipparchia aristaeus",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-aristaeus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 395,
@@ -4411,9 +3813,7 @@
     "taxon": "Hipparchia volgensis",
     "family": "Nymphalidae",
     "descriptionKey": "Hipparchia-volgensis-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 396,
@@ -4486,9 +3886,7 @@
     "taxon": "Minois dryas",
     "family": "Nymphalidae",
     "descriptionKey": "Minois-dryas-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 404,
@@ -4498,9 +3896,7 @@
     "taxon": "Brintesia circe",
     "family": "Nymphalidae",
     "descriptionKey": "Brintesia-circe-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 405,
@@ -4510,9 +3906,7 @@
     "taxon": "Arethusana arethusa",
     "family": "Nymphalidae",
     "descriptionKey": "Arethusana-arethusa-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 406,
@@ -4567,9 +3961,7 @@
     "taxon": "Oeneis jutta",
     "family": "Nymphalidae",
     "descriptionKey": "Oeneis-jutta-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 412,
@@ -4597,9 +3989,7 @@
     "taxon": "Oeneis glacialis",
     "family": "Nymphalidae",
     "descriptionKey": "Oeneis-glacialis-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 415,
@@ -4609,9 +3999,7 @@
     "taxon": "Satyrus ferula",
     "family": "Nymphalidae",
     "descriptionKey": "Satyrus-ferula-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 416,
@@ -4630,9 +4018,7 @@
     "taxon": "Satyrus actaea",
     "family": "Nymphalidae",
     "descriptionKey": "Satyrus-actaea-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 418,
@@ -4642,9 +4028,7 @@
     "taxon": "Chazara briseis",
     "family": "Nymphalidae",
     "descriptionKey": "Chazara-briseis-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 419,
@@ -4663,9 +4047,7 @@
     "taxon": "Chazara persephone",
     "family": "Nymphalidae",
     "descriptionKey": "Chazara-persephone-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 421,
@@ -4675,9 +4057,7 @@
     "taxon": "Pseudochazara geyeri",
     "family": "Nymphalidae",
     "descriptionKey": "Pseudochazara-geyeri-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 422,
@@ -4705,9 +4085,7 @@
     "taxon": "Pseudochazara anthelea",
     "family": "Nymphalidae",
     "descriptionKey": "Pseudochazara-anthelea-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 425,
@@ -4780,9 +4158,7 @@
     "taxon": "Ypthima asterope",
     "family": "Nymphalidae",
     "descriptionKey": "Ypthima-asterope-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 433,
@@ -4792,9 +4168,7 @@
     "taxon": "Proterebia phegea",
     "family": "Nymphalidae",
     "descriptionKey": "Proterebia-phegea-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 434,
@@ -4813,9 +4187,7 @@
     "taxon": "Hyponephele lycaon",
     "family": "Nymphalidae",
     "descriptionKey": "Hyponephele-lycaon-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 436,
@@ -4825,9 +4197,7 @@
     "taxon": "Hyponephele lupina",
     "family": "Nymphalidae",
     "descriptionKey": "Hyponephele-lupina-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 437,
@@ -4837,9 +4207,7 @@
     "taxon": "Aphantopus hyperantus",
     "family": "Nymphalidae",
     "descriptionKey": "Aphantopus-hyperantus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 438,
@@ -4849,9 +4217,7 @@
     "taxon": "Pyronia cecilia",
     "family": "Nymphalidae",
     "descriptionKey": "Pyronia-cecilia-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 439,
@@ -4861,9 +4227,7 @@
     "taxon": "Pyronia tithonus",
     "family": "Nymphalidae",
     "descriptionKey": "Pyronia-tithonus-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 440,
@@ -4873,9 +4237,7 @@
     "taxon": "Pyronia bathseba",
     "family": "Nymphalidae",
     "descriptionKey": "Pyronia-bathseba-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 441,
@@ -4885,9 +4247,7 @@
     "taxon": "Maniola jurtina",
     "family": "Nymphalidae",
     "descriptionKey": "Maniola-jurtina-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 442,
@@ -4933,9 +4293,7 @@
     "taxon": "Maniola telmessia",
     "family": "Nymphalidae",
     "descriptionKey": "Maniola-telmessia-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 447,
@@ -4945,9 +4303,7 @@
     "taxon": "Maniola halicarnassus",
     "family": "Nymphalidae",
     "descriptionKey": "Maniola-halicarnassus-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 448,
@@ -5020,9 +4376,7 @@
     "taxon": "Erebia meolans",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-meolans-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 456,
@@ -5059,9 +4413,7 @@
     "taxon": "Erebia manto",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-manto-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 460,
@@ -5071,9 +4423,7 @@
     "taxon": "Erebia ottomana",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-ottomana-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 461,
@@ -5083,9 +4433,7 @@
     "taxon": "Erebia hispania",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-hispania-description",
-    "image_copyright": [
-      "Alperen Yayla"
-    ]
+    "image_copyright": ["Alperen Yayla"]
   },
   {
     "id": 462,
@@ -5113,9 +4461,7 @@
     "taxon": "Erebia tyndarus",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-tyndarus-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 465,
@@ -5125,9 +4471,7 @@
     "taxon": "Erebia cassioides",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-cassioides-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 466,
@@ -5137,9 +4481,7 @@
     "taxon": "Erebia nivalis",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-nivalis-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 467,
@@ -5176,9 +4518,7 @@
     "taxon": "Erebia oeme",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-oeme-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 471,
@@ -5188,9 +4528,7 @@
     "taxon": "Erebia gorge",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-gorge-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 472,
@@ -5209,9 +4547,7 @@
     "taxon": "Erebia pandrose",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-pandrose-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 474,
@@ -5221,9 +4557,7 @@
     "taxon": "Erebia eriphyle",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-eriphyle-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 475,
@@ -5242,9 +4576,7 @@
     "taxon": "Erebia euryale",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-euryale-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 477,
@@ -5263,9 +4595,7 @@
     "taxon": "Erebia ligea",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-ligea-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 479,
@@ -5275,9 +4605,7 @@
     "taxon": "Erebia pluto",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-pluto-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 480,
@@ -5314,9 +4642,7 @@
     "taxon": "Erebia mnestra",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-mnestra-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 484,
@@ -5326,9 +4652,7 @@
     "taxon": "Erebia albergana",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-albergana-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 485,
@@ -5347,9 +4671,7 @@
     "taxon": "Erebia melampus",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-melampus-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 487,
@@ -5377,9 +4699,7 @@
     "taxon": "Erebia medusa",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-medusa-description",
-    "image_copyright": [
-      "Chris Van Swaay"
-    ]
+    "image_copyright": ["Chris Van Swaay"]
   },
   {
     "id": 490,
@@ -5389,9 +4709,7 @@
     "taxon": "Erebia aethiops",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-aethiops-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 491,
@@ -5401,9 +4719,7 @@
     "taxon": "Erebia pharte",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-pharte-description",
-    "image_copyright": [
-      "Kars Veling"
-    ]
+    "image_copyright": ["Kars Veling"]
   },
   {
     "id": 492,
@@ -5431,9 +4747,7 @@
     "taxon": "Erebia epiphron",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-epiphron-description",
-    "image_copyright": [
-      "Rudi Verovnik"
-    ]
+    "image_copyright": ["Rudi Verovnik"]
   },
   {
     "id": 495,
@@ -5461,9 +4775,7 @@
     "taxon": "Erebia styx",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-styx-description",
-    "image_copyright": [
-      "Martin Wiemers"
-    ]
+    "image_copyright": ["Martin Wiemers"]
   },
   {
     "id": 498,
@@ -5491,9 +4803,7 @@
     "taxon": "Erebia pronoe",
     "family": "Nymphalidae",
     "descriptionKey": "Erebia-pronoe-description",
-    "image_copyright": [
-      "Albert Vliegenthart"
-    ]
+    "image_copyright": ["Albert Vliegenthart"]
   },
   {
     "id": 501,
@@ -5537,9 +4847,7 @@
     "taxon": "Argyrophenga antipodum",
     "family": "Nymphalidae",
     "descriptionKey": "Argyrophenga-antipodum-description",
-    "image_copyright": [
-      "Chris Rickards"
-    ]
+    "image_copyright": ["Chris Rickards"]
   },
   {
     "id": 506,
@@ -5547,9 +4855,7 @@
     "taxon": "Argyrophenga harrisi",
     "family": "Nymphalidae",
     "descriptionKey": "Argyrophenga-harrisi-description",
-    "image_copyright": [
-      "Chris Rickards"
-    ]
+    "image_copyright": ["Chris Rickards"]
   },
   {
     "id": 507,
@@ -5557,9 +4863,7 @@
     "taxon": "Argyrophenga janitae",
     "family": "Nymphalidae",
     "descriptionKey": "Argyrophenga-janitae-description",
-    "image_copyright": [
-      "Jacqui Knight"
-    ]
+    "image_copyright": ["Jacqui Knight"]
   },
   {
     "id": 508,
@@ -5567,9 +4871,7 @@
     "taxon": "Danaus plexippus plexippus",
     "family": "Nymphalidae",
     "descriptionKey": "Danaus-plexippus-plexippus-description",
-    "image_copyright": [
-      "Jacqui Knight"
-    ]
+    "image_copyright": ["Jacqui Knight"]
   },
   {
     "id": 509,
@@ -5577,9 +4879,7 @@
     "taxon": "Dodonidia helmsii",
     "family": "Nymphalidae",
     "descriptionKey": "Dodonidia-helmsii-description",
-    "image_copyright": [
-      "Norm Twigge"
-    ]
+    "image_copyright": ["Norm Twigge"]
   },
   {
     "id": 510,
@@ -5587,9 +4887,7 @@
     "taxon": "Erebiola butleri",
     "family": "Nymphalidae",
     "descriptionKey": "Erebiola-butleri-description",
-    "image_copyright": [
-      "Chris Rickards"
-    ]
+    "image_copyright": ["Chris Rickards"]
   },
   {
     "id": 511,
@@ -5597,9 +4895,7 @@
     "taxon": "Lycaena boldenarum",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-boldenarum-description",
-    "image_copyright": [
-      "Brian Patrick"
-    ]
+    "image_copyright": ["Brian Patrick"]
   },
   {
     "id": 512,
@@ -5607,9 +4903,7 @@
     "taxon": "Lycaena feredayi",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-feredayi-description",
-    "image_copyright": [
-      "Dianne Clarke Pukawa"
-    ]
+    "image_copyright": ["Dianne Clarke Pukawa"]
   },
   {
     "id": 513,
@@ -5617,9 +4911,7 @@
     "taxon": "Lycaena rauparaha",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-rauparaha-description",
-    "image_copyright": [
-      "Erin Hall"
-    ]
+    "image_copyright": ["Erin Hall"]
   },
   {
     "id": 514,
@@ -5627,9 +4919,7 @@
     "taxon": "Lycaena salustius",
     "family": "Lycaenidae",
     "descriptionKey": "Lycaena-salustius-description",
-    "image_copyright": [
-      "Chris Rickards"
-    ]
+    "image_copyright": ["Chris Rickards"]
   },
   {
     "id": 515,
@@ -5637,9 +4927,7 @@
     "taxon": "Percnodaimon merula",
     "family": "Nymphalidae",
     "descriptionKey": "Percnodaimon-merula-description",
-    "image_copyright": [
-      "Jacqui Knight"
-    ]
+    "image_copyright": ["Jacqui Knight"]
   },
   {
     "id": 516,
@@ -5647,9 +4935,7 @@
     "taxon": "Vanessa gonerilla",
     "family": "Nymphalidae",
     "descriptionKey": "Vanessa-gonerilla-description",
-    "image_copyright": [
-      "Mike Lusk"
-    ]
+    "image_copyright": ["Mike Lusk"]
   },
   {
     "id": 519,
@@ -5657,9 +4943,7 @@
     "taxon": "Vanessa itea",
     "family": "Nymphalidae",
     "descriptionKey": "Vanessa-itea-description",
-    "image_copyright": [
-      "Chris Rickards"
-    ]
+    "image_copyright": ["Chris Rickards"]
   },
   {
     "id": 520,
@@ -5667,9 +4951,7 @@
     "taxon": "Zizina labradus labradus",
     "family": "Lycaenidae",
     "descriptionKey": "Zizina-labradus-labradus-description",
-    "image_copyright": [
-      "Cathy Casey"
-    ]
+    "image_copyright": ["Cathy Casey"]
   },
   {
     "id": 521,
@@ -5677,9 +4959,7 @@
     "taxon": "Zizina oxleyi",
     "family": "Lycaenidae",
     "descriptionKey": "Zizina-oxleyi-description",
-    "image_copyright": [
-      "Jon Sullivan"
-    ]
+    "image_copyright": ["Jon Sullivan"]
   },
   {
     "id": 522,
@@ -5687,8 +4967,6 @@
     "taxon": "Limenitis glorifica",
     "family": "Nymphalidae",
     "descriptionKey": "Limenitis-glorifica-description",
-    "image_copyright": [
-      "Quentin Paynter"
-    ]
+    "image_copyright": ["Quentin Paynter"]
   }
 ]

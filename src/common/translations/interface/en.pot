@@ -23,6 +23,10 @@ msgstr "Spain"
 msgid "Andorra"
 msgstr "Andorra"
 
+# Country
+msgid "Ecuador"
+msgstr "Ecuador"
+
 msgid "Albania"
 msgstr "Albania"
 

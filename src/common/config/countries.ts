@@ -97,6 +97,13 @@ const countries = {
     zoom: 4,
     id: 216022,
   },
+  EC: {
+    name: 'Ecuador',
+    latitude: -1.493126,
+    longitude: -78.606819,
+    zoom: 6,
+    id: 216026,
+  },
   EE: {
     name: 'Estonia',
     latitude: 58.595272,
