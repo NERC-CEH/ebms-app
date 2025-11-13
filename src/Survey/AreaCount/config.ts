@@ -139,7 +139,7 @@ const survey: Survey = {
           survey_id: surveyId || survey.id,
           survey: surveyName || survey.name,
         },
-        attrs: {
+        data: {
           surveyId: surveyId || survey.id,
           location: {},
         },
@@ -190,7 +190,7 @@ const survey: Survey = {
         const isDragonfly = taxon.group === DRAGONFLY_GROUP;
 
         return new Occurrence({
-          attrs: {
+          data: {
             comment: null,
             stage: !isDragonfly ? 'Adult' : undefined,
             dragonflyStage: isDragonfly ? 'Adult' : undefined,
@@ -212,7 +212,7 @@ const survey: Survey = {
         survey: surveyName || survey.name,
         pausedTime: 0,
       },
-      attrs: {
+      data: {
         surveyId: surveyId || survey.id,
         date: new Date().toISOString(),
         enteredSrefSystem: 4326,

@@ -125,7 +125,7 @@ const config: Survey = {
         const isDragonfly = taxon.group === DRAGONFLY_GROUP;
 
         return new Occurrence({
-          attrs: {
+          data: {
             count: 1,
             stage: !isDragonfly ? 'Adult' : undefined,
             dragonflyStage: isDragonfly ? 'Adult' : undefined,
@@ -152,7 +152,7 @@ const config: Survey = {
           survey: config.name,
           survey_id: config.id,
         },
-        attrs: {
+        data: {
           surveyId: config.id,
           sampleMethodId: 776,
           location,
@@ -208,7 +208,7 @@ const config: Survey = {
         survey_id: config.id,
         survey: config.name,
       },
-      attrs: {
+      data: {
         surveyId: config.id,
         date: now,
         training: appModel.data.useTraining,

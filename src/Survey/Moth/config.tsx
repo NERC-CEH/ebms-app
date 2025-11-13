@@ -591,7 +591,7 @@ const survey: Survey = {
         survey_id: surveyId || survey.id,
         survey: surveyName || survey.name,
       },
-      attrs: {
+      data: {
         surveyId: surveyId || survey.id,
         date: new Date().toISOString(),
         enteredSrefSystem: 4326,
