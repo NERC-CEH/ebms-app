@@ -101,6 +101,10 @@ export { default as device } from '@flumens/utils/dist/device';
 export { default as string } from '@flumens/utils/dist/string';
 export * from '@flumens/utils/dist/location';
 export {
+  default as MigrationManager,
+  type Migration,
+} from '@flumens/utils/dist/MigrationManager';
+export {
   useDisableBackButton,
   useOnBackButton,
   useOnHideModal,

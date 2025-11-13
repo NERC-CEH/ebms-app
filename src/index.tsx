@@ -8,6 +8,7 @@ import { loadingController } from '@ionic/core';
 import { setupIonicReact, isPlatform } from '@ionic/react';
 import * as SentryBrowser from '@sentry/browser';
 import config from 'common/config';
+import migrationManager from 'common/migrations';
 import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
 import speciesLists from 'common/models/collections/speciesLists';
@@ -38,6 +39,13 @@ mobxConfig({ enforceActions: 'never' });
     window.location.reload();
     return;
   }
+
+  // Run first migration
+  // TODO: remove in future when all users have updated
+  if (!window.localStorage.getItem('_lastAppMigratedVersion'))
+    window.localStorage.setItem('_lastAppMigratedVersion', '1.0.0');
+
+  await migrationManager.run();
 
   await db.init();
   await userModel.fetch();

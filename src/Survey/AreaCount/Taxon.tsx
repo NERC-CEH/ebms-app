@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -11,6 +11,7 @@ import {
   useSample,
 } from '@flumens';
 import { NavContext, IonButtons, IonButton } from '@ionic/react';
+import speciesGroupsList from 'common/data/groups';
 import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
 import Sample from 'models/sample';
 import TaxonSearch from 'Survey/common/TaxonSearch';
@@ -220,6 +221,18 @@ const TaxonController = () => {
     : 'Species';
 
   const showCancelButton = sample.isPreciseSingleSpeciesSurvey();
+
+  useEffect(() => {
+    // backward compatibility, remove once all users have updated
+    // fix speciesGroups in case are 'butterflies' strings from old surveys, get ids
+    const speciesGroups = sample.data.speciesGroups || [];
+    if (speciesGroups.every(sg => typeof sg === 'number')) return;
+
+    const updatedSpeciesGroups: any = speciesGroups?.map((sg: any) =>
+      typeof sg === 'string' ? (speciesGroupsList as any)[sg]?.id : sg
+    );
+    sample.data.speciesGroups = updatedSpeciesGroups;
+  }, []);
 
   return (
     <Page id="precise-area-count-edit-taxa">

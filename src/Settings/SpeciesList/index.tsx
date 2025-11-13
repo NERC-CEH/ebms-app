@@ -124,13 +124,18 @@ const SpeciesListSettings = () => {
       await list.fetchRemoteSpecies();
 
       toast.success(
-        `Successfully installed ${list.data.title} with ${list.data.size} species`
+        `Successfully installed "${list.data.title}" list with ${list.data.size} species`,
+        { position: 'bottom' }
       );
     } catch (error: any) {
       toast.error(`Failed to install list: ${error.message}`);
     }
 
     await loader.hide();
+
+    setCurrentSearch('');
+    setShowSearch(false);
+
     setSegment('installed');
   };
 
@@ -169,6 +174,11 @@ const SpeciesListSettings = () => {
 
     try {
       await list.fetchRemoteSpecies();
+
+      toast.success(
+        `Successfully refreshed "${list.data.title}" list with ${list.data.size} species`,
+        { position: 'bottom' }
+      );
     } catch (error: any) {
       toast.error(`Failed to load lists: ${error.message}`);
     }

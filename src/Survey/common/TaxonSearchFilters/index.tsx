@@ -8,21 +8,16 @@ import FiltersModal from './FiltersModal';
 import './styles.scss';
 
 type Props = {
-  sample: Sample;
+  sample?: Sample;
 };
 
 const Header = ({ sample }: Props) => {
-  if (!sample.data.speciesGroups) {
-    // eslint-disable-next-line no-param-reassign
-    sample.data.speciesGroups = appModel.data.speciesGroups;
-    sample.save();
-  }
-
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => setShowModal(!showModal);
 
-  const { speciesGroups } = sample.data;
+  const speciesGroups =
+    sample?.data.speciesGroups || appModel.data.speciesGroups;
 
   const isMultiSpeciesGroupSelected = speciesGroups.length > 1;
 

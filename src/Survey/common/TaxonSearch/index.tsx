@@ -17,17 +17,17 @@ type SearchResults = SearchResult[];
 const MIN_SEARCH_LENGTH = 2;
 
 type Props = {
-  speciesGroups?: number[];
   recordedTaxa: any;
-  useDayFlyingMothsOnly: any;
   onSpeciesSelected: any;
+  useDayFlyingMothsOnly?: any;
+  speciesGroups?: number[];
 };
 
 const TaxonSearch = ({
-  speciesGroups,
   recordedTaxa,
-  useDayFlyingMothsOnly,
   onSpeciesSelected,
+  speciesGroups,
+  useDayFlyingMothsOnly,
 }: Props) => {
   const { t } = useTranslation();
 
@@ -45,7 +45,7 @@ const TaxonSearch = ({
 
   const filterDayFlyingMoths = (table: typeof speciesStore.table): SQL => {
     const useDayMothsFilter =
-      useDayFlyingMothsOnly && appModel.data.useDayFlyingMothsOnly;
+      useDayFlyingMothsOnly || appModel.data.useDayFlyingMothsOnly;
     if (!useDayMothsFilter) return sql`1`;
 
     // filter for day-flying moths only
@@ -149,6 +149,7 @@ const TaxonSearch = ({
       {hasMissingSpeciesGroupLists && !searchResults?.length && (
         <InfoMessage color="warning" className="mx-2 text-center">
           Some species groups are missing from your current downloaded lists.
+          <br />
           <IonButton
             routerLink="/settings/species-lists"
             fill="outline"

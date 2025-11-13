@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { Page, Main, Header, useAlert, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
+import appModel from 'common/models/app';
 import Occurrence, { Taxon, DRAGONFLY_GROUP } from 'models/occurrence';
 import Sample from 'models/sample';
 import TaxonSearch from 'Survey/common/TaxonSearch';
@@ -187,18 +188,12 @@ const Controller = () => {
 
   return (
     <Page id="transect-sections-taxa">
-      <Header
-        title="Species"
-        rightSlot={<TaxonSearchFilters sample={sectionSample.parent!} />}
-      />
+      <Header title="Species" rightSlot={<TaxonSearchFilters />} />
       <Main>
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}
-          speciesGroups={sectionSample?.parent!.data.speciesGroups}
-          useDayFlyingMothsOnly={
-            sectionSample?.parent!.metadata.useDayFlyingMothsOnly
-          }
+          speciesGroups={appModel.data.speciesGroups}
         />
       </Main>
     </Page>

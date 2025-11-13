@@ -13,7 +13,6 @@ import {
 } from '@flumens';
 import config from 'common/config';
 import groups, { SpeciesGroup } from 'common/data/groups';
-import appModel from 'models/app';
 import userModel from 'models/user';
 import areaSurvey from 'Survey/AreaCount/config';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
@@ -325,14 +324,6 @@ export default class Sample extends SampleModel<Data, Metadata> {
     };
 
     this.samples.forEach(checkIfNewSpeciesGroupsAreAdded);
-    this.save();
-  }
-
-  setPreviousSpeciesGroups() {
-    if (this.metadata.survey === 'moth') return;
-
-    this.data.speciesGroups = appModel.data.speciesGroups;
-    this.metadata.useDayFlyingMothsOnly = appModel.data.useDayFlyingMothsOnly;
     this.save();
   }
 

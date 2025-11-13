@@ -18,7 +18,6 @@ import {
   dateAttr,
   stageAttr,
   dragonflyStageAttr,
-  speciesGroupsAttr,
   cloudAttr,
 } from 'Survey/common/config';
 
@@ -70,7 +69,6 @@ const config: Survey = {
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,
     comment: commentAttr,
-    speciesGroups: speciesGroupsAttr,
 
     recorder: {
       pageProps: {
@@ -216,7 +214,6 @@ const config: Survey = {
         sampleMethodId: 22,
         surveyStartTime: now,
         recorder,
-        speciesGroups: appModel.data.speciesGroups,
       },
     });
 

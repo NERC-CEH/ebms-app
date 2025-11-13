@@ -18,7 +18,6 @@ async function getNewSample(survey: Survey, hasGPSPermission: any) {
     hasGPSPermission,
   });
 
-  sample.setPreviousSpeciesGroups();
   samplesCollection.push(sample);
 
   sample.save();

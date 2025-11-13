@@ -26,6 +26,10 @@ const fetchCountrySpeciesList = async (newCountry: string) => {
       throw new Error('No default country species list found');
 
     const [list] = lists;
+
+    if (!speciesListsCollection.cidMap.has(list.cid))
+      speciesListsCollection.push(list);
+
     await list.save(true);
     await list.fetchRemoteSpecies();
   } catch (error) {

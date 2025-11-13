@@ -10,7 +10,7 @@ import {
   IonModal,
 } from '@ionic/react';
 import groups from 'common/data/groups';
-import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
+import appModel from 'models/app';
 import Sample from 'models/sample';
 import './styles.scss';
 
@@ -19,7 +19,7 @@ const DAY_FLYING_MOTHS = 'day-flying-moths';
 type Props = {
   toggleModal: () => void;
   showModal: boolean;
-  sample: Sample;
+  sample?: Sample;
 };
 
 const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
@@ -32,35 +32,36 @@ const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
     const hasDayFlyingMothGroup = newValuesArg.includes(DAY_FLYING_MOTHS);
     const hasMothGroup = newValues.includes(groups.moths.id);
 
-    appModel.data.useDayFlyingMothsOnly = hasMothGroup && hasDayFlyingMothGroup;
-
-    // eslint-disable-next-line no-param-reassign
-    sample.metadata.useDayFlyingMothsOnly =
-      hasMothGroup && hasDayFlyingMothGroup;
-
-    // eslint-disable-next-line no-param-reassign
-    sample.data.speciesGroups = newValues;
-    sample.save();
-
     // keep in global app model for next samples
-    appModel.data.speciesGroups = sample.data.speciesGroups;
+    appModel.data.useDayFlyingMothsOnly = hasMothGroup && hasDayFlyingMothGroup;
+    appModel.data.speciesGroups = newValues;
     appModel.save();
 
-    if (!appModel.data.speciesGroups.length) {
+    if (sample) {
       // eslint-disable-next-line no-param-reassign
-      sample.data.speciesGroups = DEFAULT_SPECIES_GROUP;
+      sample.metadata.useDayFlyingMothsOnly =
+        appModel.data.useDayFlyingMothsOnly;
+      // eslint-disable-next-line no-param-reassign
+      sample.data.speciesGroups = appModel.data.speciesGroups;
       sample.save();
     }
   };
 
-  const value = sample.data.speciesGroups.map(String) || [];
-  if (sample.metadata.useDayFlyingMothsOnly) value.push(DAY_FLYING_MOTHS);
+  const speciesGroups =
+    sample?.data.speciesGroups || appModel.data.speciesGroups;
+  const value = speciesGroups.map(String) || [];
+
+  if (
+    sample?.metadata.useDayFlyingMothsOnly ||
+    appModel.data.useDayFlyingMothsOnly
+  )
+    value.push(DAY_FLYING_MOTHS);
 
   const options: CheckboxOption[] = Object.values(groups).map(
     ({ id, prefix, label }) => ({ value: `${id}`, prefix, label })
   );
 
-  if (sample.data.speciesGroups?.includes(groups.moths.id)) {
+  if (speciesGroups?.includes(groups.moths.id)) {
     options.splice(2, 0, {
       value: DAY_FLYING_MOTHS,
       label: 'Use only day-flying moths',
