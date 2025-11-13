@@ -23,7 +23,7 @@ const languages = {
   'ru-RU': { name: 'Pусский', ISO_639_2: 'rus' },
   'sk-SK': { name: 'Slovensky', ISO_639_2: 'slk' },
   'sl-SI': { name: 'Slovenščina', ISO_639_2: 'slv' },
-  'sr-RS': { name: 'Cрпски' },
+  'sr-RS': { name: 'Cрпски', ISO_639_2: 'srb' },
   'sv-SE': { name: 'Svenska', ISO_639_2: 'swe' },
   'tr-TR': { name: 'Türkçe', ISO_639_2: 'tur' },
   en: { name: 'English', ISO_639_2: 'eng' },
@@ -40,5 +40,18 @@ if (isDemo) {
 export type Language = { name: string; ISO_639_2?: string };
 
 export type LanguageCode = keyof typeof languages;
+
+export const getLanguageIso = (languageCode?: LanguageCode | null): string => {
+  const DEFAULT_LANGUAGE_ISO = 'eng';
+
+  if (!languageCode) return DEFAULT_LANGUAGE_ISO;
+
+  const directMatch = (languages as Record<LanguageCode, Language>)[
+    languageCode
+  ];
+  if (directMatch?.ISO_639_2) return directMatch.ISO_639_2;
+
+  return DEFAULT_LANGUAGE_ISO;
+};
 
 export default languages as Record<LanguageCode, Language>;
