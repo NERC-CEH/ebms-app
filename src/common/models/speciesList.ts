@@ -9,7 +9,7 @@ import userModel from './user';
 const dtoSchema = z.object({
   id: z.number(),
   type: z.enum(['location', 'list']),
-  title: z.string(),
+  title: z.string().optional(),
   description: z.string().optional(),
   locationCode: z.string().optional(),
   taxonGroups: z.number().array(),
@@ -47,7 +47,8 @@ export default class SpeciesList extends Model<Data> {
         coordinates: dto.coordinates,
         size: dto.size,
       },
-      // updatedAt: dto.updatedOn ? dto.updatedOn * 1000 : undefined, // TODO:
+      updatedAt: dto.updatedOn,
+      syncedAt: dto.updatedOn,
       skipStore,
     });
   }

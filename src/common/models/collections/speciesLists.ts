@@ -1,8 +1,14 @@
 import { observable } from 'mobx';
 import axios from 'axios';
-import { Collection, HandledError, isAxiosNetworkError } from '@flumens';
+import {
+  Collection,
+  device,
+  HandledError,
+  isAxiosNetworkError,
+} from '@flumens';
 import config from 'common/config';
 import userModel from 'models/user';
+import appModel from '../app';
 import SpeciesList, { DTO } from '../speciesList';
 import { speciesListsStore } from '../store';
 
@@ -11,6 +17,7 @@ type RemoteFetchParams = {
   locationCode?: string;
   lat?: number;
   lon?: number;
+  updatedOn?: number;
 };
 
 export type SpeciesData = {
@@ -41,6 +48,9 @@ class SpeciesListCollection extends Collection<SpeciesList> {
       url: config.backend.indicia.url,
       getAccessToken: () => userModel.getAccessToken(),
     });
+
+    // refresh installed species lists in the background
+    this.ready.then(() => this.refreshInstalledLists());
   }
 
   async fetchRemote(params: RemoteFetchParams = {}) {
@@ -49,7 +59,13 @@ class SpeciesListCollection extends Collection<SpeciesList> {
     this.remote.synchronising = true;
 
     try {
-      const { limit = 1000, locationCode = '', lat = '', lon = '' } = params;
+      const {
+        limit = 1000,
+        locationCode = '',
+        lat = '',
+        lon = '',
+        updatedOn,
+      } = params;
 
       const accessToken = await this.remote.getAccessToken();
 
@@ -57,7 +73,7 @@ class SpeciesListCollection extends Collection<SpeciesList> {
       const url = `${warehouseURL}/index.php/services/rest/reports/projects/ebms/ebms_countries_and_other_ttl_attr_profiles_for_app.xml`;
 
       const requestParams = {
-        updated_on_filter: '',
+        updated_on_filter: updatedOn ? new Date(updatedOn).toISOString() : '',
         species_groups_filter: '',
         description_filter: '',
         lon,
@@ -124,6 +140,50 @@ class SpeciesListCollection extends Collection<SpeciesList> {
 
   get isSynchronising(): boolean {
     return this.remote.synchronising;
+  }
+
+  async refreshInstalledLists() {
+    if (!userModel.isLoggedIn() || !device.isOnline) return;
+
+    try {
+      // get last update date or default to yesterday
+      const getYesterdayDate = () => {
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        return yesterday.getTime();
+      };
+
+      const lastUpdateDate =
+        appModel.data.speciesListsUpdatedAt || getYesterdayDate();
+
+      console.log(
+        '📚 Collection: speciesLists fetching species lists updated since:',
+        lastUpdateDate
+      );
+
+      // fetch latest species lists
+      const latestLists = await this.fetchRemote({ updatedOn: lastUpdateDate });
+      if (!latestLists.length) return;
+
+      // filter lists that exist locally
+      const listsToRefresh = latestLists.filter(list =>
+        this.cidMap.has(list.cid)
+      );
+      if (!listsToRefresh.length) return;
+
+      // refresh each list
+      await Promise.all(listsToRefresh.map(list => list.fetchRemoteSpecies()));
+
+      // update last refresh date
+      appModel.data.speciesListsUpdatedAt = Date.now();
+      await appModel.save();
+
+      // eslint-disable-next-line no-console
+      console.log('📚 Collection: speciesLists refresh completed');
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('Error refreshing species lists:', error);
+    }
   }
 }
 

@@ -15,19 +15,26 @@ type Props = {
 const fetchCountrySpeciesList = async (newCountry: string) => {
   if (newCountry === 'ELSEWHERE') return;
 
-  const newCountryNormalised =
-    newCountry === 'UK' ? 'GB' : newCountry.replace('_', ': ');
-  const lists = await speciesListsCollection.fetchRemote({
-    locationCode: newCountryNormalised,
-  });
-  if (lists.length !== 1) {
-    console.error('No default country species list found for ', newCountry);
-    return;
-  }
+  try {
+    const newCountryNormalised =
+      newCountry === 'UK' ? 'GB' : newCountry.replace('_', ': ');
+    const lists = await speciesListsCollection.fetchRemote({
+      locationCode: newCountryNormalised,
+    });
 
-  const [list] = lists;
-  await list.save(true);
-  await list.fetchRemoteSpecies();
+    if (lists.length !== 1)
+      throw new Error('No default country species list found');
+
+    const [list] = lists;
+    await list.save(true);
+    await list.fetchRemoteSpecies();
+  } catch (error) {
+    console.error(
+      'Error fetching country species list for ',
+      newCountry,
+      error
+    );
+  }
 };
 
 const SelectCountry = ({ hideHeader }: Props) => {

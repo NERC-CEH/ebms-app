@@ -46,6 +46,10 @@ export type Data = ModelAttrs & {
   showCommonNamesInGuide: boolean;
   showCopyHelpTip: boolean;
   transectsRefreshTimestamp: number | null;
+  /**
+   * Timestamp of last species lists automatic update.
+   */
+  speciesListsUpdatedAt?: number;
 } & SurveyDraftKeys;
 
 const defaults: Data = {

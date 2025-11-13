@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import { Button, useAlert } from '@flumens';
+import { Badge, Button, getRelativeDate, useAlert } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -69,12 +69,14 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
         <IonItem className="max-h-[73px] [--min-height:73px]">
           <div className="flex w-full items-center justify-between gap-2">
             <div className="min-w-0 flex-1">
-              <h2 className="line-clamp-2 font-bold">
+              <h2 className="line-clamp-1 font-bold">
                 {list.data.title || list.data.description}
               </h2>
-              <p className="line-clamp-1 text-sm opacity-70">
-                {list.getSize()} species
-              </p>
+
+              <div className="mt-2 flex gap-2">
+                <Badge>{`${list.getSize()}`} species</Badge>
+                <Badge>{getRelativeDate(list.updatedAt)}</Badge>
+              </div>
             </div>
 
             <Button
