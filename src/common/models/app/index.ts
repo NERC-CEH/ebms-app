@@ -25,10 +25,6 @@ export type Data = ModelAttrs & {
 
   speciesGroups: number[];
   useDayFlyingMothsOnly: boolean;
-  /**
-   * Instead of local species show all available species names when surveying.
-   */
-  useGlobalSpeciesList: boolean;
   locations: any[];
   taxonGroupFilters?: any;
   primarySurvey: any;
@@ -69,7 +65,6 @@ const defaults: Data = {
 
   speciesGroups: DEFAULT_SPECIES_GROUP,
   useDayFlyingMothsOnly: false,
-  useGlobalSpeciesList: false,
   locations: [],
 
   primarySurvey: 'precise-area',

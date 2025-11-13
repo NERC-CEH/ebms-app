@@ -56,8 +56,8 @@ const TaxonSearch = ({
   };
 
   const isPresent = (table: typeof speciesStore.table): SQL => {
-    const { country, useGlobalSpeciesList } = appModel.data;
-    if (useGlobalSpeciesList || country === 'ELSEWHERE') return sql`1`;
+    const { country } = appModel.data;
+    if (country === 'ELSEWHERE') return sql`1`;
 
     // convert UK to GB for country code
     const countryCode = country === 'UK' ? 'GB' : country;

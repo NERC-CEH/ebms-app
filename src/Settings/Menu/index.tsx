@@ -123,7 +123,6 @@ const Container = () => {
         onToggle={onToggle}
         language={appModel.data.language!}
         country={appModel.data.country!}
-        useGlobalSpeciesList={appModel.data.useGlobalSpeciesList}
         exportDatabase={exportDatabase}
         importDatabase={importDatabase}
       />

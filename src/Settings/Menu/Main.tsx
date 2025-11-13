@@ -115,7 +115,6 @@ type Props = {
   onToggle: any;
   useTraining: boolean;
   useExperiments: boolean;
-  useGlobalSpeciesList: boolean;
   sendAnalytics: boolean;
   showCommonNamesInGuide: boolean;
   isLoggedIn: boolean;
@@ -139,7 +138,6 @@ const MenuMain = ({
   language,
   country,
   showCommonNamesInGuide,
-  useGlobalSpeciesList,
   exportDatabase,
   importDatabase,
 }: Props) => {
@@ -159,8 +157,6 @@ const MenuMain = ({
   const onClearCacheDialog = () => clearCacheDialog(clearCache, alert);
   const onTrainingToggle = (checked: boolean) =>
     onToggle('useTraining', checked);
-  const onGlobalSpeciesListToggle = (checked: boolean) =>
-    onToggle('useGlobalSpeciesList', checked);
 
   const countryLabel = countries[country]?.name;
   const languageLabel = languages[language]?.name;
@@ -216,15 +212,6 @@ const MenuMain = ({
               <T>{countryLabel}</T>
             </IonLabel>
           </IonItem>
-          <Toggle
-            prefix={<IonIcon src={butterflyIcon} className="size-6" />}
-            label="Use global species lists"
-            defaultSelected={useGlobalSpeciesList}
-            onChange={onGlobalSpeciesListToggle}
-          />
-          <InfoMessage inline>
-            Don't restrict to local species names in survey searches.
-          </InfoMessage>
           <Toggle
             prefix={<IonIcon src={butterflyIcon} className="size-6" />}
             label="Show common names in guide"
