@@ -4,7 +4,6 @@ import { z } from 'zod';
 import { Model, ModelAttrs } from '@flumens';
 import config from 'common/config';
 import { db, speciesListsStore } from './store';
-import userModel from './user';
 
 const dtoSchema = z.object({
   id: z.number(),
@@ -65,7 +64,8 @@ export default class SpeciesList extends Model<Data> {
     this.remote = observable({
       synchronising: false,
       url: config.backend.indicia.url,
-      getAccessToken: () => userModel.getAccessToken(),
+      getAccessToken: () =>
+        Promise.resolve(process.env.APP_WAREHOUSE_ANON_TOKEN!),
     });
   }
 

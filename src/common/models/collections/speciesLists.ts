@@ -7,7 +7,6 @@ import {
   isAxiosNetworkError,
 } from '@flumens';
 import config from 'common/config';
-import userModel from 'models/user';
 import appModel from '../app';
 import SpeciesList, { DTO } from '../speciesList';
 import { speciesListsStore } from '../store';
@@ -46,7 +45,8 @@ class SpeciesListCollection extends Collection<SpeciesList> {
     this.remote = observable({
       synchronising: false,
       url: config.backend.indicia.url,
-      getAccessToken: () => userModel.getAccessToken(),
+      getAccessToken: () =>
+        Promise.resolve(process.env.APP_WAREHOUSE_ANON_TOKEN!),
     });
 
     // refresh installed species lists in the background
@@ -143,7 +143,7 @@ class SpeciesListCollection extends Collection<SpeciesList> {
   }
 
   async refreshInstalledLists() {
-    if (!userModel.isLoggedIn() || !device.isOnline) return;
+    if (!device.isOnline) return;
 
     try {
       // get last update date or default to yesterday

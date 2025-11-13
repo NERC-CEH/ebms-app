@@ -9,9 +9,9 @@ dotenv.config({ path: '../../../../.env' }); // eslint-disable-line
 
 const warehouseURL = 'https://warehouse1.indicia.org.uk';
 
-const { ANON_WAREHOUSE_TOKEN } = process.env;
-if (!ANON_WAREHOUSE_TOKEN) {
-  throw new Error('ANON_WAREHOUSE_TOKEN is missing from env.');
+const { APP_WAREHOUSE_ANON_TOKEN } = process.env;
+if (!APP_WAREHOUSE_ANON_TOKEN) {
+  throw new Error('APP_WAREHOUSE_ANON_TOKEN is missing from env.');
 }
 
 const drive =
@@ -38,7 +38,7 @@ async function fetchSpecies(listID: any) {
     method: 'GET',
     url: `${warehouseURL}/index.php/services/rest/reports/projects/ebms/ebms_app_species_list.xml?taxon_list_id=${listID}&limit=10000000`,
     headers: {
-      Authorization: `Bearer ${ANON_WAREHOUSE_TOKEN}`,
+      Authorization: `Bearer ${APP_WAREHOUSE_ANON_TOKEN}`,
     },
   });
 
