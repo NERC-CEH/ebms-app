@@ -235,7 +235,7 @@ const TaxonController = () => {
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}
-          speciesGroups={sample.metadata.speciesGroups}
+          speciesGroups={sample.data.speciesGroups}
           useDayFlyingMothsOnly={sample.metadata.useDayFlyingMothsOnly}
         />
       </Main>

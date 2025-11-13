@@ -172,6 +172,12 @@ const MenuMain = ({
           <T>Surveying</T>
         </h3>
         <div className="rounded-list">
+          <IonItem routerLink="/settings/species-lists" detail>
+            <IonLabel>
+              <T>Species Lists</T>
+            </IonLabel>
+            <IonIcon icon={butterflyIcon} size="small" slot="start" />
+          </IonItem>
           <IonItem routerLink="/settings/primary-survey" detail>
             <IonLabel>
               <T>Primary Survey</T>

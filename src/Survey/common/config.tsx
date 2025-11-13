@@ -15,7 +15,6 @@ import groups from 'common/data/groups';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import windIcon from 'common/images/wind.svg';
 import Occurrence, { Taxon } from 'common/models/occurrence';
-import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
 import Media from 'models/media';
 import Sample from 'models/sample';
 
@@ -102,100 +101,13 @@ export const temperatureAttr = {
   remote: { id: 1660, values: temperatureValues },
 };
 
-const DAY_FLYING_MOTHS = 'day-flying-moths';
-const MOTHS = 'moths';
-
-const speciesGroupsValues = [
-  { value: 'moths', id: 20647 },
-  { value: 'butterflies', id: 20648 },
-  { value: 'dragonflies', id: 20649 },
-  { value: 'bumblebees', id: 20650 },
-];
-
 export const speciesGroupsAttr = {
-  pageProps: {
-    attrProps: {
-      input: 'checkbox',
-      set: (newValues: string[], model: Sample) => {
-        const hasMothGroup = newValues.includes(MOTHS);
-        const hasDayFlyingMothGroup = newValues.includes(DAY_FLYING_MOTHS);
-
-        // eslint-disable-next-line no-param-reassign
-        newValues = newValues.filter(
-          (group: string) => group !== DAY_FLYING_MOTHS
-        );
-
-        appModel.data.useDayFlyingMothsOnly =
-          hasMothGroup && hasDayFlyingMothGroup;
-
-        // eslint-disable-next-line no-param-reassign
-        model.metadata.useDayFlyingMothsOnly =
-          hasMothGroup && hasDayFlyingMothGroup;
-
-        // eslint-disable-next-line no-param-reassign
-        model.metadata.speciesGroups = newValues;
-        model.save();
-
-        appModel.data.speciesGroups = model.metadata.speciesGroups;
-        appModel.save();
-
-        if (!appModel.data.speciesGroups.length) {
-          // eslint-disable-next-line no-param-reassign
-          model.metadata.speciesGroups = DEFAULT_SPECIES_GROUP;
-          model.save();
-        }
-      },
-
-      get: (model: Sample) => {
-        const speciesGroups = [...model.metadata.speciesGroups!];
-        if (model.metadata.useDayFlyingMothsOnly) {
-          speciesGroups.push(DAY_FLYING_MOTHS);
-        }
-
-        return speciesGroups;
-      },
-
-      inputProps: (model: Sample) => {
-        const groupOption = ([value, { label, prefix }]: any) => {
-          const disabled = model.metadata.saved;
-
-          return { prefix, value, label, disabled };
-        };
-
-        const options: any = Object.entries(groups).map(groupOption);
-
-        if (model.metadata.speciesGroups?.includes('moths')) {
-          options.splice(2, 0, {
-            value: DAY_FLYING_MOTHS,
-            label: 'Use only day-flying moths',
-            className: 'w-[85%] ml-auto',
-            disabled: model.metadata.saved,
-          });
-        }
-
-        return { options };
-      },
-    },
-  },
-
   remote: {
     id: 1735,
-    values(speciesGroups: any, submission: any) {
-      // eslint-disable-next-line
-      submission.values = {
-        ...submission.values,
-      };
-
-      const bySameGroup = (spGroupObject: any) =>
-        speciesGroups.includes(spGroupObject.value);
-      const extractID = (obj: any) => obj.id;
-
-      const speciesGroupsID = speciesGroupsValues
-        .filter(bySameGroup)
-        .map(extractID);
-
-      // eslint-disable-next-line no-param-reassign
-      submission.values['smpAttr:1735'] = speciesGroupsID;
+    values(speciesGroups: number[]) {
+      return Object.values(groups)
+        .filter(({ id }) => speciesGroups.includes(id))
+        .map(({ attributeId }) => attributeId);
     },
   },
 };
@@ -490,9 +402,4 @@ export interface Survey extends SampleConfig {
    * Remote website survey edit page path.
    */
   webForm?: string;
-
-  /** ? */
-  metadata?: {
-    speciesGroups: any;
-  };
 }

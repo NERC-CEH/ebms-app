@@ -34,20 +34,6 @@ export const speciesListGroupImages = {
 
 const PAINTED_LADY_OCCURRENCE = 432422;
 
-export interface SpeciesGroup {
-  id: number;
-  label: string;
-  value: string;
-  disabled?: boolean;
-}
-
-export interface SpeciesGroups {
-  butterflies: SpeciesGroup;
-  moths: SpeciesGroup;
-  bumblebees: SpeciesGroup;
-  dragonflies: SpeciesGroup;
-}
-
 export type Taxon = {
   version?: string;
   machineInvolvement?: MachineInvolvement;
@@ -136,7 +122,9 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
     return [taxon[taxon.found_in_name], taxon.scientific_name];
   }
 
-  isDragonflyTaxon = () => this.data.taxon.group === DRAGONFLY_GROUP;
+  isDragonflyTaxon = () =>
+    this.data.taxon.group === DRAGONFLY_GROUP ||
+    this.data.taxon.group === speciesGroups.dragonflies.listId; // backwards compatibility, remove later
 
   async identify() {
     const identifyAllImages = (media: Media) => media.identify();

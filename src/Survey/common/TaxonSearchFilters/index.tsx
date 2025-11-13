@@ -12,9 +12,9 @@ type Props = {
 };
 
 const Header = ({ sample }: Props) => {
-  if (!sample.metadata.speciesGroups) {
+  if (!sample.data.speciesGroups) {
     // eslint-disable-next-line no-param-reassign
-    sample.metadata.speciesGroups = appModel.data.speciesGroups;
+    sample.data.speciesGroups = appModel.data.speciesGroups;
     sample.save();
   }
 
@@ -22,8 +22,7 @@ const Header = ({ sample }: Props) => {
 
   const toggleModal = () => setShowModal(!showModal);
 
-  const { speciesGroups } = sample.metadata;
-  const speciesGroupCount = sample.metadata.speciesGroups.length;
+  const { speciesGroups } = sample.data;
 
   const isMultiSpeciesGroupSelected = speciesGroups.length > 1;
 
@@ -33,7 +32,6 @@ const Header = ({ sample }: Props) => {
         toggleModal={toggleModal}
         showModal={showModal}
         sample={sample}
-        appModel={appModel}
       />
 
       <Button
@@ -44,7 +42,7 @@ const Header = ({ sample }: Props) => {
       >
         <IonLabel>
           <T>Groups</T>{' '}
-          {isMultiSpeciesGroupSelected && <b>({speciesGroupCount})</b>}
+          {isMultiSpeciesGroupSelected && <b>({speciesGroups.length})</b>}
         </IonLabel>
       </Button>
     </>

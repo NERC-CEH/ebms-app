@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { Page, Main, Header, useAlert, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
+import groups from 'common/data/groups';
 import Media from 'models/media';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
@@ -151,7 +152,7 @@ const Taxon = () => {
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}
-          speciesGroups={['moths']}
+          speciesGroups={[groups.moths.id]}
           useDayFlyingMothsOnly={false}
         />
       </Main>

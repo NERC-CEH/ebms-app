@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import { Main, Attr } from '@flumens';
+import { Main, Checkbox, InfoMessage, CheckboxOption } from '@flumens';
 import {
   IonButtons,
   IonToolbar,
@@ -9,31 +9,64 @@ import {
   IonButton,
   IonModal,
 } from '@ionic/react';
-import appModel, { AppModel } from 'models/app';
+import groups from 'common/data/groups';
+import appModel, { DEFAULT_SPECIES_GROUP } from 'models/app';
 import Sample from 'models/sample';
 import './styles.scss';
+
+const DAY_FLYING_MOTHS = 'day-flying-moths';
 
 type Props = {
   toggleModal: () => void;
   showModal: boolean;
   sample: Sample;
-  appModel: AppModel;
 };
 
 const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
-  if (!sample.metadata.speciesGroups) {
+  const onChange = (newValuesArg: string[]) => {
     // eslint-disable-next-line no-param-reassign
-    sample.metadata.speciesGroups = appModel.data.speciesGroups;
+    const newValues: number[] = newValuesArg
+      .filter((group: string) => group !== DAY_FLYING_MOTHS)
+      .map(id => Number.parseInt(id, 10));
+
+    const hasDayFlyingMothGroup = newValuesArg.includes(DAY_FLYING_MOTHS);
+    const hasMothGroup = newValues.includes(groups.moths.id);
+
+    appModel.data.useDayFlyingMothsOnly = hasMothGroup && hasDayFlyingMothGroup;
+
+    // eslint-disable-next-line no-param-reassign
+    sample.metadata.useDayFlyingMothsOnly =
+      hasMothGroup && hasDayFlyingMothGroup;
+
+    // eslint-disable-next-line no-param-reassign
+    sample.data.speciesGroups = newValues;
     sample.save();
+
+    // keep in global app model for next samples
+    appModel.data.speciesGroups = sample.data.speciesGroups;
+    appModel.save();
+
+    if (!appModel.data.speciesGroups.length) {
+      // eslint-disable-next-line no-param-reassign
+      sample.data.speciesGroups = DEFAULT_SPECIES_GROUP;
+      sample.save();
+    }
+  };
+
+  const value = sample.data.speciesGroups.map(String) || [];
+  if (sample.metadata.useDayFlyingMothsOnly) value.push(DAY_FLYING_MOTHS);
+
+  const options: CheckboxOption[] = Object.values(groups).map(
+    ({ id, prefix, label }) => ({ value: `${id}`, prefix, label })
+  );
+
+  if (sample.data.speciesGroups?.includes(groups.moths.id)) {
+    options.splice(2, 0, {
+      value: DAY_FLYING_MOTHS,
+      label: 'Use only day-flying moths',
+      className: 'w-[85%] ml-auto',
+    });
   }
-
-  const survey = sample.getSurvey();
-  if (!survey.metadata)
-    throw new Error(
-      'survey.metadata.speciesGroups is missing for FiltersModal'
-    );
-
-  const { attrProps } = survey.metadata.speciesGroups.pageProps;
 
   return (
     <IonModal isOpen={showModal}>
@@ -49,13 +82,17 @@ const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
+
       <Main fullscreen>
-        <Attr
-          metadata="speciesGroups"
-          model={sample}
-          {...attrProps}
+        <InfoMessage className="blue mx-3">
+          Please select the species groups that you always record.
+        </InfoMessage>
+
+        <Checkbox
           className="mt-5 px-3"
-          info="Please select the species groups that you always record."
+          onChange={onChange}
+          options={options}
+          value={value}
         />
       </Main>
     </IonModal>

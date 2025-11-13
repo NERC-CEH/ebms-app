@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 
 /* eslint-disable @getify/proper-arrows/name */
-import names from 'common/data/commonNames/index.json';
 import bg_BG from './interface/bg_BG.po';
 import ca_ES from './interface/ca_ES.po';
 import cs_CZ from './interface/cs_CZ.po';
@@ -59,16 +58,6 @@ import species_sr_RS from './species/sr.po';
 import species_sv_SE from './species/sv_SE.po';
 import species_tr_TR from './species/tr_TR.po';
 
-const flatNames = { ...names };
-Object.keys(flatNames).forEach(lang => {
-  flatNames[lang] = flatNames[lang].reduce((agg, term) => {
-    const { scientific_name, common_name } = term;
-    agg[scientific_name] = common_name; // eslint-disable-line
-
-    return agg;
-  }, {});
-});
-
 // Adding some context, reference and other in po files:
 
 // #: Some reference!!
@@ -104,141 +93,113 @@ export default {
   en: {
     interface: rawToKeyVal(en),
     species: rawToKeyVal(species_en),
-    names: flatNames.en,
   },
   'lt-LT': {
     interface: rawToKeyVal(lt_LT),
     species: rawToKeyVal(species_lt_LT),
-    names: flatNames['lt-LT'],
   },
   'es-ES': {
     interface: rawToKeyVal(es_ES),
     species: rawToKeyVal(species_es_ES),
-    names: flatNames['es-ES'],
   },
   'sv-SE': {
     interface: rawToKeyVal(sv_SE),
     species: rawToKeyVal(species_sv_SE),
-    names: flatNames['sv-SE'],
   },
   'fi-FI': {
     interface: rawToKeyVal(fi_FI),
     species: rawToKeyVal(species_fi_FI),
-    names: flatNames['fi-FI'],
   },
   'hr-HR': {
     interface: rawToKeyVal(hr_HR),
     species: rawToKeyVal(species_hr_HR),
-    names: flatNames['hr-HR'],
   },
   'nl-NL': {
     interface: rawToKeyVal(nl_NL),
     species: rawToKeyVal(species_nl_NL),
-    names: flatNames['nl-NL'],
   },
   'fr-FR': {
     interface: rawToKeyVal(fr_FR),
     species: rawToKeyVal(species_fr_FR),
-    names: flatNames['fr-FR'],
   },
   'ru-RU': {
     interface: rawToKeyVal(ru_RU),
     species: rawToKeyVal(species_ru_RU),
-    names: flatNames['ru-RU'],
   },
   'pt-PT': {
     interface: rawToKeyVal(pt_PT),
     species: rawToKeyVal(species_pt_PT),
-    names: flatNames['pt-PT'],
   },
   'de-DE': {
     interface: rawToKeyVal(de_DE),
     species: rawToKeyVal(species_de_DE),
-    names: flatNames['de-DE'],
   },
   'it-IT': {
     interface: rawToKeyVal(it_IT),
     species: rawToKeyVal(species_it_IT),
-    names: flatNames['it-IT'],
   },
   'cs-CZ': {
     interface: rawToKeyVal(cs_CZ),
     species: rawToKeyVal(species_cs_CZ),
-    names: flatNames['cs-CZ'],
   },
   'bg-BG': {
     interface: rawToKeyVal(bg_BG),
     species: rawToKeyVal(species_bg_BG),
-    names: flatNames['bg-BG'],
   },
   'sr-RS': {
     interface: rawToKeyVal(sr_RS),
     species: rawToKeyVal(species_sr_RS),
-    names: flatNames['sr-RS'],
   },
   'sl-SI': {
     interface: rawToKeyVal(sl_SI),
     species: rawToKeyVal(species_sl_SI),
-    names: flatNames['sl-SI'],
   },
   'tr-TR': {
     interface: rawToKeyVal(tr_TR),
     species: rawToKeyVal(species_tr_TR),
-    names: flatNames['tr-TR'],
   },
   'pl-PL': {
     interface: rawToKeyVal(pl_PL),
     species: rawToKeyVal(species_pl_PL),
-    names: flatNames['pl-PL'],
   },
   'ro-RO': {
     interface: rawToKeyVal(ro_RO),
     species: rawToKeyVal(species_ro_RO),
-    names: flatNames['ro-RO'],
   },
   'ca-ES': {
     interface: rawToKeyVal(ca_ES),
     species: rawToKeyVal(species_ca_ES),
-    names: flatNames['ca-ES'],
   },
   'gl-ES': {
     interface: rawToKeyVal(gl_ES),
     species: rawToKeyVal(species_gl_ES),
-    names: flatNames['gl-ES'],
   },
   'da-DK': {
     interface: rawToKeyVal(da_DK),
     species: rawToKeyVal(species_da_DK),
-    names: flatNames['da-DK'],
   },
   'ja-JP': {
     interface: rawToKeyVal(ja_JP),
     species: rawToKeyVal(species_ja_JP),
-    names: flatNames['ja-JP'],
   },
   'hu-HU': {
     interface: rawToKeyVal(hu_HU),
     species: rawToKeyVal(species_hu_HU),
-    names: flatNames['hu-HU'],
   },
   'sk-SK': {
     interface: rawToKeyVal(sk_SK),
     species: rawToKeyVal(species_sk_SK),
-    names: flatNames['sk-SK'],
   },
   'el-GR': {
     interface: rawToKeyVal(el_GR),
     species: rawToKeyVal(species_el_GR),
-    names: flatNames['el-GR'],
   },
   'mi-NZ': {
     interface: rawToKeyVal(mi_NZ),
     species: rawToKeyVal(species_mi_NZ),
-    names: flatNames['el-GR'],
   },
   'sq-AL': {
     interface: rawToKeyVal(sq_AL),
     species: rawToKeyVal(species_sq_AL),
-    names: flatNames['sq-AL'],
   },
 };

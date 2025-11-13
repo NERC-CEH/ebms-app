@@ -12,7 +12,7 @@ import {
   ElasticSample,
 } from '@flumens';
 import config from 'common/config';
-import groups from 'common/data/groups';
+import groups, { SpeciesGroup } from 'common/data/groups';
 import appModel from 'models/app';
 import userModel from 'models/user';
 import areaSurvey from 'Survey/AreaCount/config';
@@ -22,7 +22,7 @@ import transectSurvey from 'Survey/Transect/config';
 import { Survey } from 'Survey/common/config';
 import { Data as LocationAttributes } from '../location';
 import Media from '../media';
-import Occurrence, { SpeciesGroup } from '../occurrence';
+import Occurrence from '../occurrence';
 import { samplesStore } from '../store';
 import GPSExtension, { calculateArea } from './GPSExt';
 import VibrateExtension from './vibrateExt';
@@ -74,7 +74,7 @@ export type Data = SampleAttrs & {
   windSpeed?: any;
   reliability?: string;
   recorders?: number;
-  speciesGroups: string[];
+  speciesGroups: number[];
   group?: Group;
   site?: Site;
   privacyPrecision?: number;
@@ -133,8 +133,6 @@ type Metadata = SampleMetadata & {
    * How long the survey was paused in milliseconds.
    */
   pausedTime?: number;
-
-  speciesGroups?: any[];
 };
 
 export default class Sample extends SampleModel<Data, Metadata> {
@@ -304,85 +302,25 @@ export default class Sample extends SampleModel<Data, Metadata> {
     return isMothSurvey ? this.metadata.completedDetails : true;
   }
 
-  getSpeciesGroupList() {
-    const array: string[] = [];
-
-    const spGroups = Object.values(groups);
-    this.samples.forEach(smp => {
-      const spGroupValue = spGroups.find(
-        (group: SpeciesGroup) =>
-          group.id === smp.occurrences[0].data.taxon.group
-      )?.value;
-
-      if (!spGroupValue) return;
-
-      array.push(spGroupValue);
-    });
-
-    const uniqueSpeciesGroupList = Array.from(new Set(array));
-
-    const addDisableProperty = (value: SpeciesGroup) => {
-      const disabled = uniqueSpeciesGroupList.includes(value.value);
-
-      return {
-        ...value,
-        ...(disabled && { disabled }),
-      };
-    };
-
-    const existingSpeciesGroupsInSample = (group: SpeciesGroup) => {
-      const speciesGr = this.metadata?.speciesGroups?.length
-        ? this.metadata?.speciesGroups
-        : appModel.data.speciesGroups;
-
-      const isUniqueGroup = uniqueSpeciesGroupList.includes(group.value);
-      const isDuplicate = speciesGr.includes(group.value);
-
-      if (isUniqueGroup && !isDuplicate) {
-        return true;
-      }
-
-      return speciesGr.includes(group.value);
-    };
-
-    const byDisabledProperty = (groupA: SpeciesGroup, groupB: SpeciesGroup) => {
-      if (!!groupB?.disabled < !!groupA?.disabled) {
-        return -1;
-      }
-      if (!!groupB?.disabled > !!groupA?.disabled) {
-        return 1;
-      }
-
-      return 0;
-    };
-
-    return [...Object.values(groups)]
-      .filter(existingSpeciesGroupsInSample)
-      .map(addDisableProperty)
-      .sort(byDisabledProperty);
-  }
-
   setMissingSpeciesGroups() {
     if (!this.data.speciesGroups) {
       this.data.speciesGroups = [];
       this.save();
     }
 
-    const formattedGroups = Object.values(groups);
-
     const checkIfNewSpeciesGroupsAreAdded = (smp: Sample) => {
       const byTaxonGroup = (group: SpeciesGroup) =>
-        group.id === smp.occurrences[0].data.taxon.group;
-      const speciesGroups = formattedGroups.find(byTaxonGroup);
-
+        group.id === smp.occurrences[0].data.taxon.group ||
+        group.listId === smp.occurrences[0].data.taxon.group; // backward compatibility, some old samples use listId
+      const speciesGroups = Object.values(groups).find(byTaxonGroup);
       if (!speciesGroups) return;
 
       const missingSpeciesGroup = !this.data.speciesGroups.includes(
-        speciesGroups.value
+        speciesGroups.id
       );
 
       if (missingSpeciesGroup) {
-        this.data.speciesGroups.push(speciesGroups.value);
+        this.data.speciesGroups.push(speciesGroups.id);
       }
     };
 
@@ -393,7 +331,7 @@ export default class Sample extends SampleModel<Data, Metadata> {
   setPreviousSpeciesGroups() {
     if (this.metadata.survey === 'moth') return;
 
-    this.metadata.speciesGroups = appModel.data.speciesGroups;
+    this.data.speciesGroups = appModel.data.speciesGroups;
     this.metadata.useDayFlyingMothsOnly = appModel.data.useDayFlyingMothsOnly;
     this.save();
   }

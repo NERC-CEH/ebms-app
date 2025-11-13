@@ -70,6 +70,7 @@ const config: Survey = {
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,
     comment: commentAttr,
+    speciesGroups: speciesGroupsAttr,
 
     recorder: {
       pageProps: {
@@ -80,10 +81,6 @@ const config: Survey = {
       },
       remote: { id: 1384 },
     },
-  },
-
-  metadata: {
-    speciesGroups: speciesGroupsAttr,
   },
 
   smp: {
@@ -210,7 +207,6 @@ const config: Survey = {
       metadata: {
         survey_id: config.id,
         survey: config.name,
-        speciesGroups: [],
       },
       attrs: {
         surveyId: config.id,
@@ -220,6 +216,7 @@ const config: Survey = {
         sampleMethodId: 22,
         surveyStartTime: now,
         recorder,
+        speciesGroups: appModel.data.speciesGroups,
       },
     });
 

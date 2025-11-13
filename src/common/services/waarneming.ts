@@ -1,6 +1,9 @@
 import axios, { AxiosResponse } from 'axios';
+import { and, eq } from 'drizzle-orm';
+import { QueryBuilder } from 'drizzle-orm/sqlite-core';
 import config from 'common/config';
-import speciesCommonNamesData from 'common/data/commonNames/index.json';
+import { getLanguageIso } from 'common/config/languages';
+import { speciesStore } from 'common/models/store';
 import appModel from 'models/app';
 import userModel from 'models/user';
 
@@ -30,19 +33,28 @@ type ResultWithCommonName = Result & {
   common_name?: string;
 };
 
-function getCommonName(sp: Result) {
-  const { language } = appModel.data;
-  const speciesDataBySpecificLanguage = (speciesCommonNamesData as any)[
-    language as any
-  ];
-  const byId = ({ preferredId, scientific_name }: any) =>
-    preferredId === parseInt(sp.taxa_taxon_list_id, 10) ||
-    scientific_name === sp.taxon;
-  const taxon = speciesDataBySpecificLanguage?.find(byId);
-  if (!taxon) return {} as any;
+async function getCommonName(sp: Result) {
+  const language = getLanguageIso(appModel.data.language);
+
+  const query: any = new QueryBuilder()
+    .select()
+    .from(speciesStore.table)
+    .where(
+      and(
+        eq(
+          speciesStore.table.preferred_taxa_taxon_list_id,
+          parseInt(sp.taxa_taxon_list_id, 10)
+        ),
+        eq(speciesStore.table.language_iso, language)
+      )
+    )
+    .limit(1);
+
+  const [taxon] = await speciesStore.db.query(query.toSQL());
+  if (!taxon) return {};
 
   return {
-    common_name: taxon.common_name,
+    common_name: taxon.taxon,
     found_in_name: 'common_name',
   };
 }
@@ -71,7 +83,9 @@ export default async function identify(
 
   try {
     const response: AxiosResponse<Result[]> = await axios(options);
+
     const withValidData = (sp: Result) => sp.taxa_taxon_list_id && sp.taxon;
+
     const normalizeBaseValues = (sp: Result) => ({
       ...sp,
       warehouse_id: parseInt(sp.taxa_taxon_list_id, 10),
@@ -79,11 +93,17 @@ export default async function identify(
       found_in_name: 'scientific_name',
     });
 
-    const attachCommonName = (sp: Result) => ({ ...sp, ...getCommonName(sp) });
-    const suggestions = response.data
+    const normalized = response.data
       .filter(withValidData)
-      .map(normalizeBaseValues)
-      .map(attachCommonName);
+      .map(normalizeBaseValues);
+
+    // attach common names asynchronously
+    const attachCommonName = async (sp: any) => ({
+      ...sp,
+      ...(await getCommonName(sp)),
+    });
+
+    const suggestions = await Promise.all(normalized.map(attachCommonName));
 
     return suggestions;
   } catch (e: any) {

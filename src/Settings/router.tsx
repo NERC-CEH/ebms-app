@@ -4,6 +4,7 @@ import Language from './Language';
 import Menu from './Menu';
 import MothSurvey from './MothSurvey';
 import PrimarySurvey from './PrimarySurvey';
+import SpeciesList from './SpeciesList';
 
 export default [
   <Route path="/settings/menu" key="/settings/menu" exact component={Menu} />,
@@ -30,5 +31,11 @@ export default [
     key="/settings/moth-survey"
     exact
     component={MothSurvey}
+  />,
+  <Route
+    path="/settings/species-lists"
+    key="/settings/species-lists"
+    exact
+    component={SpeciesList}
   />,
 ];

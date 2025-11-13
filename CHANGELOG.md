@@ -1,3 +1,7 @@
+## 1.31.0
+
+Added dynamic species lists.
+
 ## 1.30.0
 
 Added Ecuador.

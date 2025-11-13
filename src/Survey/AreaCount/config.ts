@@ -107,10 +107,6 @@ const survey: Survey = {
     },
   },
 
-  metadata: {
-    speciesGroups: speciesGroupsAttr,
-  },
-
   smp: {
     attrs: {
       location: {
@@ -215,7 +211,6 @@ const survey: Survey = {
         survey_id: surveyId || survey.id,
         survey: surveyName || survey.name,
         pausedTime: 0,
-        speciesGroups: [],
       },
       attrs: {
         surveyId: surveyId || survey.id,
@@ -226,7 +221,7 @@ const survey: Survey = {
         input_form: survey.webForm,
         device: isPlatform('android') ? 'android' : 'ios',
         app_version: config.version,
-        speciesGroups: [],
+        speciesGroups: appModel.data.speciesGroups,
         surveyStartTime: null,
         location: {},
         temperature: '',

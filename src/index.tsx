@@ -10,6 +10,7 @@ import * as SentryBrowser from '@sentry/browser';
 import config from 'common/config';
 import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
+import speciesLists from 'common/models/collections/speciesLists';
 import migrate from 'common/models/migrate';
 import { db } from 'common/models/store';
 import appModel from 'models/app';
@@ -44,6 +45,7 @@ mobxConfig({ enforceActions: 'never' });
   await samples.fetch();
   await locations.fetch();
   await groups.fetch();
+  await speciesLists.fetch();
 
   appModel.data.sendAnalytics &&
     SentryBrowser.init({

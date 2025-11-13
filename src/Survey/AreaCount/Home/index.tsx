@@ -7,19 +7,17 @@ import {
   Page,
   useAlert,
   useToast,
-  Attr,
   useSample,
   useRemoteSample,
+  Checkbox,
+  CheckboxOption,
 } from '@flumens';
 import { NavContext } from '@ionic/react';
 import distance from '@turf/distance';
+import groups, { SpeciesGroup } from 'common/data/groups';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
-import Occurrence, {
-  SpeciesGroup,
-  Taxon,
-  doesShallowTaxonMatch,
-} from 'models/occurrence';
+import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample, { AreaCountLocation, useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import { useDeleteConfirmation } from '../Occurrence/Species';
@@ -29,6 +27,56 @@ import Main from './Main';
 const METERS_THRESHOLD = 200;
 
 const DUMMY_ARRAY_OF_FIVE = [1, 2, 3, 4, 5];
+
+type SpeciesGroupWithDisabled = SpeciesGroup & { disabled: boolean };
+
+const getSpeciesGroupList = (sample: Sample): SpeciesGroupWithDisabled[] => {
+  // get unique species groups from sample occurrences
+  const groupIds: number[] = [];
+  sample.samples.forEach(smp => {
+    const spGroupValue = Object.values(groups).find(
+      group =>
+        group.id === smp.occurrences[0].data.taxon.group ||
+        group.listId === smp.occurrences[0].data.taxon.group // for backward compatibility, some old samples might have listId stored
+    )?.id;
+    if (!spGroupValue) return;
+
+    groupIds.push(spGroupValue);
+  });
+
+  const uniqueGroupIds = Array.from(new Set(groupIds));
+
+  const addDisableProperty = (value: SpeciesGroup) => ({
+    ...value,
+    disabled: uniqueGroupIds.includes(value.id),
+  });
+
+  const existingSpeciesGroupsInSample = (group: SpeciesGroup) => {
+    const speciesGroups = sample.data?.speciesGroups?.length
+      ? sample.data?.speciesGroups
+      : appModel.data.speciesGroups;
+
+    const isUniqueGroup = uniqueGroupIds.includes(group.id);
+    const isDuplicate = speciesGroups.includes(group.id);
+    if (isUniqueGroup && !isDuplicate) return true;
+
+    return speciesGroups.includes(group.id);
+  };
+
+  const byDisabledProperty = (
+    groupA: SpeciesGroupWithDisabled,
+    groupB: SpeciesGroupWithDisabled
+  ) => {
+    if (!!groupB?.disabled < !!groupA?.disabled) return -1;
+    if (!!groupB?.disabled > !!groupA?.disabled) return 1;
+    return 0;
+  };
+
+  return Object.values(groups)
+    .filter(existingSpeciesGroupsInSample)
+    .map(addDisableProperty)
+    .sort(byDisabledProperty);
+};
 
 const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
@@ -85,73 +133,54 @@ function byCreateTime(model1: Sample, model2: Sample) {
   return date2.getTime() - date1.getTime();
 }
 
-function showSpeciesGroupList(
-  sample: Sample,
-  alert: any,
-  speciesGroups: SpeciesGroup
-) {
-  let lastSpeciesGroup: string[];
+function useShowSpeciesGroupList(sample?: Sample) {
+  const alert = useAlert();
 
-  const showSpeciesGroupDialog = (resolve: (param: boolean) => void) => {
-    alert({
-      header: 'Which species groups have you counted?',
-      cssClass: 'speciesGroupAlert',
-      message: (
-        <Attr
-          attr="speciesGroups"
-          model={sample}
-          input="checkbox"
-          set={(newValues: string[], model: Sample) => {
-            // eslint-disable-next-line no-param-reassign
-            model.data.speciesGroups = newValues;
-            model.save();
+  const showSpeciesGroupList = (speciesGroups: SpeciesGroupWithDisabled[]) => {
+    if (!sample) return;
 
-            if (model.data.speciesGroups.length) {
-              lastSpeciesGroup = newValues;
+    const groupList = speciesGroups.map(g => `${g.id}`);
+
+    // eslint-disable-next-line consistent-return
+    return new Promise<null | number[]>(resolve => {
+      const options: CheckboxOption[] = speciesGroups.map(
+        ({ id, prefix, label, disabled }) => ({
+          value: `${id}`,
+          prefix,
+          label,
+          isDisabled: disabled,
+        })
+      );
+
+      alert({
+        header: 'Which species groups have you counted?',
+        cssClass: 'speciesGroupAlert',
+        message: (
+          <Checkbox
+            className="px-3"
+            onChange={(newValue: any) =>
+              groupList.splice(0, groupList.length, ...newValue)
             }
+            options={options}
+            defaultValue={groupList}
+          />
+        ),
 
-            if (!model.data.speciesGroups.length) {
-              // eslint-disable-next-line no-param-reassign, prefer-destructuring
-              model.data.speciesGroups = lastSpeciesGroup;
-              model.save();
-            }
-          }}
-          get={(model: Sample) => [...model.data.speciesGroups]}
-          inputProps={{ options: speciesGroups }}
-        />
-      ),
-
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => resolve(false),
-        },
-
-        {
-          text: 'Confirm',
-          role: 'primary',
-          handler: () => resolve(true),
-        },
-      ],
+        buttons: [
+          { text: 'Cancel', role: 'cancel', handler: resolve },
+          {
+            text: 'Confirm',
+            handler: () => resolve(groupList.map(g => Number.parseInt(g, 10))),
+          },
+        ],
+      });
     });
   };
 
-  return new Promise(showSpeciesGroupDialog);
+  return showSpeciesGroupList;
 }
 
-const shouldShowSpeciesGroupDialog = (groups: SpeciesGroup[]) => {
-  if (groups.length !== 1 && !groups.every((gr: SpeciesGroup) => gr.disabled)) {
-    if (groups.length) {
-      return true;
-    }
-  }
-
-  return false;
-};
-
 const HomeController = () => {
-  const alert = useAlert();
   const { t } = useTranslation();
 
   const { navigate } = useContext(NavContext);
@@ -163,6 +192,8 @@ const HomeController = () => {
 
   let { sample } = useSample<Sample>();
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
+
+  const promptSpeciesGroupList = useShowSpeciesGroupList(sample);
 
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
@@ -231,24 +262,25 @@ const HomeController = () => {
     navigate(`/home/user-surveys`, 'root');
   };
 
-  const showSpeciesGroupConfirmationDialog = (speciesGroups: any) =>
-    showSpeciesGroupList(sample, alert, speciesGroups);
-
   const _processDraft = async () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    if (!sample.isPreciseSingleSpeciesSurvey()) {
-      const speciesGroups = sample.getSpeciesGroupList();
-      const extractValue = (group: SpeciesGroup) => group.value;
-      // eslint-disable-next-line no-param-reassign
-      sample.data.speciesGroups = speciesGroups.map(extractValue);
+    const checkSpeciesGroups = !sample.isPreciseSingleSpeciesSurvey();
+    if (checkSpeciesGroups) {
+      const speciesGroups = getSpeciesGroupList(sample);
+      sample.data.speciesGroups = speciesGroups.map(({ id }) => id); // doing it here because if disabled prompt won't run
       sample.save();
 
-      if (shouldShowSpeciesGroupDialog(speciesGroups)) {
-        const speciesGroupConfirmationDialog =
-          await showSpeciesGroupConfirmationDialog(speciesGroups);
-        if (!speciesGroupConfirmationDialog) return;
+      const showSpeciesGroupPrompt =
+        speciesGroups.length > 1 &&
+        !speciesGroups.every(({ disabled }) => disabled);
+      if (showSpeciesGroupPrompt) {
+        const newGroups = await promptSpeciesGroupList(speciesGroups);
+        if (!newGroups) return;
+
+        sample.data.speciesGroups = newGroups;
+        sample.save();
       }
     }
 

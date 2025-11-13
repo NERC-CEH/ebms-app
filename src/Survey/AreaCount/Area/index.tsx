@@ -134,7 +134,7 @@ const AreaController = () => {
         media,
       });
       await newSite.saveRemote();
-      await group.addRemoteLocation(newSite.id);
+      await group.addRemoteLocation(newSite.id!);
       await refreshLocations();
 
       toast.success('Successfully saved a location.');

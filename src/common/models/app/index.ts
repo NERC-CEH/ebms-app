@@ -2,6 +2,7 @@ import { observable } from 'mobx';
 import { Model, ModelAttrs } from '@flumens';
 import { CountryCode } from 'common/config/countries';
 import { LanguageCode } from 'common/config/languages';
+import groups from 'common/data/groups';
 import { mainStore } from '../store';
 import PastLocationsExtension from './pastLocExt';
 
@@ -12,7 +13,7 @@ export type SurveyDraftKeys = {
   'draftId:moth'?: string | null;
 };
 
-export const DEFAULT_SPECIES_GROUP = ['butterflies'];
+export const DEFAULT_SPECIES_GROUP = [groups.butterflies.id];
 
 export type Data = ModelAttrs & {
   showedWelcome: boolean;
@@ -22,7 +23,7 @@ export type Data = ModelAttrs & {
   feedbackGiven: boolean;
   areaSurveyListSortedByTime: boolean;
 
-  speciesGroups: string[];
+  speciesGroups: number[];
   useDayFlyingMothsOnly: boolean;
   /**
    * Instead of local species show all available species names when surveying.
@@ -40,8 +41,7 @@ export type Data = ModelAttrs & {
   showSurveysDeleteTip: boolean;
   showSurveyUploadTip: boolean;
   showCopySpeciesTip: boolean;
-  showWhatsNew: boolean;
-  showWhatsNewInVersion122: boolean;
+  // showWhatsNewInVersion122: boolean;
   showGPSPermissionTip: boolean;
   showCommonNamesInGuide: boolean;
   showCopyHelpTip: boolean;
@@ -71,13 +71,10 @@ const defaults: Data = {
   primarySurvey: 'precise-area',
 
   useImageIdentifier: true,
-  showWhatsNewInVersion122: true,
   useExperiments: false,
   sendAnalytics: true,
   appSession: 0,
   showCommonNamesInGuide: true,
-
-  showWhatsNew: true,
 
   // tips
   showCopyHelpTip: true,

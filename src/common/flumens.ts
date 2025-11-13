@@ -138,6 +138,10 @@ export {
 } from '@flumens/tailwind/dist/Survey';
 export { default as Block } from '@flumens/tailwind/dist/components/Block';
 export {
+  default as Checkbox,
+  type CheckboxOption,
+} from '@flumens/tailwind/dist/components/Checkbox';
+export {
   default as TailwindBlockContext,
   defaultContext,
 } from '@flumens/tailwind/dist/components/Block/Context';

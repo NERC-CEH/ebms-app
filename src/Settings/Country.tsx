@@ -5,10 +5,29 @@ import { Trans as T, useTranslation } from 'react-i18next';
 import { Page, Main, Header, useAlert, RadioInput } from '@flumens';
 import { IonIcon, IonList, NavContext } from '@ionic/react';
 import countries, { Country } from 'common/config/countries';
+import speciesListsCollection from 'common/models/collections/speciesLists';
 import appModel from 'models/app';
 
 type Props = {
   hideHeader?: any;
+};
+
+const fetchCountrySpeciesList = async (newCountry: string) => {
+  if (newCountry === 'ELSEWHERE') return;
+
+  const newCountryNormalised =
+    newCountry === 'UK' ? 'GB' : newCountry.replace('_', ': ');
+  const lists = await speciesListsCollection.fetchRemote({
+    locationCode: newCountryNormalised,
+  });
+  if (lists.length !== 1) {
+    console.error('No default country species list found for ', newCountry);
+    return;
+  }
+
+  const [list] = lists;
+  await list.save(true);
+  await list.fetchRemoteSpecies();
 };
 
 const SelectCountry = ({ hideHeader }: Props) => {
@@ -17,7 +36,7 @@ const SelectCountry = ({ hideHeader }: Props) => {
   const { t } = useTranslation();
   const { goBack } = useContext(NavContext);
 
-  const isSettingsPage = !hideHeader;
+  const isOnboarding = hideHeader;
 
   if (hideHeader) {
     const forceSecondRenderWrap = () => forceSecondRender(true);
@@ -25,15 +44,12 @@ const SelectCountry = ({ hideHeader }: Props) => {
     // app load screen does not update the countries labels so we force rerender
     // this screen after a timeout
     setTimeout(forceSecondRenderWrap, 10);
-
-    if (!secondRender) {
-      return null;
-    }
+    if (!secondRender) return null;
   }
 
   const currentValue = appModel.data.country;
 
-  function onSelect(newCountry: any) {
+  async function onSelect(newCountry: any) {
     if (appModel.data.country !== 'UK' && newCountry === 'UK') {
       alert({
         header: 'Note',
@@ -56,7 +72,10 @@ const SelectCountry = ({ hideHeader }: Props) => {
     appModel.data.country = newCountry; // eslint-disable-line no-param-reassign
     appModel.save();
 
-    if (isSettingsPage) goBack();
+    // in the background, fetch species lists for the selected country
+    fetchCountrySpeciesList(newCountry);
+
+    if (!isOnboarding) goBack();
   }
 
   const translate = ([value, country]: [string, Country]): [string, string] => [
