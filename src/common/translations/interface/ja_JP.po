@@ -31,7 +31,7 @@ msgstr "アンドラ"
 
 # Country
 msgid "Ecuador"
-msgstr ""
+msgstr "エクアドル"
 
 msgid "Albania"
 msgstr "アルバニア"

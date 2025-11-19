@@ -33,7 +33,7 @@ msgstr "Andorra"
 
 # Country
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 msgid "Albania"
 msgstr "Albania"

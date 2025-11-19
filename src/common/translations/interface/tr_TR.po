@@ -38,7 +38,7 @@ msgstr "Andorra"
 
 # Country
 msgid "Ecuador"
-msgstr ""
+msgstr "Ekvador"
 
 msgid "Albania"
 msgstr "Arnavutluk"
@@ -119,7 +119,7 @@ msgid "Montenegro"
 msgstr "Karadağ"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Fas"
 
 msgid "North Macedonia"
 msgstr "Kuzey Makedonya"
@@ -185,10 +185,10 @@ msgid "New Zealand"
 msgstr "Yeni Zellanda"
 
 msgid "Montserrat"
-msgstr ""
+msgstr "Montserrat"
 
 msgid "Anguilla"
-msgstr ""
+msgstr "Anguilla"
 
 msgid "Elsewhere"
 msgstr "Diğer"
@@ -312,12 +312,23 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
+"UGP+ projesinde* vatandaşlar, politika yapıcılar ve bilim insanları, "
+"Avrupa’daki kentsel doğanın geleceğine yönelik planlar geliştirmek için "
+"birlikte çalışıyor. Kentlerde kelebek sayımı yapmak, yalnızca "
+"biyoçeşitliliği ve yeşil alanların kalitesini izlemek için harika bir yöntem"
+" değil; aynı zamanda hepimizi biyoçeşitlilik, doğa politikaları ve şehir "
+"için yeni eylemler geliştirme konularında güçlendiren bir araçtır. "
+"Katılımcıların sağladığı veriler, Avrupa genelinde kentsel biyoçeşitliliğin "
+"korunmasına yönelik eylemleri şekillendirmek için analiz edilecektir."
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
+"UGP+, “Toplumda Biyoçeşitliliği Ana Akıma Yerleştirmek için Kentsel "
+"Yeşillendirme Planlarını Güçlendirme” anlamına gelir ve Avrupa Birliği "
+"tarafından finanse edilen bir projedir."
 
 msgid "Home"
 msgstr "Ana Sayfa"
@@ -397,435 +408,439 @@ msgstr "Alan Büyüklüğü "
 
 # New Site set-up page
 msgid "Site area"
-msgstr ""
+msgstr "Çalışma alanı"
 
 # New Site set-up page
 msgid "Approximate size of your observation site."
-msgstr ""
+msgstr "Gözlem alanınızın yaklaşık büyüklüğü."
 
 # New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
-msgstr ""
+msgstr "Habitatlar / arazi kullanımları (toplam %100 olmalıdır)"
 
 # New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
-msgstr ""
+msgstr "Tarla (buğday, arpa, çavdar)"
 
 # New Site set-up page
 msgid "Arable field fruits or vegetables"
-msgstr ""
+msgstr "Meyve ya da sebze bahçesi"
 
 # New Site set-up page
 msgid "Arable field rapeseed"
-msgstr ""
+msgstr "Kanola tarlası"
 
 # New Site set-up page
 msgid "Arable field corn"
-msgstr ""
+msgstr "Mısır tarlası"
 
 # New Site set-up page
 msgid "Arable legumes"
-msgstr ""
+msgstr "Baklagil tarlası"
 
 # New Site set-up page
 msgid "Arable multi-cropping"
-msgstr ""
+msgstr "Çoklu ekim tarlası"
 
 # New Site set-up page
 msgid "Arable fallow"
-msgstr ""
+msgstr "Nadasta tarla"
 
 # New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
-msgstr ""
+msgstr "Tekdüze / yoğun şekilde yönetilen çayır ya da mera"
 
 # New Site set-up page
 msgid "Grassland extensive or heterogeneous (pasture)"
-msgstr ""
+msgstr "Geniş çeşitlilik gösteren çayır (mera)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
 msgstr ""
+"Meyve bahçesi, bağ veya koruluk (seyrek ağaçlı, ağaçlar arasında otlak "
+"bulunan)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
-msgstr ""
+msgstr "Meyve bahçesi, bağ veya koruluk (yoğun şekilde yönetilen)"
 
 # New Site set-up page
 msgid "Scrubland"
-msgstr ""
+msgstr "Çalılık alan"
 
 # New Site set-up page
 msgid "Land laying fallow / wasteland"
-msgstr ""
+msgstr "Nadasa bırakılmış arazi / çorak arazi"
 
 # New Site set-up page
 msgid "Sparse woodland"
-msgstr ""
+msgstr "Seyrek orman"
 
 # New Site set-up page
 msgid "Dense woodland or forest"
-msgstr ""
+msgstr "Sık ağaçlandırılmış alan veya orman"
 
 # New Site set-up page
 msgid "Plantation"
-msgstr ""
+msgstr "Plantasyon / Ağaçlandırma alanı"
 
 # New Site set-up page
 msgid "Garden (single)"
-msgstr ""
+msgstr "Bahçe (tek)"
 
 # New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
-msgstr ""
+msgstr "Birden fazla bahçe (ör. paylaşımlı bahçeler)"
 
 # New Site set-up page
 msgid "Building(s)"
-msgstr ""
+msgstr "Bina(lar)"
 
 # New Site set-up page
 msgid "Pond, lake or sea"
-msgstr ""
+msgstr "Havuz, göl ya da deniz"
 
 # New Site set-up page
 msgid "River or creek"
-msgstr ""
+msgstr "Irmak ya da dere"
 
 # New Site set-up page
 msgid "Wetland"
-msgstr ""
+msgstr "Sulak alan"
 
 # New Site set-up page
 msgid "Dunes or barren land"
-msgstr ""
+msgstr "Kumul ya da çorak alan"
 
 # New Site set-up page
 msgid "Field edge(s)"
-msgstr ""
+msgstr "Tarla kenar(lar)ı"
 
 # New Site set-up page
 msgid "Buffer-strip(s)"
-msgstr ""
+msgstr "Tampon şerit(ler)"
 
 # New Site set-up page
 msgid "Flower-strip(s)"
-msgstr ""
+msgstr "Çiçek şerit(ler)i"
 
 # New Site set-up page
 msgid "Hedge(s)"
-msgstr ""
+msgstr "Çit"
 
 # New Site set-up page
 msgid "Scattered trees or trees in rows"
-msgstr ""
+msgstr "Seyrek ağaçlar veya sıralı ağaçlar"
 
 # New Site set-up page
 msgid "Wooded area"
-msgstr ""
+msgstr "Ağaçlık alan"
 
 # New Site set-up page
 msgid "Terraces, stone walls"
-msgstr ""
+msgstr "Teraslar, taş duvarlar"
 
 # New Site set-up page
 msgid "Pond"
-msgstr ""
+msgstr "Gölet"
 
 # New Site set-up page
 msgid "Path"
-msgstr ""
+msgstr "Patika"
 
 # New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
-msgstr ""
+msgstr "Cadde, yol veya demiryolu hattı (kaplamalı, ör. asfalt)"
 
 # New Site set-up page
 msgid "Fences or other human-made linear structures"
-msgstr ""
+msgstr "Çitler veya diğer insan yapımı doğrusal yapılar"
 
 # New Site set-up page
 msgid "Dead tree, stumps or wood"
-msgstr ""
+msgstr "Ölü ağaç, kütük veya odun"
 
 # New Site set-up page
 msgid "Landscape features"
-msgstr ""
+msgstr "Peyzaj özellikleri"
 
 # New Site set-up page
 msgid "Features located within a 50-meter radius."
-msgstr ""
+msgstr "50 metre yarıçap içindeki özellikler"
 
 # New Site set-up page
 msgid "Other landscape feature details"
-msgstr ""
+msgstr "Diğer peyzaj özelliği ayrıntıları"
 
 # New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
-msgstr ""
+msgstr "Uygulanamaz (çimlik / çayırlık değil)"
 
 # New Site set-up page
 msgid "I don't know"
-msgstr ""
+msgstr "Bilmiyorum"
 
 # New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
-msgstr ""
+msgstr "Sık biçim, tüm (ilgili) alan"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), all area"
-msgstr ""
+msgstr "Seyrek biçim (yılda 1–2 kez), tüm alan"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
-msgstr ""
+msgstr "Seyrek biçim (yılda 1–2 kez), kısmi biçim (Staffelmahd)"
 
 # New Site set-up page
 msgid "Extensive grazing (few grazers, not mowed)"
-msgstr ""
+msgstr "Geniş otlatma (az sayıda otlayan hayvan, biçilmez)"
 
 # New Site set-up page
 msgid "Intensive grazing (not mowed)"
-msgstr ""
+msgstr "Yoğun otlatma (biçilmez)"
 
 # New Site set-up page
 msgid "How often is this lawn mown?"
-msgstr ""
+msgstr "Bu alan ne sıklıkla biçiliyor?"
 
 # New Site set-up page
 msgid "Not applicable"
-msgstr ""
+msgstr "Uygulanamaz"
 
 # New Site set-up page
 msgid "Frequent application"
-msgstr ""
+msgstr "Sık uygulama"
 
 # New Site set-up page
 msgid "Rare application"
-msgstr ""
+msgstr "Seyrek uygulama"
 
 # New Site set-up page
 msgid "No fertilizers used"
-msgstr ""
+msgstr "Gübre kullanılmadı"
 
 # New Site set-up page
 msgid "Is the area fertilized?"
-msgstr ""
+msgstr "Alan gübreleniyor mu?"
 
 # New Site set-up page
 msgid "Other fertilizer details"
-msgstr ""
+msgstr "Diğer gübreleme ayrıntıları"
 
 # New Site set-up page
 msgid "No pesticides applied"
-msgstr ""
+msgstr "Pestisit uygulanmadı"
 
 # New Site set-up page
 msgid "Are pesticides used?"
-msgstr ""
+msgstr "Pestisit kullanılıyor mu?"
 
 # New Site set-up page
 msgid "Other pesticide details"
-msgstr ""
+msgstr "Diğer pestisit detayları"
 
 # New Site set-up page
 msgid "Please upload site photos"
-msgstr ""
+msgstr "Lütfen alan fotoğrafını yükleyin"
 
 # New Site set-up page
 msgid "Optimally in the direction to North, East, South and West."
-msgstr ""
+msgstr "En uygun şekilde kuzey, doğu, güney ve batı yönlerine doğru."
 
 # New Site set-up page
 msgid "Garden"
-msgstr ""
+msgstr "Bahçe"
 
 # New Site set-up page
 msgid "Allotment gardens"
-msgstr ""
+msgstr "Paylaşımlı bahçeler / hobi bahçeleri"
 
 # New Site set-up page
 msgid "Community garden"
-msgstr ""
+msgstr "Topluluk bahçesi"
 
 # New Site set-up page
 msgid "Balcony"
-msgstr ""
+msgstr "Balkon"
 
 # New Site set-up page
 msgid "Park (mixed vegetation)"
-msgstr ""
+msgstr "Park (karışık bitki örtüsü)"
 
 # New Site set-up page
 msgid "Lawn"
-msgstr ""
+msgstr "Çim"
 
 # New Site set-up page
 msgid "Flowering strip"
-msgstr ""
+msgstr "Çiçek şeridi"
 
 # New Site set-up page
 msgid "Built-up area"
-msgstr ""
+msgstr "Yapılaşmış alan"
 
 # New Site set-up page
 msgid "Fallow land, abandoned area (urban)"
-msgstr ""
+msgstr "Nadasa bırakılmış arazi, terk edilmiş alan (kentsel)"
 
 # New Site set-up page
 msgid "Fallow land, abandoned field  (rural)"
-msgstr ""
+msgstr "Nadasa bırakılmış arazi, terk edilmiş alan (kırsal) "
 
 # New Site set-up page
 msgid "Field edge"
-msgstr ""
+msgstr "Tarla kenarı"
 
 # New Site set-up page
 msgid "Arable field"
-msgstr ""
+msgstr "Tarla (işlenebilir arazi)"
 
 # New Site set-up page
 msgid "Grassland / Meadow / Pasture"
-msgstr ""
+msgstr "Çayır / Mera / Otlak"
 
 # New Site set-up page
 msgid "Orchard"
-msgstr ""
+msgstr "Meyve bahçesi"
 
 # New Site set-up page
 msgid "Forest edge"
-msgstr ""
+msgstr "Orman kenarı"
 
 # New Site set-up page
 msgid "Woodland/Forest"
-msgstr ""
+msgstr "Ağaçlık alan / Orman"
 
 # New Site set-up page
 msgid "Coastal"
-msgstr ""
+msgstr "Kıyı"
 
 # New Site set-up page
 msgid "Scrubland/Heathland"
-msgstr ""
+msgstr "Çalılık / Fundalık"
 
 # New Site set-up page
 msgid "Sparsely vegetated"
-msgstr ""
+msgstr "Seyrek bitki örtülü"
 
 # New Site set-up page
 msgid "Desert / barren"
-msgstr ""
+msgstr "Çöl / çorak"
 
 # New Site set-up page
 msgid "Dominant habitat"
-msgstr ""
+msgstr "Baskın habiat"
 
 # New Site set-up page
 msgid "How many trees are there in the area of your observation site?"
-msgstr ""
+msgstr "Gözlem alanında kaç ağaç bulunuyor?"
 
 # New Site set-up page
 msgid "What proportion of the site is a lawn or a grassland?"
-msgstr ""
+msgstr "Alanının ne kadarlık bir kısmı çimlik veya çayırlık alandan oluşuyor?"
 
 # New Site set-up page
 msgid "Fruit trees and shrubs"
-msgstr ""
+msgstr "Meyve ağaçları ve çalılar"
 
 # New Site set-up page
 msgid "Unmanaged corners (natural spaces, abandoned areas)"
-msgstr ""
+msgstr "Yönetilmeyen köşeler (doğal alanlar, terk edilmiş bölgeler)"
 
 # New Site set-up page
 msgid "Vegetable patch"
-msgstr ""
+msgstr "Sebze bahçesi"
 
 # New Site set-up page
 msgid "Lavender species"
-msgstr ""
+msgstr "Lavanta türleri"
 
 # New Site set-up page
 msgid "Geraniums & Pelargoniums"
-msgstr ""
+msgstr "Geraniums & Pelargoniums"
 
 # New Site set-up page
 msgid "Valeriana"
-msgstr ""
+msgstr "Kediotu (Valeriana türleri)"
 
 # New Site set-up page
 msgid "Legumes (Clover, Lupin, Lotus,...)"
-msgstr ""
+msgstr "Baklagiller (Yonca, Lupin, Lotus vb.) (Fabaceae familyası)"
 
 # New Site set-up page
 msgid "Marigold"
-msgstr ""
+msgstr "Kadife çiçeği (Tagetes türleri)"
 
 # New Site set-up page
 msgid "Butterfly bush (or Summer Lilac)"
-msgstr ""
+msgstr "Kelebek çalısı (ya da yaz leylak çalısı) (Buddleja davidii)"
 
 # New Site set-up page
 msgid "Aromatics like Thyme, Oregano, etc. ( Lamiaceae)"
-msgstr ""
+msgstr "Kekik, mercanköşk gibi aromatik bitkiler (Lamiaceae familyası)"
 
 # New Site set-up page
 msgid "Nettle (Urtica dioica)"
-msgstr ""
+msgstr "Isırgan otu (Urtica dioica)"
 
 # New Site set-up page
 msgid "Brambles (Rubus fruticosa)"
-msgstr ""
+msgstr "Böğürtlen (Rubus fruticosus)"
 
 # New Site set-up page
 msgid "Ivy"
-msgstr ""
+msgstr "Sarmaşık"
 
 # New Site set-up page
 msgid "Knappweed (Centaurea and Scabiosa spp.)"
-msgstr ""
+msgstr "Peygamber çiçeği (Centaurea türleri) ve Scabiosa türleri"
 
 # New Site set-up page
 msgid "Fennel, Carvi or others from the Carrot family (Apiaceae)"
 msgstr ""
+"Rezene, karaman kimyonu veya diğer havuçgillerden (Apiaceae familyası) "
+"bitkiler"
 
 # New Site set-up page
 msgid "Cabbage, Rucola or others Mustard-plant family (Brassicaceae)"
-msgstr ""
+msgstr "Lahana, roka veya diğer hardalgiller (Brassicaceae familyası)"
 
 # New Site set-up page
 msgid "Hemp-agrimony (Eupatorium spp.)"
-msgstr ""
+msgstr "Kenevir otu (Eupatorium türleri)"
 
 # New Site set-up page
 msgid "Are these plant species present in this location?"
-msgstr ""
+msgstr "Bu konumda bu bitki türleri bulunuyor mu?"
 
 # New Site set-up page
 msgid "I own the site"
-msgstr ""
+msgstr "Alan bana ait"
 
 # New Site set-up page
 msgid "Private space"
-msgstr ""
+msgstr "Özel mülk"
 
 # New Site set-up page
 msgid "Public space"
-msgstr ""
+msgstr "Kamu alanı"
 
 # New Site set-up page
 msgid "Communal space"
-msgstr ""
+msgstr "Ortak alan"
 
 # New Site set-up page
 msgid "Prefer not to say"
-msgstr ""
+msgstr "Söylememeyi tercih ederim"
 
 # New Site set-up page
 msgid "Do you know who owns the land?"
-msgstr ""
+msgstr "Arazinin kime ait olduğunu biliyor musun?"
 
 # New Site set-up page
 msgid "Are you responsible for gardening activities at the site?"
-msgstr ""
+msgstr "Bu alandaki bahçe işleriyle sen mi sorumlusun?"
 
 # Location attribute label
 msgid "Location"
@@ -916,51 +931,51 @@ msgstr "Alan çiz"
 
 # Survey area page
 msgid "Locations"
-msgstr ""
+msgstr "konumlar"
 
 # Survey area page
 msgid "Previous"
-msgstr ""
+msgstr "Önceki"
 
 # Survey area page
 msgid "New location"
-msgstr ""
+msgstr "Yeni konum"
 
 # Survey area page
 msgid "No location"
-msgstr ""
+msgstr "Konum yok"
 
 # Survey area page
 msgid "Site name"
-msgstr ""
+msgstr "Alan adı"
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Yorumlar"
 
 # Survey area page
 msgid "The survey area is still being tracked."
-msgstr ""
+msgstr "Anket alanı hâlâ izleniyor."
 
 # Survey area page
 msgid "Successfully saved a location."
-msgstr ""
+msgstr "Konum başarıyla kaydedildi."
 
 # Survey area page
 msgid "Are you sure?"
-msgstr ""
+msgstr "Emin misin?"
 
 # Survey area page
 msgid "This will discard the form data."
-msgstr ""
+msgstr "Bu işlem form verilerini silecek."
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Evet"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "Hayır"
 
 msgid "Delete"
 msgstr "Sil"
@@ -1094,6 +1109,9 @@ msgid ""
 " the world. For example, this graph shows the European grassland butterfly "
 "index."
 msgstr ""
+"Kelebekler büyüleyici böceklerdir, ancak dünyanın birçok yerinde sayıları "
+"azalıyor. Örneğin, bu grafik Avrupa çayır kelebekleri indeksini "
+"göstermektedir."
 
 # onboarding pages
 msgid ""
@@ -1108,6 +1126,8 @@ msgid ""
 "We lack structured information on butterfly numbers in many parts of the "
 "world."
 msgstr ""
+"Dünyanın birçok bölgesinde kelebek sayılarıyla ilgili yapılandırılmış "
+"bilgilere sahip değiliz."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -1124,10 +1144,12 @@ msgid ""
 "This app enables you to contribute to the recording and conservation of "
 "butterflies across the world."
 msgstr ""
+"Bu uygulama, dünyanın dört bir yanında kelebeklerin kaydedilmesine ve "
+"korunmasına katkıda bulunmanı sağlar."
 
 # About pages
 msgid "The app was supported through several projects:"
-msgstr ""
+msgstr "Uygulama, çeşitli projeler aracılığıyla desteklenmiştir:"
 
 # About pages
 msgid ""
@@ -1135,6 +1157,9 @@ msgid ""
 "across the world and associated with national Butterfly Monitoring Schemes "
 "listed at:"
 msgstr ""
+"Uygulama, dünyanın farklı yerlerinden çok sayıda kelebek uzmanının "
+"katkılarından ve aşağıda listelenen ulusal Kelebek İzleme Programlarıyla "
+"ilişkili uzmanlardan yararlanmıştır:"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
@@ -1267,17 +1292,19 @@ msgstr ""
 
 # Help pages
 msgid "Assign a project to a count"
-msgstr ""
+msgstr "Bir sayımı bir projeye ata"
 
 # Help pages
 msgid ""
 "<0>Start a count.</0><1>Select \"Additional Details\" then "
 "\"Project\".</1><2>Finally, choose the appropriate project.</2>"
 msgstr ""
+"<0> sayım başlat. </0><1>“Ek Ayrıntılar” bölümünü, ardından “Proje”yi seç. "
+"</1><2>Son olarak uygun projeyi seç.</2>"
 
 # Help pages
 msgid "Assign a site to a count"
-msgstr ""
+msgstr "Bir sayımı bir alana ata"
 
 # Help pages
 msgid ""
@@ -1294,6 +1321,18 @@ msgid ""
 " future counts conducted in that location.</7><8>Finally, choose the site "
 "for the current count.</8>"
 msgstr ""
+"<0> sayım başlat. </0><1>Sayımı bir projeye ata; proje seçimiyle ilgili "
+"yönergelere bak. </1><2>“Alan” sayfasının üst kısmındaki GPS’i kapat. "
+"Ekranın sağ tarafındaki “Alan Çizimi (Site Drawing)” aracını seç.</2><3> "
+"Harita üzerinde bir alan belirle ve seçiminden sonra ekranın sağ tarafındaki"
+" onay düğmesine bas.</3> Ekranın sağ alt köşesindeki “Favori Alanlar” "
+"panelinde bulunan “Ekle (Add)” düğmesine tıkla. <4><5>Panel görünmüyorsa, "
+"sağ üst köşedeki yıldız simgesine (favori alanlar düğmesi) tıklayarak "
+"açabilirsin. Senden alanla ilgili bazı soruları yanıtlaman istenecek "
+"</5><6>.Soruları yanıtladıktan sonra sağ üst köşedeki “Kaydet (Save)” "
+"düğmesine bas. </6><7>Alan kaydedilecek ve bu konumda yapılacak gelecekteki "
+"sayımlar için seçilebilir hale gelecektir.</7><8> Son olarak, mevcut sayım "
+"için bu alanı seç.</8>"
 
 msgid "User"
 msgstr "Kullanıcı"
@@ -1363,11 +1402,11 @@ msgstr ""
 
 # App setting
 msgid "Export database"
-msgstr ""
+msgstr "Verileri dışa aktar"
 
 # App setting
 msgid "Export"
-msgstr ""
+msgstr "Dışa aktar"
 
 # App setting
 msgid ""
@@ -1375,6 +1414,9 @@ msgid ""
 "for technical support and is not a supported method for exporting your "
 "data</1>"
 msgstr ""
+"Verileri dışa aktarmak istediğinden emin misin?<1> Bu özellik yalnızca "
+"teknik destek amaçlıdır ve verilerini dışa aktarmanın desteklenen bir "
+"yöntemi değildir.</1>"
 
 msgid "Sweden"
 msgstr "İsveç"
@@ -1474,11 +1516,11 @@ msgstr "Kılavuzdaki yaygın adları göster"
 
 # App setting label
 msgid "Use global species lists"
-msgstr ""
+msgstr "Küresel tür listesini kullan"
 
 # App setting label
 msgid "Don't restrict to local species names in survey searches."
-msgstr ""
+msgstr "Anket aramalarında tür adlarını yerel isimlerle sınırlama."
 
 msgid "Share App Analytics"
 msgstr "Uygulama analitiğini paylaş"
@@ -1766,6 +1808,11 @@ msgid ""
 "established butterfly transects. The notes below tell you how to use the "
 "currently available methods."
 msgstr ""
+"Tercih edilen yöntem, 15 dakikalık bir sayım yapmaktır. Bu sayım, "
+"kelebeklerin aktif olduğu herhangi bir yerde ve zamanda (yani hava sıcak ve "
+"tercihen güneşliyken) yapılabilir. Ayrıca uygulamayı, daha önceden "
+"belirlenmiş kelebek transektlerinizi kaydetmek için de kullanabilirsiniz. "
+"Aşağıdaki notlar, mevcut yöntemlerin nasıl kullanılacağını açıklamaktadır."
 
 msgid "How to do a 15-minute Count"
 msgstr "15 dakikalık sayım nasıl yapılır?"
@@ -2498,7 +2545,7 @@ msgstr "Lamba ekle"
 
 # Moth trap survey
 msgid "Lamp type is a required field."
-msgstr ""
+msgstr "Lamba türü zorunlu bir alandır."
 
 # Moth trap survey
 msgid "What type of trap was it?"
@@ -3072,7 +3119,7 @@ msgstr "Daha önceden rotanız bulunmuyor."
 
 # Part of favorite track
 msgid "You have no saved sites."
-msgstr ""
+msgstr "Kaydedilmiş hiç alanınız yok"
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
@@ -3104,19 +3151,19 @@ msgstr "Bulut bilgisi boş bırakılamaz"
 
 # Survey Projects functionality
 msgid "Not linked to any project"
-msgstr ""
+msgstr "Hiçbir proje ile bağlantısı yok"
 
 # Survey Projects functionality
 msgid "Join"
-msgstr ""
+msgstr "Katıl"
 
 # Survey Projects functionality
 msgid "Project"
-msgstr ""
+msgstr "Proje"
 
 # Survey Projects functionality
 msgid "Projects"
-msgstr ""
+msgstr "Projeler"
 
 # Survey Projects functionality
 msgid "My projects"
@@ -3131,16 +3178,20 @@ msgid ""
 "You haven't joined any projects yet. Go to the \"All projects\" tab to join "
 "a project.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"Henüz herhangi bir projeye katılmadınız. <br/><br/>Bir projeye katılmak için"
+" “Tüm projeler” sekmesine gidin. Listeyi yenilemek için sayfayı aşağı çekin."
 
 # Survey Projects functionality
 msgid ""
 "<0>{{country}}</0>There are currently no new projects available to "
 "join.<br/><br/>Pull the page down to refresh the list."
 msgstr ""
+"<0>{{country}} </0>Şu anda katılabileceğin yeni bir proje bulunmamaktadır. "
+"<br/><br/>Listeyi yenilemek için sayfayı aşağı doğru çek."
 
 # Survey Projects functionality
 msgid "Successfully joined the project."
-msgstr ""
+msgstr "Projeye başarıyla katıldın."
 
 # Survey Projects functionality
 msgid "Leave"
@@ -3159,3 +3210,5 @@ msgid ""
 "This survey has sensitive species and should not be included in public "
 "reports."
 msgstr ""
+"Bu sayım hassas türler içermektedir ve kamuya açık raporlara dahil "
+"edilmemelidir."
