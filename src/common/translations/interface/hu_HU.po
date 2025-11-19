@@ -15,6 +15,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: POEditor.com\n"
 
+# Country selection
+msgid "Europe"
+msgstr ""
+
+# Country selection
+msgid "Asia"
+msgstr ""
+
+# Country selection
+msgid "Africa"
+msgstr ""
+
+# Country selection
+msgid "Australasia"
+msgstr ""
+
+# Country selection
+msgid "North America"
+msgstr ""
+
+# Country selection
+msgid "South America"
+msgstr ""
+
 msgid "Select your country"
 msgstr "Válaszd ki az országot!"
 

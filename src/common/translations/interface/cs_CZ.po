@@ -16,6 +16,30 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 "X-Generator: POEditor.com\n"
 
+# Country selection
+msgid "Europe"
+msgstr ""
+
+# Country selection
+msgid "Asia"
+msgstr ""
+
+# Country selection
+msgid "Africa"
+msgstr ""
+
+# Country selection
+msgid "Australasia"
+msgstr ""
+
+# Country selection
+msgid "North America"
+msgstr ""
+
+# Country selection
+msgid "South America"
+msgstr ""
+
 msgid "Select your country"
 msgstr "Vyber svou zemi"
 

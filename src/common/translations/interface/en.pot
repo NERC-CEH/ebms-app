@@ -8,6 +8,31 @@ msgstr ""
 "Language: en\n"
 "X-Generator: POEditor.com\n"
 
+
+# Country selection
+msgid "Europe"
+msgstr "Europe"
+
+# Country selection
+msgid "Asia"
+msgstr "Asia"
+
+# Country selection
+msgid "Africa"
+msgstr "Africa"
+
+# Country selection
+msgid "Australasia"
+msgstr "Australasia"
+
+# Country selection
+msgid "North America"
+msgstr "North America"
+
+# Country selection
+msgid "South America"
+msgstr "South America"
+
 msgid "Select your country"
 msgstr "Select your country"
 

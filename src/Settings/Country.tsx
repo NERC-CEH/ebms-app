@@ -2,9 +2,13 @@ import { useState, useContext } from 'react';
 import { observer } from 'mobx-react';
 import { flagOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
-import { Page, Main, Header, useAlert, RadioInput } from '@flumens';
+import { Page, Main, Header, useAlert, RadioInput, Collapse } from '@flumens';
 import { IonIcon, IonList, NavContext } from '@ionic/react';
-import countries, { Country } from 'common/config/countries';
+import countries, {
+  continents,
+  ContinentCode,
+  CountryCode,
+} from 'common/config/countries';
 import speciesListsCollection from 'common/models/collections/speciesLists';
 import appModel from 'models/app';
 
@@ -89,25 +93,29 @@ const SelectCountry = ({ hideHeader }: Props) => {
     if (!isOnboarding) goBack();
   }
 
-  const translate = ([value, country]: [string, Country]): [string, string] => [
-    value,
-    t(country.name),
-  ];
-  const placeElseWhereAtEnd = (
-    [value1, country1]: [string, string],
-    [, country2]: [string, string]
-  ) => (value1 === 'ELSEWHERE' ? 1 : country1.localeCompare(country2));
+  // group countries by continent
+  const countriesByContinent = Object.entries(countries).reduce(
+    (acc, [code, country]) => {
+      const continent = country.continent || 'OTHER';
+      if (!acc[continent]) acc[continent] = [];
 
-  const getCountryOption = ([value, country]: [string, string]) => ({
-    className: value === 'ELSEWHERE' ? 'mt-5' : '',
-    value,
-    label: country,
+      acc[continent].push({ code, name: t(country.name) });
+      return acc;
+    },
+    {} as Record<string, Array<{ code: string; name: string }>>
+  );
+
+  // sort countries within each continent
+  Object.values(countriesByContinent).forEach(countryList => {
+    countryList.sort((a, b) => a.name.localeCompare(b.name));
   });
 
-  const countriesOptions = Object.entries(countries)
-    .map(translate)
-    .sort(placeElseWhereAtEnd)
-    .map(getCountryOption);
+  // define continent order
+  const continentOrder: ContinentCode[] = ['EU', 'AS', 'AF', 'AU', 'NA', 'SA'];
+
+  // find the continent of the currently selected country
+  const selectedCountryContinent =
+    countries[currentValue as CountryCode]?.continent;
 
   return (
     <Page
@@ -129,10 +137,54 @@ const SelectCountry = ({ hideHeader }: Props) => {
           <RadioInput
             onChange={onSelect}
             value={currentValue}
-            options={countriesOptions}
             platform="ios"
             skipTranslation
-          />
+          >
+            {continentOrder.map(continentCode => {
+              const countryList = countriesByContinent[continentCode];
+              if (!countryList) return null;
+
+              const isSelectedContinent =
+                selectedCountryContinent === continentCode;
+              const collapseProps = isSelectedContinent && {
+                groupProps: { value: continentCode },
+                value: continentCode,
+              };
+
+              return (
+                <div className="overflow-hidden rounded-md [&_ion-label]:!text-base [&_ion-label]:!font-semibold">
+                  <Collapse
+                    key={continentCode}
+                    title={continents[continentCode]}
+                    {...collapseProps}
+                  >
+                    <div className="my-3 flex w-full flex-col gap-2">
+                      {countryList.map(country => (
+                        <RadioInput.Option
+                          key={country.code}
+                          value={country.code}
+                          label={country.name}
+                          className="w-full"
+                        />
+                      ))}
+                    </div>
+                  </Collapse>
+                </div>
+              );
+            })}
+
+            {countriesByContinent.OTHER && (
+              <div className="mt-5">
+                {countriesByContinent.OTHER.map(country => (
+                  <RadioInput.Option
+                    key={country.code}
+                    value={country.code}
+                    label={country.name}
+                  />
+                ))}
+              </div>
+            )}
+          </RadioInput>
         </IonList>
       </Main>
     </Page>
