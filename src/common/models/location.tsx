@@ -101,7 +101,7 @@ export const mothTrapLampTypeAttr = {
     { dataName: '19129', title: 'TL → Blacklight → 18W' },
     { dataName: '19130', title: 'TL → Other → Please describe' },
     { dataName: '19131', title: 'E27 → Mercury vapour - ML → 160W' },
-    { dataName: '19132', title: 'E27 → Mercury vapour - ML → 250W' },
+    // { dataName: '19132', title: 'E27 → Mercury vapour - ML → 250W' }, // don't need this anymore
     { dataName: '19133', title: 'E27 → Mercury vapour - ML → 500W' },
     { dataName: '19134', title: 'E27 → Mercury vapour - HPL → 125W' },
     { dataName: '19135', title: 'E27 → Mercury vapour - HPL → 400W' },
@@ -109,6 +109,9 @@ export const mothTrapLampTypeAttr = {
     { dataName: '19137', title: 'E27 → Mercury vapour - Blacklight → 400W' },
     { dataName: '19138', title: 'E27 → Sylvana UV-A → 20W' },
     { dataName: '19140', title: 'E27 → Other → Please describe' },
+    { dataName: '22302', title: 'E40 → Mercury vapour - ML → 500W' },
+    { dataName: '22303', title: 'E40 → Mercury vapour - HPL → 250W' },
+    { dataName: '22304', title: 'E40 → Mercury vapour - HPL → 400W' },
     { dataName: '20068', title: 'Other → Other → Please describe' },
   ],
 } as const;
