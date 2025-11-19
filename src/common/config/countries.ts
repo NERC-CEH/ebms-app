@@ -383,7 +383,7 @@ const countries = {
     longitude: -15.695324,
     zoom: 5,
     id: 216258, // NUTS level 1 list
-    continent: 'AF',
+    continent: 'EU',
   },
   PT_MA: {
     name: 'Portugal (Madeira Islands)',
@@ -391,7 +391,7 @@ const countries = {
     longitude: -16.9595,
     zoom: 7,
     id: 216314, // NUTS level 1 list
-    continent: 'AF',
+    continent: 'EU',
   },
   TR: {
     name: 'Turkey (Europe)',

@@ -152,7 +152,7 @@ const SelectCountry = ({ hideHeader }: Props) => {
               };
 
               return (
-                <div className="overflow-hidden rounded-md [&_ion-label]:!text-base [&_ion-label]:!font-semibold">
+                <div className="overflow-hidden rounded-md [&_ion-item]:[--border-style:none] [&_ion-label]:!text-base [&_ion-label]:!font-semibold">
                   <Collapse
                     key={continentCode}
                     title={continents[continentCode]}
