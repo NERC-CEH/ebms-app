@@ -33,7 +33,7 @@ msgstr "Andora"
 
 # Country
 msgid "Ecuador"
-msgstr ""
+msgstr "Ekvadoras"
 
 msgid "Albania"
 msgstr "Albanija"
@@ -114,7 +114,7 @@ msgid "Montenegro"
 msgstr "Juodkalnija"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Marokas"
 
 msgid "North Macedonia"
 msgstr "Šiaurės Makedonija"
@@ -174,10 +174,10 @@ msgid "Botswana"
 msgstr "Botsvana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigerija"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Naujoji Zelandija"
 
 msgid "Montserrat"
 msgstr "Montseratas"
@@ -401,279 +401,280 @@ msgstr "Vietovė"
 
 # New Site set-up page
 msgid "Site area"
-msgstr ""
+msgstr "Vietos plotas"
 
 # New Site set-up page
 msgid "Approximate size of your observation site."
-msgstr ""
+msgstr "Apytikris jūsų stebėjimo vietos dydis."
 
 # New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
-msgstr ""
+msgstr "Buveinės/žemės naudojimas (iš viso turėtų būti 100%)"
 
 # New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
-msgstr ""
+msgstr "Ariamasis laukas grūdai (kviečiai, miežiai, rugiai)"
 
 # New Site set-up page
 msgid "Arable field fruits or vegetables"
-msgstr ""
+msgstr "Ariamasis laukas vaisiai ar daržovės"
 
 # New Site set-up page
 msgid "Arable field rapeseed"
-msgstr ""
+msgstr "Ariamasis laukas rapsai"
 
 # New Site set-up page
 msgid "Arable field corn"
-msgstr ""
+msgstr "Ariamasis laukas kukurūzai"
 
 # New Site set-up page
 msgid "Arable legumes"
-msgstr ""
+msgstr "Ariamieji ankštiniai augalai"
 
 # New Site set-up page
 msgid "Arable multi-cropping"
-msgstr ""
+msgstr "Ariamasis daugiakultūrinis auginimas"
 
 # New Site set-up page
 msgid "Arable fallow"
-msgstr ""
+msgstr "Ariamasis dirvonuojantis"
 
 # New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
-msgstr ""
+msgstr "Pievos vienalytės/intensyviai tvarkomos"
 
 # New Site set-up page
 msgid "Grassland extensive or heterogeneous (pasture)"
-msgstr ""
+msgstr "Pievos ekstensyvios ar įvairios (ganykla)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
-msgstr ""
+msgstr "Sodas, vynuogynas ar giraitė (retai, ganykla tarp medžių)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
-msgstr ""
+msgstr "Sodas, vynuogynas ar giraitė (intensyviai tvarkoma)"
 
 # New Site set-up page
 msgid "Scrubland"
-msgstr ""
+msgstr "Krūmynai"
 
 # New Site set-up page
 msgid "Land laying fallow / wasteland"
-msgstr ""
+msgstr "Dirvonuojanti žemė / nenaudojama žemė"
 
 # New Site set-up page
 msgid "Sparse woodland"
-msgstr ""
+msgstr "Retas miškas"
 
 # New Site set-up page
 msgid "Dense woodland or forest"
-msgstr ""
+msgstr "Tankus miškas ar miškas"
 
 # New Site set-up page
 msgid "Plantation"
-msgstr ""
+msgstr "Plantacija"
 
 # New Site set-up page
 msgid "Garden (single)"
-msgstr ""
+msgstr "Sodas (vienas)"
 
 # New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
-msgstr ""
+msgstr "Sodai (keli, pvz., daržininkų sodai)"
 
 # New Site set-up page
 msgid "Building(s)"
-msgstr ""
+msgstr "Pastatas(-ai)"
 
 # New Site set-up page
 msgid "Pond, lake or sea"
-msgstr ""
+msgstr "Tvenkinys, ežeras ar jūra"
 
 # New Site set-up page
 msgid "River or creek"
-msgstr ""
+msgstr "Upė ar upelis"
 
 # New Site set-up page
 msgid "Wetland"
-msgstr ""
+msgstr "Pelkė"
 
 # New Site set-up page
 msgid "Dunes or barren land"
-msgstr ""
+msgstr "Kopos ar nederlingos žemės"
 
 # New Site set-up page
 msgid "Field edge(s)"
-msgstr ""
+msgstr "Lauko pakraštys(-iai)"
 
 # New Site set-up page
 msgid "Buffer-strip(s)"
-msgstr ""
+msgstr "Apsauginė juosta(-os)"
 
 # New Site set-up page
 msgid "Flower-strip(s)"
-msgstr ""
+msgstr "Gėlių juosta(-os)"
 
 # New Site set-up page
 msgid "Hedge(s)"
-msgstr ""
+msgstr "Gyvatvorė(-ės)"
 
 # New Site set-up page
 msgid "Scattered trees or trees in rows"
-msgstr ""
+msgstr "Išsibarstę medžiai ar medžiai eilėse"
 
 # New Site set-up page
 msgid "Wooded area"
-msgstr ""
+msgstr "Miškinga teritorija"
 
 # New Site set-up page
 msgid "Terraces, stone walls"
-msgstr ""
+msgstr "Terasas, akmeninės sienos"
 
 # New Site set-up page
 msgid "Pond"
-msgstr ""
+msgstr "Tvenkinys"
 
 # New Site set-up page
 msgid "Path"
-msgstr ""
+msgstr "Takas"
 
 # New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
-msgstr ""
+msgstr "Gatvė, kelias ar geležinkelio bėgiai (užantspauduoti, pvz., asfaltas)"
 
 # New Site set-up page
 msgid "Fences or other human-made linear structures"
-msgstr ""
+msgstr "Tvoros ar kitos žmogaus sukurtos linijinės struktūros"
 
 # New Site set-up page
 msgid "Dead tree, stumps or wood"
-msgstr ""
+msgstr "Miręs medis, kelmai ar mediena"
 
 # New Site set-up page
 msgid "Landscape features"
-msgstr ""
+msgstr "Kraštovaizdžio ypatybės"
 
 # New Site set-up page
 msgid "Features located within a 50-meter radius."
-msgstr ""
+msgstr "Objektai, esantys 50 metrų spinduliu."
 
 # New Site set-up page
 msgid "Other landscape feature details"
-msgstr ""
+msgstr "Kitos kraštovaizdžio ypatybių detalės"
 
 # New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
-msgstr ""
+msgstr "Netaikoma (ne veja / pievelė)"
 
 # New Site set-up page
 msgid "I don't know"
-msgstr ""
+msgstr "Nežinau"
 
 # New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
-msgstr ""
+msgstr "Dažnas šienavimas, visa (reikalinga) teritorija"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), all area"
-msgstr ""
+msgstr "Retas šienavimas (1-2 kartus per metus), visa teritorija"
 
 # New Site set-up page
 msgid "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
 msgstr ""
+"Retas šienavimas (1-2 kartus per metus), dalinis šienavimas (Staffelmahd)"
 
 # New Site set-up page
 msgid "Extensive grazing (few grazers, not mowed)"
-msgstr ""
+msgstr "Ekstensyvi ganykla (nedaug ganančių, nešienaujama)"
 
 # New Site set-up page
 msgid "Intensive grazing (not mowed)"
-msgstr ""
+msgstr "Intensyvi ganykla (nešienaujama)"
 
 # New Site set-up page
 msgid "How often is this lawn mown?"
-msgstr ""
+msgstr "Kaip dažnai šienaujama ši veja?"
 
 # New Site set-up page
 msgid "Not applicable"
-msgstr ""
+msgstr "Netaikoma"
 
 # New Site set-up page
 msgid "Frequent application"
-msgstr ""
+msgstr "Dažnas naudojimas"
 
 # New Site set-up page
 msgid "Rare application"
-msgstr ""
+msgstr "Retas naudojimas"
 
 # New Site set-up page
 msgid "No fertilizers used"
-msgstr ""
+msgstr "Trąšos nenaudojamos"
 
 # New Site set-up page
 msgid "Is the area fertilized?"
-msgstr ""
+msgstr "Ar teritorija tręšiama?"
 
 # New Site set-up page
 msgid "Other fertilizer details"
-msgstr ""
+msgstr "Kitos trąšų detalės"
 
 # New Site set-up page
 msgid "No pesticides applied"
-msgstr ""
+msgstr "Pesticidai nenaudojami"
 
 # New Site set-up page
 msgid "Are pesticides used?"
-msgstr ""
+msgstr "Ar naudojami pesticidai?"
 
 # New Site set-up page
 msgid "Other pesticide details"
-msgstr ""
+msgstr "Kitos pesticidų detalės"
 
 # New Site set-up page
 msgid "Please upload site photos"
-msgstr ""
+msgstr "Prašome įkelti vietos nuotraukas"
 
 # New Site set-up page
 msgid "Optimally in the direction to North, East, South and West."
-msgstr ""
+msgstr "Optimaliai šiaurės, rytų, pietų ir vakarų kryptimis."
 
 # New Site set-up page
 msgid "Garden"
-msgstr ""
+msgstr "Sodas"
 
 # New Site set-up page
 msgid "Allotment gardens"
-msgstr ""
+msgstr "Daržininkų sodai"
 
 # New Site set-up page
 msgid "Community garden"
-msgstr ""
+msgstr "Bendruomenės sodas"
 
 # New Site set-up page
 msgid "Balcony"
-msgstr ""
+msgstr "Balkonas"
 
 # New Site set-up page
 msgid "Park (mixed vegetation)"
-msgstr ""
+msgstr "Parkas (mišri augmenija)"
 
 # New Site set-up page
 msgid "Lawn"
-msgstr ""
+msgstr "Veja"
 
 # New Site set-up page
 msgid "Flowering strip"
-msgstr ""
+msgstr "Žydinčių augalų juosta"
 
 # New Site set-up page
 msgid "Built-up area"
-msgstr ""
+msgstr "Užstatyta teritorija"
 
 # New Site set-up page
 msgid "Fallow land, abandoned area (urban)"
-msgstr ""
+msgstr "Dirvonuojanti žemė, apleista teritorija (miesto)"
 
 # New Site set-up page
 msgid "Fallow land, abandoned field  (rural)"
@@ -681,155 +682,155 @@ msgstr ""
 
 # New Site set-up page
 msgid "Field edge"
-msgstr ""
+msgstr "Lauko pakraštys"
 
 # New Site set-up page
 msgid "Arable field"
-msgstr ""
+msgstr "Ariamasis laukas"
 
 # New Site set-up page
 msgid "Grassland / Meadow / Pasture"
-msgstr ""
+msgstr "Pieva / Pievų / Ganykla"
 
 # New Site set-up page
 msgid "Orchard"
-msgstr ""
+msgstr "Sodas"
 
 # New Site set-up page
 msgid "Forest edge"
-msgstr ""
+msgstr "Miško pakraštys"
 
 # New Site set-up page
 msgid "Woodland/Forest"
-msgstr ""
+msgstr "Miškas/Giria"
 
 # New Site set-up page
 msgid "Coastal"
-msgstr ""
+msgstr "Pajūrio"
 
 # New Site set-up page
 msgid "Scrubland/Heathland"
-msgstr ""
+msgstr "Krūmynai/Viržynai"
 
 # New Site set-up page
 msgid "Sparsely vegetated"
-msgstr ""
+msgstr "Retai apaugusi"
 
 # New Site set-up page
 msgid "Desert / barren"
-msgstr ""
+msgstr "Dykuma / nederlingos"
 
 # New Site set-up page
 msgid "Dominant habitat"
-msgstr ""
+msgstr "Pagrindinė buveinė"
 
 # New Site set-up page
 msgid "How many trees are there in the area of your observation site?"
-msgstr ""
+msgstr "Kiek medžių yra jūsų stebėjimo vietos teritorijoje?"
 
 # New Site set-up page
 msgid "What proportion of the site is a lawn or a grassland?"
-msgstr ""
+msgstr "Kokia vietos dalis yra veja ar pieva?"
 
 # New Site set-up page
 msgid "Fruit trees and shrubs"
-msgstr ""
+msgstr "Vaismedžiai ir krūmai"
 
 # New Site set-up page
 msgid "Unmanaged corners (natural spaces, abandoned areas)"
-msgstr ""
+msgstr "Netvarkomos vietos (natūralios erdvės, apleistos teritorijos)"
 
 # New Site set-up page
 msgid "Vegetable patch"
-msgstr ""
+msgstr "Daržovių lysvė"
 
 # New Site set-up page
 msgid "Lavender species"
-msgstr ""
+msgstr "Levandų rūšys"
 
 # New Site set-up page
 msgid "Geraniums & Pelargoniums"
-msgstr ""
+msgstr "Geranijos ir pelargonijos"
 
 # New Site set-up page
 msgid "Valeriana"
-msgstr ""
+msgstr "Valerijonas"
 
 # New Site set-up page
 msgid "Legumes (Clover, Lupin, Lotus,...)"
-msgstr ""
+msgstr "Ankštiniai augalai (dobilas, lubinas, lotosas ir kt.)"
 
 # New Site set-up page
 msgid "Marigold"
-msgstr ""
+msgstr "Medetka"
 
 # New Site set-up page
 msgid "Butterfly bush (or Summer Lilac)"
-msgstr ""
+msgstr "Drugelių krūmas (arba vasaros alyvos)"
 
 # New Site set-up page
 msgid "Aromatics like Thyme, Oregano, etc. ( Lamiaceae)"
-msgstr ""
+msgstr "Aromatiniai augalai kaip čiobreliai, raudonėliai ir kt. (Lamiaceae)"
 
 # New Site set-up page
 msgid "Nettle (Urtica dioica)"
-msgstr ""
+msgstr "Dilgėlė (Urtica dioica)"
 
 # New Site set-up page
 msgid "Brambles (Rubus fruticosa)"
-msgstr ""
+msgstr "Gervuogės (Rubus fruticosa)"
 
 # New Site set-up page
 msgid "Ivy"
-msgstr ""
+msgstr "Gebenė"
 
 # New Site set-up page
 msgid "Knappweed (Centaurea and Scabiosa spp.)"
-msgstr ""
+msgstr "Bajorė (Centaurea ir Scabiosa rūšys)"
 
 # New Site set-up page
 msgid "Fennel, Carvi or others from the Carrot family (Apiaceae)"
-msgstr ""
+msgstr "Pančiai, kmynai ar kiti iš morkų šeimos (Apiaceae)"
 
 # New Site set-up page
 msgid "Cabbage, Rucola or others Mustard-plant family (Brassicaceae)"
-msgstr ""
+msgstr "Kopūstai, rukolė ar kiti iš garstyčių šeimos (Brassicaceae)"
 
 # New Site set-up page
 msgid "Hemp-agrimony (Eupatorium spp.)"
-msgstr ""
+msgstr "Eupatorium rūšys"
 
 # New Site set-up page
 msgid "Are these plant species present in this location?"
-msgstr ""
+msgstr "Ar šios augalų rūšys yra šioje vietoje?"
 
 # New Site set-up page
 msgid "I own the site"
-msgstr ""
+msgstr "Aš esu vietos savininkas"
 
 # New Site set-up page
 msgid "Private space"
-msgstr ""
+msgstr "Privati erdvė"
 
 # New Site set-up page
 msgid "Public space"
-msgstr ""
+msgstr "Viešoji erdvė"
 
 # New Site set-up page
 msgid "Communal space"
-msgstr ""
+msgstr "Bendruomeninė erdvė"
 
 # New Site set-up page
 msgid "Prefer not to say"
-msgstr ""
+msgstr "Geriau nesakysiu"
 
 # New Site set-up page
 msgid "Do you know who owns the land?"
-msgstr ""
+msgstr "Ar žinote, kam priklauso žemė?"
 
 # New Site set-up page
 msgid "Are you responsible for gardening activities at the site?"
-msgstr ""
+msgstr "Ar esate atsakingas už sodininko veiklą šioje vietoje?"
 
 # Location attribute label
 msgid "Location"
@@ -1132,10 +1133,12 @@ msgid ""
 "This app enables you to contribute to the recording and conservation of "
 "butterflies across the world."
 msgstr ""
+"Ši programėlė leidžia jums prisidėti prie drugelių monitoringo ir "
+"išsaugojimo visame pasaulyje."
 
 # About pages
 msgid "The app was supported through several projects:"
-msgstr ""
+msgstr "Programėlė buvo remiama per kelis projektus:"
 
 # About pages
 msgid ""
@@ -1143,6 +1146,8 @@ msgid ""
 "across the world and associated with national Butterfly Monitoring Schemes "
 "listed at:"
 msgstr ""
+"Programėlė buvo sukurta įtraukiant drugelių ekspertus iš viso pasaulio ir "
+"nacionalinių Drugelių monitoringo schemų narių:"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
@@ -1269,17 +1274,19 @@ msgstr ""
 
 # Help pages
 msgid "Assign a project to a count"
-msgstr ""
+msgstr "Priskirti projektą skaičiavimui"
 
 # Help pages
 msgid ""
 "<0>Start a count.</0><1>Select \"Additional Details\" then "
 "\"Project\".</1><2>Finally, choose the appropriate project.</2>"
 msgstr ""
+"<0>Pradėkite skaičiavimą.</0><1>Pasirinkite \"Papildomi duomenys\", tada "
+"\"Projektas\".</1><2>Galiausiai pasirinkite atitinkamą projektą.</2>"
 
 # Help pages
 msgid "Assign a site to a count"
-msgstr ""
+msgstr "Priskirti vietą skaičiavimui"
 
 # Help pages
 msgid ""
@@ -1296,6 +1303,19 @@ msgid ""
 " future counts conducted in that location.</7><8>Finally, choose the site "
 "for the current count.</8>"
 msgstr ""
+"<0>Pradėkite skaičiavimą.</0><1>Priskirkite projektą skaičiavimui, žr. "
+"instrukcijas kaip pasirinkti projektą.</1><2>Išjunkite GPS \"Teritorijos\" "
+"puslapio antraštėje.</2><3>Pasirinkite \"Teritorijos žymėjimo\" įrankį "
+"dešinėje ekrano pusėje.</3><4>Pasirinkite teritoriją žemėlapyje ir "
+"patvirtinkite pasirinkimą dešinėje ekrano pusėje.</4><5>Paspauskite "
+"\"Pridėti\" mygtuką, esantį mėgstamiausių vietų skydelyje apatiniame "
+"dešiniajame ekrano kampe. Jei skydelis nematomas, galite jį atidaryti "
+"paspausdami mėgstamiausių vietų mygtuką (žvaigždutės piktogramą) "
+"viršutiniame dešiniajame kampe.</5><6>Jums bus pasiūlyta atsakyti į keletą "
+"klausimų apie vietą.</6><7>Paspauskite \"Išsaugoti\" viršutiniame "
+"dešiniajame kampe atsakę į klausimus. Vieta bus išsaugota ir ja galės būti "
+"pasinaudota būsimiems skaičiavimams toje vietoje.</7><8>Galiausiai "
+"pasirinkite vietą dabartiniam skaičiavimui.</8>"
 
 msgid "User"
 msgstr "Vartotojas"
@@ -1366,11 +1386,11 @@ msgstr ""
 
 # App setting
 msgid "Export database"
-msgstr ""
+msgstr "Eksportuoti duomenų bazę"
 
 # App setting
 msgid "Export"
-msgstr ""
+msgstr "Exportuoti"
 
 # App setting
 msgid ""
@@ -1378,6 +1398,8 @@ msgid ""
 "for technical support and is not a supported method for exporting your "
 "data</1>"
 msgstr ""
+"Ar tikrai norite eksportuoti duomenis?<1>Ši funkcija skirta tik techninei "
+"pagalbai ir nėra palaikomas duomenų eksportavimo metodas</1>?"
 
 msgid "Sweden"
 msgstr "Švedija"
@@ -3073,7 +3095,7 @@ msgstr "Jūs neturite išsaugotų maršrutų."
 
 # Part of favorite track
 msgid "You have no saved sites."
-msgstr ""
+msgstr "Jūs neturite išsaugotų vietovių."
 
 # Change list order toast message
 msgid "Changed list ordering to alphabetical."
