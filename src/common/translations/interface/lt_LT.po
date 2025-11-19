@@ -3189,3 +3189,71 @@ msgid ""
 "reports."
 msgstr ""
 "Šis įrašas turi jautrių rūšių ir neturėtų būti rodomas viešose ataskaitose."
+
+# Species lists functionality
+msgid ""
+"No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" "
+"tabs to install species lists for offline use."
+msgstr ""
+"Nerasta įdiegtų rūšių sąrašų.<br/><br/>Naršykite \"Netoliese\" arba \"Visi "
+"sąrašai\" skiltis, kad įdiegtumėte rūšių sąrašus naudojimui neprisijungus."
+
+# Species lists functionality
+msgid ""
+"Some species groups are missing from your current downloaded "
+"lists.<br/><2>Species Lists</2>"
+msgstr ""
+"Kai kurių rūšių grupių trūksta jūsų atsisiųstuose sąrašuose.<br/><2>Rūšių "
+"sąrašai</2>"
+
+# Species lists functionality
+msgid ""
+"You need to be online to browse species lists.<br/><br/>Please connect to "
+"the internet and try again."
+msgstr ""
+"Norint naršyti rūšių sąrašus, reikia būti prisijungus.<br/><br/>Prisijunkite"
+" prie interneto ir bandykite dar kartą."
+
+# Species lists functionality
+msgid "List name"
+msgstr "Sąrašo pavadinimas"
+
+# Species lists functionality
+msgid "Species Lists"
+msgstr "Rūšių sąrašai"
+
+# Species lists functionality
+msgid "Installed"
+msgstr "Įdiegta"
+
+# Species lists functionality
+msgid "Nearby"
+msgstr "Netoliese"
+
+# Species lists functionality
+msgid "All Lists"
+msgstr "Visi sąrašai"
+
+# Species lists functionality
+msgid "No species lists found."
+msgstr "Rūšių sąrašų nerasta."
+
+# Species lists functionality
+msgid "Install"
+msgstr "Įdiegti"
+
+# Species lists functionality
+msgid "Installing list..."
+msgstr "Diegiamas sąrašas..."
+
+# Species lists functionality
+msgid "Successfully refreshed \"{{country}}\" list with {{size}} species"
+msgstr "Sėkmingai atnaujintas \"{{country}}\" sąrašas su {{size}} rūšimis"
+
+# Species lists functionality
+msgid "Are you sure you want to delete the list?"
+msgstr "Ar tikrai norite ištrinti sąrašą?"
+
+# Species lists functionality
+msgid "Successfully installed \"{{country}}\" list with {{size}} species"
+msgstr "Sėkmingai įdiegtas \"{{country}}\" sąrašas su {{size}} rūšimis"

@@ -124,8 +124,11 @@ const SpeciesListSettings = () => {
       await list.fetchRemoteSpecies();
 
       toast.success(
-        `Successfully installed "${list.data.title}" list with ${list.data.size} species`,
-        { position: 'bottom' }
+        t('Successfully installed "{{country}}" list with {{size}} species', {
+          country: list.data.title,
+          size: list.data.size,
+        }),
+        { position: 'bottom', skipTranslation: true }
       );
     } catch (error: any) {
       toast.error(`Failed to install list: ${error.message}`);
@@ -176,8 +179,11 @@ const SpeciesListSettings = () => {
       await list.fetchRemoteSpecies();
 
       toast.success(
-        `Successfully refreshed "${list.data.title}" list with ${list.data.size} species`,
-        { position: 'bottom' }
+        t('Successfully refreshed "{{country}}" list with {{size}} species', {
+          country: list.data.title,
+          size: list.data.size,
+        }),
+        { position: 'bottom', skipTranslation: true }
       );
     } catch (error: any) {
       toast.error(`Failed to load lists: ${error.message}`);
@@ -205,6 +211,7 @@ const SpeciesListSettings = () => {
               ref={searchbarRef}
               value={currentSearch}
               showCancelButton="always"
+              cancelButtonText={t('Cancel')}
               onIonCancel={() => {
                 setShowSearch(false);
                 setCurrentSearch('');

@@ -46,13 +46,11 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
   if (!lists.length) {
     return (
       <InfoBackgroundMessage className="mt-20">
-        <T>No species lists installed</T>
+        No species lists installed.
         <br />
         <br />
-        <T>
-          Browse the "Nearby" or "All Lists" tabs to install species lists for
-          offline use.
-        </T>
+        Browse the "Nearby" or "All Lists" tabs to install species lists for
+        offline use.
       </InfoBackgroundMessage>
     );
   }

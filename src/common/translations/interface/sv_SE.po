@@ -3195,3 +3195,65 @@ msgid ""
 msgstr ""
 "Denna undersökning inkluderar känsliga arter och bör inte inkluderas i "
 "offentliga rapporter."
+
+# Species lists functionality
+msgid ""
+"No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" "
+"tabs to install species lists for offline use."
+msgstr ""
+
+# Species lists functionality
+msgid ""
+"Some species groups are missing from your current downloaded "
+"lists.<br/><2>Species Lists</2>"
+msgstr ""
+
+# Species lists functionality
+msgid ""
+"You need to be online to browse species lists.<br/><br/>Please connect to "
+"the internet and try again."
+msgstr ""
+
+# Species lists functionality
+msgid "List name"
+msgstr ""
+
+# Species lists functionality
+msgid "Species Lists"
+msgstr ""
+
+# Species lists functionality
+msgid "Installed"
+msgstr ""
+
+# Species lists functionality
+msgid "Nearby"
+msgstr ""
+
+# Species lists functionality
+msgid "All Lists"
+msgstr ""
+
+# Species lists functionality
+msgid "No species lists found."
+msgstr ""
+
+# Species lists functionality
+msgid "Install"
+msgstr ""
+
+# Species lists functionality
+msgid "Installing list..."
+msgstr ""
+
+# Species lists functionality
+msgid "Successfully refreshed \"{{country}}\" list with {{size}} species"
+msgstr ""
+
+# Species lists functionality
+msgid "Are you sure you want to delete the list?"
+msgstr ""
+
+# Species lists functionality
+msgid "Successfully installed \"{{country}}\" list with {{size}} species"
+msgstr ""

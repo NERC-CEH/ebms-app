@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import { observer } from 'mobx-react';
-import { Trans as T } from 'react-i18next';
 import { device, Button, VirtualList } from '@flumens';
 import {
   IonList,
@@ -70,10 +69,10 @@ const AllLists = ({ onInstall, lists, onRefresh }: Props) => {
   if (!device.isOnline) {
     return (
       <InfoBackgroundMessage className="mt-20">
-        <T>You need to be online to browse species lists</T>
+        You need to be online to browse species lists.
         <br />
         <br />
-        <T>Please connect to the internet and try again.</T>
+        Please connect to the internet and try again.
       </InfoBackgroundMessage>
     );
   }

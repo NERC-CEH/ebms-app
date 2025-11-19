@@ -3110,3 +3110,59 @@ msgid ""
 msgstr ""
 "This survey has sensitive species and should not be included in public "
 "reports."
+
+# Species lists functionality
+msgid "No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" tabs to install species lists for offline use."
+msgstr "No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" tabs to install species lists for offline use."
+
+# Species lists functionality
+msgid "Some species groups are missing from your current downloaded lists.<br/><2>Species Lists</2>"
+msgstr "Some species groups are missing from your current downloaded lists.<br/><2>Species Lists</2>"
+
+# Species lists functionality
+msgid "You need to be online to browse species lists.<br/><br/>Please connect to the internet and try again."
+msgstr "You need to be online to browse species lists.<br/><br/>Please connect to the internet and try again."
+
+# Species lists functionality
+msgid "List name"
+msgstr "List name"
+
+# Species lists functionality
+msgid "Species Lists"
+msgstr "Species Lists"
+
+# Species lists functionality
+msgid "Installed"
+msgstr "Installed"
+
+# Species lists functionality
+msgid "Nearby"
+msgstr "Nearby"
+
+# Species lists functionality
+msgid "All Lists"
+msgstr "All Lists"
+
+# Species lists functionality
+msgid "No species lists found."
+msgstr "No species lists found."
+
+# Species lists functionality
+msgid "Install"
+msgstr "Install"
+
+# Species lists functionality
+msgid "Installing list..."
+msgstr "Installing list..."
+
+# Species lists functionality
+msgid "Successfully refreshed \"{{country}}\" list with {{size}} species"
+msgstr "Successfully refreshed \"{{country}}\" list with {{size}} species"
+
+# Species lists functionality
+msgid "Are you sure you want to delete the list?"
+msgstr "Are you sure you want to delete the list?"
+
+# Species lists functionality
+msgid "Successfully installed \"{{country}}\" list with {{size}} species"
+msgstr "Successfully installed \"{{country}}\" list with {{size}} species"
