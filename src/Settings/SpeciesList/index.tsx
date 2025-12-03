@@ -119,9 +119,10 @@ const SpeciesListSettings = () => {
     await loader.show('Installing list...');
 
     try {
-      speciesLists.push(list);
       await list.save(true);
       await list.fetchRemoteSpecies();
+
+      speciesLists.push(list);
 
       toast.success(
         t('Successfully installed "{{country}}" list with {{size}} species', {

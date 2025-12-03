@@ -7,7 +7,6 @@ async function searchCommonNames(
   store: { table: any; db: any },
   searchPhrase: string,
   language: string,
-
   where?: (table: typeof store.table) => SQL
 ): Promise<SearchResult[]> {
   const { table } = store;

@@ -67,14 +67,7 @@ const newValueWrap = ({ newValue }) => {
 };
 observe(appModel.data, 'language', newValueWrap);
 
-export function translateSpeciesName(key) {
-  return i18n.t(key, {
-    ns: 'names',
-    lngs: [i18n.language], // don't revert to english if no local species name
-    defaultValue: '', // don't return anything if no local species name
-  });
-}
-
+// eslint-disable-next-line import/prefer-default-export
 export function translateSpeciesDescription(key) {
   // revert to English descriptions
   let translation = i18n.t(key, { ns: 'species' });

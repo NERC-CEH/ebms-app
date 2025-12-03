@@ -5,10 +5,7 @@ import { Main, ModalHeader, InfoMessage, UserFeedbackRequest } from '@flumens';
 import { IonModal, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
 import config from 'common/config';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
-import {
-  translateSpeciesDescription,
-  translateSpeciesName,
-} from 'common/translations/translator';
+import { translateSpeciesDescription } from 'common/translations/translator';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import userModel from 'models/user';
@@ -73,8 +70,7 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     const filterBySearchPhrase = (sp: SpeciesType) => {
       const re = new RegExp(escapeRegexCharacters(searchPhrase), 'i');
 
-      const commonName = translateSpeciesName(sp.taxon);
-      const matchesCommonName = re.test(commonName);
+      const matchesCommonName = re.test(sp.commonName || '');
       const matchesLatinName = re.test(sp.taxon);
 
       return matchesCommonName || matchesLatinName;
@@ -107,11 +103,11 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     const { showCommonNamesInGuide } = appModel.data;
 
     const getSpeciesElement = (sp: SpeciesType) => {
-      const { id, taxon } = sp;
+      const { id, taxon, commonName } = sp;
 
       let label = taxon;
       if (showCommonNamesInGuide) {
-        label = translateSpeciesName(taxon) || label; // might not have translation
+        label = commonName || label; // might not have translation
       }
 
       const onClick = () => showSpeciesModal(id!);
