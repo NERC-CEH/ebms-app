@@ -34,9 +34,7 @@ export interface Species {
   };
 }
 
-const speciesWithCommonNames = observable(
-  species.filter(sp => !!sp.descriptionKey) // optimise by only looking for species with descriptionKey
-);
+const speciesWithCommonNames = observable(species);
 
 // attach commonName field for easier access
 speciesLists.ready.then(async () => {
@@ -45,7 +43,9 @@ speciesLists.ready.then(async () => {
       // eslint-disable-next-line no-unused-expressions
       speciesLists.data.length; // track speciesLists changes
 
-      const ids = speciesWithCommonNames.map(sp => sp.warehouse_id);
+      const ids = species
+        .filter(sp => !!sp.descriptionKey) // optimise by only looking for species with descriptionKey
+        .map(sp => sp.warehouse_id);
 
       const synonym: any = alias(speciesStore.table, 'synonym');
 

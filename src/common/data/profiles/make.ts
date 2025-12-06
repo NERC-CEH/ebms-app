@@ -23,20 +23,24 @@ function getCountryMap(string: any) {
   const map: any = {};
   if (string === null) return map;
 
-  const transformCountryFormat = (country: any) => {
-    const [key, val] = country.split('=');
+  const transformCountryFormat = ([key, val]: any) => {
     const normKey = key.replace(': ', '_');
     const normVal = val.replace('?', '');
     map[normKey] = normVal;
   };
-  string.split(' | ').forEach(transformCountryFormat);
+  Object.entries(JSON.parse(string)).forEach(transformCountryFormat);
   return map;
 }
 
-async function fetchSpecies(listID: any) {
+async function fetchWarehouseSpecies(listID: any) {
   const { data } = await axios({
     method: 'GET',
-    url: `${warehouseURL}/index.php/services/rest/reports/projects/ebms/ebms_app_species_list.xml?taxon_list_id=${listID}&limit=10000000`,
+    url: `${warehouseURL}/index.php/services/rest/reports/projects/ebms/ebms_app_species_list.xml`,
+    params: {
+      id: listID,
+      type: 'list',
+      limit: 10000000,
+    },
     headers: {
       Authorization: `Bearer ${APP_WAREHOUSE_ANON_TOKEN}`,
     },
@@ -94,13 +98,13 @@ function saveToFile(data: any, name: any) {
   return new Promise(saveSpeciesToFileWrap);
 }
 
-const fetchAndSave = async (sheet: any) => {
+const fetchDatasheetAndSave = async (sheet: any) => {
   const sheetData = await fetchSheet({ drive, file, sheet });
   saveToFile(sheetData, sheet);
   return sheetData;
 };
 
-async function attachProfileInfo(species: any, speciesInfoList: any) {
+async function attachProfileInfo(warehouseSpecies: any, speciesInfoList: any) {
   const getSpeciesWithInfo = (sp: any) => {
     const byTaxon = (spInfo: any) =>
       spInfo.taxon === sp.taxon || spInfo.taxon === sp.preferred_taxon;
@@ -120,14 +124,14 @@ async function attachProfileInfo(species: any, speciesInfoList: any) {
   const byId = (s1: any, s2: any) =>
     s1.id - s2.id || s1.warehouse_id - s2.warehouse_id;
 
-  return species.map(getSpeciesWithInfo).filter(hasValue).sort(byId);
+  return warehouseSpecies.map(getSpeciesWithInfo).filter(hasValue).sort(byId);
 }
 
 const getData = async () => {
-  const speciesInfoList = await fetchAndSave('species');
+  const speciesInfoList = await fetchDatasheetAndSave('species');
 
-  await fetchSpecies(251)
-    .then(sp => attachProfileInfo(sp, speciesInfoList))
+  await fetchWarehouseSpecies(251)
+    .then(warehouseSp => attachProfileInfo(warehouseSp, speciesInfoList))
     .then(save)
     // eslint-disable-next-line @getify/proper-arrows/name
     .then(() => console.log('All done! 🚀'));

@@ -8,7 +8,6 @@ msgstr ""
 "Language: en\n"
 "X-Generator: POEditor.com\n"
 
-
 # Country selection
 msgid "Europe"
 msgstr "Europe"
@@ -315,13 +314,31 @@ msgid ""
 msgstr ""
 "We are very grateful for all the people that helped to create this app:"
 
-# Credits page 
-msgid "In the UGP+ project*, citizens, policy makers and scientists work together to develop future plans for urban nature in Europe. Counting butterflies in cities is not only a great way to keep track of biodiversity and the quality of urban green spaces, but also to empower all of us to engage with questions of biodiversity, nature policy, and propose new actions for people and the city. The data contributed by participants will be analysed to inform urban biodiversity conservation actions across Europe."
-msgstr "In the UGP+ project*, citizens, policy makers and scientists work together to develop future plans for urban nature in Europe. Counting butterflies in cities is not only a great way to keep track of biodiversity and the quality of urban green spaces, but also to empower all of us to engage with questions of biodiversity, nature policy, and propose new actions for people and the city. The data contributed by participants will be analysed to inform urban biodiversity conservation actions across Europe."
+# Credits page
+msgid ""
+"In the UGP+ project*, citizens, policy makers and scientists work together "
+"to develop future plans for urban nature in Europe. Counting butterflies in "
+"cities is not only a great way to keep track of biodiversity and the quality"
+" of urban green spaces, but also to empower all of us to engage with "
+"questions of biodiversity, nature policy, and propose new actions for people"
+" and the city. The data contributed by participants will be analysed to "
+"inform urban biodiversity conservation actions across Europe."
+msgstr ""
+"In the UGP+ project*, citizens, policy makers and scientists work together "
+"to develop future plans for urban nature in Europe. Counting butterflies in "
+"cities is not only a great way to keep track of biodiversity and the quality"
+" of urban green spaces, but also to empower all of us to engage with "
+"questions of biodiversity, nature policy, and propose new actions for people"
+" and the city. The data contributed by participants will be analysed to "
+"inform urban biodiversity conservation actions across Europe."
 
-# Credits page 
-msgid "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in Society, and is a project funded by the European Union"
-msgstr "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in Society, and is a project funded by the European Union"
+# Credits page
+msgid ""
+"UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
+" Society, and is a project funded by the European Union"
+msgstr ""
+"UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
+" Society, and is a project funded by the European Union"
 
 msgid "Home"
 msgstr "Home"
@@ -399,243 +416,243 @@ msgstr "Area Count"
 msgid "Area"
 msgstr "Area"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Site area"
 msgstr "Site area"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Approximate size of your observation site."
 msgstr "Approximate size of your observation site."
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
 msgstr "Habitats/land uses (total should be 100%)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
 msgstr "Arable field grains (wheat, barley, rye)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Arable field fruits or vegetables"
 msgstr "Arable field fruits or vegetables"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Arable field rapeseed"
 msgstr "Arable field rapeseed"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Arable field corn"
 msgstr "Arable field corn"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Arable legumes"
 msgstr "Arable legumes"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Arable multi-cropping"
 msgstr "Arable multi-cropping"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Arable fallow"
 msgstr "Arable fallow"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
 msgstr "Grassland homogeneous/intensively managed"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Grassland extensive or heterogeneous (pasture)"
 msgstr "Grassland extensive or heterogeneous (pasture)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
 msgstr "Orchard, vineyard or grove (sparse, pasture among trees)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
 msgstr "Orchard, vineyard or grove (intensely managed)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Scrubland"
 msgstr "Scrubland"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Land laying fallow / wasteland"
 msgstr "Land laying fallow / wasteland"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Sparse woodland"
 msgstr "Sparse woodland"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Dense woodland or forest"
 msgstr "Dense woodland or forest"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Plantation"
 msgstr "Plantation"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Garden (single)"
 msgstr "Garden (single)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
 msgstr "Gardens (multiple, e.g. allotment gardens)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Building(s)"
 msgstr "Building(s)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Pond, lake or sea"
 msgstr "Pond, lake or sea"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "River or creek"
 msgstr "River or creek"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Wetland"
 msgstr "Wetland"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Dunes or barren land"
 msgstr "Dunes or barren land"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Field edge(s)"
 msgstr "Field edge(s)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Buffer-strip(s)"
 msgstr "Buffer-strip(s)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Flower-strip(s)"
 msgstr "Flower-strip(s)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Hedge(s)"
 msgstr "Hedge(s)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Scattered trees or trees in rows"
 msgstr "Scattered trees or trees in rows"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Wooded area"
 msgstr "Wooded area"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Terraces, stone walls"
 msgstr "Terraces, stone walls"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Pond"
 msgstr "Pond"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Path"
 msgstr "Path"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
 msgstr "Street, road or railroad tracks (sealed, e.g. asphalt)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Fences or other human-made linear structures"
 msgstr "Fences or other human-made linear structures"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Dead tree, stumps or wood"
 msgstr "Dead tree, stumps or wood"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Landscape features"
 msgstr "Landscape features"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Features located within a 50-meter radius."
 msgstr "Features located within a 50-meter radius."
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Other landscape feature details"
 msgstr "Other landscape feature details"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
 msgstr "Not applicable (not a grass / lawn)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "I don't know"
 msgstr "I don't know"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
 msgstr "Frequent mowing, all (relevant) area"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Rare mowing (1-2 times a year), all area"
 msgstr "Rare mowing (1-2 times a year), all area"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
 msgstr "Rare mowing (1-2 times a year), partial mowing (Staffelmahd)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Extensive grazing (few grazers, not mowed)"
 msgstr "Extensive grazing (few grazers, not mowed)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Intensive grazing (not mowed)"
 msgstr "Intensive grazing (not mowed)"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "How often is this lawn mown?"
 msgstr "How often is this lawn mown?"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Not applicable"
 msgstr "Not applicable"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Frequent application"
 msgstr "Frequent application"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Rare application"
 msgstr "Rare application"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "No fertilizers used"
 msgstr "No fertilizers used"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Is the area fertilized?"
 msgstr "Is the area fertilized?"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Other fertilizer details"
 msgstr "Other fertilizer details"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "No pesticides applied"
 msgstr "No pesticides applied"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Are pesticides used?"
 msgstr "Are pesticides used?"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Other pesticide details"
 msgstr "Other pesticide details"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Please upload site photos"
 msgstr "Please upload site photos"
 
-# New Site set-up page 
+# New Site set-up page
 msgid "Optimally in the direction to North, East, South and West."
 msgstr "Optimally in the direction to North, East, South and West."
 
@@ -1094,8 +1111,14 @@ msgstr "Unrecognized email address."
 msgid "email is not valid"
 msgstr "email is not valid"
 
-msgid "Butterflies are captivating insects, but they are declining in many parts of the world. For example, this graph shows the European grassland butterfly index."
-msgstr "Butterflies are captivating insects, but they are declining in many parts of the world. For example, this graph shows the European grassland butterfly index."
+msgid ""
+"Butterflies are captivating insects, but they are declining in many parts of"
+" the world. For example, this graph shows the European grassland butterfly "
+"index."
+msgstr ""
+"Butterflies are captivating insects, but they are declining in many parts of"
+" the world. For example, this graph shows the European grassland butterfly "
+"index."
 
 # onboarding pages
 msgid ""
@@ -1106,8 +1129,12 @@ msgstr ""
 "butterflies and their habitats."
 
 # onboarding pages
-msgid "We lack structured information on butterfly numbers in many parts of the world."
-msgstr "We lack structured information on butterfly numbers in many parts of the world."
+msgid ""
+"We lack structured information on butterfly numbers in many parts of the "
+"world."
+msgstr ""
+"We lack structured information on butterfly numbers in many parts of the "
+"world."
 
 msgid ""
 "It has never been easier to contribute high quality data for research to "
@@ -1119,16 +1146,26 @@ msgstr ""
 "started straight away"
 
 # About pages
-msgid "This app enables you to contribute to the recording and conservation of butterflies across the world."
-msgstr "This app enables you to contribute to the recording and conservation of butterflies across the world."
+msgid ""
+"This app enables you to contribute to the recording and conservation of "
+"butterflies across the world."
+msgstr ""
+"This app enables you to contribute to the recording and conservation of "
+"butterflies across the world."
 
 # About pages
 msgid "The app was supported through several projects:"
 msgstr "The app was supported through several projects:"
 
 # About pages
-msgid "The app has benefited from input from a number of butterfly experts from across the world and associated with national Butterfly Monitoring Schemes listed at:"
-msgstr "The app has benefited from input from a number of butterfly experts from across the world and associated with national Butterfly Monitoring Schemes listed at:"
+msgid ""
+"The app has benefited from input from a number of butterfly experts from "
+"across the world and associated with national Butterfly Monitoring Schemes "
+"listed at:"
+msgstr ""
+"The app has benefited from input from a number of butterfly experts from "
+"across the world and associated with national Butterfly Monitoring Schemes "
+"listed at:"
 
 msgid ""
 "ABLE is funded by a service contract from the European Union Directorate for"
@@ -1260,16 +1297,44 @@ msgid "Assign a project to a count"
 msgstr "Assign a project to a count"
 
 # Help pages
-msgid "<0>Start a count.</0><1>Select \"Additional Details\" then \"Project\".</1><2>Finally, choose the appropriate project.</2>"
-msgstr "<0>Start a count.</0><1>Select \"Additional Details\" then \"Project\".</1><2>Finally, choose the appropriate project.</2>"
+msgid ""
+"<0>Start a count.</0><1>Select \"Additional Details\" then "
+"\"Project\".</1><2>Finally, choose the appropriate project.</2>"
+msgstr ""
+"<0>Start a count.</0><1>Select \"Additional Details\" then "
+"\"Project\".</1><2>Finally, choose the appropriate project.</2>"
 
 # Help pages
 msgid "Assign a site to a count"
 msgstr "Assign a site to a count"
 
 # Help pages
-msgid "<0>Start a count.</0><1>Assign a project to the count, see instructions on how to select a project.</1><2>Turn off the GPS in the header of the \"Area\" page.</2><3>Select the \"Site Drawing\" tool on the right side of the screen.</3><4>Choose an area on the map and confirm your selection on the right side of the screen.</4><5>Press the \"Add\" button located on the favourite sites panel in the bottom right corner of the screen. If the panel is not visible, you can open it by clicking the favourite sites button (star icon) at the top right.</5><6>You will be prompted to answer some questions about the site.</6><7>Press \"Save\" in the top right corner after answering the questions. The site will be saved, and it can be selected for future counts conducted in that location.</7><8>Finally, choose the site for the current count.</8>"
-msgstr "<0>Start a count.</0><1>Assign a project to the count, see instructions on how to select a project.</1><2>Turn off the GPS in the header of the \"Area\" page.</2><3>Select the \"Site Drawing\" tool on the right side of the screen.</3><4>Choose an area on the map and confirm your selection on the right side of the screen.</4><5>Press the \"Add\" button located on the favourite sites panel in the bottom right corner of the screen. If the panel is not visible, you can open it by clicking the favourite sites button (star icon) at the top right.</5><6>You will be prompted to answer some questions about the site.</6><7>Press \"Save\" in the top right corner after answering the questions. The site will be saved, and it can be selected for future counts conducted in that location.</7><8>Finally, choose the site for the current count.</8>"
+msgid ""
+"<0>Start a count.</0><1>Assign a project to the count, see instructions on "
+"how to select a project.</1><2>Turn off the GPS in the header of the "
+"\"Area\" page.</2><3>Select the \"Site Drawing\" tool on the right side of "
+"the screen.</3><4>Choose an area on the map and confirm your selection on "
+"the right side of the screen.</4><5>Press the \"Add\" button located on the "
+"favourite sites panel in the bottom right corner of the screen. If the panel"
+" is not visible, you can open it by clicking the favourite sites button "
+"(star icon) at the top right.</5><6>You will be prompted to answer some "
+"questions about the site.</6><7>Press \"Save\" in the top right corner after"
+" answering the questions. The site will be saved, and it can be selected for"
+" future counts conducted in that location.</7><8>Finally, choose the site "
+"for the current count.</8>"
+msgstr ""
+"<0>Start a count.</0><1>Assign a project to the count, see instructions on "
+"how to select a project.</1><2>Turn off the GPS in the header of the "
+"\"Area\" page.</2><3>Select the \"Site Drawing\" tool on the right side of "
+"the screen.</3><4>Choose an area on the map and confirm your selection on "
+"the right side of the screen.</4><5>Press the \"Add\" button located on the "
+"favourite sites panel in the bottom right corner of the screen. If the panel"
+" is not visible, you can open it by clicking the favourite sites button "
+"(star icon) at the top right.</5><6>You will be prompted to answer some "
+"questions about the site.</6><7>Press \"Save\" in the top right corner after"
+" answering the questions. The site will be saved, and it can be selected for"
+" future counts conducted in that location.</7><8>Finally, choose the site "
+"for the current count.</8>"
 
 msgid "User"
 msgstr "User"
@@ -1336,17 +1401,23 @@ msgstr "Clear"
 msgid " This will delete cached data, including your uploaded surveys."
 msgstr " This will delete cached data, including your uploaded surveys."
 
-# App setting  
+# App setting
 msgid "Export database"
 msgstr "Export database"
 
-# App setting  
+# App setting
 msgid "Export"
 msgstr "Export"
 
-# App setting  
-msgid "Are you sure you want to export the data?<1>This feature is intended solely for technical support and is not a supported method for exporting your data</1>"
-msgstr "Are you sure you want to export the data?<1>This feature is intended solely for technical support and is not a supported method for exporting your data</1>"
+# App setting
+msgid ""
+"Are you sure you want to export the data?<1>This feature is intended solely "
+"for technical support and is not a supported method for exporting your "
+"data</1>"
+msgstr ""
+"Are you sure you want to export the data?<1>This feature is intended solely "
+"for technical support and is not a supported method for exporting your "
+"data</1>"
 
 msgid "Sweden"
 msgstr "Sweden"
@@ -3137,16 +3208,28 @@ msgstr ""
 "reports."
 
 # Species lists functionality
-msgid "No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" tabs to install species lists for offline use."
-msgstr "No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" tabs to install species lists for offline use."
+msgid ""
+"No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" "
+"tabs to install species lists for offline use."
+msgstr ""
+"No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" "
+"tabs to install species lists for offline use."
 
 # Species lists functionality
-msgid "Some species groups are missing from your current downloaded lists.<br/><2>Species Lists</2>"
-msgstr "Some species groups are missing from your current downloaded lists.<br/><2>Species Lists</2>"
+msgid ""
+"Some species groups are missing from your current downloaded "
+"lists.<br/><2>Species Lists</2>"
+msgstr ""
+"Some species groups are missing from your current downloaded "
+"lists.<br/><2>Species Lists</2>"
 
 # Species lists functionality
-msgid "You need to be online to browse species lists.<br/><br/>Please connect to the internet and try again."
-msgstr "You need to be online to browse species lists.<br/><br/>Please connect to the internet and try again."
+msgid ""
+"You need to be online to browse species lists.<br/><br/>Please connect to "
+"the internet and try again."
+msgstr ""
+"You need to be online to browse species lists.<br/><br/>Please connect to "
+"the internet and try again."
 
 # Species lists functionality
 msgid "List name"

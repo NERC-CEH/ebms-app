@@ -16,27 +16,27 @@ msgstr ""
 
 # Country selection
 msgid "Europe"
-msgstr ""
+msgstr "ヨーロッパ"
 
 # Country selection
 msgid "Asia"
-msgstr ""
+msgstr "アジア"
 
 # Country selection
 msgid "Africa"
-msgstr ""
+msgstr "アフリカ"
 
 # Country selection
 msgid "Australasia"
-msgstr ""
+msgstr "オセアニア"
 
 # Country selection
 msgid "North America"
-msgstr ""
+msgstr "北アメリカ"
 
 # Country selection
 msgid "South America"
-msgstr ""
+msgstr "南アメリカ"
 
 msgid "Select your country"
 msgstr "国を選んでください。"
@@ -3046,59 +3046,60 @@ msgid ""
 "No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" "
 "tabs to install species lists for offline use."
 msgstr ""
+"種リストがインストールされていません.<br/><br/>「近く」または「すべてのリスト」タブを参照して、オフラインで使用するために種のリストをインストールします."
 
 # Species lists functionality
 msgid ""
 "Some species groups are missing from your current downloaded "
 "lists.<br/><2>Species Lists</2>"
-msgstr ""
+msgstr "現在ダウンロードしたリストに一部の種グループがありません.<br/><2>種のリスト</2>"
 
 # Species lists functionality
 msgid ""
 "You need to be online to browse species lists.<br/><br/>Please connect to "
 "the internet and try again."
-msgstr ""
+msgstr "種リストを閲覧するにはオンラインである必要があります.<br/><br/>インターネットに接続してもう一度お試しください."
 
 # Species lists functionality
 msgid "List name"
-msgstr ""
+msgstr "リストの名前"
 
 # Species lists functionality
 msgid "Species Lists"
-msgstr ""
+msgstr "種のリスト"
 
 # Species lists functionality
 msgid "Installed"
-msgstr ""
+msgstr "インストール済"
 
 # Species lists functionality
 msgid "Nearby"
-msgstr ""
+msgstr "近く"
 
 # Species lists functionality
 msgid "All Lists"
-msgstr ""
+msgstr "すべてのリスト"
 
 # Species lists functionality
 msgid "No species lists found."
-msgstr ""
+msgstr "種リストはみつからず"
 
 # Species lists functionality
 msgid "Install"
-msgstr ""
+msgstr "インストール"
 
 # Species lists functionality
 msgid "Installing list..."
-msgstr ""
+msgstr "リストをインストール中"
 
 # Species lists functionality
 msgid "Successfully refreshed \"{{country}}\" list with {{size}} species"
-msgstr ""
+msgstr "新しくするのに成功 \"{{country}}\" list with {{size}} species"
 
 # Species lists functionality
 msgid "Are you sure you want to delete the list?"
-msgstr ""
+msgstr "このリストを削除してもよろしいですか?"
 
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
-msgstr ""
+msgstr "インストールに成功 \"{{country}}\" list with {{size}} species"

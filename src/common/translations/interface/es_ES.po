@@ -18,27 +18,27 @@ msgstr ""
 
 # Country selection
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 # Country selection
 msgid "Asia"
-msgstr ""
+msgstr "Asia"
 
 # Country selection
 msgid "Africa"
-msgstr ""
+msgstr "África"
 
 # Country selection
 msgid "Australasia"
-msgstr ""
+msgstr "Australasia"
 
 # Country selection
 msgid "North America"
-msgstr ""
+msgstr "Norte América"
 
 # Country selection
 msgid "South America"
-msgstr ""
+msgstr "Sudamérica"
 
 msgid "Select your country"
 msgstr "Seleccione su país"
@@ -401,7 +401,7 @@ msgid ""
 "Are you sure you want to logout?<br/><br/>Your pending and uploaded "
 "<4>records will not be deleted </4> from this device."
 msgstr ""
-"¿Estás seguro de que quieres cerrar la sesión?<br/><br/>Sus registros "
+"¿Está segur@ de que quieres cerrar la sesión?<br/><br/>Sus registros "
 "pendientes y cargados <4>no se borrarán  </4> de este dispositivo"
 
 msgid "Cancel"
@@ -984,7 +984,7 @@ msgstr "Se ha guardado con éxito una ubicación."
 
 # Survey area page
 msgid "Are you sure?"
-msgstr "¿Está seguro?"
+msgstr "¿Está segur@?"
 
 # Survey area page
 msgid "This will discard the form data."
@@ -1067,7 +1067,7 @@ msgid "Camera"
 msgstr "Cámara"
 
 msgid "Are you sure you want to remove this photo?"
-msgstr "¿Estás seguro que quieres eliminar esta foto de la muestra?"
+msgstr "¿Está segur@ que quieres eliminar esta foto de la muestra?"
 
 msgid "Note: it will remain in the gallery."
 msgstr "Nota: permanecerá en la galería"
@@ -1443,7 +1443,7 @@ msgid ""
 "for technical support and is not a supported method for exporting your "
 "data</1>"
 msgstr ""
-"¿Estás seguro de querer exportar los datos?<1>Esta función está destinada "
+"¿Está segur@ de querer exportar los datos?<1>Esta función está destinada "
 "exclusivamente a la asistencia técnica y no es un método admitido para "
 "exportar sus datos.</1>"
 
@@ -2004,7 +2004,7 @@ msgstr ""
 
 # This is part of mapping functionality
 msgid "Are you sure you want to delete your current track?"
-msgstr "¿Estás seguro de que quieres borrar la ruta actual?"
+msgstr "¿Está segur@ de que quieres borrar la ruta actual?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -2073,7 +2073,7 @@ msgstr "Condiciones climáticas"
 
 # Alert message
 msgid "Are you sure you want to delete {{taxon}} ?"
-msgstr "¿Estás seguro de que quieres eliminar {{taxon}} ?"
+msgstr "¿Está segur@ de que quieres eliminar {{taxon}} ?"
 
 # Credits page text
 msgid ""
@@ -2262,7 +2262,7 @@ msgstr "Advertencia"
 
 # Alert message when turning GPS off
 msgid "Are you sure you want to turn off the GPS tracking?"
-msgstr "¿Estás seguro de que quieres desactivar el seguimiento GPS?"
+msgstr "¿Está segur@ de que quieres desactivar el seguimiento GPS?"
 
 # Alert button option
 msgid "Turn off"
@@ -2279,7 +2279,7 @@ msgstr "La especie ya existe"
 # Alert message
 msgid "Are you sure you want to merge this list to the existing species list?"
 msgstr ""
-"¿Está seguro de que desea unir esta lista con la lista de especies "
+"¿Está segur@ de que desea unir esta lista con la lista de especies "
 "existente?"
 
 # Single species count survey validation message
@@ -2655,7 +2655,7 @@ msgstr "Nombre trampa de polillas"
 
 # Moth trap survey
 msgid "Are you sure you want to delete this moth trap?"
-msgstr "¿Está seguro de que quiere eliminar esta trampa para polillas?"
+msgstr "¿Está segur@ de que quiere eliminar esta trampa para polillas?"
 
 # Moth trap survey
 msgid "Additional description of lamp."
@@ -2729,7 +2729,7 @@ msgstr "Lámparas"
 # Moth trap setup delete lamp entry alert message
 msgid "Are you sure you want to delete this lamp entry from the moth trap?"
 msgstr ""
-"¿Estás seguro/a de que quieres eliminar este registro de la lámpara de la "
+"¿Estás segur@ de que quieres eliminar este registro de la lámpara de la "
 "trampa de polillas?"
 
 # Moth trap setup submitting the record alert message
@@ -2794,7 +2794,7 @@ msgid ""
 "account on the <2>{{url}}</2> website. You will lose access to any records "
 "that you have previously submitted using the app or website.</1>"
 msgstr ""
-"¿Seguro que quieres eliminar tu cuenta?<1>Esto eliminará su cuenta en el "
+"¿Segur@ que quieres eliminar tu cuenta?<1>Esto eliminará su cuenta en el "
 "<2>{{url}}</2> página web. Perderá el acceso a cualquier registro que haya "
 "presentado previamente utilizando la aplicación o el sitio web.</1>"
 
@@ -3090,7 +3090,7 @@ msgstr "Favorito"
 
 # Part of favorite track selection
 msgid "Are you sure you want to delete the saved track?"
-msgstr "¿Está seguro de que desea eliminar la ruta guardada?"
+msgstr "¿Está segur@ de que desea eliminar la ruta guardada?"
 
 # Map GPS button interface
 msgid ""
@@ -3282,59 +3282,66 @@ msgid ""
 "No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" "
 "tabs to install species lists for offline use."
 msgstr ""
+"No hay listas de especies instaladas.<br/><br/>Explora las pestañas "
+"\"Cerca\" o \"Todas las listas\" para instalar listas de especies para su "
+"uso sin conexión."
 
 # Species lists functionality
 msgid ""
 "Some species groups are missing from your current downloaded "
 "lists.<br/><2>Species Lists</2>"
 msgstr ""
+"Algunos grupos de especies no aparecen en las listas que han descargado "
+"actualmente <br/><2>Listas de Especies</2>"
 
 # Species lists functionality
 msgid ""
 "You need to be online to browse species lists.<br/><br/>Please connect to "
 "the internet and try again."
 msgstr ""
+"Debe estar conectado a Internet para consultar las listas de "
+"especies.<br/><br/>Conéctese a Internet e inténtelo de nuevo."
 
 # Species lists functionality
 msgid "List name"
-msgstr ""
+msgstr "Nombre de la lista"
 
 # Species lists functionality
 msgid "Species Lists"
-msgstr ""
+msgstr "Listas de Especies"
 
 # Species lists functionality
 msgid "Installed"
-msgstr ""
+msgstr "Instalado"
 
 # Species lists functionality
 msgid "Nearby"
-msgstr ""
+msgstr "Cerca"
 
 # Species lists functionality
 msgid "All Lists"
-msgstr ""
+msgstr "Todas las listas"
 
 # Species lists functionality
 msgid "No species lists found."
-msgstr ""
+msgstr "Lista de especies no encontrada."
 
 # Species lists functionality
 msgid "Install"
-msgstr ""
+msgstr "Instalar"
 
 # Species lists functionality
 msgid "Installing list..."
-msgstr ""
+msgstr "Instalando lista..."
 
 # Species lists functionality
 msgid "Successfully refreshed \"{{country}}\" list with {{size}} species"
-msgstr ""
+msgstr "Actualizada correctamente lista de \"{{country}}\" con {{size}} especies"
 
 # Species lists functionality
 msgid "Are you sure you want to delete the list?"
-msgstr ""
+msgstr "¿Estás segur@ de que deseas eliminar la lista?"
 
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
-msgstr ""
+msgstr "Instalada correctamente lista de \"{{country}}\" con {{size}} especies"

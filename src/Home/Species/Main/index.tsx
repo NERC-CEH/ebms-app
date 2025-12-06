@@ -37,14 +37,10 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
 
   const getSpecies = (country: string) => {
     const existInCountry = (sp: SpeciesType) => {
-      if (country === 'ELSEWHERE') {
-        return true;
-      }
+      if (country === 'ELSEWHERE') return true;
 
       const abundanceStatus = (sp.abundance as any)[country];
-      if (!abundanceStatus) {
-        return false;
-      }
+      if (!abundanceStatus) return false;
 
       const isPresent = !['A', 'Ex'].includes(abundanceStatus);
       return isPresent;
@@ -58,7 +54,7 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     const bySpeciesId = (sp1: SpeciesType, sp2: SpeciesType) =>
       sp1.sort_id! - sp2.sort_id!;
 
-    let filteredSpecies = [...speciesProfiles].filter(existInCountry);
+    let filteredSpecies = speciesProfiles.filter(existInCountry);
     const totalSpeciesCountryCount = filteredSpecies.length;
 
     filteredSpecies = filteredSpecies

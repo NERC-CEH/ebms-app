@@ -23,15 +23,15 @@ msgstr ""
 
 # Country selection
 msgid "Europe"
-msgstr ""
+msgstr "Avrupa"
 
 # Country selection
 msgid "Asia"
-msgstr ""
+msgstr "Asya"
 
 # Country selection
 msgid "Africa"
-msgstr ""
+msgstr "Afrika"
 
 # Country selection
 msgid "Australasia"
@@ -39,11 +39,11 @@ msgstr ""
 
 # Country selection
 msgid "North America"
-msgstr ""
+msgstr "Kuzey Amerika"
 
 # Country selection
 msgid "South America"
-msgstr ""
+msgstr "Güney Amerika"
 
 msgid "Select your country"
 msgstr "Ülkenizi seçin"

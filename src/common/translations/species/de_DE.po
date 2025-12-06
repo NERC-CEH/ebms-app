@@ -1605,3 +1605,135 @@ msgstr ""
 
 msgid "Limenitis-glorifica-description"
 msgstr ""
+
+msgid "Anaea-troglodyta-description"
+msgstr ""
+
+msgid "Anartia-jatrophae-description"
+msgstr ""
+
+msgid "Anteos-maerula-description"
+msgstr ""
+
+msgid "Antillea-pelops-description"
+msgstr ""
+
+msgid "Ascia-monuste-description"
+msgstr ""
+
+msgid "Battus-polydamas-description"
+msgstr ""
+
+msgid "Biblis-hyperia-description"
+msgstr ""
+
+msgid "Burnsius-oileus-description"
+msgstr ""
+
+msgid "Calpodes-ethlius-description"
+msgstr ""
+
+msgid "Cecropterus-obscurus-description"
+msgstr ""
+
+msgid "Chlorostrymom-simaethis-description"
+msgstr ""
+
+msgid "Dione-vanillae-description"
+msgstr ""
+
+msgid "Dryas-dominicana-description"
+msgstr ""
+
+msgid "Eantis-minor-description"
+msgstr ""
+
+msgid "Electrostrymon-angerona-description"
+msgstr ""
+
+msgid "Epargyreus-zestos-description"
+msgstr ""
+
+msgid "Ephyriades-arcas-description"
+msgstr ""
+
+msgid "Ephyriades-domincensis-description"
+msgstr ""
+
+msgid "Eunica-monima-description"
+msgstr ""
+
+msgid "Eurema-elathea-description"
+msgstr ""
+
+msgid "Glutophrissa-drusilla-description"
+msgstr ""
+
+msgid "Hamadryas-februa-description"
+msgstr ""
+
+msgid "Heliconius-charithonia-description"
+msgstr ""
+
+msgid "Hemiargus-hanno-description"
+msgstr ""
+
+msgid "Hylephila-phyleus-description"
+msgstr ""
+
+msgid "Junonia-zonalis-description"
+msgstr ""
+
+msgid "Leptotes-cassius-description"
+msgstr ""
+
+msgid "Marpesia-petreus-description"
+msgstr ""
+
+msgid "Ministrymon-azia-description"
+msgstr ""
+
+msgid "Nyctelius-nyctelius-description"
+msgstr ""
+
+msgid "Panoquina-lucas-description"
+msgstr ""
+
+msgid "Phoebis-sennae-description"
+msgstr ""
+
+msgid "Phoebis-trite-description"
+msgstr ""
+
+msgid "Polites-dictynna-description"
+msgstr ""
+
+msgid "Polites-ophites-description"
+msgstr ""
+
+msgid "Polygonus-leo-description"
+msgstr ""
+
+msgid "Polygonus-savigny-description"
+msgstr ""
+
+msgid "Pyrisitia-leuce-description"
+msgstr ""
+
+msgid "Pyrisitia-lisa-description"
+msgstr ""
+
+msgid "Pyrisitia-venusta-description"
+msgstr ""
+
+msgid "Strymon-acis-description"
+msgstr ""
+
+msgid "Strymon-bubastus-description"
+msgstr ""
+
+msgid "Telegonus-anausis-description"
+msgstr ""
+
+msgid "Urbanus-proteus-description"
+msgstr ""
