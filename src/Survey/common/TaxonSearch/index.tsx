@@ -60,8 +60,13 @@ const TaxonSearch = ({
     if (country === 'ELSEWHERE') return sql`1`;
 
     // convert UK to GB for country code
-    const countryCode = country === 'UK' ? 'GB' : country;
+    let countryCode = country === 'UK' ? 'GB' : country;
     if (!countryCode) return sql`1`;
+
+    const countryCodeWithSubregion = countryCode.includes('_');
+    if (countryCodeWithSubregion) {
+      countryCode = countryCode.replaceAll('_', ': '); // normalize it to match the data format
+    }
 
     return or(
       not(eq(table.taxon_group_id, groups.butterflies.id)), // abundance available only for butterflies group
