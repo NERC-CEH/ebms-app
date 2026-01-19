@@ -208,7 +208,7 @@ const SpeciesListSettings = () => {
             <IonSearchbar
               placeholder={t('List name')}
               className={clsx('!py-0', !showSearch && 'hidden')}
-              onIonChange={onSearch}
+              onIonInput={onSearch}
               ref={searchbarRef}
               value={currentSearch}
               showCancelButton="always"

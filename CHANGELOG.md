@@ -1,6 +1,7 @@
 ## 1.31.1
 
 Fixed subregional species lists.
+Fixed species list search.
 
 ## 1.31.0
 
