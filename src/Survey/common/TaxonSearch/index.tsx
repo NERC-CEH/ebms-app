@@ -160,7 +160,7 @@ const TaxonSearch = ({
             fill="outline"
             size="small"
             color="warning"
-            className="-mt-2"
+            className="mt-2"
           >
             Species Lists
           </IonButton>

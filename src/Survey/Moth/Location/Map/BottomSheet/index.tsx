@@ -25,6 +25,7 @@ const DEFAULT_SNAP_POSITION = 0.5;
 const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 1;
 
 type Props = {
+  isFetchingTraps: boolean;
   mothTraps: MothTrap[];
   updateRecord: (mothTrap: MothTrap) => void;
   deleteTrap: (mothTrap: MothTrap) => void;
@@ -35,6 +36,7 @@ type Props = {
 };
 
 const BottomSheet = ({
+  isFetchingTraps,
   mothTraps,
   updateRecord,
   deleteTrap,
@@ -136,6 +138,7 @@ const BottomSheet = ({
                 color="secondary"
                 onPress={createTrap}
                 className="px-4 py-1"
+                isDisabled={isFetchingTraps}
               >
                 Add
               </Button>
@@ -144,9 +147,7 @@ const BottomSheet = ({
         </IonHeader>
 
         <IonContent>
-          <IonList className="mt-2 flex flex-col gap-2">
-            {getMothTraps()}
-          </IonList>
+          <IonList className="mt-2">{getMothTraps()}</IonList>
         </IonContent>
       </IonModal>
     </div>

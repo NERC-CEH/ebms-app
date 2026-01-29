@@ -327,6 +327,7 @@ ion-item-divider {
 
 /* menu date picker match other input value colors */
 .date-input-attr ion-label[slot='end'] {
+  opacity: 1 !important;
   color: var(--form-value-color);
   font-size: 1rem;
 }

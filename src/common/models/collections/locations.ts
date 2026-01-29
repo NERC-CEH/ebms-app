@@ -71,8 +71,6 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       ...groupLocations,
     ];
 
-    this.remote.synchronising = false;
-
     const models = docs.map(doc =>
       Array.isArray(doc)
         ? this.Model.fromDTO(doc[0], { metadata: doc[1] }) // with metadata
@@ -101,12 +99,13 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     this.push(...models, ...drafts);
 
+    this.remote.synchronising = false;
+
     console.log(`📚 Collection: ${this.id} collection fetching done`);
   }
 
-  async fetchGroupLocations() {
+  private async fetchGroupLocations() {
     console.log(`📚 Collection: ${this.id} collection fetching locations`);
-    this.remote.synchronising = true;
 
     const transformToLocation = (
       doc: GroupLocationData
@@ -141,8 +140,6 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
     );
 
     const docs = groupLocationDTOs.flat().map(transformToLocation);
-
-    this.remote.synchronising = false;
 
     console.log(
       `📚 Collection: ${this.id} collection fetching locations done ${docs.length} documents`

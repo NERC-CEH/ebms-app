@@ -62,6 +62,7 @@ const MapComponent = ({
 
       {!isDisabled && (
         <BottomSheet
+          isFetchingTraps={!!isFetchingTraps}
           mothTraps={mothTraps}
           centroid={currentMapCenter}
           updateRecord={onLocationSelect}

@@ -84,7 +84,7 @@ const MothTrapEntry = ({
   };
 
   return (
-    <IonItemSliding className="rounded-md">
+    <IonItemSliding className="rounded-md mb-2">
       <IonItem
         className={clsx(
           'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2 [--border-style:none] [--inner-padding-end:0] [--padding-start:0]',
@@ -109,7 +109,7 @@ const MothTrapEntry = ({
           </div>
 
           <div className="flex w-full flex-col gap-1 py-1">
-            <h4 className="line-clamp-2">{label}</h4>
+            <div className="line-clamp-2 text-lg font-semibold">{label}</div>
 
             {location?.latitude && (
               <div className="text-xs">
