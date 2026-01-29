@@ -1,5 +1,3 @@
-import 'regenerator-runtime/runtime';
-
 const mock = query => ({
   matches: false,
   media: query,
