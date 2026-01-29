@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import useLocation from 'Location/MothTrap/useLocation';

@@ -28,8 +28,8 @@ const PaintedLadyAttrs = ({ occurrence }: Props) => {
   const nectaring = behaviour === 'Nectaring';
   const mating = behaviour === 'Mating';
 
-  const hasThistle = eggLaying && eggLaying.includes('Thistles');
-  const hasOther = eggLaying && eggLaying.includes('Other');
+  const hasThistle = eggLaying?.includes('Thistles');
+  const hasOther = eggLaying?.includes('Other');
 
   const isStageAdult = occurrence.data.stage === 'Adult';
 

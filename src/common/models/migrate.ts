@@ -43,13 +43,13 @@ export default async () => {
 
     const hasLocations = tables.find((t: any) => t.name === 'locations');
     if (hasLocations) {
-      await db.query({ sql: `DROP TABLE IF EXISTS locations;` });
+      await db.query({ sql: 'DROP TABLE IF EXISTS locations;' });
       console.log('SQLite migrate: locations dropped');
     }
 
     const hasGroups = tables.find((t: any) => t.name === 'groups');
     if (hasGroups) {
-      await db.query({ sql: `DROP TABLE IF EXISTS groups;` });
+      await db.query({ sql: 'DROP TABLE IF EXISTS groups;' });
       console.log('SQLite migrate: groups dropped');
     }
 

@@ -18,15 +18,13 @@ import TaxonSearch from 'Survey/common/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
-const cancelButtonWrap = (onDeleteSurvey: any) => {
-  return (
-    <IonButtons slot="start">
-      <IonButton onClick={onDeleteSurvey}>
-        <T>Cancel</T>
-      </IonButton>
-    </IonButtons>
-  );
-};
+const cancelButtonWrap = (onDeleteSurvey: any) => (
+  <IonButtons slot="start">
+    <IonButton onClick={onDeleteSurvey}>
+      <T>Cancel</T>
+    </IonButton>
+  </IonButtons>
+);
 
 function useDeleteSurveyPrompt(alert: any) {
   const deleteSurveyPromt = (resolve: (param: boolean) => void) => {
@@ -148,22 +146,19 @@ const TaxonController = () => {
         occurrence.data.taxon.group !== DRAGONFLY_GROUP &&
         taxon.group === DRAGONFLY_GROUP
       ) {
-        // eslint-disable-next-line no-param-reassign
         occurrence.data.dragonflyStage = 'Adult';
-        // eslint-disable-next-line no-param-reassign
+
         occurrence.data.stage = undefined;
       }
       if (
         occurrence.data.taxon.group === DRAGONFLY_GROUP &&
         taxon.group !== DRAGONFLY_GROUP
       ) {
-        // eslint-disable-next-line no-param-reassign
         occurrence.data.stage = 'Adult';
-        // eslint-disable-next-line no-param-reassign
+
         occurrence.data.dragonflyStage = undefined;
       }
 
-      // eslint-disable-next-line
       occurrence.data.taxon = taxon;
     } else {
       const survey = sample.getSurvey();
@@ -178,9 +173,8 @@ const TaxonController = () => {
       sample.samples.push(newSample);
 
       if (sample.isPaintedLadySurvey()) {
-        // eslint-disable-next-line no-param-reassign
         sample.samples[0].occurrences[0].data.wing = [];
-        // eslint-disable-next-line no-param-reassign
+
         sample.samples[0].occurrences[0].data.behaviour = null;
         sample.save();
       }

@@ -52,7 +52,7 @@ const useShowGPSPermissionDialog = () => {
     )
       return true;
 
-    appModel.data.showGPSPermissionTip = false; // eslint-disable-line
+    appModel.data.showGPSPermissionTip = false;
     appModel.save();
 
     const prompt = (resolve: any) => {
@@ -96,11 +96,10 @@ function StartNewSurvey({ survey }: Props): null {
   const pickDraftOrCreateSampleWrap = () => {
     const pickDraftOrCreateSample = async () => {
       if (!userModel.isLoggedIn()) {
-        navigate(`/user/login`, 'none', 'replace');
+        navigate('/user/login', 'none', 'replace');
         return;
       }
 
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
       const ignoreError = () => {};
       const hasGrantedGps = await showGPSPermissionDialog().catch(ignoreError);
       const sample = await getNewSample(survey, hasGrantedGps);
@@ -130,7 +129,6 @@ function StartNewSurvey({ survey }: Props): null {
   return null;
 }
 
-// eslint-disable-next-line @getify/proper-arrows/name
 StartNewSurvey.with = (survey: Survey) => {
   const StartNewSurveyWithRouter = (params: any) => (
     <StartNewSurvey survey={survey} {...params} />

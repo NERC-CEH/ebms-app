@@ -10,7 +10,7 @@ async function searchSciNames(
   searchPhrase: string,
   language: string,
   where?: (table: typeof speciesStore.table) => SQL,
-  limit: number = 20
+  limit = 20
 ) {
   const { table } = speciesStore;
   const synonym: any = alias(table, 'synonym');
@@ -68,16 +68,14 @@ async function searchSciNames(
   const species: any = await speciesStore.db.query(query.toSQL());
 
   return species.map(
-    (sp: SpeciesColumns & { common_name: string }): SearchResult => {
-      return {
-        found_in_name: 'scientific_name',
-        warehouse_id: sp.id,
-        scientific_name: sp.taxon,
-        common_name: sp.common_name,
-        group: sp.taxon_group_id,
-        preferredId: sp.preferred_taxa_taxon_list_id!,
-      };
-    }
+    (sp: SpeciesColumns & { common_name: string }): SearchResult => ({
+      found_in_name: 'scientific_name',
+      warehouse_id: sp.id,
+      scientific_name: sp.taxon,
+      common_name: sp.common_name,
+      group: sp.taxon_group_id,
+      preferredId: sp.preferred_taxa_taxon_list_id!,
+    })
   );
 }
 

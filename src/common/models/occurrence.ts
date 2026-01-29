@@ -256,7 +256,6 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
 
     const values: any = {};
     if (Number.isFinite(taxon?.machineInvolvement)) {
-      // eslint-disable-next-line no-param-reassign
       values.machine_involvement = taxon?.machineInvolvement;
     }
 

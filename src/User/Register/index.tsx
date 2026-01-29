@@ -37,8 +37,8 @@ const RegisterContainer = () => {
     try {
       await userModel.register(email, password, otherDetails);
 
-      userModel.data.firstName = firstName; // eslint-disable-line
-      userModel.data.lastName = lastName; // eslint-disable-line
+      userModel.data.firstName = firstName;
+      userModel.data.lastName = lastName;
       userModel.save();
 
       alert({

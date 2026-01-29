@@ -39,7 +39,7 @@ const Map = () => {
     []
   );
 
-  const [isFetchingRecords, setFetchingRecords] = useState<any>(null);
+  const [fetchingRecords, setFetchingRecords] = useState<any>(null);
   const toast = useToast();
 
   const [totalSquares, setTotalSquares] = useState<number>(1);
@@ -148,7 +148,7 @@ const Map = () => {
 
     const [longitude, latitude] = square.key.split(' ').map(parseFloat);
 
-    const radius = square.size! / 2;
+    const radius = square.size / 2;
     const padding = 1.1; // extra padding between squares
     const metersToPixels =
       radius / padding / 0.075 / Math.cos((latitude * Math.PI) / 180);
@@ -212,7 +212,7 @@ const Map = () => {
       {recordMarkers}
 
       <MapContainer.Control>
-        {isFetchingRecords ? <IonSpinner /> : <div />}
+        {fetchingRecords ? <IonSpinner /> : <div />}
       </MapContainer.Control>
 
       {!!showRecordsInfo?.length && (

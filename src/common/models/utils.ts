@@ -3,19 +3,18 @@ import Occurrence, { Attrs as OccurrenceAttrs } from './occurrence';
 import Sample, { Data as SampleAttrs } from './sample';
 
 export type CustomAttr = {
-  attribute_id: string; // eslint-disable-line camelcase
-  value_id: string; // eslint-disable-line camelcase
-  caption: string; // eslint-disable-line camelcase
-  data_type: string; // eslint-disable-line camelcase
-  multi_value: string; // eslint-disable-line camelcase
-  value: string; // eslint-disable-line camelcase
-  raw_value: string; // eslint-disable-line camelcase
-  upper_value: any; // eslint-disable-line camelcase
+  attribute_id: string;
+  value_id: string;
+  caption: string;
+  data_type: string;
+  multi_value: string;
+  value: string;
+  raw_value: string;
+  upper_value: any;
 };
 
 const byAttrID =
   (attrId: string) =>
-  // eslint-disable-next-line @getify/proper-arrows/name
   ([, attr]: [string, AttrConfig]) =>
     `${attr.remote?.id}` === attrId;
 
@@ -24,7 +23,7 @@ export function getLocalAttributes(doc: any, schema: any) {
 
   const getLocal = ([key, values]: Entry) => {
     const isCustom = key.match(/:\d+/);
-    const remoteId = isCustom ? (key.split(':').pop() as string) : `${key}`;
+    const remoteId = isCustom ? (key.split(':').pop() as string) : key;
 
     const attrConfigWithName = Object.entries<AttrConfig>(schema).find(
       byAttrID(remoteId)

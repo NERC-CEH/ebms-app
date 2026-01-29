@@ -7,9 +7,7 @@ type Props = {
   showLabel?: boolean;
 };
 
-interface Type {
-  [key: string]: string;
-}
+type Type = Record<string, string>;
 
 const BEHAVIOUR_COLOURS: Type = {
   Migrating: '#4e4fff',

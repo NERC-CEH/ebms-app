@@ -45,4 +45,4 @@ const extension = {
   },
 };
 
-export { extension as default };
+export default extension;

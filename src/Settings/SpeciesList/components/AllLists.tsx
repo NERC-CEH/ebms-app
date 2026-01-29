@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { observer } from 'mobx-react';
-import { device, Button, VirtualList } from '@flumens';
+import { device, Button, VirtualList, ItemProps } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -15,16 +15,17 @@ const rawSafeAreaTop =
   getComputedStyle(document.documentElement).getPropertyValue('--sat') || '0px';
 const SAFE_AREA_TOP = parseInt(rawSafeAreaTop.replace('px', ''), 10);
 const LIST_PADDING = 80 + SAFE_AREA_TOP;
-const LIST_ITEM_HEIGHT = 75 + 10; // 10px for padding
+const LIST_ITEM_HEIGHT = 73 + 10; // 10px for padding
 
-const Item = ({
-  index,
-  data: { lists, onInstall },
-  ...itemProps
-}: {
-  index: number;
-  data: { lists: SpeciesList[]; onInstall: any };
-}) => {
+type Data = {
+  lists: SpeciesList[];
+  onInstall: (list: SpeciesList) => void;
+};
+
+const Item = ({ index, style, data }: ItemProps<Data>) => {
+  const lists: SpeciesList[] = data.lists;
+  const onInstall: any = data.onInstall;
+
   const list: SpeciesList = lists[index];
 
   const handleInstallClick = () => onInstall(list);
@@ -32,14 +33,14 @@ const Item = ({
   return (
     <IonItem
       key={list.id}
-      style={(itemProps as any).style}
-      className="max-h-[73px] rounded-md border border-solid border-neutral-300 [--min-height:73px]"
+      style={style}
+      className="max-h-[73px] rounded-md border border-solid border-neutral-300 [--min-height:73px] [--inner-padding-end:5px]"
     >
       <div className="flex w-full items-center justify-between gap-2">
         <div className="min-w-0 flex-1">
-          <h2 className="line-clamp-1 font-bold">{list.data.title}</h2>
+          <h2 className="line-clamp-1 font-bold mt-0!">{list.data.title}</h2>
           {list.data.description && (
-            <p className="line-clamp-1 text-sm opacity-70">
+            <p className="line-clamp-1 text-sm opacity-70 m-0">
               {list.data.description}
             </p>
           )}
@@ -97,13 +98,12 @@ const AllLists = ({ onInstall, lists, onRefresh }: Props) => {
       {!!lists.length && (
         <IonList className="h-full">
           <VirtualList
-            itemCount={lists.length}
-            itemSize={() => LIST_ITEM_HEIGHT}
-            itemData={listsMemo}
+            rowCount={lists.length}
+            rowHeight={() => LIST_ITEM_HEIGHT}
+            rowProps={listsMemo}
             Item={Item}
             topPadding={LIST_PADDING}
             bottomPadding={LIST_ITEM_HEIGHT / 2}
-            // onScroll={onScroll}
           />
         </IonList>
       )}

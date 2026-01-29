@@ -105,7 +105,7 @@ const HistoricalLocations = ({ onSelect, position }: Props) => {
     appModel.setLocation(updatedLocation);
 
     setEditLocation(null);
-    listRef.current && listRef.current.closeSlidingItems();
+    listRef.current?.closeSlidingItems();
   };
 
   const getEntry = ([location, distance]: any) => (

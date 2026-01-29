@@ -66,9 +66,8 @@ const EditController = () => {
   if (!sample || !subSample) return null;
 
   const deleteFromShallowList = (taxon: Taxon) => {
-    const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) => {
-      return doesShallowTaxonMatch(shallowEntry, taxon);
-    };
+    const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) =>
+      doesShallowTaxonMatch(shallowEntry, taxon);
 
     const taxonIndexInShallowList = subSample.shallowSpeciesList.findIndex(
       withSamePreferredIdOrWarehouseId
@@ -89,9 +88,7 @@ const EditController = () => {
     }
 
     const destroyWrap = () => {
-      const matchingTaxon = (occ: Occurrence) => {
-        return occ.doesTaxonMatch(taxon);
-      };
+      const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
       const subSamplesMatchingTaxon =
         subSample.occurrences.filter(matchingTaxon);
 
@@ -116,9 +113,7 @@ const EditController = () => {
       return;
     }
 
-    const matchingTaxon = (occ: Occurrence) => {
-      return occ.doesTaxonMatch(taxa);
-    };
+    const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxa);
 
     const occ = subSample.occurrences.find(matchingTaxon);
 

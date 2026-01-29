@@ -95,7 +95,7 @@ const Credits = () => (
         </P>
         <IonItem>
           <a href="https://flumens.io" aria-label="Flumens link">
-            <img className="flumens-logo" src={flumensLogo} alt="" />
+            <img className="w-full max-w-md mx-auto" src={flumensLogo} alt="" />
           </a>
         </IonItem>
         <P skipTranslation>

@@ -203,11 +203,16 @@ const SpeciesListSettings = () => {
       <Header title="Species Lists" rightSlot={searchButton} />
 
       <Main className="[--padding-bottom:0] [--padding-top:0]">
-        <IonToolbar className="fixed text-black [&.ios]:[--background:transparent] [&.md]:shadow-[-1px_2px_7px_0_#0000001a,0_2px_9px_0_#3e396b1a] [&.md]:[--background:white]">
+        <IonToolbar
+          className={clsx(
+            'fixed text-black [&.ios]:[--background:transparent] [&.md]:shadow-[-1px_2px_7px_0_#0000001a,0_2px_9px_0_#3e396b1a] [&.md]:[--background:white]',
+            showSearch && 'bg-white'
+          )}
+        >
           <div className="flex w-full items-center justify-end gap-2">
             <IonSearchbar
               placeholder={t('List name')}
-              className={clsx('!py-0', !showSearch && 'hidden')}
+              className={clsx('!py-0', !showSearch && 'hidden!')}
               onIonInput={onSearch}
               ref={searchbarRef}
               value={currentSearch}

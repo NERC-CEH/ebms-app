@@ -9,11 +9,11 @@ import CONFIG from 'common/config';
 import { matchAppSurveys } from 'common/services/ES';
 import userModel from 'models/user';
 
-export interface Square {
+export type Square = {
   key: string;
   doc_count: number;
   size: number; // in meters
-}
+};
 
 type LatLng = { lat: number; lng: number };
 

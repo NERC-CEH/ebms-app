@@ -6,7 +6,7 @@ import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
 import { sentryOptions } from '@flumens';
 import { loadingController } from '@ionic/core';
 import { setupIonicReact, isPlatform } from '@ionic/react';
-import * as SentryBrowser from '@sentry/browser';
+import SentryBrowser from '@sentry/browser';
 import config from 'common/config';
 import migrationManager from 'common/migrations';
 import groups from 'common/models/collections/groups';

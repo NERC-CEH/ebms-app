@@ -225,11 +225,11 @@ export const areaCountSchema = z.object({
         longitude: z.number().nullable().optional(),
         shape: z.object({}).nullable().optional(),
         area: z
-          .number({ required_error: 'Please add survey area information.' })
+          .number({ error: 'Please add survey area information.' })
           .min(1, 'Please add survey area information.')
           .max(20000000, 'Please select a smaller area.'),
       },
-      { required_error: 'Location is missing.' }
+      { error: 'Location is missing.' }
     )
     .refine(
       (val: any) =>
@@ -240,7 +240,7 @@ export const areaCountSchema = z.object({
     ),
 
   surveyStartTime: z
-    .string({ required_error: 'Date is missing' })
+    .string({ error: 'Date is missing' })
     .min(1, 'Date is missing'),
 });
 
@@ -337,9 +337,7 @@ export type AttrConfig = {
   remote?: RemoteConfig;
 };
 
-interface Attrs {
-  [key: string]: AttrConfig;
-}
+type Attrs = Record<string, AttrConfig>;
 
 type OccurrenceCreateOptions = {
   Occurrence: typeof Occurrence;
@@ -384,7 +382,7 @@ export type SampleConfig = {
   occ?: OccurrenceConfig;
 };
 
-export interface Survey extends SampleConfig {
+export type Survey = {
   /**
    * Remote warehouse survey ID.
    */
@@ -402,4 +400,4 @@ export interface Survey extends SampleConfig {
    * Remote website survey edit page path.
    */
   webForm?: string;
-}
+} & SampleConfig;

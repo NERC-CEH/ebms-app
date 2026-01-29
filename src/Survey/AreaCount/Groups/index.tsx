@@ -33,13 +33,12 @@ const Groups = () => {
     const byId = (group: Group) => group.id === groupId;
     const group = groups.find(byId);
     if (!group) {
-      // eslint-disable-next-line
       sample.data.group = undefined;
-      // eslint-disable-next-line
+
       appModel.data.defaultGroup = undefined;
     } else {
       const simplifiedGroup = { title: group.data.title, id: group.id! };
-      // eslint-disable-next-line
+
       sample.data.group = group ? simplifiedGroup : undefined;
       appModel.data.defaultGroup = simplifiedGroup;
     }
@@ -74,7 +73,6 @@ const Groups = () => {
       await groups.fetchRemote({ type: 'joinable' });
 
       if (sample.data.group?.id === group.id) {
-        // eslint-disable-next-line
         sample.data.group = undefined;
       }
 

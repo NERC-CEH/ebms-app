@@ -5,6 +5,7 @@ import { Model, ModelAttrs } from '@flumens';
 import config from 'common/config';
 import { db, speciesListsStore } from './store';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const dtoSchema = z.object({
   id: z.number(),
   type: z.enum(['location', 'list']),
@@ -76,7 +77,7 @@ export default class SpeciesList extends Model<Data> {
   async save(force = false) {
     // add to store if not already present
     if (force && !this.store) {
-      this.store = speciesListsStore as any;
+      this.store = speciesListsStore;
     }
 
     super.save();
@@ -142,7 +143,6 @@ export default class SpeciesList extends Model<Data> {
     await db.query({ sql: 'BEGIN TRANSACTION' });
 
     try {
-      // eslint-disable-next-line no-restricted-syntax
       for (let i = 0; i < parsedData.length; i += BATCH_SIZE) {
         const batch = parsedData.slice(i, i + BATCH_SIZE);
 

@@ -68,24 +68,20 @@ function Transects({ onTransectSelect }: Props) {
       <InfoMessage
         prefix={<IonIcon src={informationCircleOutline} className="size-6" />}
         color="tertiary"
+        className="m-3"
       >
         Please select your transect first.
       </InfoMessage>
 
-      <IonList lines="full">
-        <div className="rounded-list">
-          {hasTransects ? (
-            transectsList
-          ) : (
-            <IonList lines="full">
-              <InfoBackgroundMessage>
-                You don&#39;t have any transects. Please try to refresh the
-                list.
-              </InfoBackgroundMessage>
-            </IonList>
-          )}
-        </div>
-      </IonList>
+      {hasTransects ? (
+        <IonList lines="full">
+          <div className="rounded-list">{transectsList}</div>
+        </IonList>
+      ) : (
+        <InfoBackgroundMessage>
+          You don&#39;t have any transects. Please try to refresh the list.
+        </InfoBackgroundMessage>
+      )}
     </Main>
   );
 }

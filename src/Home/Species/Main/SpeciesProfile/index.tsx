@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-
-/* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import { useState } from 'react';
 import { Trans as T } from 'react-i18next';
 import 'swiper/css';
@@ -22,7 +19,7 @@ type Props = {
 };
 
 const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
-  const [showGallery, setGallery] = useState(false);
+  const [gallery, setGallery] = useState(false);
 
   const closeGallery = () => setGallery(false);
 
@@ -34,8 +31,8 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
   const status = abundances[abundanceCode];
 
   const getSlides = () => {
-    const { image_copyright } = species;
-    if (!image_copyright) return null;
+    const { image_copyright: imageCopyright } = species;
+    if (!imageCopyright) return null;
 
     const slideOpts = {
       initialSlide: 0,
@@ -58,7 +55,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
       );
     };
 
-    const slideImage = image_copyright.map(getSlide);
+    const slideImage = imageCopyright.map(getSlide);
 
     return (
       <Swiper modules={[Pagination]} pagination {...slideOpts}>
@@ -69,13 +66,12 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
 
   const { commonName } = species;
 
-  /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   return (
     <>
       <FullScreenPhotoViewer
         species={species}
         onClose={closeGallery}
-        showGallery={showGallery}
+        showGallery={gallery}
       />
 
       <Main id="species-profile" className="ion-padding">
@@ -83,9 +79,9 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
 
         <div className="flex flex-col gap-2 bg-[var(--ion-page-background)] p-4">
           {commonName && (
-            <h2 className="text-xl font-bold text-primary-900">{commonName}</h2>
+            <h2 className="my-0! text-xl! font-bold!">{commonName}</h2>
           )}
-          <h3 className="text-xl italic">{species.taxon}</h3>
+          <h3 className="my-0! text-xl! italic">{species.taxon}</h3>
         </div>
 
         <div className="p-4">
@@ -98,7 +94,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
             </div>
           )}
 
-          <h3 className="species-label mb-2 mt-5">
+          <h3 className="species-label mt-5!">
             <T>Description</T>:
           </h3>
 
@@ -108,6 +104,5 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
     </>
   );
 };
-/* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 
 export default SpeciesProfile;

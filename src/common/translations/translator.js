@@ -67,7 +67,7 @@ const newValueWrap = ({ newValue }) => {
 };
 observe(appModel.data, 'language', newValueWrap);
 
-// eslint-disable-next-line import/prefer-default-export
+// eslint-disable-next-line import-x/prefer-default-export
 export function translateSpeciesDescription(key) {
   // revert to English descriptions
   let translation = i18n.t(key, { ns: 'species' });

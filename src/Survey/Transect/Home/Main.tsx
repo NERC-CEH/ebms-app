@@ -65,7 +65,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
 
   return (
     <Main id="transect-edit">
-      {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
+      {!!isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">
         <div className="rounded-list">

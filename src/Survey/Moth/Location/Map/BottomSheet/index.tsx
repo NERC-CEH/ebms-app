@@ -24,7 +24,7 @@ const SNAP_POSITIONS = [0.05, 0.22, 0.5, 1];
 const DEFAULT_SNAP_POSITION = 0.5;
 const DEFAULT_SNAP_POSITION_IF_NO_CONNECTION = 1;
 
-interface Props {
+type Props = {
   mothTraps: MothTrap[];
   updateRecord: (mothTrap: MothTrap) => void;
   deleteTrap: (mothTrap: MothTrap) => void;
@@ -32,7 +32,7 @@ interface Props {
   createTrap: () => void;
   sample: Sample;
   centroid: number[];
-}
+};
 
 const BottomSheet = ({
   mothTraps,
@@ -44,7 +44,7 @@ const BottomSheet = ({
   centroid,
 }: Props) => {
   const { navigate } = useContext(NavContext);
-  const [isMounted, setUnmount] = useState(true);
+  const [isMounted, setIsMounted] = useState(true);
 
   type MothTrapWithDistance = [MothTrap, number];
 
@@ -107,8 +107,8 @@ const BottomSheet = ({
       .map(getMothTrap);
   };
 
-  const unMountBottomSheet = () => setUnmount(false); // hack, this component is mounted as a parent with root div
-  const mountBottomSheet = () => setUnmount(true); // hack, this component is mounted as a parent with root div
+  const unMountBottomSheet = () => setIsMounted(false); // hack, this component is mounted as a parent with root div
+  const mountBottomSheet = () => setIsMounted(true); // hack, this component is mounted as a parent with root div
   useIonViewWillLeave(unMountBottomSheet);
   useIonViewWillEnter(mountBottomSheet);
 

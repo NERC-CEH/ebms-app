@@ -26,6 +26,7 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
   const { t } = useTranslation();
 
   // force update the radio styles
+  // eslint-disable-next-line react/hook-use-state
   const [currentValue, forceRefresh] = useState(sample.data.group?.id);
 
   const onSelectWrap = (e: any) => {

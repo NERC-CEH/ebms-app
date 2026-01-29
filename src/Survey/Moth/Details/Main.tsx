@@ -25,7 +25,7 @@ const DetailsMain = ({ sample }: Props) => {
   const location = sample.data.location as MothTrapLocation;
   const survey = sample.getSurvey();
 
-  const dateAttrProps = survey.attrs!.date!.pageProps!
+  const dateAttrProps = survey.attrs!.date.pageProps!
     .attrProps as AttrPropsExtended;
   const surveyDateProps = dateAttrProps.inputProps();
 
@@ -41,12 +41,10 @@ const DetailsMain = ({ sample }: Props) => {
 
   const startTimePretty = isValidDate(surveyStartTime!)
     ? timeFormat.format(new Date(surveyStartTime!))
-    : // remote dates
-      surveyStartTime;
+    : surveyStartTime; // remote dates
   const endTimePretty = isValidDate(surveyEndTime!)
     ? timeFormat.format(new Date(surveyEndTime!))
-    : // remote dates
-      surveyEndTime;
+    : surveyEndTime; // remote dates
 
   return (
     <Main>

@@ -33,9 +33,7 @@ import {
   dateAttr,
 } from 'Survey/common/config';
 
-interface Type {
-  [key: string]: string;
-}
+type Type = Record<string, string>;
 
 export const moonIcons: Type = {
   New: newIcon,
@@ -236,7 +234,7 @@ const getSetStartMoonPhase = (sample: AppSample) => () => {
     new Date(sample.data.surveyStartTime!),
     isSouthernHemisphere
   );
-  // eslint-disable-next-line no-param-reassign
+
   assignIfMissing(sample, 'moon', moonPhase);
 };
 
@@ -526,7 +524,7 @@ const survey: Survey = {
         })
         .refine(
           (val: any) => val.count + val['count-outside'] > 0,
-          `Count sum must be greater than 0`
+          'Count sum must be greater than 0'
         );
 
       return occurrenceSchema.safeParse(attrs).error;
@@ -565,7 +563,7 @@ const survey: Survey = {
       .object({
         location: z.object(
           {
-            id: z.string({ required_error: 'Location is missing.' }),
+            id: z.string({ error: 'Location is missing.' }),
             data: z.object({
               location: z
                 .object({
@@ -580,7 +578,7 @@ const survey: Survey = {
                 ),
             }),
           },
-          { invalid_type_error: 'Location is missing.' }
+          { error: 'Location is missing.' }
         ),
       })
       .safeParse(attrs).error,
@@ -617,7 +615,7 @@ const survey: Survey = {
 
 export default survey;
 
-type UnknownSpeciesObject = { [key: string]: any };
+type UnknownSpeciesObject = Record<string, any>;
 const UNKNOWN_SPECIES: UnknownSpeciesObject = {
   en: {
     warehouse_id: 538737,

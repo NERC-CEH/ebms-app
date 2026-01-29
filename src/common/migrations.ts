@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign, no-restricted-syntax */
 import MigrationsManager from '@flumens/utils/dist/MigrationManager';
 import { isPlatform } from '@ionic/core';
 import config from './config';
@@ -16,10 +15,10 @@ const migrations: Migration[] = [
       await db.init();
 
       try {
-        await db.query({ sql: `UPDATE samples SET id = NULL WHERE id is ''` });
-        await db.query({ sql: `UPDATE groups SET id = NULL WHERE id is ''` });
+        await db.query({ sql: "UPDATE samples SET id = NULL WHERE id is ''" });
+        await db.query({ sql: "UPDATE groups SET id = NULL WHERE id is ''" });
         await db.query({
-          sql: `UPDATE locations SET id = NULL WHERE id is ''`,
+          sql: "UPDATE locations SET id = NULL WHERE id is ''",
         });
 
         appModel.data.speciesGroups = DEFAULT_SPECIES_GROUP;

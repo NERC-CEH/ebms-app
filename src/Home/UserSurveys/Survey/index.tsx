@@ -131,14 +131,22 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
 
       return (
         <>
-          {!!locationName && <h4>{locationName}</h4>}
+          {!!locationName && (
+            <div className="text-sm line-clamp-1">{locationName}</div>
+          )}
           {!!speciesCount && speciesCountBadge}
         </>
       );
     }
 
     const locationName = sample.data.location?.name;
-    return !!locationName && <h4>{locationName}</h4>;
+    return (
+      !!locationName && (
+        <Badge skipTranslation prefix={<IonIcon icon={mapOutline} />}>
+          {locationName}
+        </Badge>
+      )
+    );
   }
 
   const onUpload = async () => {
@@ -169,10 +177,10 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
 
         <div className="flex w-full flex-nowrap items-center gap-2 pl-4">
           <div className="flex w-full flex-col content-center gap-1 overflow-hidden">
-            <h3 className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap font-bold">
+            <h3 className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap font-bold! my-0!">
               <T>{survey.label}</T>
             </h3>
-            <div className="record-details">{getInfo()}</div>
+            <div>{getInfo()}</div>
           </div>
 
           <OnlineStatus

@@ -1,4 +1,3 @@
-/* eslint-disable @getify/proper-arrows/name */
 import { Gallery, useOnHideModal } from '@flumens';
 import { Species } from 'common/data/profiles';
 import '../styles.scss';

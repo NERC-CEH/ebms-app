@@ -24,7 +24,7 @@ const DetailsController = () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    sample.metadata.completedDetails = true; // eslint-disable-line
+    sample.metadata.completedDetails = true;
     sample.save();
 
     const url = match.url.replace('/details', '');

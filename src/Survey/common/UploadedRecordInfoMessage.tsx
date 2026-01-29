@@ -17,7 +17,7 @@ const UploadedRecordInfoMessage = ({ sample }: Props) => {
       color="tertiary"
       prefix={<IonIcon src={informationCircleOutline} className="size-6" />}
       skipTranslation
-      className="mx-3 max-w-xl"
+      className="m-3 max-w-xl"
     >
       <T>
         This record has been submitted and cannot be edited within this App.
@@ -25,7 +25,7 @@ const UploadedRecordInfoMessage = ({ sample }: Props) => {
       <Button
         href={`${config.backend.url}/${webForm}?sample_id=${sample.id}`}
         fill="outline"
-        color="primary"
+        color="tertiary"
         className="mx-auto mt-4 max-w-sm py-1.5 text-sm"
       >
         eBMS website

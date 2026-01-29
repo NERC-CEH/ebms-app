@@ -7,12 +7,12 @@ import config from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'models/app';
 
-interface Props {
+type Props = {
   latitude?: any;
   longitude?: any;
   onMovedCoords: any;
   children: any;
-}
+};
 
 const Map = ({ latitude, longitude, onMovedCoords, children }: Props) => {
   let initialViewState;

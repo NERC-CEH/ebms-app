@@ -66,10 +66,10 @@ const SpeciesOccurrences = () => {
       const [occ] = occurrences;
       if (!occ) return false;
 
-      const { warehouse_id, preferredId } = occ.data.taxon;
+      const { warehouse_id: warehouseId, preferredId } = occ.data.taxon;
       if (preferredId === parseInt(taxa, 10)) return true;
 
-      if (warehouse_id === parseInt(taxa, 10)) return true;
+      if (warehouseId === parseInt(taxa, 10)) return true;
 
       return false;
     };

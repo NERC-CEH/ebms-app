@@ -64,7 +64,6 @@
     "taxon": "Carcharodus stauderi",
     "family": "Hesperiidae",
     "descriptionKey": "Carcharodus-stauderi-description",
-    "image_copyright": ["Alperen Yayla"],
     "warehouse_id": 432165,
     "external_key": "eBMS185"
   },
@@ -142,7 +141,6 @@
     "taxon": "Zerynthia cassandra",
     "family": "Papilionidae",
     "descriptionKey": "Zerynthia-cassandra-description",
-    "image_copyright": ["Alperen Yayla"],
     "warehouse_id": 432137,
     "external_key": "eBMS157"
   },
@@ -182,7 +180,6 @@
     "taxon": "Pelopidas thrax",
     "family": "Hesperiidae",
     "descriptionKey": "Pelopidas-thrax-description",
-    "image_copyright": ["Alperen Yayla"],
     "warehouse_id": 432141,
     "external_key": "eBMS161"
   },
@@ -318,7 +315,6 @@
     "taxon": "Spialia rosae",
     "family": "Hesperiidae",
     "descriptionKey": "Spialia-rosae-description",
-    "image_copyright": ["Alperen Yayla"],
     "warehouse_id": 432155,
     "external_key": "eBMS175"
   },
@@ -456,7 +452,6 @@
     "taxon": "Pyrgus malvoides",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-malvoides-description",
-    "image_copyright": ["Alperen Yayla"],
     "warehouse_id": 432169,
     "external_key": "eBMS189"
   },
@@ -614,7 +609,6 @@
     "taxon": "Pyrgus cinarae",
     "family": "Hesperiidae",
     "descriptionKey": "Pyrgus-cinarae-description",
-    "image_copyright": ["Alperen Yayla"],
     "warehouse_id": 432186,
     "external_key": "eBMS205"
   },
@@ -943,7 +937,6 @@
     "taxon": "Pieris wollastoni",
     "family": "Pieridae",
     "descriptionKey": "Pieris-wollastoni-description",
-    "image_copyright": ["Martin Wiemers"],
     "warehouse_id": 432221,
     "external_key": "eBMS239"
   },
@@ -2193,7 +2186,6 @@
     "taxon": "Kretania pylaon",
     "family": "Lycaenidae",
     "descriptionKey": "Kretania-pylaon-description",
-    "image_copyright": ["Alperen Yayla"],
     "warehouse_id": 432336,
     "external_key": "eBMS354"
   },
@@ -2222,7 +2214,6 @@
     "taxon": "Aricia morronensis",
     "family": "Lycaenidae",
     "descriptionKey": "Aricia-morronensis-description",
-    "image_copyright": ["Alperen Yayla"],
     "warehouse_id": 432339,
     "external_key": "eBMS357"
   },

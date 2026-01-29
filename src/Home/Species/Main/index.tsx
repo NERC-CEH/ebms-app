@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
+import { InAppReview } from '@capacitor-community/in-app-review';
 import { Main, ModalHeader, InfoMessage, UserFeedbackRequest } from '@flumens';
 import { IonModal, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
 import config from 'common/config';
@@ -138,23 +139,16 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     );
   };
 
+  const onReview = () => InAppReview.requestReview();
   const onFeedbackDone = () => {
     appModel.data.feedbackGiven = true;
     appModel.save();
   };
 
   const showFeedback = () => {
-    if (appModel.data.feedbackGiven) {
-      return false;
-    }
-
-    if (appModel.data.useTraining) {
-      return false;
-    }
-
-    if (!userModel.isLoggedIn()) {
-      return false;
-    }
+    if (appModel.data.feedbackGiven) return false;
+    if (appModel.data.useTraining) return false;
+    if (!userModel.isLoggedIn()) return false;
 
     return samplesCollection.length > 5;
   };
@@ -169,6 +163,9 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     <UserFeedbackRequest
       email={config.feedbackEmail}
       onFeedbackDone={onFeedbackDone}
+      onReview={onReview}
+      appName="ButterflyCount"
+      className="m-3"
     />
   );
 

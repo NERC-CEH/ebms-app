@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { and, eq, getTableColumns, like, SQL, sql } from 'drizzle-orm';
 import { alias, QueryBuilder } from 'drizzle-orm/sqlite-core';
 import { SearchResult, SpeciesColumns } from '.';
@@ -48,16 +47,14 @@ async function searchCommonNames(
   const species: any = await store.db.query(query.toSQL());
 
   return species.map(
-    (sp: SpeciesColumns & { scientific_name: string }): SearchResult => {
-      return {
-        found_in_name: 'common_name',
-        warehouse_id: sp.id,
-        common_name: sp.taxon,
-        scientific_name: sp.scientific_name,
-        group: sp.taxon_group_id,
-        preferredId: sp.preferred_taxa_taxon_list_id!,
-      };
-    }
+    (sp: SpeciesColumns & { scientific_name: string }): SearchResult => ({
+      found_in_name: 'common_name',
+      warehouse_id: sp.id,
+      common_name: sp.taxon,
+      scientific_name: sp.scientific_name,
+      group: sp.taxon_group_id,
+      preferredId: sp.preferred_taxa_taxon_list_id!,
+    })
   );
 }
 

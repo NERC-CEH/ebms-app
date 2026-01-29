@@ -1,4 +1,3 @@
-/* eslint-disable @getify/proper-arrows/name */
 import { getLocalAttributes } from '../utils';
 
 describe('getCustomAttributes', () => {

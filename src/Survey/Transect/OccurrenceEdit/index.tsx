@@ -27,7 +27,6 @@ const TransectHomeController = () => {
   const isDisabled = occurrence.isUploaded;
 
   const getCounterOnChange = (value: number | null) => {
-    // eslint-disable-next-line no-param-reassign
     occurrence.data.count = value;
     occurrence.save();
   };

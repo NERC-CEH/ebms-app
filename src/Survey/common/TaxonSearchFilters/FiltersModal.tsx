@@ -24,7 +24,6 @@ type Props = {
 
 const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
   const onChange = (newValuesArg: string[]) => {
-    // eslint-disable-next-line no-param-reassign
     const newValues: number[] = newValuesArg
       .filter((group: string) => group !== DAY_FLYING_MOTHS)
       .map(id => Number.parseInt(id, 10));
@@ -85,7 +84,7 @@ const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
       </IonHeader>
 
       <Main fullscreen>
-        <InfoMessage className="blue mx-3">
+        <InfoMessage className="blue m-3">
           Please select the species groups that you always record.
         </InfoMessage>
 

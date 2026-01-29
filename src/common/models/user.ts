@@ -13,7 +13,7 @@ import { NavContext } from '@ionic/react';
 import CONFIG from 'common/config';
 import { mainStore } from './store';
 
-export interface Attrs extends DrupalUserModelData {
+export type Attrs = {
   firstName?: string;
   lastName?: string;
   email?: string;
@@ -22,7 +22,7 @@ export interface Attrs extends DrupalUserModelData {
    * @deprecated
    */
   password?: any;
-}
+} & DrupalUserModelData;
 
 const defaults: Attrs = {
   firstName: '',
@@ -94,7 +94,6 @@ export class UserModel extends DrupalUserModel<Attrs> {
     return super.logOut();
   }
 
-  // eslint-disable-next-line @getify/proper-arrows/name
   getPrettyName = () => {
     if (!this.isLoggedIn()) return '';
 
@@ -127,7 +126,7 @@ export const useUserStatusCheck = () => {
     }
 
     if (!userModel.isLoggedIn()) {
-      navigate(`/user/login`);
+      navigate('/user/login');
       return false;
     }
 

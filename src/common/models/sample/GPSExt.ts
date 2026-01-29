@@ -14,14 +14,42 @@ import GPS from 'helpers/GPS';
 
 const METERS_SINCE_LAST_LOCATION = 15;
 
-function calculateLineLenght(lineString) {
+type Coordinate = [number, number];
+type LineString = Coordinate[];
+type Polygon = Coordinate[][];
+
+type Shape = {
+  type: 'LineString' | 'Polygon';
+  coordinates: LineString | Polygon;
+};
+
+type Location = {
+  latitude: number;
+  longitude: number;
+  area: number;
+  shape: Shape;
+  source: string;
+  accuracy: number;
+  altitude: number | null;
+  altitudeAccuracy: number | null;
+};
+
+type GPSLocation = {
+  latitude: number;
+  longitude: number;
+  accuracy: number;
+  altitude: number | null;
+  altitudeAccuracy: number | null;
+};
+
+function calculateLineLenght(lineString: LineString): number {
   /**
    * Calculate the approximate distance between two coordinates (lat/lon)
    *
    * © Chris Veness, MIT-licensed,
    * http://www.movable-type.co.uk/scripts/latlong.html#equirectangular
    */
-  function distance(λ1, φ1, λ2, φ2) {
+  function distance(λ1: number, φ1: number, λ2: number, φ2: number): number {
     const R = 6371000;
     const Δλ = ((λ2 - λ1) * Math.PI) / 180;
     φ1 = (φ1 * Math.PI) / 180; //eslint-disable-line
@@ -44,8 +72,15 @@ function calculateLineLenght(lineString) {
   return result;
 }
 
-function getShape(sample) {
-  const oldLocation = sample.data.location || {};
+type SampleWithLocation = {
+  data: {
+    location?: Location | null;
+    surveyStartTime?: string;
+  };
+};
+
+function getShape(sample: SampleWithLocation): Shape {
+  const oldLocation = sample.data.location || ({} as Location);
 
   if (!oldLocation.shape) {
     return { type: 'LineString', coordinates: [] };
@@ -53,11 +88,15 @@ function getShape(sample) {
   return JSON.parse(JSON.stringify(oldLocation.shape));
 }
 
-function isSufficientDistanceMade(coordinates, latitude, longitude) {
+function isSufficientDistanceMade(
+  coordinates: LineString | Polygon,
+  latitude: number,
+  longitude: number
+): boolean {
   const lastLocation = [...(coordinates[coordinates.length - 1] || [])]
     .reverse()
-    .map(parseFloat);
-  const newLocation = [latitude, longitude].map(parseFloat);
+    .map(Number) as Coordinate;
+  const newLocation = [latitude, longitude].map(Number) as Coordinate;
 
   const distanceSinceLastLocation = calculateLineLenght([
     lastLocation,
@@ -74,47 +113,81 @@ function isSufficientDistanceMade(coordinates, latitude, longitude) {
   return true;
 }
 
-export function updateSampleArea(sample, location) {
+type SampleModel = SampleWithLocation & {
+  setLocation: (
+    shape: Shape,
+    accuracy: number,
+    altitude: number | null,
+    altitudeAccuracy: number | null
+  ) => Promise<void>;
+  save: () => Promise<void>;
+};
+
+export function updateSampleArea(
+  sample: SampleModel,
+  location: GPSLocation
+): Promise<void> {
   const { latitude, longitude, accuracy, altitude, altitudeAccuracy } =
     location;
   const shape = getShape(sample);
   const coordinates =
     shape.type === 'Polygon' ? shape.coordinates[0] : shape.coordinates;
 
-  if (!isSufficientDistanceMade(coordinates, latitude, longitude)) {
-    return sample;
+  if (
+    !isSufficientDistanceMade(coordinates as LineString, latitude, longitude)
+  ) {
+    return sample.save();
   }
 
-  coordinates.push([longitude, latitude]);
-  if (coordinates.length === 1) coordinates.push([longitude, latitude]); // can't have just one point
+  (coordinates as LineString).push([longitude, latitude]);
+  if (coordinates.length === 1)
+    (coordinates as LineString).push([longitude, latitude]); // can't have just one point
 
   return sample.setLocation(shape, accuracy, altitude, altitudeAccuracy);
 }
 
-export const calculateArea = shape => {
+export const calculateArea = (shape: Shape): number => {
   let area;
 
   if (shape.type === 'Polygon') {
     area = geojsonArea.geometry(shape);
   } else {
     area =
-      config.DEFAULT_TRANSECT_BUFFER * calculateLineLenght(shape.coordinates);
+      config.DEFAULT_TRANSECT_BUFFER *
+      calculateLineLenght(shape.coordinates as LineString);
   }
 
   return Math.floor(area);
 };
 
+type ExtensionThis = SampleModel & {
+  gps: { locating: number | null };
+  parent?: unknown;
+  isTimerFinished: () => boolean;
+  isGPSRunning: () => boolean;
+  stopGPS: () => void;
+  startGPS: () => void;
+};
+
 const extension = {
-  setLocation(shape, accuracy, altitude, altitudeAccuracy) {
+  setLocation(
+    this: ExtensionThis,
+    shape: Shape | null,
+    accuracy: number,
+    altitude: number | null,
+    altitudeAccuracy: number | null
+  ): Promise<void> {
     if (!shape) {
       this.data.location = null;
       return this.save();
     }
 
-    const [longitude, latitude] =
+    const lastCoordinate =
       shape.type === 'Polygon'
-        ? shape.coordinates[0][shape.coordinates[0].length - 1]
-        : shape.coordinates[shape.coordinates.length - 1];
+        ? (shape.coordinates[0][shape.coordinates[0].length - 1] as Coordinate)
+        : (shape.coordinates[shape.coordinates.length - 1] as Coordinate);
+
+    const [longitude, latitude] = lastCoordinate;
 
     this.data.location = {
       latitude,
@@ -130,7 +203,7 @@ const extension = {
     return this.save();
   },
 
-  toggleGPStracking(state) {
+  toggleGPStracking(this: ExtensionThis, state?: boolean) {
     if (this.isGPSRunning() || state === false) {
       this.stopGPS();
       return;
@@ -139,11 +212,12 @@ const extension = {
     this.startGPS();
   },
 
-  gpsExtensionInit() {
+  gpsExtensionInit(this: ExtensionThis) {
     this.gps = observable({ locating: null });
   },
 
-  startGPS() {
+  startGPS(this: ExtensionThis) {
+    // eslint-disable-next-line no-console
     console.log('SampleModel:GPS start');
 
     const showPushNotificationForBackgroundGPS = async () => {
@@ -163,13 +237,14 @@ const extension = {
       showPushNotificationForBackgroundGPS();
     }
 
-    // eslint-disable-next-line
-    const onPosition = (error, location) => {
+    const onPosition = (error: Error | null, location?: GPSLocation) => {
       if (error) {
         const permissionsError = error?.message === 'User denied Geolocation';
         if (permissionsError) {
+          // eslint-disable-next-line no-console
           console.log('GPS: error', error);
         } else {
+          // eslint-disable-next-line no-console
           console.error('GPS: error', error);
         }
 
@@ -179,6 +254,7 @@ const extension = {
 
       const isOverDefaultSurveyEndTime = this.isTimerFinished();
       if (this.data.surveyStartTime && isOverDefaultSurveyEndTime) {
+        // eslint-disable-next-line no-console
         console.log('SampleModel:GPS: timed out stopping!');
         this.stopGPS();
         return;
@@ -186,37 +262,38 @@ const extension = {
 
       const isPreciseAreaSubSample = !!this.parent;
       if (isPreciseAreaSubSample) {
-        updateModelLocation(this, location);
+        const locationForModel = {
+          ...location!,
+          altitude: location!.altitude ?? undefined,
+          altitudeAccuracy: location!.altitudeAccuracy ?? undefined,
+        };
+        updateModelLocation(this, locationForModel);
         this.stopGPS();
         return;
       }
 
-      updateSampleArea(this, location);
+      updateSampleArea(this, location!);
     };
 
     this.gps.locating = GPS.start(onPosition);
   },
 
-  stopGPS() {
-    if (!this.isGPSRunning()) {
-      return;
-    }
+  stopGPS(this: ExtensionThis) {
+    if (!this.isGPSRunning()) return;
 
+    // eslint-disable-next-line no-console
     console.log('SampleModel:GPS stop');
-    GPS.stop(this.gps.locating);
+    GPS.stop(this.gps.locating!);
     this.gps.locating = null;
   },
 
-  isGPSRunning() {
+  isGPSRunning(this: ExtensionThis) {
     return !!(this.gps.locating || this.gps.locating === 0);
   },
 
-  hasLoctionMissingAndIsnotLocating() {
-    return (
-      (!this.data.location || !this.data.location.latitude) &&
-      !this.isGPSRunning()
-    );
+  hasLoctionMissingAndIsnotLocating(this: ExtensionThis) {
+    return !this.data.location?.latitude && !this.isGPSRunning();
   },
 };
 
-export { extension as default };
+export default extension;

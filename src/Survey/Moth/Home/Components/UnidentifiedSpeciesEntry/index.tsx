@@ -43,12 +43,12 @@ function useDeleteOccurrencePrompt(occ: Occurrence) {
   return showPrompt;
 }
 
-interface Props {
+type Props = {
   occ: Occurrence;
   isDisabled: boolean;
   isUnidentifiedSpeciesLengthMoreThanFive: boolean;
   onIdentify: any;
-}
+};
 
 const UnidentifiedSpeciesEntry = ({
   occ,

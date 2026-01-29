@@ -2,9 +2,9 @@ import { observer } from 'mobx-react';
 import { InfoBackgroundMessage, InfoMessageProps } from '@flumens';
 import appModel, { Data } from 'models/app';
 
-interface Props extends InfoMessageProps {
+type Props = InfoMessageProps & {
   name?: keyof Data;
-}
+};
 
 const InfoBackgroundMessageWrap = ({ name, children, ...props }: Props) => {
   if (name && !appModel.data[name]) return null;

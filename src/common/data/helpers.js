@@ -6,7 +6,7 @@ export default function getAttrs(str) {
 
     const normKey = key.replace(': ', '_');
     const normVal = val.replace('?', '');
-    // eslint-disable-next-line no-param-reassign
+
     attributes[normKey] = normVal;
   };
 

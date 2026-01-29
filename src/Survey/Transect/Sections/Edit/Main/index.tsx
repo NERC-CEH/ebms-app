@@ -156,6 +156,7 @@ const Edit = ({
 
     const counts = {
       ...speciesCounts,
+      // eslint-disable-next-line @typescript-eslint/no-misused-spread
       ...shallowCounts,
     };
 

@@ -9,7 +9,7 @@ import Map from './Map';
 import Traps from './Traps';
 import './styles.scss';
 
-interface Props {
+type Props = {
   sample: Sample;
   isFetchingTraps: boolean | null;
   isDisabled?: boolean;
@@ -18,7 +18,7 @@ interface Props {
   onLocationDelete: any;
   onLocationUpload: any;
   onLocationCreate: any;
-}
+};
 
 const MapComponent = ({
   sample,
@@ -31,7 +31,7 @@ const MapComponent = ({
   onLocationCreate,
 }: Props) => {
   // dynamic center when the user moves the map manually
-  const [currentMapCenter, setMapCurrentCenter] = useState([51, -1]);
+  const [currentMapCenter, setCurrentMapCenter] = useState([51, -1]);
 
   const onLocationMapSelect = (point: any) => {
     const byId = (trap: MothTrap) => trap.id === point.properties.id;
@@ -48,7 +48,7 @@ const MapComponent = ({
       <Map
         latitude={parseFloat(location?.data?.lat)}
         longitude={parseFloat(location?.data?.lon)}
-        onMovedCoords={setMapCurrentCenter}
+        onMovedCoords={setCurrentMapCenter}
       >
         <Traps
           onSelect={onLocationMapSelect}

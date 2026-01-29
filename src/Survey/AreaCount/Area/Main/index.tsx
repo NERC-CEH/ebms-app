@@ -64,7 +64,6 @@ const AreaAttr = ({
   onSelectGroupLocation,
   isFetchingLocations,
 }: Props) => {
-  // eslint-disable-next-line prefer-destructuring
   const location = (sample.data.location as AreaCountLocation) || {};
 
   let initialViewState;
@@ -77,9 +76,9 @@ const AreaAttr = ({
     }
   }
 
-  const [mapCenter, saveMapCenter] = useState<any>([1, 1]);
+  const [mapCenter, setMapCenter] = useState<any>([1, 1]);
   const updateMapCentre = ({ viewState }: any) =>
-    saveMapCenter([viewState.latitude, viewState.longitude]);
+    setMapCenter([viewState.latitude, viewState.longitude]);
 
   const groupId = sample.data.group?.id;
   const hasGroup = !!groupId && !isDisabled;
@@ -133,9 +132,9 @@ const AreaAttr = ({
             {({ isEditing }: any) =>
               !isEditing && (
                 <>
-                  <MapContainer.Marker {...location!} />
-                  <StartingPointMarker {...location!} />
-                  <FinishPointMarker {...location!} active={!isFinished} />
+                  <MapContainer.Marker {...location} />
+                  <StartingPointMarker {...location} />
+                  <FinishPointMarker {...location} active={!isFinished} />
                 </>
               )
             }

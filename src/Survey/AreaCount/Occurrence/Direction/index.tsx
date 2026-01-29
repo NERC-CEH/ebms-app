@@ -68,11 +68,10 @@ const Direction = () => {
   const [startCompass, setStartCompass] = useState(false);
 
   const occurrenceConfig = occurrence.getSurvey();
-  const attrProps = occurrenceConfig!.attrs!.direction!.pageProps!
+  const attrProps = occurrenceConfig.attrs!.direction.pageProps!
     .attrProps as AttrPropsExtended;
 
   const onValueChange = (directionValue: any) => {
-    // eslint-disable-next-line no-param-reassign
     occurrence.data.direction = directionValue;
     occurrence.save();
 
@@ -116,7 +115,6 @@ const Direction = () => {
 
     onStartCompass();
 
-    // eslint-disable-next-line consistent-return
     return () => {
       window.removeEventListener('deviceorientationabsolute', handler);
       window.removeEventListener('deviceorientation', handler);
@@ -140,23 +138,21 @@ const Direction = () => {
     </IonButton>
   );
   return (
-    <>
-      <Page id="survey-area-count-detail-edit">
-        {startCompass && (
-          <CompassModal hideCompass={toggleModal} value={rotationValue} />
-        )}
-        <Header title="Direction" rightSlot={showCompassModal()} />
+    <Page id="survey-area-count-detail-edit">
+      {startCompass && (
+        <CompassModal hideCompass={toggleModal} value={rotationValue} />
+      )}
+      <Header title="Direction" rightSlot={showCompassModal()} />
 
-        <Main>
-          <Attr
-            attr="direction"
-            model={occurrence}
-            onChange={onValueChange}
-            {...attrProps}
-          />
-        </Main>
-      </Page>
-    </>
+      <Main>
+        <Attr
+          attr="direction"
+          model={occurrence}
+          onChange={onValueChange}
+          {...attrProps}
+        />
+      </Main>
+    </Page>
   );
 };
 

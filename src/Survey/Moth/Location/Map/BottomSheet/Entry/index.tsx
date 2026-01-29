@@ -44,14 +44,14 @@ function useDeleteTrapPrompt(onDelete: any) {
   return showPrompt;
 }
 
-interface Props {
+type Props = {
   mothTrap: MothTrap;
   updateRecord: (mothTrap: MothTrap) => void;
   deleteTrap: (mothTrap: MothTrap) => void;
   onUpload: (mothTrap: MothTrap) => void;
   distance: number;
   isSelected?: boolean;
-}
+};
 
 const MothTrapEntry = ({
   mothTrap,

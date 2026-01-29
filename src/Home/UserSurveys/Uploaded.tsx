@@ -1,14 +1,8 @@
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
-import InfiniteLoader from 'react-window-infinite-loader';
+import { useInfiniteLoader } from 'react-window-infinite-loader';
 import { device, getRelativeDate, VirtualList, useToast } from '@flumens';
-import {
-  IonItem,
-  IonLabel,
-  IonList,
-  IonRefresher,
-  IonSpinner,
-} from '@ionic/react';
+import { IonLabel, IonList, IonRefresher, IonSpinner } from '@ionic/react';
 import samplesCollection, { bySurveyDate } from 'models/collections/samples';
 import Sample from 'models/sample';
 import userModel from 'models/user';
@@ -122,15 +116,12 @@ const UploadedSurveys = ({ isOpen }: Props) => {
     const sample = groupedSurveys[index];
     if (!sample)
       return (
-        <IonItem
-          detail={false}
+        <div
+          className="flex h-20 pb-10 mx-auto items-center justify-center"
           {...itemProps}
-          className="rounded-[var(--theme-border-radius)] bg-transparent [--background:transparent] [--border-style:0]"
         >
-          <div className="flex h-[73px] w-full max-w-[600px] items-center justify-center">
-            <IonSpinner />
-          </div>
-        </IonItem>
+          <IonSpinner />
+        </div>
       );
 
     return <Survey key={sample.cid} sample={sample} {...itemProps} />;
@@ -147,7 +138,7 @@ const UploadedSurveys = ({ isOpen }: Props) => {
   const onScroll = ({ scrollOffset }: any) =>
     setReachedTopOfList(scrollOffset < 80);
 
-  const loadMoreItems = (from: number, to: number) => {
+  const loadMoreItems = async (from: number, to: number) => {
     if (cachedPages * PAGE_SIZE < to && !isLoading) {
       fetchSurveys(cachedPages * PAGE_SIZE);
     }
@@ -158,6 +149,12 @@ const UploadedSurveys = ({ isOpen }: Props) => {
     const sample = groupedSurveys[index];
     return !!sample;
   };
+
+  const onRowsRendered = useInfiniteLoader({
+    isRowLoaded: isItemLoaded,
+    rowCount: itemCount,
+    loadMoreRows: loadMoreItems,
+  });
 
   if (!isOpen) return null;
 
@@ -199,24 +196,15 @@ const UploadedSurveys = ({ isOpen }: Props) => {
       </IonRefresher>
 
       <IonList>
-        <InfiniteLoader
-          isItemLoaded={isItemLoaded}
-          itemCount={itemCount}
-          loadMoreItems={loadMoreItems}
-        >
-          {({ onItemsRendered, ref }: any) => (
-            <VirtualList
-              ref={ref}
-              onItemsRendered={onItemsRendered}
-              itemCount={itemCount}
-              itemSize={getItemSize}
-              Item={Item}
-              topPadding={LIST_PADDING}
-              bottomPadding={LIST_ITEM_HEIGHT / 2}
-              onScroll={onScroll}
-            />
-          )}
-        </InfiniteLoader>
+        <VirtualList
+          onRowsRendered={onRowsRendered}
+          rowCount={itemCount}
+          rowHeight={getItemSize}
+          Item={Item}
+          topPadding={LIST_PADDING}
+          bottomPadding={LIST_ITEM_HEIGHT / 2}
+          onScroll={onScroll}
+        />
       </IonList>
     </>
   );

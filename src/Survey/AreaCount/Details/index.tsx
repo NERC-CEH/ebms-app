@@ -34,15 +34,13 @@ function useDeleteSurveyPrompt(alert: any) {
   return deleteSurveyPromtWrap;
 }
 
-const cancelButtonWrap = (onDeleteSurvey: any) => {
-  return (
-    <IonButtons slot="start">
-      <IonButton onClick={onDeleteSurvey}>
-        <T>Cancel</T>
-      </IonButton>
-    </IonButtons>
-  );
-};
+const cancelButtonWrap = (onDeleteSurvey: any) => (
+  <IonButtons slot="start">
+    <IonButton onClick={onDeleteSurvey}>
+      <T>Cancel</T>
+    </IonButton>
+  </IonButtons>
+);
 
 const DetailsController = () => {
   const alert = useAlert();
@@ -61,13 +59,12 @@ const DetailsController = () => {
 
   const onChangeCounter = (value: number | null) => {
     if (!Number.isFinite(value)) return;
-    // eslint-disable-next-line no-param-reassign
+
     sample.data.recorders = value as number;
     sample.save();
   };
 
   const onChangeSensitivityStatus = (value: boolean) => {
-    // eslint-disable-next-line no-param-reassign
     sample.data.privacyPrecision = value ? 0 : undefined;
     sample.save();
   };
@@ -107,7 +104,6 @@ const DetailsController = () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    // eslint-disable-next-line no-param-reassign
     sample.data.surveyStartTime = new Date().toISOString();
     sample.startVibrateCounter();
     sample.save();

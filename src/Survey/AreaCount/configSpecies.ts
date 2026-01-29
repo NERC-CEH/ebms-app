@@ -174,7 +174,6 @@ const speciesConfig: Survey = {
           remote: {
             id: 977,
             values(wingValues: any, submission: any) {
-              // eslint-disable-next-line
               submission.values = {
                 ...submission.values,
               };
@@ -187,7 +186,6 @@ const speciesConfig: Survey = {
                 .filter(bySameGroup)
                 .map(extractID);
 
-              // eslint-disable-next-line no-param-reassign
               submission.values['occAttr:977'] = wingValueIDs;
             },
           },
@@ -208,7 +206,7 @@ const speciesConfig: Survey = {
                   model.data.mating = null;
                   model.data.otherThistles = null;
                 }
-                // eslint-disable-next-line no-param-reassign
+
                 model.data.behaviour = value;
                 model.save();
               },
@@ -290,7 +288,7 @@ const speciesConfig: Survey = {
                 if (model.data.otherThistles && !value.includes('Thistles')) {
                   model.data.otherThistles = null;
                 }
-                // eslint-disable-next-line no-param-reassign
+
                 model.data.eggLaying = value;
                 model.save();
               },
@@ -300,7 +298,6 @@ const speciesConfig: Survey = {
           remote: {
             id: 982,
             values(flowerValue: any, submission: any) {
-              // eslint-disable-next-line
               submission.values = {
                 ...submission.values,
               };
@@ -313,7 +310,6 @@ const speciesConfig: Survey = {
                 .filter(bySameGroup)
                 .map(extractID);
 
-              // eslint-disable-next-line no-param-reassign
               submission.values['occAttr:982'] = flowersIDs;
             },
           },
@@ -363,7 +359,7 @@ const speciesConfig: Survey = {
           data: areaCountSchema,
           samples: z
             .array(z.object({}), {
-              required_error: 'Please add your target species',
+              error: 'Please add your target species',
             })
             .min(1, 'Please add your target species'),
         })

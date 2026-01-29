@@ -14,7 +14,7 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
 
   let geom: any;
   if ('boundaryGeom' in section && section.boundaryGeom) {
-    geom = wkt.parse(section.boundaryGeom!);
+    geom = wkt.parse(section.boundaryGeom);
     geom.coordinates = transformToLatLon(geom);
     geom = [{ type: 'Feature', geometry: geom }];
     if (geom?.type === 'Point') {

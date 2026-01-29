@@ -69,12 +69,14 @@ export { default as ModalHeader } from '@flumens/ionic/dist/components/ModalHead
 export { default as Section } from '@flumens/ionic/dist/components/Section';
 export { default as PhotoPicker } from '@flumens/ionic/dist/components/PhotoPicker';
 export { default as MenuAttrItem } from '@flumens/ionic/dist/components/MenuAttrItem';
-export { default as VirtualList } from '@flumens/tailwind/dist/components/VirtualList';
+export {
+  default as VirtualList,
+  type ItemProps,
+} from '@flumens/tailwind/dist/components/VirtualList';
 export {
   default as MenuAttrItemFromModel,
   type MenuProps as MenuAttrItemFromModelMenuProps,
 } from '@flumens/ionic/dist/components/MenuAttrItemFromModel';
-export { default as UserFeedbackRequest } from '@flumens/ionic/dist/components/UserFeedbackRequest';
 export {
   default as MapContainer,
   useMapStyles,
@@ -149,6 +151,7 @@ export {
   default as TailwindBlockContext,
   defaultContext,
 } from '@flumens/tailwind/dist/components/Block/Context';
+export { default as UserFeedbackRequest } from '@flumens/tailwind/dist/components/UserFeedbackRequest';
 export { default as InfoBackgroundMessage } from '@flumens/tailwind/dist/components/InfoBackgroundMessage';
 
 export {

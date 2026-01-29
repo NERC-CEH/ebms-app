@@ -1,11 +1,11 @@
 import axios from 'axios';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import * as dotenv from 'dotenv';
+// eslint-disable-next-line import-x/no-extraneous-dependencies
+import dotenv from 'dotenv';
 import fs from 'fs';
 // eslint-disable-next-line
 import fetchSheet from '@flumens/fetch-onedrive-excel';
 
-dotenv.config({ path: '../../../../.env' }); // eslint-disable-line
+dotenv.config({ path: '../../../../.env' });
 
 const warehouseURL = 'https://warehouse1.indicia.org.uk';
 
@@ -133,7 +133,6 @@ const getData = async () => {
   await fetchWarehouseSpecies(251)
     .then(warehouseSp => attachProfileInfo(warehouseSp, speciesInfoList))
     .then(save)
-    // eslint-disable-next-line @getify/proper-arrows/name
     .then(() => console.log('All done! 🚀'));
 };
 

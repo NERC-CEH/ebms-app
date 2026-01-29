@@ -51,13 +51,11 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
     </IonLabel>
   );
 
-  const getLampAddButton = () => {
-    return (
-      <Button color="primary" onPress={addNewLamp} className="mx-auto my-10">
-        Add lamp
-      </Button>
-    );
-  };
+  const getLampAddButton = () => (
+    <Button color="primary" onPress={addNewLamp} className="mx-auto my-10">
+      Add lamp
+    </Button>
+  );
 
   const getLampList = () => {
     if (!lamps.length)

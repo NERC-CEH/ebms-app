@@ -11,7 +11,6 @@ function AddNewMothTrap() {
   const { navigate } = useContext(NavContext);
 
   const pickDraftOrCreateNewWrap = () => {
-    // eslint-disable-next-line
     const pickDraftOrCreateNew = async () => {
       const model = new MothTrap({
         data: {
@@ -38,9 +37,9 @@ function AddNewMothTrap() {
 
 const routes = [
   ['/location', AddNewMothTrap, true],
-  [`/location/:locId`, MothTrapNew],
-  [`/location/:locId/location`, ModelLocationMap],
-  [`/location/:locId/lamps/:lampId`, MothTrapLamp],
+  ['/location/:locId', MothTrapNew],
+  ['/location/:locId/location', ModelLocationMap],
+  ['/location/:locId/lamps/:lampId', MothTrapLamp],
 ].map(([route, component]: any) => (
   <Route key={route} path={route} component={component} exact />
 ));

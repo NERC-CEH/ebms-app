@@ -66,14 +66,12 @@ const AreaController = () => {
     if (sample.isGPSRunning()) sample.stopGPS();
 
     isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
-
-    // eslint-disable-next-line no-param-reassign
     sample.data.location = selectedLoc as AreaCountLocation;
     sample.save();
     goBack();
   };
 
-  const [isNewLocationModalOpen, setNewLocationModalOpen] = useState(false);
+  const [isNewLocationModalOpen, setIsNewLocationModalOpen] = useState(false);
 
   const modal = useRef<HTMLIonModalElement>(null);
   const onCreateGroupLocation = () => modal.current?.present();
@@ -84,9 +82,9 @@ const AreaController = () => {
 
     const shouldUnselect = !loc || sample.data.site?.id === loc.id;
     if (shouldUnselect) {
-      sample.data.site = undefined; // eslint-disable-line
+      sample.data.site = undefined;
     } else {
-      sample.data.site = JSON.parse(JSON.stringify(loc.data)); // eslint-disable-line
+      sample.data.site = JSON.parse(JSON.stringify(loc.data));
     }
 
     sample.save();
@@ -115,7 +113,7 @@ const AreaController = () => {
   };
   useEffect(refreshLocations, []);
 
-  const onCloseLocationModal = () => setNewLocationModalOpen(false);
+  const onCloseLocationModal = () => setIsNewLocationModalOpen(false);
 
   const onSaveNewLocation = async (newSiteAttrs: Data, media: Media[]) => {
     if (!userModel.isLoggedIn() || !userModel.data.verified || !device.isOnline)

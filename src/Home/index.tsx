@@ -45,7 +45,6 @@ const HomeController = () => {
   const exitApp = () => {
     const onExitApp = () => !ionRouter.canGoBack() && AppPlugin.exitApp();
 
-    // eslint-disable-next-line @getify/proper-arrows/name
     document.addEventListener('ionBackButton', (ev: any) =>
       ev.detail.register(-1, onExitApp)
     );

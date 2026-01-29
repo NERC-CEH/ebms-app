@@ -218,7 +218,7 @@ export default class Sample extends SampleModel<Data, Metadata> {
     if (!survey) {
       console.log(JSON.stringify(this.metadata));
       console.log(JSON.stringify(this.data));
-      console.error(`Survey config was missing`);
+      console.error('Survey config was missing');
       return {} as Survey;
     }
 

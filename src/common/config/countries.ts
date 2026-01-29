@@ -491,14 +491,14 @@ const countries = {
   },
 };
 
-export interface Country {
+export type Country = {
   name: string;
   latitude: number;
   longitude: number;
   zoom?: number;
   id?: number;
   continent?: keyof typeof continents;
-}
+};
 
 export type CountryCode = keyof typeof countries;
 export type ContinentCode = keyof typeof continents;

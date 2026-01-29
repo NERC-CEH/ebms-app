@@ -231,159 +231,157 @@ const NewLocationModal = (
     (newLocation as any)[siteAreaAttr.id] === OTHER_SITE_SIZE_VALUE;
 
   return (
-    <>
-      <IonModal
-        ref={ref}
-        isOpen={isOpen}
-        backdropDismiss={false}
-        presentingElement={presentingElement}
-        canDismiss={canDismiss}
-        onWillDismiss={cleanUp}
-        focusTrap={false}
-      >
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonButton onClick={() => dismiss()}>
-                <T>Cancel</T>
-              </IonButton>
-            </IonButtons>
-            <IonTitle className={clsx(isPlatform('ios') && 'pr-[130px]')}>
-              <T>New location</T>
-            </IonTitle>
-            <IonButtons slot="end">
-              <HeaderButton isInvalid={!isValidLocation} onClick={onSaveWrap}>
-                Save
-              </HeaderButton>
-            </IonButtons>
-          </IonToolbar>
-          <div className="bg-tertiary-600 p-1 text-center text-sm text-white">
-            {group?.title}
-          </div>
-        </IonHeader>
+    <IonModal
+      ref={ref}
+      isOpen={isOpen}
+      backdropDismiss={false}
+      presentingElement={presentingElement}
+      canDismiss={canDismiss}
+      onWillDismiss={cleanUp}
+      focusTrap={false}
+    >
+      <IonHeader>
+        <IonToolbar>
+          <IonButtons slot="start">
+            <IonButton onClick={() => dismiss()}>
+              <T>Cancel</T>
+            </IonButton>
+          </IonButtons>
+          <IonTitle className={clsx(isPlatform('ios') && 'pr-[130px]')}>
+            <T>New location</T>
+          </IonTitle>
+          <IonButtons slot="end">
+            <HeaderButton isInvalid={!isValidLocation} onClick={onSaveWrap}>
+              Save
+            </HeaderButton>
+          </IonButtons>
+        </IonToolbar>
+        <div className="bg-tertiary-600 p-1 text-center text-sm text-white">
+          {group?.title}
+        </div>
+      </IonHeader>
 
-        <Main>
-          <div className="m-3 flex flex-col gap-3">
-            <div className="rounded-list">
-              <Block {...getBlockAttrs(siteNameAttr)} />
+      <Main>
+        <div className="m-3 flex flex-col gap-3">
+          <div className="rounded-list">
+            <Block {...getBlockAttrs(siteNameAttr)} />
 
-              {(isAgroecologyTRANSECT ||
-                isCAP4GI ||
-                isVielFalterGarten ||
-                isUNPplus) && (
-                <>
-                  <Block {...getBlockAttrs(siteAreaAttr)} />
-                  {isOtherSiteSize && (
-                    <Block {...getBlockAttrs(customAreaSizeAttr)} />
-                  )}
-                  <InfoMessage inline>
-                    Approximate size of your observation site.
-                  </InfoMessage>
-                </>
-              )}
-
-              {(isVielFalterGarten || isUNPplus) && (
-                <Block {...getBlockAttrs(habitatAttr)} />
-              )}
-            </div>
-
-            {(isAgroecologyTRANSECT || isCAP4GI) && (
-              <div>
-                <h3 className="list-title">
-                  <T>Habitats/land uses (total should be 100%)</T>
-                </h3>
-                <div className="rounded-list">
-                  <Block {...getBlockAttrs(grainsNumberAttr)} />
-                  <Block {...getBlockAttrs(vegetablesNumberAttr)} />
-                  <Block {...getBlockAttrs(rapeseedNumberAttr)} />
-                  <Block {...getBlockAttrs(cornNumberAttr)} />
-                  <Block {...getBlockAttrs(legumesNumberAttr)} />
-                  <Block {...getBlockAttrs(croppingNumberAttr)} />
-                  <Block {...getBlockAttrs(fallowNumberAttr)} />
-                  <Block {...getBlockAttrs(managedGrasslandNumberAttr)} />
-                  <Block {...getBlockAttrs(grasslandNumberAttr)} />
-                  <Block {...getBlockAttrs(orchardNumberAttr)} />
-                  <Block {...getBlockAttrs(orchardManagedNumberAttr)} />
-                  <Block {...getBlockAttrs(numberAttr)} />
-                  <Block {...getBlockAttrs(wastelandNumberAttr)} />
-                  <Block {...getBlockAttrs(woodlandNumberAttr)} />
-                  <Block {...getBlockAttrs(forestNumberAttr)} />
-                  <Block {...getBlockAttrs(plantationNumberAttr)} />
-                  <Block {...getBlockAttrs(gardenNumberAttr)} />
-                  <Block {...getBlockAttrs(gardensNumberAttr)} />
-                  <Block {...getBlockAttrs(buildingsNumberAttr)} />
-                  <Block {...getBlockAttrs(waterNumberAttr)} />
-                  <Block {...getBlockAttrs(riverNumberAttr)} />
-                  <Block {...getBlockAttrs(wetlandNumberAttr)} />
-                  <Block {...getBlockAttrs(landNumberAttr)} />
-                </div>
-              </div>
+            {(isAgroecologyTRANSECT ||
+              isCAP4GI ||
+              isVielFalterGarten ||
+              isUNPplus) && (
+              <>
+                <Block {...getBlockAttrs(siteAreaAttr)} />
+                {isOtherSiteSize && (
+                  <Block {...getBlockAttrs(customAreaSizeAttr)} />
+                )}
+                <InfoMessage inline>
+                  Approximate size of your observation site.
+                </InfoMessage>
+              </>
             )}
 
-            <div className="rounded-list">
-              {(isAgroecologyTRANSECT || isCAP4GI) && (
-                <>
-                  <Block {...getBlockAttrs(landscapeFeaturesAttr)} />
-                  <InfoMessage inline>
-                    Features located within a 50-meter radius.
-                  </InfoMessage>
-                  <Block
-                    record={newLocation}
-                    block={otherLandscapeFeaturesAttr}
-                  />
-                </>
-              )}
+            {(isVielFalterGarten || isUNPplus) && (
+              <Block {...getBlockAttrs(habitatAttr)} />
+            )}
+          </div>
 
-              {(isVielFalterGarten || isUNPplus) && (
-                <>
-                  <Block {...getBlockAttrs(treeNumberAttr)} />
-                  <Block {...getBlockAttrs(grassProportionAttr)} />
-                </>
-              )}
-
-              {(isAgroecologyTRANSECT ||
-                isCAP4GI ||
-                isVielFalterGarten ||
-                isUNPplus) && (
-                <>
-                  <Block {...getBlockAttrs(grassMownAttr)} />
-                  <Block {...getBlockAttrs(fertilizedAttr)} />
-                  <Block {...getBlockAttrs(otherFertilizerAttr)} />
-                  <Block {...getBlockAttrs(pesticidesAttr)} />
-                  <Block {...getBlockAttrs(otherPesticideAttr)} />
-                </>
-              )}
-
-              {(isVielFalterGarten || isUNPplus) && (
-                <>
-                  <Block {...getBlockAttrs(speciesAttr)} />
-                  <Block {...getBlockAttrs(landOwnershipAttr)} />
-                  <Block {...getBlockAttrs(responsibleAttr)} />
-                </>
-              )}
-
-              <Block {...getBlockAttrs(commentAttr)} />
-            </div>
-
+          {(isAgroecologyTRANSECT || isCAP4GI) && (
             <div>
               <h3 className="list-title">
-                <T>Please upload site photos</T>
+                <T>Habitats/land uses (total should be 100%)</T>
               </h3>
               <div className="rounded-list">
-                <PhotoPicker
-                  onAdd={onAddPhoto}
-                  onRemove={onRemovePhoto}
-                  value={photos}
-                />
-                <InfoMessage inline>
-                  Optimally in the direction to North, East, South and West.
-                </InfoMessage>
+                <Block {...getBlockAttrs(grainsNumberAttr)} />
+                <Block {...getBlockAttrs(vegetablesNumberAttr)} />
+                <Block {...getBlockAttrs(rapeseedNumberAttr)} />
+                <Block {...getBlockAttrs(cornNumberAttr)} />
+                <Block {...getBlockAttrs(legumesNumberAttr)} />
+                <Block {...getBlockAttrs(croppingNumberAttr)} />
+                <Block {...getBlockAttrs(fallowNumberAttr)} />
+                <Block {...getBlockAttrs(managedGrasslandNumberAttr)} />
+                <Block {...getBlockAttrs(grasslandNumberAttr)} />
+                <Block {...getBlockAttrs(orchardNumberAttr)} />
+                <Block {...getBlockAttrs(orchardManagedNumberAttr)} />
+                <Block {...getBlockAttrs(numberAttr)} />
+                <Block {...getBlockAttrs(wastelandNumberAttr)} />
+                <Block {...getBlockAttrs(woodlandNumberAttr)} />
+                <Block {...getBlockAttrs(forestNumberAttr)} />
+                <Block {...getBlockAttrs(plantationNumberAttr)} />
+                <Block {...getBlockAttrs(gardenNumberAttr)} />
+                <Block {...getBlockAttrs(gardensNumberAttr)} />
+                <Block {...getBlockAttrs(buildingsNumberAttr)} />
+                <Block {...getBlockAttrs(waterNumberAttr)} />
+                <Block {...getBlockAttrs(riverNumberAttr)} />
+                <Block {...getBlockAttrs(wetlandNumberAttr)} />
+                <Block {...getBlockAttrs(landNumberAttr)} />
               </div>
             </div>
+          )}
+
+          <div className="rounded-list">
+            {(isAgroecologyTRANSECT || isCAP4GI) && (
+              <>
+                <Block {...getBlockAttrs(landscapeFeaturesAttr)} />
+                <InfoMessage inline>
+                  Features located within a 50-meter radius.
+                </InfoMessage>
+                <Block
+                  record={newLocation}
+                  block={otherLandscapeFeaturesAttr}
+                />
+              </>
+            )}
+
+            {(isVielFalterGarten || isUNPplus) && (
+              <>
+                <Block {...getBlockAttrs(treeNumberAttr)} />
+                <Block {...getBlockAttrs(grassProportionAttr)} />
+              </>
+            )}
+
+            {(isAgroecologyTRANSECT ||
+              isCAP4GI ||
+              isVielFalterGarten ||
+              isUNPplus) && (
+              <>
+                <Block {...getBlockAttrs(grassMownAttr)} />
+                <Block {...getBlockAttrs(fertilizedAttr)} />
+                <Block {...getBlockAttrs(otherFertilizerAttr)} />
+                <Block {...getBlockAttrs(pesticidesAttr)} />
+                <Block {...getBlockAttrs(otherPesticideAttr)} />
+              </>
+            )}
+
+            {(isVielFalterGarten || isUNPplus) && (
+              <>
+                <Block {...getBlockAttrs(speciesAttr)} />
+                <Block {...getBlockAttrs(landOwnershipAttr)} />
+                <Block {...getBlockAttrs(responsibleAttr)} />
+              </>
+            )}
+
+            <Block {...getBlockAttrs(commentAttr)} />
           </div>
-        </Main>
-      </IonModal>
-    </>
+
+          <div>
+            <h3 className="list-title">
+              <T>Please upload site photos</T>
+            </h3>
+            <div className="rounded-list">
+              <PhotoPicker
+                onAdd={onAddPhoto}
+                onRemove={onRemovePhoto}
+                value={photos}
+              />
+              <InfoMessage inline>
+                Optimally in the direction to North, East, South and West.
+              </InfoMessage>
+            </div>
+          </div>
+        </div>
+      </Main>
+    </IonModal>
   );
 };
 

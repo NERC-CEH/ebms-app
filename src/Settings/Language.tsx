@@ -17,7 +17,7 @@ function SelectLanguage({ hideHeader }: Props) {
   const isSettingsPage = !hideHeader;
 
   function onSelect(newLanguage: any) {
-    appModel.data.language = newLanguage; // eslint-disable-line no-param-reassign
+    appModel.data.language = newLanguage;
     appModel.save();
 
     if (isSettingsPage) goBack();
@@ -57,6 +57,7 @@ function SelectLanguage({ hideHeader }: Props) {
             options={languagesOptions}
             skipTranslation
             platform="ios"
+            className="[&>div>label]:font-sans!" // use default browser font to support all languages
           />
         </IonList>
       </Main>

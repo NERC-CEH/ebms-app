@@ -35,11 +35,7 @@ const Traps = ({ sample, onSelect, mothTraps }: Props) => {
     };
   };
 
-  const data = useMemo(
-    // eslint-disable-next-line @getify/proper-arrows/name
-    () => getGeoJSON(mothTraps),
-    [mothTraps]
-  );
+  const data = useMemo(() => getGeoJSON(mothTraps), [mothTraps]);
 
   return (
     <MapContainer.Cluster data={data}>

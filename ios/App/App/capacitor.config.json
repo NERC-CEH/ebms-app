@@ -1,9 +1,7 @@
 {
 	"appId": "uk.ac.ceh.ebms",
 	"appName": "ButterflyCount",
-	"npmClient": "npm",
 	"webDir": "build",
-	"cordova": {},
 	"packageClassList": [
 		"BackgroundGeolocation",
 		"CapacitorSQLitePlugin",

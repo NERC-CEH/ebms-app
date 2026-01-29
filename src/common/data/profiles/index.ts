@@ -19,7 +19,7 @@ export const abundances = {
 
 export type AbundanceCode = keyof typeof abundances;
 
-export interface Species {
+export type Species = {
   id?: number;
   sort_id?: number;
   warehouse_id: number;
@@ -29,10 +29,10 @@ export interface Species {
   family?: string;
   descriptionKey?: string;
   image_copyright?: string[] | null;
-  abundance: {
-    [key in Exclude<CountryCode, 'UK' | 'ELSEWHERE'>]?: AbundanceCode;
-  };
-}
+  abundance: Partial<
+    Record<Exclude<CountryCode, 'UK' | 'ELSEWHERE'>, AbundanceCode>
+  >;
+};
 
 const speciesWithCommonNames = observable(species);
 
@@ -40,7 +40,7 @@ const speciesWithCommonNames = observable(species);
 speciesLists.ready.then(async () => {
   autorun(async () => {
     try {
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       speciesLists.data.length; // track speciesLists changes
 
       const ids = species
@@ -68,7 +68,7 @@ speciesLists.ready.then(async () => {
       const res: any = await speciesStore.db.query(query.toSQL());
 
       // get id-name map for easy lookup
-      const commonNameMap: { [id: number]: string } = {};
+      const commonNameMap: Record<number, string> = {};
       res.forEach((r: { id: number; commonName: string }) => {
         commonNameMap[r.id] = r.commonName;
       });

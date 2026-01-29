@@ -164,7 +164,7 @@ const surveyConfig = {
         description: z.string().optional(),
         quantity: z.number().min(1),
         type: z
-          .string({ required_error: 'Lamp type is a required field.' })
+          .string({ error: 'Lamp type is a required field.' })
           .min(1, 'Lamp type is a required field.'),
       }),
     });
@@ -177,10 +177,10 @@ const surveyConfig = {
               latitude: z.number().nullable().optional(),
               longitude: z.number().nullable().optional(),
               name: z
-                .string({ required_error: 'Location name is missing' })
+                .string({ error: 'Location name is missing' })
                 .min(1, 'Please add the moth trap location and name.'),
             },
-            { required_error: 'Location is missing.' }
+            { error: 'Location is missing.' }
           )
           .refine(
             (val: any) =>
@@ -189,10 +189,10 @@ const surveyConfig = {
           ),
 
         [mothTrapTypeAttr.id]: z.string({
-          required_error: 'Trap type is a required field.',
+          error: 'Trap type is a required field.',
         }),
         [mothTrapLampsAttr.id]: z
-          .array(lampSchema, { required_error: 'No lamps added' })
+          .array(lampSchema, { error: 'No lamps added' })
           .min(1, 'No lamps added'),
       })
       .safeParse(attrs).error;
@@ -207,8 +207,8 @@ class Location extends LocationModel<Data> {
     const parsedRemoteJSON: any = {
       cid: externalKey || UUIDv7(),
       id,
-      createdAt: new Date(createdOn!).getTime(),
-      updatedAt: new Date(updatedOn!).getTime(),
+      createdAt: new Date(createdOn).getTime(),
+      updatedAt: new Date(updatedOn).getTime(),
       data: {
         id,
         createdAt: createdOn,
@@ -295,13 +295,12 @@ class Location extends LocationModel<Data> {
   }
 
   toDTO(warehouseMediaNames = {}) {
-    const toSnakeCase = (attrs: any) => {
-      return Object.entries(attrs).reduce((agg: any, [attr, value]): any => {
+    const toSnakeCase = (attrs: any) =>
+      Object.entries(attrs).reduce((agg: any, [attr, value]): any => {
         const attrModified = attr.includes('locAttr:') ? attr : snakeCase(attr);
         agg[attrModified] = value; // eslint-disable-line no-param-reassign
         return agg;
       }, {});
-    };
 
     const transformBoolean = (attrs: any) =>
       Object.entries(attrs).reduce((agg: any, [attr, value]: any) => {
@@ -352,12 +351,10 @@ class Location extends LocationModel<Data> {
   }
 
   async startGPS(accuracyLimit = 50) {
-    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const that = this;
     const options = {
       accuracyLimit,
 
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
       onUpdate() {},
 
       callback(error: any, location: any) {
@@ -396,7 +393,7 @@ class Location extends LocationModel<Data> {
 
     const onPosition = (position: any, err: any) => {
       if (err) {
-        callback && callback(new Error(err.message));
+        callback?.(new Error(err.message));
         return;
       }
 
@@ -409,9 +406,9 @@ class Location extends LocationModel<Data> {
       };
 
       if (location.accuracy <= accuracyLimit) {
-        callback && callback(null, location);
+        callback?.(null, location);
       } else {
-        onUpdate && onUpdate(location);
+        onUpdate?.(location);
       }
     };
 

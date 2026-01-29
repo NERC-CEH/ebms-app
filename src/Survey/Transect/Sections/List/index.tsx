@@ -37,7 +37,6 @@ const SectionListController = () => {
   };
 
   const onTransectSelect = (transect: Location) => {
-    // eslint-disable-next-line no-param-reassign
     sample.data.location = toJS(transect.data);
 
     const byTransectId = (section: Location) =>

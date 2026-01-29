@@ -136,10 +136,7 @@ const config: Survey = {
       verify: attrs =>
         z
           .object({
-            count: z.number({
-              required_error: 'Count cannot be empty',
-              invalid_type_error: 'Count cannot be empty',
-            }),
+            count: z.number({ error: 'Count cannot be empty' }),
           })
           .safeParse(attrs).error,
     },
@@ -166,7 +163,7 @@ const config: Survey = {
       z
         .object({
           reliability: z.string({
-            required_error: 'Reliability cannot be empty.',
+            error: 'Reliability cannot be empty.',
           }),
         })
         .safeParse(attrs).error,
@@ -182,18 +179,15 @@ const config: Survey = {
             // centroidSref: z.string().required(),
             // srefSystem: z.string().required(),
           },
-          {
-            invalid_type_error: 'Please select your transect.',
-            required_error: 'Please select your transect.',
-          }
+          { error: 'Please select your transect.' }
         ),
-        recorder: z.string({ required_error: 'Recorder info is missing' }),
-        surveyStartTime: z.string({ required_error: 'Start time is missing' }),
+        recorder: z.string({ error: 'Recorder info is missing' }),
+        surveyStartTime: z.string({ error: 'Start time is missing' }),
         // surveyEndTime: // automatically set on send
         temperature: z.number({
-          required_error: 'Temperature info is missing',
+          error: 'Temperature info is missing',
         }),
-        windSpeed: z.string({ required_error: 'Wind speed info is missing' }),
+        windSpeed: z.string({ error: 'Wind speed info is missing' }),
       })
       .safeParse(attrs).error,
 

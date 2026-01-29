@@ -1,0 +1,455 @@
+@import '@ionic/core/css/core.css';
+@import '@ionic/core/css/structure.css';
+@import '@ionic/core/css/typography.css';
+/* @import '@ionic/core/css/normalize.css'; not adding because messes up tailwind buttons */
+
+@import '@flumens/ionic/dist/themes/rounded.css';
+
+@import 'tailwindcss';
+
+@source "../../node_modules/@flumens/tailwind";
+@source "../../node_modules/@flumens/ionic";
+
+@theme {
+  /* https://www.shadecolr.com/#colors=Y29sb3I6MjY5LjQzMzk2MjI2NDE1MSwyMi43NDY3ODExMTU4Nzk4MjMsNDUuNjg2Mjc0NTA5ODAzOTJ8c3RlcC11cDo5fHN0ZXAtZG93bjoxMnxodWUtc2hpZnQ6MHxiYXNlLXN0b3A6NnxuYW1lOnNsYXRlfGxvY2tlZDow&active=color-1&v=2 */
+  --color-primary: oklch(51.531% 0.08666 306.1);
+  --color-primary-50: oklch(95.915% 0.00856 308.36);
+  --color-primary-100: oklch(91.989% 0.01567 306.4);
+  --color-primary-200: oklch(84.107% 0.03077 307.06);
+  --color-primary-300: oklch(76.07% 0.04664 307.1);
+  --color-primary-400: oklch(67.673% 0.06513 307.39);
+  --color-primary-500: oklch(59.352% 0.08413 306.43);
+  --color-primary-600: oklch(51.531% 0.08666 306.1);
+  --color-primary-700: oklch(41.685% 0.0677 307.2);
+  --color-primary-800: oklch(31.375% 0.04637 305.88);
+  --color-primary-900: oklch(19.945% 0.02336 309.14);
+  --color-primary-950: oklch(13.434% 0.01215 304.39);
+
+  /* https://www.shadecolr.com/#colors=Y29sb3I6MzkuMDEzNDUyOTE0Nzk4MjEsMTAwLDQzLjcyNTQ5MDE5NjA3ODQzfHN0ZXAtdXA6MTB8c3RlcC1kb3duOjEyfGh1ZS1zaGlmdDowfGJhc2Utc3RvcDo2fG5hbWU6b3JhbmdlfGxvY2tlZDow&active=color-1&v=2 */
+  --color-secondary: oklch(71.866% 0.15437 71.432);
+  --color-secondary-50: oklch(99.42% 0.00693 88.641);
+  --color-secondary-100: oklch(97.023% 0.03001 83.635);
+  --color-secondary-200: oklch(92.394% 0.0762 82.807);
+  --color-secondary-300: oklch(88.072% 0.11801 81.628);
+  --color-secondary-400: oklch(84.109% 0.15038 79.011);
+  --color-secondary-500: oklch(80.548% 0.16796 73.664);
+  --color-secondary-600: oklch(71.866% 0.15437 71.432);
+  --color-secondary-700: oklch(56.822% 0.12156 72.167);
+  --color-secondary-800: oklch(40.693% 0.08638 73.684);
+  --color-secondary-900: oklch(22.817% 0.04691 83.092);
+  --color-secondary-950: oklch(12.346% 0.02533 94.54);
+
+  /* https://www.shadecolr.com/#colors=Y29sb3I6MjAzLjg5ODMwNTA4NDc0NTc3LDEwMCw0Ni4yNzQ1MDk4MDM5MjE1N3xzdGVwLXVwOjl8c3RlcC1kb3duOjEyfGh1ZS1zaGlmdDowfGJhc2Utc3RvcDo2fG5hbWU6c2t5fGxvY2tlZDow&active=color-1&v=2 */
+  --color-tertiary: oklch(63.276% 0.17242 248.5);
+  --color-tertiary-50: oklch(96.61% 0.01835 237.76);
+  --color-tertiary-100: oklch(93.267% 0.03678 238.08);
+  --color-tertiary-200: oklch(86.649% 0.07487 237.94);
+  --color-tertiary-300: oklch(80.425% 0.11115 239.06);
+  --color-tertiary-400: oklch(74.526% 0.1442 241.91);
+  --color-tertiary-500: oklch(69.562% 0.17063 245.65);
+  --color-tertiary-600: oklch(63.276% 0.17242 248.5);
+  --color-tertiary-700: oklch(50.844% 0.13671 247.95);
+  --color-tertiary-800: oklch(37.592% 0.09851 246.85);
+  --color-tertiary-900: oklch(23.245% 0.05366 240.46);
+  --color-tertiary-950: oklch(14.973% 0.03107 233.36);
+
+  /* https://www.shadecolr.com/#colors=Y29sb3I6MCw4NS4zNjU4NTM2NTg1MzY1OCw1OS44MDM5MjE1Njg2Mjc0NXxzdGVwLXVwOjh8c3RlcC1kb3duOjExfGh1ZS1zaGlmdDowfGJhc2Utc3RvcDo1fG5hbWU6cmVkfGxvY2tlZDow&active=color-1&v=2 */
+  --color-danger: oklch(63.538% 0.21167 25.6);
+  --color-danger-50: oklch(95.437% 0.0196 17.501);
+  --color-danger-100: oklch(91.236% 0.04024 17.913);
+  --color-danger-200: oklch(83.016% 0.08326 18.986);
+  --color-danger-300: oklch(75.547% 0.12772 20.507);
+  --color-danger-400: oklch(68.817% 0.17302 22.739);
+  --color-danger-500: oklch(63.538% 0.21167 25.6);
+  --color-danger-600: oklch(58.728% 0.23449 28.638);
+  --color-danger-700: oklch(48.633% 0.19267 28.477);
+  --color-danger-800: oklch(38.007% 0.14816 28.152);
+  --color-danger-900: oklch(26.604% 0.0996 27.398);
+  --color-danger-950: oklch(20.442% 0.07305 26.62);
+
+  /* https://www.shadecolr.com/#colors=Y29sb3I6MTI4LjI1Mzk2ODI1Mzk2ODI1LDEwMCwzMnxzdGVwLXVwOjh8c3RlcC1kb3duOjExfGh1ZS1zaGlmdDowfGJhc2Utc3RvcDo3fG5hbWU6Z3JlZW58bG9ja2VkOjA%3D&active=color-1&v=2 */
+  --color-success: oklch(62.054% 0.20566 143.3);
+  --color-success-50: oklch(92.955% 0.12398 148.22);
+  --color-success-100: oklch(91.596% 0.15321 147.42);
+  --color-success-200: oklch(89.364% 0.20593 146.3);
+  --color-success-300: oklch(87.839% 0.24825 145.08);
+  --color-success-400: oklch(86.989% 0.27729 143.81);
+  --color-success-500: oklch(84.126% 0.28028 143.14);
+  --color-success-600: oklch(73.299% 0.24371 143.2);
+  --color-success-700: oklch(62.054% 0.20566 143.3);
+  --color-success-800: oklch(45.799% 0.1499 143.7);
+  --color-success-900: oklch(27.903% 0.08802 144.9);
+  --color-success-950: oklch(17.817% 0.0536 146.56);
+
+  --color-warning: var(--color-secondary);
+  --color-warning-50: var(--color-secondary-50);
+  --color-warning-100: var(--color-secondary-100);
+  --color-warning-200: var(--color-secondary-200);
+  --color-warning-300: var(--color-secondary-300);
+  --color-warning-400: var(--color-secondary-400);
+  --color-warning-500: var(--color-secondary-500);
+  --color-warning-600: var(--color-secondary-600);
+  --color-warning-700: var(--color-secondary-700);
+  --color-warning-800: var(--color-secondary-800);
+  --color-warning-900: var(--color-secondary-900);
+  --color-warning-950: var(--color-secondary-950);
+}
+
+/* tailwind is loaded later than ionic so resets some of the ionic's base styles */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    margin: revert-layer;
+  }
+}
+
+/* change link colours */
+a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+a[role='button'] {
+  color: unset;
+  font-weight: unset;
+}
+
+h1 {
+  @apply my-5 text-2xl;
+}
+h2 {
+  @apply my-2 text-base;
+}
+h3 {
+  @apply my-1 text-base;
+}
+
+:root {
+  --ion-color-primary: var(--color-primary);
+  --ion-color-primary-contrast: var(--color-primary-50);
+  --ion-color-primary-shade: var(--color-primary-800);
+  --ion-color-primary-tint: var(--color-primary-500);
+  --ion-color-primary-dark: var(--color-primary-950);
+
+  --ion-color-secondary: var(--color-secondary);
+  --ion-color-secondary-contrast: var(--color-secondary-50);
+  --ion-color-secondary-shade: var(--color-secondary-700);
+  --ion-color-secondary-tint: var(--color-secondary-500);
+  --ion-color-secondary-dark: var(--color-secondary-950);
+
+  --ion-color-tertiary: var(--color-tertiary);
+  --ion-color-tertiary-contrast: var(--color-tertiary-50);
+  --ion-color-tertiary-shade: var(--color-tertiary-700);
+  --ion-color-tertiary-tint: var(--color-tertiary-500);
+  --ion-color-tertiary-dark: var(--color-tertiary-950);
+
+  --ion-color-success: var(--color-success);
+  --ion-color-success-contrast: var(--color-success-50);
+  --ion-color-success-shade: var(--color-success-700);
+  --ion-color-success-tint: var(--color-success-500);
+  --ion-color-success-dark: var(--color-success-950);
+
+  --ion-color-warning: var(--color-warning);
+  --ion-color-warning-contrast: var(--color-warning-50);
+  --ion-color-warning-shade: var(--color-warning-700);
+  --ion-color-warning-tint: var(--color-warning-500);
+  --ion-color-warning-dark: var(--color-warning-900);
+
+  --ion-color-danger: var(--color-danger);
+  --ion-color-danger-contrast: var(--color-danger-50);
+  --ion-color-danger-shade: var(--color-danger-700);
+  --ion-color-danger-tint: var(--color-danger-500);
+  --ion-color-danger-dark: var(--color-danger-950);
+
+  --ion-color-dark: var(--color-slate-900);
+  --ion-color-dark-contrast: var(--color-slate-50);
+  --ion-color-dark-shade: var(--color-slate-950);
+  --ion-color-dark-tint: var(--color-slate-800);
+
+  --ion-color-medium: var(--color-slate-400);
+  --ion-color-medium-contrast: var(--color-slate-50);
+  --ion-color-medium-shade: var(--color-slate-500);
+  --ion-color-medium-tint: var(--color-slate-300);
+
+  --ion-color-light: var(--color-white);
+  --ion-color-light-contrast: var(--color-slate-950);
+  --ion-color-light-shade: var(--color-slate-200);
+  --ion-color-light-tint: var(--color-white);
+
+  --ion-page-background: #f6f4f7;
+
+  --ion-headings-font-weight: 300;
+  --ion-item-border-color: rgb(0, 0, 0, 0.2);
+
+  --ion-toolbar-background: var(--ion-color-primary);
+  --ion-toolbar-color: #fff;
+  --ion-toolbar-color-activated: #fff;
+
+  --form-value-color: var(--color-tertiary-800);
+  --ion-font-family: 'Quicksand';
+}
+
+/* status bar */
+html.ios.plt-hybrid #status-bar-background {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: #443553;
+  width: 100vw;
+  height: env(safe-area-inset-top);
+}
+
+/* Fixes the tabbed page top safe area */
+html[mode='ios'] .tabs-inner .ion-page {
+  margin-top: var(--ion-safe-area-top);
+}
+
+/* don't know why this is needed but it fixed location name being off */
+.location-name-attr .auto-suggest-input-attr ion-input {
+  height: 30px;
+}
+
+/* FONTS START */
+@font-face {
+  font-weight: 300;
+  src: url('./fonts/Quicksand-Light.ttf');
+  font-family: 'Quicksand';
+}
+@font-face {
+  font-weight: 400;
+  src: url('./fonts/Quicksand-Regular.ttf');
+  font-family: 'Quicksand';
+}
+@font-face {
+  font-weight: 500;
+  src: url('./fonts/Quicksand-Medium.ttf');
+  font-family: 'Quicksand';
+}
+@font-face {
+  font-weight: 600;
+  src: url('./fonts/Quicksand-SemiBold.ttf');
+  font-family: 'Quicksand';
+}
+@font-face {
+  font-weight: 700;
+  src: url('./fonts/Quicksand-Bold.ttf');
+  font-family: 'Quicksand';
+}
+
+ion-title,
+h1 {
+  font-weight: 700;
+  font-family: 'Quicksand';
+}
+
+ion-item-divider,
+ion-badge,
+ion-label.bold,
+ion-card-title,
+b {
+  font-weight: 600;
+  font-family: 'Quicksand';
+}
+
+.apps-section .apps-section-h,
+h2,
+h3,
+h4,
+h5,
+p,
+i,
+div,
+span,
+input,
+button {
+  font-family: 'Quicksand';
+}
+/* FONTS END */
+
+/* header colours */
+.apps-section .apps-section-h,
+h1,
+h2,
+h3 {
+  color: var(--color-primary-900);
+}
+
+/* training subheader */
+.training-survey {
+  background: black;
+  padding: 4px;
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* info messages */
+.info-message.blue,
+.attr-page .info-message {
+  @apply border-tertiary-300/40 bg-tertiary-50 text-tertiary-900;
+}
+
+/* ACCESSIBILITY IMPROVEMENTS START */
+ion-button:not(.button-has-icon-only),
+ion-item {
+  font-size: 1em;
+}
+
+ion-button:not(.button-has-icon-only).md,
+ion-item.md {
+  font-size: 0.9em;
+}
+
+/* clearer image picker empty message */
+.photo-picker.ios .empty {
+  font-size: 0.9em !important;
+}
+
+.photo-picker.md .empty {
+  font-size: 1em !important;
+}
+
+/* brighter and bigger divider */
+ion-item-divider {
+  padding: 0 5px 7px 5px;
+  color: var(--ion-text-color);
+  font-size: 0.9em;
+}
+
+/* clearer menu items */
+.menu-attr-item ion-label[slot='end'],
+.attr-wrapper ion-label[slot='end'] {
+  opacity: 1 !important;
+  color: #000000b3;
+}
+
+/* menu date picker match other input value colors */
+.date-input-attr ion-label[slot='end'] {
+  color: var(--form-value-color);
+  font-size: 1rem;
+}
+
+.date-input-attr ion-label[slot='end'].md {
+  font-size: 0.9rem;
+}
+
+/* larger collapse headers */
+.collapse-block ion-label.ion-text-wrap {
+  font-size: 1rem;
+}
+
+/* clearer alert messages */
+ion-alert div.alert-message.sc-ion-alert-md {
+  color: black;
+  font-size: 1.1em;
+}
+
+/* increase link and menu label visibility */
+.field-label:first-of-type,
+ion-item[detail='true'][href],
+ion-item > ion-icon + ion-label,
+ion-item.item > ion-icon + ion-label.sc-ion-label-md-h {
+  font-weight: 500;
+  font-size: 1rem;
+}
+/* ACCESSIBILITY IMPROVEMENTS END */
+
+/* subtle borders around rounded items */
+.apps-section,
+.search-result:nth-child(odd),
+.survey-list-item,
+.slider-input,
+.input-list-attr .input-list-attr-item,
+.radio-input-attr ion-item,
+#suggestions .empty,
+.taxa-filter-edit-dialog-form ion-item,
+.rounded-list:not(:empty) {
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--theme-border-radius);
+}
+
+/* Hide unnecessary clear icon for search input components */
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Display occurrence taxon name as Common and scientific names. */
+.taxon-entry .ion-label[slot='end'] {
+  max-width: 50% !important;
+  white-space: inherit !important;
+}
+.taxon-entry .ion-label {
+  white-space: nowrap !important;
+}
+
+/* list item picture */
+.list-avatar {
+  @apply flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-md bg-neutral-100;
+}
+
+/* top of the list title */
+.list-title {
+  @apply mx-1 mt-4 mb-2 flex items-center text-base font-semibold;
+}
+
+/* top of the list item */
+.list-divider {
+  @apply bg-primary-700/10 text-primary-900 flex items-center justify-between p-1 px-2 text-sm;
+}
+
+/* Make Android icons dark, same as iOS */
+ion-icon[slot='start'].md {
+  color: var(--ion-text-color, #000);
+}
+
+/* unify icon strokes and widths */
+ion-icon.size-5,
+ion-icon.size-6,
+.menu-attr-item ion-icon[slot='start'],
+ion-item > ion-icon[slot='start'],
+.single-photo-picker ion-icon[slot='start'] {
+  --ionicon-stroke-width: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Makes iOS menu items same height as Android */
+ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* Make menu item value colours same as form values, e.g. Settings page */
+ion-item .sc-ion-label-md-h.sc-ion-label-md-s.md[slot='end'],
+ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios[slot='end'] {
+  color: var(--form-value-color);
+}
+
+/* Unify menu lines with Tailwind package components */
+.date-input-attr ion-accordion:last-of-type ion-item[slot='header'],
+.list-ios-lines-full ion-item.item-lines-default,
+.list-md-lines-full ion-item.item-lines-default {
+  --border-width: 0 0 0.5px 0 !important;
+  --border-color: #e5e5e5 !important;
+}
+
+/* Fix menu date button label alignment for Android */
+ion-accordion ion-icon[slot='start'].md {
+  margin-right: 37px;
+}
+
+/* Fix input list input width */
+.input-list-attr-item input.plain-input {
+  width: 100%;
+}
+
+/* Fix menu item label sizes */
+ion-item.in-list,
+ion-item[router-link] {
+  font-weight: 500;
+  font-size: 1rem;
+}

@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Location } from '@flumens';
 import config from 'common/config';
 
-interface WeatherRemoteRes {
+type WeatherRemoteRes = {
   coord: { lon: number; lat: number };
   weather: { id: number; main: string; description: string; icon: string }[];
   base: string;
@@ -29,7 +29,7 @@ interface WeatherRemoteRes {
   id: number;
   name: string;
   cod: number;
-}
+};
 
 type Weather = {
   cloud: number | null;
@@ -64,13 +64,13 @@ type HistoricalWeatherData = {
   };
 };
 
-export interface HistoricalWeatherRemoteRes {
+export type HistoricalWeatherRemoteRes = {
   lat: number;
   lon: number;
   timezone: string;
   timezone_offset: number;
   data: HistoricalWeatherData[];
-}
+};
 
 const url = config.weatherSiteUrl;
 

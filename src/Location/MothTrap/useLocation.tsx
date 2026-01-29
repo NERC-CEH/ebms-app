@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { useRouteMatch } from 'react-router-dom';
 import locations from 'common/models/collections/locations';
 import Location from 'models/location';

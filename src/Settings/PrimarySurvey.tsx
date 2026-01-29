@@ -20,7 +20,7 @@ function SelectCountry() {
 
   function onSelect(e: any) {
     const survey = e.target.value;
-    appModel.data.primarySurvey = survey; // eslint-disable-line no-param-reassign
+    appModel.data.primarySurvey = survey;
     appModel.save();
     goBack();
   }

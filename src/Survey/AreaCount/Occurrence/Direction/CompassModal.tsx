@@ -10,10 +10,10 @@ type Props = {
 };
 
 const CompassModal = ({ hideCompass, value }: Props) => {
-  const [state, setstate] = useState(0);
+  const [state, setState] = useState(0);
 
   useEffect(() => {
-    setstate(Math.round(value));
+    setState(Math.round(value));
   });
 
   const directionNames = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];

@@ -3,12 +3,12 @@ import { Button } from '@flumens';
 import { isPlatform } from '@ionic/react';
 import AnimatedNumber from './AnimatedNumber';
 
-interface Props {
+type Props = {
   onClick: any;
   onLongClick?: any;
   value: number;
   disabled?: boolean;
-}
+};
 
 const IncrementalButton = ({
   onClick: onClickProp,

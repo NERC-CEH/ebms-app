@@ -27,9 +27,9 @@ function showDeleteSurveyAlertMessage(alert: any) {
   return new Promise(deleteSurveyPromt);
 }
 
-interface Props {
+type Props = {
   location: any;
-}
+};
 
 const CancelButton = ({ location }: Props) => {
   const { goBack } = useContext(NavContext);

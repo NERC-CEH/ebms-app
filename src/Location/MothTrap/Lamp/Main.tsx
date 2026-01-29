@@ -16,33 +16,31 @@ type Props = {
   lamp: Lamp;
 };
 
-const MothTrapLampMain = ({ lamp }: Props) => {
-  return (
-    <Main>
-      <IonList lines="full">
-        <h3 className="list-title">
-          <T>Lamp Details</T>
-        </h3>
+const MothTrapLampMain = ({ lamp }: Props) => (
+  <Main>
+    <IonList lines="full">
+      <h3 className="list-title">
+        <T>Lamp Details</T>
+      </h3>
 
-        <div className="rounded-list">
-          <Block
-            block={mothTrapLampTypeAttr}
-            record={lamp.data}
-            onChange={(val: any) => {
-              const byId = (choice: any) => choice.dataName === val;
-              const choice = mothTrapLampTypeAttr.choices.find(byId);
-              lamp.data[mothTrapLampTypeAttr.id] = val;
-              lamp.data[mothTrapLampTypeNameAttr.id] = choice?.title || '';
-              return null;
-            }}
-          />
-          <Block block={mothTrapLampQuantityAttr} record={lamp.data} />
-          <Block block={mothTrapLampDescriptionAttr} record={lamp.data} />
-          <InfoMessage>Additional description of lamp.</InfoMessage>
-        </div>
-      </IonList>
-    </Main>
-  );
-};
+      <div className="rounded-list">
+        <Block
+          block={mothTrapLampTypeAttr}
+          record={lamp.data}
+          onChange={(val: any) => {
+            const byId = (choice: any) => choice.dataName === val;
+            const choice = mothTrapLampTypeAttr.choices.find(byId);
+            lamp.data[mothTrapLampTypeAttr.id] = val;
+            lamp.data[mothTrapLampTypeNameAttr.id] = choice?.title || '';
+            return null;
+          }}
+        />
+        <Block block={mothTrapLampQuantityAttr} record={lamp.data} />
+        <Block block={mothTrapLampDescriptionAttr} record={lamp.data} />
+        <InfoMessage>Additional description of lamp.</InfoMessage>
+      </div>
+    </IonList>
+  </Main>
+);
 
 export default observer(MothTrapLampMain);

@@ -33,8 +33,6 @@ const Location = () => {
 
   const onLocationSelect = (newTrap: MothTrap) => {
     if (isDisabled) return;
-
-    // eslint-disable-next-line no-param-reassign
     sample.data.location = newTrap.toJSON() as any as MothTrapLocation;
 
     goBack();

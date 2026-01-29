@@ -15,7 +15,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import WhatsNewDialog from 'common/Components/WhatsNewDialog';
 import samples from 'common/models/collections/samples';
-import 'common/theme.scss';
+import 'common/theme.css';
 import 'common/translations/translator';
 import appModel from 'models/app';
 import LanguageCountrySelectRequired from 'Components/LanguageCountrySelectRequired';

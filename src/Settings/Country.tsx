@@ -46,6 +46,7 @@ const fetchCountrySpeciesList = async (newCountry: string) => {
 };
 
 const SelectCountry = ({ hideHeader }: Props) => {
+  // eslint-disable-next-line react/hook-use-state
   const [secondRender, forceSecondRender] = useState(false);
   const alert = useAlert();
   const { t } = useTranslation();
@@ -84,7 +85,7 @@ const SelectCountry = ({ hideHeader }: Props) => {
         ],
       });
     }
-    appModel.data.country = newCountry; // eslint-disable-line no-param-reassign
+    appModel.data.country = newCountry;
     appModel.save();
 
     // in the background, fetch species lists for the selected country
@@ -94,16 +95,15 @@ const SelectCountry = ({ hideHeader }: Props) => {
   }
 
   // group countries by continent
-  const countriesByContinent = Object.entries(countries).reduce(
-    (acc, [code, country]) => {
-      const continent = country.continent || 'OTHER';
-      if (!acc[continent]) acc[continent] = [];
+  const countriesByContinent = Object.entries(countries).reduce<
+    Record<string, { code: string; name: string }[]>
+  >((acc, [code, country]) => {
+    const continent = country.continent || 'OTHER';
+    if (!acc[continent]) acc[continent] = [];
 
-      acc[continent].push({ code, name: t(country.name) });
-      return acc;
-    },
-    {} as Record<string, Array<{ code: string; name: string }>>
-  );
+    acc[continent].push({ code, name: t(country.name) });
+    return acc;
+  }, {});
 
   // sort countries within each continent
   Object.values(countriesByContinent).forEach(countryList => {
@@ -152,9 +152,11 @@ const SelectCountry = ({ hideHeader }: Props) => {
               };
 
               return (
-                <div className="overflow-hidden rounded-md [&_ion-item]:[--border-style:none] [&_ion-label]:!text-base [&_ion-label]:!font-semibold">
+                <div
+                  className="overflow-hidden rounded-md [&_ion-item]:[--border-style:none] [&_ion-label]:!text-base [&_ion-label]:!font-semibold"
+                  key={continentCode}
+                >
                   <Collapse
-                    key={continentCode}
                     title={continents[continentCode]}
                     {...collapseProps}
                   >

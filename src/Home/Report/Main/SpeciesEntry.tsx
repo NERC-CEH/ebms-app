@@ -6,9 +6,9 @@ import speciesProfiles, {
 import butterflyIcon from 'common/images/butterfly.svg';
 import { speciesListGroupImages } from 'models/occurrence';
 
-interface Props {
+type Props = {
   species: any;
-}
+};
 
 const SpeciesEntry = ({ species }: Props) => {
   const { t } = useTranslation();
@@ -52,11 +52,13 @@ const SpeciesEntry = ({ species }: Props) => {
         {/* <IonAvatar className="[--border-radius:5px]">{avatar}</IonAvatar> */}
 
         <div className="flex w-full flex-col justify-center">
-          {commonName && <div className="">{commonName}</div>}
+          {commonName && <div className="font-medium">{commonName}</div>}
           <div className="text-base italic opacity-70">{scientificName}</div>
         </div>
 
-        <div className="max-w:[50px] text-lg">{species.doc_count}</div>
+        <div className="max-w:[50px] text-lg font-medium">
+          {species.doc_count}
+        </div>
       </div>
     </IonItem>
   );

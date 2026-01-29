@@ -40,7 +40,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       }
     };
 
-    this.ready && this.ready.then(fetchFirstTime);
+    this.ready?.then(fetchFirstTime);
 
     const onLoginChange = async (newEmail: any) => {
       if (!newEmail) return;
@@ -181,6 +181,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
       const docs = res.data.data.map(getValues);
       const remoteSchema = dtoSchema.extend({
+        // @ts-expect-error fix this once drizzle-orm supports zod v4
         parentId: z.string(), // this is required to join with transects
       });
 

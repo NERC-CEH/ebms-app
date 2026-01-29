@@ -25,8 +25,7 @@ const Menu = ({ searchPhrase, values, onSelect, options }: Props) => {
   }: FilterOption) => {
     let filterOptions = [...optionValues];
 
-    const notSelected = (value: string) =>
-      !values[type] || !values[type]?.includes(value);
+    const notSelected = (value: string) => !values[type]?.includes(value);
     const matchesSearchString = (value: string) =>
       searchPhrase
         ? value?.toLowerCase().includes(searchPhrase.toLowerCase())
@@ -69,7 +68,7 @@ const Menu = ({ searchPhrase, values, onSelect, options }: Props) => {
 
   const filterOptions = options.map(getFilterOptions);
 
-  const hasFilters = !!filterOptions.find((val: any) => !!val); // eslint-disable-line @getify/proper-arrows/name
+  const hasFilters = !!filterOptions.find((val: any) => !!val);
   if (!hasFilters) return null;
 
   return (

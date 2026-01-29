@@ -250,7 +250,7 @@ const HomeController = () => {
 
   if (!sample) return null;
 
-  const _processSubmission = async () => {
+  const processSubmission = async () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
@@ -259,10 +259,10 @@ const HomeController = () => {
 
     sample.upload().catch(toast.error);
 
-    navigate(`/home/user-surveys`, 'root');
+    navigate('/home/user-surveys', 'root');
   };
 
-  const _processDraft = async () => {
+  const processDraft = async () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
@@ -287,28 +287,26 @@ const HomeController = () => {
     appModel.setLocation(sample.data.location);
 
     await appModel.save();
-
-    // eslint-disable-next-line no-param-reassign
     sample.metadata.saved = true;
-    sample.data.surveyEndTime = new Date().toISOString(); // eslint-disable-line no-param-reassign
+    sample.data.surveyEndTime = new Date().toISOString();
 
     sample.cleanUp();
     sample.save();
-    navigate(`/home/user-surveys`, 'root');
+    navigate('/home/user-surveys', 'root');
   };
 
   const onSubmit = async () => {
     if (!sample.metadata.saved) {
-      await _processDraft();
+      await processDraft();
       return;
     }
 
-    await _processSubmission();
+    await processSubmission();
   };
 
   const navigateToSpeciesOccurrences = (taxon: any) => {
-    const { warehouse_id, preferredId } = taxon;
-    const taxonId = preferredId || warehouse_id;
+    const { warehouse_id: warehouseId, preferredId } = taxon;
+    const taxonId = preferredId || warehouseId;
 
     navigate(`${match.url}/speciesOccurrences/${taxonId}`);
   };
@@ -415,9 +413,8 @@ const HomeController = () => {
   };
 
   const deleteFromShallowList = (taxon: any) => {
-    const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) => {
-      return doesShallowTaxonMatch(shallowEntry, taxon);
-    };
+    const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) =>
+      doesShallowTaxonMatch(shallowEntry, taxon);
 
     const taxonIndexInShallowList = sample.shallowSpeciesList.findIndex(
       withSamePreferredIdOrWarehouseId
@@ -456,7 +453,6 @@ const HomeController = () => {
 
   const increaseCount = (taxon: any, _: boolean, is5x: boolean) => {
     if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
-      // eslint-disable-next-line no-param-reassign
       sample.samples[0].occurrences[0].data.zero_abundance = null;
       sample.samples[0].startGPS();
       sample.save();
@@ -519,18 +515,16 @@ const HomeController = () => {
   };
 
   const cloneSubSample = async (copiedSubSample: Sample, ref: any) => {
-    // eslint-disable-next-line no-param-reassign
     sample.copyAttributes = {}; // clean previous copy
     sample.save();
 
-    // eslint-disable-next-line no-param-reassign
     sample.copyAttributes = toJS(copiedSubSample.occurrences[0].data);
 
     const taxon = { ...copiedSubSample.occurrences[0].data.taxon };
 
     const survey = sample.getSurvey();
     const newSubSample = survey.smp!.create!({ Sample, Occurrence, taxon });
-    // eslint-disable-next-line no-param-reassign
+
     (sample.copyAttributes as any).timeOfSighting = new Date().toISOString();
 
     newSubSample.occurrences[0].data = observable(sample.copyAttributes) as any;

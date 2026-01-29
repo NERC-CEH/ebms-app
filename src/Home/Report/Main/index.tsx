@@ -14,13 +14,13 @@ import ExpandableList from 'Components/ExpandableList';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import SpeciesEntry from './SpeciesEntry';
 
-interface Props {
+type Props = {
   species: any;
   userSpecies: any;
   userSpeciesLastMonth: any;
   refreshing: any;
   refreshReport: any;
-}
+};
 
 const MainReport = ({
   species,
@@ -91,7 +91,7 @@ const MainReport = ({
   const isLoggedIn = userModel.isLoggedIn();
 
   return (
-    <Main className="[--padding-top:env(safe-area-inset-top)]">
+    <Main className="[--padding-top:env(safe-area-inset-top)] [--padding-bottom:30px]">
       <IonRefresher slot="fixed" onIonRefresh={onListRefreshPull}>
         <IonRefresherContent />
       </IonRefresher>

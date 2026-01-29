@@ -1,6 +1,3 @@
-/* eslint-disable no-param-reassign */
-
-/* eslint-disable camelcase */
 import { useContext } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
@@ -91,7 +88,7 @@ const HomeController = () => {
 
   const surveyConfig = sample.getSurvey();
 
-  const _processSubmission = async () => {
+  const processSubmission = async () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
@@ -100,10 +97,10 @@ const HomeController = () => {
 
     sample.upload().catch(toast.error);
 
-    navigate(`/home/user-surveys`, 'root');
+    navigate('/home/user-surveys', 'root');
   };
 
-  const _processDraft = async () => {
+  const processDraft = async () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
@@ -112,21 +109,20 @@ const HomeController = () => {
     const saveAndReturn = () => {
       sample.cleanUp();
       sample.save();
-      navigate(`/home/user-surveys`, 'root');
+      navigate('/home/user-surveys', 'root');
     };
 
-    // eslint-disable-next-line no-param-reassign
     sample.metadata.saved = true;
     saveAndReturn();
   };
 
   const onSubmit = async () => {
     if (!sample.metadata.saved) {
-      await _processDraft();
+      await processDraft();
       return;
     }
 
-    await _processSubmission();
+    await processSubmission();
   };
 
   const toggleSpeciesSort = () => {
@@ -151,9 +147,8 @@ const HomeController = () => {
   // };
 
   const deleteFromShallowList = (taxon: Taxon) => {
-    const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) => {
-      return doesShallowTaxonMatch(shallowEntry, taxon);
-    };
+    const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) =>
+      doesShallowTaxonMatch(shallowEntry, taxon);
 
     const taxonIndexInShallowList = sample.shallowSpeciesList.findIndex(
       withSamePreferredIdOrWarehouseId
@@ -174,9 +169,7 @@ const HomeController = () => {
     }
 
     const destroyWrap = () => {
-      const matchingTaxon = (occ: Occurrence) => {
-        return occ.doesTaxonMatch(taxon);
-      };
+      const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
       const sampleMatchingTaxon = sample.occurrences.filter(matchingTaxon);
 
       const destroy = (occ: Occurrence) => {
@@ -208,9 +201,7 @@ const HomeController = () => {
       return;
     }
 
-    const matchingTaxon = (occ: Occurrence) => {
-      return occ.doesTaxonMatch(taxa);
-    };
+    const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxa);
 
     const occ = sample.occurrences.find(matchingTaxon);
 
@@ -227,16 +218,13 @@ const HomeController = () => {
       occ.data.taxon?.warehouse_id !== UNKNOWN_SPECIES.preferredId;
     if (!speciesIsKnown) return;
 
-    const selectedTaxon = (selectedOccurrence: Occurrence) => {
-      return (
-        (selectedOccurrence.data.taxon?.preferredId ||
-          selectedOccurrence.data.taxon?.warehouse_id) ===
-          (occ?.data.taxon?.preferredId || occ?.data.taxon?.warehouse_id) &&
-        selectedOccurrence !== occ &&
-        selectedOccurrence.data.comment === comment &&
-        selectedOccurrence.data.identifier === identifier
-      );
-    };
+    const selectedTaxon = (selectedOccurrence: Occurrence) =>
+      (selectedOccurrence.data.taxon?.preferredId ||
+        selectedOccurrence.data.taxon?.warehouse_id) ===
+        (occ?.data.taxon?.preferredId || occ?.data.taxon?.warehouse_id) &&
+      selectedOccurrence !== occ &&
+      selectedOccurrence.data.comment === comment &&
+      selectedOccurrence.data.identifier === identifier;
     const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
     if (!occWithSameSpecies) return;
 

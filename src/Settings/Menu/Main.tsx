@@ -265,12 +265,12 @@ const MenuMain = ({
           )}
         </div>
 
-        <h3 className="list-title">
-          <T>Account</T>
-        </h3>
-        <div className="rounded-list">
-          {isLoggedIn && (
-            <>
+        {isLoggedIn && (
+          <>
+            <h3 className="list-title">
+              <T>Account</T>
+            </h3>
+            <div className="rounded-list">
               <IonItem onClick={showUserDeleteDialog} className="!text-danger">
                 <IonIcon icon={personRemoveOutline} size="small" slot="start" />
                 <IonLabel>
@@ -280,9 +280,9 @@ const MenuMain = ({
               <InfoMessage inline>
                 You can delete your user account from the system.
               </InfoMessage>
-            </>
-          )}
-        </div>
+            </div>
+          </>
+        )}
       </IonList>
 
       <p className="m-0 mx-auto w-full max-w-2xl p-2.5 text-right opacity-60">{`v${config.version} (${config.build})`}</p>

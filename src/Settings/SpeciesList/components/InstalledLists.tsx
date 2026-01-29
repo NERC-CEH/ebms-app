@@ -64,14 +64,14 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
         key={list.cid}
         className="mb-2 rounded-md border border-solid border-neutral-300"
       >
-        <IonItem className="max-h-[73px] [--min-height:73px]">
+        <IonItem className="max-h-[77px] [--min-height:77px]">
           <div className="flex w-full items-center justify-between gap-2">
             <div className="min-w-0 flex-1">
-              <h2 className="line-clamp-1 font-bold">
+              <h2 className="line-clamp-1 font-bold mt-0!">
                 {list.data.title || list.data.description}
               </h2>
 
-              <div className="mt-2 flex gap-2">
+              <div className="flex gap-2">
                 <Badge>{`${list.getSize()}`} species</Badge>
                 <Badge>{getRelativeDate(list.updatedAt)}</Badge>
               </div>
@@ -97,7 +97,7 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
   };
 
   return (
-    <IonList className="full mt-20" lines="none">
+    <IonList className="full mt-20!" lines="none">
       {lists.map(getListItem)}
     </IonList>
   );

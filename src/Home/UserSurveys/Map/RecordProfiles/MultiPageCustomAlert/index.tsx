@@ -22,10 +22,10 @@ const MultiPageCustomAlert = ({ children, onClose }: Props) => {
   const [prevSlidesExist, setPrevSlidesExist] = useState(false);
 
   const slideNext = () => {
-    controlledSwiper && controlledSwiper.slideNext();
+    controlledSwiper?.slideNext();
   };
   const slidePrev = () => {
-    controlledSwiper && controlledSwiper.slidePrev();
+    controlledSwiper?.slidePrev();
   };
 
   const handleSlideChange = async () => {

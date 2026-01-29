@@ -20,7 +20,7 @@ const TransectHomeController = () => {
 
   if (!sample) return null;
 
-  const _processSubmission = async () => {
+  const processSubmission = async () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
@@ -29,10 +29,10 @@ const TransectHomeController = () => {
 
     sample.upload().catch(toast.error);
 
-    navigate(`/home/user-surveys`, 'root');
+    navigate('/home/user-surveys', 'root');
   };
 
-  const _processDraft = async () => {
+  const processDraft = async () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
@@ -41,25 +41,23 @@ const TransectHomeController = () => {
 
     const saveAndReturn = () => {
       if (!sample.data.surveyEndTime) {
-        // eslint-disable-next-line no-param-reassign
         sample.data.surveyEndTime = new Date().toISOString();
       }
       sample.save();
-      navigate(`/home/user-surveys`, 'root');
+      navigate('/home/user-surveys', 'root');
     };
 
-    // eslint-disable-next-line no-param-reassign
     sample.metadata.saved = true;
     saveAndReturn();
   };
 
   const onSubmit = async () => {
     if (!sample.metadata.saved) {
-      await _processDraft();
+      await processDraft();
       return;
     }
 
-    await _processSubmission();
+    await processSubmission();
   };
 
   return (

@@ -17,7 +17,7 @@ import surveySingleSpecies from './configSpecies';
 const { AttrPageFromRoute } = AttrPage;
 
 const getRoutes = (baseURL: string, config: Survey) => [
-  [`${baseURL}`, StartNewSurvey.with(config), true],
+  [baseURL, StartNewSurvey.with(config), true],
   [`${baseURL}/:smpId`, Home],
   [`${baseURL}/:smpId/:attr`, withSample(AttrPageFromRoute)],
   [`${baseURL}/:smpId/area`, AreaAttr],

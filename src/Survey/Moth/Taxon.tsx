@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import { Page, Main, Header, useAlert, useSample } from '@flumens';
@@ -45,14 +44,11 @@ const Taxon = () => {
     }
 
     if (occurrence && isRecorded && !isTaxonUnknown) {
-      const selectedTaxon = (selectedOccurrence: Occurrence) => {
-        return (
-          occurrence.data.taxon?.warehouse_id &&
-          selectedOccurrence !== occurrence &&
-          selectedOccurrence.data.comment === occurrence?.data?.comment &&
-          selectedOccurrence.data.identifier === occurrence?.data?.identifier
-        );
-      };
+      const selectedTaxon = (selectedOccurrence: Occurrence) =>
+        occurrence.data.taxon?.warehouse_id &&
+        selectedOccurrence !== occurrence &&
+        selectedOccurrence.data.comment === occurrence?.data?.comment &&
+        selectedOccurrence.data.identifier === occurrence?.data?.identifier;
 
       const occWithSameSpecies = sample.occurrences.find(selectedTaxon);
       if (!occWithSameSpecies) {
@@ -111,9 +107,7 @@ const Taxon = () => {
       return;
     }
 
-    const selectedTaxon = (occ: Occurrence) => {
-      return occ.doesTaxonMatch(taxon);
-    };
+    const selectedTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
 
     const existingOccurrence = sample.occurrences.find(selectedTaxon);
     if (existingOccurrence) {
@@ -137,9 +131,8 @@ const Taxon = () => {
     goBack();
   };
 
-  const getTaxonId = (occ: Occurrence) => {
-    return occ.data.taxon?.preferredId || occ.data.taxon?.warehouse_id;
-  };
+  const getTaxonId = (occ: Occurrence) =>
+    occ.data.taxon?.preferredId || occ.data.taxon?.warehouse_id;
 
   const species = sample.occurrences.map(getTaxonId);
 

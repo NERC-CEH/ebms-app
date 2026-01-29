@@ -22,7 +22,7 @@ export class GroupCollection extends GroupCollectionBase<Group> {
       }
     };
 
-    this.ready && this.ready.then(fetchFirstTime);
+    this.ready?.then(fetchFirstTime);
 
     const onLoginChange = async (newEmail: any) => {
       if (!newEmail) return;

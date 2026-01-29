@@ -1,6 +1,4 @@
 /* eslint-disable camelcase */
-
-/* eslint-disable @getify/proper-arrows/name */
 import bg_BG from './interface/bg_BG.po';
 import ca_ES from './interface/ca_ES.po';
 import cs_CZ from './interface/cs_CZ.po';

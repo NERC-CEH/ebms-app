@@ -217,36 +217,34 @@ const HomeMain = ({
     if (speciesList.length < 1) return null;
 
     return (
-      <>
-        <IonList id="list" lines="full">
-          <div className="rounded-list">
-            <div className="list-divider">
-              <div
-                className={clsx(
-                  !isUnidentifiedSpeciesLengthMoreThanFive() && 'full-width'
-                )}
-              >
-                <T>Unknown species</T>
-              </div>
-              {!isUnidentifiedSpeciesLengthMoreThanFive() && (
-                <div className="count">{count}</div>
+      <IonList id="list" lines="full">
+        <div className="rounded-list">
+          <div className="list-divider">
+            <div
+              className={clsx(
+                !isUnidentifiedSpeciesLengthMoreThanFive() && 'full-width'
               )}
-
-              {isUnidentifiedSpeciesLengthMoreThanFive() && (
-                <Button
-                  onPress={onIdentifyAllOccurrences}
-                  color="secondary"
-                  className="py-1 text-sm"
-                >
-                  <T>Identify All</T>
-                </Button>
-              )}
+            >
+              <T>Unknown species</T>
             </div>
+            {!isUnidentifiedSpeciesLengthMoreThanFive() && (
+              <div className="count">{count}</div>
+            )}
 
-            {speciesList}
+            {isUnidentifiedSpeciesLengthMoreThanFive() && (
+              <Button
+                onPress={onIdentifyAllOccurrences}
+                color="secondary"
+                className="py-1 text-sm"
+              >
+                <T>Identify All</T>
+              </Button>
+            )}
           </div>
-        </IonList>
-      </>
+
+          {speciesList}
+        </div>
+      </IonList>
     );
   };
 
@@ -258,14 +256,9 @@ const HomeMain = ({
         </IonList>
       );
     }
-
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const byKnownSpecies = ([, species]: any) => {
-      return (
-        species.taxon &&
-        species.taxon.warehouse_id !== UNKNOWN_SPECIES_PREFFERD_ID
-      );
-    };
+    const byKnownSpecies = ([, species]: any) =>
+      species.taxon &&
+      species.taxon.warehouse_id !== UNKNOWN_SPECIES_PREFFERD_ID;
 
     const speciesCounts = [...sample.occurrences].reduce(buildSpeciesCount, {});
 
@@ -289,6 +282,7 @@ const HomeMain = ({
 
     const counts = {
       ...speciesCounts,
+      // eslint-disable-next-line @typescript-eslint/no-misused-spread
       ...shallowCounts,
     };
 
@@ -369,7 +363,7 @@ const HomeMain = ({
           <Button
             color="tertiary"
             className={clsx(
-              `shrink-0 py-2`,
+              'shrink-0 py-2',
               !useImageIdentifier && 'opacity-40'
             )}
             onPress={

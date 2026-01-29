@@ -1,5 +1,5 @@
 import { createRef, Component } from 'react';
-import * as d3 from 'd3';
+import d3 from 'd3';
 
 class SVG extends Component {
   // static propTypes = {
@@ -36,11 +36,10 @@ class SVG extends Component {
       );
     const path = d3.geoPath(projection);
 
-    const strokeColor = (_, index) => {
-      return index % 2
+    const strokeColor = (_, index) =>
+      index % 2
         ? 'var(--ion-color-primary-shade)'
         : 'var(--ion-color-tertiary-tint)';
-    };
     group
       .selectAll('path')
       .data(isGeometryCollection ? geoLineString.geometries : geoLineString)

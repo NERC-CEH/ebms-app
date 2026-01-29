@@ -79,7 +79,7 @@ const showCopyTip = (alert: any) => {
       },
     ],
   });
-  // eslint-disable-next-line no-param-reassign
+
   appModel.data.showCopyHelpTip = false;
   appModel.save();
 };
@@ -114,7 +114,7 @@ const buildSpeciesCount = (agg: any, smp: Sample) => {
   agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning(); // eslint-disable-line
   // eslint-disable-next-line
   agg[id].hasLocationMissing =
-    agg[id].hasLocationMissing || smp.hasLoctionMissingAndIsnotLocating(); // eslint-disable-line
+    agg[id].hasLocationMissing || smp.hasLoctionMissingAndIsnotLocating();
 
   return agg;
 };
@@ -316,6 +316,7 @@ const AreaCount = ({
 
     const counts = {
       ...speciesCounts,
+      // eslint-disable-next-line @typescript-eslint/no-misused-spread
       ...shallowCounts,
     };
 

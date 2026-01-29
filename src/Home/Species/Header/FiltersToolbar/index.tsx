@@ -11,13 +11,11 @@ import './styles.scss';
 export type FilterOption = FilterOptionType;
 export type FilterGroup = string;
 export type Filter = string;
-export type Filters = {
-  [key in FilterGroup]?: Filter[];
-};
+export type Filters = Partial<Record<FilterGroup, Filter[]>>;
 
-export type FilterGroupWithText = FilterGroup & 'text';
+export type FilterGroupWithText = FilterGroup;
 
-interface Props {
+type Props = {
   /**
    * What filters to show.
    */
@@ -33,7 +31,7 @@ interface Props {
   onSearch: any;
   onSearchEnd: any;
   isOpen?: boolean;
-}
+};
 
 const FiltersToolbar = ({
   values,

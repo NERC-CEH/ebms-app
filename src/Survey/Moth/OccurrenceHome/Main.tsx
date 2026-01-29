@@ -11,9 +11,9 @@ import appModel from 'models/app';
 import Occurrence from 'models/occurrence';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 
-interface Props {
+type Props = {
   occurrence: Occurrence;
-}
+};
 
 const EditOccurrence = ({ occurrence }: Props) => {
   const { useImageIdentifier } = appModel.data;

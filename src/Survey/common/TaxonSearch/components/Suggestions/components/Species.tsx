@@ -14,7 +14,7 @@ const reduceToIdAndLabel = (
 
 const groupLabels = Object.values(groups).reduce<GroupLabels>(
   reduceToIdAndLabel,
-  {} as GroupLabels
+  {}
 );
 
 type OnSelectSpecies = (species: SuggestionResult, edit?: boolean) => void;

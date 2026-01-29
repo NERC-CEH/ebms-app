@@ -9,10 +9,8 @@ type Props = {
 
 function CountdownClock({ isPaused, countdown }: Props) {
   const { t } = useTranslation();
-
-  // eslint-disable-next-line react/no-unstable-nested-components
   const countdownRenderer = ({ minutes, seconds, completed }: any) => {
-    if (completed) return t(`Time's up!`);
+    if (completed) return t("Time's up!");
 
     return (
       <span className={minutes < 3 ? 'text-danger' : ''}>{`${zeroPad(

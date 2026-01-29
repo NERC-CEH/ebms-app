@@ -16,15 +16,16 @@ const checkIfTaxonSelectedSame = (
 ) => {
   if (!sectionOccurrence) return false;
 
-  const { preferredId, warehouse_id } = sectionOccurrence?.data?.taxon || {};
+  const { preferredId, warehouse_id: warehouseId } =
+    sectionOccurrence?.data?.taxon || {};
 
   if (preferredId) {
     return (
-      warehouse_id === taxon.warehouse_id || preferredId === taxon?.preferredId
+      warehouseId === taxon.warehouse_id || preferredId === taxon?.preferredId
     );
   }
 
-  return warehouse_id === taxon.warehouse_id;
+  return warehouseId === taxon.warehouse_id;
 };
 
 const Controller = () => {
@@ -53,9 +54,7 @@ const Controller = () => {
       sectionOccurrence
     );
 
-    const byId = (occ: Occurrence) => {
-      return occ.doesTaxonMatch(taxon);
-    };
+    const byId = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
     const occWithSameSpecies = sectionSample.occurrences.find(byId);
 
     const isOccurrenceEditPage = occWithSameSpecies && isRecorded && taxa;
@@ -78,18 +77,16 @@ const Controller = () => {
         sectionOccurrence.data.taxon.group !== DRAGONFLY_GROUP &&
         taxon.group === DRAGONFLY_GROUP
       ) {
-        // eslint-disable-next-line no-param-reassign
         sectionOccurrence.data.dragonflyStage = 'Adult';
-        // eslint-disable-next-line no-param-reassign
+
         sectionOccurrence.data.stage = undefined;
       }
       if (
         sectionOccurrence.data.taxon.group === DRAGONFLY_GROUP &&
         taxon.group !== DRAGONFLY_GROUP
       ) {
-        // eslint-disable-next-line no-param-reassign
         sectionOccurrence.data.stage = 'Adult';
-        // eslint-disable-next-line no-param-reassign
+
         sectionOccurrence.data.dragonflyStage = undefined;
       }
 
@@ -123,7 +120,6 @@ const Controller = () => {
     }
 
     if (sectionOccurrence && isRecorded && isTaxonSelectedSame) {
-      // eslint-disable-next-line no-param-reassign
       sectionOccurrence.data.count += 1;
       sectionOccurrence.save();
 
@@ -142,22 +138,19 @@ const Controller = () => {
         sectionOccurrence.data.taxon.group !== DRAGONFLY_GROUP &&
         taxon.group === DRAGONFLY_GROUP
       ) {
-        // eslint-disable-next-line no-param-reassign
         sectionOccurrence.data.dragonflyStage = 'Adult';
-        // eslint-disable-next-line no-param-reassign
+
         sectionOccurrence.data.stage = undefined;
       }
       if (
         sectionOccurrence.data.taxon.group === DRAGONFLY_GROUP &&
         taxon.group !== DRAGONFLY_GROUP
       ) {
-        // eslint-disable-next-line no-param-reassign
         sectionOccurrence.data.stage = 'Adult';
-        // eslint-disable-next-line no-param-reassign
+
         sectionOccurrence.data.dragonflyStage = undefined;
       }
 
-      // eslint-disable-next-line no-param-reassign
       sectionOccurrence.data.taxon = taxon;
       sectionOccurrence.save();
 

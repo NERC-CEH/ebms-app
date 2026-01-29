@@ -1,6 +1,3 @@
-/* eslint-disable no-param-reassign */
-
-/* eslint-disable camelcase */
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { Page, Header } from '@flumens';

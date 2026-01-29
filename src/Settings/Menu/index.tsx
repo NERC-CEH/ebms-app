@@ -68,7 +68,7 @@ const exportDatabase = async () => {
 
   await writeBlob({ path, directory, blob });
   const { uri: url } = await Filesystem.getUri({ directory, path });
-  await Share.share({ title: `App database`, files: [url] });
+  await Share.share({ title: 'App database', files: [url] });
   await Filesystem.deleteFile({ directory, path });
 };
 
@@ -95,7 +95,7 @@ const importDatabase = async () => {
 
 const onToggle = (setting: keyof Data, checked: boolean) => {
   console.log('Settings:Menu:Controller: setting toggled.');
-  appModel.data[setting] = checked; // eslint-disable-line no-param-reassign
+  appModel.data[setting] = checked;
   appModel.save();
 
   isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });

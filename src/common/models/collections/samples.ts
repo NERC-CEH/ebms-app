@@ -30,7 +30,7 @@ export async function uploadAllSamples() {
       !isAlreadyUploaded &&
       !isOldSurvey
     ) {
-      const invalids = sample.validateRemote(); // eslint-disable-line
+      const invalids = sample.validateRemote();
       if (!invalids) {
         affectedRecordsCount++;
         sample.saveRemote();
