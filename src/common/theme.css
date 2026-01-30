@@ -3,12 +3,12 @@
 @import '@ionic/core/css/typography.css';
 /* @import '@ionic/core/css/normalize.css'; not adding because messes up tailwind buttons */
 
-@import '@flumens/ionic/dist/themes/rounded.css';
-
 @import 'tailwindcss';
 
 @source "../../node_modules/@flumens/tailwind";
 @source "../../node_modules/@flumens/ionic";
+
+@import '@flumens/ionic/dist/themes/rounded.css';
 
 @theme {
   /* https://www.shadecolr.com/#colors=Y29sb3I6MjY5LjQzMzk2MjI2NDE1MSwyMi43NDY3ODExMTU4Nzk4MjMsNDUuNjg2Mjc0NTA5ODAzOTJ8c3RlcC11cDo5fHN0ZXAtZG93bjoxMnxodWUtc2hpZnQ6MHxiYXNlLXN0b3A6NnxuYW1lOnNsYXRlfGxvY2tlZDow&active=color-1&v=2 */
@@ -95,37 +95,6 @@
   --color-warning-950: var(--color-secondary-950);
 }
 
-/* tailwind is loaded later than ionic so resets some of the ionic's base styles */
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    margin: revert-layer;
-  }
-}
-
-/* change link colours */
-a {
-  color: var(--color-primary);
-  font-weight: 600;
-}
-a[role='button'] {
-  color: unset;
-  font-weight: unset;
-}
-
-h1 {
-  @apply my-5 text-2xl;
-}
-h2 {
-  @apply my-2 text-base;
-}
-h3 {
-  @apply my-1 text-base;
-}
-
 :root {
   --ion-color-primary: var(--color-primary);
   --ion-color-primary-contrast: var(--color-primary-50);
@@ -191,26 +160,6 @@ h3 {
   --ion-font-family: 'Quicksand';
 }
 
-/* status bar */
-html.ios.plt-hybrid #status-bar-background {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  background: #443553;
-  width: 100vw;
-  height: env(safe-area-inset-top);
-}
-
-/* Fixes the tabbed page top safe area */
-html[mode='ios'] .tabs-inner .ion-page {
-  margin-top: var(--ion-safe-area-top);
-}
-
-/* don't know why this is needed but it fixed location name being off */
-.location-name-attr .auto-suggest-input-attr ion-input {
-  height: 30px;
-}
-
 /* FONTS START */
 @font-face {
   font-weight: 300;
@@ -268,14 +217,6 @@ button {
 }
 /* FONTS END */
 
-/* header colours */
-.apps-section .apps-section-h,
-h1,
-h2,
-h3 {
-  color: var(--color-primary-900);
-}
-
 /* training subheader */
 .training-survey {
   background: black;
@@ -291,93 +232,6 @@ h3 {
   @apply border-tertiary-300/40 bg-tertiary-50 text-tertiary-900;
 }
 
-/* ACCESSIBILITY IMPROVEMENTS START */
-ion-button:not(.button-has-icon-only),
-ion-item {
-  font-size: 1em;
-}
-
-ion-button:not(.button-has-icon-only).md,
-ion-item.md {
-  font-size: 0.9em;
-}
-
-/* clearer image picker empty message */
-.photo-picker.ios .empty {
-  font-size: 0.9em !important;
-}
-
-.photo-picker.md .empty {
-  font-size: 1em !important;
-}
-
-/* brighter and bigger divider */
-ion-item-divider {
-  padding: 0 5px 7px 5px;
-  color: var(--ion-text-color);
-  font-size: 0.9em;
-}
-
-/* clearer menu items */
-.menu-attr-item ion-label[slot='end'],
-.attr-wrapper ion-label[slot='end'] {
-  opacity: 1 !important;
-  color: #000000b3;
-}
-
-/* menu date picker match other input value colors */
-.date-input-attr ion-label[slot='end'] {
-  opacity: 1 !important;
-  color: var(--form-value-color);
-  font-size: 1rem;
-}
-
-.date-input-attr ion-label[slot='end'].md {
-  font-size: 0.9rem;
-}
-
-/* larger collapse headers */
-.collapse-block ion-label.ion-text-wrap {
-  font-size: 1rem;
-}
-
-/* clearer alert messages */
-ion-alert div.alert-message.sc-ion-alert-md {
-  color: black;
-  font-size: 1.1em;
-}
-
-/* increase link and menu label visibility */
-.field-label:first-of-type,
-ion-item[detail='true'][href],
-ion-item > ion-icon + ion-label,
-ion-item.item > ion-icon + ion-label.sc-ion-label-md-h {
-  font-weight: 500;
-  font-size: 1rem;
-}
-/* ACCESSIBILITY IMPROVEMENTS END */
-
-/* subtle borders around rounded items */
-.apps-section,
-.search-result:nth-child(odd),
-.survey-list-item,
-.slider-input,
-.input-list-attr .input-list-attr-item,
-.radio-input-attr ion-item,
-#suggestions .empty,
-.taxa-filter-edit-dialog-form ion-item,
-.rounded-list:not(:empty) {
-  border: 1px solid var(--color-neutral-200);
-  border-radius: var(--theme-border-radius);
-}
-
-/* Hide unnecessary clear icon for search input components */
-[type='search']::-webkit-search-cancel-button,
-[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  appearance: none;
-}
-
 /* Display occurrence taxon name as Common and scientific names. */
 .taxon-entry .ion-label[slot='end'] {
   max-width: 50% !important;
@@ -385,72 +239,4 @@ ion-item.item > ion-icon + ion-label.sc-ion-label-md-h {
 }
 .taxon-entry .ion-label {
   white-space: nowrap !important;
-}
-
-/* list item picture */
-.list-avatar {
-  @apply flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-md bg-neutral-100;
-}
-
-/* top of the list title */
-.list-title {
-  @apply mx-1 mt-4 mb-2 flex items-center text-base font-semibold;
-}
-
-/* top of the list item */
-.list-divider {
-  @apply bg-primary-700/10 text-primary-900 flex items-center justify-between p-1 px-2 text-sm;
-}
-
-/* Make Android icons dark, same as iOS */
-ion-icon[slot='start'].md {
-  color: var(--ion-text-color, #000);
-}
-
-/* unify icon strokes and widths */
-ion-icon.size-5,
-ion-icon.size-6,
-.menu-attr-item ion-icon[slot='start'],
-ion-item > ion-icon[slot='start'],
-.single-photo-picker ion-icon[slot='start'] {
-  --ionicon-stroke-width: 24px;
-  width: 24px;
-  height: 24px;
-}
-
-/* Makes iOS menu items same height as Android */
-ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-/* Make menu item value colours same as form values, e.g. Settings page */
-ion-item .sc-ion-label-md-h.sc-ion-label-md-s.md[slot='end'],
-ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios[slot='end'] {
-  color: var(--form-value-color);
-}
-
-/* Unify menu lines with Tailwind package components */
-.date-input-attr ion-accordion:last-of-type ion-item[slot='header'],
-.list-ios-lines-full ion-item.item-lines-default,
-.list-md-lines-full ion-item.item-lines-default {
-  --border-width: 0 0 0.5px 0 !important;
-  --border-color: #e5e5e5 !important;
-}
-
-/* Fix menu date button label alignment for Android */
-ion-accordion ion-icon[slot='start'].md {
-  margin-right: 37px;
-}
-
-/* Fix input list input width */
-.input-list-attr-item input.plain-input {
-  width: 100%;
-}
-
-/* Fix menu item label sizes */
-ion-item.in-list,
-ion-item[router-link] {
-  font-weight: 500;
-  font-size: 1rem;
 }

@@ -10,11 +10,10 @@ import {
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Trans as T } from 'react-i18next';
 import { TypeOf } from 'zod';
-import { Main, Button, InfoMessage } from '@flumens';
+import { Main, Button, InfoMessage, Input } from '@flumens';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { IonIcon, IonItem } from '@ionic/react';
 import { UserModel } from 'models/user';
-import ControlledInput from '../common/Components/ControlledInput';
 
 type Details = TypeOf<typeof UserModel.loginSchema>;
 
@@ -47,14 +46,14 @@ const LoginMain = ({ onSubmit }: Props) => {
           <input type="submit" className="hidden" />
 
           <div className="rounded-list">
-            <ControlledInput
+            <Input.Form
               control={control}
               name="email"
               prefix={<IonIcon icon={mailOutline} className="size-5" />}
               type="email"
               placeholder="Email"
             />
-            <ControlledInput
+            <Input.Form
               control={control}
               name="password"
               prefix={<IonIcon icon={keyOutline} className="size-5" />}

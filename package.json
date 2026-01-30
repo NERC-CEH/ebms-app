@@ -42,7 +42,7 @@
     "@capacitor/splash-screen": "8.0.0",
     "@capacitor/status-bar": "8.0.0",
     "@flumens/bigu": "0.4.1",
-    "@flumens/ionic": "2.0.0-alpha.85",
+    "@flumens/ionic": "2.0.0-alpha.86",
     "@flumens/models": "0.17.2",
     "@flumens/tailwind": "0.38.1",
     "@flumens/utils": "^0.7.0",
@@ -102,7 +102,7 @@
     "@babel/preset-react": "7.28.5",
     "@babel/preset-typescript": "7.28.5",
     "@capacitor/cli": "8.0.2",
-    "@flumens/eslint-config": "3.0.1",
+    "@flumens/eslint-config": "3.0.2",
     "@flumens/fetch-onedrive-excel": "0.3.4",
     "@flumens/prettier-config": "0.4.0",
     "@flumens/webpack-config": "6.0.3",
@@ -130,7 +130,6 @@
     "mock-geolocation": "1.0.11",
     "prettier": "^3.8.1",
     "tailwindcss": "4.1.18",
-    "tslib": "2.8.1",
     "tsx": "^4.21.0",
     "typescript": "5.9.3",
     "vercel": "50.9.1",
@@ -175,9 +174,6 @@
     "ukbms"
   ],
   "babel": {
-    "assumptions": {
-      "setPublicClassFields": true
-    },
     "presets": [
       [
         "@babel/react",
@@ -237,7 +233,7 @@
   "jest": {
     "testEnvironment": "jsdom",
     "transform": {
-      ".+\\.(t|j)sx?$": [
+      "^.+\\.(t|j)sx?$": [
         "babel-jest",
         {
           "presets": [
@@ -248,7 +244,7 @@
     },
     "testRegex": "src.*((\\.|/*.)(spec))\\.(t|j)s?$",
     "moduleNameMapper": {
-      ".+.(css|style|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+.(css|style|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "ionic-native": "jest-transform-stub",
       "swiper": "jest-transform-stub"
     },

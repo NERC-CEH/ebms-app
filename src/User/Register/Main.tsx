@@ -10,12 +10,11 @@ import {
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Trans as T } from 'react-i18next';
 import { TypeOf } from 'zod';
-import { Main, Button } from '@flumens';
+import { Main, Button, Input } from '@flumens';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { IonIcon, IonRouterLink } from '@ionic/react';
 import config from 'common/config';
 import { UserModel } from 'models/user';
-import ControlledInput from '../common/Components/ControlledInput';
 
 type Details = TypeOf<typeof UserModel.registerSchema>;
 
@@ -42,19 +41,19 @@ const RegisterMain = ({ onSubmit, lang }: Props) => {
           <input type="submit" className="hidden" />
 
           <div className="rounded-list">
-            <ControlledInput
+            <Input.Form
               control={control}
               name="firstName"
               prefix={<IonIcon icon={personOutline} className="size-5" />}
               placeholder="First Name"
             />
-            <ControlledInput
+            <Input.Form
               control={control}
               name="lastName"
               prefix={<IonIcon icon={personOutline} className="size-5" />}
               placeholder="Surname"
             />
-            <ControlledInput
+            <Input.Form
               control={control}
               name="email"
               prefix={<IonIcon icon={mailOutline} className="size-5" />}
@@ -62,7 +61,7 @@ const RegisterMain = ({ onSubmit, lang }: Props) => {
               placeholder="Email"
             />
 
-            <ControlledInput
+            <Input.Form
               control={control}
               name="password"
               prefix={<IonIcon icon={keyOutline} className="size-5" />}
