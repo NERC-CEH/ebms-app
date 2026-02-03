@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import { observable } from 'mobx';
+import { IObservableArray, observable } from 'mobx';
+import { Species as ReportSpecies } from 'src/Home/Report/services';
 import { z, object } from 'zod';
 import {
   DrupalUserModel,
@@ -47,9 +48,9 @@ export class UserModel extends DrupalUserModel<Attrs> {
     password: z.string().min(1, 'Please fill in'),
   });
 
-  userSpeciesReport = observable([]) as any;
+  userSpeciesReport: IObservableArray<ReportSpecies> = observable([]);
 
-  userSpeciesLastMonthReport = observable([]) as any;
+  userSpeciesLastMonthReport: IObservableArray<ReportSpecies> = observable([]);
 
   constructor(options: any) {
     super({ ...options, data: { ...defaults, ...options.data } });

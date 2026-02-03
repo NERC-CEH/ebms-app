@@ -71,15 +71,14 @@ type SpeciesProps = {
 
 const Species = ({ species, searchPhrase, onSelect }: SpeciesProps) => {
   const prettyName = prettifyName(species, searchPhrase);
-  const { isRecorded } = species;
-  const speciesGroup = groupLabels[species.group] ?? '';
+  const speciesGroup = groupLabels[species.taxonGroupId] ?? '';
 
   const onSelectSpecies = (e: MouseEvent<HTMLElement>) =>
     onClick(e, species, onSelect);
 
   return (
     <IonItem
-      className={`search-result ${isRecorded ? 'recorded' : ''}`}
+      className={`search-result ${species.isRecorded ? 'recorded' : ''}`}
       onClick={onSelectSpecies}
     >
       <div className="taxon">{prettyName}</div>

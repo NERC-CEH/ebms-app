@@ -19,7 +19,7 @@ const useDeleteSpeciesPrompt = () => {
 
   function showDeleteSpeciesPrompt(taxon: Taxon) {
     const prompt = (resolve: any) => {
-      const taxonName = taxon.scientific_name;
+      const taxonName = taxon.scientificName;
       alert({
         header: t('Delete'),
         skipTranslation: true,
@@ -209,12 +209,12 @@ const EditController = () => {
     }
 
     const getSpeciesId = (occ: Occurrence) =>
-      occ.data.taxon.preferredId || occ.data.taxon.warehouse_id;
+      occ.data.taxon.preferredId || occ.data.taxon.warehouseId;
     const existingSpeciesIds = subSample.occurrences.map(getSpeciesId);
 
     const uniqueSpeciesList: any = [];
-    const getNewSpeciesOnly = ({ warehouse_id, preferredId }: any) => {
-      const speciesID = preferredId || warehouse_id;
+    const getNewSpeciesOnly = ({ warehouseId, preferredId }: Taxon) => {
+      const speciesID = preferredId || warehouseId;
 
       if (uniqueSpeciesList.includes(speciesID)) {
         return false;
@@ -235,15 +235,8 @@ const EditController = () => {
       ...newSpeciesList
     );
 
-    const speciesNameSort = (sp1: any, sp2: any) => {
-      const taxon1 = sp1.found_in_name;
-      const taxonName1 = sp1[taxon1];
-
-      const taxon2 = sp2.found_in_name;
-      const taxonName2 = sp2[taxon2];
-
-      return taxonName1.localeCompare(taxonName2);
-    };
+    const speciesNameSort = (sp1: Taxon, sp2: Taxon) =>
+      sp1[sp1.foundInName!]?.localeCompare(sp2[sp2.foundInName!] || '') || 0;
 
     subSample.shallowSpeciesList.sort(speciesNameSort);
 
@@ -265,7 +258,7 @@ const EditController = () => {
 
     if (!occ) return;
 
-    const taxa = occ.data.taxon.warehouse_id || occ.data.taxon.preferredId;
+    const taxa = occ.data.taxon.warehouseId || occ.data.taxon.preferredId;
 
     navigate(`${url}/${occ.cid}/${taxa}`);
   };

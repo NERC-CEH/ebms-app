@@ -1,4 +1,5 @@
-import { observable } from 'mobx';
+import { IObservableArray, observable } from 'mobx';
+import { Species as ReportSpecies } from 'src/Home/Report/services';
 import { Model, ModelAttrs } from '@flumens';
 import { CountryCode } from 'common/config/countries';
 import { LanguageCode } from 'common/config/languages';
@@ -88,7 +89,7 @@ export class AppModel extends Model<Data> {
 
   removeLocation: any; // from extension
 
-  speciesReport = observable([]);
+  speciesReport: IObservableArray<ReportSpecies> = observable([]);
 
   constructor(options: any) {
     super({ ...options, data: { ...defaults, ...options.data } });

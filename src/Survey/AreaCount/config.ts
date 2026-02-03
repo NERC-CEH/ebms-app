@@ -1,6 +1,5 @@
 import { when } from 'mobx';
 import { device, getGeomWKT, isValidLocation } from '@flumens';
-import { isPlatform } from '@ionic/react';
 import config from 'common/config';
 import appModel from 'common/models/app';
 import { assignIfMissing } from 'common/models/utils';
@@ -9,8 +8,6 @@ import { DRAGONFLY_GROUP } from 'models/occurrence';
 import AppSample, { AreaCountLocation } from 'models/sample';
 import {
   Survey,
-  deviceAttr,
-  deviceVersionAttr,
   appVersionAttr,
   windSpeedAttr,
   temperatureAttr,
@@ -54,9 +51,9 @@ const survey: Survey = {
   webForm: 'mydata/samples/edit',
 
   attrs: {
-    device: deviceAttr,
-    device_version: deviceVersionAttr,
-    app_version: appVersionAttr,
+    appVersion: appVersionAttr,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    app_version: appVersionAttr, // for backwards compatibility, TODO: remove later once all old samples uploaded
     date: dateAttr,
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
@@ -136,7 +133,7 @@ const survey: Survey = {
     create({ Sample, Occurrence, taxon, surveyId, surveyName }) {
       const sample = new Sample({
         metadata: {
-          survey_id: surveyId || survey.id,
+          surveyId: surveyId || survey.id,
           survey: surveyName || survey.name,
         },
         data: {
@@ -187,7 +184,7 @@ const survey: Survey = {
       },
 
       create({ Occurrence, taxon }) {
-        const isDragonfly = taxon.group === DRAGONFLY_GROUP;
+        const isDragonfly = taxon.taxonGroupId === DRAGONFLY_GROUP;
 
         return new Occurrence({
           data: {
@@ -208,7 +205,7 @@ const survey: Survey = {
   create({ Sample, surveyId, surveyName, hasGPSPermission }) {
     const sample = new Sample({
       metadata: {
-        survey_id: surveyId || survey.id,
+        surveyId: surveyId || survey.id,
         survey: surveyName || survey.name,
         pausedTime: 0,
       },
@@ -218,9 +215,8 @@ const survey: Survey = {
         enteredSrefSystem: 4326,
         training: appModel.data.useTraining,
         group: appModel.data.defaultGroup,
-        input_form: survey.webForm,
-        device: isPlatform('android') ? 'android' : 'ios',
-        app_version: config.version,
+        inputForm: survey.webForm,
+        appVersion: config.version,
         speciesGroups: appModel.data.speciesGroups,
         surveyStartTime: null,
         location: {},

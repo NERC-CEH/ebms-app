@@ -157,6 +157,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     const token = await userModel.getAccessToken();
 
+    /* eslint-disable @typescript-eslint/naming-convention */
     const options = {
       params: {
         website_id: 118,
@@ -169,6 +170,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       },
       timeout: 80000,
     };
+    /* eslint-enable @typescript-eslint/naming-convention */
 
     try {
       const res = await axios.get(url, options);
@@ -211,6 +213,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     const token = await userModel.getAccessToken();
 
+    /* eslint-disable @typescript-eslint/naming-convention */
     const options = {
       params: {
         location_type_id: locationTypeId,
@@ -222,6 +225,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       },
       timeout: 80000,
     };
+    /* eslint-enable @typescript-eslint/naming-convention */
 
     try {
       const res = await axios.get(url, options);
@@ -259,6 +263,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     const token = await userModel.getAccessToken();
 
+    /* eslint-disable @typescript-eslint/naming-convention */
     const options = {
       params: {
         location_type_id: '',
@@ -272,6 +277,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       },
       timeout: 80000,
     };
+    /* eslint-enable @typescript-eslint/naming-convention */
 
     try {
       const res = await axios.get(url, options);

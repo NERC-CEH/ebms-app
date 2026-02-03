@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Location } from '@flumens';
 import config from 'common/config';
 
+/* eslint-disable @typescript-eslint/naming-convention */
 type WeatherRemoteRes = {
   coord: { lon: number; lat: number };
   weather: { id: number; main: string; description: string; icon: string }[];
@@ -30,6 +31,7 @@ type WeatherRemoteRes = {
   name: string;
   cod: number;
 };
+/* eslint-enable @typescript-eslint/naming-convention */
 
 type Weather = {
   cloud: number | null;
@@ -38,6 +40,7 @@ type Weather = {
   windSpeed: string | null;
 };
 
+/* eslint-disable @typescript-eslint/naming-convention */
 type HistoricalWeatherData = {
   dt: number;
   sunrise: number;
@@ -71,6 +74,7 @@ export type HistoricalWeatherRemoteRes = {
   timezone_offset: number;
   data: HistoricalWeatherData[];
 };
+/* eslint-enable @typescript-eslint/naming-convention */
 
 const url = config.weatherSiteUrl;
 

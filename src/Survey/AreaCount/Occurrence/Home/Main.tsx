@@ -26,7 +26,6 @@ type Props = {
 const EditOccurrence = ({ subSample, occurrence, isDisabled }: Props) => {
   const match = useRouteMatch();
 
-  const species = occurrence.getTaxonCommonAndScientificNames();
   const { dragonflyStage, stage, comment } = occurrence.data;
 
   const isDragonfly = occurrence.isDragonflyTaxon();
@@ -62,9 +61,8 @@ const EditOccurrence = ({ subSample, occurrence, isDisabled }: Props) => {
               disabled={isDisabled}
               icon={occurrence.getSpeciesGroupIcon()}
               label="Species"
-              value={<TaxonPrettyName name={species} />}
+              value={<TaxonPrettyName taxon={occurrence.data.taxon} />}
               skipValueTranslation
-              className="taxon-entry"
             />
           )}
           <MenuAttrItem

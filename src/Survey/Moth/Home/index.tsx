@@ -32,7 +32,7 @@ const useDeleteSpeciesPrompt = () => {
 
   function showDeleteSpeciesPrompt(taxon: any) {
     const prompt = (resolve: any) => {
-      const taxonName = taxon.scientific_name;
+      const taxonName = taxon.scientificName;
       alert({
         header: t('Delete'),
         skipTranslation: true,
@@ -215,13 +215,13 @@ const HomeController = () => {
     const { comment, identifier } = occ.data;
 
     const speciesIsKnown =
-      occ.data.taxon?.warehouse_id !== UNKNOWN_SPECIES.preferredId;
+      occ.data.taxon?.warehouseId !== UNKNOWN_SPECIES.preferredId;
     if (!speciesIsKnown) return;
 
     const selectedTaxon = (selectedOccurrence: Occurrence) =>
       (selectedOccurrence.data.taxon?.preferredId ||
-        selectedOccurrence.data.taxon?.warehouse_id) ===
-        (occ?.data.taxon?.preferredId || occ?.data.taxon?.warehouse_id) &&
+        selectedOccurrence.data.taxon?.warehouseId) ===
+        (occ?.data.taxon?.preferredId || occ?.data.taxon?.warehouseId) &&
       selectedOccurrence !== occ &&
       selectedOccurrence.data.comment === comment &&
       selectedOccurrence.data.identifier === identifier;
@@ -343,12 +343,12 @@ const HomeController = () => {
     }
 
     const getSpeciesId = (occ: Occurrence) =>
-      occ.data.taxon.preferredId || occ.data.taxon.warehouse_id;
+      occ.data.taxon.preferredId || occ.data.taxon.warehouseId;
     const existingSpeciesIds = sample.occurrences.map(getSpeciesId);
 
     const uniqueSpeciesList: any = [];
-    const getNewSpeciesOnly = ({ warehouse_id, preferredId }: any) => {
-      const speciesID = preferredId || warehouse_id;
+    const getNewSpeciesOnly = ({ warehouseId, preferredId }: Taxon) => {
+      const speciesID = preferredId || warehouseId;
 
       if (uniqueSpeciesList.includes(speciesID)) {
         return false;
@@ -370,10 +370,10 @@ const HomeController = () => {
     );
 
     const speciesNameSort = (sp1: any, sp2: any) => {
-      const taxon1 = sp1.found_in_name;
+      const taxon1 = sp1.foundInName;
       const taxonName1 = sp1[taxon1];
 
-      const taxon2 = sp2.found_in_name;
+      const taxon2 = sp2.foundInName;
       const taxonName2 = sp2[taxon2];
 
       return taxonName1.localeCompare(taxonName2);

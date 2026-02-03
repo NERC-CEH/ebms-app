@@ -48,12 +48,12 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     };
     const byNotEmptyContent = (sp: SpeciesType) => {
       const hasDescription = translateSpeciesDescription(sp.descriptionKey);
-      const hasImage = sp?.image_copyright?.length;
+      const hasImage = sp?.imageCopyright?.length;
 
       return hasImage && hasDescription;
     };
     const bySpeciesId = (sp1: SpeciesType, sp2: SpeciesType) =>
-      sp1.sort_id! - sp2.sort_id!;
+      sp1.sortId! - sp2.sortId!;
 
     let filteredSpecies = speciesProfiles.filter(existInCountry);
     const totalSpeciesCountryCount = filteredSpecies.length;

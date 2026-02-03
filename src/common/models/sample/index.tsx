@@ -113,10 +113,6 @@ type Metadata = SampleMetadata & {
    */
   survey: keyof typeof surveyConfigs;
   /**
-   * Survey id.
-   */
-  survey_id: number;
-  /**
    * If the sample was saved and ready for upload.
    */
   saved?: boolean;
@@ -265,13 +261,10 @@ export default class Sample extends SampleModel<Data, Metadata> {
   isSurveyPreciseSingleSpecies = () =>
     this.metadata.survey === 'precise-single-species-area';
 
-  hasZeroAbundance = () => {
-    if (this.parent) {
-      return this.parent.samples[0].occurrences[0].data.zero_abundance;
-    }
-
-    return this.samples[0].occurrences[0].data.zero_abundance;
-  };
+  hasZeroAbundance = () =>
+    this.parent
+      ? this.parent.samples[0].occurrences[0].data.zeroAbundance
+      : this.samples[0].occurrences[0].data.zeroAbundance;
 
   /**
    * Area count methods.
@@ -282,9 +275,7 @@ export default class Sample extends SampleModel<Data, Metadata> {
     const startTime = new Date(this.data.surveyStartTime!);
 
     return (
-      startTime.getTime() +
-      config.DEFAULT_SURVEY_TIME +
-      this.metadata.pausedTime!
+      startTime.getTime() + config.defaultSurveyTime + this.metadata.pausedTime!
     );
   };
 
@@ -309,8 +300,8 @@ export default class Sample extends SampleModel<Data, Metadata> {
 
     const checkIfNewSpeciesGroupsAreAdded = (smp: Sample) => {
       const byTaxonGroup = (group: SpeciesGroup) =>
-        group.id === smp.occurrences[0].data.taxon.group ||
-        group.listId === smp.occurrences[0].data.taxon.group; // backward compatibility, some old samples use listId
+        group.id === smp.occurrences[0].data.taxon.taxonGroupId ||
+        group.listId === smp.occurrences[0].data.taxon.taxonGroupId; // backward compatibility, some old samples use listId
       const speciesGroups = Object.values(groups).find(byTaxonGroup);
       if (!speciesGroups) return;
 

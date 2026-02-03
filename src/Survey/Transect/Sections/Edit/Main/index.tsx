@@ -46,7 +46,7 @@ const getDefaultTaxonCount = (taxon: any, createdAt?: any) => ({
 
 const buildSpeciesCount = (agg: any, occ: Occurrence) => {
   const taxon = toJS(occ.data.taxon);
-  const id = taxon.preferredId || taxon.warehouse_id;
+  const id = taxon.preferredId || taxon.warehouseId;
 
   agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.createdAt); // eslint-disable-line
 
@@ -88,7 +88,7 @@ const Edit = ({
     const isSpeciesDisabled = !species.count;
     const { taxon } = species;
 
-    const speciesName = taxon[taxon.found_in_name];
+    const speciesName = taxon[taxon.foundInName];
 
     const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
     const isShallow = !sectionSample.occurrences.filter(matchingTaxon).length;
@@ -138,7 +138,7 @@ const Edit = ({
 
     const getShallowEntry = (shallowEntry: Taxon) => {
       const shallowEntryId =
-        shallowEntry.preferredId || shallowEntry.warehouse_id;
+        shallowEntry.preferredId || shallowEntry.warehouseId;
 
       if (speciesCounts[shallowEntryId]) {
         speciesCounts[shallowEntryId].createdAt = 0;

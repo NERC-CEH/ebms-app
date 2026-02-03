@@ -30,7 +30,7 @@ async function searchCommonNames(
   const query: any = new QueryBuilder()
     .select({
       ...getTableColumns(table),
-      scientific_name: sql`${preferred.taxon} as scientific_name`,
+      scientificName: sql`${preferred.taxon} as scientificName`,
     })
     .from(table)
     .leftJoin(preferred, eq(preferred.id, table.preferred_taxa_taxon_list_id))
@@ -47,15 +47,38 @@ async function searchCommonNames(
   const species: any = await store.db.query(query.toSQL());
 
   return species.map(
-    (sp: SpeciesColumns & { scientific_name: string }): SearchResult => ({
-      found_in_name: 'common_name',
-      warehouse_id: sp.id,
-      common_name: sp.taxon,
-      scientific_name: sp.scientific_name,
-      group: sp.taxon_group_id,
+    (sp: SpeciesColumns & { scientificName: string }): SearchResult => ({
+      foundInName: 'commonName',
+      warehouseId: sp.id,
+      commonName: sp.taxon,
+      scientificName: sp.scientificName,
+      taxonGroupId: sp.taxon_group_id,
       preferredId: sp.preferred_taxa_taxon_list_id!,
     })
   );
+}
+
+export async function getCommonNameById(
+  store: { table: any; db: any },
+  taxaTaxonListId: string | number,
+  language = 'eng'
+) {
+  const query: any = new QueryBuilder()
+    .select({ taxon: store.table.taxon })
+    .from(store.table)
+    .where(
+      and(
+        eq(
+          store.table.preferred_taxa_taxon_list_id,
+          parseInt(`${taxaTaxonListId}`, 10)
+        ),
+        eq(store.table.language_iso, language)
+      )
+    )
+    .limit(1);
+
+  const [taxon] = await store.db.query(query.toSQL());
+  return taxon?.taxon || null;
 }
 
 export default searchCommonNames;

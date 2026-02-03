@@ -153,7 +153,7 @@ export const calculateArea = (shape: Shape): number => {
     area = geojsonArea.geometry(shape);
   } else {
     area =
-      config.DEFAULT_TRANSECT_BUFFER *
+      config.defaultTransectBuffer *
       calculateLineLenght(shape.coordinates as LineString);
   }
 

@@ -18,7 +18,6 @@ type Props = {
 const EditOccurrence = ({ occurrence }: Props) => {
   const { useImageIdentifier } = appModel.data;
   const match = useRouteMatch();
-  const species = occurrence.getTaxonCommonAndScientificNames();
   const { isDisabled } = occurrence;
   const baseURL = match.url;
 
@@ -34,9 +33,8 @@ const EditOccurrence = ({ occurrence }: Props) => {
             disabled={isDisabled}
             icon={mothIcon}
             label="Species"
-            value={<TaxonPrettyName name={species} />}
+            value={<TaxonPrettyName taxon={occurrence.data.taxon} />}
             skipValueTranslation
-            className="taxon-entry"
           />
           <Attr
             model={occurrence}

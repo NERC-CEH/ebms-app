@@ -21,14 +21,14 @@ export type AbundanceCode = keyof typeof abundances;
 
 export type Species = {
   id?: number;
-  sort_id?: number;
-  warehouse_id: number;
-  external_key: string;
+  sortId?: number;
+  warehouseId: number;
+  externalKey: string;
   taxon: string;
   commonName?: string;
   family?: string;
   descriptionKey?: string;
-  image_copyright?: string[] | null;
+  imageCopyright?: string[] | null;
   abundance: Partial<
     Record<Exclude<CountryCode, 'UK' | 'ELSEWHERE'>, AbundanceCode>
   >;
@@ -45,7 +45,7 @@ speciesLists.ready.then(async () => {
 
       const ids = species
         .filter(sp => !!sp.descriptionKey) // optimise by only looking for species with descriptionKey
-        .map(sp => sp.warehouse_id);
+        .map(sp => sp.warehouseId);
 
       const synonym: any = alias(speciesStore.table, 'synonym');
 
@@ -75,7 +75,7 @@ speciesLists.ready.then(async () => {
 
       // assign common names to species
       speciesWithCommonNames.forEach(sp =>
-        Object.assign(sp, { commonName: commonNameMap[sp.warehouse_id] })
+        Object.assign(sp, { commonName: commonNameMap[sp.warehouseId] })
       );
     } catch (error) {
       console.error('Error fetching common names for species:', error);

@@ -4,7 +4,11 @@ import { Page, device, useToast } from '@flumens';
 import { AppModel } from 'models/app';
 import { UserModel } from 'models/user';
 import Main from './Main';
-import { fetchSpeciesReport, fetchUserSpeciesReport } from './services';
+import {
+  fetchSpeciesReport,
+  fetchUserSpeciesReport,
+  Species,
+} from './services';
 import './styles.scss';
 
 type Props = {
@@ -13,9 +17,11 @@ type Props = {
 };
 
 const Report = ({ appModel, userModel }: Props) => {
-  const [species, setSpecies] = useState<any>([]);
-  const [userSpecies, setUserSpecies] = useState<any>([]);
-  const [userSpeciesLastMonth, setUserSpeciesLastMonth] = useState<any>([]);
+  const [species, setSpecies] = useState<Species[]>([]);
+  const [userSpecies, setUserSpecies] = useState<Species[]>([]);
+  const [userSpeciesLastMonth, setUserSpeciesLastMonth] = useState<Species[]>(
+    []
+  );
   const [refreshing, setRefreshing] = useState(false);
   const toast = useToast();
 
@@ -33,7 +39,8 @@ const Report = ({ appModel, userModel }: Props) => {
 
     let promise = fetchSpeciesReport().then(data => {
       // eslint-disable-next-line no-param-reassign
-      appModel.speciesReport = [...data] as any;
+      appModel.speciesReport.clear();
+      appModel.speciesReport.push(...data);
       setSpecies([...appModel.speciesReport]);
     });
 

@@ -1,17 +1,25 @@
-const TaxonPrettyName = ({ name }: { name: string | string[] }) => {
-  if (!Array.isArray(name)) {
+import { Taxon } from 'common/models/occurrence';
+
+type Props = {
+  taxon: Taxon;
+};
+
+const TaxonPrettyName = ({ taxon }: Props) => {
+  if (!taxon.commonName) {
     return (
-      <div className="overflow-hidden text-ellipsis pr-1 italic">{name}</div>
+      <div className="overflow-hidden text-ellipsis pr-1 italic">
+        {taxon.scientificName}
+      </div>
     );
   }
 
-  const [commonName, scientificName] = name;
-
   return (
-    <div className="flex flex-col gap-1">
-      <div className="overflow-hidden text-ellipsis">{commonName}</div>
+    <div className="flex flex-col">
+      <div className="overflow-hidden text-ellipsis font-semibold">
+        {taxon.commonName}
+      </div>
       <div className="overflow-hidden text-ellipsis pr-1 italic">
-        {scientificName}
+        {taxon.scientificName}
       </div>
     </div>
   );

@@ -31,8 +31,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
   const status = abundances[abundanceCode];
 
   const getSlides = () => {
-    const { image_copyright: imageCopyright } = species;
-    if (!imageCopyright) return null;
+    if (!species.imageCopyright) return null;
 
     const slideOpts = {
       initialSlide: 0,
@@ -55,7 +54,7 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
       );
     };
 
-    const slideImage = imageCopyright.map(getSlide);
+    const slideImage = species.imageCopyright.map(getSlide);
 
     return (
       <Swiper modules={[Pagination]} pagination {...slideOpts}>

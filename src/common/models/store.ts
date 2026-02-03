@@ -14,6 +14,7 @@ export const groupsStore = new Store({ name: 'groups', db });
 
 export const speciesListsStore: any = new Store({ name: 'speciesLists', db });
 
+/* eslint-disable @typescript-eslint/naming-convention */
 export const speciesColumns: any = {
   /**
    * Warehouse taxa_taxon_list_id of the species. Not a unique ID on its own as multiple lists can contain the same taxon.
@@ -54,6 +55,7 @@ export const speciesColumns: any = {
    */
   data: jsonb<any>('data').notNull().default({}),
 } as const;
+/* eslint-enable @typescript-eslint/naming-convention */
 
 export const speciesStore: any = new Store<typeof speciesColumns>({
   name: 'species',

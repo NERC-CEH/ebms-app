@@ -9,12 +9,12 @@ import './styles.scss';
 
 const { P, H } = Section;
 
-const speciesWithImageCopyright = (s: Species) => s.image_copyright;
+const speciesWithImageCopyright = (s: Species) => s.imageCopyright;
 const getTaxonWithImageCopyright = (s: Species) => (
   <IonItem key={s.id} lines="none">
     <IonLabel>
       <i>{`${s.taxon}: `}</i>
-      <span dangerouslySetInnerHTML={{ __html: s.image_copyright as any }} />
+      <span dangerouslySetInnerHTML={{ __html: s.imageCopyright as any }} />
     </IonLabel>
   </IonItem>
 );

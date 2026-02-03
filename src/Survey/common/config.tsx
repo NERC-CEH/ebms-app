@@ -18,22 +18,6 @@ import Occurrence, { Taxon } from 'common/models/occurrence';
 import Media from 'models/media';
 import Sample from 'models/sample';
 
-export const deviceAttr = {
-  remote: {
-    id: 922,
-    values: {
-      iOS: 2398, // TODO: remove once all old samples uploaded
-      ios: 2398,
-      Android: 2399, // TODO: remove once all old samples uploaded
-      android: 2399,
-    },
-  },
-};
-
-export const deviceVersionAttr = {
-  remote: { id: 759 } /* TODO: remove once all old samples uploaded */,
-};
-
 export const appVersionAttr = { remote: { id: 1139 } };
 
 export const temperatureValues = [
@@ -175,7 +159,7 @@ export const commentAttr = {
 export const taxonAttr = {
   remote: {
     id: 'taxa_taxon_list_id',
-    values: (taxon: Taxon) => taxon.warehouse_id,
+    values: (taxon: Taxon) => taxon.warehouseId,
   },
 };
 

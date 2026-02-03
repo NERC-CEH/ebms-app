@@ -11,6 +11,8 @@ import bumblebeeIcon from 'common/images/bumblebee.svg';
 import butterflyIcon from 'common/images/butterfly.svg';
 import dragonflyIcon from 'common/images/dragonfly.svg';
 import mothIcon from 'common/images/moth.svg';
+import { Suggestion } from 'common/services/waarneming';
+import { PaintedLadyAttrs } from 'Survey/AreaCount/configSpecies';
 import { MachineInvolvement } from 'Survey/Moth/config';
 import { Survey } from 'Survey/common/config';
 import Media from './media';
@@ -18,14 +20,7 @@ import Sample from './sample';
 
 export const DRAGONFLY_GROUP = speciesGroups.dragonflies.id;
 
-const speciesGroupImages = {
-  251: butterflyIcon,
-  260: mothIcon,
-  265: dragonflyIcon,
-  261: bumblebeeIcon,
-};
-
-export const speciesListGroupImages = {
+export const speciesGroupIcons = {
   104: butterflyIcon,
   114: mothIcon,
   107: dragonflyIcon,
@@ -34,58 +29,50 @@ export const speciesListGroupImages = {
 
 const PAINTED_LADY_OCCURRENCE = 432422;
 
-export type Taxon = {
+type ClassifierAttributes = {
+  probability?: number;
   version?: string;
+  suggestions?: Suggestion[];
   machineInvolvement?: MachineInvolvement;
-  suggestions?: any;
-  preferredId?: any;
-  array_id?: number;
-  found_in_name?: string;
-  group?: number;
-  scientific_name?: string;
-  species_id?: number;
-  warehouse_id: number;
 };
+
+export type Taxon = {
+  warehouseId: number;
+  scientificName: string;
+  preferredId?: any;
+  foundInName?: 'commonName' | 'scientificName';
+  taxonGroupId?: number;
+  commonName?: string;
+  id?: number;
+} & ClassifierAttributes;
 
 export type Metadata = OccurrenceMetadata & {
   // moth survey
   mergedOccurrences?: string[];
 };
 
-export type Attrs = OccurrenceAttrs & {
-  taxon: any;
+export type Attrs = Omit<OccurrenceAttrs, 'taxon'> & {
+  taxon: Taxon;
   comment?: string;
   stage?: string;
   dragonflyStage?: string;
-  zero_abundance?: any;
   identifier?: any;
   count?: any;
   'count-outside'?: any;
-  machineInvolvement?: MachineInvolvement;
-
-  // PaintedLady survey
-  wing?: any;
-  behaviour?: any;
-  direction?: any;
-  eggLaying?: any;
-  otherEggLaying?: any;
-  otherThistles?: any;
-  nectarSource?: any;
-  mating?: any;
-};
+} & PaintedLadyAttrs;
 
 export const doesShallowTaxonMatch = (shallowEntry: Taxon, taxon: Taxon) => {
-  if (shallowEntry.warehouse_id === taxon.warehouse_id) return true;
-  if (shallowEntry.warehouse_id === taxon.preferredId) return true;
+  if (shallowEntry.warehouseId === taxon.warehouseId) return true;
+  if (shallowEntry.warehouseId === taxon.preferredId) return true;
 
   if (shallowEntry.preferredId) {
     if (shallowEntry.preferredId === taxon.preferredId) return true;
-    if (shallowEntry.preferredId === taxon.warehouse_id) return true;
+    if (shallowEntry.preferredId === taxon.warehouseId) return true;
   }
 
   if (taxon.preferredId) {
     if (shallowEntry.preferredId === taxon.preferredId) return true;
-    if (shallowEntry.warehouse_id === taxon.preferredId) return true;
+    if (shallowEntry.warehouseId === taxon.preferredId) return true;
   }
 
   return false;
@@ -102,29 +89,41 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
 
   constructor(options: any) {
     super({ ...options, Media });
+
+    // backwards compatibility for old taxon structure. TODO: remove later once all uploaded.
+    const oldTaxon = this.data.taxon as any;
+    if (oldTaxon.warehouse_id) {
+      Object.assign(this.data.taxon, {
+        warehouseId: oldTaxon.warehouse_id,
+        scientificName: oldTaxon.scientific_name,
+        commonName: oldTaxon.common_name,
+        foundInName: oldTaxon.found_in_name,
+        taxonGroupId: oldTaxon.group,
+        warehouse_id: null, // eslint-disable-line @typescript-eslint/naming-convention
+      });
+    }
+
+    // backwards compatibility for old attrs. TODO: remove later once all uploaded.
+    if ((this.data as any).zero_abundance) {
+      Object.assign(this.data, {
+        zeroAbundance: (this.data as any).zero_abundance,
+        zero_abundance: null, // eslint-disable-line @typescript-eslint/naming-convention
+      });
+    }
   }
 
   getTaxonName() {
     const { taxon } = this.data;
     if (!taxon) return null;
 
-    if (!taxon.found_in_name) return taxon.scientific_name;
+    if (!taxon.foundInName) return taxon.scientificName;
 
-    return taxon[taxon.found_in_name];
-  }
-
-  getTaxonCommonAndScientificNames() {
-    const { taxon } = this.data;
-    if (!taxon) return null;
-
-    if (!taxon.common_name) return taxon.scientific_name;
-
-    return [taxon[taxon.found_in_name], taxon.scientific_name];
+    return taxon[taxon.foundInName];
   }
 
   isDragonflyTaxon = () =>
-    this.data.taxon.group === DRAGONFLY_GROUP ||
-    this.data.taxon.group === speciesGroups.dragonflies.listId; // backwards compatibility, remove later
+    this.data.taxon.taxonGroupId === DRAGONFLY_GROUP ||
+    this.data.taxon.taxonGroupId === speciesGroups.dragonflies.listId; // backwards compatibility, remove later
 
   async identify() {
     const identifyAllImages = (media: Media) => media.identify();
@@ -133,19 +132,18 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
     const allSuggestions = await Promise.all(this.media.map(identifyAllImages));
 
     // [sp1, sp2, sp3 ]
-    const hasValue = (val: any) => !!val;
-    const suggestions = allSuggestions.filter(hasValue);
+    const suggestions = allSuggestions.filter(val => !!val);
 
-    const highestProbSpecies: any = this.getTopSuggestion(suggestions);
+    const highestProbSpecies = this.getTopSuggestion(suggestions);
     if (!highestProbSpecies) return this.data.taxon;
 
     this.data.taxon = {
-      found_in_name: highestProbSpecies.found_in_name,
-      common_name: highestProbSpecies.common_name,
-      group: highestProbSpecies.group,
+      foundInName: highestProbSpecies.foundInName,
+      commonName: highestProbSpecies.commonName,
+      taxonGroupId: highestProbSpecies.group,
       probability: highestProbSpecies.probability,
-      scientific_name: highestProbSpecies.scientific_name,
-      warehouse_id: highestProbSpecies.warehouse_id,
+      scientificName: highestProbSpecies.scientificName,
+      warehouseId: highestProbSpecies.warehouseId,
 
       machineInvolvement: MachineInvolvement.MACHINE,
       version: '1',
@@ -161,8 +159,8 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
     // scientific name does not have preferredId
     return (
       this?.data?.taxon?.preferredId === PAINTED_LADY_OCCURRENCE ||
-      this?.data?.taxon?.warehouse_id === PAINTED_LADY_OCCURRENCE ||
-      this?.data?.taxon?.scientific_name === 'Vanessa cardui' // for remote cached
+      this?.data?.taxon?.warehouseId === PAINTED_LADY_OCCURRENCE ||
+      this?.data?.taxon?.scientificName === 'Vanessa cardui' // for remote cached
     );
   }
 
@@ -170,38 +168,38 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
     const { taxon } = this.data;
     if (!taxon) return '';
 
-    if (taxon?.common_name) return taxon.common_name;
+    if (taxon?.commonName) return taxon.commonName;
 
-    return taxon.scientific_name;
+    return taxon.scientificName;
   }
 
   getSpeciesGroupIcon = () =>
-    (speciesGroupImages as any)[this.data.taxon.group];
+    (speciesGroupIcons as any)[this.data.taxon.taxonGroupId!];
 
   doesTaxonMatch = (taxon: Taxon) => {
-    if (this.data.taxon.warehouse_id === taxon.warehouse_id) return true;
-    if (this.data.taxon.warehouse_id === taxon.preferredId) return true;
+    if (this.data.taxon.warehouseId === taxon.warehouseId) return true;
+    if (this.data.taxon.warehouseId === taxon.preferredId) return true;
 
     if (this.data.taxon.preferredId) {
       if (this.data.taxon.preferredId === taxon.preferredId) return true;
-      if (this.data.taxon.preferredId === taxon.warehouse_id) return true;
+      if (this.data.taxon.preferredId === taxon.warehouseId) return true;
     }
 
     if (taxon.preferredId) {
       if (this.data.taxon.preferredId === taxon.preferredId) return true;
-      if (this.data.taxon.warehouse_id === taxon.preferredId) return true;
+      if (this.data.taxon.warehouseId === taxon.preferredId) return true;
     }
 
     return false;
   };
 
-  getTopSuggestion(suggestions?: any) {
+  getTopSuggestion(suggestions?: Suggestion[]) {
     // eslint-disable-next-line no-param-reassign
     suggestions = suggestions || this.data.taxon?.suggestions;
 
-    let highestProbSpecies: any;
+    let highestProbSpecies: Suggestion | undefined;
 
-    const findHighestProbSpecies = (sp: any) => {
+    const findHighestProbSpecies = (sp: Suggestion) => {
       if (!highestProbSpecies) {
         highestProbSpecies = sp;
         return;
@@ -224,22 +222,24 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
     const mediaPaths = this.media.map(getMediaPath);
 
     const getSuggestion = (
-      { probability, taxon: taxon_name_given, warehouse_id }: any,
+      { probability, taxon: taxon_name_given, warehouseId }: Suggestion,
       index: number
     ) => {
       const topSpecies = index === 0;
       const classifierChosen = topSpecies ? 't' : 'f';
-      const humanChosen = warehouse_id === taxon?.warehouse_id ? 't' : 'f';
+      const humanChosen = warehouseId === taxon?.warehouseId ? 't' : 'f';
 
+      /* eslint-disable @typescript-eslint/naming-convention */
       return {
         values: {
           taxon_name_given,
           probability_given: probability,
-          taxa_taxon_list_id: warehouse_id,
+          taxa_taxon_list_id: warehouseId,
           classifier_chosen: classifierChosen,
           human_chosen: humanChosen,
         },
       };
+      /* eslint-enable @typescript-eslint/naming-convention */
     };
 
     const classifierSuggestions =
@@ -262,6 +262,7 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
     return {
       values,
 
+      /* eslint-disable @typescript-eslint/naming-convention */
       classification_event: {
         values: { created_by_id: null },
         classification_results: [
@@ -275,6 +276,7 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
           },
         ],
       },
+      /* eslint-enable @typescript-eslint/naming-convention */
     };
   }
 }

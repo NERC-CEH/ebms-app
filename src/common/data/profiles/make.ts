@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import fs from 'fs';
 // eslint-disable-next-line
 import fetchSheet from '@flumens/fetch-onedrive-excel';
+import { getCamelCaseObj } from '@flumens/utils';
 
 dotenv.config({ path: '../../../../.env' });
 
@@ -112,9 +113,9 @@ async function attachProfileInfo(warehouseSpecies: any, speciesInfoList: any) {
     const speciesInfo = speciesInfoList.find(byTaxon);
 
     return {
-      ...speciesInfo,
-      warehouse_id: parseInt(sp.taxa_taxon_list_id, 10),
-      external_key: sp.external_key,
+      ...getCamelCaseObj(speciesInfo),
+      warehouseId: parseInt(sp.taxa_taxon_list_id, 10),
+      externalKey: sp.external_key,
       taxon: sp.taxon,
       abundance: sp.abundance,
     };
@@ -122,7 +123,7 @@ async function attachProfileInfo(warehouseSpecies: any, speciesInfoList: any) {
 
   const hasValue = (sp: any) => !!sp;
   const byId = (s1: any, s2: any) =>
-    s1.id - s2.id || s1.warehouse_id - s2.warehouse_id;
+    s1.id - s2.id || s1.warehouseId - s2.warehouseId;
 
   return warehouseSpecies.map(getSpeciesWithInfo).filter(hasValue).sort(byId);
 }

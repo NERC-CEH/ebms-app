@@ -1,12 +1,11 @@
 import { chatboxOutline } from 'ionicons/icons';
 import { z } from 'zod';
+import config from 'common/config';
 import appModel from 'models/app';
 import { DRAGONFLY_GROUP } from 'models/occurrence';
 import userModel from 'models/user';
 import {
   Survey,
-  deviceAttr,
-  deviceVersionAttr,
   appVersionAttr,
   windSpeedAttr,
   temperatureAttr,
@@ -31,27 +30,20 @@ const locationAttr = {
   remote: {
     id: 'location_id',
     values(location: any, submission: any) {
-      // eslint-disable-next-line
+      /* eslint-disable @typescript-eslint/naming-convention, no-param-reassign */
       submission.values = {
         ...submission.values,
-        ...{
-          entered_sref_system:
-            location.centroidSrefSystem ||
-            // Backwards compatible
-            location.sref_system,
-          entered_sref:
-            location.centroidSref ||
-            // Backwards compatible
-            location.centroid_sref,
-        },
+        entered_sref: location.centroidSref,
+        entered_sref_system: location.centroidSrefSystem,
       };
+      /* eslint-enable @typescript-eslint/naming-convention, no-param-reassign  */
 
       return location.id;
     },
   },
 };
 
-const config: Survey = {
+const survey: Survey = {
   id: 562,
   name: 'transect',
   label: 'eBMS Transect',
@@ -59,9 +51,7 @@ const config: Survey = {
   attrs: {
     date: dateAttr,
     location: locationAttr,
-    device: deviceAttr,
-    device_version: deviceVersionAttr,
-    app_version: appVersionAttr,
+    appVersion: appVersionAttr,
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
     cloud: cloudAttr,
@@ -120,7 +110,7 @@ const config: Survey = {
       },
 
       create({ Occurrence, taxon }) {
-        const isDragonfly = taxon.group === DRAGONFLY_GROUP;
+        const isDragonfly = taxon.taxonGroupId === DRAGONFLY_GROUP;
 
         return new Occurrence({
           data: {
@@ -144,11 +134,11 @@ const config: Survey = {
     create({ Sample, location }) {
       const sample = new Sample({
         metadata: {
-          survey: config.name,
-          survey_id: config.id,
+          survey: survey.name,
+          surveyId: survey.id,
         },
         data: {
-          surveyId: config.id,
+          surveyId: survey.id,
           sampleMethodId: 776,
           location,
           comment: null,
@@ -197,17 +187,18 @@ const config: Survey = {
 
     const sample = new Sample({
       metadata: {
-        survey_id: config.id,
-        survey: config.name,
+        surveyId: survey.id,
+        survey: survey.name,
       },
       data: {
-        surveyId: config.id,
+        surveyId: survey.id,
         date: now,
         training: appModel.data.useTraining,
         location: null,
         sampleMethodId: 22,
         surveyStartTime: now,
         recorder,
+        appVersion: config.version,
       },
     });
 
@@ -215,4 +206,4 @@ const config: Survey = {
   },
 };
 
-export default config;
+export default survey;

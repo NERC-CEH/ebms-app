@@ -27,8 +27,8 @@ const config = {
 
   feedbackEmail: 'apps%40ceh.ac.uk',
 
-  DEFAULT_SURVEY_TIME: 15 * 60 * 1000, // 15 mins
-  DEFAULT_TRANSECT_BUFFER: 5, // 2.5x2 meters
+  defaultSurveyTime: 15 * 60 * 1000, // 15 mins
+  defaultTransectBuffer: 5, // 2.5x2 meters
 
   map: {
     mapboxApiKey: process.env.APP_MAPBOX_MAP_KEY as string,

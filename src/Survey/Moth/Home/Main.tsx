@@ -67,7 +67,7 @@ const getDefaultTaxonCount = (taxon: Taxon, createdAt?: any) => ({
 
 const buildSpeciesCount = (agg: any, occ: Occurrence) => {
   const taxon = toJS(occ.data.taxon);
-  const id = taxon.preferredId || taxon.warehouse_id;
+  const id = taxon.preferredId || taxon.warehouseId;
 
   agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.createdAt); // eslint-disable-line
 
@@ -118,7 +118,7 @@ const HomeMain = ({
   const ref = useRef<any>(null);
   const shownDisabledImageIdentifierAlert = useDisabledImageIdentifierAlert();
 
-  const UNKNOWN_SPECIES_PREFFERD_ID = getUnknownSpecies().warehouse_id;
+  const UNKNOWN_SPECIES_PREFFERD_ID = getUnknownSpecies().warehouseId;
 
   const showCopyOptions = () => {
     alert({
@@ -148,7 +148,7 @@ const HomeMain = ({
   const getSpeciesEntry = ([id, species]: any) => {
     const { taxon } = species;
 
-    const speciesName = taxon[taxon.found_in_name];
+    const speciesName = taxon[taxon.foundInName];
 
     const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
 
@@ -188,7 +188,7 @@ const HomeMain = ({
     const unIdentifiedSpecies = (occ: Occurrence) =>
       occ.media[0] &&
       !occ.media[0]?.data?.species &&
-      occ.data?.taxon.warehouse_id === UNKNOWN_SPECIES_PREFFERD_ID;
+      occ.data?.taxon.warehouseId === UNKNOWN_SPECIES_PREFFERD_ID;
 
     return sample.occurrences.filter(unIdentifiedSpecies).length >= 5;
   };
@@ -196,7 +196,7 @@ const HomeMain = ({
   const getUndentifiedspeciesList = () => {
     const byUnknownSpecies = (occ: Occurrence) =>
       !occ.data.taxon ||
-      occ.data?.taxon.warehouse_id === UNKNOWN_SPECIES_PREFFERD_ID;
+      occ.data?.taxon.warehouseId === UNKNOWN_SPECIES_PREFFERD_ID;
 
     const getUnidentifiedSpeciesEntry = (occ: Occurrence) => (
       <UnidentifiedSpeciesEntry
@@ -258,13 +258,13 @@ const HomeMain = ({
     }
     const byKnownSpecies = ([, species]: any) =>
       species.taxon &&
-      species.taxon.warehouse_id !== UNKNOWN_SPECIES_PREFFERD_ID;
+      species.taxon.warehouseId !== UNKNOWN_SPECIES_PREFFERD_ID;
 
     const speciesCounts = [...sample.occurrences].reduce(buildSpeciesCount, {});
 
     const getShallowEntry = (shallowEntry: Taxon) => {
       const shallowEntryId =
-        shallowEntry.preferredId || shallowEntry.warehouse_id;
+        shallowEntry.preferredId || shallowEntry.warehouseId;
 
       if (speciesCounts[shallowEntryId]) {
         speciesCounts[shallowEntryId].createdAt = 0;

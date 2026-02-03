@@ -3,17 +3,17 @@ export const speciesOccAddedTimeSort = ([, occ1]: any, [, occ2]: any) => {
     return occ2.createdAt - occ1.createdAt;
 
   const taxon1 = occ1.taxon;
-  const taxonName1 = taxon1[taxon1.found_in_name];
+  const taxonName1 = taxon1[taxon1.foundInName];
 
   const taxon2 = occ2.taxon;
-  const taxonName2 = taxon2[taxon2.found_in_name];
+  const taxonName2 = taxon2[taxon2.foundInName];
 
   return taxonName1.localeCompare(taxonName2);
 };
 
 const compareAlphabetical = (taxon1: any, taxon2: any) => {
-  const foundInName1 = taxon1.found_in_name;
-  const foundInName2 = taxon2.found_in_name;
+  const foundInName1 = taxon1.foundInName;
+  const foundInName2 = taxon2.foundInName;
   const taxonName1 = taxon1[foundInName1];
   const taxonName2 = taxon2[foundInName2];
   return taxonName1.localeCompare(taxonName2);

@@ -1,13 +1,15 @@
 import axios, { AxiosResponse } from 'axios';
-import { and, eq } from 'drizzle-orm';
-import { QueryBuilder } from 'drizzle-orm/sqlite-core';
+import { CamelizeKeys } from '@flumens/utils';
 import config from 'common/config';
 import { getLanguageIso } from 'common/config/languages';
+import { getCamelCaseObj } from 'common/flumens';
+import { getCommonNameById } from 'common/helpers/taxonSearch/commonNamesSearch';
 import { speciesStore } from 'common/models/store';
 import appModel from 'models/app';
 import userModel from 'models/user';
 
-type Result = {
+/* eslint-disable @typescript-eslint/naming-convention */
+type DTO = {
   classifier_id: string;
   classifier_name: string;
   probability: number;
@@ -25,54 +27,26 @@ type Result = {
   taxa_taxon_list_id: string;
   taxon_meaning_id: string;
 };
+/* eslint-enable @typescript-eslint/naming-convention */
 
-type ResultWithCommonName = Result & {
-  warehouse_id: number;
-  found_in_name: string;
-  scientific_name: string;
-  common_name?: string;
+export type Suggestion = CamelizeKeys<DTO> & {
+  warehouseId: number;
+  foundInName: 'scientificName' | 'commonName';
+  scientificName: string;
+  commonName?: string;
 };
 
-async function getCommonName(sp: Result) {
-  const language = getLanguageIso(appModel.data.language);
-
-  const query: any = new QueryBuilder()
-    .select()
-    .from(speciesStore.table)
-    .where(
-      and(
-        eq(
-          speciesStore.table.preferred_taxa_taxon_list_id,
-          parseInt(sp.taxa_taxon_list_id, 10)
-        ),
-        eq(speciesStore.table.language_iso, language)
-      )
-    )
-    .limit(1);
-
-  const [taxon] = await speciesStore.db.query(query.toSQL());
-  if (!taxon) return {};
-
-  return {
-    common_name: taxon.taxon,
-    found_in_name: 'common_name',
-  };
-}
-
-export default async function identify(
-  url: string
-): Promise<ResultWithCommonName[]> {
+export default async function identify(url: string): Promise<Suggestion[]> {
   const data = new URLSearchParams({ image: url });
 
   const params = new URLSearchParams({
-    _api_proxy_uri: 'identify-proxy/v1/?app_name=uni-jena',
+    _api_proxy_uri: 'identify-proxy/v1/?app_name=uni-jena', // eslint-disable-line @typescript-eslint/naming-convention
   });
 
   const options: any = {
     method: 'post',
     params,
     url: `${config.backend.url}/api-proxy/waarneming`,
-    // url: 'https://butterfly-monitoring.net/api-proxy/waarneming',
     headers: {
       Authorization: `Bearer ${await userModel.getAccessToken()}`,
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -82,28 +56,34 @@ export default async function identify(
   };
 
   try {
-    const response: AxiosResponse<Result[]> = await axios(options);
+    const response: AxiosResponse<DTO[]> = await axios(options);
 
-    const withValidData = (sp: Result) => sp.taxa_taxon_list_id && sp.taxon;
+    const isValidDTO = (sp: DTO) => sp.taxa_taxon_list_id && sp.taxon;
 
-    const normalizeBaseValues = (sp: Result) => ({
-      ...sp,
-      warehouse_id: parseInt(sp.taxa_taxon_list_id, 10),
-      scientific_name: sp.taxon,
-      found_in_name: 'scientific_name',
+    const fromDTO = (sp: DTO) => ({
+      ...getCamelCaseObj(sp),
+      warehouseId: parseInt(sp.taxa_taxon_list_id, 10),
+      scientificName: sp.taxon,
+      foundInName: 'scientificName',
     });
 
-    const normalized = response.data
-      .filter(withValidData)
-      .map(normalizeBaseValues);
+    const normalized = response.data.filter(isValidDTO).map(fromDTO);
+
+    const language = getLanguageIso(appModel.data.language);
 
     // attach common names asynchronously
-    const attachCommonName = async (sp: any) => ({
-      ...sp,
-      ...(await getCommonName(sp)),
-    });
-
-    const suggestions = await Promise.all(normalized.map(attachCommonName));
+    const suggestions = await Promise.all(
+      normalized.map(async sp => {
+        const commonName = await getCommonNameById(
+          speciesStore,
+          sp.warehouseId,
+          language
+        );
+        return commonName
+          ? { ...sp, commonName, foundInName: 'commonName' as const }
+          : { ...sp, foundInName: 'scientificName' as const };
+      })
+    );
 
     return suggestions;
   } catch (e: any) {

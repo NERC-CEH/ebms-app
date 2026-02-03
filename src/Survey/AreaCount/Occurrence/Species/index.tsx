@@ -62,11 +62,11 @@ const SpeciesOccurrences = () => {
   };
 
   const getSamples = () => {
-    const matchesTaxa = ({ occurrences }: any) => {
+    const matchesTaxa = ({ occurrences }: Sample) => {
       const [occ] = occurrences;
       if (!occ) return false;
 
-      const { warehouse_id: warehouseId, preferredId } = occ.data.taxon;
+      const { warehouseId, preferredId } = occ.data.taxon;
       if (preferredId === parseInt(taxa, 10)) return true;
 
       if (warehouseId === parseInt(taxa, 10)) return true;
@@ -90,7 +90,6 @@ const SpeciesOccurrences = () => {
       s.occurrences[0].data.taxon.id === taxon.id;
 
     const isLastSampleDeleted = !sample.samples.filter(byTaxonId).length;
-
     if (isLastSampleDeleted && !sample.isPreciseSingleSpeciesSurvey()) {
       goBack();
       return;

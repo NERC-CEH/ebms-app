@@ -45,7 +45,7 @@ async function searchSciNames(
   const query: any = new QueryBuilder()
     .select({
       ...getTableColumns(table),
-      common_name: sql`${synonym.taxon} as common_name`,
+      commonName: sql`${synonym.taxon} as commonName`,
     })
     .from(table)
     .leftJoin(
@@ -68,12 +68,12 @@ async function searchSciNames(
   const species: any = await speciesStore.db.query(query.toSQL());
 
   return species.map(
-    (sp: SpeciesColumns & { common_name: string }): SearchResult => ({
-      found_in_name: 'scientific_name',
-      warehouse_id: sp.id,
-      scientific_name: sp.taxon,
-      common_name: sp.common_name,
-      group: sp.taxon_group_id,
+    (sp: SpeciesColumns & { commonName: string }): SearchResult => ({
+      foundInName: 'scientificName',
+      warehouseId: sp.id,
+      scientificName: sp.taxon,
+      commonName: sp.commonName,
+      taxonGroupId: sp.taxon_group_id,
       preferredId: sp.preferred_taxa_taxon_list_id!,
     })
   );

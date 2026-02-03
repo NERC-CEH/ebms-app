@@ -2,6 +2,7 @@ import { AttrConfig } from 'Survey/common/config';
 import Occurrence, { Attrs as OccurrenceAttrs } from './occurrence';
 import Sample, { Data as SampleAttrs } from './sample';
 
+/* eslint-disable @typescript-eslint/naming-convention */
 export type CustomAttr = {
   attribute_id: string;
   value_id: string;
@@ -12,6 +13,7 @@ export type CustomAttr = {
   raw_value: string;
   upper_value: any;
 };
+/* eslint-enable @typescript-eslint/naming-convention */
 
 const byAttrID =
   (attrId: string) =>

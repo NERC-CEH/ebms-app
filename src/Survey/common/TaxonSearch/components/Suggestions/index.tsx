@@ -86,17 +86,14 @@ const Suggestions = ({
   } else {
     const deDuped = deDuplicateSuggestions(searchResults);
 
-    const getSpeciesEntry = (species: SuggestionResult) => {
-      const key = `${species.warehouse_id}-${species.found_in_name}-${species.isFavourite}`;
-      return (
-        <Species
-          key={key}
-          species={species}
-          searchPhrase={searchPhrase}
-          onSelect={onSpeciesSelected}
-        />
-      );
-    };
+    const getSpeciesEntry = (species: SuggestionResult) => (
+      <Species
+        key={`${species.warehouseId}-${species.foundInName}-${species.isFavourite}`}
+        species={species}
+        searchPhrase={searchPhrase}
+        onSelect={onSpeciesSelected}
+      />
+    );
     suggestionsList = deDuped.map(getSpeciesEntry);
   }
 

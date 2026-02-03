@@ -80,13 +80,11 @@ const EditOccurrence = ({
   const firstSubSample = samples[0];
 
   const getSpecies = () => {
-    const species =
-      firstSubSample.occurrences[0].getTaxonCommonAndScientificNames();
+    const [occ] = firstSubSample.occurrences;
 
     const count = samples.length > 1 ? samples.length : null;
 
-    const speciesGroupImage =
-      firstSubSample.occurrences[0].getSpeciesGroupIcon();
+    const speciesGroupImage = occ.getSpeciesGroupIcon();
 
     return (
       <IonList lines="full">
@@ -97,9 +95,8 @@ const EditOccurrence = ({
               disabled={isDisabled}
               icon={speciesGroupImage}
               label="Species"
-              value={<TaxonPrettyName name={species} />}
+              value={<TaxonPrettyName taxon={occ.data.taxon} />}
               skipValueTranslation
-              className="taxon-entry"
             />
           </div>
         )}

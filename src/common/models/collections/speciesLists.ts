@@ -19,19 +19,6 @@ type RemoteFetchParams = {
   updatedOn?: number;
 };
 
-export type SpeciesData = {
-  taxa_taxon_list_id: string;
-  preferred_taxa_taxon_list_id: string;
-  taxon_meaning_id: string;
-  taxon: string;
-  preferred_taxon: string;
-  language_iso: string;
-  taxon_group: number;
-  external_key: string;
-  parent_id?: string;
-  attributes?: string;
-};
-
 class SpeciesListCollection extends Collection<SpeciesList> {
   protected remote: {
     synchronising: boolean;
@@ -72,6 +59,7 @@ class SpeciesListCollection extends Collection<SpeciesList> {
       const warehouseURL = 'https://warehouse1.indicia.org.uk';
       const url = `${warehouseURL}/index.php/services/rest/reports/projects/ebms/ebms_countries_and_other_ttl_attr_profiles_for_app.xml`;
 
+      /* eslint-disable @typescript-eslint/naming-convention */
       const requestParams = {
         updated_on_filter: updatedOn ? new Date(updatedOn).toISOString() : '',
         species_groups_filter: '',
@@ -82,6 +70,7 @@ class SpeciesListCollection extends Collection<SpeciesList> {
         name_filter: '',
         limit,
       };
+      /* eslint-enable @typescript-eslint/naming-convention */
 
       const options = {
         params: requestParams,

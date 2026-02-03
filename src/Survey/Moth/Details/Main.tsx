@@ -78,10 +78,10 @@ const DetailsMain = ({ sample }: Props) => {
         </div>
       </IonList>
 
-      <h3 className="list-title">
-        <T>Trap start</T>
-      </h3>
       <IonList lines="full">
+        <h3 className="list-title">
+          <T>Trap start</T>
+        </h3>
         <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${url}/surveyStartTime`}
@@ -100,10 +100,10 @@ const DetailsMain = ({ sample }: Props) => {
         </div>
       </IonList>
 
-      <h3 className="list-title">
-        <T>Trap end</T>
-      </h3>
       <IonList lines="full">
+        <h3 className="list-title">
+          <T>Trap end</T>
+        </h3>
         <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${url}/surveyEndTime`}

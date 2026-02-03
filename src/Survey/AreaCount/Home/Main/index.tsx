@@ -101,7 +101,7 @@ const buildSpeciesCount = (agg: any, smp: Sample) => {
   const taxon = toJS(smp.occurrences[0]?.data.taxon);
   if (!taxon) return agg;
 
-  const id = taxon.preferredId || taxon.warehouse_id;
+  const id = taxon.preferredId || taxon.warehouseId;
 
   const createdAt = new Date(smp.createdAt).getTime();
   agg[id] = agg[id] || getDefaultTaxonCount(taxon, createdAt); // eslint-disable-line
@@ -229,7 +229,7 @@ const AreaCount = ({
     const isSpeciesDisabled = !species.count || species.isDisabled;
     const { taxon } = species;
 
-    const speciesName = taxon[taxon.found_in_name];
+    const speciesName = taxon[taxon.foundInName];
 
     const isShallow = !species.count;
     const increaseCountWrap = () => increaseCount(taxon, isShallow);
@@ -251,7 +251,7 @@ const AreaCount = ({
       sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance();
 
     return (
-      <IonItemSliding key={species.taxon.warehouse_id}>
+      <IonItemSliding key={species.taxon.warehouseId}>
         <IonItem
           detail={!isSpeciesDisabled && !hasZeroAbundance}
           onClick={navigateToSpeciesOccurrencesWrap}
@@ -286,19 +286,18 @@ const AreaCount = ({
       !sample.samples.length &&
       !sample.occurrences.length &&
       !sample.shallowSpeciesList.length;
-    if (hasNoSpecies) {
+    if (hasNoSpecies)
       return (
         <IonList lines="full">
           <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
         </IonList>
       );
-    }
 
     const speciesCounts = [...sample.samples].reduce(buildSpeciesCount, {});
 
     const getShallowEntry = (shallowEntry: Taxon) => {
       const shallowEntryId =
-        shallowEntry.preferredId || shallowEntry.warehouse_id;
+        shallowEntry.preferredId || shallowEntry.warehouseId;
 
       if (speciesCounts[shallowEntryId]) {
         speciesCounts[shallowEntryId].createdAt = 0;

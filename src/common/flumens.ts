@@ -42,7 +42,10 @@ export {
   dtoSchema as locationDtoSchema,
   LocationType,
 } from '@flumens/models/dist/Indicia/Location';
-export { validateRemoteModel } from '@flumens/models/dist/Indicia/helpers';
+export {
+  validateRemoteModel,
+  type ElasticSearchResponse,
+} from '@flumens/models/dist/Indicia/helpers';
 export {
   default as DrupalUserModel,
   type Data as DrupalUserModelData,
@@ -154,6 +157,7 @@ export * from '@flumens/utils/dist/date';
 export { options as sentryOptions } from '@flumens/utils/dist/sentry';
 export { default as device } from '@flumens/utils/dist/device';
 export { default as string } from '@flumens/utils/dist/string';
+export { getCamelCaseObj } from '@flumens/utils/dist/cases';
 export * from '@flumens/utils/dist/location';
 export {
   default as MigrationManager,

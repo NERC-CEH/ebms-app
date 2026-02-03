@@ -15,6 +15,17 @@ import thistleImg from './common/images/thistle.jpg';
 import wornImg from './common/images/worn.png';
 import coreSurvey from './config';
 
+export type PaintedLadyAttrs = {
+  wing?: any;
+  behaviour?: any;
+  direction?: any;
+  eggLaying?: any;
+  otherEggLaying?: any;
+  otherThistles?: any;
+  nectarSource?: any;
+  mating?: any;
+};
+
 const translateEggLayingValue = (eggLayingValues: any) => {
   if (!eggLayingValues?.length) return null;
 
@@ -143,13 +154,11 @@ const speciesConfig: Survey = {
         Occurrence,
         taxon,
         zeroAbundance,
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
-        surveyId: speciesSurvey.id,
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
-        surveyName: speciesSurvey.name,
+        surveyId: speciesSurvey.id, // eslint-disable-line @typescript-eslint/no-use-before-define
+        surveyName: speciesSurvey.name, // eslint-disable-line @typescript-eslint/no-use-before-define
       });
 
-      subSample.occurrences[0].data.zero_abundance = zeroAbundance;
+      subSample.occurrences[0].data.zeroAbundance = zeroAbundance;
       return subSample;
     },
 
@@ -159,7 +168,7 @@ const speciesConfig: Survey = {
           remote: {
             id: 780,
             values: (value: any, _: any, model: any) =>
-              model.data.zero_abundance ? null : value,
+              model.data.zeroAbundance ? null : value,
           },
         },
 
@@ -174,10 +183,6 @@ const speciesConfig: Survey = {
           remote: {
             id: 977,
             values(wingValues: any, submission: any) {
-              submission.values = {
-                ...submission.values,
-              };
-
               const bySameGroup = (wingObject: any) =>
                 wingValues.includes(wingObject.value);
               const extractID = (obj: any) => obj.id;
@@ -298,10 +303,6 @@ const speciesConfig: Survey = {
           remote: {
             id: 982,
             values(flowerValue: any, submission: any) {
-              submission.values = {
-                ...submission.values,
-              };
-
               const bySameGroup = (wingObject: any) =>
                 flowerValue.includes(wingObject.value);
               const extractID = (obj: any) => obj.id;
@@ -372,10 +373,8 @@ const speciesConfig: Survey = {
   create: ({ Sample, hasGPSPermission }) => {
     const sample = coreSurvey.create!({
       Sample,
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
-      surveyId: speciesSurvey.id,
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
-      surveyName: speciesSurvey.name,
+      surveyId: speciesSurvey.id, // eslint-disable-line @typescript-eslint/no-use-before-define
+      surveyName: speciesSurvey.name, // eslint-disable-line @typescript-eslint/no-use-before-define
       hasGPSPermission,
     });
 

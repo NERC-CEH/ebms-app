@@ -5,10 +5,7 @@ export type SuggestionResult = SearchResult & {
   isRecorded?: boolean;
 };
 
-export const getTaxonName = (taxon: SuggestionResult): string => {
-  if (taxon.found_in_name === 'common_name') {
-    return taxon.common_name ?? '';
-  }
-
-  return taxon.scientific_name ?? '';
-};
+export const getTaxonName = (taxon: SuggestionResult) =>
+  taxon.foundInName === 'commonName'
+    ? (taxon.commonName ?? '')
+    : (taxon.scientificName ?? '');

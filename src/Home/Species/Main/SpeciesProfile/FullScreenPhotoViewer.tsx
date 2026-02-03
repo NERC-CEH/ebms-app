@@ -12,16 +12,16 @@ const FullScreenPhotoViewer = ({ species, onClose, showGallery }: Props) => {
   useOnHideModal(onClose);
 
   const getImageSource = (_: any, index: number) => {
-    if (!species?.image_copyright) return null;
+    if (!species?.imageCopyright) return null;
     return {
       src: `/images/${species.id}_${index}_image.jpg`,
-      footer: `© ${species.image_copyright[index]}`,
+      footer: `© ${species.imageCopyright[index]}`,
     };
   };
 
-  if (!species?.image_copyright?.length) return null;
+  if (!species?.imageCopyright?.length) return null;
 
-  const items = species?.image_copyright.map(getImageSource);
+  const items = species?.imageCopyright.map(getImageSource);
 
   return (
     <Gallery isOpen={showGallery} items={items} onClose={onClose} mode="md" />

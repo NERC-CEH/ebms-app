@@ -26,7 +26,7 @@ const Taxon = () => {
     const topAISuggestion = occurrence?.getTopSuggestion();
     if (topAISuggestion) {
       const selectedTopSuggestion =
-        topAISuggestion.warehouse_id === taxon.warehouse_id;
+        topAISuggestion.warehouseId === taxon.warehouseId;
       if (selectedTopSuggestion) {
         machineInvolvement = MachineInvolvement.HUMAN_ACCEPTED_PREFERRED;
       } else {
@@ -34,7 +34,7 @@ const Taxon = () => {
       }
     }
 
-    const isTaxonUnknown = taxon.warehouse_id === UNKNOWN_SPECIES.warehouse_id;
+    const isTaxonUnknown = taxon.warehouseId === UNKNOWN_SPECIES.warehouseId;
 
     if (occurrence && isTaxonUnknown) {
       Object.assign(occurrence.data.taxon, taxon, { machineInvolvement });
@@ -45,7 +45,7 @@ const Taxon = () => {
 
     if (occurrence && isRecorded && !isTaxonUnknown) {
       const selectedTaxon = (selectedOccurrence: Occurrence) =>
-        occurrence.data.taxon?.warehouse_id &&
+        occurrence.data.taxon?.warehouseId &&
         selectedOccurrence !== occurrence &&
         selectedOccurrence.data.comment === occurrence?.data?.comment &&
         selectedOccurrence.data.identifier === occurrence?.data?.identifier;
@@ -59,7 +59,7 @@ const Taxon = () => {
       }
 
       const isSelectedSameSpecies =
-        taxon.warehouse_id === occurrence.data.taxon.warehouse_id;
+        taxon.warehouseId === occurrence.data.taxon.warehouseId;
       if (isSelectedSameSpecies) {
         navigate(`/survey/moth/${sample.id || sample.cid}`, 'none', 'pop');
         return;
@@ -132,7 +132,7 @@ const Taxon = () => {
   };
 
   const getTaxonId = (occ: Occurrence) =>
-    occ.data.taxon?.preferredId || occ.data.taxon?.warehouse_id;
+    occ.data.taxon?.preferredId || occ.data.taxon?.warehouseId;
 
   const species = sample.occurrences.map(getTaxonId);
 

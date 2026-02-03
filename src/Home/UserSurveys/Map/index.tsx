@@ -26,7 +26,7 @@ const getSquareSize = (zoomLevel: number) => {
 
 const getTotalSquares = (squares: Square[]) => {
   const addSquares = (acc: number, square: Square): number =>
-    acc + square.doc_count;
+    acc + square.docCount;
 
   // protection division from 0, defaulting to 1
   return squares?.reduce(addSquares, 0) || 1;
@@ -141,7 +141,7 @@ const Map = () => {
   const recordMarkers = records.map(getRecordMarker);
 
   const getSquareMarker = (square: Square) => {
-    const opacity = Number((square.doc_count / totalSquares).toFixed(2));
+    const opacity = Number((square.docCount / totalSquares).toFixed(2));
 
     // max 90%, min 40%
     const normalizedOpacity = Math.min(Math.max(opacity, 0.4), 0.9);

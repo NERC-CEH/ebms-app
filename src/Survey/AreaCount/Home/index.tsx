@@ -36,8 +36,8 @@ const getSpeciesGroupList = (sample: Sample): SpeciesGroupWithDisabled[] => {
   sample.samples.forEach(smp => {
     const spGroupValue = Object.values(groups).find(
       group =>
-        group.id === smp.occurrences[0].data.taxon.group ||
-        group.listId === smp.occurrences[0].data.taxon.group // for backward compatibility, some old samples might have listId stored
+        group.id === smp.occurrences[0].data.taxon.taxonGroupId ||
+        group.listId === smp.occurrences[0].data.taxon.taxonGroupId // for backward compatibility, some old samples might have listId stored
     )?.id;
     if (!spGroupValue) return;
 
@@ -84,7 +84,7 @@ const useDeleteSpeciesPrompt = () => {
 
   function showDeleteSpeciesPrompt(taxon: any) {
     const prompt = (resolve: any) => {
-      const name = taxon.scientific_name;
+      const name = taxon.scientificName;
       alert({
         header: t('Delete'),
         skipTranslation: true,
@@ -304,8 +304,8 @@ const HomeController = () => {
     await processSubmission();
   };
 
-  const navigateToSpeciesOccurrences = (taxon: any) => {
-    const { warehouse_id: warehouseId, preferredId } = taxon;
+  const navigateToSpeciesOccurrences = (taxon: Taxon) => {
+    const { warehouseId, preferredId } = taxon;
     const taxonId = preferredId || warehouseId;
 
     navigate(`${match.url}/speciesOccurrences/${taxonId}`);
@@ -363,12 +363,12 @@ const HomeController = () => {
 
     const getSpeciesId = (s: Sample) =>
       s.occurrences[0].data.taxon.preferredId ||
-      s.occurrences[0].data.taxon.warehouse_id;
+      s.occurrences[0].data.taxon.warehouseId;
     const existingSpeciesIds = sample.samples.map(getSpeciesId);
 
     const uniqueSpeciesList: any = [];
-    const getNewSpeciesOnly = ({ warehouse_id, preferredId }: any) => {
-      const speciesID = preferredId || warehouse_id;
+    const getNewSpeciesOnly = ({ warehouseId, preferredId }: Taxon) => {
+      const speciesID = preferredId || warehouseId;
 
       if (uniqueSpeciesList.includes(speciesID)) {
         return false;
@@ -390,10 +390,10 @@ const HomeController = () => {
     );
 
     const speciesNameSort = (sp1: any, sp2: any) => {
-      const taxon1 = sp1.found_in_name;
+      const taxon1 = sp1.foundInName;
       const taxonName1 = sp1[taxon1];
 
-      const taxon2 = sp2.found_in_name;
+      const taxon2 = sp2.foundInName;
       const taxonName2 = sp2[taxon2];
 
       return taxonName1.localeCompare(taxonName2);
@@ -453,7 +453,7 @@ const HomeController = () => {
 
   const increaseCount = (taxon: any, _: boolean, is5x: boolean) => {
     if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
-      sample.samples[0].occurrences[0].data.zero_abundance = null;
+      sample.samples[0].occurrences[0].data.zeroAbundance = false;
       sample.samples[0].startGPS();
       sample.save();
       return;
@@ -487,7 +487,7 @@ const HomeController = () => {
 
     const byTaxonId = (s: Sample) =>
       s.occurrences[0].data.taxon.preferredId === taxon.preferredId ||
-      s.occurrences[0].data.taxon.warehouse_id === taxon.warehouse_id;
+      s.occurrences[0].data.taxon.warehouseId === taxon.warehouseId;
 
     const isLastSampleDeleted = ![...sample.samples].filter(byTaxonId).length;
 

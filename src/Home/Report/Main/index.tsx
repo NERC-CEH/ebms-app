@@ -12,12 +12,13 @@ import {
 import userModel from 'models/user';
 import ExpandableList from 'Components/ExpandableList';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import { Species } from '../services';
 import SpeciesEntry from './SpeciesEntry';
 
 type Props = {
-  species: any;
-  userSpecies: any;
-  userSpeciesLastMonth: any;
+  species: Species[];
+  userSpecies: Species[];
+  userSpeciesLastMonth: Species[];
   refreshing: any;
   refreshReport: any;
 };
@@ -44,13 +45,13 @@ const MainReport = ({
     e?.detail?.complete(); // refresh pull update
   };
 
-  const getReportTable = (data: any, label: string) => {
+  const getReportTable = (data: Species[], label: string) => {
     if (!data.length) return null;
 
     const speciesList = [...data];
 
-    const getSpeciesEntry = (sp: any) => (
-      <SpeciesEntry key={sp.key} species={sp} />
+    const getSpeciesEntry = (sp: Species) => (
+      <SpeciesEntry key={sp.scientificName} species={sp} />
     );
 
     const listComponents = speciesList.map(getSpeciesEntry);

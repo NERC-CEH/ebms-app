@@ -8,6 +8,7 @@ const continents = {
   // AN: 'Antarctica', // no butterflies there
 } as const;
 
+/* eslint-disable @typescript-eslint/naming-convention */
 const countries = {
   AI: {
     name: 'Anguilla',
@@ -490,6 +491,8 @@ const countries = {
     zoom: 3,
   },
 };
+
+/* eslint-enable @typescript-eslint/naming-convention */
 
 export type Country = {
   name: string;

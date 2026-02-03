@@ -46,7 +46,7 @@ const Entry = ({
       />
       <div className="flex w-full items-center justify-start gap-4">
         <div className="flex w-full flex-col gap-1 py-1">
-          <h4 className="line-clamp-2">{name}</h4>
+          <div className="line-clamp-2 font-semibold">{name}</div>
 
           {isValid && (
             <div className="text-xs">

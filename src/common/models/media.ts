@@ -7,14 +7,16 @@ import {
 import { MediaModel, MediaAttrs } from '@flumens';
 import { isPlatform } from '@ionic/react';
 import config from 'common/config';
-import identifyImage from 'common/services/waarneming';
+import identifyImage, { Suggestion } from 'common/services/waarneming';
 import userModel from 'models/user';
 import Occurrence from './occurrence';
 import Sample from './sample';
 
 export type URL = string;
 
-type Attrs = MediaAttrs & { species: any };
+type Attrs = MediaAttrs & {
+  species: Suggestion[];
+};
 
 export default class Media extends MediaModel<Attrs> {
   declare parent?: Sample | Occurrence;
@@ -103,11 +105,14 @@ export default class Media extends MediaModel<Attrs> {
         'Cannot use doesTaxonMatchParent with media part of samples'
       );
 
-    const speciesId = species.warehouse_id;
+    const speciesId =
+      species.warehouseId ||
+      // backwards compatibility, remove later
+      (species as any).warehouse_id;
     const parentTaxon = this.parent!.data?.taxon;
 
     return (
-      speciesId === parentTaxon?.warehouse_id ||
+      speciesId === parentTaxon?.warehouseId ||
       speciesId === parentTaxon?.preferredId
     );
   };

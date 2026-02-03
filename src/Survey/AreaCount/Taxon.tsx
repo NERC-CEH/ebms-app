@@ -108,14 +108,14 @@ const TaxonController = () => {
 
         return (
           occ.data.taxon.preferredId === parseInt(taxa, 10) ||
-          occ.data.taxon.warehouse_id === parseInt(taxa, 10)
+          occ.data.taxon.warehouseId === parseInt(taxa, 10)
         );
       };
       const assignTaxon = ({ occurrences }: Sample) => {
         const [occ] = occurrences; // always one
 
         if (
-          occ.data.taxon.group === DRAGONFLY_GROUP &&
+          occ.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
           taxon.group !== DRAGONFLY_GROUP
         ) {
           occ.data.stage = 'Adult';
@@ -123,7 +123,7 @@ const TaxonController = () => {
         }
 
         if (
-          occ.data.taxon.group !== DRAGONFLY_GROUP &&
+          occ.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
           taxon.group === DRAGONFLY_GROUP
         ) {
           occ.data.dragonflyStage = 'Adult';
@@ -143,7 +143,7 @@ const TaxonController = () => {
 
     if (occurrence) {
       if (
-        occurrence.data.taxon.group !== DRAGONFLY_GROUP &&
+        occurrence.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
         taxon.group === DRAGONFLY_GROUP
       ) {
         occurrence.data.dragonflyStage = 'Adult';
@@ -151,7 +151,7 @@ const TaxonController = () => {
         occurrence.data.stage = undefined;
       }
       if (
-        occurrence.data.taxon.group === DRAGONFLY_GROUP &&
+        occurrence.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
         taxon.group !== DRAGONFLY_GROUP
       ) {
         occurrence.data.stage = 'Adult';
@@ -200,12 +200,12 @@ const TaxonController = () => {
 
   const getTaxonId = (smp: Sample) => {
     const occ = smp.occurrences[0];
-    return occ.data.taxon.preferredId || occ.data.taxon.warehouse_id;
+    return occ.data.taxon.preferredId || occ.data.taxon.warehouseId;
   };
   const species = sample.samples.map(getTaxonId);
 
   const getShallowTaxonId = (taxon: any) =>
-    taxon.preferredId || taxon.warehouse_id;
+    taxon.preferredId || taxon.warehouseId;
   const shallowSpecies = sample.shallowSpeciesList.map(getShallowTaxonId);
 
   const recordedTaxa = [...species, ...shallowSpecies];

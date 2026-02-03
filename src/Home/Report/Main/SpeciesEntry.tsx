@@ -1,34 +1,27 @@
-import { useTranslation } from 'react-i18next';
 import { IonItem, IonIcon } from '@ionic/react';
 import speciesProfiles, {
   Species as SpeciesProfile,
 } from 'common/data/profiles';
 import butterflyIcon from 'common/images/butterfly.svg';
-import { speciesListGroupImages } from 'models/occurrence';
+import { speciesGroupIcons } from 'models/occurrence';
+import { Species } from '../services';
 
 type Props = {
-  species: any;
+  species: Species;
 };
 
 const SpeciesEntry = ({ species }: Props) => {
-  const { t } = useTranslation();
-
-  const scientificName = species.key;
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const commonName = t(scientificName, null, true);
-
-  const speciesGroupId = species?.group_id?.value;
+  const { scientificName, count, groupId: speciesGroupId } = species;
 
   const byName = (sp: SpeciesProfile) => sp.taxon === scientificName;
-  const image = speciesProfiles.find(byName);
+  const profile = speciesProfiles.find(byName);
 
   let avatar: any;
-  const hasImage = image?.image_copyright?.length;
+  const hasImage = profile?.imageCopyright?.length;
   if (hasImage) {
     avatar = (
       <img
-        src={`/images/${image.id}_0_image.jpg`}
+        src={`/images/${profile.id}_0_image.jpg`}
         className="h-full w-full object-cover"
       />
     );
@@ -37,7 +30,7 @@ const SpeciesEntry = ({ species }: Props) => {
       <IonIcon
         icon={
           speciesGroupId
-            ? (speciesListGroupImages as any)[speciesGroupId]
+            ? (speciesGroupIcons as any)[speciesGroupId]
             : butterflyIcon
         }
         className="size-8 opacity-75"
@@ -52,13 +45,13 @@ const SpeciesEntry = ({ species }: Props) => {
         {/* <IonAvatar className="[--border-radius:5px]">{avatar}</IonAvatar> */}
 
         <div className="flex w-full flex-col justify-center">
-          {commonName && <div className="font-medium">{commonName}</div>}
+          {profile?.commonName && (
+            <div className="font-medium">{profile?.commonName}</div>
+          )}
           <div className="text-base italic opacity-70">{scientificName}</div>
         </div>
 
-        <div className="max-w:[50px] text-lg font-medium">
-          {species.doc_count}
-        </div>
+        <div className="max-w:[50px] text-lg font-medium">{count}</div>
       </div>
     </IonItem>
   );

@@ -23,10 +23,12 @@ const RegisterContainer = () => {
     const email = details.email.trim();
     const { password, firstName, lastName } = details;
 
+    /* eslint-disable @typescript-eslint/naming-convention */
     const otherDetails = {
       field_first_name: [{ value: firstName?.trim() }],
       field_last_name: [{ value: lastName?.trim() }],
     };
+    /* eslint-enable @typescript-eslint/naming-convention */
 
     if (!device.isOnline) {
       toast.warn("Sorry, looks like you're offline.");

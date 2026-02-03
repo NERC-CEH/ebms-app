@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { getLocalAttributes } from '../utils';
 
 describe('getCustomAttributes', () => {
@@ -8,17 +9,13 @@ describe('getCustomAttributes', () => {
         remote: { id: 1 },
       },
     };
-    const document = {
-      'locAttr:1': { raw_value: 2 },
-    };
+    const document = { 'locAttr:1': { raw_value: 2 } };
 
     // When
     const customAttrs = getLocalAttributes(document, schema);
 
     // Then
-    expect(customAttrs).toStrictEqual({
-      customAttr: 2,
-    });
+    expect(customAttrs).toStrictEqual({ customAttr: 2 });
   });
 
   it('should get a custom attribute with mapped value', () => {

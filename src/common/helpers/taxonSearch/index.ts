@@ -2,6 +2,7 @@ import { SQL } from 'drizzle-orm';
 import searchCommonNames from './commonNamesSearch';
 import searchSciNames from './scientificNamesSearch';
 
+/* eslint-disable @typescript-eslint/naming-convention */
 export type SpeciesColumns = {
   data: any;
   id: number;
@@ -13,13 +14,14 @@ export type SpeciesColumns = {
   language_iso: string;
   taxon: string;
 };
+/* eslint-enable @typescript-eslint/naming-convention */
 
 export type SearchResult = {
-  found_in_name: string;
-  warehouse_id: number;
-  scientific_name: string;
-  common_name?: string;
-  group: number;
+  foundInName: 'scientificName' | 'commonName';
+  warehouseId: number;
+  scientificName: string;
+  taxonGroupId: number;
+  commonName?: string;
   preferredId?: number;
 };
 
@@ -71,19 +73,15 @@ export default async function search({
 
   // sort results by the order of appearance of the search phrase in the name
   results.sort((a, b) => {
-    const aIndex = (a as any)[a.found_in_name]
-      ?.toLowerCase()
-      .indexOf(normSearchPhrase);
-    const bIndex = (b as any)[b.found_in_name]
-      ?.toLowerCase()
-      .indexOf(normSearchPhrase);
+    const aIndex = a[a.foundInName]?.toLowerCase().indexOf(normSearchPhrase);
+    const bIndex = b[b.foundInName]?.toLowerCase().indexOf(normSearchPhrase);
 
     // results not containing the search phrase should be at the end
     if (aIndex === -1 && bIndex === -1) return 0;
     if (aIndex === -1) return 1;
     if (bIndex === -1) return -1;
 
-    return aIndex - bIndex;
+    return aIndex! - bIndex!;
   });
 
   return results;

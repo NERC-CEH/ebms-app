@@ -118,19 +118,20 @@ export default class SpeciesList extends Model<Data> {
       offset += LIMIT;
     }
 
-    const parsedData = allSpecies.map((item: any) => ({
-      taxa_taxon_list_id: parseInt(item.taxa_taxon_list_id, 10) || null,
-      taxon_group_id: parseInt(item.taxon_group_id, 10) || null,
-      preferred_taxa_taxon_list_id:
+    const fromDTO = (item: any) => ({
+      taxaTaxonListId: parseInt(item.taxa_taxon_list_id, 10) || null,
+      taxonGroupId: parseInt(item.taxon_group_id, 10) || null,
+      preferredTaxaTaxonListId:
         parseInt(item.preferred_taxa_taxon_list_id, 10) || null,
-      taxon_meaning_id: parseInt(item.taxon_meaning_id, 10) || null,
-      parent_id: parseInt(item.parent_id, 10) || null,
+      taxonMeaningId: parseInt(item.taxon_meaning_id, 10) || null,
+      parentId: parseInt(item.parent_id, 10) || null,
       taxon: item.taxon,
-      preferred_taxon: item.preferred_taxon || null,
-      language_iso: item.language_iso,
-      external_key: item.external_key || null,
+      preferredTaxon: item.preferred_taxon || null,
+      languageIso: item.language_iso,
+      externalKey: item.external_key || null,
       data: item.attributes ? JSON.parse(item.attributes) : {},
-    }));
+    });
+    const data = allSpecies.map(fromDTO);
 
     await db.query({
       sql: `DELETE FROM species WHERE list_cid = "${this.cid}"`,
@@ -143,8 +144,8 @@ export default class SpeciesList extends Model<Data> {
     await db.query({ sql: 'BEGIN TRANSACTION' });
 
     try {
-      for (let i = 0; i < parsedData.length; i += BATCH_SIZE) {
-        const batch = parsedData.slice(i, i + BATCH_SIZE);
+      for (let i = 0; i < data.length; i += BATCH_SIZE) {
+        const batch = data.slice(i, i + BATCH_SIZE);
 
         const placeholders = batch
           .map((_item: unknown, idx: number) => {
@@ -153,14 +154,14 @@ export default class SpeciesList extends Model<Data> {
           })
           .join(',');
 
-        const params = batch.flatMap((item: (typeof parsedData)[0]) => [
-          item.taxa_taxon_list_id,
+        const params = batch.flatMap((item: (typeof data)[0]) => [
+          item.taxaTaxonListId,
           this.cid,
-          item.taxon_group_id,
-          item.preferred_taxa_taxon_list_id,
-          item.parent_id,
-          item.external_key,
-          item.language_iso,
+          item.taxonGroupId,
+          item.preferredTaxaTaxonListId,
+          item.parentId,
+          item.externalKey,
+          item.languageIso,
           item.taxon,
           JSON.stringify(item.data),
         ]);

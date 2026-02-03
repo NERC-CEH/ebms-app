@@ -16,16 +16,15 @@ const checkIfTaxonSelectedSame = (
 ) => {
   if (!sectionOccurrence) return false;
 
-  const { preferredId, warehouse_id: warehouseId } =
-    sectionOccurrence?.data?.taxon || {};
+  const { preferredId, warehouseId } = sectionOccurrence?.data?.taxon || {};
 
   if (preferredId) {
     return (
-      warehouseId === taxon.warehouse_id || preferredId === taxon?.preferredId
+      warehouseId === taxon.warehouseId || preferredId === taxon?.preferredId
     );
   }
 
-  return warehouseId === taxon.warehouse_id;
+  return warehouseId === taxon.warehouseId;
 };
 
 const Controller = () => {
@@ -41,7 +40,7 @@ const Controller = () => {
   if (!sectionSample) return null;
 
   const getTaxonId = (occ: Occurrence) =>
-    occ.data.taxon.preferredId || occ.data.taxon.warehouse_id;
+    occ.data.taxon.preferredId || occ.data.taxon.warehouseId;
   const recordedTaxa = sectionSample.occurrences.map(getTaxonId);
 
   const onSpeciesSelected = async (taxon: Taxon) => {
@@ -74,16 +73,16 @@ const Controller = () => {
       occWithSameSpecies.data.count += sectionOccurrence.data.count;
 
       if (
-        sectionOccurrence.data.taxon.group !== DRAGONFLY_GROUP &&
-        taxon.group === DRAGONFLY_GROUP
+        sectionOccurrence.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
+        taxon.taxonGroupId === DRAGONFLY_GROUP
       ) {
         sectionOccurrence.data.dragonflyStage = 'Adult';
 
         sectionOccurrence.data.stage = undefined;
       }
       if (
-        sectionOccurrence.data.taxon.group === DRAGONFLY_GROUP &&
-        taxon.group !== DRAGONFLY_GROUP
+        sectionOccurrence.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
+        taxon.taxonGroupId !== DRAGONFLY_GROUP
       ) {
         sectionOccurrence.data.stage = 'Adult';
 
@@ -135,16 +134,16 @@ const Controller = () => {
 
     if (!occWithSameSpecies && sectionOccurrence && taxa) {
       if (
-        sectionOccurrence.data.taxon.group !== DRAGONFLY_GROUP &&
-        taxon.group === DRAGONFLY_GROUP
+        sectionOccurrence.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
+        taxon.taxonGroupId === DRAGONFLY_GROUP
       ) {
         sectionOccurrence.data.dragonflyStage = 'Adult';
 
         sectionOccurrence.data.stage = undefined;
       }
       if (
-        sectionOccurrence.data.taxon.group === DRAGONFLY_GROUP &&
-        taxon.group !== DRAGONFLY_GROUP
+        sectionOccurrence.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
+        taxon.taxonGroupId !== DRAGONFLY_GROUP
       ) {
         sectionOccurrence.data.stage = 'Adult';
 

@@ -38,7 +38,7 @@ const TaxonSearch = ({
 
   const annotateRecordedTaxa = (newSearchResults: SearchResults) =>
     newSearchResults.map((result: SearchResult) =>
-      recordedTaxa?.includes(result.preferredId || result.warehouse_id)
+      recordedTaxa?.includes(result.preferredId || result.warehouseId)
         ? { ...result, ...{ isRecorded: true } }
         : result
     );

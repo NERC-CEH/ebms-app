@@ -231,12 +231,3 @@ button {
 .attr-page .info-message {
   @apply border-tertiary-300/40 bg-tertiary-50 text-tertiary-900;
 }
-
-/* Display occurrence taxon name as Common and scientific names. */
-.taxon-entry .ion-label[slot='end'] {
-  max-width: 50% !important;
-  white-space: inherit !important;
-}
-.taxon-entry .ion-label {
-  white-space: nowrap !important;
-}

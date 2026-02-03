@@ -23,7 +23,6 @@ const TransectHomeController = () => {
   const { occurrence } = useSample<any, Occurrence>();
   if (!occurrence) return null;
 
-  const species = occurrence.getTaxonCommonAndScientificNames();
   const isDisabled = occurrence.isUploaded;
 
   const getCounterOnChange = (value: number | null) => {
@@ -44,9 +43,8 @@ const TransectHomeController = () => {
               disabled={isDisabled}
               icon={occurrence.getSpeciesGroupIcon()}
               label="Species"
-              value={<TaxonPrettyName name={species} />}
+              value={<TaxonPrettyName taxon={occurrence.data.taxon} />}
               skipValueTranslation
-              className="taxon-entry"
             />
 
             <MenuAttrItemFromModel attr="comment" model={occurrence} />

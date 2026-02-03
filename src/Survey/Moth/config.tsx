@@ -10,6 +10,7 @@ import SunCalc from 'suncalc';
 import { z } from 'zod';
 import { device, isValidLocation, timeFormat } from '@flumens';
 import { IonIcon, IonImg } from '@ionic/react';
+import config from 'common/config';
 import firstQuarterMoonIcon from 'common/images/first-quarter-moon.svg';
 import fullIcon from 'common/images/full-moon.svg';
 import lastQuarterIcon from 'common/images/last-quarter-moon.svg';
@@ -259,13 +260,12 @@ const survey: Survey = {
       remote: {
         id: 'location_id',
         values(location: any, submission: any) {
-          const centroidSref = `${location.data.location.latitude} ${location.data.location.longitude}`;
-
-          // eslint-disable-next-line
+          /* eslint-disable @typescript-eslint/naming-convention, no-param-reassign */
           submission.values = {
             ...submission.values,
-            entered_sref: centroidSref,
+            entered_sref: `${location.data.location.latitude} ${location.data.location.longitude}`,
           };
+          /* eslint-enable @typescript-eslint/naming-convention, no-param-reassign */
 
           return location.id;
         },
@@ -488,7 +488,7 @@ const survey: Survey = {
       taxon: {
         remote: {
           id: 'taxa_taxon_list_id',
-          values: (taxon: any) => taxon.warehouse_id,
+          values: (taxon: any) => taxon.warehouseId,
         },
       },
 
@@ -586,7 +586,7 @@ const survey: Survey = {
   create({ Sample, recorder, surveyId, surveyName }) {
     const sample = new Sample({
       metadata: {
-        survey_id: surveyId || survey.id,
+        surveyId: surveyId || survey.id,
         survey: surveyName || survey.name,
       },
       data: {
@@ -598,6 +598,7 @@ const survey: Survey = {
         location: null,
         comment: null,
         recorder,
+        appVersion: config.version,
       },
     });
 
@@ -618,18 +619,18 @@ export default survey;
 type UnknownSpeciesObject = Record<string, any>;
 const UNKNOWN_SPECIES: UnknownSpeciesObject = {
   en: {
-    warehouse_id: 538737,
-    taxon_group: 260,
-    common_name: 'Unknown',
+    warehouseId: 538737,
+    taxonGroupId: 260,
+    commonName: 'Unknown',
     preferredId: 538737,
-    found_in_name: 'common_name',
+    foundInName: 'commonName',
   },
-  'nl-NL': {
-    warehouse_id: 541352,
-    common_name: 'Onbekend',
-    taxon_group: 260,
+  nlNL: {
+    warehouseId: 541352,
+    commonName: 'Onbekend',
+    taxonGroupId: 260,
     preferredId: 538737,
-    found_in_name: 'common_name',
+    foundInName: 'commonName',
   },
 };
 

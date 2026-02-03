@@ -144,16 +144,9 @@ const surveyConfig = {
     remote: {
       id: 'entered_sref',
       values(location: any, submission: any) {
-        const { latitude, longitude, name } = location;
-
-        // eslint-disable-next-line
-        submission.values = {
-          ...submission.values,
-        };
-
-        submission.values['lat'] = latitude; // eslint-disable-line
-        submission.values['lon'] = longitude; // eslint-disable-line
-        submission.values['name'] = name; // eslint-disable-line
+        submission.values['lat'] = location.latitude; // eslint-disable-line
+        submission.values['lon'] = location.longitude; // eslint-disable-line
+        submission.values['name'] = location.name; // eslint-disable-line
       },
     },
   },
@@ -264,6 +257,8 @@ class Location extends LocationModel<Data> {
   getSurvey = () => surveyConfig;
 
   private toMothTrapDTO() {
+    /* eslint-disable @typescript-eslint/naming-convention */
+
     const { location, comment, boundaryGeom, centroidSrefSystem } = this.data;
 
     const stringifyLamp = (lamp: any) => JSON.stringify(lamp);
@@ -292,6 +287,8 @@ class Location extends LocationModel<Data> {
       [mothTrapLampsAttr.id]: stringifiedLamps,
       [mothTrapUserAttr.id]: userModel.id,
     };
+
+    /* eslint-enable @typescript-eslint/naming-convention */
   }
 
   toDTO(warehouseMediaNames = {}) {
@@ -314,13 +311,12 @@ class Location extends LocationModel<Data> {
       ? this.toMothTrapDTO()
       : transformBoolean(toSnakeCase(this.data));
 
+    /* eslint-disable @typescript-eslint/naming-convention */
     const submission: any = {
-      values: {
-        external_key: this.cid,
-        ...data,
-      },
+      values: { external_key: this.cid, ...data },
       media: [],
     };
+    /* eslint-enable @typescript-eslint/naming-convention */
 
     this.media.forEach(model => {
       const modelSubmission = model.toDTO(warehouseMediaNames);
