@@ -10,10 +10,11 @@ import {
   trashBinOutline,
   cloudDownloadOutline,
   cloudUploadOutline,
+  textOutline,
   languageOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Main, useAlert, InfoMessage, Toggle } from '@flumens';
+import { Main, useAlert, InfoMessage, Toggle, SelectInput } from '@flumens';
 import { IonIcon, IonList, IonItem, IonLabel, isPlatform } from '@ionic/react';
 import config from 'common/config';
 import countries, { CountryCode } from 'common/config/countries';
@@ -123,6 +124,8 @@ type Props = {
   country: CountryCode;
   exportDatabase: any;
   importDatabase: any;
+  taxonNameDisplay: string;
+  onTaxonNameDisplayChange: any;
 };
 
 const MenuMain = ({
@@ -138,6 +141,8 @@ const MenuMain = ({
   country,
   exportDatabase,
   importDatabase,
+  taxonNameDisplay,
+  onTaxonNameDisplayChange,
 }: Props) => {
   const showDatabaseExportDialog = useDatabaseExportDialog(exportDatabase);
 
@@ -156,6 +161,12 @@ const MenuMain = ({
 
   const countryLabel = countries[country]?.name;
   const languageLabel = languages[language]?.name;
+
+  const taxonNameDisplayOptions = [
+    { value: 'commonScientific', label: 'Common and scientific' },
+    { value: 'commonOnly', label: 'Common only' },
+    { value: 'scientificOnly', label: 'Scientific only' },
+  ];
 
   return (
     <Main className="app-settings">
@@ -186,6 +197,13 @@ const MenuMain = ({
             </IonLabel>
             <IonIcon icon={mothIcon} size="small" slot="start" />
           </IonItem>
+          <SelectInput
+            prefix={<IonIcon icon={textOutline} className="size-6" />}
+            label="Species Name Display"
+            value={taxonNameDisplay}
+            onChange={onTaxonNameDisplayChange}
+            options={taxonNameDisplayOptions}
+          />
         </div>
 
         <h3 className="list-title">

@@ -16,6 +16,11 @@ export type SurveyDraftKeys = {
 
 export const DEFAULT_SPECIES_GROUP = [groups.butterflies.id];
 
+export type TaxonNameDisplayType =
+  | 'commonScientific'
+  | 'commonOnly'
+  | 'scientificOnly';
+
 export type Data = ModelAttrs & {
   showedWelcome: boolean;
   language?: LanguageCode | null;
@@ -40,13 +45,13 @@ export type Data = ModelAttrs & {
   showCopySpeciesTip: boolean;
   // showWhatsNewInVersion122: boolean;
   showGPSPermissionTip: boolean;
-  showCommonNamesInGuide: boolean;
   showCopyHelpTip: boolean;
   transectsRefreshTimestamp: number | null;
   /**
    * Timestamp of last species lists automatic update.
    */
   speciesListsUpdatedAt?: number;
+  taxonNameDisplay: TaxonNameDisplayType;
 } & SurveyDraftKeys;
 
 const defaults: Data = {
@@ -74,7 +79,7 @@ const defaults: Data = {
   useExperiments: false,
   sendAnalytics: true,
   appSession: 0,
-  showCommonNamesInGuide: true,
+  taxonNameDisplay: 'commonScientific',
 
   // tips
   showCopyHelpTip: true,

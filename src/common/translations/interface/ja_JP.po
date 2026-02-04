@@ -1438,10 +1438,6 @@ msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr "新しいレコードを「トレーニング」としてマークし、すべてのレポートから除外します。"
 
 # App setting label
-msgid "Show common names in guide"
-msgstr "一般名をガイドに表示する"
-
-# App setting label
 msgid "Use global species lists"
 msgstr "世界の種のリストを使う"
 
@@ -1990,6 +1986,22 @@ msgstr "一次調査"
 # App settings labels for primary survey change
 msgid "All Surveys"
 msgstr "すべての調査"
+
+# App settings label for species name display preference
+msgid "Common and scientific"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Common only"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Scientific only"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Species Name Display"
+msgstr ""
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"

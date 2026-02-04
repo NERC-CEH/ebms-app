@@ -39,9 +39,9 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
       {!!sectionSpeciesCount && (
         <div
           slot="end"
-          className="flex min-w-12 gap-3 text-left text-[var(--form-value-color)]"
+          className="flex min-w-12 gap-3 text-left text-[var(--form-value-color)] justify-start items-center"
         >
-          <IonIcon icon={butterflyIcon} /> {/* prettier-ignore */}{' '}
+          <IonIcon icon={butterflyIcon} />
           {sectionSpeciesCount}
         </div>
       )}

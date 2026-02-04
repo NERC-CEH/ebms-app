@@ -231,3 +231,8 @@ button {
 .attr-page .info-message {
   @apply border-tertiary-300/40 bg-tertiary-50 text-tertiary-900;
 }
+
+/* Unify Select component value in menus */
+.react-aria-SelectValue {
+  @apply font-medium;
+}

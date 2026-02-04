@@ -45,6 +45,7 @@ import PaintedLadyDirection from 'Survey/AreaCount/common/Components/PaintedLady
 import PaintedLadyOther from 'Survey/AreaCount/common/Components/PaintedLadyOther';
 import PaintedLadyWing from 'Survey/AreaCount/common/Components/PaintedLadyWing';
 import IncrementalButton from 'Survey/common/IncrementalButton';
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 import {
   speciesOccAddedTimeSort,
@@ -229,8 +230,6 @@ const AreaCount = ({
     const isSpeciesDisabled = !species.count || species.isDisabled;
     const { taxon } = species;
 
-    const speciesName = taxon[taxon.foundInName];
-
     const isShallow = !species.count;
     const increaseCountWrap = () => increaseCount(taxon, isShallow);
     const increase5xCountWrap = () => increaseCount(taxon, isShallow, true);
@@ -262,7 +261,9 @@ const AreaCount = ({
             value={species.count}
             disabled={isDisabled}
           />
-          <IonLabel className="title">{speciesName}</IonLabel>
+          <div className="my-2 mx-3">
+            <TaxonPrettyName taxon={taxon} />
+          </div>
           <IonLabel slot="end" className="location-spinner">
             {location}
           </IonLabel>

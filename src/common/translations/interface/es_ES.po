@@ -1542,10 +1542,6 @@ msgstr ""
 "los informes."
 
 # App setting label
-msgid "Show common names in guide"
-msgstr "Mostrar los nombres comunes en la guía"
-
-# App setting label
 msgid "Use global species lists"
 msgstr "Usar lista de especies global"
 
@@ -2171,6 +2167,22 @@ msgstr "Muestreo Principal"
 # App settings labels for primary survey change
 msgid "All Surveys"
 msgstr "Todos los muestreos"
+
+# App settings label for species name display preference
+msgid "Common and scientific"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Common only"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Scientific only"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Species Name Display"
+msgstr ""
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"

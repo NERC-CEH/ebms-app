@@ -7,7 +7,7 @@ import {
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Main, MenuAttrItem } from '@flumens';
-import { IonList, IonIcon } from '@ionic/react';
+import { IonList, IonIcon, IonItem } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import Occurrence from 'models/occurrence';
@@ -56,14 +56,12 @@ const EditOccurrence = ({ subSample, occurrence, isDisabled }: Props) => {
         </h3>
         <div className="rounded-list">
           {!isPreciseSurvey && (
-            <MenuAttrItem
-              routerLink={`${baseURL}/taxon`}
-              disabled={isDisabled}
-              icon={occurrence.getSpeciesGroupIcon()}
-              label="Species"
-              value={<TaxonPrettyName taxon={occurrence.data.taxon} />}
-              skipValueTranslation
-            />
+            <IonItem routerLink={`${baseURL}/taxon`} disabled={isDisabled}>
+              <TaxonPrettyName
+                taxon={occurrence.data.taxon}
+                className="text-(--form-value-color) my-2 text-right"
+              />
+            </IonItem>
           )}
           <MenuAttrItem
             routerLink={`${sampleBaseUrl}/location`}

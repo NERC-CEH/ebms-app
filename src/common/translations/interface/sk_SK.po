@@ -1496,10 +1496,6 @@ msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr "V móde \"Simulácia\" sa novopridané záznamy nebudú ukladať do štatistík. "
 
 # App setting label
-msgid "Show common names in guide"
-msgstr "V sprievodcovi zobraziť bežné názvy"
-
-# App setting label
 msgid "Use global species lists"
 msgstr "Použite zoznam globálnych druhov"
 
@@ -2113,6 +2109,22 @@ msgstr "Predvolený prieskum"
 # App settings labels for primary survey change
 msgid "All Surveys"
 msgstr "Všetky pozorovania"
+
+# App settings label for species name display preference
+msgid "Common and scientific"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Common only"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Scientific only"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Species Name Display"
+msgstr ""
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"

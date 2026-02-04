@@ -124,6 +124,7 @@ export { default as Button } from '@flumens/tailwind/dist/components/Button';
 export { default as Badge } from '@flumens/tailwind/dist/components/Badge';
 export { default as NumberInput } from '@flumens/tailwind/dist/components/NumberInput';
 export { default as RadioInput } from '@flumens/tailwind/dist/components/Radio';
+export { default as SelectInput } from '@flumens/tailwind/dist/components/Select';
 export { default as Toggle } from '@flumens/tailwind/dist/components/Switch';
 export {
   default as InfoMessage,

@@ -6,11 +6,10 @@ import {
   Header,
   Main,
   MenuAttrItemFromModel,
-  MenuAttrItem,
   NumberInput,
   useSample,
 } from '@flumens';
-import { IonIcon, IonList } from '@ionic/react';
+import { IonIcon, IonItem, IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import numberIcon from 'common/images/number.svg';
 import Occurrence from 'models/occurrence';
@@ -38,14 +37,12 @@ const TransectHomeController = () => {
       <Main>
         <IonList lines="full">
           <div className="rounded-list">
-            <MenuAttrItem
-              routerLink={`${url}/taxa`}
-              disabled={isDisabled}
-              icon={occurrence.getSpeciesGroupIcon()}
-              label="Species"
-              value={<TaxonPrettyName taxon={occurrence.data.taxon} />}
-              skipValueTranslation
-            />
+            <IonItem routerLink={`${url}/taxon`} disabled={isDisabled}>
+              <TaxonPrettyName
+                taxon={occurrence.data.taxon}
+                className="text-(--form-value-color) my-2 text-right"
+              />
+            </IonItem>
 
             <MenuAttrItemFromModel attr="comment" model={occurrence} />
 

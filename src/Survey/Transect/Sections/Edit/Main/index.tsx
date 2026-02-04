@@ -21,7 +21,6 @@ import {
   IonItemSliding,
   IonButton,
   IonIcon,
-  IonLabel,
   IonItemOptions,
   IonItemOption,
   NavContext,
@@ -31,6 +30,7 @@ import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import IncrementalButton from 'Survey/common/IncrementalButton';
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import {
   speciesOccAddedTimeSort,
   speciesNameSort,
@@ -88,8 +88,6 @@ const Edit = ({
     const isSpeciesDisabled = !species.count;
     const { taxon } = species;
 
-    const speciesName = taxon[taxon.foundInName];
-
     const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
     const isShallow = !sectionSample.occurrences.filter(matchingTaxon).length;
 
@@ -109,7 +107,9 @@ const Edit = ({
             value={species.count}
             disabled={isDisabled}
           />
-          <IonLabel className="title">{speciesName}</IonLabel>
+          <div className="my-2 mx-3">
+            <TaxonPrettyName taxon={taxon} />
+          </div>
         </IonItem>
 
         {!isDisabled && (

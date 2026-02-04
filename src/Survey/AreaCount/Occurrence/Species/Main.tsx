@@ -2,7 +2,7 @@ import { observer } from 'mobx-react';
 import { warningOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Badge, Main, MenuAttrItem } from '@flumens';
+import { Badge, Main } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -84,20 +84,16 @@ const EditOccurrence = ({
 
     const count = samples.length > 1 ? samples.length : null;
 
-    const speciesGroupImage = occ.getSpeciesGroupIcon();
-
     return (
       <IonList lines="full">
         {!firstSubSample.isPreciseSingleSpeciesSurvey() && (
           <div className="rounded-list">
-            <MenuAttrItem
-              routerLink={`${match.url}/taxon`}
-              disabled={isDisabled}
-              icon={speciesGroupImage}
-              label="Species"
-              value={<TaxonPrettyName taxon={occ.data.taxon} />}
-              skipValueTranslation
-            />
+            <IonItem routerLink={`${match.url}/taxon`} disabled={isDisabled}>
+              <TaxonPrettyName
+                taxon={occ.data.taxon}
+                className="text-(--form-value-color) my-2 text-right"
+              />
+            </IonItem>
           </div>
         )}
 

@@ -8,7 +8,7 @@ import { Page, Header, useToast, useLoader } from '@flumens';
 import { isPlatform, NavContext } from '@ionic/react';
 import CONFIG from 'common/config';
 import { db } from 'common/models/store';
-import appModel, { Data } from 'models/app';
+import appModel, { Data, TaxonNameDisplayType } from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import Sample from 'models/sample';
 import userModel from 'models/user';
@@ -108,6 +108,11 @@ const Container = () => {
 
   const clearCacheWrap = () => clearCache(toast);
 
+  const onTaxonNameDisplayChange = (value: TaxonNameDisplayType) => {
+    appModel.data.taxonNameDisplay = value;
+    appModel.save();
+  };
+
   return (
     <Page id="settings-menu">
       <Header title="Settings" />
@@ -124,6 +129,8 @@ const Container = () => {
         country={appModel.data.country!}
         exportDatabase={exportDatabase}
         importDatabase={importDatabase}
+        taxonNameDisplay={appModel.data.taxonNameDisplay}
+        onTaxonNameDisplayChange={onTaxonNameDisplayChange}
       />
     </Page>
   );

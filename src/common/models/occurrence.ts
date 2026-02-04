@@ -173,7 +173,7 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
     return taxon.scientificName;
   }
 
-  getSpeciesGroupIcon = () =>
+  getSpeciesGroupIcon2 = () =>
     (speciesGroupIcons as any)[this.data.taxon.taxonGroupId!];
 
   doesTaxonMatch = (taxon: Taxon) => {

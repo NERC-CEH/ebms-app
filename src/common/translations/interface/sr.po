@@ -1524,10 +1524,6 @@ msgstr ""
 "Означите било који нови налаз као „вежбу“ и искључите га из свих извештаја."
 
 # App setting label
-msgid "Show common names in guide"
-msgstr "Приказуј народне називе у упутству"
-
-# App setting label
 msgid "Use global species lists"
 msgstr "Користи глобални списак врста"
 
@@ -2133,6 +2129,22 @@ msgstr "Основни обиласци"
 # App settings labels for primary survey change
 msgid "All Surveys"
 msgstr "Сви обиласци"
+
+# App settings label for species name display preference
+msgid "Common and scientific"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Common only"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Scientific only"
+msgstr ""
+
+# App settings label for species name display preference
+msgid "Species Name Display"
+msgstr ""
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"

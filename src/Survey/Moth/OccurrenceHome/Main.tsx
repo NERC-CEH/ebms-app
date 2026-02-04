@@ -1,12 +1,11 @@
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Main, MenuAttrItem, MenuAttrItemFromModel, Attr } from '@flumens';
-import { IonIcon, IonList } from '@ionic/react';
+import { Main, MenuAttrItemFromModel, Attr } from '@flumens';
+import { IonIcon, IonItem, IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
-import mothIcon from 'common/images/moth.svg';
 import appModel from 'models/app';
 import Occurrence from 'models/occurrence';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
@@ -28,14 +27,12 @@ const EditOccurrence = ({ occurrence }: Props) => {
           <T>Details</T>
         </h3>
         <div className="rounded-list">
-          <MenuAttrItem
-            routerLink={`${baseURL}/taxon`}
-            disabled={isDisabled}
-            icon={mothIcon}
-            label="Species"
-            value={<TaxonPrettyName taxon={occurrence.data.taxon} />}
-            skipValueTranslation
-          />
+          <IonItem routerLink={`${baseURL}/taxon`} disabled={isDisabled}>
+            <TaxonPrettyName
+              taxon={occurrence.data.taxon}
+              className="text-(--form-value-color) my-2 text-right"
+            />
+          </IonItem>
           <Attr
             model={occurrence}
             input="counter"

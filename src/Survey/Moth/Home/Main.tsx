@@ -14,7 +14,6 @@ import {
   IonList,
   IonButton,
   IonIcon,
-  IonLabel,
   NavContext,
   IonItemSliding,
   IonItem,
@@ -26,6 +25,7 @@ import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import { getUnknownSpecies } from 'Survey/Moth/config';
 import IncrementalButton from 'Survey/common/IncrementalButton';
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 import {
   speciesOccAddedTimeSort,
@@ -148,8 +148,6 @@ const HomeMain = ({
   const getSpeciesEntry = ([id, species]: any) => {
     const { taxon } = species;
 
-    const speciesName = taxon[taxon.foundInName];
-
     const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
 
     const isShallow = !sample.occurrences.filter(matchingTaxon).length;
@@ -171,7 +169,9 @@ const HomeMain = ({
             value={species.count}
             disabled={isDisabled}
           />
-          <IonLabel>{speciesName}</IonLabel>
+          <div className="my-2 mx-3">
+            <TaxonPrettyName taxon={taxon} />
+          </div>
         </IonItem>
         {!isDisabled && (
           <IonItemOptions side="end">

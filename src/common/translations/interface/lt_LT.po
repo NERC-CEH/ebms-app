@@ -1517,10 +1517,6 @@ msgid "Mark any new records as 'training' and exclude from all reports."
 msgstr "Pažymėti naujus įrašus 'testavimui' ir nerodyti jokiuose reportuose."
 
 # App setting label
-msgid "Show common names in guide"
-msgstr "Rodyti bendrinius rūšių pavadinimus gide"
-
-# App setting label
 msgid "Use global species lists"
 msgstr "Naudoti pasaulinį rūšių sąrašą"
 
@@ -2127,6 +2123,22 @@ msgstr "Pagrindinis stebėjimas"
 # App settings labels for primary survey change
 msgid "All Surveys"
 msgstr "Visi stebėjimai"
+
+# App settings label for species name display preference
+msgid "Common and scientific"
+msgstr "Lietuviški ir lotyniški"
+
+# App settings label for species name display preference
+msgid "Common only"
+msgstr "Tik lietuviški"
+
+# App settings label for species name display preference
+msgid "Scientific only"
+msgstr "Tik lotyniški"
+
+# App settings label for species name display preference
+msgid "Species Name Display"
+msgstr "Rūšių pavadinimų rodymas"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
