@@ -48,9 +48,7 @@ export async function fetchSpeciesReport(): Promise<Species[]> {
   try {
     const { data } = await axios.post<DTO>(url, formData);
 
-    if (!data.aggregations) return [];
-
-    const isValid = dtoSchema.safeParse(data.aggregations).success;
+    const isValid = dtoSchema.safeParse(data).success;
     if (!isValid) throw new Error('Invalid server response.');
 
     return data.aggregations.bySpecies.buckets.map(bucket => ({
@@ -109,15 +107,12 @@ export async function fetchUserSpeciesReport(
     }),
   };
 
-  const response = await axios<DTO>(options);
+  const { data } = await axios<DTO>(options);
 
-  if (!response.data.aggregations) return [];
-
-  const isValid = dtoSchema.safeParse(response.data.aggregations).success;
-
+  const isValid = dtoSchema.safeParse(data).success;
   if (!isValid) throw new Error('Invalid server response.');
 
-  return response.data.aggregations.bySpecies.buckets.map(bucket => ({
+  return data.aggregations.bySpecies.buckets.map(bucket => ({
     scientificName: bucket.key,
     count: bucket.doc_count,
     groupId: bucket.groupId ? bucket.groupId.value : undefined,

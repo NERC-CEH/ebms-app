@@ -125,9 +125,9 @@ const SelectCountry = ({ hideHeader }: Props) => {
       {!hideHeader && <Header title="Country" />}
 
       <Main>
-        <IonList>
+        <IonList className="my-10!">
           {hideHeader && (
-            <div className="mx-auto my-10 flex flex-col items-center text-primary-900">
+            <div className="mx-auto flex flex-col items-center text-primary-900">
               <IonIcon icon={flagOutline} className="size-10" />
               <h1>
                 <T>Select your country</T>

@@ -4,6 +4,7 @@
 	"webDir": "build",
 	"packageClassList": [
 		"BackgroundGeolocation",
+		"InAppReviewPlugin",
 		"CapacitorSQLitePlugin",
 		"AppPlugin",
 		"CAPCameraPlugin",

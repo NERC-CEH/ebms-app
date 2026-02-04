@@ -179,7 +179,7 @@ const MenuMain = ({
               <T>Primary Survey</T>
             </IonLabel>
             <IonIcon icon={addCircleOutline} size="small" slot="start" />
-            <IonLabel slot="end">
+            <IonLabel slot="end" className="max-w-28 truncate">
               <T>{primarySurveyLabel}</T>
             </IonLabel>
           </IonItem>

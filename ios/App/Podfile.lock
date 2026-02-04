@@ -1,5 +1,5 @@
 PODS:
-  - Capacitor (8.0.1):
+  - Capacitor (8.0.2):
     - CapacitorCordova
   - CapacitorApp (8.0.0):
     - Capacitor
@@ -10,11 +10,13 @@ PODS:
     - Capacitor
   - CapacitorCommunityBackgroundGeolocation (1.2.26):
     - Capacitor
+  - CapacitorCommunityInAppReview (8.0.0):
+    - Capacitor
   - CapacitorCommunitySqlite (8.0.0):
     - Capacitor
     - SQLCipher
     - ZIPFoundation
-  - CapacitorCordova (8.0.1)
+  - CapacitorCordova (8.0.2)
   - CapacitorDevice (8.0.0):
     - Capacitor
   - CapacitorFilesystem (8.1.0):
@@ -55,6 +57,7 @@ DEPENDENCIES:
   - CapacitorBlobWriter (from `../../node_modules/capacitor-blob-writer`)
   - "CapacitorCamera (from `../../node_modules/@capacitor/camera`)"
   - "CapacitorCommunityBackgroundGeolocation (from `../../node_modules/@capacitor-community/background-geolocation`)"
+  - "CapacitorCommunityInAppReview (from `../../node_modules/@capacitor-community/in-app-review`)"
   - "CapacitorCommunitySqlite (from `../../node_modules/@capacitor-community/sqlite`)"
   - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
   - "CapacitorDevice (from `../../node_modules/@capacitor/device`)"
@@ -87,6 +90,8 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/camera"
   CapacitorCommunityBackgroundGeolocation:
     :path: "../../node_modules/@capacitor-community/background-geolocation"
+  CapacitorCommunityInAppReview:
+    :path: "../../node_modules/@capacitor-community/in-app-review"
   CapacitorCommunitySqlite:
     :path: "../../node_modules/@capacitor-community/sqlite"
   CapacitorCordova:
@@ -113,13 +118,14 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/status-bar"
 
 SPEC CHECKSUMS:
-  Capacitor: 2d8b1a05870ddb600b0e1e32b83fcf0890c244e1
+  Capacitor: cfc1ce4a70dbc19fdc4e66e17808937088029752
   CapacitorApp: cfa0120a1f3a6f69d4d37d3041782aa5c5167d0b
   CapacitorBlobWriter: 110eeaf80611f19bf01a8a05ff3672149ed0baad
   CapacitorCamera: 05ac5bd4499ed4b8cf5358d1b4a874b385de7b4d
   CapacitorCommunityBackgroundGeolocation: 64561a9463d1decd1b58349a5b999327e24bf9ed
+  CapacitorCommunityInAppReview: 2a4296ea3e7e4799a87340bd1161c173bd22f3bd
   CapacitorCommunitySqlite: 618bf60537d8a455c65abc39af94d1e735cb6fe3
-  CapacitorCordova: 0d65b9bb74e995dcecb9463f34f1af2aba6f955c
+  CapacitorCordova: 921bdb690ebe82421b24fce45552fd3dea2ae43a
   CapacitorDevice: 56baac70d6493c42756676d521e99eea5cc83e71
   CapacitorFilesystem: 57c128a5ea9875aa7bb54eb7431e63d7721bedd4
   CapacitorGeolocation: a8381371f7b460e6be569576557285e70f0c9d6c
@@ -136,6 +142,6 @@ SPEC CHECKSUMS:
   SQLCipher: eb79c64049cb002b4e9fcb30edb7979bf4706dfc
   ZIPFoundation: dfd3d681c4053ff7e2f7350bc4e53b5dba3f5351
 
-PODFILE CHECKSUM: 62c868ce1511cd00059fd2c5dad978b3e8af4f31
+PODFILE CHECKSUM: 0198c93d12fd4934f41a416ac3bde46c06e77e40
 
 COCOAPODS: 1.16.2
