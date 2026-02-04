@@ -28,28 +28,12 @@
       --border-color: var(--ion-color-medium-shade);
 
       margin-top: 5px;
-
-      .label {
-        background: none;
-        height: 100%;
-      }
     }
 
     div {
       background-size: cover;
       width: 50vw;
       height: 50vw;
-    }
-
-    .label {
-      position: absolute;
-      bottom: -1px;
-      border: 0;
-      background: #00000099;
-      padding: 7px 15px;
-      width: 100%;
-      color: white;
-      font-size: 14px;
     }
   }
 }

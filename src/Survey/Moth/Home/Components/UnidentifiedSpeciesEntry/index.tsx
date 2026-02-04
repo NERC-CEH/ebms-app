@@ -101,11 +101,7 @@ const UnidentifiedSpeciesEntry = ({
     : 'solid';
 
   return (
-    <IonItemSliding
-      className="species-list-item unknown"
-      disabled={identifying}
-      key={occ.cid}
-    >
+    <IonItemSliding className="unknown" disabled={identifying} key={occ.cid}>
       <IonItem detail={!identifying} onClick={navigateToSpeciesOccurrence}>
         {getProfilePhoto()}
 

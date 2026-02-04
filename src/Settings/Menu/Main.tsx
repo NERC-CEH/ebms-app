@@ -3,7 +3,6 @@ import {
   warningOutline,
   flameOutline,
   schoolOutline,
-  flagOutline,
   globeOutline,
   shareOutline,
   addCircleOutline,
@@ -11,6 +10,7 @@ import {
   trashBinOutline,
   cloudDownloadOutline,
   cloudUploadOutline,
+  languageOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Main, useAlert, InfoMessage, Toggle } from '@flumens';
@@ -116,7 +116,6 @@ type Props = {
   useTraining: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;
-  showCommonNamesInGuide: boolean;
   isLoggedIn: boolean;
   deleteUser: any;
   primarySurvey?: string;
@@ -137,7 +136,6 @@ const MenuMain = ({
   primarySurvey,
   language,
   country,
-  showCommonNamesInGuide,
   exportDatabase,
   importDatabase,
 }: Props) => {
@@ -152,8 +150,6 @@ const MenuMain = ({
     onToggle('sendAnalytics', checked);
   const onUseExperiments = (checked: boolean) =>
     onToggle('useExperiments', checked);
-  const onShowCommonNamesInGuide = (checked: boolean) =>
-    onToggle('showCommonNamesInGuide', checked);
   const onClearCacheDialog = () => clearCacheDialog(clearCache, alert);
   const onTrainingToggle = (checked: boolean) =>
     onToggle('useTraining', checked);
@@ -200,7 +196,7 @@ const MenuMain = ({
             <IonLabel>
               <T>Language</T>
             </IonLabel>
-            <IonIcon icon={flagOutline} size="small" slot="start" />
+            <IonIcon icon={languageOutline} size="small" slot="start" />
             <IonLabel slot="end">{languageLabel}</IonLabel>
           </IonItem>
           <IonItem routerLink="/settings/country" detail>
@@ -212,12 +208,7 @@ const MenuMain = ({
               <T>{countryLabel}</T>
             </IonLabel>
           </IonItem>
-          <Toggle
-            prefix={<IonIcon src={butterflyIcon} className="size-6" />}
-            label="Show common names in guide"
-            defaultSelected={showCommonNamesInGuide}
-            onChange={onShowCommonNamesInGuide}
-          />
+
           <Toggle
             prefix={<IonIcon src={schoolOutline} className="size-6" />}
             label="Training Mode"

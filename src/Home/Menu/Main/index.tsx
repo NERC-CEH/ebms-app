@@ -38,13 +38,6 @@ const MenuMain = ({
 }: Props) => {
   const lang = appModel.data.language;
 
-  let userName = `${user.firstName} ${user.lastName}`;
-  if (!user.firstName && !user.lastName) {
-    // MIGRATION
-    // backwards compatible until everyone migrates to JWT auth
-    userName = `${user.firstname} ${user.secondname}`;
-  }
-
   const isNotVerified = user.verified === false; // verified is undefined in old versions
   const userEmail = user.email;
 
@@ -60,9 +53,13 @@ const MenuMain = ({
           {isLoggedIn && (
             <IonItem detail id="logout-button" onClick={logOut}>
               <IonIcon icon={exitOutline} size="small" slot="start" />
-              <T>Logout</T>
-              {': '}
-              {userName}
+              <div className="truncate">
+                <T>Logout</T>
+                {': '}
+                <span className="ml-2">
+                  {user.firstName} {user.lastName}
+                </span>
+              </div>
             </IonItem>
           )}
 

@@ -97,15 +97,10 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
         </InfoBackgroundMessage>
       );
 
-    const { showCommonNamesInGuide } = appModel.data;
-
     const getSpeciesElement = (sp: SpeciesType) => {
       const { id, taxon, commonName } = sp;
 
-      let label = taxon;
-      if (showCommonNamesInGuide) {
-        label = commonName || label; // might not have translation
-      }
+      const label = commonName || taxon; // might not have translation
 
       const onClick = () => showSpeciesModal(id!);
 
@@ -122,7 +117,9 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
               backgroundImage: `url('/images/${id}_thumbnail.jpg')`,
             }}
           >
-            <span className="label">{label}</span>
+            <span className="absolute -bottom-px border-0 bg-black/70 px-3.75 py-1.75 w-full text-white text-sm font-semibold">
+              {label}
+            </span>
           </div>
         </IonCol>
       );

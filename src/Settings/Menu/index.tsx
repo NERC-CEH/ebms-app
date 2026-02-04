@@ -118,7 +118,6 @@ const Container = () => {
         useExperiments={appModel.data.useExperiments}
         sendAnalytics={appModel.data.sendAnalytics}
         primarySurvey={appModel.data.primarySurvey}
-        showCommonNamesInGuide={appModel.data.showCommonNamesInGuide}
         clearCache={clearCacheWrap}
         onToggle={onToggle}
         language={appModel.data.language!}
