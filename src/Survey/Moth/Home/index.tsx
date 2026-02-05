@@ -14,7 +14,6 @@ import {
   useSample,
 } from '@flumens';
 import { NavContext, isPlatform } from '@ionic/react';
-import { usePromptImageSource } from 'common/Components/PhotoPicker';
 import CONFIG from 'common/config';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
@@ -76,8 +75,6 @@ const HomeController = () => {
 
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
-
-  const promptImageSource = usePromptImageSource();
 
   if (!sample) return null;
 
@@ -264,17 +261,13 @@ const HomeController = () => {
   const onIdentifyAllOccurrences = () =>
     sample.occurrences.forEach(onIdentifyOccurrence);
 
-  const photoSelect = async () => {
+  const onAddImage = async (useCamera = true) => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
     async function getImage() {
-      const shouldUseCamera = await promptImageSource();
-      const cancelled = shouldUseCamera === null;
-      if (cancelled) return [];
-
       const images = await captureImage(
-        shouldUseCamera ? { camera: true } : { multiple: true }
+        useCamera ? { camera: true } : { multiple: true }
       );
       if (!images.length) return [];
 
@@ -311,6 +304,9 @@ const HomeController = () => {
       onIdentifyOccurrence(newOccurrence);
     });
   };
+
+  const photoSelect = () => onAddImage();
+  const cameraSelect = () => onAddImage(false);
 
   const getPreviousSurvey = () => {
     const sortedSavedSamples = [...samplesCollection]
@@ -405,6 +401,7 @@ const HomeController = () => {
         deleteSpecies={deleteSpecies}
         isDisabled={isDisabled}
         onToggleSpeciesSort={toggleSpeciesSort}
+        cameraSelect={cameraSelect}
         photoSelect={photoSelect}
         areaSurveyListSortedByTime={areaSurveyListSortedByTime}
         useImageIdentifier={useImageIdentifier}

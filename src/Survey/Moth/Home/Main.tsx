@@ -7,6 +7,7 @@ import {
   camera,
   filterOutline,
   addCircleOutline,
+  images,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Main, MenuAttrItem, useAlert, Button } from '@flumens';
@@ -85,6 +86,7 @@ function byCreateTime(occ1: Occurrence, occ2: Occurrence) {
 type Props = {
   match: any;
   sample: Sample;
+  cameraSelect: any;
   photoSelect: any;
   increaseCount: any;
   deleteSpecies: any;
@@ -105,6 +107,7 @@ const HomeMain = ({
   deleteSpecies,
   isDisabled,
   onToggleSpeciesSort,
+  cameraSelect,
   photoSelect,
   areaSurveyListSortedByTime,
   useImageIdentifier,
@@ -349,7 +352,7 @@ const HomeMain = ({
       </IonList>
 
       {!isDisabled && (
-        <div className="mx-5 my-8 flex items-center justify-center gap-8">
+        <div className="mx-5 my-8 flex items-center justify-center gap-4">
           <Button
             color="primary"
             className="py-2"
@@ -368,11 +371,26 @@ const HomeMain = ({
             )}
             onPress={
               useImageIdentifier
-                ? photoSelect
+                ? cameraSelect
                 : shownDisabledImageIdentifierAlert
             }
           >
             <IonIcon icon={camera} className="size-6" />
+          </Button>
+
+          <Button
+            color="tertiary"
+            className={clsx(
+              'shrink-0 py-2',
+              !useImageIdentifier && 'opacity-40'
+            )}
+            onPress={
+              useImageIdentifier
+                ? photoSelect
+                : shownDisabledImageIdentifierAlert
+            }
+          >
+            <IonIcon icon={images} className="size-6" />
           </Button>
         </div>
       )}
