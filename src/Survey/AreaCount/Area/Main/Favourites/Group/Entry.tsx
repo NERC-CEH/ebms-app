@@ -29,7 +29,7 @@ const Entry = ({
     <div
       onClick={onClick}
       className={twMerge(
-        'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2',
+        'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2 mb-2',
         isSelected
           ? 'border-[var(--form-value-color)] text-[var(--form-value-color)]'
           : 'border-neutral-200',
