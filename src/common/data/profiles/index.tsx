@@ -1,8 +1,13 @@
 import { autorun, observable } from 'mobx';
 import { and, eq, inArray, sql } from 'drizzle-orm';
 import { alias, QueryBuilder } from 'drizzle-orm/sqlite-core';
+import { IonIcon } from '@ionic/react';
 import { CountryCode } from 'common/config/countries';
 import { getLanguageIso } from 'common/config/languages';
+import bumblebeeIcon from 'common/images/bumblebee.svg';
+import butterflyIcon from 'common/images/butterfly.svg';
+import dragonflyIcon from 'common/images/dragonfly.svg';
+import mothIcon from 'common/images/moth.svg';
 import appModel from 'common/models/app';
 import speciesLists from 'common/models/collections/speciesLists';
 import { speciesStore } from 'common/models/store';
@@ -34,7 +39,12 @@ export type Species = {
   >;
 };
 
-const speciesWithCommonNames = observable(species);
+const speciesWithCommonNames = observable<Species>(species);
+
+const scientificNameToSpeciesMap: Record<string, Species> = {};
+speciesWithCommonNames.forEach(sp => {
+  scientificNameToSpeciesMap[sp.taxon] = sp;
+});
 
 // attach commonName field for easier access
 speciesLists.ready.then(async () => {
@@ -82,5 +92,43 @@ speciesLists.ready.then(async () => {
     }
   });
 });
+
+export const getSpeciesProfileByName = (scientificName: string) =>
+  scientificNameToSpeciesMap[scientificName];
+
+export const speciesGroupIcons = {
+  104: butterflyIcon,
+  114: mothIcon,
+  107: dragonflyIcon,
+  110: bumblebeeIcon,
+};
+
+export const getSpeciesProfileImage = ({
+  scientificName,
+  taxonGroupId,
+}: {
+  scientificName: string;
+  taxonGroupId?: number;
+}) => {
+  const profile = getSpeciesProfileByName(scientificName);
+
+  const hasImage = profile?.imageCopyright?.length;
+  if (hasImage)
+    return (
+      <img
+        src={`/images/${profile.id}_0_image.jpg`}
+        className="h-full w-full object-cover"
+      />
+    );
+
+  return (
+    <IonIcon
+      icon={
+        taxonGroupId ? (speciesGroupIcons as any)[taxonGroupId] : butterflyIcon
+      }
+      className="size-8 opacity-75"
+    />
+  );
+};
 
 export default speciesWithCommonNames;

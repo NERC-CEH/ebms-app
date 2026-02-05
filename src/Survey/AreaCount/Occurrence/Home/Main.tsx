@@ -9,6 +9,7 @@ import { useRouteMatch } from 'react-router';
 import { Main, MenuAttrItem } from '@flumens';
 import { IonList, IonIcon, IonItem } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
+import { getSpeciesProfileImage } from 'common/data/profiles';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
@@ -56,7 +57,14 @@ const EditOccurrence = ({ subSample, occurrence, isDisabled }: Props) => {
         </h3>
         <div className="rounded-list">
           {!isPreciseSurvey && (
-            <IonItem routerLink={`${baseURL}/taxon`} disabled={isDisabled}>
+            <IonItem
+              routerLink={`${baseURL}/taxon`}
+              disabled={isDisabled}
+              className="[--padding-start:5px]"
+            >
+              <div className="list-avatar my-1 border-neutral-200 border">
+                {getSpeciesProfileImage(occurrence.data.taxon)}
+              </div>
               <TaxonPrettyName
                 taxon={occurrence.data.taxon}
                 className="text-(--form-value-color) my-2 text-right"

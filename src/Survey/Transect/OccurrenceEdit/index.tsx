@@ -11,6 +11,7 @@ import {
 } from '@flumens';
 import { IonIcon, IonItem, IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
+import { getSpeciesProfileImage } from 'common/data/profiles';
 import numberIcon from 'common/images/number.svg';
 import Occurrence from 'models/occurrence';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
@@ -37,7 +38,14 @@ const TransectHomeController = () => {
       <Main>
         <IonList lines="full">
           <div className="rounded-list">
-            <IonItem routerLink={`${url}/taxon`} disabled={isDisabled}>
+            <IonItem
+              routerLink={`${url}/taxon`}
+              disabled={isDisabled}
+              className="[--padding-start:5px]"
+            >
+              <div className="list-avatar my-1 border-neutral-200 border">
+                {getSpeciesProfileImage(occurrence.data.taxon)}
+              </div>
               <TaxonPrettyName
                 taxon={occurrence.data.taxon}
                 className="text-(--form-value-color) my-2 text-right"

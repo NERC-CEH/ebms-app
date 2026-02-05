@@ -7,10 +7,6 @@ import {
 } from '@flumens';
 import config from 'common/config';
 import speciesGroups from 'common/data/groups';
-import bumblebeeIcon from 'common/images/bumblebee.svg';
-import butterflyIcon from 'common/images/butterfly.svg';
-import dragonflyIcon from 'common/images/dragonfly.svg';
-import mothIcon from 'common/images/moth.svg';
 import { Suggestion } from 'common/services/waarneming';
 import { PaintedLadyAttrs } from 'Survey/AreaCount/configSpecies';
 import { MachineInvolvement } from 'Survey/Moth/config';
@@ -19,13 +15,6 @@ import Media from './media';
 import Sample from './sample';
 
 export const DRAGONFLY_GROUP = speciesGroups.dragonflies.id;
-
-export const speciesGroupIcons = {
-  104: butterflyIcon,
-  114: mothIcon,
-  107: dragonflyIcon,
-  110: bumblebeeIcon,
-};
 
 const PAINTED_LADY_OCCURRENCE = 432422;
 
@@ -172,9 +161,6 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
 
     return taxon.scientificName;
   }
-
-  getSpeciesGroupIcon2 = () =>
-    (speciesGroupIcons as any)[this.data.taxon.taxonGroupId!];
 
   doesTaxonMatch = (taxon: Taxon) => {
     if (this.data.taxon.warehouseId === taxon.warehouseId) return true;

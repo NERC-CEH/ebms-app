@@ -1,7 +1,8 @@
 import type { MouseEvent, ReactNode } from 'react';
+import clsx from 'clsx';
 import { Trans as T } from 'react-i18next';
-import { IonItem } from '@ionic/react';
 import groups from 'common/data/groups';
+import { getSpeciesProfileImage } from 'common/data/profiles';
 import { getTaxonName, type SuggestionResult } from '../types';
 import './styles.scss';
 
@@ -77,15 +78,23 @@ const Species = ({ species, searchPhrase, onSelect }: SpeciesProps) => {
     onClick(e, species, onSelect);
 
   return (
-    <IonItem
-      className={`search-result ${species.isRecorded ? 'recorded' : ''}`}
+    <div
+      className={clsx(
+        'search-result flex relative items-center',
+        species.isRecorded && 'opacity-50'
+      )}
       onClick={onSelectSpecies}
     >
-      <div className="taxon">{prettyName}</div>
+      <div className="list-avatar m-1 border-neutral-200 border">
+        {getSpeciesProfileImage(species)}
+      </div>
+      <div className="my-0.5 overflow-visible font-normal leading-5 whitespace-normal ml-2">
+        {prettyName}
+      </div>
       <div className="group">
         <T>{speciesGroup}</T>
       </div>
-    </IonItem>
+    </div>
   );
 };
 

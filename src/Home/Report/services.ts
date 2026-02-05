@@ -8,7 +8,7 @@ import userModel from 'models/user';
 export type Species = {
   scientificName: string;
   count: number;
-  groupId?: number;
+  taxonGroupId?: number;
 };
 
 /* eslint-disable @typescript-eslint/naming-convention */
@@ -54,7 +54,7 @@ export async function fetchSpeciesReport(): Promise<Species[]> {
     return data.aggregations.bySpecies.buckets.map(bucket => ({
       scientificName: bucket.key,
       count: bucket.doc_count,
-      groupId: bucket.groupId ? bucket.groupId.value : undefined,
+      taxonGroupId: bucket.groupId ? bucket.groupId.value : undefined,
     }));
   } catch (error: unknown) {
     if (isAxiosNetworkError(error as AxiosError))
@@ -115,6 +115,6 @@ export async function fetchUserSpeciesReport(
   return data.aggregations.bySpecies.buckets.map(bucket => ({
     scientificName: bucket.key,
     count: bucket.doc_count,
-    groupId: bucket.groupId ? bucket.groupId.value : undefined,
+    taxonGroupId: bucket.groupId ? bucket.groupId.value : undefined,
   }));
 }

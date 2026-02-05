@@ -12,6 +12,7 @@ import {
   IonItemSliding,
   IonIcon,
 } from '@ionic/react';
+import { getSpeciesProfileImage } from 'common/data/profiles';
 import Sample from 'models/sample';
 import GridRefValue from 'Components/GridRefValue';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
@@ -88,7 +89,14 @@ const EditOccurrence = ({
       <IonList lines="full">
         {!firstSubSample.isPreciseSingleSpeciesSurvey() && (
           <div className="rounded-list">
-            <IonItem routerLink={`${match.url}/taxon`} disabled={isDisabled}>
+            <IonItem
+              routerLink={`${match.url}/taxon`}
+              disabled={isDisabled}
+              className="[--padding-start:5px]"
+            >
+              <div className="list-avatar my-1 border-neutral-200 border">
+                {getSpeciesProfileImage(occ.data.taxon)}
+              </div>
               <TaxonPrettyName
                 taxon={occ.data.taxon}
                 className="text-(--form-value-color) my-2 text-right"

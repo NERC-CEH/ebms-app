@@ -1,77 +1,15 @@
-#suggestions .empty {
-  margin: 50px auto 0;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 250px;
-  --border-width: 0;
-  --background: var(--ion-color-light);
-  --color: var(--ion-color-light-contrast);
-  span {
-    margin: 0 auto;
-    padding: 15px;
-    font-weight: 200;
-  }
-}
-
-#suggestions .search-result {
-  position: relative;
-  padding: 8px 8px 8px 15px;
-  overflow: hidden;
-  font-size: 16px;
-  --background: none;
-  padding: 0;
-
-  &.recorded {
-    opacity: 0.5;
-  }
-
+.search-result {
   &:nth-child(odd) {
     border-radius: 10px;
     background-color: #fff;
   }
 
   &:hover {
+    cursor: pointer;
     background-color: var(--ion-color-light);
   }
 
-  button {
-    right: 0;
-    border: none;
-
-    background-color: transparent;
-    width: 20%;
-    max-width: 80px;
-
-    //left line
-    &:after {
-      position: absolute;
-      bottom: 9px;
-      left: 0;
-      background: var(--ion-color-light-shade);
-      width: 1px;
-      height: 63%;
-      content: '';
-    }
-  }
-
-  button.edit-shortcut {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0 20px;
-    height: 47px;
-  }
-
-  div.taxon {
-    margin-top: 3px;
-    margin-bottom: 3px;
-    overflow: visible;
-    font-weight: normal;
-    line-height: 20px;
-    white-space: normal;
-  }
-
-  div.group {
+  .group {
     position: absolute;
     right: 14px;
     bottom: 4px;
@@ -84,17 +22,5 @@
     span.group {
       right: 90px;
     }
-  }
-
-  &.selected {
-    background-color: var(--ion-color-light-shade);
-
-    button {
-      border-left: 1px var(--ion-color-medium) solid;
-    }
-  }
-
-  &:hover {
-    cursor: pointer;
   }
 }

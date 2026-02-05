@@ -4,6 +4,7 @@ import { useRouteMatch } from 'react-router';
 import { Main, MenuAttrItemFromModel, Attr } from '@flumens';
 import { IonIcon, IonItem, IonList } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
+import { getSpeciesProfileImage } from 'common/data/profiles';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import mothOutsideBoxIcon from 'common/images/moth-outside-icon.svg';
 import appModel from 'models/app';
@@ -27,7 +28,14 @@ const EditOccurrence = ({ occurrence }: Props) => {
           <T>Details</T>
         </h3>
         <div className="rounded-list">
-          <IonItem routerLink={`${baseURL}/taxon`} disabled={isDisabled}>
+          <IonItem
+            routerLink={`${baseURL}/taxon`}
+            disabled={isDisabled}
+            className="[--padding-start:5px]"
+          >
+            <div className="list-avatar my-1 border-neutral-200 border">
+              {getSpeciesProfileImage(occurrence.data.taxon)}
+            </div>
             <TaxonPrettyName
               taxon={occurrence.data.taxon}
               className="text-(--form-value-color) my-2 text-right"
