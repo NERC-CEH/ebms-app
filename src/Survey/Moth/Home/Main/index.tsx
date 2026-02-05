@@ -33,8 +33,7 @@ import {
   speciesNameSort,
   speciesCount,
 } from 'Survey/common/taxonSortFunctions';
-import UnidentifiedSpeciesEntry from './Components/UnidentifiedSpeciesEntry';
-import './styles.scss';
+import UnidentifiedSpeciesEntry from './UnidentifiedSpeciesEntry';
 
 function useDisabledImageIdentifierAlert() {
   const alert = useAlert();

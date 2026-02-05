@@ -16,7 +16,6 @@ import mothIcon from 'common/images/moth.svg';
 import Media from 'models/media';
 import Occurrence from 'models/occurrence';
 import { useUserStatusCheck } from 'models/user';
-import './styles.scss';
 
 function useDeleteOccurrencePrompt(occ: Occurrence) {
   const alert = useAlert();
@@ -76,12 +75,19 @@ const UnidentifiedSpeciesEntry = ({
 
   const getProfilePhoto = () => {
     const photo = hasSpeciesPhoto ? (
-      <img src={hasSpeciesPhoto.getURL()} />
+      <img src={hasSpeciesPhoto.getURL()} className="size-full object-cover" />
     ) : (
-      <IonIcon icon={mothIcon} />
+      <IonIcon
+        icon={mothIcon}
+        className="w-6/12 h-full text-warning-700 mx-auto my-0"
+      />
     );
 
-    return <div className="profile-photo">{photo}</div>;
+    return (
+      <div className="bg-warning-100/60 min-w-15 max-w-15 h-12 overflow-hidden text-center">
+        {photo}
+      </div>
+    );
   };
 
   const deleteOccurrenceWrap = () => showDeleteOccurrencePrompt();
@@ -101,7 +107,11 @@ const UnidentifiedSpeciesEntry = ({
     : 'solid';
 
   return (
-    <IonItemSliding className="unknown" disabled={identifying} key={occ.cid}>
+    <IonItemSliding
+      className="species-list-item unknown"
+      disabled={identifying}
+      key={occ.cid}
+    >
       <IonItem detail={!identifying} onClick={navigateToSpeciesOccurrence}>
         {getProfilePhoto()}
 
