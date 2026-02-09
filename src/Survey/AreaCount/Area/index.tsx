@@ -2,14 +2,12 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
 import { resizeOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { device, Location, useLoader, useSample, useToast } from '@flumens';
-import { IonIcon, IonPage, isPlatform, NavContext } from '@ionic/react';
+import { device, useLoader, useSample, useToast } from '@flumens';
+import { IonIcon, IonPage, NavContext } from '@ionic/react';
 import groups from 'common/models/collections/groups';
 import GroupModel from 'common/models/group';
-import Media from 'common/models/media';
 import locations from 'models/collections/locations';
-import LocationModel, { Data } from 'models/location';
+import LocationModel from 'models/location';
 import Sample, { AreaCountLocation } from 'models/sample';
 import userModel from 'models/user';
 import Header from './Header';
@@ -62,17 +60,6 @@ const AreaController = () => {
 
   const isAreaShape = location.shape?.type === 'Polygon';
 
-  const onSelectHistoricalLocation = (selectedLoc: Location) => {
-    if (sample.isGPSRunning()) sample.stopGPS();
-
-    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
-    sample.data.location = selectedLoc as AreaCountLocation;
-    sample.save();
-    goBack();
-  };
-
-  const [isNewLocationModalOpen, setIsNewLocationModalOpen] = useState(false);
-
   const modal = useRef<HTMLIonModalElement>(null);
   const onCreateGroupLocation = () => modal.current?.present();
   const onSelectGroupLocation = (loc?: LocationModel) => {
@@ -113,26 +100,23 @@ const AreaController = () => {
   };
   useEffect(refreshLocations, []);
 
-  const onCloseLocationModal = () => setIsNewLocationModalOpen(false);
-
-  const onSaveNewLocation = async (newSiteAttrs: Data, media: Media[]) => {
+  const onSaveNewLocation = async (newLocation: LocationModel) => {
     if (!userModel.isLoggedIn() || !userModel.data.verified || !device.isOnline)
       return false;
 
     try {
       await loader.show('Please wait...');
 
-      const byId = (p: GroupModel) => p.id === sample.data.group?.id;
-      const group = groups.find(byId);
-      if (!group) throw new Error('Group was not found');
+      await newLocation.saveRemote();
 
-      const newSite = new LocationModel({
-        skipStore: true,
-        data: newSiteAttrs as any, // any - to fix Moth trap attrs
-        media,
-      });
-      await newSite.saveRemote();
-      await group.addRemoteLocation(newSite.id!);
+      if (newLocation.metadata.groupId) {
+        const byId = (p: GroupModel) => p.id === newLocation.metadata.groupId;
+        const group = groups.find(byId);
+        if (!group) throw new Error('Group was not found');
+
+        await group.addRemoteLocation(newLocation.id!);
+      }
+
       await refreshLocations();
 
       toast.success('Successfully saved a location.');
@@ -160,7 +144,6 @@ const AreaController = () => {
         isGPSTracking={isGPSTracking}
         setLocation={setLocation}
         isDisabled={isDisabled}
-        onSelectHistoricalLocation={onSelectHistoricalLocation}
         onCreateGroupLocation={onCreateGroupLocation}
         onSelectGroupLocation={onSelectGroupLocation}
         isFetchingLocations={locations.isSynchronising}
@@ -168,11 +151,8 @@ const AreaController = () => {
       <NewLocationModal
         ref={modal}
         presentingElement={presentingElement}
-        isOpen={isNewLocationModalOpen}
-        onCancel={onCloseLocationModal}
         onSave={onSaveNewLocation}
         group={sample.data.group!}
-        shape={location.shape}
       />
     </IonPage>
   );

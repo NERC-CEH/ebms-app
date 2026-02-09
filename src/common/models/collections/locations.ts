@@ -62,13 +62,15 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
     const transects = await this.fetchTransects();
     const locationList = transects.map(({ id }) => id!);
     const transectSections = await this.fetchTransectSections(locationList);
-    const groupLocations = await this.fetchGroupLocations();
+    const groupSites = await this.fetchGroupLocations();
+    const mySites = await this.fetchRemoteByType(LocationType.Site);
 
     const docs = [
+      ...mySites,
       ...mothTraps,
       ...transects,
       ...transectSections,
-      ...groupLocations,
+      ...groupSites,
     ];
 
     const models = docs.map(doc =>
@@ -107,17 +109,15 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
   private async fetchGroupLocations() {
     console.log(`📚 Collection: ${this.id} collection fetching locations`);
 
-    const transformToLocation = (
-      doc: GroupLocationData
-    ): [RemoteLocationAttributes, { groupId: any }] => {
-      const transformedDoc = {
+    const transformToLocation = (doc: GroupLocationData) => {
+      const transformedDoc: RemoteLocationAttributes = {
         id: doc.locationId,
         createdOn: doc.locationCreatedOn,
         updatedOn: doc.locationUpdatedOn,
         lat: doc.locationLat,
         lon: doc.locationLon,
         name: doc.locationName,
-        locationTypeId: LocationType.GroupSite,
+        locationTypeId: LocationType.Site,
         parentId: null,
         boundaryGeom: doc.locationBoundaryGeom,
         code: doc.locationCode,
@@ -129,7 +129,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         public: 'f',
       } as any; // any - to fix Moth trap attrs
 
-      const metadata = { groupId: doc.groupId };
+      const metadata = { groupId: doc.groupId } as any;
       return [transformedDoc, metadata];
     };
 

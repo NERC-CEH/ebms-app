@@ -5,16 +5,12 @@ import './styles.scss';
 
 type Props = { onClick: any };
 
-const FavouritesButton = ({ onClick }: Props) => (
+const SitesButton = ({ onClick }: Props) => (
   <MapContainer.Control>
-    <button
-      onClick={onClick}
-      className="map-control-favourites"
-      aria-label="Favourites"
-    >
+    <button onClick={onClick} className="map-control-sites" aria-label="Sites">
       <IonIcon slot="icon-only" icon={starOutline} className="size-6" />
     </button>
   </MapContainer.Control>
 );
 
-export default FavouritesButton;
+export default SitesButton;

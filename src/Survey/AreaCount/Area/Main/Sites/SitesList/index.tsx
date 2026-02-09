@@ -1,22 +1,26 @@
 import { observer } from 'mobx-react';
 import { useTranslation } from 'react-i18next';
 import { IonList } from '@ionic/react';
-import locations, { byType } from 'models/collections/locations';
-import Location, { LocationType } from 'models/location';
+import Location from 'models/location';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import Entry from './Entry';
+import Site from './Site';
 
 type Props = {
+  locations: Location[];
   onSelect: any;
-  groupId: string | number;
   selectedLocationId?: string | number;
 };
 
-const GroupLocations = ({ onSelect, groupId, selectedLocationId }: Props) => {
+const GroupSites = ({
+  locations,
+  onSelect,
+
+  selectedLocationId,
+}: Props) => {
   const { t } = useTranslation();
 
   const getEntry = (location: Location) => (
-    <Entry
+    <Site
       key={location.cid}
       latitude={location.data.location.latitude}
       longitude={location.data.location.longitude}
@@ -26,16 +30,11 @@ const GroupLocations = ({ onSelect, groupId, selectedLocationId }: Props) => {
     />
   );
 
-  const byGroup = (location: Location) => location.metadata.groupId === groupId;
+  const entries = locations.map(getEntry);
 
-  const entries = locations
-    .filter(byType(LocationType.GroupSite))
-    .filter(byGroup)
-    .map(getEntry);
-
-  const noLocationEntry = (
-    <Entry
-      name={t('No location')}
+  const emptyOption = (
+    <Site
+      name={t('No site')}
       onClick={() => onSelect()}
       isSelected={!selectedLocationId}
       className="h-12 opacity-60"
@@ -46,7 +45,7 @@ const GroupLocations = ({ onSelect, groupId, selectedLocationId }: Props) => {
     <IonList className="mt-2 flex flex-col gap-2">
       {entries.length ? (
         <>
-          {noLocationEntry}
+          {emptyOption}
           {entries}
         </>
       ) : (
@@ -56,4 +55,4 @@ const GroupLocations = ({ onSelect, groupId, selectedLocationId }: Props) => {
   );
 };
 
-export default observer(GroupLocations);
+export default observer(GroupSites);

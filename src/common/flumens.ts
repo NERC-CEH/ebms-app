@@ -72,6 +72,10 @@ export { default as Header } from '@flumens/ionic/dist/components/Header';
 export { default as Collapse } from '@flumens/ionic/dist/components/Collapse';
 export { default as Attr } from '@flumens/ionic/dist/components/Attr';
 export {
+  default as ModalNav,
+  useModalNav,
+} from '@flumens/ionic/dist/components/ModalNav';
+export {
   default as AttrPage,
   type Props as PageProps,
   type AttrPropsExtended,
@@ -149,6 +153,12 @@ export {
 } from '@flumens/tailwind/dist/components/Block/Context';
 export { default as UserFeedbackRequest } from '@flumens/tailwind/dist/components/UserFeedbackRequest';
 export { default as InfoBackgroundMessage } from '@flumens/tailwind/dist/components/InfoBackgroundMessage';
+export {
+  type ChoiceInputConf,
+  type NumberInputConf,
+  type TextInputConf,
+  type YesNoInputConf,
+} from '@flumens/tailwind/dist/Survey';
 
 // UTILS
 export * from '@flumens/utils/dist/image';

@@ -14,9 +14,9 @@ import config from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'common/models/app';
 import Sample, { AreaCountLocation } from 'models/sample';
-import Favourites from './Favourites';
 import FinishPointMarker from './FinishPointMarker';
 import Records from './Records';
+import Sites from './Sites';
 import StartingPointMarker from './StartingPointMarker';
 
 const useDeletePropt = () => {
@@ -48,7 +48,6 @@ type Props = {
   setLocation: any;
   isGPSTracking: boolean;
   isDisabled?: boolean;
-  onSelectHistoricalLocation: any;
   onCreateGroupLocation: any;
   onSelectGroupLocation: any;
   isFetchingLocations?: boolean;
@@ -59,7 +58,6 @@ const AreaAttr = ({
   setLocation,
   isGPSTracking,
   isDisabled,
-  onSelectHistoricalLocation,
   onCreateGroupLocation,
   onSelectGroupLocation,
   isFetchingLocations,
@@ -76,14 +74,10 @@ const AreaAttr = ({
     }
   }
 
-  const [mapCenter, setMapCenter] = useState<any>([1, 1]);
-  const updateMapCentre = ({ viewState }: any) =>
-    setMapCenter([viewState.latitude, viewState.longitude]);
-
   const groupId = sample.data.group?.id;
   const hasGroup = !!groupId && !isDisabled;
   const [showPastLocations, setShowPastLocations] = useState(hasGroup);
-  const toggleFavourites = () => setShowPastLocations(!showPastLocations);
+  const toggleSites = () => setShowPastLocations(!showPastLocations);
 
   const shouldDeleteShape = useDeletePropt();
 
@@ -118,10 +112,9 @@ const AreaAttr = ({
         mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
         maxPitch={0}
         initialViewState={initialViewState}
-        onMoveEnd={updateMapCentre}
         maxZoom={19}
       >
-        {!isDisabled && <Favourites.Control onClick={toggleFavourites} />}
+        {!isDisabled && <Sites.Control onClick={toggleSites} />}
 
         <GeolocateButton />
 
@@ -152,14 +145,10 @@ const AreaAttr = ({
         <Records sample={sample} />
       </MapContainer>
 
-      <Favourites
+      <Sites
         isOpen={showPastLocations}
-        mapLocation={mapCenter}
         onClose={() => setShowPastLocations(false)}
-        onSelectHistoricalLocation={onSelectHistoricalLocation}
-        currentLocation={location}
         groupId={groupId}
-        isGPSTracking={isGPSTracking}
         onCreateGroupLocation={onCreateGroupLocation}
         onSelectGroupLocation={onSelectGroupLocation}
         selectedLocationId={selectedLocationId}

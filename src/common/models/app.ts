@@ -4,8 +4,7 @@ import { Model, ModelAttrs } from '@flumens';
 import { CountryCode } from 'common/config/countries';
 import { LanguageCode } from 'common/config/languages';
 import groups from 'common/data/groups';
-import { mainStore } from '../store';
-import PastLocationsExtension from './pastLocExt';
+import { mainStore } from './store';
 
 export type SurveyDraftKeys = {
   'draftId:precise-area'?: string;
@@ -98,8 +97,6 @@ export class AppModel extends Model<Data> {
 
   constructor(options: any) {
     super({ ...options, data: { ...defaults, ...options.data } });
-
-    Object.assign(this, PastLocationsExtension);
   }
 
   toggleTaxonFilter(filter: any) {

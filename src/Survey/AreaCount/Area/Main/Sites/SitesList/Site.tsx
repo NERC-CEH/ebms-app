@@ -12,7 +12,7 @@ type Props = {
   className?: string;
 };
 
-const Entry = ({
+const Site = ({
   name,
   latitude,
   longitude,
@@ -67,4 +67,4 @@ const Entry = ({
   );
 };
 
-export default Entry;
+export default Site;
