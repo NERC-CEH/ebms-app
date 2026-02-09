@@ -20,6 +20,7 @@ import config from 'common/config';
 import mothTrap from 'common/images/moth-inside-icon.svg';
 import numberIcon from 'common/images/number.svg';
 import userModel from 'models/user';
+import { responsibleAttr } from 'Survey/AreaCount/Area/NewLocationModal/config';
 import Media from './media';
 import { locationsStore } from './store';
 import { getLocalAttributes } from './utils';
@@ -137,7 +138,11 @@ export type MothTrapAttrs = {
   };
 };
 
-export type Data = LocationData & MothTrapAttrs & ModelAttrs;
+type SiteAttrs = {
+  [responsibleAttr.id]: string;
+};
+
+export type Data = LocationData & ModelAttrs & MothTrapAttrs & SiteAttrs;
 
 const surveyConfig = {
   location: {

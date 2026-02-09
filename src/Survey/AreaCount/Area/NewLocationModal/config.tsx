@@ -1,9 +1,16 @@
+import {
+  ChoiceInputConf,
+  NumberInputConf,
+  TextInputConf,
+  YesNoInputConf,
+} from '@flumens';
+
 export const siteNameAttr = {
   id: 'name',
   type: 'textInput',
   title: 'Site name',
   container: 'inline',
-} as const;
+} as const satisfies TextInputConf;
 
 export const OTHER_SITE_SIZE_VALUE = '23733';
 
@@ -19,7 +26,7 @@ export const siteAreaAttr = {
     { title: '5 x 100 m', dataName: '23732' },
     { title: 'Other', dataName: OTHER_SITE_SIZE_VALUE },
   ],
-} as const;
+} as const satisfies ChoiceInputConf;
 
 export const habitatAttr = {
   id: 'locAttr:340',
@@ -50,7 +57,7 @@ export const habitatAttr = {
     { title: 'Desert / barren', dataName: '23611' },
     { title: 'Other', dataName: '23613' },
   ],
-} as const;
+} as const satisfies ChoiceInputConf;
 
 export const grainsNumberAttr = {
   id: 'locAttr:341',
@@ -59,7 +66,7 @@ export const grainsNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const customAreaSizeAttr = {
   id: 'locAttr:159',
@@ -69,7 +76,7 @@ export const customAreaSizeAttr = {
   placeholder: '0',
   suffix: 'm²',
   validation: { min: 0 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const vegetablesNumberAttr = {
   id: 'locAttr:342',
@@ -78,7 +85,7 @@ export const vegetablesNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const rapeseedNumberAttr = {
   id: 'locAttr:343',
@@ -87,7 +94,7 @@ export const rapeseedNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const cornNumberAttr = {
   id: 'locAttr:344',
@@ -96,7 +103,7 @@ export const cornNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const legumesNumberAttr = {
   id: 'locAttr:345',
@@ -105,7 +112,7 @@ export const legumesNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const croppingNumberAttr = {
   id: 'locAttr:346',
@@ -114,7 +121,7 @@ export const croppingNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const fallowNumberAttr = {
   id: 'locAttr:347',
@@ -123,7 +130,7 @@ export const fallowNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const managedGrasslandNumberAttr = {
   id: 'locAttr:348',
@@ -132,7 +139,7 @@ export const managedGrasslandNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const grasslandNumberAttr = {
   id: 'locAttr:349',
@@ -141,7 +148,7 @@ export const grasslandNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const orchardNumberAttr = {
   id: 'locAttr:350',
@@ -150,7 +157,7 @@ export const orchardNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const orchardManagedNumberAttr = {
   id: 'locAttr:351',
@@ -159,7 +166,7 @@ export const orchardManagedNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const numberAttr = {
   id: 'locAttr:352',
@@ -168,7 +175,7 @@ export const numberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const wastelandNumberAttr = {
   id: 'locAttr:353',
@@ -177,7 +184,7 @@ export const wastelandNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const woodlandNumberAttr = {
   id: 'locAttr:354',
@@ -186,7 +193,7 @@ export const woodlandNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const forestNumberAttr = {
   id: 'locAttr:355',
@@ -195,7 +202,7 @@ export const forestNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const plantationNumberAttr = {
   id: 'locAttr:356',
@@ -204,7 +211,7 @@ export const plantationNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const gardenNumberAttr = {
   id: 'locAttr:357',
@@ -213,7 +220,7 @@ export const gardenNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const gardensNumberAttr = {
   id: 'locAttr:358',
@@ -222,7 +229,7 @@ export const gardensNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const buildingsNumberAttr = {
   id: 'locAttr:359',
@@ -231,7 +238,7 @@ export const buildingsNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const waterNumberAttr = {
   id: 'locAttr:360',
@@ -240,7 +247,7 @@ export const waterNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const riverNumberAttr = {
   id: 'locAttr:361',
@@ -249,7 +256,7 @@ export const riverNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const wetlandNumberAttr = {
   id: 'locAttr:362',
@@ -258,7 +265,7 @@ export const wetlandNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const landNumberAttr = {
   id: 'locAttr:363',
@@ -267,7 +274,7 @@ export const landNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const landscapeFeaturesAttr = {
   id: 'locAttr:364',
@@ -297,7 +304,7 @@ export const landscapeFeaturesAttr = {
     { title: 'Dead tree, stumps or wood', dataName: '23639' },
     { title: 'Other', dataName: '23641' },
   ],
-} as const;
+} as const satisfies ChoiceInputConf;
 
 export const otherLandscapeFeaturesAttr = {
   id: 'locAttr:375',
@@ -305,7 +312,7 @@ export const otherLandscapeFeaturesAttr = {
   title: 'Other landscape feature details',
   appearance: 'multiline',
   container: 'inline',
-} as const;
+} as const satisfies TextInputConf;
 
 export const treeNumberAttr = {
   id: 'locAttr:365',
@@ -314,7 +321,7 @@ export const treeNumberAttr = {
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const grassProportionAttr = {
   id: 'locAttr:366',
@@ -324,7 +331,7 @@ export const grassProportionAttr = {
   placeholder: '0',
   suffix: '%',
   validation: { min: 0, max: 100 },
-} as const;
+} as const satisfies NumberInputConf;
 
 export const grassMownAttr = {
   id: 'locAttr:367',
@@ -343,7 +350,7 @@ export const grassMownAttr = {
     { title: 'Extensive grazing (few grazers, not mowed)', dataName: '23653' },
     { title: 'Intensive grazing (not mowed)', dataName: '23655' },
   ],
-} as const;
+} as const satisfies ChoiceInputConf;
 
 export const fertilizedAttr = {
   id: 'locAttr:368',
@@ -358,7 +365,7 @@ export const fertilizedAttr = {
     { title: 'No fertilizers used', dataName: '23665' },
     { title: 'Other', dataName: '23667' },
   ],
-} as const;
+} as const satisfies ChoiceInputConf;
 
 export const otherFertilizerAttr = {
   id: 'locAttr:373',
@@ -366,7 +373,7 @@ export const otherFertilizerAttr = {
   title: 'Other fertilizer details',
   appearance: 'multiline',
   container: 'inline',
-} as const;
+} as const satisfies TextInputConf;
 
 export const pesticidesAttr = {
   id: 'locAttr:369',
@@ -381,7 +388,7 @@ export const pesticidesAttr = {
     { title: 'No pesticides applied', dataName: '23677' },
     { title: 'Other', dataName: '23679' },
   ],
-} as const;
+} as const satisfies ChoiceInputConf;
 
 export const otherPesticideAttr = {
   id: 'locAttr:374',
@@ -389,7 +396,7 @@ export const otherPesticideAttr = {
   title: 'Other pesticide details',
   appearance: 'multiline',
   container: 'inline',
-} as const;
+} as const satisfies TextInputConf;
 
 export const speciesAttr = {
   id: 'locAttr:370',
@@ -429,7 +436,7 @@ export const speciesAttr = {
     },
     { title: 'Hemp-agrimony (Eupatorium spp.)', dataName: '23711' },
   ],
-} as const;
+} as const satisfies ChoiceInputConf;
 
 export const landOwnershipAttr = {
   id: 'locAttr:371',
@@ -444,14 +451,14 @@ export const landOwnershipAttr = {
     { title: 'Prefer not to say', dataName: '23725' },
     { title: "I don't know", dataName: '23727' },
   ],
-} as const;
+} as const satisfies ChoiceInputConf;
 
 export const responsibleAttr = {
   id: 'locAttr:372',
   type: 'yesNoInput',
   title: 'Are you responsible for gardening activities at the site?',
   choices: [{ dataName: '0' }, { dataName: '1' }],
-} as const;
+} as const satisfies YesNoInputConf;
 
 export const commentAttr = {
   id: 'comment',
@@ -459,4 +466,4 @@ export const commentAttr = {
   title: 'Comments',
   appearance: 'multiline',
   container: 'inline',
-} as const;
+} as const satisfies TextInputConf;

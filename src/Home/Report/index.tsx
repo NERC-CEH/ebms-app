@@ -38,7 +38,6 @@ const Report = ({ appModel, userModel }: Props) => {
     const requests = [];
 
     let promise = fetchSpeciesReport().then(data => {
-      // eslint-disable-next-line no-param-reassign
       appModel.speciesReport.clear();
       appModel.speciesReport.push(...data);
       setSpecies([...appModel.speciesReport]);

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 /* eslint-disable camelcase */
 import bg_BG from './interface/bg_BG.po';
 import ca_ES from './interface/ca_ES.po';
