@@ -61,8 +61,8 @@ const AreaController = () => {
   const isAreaShape = location.shape?.type === 'Polygon';
 
   const modal = useRef<HTMLIonModalElement>(null);
-  const onCreateGroupLocation = () => modal.current?.present();
-  const onSelectGroupLocation = (loc?: LocationModel) => {
+  const onCreateSite = () => modal.current?.present();
+  const onSelectSite = (loc?: LocationModel) => {
     if (!sample.data.location) {
       sample.data.location = {} as any; // eslint-disable-line
     }
@@ -144,8 +144,8 @@ const AreaController = () => {
         isGPSTracking={isGPSTracking}
         setLocation={setLocation}
         isDisabled={isDisabled}
-        onCreateGroupLocation={onCreateGroupLocation}
-        onSelectGroupLocation={onSelectGroupLocation}
+        onCreateSite={onCreateSite}
+        onSelectSite={onSelectSite}
         isFetchingLocations={locations.isSynchronising}
       />
       <NewLocationModal

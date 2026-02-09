@@ -27,15 +27,15 @@ type Props = {
   onClose: any;
   groupId?: string | number;
   selectedLocationId?: string | number;
-  onCreateGroupLocation: any;
-  onSelectGroupLocation: any;
+  onCreateSite: any;
+  onSelectSite: any;
 };
 
 const Sites = ({
   isOpen,
   onClose,
-  onCreateGroupLocation,
-  onSelectGroupLocation,
+  onCreateSite,
+  onSelectSite,
   groupId,
   selectedLocationId,
 }: Props) => {
@@ -50,13 +50,13 @@ const Sites = ({
     setSegment(newSegment);
   };
 
-  const onCreateGroupLocationWrap = () => {
+  const onCreateSiteWrap = () => {
     if (!device.isOnline) {
       toast.warn("Sorry, looks like you're offline.");
       return;
     }
 
-    onCreateGroupLocation();
+    onCreateSite();
   };
 
   useIonViewWillLeave(onClose);
@@ -98,7 +98,7 @@ const Sites = ({
             </div>
 
             <HeaderButton
-              onClick={onCreateGroupLocationWrap}
+              onClick={onCreateSiteWrap}
               isInvalid={!device.isOnline}
               className="text-sm"
             >
@@ -128,14 +128,14 @@ const Sites = ({
         {segment === 'my' && (
           <SitesList
             locations={myLocations}
-            onSelect={onSelectGroupLocation}
+            onSelect={onSelectSite}
             selectedLocationId={selectedLocationId}
           />
         )}
         {segment === 'group' && hasGroup && (
           <SitesList
             locations={groupLocations}
-            onSelect={onSelectGroupLocation}
+            onSelect={onSelectSite}
             selectedLocationId={selectedLocationId}
           />
         )}

@@ -48,8 +48,8 @@ type Props = {
   setLocation: any;
   isGPSTracking: boolean;
   isDisabled?: boolean;
-  onCreateGroupLocation: any;
-  onSelectGroupLocation: any;
+  onCreateSite: any;
+  onSelectSite: any;
   isFetchingLocations?: boolean;
 };
 
@@ -58,8 +58,8 @@ const AreaAttr = ({
   setLocation,
   isGPSTracking,
   isDisabled,
-  onCreateGroupLocation,
-  onSelectGroupLocation,
+  onCreateSite,
+  onSelectSite,
   isFetchingLocations,
 }: Props) => {
   const location = (sample.data.location as AreaCountLocation) || {};
@@ -149,8 +149,8 @@ const AreaAttr = ({
         isOpen={showPastLocations}
         onClose={() => setShowPastLocations(false)}
         groupId={groupId}
-        onCreateGroupLocation={onCreateGroupLocation}
-        onSelectGroupLocation={onSelectGroupLocation}
+        onCreateSite={onCreateSite}
+        onSelectSite={onSelectSite}
         selectedLocationId={selectedLocationId}
       />
     </Main>
