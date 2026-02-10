@@ -13,13 +13,15 @@ import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'common/models/app';
+import Location from 'models/location';
 import Sample, { AreaCountLocation } from 'models/sample';
 import FinishPointMarker from './FinishPointMarker';
 import Records from './Records';
 import Sites from './Sites';
+import SitesPanel from './SitesPanel';
 import StartingPointMarker from './StartingPointMarker';
 
-const useDeletePropt = () => {
+const useDeletePrompt = () => {
   const alert = useAlert();
 
   return () =>
@@ -49,7 +51,9 @@ type Props = {
   isGPSTracking: boolean;
   isDisabled?: boolean;
   onCreateSite: any;
-  onSelectSite: any;
+  onSelectSite: (loc?: Location) => void;
+  userLocations: Location[];
+  groupLocations: Location[];
   isFetchingLocations?: boolean;
 };
 
@@ -61,6 +65,8 @@ const AreaAttr = ({
   onCreateSite,
   onSelectSite,
   isFetchingLocations,
+  groupLocations,
+  userLocations,
 }: Props) => {
   const location = (sample.data.location as AreaCountLocation) || {};
 
@@ -76,10 +82,10 @@ const AreaAttr = ({
 
   const groupId = sample.data.group?.id;
   const hasGroup = !!groupId && !isDisabled;
-  const [showPastLocations, setShowPastLocations] = useState(hasGroup);
-  const toggleSites = () => setShowPastLocations(!showPastLocations);
+  const [showSites, setShowSites] = useState(hasGroup);
+  const toggleSites = () => setShowSites(!showSites);
 
-  const shouldDeleteShape = useDeletePropt();
+  const shouldDeleteShape = useDeletePrompt();
 
   const isFinished =
     sample.isDisabled || sample.metadata.saved || sample.isTimerFinished();
@@ -107,14 +113,14 @@ const AreaAttr = ({
   return (
     <Main className="[--padding-bottom:0] [--padding-top:0]">
       <MapContainer
-        onReady={setMapRef}
+        onReady={ref => ref.resize() && setMapRef(ref)}
         accessToken={config.map.mapboxApiKey}
         mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
         maxPitch={0}
         initialViewState={initialViewState}
         maxZoom={19}
       >
-        {!isDisabled && <Sites.Control onClick={toggleSites} />}
+        {!isDisabled && <SitesPanel.Control onClick={toggleSites} />}
 
         <GeolocateButton />
 
@@ -143,14 +149,21 @@ const AreaAttr = ({
         </MapContainer.Control>
 
         <Records sample={sample} />
+        {showSites && (
+          <Sites
+            locations={[...userLocations, ...groupLocations]}
+            onSelectSite={onSelectSite}
+          />
+        )}
       </MapContainer>
 
-      <Sites
-        isOpen={showPastLocations}
-        onClose={() => setShowPastLocations(false)}
-        groupId={groupId}
+      <SitesPanel
+        isOpen={showSites}
+        onClose={() => setShowSites(false)}
         onCreateSite={onCreateSite}
         onSelectSite={onSelectSite}
+        groupLocations={groupLocations}
+        userLocations={userLocations}
         selectedLocationId={selectedLocationId}
       />
     </Main>

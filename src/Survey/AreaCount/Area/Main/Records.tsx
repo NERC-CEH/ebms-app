@@ -50,9 +50,7 @@ const Records = ({ sample }: Props) => {
       <MapContainer.Cluster.Clusters />
       <MapContainer.Cluster.Markers
         onClick={onRecordClick}
-        paint={{
-          'circle-color': '#df9100',
-        }}
+        paint={{ 'circle-color': '#df9100' }}
       />
     </MapContainer.Cluster>
   );

@@ -37,7 +37,7 @@ const SitesList = ({ locations, onSelect, selectedLocationId }: Props) => {
   );
 
   return (
-    <IonList className="mt-2 flex flex-col gap-2">
+    <IonList className="mt-2! flex flex-col gap-2">
       {entries.length ? (
         <>
           {emptyOption}
