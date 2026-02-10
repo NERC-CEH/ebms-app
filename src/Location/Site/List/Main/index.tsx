@@ -16,7 +16,7 @@ type Props = {
   hasGroup: boolean;
   myLocations: Location[];
   groupLocations: Location[];
-  onSelectSite: (location?: Location) => void;
+  onSelectSite?: (location?: Location) => void;
   selectedLocationId?: string;
   onRefresh: () => void;
 };
@@ -48,41 +48,45 @@ const MainSites = ({
         <IonRefresherContent />
       </IonRefresher>
 
-      <IonToolbar className="!p-0 text-black [--background:var(--ion-page-background)]">
-        <IonSegment onIonChange={onSegmentClick} value={segment}>
-          <IonSegmentButton value="my">
-            <IonLabel className="ion-text-wrap">
-              <T>My sites</T>
-            </IonLabel>
-          </IonSegmentButton>
+      {!!onSelectSite && (
+        <IonToolbar className="text-black [--background:var(--ion-page-background)]">
+          <IonSegment onIonChange={onSegmentClick} value={segment}>
+            <IonSegmentButton value="my">
+              <IonLabel className="ion-text-wrap">
+                <T>My sites</T>
+              </IonLabel>
+            </IonSegmentButton>
 
-          <IonSegmentButton value="group">
-            <IonLabel className="ion-text-wrap">
-              <T>Project</T>
-            </IonLabel>
-          </IonSegmentButton>
-        </IonSegment>
-      </IonToolbar>
+            <IonSegmentButton value="group">
+              <IonLabel className="ion-text-wrap">
+                <T>Project</T>
+              </IonLabel>
+            </IonSegmentButton>
+          </IonSegment>
+        </IonToolbar>
+      )}
 
-      {segment === 'my' && (
-        <SitesList
-          locations={myLocations}
-          onSelect={onSelectSite}
-          selectedLocationId={selectedLocationId}
-        />
-      )}
-      {segment === 'group' && hasGroup && (
-        <SitesList
-          locations={groupLocations}
-          onSelect={onSelectSite}
-          selectedLocationId={selectedLocationId}
-        />
-      )}
-      {segment === 'group' && !hasGroup && (
-        <InfoBackgroundMessage>
-          Please select a project to view its sites.
-        </InfoBackgroundMessage>
-      )}
+      <div className="my-5">
+        {segment === 'my' && (
+          <SitesList
+            locations={myLocations}
+            onSelect={onSelectSite}
+            selectedLocationId={selectedLocationId}
+          />
+        )}
+        {segment === 'group' && hasGroup && (
+          <SitesList
+            locations={groupLocations}
+            onSelect={onSelectSite}
+            selectedLocationId={selectedLocationId}
+          />
+        )}
+        {segment === 'group' && !hasGroup && (
+          <InfoBackgroundMessage>
+            Please select a project to view its sites.
+          </InfoBackgroundMessage>
+        )}
+      </div>
     </Main>
   );
 };

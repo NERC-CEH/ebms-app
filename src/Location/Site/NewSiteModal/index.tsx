@@ -13,7 +13,7 @@ import { Group } from 'common/models/sample';
 import Details from './Details';
 import { responsibleAttr } from './config';
 
-const getNewLocation = (group: Group) => {
+const getNewLocation = (group?: Group) => {
   const isVielFalterGarten = group?.title.includes('VielFalterGarten');
   const isUNPplus = group?.title.includes('UNPplus');
 
@@ -53,7 +53,7 @@ export function useLocation(): LocationContext {
 type Props = {
   presentingElement: any;
   onSave: (location: LocationModel) => Promise<boolean>;
-  group: Group;
+  group?: Group;
 };
 
 const NewSiteModal = (

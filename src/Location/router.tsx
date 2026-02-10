@@ -1,3 +1,4 @@
-import MothTrapRoutes from './MothTrap/router';
+import mothTrapRoutes from './MothTrap/router';
+import sitesRoutes from './Site/router';
 
-export default [...MothTrapRoutes];
+export default [...mothTrapRoutes, ...sitesRoutes];

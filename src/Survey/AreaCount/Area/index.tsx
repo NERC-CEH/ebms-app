@@ -152,7 +152,7 @@ const AreaController = () => {
         ref={modal}
         presentingElement={presentingElement}
         onSave={onSaveNewLocation}
-        group={sample.data.group!}
+        group={sample.data.group}
       />
     </IonPage>
   );

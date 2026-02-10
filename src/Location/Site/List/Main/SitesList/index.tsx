@@ -7,7 +7,7 @@ import Site from './Site';
 
 type Props = {
   locations: Location[];
-  onSelect: (location?: Location) => void;
+  onSelect?: (location?: Location) => void;
   selectedLocationId?: string | number;
 };
 
@@ -20,17 +20,17 @@ const SitesList = ({ locations, onSelect, selectedLocationId }: Props) => {
       latitude={location.data.location.latitude}
       longitude={location.data.location.longitude}
       name={location.data.location.name}
-      onClick={() => onSelect(location)}
+      onClick={() => onSelect?.(location)}
       isSelected={location.id === selectedLocationId}
     />
   );
 
   const entries = locations.map(getEntry);
 
-  const emptyOption = (
+  const emptyOption = !!onSelect && (
     <Site
       name={t('No site')}
-      onClick={() => onSelect()}
+      onClick={() => onSelect?.()}
       isSelected={!selectedLocationId}
       className="h-12 opacity-60"
     />

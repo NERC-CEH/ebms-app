@@ -12,6 +12,7 @@ import {
   cloudUploadOutline,
   textOutline,
   languageOutline,
+  locationOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Main, useAlert, InfoMessage, Toggle, SelectInput } from '@flumens';
@@ -190,7 +191,6 @@ const MenuMain = ({
               <T>{primarySurveyLabel}</T>
             </IonLabel>
           </IonItem>
-
           <IonItem routerLink="/settings/moth-survey" detail>
             <IonLabel>
               <T>Moth Survey</T>
@@ -204,6 +204,12 @@ const MenuMain = ({
             onChange={onTaxonNameDisplayChange}
             options={taxonNameDisplayOptions}
           />
+          <IonItem routerLink="/locations/sites" detail>
+            <IonLabel>
+              <T>Sites</T>
+            </IonLabel>
+            <IonIcon icon={locationOutline} size="small" slot="start" />
+          </IonItem>
         </div>
 
         <h3 className="list-title">

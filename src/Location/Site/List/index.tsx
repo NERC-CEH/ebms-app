@@ -19,9 +19,8 @@ const Site = () => {
   const checkUserStatus = useUserStatusCheck();
 
   const { sample } = useSample<Sample>();
-  if (!sample) throw new Error('Sample is missing');
 
-  const groupId = sample.data.group?.id;
+  const groupId = sample?.data.group?.id;
   const hasGroup = !!groupId;
 
   const alphabeticallyByName = (a: Location, b: Location) =>
@@ -41,18 +40,18 @@ const Site = () => {
     .sort(alphabeticallyByName);
 
   const onSelectSite = (loc?: Location) => {
-    if (!sample.data.location) {
-      sample.data.location = {} as any; // eslint-disable-line
+    if (!sample!.data.location) {
+      sample!.data.location = {} as any; // eslint-disable-line
     }
 
-    const shouldUnselect = !loc || sample.data.site?.id === loc.id;
+    const shouldUnselect = !loc || sample!.data.site?.id === loc.id;
     if (shouldUnselect) {
-      sample.data.site = undefined;
+      sample!.data.site = undefined;
     } else {
-      sample.data.site = JSON.parse(JSON.stringify(loc.data));
+      sample!.data.site = JSON.parse(JSON.stringify(loc.data));
     }
 
-    sample.save();
+    sample!.save();
     goBack();
   };
 
@@ -146,8 +145,8 @@ const Site = () => {
         <Main
           groupLocations={groupLocations}
           myLocations={myLocations}
-          onSelectSite={onSelectSite}
-          selectedLocationId={sample.data.site?.id}
+          onSelectSite={sample ? onSelectSite : undefined}
+          selectedLocationId={sample?.data.site?.id}
           hasGroup={hasGroup}
           onRefresh={refreshSites}
         />
@@ -157,7 +156,7 @@ const Site = () => {
         ref={modal}
         presentingElement={presentingElement}
         onSave={onSaveNewLocation}
-        group={sample.data.group!}
+        group={sample?.data.group}
       />
     </>
   );
