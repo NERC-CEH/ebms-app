@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
 import { InAppReview } from '@capacitor-community/in-app-review';
 import { Main, ModalHeader, InfoMessage, UserFeedbackRequest } from '@flumens';
-import { IonModal, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
+import { IonModal, IonIcon } from '@ionic/react';
 import config from 'common/config';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
 import { translateSpeciesDescription } from 'common/translations/translator';
@@ -105,35 +105,32 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
       const onClick = () => showSpeciesModal(id!);
 
       return (
-        <IonCol
+        <div
           key={id}
-          className="species-list-item ion-no-padding ion-no-margin"
+          className="w-full h-full bg-white flex relative flex-col shadow-md border border-neutral-200 overflow-hidden rounded-md"
           onClick={onClick}
-          size="6"
-          size-lg
         >
-          <div
-            style={{
-              backgroundImage: `url('/images/${id}_thumbnail.jpg')`,
-            }}
-          >
-            <span className="absolute -bottom-px border-0 bg-black/70 px-3.75 py-1.75 w-full text-white text-sm font-semibold">
-              {label}
-            </span>
-          </div>
-        </IonCol>
+          <img
+            src={`/images/${id}_thumbnail.png`}
+            className="z-10 w-[106%] max-w-none mb-8 min-h-[120px] p-4"
+          />
+          <img
+            src={`/images/${id}_thumbnail_bg.png`}
+            className="absolute h-full w-full opacity-30 pb-8"
+          />
+          <span className="absolute bottom-0 min-h-12 px-3.75 py-1.75 w-full text-transparent text-sm font-bold bg-white shadow-[0_0_20px_20px_#ffffff]">
+            {label}
+          </span>
+          <span className="absolute z-10 min-h-12 flex justify-center items-center text-center bottom-0 px-3.75 py-1.75 w-full text-black text-sm font-bold">
+            {label}
+          </span>
+        </div>
       );
     };
 
     const speciesColumns = speciesList.map(getSpeciesElement);
 
-    return (
-      <IonGrid className="ion-no-padding ion-no-margin">
-        <IonRow className="ion-no-padding ion-no-margin">
-          {speciesColumns}
-        </IonRow>
-      </IonGrid>
-    );
+    return <div className="grid grid-cols-2 gap-3 p-2">{speciesColumns}</div>;
   };
 
   const onReview = () => InAppReview.requestReview();

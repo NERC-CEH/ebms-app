@@ -116,8 +116,8 @@ export const getSpeciesProfileImage = ({
   if (hasImage)
     return (
       <img
-        src={`/images/${profile.id}_0_image.jpg`}
-        className="h-full w-full object-cover"
+        src={`/images/${profile.id}_thumbnail.png`}
+        className="h-full w-full object-cover p-1"
       />
     );
 
