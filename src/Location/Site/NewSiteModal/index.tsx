@@ -56,7 +56,7 @@ type Props = {
   group: Group;
 };
 
-const NewLocationModal = (
+const NewSiteModal = (
   { presentingElement, onSave, group }: Props,
   ref: any
 ) => {
@@ -97,4 +97,4 @@ const NewLocationModal = (
   );
 };
 
-export default forwardRef(NewLocationModal);
+export default forwardRef(NewSiteModal);

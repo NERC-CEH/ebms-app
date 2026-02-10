@@ -6,6 +6,7 @@ import {
   cloudyOutline,
   personOutline,
   eyeOffOutline,
+  locationOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
@@ -38,11 +39,64 @@ const AreaCountDetails = ({
     windDirection,
     windSpeed,
     group,
+    site,
   } = sample.data;
 
   return (
     <Main>
       <IonList lines="full">
+        <div className="rounded-list">
+          <MenuAttrItem
+            routerLink={`${baseURL}/group`}
+            disabled={isDisabled}
+            icon={peopleOutline}
+            label="Project"
+            value={group?.title}
+            skipValueTranslation
+          />
+          <MenuAttrItem
+            routerLink={`${baseURL}/site`}
+            disabled={isDisabled}
+            icon={locationOutline}
+            label="Site"
+            value={site?.name}
+            skipValueTranslation
+          />
+
+          <Toggle
+            prefix={<IonIcon src={eyeOffOutline} className="size-6" />}
+            label="Sensitive"
+            defaultSelected={Number.isFinite(sample.data.privacyPrecision)}
+            onChange={onChangeSensitivityStatus}
+            isDisabled={isDisabled}
+          />
+          <InfoMessage inline>
+            This survey has sensitive species and should not be included in
+            public reports.
+          </InfoMessage>
+          <MenuAttrItem
+            routerLink={`${baseURL}/comment`}
+            disabled={isDisabled}
+            icon={clipboardOutline}
+            label="Comment"
+            value={comment}
+            skipValueTranslation
+          />
+
+          <NumberInput
+            label="Recorders"
+            onChange={onChangeCounter}
+            value={recorders}
+            prefix={<IonIcon src={personOutline} className="size-6" />}
+            minValue={1}
+            isDisabled={isDisabled}
+          />
+          <InfoMessage inline>
+            Enter the number of recorders of anyone who helped with this record
+            - including your own.
+          </InfoMessage>
+        </div>
+
         <h3 className="list-title">
           <T>Weather Conditions</T>
         </h3>
@@ -89,52 +143,6 @@ const AreaCountDetails = ({
           <PhotoPicker model={sample} />
           <InfoMessage inline>
             Representative photo of where the 15 minute count was made
-          </InfoMessage>
-        </div>
-
-        <h3 className="list-title">
-          <T>Other</T>
-        </h3>
-        <div className="rounded-list">
-          <MenuAttrItem
-            routerLink={`${baseURL}/group`}
-            disabled={isDisabled}
-            icon={peopleOutline}
-            label="Project"
-            value={group?.title}
-            skipValueTranslation
-          />
-          <Toggle
-            prefix={<IonIcon src={eyeOffOutline} className="size-6" />}
-            label="Sensitive"
-            defaultSelected={Number.isFinite(sample.data.privacyPrecision)}
-            onChange={onChangeSensitivityStatus}
-            isDisabled={isDisabled}
-          />
-          <InfoMessage inline>
-            This survey has sensitive species and should not be included in
-            public reports.
-          </InfoMessage>
-          <MenuAttrItem
-            routerLink={`${baseURL}/comment`}
-            disabled={isDisabled}
-            icon={clipboardOutline}
-            label="Comment"
-            value={comment}
-            skipValueTranslation
-          />
-
-          <NumberInput
-            label="Recorders"
-            onChange={onChangeCounter}
-            value={recorders}
-            prefix={<IonIcon src={personOutline} className="size-6" />}
-            minValue={1}
-            isDisabled={isDisabled}
-          />
-          <InfoMessage inline>
-            Enter the number of recorders of anyone who helped with this record
-            - including your own.
           </InfoMessage>
         </div>
       </IonList>

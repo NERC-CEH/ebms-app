@@ -7,16 +7,11 @@ import Site from './Site';
 
 type Props = {
   locations: Location[];
-  onSelect: any;
+  onSelect: (location?: Location) => void;
   selectedLocationId?: string | number;
 };
 
-const GroupSites = ({
-  locations,
-  onSelect,
-
-  selectedLocationId,
-}: Props) => {
+const SitesList = ({ locations, onSelect, selectedLocationId }: Props) => {
   const { t } = useTranslation();
 
   const getEntry = (location: Location) => (
@@ -55,4 +50,4 @@ const GroupSites = ({
   );
 };
 
-export default observer(GroupSites);
+export default observer(SitesList);

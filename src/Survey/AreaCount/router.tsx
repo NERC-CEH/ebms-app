@@ -1,3 +1,4 @@
+import Sites from 'Location/Site/List';
 import { Route } from 'react-router-dom';
 import { AttrPage, withSample } from '@flumens';
 import ModelLocationMap from 'Survey/common/ModelLocationMap';
@@ -25,6 +26,7 @@ const getRoutes = (baseURL: string, config: Survey) => [
   [`${baseURL}/:smpId/details`, Details],
   [`${baseURL}/:smpId/details/:attr`, withSample(AttrPageFromRoute)],
   [`${baseURL}/:smpId/details/group`, Groups],
+  [`${baseURL}/:smpId/details/site`, Sites],
   [`${baseURL}/:smpId/speciesOccurrences/:taxa`, SpeciesOccurrences],
   [`${baseURL}/:smpId/speciesOccurrences/:taxa/taxon`, Taxon],
   [

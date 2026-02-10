@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
+import NewSiteModal from 'Location/Site/NewSiteModal';
 import { resizeOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { device, useLoader, useSample, useToast } from '@flumens';
@@ -12,7 +13,6 @@ import Sample, { AreaCountLocation } from 'models/sample';
 import userModel from 'models/user';
 import Header from './Header';
 import Main from './Main';
-import NewLocationModal from './NewLocationModal';
 import './styles.scss';
 
 const AreaController = () => {
@@ -148,7 +148,7 @@ const AreaController = () => {
         onSelectSite={onSelectSite}
         isFetchingLocations={locations.isSynchronising}
       />
-      <NewLocationModal
+      <NewSiteModal
         ref={modal}
         presentingElement={presentingElement}
         onSave={onSaveNewLocation}

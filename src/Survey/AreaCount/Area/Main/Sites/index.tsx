@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SitesList from 'Location/Site/List/Main/SitesList';
 import { Trans as T } from 'react-i18next';
 import { device, useToast } from '@flumens';
 import {
@@ -17,7 +18,6 @@ import locations, { byType } from 'models/collections/locations';
 import Location, { LocationType } from 'models/location';
 import HeaderButton from 'Survey/common/HeaderButton';
 import Control from './Control';
-import SitesList from './SitesList';
 
 const SNAP_POSITIONS = [0, 0.3, 0.5, 1];
 const DEFAULT_SNAP_POSITION = 0.3;
