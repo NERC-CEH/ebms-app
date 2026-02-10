@@ -68,7 +68,7 @@ const getAreasGeoJSON = (
 };
 
 type Props = {
-  onSelectSite: (location?: Location) => void;
+  onSelectSite?: (location?: Location) => void;
   locations: Location[];
 };
 
@@ -81,7 +81,7 @@ const Sites = ({ onSelectSite, locations }: Props) => {
     const location = locations.find(loc => loc.id === id);
     if (!location) return;
 
-    onSelectSite(location);
+    onSelectSite?.(location);
   };
 
   return (

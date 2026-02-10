@@ -34,7 +34,7 @@ const Site = () => {
 
   const byCreatedByMe = (location: Location) =>
     location.data.createdById === `${userModel.data.indiciaUserId}`;
-  const myLocations = locations
+  const userLocations = locations
     .filter(byType(LocationType.Site))
     .filter(byCreatedByMe)
     .sort(alphabeticallyByName);
@@ -144,11 +144,11 @@ const Site = () => {
         <Header title="Sites" rightSlot={addButton} />
         <Main
           groupLocations={groupLocations}
-          myLocations={myLocations}
+          userLocations={userLocations}
           onSelectSite={sample ? onSelectSite : undefined}
           selectedLocationId={sample?.data.site?.id}
           hasGroup={hasGroup}
-          onRefresh={refreshSites}
+          isFetchingLocations={locations.isSynchronising}
         />
       </IonPage>
 

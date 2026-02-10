@@ -1,92 +1,80 @@
-import { useState } from 'react';
-import { Trans as T } from 'react-i18next';
-import {
-  IonLabel,
-  IonRefresher,
-  IonRefresherContent,
-  IonSegment,
-  IonSegmentButton,
-  IonToolbar,
-} from '@ionic/react';
-import { InfoBackgroundMessage, Main } from 'common/flumens';
+import { IonSpinner } from '@ionic/react';
+import GeolocateButton from 'common/Components/GeolocateButton';
+import config from 'common/config';
+import countries from 'common/config/countries';
+import { Main, MapContainer } from 'common/flumens';
+import appModel from 'common/models/app';
 import Location from 'models/location';
-import SitesList from './SitesList';
+import Sites from './Sites';
+import SitesPanel from './SitesPanel';
 
 type Props = {
+  isFetchingLocations: boolean;
   hasGroup: boolean;
-  myLocations: Location[];
+  userLocations: Location[];
   groupLocations: Location[];
   onSelectSite?: (location?: Location) => void;
   selectedLocationId?: string;
-  onRefresh: () => void;
+  site?: Location;
 };
 
 const MainSites = ({
   hasGroup,
-  myLocations,
+  userLocations,
   groupLocations,
   onSelectSite,
   selectedLocationId,
-  onRefresh,
+  isFetchingLocations,
+  site,
 }: Props) => {
-  const [segment, setSegment] = useState<'my' | 'group'>(
-    hasGroup ? 'group' : 'my'
-  );
-  const onSegmentClick = (e: any) => {
-    const newSegment = e.detail.value;
-    setSegment(newSegment);
-  };
-
-  const refreshGroups = async (e: any) => {
-    e?.detail?.complete(); // refresh pull update
-    onRefresh();
-  };
+  let initialViewState;
+  if (site) {
+    initialViewState = {
+      latitude: parseFloat(site.data.lat),
+      longitude: parseFloat(site.data.lon),
+      zoom: 15,
+    };
+  } else {
+    const country = countries[appModel.data.country!];
+    if (country?.zoom) {
+      initialViewState = { ...country };
+    }
+  }
 
   return (
-    <Main>
-      <IonRefresher slot="fixed" onIonRefresh={refreshGroups}>
-        <IonRefresherContent />
-      </IonRefresher>
+    <Main className="[--padding-bottom:0] [--padding-top:0]">
+      <MapContainer
+        onReady={ref => ref.resize()}
+        accessToken={config.map.mapboxApiKey}
+        mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
+        maxPitch={0}
+        initialViewState={initialViewState}
+        maxZoom={19}
+      >
+        <GeolocateButton />
 
-      {!!onSelectSite && (
-        <IonToolbar className="text-black [--background:var(--ion-page-background)]">
-          <IonSegment onIonChange={onSegmentClick} value={segment}>
-            <IonSegmentButton value="my">
-              <IonLabel className="ion-text-wrap">
-                <T>My sites</T>
-              </IonLabel>
-            </IonSegmentButton>
+        <MapContainer.Control>
+          {isFetchingLocations ? (
+            <IonSpinner color="medium" className="mx-auto block" />
+          ) : (
+            <div />
+          )}
+        </MapContainer.Control>
 
-            <IonSegmentButton value="group">
-              <IonLabel className="ion-text-wrap">
-                <T>Project</T>
-              </IonLabel>
-            </IonSegmentButton>
-          </IonSegment>
-        </IonToolbar>
-      )}
+        <Sites
+          locations={[...userLocations, ...groupLocations]}
+          onSelectSite={onSelectSite}
+        />
+      </MapContainer>
 
-      <div className="my-5">
-        {segment === 'my' && (
-          <SitesList
-            locations={myLocations}
-            onSelect={onSelectSite}
-            selectedLocationId={selectedLocationId}
-          />
-        )}
-        {segment === 'group' && hasGroup && (
-          <SitesList
-            locations={groupLocations}
-            onSelect={onSelectSite}
-            selectedLocationId={selectedLocationId}
-          />
-        )}
-        {segment === 'group' && !hasGroup && (
-          <InfoBackgroundMessage>
-            Please select a project to view its sites.
-          </InfoBackgroundMessage>
-        )}
-      </div>
+      <SitesPanel
+        isOpen
+        hasGroup={hasGroup}
+        onSelectSite={onSelectSite}
+        groupLocations={groupLocations}
+        userLocations={userLocations}
+        selectedLocationId={selectedLocationId}
+      />
     </Main>
   );
 };

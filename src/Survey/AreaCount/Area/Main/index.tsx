@@ -8,17 +8,13 @@ import {
   mapFlyToLocation,
   isValidLocation,
 } from '@flumens';
-import { IonSpinner } from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'common/models/app';
-import Location from 'models/location';
 import Sample, { AreaCountLocation } from 'models/sample';
 import FinishPointMarker from './FinishPointMarker';
 import Records from './Records';
-import Sites from './Sites';
-import SitesPanel from './SitesPanel';
 import StartingPointMarker from './StartingPointMarker';
 
 const useDeletePrompt = () => {
@@ -50,11 +46,6 @@ type Props = {
   setLocation: any;
   isGPSTracking: boolean;
   isDisabled?: boolean;
-  onCreateSite: any;
-  onSelectSite: (loc?: Location) => void;
-  userLocations: Location[];
-  groupLocations: Location[];
-  isFetchingLocations?: boolean;
 };
 
 const AreaAttr = ({
@@ -62,11 +53,6 @@ const AreaAttr = ({
   setLocation,
   isGPSTracking,
   isDisabled,
-  onCreateSite,
-  onSelectSite,
-  isFetchingLocations,
-  groupLocations,
-  userLocations,
 }: Props) => {
   const location = (sample.data.location as AreaCountLocation) || {};
 
@@ -79,11 +65,6 @@ const AreaAttr = ({
       initialViewState = { ...country };
     }
   }
-
-  const groupId = sample.data.group?.id;
-  const hasGroup = !!groupId && !isDisabled;
-  const [showSites, setShowSites] = useState(hasGroup);
-  const toggleSites = () => setShowSites(!showSites);
 
   const shouldDeleteShape = useDeletePrompt();
 
@@ -108,8 +89,6 @@ const AreaAttr = ({
   };
   useEffect(flyToLocation, [mapRef, location]);
 
-  const selectedLocationId = sample.data.site?.id;
-
   return (
     <Main className="[--padding-bottom:0] [--padding-top:0]">
       <MapContainer
@@ -120,8 +99,6 @@ const AreaAttr = ({
         initialViewState={initialViewState}
         maxZoom={19}
       >
-        {!isDisabled && <SitesPanel.Control onClick={toggleSites} />}
-
         <GeolocateButton />
 
         <MapDraw shape={location?.shape as any} onChange={onShapeChange}>
@@ -140,32 +117,8 @@ const AreaAttr = ({
           </MapDraw.Context.Consumer>
         </MapDraw>
 
-        <MapContainer.Control>
-          {isFetchingLocations ? (
-            <IonSpinner color="medium" className="mx-auto block" />
-          ) : (
-            <div />
-          )}
-        </MapContainer.Control>
-
         <Records sample={sample} />
-        {showSites && (
-          <Sites
-            locations={[...userLocations, ...groupLocations]}
-            onSelectSite={onSelectSite}
-          />
-        )}
       </MapContainer>
-
-      <SitesPanel
-        isOpen={showSites}
-        onClose={() => setShowSites(false)}
-        onCreateSite={onCreateSite}
-        onSelectSite={onSelectSite}
-        groupLocations={groupLocations}
-        userLocations={userLocations}
-        selectedLocationId={selectedLocationId}
-      />
     </Main>
   );
 };
