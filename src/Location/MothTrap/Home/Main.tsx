@@ -7,7 +7,6 @@ import { Button, Main, MenuAttrItem, Badge, Block } from '@flumens';
 import {
   IonList,
   IonItem,
-  IonLabel,
   IonItemSliding,
   IonItemOptions,
   IonItemOption,
@@ -41,14 +40,10 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
   const empty = !hasLocation || !hasName;
 
   const locationValue = (
-    <IonLabel position="stacked" mode="ios">
-      <IonLabel color={clsx(empty && hasLocation && 'dark')}>
-        <GridRefValue sample={location} />
-      </IonLabel>
-      <IonLabel color={clsx(empty && hasName && 'dark')}>
-        {loc?.name || t('No moth trap name')}
-      </IonLabel>
-    </IonLabel>
+    <div className="flex flex-col gap-1">
+      <GridRefValue sample={location} />
+      <div>{loc?.name || t('No moth trap name')}</div>
+    </div>
   );
 
   const getLampAddButton = () => (
@@ -101,12 +96,12 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
 
     return (
       <div className="rounded-list">
-        <h3 className="list-divider">
+        <div className="list-divider">
           <div>
             <T>Lamps</T>
           </div>
           <div>{lampList.length}</div>
-        </h3>
+        </div>
 
         {lampList}
       </div>
@@ -118,7 +113,7 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
       <IonList lines="full">
         <div className="rounded-list">
           <MenuAttrItem
-            routerLink={`/location/${location.cid}/location`}
+            routerLink={`${url}/location`}
             icon={pinOutline}
             label="Location"
             required

@@ -80,7 +80,8 @@ const MothTrapEntry = ({
       return;
     }
 
-    if (!isUploading && !isSelected) navigate(`/location/${mothTrap.cid}`);
+    if (!isUploading && !isSelected)
+      navigate(`/location/moth-trap/${mothTrap.cid}`);
   };
 
   return (

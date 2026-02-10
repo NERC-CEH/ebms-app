@@ -2,9 +2,9 @@ import { useEffect, useContext } from 'react';
 import { Route } from 'react-router';
 import { NavContext } from '@ionic/react';
 import locations from 'models/collections/locations';
-import MothTrap, { LocationType } from 'models/location';
+import Location, { LocationType } from 'models/location';
 import ModelLocationMap from 'Survey/common/ModelLocationMap';
-import MothTrapNew from './Home';
+import MothTrap from './Home';
 import MothTrapLamp from './Lamp';
 
 function AddNewMothTrap() {
@@ -12,7 +12,7 @@ function AddNewMothTrap() {
 
   const pickDraftOrCreateNewWrap = () => {
     const pickDraftOrCreateNew = async () => {
-      const model = new MothTrap({
+      const model = new Location({
         data: {
           locationTypeId: LocationType.MothTrap,
           centroidSrefSystem: '4326',
@@ -23,7 +23,7 @@ function AddNewMothTrap() {
       await model.save();
       locations.push(model);
 
-      const url = `/location/${model.cid}`;
+      const url = `/location/moth-trap/${model.cid}`;
       navigate(url, 'none', 'replace');
     };
 
@@ -36,10 +36,10 @@ function AddNewMothTrap() {
 }
 
 const routes = [
-  ['/location', AddNewMothTrap, true],
-  ['/location/:locId', MothTrapNew],
-  ['/location/:locId/location', ModelLocationMap],
-  ['/location/:locId/lamps/:lampId', MothTrapLamp],
+  ['/location/moth-trap', AddNewMothTrap, true],
+  ['/location/moth-trap/:locId', MothTrap],
+  ['/location/moth-trap/:locId/location', ModelLocationMap],
+  ['/location/moth-trap/:locId/lamps/:lampId', MothTrapLamp],
 ].map(([route, component]: any) => (
   <Route key={route} path={route} component={component} exact />
 ));

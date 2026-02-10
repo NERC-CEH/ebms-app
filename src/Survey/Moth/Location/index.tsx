@@ -58,7 +58,7 @@ const Location = () => {
     location.saveRemote().catch(toast.error);
   };
 
-  const onLocationCreate = () => navigate('/location');
+  const onLocationCreate = () => navigate('/location/moth-trap');
 
   const mothTraps = locations.filter(byType(LocationType.MothTrap));
 

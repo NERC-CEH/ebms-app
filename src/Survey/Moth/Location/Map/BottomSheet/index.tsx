@@ -93,7 +93,7 @@ const BottomSheet = ({
         >
           You do not have any moth traps yet.
           <Button
-            onPress={() => navigate('/location')}
+            onPress={() => navigate('/location/moth-trap')}
             className="mx-auto my-2 px-4 py-1"
           >
             Create first moth trap
