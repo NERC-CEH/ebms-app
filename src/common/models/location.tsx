@@ -10,7 +10,7 @@ import {
   LocationOptions,
   validateRemoteModel,
   useAlert,
-  ModelAttrs,
+  ModelData,
   updateModelLocation,
   ModelValidationMessage,
   UUIDv7,
@@ -142,7 +142,7 @@ type SiteAttrs = {
   [responsibleAttr.id]: string;
 };
 
-export type Data = LocationData & ModelAttrs & MothTrapAttrs & SiteAttrs;
+export type Data = LocationData & ModelData & MothTrapAttrs & SiteAttrs;
 
 const surveyConfig = {
   location: {

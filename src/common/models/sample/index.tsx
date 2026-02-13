@@ -5,7 +5,7 @@ import {
   ModelValidationMessage,
   useAlert,
   SampleModel,
-  SampleAttrs,
+  SampleData,
   SampleOptions,
   SampleMetadata,
   Location as SampleLocation,
@@ -16,7 +16,7 @@ import groups, { SpeciesGroup } from 'common/data/groups';
 import userModel from 'models/user';
 import areaSurvey from 'Survey/AreaCount/config';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
-import mothSurvey from 'Survey/Moth/config';
+import mothSurvey from 'Survey/MothTrap/config';
 import transectSurvey from 'Survey/Transect/config';
 import { Survey } from 'Survey/common/config';
 import { Data as LocationAttributes } from '../location';
@@ -60,26 +60,7 @@ export type AreaCountLocation = SampleLocation & {
 
 export type Location = AreaCountLocation | MothTrapLocation | TransectLocation;
 
-export type Data = SampleAttrs & {
-  date?: any;
-  location?: Location;
-  surveyStartTime?: string;
-  surveyEndTime?: string;
-  recorder?: any;
-  comment?: any;
-  cloud?: any;
-  temperature?: any;
-  windDirection?: any;
-  windSpeed?: any;
-  reliability?: string;
-  recorders?: number;
-  speciesGroups: number[];
-  group?: Group;
-  site?: Site;
-  privacyPrecision?: number;
-  groupId?: number;
-
-  // moth survey attributes
+type MothData = {
   wind: string;
   temperatureEnd: number;
   directionEnd: string;
@@ -88,6 +69,28 @@ export type Data = SampleAttrs & {
   moon?: string;
   moonEnd?: string;
 };
+
+type AreaCountData = {
+  date: any;
+  location: Location;
+  surveyStartTime: string;
+  surveyEndTime: string;
+  recorder: any;
+  comment: any;
+  cloud: any;
+  temperature: any;
+  windDirection: any;
+  windSpeed: any;
+  reliability: string;
+  recorders: number;
+  speciesGroups: number[];
+  group: Group;
+  site: Site;
+  privacyPrecision: number;
+  groupId: number;
+};
+
+export type Data = SampleData & Partial<AreaCountData> & Partial<MothData>;
 
 export const surveyConfigs = {
   [areaSurvey.name]: areaSurvey,
@@ -130,7 +133,10 @@ type Metadata = SampleMetadata & {
   pausedTime?: number;
 };
 
-export default class Sample extends SampleModel<Data, Metadata> {
+export default class Sample<T extends SampleData = Data> extends SampleModel<
+  T,
+  Metadata
+> {
   static fromElasticDTO(json: ElasticSample, options: any, survey?: any) {
     const parsed = super.fromElasticDTO(json, options, survey) as any;
     if (parsed.data?.location?.shape) {
@@ -142,11 +148,11 @@ export default class Sample extends SampleModel<Data, Metadata> {
 
   declare occurrences: IObservableArray<Occurrence>;
 
-  declare samples: IObservableArray<Sample>;
+  declare samples: IObservableArray<Sample<any>>;
 
   declare media: IObservableArray<Media>;
 
-  declare parent?: Sample;
+  declare parent?: Sample<any>;
 
   shallowSpeciesList = observable([]);
 
@@ -271,13 +277,13 @@ export default class Sample extends SampleModel<Data, Metadata> {
    */
   isTimerPaused = () => !!this.timerPausedTime.time;
 
-  getTimerEndTime = () => {
+  getTimerEndTime(this: Sample) {
     const startTime = new Date(this.data.surveyStartTime!);
 
     return (
       startTime.getTime() + config.defaultSurveyTime + this.metadata.pausedTime!
     );
-  };
+  }
 
   isTimerFinished = () => {
     if (this.isTimerPaused()) return false;
@@ -292,7 +298,7 @@ export default class Sample extends SampleModel<Data, Metadata> {
     return isMothSurvey ? this.metadata.completedDetails : true;
   }
 
-  setMissingSpeciesGroups() {
+  setMissingSpeciesGroups(this: Sample) {
     if (!this.data.speciesGroups) {
       this.data.speciesGroups = [];
       this.save();
@@ -305,12 +311,12 @@ export default class Sample extends SampleModel<Data, Metadata> {
       const speciesGroups = Object.values(groups).find(byTaxonGroup);
       if (!speciesGroups) return;
 
-      const missingSpeciesGroup = !this.data.speciesGroups.includes(
+      const missingSpeciesGroup = !this.data.speciesGroups?.includes(
         speciesGroups.id
       );
 
       if (missingSpeciesGroup) {
-        this.data.speciesGroups.push(speciesGroups.id);
+        this.data.speciesGroups?.push(speciesGroups.id);
       }
     };
 

@@ -1,5 +1,5 @@
 import { AttrConfig } from 'Survey/common/config';
-import Occurrence, { Attrs as OccurrenceAttrs } from './occurrence';
+import Occurrence, { Data as OccurrenceAttrs } from './occurrence';
 import Sample, { Data as SampleAttrs } from './sample';
 
 /* eslint-disable @typescript-eslint/naming-convention */

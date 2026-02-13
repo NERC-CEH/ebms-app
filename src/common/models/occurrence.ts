@@ -1,7 +1,7 @@
 import { IObservableArray } from 'mobx';
 import {
   OccurrenceModel,
-  OccurrenceAttrs,
+  OccurrenceData,
   OccurrenceMetadata,
   validateRemoteModel,
 } from '@flumens';
@@ -9,7 +9,7 @@ import config from 'common/config';
 import speciesGroups from 'common/data/groups';
 import { Suggestion } from 'common/services/waarneming';
 import { PaintedLadyAttrs } from 'Survey/AreaCount/configSpecies';
-import { MachineInvolvement } from 'Survey/Moth/config';
+import { MachineInvolvement } from 'Survey/MothTrap/config';
 import { Survey } from 'Survey/common/config';
 import Media from './media';
 import Sample from './sample';
@@ -40,7 +40,7 @@ export type Metadata = OccurrenceMetadata & {
   mergedOccurrences?: string[];
 };
 
-export type Attrs = Omit<OccurrenceAttrs, 'taxon'> & {
+export type Data = Omit<OccurrenceData, 'taxon'> & {
   taxon: Taxon;
   comment?: string;
   stage?: string;
@@ -67,7 +67,9 @@ export const doesShallowTaxonMatch = (shallowEntry: Taxon, taxon: Taxon) => {
   return false;
 };
 
-export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
+export default class Occurrence<
+  T extends OccurrenceData = Data,
+> extends OccurrenceModel<T, Metadata> {
   declare media: IObservableArray<Media>;
 
   declare parent?: Sample;
@@ -80,7 +82,7 @@ export default class Occurrence extends OccurrenceModel<Attrs, Metadata> {
     super({ ...options, Media });
 
     // backwards compatibility for old taxon structure. TODO: remove later once all uploaded.
-    const oldTaxon = this.data.taxon as any;
+    const oldTaxon = this.data.taxon;
     if (oldTaxon.warehouse_id) {
       Object.assign(this.data.taxon, {
         warehouseId: oldTaxon.warehouse_id,

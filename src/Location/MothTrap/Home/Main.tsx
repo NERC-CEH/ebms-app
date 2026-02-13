@@ -3,7 +3,14 @@ import clsx from 'clsx';
 import { pinOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Button, Main, MenuAttrItem, Badge, Block } from '@flumens';
+import {
+  Button,
+  Main,
+  MenuAttrItem,
+  Badge,
+  Block,
+  BlockContext,
+} from '@flumens';
 import {
   IonList,
   IonItem,
@@ -110,35 +117,29 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
 
   return (
     <Main>
-      <IonList lines="full">
-        <div className="rounded-list">
-          <MenuAttrItem
-            routerLink={`${url}/location`}
-            icon={pinOutline}
-            label="Location"
-            required
-            className={clsx({ empty })}
-            value={locationValue}
-            skipValueTranslation
-          />
+      <BlockContext value={{ isDisabled: location.isDisabled }}>
+        <IonList lines="full">
+          <div className="rounded-list">
+            <MenuAttrItem
+              routerLink={`${url}/location`}
+              icon={pinOutline}
+              label="Location"
+              required
+              className={clsx({ empty })}
+              value={locationValue}
+              skipValueTranslation
+            />
 
-          <Block
-            block={mothTrapTypeAttr}
-            record={location.data}
-            isDisabled={location.isDisabled}
-          />
+            <Block block={mothTrapTypeAttr} record={location.data} />
 
-          <Block
-            block={mothTrapOtherTypeAttr}
-            record={location.data}
-            isDisabled={location.isDisabled}
-          />
-        </div>
+            <Block block={mothTrapOtherTypeAttr} record={location.data} />
+          </div>
 
-        {getLampAddButton()}
+          {getLampAddButton()}
 
-        {getLampList()}
-      </IonList>
+          {getLampList()}
+        </IonList>
+      </BlockContext>
     </Main>
   );
 };

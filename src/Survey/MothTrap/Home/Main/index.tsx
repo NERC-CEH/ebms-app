@@ -24,7 +24,7 @@ import {
 import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import { getUnknownSpecies } from 'Survey/Moth/config';
+import { getUnknownSpecies } from 'Survey/MothTrap/config';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';

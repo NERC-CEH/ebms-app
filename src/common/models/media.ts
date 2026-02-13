@@ -4,7 +4,7 @@ import {
   Filesystem,
   Directory as FilesystemDirectory,
 } from '@capacitor/filesystem';
-import { MediaModel, MediaAttrs } from '@flumens';
+import { MediaModel, MediaData } from '@flumens';
 import { isPlatform } from '@ionic/react';
 import config from 'common/config';
 import identifyImage, { Suggestion } from 'common/services/waarneming';
@@ -14,7 +14,7 @@ import Sample from './sample';
 
 export type URL = string;
 
-type Attrs = MediaAttrs & {
+type Attrs = MediaData & {
   species: Suggestion[];
 };
 

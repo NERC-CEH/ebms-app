@@ -51,9 +51,6 @@ const survey: Survey = {
   webForm: 'mydata/samples/edit',
 
   attrs: {
-    appVersion: appVersionAttr,
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    app_version: appVersionAttr, // for backwards compatibility, TODO: remove later once all old samples uploaded
     date: dateAttr,
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
@@ -216,7 +213,7 @@ const survey: Survey = {
         training: appModel.data.useTraining,
         group: appModel.data.defaultGroup,
         inputForm: survey.webForm,
-        appVersion: config.version,
+        [appVersionAttr.id]: config.version,
         speciesGroups: appModel.data.speciesGroups,
         surveyStartTime: null,
         location: {},

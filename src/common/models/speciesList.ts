@@ -1,7 +1,7 @@
 import { observable } from 'mobx';
 import axios from 'axios';
 import { z } from 'zod';
-import { Model, ModelAttrs } from '@flumens';
+import { Model, ModelData } from '@flumens';
 import config from 'common/config';
 import { db, speciesListsStore } from './store';
 
@@ -20,7 +20,7 @@ const dtoSchema = z.object({
 
 export type DTO = z.infer<typeof dtoSchema>;
 
-export type Data = ModelAttrs & {
+export type Data = ModelData & {
   id: number;
   type: 'location' | 'list';
   title: string;

@@ -1,6 +1,6 @@
 import { IObservableArray, observable } from 'mobx';
 import { Species as ReportSpecies } from 'src/Home/Report/services';
-import { Model, ModelAttrs } from '@flumens';
+import { Model, ModelData } from '@flumens';
 import { CountryCode } from 'common/config/countries';
 import { LanguageCode } from 'common/config/languages';
 import groups from 'common/data/groups';
@@ -20,7 +20,7 @@ export type TaxonNameDisplayType =
   | 'commonOnly'
   | 'scientificOnly';
 
-export type Data = ModelAttrs & {
+export type Data = ModelData & {
   showedWelcome: boolean;
   language?: LanguageCode | null;
   country?: CountryCode;

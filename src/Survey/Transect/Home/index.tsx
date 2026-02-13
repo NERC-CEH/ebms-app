@@ -1,11 +1,12 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
-import { Page, useRemoteSample, useSample, useToast } from '@flumens';
+import { Header, Page, useRemoteSample, useSample, useToast } from '@flumens';
 import { NavContext } from '@ionic/react';
 import appModel from 'models/app';
 import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
-import Header from './Header';
+import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
+import TrainingHeader from 'Survey/common/TrainingHeader';
 import Main from './Main';
 
 const TransectHomeController = () => {
@@ -62,7 +63,12 @@ const TransectHomeController = () => {
 
   return (
     <Page id="transect-edit">
-      <Header sample={sample} onSubmit={onSubmit} />
+      <Header
+        title="Transect"
+        rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
+        subheader={sample.data.training && <TrainingHeader />}
+        defaultHref="/home/user-surveys"
+      />
       <Main sample={sample} isDisabled={sample.isDisabled} />
     </Page>
   );

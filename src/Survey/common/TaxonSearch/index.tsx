@@ -7,6 +7,7 @@ import groups from 'common/data/groups';
 import { InfoMessage } from 'common/flumens';
 import speciesSearch, { type SearchResult } from 'common/helpers/taxonSearch';
 import speciesListsCollection from 'common/models/collections/speciesLists';
+import { Taxon } from 'common/models/occurrence';
 import { speciesStore } from 'common/models/store';
 import appModel from 'models/app';
 import Suggestions from './components/Suggestions';
@@ -17,9 +18,9 @@ type SearchResults = SearchResult[];
 const MIN_SEARCH_LENGTH = 2;
 
 type Props = {
-  recordedTaxa: any;
-  onSpeciesSelected: any;
-  useDayFlyingMothsOnly?: any;
+  recordedTaxa: number[] | undefined;
+  onSpeciesSelected: (taxon: Taxon) => void;
+  useDayFlyingMothsOnly?: boolean;
   speciesGroups?: number[];
 };
 

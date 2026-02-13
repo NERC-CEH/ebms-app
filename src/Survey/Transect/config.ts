@@ -51,7 +51,6 @@ const survey: Survey = {
   attrs: {
     date: dateAttr,
     location: locationAttr,
-    appVersion: appVersionAttr,
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
     cloud: cloudAttr,
@@ -198,7 +197,7 @@ const survey: Survey = {
         sampleMethodId: 22,
         surveyStartTime: now,
         recorder,
-        appVersion: config.version,
+        [appVersionAttr.id]: config.version,
       },
     });
 

@@ -2,22 +2,22 @@
 export {
   default as Model,
   type Options as ModelOptions,
-  type Data as ModelAttrs,
+  type Data as ModelData,
 } from '@flumens/models/dist/Model';
 export {
   default as SampleModel,
-  type Data as SampleAttrs,
+  type Data as SampleData,
   type Options as SampleOptions,
   type Metadata as SampleMetadata,
   type RemoteConfig,
 } from '@flumens/models/dist/Indicia/Sample';
 export {
   default as MediaModel,
-  type Data as MediaAttrs,
+  type Data as MediaData,
 } from '@flumens/models/dist/Indicia/Media';
 export {
   default as OccurrenceModel,
-  type Data as OccurrenceAttrs,
+  type Data as OccurrenceData,
   type Options as OccurrenceOptions,
   type Metadata as OccurrenceMetadata,
 } from '@flumens/models/dist/Indicia/Occurrence';
@@ -143,6 +143,8 @@ export {
   type ChoiceValues,
 } from '@flumens/tailwind/dist/Survey';
 export { default as Block } from '@flumens/tailwind/dist/components/Block';
+export { default as BlockContext } from '@flumens/tailwind/dist/components/Context';
+export { type inferBlockType } from '@flumens/tailwind/dist/components/types';
 export {
   default as Checkbox,
   type CheckboxOption,

@@ -1,5 +1,5 @@
 import AreaCountRoutes from './AreaCount/router';
-import MothRoutes from './Moth/router';
+import MothTrapRoutes from './MothTrap/router';
 import TransectRoutes from './Transect/router';
 
-export default [...AreaCountRoutes, ...TransectRoutes, ...MothRoutes];
+export default [...AreaCountRoutes, ...TransectRoutes, ...MothTrapRoutes];

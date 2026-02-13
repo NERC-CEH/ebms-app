@@ -6,7 +6,7 @@ import groups from 'common/data/groups';
 import Media from 'models/media';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
-import { getUnknownSpecies, MachineInvolvement } from 'Survey/Moth/config';
+import { getUnknownSpecies, MachineInvolvement } from 'Survey/MothTrap/config';
 import TaxonSearch from 'Survey/common/TaxonSearch';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 

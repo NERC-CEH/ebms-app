@@ -10,6 +10,8 @@ import {
   PageProps,
   timeFormat,
   dateFormat,
+  BlockT,
+  inferBlockType,
 } from '@flumens';
 import groups from 'common/data/groups';
 import caterpillarIcon from 'common/images/caterpillar.svg';
@@ -18,7 +20,7 @@ import Occurrence, { Taxon } from 'common/models/occurrence';
 import Media from 'models/media';
 import Sample from 'models/sample';
 
-export const appVersionAttr = { remote: { id: 1139 } };
+export const appVersionAttr = { id: 'smpAttr:1139' } as const;
 
 export const temperatureValues = [
   {
@@ -83,7 +85,7 @@ export const temperatureAttr = {
     },
   },
   remote: { id: 1660, values: temperatureValues },
-};
+} as const satisfies AttrConfig;
 
 export const speciesGroupsAttr = {
   remote: {
@@ -94,7 +96,7 @@ export const speciesGroupsAttr = {
         .map(({ attributeId }) => attributeId);
     },
   },
-};
+} as const satisfies AttrConfig;
 
 export const windDirectionValues = [
   { value: '', label: 'Not recorded/no data', id: 2460, isDefault: true },
@@ -120,7 +122,7 @@ export const windDirectionAttr = {
     },
   },
   remote: { id: 1389, values: windDirectionValues },
-};
+} as const satisfies AttrConfig;
 
 export const windSpeedValues = [
   { value: '', label: 'Not recorded/no data', id: 2459, isDefault: true },
@@ -144,9 +146,10 @@ export const windSpeedAttr = {
     },
   },
   remote: { id: 1390, values: windSpeedValues },
-};
+} as const satisfies AttrConfig;
 
 export const commentAttr = {
+  id: 'comment',
   menuProps: { icon: chatboxOutline, skipValueTranslation: true },
   pageProps: {
     attrProps: {
@@ -154,14 +157,14 @@ export const commentAttr = {
       info: 'Please add any extra info about this record.',
     },
   },
-};
+} as const;
 
 export const taxonAttr = {
   remote: {
     id: 'taxa_taxon_list_id',
     values: (taxon: Taxon) => taxon.warehouseId,
   },
-};
+} as const;
 
 export const surveyStartTimeAttr = {
   menuProps: { label: 'Start Time' },
@@ -178,7 +181,7 @@ export const surveyStartTimeAttr = {
     id: 1385,
     values: (date: number) => timeFormat.format(new Date(date)),
   },
-};
+} as const;
 
 export const surveyEndTimeAttr = {
   menuProps: { label: 'End Time' },
@@ -195,11 +198,12 @@ export const surveyEndTimeAttr = {
     id: 1386,
     values: (date: number) => timeFormat.format(new Date(date)),
   },
-};
+} as const;
 
 export const dateAttr = {
+  id: 'date',
   remote: { values: (date: number) => dateFormat.format(new Date(date)) },
-};
+} as const;
 
 export const areaCountSchema = z.object({
   location: z
@@ -257,7 +261,7 @@ export const dragonflyStageAttr = {
     },
   },
   remote: { id: 988, values: dragonflyStageValues },
-};
+} as const;
 
 export const stageAttr = {
   menuProps: { icon: caterpillarIcon },
@@ -298,7 +302,7 @@ export const stageAttr = {
     },
   },
   remote: { id: 293, values: stageValues },
-};
+} as const;
 
 export const cloudAttr = {
   menuProps: { icon: cloudyOutline, label: 'Cloud' },
@@ -311,13 +315,16 @@ export const cloudAttr = {
     },
   },
   remote: { id: 1457 },
-};
+} as const;
 
 type MenuProps = MenuAttrItemFromModelMenuProps;
+
+export type BlockOrFn = BlockT | ((record?: any) => BlockT);
 
 export type AttrConfig = {
   menuProps?: MenuProps;
   pageProps?: Omit<PageProps, 'attr' | 'model'>;
+  block?: BlockOrFn;
   remote?: RemoteConfig;
 };
 
@@ -385,3 +392,22 @@ export type Survey = {
    */
   webForm?: string;
 } & SampleConfig;
+
+/**
+ * utility type that transforms a record of block configurations
+ * into a record of their corresponding value types
+ *
+ * @example
+ * type Config = {
+ *   'smpAttr:123': { block: NumberInputConf };
+ *   'smpAttr:456': { block: TextInputConf };
+ *   'other': { something: string }; // returns unknown
+ * };
+ * type Result = inferAttrConfigTypes<Config>;
+ * // Result = { 'smpAttr:123': number; 'smpAttr:456': string; 'other': unknown }
+ */
+export type inferAttrConfigTypes<T extends Record<string, unknown>> = {
+  -readonly [K in keyof T]: T[K] extends { block: infer B extends BlockT }
+    ? inferBlockType<B>
+    : unknown;
+};
