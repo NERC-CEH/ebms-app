@@ -16,6 +16,7 @@ import groups, { SpeciesGroup } from 'common/data/groups';
 import userModel from 'models/user';
 import areaSurvey from 'Survey/AreaCount/config';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
+import baitTrapSurvey from 'Survey/BaitTrap/config';
 import mothSurvey from 'Survey/MothTrap/config';
 import transectSurvey from 'Survey/Transect/config';
 import { Survey } from 'Survey/common/config';
@@ -98,6 +99,10 @@ export const surveyConfigs = {
   [transectSurvey.name]: transectSurvey,
   [mothSurvey.name]: mothSurvey,
 };
+
+if (window.location.host.includes('localhost')) {
+  surveyConfigs[baitTrapSurvey.name] = baitTrapSurvey;
+}
 
 export const surveyConfigsByCode = Object.values(surveyConfigs).reduce<any>(
   (agg: any, survey: Survey) => {
@@ -295,7 +300,13 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
     if (this.isDisabled) return true;
 
     const isMothSurvey = this.metadata.survey === 'moth';
-    return isMothSurvey ? this.metadata.completedDetails : true;
+    const isBaitTrapSurvey = this.metadata.survey === 'bait-trap';
+
+    if (isMothSurvey || isBaitTrapSurvey) {
+      return this.metadata.completedDetails;
+    }
+
+    return true;
   }
 
   setMissingSpeciesGroups(this: Sample) {

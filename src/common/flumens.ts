@@ -40,8 +40,21 @@ export {
   type Data as LocationData,
   type Options as LocationOptions,
   dtoSchema as locationDtoSchema,
-  LocationType,
+  // LocationType,
 } from '@flumens/models/dist/Indicia/Location';
+
+// TODO: replace with real ones from the model when they are added
+export enum LocationType {
+  MothTrap = '18879',
+  Transect = '777',
+  TransectSection = '778',
+  Site = '14',
+  // eslint-disable-next-line @typescript-eslint/no-duplicate-enum-values
+  BaitTrapSite = '777', // TODO: replace with real ones
+  // eslint-disable-next-line @typescript-eslint/no-duplicate-enum-values
+  BaitTrap = '778', // TODO: replace with real ones
+}
+
 export {
   validateRemoteModel,
   type ElasticSearchResponse,
