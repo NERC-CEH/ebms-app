@@ -374,7 +374,7 @@ const HomeMain = ({
                 : shownDisabledImageIdentifierAlert
             }
           >
-            <IonIcon icon={camera} className="size-6" />
+            <IonIcon icon={images} className="size-6" />
           </Button>
 
           <Button
@@ -389,7 +389,7 @@ const HomeMain = ({
                 : shownDisabledImageIdentifierAlert
             }
           >
-            <IonIcon icon={images} className="size-6" />
+            <IonIcon icon={camera} className="size-6" />
           </Button>
         </div>
       )}
