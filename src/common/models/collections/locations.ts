@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop */
 import { reaction } from 'mobx';
 import axios from 'axios';
 import { camelCase, mapKeys } from 'lodash';
@@ -79,27 +78,34 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         : this.Model.fromDTO(doc)
     );
 
-    const remoteExternalKeys = models.map(({ cid }) => cid);
+    const newExternalKeys = new Set(models.map(m => m.cid));
 
-    const drafts: Location[] = [];
+    // replace existing models in-place or push new ones
+    await Promise.all(
+      models.map(async model => {
+        const existingIndex = this.data.findIndex(
+          (m: Location) => m.id === model.id
+        );
 
-    while (this.length) {
-      const model = this.pop();
-      if (!model) continue; // eslint-disable-line no-continue
+        if (existingIndex !== -1) {
+          const existingModel = this.data[existingIndex];
+          this.data.spliceWithArray(existingIndex, 1, [model]);
+          await existingModel.destroy(); // need to destroy for unique sql constraints to work when saving the new model with the same cid
+        } else {
+          this.push(model);
+        }
 
-      const wasUploaded = !model.isDraft;
-      const isLocalDuplicate =
-        !wasUploaded && remoteExternalKeys.includes(model.cid); // can happen if uploaded but not reflected back in the app
-      if (wasUploaded || isLocalDuplicate) {
-        await model.destroy();
-      } else {
-        drafts.push(model);
-      }
-    }
+        await model.save();
+      })
+    );
 
-    await Promise.all(models.map(m => m.save()));
-
-    this.push(...models, ...drafts);
+    // remove stale non-draft models that are no longer in the remote
+    const stale = this.filter((model: Location) => {
+      const isLocalDuplicate = !model.id && newExternalKeys.has(model.cid); // can happen if uploaded but not reflected back in the app
+      const modelIsStale = model.id && !newExternalKeys.has(model.cid); // once uploaded, but deleted from remote
+      return modelIsStale || isLocalDuplicate;
+    });
+    await Promise.all(stale.map(m => m.destroy()));
 
     this.remote.synchronising = false;
 

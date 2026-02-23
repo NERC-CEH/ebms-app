@@ -3,13 +3,13 @@ import locations from 'common/models/collections/locations';
 import Location from 'models/location';
 
 const byCid =
-  (val: any) =>
-  ({ cid }: any) =>
+  (val?: string) =>
+  ({ cid }: Location) =>
     cid === val;
 
 const byId =
-  (val: any) =>
-  ({ id }: any) =>
+  (val?: string) =>
+  ({ id }: Location) =>
     id === val;
 
 const isCID = (val?: string) =>

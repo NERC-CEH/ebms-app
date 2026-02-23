@@ -5,7 +5,7 @@ import { Lamp, mothTrapLampsAttr } from 'models/location';
 import useLocation from '../useLocation';
 import Main from './Main';
 
-const MothTrapSetup = () => {
+const MothTrapLamp = () => {
   const { location } = useLocation();
   if (!location) throw new Error('No location was found');
 
@@ -22,4 +22,4 @@ const MothTrapSetup = () => {
   );
 };
 
-export default observer(MothTrapSetup);
+export default observer(MothTrapLamp);

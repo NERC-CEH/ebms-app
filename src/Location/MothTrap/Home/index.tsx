@@ -51,7 +51,7 @@ function useDeleteLampPrompt() {
   return showDeletePrompt;
 }
 
-const MothTrapSetup = () => {
+const MothTrapHome = () => {
   const { location } = useLocation();
   if (!location) throw new Error('No location was found');
 
@@ -134,4 +134,4 @@ const MothTrapSetup = () => {
   );
 };
 
-export default observer(MothTrapSetup);
+export default observer(MothTrapHome);
