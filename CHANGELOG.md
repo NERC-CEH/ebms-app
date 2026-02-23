@@ -1,5 +1,11 @@
 ## 1.32.0
 
+Updated species guide (cutouts).
+Added species thumbnails to species search and other places.
+Added species name display options.
+Fixed moth trap location selection.
+Added sites map page.
+Made projects and sites independent from each other.
 Updated codebase.
 
 ## 1.31.1
