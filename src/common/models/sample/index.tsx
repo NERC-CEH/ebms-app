@@ -100,7 +100,7 @@ export const surveyConfigs = {
   [mothSurvey.name]: mothSurvey,
 };
 
-if (window.location.host.includes('localhost')) {
+if (window.location.host.includes('localhost:8000')) {
   surveyConfigs[baitTrapSurvey.name] = baitTrapSurvey;
 }
 

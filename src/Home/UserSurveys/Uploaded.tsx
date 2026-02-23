@@ -4,10 +4,9 @@ import { useInfiniteLoader } from 'react-window-infinite-loader';
 import { device, getRelativeDate, VirtualList, useToast } from '@flumens';
 import { IonLabel, IonList, IonRefresher, IonSpinner } from '@ionic/react';
 import samplesCollection, { bySurveyDate } from 'models/collections/samples';
-import Sample from 'models/sample';
+import Sample, { surveyConfigs } from 'models/sample';
 import userModel from 'models/user';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import { getSurveyConfigs } from 'Survey/common/surveyConfigs';
 import Survey from './Survey';
 
 // https://stackoverflow.com/questions/47112393/getting-the-iphone-x-safe-area-using-javascript
@@ -50,9 +49,7 @@ const UploadedSurveys = ({ isOpen }: Props) => {
 
     setIsLoading(true);
     try {
-      const surveyIDs = Object.values(getSurveyConfigs()).map(
-        ({ id }: any) => id
-      );
+      const surveyIDs = Object.values(surveyConfigs).map(({ id }: any) => id);
       const remoteSamples = await samplesCollection.fetchRemote(
         from,
         surveyIDs
