@@ -359,7 +359,7 @@ const HomeMain = ({
             onLongPress={showCopyOptionsWrap}
             prefix={<IonIcon src={addCircleOutline} className="size-5" />}
           >
-            Add species
+            Species
           </Button>
 
           <Button
