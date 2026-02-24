@@ -11,21 +11,34 @@ import {
   toggleGPS,
   mapFlyToLocation,
   useSample,
+  isValidLocation,
 } from '@flumens';
 import config from 'common/config';
-import Location from 'models/location';
+import countries from 'common/config/countries';
+import appModel from 'common/models/app';
 import Sample, { AreaCountLocation } from 'models/sample';
 
 const ModelLocationMap = () => {
   const { sample, subSample } = useSample<Sample>();
   const { location: locationModel } = useLocation();
 
-  const model = subSample! || sample! || locationModel!;
+  const model = locationModel || subSample || sample;
 
-  const location = (model.data.location as AreaCountLocation) || {};
-  const parentLocation = model.parent?.data.location as AreaCountLocation;
+  const location = (model!.data.location as AreaCountLocation) || {};
 
-  const isMothSurvey = model instanceof Location;
+  const isMothSurvey = !!locationModel;
+
+  const [mapRef, setMapRef] = useState<any>();
+  const flyToLocation = () => {
+    mapFlyToLocation(mapRef, location as any);
+  };
+  useEffect(flyToLocation, [mapRef, location]);
+
+  if (!model) return null;
+
+  const onLocationNameChange = ({ name }: any) => {
+    (model.data.location as AreaCountLocation).name = name;
+  };
 
   const setLocation = async (newLocation: any) => {
     if (!newLocation) return;
@@ -40,15 +53,16 @@ const ModelLocationMap = () => {
   const onMapClick = (e: any) => setLocation(mapEventToLocation(e));
   const onGPSClick = () => toggleGPS(model);
 
-  const onLocationNameChange = ({ name }: any) => {
-    (model.data.location as AreaCountLocation).name = name;
-  };
-
-  const [mapRef, setMapRef] = useState<any>();
-  const flyToLocation = () => {
-    mapFlyToLocation(mapRef, location as any);
-  };
-  useEffect(flyToLocation, [mapRef, location]);
+  // default view to the user's selected country
+  let initialViewState;
+  if (isValidLocation(location)) {
+    initialViewState = { ...location };
+  } else {
+    const country = countries[appModel.data.country!];
+    if (country?.zoom) {
+      initialViewState = { ...country };
+    }
+  }
 
   return (
     <Page id="model-location">
@@ -73,17 +87,14 @@ const ModelLocationMap = () => {
           accessToken={config.map.mapboxApiKey}
           mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
           maxPitch={0}
-          // initialViewState // TODO: default to the current country
+          initialViewState={initialViewState}
         >
           <MapContainer.Control.Geolocate
             isLocating={model.gps.locating}
             onClick={onGPSClick}
           />
 
-          <MapContainer.Marker
-            parentGridref={parentLocation?.gridref}
-            {...location}
-          />
+          <MapContainer.Marker {...location} />
         </MapContainer>
       </Main>
     </Page>
