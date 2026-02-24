@@ -35,7 +35,7 @@ import {
   NavContext,
   IonSpinner,
 } from '@ionic/react';
-import GridRef from 'common/Components/GridRefValue';
+import GridRef from 'common/Components/PrettyLocation';
 import appModel from 'models/app';
 import { Taxon } from 'models/occurrence';
 import Sample, { AreaCountLocation } from 'models/sample';

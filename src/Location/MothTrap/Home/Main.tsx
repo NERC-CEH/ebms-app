@@ -18,8 +18,8 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
-import GridRefValue from 'common/Components/GridRefValue';
 import InfoBackgroundMessage from 'common/Components/InfoBackgroundMessage';
+import PrettyLocation from 'common/Components/PrettyLocation';
 import {
   Lamp,
   mothTrapLampsAttr,
@@ -48,7 +48,7 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
 
   const locationValue = (
     <div className="flex flex-col gap-1">
-      <GridRefValue sample={location} />
+      <PrettyLocation sample={location} />
       <div>{loc?.name || t('No moth trap name')}</div>
     </div>
   );

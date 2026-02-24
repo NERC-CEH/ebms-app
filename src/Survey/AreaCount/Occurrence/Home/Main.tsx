@@ -13,7 +13,7 @@ import { getSpeciesProfileImage } from 'common/data/profiles';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
-import GridRefValue from 'Components/GridRefValue';
+import PrettyLocation from 'Components/PrettyLocation';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import PaintedLadyAttrs from './PaintedLadyAttrs';
 import './styles.scss';
@@ -42,7 +42,7 @@ const EditOccurrence = ({ subSample, occurrence, isDisabled }: Props) => {
     if (!isDisabled)
       location = <IonIcon icon={warningOutline} color="danger" />;
   } else {
-    location = <GridRefValue sample={subSample} />;
+    location = <PrettyLocation sample={subSample} />;
   }
 
   const speciesName = occurrence.getTaxonName();

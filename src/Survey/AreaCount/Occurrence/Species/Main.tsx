@@ -14,8 +14,8 @@ import {
 } from '@ionic/react';
 import { getSpeciesProfileImage } from 'common/data/profiles';
 import Sample from 'models/sample';
-import GridRefValue from 'Components/GridRefValue';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import PrettyLocation from 'Components/PrettyLocation';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import './styles.scss';
 
@@ -48,7 +48,7 @@ const EditOccurrence = ({
         if (!isDisabled)
           location = <IonIcon icon={warningOutline} color="danger" />;
       } else {
-        location = <GridRefValue sample={smp} />;
+        location = <PrettyLocation sample={smp} />;
       }
 
       const navigateToOccurrenceWithSample = () => navigateToOccurrence(smp);
