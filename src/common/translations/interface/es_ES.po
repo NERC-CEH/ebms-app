@@ -1,13 +1,12 @@
-# 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2024
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2025
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2025\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2026\n"
 "Language-Team: Spanish (Spain) (https://app.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2170,19 +2169,19 @@ msgstr "Todos los muestreos"
 
 # App settings label for species name display preference
 msgid "Common and scientific"
-msgstr ""
+msgstr "Común y científico"
 
 # App settings label for species name display preference
 msgid "Common only"
-msgstr ""
+msgstr "Solo común"
 
 # App settings label for species name display preference
 msgid "Scientific only"
-msgstr ""
+msgstr "Solo científico"
 
 # App settings label for species name display preference
 msgid "Species Name Display"
-msgstr ""
+msgstr "Visualización del nombre de la especie"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
