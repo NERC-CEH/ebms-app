@@ -44,7 +44,10 @@ const ModelLocationMap = () => {
     if (!newLocation) return;
     if (model.isGPSRunning()) model.stopGPS();
 
-    model.data.location = { ...model.data.location, ...newLocation };
+    const locationWithoutGridRef = { ...newLocation };
+    delete locationWithoutGridRef.gridref;
+
+    model.data.location = { ...model.data.location, ...locationWithoutGridRef };
   };
 
   const onManuallyTypedLocationChange = (e: any) =>
@@ -94,7 +97,7 @@ const ModelLocationMap = () => {
             onClick={onGPSClick}
           />
 
-          <MapContainer.Marker {...location} />
+          <MapContainer.Marker {...location} gridref={undefined} />
         </MapContainer>
       </Main>
     </Page>
