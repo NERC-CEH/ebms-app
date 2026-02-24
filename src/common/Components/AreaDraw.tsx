@@ -47,6 +47,7 @@ const AreaDraw = ({ shape, onChange }: Props) => {
         maxPitch={0}
         initialViewState={initialViewState}
         maxZoom={19}
+        onTouchStart={e => e.originalEvent.stopPropagation()} // fix map swipe down the modal page
       >
         <MapDraw shape={shape} onChange={onChange} isEditing="polygon">
           <MapDraw.Control polygon />
