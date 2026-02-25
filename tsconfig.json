@@ -20,8 +20,8 @@
       "common/*": ["./src/common/*"],
       "@flumens": ["./src/common/flumens"],
       "models/*": ["./src/common/models/*"],
-      "helpers/*": ["src/common/helpers/*"],
-      "Components/*": ["src/common/Components/*"],
+      "helpers/*": ["./src/common/helpers/*"],
+      "Components/*": ["./src/common/Components/*"],
       "Survey/*": ["./src/Survey/*"],
       "Location/*": ["./src/Location/*"]
     }
