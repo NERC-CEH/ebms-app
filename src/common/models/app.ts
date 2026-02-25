@@ -89,10 +89,6 @@ const defaults: Data = {
 };
 
 export class AppModel extends Model<Data> {
-  setLocation: any; // from extension
-
-  removeLocation: any; // from extension
-
   speciesReport: IObservableArray<ReportSpecies> = observable([]);
 
   constructor(options: any) {

@@ -284,8 +284,6 @@ const HomeController = () => {
       }
     }
 
-    appModel.setLocation(sample.data.location);
-
     await appModel.save();
     sample.metadata.saved = true;
     sample.data.surveyEndTime = new Date().toISOString();
