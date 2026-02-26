@@ -35,19 +35,24 @@ const AllGroups = ({ groups, onJoin }: Props) => {
         className="flex w-full max-w-sm flex-col gap-2 rounded-md border border-solid border-neutral-300 bg-white p-3"
         key={group.id}
       >
-        <div className="line-clamp-2 font-bold">{group.data.title}</div>
+        <div className="flex items-center gap-2 justify-between">
+          <div className="line-clamp-2 font-bold">{group.data.title}</div>
+
+          <Button
+            className="py-1 px-4 text-sm shrink-0"
+            onPress={onJoinWrap}
+            color="secondary"
+            fill="outline"
+          >
+            Join
+          </Button>
+        </div>
 
         {!!group.data.description && (
           <div className="line-clamp-3 text-balance border-t border-solid border-[var(--background)] pt-2 text-black/70">
             {group.data.description}
           </div>
         )}
-
-        <div>
-          <Button className="mx-auto" onPress={onJoinWrap} color="secondary">
-            Join
-          </Button>
-        </div>
       </div>
     );
   };
