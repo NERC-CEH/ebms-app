@@ -14,16 +14,22 @@ import { Main, MenuAttrItem, InfoMessage, NumberInput, Toggle } from '@flumens';
 import { IonList, IonIcon } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
+import Group from 'common/models/group';
+import Location from 'common/models/location';
 import Sample from 'models/sample';
 
 type Props = {
   sample: Sample;
+  site?: Location;
+  group?: Group;
   onChangeCounter: (value: number | null) => void;
   onChangeSensitivityStatus: (value: boolean) => void;
 };
 
 const AreaCountDetails = ({
   sample,
+  site,
+  group,
   onChangeCounter,
   onChangeSensitivityStatus,
 }: Props) => {
@@ -31,16 +37,8 @@ const AreaCountDetails = ({
   const baseURL = match.url;
 
   const { isDisabled } = sample;
-  const {
-    recorders,
-    comment,
-    cloud,
-    temperature,
-    windDirection,
-    windSpeed,
-    group,
-    site,
-  } = sample.data;
+  const { recorders, comment, cloud, temperature, windDirection, windSpeed } =
+    sample.data;
 
   return (
     <Main>
@@ -51,7 +49,7 @@ const AreaCountDetails = ({
             disabled={isDisabled}
             icon={peopleOutline}
             label="Project"
-            value={group?.title}
+            value={group?.data.title}
             skipValueTranslation
           />
           <MenuAttrItem
@@ -59,7 +57,7 @@ const AreaCountDetails = ({
             disabled={isDisabled}
             icon={locationOutline}
             label="Site"
-            value={site?.name}
+            value={site?.data.name}
             skipValueTranslation
           />
 

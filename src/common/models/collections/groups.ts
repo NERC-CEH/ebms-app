@@ -44,6 +44,7 @@ export class GroupCollection extends GroupCollectionBase<Group> {
 
     return super.fetchRemote({
       ...params,
+      // we only want to show current country groups that are not the user's member groups
       location: useCountryFilter ? countryId : undefined,
     });
   }

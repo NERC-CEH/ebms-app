@@ -33,7 +33,10 @@ export type Data = ModelData & {
   locations: any[];
   taxonGroupFilters?: any;
   primarySurvey: any;
-  defaultGroup?: { title: string; id: string };
+  /**
+   * Default user group/project ID.
+   */
+  defaultGroupId?: string;
   useImageIdentifier: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;

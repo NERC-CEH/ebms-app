@@ -165,8 +165,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
     navigate(href);
   };
 
-  const { groupId, group } = sample.data;
-  const hasGroup = !!groupId || !!group;
+  const hasGroup = !!sample.data.groupId;
 
   return (
     <IonItemSliding className="survey-list-item" style={style}>

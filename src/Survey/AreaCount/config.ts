@@ -89,16 +89,9 @@ const survey: Survey = {
     },
     ...locationAttrs,
 
-    group: {
-      remote: {
-        id: 'group_id',
-        values: (val: any) => val.id,
-      },
-    },
-
-    site: {
-      remote: { id: 'location_id', values: site => site.id },
-    },
+    // backwards compatibility with old values, these can be removed in the future
+    group: { remote: { id: 'group_id', values: val => val.id } },
+    site: { remote: { id: 'location_id', values: site => site.id } },
   },
 
   smp: {
@@ -211,7 +204,7 @@ const survey: Survey = {
         date: new Date().toISOString(),
         enteredSrefSystem: 4326,
         training: appModel.data.useTraining,
-        group: appModel.data.defaultGroup,
+        groupId: appModel.data.defaultGroupId,
         inputForm: survey.webForm,
         [appVersionAttr.id]: config.version,
         speciesGroups: appModel.data.speciesGroups,

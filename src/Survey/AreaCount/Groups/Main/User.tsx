@@ -61,7 +61,7 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
     <IonList>
       <RadioInput
         onChange={onSelect}
-        value={sample.data.group?.id || ''}
+        value={sample.data.groupId || ''}
         platform="ios"
         skipTranslation
         className="mt-4"

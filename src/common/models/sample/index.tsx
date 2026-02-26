@@ -27,19 +27,6 @@ import { samplesStore } from '../store';
 import GPSExtension, { calculateArea } from './GPSExt';
 import VibrateExtension from './vibrateExt';
 
-export type Group = {
-  /**
-   * Remote (warehouse) group ID.
-   */
-  id: string;
-  /**
-   * Group's title.
-   */
-  title: string;
-};
-
-export type Site = LocationAttributes;
-
 export type TransectLocation = LocationAttributes;
 
 export type MothTrapLocation = {
@@ -72,12 +59,10 @@ type MothData = {
 };
 
 type AreaCountData = {
-  date: any;
   location: Location;
   surveyStartTime: string;
   surveyEndTime: string;
   recorder: any;
-  comment: any;
   cloud: any;
   temperature: any;
   windDirection: any;
@@ -85,10 +70,6 @@ type AreaCountData = {
   reliability: string;
   recorders: number;
   speciesGroups: number[];
-  group: Group;
-  site: Site;
-  privacyPrecision: number;
-  groupId: number;
 };
 
 export type Data = SampleData & Partial<AreaCountData> & Partial<MothData>;

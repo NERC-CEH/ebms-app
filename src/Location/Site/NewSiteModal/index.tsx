@@ -8,14 +8,16 @@ import {
 } from 'react';
 import { IonModal } from '@ionic/react';
 import { ModalNav } from 'common/flumens';
+import groups from 'common/models/collections/groups';
 import LocationModel, { LocationType } from 'common/models/location';
-import { Group } from 'common/models/sample';
 import Details from './Details';
 import { responsibleAttr } from './config';
 
-const getNewLocation = (group?: Group) => {
-  const isVielFalterGarten = group?.title.includes('VielFalterGarten');
-  const isUNPplus = group?.title.includes('UNPplus');
+const getNewLocation = (groupId?: string) => {
+  const group = groups.idMap.get(groupId!);
+
+  const isVielFalterGarten = group?.data.title?.includes('VielFalterGarten');
+  const isUNPplus = group?.data.title?.includes('UNPplus');
 
   const data: any = {
     lat: '',
@@ -31,7 +33,7 @@ const getNewLocation = (group?: Group) => {
   }
 
   const location = new LocationModel({ skipStore: true, data });
-  location.metadata.groupId = group?.id;
+  location.metadata.groupId = groupId;
 
   return location;
 };
@@ -53,22 +55,22 @@ export function useLocation(): LocationContext {
 type Props = {
   presentingElement: any;
   onSave: (location: LocationModel) => Promise<boolean>;
-  group?: Group;
+  groupId?: string;
 };
 
 const NewSiteModal = (
-  { presentingElement, onSave, group }: Props,
+  { presentingElement, onSave, groupId }: Props,
   ref: any
 ) => {
   // const canDismiss = useDismissHandler(newLocation || {});
   const onDismiss = async () => ref.current?.dismiss();
 
   const [location, setLocation] = useState<LocationModel>(
-    getNewLocation(group)
+    getNewLocation(groupId)
   );
 
   const resetState = () => {
-    setLocation(getNewLocation(group));
+    setLocation(getNewLocation(groupId));
   };
   useEffect(resetState, []);
 

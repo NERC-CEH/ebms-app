@@ -36,6 +36,7 @@ import {
   IonSpinner,
 } from '@ionic/react';
 import GridRef from 'common/Components/PrettyLocation';
+import Location from 'common/models/location';
 import appModel from 'models/app';
 import { Taxon } from 'models/occurrence';
 import Sample, { AreaCountLocation } from 'models/sample';
@@ -122,6 +123,7 @@ const buildSpeciesCount = (agg: any, smp: Sample) => {
 
 type Props = {
   sample: Sample;
+  site?: Location;
   previousSurvey: any;
   deleteSpecies: any;
   copyPreviousSurveyTaxonList: any;
@@ -139,6 +141,7 @@ type Props = {
 
 const AreaCount = ({
   sample,
+  site,
   previousSurvey,
   deleteSpecies,
   hasLongSections,
@@ -582,7 +585,7 @@ const AreaCount = ({
       <div className="flex flex-col overflow-hidden">
         <div>{area ? `${area} m²` : ''}</div>
         <div className="max-w-28 overflow-hidden text-ellipsis whitespace-nowrap">
-          {sample.data.site?.name || sample.data.location?.name}
+          {site?.data.name || sample.data.location?.name}
         </div>
       </div>
     );

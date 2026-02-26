@@ -14,7 +14,9 @@ import {
 } from '@flumens';
 import { NavContext } from '@ionic/react';
 import distance from '@turf/distance';
-import groups, { SpeciesGroup } from 'common/data/groups';
+import speciesGroups, { SpeciesGroup } from 'common/data/groups';
+import groups from 'common/models/collections/groups';
+import locations from 'common/models/collections/locations';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
@@ -34,7 +36,7 @@ const getSpeciesGroupList = (sample: Sample): SpeciesGroupWithDisabled[] => {
   // get unique species groups from sample occurrences
   const groupIds: number[] = [];
   sample.samples.forEach(smp => {
-    const spGroupValue = Object.values(groups).find(
+    const spGroupValue = Object.values(speciesGroups).find(
       group =>
         group.id === smp.occurrences[0].data.taxon.taxonGroupId ||
         group.listId === smp.occurrences[0].data.taxon.taxonGroupId // for backward compatibility, some old samples might have listId stored
@@ -52,15 +54,15 @@ const getSpeciesGroupList = (sample: Sample): SpeciesGroupWithDisabled[] => {
   });
 
   const existingSpeciesGroupsInSample = (group: SpeciesGroup) => {
-    const speciesGroups = sample.data?.speciesGroups?.length
+    const spGroups = sample.data?.speciesGroups?.length
       ? sample.data?.speciesGroups
       : appModel.data.speciesGroups;
 
     const isUniqueGroup = uniqueGroupIds.includes(group.id);
-    const isDuplicate = speciesGroups.includes(group.id);
+    const isDuplicate = spGroups.includes(group.id);
     if (isUniqueGroup && !isDuplicate) return true;
 
-    return speciesGroups.includes(group.id);
+    return spGroups.includes(group.id);
   };
 
   const byDisabledProperty = (
@@ -72,7 +74,7 @@ const getSpeciesGroupList = (sample: Sample): SpeciesGroupWithDisabled[] => {
     return 0;
   };
 
-  return Object.values(groups)
+  return Object.values(speciesGroups)
     .filter(existingSpeciesGroupsInSample)
     .map(addDisableProperty)
     .sort(byDisabledProperty);
@@ -136,14 +138,14 @@ function byCreateTime(model1: Sample, model2: Sample) {
 function useShowSpeciesGroupList(sample?: Sample) {
   const alert = useAlert();
 
-  const showSpeciesGroupList = (speciesGroups: SpeciesGroupWithDisabled[]) => {
+  const showSpeciesGroupList = (spGroups: SpeciesGroupWithDisabled[]) => {
     if (!sample) return;
 
-    const groupList = speciesGroups.map(g => `${g.id}`);
+    const groupList = spGroups.map(g => `${g.id}`);
 
     // eslint-disable-next-line consistent-return
     return new Promise<null | number[]>(resolve => {
-      const options: CheckboxOption[] = speciesGroups.map(
+      const options: CheckboxOption[] = spGroups.map(
         ({ id, prefix, label, disabled }) => ({
           value: `${id}`,
           prefix,
@@ -192,6 +194,9 @@ const HomeController = () => {
 
   let { sample } = useSample<Sample>();
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
+
+  const site = sample && locations.idMap.get(sample.data.locationId!);
+  const group = sample && groups.idMap.get(sample.data.groupId!);
 
   const promptSpeciesGroupList = useShowSpeciesGroupList(sample);
 
@@ -268,15 +273,15 @@ const HomeController = () => {
 
     const checkSpeciesGroups = !sample.isPreciseSingleSpeciesSurvey();
     if (checkSpeciesGroups) {
-      const speciesGroups = getSpeciesGroupList(sample);
-      sample.data.speciesGroups = speciesGroups.map(({ id }) => id); // doing it here because if disabled prompt won't run
+      const newSpeciesGroups = getSpeciesGroupList(sample);
+      sample.data.speciesGroups = newSpeciesGroups.map(({ id }) => id); // doing it here because if disabled prompt won't run
       sample.save();
 
       const showSpeciesGroupPrompt =
-        speciesGroups.length > 1 &&
-        !speciesGroups.every(({ disabled }) => disabled);
+        newSpeciesGroups.length > 1 &&
+        !newSpeciesGroups.every(({ disabled }) => disabled);
       if (showSpeciesGroupPrompt) {
-        const newGroups = await promptSpeciesGroupList(speciesGroups);
+        const newGroups = await promptSpeciesGroupList(newSpeciesGroups);
         if (!newGroups) return;
 
         sample.data.speciesGroups = newGroups;
@@ -550,9 +555,11 @@ const HomeController = () => {
         sample={sample}
         onSubmit={onSubmit}
         onGroupClick={navigateToGroup}
+        group={group}
       />
       <Main
         sample={sample}
+        site={site}
         previousSurvey={previousSurvey}
         deleteSpecies={deleteSpecies}
         increaseCount={increaseCount}

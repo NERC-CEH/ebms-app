@@ -20,13 +20,13 @@ const Site = () => {
 
   const { sample } = useSample<Sample>();
 
-  const groupId = sample?.data.group?.id;
-  const hasGroup = !!groupId;
+  const hasGroup = !!sample?.data.groupId;
 
   const alphabeticallyByName = (a: Location, b: Location) =>
     a.data.location.name.localeCompare(b.data.location.name);
 
-  const byGroup = (location: Location) => location.metadata.groupId === groupId;
+  const byGroup = (location: Location) =>
+    location.metadata.groupId === sample?.data.groupId;
   const groupLocations = locations
     .filter(byType(LocationType.Site))
     .filter(byGroup)
@@ -40,17 +40,7 @@ const Site = () => {
     .sort(alphabeticallyByName);
 
   const onSelectSite = (loc?: Location) => {
-    if (!sample!.data.location) {
-      sample!.data.location = {} as any; // eslint-disable-line
-    }
-
-    const shouldUnselect = !loc || sample!.data.site?.id === loc.id;
-    if (shouldUnselect) {
-      sample!.data.site = undefined;
-    } else {
-      sample!.data.site = JSON.parse(JSON.stringify(loc.data));
-    }
-
+    sample!.data.locationId = loc?.id;
     sample!.save();
     goBack();
   };
@@ -146,7 +136,7 @@ const Site = () => {
           groupLocations={groupLocations}
           userLocations={userLocations}
           onSelectSite={sample ? onSelectSite : undefined}
-          selectedLocationId={sample?.data.site?.id}
+          selectedLocationId={sample?.data.locationId}
           hasGroup={hasGroup}
           isFetchingLocations={locations.isSynchronising}
         />
@@ -156,7 +146,7 @@ const Site = () => {
         ref={modal}
         presentingElement={presentingElement}
         onSave={onSaveNewLocation}
-        group={sample?.data.group}
+        groupId={sample?.data.groupId}
       />
     </>
   );

@@ -33,14 +33,11 @@ const Groups = () => {
     const byId = (group: Group) => group.id === groupId;
     const group = groups.find(byId);
     if (!group) {
-      sample.data.group = undefined;
-
-      appModel.data.defaultGroup = undefined;
+      sample.data.groupId = undefined;
+      appModel.data.defaultGroupId = undefined;
     } else {
-      const simplifiedGroup = { title: group.data.title, id: group.id! };
-
-      sample.data.group = group ? simplifiedGroup : undefined;
-      appModel.data.defaultGroup = simplifiedGroup;
+      sample.data.groupId = group.id;
+      appModel.data.defaultGroupId = group.id;
     }
 
     navigation.goBack();
@@ -72,12 +69,12 @@ const Groups = () => {
       await groups.fetchRemote({ type: 'member' });
       await groups.fetchRemote({ type: 'joinable' });
 
-      if (sample.data.group?.id === group.id) {
-        sample.data.group = undefined;
+      if (sample.data.groupId === group.id) {
+        sample.data.groupId = undefined;
       }
 
-      if (appModel.data.defaultGroup?.id === group.id) {
-        appModel.data.defaultGroup = undefined;
+      if (appModel.data.defaultGroupId === group.id) {
+        appModel.data.defaultGroupId = undefined;
       }
 
       toast.success('Successfully left the project.');
