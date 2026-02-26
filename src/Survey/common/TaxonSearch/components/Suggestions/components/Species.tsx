@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { Trans as T } from 'react-i18next';
 import groups from 'common/data/groups';
 import { getSpeciesProfileImage } from 'common/data/profiles';
+import appModel from 'common/models/app';
 import { getTaxonName, type SuggestionResult } from '../types';
 import './styles.scss';
 
@@ -71,7 +72,17 @@ type SpeciesProps = {
 };
 
 const Species = ({ species, searchPhrase, onSelect }: SpeciesProps) => {
+  const { taxonNameDisplay } = appModel.data;
+
   const prettyName = prettifyName(species, searchPhrase);
+  let secondaryName;
+  if (taxonNameDisplay === 'commonScientific') {
+    secondaryName =
+      species.foundInName === 'commonName'
+        ? species.scientificName
+        : species.commonName;
+  }
+
   const speciesGroup = groupLabels[species.taxonGroupId] ?? '';
 
   const onSelectSpecies = (e: MouseEvent<HTMLElement>) =>
@@ -88,8 +99,13 @@ const Species = ({ species, searchPhrase, onSelect }: SpeciesProps) => {
       <div className="list-avatar m-1 border-neutral-200 border">
         {getSpeciesProfileImage(species)}
       </div>
-      <div className="my-0.5 overflow-visible font-normal leading-5 whitespace-normal ml-2">
-        {prettyName}
+      <div className="flex flex-col">
+        <div className="mt-0.5 overflow-visible font-normal leading-5 whitespace-normal ml-2">
+          {prettyName}
+        </div>
+        <div className="mb-0.5 overflow-visible text-xs font-normal leading-5 whitespace-normal ml-2">
+          {secondaryName}
+        </div>
       </div>
       <div className="group">
         <T>{speciesGroup}</T>
