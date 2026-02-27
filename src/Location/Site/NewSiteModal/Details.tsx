@@ -27,6 +27,7 @@ import {
   IonList,
   IonLabel,
 } from '@ionic/react';
+import geojsonArea from '@mapbox/geojson-area';
 import AreaDraw, { Shape } from 'common/Components/AreaDraw';
 import config from 'common/config';
 import groups from 'common/models/collections/groups';
@@ -182,6 +183,9 @@ const Details = ({ onSave }: Props) => {
       </>
     ));
 
+  const shape = getShapeFromGeom(location.data.boundaryGeom);
+  const area = shape && Math.floor(geojsonArea.geometry(shape));
+
   return (
     <>
       <IonHeader>
@@ -221,6 +225,11 @@ const Details = ({ onSave }: Props) => {
               <IonLabel color={location.data.boundaryGeom ? '' : 'warning'}>
                 Area
               </IonLabel>
+              {!!area && (
+                <IonLabel slot="end" className="text-sm mr-0">
+                  {area} m²
+                </IonLabel>
+              )}
             </IonItem>
 
             <Block record={location.metadata} block={projectAttr} />
