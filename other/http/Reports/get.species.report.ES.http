@@ -1,0 +1,36 @@
+POST {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/es-able/_search
+Content-Type: application/json
+Authorization: 
+
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "metadata.survey.id": 565
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "by_species": {
+      "terms": {
+        "field": "taxon.accepted_name.keyword",
+        "size": 50,
+        "order": {
+          "_count": "desc"
+        }
+      },
+      "aggs": {
+        "sample_count": {
+          "cardinality": {
+            "field": "event.event_id"
+          }
+        }
+      }
+    }
+  },
+  "size": 0
+}

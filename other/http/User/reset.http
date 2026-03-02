@@ -1,0 +1,5 @@
+
+POST https://dev-butterfly-monitoring.pantheonsite.io/user/register-with-password
+  ?_format=json
+  &email=
+content-type: application/json

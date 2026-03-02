@@ -1,0 +1,2 @@
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/es-ukbms/_search
+authorization: 

@@ -1,0 +1,9 @@
+POST {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/groups/2713/users
+Authorization: Bearer {{$dotenv access_token}}
+Content-Type: application/json
+
+{
+  "values": {
+    "id": 97622
+  }
+}

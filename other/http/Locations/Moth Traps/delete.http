@@ -1,0 +1,5 @@
+DELETE {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/locations/123
+  ?code=LT
+  &locattrs=287
+  &verbose=null
+Authorization: Bearer {{$dotenv access_token}}

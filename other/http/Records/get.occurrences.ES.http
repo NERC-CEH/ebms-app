@@ -1,0 +1,39 @@
+POST {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/es-occurrences/_search
+Authorization: Bearer {{ $dotenv access_token }}
+
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "match": {
+                                    "event.parent_event_id": "22627168"
+                                }
+                            },
+                            {
+                                "match": {
+                                    "event.parent_event_id": "22627169"
+                                }
+                            },
+                            {
+                                "match": {
+                                    "event.parent_event_id": "22627170"
+                                }
+                            },
+                            {
+                                "match": {
+                                    "event.parent_event_id": "22627167"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
+
+###

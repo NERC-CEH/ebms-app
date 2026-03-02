@@ -1,0 +1,17 @@
+POST {{$dotenv APP_BACKEND_URL}}/oauth/token
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+
+refresh_token
+--WebAppBoundary
+Content-Disposition: form-data; name="refresh_token"
+
+--WebAppBoundary
+Content-Disposition: form-data; name="client_id"
+
+--WebAppBoundary
+Content-Disposition: form-data; name="client_secret"
+
+--WebAppBoundary

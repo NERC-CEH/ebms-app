@@ -1,0 +1,5 @@
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/reports/projects/ebms/ebms_app_sections_list_2.xml
+  ?website_id=118
+  &userID=5720
+  &location_list=321060
+Authorization: Bearer {{$dotenv access_token}}

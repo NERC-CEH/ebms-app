@@ -1,0 +1,7 @@
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/locations
+  ?code=LT
+  &public=false
+  &locattrs=287
+  &verbose=1
+  &location_type_id=777
+Authorization: Bearer {{$dotenv access_token}}

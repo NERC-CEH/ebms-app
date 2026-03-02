@@ -1,0 +1,8 @@
+POST {{$dotenv APP_BACKEND_URL}}/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type = password &
+username =  &
+password =  &
+client_id =  &
+client_secret =

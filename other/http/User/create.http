@@ -1,0 +1,31 @@
+POST {{$dotenv APP_BACKEND_URL}}/user/register-with-password
+  ?_format=json
+content-type: application/json
+
+{
+  "name": [
+    {
+      "value": "124@1234.io"
+    }
+  ],
+  "pass": [
+    {
+      "value": "123"
+    }
+  ],
+  "mail": [
+    {
+      "value": "124@1234.io"
+    }
+  ],
+  "field_first_name": [
+    {
+      "value": "test"
+    }
+  ],
+  "field_last_name": [
+    {
+      "value": "test"
+    }
+  ]
+}

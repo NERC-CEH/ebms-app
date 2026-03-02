@@ -1,0 +1,44 @@
+POST {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/es-occurrences/_search
+Authorization: Bearer {{$dotenv access_token}}
+
+{
+    "size": 0,
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "match": {
+                                    "metadata.website.id": 118
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "range": {
+                        "metadata.updated_on": {
+                            "gte": "2022-05-01 00:00:00"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "by_species": {
+            "terms": {
+                "field": "taxon.accepted_name.keyword"
+            },
+            "aggs": {
+                "sample_count": {
+                    "cardinality": {
+                        "field": "event.event_id"
+                    }
+                }
+            }
+        }
+    }
+}

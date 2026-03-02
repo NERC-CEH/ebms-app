@@ -1,0 +1,20 @@
+POST {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/locations
+Authorization: Bearer {{$dotenv access_token}}
+Content-Type: application/json
+
+{
+  "values": {
+    "external_key": "2eb95250-2fe4-49a6-bb04-613136d3fd01",
+    "public": "f",
+    "location_type_id": 18879,
+    "name": "dfd",
+    "lat": "55.4850800",
+    "lon": "-3.1091300",
+    "centroid_sref": "55.4850800 -3.1091300",
+    "centroid_sref_system": 4326,
+    "locAttr:306": [
+      "{\"type_term\":\"LED → Ledstrip → 395-405 SMD 2835\",\"type\":19111,\"description\":\"asd\",\"quantity\":1}"
+    ],
+    "locAttr:330": 19306
+  }
+}

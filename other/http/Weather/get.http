@@ -1,0 +1,5 @@
+GET https://api.openweathermap.org/data/2.5/weather
+  ?lat=50.510
+  &lon=3.614
+  &units=metric
+  &appid={{$dotenv APP_WEATHER_SITE_API_KEY}}

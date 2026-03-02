@@ -1,0 +1,53 @@
+POST {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/es-samples/_search
+Authorization: Bearer {{ $dotenv access_token }}
+
+{
+    "from": 0,
+    "size": 100,
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "match": {
+                                    "metadata.survey.id": 565
+                                }
+                            },
+                            {
+                                "match": {
+                                    "metadata.survey.id": 681
+                                }
+                            },
+                            {
+                                "match": {
+                                    "metadata.survey.id": 562
+                                }
+                            },
+                            {
+                                "match": {
+                                    "metadata.survey.id": 645
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "bool": {
+                        "must_not": {
+                            "exists": {
+                                "field": "event.parent_event_id"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "sort": [
+        {
+            "metadata.created_on": "desc"
+        }
+    ]
+}

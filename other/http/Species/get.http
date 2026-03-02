@@ -1,0 +1,5 @@
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/reports/projects/ebms/ebms_app_species_list.xml
+  ?id=93
+  &type=location
+  &limit=1000000
+Authorization: Bearer {{$dotenv access_token}}

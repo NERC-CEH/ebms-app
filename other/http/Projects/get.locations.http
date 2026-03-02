@@ -1,0 +1,4 @@
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/groups/2715/locations
+  ?code=LT
+  &locattrs=287
+Authorization: Bearer {{$dotenv access_token}}

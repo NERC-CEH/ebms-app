@@ -1,0 +1,9 @@
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/reports/projects/ebms/ebms_countries_and_other_ttl_attr_profiles_for_app.xml
+  ?updated_on_filter=2025-10-07
+  &species_groups_filter=
+  &description_filter=
+  &lon=23.89186217
+  &lat=54.89704949
+  &location_code_filter=
+  &name_filter=
+    Authorization: Bearer {{$dotenv access_token}}

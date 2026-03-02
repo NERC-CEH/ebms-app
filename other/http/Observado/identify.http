@@ -1,0 +1,10 @@
+POST https://waarneming.nl/api/identify-proxy/v1/
+  ?app_name=uni-jena
+Authorization: Bearer ABC
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="image"; filename="RP-P-1961-154.jpg"
+
+< /RP-P-1961-154.jpg
+--WebAppBoundary
