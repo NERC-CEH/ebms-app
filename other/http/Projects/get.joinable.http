@@ -1,0 +1,3 @@
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/groups
+?view=joinable
+Authorization: Bearer {{$dotenv access_token}}
