@@ -134,9 +134,12 @@ const isPresent = (table: typeof taxaStore.table): SQL => {
 
 const taxonListFilter = (
   table: typeof taxaStore.table,
-  taxonListCids?: string[]
+  taxonListCids?: string[],
+  isDisabled = false
 ): SQL =>
-  !taxonListCids?.length ? sql`1` : inArray(table.list_cid, taxonListCids);
+  !taxonListCids?.length || isDisabled
+    ? sql`1`
+    : inArray(table.list_cid, taxonListCids);
 
 type Props = {
   recordedTaxa: number[] | undefined;
@@ -161,9 +164,9 @@ const TaxonSearch = ({
   const [searchPhrase, setSearchPhrase] = useState('');
   const defaultSpecies = useDefaultSpecies(taxonListCids, recordedTaxa);
 
-  const onInputKeystroke = async (e: any) => {
-    const newSearchPhrase = e.target.value?.toLowerCase();
+  const [searchOutsideTaxonLists, setSearchOutsideTaxonLists] = useState(false);
 
+  const onSearch = async (newSearchPhrase: string, skipTaxonLists: boolean) => {
     const isValidSearch =
       typeof newSearchPhrase === 'string' &&
       newSearchPhrase.length >= MIN_SEARCH_LENGTH;
@@ -183,7 +186,7 @@ const TaxonSearch = ({
       where: (table: typeof taxaStore.table): any =>
         and(
           speciesGroupFilter(table, speciesGroups),
-          taxonListFilter(table, taxonListCids),
+          taxonListFilter(table, taxonListCids, skipTaxonLists),
           isPresent(table),
           filterDayFlyingMoths(table, useDayFlyingMothsOnly)
         ),
@@ -198,6 +201,9 @@ const TaxonSearch = ({
     setSearchPhrase(newSearchPhrase);
   };
 
+  const onInputKeystroke = async (e: any) =>
+    onSearch(e.target.value?.toLowerCase(), searchOutsideTaxonLists);
+
   const onInputClear = () => {
     setSearchResults(undefined);
     setSearchPhrase('');
@@ -210,6 +216,11 @@ const TaxonSearch = ({
   const hasMissingSpeciesGroupLists = !!speciesGroups?.filter(
     sg => !taxonLists.find(list => list.data.taxonGroups.includes(sg))
   ).length;
+
+  const onOutsideSearch = () => {
+    setSearchOutsideTaxonLists(true);
+    onSearch(searchPhrase, true);
+  };
 
   return (
     <>
@@ -231,6 +242,10 @@ const TaxonSearch = ({
         searchResults={searchResults || defaultSpecies}
         searchPhrase={searchPhrase}
         onSpeciesSelected={onSpeciesSelected}
+        onOutsideSearch={onOutsideSearch}
+        hasProjectsOrSiteLists={
+          !!taxonListCids?.length && !searchOutsideTaxonLists
+        }
       />
     </>
   );

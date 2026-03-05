@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import i18n from 'i18next';
+import { Button } from 'common/flumens';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Species from './components/Species';
 import { getTaxonName, type SuggestionResult } from './types';
@@ -8,6 +9,8 @@ type SuggestionsProps = {
   searchResults?: SuggestionResult[];
   searchPhrase: string;
   onSpeciesSelected: (species: SuggestionResult, edit?: boolean) => void;
+  onOutsideSearch: () => void;
+  hasProjectsOrSiteLists: boolean;
 };
 
 /**
@@ -47,6 +50,8 @@ const Suggestions = ({
   searchResults,
   searchPhrase,
   onSpeciesSelected,
+  hasProjectsOrSiteLists,
+  onOutsideSearch,
 }: SuggestionsProps) => {
   if (!searchResults) {
     return (
@@ -72,9 +77,23 @@ const Suggestions = ({
   let suggestionsList: ReactNode;
   if (!searchResults.length) {
     suggestionsList = (
-      <InfoBackgroundMessage>
-        No species found with this name
-      </InfoBackgroundMessage>
+      <>
+        <InfoBackgroundMessage className="mb-2">
+          No species found with this name
+        </InfoBackgroundMessage>
+
+        {hasProjectsOrSiteLists && (
+          <InfoBackgroundMessage className="mt-0">
+            Search outside my current project or site list.
+            <Button
+              className="mx-auto py-1.5 px-4 mt-3 mb-2 text-sm"
+              onPress={onOutsideSearch}
+            >
+              Search
+            </Button>
+          </InfoBackgroundMessage>
+        )}
+      </>
     );
   } else {
     const deDuped = deDuplicateSuggestions(searchResults);

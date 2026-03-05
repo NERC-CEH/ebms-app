@@ -3322,3 +3322,6 @@ msgstr "pasirinktinis sąrašas"
 
 msgid "location"
 msgstr "vietovė"
+
+msgid "Search outside my current project or site list.<1>Search</1>"
+msgstr "Ieškoti už dabartinio projekto ar vietovių sąrašo ribų.<1>Ieškoti</1>"
