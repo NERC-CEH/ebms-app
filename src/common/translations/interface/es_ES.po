@@ -2476,10 +2476,6 @@ msgstr "<0>Aviso</0> - no pudimos identificar esta especie."
 msgid "Surveying"
 msgstr "Muestreando"
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Muestreo de polillas (SPRING)"
-
 # Survey name
 msgid "Moth Survey"
 msgstr "Muestreo de polillas"
@@ -3385,4 +3381,7 @@ msgid "custom list"
 msgstr ""
 
 msgid "location"
+msgstr ""
+
+msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""

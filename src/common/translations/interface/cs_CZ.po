@@ -2422,10 +2422,6 @@ msgstr "<0>Pozor</0> - tento druh nedokážeme určit."
 msgid "Surveying"
 msgstr "Prozkoumávám"
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Průzkum nočních motýlů (SPRING)"
-
 # Survey name
 msgid "Moth Survey"
 msgstr "Průzkum nočních motýlů"
@@ -3308,4 +3304,7 @@ msgid "custom list"
 msgstr ""
 
 msgid "location"
+msgstr ""
+
+msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""

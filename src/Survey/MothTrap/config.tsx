@@ -252,7 +252,7 @@ const getSetStartMoonEndPhase = (sample: AppSample) => () => {
 const survey: Survey = {
   id: 681,
   name: 'moth',
-  label: 'Moth survey (SPRING)',
+  label: 'Moth survey',
   webForm: 'enter-moth-trap-records',
 
   attrs: {

@@ -2417,10 +2417,6 @@ msgstr "<0>Varovanie</0> - tento druh nebolo možné určiť."
 msgid "Surveying"
 msgstr "Pozorovanie"
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Prieskum nočných motýľov (SPRING)"
-
 # Survey name
 msgid "Moth Survey"
 msgstr "Pozorovanie nočných motýľov"
@@ -3307,4 +3303,7 @@ msgid "custom list"
 msgstr ""
 
 msgid "location"
+msgstr ""
+
+msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""

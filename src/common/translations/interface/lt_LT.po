@@ -1,12 +1,12 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2022
-# Karolis, 2025
 # Egle Viciuviene <eviciuviene@gmail.com>, 2026
+# Karolis, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Egle Viciuviene <eviciuviene@gmail.com>, 2026\n"
+"Last-Translator: Karolis, 2026\n"
 "Language-Team: Lithuanian (Lithuania) (https://app.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2429,10 +2429,6 @@ msgstr "<0>Dėmesio</0> - negalime nustatyti šios rūšies."
 # App settings title
 msgid "Surveying"
 msgstr "Stebėjimai"
-
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Naktinių drugių stebėjimas (SPRING)"
 
 # Survey name
 msgid "Moth Survey"

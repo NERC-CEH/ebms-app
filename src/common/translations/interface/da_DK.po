@@ -2430,10 +2430,6 @@ msgstr "<0>Advarsel</0> - vi kunne ikke bestemme denne art."
 msgid "Surveying"
 msgstr "Observationer"
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Natsværmerobservation (FORÅR)"
-
 # Survey name
 msgid "Moth Survey"
 msgstr "Natsværmerobservation"
@@ -3320,4 +3316,7 @@ msgid "custom list"
 msgstr ""
 
 msgid "location"
+msgstr ""
+
+msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""

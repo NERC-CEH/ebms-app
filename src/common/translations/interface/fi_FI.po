@@ -2359,10 +2359,6 @@ msgstr ""
 msgid "Surveying"
 msgstr ""
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr ""
-
 # Survey name
 msgid "Moth Survey"
 msgstr ""
@@ -3207,4 +3203,7 @@ msgid "custom list"
 msgstr ""
 
 msgid "location"
+msgstr ""
+
+msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""

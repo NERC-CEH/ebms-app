@@ -2385,10 +2385,6 @@ msgstr "<0>Opozorilo</0> - te vrste ni bilo mogoče določiti."
 msgid "Surveying"
 msgstr "Popisi"
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Popis nočnih metuljev (POMLAD)"
-
 # Survey name
 msgid "Moth Survey"
 msgstr "Popis nočnih metuljev"
@@ -3255,4 +3251,7 @@ msgid "custom list"
 msgstr ""
 
 msgid "location"
+msgstr ""
+
+msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""

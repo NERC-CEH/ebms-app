@@ -2430,10 +2430,6 @@ msgstr "<0>Aviso</0>- Não conseguimos identificar esta espécie."
 msgid "Surveying"
 msgstr "A amostrar"
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Amostragem de borboletas noturnas (SPRING)"
-
 # Survey name
 msgid "Moth Survey"
 msgstr "Amostragem de borboletas noturnas"
@@ -3333,4 +3329,7 @@ msgid "custom list"
 msgstr ""
 
 msgid "location"
+msgstr ""
+
+msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""

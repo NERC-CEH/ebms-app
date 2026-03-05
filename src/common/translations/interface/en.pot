@@ -2425,9 +2425,6 @@ msgstr "<0>Warning</0> - we could not identify this species."
 msgid "Surveying"
 msgstr "Surveying"
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Moth survey (SPRING)"
 
 # Survey name
 msgid "Moth Survey"

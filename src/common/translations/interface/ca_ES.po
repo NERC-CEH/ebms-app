@@ -2409,10 +2409,6 @@ msgstr "<0>Alerta</0> - no hem pogut identificar aquesta espècie."
 msgid "Surveying"
 msgstr "Mostrejant"
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Mostreig d'arnes (SPRING)"
-
 # Survey name
 msgid "Moth Survey"
 msgstr "Mostreig d'arnes"
@@ -3305,4 +3301,7 @@ msgid "custom list"
 msgstr ""
 
 msgid "location"
+msgstr ""
+
+msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""

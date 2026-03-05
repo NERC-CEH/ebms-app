@@ -2450,10 +2450,6 @@ msgstr "Uyarı - Bu türü tanımlayamadık."
 msgid "Surveying"
 msgstr "Ölçme"
 
-# Moth survey label
-msgid "Moth survey (SPRING)"
-msgstr "Güve anketi (SPRING Projesi)"
-
 # Survey name
 msgid "Moth Survey"
 msgstr "Güve Anketi"
@@ -3338,4 +3334,7 @@ msgid "custom list"
 msgstr ""
 
 msgid "location"
+msgstr ""
+
+msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""
