@@ -24,7 +24,9 @@ const migrations: Migration[] = [
         appModel.data.speciesGroups = DEFAULT_SPECIES_GROUP;
         appModel.save();
       } catch (error) {
-        console.debug('🔵 groups table does not exist, skipping migration');
+        console.debug(
+          '🔵 groups or samples tables does not exist, skipping migration'
+        );
       }
 
       if (!isPlatform('hybrid')) {

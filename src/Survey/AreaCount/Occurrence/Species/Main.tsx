@@ -1,8 +1,12 @@
 import { observer } from 'mobx-react';
-import { warningOutline } from 'ionicons/icons';
+import {
+  chevronForwardOutline,
+  locateOutline,
+  warningOutline,
+} from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Badge, Main } from '@flumens';
+import { Badge, Main, prettyPrintLocation } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -10,12 +14,10 @@ import {
   IonItemOption,
   IonItemOptions,
   IonItemSliding,
-  IonIcon,
 } from '@ionic/react';
 import { getSpeciesProfileImage } from 'common/data/profiles';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import PrettyLocation from 'Components/PrettyLocation';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import './styles.scss';
 
@@ -43,13 +45,16 @@ const EditOccurrence = ({
 
       const { stage, dragonflyStage } = occ.data;
 
-      let location;
+      let detailIcon;
       if (smp.hasLoctionMissingAndIsnotLocating()) {
-        if (!isDisabled)
-          location = <IonIcon icon={warningOutline} color="danger" />;
+        detailIcon = warningOutline;
+      } else if (smp.isGPSRunning()) {
+        detailIcon = locateOutline;
       } else {
-        location = <PrettyLocation sample={smp} />;
+        detailIcon = chevronForwardOutline;
       }
+
+      const location = prettyPrintLocation(smp.data.location);
 
       const navigateToOccurrenceWithSample = () => navigateToOccurrence(smp);
 
@@ -57,12 +62,16 @@ const EditOccurrence = ({
 
       return (
         <IonItemSliding key={smp.cid}>
-          <IonItem detail onClick={navigateToOccurrenceWithSample}>
+          <IonItem
+            detail
+            onClick={navigateToOccurrenceWithSample}
+            detailIcon={detailIcon}
+          >
             <IonLabel className="time">{prettyTime}</IonLabel>
             <IonLabel className="stage">
               <Badge>{stage || dragonflyStage}</Badge>
+              {location && <Badge className="ml-2">{location}</Badge>}
             </IonLabel>
-            <IonLabel slot="end">{location}</IonLabel>
           </IonItem>
           {!isDisabled && (
             <IonItemOptions side="end">

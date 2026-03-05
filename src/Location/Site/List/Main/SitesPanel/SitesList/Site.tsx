@@ -1,7 +1,7 @@
 import { checkmarkOutline, pinOutline } from 'ionicons/icons';
 import { twMerge } from 'tailwind-merge';
 import { IonIcon } from '@ionic/react';
-import { isValidLocation } from 'common/flumens';
+import { Badge, isValidLocation } from 'common/flumens';
 
 type Props = {
   name?: string;
@@ -9,6 +9,7 @@ type Props = {
   latitude?: number;
   onClick: any;
   isSelected: boolean;
+  hasLists?: boolean;
   className?: string;
 };
 
@@ -18,6 +19,7 @@ const Site = ({
   longitude,
   onClick,
   isSelected,
+  hasLists,
   className,
 }: Props) => {
   const isValid = isValidLocation({
@@ -48,12 +50,15 @@ const Site = ({
         <div className="flex w-full flex-col gap-1 py-1">
           <div className="line-clamp-2 font-semibold">{name}</div>
 
-          {isValid && (
-            <div className="text-xs">
-              <IonIcon icon={pinOutline} />
-              {latitude!.toFixed(3)}, {longitude!.toFixed(3)}
-            </div>
-          )}
+          <div className="flex gap-2 items-center">
+            {isValid && (
+              <Badge size="small" prefix={<IonIcon icon={pinOutline} />}>
+                {latitude!.toFixed(3)}, {longitude!.toFixed(3)}
+              </Badge>
+            )}
+
+            {!!hasLists && <Badge size="small">Has species lists</Badge>}
+          </div>
         </div>
 
         {isSelected && (

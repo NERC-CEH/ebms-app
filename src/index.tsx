@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { App as AppPlugin } from '@capacitor/app';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
-import { sentryOptions } from '@flumens';
+import { device, sentryOptions } from '@flumens';
 import { loadingController } from '@ionic/core';
 import { setupIonicReact, isPlatform } from '@ionic/react';
 import SentryBrowser from '@sentry/browser';
@@ -11,7 +11,7 @@ import config from 'common/config';
 import migrationManager from 'common/migrations';
 import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
-import speciesLists from 'common/models/collections/speciesLists';
+import taxonLists from 'common/models/collections/taxonLists';
 import migrate from 'common/models/migrate';
 import { db } from 'common/models/store';
 import appModel from 'models/app';
@@ -53,7 +53,16 @@ mobxConfig({ enforceActions: 'never' });
   await samples.fetch();
   await locations.fetch();
   await groups.fetch();
-  await speciesLists.fetch();
+  await taxonLists.fetch();
+
+  // in the background, fetch species lists for the selected country
+  // TODO: remove in the future when users have redownloaded their lists.
+  if (!taxonLists.length && appModel.data.country && device.isOnline)
+    taxonLists
+      .fetchDefaultCountryTaxonList(appModel.data.country)
+      .catch(error => {
+        console.error('Error fetching default country taxon list', error);
+      });
 
   appModel.data.sendAnalytics &&
     SentryBrowser.init({

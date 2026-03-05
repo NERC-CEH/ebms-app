@@ -4,7 +4,7 @@ import { useAlert, HandledError } from '@flumens';
 import { NavContext, isPlatform } from '@ionic/react';
 import { GPS_DISABLED_ERROR_MESSAGE } from 'common/helpers/GPS';
 import appModel from 'models/app';
-import samplesCollection from 'models/collections/samples';
+import samples from 'models/collections/samples';
 import Sample from 'models/sample';
 import userModel from 'models/user';
 import { Survey } from 'Survey/common/config';
@@ -18,7 +18,7 @@ async function getNewSample(survey: Survey, hasGPSPermission: any) {
     hasGPSPermission,
   });
 
-  samplesCollection.push(sample);
+  samples.push(sample);
 
   sample.save();
 

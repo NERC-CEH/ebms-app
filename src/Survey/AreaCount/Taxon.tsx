@@ -12,6 +12,8 @@ import {
 } from '@flumens';
 import { NavContext, IonButtons, IonButton } from '@ionic/react';
 import speciesGroupsList from 'common/data/groups';
+import groups from 'common/models/collections/groups';
+import locations from 'common/models/collections/locations';
 import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
 import Sample from 'models/sample';
 import TaxonSearch from 'Survey/common/TaxonSearch';
@@ -228,6 +230,9 @@ const TaxonController = () => {
     sample.data.speciesGroups = updatedSpeciesGroups;
   }, []);
 
+  const site = locations.idMap.get(sample.data.locationId || '');
+  const group = groups.idMap.get(sample.data.groupId || '');
+
   return (
     <Page id="precise-area-count-edit-taxa">
       <Header
@@ -244,6 +249,11 @@ const TaxonController = () => {
           recordedTaxa={recordedTaxa}
           speciesGroups={sample.data.speciesGroups}
           useDayFlyingMothsOnly={sample.metadata.useDayFlyingMothsOnly}
+          taxonListCids={
+            (site?.taxonListCids?.length
+              ? site?.taxonListCids
+              : group?.taxonListCids) as string[]
+          }
         />
       </Main>
     </Page>

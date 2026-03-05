@@ -6,13 +6,13 @@ import { alias, QueryBuilder } from 'drizzle-orm/sqlite-core';
 import { SearchResult, SpeciesColumns } from '.';
 
 async function searchSciNames(
-  speciesStore: any,
+  taxaStore: any,
   searchPhrase: string,
   language: string,
-  where?: (table: typeof speciesStore.table) => SQL,
+  where?: (table: typeof taxaStore.table) => SQL,
   limit = 20
 ) {
-  const { table } = speciesStore;
+  const { table } = taxaStore;
   const synonym: any = alias(table, 'synonym');
 
   const customWhere = where ? where(table) : sql`1`; // always true
@@ -65,7 +65,7 @@ async function searchSciNames(
     .groupBy(table.id) // we only want one common name per species - a subquery would be more efficient, but usually we have only a few synonyms
     .limit(limit);
 
-  const species: any = await speciesStore.db.query(query.toSQL());
+  const species: any = await taxaStore.db.query(query.toSQL());
 
   return species.map(
     (sp: SpeciesColumns & { commonName: string }): SearchResult => ({

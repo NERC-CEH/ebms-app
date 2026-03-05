@@ -21,6 +21,7 @@ import Location, {
 } from '../location';
 import { locationsStore as store } from '../store';
 import groups from './groups';
+import taxonLists from './taxonLists';
 
 export class LocationsCollection extends LocationCollectionBase<Location> {
   declare Model: typeof Location;
@@ -53,63 +54,119 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
     reaction(getEmail, onLoginChange);
   }
 
-  async fetchRemote() {
+  async fetchRemote(
+    params: { type?: 'sites' | 'transects' | 'mothTraps' } = {}
+  ) {
     console.log(`📚 Collection: ${this.id} collection fetching`);
     this.remote.synchronising = true;
 
-    const mothTraps = await this.fetchRemoteByType(LocationType.MothTrap);
-    const transects = await this.fetchTransects();
-    const locationList = transects.map(({ id }) => id!);
-    const transectSections = await this.fetchTransectSections(locationList);
-    const groupSites = await this.fetchGroupLocations();
-    const mySites = await this.fetchRemoteByType(LocationType.Site);
+    const { type } = params;
 
-    const docs = [
-      ...mySites,
-      ...mothTraps,
-      ...transects,
-      ...transectSections,
-      ...groupSites,
-    ];
+    if (!type || type === 'transects') {
+      const docs = await this.fetchTransects();
+      const locationList = docs.map(({ id }) => id!);
+      const sectionDocs = await this.fetchTransectSections(locationList);
+      const newModels = [...docs, ...sectionDocs].map(doc =>
+        this.Model.fromDTO(doc)
+      );
+      this.upsert(...newModels);
+      await Promise.all(newModels.map(m => m.save()));
+      await this.removeStaleLocalModels(newModels, [
+        LocationType.Transect,
+        LocationType.TransectSection,
+      ]);
+    }
 
-    const models = docs.map(doc =>
-      Array.isArray(doc)
-        ? this.Model.fromDTO(doc[0], { metadata: doc[1] }) // with metadata
-        : this.Model.fromDTO(doc)
+    if (!type || type === 'mothTraps') {
+      const docs = await this.fetchRemoteByType(LocationType.MothTrap);
+      const newModels = docs.map(doc => this.Model.fromDTO(doc));
+      this.upsert(...newModels);
+      await Promise.all(newModels.map(m => m.save()));
+
+      await this.removeStaleLocalModels(newModels, [LocationType.MothTrap]);
+    }
+
+    if (!type || type === 'sites') {
+      const docs = await this.fetchRemoteByType(LocationType.Site);
+      const newModels = docs.map(doc => this.Model.fromDTO(doc));
+
+      const groupDocs = await this.fetchGroupLocations();
+      const newGroupModels = groupDocs.map(([doc, metadata]) =>
+        this.Model.fromDTO(doc, { metadata })
+      );
+      newModels.push(...newGroupModels);
+      this.upsert(...newModels);
+      await Promise.all(newModels.map(m => m.save()));
+
+      // link groups to locations
+      await Promise.all(
+        newModels.map(async location => {
+          const group = groups.idMap.get(location.metadata.groupId!);
+          await group?.linkLocation(location);
+        })
+      );
+
+      await this.fetchAndLinkTaxonLists(newModels);
+
+      await this.removeStaleLocalModels(newModels, [LocationType.Site]);
+    }
+
+    this.remote.synchronising = false;
+
+    console.log(`📚 Collection: ${this.id} collection fetching done`);
+  }
+
+  /**
+   *  Download all species lists and link matching ones to locations
+   * */
+  private async fetchAndLinkTaxonLists(locations: Location[]) {
+    // build a lookup from warehouse id to location model
+    const locationIdMap = new Map(
+      locations.filter(l => l.id).map(l => [String(l.id), l])
     );
 
-    const newExternalKeys = new Set(models.map(m => m.cid));
+    const allTaxonLists = await taxonLists.fetchRemoteWithLinks();
 
-    // replace existing models in-place or push new ones
+    // for each species list, find matching site locations and link them
     await Promise.all(
-      models.map(async model => {
-        const existingIndex = this.data.findIndex(
-          (m: Location) => m.id === model.id
+      allTaxonLists.map(async ({ model: taxonList, locationIds }) => {
+        const matchingLocations = locationIds
+          .map(id => locationIdMap.get(id))
+          .filter(Boolean) as Location[];
+
+        if (!matchingLocations.length) return; // list doesn't link to any locations
+
+        // persist the species list to the local store
+        await taxonList.save(true);
+
+        taxonLists.upsert(taxonList);
+
+        // link species list to each matching location bidirectionally
+        await Promise.all(
+          matchingLocations.map(l => taxonList.linkLocation(l))
         );
 
-        if (existingIndex !== -1) {
-          const existingModel = this.data[existingIndex];
-          this.data.spliceWithArray(existingIndex, 1, [model]);
-          await existingModel.destroy(); // need to destroy for unique sql constraints to work when saving the new model with the same cid
-        } else {
-          this.push(model);
-        }
-
-        await model.save();
+        // download the taxon list for this species list
+        await taxonList.fetchRemoteSpecies();
       })
     );
+  }
+
+  private async removeStaleLocalModels(
+    models: Location[],
+    type: LocationType[]
+  ) {
+    const newExternalKeys = new Set(models.map(m => m.cid));
 
     // remove stale non-draft models that are no longer in the remote
-    const stale = this.filter((model: Location) => {
+    const stale = this.filter(model => {
+      if (!type.includes(model.data.locationTypeId as any)) return false;
+
       const isLocalDuplicate = !model.id && newExternalKeys.has(model.cid); // can happen if uploaded but not reflected back in the app
       const modelIsStale = model.id && !newExternalKeys.has(model.cid); // once uploaded, but deleted from remote
       return modelIsStale || isLocalDuplicate;
     });
     await Promise.all(stale.map(m => m.destroy()));
-
-    this.remote.synchronising = false;
-
-    console.log(`📚 Collection: ${this.id} collection fetching done`);
   }
 
   private async fetchGroupLocations() {
@@ -142,7 +199,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
     const groupLocationDTOs = await Promise.all(
       groups
         .filter(byGroupMembershipStatus('member'))
-        .map(m => m.fetchRemoteLocations())
+        .map(group => group.fetchRemoteLocations())
     );
 
     const docs = groupLocationDTOs.flat().map(transformToLocation);
@@ -321,6 +378,8 @@ const collection = new LocationsCollection({
   url: config.backend.indicia.url,
   getAccessToken: () => userModel.getAccessToken(),
 });
+
+// (window as any).locationCollection = collection;
 
 export const byType = byLocationType;
 

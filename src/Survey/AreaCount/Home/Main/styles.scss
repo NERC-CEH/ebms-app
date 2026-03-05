@@ -1,8 +1,4 @@
 #precise-area-count-edit {
-  ion-spinner {
-    width: 15px;
-  }
-
   ion-list {
     margin-bottom: 0;
   }
@@ -86,16 +82,6 @@
 
     ion-item {
       --padding-start: 0;
-    }
-  }
-
-  .location-spinner {
-    max-width: 30px;
-    max-height: 23px;
-
-    ion-spinner {
-      margin-top: -4px;
-      width: 15px;
     }
   }
 }

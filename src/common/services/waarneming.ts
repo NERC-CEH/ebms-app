@@ -4,7 +4,7 @@ import config from 'common/config';
 import { getLanguageIso } from 'common/config/languages';
 import { getCamelCaseObj } from 'common/flumens';
 import { getCommonNameById } from 'common/helpers/taxonSearch/commonNamesSearch';
-import { speciesStore } from 'common/models/store';
+import { taxaStore } from 'common/models/store';
 import appModel from 'models/app';
 import userModel from 'models/user';
 
@@ -75,7 +75,7 @@ export default async function identify(url: string): Promise<Suggestion[]> {
     const suggestions = await Promise.all(
       normalized.map(async sp => {
         const commonName = await getCommonNameById(
-          speciesStore,
+          taxaStore,
           sp.warehouseId,
           language
         );

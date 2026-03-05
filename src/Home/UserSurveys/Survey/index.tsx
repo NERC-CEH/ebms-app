@@ -132,7 +132,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
       return (
         <>
           {!!locationName && (
-            <div className="text-sm line-clamp-1">{locationName}</div>
+            <div className="text-sm line-clamp-1 max-w-1/2">{locationName}</div>
           )}
           {!!speciesCount && speciesCountBadge}
         </>

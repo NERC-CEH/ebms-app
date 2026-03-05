@@ -8,7 +8,7 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
-import SpeciesList from 'common/models/speciesList';
+import TaxonList from 'common/models/taxonList';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 
 function useShowDeletePopup() {
@@ -35,9 +35,9 @@ function useShowDeletePopup() {
 }
 
 type Props = {
-  lists: SpeciesList[];
-  onReinstall: (list: SpeciesList) => void;
-  onDelete: (list: SpeciesList) => void;
+  lists: TaxonList[];
+  onReinstall: (list: TaxonList) => void;
+  onDelete: (list: TaxonList) => void;
 };
 
 const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
@@ -55,7 +55,7 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
     );
   }
 
-  const getListItem = (list: SpeciesList) => {
+  const getListItem = (list: TaxonList) => {
     const handleRefresh = () => onReinstall(list);
     const handleDelete = () => showDeletePopup(() => onDelete(list));
 
@@ -64,7 +64,7 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
         key={list.cid}
         className="mb-2 rounded-md border border-solid border-neutral-300"
       >
-        <IonItem className="max-h-[77px] [--min-height:77px]">
+        <IonItem className="max-h-19.25 [--min-height:77px] [--inner-padding-end:5px]">
           <div className="flex w-full items-center justify-between gap-2">
             <div className="min-w-0 flex-1">
               <h2 className="line-clamp-1 font-bold mt-0!">
@@ -72,8 +72,13 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
               </h2>
 
               <div className="flex gap-2">
-                <Badge>{`${list.getSize()}`} species</Badge>
-                <Badge>{getRelativeDate(list.updatedAt)}</Badge>
+                <Badge size="small">{`${list.getSize()}`} species</Badge>
+                <Badge size="small">{getRelativeDate(list.updatedAt)}</Badge>
+                {list.data.type !== 'list' && (
+                  <Badge size="small">
+                    {list.data.type.replaceAll('_', ' ')}
+                  </Badge>
+                )}
               </div>
             </div>
 

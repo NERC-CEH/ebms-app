@@ -41,7 +41,7 @@ const TaxonPrettyName = ({ taxon, className }: Props) => {
   }
 
   return (
-    <div className={clsx('flex flex-col w-full', className)}>
+    <div className={clsx('flex flex-col w-full overflow-hidden', className)}>
       <div className="font-semibold truncate">{taxon.commonName}</div>
       <div className="pr-1 italic truncate">{taxon.scientificName}</div>
     </div>

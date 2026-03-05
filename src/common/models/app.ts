@@ -52,7 +52,7 @@ export type Data = ModelData & {
   /**
    * Timestamp of last species lists automatic update.
    */
-  speciesListsUpdatedAt?: number;
+  taxonListsUpdatedAt?: number;
   taxonNameDisplay: TaxonNameDisplayType;
 } & SurveyDraftKeys;
 

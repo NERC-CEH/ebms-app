@@ -3,7 +3,6 @@ import { observer } from 'mobx-react';
 import { IonPage, NavContext } from '@ionic/react';
 import { device, Header, useLoader, useSample, useToast } from 'common/flumens';
 import groups from 'common/models/collections/groups';
-import Group from 'common/models/group';
 import Sample from 'common/models/sample';
 import userModel, { useUserStatusCheck } from 'common/models/user';
 import locations, { byType } from 'models/collections/locations';
@@ -20,13 +19,13 @@ const Site = () => {
 
   const { sample } = useSample<Sample>();
 
-  const hasGroup = !!sample?.data.groupId;
+  const group = groups.idMap.get(sample?.data.groupId || '');
 
   const alphabeticallyByName = (a: Location, b: Location) =>
     a.data.location.name.localeCompare(b.data.location.name);
 
   const byGroup = (location: Location) =>
-    location.metadata.groupId === sample?.data.groupId;
+    group?.locationCids.includes(location.cid);
   const groupLocations = locations
     .filter(byType(LocationType.Site))
     .filter(byGroup)
@@ -98,11 +97,10 @@ const Site = () => {
       await newLocation.saveRemote();
 
       if (newLocation.metadata.groupId) {
-        const byId = (p: Group) => p.id === newLocation.metadata.groupId;
-        const group = groups.find(byId);
-        if (!group) throw new Error('Group was not found');
+        const g = groups.idMap.get(newLocation.metadata.groupId);
+        if (!g) throw new Error('Group was not found');
 
-        await group.addRemoteLocation(newLocation.id!);
+        await g.addRemoteLocation(newLocation.id!);
       }
 
       await refreshSites();
@@ -137,7 +135,7 @@ const Site = () => {
           userLocations={userLocations}
           onSelectSite={sample ? onSelectSite : undefined}
           selectedLocationId={sample?.data.locationId}
-          hasGroup={hasGroup}
+          hasGroup={!!group}
           isFetchingLocations={locations.isSynchronising}
         />
       </IonPage>
@@ -146,7 +144,7 @@ const Site = () => {
         ref={modal}
         presentingElement={presentingElement}
         onSave={onSaveNewLocation}
-        groupId={sample?.data.groupId}
+        groupId={group?.id}
       />
     </>
   );

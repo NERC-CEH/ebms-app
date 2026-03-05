@@ -9,8 +9,8 @@ import butterflyIcon from 'common/images/butterfly.svg';
 import dragonflyIcon from 'common/images/dragonfly.svg';
 import mothIcon from 'common/images/moth.svg';
 import appModel from 'common/models/app';
-import speciesLists from 'common/models/collections/speciesLists';
-import { speciesStore } from 'common/models/store';
+import taxonLists from 'common/models/collections/taxonLists';
+import { taxaStore } from 'common/models/store';
 import species from './data.json';
 
 export const abundances = {
@@ -47,35 +47,35 @@ speciesWithCommonNames.forEach(sp => {
 });
 
 // attach commonName field for easier access
-speciesLists.ready.then(async () => {
+taxonLists.ready.then(async () => {
   autorun(async () => {
     try {
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      speciesLists.data.length; // track speciesLists changes
+      taxonLists.data.length; // track taxonLists changes
 
       const ids = species
         .filter(sp => !!sp.descriptionKey) // optimise by only looking for species with descriptionKey
         .map(sp => sp.warehouseId);
 
-      const synonym: any = alias(speciesStore.table, 'synonym');
+      const synonym: any = alias(taxaStore.table, 'synonym');
 
       const query: any = new QueryBuilder()
         .select({
-          id: speciesStore.table.id,
+          id: taxaStore.table.id,
           commonName: sql`${synonym.taxon} as commonName`,
         })
-        .from(speciesStore.table)
+        .from(taxaStore.table)
         .leftJoin(
           synonym,
           and(
-            eq(synonym.preferred_taxa_taxon_list_id, speciesStore.table.id),
+            eq(synonym.preferred_taxa_taxon_list_id, taxaStore.table.id),
             eq(synonym.language_iso, getLanguageIso(appModel.data.language))
           )
         )
-        .where(inArray(speciesStore.table.id, ids))
-        .groupBy(speciesStore.table.id); // we only want one common name per species
+        .where(inArray(taxaStore.table.id, ids))
+        .groupBy(taxaStore.table.id); // we only want one common name per species
 
-      const res: any = await speciesStore.db.query(query.toSQL());
+      const res: any = await taxaStore.db.query(query.toSQL());
 
       // get id-name map for easy lookup
       const commonNameMap: Record<number, string> = {};
@@ -117,7 +117,7 @@ export const getSpeciesProfileImage = ({
     return (
       <img
         src={`/images/${profile.id}_thumbnail.png`}
-        className="h-full w-full object-cover p-1"
+        className="size-full object-cover p-1"
       />
     );
 
@@ -126,7 +126,7 @@ export const getSpeciesProfileImage = ({
       icon={
         taxonGroupId ? (speciesGroupIcons as any)[taxonGroupId] : butterflyIcon
       }
-      className="size-8 opacity-75"
+      className="p-2 size-full opacity-55"
     />
   );
 };

@@ -1,5 +1,9 @@
 import { IObservableArray, observable } from 'mobx';
 import { responsibleAttr } from 'Location/Site/NewSiteModal/config';
+import {
+  SQLiteInsertBuilder,
+  SQLiteSyncDialect,
+} from 'drizzle-orm/sqlite-core';
 import { bulbOutline, chatboxOutline } from 'ionicons/icons';
 import { snakeCase } from 'lodash';
 import { z } from 'zod';
@@ -21,8 +25,11 @@ import config from 'common/config';
 import mothTrap from 'common/images/moth-inside-icon.svg';
 import numberIcon from 'common/images/number.svg';
 import userModel from 'models/user';
+import locations from './collections/locations';
+import Group from './group';
 import Media from './media';
 import { locationsStore } from './store';
+import TaxonList from './taxonList';
 import { getLocalAttributes } from './utils';
 
 export { locationDtoSchema as dtoSchema, LocationType } from '@flumens';
@@ -202,8 +209,9 @@ class Location extends LocationModel<Data> {
     { id, createdOn, updatedOn, externalKey, ...data }: any,
     options?: LocationOptions
   ) {
+    const existingCid = locations.idMap.get(id)?.cid;
     const parsedRemoteJSON: any = {
-      cid: externalKey || UUIDv7(),
+      cid: existingCid || externalKey || UUIDv7(),
       id,
       createdAt: new Date(createdOn).getTime(),
       updatedAt: new Date(updatedOn).getTime(),
@@ -241,12 +249,18 @@ class Location extends LocationModel<Data> {
 
   media: IObservableArray<Media>;
 
+  private _groupCids: IObservableArray<string>;
+
+  private _taxonListCids: IObservableArray<string>;
+
   constructor({
     skipStore,
     media = [],
     metadata = {},
+    groupCids,
+    taxonListCids,
     ...options
-  }: LocationOptions) {
+  }: LocationOptions & { groupCids?: string[]; taxonListCids?: string[] }) {
     super({
       store: skipStore ? undefined : locationsStore,
       url: config.backend.indicia.url,
@@ -257,6 +271,48 @@ class Location extends LocationModel<Data> {
     this.metadata = observable(metadata);
 
     this.media = observable(media);
+
+    this._groupCids = observable([...new Set(groupCids || [])]);
+    this._taxonListCids = observable([...new Set(taxonListCids || [])]);
+  }
+
+  get groupCids(): readonly string[] {
+    return this._groupCids;
+  }
+
+  get taxonListCids(): readonly string[] {
+    return this._taxonListCids;
+  }
+
+  async linkGroup(group: Group) {
+    if (!this._groupCids.includes(group.cid)) {
+      this._groupCids.push(group.cid);
+    }
+
+    if (!group.locationCids.includes(this.cid)) {
+      await group.linkLocation(this);
+    }
+  }
+
+  async linkTaxonList(taxonList: TaxonList) {
+    if (!this._taxonListCids.includes(taxonList.cid)) {
+      this._taxonListCids.push(taxonList.cid);
+
+      // persist the link to the locations_lists join table
+      const query = new SQLiteInsertBuilder(
+        locationsStore.locationLists.table,
+        {} as any,
+        new SQLiteSyncDialect()
+      )
+        .values({ locationCid: this.cid, taxonListCid: taxonList.cid })
+        .onConflictDoNothing();
+
+      await locationsStore.locationLists.db.query(query.toSQL());
+    }
+
+    if (!taxonList.locationCids.includes(this.cid)) {
+      await taxonList.linkLocation(this);
+    }
   }
 
   getSurvey = () => surveyConfig;

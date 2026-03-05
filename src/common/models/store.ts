@@ -3,28 +3,38 @@ import { Store } from '@flumens';
 import SQLiteDatabase from '@flumens/models/dist/Stores/SQLiteDatabase';
 import { jsonb } from '@flumens/models/dist/Stores/SQLiteStore';
 import { isPlatform } from '@ionic/react';
+import GroupsStore from './GroupsStore';
+import LocationsStore from './LocationsStore';
 
 const web = !isPlatform('hybrid');
 
 export const db = new SQLiteDatabase({ name: 'indicia', web, debug: web });
 export const mainStore = new Store({ name: 'main', db });
 export const samplesStore = new Store({ name: 'samples', db });
-export const locationsStore = new Store({ name: 'locations', db });
-export const groupsStore = new Store({ name: 'groups', db });
-
-export const speciesListsStore: any = new Store({ name: 'speciesLists', db });
+export const taxonListsStore: any = new Store({ name: 'taxon_lists', db });
+export const locationsStore: any = new LocationsStore({
+  name: 'locations',
+  db,
+  taxonListsStore,
+});
+export const groupsStore = new GroupsStore({
+  name: 'groups',
+  db,
+  locationsStore,
+  taxonListsStore,
+});
 
 /* eslint-disable @typescript-eslint/naming-convention */
-export const speciesColumns: any = {
+export const taxonColumns = {
   /**
-   * Warehouse taxa_taxon_list_id of the species. Not a unique ID on its own as multiple lists can contain the same taxon.
+   * Warehouse taxa_taxon_list_id of the taxon. Not a unique ID on its own as multiple lists can contain the same taxon.
    */
   id: integer().notNull(),
   /**
    * Identifies the taxon list which this searchable name is from.
    */
   list_cid: text()
-    .references(() => speciesListsStore.table.cid, { onDelete: 'cascade' })
+    .references(() => taxonListsStore.table.cid, { onDelete: 'cascade' })
     .notNull(),
   /**
    * Informal taxon group ID.
@@ -51,16 +61,16 @@ export const speciesColumns: any = {
    */
   taxon: text().notNull(),
   /**
-   * For storing additional species attributes, like country presence.
+   * For storing additional taxon attributes, like country presence.
    */
   data: jsonb<any>('data').notNull().default({}),
 } as const;
 /* eslint-enable @typescript-eslint/naming-convention */
 
-export const speciesStore: any = new Store<typeof speciesColumns>({
-  name: 'species',
+export const taxaStore: any = new Store<typeof taxonColumns>({
+  name: 'taxa',
   db,
-  columns: speciesColumns,
+  columns: taxonColumns,
   extraConf: (table: any) => [
     primaryKey({ columns: [table.id, table.list_cid] }),
     index('taxon_idx').on(table.taxon),
@@ -77,8 +87,8 @@ if (web) {
     samplesStore,
     groupsStore,
     locationsStore,
-    speciesListsStore,
-    speciesStore,
+    taxonListsStore,
+    taxaStore,
     db,
   });
 }

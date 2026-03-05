@@ -6,6 +6,8 @@ import userModel from 'models/user';
 import appModel from '../app';
 import Group from '../group';
 import { groupsStore as store } from '../store';
+import locations from './locations';
+import taxonLists from './taxonLists';
 
 export class GroupCollection extends GroupCollectionBase<Group> {
   constructor(options: any) {
@@ -35,18 +37,56 @@ export class GroupCollection extends GroupCollectionBase<Group> {
     reaction(() => userModel.data.email, onLoginChange);
   }
 
-  async fetchRemote(params: any) {
+  async fetchRemote(
+    params: Parameters<GroupCollectionBase<Group>['fetchRemote']>[0]
+  ) {
     const countryCode = appModel.data.country!;
     const countryId = countries[countryCode]?.id;
 
     const useCountryFilter =
-      params.type !== 'member' && Number.isFinite(countryId);
+      params?.type !== 'member' && Number.isFinite(countryId);
 
-    return super.fetchRemote({
+    await super.fetchRemote({
       ...params,
       // we only want to show current country groups that are not the user's member groups
       location: useCountryFilter ? countryId : undefined,
     });
+
+    if (params?.type === 'member') {
+      // we need to fetch new group-locations and link them together
+      await locations.fetchRemote({ type: 'sites' });
+      await this.fetchAndLinkTaxonLists();
+    }
+  }
+
+  /**
+   * Fetch new group-species-lists and link them together.
+   */
+  private async fetchAndLinkTaxonLists() {
+    const allTaxonLists = await taxonLists.fetchRemoteWithLinks();
+    // for each member group, find matching species lists and install them
+    await Promise.all(
+      allTaxonLists.map(async ({ model: taxonList, groupIds }) => {
+        const matchingGroups = groupIds
+          .map(id => this.idMap.get(id))
+          .filter(Boolean) as Group[];
+
+        if (!matchingGroups.length) return;
+
+        // persist the species list to the local store
+        await taxonList.save(true);
+
+        taxonLists.upsert(taxonList);
+
+        // link species list to each matching group bidirectionally
+        await Promise.all(
+          matchingGroups.map(group => taxonList.linkGroup(group))
+        );
+
+        // download the taxon list for this species list
+        await taxonList.fetchRemoteSpecies();
+      })
+    );
   }
 }
 
@@ -56,5 +96,7 @@ const collection = new GroupCollection({
   url: config.backend.indicia.url,
   getAccessToken: () => userModel.getAccessToken(),
 });
+
+// (window as any).groupCollection = collection;
 
 export default collection;

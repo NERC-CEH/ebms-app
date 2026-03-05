@@ -33,6 +33,7 @@ export {
 export {
   default as GroupModel,
   type Data as GroupData,
+  type Options as GroupOptions,
   type LocationData as GroupLocationData,
 } from '@flumens/models/dist/Indicia/Group';
 export {

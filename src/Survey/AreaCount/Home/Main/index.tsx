@@ -12,6 +12,7 @@ import {
   flagOutline,
   copyOutline,
   addCircleOutline,
+  locateOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
@@ -36,6 +37,7 @@ import {
   IonSpinner,
 } from '@ionic/react';
 import GridRef from 'common/Components/PrettyLocation';
+import { getSpeciesProfileImage } from 'common/data/profiles';
 import Location from 'common/models/location';
 import appModel from 'models/app';
 import { Taxon } from 'models/occurrence';
@@ -242,21 +244,20 @@ const AreaCount = ({
 
     const deleteSpeciesWrap = () => deleteSpecies(taxon, isShallow);
 
-    let location;
+    let detailIcon;
     if (species.hasLocationMissing && !isDisabled) {
-      location = <IonIcon icon={warningOutline} color="danger" />;
+      detailIcon = warningOutline;
     } else if (species.isGeolocating) {
-      location = <IonSpinner />;
+      detailIcon = locateOutline;
     }
-
-    const hasZeroAbundance =
-      sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance();
 
     return (
       <IonItemSliding key={species.taxon.warehouseId}>
         <IonItem
-          detail={!isSpeciesDisabled && !hasZeroAbundance}
+          detail={!!detailIcon}
+          detailIcon={detailIcon}
           onClick={navigateToSpeciesOccurrencesWrap}
+          className={species.isGeolocating && 'geolocating'}
         >
           <IncrementalButton
             onClick={increaseCountWrap}
@@ -264,12 +265,13 @@ const AreaCount = ({
             value={species.count}
             disabled={isDisabled}
           />
-          <div className="my-2 mx-3">
+          <div className="min-h-11 my-1 ml-3 flex items-center gap-3 overflow-hidden">
+            <div className="list-avatar border-neutral-200 border size-9!">
+              {getSpeciesProfileImage(taxon)}
+            </div>
+
             <TaxonPrettyName taxon={taxon} />
           </div>
-          <IonLabel slot="end" className="location-spinner">
-            {location}
-          </IonLabel>
         </IonItem>
 
         {!isDisabled && !sample.isPreciseSingleSpeciesSurvey() && (

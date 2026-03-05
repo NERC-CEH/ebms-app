@@ -9,40 +9,11 @@ import countries, {
   ContinentCode,
   CountryCode,
 } from 'common/config/countries';
-import speciesListsCollection from 'common/models/collections/speciesLists';
+import taxonLists from 'common/models/collections/taxonLists';
 import appModel from 'models/app';
 
 type Props = {
   hideHeader?: any;
-};
-
-const fetchCountrySpeciesList = async (newCountry: string) => {
-  if (newCountry === 'ELSEWHERE') return;
-
-  try {
-    const newCountryNormalised =
-      newCountry === 'UK' ? 'GB' : newCountry.replace('_', ': ');
-    const lists = await speciesListsCollection.fetchRemote({
-      locationCode: newCountryNormalised,
-    });
-
-    if (lists.length !== 1)
-      throw new Error('No default country species list found');
-
-    const [list] = lists;
-
-    if (!speciesListsCollection.cidMap.has(list.cid))
-      speciesListsCollection.push(list);
-
-    await list.save(true);
-    await list.fetchRemoteSpecies();
-  } catch (error) {
-    console.error(
-      'Error fetching country species list for ',
-      newCountry,
-      error
-    );
-  }
 };
 
 const SelectCountry = ({ hideHeader }: Props) => {
@@ -88,8 +59,15 @@ const SelectCountry = ({ hideHeader }: Props) => {
     appModel.data.country = newCountry;
     appModel.save();
 
-    // in the background, fetch species lists for the selected country
-    fetchCountrySpeciesList(newCountry);
+    try {
+      // in the background, fetch species lists for the selected country
+      taxonLists.fetchDefaultCountryTaxonList(newCountry);
+    } catch (error) {
+      console.error(
+        `Error fetching country species list for "${newCountry}"`,
+        error
+      );
+    }
 
     if (!isOnboarding) goBack();
   }

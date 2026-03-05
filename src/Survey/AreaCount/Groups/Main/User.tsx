@@ -7,7 +7,7 @@ import {
   IonItemSliding,
   IonList,
 } from '@ionic/react';
-import { RadioInput } from 'common/flumens';
+import { Badge, RadioInput } from 'common/flumens';
 import Group from 'common/models/group';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
@@ -39,13 +39,23 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
       return <RadioInput.Option value="" label="Not linked to any project" />;
 
     return (
-      <IonItemSliding key={group?.id} className="rounded-md overflow-hidden">
+      <IonItemSliding key={group?.id} className="rounded-md mt-1">
         <IonItem className="[--padding-start:0] [--inner-padding-end:0] [--border-style:none]">
-          <RadioInput.Option
-            value={group.id!}
-            label={group.data.title}
-            className="w-full "
-          />
+          <div className="flex flex-col w-full rounded-md border-neutral-200 border">
+            <RadioInput.Option
+              value={group.id!}
+              label={group.data.title}
+              className="w-full "
+            />
+            <div className="flex items-center gap-2 m-1 empty:hidden">
+              {!!group.taxonListCids.length && (
+                <Badge size="small">Has species lists</Badge>
+              )}
+              {!!group.locationCids.length && (
+                <Badge size="small">Has sites</Badge>
+              )}
+            </div>
+          </div>
         </IonItem>
 
         <IonItemOptions side="end">

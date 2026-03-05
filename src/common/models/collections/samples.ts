@@ -57,4 +57,6 @@ export function bySurveyDate(sample1: Sample, sample2: Sample) {
   return date2.getTime() - date1.getTime();
 }
 
+// (window as any).sampleCollection = collection;
+
 export default samples;

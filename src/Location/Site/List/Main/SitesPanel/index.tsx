@@ -88,7 +88,7 @@ const Sites = ({
         )}
         {segment === 'group' && !groupLocations.length && (
           <InfoBackgroundMessage>
-            Please select a project to view its sites.
+            This project doesn't have any sites.
           </InfoBackgroundMessage>
         )}
       </IonContent>

@@ -1,13 +1,13 @@
 import { useMemo } from 'react';
 import { observer } from 'mobx-react';
-import { device, Button, VirtualList, ItemProps } from '@flumens';
+import { device, Button, VirtualList, ItemProps, Badge } from '@flumens';
 import {
   IonList,
   IonItem,
   IonRefresher,
   IonRefresherContent,
 } from '@ionic/react';
-import SpeciesList from 'common/models/speciesList';
+import TaxonList from 'common/models/taxonList';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 
 // https://stackoverflow.com/questions/47112393/getting-the-iphone-x-safe-area-using-javascript
@@ -18,15 +18,15 @@ const LIST_PADDING = 80 + SAFE_AREA_TOP;
 const LIST_ITEM_HEIGHT = 73 + 10; // 10px for padding
 
 type Data = {
-  lists: SpeciesList[];
-  onInstall: (list: SpeciesList) => void;
+  lists: TaxonList[];
+  onInstall: (list: TaxonList) => void;
 };
 
 const Item = ({ index, style, data }: ItemProps<Data>) => {
-  const lists: SpeciesList[] = data.lists;
+  const lists: TaxonList[] = data.lists;
   const onInstall: any = data.onInstall;
 
-  const list: SpeciesList = lists[index];
+  const list: TaxonList = lists[index];
 
   const handleInstallClick = () => onInstall(list);
 
@@ -38,12 +38,13 @@ const Item = ({ index, style, data }: ItemProps<Data>) => {
     >
       <div className="flex w-full items-center justify-between gap-2">
         <div className="min-w-0 flex-1">
-          <h2 className="line-clamp-1 font-bold mt-0!">{list.data.title}</h2>
-          {list.data.description && (
-            <p className="line-clamp-1 text-sm opacity-70 m-0">
-              {list.data.description}
-            </p>
-          )}
+          <h2 className="line-clamp-1 font-bold mt-0.5">{list.data.title}</h2>
+          <div className="flex gap-1">
+            <Badge size="small">{`${list.getSize()}`} species</Badge>
+            {list.data.type !== 'list' && (
+              <Badge size="small">{list.data.type.replaceAll('_', ' ')}</Badge>
+            )}
+          </div>
         </div>
 
         <Button
@@ -59,9 +60,9 @@ const Item = ({ index, style, data }: ItemProps<Data>) => {
 };
 
 type Props = {
-  onInstall: (list: SpeciesList) => void;
+  onInstall: (list: TaxonList) => void;
   onRefresh: () => void;
-  lists: SpeciesList[];
+  lists: TaxonList[];
 };
 
 const AllLists = ({ onInstall, lists, onRefresh }: Props) => {

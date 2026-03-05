@@ -1,26 +1,148 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { and, eq, inArray, not, or, SQL, sql } from 'drizzle-orm';
 import { useTranslation } from 'react-i18next';
-import { IonButton, IonSearchbar, useIonViewDidEnter } from '@ionic/react';
+import { IonSearchbar, useIonViewDidEnter } from '@ionic/react';
 import { getLanguageIso } from 'common/config/languages';
 import groups from 'common/data/groups';
-import { InfoMessage } from 'common/flumens';
 import speciesSearch, { type SearchResult } from 'common/helpers/taxonSearch';
-import speciesListsCollection from 'common/models/collections/speciesLists';
+import taxonLists from 'common/models/collections/taxonLists';
 import { Taxon } from 'common/models/occurrence';
-import { speciesStore } from 'common/models/store';
+import { taxaStore } from 'common/models/store';
 import appModel from 'models/app';
+import MissingListsMessage from './components/MissingListsMessage';
 import Suggestions from './components/Suggestions';
-import './styles.scss';
 
 type SearchResults = SearchResult[];
 
 const MIN_SEARCH_LENGTH = 2;
 
+const annotateRecordedTaxa = (
+  newSearchResults: SearchResults,
+  recordedTaxa?: number[]
+) =>
+  newSearchResults.map((result: SearchResult) =>
+    recordedTaxa?.includes(result.preferredId || result.warehouseId)
+      ? { ...result, ...{ isRecorded: true } }
+      : result
+  );
+
+const useDefaultSpecies = (
+  taxonListCids?: string[],
+  recordedTaxa?: number[]
+) => {
+  const [defaultSpecies, setDefaultSpecies] = useState<SearchResult[]>();
+
+  // load all species by default if there are fewer than 200
+  useEffect(() => {
+    const language = getLanguageIso(appModel.data.language);
+
+    const fetchDefaultSpecies = async () => {
+      const lists = taxonLists.filter(list =>
+        taxonListCids?.includes(list.cid)
+      );
+
+      let speciesCount = 0;
+      lists.forEach(list => {
+        speciesCount += list.data.size || 0;
+      });
+      if (!speciesCount || speciesCount > 200) return;
+
+      const species: SearchResult[] = [];
+      await Promise.all(
+        lists.map(async list => {
+          const listSpecies = await list.fetchSpecies(language);
+          species.push(...listSpecies);
+        })
+      );
+
+      const annotated = annotateRecordedTaxa(species, recordedTaxa);
+
+      // sort by preferred name type (common vs scientific)
+      const { taxonNameDisplay } = appModel.data;
+      const preferCommonNames = taxonNameDisplay !== 'scientificOnly';
+      annotated.sort((a, b) => {
+        const nameA = preferCommonNames ? a.commonName : a.scientificName;
+        const nameB = preferCommonNames ? b.commonName : b.scientificName;
+        if (!nameA) return 1;
+        if (!nameB) return -1;
+        return nameA.localeCompare(nameB);
+      });
+
+      setDefaultSpecies(annotated);
+    };
+
+    fetchDefaultSpecies();
+  }, []);
+
+  return defaultSpecies;
+};
+
+const filterDayFlyingMoths = (
+  table: typeof taxaStore.table,
+  useDayFlyingMothsOnly?: boolean
+): SQL => {
+  const useDayMothsFilter =
+    useDayFlyingMothsOnly || appModel.data.useDayFlyingMothsOnly;
+  if (!useDayMothsFilter) return sql`1`;
+
+  // filter for day-flying moths only
+  return or(
+    not(eq(table.taxon_group_id, groups.moths.id)),
+    sql`json_extract(${table.data}, '$.Day-active') not null`
+  ) as SQL<any>;
+};
+
+const speciesGroupFilter = (
+  table: typeof taxaStore.table,
+  speciesGroups?: number[]
+): SQL => {
+  const getGroupId = (group: any) => {
+    if (typeof group === 'string') return (groups as any)[group]?.id; // backward compatibility
+    return group;
+  };
+  const informalGroups = speciesGroups?.map(getGroupId) || [];
+  if (!informalGroups.length) return sql`1`;
+
+  return or(
+    ...informalGroups.map((g: any) => eq(table.taxon_group_id, g))
+  ) as SQL<any>;
+};
+
+const isPresent = (table: typeof taxaStore.table): SQL => {
+  const { country } = appModel.data;
+  if (country === 'ELSEWHERE') return sql`1`;
+
+  // convert UK to GB for country code
+  let countryCode = country === 'UK' ? 'GB' : country;
+  if (!countryCode) return sql`1`;
+
+  const countryCodeWithSubregion = countryCode.includes('_');
+  if (countryCodeWithSubregion) {
+    countryCode = countryCode.replaceAll('_', ': '); // normalize it to match the data format
+  }
+
+  return or(
+    not(eq(table.taxon_group_id, groups.butterflies.id)), // abundance available only for butterflies group
+    inArray(sql`json_extract(${table.data}, '$.' || ${countryCode})`, [
+      'P',
+      'P?',
+      'M',
+      'I',
+    ])
+  ) as SQL<any>;
+};
+
+const taxonListFilter = (
+  table: typeof taxaStore.table,
+  taxonListCids?: string[]
+): SQL =>
+  !taxonListCids?.length ? sql`1` : inArray(table.list_cid, taxonListCids);
+
 type Props = {
   recordedTaxa: number[] | undefined;
   onSpeciesSelected: (taxon: Taxon) => void;
   useDayFlyingMothsOnly?: boolean;
+  taxonListCids?: string[];
   speciesGroups?: number[];
 };
 
@@ -29,6 +151,7 @@ const TaxonSearch = ({
   onSpeciesSelected,
   speciesGroups,
   useDayFlyingMothsOnly,
+  taxonListCids,
 }: Props) => {
   const { t } = useTranslation();
 
@@ -36,52 +159,10 @@ const TaxonSearch = ({
 
   const [searchResults, setSearchResults] = useState<SearchResult[]>();
   const [searchPhrase, setSearchPhrase] = useState('');
-
-  const annotateRecordedTaxa = (newSearchResults: SearchResults) =>
-    newSearchResults.map((result: SearchResult) =>
-      recordedTaxa?.includes(result.preferredId || result.warehouseId)
-        ? { ...result, ...{ isRecorded: true } }
-        : result
-    );
-
-  const filterDayFlyingMoths = (table: typeof speciesStore.table): SQL => {
-    const useDayMothsFilter =
-      useDayFlyingMothsOnly || appModel.data.useDayFlyingMothsOnly;
-    if (!useDayMothsFilter) return sql`1`;
-
-    // filter for day-flying moths only
-    return or(
-      not(eq(table.taxon_group_id, groups.moths.id)),
-      sql`json_extract(${table.data}, '$.Day-active') not null`
-    ) as SQL<any>;
-  };
-
-  const isPresent = (table: typeof speciesStore.table): SQL => {
-    const { country } = appModel.data;
-    if (country === 'ELSEWHERE') return sql`1`;
-
-    // convert UK to GB for country code
-    let countryCode = country === 'UK' ? 'GB' : country;
-    if (!countryCode) return sql`1`;
-
-    const countryCodeWithSubregion = countryCode.includes('_');
-    if (countryCodeWithSubregion) {
-      countryCode = countryCode.replaceAll('_', ': '); // normalize it to match the data format
-    }
-
-    return or(
-      not(eq(table.taxon_group_id, groups.butterflies.id)), // abundance available only for butterflies group
-      inArray(sql`json_extract(${table.data}, '$.' || ${countryCode})`, [
-        'P',
-        'P?',
-        'M',
-        'I',
-      ])
-    ) as SQL<any>;
-  };
+  const defaultSpecies = useDefaultSpecies(taxonListCids, recordedTaxa);
 
   const onInputKeystroke = async (e: any) => {
-    let newSearchPhrase = e.target.value;
+    const newSearchPhrase = e.target.value?.toLowerCase();
 
     const isValidSearch =
       typeof newSearchPhrase === 'string' &&
@@ -92,33 +173,26 @@ const TaxonSearch = ({
       return;
     }
 
-    newSearchPhrase = newSearchPhrase.toLowerCase();
-
-    const speciesGroup = (table: typeof speciesStore.table): SQL => {
-      const getGroupId = (group: any) => {
-        if (typeof group === 'string') return (groups as any)[group]?.id; // backward compatibility
-        return group;
-      };
-      const informalGroups = speciesGroups?.map(getGroupId) || [];
-      if (!informalGroups.length) return sql`1`;
-
-      return or(
-        ...informalGroups.map((g: any) => eq(table.taxon_group_id, g))
-      ) as SQL<any>;
-    };
-
     const language = getLanguageIso(appModel.data.language);
 
     // search
     const newSearchResults = await speciesSearch({
-      store: speciesStore,
+      store: taxaStore,
       searchPhrase: newSearchPhrase,
       language,
-      where: (table: typeof speciesStore.table): any =>
-        and(speciesGroup(table), isPresent(table), filterDayFlyingMoths(table)),
+      where: (table: typeof taxaStore.table): any =>
+        and(
+          speciesGroupFilter(table, speciesGroups),
+          taxonListFilter(table, taxonListCids),
+          isPresent(table),
+          filterDayFlyingMoths(table, useDayFlyingMothsOnly)
+        ),
     });
 
-    const annotatedSearchResults = annotateRecordedTaxa(newSearchResults);
+    const annotatedSearchResults = annotateRecordedTaxa(
+      newSearchResults,
+      recordedTaxa
+    );
 
     setSearchResults(annotatedSearchResults);
     setSearchPhrase(newSearchPhrase);
@@ -129,15 +203,12 @@ const TaxonSearch = ({
     setSearchPhrase('');
   };
 
-  useIonViewDidEnter(() => {
-    if (inputEl.current) {
-      inputEl.current.setFocus();
-    }
-  });
+  useIonViewDidEnter(
+    () => !defaultSpecies?.length && inputEl.current?.setFocus()
+  );
 
   const hasMissingSpeciesGroupLists = !!speciesGroups?.filter(
-    sg =>
-      !speciesListsCollection.find(list => list.data.taxonGroups.includes(sg))
+    sg => !taxonLists.find(list => list.data.taxonGroups.includes(sg))
   ).length;
 
   return (
@@ -153,26 +224,11 @@ const TaxonSearch = ({
       />
 
       {hasMissingSpeciesGroupLists && !searchResults?.length && (
-        <InfoMessage
-          color="warning"
-          className="mx-2 text-center border-secondary-200"
-        >
-          Some species groups are missing from your current downloaded lists.
-          <br />
-          <IonButton
-            routerLink="/settings/species-lists"
-            fill="outline"
-            size="small"
-            color="warning"
-            className="mt-2"
-          >
-            Species Lists
-          </IonButton>
-        </InfoMessage>
+        <MissingListsMessage />
       )}
 
       <Suggestions
-        searchResults={searchResults}
+        searchResults={searchResults || defaultSpecies}
         searchPhrase={searchPhrase}
         onSpeciesSelected={onSpeciesSelected}
       />

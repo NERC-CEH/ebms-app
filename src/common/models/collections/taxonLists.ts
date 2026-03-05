@@ -8,8 +8,8 @@ import {
 } from '@flumens';
 import config from 'common/config';
 import appModel from '../app';
-import SpeciesList, { DTO } from '../speciesList';
-import { speciesListsStore } from '../store';
+import { taxonListsStore } from '../store';
+import TaxonList, { DTO } from '../taxonList';
 
 type RemoteFetchParams = {
   limit?: number;
@@ -19,7 +19,7 @@ type RemoteFetchParams = {
   updatedOn?: number;
 };
 
-class SpeciesListCollection extends Collection<SpeciesList> {
+class TaxonListCollection extends Collection<TaxonList> {
   protected remote: {
     synchronising: boolean;
     url: string;
@@ -27,7 +27,7 @@ class SpeciesListCollection extends Collection<SpeciesList> {
   };
 
   constructor() {
-    super({ id: 'speciesLists', store: speciesListsStore, Model: SpeciesList });
+    super({ id: 'taxonLists', store: taxonListsStore, Model: TaxonList });
 
     this.remote = observable({
       synchronising: false,
@@ -41,6 +41,11 @@ class SpeciesListCollection extends Collection<SpeciesList> {
   }
 
   async fetchRemote(params: RemoteFetchParams = {}) {
+    const models = await this.fetchRemoteWithLinks(params);
+    return models.map(({ model }) => model);
+  }
+
+  async fetchRemoteWithLinks(params: RemoteFetchParams = {}) {
     console.log(`📚 Collection: ${this.id} collection fetching`);
 
     this.remote.synchronising = true;
@@ -80,8 +85,10 @@ class SpeciesListCollection extends Collection<SpeciesList> {
 
       const res = await axios.get(url, options);
 
-      const dtos: DTO[] = res.data.data.map(
-        (item: any): DTO => ({
+      type Parsed = { doc: DTO; groupIds: string[]; locationIds: string[] };
+
+      const parsed: Parsed[] = res.data.data.map((item: any) => ({
+        doc: {
           id: item.id,
           type: item.type,
           title: item.name,
@@ -95,21 +102,25 @@ class SpeciesListCollection extends Collection<SpeciesList> {
             .map(parseFloat),
           size: Number.parseInt(item.taxa_count, 10) || 0,
           locationCode: item.location_code,
-        })
-      );
+        },
+        groupIds: JSON.parse(item.projects || '[]').map(String),
+        locationIds: JSON.parse(item.locations || '[]').map(String),
+      }));
 
       // create ephemeral models (not stored in local database)
-      const models: SpeciesList[] = dtos.map((dto: DTO) =>
-        SpeciesList.fromDTO(dto, { skipStore: true })
-      );
+      const full = parsed.map(({ doc, groupIds, locationIds }) => ({
+        model: TaxonList.fromDTO(doc, { skipStore: true }),
+        groupIds,
+        locationIds,
+      }));
 
       console.log(
-        `📚 Collection: ${this.id} collection fetching done ${dtos.length} documents`
+        `📚 Collection: ${this.id} collection fetching done ${parsed.length} documents`
       );
 
       this.remote.synchronising = false;
 
-      return models;
+      return full;
     } catch (error: any) {
       this.remote.synchronising = false;
 
@@ -143,10 +154,10 @@ class SpeciesListCollection extends Collection<SpeciesList> {
       };
 
       const lastUpdateDate =
-        appModel.data.speciesListsUpdatedAt || getYesterdayDate();
+        appModel.data.taxonListsUpdatedAt || getYesterdayDate();
 
       console.log(
-        '📚 Collection: speciesLists fetching species lists updated since:',
+        '📚 Collection: taxonLists fetching species lists updated since:',
         lastUpdateDate
       );
 
@@ -164,18 +175,36 @@ class SpeciesListCollection extends Collection<SpeciesList> {
       await Promise.all(listsToRefresh.map(list => list.fetchRemoteSpecies()));
 
       // update last refresh date
-      appModel.data.speciesListsUpdatedAt = Date.now();
+      appModel.data.taxonListsUpdatedAt = Date.now();
       await appModel.save();
 
       // eslint-disable-next-line no-console
-      console.log('📚 Collection: speciesLists refresh completed');
+      console.log('📚 Collection: taxonLists refresh completed');
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error('Error refreshing species lists:', error);
     }
   }
+
+  async fetchDefaultCountryTaxonList(newCountry: string) {
+    if (newCountry === 'ELSEWHERE') return;
+
+    const newCountryNormalised =
+      newCountry === 'UK' ? 'GB' : newCountry.replace('_', ': ');
+    const lists = await this.fetchRemote({
+      locationCode: newCountryNormalised,
+    });
+
+    const list = lists.find(l => l.data.locationCode === newCountryNormalised);
+    if (!list) throw new Error('No default country species list found');
+
+    this.upsert(list);
+
+    await list.save(true);
+    await list.fetchRemoteSpecies();
+  }
 }
 
-const speciesListsCollection = new SpeciesListCollection();
+const taxonListsCollection = new TaxonListCollection();
 
-export default speciesListsCollection;
+export default taxonListsCollection;

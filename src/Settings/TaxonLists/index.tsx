@@ -21,19 +21,19 @@ import {
   IonIcon,
 } from '@ionic/react';
 import GPS from 'common/helpers/GPS';
-import speciesLists from 'common/models/collections/speciesLists';
-import SpeciesList from 'common/models/speciesList';
+import taxonLists from 'common/models/collections/taxonLists';
+import TaxonList from 'common/models/taxonList';
 import AllLists from './components/AllLists';
 import InstalledLists from './components/InstalledLists';
 
-const SpeciesListSettings = () => {
+const TaxonLists = () => {
   const toast = useToast();
   const loader = useLoader();
   const { t } = useTranslation();
   const searchbarRef = useRef<any>(null);
 
-  const [nearbyLists, setNearbyLists] = useState<SpeciesList[]>([]);
-  const [allLists, setAllLists] = useState<SpeciesList[]>([]);
+  const [nearbyLists, setNearbyLists] = useState<TaxonList[]>([]);
+  const [allLists, setAllLists] = useState<TaxonList[]>([]);
   const [location, setLocation] = useState<{ lat: number; lon: number }>();
 
   const [segment, setSegment] = useState<'installed' | 'nearby' | 'all'>(
@@ -73,7 +73,7 @@ const SpeciesListSettings = () => {
     await loader.show('Please wait...');
 
     try {
-      const lists = await speciesLists.fetchRemote({ limit: 1000 }); // 1k should cover all lists
+      const lists = await taxonLists.fetchRemote({ limit: 1000 }); // 1k should cover all lists
       setAllLists(lists);
     } catch (error: any) {
       toast.error(`Failed to load lists: ${error.message}`);
@@ -93,7 +93,7 @@ const SpeciesListSettings = () => {
     try {
       // retrieve lat/lon from device location
 
-      const lists = await speciesLists.fetchRemote({
+      const lists = await taxonLists.fetchRemote({
         limit: 5,
         ...location,
       });
@@ -110,7 +110,7 @@ const SpeciesListSettings = () => {
     if (segment === 'all') fetchRemoteLists();
   }, [segment]);
 
-  const onInstall = async (list: SpeciesList) => {
+  const onInstall = async (list: TaxonList) => {
     if (!device.isOnline) {
       toast.warn("Sorry, looks like you're offline.");
       return;
@@ -122,7 +122,7 @@ const SpeciesListSettings = () => {
       await list.save(true);
       await list.fetchRemoteSpecies();
 
-      speciesLists.push(list);
+      taxonLists.upsert(list);
 
       toast.success(
         t('Successfully installed "{{country}}" list with {{size}} species', {
@@ -159,16 +159,20 @@ const SpeciesListSettings = () => {
     </Button>
   );
 
-  const notInstalled = (list: SpeciesList) =>
-    !speciesLists.cidMap.has(list.cid);
-  const matchesSearch = (list: SpeciesList) =>
+  const notInstalled = (list: TaxonList) => !taxonLists.cidMap.has(list.cid);
+  const alphabetically = (l1: TaxonList, l2: TaxonList) =>
+    l1.data.title.localeCompare(l2.data.title);
+  const matchesSearch = (list: TaxonList) =>
     !currentSearch ||
     list.data.title?.toLowerCase().includes(currentSearch?.toLowerCase()) ||
     list.data.description?.toLowerCase().includes(currentSearch?.toLowerCase());
-  const allListsFiltered = allLists.filter(notInstalled).filter(matchesSearch);
+  const allListsFiltered = allLists
+    .filter(notInstalled)
+    .filter(matchesSearch)
+    .sort(alphabetically);
   const nearbyListsFiltered = nearbyLists.filter(notInstalled);
 
-  const onReinstall = async (list: SpeciesList) => {
+  const onReinstall = async (list: TaxonList) => {
     if (!device.isOnline) {
       toast.warn("Sorry, looks like you're offline.");
       return;
@@ -193,8 +197,8 @@ const SpeciesListSettings = () => {
     loader.hide();
   };
 
-  const onDelete = async (list: SpeciesList) => {
-    await speciesLists.remove(list);
+  const onDelete = async (list: TaxonList) => {
+    await taxonLists.remove(list);
     await list.destroy();
   };
 
@@ -254,7 +258,7 @@ const SpeciesListSettings = () => {
 
         {segment === 'installed' && (
           <InstalledLists
-            lists={speciesLists as any}
+            lists={taxonLists as any}
             onDelete={onDelete}
             onReinstall={onReinstall}
           />
@@ -278,4 +282,4 @@ const SpeciesListSettings = () => {
   );
 };
 
-export default observer(SpeciesListSettings);
+export default observer(TaxonLists);
