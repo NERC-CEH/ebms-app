@@ -10,13 +10,22 @@ import {
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
-import { Main, MenuAttrItem, InfoMessage, NumberInput, Toggle } from '@flumens';
+import {
+  Main,
+  MenuAttrItem,
+  InfoMessage,
+  NumberInput,
+  Toggle,
+  Block,
+} from '@flumens';
 import { IonList, IonIcon } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
+import appModel from 'common/models/app';
 import Group from 'common/models/group';
 import Location from 'common/models/location';
 import Sample from 'models/sample';
+import { guidAttr } from 'Survey/common/config';
 
 type Props = {
   sample: Sample;
@@ -40,6 +49,8 @@ const AreaCountDetails = ({
   const { recorders, comment, cloud, temperature, windDirection, windSpeed } =
     sample.data;
 
+  const isSwissUser = appModel.data.country === 'CH';
+
   return (
     <Main>
       <IonList lines="full">
@@ -60,7 +71,13 @@ const AreaCountDetails = ({
             value={site?.data.name}
             skipValueTranslation
           />
-
+          {isSwissUser && (
+            <Block
+              record={sample.data}
+              block={guidAttr}
+              isDisabled={isDisabled}
+            />
+          )}
           <Toggle
             prefix={<IonIcon src={eyeOffOutline} className="size-6" />}
             label="Sensitive"

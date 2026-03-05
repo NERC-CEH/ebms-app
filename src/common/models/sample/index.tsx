@@ -19,7 +19,7 @@ import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
 import baitTrapSurvey from 'Survey/BaitTrap/config';
 import mothSurvey from 'Survey/MothTrap/config';
 import transectSurvey from 'Survey/Transect/config';
-import { Survey } from 'Survey/common/config';
+import { guidAttr, Survey } from 'Survey/common/config';
 import { Data as LocationAttributes } from '../location';
 import Media from '../media';
 import Occurrence from '../occurrence';
@@ -70,6 +70,7 @@ type AreaCountData = {
   reliability: string;
   recorders: number;
   speciesGroups: number[];
+  [guidAttr.id]: string;
 };
 
 export type Data = SampleData & Partial<AreaCountData> & Partial<MothData>;

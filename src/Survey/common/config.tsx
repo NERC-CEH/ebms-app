@@ -12,10 +12,13 @@ import {
   dateFormat,
   BlockT,
   inferBlockType,
+  TextInputConf,
 } from '@flumens';
+import { IonIcon } from '@ionic/react';
 import groups from 'common/data/groups';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import windIcon from 'common/images/wind.svg';
+import appModel from 'common/models/app';
 import Occurrence, { Taxon } from 'common/models/occurrence';
 import Media from 'models/media';
 import Sample from 'models/sample';
@@ -205,32 +208,50 @@ export const dateAttr = {
   remote: { values: (date: number) => dateFormat.format(new Date(date)) },
 } as const;
 
-export const areaCountSchema = z.object({
-  location: z
-    .object(
-      {
-        latitude: z.number().nullable().optional(),
-        longitude: z.number().nullable().optional(),
-        shape: z.object({}).nullable().optional(),
-        area: z
-          .number({ error: 'Please add survey area information.' })
-          .min(1, 'Please add survey area information.')
-          .max(20000000, 'Please select a smaller area.'),
-      },
-      { error: 'Location is missing.' }
-    )
-    .refine(
-      (val: any) =>
-        Number.isFinite(val.latitude) &&
-        Number.isFinite(val.longitude) &&
-        val.shape,
-      'Location is missing.'
-    ),
+export const guidAttr = {
+  id: 'smpAttr:2021',
+  type: 'textInput',
+  title: 'GUID',
+  container: 'inline',
+  prefix: (<IonIcon icon={chatboxOutline} className="size-6" />) as any,
+  className: '[&>div>div>input]:text-right',
+} as const satisfies TextInputConf;
 
-  surveyStartTime: z
-    .string({ error: 'Date is missing' })
-    .min(1, 'Date is missing'),
-});
+export const areaCountSchema = z
+  .object({
+    location: z
+      .object(
+        {
+          latitude: z.number().nullable().optional(),
+          longitude: z.number().nullable().optional(),
+          shape: z.object({}).nullable().optional(),
+          area: z
+            .number({ error: 'Please add survey area information.' })
+            .min(1, 'Please add survey area information.')
+            .max(20000000, 'Please select a smaller area.'),
+        },
+        { error: 'Location is missing.' }
+      )
+      .refine(
+        (val: any) =>
+          Number.isFinite(val.latitude) &&
+          Number.isFinite(val.longitude) &&
+          val.shape,
+        'Location is missing.'
+      ),
+
+    surveyStartTime: z
+      .string({ error: 'Date is missing' })
+      .min(1, 'Date is missing'),
+
+    [guidAttr.id]: z.string().optional(),
+  })
+  .superRefine((val, ctx) => {
+    const isSwissUser = appModel.data.country === 'CH';
+    if (isSwissUser && !val[guidAttr.id]) {
+      ctx.addIssue({ code: 'custom', message: 'GUID is missing.' });
+    }
+  });
 
 const stageValues = [
   { value: null, isDefault: true, label: 'Not Recorded' },
