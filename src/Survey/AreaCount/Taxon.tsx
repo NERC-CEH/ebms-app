@@ -182,7 +182,7 @@ const TaxonController = () => {
       }
 
       if (!sample.isSurveyPreciseSingleSpecies()) {
-        newSample.startGPS();
+        if (!sample.isTimerFinished()) newSample.startGPS();
       }
     }
 

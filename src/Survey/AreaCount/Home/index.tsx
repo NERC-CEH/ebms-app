@@ -457,7 +457,9 @@ const HomeController = () => {
   const increaseCount = (taxon: any, _: boolean, is5x: boolean) => {
     if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
       sample.samples[0].occurrences[0].data.zeroAbundance = false;
-      sample.samples[0].startGPS();
+
+      if (!sample.isTimerFinished()) sample.samples[0].startGPS();
+
       sample.save();
       return;
     }
@@ -469,7 +471,8 @@ const HomeController = () => {
     const addOneCount = () => {
       const newSubSample = survey.smp!.create!({ Sample, Occurrence, taxon });
       sample.samples.push(newSubSample);
-      newSubSample.startGPS();
+
+      if (!sample.isTimerFinished()) newSubSample.startGPS();
     };
 
     if (is5x) {
