@@ -3305,3 +3305,7 @@ msgstr ""
 
 msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""
+
+msgid ""
+"To create a new project, visit the <2>projects page</2> on the website."
+msgstr ""

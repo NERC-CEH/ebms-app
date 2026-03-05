@@ -1,9 +1,18 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@flumens';
+import config from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'models/app';
 import Group from 'models/group';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+
+const newProjectMessage = (
+  <InfoBackgroundMessage>
+    To create a new project, visit the{' '}
+    <a href={`${config.backend.url}/projects/`}>projects page</a> on the{' '}
+    website.
+  </InfoBackgroundMessage>
+);
 
 type Props = {
   groups: Group[];
@@ -18,13 +27,16 @@ const AllGroups = ({ groups, onJoin }: Props) => {
 
   if (!groups.length)
     return (
-      <InfoBackgroundMessage>
-        <div className="my-3 opacity-50">{{ country } as any}</div>
-        There are currently no new projects available to join.
-        <br />
-        <br />
-        Pull the page down to refresh the list.
-      </InfoBackgroundMessage>
+      <>
+        <InfoBackgroundMessage>
+          <div className="my-3 opacity-50">{{ country } as any}</div>
+          There are currently no new projects available to join.
+          <br />
+          <br />
+          Pull the page down to refresh the list.
+        </InfoBackgroundMessage>
+        {newProjectMessage}
+      </>
     );
 
   const getGroupButton = (group: Group) => {
@@ -60,6 +72,8 @@ const AllGroups = ({ groups, onJoin }: Props) => {
   return (
     <div className="m-3 flex flex-col items-center gap-4">
       {groups.map(getGroupButton)}
+
+      {newProjectMessage}
     </div>
   );
 };
