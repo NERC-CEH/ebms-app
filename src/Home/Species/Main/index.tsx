@@ -107,18 +107,18 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
       return (
         <div
           key={id}
-          className="w-full h-full bg-white flex relative flex-col shadow-md border border-neutral-200 overflow-hidden rounded-md"
+          className="w-full h-full bg-white flex relative flex-col shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] border border-neutral-200 overflow-hidden rounded-md"
           onClick={onClick}
         >
           <img
             src={`/images/${id}_thumbnail.png`}
-            className="z-10 w-[106%] max-w-none mb-8 min-h-[120px] p-4"
+            className="z-10 w-full max-w-none mb-8 min-h-[120px] p-1"
           />
           <img
             src={`/images/${id}_thumbnail_bg.png`}
-            className="absolute h-full w-full opacity-30 pb-8"
+            className="absolute h-full w-full opacity-30"
           />
-          <span className="absolute bottom-0 min-h-12 px-3.75 py-1.75 w-full text-transparent text-sm font-bold bg-white shadow-[0_0_20px_20px_#ffffff]">
+          <span className="absolute bottom-0 min-h-12 px-3.75 py-1.75 w-full text-transparent text-sm font-bold bg-white shadow-[0_0_20px_20px_#ffffff] opacity-80">
             {label}
           </span>
           <span className="absolute z-10 min-h-12 flex justify-center items-center text-center bottom-0 px-3.75 py-1.75 w-full text-black text-sm font-bold">

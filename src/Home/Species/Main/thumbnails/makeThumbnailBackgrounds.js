@@ -28,3 +28,8 @@ const createBackground = thumbnail => {
   );
 };
 thumbnails.forEach(createBackground);
+
+// Run this a few times afterwards to get the best results to increase the colour saturation.
+// for f in *_bg.png; do
+//   magick "$f" -modulate 100,170,100 "$f"
+// done

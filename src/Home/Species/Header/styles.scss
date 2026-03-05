@@ -20,6 +20,7 @@
   ion-toolbar {
     --ion-toolbar-background: white;
     --color: black;
+    border-bottom: rgb(226, 226, 226) solid 1px;
 
     padding-top: env(safe-area-inset-top);
   }
