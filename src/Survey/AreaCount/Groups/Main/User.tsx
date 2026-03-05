@@ -73,7 +73,6 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
         onChange={onSelect}
         value={sample.data.groupId || ''}
         platform="ios"
-        skipTranslation
         className="mt-4"
       >
         {groupOptions.map(getOption)}

@@ -1,13 +1,12 @@
-# 
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2022
-# Egle Viciuviene <eviciuviene@gmail.com>, 2023
 # Karolis, 2025
+# Egle Viciuviene <eviciuviene@gmail.com>, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2025\n"
+"Last-Translator: Egle Viciuviene <eviciuviene@gmail.com>, 2026\n"
 "Language-Team: Lithuanian (Lithuania) (https://app.transifex.com/ceh/teams/95441/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3293,3 +3292,33 @@ msgstr "Ar tikrai norite ištrinti sąrašą?"
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
 msgstr "Sėkmingai įdiegtas \"{{country}}\" sąrašas su {{size}} rūšimis"
+
+msgid "Site"
+msgstr "Vietovė"
+
+msgid "Has species lists"
+msgstr "Turi rūšių sąrašus"
+
+msgid "Has sites"
+msgstr "Turi vietoves"
+
+msgid "New site"
+msgstr "Nauja vietovė"
+
+msgid "None"
+msgstr "Nėra"
+
+msgid "Sites"
+msgstr "Vietovės"
+
+msgid "My sites"
+msgstr "Mano vietovės"
+
+msgid "No site"
+msgstr "Nėra vietovės"
+
+msgid "custom list"
+msgstr "pasirinktinis sąrašas"
+
+msgid "location"
+msgstr "vietovė"

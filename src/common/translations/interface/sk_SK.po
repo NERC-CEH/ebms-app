@@ -1,12 +1,11 @@
-# 
 # Translators:
-# Lucia, 2023
 # Lucia Makarova, 2024
+# Lucia, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Lucia Makarova, 2024\n"
+"Last-Translator: Lucia, 2026\n"
 "Language-Team: Slovak (Slovakia) (https://app.transifex.com/ceh/teams/95441/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3278,4 +3277,34 @@ msgstr ""
 
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
+msgstr ""
+
+msgid "Site"
+msgstr ""
+
+msgid "Has species lists"
+msgstr ""
+
+msgid "Has sites"
+msgstr ""
+
+msgid "New site"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Sites"
+msgstr ""
+
+msgid "My sites"
+msgstr "Moje transekty"
+
+msgid "No site"
+msgstr ""
+
+msgid "custom list"
+msgstr ""
+
+msgid "location"
 msgstr ""

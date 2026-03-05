@@ -3356,3 +3356,33 @@ msgstr "¿Estás segur@ de que deseas eliminar la lista?"
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
 msgstr "Instalada correctamente lista de \"{{country}}\" con {{size}} especies"
+
+msgid "Site"
+msgstr ""
+
+msgid "Has species lists"
+msgstr ""
+
+msgid "Has sites"
+msgstr ""
+
+msgid "New site"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Sites"
+msgstr ""
+
+msgid "My sites"
+msgstr "Mis transectos"
+
+msgid "No site"
+msgstr ""
+
+msgid "custom list"
+msgstr ""
+
+msgid "location"
+msgstr ""

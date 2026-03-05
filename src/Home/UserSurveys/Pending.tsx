@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { addOutline } from 'ionicons/icons';
-import { useTranslation } from 'react-i18next';
+import { Trans as T, useTranslation } from 'react-i18next';
 import { useToast, getRelativeDate, VirtualList, Button } from '@flumens';
 import {
   IonIcon,
@@ -74,7 +74,9 @@ const getSurveys = (surveys: Sample[], showUploadAll?: boolean) => {
       const { date, count } = groupedSurveys[index];
       return (
         <IonItemDivider key={date} style={(itemProps as any).style} mode="ios">
-          <IonLabel>{getRelativeDate(date)}</IonLabel>
+          <IonLabel>
+            <T>{getRelativeDate(date)}</T>
+          </IonLabel>
           {count > 1 && <IonLabel slot="end">{count}</IonLabel>}
         </IonItemDivider>
       );

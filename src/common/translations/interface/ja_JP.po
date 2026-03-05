@@ -1,11 +1,10 @@
-# 
 # Translators:
-# Yasuhiro Nakamura, 2025
+# Yasuhiro Nakamura, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Yasuhiro Nakamura, 2025\n"
+"Last-Translator: Yasuhiro Nakamura, 2026\n"
 "Language-Team: Japanese (Japan) (https://app.transifex.com/ceh/teams/95441/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3115,3 +3114,33 @@ msgstr "このリストを削除してもよろしいですか?"
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
 msgstr "インストールに成功 \"{{country}}\" list with {{size}} species"
+
+msgid "Site"
+msgstr ""
+
+msgid "Has species lists"
+msgstr ""
+
+msgid "Has sites"
+msgstr ""
+
+msgid "New site"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Sites"
+msgstr ""
+
+msgid "My sites"
+msgstr "私の調査サイト"
+
+msgid "No site"
+msgstr ""
+
+msgid "custom list"
+msgstr ""
+
+msgid "location"
+msgstr ""

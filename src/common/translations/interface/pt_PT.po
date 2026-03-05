@@ -1,16 +1,15 @@
-# 
 # Translators:
 # Renata Santos <renatailsantos@gmail.com>, 2020
 # Vilius Stankaitis <vilius@flumens.io>, 2020
 # Karolis, 2021
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2023
-# Ricardo Silva Ramirez, 2023
 # Eva Monteiro <evasmonteiro@gmail.com>, 2024
+# Ricardo Silva Ramirez, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Eva Monteiro <evasmonteiro@gmail.com>, 2024\n"
+"Last-Translator: Ricardo Silva Ramirez, 2026\n"
 "Language-Team: Portuguese (Portugal) (https://app.transifex.com/ceh/teams/95441/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3304,4 +3303,34 @@ msgstr ""
 
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
+msgstr ""
+
+msgid "Site"
+msgstr ""
+
+msgid "Has species lists"
+msgstr ""
+
+msgid "Has sites"
+msgstr ""
+
+msgid "New site"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Sites"
+msgstr ""
+
+msgid "My sites"
+msgstr "Os meus locais"
+
+msgid "No site"
+msgstr ""
+
+msgid "custom list"
+msgstr ""
+
+msgid "location"
 msgstr ""

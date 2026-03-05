@@ -1,11 +1,10 @@
-# 
 # Translators:
-# Konstantina Nasiou, 2024
+# Konstantina Nasiou, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Konstantina Nasiou, 2024\n"
+"Last-Translator: Konstantina Nasiou, 2026\n"
 "Language-Team: Greek (Greece) (https://app.transifex.com/ceh/teams/95441/el_GR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3337,4 +3336,34 @@ msgstr ""
 
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
+msgstr ""
+
+msgid "Site"
+msgstr ""
+
+msgid "Has species lists"
+msgstr ""
+
+msgid "Has sites"
+msgstr ""
+
+msgid "New site"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Sites"
+msgstr ""
+
+msgid "My sites"
+msgstr "Οι διαδρομές μου"
+
+msgid "No site"
+msgstr ""
+
+msgid "custom list"
+msgstr ""
+
+msgid "location"
 msgstr ""

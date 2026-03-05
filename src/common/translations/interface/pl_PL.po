@@ -1,14 +1,13 @@
-# 
 # Translators:
 # Aleksandra Magdziarek <aleksandra.magdziarek@biol.lu.se>, 2020
-# Izabela Dziekańska <dzika200@interia.pl>, 2021
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2021
 # Michał Kochanowski, 2022
+# Izabela Dziekańska <dzika200@interia.pl>, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Michał Kochanowski, 2022\n"
+"Last-Translator: Izabela Dziekańska <dzika200@interia.pl>, 2026\n"
 "Language-Team: Polish (Poland) (https://app.transifex.com/ceh/teams/95441/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3251,4 +3250,34 @@ msgstr ""
 
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
+msgstr ""
+
+msgid "Site"
+msgstr ""
+
+msgid "Has species lists"
+msgstr ""
+
+msgid "Has sites"
+msgstr ""
+
+msgid "New site"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Sites"
+msgstr ""
+
+msgid "My sites"
+msgstr "Moje stanowiska"
+
+msgid "No site"
+msgstr ""
+
+msgid "custom list"
+msgstr ""
+
+msgid "location"
 msgstr ""

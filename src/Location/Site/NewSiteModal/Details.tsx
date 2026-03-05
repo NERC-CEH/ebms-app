@@ -223,7 +223,7 @@ const Details = ({ onSave }: Props) => {
 
             <IonItem detail onClick={navigateToArea} className="warning">
               <IonLabel color={location.data.boundaryGeom ? '' : 'warning'}>
-                Area
+                <T>Area</T>
               </IonLabel>
               {!!area && (
                 <IonLabel slot="end" className="text-sm mr-0">
