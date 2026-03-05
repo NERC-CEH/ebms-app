@@ -37,7 +37,7 @@ const Item = ({ index, style, data }: ItemProps<Data>) => {
       className="max-h-[73px] rounded-md border border-solid border-neutral-300 [--min-height:73px] [--inner-padding-end:5px]"
     >
       <div className="flex w-full items-center justify-between gap-2">
-        <div className="min-w-0 flex-1">
+        <div className="min-w-0 flex-1 overflow-hidden">
           <h2 className="line-clamp-1 font-bold mt-0.5">{list.data.title}</h2>
           <div className="flex gap-1">
             <Badge size="small">{`${list.getSize()}`} species</Badge>

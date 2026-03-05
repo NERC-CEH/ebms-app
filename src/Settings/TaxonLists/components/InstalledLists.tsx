@@ -66,7 +66,7 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
       >
         <IonItem className="max-h-19.25 [--min-height:77px] [--inner-padding-end:5px]">
           <div className="flex w-full items-center justify-between gap-2">
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 flex-1 overflow-hidden">
               <h2 className="line-clamp-1 font-bold mt-0!">
                 {list.data.title || list.data.description}
               </h2>
