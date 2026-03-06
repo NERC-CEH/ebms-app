@@ -1,6 +1,6 @@
 import { configure as mobxConfig } from 'mobx';
 import { createRoot } from 'react-dom/client';
-import { App as AppPlugin } from '@capacitor/app';
+import { SystemBars, SystemBarsStyle } from '@capacitor/core';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
 import { device, sentryOptions } from '@flumens';
@@ -69,14 +69,8 @@ mobxConfig({ enforceActions: 'never' });
   root.render(<App />);
 
   if (isPlatform('hybrid')) {
-    StatusBar.setStyle({
-      style: StatusBarStyle.Dark,
-    });
-
+    await SystemBars.setStyle({ style: SystemBarsStyle.Light });
+    await StatusBar.setStyle({ style: StatusBarStyle.Dark });
     SplashScreen.hide();
-
-    AppPlugin.addListener('backButton', () => {
-      /* disable android app exit using back button */
-    });
   }
 })();
