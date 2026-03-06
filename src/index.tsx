@@ -4,7 +4,6 @@ import { App as AppPlugin } from '@capacitor/app';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
 import { device, sentryOptions } from '@flumens';
-import { loadingController } from '@ionic/core';
 import { setupIonicReact, isPlatform } from '@ionic/react';
 import SentryBrowser from '@sentry/browser';
 import config from 'common/config';
@@ -12,7 +11,6 @@ import migrationManager from 'common/migrations';
 import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
 import taxonLists from 'common/models/collections/taxonLists';
-import migrate from 'common/models/migrate';
 import { db } from 'common/models/store';
 import appModel from 'models/app';
 import samples from 'models/collections/samples';
@@ -26,20 +24,6 @@ setupIonicReact();
 mobxConfig({ enforceActions: 'never' });
 
 (async function () {
-  if (isPlatform('hybrid') && !localStorage.getItem('sqliteMigrated')) {
-    SentryBrowser.init({
-      ...sentryOptions,
-      release: config.version,
-      dist: config.build,
-      dsn: config.sentryDSN,
-    });
-    (await loadingController.create({ message: 'Upgrading...' })).present();
-    await migrate();
-    localStorage.setItem('sqliteMigrated', 'true');
-    window.location.reload();
-    return;
-  }
-
   // Run first migration
   // TODO: remove in future when all users have updated
   if (!window.localStorage.getItem('_lastAppMigratedVersion'))
