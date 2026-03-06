@@ -204,12 +204,14 @@ const MenuMain = ({
             onChange={onTaxonNameDisplayChange}
             options={taxonNameDisplayOptions}
           />
-          <IonItem routerLink="/locations/sites" detail>
-            <IonLabel>
-              <T>Sites</T>
-            </IonLabel>
-            <IonIcon icon={locationOutline} size="small" slot="start" />
-          </IonItem>
+          {isLoggedIn && (
+            <IonItem routerLink="/locations/sites" detail>
+              <IonLabel>
+                <T>Sites</T>
+              </IonLabel>
+              <IonIcon icon={locationOutline} size="small" slot="start" />
+            </IonItem>
+          )}
         </div>
 
         <h3 className="list-title">

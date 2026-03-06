@@ -1,13 +1,5 @@
 {
 	"appId": "uk.ac.ceh.ebms",
 	"appName": "ButterflyCount",
-	"webDir": "build",
-	"plugins": {
-		"SystemBars": {
-			"insetsHandling": "css",
-			"style": "DARK",
-			"hidden": false,
-			"animation": "NONE"
-		}
-	}
+	"webDir": "build"
 }
