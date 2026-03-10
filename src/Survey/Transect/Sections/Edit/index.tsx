@@ -124,16 +124,9 @@ const EditController = () => {
   };
 
   const toggleSpeciesSort = () => {
-    const { areaSurveyListSortedByTime } = appModel.data;
-    const newSort = !areaSurveyListSortedByTime;
-    appModel.data.areaSurveyListSortedByTime = newSort;
-    appModel.save();
+    const newSortOrder = appModel.cycleSpeciesListSortOrder();
 
-    const prettySortName = appModel.data.areaSurveyListSortedByTime
-      ? 'last added'
-      : 'alphabetical';
-
-    toast.success(`Changed list ordering to ${prettySortName}.`, {
+    toast.success(`Changed list ordering to ${newSortOrder}.`, {
       color: 'light',
       position: 'bottom',
       duration: 1000,
@@ -267,7 +260,7 @@ const EditController = () => {
   const sectionCode =
     ('code' in sectionLocation && sectionLocation.code) || t('Section');
 
-  const { areaSurveyListSortedByTime } = appModel.data;
+  const { speciesListSortOrder } = appModel.data;
   return (
     <Page id="transect-sections-edit">
       <Header
@@ -281,7 +274,7 @@ const EditController = () => {
         deleteOccurrence={deleteSpecies}
         increaseCount={increaseCount}
         onToggleSpeciesSort={toggleSpeciesSort}
-        areaSurveyListSortedByTime={areaSurveyListSortedByTime}
+        speciesListSortOrder={speciesListSortOrder}
         isDisabled={isDisabled}
         copyPreviousSurveyTaxonList={copyPreviousSurveyTaxonList}
         navigateToSpeciesOccurrences={navigateToSpeciesOccurrences}

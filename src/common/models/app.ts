@@ -20,13 +20,15 @@ export type TaxonNameDisplayType =
   | 'commonOnly'
   | 'scientificOnly';
 
+export type SpeciesListSortOrder = 'alphabetical' | 'lastAdded' | 'lastEdited';
+
 export type Data = ModelData & {
   showedWelcome: boolean;
   language?: LanguageCode | null;
   country?: CountryCode;
   useTraining: boolean;
   feedbackGiven: boolean;
-  areaSurveyListSortedByTime: boolean;
+  speciesListSortOrder: SpeciesListSortOrder;
 
   speciesGroups: number[];
   useDayFlyingMothsOnly: boolean;
@@ -62,7 +64,7 @@ const defaults: Data = {
   language: null,
   country: undefined,
   feedbackGiven: false,
-  areaSurveyListSortedByTime: false,
+  speciesListSortOrder: 'alphabetical',
   showGPSPermissionTip: true,
   transectsRefreshTimestamp: null,
 
@@ -96,6 +98,26 @@ export class AppModel extends Model<Data> {
 
   constructor(options: any) {
     super({ ...options, data: { ...defaults, ...options.data } });
+  }
+
+  cycleSpeciesListSortOrder() {
+    const sortCycle: Record<SpeciesListSortOrder, SpeciesListSortOrder> = {
+      alphabetical: 'lastAdded',
+      lastAdded: 'lastEdited',
+      lastEdited: 'alphabetical',
+    };
+
+    this.data.speciesListSortOrder =
+      sortCycle[this.data.speciesListSortOrder] || 'alphabetical';
+    this.save();
+
+    const prettySortName: Record<string, string> = {
+      alphabetical: 'alphabetical',
+      lastAdded: 'last added',
+      lastEdited: 'last edited',
+    };
+
+    return prettySortName[this.data.speciesListSortOrder];
   }
 
   toggleTaxonFilter(filter: any) {

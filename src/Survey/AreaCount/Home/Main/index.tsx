@@ -39,7 +39,7 @@ import {
 import GridRef from 'common/Components/PrettyLocation';
 import { getSpeciesProfileImage } from 'common/data/profiles';
 import Location from 'common/models/location';
-import appModel from 'models/app';
+import appModel, { SpeciesListSortOrder } from 'models/app';
 import { Taxon } from 'models/occurrence';
 import Sample, { AreaCountLocation } from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
@@ -52,8 +52,10 @@ import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 import {
   speciesOccAddedTimeSort,
+  speciesOccUpdatedTimeSort,
   speciesNameSort,
   speciesCount,
+  getDefaultTaxonCount,
 } from 'Survey/common/taxonSortFunctions';
 import CountdownClock from './CountdownClock';
 import './styles.scss';
@@ -94,25 +96,18 @@ const byTime = (sp1: Sample, sp2: Sample) => {
   return date2.getTime() - date1.getTime();
 };
 
-const getDefaultTaxonCount = (taxon: any, createdAt?: any) => ({
-  count: 0,
-  taxon,
-  createdAt,
-  isDisabled: false, // for remote occurrences without samples, don't let open any pages
-});
-
 const buildSpeciesCount = (agg: any, smp: Sample) => {
   const taxon = toJS(smp.occurrences[0]?.data.taxon);
   if (!taxon) return agg;
 
   const id = taxon.preferredId || taxon.warehouseId;
 
-  const createdAt = new Date(smp.createdAt).getTime();
-  agg[id] = agg[id] || getDefaultTaxonCount(taxon, createdAt); // eslint-disable-line
+  if (!agg[id])
+    agg[id] = getDefaultTaxonCount(taxon, smp.createdAt, smp.updatedAt); // eslint-disable-line no-param-reassign
 
-  if (smp.isSurveyPreciseSingleSpecies() && smp.hasZeroAbundance()) {
-    return agg;
-  }
+  if (agg[id].updatedAt < smp.updatedAt) agg[id].updatedAt = smp.updatedAt; // eslint-disable-line
+
+  if (smp.isSurveyPreciseSingleSpecies() && smp.hasZeroAbundance()) return agg;
 
   agg[id].count++; // eslint-disable-line
   agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning(); // eslint-disable-line
@@ -132,7 +127,7 @@ type Props = {
   navigateToSpeciesOccurrences: any;
   onToggleSpeciesSort: any;
   toggleTimer: any;
-  areaSurveyListSortedByTime: boolean;
+  speciesListSortOrder: SpeciesListSortOrder;
   hasLongSections: boolean;
   increaseCount: any;
   navigateToOccurrence: (smp: Sample) => void;
@@ -150,7 +145,7 @@ const AreaCount = ({
   navigateToSpeciesOccurrences,
   onToggleSpeciesSort,
   toggleTimer,
-  areaSurveyListSortedByTime,
+  speciesListSortOrder,
   increaseCount,
   isDisabled,
   copyPreviousSurveyTaxonList,
@@ -325,9 +320,9 @@ const AreaCount = ({
       ...shallowCounts,
     };
 
-    let sort = areaSurveyListSortedByTime
-      ? speciesOccAddedTimeSort
-      : speciesNameSort;
+    let sort = speciesNameSort;
+    if (speciesListSortOrder === 'lastAdded') sort = speciesOccAddedTimeSort;
+    if (speciesListSortOrder === 'lastEdited') sort = speciesOccUpdatedTimeSort;
 
     if (isDisabled) {
       sort = speciesCount;

@@ -21,6 +21,7 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
+import { SpeciesListSortOrder } from 'common/models/app';
 import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
@@ -30,8 +31,10 @@ import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 import {
   speciesOccAddedTimeSort,
+  speciesOccUpdatedTimeSort,
   speciesNameSort,
   speciesCount,
+  getDefaultTaxonCount,
 } from 'Survey/common/taxonSortFunctions';
 import UnidentifiedSpeciesEntry from './UnidentifiedSpeciesEntry';
 
@@ -59,17 +62,14 @@ function useDisabledImageIdentifierAlert() {
   return shownDisabledImageIdentifierAlert;
 }
 
-const getDefaultTaxonCount = (taxon: Taxon, createdAt?: any) => ({
-  count: 0,
-  taxon,
-  createdAt,
-});
-
 const buildSpeciesCount = (agg: any, occ: Occurrence) => {
   const taxon = toJS(occ.data.taxon);
   const id = taxon.preferredId || taxon.warehouseId;
 
-  agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.createdAt); // eslint-disable-line
+  if (!agg[id])
+    agg[id] = getDefaultTaxonCount(taxon, occ.createdAt, occ.updatedAt); // eslint-disable-line no-param-reassign
+
+  if (agg[id].updatedAt < occ.updatedAt) agg[id].updatedAt = occ.updatedAt; // eslint-disable-line
 
   agg[id].count = toJS(occ.data.count); // eslint-disable-line
 
@@ -93,7 +93,7 @@ type Props = {
   isDisabled: boolean;
   useImageIdentifier: boolean;
   onIdentifyOccurrence: any;
-  areaSurveyListSortedByTime: boolean;
+  speciesListSortOrder: SpeciesListSortOrder;
   onIdentifyAllOccurrences: any;
   copyPreviousSurveyTaxonList: any;
   navigateToSpeciesOccurrences: any;
@@ -108,7 +108,7 @@ const HomeMain = ({
   onToggleSpeciesSort,
   cameraSelect,
   photoSelect,
-  areaSurveyListSortedByTime,
+  speciesListSortOrder,
   useImageIdentifier,
   onIdentifyOccurrence,
   onIdentifyAllOccurrences,
@@ -273,7 +273,7 @@ const HomeMain = ({
         return null;
       }
 
-      return getDefaultTaxonCount(shallowEntry, 0);
+      return getDefaultTaxonCount(shallowEntry, 0, 0);
     };
 
     const notEmpty = (shallowEntry: any) => shallowEntry;
@@ -288,9 +288,10 @@ const HomeMain = ({
       ...shallowCounts,
     };
 
-    let sort = areaSurveyListSortedByTime
-      ? speciesOccAddedTimeSort
-      : speciesNameSort;
+    let sort = speciesNameSort;
+    if (speciesListSortOrder === 'lastAdded') sort = speciesOccAddedTimeSort;
+
+    if (speciesListSortOrder === 'lastEdited') sort = speciesOccUpdatedTimeSort;
 
     if (isDisabled) {
       sort = speciesCount;

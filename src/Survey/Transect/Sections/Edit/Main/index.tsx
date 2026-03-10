@@ -33,22 +33,21 @@ import IncrementalButton from 'Survey/common/IncrementalButton';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import {
   speciesOccAddedTimeSort,
+  speciesOccUpdatedTimeSort,
   speciesNameSort,
   speciesCount,
+  getDefaultTaxonCount,
 } from 'Survey/common/taxonSortFunctions';
 import './styles.scss';
-
-const getDefaultTaxonCount = (taxon: any, createdAt?: any) => ({
-  count: 0,
-  taxon,
-  createdAt,
-});
 
 const buildSpeciesCount = (agg: any, occ: Occurrence) => {
   const taxon = toJS(occ.data.taxon);
   const id = taxon.preferredId || taxon.warehouseId;
 
-  agg[id] = agg[id] || getDefaultTaxonCount(taxon, occ.createdAt); // eslint-disable-line
+  if (!agg[id])
+    agg[id] = getDefaultTaxonCount(taxon, occ.createdAt, occ.updatedAt); // eslint-disable-line no-param-reassign
+
+  if (agg[id].updatedAt < occ.updatedAt) agg[id].updatedAt = occ.updatedAt; // eslint-disable-line
 
   agg[id].count = toJS(occ.data.count); // eslint-disable-line
 
@@ -61,7 +60,7 @@ type Props = {
   deleteOccurrence: (taxon: Taxon, isShallow: boolean, ref: any) => void;
   navigateToSpeciesOccurrences: any;
   onToggleSpeciesSort: () => void;
-  areaSurveyListSortedByTime: boolean;
+  speciesListSortOrder: string;
   increaseCount: any;
   isDisabled: boolean;
   copyPreviousSurveyTaxonList: any;
@@ -73,7 +72,7 @@ const Edit = ({
   deleteOccurrence,
   onToggleSpeciesSort,
   navigateToSpeciesOccurrences,
-  areaSurveyListSortedByTime,
+  speciesListSortOrder,
   increaseCount,
   copyPreviousSurveyTaxonList,
   isDisabled,
@@ -160,9 +159,11 @@ const Edit = ({
       ...shallowCounts,
     };
 
-    let sort = areaSurveyListSortedByTime
-      ? speciesOccAddedTimeSort
-      : speciesNameSort;
+    let sort = speciesNameSort;
+
+    if (speciesListSortOrder === 'lastAdded') sort = speciesOccAddedTimeSort;
+
+    if (speciesListSortOrder === 'lastEdited') sort = speciesOccUpdatedTimeSort;
 
     if (isDisabled) {
       sort = speciesCount;

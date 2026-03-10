@@ -11,6 +11,9 @@ export const speciesOccAddedTimeSort = ([, occ1]: any, [, occ2]: any) => {
   return taxonName1.localeCompare(taxonName2);
 };
 
+export const speciesOccUpdatedTimeSort = ([, occ1]: any, [, occ2]: any) =>
+  occ2.updatedAt - occ1.updatedAt;
+
 const compareAlphabetical = (taxon1: any, taxon2: any) => {
   const foundInName1 = taxon1.foundInName;
   const foundInName2 = taxon2.foundInName;
@@ -28,3 +31,15 @@ export const speciesCount = ([, occ1]: any, [, occ2]: any) => {
 
   return occ2.count - occ1.count;
 };
+
+export const getDefaultTaxonCount = (
+  taxon: any,
+  createdAt?: number,
+  updatedAt?: number
+) => ({
+  count: 0,
+  taxon,
+  createdAt,
+  updatedAt,
+  isDisabled: false, // for remote occurrences without samples, don't let open any pages
+});

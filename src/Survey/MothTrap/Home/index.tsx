@@ -126,16 +126,9 @@ const HomeController = () => {
   };
 
   const toggleSpeciesSort = () => {
-    const { areaSurveyListSortedByTime } = appModel.data;
-    const newSort = !areaSurveyListSortedByTime;
-    appModel.data.areaSurveyListSortedByTime = newSort;
-    appModel.save();
+    const newSortOrder = appModel.cycleSpeciesListSortOrder();
 
-    const prettySortName = appModel.data.areaSurveyListSortedByTime
-      ? 'last added'
-      : 'alphabetical';
-
-    toast.success(`Changed list ordering to ${prettySortName}.`, {
+    toast.success(`Changed list ordering to ${newSortOrder}.`, {
       color: 'light',
       position: 'bottom',
       duration: 1000,
@@ -392,7 +385,7 @@ const HomeController = () => {
     }
   };
 
-  const { areaSurveyListSortedByTime } = appModel.data;
+  const { speciesListSortOrder } = appModel.data;
 
   return (
     <Page id="survey-moth-home">
@@ -411,7 +404,7 @@ const HomeController = () => {
         onToggleSpeciesSort={toggleSpeciesSort}
         cameraSelect={cameraSelect}
         photoSelect={photoSelect}
-        areaSurveyListSortedByTime={areaSurveyListSortedByTime}
+        speciesListSortOrder={speciesListSortOrder}
         useImageIdentifier={useImageIdentifier}
         onIdentifyOccurrence={onIdentifyOccurrence}
         onIdentifyAllOccurrences={onIdentifyAllOccurrences}
