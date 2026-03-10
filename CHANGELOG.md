@@ -6,6 +6,7 @@ Added species name display options.
 Fixed moth trap location selection.
 Added sites map page.
 Made projects and sites independent from each other.
+Added custom species lists.
 Updated codebase.
 
 ## 1.31.1
