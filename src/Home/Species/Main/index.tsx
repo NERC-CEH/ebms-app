@@ -130,7 +130,11 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
 
     const speciesColumns = speciesList.map(getSpeciesElement);
 
-    return <div className="grid grid-cols-2 gap-3 p-2">{speciesColumns}</div>;
+    return (
+      <div className="grid grid-cols-2 gap-3 p-2 sm:grid-cols-3">
+        {speciesColumns}
+      </div>
+    );
   };
 
   const onReview = () => InAppReview.requestReview();
