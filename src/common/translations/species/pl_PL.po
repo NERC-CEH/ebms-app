@@ -1,4 +1,3 @@
-# 
 # Translators:
 # Michał Kochanowski, 2022
 # 
@@ -1776,4 +1775,7 @@ msgid "Telegonus-anausis-description"
 msgstr ""
 
 msgid "Urbanus-proteus-description"
+msgstr ""
+
+msgid "Danaus-plexippus-megalippe-description"
 msgstr ""

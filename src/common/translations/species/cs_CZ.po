@@ -1689,3 +1689,6 @@ msgstr ""
 
 msgid "Urbanus-proteus-description"
 msgstr ""
+
+msgid "Danaus-plexippus-megalippe-description"
+msgstr ""

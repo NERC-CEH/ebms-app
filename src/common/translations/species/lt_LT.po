@@ -1,4 +1,3 @@
-# 
 # Translators:
 # Karolis, 2020
 # Egle Viciuviene <eviciuviene@gmail.com>, 2023
@@ -1807,4 +1806,7 @@ msgid "Telegonus-anausis-description"
 msgstr ""
 
 msgid "Urbanus-proteus-description"
+msgstr ""
+
+msgid "Danaus-plexippus-megalippe-description"
 msgstr ""

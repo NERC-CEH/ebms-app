@@ -1,4 +1,3 @@
-# 
 # Translators:
 # Светлана Соболева <sv.goloshchapova@gmail.com>, 2020
 # 
@@ -1858,4 +1857,7 @@ msgid "Telegonus-anausis-description"
 msgstr ""
 
 msgid "Urbanus-proteus-description"
+msgstr ""
+
+msgid "Danaus-plexippus-megalippe-description"
 msgstr ""

@@ -1,4 +1,3 @@
-# 
 # Translators:
 # Karolis, 2022
 # Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2025
@@ -2352,4 +2351,7 @@ msgid "Telegonus-anausis-description"
 msgstr ""
 
 msgid "Urbanus-proteus-description"
+msgstr ""
+
+msgid "Danaus-plexippus-megalippe-description"
 msgstr ""

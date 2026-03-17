@@ -1,4 +1,3 @@
-# 
 # Translators:
 # Zdravko Kolev <zkolev72@gmail.com>, 2022
 # 
@@ -1817,4 +1816,7 @@ msgid "Telegonus-anausis-description"
 msgstr ""
 
 msgid "Urbanus-proteus-description"
+msgstr ""
+
+msgid "Danaus-plexippus-megalippe-description"
 msgstr ""
