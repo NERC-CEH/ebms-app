@@ -1257,24 +1257,29 @@ msgstr "カウントを始めて下さい。「追加の詳細」を選んで、
 msgid "Assign a site to a count"
 msgstr "サイトをプロジェクトに割り振る"
 
+# Guide page
+msgid ""
+"It is also possible to register and select a permanent site as well as to "
+"assign your survey to a project."
+msgstr ""
+
 # Help pages
 msgid ""
-"<0>Start a count.</0><1>Assign a project to the count, see instructions on "
-"how to select a project.</1><2>Turn off the GPS in the header of the "
-"\"Area\" page.</2><3>Select the \"Site Drawing\" tool on the right side of "
-"the screen.</3><4>Choose an area on the map and confirm your selection on "
-"the right side of the screen.</4><5>Press the \"Add\" button located on the "
-"favourite sites panel in the bottom right corner of the screen. If the panel"
-" is not visible, you can open it by clicking the favourite sites button "
-"(star icon) at the top right.</5><6>You will be prompted to answer some "
-"questions about the site.</6><7>Press \"Save\" in the top right corner after"
-" answering the questions. The site will be saved, and it can be selected for"
-" future counts conducted in that location.</7><8>Finally, choose the site "
-"for the current count.</8>"
+"<0>Start a count.</0><1>Select \"Additional Details\" then "
+"\"Site\".</1><2>Finally, choose the site for the current count.</2>"
 msgstr ""
-"<0>カウントを開始する。</0><1>カウントをプロジェクトに割り当てて、どのようにプロジェクトを選択するかの指示を確認してください。</1><2>「Area」のページのヘッダーからGPSを切ってください。</2><3>画面右側の「Site"
-" "
-"Drawing」を選択してください。</3><4>地図の調査地を選択して、画面右側であなたの選択を確定してください。</4><5>画面右下のお気に入りのパネルにある「Add」をクリックしてください。もしそのパネルが見えなかったら、あなたは右上のお気に入りボタン（星のアイコン）をクリックして開くことが出来ます。</5><6>あなたはその場所についていくつか質問を促されるでしょう。</6><7>右上の「Save」を質問に答えた後にクリックしてください。その場所は保存され、その場所で行われる今後のカウントで選択可能になります。</7><8>最後に、今のカウントの場所を選択してください。</8>"
+
+# Help pages
+msgid "Create a new site"
+msgstr ""
+
+# Help pages
+msgid ""
+"<0>Go to the app Settings page.</0><1>Select \"Sites\".</1><2>In the top-"
+"right corner press \"Add\" button.</2><3>Fill in the necessary site details "
+"and press \"Save\".</3><br/>Note: you need to be logged in and have a "
+"network connection to create a new site."
+msgstr ""
 
 msgid "User"
 msgstr "ユーザー"

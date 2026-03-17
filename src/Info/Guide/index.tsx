@@ -78,6 +78,13 @@ const Component = () => {
         </Section>
 
         <Section>
+          <P>
+            It is also possible to register and select a permanent site as well
+            as to assign your survey to a project.
+          </P>
+        </Section>
+
+        <Section>
           <H>How to record along an existing transect</H>
           <P>
             You can also use the app to submit records while walking an existing

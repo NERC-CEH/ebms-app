@@ -1280,20 +1280,28 @@ msgstr ""
 msgid "Assign a site to a count"
 msgstr ""
 
+# Guide page
+msgid ""
+"It is also possible to register and select a permanent site as well as to "
+"assign your survey to a project."
+msgstr ""
+
 # Help pages
 msgid ""
-"<0>Start a count.</0><1>Assign a project to the count, see instructions on "
-"how to select a project.</1><2>Turn off the GPS in the header of the "
-"\"Area\" page.</2><3>Select the \"Site Drawing\" tool on the right side of "
-"the screen.</3><4>Choose an area on the map and confirm your selection on "
-"the right side of the screen.</4><5>Press the \"Add\" button located on the "
-"favourite sites panel in the bottom right corner of the screen. If the panel"
-" is not visible, you can open it by clicking the favourite sites button "
-"(star icon) at the top right.</5><6>You will be prompted to answer some "
-"questions about the site.</6><7>Press \"Save\" in the top right corner after"
-" answering the questions. The site will be saved, and it can be selected for"
-" future counts conducted in that location.</7><8>Finally, choose the site "
-"for the current count.</8>"
+"<0>Start a count.</0><1>Select \"Additional Details\" then "
+"\"Site\".</1><2>Finally, choose the site for the current count.</2>"
+msgstr ""
+
+# Help pages
+msgid "Create a new site"
+msgstr ""
+
+# Help pages
+msgid ""
+"<0>Go to the app Settings page.</0><1>Select \"Sites\".</1><2>In the top-"
+"right corner press \"Add\" button.</2><3>Fill in the necessary site details "
+"and press \"Save\".</3><br/>Note: you need to be logged in and have a "
+"network connection to create a new site."
 msgstr ""
 
 msgid "User"
