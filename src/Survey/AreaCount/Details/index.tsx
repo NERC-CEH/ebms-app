@@ -78,7 +78,7 @@ const DetailsController = () => {
   const isDetailsPage = url !== location.pathname;
 
   const onDeleteSurvey = async () => {
-    if (!sample.isPreciseSingleSpeciesSurvey()) {
+    if (!sample.isSingleSpeciesSurvey()) {
       goBack();
       return;
     }

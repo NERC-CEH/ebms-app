@@ -1421,6 +1421,10 @@ msgstr "Σουηδία"
 msgid "Paused"
 msgstr "Παύση"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "Εκκρεμής"
 

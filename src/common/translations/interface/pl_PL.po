@@ -1412,6 +1412,10 @@ msgstr "Szwecja"
 msgid "Paused"
 msgstr "Wstrzymano"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "Oczekujące"
 

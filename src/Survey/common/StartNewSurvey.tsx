@@ -104,7 +104,7 @@ function StartNewSurvey({ survey }: Props): null {
       const hasGrantedGps = await showGPSPermissionDialog().catch(ignoreError);
       const sample = await getNewSample(survey, hasGrantedGps);
 
-      if (sample.isPreciseSingleSpeciesSurvey()) {
+      if (sample.isSingleSpeciesSurvey()) {
         navigate(
           `/survey/${survey.name}/${sample.id || sample.cid}/taxon`,
           'none',

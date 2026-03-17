@@ -1391,6 +1391,10 @@ msgstr "Suedi"
 msgid "Paused"
 msgstr "I ndaluar"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "Pezull"
 

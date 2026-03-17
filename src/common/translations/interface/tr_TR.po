@@ -1443,6 +1443,10 @@ msgstr "İsveç"
 msgid "Paused"
 msgstr "Durduruldu"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "Bekleniyor"
 

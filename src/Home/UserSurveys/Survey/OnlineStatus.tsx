@@ -17,6 +17,14 @@ const OnlineStatus = ({ sample, onUpload, uploadIsPrimary }: Props) => {
   if (deprecated) return null;
 
   const { saved } = sample.metadata;
+
+  if (sample.isCountSurvey() || sample.isSingleSpeciesSurvey()) {
+    if (sample.isTimerPaused())
+      return <Badge className="max-w-32">Paused</Badge>;
+    if (!sample.isTimerFinished())
+      return <Badge className="max-w-32">Running</Badge>;
+  }
+
   if (!saved) return <Badge className="max-w-32">Draft</Badge>;
 
   if (sample.isSynchronising) return <IonSpinner className="mr-2 size-4" />;

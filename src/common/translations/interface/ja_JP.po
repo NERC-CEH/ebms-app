@@ -1360,6 +1360,10 @@ msgstr "スウェーデン"
 msgid "Paused"
 msgstr "一時停止"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "保留"
 

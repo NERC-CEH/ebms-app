@@ -96,7 +96,7 @@ const EditOccurrence = ({
 
     return (
       <IonList lines="full">
-        {!firstSubSample.isPreciseSingleSpeciesSurvey() && (
+        {!firstSubSample.isSingleSpeciesSurvey() && (
           <div className="rounded-list">
             <IonItem
               routerLink={`${match.url}/taxon`}

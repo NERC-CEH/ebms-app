@@ -1447,6 +1447,10 @@ msgstr "Suède"
 msgid "Paused"
 msgstr "En pause"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "En attente"
 

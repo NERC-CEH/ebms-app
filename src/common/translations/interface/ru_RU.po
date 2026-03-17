@@ -1401,6 +1401,10 @@ msgstr "Швеция"
 msgid "Paused"
 msgstr "Пауза"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "В ожидании"
 

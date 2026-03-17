@@ -90,7 +90,7 @@ const SpeciesOccurrences = () => {
       s.occurrences[0].data.taxon.id === taxon.id;
 
     const isLastSampleDeleted = !sample.samples.filter(byTaxonId).length;
-    if (isLastSampleDeleted && !sample.isPreciseSingleSpeciesSurvey()) {
+    if (isLastSampleDeleted && !sample.isSingleSpeciesSurvey()) {
       goBack();
       return;
     }

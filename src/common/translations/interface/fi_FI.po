@@ -1397,6 +1397,10 @@ msgstr "Ruotsi"
 msgid "Paused"
 msgstr "Pysähtynyt"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "Käynnissä"
 

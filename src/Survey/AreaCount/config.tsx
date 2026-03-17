@@ -217,14 +217,14 @@ const survey: Survey = {
       },
     });
 
-    if (!sample.isPreciseSingleSpeciesSurvey()) {
+    if (!sample.isSingleSpeciesSurvey()) {
       // copy previous species groups and moth settings
       sample.data.speciesGroups = appModel.data.speciesGroups;
       sample.metadata.useDayFlyingMothsOnly =
         appModel.data.useDayFlyingMothsOnly;
     }
 
-    if (!sample.isPreciseSingleSpeciesSurvey()) {
+    if (!sample.isSingleSpeciesSurvey()) {
       const createdOnString = new Date(sample.createdAt).toISOString();
       sample.data.surveyStartTime = createdOnString; // this can't be done in defaults
       sample.startVibrateCounter();

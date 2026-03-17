@@ -317,7 +317,11 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
     this.save();
   }
 
-  isPreciseSingleSpeciesSurvey() {
+  isCountSurvey() {
+    return this.metadata.survey === 'precise-area';
+  }
+
+  isSingleSpeciesSurvey() {
     return this.metadata.survey === 'precise-single-species-area';
   }
 

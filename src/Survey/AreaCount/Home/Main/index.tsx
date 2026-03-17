@@ -176,7 +176,7 @@ const AreaCount = ({
   const getSpeciesAddButton = () => {
     if (isDisabled) return <div style={{ height: '44px' }} />;
 
-    if (sample.isPreciseSingleSpeciesSurvey()) {
+    if (sample.isSingleSpeciesSurvey()) {
       const { taxon } = sample.samples[0]?.occurrences[0]?.data || {};
 
       if (!taxon) return null;
@@ -269,7 +269,7 @@ const AreaCount = ({
           </div>
         </IonItem>
 
-        {!isDisabled && !sample.isPreciseSingleSpeciesSurvey() && (
+        {!isDisabled && !sample.isSingleSpeciesSurvey() && (
           <IonItemOptions side="end">
             <IonItemOption color="danger" onClick={deleteSpeciesWrap}>
               <T>Delete</T>
@@ -281,7 +281,7 @@ const AreaCount = ({
   };
 
   const getSpeciesList = () => {
-    if (sample.isPreciseSingleSpeciesSurvey()) return null;
+    if (sample.isSingleSpeciesSurvey()) return null;
 
     const hasNoSpecies =
       !sample.samples.length &&
@@ -379,7 +379,7 @@ const AreaCount = ({
   };
 
   const getSpeciesSingleCountList = () => {
-    if (!sample.isPreciseSingleSpeciesSurvey()) return null;
+    if (!sample.isSingleSpeciesSurvey()) return null;
 
     // For remote-fetched records don't have sub-sample layer, only occurrences, so this is a temporary workaround.
     if (sample.occurrences.length)

@@ -1413,6 +1413,10 @@ msgstr "Sweden"
 msgid "Paused"
 msgstr "Paused"
 
+# Survey status 
+msgid "Running"
+msgstr "Running"
+
 msgid "Pending"
 msgstr "Pending"
 

@@ -1397,6 +1397,10 @@ msgstr "Švedska"
 msgid "Paused"
 msgstr "Premor"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "V teku"
 

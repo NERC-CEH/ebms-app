@@ -271,7 +271,7 @@ const HomeController = () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    const checkSpeciesGroups = !sample.isPreciseSingleSpeciesSurvey();
+    const checkSpeciesGroups = !sample.isSingleSpeciesSurvey();
     if (checkSpeciesGroups) {
       const newSpeciesGroups = getSpeciesGroupList(sample);
       sample.data.speciesGroups = newSpeciesGroups.map(({ id }) => id); // doing it here because if disabled prompt won't run
@@ -490,7 +490,7 @@ const HomeController = () => {
 
     const isLastSampleDeleted = ![...sample.samples].filter(byTaxonId).length;
 
-    if (!isLastSampleDeleted && !sample.isPreciseSingleSpeciesSurvey()) return;
+    if (!isLastSampleDeleted && !sample.isSingleSpeciesSurvey()) return;
 
     if (isLastSampleDeleted) {
       const survey = sample.getSurvey();

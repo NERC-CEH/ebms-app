@@ -1431,6 +1431,10 @@ msgstr "Шведска"
 msgid "Paused"
 msgstr "Заустављено"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "На чекању"
 

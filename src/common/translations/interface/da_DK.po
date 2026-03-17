@@ -1423,6 +1423,10 @@ msgstr "Sverige"
 msgid "Paused"
 msgstr "Sat på pause"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "Venter"
 

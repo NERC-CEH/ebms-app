@@ -1418,6 +1418,10 @@ msgstr "Švédsko"
 msgid "Paused"
 msgstr "Pozastaveno"
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr "Čekám"
 

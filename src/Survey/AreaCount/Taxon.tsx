@@ -65,12 +65,12 @@ const TaxonController = () => {
   if (!sample) throw new Error('Sample is missing');
 
   const onDeleteSurvey = async () => {
-    if (!sample.isPreciseSingleSpeciesSurvey()) {
+    if (!sample.isSingleSpeciesSurvey()) {
       goBack();
       return;
     }
 
-    if (!sample.isPreciseSingleSpeciesSurvey() || isAlertPresent) {
+    if (!sample.isSingleSpeciesSurvey() || isAlertPresent) {
       goBack();
       return;
     }
@@ -188,7 +188,7 @@ const TaxonController = () => {
 
     await sample.save();
 
-    if (sample.isPreciseSingleSpeciesSurvey()) {
+    if (sample.isSingleSpeciesSurvey()) {
       const path = match.url.replace('/taxon', '/details');
 
       navigate(path, 'forward', 'replace', undefined, {
@@ -212,11 +212,11 @@ const TaxonController = () => {
 
   const recordedTaxa = [...species, ...shallowSpecies];
 
-  const title = sample.isPreciseSingleSpeciesSurvey()
+  const title = sample.isSingleSpeciesSurvey()
     ? 'Select Target Species'
     : 'Species';
 
-  const showCancelButton = sample.isPreciseSingleSpeciesSurvey();
+  const showCancelButton = sample.isSingleSpeciesSurvey();
 
   useEffect(() => {
     // backward compatibility, remove once all users have updated

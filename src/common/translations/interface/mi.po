@@ -1348,6 +1348,10 @@ msgstr ""
 msgid "Paused"
 msgstr ""
 
+# Survey status
+msgid "Running"
+msgstr ""
+
 msgid "Pending"
 msgstr ""
 
