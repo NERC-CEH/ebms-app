@@ -107,7 +107,7 @@ const EditOccurrence = ({
                 {getSpeciesProfileImage(occ.data.taxon)}
               </div>
               <TaxonPrettyName
-                taxon={occ.data.taxon}
+                {...occ.data.taxon}
                 className="text-(--form-value-color) my-2 text-right"
               />
             </IonItem>

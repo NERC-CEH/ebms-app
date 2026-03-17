@@ -172,7 +172,7 @@ const HomeMain = ({
             disabled={isDisabled}
           />
           <div className="my-2 mx-3">
-            <TaxonPrettyName taxon={taxon} />
+            <TaxonPrettyName {...taxon} />
           </div>
         </IonItem>
         {!isDisabled && (

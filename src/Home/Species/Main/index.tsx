@@ -100,7 +100,10 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     const getSpeciesElement = (sp: SpeciesType) => {
       const { id, taxon, commonName } = sp;
 
-      const label = commonName || taxon; // might not have translation
+      const { taxonNameDisplay } = appModel.data;
+
+      const label =
+        taxonNameDisplay === 'scientificOnly' ? taxon : commonName || taxon; // might not have translation
 
       const onClick = () => showSpeciesModal(id!);
 

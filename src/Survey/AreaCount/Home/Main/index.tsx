@@ -265,7 +265,7 @@ const AreaCount = ({
               {getSpeciesProfileImage(taxon)}
             </div>
 
-            <TaxonPrettyName taxon={taxon} />
+            <TaxonPrettyName {...taxon} />
           </div>
         </IonItem>
 

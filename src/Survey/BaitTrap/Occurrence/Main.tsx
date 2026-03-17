@@ -41,7 +41,7 @@ const OccurrenceMain = ({ occurrence }: Props) => {
                 {getSpeciesProfileImage(occurrence.data.taxon)}
               </div>
               <TaxonPrettyName
-                taxon={occurrence.data.taxon}
+                {...occurrence.data.taxon}
                 className="text-(--form-value-color) my-2 text-right"
               />
             </IonItem>

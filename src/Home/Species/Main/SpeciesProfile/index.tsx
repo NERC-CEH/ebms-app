@@ -9,6 +9,7 @@ import '@ionic/react/css/ionic-swiper.css';
 import { CountryCode } from 'common/config/countries';
 import { Species, AbundanceCode, abundances } from 'common/data/profiles';
 import { translateSpeciesDescription } from 'common/translations/translator';
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
 
@@ -77,10 +78,11 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
         {getSlides()}
 
         <div className="flex flex-col gap-2 bg-[var(--ion-page-background)] p-4">
-          {commonName && (
-            <h2 className="my-0! text-xl! font-bold!">{commonName}</h2>
-          )}
-          <h3 className="my-0! text-xl! italic">{species.taxon}</h3>
+          <TaxonPrettyName
+            className="text-xl"
+            scientificName={species.taxon}
+            commonName={commonName}
+          />
         </div>
 
         <div className="p-4">
