@@ -61,7 +61,7 @@ const Home = () => {
         <Banner />
 
         <div
-          className="absolute h-full w-full z-50 pt-[55vh] pb-20 overflow-scroll"
+          className="absolute h-full w-full z-50 pt-[57vh] pb-20 overflow-scroll"
           onScroll={onScroll}
         >
           <div className="flex flex-col gap-3 max-w-4xl mx-auto px-5">
