@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Page, device, useToast } from '@flumens';
-import { AppModel } from 'models/app';
-import { UserModel } from 'models/user';
+import appModel from 'common/models/app';
+import userModel from 'common/models/user';
 import Main from './Main';
 import {
   fetchSpeciesReport,
@@ -11,12 +11,7 @@ import {
 } from './services';
 import './styles.scss';
 
-type Props = {
-  appModel: AppModel;
-  userModel: UserModel;
-};
-
-const Report = ({ appModel, userModel }: Props) => {
+const Report = () => {
   const [species, setSpecies] = useState<Species[]>([]);
   const [userSpecies, setUserSpecies] = useState<Species[]>([]);
   const [userSpeciesLastMonth, setUserSpeciesLastMonth] = useState<Species[]>(

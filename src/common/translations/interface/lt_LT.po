@@ -1706,6 +1706,30 @@ msgstr "15min Vienos Rūšies Stebėjimas"
 msgid "eBMS Transect"
 msgstr "eBMS Transekta"
 
+# Home page
+msgid "Count for 15 minutes anywhere"
+msgstr "Stebėkite 15 minučių bet kur"
+
+# Home page
+msgid "Walk a fixed transect"
+msgstr "Eikite nustatyta transekta"
+
+# Home page
+msgid "Record a moth-trap survey"
+msgstr "Naktinių drugių gaudyklė"
+
+# Home page
+msgid "Count a single species for 15 minutes"
+msgstr "Stebėkite vieną rūšį 15 minučių"
+
+# Home page
+msgid "Bait-trap survey"
+msgstr "Gaudyklė"
+
+# Home page
+msgid "Record a fixed bait-trap survey"
+msgstr "Stacionari masalo gaudyklė"
+
 msgid "Please add any extra info about this record."
 msgstr "Prašome papildyti įrašą kita susijusia informacija."
 

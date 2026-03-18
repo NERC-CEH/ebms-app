@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { searchOutline } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import { IonHeader, IonToolbar, IonIcon } from '@ionic/react';
 import { Button } from 'common/flumens';
 import FiltersToolbar from './FiltersToolbar';
-import logo from './logo.svg';
 import './styles.scss';
 
 type Props = {
@@ -24,10 +24,8 @@ const Header = ({ onSearch, toggleFilter, filters, filterOptions }: Props) => {
       {!isSearching && (
         <IonToolbar className="species-toolbar">
           <div className="flex items-center justify-between">
-            <img src={logo} className="m-2 size-8" />
-
-            <div className="app-name w-fit">
-              <b>Butterfly</b> Count
+            <div className="text-center font-bold text-2xl ml-8 w-full my-0! text-primary-800">
+              <T>Guide</T>
             </div>
 
             <Button

@@ -3,7 +3,6 @@ import Country from './Country';
 import Language from './Language';
 import Menu from './Menu';
 import MothSurvey from './MothSurvey';
-import PrimarySurvey from './PrimarySurvey';
 import TaxonLists from './TaxonLists';
 
 export default [
@@ -19,12 +18,6 @@ export default [
     key="/settings/country"
     exact
     component={Country}
-  />,
-  <Route
-    path="/settings/primary-survey"
-    key="/settings/primary-survey"
-    exact
-    component={PrimarySurvey}
   />,
   <Route
     path="/settings/moth-survey"

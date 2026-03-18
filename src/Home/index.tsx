@@ -1,15 +1,13 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import {
   personOutline,
-  addOutline,
   menuOutline,
   statsChartOutline,
+  homeOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Route, Redirect } from 'react-router-dom';
 import { App as AppPlugin } from '@capacitor/app';
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { Button, LongPressFabButton } from '@flumens';
 import {
   IonTabs,
   IonTabButton,
@@ -17,30 +15,19 @@ import {
   IonLabel,
   IonTabBar,
   IonRouterOutlet,
-  NavContext,
   useIonRouter,
-  isPlatform,
 } from '@ionic/react';
 import PendingSurveysBadge from 'common/Components/PendingSurveysBadge';
 import butterflyIcon from 'common/images/butterfly.svg';
-import appModel from 'models/app';
-import { surveyConfigs as surveys } from 'models/sample';
-import userModel from 'models/user';
-import { Survey } from 'Survey/common/config';
+import Home from './Home';
 import Menu from './Menu';
 import Report from './Report';
 import Species from './Species';
 import UserSurveys from './UserSurveys';
 import './styles.scss';
 
-const ReportTab = () => <Report appModel={appModel} userModel={userModel} />;
-const SpeciesTab = () => <Species appModel={appModel} />;
-
 const HomeController = () => {
-  const { navigate } = useContext(NavContext);
   const ionRouter = useIonRouter();
-  // prevent fast tapping
-  const [isButtonTapped, setIsButtonTapped] = useState(false);
 
   const exitApp = () => {
     const onExitApp = () => !ionRouter.canGoBack() && AppPlugin.exitApp();
@@ -55,58 +42,25 @@ const HomeController = () => {
   };
   useEffect(exitApp, []);
 
-  const navigateToPrimarySurvey = () => {
-    const primarySurveyName = appModel.data.primarySurvey || 'precise-area';
-
-    if (!isButtonTapped) {
-      setIsButtonTapped(true);
-      navigate(`/survey/${primarySurveyName}`);
-    }
-  };
-
-  const primarySurveyName = appModel.data.primarySurvey || 'precise-area';
-
-  const getOtherSurveys = () => {
-    const notPrimarySurvey = ({ name }: Survey) => name !== primarySurveyName;
-    const notDeprecatedSurvey = ({ deprecated }: Survey) => !deprecated;
-    const otherSurveys = Object.values(surveys)
-      .filter(notPrimarySurvey)
-      .filter(notDeprecatedSurvey);
-
-    // eslint-disable-next-line
-    const getSurveyButton = ({ name, label }: any) => {
-      if (!surveys[name]) return null; // for backwards compatible
-      const navigateToOtherSurvey = () => navigate(`/survey/${name}`);
-
-      return (
-        <Button
-          onPress={navigateToOtherSurvey}
-          key={name}
-          className="!h-fit"
-          color="primary"
-        >
-          {label}
-        </Button>
-      );
-    };
-
-    return otherSurveys.map(getSurveyButton);
-  };
-
-  const vibrate = () =>
-    isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });
-
   return (
     <IonTabs>
       <IonRouterOutlet>
-        <Redirect exact path="/home" to="/home/species" />
-        <Route path="/home/species" render={SpeciesTab} exact />
-        <Route path="/home/report" render={ReportTab} exact />
+        <Redirect exact path="/home" to="/home/home" />
+        <Route path="/home/home" component={Home} exact />
+        <Route path="/home/species" component={Species} exact />
+        <Route path="/home/report" component={Report} exact />
         <Route path="/home/user-surveys/:id?" component={UserSurveys} exact />
         <Route path="/home/menu" component={Menu} exact />
       </IonRouterOutlet>
 
       <IonTabBar slot="bottom">
+        <IonTabButton tab="home/home" href="/home/home">
+          <IonIcon icon={homeOutline} />
+          <IonLabel>
+            <T>Home</T>
+          </IonLabel>
+        </IonTabButton>
+
         <IonTabButton tab="home/species" href="/home/species">
           <IonIcon icon={butterflyIcon} />
           <IonLabel>
@@ -119,21 +73,6 @@ const HomeController = () => {
           <IonLabel>
             <T>Reports</T>
           </IonLabel>
-        </IonTabButton>
-
-        <IonTabButton>
-          <LongPressFabButton
-            onClick={navigateToPrimarySurvey}
-            icon={addOutline}
-            onLongClick={vibrate}
-            buttonProps={{ skipTranslation: true }}
-          >
-            <div className="flex h-[70px] items-center justify-center rounded bg-[#424242] p-5 text-[0.8rem] text-[white]">
-              <T>Click on other recording options from list below</T>
-            </div>
-
-            {getOtherSurveys()}
-          </LongPressFabButton>
         </IonTabButton>
 
         <IonTabButton tab="/home/user-surveys" href="/home/user-surveys">

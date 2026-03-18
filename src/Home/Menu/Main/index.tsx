@@ -16,7 +16,6 @@ import { Main, InfoMessage } from '@flumens';
 import { IonIcon, IonList, IonItem, IonButton } from '@ionic/react';
 import config from 'common/config';
 import AppModelType from 'models/app';
-import logo from './logo.png';
 import './styles.scss';
 
 type Props = {
@@ -43,7 +42,9 @@ const MenuMain = ({
 
   return (
     <Main className="app-menu [--padding-top:env(safe-area-inset-top)] [--padding-bottom:30px]">
-      <img src={logo} alt="app logo" />
+      <div className="text-center font-bold text-2xl w-full mt-5 mb-8 text-primary-800">
+        <T>Menu</T>
+      </div>
 
       <IonList lines="full">
         <h3 className="list-title">

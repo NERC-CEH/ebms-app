@@ -5,7 +5,6 @@ import {
   schoolOutline,
   globeOutline,
   shareOutline,
-  addCircleOutline,
   personRemoveOutline,
   trashBinOutline,
   cloudDownloadOutline,
@@ -22,7 +21,6 @@ import countries, { CountryCode } from 'common/config/countries';
 import languages, { LanguageCode } from 'common/config/languages';
 import butterflyIcon from 'common/images/butterfly.svg';
 import mothIcon from 'common/images/moth.svg';
-import { surveyConfigs as surveys } from 'models/sample';
 
 function useDatabaseExportDialog(exportFn: any) {
   const alert = useAlert();
@@ -120,7 +118,6 @@ type Props = {
   sendAnalytics: boolean;
   isLoggedIn: boolean;
   deleteUser: any;
-  primarySurvey?: string;
   language: LanguageCode;
   country: CountryCode;
   exportDatabase: any;
@@ -137,7 +134,6 @@ const MenuMain = ({
   useTraining,
   useExperiments,
   sendAnalytics,
-  primarySurvey,
   language,
   country,
   exportDatabase,
@@ -149,8 +145,6 @@ const MenuMain = ({
 
   const alert = useAlert();
   const showUserDeleteDialog = useUserDeleteDialog(deleteUser);
-
-  const primarySurveyLabel = surveys[primarySurvey as string].label;
 
   const onSendAnalyticsToggle = (checked: boolean) =>
     onToggle('sendAnalytics', checked);
@@ -181,15 +175,6 @@ const MenuMain = ({
               <T>Species Lists</T>
             </IonLabel>
             <IonIcon icon={butterflyIcon} size="small" slot="start" />
-          </IonItem>
-          <IonItem routerLink="/settings/primary-survey" detail>
-            <IonLabel>
-              <T>Primary Survey</T>
-            </IonLabel>
-            <IonIcon icon={addCircleOutline} size="small" slot="start" />
-            <IonLabel slot="end" className="max-w-28 truncate">
-              <T>{primarySurveyLabel}</T>
-            </IonLabel>
           </IonItem>
           <IonItem routerLink="/settings/moth-survey" detail>
             <IonLabel>

@@ -34,7 +34,6 @@ export type Data = ModelData & {
   useDayFlyingMothsOnly: boolean;
   locations: any[];
   taxonGroupFilters?: any;
-  primarySurvey: any;
   /**
    * Default user group/project ID.
    */
@@ -76,8 +75,6 @@ const defaults: Data = {
   speciesGroups: DEFAULT_SPECIES_GROUP,
   useDayFlyingMothsOnly: false,
   locations: [],
-
-  primarySurvey: 'precise-area',
 
   useImageIdentifier: true,
   useExperiments: false,

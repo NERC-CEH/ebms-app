@@ -1705,6 +1705,30 @@ msgstr "Contaxe de 15 min dunha única especie"
 msgid "eBMS Transect"
 msgstr "Transecto eBMS"
 
+# Home page
+msgid "Count for 15 minutes anywhere"
+msgstr ""
+
+# Home page
+msgid "Walk a fixed transect"
+msgstr ""
+
+# Home page
+msgid "Record a moth-trap survey"
+msgstr ""
+
+# Home page
+msgid "Count a single species for 15 minutes"
+msgstr ""
+
+# Home page
+msgid "Bait-trap survey"
+msgstr ""
+
+# Home page
+msgid "Record a fixed bait-trap survey"
+msgstr ""
+
 msgid "Please add any extra info about this record."
 msgstr "Por favor, engada información adicional sobre este rexistro."
 

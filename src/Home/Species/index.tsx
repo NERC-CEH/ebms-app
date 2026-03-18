@@ -5,7 +5,7 @@ import { Trans as T } from 'react-i18next';
 import { Page, useAlert } from '@flumens';
 import { IonIcon } from '@ionic/react';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
-import { AppModel } from 'models/app';
+import appModel from 'models/app';
 import Header from './Header';
 import Main from './Main';
 
@@ -18,11 +18,7 @@ const uniqueFamilyList = Array.from(new Set(families));
 
 const filterOptions = [{ type: 'family', values: uniqueFamilyList }];
 
-type Props = {
-  appModel: AppModel;
-};
-
-const Species = ({ appModel }: Props) => {
+const Species = () => {
   const [searchPhrase, setSearchPhrase] = useState('');
   const alert = useAlert();
 

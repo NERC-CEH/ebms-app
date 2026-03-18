@@ -386,7 +386,7 @@ export const wingLengthAttr = {
   suffix: 'mm',
 } as const satisfies NumberInputConf;
 
-const SURVEY_ID = 999; // TODO:
+const SURVEY_ID = 1032;
 const SURVEY_NAME = 'bait-trap';
 const SURVEY_FORM = 'ebms-bait-trap'; // TODO:
 

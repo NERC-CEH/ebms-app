@@ -1692,6 +1692,30 @@ msgstr "15min Single Species Count"
 msgid "eBMS Transect"
 msgstr "eBMS Transect"
 
+# Home page 
+msgid "Count for 15 minutes anywhere"
+msgstr "Count for 15 minutes anywhere"
+
+# Home page 
+msgid "Walk a fixed transect"
+msgstr "Walk a fixed transect"
+
+# Home page 
+msgid "Record a moth-trap survey"
+msgstr "Record a moth-trap survey"
+
+# Home page 
+msgid "Count a single species for 15 minutes"
+msgstr "Count a single species for 15 minutes"
+
+# Home page 
+msgid "Bait-trap survey"
+msgstr "Bait-trap survey"
+
+# Home page 
+msgid "Record a fixed bait-trap survey"
+msgstr "Record a fixed bait-trap survey"
+
 msgid "Please add any extra info about this record."
 msgstr "Please add any extra info about this record."
 

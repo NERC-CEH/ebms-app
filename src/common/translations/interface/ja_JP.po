@@ -1635,6 +1635,30 @@ msgstr "15 分間の単一種カウント"
 msgid "eBMS Transect"
 msgstr "eBMSトランセクト"
 
+# Home page
+msgid "Count for 15 minutes anywhere"
+msgstr ""
+
+# Home page
+msgid "Walk a fixed transect"
+msgstr ""
+
+# Home page
+msgid "Record a moth-trap survey"
+msgstr ""
+
+# Home page
+msgid "Count a single species for 15 minutes"
+msgstr ""
+
+# Home page
+msgid "Bait-trap survey"
+msgstr ""
+
+# Home page
+msgid "Record a fixed bait-trap survey"
+msgstr ""
+
 msgid "Please add any extra info about this record."
 msgstr "この記録に関する追加情報を追加してください。"
 

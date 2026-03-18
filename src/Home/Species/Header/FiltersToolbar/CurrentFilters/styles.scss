@@ -1,7 +1,7 @@
 ion-toolbar.filterbar {
-  --padding-top: 0;
+  --padding-top: 3px;
+  --padding-bottom: 3px;
   --min-height: 2em;
-  max-height: 2em;
 
   > div {
     overflow-x: scroll;

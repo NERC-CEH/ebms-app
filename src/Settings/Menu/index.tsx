@@ -122,7 +122,6 @@ const Container = () => {
         useTraining={appModel.data.useTraining}
         useExperiments={appModel.data.useExperiments}
         sendAnalytics={appModel.data.sendAnalytics}
-        primarySurvey={appModel.data.primarySurvey}
         clearCache={clearCacheWrap}
         onToggle={onToggle}
         language={appModel.data.language!}

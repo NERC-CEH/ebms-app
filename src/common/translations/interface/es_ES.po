@@ -1334,16 +1334,20 @@ msgid ""
 "It is also possible to register and select a permanent site as well as to "
 "assign your survey to a project."
 msgstr ""
+"También es posible registrarse y seleccionar un lugar permanente, así como "
+"asignar su estudio a un proyecto."
 
 # Help pages
 msgid ""
 "<0>Start a count.</0><1>Select \"Additional Details\" then "
 "\"Site\".</1><2>Finally, choose the site for the current count.</2>"
 msgstr ""
+"<0>Empieza un registro.</0><1>Selecciona \"Detalles Opcionales\" y luego "
+"\"Luego\".</1><2>Por último, elige el sitio para el recuento actual.</2>"
 
 # Help pages
 msgid "Create a new site"
-msgstr ""
+msgstr "Crear un nuevo lugar"
 
 # Help pages
 msgid ""
@@ -1352,6 +1356,11 @@ msgid ""
 "and press \"Save\".</3><br/>Note: you need to be logged in and have a "
 "network connection to create a new site."
 msgstr ""
+"<0>Ve a la página de Ajustes de la aplicación.</0><1>Selecciona "
+"\"Lugares\".</1><2>En la esquina superior derecha, pulsa el botón "
+"«Añadir».<3>Introduce los datos necesarios del lugar y pulsa "
+"«Guardar».</3><br/>Nota: para crear un nuevo lugar, debes haber iniciado "
+"sesión y disponer de conexión a Internet."
 
 msgid "User"
 msgstr "Usuario"
@@ -1449,7 +1458,7 @@ msgstr "Pausa"
 
 # Survey status
 msgid "Running"
-msgstr ""
+msgstr "Corriendo"
 
 msgid "Pending"
 msgstr "Pendientes"
@@ -1731,6 +1740,30 @@ msgstr "Recuento de 15 min única especie"
 
 msgid "eBMS Transect"
 msgstr "Transecto eBMS"
+
+# Home page
+msgid "Count for 15 minutes anywhere"
+msgstr ""
+
+# Home page
+msgid "Walk a fixed transect"
+msgstr ""
+
+# Home page
+msgid "Record a moth-trap survey"
+msgstr ""
+
+# Home page
+msgid "Count a single species for 15 minutes"
+msgstr ""
+
+# Home page
+msgid "Bait-trap survey"
+msgstr ""
+
+# Home page
+msgid "Record a fixed bait-trap survey"
+msgstr ""
 
 msgid "Please add any extra info about this record."
 msgstr "Por favor añada cualquier otra información extra sobre este recuento"
@@ -3353,38 +3386,41 @@ msgid "Successfully installed \"{{country}}\" list with {{size}} species"
 msgstr "Instalada correctamente lista de \"{{country}}\" con {{size}} especies"
 
 msgid "Site"
-msgstr ""
+msgstr "Lugar"
 
 msgid "Has species lists"
-msgstr ""
+msgstr "Incluye listas de especies"
 
 msgid "Has sites"
-msgstr ""
+msgstr "Incluye lugares"
 
 msgid "New site"
-msgstr ""
+msgstr "Nuevo lugar"
 
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 msgid "Sites"
-msgstr ""
+msgstr "Lugares"
 
 msgid "My sites"
 msgstr "Mis transectos"
 
 msgid "No site"
-msgstr ""
+msgstr "Sin lugar"
 
 msgid "custom list"
-msgstr ""
+msgstr "lista personalizada"
 
 msgid "location"
-msgstr ""
+msgstr "localización"
 
 msgid "Search outside my current project or site list.<1>Search</1>"
 msgstr ""
+"Buscar fuera de mi proyecto actual o de la lista de lugares.<1>Buscar</1>"
 
 msgid ""
 "To create a new project, visit the <2>projects page</2> on the website."
 msgstr ""
+"Para crear un nuevo proyecto, visita la <2>página de proyectos</2> en la "
+"página web."
