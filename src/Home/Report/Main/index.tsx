@@ -35,7 +35,7 @@ const MainReport = ({
   if (hasNoData && refreshing) {
     return (
       <Main>
-        <IonSpinner className="centered" />
+        <IonSpinner className="w-full my-50" />
       </Main>
     );
   }

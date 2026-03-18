@@ -49,7 +49,7 @@ const Home = () => {
 
   return (
     <Page id="home-home">
-      <Main>
+      <Main scrollY={false}>
         <img src={background} className="absolute size-full object-cover" />
 
         {/* darkening overlay that increases with scroll */}

@@ -3,7 +3,7 @@ import logo from './logo_white.png';
 const Banner = () => (
   <>
     {/* header shadow shapes */}
-    <div className="absolute top-0 left-0 pointer-events-none z-10">
+    <div className="absolute top-0 left-0 pointer-events-none z-10 pt-[env(safe-area-inset-top)]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 200 100"
@@ -28,7 +28,7 @@ const Banner = () => (
     <img
       src={logo}
       alt="logo"
-      className="absolute top-0 left-0 w-screen h-[25vh] object-contain z-20"
+      className="absolute top-0 left-0 w-screen h-[25vh] object-contain z-20 pt-[env(safe-area-inset-top)]"
     />
   </>
 );
