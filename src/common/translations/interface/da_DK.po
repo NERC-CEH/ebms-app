@@ -2812,6 +2812,10 @@ msgstr "Godkend"
 msgid "Which species groups have you counted?"
 msgstr "Hvilke artsgrupper har du talt?"
 
+# Part of Species Group selection
+msgid "Which <1>species groups</1> are you interested in?"
+msgstr ""
+
 # Part of Painted lady survey
 msgid "Select Target Species"
 msgstr "Vælg målart"

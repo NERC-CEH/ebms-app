@@ -2811,6 +2811,10 @@ msgstr "Bekräfta"
 msgid "Which species groups have you counted?"
 msgstr "Vilka artgrupper har du räknat?"
 
+# Part of Species Group selection
+msgid "Which <1>species groups</1> are you interested in?"
+msgstr ""
+
 # Part of Painted lady survey
 msgid "Select Target Species"
 msgstr "Välj målart"

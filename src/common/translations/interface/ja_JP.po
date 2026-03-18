@@ -2645,6 +2645,10 @@ msgstr "確認"
 msgid "Which species groups have you counted?"
 msgstr "どの種のグループをあなたは数えましたか？"
 
+# Part of Species Group selection
+msgid "Which <1>species groups</1> are you interested in?"
+msgstr ""
+
 # Part of Painted lady survey
 msgid "Select Target Species"
 msgstr "目的の種を選択してください。"

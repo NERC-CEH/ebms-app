@@ -2861,6 +2861,10 @@ msgstr "Потвърди"
 msgid "Which species groups have you counted?"
 msgstr "Кои групи видове сте броили?"
 
+# Part of Species Group selection
+msgid "Which <1>species groups</1> are you interested in?"
+msgstr ""
+
 # Part of Painted lady survey
 msgid "Select Target Species"
 msgstr "Избери целеви вид"

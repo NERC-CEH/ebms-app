@@ -2859,6 +2859,10 @@ msgstr "Confirmer"
 msgid "Which species groups have you counted?"
 msgstr "Quels groupes d'espèces avez-vous observés ?"
 
+# Part of Species Group selection
+msgid "Which <1>species groups</1> are you interested in?"
+msgstr ""
+
 # Part of Painted lady survey
 msgid "Select Target Species"
 msgstr "Sélectionner l'espèce cible"
