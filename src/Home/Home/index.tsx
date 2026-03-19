@@ -2,16 +2,16 @@ import { useRef } from 'react';
 import { Main, Page } from 'common/flumens';
 import Banner from './Banner';
 import FancyButton from './FancyButton';
-import background1 from './background.jpg';
-import background2 from './background_2.jpg';
-import background3 from './background_3.jpg';
-import background4 from './background_4.jpg';
-import background5 from './background_5.jpg';
-import background6 from './background_6.jpg';
-import background7 from './background_7.jpg';
-import background8 from './background_8.jpg';
-import background9 from './background_9.jpg';
-import background10 from './background_10.jpg';
+import background1 from './backgrounds/background.jpg';
+import background2 from './backgrounds/background_2.jpg';
+import background3 from './backgrounds/background_3.jpg';
+import background4 from './backgrounds/background_4.jpg';
+import background5 from './backgrounds/background_5.jpg';
+import background6 from './backgrounds/background_6.jpg';
+import background7 from './backgrounds/background_7.jpg';
+import background8 from './backgrounds/background_8.jpg';
+import background9 from './backgrounds/background_9.jpg';
+import background10 from './backgrounds/background_10.jpg';
 import baitTrapIcon from './icons/baitTrapIcon.svg';
 import countIcon from './icons/countIcon.svg';
 import mothIcon from './icons/mothIcon.svg';
@@ -61,7 +61,7 @@ const Home = () => {
         <Banner />
 
         <div
-          className="absolute h-full w-full z-50 pt-[57vh] pb-20 overflow-scroll"
+          className="absolute h-full w-full z-50 pt-[57vh] pb-25 overflow-scroll"
           onScroll={onScroll}
         >
           <div className="flex flex-col gap-3 max-w-4xl mx-auto px-5">
