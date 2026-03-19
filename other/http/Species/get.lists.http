@@ -1,4 +1,4 @@
-GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/reports/projects/ebms/ebms_countries_and_other_ttl_attr_profiles_for_app_test.xml
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/reports/projects/ebms/ebms_countries_and_other_ttl_attr_profiles_for_app.xml
   # 2025-10-07
   ?updated_on_filter=
   &species_groups_filter=

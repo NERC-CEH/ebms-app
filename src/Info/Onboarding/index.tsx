@@ -8,9 +8,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Button, Main, Page } from '@flumens';
+import { Button, device, Main, Page } from '@flumens';
 import { IonButtons, IonFooter, IonIcon, IonToolbar } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
+import groups from 'common/data/groups';
+import taxonListsCollection from 'common/models/collections/taxonLists';
 import appModel from 'models/app';
 import SpeciesGroupsSlide from './SpeciesGroupsSlide';
 import graph from './images/welcome_1.png';
@@ -26,14 +28,20 @@ const Onboarding = ({ children }: any) => {
     setMoreSlidesExist(!isEnd);
   };
 
-  const { showedWelcome } = appModel.data;
-
-  if (showedWelcome) return children;
+  if (appModel.data.showedWelcome) return children;
 
   function exit() {
     console.log('Info:Welcome:Controller: exit.');
     appModel.data.showedWelcome = true;
     appModel.save();
+
+    if (!device.isOnline) return;
+
+    taxonListsCollection.fetchDefaultSpeciesGroupList(
+      appModel.data.speciesGroups.filter(
+        group => group !== groups.butterflies.id
+      )
+    );
   }
 
   const slideNextOrClose = () => {

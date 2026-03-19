@@ -14,6 +14,7 @@ import TaxonList, { DTO } from '../taxonList';
 type RemoteFetchParams = {
   limit?: number;
   locationCode?: string;
+  speciesGroupsFilter?: (string | number)[];
   lat?: number;
   lon?: number;
   updatedOn?: number;
@@ -54,6 +55,7 @@ class TaxonListCollection extends Collection<TaxonList> {
       const {
         limit = 1000,
         locationCode = '',
+        speciesGroupsFilter = [],
         lat = '',
         lon = '',
         updatedOn,
@@ -67,7 +69,7 @@ class TaxonListCollection extends Collection<TaxonList> {
       /* eslint-disable @typescript-eslint/naming-convention */
       const requestParams = {
         updated_on_filter: updatedOn ? new Date(updatedOn).toISOString() : '',
-        species_groups_filter: '',
+        species_groups_filter: speciesGroupsFilter.join(','),
         description_filter: '',
         lon,
         lat,
@@ -187,7 +189,12 @@ class TaxonListCollection extends Collection<TaxonList> {
   }
 
   async fetchDefaultCountryTaxonList(newCountry: string) {
-    if (newCountry === 'ELSEWHERE') return;
+    if (newCountry === 'ELSEWHERE') return null;
+
+    console.log(
+      '📚 Collection: taxonLists fetching default country list for country:',
+      newCountry
+    );
 
     const newCountryNormalised =
       newCountry === 'UK' ? 'GB' : newCountry.replace('_', ': ');
@@ -202,9 +209,37 @@ class TaxonListCollection extends Collection<TaxonList> {
 
     await list.save(true);
     await list.fetchRemoteSpecies();
+    return list;
+  }
+
+  /**
+   * Not for butterflies, but for other species groups we want to fetch the default list, so that users can easily find their species in the app and start contributing.
+   */
+  async fetchDefaultSpeciesGroupList(groups: number[]) {
+    if (!groups.length) return [];
+
+    console.log(
+      '📚 Collection: taxonLists fetching default species group lists for groups:',
+      groups
+    );
+
+    const lists = await this.fetchRemote({ speciesGroupsFilter: groups });
+
+    const speciesGroupLists = lists.filter(l => l.data.type === 'list');
+
+    return Promise.all(
+      speciesGroupLists.map(async list => {
+        await this.upsert(list);
+        await list.save(true);
+        await list.fetchRemoteSpecies();
+        return list;
+      })
+    );
   }
 }
 
 const taxonListsCollection = new TaxonListCollection();
+
+// (window as any).taxonListsCollection = taxonListsCollection; // for debugging
 
 export default taxonListsCollection;
