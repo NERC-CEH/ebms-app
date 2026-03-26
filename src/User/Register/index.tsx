@@ -16,7 +16,7 @@ const RegisterContainer = () => {
   const loader = useLoader();
 
   const onSuccess = () => {
-    context.navigate('/home/user-surveys', 'root');
+    context.navigate('/home/home', 'root');
   };
 
   async function onRegister(details: Details) {

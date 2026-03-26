@@ -1,14 +1,7 @@
 import { useContext } from 'react';
-import { addOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { useToast, getRelativeDate, VirtualList, Button } from '@flumens';
-import {
-  IonIcon,
-  IonItemDivider,
-  IonLabel,
-  IonList,
-  NavContext,
-} from '@ionic/react';
+import { IonItemDivider, IonLabel, IonList, NavContext } from '@ionic/react';
 import samplesCollection, {
   uploadAllSamples,
 } from 'models/collections/samples';
