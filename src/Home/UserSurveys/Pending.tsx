@@ -135,10 +135,6 @@ const Pending = () => {
     return (
       <InfoBackgroundMessage className="mb-[10vh] mt-[20vh]">
         No finished pending surveys.
-        <br />
-        <br />
-        Press <IonIcon icon={addOutline} className="start-survey-icon" /> to
-        add.
       </InfoBackgroundMessage>
     );
   }
