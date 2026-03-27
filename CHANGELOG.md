@@ -1,3 +1,7 @@
+## 1.33.0
+
+Added Bait-trap survey.
+
 ## 1.32.0
 
 Updated species guide (cutouts).
