@@ -89,14 +89,12 @@ const Home = () => {
               path="/survey/precise-single-species-area"
               description="Count a single species for 15 minutes"
             />
-            {window.location.href.includes('localhost:8000') && (
-              <FancyButton
-                icon={baitTrapIcon}
-                label="Bait-trap survey"
-                path="/survey/bait-trap"
-                description="Record a fixed bait-trap survey"
-              />
-            )}
+            <FancyButton
+              icon={baitTrapIcon}
+              label="Bait-trap survey"
+              path="/survey/bait-trap"
+              description="Record a fixed bait-trap survey"
+            />
           </div>
         </div>
       </Main>
