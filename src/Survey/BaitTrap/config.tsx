@@ -31,6 +31,7 @@ import {
 import { IonIcon } from '@ionic/react';
 import config from 'common/config';
 import mothTrap from 'common/images/moth-inside-icon.svg';
+import Sample from 'common/models/sample';
 import appModel from 'models/app';
 import { Data as LocationData } from 'models/location';
 import {
@@ -40,6 +41,8 @@ import {
   dateAttr as commonDateAttr,
   inferAttrConfigTypes,
 } from 'Survey/common/config';
+
+const FIELD_CODE_REGEX = /^[A-Z]\d{1,2}$/;
 
 const mothTrapIcon = (<IonIcon src={mothTrap} className="size-6" />) as any;
 
@@ -88,24 +91,6 @@ const dateTimeAttr = {
         // TODO: add time
       });
       return dateFormat.format(new Date(date));
-    },
-  },
-} as const;
-
-const locationAttr = {
-  id: 'location',
-  remote: {
-    id: 'location_id',
-    values(location: any, submission: any) {
-      /* eslint-disable @typescript-eslint/naming-convention, no-param-reassign */
-      submission.values = {
-        ...submission.values,
-        entered_sref: location.centroidSref,
-        entered_sref_system: location.centroidSrefSystem,
-      };
-      /* eslint-enable @typescript-eslint/naming-convention, no-param-reassign */
-
-      return location.id;
     },
   },
 } as const;
@@ -186,12 +171,11 @@ export const collectorsAttr = {
 
 export const eventTypeAttr = {
   id: 'smpAttr:9999',
-  type: 'choiceInput',
+  type: 'textInput',
   title: 'Event type',
-  appearance: 'button',
+  container: 'inline',
   prefix: <IonIcon src={flagOutline} className="size-6" />,
-  choices: [{ title: 'Trampa-monitoreo', dataName: '99910' }],
-} as const satisfies ChoiceInputConf;
+} as const satisfies TextInputConf;
 
 export const samplingDesignAttr = {
   id: 'smpAttr:99910',
@@ -203,35 +187,28 @@ export const samplingDesignAttr = {
 
 export const carrionBaitAttr = {
   id: 'smpAttr:99911',
-  type: 'choiceInput',
+  type: 'textInput',
   title: 'Carrion bait',
-  appearance: 'button',
+  container: 'inline',
   prefix: <IonIcon src={fishOutline} className="size-6" />,
-  choices: [
-    { title: 'Tilapia', dataName: '99911' },
-    { title: 'Other fish', dataName: '99912' },
-  ],
-} as const satisfies ChoiceInputConf;
+} as const satisfies TextInputConf;
 
-export const fieldCodeAttr = {
+export const fieldCodeStartAttr = {
   id: 'smpAttr:99912',
   type: 'textInput',
   title: 'Field code',
   container: 'inline',
   prefix: <IonIcon src={codeOutline} className="size-6" />,
+  validation: { pattern: FIELD_CODE_REGEX.source },
 } as const satisfies TextInputConf;
 
 export const stratumAttr = {
   id: 'smpAttr:99913',
-  type: 'choiceInput',
+  type: 'textInput',
   title: 'Stratum',
-  appearance: 'button',
+  container: 'inline',
   prefix: <IonIcon src={layersOutline} className="size-6" />,
-  choices: [
-    { title: 'Dosel', dataName: '99901' },
-    { title: 'Sotobosque', dataName: '99902' },
-  ],
-} as const satisfies ChoiceInputConf;
+} as const satisfies TextInputConf;
 
 export const baitAttr = {
   id: 'smpAttr:99914',
@@ -255,6 +232,14 @@ export const otherBaitAttr = {
   visibility: [{ target: baitAttr.id, op: 'eq', value: '99905' }],
 } as const satisfies TextInputConf;
 
+export const surveyCommentAttr = {
+  id: 'comment',
+  type: 'textInput',
+  title: 'Comments',
+  appearance: 'multiline',
+  container: 'inline',
+} as const satisfies TextInputConf;
+
 export const trapCommentAttr = {
   id: 'comment',
   type: 'textInput',
@@ -271,7 +256,6 @@ export const weatherAttr = {
   prefix: <IonIcon src={cloudyOutline} className="size-6" />,
   choices: [
     { title: 'Sunny', dataName: '99906' },
-    { title: 'Partly cloudy', dataName: '99907' },
     { title: 'Cloudy', dataName: '99908' },
     { title: 'Rainy', dataName: '99909' },
   ],
@@ -320,9 +304,9 @@ export const sexAttr = {
   appearance: 'button',
   prefix: <IonIcon src={maleOutline} className="size-6" />,
   choices: [
+    { title: 'Not recorded', dataName: '' },
     { title: 'Male', dataName: '99913' },
     { title: 'Female', dataName: '99914' },
-    { title: 'Unknown', dataName: '99915' },
   ],
 } as const satisfies ChoiceInputConf;
 
@@ -359,7 +343,7 @@ export const fateAttr = {
   choices: [
     { title: 'Released', dataName: '99916' },
     { title: 'Collected', dataName: '99917' },
-    { title: 'Dead', dataName: '99918' },
+    { title: 'Died', dataName: '99918' },
   ],
 } as const satisfies ChoiceInputConf;
 
@@ -370,11 +354,17 @@ export const ageAttr = {
   appearance: 'button',
   prefix: <IonIcon src={timeOutline} className="size-6" />,
   choices: [
-    { title: 'Adult', dataName: '99919' },
-    { title: 'Juvenile', dataName: '99920' },
-    { title: 'Unknown', dataName: '99921' },
+    { title: 'Not recorded', dataName: '' },
+    { title: 'New', dataName: '99919' },
+    { title: 'Intermediate', dataName: '99920' },
+    { title: 'Old', dataName: '99921' },
   ],
 } as const satisfies ChoiceInputConf;
+
+export const fieldCodeAttr = {
+  id: 'occAttr:99912',
+  type: 'textInput',
+} as const satisfies TextInputConf;
 
 export const wingLengthAttr = {
   id: 'occAttr:99925',
@@ -386,13 +376,44 @@ export const wingLengthAttr = {
   suffix: 'mm',
 } as const satisfies NumberInputConf;
 
+const getNextSpeciesCode = (subSample: Sample<Data>) => {
+  // go through all occurrences across all sub-samples, flattened and find the last created occurrence with a field code, then increment that code by 1 for the new occurrence
+  const allOccurrences = subSample.parent!.samples.flatMap(
+    smp => smp.occurrences
+  );
+  const lastOccurrence: any = allOccurrences
+    .sort((a, b) => a.createdAt - b.createdAt)
+    .at(-1);
+  const lastFieldCode = lastOccurrence?.data[fieldCodeAttr.id];
+  if (!lastFieldCode || !FIELD_CODE_REGEX.test(lastFieldCode))
+    return subSample.parent!.data[fieldCodeStartAttr.id] || 'A1';
+
+  // extract the single letter and number, increment the number by 1, and if it exceeds 99, increment the letter
+  const match = lastFieldCode.match(/^([A-Z])(\d{1,2})$/);
+  if (!match) return '';
+
+  const [, letter, numberStr] = match;
+  const number = parseInt(numberStr, 10);
+  let nextNumber = number + 1;
+  let nextLetter = letter;
+
+  if (nextNumber > 99) {
+    nextNumber = 1;
+
+    // increment the letter (e.g. A -> Z and back to A)
+    nextLetter =
+      letter === 'Z' ? 'A' : String.fromCharCode(letter.charCodeAt(0) + 1);
+  }
+
+  return `${nextLetter}${nextNumber}`;
+};
+
 const SURVEY_ID = 1032;
 const SURVEY_NAME = 'bait-trap';
 const SURVEY_FORM = 'ebms-bait-trap'; // TODO:
 
 const attrs = {
   [dateAttr.id]: dateAttr,
-  [locationAttr.id]: locationAttr,
   [commentAttr.id]: commentAttr,
   [trapsAttr.id]: { block: trapsAttr },
   [trapsCarrionAttr.id]: { block: trapsCarrionAttr },
@@ -405,12 +426,11 @@ const attrs = {
   [eventTypeAttr.id]: { block: eventTypeAttr },
   [samplingDesignAttr.id]: { block: samplingDesignAttr },
   [carrionBaitAttr.id]: { block: carrionBaitAttr },
-  [fieldCodeAttr.id]: { block: fieldCodeAttr },
+  [fieldCodeStartAttr.id]: { block: fieldCodeStartAttr },
 } as const;
 
 const subSmpAttrs = {
   [dateAttr.id]: dateTimeAttr,
-  [locationAttr.id]: locationAttr,
   [stratumAttr.id]: { block: stratumAttr },
   [baitAttr.id]: { block: baitAttr },
   [otherBaitAttr.id]: { block: otherBaitAttr },
@@ -431,6 +451,7 @@ const occAttrs = {
   [ageAttr.id]: { block: ageAttr },
   [wingLengthAttr.id]: { block: wingLengthAttr },
   [commentAttr.id]: commentAttr,
+  [fieldCodeAttr.id]: { block: fieldCodeAttr },
 } as const;
 
 const survey = {
@@ -447,10 +468,11 @@ const survey = {
     occ: {
       attrs: occAttrs,
 
-      create({ Occurrence, taxon }) {
+      create({ Occurrence, sample, taxon }) {
         return new Occurrence<OccData>({
           data: {
             taxon,
+            [fieldCodeAttr.id]: getNextSpeciesCode(sample!),
           },
         });
       },
@@ -466,14 +488,12 @@ const survey = {
           .safeParse(data).error,
     },
 
-    create({ Sample, location }) {
+    create({ location }) {
       const sample = new Sample<SubSmpData>({
-        metadata: {
-          survey: SURVEY_NAME,
-          surveyId: SURVEY_ID,
-        },
+        metadata: { survey: SURVEY_NAME },
         data: {
           surveyId: SURVEY_ID,
+          sampleMethodId: 24553, // bait-trap check
           date: new Date().toISOString(),
           location,
         },
@@ -485,10 +505,7 @@ const survey = {
     verify: data =>
       z
         .object({
-          location: z.object(
-            { id: z.string() },
-            { error: 'Please select a trap.' }
-          ),
+          locationId: z.string({ error: 'Please select your site.' }),
           date: z.string({ error: 'Date is missing' }),
         })
         .safeParse(data).error,
@@ -497,49 +514,23 @@ const survey = {
   verify: data =>
     z
       .object({
-        location: z.object(
-          { id: z.string() },
-          { error: 'Please select your site.' }
-        ),
+        locationId: z.string({ error: 'Please select your site.' }),
         date: z.string({ error: 'Date is missing' }),
-        // TODO: add any extras
+        [fieldCodeStartAttr.id]: z
+          .string()
+          .regex(FIELD_CODE_REGEX, { error: 'Field code is invalid (e.g. A1)' })
+          .or(z.literal(''))
+          .optional(),
       })
       .safeParse(data).error,
 
-  create({ Sample }) {
-    const dummyTrap = {
-      id: '378622',
-      createdAt: '2025-10-14 08:33:02',
-      location: {
-        name: 'Test Kaunas',
-        latitude: 54.89810876554291,
-        longitude: 23.883737541594577,
-      },
-      name: 'Test Kaunas',
-      code: 'EBMS:Lithuania:33',
-      centroidSref: '54.89811N, 23.88374E',
-      centroidSrefSystem: '4326',
-      sections: '3',
-      createdById: '97622',
-      updatedById: '97622',
-      centroidGeom: 'POINT(2658725.5013705 7342116.160814198)',
-      locationTypeId: '777',
-      public: 'f',
-      lat: '54.89810876554291',
-      lon: '23.883737541594577',
-      'locAttr:306': [],
-    };
-
+  create() {
     const sample = new Sample<Data>({
-      metadata: {
-        surveyId: SURVEY_ID,
-        survey: SURVEY_NAME,
-      },
+      metadata: { survey: SURVEY_NAME },
       data: {
         surveyId: SURVEY_ID,
         date: new Date().toISOString(),
-        // sampleMethodId: 776, TODO: get real sample method ID from backend
-        location: dummyTrap, // TODO: use real location selection instead of dummy trap
+        sampleMethodId: 24552, // bait-trap
         training: appModel.data.useTraining,
         inputForm: SURVEY_FORM,
         [appVersionAttr.id]: config.version,

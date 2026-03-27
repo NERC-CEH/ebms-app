@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react';
 import { Page, Header, useSample } from '@flumens';
 import Sample from 'models/sample';
-import { Data, SubSmpData } from '../config';
+import { Data, SubSmpData } from '../../config';
 import Main from './Main';
 
 const TrapHomeController = () => {
@@ -15,7 +15,7 @@ const TrapHomeController = () => {
   return (
     <Page id="survey-bait-trap-trap-home">
       <Header title="Trap" />
-      <Main sample={sample} subSample={subSample} />
+      <Main subSample={subSample} />
     </Page>
   );
 };

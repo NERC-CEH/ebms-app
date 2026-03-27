@@ -12,7 +12,7 @@ type Props = {
   isFetchingLocations: boolean;
   hasGroup: boolean;
   userLocations: Location[];
-  groupLocations: Location[];
+  groupLocations?: Location[];
   onSelectSite?: (location?: Location) => void;
   selectedLocationId?: string;
   site?: Location;
@@ -21,7 +21,7 @@ type Props = {
 const MainSites = ({
   hasGroup,
   userLocations,
-  groupLocations,
+  groupLocations = [],
   onSelectSite,
   selectedLocationId,
   isFetchingLocations,

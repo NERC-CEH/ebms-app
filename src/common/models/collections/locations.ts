@@ -55,7 +55,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
   }
 
   async fetchRemote(
-    params: { type?: 'sites' | 'transects' | 'mothTraps' } = {}
+    params: { type?: 'sites' | 'transects' | 'mothTraps' | 'baitTraps' } = {}
   ) {
     console.log(`📚 Collection: ${this.id} collection fetching`);
     this.remote.synchronising = true;
@@ -84,6 +84,24 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       await Promise.all(newModels.map(m => m.save()));
 
       await this.removeStaleLocalModels(newModels, [LocationType.MothTrap]);
+    }
+
+    if (!type || type === 'baitTraps') {
+      const siteDocs = await this.fetchRemoteByType(LocationType.BaitTrapSite);
+      const newSiteModels = siteDocs.map(doc => this.Model.fromDTO(doc));
+      this.upsert(...newSiteModels);
+      await Promise.all(newSiteModels.map(m => m.save()));
+
+      await this.removeStaleLocalModels(newSiteModels, [
+        LocationType.BaitTrapSite,
+      ]);
+
+      const trapDocs = await this.fetchRemoteByType(LocationType.BaitTrap);
+      const newTrapModels = trapDocs.map(doc => this.Model.fromDTO(doc));
+      this.upsert(...newTrapModels);
+      await Promise.all(newTrapModels.map(m => m.save()));
+
+      await this.removeStaleLocalModels(newTrapModels, [LocationType.BaitTrap]);
     }
 
     if (!type || type === 'sites') {

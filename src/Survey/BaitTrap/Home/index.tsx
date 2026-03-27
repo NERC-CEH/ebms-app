@@ -62,7 +62,7 @@ const HomeController = () => {
   };
 
   const onAddTrapVisit = () => {
-    if (!sample.data.location?.id) {
+    if (!sample.data.locationId) {
       toast.warn('Please select a site first.');
       navigate(`${match.url}/details`);
       return;

@@ -12,6 +12,7 @@ import {
   NavContext,
 } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
+import locations from 'common/models/collections/locations';
 import Occurrence from 'models/occurrence';
 import Sample, { MothTrapLocation, useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
@@ -139,7 +140,13 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
       );
     }
 
-    const locationName = sample.data.location?.name;
+    let locationName = sample.data.location?.name;
+
+    if (survey.name === 'bait-trap') {
+      const location = locations.idMap.get(sample.data.locationId || '');
+      locationName = location?.data.name;
+    }
+
     return (
       !!locationName && (
         <Badge skipTranslation prefix={<IonIcon icon={mapOutline} />}>

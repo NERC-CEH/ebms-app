@@ -5,23 +5,11 @@ import Sample from 'models/sample';
 import { Data, fieldCodeAttr, OccData } from '../config';
 import Main from './Main';
 
-const getSpeciesCode = (sample: Sample<Data>, occurrence: Occurrence) => {
-  const fieldCode = sample.data[fieldCodeAttr.id] || '';
-
-  // collect all occurrences across all sub-samples, flattened
-  const allOccurrences = sample.samples.flatMap(smp => smp.occurrences);
-
-  // find this occurrence's index (1-based)
-  const index = allOccurrences.findIndex(occ => occ.cid === occurrence.cid) + 1;
-
-  return `${fieldCode}${index}`;
-};
-
 const OccurrenceController = () => {
   const { sample, occurrence } = useSample<Sample<Data>, Occurrence<OccData>>();
   if (!sample || !occurrence) return null;
 
-  const speciesCode = getSpeciesCode(sample, occurrence);
+  const speciesCode = occurrence.data[fieldCodeAttr.id];
 
   return (
     <Page id="survey-bait-trap-edit-occurrence">

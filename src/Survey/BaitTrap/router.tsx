@@ -6,9 +6,9 @@ import Home from './Home';
 import Location from './Location';
 import Occurrence from './Occurrence';
 import Taxon from './Taxon';
-import Trap from './Trap';
-import TrapDetails from './TrapDetails';
-import TrapPicker from './TrapPicker';
+import TrapDetails from './Trap/Details';
+import Trap from './Trap/Edit';
+import TrapPicker from './Trap/List';
 import survey from './config';
 
 const { AttrPageFromRoute } = AttrPage;

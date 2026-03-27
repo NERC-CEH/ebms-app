@@ -1,5 +1,4 @@
 import { observer } from 'mobx-react';
-import { Trans as T } from 'react-i18next';
 import { Main } from '@flumens';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
 import Location from 'models/location';
@@ -17,7 +16,7 @@ const TrapPickerMain = ({ traps, onTrapSelect }: Props) => {
       <Main className="ion-padding">
         <IonList lines="full">
           <InfoBackgroundMessage>
-            <T>No traps found for this site</T>
+            No traps found for this site.
           </InfoBackgroundMessage>
         </IonList>
       </Main>
@@ -27,9 +26,7 @@ const TrapPickerMain = ({ traps, onTrapSelect }: Props) => {
   const getTrapItem = (trap: Location) => {
     const trapName = trap.data.name || trap.data.code || 'Unnamed trap';
 
-    const handleClick = () => {
-      onTrapSelect(trap);
-    };
+    const handleClick = () => onTrapSelect(trap);
 
     return (
       <IonItem key={trap.id} button onClick={handleClick} detail>
@@ -41,9 +38,6 @@ const TrapPickerMain = ({ traps, onTrapSelect }: Props) => {
   return (
     <Main className="ion-padding">
       <IonList lines="full">
-        <h3 className="list-title">
-          <T>Select a trap</T>
-        </h3>
         <div className="rounded-list">{traps.map(getTrapItem)}</div>
       </IonList>
     </Main>

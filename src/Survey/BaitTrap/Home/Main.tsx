@@ -8,6 +8,7 @@ import {
   useAlert,
   MenuAttrItem,
   getRelativeDate,
+  Badge,
 } from '@flumens';
 import {
   IonList,
@@ -17,6 +18,7 @@ import {
   IonItemOptions,
   IonItemOption,
 } from '@ionic/react';
+import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import { Data, SubSmpData } from '../config';
@@ -116,7 +118,8 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
     const { visit: trapVisit } = item;
 
     const occCount = trapVisit.occurrences?.length || 0;
-    const trapName = trapVisit.data.location?.name || 'Trap visit';
+    const location = locations.idMap.get(trapVisit.data.locationId || '');
+    const trapName = location?.data.name || 'Trap visit';
 
     return (
       <IonItemSliding
@@ -130,7 +133,7 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
         >
           <div className="flex gap-2 justify-between items-center w-full py-3">
             <div className="line-clamp-2">{trapName}</div>
-            <div>{occCount} species</div>
+            <Badge>{`${occCount}`} species</Badge>
           </div>
         </IonItem>
 

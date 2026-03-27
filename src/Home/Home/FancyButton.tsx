@@ -77,7 +77,7 @@ const FancyButton = ({
 
       <IonIcon
         src={icon}
-        className="size-13 ml-2.5 bg-warning-200/40 rounded-xl p-1 shrink-0"
+        className="size-13 ml-2.5 bg-warning-200/40 rounded-xl p-1 shrink-0 border-warning-200 border"
       />
     </div>
   );

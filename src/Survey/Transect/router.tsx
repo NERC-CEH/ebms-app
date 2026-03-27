@@ -2,7 +2,7 @@ import { Route } from 'react-router-dom';
 import { AttrPage, withSample } from '@flumens';
 import StartNewSurvey from 'Survey/common/StartNewSurvey';
 import Home from './Home';
-import OccurrenceEdit from './OccurrenceEdit';
+import OccurrenceEdit from './Occurrence';
 import SectionsEdit from './Sections/Edit';
 import SectionsList from './Sections/List';
 import SectionsEditTaxa from './Sections/Taxon';
@@ -20,13 +20,11 @@ const routes = [
   [`${baseURL}/:smpId/sections/:subSmpId`, SectionsEdit],
   [`${baseURL}/:smpId/sections/:subSmpId/:attr`, withSample(AttrPageFromRoute)],
   [`${baseURL}/:smpId/sections/:subSmpId/taxa`, SectionsEditTaxa],
-
   [`${baseURL}/:smpId/sections/:subSmpId/:occId/:taxa`, OccurrenceEdit],
   [
     `${baseURL}/:smpId/sections/:subSmpId/:occId/:taxa/:attr`,
     withSample(AttrPageFromRoute),
   ],
-
   [`${baseURL}/:smpId/sections/:subSmpId/:occId/:taxa/taxa`, SectionsEditTaxa],
 ].map(([route, component]: any) => (
   <Route key={route} path={route} component={component} exact />

@@ -5,6 +5,7 @@ import { useRouteMatch } from 'react-router';
 import { Main, Block, MenuAttrItem, BlockContext } from '@flumens';
 import { IonList } from '@ionic/react';
 import MenuDateAttr from 'common/Components/MenuDateAttr';
+import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import {
   stratumAttr,
@@ -16,7 +17,7 @@ import {
   temperatureAttr,
   temperatureInTrapAttr,
   SubSmpData,
-} from '../config';
+} from '../../config';
 
 type Props = {
   subSample: Sample<SubSmpData>;
@@ -24,6 +25,9 @@ type Props = {
 
 const TrapDetailsMain = ({ subSample }: Props) => {
   const { url } = useRouteMatch();
+
+  const location = locations.idMap.get(subSample.data.locationId || '');
+  const locationName = location?.data.name;
 
   return (
     <Main>
@@ -35,8 +39,8 @@ const TrapDetailsMain = ({ subSample }: Props) => {
               label="Trap"
               skipValueTranslation
               icon={locationOutline}
-              value={subSample.data.location?.name}
-              disabled={subSample.isUploaded}
+              value={locationName}
+              disabled
             />
             <MenuDateAttr
               label="Date & time"
@@ -45,7 +49,6 @@ const TrapDetailsMain = ({ subSample }: Props) => {
               onChange={val => (subSample.data.date = val)} // eslint-disable-line no-return-assign, no-param-reassign
               isDisabled={subSample.isUploaded}
             />
-            <Block record={subSample.data} block={stratumAttr} />
             <Block record={subSample.data} block={stratumAttr} />
             <Block record={subSample.data} block={baitAttr} />
             <Block record={subSample.data} block={otherBaitAttr} />

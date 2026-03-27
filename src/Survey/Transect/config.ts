@@ -132,10 +132,7 @@ const survey: Survey = {
 
     create({ Sample, location }) {
       const sample = new Sample({
-        metadata: {
-          survey: survey.name,
-          surveyId: survey.id,
-        },
+        metadata: { survey: survey.name },
         data: {
           surveyId: survey.id,
           sampleMethodId: 776,
@@ -185,10 +182,7 @@ const survey: Survey = {
     const now = new Date().toISOString();
 
     const sample = new Sample({
-      metadata: {
-        surveyId: survey.id,
-        survey: survey.name,
-      },
+      metadata: { survey: survey.name },
       data: {
         surveyId: survey.id,
         date: now,

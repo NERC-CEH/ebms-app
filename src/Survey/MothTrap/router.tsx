@@ -6,7 +6,7 @@ import EndWeather from './Details/EndWeather';
 import StartWeather from './Details/StartWeather';
 import Home from './Home';
 import Location from './Location';
-import OccurrenceHome from './OccurrenceHome';
+import OccurrenceHome from './Occurrence';
 import Taxon from './Taxon';
 import survey from './config';
 

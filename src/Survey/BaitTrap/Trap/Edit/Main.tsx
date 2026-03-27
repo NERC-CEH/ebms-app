@@ -15,23 +15,10 @@ import {
 } from '@ionic/react';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
-import { Data, fieldCodeAttr, OccData, SubSmpData } from '../config';
+import { fieldCodeAttr, OccData, SubSmpData } from '../../config';
 
 type Props = {
-  sample: Sample<Data>;
   subSample: Sample<SubSmpData>;
-};
-
-const getSpeciesCode = (sample: Sample<Data>, occurrence: Occurrence) => {
-  const fieldCode = sample.data[fieldCodeAttr.id] || '';
-
-  // collect all occurrences across all sub-samples, flattened
-  const allOccurrences = sample.samples.flatMap(smp => smp.occurrences);
-
-  // find this occurrence's index (1-based)
-  const index = allOccurrences.findIndex(occ => occ.cid === occurrence.cid) + 1;
-
-  return `${fieldCode}${index}`;
 };
 
 const useDeleteSpecies = () => {
@@ -53,7 +40,7 @@ const useDeleteSpecies = () => {
   };
 };
 
-const TrapHomeMain = ({ sample, subSample }: Props) => {
+const TrapHomeMain = ({ subSample }: Props) => {
   const match = useRouteMatch();
   const { navigate } = useContext(NavContext);
 
@@ -66,7 +53,7 @@ const TrapHomeMain = ({ sample, subSample }: Props) => {
   const onAddSpecies = () => navigate(`${url}/taxon`);
 
   const getListItem = (occ: Occurrence<OccData>) => {
-    const speciesCode = getSpeciesCode(sample, occ);
+    const speciesCode = occ.data[fieldCodeAttr.id];
     const speciesName = occ.data.taxon?.scientificName || 'Unknown';
 
     return (

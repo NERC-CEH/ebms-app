@@ -1,12 +1,11 @@
 import { useContext } from 'react';
-import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { Page, useSample, LocationType } from '@flumens';
 import { NavContext } from '@ionic/react';
 import locations, { byType } from 'models/collections/locations';
 import Location from 'models/location';
 import Sample from 'models/sample';
-import config, { Data } from '../config';
+import config, { Data } from '../../config';
 import Header from './Header';
 import Main from './Main';
 
@@ -18,11 +17,8 @@ const TrapPickerController = () => {
 
   const onTrapSelect = (trap: Location) => {
     // create a new trap visit sub-sample with the selected trap's location
-    const trapVisit = config.smp.create({
-      Sample,
-      location: toJS(trap.data),
-    });
-
+    const trapVisit = config.smp.create({ Sample });
+    trapVisit.data.locationId = trap.id;
     sample.samples.push(trapVisit);
     sample.save();
 
@@ -31,10 +27,9 @@ const TrapPickerController = () => {
     navigate(`${baseURL}/traps/${trapVisit.cid}/details`, 'forward', 'replace');
   };
 
-  const siteId = (sample.data.location as any)?.id; // eslint-disable-line
-
   // filter traps by parent site ID
-  const byParentId = (loc: Location) => loc.data.parentId === siteId;
+  const byParentId = (loc: Location) =>
+    loc.data.parentId === sample.data.locationId;
 
   const traps = locations
     .filter(byType(LocationType.BaitTrap))

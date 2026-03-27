@@ -80,11 +80,8 @@ export const surveyConfigs = {
   [areaSingleSpeciesSurvey.name]: areaSingleSpeciesSurvey,
   [transectSurvey.name]: transectSurvey,
   [mothSurvey.name]: mothSurvey,
+  [baitTrapSurvey.name]: baitTrapSurvey,
 };
-
-if (window.location.host.includes('localhost:8000')) {
-  surveyConfigs[baitTrapSurvey.name] = baitTrapSurvey;
-}
 
 export const surveyConfigsByCode = Object.values(surveyConfigs).reduce<any>(
   (agg: any, survey: Survey) => {

@@ -2,15 +2,10 @@ import { observer } from 'mobx-react';
 import { locationOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import {
-  Main,
-  Block,
-  MenuAttrItem,
-  MenuAttrItemFromModel,
-  BlockContext,
-} from '@flumens';
+import { Main, Block, MenuAttrItem, BlockContext, InfoMessage } from '@flumens';
 import { IonList } from '@ionic/react';
 import MenuDateAttr from 'common/Components/MenuDateAttr';
+import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import {
   trapsAttr,
@@ -24,8 +19,9 @@ import {
   eventTypeAttr,
   samplingDesignAttr,
   carrionBaitAttr,
-  fieldCodeAttr,
+  fieldCodeStartAttr,
   Data,
+  surveyCommentAttr,
 } from '../config';
 
 type Props = {
@@ -36,13 +32,17 @@ const DetailsMain = ({ sample }: Props) => {
   const { url } = useRouteMatch();
 
   const isDisabled = sample.isUploaded;
+  const { completedDetails } = sample.metadata;
+
+  const location = locations.idMap.get(sample.data.locationId || '');
+  const locationName = location?.data.name;
 
   return (
-    <Main>
+    <Main className="[--padding-bottom:20px]">
       <BlockContext value={{ isDisabled }}>
         <IonList lines="full">
           <h3 className="list-title">
-            <T>Site</T>
+            <T>Trapping Site</T>
           </h3>
           <div className="rounded-list">
             <MenuAttrItem
@@ -50,8 +50,8 @@ const DetailsMain = ({ sample }: Props) => {
               label="Site"
               icon={locationOutline}
               skipValueTranslation
-              value={sample.data.location?.name}
-              disabled={isDisabled}
+              value={locationName}
+              disabled={isDisabled || completedDetails}
             />
             <Block record={sample.data} block={trapsAttr} />
             <Block record={sample.data} block={trapsCarrionAttr} />
@@ -72,8 +72,18 @@ const DetailsMain = ({ sample }: Props) => {
               isDisabled={sample.isUploaded}
             />
             <Block record={sample.data} block={numberOfDaysAttr} />
-            <Block record={sample.data} block={firstSampleDateAttr} />
-            <Block record={sample.data} block={lastSampleDateAttr} />
+            <MenuDateAttr
+              label={firstSampleDateAttr.title}
+              value={sample.data[firstSampleDateAttr.id]}
+              onChange={val => (sample.data[firstSampleDateAttr.id] = val)} // eslint-disable-line no-return-assign, no-param-reassign
+              isDisabled={sample.isUploaded}
+            />
+            <MenuDateAttr
+              label={lastSampleDateAttr.title}
+              value={sample.data[lastSampleDateAttr.id]}
+              onChange={val => (sample.data[lastSampleDateAttr.id] = val)} // eslint-disable-line no-return-assign, no-param-reassign
+              isDisabled={sample.isUploaded}
+            />
           </div>
         </IonList>
 
@@ -86,12 +96,15 @@ const DetailsMain = ({ sample }: Props) => {
             <Block record={sample.data} block={eventTypeAttr} />
             <Block record={sample.data} block={samplingDesignAttr} />
             <Block record={sample.data} block={carrionBaitAttr} />
-            <Block record={sample.data} block={fieldCodeAttr} />
-            <MenuAttrItemFromModel
-              model={sample}
-              attr="comment"
-              skipValueTranslation
+            <Block
+              record={sample.data}
+              block={fieldCodeStartAttr}
+              isDisabled={sample.metadata.completedDetails}
             />
+            <InfoMessage inline>
+              A letter followed by a number, e.g. A1.
+            </InfoMessage>
+            <Block record={sample.data} block={surveyCommentAttr} />
           </div>
         </IonList>
       </BlockContext>

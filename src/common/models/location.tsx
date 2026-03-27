@@ -149,7 +149,17 @@ type SiteAttrs = {
   [responsibleAttr.id]: string;
 };
 
-export type Data = LocationData & ModelData & MothTrapAttrs & SiteAttrs;
+export const trapCountAttr = { id: 'locAttr:428' } as const;
+
+type BaitTrapSiteAttrs = {
+  [trapCountAttr.id]: { value: string };
+};
+
+export type Data = LocationData &
+  ModelData &
+  MothTrapAttrs &
+  SiteAttrs &
+  BaitTrapSiteAttrs;
 
 const surveyConfig = {
   location: {

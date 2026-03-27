@@ -5,7 +5,7 @@ import { Page, Header, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
 import Sample from 'models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
-import { Data, SubSmpData } from '../config';
+import { Data, SubSmpData } from '../../config';
 import Main from './Main';
 
 const TrapDetailsController = () => {

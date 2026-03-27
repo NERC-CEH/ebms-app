@@ -1,0 +1,3 @@
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/locations
+  ?location_type_id=24554
+Authorization: Bearer {{$dotenv access_token}}
