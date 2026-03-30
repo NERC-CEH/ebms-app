@@ -482,6 +482,14 @@ const countries = {
     id: 216096,
     continent: 'AF',
   },
+  ZM: {
+    name: 'Zambia',
+    longitude: 28.241224,
+    latitude: -14.238513,
+    zoom: 4,
+    id: 216185,
+    continent: 'AF',
+  },
 
   // special option
   ELSEWHERE: {

@@ -53,6 +53,9 @@ msgstr "Birleşik Krallık"
 msgid "Lithuania"
 msgstr "Litvanya"
 
+msgid "Zambia"
+msgstr ""
+
 msgid "Spain"
 msgstr "İspanya"
 

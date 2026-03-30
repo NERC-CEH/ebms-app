@@ -51,6 +51,9 @@ msgstr "Storbritannien"
 msgid "Lithuania"
 msgstr "Litauen"
 
+msgid "Zambia"
+msgstr ""
+
 msgid "Spain"
 msgstr "Spanien"
 

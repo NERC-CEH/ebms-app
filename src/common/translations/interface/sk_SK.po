@@ -47,6 +47,9 @@ msgstr "Veľká Británia"
 msgid "Lithuania"
 msgstr "Litva"
 
+msgid "Zambia"
+msgstr ""
+
 msgid "Spain"
 msgstr "Španielsko"
 
