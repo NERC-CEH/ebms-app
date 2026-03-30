@@ -17,27 +17,27 @@ msgstr ""
 
 # Country selection
 msgid "Europe"
-msgstr ""
+msgstr "Evropa"
 
 # Country selection
 msgid "Asia"
-msgstr ""
+msgstr "Asie"
 
 # Country selection
 msgid "Africa"
-msgstr ""
+msgstr "Afrika"
 
 # Country selection
 msgid "Australasia"
-msgstr ""
+msgstr "Australasie"
 
 # Country selection
 msgid "North America"
-msgstr ""
+msgstr "Severní Amerika"
 
 # Country selection
 msgid "South America"
-msgstr ""
+msgstr "Jižní Amerika"
 
 msgid "Select your country"
 msgstr "Vyber svou zemi"
@@ -56,7 +56,7 @@ msgstr "Andora"
 
 # Country
 msgid "Ecuador"
-msgstr ""
+msgstr "Ekvádor"
 
 msgid "Albania"
 msgstr "Albánie"
@@ -1311,16 +1311,20 @@ msgid ""
 "It is also possible to register and select a permanent site as well as to "
 "assign your survey to a project."
 msgstr ""
+"Je také možné si zaregistrovat a vybrat trvalé místo a také přiřadit výzkum "
+"k projektu."
 
 # Help pages
 msgid ""
 "<0>Start a count.</0><1>Select \"Additional Details\" then "
 "\"Site\".</1><2>Finally, choose the site for the current count.</2>"
 msgstr ""
+"<0>Začni součet.</0><1>Vyber \"Další detaily\" a poté "
+"\"Místo\".</1><2>Konečně, vyberte místo pro nový součet.</2>"
 
 # Help pages
 msgid "Create a new site"
-msgstr ""
+msgstr "Vytvořte nové místo"
 
 # Help pages
 msgid ""
@@ -1329,6 +1333,10 @@ msgid ""
 "and press \"Save\".</3><br/>Note: you need to be logged in and have a "
 "network connection to create a new site."
 msgstr ""
+"<0>Běžte do Nastavení aplikace.</0><1>Vyberte \"Místa\".</1><2>V pravém "
+"horním rohu zmáčkněte tlačítko \"Vložit\".</2><3>Vyplňte nezbytné detaily o "
+"místě a zmáčkněte \"Uložit\".</3><br/>Poznámka: pro vytvoření nového místa "
+"potřebujete být přihlášení a mít internetové spojení."
 
 msgid "User"
 msgstr "Uživatel"
@@ -3271,23 +3279,23 @@ msgstr ""
 
 # Species lists functionality
 msgid "Installed"
-msgstr ""
+msgstr "Nainstalováno"
 
 # Species lists functionality
 msgid "Nearby"
-msgstr ""
+msgstr "Poblíž"
 
 # Species lists functionality
 msgid "All Lists"
-msgstr ""
+msgstr "Všechny seznamy"
 
 # Species lists functionality
 msgid "No species lists found."
-msgstr ""
+msgstr "Seznam druhů nenalezen."
 
 # Species lists functionality
 msgid "Install"
-msgstr ""
+msgstr "Instalovat"
 
 # Species lists functionality
 msgid "Installing list..."
@@ -3299,14 +3307,14 @@ msgstr ""
 
 # Species lists functionality
 msgid "Are you sure you want to delete the list?"
-msgstr ""
+msgstr "Opravdu chcete smazat tento seznam?"
 
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
 msgstr ""
 
 msgid "Site"
-msgstr ""
+msgstr "Místo"
 
 msgid "Has species lists"
 msgstr ""
@@ -3321,7 +3329,7 @@ msgid "None"
 msgstr ""
 
 msgid "Sites"
-msgstr ""
+msgstr "Místa"
 
 msgid "My sites"
 msgstr "Moje místa"

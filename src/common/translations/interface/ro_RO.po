@@ -16,27 +16,27 @@ msgstr ""
 
 # Country selection
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 # Country selection
 msgid "Asia"
-msgstr ""
+msgstr "Asia"
 
 # Country selection
 msgid "Africa"
-msgstr ""
+msgstr "Africa"
 
 # Country selection
 msgid "Australasia"
-msgstr ""
+msgstr "Australasia"
 
 # Country selection
 msgid "North America"
-msgstr ""
+msgstr "America de Nord"
 
 # Country selection
 msgid "South America"
-msgstr ""
+msgstr "America de Sud"
 
 msgid "Select your country"
 msgstr "‭Selecteaz‭ă țara"
@@ -55,7 +55,7 @@ msgstr "Andora"
 
 # Country
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 msgid "Albania"
 msgstr "Albania"
@@ -136,7 +136,7 @@ msgid "Montenegro"
 msgstr "Muntenegru"
 
 msgid "Morocco"
-msgstr ""
+msgstr "Maroc"
 
 msgid "North Macedonia"
 msgstr "Macedonia de Nord"
@@ -196,16 +196,16 @@ msgid "Botswana"
 msgstr "Botswana"
 
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigeria"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Noua Zeelandă"
 
 msgid "Montserrat"
-msgstr ""
+msgstr "Montserrat"
 
 msgid "Anguilla"
-msgstr ""
+msgstr "Anguilla"
 
 msgid "Elsewhere"
 msgstr "Altă țară"
@@ -331,12 +331,23 @@ msgid ""
 " and the city. The data contributed by participants will be analysed to "
 "inform urban biodiversity conservation actions across Europe."
 msgstr ""
+"În cadrul proiectului UGP+*, cetățenii, factorii de decizie politică și "
+"oamenii de știință lucrează împreună pentru a dezvolta planuri de viitor "
+"pentru natura urbană în Europa. Numărarea fluturilor în orașe nu este doar o"
+" modalitate excelentă de a urmări biodiversitatea și calitatea spațiilor "
+"verzi urbane, ci și de a ne împuternici pe toți să ne implicăm în chestiuni "
+"legate de biodiversitate, politici privind natura și să propunem noi acțiuni"
+" pentru oameni și oraș. Datele furnizate de participanți vor fi analizate "
+"pentru a fundamenta acțiunile de conservare a biodiversității urbane în "
+"întreaga Europă."
 
 # Credits page
 msgid ""
 "UGP+ stands for Enhancing Urban Greening Plans to Mainstream Biodiversity in"
 " Society, and is a project funded by the European Union"
 msgstr ""
+"UGP+ este prescurtarea de la Enhancing Urban Greening Plans to Integrate "
+"Biodiversity in Society și este un proiect finanțat de Uniunea Europeană."
 
 msgid "Home"
 msgstr "Acasă"
@@ -417,175 +428,176 @@ msgstr "Zona"
 
 # New Site set-up page
 msgid "Site area"
-msgstr ""
+msgstr "Zona sitului"
 
 # New Site set-up page
 msgid "Approximate size of your observation site."
-msgstr ""
+msgstr "Dimensiunea aproximativă a locului dumneavoastră de observație."
 
 # New Site set-up page
 msgid "Habitats/land uses (total should be 100%)"
-msgstr ""
+msgstr "Habitate/utilizări ale terenurilor (totalul trebuie să fie 100%)"
 
 # New Site set-up page
 msgid "Arable field grains (wheat, barley, rye)"
-msgstr ""
+msgstr "Cereale arabile (grâu, orz, secară)"
 
 # New Site set-up page
 msgid "Arable field fruits or vegetables"
-msgstr ""
+msgstr "Fructe sau legume de câmp arabil"
 
 # New Site set-up page
 msgid "Arable field rapeseed"
-msgstr ""
+msgstr "Rapiță de câmp arabil"
 
 # New Site set-up page
 msgid "Arable field corn"
-msgstr ""
+msgstr "Porumb de câmp arabil"
 
 # New Site set-up page
 msgid "Arable legumes"
-msgstr ""
+msgstr "Leguminoase arabile"
 
 # New Site set-up page
 msgid "Arable multi-cropping"
-msgstr ""
+msgstr "Culturi multiple arabile"
 
 # New Site set-up page
 msgid "Arable fallow"
-msgstr ""
+msgstr "Pământ arabil nelucrat"
 
 # New Site set-up page
 msgid "Grassland homogeneous/intensively managed"
-msgstr ""
+msgstr "Pajiște omogenă/gestionată intensiv"
 
 # New Site set-up page
 msgid "Grassland extensive or heterogeneous (pasture)"
-msgstr ""
+msgstr "Pășune extensivă sau eterogenă (pășune)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (sparse, pasture among trees)"
-msgstr ""
+msgstr "Livadă, vie sau crâng (rară, pășune printre copaci)"
 
 # New Site set-up page
 msgid "Orchard, vineyard or grove (intensely managed)"
-msgstr ""
+msgstr "Livadă, vie sau crâng (administrat intens)"
 
 # New Site set-up page
 msgid "Scrubland"
-msgstr ""
+msgstr "Tufăriș"
 
 # New Site set-up page
 msgid "Land laying fallow / wasteland"
-msgstr ""
+msgstr "Pământ nelucrat / teren viran"
 
 # New Site set-up page
 msgid "Sparse woodland"
-msgstr ""
+msgstr "Pădure rară"
 
 # New Site set-up page
 msgid "Dense woodland or forest"
-msgstr ""
+msgstr "Pădure deasă"
 
 # New Site set-up page
 msgid "Plantation"
-msgstr ""
+msgstr "Plantație"
 
 # New Site set-up page
 msgid "Garden (single)"
-msgstr ""
+msgstr "Grădină (unică)"
 
 # New Site set-up page
 msgid "Gardens (multiple, e.g. allotment gardens)"
-msgstr ""
+msgstr "Grădini (mai multe, de exemplu grădini de loturi)"
 
 # New Site set-up page
 msgid "Building(s)"
-msgstr ""
+msgstr "Clădire(i)"
 
 # New Site set-up page
 msgid "Pond, lake or sea"
-msgstr ""
+msgstr "Iaz, lac sau mare"
 
 # New Site set-up page
 msgid "River or creek"
-msgstr ""
+msgstr "Râu sau pârâu"
 
 # New Site set-up page
 msgid "Wetland"
-msgstr ""
+msgstr "Zonă umedă"
 
 # New Site set-up page
 msgid "Dunes or barren land"
-msgstr ""
+msgstr "Dune sau terenuri aride"
 
 # New Site set-up page
 msgid "Field edge(s)"
-msgstr ""
+msgstr "Marginea (marginile) câmpului"
 
 # New Site set-up page
 msgid "Buffer-strip(s)"
-msgstr ""
+msgstr "Bandă (benzi) tampon"
 
 # New Site set-up page
 msgid "Flower-strip(s)"
-msgstr ""
+msgstr "Banda (benzi) cu flori"
 
 # New Site set-up page
 msgid "Hedge(s)"
-msgstr ""
+msgstr "Gard viu (garduri vii)"
 
 # New Site set-up page
 msgid "Scattered trees or trees in rows"
-msgstr ""
+msgstr "Copaci împrăștiați sau aliniați"
 
 # New Site set-up page
 msgid "Wooded area"
-msgstr ""
+msgstr "Zonă împădurită"
 
 # New Site set-up page
 msgid "Terraces, stone walls"
-msgstr ""
+msgstr "Terase, ziduri de piatră"
 
 # New Site set-up page
 msgid "Pond"
-msgstr ""
+msgstr "Iaz"
 
 # New Site set-up page
 msgid "Path"
-msgstr ""
+msgstr "Potecă"
 
 # New Site set-up page
 msgid "Street, road or railroad tracks (sealed, e.g. asphalt)"
 msgstr ""
+"Străzi, drumuri sau șine de cale ferată (cu suprafață pavată, ex. cu asfalt)"
 
 # New Site set-up page
 msgid "Fences or other human-made linear structures"
-msgstr ""
+msgstr "Garduri sau alte structuri liniare construite de om"
 
 # New Site set-up page
 msgid "Dead tree, stumps or wood"
-msgstr ""
+msgstr "Copaci morți, cioturi sau lemn"
 
 # New Site set-up page
 msgid "Landscape features"
-msgstr ""
+msgstr "Caracteristici ale peisajului"
 
 # New Site set-up page
 msgid "Features located within a 50-meter radius."
-msgstr ""
+msgstr "Puncte de interes situate pe o rază de 50 de metri."
 
 # New Site set-up page
 msgid "Other landscape feature details"
-msgstr ""
+msgstr "Alte detalii privind elementele peisajului"
 
 # New Site set-up page
 msgid "Not applicable (not a grass / lawn)"
-msgstr ""
+msgstr "Nu se aplică (nu este gazon)"
 
 # New Site set-up page
 msgid "I don't know"
-msgstr ""
+msgstr "Nu știu"
 
 # New Site set-up page
 msgid "Frequent mowing, all (relevant) area"
@@ -957,7 +969,7 @@ msgstr ""
 
 # Survey area page
 msgid "Comments"
-msgstr ""
+msgstr "Comentarii"
 
 # Survey area page
 msgid "The survey area is still being tracked."
@@ -977,11 +989,11 @@ msgstr ""
 
 # Survey area page
 msgid "Yes"
-msgstr ""
+msgstr "Da"
 
 # Survey area page
 msgid "No"
-msgstr ""
+msgstr "Nu"
 
 msgid "Delete"
 msgstr "Șterge"
