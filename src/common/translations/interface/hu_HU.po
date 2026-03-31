@@ -50,6 +50,9 @@ msgstr "Litvánia"
 msgid "Zambia"
 msgstr ""
 
+msgid "Georgia"
+msgstr ""
+
 msgid "Spain"
 msgstr "Spanyolország"
 

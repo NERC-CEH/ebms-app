@@ -162,6 +162,14 @@ const countries = {
     id: 216020,
     continent: 'EU',
   },
+  GE: {
+    name: 'Georgia',
+    latitude: 41.937958,
+    longitude: 43.59545,
+    zoom: 5,
+    id: 216049,
+    continent: 'EU',
+  },
   GR: {
     name: 'Greece',
     latitude: 39.074208,
