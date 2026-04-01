@@ -171,7 +171,7 @@ const Controller = () => {
     }
 
     const survey = sectionSample.getSurvey();
-    const occurrence = survey.occ!.create!({ Occurrence, taxon });
+    const occurrence = survey.occ!.create!({ taxon });
     sectionSample.occurrences.push(occurrence);
 
     await sectionSample.save();

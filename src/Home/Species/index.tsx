@@ -46,7 +46,7 @@ const Species = () => {
         },
       ],
     });
-    // eslint-disable-next-line no-param-reassign
+
     appModel.data.showGuideHelpTip = false;
     appModel.save();
   };

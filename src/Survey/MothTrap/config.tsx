@@ -24,7 +24,7 @@ import { assignIfMissing } from 'common/models/utils';
 import { fetchHistoricalWeather } from 'common/services/openWeather';
 import appModel from 'models/app';
 import Occurrence from 'models/occurrence';
-import AppSample, { MothTrapLocation } from 'models/sample';
+import Sample, { MothTrapLocation } from 'models/sample';
 import {
   Survey,
   commentAttr,
@@ -117,7 +117,7 @@ const moonPhaseValues = [
   },
 ];
 
-const getSetDefaultTime = (sample: AppSample) => () => {
+const getSetDefaultTime = (sample: Sample) => () => {
   const { surveyStartTime } = sample.data;
   if (surveyStartTime) return;
 
@@ -146,7 +146,7 @@ const getSetDefaultTime = (sample: AppSample) => () => {
   sample.save();
 };
 
-const getSetEndWeather = (sample: AppSample) => async () => {
+const getSetEndWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
 
   const weatherValues = await fetchHistoricalWeather(
@@ -159,11 +159,11 @@ const getSetEndWeather = (sample: AppSample) => async () => {
   assignIfMissing(sample, 'windEnd', weatherValues.windSpeed);
   assignIfMissing(sample, 'cloudEnd', weatherValues.cloud);
 };
-const getHasEndTimeAndLocation = (sample: AppSample) => () =>
+const getHasEndTimeAndLocation = (sample: Sample) => () =>
   !!sample.data.surveyEndTime &&
   !!(sample.data.location as MothTrapLocation)?.id;
 
-const getSetStartWeather = (sample: AppSample) => async () => {
+const getSetStartWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
 
   const weatherValues = await fetchHistoricalWeather(
@@ -177,7 +177,7 @@ const getSetStartWeather = (sample: AppSample) => async () => {
   assignIfMissing(sample, 'cloud', weatherValues.cloud);
 };
 
-const getHasStartTimeAndLocation = (sample: AppSample) => () =>
+const getHasStartTimeAndLocation = (sample: Sample) => () =>
   !!sample.data.surveyStartTime &&
   !!(sample.data.location as MothTrapLocation)?.id;
 
@@ -228,7 +228,7 @@ const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
   return 'New';
 };
 
-const getSetStartMoonPhase = (sample: AppSample) => () => {
+const getSetStartMoonPhase = (sample: Sample) => () => {
   const isSouthernHemisphere =
     (sample.data.location as MothTrapLocation)?.data?.location?.latitude < 0;
   const moonPhase = getMoonPhase(
@@ -239,7 +239,7 @@ const getSetStartMoonPhase = (sample: AppSample) => () => {
   assignIfMissing(sample, 'moon', moonPhase);
 };
 
-const getSetStartMoonEndPhase = (sample: AppSample) => () => {
+const getSetStartMoonEndPhase = (sample: Sample) => () => {
   const isSouthernHemisphere =
     (sample.data.location as MothTrapLocation)?.data?.location?.latitude < 0;
   const moonPhase = getMoonPhase(
@@ -530,8 +530,8 @@ const survey: Survey = {
       return occurrenceSchema.safeParse(attrs).error;
     },
 
-    create({ Occurrence: AppOccurrence, taxon, identifier, photo }) {
-      const occ = new AppOccurrence({
+    create({ taxon, identifier, photo }) {
+      const occ = new Occurrence({
         attrs: {
           count: 1,
           'count-outside': 0,
@@ -583,7 +583,7 @@ const survey: Survey = {
       })
       .safeParse(attrs).error,
 
-  create({ Sample, recorder, surveyId, surveyName }) {
+  create({ recorder, surveyId, surveyName }) {
     const sample = new Sample({
       metadata: {
         surveyId: surveyId || survey.id,

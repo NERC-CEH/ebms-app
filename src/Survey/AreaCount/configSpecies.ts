@@ -148,10 +148,8 @@ const speciesConfig: Survey = {
   label: '15min Single Species Count',
 
   smp: {
-    create: ({ Sample, Occurrence, taxon, zeroAbundance }) => {
+    create: ({ taxon, zeroAbundance }) => {
       const subSample = coreSurvey.smp!.create!({
-        Sample,
-        Occurrence,
         taxon,
         zeroAbundance,
         surveyId: speciesSurvey.id, // eslint-disable-line @typescript-eslint/no-use-before-define
@@ -370,9 +368,8 @@ const speciesConfig: Survey = {
     return null;
   },
 
-  create: ({ Sample, hasGPSPermission }) => {
+  create: ({ hasGPSPermission }) => {
     const sample = coreSurvey.create!({
-      Sample,
       surveyId: speciesSurvey.id, // eslint-disable-line @typescript-eslint/no-use-before-define
       surveyName: speciesSurvey.name, // eslint-disable-line @typescript-eslint/no-use-before-define
       hasGPSPermission,

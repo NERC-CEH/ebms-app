@@ -5,18 +5,13 @@ import { NavContext, isPlatform } from '@ionic/react';
 import { GPS_DISABLED_ERROR_MESSAGE } from 'common/helpers/GPS';
 import appModel from 'models/app';
 import samples from 'models/collections/samples';
-import Sample from 'models/sample';
 import userModel from 'models/user';
 import { Survey } from 'Survey/common/config';
 
 async function getNewSample(survey: Survey, hasGPSPermission: any) {
   const recorder = userModel.getPrettyName();
 
-  const sample = await survey.create!({
-    Sample,
-    recorder,
-    hasGPSPermission,
-  });
+  const sample = await survey.create!({ recorder, hasGPSPermission });
 
   samples.push(sample);
 

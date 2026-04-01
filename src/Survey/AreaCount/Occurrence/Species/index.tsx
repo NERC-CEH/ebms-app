@@ -3,7 +3,6 @@ import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router-dom';
 import { Page, Header, useAlert, useSample } from '@flumens';
 import { NavContext, useIonViewWillEnter } from '@ionic/react';
-import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 import Main from './Main';
 import './styles.scss';
@@ -98,12 +97,7 @@ const SpeciesOccurrences = () => {
     if (isLastSampleDeleted) {
       const survey = sample.getSurvey();
 
-      const newSubSample = survey.smp!.create!({
-        Sample,
-        Occurrence,
-        taxon,
-        zeroAbundance: 't',
-      });
+      const newSubSample = survey.smp!.create!({ taxon, zeroAbundance: 't' });
       sample.samples.push(newSubSample);
       sample.save();
 

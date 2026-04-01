@@ -105,7 +105,7 @@ const EditController = () => {
   const increaseCount = (taxa: Taxon, isShallow: boolean, is5x: boolean) => {
     if (isShallow) {
       const survey = subSample.getSurvey();
-      const newOccurrence = survey.occ!.create!({ Occurrence, taxon: taxa });
+      const newOccurrence = survey.occ!.create!({ taxon: taxa });
 
       newOccurrence.createdAt = 0;
       subSample.occurrences.push(newOccurrence);

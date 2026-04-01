@@ -31,6 +31,7 @@ import {
 import { IonIcon } from '@ionic/react';
 import config from 'common/config';
 import mothTrap from 'common/images/moth-inside-icon.svg';
+import Occurrence from 'common/models/occurrence';
 import Sample from 'common/models/sample';
 import appModel from 'models/app';
 import { Data as LocationData } from 'models/location';
@@ -468,7 +469,7 @@ const survey = {
     occ: {
       attrs: occAttrs,
 
-      create({ Occurrence, sample, taxon }) {
+      create({ sample, taxon }) {
         return new Occurrence<OccData>({
           data: {
             taxon,

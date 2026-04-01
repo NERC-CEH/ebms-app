@@ -19,7 +19,7 @@ import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
-import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
+import { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample, { AreaCountLocation, useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import { useDeleteConfirmation } from '../Occurrence/Species';
@@ -462,7 +462,7 @@ const HomeController = () => {
     const survey = sample.getSurvey();
 
     const addOneCount = () => {
-      const newSubSample = survey.smp!.create!({ Sample, Occurrence, taxon });
+      const newSubSample = survey.smp!.create!({ taxon });
       sample.samples.push(newSubSample);
 
       if (!sample.isTimerFinished()) newSubSample.startGPS();
@@ -495,12 +495,7 @@ const HomeController = () => {
     if (isLastSampleDeleted) {
       const survey = sample.getSurvey();
 
-      const newSubSample = survey.smp!.create!({
-        Sample,
-        Occurrence,
-        taxon,
-        zeroAbundance: 't',
-      });
+      const newSubSample = survey.smp!.create!({ taxon, zeroAbundance: 't' });
       sample.samples.push(newSubSample);
       sample.save();
     }
@@ -522,7 +517,7 @@ const HomeController = () => {
     const taxon = { ...copiedSubSample.occurrences[0].data.taxon };
 
     const survey = sample.getSurvey();
-    const newSubSample = survey.smp!.create!({ Sample, Occurrence, taxon });
+    const newSubSample = survey.smp!.create!({ taxon });
 
     (sample.copyAttributes as any).timeOfSighting = new Date().toISOString();
 

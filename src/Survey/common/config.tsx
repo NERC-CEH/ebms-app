@@ -342,7 +342,6 @@ export type AttrConfig = {
 type Attrs = Record<string, AttrConfig>;
 
 type OccurrenceCreateOptions = {
-  Occurrence: typeof Occurrence;
   taxon: Taxon;
   sample?: Sample;
   identifier?: string;
@@ -362,8 +361,6 @@ type OccurrenceConfig = {
 };
 
 type SampleCreateOptions = {
-  Sample: typeof Sample;
-  Occurrence?: typeof Occurrence;
   taxon?: Taxon;
   surveySample?: Sample;
   surveyId?: number;

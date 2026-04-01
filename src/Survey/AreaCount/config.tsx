@@ -4,8 +4,8 @@ import config from 'common/config';
 import appModel from 'common/models/app';
 import { assignIfMissing } from 'common/models/utils';
 import { fetchWeather } from 'common/services/openWeather';
-import { DRAGONFLY_GROUP } from 'models/occurrence';
-import AppSample, { AreaCountLocation } from 'models/sample';
+import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
+import Sample, { AreaCountLocation } from 'models/sample';
 import {
   Survey,
   appVersionAttr,
@@ -31,7 +31,7 @@ const locationAttrs = {
   locationAltitudeAccuracy: { remote: { id: 284 } },
 };
 
-const getSetWeather = (sample: AppSample) => async () => {
+const getSetWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
 
   const weatherValues = await fetchWeather(
@@ -120,7 +120,7 @@ const survey: Survey = {
       date: dateAttr,
     },
 
-    create({ Sample, Occurrence, taxon, surveyId, surveyName }) {
+    create({ taxon, surveyId, surveyName }) {
       const sample = new Sample({
         metadata: {
           surveyId: surveyId || survey.id,
@@ -132,10 +132,10 @@ const survey: Survey = {
         },
       });
 
-      if (!Occurrence || !taxon)
+      if (!taxon)
         throw new Error('Subsample create without Occurrence or taxon');
 
-      const occurrence = survey.smp!.occ!.create!({ Occurrence, taxon });
+      const occurrence = survey.smp!.occ!.create!({ taxon });
       sample.occurrences.push(occurrence);
 
       return sample;
@@ -173,7 +173,7 @@ const survey: Survey = {
         },
       },
 
-      create({ Occurrence, taxon }) {
+      create({ taxon }) {
         const isDragonfly = taxon.taxonGroupId === DRAGONFLY_GROUP;
 
         return new Occurrence({
@@ -192,7 +192,7 @@ const survey: Survey = {
 
   verify: attrs => areaCountSchema.safeParse(attrs).error,
 
-  create({ Sample, surveyId, surveyName, hasGPSPermission }) {
+  create({ surveyId, surveyName, hasGPSPermission }) {
     const sample = new Sample({
       metadata: {
         surveyId: surveyId || survey.id,

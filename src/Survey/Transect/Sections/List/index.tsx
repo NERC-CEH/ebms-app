@@ -56,7 +56,6 @@ const SectionListController = () => {
     const survey = sample.getSurvey();
     const addSectionSample = (section: any) => {
       const sectionSample = survey.smp!.create!({
-        Sample,
         location: toJS(section.data),
       });
       sample.samples.push(sectionSample);

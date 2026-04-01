@@ -1,8 +1,9 @@
 import { chatboxOutline } from 'ionicons/icons';
 import { z } from 'zod';
 import config from 'common/config';
+import Sample from 'common/models/sample';
 import appModel from 'models/app';
-import { DRAGONFLY_GROUP } from 'models/occurrence';
+import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
 import userModel from 'models/user';
 import {
   Survey,
@@ -108,7 +109,7 @@ const survey: Survey = {
         taxon: taxonAttr,
       },
 
-      create({ Occurrence, taxon }) {
+      create({ taxon }) {
         const isDragonfly = taxon.taxonGroupId === DRAGONFLY_GROUP;
 
         return new Occurrence({
@@ -130,7 +131,7 @@ const survey: Survey = {
           .safeParse(attrs).error,
     },
 
-    create({ Sample, location }) {
+    create({ location }) {
       const sample = new Sample({
         metadata: { survey: survey.name },
         data: {
@@ -177,7 +178,7 @@ const survey: Survey = {
       })
       .safeParse(attrs).error,
 
-  create({ Sample }) {
+  create() {
     const recorder = `${userModel.data.firstName} ${userModel.data.lastName}`;
     const now = new Date().toISOString();
 

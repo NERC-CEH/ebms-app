@@ -186,7 +186,7 @@ const HomeController = () => {
   const increaseCount = (taxa: Taxon, isShallow: boolean, is5x: boolean) => {
     if (isShallow) {
       const survey = sample.getSurvey();
-      const newOccurrence = survey.occ!.create!({ Occurrence, taxon: taxa });
+      const newOccurrence = survey.occ!.create!({ taxon: taxa });
 
       newOccurrence.createdAt = 0;
       sample.occurrences.push(newOccurrence);
@@ -288,7 +288,6 @@ const HomeController = () => {
 
     images.forEach((photo: Media) => {
       const newOccurrence = surveyConfig.occ!.create!({
-        Occurrence,
         taxon,
         identifier,
         photo,

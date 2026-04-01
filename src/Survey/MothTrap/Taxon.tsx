@@ -95,11 +95,7 @@ const Taxon = () => {
     if (isTaxonUnknown) {
       // we allow multiple unknown entries
       const identifier = sample.data.recorder;
-      const newOccurrence = survey.occ!.create!({
-        Occurrence,
-        taxon,
-        identifier,
-      });
+      const newOccurrence = survey.occ!.create!({ taxon, identifier });
       newOccurrence.data.taxon.machineInvolvement = machineInvolvement;
       sample.occurrences.push(newOccurrence);
       await sample.save();
@@ -119,11 +115,7 @@ const Taxon = () => {
     }
 
     const identifier = sample.data.recorder;
-    const newOccurrence = survey.occ!.create!({
-      Occurrence,
-      taxon,
-      identifier,
-    });
+    const newOccurrence = survey.occ!.create!({ taxon, identifier });
     newOccurrence.data.taxon.machineInvolvement = machineInvolvement;
     sample.occurrences.push(newOccurrence);
 
