@@ -11,6 +11,7 @@ import { Trans as T } from 'react-i18next';
 import { isValidDate, Main, MenuAttrItem, timeFormat } from '@flumens';
 import { IonList, IonItem, IonIcon, IonLabel } from '@ionic/react';
 import windIcon from 'common/images/wind.svg';
+import locations from 'models/collections/locations';
 import Sample from 'models/sample';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 
@@ -21,20 +22,15 @@ type Props = {
 
 const Edit = ({ sample, isDisabled }: Props) => {
   const getPrettySectionsLabel = () => {
-    const transect: any = sample.data.location;
+    const transect = locations.idMap.get(sample.data.locationId || '');
     if (!transect)
       return (
-        <IonLabel slot="end" color="danger  ">
+        <IonLabel slot="end" color="danger">
           <T>No transect</T>
         </IonLabel>
       );
 
-    const name =
-      transect.location?.name ||
-      // for remote locations
-      transect.name;
-
-    return <IonLabel slot="end">{name}</IonLabel>;
+    return <IonLabel slot="end">{transect.data.name}</IonLabel>;
   };
 
   const {

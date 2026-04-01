@@ -18,6 +18,7 @@ import { IonIcon } from '@ionic/react';
 import groups from 'common/data/groups';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import windIcon from 'common/images/wind.svg';
+import Location from 'common/models/location';
 import Occurrence, { Taxon } from 'common/models/occurrence';
 import Media from 'models/media';
 import Sample from 'models/sample';
@@ -216,6 +217,8 @@ export const guidAttr = {
   className: '[&>div>div>input]:text-right',
 } as const satisfies TextInputConf;
 
+export const areaSizeAttr = { id: 'smpAttr:723' } as const;
+
 export const areaCountSchema = z.object({
   location: z
     .object(
@@ -223,10 +226,6 @@ export const areaCountSchema = z.object({
         latitude: z.number().nullable().optional(),
         longitude: z.number().nullable().optional(),
         shape: z.object({}).nullable().optional(),
-        area: z
-          .number({ error: 'Please add survey area information.' })
-          .min(1, 'Please add survey area information.')
-          .max(20000000, 'Please select a smaller area.'),
       },
       { error: 'Location is missing.' }
     )
@@ -237,6 +236,11 @@ export const areaCountSchema = z.object({
         val.shape,
       'Location is missing.'
     ),
+
+  [areaSizeAttr.id]: z
+    .number({ error: 'Please add survey area information.' })
+    .min(1, 'Please add survey area information.')
+    .max(20000000, 'Please select a smaller area.'),
 
   surveyStartTime: z
     .string({ error: 'Date is missing' })
@@ -368,7 +372,7 @@ type SampleCreateOptions = {
   skipGPS?: boolean;
   hasGPSPermission?: boolean;
   recorder?: string;
-  location?: any;
+  location?: Location;
   zeroAbundance?: any;
 };
 

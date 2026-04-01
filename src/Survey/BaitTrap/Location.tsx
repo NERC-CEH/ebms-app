@@ -50,7 +50,7 @@ const BaitTrapLocation = () => {
   if (!sample) return null;
 
   const alphabeticallyByName = (a: Location, b: Location) =>
-    a.data.location.name.localeCompare(b.data.location.name);
+    a.data.name.localeCompare(b.data.name);
 
   const userLocations = locations
     .filter(byType(LocationType.BaitTrapSite))

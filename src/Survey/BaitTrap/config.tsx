@@ -473,7 +473,7 @@ const survey = {
         return new Occurrence<OccData>({
           data: {
             taxon,
-            [fieldCodeAttr.id]: getNextSpeciesCode(sample!),
+            [fieldCodeAttr.id]: getNextSpeciesCode(sample as Sample<Data>),
           },
         });
       },
@@ -500,7 +500,7 @@ const survey = {
         },
       });
 
-      return sample;
+      return sample as unknown as Sample;
     },
 
     verify: data =>
@@ -538,7 +538,7 @@ const survey = {
       },
     });
 
-    return sample;
+    return sample as unknown as Sample;
   },
 } as const satisfies Survey;
 

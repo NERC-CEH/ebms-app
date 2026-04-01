@@ -14,8 +14,9 @@ import {
 import butterflyIcon from 'common/images/butterfly.svg';
 import locations from 'common/models/collections/locations';
 import Occurrence from 'models/occurrence';
-import Sample, { MothTrapLocation, useValidateCheck } from 'models/sample';
+import Sample, { useValidateCheck } from 'models/sample';
 import { useUserStatusCheck } from 'models/user';
+import { areaSizeAttr } from 'Survey/AreaCount/config';
 import OnlineStatus from './OnlineStatus';
 import './styles.scss';
 
@@ -107,7 +108,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
     );
 
     if (survey.name === 'precise-area') {
-      const { area }: any = sample.data.location || {};
+      const area = sample.data[areaSizeAttr.id];
 
       return (
         <div className="flex justify-start gap-1">
@@ -127,8 +128,8 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
     }
 
     if (survey.name === 'moth') {
-      const locationName = (sample.data.location as MothTrapLocation)?.data
-        ?.location?.name;
+      const trap = locations.idMap.get(sample.data.locationId || '');
+      const locationName = trap?.data?.name;
 
       return (
         <>
@@ -140,9 +141,9 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
       );
     }
 
-    let locationName = sample.data.location?.name;
+    let { locationName } = sample.data;
 
-    if (survey.name === 'bait-trap') {
+    if (survey.name === 'bait-trap' || survey.name === 'transect') {
       const location = locations.idMap.get(sample.data.locationId || '');
       locationName = location?.data.name;
     }

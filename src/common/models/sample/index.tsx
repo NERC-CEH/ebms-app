@@ -8,45 +8,23 @@ import {
   SampleData,
   SampleOptions,
   SampleMetadata,
-  Location as SampleLocation,
+  Location,
   ElasticSample,
 } from '@flumens';
 import config from 'common/config';
 import groups, { SpeciesGroup } from 'common/data/groups';
 import userModel from 'models/user';
-import areaSurvey from 'Survey/AreaCount/config';
+import areaSurvey, { areaSizeAttr } from 'Survey/AreaCount/config';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
 import baitTrapSurvey from 'Survey/BaitTrap/config';
 import mothSurvey from 'Survey/MothTrap/config';
 import transectSurvey from 'Survey/Transect/config';
 import { guidAttr, Survey } from 'Survey/common/config';
-import { Data as LocationAttributes } from '../location';
 import Media from '../media';
 import Occurrence from '../occurrence';
 import { samplesStore } from '../store';
 import GPSExtension, { calculateArea } from './GPSExt';
 import VibrateExtension from './vibrateExt';
-
-export type TransectLocation = LocationAttributes;
-
-export type MothTrapLocation = {
-  data: {
-    deleted: boolean;
-    type: string;
-    typeOther?: string;
-    location: { name: string; latitude: number; longitude: number };
-  };
-  name: string;
-  id: string;
-  cid: string;
-};
-
-export type AreaCountLocation = SampleLocation & {
-  name: string;
-  area?: number;
-};
-
-export type Location = AreaCountLocation | MothTrapLocation | TransectLocation;
 
 type MothData = {
   wind: string;
@@ -71,11 +49,12 @@ type AreaCountData = {
   recorders: number;
   speciesGroups: number[];
   [guidAttr.id]: string;
+  [areaSizeAttr.id]: number;
 };
 
 export type Data = SampleData & Partial<AreaCountData> & Partial<MothData>;
 
-export const surveyConfigs = {
+export const surveyConfigs: Record<string, Survey> = {
   [areaSurvey.name]: areaSurvey,
   [areaSingleSpeciesSurvey.name]: areaSingleSpeciesSurvey,
   [transectSurvey.name]: transectSurvey,
@@ -83,16 +62,15 @@ export const surveyConfigs = {
   [baitTrapSurvey.name]: baitTrapSurvey,
 };
 
-export const surveyConfigsByCode = Object.values(surveyConfigs).reduce<any>(
-  (agg: any, survey: Survey) => {
-    if (survey.deprecated) return agg;
+export const surveyConfigsByCode = Object.values(surveyConfigs).reduce<
+  Record<number, Survey>
+>((agg, survey) => {
+  if (survey.deprecated) return agg;
 
-    // eslint-disable-next-line no-param-reassign
-    agg[survey.id] = survey;
-    return agg;
-  },
-  {}
-);
+  // eslint-disable-next-line no-param-reassign
+  agg[survey.id] = survey;
+  return agg;
+}, {});
 
 type Metadata = SampleMetadata & {
   /**
@@ -173,6 +151,31 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
       Media,
       store: samplesStore,
     });
+
+    // migrate old location data to new format
+    // remove once samples are uploaded
+    const data = this.data as any;
+    if (data?.location?.id) {
+      data.locationId = data.location.id;
+      delete data.location.id;
+    }
+    if (data?.location?.name) {
+      data.locationName = data?.location?.name;
+      delete data?.location?.name;
+    }
+    if (data?.location?.area) {
+      data[areaSizeAttr.id] = data?.location?.area;
+      delete data?.location?.area;
+    }
+    if (this.isMothSurvey() && data.location?.data?.lat) {
+      data.enteredSref = `${data.location.data.lat} ${data.location.data.lon}`;
+      delete data.location?.data?.lat;
+    }
+    if (this.isTransectSurvey() && data.location?.centroidSref) {
+      data.enteredSref = data?.location?.centroidSref;
+      data.enteredSrefSystem = data?.location?.centroidSrefSystem;
+      delete data?.location?.centroidSref;
+    }
 
     Object.assign(this, VibrateExtension);
     Object.assign(this, GPSExtension);
@@ -312,6 +315,14 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
 
     this.samples.forEach(checkIfNewSpeciesGroupsAreAdded);
     this.save();
+  }
+
+  isMothSurvey() {
+    return this.metadata.survey === 'moth';
+  }
+
+  isTransectSurvey() {
+    return this.metadata.survey === 'transect';
   }
 
   isCountSurvey() {

@@ -4,17 +4,18 @@ import wkt from 'wellknown';
 import { Main, transformToLatLon } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
+import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import SVG from './components/SVG';
 import Transects from './components/Transects';
 import './styles.scss';
 
 const getSectionItem = (sectionSample: Sample, match: any) => {
-  const section = sectionSample.data.location!;
+  const section = locations.idMap.get(sectionSample.data.locationId || '');
 
   let geom: any;
-  if ('boundaryGeom' in section && section.boundaryGeom) {
-    geom = wkt.parse(section.boundaryGeom);
+  if (section?.data.boundaryGeom) {
+    geom = wkt.parse(section.data.boundaryGeom);
     geom.coordinates = transformToLatLon(geom);
     geom = [{ type: 'Feature', geometry: geom }];
     if (geom?.type === 'Point') {
@@ -34,7 +35,7 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
       {!!geom && <SVG geom={geom} />}
 
       <IonLabel className="ion-text-wrap" slot="start">
-        {section.name || (section as any).code}
+        {section?.data.name || (section as any).code}
       </IonLabel>
       {!!sectionSpeciesCount && (
         <div
@@ -56,7 +57,7 @@ type Props = {
 const Sections = ({ sample, onTransectSelect }: Props) => {
   const match = useRouteMatch<any>();
 
-  const hasSelectedTransect = sample.data.location;
+  const hasSelectedTransect = sample.data.locationId;
   if (!hasSelectedTransect)
     return <Transects onTransectSelect={onTransectSelect} />;
 

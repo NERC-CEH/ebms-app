@@ -70,7 +70,7 @@ const MothTrapEntry = ({
   const showDeletePrompt = useDeleteTrapPrompt(onDeleteWrap);
 
   const { isDraft } = mothTrap;
-  const label = location?.name || <T>Draft</T>;
+  const label = mothTrap.data?.name || <T>Draft</T>;
 
   const isUploading = mothTrap.isSynchronising;
 

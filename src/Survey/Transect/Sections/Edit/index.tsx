@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Page, Header, useAlert, useToast, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
+import locations from 'common/models/collections/locations';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
@@ -256,9 +257,8 @@ const EditController = () => {
     navigate(`${url}/${occ.cid}/${taxa}`);
   };
 
-  const sectionLocation = subSample.data.location!;
-  const sectionCode =
-    ('code' in sectionLocation && sectionLocation.code) || t('Section');
+  const sectionLocation = locations.idMap.get(subSample.data.locationId || '');
+  const sectionCode = sectionLocation?.data.code || t('Section');
 
   const { speciesListSortOrder } = appModel.data;
   return (

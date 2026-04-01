@@ -19,7 +19,7 @@ const SitesList = ({ locations, onSelect, selectedLocationId }: Props) => {
       key={location.cid}
       latitude={location.data.location.latitude}
       longitude={location.data.location.longitude}
-      name={location.data.location.name}
+      name={location.data.name}
       hasLists={!!location.taxonListCids?.length}
       onClick={() => onSelect?.(location)}
       isSelected={location.id === selectedLocationId}

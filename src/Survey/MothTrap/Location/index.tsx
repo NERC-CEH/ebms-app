@@ -4,7 +4,7 @@ import { Page, Header, Main, device, useToast, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
 import locations, { byType } from 'common/models/collections/locations';
 import MothTrap, { LocationType, useValidateCheck } from 'models/location';
-import Sample, { MothTrapLocation } from 'models/sample';
+import Sample from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import Map from './Map';
@@ -33,7 +33,8 @@ const Location = () => {
 
   const onLocationSelect = (newTrap: MothTrap) => {
     if (isDisabled) return;
-    sample.data.location = newTrap.toJSON() as any as MothTrapLocation;
+    sample.data.locationId = newTrap.id;
+    sample.data.enteredSref = `${newTrap?.data.location.latitude} ${newTrap?.data.location.longitude}`;
 
     goBack();
   };

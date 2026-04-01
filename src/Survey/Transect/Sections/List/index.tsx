@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import { Page, useToast, useLoader, device, useSample } from '@flumens';
 import appModel from 'models/app';
@@ -37,7 +36,9 @@ const SectionListController = () => {
   };
 
   const onTransectSelect = (transect: Location) => {
-    sample.data.location = toJS(transect.data);
+    sample.data.locationId = transect.id;
+    sample.data.enteredSref = `${transect?.data.location?.latitude} ${transect?.data.location?.longitude}`;
+    sample.data.enteredSrefSystem = transect?.data.centroidSrefSystem as any;
 
     const byTransectId = (section: Location) =>
       section.data.parentId === transect.id;
@@ -54,10 +55,8 @@ const SectionListController = () => {
       .sort(byCode);
 
     const survey = sample.getSurvey();
-    const addSectionSample = (section: any) => {
-      const sectionSample = survey.smp!.create!({
-        location: toJS(section.data),
-      });
+    const addSectionSample = (section: Location) => {
+      const sectionSample = survey.smp!.create!({ location: section });
       sample.samples.push(sectionSample);
     };
 
@@ -79,14 +78,14 @@ const SectionListController = () => {
     const shouldSyncWait =
       new Date().getTime() - lastSyncTime < TWENTY_FOURTH_HOURS;
 
-    const isTransectSelected = sample.data.location;
+    const isTransectSelected = sample.data.locationId;
     if (shouldSyncWait || isTransectSelected) return;
 
     refreshUserTransects();
     appModel.data.transectsRefreshTimestamp = new Date().getTime();
   }, []);
 
-  const transect = sample.data.location;
+  const transect = locations.idMap.get(sample.data.locationId || '');
 
   return (
     <Page id="transect-sections-list">

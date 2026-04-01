@@ -27,23 +27,6 @@ const reliabilityValues = [
   { value: 'Unable to survey', id: 16592 },
 ];
 
-const locationAttr = {
-  remote: {
-    id: 'location_id',
-    values(location: any, submission: any) {
-      /* eslint-disable @typescript-eslint/naming-convention, no-param-reassign */
-      submission.values = {
-        ...submission.values,
-        entered_sref: location.centroidSref,
-        entered_sref_system: location.centroidSrefSystem,
-      };
-      /* eslint-enable @typescript-eslint/naming-convention, no-param-reassign  */
-
-      return location.id;
-    },
-  },
-};
-
 const survey: Survey = {
   id: 562,
   name: 'transect',
@@ -51,7 +34,6 @@ const survey: Survey = {
   webForm: 'ebms-input-data',
   attrs: {
     date: dateAttr,
-    location: locationAttr,
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
     cloud: cloudAttr,
@@ -74,7 +56,6 @@ const survey: Survey = {
   smp: {
     attrs: {
       date: dateAttr,
-      location: locationAttr,
       comment: {
         menuProps: { icon: chatboxOutline, skipValueTranslation: true },
         pageProps: {
@@ -137,7 +118,9 @@ const survey: Survey = {
         data: {
           surveyId: survey.id,
           sampleMethodId: 776,
-          location,
+          enteredSref: location?.data.centroidSref,
+          enteredSrefSystem: location?.data.centroidSrefSystem,
+          locationId: location!.id,
           comment: null,
           reliability: 'Suitable conditions',
         },
@@ -159,15 +142,7 @@ const survey: Survey = {
   verify: attrs =>
     z
       .object({
-        location: z.object(
-          {
-            id: z.string(),
-            // TODO: enable once all the old samples are uploaded
-            // centroidSref: z.string().required(),
-            // srefSystem: z.string().required(),
-          },
-          { error: 'Please select your transect.' }
-        ),
+        locationId: z.string({ error: 'Please select your transect.' }),
         recorder: z.string({ error: 'Recorder info is missing' }),
         surveyStartTime: z.string({ error: 'Start time is missing' }),
         // surveyEndTime: // automatically set on send
@@ -188,7 +163,6 @@ const survey: Survey = {
         surveyId: survey.id,
         date: now,
         training: appModel.data.useTraining,
-        location: null,
         sampleMethodId: 22,
         surveyStartTime: now,
         recorder,

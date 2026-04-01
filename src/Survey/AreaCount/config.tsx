@@ -5,7 +5,7 @@ import appModel from 'common/models/app';
 import { assignIfMissing } from 'common/models/utils';
 import { fetchWeather } from 'common/services/openWeather';
 import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
-import Sample, { AreaCountLocation } from 'models/sample';
+import Sample from 'models/sample';
 import {
   Survey,
   appVersionAttr,
@@ -24,6 +24,8 @@ import {
   speciesGroupsAttr,
 } from 'Survey/common/config';
 
+export { areaSizeAttr } from 'Survey/common/config';
+
 const locationAttrs = {
   locationArea: { remote: { id: 723 } },
   locationAccuracy: { remote: { id: 282 } },
@@ -34,9 +36,7 @@ const locationAttrs = {
 const getSetWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
 
-  const weatherValues = await fetchWeather(
-    sample.data.location as AreaCountLocation
-  );
+  const weatherValues = await fetchWeather(sample.data.location!);
 
   assignIfMissing(sample, 'temperature', weatherValues.temperature);
   assignIfMissing(sample, 'windDirection', weatherValues.windDirection);
@@ -79,7 +79,6 @@ const survey: Survey = {
           submission.values['smpAttr:282'] = accuracy; // eslint-disable-line
           submission.values['smpAttr:283'] = altitude; // eslint-disable-line
           submission.values['smpAttr:284'] = altitudeAccuracy; // eslint-disable-line
-          submission.values['smpAttr:723'] = location.area; // eslint-disable-line
 
           return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
             location.longitude
@@ -232,10 +231,7 @@ const survey: Survey = {
 
     if (hasGPSPermission) sample.toggleGPStracking();
 
-    when(
-      () => isValidLocation(sample.data.location as AreaCountLocation),
-      getSetWeather(sample)
-    );
+    when(() => isValidLocation(sample.data.location), getSetWeather(sample));
 
     return sample;
   },

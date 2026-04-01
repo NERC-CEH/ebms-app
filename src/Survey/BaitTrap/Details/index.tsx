@@ -16,7 +16,7 @@ const DetailsController = () => {
   let { sample } = useSample<Sample<Data>>();
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
 
-  const checkSampleStatus = useValidateCheck(sample);
+  const checkSampleStatus = useValidateCheck(sample as any);
 
   if (!sample) return null;
 

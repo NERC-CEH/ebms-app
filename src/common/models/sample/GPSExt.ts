@@ -11,6 +11,7 @@ import { isPlatform } from '@ionic/react';
 import geojsonArea from '@mapbox/geojson-area';
 import config from 'common/config';
 import GPS from 'helpers/GPS';
+import { areaSizeAttr } from 'Survey/common/config';
 
 const METERS_SINCE_LAST_LOCATION = 15;
 
@@ -26,7 +27,6 @@ type Shape = {
 type Location = {
   latitude: number;
   longitude: number;
-  area: number;
   shape: Shape;
   source: string;
   accuracy: number;
@@ -76,6 +76,7 @@ type SampleWithLocation = {
   data: {
     location?: Location | null;
     surveyStartTime?: string;
+    [areaSizeAttr.id]: number;
   };
 };
 
@@ -147,17 +148,12 @@ export function updateSampleArea(
 }
 
 export const calculateArea = (shape: Shape): number => {
-  let area;
+  if (shape.type === 'Polygon') return Math.floor(geojsonArea.geometry(shape));
 
-  if (shape.type === 'Polygon') {
-    area = geojsonArea.geometry(shape);
-  } else {
-    area =
-      config.defaultTransectBuffer *
-      calculateLineLenght(shape.coordinates as LineString);
-  }
-
-  return Math.floor(area);
+  return Math.floor(
+    config.defaultTransectBuffer *
+      calculateLineLenght(shape.coordinates as LineString)
+  );
 };
 
 type ExtensionThis = SampleModel & {
@@ -192,13 +188,14 @@ const extension = {
     this.data.location = {
       latitude,
       longitude,
-      area: calculateArea(shape),
       shape,
       source: 'map',
       accuracy,
       altitude,
       altitudeAccuracy,
     };
+
+    this.data[areaSizeAttr.id] = calculateArea(shape);
 
     return this.save();
   },

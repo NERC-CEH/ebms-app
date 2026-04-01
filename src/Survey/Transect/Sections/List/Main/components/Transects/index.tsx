@@ -42,9 +42,7 @@ function getTransectItem(transect: Location, onTransectSelect: any) {
       onClick={onTransectSelectWrap}
       detail
     >
-      <IonLabel slot="start">
-        {transect.data.location.name || transect.id}
-      </IonLabel>
+      <IonLabel slot="start">{transect.data.name || transect.id}</IonLabel>
       <IonLabel slot="end">{sections.length}</IonLabel>
       {hasLines && <SVG geom={geom} />}
     </IonItem>

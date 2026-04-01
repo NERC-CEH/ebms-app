@@ -23,8 +23,9 @@ import windIcon from 'common/images/wind.svg';
 import { assignIfMissing } from 'common/models/utils';
 import { fetchHistoricalWeather } from 'common/services/openWeather';
 import appModel from 'models/app';
+import locations from 'models/collections/locations';
 import Occurrence from 'models/occurrence';
-import Sample, { MothTrapLocation } from 'models/sample';
+import Sample from 'models/sample';
 import {
   Survey,
   commentAttr,
@@ -121,8 +122,9 @@ const getSetDefaultTime = (sample: Sample) => () => {
   const { surveyStartTime } = sample.data;
   if (surveyStartTime) return;
 
-  const { location } = (sample.data.location as MothTrapLocation)?.data || {};
-  if (!isValidLocation(location)) return;
+  const trap = locations.idMap.get(sample.data.locationId || '');
+  const { location } = trap?.data || {};
+  if (!location || !isValidLocation(location)) return;
 
   // end time
   const date = new Date(sample.data.date);
@@ -149,8 +151,9 @@ const getSetDefaultTime = (sample: Sample) => () => {
 const getSetEndWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
 
+  const trap = locations.idMap.get(sample.data.locationId || '');
   const weatherValues = await fetchHistoricalWeather(
-    (sample.data.location as MothTrapLocation).data.location,
+    trap!.data.location,
     sample.data.surveyEndTime!
   );
 
@@ -160,14 +163,14 @@ const getSetEndWeather = (sample: Sample) => async () => {
   assignIfMissing(sample, 'cloudEnd', weatherValues.cloud);
 };
 const getHasEndTimeAndLocation = (sample: Sample) => () =>
-  !!sample.data.surveyEndTime &&
-  !!(sample.data.location as MothTrapLocation)?.id;
+  !!sample.data.surveyEndTime && !!sample.data.locationId;
 
 const getSetStartWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
 
+  const trap = locations.idMap.get(sample.data.locationId || '');
   const weatherValues = await fetchHistoricalWeather(
-    (sample.data.location as MothTrapLocation).data.location,
+    trap!.data.location,
     sample.data.surveyStartTime!
   );
 
@@ -178,8 +181,7 @@ const getSetStartWeather = (sample: Sample) => async () => {
 };
 
 const getHasStartTimeAndLocation = (sample: Sample) => () =>
-  !!sample.data.surveyStartTime &&
-  !!(sample.data.location as MothTrapLocation)?.id;
+  !!sample.data.surveyStartTime && !!sample.data.locationId;
 
 const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
   const LUNAR_MONTH = 29.530588853;
@@ -229,8 +231,8 @@ const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
 };
 
 const getSetStartMoonPhase = (sample: Sample) => () => {
-  const isSouthernHemisphere =
-    (sample.data.location as MothTrapLocation)?.data?.location?.latitude < 0;
+  const trap = locations.idMap.get(sample.data.locationId || '');
+  const isSouthernHemisphere = (trap?.data?.location?.latitude ?? 0) < 0;
   const moonPhase = getMoonPhase(
     new Date(sample.data.surveyStartTime!),
     isSouthernHemisphere
@@ -240,8 +242,8 @@ const getSetStartMoonPhase = (sample: Sample) => () => {
 };
 
 const getSetStartMoonEndPhase = (sample: Sample) => () => {
-  const isSouthernHemisphere =
-    (sample.data.location as MothTrapLocation)?.data?.location?.latitude < 0;
+  const trap = locations.idMap.get(sample.data.locationId || '');
+  const isSouthernHemisphere = (trap?.data?.location?.latitude ?? 0) < 0;
   const moonPhase = getMoonPhase(
     new Date(sample.data.surveyEndTime!),
     isSouthernHemisphere
@@ -256,22 +258,6 @@ const survey: Survey = {
   webForm: 'enter-moth-trap-records',
 
   attrs: {
-    location: {
-      remote: {
-        id: 'location_id',
-        values(location: any, submission: any) {
-          /* eslint-disable @typescript-eslint/naming-convention, no-param-reassign */
-          submission.values = {
-            ...submission.values,
-            entered_sref: `${location.data.location.latitude} ${location.data.location.longitude}`,
-          };
-          /* eslint-enable @typescript-eslint/naming-convention, no-param-reassign */
-
-          return location.id;
-        },
-      },
-    },
-
     surveyStartTime: {
       menuProps: { label: 'Start Time' },
       pageProps: {
@@ -561,25 +547,7 @@ const survey: Survey = {
   verify: attrs =>
     z
       .object({
-        location: z.object(
-          {
-            id: z.string({ error: 'Location is missing.' }),
-            data: z.object({
-              location: z
-                .object({
-                  latitude: z.number().nullable().optional(),
-                  longitude: z.number().nullable().optional(),
-                })
-                .refine(
-                  (val: any) =>
-                    Number.isFinite(val.latitude) &&
-                    Number.isFinite(val.longitude),
-                  'Location is missing.'
-                ),
-            }),
-          },
-          { error: 'Location is missing.' }
-        ),
+        locationId: z.string({ error: 'Location is missing.' }),
       })
       .safeParse(attrs).error,
 
@@ -595,14 +563,14 @@ const survey: Survey = {
         enteredSrefSystem: 4326,
         training: appModel.data.useTraining,
         inputForm: survey.webForm,
-        location: null,
+        locationId: undefined,
         comment: null,
         recorder,
         appVersion: config.version,
       },
     });
 
-    when(() => !!sample.data.location, getSetDefaultTime(sample));
+    when(() => !!sample.data.locationId, getSetDefaultTime(sample));
 
     when(getHasStartTimeAndLocation(sample), getSetStartWeather(sample));
     when(getHasEndTimeAndLocation(sample), getSetEndWeather(sample));

@@ -22,7 +22,7 @@ const Site = () => {
   const group = groups.idMap.get(sample?.data.groupId || '');
 
   const alphabeticallyByName = (a: Location, b: Location) =>
-    a.data.location.name.localeCompare(b.data.location.name);
+    a.data.name.localeCompare(b.data.name);
 
   const byGroup = (location: Location) =>
     group?.locationCids.includes(location.cid);

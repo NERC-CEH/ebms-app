@@ -2,7 +2,7 @@ import { useContext, useMemo } from 'react';
 import { useRouteMatch } from 'react-router';
 import { MapContainer } from '@flumens';
 import { NavContext } from '@ionic/react';
-import Sample, { AreaCountLocation } from 'models/sample';
+import Sample from 'models/sample';
 
 type Props = { sample: Sample };
 
@@ -30,8 +30,8 @@ const Records = ({ sample }: Props) => {
       geometry: {
         type: 'Point',
         coordinates: [
-          (smp.data.location as AreaCountLocation).longitude,
-          (smp.data.location as AreaCountLocation).latitude,
+          smp.data.location?.longitude,
+          smp.data.location?.latitude,
           0.0,
         ],
       },

@@ -19,7 +19,7 @@ const HomeController = () => {
   let { sample } = useSample<Sample<Data>>();
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
 
-  const checkSampleStatus = useValidateCheck(sample);
+  const checkSampleStatus = useValidateCheck(sample as any);
   const checkUserStatus = useUserStatusCheck();
 
   if (!sample) return null;
@@ -75,7 +75,9 @@ const HomeController = () => {
     <Page id="survey-bait-trap-home">
       <Header
         title="Bait-Trap Survey"
-        rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
+        rightSlot={
+          <SurveyHeaderButton onClick={onSubmit} sample={sample as any} />
+        }
         subheader={sample.data.training && <TrainingHeader />}
         defaultHref="/home/user-surveys"
       />

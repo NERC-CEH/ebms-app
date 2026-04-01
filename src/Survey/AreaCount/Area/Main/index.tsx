@@ -12,7 +12,7 @@ import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'common/models/app';
-import Sample, { AreaCountLocation } from 'models/sample';
+import Sample from 'models/sample';
 import FinishPointMarker from './FinishPointMarker';
 import Records from './Records';
 import StartingPointMarker from './StartingPointMarker';
@@ -54,7 +54,7 @@ const AreaAttr = ({
   isGPSTracking,
   isDisabled,
 }: Props) => {
-  const location = (sample.data.location as AreaCountLocation) || {};
+  const { location } = sample.data;
 
   let initialViewState;
   if (isValidLocation(location)) {
@@ -106,7 +106,8 @@ const AreaAttr = ({
 
           <MapDraw.Context.Consumer>
             {({ isEditing }: any) =>
-              !isEditing && (
+              !isEditing &&
+              location && (
                 <>
                   <MapContainer.Marker {...location} />
                   <StartingPointMarker {...location} />

@@ -141,7 +141,6 @@ export type MothTrapAttrs = {
   location: {
     latitude: number;
     longitude: number;
-    name: string;
   };
 };
 
@@ -229,7 +228,6 @@ class Location extends LocationModel<Data> {
         id,
         createdAt: createdOn,
         location: {
-          name: data.name,
           latitude: Number(data.lat),
           longitude: Number(data.lon),
         },
@@ -349,7 +347,6 @@ class Location extends LocationModel<Data> {
 
     return {
       ...this.data,
-      name: location.name,
       location_type_id: LocationType.MothTrap, // the model already has this, so probably not needed
       centroid_sref_system: centroidSrefSystem,
       centroid_sref: `${location.latitude} ${location.longitude}`,

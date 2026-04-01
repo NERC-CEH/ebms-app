@@ -13,7 +13,8 @@ import {
 } from '@flumens';
 import { IonList } from '@ionic/react';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
-import Sample, { MothTrapLocation } from 'models/sample';
+import locations from 'models/collections/locations';
+import Sample from 'models/sample';
 
 type Props = {
   sample: Sample;
@@ -22,7 +23,7 @@ type Props = {
 const DetailsMain = ({ sample }: Props) => {
   const { url } = useRouteMatch();
   const { surveyStartTime, surveyEndTime } = sample.data;
-  const location = sample.data.location as MothTrapLocation;
+  const location = locations.idMap.get(sample.data.locationId || '');
   const survey = sample.getSurvey();
 
   const dateAttrProps = survey.attrs!.date.pageProps!
@@ -31,13 +32,7 @@ const DetailsMain = ({ sample }: Props) => {
 
   const isDisabled = sample.isUploaded;
 
-  // TODO: Backwards compatibility
-  const locationNameSupportedBackwardsCompatibility =
-    location?.name || location?.data?.location?.name;
-
-  const locationName = location
-    ? locationNameSupportedBackwardsCompatibility
-    : null;
+  const locationName = location?.data?.name ?? null;
 
   const startTimePretty = isValidDate(surveyStartTime!)
     ? timeFormat.format(new Date(surveyStartTime!))

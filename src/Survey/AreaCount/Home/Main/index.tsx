@@ -41,12 +41,13 @@ import { getSpeciesProfileImage } from 'common/data/profiles';
 import Location from 'common/models/location';
 import appModel, { SpeciesListSortOrder } from 'models/app';
 import { Taxon } from 'models/occurrence';
-import Sample, { AreaCountLocation } from 'models/sample';
+import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import PaintedLadyBehaviour from 'Survey/AreaCount/common/Components/PaintedLadyBehaviour';
 import PaintedLadyDirection from 'Survey/AreaCount/common/Components/PaintedLadyDirection';
 import PaintedLadyOther from 'Survey/AreaCount/common/Components/PaintedLadyOther';
 import PaintedLadyWing from 'Survey/AreaCount/common/Components/PaintedLadyWing';
+import { areaSizeAttr } from 'Survey/AreaCount/config';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
@@ -575,14 +576,14 @@ const AreaCount = ({
     );
   };
 
-  const { area } = (sample.data.location as AreaCountLocation) || {};
+  const area = sample.data[areaSizeAttr.id];
   let areaPretty: any = <IonIcon icon={warningOutline} color="danger" />;
   if (Number.isFinite(area) || sample.isGPSRunning()) {
     areaPretty = (
       <div className="flex flex-col overflow-hidden">
         <div>{area ? `${area} m²` : ''}</div>
         <div className="max-w-28 overflow-hidden text-ellipsis whitespace-nowrap">
-          {site?.data.name || sample.data.location?.name}
+          {site?.data.name || sample.data.locationName}
         </div>
       </div>
     );

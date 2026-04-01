@@ -20,7 +20,7 @@ import locations from 'common/models/collections/locations';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
-import Sample, { AreaCountLocation, useValidateCheck } from 'models/sample';
+import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import { useDeleteConfirmation } from '../Occurrence/Species';
 import Header from './Header';
@@ -207,8 +207,7 @@ const HomeController = () => {
   const calculateIfHasLongSections = () => {
     if (!sample) return;
 
-    if (!(sample.data.location as AreaCountLocation)?.shape?.coordinates.length)
-      return;
+    if (!sample.data.location?.shape?.coordinates.length) return;
     if (!sample.metadata.saved) return;
 
     const shapeCoords = [...(sample.data.location as any).shape.coordinates];
@@ -250,7 +249,7 @@ const HomeController = () => {
   };
 
   useEffect(calculateIfHasLongSections, [
-    (sample?.data.location as AreaCountLocation)?.shape?.coordinates,
+    sample?.data.location?.shape?.coordinates,
   ]);
 
   if (!sample) return null;

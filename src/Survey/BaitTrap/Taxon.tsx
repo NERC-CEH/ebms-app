@@ -27,7 +27,7 @@ const Taxon = () => {
 
     // adding new occurrence
     const survey = subSample.getSurvey();
-    const newOcc = survey.occ!.create!({ sample: subSample, taxon });
+    const newOcc = survey.occ!.create!({ sample: subSample as any, taxon });
     subSample.occurrences.push(newOcc);
     subSample.save();
 

@@ -16,7 +16,7 @@ import {
 import config from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'common/models/app';
-import Sample, { AreaCountLocation } from 'models/sample';
+import Sample from 'models/sample';
 
 const ModelLocationMap = () => {
   const { sample, subSample } = useSample<Sample>();
@@ -24,7 +24,10 @@ const ModelLocationMap = () => {
 
   const model = locationModel || subSample || sample;
 
-  const location = (model!.data.location as AreaCountLocation) || {};
+  const locationName =
+    locationModel?.data.name || (model as Sample)?.data.locationName;
+
+  const location = model!.data.location || {};
 
   const isMothSurvey = !!locationModel;
 
@@ -37,7 +40,11 @@ const ModelLocationMap = () => {
   if (!model) return null;
 
   const onLocationNameChange = ({ name }: any) => {
-    (model.data.location as AreaCountLocation).name = name;
+    if (locationModel) {
+      locationModel.data.name = name;
+    } else {
+      (model as Sample).data.locationName = name;
+    }
   };
 
   const setLocation = async (newLocation: any) => {
@@ -58,7 +65,7 @@ const ModelLocationMap = () => {
 
   // default view to the user's selected country
   let initialViewState;
-  if (isValidLocation(location)) {
+  if (isValidLocation(location as any)) {
     initialViewState = { ...location };
   } else {
     const country = countries[appModel.data.country!];
@@ -71,14 +78,14 @@ const ModelLocationMap = () => {
     <Page id="model-location">
       <MapHeader>
         <MapHeader.Location
-          location={location}
+          location={location as any}
           onChange={onManuallyTypedLocationChange}
           useGridRef
         />
         {isMothSurvey && (
           <MapHeader.LocationName
             onChange={onLocationNameChange}
-            value={location.name}
+            value={locationName}
             placeholder="Moth trap name"
           />
         )}
@@ -97,7 +104,7 @@ const ModelLocationMap = () => {
             onClick={onGPSClick}
           />
 
-          <MapContainer.Marker {...location} gridref={undefined} />
+          <MapContainer.Marker {...(location as any)} gridref={undefined} />
         </MapContainer>
       </Main>
     </Page>

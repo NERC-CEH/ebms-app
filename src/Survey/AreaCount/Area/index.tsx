@@ -9,8 +9,9 @@ import groups from 'common/models/collections/groups';
 import GroupModel from 'common/models/group';
 import locations from 'models/collections/locations';
 import Location from 'models/location';
-import Sample, { AreaCountLocation } from 'models/sample';
+import Sample from 'models/sample';
 import userModel from 'models/user';
+import { areaSizeAttr } from '../config';
 import Header from './Header';
 import Main from './Main';
 import './styles.scss';
@@ -22,17 +23,13 @@ const AreaController = () => {
   const { sample } = useSample<Sample>();
   if (!sample) throw new Error('Sample is missing');
 
-  const toggleGPStracking = (on: boolean) => {
-    sample.toggleGPStracking(on);
-  };
+  const toggleGPStracking = (on: boolean) => sample.toggleGPStracking(on);
 
-  const setLocation = (shape: any) => {
-    sample.setLocation(shape);
-  };
+  const setLocation = (shape: any) => sample.setLocation(shape);
 
-  const location = (sample.data.location as AreaCountLocation) || {};
+  const { location } = sample.data;
   const isGPSTracking = sample.isGPSRunning();
-  const { area } = location;
+  const area = sample.data[areaSizeAttr.id];
 
   let infoText;
   if (area) {
@@ -57,7 +54,7 @@ const AreaController = () => {
 
   const { isDisabled } = sample;
 
-  const isAreaShape = location.shape?.type === 'Polygon';
+  const isAreaShape = location?.shape?.type === 'Polygon';
 
   const modal = useRef<HTMLIonModalElement>(null);
 

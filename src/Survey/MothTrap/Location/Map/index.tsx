@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { MapContainer } from '@flumens';
 import { IonSpinner } from '@ionic/react';
+import locations from 'models/collections/locations';
 import MothTrap from 'models/location';
 import Sample from 'models/sample';
 import BottomSheet from './BottomSheet';
@@ -41,13 +42,15 @@ const MapComponent = ({
     onLocationSelect(newTrap);
   };
 
-  const location = sample.data.location as any;
+  const selectedTrap = locations.idMap.get(sample.data.locationId || '');
+  const trapLatitude = selectedTrap?.data.location?.latitude;
+  const trapLongitude = selectedTrap?.data.location?.longitude;
 
   return (
     <>
       <Map
-        latitude={parseFloat(location?.data?.lat)}
-        longitude={parseFloat(location?.data?.lon)}
+        latitude={trapLatitude}
+        longitude={trapLongitude}
         onMovedCoords={setCurrentMapCenter}
       >
         <Traps
