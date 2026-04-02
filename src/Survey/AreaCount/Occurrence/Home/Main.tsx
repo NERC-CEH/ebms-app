@@ -38,7 +38,7 @@ const EditOccurrence = ({ subSample, occurrence, isDisabled }: Props) => {
   sampleBaseUrl.pop();
 
   let location;
-  if (subSample.hasLoctionMissingAndIsnotLocating()) {
+  if (subSample.hasNoLocationAndNotLocating()) {
     if (!isDisabled)
       location = <IonIcon icon={warningOutline} color="danger" />;
   } else {

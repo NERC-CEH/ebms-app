@@ -140,7 +140,7 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
 
   startVibrateCounter: any; // from extension
 
-  hasLoctionMissingAndIsnotLocating: any; // from extension
+  hasNoLocationAndNotLocating: any; // from extension
 
   constructor(options: SampleOptions) {
     super({

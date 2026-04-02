@@ -288,7 +288,7 @@ const extension = {
     return !!(this.gps.locating || this.gps.locating === 0);
   },
 
-  hasLoctionMissingAndIsnotLocating(this: ExtensionThis) {
+  hasNoLocationAndNotLocating(this: ExtensionThis) {
     return !this.data.location?.latitude && !this.isGPSRunning();
   },
 };

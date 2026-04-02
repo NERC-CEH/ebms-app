@@ -114,7 +114,7 @@ const buildSpeciesCount = (agg: any, smp: Sample) => {
   agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning(); // eslint-disable-line
   // eslint-disable-next-line
   agg[id].hasLocationMissing =
-    agg[id].hasLocationMissing || smp.hasLoctionMissingAndIsnotLocating();
+    agg[id].hasLocationMissing || smp.hasNoLocationAndNotLocating();
 
   return agg;
 };
@@ -405,7 +405,7 @@ const AreaCount = ({
       } = occ.data;
 
       let location;
-      if (smp.hasLoctionMissingAndIsnotLocating()) {
+      if (smp.hasNoLocationAndNotLocating()) {
         if (!isDisabled)
           location = <IonIcon icon={warningOutline} color="danger" />;
       } else if (smp.isGPSRunning()) {

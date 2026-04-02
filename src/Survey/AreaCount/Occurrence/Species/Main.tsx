@@ -46,7 +46,7 @@ const EditOccurrence = ({
       const { stage, dragonflyStage } = occ.data;
 
       let detailIcon;
-      if (smp.hasLoctionMissingAndIsnotLocating()) {
+      if (smp.hasNoLocationAndNotLocating()) {
         detailIcon = warningOutline;
       } else if (smp.isGPSRunning()) {
         detailIcon = locateOutline;
