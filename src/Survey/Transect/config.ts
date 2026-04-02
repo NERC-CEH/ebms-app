@@ -1,7 +1,12 @@
+import { when } from 'mobx';
 import { chatboxOutline } from 'ionicons/icons';
 import { z } from 'zod';
 import config from 'common/config';
+import { device } from 'common/flumens';
+import locations from 'common/models/collections/locations';
 import Sample from 'common/models/sample';
+import { assignIfMissing } from 'common/models/utils';
+import { fetchHistoricalWeather } from 'common/services/openWeather';
 import appModel from 'models/app';
 import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
 import userModel from 'models/user';
@@ -26,6 +31,24 @@ const reliabilityValues = [
   { value: 'Unsuitable conditions', id: 16591 },
   { value: 'Unable to survey', id: 16592 },
 ];
+
+const getHasStartTimeAndLocation = (sample: Sample) => () =>
+  !!sample.data.surveyStartTime && !!sample.data.locationId;
+
+const getSetStartWeather = (sample: Sample) => async () => {
+  if (!device.isOnline) return;
+
+  const trap = locations.idMap.get(sample.data.locationId || '');
+  const weatherValues = await fetchHistoricalWeather(
+    trap!.data.location,
+    sample.data.surveyStartTime!
+  );
+
+  assignIfMissing(sample, 'temperature', weatherValues.temperature);
+  assignIfMissing(sample, 'windDirection', weatherValues.windDirection);
+  assignIfMissing(sample, 'windSpeed', weatherValues.windSpeed);
+  assignIfMissing(sample, 'cloud', weatherValues.cloud);
+};
 
 const survey: Survey = {
   id: 562,
@@ -169,6 +192,8 @@ const survey: Survey = {
         [appVersionAttr.id]: config.version,
       },
     });
+
+    when(getHasStartTimeAndLocation(sample), getSetStartWeather(sample));
 
     return sample;
   },
