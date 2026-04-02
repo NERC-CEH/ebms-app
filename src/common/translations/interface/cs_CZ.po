@@ -49,10 +49,10 @@ msgid "Lithuania"
 msgstr "Litva"
 
 msgid "Zambia"
-msgstr ""
+msgstr "Zambie"
 
 msgid "Georgia"
-msgstr ""
+msgstr "Gruzie"
 
 msgid "Spain"
 msgstr "Španělsko"
@@ -1434,7 +1434,7 @@ msgstr "Pozastaveno"
 
 # Survey status
 msgid "Running"
-msgstr ""
+msgstr "Běží"
 
 msgid "Pending"
 msgstr "Čekám"
@@ -1713,27 +1713,27 @@ msgstr "Transekt eBMS"
 
 # Home page
 msgid "Count for 15 minutes anywhere"
-msgstr ""
+msgstr "Počítejte kdekoli 15 minut"
 
 # Home page
 msgid "Walk a fixed transect"
-msgstr ""
+msgstr "Procházejte fixním transektem"
 
 # Home page
 msgid "Record a moth-trap survey"
-msgstr ""
+msgstr "Zaznamenejte lapačový průzkum"
 
 # Home page
 msgid "Count a single species for 15 minutes"
-msgstr ""
+msgstr "Počítejte 15 minut jeden druh"
 
 # Home page
 msgid "Bait-trap survey"
-msgstr ""
+msgstr "Návnadový průzkum"
 
 # Home page
 msgid "Record a fixed bait-trap survey"
-msgstr ""
+msgstr "Zaznamenejte fixní návnadový průzkum"
 
 msgid "Please add any extra info about this record."
 msgstr "Vložte, prosím, další informace k tomuto záznamu"
@@ -2157,19 +2157,19 @@ msgstr "Všechny průzkumy"
 
 # App settings label for species name display preference
 msgid "Common and scientific"
-msgstr ""
+msgstr "České a vědecké"
 
 # App settings label for species name display preference
 msgid "Common only"
-msgstr ""
+msgstr "Pouze české"
 
 # App settings label for species name display preference
 msgid "Scientific only"
-msgstr ""
+msgstr "Pouze vědecké"
 
 # App settings label for species name display preference
 msgid "Species Name Display"
-msgstr ""
+msgstr "Zobrazení názvu druhu"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"

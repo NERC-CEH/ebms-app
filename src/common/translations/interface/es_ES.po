@@ -49,10 +49,10 @@ msgid "Lithuania"
 msgstr "Lituania"
 
 msgid "Zambia"
-msgstr ""
+msgstr "Zambia"
 
 msgid "Georgia"
-msgstr ""
+msgstr "Georgia"
 
 msgid "Spain"
 msgstr "España"
@@ -1749,27 +1749,27 @@ msgstr "Transecto eBMS"
 
 # Home page
 msgid "Count for 15 minutes anywhere"
-msgstr ""
+msgstr "Cuenta durante 15 minutos en cualquier lugar"
 
 # Home page
 msgid "Walk a fixed transect"
-msgstr ""
+msgstr "Recorrer un transecto fijo"
 
 # Home page
 msgid "Record a moth-trap survey"
-msgstr ""
+msgstr "Realizar un muestreo con trampa para polillas"
 
 # Home page
 msgid "Count a single species for 15 minutes"
-msgstr ""
+msgstr "Cuenta individuos de una sola especie durante 15 minutos"
 
 # Home page
 msgid "Bait-trap survey"
-msgstr ""
+msgstr "Muestreo con trampa de cebo"
 
 # Home page
 msgid "Record a fixed bait-trap survey"
-msgstr ""
+msgstr "Realizar un muestreo con trampas de cebo fijas"
 
 msgid "Please add any extra info about this record."
 msgstr "Por favor añada cualquier otra información extra sobre este recuento"
@@ -2870,7 +2870,7 @@ msgstr "¿Qué grupos de especies ha contado?"
 
 # Part of Species Group selection
 msgid "Which <1>species groups</1> are you interested in?"
-msgstr ""
+msgstr "¿En qué <1>grupo de especies</1> estás interesad@?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
@@ -2902,7 +2902,7 @@ msgstr "Brújula"
 
 # Alert header
 msgid "Delete Survey"
-msgstr "Eliminar registro"
+msgstr "Eliminar muestreo"
 
 # Alert message
 msgid ""
