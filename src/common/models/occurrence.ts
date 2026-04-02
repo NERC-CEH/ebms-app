@@ -48,6 +48,7 @@ export type Data = Omit<OccurrenceData, 'taxon'> & {
   identifier?: any;
   count?: any;
   'count-outside'?: any;
+  timeOfSighting?: string;
 } & PaintedLadyAttrs;
 
 export const doesShallowTaxonMatch = (shallowEntry: Taxon, taxon: Taxon) => {

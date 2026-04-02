@@ -282,8 +282,6 @@ const AreaCount = ({
   };
 
   const getSpeciesList = () => {
-    if (sample.isSingleSpeciesSurvey()) return null;
-
     const hasNoSpecies =
       !sample.samples.length &&
       !sample.occurrences.length &&
@@ -379,23 +377,19 @@ const AreaCount = ({
     );
   };
 
-  const getSpeciesSingleCountList = () => {
-    if (!sample.isSingleSpeciesSurvey()) return null;
-
+  const getSingleSpeciesCountList = () => {
     // For remote-fetched records don't have sub-sample layer, only occurrences, so this is a temporary workaround.
     if (sample.occurrences.length)
       return (
-        <div className="m-2">
-          <div className="flex w-full justify-between rounded-md border-b-[0.5px] border-solid border-neutral-300 bg-white px-4 py-3">
-            <div>{sample.occurrences[0].getPrettyName()}</div>
-            {sample.occurrences.length}
-          </div>
+        <div className="m-2 flex w-full justify-between rounded-md border-b-[0.5px] border-solid border-neutral-300 bg-white px-4 py-3">
+          <div>{sample.occurrences[0].getPrettyName()}</div>
+          {sample.occurrences.length}
         </div>
       );
 
     const getOccurrence = (smp: Sample) => {
       const occ = smp.occurrences[0];
-      const prettyTime = new Date(smp.createdAt)
+      const prettyTime = new Date(occ.data.timeOfSighting!)
         .toLocaleTimeString()
         .replace(/(:\d{2}| [AP]M)$/, '');
 
@@ -589,6 +583,10 @@ const AreaCount = ({
     );
   }
 
+  const speciesList = sample.isSingleSpeciesSurvey()
+    ? getSingleSpeciesCountList()
+    : getSpeciesList();
+
   return (
     <Main id="precise-area-count-edit">
       {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
@@ -622,9 +620,7 @@ const AreaCount = ({
         {getSpeciesAddButton()}
       </IonList>
 
-      {getSpeciesList()}
-
-      {getSpeciesSingleCountList()}
+      {speciesList}
     </Main>
   );
 };

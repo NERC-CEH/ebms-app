@@ -448,7 +448,12 @@ const HomeController = () => {
 
   const increaseCount = (taxon: any, _: boolean, is5x: boolean) => {
     if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
-      sample.samples[0].occurrences[0].data.zeroAbundance = false;
+      const [occ] = sample.samples[0].occurrences;
+      occ.data.zeroAbundance = false;
+
+      // update the timestamp to when the first observation is actually recorded,
+      // not when the species was selected at the start of the count
+      occ.data.timeOfSighting = new Date().toISOString();
 
       if (!sample.isTimerFinished()) sample.samples[0].startGPS();
 
