@@ -1,6 +1,7 @@
 import { Header } from '@flumens';
 import Group from 'common/models/group';
 import Sample from 'models/sample';
+import GroupHeader from 'Survey/common/GroupHeader';
 import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
 import TrainingHeader from 'Survey/common/TrainingHeader';
 
@@ -16,20 +17,10 @@ const HeaderComponent = ({ sample, group, onSubmit, onGroupClick }: Props) => {
 
   const trainingModeHeader = sample.data.training && <TrainingHeader />;
 
-  const groupName = group?.data?.title;
-  const groupHeader = !!groupName && (
-    <div
-      className="line-clamp-1 bg-tertiary-600 p-1 text-center text-sm text-white"
-      onClick={onGroupClick}
-    >
-      {groupName}
-    </div>
-  );
-
   const trainingModeSubheader = (
     <>
       {trainingModeHeader}
-      {groupHeader}
+      <GroupHeader group={group} onClick={onGroupClick} />
     </>
   );
 

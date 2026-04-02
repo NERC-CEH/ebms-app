@@ -16,6 +16,7 @@ import {
 } from '@flumens';
 import { NavContext, isPlatform } from '@ionic/react';
 import CONFIG from 'common/config';
+import groups from 'common/models/collections/groups';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import Media from 'models/media';
@@ -23,6 +24,7 @@ import Occurrence, { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import { getUnknownSpecies } from 'Survey/MothTrap/config';
+import GroupHeader from 'Survey/common/GroupHeader';
 import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
 import TrainingHeader from 'Survey/common/TrainingHeader';
 import Main from './Main';
@@ -386,12 +388,24 @@ const HomeController = () => {
 
   const { speciesListSortOrder } = appModel.data;
 
+  const group = groups.idMap.get(sample.data.groupId!);
+
+  const trainingModeSubheader = (
+    <>
+      {sample.data.training && <TrainingHeader />}
+      <GroupHeader
+        group={group}
+        onClick={() => navigate(`${match.url}/details/group`)}
+      />
+    </>
+  );
+
   return (
     <Page id="survey-moth-home">
       <Header
         title="Moth-trap survey"
         rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
-        subheader={sample.data.training && <TrainingHeader />}
+        subheader={trainingModeSubheader}
         defaultHref="/home/user-surveys"
       />
       <Main

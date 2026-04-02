@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { Page, Header, useSample, useRemoteSample } from '@flumens';
 import { NavContext } from '@ionic/react';
+import groups from 'common/models/collections/groups';
 import userModel from 'common/models/user';
 import Sample, { useValidateCheck } from 'models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
@@ -40,10 +41,12 @@ const DetailsController = () => {
     </HeaderButton>
   );
 
+  const group = groups.idMap.get(sample.data.groupId!);
+
   return (
     <Page id="survey-moth-detail">
       <Header title="Survey Details" rightSlot={getNextButton} />
-      <Main sample={sample} />
+      <Main sample={sample} group={group} />
     </Page>
   );
 };

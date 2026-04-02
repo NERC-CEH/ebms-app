@@ -562,6 +562,7 @@ const survey: Survey = {
         date: new Date().toISOString(),
         enteredSrefSystem: 4326,
         training: appModel.data.useTraining,
+        groupId: appModel.data.defaultGroupId,
         inputForm: survey.webForm,
         locationId: undefined,
         comment: null,

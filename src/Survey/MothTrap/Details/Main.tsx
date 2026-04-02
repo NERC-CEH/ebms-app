@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react';
-import { timeOutline, cloudOutline } from 'ionicons/icons';
+import { timeOutline, cloudOutline, peopleOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import {
@@ -13,14 +13,16 @@ import {
 } from '@flumens';
 import { IonList } from '@ionic/react';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
+import Group from 'common/models/group';
 import locations from 'models/collections/locations';
 import Sample from 'models/sample';
 
 type Props = {
   sample: Sample;
+  group?: Group;
 };
 
-const DetailsMain = ({ sample }: Props) => {
+const DetailsMain = ({ sample, group }: Props) => {
   const { url } = useRouteMatch();
   const { surveyStartTime, surveyEndTime } = sample.data;
   const location = locations.idMap.get(sample.data.locationId || '');
@@ -58,6 +60,14 @@ const DetailsMain = ({ sample }: Props) => {
             attr="date"
             input="date"
             inputProps={{ ...surveyDateProps, disabled: isDisabled }}
+          />
+          <MenuAttrItem
+            routerLink={`${url}/group`}
+            disabled={isDisabled}
+            icon={peopleOutline}
+            label="Project"
+            value={group?.data.title}
+            skipValueTranslation
           />
           <MenuAttrItemFromModel
             model={sample}

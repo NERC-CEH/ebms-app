@@ -1,12 +1,12 @@
 import Sites from 'Location/Site/List';
 import { Route } from 'react-router-dom';
 import { AttrPage, withSample } from '@flumens';
+import Groups from 'Survey/common/Groups';
 import ModelLocationMap from 'Survey/common/ModelLocationMap';
 import StartNewSurvey from 'Survey/common/StartNewSurvey';
 import { Survey } from 'Survey/common/config';
 import AreaAttr from './Area';
 import Details from './Details';
-import Groups from './Groups';
 import Home from './Home';
 import Direction from './Occurrence/Direction';
 import OccurrenceHome from './Occurrence/Home';
