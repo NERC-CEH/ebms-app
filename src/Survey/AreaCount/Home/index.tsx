@@ -290,7 +290,10 @@ const HomeController = () => {
 
     await appModel.save();
     sample.metadata.saved = true;
-    sample.data.surveyEndTime = new Date().toISOString();
+
+    // in case the automatic survey end time hasn't been set after the timeout
+    if (!sample.data.surveyEndTime)
+      sample.data.surveyEndTime = new Date().toISOString();
 
     sample.cleanUp();
     sample.save();

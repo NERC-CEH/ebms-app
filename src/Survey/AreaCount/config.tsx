@@ -217,17 +217,30 @@ const survey: Survey = {
     });
 
     if (!sample.isSingleSpeciesSurvey()) {
+      const createdOnString = new Date(sample.createdAt).toISOString();
+      sample.data.surveyStartTime = createdOnString; // this can't be done in defaults for single species survey
+      sample.startVibrateCounter();
+
       // copy previous species groups and moth settings
       sample.data.speciesGroups = appModel.data.speciesGroups;
       sample.metadata.useDayFlyingMothsOnly =
         appModel.data.useDayFlyingMothsOnly;
     }
 
-    if (!sample.isSingleSpeciesSurvey()) {
-      const createdOnString = new Date(sample.createdAt).toISOString();
-      sample.data.surveyStartTime = createdOnString; // this can't be done in defaults
-      sample.startVibrateCounter();
-    }
+    // check if the timer is finished every second and if so then set the end time
+    const timerInterval = setInterval(() => {
+      if (
+        !sample.isTimerFinished() ||
+        !sample.data.surveyStartTime ||
+        sample.data.surveyEndTime
+      )
+        return;
+
+      clearInterval(timerInterval);
+
+      sample.data.surveyEndTime = new Date().toISOString();
+      sample.save();
+    }, 1000);
 
     if (hasGPSPermission) sample.toggleGPStracking();
 
