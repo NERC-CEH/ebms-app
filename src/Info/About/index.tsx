@@ -21,6 +21,15 @@ const Component = () => (
         <P skipTranslation>
           <ul className="ml-2 !list-disc">
             <li>
+              The GloBMS project, part of UKCEH's Global Challenges programme
+              (grant number NE/X006247/1) delivering National Capability for
+              NERC
+            </li>
+            <li>
+              INSPIRE project funded by the Aberdeen Group Charitable Trust (a
+              registered charity in Scotland SC040877)
+            </li>
+            <li>
               Assessing Butterflies in Europe (ABLE) project, funded by the
               European Union
             </li>

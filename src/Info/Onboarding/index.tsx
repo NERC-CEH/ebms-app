@@ -72,8 +72,7 @@ const Onboarding = ({ children }: any) => {
               <div className="w-4/5 rounded-md border border-solid border-primary-200 bg-white/70 px-6 py-3 text-left text-lg text-primary-900 backdrop-blur-sm backdrop-filter">
                 <T>
                   Butterflies are captivating insects, but they are declining in
-                  many parts of the world. For example, this graph shows the
-                  European grassland butterfly index.
+                  many parts of the world.
                 </T>
               </div>
               <img src={graph} alt="pic" className="" />

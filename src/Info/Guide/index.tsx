@@ -22,18 +22,20 @@ const Component = () => {
         <Section>
           <H>How to use the app</H>
           <P>
-            You can use this app to record butterfly observations anywhere in
-            the world. Your records will be stored in
-            https://butterfly-monitoring.net, where they help support butterfly
-            monitoring and research. To get started, you first need to create an
-            account.
+            You can use this app to monitor butterflies in many countries of the
+            world. The results will support conservation and research. To use
+            the app you will first have to register an account.
+          </P>
+          <P>The app supports a range of butterfly monitoring methods.</P>
+          <P>
+            Pollard transects are fixed locations where butterflies are counted
+            regularly.
           </P>
           <P>
-            The preferred method is to conduct a 15-minute Count. This can be
-            done at any place and at any time when butterflies are active (i.e.
-            when the weather is warm and preferably sunny). You can also use the
-            app to record your established butterfly transects. The notes below
-            tell you how to use the currently available methods.
+            15-minute Counts are a flexible method that can be done at any place
+            and at any time when butterflies are active (i.e. when the weather
+            is warm and preferably sunny). The notes below tell you how to use
+            the currently available methods.
           </P>
         </Section>
 

@@ -1,10 +1,11 @@
 # Translators:
 # Yasuhiro Nakamura, 2026
+# Karolis, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Yasuhiro Nakamura, 2026\n"
+"Last-Translator: Karolis, 2026\n"
 "Language-Team: Japanese (Japan) (https://app.transifex.com/ceh/teams/95441/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1107,8 +1108,7 @@ msgstr "Eメールが無効です"
 
 msgid ""
 "Butterflies are captivating insects, but they are declining in many parts of"
-" the world. For example, this graph shows the European grassland butterfly "
-"index."
+" the world."
 msgstr "チョウは魅力的な昆虫ですが、彼らは世界中の多くの場所で減少しています。例えば、このグラフはヨーロッパの草原のチョウの指数を示しています。"
 
 # onboarding pages
@@ -1145,11 +1145,6 @@ msgid ""
 "across the world and associated with national Butterfly Monitoring Schemes "
 "listed at:"
 msgstr "アプリは世界中の多数のチョウの専門家による入力によって貢献されており、次にリストされている国際チョウ類モニタリング計画と紐づいています。"
-
-msgid ""
-"ABLE is funded by a service contract from the European Union Directorate for"
-" the Environment, for an initial period of two years from 2019-20."
-msgstr "ABLEは、2019-2020年までの最初の2年間、欧州連合環境局からのサービス契約によって資金提供されています。"
 
 msgid "ABLE partners:"
 msgstr "ABLEプロジェクトのパートナー:"
@@ -1428,19 +1423,28 @@ msgstr ""
 msgid "App Development"
 msgstr "アプリ開発"
 
-msgid "This app was hand crafted with love by"
-msgstr "このアプリは、愛情を込めて手作りされました"
+msgid ""
+"You can use this app to monitor butterflies in many countries of the world. "
+"The results will support conservation and research. To use the app you will "
+"first have to register an account."
+msgstr ""
+
+msgid "The app supports a range of butterfly monitoring methods."
+msgstr ""
 
 msgid ""
-"A technical consultancy that excels at building bespoke environmental "
-"science and community focussed solutions."
-msgstr "環境科学とコミュニティに焦点を当てた解決の構築に優れた技術コンサルタントです。"
+"Pollard transects are fixed locations where butterflies are counted "
+"regularly."
+msgstr ""
 
-msgid "For suggestions and feedback please do not hesitate to"
-msgstr "提案やフィードバックについては、お気軽に"
+msgid ""
+"This app was handcrafted with love by<1> Flumens,</1> an agency specialising"
+" in building bespoke data-oriented solutions. For suggestions and feedback "
+"please do not hesitate to <5>contact us</5>."
+msgstr ""
 
-msgid "contact us"
-msgstr "お問い合わせ"
+msgid "Partners:"
+msgstr ""
 
 msgid "Language"
 msgstr "言語"
@@ -1746,24 +1750,6 @@ msgstr "写真のクレジット"
 
 msgid "How to use the app"
 msgstr "アプリの使い方"
-
-msgid ""
-"You can use this app to record butterfly observations anywhere in the world."
-" Your records will be stored in https://butterfly-monitoring.net, where they"
-" help support butterfly monitoring and research. To get started, you first "
-"need to create an account."
-msgstr ""
-"このアプリケーションを使用すると、ヨーロッパのどこにいてもチョウ類をモニタリングすることができます。 "
-"結果はヨーロッパチョウ類モニタリングデータベースに入力され、ヨーロッパ全体のチョウの傾向を明らかにするために使用されます。このアプリを使用するには、最初にアカウントを登録する必要があります。"
-
-msgid ""
-"The preferred method is to conduct a 15-minute Count. This can be done at "
-"any place and at any time when butterflies are active (i.e. when the weather"
-" is warm and preferably sunny). You can also use the app to record your "
-"established butterfly transects. The notes below tell you how to use the "
-"currently available methods."
-msgstr ""
-"もっともお勧めするのは、15分間カウント調査です。この方法は、チョウが活発であるとき（例えば、気温が暖かい時、好ましくは晴れているとき）には、どんな場所でもいつの時間でも行うことができます。設定されたチョウのトランセクト調査の記録にもこのアプリを使うことができます。下記の文書に、現在実施できる調査手法が紹介されています。"
 
 msgid "How to do a 15-minute Count"
 msgstr "15分間カウントの調査方法"

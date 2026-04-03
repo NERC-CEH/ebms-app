@@ -79,11 +79,6 @@ const Credits = () => (
 
       <Section>
         <P>
-          ABLE is funded by a service contract from the European Union
-          Directorate for the Environment, for an initial period of two years
-          from 2019-20.
-        </P>
-        <P>
           In the UGP+ project*, citizens, policy makers and scientists work
           together to develop future plans for urban nature in Europe. Counting
           butterflies in cities is not only a great way to keep track of
@@ -94,31 +89,31 @@ const Credits = () => (
           biodiversity conservation actions across Europe.
         </P>
         <IonItem>
-          <a href="https://flumens.io" aria-label="Flumens link">
-            <img className="w-full max-w-md mx-auto" src={flumensLogo} alt="" />
+          <a
+            href="https://flumens.io"
+            aria-label="Flumens link"
+            className="w-full max-w-[200px] mx-auto"
+          >
+            <img src={flumensLogo} alt="" />
           </a>
         </IonItem>
-        <P skipTranslation>
-          <T>This app was hand crafted with love by</T>
+        <P>
+          This app was handcrafted with love by
           <a href="https://flumens.io" style={{ whiteSpace: 'nowrap' }}>
             {' '}
-            Flumens.
+            Flumens,
           </a>{' '}
-          <T>
-            A technical consultancy that excels at building bespoke
-            environmental science and community focussed solutions.
-          </T>{' '}
-          <T>For suggestions and feedback please do not hesitate to</T>{' '}
-          <a href="mailto:apps%40ceh.ac.uk?subject=eBMS%20App">
-            <T>contact us</T>
+          an agency specialising in building bespoke data-oriented solutions.
+          For suggestions and feedback please do not hesitate to{' '}
+          <a href="mailto:apps%40ceh.ac.uk?subject=ButterflyCount%20App">
+            contact us
           </a>
           .
         </P>
       </Section>
 
       <Section>
-        <H>ABLE partners:</H>
-
+        <H>Partners:</H>
         <IonItem>
           <IonLabel>
             <b>Butterfly Conservation Europe</b> – Sue Collins, Martin Warren
@@ -128,6 +123,21 @@ const Credits = () => (
           <IonLabel>
             <b>UK Centre for Ecology and Hydrology (UKCEH, UK)</b> – David Roy,
             Reto Schmucki
+          </IonLabel>
+        </IonItem>
+        <IonItem>
+          <IonLabel>
+            <b>Africa Lepidoptera Society</b>
+          </IonLabel>
+        </IonItem>
+        <IonItem>
+          <IonLabel>
+            <b>Japan Butterfly Conservation</b>
+          </IonLabel>
+        </IonItem>
+        <IonItem>
+          <IonLabel>
+            <b>Moths and Butterflies of NZ Trust</b>
           </IonLabel>
         </IonItem>
         <IonItem>
