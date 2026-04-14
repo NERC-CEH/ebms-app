@@ -46,12 +46,6 @@ const Component = () => (
               Conservation across Europe 2021-2026 (EMBRACE) project, funded by
               the European Union
             </li>
-
-            <li>
-              GLOBMS, funded as the part of the UK Centre for Ecology &
-              Hydrology (UKCEH) National Capability Internation programme,
-              funded by the Natural Environment Research Council (NERC)
-            </li>
           </ul>
         </P>
       </Section>
