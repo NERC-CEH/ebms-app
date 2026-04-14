@@ -15,6 +15,7 @@ import {
 } from '@ionic/react';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
+import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import { fieldCodeAttr, OccData, SubSmpData } from '../../config';
 
 type Props = {
@@ -54,7 +55,6 @@ const TrapHomeMain = ({ subSample }: Props) => {
 
   const getListItem = (occ: Occurrence<OccData>) => {
     const speciesCode = occ.data[fieldCodeAttr.id];
-    const speciesName = occ.data.taxon?.scientificName || 'Unknown';
 
     return (
       <IonItemSliding key={occ.cid}>
@@ -64,11 +64,11 @@ const TrapHomeMain = ({ subSample }: Props) => {
           disabled={isDisabled}
           className="[--padding-start:2px]"
         >
-          <div className="w-full flex items-center">
+          <div className="w-full flex items-center py-1">
             <div className="text-lg text-center font-light mr-2 w-14">
               {speciesCode}
             </div>
-            <div className="">{speciesName}</div>
+            <TaxonPrettyName {...occ.data.taxon} />
           </div>
         </IonItem>
 
