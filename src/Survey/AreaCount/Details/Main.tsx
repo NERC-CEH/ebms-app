@@ -89,6 +89,10 @@ const AreaCountDetails = ({
             This survey has sensitive species and should not be included in
             public reports.
           </InfoMessage>
+          <PhotoPicker model={sample} />
+          <InfoMessage inline>
+            Representative photo of where the 15 minute count was made
+          </InfoMessage>
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}
@@ -149,16 +153,6 @@ const AreaCountDetails = ({
             label="Wind Speed"
             value={windSpeed}
           />
-        </div>
-
-        <h3 className="list-title">
-          <T>Photo</T>
-        </h3>
-        <div className="rounded-list">
-          <PhotoPicker model={sample} />
-          <InfoMessage inline>
-            Representative photo of where the 15 minute count was made
-          </InfoMessage>
         </div>
       </IonList>
     </Main>
