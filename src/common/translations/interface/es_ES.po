@@ -1,12 +1,12 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2026
 # Karolis, 2026
+# Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2026\n"
+"Last-Translator: Cristina Sevilleja <cristina.sevilleja@gmail.com>, 2026\n"
 "Language-Team: Spanish (Spain) (https://app.transifex.com/ceh/teams/95441/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1523,23 +1523,32 @@ msgid ""
 "The results will support conservation and research. To use the app you will "
 "first have to register an account."
 msgstr ""
+"Puedes utilizar esta aplicación para observar mariposas en muchos países del"
+" mundo. Los resultados contribuirán a la conservación y la investigación. "
+"Para utilizar la aplicación, primero tendrás que crear una cuenta."
 
 msgid "The app supports a range of butterfly monitoring methods."
-msgstr ""
+msgstr "La aplicación admite diversos métodos de seguimiento de mariposas."
 
 msgid ""
 "Pollard transects are fixed locations where butterflies are counted "
 "regularly."
 msgstr ""
+"Los transectos de Pollard son rutas fijas en las que se realiza un "
+"seguimiento periódico de mariposas."
 
 msgid ""
 "This app was handcrafted with love by<1> Flumens,</1> an agency specialising"
 " in building bespoke data-oriented solutions. For suggestions and feedback "
 "please do not hesitate to <5>contact us</5>."
 msgstr ""
+"Esta aplicación ha sido creada con mucho cariño por<1> Flumens,</1> una "
+"agencia especializada en el desarrollo de soluciones personalizadas basadas "
+"en datos. Si tiene alguna sugerencia o comentario, no dude en "
+"<5>contactarnos</5>."
 
 msgid "Partners:"
-msgstr ""
+msgstr "Socios:"
 
 msgid "Language"
 msgstr "Idioma"
