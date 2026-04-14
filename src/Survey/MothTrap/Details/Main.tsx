@@ -16,6 +16,7 @@ import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import Group from 'common/models/group';
 import locations from 'models/collections/locations';
 import Sample from 'models/sample';
+import { trapEmptyingTimeAttr } from '../config';
 
 type Props = {
   sample: Sample;
@@ -25,6 +26,7 @@ type Props = {
 const DetailsMain = ({ sample, group }: Props) => {
   const { url } = useRouteMatch();
   const { surveyStartTime, surveyEndTime } = sample.data;
+  const trapEmptyingTime = sample.data[trapEmptyingTimeAttr.id];
   const location = locations.idMap.get(sample.data.locationId || '');
   const survey = sample.getSurvey();
 
@@ -42,6 +44,9 @@ const DetailsMain = ({ sample, group }: Props) => {
   const endTimePretty = isValidDate(surveyEndTime!)
     ? timeFormat.format(new Date(surveyEndTime!))
     : surveyEndTime; // remote dates
+  const emptyingTimePretty = isValidDate(trapEmptyingTime!)
+    ? timeFormat.format(new Date(trapEmptyingTime!))
+    : trapEmptyingTime; // remote dates
 
   return (
     <Main>
@@ -116,6 +121,15 @@ const DetailsMain = ({ sample, group }: Props) => {
             icon={timeOutline}
             label="Time"
             value={endTimePretty}
+            skipValueTranslation
+          />
+
+          <MenuAttrItem
+            routerLink={`${url}/${trapEmptyingTimeAttr.id}`}
+            disabled={isDisabled}
+            icon={timeOutline}
+            label="Emptying time"
+            value={emptyingTimePretty}
             skipValueTranslation
           />
 

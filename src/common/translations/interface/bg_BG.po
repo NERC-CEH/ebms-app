@@ -2433,6 +2433,10 @@ msgstr "Ловилки за нощни пеперуди"
 msgid "Moth trap"
 msgstr "Ловилка за нощни пеперуди"
 
+# Moth survey details label
+msgid "Emptying time"
+msgstr ""
+
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "

@@ -118,6 +118,21 @@ const moonPhaseValues = [
   },
 ];
 
+export const trapEmptyingTimeAttr = {
+  id: 'smpAttr:2028',
+  pageProps: {
+    headerProps: { title: 'Emptying time' },
+    attrProps: {
+      input: 'time',
+      inputProps: {
+        format: { options: { hour: '2-digit', minute: '2-digit' } },
+        presentation: 'time',
+      },
+    },
+  },
+  remote: { values: (date: number) => timeFormat.format(new Date(date)) },
+} as const;
+
 const getSetDefaultTime = (sample: Sample) => () => {
   const { surveyStartTime } = sample.data;
   if (surveyStartTime) return;
@@ -126,15 +141,21 @@ const getSetDefaultTime = (sample: Sample) => () => {
   const { location } = trap?.data || {};
   if (!location || !isValidLocation(location)) return;
 
-  // end time
+  // end time (sunrise)
   const date = new Date(sample.data.date);
   const { sunrise } = SunCalc.getTimes(
     date,
     location.latitude,
     location.longitude
   );
+  const sunriseISO = new Date(sunrise).toISOString(); // UTC time
+
   // eslint-disable-next-line no-param-reassign
-  sample.data.surveyEndTime = new Date(sunrise).toISOString(); // UTC time
+  sample.data.surveyEndTime = sunriseISO;
+
+  // trap emptying time defaults to sunrise
+  // eslint-disable-next-line no-param-reassign
+  sample.data[trapEmptyingTimeAttr.id] = sunriseISO;
 
   // start time
   const oneDayBefore = new Date(date.setDate(date.getDate() - 1));
@@ -295,6 +316,8 @@ const survey: Survey = {
         values: (date: number) => timeFormat.format(new Date(date)),
       },
     },
+
+    [trapEmptyingTimeAttr.id]: trapEmptyingTimeAttr,
 
     // start weather
     direction: {
@@ -584,6 +607,17 @@ const survey: Survey = {
 };
 
 export default survey;
+
+export type Data = {
+  wind: string;
+  temperatureEnd: number;
+  directionEnd: string;
+  windEnd: string;
+  cloudEnd: number;
+  moon?: string;
+  moonEnd?: string;
+  [trapEmptyingTimeAttr.id]?: string;
+};
 
 type UnknownSpeciesObject = Record<string, any>;
 const UNKNOWN_SPECIES: UnknownSpeciesObject = {

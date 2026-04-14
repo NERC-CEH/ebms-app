@@ -2398,6 +2398,10 @@ msgstr "Trampas para avelaíñas"
 msgid "Moth trap"
 msgstr "Trampa para avelaíñas"
 
+# Moth survey details label
+msgid "Emptying time"
+msgstr ""
+
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "

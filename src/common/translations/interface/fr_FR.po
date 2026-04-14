@@ -2433,6 +2433,10 @@ msgstr "Pièges à papillons \"de nuit\""
 msgid "Moth trap"
 msgstr "Piège à papillons \"de nuit\""
 
+# Moth survey details label
+msgid "Emptying time"
+msgstr ""
+
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "

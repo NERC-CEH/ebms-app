@@ -17,7 +17,7 @@ import userModel from 'models/user';
 import areaSurvey, { areaSizeAttr } from 'Survey/AreaCount/config';
 import areaSingleSpeciesSurvey from 'Survey/AreaCount/configSpecies';
 import baitTrapSurvey from 'Survey/BaitTrap/config';
-import mothSurvey from 'Survey/MothTrap/config';
+import mothSurvey, { Data as MothData } from 'Survey/MothTrap/config';
 import transectSurvey from 'Survey/Transect/config';
 import { guidAttr, Survey } from 'Survey/common/config';
 import Media from '../media';
@@ -25,16 +25,6 @@ import Occurrence from '../occurrence';
 import { samplesStore } from '../store';
 import GPSExtension, { calculateArea } from './GPSExt';
 import VibrateExtension from './vibrateExt';
-
-type MothData = {
-  wind: string;
-  temperatureEnd: number;
-  directionEnd: string;
-  windEnd: string;
-  cloudEnd: number;
-  moon?: string;
-  moonEnd?: string;
-};
 
 type AreaCountData = {
   location: Location;

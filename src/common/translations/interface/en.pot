@@ -2360,6 +2360,10 @@ msgstr "Moth traps"
 msgid "Moth trap"
 msgstr "Moth trap"
 
+# Moth survey details label
+msgid "Emptying time"
+msgstr "Emptying time"
+
 # Moth survey Location Info message
 msgid ""
 "You have not created any moth traps yet. To create one please go to the "
