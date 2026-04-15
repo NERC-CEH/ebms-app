@@ -87,7 +87,10 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
     }
 
     if (!type || type === 'baitTraps') {
-      const siteDocs = await this.fetchRemoteByType(LocationType.BaitTrapSite);
+      const siteDocs = await this.fetchRemoteByType(
+        LocationType.BaitTrapSite,
+        true
+      );
       const newSiteModels = siteDocs.map(doc => this.Model.fromDTO(doc));
       this.upsert(...newSiteModels);
       await Promise.all(newSiteModels.map(m => m.save()));
@@ -96,7 +99,10 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         LocationType.BaitTrapSite,
       ]);
 
-      const trapDocs = await this.fetchRemoteByType(LocationType.BaitTrap);
+      const trapDocs = await this.fetchRemoteByType(
+        LocationType.BaitTrap,
+        true
+      );
       const newTrapModels = trapDocs.map(doc => this.Model.fromDTO(doc));
       this.upsert(...newTrapModels);
       await Promise.all(newTrapModels.map(m => m.save()));
@@ -288,7 +294,8 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
   }
 
   private async fetchRemoteByType(
-    locationTypeId: number | string
+    locationTypeId: number | string,
+    publicLocations = false
   ): Promise<RemoteLocationAttributes[]> {
     const url = `${this.remote.url}/index.php/services/rest/locations`;
 
@@ -298,7 +305,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
     const options = {
       params: {
         location_type_id: locationTypeId,
-        public: false,
+        public: publicLocations,
         verbose: 1,
       },
       headers: {
