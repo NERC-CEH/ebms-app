@@ -99,9 +99,9 @@ const EditOccurrence = ({
         {!firstSubSample.isSingleSpeciesSurvey() && (
           <div className="rounded-list">
             <IonItem
-              routerLink={`${match.url}/taxon`}
-              disabled={isDisabled}
+              routerLink={!isDisabled ? `${match.url}/taxon` : undefined}
               className="[--padding-start:5px]"
+              detail={!isDisabled}
             >
               <div className="list-avatar my-1 border-neutral-200 border">
                 {getSpeciesProfileImage(occ.data.taxon)}
