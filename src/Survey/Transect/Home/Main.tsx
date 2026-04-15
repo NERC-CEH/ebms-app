@@ -22,15 +22,17 @@ type Props = {
 
 const Edit = ({ sample, isDisabled }: Props) => {
   const getPrettySectionsLabel = () => {
-    const transect = locations.idMap.get(sample.data.locationId || '');
-    if (!transect)
+    if (!sample.data.locationId)
       return (
         <IonLabel slot="end" color="danger">
           <T>No transect</T>
         </IonLabel>
       );
 
-    return <IonLabel slot="end">{transect.data.name}</IonLabel>;
+    const transect = locations.idMap.get(sample.data.locationId || '');
+    const transectName = transect?.data.name || sample.data.locationId; // locationId for remote ones
+
+    return <IonLabel slot="end">{transectName}</IonLabel>;
   };
 
   const {

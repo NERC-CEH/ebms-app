@@ -13,6 +13,11 @@ import './styles.scss';
 const getSectionItem = (sectionSample: Sample, match: any) => {
   const section = locations.idMap.get(sectionSample.data.locationId || '');
 
+  const locationName =
+    section?.data.name ||
+    (section as any)?.code ||
+    sectionSample.data.locationId; // for remote ones
+
   let geom: any;
   if (section?.data.boundaryGeom) {
     geom = wkt.parse(section.data.boundaryGeom);
@@ -35,7 +40,7 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
       {!!geom && <SVG geom={geom} />}
 
       <IonLabel className="ion-text-wrap" slot="start">
-        {section?.data.name || (section as any).code}
+        {locationName}
       </IonLabel>
       {!!sectionSpeciesCount && (
         <div
