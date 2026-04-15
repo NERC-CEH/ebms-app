@@ -884,6 +884,9 @@ msgstr "Προσθήκη είδους"
 msgid "Duration"
 msgstr "Διάρκεια"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Είδος"
 

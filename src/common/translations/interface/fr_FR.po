@@ -900,6 +900,9 @@ msgstr "Ajouter des espèces"
 msgid "Duration"
 msgstr "Durée"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Espèce"
 

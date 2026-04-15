@@ -894,6 +894,9 @@ msgstr "Tilføj arter"
 msgid "Duration"
 msgstr "Varighed"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Arter"
 

@@ -898,6 +898,9 @@ msgstr "Engadir especie"
 msgid "Duration"
 msgstr "Duración"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Especie"
 

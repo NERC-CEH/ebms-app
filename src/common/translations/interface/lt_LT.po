@@ -894,6 +894,9 @@ msgstr "Pridėti rūšį"
 msgid "Duration"
 msgstr "Trukmė"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Rūšis"
 

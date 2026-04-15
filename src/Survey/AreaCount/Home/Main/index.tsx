@@ -13,6 +13,7 @@ import {
   copyOutline,
   addCircleOutline,
   locateOutline,
+  informationCircleOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
@@ -540,7 +541,19 @@ const AreaCount = ({
 
   const getTimerButton = () => {
     if (isDisabled) {
-      return null;
+      const { surveyStartTime, surveyEndTime } = sample.data;
+
+      return (
+        <IonItem className="menu-attr-item [--inner-padding-end:5px]">
+          <IonIcon icon={timeOutline} slot="start" mode="md" />
+          <IonLabel>
+            <T>Duration</T>
+          </IonLabel>
+          <IonLabel slot="end">
+            {surveyStartTime} – {surveyEndTime}
+          </IonLabel>
+        </IonItem>
+      );
     }
 
     const timerEndTime = sample.getTimerEndTime();
@@ -596,6 +609,15 @@ const AreaCount = ({
           <T>Details</T>
         </h3>
         <div className="rounded-list">
+          {isDisabled && (
+            <IonItem className="menu-attr-item [--inner-padding-end:5px]">
+              <IonIcon icon={informationCircleOutline} slot="start" mode="md" />
+              <IonLabel>
+                <T>Record ID</T>
+              </IonLabel>
+              <IonLabel slot="end">{sample.id}</IonLabel>
+            </IonItem>
+          )}
           <MenuAttrItem
             routerLink={`${match.url}/area`}
             icon={mapOutline}

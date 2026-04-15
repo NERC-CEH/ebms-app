@@ -894,6 +894,9 @@ msgstr "Vložte druh"
 msgid "Duration"
 msgstr "Doba"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Druh"
 

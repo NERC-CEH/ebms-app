@@ -880,6 +880,9 @@ msgstr "Lisää"
 msgid "Duration"
 msgstr "Kesto"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Laji"
 

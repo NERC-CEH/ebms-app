@@ -886,6 +886,9 @@ msgstr "Dodaj gatunek"
 msgid "Duration"
 msgstr "Czas trwania"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Gatunki"
 

@@ -885,6 +885,9 @@ msgstr "Dodajte"
 msgid "Duration"
 msgstr "Trajanje"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Vrsta"
 

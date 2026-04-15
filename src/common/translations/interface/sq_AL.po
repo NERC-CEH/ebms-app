@@ -883,6 +883,9 @@ msgstr "Shto specie"
 msgid "Duration"
 msgstr "Kohëzgjatja"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Speciet"
 

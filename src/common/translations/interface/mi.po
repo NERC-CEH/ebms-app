@@ -873,6 +873,9 @@ msgstr ""
 msgid "Duration"
 msgstr ""
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr ""
 

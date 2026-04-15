@@ -904,6 +904,9 @@ msgstr "Tür ekle"
 msgid "Duration"
 msgstr "Süre"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Tür"
 

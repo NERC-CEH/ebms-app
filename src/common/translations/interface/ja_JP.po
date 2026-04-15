@@ -880,6 +880,9 @@ msgstr "種を追加する"
 msgid "Duration"
 msgstr "調査時間"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "種"
 

@@ -900,6 +900,9 @@ msgstr "Añadir especies"
 msgid "Duration"
 msgstr "Duración"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Especies"
 
@@ -2446,7 +2449,7 @@ msgstr "Trampa de polillas"
 
 # Moth survey details label
 msgid "Emptying time"
-msgstr ""
+msgstr "Tiempo de vaciado"
 
 # Moth survey Location Info message
 msgid ""

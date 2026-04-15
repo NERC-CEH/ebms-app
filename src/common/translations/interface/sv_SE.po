@@ -899,6 +899,9 @@ msgstr "Lägg till art"
 msgid "Duration"
 msgstr "Tidsintervall"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Art"
 

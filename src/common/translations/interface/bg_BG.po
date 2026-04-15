@@ -897,6 +897,9 @@ msgstr "Добави вид"
 msgid "Duration"
 msgstr "Продължителност"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Вид"
 

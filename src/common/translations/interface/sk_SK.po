@@ -892,6 +892,9 @@ msgstr "Pridať druh"
 msgid "Duration"
 msgstr "Trvanie"
 
+msgid "Record ID"
+msgstr ""
+
 msgid "Species"
 msgstr "Druh"
 
