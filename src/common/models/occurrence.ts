@@ -38,6 +38,8 @@ export type Taxon = {
 export type Metadata = OccurrenceMetadata & {
   // moth survey
   mergedOccurrences?: string[];
+  // bait-trap survey
+  speciesCode?: string;
 };
 
 export type Data = Omit<OccurrenceData, 'taxon'> & {

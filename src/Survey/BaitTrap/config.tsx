@@ -6,6 +6,7 @@ import {
   documentTextOutline,
   fishOutline,
   flagOutline,
+  informationCircleOutline,
   layersOutline,
   leafOutline,
   maleOutline,
@@ -13,7 +14,6 @@ import {
   peopleOutline,
   refreshOutline,
   resizeOutline,
-  ribbonOutline,
   thermometerOutline,
   timeOutline,
   waterOutline,
@@ -311,14 +311,6 @@ export const sexAttr = {
   ],
 } as const satisfies ChoiceInputConf;
 
-export const markedAttr = {
-  id: 'occAttr:99921',
-  type: 'yesNoInput',
-  title: 'Marked',
-  prefix: <IonIcon src={ribbonOutline} className="size-6" />,
-  choices: [{ dataName: '0' }, { dataName: '1' }],
-} as const satisfies YesNoInputConf;
-
 export const recaptureAttr = {
   id: 'occAttr:99922',
   type: 'yesNoInput',
@@ -335,6 +327,8 @@ export const feedingAttr = {
   choices: [{ dataName: '0' }, { dataName: '1' }],
 } as const satisfies YesNoInputConf;
 
+const RELEASED = '99916';
+
 export const fateAttr = {
   id: 'occAttr:99923',
   type: 'choiceInput',
@@ -342,7 +336,7 @@ export const fateAttr = {
   appearance: 'button',
   prefix: <IonIcon src={flagOutline} className="size-6" />,
   choices: [
-    { title: 'Released', dataName: '99916' },
+    { title: 'Released', dataName: RELEASED },
     { title: 'Collected', dataName: '99917' },
     { title: 'Died', dataName: '99918' },
   ],
@@ -365,6 +359,10 @@ export const ageAttr = {
 export const fieldCodeAttr = {
   id: 'occAttr:99912',
   type: 'textInput',
+  title: 'Code',
+  container: 'inline',
+  prefix: <IonIcon src={informationCircleOutline} className="size-6" />,
+  validation: { pattern: FIELD_CODE_REGEX.source },
 } as const satisfies TextInputConf;
 
 export const wingLengthAttr = {
@@ -445,7 +443,6 @@ const subSmpAttrs = {
 const occAttrs = {
   [taxonAttr.id]: taxonAttr,
   [sexAttr.id]: { block: sexAttr },
-  [markedAttr.id]: { block: markedAttr },
   [recaptureAttr.id]: { block: recaptureAttr },
   [feedingAttr.id]: { block: feedingAttr },
   [fateAttr.id]: { block: fateAttr },
@@ -474,6 +471,7 @@ const survey = {
           data: {
             taxon,
             [fieldCodeAttr.id]: getNextSpeciesCode(sample as Sample<Data>),
+            [fateAttr.id]: RELEASED,
           },
         });
       },
@@ -485,6 +483,9 @@ const survey = {
               { warehouseId: z.number() },
               { error: 'Species is missing' }
             ),
+            [fieldCodeAttr.id]: z.string().regex(FIELD_CODE_REGEX, {
+              error: 'Field code is invalid (e.g. A1)',
+            }),
           })
           .safeParse(data).error,
     },

@@ -3,7 +3,13 @@ import { observer } from 'mobx-react';
 import { addCircleOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { Main, MenuAttrItem, useAlert, Button } from '@flumens';
+import {
+  Main,
+  MenuAttrItem,
+  useAlert,
+  Button,
+  InfoBackgroundMessage,
+} from '@flumens';
 import {
   IonIcon,
   IonItem,
@@ -104,7 +110,7 @@ const TrapHomeMain = ({ subSample }: Props) => {
         </Button>
       )}
 
-      {subSample.occurrences.length > 0 && (
+      {subSample.occurrences.length > 0 ? (
         <IonList lines="full" className="mt-10!">
           <div className="rounded-list">
             <div className="list-divider gap-6">
@@ -118,6 +124,8 @@ const TrapHomeMain = ({ subSample }: Props) => {
             {subSample.occurrences.map(getListItem as any)}
           </div>
         </IonList>
+      ) : (
+        <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
       )}
     </Main>
   );

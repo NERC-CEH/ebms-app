@@ -1,27 +1,37 @@
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
+import { useRouteMatch } from 'react-router';
 import { Page, Header, useSample } from '@flumens';
+import { NavContext } from '@ionic/react';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
-import { Data, fieldCodeAttr, OccData } from '../config';
+import HeaderButton from 'Survey/common/HeaderButton';
+import { Data, OccData } from '../config';
 import Main from './Main';
 
 const OccurrenceController = () => {
+  const { navigate } = useContext(NavContext);
+  const match = useRouteMatch();
+
   const { sample, occurrence } = useSample<Sample<Data>, Occurrence<OccData>>();
   if (!sample || !occurrence) return null;
 
-  const speciesCode = occurrence.data[fieldCodeAttr.id];
+  const onFinish = () => {
+    const url = match.url.split('/').slice(0, -2).join('/');
+    navigate(url, 'back', 'pop');
+  };
+
+  const isInvalid = occurrence.validateRemote();
+
+  const nextButton = (
+    <HeaderButton onClick={onFinish} isInvalid={!!isInvalid}>
+      Next
+    </HeaderButton>
+  );
 
   return (
     <Page id="survey-bait-trap-edit-occurrence">
-      <Header
-        title="Edit Occurrence"
-        rightSlot={
-          <div className="pr-3 flex flex-col items-center">
-            <div className="text-xs">Code:</div>
-            <div className="font-extrabold -m-0.5">{speciesCode}</div>
-          </div>
-        }
-      />
+      <Header title="Edit Occurrence" rightSlot={nextButton} />
       <Main occurrence={occurrence} />
     </Page>
   );

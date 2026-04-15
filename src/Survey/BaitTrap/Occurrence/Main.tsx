@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -9,13 +10,13 @@ import Occurrence from 'models/occurrence';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import {
   sexAttr,
-  markedAttr,
   recaptureAttr,
   feedingAttr,
   fateAttr,
   ageAttr,
   wingLengthAttr,
   OccData,
+  fieldCodeAttr,
 } from '../config';
 
 type Props = {
@@ -26,6 +27,19 @@ const OccurrenceMain = ({ occurrence }: Props) => {
   const { url } = useRouteMatch();
 
   const isDisabled = occurrence.isUploaded;
+
+  const setRecaptureAndResetCode = (value: string) => {
+    occurrence.data[recaptureAttr.id] = value;
+
+    if (value === '1') {
+      occurrence.metadata.speciesCode = occurrence.data[fieldCodeAttr.id];
+      occurrence.data[fieldCodeAttr.id] = '';
+    } else {
+      occurrence.data[fieldCodeAttr.id] = occurrence.metadata.speciesCode || '';
+    }
+  };
+
+  const isRecaptured = occurrence.data[recaptureAttr.id] === '1';
 
   return (
     <Main>
@@ -45,9 +59,17 @@ const OccurrenceMain = ({ occurrence }: Props) => {
                 className="text-(--form-value-color) my-2 text-right"
               />
             </IonItem>
+            <Block
+              record={occurrence.data}
+              block={recaptureAttr}
+              onChange={setRecaptureAndResetCode}
+            />
+            <Block
+              record={occurrence.data}
+              block={fieldCodeAttr}
+              isDisabled={!isRecaptured}
+            />
             <Block record={occurrence.data} block={sexAttr} />
-            <Block record={occurrence.data} block={markedAttr} />
-            <Block record={occurrence.data} block={recaptureAttr} />
             <Block record={occurrence.data} block={fateAttr} />
             <Block record={occurrence.data} block={ageAttr} />
             <Block record={occurrence.data} block={wingLengthAttr} />

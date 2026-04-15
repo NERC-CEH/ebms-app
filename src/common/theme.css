@@ -245,6 +245,7 @@ html.ios ion-modal ion-header ion-toolbar {
 
 /* Make the input values in the trap details page right-aligned */
 #survey-bait-trap-trap-detail .field-label + input,
+#survey-bait-trap-edit-occurrence .field-label + input,
 #survey-bait-trap-detail .field-label + input {
   text-align: right;
 }
