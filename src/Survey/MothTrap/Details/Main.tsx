@@ -16,7 +16,7 @@ import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import Group from 'common/models/group';
 import locations from 'models/collections/locations';
 import Sample from 'models/sample';
-import { trapEmptyingTimeAttr } from '../config';
+import { trapEmptyingTimeAttr, surveyEndDateAttr } from '../config';
 
 type Props = {
   sample: Sample;
@@ -33,6 +33,10 @@ const DetailsMain = ({ sample, group }: Props) => {
   const dateAttrProps = survey.attrs!.date.pageProps!
     .attrProps as AttrPropsExtended;
   const surveyDateProps = dateAttrProps.inputProps();
+
+  const surveyEndDateAttrProps = survey.attrs![surveyEndDateAttr.id].pageProps!
+    .attrProps as AttrPropsExtended;
+  const surveyEndDateProps = surveyEndDateAttrProps.inputProps();
 
   const isDisabled = sample.isUploaded;
 
@@ -59,12 +63,6 @@ const DetailsMain = ({ sample, group }: Props) => {
             skipValueTranslation
             value={locationName}
             disabled={isDisabled}
-          />
-          <Attr
-            model={sample}
-            attr="date"
-            input="date"
-            inputProps={{ ...surveyDateProps, disabled: isDisabled }}
           />
           <MenuAttrItem
             routerLink={`${url}/group`}
@@ -93,6 +91,12 @@ const DetailsMain = ({ sample, group }: Props) => {
           <T>Trap start</T>
         </h3>
         <div className="rounded-list">
+          <Attr
+            model={sample}
+            attr="date"
+            input="date"
+            inputProps={{ ...surveyDateProps, disabled: isDisabled }}
+          />
           <MenuAttrItem
             routerLink={`${url}/surveyStartTime`}
             disabled={isDisabled}
@@ -115,6 +119,12 @@ const DetailsMain = ({ sample, group }: Props) => {
           <T>Trap end</T>
         </h3>
         <div className="rounded-list">
+          <Attr
+            model={sample}
+            attr={surveyEndDateAttr.id}
+            input="date"
+            inputProps={{ ...surveyEndDateProps, disabled: isDisabled }}
+          />
           <MenuAttrItem
             routerLink={`${url}/surveyEndTime`}
             disabled={isDisabled}
