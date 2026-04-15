@@ -21,7 +21,7 @@ import {
 import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
-import { Data, SubSmpData } from '../config';
+import { Data, stratumAttr, SubSmpData } from '../config';
 
 function roundDate(date: number) {
   let roundedDate = date - (date % (24 * 60 * 60 * 1000)); // subtract amount of time since midnight
@@ -120,6 +120,7 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
     const occCount = trapVisit.occurrences?.length || 0;
     const location = locations.idMap.get(trapVisit.data.locationId || '');
     const trapName = location?.data.name || 'Trap visit';
+    const stratum = trapVisit?.data[stratumAttr.id];
 
     return (
       <IonItemSliding
@@ -133,7 +134,10 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
         >
           <div className="flex gap-2 justify-between items-center w-full py-3">
             <div className="line-clamp-2">{trapName}</div>
-            <Badge>{`${occCount}`} species</Badge>
+            <div className="flex gap-2 items-center">
+              <Badge>{`${occCount}`} species</Badge>
+              {stratum && <Badge>{stratum}</Badge>}
+            </div>
           </div>
         </IonItem>
 
