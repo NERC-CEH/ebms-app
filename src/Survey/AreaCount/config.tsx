@@ -26,13 +26,6 @@ import {
 
 export { areaSizeAttr } from 'Survey/common/config';
 
-const locationAttrs = {
-  locationArea: { remote: { id: 723 } },
-  locationAccuracy: { remote: { id: 282 } },
-  locationAltitude: { remote: { id: 283 } },
-  locationAltitudeAccuracy: { remote: { id: 284 } },
-};
-
 const getSetWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
 
@@ -86,9 +79,9 @@ const survey: Survey = {
         },
       },
     },
-    ...locationAttrs,
 
     // backwards compatibility with old values, these can be removed in the future
+    locationArea: { remote: { id: 723, isBackwardsCompatible: true } },
     group: { remote: { id: 'group_id', values: val => val.id } },
     site: { remote: { id: 'location_id', values: site => site.id } },
   },
@@ -115,7 +108,6 @@ const survey: Survey = {
           },
         },
       },
-      ...locationAttrs,
       date: dateAttr,
     },
 
