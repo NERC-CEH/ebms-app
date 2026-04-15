@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
-import { useRouteMatch } from 'react-router';
 import { Page, Header, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
 import Occurrence from 'models/occurrence';
@@ -10,16 +9,12 @@ import { Data, OccData } from '../config';
 import Main from './Main';
 
 const OccurrenceController = () => {
-  const { navigate } = useContext(NavContext);
-  const match = useRouteMatch();
+  const { goBack } = useContext(NavContext);
 
   const { sample, occurrence } = useSample<Sample<Data>, Occurrence<OccData>>();
   if (!sample || !occurrence) return null;
 
-  const onFinish = () => {
-    const url = match.url.split('/').slice(0, -2).join('/');
-    navigate(url, 'back', 'pop');
-  };
+  const onFinish = () => goBack();
 
   const isInvalid = occurrence.validateRemote();
 
