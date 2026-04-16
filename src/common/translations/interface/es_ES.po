@@ -901,7 +901,7 @@ msgid "Duration"
 msgstr "Duración"
 
 msgid "Record ID"
-msgstr ""
+msgstr "N.º de registro"
 
 msgid "Species"
 msgstr "Especies"
