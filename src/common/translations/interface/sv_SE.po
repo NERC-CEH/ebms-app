@@ -319,6 +319,18 @@ msgstr "Vanligaste arterna från 15-min inventeringar"
 msgid "Back"
 msgstr "Tillbaka"
 
+# part of survey navigation
+msgid "Exit"
+msgstr ""
+
+# part of survey navigation
+msgid "Exit Survey"
+msgstr ""
+
+# part of survey navigation
+msgid "Are you sure you want to leave? Your survey will be saved as a draft."
+msgstr ""
+
 msgid "Menu"
 msgstr "Meny"
 

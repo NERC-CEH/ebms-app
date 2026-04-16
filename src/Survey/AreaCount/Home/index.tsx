@@ -11,6 +11,7 @@ import {
   useRemoteSample,
   Checkbox,
   CheckboxOption,
+  useOnBackButton,
 } from '@flumens';
 import { NavContext } from '@ionic/react';
 import distance from '@turf/distance';
@@ -182,10 +183,28 @@ function useShowSpeciesGroupList(sample?: Sample) {
   return showSpeciesGroupList;
 }
 
+const useExitConfirmation = () => {
+  const alert = useAlert();
+
+  return () =>
+    new Promise<boolean>(resolve => {
+      alert({
+        header: 'Exit Survey',
+        backdropDismiss: false,
+        message:
+          'Are you sure you want to leave? Your survey will be saved as a draft.',
+        buttons: [
+          { text: 'Cancel', handler: () => resolve(false) },
+          { text: 'Exit', handler: () => resolve(true) },
+        ],
+      });
+    });
+};
+
 const HomeController = () => {
   const { t } = useTranslation();
 
-  const { navigate } = useContext(NavContext);
+  const { navigate, goBack } = useContext(NavContext);
   const match = useRouteMatch<any>();
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
   const toast = useToast();
@@ -203,6 +222,20 @@ const HomeController = () => {
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
   const confirmDelete = useDeleteConfirmation();
+  const confirmExit = useExitConfirmation();
+
+  const onExit = async (setIsLeaving?: any) => {
+    if (!sample?.isTimerFinished()) {
+      const shouldExit = await confirmExit();
+      if (!shouldExit) {
+        setIsLeaving?.(false);
+        return;
+      }
+    }
+    goBack();
+  };
+
+  useOnBackButton(onExit);
 
   const calculateIfHasLongSections = () => {
     if (!sample) return;
@@ -554,6 +587,7 @@ const HomeController = () => {
         onSubmit={onSubmit}
         onGroupClick={navigateToGroup}
         group={group}
+        onLeave={!sample.isTimerFinished() ? onExit : undefined}
       />
       <Main
         sample={sample}

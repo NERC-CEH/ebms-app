@@ -10,9 +10,16 @@ type Props = {
   group?: Group;
   onSubmit: any;
   onGroupClick: any;
+  onLeave?: () => void;
 };
 
-const HeaderComponent = ({ sample, group, onSubmit, onGroupClick }: Props) => {
+const HeaderComponent = ({
+  sample,
+  group,
+  onSubmit,
+  onGroupClick,
+  onLeave,
+}: Props) => {
   const survey = sample.getSurvey();
 
   const trainingModeHeader = sample.data.training && <TrainingHeader />;
@@ -30,6 +37,7 @@ const HeaderComponent = ({ sample, group, onSubmit, onGroupClick }: Props) => {
       rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
       subheader={trainingModeSubheader}
       defaultHref="/home/user-surveys"
+      onLeave={onLeave}
     />
   );
 };

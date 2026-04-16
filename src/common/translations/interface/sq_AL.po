@@ -314,6 +314,18 @@ msgstr "Speciet më të mira të numëruara nga gjithë kohërat"
 msgid "Back"
 msgstr "Prapa"
 
+# part of survey navigation
+msgid "Exit"
+msgstr ""
+
+# part of survey navigation
+msgid "Exit Survey"
+msgstr ""
+
+# part of survey navigation
+msgid "Are you sure you want to leave? Your survey will be saved as a draft."
+msgstr ""
+
 msgid "Menu"
 msgstr "Menu"
 

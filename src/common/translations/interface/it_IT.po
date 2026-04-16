@@ -318,6 +318,18 @@ msgstr "Le specie più trovate nei conteggi a tempo"
 msgid "Back"
 msgstr "Indietro"
 
+# part of survey navigation
+msgid "Exit"
+msgstr ""
+
+# part of survey navigation
+msgid "Exit Survey"
+msgstr ""
+
+# part of survey navigation
+msgid "Are you sure you want to leave? Your survey will be saved as a draft."
+msgstr ""
+
 msgid "Menu"
 msgstr "Menu"
 

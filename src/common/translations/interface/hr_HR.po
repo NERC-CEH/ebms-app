@@ -316,6 +316,18 @@ msgstr "Top vrsta"
 msgid "Back"
 msgstr "Natrag"
 
+# part of survey navigation
+msgid "Exit"
+msgstr ""
+
+# part of survey navigation
+msgid "Exit Survey"
+msgstr ""
+
+# part of survey navigation
+msgid "Are you sure you want to leave? Your survey will be saved as a draft."
+msgstr ""
+
 msgid "Menu"
 msgstr "Izbornik"
 

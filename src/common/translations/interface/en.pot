@@ -309,6 +309,18 @@ msgstr "Top Species from all timed counts"
 msgid "Back"
 msgstr "Back"
 
+# part of survey navigation
+msgid "Exit"
+msgstr "Exit"
+
+# part of survey navigation
+msgid "Exit Survey"
+msgstr "Exit Survey"
+
+# part of survey navigation
+msgid "Are you sure you want to leave? Your survey will be saved as a draft."
+msgstr "Are you sure you want to leave? Your survey will be saved as a draft."
+
 msgid "Menu"
 msgstr "Menu"
 
