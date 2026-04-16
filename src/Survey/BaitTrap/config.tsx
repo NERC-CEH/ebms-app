@@ -547,6 +547,9 @@ const survey = {
         training: appModel.data.useTraining,
         inputForm: SURVEY_FORM,
         [appVersionAttr.id]: config.version,
+        [eventTypeAttr.id]: 'bimonthly monitoring',
+        [samplingDesignAttr.id]: 'Paired understorey and canopy traps',
+        [carrionBaitAttr.id]: 'Fish',
       },
     });
 
