@@ -16,6 +16,7 @@ type Props = {
   onChange: (val: any) => void;
   isDisabled?: boolean;
   icon?: any;
+  max?: string;
   presentation?: DatetimePresentation;
 };
 
@@ -26,6 +27,7 @@ const MenuDateAttr = ({
   value,
   onChange,
   isDisabled,
+  max,
 }: Props) => (
   <IonItem className="m-0! rounded-none! [--border-radius:0]! [--border-style:solid]! [--inner-padding-end:8px]!">
     <IonIcon src={icon} slot="start" />
@@ -48,7 +50,7 @@ const MenuDateAttr = ({
             onIonChange={(e: any) => onChange(e.detail.value)}
             value={value}
             disabled={isDisabled}
-            max={new Date().toISOString()}
+            max={max || new Date().toISOString()}
             formatOptions={{
               date: { day: '2-digit', month: '2-digit', year: '2-digit' },
               time: { hour: '2-digit', minute: '2-digit' },

@@ -85,6 +85,10 @@ const DetailsMain = ({ sample }: Props) => {
               value={sample.data[lastSampleDateAttr.id]}
               onChange={val => (sample.data[lastSampleDateAttr.id] = val)} // eslint-disable-line no-return-assign, no-param-reassign
               isDisabled={sample.isUploaded}
+              // Set max date to 1 year from now to prevent users from selecting a date far in the future
+              max={new Date(
+                new Date().setFullYear(new Date().getFullYear() + 1)
+              ).toISOString()}
             />
           </div>
         </IonList>
