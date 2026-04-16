@@ -117,15 +117,15 @@ function StartNewSurvey({ survey }: Props): null {
           await showGPSPermissionDialog().catch(ignoreError);
         sample = await getNewSample(survey, hasGrantedGps);
         (appModel.data as any)[draftIdKey] = sample.cid;
-      }
 
-      if (sample.isSingleSpeciesSurvey()) {
-        navigate(
-          `/survey/${survey.name}/${sample.id || sample.cid}/taxon`,
-          'none',
-          'replace'
-        );
-        return;
+        if (sample.isSingleSpeciesSurvey()) {
+          navigate(
+            `/survey/${survey.name}/${sample.id || sample.cid}/taxon`,
+            'none',
+            'replace'
+          );
+          return;
+        }
       }
 
       const path = sample.isDetailsComplete() ? '' : '/details';
