@@ -14,7 +14,7 @@ import Sample from 'common/models/sample';
 import { useUserStatusCheck } from 'common/models/user';
 import locations, { byType } from 'models/collections/locations';
 import Location, { trapCountAttr } from 'models/location';
-import { Data, trapsAttr } from './config';
+import { Data, trapLocationsAttr, trapsAttr } from './config';
 
 const BaitTrapLocation = () => {
   const { goBack } = useContext(NavContext);
@@ -60,6 +60,8 @@ const BaitTrapLocation = () => {
     sample.data.locationId = location?.id;
     sample.data[trapsAttr.id] =
       Number(location?.data[trapCountAttr.id].value) || 0;
+
+    sample.data[trapLocationsAttr.id] = sample.data[trapsAttr.id] / 2;
     goBack();
   };
 

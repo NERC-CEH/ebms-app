@@ -8,7 +8,7 @@ import MenuDateAttr from 'common/Components/MenuDateAttr';
 import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import {
-  trapsAttr,
+  trapLocationsAttr,
   trapsCarrionAttr,
   trapsBananaAttr,
   trapsOtherAttr,
@@ -22,6 +22,7 @@ import {
   fieldCodeStartAttr,
   Data,
   surveyCommentAttr,
+  trapsAttr,
 } from '../config';
 
 type Props = {
@@ -53,6 +54,7 @@ const DetailsMain = ({ sample }: Props) => {
               value={locationName}
               disabled={isDisabled || completedDetails}
             />
+            <Block record={sample.data} block={trapLocationsAttr} />
             <Block record={sample.data} block={trapsAttr} />
             <Block record={sample.data} block={trapsCarrionAttr} />
             <Block record={sample.data} block={trapsBananaAttr} />

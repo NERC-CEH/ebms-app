@@ -96,10 +96,20 @@ const dateTimeAttr = {
   },
 } as const;
 
+export const trapLocationsAttr = {
+  id: 'smpAttr:11991',
+  type: 'numberInput',
+  title: 'Trap locations',
+  appearance: 'counter',
+  prefix: mothTrapIcon,
+  placeholder: '0',
+  validation: { min: 0 },
+} as const satisfies NumberInputConf;
+
 export const trapsAttr = {
   id: 'smpAttr:9991',
   type: 'numberInput',
-  title: 'Traps',
+  title: 'Total no. of traps',
   appearance: 'counter',
   prefix: mothTrapIcon,
   placeholder: '0',
@@ -414,6 +424,7 @@ const SURVEY_FORM = 'ebms-bait-trap'; // TODO:
 const attrs = {
   [dateAttr.id]: dateAttr,
   [commentAttr.id]: commentAttr,
+  [trapLocationsAttr.id]: { block: trapLocationsAttr },
   [trapsAttr.id]: { block: trapsAttr },
   [trapsCarrionAttr.id]: { block: trapsCarrionAttr },
   [trapsBananaAttr.id]: { block: trapsBananaAttr },
