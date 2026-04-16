@@ -35,10 +35,16 @@ const TrapPickerMain = ({ traps, onTrapSelect }: Props) => {
     );
   };
 
+  const sortedTraps = [...traps].sort((a, b) => {
+    const nameA = a.data.name || a.data.code || '';
+    const nameB = b.data.name || b.data.code || '';
+    return nameA.localeCompare(nameB);
+  });
+
   return (
     <Main className="ion-padding">
       <IonList lines="full">
-        <div className="rounded-list">{traps.map(getTrapItem)}</div>
+        <div className="rounded-list">{sortedTraps.map(getTrapItem)}</div>
       </IonList>
     </Main>
   );
