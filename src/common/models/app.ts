@@ -11,6 +11,7 @@ export type SurveyDraftKeys = {
   'draftId:precise-single-species-area'?: string;
   'draftId:transect'?: string;
   'draftId:moth'?: string | null;
+  'draftId:bait-trap'?: string | null;
 };
 
 export const DEFAULT_SPECIES_GROUP = [groups.butterflies.id];

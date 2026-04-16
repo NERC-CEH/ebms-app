@@ -106,7 +106,8 @@ const HomeController = () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    await appModel.save();
+    const survey = sample.getSurvey();
+    (appModel.data as any)[`draftId:${survey.name}`] = '';
 
     const saveAndReturn = () => {
       sample.cleanUp();

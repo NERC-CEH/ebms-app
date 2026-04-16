@@ -321,7 +321,8 @@ const HomeController = () => {
       }
     }
 
-    await appModel.save();
+    const survey = sample.getSurvey();
+    (appModel.data as any)[`draftId:${survey.name}`] = '';
     sample.metadata.saved = true;
 
     // in case the automatic survey end time hasn't been set after the timeout

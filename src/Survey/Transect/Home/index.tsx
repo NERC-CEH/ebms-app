@@ -7,6 +7,7 @@ import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
 import TrainingHeader from 'Survey/common/TrainingHeader';
+import survey from '../config';
 import Main from './Main';
 
 const TransectHomeController = () => {
@@ -37,8 +38,7 @@ const TransectHomeController = () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    appModel.data['draftId:transect'] = '';
-    await appModel.save();
+    (appModel.data as any)[`draftId:${survey.name}`] = '';
 
     const saveAndReturn = () => {
       if (!sample.data.surveyEndTime) {
