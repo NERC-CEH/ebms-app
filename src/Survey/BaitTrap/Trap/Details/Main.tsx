@@ -36,7 +36,7 @@ const TrapDetailsMain = ({ subSample }: Props) => {
           <div className="rounded-list">
             <MenuAttrItem
               routerLink={`${url}/location`}
-              label="Trap"
+              label="Trap location"
               skipValueTranslation
               icon={locationOutline}
               value={locationName}
