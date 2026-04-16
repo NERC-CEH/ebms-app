@@ -327,12 +327,13 @@ export const sexAttr = {
   ],
 } as const satisfies ChoiceInputConf;
 
+export const RECAPTURED = '1';
 export const recaptureAttr = {
   id: 'occAttr:99922',
   type: 'yesNoInput',
   title: 'Recapture',
   prefix: <IonIcon src={refreshOutline} className="size-6" />,
-  choices: [{ dataName: '0' }, { dataName: '1' }],
+  choices: [{ dataName: '' }, { dataName: RECAPTURED }],
 } as const satisfies YesNoInputConf;
 
 export const feedingAttr = {
@@ -340,7 +341,7 @@ export const feedingAttr = {
   type: 'yesNoInput',
   title: 'Feeding',
   prefix: <IonIcon src={nutritionOutline} className="size-6" />,
-  choices: [{ dataName: '0' }, { dataName: '1' }],
+  choices: [{ dataName: '' }, { dataName: 't' }],
 } as const satisfies YesNoInputConf;
 
 const RELEASED = '99916';
@@ -392,10 +393,14 @@ export const wingLengthAttr = {
 } as const satisfies NumberInputConf;
 
 const getNextSpeciesCode = (subSample: Sample<Data>) => {
+  const recaptured = (occ: Occurrence) =>
+    occ.data[recaptureAttr.id as keyof typeof occ.data] !== RECAPTURED;
+
   // go through all occurrences across all sub-samples, flattened and find the last created occurrence with a field code, then increment that code by 1 for the new occurrence
-  const allOccurrences = subSample.parent!.samples.flatMap(
-    smp => smp.occurrences
-  );
+  // exclude recaptures so their codes don't skew the next code sequence
+  const allOccurrences = subSample
+    .parent!.samples.flatMap(smp => smp.occurrences)
+    .filter(recaptured);
   const lastOccurrence: any = allOccurrences
     .sort((a, b) => a.createdAt - b.createdAt)
     .at(-1);

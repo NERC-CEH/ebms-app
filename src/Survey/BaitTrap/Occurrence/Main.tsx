@@ -17,6 +17,7 @@ import {
   wingLengthAttr,
   OccData,
   fieldCodeAttr,
+  RECAPTURED,
 } from '../config';
 
 type Props = {
@@ -31,7 +32,7 @@ const OccurrenceMain = ({ occurrence }: Props) => {
   const setRecaptureAndResetCode = (value: string) => {
     occurrence.data[recaptureAttr.id] = value;
 
-    if (value === '1') {
+    if (value === RECAPTURED) {
       occurrence.metadata.speciesCode = occurrence.data[fieldCodeAttr.id];
       occurrence.data[fieldCodeAttr.id] = '';
     } else {
@@ -39,7 +40,7 @@ const OccurrenceMain = ({ occurrence }: Props) => {
     }
   };
 
-  const isRecaptured = occurrence.data[recaptureAttr.id] === '1';
+  const isRecaptured = occurrence.data[recaptureAttr.id] === RECAPTURED;
 
   return (
     <Main className="[--padding-bottom:40px]">
