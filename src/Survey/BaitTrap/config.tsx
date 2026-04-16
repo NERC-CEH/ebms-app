@@ -215,11 +215,17 @@ export const fieldCodeStartAttr = {
 
 export const stratumAttr = {
   id: 'smpAttr:99913',
-  type: 'textInput',
+  type: 'choiceInput',
   title: 'Stratum',
-  container: 'inline',
+  appearance: 'button',
   prefix: <IonIcon src={layersOutline} className="size-6" />,
-} as const satisfies TextInputConf;
+  choices: [
+    { title: 'Understorey', dataName: '1' },
+    { title: 'Canopy', dataName: '2' },
+    { title: 'Midstory', dataName: '3' },
+    { title: 'Other', dataName: '4' },
+  ],
+} as const satisfies ChoiceInputConf;
 
 export const baitAttr = {
   id: 'smpAttr:99914',

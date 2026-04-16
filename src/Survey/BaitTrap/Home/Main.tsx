@@ -120,7 +120,10 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
     const occCount = trapVisit.occurrences?.length || 0;
     const location = locations.idMap.get(trapVisit.data.locationId || '');
     const trapName = location?.data.name || 'Trap visit';
-    const stratum = trapVisit?.data[stratumAttr.id];
+    const stratumValue = trapVisit?.data[stratumAttr.id];
+    const stratum = stratumAttr.choices.find(
+      c => c.dataName === stratumValue
+    )?.title;
 
     return (
       <IonItemSliding
