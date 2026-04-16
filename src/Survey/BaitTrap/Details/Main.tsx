@@ -108,7 +108,7 @@ const DetailsMain = ({ sample }: Props) => {
               isDisabled={sample.metadata.completedDetails}
             />
             <InfoMessage inline>
-              A letter followed by a number, e.g. A1.
+              First specimen code for survey, letter then number, e.g. A1
             </InfoMessage>
             <Block record={sample.data} block={surveyCommentAttr} />
           </div>
