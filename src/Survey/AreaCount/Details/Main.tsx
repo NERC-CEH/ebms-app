@@ -52,7 +52,7 @@ const AreaCountDetails = ({
   const isSwissUser = appModel.data.country === 'CH';
 
   return (
-    <Main>
+    <Main className="[--padding-bottom:40px]">
       <IonList lines="full">
         <div className="rounded-list">
           <MenuAttrItem

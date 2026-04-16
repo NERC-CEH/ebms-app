@@ -338,7 +338,7 @@ const HomeMain = ({
   };
 
   return (
-    <Main>
+    <Main className="[--padding-bottom:40px]">
       {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">

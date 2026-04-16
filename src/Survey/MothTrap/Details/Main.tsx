@@ -53,7 +53,7 @@ const DetailsMain = ({ sample, group }: Props) => {
     : trapEmptyingTime; // remote dates
 
   return (
-    <Main>
+    <Main className="[--padding-bottom:40px]">
       <IonList lines="full">
         <div className="rounded-list">
           <MenuAttrItem

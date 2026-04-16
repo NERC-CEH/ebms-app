@@ -83,7 +83,7 @@ const UserSurveyComponent = () => {
       </IonHeader>
 
       <Main
-        className="[--padding-bottom:0] [--padding-top:0]"
+        className="[--padding-bottom:16px] [--padding-top:0]"
         forceOverscroll={false}
         scrollY={false}
       >

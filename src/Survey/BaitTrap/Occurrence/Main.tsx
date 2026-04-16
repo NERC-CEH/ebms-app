@@ -42,7 +42,7 @@ const OccurrenceMain = ({ occurrence }: Props) => {
   const isRecaptured = occurrence.data[recaptureAttr.id] === '1';
 
   return (
-    <Main>
+    <Main className="[--padding-bottom:40px]">
       <BlockContext value={{ isDisabled }}>
         <IonList lines="full">
           <div className="rounded-list">

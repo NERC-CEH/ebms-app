@@ -164,7 +164,7 @@ const MenuMain = ({
   ];
 
   return (
-    <Main className="app-settings">
+    <Main className="[--padding-bottom:20px]">
       <IonList lines="full">
         <h3 className="list-title">
           <T>Surveying</T>

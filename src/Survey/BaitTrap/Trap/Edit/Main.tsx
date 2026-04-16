@@ -88,7 +88,7 @@ const TrapHomeMain = ({ subSample }: Props) => {
   };
 
   return (
-    <Main className="ion-padding">
+    <Main className="[--padding-bottom:40px]">
       <IonList lines="full">
         <div className="rounded-list">
           <MenuAttrItem

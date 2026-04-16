@@ -5,7 +5,6 @@ import { Page, Header, useAlert, useSample } from '@flumens';
 import { NavContext, useIonViewWillEnter } from '@ionic/react';
 import Sample from 'models/sample';
 import Main from './Main';
-import './styles.scss';
 
 export const useDeleteConfirmation = () => {
   const alert = useAlert();

@@ -19,7 +19,6 @@ import { getSpeciesProfileImage } from 'common/data/profiles';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
-import './styles.scss';
 
 type Props = {
   samples: Sample[];
@@ -67,8 +66,8 @@ const EditOccurrence = ({
             onClick={navigateToOccurrenceWithSample}
             detailIcon={detailIcon}
           >
-            <IonLabel className="time">{prettyTime}</IonLabel>
-            <IonLabel className="stage">
+            <IonLabel className="max-w-[66px] m-0">{prettyTime}</IonLabel>
+            <IonLabel>
               <Badge>{stage || dragonflyStage}</Badge>
               {location && <Badge className="ml-2">{location}</Badge>}
             </IonLabel>
@@ -134,7 +133,7 @@ const EditOccurrence = ({
   };
 
   return (
-    <Main>
+    <Main className="[--padding-bottom:40px]">
       {!firstSubSample && (
         <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
       )}

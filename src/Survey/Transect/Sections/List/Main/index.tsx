@@ -8,7 +8,6 @@ import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import SVG from './components/SVG';
 import Transects from './components/Transects';
-import './styles.scss';
 
 const getSectionItem = (sectionSample: Sample, match: any) => {
   const section = locations.idMap.get(sectionSample.data.locationId || '');
@@ -37,7 +36,11 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
       routerLink={`${match.url}/${sectionSample.id || sectionSample.cid}`}
       detail
     >
-      {!!geom && <SVG geom={geom} />}
+      {!!geom && (
+        <div className="m-0.5">
+          <SVG geom={geom} />
+        </div>
+      )}
 
       <IonLabel className="ion-text-wrap" slot="start">
         {locationName}
@@ -71,7 +74,7 @@ const Sections = ({ sample, onTransectSelect }: Props) => {
   const sections = sample.samples.map(getSectionItemWrap);
 
   return (
-    <Main id="transect-sections-list">
+    <Main className="[--padding-bottom:40px]">
       <IonList lines="full">
         <div className="rounded-list">{sections}</div>
       </IonList>
