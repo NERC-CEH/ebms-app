@@ -7,6 +7,7 @@ import groups from 'common/models/collections/groups';
 import userModel from 'common/models/user';
 import Sample, { useValidateCheck } from 'models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
+import { useOnExitDetails } from 'Survey/common/useExitConfirmation';
 import Main from './Main';
 import './styles.scss';
 
@@ -18,6 +19,8 @@ const DetailsController = () => {
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
 
   const checkSampleStatus = useValidateCheck(sample);
+
+  const onExit = useOnExitDetails(sample);
 
   if (!sample) return null;
 
@@ -45,7 +48,11 @@ const DetailsController = () => {
 
   return (
     <Page id="survey-moth-detail">
-      <Header title="Survey Details" rightSlot={getNextButton} />
+      <Header
+        title="Survey Details"
+        rightSlot={getNextButton}
+        onLeave={onExit}
+      />
       <Main sample={sample} group={group} />
     </Page>
   );

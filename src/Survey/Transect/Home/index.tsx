@@ -1,17 +1,25 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
-import { Header, Page, useRemoteSample, useSample, useToast } from '@flumens';
+import {
+  Header,
+  Page,
+  useOnBackButton,
+  useRemoteSample,
+  useSample,
+  useToast,
+} from '@flumens';
 import { NavContext } from '@ionic/react';
 import appModel from 'models/app';
 import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
 import TrainingHeader from 'Survey/common/TrainingHeader';
+import useExitConfirmation from 'Survey/common/useExitConfirmation';
 import survey from '../config';
 import Main from './Main';
 
 const TransectHomeController = () => {
-  const { navigate } = useContext(NavContext);
+  const { navigate, goBack } = useContext(NavContext);
   const toast = useToast();
 
   let { sample } = useSample<Sample>();
@@ -19,6 +27,20 @@ const TransectHomeController = () => {
 
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
+  const confirmExit = useExitConfirmation();
+
+  const onExit = async (setIsLeaving?: any) => {
+    if (!sample?.metadata.saved) {
+      const shouldExit = await confirmExit();
+      if (!shouldExit) {
+        setIsLeaving?.(false);
+        return;
+      }
+    }
+    goBack();
+  };
+
+  useOnBackButton(onExit);
 
   if (!sample) return null;
 
@@ -68,6 +90,7 @@ const TransectHomeController = () => {
         rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
         subheader={sample.data.training && <TrainingHeader />}
         defaultHref="/home/user-surveys"
+        onLeave={onExit}
       />
       <Main sample={sample} isDisabled={sample.isDisabled} />
     </Page>

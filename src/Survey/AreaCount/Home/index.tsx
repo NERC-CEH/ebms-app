@@ -23,6 +23,7 @@ import samplesCollection from 'models/collections/samples';
 import { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
+import useExitConfirmation from 'Survey/common/useExitConfirmation';
 import { useDeleteConfirmation } from '../Occurrence/Species';
 import Header from './Header';
 import Main from './Main';
@@ -182,24 +183,6 @@ function useShowSpeciesGroupList(sample?: Sample) {
 
   return showSpeciesGroupList;
 }
-
-const useExitConfirmation = () => {
-  const alert = useAlert();
-
-  return () =>
-    new Promise<boolean>(resolve => {
-      alert({
-        header: 'Exit Survey',
-        backdropDismiss: false,
-        message:
-          'Are you sure you want to leave? Your survey will be saved as a draft.',
-        buttons: [
-          { text: 'Cancel', handler: () => resolve(false) },
-          { text: 'Exit', handler: () => resolve(true) },
-        ],
-      });
-    });
-};
 
 const HomeController = () => {
   const { t } = useTranslation();

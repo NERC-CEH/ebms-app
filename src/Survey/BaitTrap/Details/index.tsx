@@ -6,6 +6,7 @@ import { NavContext } from '@ionic/react';
 import userModel from 'common/models/user';
 import Sample, { useValidateCheck } from 'models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
+import { useOnExitDetails } from 'Survey/common/useExitConfirmation';
 import { Data } from '../config';
 import Main from './Main';
 
@@ -17,6 +18,8 @@ const DetailsController = () => {
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
 
   const checkSampleStatus = useValidateCheck(sample as any);
+
+  const onExit = useOnExitDetails(sample);
 
   if (!sample) return null;
 
@@ -42,7 +45,7 @@ const DetailsController = () => {
 
   return (
     <Page id="survey-bait-trap-detail">
-      <Header title="Survey Details" rightSlot={nextButton} />
+      <Header title="Survey Details" rightSlot={nextButton} onLeave={onExit} />
       <Main sample={sample} />
     </Page>
   );

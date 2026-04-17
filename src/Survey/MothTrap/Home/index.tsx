@@ -27,6 +27,7 @@ import { getUnknownSpecies } from 'Survey/MothTrap/config';
 import GroupHeader from 'Survey/common/GroupHeader';
 import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
 import TrainingHeader from 'Survey/common/TrainingHeader';
+import { useOnExit } from 'Survey/common/useExitConfirmation';
 import Main from './Main';
 import './styles.scss';
 
@@ -80,6 +81,8 @@ const HomeController = () => {
 
   const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
+
+  const onExit = useOnExit(sample);
 
   if (!sample) return null;
 
@@ -408,6 +411,7 @@ const HomeController = () => {
         rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
         subheader={trainingModeSubheader}
         defaultHref="/home/user-surveys"
+        onLeave={!sample.metadata.saved ? onExit : undefined}
       />
       <Main
         match={match}

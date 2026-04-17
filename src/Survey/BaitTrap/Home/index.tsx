@@ -8,6 +8,7 @@ import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
 import TrainingHeader from 'Survey/common/TrainingHeader';
+import { useOnExit } from 'Survey/common/useExitConfirmation';
 import survey, { Data } from '../config';
 import Main from './Main';
 
@@ -21,6 +22,8 @@ const HomeController = () => {
 
   const checkSampleStatus = useValidateCheck(sample as any);
   const checkUserStatus = useUserStatusCheck();
+
+  const onExit = useOnExit(sample);
 
   if (!sample) return null;
 
@@ -80,6 +83,7 @@ const HomeController = () => {
         }
         subheader={sample.data.training && <TrainingHeader />}
         defaultHref="/home/user-surveys"
+        onLeave={!sample.metadata.saved ? onExit : undefined}
       />
       <Main sample={sample} onAddTrapVisit={onAddTrapVisit} />
     </Page>
