@@ -1,5 +1,4 @@
 import { observer } from 'mobx-react';
-import { time } from 'console';
 import { locationOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';

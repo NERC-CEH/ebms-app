@@ -6,7 +6,7 @@ import config from 'common/config';
 import Sample from 'models/sample';
 
 type Props = {
-  sample: Sample;
+  sample: Sample<any>;
 };
 
 const UploadedRecordInfoMessage = ({ sample }: Props) => {
