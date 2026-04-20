@@ -88,7 +88,7 @@ const MothTrapEntry = ({
     <IonItemSliding className="rounded-md mb-2">
       <IonItem
         className={clsx(
-          'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2 [--border-style:none] [--inner-padding-end:0] [--padding-start:0]',
+          'relative flex rounded-md border border-solid bg-white px-4 py-2 [--border-style:none] [--inner-padding-end:0] [--padding-start:0]',
           isSelected
             ? 'border-[var(--form-value-color)] text-[var(--form-value-color)]'
             : 'border-neutral-200'
@@ -98,9 +98,9 @@ const MothTrapEntry = ({
         <div
           className={clsx(
             'absolute left-0 top-0 h-full w-full opacity-0',
-            'bg-[var(--form-value-color)]',
-            isSelected && 'opacity-[2%]',
-            'transition-[opacity] duration-150'
+            'bg-(--form-value-color)',
+            isSelected && 'opacity-2',
+            'transition-opacity duration-150'
           )}
         />
 
@@ -109,8 +109,8 @@ const MothTrapEntry = ({
             <IonIcon icon={mothTrapIcon} className="size-7" />
           </div>
 
-          <div className="flex w-full flex-col gap-1 py-1">
-            <div className="line-clamp-2 text-lg font-semibold">{label}</div>
+          <div className="flex w-full flex-col gap-1">
+            <div className="line-clamp-2 font-semibold">{label}</div>
 
             {location?.latitude && (
               <div className="text-xs">

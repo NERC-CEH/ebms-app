@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
-import { pinOutline } from 'ionicons/icons';
+import { locationOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import {
@@ -122,16 +122,14 @@ const MothTrapHomeMain = ({ location, addNewLamp, deleteLamp }: Props) => {
           <div className="rounded-list">
             <MenuAttrItem
               routerLink={`${url}/location`}
-              icon={pinOutline}
+              icon={locationOutline}
               label="Location"
               required
               className={clsx({ empty })}
               value={locationValue}
               skipValueTranslation
             />
-
             <Block block={mothTrapTypeAttr} record={location.data} />
-
             <Block block={mothTrapOtherTypeAttr} record={location.data} />
           </div>
 
