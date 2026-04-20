@@ -126,10 +126,10 @@ export const trapsCarrionAttr = {
   validation: { min: 0 },
 } as const satisfies NumberInputConf;
 
-export const trapsBananaAttr = {
+export const trapsFruitAttr = {
   id: 'smpAttr:9993',
   type: 'numberInput',
-  title: 'Traps (banana)',
+  title: 'Traps (fruit)',
   appearance: 'counter',
   prefix: <IonIcon src={leafOutline} className="size-6" />,
   placeholder: '0',
@@ -331,7 +331,7 @@ export const RECAPTURED = '1';
 export const recaptureAttr = {
   id: 'occAttr:99922',
   type: 'yesNoInput',
-  title: 'Recapture',
+  title: 'Recaptured',
   prefix: <IonIcon src={refreshOutline} className="size-6" />,
   choices: [{ dataName: '' }, { dataName: RECAPTURED }],
 } as const satisfies YesNoInputConf;
@@ -438,7 +438,7 @@ const attrs = {
   [trapLocationsAttr.id]: { block: trapLocationsAttr },
   [trapsAttr.id]: { block: trapsAttr },
   [trapsCarrionAttr.id]: { block: trapsCarrionAttr },
-  [trapsBananaAttr.id]: { block: trapsBananaAttr },
+  [trapsFruitAttr.id]: { block: trapsFruitAttr },
   [trapsOtherAttr.id]: { block: trapsOtherAttr },
   [numberOfDaysAttr.id]: { block: numberOfDaysAttr },
   [firstSampleDateAttr.id]: { block: firstSampleDateAttr },

@@ -109,7 +109,9 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
           key={item.date}
           className="flex justify-between items-center rounded-md text-primary-900 font-semibold px-3 bg-primary-800/10"
         >
-          <div>{getRelativeDate(item.date)}</div>
+          <div>
+            <T>{getRelativeDate(item.date)}</T>
+          </div>
           {item.count > 1 && <div>{item.count}</div>}
         </div>
       );
@@ -119,7 +121,7 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
 
     const occCount = trapVisit.occurrences?.length || 0;
     const location = locations.idMap.get(trapVisit.data.locationId || '');
-    const trapName = location?.data.name || 'Trap visit';
+    const trapName = location?.data.name || <T>Trap visit</T>;
     const stratumValue = trapVisit?.data[stratumAttr.id];
     const stratum = stratumAttr.choices.find(
       c => c.dataName === stratumValue
@@ -138,7 +140,9 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
           <div className="flex gap-2 justify-between items-center w-full py-3">
             <div className="line-clamp-2">{trapName}</div>
             <div className="flex gap-2 items-center">
-              <Badge>{`${occCount}`} species</Badge>
+              <Badge>
+                {`${occCount}`} <T>species</T>
+              </Badge>
               {stratum && <Badge>{stratum}</Badge>}
             </div>
           </div>

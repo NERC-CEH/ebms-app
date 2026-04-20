@@ -10,7 +10,7 @@ import Sample from 'models/sample';
 import {
   trapLocationsAttr,
   trapsCarrionAttr,
-  trapsBananaAttr,
+  trapsFruitAttr,
   trapsOtherAttr,
   numberOfDaysAttr,
   firstSampleDateAttr,
@@ -57,7 +57,7 @@ const DetailsMain = ({ sample }: Props) => {
             <Block record={sample.data} block={trapLocationsAttr} />
             <Block record={sample.data} block={trapsAttr} />
             <Block record={sample.data} block={trapsCarrionAttr} />
-            <Block record={sample.data} block={trapsBananaAttr} />
+            <Block record={sample.data} block={trapsFruitAttr} />
             <Block record={sample.data} block={trapsOtherAttr} />
           </div>
         </IonList>

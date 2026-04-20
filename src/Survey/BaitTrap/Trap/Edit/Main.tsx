@@ -34,14 +34,10 @@ const useDeleteSpecies = () => {
   return (occ: Occurrence) => {
     alert({
       header: 'Delete',
-      message: 'Are you sure you want to delete this species?',
+      message: 'Are you sure you want to remove this entry?',
       buttons: [
         { text: 'Cancel', role: 'cancel' },
-        {
-          text: 'Delete',
-          role: 'destructive',
-          handler: () => occ.destroy(),
-        },
+        { text: 'Delete', role: 'destructive', handler: () => occ.destroy() },
       ],
     });
   };

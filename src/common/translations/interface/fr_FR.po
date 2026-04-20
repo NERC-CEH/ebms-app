@@ -949,6 +949,9 @@ msgstr "Il existe un suivi non finalisé, voulez-vous le poursuivre ?"
 msgid "Discard"
 msgstr "Supprimer"
 
+msgid "Start new"
+msgstr ""
+
 msgid "Continue"
 msgstr "Continuer"
 
@@ -2017,6 +2020,9 @@ msgstr ""
 msgid "Are you sure you want to delete your current track?"
 msgstr "Etes-vous sûr de vouloir arrêter votre suivi en cours ?"
 
+msgid "Are you sure you want to remove this entry?"
+msgstr ""
+
 # This is part of mapping functionality
 msgid "Save"
 msgstr "Sauvegarder"
@@ -2769,6 +2775,218 @@ msgstr "Etes-vous sûr de vouloir supprimer cette lampe du piège ?"
 # Moth trap setup submitting the record alert message
 msgid "Trap type is a required field."
 msgstr "Le type de piège est un champ obligatoire."
+
+# Context term
+msgid "Trapping Site"
+msgstr ""
+
+# Context term
+msgid "Trap visit"
+msgstr ""
+
+# Bait-trap survey
+msgid "Trap locations"
+msgstr ""
+
+# Bait-trap survey
+msgid "Total no. of traps"
+msgstr ""
+
+# Bait-trap survey
+msgid "Traps (carrion)"
+msgstr ""
+
+# Bait-trap survey
+msgid "Traps (fruit)"
+msgstr ""
+
+# Bait-trap survey
+msgid "Traps (other)"
+msgstr ""
+
+# Bait-trap survey
+msgid "Dates"
+msgstr ""
+
+# Bait-trap survey
+msgid "No. of days"
+msgstr ""
+
+# Bait-trap survey
+msgid "First sample date"
+msgstr ""
+
+# Bait-trap survey
+msgid "Last sample date"
+msgstr ""
+
+# Bait-trap survey
+msgid "Collectors"
+msgstr ""
+
+# Bait-trap survey
+msgid "Event type"
+msgstr ""
+
+# Bait-trap survey
+msgid "Sampling design"
+msgstr ""
+
+# Bait-trap survey
+msgid "Carrion bait"
+msgstr ""
+
+# Bait-trap survey
+msgid "Field code"
+msgstr ""
+
+# Bait-trap survey
+msgid "First specimen code for survey, letter then number, e.g. A1"
+msgstr ""
+
+# Bait-trap survey
+msgid "Bait-Trap Survey"
+msgstr ""
+
+# Bait-trap survey
+msgid "Survey details"
+msgstr ""
+
+# Bait-trap survey
+msgid "Add trap visit"
+msgstr ""
+
+# Bait-trap survey
+msgid "No trap visits added"
+msgstr ""
+
+# Bait-trap survey
+msgid "Select trap"
+msgstr ""
+
+# Bait-trap survey
+msgid "Trap details"
+msgstr ""
+
+# Bait-trap survey
+msgid "Trap location"
+msgstr ""
+
+# Bait-trap survey
+msgid "Date & time"
+msgstr ""
+
+# Bait-trap survey
+msgid "Understorey"
+msgstr ""
+
+# Bait-trap survey
+msgid "Canopy"
+msgstr ""
+
+# Bait-trap survey
+msgid "Midstory"
+msgstr ""
+
+# Bait-trap survey
+msgid "Stratum"
+msgstr ""
+
+# Bait-trap survey
+msgid "Carrion"
+msgstr ""
+
+# Bait-trap survey
+msgid "Banana"
+msgstr ""
+
+# Bait-trap survey
+msgid "Bait"
+msgstr ""
+
+# Bait-trap survey
+msgid "Sunny"
+msgstr ""
+
+# Bait-trap survey
+msgid "Cloudy"
+msgstr ""
+
+# Bait-trap survey
+msgid "Rainy"
+msgstr ""
+
+# Bait-trap survey
+msgid "Humidity"
+msgstr ""
+
+# Bait-trap survey
+msgid "Temp. in trap"
+msgstr ""
+
+# Bait-trap survey
+msgid "Trap"
+msgstr ""
+
+# Bait-trap survey
+msgid "Code"
+msgstr ""
+
+# Bait-trap survey
+msgid "Recaptured"
+msgstr ""
+
+# Bait-trap survey
+msgid "Male"
+msgstr ""
+
+# Bait-trap survey
+msgid "Female"
+msgstr ""
+
+# Bait-trap survey
+msgid "Sex"
+msgstr ""
+
+# Bait-trap survey
+msgid "Released"
+msgstr ""
+
+# Bait-trap survey
+msgid "Collected"
+msgstr ""
+
+# Bait-trap survey
+msgid "Died"
+msgstr ""
+
+# Bait-trap survey
+msgid "Fate"
+msgstr ""
+
+# Bait-trap survey
+msgid "Intermediate"
+msgstr ""
+
+# Bait-trap survey
+msgid "Old"
+msgstr ""
+
+# Bait-trap survey
+msgid "Age"
+msgstr ""
+
+# Bait-trap survey
+msgid "Wing length"
+msgstr ""
+
+# Bait-trap survey
+msgid "Feeding"
+msgstr ""
+
+# Bait-trap survey
+msgid "Species photos"
+msgstr ""
 
 # Successful registration pop-up
 msgid "Welcome aboard"
