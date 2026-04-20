@@ -168,7 +168,7 @@ const AreaCount = ({
         { text: 'Cancel' },
         {
           text: 'Copy',
-          cssClass: 'danger',
+          role: 'destructive',
           handler: copyPreviousSurveyTaxonList,
         },
       ],

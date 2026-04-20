@@ -130,7 +130,7 @@ const HomeMain = ({
         { text: 'Cancel' },
         {
           text: 'Copy',
-          cssClass: 'danger',
+          role: 'destructive',
           handler: copyPreviousSurveyTaxonList,
         },
       ],
@@ -227,7 +227,7 @@ const HomeMain = ({
                 !isUnidentifiedSpeciesLengthMoreThanFive() && 'full-width'
               )}
             >
-              <T>Unknown species</T>
+              <T>Not classified</T>
             </div>
             {!isUnidentifiedSpeciesLengthMoreThanFive() && (
               <div className="count">{count}</div>
