@@ -48,8 +48,7 @@ const OccurrenceMain = ({ occurrence }: Props) => {
         <IonList lines="full">
           <div className="rounded-list">
             <IonItem
-              routerLink={`${url}/taxon`}
-              disabled={isDisabled}
+              routerLink={!isDisabled ? `${url}/taxon` : undefined}
               className="[--padding-start:5px]"
             >
               <div className="list-avatar my-1 border-neutral-200 border">

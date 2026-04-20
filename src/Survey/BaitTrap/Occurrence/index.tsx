@@ -18,7 +18,7 @@ const OccurrenceController = () => {
 
   const isInvalid = occurrence.validateRemote();
 
-  const nextButton = (
+  const nextButton = !sample.isDisabled && (
     <HeaderButton onClick={onFinish} isInvalid={!!isInvalid}>
       Next
     </HeaderButton>

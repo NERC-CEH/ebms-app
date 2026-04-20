@@ -21,6 +21,7 @@ import {
 import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 import { Data, stratumAttr, SubSmpData } from '../config';
 
 function roundDate(date: number) {
@@ -164,25 +165,24 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
 
   return (
     <Main className="[--padding-bottom:40px]">
+      {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
+
       <IonList lines="full">
         <div className="rounded-list">
-          <MenuAttrItem
-            routerLink={`${url}/details`}
-            label="Survey details"
-            disabled={isDisabled}
-          />
+          <MenuAttrItem routerLink={`${url}/details`} label="Survey details" />
         </div>
       </IonList>
 
-      <Button
-        color="primary"
-        className="mx-auto mt-10"
-        onPress={onAddTrapVisit}
-        isDisabled={isDisabled}
-        prefix={<IonIcon src={addCircleOutline} className="size-5" />}
-      >
-        Add trap visit
-      </Button>
+      {!isDisabled && (
+        <Button
+          color="primary"
+          className="mx-auto mt-10"
+          onPress={onAddTrapVisit}
+          prefix={<IonIcon src={addCircleOutline} className="size-5" />}
+        >
+          Add trap visit
+        </Button>
+      )}
 
       {trapVisits.length === 0 && (
         <InfoBackgroundMessage>No trap visits added</InfoBackgroundMessage>

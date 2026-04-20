@@ -1,4 +1,5 @@
 import { observer } from 'mobx-react';
+import { time } from 'console';
 import { locationOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
@@ -17,6 +18,7 @@ import {
   temperatureAttr,
   temperatureInTrapAttr,
   SubSmpData,
+  timeAttr,
 } from '../../config';
 
 type Props = {
@@ -43,10 +45,17 @@ const TrapDetailsMain = ({ subSample }: Props) => {
               disabled
             />
             <MenuDateAttr
-              label="Date & time"
+              label="Date"
               value={subSample.data.date}
-              presentation="date-time"
+              presentation="date"
               onChange={val => (subSample.data.date = val)} // eslint-disable-line no-return-assign, no-param-reassign
+              isDisabled={subSample.isUploaded}
+            />
+            <MenuDateAttr
+              label="Time"
+              value={subSample.data[timeAttr.id]}
+              presentation="time"
+              onChange={val => (subSample.data[timeAttr.id] = val)} // eslint-disable-line no-return-assign, no-param-reassign
               isDisabled={subSample.isUploaded}
             />
             <Block record={subSample.data} block={stratumAttr} />

@@ -62,8 +62,6 @@ const TrapHomeMain = ({ subSample }: Props) => {
       <IonItemSliding key={occ.cid}>
         <IonItem
           routerLink={`${url}/occ/${occ.cid}`}
-          detail
-          disabled={isDisabled}
           className="[--padding-start:2px]"
         >
           <div className="w-full flex items-center py-1">
@@ -74,11 +72,13 @@ const TrapHomeMain = ({ subSample }: Props) => {
           </div>
         </IonItem>
 
-        <IonItemOptions side="end">
-          <IonItemOption color="danger" onClick={() => onDeleteSpecies(occ)}>
-            <T>Delete</T>
-          </IonItemOption>
-        </IonItemOptions>
+        {!isDisabled && (
+          <IonItemOptions side="end">
+            <IonItemOption color="danger" onClick={() => onDeleteSpecies(occ)}>
+              <T>Delete</T>
+            </IonItemOption>
+          </IonItemOptions>
+        )}
       </IonItemSliding>
     );
   };
@@ -87,11 +87,7 @@ const TrapHomeMain = ({ subSample }: Props) => {
     <Main className="[--padding-bottom:40px]">
       <IonList lines="full">
         <div className="rounded-list">
-          <MenuAttrItem
-            routerLink={`${url}/details`}
-            label="Trap details"
-            disabled={isDisabled}
-          />
+          <MenuAttrItem routerLink={`${url}/details`} label="Trap details" />
         </div>
       </IonList>
 

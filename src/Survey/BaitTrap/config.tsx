@@ -26,12 +26,13 @@ import {
   OccurrenceData,
   SampleData,
   TextInputConf,
+  timeFormat,
   YesNoInputConf,
 } from '@flumens';
 import { IonIcon } from '@ionic/react';
 import config from 'common/config';
 import mothTrap from 'common/images/moth-inside-icon.svg';
-import Occurrence from 'common/models/occurrence';
+import Occurrence, { Taxon } from 'common/models/occurrence';
 import Sample from 'common/models/sample';
 import appModel from 'models/app';
 import { Data as LocationData } from 'models/location';
@@ -39,7 +40,7 @@ import {
   Survey,
   appVersionAttr,
   commentAttr,
-  dateAttr as commonDateAttr,
+  dateAttr,
   inferAttrConfigTypes,
 } from 'Survey/common/config';
 
@@ -47,57 +48,13 @@ const FIELD_CODE_REGEX = /^[A-Z]\d{1,2}$/;
 
 const mothTrapIcon = (<IonIcon src={mothTrap} className="size-6" />) as any;
 
-const dateAttr = {
-  id: 'date',
-  menuProps: { parse: 'date', icon: calendarOutline },
-  pageProps: {
-    attrProps: {
-      input: 'date',
-      inputProps: () => ({
-        max: () => new Date(),
-        label: 'Date',
-        icon: calendarOutline,
-        autoFocus: false,
-        presentation: 'date',
-        locale: appModel.data.language || undefined,
-      }),
-    },
-  },
-  remote: commonDateAttr.remote,
-} as const;
-
-const dateTimeAttr = {
-  id: 'date',
-  menuProps: {
-    label: 'Date and time',
-    parse: 'date',
-    icon: calendarOutline,
-  },
-  pageProps: {
-    attrProps: {
-      input: 'date',
-      inputProps: () => ({
-        max: () => new Date(),
-        label: 'Date',
-        icon: calendarOutline,
-        autoFocus: false,
-        presentation: 'date',
-        locale: appModel.data.language || undefined,
-      }),
-    },
-  },
-  remote: {
-    values: (date: number, submission: any) => {
-      Object.assign(submission.values, {
-        // TODO: add time
-      });
-      return dateFormat.format(new Date(date));
-    },
-  },
+export const timeAttr = {
+  id: 'smpAttr:2035',
+  remote: { values: (date: number) => timeFormat.format(new Date(date)) },
 } as const;
 
 export const trapLocationsAttr = {
-  id: 'smpAttr:11991',
+  id: 'smpAttr:2036',
   type: 'numberInput',
   title: 'Trap locations',
   appearance: 'counter',
@@ -107,7 +64,7 @@ export const trapLocationsAttr = {
 } as const satisfies NumberInputConf;
 
 export const trapsAttr = {
-  id: 'smpAttr:9991',
+  id: 'smpAttr:2037',
   type: 'numberInput',
   title: 'Total no. of traps',
   appearance: 'counter',
@@ -117,7 +74,7 @@ export const trapsAttr = {
 } as const satisfies NumberInputConf;
 
 export const trapsCarrionAttr = {
-  id: 'smpAttr:9992',
+  id: 'smpAttr:2038',
   type: 'numberInput',
   title: 'Traps (carrion)',
   appearance: 'counter',
@@ -127,7 +84,7 @@ export const trapsCarrionAttr = {
 } as const satisfies NumberInputConf;
 
 export const trapsFruitAttr = {
-  id: 'smpAttr:9993',
+  id: 'smpAttr:2039',
   type: 'numberInput',
   title: 'Traps (fruit)',
   appearance: 'counter',
@@ -137,7 +94,7 @@ export const trapsFruitAttr = {
 } as const satisfies NumberInputConf;
 
 export const trapsOtherAttr = {
-  id: 'smpAttr:9994',
+  id: 'smpAttr:2040',
   type: 'numberInput',
   title: 'Traps (other)',
   appearance: 'counter',
@@ -147,7 +104,7 @@ export const trapsOtherAttr = {
 } as const satisfies NumberInputConf;
 
 export const numberOfDaysAttr = {
-  id: 'smpAttr:9995',
+  id: 'smpAttr:2041',
   type: 'numberInput',
   title: 'No. of days',
   appearance: 'counter',
@@ -157,7 +114,7 @@ export const numberOfDaysAttr = {
 } as const satisfies NumberInputConf;
 
 export const firstSampleDateAttr = {
-  id: 'smpAttr:9996',
+  id: 'smpAttr:2042',
   type: 'textInput',
   title: 'First sample date',
   container: 'inline',
@@ -165,7 +122,7 @@ export const firstSampleDateAttr = {
 } as const satisfies TextInputConf;
 
 export const lastSampleDateAttr = {
-  id: 'smpAttr:9997',
+  id: 'smpAttr:2043',
   type: 'textInput',
   title: 'Last sample date',
   container: 'inline',
@@ -173,7 +130,7 @@ export const lastSampleDateAttr = {
 } as const satisfies TextInputConf;
 
 export const collectorsAttr = {
-  id: 'smpAttr:9998',
+  id: 'smpAttr:2044',
   type: 'textInput',
   title: 'Collectors',
   container: 'inline',
@@ -181,7 +138,7 @@ export const collectorsAttr = {
 } as const satisfies TextInputConf;
 
 export const eventTypeAttr = {
-  id: 'smpAttr:9999',
+  id: 'smpAttr:2045',
   type: 'textInput',
   title: 'Event type',
   container: 'inline',
@@ -189,7 +146,7 @@ export const eventTypeAttr = {
 } as const satisfies TextInputConf;
 
 export const samplingDesignAttr = {
-  id: 'smpAttr:99910',
+  id: 'smpAttr:2046',
   type: 'textInput',
   title: 'Sampling design',
   container: 'inline',
@@ -197,7 +154,7 @@ export const samplingDesignAttr = {
 } as const satisfies TextInputConf;
 
 export const carrionBaitAttr = {
-  id: 'smpAttr:99911',
+  id: 'smpAttr:2047',
   type: 'textInput',
   title: 'Carrion bait',
   container: 'inline',
@@ -205,7 +162,7 @@ export const carrionBaitAttr = {
 } as const satisfies TextInputConf;
 
 export const fieldCodeStartAttr = {
-  id: 'smpAttr:99912',
+  id: 'smpAttr:2048',
   type: 'textInput',
   title: 'Field code',
   container: 'inline',
@@ -214,34 +171,34 @@ export const fieldCodeStartAttr = {
 } as const satisfies TextInputConf;
 
 export const stratumAttr = {
-  id: 'smpAttr:99913',
+  id: 'smpAttr:2049',
   type: 'choiceInput',
   title: 'Stratum',
   appearance: 'button',
   prefix: <IonIcon src={layersOutline} className="size-6" />,
   choices: [
-    { title: 'Understorey', dataName: '1' },
-    { title: 'Canopy', dataName: '2' },
-    { title: 'Midstory', dataName: '3' },
-    { title: 'Other', dataName: '4' },
+    { title: 'Understorey', dataName: '24581' },
+    { title: 'Canopy', dataName: '24582' },
+    { title: 'Midstory', dataName: '24583' },
+    { title: 'Other', dataName: '24584' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const baitAttr = {
-  id: 'smpAttr:99914',
+  id: 'smpAttr:2050',
   type: 'choiceInput',
   title: 'Bait',
   appearance: 'button',
   prefix: <IonIcon src={clipboardOutline} className="size-6" />,
   choices: [
-    { title: 'Carrion', dataName: '99903' },
-    { title: 'Banana', dataName: '99904' },
-    { title: 'Other', dataName: '99905' },
+    { title: 'Carrion', dataName: '24585' },
+    { title: 'Banana', dataName: '24586' },
+    { title: 'Other', dataName: '24587' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const otherBaitAttr = {
-  id: 'smpAttr:99915',
+  id: 'smpAttr:2051',
   type: 'textInput',
   title: 'Other bait',
   container: 'inline',
@@ -266,20 +223,20 @@ export const trapCommentAttr = {
 } as const satisfies TextInputConf;
 
 export const weatherAttr = {
-  id: 'smpAttr:99916',
+  id: 'smpAttr:2052',
   type: 'choiceInput',
   title: 'Weather',
   appearance: 'button',
   prefix: <IonIcon src={cloudyOutline} className="size-6" />,
   choices: [
-    { title: 'Sunny', dataName: '99906' },
-    { title: 'Cloudy', dataName: '99908' },
-    { title: 'Rainy', dataName: '99909' },
+    { title: 'Sunny', dataName: '24588' },
+    { title: 'Cloudy', dataName: '24589' },
+    { title: 'Rainy', dataName: '24590' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const humidityAttr = {
-  id: 'smpAttr:99917',
+  id: 'smpAttr:2053',
   type: 'numberInput',
   title: 'Humidity',
   appearance: 'counter',
@@ -290,7 +247,7 @@ export const humidityAttr = {
 } as const satisfies NumberInputConf;
 
 export const temperatureAttr = {
-  id: 'smpAttr:99918',
+  id: 'smpAttr:2054',
   type: 'numberInput',
   title: 'Temperature',
   appearance: 'counter',
@@ -300,7 +257,7 @@ export const temperatureAttr = {
 } as const satisfies NumberInputConf;
 
 export const temperatureInTrapAttr = {
-  id: 'smpAttr:99919',
+  id: 'smpAttr:2055',
   type: 'numberInput',
   title: 'Temp. in trap',
   appearance: 'counter',
@@ -311,25 +268,28 @@ export const temperatureInTrapAttr = {
 
 const taxonAttr = {
   id: 'taxon',
-  remote: { id: 'taxa_taxon_list_id' },
+  remote: {
+    id: 'taxa_taxon_list_id',
+    values: (taxon: Taxon) => taxon.warehouseId,
+  },
 } as const;
 
 export const sexAttr = {
-  id: 'occAttr:99920',
+  id: 'occAttr:1239',
   type: 'choiceInput',
   title: 'Sex',
   appearance: 'button',
   prefix: <IonIcon src={maleOutline} className="size-6" />,
   choices: [
     { title: 'Not recorded', dataName: '' },
-    { title: 'Male', dataName: '99913' },
-    { title: 'Female', dataName: '99914' },
+    { title: 'Male', dataName: '24592' },
+    { title: 'Female', dataName: '24593' },
   ],
 } as const satisfies ChoiceInputConf;
 
-export const RECAPTURED = '1';
+export const RECAPTURED = 't';
 export const recaptureAttr = {
-  id: 'occAttr:99922',
+  id: 'occAttr:1240',
   type: 'yesNoInput',
   title: 'Recaptured',
   prefix: <IonIcon src={refreshOutline} className="size-6" />,
@@ -337,44 +297,44 @@ export const recaptureAttr = {
 } as const satisfies YesNoInputConf;
 
 export const feedingAttr = {
-  id: 'occAttr:99926',
+  id: 'occAttr:1241',
   type: 'yesNoInput',
   title: 'Feeding',
   prefix: <IonIcon src={nutritionOutline} className="size-6" />,
   choices: [{ dataName: '' }, { dataName: 't' }],
 } as const satisfies YesNoInputConf;
 
-const RELEASED = '99916';
+const RELEASED = '24594';
 
 export const fateAttr = {
-  id: 'occAttr:99923',
+  id: 'occAttr:1242',
   type: 'choiceInput',
   title: 'Fate',
   appearance: 'button',
   prefix: <IonIcon src={flagOutline} className="size-6" />,
   choices: [
     { title: 'Released', dataName: RELEASED },
-    { title: 'Collected', dataName: '99917' },
-    { title: 'Died', dataName: '99918' },
+    { title: 'Collected', dataName: '24595' },
+    { title: 'Died', dataName: '24596' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const ageAttr = {
-  id: 'occAttr:99924',
+  id: 'occAttr:1243',
   type: 'choiceInput',
   title: 'Age',
   appearance: 'button',
   prefix: <IonIcon src={timeOutline} className="size-6" />,
   choices: [
     { title: 'Not recorded', dataName: '' },
-    { title: 'New', dataName: '99919' },
-    { title: 'Intermediate', dataName: '99920' },
-    { title: 'Old', dataName: '99921' },
+    { title: 'New', dataName: '24598' },
+    { title: 'Intermediate', dataName: '24599' },
+    { title: 'Old', dataName: '24600' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const fieldCodeAttr = {
-  id: 'occAttr:99912',
+  id: 'occAttr:1244',
   type: 'textInput',
   title: 'Code',
   container: 'inline',
@@ -383,7 +343,7 @@ export const fieldCodeAttr = {
 } as const satisfies TextInputConf;
 
 export const wingLengthAttr = {
-  id: 'occAttr:99925',
+  id: 'occAttr:1245',
   type: 'numberInput',
   title: 'Wing length',
   appearance: 'counter',
@@ -430,7 +390,7 @@ const getNextSpeciesCode = (subSample: Sample<Data>) => {
 
 const SURVEY_ID = 1032;
 const SURVEY_NAME = 'bait-trap';
-const SURVEY_FORM = 'ebms-bait-trap'; // TODO:
+const SURVEY_FORM = 'enter-bait-trap-records';
 
 const attrs = {
   [dateAttr.id]: dateAttr,
@@ -441,8 +401,14 @@ const attrs = {
   [trapsFruitAttr.id]: { block: trapsFruitAttr },
   [trapsOtherAttr.id]: { block: trapsOtherAttr },
   [numberOfDaysAttr.id]: { block: numberOfDaysAttr },
-  [firstSampleDateAttr.id]: { block: firstSampleDateAttr },
-  [lastSampleDateAttr.id]: { block: lastSampleDateAttr },
+  [firstSampleDateAttr.id]: {
+    block: firstSampleDateAttr,
+    remote: { values: (date: number) => dateFormat.format(new Date(date)) },
+  },
+  [lastSampleDateAttr.id]: {
+    block: lastSampleDateAttr,
+    remote: { values: (date: number) => dateFormat.format(new Date(date)) },
+  },
   [collectorsAttr.id]: { block: collectorsAttr },
   [eventTypeAttr.id]: { block: eventTypeAttr },
   [samplingDesignAttr.id]: { block: samplingDesignAttr },
@@ -451,7 +417,8 @@ const attrs = {
 } as const;
 
 const subSmpAttrs = {
-  [dateAttr.id]: dateTimeAttr,
+  [dateAttr.id]: dateAttr,
+  [timeAttr.id]: timeAttr as any,
   [stratumAttr.id]: { block: stratumAttr },
   [baitAttr.id]: { block: baitAttr },
   [otherBaitAttr.id]: { block: otherBaitAttr },
@@ -513,12 +480,15 @@ const survey = {
     },
 
     create({ location }) {
+      const now = new Date().toISOString();
+
       const sample = new Sample<SubSmpData>({
         metadata: { survey: SURVEY_NAME },
         data: {
           surveyId: SURVEY_ID,
           sampleMethodId: 24553, // bait-trap check
-          date: new Date().toISOString(),
+          date: now,
+          [timeAttr.id]: now,
           location,
         },
       });
@@ -549,16 +519,20 @@ const survey = {
       .safeParse(data).error,
 
   create() {
+    const now = new Date().toISOString();
+
     const sample = new Sample<Data>({
       metadata: { survey: SURVEY_NAME },
       data: {
         surveyId: SURVEY_ID,
-        date: new Date().toISOString(),
+        date: now,
+        [firstSampleDateAttr.id]: now,
+        [lastSampleDateAttr.id]: now,
         sampleMethodId: 24552, // bait-trap
         training: appModel.data.useTraining,
         inputForm: SURVEY_FORM,
         [appVersionAttr.id]: config.version,
-        [eventTypeAttr.id]: 'bimonthly monitoring',
+        [eventTypeAttr.id]: 'Bimonthly monitoring',
         [samplingDesignAttr.id]: 'Paired understorey and canopy traps',
         [carrionBaitAttr.id]: 'Fish',
       },
