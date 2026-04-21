@@ -2533,6 +2533,10 @@ msgid "Identify"
 msgstr "Определи вида"
 
 # Moth survey button label
+msgid "Not classified"
+msgstr ""
+
+# Moth survey button label
 msgid "Identify All"
 msgstr "Определи всички"
 

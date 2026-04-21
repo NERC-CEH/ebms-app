@@ -255,7 +255,8 @@ const HomeController = () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
-    await occ.identify();
+    const identified = await occ.identify().catch(toast.error);
+    if (!identified) return;
 
     mergeOccurrence(occ);
   };
@@ -301,7 +302,9 @@ const HomeController = () => {
 
       sample.occurrences.push(newOccurrence);
       sample.save();
+
       if (!useImageIdentifier) return;
+
       onIdentifyOccurrence(newOccurrence);
     });
   };

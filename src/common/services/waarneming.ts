@@ -88,7 +88,6 @@ export default async function identify(url: string): Promise<Suggestion[]> {
     return suggestions;
   } catch (e: any) {
     console.error(e);
+    throw new Error('Failed to identify image');
   }
-
-  return [];
 }

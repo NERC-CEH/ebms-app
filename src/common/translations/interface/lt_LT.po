@@ -2482,6 +2482,10 @@ msgid "Identify"
 msgstr "Identifikuoti"
 
 # Moth survey button label
+msgid "Not classified"
+msgstr ""
+
+# Moth survey button label
 msgid "Identify All"
 msgstr "Identifikuoti visus"
 

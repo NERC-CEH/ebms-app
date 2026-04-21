@@ -7,7 +7,6 @@ import {
   IonItem,
   IonItemOptions,
   IonItemOption,
-  IonLabel,
   IonSpinner,
   IonIcon,
   NavContext,
@@ -116,7 +115,7 @@ const UnidentifiedSpeciesEntry = ({
         {getProfilePhoto()}
 
         <div className="flex w-full items-center justify-between gap-2">
-          <IonLabel>{speciesName}</IonLabel>
+          <div className="ml-3 opacity-70">{speciesName}</div>
           {!identifying && (
             <div className="flex w-full items-center justify-end gap-2">
               {!hasSpeciesPhoto && (

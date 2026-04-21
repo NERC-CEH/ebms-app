@@ -2361,6 +2361,10 @@ msgid "Identify"
 msgstr "識別する"
 
 # Moth survey button label
+msgid "Not classified"
+msgstr ""
+
+# Moth survey button label
 msgid "Identify All"
 msgstr "すべてを識別"
 

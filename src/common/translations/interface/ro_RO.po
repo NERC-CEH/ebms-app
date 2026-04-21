@@ -2513,6 +2513,10 @@ msgid "Identify"
 msgstr "Identifica"
 
 # Moth survey button label
+msgid "Not classified"
+msgstr ""
+
+# Moth survey button label
 msgid "Identify All"
 msgstr "Identificați toți"
 

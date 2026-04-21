@@ -137,12 +137,14 @@ export default class Media extends MediaModel<Attrs> {
       this.data.species = suggestions;
 
       this.parent!.save();
+
+      this.identification.identifying = false;
+
+      return this.data.species?.[0];
     } catch (error) {
+      this.identification.identifying = false;
       console.error(error);
+      throw error;
     }
-
-    this.identification.identifying = false;
-
-    return this.data.species?.[0];
   }
 }

@@ -2492,6 +2492,10 @@ msgid "Identify"
 msgstr "Határoz"
 
 # Moth survey button label
+msgid "Not classified"
+msgstr ""
+
+# Moth survey button label
 msgid "Identify All"
 msgstr "Összes határozása"
 

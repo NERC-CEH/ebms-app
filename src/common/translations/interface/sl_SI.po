@@ -2455,6 +2455,10 @@ msgid "Identify"
 msgstr "Določi"
 
 # Moth survey button label
+msgid "Not classified"
+msgstr ""
+
+# Moth survey button label
 msgid "Identify All"
 msgstr "Določi vse"
 

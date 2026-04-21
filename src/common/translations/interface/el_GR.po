@@ -2512,6 +2512,10 @@ msgid "Identify"
 msgstr "Αναγνώριση"
 
 # Moth survey button label
+msgid "Not classified"
+msgstr ""
+
+# Moth survey button label
 msgid "Identify All"
 msgstr "Αναγνώριση Όλων"
 
