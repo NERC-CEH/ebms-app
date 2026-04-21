@@ -132,12 +132,14 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
       const locationName = trap?.data?.name;
 
       return (
-        <>
-          {!!locationName && (
-            <div className="text-sm line-clamp-1 max-w-1/2">{locationName}</div>
-          )}
+        <div className="flex justify-start items-center gap-3">
           {!!speciesCount && speciesCountBadge}
-        </>
+          {!!locationName && (
+            <div className="text-sm text-nowrap overflow-hidden text-ellipsis max-w-1/2">
+              {locationName}
+            </div>
+          )}
+        </div>
       );
     }
 
