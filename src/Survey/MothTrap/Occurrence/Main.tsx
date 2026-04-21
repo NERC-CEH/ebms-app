@@ -16,7 +16,6 @@ type Props = {
 };
 
 const EditOccurrence = ({ occurrence }: Props) => {
-  const { useImageIdentifier } = appModel.data;
   const match = useRouteMatch();
   const { isDisabled } = occurrence;
   const baseURL = match.url;
@@ -83,7 +82,7 @@ const EditOccurrence = ({ occurrence }: Props) => {
         <div className="rounded-list">
           <PhotoPicker
             model={occurrence}
-            useImageIdentifier={useImageIdentifier}
+            useClassifier={appModel.data.useImageIdentifier}
           />
         </div>
       </IonList>

@@ -2547,6 +2547,30 @@ msgstr ""
 msgid "Identify All"
 msgstr "Bestimme alle"
 
+# AI suggestions
+msgid "Note that AI confidence levels are not absolute."
+msgstr ""
+
+# AI suggestions
+msgid "Supplement identifications with additional evidence where possible."
+msgstr ""
+
+# AI suggestions
+msgid "Suggestions"
+msgstr ""
+
+# AI suggestions
+msgid "Higher classifier confidence."
+msgstr ""
+
+# AI suggestions
+msgid "Moderate classifier confidence."
+msgstr ""
+
+# AI suggestions
+msgid "Lower classifier confidence."
+msgstr ""
+
 # Moth survey image classifier disabled info header
 msgid "Image identification"
 msgstr "Bilderkennung"
@@ -3463,6 +3487,10 @@ msgstr "Listensortierung geändert zu: alphabetisch"
 # Change list order toast message
 msgid "Changed list ordering to last added."
 msgstr "Listensortierung geändert zu: zuletzt hinzugefügt"
+
+# Change list order toast message
+msgid "Changed list ordering to last edited."
+msgstr ""
 
 # Record verification status
 msgid "Unconfirmed"

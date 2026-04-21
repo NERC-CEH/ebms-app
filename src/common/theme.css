@@ -156,6 +156,10 @@
   --ion-toolbar-color: #fff;
   --ion-toolbar-color-activated: #fff;
 
+  --classifier-success: oklch(from var(--color-success-800) l c h / 70%);
+  --classifier-plausible: var(--color-warning-600);
+  --classifier-unlikely: var(--color-danger);
+
   --form-value-color: var(--color-tertiary-800);
   --ion-font-family: 'Quicksand';
 }

@@ -130,12 +130,24 @@ const Taxon = () => {
 
   const recordedTaxa = [...species];
 
+  const byProbabilityDesc = (
+    a: { probability?: number },
+    b: { probability?: number }
+  ) => (b.probability ?? 0) - (a.probability ?? 0);
+
+  const suggestions = occurrence?.media.flatMap(m => m.data.species) || [];
+  const uniqueSuggestions = new Map(
+    suggestions.map(s => [s.warehouseId, s])
+  ).values();
+  const sortedSuggestions = [...uniqueSuggestions].sort(byProbabilityDesc);
+
   return (
     <Page id="moth-survey-taxasearch">
       <Header title="Species" />
       <Main>
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}
+          suggestedSpecies={sortedSuggestions}
           recordedTaxa={recordedTaxa}
           speciesGroups={[groups.moths.id]}
           useDayFlyingMothsOnly={false}

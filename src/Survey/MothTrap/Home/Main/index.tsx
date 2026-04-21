@@ -195,7 +195,7 @@ const HomeMain = ({
     return sample.occurrences.filter(unIdentifiedSpecies).length >= 5;
   };
 
-  const getUndentifiedspeciesList = () => {
+  const getUnidentifiedSpeciesList = () => {
     const byUnknownSpecies = (occ: Occurrence) =>
       !occ.data.taxon ||
       occ.data?.taxon.warehouseId === UNKNOWN_SPECIES_PREFFERD_ID;
@@ -239,7 +239,7 @@ const HomeMain = ({
                 color="secondary"
                 className="py-1 text-sm"
               >
-                <T>Identify All</T>
+                Identify All
               </Button>
             )}
           </div>
@@ -355,7 +355,7 @@ const HomeMain = ({
         <div className="mx-5 my-8 flex items-center justify-center gap-4">
           <Button
             color="primary"
-            className="py-2"
+            className="py-2 text-nowrap"
             onPress={navigateToTaxonSearch}
             onLongPress={showCopyOptionsWrap}
             prefix={<IonIcon src={addCircleOutline} className="size-5" />}
@@ -395,7 +395,7 @@ const HomeMain = ({
         </div>
       )}
 
-      {getUndentifiedspeciesList()}
+      {getUnidentifiedSpeciesList()}
 
       {getSpeciesList()}
     </Main>

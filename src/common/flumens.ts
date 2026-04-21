@@ -87,7 +87,10 @@ export { default as ImageWithBackground } from '@flumens/ionic/dist/components/I
 export { default as Gallery } from '@flumens/ionic/dist/components/Gallery';
 export { default as ModalHeader } from '@flumens/ionic/dist/components/ModalHeader';
 export { default as Section } from '@flumens/ionic/dist/components/Section';
-export { default as PhotoPicker } from '@flumens/ionic/dist/components/PhotoPicker';
+export {
+  default as PhotoPicker,
+  usePhotoDeletePrompt,
+} from '@flumens/ionic/dist/components/PhotoPicker';
 export { default as MenuAttrItem } from '@flumens/ionic/dist/components/MenuAttrItem';
 export {
   default as MenuAttrItemFromModel,

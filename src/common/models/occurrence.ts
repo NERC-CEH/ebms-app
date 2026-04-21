@@ -16,6 +16,8 @@ import Sample from './sample';
 
 export const DRAGONFLY_GROUP = speciesGroups.dragonflies.id;
 
+export { type Suggestion as ClassifierSuggestion } from 'common/services/waarneming';
+
 const PAINTED_LADY_OCCURRENCE = 432422;
 
 type ClassifierAttributes = {

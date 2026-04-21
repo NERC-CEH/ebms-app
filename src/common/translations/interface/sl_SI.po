@@ -2462,6 +2462,30 @@ msgstr ""
 msgid "Identify All"
 msgstr "Določi vse"
 
+# AI suggestions
+msgid "Note that AI confidence levels are not absolute."
+msgstr ""
+
+# AI suggestions
+msgid "Supplement identifications with additional evidence where possible."
+msgstr ""
+
+# AI suggestions
+msgid "Suggestions"
+msgstr ""
+
+# AI suggestions
+msgid "Higher classifier confidence."
+msgstr ""
+
+# AI suggestions
+msgid "Moderate classifier confidence."
+msgstr ""
+
+# AI suggestions
+msgid "Lower classifier confidence."
+msgstr ""
+
 # Moth survey image classifier disabled info header
 msgid "Image identification"
 msgstr "Določitev vrste po fotografiji"
@@ -3348,6 +3372,10 @@ msgstr ""
 
 # Change list order toast message
 msgid "Changed list ordering to last added."
+msgstr ""
+
+# Change list order toast message
+msgid "Changed list ordering to last edited."
 msgstr ""
 
 # Record verification status

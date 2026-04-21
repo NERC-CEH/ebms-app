@@ -1,12 +1,15 @@
 import type { ReactNode } from 'react';
 import i18n from 'i18next';
-import { Button } from 'common/flumens';
+import { Trans as T } from 'react-i18next';
+import { Button, hashCode } from 'common/flumens';
+import { ClassifierSuggestion } from 'common/models/occurrence';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Species from './components/Species';
 import { getTaxonName, type SuggestionResult } from './types';
 
 type SuggestionsProps = {
   searchResults?: SuggestionResult[];
+  suggestedSpecies?: ClassifierSuggestion[];
   searchPhrase: string;
   onSpeciesSelected: (species: SuggestionResult, edit?: boolean) => void;
   onOutsideSearch: () => void;
@@ -46,57 +49,84 @@ function deDuplicateSuggestions(
   return results;
 }
 
+const getSearchInfo = (): ReactNode => (
+  <InfoBackgroundMessage className="text-left" skipTranslation>
+    {i18n.t(
+      'For quicker searching of the taxa you can use different shortcuts. For example, to find'
+    )}{' '}
+    <i>Lopinga achine</i> {i18n.t('you can type in the search bar')}
+    :
+    <br />
+    <br />
+    <i>lop ach</i>
+    <br />
+    <i>lopac</i>
+    <br />
+    <i>lop .ne</i>
+    <br />
+    <i>. achine</i>
+  </InfoBackgroundMessage>
+);
+
 const Suggestions = ({
   searchResults,
+  suggestedSpecies,
   searchPhrase,
   onSpeciesSelected,
   hasProjectsOrSiteLists,
   onOutsideSearch,
 }: SuggestionsProps) => {
-  if (!searchResults) {
-    return (
-      <InfoBackgroundMessage className="text-left" skipTranslation>
-        {i18n.t(
-          'For quicker searching of the taxa you can use different shortcuts. For example, to find'
-        )}{' '}
-        <i>Lopinga achine</i> {i18n.t('you can type in the search bar')}
-        :
-        <br />
-        <br />
-        <i>lop ach</i>
-        <br />
-        <i>lopac</i>
-        <br />
-        <i>lop .ne</i>
-        <br />
-        <i>. achine</i>
-      </InfoBackgroundMessage>
+  const getSuggestedSpecies = (species: ClassifierSuggestion[]) => {
+    const getSuggestion = (s: ClassifierSuggestion) => (
+      <Species
+        key={hashCode(JSON.stringify(s))}
+        species={s}
+        probability={s.probability}
+        onSelect={onSpeciesSelected}
+      />
     );
-  }
 
-  let suggestionsList: ReactNode;
-  if (!searchResults.length) {
-    suggestionsList = (
+    return (
       <>
-        <InfoBackgroundMessage className="mb-2">
-          No species found with this name
-        </InfoBackgroundMessage>
-
-        {hasProjectsOrSiteLists && (
-          <InfoBackgroundMessage className="mt-0">
-            Search outside my current project or site list.
-            <Button
-              className="mx-auto py-1.5 px-4 mt-3 mb-2 text-sm"
-              onPress={onOutsideSearch}
-            >
-              Search
-            </Button>
-          </InfoBackgroundMessage>
-        )}
+        <div>{/* quick hack to fix odd css style */}</div>
+        <h3>
+          <T>Suggestions</T>:
+        </h3>
+        {species.map(getSuggestion)}
       </>
     );
-  } else {
-    const deDuped = deDuplicateSuggestions(searchResults);
+  };
+
+  const getAllSuggestions = () => {
+    if (!searchResults) {
+      if (suggestedSpecies?.length)
+        return getSuggestedSpecies(suggestedSpecies);
+
+      return getSearchInfo();
+    }
+
+    const noSpeciesFound = searchResults.length === 0;
+    if (noSpeciesFound) {
+      return (
+        <>
+          <InfoBackgroundMessage className="mb-2">
+            No species found with this name
+          </InfoBackgroundMessage>
+
+          {hasProjectsOrSiteLists && (
+            <InfoBackgroundMessage className="mt-0">
+              Search outside my current project or site list.
+              <Button
+                className="mx-auto py-1.5 px-4 mt-3 mb-2 text-sm"
+                onPress={onOutsideSearch}
+              >
+                Search
+              </Button>
+            </InfoBackgroundMessage>
+          )}
+        </>
+      );
+    }
 
     const getSpeciesEntry = (species: SuggestionResult) => (
       <Species
@@ -106,10 +136,12 @@ const Suggestions = ({
         onSelect={onSpeciesSelected}
       />
     );
-    suggestionsList = deDuped.map(getSpeciesEntry);
-  }
 
-  return <div className="px-2">{suggestionsList}</div>;
+    const deDuped = deDuplicateSuggestions(searchResults);
+    return deDuped.map(getSpeciesEntry);
+  };
+
+  return <div className="px-2">{getAllSuggestions()}</div>;
 };
 
 export default Suggestions;

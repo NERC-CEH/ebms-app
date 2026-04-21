@@ -33,6 +33,7 @@ export type Suggestion = CamelizeKeys<DTO> & {
   warehouseId: number;
   foundInName: 'scientificName' | 'commonName';
   scientificName: string;
+  taxonGroupId: number;
   commonName?: string;
 };
 
@@ -58,13 +59,15 @@ export default async function identify(url: string): Promise<Suggestion[]> {
   try {
     const response: AxiosResponse<DTO[]> = await axios(options);
 
-    const isValidDTO = (sp: DTO) => sp.taxa_taxon_list_id && sp.taxon;
+    const isValidDTO = (sp: DTO) =>
+      sp.taxa_taxon_list_id && sp.taxon && sp.probability > 0;
 
     const fromDTO = (sp: DTO) => ({
       ...getCamelCaseObj(sp),
       warehouseId: parseInt(sp.taxa_taxon_list_id, 10),
       scientificName: sp.taxon,
       foundInName: 'scientificName',
+      taxonGroupId: 114,
     });
 
     const normalized = response.data.filter(isValidDTO).map(fromDTO);

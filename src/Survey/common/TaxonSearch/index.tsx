@@ -6,7 +6,7 @@ import { getLanguageIso } from 'common/config/languages';
 import groups from 'common/data/groups';
 import speciesSearch, { type SearchResult } from 'common/helpers/taxonSearch';
 import taxonLists from 'common/models/collections/taxonLists';
-import { Taxon } from 'common/models/occurrence';
+import { ClassifierSuggestion, Taxon } from 'common/models/occurrence';
 import { taxaStore } from 'common/models/store';
 import appModel from 'models/app';
 import MissingListsMessage from './components/MissingListsMessage';
@@ -147,10 +147,12 @@ type Props = {
   useDayFlyingMothsOnly?: boolean;
   taxonListCids?: string[];
   speciesGroups?: number[];
+  suggestedSpecies?: ClassifierSuggestion[];
 };
 
 const TaxonSearch = ({
   recordedTaxa,
+  suggestedSpecies,
   onSpeciesSelected,
   speciesGroups,
   useDayFlyingMothsOnly,
@@ -240,6 +242,7 @@ const TaxonSearch = ({
 
       <Suggestions
         searchResults={searchResults || defaultSpecies}
+        suggestedSpecies={suggestedSpecies}
         searchPhrase={searchPhrase}
         onSpeciesSelected={onSpeciesSelected}
         onOutsideSearch={onOutsideSearch}

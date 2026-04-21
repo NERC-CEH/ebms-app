@@ -31,6 +31,10 @@ export default class Media extends MediaModel<Attrs> {
     });
   }
 
+  get isIdentifying() {
+    return this.identification.identifying;
+  }
+
   async destroy(silent?: boolean) {
     console.log('MediaModel: destroying.');
 

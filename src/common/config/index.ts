@@ -23,6 +23,9 @@ const config = {
   // AI classifier
   classifierID: 20098,
 
+  positiveThreshold: 0.7,
+  possibleThreshold: 0.4,
+
   sentryDSN: process.env.APP_SENTRY_KEY as string,
 
   feedbackEmail: 'apps%40ceh.ac.uk',
