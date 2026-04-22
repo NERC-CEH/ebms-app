@@ -1,4 +1,8 @@
-import { checkmarkOutline, pinOutline } from 'ionicons/icons';
+import {
+  arrowForwardOutline,
+  checkmarkOutline,
+  pinOutline,
+} from 'ionicons/icons';
 import { twMerge } from 'tailwind-merge';
 import { IonIcon } from '@ionic/react';
 import { Badge, isValidLocation } from 'common/flumens';
@@ -7,9 +11,10 @@ type Props = {
   name?: string;
   longitude?: number;
   latitude?: number;
-  onClick: any;
+  onClick: () => void;
   isSelected: boolean;
   hasLists?: boolean;
+  distance?: number;
   className?: string;
 };
 
@@ -20,6 +25,7 @@ const Site = ({
   onClick,
   isSelected,
   hasLists,
+  distance,
   className,
 }: Props) => {
   const isValid = isValidLocation({
@@ -33,7 +39,7 @@ const Site = ({
       className={twMerge(
         'relative flex h-16 rounded-md border border-solid bg-white px-4 py-2 mb-2',
         isSelected
-          ? 'border-[var(--form-value-color)] text-[var(--form-value-color)]'
+          ? 'border-(--form-value-color) text-(--form-value-color)'
           : 'border-neutral-200',
         className
       )}
@@ -41,9 +47,9 @@ const Site = ({
       <div
         className={twMerge(
           'absolute left-0 top-0 h-full w-full opacity-0',
-          'bg-[var(--form-value-color)]',
-          isSelected && 'opacity-[2%]',
-          'transition-[opacity] duration-150'
+          'bg-(--form-value-color)',
+          isSelected && 'opacity-2',
+          'transition-opacity duration-150'
         )}
       />
       <div className="flex w-full items-center justify-start gap-4">
@@ -60,6 +66,15 @@ const Site = ({
             {!!hasLists && <Badge size="small">Has species lists</Badge>}
           </div>
         </div>
+
+        {!isSelected && !!distance && (
+          <div className="flex flex-col items-end text-primary-700">
+            <IonIcon icon={arrowForwardOutline} />
+            <span className="whitespace-nowrap text-sm font-bold">
+              {distance} km
+            </span>
+          </div>
+        )}
 
         {isSelected && (
           <IonIcon

@@ -11,7 +11,6 @@ import {
 } from '@ionic/react';
 import InfoBackgroundMessage from 'common/Components/InfoBackgroundMessage';
 import Location from 'models/location';
-import Control from './Control';
 import SitesList from './SitesList';
 
 const SNAP_POSITIONS = [0, 0.3, 0.5, 1];
@@ -20,6 +19,7 @@ const DEFAULT_SNAP_POSITION = 0.3;
 type Props = {
   isOpen: boolean;
   hasGroup: boolean;
+  centroid: number[];
   selectedLocationId?: string | number;
   onSelectSite?: (loc?: Location) => void;
   userLocations: Location[];
@@ -29,6 +29,7 @@ type Props = {
 const Sites = ({
   isOpen,
   hasGroup,
+  centroid,
   onSelectSite,
   selectedLocationId,
   userLocations,
@@ -74,6 +75,7 @@ const Sites = ({
       <IonContent className="[--padding-top:20px]">
         {segment === 'user' && (
           <SitesList
+            centroid={centroid}
             locations={userLocations}
             onSelect={onSelectSite}
             selectedLocationId={selectedLocationId}
@@ -81,6 +83,7 @@ const Sites = ({
         )}
         {segment === 'group' && !!groupLocations.length && (
           <SitesList
+            centroid={centroid}
             locations={groupLocations}
             onSelect={onSelectSite}
             selectedLocationId={selectedLocationId}
@@ -95,7 +98,5 @@ const Sites = ({
     </IonModal>
   );
 };
-
-Sites.Control = Control;
 
 export default Sites;

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { ViewStateChangeEvent } from 'react-map-gl/mapbox';
 import { IonSpinner } from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
@@ -28,6 +30,7 @@ const MainSites = ({
   site,
 }: Props) => {
   let initialViewState;
+
   if (site) {
     initialViewState = {
       latitude: parseFloat(site.data.lat),
@@ -41,6 +44,15 @@ const MainSites = ({
     }
   }
 
+  const defaultCentroid = [
+    initialViewState?.latitude || 51,
+    initialViewState?.longitude || -1,
+  ];
+  const [currentMapCenter, setCurrentMapCenter] = useState(defaultCentroid);
+
+  const updateMapCenter = ({ viewState }: ViewStateChangeEvent) =>
+    setCurrentMapCenter([viewState.latitude, viewState.longitude]);
+
   return (
     <Main className="[--padding-bottom:0] [--padding-top:0]">
       <MapContainer
@@ -49,6 +61,7 @@ const MainSites = ({
         mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
         maxPitch={0}
         initialViewState={initialViewState}
+        onMoveEnd={updateMapCenter}
         maxZoom={19}
       >
         <GeolocateButton />
@@ -70,6 +83,7 @@ const MainSites = ({
       <SitesPanel
         isOpen
         hasGroup={hasGroup}
+        centroid={currentMapCenter}
         onSelectSite={onSelectSite}
         groupLocations={groupLocations}
         userLocations={userLocations}
