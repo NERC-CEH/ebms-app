@@ -93,9 +93,14 @@ const importDatabase = async () => {
   window.location.reload();
 };
 
-const onToggle = (setting: keyof Data, checked: boolean) => {
+type BooleanKeys<T> = keyof {
+  [K in keyof T as NonNullable<T[K]> extends boolean ? K : never]: T[K];
+};
+
+const onToggle = (setting: BooleanKeys<Data>, checked: boolean) => {
   console.log('Settings:Menu:Controller: setting toggled.');
-  appModel.data[setting] = checked;
+  const data = appModel.data as unknown as Record<string, boolean>;
+  data[setting as string] = checked;
   appModel.save();
 
   isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });

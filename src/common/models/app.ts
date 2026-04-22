@@ -56,6 +56,10 @@ export type Data = ModelData & {
    */
   taxonListsUpdatedAt?: number;
   taxonNameDisplay: TaxonNameDisplayType;
+  /** offset in minutes applied to default moth survey sunset start/end times */
+  mothSunsetOffset: number;
+  /** offset in minutes applied to default moth survey sunrise end time */
+  mothSunriseOffset: number;
 } & SurveyDraftKeys;
 
 const defaults: Data = {
@@ -82,6 +86,8 @@ const defaults: Data = {
   sendAnalytics: true,
   appSession: 0,
   taxonNameDisplay: 'commonScientific',
+  mothSunsetOffset: 0,
+  mothSunriseOffset: 0,
 
   // tips
   showCopyHelpTip: true,

@@ -2463,6 +2463,18 @@ msgstr "Configuració del mostreig d'arnes"
 msgid "Use image identification"
 msgstr "Usar la identificació d'imatge"
 
+# Moth settings page label
+msgid "No offset"
+msgstr ""
+
+# Moth settings page label
+msgid "Sunset offset"
+msgstr ""
+
+# Moth settings page label
+msgid "Sunrise offset"
+msgstr ""
+
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."

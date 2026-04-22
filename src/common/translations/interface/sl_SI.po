@@ -2444,6 +2444,18 @@ msgstr "Nastavitve popisa nočnih metuljev"
 msgid "Use image identification"
 msgstr "Uporabi slikovno identifikacijo"
 
+# Moth settings page label
+msgid "No offset"
+msgstr ""
+
+# Moth settings page label
+msgid "Sunset offset"
+msgstr ""
+
+# Moth settings page label
+msgid "Sunrise offset"
+msgstr ""
+
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."

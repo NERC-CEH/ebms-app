@@ -166,8 +166,13 @@ const getSetDefaultTime = (sample: Sample) => () => {
       location.latitude,
       location.longitude
     );
+
+    // apply user-configured sunset offset in minutes
+    const offsetMs = appModel.data.mothSunsetOffset * 60 * 1000;
+    const adjustedSunset = new Date(new Date(sunset).getTime() + offsetMs);
+
     // eslint-disable-next-line no-param-reassign
-    sample.data.surveyStartTime = new Date(sunset).toISOString(); // UTC time
+    sample.data.surveyStartTime = adjustedSunset.toISOString(); // UTC time
     sample.save();
   }
 
@@ -181,8 +186,12 @@ const getSetDefaultTime = (sample: Sample) => () => {
       location.longitude
     );
 
+    // apply user-configured sunrise offset in minutes
+    const offsetMs = appModel.data.mothSunriseOffset * 60 * 1000;
+    const adjustedSunrise = new Date(new Date(sunrise).getTime() + offsetMs);
+
     // eslint-disable-next-line no-param-reassign
-    sample.data.surveyEndTime = new Date(sunrise).toISOString(); // UTC time
+    sample.data.surveyEndTime = adjustedSunrise.toISOString(); // UTC time
 
     // trap emptying time defaults to sunrise
     // eslint-disable-next-line no-param-reassign

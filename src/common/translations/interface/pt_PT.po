@@ -2482,6 +2482,18 @@ msgstr "Definições da amostragem de borboletas noturnas"
 msgid "Use image identification"
 msgstr "Usar a identificação de imagens "
 
+# Moth settings page label
+msgid "No offset"
+msgstr ""
+
+# Moth settings page label
+msgid "Sunset offset"
+msgstr ""
+
+# Moth settings page label
+msgid "Sunrise offset"
+msgstr ""
+
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."

@@ -2482,6 +2482,18 @@ msgstr "Éjjelilepke-felmérés beállításai"
 msgid "Use image identification"
 msgstr "Automatikus fotóhatározás használata"
 
+# Moth settings page label
+msgid "No offset"
+msgstr ""
+
+# Moth settings page label
+msgid "Sunset offset"
+msgstr ""
+
+# Moth settings page label
+msgid "Sunrise offset"
+msgstr ""
+
 # Moth settings page info message
 msgid ""
 "We will help you to identify species using our species image classifier."
