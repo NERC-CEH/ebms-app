@@ -49,10 +49,10 @@ msgid "Lithuania"
 msgstr "Lietuva"
 
 msgid "Zambia"
-msgstr ""
+msgstr "Zambija"
 
 msgid "Georgia"
-msgstr ""
+msgstr "Gruzija"
 
 msgid "Spain"
 msgstr "Ispanija"
@@ -209,10 +209,10 @@ msgid "New Zealand"
 msgstr "Naujoji Zelandija"
 
 msgid "Australia"
-msgstr ""
+msgstr "Australija"
 
 msgid "Central America"
-msgstr ""
+msgstr "Centrinė Amerika"
 
 msgid "Montserrat"
 msgstr "Montseratas"
@@ -272,7 +272,7 @@ msgid "Credits"
 msgstr "Padėkos"
 
 msgid "Email"
-msgstr "El.paštas"
+msgstr "El. paštas"
 
 msgid "First Name"
 msgstr "Vardas"
@@ -287,7 +287,7 @@ msgid "Terms and Conditions"
 msgstr "Nuostatais"
 
 msgid "Reset"
-msgstr "Atstatyti "
+msgstr "Atstatyti"
 
 msgid "Records"
 msgstr "Įrašai"
@@ -299,7 +299,7 @@ msgid "Remove All Saved"
 msgstr "Ištrinti Visus Išsaugotus"
 
 msgid "Application"
-msgstr "Aplikacija"
+msgstr "Programėlė"
 
 msgid "Training Mode"
 msgstr "Mokymosi Režimas"
@@ -311,7 +311,7 @@ msgid "Welcome"
 msgstr "Sveiki"
 
 msgid "Lets start!"
-msgstr "Pirmyn"
+msgstr "Pradėkime!"
 
 msgid "TOP RECORDERS"
 msgstr "TOP VARTOTOJAI"
@@ -324,21 +324,22 @@ msgstr "Atgal"
 
 # part of survey navigation
 msgid "Exit"
-msgstr ""
+msgstr "Išeiti"
 
 # part of survey navigation
 msgid "Exit Survey"
-msgstr ""
+msgstr "Išeiti iš stebėjimo"
 
 # part of survey navigation
 msgid "Are you sure you want to leave? Your survey will be saved as a draft."
 msgstr ""
+"Ar tikrai norite išeiti? Jūsų stebėjimas bus išsaugotas kaip juodraštis."
 
 msgid "Menu"
 msgstr "Meniu"
 
 msgid "App"
-msgstr "Aplikacija"
+msgstr "Programėlė"
 
 msgid ""
 "We are very grateful for all the people that helped to create this app:"
@@ -371,7 +372,7 @@ msgstr ""
 "Greening Plans to Mainstream Biodiversity in Society\"."
 
 msgid "Home"
-msgstr "Namai"
+msgstr "Pagrindinis"
 
 msgid "Guide"
 msgstr "Gidas"
@@ -383,7 +384,7 @@ msgid "Offline"
 msgstr "Neprisijungęs"
 
 msgid "Sorry, looks like you're offline."
-msgstr "Įrenginys nėra prisijungęs prie interneto."
+msgstr "Atrodo, kad neturite interneto ryšio."
 
 msgid "OK"
 msgstr "Gerai"
@@ -395,10 +396,10 @@ msgid "Please wait..."
 msgstr "Prašome palaukti..."
 
 msgid "name is a required field"
-msgstr "vartotojo vardas negali būti tuščias"
+msgstr "vardas yra privalomas"
 
 msgid "password is a required field"
-msgstr "slaptažodis negali būti tuščias"
+msgstr "slaptažodis yra privalomas"
 
 msgid "Login error:"
 msgstr "Prisijungimo klaida:"
@@ -407,7 +408,7 @@ msgid "Failed to fetch"
 msgstr "Nepavyko prisijungti"
 
 msgid "Incorrect password or email."
-msgstr "Neteisingas prisijungimo vardas arba slaptažodis"
+msgstr "Neteisingas el. paštas arba slaptažodis"
 
 # Part of logout process
 msgid "Logout"
@@ -885,7 +886,7 @@ msgstr "Vieta"
 
 # GPS permissions message
 msgid "Location Required"
-msgstr "Vieta"
+msgstr "Reikalinga vieta"
 
 # GPS permissions message
 msgid ""
@@ -913,7 +914,7 @@ msgid "Duration"
 msgstr "Trukmė"
 
 msgid "Record ID"
-msgstr ""
+msgstr "Įrašo ID"
 
 msgid "Species"
 msgstr "Rūšis"
@@ -947,10 +948,10 @@ msgid "Previous survey draft exists, would you like to continue it?"
 msgstr "Rastas neužbaigtas įrašas, ar norėtumėte jį tęsti?"
 
 msgid "Discard"
-msgstr "Ištrinti"
+msgstr "Atmesti"
 
 msgid "Start new"
-msgstr ""
+msgstr "Pradėti naują"
 
 msgid "Continue"
 msgstr "Tęsti"
@@ -987,11 +988,11 @@ msgstr "Nauja vietovė"
 
 # Survey area page
 msgid "No location"
-msgstr "Jokios vietovės"
+msgstr "Nėra vietovės"
 
 # Survey area page
 msgid "Site name"
-msgstr "Vietovės vardas"
+msgstr "Vietovės pavadinimas"
 
 # Survey area page
 msgid "Comments"
@@ -1445,11 +1446,11 @@ msgid "Sweden"
 msgstr "Švedija"
 
 msgid "Paused"
-msgstr "Pauzė"
+msgstr "Sustabdyta"
 
 # Survey status
 msgid "Running"
-msgstr ""
+msgstr "Vykdoma"
 
 msgid "Pending"
 msgstr "Neišsiųsta"
@@ -1470,7 +1471,7 @@ msgid "No uploaded surveys"
 msgstr "Neturite išsiųstų įrašų"
 
 msgid "Enjoying the app?"
-msgstr "Ar tau patinka ši aplikacija?"
+msgstr "Ar patinka programėlė?"
 
 msgid "Not really"
 msgstr "Deja, ne"
@@ -1534,7 +1535,7 @@ msgid ""
 msgstr ""
 
 msgid "Partners:"
-msgstr ""
+msgstr "Partneriai:"
 
 msgid "Language"
 msgstr "Kalba"
@@ -1571,19 +1572,19 @@ msgid "Not Recorded"
 msgstr "Nepažymėta"
 
 msgid "Adults"
-msgstr "Suaugęs"
+msgstr "Suaugę"
 
 msgid "Larvae"
-msgstr "Vikšras"
+msgstr "Vikšrai"
 
 msgid "Eggs"
-msgstr "Kiaušinėlis"
+msgstr "Kiaušinėliai"
 
 msgid "Pupae"
-msgstr "Lėliukė"
+msgstr "Lėliukės"
 
 msgid "Larval webs"
-msgstr "Vikšro tinklas"
+msgstr "Vikšro tinklai"
 
 # Butterfly stage
 msgid "Adult"
@@ -1633,7 +1634,7 @@ msgid "Wind Speed"
 msgstr "Vėjo Greitis"
 
 msgid "Recorder"
-msgstr "Stebėtojo vardas"
+msgstr "Stebėtojas"
 
 msgid "Refresh"
 msgstr "Atnaujinti"
@@ -3318,7 +3319,7 @@ msgstr ""
 
 # Part of favorite track selection
 msgid "Edit"
-msgstr "Redaguoti."
+msgstr "Redaguoti"
 
 # Part of favorite track selection
 msgid "Edit Location"
