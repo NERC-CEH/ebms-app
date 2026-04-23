@@ -1,5 +1,8 @@
 import { useRef } from 'react';
+import { observer } from 'mobx-react';
+import { isPlatform } from '@ionic/core';
 import { Main, Page } from 'common/flumens';
+import appModel from 'models/app';
 import Banner from './Banner';
 import FancyButton from './FancyButton';
 import background1 from './backgrounds/background.jpg';
@@ -89,12 +92,14 @@ const Home = () => {
               path="/survey/precise-single-species-area"
               description="Count a single species for 15 minutes"
             />
-            <FancyButton
-              icon={baitTrapIcon}
-              label="Bait-trap survey"
-              path="/survey/bait-trap"
-              description="Record a fixed bait-trap survey"
-            />
+            {(appModel.data.useExperiments || !isPlatform('hybrid')) && (
+              <FancyButton
+                icon={baitTrapIcon}
+                label="Bait-trap survey"
+                path="/survey/bait-trap"
+                description="Record a fixed bait-trap survey"
+              />
+            )}
           </div>
         </div>
       </Main>
@@ -102,4 +107,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default observer(Home);
