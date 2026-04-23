@@ -89,7 +89,15 @@ const SelectCountry = ({ hideHeader }: Props) => {
   });
 
   // define continent order
-  const continentOrder: ContinentCode[] = ['EU', 'AS', 'AF', 'AU', 'NA', 'SA'];
+  const continentOrder: ContinentCode[] = [
+    'EU',
+    'AS',
+    'AF',
+    'AU',
+    'NA',
+    'CAM',
+    'SA',
+  ];
 
   // find the continent of the currently selected country
   const selectedCountryContinent =

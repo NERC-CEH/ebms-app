@@ -207,6 +207,12 @@ msgstr "Nigeria"
 msgid "New Zealand"
 msgstr "Noua Zeelandă"
 
+msgid "Australia"
+msgstr ""
+
+msgid "Central America"
+msgstr ""
+
 msgid "Montserrat"
 msgstr "Montserrat"
 

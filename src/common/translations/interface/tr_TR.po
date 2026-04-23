@@ -213,6 +213,12 @@ msgstr "Nijerya"
 msgid "New Zealand"
 msgstr "Yeni Zellanda"
 
+msgid "Australia"
+msgstr ""
+
+msgid "Central America"
+msgstr ""
+
 msgid "Montserrat"
 msgstr "Montserrat"
 

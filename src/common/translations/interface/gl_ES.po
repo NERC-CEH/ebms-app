@@ -207,6 +207,12 @@ msgstr "Nixeria"
 msgid "New Zealand"
 msgstr "Nova Zelandia"
 
+msgid "Australia"
+msgstr ""
+
+msgid "Central America"
+msgstr ""
+
 msgid "Montserrat"
 msgstr "Monsterrat"
 

@@ -207,6 +207,12 @@ msgstr "ナイジェリア"
 msgid "New Zealand"
 msgstr "ニュージーランド"
 
+msgid "Australia"
+msgstr ""
+
+msgid "Central America"
+msgstr ""
+
 msgid "Montserrat"
 msgstr "モントセラト"
 

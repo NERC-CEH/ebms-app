@@ -4,6 +4,7 @@ const continents = {
   AF: 'Africa',
   AU: 'Australasia',
   NA: 'North America',
+  CAM: 'Central America',
   SA: 'South America',
   // AN: 'Antarctica', // no butterflies there
 } as const;
@@ -16,7 +17,7 @@ const countries = {
     longitude: -63.0513729,
     zoom: 10,
     id: 215964,
-    continent: 'NA',
+    continent: 'CAM',
   },
   AL: {
     name: 'Albania',
@@ -49,6 +50,14 @@ const countries = {
     zoom: 4,
     id: 215970,
     continent: 'EU',
+  },
+  AU: {
+    name: 'Australia',
+    latitude: -25.274398,
+    longitude: 133.775136,
+    zoom: 3,
+    id: 215977,
+    continent: 'AU',
   },
   BY: {
     name: 'Belarus',
@@ -272,7 +281,7 @@ const countries = {
     longitude: -62.19,
     zoom: 11,
     id: 216075,
-    continent: 'NA',
+    continent: 'CAM',
   },
   NL: {
     name: 'Netherlands',
