@@ -2,14 +2,17 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
 import { IonPage, NavContext } from '@ionic/react';
 import { device, Header, useLoader, useSample, useToast } from 'common/flumens';
-import groups from 'common/models/collections/groups';
 import Sample from 'common/models/sample';
 import userModel, { useUserStatusCheck } from 'common/models/user';
 import locations, { byType } from 'models/collections/locations';
-import Location, { LocationType } from 'models/location';
+import Location, {
+  LocationType,
+  type Data as LocationData,
+} from 'models/location';
+import GPSPermissionSubheader from 'Survey/common/GPSPermissionSubheader';
 import HeaderButton from 'Survey/common/HeaderButton';
-import NewSiteModal from '../NewSiteModal';
-import Main from './Main';
+import Main from '../common/MapList';
+import NewLocation from './New';
 
 const Site = () => {
   const { goBack } = useContext(NavContext);
@@ -19,27 +22,11 @@ const Site = () => {
 
   const { sample } = useSample<Sample>();
 
-  const group = groups.idMap.get(sample?.data.groupId || '');
-
-  const alphabeticallyByName = (a: Location, b: Location) =>
-    a.data.name.localeCompare(b.data.name);
-
-  const byGroup = (location: Location) =>
-    group?.locationCids.includes(location.cid);
-  const groupLocations = locations
-    .filter(byType(LocationType.Site))
-    .filter(byGroup)
-    .sort(alphabeticallyByName);
-
-  const byCreatedByMe = (location: Location) =>
-    location.data.createdById === `${userModel.data.indiciaUserId}`;
-  const userLocations = locations
-    .filter(byType(LocationType.Site))
-    .filter(byCreatedByMe)
-    .sort(alphabeticallyByName);
+  const userLocations = locations.filter(byType(LocationType.MothTrap));
 
   const onSelectSite = (loc?: Location) => {
     sample!.data.locationId = loc?.id;
+    sample!.data.enteredSref = `${loc?.data.location.latitude} ${loc?.data.location.longitude}`;
     sample!.save();
     goBack();
   };
@@ -53,7 +40,7 @@ const Site = () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
-    await loader.show('Please wait...');
+    if (!userLocations.length) await loader.show('Please wait...');
 
     try {
       await locations.fetchRemote();
@@ -87,21 +74,15 @@ const Site = () => {
     setPresentingElement(page.current);
   }, []);
 
-  const onSaveNewLocation = async (newLocation: Location) => {
+  const onSaveNewLocation = async (data: Partial<LocationData>) => {
     if (!userModel.isLoggedIn() || !userModel.data.verified || !device.isOnline)
       return false;
 
     try {
       await loader.show('Please wait...');
 
-      await newLocation.saveRemote();
-
-      if (newLocation.metadata.groupId) {
-        const g = groups.idMap.get(newLocation.metadata.groupId);
-        if (!g) throw new Error('Group was not found');
-
-        await g.addRemoteLocation(newLocation.id!);
-      }
+      const location = new Location({ skipStore: true, data: data as any });
+      await location.saveRemote();
 
       await refreshSites();
 
@@ -119,32 +100,37 @@ const Site = () => {
   const addButton = (
     <HeaderButton
       onClick={onCreateSite}
-      isInvalid={!device.isOnline}
+      isInvalid={!device.isOnline && !locations.isSynchronising}
       className="text-sm"
     >
       Add
     </HeaderButton>
   );
 
+  const gpsPermissionSubheader = !sample?.isDisabled && (
+    <GPSPermissionSubheader />
+  );
+
   return (
     <>
-      <IonPage id="sites" ref={page}>
-        <Header title="Sites" rightSlot={addButton} />
+      <IonPage id="moth-sites" ref={page}>
+        <Header
+          title="Moth traps"
+          rightSlot={addButton}
+          subheader={gpsPermissionSubheader}
+        />
         <Main
-          groupLocations={groupLocations}
           userLocations={userLocations}
           onSelectSite={sample ? onSelectSite : undefined}
           selectedLocationId={sample?.data.locationId}
-          hasGroup={!!group}
           isFetchingLocations={locations.isSynchronising}
         />
       </IonPage>
 
-      <NewSiteModal
+      <NewLocation
         ref={modal}
         presentingElement={presentingElement}
         onSave={onSaveNewLocation}
-        groupId={group?.id}
       />
     </>
   );

@@ -5,10 +5,17 @@ import {
   personOutline,
   cloudyOutline,
   moonOutline,
+  informationCircleOutline,
 } from 'ionicons/icons';
 import SunCalc from 'suncalc';
 import { z } from 'zod';
-import { dateFormat, device, isValidLocation, timeFormat } from '@flumens';
+import {
+  dateFormat,
+  device,
+  isValidLocation,
+  Location,
+  timeFormat,
+} from '@flumens';
 import { IonIcon, IonImg } from '@ionic/react';
 import config from 'common/config';
 import firstQuarterMoonIcon from 'common/images/first-quarter-moon.svg';
@@ -118,6 +125,13 @@ const moonPhaseValues = [
   },
 ];
 
+export const useTemporarySiteAttr = {
+  id: 'temporarySite',
+  type: 'yesNoInput',
+  title: 'Temporary',
+  prefix: <IonIcon src={informationCircleOutline} className="size-6" />,
+} as const;
+
 export const trapEmptyingTimeAttr = {
   id: 'smpAttr:2028',
   pageProps: {
@@ -151,9 +165,34 @@ export const surveyEndDateAttr = {
   remote: { values: (date: number) => dateFormat.format(new Date(date)) },
 } as const;
 
+export const tempMothTrapTypeAttr = {
+  id: 'smpAttr:2056',
+  choices: [
+    { title: 'LED funnel trap', dataName: '24613' },
+    { title: 'Other funnel trap', dataName: '24614' },
+    { title: 'Trap with 2 sheets', dataName: '24615' },
+    { title: 'Other trap', dataName: '24616' },
+  ],
+} as const;
+export const tempMothTrapOtherTypeAttr = { id: 'smpAttr:2057' } as const;
+export const tempMothTrapLampsAttr = { id: 'smpAttr:2058' } as const;
+
+const getTrapLocation = (sample: Sample): Location | null => {
+  if (sample.metadata[useTemporarySiteAttr.id]) {
+    if (!sample.data.enteredSref) return null;
+
+    const coords = sample.data.enteredSref?.split(' ').map(Number);
+    return { latitude: coords?.[0], longitude: coords?.[1] };
+  }
+
+  const location = locations.idMap.get(sample.data.locationId || '');
+  if (!location) return null;
+
+  return location.data.location;
+};
+
 const getSetDefaultTime = (sample: Sample) => () => {
-  const trap = locations.idMap.get(sample.data.locationId || '');
-  const { location } = trap?.data || {};
+  const location = getTrapLocation(sample);
   if (!location || !isValidLocation(location)) return;
 
   // start time
@@ -201,14 +240,14 @@ const getSetDefaultTime = (sample: Sample) => () => {
 
 const getSetEndWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
-
-  const trap = locations.idMap.get(sample.data.locationId || '');
+  const location = getTrapLocation(sample);
+  if (!location) return;
 
   const datePart = sample.data[surveyEndDateAttr.id]!.slice(0, 10); // YYYY-MM-DD
   const timePart = sample.data.surveyEndTime!.slice(11); // HH:mm:ss.sssZ
   const time = `${datePart}T${timePart}`;
 
-  const weatherValues = await fetchHistoricalWeather(trap!.data.location, time);
+  const weatherValues = await fetchHistoricalWeather(location, time);
 
   assignIfMissing(sample, 'temperatureEnd', weatherValues.temperature);
   assignIfMissing(sample, 'directionEnd', weatherValues.windDirection);
@@ -216,18 +255,19 @@ const getSetEndWeather = (sample: Sample) => async () => {
   assignIfMissing(sample, 'cloudEnd', weatherValues.cloud);
 };
 const getHasEndTimeAndLocation = (sample: Sample) => () =>
-  !!sample.data.surveyEndTime && !!sample.data.locationId;
+  !!sample.data.surveyEndTime && !!getTrapLocation(sample);
 
 const getSetStartWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
 
-  const trap = locations.idMap.get(sample.data.locationId || '');
+  const location = getTrapLocation(sample);
+  if (!location) return;
 
   const datePart = sample.data.date.slice(0, 10); // YYYY-MM-DD
   const timePart = sample.data.surveyStartTime!.slice(11); // HH:mm:ss.sssZ
   const time = `${datePart}T${timePart}`;
 
-  const weatherValues = await fetchHistoricalWeather(trap!.data.location, time);
+  const weatherValues = await fetchHistoricalWeather(location, time);
 
   assignIfMissing(sample, 'temperature', weatherValues.temperature);
   assignIfMissing(sample, 'direction', weatherValues.windDirection);
@@ -236,7 +276,7 @@ const getSetStartWeather = (sample: Sample) => async () => {
 };
 
 const getHasStartTimeAndLocation = (sample: Sample) => () =>
-  !!sample.data.surveyStartTime && !!sample.data.locationId;
+  !!sample.data.surveyStartTime && !!getTrapLocation(sample);
 
 const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
   const LUNAR_MONTH = 29.530588853;
@@ -286,8 +326,8 @@ const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
 };
 
 const getSetStartMoonPhase = (sample: Sample) => () => {
-  const trap = locations.idMap.get(sample.data.locationId || '');
-  const isSouthernHemisphere = (trap?.data?.location?.latitude ?? 0) < 0;
+  const location = getTrapLocation(sample);
+  const isSouthernHemisphere = (location?.latitude ?? 0) < 0;
   const moonPhase = getMoonPhase(
     new Date(sample.data.date),
     isSouthernHemisphere
@@ -297,8 +337,8 @@ const getSetStartMoonPhase = (sample: Sample) => () => {
 };
 
 const getSetStartMoonEndPhase = (sample: Sample) => () => {
-  const trap = locations.idMap.get(sample.data.locationId || '');
-  const isSouthernHemisphere = (trap?.data?.location?.latitude ?? 0) < 0;
+  const location = getTrapLocation(sample);
+  const isSouthernHemisphere = (location?.latitude ?? 0) < 0;
   const moonPhase = getMoonPhase(
     new Date(sample.data[surveyEndDateAttr.id]!),
     isSouthernHemisphere
@@ -354,6 +394,8 @@ const survey: Survey = {
     [trapEmptyingTimeAttr.id]: trapEmptyingTimeAttr,
 
     [surveyEndDateAttr.id]: surveyEndDateAttr,
+
+    [useTemporarySiteAttr.id]: { block: useTemporarySiteAttr },
 
     // start weather
     direction: {
@@ -606,8 +648,13 @@ const survey: Survey = {
   verify: attrs =>
     z
       .object({
-        locationId: z.string({ error: 'Location is missing.' }),
+        locationId: z.string().optional(),
+        enteredSref: z.string().optional(),
       })
+      .refine(
+        value => !!value.locationId || !!value.enteredSref,
+        'Location is missing.'
+      )
       .safeParse(attrs).error,
 
   create({ recorder, surveyId, surveyName }) {
@@ -634,7 +681,10 @@ const survey: Survey = {
       },
     });
 
-    when(() => !!sample.data.locationId, getSetDefaultTime(sample));
+    when(
+      () => !!sample.data.locationId || !!sample.data.enteredSref,
+      getSetDefaultTime(sample)
+    );
 
     when(getHasStartTimeAndLocation(sample), getSetStartWeather(sample));
     when(getHasStartTimeAndLocation(sample), getSetStartMoonPhase(sample));
@@ -658,6 +708,9 @@ export type Data = {
   moonEnd?: string;
   [trapEmptyingTimeAttr.id]?: string;
   [surveyEndDateAttr.id]?: string;
+  [tempMothTrapTypeAttr.id]?: string;
+  [tempMothTrapOtherTypeAttr.id]?: any;
+  [tempMothTrapLampsAttr.id]?: any[];
 };
 
 type UnknownSpeciesObject = Record<string, any>;

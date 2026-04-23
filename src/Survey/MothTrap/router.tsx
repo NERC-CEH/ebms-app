@@ -1,12 +1,13 @@
+import Location from 'Location/MothTrap/List';
 import { Route } from 'react-router-dom';
 import { withSample, AttrPage } from '@flumens';
 import Groups from 'Survey/common/Groups';
+import ModelLocationMap from 'Survey/common/ModelLocationMap';
 import StartNewSurvey from 'Survey/common/StartNewSurvey';
 import Details from './Details';
 import EndWeather from './Details/EndWeather';
 import StartWeather from './Details/StartWeather';
 import Home from './Home';
-import Location from './Location';
 import OccurrenceHome from './Occurrence';
 import Taxon from './Taxon';
 import survey from './config';
@@ -27,7 +28,8 @@ const routes = [
     `${baseURL}/:smpId/details/startWeather/:attr`,
     withSample(AttrPageFromRoute),
   ],
-  [`${baseURL}/:smpId/details/location`, Location],
+  [`${baseURL}/:smpId/details/trap`, Location],
+  [`${baseURL}/:smpId/details/location`, ModelLocationMap],
   [`${baseURL}/:smpId/taxon`, Taxon],
   [`${baseURL}/:smpId/occ/:occId`, OccurrenceHome],
   [`${baseURL}/:smpId/occ/:occId/:attr`, withSample(AttrPageFromRoute)],

@@ -54,7 +54,7 @@ const Site = ({
       />
       <div className="flex w-full items-center justify-start gap-4">
         <div className="flex w-full flex-col gap-1 py-1">
-          <div className="line-clamp-2 font-semibold">{name}</div>
+          <div className="line-clamp-1 font-semibold">{name}</div>
 
           <div className="flex gap-2 items-center">
             {isValid && (

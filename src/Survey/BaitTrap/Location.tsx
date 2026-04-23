@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import Main from 'Location/Site/List/Main';
+import Main from 'Location/common/MapList';
 import {
   device,
   Header,

@@ -28,13 +28,13 @@ import {
   IonLabel,
 } from '@ionic/react';
 import geojsonArea from '@mapbox/geojson-area';
-import AreaDraw, { Shape } from 'common/Components/AreaDraw';
 import config from 'common/config';
 import groups from 'common/models/collections/groups';
 import LocationModel, { dtoSchema } from 'common/models/location';
 import Media from 'common/models/media';
 import HeaderButton from 'Survey/common/HeaderButton';
 import { useLocation } from '.';
+import AreaDraw, { Shape } from './AreaDraw';
 import {
   OTHER_SITE_SIZE_VALUE,
   buildingsNumberAttr,

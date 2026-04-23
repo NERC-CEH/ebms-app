@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
-import useLocation from 'Location/MothTrap/useLocation';
 import {
   MapContainer,
   MapHeader,
@@ -20,16 +19,10 @@ import Sample from 'models/sample';
 
 const ModelLocationMap = () => {
   const { sample, subSample } = useSample<Sample>();
-  const { location: locationModel } = useLocation();
 
-  const model = locationModel || subSample || sample;
-
-  const locationName =
-    locationModel?.data.name || (model as Sample)?.data.locationName;
+  const model = subSample || sample;
 
   const location = model!.data.location || {};
-
-  const isMothSurvey = !!locationModel;
 
   const [mapRef, setMapRef] = useState<any>();
   const flyToLocation = () => {
@@ -38,14 +31,6 @@ const ModelLocationMap = () => {
   useEffect(flyToLocation, [mapRef, location]);
 
   if (!model) return null;
-
-  const onLocationNameChange = ({ name }: any) => {
-    if (locationModel) {
-      locationModel.data.name = name;
-    } else {
-      (model as Sample).data.locationName = name;
-    }
-  };
 
   const setLocation = async (newLocation: any) => {
     if (!newLocation) return;
@@ -82,13 +67,6 @@ const ModelLocationMap = () => {
           onChange={onManuallyTypedLocationChange}
           useGridRef
         />
-        {isMothSurvey && (
-          <MapHeader.LocationName
-            onChange={onLocationNameChange}
-            value={locationName}
-            placeholder="Moth trap name"
-          />
-        )}
       </MapHeader>
       <Main className="[--padding-bottom:0] [--padding-top:0]">
         <MapContainer

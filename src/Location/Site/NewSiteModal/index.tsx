@@ -1,6 +1,7 @@
 import {
   createContext,
   forwardRef,
+  MutableRefObject,
   useContext,
   useEffect,
   useMemo,
@@ -60,10 +61,15 @@ type Props = {
 
 const NewSiteModal = (
   { presentingElement, onSave, groupId }: Props,
-  ref: any
+  ref: React.ForwardedRef<HTMLIonModalElement>
 ) => {
   // const canDismiss = useDismissHandler(newLocation || {});
-  const onDismiss = async () => ref.current?.dismiss();
+  const modalRef = ref as MutableRefObject<HTMLIonModalElement | null>;
+
+  const onDismiss = async () => {
+    await modalRef.current?.dismiss();
+    return true;
+  };
 
   const [location, setLocation] = useState<LocationModel>(
     getNewLocation(groupId)

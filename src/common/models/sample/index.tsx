@@ -83,6 +83,11 @@ type Metadata = SampleMetadata & {
    * How long the survey was paused in milliseconds.
    */
   pausedTime?: number;
+
+  /**
+   * Moth-trap survey
+   */
+  temporarySite?: boolean;
 };
 
 export default class Sample<T extends SampleData = Data> extends SampleModel<

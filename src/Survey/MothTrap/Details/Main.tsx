@@ -8,25 +8,34 @@ import {
   Attr,
   MenuAttrItem,
   AttrPropsExtended,
-  timeFormat,
-  isValidDate,
+  Block,
 } from '@flumens';
-import { IonList } from '@ionic/react';
+import { IonIcon, IonItem, IonLabel, IonList } from '@ionic/react';
+import MenuDateAttr from 'common/Components/MenuDateAttr';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
 import Group from 'common/models/group';
 import locations from 'models/collections/locations';
 import Sample from 'models/sample';
-import { trapEmptyingTimeAttr, surveyEndDateAttr } from '../config';
+import {
+  trapEmptyingTimeAttr,
+  surveyEndDateAttr,
+  useTemporarySiteAttr,
+} from '../config';
 
 type Props = {
   sample: Sample;
   group?: Group;
+  onOpenTemporaryTrapModal: () => void;
+  onChangeSiteType: (value: boolean) => void;
 };
 
-const DetailsMain = ({ sample, group }: Props) => {
+const DetailsMain = ({
+  sample,
+  group,
+  onChangeSiteType,
+  onOpenTemporaryTrapModal,
+}: Props) => {
   const { url } = useRouteMatch();
-  const { surveyStartTime, surveyEndTime } = sample.data;
-  const trapEmptyingTime = sample.data[trapEmptyingTimeAttr.id];
   const location = locations.idMap.get(sample.data.locationId || '');
   const survey = sample.getSurvey();
 
@@ -42,46 +51,45 @@ const DetailsMain = ({ sample, group }: Props) => {
 
   const locationName = location?.data?.name ?? null;
 
-  const startTimePretty = isValidDate(surveyStartTime!)
-    ? timeFormat.format(new Date(surveyStartTime!))
-    : surveyStartTime; // remote dates
-  const endTimePretty = isValidDate(surveyEndTime!)
-    ? timeFormat.format(new Date(surveyEndTime!))
-    : surveyEndTime; // remote dates
-  const emptyingTimePretty = isValidDate(trapEmptyingTime!)
-    ? timeFormat.format(new Date(trapEmptyingTime!))
-    : trapEmptyingTime; // remote dates
+  const isUsingTemporarySite = sample.metadata[useTemporarySiteAttr.id];
+  const temporaryTrapName = sample.data.locationName;
+
+  const openTemporaryTrapModal = () =>
+    !isDisabled && onOpenTemporaryTrapModal();
 
   return (
     <Main className="[--padding-bottom:40px]">
       <IonList lines="full">
+        <h3 className="list-title">
+          <T>Trap</T>
+        </h3>
         <div className="rounded-list">
-          <MenuAttrItem
-            routerLink={`${url}/location`}
-            icon={mothInsideBoxIcon}
-            label="Moth trap"
-            skipValueTranslation
-            value={locationName}
-            disabled={isDisabled}
-          />
-          <MenuAttrItem
-            routerLink={`${url}/group`}
-            disabled={isDisabled}
-            icon={peopleOutline}
-            label="Project"
-            value={group?.data.title}
-            skipValueTranslation
-          />
-          <MenuAttrItemFromModel
-            model={sample}
-            attr="recorder"
-            skipValueTranslation
-          />
-
-          <MenuAttrItemFromModel
-            model={sample}
-            attr="comment"
-            skipValueTranslation
+          {!isUsingTemporarySite && (
+            <MenuAttrItem
+              routerLink={`${url}/trap`}
+              icon={mothInsideBoxIcon}
+              label="Moth trap"
+              skipValueTranslation
+              value={locationName}
+              disabled={isDisabled}
+            />
+          )}
+          {isUsingTemporarySite && (
+            <IonItem detail onClick={openTemporaryTrapModal}>
+              <IonIcon slot="start" src={mothInsideBoxIcon} />
+              <IonLabel>
+                <T>Moth trap</T>
+              </IonLabel>
+              <IonLabel slot="end" className="max-w-1/3 truncate">
+                {temporaryTrapName}
+              </IonLabel>
+            </IonItem>
+          )}
+          <Block
+            record={sample.metadata}
+            block={useTemporarySiteAttr}
+            onChange={onChangeSiteType}
+            isDisabled={isDisabled}
           />
         </div>
       </IonList>
@@ -97,13 +105,13 @@ const DetailsMain = ({ sample, group }: Props) => {
             input="date"
             inputProps={{ ...surveyDateProps, disabled: isDisabled }}
           />
-          <MenuAttrItem
-            routerLink={`${url}/surveyStartTime`}
-            disabled={isDisabled}
-            icon={timeOutline}
+          <MenuDateAttr
             label="Time"
-            value={startTimePretty}
-            skipValueTranslation
+            value={sample.data.surveyStartTime}
+            presentation="time"
+            onChange={val => (sample.data.surveyStartTime = val)} // eslint-disable-line no-return-assign, no-param-reassign
+            isDisabled={isDisabled}
+            icon={timeOutline}
           />
           <MenuAttrItem
             routerLink={`${url}/startWeather`}
@@ -125,28 +133,54 @@ const DetailsMain = ({ sample, group }: Props) => {
             input="date"
             inputProps={{ ...surveyEndDateProps, disabled: isDisabled }}
           />
-          <MenuAttrItem
-            routerLink={`${url}/surveyEndTime`}
-            disabled={isDisabled}
-            icon={timeOutline}
+          <MenuDateAttr
             label="Time"
-            value={endTimePretty}
-            skipValueTranslation
-          />
-
-          <MenuAttrItem
-            routerLink={`${url}/${trapEmptyingTimeAttr.id}`}
-            disabled={isDisabled}
+            value={sample.data.surveyEndTime}
+            presentation="time"
+            onChange={val => (sample.data.surveyEndTime = val)} // eslint-disable-line no-return-assign, no-param-reassign
+            isDisabled={isDisabled}
             icon={timeOutline}
+          />
+          <MenuDateAttr
             label="Emptying time"
-            value={emptyingTimePretty}
-            skipValueTranslation
+            value={sample.data[trapEmptyingTimeAttr.id]}
+            presentation="time"
+            onChange={val => (sample.data[trapEmptyingTimeAttr.id] = val)} // eslint-disable-line no-return-assign, no-param-reassign
+            isDisabled={isDisabled}
+            icon={timeOutline}
           />
 
           <MenuAttrItem
             routerLink={`${url}/endWeather`}
             icon={cloudOutline}
             label="Weather"
+            skipValueTranslation
+          />
+        </div>
+      </IonList>
+
+      <IonList lines="full">
+        <h3 className="list-title">
+          <T>Other</T>
+        </h3>
+        <div className="rounded-list">
+          <MenuAttrItem
+            routerLink={`${url}/group`}
+            disabled={isDisabled}
+            icon={peopleOutline}
+            label="Project"
+            value={group?.data.title}
+            skipValueTranslation
+          />
+          <MenuAttrItemFromModel
+            model={sample}
+            attr="recorder"
+            skipValueTranslation
+          />
+
+          <MenuAttrItemFromModel
+            model={sample}
+            attr="comment"
             skipValueTranslation
           />
         </div>

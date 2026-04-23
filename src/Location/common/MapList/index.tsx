@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { wifiOutline } from 'ionicons/icons';
 import { ViewStateChangeEvent } from 'react-map-gl/mapbox';
-import { IonSpinner } from '@ionic/react';
+import { IonIcon, IonSpinner } from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import countries from 'common/config/countries';
-import { Main, MapContainer } from 'common/flumens';
+import { device, InfoMessage, Main, MapContainer } from 'common/flumens';
 import appModel from 'common/models/app';
 import Location from 'models/location';
 import Sites from './Sites';
@@ -12,7 +13,7 @@ import SitesPanel from './SitesPanel';
 
 type Props = {
   isFetchingLocations: boolean;
-  hasGroup: boolean;
+  hasGroup?: boolean;
   userLocations: Location[];
   groupLocations?: Location[];
   onSelectSite?: (location?: Location) => void;
@@ -21,7 +22,7 @@ type Props = {
 };
 
 const MainSites = ({
-  hasGroup,
+  hasGroup = false,
   userLocations,
   groupLocations = [],
   onSelectSite,
@@ -55,33 +56,43 @@ const MainSites = ({
 
   return (
     <Main className="[--padding-bottom:0] [--padding-top:0]">
-      <MapContainer
-        onReady={ref => ref.resize()}
-        accessToken={config.map.mapboxApiKey}
-        mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
-        maxPitch={0}
-        initialViewState={initialViewState}
-        onMoveEnd={updateMapCenter}
-        maxZoom={19}
-      >
-        <GeolocateButton />
+      {device.isOnline && (
+        <MapContainer
+          onReady={ref => ref.resize()}
+          accessToken={config.map.mapboxApiKey}
+          mapStyle="mapbox://styles/mapbox/satellite-streets-v10"
+          maxPitch={0}
+          initialViewState={initialViewState}
+          onMoveEnd={updateMapCenter}
+          maxZoom={19}
+        >
+          <GeolocateButton />
 
-        <MapContainer.Control>
-          {isFetchingLocations ? (
-            <IonSpinner color="medium" className="mx-auto block" />
-          ) : (
-            <div />
-          )}
-        </MapContainer.Control>
+          <MapContainer.Control>
+            {isFetchingLocations ? (
+              <IonSpinner color="medium" className="mx-auto block" />
+            ) : (
+              <div />
+            )}
+          </MapContainer.Control>
 
-        <Sites
-          locations={[...userLocations, ...groupLocations]}
-          onSelectSite={onSelectSite}
-        />
-      </MapContainer>
+          <Sites
+            locations={[...userLocations, ...groupLocations]}
+            onSelectSite={onSelectSite}
+            selectedLocationId={selectedLocationId}
+          />
+        </MapContainer>
+      )}
+
+      {!device.isOnline && (
+        <div className="absolute top-0 z-[99999] flex h-full w-full flex-col items-center bg-[#4a4a4a] p-6">
+          <InfoMessage prefix={<IonIcon src={wifiOutline} />}>
+            To see the map please connect to the internet.
+          </InfoMessage>
+        </div>
+      )}
 
       <SitesPanel
-        isOpen
         hasGroup={hasGroup}
         centroid={currentMapCenter}
         onSelectSite={onSelectSite}

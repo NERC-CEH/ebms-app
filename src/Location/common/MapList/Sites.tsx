@@ -24,12 +24,14 @@ const getShapeFromGeom = (
 };
 
 const getGeoJSONfromRecords = (
-  locations?: Location[]
+  locations?: Location[],
+  selectedLocationId?: string
 ): FeatureCollection<Point, SiteFeatureProperties> => {
   const getFeature = (location: Location) => ({
     type: 'Feature' as const,
     properties: {
       id: location.id || '',
+      selected: location.id === selectedLocationId && 'yes',
       type: 'record',
     },
     geometry: {
@@ -70,10 +72,14 @@ const getAreasGeoJSON = (
 type Props = {
   onSelectSite?: (location?: Location) => void;
   locations: Location[];
+  selectedLocationId?: string;
 };
 
-const Sites = ({ onSelectSite, locations }: Props) => {
-  const data = useMemo(() => getGeoJSONfromRecords(locations), [locations]);
+const Sites = ({ onSelectSite, locations, selectedLocationId }: Props) => {
+  const data = useMemo(
+    () => getGeoJSONfromRecords(locations, selectedLocationId),
+    [locations, selectedLocationId]
+  );
   const areasData = useMemo(() => getAreasGeoJSON(locations), [locations]);
 
   const onClick = (feature: any) => {
@@ -103,7 +109,19 @@ const Sites = ({ onSelectSite, locations }: Props) => {
 
       <MapContainer.Cluster data={data} id="sites">
         <MapContainer.Cluster.Clusters id="sites-clusters" />
-        <MapContainer.Cluster.Markers id="sites-markers" onClick={onClick} />
+        <MapContainer.Cluster.Markers
+          id="sites-markers"
+          onClick={onClick}
+          paint={{
+            'circle-color': [
+              'match',
+              ['get', 'selected'],
+              'yes',
+              '#df9100',
+              /* other */ '#745a8f',
+            ],
+          }}
+        />
       </MapContainer.Cluster>
     </>
   );
