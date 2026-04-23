@@ -1,6 +1,25 @@
 ## 1.33.0
 
-Added Bait-trap survey.
+Added moth survey end date attribute
+Added moth trap sunrise/sunset time offsets
+Added temporary moth trap sites
+Added projects to moth survey
+Added optional trap emptying time
+Showing site boundaries on map
+Showing distance to current location in site lists
+Showing classification confidence
+Showing uploaded survey record ID and duration
+Added automatic weather values to transect survey
+Auto-setting survey end time
+Improved failed classification logic
+Preventing accidental survey exit and draft management
+Made app less Europe-centric
+Added Georgia, Zambia Australia and Central America categories
+Added bait-trap survey (under Experimental features)
+Updated translations
+Minor UI tweaks and polish
+Bug fixes
+
 
 ## 1.32.0
 
