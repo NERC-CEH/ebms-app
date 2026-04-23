@@ -2382,6 +2382,14 @@ msgid "Moth trap"
 msgstr "Moth trap"
 
 # Moth survey details label
+msgid "Temporary"
+msgstr "Temporary"
+
+# Moth survey details label
+msgid "Lamp details"
+msgstr "Lamp details"
+
+# Moth survey details label
 msgid "Emptying time"
 msgstr "Emptying time"
 

@@ -2434,6 +2434,14 @@ msgid "Moth trap"
 msgstr "Παγίδα νυχτοπεταλούδων"
 
 # Moth survey details label
+msgid "Temporary"
+msgstr ""
+
+# Moth survey details label
+msgid "Lamp details"
+msgstr ""
+
+# Moth survey details label
 msgid "Emptying time"
 msgstr ""
 
