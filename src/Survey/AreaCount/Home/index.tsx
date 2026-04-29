@@ -208,7 +208,7 @@ const HomeController = () => {
   const confirmExit = useExitConfirmation();
 
   const onExit = async (setIsLeaving?: any) => {
-    if (!sample?.isTimerFinished()) {
+    if (!sample?.isTimerFinished() && !sample?.isDisabled) {
       const shouldExit = await confirmExit();
       if (!shouldExit) {
         setIsLeaving?.(false);

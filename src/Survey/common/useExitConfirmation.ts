@@ -3,6 +3,7 @@ import { useAlert, useOnBackButton } from '@flumens';
 import { NavContext } from '@ionic/react';
 
 type SampleLike = {
+  isDisabled?: boolean;
   metadata: { saved?: unknown; completedDetails?: unknown };
 };
 
@@ -31,7 +32,7 @@ export const useOnExit = (sample: SampleLike | null | undefined) => {
   const confirmExit = useExitConfirmation();
 
   const onExit = async (setIsLeaving?: (value: boolean) => void) => {
-    if (!sample?.metadata.saved) {
+    if (!sample?.metadata.saved && !sample?.isDisabled) {
       const shouldExit = await confirmExit();
 
       if (!shouldExit) {
@@ -54,7 +55,7 @@ export const useOnExitDetails = (sample: SampleLike | null | undefined) => {
   const confirmExit = useExitConfirmation();
 
   const onExit = async (setIsLeaving?: (value: boolean) => void) => {
-    if (!sample?.metadata.completedDetails) {
+    if (!sample?.metadata.completedDetails && !sample?.isDisabled) {
       const shouldExit = await confirmExit();
 
       if (!shouldExit) {

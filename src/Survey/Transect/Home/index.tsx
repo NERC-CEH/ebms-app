@@ -30,7 +30,7 @@ const TransectHomeController = () => {
   const confirmExit = useExitConfirmation();
 
   const onExit = async (setIsLeaving?: any) => {
-    if (!sample?.metadata.saved) {
+    if (!sample?.metadata.saved && !sample?.isDisabled) {
       const shouldExit = await confirmExit();
       if (!shouldExit) {
         setIsLeaving?.(false);
