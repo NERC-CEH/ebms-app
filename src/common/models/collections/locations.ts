@@ -57,7 +57,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
   async fetchRemote(
     params: { type?: 'sites' | 'transects' | 'mothTraps' | 'baitTraps' } = {}
   ) {
-    console.log(`📚 Collection: ${this.id} collection fetching`);
+    console.log(`📚 Collection: ${this.id} fetching`);
     this.remote.synchronising = true;
 
     const { type } = params;
@@ -112,20 +112,27 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     if (!type || type === 'sites') {
       const docs = await this.fetchRemoteByType(LocationType.Site);
-      const newModels = docs.map(doc => this.Model.fromDTO(doc));
+      const newSiteModels = docs.map(doc => this.Model.fromDTO(doc));
 
       const groupDocs = await this.fetchGroupLocations();
-      const newGroupModels = groupDocs.map(([doc, metadata]) =>
-        this.Model.fromDTO(doc, { metadata })
-      );
-      newModels.push(...newGroupModels);
-      this.upsert(...newModels);
-      await Promise.all(newModels.map(m => m.save()));
+      const newGroupModels = groupDocs.map(([doc]) => this.Model.fromDTO(doc));
+
+      const newModels = [...newGroupModels, ...newSiteModels]; // both can have duplicates, especially if a location is linked to multiple groups
+      const uniqueModels = [...new Map(newModels.map(m => [m.id, m])).values()]; // de-dup by id
+
+      this.upsert(...uniqueModels);
+      await Promise.all(uniqueModels.map(m => m.save()));
 
       // link groups to locations
       await Promise.all(
-        newModels.map(async location => {
-          const group = groups.idMap.get(location.metadata.groupId!);
+        groupDocs.map(async ([doc, groupId]) => {
+          const group = groups.idMap.get(groupId);
+          const location = uniqueModels.find(m => m.id === doc.id);
+          if (!location) {
+            console.log(`⚠️ Could not find location: ${doc.id} `);
+            return;
+          }
+
           await group?.linkLocation(location);
         })
       );
@@ -194,8 +201,6 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
   }
 
   private async fetchGroupLocations() {
-    console.log(`📚 Collection: ${this.id} collection fetching locations`);
-
     const transformToLocation = (doc: GroupLocationData) => {
       const transformedDoc: RemoteLocationAttributes = {
         id: doc.locationId,
@@ -216,8 +221,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         public: 'f',
       } as any; // any - to fix Moth trap attrs
 
-      const metadata = { groupId: doc.groupId } as any;
-      return [transformedDoc, metadata];
+      return [transformedDoc, doc.groupId!];
     };
 
     const groupLocationDTOs = await Promise.all(
@@ -228,11 +232,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     const docs = groupLocationDTOs.flat().map(transformToLocation);
 
-    console.log(
-      `📚 Collection: ${this.id} collection fetching locations done ${docs.length} documents`
-    );
-
-    return docs;
+    return docs as [RemoteLocationAttributes, string][];
   }
 
   private async fetchTransectSections(
