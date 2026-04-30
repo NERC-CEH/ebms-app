@@ -45,7 +45,7 @@
     "@flumens/ionic": "2.0.0-alpha.96",
     "@flumens/models": "0.25.0",
     "@flumens/tailwind": "0.40.1",
-    "@flumens/utils": "0.9.0",
+    "@flumens/utils": "0.10.0",
     "@heroicons/react": "2.2.0",
     "@hookform/resolvers": "5.2.2",
     "@ionic-native/core": "5.36.0",

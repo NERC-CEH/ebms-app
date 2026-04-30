@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
 import wkt from 'wellknown';
-import { Main, InfoMessage, transformToLatLon } from '@flumens';
+import { Main, InfoMessage, getGeomMetersToLatLon } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import Location, { LocationType } from 'common/models/location';
 import locations, { byType } from 'models/collections/locations';
@@ -19,8 +19,7 @@ function getTransectItem(transect: Location, onTransectSelect: any) {
   const getSectionGeometry = (section: Location) => {
     const geometry = section.data.boundaryGeom;
     const shape: any = geometry ? wkt.parse(geometry) : {};
-    shape.coordinates = transformToLatLon(shape);
-    return shape;
+    return getGeomMetersToLatLon(shape);
   };
 
   const nonPoints = (geom?: any) => geom?.type !== 'Point';

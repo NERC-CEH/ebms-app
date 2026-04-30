@@ -10,11 +10,11 @@ import {
   Main,
   PhotoPicker,
   captureImage,
-  transformToLatLon,
   useModalNav,
   getGeomCenter,
   getGeomWKT,
   Header,
+  getGeomMetersToLatLon,
 } from '@flumens';
 import { isPlatform } from '@ionic/core';
 import {
@@ -89,12 +89,11 @@ const getLocationAttrsFromShape = (shape?: Shape) => ({
     : undefined,
 });
 
-const getShapeFromGeom = (geom?: string | null): Shape | undefined => {
+const getShapeFromGeom = (geom?: string | null) => {
   if (!geom) return undefined;
   const geomParsed = wkt.parse(geom) as any;
 
-  geomParsed.coordinates = transformToLatLon(geomParsed);
-  return geomParsed;
+  return getGeomMetersToLatLon(geomParsed) as Shape;
 };
 
 type Props = {

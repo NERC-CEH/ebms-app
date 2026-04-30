@@ -2,18 +2,15 @@
 import { LineString, Polygon } from 'geojson';
 import { Layer, Source } from 'react-map-gl/mapbox';
 import wkt from 'wellknown';
-import { transformToLatLon } from '@flumens/utils';
+import { getGeomMetersToLatLon } from '@flumens';
 import Location from 'models/location';
 
-export const getShapeFromGeom = (
-  geom?: string | null
-): Polygon | LineString | undefined => {
+export const getShapeFromGeom = (geom?: string | null) => {
   if (!geom) return undefined;
 
   const geomParsed = wkt.parse(geom) as Polygon | LineString;
 
-  geomParsed.coordinates = transformToLatLon(geomParsed);
-  return geomParsed;
+  return getGeomMetersToLatLon(geomParsed) as Polygon | LineString;
 };
 
 type Props = {

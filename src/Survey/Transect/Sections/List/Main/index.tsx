@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import wkt from 'wellknown';
-import { Main, transformToLatLon } from '@flumens';
+import { Main, getGeomMetersToLatLon } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import locations from 'common/models/collections/locations';
@@ -20,7 +20,7 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
   let geom: any;
   if (section?.data.boundaryGeom) {
     geom = wkt.parse(section.data.boundaryGeom);
-    geom.coordinates = transformToLatLon(geom);
+    geom = getGeomMetersToLatLon(geom);
     geom = [{ type: 'Feature', geometry: geom }];
     if (geom?.type === 'Point') {
       geom = null;

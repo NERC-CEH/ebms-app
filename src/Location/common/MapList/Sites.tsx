@@ -1,10 +1,15 @@
 import { useMemo } from 'react';
 // eslint-disable-next-line import-x/no-extraneous-dependencies
-import { FeatureCollection, LineString, Point, Polygon } from 'geojson';
+import {
+  FeatureCollection,
+  LineString,
+  MultiPolygon,
+  Point,
+  Polygon,
+} from 'geojson';
 import { Layer, Source } from 'react-map-gl/mapbox';
 import wkt from 'wellknown';
-import { transformToLatLon } from '@flumens/utils';
-import { MapContainer } from 'common/flumens';
+import { MapContainer, getGeomMetersToLatLon } from '@flumens';
 import Location from 'models/location';
 
 type SiteFeatureProperties = {
@@ -12,15 +17,15 @@ type SiteFeatureProperties = {
   type: string;
 };
 
-const getShapeFromGeom = (
-  geom?: string | null
-): Polygon | LineString | undefined => {
-  if (!geom) return undefined;
+type AreaShape = Polygon | LineString | MultiPolygon;
 
-  const geomParsed = wkt.parse(geom) as Polygon | LineString;
+const getShapeFromGeom = (geom?: string | null) => {
+  if (!geom) return null;
 
-  geomParsed.coordinates = transformToLatLon(geomParsed);
-  return geomParsed;
+  const geomParsed = wkt.parse(geom) as AreaShape;
+  if (geomParsed?.type === 'MultiPolygon') return null;
+
+  return getGeomMetersToLatLon(geomParsed) as AreaShape;
 };
 
 const getGeoJSONfromRecords = (
@@ -48,7 +53,7 @@ const getGeoJSONfromRecords = (
 
 const getAreasGeoJSON = (
   locations?: Location[]
-): FeatureCollection<Polygon | LineString, SiteFeatureProperties> => {
+): FeatureCollection<AreaShape, SiteFeatureProperties> => {
   const getFeature = (location: Location) => {
     const shape = getShapeFromGeom(location.data.boundaryGeom);
     if (!shape) return null;
@@ -66,13 +71,17 @@ const getAreasGeoJSON = (
   return {
     type: 'FeatureCollection',
     features: locations?.map(getFeature).filter(Boolean) || [],
-  } as FeatureCollection<Polygon | LineString, SiteFeatureProperties>;
+  } as FeatureCollection<AreaShape, SiteFeatureProperties>;
 };
 
 type Props = {
   onSelectSite?: (location?: Location) => void;
   locations: Location[];
   selectedLocationId?: string;
+};
+
+type SiteMarkerFeature = {
+  properties?: SiteFeatureProperties;
 };
 
 const Sites = ({ onSelectSite, locations, selectedLocationId }: Props) => {
@@ -82,8 +91,10 @@ const Sites = ({ onSelectSite, locations, selectedLocationId }: Props) => {
   );
   const areasData = useMemo(() => getAreasGeoJSON(locations), [locations]);
 
-  const onClick = (feature: any) => {
-    const { id } = feature.properties as SiteFeatureProperties;
+  const onClick = (feature: SiteMarkerFeature) => {
+    if (!feature.properties) return;
+
+    const { id } = feature.properties;
     const location = locations.find(loc => loc.id === id);
     if (!location) return;
 
