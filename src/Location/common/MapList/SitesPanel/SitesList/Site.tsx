@@ -52,8 +52,8 @@ const Site = ({
           'transition-opacity duration-150'
         )}
       />
-      <div className="flex w-full items-center justify-start gap-4">
-        <div className="flex w-full flex-col gap-1 py-1">
+      <div className="flex w-full items-center justify-between gap-4">
+        <div className="flex w-full flex-col gap-1 py-1 max-w-3/4">
           <div className="line-clamp-1 font-semibold">{name}</div>
 
           <div className="flex gap-2 items-center">
