@@ -9,7 +9,7 @@ import {
   byGroupMembershipStatus,
   GroupLocationData,
   byLocationType,
-  LocationType,
+  LocationType as LocType,
   isAxiosNetworkError,
   HandledError,
 } from '@flumens';
@@ -18,6 +18,7 @@ import userModel from 'models/user';
 import Location, {
   dtoSchema,
   Data as RemoteLocationAttributes,
+  trapCountAttr,
 } from '../location';
 import { locationsStore as store } from '../store';
 import groups from './groups';
@@ -72,46 +73,39 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       this.upsert(...newModels);
       await Promise.all(newModels.map(m => m.save()));
       await this.removeStaleLocalModels(newModels, [
-        LocationType.Transect,
-        LocationType.TransectSection,
+        LocType.Transect,
+        LocType.TransectSection,
       ]);
     }
 
     if (!type || type === 'mothTraps') {
-      const docs = await this.fetchRemoteByType(LocationType.MothTrap);
+      const docs = await this.fetchRemoteByType(LocType.MothTrap);
       const newModels = docs.map(doc => this.Model.fromDTO(doc));
       this.upsert(...newModels);
       await Promise.all(newModels.map(m => m.save()));
 
-      await this.removeStaleLocalModels(newModels, [LocationType.MothTrap]);
+      await this.removeStaleLocalModels(newModels, [LocType.MothTrap]);
     }
 
     if (!type || type === 'baitTraps') {
-      const siteDocs = await this.fetchRemoteByType(
-        LocationType.BaitTrapSite,
-        true
-      );
+      const siteDocs = await this.fetchBaitTrapSites();
       const newSiteModels = siteDocs.map(doc => this.Model.fromDTO(doc));
       this.upsert(...newSiteModels);
       await Promise.all(newSiteModels.map(m => m.save()));
 
-      await this.removeStaleLocalModels(newSiteModels, [
-        LocationType.BaitTrapSite,
-      ]);
+      await this.removeStaleLocalModels(newSiteModels, [LocType.BaitTrapSite]);
 
-      const trapDocs = await this.fetchRemoteByType(
-        LocationType.BaitTrap,
-        true
-      );
+      const locationList = siteDocs.map(({ id }) => id!);
+      const trapDocs = await this.fetchBaitTraps(locationList);
       const newTrapModels = trapDocs.map(doc => this.Model.fromDTO(doc));
       this.upsert(...newTrapModels);
       await Promise.all(newTrapModels.map(m => m.save()));
 
-      await this.removeStaleLocalModels(newTrapModels, [LocationType.BaitTrap]);
+      await this.removeStaleLocalModels(newTrapModels, [LocType.BaitTrap]);
     }
 
     if (!type || type === 'sites') {
-      const docs = await this.fetchRemoteByType(LocationType.Site);
+      const docs = await this.fetchRemoteByType(LocType.Site);
       const newSiteModels = docs.map(doc => this.Model.fromDTO(doc));
 
       const groupDocs = await this.fetchGroupLocations();
@@ -139,7 +133,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
       await this.fetchAndLinkTaxonLists(newModels);
 
-      await this.removeStaleLocalModels(newModels, [LocationType.Site]);
+      await this.removeStaleLocalModels(newModels, [LocType.Site]);
     }
 
     this.remote.synchronising = false;
@@ -183,10 +177,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
     );
   }
 
-  private async removeStaleLocalModels(
-    models: Location[],
-    type: LocationType[]
-  ) {
+  private async removeStaleLocalModels(models: Location[], type: LocType[]) {
     const newExternalKeys = new Set(models.map(m => m.cid));
 
     // remove stale non-draft models that are no longer in the remote
@@ -209,7 +200,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         lat: doc.locationLat,
         lon: doc.locationLon,
         name: doc.locationName,
-        locationTypeId: LocationType.Site,
+        locationTypeId: LocType.Site,
         parentId: null,
         boundaryGeom: doc.locationBoundaryGeom,
         code: doc.locationCode,
@@ -325,6 +316,112 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       const docs = res.data.map(getValues);
 
       docs.forEach(dtoSchema.parse);
+
+      return docs;
+    } catch (error: any) {
+      if (axios.isCancel(error)) return [];
+
+      if (isAxiosNetworkError(error))
+        throw new HandledError(
+          'Request aborted because of a network issue (timeout or similar).'
+        );
+
+      if ('issues' in error) {
+        const err: ZodError = error;
+        throw new Error(
+          err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
+        );
+      }
+
+      throw error;
+    }
+  }
+
+  private async fetchBaitTrapSites(): Promise<RemoteLocationAttributes[]> {
+    const url = `${this.remote.url}/index.php/services/rest/reports/projects/ebms/ebms_shared_locations.xml`;
+
+    const token = await userModel.getAccessToken();
+
+    /* eslint-disable @typescript-eslint/naming-convention */
+    const options = {
+      params: {
+        location_type_id: 24555,
+        locattrs: '428',
+        limit: 10000,
+      },
+      headers: { Authorization: `Bearer ${token}` },
+      timeout: 80000,
+    };
+    /* eslint-enable @typescript-eslint/naming-convention */
+
+    try {
+      const res = await axios.get(url, options);
+
+      const getValues = (doc: any) =>
+        mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
+
+      const attachTrapNoAttr: any = (doc: any) => ({
+        ...doc,
+        [trapCountAttr.id]: doc.attrLocation428,
+      });
+      const docs = res.data.data.map(getValues).map(attachTrapNoAttr);
+
+      docs.forEach(dtoSchema.parse);
+
+      return docs;
+    } catch (error: any) {
+      if (axios.isCancel(error)) return [];
+
+      if (isAxiosNetworkError(error))
+        throw new HandledError(
+          'Request aborted because of a network issue (timeout or similar).'
+        );
+
+      if ('issues' in error) {
+        const err: ZodError = error;
+        throw new Error(
+          err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
+        );
+      }
+
+      throw error;
+    }
+  }
+
+  private async fetchBaitTraps(
+    locationList: string[]
+  ): Promise<RemoteLocationAttributes[]> {
+    if (!locationList?.length) return [];
+
+    const url = `${this.remote.url}/index.php/services/rest/reports/projects/ebms/ebms_shared_locations.xml`;
+
+    const token = await userModel.getAccessToken();
+
+    /* eslint-disable @typescript-eslint/naming-convention */
+    const options = {
+      params: {
+        location_type_id: 24554,
+        // parent_id: locationList.join(','), // the API doesn't support array filtering by parent_id yet
+        limit: 10000,
+      },
+      headers: { Authorization: `Bearer ${token}` },
+      timeout: 80000,
+    };
+    /* eslint-enable @typescript-eslint/naming-convention */
+
+    try {
+      const res = await axios.get(url, options);
+
+      const getValues = (doc: any) =>
+        mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
+
+      const docs = res.data.data.map(getValues);
+      const remoteSchema = dtoSchema.extend({
+        // @ts-expect-error fix this once drizzle-orm supports zod v4
+        parentId: z.string(), // this is required to join with transects
+      });
+
+      docs.forEach(remoteSchema.parse);
 
       return docs;
     } catch (error: any) {

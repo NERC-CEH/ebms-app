@@ -1,3 +1,4 @@
-GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/locations
+GET {{$dotenv APP_BACKEND_INDICIA_URL}}/index.php/services/rest/reports/projects/ebms/ebms_shared_locations.xml
   ?location_type_id=24555
+  &locattrs=428
 Authorization: Bearer {{$dotenv access_token}}

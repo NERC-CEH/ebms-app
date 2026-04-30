@@ -58,8 +58,7 @@ const BaitTrapLocation = () => {
 
   const onSelectSite = (location?: Location) => {
     sample.data.locationId = location?.id;
-    sample.data[trapsAttr.id] =
-      Number(location?.data[trapCountAttr.id].value) || 0;
+    sample.data[trapsAttr.id] = Number(location?.data[trapCountAttr.id]) || 0;
 
     sample.data[trapLocationsAttr.id] = sample.data[trapsAttr.id] / 2;
     goBack();
