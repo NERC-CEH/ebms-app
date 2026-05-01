@@ -69,7 +69,11 @@ const AreaAttr = ({
     initialViewState = { ...location, zoom: 14 };
   } else if (siteBoundaryShape) {
     // zoom to site boundary centroid on init
-    const [firstCoord] = (siteBoundaryShape.coordinates as any)[0];
+    let [firstCoord] = (siteBoundaryShape.coordinates as any)[0];
+    if (siteBoundaryShape.type === 'MultiPolygon') {
+      [firstCoord] = firstCoord;
+    }
+
     initialViewState = {
       longitude: firstCoord[0],
       latitude: firstCoord[1],

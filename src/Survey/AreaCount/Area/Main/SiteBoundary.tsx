@@ -1,5 +1,5 @@
 // eslint-disable-next-line import-x/no-extraneous-dependencies
-import { LineString, Polygon } from 'geojson';
+import { LineString, MultiPolygon, Polygon } from 'geojson';
 import { Layer, Source } from 'react-map-gl/mapbox';
 import wkt from 'wellknown';
 import { getGeomMetersToLatLon } from '@flumens';
@@ -8,9 +8,12 @@ import Location from 'models/location';
 export const getShapeFromGeom = (geom?: string | null) => {
   if (!geom) return undefined;
 
-  const geomParsed = wkt.parse(geom) as Polygon | LineString;
+  const geomParsed = wkt.parse(geom) as Polygon | LineString | MultiPolygon;
 
-  return getGeomMetersToLatLon(geomParsed) as Polygon | LineString;
+  return getGeomMetersToLatLon(geomParsed) as
+    | Polygon
+    | LineString
+    | MultiPolygon;
 };
 
 type Props = {
