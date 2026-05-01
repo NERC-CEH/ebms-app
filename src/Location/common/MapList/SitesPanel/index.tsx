@@ -25,6 +25,7 @@ type Props = {
   centroid: number[];
   selectedLocationId?: string | number;
   onSelectSite?: (loc?: Location) => void;
+  isShowingProjects?: (value: boolean) => void;
   userLocations: Location[];
   groupLocations: Location[];
 };
@@ -36,6 +37,7 @@ const Sites = ({
   selectedLocationId,
   userLocations,
   groupLocations,
+  isShowingProjects,
 }: Props) => {
   const [isMounted, setIsMounted] = useState(true);
 
@@ -44,6 +46,7 @@ const Sites = ({
   const onSegmentClick = (e: any) => {
     const newSegment = e.detail.value;
     setSegment(newSegment);
+    isShowingProjects?.(newSegment === 'group');
   };
 
   const unMountBottomSheet = () => setIsMounted(false); // hack, this component is mounted as a parent with root div

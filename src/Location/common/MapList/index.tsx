@@ -30,6 +30,7 @@ const MainSites = ({
   isFetchingLocations,
   site,
 }: Props) => {
+  const [showGroupsOnMap, setShowGroupsOnMap] = useState(false);
   let initialViewState;
 
   if (site) {
@@ -54,6 +55,8 @@ const MainSites = ({
   const updateMapCenter = ({ viewState }: ViewStateChangeEvent) =>
     setCurrentMapCenter([viewState.latitude, viewState.longitude]);
 
+  const locations = showGroupsOnMap ? groupLocations : userLocations;
+
   return (
     <Main className="[--padding-bottom:0] [--padding-top:0]">
       {device.isOnline && (
@@ -77,7 +80,7 @@ const MainSites = ({
           </MapContainer.Control>
 
           <Sites
-            locations={[...userLocations, ...groupLocations]}
+            locations={locations}
             onSelectSite={onSelectSite}
             selectedLocationId={selectedLocationId}
           />
@@ -94,6 +97,7 @@ const MainSites = ({
 
       <SitesPanel
         hasGroup={hasGroup}
+        isShowingProjects={setShowGroupsOnMap}
         centroid={currentMapCenter}
         onSelectSite={onSelectSite}
         groupLocations={groupLocations}
