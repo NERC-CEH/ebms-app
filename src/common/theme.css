@@ -241,12 +241,6 @@ button {
   @apply font-medium;
 }
 
-/* Fix ion-modal header padding */
-html.ios ion-modal ion-header ion-toolbar {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-}
-
 /* Make the input values in the trap details page right-aligned */
 #survey-bait-trap-trap-detail .field-label + input,
 #survey-bait-trap-edit-occurrence .field-label + input,
