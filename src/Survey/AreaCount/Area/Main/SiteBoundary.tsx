@@ -9,6 +9,7 @@ export const getShapeFromGeom = (geom?: string | null) => {
   if (!geom) return undefined;
 
   const geomParsed = wkt.parse(geom) as Polygon | LineString | MultiPolygon;
+  if (!geomParsed) return undefined;
 
   return getGeomMetersToLatLon(geomParsed) as
     | Polygon

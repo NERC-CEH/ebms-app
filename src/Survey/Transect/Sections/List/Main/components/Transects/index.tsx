@@ -18,7 +18,9 @@ function getTransectItem(transect: Location, onTransectSelect: any) {
 
   const getSectionGeometry = (section: Location) => {
     const geometry = section.data.boundaryGeom;
-    const shape: any = geometry ? wkt.parse(geometry) : {};
+    const shape: any = geometry ? wkt.parse(geometry) : null;
+    if (!shape) return null;
+
     return getGeomMetersToLatLon(shape);
   };
 

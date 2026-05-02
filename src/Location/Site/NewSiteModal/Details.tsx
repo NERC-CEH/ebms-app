@@ -91,7 +91,9 @@ const getLocationAttrsFromShape = (shape?: Shape) => ({
 
 const getShapeFromGeom = (geom?: string | null) => {
   if (!geom) return undefined;
+
   const geomParsed = wkt.parse(geom) as any;
+  if (!geomParsed) return undefined;
 
   return getGeomMetersToLatLon(geomParsed) as Shape;
 };

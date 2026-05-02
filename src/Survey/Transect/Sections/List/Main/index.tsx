@@ -20,10 +20,12 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
   let geom: any;
   if (section?.data.boundaryGeom) {
     geom = wkt.parse(section.data.boundaryGeom);
-    geom = getGeomMetersToLatLon(geom);
-    geom = [{ type: 'Feature', geometry: geom }];
-    if (geom?.type === 'Point') {
-      geom = null;
+    if (geom) {
+      geom = getGeomMetersToLatLon(geom);
+      geom = [{ type: 'Feature', geometry: geom }];
+      if (geom?.type === 'Point') {
+        geom = null;
+      }
     }
   }
 
