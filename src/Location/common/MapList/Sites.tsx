@@ -22,10 +22,13 @@ type AreaShape = Polygon | LineString | MultiPolygon;
 const getShapeFromGeom = (geom?: string | null) => {
   if (!geom) return null;
 
-  const geomParsed = wkt.parse(geom) as AreaShape;
-  if (geomParsed?.type === 'MultiPolygon') return null;
-
-  return getGeomMetersToLatLon(geomParsed) as AreaShape;
+  try {
+    const geomParsed = wkt.parse(geom) as AreaShape;
+    return getGeomMetersToLatLon(geomParsed) as AreaShape;
+  } catch (error) {
+    console.error('Error parsing WKT geometry:', error);
+    return null;
+  }
 };
 
 const getGeoJSONfromRecords = (
