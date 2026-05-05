@@ -39,7 +39,7 @@ const TransectHomeController = () => {
         <IonList lines="full">
           <div className="rounded-list">
             <IonItem
-              routerLink={`${url}/taxon`}
+              routerLink={`${url}/taxa`}
               disabled={isDisabled}
               className="[--padding-start:5px]"
             >
