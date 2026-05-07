@@ -107,6 +107,7 @@ const DetailsMain = ({
           />
           <MenuDateAttr
             label="Time"
+            id="surveyStartTime"
             value={sample.data.surveyStartTime}
             presentation="time"
             onChange={val => (sample.data.surveyStartTime = val)} // eslint-disable-line no-return-assign, no-param-reassign
@@ -135,6 +136,7 @@ const DetailsMain = ({
           />
           <MenuDateAttr
             label="Time"
+            id="surveyEndTime"
             value={sample.data.surveyEndTime}
             presentation="time"
             onChange={val => (sample.data.surveyEndTime = val)} // eslint-disable-line no-return-assign, no-param-reassign

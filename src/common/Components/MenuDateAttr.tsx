@@ -17,10 +17,12 @@ type Props = {
   isDisabled?: boolean;
   icon?: any;
   max?: string;
+  id?: string;
   presentation?: DatetimePresentation;
 };
 
 const MenuDateAttr = ({
+  id,
   label,
   icon = calendarOutline,
   presentation = 'date',
@@ -38,13 +40,13 @@ const MenuDateAttr = ({
     <div className="flex items-center gap-1">
       <div>
         <IonDatetimeButton
-          datetime={`date-time-picker-${label}`}
+          datetime={`date-time-picker-${id || label}`}
           slot="end"
           className="[--ion-text-color:var(--form-value-color)]"
         />
         <IonModal keepContentsMounted className="[--border-radius:10px]">
           <IonDatetime
-            id={`date-time-picker-${label}`}
+            id={`date-time-picker-${id || label}`}
             presentation={presentation}
             preferWheel
             onIonChange={(e: any) => onChange(e.detail.value)}
