@@ -40,6 +40,7 @@ import {
   windSpeedValues,
   temperatureValues,
   dateAttr,
+  appVersionAttr,
 } from 'Survey/common/config';
 
 type Type = Record<string, string>;
@@ -676,7 +677,7 @@ const survey: Survey = {
         locationId: undefined,
         comment: null,
         recorder,
-        appVersion: config.version,
+        [appVersionAttr.id]: config.version,
         [surveyEndDateAttr.id]: new Date().toISOString(),
       },
     });
