@@ -10,7 +10,7 @@ import {
 import SunCalc from 'suncalc';
 import { z } from 'zod';
 import {
-  dateFormat,
+  dateFormatISO,
   device,
   isValidLocation,
   Location,
@@ -41,6 +41,8 @@ import {
   temperatureValues,
   dateAttr,
   appVersionAttr,
+  backwardsTimeFormat,
+  backwardsDateFormat,
 } from 'Survey/common/config';
 
 type Type = Record<string, string>;
@@ -135,35 +137,12 @@ export const useTemporarySiteAttr = {
 
 export const trapEmptyingTimeAttr = {
   id: 'smpAttr:2028',
-  pageProps: {
-    headerProps: { title: 'Emptying time' },
-    attrProps: {
-      input: 'time',
-      inputProps: {
-        format: { options: { hour: '2-digit', minute: '2-digit' } },
-        presentation: 'time',
-      },
-    },
-  },
-  remote: { values: (date: number) => timeFormat.format(new Date(date)) },
+  remote: { values: backwardsTimeFormat },
 } as const;
 
 export const surveyEndDateAttr = {
   id: 'smpAttr:2029',
-  menuProps: { parse: 'date', icon: calendarOutline },
-  pageProps: {
-    attrProps: {
-      input: 'date',
-      inputProps: () => ({
-        label: 'Date',
-        icon: calendarOutline,
-        autoFocus: false,
-        presentation: 'date',
-        locale: appModel.data.language || undefined,
-      }),
-    },
-  },
-  remote: { values: (date: number) => dateFormat.format(new Date(date)) },
+  remote: { values: backwardsDateFormat },
 } as const;
 
 export const tempMothTrapTypeAttr = {
@@ -212,7 +191,7 @@ const getSetDefaultTime = (sample: Sample) => () => {
     const adjustedSunset = new Date(new Date(sunset).getTime() + offsetMs);
 
     // eslint-disable-next-line no-param-reassign
-    sample.data.surveyStartTime = adjustedSunset.toISOString(); // UTC time
+    sample.data.surveyStartTime = timeFormat.format(adjustedSunset);
     sample.save();
   }
 
@@ -231,7 +210,7 @@ const getSetDefaultTime = (sample: Sample) => () => {
     const adjustedSunrise = new Date(new Date(sunrise).getTime() + offsetMs);
 
     // eslint-disable-next-line no-param-reassign
-    sample.data.surveyEndTime = adjustedSunrise.toISOString(); // UTC time
+    sample.data.surveyEndTime = timeFormat.format(adjustedSunrise);
 
     // trap emptying time defaults to sunrise
     // eslint-disable-next-line no-param-reassign
@@ -244,9 +223,9 @@ const getSetEndWeather = (sample: Sample) => async () => {
   const location = getTrapLocation(sample);
   if (!location) return;
 
-  const datePart = sample.data[surveyEndDateAttr.id]!.slice(0, 10); // YYYY-MM-DD
-  const timePart = sample.data.surveyEndTime!.slice(11); // HH:mm:ss.sssZ
-  const time = `${datePart}T${timePart}`;
+  const datePart = sample.data[surveyEndDateAttr.id]; // YYYY-MM-DD
+  const timePart = sample.data.surveyEndTime; // HH:mm
+  const time = `${datePart}T${timePart}`; // no timezone suffix (Z or +02:00), so JS interprets it as local time
 
   const weatherValues = await fetchHistoricalWeather(location, time);
 
@@ -264,9 +243,9 @@ const getSetStartWeather = (sample: Sample) => async () => {
   const location = getTrapLocation(sample);
   if (!location) return;
 
-  const datePart = sample.data.date.slice(0, 10); // YYYY-MM-DD
-  const timePart = sample.data.surveyStartTime!.slice(11); // HH:mm:ss.sssZ
-  const time = `${datePart}T${timePart}`;
+  const datePart = sample.data.date; // YYYY-MM-DD
+  const timePart = sample.data.surveyStartTime; // HH:mm
+  const time = `${datePart}T${timePart}`; // no timezone suffix (Z or +02:00), so JS interprets it as local time
 
   const weatherValues = await fetchHistoricalWeather(location, time);
 
@@ -367,10 +346,7 @@ const survey: Survey = {
           },
         },
       },
-      remote: {
-        id: 1385,
-        values: (date: number) => timeFormat.format(new Date(date)),
-      },
+      remote: { id: 1385, values: backwardsTimeFormat },
     },
 
     surveyEndTime: {
@@ -386,10 +362,7 @@ const survey: Survey = {
           },
         },
       },
-      remote: {
-        id: 1386,
-        values: (date: number) => timeFormat.format(new Date(date)),
-      },
+      remote: { id: 1386, values: backwardsTimeFormat },
     },
 
     [trapEmptyingTimeAttr.id]: trapEmptyingTimeAttr,
@@ -669,7 +642,7 @@ const survey: Survey = {
       },
       data: {
         surveyId: surveyId || survey.id,
-        date: yesterday.toISOString(),
+        date: dateFormatISO.format(yesterday),
         enteredSrefSystem: 4326,
         training: appModel.data.useTraining,
         groupId: appModel.data.defaultGroupId,
@@ -678,7 +651,7 @@ const survey: Survey = {
         comment: null,
         recorder,
         [appVersionAttr.id]: config.version,
-        [surveyEndDateAttr.id]: new Date().toISOString(),
+        [surveyEndDateAttr.id]: dateFormatISO.format(new Date()),
       },
     });
 

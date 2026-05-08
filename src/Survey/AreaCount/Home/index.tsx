@@ -12,6 +12,7 @@ import {
   Checkbox,
   CheckboxOption,
   useOnBackButton,
+  timeFormat,
 } from '@flumens';
 import { NavContext } from '@ionic/react';
 import distance from '@turf/distance';
@@ -310,7 +311,7 @@ const HomeController = () => {
 
     // in case the automatic survey end time hasn't been set after the timeout
     if (!sample.data.surveyEndTime)
-      sample.data.surveyEndTime = new Date().toISOString();
+      sample.data.surveyEndTime = timeFormat.format(new Date());
 
     sample.cleanUp();
     sample.save();

@@ -1,3 +1,4 @@
+/* eslint-disable no-return-assign */
 import { observer } from 'mobx-react';
 import {
   personOutline,
@@ -8,8 +9,9 @@ import {
   cloudyOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { isValidDate, Main, MenuAttrItem, timeFormat } from '@flumens';
+import { Main, MenuAttrItem } from '@flumens';
 import { IonList, IonItem, IonIcon, IonLabel } from '@ionic/react';
+import MenuDateAttr from 'common/Components/MenuDateAttr';
 import windIcon from 'common/images/wind.svg';
 import locations from 'models/collections/locations';
 import Sample from 'models/sample';
@@ -35,31 +37,10 @@ const Edit = ({ sample, isDisabled }: Props) => {
     return <IonLabel slot="end">{transectName}</IonLabel>;
   };
 
-  const {
-    temperature,
-    cloud,
-    windDirection,
-    windSpeed,
-    recorder,
-    comment,
-    surveyStartTime,
-    surveyEndTime,
-  } = sample.data;
-
-  const startTimePretty = isValidDate(surveyStartTime!)
-    ? timeFormat.format(new Date(surveyStartTime!))
-    : surveyStartTime;
-
-  const endTimePretty = isValidDate(surveyEndTime!)
-    ? timeFormat.format(new Date(surveyEndTime!))
-    : surveyEndTime;
+  const { temperature, cloud, windDirection, windSpeed, recorder, comment } =
+    sample.data;
 
   const baseURL = `/survey/transect/${sample.id || sample.cid}`;
-
-  const setSurveyEndTimeIfMissing = () => {
-    if (!isDisabled && !sample.data.surveyEndTime)
-      sample.data.surveyEndTime = new Date().toISOString(); // eslint-disable-line no-param-reassign
-  };
 
   return (
     <Main id="transect-edit">
@@ -75,25 +56,25 @@ const Edit = ({ sample, isDisabled }: Props) => {
             {getPrettySectionsLabel()}
           </IonItem>
 
-          <MenuAttrItem
-            routerLink={`${baseURL}/surveyStartTime`}
-            disabled={isDisabled}
-            icon={timeOutline}
+          <MenuDateAttr
             label="Start Time"
-            value={startTimePretty}
-            skipValueTranslation
+            id="surveyStartTime"
+            value={sample.data.surveyStartTime}
+            presentation="time"
+            onChange={val => (sample.data.surveyStartTime = val)}
+            isDisabled={isDisabled}
+            icon={timeOutline}
           />
 
-          <div onClick={setSurveyEndTimeIfMissing}>
-            <MenuAttrItem
-              routerLink={`${baseURL}/surveyEndTime`}
-              disabled={isDisabled}
-              icon={timeOutline}
-              label="End Time"
-              value={endTimePretty}
-              skipValueTranslation
-            />
-          </div>
+          <MenuDateAttr
+            label="End Time"
+            id="surveyEndTime"
+            value={sample.data.surveyEndTime}
+            presentation="time"
+            onChange={val => (sample.data.surveyEndTime = val)}
+            isDisabled={isDisabled}
+            icon={timeOutline}
+          />
         </div>
 
         <h3 className="list-title">

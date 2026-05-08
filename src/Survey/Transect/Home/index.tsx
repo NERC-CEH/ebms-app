@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import {
   Header,
   Page,
+  timeFormat,
   useOnBackButton,
   useRemoteSample,
   useSample,
@@ -64,7 +65,7 @@ const TransectHomeController = () => {
 
     const saveAndReturn = () => {
       if (!sample.data.surveyEndTime) {
-        sample.data.surveyEndTime = new Date().toISOString();
+        sample.data.surveyEndTime = timeFormat.format(new Date());
       }
       sample.save();
       navigate('/home/user-surveys', 'root');

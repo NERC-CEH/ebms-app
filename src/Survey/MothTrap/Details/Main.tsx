@@ -1,15 +1,9 @@
+/* eslint-disable no-return-assign */
 import { observer } from 'mobx-react';
 import { timeOutline, cloudOutline, peopleOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import {
-  Main,
-  MenuAttrItemFromModel,
-  Attr,
-  MenuAttrItem,
-  AttrPropsExtended,
-  Block,
-} from '@flumens';
+import { Main, MenuAttrItemFromModel, MenuAttrItem, Block } from '@flumens';
 import { IonIcon, IonItem, IonLabel, IonList } from '@ionic/react';
 import MenuDateAttr from 'common/Components/MenuDateAttr';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
@@ -37,15 +31,6 @@ const DetailsMain = ({
 }: Props) => {
   const { url } = useRouteMatch();
   const location = locations.idMap.get(sample.data.locationId || '');
-  const survey = sample.getSurvey();
-
-  const dateAttrProps = survey.attrs!.date.pageProps!
-    .attrProps as AttrPropsExtended;
-  const surveyDateProps = dateAttrProps.inputProps();
-
-  const surveyEndDateAttrProps = survey.attrs![surveyEndDateAttr.id].pageProps!
-    .attrProps as AttrPropsExtended;
-  const surveyEndDateProps = surveyEndDateAttrProps.inputProps();
 
   const isDisabled = sample.isUploaded;
 
@@ -99,18 +84,19 @@ const DetailsMain = ({
           <T>Trap start</T>
         </h3>
         <div className="rounded-list">
-          <Attr
-            model={sample}
-            attr="date"
-            input="date"
-            inputProps={{ ...surveyDateProps, disabled: isDisabled }}
+          <MenuDateAttr
+            label="Date"
+            value={sample.data.date}
+            onChange={val => (sample.data.date = val)}
+            isDisabled={isDisabled}
           />
+
           <MenuDateAttr
             label="Time"
             id="surveyStartTime"
             value={sample.data.surveyStartTime}
             presentation="time"
-            onChange={val => (sample.data.surveyStartTime = val)} // eslint-disable-line no-return-assign, no-param-reassign
+            onChange={val => (sample.data.surveyStartTime = val)}
             isDisabled={isDisabled}
             icon={timeOutline}
           />
@@ -128,18 +114,19 @@ const DetailsMain = ({
           <T>Trap end</T>
         </h3>
         <div className="rounded-list">
-          <Attr
-            model={sample}
-            attr={surveyEndDateAttr.id}
-            input="date"
-            inputProps={{ ...surveyEndDateProps, disabled: isDisabled }}
+          <MenuDateAttr
+            label="Date"
+            id="trapEndDate" // needed for datepicker to work
+            value={sample.data[surveyEndDateAttr.id]}
+            onChange={val => (sample.data[surveyEndDateAttr.id] = val)}
+            isDisabled={isDisabled}
           />
           <MenuDateAttr
             label="Time"
             id="surveyEndTime"
             value={sample.data.surveyEndTime}
             presentation="time"
-            onChange={val => (sample.data.surveyEndTime = val)} // eslint-disable-line no-return-assign, no-param-reassign
+            onChange={val => (sample.data.surveyEndTime = val)}
             isDisabled={isDisabled}
             icon={timeOutline}
           />
@@ -147,7 +134,7 @@ const DetailsMain = ({
             label="Emptying time"
             value={sample.data[trapEmptyingTimeAttr.id]}
             presentation="time"
-            onChange={val => (sample.data[trapEmptyingTimeAttr.id] = val)} // eslint-disable-line no-return-assign, no-param-reassign
+            onChange={val => (sample.data[trapEmptyingTimeAttr.id] = val)}
             isDisabled={isDisabled}
             icon={timeOutline}
           />

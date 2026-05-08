@@ -21,7 +21,7 @@ import {
 import { z } from 'zod';
 import {
   ChoiceInputConf,
-  dateFormat,
+  dateFormatISO,
   NumberInputConf,
   OccurrenceData,
   SampleData,
@@ -39,6 +39,8 @@ import { Data as LocationData } from 'models/location';
 import {
   Survey,
   appVersionAttr,
+  backwardsDateFormat,
+  backwardsTimeFormat,
   commentAttr,
   dateAttr,
   inferAttrConfigTypes,
@@ -50,7 +52,7 @@ const mothTrapIcon = (<IonIcon src={mothTrap} className="size-6" />) as any;
 
 export const timeAttr = {
   id: 'smpAttr:2035',
-  remote: { values: (date: number) => timeFormat.format(new Date(date)) },
+  remote: { values: backwardsTimeFormat },
 } as const;
 
 export const trapLocationsAttr = {
@@ -403,11 +405,11 @@ const attrs = {
   [numberOfDaysAttr.id]: { block: numberOfDaysAttr },
   [firstSampleDateAttr.id]: {
     block: firstSampleDateAttr,
-    remote: { values: (date: number) => dateFormat.format(new Date(date)) },
+    remote: { values: backwardsDateFormat },
   },
   [lastSampleDateAttr.id]: {
     block: lastSampleDateAttr,
-    remote: { values: (date: number) => dateFormat.format(new Date(date)) },
+    remote: { values: backwardsDateFormat },
   },
   [collectorsAttr.id]: { block: collectorsAttr },
   [eventTypeAttr.id]: { block: eventTypeAttr },
@@ -480,15 +482,15 @@ const survey = {
     },
 
     create({ location }) {
-      const now = new Date().toISOString();
+      const now = new Date();
 
       const sample = new Sample<SubSmpData>({
         metadata: { survey: SURVEY_NAME },
         data: {
           surveyId: SURVEY_ID,
           sampleMethodId: 24553, // bait-trap check
-          date: now,
-          [timeAttr.id]: now,
+          date: dateFormatISO.format(now),
+          [timeAttr.id]: timeFormat.format(now),
           location,
         },
       });
@@ -519,15 +521,15 @@ const survey = {
       .safeParse(data).error,
 
   create() {
-    const now = new Date().toISOString();
+    const now = new Date();
 
     const sample = new Sample<Data>({
       metadata: { survey: SURVEY_NAME },
       data: {
         surveyId: SURVEY_ID,
         date: now,
-        [firstSampleDateAttr.id]: now,
-        [lastSampleDateAttr.id]: now,
+        [firstSampleDateAttr.id]: dateFormatISO.format(now),
+        [lastSampleDateAttr.id]: dateFormatISO.format(now),
         sampleMethodId: 24552, // bait-trap
         training: appModel.data.useTraining,
         inputForm: SURVEY_FORM,

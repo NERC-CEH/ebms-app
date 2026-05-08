@@ -2,7 +2,14 @@ import { useContext, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch, useLocation } from 'react-router';
-import { Page, Header, useOnBackButton, useAlert, useSample } from '@flumens';
+import {
+  Page,
+  Header,
+  useOnBackButton,
+  useAlert,
+  useSample,
+  timeFormat,
+} from '@flumens';
 import { IonButton, NavContext, IonButtons } from '@ionic/react';
 import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
@@ -109,7 +116,7 @@ const DetailsController = () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    sample.data.surveyStartTime = new Date().toISOString();
+    sample.data.surveyStartTime = timeFormat.format(new Date());
     sample.startVibrateCounter();
     sample.save();
 

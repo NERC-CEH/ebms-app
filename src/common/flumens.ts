@@ -110,6 +110,10 @@ export {
   SamplesContext,
 } from '@flumens/ionic/dist/hooks/useSample';
 export { default as useRemoteSample } from '@flumens/ionic/dist/hooks/useRemoteSample';
+export {
+  default as DatetimeButton,
+  type Props as DatetimeButtonProps,
+} from '@flumens/ionic/dist/components/DatetimeButton';
 
 // TAILWIND
 export {

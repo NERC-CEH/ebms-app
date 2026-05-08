@@ -9,10 +9,10 @@ import {
   MenuAttrItemFromModelMenuProps,
   PageProps,
   timeFormat,
-  dateFormat,
   BlockT,
   inferBlockType,
   TextInputConf,
+  dateFormatISO,
 } from '@flumens';
 import { IonIcon } from '@ionic/react';
 import groups from 'common/data/groups';
@@ -169,6 +169,18 @@ export const taxonAttr = {
   },
 } as const;
 
+/** @deprecated */
+export const backwardsTimeFormat = (date: number | string) => {
+  // return if matches time format already (for backwards compatibility, can be removed in the future when all values are in correct format)
+  const timeFormatRegex = /^\d{2}:\d{2}$/;
+  if (timeFormatRegex.test(String(date))) return date;
+  return timeFormat.format(new Date(date));
+};
+
+/** @deprecated */
+export const backwardsDateFormat = (date: number | string) =>
+  dateFormatISO.format(new Date(date)); // for backwards compatibility, remove later
+
 export const surveyStartTimeAttr = {
   menuProps: { label: 'Start Time' },
   pageProps: {
@@ -180,10 +192,7 @@ export const surveyStartTimeAttr = {
       },
     },
   },
-  remote: {
-    id: 1385,
-    values: (date: number) => timeFormat.format(new Date(date)),
-  },
+  remote: { id: 1385, values: backwardsTimeFormat },
 } as const;
 
 export const surveyEndTimeAttr = {
@@ -197,15 +206,12 @@ export const surveyEndTimeAttr = {
       },
     },
   },
-  remote: {
-    id: 1386,
-    values: (date: number) => timeFormat.format(new Date(date)),
-  },
+  remote: { id: 1386, values: backwardsTimeFormat },
 } as const;
 
 export const dateAttr = {
   id: 'date',
-  remote: { values: (date: number) => dateFormat.format(new Date(date)) },
+  remote: { values: backwardsDateFormat },
 } as const;
 
 export const guidAttr = {

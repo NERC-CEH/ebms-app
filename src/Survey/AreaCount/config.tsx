@@ -1,5 +1,11 @@
 import { when } from 'mobx';
-import { device, getGeomWKT, isValidLocation } from '@flumens';
+import {
+  dateFormatISO,
+  device,
+  getGeomWKT,
+  isValidLocation,
+  timeFormat,
+} from '@flumens';
 import config from 'common/config';
 import appModel from 'common/models/app';
 import { assignIfMissing } from 'common/models/utils';
@@ -192,7 +198,7 @@ const survey: Survey = {
       },
       data: {
         surveyId: surveyId || survey.id,
-        date: new Date().toISOString(),
+        date: dateFormatISO.format(new Date()),
         enteredSrefSystem: 4326,
         training: appModel.data.useTraining,
         groupId: appModel.data.defaultGroupId,
@@ -209,7 +215,7 @@ const survey: Survey = {
     });
 
     if (!sample.isSingleSpeciesSurvey()) {
-      const createdOnString = new Date(sample.createdAt).toISOString();
+      const createdOnString = timeFormat.format(new Date(sample.createdAt));
       sample.data.surveyStartTime = createdOnString; // this can't be done in defaults for single species survey
       sample.startVibrateCounter();
 
@@ -230,7 +236,7 @@ const survey: Survey = {
 
       clearInterval(timerInterval);
 
-      sample.data.surveyEndTime = new Date().toISOString();
+      sample.data.surveyEndTime = timeFormat.format(new Date());
       sample.save();
     }, 1000);
 

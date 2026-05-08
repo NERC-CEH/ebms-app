@@ -260,7 +260,11 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
   isTimerPaused = () => !!this.timerPausedTime.time;
 
   getTimerEndTime(this: Sample) {
-    const startTime = new Date(this.data.surveyStartTime!);
+    let startTime = new Date(this.data.surveyStartTime!); // keep it for backwards compatibility, remove in the future when all surveyStartTime values are in correct format
+
+    if (startTime.toString() === 'Invalid Date') {
+      startTime = new Date(`${this.data.date}T${this.data.surveyStartTime!}`); // new format
+    }
 
     return (
       startTime.getTime() + config.defaultSurveyTime + this.metadata.pausedTime!

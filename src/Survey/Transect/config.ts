@@ -2,7 +2,7 @@ import { when } from 'mobx';
 import { chatboxOutline } from 'ionicons/icons';
 import { z } from 'zod';
 import config from 'common/config';
-import { device } from 'common/flumens';
+import { dateFormatISO, device, timeFormat } from 'common/flumens';
 import locations from 'common/models/collections/locations';
 import Sample from 'common/models/sample';
 import { assignIfMissing } from 'common/models/utils';
@@ -39,10 +39,12 @@ const getSetStartWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
 
   const trap = locations.idMap.get(sample.data.locationId || '');
-  const weatherValues = await fetchHistoricalWeather(
-    trap!.data.location,
-    sample.data.surveyStartTime!
-  );
+
+  const datePart = sample.data.date; // YYYY-MM-DD
+  const timePart = sample.data.surveyStartTime; // HH:mm
+  const time = `${datePart}T${timePart}`; // no timezone suffix (Z or +02:00), so JS interprets it as local time
+
+  const weatherValues = await fetchHistoricalWeather(trap!.data.location, time);
 
   assignIfMissing(sample, 'temperature', weatherValues.temperature);
   assignIfMissing(sample, 'windDirection', weatherValues.windDirection);
@@ -178,16 +180,16 @@ const survey: Survey = {
 
   create() {
     const recorder = `${userModel.data.firstName} ${userModel.data.lastName}`;
-    const now = new Date().toISOString();
+    const now = new Date();
 
     const sample = new Sample({
       metadata: { survey: survey.name },
       data: {
         surveyId: survey.id,
-        date: now,
+        date: dateFormatISO.format(now),
         training: appModel.data.useTraining,
         sampleMethodId: 22,
-        surveyStartTime: now,
+        surveyStartTime: timeFormat.format(now),
         recorder,
         [appVersionAttr.id]: config.version,
       },
