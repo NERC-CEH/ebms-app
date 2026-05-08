@@ -40,19 +40,23 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
 
     return (
       <IonItemSliding key={group?.id} className="rounded-md mt-1">
-        <IonItem className="[--padding-start:0] [--inner-padding-end:0] [--border-style:none]">
-          <div className="flex flex-col w-full rounded-md border-neutral-200 border">
+        <IonItem className="[--padding-start:0] [--inner-padding-end:0] [--border-style:none] [--background:transparent]">
+          <div className="flex flex-col w-full">
             <RadioInput.Option
               value={group.id!}
               label={group.data.title}
               className="w-full "
             />
-            <div className="flex items-center gap-2 m-1 empty:hidden">
+            <div className="flex items-center gap-2 m-1 empty:hidden opacity-90">
               {!!group.taxonListCids.length && (
-                <Badge size="small">Has species lists</Badge>
+                <Badge size="small" className="bg-neutral-50 ring-neutral-200">
+                  Has species lists
+                </Badge>
               )}
               {!!group.locationCids.length && (
-                <Badge size="small">Has sites</Badge>
+                <Badge size="small" className="bg-neutral-50 ring-neutral-200">
+                  Has sites
+                </Badge>
               )}
             </div>
           </div>
