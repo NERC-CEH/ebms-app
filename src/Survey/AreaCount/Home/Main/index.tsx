@@ -24,6 +24,7 @@ import {
   InfoMessage,
   Button,
   Badge,
+  timeFormat,
 } from '@flumens';
 import {
   IonList,
@@ -540,17 +541,20 @@ const AreaCount = ({
   const toggleTimerWrap = () => toggleTimer(sample);
 
   const getTimerButton = () => {
-    if (isDisabled) {
-      const { surveyStartTime, surveyEndTime } = sample.data;
+    const { surveyStartTime, surveyEndTime } = sample.data;
+    if (isDisabled || surveyEndTime) {
+      const formattedStartTime = surveyStartTime?.includes('T')
+        ? timeFormat.format(new Date(surveyStartTime))
+        : surveyStartTime; // from remote
 
       return (
-        <IonItem className="menu-attr-item [--inner-padding-end:5px]">
+        <IonItem className="menu-attr-item" detailIcon={flagOutline} detail>
           <IonIcon icon={timeOutline} slot="start" mode="md" />
           <IonLabel>
             <T>Duration</T>
           </IonLabel>
           <IonLabel slot="end">
-            {surveyStartTime} – {surveyEndTime}
+            {formattedStartTime} – {surveyEndTime}
           </IonLabel>
         </IonItem>
       );

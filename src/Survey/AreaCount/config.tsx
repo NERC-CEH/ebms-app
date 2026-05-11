@@ -215,7 +215,7 @@ const survey: Survey = {
     });
 
     if (!sample.isSingleSpeciesSurvey()) {
-      const createdOnString = timeFormat.format(new Date(sample.createdAt));
+      const createdOnString = new Date(sample.createdAt).toISOString();
       sample.data.surveyStartTime = createdOnString; // this can't be done in defaults for single species survey
       sample.startVibrateCounter();
 
