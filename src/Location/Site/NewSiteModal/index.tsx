@@ -2,6 +2,7 @@ import {
   createContext,
   forwardRef,
   MutableRefObject,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
@@ -85,20 +86,25 @@ const NewSiteModal = (
     [location, setLocation]
   );
 
+  const detailsRoot = useCallback(() => <Details onSave={onSave} />, []);
+
+  // prevent swipe-down gesture from closing the modal
+  const canDismiss = async (_: unknown, role?: string) => role !== 'gesture';
+
   return (
     <IonModal
       ref={ref}
       backdropDismiss={false}
       presentingElement={presentingElement}
-      // canDismiss={canDismiss}
+      canDismiss={canDismiss}
       onWillDismiss={resetState}
       focusTrap={false}
     >
       <LocationContext.Provider value={context}>
         <ModalNav
-          // eslint-disable-next-line react/no-unstable-nested-components
-          root={() => <Details onSave={onSave} />}
+          root={detailsRoot}
           onDismiss={onDismiss}
+          swipeGesture={false}
         />
       </LocationContext.Provider>
     </IonModal>
