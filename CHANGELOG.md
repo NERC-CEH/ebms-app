@@ -1,3 +1,7 @@
+## 1.33.1
+
+Fixed Luxembourg's transect location handling.
+
 ## 1.33.0
 
 Added moth survey end date attribute

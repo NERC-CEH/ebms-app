@@ -37,7 +37,7 @@ const SectionListController = () => {
 
   const onTransectSelect = (transect: Location) => {
     sample.data.locationId = transect.id;
-    sample.data.enteredSref = `${transect?.data.location?.latitude} ${transect?.data.location?.longitude}`;
+    sample.data.enteredSref = transect?.data.centroidSref;
     sample.data.enteredSrefSystem = transect?.data.centroidSrefSystem as any;
 
     const byTransectId = (section: Location) =>

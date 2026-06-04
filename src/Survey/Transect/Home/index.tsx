@@ -11,6 +11,7 @@ import {
 } from '@flumens';
 import { NavContext } from '@ionic/react';
 import appModel from 'models/app';
+import locations from 'models/collections/locations';
 import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
@@ -44,6 +45,22 @@ const TransectHomeController = () => {
   useOnBackButton(onExit);
 
   if (!sample) return null;
+
+  if (
+    // eslint-disable-next-line eqeqeq
+    (sample.data as any).enteredSrefSystem == 2169 &&
+    sample.data.locationId
+  ) {
+    // backwards compatibility to fix luxembourg transect samples, remove later
+    const newCentroid = locations.idMap.get(sample.data.locationId)?.data
+      .centroidSref;
+    if (newCentroid) {
+      console.warn(
+        `Updating sample ${sample.id} enteredSref from ${sample.data.enteredSref} to ${newCentroid}`
+      );
+      sample.data.enteredSref = newCentroid;
+    }
+  }
 
   const processSubmission = async () => {
     const isUserOK = await checkUserStatus();
