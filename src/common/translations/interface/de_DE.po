@@ -4,13 +4,13 @@
 # Irma Wynhoff <irma.wynhoff@vlinderstichting.nl>, 2022
 # Elisabeth Kühn, 2023
 # Henry Geres, 2024
-# Daniela Lehner <daleh@gmx.at>, 2026
 # Karolis, 2026
+# Daniela Lehner <daleh@gmx.at>, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Karolis, 2026\n"
+"Last-Translator: Daniela Lehner <daleh@gmx.at>, 2026\n"
 "Language-Team: German (Germany) (https://app.transifex.com/ceh/teams/95441/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,27 +21,27 @@ msgstr ""
 
 # Country selection
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 # Country selection
 msgid "Asia"
-msgstr ""
+msgstr "Asien"
 
 # Country selection
 msgid "Africa"
-msgstr ""
+msgstr "Afrika"
 
 # Country selection
 msgid "Australasia"
-msgstr ""
+msgstr "Australasien"
 
 # Country selection
 msgid "North America"
-msgstr ""
+msgstr "Nordamerika"
 
 # Country selection
 msgid "South America"
-msgstr ""
+msgstr "Südamerika"
 
 msgid "Select your country"
 msgstr "Wähle dein Land"
@@ -53,10 +53,10 @@ msgid "Lithuania"
 msgstr "Litauen"
 
 msgid "Zambia"
-msgstr ""
+msgstr "Sambia"
 
 msgid "Georgia"
-msgstr ""
+msgstr "Georgien"
 
 msgid "Spain"
 msgstr "Spanien"
@@ -66,7 +66,7 @@ msgstr "Andorra"
 
 # Country
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 msgid "Albania"
 msgstr "Albanien"
@@ -213,10 +213,10 @@ msgid "New Zealand"
 msgstr "Neuseeland"
 
 msgid "Australia"
-msgstr ""
+msgstr "Australien"
 
 msgid "Central America"
-msgstr ""
+msgstr "Zentralamerika"
 
 msgid "Montserrat"
 msgstr "Montserrat"
@@ -328,15 +328,17 @@ msgstr "Zurück"
 
 # part of survey navigation
 msgid "Exit"
-msgstr ""
+msgstr "Verlassen"
 
 # part of survey navigation
 msgid "Exit Survey"
-msgstr ""
+msgstr "Erhebung verlassen"
 
 # part of survey navigation
 msgid "Are you sure you want to leave? Your survey will be saved as a draft."
 msgstr ""
+"Bist du sicher, dass du die Erhebung verlassen möchtest? Sie wird als "
+"Entwurf gespeichert."
 
 msgid "Menu"
 msgstr "Menu "
@@ -961,7 +963,7 @@ msgid "Discard"
 msgstr "Verwerfen "
 
 msgid "Start new"
-msgstr ""
+msgstr "Neu starten"
 
 msgid "Continue"
 msgstr "fortfahren"
@@ -1362,6 +1364,8 @@ msgid ""
 "It is also possible to register and select a permanent site as well as to "
 "assign your survey to a project."
 msgstr ""
+"Es gibt die Möglichkeit einen fixierten Standort auszuwählen oder zu "
+"erstellen bzw. die Erhebung einem Projekt zuzuordnen."
 
 # Help pages
 msgid ""
@@ -1371,7 +1375,7 @@ msgstr ""
 
 # Help pages
 msgid "Create a new site"
-msgstr ""
+msgstr "Neuen Standort erstellen"
 
 # Help pages
 msgid ""
@@ -1547,14 +1551,21 @@ msgid ""
 "The results will support conservation and research. To use the app you will "
 "first have to register an account."
 msgstr ""
+"Mit dieser App kannst du überall in Europa und zahlreichen Ländern rund um "
+"die Welt Tagfalter beobachten und erfassen. Die Ergebnisse unterstützen "
+"sowohl Schutzmaßnahmen als auch die aktuelle Schmetterlingsforschung. Um die"
+" App nutzen zu können, musst du dich zunächst registrieren und einen Account"
+" anlegen."
 
 msgid "The app supports a range of butterfly monitoring methods."
-msgstr ""
+msgstr "Die App stellt eine Reihe von Monitoring-Methoden zur Verfügung."
 
 msgid ""
 "Pollard transects are fixed locations where butterflies are counted "
 "regularly."
 msgstr ""
+"Pollard-Transekte sind festgelegte Standorte an denen regelmäßig "
+"Schmetterlinge gezählt werden."
 
 msgid ""
 "This app was handcrafted with love by<1> Flumens,</1> an agency specialising"
@@ -1563,7 +1574,7 @@ msgid ""
 msgstr ""
 
 msgid "Partners:"
-msgstr ""
+msgstr "Partner:"
 
 msgid "Language"
 msgstr "Sprache"
@@ -1769,19 +1780,19 @@ msgstr "eBMS Transekt"
 
 # Home page
 msgid "Count for 15 minutes anywhere"
-msgstr ""
+msgstr "Erfassen Sie Schmetterlinge 15 Minuten lang an einem beliebigen Ort."
 
 # Home page
 msgid "Walk a fixed transect"
-msgstr ""
+msgstr "Begehen Sie eine festgelegte Transektstrecke"
 
 # Home page
 msgid "Record a moth-trap survey"
-msgstr ""
+msgstr "Erfassen Sie eine Nachtfalter-Lichtfallen-Zählung."
 
 # Home page
 msgid "Count a single species for 15 minutes"
-msgstr ""
+msgstr "Erfassen Sie 15 Minuten lang eine einzelne Art"
 
 # Home page
 msgid "Bait-trap survey"
@@ -2211,19 +2222,19 @@ msgstr "Alle Erfassungen"
 
 # App settings label for species name display preference
 msgid "Common and scientific"
-msgstr ""
+msgstr "Trivial- und wissenschafltiche Namen"
 
 # App settings label for species name display preference
 msgid "Common only"
-msgstr ""
+msgstr "Nur Trivialnamen"
 
 # App settings label for species name display preference
 msgid "Scientific only"
-msgstr ""
+msgstr "Nur wissenschaflichte Namen"
 
 # App settings label for species name display preference
 msgid "Species Name Display"
-msgstr ""
+msgstr "Anzeige von Artnamen"
 
 # Part of a photo picker element
 msgid "Representative photo of where the 15 minute count was made"
@@ -2848,7 +2859,7 @@ msgstr ""
 
 # Bait-trap survey
 msgid "Trap locations"
-msgstr ""
+msgstr "Fallen Standorte"
 
 # Bait-trap survey
 msgid "Total no. of traps"
@@ -2932,7 +2943,7 @@ msgstr ""
 
 # Bait-trap survey
 msgid "Trap location"
-msgstr ""
+msgstr "Fallen Standort"
 
 # Bait-trap survey
 msgid "Date & time"
@@ -2960,27 +2971,27 @@ msgstr ""
 
 # Bait-trap survey
 msgid "Banana"
-msgstr ""
+msgstr "Banane"
 
 # Bait-trap survey
 msgid "Bait"
-msgstr ""
+msgstr "Köder"
 
 # Bait-trap survey
 msgid "Sunny"
-msgstr ""
+msgstr "Sonnig"
 
 # Bait-trap survey
 msgid "Cloudy"
-msgstr ""
+msgstr "Bewölkt"
 
 # Bait-trap survey
 msgid "Rainy"
-msgstr ""
+msgstr "Regnerisch"
 
 # Bait-trap survey
 msgid "Humidity"
-msgstr ""
+msgstr "Feuchtigkeit"
 
 # Bait-trap survey
 msgid "Temp. in trap"
@@ -3000,15 +3011,15 @@ msgstr ""
 
 # Bait-trap survey
 msgid "Male"
-msgstr ""
+msgstr "Männlich"
 
 # Bait-trap survey
 msgid "Female"
-msgstr ""
+msgstr "Weiblich"
 
 # Bait-trap survey
 msgid "Sex"
-msgstr ""
+msgstr "Geschlecht"
 
 # Bait-trap survey
 msgid "Released"
@@ -3036,11 +3047,11 @@ msgstr ""
 
 # Bait-trap survey
 msgid "Age"
-msgstr ""
+msgstr "Alter"
 
 # Bait-trap survey
 msgid "Wing length"
-msgstr ""
+msgstr "Flügellänge"
 
 # Bait-trap survey
 msgid "Feeding"
@@ -3627,31 +3638,31 @@ msgstr ""
 
 # Species lists functionality
 msgid "Species Lists"
-msgstr ""
+msgstr "Artenlisten"
 
 # Species lists functionality
 msgid "Installed"
-msgstr ""
+msgstr "Installiert"
 
 # Species lists functionality
 msgid "Nearby"
-msgstr ""
+msgstr "In der Nähe"
 
 # Species lists functionality
 msgid "All Lists"
-msgstr ""
+msgstr "Alle Listen"
 
 # Species lists functionality
 msgid "No species lists found."
-msgstr ""
+msgstr "Keine Artenliste gefunden."
 
 # Species lists functionality
 msgid "Install"
-msgstr ""
+msgstr "Installieren"
 
 # Species lists functionality
 msgid "Installing list..."
-msgstr ""
+msgstr "Liste wird installiert..."
 
 # Species lists functionality
 msgid "Successfully refreshed \"{{country}}\" list with {{size}} species"
@@ -3666,7 +3677,7 @@ msgid "Successfully installed \"{{country}}\" list with {{size}} species"
 msgstr ""
 
 msgid "Site"
-msgstr ""
+msgstr "Standort"
 
 msgid "Has species lists"
 msgstr ""
@@ -3675,19 +3686,19 @@ msgid "Has sites"
 msgstr ""
 
 msgid "New site"
-msgstr ""
+msgstr "Neuer Standort"
 
 msgid "None"
-msgstr ""
+msgstr "Keine"
 
 msgid "Sites"
-msgstr ""
+msgstr "Standorte"
 
 msgid "My sites"
 msgstr "Meine Transektstandorte"
 
 msgid "No site"
-msgstr ""
+msgstr "Kein Standort"
 
 msgid "custom list"
 msgstr ""

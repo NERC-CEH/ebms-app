@@ -1,6 +1,6 @@
 # Translators:
 # Vilius Stankaitis <vilius@flumens.io>, 2020
-# Karolis, 2026
+# Karolis, 2021
 # Zdenek Faltynek Fric <fric@entu.cas.cz>, 2026
 # 
 msgid ""
@@ -209,10 +209,10 @@ msgid "New Zealand"
 msgstr "Nový Zéland"
 
 msgid "Australia"
-msgstr ""
+msgstr "Austrálie"
 
 msgid "Central America"
-msgstr ""
+msgstr "Střední Amerika"
 
 msgid "Montserrat"
 msgstr "Montserrat"
@@ -324,15 +324,15 @@ msgstr "Zpět"
 
 # part of survey navigation
 msgid "Exit"
-msgstr ""
+msgstr "Ukončit"
 
 # part of survey navigation
 msgid "Exit Survey"
-msgstr ""
+msgstr "Ukončit průzkum"
 
 # part of survey navigation
 msgid "Are you sure you want to leave? Your survey will be saved as a draft."
-msgstr ""
+msgstr "Opravdu chete odejít? Váš průzkum bude uložen jako návrh."
 
 msgid "Menu"
 msgstr "Menu"
@@ -913,7 +913,7 @@ msgid "Duration"
 msgstr "Doba"
 
 msgid "Record ID"
-msgstr ""
+msgstr "ID záznamu"
 
 msgid "Species"
 msgstr "Druh"
@@ -949,7 +949,7 @@ msgid "Discard"
 msgstr "Zahodit změny"
 
 msgid "Start new"
-msgstr ""
+msgstr "Začněte nový"
 
 msgid "Continue"
 msgstr "Pokračovat"
@@ -1152,7 +1152,7 @@ msgid ""
 " the world."
 msgstr ""
 "Motýli patří mezi oblíbenou hmyzí skupinu, ale v mnoha oblastech světa "
-"ubývají. Tak jako ukazuje tento Indikátor lučních motýlů v EU."
+"ubývají. "
 
 # onboarding pages
 msgid ""
@@ -1535,6 +1535,9 @@ msgid ""
 " in building bespoke data-oriented solutions. For suggestions and feedback "
 "please do not hesitate to <5>contact us</5>."
 msgstr ""
+"Tuto aplikaci vypracována s láskou <1> Flumens,</1> agentura, která se "
+"specializuje na produkci datově orientovaných řešení na míru. Pro návrhy a "
+"zpětnou vazbu se nestyďtě <5>nás kontaktovat</5>."
 
 msgid "Partners:"
 msgstr "Partneři:"
@@ -1995,7 +1998,7 @@ msgid "Are you sure you want to delete your current track?"
 msgstr "Opravdu chcete smazat současnou trasu?"
 
 msgid "Are you sure you want to remove this entry?"
-msgstr ""
+msgstr "Opravdu chcete odstranit tento záznam?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -2422,15 +2425,15 @@ msgstr "Lapač"
 
 # Moth survey details label
 msgid "Temporary"
-msgstr ""
+msgstr "Dočasné"
 
 # Moth survey details label
 msgid "Lamp details"
-msgstr ""
+msgstr "Detaily o zdroji světla"
 
 # Moth survey details label
 msgid "Emptying time"
-msgstr ""
+msgstr "Mazání času"
 
 # Moth survey Location Info message
 msgid ""
@@ -2496,15 +2499,15 @@ msgstr "Použijte určování podle obrázku"
 
 # Moth settings page label
 msgid "No offset"
-msgstr ""
+msgstr "Žádný posun"
 
 # Moth settings page label
 msgid "Sunset offset"
-msgstr ""
+msgstr "Posun západu slunce"
 
 # Moth settings page label
 msgid "Sunrise offset"
-msgstr ""
+msgstr "Posun východu slunce"
 
 # Moth settings page info message
 msgid ""
@@ -2517,7 +2520,7 @@ msgstr "Urči"
 
 # Moth survey button label
 msgid "Not classified"
-msgstr ""
+msgstr "Nezařazeno"
 
 # Moth survey button label
 msgid "Identify All"
@@ -2525,27 +2528,27 @@ msgstr "Urči vše"
 
 # AI suggestions
 msgid "Note that AI confidence levels are not absolute."
-msgstr ""
+msgstr "Berte v potaz, že přesnost určení pomocí AI není absolutní."
 
 # AI suggestions
 msgid "Supplement identifications with additional evidence where possible."
-msgstr ""
+msgstr "Doplňte určení dalšími prostředky, kdykoli je to možné."
 
 # AI suggestions
 msgid "Suggestions"
-msgstr ""
+msgstr "Návrhy"
 
 # AI suggestions
 msgid "Higher classifier confidence."
-msgstr ""
+msgstr "Vyšší spolehlivost určení."
 
 # AI suggestions
 msgid "Moderate classifier confidence."
-msgstr ""
+msgstr "Střední spolehlivost určení."
 
 # AI suggestions
 msgid "Lower classifier confidence."
-msgstr ""
+msgstr "Nízká spolehlivost určení."
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
@@ -2780,215 +2783,215 @@ msgstr "Typ lapače je povinný údaj."
 
 # Context term
 msgid "Trapping Site"
-msgstr ""
+msgstr "Místo s lapačem"
 
 # Context term
 msgid "Trap visit"
-msgstr ""
+msgstr "Návštěva lapače"
 
 # Bait-trap survey
 msgid "Trap locations"
-msgstr ""
+msgstr "Umístění lapače"
 
 # Bait-trap survey
 msgid "Total no. of traps"
-msgstr ""
+msgstr "Celkový počet lapačů"
 
 # Bait-trap survey
 msgid "Traps (carrion)"
-msgstr ""
+msgstr "Návnada (mršina)"
 
 # Bait-trap survey
 msgid "Traps (fruit)"
-msgstr ""
+msgstr "Návnada (ovoce)"
 
 # Bait-trap survey
 msgid "Traps (other)"
-msgstr ""
+msgstr "Návnada (jiná)"
 
 # Bait-trap survey
 msgid "Dates"
-msgstr ""
+msgstr "Datumy"
 
 # Bait-trap survey
 msgid "No. of days"
-msgstr ""
+msgstr "Počet dní"
 
 # Bait-trap survey
 msgid "First sample date"
-msgstr ""
+msgstr "Datum prvního sběru"
 
 # Bait-trap survey
 msgid "Last sample date"
-msgstr ""
+msgstr "Datum posledního sběru"
 
 # Bait-trap survey
 msgid "Collectors"
-msgstr ""
+msgstr "Sběratelé"
 
 # Bait-trap survey
 msgid "Event type"
-msgstr ""
+msgstr "Typ události"
 
 # Bait-trap survey
 msgid "Sampling design"
-msgstr ""
+msgstr "Design sběru"
 
 # Bait-trap survey
 msgid "Carrion bait"
-msgstr ""
+msgstr "Návnada s mršinou"
 
 # Bait-trap survey
 msgid "Field code"
-msgstr ""
+msgstr "Terénní kód"
 
 # Bait-trap survey
 msgid "First specimen code for survey, letter then number, e.g. A1"
-msgstr ""
+msgstr "Kód prvního jedince v průzkumu, napřed písmeno, pak číslo, např. A1"
 
 # Bait-trap survey
 msgid "Bait-Trap Survey"
-msgstr ""
+msgstr "Průzkum návnadovými pastmi"
 
 # Bait-trap survey
 msgid "Survey details"
-msgstr ""
+msgstr "Detaily průzkumu"
 
 # Bait-trap survey
 msgid "Add trap visit"
-msgstr ""
+msgstr "Vložte návštěvu pasti"
 
 # Bait-trap survey
 msgid "No trap visits added"
-msgstr ""
+msgstr "Žádná návštěva pasti není vložena"
 
 # Bait-trap survey
 msgid "Select trap"
-msgstr ""
+msgstr "Vyberte past"
 
 # Bait-trap survey
 msgid "Trap details"
-msgstr ""
+msgstr "Detaily o pasti"
 
 # Bait-trap survey
 msgid "Trap location"
-msgstr ""
+msgstr "Umístění pasti"
 
 # Bait-trap survey
 msgid "Date & time"
-msgstr ""
+msgstr "Datum & čas"
 
 # Bait-trap survey
 msgid "Understorey"
-msgstr ""
+msgstr "Podrost"
 
 # Bait-trap survey
 msgid "Canopy"
-msgstr ""
+msgstr "Korunové patro"
 
 # Bait-trap survey
 msgid "Midstory"
-msgstr ""
+msgstr "Střední patro"
 
 # Bait-trap survey
 msgid "Stratum"
-msgstr ""
+msgstr "Vrstva"
 
 # Bait-trap survey
 msgid "Carrion"
-msgstr ""
+msgstr "Zdechlina"
 
 # Bait-trap survey
 msgid "Banana"
-msgstr ""
+msgstr "Banán"
 
 # Bait-trap survey
 msgid "Bait"
-msgstr ""
+msgstr "Návnada"
 
 # Bait-trap survey
 msgid "Sunny"
-msgstr ""
+msgstr "Slunečno"
 
 # Bait-trap survey
 msgid "Cloudy"
-msgstr ""
+msgstr "Zataženo"
 
 # Bait-trap survey
 msgid "Rainy"
-msgstr ""
+msgstr "Deštivo"
 
 # Bait-trap survey
 msgid "Humidity"
-msgstr ""
+msgstr "Vlhkost"
 
 # Bait-trap survey
 msgid "Temp. in trap"
-msgstr ""
+msgstr "Teplota v pasti"
 
 # Bait-trap survey
 msgid "Trap"
-msgstr ""
+msgstr "Past"
 
 # Bait-trap survey
 msgid "Code"
-msgstr ""
+msgstr "Kód"
 
 # Bait-trap survey
 msgid "Recaptured"
-msgstr ""
+msgstr "Znovu odchyceno"
 
 # Bait-trap survey
 msgid "Male"
-msgstr ""
+msgstr "Samec"
 
 # Bait-trap survey
 msgid "Female"
-msgstr ""
+msgstr "Samice"
 
 # Bait-trap survey
 msgid "Sex"
-msgstr ""
+msgstr "Pohlaví"
 
 # Bait-trap survey
 msgid "Released"
-msgstr ""
+msgstr "Vypuštěno"
 
 # Bait-trap survey
 msgid "Collected"
-msgstr ""
+msgstr "Sebráno"
 
 # Bait-trap survey
 msgid "Died"
-msgstr ""
+msgstr "Mrtev"
 
 # Bait-trap survey
 msgid "Fate"
-msgstr ""
+msgstr "Osud"
 
 # Bait-trap survey
 msgid "Intermediate"
-msgstr ""
+msgstr "Střední"
 
 # Bait-trap survey
 msgid "Old"
-msgstr ""
+msgstr "Starý"
 
 # Bait-trap survey
 msgid "Age"
-msgstr ""
+msgstr "Věk"
 
 # Bait-trap survey
 msgid "Wing length"
-msgstr ""
+msgstr "Délka křídla"
 
 # Bait-trap survey
 msgid "Feeding"
-msgstr ""
+msgstr "Krmení se"
 
 # Bait-trap survey
 msgid "Species photos"
-msgstr ""
+msgstr "Fotky druhů"
 
 # Successful registration pop-up
 msgid "Welcome aboard"
@@ -3078,7 +3081,7 @@ msgstr "Jakou skupinu druhů jste zaznamenávali?"
 
 # Part of Species Group selection
 msgid "Which <1>species groups</1> are you interested in?"
-msgstr ""
+msgstr "Která <1>skupina druhů</1> Vás zajímá?"
 
 # Part of Painted lady survey
 msgid "Select Target Species"
@@ -3447,7 +3450,7 @@ msgstr "Změněno pořadí seznamu změněno podle posledního vložení"
 
 # Change list order toast message
 msgid "Changed list ordering to last edited."
-msgstr ""
+msgstr "Změněné pořadí seznamu podle poslední editace"
 
 # Record verification status
 msgid "Unconfirmed"
@@ -3539,26 +3542,32 @@ msgid ""
 "No species lists installed.<br/><br/>Browse the \"Nearby\" or \"All Lists\" "
 "tabs to install species lists for offline use."
 msgstr ""
+"Není nainstalovaný seznam druhů.<br/><br/>Projděte záložku \"Poblíž\" nebo "
+"\"Všechny seznamy\" pro instalaci seznamů druhů na offline použití."
 
 # Species lists functionality
 msgid ""
 "Some species groups are missing from your current downloaded "
 "lists.<br/><2>Species Lists</2>"
 msgstr ""
+"Některé druhové skupiny chybí ve Vašich uložených seznamech.<br/><2>Seznamy "
+"druhů</2>"
 
 # Species lists functionality
 msgid ""
 "You need to be online to browse species lists.<br/><br/>Please connect to "
 "the internet and try again."
 msgstr ""
+"Pro procházení seznamů druhů musíte být online.<br/><br/>Prosím, připojte se"
+" k internetu a zkuste to znovu."
 
 # Species lists functionality
 msgid "List name"
-msgstr ""
+msgstr "Název seznamu"
 
 # Species lists functionality
 msgid "Species Lists"
-msgstr ""
+msgstr "Seznamy druhů"
 
 # Species lists functionality
 msgid "Installed"
@@ -3582,11 +3591,11 @@ msgstr "Instalovat"
 
 # Species lists functionality
 msgid "Installing list..."
-msgstr ""
+msgstr "Instaluji seznam"
 
 # Species lists functionality
 msgid "Successfully refreshed \"{{country}}\" list with {{size}} species"
-msgstr ""
+msgstr "Úspěšně obnovený seznam \"{{country}}\" s {{size}} druhy"
 
 # Species lists functionality
 msgid "Are you sure you want to delete the list?"
@@ -3594,22 +3603,22 @@ msgstr "Opravdu chcete smazat tento seznam?"
 
 # Species lists functionality
 msgid "Successfully installed \"{{country}}\" list with {{size}} species"
-msgstr ""
+msgstr "Úspěšně nainstalovaný Váš seznam \"{{country}}\" s {{size}} druhy"
 
 msgid "Site"
 msgstr "Místo"
 
 msgid "Has species lists"
-msgstr ""
+msgstr "Obsahuje seznamy druhů"
 
 msgid "Has sites"
-msgstr ""
+msgstr "Obsahuje místa"
 
 msgid "New site"
-msgstr ""
+msgstr "Nové místo"
 
 msgid "None"
-msgstr ""
+msgstr "Nic"
 
 msgid "Sites"
 msgstr "Místa"
@@ -3618,17 +3627,19 @@ msgid "My sites"
 msgstr "Moje místa"
 
 msgid "No site"
-msgstr ""
+msgstr "Žádné místo"
 
 msgid "custom list"
-msgstr ""
+msgstr "vlastní seznam"
 
 msgid "location"
-msgstr ""
+msgstr "umístění"
 
 msgid "Search outside my current project or site list.<1>Search</1>"
-msgstr ""
+msgstr "Hledej mimo můj současný projekt nebo seznam míst.<1>Hledat</1>"
 
 msgid ""
 "To create a new project, visit the <2>projects page</2> on the website."
 msgstr ""
+"Pro vytvoření nového projektu navštivte <2>stránku projektu</2> na webové "
+"stránce."

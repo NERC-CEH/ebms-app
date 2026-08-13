@@ -209,10 +209,10 @@ msgid "New Zealand"
 msgstr "Nueva Zelanda"
 
 msgid "Australia"
-msgstr ""
+msgstr "Australia"
 
 msgid "Central America"
-msgstr ""
+msgstr "América Central"
 
 msgid "Montserrat"
 msgstr "Montserrat"
@@ -324,15 +324,16 @@ msgstr "Atrás"
 
 # part of survey navigation
 msgid "Exit"
-msgstr ""
+msgstr "Salir"
 
 # part of survey navigation
 msgid "Exit Survey"
-msgstr ""
+msgstr "Salir muestreo"
 
 # part of survey navigation
 msgid "Are you sure you want to leave? Your survey will be saved as a draft."
 msgstr ""
+"¿Estás seguro de que quieres salir? Tu muestreo se guardará como borrador."
 
 msgid "Menu"
 msgstr "Menu"
@@ -956,7 +957,7 @@ msgid "Discard"
 msgstr "Descartar"
 
 msgid "Start new"
-msgstr ""
+msgstr "Comenzar nuevo"
 
 msgid "Continue"
 msgstr "Continuar"
@@ -2045,7 +2046,7 @@ msgid "Are you sure you want to delete your current track?"
 msgstr "¿Está segur@ de que quieres borrar la ruta actual?"
 
 msgid "Are you sure you want to remove this entry?"
-msgstr ""
+msgstr "¿Estás seguro de que quieres eliminar esta entrada?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -2473,11 +2474,11 @@ msgstr "Trampa de polillas"
 
 # Moth survey details label
 msgid "Temporary"
-msgstr ""
+msgstr "Temporal"
 
 # Moth survey details label
 msgid "Lamp details"
-msgstr ""
+msgstr "Detalles de la lámpara"
 
 # Moth survey details label
 msgid "Emptying time"
@@ -2548,15 +2549,15 @@ msgstr "Usar la identificación de imágenes"
 
 # Moth settings page label
 msgid "No offset"
-msgstr ""
+msgstr "Sin desfase"
 
 # Moth settings page label
 msgid "Sunset offset"
-msgstr ""
+msgstr "Desfase del atardecer"
 
 # Moth settings page label
 msgid "Sunrise offset"
-msgstr ""
+msgstr "Desfase del amanecer"
 
 # Moth settings page info message
 msgid ""
@@ -2571,7 +2572,7 @@ msgstr "Identificar"
 
 # Moth survey button label
 msgid "Not classified"
-msgstr ""
+msgstr "Sin clasificar"
 
 # Moth survey button label
 msgid "Identify All"
@@ -2579,27 +2580,29 @@ msgstr "Identificar todo"
 
 # AI suggestions
 msgid "Note that AI confidence levels are not absolute."
-msgstr ""
+msgstr "Ten en cuenta que los niveles de confianza de la IA no son absolutos."
 
 # AI suggestions
 msgid "Supplement identifications with additional evidence where possible."
 msgstr ""
+"Siempre que sea posible, complemente las identificaciones con pruebas "
+"adicionales."
 
 # AI suggestions
 msgid "Suggestions"
-msgstr ""
+msgstr "Sugerencias"
 
 # AI suggestions
 msgid "Higher classifier confidence."
-msgstr ""
+msgstr "Mayor fiabilidad del clasificador."
 
 # AI suggestions
 msgid "Moderate classifier confidence."
-msgstr ""
+msgstr "Confianza moderada del clasificador."
 
 # AI suggestions
 msgid "Lower classifier confidence."
-msgstr ""
+msgstr "Reducir la confianza del clasificador."
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
@@ -2843,215 +2846,215 @@ msgstr "El tipo de trampa es un campo obligatorio."
 
 # Context term
 msgid "Trapping Site"
-msgstr ""
+msgstr "Lugar de captura"
 
 # Context term
 msgid "Trap visit"
-msgstr ""
+msgstr "Visita a la trampa"
 
 # Bait-trap survey
 msgid "Trap locations"
-msgstr ""
+msgstr "Ubicación de las trampas"
 
 # Bait-trap survey
 msgid "Total no. of traps"
-msgstr ""
+msgstr "Número total de trampas"
 
 # Bait-trap survey
 msgid "Traps (carrion)"
-msgstr ""
+msgstr "Trampas (carroña)"
 
 # Bait-trap survey
 msgid "Traps (fruit)"
-msgstr ""
+msgstr "Trampas (fruta)"
 
 # Bait-trap survey
 msgid "Traps (other)"
-msgstr ""
+msgstr "Trampas (otro)"
 
 # Bait-trap survey
 msgid "Dates"
-msgstr ""
+msgstr "Fechas"
 
 # Bait-trap survey
 msgid "No. of days"
-msgstr ""
+msgstr "Nº de días"
 
 # Bait-trap survey
 msgid "First sample date"
-msgstr ""
+msgstr "Fecha de la primera muestra"
 
 # Bait-trap survey
 msgid "Last sample date"
-msgstr ""
+msgstr "Fecha de la última muestra"
 
 # Bait-trap survey
 msgid "Collectors"
-msgstr ""
+msgstr "Registrador"
 
 # Bait-trap survey
 msgid "Event type"
-msgstr ""
+msgstr "Tipo de evento"
 
 # Bait-trap survey
 msgid "Sampling design"
-msgstr ""
+msgstr "Diseño del muestreo"
 
 # Bait-trap survey
 msgid "Carrion bait"
-msgstr ""
+msgstr "Cebo de carroña"
 
 # Bait-trap survey
 msgid "Field code"
-msgstr ""
+msgstr "Código de campo"
 
 # Bait-trap survey
 msgid "First specimen code for survey, letter then number, e.g. A1"
-msgstr ""
+msgstr "Código del primer ejemplar del muestreo, luego un número, p. ej., A1"
 
 # Bait-trap survey
 msgid "Bait-Trap Survey"
-msgstr ""
+msgstr "Muestreo Trampas con Cebo"
 
 # Bait-trap survey
 msgid "Survey details"
-msgstr ""
+msgstr "Detalles del muestreo"
 
 # Bait-trap survey
 msgid "Add trap visit"
-msgstr ""
+msgstr "Añadir visita trampa"
 
 # Bait-trap survey
 msgid "No trap visits added"
-msgstr ""
+msgstr "No se han añadido visitas a la trampa"
 
 # Bait-trap survey
 msgid "Select trap"
-msgstr ""
+msgstr "Seleccionar trampa"
 
 # Bait-trap survey
 msgid "Trap details"
-msgstr ""
+msgstr "Detalles trampa"
 
 # Bait-trap survey
 msgid "Trap location"
-msgstr ""
+msgstr "Ubicación trampa"
 
 # Bait-trap survey
 msgid "Date & time"
-msgstr ""
+msgstr "Fecha & hora"
 
 # Bait-trap survey
 msgid "Understorey"
-msgstr ""
+msgstr "Sotobosque"
 
 # Bait-trap survey
 msgid "Canopy"
-msgstr ""
+msgstr "Dosel arbóreo"
 
 # Bait-trap survey
 msgid "Midstory"
-msgstr ""
+msgstr "A mitad de la historia"
 
 # Bait-trap survey
 msgid "Stratum"
-msgstr ""
+msgstr "Estrato"
 
 # Bait-trap survey
 msgid "Carrion"
-msgstr ""
+msgstr "Carroña"
 
 # Bait-trap survey
 msgid "Banana"
-msgstr ""
+msgstr "Banana"
 
 # Bait-trap survey
 msgid "Bait"
-msgstr ""
+msgstr "Cebo"
 
 # Bait-trap survey
 msgid "Sunny"
-msgstr ""
+msgstr "Soleado"
 
 # Bait-trap survey
 msgid "Cloudy"
-msgstr ""
+msgstr "Nublado"
 
 # Bait-trap survey
 msgid "Rainy"
-msgstr ""
+msgstr "Lluvioso"
 
 # Bait-trap survey
 msgid "Humidity"
-msgstr ""
+msgstr "Humedad"
 
 # Bait-trap survey
 msgid "Temp. in trap"
-msgstr ""
+msgstr "Temperatura en trampa"
 
 # Bait-trap survey
 msgid "Trap"
-msgstr ""
+msgstr "Trampa"
 
 # Bait-trap survey
 msgid "Code"
-msgstr ""
+msgstr "Código"
 
 # Bait-trap survey
 msgid "Recaptured"
-msgstr ""
+msgstr "Recaptura"
 
 # Bait-trap survey
 msgid "Male"
-msgstr ""
+msgstr "Macho"
 
 # Bait-trap survey
 msgid "Female"
-msgstr ""
+msgstr "Hembra"
 
 # Bait-trap survey
 msgid "Sex"
-msgstr ""
+msgstr "Género"
 
 # Bait-trap survey
 msgid "Released"
-msgstr ""
+msgstr "Liberado"
 
 # Bait-trap survey
 msgid "Collected"
-msgstr ""
+msgstr "Capturado"
 
 # Bait-trap survey
 msgid "Died"
-msgstr ""
+msgstr "Muerto"
 
 # Bait-trap survey
 msgid "Fate"
-msgstr ""
+msgstr "Destino"
 
 # Bait-trap survey
 msgid "Intermediate"
-msgstr ""
+msgstr "Intermedio"
 
 # Bait-trap survey
 msgid "Old"
-msgstr ""
+msgstr "Antiguo"
 
 # Bait-trap survey
 msgid "Age"
-msgstr ""
+msgstr "Edad"
 
 # Bait-trap survey
 msgid "Wing length"
-msgstr ""
+msgstr "Longitud ala"
 
 # Bait-trap survey
 msgid "Feeding"
-msgstr ""
+msgstr "Alimentación"
 
 # Bait-trap survey
 msgid "Species photos"
-msgstr ""
+msgstr "Fotos de especies"
 
 # Successful registration pop-up
 msgid "Welcome aboard"
@@ -3516,6 +3519,7 @@ msgstr "Cambiado el orden de la lista al último añadido."
 # Change list order toast message
 msgid "Changed list ordering to last edited."
 msgstr ""
+"Cambiado el orden de la lista organizado por fecha de última modificación."
 
 # Record verification status
 msgid "Unconfirmed"
