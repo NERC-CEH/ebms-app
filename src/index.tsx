@@ -20,6 +20,7 @@ import App from './App';
 console.log('🚩 App starting.');
 
 setupIonicReact();
+// setupIonicReact({ experimentalCloseWatcher: true, hardwareBackButton: true });
 
 mobxConfig({ enforceActions: 'never' });
 
