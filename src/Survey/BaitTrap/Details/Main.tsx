@@ -17,6 +17,7 @@ import {
   lastSampleDateAttr,
   collectorsAttr,
   eventTypeAttr,
+  eventNameAttr,
   samplingDesignAttr,
   carrionBaitAttr,
   fieldCodeStartAttr,
@@ -100,6 +101,7 @@ const DetailsMain = ({ sample }: Props) => {
           <div className="rounded-list">
             <Block record={sample.data} block={collectorsAttr} />
             <Block record={sample.data} block={eventTypeAttr} />
+            <Block record={sample.data} block={eventNameAttr} />
             <Block record={sample.data} block={samplingDesignAttr} />
             <Block record={sample.data} block={carrionBaitAttr} />
             <Block

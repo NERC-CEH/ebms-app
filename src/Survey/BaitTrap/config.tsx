@@ -147,6 +147,14 @@ export const eventTypeAttr = {
   prefix: <IonIcon src={flagOutline} className="size-6" />,
 } as const satisfies TextInputConf;
 
+export const eventNameAttr = {
+  id: 'smpAttr:2072',
+  type: 'textInput',
+  title: 'Event name',
+  container: 'inline',
+  prefix: <IonIcon src={flagOutline} className="size-6" />,
+} as const satisfies TextInputConf;
+
 export const samplingDesignAttr = {
   id: 'smpAttr:2046',
   type: 'textInput',
@@ -413,6 +421,7 @@ const attrs = {
   },
   [collectorsAttr.id]: { block: collectorsAttr },
   [eventTypeAttr.id]: { block: eventTypeAttr },
+  [eventNameAttr.id]: { block: eventNameAttr },
   [samplingDesignAttr.id]: { block: samplingDesignAttr },
   [carrionBaitAttr.id]: { block: carrionBaitAttr },
   [fieldCodeStartAttr.id]: { block: fieldCodeStartAttr },
