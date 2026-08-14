@@ -160,7 +160,8 @@ export const windSpeedAttr = {
   remote: { id: 1390, values: windSpeedValues },
 } as const satisfies AttrConfig;
 
-export const commentAttr = {
+/** @deprecated */
+export const commentAttrOld = {
   id: 'comment',
   menuProps: { icon: chatboxOutline, skipValueTranslation: true },
   pageProps: {
@@ -170,6 +171,13 @@ export const commentAttr = {
     },
   },
 } as const;
+
+export const commentAttr = {
+  id: 'comment',
+  title: 'Comment',
+  type: 'textInput',
+  appearance: 'multiline',
+} as const satisfies TextInputConf;
 
 export const taxonAttr = {
   remote: {

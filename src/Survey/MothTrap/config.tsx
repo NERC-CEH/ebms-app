@@ -35,7 +35,7 @@ import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 import {
   Survey,
-  commentAttr,
+  commentAttrOld,
   windDirectionValues,
   windSpeedValues,
   temperatureValues,
@@ -527,7 +527,7 @@ const survey: Survey = {
       remote: dateAttr.remote,
     },
 
-    comment: commentAttr,
+    comment: commentAttrOld,
 
     recorder: {
       menuProps: { icon: personOutline },
@@ -553,7 +553,7 @@ const survey: Survey = {
         },
       },
 
-      comment: commentAttr,
+      comment: commentAttrOld,
       identifier: {
         menuProps: { icon: personOutline },
         pageProps: {

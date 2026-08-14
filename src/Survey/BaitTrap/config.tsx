@@ -41,7 +41,7 @@ import {
   appVersionAttr,
   backwardsDateFormat,
   backwardsTimeFormat,
-  commentAttr,
+  commentAttrOld,
   dateAttr,
   inferAttrConfigTypes,
 } from 'Survey/common/config';
@@ -404,7 +404,7 @@ const SURVEY_FORM = 'enter-bait-trap-records';
 
 const attrs = {
   [dateAttr.id]: dateAttr,
-  [commentAttr.id]: commentAttr,
+  [commentAttrOld.id]: commentAttrOld,
   [trapLocationsAttr.id]: { block: trapLocationsAttr },
   [trapsAttr.id]: { block: trapsAttr },
   [trapsCarrionAttr.id]: { block: trapsCarrionAttr },
@@ -448,7 +448,7 @@ const occAttrs = {
   [fateAttr.id]: { block: fateAttr },
   [ageAttr.id]: { block: ageAttr },
   [wingLengthAttr.id]: { block: wingLengthAttr },
-  [commentAttr.id]: commentAttr,
+  [commentAttrOld.id]: commentAttrOld,
   [fieldCodeAttr.id]: { block: fieldCodeAttr },
 } as const;
 

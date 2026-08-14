@@ -19,7 +19,7 @@ import {
   taxonAttr,
   surveyStartTimeAttr,
   surveyEndTimeAttr,
-  commentAttr,
+  commentAttrOld,
   dateAttr,
   stageAttr,
   dragonflyStageAttr,
@@ -65,7 +65,7 @@ const survey: Survey = {
     temperature: temperatureAttr,
     windDirection: windDirectionAttr,
     windSpeed: windSpeedAttr,
-    comment: commentAttr,
+    comment: commentAttrOld,
 
     recorder: {
       pageProps: {
@@ -109,7 +109,7 @@ const survey: Survey = {
             id: 780,
           },
         },
-        comment: commentAttr,
+        comment: commentAttrOld,
         stage: stageAttr,
         dragonflyStage: dragonflyStageAttr,
         taxon: taxonAttr,

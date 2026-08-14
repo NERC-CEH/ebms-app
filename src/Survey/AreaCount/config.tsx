@@ -21,13 +21,14 @@ import {
   taxonAttr,
   surveyStartTimeAttr,
   surveyEndTimeAttr,
-  commentAttr,
+  commentAttrOld,
   dateAttr,
   areaCountSchema,
   stageAttr,
   cloudAttr,
   dragonflyStageAttr,
   speciesGroupsAttr,
+  commentAttr,
 } from 'Survey/common/config';
 
 export { areaSizeAttr } from 'Survey/common/config';
@@ -53,7 +54,7 @@ const survey: Survey = {
     date: dateAttr,
     surveyStartTime: surveyStartTimeAttr,
     surveyEndTime: surveyEndTimeAttr,
-    comment: commentAttr,
+    comment: commentAttrOld,
     temperature: temperatureAttr,
     cloud: cloudAttr,
     windDirection: windDirectionAttr,
@@ -162,7 +163,7 @@ const survey: Survey = {
     occ: {
       attrs: {
         taxon: taxonAttr,
-        comment: commentAttr,
+        comment: { block: commentAttr },
 
         count: { remote: { id: 780 } },
 

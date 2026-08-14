@@ -1,12 +1,8 @@
 import { observer } from 'mobx-react';
-import {
-  clipboardOutline,
-  locationOutline,
-  warningOutline,
-} from 'ionicons/icons';
+import { locationOutline, warningOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import { isValidLocation, Main, MenuAttrItem } from '@flumens';
+import { Block, isValidLocation, Main, MenuAttrItem } from '@flumens';
 import { IonList, IonIcon, IonItem } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import { getSpeciesProfileImage } from 'common/data/profiles';
@@ -16,6 +12,7 @@ import Sample from 'models/sample';
 import PrettyLocation from 'Components/PrettyLocation';
 import AttrLock from 'Survey/common/AttrLock';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
+import { commentAttr } from 'Survey/common/config';
 import PaintedLadyAttrs from './PaintedLadyAttrs';
 import './styles.scss';
 
@@ -140,12 +137,10 @@ const EditOccurrence = ({
             attr="comment"
             value={comment}
           >
-            <MenuAttrItem
-              routerLink={`${baseURL}/comment`}
-              disabled={isDisabled}
-              icon={clipboardOutline}
-              label="Comment"
-              value={comment}
+            <Block
+              block={commentAttr}
+              record={occurrence.data}
+              isDisabled={occurrence.isDisabled}
             />
           </AttrLock>
         </div>
