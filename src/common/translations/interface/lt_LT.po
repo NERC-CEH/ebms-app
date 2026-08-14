@@ -726,7 +726,7 @@ msgstr "Dirvonuojanti žemė, apleista teritorija (miesto)"
 
 # New Site set-up page
 msgid "Fallow land, abandoned field  (rural)"
-msgstr ""
+msgstr "Pūdymas, apleistas laukas (kaimo vietovėje)"
 
 # New Site set-up page
 msgid "Field edge"
@@ -1339,16 +1339,20 @@ msgid ""
 "It is also possible to register and select a permanent site as well as to "
 "assign your survey to a project."
 msgstr ""
+"Taip pat galima užregistruoti ir pasirinkti nuolatinę vietovę bei priskirti "
+"apskaitą projektui."
 
 # Help pages
 msgid ""
 "<0>Start a count.</0><1>Select \"Additional Details\" then "
 "\"Site\".</1><2>Finally, choose the site for the current count.</2>"
 msgstr ""
+"<0>Pradėkite apskaitą.</0><1>Pasirinkite „Papildoma informacija“, tada "
+"„Vietovė“.</1><2>Galiausiai pasirinkite šios apskaitos vietovę.</2>"
 
 # Help pages
 msgid "Create a new site"
-msgstr ""
+msgstr "Sukurti naują vietovę"
 
 # Help pages
 msgid ""
@@ -1357,6 +1361,11 @@ msgid ""
 "and press \"Save\".</3><br/>Note: you need to be logged in and have a "
 "network connection to create a new site."
 msgstr ""
+"<0>Eikite į programėlės nustatymų puslapį.</0><1>Pasirinkite „Vietovės“.</1>"
+"<2>Viršutiniame dešiniajame kampe paspauskite mygtuką „Pridėti“.</2><3>"
+"Užpildykite reikiamą vietovės informaciją ir paspauskite „Išsaugoti“.</3>"
+"<br/>Pastaba: norėdami sukurti naują vietovę, turite būti prisijungę ir "
+"turėti interneto ryšį."
 
 msgid "User"
 msgstr "Vartotojas"
@@ -1519,20 +1528,28 @@ msgid ""
 "The results will support conservation and research. To use the app you will "
 "first have to register an account."
 msgstr ""
+"Naudodami šią programėlę galite stebėti drugelius daugelyje pasaulio šalių. "
+"Rezultatai padės vykdyti gamtos apsaugą ir mokslinius tyrimus. Norėdami "
+"naudotis programėle, pirmiausia turėsite užregistruoti paskyrą."
 
 msgid "The app supports a range of butterfly monitoring methods."
-msgstr ""
+msgstr "Programėlė palaiko įvairius drugelių stebėjimo metodus."
 
 msgid ""
 "Pollard transects are fixed locations where butterflies are counted "
 "regularly."
 msgstr ""
+"Pollardo transektos yra nustatyti maršrutai, kuriuose drugeliai reguliariai "
+"skaičiuojami."
 
 msgid ""
 "This app was handcrafted with love by<1> Flumens,</1> an agency specialising"
 " in building bespoke data-oriented solutions. For suggestions and feedback "
 "please do not hesitate to <5>contact us</5>."
 msgstr ""
+"Šią programėlę su meile sukūrė<1> „Flumens“</1> – agentūra, kuri "
+"specializuojasi kurdama individualius, į duomenis orientuotus sprendimus. "
+"Jei turite pasiūlymų ar atsiliepimų, nedvejodami <5>susisiekite su mumis</5>."
 
 msgid "Partners:"
 msgstr "Partneriai:"
@@ -1990,7 +2007,7 @@ msgid "Are you sure you want to delete your current track?"
 msgstr "Ar tikrai norite ištrinti pažymėtą maršrutą?"
 
 msgid "Are you sure you want to remove this entry?"
-msgstr ""
+msgstr "Ar tikrai norite pašalinti šį įrašą?"
 
 # This is part of mapping functionality
 msgid "Save"
@@ -2414,15 +2431,15 @@ msgstr "Gaudyklė"
 
 # Moth survey details label
 msgid "Temporary"
-msgstr ""
+msgstr "Laikina"
 
 # Moth survey details label
 msgid "Lamp details"
-msgstr ""
+msgstr "Lempos informacija"
 
 # Moth survey details label
 msgid "Emptying time"
-msgstr ""
+msgstr "Ištuštinimo laikas"
 
 # Moth survey Location Info message
 msgid ""
@@ -2489,15 +2506,15 @@ msgstr "Nustatyti rūšis pagal nuotraukas"
 
 # Moth settings page label
 msgid "No offset"
-msgstr ""
+msgstr "Be poslinkio"
 
 # Moth settings page label
 msgid "Sunset offset"
-msgstr ""
+msgstr "Saulėlydžio poslinkis"
 
 # Moth settings page label
 msgid "Sunrise offset"
-msgstr ""
+msgstr "Saulėtekio poslinkis"
 
 # Moth settings page info message
 msgid ""
@@ -2510,7 +2527,7 @@ msgstr "Identifikuoti"
 
 # Moth survey button label
 msgid "Not classified"
-msgstr ""
+msgstr "Neklasifikuota"
 
 # Moth survey button label
 msgid "Identify All"
@@ -2518,27 +2535,27 @@ msgstr "Identifikuoti visus"
 
 # AI suggestions
 msgid "Note that AI confidence levels are not absolute."
-msgstr ""
+msgstr "Atkreipkite dėmesį, kad DI patikimumo lygiai nėra absoliutūs."
 
 # AI suggestions
 msgid "Supplement identifications with additional evidence where possible."
-msgstr ""
+msgstr "Jei įmanoma, rūšies nustatymą papildykite kitais įrodymais."
 
 # AI suggestions
 msgid "Suggestions"
-msgstr ""
+msgstr "Pasiūlymai"
 
 # AI suggestions
 msgid "Higher classifier confidence."
-msgstr ""
+msgstr "Didesnis klasifikatoriaus patikimumas."
 
 # AI suggestions
 msgid "Moderate classifier confidence."
-msgstr ""
+msgstr "Vidutinis klasifikatoriaus patikimumas."
 
 # AI suggestions
 msgid "Lower classifier confidence."
-msgstr ""
+msgstr "Mažesnis klasifikatoriaus patikimumas."
 
 # Moth survey image classifier disabled info header
 msgid "Image identification"
@@ -2636,7 +2653,7 @@ msgstr "Pridėti lempą"
 
 # Moth trap survey
 msgid "Lamp type is a required field."
-msgstr ""
+msgstr "Lempos tipas yra privalomas laukas."
 
 # Moth trap survey
 msgid "What type of trap was it?"
@@ -2768,219 +2785,219 @@ msgstr "Prašome pasirinkti gaudyklės tipą."
 
 # Context term
 msgid "Trapping Site"
-msgstr ""
+msgstr "Gaudymo vietovė"
 
 # Context term
 msgid "Trap visit"
-msgstr ""
+msgstr "Gaudyklės patikra"
 
 # Bait-trap survey
 msgid "Trap locations"
-msgstr ""
+msgstr "Gaudyklių vietos"
 
 # Bait-trap survey
 msgid "Total no. of traps"
-msgstr ""
+msgstr "Bendras gaudyklių skaičius"
 
 # Bait-trap survey
 msgid "Traps (carrion)"
-msgstr ""
+msgstr "Gaudyklės (dvėsena)"
 
 # Bait-trap survey
 msgid "Traps (fruit)"
-msgstr ""
+msgstr "Gaudyklės (vaisiai)"
 
 # Bait-trap survey
 msgid "Traps (other)"
-msgstr ""
+msgstr "Gaudyklės (kita)"
 
 # Bait-trap survey
 msgid "Dates"
-msgstr ""
+msgstr "Datos"
 
 # Bait-trap survey
 msgid "No. of days"
-msgstr ""
+msgstr "Dienų skaičius"
 
 # Bait-trap survey
 msgid "First sample date"
-msgstr ""
+msgstr "Pirmojo mėginio data"
 
 # Bait-trap survey
 msgid "Last sample date"
-msgstr ""
+msgstr "Paskutinio mėginio data"
 
 # Bait-trap survey
 msgid "Collectors"
-msgstr ""
+msgstr "Rinkėjai"
 
 # Bait-trap survey
 msgid "Event type"
-msgstr ""
+msgstr "Įvykio tipas"
 
 # Bait-trap survey
 msgid "Event name"
-msgstr ""
+msgstr "Įvykio pavadinimas"
 
 # Bait-trap survey
 msgid "Sampling design"
-msgstr ""
+msgstr "Mėginių ėmimo schema"
 
 # Bait-trap survey
 msgid "Carrion bait"
-msgstr ""
+msgstr "Dvėsenos masalas"
 
 # Bait-trap survey
 msgid "Field code"
-msgstr ""
+msgstr "Lauko kodas"
 
 # Bait-trap survey
 msgid "First specimen code for survey, letter then number, e.g. A1"
-msgstr ""
+msgstr "Pirmojo tyrimo mėginio kodas: raidė ir skaičius, pvz., A1"
 
 # Bait-trap survey
 msgid "Bait-Trap Survey"
-msgstr ""
+msgstr "Masalinių gaudyklių apskaita"
 
 # Bait-trap survey
 msgid "Survey details"
-msgstr ""
+msgstr "Apskaitos informacija"
 
 # Bait-trap survey
 msgid "Add trap visit"
-msgstr ""
+msgstr "Pridėti gaudyklės patikrą"
 
 # Bait-trap survey
 msgid "No trap visits added"
-msgstr ""
+msgstr "Nepridėta nė viena gaudyklės patikra"
 
 # Bait-trap survey
 msgid "Select trap"
-msgstr ""
+msgstr "Pasirinkite gaudyklę"
 
 # Bait-trap survey
 msgid "Trap details"
-msgstr ""
+msgstr "Gaudyklės informacija"
 
 # Bait-trap survey
 msgid "Trap location"
-msgstr ""
+msgstr "Gaudyklės vieta"
 
 # Bait-trap survey
 msgid "Date & time"
-msgstr ""
+msgstr "Data ir laikas"
 
 # Bait-trap survey
 msgid "Understorey"
-msgstr ""
+msgstr "Pomiškis"
 
 # Bait-trap survey
 msgid "Canopy"
-msgstr ""
+msgstr "Lajų sluoksnis"
 
 # Bait-trap survey
 msgid "Midstory"
-msgstr ""
+msgstr "Vidurinis ardas"
 
 # Bait-trap survey
 msgid "Stratum"
-msgstr ""
+msgstr "Ardas"
 
 # Bait-trap survey
 msgid "Carrion"
-msgstr ""
+msgstr "Dvėsena"
 
 # Bait-trap survey
 msgid "Banana"
-msgstr ""
+msgstr "Bananas"
 
 # Bait-trap survey
 msgid "Bait"
-msgstr ""
+msgstr "Masalas"
 
 # Bait-trap survey
 msgid "Sunny"
-msgstr ""
+msgstr "Saulėta"
 
 # Bait-trap survey
 msgid "Cloudy"
-msgstr ""
+msgstr "Debesuota"
 
 # Bait-trap survey
 msgid "Rainy"
-msgstr ""
+msgstr "Lietinga"
 
 # Bait-trap survey
 msgid "Humidity"
-msgstr ""
+msgstr "Drėgmė"
 
 # Bait-trap survey
 msgid "Temp. in trap"
-msgstr ""
+msgstr "Temperatūra gaudyklėje"
 
 # Bait-trap survey
 msgid "Trap"
-msgstr ""
+msgstr "Gaudyklė"
 
 # Bait-trap survey
 msgid "Code"
-msgstr ""
+msgstr "Kodas"
 
 # Bait-trap survey
 msgid "Recaptured"
-msgstr ""
+msgstr "Pakartotinai sugautas"
 
 # Bait-trap survey
 msgid "Male"
-msgstr ""
+msgstr "Patinas"
 
 # Bait-trap survey
 msgid "Female"
-msgstr ""
+msgstr "Patelė"
 
 # Bait-trap survey
 msgid "Sex"
-msgstr ""
+msgstr "Lytis"
 
 # Bait-trap survey
 msgid "Released"
-msgstr ""
+msgstr "Paleistas"
 
 # Bait-trap survey
 msgid "Collected"
-msgstr ""
+msgstr "Surinktas"
 
 # Bait-trap survey
 msgid "Died"
-msgstr ""
+msgstr "Žuvęs"
 
 # Bait-trap survey
 msgid "Fate"
-msgstr ""
+msgstr "Baigtis"
 
 # Bait-trap survey
 msgid "Intermediate"
-msgstr ""
+msgstr "Vidutinio amžiaus"
 
 # Bait-trap survey
 msgid "Old"
-msgstr ""
+msgstr "Senas"
 
 # Bait-trap survey
 msgid "Age"
-msgstr ""
+msgstr "Amžius"
 
 # Bait-trap survey
 msgid "Wing length"
-msgstr ""
+msgstr "Sparno ilgis"
 
 # Bait-trap survey
 msgid "Feeding"
-msgstr ""
+msgstr "Maitinasi"
 
 # Bait-trap survey
 msgid "Species photos"
-msgstr ""
+msgstr "Rūšių nuotraukos"
 
 # Successful registration pop-up
 msgid "Welcome aboard"
@@ -3443,7 +3460,7 @@ msgstr "Sąrašo rūšavimas pakeistas į rūšies įvedimo laiką."
 
 # Change list order toast message
 msgid "Changed list ordering to last edited."
-msgstr ""
+msgstr "Sąrašas surikiuotas pagal paskutinį redagavimą."
 
 # Record verification status
 msgid "Unconfirmed"
@@ -3642,3 +3659,4 @@ msgid ""
 "The attribute value was locked and will be pre-filled for subsequent "
 "records."
 msgstr ""
+"Lauko reikšmė užrakinta ir bus automatiškai įrašyta vėlesniuose įrašuose."
