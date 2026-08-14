@@ -6,9 +6,10 @@ import {
   lockOpenOutline,
 } from 'ionicons/icons';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { useToast } from '@flumens';
+import { MenuAttrItem, useToast } from '@flumens';
 import {
   IonIcon,
+  IonItem,
   IonItemOption,
   IonItemOptions,
   IonItemSliding,
@@ -69,15 +70,26 @@ const AttrLock = ({
     );
   };
 
+  const detailIcon = isLocked ? lockClosedOutline : chevronForwardOutline;
+  const child =
+    children.type === IonItem || children.type === MenuAttrItem ? (
+      cloneElement(children, { detailIcon })
+    ) : (
+      <IonItem
+        className="[--padding-start:0px] [--inner-padding-end:0px] w-full [&>*]:w-full"
+        detailIcon={detailIcon}
+      >
+        {children}
+      </IonItem>
+    );
+
   return (
     <IonItemSliding
       ref={slider}
       className={`attr-lock${isLocked ? ' locked' : ''}`}
       disabled={!hasValue || sample.isDisabled}
     >
-      {cloneElement(children, {
-        detailIcon: isLocked ? lockClosedOutline : chevronForwardOutline,
-      })}
+      {child}
       <IonItemOptions side="end">
         <IonItemOption
           aria-label={isLocked ? 'Unlock attribute' : 'Lock attribute'}
