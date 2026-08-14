@@ -1,6 +1,13 @@
 ## 1.34.0
 
 Added AreaCount survey species attribute locking.
+Added event name attribute to bait-trap surveys.
+Added support for sub-zero temperatures.
+Added Guadeloupe, Martinique, Saint-Martin and Saint-Barthélémy under Central America.
+Made AreaCount occurrence comments inline.
+Updated translations.
+Updated dependencies.
+Fixed page padding.
 
 ## 1.33.1
 
