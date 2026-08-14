@@ -83,7 +83,7 @@ const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
         </IonToolbar>
       </IonHeader>
 
-      <Main fullscreen>
+      <Main fullscreen className="pb-ion-s-10">
         <InfoMessage className="blue m-3">
           Please select the species groups that you always record.
         </InfoMessage>

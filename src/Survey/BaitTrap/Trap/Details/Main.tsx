@@ -31,7 +31,7 @@ const TrapDetailsMain = ({ subSample }: Props) => {
   const locationName = location?.data.name;
 
   return (
-    <Main>
+    <Main className="pb-ion-s-10">
       <BlockContext value={{ isDisabled: subSample.isUploaded }}>
         <IonList lines="full">
           <div className="rounded-list">

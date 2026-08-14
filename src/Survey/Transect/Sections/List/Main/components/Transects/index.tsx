@@ -63,7 +63,7 @@ function Transects({ onTransectSelect }: Props) {
   const transectsList = transects.map(getTransectItemWrap);
 
   return (
-    <Main id="transect-list">
+    <Main id="transect-list" className="pb-ion-s-10">
       <InfoMessage
         prefix={<IonIcon src={informationCircleOutline} className="size-6" />}
         color="tertiary"

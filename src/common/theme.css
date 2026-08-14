@@ -9,6 +9,7 @@
 @source "../../node_modules/@flumens/ionic";
 
 @import '@flumens/ionic/dist/themes/rounded.css';
+@import '@flumens/ionic/dist/themes/tailwindUtils.css';
 
 @theme {
   /* https://www.shadecolr.com/#colors=Y29sb3I6MjY5LjQzMzk2MjI2NDE1MSwyMi43NDY3ODExMTU4Nzk4MjMsNDUuNjg2Mjc0NTA5ODAzOTJ8c3RlcC11cDo5fHN0ZXAtZG93bjoxMnxodWUtc2hpZnQ6MHxiYXNlLXN0b3A6NnxuYW1lOnNsYXRlfGxvY2tlZDow&active=color-1&v=2 */

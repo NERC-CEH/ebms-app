@@ -56,7 +56,7 @@ const EditOccurrence = ({
   const isPaintedLadySurvey = subSample.isPaintedLadySurvey();
 
   return (
-    <Main id="area-count-occurrence-edit">
+    <Main id="area-count-occurrence-edit" className="pb-ion-s-10">
       <IonList lines="full">
         <h3 className="list-title">
           <T>Details</T>

@@ -254,7 +254,7 @@ const Edit = ({
   const baseURL = `/survey/transect/${sample.cid}/sections/${sectionSample.cid}`;
 
   return (
-    <Main id="transect-section-edit">
+    <Main id="transect-section-edit" className="pb-ion-s-10">
       <IonList lines="full">
         <div className="rounded-list">
           <MenuAttrItem

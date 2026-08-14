@@ -43,7 +43,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
   const baseURL = `/survey/transect/${sample.id || sample.cid}`;
 
   return (
-    <Main id="transect-edit">
+    <Main id="transect-edit" className="pb-ion-s-10">
       {!!isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">

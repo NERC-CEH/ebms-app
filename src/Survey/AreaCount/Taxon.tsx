@@ -246,7 +246,7 @@ const TaxonController = () => {
         }
       />
 
-      <Main>
+      <Main className="pb-ion-s-10">
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}

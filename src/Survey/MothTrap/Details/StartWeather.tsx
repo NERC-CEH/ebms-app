@@ -10,7 +10,7 @@ const StartWeather = () => {
   return (
     <Page id="moth-trap-start-weather">
       <Header title="Start Weather" />
-      <Main>
+      <Main className="pb-ion-s-10">
         <IonList lines="full">
           <div className="rounded-list">
             <MenuAttrItemFromModel model={sample} attr="temperature" />

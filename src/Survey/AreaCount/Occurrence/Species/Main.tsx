@@ -133,7 +133,7 @@ const EditOccurrence = ({
   };
 
   return (
-    <Main className="[--padding-bottom:40px]">
+    <Main className="pb-ion-s-10">
       {!firstSubSample && (
         <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
       )}

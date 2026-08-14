@@ -21,7 +21,7 @@ const EditOccurrence = ({ occurrence }: Props) => {
   const baseURL = match.url;
 
   return (
-    <Main id="moth-occurrence-edit">
+    <Main id="moth-occurrence-edit" className="pb-ion-s-10">
       <IonList lines="full">
         <h3 className="list-title">
           <T>Details</T>

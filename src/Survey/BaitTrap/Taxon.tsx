@@ -43,7 +43,7 @@ const Taxon = () => {
   return (
     <Page id="bait-trap-survey-taxasearch">
       <Header title="Species" />
-      <Main>
+      <Main className="pb-ion-s-10">
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}

@@ -164,7 +164,7 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
   };
 
   return (
-    <Main className="[--padding-bottom:40px]">
+    <Main className="pb-ion-s-10">
       {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">

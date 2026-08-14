@@ -605,7 +605,7 @@ const AreaCount = ({
     : getSpeciesList();
 
   return (
-    <Main id="precise-area-count-edit" className="[--padding-bottom:40px]">
+    <Main id="precise-area-count-edit" className="pb-ion-s-10">
       {isDisabled && <UploadedRecordInfoMessage sample={sample} />}
 
       <IonList lines="full">

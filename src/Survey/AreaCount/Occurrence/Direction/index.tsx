@@ -144,7 +144,7 @@ const Direction = () => {
       )}
       <Header title="Direction" rightSlot={showCompassModal()} />
 
-      <Main>
+      <Main className="pb-ion-s-10">
         <Attr
           attr="direction"
           model={occurrence}

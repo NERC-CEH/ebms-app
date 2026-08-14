@@ -84,7 +84,7 @@ const TrapHomeMain = ({ subSample }: Props) => {
   };
 
   return (
-    <Main className="[--padding-bottom:40px]">
+    <Main className="pb-ion-s-10">
       <IonList lines="full">
         <div className="rounded-list">
           <MenuAttrItem routerLink={`${url}/details`} label="Trap details" />

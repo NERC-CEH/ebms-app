@@ -43,7 +43,7 @@ const DetailsMain = ({
     !isDisabled && onOpenTemporaryTrapModal();
 
   return (
-    <Main className="[--padding-bottom:40px]">
+    <Main className="pb-ion-s-10">
       <IonList lines="full">
         <h3 className="list-title">
           <T>Trap</T>

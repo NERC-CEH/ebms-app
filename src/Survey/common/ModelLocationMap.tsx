@@ -68,7 +68,7 @@ const ModelLocationMap = () => {
           useGridRef
         />
       </MapHeader>
-      <Main className="[--padding-bottom:0] [--padding-top:0]">
+      <Main>
         <MapContainer
           onReady={setMapRef}
           onClick={onMapClick}

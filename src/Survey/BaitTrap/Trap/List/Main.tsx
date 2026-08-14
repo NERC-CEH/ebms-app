@@ -13,7 +13,7 @@ const TrapPickerMain = ({ traps, onTrapSelect }: Props) => {
   const hasTraps = traps.length > 0;
   if (!hasTraps) {
     return (
-      <Main className="ion-padding">
+      <Main className="ion-padding pb-ion-s-10">
         <IonList lines="full">
           <InfoBackgroundMessage>
             No traps found for this site.
@@ -42,7 +42,7 @@ const TrapPickerMain = ({ traps, onTrapSelect }: Props) => {
   });
 
   return (
-    <Main className="ion-padding">
+    <Main className="ion-padding pb-ion-s-10">
       <IonList lines="full">
         <div className="rounded-list">{sortedTraps.map(getTrapItem)}</div>
       </IonList>

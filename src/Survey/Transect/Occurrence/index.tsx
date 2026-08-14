@@ -35,7 +35,7 @@ const TransectHomeController = () => {
   return (
     <Page id="section-occurrence-edit">
       <Header title="Edit Occurrence" />
-      <Main>
+      <Main className="pb-ion-s-10">
         <IonList lines="full">
           <div className="rounded-list">
             <IonItem

@@ -116,7 +116,7 @@ const AreaAttr = ({
   useEffect(flyToLocation, [mapRef, location, selectedSite]);
 
   return (
-    <Main className="[--padding-bottom:0] [--padding-top:0]">
+    <Main className="pb-ion-0 pt-ion-0">
       <MapContainer
         onReady={ref => ref.resize() && setMapRef(ref)}
         accessToken={config.map.mapboxApiKey}

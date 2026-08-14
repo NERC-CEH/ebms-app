@@ -55,7 +55,7 @@ const GroupsMain = ({
   };
 
   return (
-    <Main>
+    <Main className="pb-ion-s-10">
       <IonRefresher slot="fixed" onIonRefresh={refreshGroups}>
         <IonRefresherContent />
       </IonRefresher>

@@ -40,7 +40,7 @@ const DetailsMain = ({ sample }: Props) => {
   const locationName = location?.data.name;
 
   return (
-    <Main className="[--padding-bottom:20px]">
+    <Main className="pb-ion-s-10">
       <BlockContext value={{ isDisabled }}>
         <IonList lines="full">
           <h3 className="list-title">

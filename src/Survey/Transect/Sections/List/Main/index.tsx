@@ -76,7 +76,7 @@ const Sections = ({ sample, onTransectSelect }: Props) => {
   const sections = sample.samples.map(getSectionItemWrap);
 
   return (
-    <Main className="[--padding-bottom:40px]">
+    <Main className="pb-ion-s-10">
       <IonList lines="full">
         <div className="rounded-list">{sections}</div>
       </IonList>
