@@ -173,16 +173,14 @@ export default class TaxonList extends Model<Data> {
     const species: any = await taxaStore.db.query(query.toSQL());
 
     return species
-      .map(
-        (sp: SpeciesColumns & { commonName: string }): SearchResult => ({
-          foundInName: 'commonName',
-          warehouseId: sp.id,
-          scientificName: sp.taxon,
-          commonName: sp.commonName,
-          taxonGroupId: sp.taxon_group_id,
-          preferredId: sp.preferred_taxa_taxon_list_id!,
-        })
-      )
+      .map((sp: SpeciesColumns & { commonName: string }): SearchResult => ({
+        foundInName: 'commonName',
+        warehouseId: sp.id,
+        scientificName: sp.taxon,
+        commonName: sp.commonName,
+        taxonGroupId: sp.taxon_group_id,
+        preferredId: sp.preferred_taxa_taxon_list_id!,
+      }))
       .filter((s: SearchResult) => !!s.commonName);
   }
 

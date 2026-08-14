@@ -197,13 +197,11 @@ export async function fetchSquares(
 
     const squares = data?.aggregations?.bySrid?.buckets
       .flatMap(bucket =>
-        bucket?.bySquare?.buckets.map(
-          (square): Square => ({
-            key: square.key,
-            docCount: square.doc_count,
-            size: squareSize,
-          })
-        )
+        bucket?.bySquare?.buckets.map((square): Square => ({
+          key: square.key,
+          docCount: square.doc_count,
+          size: squareSize,
+        }))
       )
       .filter(o => !!o);
 

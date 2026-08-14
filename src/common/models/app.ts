@@ -17,9 +17,7 @@ export type SurveyDraftKeys = {
 export const DEFAULT_SPECIES_GROUP = [groups.butterflies.id];
 
 export type TaxonNameDisplayType =
-  | 'commonScientific'
-  | 'commonOnly'
-  | 'scientificOnly';
+  'commonScientific' | 'commonOnly' | 'scientificOnly';
 
 export type SpeciesListSortOrder = 'alphabetical' | 'lastAdded' | 'lastEdited';
 

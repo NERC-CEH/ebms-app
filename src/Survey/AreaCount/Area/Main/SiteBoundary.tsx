@@ -12,9 +12,7 @@ export const getShapeFromGeom = (geom?: string | null) => {
   if (!geomParsed) return undefined;
 
   return getGeomMetersToLatLon(geomParsed) as
-    | Polygon
-    | LineString
-    | MultiPolygon;
+    Polygon | LineString | MultiPolygon;
 };
 
 type Props = {
