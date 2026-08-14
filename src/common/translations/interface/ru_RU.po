@@ -220,6 +220,18 @@ msgstr ""
 msgid "Anguilla"
 msgstr ""
 
+msgid "Guadeloupe"
+msgstr ""
+
+msgid "Martinique"
+msgstr ""
+
+msgid "Saint-Martin"
+msgstr ""
+
+msgid "Saint-Barthélémy"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Другое место"
 

@@ -75,6 +75,14 @@ const countries = {
     id: 215983,
     continent: 'EU',
   },
+  BL: {
+    name: 'Saint-Barthélémy',
+    latitude: 17.89755,
+    longitude: -62.82183,
+    zoom: 11,
+    id: 215991,
+    continent: 'CAM',
+  },
   BA: {
     name: 'Bosnia and Herzegovina',
     latitude: 43.915886,
@@ -179,6 +187,13 @@ const countries = {
     id: 216049,
     continent: 'EU',
   },
+  GP: {
+    name: 'Guadeloupe',
+    latitude: 16.265,
+    longitude: -61.551,
+    zoom: 8,
+    continent: 'CAM',
+  },
   GR: {
     name: 'Greece',
     latitude: 39.074208,
@@ -274,6 +289,20 @@ const countries = {
     zoom: 5,
     id: 216104,
     continent: 'EU',
+  },
+  MF: {
+    name: 'Saint-Martin',
+    latitude: 18.07083,
+    longitude: -63.05008,
+    zoom: 11,
+    continent: 'CAM',
+  },
+  MQ: {
+    name: 'Martinique',
+    latitude: 14.641528,
+    longitude: -61.024174,
+    zoom: 9,
+    continent: 'CAM',
   },
   MS: {
     name: 'Montserrat',

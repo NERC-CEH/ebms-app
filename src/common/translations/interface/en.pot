@@ -213,6 +213,18 @@ msgstr "Montserrat"
 msgid "Anguilla"
 msgstr "Anguilla"
 
+msgid "Guadeloupe"
+msgstr "Guadeloupe"
+
+msgid "Martinique"
+msgstr "Martinique"
+
+msgid "Saint-Martin"
+msgstr "Saint-Martin"
+
+msgid "Saint-Barthélémy"
+msgstr "Saint-Barthélémy"
+
 msgid "Elsewhere"
 msgstr "Elsewhere"
 

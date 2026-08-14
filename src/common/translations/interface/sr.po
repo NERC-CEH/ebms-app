@@ -220,6 +220,18 @@ msgstr "Монтсерат"
 msgid "Anguilla"
 msgstr "Ангвила"
 
+msgid "Guadeloupe"
+msgstr ""
+
+msgid "Martinique"
+msgstr ""
+
+msgid "Saint-Martin"
+msgstr ""
+
+msgid "Saint-Barthélémy"
+msgstr ""
+
 msgid "Elsewhere"
 msgstr "Негде другде"
 
