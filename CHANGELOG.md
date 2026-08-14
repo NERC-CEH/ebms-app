@@ -1,3 +1,7 @@
+## 1.34.0
+
+Added AreaCount survey species attribute locking.
+
 ## 1.33.1
 
 Fixed Luxembourg's transect location handling.

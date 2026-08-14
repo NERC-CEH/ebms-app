@@ -24,6 +24,7 @@ import Media from '../media';
 import Occurrence from '../occurrence';
 import { samplesStore } from '../store';
 import GPSExtension, { calculateArea } from './GPSExt';
+import attrLockExtension from './attrLockExt';
 import VibrateExtension from './vibrateExt';
 
 type AreaCountData = {
@@ -114,6 +115,8 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
   shallowSpeciesList = observable([]);
 
   copyAttributes = observable({});
+
+  locks = attrLockExtension();
 
   timerPausedTime = observable<any>({ time: null });
 

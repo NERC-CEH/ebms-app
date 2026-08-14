@@ -1,0 +1,14 @@
+.attr-lock {
+  &.locked ion-item {
+    --detail-icon-color: var(--color-success-700);
+    --detail-icon-opacity: 0.7;
+
+    *[slot='end'] {
+      color: var(--color-success-700);
+    }
+  }
+
+  ion-item-option {
+    min-width: 70px;
+  }
+}

@@ -148,10 +148,11 @@ const speciesConfig: Survey = {
   label: '15min Single Species Count',
 
   smp: {
-    create: ({ taxon, zeroAbundance }) => {
+    create: ({ taxon, zeroAbundance, parent }) => {
       const subSample = coreSurvey.smp!.create!({
         taxon,
         zeroAbundance,
+        parent,
         surveyId: speciesSurvey.id, // eslint-disable-line @typescript-eslint/no-use-before-define
         surveyName: speciesSurvey.name, // eslint-disable-line @typescript-eslint/no-use-before-define
       });

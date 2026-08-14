@@ -117,7 +117,7 @@ const survey: Survey = {
       date: dateAttr,
     },
 
-    create({ taxon, surveyId, surveyName }) {
+    create({ taxon, parent, surveyId, surveyName }) {
       const sample = new Sample({
         metadata: {
           surveyId: surveyId || survey.id,
@@ -134,6 +134,12 @@ const survey: Survey = {
 
       const occurrence = survey.smp!.occ!.create!({ taxon });
       sample.occurrences.push(occurrence);
+
+      if (parent) {
+        const locks = parent.locks.getAll(taxon.taxonGroupId);
+        Object.assign(sample.data, locks.smp);
+        Object.assign(occurrence.data, locks.occ);
+      }
 
       return sample;
     },

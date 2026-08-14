@@ -12,6 +12,7 @@ const Container = () => {
     <Page id="precise-area-count-edit-occurrence">
       <Header title="Edit Occurrence" />
       <Main
+        sample={sample!}
         occurrence={occurrence!}
         subSample={subSample!}
         isDisabled={sample!.isDisabled}

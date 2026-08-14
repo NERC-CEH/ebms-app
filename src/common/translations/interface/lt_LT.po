@@ -2819,6 +2819,10 @@ msgid "Event type"
 msgstr ""
 
 # Bait-trap survey
+msgid "Event name"
+msgstr ""
+
+# Bait-trap survey
 msgid "Sampling design"
 msgstr ""
 
@@ -3632,3 +3636,9 @@ msgid ""
 msgstr ""
 "Norėdami sukurti naują projektą, apsilankykite <2>projektų puslapyje</2> "
 "svetainėje."
+
+# Survey lock message
+msgid ""
+"The attribute value was locked and will be pre-filled for subsequent "
+"records."
+msgstr ""

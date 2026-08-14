@@ -372,7 +372,7 @@ type OccurrenceConfig = {
 
 type SampleCreateOptions = {
   taxon?: Taxon;
-  surveySample?: Sample;
+  parent?: Sample;
   surveyId?: number;
   surveyName?: string;
   skipGPS?: boolean;

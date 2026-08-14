@@ -3,7 +3,7 @@
   "id": "uk.ac.ceh.ebms",
   "title": "ButterflyCount",
   "description": "ButterflyCount mobile application.",
-  "version": "1.33.1",
+  "version": "1.34.0",
   "homepage": "http://www.butterfly-monitoring.net",
   "scripts": {
     "prepare": "husky",
@@ -138,8 +138,8 @@
     "webpack-dev-server": "5.2.3"
   },
   "browserslist": [
-    "ChromeAndroid >=89",
-    "iOS >=12"
+    "ChromeAndroid >= 89",
+    "iOS >= 15"
   ],
   "engines": {
     "node": ">=20",

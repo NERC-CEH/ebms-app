@@ -64,6 +64,9 @@ const TaxonController = () => {
   const { sample, occurrence } = useSample<Sample, Occurrence>();
   if (!sample) throw new Error('Sample is missing');
 
+  const isLocationLocked = () =>
+    sample.locks.isLocked('all', 'smp', 'location');
+
   const onDeleteSurvey = async () => {
     if (!sample.isSingleSpeciesSurvey()) {
       goBack();
@@ -166,7 +169,11 @@ const TaxonController = () => {
       const survey = sample.getSurvey();
       const zeroAbundance = sample.isSurveyPreciseSingleSpecies() ? 't' : null;
 
-      const newSample = survey.smp!.create!({ taxon, zeroAbundance });
+      const newSample = survey.smp!.create!({
+        taxon,
+        zeroAbundance,
+        parent: sample,
+      });
       sample.samples.push(newSample);
 
       if (sample.isPaintedLadySurvey()) {
@@ -177,7 +184,8 @@ const TaxonController = () => {
       }
 
       if (!sample.isSurveyPreciseSingleSpecies()) {
-        if (!sample.isTimerFinished()) newSample.startGPS();
+        if (!sample.isTimerFinished() && !isLocationLocked())
+          newSample.startGPS();
       }
     }
 

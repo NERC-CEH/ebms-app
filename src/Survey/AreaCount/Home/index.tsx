@@ -271,6 +271,9 @@ const HomeController = () => {
 
   if (!sample) return null;
 
+  const isLocationLocked = () =>
+    sample.locks.isLocked('all', 'smp', 'location');
+
   const processSubmission = async () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
@@ -487,10 +490,11 @@ const HomeController = () => {
     const survey = sample.getSurvey();
 
     const addOneCount = () => {
-      const newSubSample = survey.smp!.create!({ taxon });
+      const newSubSample = survey.smp!.create!({ taxon, parent: sample });
       sample.samples.push(newSubSample);
 
-      if (!sample.isTimerFinished()) newSubSample.startGPS();
+      if (!sample.isTimerFinished() && !isLocationLocked())
+        newSubSample.startGPS();
     };
 
     if (is5x) {
@@ -542,14 +546,14 @@ const HomeController = () => {
     const taxon = { ...copiedSubSample.occurrences[0].data.taxon };
 
     const survey = sample.getSurvey();
-    const newSubSample = survey.smp!.create!({ taxon });
+    const newSubSample = survey.smp!.create!({ taxon, parent: sample });
 
     (sample.copyAttributes as any).timeOfSighting = new Date().toISOString();
 
     newSubSample.occurrences[0].data = observable(sample.copyAttributes) as any;
 
     sample.samples.push(newSubSample);
-    newSubSample.startGPS();
+    if (!isLocationLocked()) newSubSample.startGPS();
     sample.save();
 
     await ref.current.closeOpened();
