@@ -4,6 +4,8 @@ node_modules
 .env*
 *.patch
 coverage
+playwright-report
+test-results
 .vscode
 .nowbuild
 .now
