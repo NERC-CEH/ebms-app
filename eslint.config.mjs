@@ -6,6 +6,7 @@ export default defineConfig([
     files: ['**/*'],
     extends: [config],
     rules: {
+      '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
       'no-param-reassign': 0,
       '@typescript-eslint/naming-convention': [
         'error',

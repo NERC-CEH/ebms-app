@@ -1,5 +1,5 @@
 declare module '*.svg' {
-  const content: any;
+  const content: string;
   export default content;
 }
 
@@ -11,25 +11,25 @@ declare module '*.svg?react' {
 }
 
 declare module '*.jpg' {
-  const content: any;
+  const content: string;
   export default content;
 }
 
 declare module '*.po' {
-  const content: any;
+  const content: Record<string, string[]>;
   export default content;
 }
 
 declare module '*.pot' {
-  const content: any;
+  const content: Record<string, string[]>;
   export default content;
 }
 
 declare module '*.png' {
-  const content: any;
+  const content: string;
   export default content;
 }
 
 declare module '@mapbox/geojson-area' {
-  export function geometry(geojson: { type: string; coordinates: any }): number;
+  export function geometry(geojson: GeoJSON.Geometry): number;
 }

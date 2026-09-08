@@ -1,7 +1,8 @@
 import { Trans as T } from 'react-i18next';
+import { useAlert } from '@flumens';
 
-export default async (alert: any) => {
-  const showMergeSpeciesDialog = (resolve: any) => {
+export default async (alert: ReturnType<typeof useAlert>) => {
+  const showMergeSpeciesDialog = (resolve: (merge: boolean) => void) => {
     alert({
       header: 'Species already exists',
       message: (
@@ -27,5 +28,5 @@ export default async (alert: any) => {
       ],
     });
   };
-  return new Promise(showMergeSpeciesDialog);
+  return new Promise<boolean>(showMergeSpeciesDialog);
 };

@@ -19,7 +19,7 @@ const FancyButton = ({
   path,
   ...otherProps
 }: Props) => {
-  const { pathname } = useLocation<any>();
+  const { pathname } = useLocation();
 
   const ref = useRef<HTMLDivElement>(null);
   const [fullyVisible, setFullyVisible] = useState(true);

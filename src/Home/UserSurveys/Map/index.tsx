@@ -34,12 +34,11 @@ const getTotalSquares = (squares: Square[]) => {
 
 const Map = () => {
   const [mapRef, setMapRef] = useState<{ current?: MapRef }>({});
-  const measuredRef = useCallback(
-    (node: any) => node && setMapRef({ current: node }),
-    []
-  );
+  const measuredRef = useCallback((node: MapRef | null) => {
+    if (node) setMapRef({ current: node });
+  }, []);
 
-  const [fetchingRecords, setFetchingRecords] = useState<any>(null);
+  const [fetchingRecords, setFetchingRecords] = useState<boolean | null>(null);
   const toast = useToast();
 
   const [totalSquares, setTotalSquares] = useState<number>(1);

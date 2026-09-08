@@ -7,11 +7,12 @@ import { IonIcon } from '@ionic/react';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
 import appModel from 'models/app';
 import Header from './Header';
+import type { Filters } from './Header/FiltersToolbar';
 import Main from './Main';
 
 const getFamily = (sp: SpeciesType) => sp.family;
 
-const existFamily = (sp: SpeciesType['family']) => sp;
+const existFamily = (family: string | undefined): family is string => !!family;
 const families = speciesProfiles.map(getFamily).filter(existFamily);
 
 const uniqueFamilyList = Array.from(new Set(families));
@@ -56,14 +57,14 @@ const Species = () => {
   }, []);
 
   // in-memory filters
-  const [filters, setFilters] = useState<any>({ family: [] });
+  const [filters, setFilters] = useState<Filters>({ family: [] });
 
   const toggleFilter = (type: string, value: string) => {
     if (!filters[type]) {
       filters[type] = [];
     }
 
-    const foundIndex = filters[type]?.indexOf(value) as number;
+    const foundIndex = filters[type]?.indexOf(value);
     if (foundIndex >= 0) {
       filters[type]?.splice(foundIndex, 1);
     } else {
@@ -80,7 +81,7 @@ const Species = () => {
         filters={filters}
         filterOptions={filterOptions}
       />
-      <Main searchPhrase={searchPhrase} filters={[...filters.family]} />
+      <Main searchPhrase={searchPhrase} filters={filters.family || []} />
     </Page>
   );
 };

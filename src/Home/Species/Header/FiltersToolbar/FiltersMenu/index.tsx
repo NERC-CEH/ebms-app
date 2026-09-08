@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { observer } from 'mobx-react';
 import { Collapse } from '@flumens';
 import { IonContent, IonList, IonCol, IonRow, IonGrid } from '@ionic/react';
@@ -7,13 +8,13 @@ import './styles.scss';
 export type FilterOption<T = string> = {
   type: T;
   values: string[];
-  render?: any;
+  render?: (value: string) => ReactNode;
 };
 
 export type Props = {
   values: Filters;
-  options: any;
-  onSelect: any;
+  options: FilterOption[];
+  onSelect: (type: string, value: string) => void;
   searchPhrase?: string;
 };
 
@@ -68,7 +69,7 @@ const Menu = ({ searchPhrase, values, onSelect, options }: Props) => {
 
   const filterOptions = options.map(getFilterOptions);
 
-  const hasFilters = !!filterOptions.find((val: any) => !!val);
+  const hasFilters = filterOptions.some(Boolean);
   if (!hasFilters) return null;
 
   return (

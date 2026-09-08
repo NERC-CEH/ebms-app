@@ -19,6 +19,8 @@ import {
   IonToolbar,
   IonSearchbar,
   IonIcon,
+  type SearchbarCustomEvent,
+  type SegmentCustomEvent,
 } from '@ionic/react';
 import GPS from 'common/helpers/GPS';
 import taxonLists from 'common/models/collections/taxonLists';
@@ -30,7 +32,7 @@ const TaxonLists = () => {
   const toast = useToast();
   const loader = useLoader();
   const { t } = useTranslation();
-  const searchbarRef = useRef<any>(null);
+  const searchbarRef = useRef<HTMLIonSearchbarElement>(null);
 
   const [nearbyLists, setNearbyLists] = useState<TaxonList[]>([]);
   const [allLists, setAllLists] = useState<TaxonList[]>([]);
@@ -40,19 +42,19 @@ const TaxonLists = () => {
     'installed'
   );
 
-  const onSegmentClick = (e: any) => {
+  const onSegmentClick = (e: SegmentCustomEvent) => {
     const newSegment = e.detail.value;
-    setSegment(newSegment);
+    if (newSegment) setSegment(newSegment as typeof segment);
   };
 
   const [showSearch, setShowSearch] = useState(false);
   const [currentSearch, setCurrentSearch] = useState('');
-  const onSearch = (e: any) => {
-    setCurrentSearch(e.detail.value);
+  const onSearch = (e: SearchbarCustomEvent) => {
+    setCurrentSearch(e.detail.value || '');
   };
 
   useEffect(() => {
-    const runnerId = GPS.start((err: any, pos: any) => {
+    const runnerId = GPS.start((err, pos) => {
       if (err || !pos) {
         GPS.stop(runnerId);
         return;
@@ -75,8 +77,10 @@ const TaxonLists = () => {
     try {
       const lists = await taxonLists.fetchRemote({ limit: 1000 }); // 1k should cover all lists
       setAllLists(lists);
-    } catch (error: any) {
-      toast.error(`Failed to load lists: ${error.message}`);
+    } catch (error) {
+      toast.error(
+        `Failed to load lists: ${error instanceof Error ? error.message : String(error)}`
+      );
     }
 
     loader.hide();
@@ -98,8 +102,10 @@ const TaxonLists = () => {
         ...location,
       });
       setNearbyLists(lists);
-    } catch (error: any) {
-      toast.error(`Failed to load lists: ${error.message}`);
+    } catch (error) {
+      toast.error(
+        `Failed to load lists: ${error instanceof Error ? error.message : String(error)}`
+      );
     }
 
     loader.hide();
@@ -131,8 +137,10 @@ const TaxonLists = () => {
         }),
         { position: 'bottom', skipTranslation: true }
       );
-    } catch (error: any) {
-      toast.error(`Failed to install list: ${error.message}`);
+    } catch (error) {
+      toast.error(
+        `Failed to install list: ${error instanceof Error ? error.message : String(error)}`
+      );
     }
 
     await loader.hide();
@@ -152,7 +160,8 @@ const TaxonLists = () => {
         setCurrentSearch('');
         setShowSearch(!showSearch);
 
-        if (!showSearch) setTimeout(() => searchbarRef.current.setFocus(), 300); // searchbar is hidden and needs to "unhide" before we can set focus
+        if (!showSearch)
+          setTimeout(() => searchbarRef.current?.setFocus(), 300); // searchbar is hidden and needs to "unhide" before we can set focus
       }}
     >
       <IonIcon icon={searchOutline} className="size-6" />
@@ -190,8 +199,10 @@ const TaxonLists = () => {
         }),
         { position: 'bottom', skipTranslation: true }
       );
-    } catch (error: any) {
-      toast.error(`Failed to load lists: ${error.message}`);
+    } catch (error) {
+      toast.error(
+        `Failed to load lists: ${error instanceof Error ? error.message : String(error)}`
+      );
     }
 
     loader.hide();
@@ -258,7 +269,7 @@ const TaxonLists = () => {
 
         {segment === 'installed' && (
           <InstalledLists
-            lists={taxonLists as any}
+            lists={taxonLists.data}
             onDelete={onDelete}
             onReinstall={onReinstall}
           />

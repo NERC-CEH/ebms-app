@@ -1,7 +1,7 @@
 import './styles.scss';
 
 type Props = {
-  direction: any;
+  direction: number;
 };
 
 const Compass = ({ direction }: Props) => (

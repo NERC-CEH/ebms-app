@@ -16,7 +16,9 @@ function SelectLanguage({ hideHeader }: Props) {
 
   const isSettingsPage = !hideHeader;
 
-  function onSelect(newLanguage: any) {
+  function onSelect(value: string) {
+    if (!(value in languages)) return;
+    const newLanguage = value as keyof typeof languages;
     appModel.data.language = newLanguage;
     appModel.save();
 

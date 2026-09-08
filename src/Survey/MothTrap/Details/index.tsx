@@ -7,7 +7,7 @@ import {
   mothTrapTypeAttr,
 } from 'Location/MothTrap/New/config';
 import { useRouteMatch } from 'react-router';
-import { Header, useSample, useRemoteSample } from '@flumens';
+import { Header, useSample, useRemoteSample, type Choice } from '@flumens';
 import { IonPage, NavContext } from '@ionic/react';
 import groups from 'common/models/collections/groups';
 import userModel from 'common/models/user';
@@ -24,13 +24,19 @@ import {
 import Main from './Main';
 import './styles.scss';
 
-const mapAttr2Attr = (fromAttr: any, toAttr: any, val?: string): string => {
+type ChoiceAttr = { choices: readonly Choice[] };
+
+const mapAttr2Attr = (
+  fromAttr: ChoiceAttr,
+  toAttr: ChoiceAttr,
+  val?: string
+) => {
   if (!val) return '';
 
-  const origChoice = fromAttr.choices.find((c: any) => c.dataName === val);
+  const origChoice = fromAttr.choices.find(c => c.dataName === val);
   if (!origChoice) return ''; // edge case: stale or unexpected value not present in choices
 
-  const choice = toAttr.choices.find((c: any) => c.title === origChoice.title);
+  const choice = toAttr.choices.find(c => c.title === origChoice.title);
 
   return choice?.dataName || '';
 };
@@ -64,14 +70,16 @@ const DetailsController = () => {
   const saveTemporaryTrap = async (trap: Partial<LocationData>) => {
     sample.data.locationName = trap.name;
     sample.data.enteredSref = trap.centroidSref;
-    sample.data.enteredSrefSystem = trap.centroidSrefSystem as any;
+    sample.data.enteredSrefSystem =
+      trap.centroidSrefSystem as unknown as Sample['data']['enteredSrefSystem'];
 
     sample.data[tempMothTrapTypeAttr.id] = mapAttr2Attr(
       mothTrapTypeAttr,
       tempMothTrapTypeAttr,
       trap[mothTrapTypeAttr.id]
     );
-    sample.data[tempMothTrapOtherTypeAttr.id] = trap[mothTrapOtherTypeAttr.id];
+    sample.data[tempMothTrapOtherTypeAttr.id] =
+      trap[mothTrapOtherTypeAttr.id] ?? undefined;
     sample.data[tempMothTrapLampsAttr.id] = trap[mothTrapLampsAttr.id]?.map(t =>
       JSON.stringify(t)
     );
@@ -103,7 +111,7 @@ const DetailsController = () => {
     navigate(url, 'forward', 'pop');
   };
 
-  const isInvalid = sample.validateRemote();
+  const isInvalid = !!sample.validateRemote();
 
   const getNextButton = sample.isDetailsComplete() ? null : (
     <HeaderButton onClick={onFinish} isInvalid={isInvalid}>

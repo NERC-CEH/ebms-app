@@ -30,31 +30,24 @@ const checkIfTaxonSelectedSame = (
 const Controller = () => {
   const alert = useAlert();
   const { goBack, navigate } = useContext(NavContext);
-  const match: any = useRouteMatch();
+  const match = useRouteMatch<{ taxa?: string }>();
 
-  const { subSample: sectionSample, occurrence: sectionOccurrence } = useSample<
-    Sample,
-    Occurrence
-  >();
-
-  if (!sectionSample) return null;
+  const { subSample: sample, occurrence } = useSample<Sample, Occurrence>();
+  if (!sample) return null;
 
   const getTaxonId = (occ: Occurrence) =>
     occ.data.taxon.preferredId || occ.data.taxon.warehouseId;
-  const recordedTaxa = sectionSample.occurrences.map(getTaxonId);
+  const recordedTaxa = sample.occurrences.map(getTaxonId);
 
-  const onSpeciesSelected = async (taxon: Taxon) => {
-    const { taxa }: any = match.params;
-    const { isRecorded }: any = taxon;
+  const onSpeciesSelected = async (taxon: Taxon & { isRecorded?: boolean }) => {
+    const { taxa } = match.params;
+    const { isRecorded } = taxon;
 
     // bumblebees and dragonflies does not have preferredId
-    const isTaxonSelectedSame = checkIfTaxonSelectedSame(
-      taxon,
-      sectionOccurrence
-    );
+    const isTaxonSelectedSame = checkIfTaxonSelectedSame(taxon, occurrence);
 
     const byId = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
-    const occWithSameSpecies = sectionSample.occurrences.find(byId);
+    const occWithSameSpecies = sample.occurrences.find(byId);
 
     const isOccurrenceEditPage = occWithSameSpecies && isRecorded && taxa;
 
@@ -66,51 +59,50 @@ const Controller = () => {
       return;
     }
 
-    if (sectionOccurrence && isOccurrenceEditPage && !isTaxonSelectedSame) {
+    if (occurrence && isOccurrenceEditPage && !isTaxonSelectedSame) {
       const mergeSpecies = await showMergeSpeciesAlert(alert);
       if (!mergeSpecies) return;
 
-      occWithSameSpecies.data.count += sectionOccurrence.data.count;
+      occWithSameSpecies.data.count =
+        (occWithSameSpecies.data.count || 0) + (occurrence.data.count || 0);
 
       if (
-        sectionOccurrence.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
+        occurrence.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
         taxon.taxonGroupId === DRAGONFLY_GROUP
       ) {
-        sectionOccurrence.data.dragonflyStage = 'Adult';
+        occurrence.data.dragonflyStage = 'Adult';
 
-        sectionOccurrence.data.stage = undefined;
+        occurrence.data.stage = undefined;
       }
       if (
-        sectionOccurrence.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
+        occurrence.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
         taxon.taxonGroupId !== DRAGONFLY_GROUP
       ) {
-        sectionOccurrence.data.stage = 'Adult';
+        occurrence.data.stage = 'Adult';
 
-        sectionOccurrence.data.dragonflyStage = undefined;
+        occurrence.data.dragonflyStage = undefined;
       }
 
-      const hasComment = sectionOccurrence.data.comment;
+      const hasComment = occurrence.data.comment;
       if (hasComment) {
         const firstString = occWithSameSpecies.data.comment || '';
         occWithSameSpecies.data.comment = firstString.concat(
           ' ',
-          sectionOccurrence.data.comment!
+          occurrence.data.comment!
         );
       }
 
-      while (sectionOccurrence.media.length) {
-        const copy = sectionOccurrence.media.pop();
+      while (occurrence.media.length) {
+        const copy = occurrence.media.pop();
         occWithSameSpecies.media.push(copy!);
       }
 
       occWithSameSpecies.save();
-      sectionOccurrence.destroy();
-      sectionSample.save();
+      occurrence.destroy();
+      sample.save();
 
       navigate(
-        `/survey/transect/${sectionSample.parent!.cid}/sections/${
-          sectionSample.cid
-        }`,
+        `/survey/transect/${sample.parent!.cid}/sections/${sample.cid}`,
         'none',
         'pop'
       );
@@ -118,45 +110,41 @@ const Controller = () => {
       return;
     }
 
-    if (sectionOccurrence && isRecorded && isTaxonSelectedSame) {
-      sectionOccurrence.data.count += 1;
-      sectionOccurrence.save();
+    if (occurrence && isRecorded && isTaxonSelectedSame) {
+      occurrence.data.count = (occurrence.data.count || 0) + 1;
+      occurrence.save();
 
       navigate(
-        `/survey/transect/${sectionSample.parent!.cid}/sections/${
-          sectionSample.cid
-        }`,
+        `/survey/transect/${sample.parent!.cid}/sections/${sample.cid}`,
         'none',
         'pop'
       );
       return;
     }
 
-    if (!occWithSameSpecies && sectionOccurrence && taxa) {
+    if (!occWithSameSpecies && occurrence && taxa) {
       if (
-        sectionOccurrence.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
+        occurrence.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
         taxon.taxonGroupId === DRAGONFLY_GROUP
       ) {
-        sectionOccurrence.data.dragonflyStage = 'Adult';
+        occurrence.data.dragonflyStage = 'Adult';
 
-        sectionOccurrence.data.stage = undefined;
+        occurrence.data.stage = undefined;
       }
       if (
-        sectionOccurrence.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
+        occurrence.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
         taxon.taxonGroupId !== DRAGONFLY_GROUP
       ) {
-        sectionOccurrence.data.stage = 'Adult';
+        occurrence.data.stage = 'Adult';
 
-        sectionOccurrence.data.dragonflyStage = undefined;
+        occurrence.data.dragonflyStage = undefined;
       }
 
-      sectionOccurrence.data.taxon = taxon;
-      sectionOccurrence.save();
+      occurrence.data.taxon = taxon;
+      occurrence.save();
 
       navigate(
-        `/survey/transect/${sectionSample.parent!.cid}/sections/${
-          sectionSample.cid
-        }`,
+        `/survey/transect/${sample.parent!.cid}/sections/${sample.cid}`,
         'none',
         'pop'
       );
@@ -164,17 +152,17 @@ const Controller = () => {
     }
 
     if (occWithSameSpecies && !taxa) {
-      occWithSameSpecies.data.count += 1;
+      occWithSameSpecies.data.count = (occWithSameSpecies.data.count || 0) + 1;
       occWithSameSpecies.save();
       goBack();
       return;
     }
 
-    const survey = sectionSample.getSurvey();
-    const occurrence = survey.occ!.create!({ taxon });
-    sectionSample.occurrences.push(occurrence);
+    const survey = sample.getSurvey();
+    const newOccurrence = survey.occ!.create!({ taxon });
+    sample.occurrences.push(newOccurrence);
 
-    await sectionSample.save();
+    await sample.save();
     goBack();
   };
 

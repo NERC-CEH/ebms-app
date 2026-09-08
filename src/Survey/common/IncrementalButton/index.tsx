@@ -4,8 +4,8 @@ import { isPlatform } from '@ionic/react';
 import AnimatedNumber from './AnimatedNumber';
 
 type Props = {
-  onClick: any;
-  onLongClick?: any;
+  onClick: () => void;
+  onLongClick?: () => void;
   value: number;
   disabled?: boolean;
 };

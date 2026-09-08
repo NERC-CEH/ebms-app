@@ -29,8 +29,8 @@ const SectionListController = () => {
       await locations.fetchRemote();
 
       toast.success('Transect list was successfully updated.');
-    } catch (e: any) {
-      toast.error(e);
+    } catch (error) {
+      toast.error(error as Error);
     }
     await loader.hide();
   };
@@ -38,14 +38,19 @@ const SectionListController = () => {
   const onTransectSelect = (transect: Location) => {
     sample.data.locationId = transect.id;
     sample.data.enteredSref = transect?.data.centroidSref;
-    sample.data.enteredSrefSystem = transect?.data.centroidSrefSystem as any;
+    sample.data.enteredSrefSystem = transect?.data
+      .centroidSrefSystem as Sample['data']['enteredSrefSystem'];
 
     const byTransectId = (section: Location) =>
       section.data.parentId === transect.id;
 
     const byCode = (loc1: Location, loc2: Location) => {
-      const sectionCodeNumberIndex1: any = loc1.data.code?.match(/\d+$/)?.[0];
-      const sectionCodeNumberIndex2: any = loc2.data.code?.match(/\d+$/)?.[0];
+      const sectionCodeNumberIndex1 = Number(
+        loc1.data.code?.match(/\d+$/)?.[0]
+      );
+      const sectionCodeNumberIndex2 = Number(
+        loc2.data.code?.match(/\d+$/)?.[0]
+      );
       return sectionCodeNumberIndex1 - sectionCodeNumberIndex2;
     };
 

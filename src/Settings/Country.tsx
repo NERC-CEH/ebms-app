@@ -13,7 +13,7 @@ import taxonLists from 'common/models/collections/taxonLists';
 import appModel from 'models/app';
 
 type Props = {
-  hideHeader?: any;
+  hideHeader?: boolean;
 };
 
 const SelectCountry = ({ hideHeader }: Props) => {
@@ -36,7 +36,10 @@ const SelectCountry = ({ hideHeader }: Props) => {
 
   const currentValue = appModel.data.country;
 
-  async function onSelect(newCountry: any) {
+  async function onSelect(value: string) {
+    if (!(value in countries)) return;
+    const newCountry = value as CountryCode;
+
     if (appModel.data.country !== 'UK' && newCountry === 'UK') {
       alert({
         header: 'Note',
@@ -106,7 +109,7 @@ const SelectCountry = ({ hideHeader }: Props) => {
   return (
     <Page
       id="country-select"
-      className={hideHeader && 'pt-[var(--ion-safe-area-top,0)]'}
+      className={hideHeader ? 'pt-[var(--ion-safe-area-top,0)]' : undefined}
     >
       {!hideHeader && <Header title="Country" />}
 

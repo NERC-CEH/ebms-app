@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { observer } from 'mobx-react';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Header, Toggle, useAlert } from '@flumens';
@@ -8,10 +8,10 @@ import './styles.scss';
 
 type Props = {
   isGPSTracking: boolean;
-  toggleGPStracking: any;
+  toggleGPStracking: (state: boolean) => void;
   isDisabled: boolean;
   isAreaShape: boolean;
-  infoText: any;
+  infoText: ReactNode;
 };
 
 const HeaderComponent = ({

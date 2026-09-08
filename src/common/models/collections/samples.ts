@@ -1,19 +1,19 @@
 import SampleCollection from '@flumens/models/dist/Indicia/SampleCollection';
 import config from 'common/config';
-import Sample from 'models/sample';
+import Sample, { bySurveyDate } from 'models/sample';
 import Occurrence from '../occurrence';
 import { samplesStore } from '../store';
 import userModel from '../user';
 
 console.log('SavedSamples: initializing');
 
-const samples: SampleCollection<Sample> = new SampleCollection({
+const samples = new SampleCollection<Sample>({
   store: samplesStore,
   Model: Sample,
   Occurrence,
   url: config.backend.indicia.url,
   getAccessToken: () => userModel.getAccessToken(),
-}) as any;
+});
 
 export async function uploadAllSamples() {
   console.log('SavedSamples: setting all samples to send.');
@@ -48,15 +48,6 @@ export function getPending() {
   return samples.filter(byUploadStatus);
 }
 
-export function bySurveyDate(sample1: Sample, sample2: Sample) {
-  const date1 = new Date(sample1.data.date);
-  const moveToTop = !date1 || date1.toString() === 'Invalid Date';
-  if (moveToTop) return -1;
-
-  const date2 = new Date(sample2.data.date);
-  return date2.getTime() - date1.getTime();
-}
-
-// (window as any).sampleCollection = collection;
+export { bySurveyDate };
 
 export default samples;

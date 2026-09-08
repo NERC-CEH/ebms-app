@@ -14,7 +14,7 @@ import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 function useShowDeletePopup() {
   const alert = useAlert();
 
-  const showDeletePopup = (onDelete: any) =>
+  const showDeletePopup = (onDelete: () => void) =>
     alert({
       header: 'Delete',
       message: 'Are you sure you want to delete the list?',

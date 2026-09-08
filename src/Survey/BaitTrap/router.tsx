@@ -1,3 +1,4 @@
+import { ComponentType } from 'react';
 import { Route } from 'react-router-dom';
 import { AttrPage, withSample } from '@flumens';
 import StartNewSurvey from 'Survey/common/StartNewSurvey';
@@ -34,8 +35,8 @@ const routes = [
     withSample(AttrPageFromRoute),
   ],
   [`${baseURL}/:smpId/traps/:subSmpId/occ/:occId/taxon`, Taxon],
-].map(([route, component]: any) => (
+] as [string, ComponentType][];
+
+export default routes.map(([route, component]) => (
   <Route key={route} path={route} component={component} exact />
 ));
-
-export default routes;

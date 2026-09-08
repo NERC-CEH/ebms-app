@@ -5,6 +5,7 @@ import {
   getGeomWKT,
   isValidLocation,
   timeFormat,
+  type Location,
 } from '@flumens';
 import config from 'common/config';
 import appModel from 'common/models/app';
@@ -29,9 +30,14 @@ import {
   dragonflyStageAttr,
   speciesGroupsAttr,
   commentAttr,
+  type Submission,
 } from 'Survey/common/config';
 
 export { areaSizeAttr } from 'Survey/common/config';
+
+type SubmissionLocation = Location & {
+  shape: NonNullable<Location['shape']>;
+};
 
 const getSetWeather = (sample: Sample) => async () => {
   if (!device.isOnline) return;
@@ -67,30 +73,38 @@ const survey: Survey = {
     location: {
       remote: {
         id: 'entered_sref',
-        values(location, submission) {
+        values(location: SubmissionLocation, submission: Submission) {
           const { accuracy, altitude, altitudeAccuracy } = location;
-
-          // eslint-disable-next-line
           submission.values = {
             ...submission.values,
             geom: getGeomWKT(location.shape),
           };
 
-          submission.values['smpAttr:282'] = accuracy; // eslint-disable-line
-          submission.values['smpAttr:283'] = altitude; // eslint-disable-line
-          submission.values['smpAttr:284'] = altitudeAccuracy; // eslint-disable-line
+          submission.values['smpAttr:282'] = accuracy;
+          submission.values['smpAttr:283'] = altitude;
+          submission.values['smpAttr:284'] = altitudeAccuracy;
 
-          return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
-            location.longitude
-          ).toFixed(7)}`;
+          return `${location.latitude.toFixed(7)}, ${location.longitude.toFixed(
+            7
+          )}`;
         },
       },
     },
 
     // backwards compatibility with old values, these can be removed in the future
     locationArea: { remote: { id: 723, isBackwardsCompatible: true } },
-    group: { remote: { id: 'group_id', values: val => val.id } },
-    site: { remote: { id: 'location_id', values: site => site.id } },
+    group: {
+      remote: {
+        id: 'group_id',
+        values: (val: { id?: string }) => val.id,
+      },
+    },
+    site: {
+      remote: {
+        id: 'location_id',
+        values: (site: { id?: string }) => site.id,
+      },
+    },
   },
 
   smp: {
@@ -98,20 +112,20 @@ const survey: Survey = {
       location: {
         remote: {
           id: 'entered_sref',
-          values(location, submission) {
+          values(location: SubmissionLocation, submission: Submission) {
             const { accuracy, altitude, altitudeAccuracy } = location;
 
-            submission.values['smpAttr:282'] = accuracy; // eslint-disable-line
-            submission.values['smpAttr:283'] = altitude; // eslint-disable-line
-            submission.values['smpAttr:284'] = altitudeAccuracy; // eslint-disable-line
+            submission.values['smpAttr:282'] = accuracy;
+            submission.values['smpAttr:283'] = altitude;
+            submission.values['smpAttr:284'] = altitudeAccuracy;
 
             if (!location.latitude) {
               return null; // if missing then sub-sample will be removed
             }
 
-            return `${parseFloat(location.latitude).toFixed(7)}, ${parseFloat(
-              location.longitude
-            ).toFixed(7)}`;
+            return `${location.latitude.toFixed(
+              7
+            )}, ${location.longitude.toFixed(7)}`;
           },
         },
       },
@@ -146,15 +160,13 @@ const survey: Survey = {
     },
 
     modifySubmission(submission, model) {
-      if (model.parent.data.group?.id) {
-        // eslint-disable-next-line
-        submission.values.group_id = model.parent.data.group.id;
+      const parent = model.parent as Sample<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+      if (parent.data?.group?.id) {
+        submission.values.group_id = parent.data.group.id;
       }
 
-      if (Number.isFinite(model.parent.data.privacyPrecision)) {
-        // eslint-disable-next-line
-        submission.values.privacy_precision =
-          model.parent.data.privacyPrecision;
+      if (Number.isFinite(parent.data?.privacyPrecision)) {
+        submission.values.privacy_precision = parent.data!.privacyPrecision;
       }
 
       return submission;
@@ -182,7 +194,6 @@ const survey: Survey = {
 
         return new Occurrence({
           data: {
-            comment: null,
             stage: !isDragonfly ? 'Adult' : undefined,
             dragonflyStage: isDragonfly ? 'Adult' : undefined,
             taxon,
@@ -212,7 +223,6 @@ const survey: Survey = {
         inputForm: survey.webForm,
         [appVersionAttr.id]: config.version,
         speciesGroups: appModel.data.speciesGroups,
-        surveyStartTime: null,
         location: {},
         temperature: '',
         windDirection: '',

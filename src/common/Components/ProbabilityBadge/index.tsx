@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { MouseEvent, useState } from 'react';
 import clsx from 'clsx';
 import { Trans as T } from 'react-i18next';
 import { IonContent, IonPopover } from '@ionic/react';
@@ -11,15 +11,15 @@ type Props = {
 };
 
 const ProbabilityBadge = ({ probability, className, showInfo }: Props) => {
-  const [infoState, setInfoState] = useState<any>({
-    showInfo: false,
-    event: undefined,
-  });
+  const [infoState, setInfoState] = useState<{
+    showInfo: boolean;
+    event?: MouseEvent;
+  }>({ showInfo: false });
 
   const hasProbability = Number.isFinite(probability);
   const normalisedProbability = probability! < 0.01 ? 0.01 : probability; // round the very small probabilities to 1%
 
-  const onShowInfo = (e: any) => {
+  const onShowInfo = (e: MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
     setInfoState({ showInfo: true, event: e });

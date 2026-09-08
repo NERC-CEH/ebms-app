@@ -3,7 +3,12 @@ import clsx from 'clsx';
 import { checkmarkOutline } from 'ionicons/icons';
 import { useTranslation } from 'react-i18next';
 import { Keyboard } from '@capacitor/keyboard';
-import { IonToolbar, IonSearchbar, isPlatform } from '@ionic/react';
+import {
+  IonToolbar,
+  IonSearchbar,
+  isPlatform,
+  type SearchbarCustomEvent,
+} from '@ionic/react';
 import CurrentFilters from './CurrentFilters';
 import FiltersMenu, { FilterOption as FilterOptionType } from './FiltersMenu';
 import './styles.scss';
@@ -27,9 +32,9 @@ type Props = {
   /**
    * On filter select/deselect.
    */
-  toggleFilter: any;
-  onSearch: any;
-  onSearchEnd: any;
+  toggleFilter: (type: FilterGroup, value: Filter) => void;
+  onSearch: (value: string) => void;
+  onSearchEnd: () => void;
   isOpen?: boolean;
 };
 
@@ -43,11 +48,11 @@ const FiltersToolbar = ({
 }: Props) => {
   const [searchPhrase, setSearchPhrase] = useState('');
   const [tappedSearchEnd, setTappedSearchEnd] = useState(false);
-  const searchInput: any = useRef<any>(null);
+  const searchInput = useRef<HTMLIonSearchbarElement>(null);
   const { t } = useTranslation();
 
-  function onSearch(e: any) {
-    const { value } = e.detail;
+  function onSearch(e: SearchbarCustomEvent) {
+    const value = e.detail.value || '';
 
     if (tappedSearchEnd) {
       return;
@@ -59,7 +64,7 @@ const FiltersToolbar = ({
   const focusSearch = () => {
     if (!isOpen) return;
     setTappedSearchEnd(false);
-    searchInput.current.setFocus();
+    searchInput.current?.setFocus();
   };
   useEffect(focusSearch, [isOpen, searchInput.current]);
 
@@ -75,7 +80,7 @@ const FiltersToolbar = ({
 
   const selectFilter = (type: FilterGroup, value: Filter) => {
     setSearchPhrase('');
-    searchInput.current.setFocus();
+    searchInput.current?.setFocus();
 
     type !== 'text' && toggleFilter(type, value);
   };

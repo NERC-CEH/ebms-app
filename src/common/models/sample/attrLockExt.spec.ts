@@ -1,9 +1,10 @@
+import { observable } from 'mobx';
 import attrLockExtension from './attrLockExt';
 
-it('keeps copied attribute locks isolated per extension', () => {
+it('keeps copied observable attribute locks isolated per extension', () => {
   const locks = attrLockExtension();
   const otherLocks = attrLockExtension();
-  const value = { nested: [1] };
+  const value = observable({ nested: [1] });
 
   locks.set('all', 'smp', 'location', 1);
   locks.set(104, 'occ', 'comment', value);

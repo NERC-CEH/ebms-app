@@ -8,6 +8,7 @@ import {
   IonRefresher,
   IonRefresherContent,
   IonSpinner,
+  type RefresherCustomEvent,
 } from '@ionic/react';
 import userModel from 'models/user';
 import ExpandableList from 'Components/ExpandableList';
@@ -19,8 +20,8 @@ type Props = {
   species: Species[];
   userSpecies: Species[];
   userSpeciesLastMonth: Species[];
-  refreshing: any;
-  refreshReport: any;
+  refreshing: boolean;
+  refreshReport: () => Promise<void>;
 };
 
 const MainReport = ({
@@ -40,7 +41,7 @@ const MainReport = ({
     );
   }
 
-  const onListRefreshPull = async (e: any) => {
+  const onListRefreshPull = async (e: RefresherCustomEvent) => {
     await refreshReport();
     e?.detail?.complete(); // refresh pull update
   };

@@ -19,7 +19,7 @@ const TrapPickerController = () => {
     // create a new trap visit sub-sample with the selected trap's location
     const trapVisit = config.smp.create({});
     trapVisit.data.locationId = trap.id;
-    sample.samples.push(trapVisit);
+    sample.samples.push(trapVisit as unknown as Sample<Data>);
     sample.save();
 
     // navigate to trap details page, replacing trap picker in history

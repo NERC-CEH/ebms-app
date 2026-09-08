@@ -11,7 +11,10 @@ import {
 import { IonModal } from '@ionic/react';
 import { ModalNav } from 'common/flumens';
 import groups from 'common/models/collections/groups';
-import LocationModel, { LocationType } from 'common/models/location';
+import LocationModel, {
+  LocationType,
+  type Data as LocationData,
+} from 'common/models/location';
 import Details from './Details';
 import { responsibleAttr } from './config';
 
@@ -21,7 +24,7 @@ const getNewLocation = (groupId?: string) => {
   const isVielFalterGarten = group?.data.title?.includes('VielFalterGarten');
   const isUNPplus = group?.data.title?.includes('UNPplus');
 
-  const data: any = {
+  const data: Partial<LocationData> = {
     lat: '',
     lon: '',
     centroidSref: '',
@@ -34,7 +37,10 @@ const getNewLocation = (groupId?: string) => {
     data[responsibleAttr.id] = '1';
   }
 
-  const location = new LocationModel({ skipStore: true, data });
+  const location = new LocationModel({
+    skipStore: true,
+    data: data as LocationData,
+  });
   location.metadata.groupId = groupId;
 
   return location;
@@ -55,7 +61,7 @@ export function useLocation(): LocationContext {
 }
 
 type Props = {
-  presentingElement: any;
+  presentingElement?: HTMLElement;
   onSave: (location: LocationModel) => Promise<boolean>;
   groupId?: string;
 };
@@ -95,7 +101,7 @@ const NewSiteModal = (
     <IonModal
       ref={ref}
       backdropDismiss={false}
-      presentingElement={presentingElement}
+      presentingElement={presentingElement || undefined}
       canDismiss={canDismiss}
       onWillDismiss={resetState}
       focusTrap={false}

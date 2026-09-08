@@ -19,7 +19,7 @@ type SiteFeatureProperties = {
 
 type AreaShape = Polygon | LineString | MultiPolygon;
 
-const getShapeFromGeom = (geom?: string | null) => {
+const getShapeFromGeom = (geom?: string) => {
   if (!geom) return null;
 
   try {
@@ -58,7 +58,7 @@ const getAreasGeoJSON = (
   locations?: Location[]
 ): FeatureCollection<AreaShape, SiteFeatureProperties> => {
   const getFeature = (location: Location) => {
-    const shape = getShapeFromGeom(location.data.boundaryGeom);
+    const shape = getShapeFromGeom(location.data.boundaryGeom ?? undefined);
     if (!shape) return null;
 
     return {
@@ -73,8 +73,8 @@ const getAreasGeoJSON = (
 
   return {
     type: 'FeatureCollection',
-    features: locations?.map(getFeature).filter(Boolean) || [],
-  } as FeatureCollection<AreaShape, SiteFeatureProperties>;
+    features: locations?.map(getFeature).filter(feature => !!feature) || [],
+  };
 };
 
 type Props = {

@@ -57,8 +57,8 @@ const Site = () => {
 
     try {
       await locations.fetchRemote();
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
 
     loader.hide();
@@ -80,11 +80,10 @@ const Site = () => {
 
   const page = useRef(null);
 
-  const [presentingElement, setPresentingElement] =
-    useState<HTMLElement | null>(null);
+  const [presentingElement, setPresentingElement] = useState<HTMLElement>();
 
   useEffect(() => {
-    setPresentingElement(page.current);
+    setPresentingElement(page.current ?? undefined);
   }, []);
 
   const onSaveNewLocation = async (newLocation: Location) => {
@@ -106,8 +105,8 @@ const Site = () => {
       await refreshSites();
 
       toast.success('Successfully saved a location.');
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
       loader.hide();
       return false;
     }

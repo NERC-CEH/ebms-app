@@ -1,3 +1,7 @@
+const { deserialize, serialize } = require('node:v8');
+
+global.structuredClone ??= value => deserialize(serialize(value));
+
 const mock = query => ({
   matches: false,
   media: query,

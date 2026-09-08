@@ -4,7 +4,7 @@ import { IonButton } from '@ionic/react';
 
 type Props = {
   showRefreshButton: boolean;
-  onRefresh: any;
+  onRefresh: () => void;
 };
 
 const HeaderComponent = ({ showRefreshButton, onRefresh }: Props) => {

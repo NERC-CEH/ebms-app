@@ -8,6 +8,8 @@ import {
   IonSegment,
   IonSegmentButton,
   IonToolbar,
+  type RefresherCustomEvent,
+  type SegmentCustomEvent,
 } from '@ionic/react';
 import { Main } from 'common/flumens';
 import Group from 'common/models/group';
@@ -41,15 +43,15 @@ const GroupsMain = ({
     setSegment('joined');
   };
 
-  const onSegmentClick = (e: any) => {
-    const newSegment = e.detail.value;
+  const onSegmentClick = (e: SegmentCustomEvent) => {
+    const newSegment = e.detail.value as 'joined' | 'all';
     setSegment(newSegment);
 
     if (newSegment === 'all' && !joinableGroups.length) onRefresh('joinable');
     if (newSegment === 'joined' && !memberGroups.length) onRefresh('member');
   };
 
-  const refreshGroups = async (e: any) => {
+  const refreshGroups = async (e: RefresherCustomEvent) => {
     e?.detail?.complete(); // refresh pull update
     onRefresh(segment === 'joined' ? 'member' : 'joinable');
   };

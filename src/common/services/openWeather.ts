@@ -34,10 +34,10 @@ type WeatherRemoteRes = {
 /* eslint-enable @typescript-eslint/naming-convention */
 
 type Weather = {
-  cloud: number | null;
-  temperature: number | string | null;
-  windDirection: string | null;
-  windSpeed: string | null;
+  cloud?: number;
+  temperature?: number | string;
+  windDirection?: string;
+  windSpeed?: string;
 };
 
 /* eslint-disable @typescript-eslint/naming-convention */
@@ -81,11 +81,11 @@ const url = config.weatherSiteUrl;
 function getTemperature(tempFromService: string | number) {
   const temp = parseFloat(`${tempFromService}`);
 
-  if (Number.isNaN(temp)) return null;
+  if (Number.isNaN(temp)) return undefined;
 
   const temperature = Math.round(temp);
 
-  if (temperature < 0) return null;
+  if (temperature < 0) return undefined;
   if (temperature > 39) return '40+';
 
   return temperature;
@@ -94,7 +94,7 @@ function getTemperature(tempFromService: string | number) {
 const getWindDirection = (degreesFromService: string | number) => {
   const degrees = parseFloat(`${degreesFromService}`);
 
-  if (Number.isNaN(degrees) || degrees > 360) return null;
+  if (Number.isNaN(degrees) || degrees > 360) return undefined;
 
   if (degrees < 45) return 'N';
   if (degrees < 45 * 2) return 'NE';
@@ -110,7 +110,7 @@ const getWindDirection = (degreesFromService: string | number) => {
 const getWindSpeed = (speedFromService: string | number) => {
   const speed = parseFloat(`${speedFromService}`);
 
-  if (Number.isNaN(speed)) return null;
+  if (Number.isNaN(speed)) return undefined;
 
   // Beaufort Wind Scale m/s
   if (speed < 0.4) return 'Smoke rises vertically';
@@ -126,7 +126,7 @@ const getWindSpeed = (speedFromService: string | number) => {
 const getCloud = (cloudFromService: string | number) => {
   const cloud = parseFloat(`${cloudFromService}`);
 
-  return Number.isNaN(cloud) ? null : Math.round(cloud);
+  return Number.isNaN(cloud) ? undefined : Math.round(cloud);
 };
 
 export const fetchWeather = async ({

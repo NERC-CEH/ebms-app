@@ -5,7 +5,7 @@ import { Button } from '@flumens';
 
 type Props = {
   children: ReactNode;
-  onClick: any;
+  onClick: () => void;
   isInvalid?: boolean;
   className?: string;
 };

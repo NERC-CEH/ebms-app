@@ -37,10 +37,9 @@ const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
     appModel.save();
 
     if (sample) {
-      // eslint-disable-next-line no-param-reassign
       sample.metadata.useDayFlyingMothsOnly =
         appModel.data.useDayFlyingMothsOnly;
-      // eslint-disable-next-line no-param-reassign
+
       sample.data.speciesGroups = appModel.data.speciesGroups;
       sample.save();
     }

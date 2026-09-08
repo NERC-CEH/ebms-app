@@ -10,6 +10,7 @@ import GroupModel from 'common/models/group';
 import locations from 'models/collections/locations';
 import Location from 'models/location';
 import Sample from 'models/sample';
+import type { Shape } from 'models/sample/GPSExt';
 import userModel from 'models/user';
 import { areaSizeAttr } from '../config';
 import Header from './Header';
@@ -25,7 +26,7 @@ const AreaController = () => {
 
   const toggleGPStracking = (on: boolean) => sample.toggleGPStracking(on);
 
-  const setLocation = (shape: any) => sample.setLocation(shape);
+  const setLocation = (shape: Shape | null) => sample.setLocation(shape);
 
   const { location } = sample.data;
   const isGPSTracking = sample.isGPSRunning();
@@ -60,11 +61,10 @@ const AreaController = () => {
 
   const page = useRef(null);
 
-  const [presentingElement, setPresentingElement] =
-    useState<HTMLElement | null>(null);
+  const [presentingElement, setPresentingElement] = useState<HTMLElement>();
 
   useEffect(() => {
-    setPresentingElement(page.current);
+    setPresentingElement(page.current!);
   }, []);
 
   const refreshLocations = () => {
@@ -100,8 +100,8 @@ const AreaController = () => {
       await refreshLocations();
 
       toast.success('Successfully saved a location.');
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
       loader.hide();
       return false;
     }

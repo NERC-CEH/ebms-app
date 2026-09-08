@@ -9,7 +9,15 @@ type Props = {
 
 function CountdownClock({ isPaused, countdown }: Props) {
   const { t } = useTranslation();
-  const countdownRenderer = ({ minutes, seconds, completed }: any) => {
+  const countdownRenderer = ({
+    minutes,
+    seconds,
+    completed,
+  }: {
+    minutes: number;
+    seconds: number;
+    completed: boolean;
+  }) => {
     if (completed) return t("Time's up!");
 
     return (

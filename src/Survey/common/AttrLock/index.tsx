@@ -23,8 +23,8 @@ type AttrLockProps = {
   taxonGroup: string | number | null | undefined;
   model: 'smp' | 'occ';
   attr: string;
-  value: any;
-  children: ReactElement<any>;
+  value: unknown;
+  children: ReactElement<{ detailIcon?: string }>;
 };
 
 const AttrLock = ({

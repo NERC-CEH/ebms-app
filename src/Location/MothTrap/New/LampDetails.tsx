@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { observer } from 'mobx-react';
 import { Block, BlockContext, Header, InfoMessage, Main } from '@flumens';
 import { IonList } from '@ionic/react';

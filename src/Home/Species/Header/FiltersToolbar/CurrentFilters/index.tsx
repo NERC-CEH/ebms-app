@@ -19,7 +19,7 @@ const flattenFilterValuesByType = ([filterType, values]: Filter) => {
 
 type Props = {
   values: Filters;
-  onRemove: any;
+  onRemove: (type: FilterGroup, value: FilterValue) => void;
   searchPhrase?: string;
 };
 

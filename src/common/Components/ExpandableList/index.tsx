@@ -1,17 +1,20 @@
-import { FC, useState } from 'react';
+import { Children, ReactNode, useState } from 'react';
 import { Trans as T } from 'react-i18next';
 import { IonItem, IonLabel } from '@ionic/react';
 import './styles.scss';
 
 const MAX_ITEMS = 5;
 
-const ExpandableList: FC<any> = ({
-  children: itemsProp,
-  maxItems = MAX_ITEMS,
-}: any) => {
+type Props = {
+  children: ReactNode;
+  maxItems?: number;
+};
+
+const ExpandableList = ({ children, maxItems = MAX_ITEMS }: Props) => {
   const [showMore, setShowMore] = useState(false);
+  const itemsProp = Children.toArray(children);
   const items = itemsProp.slice(0, maxItems);
-  const restItems = itemsProp.slice(maxItems, itemsProp.length);
+  const restItems = itemsProp.slice(maxItems);
 
   const hidingMoreThanTwo = restItems.length >= 2;
 

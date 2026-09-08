@@ -1,7 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { and, eq, inArray, not, or, SQL, sql } from 'drizzle-orm';
 import { useTranslation } from 'react-i18next';
-import { IonSearchbar, useIonViewDidEnter } from '@ionic/react';
+import {
+  IonSearchbar,
+  useIonViewDidEnter,
+  type SearchbarCustomEvent,
+} from '@ionic/react';
 import { getLanguageIso } from 'common/config/languages';
 import groups from 'common/data/groups';
 import speciesSearch, { type SearchResult } from 'common/helpers/taxonSearch';
@@ -89,23 +93,21 @@ const filterDayFlyingMoths = (
   return or(
     not(eq(table.taxon_group_id, groups.moths.id)),
     sql`json_extract(${table.data}, '$.Day-active') not null`
-  ) as SQL<any>;
+  ) as SQL;
 };
 
 const speciesGroupFilter = (
   table: typeof taxaStore.table,
-  speciesGroups?: number[]
+  speciesGroups?: (number | keyof typeof groups)[]
 ): SQL => {
-  const getGroupId = (group: any) => {
-    if (typeof group === 'string') return (groups as any)[group]?.id; // backward compatibility
-    return group;
-  };
+  const getGroupId = (group: number | keyof typeof groups) =>
+    typeof group === 'string' ? groups[group].id : group;
   const informalGroups = speciesGroups?.map(getGroupId) || [];
   if (!informalGroups.length) return sql`1`;
 
   return or(
-    ...informalGroups.map((g: any) => eq(table.taxon_group_id, g))
-  ) as SQL<any>;
+    ...informalGroups.map(groupId => eq(table.taxon_group_id, groupId))
+  ) as SQL;
 };
 
 const taxonListFilter = (
@@ -122,7 +124,7 @@ type Props = {
   onSpeciesSelected: (taxon: Taxon) => void;
   useDayFlyingMothsOnly?: boolean;
   taxonListCids?: string[];
-  speciesGroups?: number[];
+  speciesGroups?: (number | keyof typeof groups)[];
   suggestedSpecies?: ClassifierSuggestion[];
 };
 
@@ -136,7 +138,7 @@ const TaxonSearch = ({
 }: Props) => {
   const { t } = useTranslation();
 
-  const inputEl = useRef<any>(null);
+  const inputEl = useRef<HTMLIonSearchbarElement>(null);
 
   const [searchResults, setSearchResults] = useState<SearchResult[]>();
   const [searchPhrase, setSearchPhrase] = useState('');
@@ -161,12 +163,12 @@ const TaxonSearch = ({
       store: taxaStore,
       searchPhrase: newSearchPhrase,
       language,
-      where: (table: typeof taxaStore.table): any =>
+      where: table =>
         and(
           speciesGroupFilter(table, speciesGroups),
           taxonListFilter(table, taxonListCids, skipTaxonLists),
           filterDayFlyingMoths(table, useDayFlyingMothsOnly)
-        ),
+        )!,
     });
 
     const annotatedSearchResults = annotateRecordedTaxa(
@@ -178,21 +180,25 @@ const TaxonSearch = ({
     setSearchPhrase(newSearchPhrase);
   };
 
-  const onInputKeystroke = async (e: any) =>
-    onSearch(e.target.value?.toLowerCase(), searchOutsideTaxonLists);
+  const onInputKeystroke = async (e: SearchbarCustomEvent) =>
+    onSearch(
+      String(e.target.value || '').toLowerCase(),
+      searchOutsideTaxonLists
+    );
 
   const onInputClear = () => {
     setSearchResults(undefined);
     setSearchPhrase('');
   };
 
-  useIonViewDidEnter(
-    () => !defaultSpecies?.length && inputEl.current?.setFocus()
-  );
+  useIonViewDidEnter(() => {
+    if (!defaultSpecies?.length) inputEl.current?.setFocus();
+  });
 
-  const hasMissingSpeciesGroupLists = !!speciesGroups?.filter(
-    sg => !taxonLists.find(list => list.data.taxonGroups.includes(sg))
-  ).length;
+  const hasMissingSpeciesGroupLists = !!speciesGroups?.filter(group => {
+    const groupId = typeof group === 'number' ? group : groups[group].id;
+    return !taxonLists.find(list => list.data.taxonGroups.includes(groupId));
+  }).length;
 
   const onOutsideSearch = () => {
     setSearchOutsideTaxonLists(true);

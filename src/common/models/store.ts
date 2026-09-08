@@ -15,8 +15,8 @@ export const db = new SQLiteDatabase({
 });
 export const mainStore = new Store({ name: 'main', db });
 export const samplesStore = new Store({ name: 'samples', db });
-export const taxonListsStore: any = new Store({ name: 'taxon_lists', db });
-export const locationsStore: any = new LocationsStore({
+export const taxonListsStore = new Store({ name: 'taxon_lists', db });
+export const locationsStore = new LocationsStore({
   name: 'locations',
   db,
   taxonListsStore,
@@ -67,22 +67,22 @@ export const taxonColumns = {
   /**
    * For storing additional taxon attributes, like country presence.
    */
-  data: jsonb<any>('data').notNull().default({}),
+  data: jsonb<Record<string, unknown>>('data').notNull().default({}),
 } as const;
 /* eslint-enable @typescript-eslint/naming-convention */
 
-export const taxaStore: any = new Store<typeof taxonColumns>({
+export const taxaStore = new Store({
   name: 'taxa',
   db,
   columns: taxonColumns,
-  extraConf: (table: any) => [
-    primaryKey({ columns: [table.id, table.list_cid] }),
-    index('taxon_idx').on(table.taxon),
-    index('language_iso_taxon_group_id_idx').on(
+  extraConf: table => ({
+    primaryKey: primaryKey({ columns: [table.id, table.list_cid] }),
+    taxonIndex: index('taxon_idx').on(table.taxon),
+    languageTaxonGroupIndex: index('language_iso_taxon_group_id_idx').on(
       table.language_iso,
       table.taxon_group_id
     ),
-  ],
+  }),
 });
 
 if (web) {

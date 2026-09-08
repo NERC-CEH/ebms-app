@@ -31,14 +31,15 @@ const HomeController = () => {
 
   const exitApp = () => {
     const onExitApp = () => !ionRouter.canGoBack() && AppPlugin.exitApp();
+    const onBackButton = (ev: Event) => {
+      const e = ev as CustomEvent<{
+        register: (p: number, fn: () => void) => void;
+      }>;
+      e.detail.register(-1, onExitApp);
+    };
 
-    document.addEventListener('ionBackButton', (ev: any) =>
-      ev.detail.register(-1, onExitApp)
-    );
-
-    const removeEventListener = () =>
-      document.addEventListener('ionBackButton', onExitApp);
-    return removeEventListener;
+    document.addEventListener('ionBackButton', onBackButton);
+    return () => document.removeEventListener('ionBackButton', onBackButton);
   };
   useEffect(exitApp, []);
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
+import type { MapMouseEvent, MapRef } from 'react-map-gl/mapbox';
 import {
   Main,
   MapContainer,
@@ -10,6 +11,7 @@ import {
   textToLocation,
   Location,
 } from '@flumens';
+import type { InputCustomEvent } from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import countries from 'common/config/countries';
@@ -22,25 +24,24 @@ const LocationPicker = () => {
   const coords = record.centroidSref?.split(' ').map(Number) || [];
   const location = { latitude: coords[0], longitude: coords[1] };
 
-  const [mapRef, setMapRef] = useState<unknown>();
+  const [mapRef, setMapRef] = useState<MapRef>();
 
   const flyToLocation = () => {
-    mapFlyToLocation(mapRef as never, location as never);
+    mapFlyToLocation(mapRef, location);
   };
 
   useEffect(flyToLocation, [mapRef, location]);
 
-  const setLocation = async (newLocation?: Location | null) => {
+  const setLocation = async (newLocation?: Location) => {
     if (!newLocation) return;
 
     record.centroidSref = `${newLocation.latitude} ${newLocation.longitude}`;
   };
 
-  const onManuallyTypedLocationChange = (e: any) =>
-    setLocation(textToLocation(e?.target?.value));
+  const onManuallyTypedLocationChange = (e: InputCustomEvent) =>
+    setLocation(textToLocation(String(e.target.value || '')) ?? undefined);
 
-  const onMapClick = (e: unknown) =>
-    setLocation(mapEventToLocation(e as never));
+  const onMapClick = (e: MapMouseEvent) => setLocation(mapEventToLocation(e));
 
   // default view to the user's selected country.
   let initialViewState;
@@ -48,7 +49,7 @@ const LocationPicker = () => {
   if (
     Number.isFinite(location.latitude) &&
     Number.isFinite(location.longitude) &&
-    isValidLocation(location as never)
+    isValidLocation(location)
   ) {
     initialViewState = { ...location };
   } else {
@@ -63,7 +64,7 @@ const LocationPicker = () => {
     <>
       <MapHeader>
         <MapHeader.Location
-          location={location as never}
+          location={location}
           onChange={onManuallyTypedLocationChange}
         />
       </MapHeader>

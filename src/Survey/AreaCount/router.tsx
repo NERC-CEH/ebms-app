@@ -1,3 +1,4 @@
+import { ComponentType } from 'react';
 import Sites from 'Location/Site/List';
 import { Route } from 'react-router-dom';
 import { AttrPage, withSample } from '@flumens';
@@ -42,8 +43,8 @@ const getRoutes = (baseURL: string, config: Survey) => [
 const routes = [
   ...getRoutes(`/survey/${survey.name}`, survey),
   ...getRoutes(`/survey/${surveySingleSpecies.name}`, surveySingleSpecies),
-].map(([route, component]: any) => (
+] as [string, ComponentType][];
+
+export default routes.map(([route, component]) => (
   <Route key={route} path={route} component={component} exact />
 ));
-
-export default routes;

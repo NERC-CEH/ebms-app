@@ -1,5 +1,9 @@
 import { reaction } from 'mobx';
-import { device, GroupCollection as GroupCollectionBase } from '@flumens';
+import {
+  device,
+  GroupCollection as GroupCollectionBase,
+  type GroupCollectionOptions,
+} from '@flumens';
 import config from 'common/config';
 import countries from 'common/config/countries';
 import userModel from 'models/user';
@@ -10,7 +14,7 @@ import locations from './locations';
 import taxonLists from './taxonLists';
 
 export class GroupCollection extends GroupCollectionBase<Group> {
-  constructor(options: any) {
+  constructor(options: GroupCollectionOptions<Group>) {
     super(options);
 
     const fetchFirstTime = () => {
@@ -26,7 +30,7 @@ export class GroupCollection extends GroupCollectionBase<Group> {
 
     this.ready?.then(fetchFirstTime);
 
-    const onLoginChange = async (newEmail: any) => {
+    const onLoginChange = async (newEmail?: string) => {
       if (!newEmail) return;
 
       await this.ready;
@@ -96,7 +100,5 @@ const collection = new GroupCollection({
   url: config.backend.indicia.url,
   getAccessToken: () => userModel.getAccessToken(),
 });
-
-// (window as any).groupCollection = collection;
 
 export default collection;

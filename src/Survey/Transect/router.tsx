@@ -26,8 +26,8 @@ const routes = [
     withSample(AttrPageFromRoute),
   ],
   [`${baseURL}/:smpId/sections/:subSmpId/:occId/:taxa/taxa`, SectionsEditTaxa],
-].map(([route, component]: any) => (
+] as const;
+
+export default routes.map(([route, component]) => (
   <Route key={route} path={route} component={component} exact />
 ));
-
-export default routes;

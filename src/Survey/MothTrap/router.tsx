@@ -34,8 +34,8 @@ const routes = [
   [`${baseURL}/:smpId/occ/:occId`, OccurrenceHome],
   [`${baseURL}/:smpId/occ/:occId/:attr`, withSample(AttrPageFromRoute)],
   [`${baseURL}/:smpId/occ/:occId/taxon`, Taxon],
-].map(([route, component]: any) => (
+] as const;
+
+export default routes.map(([route, component]) => (
   <Route key={route} path={route} component={component} exact />
 ));
-
-export default routes;

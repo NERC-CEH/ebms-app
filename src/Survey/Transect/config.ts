@@ -123,7 +123,6 @@ const survey: Survey = {
             count: 1,
             stage: !isDragonfly ? 'Adult' : undefined,
             dragonflyStage: isDragonfly ? 'Adult' : undefined,
-            comment: null,
             taxon,
           },
         });
@@ -144,9 +143,9 @@ const survey: Survey = {
           surveyId: survey.id,
           sampleMethodId: 776,
           enteredSref: location?.data.centroidSref,
-          enteredSrefSystem: location?.data.centroidSrefSystem,
+          enteredSrefSystem: location?.data
+            .centroidSrefSystem as Sample['data']['enteredSrefSystem'],
           locationId: location!.id,
-          comment: null,
           reliability: 'Suitable conditions',
         },
       });

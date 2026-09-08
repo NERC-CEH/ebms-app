@@ -5,19 +5,13 @@ import { IonIcon } from '@ionic/react';
 import mothTrap from 'common/images/moth-inside-icon.svg';
 import numberIcon from 'common/images/number.svg';
 
-const mothTrapIcon = (<IonIcon src={mothTrap} className="size-6" />) as any;
-const mothTrapNumberIcon = (
-  <IonIcon src={numberIcon} className="size-6" />
-) as any;
-const mothTrapBulbIcon = (
-  <IonIcon src={bulbOutline} className="size-6" />
-) as any;
-const chatboxOutlineIcon = (
-  <IonIcon src={chatboxOutline} className="size-6" />
-) as any;
+const mothTrapIcon = <IonIcon src={mothTrap} className="size-6" />;
+const mothTrapNumberIcon = <IonIcon src={numberIcon} className="size-6" />;
+const mothTrapBulbIcon = <IonIcon src={bulbOutline} className="size-6" />;
+const chatboxOutlineIcon = <IonIcon src={chatboxOutline} className="size-6" />;
 const locationOutlineIcon = (
   <IonIcon src={locationOutline} className="size-6" />
-) as any;
+);
 
 export const trapNameAttr = {
   id: 'name',

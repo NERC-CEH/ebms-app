@@ -1,20 +1,21 @@
-import { useEffect } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Gallery } from '@flumens';
 import Media from 'models/media';
+import { ClassifierSuggestion } from 'models/occurrence';
 import ImageFooter from './ImageFooter';
 
 type Props = {
   items: Media[];
   showGallery: number;
   onClose: () => boolean;
-  onDelete: any;
-  onIdentify: any;
-  onSpeciesSelect: any;
+  onDelete: (media: Media) => void;
+  onIdentify: (manualTrigger?: boolean) => void;
+  onSpeciesSelect: (suggestion: ClassifierSuggestion) => void;
   isDisabled: boolean;
 };
 
-const Footer = ({ children }: any) => (
+const Footer = ({ children }: { children: ReactNode }) => (
   <div className="fixed bottom-0 w-full pb-6.5">{children}</div>
 );
 
@@ -28,10 +29,10 @@ const GalleryComponent = ({
   isDisabled,
 }: Props) => {
   const getItem = (image: Media) => {
-    const onSpeciesSelectWrap = (...args: any) => {
+    const onSpeciesSelectWrap = (suggestion: ClassifierSuggestion) => {
       if (isDisabled) return;
 
-      onSpeciesSelect(...args);
+      onSpeciesSelect(suggestion);
       onClose();
     };
 

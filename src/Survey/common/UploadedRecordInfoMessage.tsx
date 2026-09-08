@@ -6,6 +6,7 @@ import config from 'common/config';
 import Sample from 'models/sample';
 
 type Props = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sample: Sample<any>;
 };
 

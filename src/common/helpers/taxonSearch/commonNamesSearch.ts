@@ -1,15 +1,15 @@
 import { and, eq, getTableColumns, like, SQL, sql } from 'drizzle-orm';
 import { alias, QueryBuilder } from 'drizzle-orm/sqlite-core';
-import { SearchResult, SpeciesColumns } from '.';
+import { SearchResult, SpeciesColumns, TaxaStore } from '.';
 
 async function searchCommonNames(
-  store: { table: any; db: any },
+  store: TaxaStore,
   searchPhrase: string,
   language: string,
   where?: (table: typeof store.table) => SQL
 ): Promise<SearchResult[]> {
   const { table } = store;
-  const preferred: any = alias(table, 'preferred');
+  const preferred = alias(table, 'preferred');
 
   const customWhere = where ? where(table) : sql`1`; // always true
 
@@ -27,7 +27,7 @@ async function searchCommonNames(
   // update the search phrase to accept spaces as wildcards
   searchPhraseNormalised = searchPhraseNormalised.replace(/\s+/g, '%');
 
-  const query: any = new QueryBuilder()
+  const query = new QueryBuilder()
     .select({
       ...getTableColumns(table),
       scientificName: sql`${preferred.taxon} as scientificName`,
@@ -44,7 +44,9 @@ async function searchCommonNames(
     .groupBy(table.id) // we only want one common name per species
     .limit(20);
 
-  const species: any = await store.db.query(query.toSQL());
+  const species = await store.db.query<
+    SpeciesColumns & { scientificName: string }
+  >(query.toSQL());
 
   return species.map(
     (sp: SpeciesColumns & { scientificName: string }): SearchResult => ({
@@ -59,11 +61,11 @@ async function searchCommonNames(
 }
 
 export async function getCommonNameById(
-  store: { table: any; db: any },
+  store: TaxaStore,
   taxaTaxonListId: string | number,
   language = 'eng'
 ) {
-  const query: any = new QueryBuilder()
+  const query = new QueryBuilder()
     .select({ taxon: store.table.taxon })
     .from(store.table)
     .where(
@@ -77,7 +79,7 @@ export async function getCommonNameById(
     )
     .limit(1);
 
-  const [taxon] = await store.db.query(query.toSQL());
+  const [taxon] = await store.db.query<{ taxon: string }>(query.toSQL());
   return taxon?.taxon || null;
 }
 

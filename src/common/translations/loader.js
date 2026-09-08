@@ -79,11 +79,11 @@ const rawToKeyVal = lang =>
 
     if (pluralVals.length) {
       pluralVals.forEach((plural, index) => {
-        agg[`${key}_${index + 1}`] = plural; // eslint-disable-line no-param-reassign
+        agg[`${key}_${index + 1}`] = plural;
       });
     }
 
-    agg[key] = val; // eslint-disable-line no-param-reassign
+    agg[key] = val;
     return agg;
   }, {});
 

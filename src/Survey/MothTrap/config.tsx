@@ -31,7 +31,7 @@ import { assignIfMissing } from 'common/models/utils';
 import { fetchHistoricalWeather } from 'common/services/openWeather';
 import appModel from 'models/app';
 import locations from 'models/collections/locations';
-import Occurrence from 'models/occurrence';
+import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import {
   Survey,
@@ -43,6 +43,7 @@ import {
   appVersionAttr,
   backwardsTimeFormat,
   backwardsDateFormat,
+  type Submission,
 } from 'Survey/common/config';
 
 type Type = Record<string, string>;
@@ -178,7 +179,7 @@ const getSetDefaultTime = (sample: Sample) => () => {
   // start time
   if (!sample.data.surveyStartTime) {
     // start time: sunset on the evening before the end date
-    const startDate = new Date(sample.data.date);
+    const startDate = new Date(sample.data.date ?? '');
     startDate.setDate(startDate.getDate() - 1);
     const { sunset } = SunCalc.getTimes(
       startDate,
@@ -189,8 +190,6 @@ const getSetDefaultTime = (sample: Sample) => () => {
     // apply user-configured sunset offset in minutes
     const offsetMs = appModel.data.mothSunsetOffset * 60 * 1000;
     const adjustedSunset = new Date(new Date(sunset).getTime() + offsetMs);
-
-    // eslint-disable-next-line no-param-reassign
     sample.data.surveyStartTime = timeFormat.format(adjustedSunset);
     sample.save();
   }
@@ -208,12 +207,10 @@ const getSetDefaultTime = (sample: Sample) => () => {
     // apply user-configured sunrise offset in minutes
     const offsetMs = appModel.data.mothSunriseOffset * 60 * 1000;
     const adjustedSunrise = new Date(new Date(sunrise).getTime() + offsetMs);
-
-    // eslint-disable-next-line no-param-reassign
     sample.data.surveyEndTime = timeFormat.format(adjustedSunrise);
 
     // trap emptying time defaults to sunrise
-    // eslint-disable-next-line no-param-reassign
+
     sample.data[trapEmptyingTimeAttr.id] = sample.data.surveyEndTime;
   }
 };
@@ -262,9 +259,8 @@ const getMoonPhase = (date: Date, isSouthernHemisphere: boolean) => {
   const LUNAR_MONTH = 29.530588853;
   const getLunarAge = () => {
     const normalize = (value: number) => {
-      // eslint-disable-next-line no-param-reassign
       value -= Math.floor(value);
-      // eslint-disable-next-line no-param-reassign
+
       if (value < 0) value += 1;
       return value;
     };
@@ -309,7 +305,7 @@ const getSetStartMoonPhase = (sample: Sample) => () => {
   const location = getTrapLocation(sample);
   const isSouthernHemisphere = (location?.latitude ?? 0) < 0;
   const moonPhase = getMoonPhase(
-    new Date(sample.data.date),
+    new Date(sample.data.date ?? ''),
     isSouthernHemisphere
   );
 
@@ -549,7 +545,7 @@ const survey: Survey = {
       taxon: {
         remote: {
           id: 'taxa_taxon_list_id',
-          values: (taxon: any) => taxon.warehouseId,
+          values: (taxon: Taxon) => taxon.warehouseId,
         },
       },
 
@@ -584,7 +580,7 @@ const survey: Survey = {
           'count-outside': z.number(),
         })
         .refine(
-          (val: any) => val.count + val['count-outside'] > 0,
+          val => val.count + val['count-outside'] > 0,
           'Count sum must be greater than 0'
         );
 
@@ -598,7 +594,6 @@ const survey: Survey = {
           'count-outside': 0,
           taxon,
           identifier,
-          comment: null,
         },
       });
 
@@ -607,7 +602,7 @@ const survey: Survey = {
       return occ;
     },
 
-    modifySubmission(submission: any, occ: Occurrence) {
+    modifySubmission(submission: Submission, occ: Occurrence) {
       const classifierSubmission = occ.getClassifierSubmission();
       if (!classifierSubmission) return submission;
 
@@ -648,7 +643,6 @@ const survey: Survey = {
         groupId: appModel.data.defaultGroupId,
         inputForm: survey.webForm,
         locationId: undefined,
-        comment: null,
         recorder,
         [appVersionAttr.id]: config.version,
         [surveyEndDateAttr.id]: dateFormatISO.format(new Date()),
@@ -673,32 +667,35 @@ const survey: Survey = {
 export default survey;
 
 export type Data = {
-  wind: string;
-  temperatureEnd: number;
-  directionEnd: string;
-  windEnd: string;
-  cloudEnd: number;
+  wind: string | null;
+  direction: string | null;
+  cloud: number | null;
+  temperatureEnd: number | string | null;
+  directionEnd: string | null;
+  windEnd: string | null;
+  cloudEnd: number | null;
   moon?: string;
   moonEnd?: string;
   [trapEmptyingTimeAttr.id]?: string;
   [surveyEndDateAttr.id]?: string;
   [tempMothTrapTypeAttr.id]?: string;
-  [tempMothTrapOtherTypeAttr.id]?: any;
-  [tempMothTrapLampsAttr.id]?: any[];
+  [tempMothTrapOtherTypeAttr.id]?: string;
+  [tempMothTrapLampsAttr.id]?: string[];
 };
 
-type UnknownSpeciesObject = Record<string, any>;
-const UNKNOWN_SPECIES: UnknownSpeciesObject = {
+const UNKNOWN_SPECIES: Record<string, Taxon> = {
   en: {
     warehouseId: 538737,
     taxonGroupId: 260,
     commonName: 'Unknown',
+    scientificName: 'Unknown',
     preferredId: 538737,
     foundInName: 'commonName',
   },
   nlNL: {
     warehouseId: 541352,
     commonName: 'Onbekend',
+    scientificName: 'Unknown',
     taxonGroupId: 260,
     preferredId: 538737,
     foundInName: 'commonName',
@@ -706,4 +703,4 @@ const UNKNOWN_SPECIES: UnknownSpeciesObject = {
 };
 
 export const getUnknownSpecies = () =>
-  UNKNOWN_SPECIES[appModel.data.language as any] || UNKNOWN_SPECIES.en;
+  UNKNOWN_SPECIES[appModel.data.language || 'en'] || UNKNOWN_SPECIES.en;

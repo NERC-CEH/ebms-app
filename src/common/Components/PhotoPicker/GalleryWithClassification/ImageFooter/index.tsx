@@ -2,15 +2,15 @@ import { observer } from 'mobx-react';
 import { trashBinOutline } from 'ionicons/icons';
 import { IonIcon } from '@ionic/react';
 import { Button, usePhotoDeletePrompt } from 'common/flumens';
-import Occurrence from 'common/models/occurrence';
+import Occurrence, { ClassifierSuggestion } from 'common/models/occurrence';
 import Media from 'models/media';
 import SpeciesSuggestions from './SpeciesSuggestions';
 
 type Props = {
-  onDelete: any;
+  onDelete: (media: Media) => void;
   image: Media;
-  identifySpecies?: any;
-  onSpeciesSelect: any;
+  identifySpecies?: (manualTrigger?: boolean) => void;
+  onSpeciesSelect: (suggestion: ClassifierSuggestion) => void;
 };
 
 const ImageFooter = ({
@@ -29,13 +29,13 @@ const ImageFooter = ({
 
   const occurrence = image.parent instanceof Occurrence ? image.parent : null;
 
-  const allowToEdit = !image.parent?.isDisabled && !image?.isIdentifying;
+  const allowToEdit = !image.parent?.isUploaded && !image.isIdentifying;
 
   return (
     <div className="mx-4 flex justify-between gap-2">
       {occurrence && !occurrence.isDisabled && (
         <SpeciesSuggestions
-          occurrence={occurrence as any}
+          occurrence={occurrence}
           identifySpecies={identifySpecies}
           onSpeciesSelect={onSpeciesSelect}
           media={image}

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, type CSSProperties } from 'react';
 import { observer } from 'mobx-react';
 import { mapOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
@@ -67,7 +67,7 @@ const getSurveyLink = (sample: Sample) => {
 type Props = {
   sample: Sample;
   uploadIsPrimary?: boolean;
-  style?: any;
+  style?: CSSProperties;
 };
 
 const Survey = ({ sample, uploadIsPrimary, style }: Props) => {

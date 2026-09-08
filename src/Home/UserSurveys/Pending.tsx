@@ -1,6 +1,13 @@
 import { useContext } from 'react';
+import type { TFunction } from 'i18next';
 import { Trans as T, useTranslation } from 'react-i18next';
-import { useToast, getRelativeDate, VirtualList, Button } from '@flumens';
+import {
+  useToast,
+  getRelativeDate,
+  VirtualList,
+  Button,
+  type ItemProps,
+} from '@flumens';
 import { IonItemDivider, IonLabel, IonList, NavContext } from '@ionic/react';
 import samplesCollection, {
   uploadAllSamples,
@@ -10,7 +17,10 @@ import userModel from 'models/user';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import Survey from './Survey';
 
-async function uploadAllSamplesWrap(toast: any, t: any) {
+async function uploadAllSamplesWrap(
+  toast: ReturnType<typeof useToast>,
+  t: TFunction
+) {
   console.log('Settings:Menu:Controller: sending all samples.');
 
   if (!userModel.isLoggedIn()) {
@@ -24,8 +34,8 @@ async function uploadAllSamplesWrap(toast: any, t: any) {
       t('Uploading {{count}} record', { count: affectedRecordsCount }),
       { skipTranslation: true }
     );
-  } catch (e: any) {
-    toast.error(e);
+  } catch (error) {
+    toast.error(error as Error);
   }
 }
 
@@ -43,15 +53,19 @@ function roundDate(date: number) {
   return new Date(roundedDate);
 }
 
-const getSurveys = (surveys: Sample[], showUploadAll?: boolean) => {
-  const dates: any = [];
-  const dateIndices: any = [];
+type DateDivider = { date: string; count: number };
 
-  const groupedSurveys: any = [];
-  let counter: any = {};
+const getSurveys = (surveys: Sample[], showUploadAll?: boolean) => {
+  const dates: string[] = [];
+  const dateIndices: number[] = [];
+
+  const groupedSurveys: (DateDivider | Sample)[] = [];
+  let counter: DateDivider = { date: '', count: 0 };
 
   [...surveys].forEach(survey => {
-    const date = roundDate(new Date(survey.data.date).getTime()).toString();
+    const date = roundDate(
+      new Date(survey.data.date ?? '').getTime()
+    ).toString();
     if (!dates.includes(date) && date !== 'Invalid Date') {
       dates.push(date);
       dateIndices.push(groupedSurveys.length);
@@ -62,27 +76,25 @@ const getSurveys = (surveys: Sample[], showUploadAll?: boolean) => {
     counter.count += 1;
     groupedSurveys.push(survey);
   });
-  const Item = ({ index, ...itemProps }: { index: number }) => {
-    if (dateIndices.includes(index)) {
-      const { date, count } = groupedSurveys[index];
+  const Item = ({ index, style }: ItemProps) => {
+    const item = groupedSurveys[index];
+    if (!(item instanceof Sample)) {
       return (
-        <IonItemDivider key={date} style={(itemProps as any).style} mode="ios">
+        <IonItemDivider key={item.date} style={style} mode="ios">
           <IonLabel>
-            <T>{getRelativeDate(date)}</T>
+            <T>{getRelativeDate(item.date)}</T>
           </IonLabel>
-          {count > 1 && <IonLabel slot="end">{count}</IonLabel>}
+          {item.count > 1 && <IonLabel slot="end">{item.count}</IonLabel>}
         </IonItemDivider>
       );
     }
 
-    const sample = groupedSurveys[index];
-
     return (
       <Survey
-        key={sample.cid}
-        sample={sample}
+        key={item.cid}
+        sample={item}
         uploadIsPrimary={!showUploadAll}
-        {...itemProps}
+        style={style}
       />
     );
   };

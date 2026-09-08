@@ -1,3 +1,4 @@
+import { ComponentProps, ComponentType } from 'react';
 import { observer } from 'mobx-react';
 import { Route, Redirect } from 'react-router-dom';
 import {
@@ -27,7 +28,10 @@ import Settings from './Settings/router';
 import Survey from './Survey/router';
 import User from './User/router';
 
-const IonApp = IonAppPlain as any; // IonApp has 'lang' prop missing.
+// Ionic's React type omits the supported HTML lang attribute.
+const IonApp = IonAppPlain as ComponentType<
+  ComponentProps<typeof IonAppPlain> & { lang?: string }
+>;
 
 const platform = isPlatform('ios') ? 'ios' : 'android';
 const tailwindContext: TailwindContextValue = { platform };
@@ -42,10 +46,10 @@ const samplesContext = { samples };
 const HomeRedirect = () => <Redirect to="home" />;
 
 const App = () => {
-  const { language } = appModel.data;
+  const lang = appModel.data.language || undefined;
 
   return (
-    <IonApp lang={language as any}>
+    <IonApp lang={lang}>
       <LanguageCountrySelectRequired appModel={appModel}>
         <TailwindContext.Provider value={tailwindContext}>
           <TailwindBlockContext.Provider value={tailwindBlockContext}>

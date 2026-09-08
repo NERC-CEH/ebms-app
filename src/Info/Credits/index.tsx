@@ -14,7 +14,9 @@ const getTaxonWithImageCopyright = (s: Species) => (
   <IonItem key={s.id} lines="none">
     <IonLabel>
       <i>{`${s.taxon}: `}</i>
-      <span dangerouslySetInnerHTML={{ __html: s.imageCopyright as any }} />
+      <span
+        dangerouslySetInnerHTML={{ __html: s.imageCopyright?.join(', ') || '' }}
+      />
     </IonLabel>
   </IonItem>
 );

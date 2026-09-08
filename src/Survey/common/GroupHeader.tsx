@@ -2,7 +2,7 @@ import Group from 'common/models/group';
 
 type Props = {
   group?: Group;
-  onClick?: any;
+  onClick?: () => void;
 };
 
 const GroupHeader = ({ group, onClick }: Props) => {

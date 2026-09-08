@@ -15,8 +15,11 @@ const GPSPermissionSubheader = () => {
 
       try {
         perm = await Geolocation.checkPermissions();
-      } catch (error: any) {
-        if (error?.message === GPS_DISABLED_ERROR_MESSAGE) {
+      } catch (error) {
+        if (
+          error instanceof Error &&
+          error.message === GPS_DISABLED_ERROR_MESSAGE
+        ) {
           throw new HandledError(GPS_DISABLED_ERROR_MESSAGE);
         }
       }

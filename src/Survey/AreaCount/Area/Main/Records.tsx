@@ -1,4 +1,5 @@
 import { useContext, useMemo } from 'react';
+import type { Feature, FeatureCollection, Point } from 'geojson';
 import { useRouteMatch } from 'react-router';
 import { MapContainer } from '@flumens';
 import { NavContext } from '@ionic/react';
@@ -10,7 +11,9 @@ const Records = ({ sample }: Props) => {
   const match = useRouteMatch();
   const { navigate } = useContext(NavContext);
 
-  const onRecordClick = (feature: any) => {
+  type RecordProperties = { id?: string; occId?: string; type: 'record' };
+
+  const onRecordClick = (feature: Feature<Point, RecordProperties>) => {
     const { id, occId } = feature.properties;
     if (!id || !occId) return; // in case occ was not fetched from remote
 
@@ -19,8 +22,10 @@ const Records = ({ sample }: Props) => {
     navigate(`${url}/samples/${id}/occ/${occId}`);
   };
 
-  const getGeoJSONfromRecords = (samples?: Sample[]): any => {
-    const getFeature = (smp: Sample) => ({
+  const getGeoJSONfromRecords = (
+    samples?: Sample[]
+  ): FeatureCollection<Point, RecordProperties> => {
+    const getFeature = (smp: Sample): Feature<Point, RecordProperties> => ({
       type: 'Feature',
       properties: {
         id: smp.cid,
@@ -30,8 +35,8 @@ const Records = ({ sample }: Props) => {
       geometry: {
         type: 'Point',
         coordinates: [
-          smp.data.location?.longitude,
-          smp.data.location?.latitude,
+          smp.data.location?.longitude as number,
+          smp.data.location?.latitude as number,
           0.0,
         ],
       },

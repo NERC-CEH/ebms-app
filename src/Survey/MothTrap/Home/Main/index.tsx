@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react';
+import { useContext, useRef, type RefObject } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
@@ -35,6 +35,7 @@ import {
   speciesNameSort,
   speciesCount,
   getDefaultTaxonCount,
+  SpeciesSummary,
 } from 'Survey/common/taxonSortFunctions';
 import UnidentifiedSpeciesEntry from './UnidentifiedSpeciesEntry';
 
@@ -62,16 +63,19 @@ function useDisabledImageIdentifierAlert() {
   return shownDisabledImageIdentifierAlert;
 }
 
-const buildSpeciesCount = (agg: any, occ: Occurrence) => {
+type SpeciesCounts = Record<number, SpeciesSummary>;
+
+const buildSpeciesCount = (agg: SpeciesCounts, occ: Occurrence) => {
   const taxon = toJS(occ.data.taxon);
   const id = taxon.preferredId || taxon.warehouseId;
 
   if (!agg[id])
-    agg[id] = getDefaultTaxonCount(taxon, occ.createdAt, occ.updatedAt); // eslint-disable-line no-param-reassign
+    agg[id] = getDefaultTaxonCount(taxon, occ.createdAt, occ.updatedAt);
 
-  if (agg[id].updatedAt < occ.updatedAt) agg[id].updatedAt = occ.updatedAt; // eslint-disable-line
+  if ((agg[id].updatedAt || 0) < occ.updatedAt)
+    agg[id].updatedAt = occ.updatedAt;
 
-  agg[id].count = toJS(occ.data.count); // eslint-disable-line
+  agg[id].count = toJS(occ.data.count) || 0;
 
   return agg;
 };
@@ -83,20 +87,24 @@ function byCreateTime(occ1: Occurrence, occ2: Occurrence) {
 }
 
 type Props = {
-  match: any;
+  match: { url: string };
   sample: Sample;
-  cameraSelect: any;
-  photoSelect: any;
-  increaseCount: any;
-  deleteSpecies: any;
-  onToggleSpeciesSort: any;
+  cameraSelect: () => void;
+  photoSelect: () => void;
+  increaseCount: (taxon: Taxon, isShallow: boolean, is5x: boolean) => void;
+  deleteSpecies: (
+    taxon: Taxon,
+    isShallow: boolean,
+    ref: RefObject<HTMLIonItemSlidingElement | null>
+  ) => void;
+  onToggleSpeciesSort: () => void;
   isDisabled: boolean;
   useImageIdentifier: boolean;
-  onIdentifyOccurrence: any;
+  onIdentifyOccurrence: (occurrence: Occurrence) => void;
   speciesListSortOrder: SpeciesListSortOrder;
-  onIdentifyAllOccurrences: any;
-  copyPreviousSurveyTaxonList: any;
-  navigateToSpeciesOccurrences: any;
+  onIdentifyAllOccurrences: () => void;
+  copyPreviousSurveyTaxonList: () => void;
+  navigateToSpeciesOccurrences: (taxon: Taxon) => void;
 };
 
 const HomeMain = ({
@@ -117,7 +125,7 @@ const HomeMain = ({
 }: Props) => {
   const { navigate } = useContext(NavContext);
   const alert = useAlert();
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLIonItemSlidingElement>(null);
   const shownDisabledImageIdentifierAlert = useDisabledImageIdentifierAlert();
 
   const UNKNOWN_SPECIES_PREFFERD_ID = getUnknownSpecies().warehouseId;
@@ -147,14 +155,14 @@ const HomeMain = ({
     showCopyOptions();
   };
 
-  const getSpeciesEntry = ([id, species]: any) => {
+  const getSpeciesEntry = ([id, species]: [string, SpeciesSummary]) => {
     const { taxon } = species;
 
     const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
 
     const isShallow = !sample.occurrences.filter(matchingTaxon).length;
 
-    const increaseCountWrap = () => increaseCount(taxon, isShallow);
+    const increaseCountWrap = () => increaseCount(taxon, isShallow, false);
 
     const increase5xCountWrap = () => increaseCount(taxon, isShallow, true);
 
@@ -163,7 +171,7 @@ const HomeMain = ({
     const navigateToOccurrence = () => navigateToSpeciesOccurrences(taxon);
 
     return (
-      <IonItemSliding key={id} ref={ref as any}>
+      <IonItemSliding key={id} ref={ref}>
         <IonItem detail={!isDisabled} onClick={navigateToOccurrence}>
           <IncrementalButton
             onClick={increaseCountWrap}
@@ -258,7 +266,7 @@ const HomeMain = ({
         </IonList>
       );
     }
-    const byKnownSpecies = ([, species]: any) =>
+    const byKnownSpecies = ([, species]: [string, SpeciesSummary]) =>
       species.taxon &&
       species.taxon.warehouseId !== UNKNOWN_SPECIES_PREFFERD_ID;
 
@@ -276,17 +284,15 @@ const HomeMain = ({
       return getDefaultTaxonCount(shallowEntry, 0, 0);
     };
 
-    const notEmpty = (shallowEntry: any) => shallowEntry;
-
     const shallowCounts = sample.shallowSpeciesList
       .map(getShallowEntry)
-      .filter(notEmpty);
+      .filter(shallowEntry => !!shallowEntry);
 
-    const counts = {
-      ...speciesCounts,
-      // eslint-disable-next-line @typescript-eslint/no-misused-spread
-      ...shallowCounts,
-    };
+    const counts = Object.assign(
+      {} as Record<string, SpeciesSummary>,
+      speciesCounts,
+      shallowCounts
+    );
 
     let sort = speciesNameSort;
     if (speciesListSortOrder === 'lastAdded') sort = speciesOccAddedTimeSort;

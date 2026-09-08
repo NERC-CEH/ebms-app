@@ -22,7 +22,7 @@ import {
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
-import { fieldCodeAttr, OccData, SubSmpData } from '../../config';
+import { fieldCodeAttr, SubSmpData } from '../../config';
 
 type Props = {
   subSample: Sample<SubSmpData>;
@@ -55,8 +55,8 @@ const TrapHomeMain = ({ subSample }: Props) => {
 
   const onAddSpecies = () => navigate(`${url}/taxon`);
 
-  const getListItem = (occ: Occurrence<OccData>) => {
-    const speciesCode = occ.data[fieldCodeAttr.id];
+  const getListItem = (occ: Occurrence) => {
+    const speciesCode = occ.data[fieldCodeAttr.id] as string;
 
     return (
       <IonItemSliding key={occ.cid}>
@@ -113,7 +113,7 @@ const TrapHomeMain = ({ subSample }: Props) => {
                 <T>Species</T>
               </div>
             </div>
-            {subSample.occurrences.map(getListItem as any)}
+            {subSample.occurrences.map(getListItem)}
           </div>
         </IonList>
       ) : (

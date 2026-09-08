@@ -9,6 +9,7 @@ import {
   useLoader,
   useAlert,
   DrupalUserModelData,
+  DrupalUserModelOptions,
 } from '@flumens';
 import { NavContext } from '@ionic/react';
 import CONFIG from 'common/config';
@@ -22,7 +23,7 @@ export type Attrs = {
   /**
    * @deprecated
    */
-  password?: any;
+  password?: string;
 } & DrupalUserModelData;
 
 const defaults: Attrs = {
@@ -32,27 +33,18 @@ const defaults: Attrs = {
 };
 
 export class UserModel extends DrupalUserModel<Attrs> {
-  static registerSchema: any = object({
+  static registerSchema = object({
     email: z.string().email('Please fill in'),
     password: z.string().min(1, 'Please fill in'),
     firstName: z.string().min(1, 'Please fill in'),
     lastName: z.string().min(1, 'Please fill in'),
   });
 
-  static resetSchema: any = object({
-    email: z.string().email('Please fill in'),
-  });
-
-  static loginSchema: any = object({
-    email: z.string().email('Please fill in'),
-    password: z.string().min(1, 'Please fill in'),
-  });
-
   userSpeciesReport: IObservableArray<ReportSpecies> = observable([]);
 
   userSpeciesLastMonthReport: IObservableArray<ReportSpecies> = observable([]);
 
-  constructor(options: any) {
+  constructor(options: DrupalUserModelOptions<Attrs>) {
     super({ ...options, data: { ...defaults, ...options.data } });
 
     const checkForValidation = () => {
@@ -144,8 +136,8 @@ export const useUserStatusCheck = () => {
             toast.success(
               'A new verification email was successfully sent now. If you did not receive the email, then check your Spam or Junk email folders.'
             );
-          } catch (err: any) {
-            toast.error(err);
+          } catch (error) {
+            toast.error(error as Error);
           }
           loader.hide();
         };

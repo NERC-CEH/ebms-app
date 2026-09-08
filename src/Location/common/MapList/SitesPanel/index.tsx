@@ -11,6 +11,7 @@ import {
   IonSegmentButton,
   useIonViewWillLeave,
   useIonViewWillEnter,
+  type SegmentCustomEvent,
 } from '@ionic/react';
 import InfoBackgroundMessage from 'common/Components/InfoBackgroundMessage';
 import Location from 'models/location';
@@ -43,9 +44,11 @@ const Sites = ({
 
   const [segment, setSegment] = useState<'user' | 'group'>('user');
 
-  const onSegmentClick = (e: any) => {
+  const onSegmentClick = (e: SegmentCustomEvent) => {
     const newSegment = e.detail.value;
-    setSegment(newSegment);
+    if (newSegment === 'user' || newSegment === 'group') {
+      setSegment(newSegment);
+    }
     isShowingProjects?.(newSegment === 'group');
   };
 

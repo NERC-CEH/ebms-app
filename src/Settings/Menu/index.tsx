@@ -28,8 +28,8 @@ const useDeleteUser = () => {
       await userModel.delete();
       goBack();
       toast.success('Done');
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
 
     loader.hide();
@@ -38,7 +38,7 @@ const useDeleteUser = () => {
   return deleteUser;
 };
 
-async function clearCache(toast: any) {
+async function clearCache(toast: ReturnType<typeof useToast>) {
   console.log('Settings:Menu:Controller: clearing cache!');
   try {
     const clearSample = (smp: Sample) => {
@@ -50,8 +50,8 @@ async function clearCache(toast: any) {
     await Promise.all(samplesCollection.map(clearSample));
 
     toast.success('Done');
-  } catch (e: any) {
-    toast.error(e);
+  } catch (error) {
+    toast.error(error as Error);
   }
 }
 
@@ -79,9 +79,11 @@ const importDatabase = async () => {
     input.type = 'file';
     input.addEventListener('change', function () {
       const fileReader = new FileReader();
-      fileReader.onloadend = async (e: any) =>
+      fileReader.onloadend = async ({ target }: ProgressEvent<FileReader>) =>
         resolve(
-          new Blob([e.target.result], { type: 'application/vnd.sqlite3' })
+          new Blob([target?.result || ''], {
+            type: 'application/vnd.sqlite3',
+          })
         );
       fileReader.readAsArrayBuffer(input.files![0]);
     });
@@ -99,8 +101,7 @@ type BooleanKeys<T> = keyof {
 
 const onToggle = (setting: BooleanKeys<Data>, checked: boolean) => {
   console.log('Settings:Menu:Controller: setting toggled.');
-  const data = appModel.data as unknown as Record<string, boolean>;
-  data[setting as string] = checked;
+  Object.assign(appModel.data, { [setting]: checked });
   appModel.save();
 
   isPlatform('hybrid') && Haptics.impact({ style: ImpactStyle.Light });

@@ -1,5 +1,5 @@
 import { reaction } from 'mobx';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { camelCase, mapKeys } from 'lodash';
 import { z, ZodError } from 'zod';
 import {
@@ -7,22 +7,47 @@ import {
   LocationCollection as LocationCollectionBase,
   LocationCollectionOptions,
   byGroupMembershipStatus,
-  GroupLocationData,
+  type GroupLocationData,
   byLocationType,
   LocationType as LocType,
+  LocationDTO,
   isAxiosNetworkError,
   HandledError,
 } from '@flumens';
 import config from 'common/config';
 import userModel from 'models/user';
-import Location, {
-  dtoSchema,
-  Data as RemoteLocationAttributes,
-  trapCountAttr,
-} from '../location';
+import Location, { dtoSchema, trapCountAttr } from '../location';
 import { locationsStore as store } from '../store';
 import groups from './groups';
 import taxonLists from './taxonLists';
+
+type UnknownRecord = Record<string, unknown>;
+
+const normalizeKeys = (doc: UnknownRecord) =>
+  mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
+
+const validateDTO = (
+  doc: UnknownRecord,
+  schema: { parse: (value: unknown) => unknown } = dtoSchema
+) => {
+  schema.parse(doc);
+  return doc as LocationDTO;
+};
+
+const throwFetchError = (error: unknown) => {
+  if (isAxiosNetworkError(error as AxiosError))
+    throw new HandledError(
+      'Request aborted because of a network issue (timeout or similar).'
+    );
+
+  if (error instanceof ZodError) {
+    throw new Error(
+      error.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
+    );
+  }
+
+  throw error;
+};
 
 export class LocationsCollection extends LocationCollectionBase<Location> {
   declare Model: typeof Location;
@@ -43,7 +68,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     this.ready?.then(fetchFirstTime);
 
-    const onLoginChange = async (newEmail: any) => {
+    const onLoginChange = async (newEmail?: string) => {
       if (!newEmail) return;
 
       await this.ready;
@@ -182,7 +207,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     // remove stale non-draft models that are no longer in the remote
     const stale = this.filter(model => {
-      if (!type.includes(model.data.locationTypeId as any)) return false;
+      if (!type.includes(model.data.locationTypeId as LocType)) return false;
 
       const isLocalDuplicate = !model.id && newExternalKeys.has(model.cid); // can happen if uploaded but not reflected back in the app
       const modelIsStale = model.id && !newExternalKeys.has(model.cid); // once uploaded, but deleted from remote
@@ -193,7 +218,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
   private async fetchGroupLocations() {
     const transformToLocation = (doc: GroupLocationData) => {
-      const transformedDoc: RemoteLocationAttributes = {
+      const transformedDoc: LocationDTO = {
         id: doc.locationId,
         createdOn: doc.locationCreatedOn,
         updatedOn: doc.locationUpdatedOn,
@@ -210,7 +235,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         updatedById: doc.locationUpdatedById,
         externalKey: doc.locationExternalKey,
         public: 'f',
-      } as any; // any - to fix Moth trap attrs
+      };
 
       return [transformedDoc, doc.groupId!];
     };
@@ -223,16 +248,13 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     const docs = groupLocationDTOs.flat().map(transformToLocation);
 
-    return docs as [RemoteLocationAttributes, string][];
+    return docs as [LocationDTO, string][];
   }
 
-  private async fetchTransectSections(
-    locationList: string[]
-  ): Promise<RemoteLocationAttributes[]> {
+  private async fetchTransectSections(locationList: string[]) {
     if (!locationList?.length) return [];
 
     const url = `${this.remote.url}/index.php/services/rest/reports/projects/ebms/ebms_app_sections_list_2.xml`;
-
     const token = await userModel.getAccessToken();
 
     /* eslint-disable @typescript-eslint/naming-convention */
@@ -243,53 +265,29 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         location_list: locationList.join(','),
         limit: 10000,
       },
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
+      headers: { Authorization: `Bearer ${token}` },
       timeout: 80000,
     };
     /* eslint-enable @typescript-eslint/naming-convention */
 
     try {
-      const res = await axios.get(url, options);
+      const res = await axios.get<{ data: UnknownRecord[] }>(url, options);
+      const remoteSchema = dtoSchema.extend({ parentId: z.string() }); // this is required to join with transects
 
-      const getValues = (doc: any) =>
-        mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
-
-      const docs = res.data.data.map(getValues);
-      const remoteSchema = dtoSchema.extend({
-        // @ts-expect-error fix this once drizzle-orm supports zod v4
-        parentId: z.string(), // this is required to join with transects
-      });
-
-      docs.forEach(remoteSchema.parse);
-
-      return docs;
-    } catch (error: any) {
+      return res.data.data
+        .map(normalizeKeys)
+        .map(doc => validateDTO(doc, remoteSchema));
+    } catch (error) {
       if (axios.isCancel(error)) return [];
-
-      if (isAxiosNetworkError(error))
-        throw new HandledError(
-          'Request aborted because of a network issue (timeout or similar).'
-        );
-
-      if ('issues' in error) {
-        const err: ZodError = error;
-        throw new Error(
-          err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
-        );
-      }
-
-      throw error;
+      return throwFetchError(error);
     }
   }
 
   private async fetchRemoteByType(
     locationTypeId: number | string,
     publicLocations = false
-  ): Promise<RemoteLocationAttributes[]> {
+  ) {
     const url = `${this.remote.url}/index.php/services/rest/locations`;
-
     const token = await userModel.getAccessToken();
 
     /* eslint-disable @typescript-eslint/naming-convention */
@@ -299,153 +297,72 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         public: publicLocations,
         verbose: 1,
       },
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      timeout: 80000,
-    };
-    /* eslint-enable @typescript-eslint/naming-convention */
-
-    try {
-      const res = await axios.get(url, options);
-
-      const getValues = (doc: any) =>
-        mapKeys(doc.values, (_, key) =>
-          key.includes(':') ? key : camelCase(key)
-        );
-      const docs = res.data.map(getValues);
-
-      docs.forEach(dtoSchema.parse);
-
-      return docs;
-    } catch (error: any) {
-      if (axios.isCancel(error)) return [];
-
-      if (isAxiosNetworkError(error))
-        throw new HandledError(
-          'Request aborted because of a network issue (timeout or similar).'
-        );
-
-      if ('issues' in error) {
-        const err: ZodError = error;
-        throw new Error(
-          err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
-        );
-      }
-
-      throw error;
-    }
-  }
-
-  private async fetchBaitTrapSites(): Promise<RemoteLocationAttributes[]> {
-    const url = `${this.remote.url}/index.php/services/rest/reports/projects/ebms/ebms_shared_locations.xml`;
-
-    const token = await userModel.getAccessToken();
-
-    /* eslint-disable @typescript-eslint/naming-convention */
-    const options = {
-      params: {
-        location_type_id: 24555,
-        locattrs: '428',
-        limit: 10000,
-      },
       headers: { Authorization: `Bearer ${token}` },
       timeout: 80000,
     };
     /* eslint-enable @typescript-eslint/naming-convention */
 
     try {
-      const res = await axios.get(url, options);
-
-      const getValues = (doc: any) =>
-        mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
-
-      const attachTrapNoAttr: any = (doc: any) => ({
-        ...doc,
-        [trapCountAttr.id]: doc.attrLocation428,
-      });
-      const docs = res.data.data.map(getValues).map(attachTrapNoAttr);
-
-      docs.forEach(dtoSchema.parse);
-
-      return docs;
-    } catch (error: any) {
+      const res = await axios.get<{ values: UnknownRecord }[]>(url, options);
+      return res.data
+        .map(doc => normalizeKeys(doc.values))
+        .map(doc => validateDTO(doc));
+    } catch (error) {
       if (axios.isCancel(error)) return [];
-
-      if (isAxiosNetworkError(error))
-        throw new HandledError(
-          'Request aborted because of a network issue (timeout or similar).'
-        );
-
-      if ('issues' in error) {
-        const err: ZodError = error;
-        throw new Error(
-          err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
-        );
-      }
-
-      throw error;
+      return throwFetchError(error);
     }
   }
 
-  private async fetchBaitTraps(
-    locationList: string[]
-  ): Promise<RemoteLocationAttributes[]> {
+  private async fetchBaitTrapSites() {
+    const url = `${this.remote.url}/index.php/services/rest/reports/projects/ebms/ebms_shared_locations.xml`;
+    const token = await userModel.getAccessToken();
+
+    const options = {
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      params: { location_type_id: 24555, locattrs: '428', limit: 10000 },
+      headers: { Authorization: `Bearer ${token}` },
+      timeout: 80000,
+    };
+
+    try {
+      const res = await axios.get<{ data: UnknownRecord[] }>(url, options);
+      return res.data.data
+        .map(normalizeKeys)
+        .map(doc => ({ ...doc, [trapCountAttr.id]: doc.attrLocation428 }))
+        .map(doc => validateDTO(doc));
+    } catch (error) {
+      if (axios.isCancel(error)) return [];
+      return throwFetchError(error);
+    }
+  }
+
+  private async fetchBaitTraps(locationList: string[]) {
     if (!locationList?.length) return [];
 
     const url = `${this.remote.url}/index.php/services/rest/reports/projects/ebms/ebms_shared_locations.xml`;
-
     const token = await userModel.getAccessToken();
-
-    /* eslint-disable @typescript-eslint/naming-convention */
     const options = {
-      params: {
-        location_type_id: 24554,
-        // parent_id: locationList.join(','), // the API doesn't support array filtering by parent_id yet
-        limit: 10000,
-      },
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      params: { location_type_id: 24554, limit: 10000 },
       headers: { Authorization: `Bearer ${token}` },
       timeout: 80000,
     };
-    /* eslint-enable @typescript-eslint/naming-convention */
 
     try {
-      const res = await axios.get(url, options);
+      const res = await axios.get<{ data: UnknownRecord[] }>(url, options);
+      const remoteSchema = dtoSchema.extend({ parentId: z.string() });
 
-      const getValues = (doc: any) =>
-        mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
-
-      const docs = res.data.data.map(getValues);
-      const remoteSchema = dtoSchema.extend({
-        // @ts-expect-error fix this once drizzle-orm supports zod v4
-        parentId: z.string(), // this is required to join with transects
-      });
-
-      docs.forEach(remoteSchema.parse);
-
-      return docs;
-    } catch (error: any) {
+      return res.data.data
+        .map(normalizeKeys)
+        .map(doc => validateDTO(doc, remoteSchema));
+    } catch (error) {
       if (axios.isCancel(error)) return [];
-
-      if (isAxiosNetworkError(error))
-        throw new HandledError(
-          'Request aborted because of a network issue (timeout or similar).'
-        );
-
-      if ('issues' in error) {
-        const err: ZodError = error;
-        throw new Error(
-          err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
-        );
-      }
-
-      throw error;
+      return throwFetchError(error);
     }
   }
 
-  private async fetchTransects(): Promise<RemoteLocationAttributes[]> {
+  private async fetchTransects() {
     const url = `${this.remote.url}/index.php/services/rest/reports/projects/ebms/ebms_app_sites_list_2.xml`;
-
     const token = await userModel.getAccessToken();
 
     /* eslint-disable @typescript-eslint/naming-convention */
@@ -457,39 +374,17 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         userID: userModel.id,
         limit: 10000,
       },
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
+      headers: { Authorization: `Bearer ${token}` },
       timeout: 80000,
     };
     /* eslint-enable @typescript-eslint/naming-convention */
 
     try {
-      const res = await axios.get(url, options);
-
-      const getValues = (doc: any) =>
-        mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
-
-      const docs = res.data.data.map(getValues);
-      docs.forEach(dtoSchema.parse);
-
-      return docs;
-    } catch (error: any) {
+      const res = await axios.get<{ data: UnknownRecord[] }>(url, options);
+      return res.data.data.map(normalizeKeys).map(doc => validateDTO(doc));
+    } catch (error) {
       if (axios.isCancel(error)) return [];
-
-      if (isAxiosNetworkError(error))
-        throw new HandledError(
-          'Request aborted because of a network issue (timeout or similar).'
-        );
-
-      if ('issues' in error) {
-        const err: ZodError = error;
-        throw new Error(
-          err.issues.map(e => `${e.path.join(' ')} ${e.message}`).join(' ')
-        );
-      }
-
-      throw error;
+      return throwFetchError(error);
     }
   }
 }
@@ -500,8 +395,6 @@ const collection = new LocationsCollection({
   url: config.backend.indicia.url,
   getAccessToken: () => userModel.getAccessToken(),
 });
-
-// (window as any).locationCollection = collection;
 
 export const byType = byLocationType;
 

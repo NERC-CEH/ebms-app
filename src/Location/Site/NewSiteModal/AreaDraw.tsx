@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 // eslint-disable-next-line import-x/no-extraneous-dependencies
 import { Polygon } from 'geojson';
+import type { MapRef } from 'react-map-gl/mapbox';
 import { Main, MapContainer, MapDraw, mapFlyToShape } from '@flumens';
 import config from 'common/config';
 import countries from 'common/config/countries';
@@ -11,7 +12,7 @@ export type Shape = Polygon;
 
 const getShapeCentroid = (shape?: Shape) => {
   if (!shape) return null;
-  const [firstRing] = shape.coordinates as any;
+  const [firstRing] = shape.coordinates;
   const [firstPoint] = firstRing;
   return { longitude: firstPoint[0], latitude: firstPoint[1] };
 };
@@ -32,7 +33,7 @@ const AreaDraw = ({ shape, onChange }: Props) => {
     }
   }
 
-  const [mapRef, setMapRef] = useState<any>();
+  const [mapRef, setMapRef] = useState<MapRef>();
   const flyToLocation = () => {
     mapFlyToShape(mapRef, shape);
   };

@@ -108,7 +108,7 @@ export async function fetchRecords(northWest: LatLng, southEast: LatLng) {
 
       return hit._source;
     });
-  } catch (error: unknown) {
+  } catch (error) {
     if (axios.isCancel(error)) return null;
 
     if (isAxiosNetworkError(error as AxiosError))
@@ -206,7 +206,7 @@ export async function fetchSquares(
       .filter(o => !!o);
 
     return squares || [];
-  } catch (error: unknown) {
+  } catch (error) {
     if (axios.isCancel(error)) return null;
 
     if (isAxiosNetworkError(error as AxiosError))

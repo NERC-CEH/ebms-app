@@ -14,13 +14,16 @@ import { NavContext, IonButtons, IonButton } from '@ionic/react';
 import speciesGroupsList from 'common/data/groups';
 import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
-import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
+import Occurrence, {
+  DRAGONFLY_GROUP,
+  type Taxon as TaxonData,
+} from 'models/occurrence';
 import Sample from 'models/sample';
 import TaxonSearch from 'Survey/common/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
-const cancelButtonWrap = (onDeleteSurvey: any) => (
+const cancelButtonWrap = (onDeleteSurvey: () => void) => (
   <IonButtons slot="start">
     <IonButton onClick={onDeleteSurvey}>
       <T>Cancel</T>
@@ -28,7 +31,7 @@ const cancelButtonWrap = (onDeleteSurvey: any) => (
   </IonButtons>
 );
 
-function useDeleteSurveyPrompt(alert: any) {
+function useDeleteSurveyPrompt(alert: ReturnType<typeof useAlert>) {
   const deleteSurveyPromt = (resolve: (param: boolean) => void) => {
     alert({
       header: 'Delete Survey',
@@ -56,7 +59,7 @@ function useDeleteSurveyPrompt(alert: any) {
 
 const TaxonController = () => {
   const { goBack, navigate } = useContext(NavContext);
-  const match = useRouteMatch();
+  const match = useRouteMatch<{ taxa?: string }>();
   const alert = useAlert();
   const [isAlertPresent, setIsAlertPresent] = useState(false);
   const shouldDeleteSurvey = useDeleteSurveyPrompt(alert);
@@ -95,8 +98,10 @@ const TaxonController = () => {
 
   useOnBackButton(onDeleteSurvey);
 
-  const onSpeciesSelected = async (taxon: any) => {
-    const { taxa }: any = match.params;
+  const onSpeciesSelected = async (
+    taxon: TaxonData & { isRecorded?: boolean }
+  ) => {
+    const { taxa } = match.params;
     const { isRecorded } = taxon;
 
     if (taxa && isRecorded) {
@@ -121,7 +126,7 @@ const TaxonController = () => {
 
         if (
           occ.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
-          taxon.group !== DRAGONFLY_GROUP
+          taxon.taxonGroupId !== DRAGONFLY_GROUP
         ) {
           occ.data.stage = 'Adult';
           occ.data.dragonflyStage = undefined;
@@ -129,7 +134,7 @@ const TaxonController = () => {
 
         if (
           occ.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
-          taxon.group === DRAGONFLY_GROUP
+          taxon.taxonGroupId === DRAGONFLY_GROUP
         ) {
           occ.data.dragonflyStage = 'Adult';
           occ.data.stage = undefined;
@@ -149,7 +154,7 @@ const TaxonController = () => {
     if (occurrence) {
       if (
         occurrence.data.taxon.taxonGroupId !== DRAGONFLY_GROUP &&
-        taxon.group === DRAGONFLY_GROUP
+        taxon.taxonGroupId === DRAGONFLY_GROUP
       ) {
         occurrence.data.dragonflyStage = 'Adult';
 
@@ -157,7 +162,7 @@ const TaxonController = () => {
       }
       if (
         occurrence.data.taxon.taxonGroupId === DRAGONFLY_GROUP &&
-        taxon.group !== DRAGONFLY_GROUP
+        taxon.taxonGroupId !== DRAGONFLY_GROUP
       ) {
         occurrence.data.stage = 'Adult';
 
@@ -167,7 +172,7 @@ const TaxonController = () => {
       occurrence.data.taxon = taxon;
     } else {
       const survey = sample.getSurvey();
-      const zeroAbundance = sample.isSurveyPreciseSingleSpecies() ? 't' : null;
+      const zeroAbundance = !!sample.isSurveyPreciseSingleSpecies();
 
       const newSample = survey.smp!.create!({
         taxon,
@@ -179,7 +184,7 @@ const TaxonController = () => {
       if (sample.isPaintedLadySurvey()) {
         sample.samples[0].occurrences[0].data.wing = [];
 
-        sample.samples[0].occurrences[0].data.behaviour = null;
+        delete sample.samples[0].occurrences[0].data.behaviour;
         sample.save();
       }
 
@@ -209,7 +214,7 @@ const TaxonController = () => {
   };
   const species = sample.samples.map(getTaxonId);
 
-  const getShallowTaxonId = (taxon: any) =>
+  const getShallowTaxonId = (taxon: TaxonData) =>
     taxon.preferredId || taxon.warehouseId;
   const shallowSpecies = sample.shallowSpeciesList.map(getShallowTaxonId);
 
@@ -227,9 +232,9 @@ const TaxonController = () => {
     const speciesGroups = sample.data.speciesGroups || [];
     if (speciesGroups.every(sg => typeof sg === 'number')) return;
 
-    const updatedSpeciesGroups: any = speciesGroups?.map((sg: any) =>
-      typeof sg === 'string' ? (speciesGroupsList as any)[sg]?.id : sg
-    );
+    const updatedSpeciesGroups = speciesGroups
+      .map(sg => (typeof sg === 'string' ? speciesGroupsList[sg]?.id : sg))
+      .filter(id => id !== undefined);
     sample.data.speciesGroups = updatedSpeciesGroups;
   }, []);
 

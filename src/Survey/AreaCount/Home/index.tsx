@@ -1,6 +1,14 @@
-import { useContext, useEffect, useState } from 'react';
+import {
+  useContext,
+  useEffect,
+  useState,
+  type Dispatch,
+  type RefObject,
+  type SetStateAction,
+} from 'react';
 import { toJS, observable } from 'mobx';
 import { observer } from 'mobx-react';
+import type { Feature, Point } from 'geojson';
 import { useTranslation } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import {
@@ -21,7 +29,11 @@ import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
-import { Taxon, doesShallowTaxonMatch } from 'models/occurrence';
+import {
+  Taxon,
+  doesShallowTaxonMatch,
+  type Data as OccurrenceData,
+} from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
 import useExitConfirmation from 'Survey/common/useExitConfirmation';
@@ -39,10 +51,9 @@ const getSpeciesGroupList = (sample: Sample): SpeciesGroupWithDisabled[] => {
   // get unique species groups from sample occurrences
   const groupIds: number[] = [];
   sample.samples.forEach(smp => {
+    const taxonGroupId = smp.occurrences[0]?.data.taxon?.taxonGroupId;
     const spGroupValue = Object.values(speciesGroups).find(
-      group =>
-        group.id === smp.occurrences[0].data.taxon.taxonGroupId ||
-        group.listId === smp.occurrences[0].data.taxon.taxonGroupId // for backward compatibility, some old samples might have listId stored
+      group => group.id === taxonGroupId || group.listId === taxonGroupId // for backward compatibility, some old samples might have listId stored
     )?.id;
     if (!spGroupValue) return;
 
@@ -87,8 +98,8 @@ const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
   const { t } = useTranslation();
 
-  function showDeleteSpeciesPrompt(taxon: any) {
-    const prompt = (resolve: any) => {
+  function showDeleteSpeciesPrompt(taxon: Taxon) {
+    const prompt = (resolve: (confirmed: boolean) => void) => {
       const name = taxon.scientificName;
       alert({
         header: t('Delete'),
@@ -104,19 +115,18 @@ const useDeleteSpeciesPrompt = () => {
           {
             text: t('Delete'),
             role: 'destructive',
-            handler: resolve,
+            handler: () => resolve(true),
           },
         ],
       });
     };
 
-    return new Promise(prompt);
+    return new Promise<boolean>(prompt);
   }
 
   return showDeleteSpeciesPrompt;
 };
 
-/* eslint-disable no-param-reassign */
 function toggleTimer(sample: Sample) {
   if (sample.isTimerFinished()) return;
 
@@ -130,7 +140,6 @@ function toggleTimer(sample: Sample) {
   }
   sample.timerPausedTime.time = new Date();
 }
-/* eslint-enable no-param-reassign */
 
 function byCreateTime(model1: Sample, model2: Sample) {
   const date1 = new Date(model1.createdAt);
@@ -163,7 +172,7 @@ function useShowSpeciesGroupList(sample?: Sample) {
         message: (
           <Checkbox
             className="px-3"
-            onChange={(newValue: any) =>
+            onChange={(newValue: string[]) =>
               groupList.splice(0, groupList.length, ...newValue)
             }
             options={options}
@@ -189,7 +198,7 @@ const HomeController = () => {
   const { t } = useTranslation();
 
   const { navigate, goBack } = useContext(NavContext);
-  const match = useRouteMatch<any>();
+  const match = useRouteMatch();
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
   const toast = useToast();
 
@@ -208,7 +217,7 @@ const HomeController = () => {
   const confirmDelete = useDeleteConfirmation();
   const confirmExit = useExitConfirmation();
 
-  const onExit = async (setIsLeaving?: any) => {
+  const onExit = async (setIsLeaving?: Dispatch<SetStateAction<boolean>>) => {
     if (!sample?.isTimerFinished() && !sample?.isDisabled) {
       const shouldExit = await confirmExit();
       if (!shouldExit) {
@@ -224,15 +233,16 @@ const HomeController = () => {
   const calculateIfHasLongSections = () => {
     if (!sample) return;
 
-    if (!sample.data.location?.shape?.coordinates.length) return;
+    const shape = sample.data.location?.shape;
+    if (shape?.type !== 'LineString' || !shape.coordinates.length) return;
     if (!sample.metadata.saved) return;
 
-    const shapeCoords = [...(sample.data.location as any).shape.coordinates];
+    const shapeCoords = [...shape.coordinates];
 
     for (let index = 1; index < shapeCoords.length; index++) {
       const coords = shapeCoords[index];
 
-      const previousPoint: any = {
+      const previousPoint: Feature<Point> = {
         type: 'Feature',
         properties: {},
         geometry: {
@@ -241,7 +251,7 @@ const HomeController = () => {
         },
       };
 
-      const currentPoint: any = {
+      const currentPoint: Feature<Point> = {
         type: 'Feature',
         properties: {},
         geometry: {
@@ -309,7 +319,7 @@ const HomeController = () => {
     }
 
     const survey = sample.getSurvey();
-    (appModel.data as any)[`draftId:${survey.name}`] = '';
+    appModel.data[`draftId:${survey.name}`] = '';
     sample.metadata.saved = true;
 
     // in case the automatic survey end time hasn't been set after the timeout
@@ -356,10 +366,7 @@ const HomeController = () => {
     const currentSampleIndex = sortedSavedSamples.findIndex(matchingSampleId);
 
     const isFirstSurvey = !currentSampleIndex;
-
-    if (isFirstSurvey) {
-      return null;
-    }
+    if (isFirstSurvey) return undefined;
 
     const previousSurveys = sortedSavedSamples
       .slice(0, currentSampleIndex)
@@ -385,21 +392,19 @@ const HomeController = () => {
       s.occurrences[0].data.taxon.warehouseId;
     const existingSpeciesIds = sample.samples.map(getSpeciesId);
 
-    const uniqueSpeciesList: any = [];
+    const uniqueSpeciesIds = new Set<number>();
     const getNewSpeciesOnly = ({ warehouseId, preferredId }: Taxon) => {
       const speciesID = preferredId || warehouseId;
 
-      if (uniqueSpeciesList.includes(speciesID)) {
-        return false;
-      }
-      uniqueSpeciesList.push(speciesID);
+      if (uniqueSpeciesIds.has(speciesID)) return false;
+      uniqueSpeciesIds.add(speciesID);
       return !existingSpeciesIds.includes(speciesID);
     };
 
     const getTaxon = (s: Sample) => toJS(s.occurrences[0].data.taxon);
     const newSpeciesList = previousSurvey.samples
       .map(getTaxon)
-      .filter(getNewSpeciesOnly) as [];
+      .filter(getNewSpeciesOnly);
 
     // copy but retain old observable ref
     sample.shallowSpeciesList.splice(
@@ -408,15 +413,8 @@ const HomeController = () => {
       ...newSpeciesList
     );
 
-    const speciesNameSort = (sp1: any, sp2: any) => {
-      const taxon1 = sp1.foundInName;
-      const taxonName1 = sp1[taxon1];
-
-      const taxon2 = sp2.foundInName;
-      const taxonName2 = sp2[taxon2];
-
-      return taxonName1.localeCompare(taxonName2);
-    };
+    const speciesNameSort = (sp1: Taxon, sp2: Taxon) =>
+      (sp1[sp1.foundInName!] || '').localeCompare(sp2[sp2.foundInName!] || '');
 
     sample.shallowSpeciesList.sort(speciesNameSort);
 
@@ -431,7 +429,7 @@ const HomeController = () => {
     }
   };
 
-  const deleteFromShallowList = (taxon: any) => {
+  const deleteFromShallowList = (taxon: Taxon) => {
     const withSamePreferredIdOrWarehouseId = (shallowEntry: Taxon) =>
       doesShallowTaxonMatch(shallowEntry, taxon);
 
@@ -445,7 +443,7 @@ const HomeController = () => {
     sample.shallowSpeciesList.splice(taxonIndexInShallowList, 1);
   };
 
-  const deleteSpecies = (taxon: any, isShallow: boolean) => {
+  const deleteSpecies = (taxon: Taxon, isShallow: boolean) => {
     if (isShallow) {
       deleteFromShallowList(taxon);
       return;
@@ -470,7 +468,11 @@ const HomeController = () => {
     showDeleteSpeciesPrompt(taxon).then(destroyWrap);
   };
 
-  const increaseCount = (taxon: any, _: boolean, is5x: boolean) => {
+  const increaseCount = (
+    taxon: Taxon,
+    _isShallow?: boolean,
+    is5x?: boolean
+  ) => {
     if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
       const [occ] = sample.samples[0].occurrences;
       occ.data.zeroAbundance = false;
@@ -524,7 +526,7 @@ const HomeController = () => {
     if (isLastSampleDeleted) {
       const survey = sample.getSurvey();
 
-      const newSubSample = survey.smp!.create!({ taxon, zeroAbundance: 't' });
+      const newSubSample = survey.smp!.create!({ taxon, zeroAbundance: true });
       sample.samples.push(newSubSample);
       sample.save();
     }
@@ -537,7 +539,10 @@ const HomeController = () => {
     navigate(`${url}/samples/${smp.cid}/occ/${occ.cid}`);
   };
 
-  const cloneSubSample = async (copiedSubSample: Sample, ref: any) => {
+  const cloneSubSample = async (
+    copiedSubSample: Sample,
+    ref?: RefObject<HTMLIonItemSlidingElement | null>
+  ) => {
     sample.copyAttributes = {}; // clean previous copy
     sample.save();
 
@@ -548,15 +553,17 @@ const HomeController = () => {
     const survey = sample.getSurvey();
     const newSubSample = survey.smp!.create!({ taxon, parent: sample });
 
-    (sample.copyAttributes as any).timeOfSighting = new Date().toISOString();
+    sample.copyAttributes.timeOfSighting = new Date().toISOString();
 
-    newSubSample.occurrences[0].data = observable(sample.copyAttributes) as any;
+    newSubSample.occurrences[0].data = observable(
+      sample.copyAttributes
+    ) as OccurrenceData;
 
     sample.samples.push(newSubSample);
     if (!isLocationLocked()) newSubSample.startGPS();
     sample.save();
 
-    await ref.current.closeOpened();
+    await ref?.current?.closeOpened();
     toast.success('Copied!', { color: 'tertiary' });
   };
 
