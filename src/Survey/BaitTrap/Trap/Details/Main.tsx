@@ -47,14 +47,14 @@ const TrapDetailsMain = ({ subSample }: Props) => {
               label="Date"
               value={subSample.data.date}
               presentation="date"
-              onChange={val => (subSample.data.date = val)} // eslint-disable-line no-return-assign, no-param-reassign
+              onChange={val => (subSample.data.date = val)} // eslint-disable-line no-return-assign
               isDisabled={subSample.isUploaded}
             />
             <MenuDateAttr
               label="Time"
               value={subSample.data[timeAttr.id]}
               presentation="time"
-              onChange={val => (subSample.data[timeAttr.id] = val)} // eslint-disable-line no-return-assign, no-param-reassign
+              onChange={val => (subSample.data[timeAttr.id] = val)} // eslint-disable-line no-return-assign
               isDisabled={subSample.isUploaded}
             />
             <Block record={subSample.data} block={stratumAttr} />

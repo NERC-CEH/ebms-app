@@ -1,13 +1,14 @@
 import { observable, IObservableArray } from 'mobx';
 import {
   SQLiteInsertBuilder,
+  type SQLiteSession,
   SQLiteSyncDialect,
 } from 'drizzle-orm/sqlite-core';
 import {
   GroupModel,
-  GroupData,
-  GroupLocationData,
-  GroupOptions as GroupOptionsBase,
+  type GroupData,
+  type GroupLocationData,
+  type GroupOptions as GroupOptionsBase,
 } from '@flumens';
 import config from 'common/config';
 import userModel from 'models/user';
@@ -55,13 +56,18 @@ class Group extends GroupModel {
       // persist the link to the groups_location join table
       const query = new SQLiteInsertBuilder(
         groupsStore.groupsLocations.table,
-        {} as any,
+        {} as SQLiteSession<
+          'sync',
+          unknown,
+          Record<string, never>,
+          Record<string, never>
+        >,
         new SQLiteSyncDialect()
       )
         .values({ groupCid: this.cid, locationCid: location.cid })
         .onConflictDoNothing();
 
-      await groupsStore.groupsLocations.db.query(query.toSQL());
+      await groupsStore.db.query(query.toSQL());
     }
 
     if (!location.groupCids.includes(this.cid)) {
@@ -76,7 +82,12 @@ class Group extends GroupModel {
       // persist the link to the groups_lists join table
       const query = new SQLiteInsertBuilder(
         groupsStore.groupsLists.table,
-        {} as any,
+        {} as SQLiteSession<
+          'sync',
+          unknown,
+          Record<string, never>,
+          Record<string, never>
+        >,
         new SQLiteSyncDialect()
       )
         .values({ groupCid: this.cid, taxonListCid: taxonList.cid })

@@ -35,8 +35,8 @@ const BaitTrapLocation = () => {
 
     try {
       await locations.fetchRemote({ type: 'baitTraps' });
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
 
     loader.hide();

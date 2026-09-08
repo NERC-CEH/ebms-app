@@ -9,7 +9,7 @@ import Main from './Main';
 export const useDeleteConfirmation = () => {
   const alert = useAlert();
 
-  const prompt = (resolve: any) => {
+  const prompt = (resolve: (confirmed: boolean) => void) => {
     alert({
       header: 'Delete',
       message: 'Are you sure you want to delete this occurrence?',
@@ -28,7 +28,7 @@ export const useDeleteConfirmation = () => {
     });
   };
 
-  const promptWrap = () => new Promise(prompt);
+  const promptWrap = () => new Promise<boolean>(prompt);
 
   return promptWrap;
 };
@@ -42,7 +42,7 @@ function byCreationDate(s1: Sample, s2: Sample) {
 
 const SpeciesOccurrences = () => {
   const { navigate, goBack } = useContext(NavContext);
-  const match = useRouteMatch<any>();
+  const match = useRouteMatch<{ taxa: string }>();
 
   const confirmDelete = useDeleteConfirmation();
 
@@ -96,7 +96,7 @@ const SpeciesOccurrences = () => {
     if (isLastSampleDeleted) {
       const survey = sample.getSurvey();
 
-      const newSubSample = survey.smp!.create!({ taxon, zeroAbundance: 't' });
+      const newSubSample = survey.smp!.create!({ taxon, zeroAbundance: true });
       sample.samples.push(newSubSample);
       sample.save();
 

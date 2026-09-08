@@ -1,12 +1,13 @@
 import { SQL } from 'drizzle-orm';
+import type { taxaStore } from 'models/store';
 import searchCommonNames from './commonNamesSearch';
 import searchSciNames from './scientificNamesSearch';
 
 /* eslint-disable @typescript-eslint/naming-convention */
 export type SpeciesColumns = {
-  data: any;
+  data: Record<string, unknown>;
   id: number;
-  taxon_list_id: number;
+  list_cid: string;
   taxon_group_id: number;
   preferred_taxa_taxon_list_id: number | null;
   parent_id: number | null;
@@ -25,12 +26,14 @@ export type SearchResult = {
   preferredId?: number;
 };
 
+export type TaxaStore = Pick<typeof taxaStore, 'table' | 'db'>;
+
 type Args = {
-  store: { table: any; db: any };
+  store: TaxaStore;
   searchPhrase: string;
   language: string;
   maxResults?: number;
-  where?: (table: any) => SQL;
+  where?: (table: TaxaStore['table']) => SQL;
 };
 
 export default async function search({

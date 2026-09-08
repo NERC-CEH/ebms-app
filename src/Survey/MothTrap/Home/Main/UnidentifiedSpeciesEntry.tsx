@@ -45,7 +45,7 @@ type Props = {
   occ: Occurrence;
   isDisabled: boolean;
   isUnidentifiedSpeciesLengthMoreThanFive: boolean;
-  onIdentify: any;
+  onIdentify: (occurrence: Occurrence) => void;
 };
 
 const UnidentifiedSpeciesEntry = ({

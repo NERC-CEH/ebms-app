@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { CamelizeKeys } from '@flumens/utils';
 import config from 'common/config';
 import { getLanguageIso } from 'common/config/languages';
@@ -44,7 +44,7 @@ export default async function identify(url: string): Promise<Suggestion[]> {
     _api_proxy_uri: 'identify-proxy/v1/?app_name=uni-jena', // eslint-disable-line @typescript-eslint/naming-convention
   });
 
-  const options: any = {
+  const options: AxiosRequestConfig<URLSearchParams> = {
     method: 'post',
     params,
     url: `${config.backend.url}/api-proxy/waarneming`,
@@ -89,8 +89,8 @@ export default async function identify(url: string): Promise<Suggestion[]> {
     );
 
     return suggestions;
-  } catch (e: any) {
-    console.error(e);
+  } catch (error) {
+    console.error(error);
     throw new Error('Failed to identify image');
   }
 }

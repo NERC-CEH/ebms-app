@@ -5,6 +5,7 @@ import { InAppReview } from '@capacitor-community/in-app-review';
 import { Main, ModalHeader, InfoMessage, UserFeedbackRequest } from '@flumens';
 import { IonModal, IonIcon } from '@ionic/react';
 import config from 'common/config';
+import type { CountryCode } from 'common/config/countries';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
 import { translateSpeciesDescription } from 'common/translations/translator';
 import appModel from 'models/app';
@@ -27,11 +28,11 @@ type Props = {
 };
 
 const MainComponent = ({ searchPhrase = '', filters }: Props) => {
-  const [species, setSpecies] = useState<any>(null);
+  const [species, setSpecies] = useState<SpeciesType | null>(null);
 
   const showSpeciesModal = (id: number) => {
     const bySpeciesId = (sp: SpeciesType) => sp.id === id;
-    setSpecies(speciesProfiles.find(bySpeciesId));
+    setSpecies(speciesProfiles.find(bySpeciesId) || null);
   };
 
   const hideSpeciesModal = () => setSpecies(null);
@@ -40,7 +41,8 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     const existInCountry = (sp: SpeciesType) => {
       if (country === 'ELSEWHERE') return true;
 
-      const abundanceStatus = (sp.abundance as any)[country];
+      const abundanceStatus =
+        sp.abundance[country as Exclude<CountryCode, 'UK' | 'ELSEWHERE'>];
       if (!abundanceStatus) return false;
 
       const isPresent = !['A', 'Ex'].includes(abundanceStatus);
@@ -154,8 +156,8 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
     return samplesCollection.length > 5;
   };
 
-  let country: any = appModel.data.country!;
-  country = country === 'UK' ? 'GB' : country;
+  const country =
+    appModel.data.country === 'UK' ? 'GB' : appModel.data.country!;
 
   const [speciesList, countrySpeciesCount, totalSpeciesCountryCount] =
     getSpecies(country) as [SpeciesType[], number, number];
@@ -185,9 +187,9 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
           inline
         >
           This guide is still in development. It covers{' '}
-          {{ countrySpeciesCount } as any} butterfly species out of the{' '}
-          {{ totalSpeciesCountryCount } as any} species in your selected
-          country.
+          {{ countrySpeciesCount } as unknown as string} butterfly species out
+          of the {{ totalSpeciesCountryCount } as unknown as string} species in
+          your selected country.
         </InfoMessage>
       )}
 
@@ -196,7 +198,7 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
         {species && (
           <SpeciesProfile
             species={species}
-            country={country}
+            country={country as keyof SpeciesType['abundance']}
             hideSpeciesModal={hideSpeciesModal}
           />
         )}

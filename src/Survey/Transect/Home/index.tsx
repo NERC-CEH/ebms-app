@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, type Dispatch, type SetStateAction } from 'react';
 import { observer } from 'mobx-react';
 import {
   Header,
@@ -31,7 +31,7 @@ const TransectHomeController = () => {
   const checkUserStatus = useUserStatusCheck();
   const confirmExit = useExitConfirmation();
 
-  const onExit = async (setIsLeaving?: any) => {
+  const onExit = async (setIsLeaving?: Dispatch<SetStateAction<boolean>>) => {
     if (!sample?.metadata.saved && !sample?.isDisabled) {
       const shouldExit = await confirmExit();
       if (!shouldExit) {
@@ -47,8 +47,7 @@ const TransectHomeController = () => {
   if (!sample) return null;
 
   if (
-    // eslint-disable-next-line eqeqeq
-    (sample.data as any).enteredSrefSystem == 2169 &&
+    Number(sample.data.enteredSrefSystem) === 2169 &&
     sample.data.locationId
   ) {
     // backwards compatibility to fix luxembourg transect samples, remove later
@@ -78,7 +77,7 @@ const TransectHomeController = () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    (appModel.data as any)[`draftId:${survey.name}`] = '';
+    appModel.data[`draftId:${survey.name}`] = '';
 
     const saveAndReturn = () => {
       if (!sample.data.surveyEndTime) {

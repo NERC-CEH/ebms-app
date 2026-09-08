@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
+import type { MapMouseEvent, MapRef } from 'react-map-gl/mapbox';
 import {
   MapContainer,
   MapHeader,
@@ -11,7 +12,9 @@ import {
   mapFlyToLocation,
   useSample,
   isValidLocation,
+  type Location,
 } from '@flumens';
+import type { InputCustomEvent } from '@ionic/react';
 import config from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'common/models/app';
@@ -19,20 +22,19 @@ import Sample from 'models/sample';
 
 const ModelLocationMap = () => {
   const { sample, subSample } = useSample<Sample>();
-
   const model = subSample || sample;
 
-  const location = model!.data.location || {};
+  const location: Partial<Location> = model!.data.location || {};
 
-  const [mapRef, setMapRef] = useState<any>();
+  const [mapRef, setMapRef] = useState<MapRef>();
   const flyToLocation = () => {
-    mapFlyToLocation(mapRef, location as any);
+    mapFlyToLocation(mapRef, location as Location);
   };
   useEffect(flyToLocation, [mapRef, location]);
 
   if (!model) return null;
 
-  const setLocation = async (newLocation: any) => {
+  const setLocation = async (newLocation: Location | null) => {
     if (!newLocation) return;
     if (model.isGPSRunning()) model.stopGPS();
 
@@ -42,15 +44,15 @@ const ModelLocationMap = () => {
     model.data.location = { ...model.data.location, ...locationWithoutGridRef };
   };
 
-  const onManuallyTypedLocationChange = (e: any) =>
-    setLocation(textToLocation(e?.target?.value));
+  const onManuallyTypedLocationChange = (e: InputCustomEvent) =>
+    setLocation(textToLocation(String(e.target.value || '')));
 
-  const onMapClick = (e: any) => setLocation(mapEventToLocation(e));
+  const onMapClick = (e: MapMouseEvent) => setLocation(mapEventToLocation(e));
   const onGPSClick = () => toggleGPS(model);
 
   // default view to the user's selected country
   let initialViewState;
-  if (isValidLocation(location as any)) {
+  if (isValidLocation(location as Location)) {
     initialViewState = { ...location };
   } else {
     const country = countries[appModel.data.country!];
@@ -63,7 +65,7 @@ const ModelLocationMap = () => {
     <Page id="model-location">
       <MapHeader>
         <MapHeader.Location
-          location={location as any}
+          location={location as Location}
           onChange={onManuallyTypedLocationChange}
           useGridRef
         />
@@ -78,11 +80,14 @@ const ModelLocationMap = () => {
           initialViewState={initialViewState}
         >
           <MapContainer.Control.Geolocate
-            isLocating={model.gps.locating}
+            isLocating={!!model.gps.locating}
             onClick={onGPSClick}
           />
 
-          <MapContainer.Marker {...(location as any)} gridref={undefined} />
+          <MapContainer.Marker
+            {...(location as Location)}
+            gridref={undefined}
+          />
         </MapContainer>
       </Main>
     </Page>

@@ -9,17 +9,18 @@ import {
 import { responsibleAttr } from 'Location/Site/NewSiteModal/config';
 import {
   SQLiteInsertBuilder,
+  type SQLiteSession,
   SQLiteSyncDialect,
 } from 'drizzle-orm/sqlite-core';
 import { snakeCase } from 'lodash';
-import { Geolocation } from '@capacitor/geolocation';
+import { Geolocation, Position } from '@capacitor/geolocation';
 import {
   LocationModel,
   LocationData,
   LocationOptions,
+  LocationDTO,
   validateRemoteModel,
   useAlert,
-  ModelData,
   updateModelLocation,
   ModelValidationMessage,
   UUIDv7,
@@ -32,12 +33,15 @@ import Media from './media';
 import { locationsStore } from './store';
 import TaxonList from './taxonList';
 
-const toSnakeCase = (attrs: any) =>
-  Object.entries(attrs).reduce((agg: any, [attr, value]): any => {
-    const attrModified = attr.includes('locAttr:') ? attr : snakeCase(attr);
-    agg[attrModified] = value; // eslint-disable-line no-param-reassign
-    return agg;
-  }, {});
+const toSnakeCase = (attrs: object) =>
+  Object.entries(attrs).reduce<Record<string, unknown>>(
+    (result, [attr, value]) => {
+      const attrModified = attr.includes('locAttr:') ? attr : snakeCase(attr);
+      result[attrModified] = value;
+      return result;
+    },
+    {}
+  );
 
 export { locationDtoSchema as dtoSchema, LocationType } from '@flumens';
 
@@ -59,26 +63,30 @@ type SiteAttrs = {
 export const trapCountAttr = { id: 'locAttr:428' } as const;
 
 type BaitTrapSiteAttrs = {
-  [trapCountAttr.id]: { value: string };
+  [trapCountAttr.id]: string;
 };
 
 export type Data = LocationData &
-  ModelData &
-  MothTrapAttrs &
-  SiteAttrs &
-  BaitTrapSiteAttrs;
+  Pick<MothTrapAttrs, 'location'> &
+  Partial<Omit<MothTrapAttrs, 'location'> & SiteAttrs & BaitTrapSiteAttrs>;
+
+type GPSLocation = MothTrapAttrs['location'] & {
+  accuracy: number;
+  altitude: number | null;
+  altitudeAccuracy: number | null;
+};
 
 class Location extends LocationModel<Data> {
   static fromDTO(
-    { id, createdOn, updatedOn, externalKey, ...data }: any,
-    options?: LocationOptions
+    { id, createdOn, updatedOn, externalKey, ...data }: LocationDTO,
+    options?: LocationOptions<Data>
   ) {
-    const existingCid = locations.idMap.get(id)?.cid;
-    const parsedRemoteJSON: any = {
+    const existingCid = id ? locations.idMap.get(id)?.cid : undefined;
+    const parsedRemoteJSON: LocationOptions<Data> = {
       cid: existingCid || externalKey || UUIDv7(),
       id,
-      createdAt: new Date(createdOn).getTime(),
-      updatedAt: new Date(updatedOn).getTime(),
+      createdAt: new Date(createdOn!).getTime(),
+      updatedAt: new Date(updatedOn!).getTime(),
       data: {
         id,
         createdAt: createdOn,
@@ -91,16 +99,20 @@ class Location extends LocationModel<Data> {
       ...options,
     };
 
-    const parseLamp = (lamp: any) => {
+    const parseLamp = (lamp: unknown) => {
       try {
-        return JSON.parse(lamp.value);
+        if (!lamp || typeof lamp !== 'object' || !('value' in lamp))
+          throw new Error();
+
+        return JSON.parse(String(lamp.value)) as Lamp;
       } catch (error) {
         throw new Error('Could not parse a lamp');
       }
     };
 
-    parsedRemoteJSON.data[mothTrapLampsAttr.id] =
-      parsedRemoteJSON.data[mothTrapLampsAttr.id]?.map(parseLamp) || [];
+    const remoteLamps = parsedRemoteJSON.data?.[mothTrapLampsAttr.id];
+    parsedRemoteJSON.data![mothTrapLampsAttr.id] =
+      remoteLamps?.map(parseLamp) || [];
 
     return new this(parsedRemoteJSON);
   }
@@ -109,7 +121,7 @@ class Location extends LocationModel<Data> {
 
   gps: { locating: null | string } = observable({ locating: null });
 
-  media: IObservableArray<Media>;
+  declare media: IObservableArray<Media>;
 
   private _groupCids: IObservableArray<string>;
 
@@ -122,17 +134,19 @@ class Location extends LocationModel<Data> {
     groupCids,
     taxonListCids,
     ...options
-  }: LocationOptions & { groupCids?: string[]; taxonListCids?: string[] }) {
+  }: LocationOptions<Data> & {
+    groupCids?: string[];
+    taxonListCids?: string[];
+  }) {
     super({
       store: skipStore ? undefined : locationsStore,
       url: config.backend.indicia.url,
       getAccessToken: () => userModel.getAccessToken(),
+      Media,
+      media,
+      metadata,
       ...options,
     });
-
-    this.metadata = observable(metadata);
-
-    this.media = observable(media);
 
     this._groupCids = observable([...new Set(groupCids || [])]);
     this._taxonListCids = observable([...new Set(taxonListCids || [])]);
@@ -163,7 +177,12 @@ class Location extends LocationModel<Data> {
       // persist the link to the locations_lists join table
       const query = new SQLiteInsertBuilder(
         locationsStore.locationLists.table,
-        {} as any,
+        {} as SQLiteSession<
+          'sync',
+          unknown,
+          Record<string, never>,
+          Record<string, never>
+        >,
         new SQLiteSyncDialect()
       )
         .values({ locationCid: this.cid, taxonListCid: taxonList.cid })
@@ -178,7 +197,7 @@ class Location extends LocationModel<Data> {
   }
 
   private toMothTrapDTO() {
-    const stringifiedLamps = this.data[mothTrapLampsAttr.id].map(l =>
+    const stringifiedLamps = (this.data[mothTrapLampsAttr.id] || []).map(l =>
       JSON.stringify(l)
     );
 
@@ -191,12 +210,10 @@ class Location extends LocationModel<Data> {
   }
 
   toDTO(warehouseMediaNames = {}) {
-    const transformBoolean = (attrs: any) =>
-      Object.entries(attrs).reduce((agg: any, [attr, value]: any) => {
-        if (typeof value === 'boolean') {
-          agg[attr] = value; // eslint-disable-line no-param-reassign
-        }
-        return agg;
+    const transformBoolean = (attrs: Record<string, unknown>) =>
+      Object.entries(attrs).reduce((result, [attr, value]) => {
+        if (typeof value === 'boolean') result[attr] = value;
+        return result;
       }, attrs);
 
     const data = this.data[mothTrapTypeAttr.id]
@@ -204,9 +221,9 @@ class Location extends LocationModel<Data> {
       : transformBoolean(toSnakeCase(this.data));
 
     /* eslint-disable @typescript-eslint/naming-convention */
-    const submission: any = {
+    const submission = {
       values: { external_key: this.cid, ...data },
-      media: [],
+      media: [] as ReturnType<Media['toDTO']>[],
     };
     /* eslint-enable @typescript-eslint/naming-convention */
 
@@ -245,16 +262,21 @@ class Location extends LocationModel<Data> {
 
       onUpdate() {},
 
-      callback(error: any, location: any) {
+      callback(error: Error | null, location?: GPSLocation) {
         if (error) {
           that.stopGPS();
           return;
         }
+        if (!location) return;
         if (location.accuracy <= options.accuracyLimit) {
           that.stopGPS();
         }
 
-        updateModelLocation(that, location);
+        updateModelLocation(that, {
+          ...location,
+          altitude: location.altitude ?? undefined,
+          altitudeAccuracy: location.altitudeAccuracy ?? undefined,
+        });
       },
     };
 
@@ -270,8 +292,11 @@ class Location extends LocationModel<Data> {
     this.gps.locating = null;
   }
 
-  start(options = {}) {
-    const { callback, onUpdate }: any = options;
+  start(options?: {
+    callback?: (error: Error | null, location?: GPSLocation) => void;
+    onUpdate?: (location: GPSLocation) => void;
+  }) {
+    const { callback, onUpdate } = options || {};
     const accuracyLimit = 100;
 
     // geolocation config
@@ -279,18 +304,29 @@ class Location extends LocationModel<Data> {
       enableHighAccuracy: true,
     };
 
-    const onPosition = (position: any, err: any) => {
-      if (err) {
-        callback?.(new Error(err.message));
+    const onPosition = (
+      position: Position | null,
+      error?: { message: string }
+    ) => {
+      if (error) {
+        callback?.(new Error(error.message));
         return;
       }
+
+      if (!position) return;
 
       const location = {
         latitude: Number(position.coords.latitude.toFixed(8)),
         longitude: Number(position.coords.longitude.toFixed(8)),
-        accuracy: parseInt(position.coords.accuracy, 10),
-        altitude: parseInt(position.coords.altitude, 10),
-        altitudeAccuracy: parseInt(position.coords.altitudeAccuracy, 10),
+        accuracy: Math.trunc(position.coords.accuracy),
+        altitude:
+          typeof position.coords.altitude === 'number'
+            ? Math.trunc(position.coords.altitude)
+            : null,
+        altitudeAccuracy:
+          typeof position.coords.altitudeAccuracy === 'number'
+            ? Math.trunc(position.coords.altitudeAccuracy)
+            : null,
       };
 
       if (location.accuracy <= accuracyLimit) {

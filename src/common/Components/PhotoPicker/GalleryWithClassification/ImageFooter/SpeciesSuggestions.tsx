@@ -14,8 +14,8 @@ const DEFAULT_SNAP_POSITION = 0.4;
 type Props = {
   occurrence: Occurrence;
   media: Media;
-  identifySpecies?: any;
-  onSpeciesSelect: any;
+  identifySpecies?: (manualTrigger?: boolean) => void;
+  onSpeciesSelect: (suggestion: ClassifierSuggestion) => void;
 };
 
 const SpeciesSuggestions = ({
@@ -110,7 +110,7 @@ const SpeciesSuggestions = ({
     return (
       <Button
         className="shrink-0 bg-black/70 text-white"
-        onPress={identifySpecies}
+        onPress={() => identifySpecies?.(true)}
         fill="outline"
       >
         Get species suggestions

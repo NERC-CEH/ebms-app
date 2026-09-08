@@ -14,19 +14,20 @@ import PhotoPicker from 'common/Components/PhotoPicker';
 import { getSpeciesProfileImage } from 'common/data/profiles';
 import numberIcon from 'common/images/number.svg';
 import Occurrence from 'models/occurrence';
+import Sample from 'models/sample';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import './styles.scss';
 
 const TransectHomeController = () => {
   const { url } = useRouteMatch();
 
-  const { occurrence } = useSample<any, Occurrence>();
+  const { occurrence } = useSample<Sample, Occurrence>();
   if (!occurrence) return null;
 
   const isDisabled = occurrence.isUploaded;
 
   const getCounterOnChange = (value: number | null) => {
-    occurrence.data.count = value;
+    occurrence.data.count = value as unknown as number;
     occurrence.save();
   };
 

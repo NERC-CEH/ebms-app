@@ -3,7 +3,7 @@ import axios from 'axios';
 import { and, eq, getTableColumns, SQL, sql } from 'drizzle-orm';
 import { alias, QueryBuilder } from 'drizzle-orm/sqlite-core';
 import { z } from 'zod';
-import { Model, ModelData } from '@flumens';
+import { Model, ModelData, ModelOptions } from '@flumens';
 import config from 'common/config';
 import type { SearchResult, SpeciesColumns } from 'common/helpers/taxonSearch';
 import Group from './group';
@@ -13,7 +13,7 @@ import { db, taxonListsStore, taxaStore } from './store';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const dtoSchema = z.object({
   id: z.number(),
-  type: z.enum(['location', 'list', '"custom_list"']),
+  type: z.enum(['location', 'list', 'custom_list']),
   title: z.string().optional(),
   description: z.string().optional(),
   locationCode: z.string().optional(),
@@ -25,15 +25,13 @@ const dtoSchema = z.object({
 
 export type DTO = z.infer<typeof dtoSchema>;
 
-export type Data = ModelData & {
-  id: number;
-  type: 'list' | 'location' | 'custom_list';
-  title: string;
-  taxonGroups: number[];
-  locationCode?: string;
-  description?: string;
-  coordinates?: number;
-  size?: number;
+export type Data = ModelData &
+  Omit<DTO, 'title' | 'updatedOn'> & { title: string };
+
+type Options = ModelOptions<Data> & {
+  skipStore?: boolean;
+  groupCids?: string[];
+  locationCids?: string[];
 };
 
 export default class TaxonList extends Model<Data> {
@@ -55,7 +53,7 @@ export default class TaxonList extends Model<Data> {
       data: {
         id: dto.id,
         type: dto.type,
-        title: dto.title,
+        title: dto.title || '',
         description: dto.description,
         taxonGroups: dto.taxonGroups,
         coordinates: dto.coordinates,
@@ -80,8 +78,11 @@ export default class TaxonList extends Model<Data> {
 
   private _locationCids: string[] = [];
 
-  constructor({ groupCids, locationCids, ...options }: any) {
-    super({ ...options, store: options.skipStore ? null : taxonListsStore });
+  constructor({ groupCids, locationCids, ...options }: Options) {
+    super({
+      ...options,
+      store: options.skipStore ? undefined : taxonListsStore,
+    });
 
     this._groupCids = groupCids || [];
     this._locationCids = locationCids || [];
@@ -151,9 +152,9 @@ export default class TaxonList extends Model<Data> {
     const listFilter = eq(table.list_cid, this.cid);
 
     // fetch species with common names
-    const preferred: any = alias(table, 'preferred');
+    const preferred = alias(table, 'preferred');
 
-    const query: any = new QueryBuilder()
+    const query = new QueryBuilder()
       .select({
         ...getTableColumns(table),
         commonName: sql`${preferred.taxon} as commonName`,
@@ -170,7 +171,9 @@ export default class TaxonList extends Model<Data> {
       .groupBy(table.id)
       .orderBy(table.taxon);
 
-    const species: any = await taxaStore.db.query(query.toSQL());
+    const species = await taxaStore.db.query<
+      SpeciesColumns & { commonName: string }
+    >(query.toSQL());
 
     return species
       .map((sp: SpeciesColumns & { commonName: string }): SearchResult => ({
@@ -200,13 +203,29 @@ export default class TaxonList extends Model<Data> {
     };
 
     const LIMIT = 40000;
-    const allSpecies: any[] = [];
+
+    /* eslint-disable @typescript-eslint/naming-convention */
+    type RemoteSpeciesDTO = {
+      taxa_taxon_list_id: string;
+      taxon_group_id: string;
+      preferred_taxa_taxon_list_id: string;
+      taxon_meaning_id: string;
+      parent_id: string;
+      taxon: string;
+      preferred_taxon?: string;
+      language_iso: string;
+      external_key?: string;
+      attributes?: string;
+    };
+    /* eslint-enable @typescript-eslint/naming-convention */
+
+    const allSpecies: RemoteSpeciesDTO[] = [];
     let offset = 0;
 
     // Fetch in chunks to avoid overwhelming the API and the device.
     while (true) {
       // eslint-disable-next-line no-await-in-loop
-      const res = await axios.get(url, {
+      const res = await axios.get<{ data: RemoteSpeciesDTO[] }>(url, {
         ...baseOptions,
         params: { ...baseOptions.params, limit: LIMIT, offset },
       });
@@ -219,7 +238,7 @@ export default class TaxonList extends Model<Data> {
       offset += LIMIT;
     }
 
-    const fromDTO = (item: any) => ({
+    const fromDTO = (item: RemoteSpeciesDTO) => ({
       taxaTaxonListId: parseInt(item.taxa_taxon_list_id, 10) || null,
       taxonGroupId: parseInt(item.taxon_group_id, 10) || null,
       preferredTaxaTaxonListId:
@@ -248,13 +267,13 @@ export default class TaxonList extends Model<Data> {
         const batch = data.slice(i, i + BATCH_SIZE);
 
         const placeholders = batch
-          .map((_item: unknown, idx: number) => {
+          .map((_item, idx) => {
             const off = idx * 9;
             return `($${off + 1}, $${off + 2}, $${off + 3}, $${off + 4}, $${off + 5}, $${off + 6}, $${off + 7}, $${off + 8}, $${off + 9})`;
           })
           .join(',');
 
-        const params = batch.flatMap((item: (typeof data)[0]) => [
+        const params = batch.flatMap(item => [
           item.taxaTaxonListId,
           this.cid,
           item.taxonGroupId,

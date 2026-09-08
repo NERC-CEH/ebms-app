@@ -44,8 +44,8 @@ const Site = () => {
 
     try {
       await locations.fetchRemote();
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
 
     loader.hide();
@@ -81,14 +81,17 @@ const Site = () => {
     try {
       await loader.show('Please wait...');
 
-      const location = new Location({ skipStore: true, data: data as any });
+      const location = new Location({
+        skipStore: true,
+        data: data as LocationData,
+      });
       await location.saveRemote();
 
       await refreshSites();
 
       toast.success('Successfully saved a location.');
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
       loader.hide();
       return false;
     }

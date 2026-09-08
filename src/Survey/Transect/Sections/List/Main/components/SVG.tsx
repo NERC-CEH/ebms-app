@@ -1,14 +1,11 @@
 import { useRef, useEffect } from 'react';
 import { select, geoNaturalEarth1, geoPath } from 'd3';
+import type { Feature, Geometry, GeometryCollection } from 'geojson';
 
-type Geometry = {
-  type: string;
-  geometries?: any[];
-  [key: string]: any;
-};
+type Drawable = Geometry | Feature;
 
 type Props = {
-  geom: Geometry | Geometry[];
+  geom: Drawable | Drawable[];
 };
 
 const SVG = ({ geom }: Props) => {
@@ -17,52 +14,39 @@ const SVG = ({ geom }: Props) => {
   useEffect(() => {
     if (!ref.current) return;
 
-    const geoLineString = geom;
+    let geometries: Drawable[] = Array.isArray(geom) ? geom : [geom];
+    if (!Array.isArray(geom) && geom.type === 'GeometryCollection') {
+      geometries = geom.geometries;
+    }
 
-    const size = {
-      w: 40,
-      h: 40,
+    const size = { w: 40, h: 40 };
+    const collection: GeometryCollection = {
+      type: 'GeometryCollection',
+      geometries: geometries.map(item =>
+        item.type === 'Feature' ? item.geometry : item
+      ),
     };
-
-    const svg = select(ref.current)
-      .attr('width', size.w)
-      .attr('height', size.h);
-
-    const graph = svg.append('g');
-    const group = graph.append('g');
-
-    const isGeometryCollection =
-      (geoLineString as Geometry).type === 'GeometryCollection';
-
-    const projection = geoNaturalEarth1().fitSize(
-      [size.w, size.h],
-      isGeometryCollection
-        ? (geoLineString as any)
-        : (geoLineString as Geometry[])[0]
-    );
-
+    const projection = geoNaturalEarth1().fitSize([size.w, size.h], collection);
     const path = geoPath(projection);
 
-    const strokeColor = (_: any, index: number) =>
-      index % 2
-        ? 'var(--ion-color-primary-shade)'
-        : 'var(--ion-color-tertiary-tint)';
-
-    const data = isGeometryCollection
-      ? (geoLineString as Geometry).geometries!
-      : (geoLineString as any[]);
-
-    group
+    select(ref.current)
+      .attr('width', size.w)
+      .attr('height', size.h)
+      .append('g')
       .selectAll('path')
-      .data(data)
+      .data(geometries)
       .enter()
       .insert('path')
       .attr('width', size.w)
       .attr('height', size.h)
-      .attr('stroke', strokeColor)
+      .attr('stroke', (_, index) =>
+        index % 2
+          ? 'var(--ion-color-primary-shade)'
+          : 'var(--ion-color-tertiary-tint)'
+      )
       .attr('stroke-width', 2)
       .attr('fill', 'none')
-      .attr('d', path);
+      .attr('d', item => path(item));
   }, [geom]);
 
   return <svg ref={ref} />;

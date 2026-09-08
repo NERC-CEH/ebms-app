@@ -11,7 +11,7 @@ type Props = {
 const FullScreenPhotoViewer = ({ species, onClose, showGallery }: Props) => {
   useOnHideModal(onClose);
 
-  const getImageSource = (_: any, index: number) => {
+  const getImageSource = (_copyright: string, index: number) => {
     if (!species?.imageCopyright) return null;
     return {
       src: `/images/${species.id}_${index}_image.jpg`,

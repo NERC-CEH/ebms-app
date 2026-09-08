@@ -1,39 +1,55 @@
-export const speciesOccAddedTimeSort = ([, occ1]: any, [, occ2]: any) => {
-  if (occ1.createdAt !== 0 || occ2.createdAt !== 0)
-    return occ2.createdAt - occ1.createdAt;
+import { Taxon } from 'models/occurrence';
 
-  const taxon1 = occ1.taxon;
-  const taxonName1 = taxon1[taxon1.foundInName];
-
-  const taxon2 = occ2.taxon;
-  const taxonName2 = taxon2[taxon2.foundInName];
-
-  return taxonName1.localeCompare(taxonName2);
+export type SpeciesSummary = {
+  taxon: Taxon;
+  count: number;
+  createdAt?: number;
+  updatedAt?: number;
+  isDisabled?: boolean;
+  isGeolocating?: boolean;
+  hasLocationMissing?: boolean;
 };
 
-export const speciesOccUpdatedTimeSort = ([, occ1]: any, [, occ2]: any) =>
-  occ2.updatedAt - occ1.updatedAt;
+type SpeciesEntry = [string, SpeciesSummary];
 
-const compareAlphabetical = (taxon1: any, taxon2: any) => {
-  const foundInName1 = taxon1.foundInName;
-  const foundInName2 = taxon2.foundInName;
-  const taxonName1 = taxon1[foundInName1];
-  const taxonName2 = taxon2[foundInName2];
-  return taxonName1.localeCompare(taxonName2);
+const getTaxonName = (taxon: Taxon) =>
+  taxon.foundInName
+    ? taxon[taxon.foundInName] || taxon.scientificName
+    : taxon.scientificName;
+
+const compareAlphabetical = (first: Taxon, second: Taxon) =>
+  getTaxonName(first).localeCompare(getTaxonName(second));
+
+export const speciesOccAddedTimeSort = (
+  [, first]: SpeciesEntry,
+  [, second]: SpeciesEntry
+) => {
+  if (first.createdAt !== 0 || second.createdAt !== 0)
+    return second.createdAt! - first.createdAt!;
+
+  return compareAlphabetical(first.taxon, second.taxon);
 };
 
-export const speciesNameSort = ([, occ1]: any, [, occ2]: any) =>
-  compareAlphabetical(occ1.taxon, occ2.taxon);
+export const speciesOccUpdatedTimeSort = (
+  [, first]: SpeciesEntry,
+  [, second]: SpeciesEntry
+) => second.updatedAt! - first.updatedAt!;
 
-export const speciesCount = ([, occ1]: any, [, occ2]: any) => {
-  if (occ2.count === occ1.count)
-    return compareAlphabetical(occ1.taxon, occ2.taxon);
+export const speciesNameSort = (
+  [, first]: SpeciesEntry,
+  [, second]: SpeciesEntry
+) => compareAlphabetical(first.taxon, second.taxon);
 
-  return occ2.count - occ1.count;
-};
+export const speciesCount = (
+  [, first]: SpeciesEntry,
+  [, second]: SpeciesEntry
+) =>
+  second.count === first.count
+    ? compareAlphabetical(first.taxon, second.taxon)
+    : second.count - first.count;
 
 export const getDefaultTaxonCount = (
-  taxon: any,
+  taxon: Taxon,
   createdAt?: number,
   updatedAt?: number
 ) => ({

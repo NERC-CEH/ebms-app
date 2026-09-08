@@ -5,7 +5,7 @@ import wkt from 'wellknown';
 import { getGeomMetersToLatLon } from '@flumens';
 import Location from 'models/location';
 
-export const getShapeFromGeom = (geom?: string | null) => {
+export const getShapeFromGeom = (geom?: string) => {
   if (!geom) return undefined;
 
   const geomParsed = wkt.parse(geom) as Polygon | LineString | MultiPolygon;
@@ -20,7 +20,7 @@ type Props = {
 };
 
 const SiteBoundary = ({ site }: Props) => {
-  const shape = getShapeFromGeom(site?.data.boundaryGeom);
+  const shape = getShapeFromGeom(site?.data.boundaryGeom ?? undefined);
   if (!shape) return null;
 
   const data = {

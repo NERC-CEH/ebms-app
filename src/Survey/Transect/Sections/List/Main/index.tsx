@@ -1,30 +1,34 @@
 import { observer } from 'mobx-react';
+import type { Feature, Geometry } from 'geojson';
 import { useRouteMatch } from 'react-router';
 import wkt from 'wellknown';
 import { Main, getGeomMetersToLatLon } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import locations from 'common/models/collections/locations';
+import Location from 'models/location';
 import Sample from 'models/sample';
 import SVG from './components/SVG';
 import Transects from './components/Transects';
 
-const getSectionItem = (sectionSample: Sample, match: any) => {
+const getSectionItem = (sectionSample: Sample, match: { url: string }) => {
   const section = locations.idMap.get(sectionSample.data.locationId || '');
 
   const locationName =
-    section?.data.name ||
-    (section as any)?.code ||
-    sectionSample.data.locationId; // for remote ones
+    section?.data.name || section?.data.code || sectionSample.data.locationId;
 
-  let geom: any;
+  let geom: Feature[] | null = null;
   if (section?.data.boundaryGeom) {
-    geom = wkt.parse(section.data.boundaryGeom);
-    if (geom) {
-      geom = getGeomMetersToLatLon(geom);
-      geom = [{ type: 'Feature', geometry: geom }];
-      if (geom?.type === 'Point') {
-        geom = null;
+    const parsed = wkt.parse(section.data.boundaryGeom) as Geometry | null;
+    if (
+      parsed &&
+      parsed.type !== 'GeometryCollection' &&
+      parsed.type !== 'MultiLineString' &&
+      parsed.type !== 'MultiPoint'
+    ) {
+      const geometry = getGeomMetersToLatLon(parsed);
+      if (geometry.type !== 'Point') {
+        geom = [{ type: 'Feature', properties: null, geometry }];
       }
     }
   }
@@ -62,10 +66,10 @@ const getSectionItem = (sectionSample: Sample, match: any) => {
 
 type Props = {
   sample: Sample;
-  onTransectSelect: any;
+  onTransectSelect: (transect: Location) => void;
 };
 const Sections = ({ sample, onTransectSelect }: Props) => {
-  const match = useRouteMatch<any>();
+  const match = useRouteMatch();
 
   const hasSelectedTransect = sample.data.locationId;
   if (!hasSelectedTransect)

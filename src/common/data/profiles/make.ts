@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import fs from 'fs';
 // eslint-disable-next-line
 import fetchSheet from '@flumens/fetch-onedrive-excel';
-import { getCamelCaseObj } from '@flumens/utils';
+import { getCamelCaseObj } from '@flumens/utils/dist/cases.js';
 
 dotenv.config({ path: '../../../../.env' });
 
@@ -20,119 +20,109 @@ const drive =
 
 const file = '01UPL42ZUY3DX66DOFLNCJNHYIP24BVJCL';
 
-function getCountryMap(string: any) {
-  const map: any = {};
-  if (string === null) return map;
+type CountryMap = Record<string, string>;
 
-  const transformCountryFormat = ([key, val]: any) => {
-    const normKey = key.replace(': ', '_');
-    const normVal = val.replace('?', '');
-    map[normKey] = normVal;
-  };
-  Object.entries(JSON.parse(string)).forEach(transformCountryFormat);
-  return map;
+/* eslint-disable @typescript-eslint/naming-convention */
+type WarehouseSpecies = {
+  taxa_taxon_list_id: string;
+  external_key: string;
+  language_iso: string;
+  taxon: string;
+  preferred_taxon: string;
+  attributes?: string;
+  abundance?: CountryMap;
+};
+/* eslint-enable @typescript-eslint/naming-convention */
+
+type SpeciesInfo = Record<string, unknown> & {
+  id: number;
+  taxon: string;
+};
+
+function getCountryMap(value: string | null) {
+  if (value === null) return {};
+
+  return Object.entries(
+    JSON.parse(value) as Record<string, string>
+  ).reduce<CountryMap>((result, [key, countryValue]) => {
+    result[key.replace(': ', '_')] = countryValue.replace('?', '');
+    return result;
+  }, {});
 }
 
-async function fetchWarehouseSpecies(listID: any) {
-  const { data } = await axios({
-    method: 'GET',
-    url: `${warehouseURL}/index.php/services/rest/reports/projects/ebms/ebms_app_species_list.xml`,
-    params: {
-      id: listID,
-      type: 'list',
-      limit: 10000000,
-    },
-    headers: {
-      Authorization: `Bearer ${APP_WAREHOUSE_ANON_TOKEN}`,
-    },
-  });
+async function fetchWarehouseSpecies(listID: number) {
+  const { data } = await axios.get<{ data: WarehouseSpecies[] }>(
+    `${warehouseURL}/index.php/services/rest/reports/projects/ebms/ebms_app_species_list.xml`,
+    {
+      params: { id: listID, type: 'list', limit: 10000000 },
+      headers: { Authorization: `Bearer ${APP_WAREHOUSE_ANON_TOKEN}` },
+    }
+  );
 
-  const parseAttributes = ({ attributes, ...sp }: any) => ({
-    ...sp,
-    abundance: getCountryMap(attributes),
-  });
-
-  const byLatinLanguageWithoutSpecificTaxon = (s: any) =>
-    s.language_iso === 'lat' && !s.taxon.includes('Unterfamilie');
-  const hasAttributes = (s: any) => !!s.attributes;
-  const isPreferred = (s: any) => s.preferred_taxon === s.taxon;
-  const latinData = data.data
-    .filter(byLatinLanguageWithoutSpecificTaxon)
-    .filter(hasAttributes)
-    .filter(isPreferred)
-    .map(parseAttributes);
-
-  return latinData;
+  return data.data
+    .filter(
+      species =>
+        species.language_iso === 'lat' &&
+        !species.taxon.includes('Unterfamilie')
+    )
+    .filter(species => !!species.attributes)
+    .filter(species => species.preferred_taxon === species.taxon)
+    .map(({ attributes, ...species }) => ({
+      ...species,
+      abundance: getCountryMap(attributes || null),
+    }));
 }
 
-function save(species: any) {
-  const saveWrap = (resolve: any, reject: any) => {
-    const dataOption = (err: any) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-
-      resolve(species);
-    };
-    fs.writeFile('./data.json', JSON.stringify(species), dataOption);
-  };
-  return new Promise(saveWrap);
+async function save<Value>(value: Value) {
+  await fs.promises.writeFile('./data.json', JSON.stringify(value));
+  return value;
 }
 
-function saveToFile(data: any, name: any) {
-  const saveSpeciesToFileWrap = (resolve: any, reject: any) => {
-    const fileName = `./cache/${name}.json`;
-    console.log(`Writing ${fileName}`);
-
-    const dataOption = (err: any) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-
-      resolve(data);
-    };
-
-    fs.writeFile(fileName, JSON.stringify(data, null, 2), dataOption);
-  };
-  return new Promise(saveSpeciesToFileWrap);
+async function saveToFile<Value>(data: Value, name: string) {
+  const fileName = `./cache/${name}.json`;
+  console.log(`Writing ${fileName}`);
+  await fs.promises.writeFile(fileName, JSON.stringify(data, null, 2));
+  return data;
 }
 
-const fetchDatasheetAndSave = async (sheet: any) => {
-  const sheetData = await fetchSheet({ drive, file, sheet });
-  saveToFile(sheetData, sheet);
+const fetchDatasheetAndSave = async (sheet: string) => {
+  const sheetData = (await fetchSheet({ drive, file, sheet })) as SpeciesInfo[];
+  await saveToFile(sheetData, sheet);
   return sheetData;
 };
 
-async function attachProfileInfo(warehouseSpecies: any, speciesInfoList: any) {
-  const getSpeciesWithInfo = (sp: any) => {
-    const byTaxon = (spInfo: any) =>
-      spInfo.taxon === sp.taxon || spInfo.taxon === sp.preferred_taxon;
+function attachProfileInfo(
+  warehouseSpecies: WarehouseSpecies[],
+  speciesInfoList: SpeciesInfo[]
+) {
+  return warehouseSpecies
+    .map(species => {
+      const speciesInfo = speciesInfoList.find(
+        info =>
+          info.taxon === species.taxon || info.taxon === species.preferred_taxon
+      );
+      if (!speciesInfo) return null;
 
-    const speciesInfo = speciesInfoList.find(byTaxon);
-
-    return {
-      ...getCamelCaseObj(speciesInfo),
-      warehouseId: parseInt(sp.taxa_taxon_list_id, 10),
-      externalKey: sp.external_key,
-      taxon: sp.taxon,
-      abundance: sp.abundance,
-    };
-  };
-
-  const hasValue = (sp: any) => !!sp;
-  const byId = (s1: any, s2: any) =>
-    s1.id - s2.id || s1.warehouseId - s2.warehouseId;
-
-  return warehouseSpecies.map(getSpeciesWithInfo).filter(hasValue).sort(byId);
+      return {
+        ...getCamelCaseObj(speciesInfo),
+        warehouseId: Number.parseInt(species.taxa_taxon_list_id, 10),
+        externalKey: species.external_key,
+        taxon: species.taxon,
+        abundance: species.abundance,
+      };
+    })
+    .filter(species => species !== null)
+    .sort(
+      (first, second) =>
+        first.id - second.id || first.warehouseId - second.warehouseId
+    );
 }
 
 const getData = async () => {
   const speciesInfoList = await fetchDatasheetAndSave('species');
 
   await fetchWarehouseSpecies(251)
-    .then(warehouseSp => attachProfileInfo(warehouseSp, speciesInfoList))
+    .then(species => attachProfileInfo(species, speciesInfoList))
     .then(save)
     .then(() => console.log('All done! 🚀'));
 };

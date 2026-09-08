@@ -5,7 +5,7 @@ import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
 import { device, sentryOptions } from '@flumens';
 import { setupIonicReact, isPlatform } from '@ionic/react';
-import SentryBrowser from '@sentry/browser';
+import { init as initSentry } from '@sentry/browser';
 import config from 'common/config';
 import migrationManager from 'common/migrations';
 import groups from 'common/models/collections/groups';
@@ -50,7 +50,7 @@ mobxConfig({ enforceActions: 'never' });
       });
 
   appModel.data.sendAnalytics &&
-    SentryBrowser.init({
+    initSentry({
       ...sentryOptions,
       dsn: config.sentryDSN,
       environment: config.environment,

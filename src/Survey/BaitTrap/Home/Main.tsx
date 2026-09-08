@@ -59,7 +59,7 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
 
   const { isDisabled } = sample;
 
-  const trapVisits: Sample<SubSmpData>[] = sample.samples || [];
+  const trapVisits = sample.samples as unknown as Sample<SubSmpData>[];
 
   // build flat array with date dividers and trap visits
   type DateDivider = {
@@ -82,11 +82,12 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
   [...trapVisits]
     .sort(
       (a, b) =>
-        new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+        new Date(b.data.date ?? '').getTime() -
+        new Date(a.data.date ?? '').getTime()
     )
     .forEach(trapVisit => {
       const date = roundDate(
-        new Date(trapVisit.data.date).getTime()
+        new Date(trapVisit.data.date ?? '').getTime()
       ).toString();
 
       if (date === 'Invalid Date') return;

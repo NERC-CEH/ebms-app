@@ -29,7 +29,7 @@ const Groups = () => {
   // eslint-disable-next-line
   groups.length; // to force refresh when groups list is updated
 
-  const onSelect = (groupId: any) => {
+  const onSelect = (groupId: string) => {
     const byId = (group: Group) => group.id === groupId;
     const group = groups.find(byId);
     if (!group) {
@@ -53,8 +53,8 @@ const Groups = () => {
       await groups.fetchRemote({ type: 'joinable' });
 
       toast.success('Successfully joined the project.');
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
 
     loader.hide();
@@ -78,8 +78,8 @@ const Groups = () => {
       }
 
       toast.success('Successfully left the project.');
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
 
     loader.hide();
@@ -100,8 +100,8 @@ const Groups = () => {
 
     try {
       await groups.fetchRemote({ type });
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
 
     loader.hide();

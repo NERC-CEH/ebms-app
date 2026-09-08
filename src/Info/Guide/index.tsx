@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { openOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Page, Main, Header, Section } from '@flumens';
@@ -97,7 +98,7 @@ const Component = () => {
             requires that your account is already linked to a transect setup
             within the eBMS system. If no transect sites are listed once you are
             logged into the app, please contact your national co-ordinator
-            (please email {{ helpEmail } as any} for advice).
+            (please email {{ helpEmail } as unknown as ReactNode} for advice).
           </P>
           <P>
             To start with the transect count, hold down the + button (a

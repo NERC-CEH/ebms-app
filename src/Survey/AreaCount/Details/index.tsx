@@ -10,7 +10,7 @@ import Sample, { useValidateCheck } from 'models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
 import Main from './Main';
 
-function useDeleteSurveyPrompt(alert: any) {
+function useDeleteSurveyPrompt(alert: ReturnType<typeof useAlert>) {
   const deleteSurveyPromt = (resolve: (param: boolean) => void) => {
     alert({
       header: 'Delete Survey',
@@ -36,7 +36,7 @@ function useDeleteSurveyPrompt(alert: any) {
   return deleteSurveyPromtWrap;
 }
 
-const cancelButtonWrap = (onDeleteSurvey: any) => (
+const cancelButtonWrap = (onDeleteSurvey: () => void) => (
   <IonButtons slot="start">
     <IonButton onClick={onDeleteSurvey}>
       <T>Cancel</T>
@@ -117,7 +117,7 @@ const DetailsController = () => {
     navigate(path, 'forward', 'replace');
   };
 
-  const isInvalid = sample?.validateRemote();
+  const isInvalid = !!sample?.validateRemote();
 
   const startTimerButton = !hasTimerStarted && (
     <HeaderButton onClick={onStartTimer} isInvalid={isInvalid}>

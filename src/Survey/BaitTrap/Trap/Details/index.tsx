@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import { useRouteMatch } from 'react-router';
 import { Page, Header, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
+import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
 import { Data, SubSmpData } from '../../config';
@@ -14,7 +15,7 @@ const TrapDetailsController = () => {
 
   const { sample, subSample } = useSample<
     Sample<Data>,
-    any,
+    Occurrence,
     Sample<SubSmpData>
   >();
   if (!sample || !subSample) return null;
@@ -28,7 +29,7 @@ const TrapDetailsController = () => {
     navigate(url, 'forward', 'replace');
   };
 
-  const isInvalid = subSample.validateRemote();
+  const isInvalid = !!subSample.validateRemote();
 
   const nextButton = subSample.metadata.completedDetails ? null : (
     <HeaderButton onClick={onFinish} isInvalid={isInvalid}>

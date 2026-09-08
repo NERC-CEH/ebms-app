@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, type ElementRef } from 'react';
 import { CreateAnimation } from '@ionic/react';
 import './styles.scss';
 
@@ -8,7 +8,7 @@ type Props = {
 
 const AnimatedNumber = ({ value }: Props) => {
   const [initialised, setInitialised] = useState<boolean>(false);
-  const first = useRef<any>(null);
+  const first = useRef<ElementRef<typeof CreateAnimation>>(null);
 
   const playAnimation = () => {
     if (!initialised) {
@@ -18,8 +18,8 @@ const AnimatedNumber = ({ value }: Props) => {
 
     // doing this programmatically to reset the progress
     // on value change before animation finishes
-    first.current.animation.progressStep(0);
-    first.current.animation.play();
+    first.current?.animation.progressStep(0);
+    first.current?.animation.play();
   };
   useEffect(playAnimation, [value, first]);
 

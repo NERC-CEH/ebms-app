@@ -33,13 +33,13 @@ export type Species = {
   commonName?: string;
   family?: string;
   descriptionKey?: string;
-  imageCopyright?: string[] | null;
+  imageCopyright?: string[];
   abundance: Partial<
     Record<Exclude<CountryCode, 'UK' | 'ELSEWHERE'>, AbundanceCode>
   >;
 };
 
-const speciesWithCommonNames = observable<Species>(species);
+const speciesWithCommonNames = observable(species as Species[]);
 
 const scientificNameToSpeciesMap: Record<string, Species> = {};
 speciesWithCommonNames.forEach(sp => {
@@ -57,9 +57,9 @@ taxonLists.ready.then(async () => {
         .filter(sp => !!sp.descriptionKey) // optimise by only looking for species with descriptionKey
         .map(sp => sp.warehouseId);
 
-      const synonym: any = alias(taxaStore.table, 'synonym');
+      const synonym = alias(taxaStore.table, 'synonym');
 
-      const query: any = new QueryBuilder()
+      const query = new QueryBuilder()
         .select({
           id: taxaStore.table.id,
           commonName: sql`${synonym.taxon} as commonName`,
@@ -75,7 +75,10 @@ taxonLists.ready.then(async () => {
         .where(inArray(taxaStore.table.id, ids))
         .groupBy(taxaStore.table.id); // we only want one common name per species
 
-      const res: any = await taxaStore.db.query(query.toSQL());
+      const res = await taxaStore.db.query<{
+        id: number;
+        commonName: string;
+      }>(query.toSQL());
 
       // get id-name map for easy lookup
       const commonNameMap: Record<number, string> = {};
@@ -96,7 +99,7 @@ taxonLists.ready.then(async () => {
 export const getSpeciesProfileByName = (scientificName: string) =>
   scientificNameToSpeciesMap[scientificName];
 
-export const speciesGroupIcons = {
+export const speciesGroupIcons: Partial<Record<number, string>> = {
   104: butterflyIcon,
   114: mothIcon,
   107: dragonflyIcon,
@@ -123,9 +126,7 @@ export const getSpeciesProfileImage = ({
 
   return (
     <IonIcon
-      icon={
-        taxonGroupId ? (speciesGroupIcons as any)[taxonGroupId] : butterflyIcon
-      }
+      icon={(taxonGroupId && speciesGroupIcons[taxonGroupId]) || butterflyIcon}
       className="p-2 size-full opacity-55"
     />
   );

@@ -1,5 +1,5 @@
 import { observable } from 'mobx';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import {
   Collection,
   device,
@@ -10,6 +10,22 @@ import config from 'common/config';
 import appModel from '../app';
 import { taxonListsStore } from '../store';
 import TaxonList, { DTO } from '../taxonList';
+
+/* eslint-disable @typescript-eslint/naming-convention */
+type RemoteTaxonList = {
+  id: number;
+  type: DTO['type'];
+  name?: string;
+  description?: string;
+  species_groups?: string;
+  updated_on: string;
+  coordinates?: string;
+  taxa_count: string;
+  location_code?: string;
+  projects?: string;
+  locations?: string;
+};
+/* eslint-enable @typescript-eslint/naming-convention */
 
 type RemoteFetchParams = {
   limit?: number;
@@ -85,11 +101,9 @@ class TaxonListCollection extends Collection<TaxonList> {
         timeout: 80000,
       };
 
-      const res = await axios.get(url, options);
+      const res = await axios.get<{ data: RemoteTaxonList[] }>(url, options);
 
-      type Parsed = { doc: DTO; groupIds: string[]; locationIds: string[] };
-
-      const parsed: Parsed[] = res.data.data.map((item: any) => ({
+      const parseItem = (item: RemoteTaxonList) => ({
         doc: {
           id: item.id,
           type: item.type,
@@ -101,13 +115,16 @@ class TaxonListCollection extends Collection<TaxonList> {
             ?.replaceAll('{', '')
             .replaceAll('}', '')
             .split(',')
-            .map(parseFloat),
+            .map(parseFloat) as DTO['coordinates'],
           size: Number.parseInt(item.taxa_count, 10) || 0,
           locationCode: item.location_code,
         },
-        groupIds: JSON.parse(item.projects || '[]').map(String),
-        locationIds: JSON.parse(item.locations || '[]').map(String),
-      }));
+        groupIds: (JSON.parse(item.projects || '[]') as unknown[]).map(String),
+        locationIds: (JSON.parse(item.locations || '[]') as unknown[]).map(
+          String
+        ),
+      });
+      const parsed = res.data.data.map(parseItem);
 
       // create ephemeral models (not stored in local database)
       const full = parsed.map(({ doc, groupIds, locationIds }) => ({
@@ -123,14 +140,14 @@ class TaxonListCollection extends Collection<TaxonList> {
       this.remote.synchronising = false;
 
       return full;
-    } catch (error: any) {
+    } catch (error) {
       this.remote.synchronising = false;
 
       if (axios.isCancel(error)) {
         return [];
       }
 
-      if (isAxiosNetworkError(error)) {
+      if (isAxiosNetworkError(error as AxiosError)) {
         throw new HandledError(
           'Request aborted because of a network issue (timeout or similar).'
         );
@@ -239,7 +256,5 @@ class TaxonListCollection extends Collection<TaxonList> {
 }
 
 const taxonListsCollection = new TaxonListCollection();
-
-// (window as any).taxonListsCollection = taxonListsCollection; // for debugging
 
 export default taxonListsCollection;

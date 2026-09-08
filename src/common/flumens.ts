@@ -10,10 +10,13 @@ export {
   type Options as SampleOptions,
   type Metadata as SampleMetadata,
   type RemoteConfig,
+  type Survey as BaseSurvey,
+  type Submission as SampleSubmission,
 } from '@flumens/models/dist/Indicia/Sample';
 export {
   default as MediaModel,
   type Data as MediaData,
+  type Options as MediaOptions,
 } from '@flumens/models/dist/Indicia/Media';
 export {
   default as OccurrenceModel,
@@ -23,6 +26,7 @@ export {
 } from '@flumens/models/dist/Indicia/Occurrence';
 export {
   default as GroupCollection,
+  type Options as GroupCollectionOptions,
   byGroupMembershipStatus,
 } from '@flumens/models/dist/Indicia/GroupCollection';
 export {
@@ -40,6 +44,7 @@ export {
   default as LocationModel,
   type Data as LocationData,
   type Options as LocationOptions,
+  type DTO as LocationDTO,
   dtoSchema as locationDtoSchema,
   LocationType,
 } from '@flumens/models/dist/Indicia/Location';
@@ -51,9 +56,14 @@ export {
 export {
   default as DrupalUserModel,
   type Data as DrupalUserModelData,
+  type Options as DrupalUserModelOptions,
 } from '@flumens/models/dist/Drupal/User';
 export { default as Collection } from '@flumens/models/dist/Collection';
-export { default as Store } from '@flumens/models/dist/Stores/SQLiteStore';
+export {
+  default as Store,
+  type SQLiteStoreOptions,
+  type SelectQueryFn,
+} from '@flumens/models/dist/Stores/SQLiteStore';
 export {
   type default as ElasticSample,
   type Media as ElasticSampleMedia,
@@ -148,6 +158,7 @@ export {
 } from '@flumens/tailwind/dist/components/Context';
 export {
   type BlockConf as BlockT,
+  type Choice,
   type ChoiceValues,
 } from '@flumens/tailwind/dist/Survey';
 export { default as Block } from '@flumens/tailwind/dist/components/Block';

@@ -12,10 +12,11 @@ import {
 } from '@flumens';
 import { NavContext, IonButton, isPlatform } from '@ionic/react';
 import Occurrence from 'models/occurrence';
+import Sample from 'models/sample';
 import CompassModal from './CompassModal';
 import './styles.scss';
 
-const unsupportedDevice = (alert: any) => {
+const unsupportedDevice = (alert: ReturnType<typeof useAlert>) => {
   alert({
     header: 'Unsupported device',
     message: (
@@ -40,12 +41,12 @@ const Direction = () => {
   const alert = useAlert();
   const { goBack } = useContext(NavContext);
 
-  const { occurrence } = useSample<any, Occurrence>();
+  const { occurrence } = useSample<Sample, Occurrence>();
   if (!occurrence) throw new Error('Occurrence is missing');
 
   let rotation = 0;
 
-  function normalizeValue(newDirection: any) {
+  function normalizeValue(newDirection: number) {
     let newAngle;
     rotation = rotation || 0;
     newAngle = rotation % 360;
@@ -71,14 +72,14 @@ const Direction = () => {
   const attrProps = occurrenceConfig.attrs!.direction.pageProps!
     .attrProps as AttrPropsExtended;
 
-  const onValueChange = (directionValue: any) => {
+  const onValueChange = (directionValue: number) => {
     occurrence.data.direction = directionValue;
     occurrence.save();
 
     goBack();
   };
 
-  const handler = (e: any) => {
+  const handler = (e: DeviceOrientationEvent) => {
     if (e.alpha === null) {
       unsupportedDevice(alert);
       return;
@@ -90,6 +91,12 @@ const Direction = () => {
     setRotationValue(normalizeDirection);
   };
 
+  type PermissionedDeviceOrientationEvent = typeof DeviceOrientationEvent & {
+    requestPermission?: () => Promise<'denied' | 'granted'>;
+  };
+  const deviceOrientationEvent =
+    window.DeviceOrientationEvent as PermissionedDeviceOrientationEvent;
+
   const addDeviceOrientationEvent = () => {
     if (isPlatform('android')) {
       window.addEventListener('deviceorientationabsolute', handler);
@@ -98,7 +105,7 @@ const Direction = () => {
 
     if (
       window.DeviceOrientationEvent &&
-      (window.DeviceOrientationEvent as any)?.requestPermission
+      deviceOrientationEvent.requestPermission
     ) {
       window.addEventListener('deviceorientation', handler);
     } else {
@@ -122,11 +129,8 @@ const Direction = () => {
   }, [startCompass, setStartCompass]);
 
   const toggleModal = () => {
-    if (
-      isPlatform('ios') &&
-      (window.DeviceOrientationEvent as any)?.requestPermission
-    ) {
-      (window.DeviceOrientationEvent as any)?.requestPermission();
+    if (isPlatform('ios') && deviceOrientationEvent.requestPermission) {
+      deviceOrientationEvent.requestPermission();
     }
 
     setStartCompass(!startCompass);

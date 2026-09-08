@@ -71,20 +71,20 @@ const DetailsMain = ({ sample }: Props) => {
             <MenuDateAttr
               label="Date"
               value={sample.data.date}
-              onChange={val => (sample.data.date = val)} // eslint-disable-line no-return-assign, no-param-reassign
+              onChange={val => (sample.data.date = val)} // eslint-disable-line no-return-assign
               isDisabled={sample.isUploaded}
             />
             <Block record={sample.data} block={numberOfDaysAttr} />
             <MenuDateAttr
               label={firstSampleDateAttr.title}
               value={sample.data[firstSampleDateAttr.id]}
-              onChange={val => (sample.data[firstSampleDateAttr.id] = val)} // eslint-disable-line no-return-assign, no-param-reassign
+              onChange={val => (sample.data[firstSampleDateAttr.id] = val)} // eslint-disable-line no-return-assign
               isDisabled={sample.isUploaded}
             />
             <MenuDateAttr
               label={lastSampleDateAttr.title}
               value={sample.data[lastSampleDateAttr.id]}
-              onChange={val => (sample.data[lastSampleDateAttr.id] = val)} // eslint-disable-line no-return-assign, no-param-reassign
+              onChange={val => (sample.data[lastSampleDateAttr.id] = val)} // eslint-disable-line no-return-assign
               isDisabled={sample.isUploaded}
               // Set max date to 1 year from now to prevent users from selecting a date far in the future
               max={new Date(

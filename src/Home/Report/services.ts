@@ -56,7 +56,7 @@ export async function fetchSpeciesReport(): Promise<Species[]> {
       count: bucket.doc_count,
       taxonGroupId: bucket.groupId ? bucket.groupId.value : undefined,
     }));
-  } catch (error: unknown) {
+  } catch (error) {
     if (isAxiosNetworkError(error as AxiosError))
       throw new HandledError(
         'Request aborted because of a network issue (timeout or similar).'

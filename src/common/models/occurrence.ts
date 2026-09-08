@@ -3,6 +3,7 @@ import {
   OccurrenceModel,
   OccurrenceData,
   OccurrenceMetadata,
+  OccurrenceOptions as Options,
   validateRemoteModel,
 } from '@flumens';
 import config from 'common/config';
@@ -30,7 +31,7 @@ type ClassifierAttributes = {
 export type Taxon = {
   warehouseId: number;
   scientificName: string;
-  preferredId?: any;
+  preferredId?: number;
   foundInName?: 'commonName' | 'scientificName';
   taxonGroupId?: number;
   commonName?: string;
@@ -49,9 +50,9 @@ export type Data = Omit<OccurrenceData, 'taxon'> & {
   comment?: string;
   stage?: string;
   dragonflyStage?: string;
-  identifier?: any;
-  count?: any;
-  'count-outside'?: any;
+  identifier?: string;
+  count?: number;
+  'count-outside'?: number;
   timeOfSighting?: string;
 } & PaintedLadyAttrs;
 
@@ -72,9 +73,10 @@ export const doesShallowTaxonMatch = (shallowEntry: Taxon, taxon: Taxon) => {
   return false;
 };
 
-export default class Occurrence<
-  T extends OccurrenceData = Data,
-> extends OccurrenceModel<T, Metadata> {
+export default class Occurrence<T extends Data = Data> extends OccurrenceModel<
+  T,
+  Metadata
+> {
   declare media: IObservableArray<Media>;
 
   declare parent?: Sample;
@@ -83,11 +85,20 @@ export default class Occurrence<
 
   validateRemote = validateRemoteModel;
 
-  constructor(options: any) {
-    super({ ...options, Media });
+  constructor(options: Options<Partial<T>>) {
+    super({ ...options, Media } as Options<T>);
 
     // backwards compatibility for old taxon structure. TODO: remove later once all uploaded.
-    const oldTaxon = this.data.taxon;
+
+    /* eslint-disable @typescript-eslint/naming-convention */
+    type LegacyTaxon = {
+      warehouse_id?: number;
+      scientific_name?: string;
+      common_name?: string;
+      found_in_name?: Taxon['foundInName'];
+      group?: number;
+    };
+    const oldTaxon = this.data.taxon as Taxon & LegacyTaxon;
     if (oldTaxon.warehouse_id) {
       Object.assign(this.data.taxon, {
         warehouseId: oldTaxon.warehouse_id,
@@ -95,17 +106,21 @@ export default class Occurrence<
         commonName: oldTaxon.common_name,
         foundInName: oldTaxon.found_in_name,
         taxonGroupId: oldTaxon.group,
-        warehouse_id: null, // eslint-disable-line @typescript-eslint/naming-convention
+        warehouse_id: null,
       });
     }
 
     // backwards compatibility for old attrs. TODO: remove later once all uploaded.
-    if ((this.data as any).zero_abundance) {
+
+    type LegacyData = { zero_abundance?: boolean };
+    const legacyData = this.data as T & LegacyData;
+    if (legacyData.zero_abundance) {
       Object.assign(this.data, {
-        zeroAbundance: (this.data as any).zero_abundance,
-        zero_abundance: null, // eslint-disable-line @typescript-eslint/naming-convention
+        zeroAbundance: legacyData.zero_abundance,
+        zero_abundance: null,
       });
     }
+    /* eslint-enable @typescript-eslint/naming-convention */
   }
 
   getTaxonName() {
@@ -187,7 +202,6 @@ export default class Occurrence<
   };
 
   getTopSuggestion(suggestions?: Suggestion[]) {
-    // eslint-disable-next-line no-param-reassign
     suggestions = suggestions || this.data.taxon?.suggestions;
 
     let highestProbSpecies: Suggestion | undefined;
@@ -247,7 +261,9 @@ export default class Occurrence<
 
     if (!mediaPaths.length) return null;
 
-    const values: any = {};
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    type ClassifierValues = { machine_involvement?: MachineInvolvement };
+    const values: ClassifierValues = {};
     if (Number.isFinite(taxon?.machineInvolvement)) {
       values.machine_involvement = taxon?.machineInvolvement;
     }

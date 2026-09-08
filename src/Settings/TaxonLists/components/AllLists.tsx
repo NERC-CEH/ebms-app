@@ -6,6 +6,7 @@ import {
   IonItem,
   IonRefresher,
   IonRefresherContent,
+  type RefresherCustomEvent,
 } from '@ionic/react';
 import TaxonList from 'common/models/taxonList';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
@@ -23,12 +24,9 @@ type Data = {
 };
 
 const Item = ({ index, style, data }: ItemProps<Data>) => {
-  const lists: TaxonList[] = data.lists;
-  const onInstall: any = data.onInstall;
+  const list = data.lists[index];
 
-  const list: TaxonList = lists[index];
-
-  const handleInstallClick = () => onInstall(list);
+  const handleInstallClick = () => data.onInstall(list);
 
   return (
     <IonItem
@@ -79,7 +77,7 @@ const AllLists = ({ onInstall, lists, onRefresh }: Props) => {
     );
   }
 
-  const onListRefreshPull = (e: any) => {
+  const onListRefreshPull = (e: RefresherCustomEvent) => {
     onRefresh();
     e?.detail?.complete(); // refresh pull update
   };

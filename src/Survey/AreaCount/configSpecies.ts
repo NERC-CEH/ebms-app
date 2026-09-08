@@ -1,11 +1,11 @@
-/* eslint-disable no-param-reassign */
 import i18n from 'i18next';
 import { resizeOutline, flowerOutline, arrowBackOutline } from 'ionicons/icons';
 import { merge } from 'lodash';
 import z from 'zod';
 import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from 'common/images/caterpillar.svg';
-import { areaCountSchema, Survey } from 'Survey/common/config';
+import Occurrence from 'models/occurrence';
+import { areaCountSchema, Survey, type Submission } from 'Survey/common/config';
 import desertNettleImg from './common/images/desertNettle.jpg';
 import freshImg from './common/images/fresh.png';
 import mallowImg from './common/images/mallow.jpg';
@@ -16,21 +16,19 @@ import wornImg from './common/images/worn.png';
 import coreSurvey from './config';
 
 export type PaintedLadyAttrs = {
-  wing?: any;
-  behaviour?: any;
-  direction?: any;
-  eggLaying?: any;
-  otherEggLaying?: any;
-  otherThistles?: any;
-  nectarSource?: any;
-  mating?: any;
+  wing?: string[];
+  behaviour?: string;
+  direction?: number | string;
+  altitude?: string;
+  eggLaying?: string[];
+  otherEggLaying?: string;
+  otherThistles?: string;
+  nectarSource?: string;
+  mating?: string;
 };
 
-const translateEggLayingValue = (eggLayingValues: any) => {
-  if (!eggLayingValues?.length) return null;
-
-  return eggLayingValues.map((value: any) => i18n.t(value)).join(', ');
-};
+const translateEggLayingValue = (eggLayingValues?: string[]) =>
+  eggLayingValues?.map(value => i18n.t(value)).join(', ') || null;
 
 const wingConditionValues = [
   {
@@ -166,8 +164,8 @@ const speciesConfig: Survey = {
         count: {
           remote: {
             id: 780,
-            values: (value: any, _: any, model: any) =>
-              model.data.zeroAbundance ? null : value,
+            values: (value: number, _: Submission, model?: Occurrence) =>
+              model?.data.zeroAbundance ? null : value,
           },
         },
 
@@ -181,14 +179,10 @@ const speciesConfig: Survey = {
           },
           remote: {
             id: 977,
-            values(wingValues: any, submission: any) {
-              const bySameGroup = (wingObject: any) =>
-                wingValues.includes(wingObject.value);
-              const extractID = (obj: any) => obj.id;
-
+            values(wingValues: string[], submission: Submission) {
               const wingValueIDs = wingConditionValues
-                .filter(bySameGroup)
-                .map(extractID);
+                .filter(({ value }) => wingValues.includes(value))
+                .map(({ id }) => id);
 
               submission.values['occAttr:977'] = wingValueIDs;
             },
@@ -200,18 +194,20 @@ const speciesConfig: Survey = {
           pageProps: {
             attrProps: {
               input: 'radio',
-              set: (value: any, model: any) => {
+              set: (value: string | null, model: Occurrence) => {
                 if (model.data.behaviour !== value) {
-                  model.data.direction = null;
-                  model.data.altitude = null;
-                  model.data.nectarSource = null;
-                  model.data.eggLaying = [];
-                  model.data.otherEggLaying = null;
-                  model.data.mating = null;
-                  model.data.otherThistles = null;
+                  Object.assign(model.data, {
+                    direction: undefined,
+                    altitude: undefined,
+                    nectarSource: undefined,
+                    eggLaying: [],
+                    otherEggLaying: undefined,
+                    mating: undefined,
+                    otherThistles: undefined,
+                  });
                 }
 
-                model.data.behaviour = value;
+                model.data.behaviour = value ?? undefined;
                 model.save();
               },
               inputProps: { options: behaviourValues },
@@ -236,7 +232,7 @@ const speciesConfig: Survey = {
           menuProps: {
             label: 'Height',
             icon: resizeOutline,
-            parse: (value: any) => `${value} m`,
+            parse: (value: string) => `${value} m`,
           },
           pageProps: {
             headerProps: { title: 'Height above ground (meters)' },
@@ -284,13 +280,13 @@ const speciesConfig: Survey = {
             attrProps: {
               input: 'checkbox',
               inputProps: { options: flowersValues },
-              set: (value: any, model: any) => {
+              set: (value: string[], model: Occurrence) => {
                 if (model.data.otherEggLaying && !value.includes('Other')) {
-                  model.data.otherEggLaying = null;
+                  delete model.data.otherEggLaying;
                 }
 
                 if (model.data.otherThistles && !value.includes('Thistles')) {
-                  model.data.otherThistles = null;
+                  delete model.data.otherThistles;
                 }
 
                 model.data.eggLaying = value;
@@ -301,14 +297,10 @@ const speciesConfig: Survey = {
 
           remote: {
             id: 982,
-            values(flowerValue: any, submission: any) {
-              const bySameGroup = (wingObject: any) =>
-                flowerValue.includes(wingObject.value);
-              const extractID = (obj: any) => obj.id;
-
+            values(flowerValue: string[], submission: Submission) {
               const flowersIDs = flowersValues
-                .filter(bySameGroup)
-                .map(extractID);
+                .filter(({ value }) => flowerValue.includes(value))
+                .map(({ id }) => id);
 
               submission.values['occAttr:982'] = flowersIDs;
             },
@@ -353,20 +345,17 @@ const speciesConfig: Survey = {
   },
 
   verify(_, model) {
-    if (model.data.surveyStartTime) {
-      return z
-        .object({
-          data: areaCountSchema,
-          samples: z
-            .array(z.object({}), {
-              error: 'Please add your target species',
-            })
-            .min(1, 'Please add your target species'),
-        })
-        .safeParse(model).error;
-    }
-
-    return null;
+    if (!model.data.surveyStartTime) return undefined;
+    return z
+      .object({
+        data: areaCountSchema,
+        samples: z
+          .array(z.object({}), {
+            error: 'Please add your target species',
+          })
+          .min(1, 'Please add your target species'),
+      })
+      .safeParse(model).error;
   },
 
   create: ({ hasGPSPermission }) => {

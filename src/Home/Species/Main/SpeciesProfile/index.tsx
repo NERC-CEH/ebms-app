@@ -16,7 +16,7 @@ import './styles.scss';
 type Props = {
   species: Species;
   country: Exclude<CountryCode, 'UK' | 'ELSEWHERE'>;
-  hideSpeciesModal: any;
+  hideSpeciesModal: () => void;
 };
 
 const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {

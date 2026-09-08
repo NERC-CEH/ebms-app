@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@flumens';
 import config from 'common/config';
@@ -29,7 +30,9 @@ const AllGroups = ({ groups, onJoin }: Props) => {
     return (
       <>
         <InfoBackgroundMessage>
-          <div className="my-3 opacity-50">{{ country } as any}</div>
+          <div className="my-3 opacity-50">
+            {{ country } as unknown as ReactNode}
+          </div>
           There are currently no new projects available to join.
           <br />
           <br />

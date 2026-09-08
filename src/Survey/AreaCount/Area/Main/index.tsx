@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
+import type { Position } from 'geojson';
+import type { MapRef } from 'react-map-gl/mapbox';
 import {
   Main,
   MapContainer,
@@ -8,6 +10,7 @@ import {
   mapFlyToLocation,
   mapFlyToShape,
   isValidLocation,
+  type Location as MapLocation,
 } from '@flumens';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
@@ -15,6 +18,7 @@ import countries from 'common/config/countries';
 import appModel from 'common/models/app';
 import locations from 'models/collections/locations';
 import Sample from 'models/sample';
+import type { Shape } from 'models/sample/GPSExt';
 import FinishPointMarker from './FinishPointMarker';
 import Records from './Records';
 import SiteBoundary, { getShapeFromGeom } from './SiteBoundary';
@@ -24,7 +28,7 @@ const useDeletePrompt = () => {
   const alert = useAlert();
 
   return () =>
-    new Promise((resolve: any) => {
+    new Promise<boolean>(resolve => {
       alert({
         header: 'Delete',
         message: 'Are you sure you want to delete your current track?',
@@ -46,7 +50,7 @@ const useDeletePrompt = () => {
 
 type Props = {
   sample: Sample;
-  setLocation: any;
+  setLocation: (shape: Shape | null) => void;
   isGPSTracking: boolean;
   isDisabled?: boolean;
 };
@@ -62,16 +66,22 @@ const AreaAttr = ({
   // look up the selected site for boundary display
   const selectedSite = locations.idMap.get(sample.data.locationId || '');
 
-  const siteBoundaryShape = getShapeFromGeom(selectedSite?.data.boundaryGeom);
+  const siteBoundaryShape = getShapeFromGeom(
+    selectedSite?.data.boundaryGeom ?? undefined
+  );
 
   let initialViewState;
   if (isValidLocation(location)) {
     initialViewState = { ...location, zoom: 14 };
   } else if (siteBoundaryShape) {
     // zoom to site boundary centroid on init
-    let [firstCoord] = (siteBoundaryShape.coordinates as any)[0];
-    if (siteBoundaryShape.type === 'MultiPolygon') {
-      [firstCoord] = firstCoord;
+    let firstCoord: Position;
+    if (siteBoundaryShape.type === 'LineString') {
+      [firstCoord] = siteBoundaryShape.coordinates;
+    } else if (siteBoundaryShape.type === 'Polygon') {
+      [[firstCoord]] = siteBoundaryShape.coordinates;
+    } else {
+      [[[firstCoord]]] = siteBoundaryShape.coordinates;
     }
 
     initialViewState = {
@@ -91,7 +101,7 @@ const AreaAttr = ({
   const isFinished =
     sample.isDisabled || sample.metadata.saved || sample.isTimerFinished();
 
-  const onShapeChange = async (newShape: any) => {
+  const onShapeChange = async (newShape: Shape | null) => {
     if (!newShape) {
       const shouldDelete = await shouldDeleteShape();
       if (!shouldDelete) return false;
@@ -101,7 +111,7 @@ const AreaAttr = ({
     return true;
   };
 
-  const [mapRef, setMapRef] = useState<any>();
+  const [mapRef, setMapRef] = useState<MapRef>();
   const flyToLocation = () => {
     // if no trail walked yet, zoom to selected site boundary
     if (!location?.shape && siteBoundaryShape) {
@@ -111,7 +121,7 @@ const AreaAttr = ({
 
     const locationToFly = { ...location };
     if (isGPSTracking) delete locationToFly?.shape;
-    mapFlyToLocation(mapRef, locationToFly as any);
+    mapFlyToLocation(mapRef, locationToFly as MapLocation);
   };
   useEffect(flyToLocation, [mapRef, location, selectedSite]);
 
@@ -129,11 +139,11 @@ const AreaAttr = ({
 
         <SiteBoundary site={selectedSite} />
 
-        <MapDraw shape={location?.shape as any} onChange={onShapeChange}>
+        <MapDraw shape={location?.shape} onChange={onShapeChange}>
           {!isDisabled && !isGPSTracking && <MapDraw.Control line polygon />}
 
           <MapDraw.Context.Consumer>
-            {({ isEditing }: any) =>
+            {({ isEditing }) =>
               !isEditing &&
               location && (
                 <>

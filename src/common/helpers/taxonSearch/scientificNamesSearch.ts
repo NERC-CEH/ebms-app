@@ -3,17 +3,17 @@
  **************************************************************************** */
 import { and, eq, getTableColumns, like, or, SQL, sql } from 'drizzle-orm';
 import { alias, QueryBuilder } from 'drizzle-orm/sqlite-core';
-import { SearchResult, SpeciesColumns } from '.';
+import { SearchResult, SpeciesColumns, TaxaStore } from '.';
 
 async function searchSciNames(
-  taxaStore: any,
+  taxaStore: TaxaStore,
   searchPhrase: string,
   language: string,
   where?: (table: typeof taxaStore.table) => SQL,
   limit = 20
 ) {
   const { table } = taxaStore;
-  const synonym: any = alias(table, 'synonym');
+  const synonym = alias(table, 'synonym');
 
   const customWhere = where ? where(table) : sql`1`; // always true
 
@@ -42,7 +42,7 @@ async function searchSciNames(
     searchPatterns.push(`${genus}% ${name}%`);
   }
 
-  const query: any = new QueryBuilder()
+  const query = new QueryBuilder()
     .select({
       ...getTableColumns(table),
       commonName: sql`${synonym.taxon} as commonName`,
@@ -65,7 +65,9 @@ async function searchSciNames(
     .groupBy(table.id) // we only want one common name per species - a subquery would be more efficient, but usually we have only a few synonyms
     .limit(limit);
 
-  const species: any = await taxaStore.db.query(query.toSQL());
+  const species = await taxaStore.db.query<
+    SpeciesColumns & { commonName: string }
+  >(query.toSQL());
 
   return species.map(
     (sp: SpeciesColumns & { commonName: string }): SearchResult => ({

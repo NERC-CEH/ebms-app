@@ -4,14 +4,17 @@ import { searchOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { IonHeader, IonToolbar, IonIcon } from '@ionic/react';
 import { Button } from 'common/flumens';
-import FiltersToolbar from './FiltersToolbar';
+import FiltersToolbar, {
+  type FilterOption,
+  type Filters,
+} from './FiltersToolbar';
 import './styles.scss';
 
 type Props = {
-  onSearch: (e: any) => void;
+  onSearch: (value: string) => void;
   toggleFilter: (type: string, value: string) => void;
-  filters: any;
-  filterOptions: any;
+  filters: Filters;
+  filterOptions: FilterOption[];
 };
 
 const Header = ({ onSearch, toggleFilter, filters, filterOptions }: Props) => {

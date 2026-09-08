@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, type RefObject } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
@@ -35,8 +35,8 @@ const useDeleteSpeciesPrompt = () => {
   const alert = useAlert();
   const { t } = useTranslation();
 
-  function showDeleteSpeciesPrompt(taxon: any) {
-    const prompt = (resolve: any) => {
+  function showDeleteSpeciesPrompt(taxon: Taxon) {
+    const prompt = (resolve: (confirmed: boolean) => void) => {
       const taxonName = taxon.scientificName;
       alert({
         header: t('Delete'),
@@ -52,13 +52,13 @@ const useDeleteSpeciesPrompt = () => {
           {
             text: t('Delete'),
             role: 'destructive',
-            handler: resolve,
+            handler: () => resolve(true),
           },
         ],
       });
     };
 
-    return new Promise(prompt);
+    return new Promise<boolean>(prompt);
   }
 
   return showDeleteSpeciesPrompt;
@@ -110,7 +110,7 @@ const HomeController = () => {
     if (!isValid) return;
 
     const survey = sample.getSurvey();
-    (appModel.data as any)[`draftId:${survey.name}`] = '';
+    appModel.data[`draftId:${survey.name}`] = '';
 
     const saveAndReturn = () => {
       sample.cleanUp();
@@ -159,10 +159,14 @@ const HomeController = () => {
     sample.shallowSpeciesList.splice(taxonIndexInShallowList, 1);
   };
 
-  const deleteSpecies = async (taxon: any, isShallow: boolean, ref: any) => {
+  const deleteSpecies = async (
+    taxon: Taxon,
+    isShallow: boolean,
+    ref: RefObject<HTMLIonItemSlidingElement | null>
+  ) => {
     if (isShallow) {
       deleteFromShallowList(taxon);
-      await ref.current.closeOpened();
+      await ref.current?.closeOpened();
 
       return;
     }
@@ -180,7 +184,7 @@ const HomeController = () => {
 
     showDeleteSpeciesPrompt(taxon).then(destroyWrap);
   };
-  const navigateToSpeciesOccurrences = (taxon: any) => {
+  const navigateToSpeciesOccurrences = (taxon: Taxon) => {
     const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
     const occ = sample.occurrences.find(matchingTaxon);
 
@@ -206,7 +210,7 @@ const HomeController = () => {
 
     if (!occ) return;
 
-    occ.data.count += is5x ? 5 : 1;
+    occ.data.count = (occ.data.count || 0) + (is5x ? 5 : 1);
     occ.save();
   };
 
@@ -239,8 +243,11 @@ const HomeController = () => {
     occWithSameSpecies.metadata.mergedOccurrences ??= [];
     occWithSameSpecies.metadata.mergedOccurrences.push(occ.cid);
 
-    occWithSameSpecies.data.count += occ.data.count;
-    occWithSameSpecies.data['count-outside'] += occ.data['count-outside'];
+    occWithSameSpecies.data.count =
+      (occWithSameSpecies.data.count || 0) + (occ.data.count || 0);
+    occWithSameSpecies.data['count-outside'] =
+      (occWithSameSpecies.data['count-outside'] || 0) +
+      (occ.data['count-outside'] || 0);
 
     while (occ.media.length) {
       const copy = occ.media.pop() as Media;
@@ -274,7 +281,7 @@ const HomeController = () => {
       );
       if (!images.length) return [];
 
-      const getImageModel = (image: any) =>
+      const getImageModel = (image: string) =>
         Media.getImageModel(
           isPlatform('hybrid') ? Capacitor.convertFileSrc(image) : image,
           CONFIG.dataPath,
@@ -346,21 +353,19 @@ const HomeController = () => {
       occ.data.taxon.preferredId || occ.data.taxon.warehouseId;
     const existingSpeciesIds = sample.occurrences.map(getSpeciesId);
 
-    const uniqueSpeciesList: any = [];
+    const uniqueSpeciesIds = new Set<number>();
     const getNewSpeciesOnly = ({ warehouseId, preferredId }: Taxon) => {
       const speciesID = preferredId || warehouseId;
 
-      if (uniqueSpeciesList.includes(speciesID)) {
-        return false;
-      }
-      uniqueSpeciesList.push(speciesID);
+      if (uniqueSpeciesIds.has(speciesID)) return false;
+      uniqueSpeciesIds.add(speciesID);
       return !existingSpeciesIds.includes(speciesID);
     };
 
     const getTaxon = (occ: Occurrence) => toJS(occ.data.taxon);
     const newSpeciesList = previousSurvey.occurrences
       .map(getTaxon)
-      .filter(getNewSpeciesOnly) as [];
+      .filter(getNewSpeciesOnly);
 
     // copy but retain old observable ref
     sample.shallowSpeciesList.splice(
@@ -369,15 +374,8 @@ const HomeController = () => {
       ...newSpeciesList
     );
 
-    const speciesNameSort = (sp1: any, sp2: any) => {
-      const taxon1 = sp1.foundInName;
-      const taxonName1 = sp1[taxon1];
-
-      const taxon2 = sp2.foundInName;
-      const taxonName2 = sp2[taxon2];
-
-      return taxonName1.localeCompare(taxonName2);
-    };
+    const speciesNameSort = (sp1: Taxon, sp2: Taxon) =>
+      (sp1[sp1.foundInName!] || '').localeCompare(sp2[sp2.foundInName!] || '');
 
     sample.shallowSpeciesList.sort(speciesNameSort);
 

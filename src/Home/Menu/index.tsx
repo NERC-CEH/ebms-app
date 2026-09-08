@@ -6,7 +6,10 @@ import userModel from 'models/user';
 import Main from './Main';
 import './styles.scss';
 
-function showLogoutConfirmationDialog(callback: any, alert: any) {
+function showLogoutConfirmationDialog(
+  callback: () => void,
+  alert: ReturnType<typeof useAlert>
+) {
   alert({
     header: 'Logout',
     message: (
@@ -55,8 +58,8 @@ const Controller = ({ ...restProps }) => {
       if (!userModel.data.verified) {
         toast.warn('The user has not been activated or is blocked.');
       }
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
     loader.hide();
   };
@@ -68,8 +71,8 @@ const Controller = ({ ...restProps }) => {
       toast.success(
         'A new verification email was successfully sent now. If you did not receive the email, then check your Spam or Junk email folders.'
       );
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
     loader.hide();
   };

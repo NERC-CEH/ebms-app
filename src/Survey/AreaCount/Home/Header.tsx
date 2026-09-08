@@ -8,8 +8,8 @@ import TrainingHeader from 'Survey/common/TrainingHeader';
 type Props = {
   sample: Sample;
   group?: Group;
-  onSubmit: any;
-  onGroupClick: any;
+  onSubmit: () => void;
+  onGroupClick: () => void;
   onLeave?: () => void;
 };
 

@@ -6,7 +6,7 @@ import './styles.scss';
 
 type Props = {
   hideCompass: () => void;
-  value: any;
+  value: number;
 };
 
 const CompassModal = ({ hideCompass, value }: Props) => {

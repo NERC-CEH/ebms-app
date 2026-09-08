@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { observer } from 'mobx-react';
 import { arrowForward, checkmarkOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
@@ -19,7 +19,7 @@ import graph from './images/welcome_1.png';
 import guidelines from './images/welcome_3.jpg';
 import './styles.scss';
 
-const Onboarding = ({ children }: any) => {
+const Onboarding = ({ children }: { children: ReactNode }) => {
   const [moreSlidesExist, setMoreSlidesExist] = useState(true);
   const [controlledSwiper, setControlledSwiper] = useState<SwiperCore>();
 

@@ -15,6 +15,8 @@ import {
   getGeomWKT,
   Header,
   getGeomMetersToLatLon,
+  type BlockT,
+  type inferBlockType,
 } from '@flumens';
 import { isPlatform } from '@ionic/core';
 import {
@@ -89,10 +91,10 @@ const getLocationAttrsFromShape = (shape?: Shape) => ({
     : undefined,
 });
 
-const getShapeFromGeom = (geom?: string | null) => {
+const getShapeFromGeom = (geom?: string) => {
   if (!geom) return undefined;
 
-  const geomParsed = wkt.parse(geom) as any;
+  const geomParsed = wkt.parse(geom) as Shape | null;
   if (!geomParsed) return undefined;
 
   return getGeomMetersToLatLon(geomParsed) as Shape;
@@ -127,19 +129,17 @@ const Details = ({ onSave }: Props) => {
     const images = await captureImage({ camera: true });
     if (!images.length) return;
 
-    const getImageModel = async (image: any) => {
-      const imageModel: any = await Media.getImageModel(
+    const getImageModel = async (image: string) => {
+      const imageModel = await Media.getImageModel(
         isPlatform('hybrid') ? Capacitor.convertFileSrc(image) : image,
         config.dataPath,
         true
       );
 
-      return imageModel;
+      return imageModel as Media;
     };
 
-    const imageModels: Media[] = await Promise.all<any>(
-      images.map(getImageModel)
-    );
+    const imageModels = await Promise.all(images.map(getImageModel));
     location.media.push(imageModels[0]);
   }
 
@@ -158,15 +158,15 @@ const Details = ({ onSave }: Props) => {
     onDismiss();
   };
 
-  const getBlockAttrs = (attrConf: any) => ({
+  const getBlockAttrs = <T extends BlockT>(attrConf: T) => ({
     record: location,
     block: attrConf,
-    onChange: (newVal: any) =>
+    onChange: (newVal: inferBlockType<T>) =>
       Object.assign(location.data, { [attrConf.id]: newVal }),
   });
 
   const isOtherSiteSize =
-    (location as any)[siteAreaAttr.id] === OTHER_SITE_SIZE_VALUE;
+    location.data[siteAreaAttr.id] === OTHER_SITE_SIZE_VALUE;
 
   const onChangeShape = (newShape?: Shape): void => {
     Object.assign(location.data, getLocationAttrsFromShape(newShape));
@@ -178,13 +178,13 @@ const Details = ({ onSave }: Props) => {
       <>
         <Header title="Draw area" />
         <AreaDraw
-          shape={getShapeFromGeom(location.data.boundaryGeom)}
+          shape={getShapeFromGeom(location.data.boundaryGeom ?? undefined)}
           onChange={onChangeShape}
         />
       </>
     ));
 
-  const shape = getShapeFromGeom(location.data.boundaryGeom);
+  const shape = getShapeFromGeom(location.data.boundaryGeom ?? undefined);
   const area = shape && Math.floor(geojsonArea.geometry(shape));
 
   return (

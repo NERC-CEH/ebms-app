@@ -21,9 +21,9 @@ import mothSurvey, { Data as MothData } from 'Survey/MothTrap/config';
 import transectSurvey from 'Survey/Transect/config';
 import { guidAttr, Survey } from 'Survey/common/config';
 import Media from '../media';
-import Occurrence from '../occurrence';
+import Occurrence, { Data as OccurrenceData, Taxon } from '../occurrence';
 import { samplesStore } from '../store';
-import GPSExtension, { calculateArea } from './GPSExt';
+import GPSExtension, { calculateArea, Shape } from './GPSExt';
 import attrLockExtension from './attrLockExt';
 import VibrateExtension from './vibrateExt';
 
@@ -31,14 +31,14 @@ type AreaCountData = {
   location: Location;
   surveyStartTime: string;
   surveyEndTime: string;
-  recorder: any;
-  cloud: any;
-  temperature: any;
-  windDirection: any;
-  windSpeed: any;
+  recorder: string;
+  cloud: number;
+  temperature: number | string;
+  windDirection: string;
+  windSpeed: string;
   reliability: string;
   recorders: number;
-  speciesGroups: number[];
+  speciesGroups: (number | keyof typeof groups)[];
   [guidAttr.id]: string;
   [areaSizeAttr.id]: number;
 };
@@ -57,8 +57,6 @@ export const surveyConfigsByCode = Object.values(surveyConfigs).reduce<
   Record<number, Survey>
 >((agg, survey) => {
   if (survey.deprecated) return agg;
-
-  // eslint-disable-next-line no-param-reassign
   agg[survey.id] = survey;
   return agg;
 }, {});
@@ -95,10 +93,16 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
   T,
   Metadata
 > {
-  static fromElasticDTO(json: ElasticSample, options: any, survey?: any) {
-    const parsed = super.fromElasticDTO(json, options, survey) as any;
-    if (parsed.data?.location?.shape) {
-      parsed.data.location.area = calculateArea(parsed.data?.location?.shape);
+  static fromElasticDTO(
+    json: ElasticSample,
+    options?: Partial<SampleOptions<Data, Metadata>>,
+    survey?: Survey
+  ) {
+    const parsed = super.fromElasticDTO(json, options, survey);
+    const legacyLocation = parsed.data.location as
+      (Location & { area?: number }) | undefined;
+    if (legacyLocation?.shape) {
+      legacyLocation.area = calculateArea(legacyLocation.shape);
     }
 
     return parsed;
@@ -106,39 +110,44 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
 
   declare occurrences: IObservableArray<Occurrence>;
 
-  declare samples: IObservableArray<Sample<any>>;
+  declare samples: IObservableArray<Sample<T>>;
 
   declare media: IObservableArray<Media>;
 
-  declare parent?: Sample<any>;
+  declare parent?: Sample<T>;
 
-  shallowSpeciesList = observable([]);
+  shallowSpeciesList = observable<Taxon>([]);
 
-  copyAttributes = observable({});
+  copyAttributes: Partial<OccurrenceData> = observable({});
 
   locks = attrLockExtension();
 
-  timerPausedTime = observable<any>({ time: null });
+  timerPausedTime = observable({ time: null as null | Date });
 
-  gpsExtensionInit: any; // from extension
+  declare gpsExtensionInit: () => void;
 
-  setLocation: any; // from extension
+  declare setLocation: (
+    shape: Shape | null,
+    accuracy?: number,
+    altitude?: number,
+    altitudeAccuracy?: number
+  ) => Promise<void>;
 
-  isGPSRunning: any; // from extension
+  declare isGPSRunning: () => boolean;
 
-  toggleGPStracking: any; // from extension
+  declare toggleGPStracking: (state?: boolean) => void;
 
-  gps: any; // from extension
+  declare gps: { locating: number | null };
 
-  startGPS: any; // from extension
+  declare startGPS: () => void;
 
-  stopGPS: any; // from extension
+  declare stopGPS: () => void;
 
-  stopVibrateCounter: any; // from extension
+  declare stopVibrateCounter: () => void;
 
-  startVibrateCounter: any; // from extension
+  declare startVibrateCounter: () => void;
 
-  hasNoLocationAndNotLocating: any; // from extension
+  declare hasNoLocationAndNotLocating: () => boolean;
 
   constructor(options: SampleOptions) {
     super({
@@ -148,11 +157,21 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
       Occurrence,
       Media,
       store: samplesStore,
-    });
+    } as SampleOptions<T, Metadata>);
 
     // migrate old location data to new format
     // remove once samples are uploaded
-    const data = this.data as any;
+    const data = this.data as T & {
+      location?: Location & {
+        id?: string;
+        name?: string;
+        area?: number;
+        data?: { lat?: string; lon?: string };
+        centroidSref?: string;
+        centroidSrefSystem?: SampleData['enteredSrefSystem'];
+      };
+      [areaSizeAttr.id]?: number;
+    };
     if (data?.location?.id) {
       data.locationId = data.location.id;
       delete data.location.id;
@@ -170,9 +189,10 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
       delete data.location?.data?.lat;
     }
     if (this.isTransectSurvey() && data.location?.centroidSref) {
-      data.enteredSref = data?.location?.centroidSref;
-      data.enteredSrefSystem = data?.location?.centroidSrefSystem;
-      delete data?.location?.centroidSref;
+      data.enteredSref = data.location.centroidSref;
+      if (data.location.centroidSrefSystem)
+        data.enteredSrefSystem = data.location.centroidSrefSystem;
+      delete data.location.centroidSref;
     }
 
     Object.assign(this, VibrateExtension);
@@ -195,7 +215,7 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
   getSurvey(): Survey {
     if (this.parent) return (this.parent.getSurvey().smp as Survey) || {};
 
-    let survey = surveyConfigsByCode[this.data.surveyId as any];
+    let survey = surveyConfigsByCode[Number(this.data.surveyId)];
 
     if (!survey) {
       const surveyName = this.metadata.survey;
@@ -277,7 +297,7 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
 
   isTimerFinished = () => {
     if (this.isTimerPaused()) return false;
-    if ((this.data as any).surveyEndTime) return true;
+    if ('surveyEndTime' in this.data && this.data.surveyEndTime) return true;
 
     return this.getTimerEndTime() < new Date().getTime();
   };
@@ -352,7 +372,8 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
   }
 }
 
-export const useValidateCheck = (sample?: Sample) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const useValidateCheck = (sample?: Sample<any>) => {
   const alert = useAlert();
   const { t } = useTranslation();
 
@@ -377,10 +398,9 @@ export const useValidateCheck = (sample?: Sample) => {
 };
 
 export function bySurveyDate(sample1: Sample, sample2: Sample) {
-  const date1 = new Date(sample1.data.date);
-  const moveToTop = !date1 || date1.toString() === 'Invalid Date';
-  if (moveToTop) return -1;
+  const date1 = new Date(sample1.data.date ?? '');
+  if (Number.isNaN(date1.getTime())) return -1;
 
-  const date2 = new Date(sample2.data.date);
+  const date2 = new Date(sample2.data.date ?? '');
   return date2.getTime() - date1.getTime();
 }

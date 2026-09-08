@@ -33,17 +33,9 @@ const languages = {
 } as const satisfies Record<string, Language>;
 /* eslint-enable @typescript-eslint/naming-convention */
 
-const isDemo =
-  typeof window !== 'undefined' && (window as any)?.Capacitor?.isNative;
-if (isDemo) {
-  Object.assign(languages, {
-    // only demo
-  });
-}
-
 export type LanguageCode = keyof typeof languages;
 
-export const getLanguageIso = (languageCode?: LanguageCode | null): string => {
+export const getLanguageIso = (languageCode: LanguageCode | null): string => {
   const DEFAULT_LANGUAGE_ISO = 'eng';
 
   if (!languageCode) return DEFAULT_LANGUAGE_ISO;

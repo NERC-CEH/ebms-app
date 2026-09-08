@@ -23,7 +23,6 @@ import {
   ChoiceInputConf,
   dateFormatISO,
   NumberInputConf,
-  OccurrenceData,
   SampleData,
   TextInputConf,
   timeFormat,
@@ -32,7 +31,10 @@ import {
 import { IonIcon } from '@ionic/react';
 import config from 'common/config';
 import mothTrap from 'common/images/moth-inside-icon.svg';
-import Occurrence, { Taxon } from 'common/models/occurrence';
+import Occurrence, {
+  Data as OccurrenceData,
+  Taxon,
+} from 'common/models/occurrence';
 import Sample from 'common/models/sample';
 import appModel from 'models/app';
 import { Data as LocationData } from 'models/location';
@@ -48,7 +50,7 @@ import {
 
 const FIELD_CODE_REGEX = /^[A-Z]\d{1,2}$/;
 
-const mothTrapIcon = (<IonIcon src={mothTrap} className="size-6" />) as any;
+const mothTrapIcon = <IonIcon src={mothTrap} className="size-6" />;
 
 export const timeAttr = {
   id: 'smpAttr:2035',
@@ -364,18 +366,21 @@ export const wingLengthAttr = {
 
 const getNextSpeciesCode = (subSample: Sample<Data>) => {
   const recaptured = (occ: Occurrence) =>
-    occ.data[recaptureAttr.id as keyof typeof occ.data] !== RECAPTURED;
+    occ.data[recaptureAttr.id] !== RECAPTURED;
 
   // go through all occurrences across all sub-samples, flattened and find the last created occurrence with a field code, then increment that code by 1 for the new occurrence
   // exclude recaptures so their codes don't skew the next code sequence
-  const allOccurrences = subSample
-    .parent!.samples.flatMap(smp => smp.occurrences)
+  const parentSamples = subSample.parent!.samples as unknown as Sample[];
+  const allOccurrences = parentSamples
+    .flatMap(smp => Array.from<Occurrence>(smp.occurrences))
     .filter(recaptured);
-  const lastOccurrence: any = allOccurrences
-    .sort((a, b) => a.createdAt - b.createdAt)
-    .at(-1);
+  allOccurrences.sort((a, b) => a.createdAt - b.createdAt);
+  const lastOccurrence = allOccurrences[allOccurrences.length - 1];
   const lastFieldCode = lastOccurrence?.data[fieldCodeAttr.id];
-  if (!lastFieldCode || !FIELD_CODE_REGEX.test(lastFieldCode))
+  if (
+    typeof lastFieldCode !== 'string' ||
+    !FIELD_CODE_REGEX.test(lastFieldCode)
+  )
     return subSample.parent!.data[fieldCodeStartAttr.id] || 'A1';
 
   // extract the single letter and number, increment the number by 1, and if it exceeds 99, increment the letter
@@ -429,7 +434,7 @@ const attrs = {
 
 const subSmpAttrs = {
   [dateAttr.id]: dateAttr,
-  [timeAttr.id]: timeAttr as any,
+  [timeAttr.id]: timeAttr,
   [stratumAttr.id]: { block: stratumAttr },
   [baitAttr.id]: { block: baitAttr },
   [otherBaitAttr.id]: { block: otherBaitAttr },

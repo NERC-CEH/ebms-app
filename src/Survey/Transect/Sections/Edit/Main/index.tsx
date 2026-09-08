@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react';
+import { useContext, useRef, type RefObject } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import {
@@ -26,6 +26,7 @@ import {
   NavContext,
 } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
+import type { SpeciesListSortOrder } from 'models/app';
 import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
@@ -37,19 +38,23 @@ import {
   speciesNameSort,
   speciesCount,
   getDefaultTaxonCount,
+  SpeciesSummary,
 } from 'Survey/common/taxonSortFunctions';
 import './styles.scss';
 
-const buildSpeciesCount = (agg: any, occ: Occurrence) => {
+type SpeciesCounts = Record<number, SpeciesSummary>;
+
+const buildSpeciesCount = (agg: SpeciesCounts, occ: Occurrence) => {
   const taxon = toJS(occ.data.taxon);
   const id = taxon.preferredId || taxon.warehouseId;
 
   if (!agg[id])
-    agg[id] = getDefaultTaxonCount(taxon, occ.createdAt, occ.updatedAt); // eslint-disable-line no-param-reassign
+    agg[id] = getDefaultTaxonCount(taxon, occ.createdAt, occ.updatedAt);
 
-  if (agg[id].updatedAt < occ.updatedAt) agg[id].updatedAt = occ.updatedAt; // eslint-disable-line
+  if ((agg[id].updatedAt || 0) < occ.updatedAt)
+    agg[id].updatedAt = occ.updatedAt;
 
-  agg[id].count = toJS(occ.data.count); // eslint-disable-line
+  agg[id].count = toJS(occ.data.count) || 0;
 
   return agg;
 };
@@ -57,13 +62,17 @@ const buildSpeciesCount = (agg: any, occ: Occurrence) => {
 type Props = {
   sample: Sample;
   subSample: Sample;
-  deleteOccurrence: (taxon: Taxon, isShallow: boolean, ref: any) => void;
-  navigateToSpeciesOccurrences: any;
+  deleteOccurrence: (
+    taxon: Taxon,
+    isShallow: boolean,
+    ref: RefObject<HTMLIonItemSlidingElement | null>
+  ) => void;
+  navigateToSpeciesOccurrences: (taxon: Taxon) => void;
   onToggleSpeciesSort: () => void;
-  speciesListSortOrder: string;
-  increaseCount: any;
+  speciesListSortOrder: SpeciesListSortOrder;
+  increaseCount: (taxon: Taxon, isShallow: boolean, is5x: boolean) => void;
   isDisabled: boolean;
-  copyPreviousSurveyTaxonList: any;
+  copyPreviousSurveyTaxonList: () => void;
 };
 
 const Edit = ({
@@ -78,19 +87,19 @@ const Edit = ({
   isDisabled,
 }: Props) => {
   const alert = useAlert();
-  const ref = useRef<any>(null);
-  const match: any = useRouteMatch();
+  const ref = useRef<HTMLIonItemSlidingElement>(null);
+  const match = useRouteMatch<{ subSmpId: string }>();
 
   const { navigate } = useContext(NavContext);
 
-  const getSpeciesEntry = ([id, species]: [string, any]) => {
+  const getSpeciesEntry = ([id, species]: [string, SpeciesSummary]) => {
     const isSpeciesDisabled = !species.count;
     const { taxon } = species;
 
     const matchingTaxon = (occ: Occurrence) => occ.doesTaxonMatch(taxon);
     const isShallow = !sectionSample.occurrences.filter(matchingTaxon).length;
 
-    const increaseCountWrap = () => increaseCount(taxon, isShallow);
+    const increaseCountWrap = () => increaseCount(taxon, isShallow, false);
     const increase5xCountWrap = () => increaseCount(taxon, isShallow, true);
 
     const navigateToOccurrence = () => navigateToSpeciesOccurrences(taxon);
@@ -98,7 +107,7 @@ const Edit = ({
     const deleteSpeciesWrap = () => deleteOccurrence(taxon, isShallow, ref);
 
     return (
-      <IonItemSliding key={id} ref={ref as any}>
+      <IonItemSliding key={id} ref={ref}>
         <IonItem detail={!isSpeciesDisabled} onClick={navigateToOccurrence}>
           <IncrementalButton
             onClick={increaseCountWrap}
@@ -147,17 +156,15 @@ const Edit = ({
       return getDefaultTaxonCount(shallowEntry, 0);
     };
 
-    const notEmpty = (shallowEntry: any) => shallowEntry;
-
     const shallowCounts = sectionSample.shallowSpeciesList
       .map(getShallowEntry)
-      .filter(notEmpty);
+      .filter(shallowEntry => !!shallowEntry);
 
-    const counts = {
-      ...speciesCounts,
-      // eslint-disable-next-line @typescript-eslint/no-misused-spread
-      ...shallowCounts,
-    };
+    const counts = Object.assign(
+      {} as Record<string, SpeciesSummary>,
+      speciesCounts,
+      shallowCounts
+    );
 
     let sort = speciesNameSort;
 

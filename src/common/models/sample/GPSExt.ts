@@ -6,7 +6,7 @@
  **************************************************************************** */
 import { observable } from 'mobx';
 import { PushNotifications } from '@capacitor/push-notifications';
-import { updateModelLocation, device } from '@flumens';
+import { updateModelLocation, device, type LocationModelLike } from '@flumens';
 import { isPlatform } from '@ionic/react';
 import geojsonArea from '@mapbox/geojson-area';
 import config from 'common/config';
@@ -15,23 +15,16 @@ import { areaSizeAttr } from 'Survey/common/config';
 
 const METERS_SINCE_LAST_LOCATION = 15;
 
-type Coordinate = [number, number];
-type LineString = Coordinate[];
-type Polygon = Coordinate[][];
-
-type Shape = {
-  type: 'LineString' | 'Polygon';
-  coordinates: LineString | Polygon;
-};
+export type Shape = GeoJSON.LineString | GeoJSON.Polygon;
 
 type Location = {
   latitude: number;
   longitude: number;
   shape: Shape;
   source: string;
-  accuracy: number;
-  altitude: number | null;
-  altitudeAccuracy: number | null;
+  accuracy?: number;
+  altitude?: number;
+  altitudeAccuracy?: number;
 };
 
 type GPSLocation = {
@@ -42,7 +35,7 @@ type GPSLocation = {
   altitudeAccuracy: number | null;
 };
 
-function calculateLineLenght(lineString: LineString): number {
+function calculateLineLength(coordinates: GeoJSON.Position[]): number {
   /**
    * Calculate the approximate distance between two coordinates (lat/lon)
    *
@@ -60,23 +53,23 @@ function calculateLineLenght(lineString: LineString): number {
     return R * d;
   }
 
-  if (lineString.length < 2) return 0;
+  if (coordinates.length < 2) return 0;
   let result = 0;
-  for (let i = 1; i < lineString.length; i++)
+  for (let i = 1; i < coordinates.length; i++)
     result += distance(
-      lineString[i - 1][0],
-      lineString[i - 1][1],
-      lineString[i][0],
-      lineString[i][1]
+      coordinates[i - 1][0],
+      coordinates[i - 1][1],
+      coordinates[i][0],
+      coordinates[i][1]
     );
   return result;
 }
 
 type SampleWithLocation = {
   data: {
-    location?: Location | null;
+    location?: Location;
     surveyStartTime?: string;
-    [areaSizeAttr.id]: number;
+    [areaSizeAttr.id]?: number;
   };
 };
 
@@ -86,20 +79,20 @@ function getShape(sample: SampleWithLocation): Shape {
   if (!oldLocation.shape) {
     return { type: 'LineString', coordinates: [] };
   }
-  return JSON.parse(JSON.stringify(oldLocation.shape));
+  return JSON.parse(JSON.stringify(oldLocation.shape)) as Shape;
 }
 
 function isSufficientDistanceMade(
-  coordinates: LineString | Polygon,
+  coordinates: GeoJSON.Position[],
   latitude: number,
   longitude: number
 ): boolean {
   const lastLocation = [...(coordinates[coordinates.length - 1] || [])]
     .reverse()
-    .map(Number) as Coordinate;
-  const newLocation = [latitude, longitude].map(Number) as Coordinate;
+    .map(Number);
+  const newLocation = [latitude, longitude];
 
-  const distanceSinceLastLocation = calculateLineLenght([
+  const distanceSinceLastLocation = calculateLineLength([
     lastLocation,
     newLocation,
   ]);
@@ -117,9 +110,9 @@ function isSufficientDistanceMade(
 type SampleModel = SampleWithLocation & {
   setLocation: (
     shape: Shape,
-    accuracy: number,
-    altitude: number | null,
-    altitudeAccuracy: number | null
+    accuracy?: number,
+    altitude?: number,
+    altitudeAccuracy?: number
   ) => Promise<void>;
   save: () => Promise<void>;
 };
@@ -134,31 +127,32 @@ export function updateSampleArea(
   const coordinates =
     shape.type === 'Polygon' ? shape.coordinates[0] : shape.coordinates;
 
-  if (
-    !isSufficientDistanceMade(coordinates as LineString, latitude, longitude)
-  ) {
+  if (!isSufficientDistanceMade(coordinates, latitude, longitude)) {
     return sample.save();
   }
 
-  (coordinates as LineString).push([longitude, latitude]);
-  if (coordinates.length === 1)
-    (coordinates as LineString).push([longitude, latitude]); // can't have just one point
+  coordinates.push([longitude, latitude]);
+  if (coordinates.length === 1) coordinates.push([longitude, latitude]); // can't have just one point
 
-  return sample.setLocation(shape, accuracy, altitude, altitudeAccuracy);
+  return sample.setLocation(
+    shape,
+    accuracy,
+    altitude ?? undefined,
+    altitudeAccuracy ?? undefined
+  );
 }
 
 export const calculateArea = (shape: Shape): number => {
   if (shape.type === 'Polygon') return Math.floor(geojsonArea.geometry(shape));
 
   return Math.floor(
-    config.defaultTransectBuffer *
-      calculateLineLenght(shape.coordinates as LineString)
+    config.defaultTransectBuffer * calculateLineLength(shape.coordinates)
   );
 };
 
 type ExtensionThis = SampleModel & {
   gps: { locating: number | null };
-  parent?: unknown;
+  parent?: object;
   isTimerFinished: () => boolean;
   isGPSRunning: () => boolean;
   stopGPS: () => void;
@@ -169,21 +163,18 @@ const extension = {
   setLocation(
     this: ExtensionThis,
     shape: Shape | null,
-    accuracy: number,
-    altitude: number | null,
-    altitudeAccuracy: number | null
+    accuracy?: number,
+    altitude?: number,
+    altitudeAccuracy?: number
   ): Promise<void> {
     if (!shape) {
-      this.data.location = null;
+      this.data.location = undefined;
       return this.save();
     }
 
-    const lastCoordinate =
-      shape.type === 'Polygon'
-        ? (shape.coordinates[0][shape.coordinates[0].length - 1] as Coordinate)
-        : (shape.coordinates[shape.coordinates.length - 1] as Coordinate);
-
-    const [longitude, latitude] = lastCoordinate;
+    const coordinates =
+      shape.type === 'Polygon' ? shape.coordinates[0] : shape.coordinates;
+    const [longitude, latitude] = coordinates[coordinates.length - 1];
 
     this.data.location = {
       latitude,
@@ -264,7 +255,10 @@ const extension = {
           altitude: location!.altitude ?? undefined,
           altitudeAccuracy: location!.altitudeAccuracy ?? undefined,
         };
-        updateModelLocation(this, locationForModel);
+        updateModelLocation(
+          this as unknown as LocationModelLike,
+          locationForModel
+        );
         this.stopGPS();
         return;
       }

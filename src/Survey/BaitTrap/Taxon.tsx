@@ -7,13 +7,17 @@ import groups from 'common/data/groups';
 import Occurrence, { Taxon as TaxonType } from 'models/occurrence';
 import Sample from 'models/sample';
 import TaxonSearch from 'Survey/common/TaxonSearch';
-import { Data } from './config';
+import { Data, OccData, SubSmpData } from './config';
 
 const Taxon = () => {
   const { navigate, goBack } = useContext(NavContext);
-  const match = useRouteMatch<any>();
+  const match = useRouteMatch();
 
-  const { subSample, occurrence } = useSample<Sample<Data>, Occurrence>();
+  const { subSample, occurrence } = useSample<
+    Sample<Data>,
+    Occurrence<OccData>,
+    Sample<SubSmpData>
+  >();
   if (!subSample) return null;
 
   const onSpeciesSelected = async (taxon: TaxonType) => {
@@ -27,7 +31,7 @@ const Taxon = () => {
 
     // adding new occurrence
     const survey = subSample.getSurvey();
-    const newOcc = survey.occ!.create!({ sample: subSample as any, taxon });
+    const newOcc = survey.occ!.create!({ sample: subSample, taxon });
     subSample.occurrences.push(newOcc);
     subSample.save();
 

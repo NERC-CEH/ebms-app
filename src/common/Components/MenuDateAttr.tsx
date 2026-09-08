@@ -5,8 +5,8 @@ import { DatetimeButton, type DatetimeButtonProps } from 'common/flumens';
 import appModel from 'common/models/app';
 
 type Props = {
-  label: any;
-  icon?: any;
+  label: string;
+  icon?: string;
 } & DatetimeButtonProps;
 
 const MenuDateAttr = ({

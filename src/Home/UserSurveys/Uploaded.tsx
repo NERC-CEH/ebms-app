@@ -1,8 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type UIEventHandler } from 'react';
 import { observer } from 'mobx-react';
 import { useInfiniteLoader } from 'react-window-infinite-loader';
-import { device, getRelativeDate, VirtualList, useToast } from '@flumens';
-import { IonLabel, IonList, IonRefresher, IonSpinner } from '@ionic/react';
+import {
+  device,
+  getRelativeDate,
+  VirtualList,
+  useToast,
+  type ItemProps,
+} from '@flumens';
+import {
+  IonLabel,
+  IonList,
+  IonRefresher,
+  IonSpinner,
+  type RefresherCustomEvent,
+} from '@ionic/react';
 import samplesCollection, { bySurveyDate } from 'models/collections/samples';
 import Sample, { surveyConfigs } from 'models/sample';
 import userModel from 'models/user';
@@ -25,7 +37,7 @@ function roundDate(date: number) {
 
 const PAGE_SIZE = 50;
 
-const cachedSurveysIds = new Set();
+const cachedSurveysIds = new Set<string>();
 
 let cachedPages = 0;
 let reachedBottom = false;
@@ -49,7 +61,7 @@ const UploadedSurveys = ({ isOpen }: Props) => {
 
     setIsLoading(true);
     try {
-      const surveyIDs = Object.values(surveyConfigs).map(({ id }: any) => id);
+      const surveyIDs = Object.values(surveyConfigs).map(({ id }) => id);
       const remoteSamples = await samplesCollection.fetchRemote(
         from,
         surveyIDs
@@ -70,18 +82,17 @@ const UploadedSurveys = ({ isOpen }: Props) => {
   };
   useEffect(fetchRemoteSamplesFirstTime, [userModel.isLoggedIn()]);
 
-  const dates: any = [];
-  const dateIndices: any = [];
+  type DateDivider = { date: string; count: number };
+  const dates: string[] = [];
+  const dateIndices: number[] = [];
 
-  const groupedSurveys: any = [];
-  let counter: any = {};
+  const groupedSurveys: (DateDivider | Sample)[] = [];
+  let counter: DateDivider = { date: '', count: 0 };
 
-  const extractDates: (
-    value: any,
-    index: number,
-    array: any[]
-  ) => void = survey => {
-    const date = roundDate(new Date(survey.data.date).getTime()).toString();
+  const extractDates = (survey: Sample) => {
+    const date = roundDate(
+      new Date(survey.data.date ?? '').getTime()
+    ).toString();
     if (!dates.includes(date) && date !== 'Invalid Date') {
       dates.push(date);
       dateIndices.push(groupedSurveys.length);
@@ -95,33 +106,28 @@ const UploadedSurveys = ({ isOpen }: Props) => {
   [...surveys].forEach(extractDates);
 
   // eslint-disable-next-line react/no-unstable-nested-components
-  const Item = ({ index, ...itemProps }: { index: number }) => {
-    if (dateIndices.includes(index)) {
-      const { date, count } = groupedSurveys[index];
-      return (
-        <div
-          className="list-divider rounded-md"
-          key={date}
-          style={(itemProps as any).style}
-        >
-          <IonLabel>{getRelativeDate(date)}</IonLabel>
-          {count > 1 && <IonLabel slot="end">{count}</IonLabel>}
-        </div>
-      );
-    }
-
-    const sample = groupedSurveys[index];
-    if (!sample)
+  const Item = ({ index, style }: ItemProps) => {
+    const item = groupedSurveys[index];
+    if (!item)
       return (
         <div
           className="flex h-20 pb-10 mx-auto items-center justify-center"
-          {...itemProps}
+          style={style}
         >
           <IonSpinner />
         </div>
       );
 
-    return <Survey key={sample.cid} sample={sample} {...itemProps} />;
+    if (!(item instanceof Sample)) {
+      return (
+        <div className="list-divider rounded-md" key={item.date} style={style}>
+          <IonLabel>{getRelativeDate(item.date)}</IonLabel>
+          {item.count > 1 && <IonLabel slot="end">{item.count}</IonLabel>}
+        </div>
+      );
+    }
+
+    return <Survey key={item.cid} sample={item} style={style} />;
   };
 
   const buffer = reachedBottom || !canFetch() ? 0 : 1; // extra one for spinner
@@ -132,8 +138,8 @@ const UploadedSurveys = ({ isOpen }: Props) => {
 
   const [reachedTopOfList, setReachedTopOfList] = useState(true);
 
-  const onScroll = ({ scrollOffset }: any) =>
-    setReachedTopOfList(scrollOffset < 80);
+  const onScroll: UIEventHandler<HTMLDivElement> = event =>
+    setReachedTopOfList(event.currentTarget.scrollTop < 80);
 
   const loadMoreItems = async (from: number, to: number) => {
     if (cachedPages * PAGE_SIZE < to && !isLoading) {
@@ -141,7 +147,7 @@ const UploadedSurveys = ({ isOpen }: Props) => {
     }
   };
 
-  const isItemLoaded = (index: any) => {
+  const isItemLoaded = (index: number) => {
     if (dateIndices.includes(index)) return true;
     const sample = groupedSurveys[index];
     return !!sample;
@@ -165,7 +171,7 @@ const UploadedSurveys = ({ isOpen }: Props) => {
     );
   }
 
-  const onListRefreshPull = async (e: any) => {
+  const onListRefreshPull = async (e: RefresherCustomEvent) => {
     if (!device.isOnline) {
       toast.warn("Sorry, looks like you're offline.");
       e?.detail?.complete();

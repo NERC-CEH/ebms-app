@@ -17,7 +17,7 @@ const DetailsController = () => {
   let { sample } = useSample<Sample<Data>>();
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
 
-  const checkSampleStatus = useValidateCheck(sample as any);
+  const checkSampleStatus = useValidateCheck(sample);
 
   const onExit = useOnExitDetails(sample);
 
@@ -35,7 +35,7 @@ const DetailsController = () => {
     navigate(url, 'forward', 'pop');
   };
 
-  const isInvalid = sample.validateRemote();
+  const isInvalid = !!sample.validateRemote();
 
   const nextButton = sample.isDetailsComplete() ? null : (
     <HeaderButton onClick={onFinish} isInvalid={isInvalid}>

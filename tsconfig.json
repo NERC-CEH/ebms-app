@@ -17,6 +17,8 @@
     "noFallthroughCasesInSwitch": true,
     "noErrorTruncation": true,
     "paths": {
+      "axios": ["./node_modules/axios"],
+      "@sentry/browser": ["./node_modules/@sentry/browser"],
       "common/*": ["./src/common/*"],
       "@flumens": ["./src/common/flumens"],
       "models/*": ["./src/common/models/*"],

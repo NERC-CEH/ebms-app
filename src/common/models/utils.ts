@@ -1,16 +1,21 @@
 /* eslint-disable import-x/prefer-default-export */
-import Occurrence, { Data as OccurrenceAttrs } from './occurrence';
-import Sample, { Data as SampleAttrs } from './sample';
+import { Data as OccurrenceAttrs } from './occurrence';
+import { Data as SampleAttrs } from './sample';
 
-export const assignIfMissing = (
-  model: Sample | Occurrence,
-  key: keyof SampleAttrs | keyof OccurrenceAttrs,
-  value: any
+export const assignIfMissing = <
+  Attrs extends SampleAttrs | OccurrenceAttrs,
+  Key extends keyof Attrs,
+>(
+  model: { data: Attrs },
+  key: Key,
+  value: Attrs[Key]
 ) => {
-  if (Number.isFinite((model as any).data[key]) || (model as any).data[key])
+  const currentValue = model.data[key];
+  if (
+    (typeof currentValue === 'number' && Number.isFinite(currentValue)) ||
+    currentValue
+  )
     return;
-  if (!Number.isFinite(value) && !value) return;
-
-  // eslint-disable-next-line no-param-reassign
-  (model as any).data[key] = value;
+  if (!(typeof value === 'number' && Number.isFinite(value)) && !value) return;
+  model.data[key] = value;
 };

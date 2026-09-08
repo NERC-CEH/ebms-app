@@ -3,7 +3,9 @@
 // import { Trans as T } from 'react-i18next';
 // import { IonBackdrop, IonIcon } from '@ionic/react';
 // import butterflyIcon from 'common/images/butterfly.svg';
+import { FC } from 'react';
 import 'common/images/icon.svg';
+import { AppModel } from 'models/app';
 // import appLogo from 'common/images/icon.svg';
 // import appModelTypes from 'common/models/app';
 // import ExpandableList from 'Components/ExpandableList';
@@ -124,5 +126,6 @@ import './styles.scss';
 
 // export default observer(WhatsNewDialog);
 
-// eslint-disable-next-line
-export default (args: any) => null;
+const WhatsNewDialog: FC<{ appModel: AppModel }> = () => null;
+
+export default WhatsNewDialog;

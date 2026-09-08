@@ -1,87 +1,92 @@
-/* eslint-disable no-param-reassign */
-import { getTableColumns, sql, eq } from 'drizzle-orm';
-import { toCamelCase } from 'drizzle-orm/casing';
+import { eq, getTableColumns, sql } from 'drizzle-orm';
 import {
   primaryKey,
   QueryBuilder,
   SQLiteSelect,
   text,
 } from 'drizzle-orm/sqlite-core';
-import { Store } from '@flumens';
+import { Store, type SelectQueryFn, type SQLiteStoreOptions } from '@flumens';
+import {
+  type ColumnMap,
+  defaultCols,
+  type InferQuery,
+} from '@flumens/models/dist/Stores/SQLiteStore';
+import { getCamelCaseObj } from '@flumens/utils';
 
-type SelectQueryFn = (q: SQLiteSelect) => SQLiteSelect;
+const groupLocationsColumns = (groups: Store, locations: Store) => ({
+  groupCid: text('group_cid')
+    .notNull()
+    .references(() => groups.table.cid, { onDelete: 'cascade' }),
+  locationCid: text('location_cid')
+    .notNull()
+    .references(() => locations.table.cid, { onDelete: 'cascade' }),
+});
 
-type Options = ConstructorParameters<typeof Store>[0] & {
-  locationsStore: Store<any>;
-  taxonListsStore: Store<any>;
-};
+const groupTaxonListsColumns = (groups: Store, taxonLists: Store) => ({
+  groupCid: text('group_cid')
+    .notNull()
+    .references(() => groups.table.cid, { onDelete: 'cascade' }),
+  taxonListCid: text('taxon_list_cid')
+    .notNull()
+    .references(() => taxonLists.table.cid, { onDelete: 'cascade' }),
+});
 
-export default class GroupsStore extends Store {
-  groupsLocations!: Store<any>;
+type DefaultColumns = ReturnType<typeof defaultCols>;
 
-  groupsLists!: Store<any>;
+export default class GroupsStore extends Store<
+  DefaultColumns,
+  ColumnMap<DefaultColumns>,
+  'groups'
+> {
+  groupsLocations: Store<ReturnType<typeof groupLocationsColumns>>;
 
-  constructor({ locationsStore, taxonListsStore, ...opts }: Options) {
-    super(opts as any);
+  groupsLists: Store<ReturnType<typeof groupTaxonListsColumns>>;
 
-    this.addLocations(locationsStore);
-    this.addTaxonLists(taxonListsStore);
-  }
+  constructor({
+    locationsStore,
+    taxonListsStore,
+    ...options
+  }: SQLiteStoreOptions<DefaultColumns, 'groups'> & {
+    locationsStore: Store;
+    taxonListsStore: Store;
+  }) {
+    super(options);
 
-  addLocations(locationsStore: Store<any>) {
-    const groupLocationsColumns = {
-      groupCid: text('group_cid')
-        .notNull()
-        .references(() => this.table.cid as any, { onDelete: 'cascade' }),
-      locationCid: text('location_cid')
-        .notNull()
-        .references(() => locationsStore.table.cid, { onDelete: 'cascade' }),
-    } as const;
-
-    this.groupsLocations = new Store<typeof groupLocationsColumns>({
+    this.groupsLocations = new Store({
       name: 'groups_locations',
       db: this.db,
-      columns: groupLocationsColumns,
-      extraConf: (table: any) => [
-        primaryKey({ columns: [table.locationCid, table.groupCid] }),
-      ],
+      columns: groupLocationsColumns(this, locationsStore),
+      extraConf: table => ({
+        primaryKey: primaryKey({
+          columns: [table.locationCid, table.groupCid],
+        }),
+      }),
     });
-  }
 
-  addTaxonLists(taxonListsStore: Store<any>) {
-    const groupTaxonListsColumns = {
-      groupCid: text('group_cid')
-        .notNull()
-        .references(() => this.table.cid as any, { onDelete: 'cascade' }),
-      taxonListCid: text('taxon_list_cid')
-        .notNull()
-        .references(() => taxonListsStore.table.cid, { onDelete: 'cascade' }),
-    } as const;
-
-    this.groupsLists = new Store<typeof groupTaxonListsColumns>({
+    this.groupsLists = new Store({
       name: 'groups_taxon_lists',
       db: this.db,
-      columns: groupTaxonListsColumns,
-      extraConf: (table: any) => [
-        primaryKey({ columns: [table.groupCid, table.taxonListCid] }),
-      ],
+      columns: groupTaxonListsColumns(this, taxonListsStore),
+      extraConf: table => ({
+        primaryKey: primaryKey({
+          columns: [table.groupCid, table.taxonListCid],
+        }),
+      }),
     });
   }
 
-  async findAll(q?: SelectQueryFn) {
+  async findAll(filter?: SelectQueryFn) {
     await this.ready;
 
-    let query: SQLiteSelect = new QueryBuilder()
+    const baseQuery = new QueryBuilder()
       .select({
         ...getTableColumns(this.table),
-
         locationCids:
-          sql`json_group_array(${this.groupsLocations.table.locationCid})`.as(
+          sql<string>`json_group_array(${this.groupsLocations.table.locationCid})`.as(
             'locationCids'
           ),
-
         taxonListCids:
-          sql`json_group_array(${this.groupsLists.table.taxonListCid})`.as(
+          sql<string>`json_group_array(${this.groupsLists.table.taxonListCid})`.as(
             'taxonListCids'
           ),
       })
@@ -94,32 +99,26 @@ export default class GroupsStore extends Store {
         this.groupsLists.table,
         eq(this.table.cid, this.groupsLists.table.groupCid)
       )
-      .groupBy(this.table.cid) as any;
+      .groupBy(this.table.cid);
 
-    if (q) query = q(query);
+    const query = filter
+      ? filter(baseQuery as unknown as SQLiteSelect)
+      : baseQuery;
 
-    const values = await this.db.query(query.toSQL());
+    type Result = InferQuery<typeof baseQuery>;
 
-    const getCamelCaseAndParseJSON = (val: any) =>
-      Object.entries(val).reduce((agg: any, [key, v]: any) => {
-        const isJSONType =
-          (getTableColumns(this.table) as any)[key]?.sqlName === 'jsonb';
+    const values = await this.db.query<Result>(query.toSQL());
 
-        if (key === 'locationCids') {
-          const parsed = JSON.parse(v);
-          agg.locationCids = parsed.filter((id: string | null) => id !== null); // json_group_array returns [null] when there are no matching rows
-        } else if (key === 'taxonListCids') {
-          const parsed = JSON.parse(v);
-          agg.taxonListCids = parsed.filter((id: string | null) => id !== null); // json_group_array returns [null] when there are no matching rows
-        } else if (isJSONType) {
-          agg[toCamelCase(key)] = JSON.parse(v);
-        } else {
-          agg[toCamelCase(key)] = v;
-        }
+    const parseIds = (value: string) =>
+      (JSON.parse(value) as (string | null)[]).filter(
+        (id): id is string => id !== null
+      );
 
-        return agg;
-      }, {});
-
-    return values.map(getCamelCaseAndParseJSON);
+    return values.map(({ data, locationCids, taxonListCids, ...value }) => ({
+      ...getCamelCaseObj(value),
+      data: JSON.parse(String(data)),
+      locationCids: parseIds(locationCids),
+      taxonListCids: parseIds(taxonListCids),
+    }));
   }
 }

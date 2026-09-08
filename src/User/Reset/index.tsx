@@ -6,7 +6,7 @@ import { NavContext } from '@ionic/react';
 import userModel, { UserModel } from 'models/user';
 import Main from './Main';
 
-type Details = TypeOf<typeof UserModel.loginSchema>;
+type Details = TypeOf<typeof UserModel.resetSchema>;
 
 const LoginController = () => {
   const { navigate } = useContext(NavContext);
@@ -45,8 +45,8 @@ const LoginController = () => {
           },
         ],
       });
-    } catch (err: any) {
-      toast.error(err);
+    } catch (error) {
+      toast.error(error as Error);
     }
 
     loader.hide();

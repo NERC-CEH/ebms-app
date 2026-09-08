@@ -4,7 +4,7 @@ import { Page, Main, Header, useAlert, useSample } from '@flumens';
 import { NavContext } from '@ionic/react';
 import groups from 'common/data/groups';
 import Media from 'models/media';
-import Occurrence from 'models/occurrence';
+import Occurrence, { Taxon as TaxonData } from 'models/occurrence';
 import Sample from 'models/sample';
 import { getUnknownSpecies, MachineInvolvement } from 'Survey/MothTrap/config';
 import TaxonSearch from 'Survey/common/TaxonSearch';
@@ -18,7 +18,9 @@ const Taxon = () => {
   const { sample, occurrence } = useSample<Sample, Occurrence>();
   if (!sample) return null;
 
-  const onSpeciesSelected = async (taxon: any) => {
+  const onSpeciesSelected = async (
+    taxon: TaxonData & { isRecorded?: boolean }
+  ) => {
     const { isRecorded } = taxon;
     const survey = sample.getSurvey();
 
@@ -68,9 +70,11 @@ const Taxon = () => {
       const mergeSpecies = await showMergeSpeciesAlert(alert);
       if (!mergeSpecies) return;
 
-      occWithSameSpecies.data.count += occurrence.data.count;
-      occWithSameSpecies.data['count-outside'] +=
-        occurrence.data['count-outside'];
+      occWithSameSpecies.data.count =
+        (occWithSameSpecies.data.count || 0) + (occurrence.data.count || 0);
+      occWithSameSpecies.data['count-outside'] =
+        (occWithSameSpecies.data['count-outside'] || 0) +
+        (occurrence.data['count-outside'] || 0);
 
       while (occurrence.media.length) {
         const copy = occurrence.media.pop() as Media;
@@ -107,7 +111,7 @@ const Taxon = () => {
 
     const existingOccurrence = sample.occurrences.find(selectedTaxon);
     if (existingOccurrence) {
-      existingOccurrence.data.count += 1;
+      existingOccurrence.data.count = (existingOccurrence.data.count || 0) + 1;
       existingOccurrence.save();
       await sample.save();
       goBack();
@@ -135,7 +139,8 @@ const Taxon = () => {
     b: { probability?: number }
   ) => (b.probability ?? 0) - (a.probability ?? 0);
 
-  const suggestions = occurrence?.media.flatMap(m => m.data.species) || [];
+  const suggestions =
+    occurrence?.media.flatMap(m => m.data.species || []) || [];
   const uniqueSuggestions = new Map(
     suggestions.map(s => [s.warehouseId, s])
   ).values();

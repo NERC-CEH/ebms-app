@@ -3,6 +3,7 @@ import GPS from 'helpers/GPS';
 
 const GeolocateButton = () => {
   const { isLocating, centerMapToCurrentLocation } = useMapFlyToCurrentLocation(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     GPS as any
   );
 

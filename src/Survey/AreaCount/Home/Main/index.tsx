@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react';
+import { useContext, useRef, type RefObject } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import {
@@ -59,13 +59,14 @@ import {
   speciesNameSort,
   speciesCount,
   getDefaultTaxonCount,
+  SpeciesSummary,
 } from 'Survey/common/taxonSortFunctions';
 import CountdownClock from './CountdownClock';
 import './styles.scss';
 
 const OCCURRENCE_THRESHOLD = 2;
 
-const showCopyTip = (alert: any) => {
+const showCopyTip = (alert: ReturnType<typeof useAlert>) => {
   if (!appModel.data.showCopyHelpTip) return;
 
   alert({
@@ -99,22 +100,25 @@ const byTime = (sp1: Sample, sp2: Sample) => {
   return date2.getTime() - date1.getTime();
 };
 
-const buildSpeciesCount = (agg: any, smp: Sample) => {
+type SpeciesCounts = Record<number, SpeciesSummary>;
+
+const buildSpeciesCount = (agg: SpeciesCounts, smp: Sample) => {
   const taxon = toJS(smp.occurrences[0]?.data.taxon);
   if (!taxon) return agg;
 
   const id = taxon.preferredId || taxon.warehouseId;
 
   if (!agg[id])
-    agg[id] = getDefaultTaxonCount(taxon, smp.createdAt, smp.updatedAt); // eslint-disable-line no-param-reassign
+    agg[id] = getDefaultTaxonCount(taxon, smp.createdAt, smp.updatedAt);
 
-  if (agg[id].updatedAt < smp.updatedAt) agg[id].updatedAt = smp.updatedAt; // eslint-disable-line
+  if ((agg[id].updatedAt || 0) < smp.updatedAt)
+    agg[id].updatedAt = smp.updatedAt;
 
   if (smp.isSurveyPreciseSingleSpecies() && smp.hasZeroAbundance()) return agg;
 
-  agg[id].count++; // eslint-disable-line
-  agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning(); // eslint-disable-line
-  // eslint-disable-next-line
+  agg[id].count++;
+  agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning();
+
   agg[id].hasLocationMissing =
     agg[id].hasLocationMissing || smp.hasNoLocationAndNotLocating();
 
@@ -124,19 +128,22 @@ const buildSpeciesCount = (agg: any, smp: Sample) => {
 type Props = {
   sample: Sample;
   site?: Location;
-  previousSurvey: any;
-  deleteSpecies: any;
-  copyPreviousSurveyTaxonList: any;
-  navigateToSpeciesOccurrences: any;
-  onToggleSpeciesSort: any;
-  toggleTimer: any;
+  previousSurvey?: Sample;
+  deleteSpecies: (taxon: Taxon, isShallow: boolean) => void;
+  copyPreviousSurveyTaxonList: () => void;
+  navigateToSpeciesOccurrences: (taxon: Taxon) => void;
+  onToggleSpeciesSort: () => void;
+  toggleTimer: (sample: Sample) => void;
   speciesListSortOrder: SpeciesListSortOrder;
   hasLongSections: boolean;
-  increaseCount: any;
+  increaseCount: (taxon: Taxon, isShallow?: boolean, is5x?: boolean) => void;
   navigateToOccurrence: (smp: Sample) => void;
   deleteSingleSample: (smp: Sample) => void;
   isDisabled?: boolean;
-  cloneSubSample: (smp: Sample, ref?: any) => void;
+  cloneSubSample: (
+    smp: Sample,
+    ref?: RefObject<HTMLIonItemSlidingElement | null>
+  ) => void;
 };
 
 const AreaCount = ({
@@ -157,9 +164,9 @@ const AreaCount = ({
   cloneSubSample,
 }: Props) => {
   const { navigate } = useContext(NavContext);
-  const match = useRouteMatch<any>();
+  const match = useRouteMatch();
   const alert = useAlert();
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLIonItemSlidingElement>(null);
 
   const showCopyOptions = () => {
     alert({
@@ -229,7 +236,7 @@ const AreaCount = ({
     );
   };
 
-  const getSpeciesEntry = ([, species]: any) => {
+  const getSpeciesEntry = ([, species]: [string, SpeciesSummary]) => {
     const isSpeciesDisabled = !species.count || species.isDisabled;
     const { taxon } = species;
 
@@ -255,7 +262,7 @@ const AreaCount = ({
           detail={!!detailIcon}
           detailIcon={detailIcon}
           onClick={navigateToSpeciesOccurrencesWrap}
-          className={species.isGeolocating && 'geolocating'}
+          className={species.isGeolocating ? 'geolocating' : undefined}
         >
           <IncrementalButton
             onClick={increaseCountWrap}
@@ -309,17 +316,15 @@ const AreaCount = ({
       return getDefaultTaxonCount(shallowEntry, 0);
     };
 
-    const notEmpty = (shallowEntry: any) => shallowEntry;
-
     const shallowCounts = sample.shallowSpeciesList
       .map(getShallowEntry)
-      .filter(notEmpty);
+      .filter(shallowEntry => !!shallowEntry);
 
-    const counts = {
-      ...speciesCounts,
-      // eslint-disable-next-line @typescript-eslint/no-misused-spread
-      ...shallowCounts,
-    };
+    const counts = Object.assign(
+      {} as Record<string, SpeciesSummary>,
+      speciesCounts,
+      shallowCounts
+    );
 
     let sort = speciesNameSort;
     if (speciesListSortOrder === 'lastAdded') sort = speciesOccAddedTimeSort;
@@ -337,14 +342,21 @@ const AreaCount = ({
 
     // For remote-fetched records don't have sub-sample layer, only occurrences, so this is a temporary workaround.
     const occSpeciesList = sample.occurrences
-      .map(occ => [
-        occ.id,
-        {
-          ...getDefaultTaxonCount(occ.data.taxon),
-          count: 1,
-          isDisabled: true,
-        },
-      ])
+      .flatMap(occ => {
+        const { taxon } = occ.data;
+        if (!taxon) return [];
+
+        return [
+          [
+            occ.id,
+            {
+              ...getDefaultTaxonCount(taxon),
+              count: 1,
+              isDisabled: true,
+            },
+          ] as [string, SpeciesSummary],
+        ];
+      })
       .map(getSpeciesEntry);
 
     return (
@@ -425,7 +437,7 @@ const AreaCount = ({
       const speciesStage = stage || dragonflyStage;
 
       return (
-        <IonItemSliding key={occ.cid} ref={ref as any}>
+        <IonItemSliding key={occ.cid} ref={ref}>
           <IonItemOptions side="start" className="copy-slider">
             <IonItemOption color="tertiary" onClick={cloneSubSampleWrap}>
               <IonIcon icon={copyOutline} />
@@ -437,10 +449,12 @@ const AreaCount = ({
               <div className="shrink-0">{prettyTime}</div>
               <div className="flex w-full flex-wrap justify-start gap-x-3 gap-y-1 align-middle">
                 {speciesStage && <Badge>{speciesStage}</Badge>}
-                <PaintedLadyWing wings={wing} />
-                <PaintedLadyBehaviour behaviour={behaviour} />
-                <PaintedLadyDirection direction={direction} />
-                <PaintedLadyOther text={nectarSource || mating || eggLaying} />
+                <PaintedLadyWing wings={wing || []} />
+                <PaintedLadyBehaviour behaviour={behaviour || ''} />
+                <PaintedLadyDirection direction={String(direction || '')} />
+                <PaintedLadyOther
+                  text={nectarSource || mating || eggLaying || ''}
+                />
               </div>
               {location && <div className="shrink-0">{location}</div>}
             </div>
@@ -468,8 +482,8 @@ const AreaCount = ({
     if (hasZeroAbundance) {
       return (
         <InfoBackgroundMessage>
-          You don't have any <b>{{ prettySpeciesName } as any}</b> records in
-          your list.
+          You don't have any <b>{{ prettySpeciesName } as unknown as string}</b>{' '}
+          records in your list.
         </InfoBackgroundMessage>
       );
     }
@@ -588,7 +602,7 @@ const AreaCount = ({
   };
 
   const area = sample.data[areaSizeAttr.id];
-  let areaPretty: any = <IonIcon icon={warningOutline} color="danger" />;
+  let areaPretty = <IonIcon icon={warningOutline} color="danger" />;
   if (Number.isFinite(area) || sample.isGPSRunning()) {
     areaPretty = (
       <div className="flex flex-col overflow-hidden">

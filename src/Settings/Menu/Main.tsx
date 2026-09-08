@@ -21,8 +21,9 @@ import countries, { CountryCode } from 'common/config/countries';
 import languages, { LanguageCode } from 'common/config/languages';
 import butterflyIcon from 'common/images/butterfly.svg';
 import mothIcon from 'common/images/moth.svg';
+import type { TaxonNameDisplayType } from 'models/app';
 
-function useDatabaseExportDialog(exportFn: any) {
+function useDatabaseExportDialog(exportFn: () => void) {
   const alert = useAlert();
 
   const showDatabaseExportDialog = () => {
@@ -53,7 +54,7 @@ function useDatabaseExportDialog(exportFn: any) {
   return showDatabaseExportDialog;
 }
 
-function useUserDeleteDialog(deleteUser: any) {
+function useUserDeleteDialog(deleteUser: () => void) {
   const alert = useAlert();
 
   const showUserDeleteDialog = () => {
@@ -68,9 +69,9 @@ function useUserDeleteDialog(deleteUser: any) {
             skipTranslation
           >
             This will remove your account on the{' '}
-            <b>{{ url: config.backend.url } as any}</b> website. You will lose
-            access to any records that you have previously submitted using the
-            app or website.
+            <b>{{ url: config.backend.url } as unknown as string}</b> website.
+            You will lose access to any records that you have previously
+            submitted using the app or website.
           </InfoMessage>
         </T>
       ),
@@ -91,7 +92,10 @@ function useUserDeleteDialog(deleteUser: any) {
   return showUserDeleteDialog;
 }
 
-function clearCacheDialog(resetApp: any, alert: any) {
+function clearCacheDialog(
+  resetApp: () => void,
+  alert: ReturnType<typeof useAlert>
+) {
   alert({
     header: 'Clear cache',
     message: ' This will delete cached data, including your uploaded surveys.',
@@ -110,20 +114,22 @@ function clearCacheDialog(resetApp: any, alert: any) {
   });
 }
 
+type BooleanSetting = 'sendAnalytics' | 'useTraining' | 'useExperiments';
+
 type Props = {
-  clearCache: any;
-  onToggle: any;
+  clearCache: () => void;
+  onToggle: (setting: BooleanSetting, checked: boolean) => void;
   useTraining: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;
   isLoggedIn: boolean;
-  deleteUser: any;
+  deleteUser: () => void;
   language: LanguageCode;
   country: CountryCode;
-  exportDatabase: any;
-  importDatabase: any;
-  taxonNameDisplay: string;
-  onTaxonNameDisplayChange: any;
+  exportDatabase: () => void;
+  importDatabase: () => void;
+  taxonNameDisplay: TaxonNameDisplayType;
+  onTaxonNameDisplayChange: (value: TaxonNameDisplayType) => void;
 };
 
 const MenuMain = ({

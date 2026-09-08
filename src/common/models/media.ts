@@ -4,7 +4,7 @@ import {
   Filesystem,
   Directory as FilesystemDirectory,
 } from '@capacitor/filesystem';
-import { MediaModel, MediaData } from '@flumens';
+import { MediaModel, MediaData, MediaOptions } from '@flumens';
 import { isPlatform } from '@ionic/react';
 import config from 'common/config';
 import identifyImage, { Suggestion } from 'common/services/waarneming';
@@ -15,15 +15,13 @@ import Sample from './sample';
 export type URL = string;
 
 type Attrs = MediaData & {
-  species: Suggestion[];
+  species?: Suggestion[];
 };
 
 export default class Media extends MediaModel<Attrs> {
-  declare parent?: Sample | Occurrence;
-
   identification = observable({ identifying: false });
 
-  constructor(options: any) {
+  constructor(options: MediaOptions<Attrs>) {
     super({
       ...options,
       url: config.backend.indicia.url,
@@ -52,6 +50,8 @@ export default class Media extends MediaModel<Attrs> {
     const URL = this.data.data;
 
     try {
+      if (!URL) throw new Error('Media data is missing.');
+
       if (this.data.path) {
         // backwards compatible - don't delete old media
         await Filesystem.deleteFile({
@@ -74,6 +74,7 @@ export default class Media extends MediaModel<Attrs> {
 
   getURL() {
     const { data: name, path } = this.data;
+    if (!name) throw new Error('Media data is missing.');
 
     if (
       !isPlatform('hybrid') ||
@@ -112,8 +113,9 @@ export default class Media extends MediaModel<Attrs> {
     const speciesId =
       species.warehouseId ||
       // backwards compatibility, remove later
-      (species as any).warehouse_id;
-    const parentTaxon = this.parent!.data?.taxon;
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      (species as Suggestion & { warehouse_id?: number }).warehouse_id;
+    const parentTaxon = (this.parent as Occurrence).data.taxon;
 
     return (
       speciesId === parentTaxon?.warehouseId ||
@@ -122,8 +124,7 @@ export default class Media extends MediaModel<Attrs> {
   };
 
   async identify() {
-    const hasSpeciesBeenIdentified = !!this.data.species;
-    if (hasSpeciesBeenIdentified) return this.data.species[0];
+    if (this.data.species) return this.data.species[0];
 
     this.identification.identifying = true;
 

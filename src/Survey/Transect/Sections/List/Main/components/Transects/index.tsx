@@ -1,4 +1,5 @@
 import { observer } from 'mobx-react';
+import type { LineString, MultiPolygon, Point, Polygon } from 'geojson';
 import { informationCircleOutline } from 'ionicons/icons';
 import wkt from 'wellknown';
 import { Main, InfoMessage, getGeomMetersToLatLon } from '@flumens';
@@ -9,7 +10,12 @@ import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import SVG from '../SVG';
 import './styles.scss';
 
-function getTransectItem(transect: Location, onTransectSelect: any) {
+type Shape = LineString | Polygon | MultiPolygon | Point;
+
+function getTransectItem(
+  transect: Location,
+  onTransectSelect: (transect: Location) => void
+) {
   const byTransectId = (section: Location) =>
     section.data.parentId === transect.id;
   const sections = locations
@@ -18,17 +24,18 @@ function getTransectItem(transect: Location, onTransectSelect: any) {
 
   const getSectionGeometry = (section: Location) => {
     const geometry = section.data.boundaryGeom;
-    const shape: any = geometry ? wkt.parse(geometry) : null;
+    const shape = geometry ? (wkt.parse(geometry) as Shape | null) : null;
     if (!shape) return null;
 
-    return getGeomMetersToLatLon(shape);
+    return getGeomMetersToLatLon(shape) as Shape;
   };
 
-  const nonPoints = (geom?: any) => geom?.type !== 'Point';
-  const geometries = sections.map(getSectionGeometry).filter(nonPoints);
+  const geometries = sections
+    .map(getSectionGeometry)
+    .filter(geom => !!geom && geom.type !== 'Point');
 
   const geom = {
-    type: 'GeometryCollection',
+    type: 'GeometryCollection' as const,
     geometries,
   };
 
@@ -51,7 +58,7 @@ function getTransectItem(transect: Location, onTransectSelect: any) {
 }
 
 type Props = {
-  onTransectSelect: any;
+  onTransectSelect: (transect: Location) => void;
 };
 
 function Transects({ onTransectSelect }: Props) {

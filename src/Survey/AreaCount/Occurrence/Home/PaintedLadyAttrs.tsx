@@ -15,9 +15,8 @@ const PaintedLadyAttrs = ({ occurrence }: Props) => {
   const { url } = useRouteMatch();
 
   if (!occurrence.data.behaviour && !occurrence.data.wing) {
-    // eslint-disable-next-line no-param-reassign
-    occurrence.data.behaviour = null;
-    // eslint-disable-next-line no-param-reassign
+    delete occurrence.data.behaviour;
+
     occurrence.data.wing = [];
     occurrence.save();
   }
@@ -38,7 +37,7 @@ const PaintedLadyAttrs = ({ occurrence }: Props) => {
       {isStageAdult && (
         <MenuAttrItem
           routerLink={`${url}/wing`}
-          value={<PaintedLadyWing wings={wing} />}
+          value={<PaintedLadyWing wings={wing || []} />}
           label="Wing condition"
           icon={butterflyIcon}
           className="text-capitalize wing-value"
@@ -50,7 +49,7 @@ const PaintedLadyAttrs = ({ occurrence }: Props) => {
       {isStageAdult && (
         <MenuAttrItem
           routerLink={`${url}/behaviour`}
-          value={<PaintedLadyBehaviour behaviour={behaviour} showLabel />}
+          value={<PaintedLadyBehaviour behaviour={behaviour || ''} showLabel />}
           label="Behaviour"
           icon={butterflyIcon}
           className="behaviour-value"

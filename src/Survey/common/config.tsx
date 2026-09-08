@@ -3,7 +3,7 @@ import {
   cloudyOutline,
   thermometerOutline,
 } from 'ionicons/icons';
-import { z } from 'zod';
+import { z, type ZodError } from 'zod';
 import {
   RemoteConfig,
   MenuAttrItemFromModelMenuProps,
@@ -13,6 +13,7 @@ import {
   inferBlockType,
   TextInputConf,
   dateFormatISO,
+  type SampleSubmission as Submission,
 } from '@flumens';
 import { IonIcon } from '@ionic/react';
 import groups from 'common/data/groups';
@@ -236,7 +237,7 @@ export const guidAttr = {
   type: 'textInput',
   title: 'GUID',
   container: 'inline',
-  prefix: (<IonIcon icon={chatboxOutline} className="size-6" />) as any,
+  prefix: <IonIcon icon={chatboxOutline} className="size-6" />,
   className: '[&>div>div>input]:text-right',
 } as const satisfies TextInputConf;
 
@@ -253,7 +254,7 @@ export const areaCountSchema = z.object({
       { error: 'Location is missing.' }
     )
     .refine(
-      (val: any) =>
+      val =>
         Number.isFinite(val.latitude) &&
         Number.isFinite(val.longitude) &&
         val.shape,
@@ -307,32 +308,20 @@ export const stageAttr = {
     attrProps: {
       input: 'radio',
       info: 'Pick the life stage',
-      set: (value: any, model: Occurrence) => {
+      set: (value: string | null, model: Occurrence) => {
         if (model.data.stage !== value && model.parent!.isPaintedLadySurvey()) {
-          // eslint-disable-next-line no-param-reassign
-          model.data.eggLaying = null;
-          // eslint-disable-next-line no-param-reassign
-          model.data.otherThistles = null;
-          // eslint-disable-next-line no-param-reassign
-          model.data.otherEggLaying = null;
-          // eslint-disable-next-line no-param-reassign
-          model.data.wing = [];
-          // eslint-disable-next-line no-param-reassign
-          model.data.behaviour = null;
-          // eslint-disable-next-line no-param-reassign
-          model.data.direction = null;
-          // eslint-disable-next-line no-param-reassign
-          model.data.nectarSource = null;
-          // eslint-disable-next-line no-param-reassign
-          model.data.eggLaying = [];
-          // eslint-disable-next-line no-param-reassign
-          model.data.otherEggLaying = null;
-          // eslint-disable-next-line no-param-reassign
-          model.data.mating = null;
+          Object.assign(model.data, {
+            otherThistles: undefined,
+            wing: [],
+            behaviour: undefined,
+            direction: undefined,
+            nectarSource: undefined,
+            eggLaying: [],
+            otherEggLaying: undefined,
+            mating: undefined,
+          });
         }
-
-        // eslint-disable-next-line no-param-reassign
-        model.data.stage = value;
+        model.data.stage = value ?? undefined;
         model.save();
       },
       onChange: () => window.history.back(),
@@ -357,7 +346,7 @@ export const cloudAttr = {
 
 type MenuProps = MenuAttrItemFromModelMenuProps;
 
-export type BlockOrFn = BlockT | ((record?: any) => BlockT);
+export type BlockOrFn = BlockT | ((record?: Sample | Occurrence) => BlockT);
 
 export type AttrConfig = {
   menuProps?: MenuProps;
@@ -370,17 +359,19 @@ type Attrs = Record<string, AttrConfig>;
 
 type OccurrenceCreateOptions = {
   taxon: Taxon;
-  sample?: Sample;
+  sample?: Sample<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   identifier?: string;
   photo?: Media;
 };
 
+export type { Submission };
+
 type OccurrenceConfig = {
-  render?: any[] | ((model: Occurrence) => any[]);
+  render?: BlockT[] | ((model: Occurrence) => BlockT[]);
   attrs: Attrs;
   create?: (options: OccurrenceCreateOptions) => Occurrence;
-  verify?: (attrs: any) => any;
-  modifySubmission?: (submission: any, model: any) => any;
+  verify?: (attrs: Record<string, unknown>) => ZodError | undefined;
+  modifySubmission?: (submission: Submission, model: Occurrence) => Submission;
   /**
    * Set to true if multi-species surveys shouldn't auto-increment it to 1 when adding to lists.
    */
@@ -396,15 +387,18 @@ type SampleCreateOptions = {
   hasGPSPermission?: boolean;
   recorder?: string;
   location?: Location;
-  zeroAbundance?: any;
+  zeroAbundance?: boolean;
 };
 
 export type SampleConfig = {
-  render?: any[] | ((model: Sample) => any[]);
+  render?: BlockT[] | ((model: Sample) => BlockT[]);
   attrs?: Attrs;
   create?: (options: SampleCreateOptions) => Sample;
-  verify?: (attrs: any, model: any) => any;
-  modifySubmission?: (submission: any, model: any) => any;
+  verify?: (
+    attrs: Record<string, unknown>,
+    model: Sample
+  ) => ZodError | undefined;
+  modifySubmission?: (submission: Submission, model: Sample) => Submission;
   smp?: SampleConfig;
   occ?: OccurrenceConfig;
 };

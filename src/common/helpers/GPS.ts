@@ -32,7 +32,7 @@ let clientCallbackId = 0;
 type Callback = (err: Error | null, location?: Position) => void;
 
 // only one watch per app, multiple clients can register callbacks
-const clientCallbacks: Record<any, Callback> = {};
+const clientCallbacks: Record<number, Callback> = {};
 
 function onWatchPosition(
   pos: Location | CapPosition | null | undefined,

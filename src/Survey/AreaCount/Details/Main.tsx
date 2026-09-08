@@ -42,7 +42,7 @@ const AreaCountDetails = ({
   onChangeCounter,
   onChangeSensitivityStatus,
 }: Props) => {
-  const match = useRouteMatch<any>();
+  const match = useRouteMatch();
   const baseURL = match.url;
 
   const { isDisabled } = sample;

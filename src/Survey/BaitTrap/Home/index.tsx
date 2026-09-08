@@ -20,7 +20,7 @@ const HomeController = () => {
   let { sample } = useSample<Sample<Data>>();
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
 
-  const checkSampleStatus = useValidateCheck(sample as any);
+  const checkSampleStatus = useValidateCheck(sample);
   const checkUserStatus = useUserStatusCheck();
 
   const onExit = useOnExit(sample);
@@ -43,7 +43,7 @@ const HomeController = () => {
     const isValid = checkSampleStatus();
     if (!isValid) return;
 
-    (appModel.data as any)[`draftId:${survey.name}`] = '';
+    appModel.data[`draftId:${survey.name}`] = '';
 
     const saveAndReturn = () => {
       sample.cleanUp();
@@ -78,9 +78,7 @@ const HomeController = () => {
     <Page id="survey-bait-trap-home">
       <Header
         title="Bait-Trap Survey"
-        rightSlot={
-          <SurveyHeaderButton onClick={onSubmit} sample={sample as any} />
-        }
+        rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
         subheader={sample.data.training && <TrainingHeader />}
         defaultHref="/home/user-surveys"
         onLeave={!sample.metadata.saved ? onExit : undefined}

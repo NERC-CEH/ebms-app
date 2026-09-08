@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, type RefObject } from 'react';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
@@ -19,7 +19,7 @@ const useDeleteSpeciesPrompt = () => {
   const { t } = useTranslation();
 
   function showDeleteSpeciesPrompt(taxon: Taxon) {
-    const prompt = (resolve: any) => {
+    const prompt = (resolve: (confirmed: boolean) => void) => {
       const taxonName = taxon.scientificName;
       alert({
         header: t('Delete'),
@@ -35,13 +35,13 @@ const useDeleteSpeciesPrompt = () => {
           {
             text: t('Delete'),
             role: 'destructive',
-            handler: resolve,
+            handler: () => resolve(true),
           },
         ],
       });
     };
 
-    return new Promise(prompt);
+    return new Promise<boolean>(prompt);
   }
 
   return showDeleteSpeciesPrompt;
@@ -80,10 +80,14 @@ const EditController = () => {
     subSample.shallowSpeciesList.splice(taxonIndexInShallowList, 1);
   };
 
-  const deleteSpecies = async (taxon: any, isShallow: boolean, ref: any) => {
+  const deleteSpecies = async (
+    taxon: Taxon,
+    isShallow: boolean,
+    ref: RefObject<HTMLIonItemSlidingElement | null>
+  ) => {
     if (isShallow) {
       deleteFromShallowList(taxon);
-      await ref.current.closeOpened();
+      await ref.current?.closeOpened();
 
       return;
     }
@@ -120,7 +124,7 @@ const EditController = () => {
 
     if (!occ) return;
 
-    occ.data.count += is5x ? 5 : 1;
+    occ.data.count = (occ.data.count || 0) + (is5x ? 5 : 1);
     occ.save();
   };
 
@@ -206,21 +210,19 @@ const EditController = () => {
       occ.data.taxon.preferredId || occ.data.taxon.warehouseId;
     const existingSpeciesIds = subSample.occurrences.map(getSpeciesId);
 
-    const uniqueSpeciesList: any = [];
+    const uniqueSpeciesIds = new Set<number>();
     const getNewSpeciesOnly = ({ warehouseId, preferredId }: Taxon) => {
       const speciesID = preferredId || warehouseId;
 
-      if (uniqueSpeciesList.includes(speciesID)) {
-        return false;
-      }
-      uniqueSpeciesList.push(speciesID);
+      if (uniqueSpeciesIds.has(speciesID)) return false;
+      uniqueSpeciesIds.add(speciesID);
       return !existingSpeciesIds.includes(speciesID);
     };
 
     const getTaxon = (occurrence: Occurrence) => toJS(occurrence.data.taxon);
     const newSpeciesList = previousSectionOrSurvey
       .map(getTaxon)
-      .filter(getNewSpeciesOnly) as [];
+      .filter(getNewSpeciesOnly);
 
     // copy but retain old observable ref
     subSample.shallowSpeciesList.splice(

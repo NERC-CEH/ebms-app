@@ -1,6 +1,6 @@
 import { IObservableArray, observable } from 'mobx';
 import { Species as ReportSpecies } from 'src/Home/Report/services';
-import { Model, ModelData } from '@flumens';
+import { Model, ModelData, ModelOptions } from '@flumens';
 import { CountryCode } from 'common/config/countries';
 import { LanguageCode } from 'common/config/languages';
 import groups from 'common/data/groups';
@@ -10,8 +10,8 @@ export type SurveyDraftKeys = {
   'draftId:precise-area'?: string;
   'draftId:precise-single-species-area'?: string;
   'draftId:transect'?: string;
-  'draftId:moth'?: string | null;
-  'draftId:bait-trap'?: string | null;
+  'draftId:moth'?: string;
+  'draftId:bait-trap'?: string;
 };
 
 export const DEFAULT_SPECIES_GROUP = [groups.butterflies.id];
@@ -23,7 +23,7 @@ export type SpeciesListSortOrder = 'alphabetical' | 'lastAdded' | 'lastEdited';
 
 export type Data = ModelData & {
   showedWelcome: boolean;
-  language?: LanguageCode | null;
+  language: LanguageCode | null;
   country?: CountryCode;
   useTraining: boolean;
   feedbackGiven: boolean;
@@ -31,8 +31,8 @@ export type Data = ModelData & {
 
   speciesGroups: number[];
   useDayFlyingMothsOnly: boolean;
-  locations: any[];
-  taxonGroupFilters?: any;
+  locations: unknown[];
+  taxonGroupFilters?: number[];
   /**
    * Default user group/project ID.
    */
@@ -40,7 +40,7 @@ export type Data = ModelData & {
   useImageIdentifier: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;
-  appSession: any;
+  appSession: number;
   showGuideHelpTip: boolean;
   showSurveysDeleteTip: boolean;
   showSurveyUploadTip: boolean;
@@ -98,7 +98,7 @@ const defaults: Data = {
 export class AppModel extends Model<Data> {
   speciesReport: IObservableArray<ReportSpecies> = observable([]);
 
-  constructor(options: any) {
+  constructor(options: ModelOptions<Data>) {
     super({ ...options, data: { ...defaults, ...options.data } });
   }
 
@@ -122,7 +122,8 @@ export class AppModel extends Model<Data> {
     return prettySortName[this.data.speciesListSortOrder];
   }
 
-  toggleTaxonFilter(filter: any) {
+  toggleTaxonFilter(filter: number) {
+    this.data.taxonGroupFilters ||= [];
     const { taxonGroupFilters } = this.data;
     const index = taxonGroupFilters.indexOf(filter);
     if (index >= 0) {

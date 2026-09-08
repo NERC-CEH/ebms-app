@@ -1,4 +1,5 @@
 import { useEffect, useContext } from 'react';
+import type { RouteComponentProps } from 'react-router';
 import { Geolocation } from '@capacitor/geolocation';
 import { useAlert, HandledError } from '@flumens';
 import { NavContext, isPlatform } from '@ionic/react';
@@ -8,8 +9,8 @@ import samples from 'models/collections/samples';
 import userModel from 'models/user';
 import { Survey } from 'Survey/common/config';
 
-async function showDraftAlert(alert: any) {
-  const alertWrap = (resolve: any) => {
+async function showDraftAlert(alert: ReturnType<typeof useAlert>) {
+  const alertWrap = (resolve: (continueDraft: boolean) => void) => {
     alert({
       header: 'Draft',
       message: 'Previous survey draft exists, would you like to continue it?',
@@ -20,10 +21,10 @@ async function showDraftAlert(alert: any) {
       ],
     });
   };
-  return new Promise(alertWrap);
+  return new Promise<boolean>(alertWrap);
 }
 
-async function getNewSample(survey: Survey, hasGPSPermission: any) {
+async function getNewSample(survey: Survey, hasGPSPermission?: boolean) {
   const recorder = userModel.getPrettyName();
 
   const sample = await survey.create!({ recorder, hasGPSPermission });
@@ -33,8 +34,11 @@ async function getNewSample(survey: Survey, hasGPSPermission: any) {
   return sample;
 }
 
-async function getDraft(draftIdKey: keyof SurveyDraftKeys, alert: any) {
-  const draftID = (appModel.data as any)[draftIdKey];
+async function getDraft(
+  draftIdKey: keyof SurveyDraftKeys,
+  alert: ReturnType<typeof useAlert>
+) {
+  const draftID = appModel.data[draftIdKey];
   if (!draftID) return null;
 
   const draftSample = samples.cidMap.get(draftID);
@@ -58,8 +62,11 @@ const useShowGPSPermissionDialog = () => {
     let gpsPermission;
     try {
       gpsPermission = await Geolocation.checkPermissions();
-    } catch (err: any) {
-      if (err?.message === GPS_DISABLED_ERROR_MESSAGE) {
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message === GPS_DISABLED_ERROR_MESSAGE
+      ) {
         throw new HandledError(GPS_DISABLED_ERROR_MESSAGE);
       }
     }
@@ -76,7 +83,7 @@ const useShowGPSPermissionDialog = () => {
     appModel.data.showGPSPermissionTip = false;
     appModel.save();
 
-    const prompt = (resolve: any) => {
+    const prompt = (resolve: (granted: boolean) => void) => {
       alert({
         header: 'Location permission',
         message:
@@ -88,7 +95,7 @@ const useShowGPSPermissionDialog = () => {
       });
     };
 
-    return new Promise(prompt);
+    return new Promise<boolean>(prompt);
   };
 
   return showGPSPermissionDialog;
@@ -112,11 +119,11 @@ function StartNewSurvey({ survey }: Props): null {
 
       let sample = await getDraft(draftIdKey, alert);
       if (!sample) {
-        const ignoreError = () => {};
-        const hasGrantedGps =
-          await showGPSPermissionDialog().catch(ignoreError);
+        const hasGrantedGps = await showGPSPermissionDialog().catch(
+          () => false
+        );
         sample = await getNewSample(survey, hasGrantedGps);
-        (appModel.data as any)[draftIdKey] = sample.cid;
+        appModel.data[draftIdKey] = sample.cid;
 
         if (sample.isSingleSpeciesSurvey()) {
           navigate(
@@ -145,7 +152,7 @@ function StartNewSurvey({ survey }: Props): null {
 }
 
 StartNewSurvey.with = (survey: Survey) => {
-  const StartNewSurveyWithRouter = (params: any) => (
+  const StartNewSurveyWithRouter = (params: RouteComponentProps) => (
     <StartNewSurvey survey={survey} {...params} />
   );
   return StartNewSurveyWithRouter;

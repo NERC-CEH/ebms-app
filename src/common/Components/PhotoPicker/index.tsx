@@ -18,7 +18,7 @@ export function usePromptImageSource() {
   const { t } = useTranslation();
   const [presentActionSheet] = useIonActionSheet();
 
-  const promptImageSource = (resolve: any) => {
+  const promptImageSource = (resolve: (value: boolean | null) => void) => {
     presentActionSheet({
       buttons: [
         { text: t('Gallery'), handler: () => resolve(false) },
@@ -60,9 +60,7 @@ const AppPhotoPicker = ({ model, useClassifier = false }: Props) => {
 
     model
       .identify()
-      .catch((err: any) =>
-        manualTrigger ? toast.error(err) : console.error(err)
-      );
+      .catch(err => (manualTrigger ? toast.error(err) : console.error(err)));
   };
 
   async function onAdd(shouldUseCamera: boolean) {
@@ -73,31 +71,28 @@ const AppPhotoPicker = ({ model, useClassifier = false }: Props) => {
       if (!photoURLs.length) return;
 
       const getImageModel = async (imageURL: URL) =>
-        Media.getImageModel(
+        (await Media.getImageModel(
           isPlatform('hybrid') ? Capacitor.convertFileSrc(imageURL) : imageURL,
           config.dataPath,
           true
-        );
-      const imageModels: Media[] = await Promise.all<any>(
-        photoURLs.map(getImageModel)
-      );
+        )) as unknown as Media;
+      const imageModels = await Promise.all(photoURLs.map(getImageModel));
 
       model.media.push(...imageModels);
       model.save();
 
       identifySpecies();
-    } catch (e: any) {
-      toast.error(e);
+    } catch (error) {
+      toast.error(error as Error);
     }
   }
 
-  const onRemove = async (m: any) => {
-    await m.destroy();
+  const onRemove = async (media: Media) => {
+    await media.destroy();
     identifySpecies();
   };
 
   const onSpeciesSelect = (suggestion: ClassifierSuggestion) => {
-    // eslint-disable-next-line no-param-reassign
     (model as Occurrence).data.taxon = {
       foundInName: suggestion.foundInName,
       commonName: suggestion.commonName,

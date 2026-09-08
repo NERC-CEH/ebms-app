@@ -2,9 +2,8 @@ import { observable } from 'mobx';
 
 type Model = 'smp' | 'occ';
 type TaxonGroup = string | number | null | undefined;
-type Locks = Partial<Record<Model, Record<string, any>>>;
+type Locks = Partial<Record<Model, Record<string, unknown>>>;
 
-const clone = (value: any) => JSON.parse(JSON.stringify(value));
 const requireTaxonGroup = (taxonGroup: TaxonGroup) => {
   if (taxonGroup === null || taxonGroup === undefined)
     throw new Error('taxon group is required');
@@ -30,12 +29,12 @@ export default () => {
     taxonGroup: TaxonGroup,
     model: Model,
     attr: string,
-    value: any
+    value: unknown
   ) => {
     const group = requireTaxonGroup(taxonGroup);
     data[group] ||= {};
     data[group][model] ||= {};
-    data[group][model][attr] = clone(value);
+    data[group][model][attr] = JSON.parse(JSON.stringify(value)) as unknown;
   };
 
   const unset = (taxonGroup: TaxonGroup, model: Model, attr: string) => {
@@ -50,7 +49,7 @@ export default () => {
     taxonGroup: TaxonGroup,
     model: Model,
     attr: string,
-    value?: any
+    value?: unknown
   ) {
     const lockedValue = get(taxonGroup, model, attr);
     if (arguments.length < 4) return lockedValue !== undefined;
