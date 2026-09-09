@@ -416,6 +416,7 @@ const countries = {
     id: 216187,
     continent: 'EU',
   },
+  // Change to GB at some point as it is a standard one.
   UK: {
     name: 'United Kingdom',
     latitude: 55.378051,
@@ -557,6 +558,9 @@ export type Country = {
   continent?: keyof typeof continents;
 };
 
+/**
+ * ISO 3166 two-letter country code.
+ */
 export type CountryCode = keyof typeof countries;
 export type ContinentCode = keyof typeof continents;
 
