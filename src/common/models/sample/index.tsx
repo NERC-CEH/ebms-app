@@ -28,7 +28,9 @@ import initGPSExtension, {
   type Extension as GPSExtension,
 } from './GPSExt';
 import attrLockExtension from './attrLockExt';
-import VibrateExtension from './vibrateExt';
+import initVibrateExtension, {
+  type Extension as VibrateExtension,
+} from './vibrateExt';
 
 type AreaCountData = {
   location: Location;
@@ -129,9 +131,7 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
 
   declare gps: GPSExtension;
 
-  declare stopVibrateCounter: () => void;
-
-  declare startVibrateCounter: () => void;
+  declare vibrate: VibrateExtension;
 
   constructor(options: SampleOptions) {
     super({
@@ -179,8 +179,8 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
       delete data.location.centroidSref;
     }
 
-    Object.assign(this, VibrateExtension);
     this.gps = initGPSExtension(this);
+    this.vibrate = initVibrateExtension(this);
   }
 
   destroy(silent?: boolean) {
@@ -192,7 +192,7 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
     this.gps.stop();
     const stopGPS = (smp: Sample) => smp.gps.stop();
     this.samples.forEach(stopGPS);
-    this.stopVibrateCounter();
+    this.vibrate.stop();
   };
 
   getSurvey(): Survey {
