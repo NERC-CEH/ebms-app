@@ -47,6 +47,72 @@ test.describe('15min Count', () => {
     ).toBeVisible();
   });
 
+  test('pauses and resumes the countdown', async ({ recordingPage }) => {
+    await openSurvey(recordingPage, '15min Count');
+
+    const duration = recordingPage
+      .locator('#precise-area-count-edit')
+      .last()
+      .getByText('Duration', { exact: true });
+    const countdown = recordingPage.locator('#countdown').last();
+
+    await expect(countdown).toHaveText(/\d{2}:\d{2}/);
+    await duration.click();
+    await expect(countdown).toHaveText('Paused');
+    await duration.click();
+    await expect(countdown).toHaveText(/\d{2}:\d{2}/);
+  });
+
+  test('records and keeps a draft while offline', async ({ recordingPage }) => {
+    await recordingPage.context().setOffline(true);
+    await openSurvey(recordingPage, '15min Count');
+
+    await recordingPage.getByText('Add species', { exact: true }).click();
+    await selectSpecies(recordingPage, 'Painted', 'Painted Lady');
+    await expect(
+      recordingPage.locator('#list').last().getByText('Painted Lady')
+    ).toBeVisible();
+
+    await recordingPage.getByRole('button', { name: 'Back' }).last().click();
+    await recordingPage
+      .getByRole('alertdialog', { name: 'Exit Survey' })
+      .getByRole('button', { name: 'Exit' })
+      .click();
+    await recordingPage.getByRole('tab', { name: /Surveys/ }).click();
+
+    const pending = recordingPage.locator('#home-user-surveys');
+    await expect(pending.getByText('15min Count')).toBeVisible();
+    await expect(pending.getByText('Running')).toBeVisible();
+  });
+
+  test('deletes a local draft permanently', async ({ recordingPage }) => {
+    await openSurvey(recordingPage, '15min Count');
+    await recordingPage.getByRole('button', { name: 'Back' }).last().click();
+    await recordingPage
+      .getByRole('alertdialog', { name: 'Exit Survey' })
+      .getByRole('button', { name: 'Exit' })
+      .click();
+    await recordingPage.getByRole('tab', { name: /Surveys/ }).click();
+
+    const survey = recordingPage
+      .locator('.survey-list-item')
+      .filter({ hasText: '15min Count' });
+    await survey.evaluate(element =>
+      (element as HTMLIonItemSlidingElement).open('end')
+    );
+    await survey.getByRole('button', { name: 'Delete' }).click();
+    await recordingPage
+      .getByRole('alertdialog', { name: 'Delete' })
+      .getByRole('button', { name: 'Delete' })
+      .click();
+
+    await expect(survey).not.toBeVisible();
+    await recordingPage.reload();
+    await expect(
+      recordingPage.getByText('No finished pending surveys.')
+    ).toBeVisible();
+  });
+
   test('offers to continue a persisted draft', async ({ recordingPage }) => {
     await openSurvey(recordingPage, '15min Count');
     const surveyUrl = recordingPage.url();
