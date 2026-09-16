@@ -257,7 +257,7 @@ const survey: Survey = {
       sample.save();
     }, 1000);
 
-    if (hasGPSPermission) sample.toggleGPStracking();
+    if (hasGPSPermission) sample.gps.toggle();
 
     when(() => isValidLocation(sample.data.location), getSetWeather(sample));
 

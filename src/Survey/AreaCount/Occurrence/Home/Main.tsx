@@ -44,7 +44,7 @@ const EditOccurrence = ({
 
   const { location } = subSample.data;
   let locationPretty;
-  if (subSample.hasNoLocationAndNotLocating()) {
+  if (subSample.gps.hasNoLocationAndNotLocating()) {
     if (!isDisabled)
       locationPretty = <IonIcon icon={warningOutline} color="danger" />;
   } else {

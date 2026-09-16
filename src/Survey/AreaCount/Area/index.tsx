@@ -24,12 +24,12 @@ const AreaController = () => {
   const { sample } = useSample<Sample>();
   if (!sample) throw new Error('Sample is missing');
 
-  const toggleGPStracking = (on: boolean) => sample.toggleGPStracking(on);
+  const toggleGPStracking = (on: boolean) => sample.gps.toggle(on);
 
-  const setLocation = (shape: Shape | null) => sample.setLocation(shape);
+  const setLocation = (shape: Shape | null) => sample.gps.setLocation(shape);
 
   const { location } = sample.data;
-  const isGPSTracking = sample.isGPSRunning();
+  const isGPSTracking = sample.gps.isRunning();
   const area = sample.data[areaSizeAttr.id];
 
   let infoText;

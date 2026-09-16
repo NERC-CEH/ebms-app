@@ -108,12 +108,14 @@ function isSufficientDistanceMade(
 }
 
 type SampleModel = SampleWithLocation & {
-  setLocation: (
-    shape: Shape,
-    accuracy?: number,
-    altitude?: number,
-    altitudeAccuracy?: number
-  ) => Promise<void>;
+  gps: {
+    setLocation: (
+      shape: Shape,
+      accuracy?: number,
+      altitude?: number,
+      altitudeAccuracy?: number
+    ) => Promise<void>;
+  };
   save: () => Promise<void>;
 };
 
@@ -134,7 +136,7 @@ export function updateSampleArea(
   coordinates.push([longitude, latitude]);
   if (coordinates.length === 1) coordinates.push([longitude, latitude]); // can't have just one point
 
-  return sample.setLocation(
+  return sample.gps.setLocation(
     shape,
     accuracy,
     altitude ?? undefined,
@@ -150,141 +152,150 @@ export const calculateArea = (shape: Shape): number => {
   );
 };
 
-type ExtensionThis = SampleModel & {
-  gps: { locating: number | null };
+type ExtensionModel = SampleModel & {
   parent?: object;
   isTimerFinished: () => boolean;
-  isGPSRunning: () => boolean;
-  stopGPS: () => void;
-  startGPS: () => void;
 };
 
-const extension = {
-  setLocation(
-    this: ExtensionThis,
+export type Extension = {
+  locating: number | null;
+  setLocation: (
     shape: Shape | null,
     accuracy?: number,
     altitude?: number,
     altitudeAccuracy?: number
-  ): Promise<void> {
-    if (!shape) {
-      this.data.location = undefined;
-      return this.save();
-    }
-
-    const coordinates =
-      shape.type === 'Polygon' ? shape.coordinates[0] : shape.coordinates;
-    const [longitude, latitude] = coordinates[coordinates.length - 1];
-
-    this.data.location = {
-      latitude,
-      longitude,
-      shape,
-      source: 'map',
-      accuracy,
-      altitude,
-      altitudeAccuracy,
-    };
-
-    this.data[areaSizeAttr.id] = calculateArea(shape);
-
-    return this.save();
-  },
-
-  toggleGPStracking(this: ExtensionThis, state?: boolean) {
-    if (this.isGPSRunning() || state === false) {
-      this.stopGPS();
-      return;
-    }
-
-    this.startGPS();
-  },
-
-  gpsExtensionInit(this: ExtensionThis) {
-    this.gps = observable({ locating: null });
-  },
-
-  startGPS(this: ExtensionThis) {
-    // eslint-disable-next-line no-console
-    console.log('SampleModel:GPS start');
-
-    const showPushNotificationForBackgroundGPS = async () => {
-      let permStatus = await PushNotifications.checkPermissions();
-
-      if (permStatus.receive !== 'granted') {
-        permStatus = await PushNotifications.requestPermissions();
-      }
-    };
-
-    const ANDROID_12_VERSION = 12;
-    const isPlatformAndroidAndDeviceVersionAbove12 =
-      isPlatform('android') &&
-      device &&
-      Number(device.info?.osVersion) > ANDROID_12_VERSION;
-    if (isPlatformAndroidAndDeviceVersionAbove12) {
-      showPushNotificationForBackgroundGPS();
-    }
-
-    const onPosition = (error: Error | null, location?: GPSLocation) => {
-      if (error) {
-        const permissionsError = error?.message === 'User denied Geolocation';
-        if (permissionsError) {
-          // eslint-disable-next-line no-console
-          console.log('GPS: error', error);
-        } else {
-          // eslint-disable-next-line no-console
-          console.error('GPS: error', error);
-        }
-
-        this.stopGPS();
-        return;
-      }
-
-      const isOverDefaultSurveyEndTime = this.isTimerFinished();
-      if (this.data.surveyStartTime && isOverDefaultSurveyEndTime) {
-        // eslint-disable-next-line no-console
-        console.log('SampleModel:GPS: timed out stopping!');
-        this.stopGPS();
-        return;
-      }
-
-      const isPreciseAreaSubSample = !!this.parent;
-      if (isPreciseAreaSubSample) {
-        const locationForModel = {
-          ...location!,
-          altitude: location!.altitude ?? undefined,
-          altitudeAccuracy: location!.altitudeAccuracy ?? undefined,
-        };
-        updateModelLocation(
-          this as unknown as LocationModelLike,
-          locationForModel
-        );
-        this.stopGPS();
-        return;
-      }
-
-      updateSampleArea(this, location!);
-    };
-
-    this.gps.locating = GPS.start(onPosition);
-  },
-
-  stopGPS(this: ExtensionThis) {
-    if (!this.isGPSRunning()) return;
-
-    // eslint-disable-next-line no-console
-    console.log('SampleModel:GPS stop');
-    GPS.stop(this.gps.locating!);
-    this.gps.locating = null;
-  },
-
-  isGPSRunning(this: ExtensionThis) {
-    return !!(this.gps.locating || this.gps.locating === 0);
-  },
-
-  hasNoLocationAndNotLocating(this: ExtensionThis) {
-    return !this.data.location?.latitude && !this.isGPSRunning();
-  },
+  ) => Promise<void>;
+  toggle: (state?: boolean) => void;
+  start: () => void;
+  stop: () => void;
+  isRunning: () => boolean;
+  hasNoLocationAndNotLocating: () => boolean;
 };
 
-export default extension;
+const initGPSExtension = (model: ExtensionModel): Extension =>
+  observable({
+    locating: null,
+
+    setLocation(
+      shape: Shape | null,
+      accuracy?: number,
+      altitude?: number,
+      altitudeAccuracy?: number
+    ): Promise<void> {
+      if (!shape) {
+        model.data.location = undefined;
+        return model.save();
+      }
+
+      const coordinates =
+        shape.type === 'Polygon' ? shape.coordinates[0] : shape.coordinates;
+      const [longitude, latitude] = coordinates[coordinates.length - 1];
+
+      model.data.location = {
+        latitude,
+        longitude,
+        shape,
+        source: 'map',
+        accuracy,
+        altitude,
+        altitudeAccuracy,
+      };
+
+      model.data[areaSizeAttr.id] = calculateArea(shape);
+
+      return model.save();
+    },
+
+    toggle(state?: boolean) {
+      if (this.isRunning() || state === false) {
+        this.stop();
+        return;
+      }
+
+      this.start();
+    },
+
+    start() {
+      // eslint-disable-next-line no-console
+      console.log('SampleModel:GPS start');
+
+      const showPushNotificationForBackgroundGPS = async () => {
+        let permStatus = await PushNotifications.checkPermissions();
+
+        if (permStatus.receive !== 'granted') {
+          permStatus = await PushNotifications.requestPermissions();
+        }
+      };
+
+      const ANDROID_12_VERSION = 12;
+      const isPlatformAndroidAndDeviceVersionAbove12 =
+        isPlatform('android') &&
+        device &&
+        Number(device.info?.osVersion) > ANDROID_12_VERSION;
+      if (isPlatformAndroidAndDeviceVersionAbove12) {
+        showPushNotificationForBackgroundGPS();
+      }
+
+      const onPosition = (error: Error | null, location?: GPSLocation) => {
+        if (error) {
+          const permissionsError = error?.message === 'User denied Geolocation';
+          if (permissionsError) {
+            // eslint-disable-next-line no-console
+            console.log('GPS: error', error);
+          } else {
+            // eslint-disable-next-line no-console
+            console.error('GPS: error', error);
+          }
+
+          this.stop();
+          return;
+        }
+
+        const isOverDefaultSurveyEndTime = model.isTimerFinished();
+        if (model.data.surveyStartTime && isOverDefaultSurveyEndTime) {
+          // eslint-disable-next-line no-console
+          console.log('SampleModel:GPS: timed out stopping!');
+          this.stop();
+          return;
+        }
+
+        const isPreciseAreaSubSample = !!model.parent;
+        if (isPreciseAreaSubSample) {
+          const locationForModel = {
+            ...location!,
+            altitude: location!.altitude ?? undefined,
+            altitudeAccuracy: location!.altitudeAccuracy ?? undefined,
+          };
+          updateModelLocation(
+            model as unknown as LocationModelLike,
+            locationForModel
+          );
+          this.stop();
+          return;
+        }
+
+        updateSampleArea(model, location!);
+      };
+
+      this.locating = GPS.start(onPosition);
+    },
+
+    stop() {
+      if (!this.isRunning()) return;
+
+      // eslint-disable-next-line no-console
+      console.log('SampleModel:GPS stop');
+      GPS.stop(this.locating!);
+      this.locating = null;
+    },
+
+    isRunning() {
+      return !!(this.locating || this.locating === 0);
+    },
+
+    hasNoLocationAndNotLocating() {
+      return !model.data.location?.latitude && !this.isRunning();
+    },
+  } as Extension);
+
+export default initGPSExtension;

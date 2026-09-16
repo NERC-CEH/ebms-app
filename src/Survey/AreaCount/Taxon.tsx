@@ -190,7 +190,7 @@ const TaxonController = () => {
 
       if (!sample.isSurveyPreciseSingleSpecies()) {
         if (!sample.isTimerFinished() && !isLocationLocked())
-          newSample.startGPS();
+          newSample.gps.start();
       }
     }
 

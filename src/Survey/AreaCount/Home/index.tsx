@@ -481,7 +481,7 @@ const HomeController = () => {
       // not when the species was selected at the start of the count
       occ.data.timeOfSighting = new Date().toISOString();
 
-      if (!sample.isTimerFinished()) sample.samples[0].startGPS();
+      if (!sample.isTimerFinished()) sample.samples[0].gps.start();
 
       sample.save();
       return;
@@ -496,7 +496,7 @@ const HomeController = () => {
       sample.samples.push(newSubSample);
 
       if (!sample.isTimerFinished() && !isLocationLocked())
-        newSubSample.startGPS();
+        newSubSample.gps.start();
     };
 
     if (is5x) {
@@ -560,7 +560,7 @@ const HomeController = () => {
     ) as OccurrenceData;
 
     sample.samples.push(newSubSample);
-    if (!isLocationLocked()) newSubSample.startGPS();
+    if (!isLocationLocked()) newSubSample.gps.start();
     sample.save();
 
     await ref?.current?.closeOpened();

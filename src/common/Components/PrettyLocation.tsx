@@ -4,7 +4,7 @@ import { IonSpinner } from '@ionic/react';
 import Sample from 'common/models/sample';
 
 function getValue(sample: Sample) {
-  if (sample.isGPSRunning()) {
+  if (sample.gps.isRunning()) {
     return <IonSpinner className="w-3.75" />;
   }
 

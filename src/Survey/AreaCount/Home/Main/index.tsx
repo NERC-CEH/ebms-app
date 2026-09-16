@@ -117,10 +117,10 @@ const buildSpeciesCount = (agg: SpeciesCounts, smp: Sample) => {
   if (smp.isSurveyPreciseSingleSpecies() && smp.hasZeroAbundance()) return agg;
 
   agg[id].count++;
-  agg[id].isGeolocating = agg[id].isGeolocating || smp.isGPSRunning();
+  agg[id].isGeolocating = agg[id].isGeolocating || smp.gps.isRunning();
 
   agg[id].hasLocationMissing =
-    agg[id].hasLocationMissing || smp.hasNoLocationAndNotLocating();
+    agg[id].hasLocationMissing || smp.gps.hasNoLocationAndNotLocating();
 
   return agg;
 };
@@ -419,10 +419,10 @@ const AreaCount = ({
       } = occ.data;
 
       let location;
-      if (smp.hasNoLocationAndNotLocating()) {
+      if (smp.gps.hasNoLocationAndNotLocating()) {
         if (!isDisabled)
           location = <IonIcon icon={warningOutline} color="danger" />;
-      } else if (smp.isGPSRunning()) {
+      } else if (smp.gps.isRunning()) {
         location = <IonSpinner />;
       } else if (smp.data.location && !behaviour && !wing?.length) {
         location = <GridRef sample={smp} />;
@@ -603,7 +603,7 @@ const AreaCount = ({
 
   const area = sample.data[areaSizeAttr.id];
   let areaPretty = <IonIcon icon={warningOutline} color="danger" />;
-  if (Number.isFinite(area) || sample.isGPSRunning()) {
+  if (Number.isFinite(area) || sample.gps.isRunning()) {
     areaPretty = (
       <div className="flex flex-col overflow-hidden">
         <div>{area ? `${area} m²` : ''}</div>

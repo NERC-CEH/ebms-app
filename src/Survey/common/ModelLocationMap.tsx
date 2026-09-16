@@ -8,7 +8,6 @@ import {
   Main,
   textToLocation,
   mapEventToLocation,
-  toggleGPS,
   mapFlyToLocation,
   useSample,
   isValidLocation,
@@ -36,7 +35,7 @@ const ModelLocationMap = () => {
 
   const setLocation = async (newLocation: Location | null) => {
     if (!newLocation) return;
-    if (model.isGPSRunning()) model.stopGPS();
+    if (model.gps.isRunning()) model.gps.stop();
 
     const locationWithoutGridRef = { ...newLocation };
     delete locationWithoutGridRef.gridref;
@@ -48,7 +47,7 @@ const ModelLocationMap = () => {
     setLocation(textToLocation(String(e.target.value || '')));
 
   const onMapClick = (e: MapMouseEvent) => setLocation(mapEventToLocation(e));
-  const onGPSClick = () => toggleGPS(model);
+  const onGPSClick = () => model.gps.toggle();
 
   // default view to the user's selected country
   let initialViewState;

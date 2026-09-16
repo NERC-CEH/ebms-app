@@ -23,7 +23,10 @@ import { guidAttr, Survey } from 'Survey/common/config';
 import Media from '../media';
 import Occurrence, { Data as OccurrenceData, Taxon } from '../occurrence';
 import { samplesStore } from '../store';
-import GPSExtension, { calculateArea, Shape } from './GPSExt';
+import initGPSExtension, {
+  calculateArea,
+  type Extension as GPSExtension,
+} from './GPSExt';
 import attrLockExtension from './attrLockExt';
 import VibrateExtension from './vibrateExt';
 
@@ -124,30 +127,11 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
 
   timerPausedTime = observable({ time: null as null | Date });
 
-  declare gpsExtensionInit: () => void;
-
-  declare setLocation: (
-    shape: Shape | null,
-    accuracy?: number,
-    altitude?: number,
-    altitudeAccuracy?: number
-  ) => Promise<void>;
-
-  declare isGPSRunning: () => boolean;
-
-  declare toggleGPStracking: (state?: boolean) => void;
-
-  declare gps: { locating: number | null };
-
-  declare startGPS: () => void;
-
-  declare stopGPS: () => void;
+  declare gps: GPSExtension;
 
   declare stopVibrateCounter: () => void;
 
   declare startVibrateCounter: () => void;
-
-  declare hasNoLocationAndNotLocating: () => boolean;
 
   constructor(options: SampleOptions) {
     super({
@@ -196,8 +180,7 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
     }
 
     Object.assign(this, VibrateExtension);
-    Object.assign(this, GPSExtension);
-    this.gpsExtensionInit();
+    this.gps = initGPSExtension(this);
   }
 
   destroy(silent?: boolean) {
@@ -206,8 +189,8 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
   }
 
   cleanUp = () => {
-    this.stopGPS();
-    const stopGPS = (smp: Sample) => smp.stopGPS();
+    this.gps.stop();
+    const stopGPS = (smp: Sample) => smp.gps.stop();
     this.samples.forEach(stopGPS);
     this.stopVibrateCounter();
   };
