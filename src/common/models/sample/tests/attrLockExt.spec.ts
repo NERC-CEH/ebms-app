@@ -1,5 +1,5 @@
 import { observable } from 'mobx';
-import attrLockExtension from './attrLockExt';
+import attrLockExtension from '../attrLockExt';
 
 it('keeps copied observable attribute locks isolated per extension', () => {
   const locks = attrLockExtension();

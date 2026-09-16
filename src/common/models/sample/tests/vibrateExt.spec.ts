@@ -1,5 +1,5 @@
 import { Haptics } from '@capacitor/haptics';
-import initVibrateExtension from './vibrateExt';
+import initVibrateExtension from '../vibrateExt';
 
 jest.mock('@capacitor/haptics', () => ({
   Haptics: { vibrate: jest.fn(() => Promise.resolve()) },

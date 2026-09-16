@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention, max-classes-per-file */
 import config from 'common/config';
 import { MachineInvolvement } from 'Survey/MothTrap/config';
-import Occurrence, { type ClassifierSuggestion } from './occurrence';
+import Occurrence, { type ClassifierSuggestion } from '.';
 
 jest.mock('@flumens', () => ({
   OccurrenceModel: class {},
@@ -22,8 +22,8 @@ jest.mock('Survey/MothTrap/config', () => ({
   default: { id: 2, name: 'moth' },
 }));
 
-jest.mock('./media', () => ({ __esModule: true, default: class {} }));
-jest.mock('./sample', () => ({ __esModule: true, default: class {} }));
+jest.mock('../media', () => ({ __esModule: true, default: class {} }));
+jest.mock('../sample', () => ({ __esModule: true, default: class {} }));
 
 const suggestion = (
   warehouseId: number,

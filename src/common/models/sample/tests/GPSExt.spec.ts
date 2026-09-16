@@ -5,7 +5,7 @@ import initGPSExtension, {
   calculateArea,
   updateSampleArea,
   type Shape,
-} from './GPSExt';
+} from '../GPSExt';
 
 jest.mock('@flumens', () => ({
   device: { info: undefined },

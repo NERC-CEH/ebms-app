@@ -2,7 +2,7 @@
 import { device } from '@flumens';
 import groups from 'common/data/groups';
 import userModel from 'models/user';
-import Sample from '.';
+import Sample from '..';
 
 jest.mock('@flumens', () => {
   class BaseModel {

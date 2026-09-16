@@ -12,8 +12,8 @@ import { Suggestion } from 'common/services/waarneming';
 import { PaintedLadyAttrs } from 'Survey/AreaCount/configSpecies';
 import { MachineInvolvement } from 'Survey/MothTrap/config';
 import { Survey } from 'Survey/common/config';
-import Media from './media';
-import Sample from './sample';
+import Media from '../media';
+import Sample from '../sample';
 
 export const DRAGONFLY_GROUP = speciesGroups.dragonflies.id;
 
