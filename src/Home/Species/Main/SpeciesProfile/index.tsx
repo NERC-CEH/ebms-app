@@ -102,7 +102,15 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
             <T>common.description</T>:
           </h3>
 
-          <p>{description !== descriptionKey ? description : null}</p>
+          <p>
+            {description !== descriptionKey && descriptionKey ? (
+              <T
+                i18nKey={descriptionKey as never}
+                ns={'species' as never}
+                components={{ i: <i />, I: <i /> }}
+              />
+            ) : null}
+          </p>
         </div>
       </Main>
     </>
