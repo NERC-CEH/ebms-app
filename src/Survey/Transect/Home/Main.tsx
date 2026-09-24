@@ -27,7 +27,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
     if (!sample.data.locationId)
       return (
         <IonLabel slot="end" color="danger">
-          <T>No transect</T>
+          <T>transect.noTransect</T>
         </IonLabel>
       );
 
@@ -51,13 +51,13 @@ const Edit = ({ sample, isDisabled }: Props) => {
           <IonItem routerLink={`${baseURL}/sections`} detail>
             <IonIcon icon={mapOutline} slot="start" mode="md" />
             <IonLabel>
-              <T>Sections</T>
+              <T>transect.sections</T>
             </IonLabel>
             {getPrettySectionsLabel()}
           </IonItem>
 
           <MenuDateAttr
-            label="Start Time"
+            label="common.startTime"
             id="surveyStartTime"
             value={sample.data.surveyStartTime}
             presentation="time"
@@ -67,7 +67,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
           />
 
           <MenuDateAttr
-            label="End Time"
+            label="common.endTime"
             id="surveyEndTime"
             value={sample.data.surveyEndTime}
             presentation="time"
@@ -78,14 +78,14 @@ const Edit = ({ sample, isDisabled }: Props) => {
         </div>
 
         <h3 className="list-title">
-          <T>Weather</T>
+          <T>common.weather</T>
         </h3>
         <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${baseURL}/temperature`}
             disabled={isDisabled}
             icon={thermometerOutline}
-            label="Temperature"
+            label="common.temperature"
             value={temperature}
             skipValueTranslation
           />
@@ -94,7 +94,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
             routerLink={`${baseURL}/cloud`}
             disabled={isDisabled}
             icon={cloudyOutline}
-            label="Cloud"
+            label="common.cloud"
             value={cloud}
             skipValueTranslation
           />
@@ -103,7 +103,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
             routerLink={`${baseURL}/windDirection`}
             disabled={isDisabled}
             icon={windIcon}
-            label="Wind Direction"
+            label="common.windDirection"
             value={windDirection}
           />
 
@@ -111,20 +111,20 @@ const Edit = ({ sample, isDisabled }: Props) => {
             routerLink={`${baseURL}/windSpeed`}
             disabled={isDisabled}
             icon={windIcon}
-            label="Wind Speed"
+            label="common.windSpeed"
             value={windSpeed}
           />
         </div>
 
         <h3 className="list-title">
-          <T>Other</T>
+          <T>common.other</T>
         </h3>
         <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${baseURL}/recorder`}
             disabled={isDisabled}
             icon={personOutline}
-            label="Recorder"
+            label="common.recorder"
             value={recorder}
             skipValueTranslation
           />
@@ -133,7 +133,7 @@ const Edit = ({ sample, isDisabled }: Props) => {
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}
             icon={clipboardOutline}
-            label="Comment"
+            label="common.comment"
             value={comment}
             skipValueTranslation
           />

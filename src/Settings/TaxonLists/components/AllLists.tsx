@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
 import { device, Button, VirtualList, ItemProps, Badge } from '@flumens';
 import {
   IonList,
@@ -38,7 +39,9 @@ const Item = ({ index, style, data }: ItemProps<Data>) => {
         <div className="min-w-0 flex-1 overflow-hidden">
           <h2 className="line-clamp-1 font-bold mt-0.5">{list.data.title}</h2>
           <div className="flex gap-1">
-            <Badge size="small">{`${list.getSize()}`} species</Badge>
+            <Badge size="small" skipTranslation>
+              {list.getSize()} <T>common.speciesLower</T>
+            </Badge>
             {list.data.type !== 'list' && (
               <Badge size="small">{list.data.type.replaceAll('_', ' ')}</Badge>
             )}
@@ -50,7 +53,7 @@ const Item = ({ index, style, data }: ItemProps<Data>) => {
           className="mx-1 shrink-0 px-3 py-1 text-sm"
           onPress={handleInstallClick}
         >
-          Install
+          lists.install
         </Button>
       </div>
     </IonItem>
@@ -68,11 +71,13 @@ const AllLists = ({ onInstall, lists, onRefresh }: Props) => {
 
   if (!device.isOnline) {
     return (
-      <InfoBackgroundMessage className="mt-20">
-        You need to be online to browse species lists.
-        <br />
-        <br />
-        Please connect to the internet and try again.
+      <InfoBackgroundMessage className="mt-20" skipTranslation>
+        <T i18nKey="lists.offlineBrowse">
+          You need to be online to browse species lists.
+          <br />
+          <br />
+          Please connect to the internet and try again.
+        </T>
       </InfoBackgroundMessage>
     );
   }
@@ -90,7 +95,7 @@ const AllLists = ({ onInstall, lists, onRefresh }: Props) => {
 
       {!lists.length && (
         <InfoBackgroundMessage className="mt-20">
-          No species lists found.
+          lists.noSpeciesLists
         </InfoBackgroundMessage>
       )}
 

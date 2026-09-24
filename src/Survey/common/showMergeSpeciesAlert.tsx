@@ -4,22 +4,18 @@ import { useAlert } from '@flumens';
 export default async (alert: ReturnType<typeof useAlert>) => {
   const showMergeSpeciesDialog = (resolve: (merge: boolean) => void) => {
     alert({
-      header: 'Species already exists',
-      message: (
-        <T>
-          Are you sure you want to merge this list to the existing species list?
-        </T>
-      ),
+      header: 'survey.speciesAlreadyExists',
+      message: <T>survey.confirmMergeList</T>,
       backdropDismiss: false,
       buttons: [
         {
-          text: 'Cancel',
+          text: 'common.cancel',
           handler: () => {
             resolve(false);
           },
         },
         {
-          text: 'Merge',
+          text: 'survey.merge',
           cssClass: 'primary',
           handler: () => {
             resolve(true);

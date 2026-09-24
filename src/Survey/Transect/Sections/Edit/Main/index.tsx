@@ -123,7 +123,7 @@ const Edit = ({
         {!isDisabled && (
           <IonItemOptions side="end">
             <IonItemOption color="danger" onClick={deleteSpeciesWrap}>
-              <T>Delete</T>
+              <T>common.delete</T>
             </IonItemOption>
           </IonItemOptions>
         )}
@@ -136,7 +136,9 @@ const Edit = ({
       !sectionSample.occurrences.length &&
       !sectionSample.shallowSpeciesList.length
     ) {
-      return <InfoBackgroundMessage>No species added</InfoBackgroundMessage>;
+      return (
+        <InfoBackgroundMessage>common.noSpeciesAdded</InfoBackgroundMessage>
+      );
     }
 
     const speciesCounts = [...sectionSample.occurrences].reduce(
@@ -194,11 +196,11 @@ const Edit = ({
           <div className="rounded-list">
             <div className="list-divider gap-4">
               <div>
-                <T>Count</T>
+                <T>common.count</T>
               </div>
               <div className="flex w-full justify-between">
                 <div>
-                  <T>Species</T>
+                  <T>common.species</T>
                 </div>
                 <div>{count}</div>
               </div>
@@ -212,12 +214,12 @@ const Edit = ({
   };
   const showCopyOptions = () => {
     alert({
-      header: 'Copy species',
-      message: 'Are you sure want to copy previous survey species list?',
+      header: 'common.copySpecies',
+      message: 'common.sureWantCopy',
       buttons: [
-        { text: 'Cancel' },
+        { text: 'common.cancel' },
         {
-          text: 'Copy',
+          text: 'common.copy',
           role: 'destructive',
           handler: copyPreviousSurveyTaxonList,
         },
@@ -251,7 +253,7 @@ const Edit = ({
         onLongPress={showCopyOptionsWrap}
         prefix={<IonIcon src={addCircleOutline} className="size-5" />}
       >
-        Add species
+        common.addSpecies
       </Button>
     );
   };
@@ -268,7 +270,7 @@ const Edit = ({
             routerLink={`${baseURL}/reliability`}
             disabled={isDisabled}
             icon={thumbsUpOutline}
-            label="Reliability"
+            label="transect.reliability"
             value={reliability}
           />
 
@@ -280,7 +282,7 @@ const Edit = ({
         </div>
 
         <h3 className="list-title">
-          <T>Section Photos</T>
+          <T>transect.sectionPhotos</T>
         </h3>
         <div className="rounded-list">
           <PhotoPicker model={sectionSample} />

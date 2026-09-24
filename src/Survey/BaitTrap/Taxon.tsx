@@ -46,7 +46,7 @@ const Taxon = () => {
 
   return (
     <Page id="bait-trap-survey-taxasearch">
-      <Header title="Species" />
+      <Header title="common.species" />
       <Main className="pb-ion-s-10">
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}

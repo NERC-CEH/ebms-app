@@ -210,7 +210,7 @@ const TaxonSearch = ({
       <IonSearchbar
         id="taxon"
         ref={inputEl}
-        placeholder={t('Species name')}
+        placeholder={t('survey.speciesName')}
         debounce={200}
         onIonInput={onInputKeystroke}
         onIonClear={onInputClear}

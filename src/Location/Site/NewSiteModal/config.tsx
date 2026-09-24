@@ -8,7 +8,7 @@ import {
 export const siteNameAttr = {
   id: 'name',
   type: 'textInput',
-  title: 'Site name',
+  title: 'locations.siteName',
   container: 'inline',
 } as const satisfies TextInputConf;
 
@@ -17,52 +17,52 @@ export const OTHER_SITE_SIZE_VALUE = '23733';
 export const siteAreaAttr = {
   id: 'locAttr:376',
   type: 'choiceInput',
-  title: 'Site area',
+  title: 'locations.siteArea',
   appearance: 'button',
   choices: [
     { title: '5 x 10 m', dataName: '23729' },
     { title: '20 x 25 m', dataName: '23730' },
     { title: '10 x 50 m', dataName: '23731' },
     { title: '5 x 100 m', dataName: '23732' },
-    { title: 'Other', dataName: OTHER_SITE_SIZE_VALUE },
+    { title: 'common.other', dataName: OTHER_SITE_SIZE_VALUE },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const habitatAttr = {
   id: 'locAttr:340',
   type: 'choiceInput',
-  title: 'Dominant habitat',
+  title: 'locations.dominantHabitat',
   appearance: 'button',
   choices: [
-    { title: 'Garden', dataName: '23571' },
-    { title: 'Allotment gardens', dataName: '23573' },
-    { title: 'Community garden', dataName: '23575' },
-    { title: 'Balcony', dataName: '23577' },
-    { title: 'Park (mixed vegetation)', dataName: '23579' },
-    { title: 'Lawn', dataName: '23581' },
-    { title: 'Flowering strip', dataName: '23583' },
-    { title: 'Built-up area', dataName: '23585' },
-    { title: 'Fallow land, abandoned area (urban)', dataName: '23587' },
-    { title: 'Fallow land, abandoned field  (rural)', dataName: '23589' },
-    { title: 'Field edge', dataName: '23591' },
-    { title: 'Arable field', dataName: '23593' },
-    { title: 'Grassland / Meadow / Pasture', dataName: '23595' },
-    { title: 'Orchard', dataName: '23597' },
-    { title: 'Forest edge', dataName: '23599' },
-    { title: 'Woodland/Forest', dataName: '23601' },
-    { title: 'Coastal', dataName: '23603' },
-    { title: 'Wetland', dataName: '23605' },
-    { title: 'Scrubland/Heathland', dataName: '23607' },
-    { title: 'Sparsely vegetated', dataName: '23609' },
-    { title: 'Desert / barren', dataName: '23611' },
-    { title: 'Other', dataName: '23613' },
+    { title: 'locations.garden', dataName: '23571' },
+    { title: 'locations.allotmentGardens', dataName: '23573' },
+    { title: 'locations.communityGarden', dataName: '23575' },
+    { title: 'locations.balcony', dataName: '23577' },
+    { title: 'locations.parkMixedVegetation', dataName: '23579' },
+    { title: 'locations.lawn', dataName: '23581' },
+    { title: 'locations.floweringStrip', dataName: '23583' },
+    { title: 'locations.builtUpArea', dataName: '23585' },
+    { title: 'locations.fallowLandAbandoned', dataName: '23587' },
+    { title: 'locations.ruralFallowLand', dataName: '23589' },
+    { title: 'locations.fieldEdge', dataName: '23591' },
+    { title: 'locations.arableField', dataName: '23593' },
+    { title: 'locations.grassland', dataName: '23595' },
+    { title: 'locations.orchard', dataName: '23597' },
+    { title: 'locations.forestEdge', dataName: '23599' },
+    { title: 'locations.woodlandForest', dataName: '23601' },
+    { title: 'locations.coastal', dataName: '23603' },
+    { title: 'locations.wetland', dataName: '23605' },
+    { title: 'locations.scrublandHeathland', dataName: '23607' },
+    { title: 'locations.sparselyVegetated', dataName: '23609' },
+    { title: 'locations.desertBarren', dataName: '23611' },
+    { title: 'common.other', dataName: '23613' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const grainsNumberAttr = {
   id: 'locAttr:341',
   type: 'numberInput',
-  title: 'Arable field grains (wheat, barley, rye)',
+  title: 'locations.arableFieldGrains',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -71,7 +71,7 @@ export const grainsNumberAttr = {
 export const customAreaSizeAttr = {
   id: 'locAttr:159',
   type: 'numberInput',
-  title: 'Area size',
+  title: 'locations.areaSize',
   appearance: 'counter',
   placeholder: '0',
   suffix: 'm²',
@@ -81,7 +81,7 @@ export const customAreaSizeAttr = {
 export const vegetablesNumberAttr = {
   id: 'locAttr:342',
   type: 'numberInput',
-  title: 'Arable field fruits or vegetables',
+  title: 'locations.arableFieldFruits',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -90,7 +90,7 @@ export const vegetablesNumberAttr = {
 export const rapeseedNumberAttr = {
   id: 'locAttr:343',
   type: 'numberInput',
-  title: 'Arable field rapeseed',
+  title: 'locations.arableFieldRapeseed',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -99,7 +99,7 @@ export const rapeseedNumberAttr = {
 export const cornNumberAttr = {
   id: 'locAttr:344',
   type: 'numberInput',
-  title: 'Arable field corn',
+  title: 'locations.arableFieldCorn',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -108,7 +108,7 @@ export const cornNumberAttr = {
 export const legumesNumberAttr = {
   id: 'locAttr:345',
   type: 'numberInput',
-  title: 'Arable legumes',
+  title: 'locations.arableLegumes',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -117,7 +117,7 @@ export const legumesNumberAttr = {
 export const croppingNumberAttr = {
   id: 'locAttr:346',
   type: 'numberInput',
-  title: 'Arable multi-cropping',
+  title: 'locations.arableMultiCropping',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -126,7 +126,7 @@ export const croppingNumberAttr = {
 export const fallowNumberAttr = {
   id: 'locAttr:347',
   type: 'numberInput',
-  title: 'Arable fallow',
+  title: 'locations.arableFallow',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -135,7 +135,7 @@ export const fallowNumberAttr = {
 export const managedGrasslandNumberAttr = {
   id: 'locAttr:348',
   type: 'numberInput',
-  title: 'Grassland homogeneous/intensively managed',
+  title: 'locations.intensiveGrassland',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -144,7 +144,7 @@ export const managedGrasslandNumberAttr = {
 export const grasslandNumberAttr = {
   id: 'locAttr:349',
   type: 'numberInput',
-  title: 'Grassland extensive or heterogeneous (pasture)',
+  title: 'locations.extensiveGrassland',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -153,7 +153,7 @@ export const grasslandNumberAttr = {
 export const orchardNumberAttr = {
   id: 'locAttr:350',
   type: 'numberInput',
-  title: 'Orchard, vineyard or grove (sparse, pasture among trees)',
+  title: 'locations.sparseOrchard',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -162,7 +162,7 @@ export const orchardNumberAttr = {
 export const orchardManagedNumberAttr = {
   id: 'locAttr:351',
   type: 'numberInput',
-  title: 'Orchard, vineyard or grove (intensely managed)',
+  title: 'locations.orchardVineyardGrove',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -171,7 +171,7 @@ export const orchardManagedNumberAttr = {
 export const numberAttr = {
   id: 'locAttr:352',
   type: 'numberInput',
-  title: 'Scrubland',
+  title: 'locations.scrubland',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -180,7 +180,7 @@ export const numberAttr = {
 export const wastelandNumberAttr = {
   id: 'locAttr:353',
   type: 'numberInput',
-  title: 'Land laying fallow / wasteland',
+  title: 'locations.landLayingFallow',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -189,7 +189,7 @@ export const wastelandNumberAttr = {
 export const woodlandNumberAttr = {
   id: 'locAttr:354',
   type: 'numberInput',
-  title: 'Sparse woodland',
+  title: 'locations.sparseWoodland',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -198,7 +198,7 @@ export const woodlandNumberAttr = {
 export const forestNumberAttr = {
   id: 'locAttr:355',
   type: 'numberInput',
-  title: 'Dense woodland or forest',
+  title: 'locations.denseWoodlandForest',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -207,7 +207,7 @@ export const forestNumberAttr = {
 export const plantationNumberAttr = {
   id: 'locAttr:356',
   type: 'numberInput',
-  title: 'Plantation',
+  title: 'locations.plantation',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -216,7 +216,7 @@ export const plantationNumberAttr = {
 export const gardenNumberAttr = {
   id: 'locAttr:357',
   type: 'numberInput',
-  title: 'Garden (single)',
+  title: 'locations.gardenSingle',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -225,7 +225,7 @@ export const gardenNumberAttr = {
 export const gardensNumberAttr = {
   id: 'locAttr:358',
   type: 'numberInput',
-  title: 'Gardens (multiple, e.g. allotment gardens)',
+  title: 'locations.gardensMultipleE',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -234,7 +234,7 @@ export const gardensNumberAttr = {
 export const buildingsNumberAttr = {
   id: 'locAttr:359',
   type: 'numberInput',
-  title: 'Building(s)',
+  title: 'locations.buildingS',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -243,7 +243,7 @@ export const buildingsNumberAttr = {
 export const waterNumberAttr = {
   id: 'locAttr:360',
   type: 'numberInput',
-  title: 'Pond, lake or sea',
+  title: 'locations.pondLakeSea',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -252,7 +252,7 @@ export const waterNumberAttr = {
 export const riverNumberAttr = {
   id: 'locAttr:361',
   type: 'numberInput',
-  title: 'River or creek',
+  title: 'locations.riverCreek',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -261,7 +261,7 @@ export const riverNumberAttr = {
 export const wetlandNumberAttr = {
   id: 'locAttr:362',
   type: 'numberInput',
-  title: 'Wetland',
+  title: 'locations.wetland',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -270,7 +270,7 @@ export const wetlandNumberAttr = {
 export const landNumberAttr = {
   id: 'locAttr:363',
   type: 'numberInput',
-  title: 'Dunes or barren land',
+  title: 'locations.dunesBarrenLand',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -279,37 +279,37 @@ export const landNumberAttr = {
 export const landscapeFeaturesAttr = {
   id: 'locAttr:364',
   type: 'choiceInput',
-  title: 'Landscape features',
+  title: 'locations.landscapeFeatures',
   multiple: true,
   appearance: 'button',
   choices: [
-    { title: 'Field edge(s)', dataName: '23615' },
-    { title: 'Buffer-strip(s)', dataName: '23617' },
-    { title: 'Flower-strip(s)', dataName: '23619' },
-    { title: 'Hedge(s)', dataName: '23621' },
-    { title: 'Scattered trees or trees in rows', dataName: '23623' },
-    { title: 'Wooded area', dataName: '23625' },
-    { title: 'Terraces, stone walls', dataName: '23627' },
-    { title: 'Pond', dataName: '23629' },
-    { title: 'River or creek', dataName: '23631' },
-    { title: 'Path', dataName: '23633' },
+    { title: 'locations.fieldEdgeS', dataName: '23615' },
+    { title: 'locations.bufferStripS', dataName: '23617' },
+    { title: 'locations.flowerStripS', dataName: '23619' },
+    { title: 'locations.hedgeS', dataName: '23621' },
+    { title: 'locations.scatteredTreesTrees', dataName: '23623' },
+    { title: 'locations.woodedArea', dataName: '23625' },
+    { title: 'locations.terracesStoneWalls', dataName: '23627' },
+    { title: 'locations.pond', dataName: '23629' },
+    { title: 'locations.riverCreek', dataName: '23631' },
+    { title: 'locations.path', dataName: '23633' },
     {
-      title: 'Street, road or railroad tracks (sealed, e.g. asphalt)',
+      title: 'locations.streetRoadRailroad',
       dataName: '23635',
     },
     {
-      title: 'Fences or other human-made linear structures',
+      title: 'locations.fencesOtherHuman',
       dataName: '23637',
     },
-    { title: 'Dead tree, stumps or wood', dataName: '23639' },
-    { title: 'Other', dataName: '23641' },
+    { title: 'locations.deadTreeStumps', dataName: '23639' },
+    { title: 'common.other', dataName: '23641' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const otherLandscapeFeaturesAttr = {
   id: 'locAttr:375',
   type: 'textInput',
-  title: 'Other landscape feature details',
+  title: 'locations.landscapeDetails',
   appearance: 'multiline',
   container: 'inline',
 } as const satisfies TextInputConf;
@@ -317,7 +317,7 @@ export const otherLandscapeFeaturesAttr = {
 export const treeNumberAttr = {
   id: 'locAttr:365',
   type: 'numberInput',
-  title: 'How many trees are there in the area of your observation site?',
+  title: 'locations.howManyTrees',
   appearance: 'counter',
   placeholder: '0',
   validation: { min: 0, max: 100 },
@@ -326,7 +326,7 @@ export const treeNumberAttr = {
 export const grassProportionAttr = {
   id: 'locAttr:366',
   type: 'numberInput',
-  title: 'What proportion of the site is a lawn or a grassland',
+  title: 'locations.lawnProportion',
   appearance: 'counter',
   placeholder: '0',
   suffix: '%',
@@ -336,41 +336,41 @@ export const grassProportionAttr = {
 export const grassMownAttr = {
   id: 'locAttr:367',
   type: 'choiceInput',
-  title: 'How often is this lawn mown?',
+  title: 'locations.howOftenLawn',
   appearance: 'button',
   choices: [
-    { title: 'Not applicable (not a grass / lawn)', dataName: '23643' },
-    { title: "I don't know", dataName: '23645' },
-    { title: 'Frequent mowing, all (relevant) area', dataName: '23647' },
-    { title: 'Rare mowing (1-2 times a year), all area', dataName: '23649' },
+    { title: 'locations.notApplicableNot', dataName: '23643' },
+    { title: 'locations.iDonT', dataName: '23645' },
+    { title: 'locations.frequentMowingAll', dataName: '23647' },
+    { title: 'locations.rareMowingAll', dataName: '23649' },
     {
-      title: 'Rare mowing (1-2 times a year), partial mowing (Staffelmahd)',
+      title: 'locations.rareMowingPartial',
       dataName: '23651',
     },
-    { title: 'Extensive grazing (few grazers, not mowed)', dataName: '23653' },
-    { title: 'Intensive grazing (not mowed)', dataName: '23655' },
+    { title: 'locations.extensiveGrazingFew', dataName: '23653' },
+    { title: 'locations.intensiveGrazingNot', dataName: '23655' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const fertilizedAttr = {
   id: 'locAttr:368',
   type: 'choiceInput',
-  title: 'Is the area fertilized?',
+  title: 'locations.areaFertilized',
   appearance: 'button',
   choices: [
-    { title: 'Not applicable', dataName: '23657' },
-    { title: "I don't know", dataName: '23659' },
-    { title: 'Frequent application', dataName: '23661' },
-    { title: 'Rare application', dataName: '23663' },
-    { title: 'No fertilizers used', dataName: '23665' },
-    { title: 'Other', dataName: '23667' },
+    { title: 'locations.notApplicable', dataName: '23657' },
+    { title: 'locations.iDonT', dataName: '23659' },
+    { title: 'locations.frequentApplication', dataName: '23661' },
+    { title: 'locations.rareApplication', dataName: '23663' },
+    { title: 'locations.noFertilizersUsed', dataName: '23665' },
+    { title: 'common.other', dataName: '23667' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const otherFertilizerAttr = {
   id: 'locAttr:373',
   type: 'textInput',
-  title: 'Other fertilizer details',
+  title: 'locations.fertilizerDetails',
   appearance: 'multiline',
   container: 'inline',
 } as const satisfies TextInputConf;
@@ -378,22 +378,22 @@ export const otherFertilizerAttr = {
 export const pesticidesAttr = {
   id: 'locAttr:369',
   type: 'choiceInput',
-  title: 'Are pesticides used?',
+  title: 'locations.pesticidesUsed',
   appearance: 'button',
   choices: [
-    { title: 'Not applicable', dataName: '23669' },
-    { title: "I don't know", dataName: '23671' },
-    { title: 'Frequent application', dataName: '23673' },
-    { title: 'Rare application', dataName: '23675' },
-    { title: 'No pesticides applied', dataName: '23677' },
-    { title: 'Other', dataName: '23679' },
+    { title: 'locations.notApplicable', dataName: '23669' },
+    { title: 'locations.iDonT', dataName: '23671' },
+    { title: 'locations.frequentApplication', dataName: '23673' },
+    { title: 'locations.rareApplication', dataName: '23675' },
+    { title: 'locations.noPesticidesApplied', dataName: '23677' },
+    { title: 'common.other', dataName: '23679' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const otherPesticideAttr = {
   id: 'locAttr:374',
   type: 'textInput',
-  title: 'Other pesticide details',
+  title: 'locations.pesticideDetails',
   appearance: 'multiline',
   container: 'inline',
 } as const satisfies TextInputConf;
@@ -401,69 +401,69 @@ export const otherPesticideAttr = {
 export const speciesAttr = {
   id: 'locAttr:370',
   type: 'choiceInput',
-  title: 'Are these plant species present in this location?',
+  title: 'locations.thesePlantSpecies',
   multiple: true,
   appearance: 'button',
   choices: [
-    { title: 'Fruit trees and shrubs', dataName: '23681' },
+    { title: 'locations.fruitTreesShrubs', dataName: '23681' },
     {
-      title: 'Unmanaged corners (natural spaces, abandoned areas)',
+      title: 'locations.unmanagedAreas',
       dataName: '23683',
     },
-    { title: 'Vegetable patch', dataName: '23685' },
-    { title: 'Lavender species', dataName: '23687' },
-    { title: 'Geraniums & Pelargoniums', dataName: '23689' },
-    { title: 'Valeriana', dataName: '23691' },
-    { title: 'Legumes (Clover, Lupin, Lotus,...)', dataName: '23693' },
-    { title: 'Marigold', dataName: '23695' },
-    { title: 'Butterfly bush (or Summer Lilac)', dataName: '23697' },
+    { title: 'locations.vegetablePatch', dataName: '23685' },
+    { title: 'locations.lavenderSpecies', dataName: '23687' },
+    { title: 'locations.geraniums', dataName: '23689' },
+    { title: 'locations.valeriana', dataName: '23691' },
+    { title: 'locations.legumesCloverLupin', dataName: '23693' },
+    { title: 'locations.marigold', dataName: '23695' },
+    { title: 'locations.butterflyBushSummer', dataName: '23697' },
     {
-      title: 'Aromatics like Thyme, Oregano, etc. ( Lamiaceae)',
+      title: 'locations.aromaticsLikeThyme',
       dataName: '23699',
     },
-    { title: 'Nettle (Urtica dioica)', dataName: '23701' },
-    { title: 'Thistle species', dataName: '23703' },
-    { title: 'Brambles (Rubus fruticosa)', dataName: '23705' },
-    { title: 'Ivy', dataName: '23707' },
-    { title: 'Knappweed (Centaurea and Scabiosa spp.)', dataName: '23709' },
+    { title: 'locations.nettleUrticaDioica', dataName: '23701' },
+    { title: 'common.thistleSpecies', dataName: '23703' },
+    { title: 'locations.brambles', dataName: '23705' },
+    { title: 'locations.ivy', dataName: '23707' },
+    { title: 'locations.knappweed', dataName: '23709' },
     {
-      title: 'Fennel, Carvi or others from the Carrot family (Apiaceae)',
+      title: 'locations.fennelCarviOthers',
       dataName: '23713',
     },
     {
-      title: 'Cabbage, Rucola or others Mustard-plant family (Brassicaceae)',
+      title: 'locations.cabbageRucolaOthers',
       dataName: '23715',
     },
-    { title: 'Hemp-agrimony (Eupatorium spp.)', dataName: '23711' },
+    { title: 'locations.hempAgrimony', dataName: '23711' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const landOwnershipAttr = {
   id: 'locAttr:371',
   type: 'choiceInput',
-  title: 'Do you know who owns the land?',
+  title: 'locations.doKnowWho',
   appearance: 'button',
   choices: [
-    { title: 'I own the site', dataName: '23717' },
-    { title: 'Private space', dataName: '23719' },
-    { title: 'Public space', dataName: '23721' },
-    { title: 'Communal space', dataName: '23723' },
-    { title: 'Prefer not to say', dataName: '23725' },
-    { title: "I don't know", dataName: '23727' },
+    { title: 'locations.iOwnSite', dataName: '23717' },
+    { title: 'locations.privateSpace', dataName: '23719' },
+    { title: 'locations.publicSpace', dataName: '23721' },
+    { title: 'locations.communalSpace', dataName: '23723' },
+    { title: 'locations.preferNotSay', dataName: '23725' },
+    { title: 'locations.iDonT', dataName: '23727' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const responsibleAttr = {
   id: 'locAttr:372',
   type: 'yesNoInput',
-  title: 'Are you responsible for gardening activities at the site?',
+  title: 'locations.manageSite',
   choices: [{ dataName: '0' }, { dataName: '1' }],
 } as const satisfies YesNoInputConf;
 
 export const commentAttr = {
   id: 'comment',
   type: 'textInput',
-  title: 'Comments',
+  title: 'common.comments',
   appearance: 'multiline',
   container: 'inline',
 } as const satisfies TextInputConf;

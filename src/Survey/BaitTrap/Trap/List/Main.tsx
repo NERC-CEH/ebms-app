@@ -1,4 +1,5 @@
 import { observer } from 'mobx-react';
+import { useTranslation } from 'react-i18next';
 import { Main } from '@flumens';
 import { IonList, IonItem, IonLabel } from '@ionic/react';
 import Location from 'models/location';
@@ -10,21 +11,21 @@ type Props = {
 };
 
 const TrapPickerMain = ({ traps, onTrapSelect }: Props) => {
+  const { t } = useTranslation();
   const hasTraps = traps.length > 0;
   if (!hasTraps) {
     return (
       <Main className="ion-padding pb-ion-s-10">
         <IonList lines="full">
-          <InfoBackgroundMessage>
-            No traps found for this site.
-          </InfoBackgroundMessage>
+          <InfoBackgroundMessage>bait.noTrapsSite</InfoBackgroundMessage>
         </IonList>
       </Main>
     );
   }
 
   const getTrapItem = (trap: Location) => {
-    const trapName = trap.data.name || trap.data.code || 'Unnamed trap';
+    const trapName =
+      trap.data.name || trap.data.code || t('locations.unnamedTrap');
 
     const handleClick = () => onTrapSelect(trap);
 

@@ -14,12 +14,12 @@ import { taxaStore } from 'common/models/store';
 import species from './data.json';
 
 export const abundances = {
-  A: 'Absent',
-  P: 'Present',
-  'P?': 'Possibly present',
-  M: 'Regular migrant',
-  I: 'Irregular vagrant',
-  Ex: 'Regionally extinct',
+  A: 'common.absent',
+  P: 'common.present',
+  'P?': 'common.possiblyPresent',
+  M: 'common.regularMigrant',
+  I: 'common.irregularVagrant',
+  Ex: 'common.regionallyExtinct',
 } as const;
 
 export type AbundanceCode = keyof typeof abundances;

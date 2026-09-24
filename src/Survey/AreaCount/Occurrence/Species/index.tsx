@@ -11,16 +11,16 @@ export const useDeleteConfirmation = () => {
 
   const prompt = (resolve: (confirmed: boolean) => void) => {
     alert({
-      header: 'Delete',
-      message: 'Are you sure you want to delete this occurrence?',
+      header: 'common.delete',
+      message: 'area.confirmDeleteOccurrence',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'common.cancel',
           role: 'cancel',
           handler: () => resolve(false),
         },
         {
-          text: 'Delete',
+          text: 'common.delete',
           role: 'destructive',
           handler: () => resolve(true),
         },
@@ -115,7 +115,7 @@ const SpeciesOccurrences = () => {
 
   return (
     <Page id="precise-area-count-edit-taxon-group">
-      <Header title="Occurrences" />
+      <Header title="area.occurrences" />
       <Main
         samples={getSamples()}
         isDisabled={isDisabled}

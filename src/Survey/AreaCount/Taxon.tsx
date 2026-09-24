@@ -26,7 +26,7 @@ import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 const cancelButtonWrap = (onDeleteSurvey: () => void) => (
   <IonButtons slot="start">
     <IonButton onClick={onDeleteSurvey}>
-      <T>Cancel</T>
+      <T>common.cancel</T>
     </IonButton>
   </IonButtons>
 );
@@ -34,17 +34,16 @@ const cancelButtonWrap = (onDeleteSurvey: () => void) => (
 function useDeleteSurveyPrompt(alert: ReturnType<typeof useAlert>) {
   const deleteSurveyPromt = (resolve: (param: boolean) => void) => {
     alert({
-      header: 'Delete Survey',
-      message:
-        'Warning - This will discard the survey information you have entered so far.',
+      header: 'area.deleteSurvey',
+      message: 'area.warningWillDiscard',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'common.cancel',
           role: 'cancel',
           handler: () => resolve(false),
         },
         {
-          text: 'Discard',
+          text: 'area.discard',
           role: 'destructive',
           handler: () => resolve(true),
         },
@@ -221,8 +220,8 @@ const TaxonController = () => {
   const recordedTaxa = [...species, ...shallowSpecies];
 
   const title = sample.isSingleSpeciesSurvey()
-    ? 'Select Target Species'
-    : 'Species';
+    ? 'area.selectTargetSpecies'
+    : 'common.species';
 
   const showCancelButton = sample.isSingleSpeciesSurvey();
 

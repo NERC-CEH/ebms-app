@@ -117,10 +117,10 @@ const Details = ({ onSave }: Props) => {
   const projectAttr = {
     id: 'groupId',
     type: 'choiceInput',
-    title: 'Project',
+    title: 'common.project',
     appearance: 'button',
     choices: [
-      { title: 'None', dataName: '' },
+      { title: 'common.none', dataName: '' },
       ...groups.map(g => ({ title: g.data.title, dataName: g.id! })),
     ],
   } as const satisfies ChoiceInputConf;
@@ -176,7 +176,7 @@ const Details = ({ onSave }: Props) => {
   const navigateToArea = () =>
     nav.push(() => (
       <>
-        <Header title="Draw area" />
+        <Header title="locations.drawArea" />
         <AreaDraw
           shape={getShapeFromGeom(location.data.boundaryGeom ?? undefined)}
           onChange={onChangeShape}
@@ -193,15 +193,15 @@ const Details = ({ onSave }: Props) => {
         <IonToolbar>
           <IonButtons slot="start">
             <IonButton onClick={onDismiss}>
-              <T>Cancel</T>
+              <T>common.cancel</T>
             </IonButton>
           </IonButtons>
           <IonTitle>
-            <T>New site</T>
+            <T>locations.newSite</T>
           </IonTitle>
           <IonButtons slot="end">
             <HeaderButton isInvalid={!isValidLocation} onClick={onSaveWrap}>
-              Save
+              common.save
             </HeaderButton>
           </IonButtons>
         </IonToolbar>
@@ -224,7 +224,7 @@ const Details = ({ onSave }: Props) => {
 
             <IonItem detail onClick={navigateToArea} className="warning">
               <IonLabel color={location.data.boundaryGeom ? '' : 'warning'}>
-                <T>Area</T>
+                <T>common.area</T>
               </IonLabel>
               {!!area && (
                 <IonLabel slot="end" className="text-sm mr-0">
@@ -244,9 +244,7 @@ const Details = ({ onSave }: Props) => {
                 {isOtherSiteSize && (
                   <Block {...getBlockAttrs(customAreaSizeAttr)} />
                 )}
-                <InfoMessage inline>
-                  Approximate size of your observation site.
-                </InfoMessage>
+                <InfoMessage inline>locations.siteSize</InfoMessage>
               </>
             )}
 
@@ -258,7 +256,7 @@ const Details = ({ onSave }: Props) => {
           {(isAgroecologyTRANSECT || isCAP4GI) && (
             <div>
               <h3 className="list-title">
-                <T>Habitats/land uses (total should be 100%)</T>
+                <T>locations.habitatsLandUses</T>
               </h3>
               <div className="rounded-list">
                 <Block {...getBlockAttrs(grainsNumberAttr)} />
@@ -292,9 +290,7 @@ const Details = ({ onSave }: Props) => {
             {(isAgroecologyTRANSECT || isCAP4GI) && (
               <>
                 <Block {...getBlockAttrs(landscapeFeaturesAttr)} />
-                <InfoMessage inline>
-                  Features located within a 50-meter radius.
-                </InfoMessage>
+                <InfoMessage inline>locations.nearbyFeatures</InfoMessage>
                 <Block record={location} block={otherLandscapeFeaturesAttr} />
               </>
             )}
@@ -332,7 +328,7 @@ const Details = ({ onSave }: Props) => {
 
           <div>
             <h3 className="list-title">
-              <T>Please upload site photos</T>
+              <T>locations.pleaseUploadSite</T>
             </h3>
             <div className="rounded-list">
               <PhotoPicker
@@ -340,9 +336,7 @@ const Details = ({ onSave }: Props) => {
                 onRemove={onRemovePhoto}
                 value={location.media}
               />
-              <InfoMessage inline>
-                Optimally in the direction to North, East, South and West.
-              </InfoMessage>
+              <InfoMessage inline>locations.cardinalDirections</InfoMessage>
             </div>
           </div>
         </IonList>

@@ -16,7 +16,7 @@ const locationOutlineIcon = (
 export const trapNameAttr = {
   id: 'name',
   type: 'textInput',
-  title: 'Name',
+  title: 'locations.name',
   container: 'inline',
   prefix: locationOutlineIcon,
 } as const satisfies TextInputConf;
@@ -24,21 +24,21 @@ export const trapNameAttr = {
 export const mothTrapTypeAttr = {
   id: 'locAttr:330',
   type: 'choiceInput',
-  title: 'Type',
+  title: 'locations.type',
   appearance: 'button',
   prefix: mothTrapIcon,
   choices: [
-    { title: 'LED funnel trap', dataName: '19306' },
-    { title: 'Other funnel trap', dataName: '19307' },
-    { title: 'Trap with 2 sheets', dataName: '19308' },
-    { title: 'Other trap', dataName: '19309' },
+    { title: 'common.ledFunnelTrap', dataName: '19306' },
+    { title: 'common.otherFunnelTrap', dataName: '19307' },
+    { title: 'common.trap2Sheets', dataName: '19308' },
+    { title: 'common.otherTrap', dataName: '19309' },
   ],
 } as const;
 
 export const mothTrapOtherTypeAttr = {
   id: 'locAttr:288',
   type: 'textInput',
-  title: 'Other type',
+  title: 'locations.otherType',
   prefix: mothTrapIcon,
   visibility: [{ target: mothTrapTypeAttr.id, op: 'eq', value: '19309' }],
 } as const;
@@ -46,14 +46,14 @@ export const mothTrapOtherTypeAttr = {
 export const mothTrapLampDescriptionAttr = {
   id: 'description',
   type: 'textInput',
-  title: 'Description',
+  title: 'common.description',
   prefix: chatboxOutlineIcon,
 } as const;
 
 export const mothTrapLampQuantityAttr = {
   id: 'quantity',
   type: 'numberInput',
-  title: 'Quantity',
+  title: 'locations.quantity',
   prefix: mothTrapNumberIcon,
   appearance: 'counter',
   validation: { min: 1 },
@@ -68,7 +68,7 @@ export const mothTrapLampTypeNameAttr = { id: 'type' } as const;
 export const mothTrapLampTypeAttr = {
   id: 'type_term',
   type: 'choiceInput',
-  title: 'Type',
+  title: 'locations.type',
   appearance: 'button',
   prefix: mothTrapBulbIcon,
   choices: [
@@ -111,19 +111,19 @@ const lampSchema = z.object({
   description: z.string().optional(),
   quantity: z.number().min(1),
   type: z
-    .string({ error: 'Lamp type is a required field.' })
-    .min(1, 'Lamp type is a required field.'),
+    .string({ error: 'locations.lampTypeRequired' })
+    .min(1, 'locations.lampTypeRequired'),
 });
 
 export const schema = z.object({
   name: z
-    .string({ error: 'Location name is missing' })
-    .min(1, 'Please add the moth trap location and name.'),
-  centroidSref: z.string({ error: 'Location is missing' }),
+    .string({ error: 'locations.nameMissing' })
+    .min(1, 'locations.pleaseAddMoth'),
+  centroidSref: z.string({ error: 'common.locationMissing' }),
   [mothTrapTypeAttr.id]: z.string({
-    error: 'Trap type is a required field.',
+    error: 'locations.trapTypeRequired',
   }),
   [mothTrapLampsAttr.id]: z
-    .array(lampSchema, { error: 'No lamps added' })
-    .min(1, 'No lamps added'),
+    .array(lampSchema, { error: 'locations.noLampsAdded' })
+    .min(1, 'locations.noLampsAdded'),
 });

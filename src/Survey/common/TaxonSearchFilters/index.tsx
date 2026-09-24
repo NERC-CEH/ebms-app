@@ -36,7 +36,7 @@ const Header = ({ sample }: Props) => {
         skipTranslation
       >
         <IonLabel>
-          <T>Groups</T>{' '}
+          <T>survey.groups</T>{' '}
           {isMultiSpeciesGroupSelected && <b>({speciesGroups.length})</b>}
         </IonLabel>
       </Button>

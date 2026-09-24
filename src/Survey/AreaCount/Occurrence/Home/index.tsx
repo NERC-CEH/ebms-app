@@ -10,7 +10,7 @@ const Container = () => {
 
   return (
     <Page id="precise-area-count-edit-occurrence">
-      <Header title="Edit Occurrence" />
+      <Header title="common.editOccurrence" />
       <Main
         sample={sample!}
         occurrence={occurrence!}

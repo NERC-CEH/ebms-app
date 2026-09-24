@@ -65,15 +65,14 @@ const Onboarding = ({ children }: { children: ReactNode }) => {
         >
           <SwiperSlide className="first">
             <div className="absolute left-0 top-0 z-[10000] mt-4 w-full p-2.5 pt-[calc(var(--ion-safe-area-top,0)_+_10px)] text-center text-4xl">
-              <span className="mr-2 font-bold text-primary">Butterfly</span>
-              Count
+              <T i18nKey="info.appName">
+                <span className="mr-2 font-bold text-primary">Butterfly</span>
+                Count
+              </T>
             </div>
             <div className="absolute inset-0 top-[17vh] flex flex-col items-center justify-center bg-[linear-gradient(to_right,#e8e8e8,transparent_1px),linear-gradient(to_bottom,#e8e8e8,transparent_1px)] bg-[size:24px_24px] bg-[position:-1px_-1px]">
               <div className="w-4/5 rounded-md border border-solid border-primary-200 bg-white/70 px-6 py-3 text-left text-lg text-primary-900 backdrop-blur-sm backdrop-filter">
-                <T>
-                  Butterflies are captivating insects, but they are declining in
-                  many parts of the world.
-                </T>
+                <T>info.butterfliesDeclining</T>
               </div>
               <img src={graph} alt="pic" className="" />
             </div>
@@ -81,10 +80,7 @@ const Onboarding = ({ children }: { children: ReactNode }) => {
 
           <SwiperSlide className="second">
             <div className="absolute bottom-[12vh] w-4/5 overflow-hidden rounded-md border border-solid border-primary-200 bg-white/80 px-6 py-3 text-lg text-primary-900 backdrop-blur-sm backdrop-filter">
-              <T>
-                Data collected by this app can greatly improve knowledge of the
-                status of butterflies and their habitats.
-              </T>
+              <T>info.dataCollectedBy</T>
             </div>
           </SwiperSlide>
 
@@ -95,20 +91,13 @@ const Onboarding = ({ children }: { children: ReactNode }) => {
               </a>
 
               <div className="-mt-16 w-4/5 shrink-0 overflow-hidden rounded-md border border-solid border-primary-200 bg-white/70 px-6 py-3 text-lg text-primary-900 backdrop-blur-sm backdrop-filter">
-                <T>
-                  We lack structured information on butterfly numbers in many
-                  parts of the world.
-                </T>
+                <T>info.weLackStructured</T>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className="fourth">
             <div className="absolute top-[7vh] w-4/5 overflow-hidden rounded-md border border-solid border-primary-200 bg-white/80 px-6 py-3 text-lg text-primary-900 backdrop-blur-sm backdrop-filter">
-              <T>
-                It has never been easier to contribute high quality data for
-                research to support conservation of these fascinating and vital
-                insects. You can get started straight away
-              </T>
+              <T>info.itHasNever</T>
             </div>
           </SwiperSlide>
 

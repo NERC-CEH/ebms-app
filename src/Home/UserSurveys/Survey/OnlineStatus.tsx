@@ -20,12 +20,12 @@ const OnlineStatus = ({ sample, onUpload, uploadIsPrimary }: Props) => {
 
   if (sample.isCountSurvey() || sample.isSingleSpeciesSurvey()) {
     if (sample.isTimerPaused())
-      return <Badge className="max-w-32">Paused</Badge>;
+      return <Badge className="max-w-32">common.paused</Badge>;
     if (!sample.isTimerFinished())
-      return <Badge className="max-w-32">Running</Badge>;
+      return <Badge className="max-w-32">records.running</Badge>;
   }
 
-  if (!saved) return <Badge className="max-w-32">Draft</Badge>;
+  if (!saved) return <Badge className="max-w-32">common.draft</Badge>;
 
   if (sample.isSynchronising) return <IonSpinner className="mr-2 size-4" />;
 
@@ -47,7 +47,7 @@ const OnlineStatus = ({ sample, onUpload, uploadIsPrimary }: Props) => {
         !isValid && 'opacity-50'
       )}
     >
-      Upload
+      common.upload
     </Button>
   );
 };

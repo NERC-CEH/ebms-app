@@ -64,10 +64,10 @@ const AttrLock = ({
 
     wasLocked.current = true;
     await sample.locks.set(taxonGroup, model, attr, value);
-    toast.success(
-      'The attribute value was locked and will be pre-filled for subsequent records.',
-      { color: 'success', position: 'bottom' }
-    );
+    toast.success('survey.attributeValueWas', {
+      color: 'success',
+      position: 'bottom',
+    });
   };
 
   const detailIcon = isLocked ? lockClosedOutline : chevronForwardOutline;

@@ -44,19 +44,19 @@ const MenuMain = ({
   return (
     <Main className="app-menu [--padding-top:env(safe-area-inset-top)] [--padding-bottom:30px]">
       <div className="text-center font-bold text-2xl w-full mt-5 mb-8 text-primary-800">
-        <T>Menu</T>
+        <T>common.menu</T>
       </div>
 
       <IonList lines="full">
         <h3 className="list-title">
-          <T>User</T>
+          <T>common.user</T>
         </h3>
         <div className="rounded-list">
           {isLoggedIn && (
             <IonItem detail id="logout-button" onClick={logOut}>
               <IonIcon icon={exitOutline} size="small" slot="start" />
               <div className="truncate">
-                <T>Logout</T>
+                <T>menu.logout</T>
                 {': '}
                 <span className="ml-2">
                   {user.firstName} {user.lastName}
@@ -66,56 +66,58 @@ const MenuMain = ({
           )}
 
           {isLoggedIn && isNotVerified && (
-            <InfoMessage className="verification-warning">
-              Looks like your <b>{{ userEmail } as unknown as string}</b> email
-              hasn't been verified yet.
-              <div>
-                <IonButton fill="outline" onClick={refreshAccount}>
-                  Refresh
-                </IonButton>
-                <IonButton fill="clear" onClick={resendVerificationEmail}>
-                  Resend Email
-                </IonButton>
-              </div>
+            <InfoMessage className="verification-warning" skipTranslation>
+              <T i18nKey="menu.unverifiedEmail" values={{ userEmail }}>
+                Looks like your <b>{{ userEmail } as unknown as string}</b>{' '}
+                email hasn't been verified yet.
+                <div>
+                  <IonButton fill="outline" onClick={refreshAccount}>
+                    Refresh
+                  </IonButton>
+                  <IonButton fill="clear" onClick={resendVerificationEmail}>
+                    Resend Email
+                  </IonButton>
+                </div>
+              </T>
             </InfoMessage>
           )}
 
           {!isLoggedIn && (
             <IonItem routerLink="/user/login" detail>
               <IonIcon icon={personOutline} size="small" slot="start" />
-              <T>Login</T>
+              <T>common.login</T>
             </IonItem>
           )}
 
           {!isLoggedIn && (
             <IonItem routerLink="/user/register" detail>
               <IonIcon icon={personAddOutline} size="small" slot="start" />
-              <T>Register</T>
+              <T>common.register</T>
             </IonItem>
           )}
         </div>
 
         <h3 className="list-title">
-          <T>Settings</T>
+          <T>settings.title</T>
         </h3>
         <div className="rounded-list">
           <IonItem routerLink="/settings/menu" detail>
             <IonIcon icon={settingsOutline} size="small" slot="start" />
-            <T>App</T>
+            <T>menu.app</T>
           </IonItem>
         </div>
 
         <h3 className="list-title">
-          <T>Info</T>
+          <T>menu.info</T>
         </h3>
         <div className="rounded-list">
           <IonItem routerLink="/info/guide" detail>
             <IonIcon icon={bookOutline} size="small" slot="start" />
-            <T>Instructions</T>
+            <T>common.instructions</T>
           </IonItem>
           <IonItem routerLink="/info/help" detail>
             <IonIcon icon={helpBuoyOutline} size="small" slot="start" />
-            <T>Help</T>
+            <T>common.help</T>
           </IonItem>
           <IonItem routerLink="/info/about" detail>
             <IonIcon
@@ -123,11 +125,11 @@ const MenuMain = ({
               size="small"
               slot="start"
             />
-            <T>About</T>
+            <T>common.about</T>
           </IonItem>
           <IonItem routerLink="/info/credits" detail>
             <IonIcon icon={heartOutline} size="small" slot="start" />
-            <T>Credits</T>
+            <T>common.credits</T>
           </IonItem>
           <IonItem
             href={`${config.backend.url}/privacy-notice?lang=${lang}`}
@@ -136,7 +138,7 @@ const MenuMain = ({
             detailIcon={openOutline}
           >
             <IonIcon icon={lockClosedOutline} size="small" slot="start" />
-            <T>Privacy Policy</T>
+            <T>common.privacyPolicy</T>
           </IonItem>
         </div>
       </IonList>

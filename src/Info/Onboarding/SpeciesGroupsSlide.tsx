@@ -19,7 +19,7 @@ const SpeciesGroupsSlide = () => {
   return (
     <div className="flex h-full flex-col items-center justify-between gap-4 px-4">
       <div className="text-2xl mt-20">
-        <T>
+        <T i18nKey="info.whichSpeciesGroups">
           Which <b>species groups</b> are you interested in?
         </T>
       </div>

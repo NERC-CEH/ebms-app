@@ -63,7 +63,7 @@ const Site = ({
               </Badge>
             )}
 
-            {!!hasLists && <Badge size="small">Has species lists</Badge>}
+            {!!hasLists && <Badge size="small">common.hasSpeciesLists</Badge>}
           </div>
         </div>
 
@@ -71,6 +71,7 @@ const Site = ({
           <div className="flex flex-col items-end text-primary-700">
             <IonIcon icon={arrowForwardOutline} />
             <span className="whitespace-nowrap text-sm font-bold">
+              {/* eslint-disable-next-line local/valid-trans-key */}
               {distance} km
             </span>
           </div>

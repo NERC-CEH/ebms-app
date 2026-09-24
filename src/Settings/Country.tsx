@@ -42,17 +42,21 @@ const SelectCountry = ({ hideHeader }: Props) => {
 
     if (appModel.data.country !== 'UK' && newCountry === 'UK') {
       alert({
-        header: 'Note',
+        header: 'common.note',
         message: (
-          <>
-            This app is not for the <b>Big Butterfly Count</b>. If you want to
-            take part in that survey please visit{' '}
-            <a href="https://www.bigbutterflycount.org">this website</a>.
-          </>
+          <T
+            i18nKey="settings.bigButterflyCountNote"
+            components={{
+              big: <b />,
+              website: (
+                <a href="https://www.bigbutterflycount.org">this website</a>
+              ),
+            }}
+          />
         ),
         buttons: [
           {
-            text: 'Got it',
+            text: 'common.gotIt',
             role: 'cancel',
             cssClass: 'primary',
           },
@@ -111,7 +115,7 @@ const SelectCountry = ({ hideHeader }: Props) => {
       id="country-select"
       className={hideHeader ? 'pt-[var(--ion-safe-area-top,0)]' : undefined}
     >
-      {!hideHeader && <Header title="Country" />}
+      {!hideHeader && <Header title="common.country" />}
 
       <Main>
         <IonList className="my-10!">
@@ -119,7 +123,7 @@ const SelectCountry = ({ hideHeader }: Props) => {
             <div className="mx-auto flex flex-col items-center text-primary-900">
               <IonIcon icon={flagOutline} className="size-10" />
               <h1>
-                <T>Select your country</T>
+                <T>countries.selectCountry</T>
               </h1>
             </div>
           )}

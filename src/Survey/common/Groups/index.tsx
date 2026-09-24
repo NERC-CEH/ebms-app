@@ -47,12 +47,12 @@ const Groups = () => {
     console.log('Projects joining', group.id);
 
     try {
-      await loader.show('Please wait...');
+      await loader.show('common.pleaseWait');
       await group.join();
       await groups.fetchRemote({ type: 'member' });
       await groups.fetchRemote({ type: 'joinable' });
 
-      toast.success('Successfully joined the project.');
+      toast.success('survey.joinedProject');
     } catch (error) {
       toast.error(error as Error);
     }
@@ -64,7 +64,7 @@ const Groups = () => {
     console.log('Projects leaving', group.id);
 
     try {
-      await loader.show('Please wait...');
+      await loader.show('common.pleaseWait');
       await group.leave();
       await groups.fetchRemote({ type: 'member' });
       await groups.fetchRemote({ type: 'joinable' });
@@ -77,7 +77,7 @@ const Groups = () => {
         appModel.data.defaultGroupId = undefined;
       }
 
-      toast.success('Successfully left the project.');
+      toast.success('survey.successfullyLeftProject');
     } catch (error) {
       toast.error(error as Error);
     }
@@ -89,14 +89,14 @@ const Groups = () => {
     console.log('Groups refreshing', type);
 
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       await groups.fetchRemote({ type });
@@ -119,7 +119,7 @@ const Groups = () => {
 
   return (
     <Page id="precise-area-count-edit-group">
-      <Header title="Projects" />
+      <Header title="survey.projects" />
 
       <Main
         sample={sample}

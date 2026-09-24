@@ -60,7 +60,7 @@ export const timeAttr = {
 export const trapLocationsAttr = {
   id: 'smpAttr:2036',
   type: 'numberInput',
-  title: 'Trap locations',
+  title: 'bait.trapLocations',
   appearance: 'counter',
   prefix: mothTrapIcon,
   placeholder: '0',
@@ -70,7 +70,7 @@ export const trapLocationsAttr = {
 export const trapsAttr = {
   id: 'smpAttr:2037',
   type: 'numberInput',
-  title: 'Total no. of traps',
+  title: 'bait.totalNoTraps',
   appearance: 'counter',
   prefix: mothTrapIcon,
   placeholder: '0',
@@ -80,7 +80,7 @@ export const trapsAttr = {
 export const trapsCarrionAttr = {
   id: 'smpAttr:2038',
   type: 'numberInput',
-  title: 'Traps (carrion)',
+  title: 'bait.trapsCarrion',
   appearance: 'counter',
   prefix: <IonIcon src={fishOutline} className="size-6" />,
   placeholder: '0',
@@ -90,7 +90,7 @@ export const trapsCarrionAttr = {
 export const trapsFruitAttr = {
   id: 'smpAttr:2039',
   type: 'numberInput',
-  title: 'Traps (fruit)',
+  title: 'bait.trapsFruit',
   appearance: 'counter',
   prefix: <IonIcon src={leafOutline} className="size-6" />,
   placeholder: '0',
@@ -100,7 +100,7 @@ export const trapsFruitAttr = {
 export const trapsOtherAttr = {
   id: 'smpAttr:2040',
   type: 'numberInput',
-  title: 'Traps (other)',
+  title: 'bait.trapsOther',
   appearance: 'counter',
   prefix: <IonIcon src={clipboardOutline} className="size-6" />,
   placeholder: '0',
@@ -110,7 +110,7 @@ export const trapsOtherAttr = {
 export const numberOfDaysAttr = {
   id: 'smpAttr:2041',
   type: 'numberInput',
-  title: 'No. of days',
+  title: 'bait.noDays',
   appearance: 'counter',
   prefix: <IonIcon src={calendarOutline} className="size-6" />,
   placeholder: '0',
@@ -120,7 +120,7 @@ export const numberOfDaysAttr = {
 export const firstSampleDateAttr = {
   id: 'smpAttr:2042',
   type: 'textInput',
-  title: 'First sample date',
+  title: 'bait.firstSampleDate',
   container: 'inline',
   prefix: <IonIcon src={calendarOutline} className="size-6" />,
 } as const satisfies TextInputConf;
@@ -128,7 +128,7 @@ export const firstSampleDateAttr = {
 export const lastSampleDateAttr = {
   id: 'smpAttr:2043',
   type: 'textInput',
-  title: 'Last sample date',
+  title: 'bait.lastSampleDate',
   container: 'inline',
   prefix: <IonIcon src={calendarOutline} className="size-6" />,
 } as const satisfies TextInputConf;
@@ -136,7 +136,7 @@ export const lastSampleDateAttr = {
 export const collectorsAttr = {
   id: 'smpAttr:2044',
   type: 'textInput',
-  title: 'Collectors',
+  title: 'bait.collectors',
   container: 'inline',
   prefix: <IonIcon src={peopleOutline} className="size-6" />,
 } as const satisfies TextInputConf;
@@ -144,7 +144,7 @@ export const collectorsAttr = {
 export const eventTypeAttr = {
   id: 'smpAttr:2045',
   type: 'textInput',
-  title: 'Event type',
+  title: 'bait.eventType',
   container: 'inline',
   prefix: <IonIcon src={flagOutline} className="size-6" />,
 } as const satisfies TextInputConf;
@@ -152,7 +152,7 @@ export const eventTypeAttr = {
 export const eventNameAttr = {
   id: 'smpAttr:2072',
   type: 'textInput',
-  title: 'Event name',
+  title: 'bait.eventName',
   container: 'inline',
   prefix: <IonIcon src={flagOutline} className="size-6" />,
 } as const satisfies TextInputConf;
@@ -160,7 +160,7 @@ export const eventNameAttr = {
 export const samplingDesignAttr = {
   id: 'smpAttr:2046',
   type: 'textInput',
-  title: 'Sampling design',
+  title: 'bait.samplingDesign',
   container: 'inline',
   prefix: <IonIcon src={documentTextOutline} className="size-6" />,
 } as const satisfies TextInputConf;
@@ -168,7 +168,7 @@ export const samplingDesignAttr = {
 export const carrionBaitAttr = {
   id: 'smpAttr:2047',
   type: 'textInput',
-  title: 'Carrion bait',
+  title: 'bait.carrionBait',
   container: 'inline',
   prefix: <IonIcon src={fishOutline} className="size-6" />,
 } as const satisfies TextInputConf;
@@ -176,7 +176,7 @@ export const carrionBaitAttr = {
 export const fieldCodeStartAttr = {
   id: 'smpAttr:2048',
   type: 'textInput',
-  title: 'Field code',
+  title: 'bait.fieldCode',
   container: 'inline',
   prefix: <IonIcon src={codeOutline} className="size-6" />,
   validation: { pattern: FIELD_CODE_REGEX.source },
@@ -185,34 +185,34 @@ export const fieldCodeStartAttr = {
 export const stratumAttr = {
   id: 'smpAttr:2049',
   type: 'choiceInput',
-  title: 'Stratum',
+  title: 'bait.stratum',
   appearance: 'button',
   prefix: <IonIcon src={layersOutline} className="size-6" />,
   choices: [
-    { title: 'Understorey', dataName: '24581' },
-    { title: 'Canopy', dataName: '24582' },
-    { title: 'Midstory', dataName: '24583' },
-    { title: 'Other', dataName: '24584' },
+    { title: 'bait.understorey', dataName: '24581' },
+    { title: 'bait.canopy', dataName: '24582' },
+    { title: 'bait.midstory', dataName: '24583' },
+    { title: 'common.other', dataName: '24584' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const baitAttr = {
   id: 'smpAttr:2050',
   type: 'choiceInput',
-  title: 'Bait',
+  title: 'bait.bait',
   appearance: 'button',
   prefix: <IonIcon src={clipboardOutline} className="size-6" />,
   choices: [
-    { title: 'Carrion', dataName: '24585' },
-    { title: 'Banana', dataName: '24586' },
-    { title: 'Other', dataName: '24587' },
+    { title: 'bait.carrion', dataName: '24585' },
+    { title: 'bait.banana', dataName: '24586' },
+    { title: 'common.other', dataName: '24587' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const otherBaitAttr = {
   id: 'smpAttr:2051',
   type: 'textInput',
-  title: 'Other bait',
+  title: 'bait.otherBait',
   container: 'inline',
   prefix: <IonIcon src={clipboardOutline} className="size-6" />,
   visibility: [{ target: baitAttr.id, op: 'eq', value: '99905' }],
@@ -221,7 +221,7 @@ export const otherBaitAttr = {
 export const surveyCommentAttr = {
   id: 'comment',
   type: 'textInput',
-  title: 'Comments',
+  title: 'common.comments',
   appearance: 'multiline',
   container: 'inline',
 } as const satisfies TextInputConf;
@@ -229,7 +229,7 @@ export const surveyCommentAttr = {
 export const trapCommentAttr = {
   id: 'comment',
   type: 'textInput',
-  title: 'Comments',
+  title: 'common.comments',
   appearance: 'multiline',
   container: 'inline',
 } as const satisfies TextInputConf;
@@ -237,20 +237,20 @@ export const trapCommentAttr = {
 export const weatherAttr = {
   id: 'smpAttr:2052',
   type: 'choiceInput',
-  title: 'Weather',
+  title: 'common.weather',
   appearance: 'button',
   prefix: <IonIcon src={cloudyOutline} className="size-6" />,
   choices: [
-    { title: 'Sunny', dataName: '24588' },
-    { title: 'Cloudy', dataName: '24589' },
-    { title: 'Rainy', dataName: '24590' },
+    { title: 'bait.sunny', dataName: '24588' },
+    { title: 'bait.cloudy', dataName: '24589' },
+    { title: 'bait.rainy', dataName: '24590' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const humidityAttr = {
   id: 'smpAttr:2053',
   type: 'numberInput',
-  title: 'Humidity',
+  title: 'bait.humidity',
   appearance: 'counter',
   prefix: <IonIcon src={waterOutline} className="size-6" />,
   placeholder: '0',
@@ -261,7 +261,7 @@ export const humidityAttr = {
 export const temperatureAttr = {
   id: 'smpAttr:2054',
   type: 'numberInput',
-  title: 'Temperature',
+  title: 'common.temperature',
   appearance: 'counter',
   prefix: <IonIcon src={thermometerOutline} className="size-6" />,
   placeholder: '0',
@@ -271,7 +271,7 @@ export const temperatureAttr = {
 export const temperatureInTrapAttr = {
   id: 'smpAttr:2055',
   type: 'numberInput',
-  title: 'Temp. in trap',
+  title: 'bait.tempTrap',
   appearance: 'counter',
   prefix: <IonIcon src={thermometerOutline} className="size-6" />,
   placeholder: '0',
@@ -289,13 +289,13 @@ const taxonAttr = {
 export const sexAttr = {
   id: 'occAttr:1239',
   type: 'choiceInput',
-  title: 'Sex',
+  title: 'bait.sex',
   appearance: 'button',
   prefix: <IonIcon src={maleOutline} className="size-6" />,
   choices: [
-    { title: 'Not recorded', dataName: '' },
-    { title: 'Male', dataName: '24592' },
-    { title: 'Female', dataName: '24593' },
+    { title: 'bait.notRecorded', dataName: '' },
+    { title: 'bait.male', dataName: '24592' },
+    { title: 'bait.female', dataName: '24593' },
   ],
 } as const satisfies ChoiceInputConf;
 
@@ -303,7 +303,7 @@ export const RECAPTURED = 't';
 export const recaptureAttr = {
   id: 'occAttr:1240',
   type: 'yesNoInput',
-  title: 'Recaptured',
+  title: 'bait.recaptured',
   prefix: <IonIcon src={refreshOutline} className="size-6" />,
   choices: [{ dataName: '' }, { dataName: RECAPTURED }],
 } as const satisfies YesNoInputConf;
@@ -311,7 +311,7 @@ export const recaptureAttr = {
 export const feedingAttr = {
   id: 'occAttr:1241',
   type: 'yesNoInput',
-  title: 'Feeding',
+  title: 'bait.feeding',
   prefix: <IonIcon src={nutritionOutline} className="size-6" />,
   choices: [{ dataName: '' }, { dataName: 't' }],
 } as const satisfies YesNoInputConf;
@@ -321,34 +321,34 @@ const RELEASED = '24594';
 export const fateAttr = {
   id: 'occAttr:1242',
   type: 'choiceInput',
-  title: 'Fate',
+  title: 'bait.fate',
   appearance: 'button',
   prefix: <IonIcon src={flagOutline} className="size-6" />,
   choices: [
-    { title: 'Released', dataName: RELEASED },
-    { title: 'Collected', dataName: '24595' },
-    { title: 'Died', dataName: '24596' },
+    { title: 'bait.released', dataName: RELEASED },
+    { title: 'bait.collected', dataName: '24595' },
+    { title: 'bait.died', dataName: '24596' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const ageAttr = {
   id: 'occAttr:1243',
   type: 'choiceInput',
-  title: 'Age',
+  title: 'bait.age',
   appearance: 'button',
   prefix: <IonIcon src={timeOutline} className="size-6" />,
   choices: [
-    { title: 'Not recorded', dataName: '' },
-    { title: 'New', dataName: '24598' },
-    { title: 'Intermediate', dataName: '24599' },
-    { title: 'Old', dataName: '24600' },
+    { title: 'bait.notRecorded', dataName: '' },
+    { title: 'common.new', dataName: '24598' },
+    { title: 'bait.intermediate', dataName: '24599' },
+    { title: 'bait.old', dataName: '24600' },
   ],
 } as const satisfies ChoiceInputConf;
 
 export const fieldCodeAttr = {
   id: 'occAttr:1244',
   type: 'textInput',
-  title: 'Code',
+  title: 'bait.code',
   container: 'inline',
   prefix: <IonIcon src={informationCircleOutline} className="size-6" />,
   validation: { pattern: FIELD_CODE_REGEX.source },
@@ -357,7 +357,7 @@ export const fieldCodeAttr = {
 export const wingLengthAttr = {
   id: 'occAttr:1245',
   type: 'numberInput',
-  title: 'Wing length',
+  title: 'bait.wingLength',
   appearance: 'counter',
   prefix: <IonIcon src={resizeOutline} className="size-6" />,
   placeholder: '0',
@@ -460,7 +460,7 @@ const occAttrs = {
 const survey = {
   id: SURVEY_ID,
   name: SURVEY_NAME,
-  label: 'Bait-Trap Survey',
+  label: 'bait.baitTrapSurvey',
   webForm: SURVEY_FORM,
 
   attrs,
@@ -486,10 +486,10 @@ const survey = {
           .object({
             taxon: z.object(
               { warehouseId: z.number() },
-              { error: 'Species is missing' }
+              { error: 'bait.speciesMissing' }
             ),
             [fieldCodeAttr.id]: z.string().regex(FIELD_CODE_REGEX, {
-              error: 'Field code is invalid (e.g. A1)',
+              error: 'bait.fieldCodeInvalid',
             }),
           })
           .safeParse(data).error,
@@ -515,8 +515,8 @@ const survey = {
     verify: data =>
       z
         .object({
-          locationId: z.string({ error: 'Please select your site.' }),
-          date: z.string({ error: 'Date is missing' }),
+          locationId: z.string({ error: 'bait.selectSite' }),
+          date: z.string({ error: 'common.dateMissing' }),
         })
         .safeParse(data).error,
   },
@@ -524,11 +524,11 @@ const survey = {
   verify: data =>
     z
       .object({
-        locationId: z.string({ error: 'Please select your site.' }),
-        date: z.string({ error: 'Date is missing' }),
+        locationId: z.string({ error: 'bait.selectSite' }),
+        date: z.string({ error: 'common.dateMissing' }),
         [fieldCodeStartAttr.id]: z
           .string()
-          .regex(FIELD_CODE_REGEX, { error: 'Field code is invalid (e.g. A1)' })
+          .regex(FIELD_CODE_REGEX, { error: 'bait.fieldCodeInvalid' })
           .or(z.literal(''))
           .optional(),
       })

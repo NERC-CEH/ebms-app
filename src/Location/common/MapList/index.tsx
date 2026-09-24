@@ -90,7 +90,7 @@ const MainSites = ({
       {!device.isOnline && (
         <div className="absolute top-0 z-[99999] flex h-full w-full flex-col items-center bg-[#4a4a4a] p-6">
           <InfoMessage prefix={<IonIcon src={wifiOutline} />}>
-            To see the map please connect to the internet.
+            locations.seeMapPlease
           </InfoMessage>
         </div>
       )}

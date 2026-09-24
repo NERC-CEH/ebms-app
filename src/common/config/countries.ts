@@ -1,18 +1,18 @@
 const continents = {
-  EU: 'Europe',
-  AS: 'Asia',
-  AF: 'Africa',
-  AU: 'Australasia',
-  NA: 'North America',
-  CAM: 'Central America',
-  SA: 'South America',
+  EU: 'common.europe',
+  AS: 'common.asia',
+  AF: 'common.africa',
+  AU: 'common.australasia',
+  NA: 'common.northAmerica',
+  CAM: 'common.centralAmerica',
+  SA: 'common.southAmerica',
   // AN: 'Antarctica', // no butterflies there
 } as const;
 
 /* eslint-disable @typescript-eslint/naming-convention */
 const countries = {
   AI: {
-    name: 'Anguilla',
+    name: 'common.anguilla',
     latitude: 18.213363,
     longitude: -63.0513729,
     zoom: 10,
@@ -20,7 +20,7 @@ const countries = {
     continent: 'CAM',
   },
   AL: {
-    name: 'Albania',
+    name: 'common.albania',
     latitude: 41.153332,
     longitude: 20.168331,
     zoom: 5,
@@ -28,7 +28,7 @@ const countries = {
     continent: 'EU',
   },
   AD: {
-    name: 'Andorra',
+    name: 'common.andorra',
     latitude: 42.546245,
     longitude: 1.601554,
     zoom: 6,
@@ -36,7 +36,7 @@ const countries = {
     continent: 'EU',
   },
   AM: {
-    name: 'Armenia',
+    name: 'common.armenia',
     latitude: 40.069099,
     longitude: 45.038189,
     zoom: 4,
@@ -44,7 +44,7 @@ const countries = {
     continent: 'AS',
   },
   AT: {
-    name: 'Austria',
+    name: 'common.austria',
     latitude: 47.516231,
     longitude: 14.550072,
     zoom: 4,
@@ -52,7 +52,7 @@ const countries = {
     continent: 'EU',
   },
   AU: {
-    name: 'Australia',
+    name: 'common.australia',
     latitude: -25.274398,
     longitude: 133.775136,
     zoom: 3,
@@ -60,7 +60,7 @@ const countries = {
     continent: 'AU',
   },
   BY: {
-    name: 'Belarus',
+    name: 'common.belarus',
     latitude: 53.709807,
     longitude: 27.953389,
     zoom: 4,
@@ -68,7 +68,7 @@ const countries = {
     continent: 'EU',
   },
   BE: {
-    name: 'Belgium',
+    name: 'common.belgium',
     latitude: 50.503887,
     longitude: 4.469936,
     zoom: 7,
@@ -76,7 +76,7 @@ const countries = {
     continent: 'EU',
   },
   BL: {
-    name: 'Saint-Barthélémy',
+    name: 'common.saintBarthélémy',
     latitude: 17.89755,
     longitude: -62.82183,
     zoom: 11,
@@ -84,7 +84,7 @@ const countries = {
     continent: 'CAM',
   },
   BA: {
-    name: 'Bosnia and Herzegovina',
+    name: 'common.bosniaHerzegovina',
     latitude: 43.915886,
     longitude: 17.679076,
     zoom: 5,
@@ -92,7 +92,7 @@ const countries = {
     continent: 'EU',
   },
   BG: {
-    name: 'Bulgaria',
+    name: 'common.bulgaria',
     latitude: 42.733883,
     longitude: 25.48583,
     zoom: 4,
@@ -100,7 +100,7 @@ const countries = {
     continent: 'EU',
   },
   HR: {
-    name: 'Croatia',
+    name: 'common.croatia',
     latitude: 45.1,
     longitude: 15.2,
     zoom: 7,
@@ -108,7 +108,7 @@ const countries = {
     continent: 'EU',
   },
   CH: {
-    name: 'Switzerland',
+    name: 'common.switzerland',
     latitude: 46.885818,
     longitude: 8.070251,
     zoom: 7,
@@ -116,7 +116,7 @@ const countries = {
     continent: 'EU',
   },
   CY: {
-    name: 'Cyprus',
+    name: 'common.cyprus',
     latitude: 35.126413,
     longitude: 33.429859,
     zoom: 7,
@@ -124,7 +124,7 @@ const countries = {
     continent: 'EU',
   },
   CZ: {
-    name: 'Czechia',
+    name: 'common.czechia',
     latitude: 49.817492,
     longitude: 15.472962,
     zoom: 4,
@@ -132,7 +132,7 @@ const countries = {
     continent: 'EU',
   },
   DK: {
-    name: 'Denmark',
+    name: 'common.denmark',
     latitude: 56.26392,
     longitude: 9.501785,
     zoom: 4,
@@ -140,7 +140,7 @@ const countries = {
     continent: 'EU',
   },
   EC: {
-    name: 'Ecuador',
+    name: 'common.ecuador',
     latitude: -1.493126,
     longitude: -78.606819,
     zoom: 6,
@@ -148,7 +148,7 @@ const countries = {
     continent: 'SA',
   },
   EE: {
-    name: 'Estonia',
+    name: 'common.estonia',
     latitude: 58.595272,
     longitude: 25.013607,
     zoom: 4,
@@ -156,7 +156,7 @@ const countries = {
     continent: 'EU',
   },
   FI: {
-    name: 'Finland',
+    name: 'common.finland',
     latitude: 61.92411,
     longitude: 25.748151,
     zoom: 2,
@@ -164,7 +164,7 @@ const countries = {
     continent: 'EU',
   },
   FR: {
-    name: 'France',
+    name: 'common.france',
     latitude: 46.227638,
     longitude: 2.213749,
     zoom: 3,
@@ -172,7 +172,7 @@ const countries = {
     continent: 'EU',
   },
   DE: {
-    name: 'Germany',
+    name: 'common.germany',
     latitude: 51.165691,
     longitude: 10.451526,
     zoom: 3,
@@ -180,7 +180,7 @@ const countries = {
     continent: 'EU',
   },
   GE: {
-    name: 'Georgia',
+    name: 'common.georgia',
     latitude: 41.937958,
     longitude: 43.59545,
     zoom: 5,
@@ -188,14 +188,14 @@ const countries = {
     continent: 'EU',
   },
   GP: {
-    name: 'Guadeloupe',
+    name: 'common.guadeloupe',
     latitude: 16.265,
     longitude: -61.551,
     zoom: 8,
     continent: 'CAM',
   },
   GR: {
-    name: 'Greece',
+    name: 'common.greece',
     latitude: 39.074208,
     longitude: 21.824312,
     zoom: 4,
@@ -203,7 +203,7 @@ const countries = {
     continent: 'EU',
   },
   HU: {
-    name: 'Hungary',
+    name: 'common.hungary',
     latitude: 47.162494,
     longitude: 19.503304,
     zoom: 4,
@@ -211,7 +211,7 @@ const countries = {
     continent: 'EU',
   },
   IS: {
-    name: 'Iceland',
+    name: 'common.iceland',
     latitude: 64.963051,
     longitude: -19.020835,
     zoom: 4,
@@ -219,7 +219,7 @@ const countries = {
     continent: 'EU',
   },
   IE: {
-    name: 'Ireland',
+    name: 'common.ireland',
     latitude: 53.41291,
     longitude: -8.24389,
     zoom: 4,
@@ -227,7 +227,7 @@ const countries = {
     continent: 'EU',
   },
   IT: {
-    name: 'Italy',
+    name: 'common.italy',
     latitude: 41.87194,
     longitude: 12.56738,
     zoom: 3,
@@ -235,7 +235,7 @@ const countries = {
     continent: 'EU',
   },
   LV: {
-    name: 'Latvia',
+    name: 'common.latvia',
     latitude: 56.879635,
     longitude: 24.603189,
     zoom: 4,
@@ -243,7 +243,7 @@ const countries = {
     continent: 'EU',
   },
   LI: {
-    name: 'Liechtenstein',
+    name: 'common.liechtenstein',
     latitude: 47.166,
     longitude: 9.555373,
     zoom: 5,
@@ -251,7 +251,7 @@ const countries = {
     continent: 'EU',
   },
   LT: {
-    name: 'Lithuania',
+    name: 'common.lithuania',
     latitude: 55.169438,
     longitude: 23.881275,
     zoom: 5,
@@ -259,7 +259,7 @@ const countries = {
     continent: 'EU',
   },
   LU: {
-    name: 'Luxembourg',
+    name: 'common.luxembourg',
     latitude: 49.815273,
     longitude: 6.129583,
     zoom: 6,
@@ -267,7 +267,7 @@ const countries = {
     continent: 'EU',
   },
   MT: {
-    name: 'Malta',
+    name: 'common.malta',
     latitude: 35.937496,
     longitude: 14.375416,
     zoom: 5,
@@ -275,7 +275,7 @@ const countries = {
     continent: 'EU',
   },
   MD: {
-    name: 'Moldova',
+    name: 'common.moldova',
     latitude: 47.411631,
     longitude: 28.369885,
     zoom: 4,
@@ -283,7 +283,7 @@ const countries = {
     continent: 'EU',
   },
   ME: {
-    name: 'Montenegro',
+    name: 'common.montenegro',
     latitude: 42.708678,
     longitude: 19.37439,
     zoom: 5,
@@ -291,21 +291,21 @@ const countries = {
     continent: 'EU',
   },
   MF: {
-    name: 'Saint-Martin',
+    name: 'common.saintMartin',
     latitude: 18.07083,
     longitude: -63.05008,
     zoom: 11,
     continent: 'CAM',
   },
   MQ: {
-    name: 'Martinique',
+    name: 'common.martinique',
     latitude: 14.641528,
     longitude: -61.024174,
     zoom: 9,
     continent: 'CAM',
   },
   MS: {
-    name: 'Montserrat',
+    name: 'common.montserrat',
     latitude: 16.7369858,
     longitude: -62.19,
     zoom: 11,
@@ -313,7 +313,7 @@ const countries = {
     continent: 'CAM',
   },
   NL: {
-    name: 'Netherlands',
+    name: 'common.netherlands',
     latitude: 52.132633,
     longitude: 5.291266,
     zoom: 6,
@@ -321,7 +321,7 @@ const countries = {
     continent: 'EU',
   },
   MK: {
-    name: 'North Macedonia',
+    name: 'common.northMacedonia',
     latitude: 41.608635,
     longitude: 21.745275,
     zoom: 5,
@@ -329,7 +329,7 @@ const countries = {
     continent: 'EU',
   },
   NO: {
-    name: 'Norway',
+    name: 'common.norway',
     latitude: 60.472024,
     longitude: 8.468946,
     zoom: 2,
@@ -337,7 +337,7 @@ const countries = {
     continent: 'EU',
   },
   PL: {
-    name: 'Poland',
+    name: 'common.poland',
     latitude: 51.919438,
     longitude: 19.145136,
     zoom: 3,
@@ -345,7 +345,7 @@ const countries = {
     continent: 'EU',
   },
   PT: {
-    name: 'Portugal',
+    name: 'common.portugal',
     latitude: 39.399872,
     longitude: -8.224454,
     zoom: 3,
@@ -353,7 +353,7 @@ const countries = {
     continent: 'EU',
   },
   RO: {
-    name: 'Romania',
+    name: 'common.romania',
     latitude: 45.943161,
     longitude: 24.96676,
     zoom: 3,
@@ -361,7 +361,7 @@ const countries = {
     continent: 'EU',
   },
   RS: {
-    name: 'Serbia',
+    name: 'common.serbia',
     latitude: 44.016521,
     longitude: 21.005859,
     zoom: 4,
@@ -369,7 +369,7 @@ const countries = {
     continent: 'EU',
   },
   SH_HL: {
-    name: 'Saint Helena',
+    name: 'common.saintHelena',
     latitude: -15.962036,
     longitude: -5.708642,
     zoom: 3,
@@ -377,7 +377,7 @@ const countries = {
     continent: 'AF',
   },
   SK: {
-    name: 'Slovakia',
+    name: 'common.slovakia',
     latitude: 48.669026,
     longitude: 19.699024,
     zoom: 3,
@@ -385,7 +385,7 @@ const countries = {
     continent: 'EU',
   },
   SI: {
-    name: 'Slovenia',
+    name: 'common.slovenia',
     latitude: 46.151241,
     longitude: 14.995463,
     zoom: 3,
@@ -393,7 +393,7 @@ const countries = {
     continent: 'EU',
   },
   ES: {
-    name: 'Spain',
+    name: 'common.spain',
     latitude: 40.463667,
     longitude: -3.74922,
     zoom: 3,
@@ -401,7 +401,7 @@ const countries = {
     continent: 'EU',
   },
   SE: {
-    name: 'Sweden',
+    name: 'common.sweden',
     latitude: 60.128161,
     longitude: 18.643501,
     zoom: 2,
@@ -409,7 +409,7 @@ const countries = {
     continent: 'EU',
   },
   UA: {
-    name: 'Ukraine',
+    name: 'common.ukraine',
     latitude: 48.379433,
     longitude: 31.16558,
     zoom: 3,
@@ -418,7 +418,7 @@ const countries = {
   },
   // Change to GB at some point as it is a standard one.
   UK: {
-    name: 'United Kingdom',
+    name: 'common.unitedKingdom',
     latitude: 55.378051,
     longitude: -3.435973,
     zoom: 4,
@@ -426,7 +426,7 @@ const countries = {
     continent: 'EU',
   },
   ES_CA: {
-    name: 'Spain (Canary Islands)',
+    name: 'common.spainCanaryIslands',
     latitude: 28.05607,
     longitude: -15.695324,
     zoom: 5,
@@ -434,7 +434,7 @@ const countries = {
     continent: 'EU',
   },
   PT_MA: {
-    name: 'Portugal (Madeira Islands)',
+    name: 'common.portugalMadeiraIslands',
     latitude: 32.7607,
     longitude: -16.9595,
     zoom: 7,
@@ -442,7 +442,7 @@ const countries = {
     continent: 'EU',
   },
   TR: {
-    name: 'Turkey (Europe)',
+    name: 'common.turkeyEurope',
     latitude: 38.9637,
     longitude: 35.2433,
     zoom: 2,
@@ -450,7 +450,7 @@ const countries = {
     continent: 'EU',
   },
   TRA: {
-    name: 'Turkey (Asia)',
+    name: 'common.turkeyAsia',
     latitude: 38.9637,
     longitude: 35.2433,
     zoom: 2,
@@ -458,7 +458,7 @@ const countries = {
     continent: 'AS',
   },
   RU: {
-    name: 'Russian Federation',
+    name: 'common.russianFederation',
     latitude: 56.2816,
     longitude: 32.842,
     zoom: 2,
@@ -466,7 +466,7 @@ const countries = {
     continent: 'EU',
   },
   PT_AZ: {
-    name: 'Portugal (Azores)',
+    name: 'common.portugalAzores',
     latitude: 37.7412,
     longitude: -25.6756,
     zoom: 5,
@@ -474,7 +474,7 @@ const countries = {
     continent: 'EU',
   },
   JP: {
-    name: 'Japan',
+    name: 'common.japan',
     latitude: 36.204824,
     longitude: 138.252924,
     zoom: 3,
@@ -482,7 +482,7 @@ const countries = {
     continent: 'AS',
   },
   KE: {
-    name: 'Kenya',
+    name: 'common.kenya',
     latitude: 0.823559,
     longitude: 37.906193,
     zoom: 4,
@@ -490,7 +490,7 @@ const countries = {
     continent: 'AF',
   },
   BW: {
-    name: 'Botswana',
+    name: 'common.botswana',
     latitude: -21.0690475,
     longitude: 23.5293358,
     zoom: 4,
@@ -498,7 +498,7 @@ const countries = {
     continent: 'AF',
   },
   ZA: {
-    name: 'South Africa',
+    name: 'common.southAfrica',
     latitude: -30.2908267,
     longitude: 23.0195502,
     zoom: 4,
@@ -506,7 +506,7 @@ const countries = {
     continent: 'AF',
   },
   NG: {
-    name: 'Nigeria',
+    name: 'common.nigeria',
     latitude: 9.113174,
     longitude: 7.688109,
     zoom: 4,
@@ -514,7 +514,7 @@ const countries = {
     continent: 'AF',
   },
   NZ: {
-    name: 'New Zealand',
+    name: 'common.newZealand',
     latitude: -41.762988,
     longitude: 173.647554,
     zoom: 4,
@@ -522,7 +522,7 @@ const countries = {
     continent: 'AU',
   },
   MA: {
-    name: 'Morocco',
+    name: 'common.morocco',
     longitude: -7.667768,
     latitude: 27.660413,
     zoom: 4,
@@ -530,7 +530,7 @@ const countries = {
     continent: 'AF',
   },
   ZM: {
-    name: 'Zambia',
+    name: 'common.zambia',
     longitude: 28.241224,
     latitude: -14.238513,
     zoom: 4,
@@ -540,29 +540,29 @@ const countries = {
 
   // special option
   ELSEWHERE: {
-    name: 'Elsewhere',
+    name: 'common.elsewhere',
     latitude: 55.378051,
     longitude: -3.435973,
     zoom: 3,
   },
-};
+} as const;
 
 /* eslint-enable @typescript-eslint/naming-convention */
-
-export type Country = {
-  name: string;
-  latitude: number;
-  longitude: number;
-  zoom?: number;
-  id?: number;
-  continent?: keyof typeof continents;
-};
 
 /**
  * ISO 3166 two-letter country code.
  */
 export type CountryCode = keyof typeof countries;
 export type ContinentCode = keyof typeof continents;
+
+export type Country = {
+  name: (typeof countries)[CountryCode]['name'];
+  latitude: number;
+  longitude: number;
+  zoom?: number;
+  id?: number;
+  continent?: ContinentCode;
+};
 
 export { continents };
 export default countries as Record<CountryCode, Country>;

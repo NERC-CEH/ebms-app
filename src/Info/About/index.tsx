@@ -5,17 +5,14 @@ const { P } = Section;
 
 const Component = () => (
   <Page id="about">
-    <Header title="About" />
+    <Header title="common.about" />
     <Main id="about" className="ion-padding">
       <Section>
-        <P>
-          This app enables you to contribute to the recording and conservation
-          of butterflies across the world.
-        </P>
+        <P>info.appEnablesContribute</P>
       </Section>
       <Section>
         <b>
-          <P>The app was supported through several projects:</P>
+          <P>info.appWasSupported</P>
         </b>
 
         <P skipTranslation>
@@ -50,11 +47,7 @@ const Component = () => (
         </P>
       </Section>
       <Section>
-        <P>
-          The app has benefited from input from a number of butterfly experts
-          from across the world and associated with national Butterfly
-          Monitoring Schemes listed at:
-        </P>
+        <P>info.appHasBenefited</P>
         <P skipTranslation>
           <a href="https://butterfly-monitoring.net/partners">
             https://butterfly-monitoring.net/partners

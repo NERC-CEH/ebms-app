@@ -37,21 +37,21 @@ const TrapDetailsMain = ({ subSample }: Props) => {
           <div className="rounded-list">
             <MenuAttrItem
               routerLink={`${url}/location`}
-              label="Trap location"
+              label="bait.trapLocation"
               skipValueTranslation
               icon={locationOutline}
               value={locationName}
               disabled
             />
             <MenuDateAttr
-              label="Date"
+              label="common.date"
               value={subSample.data.date}
               presentation="date"
               onChange={val => (subSample.data.date = val)} // eslint-disable-line no-return-assign
               isDisabled={subSample.isUploaded}
             />
             <MenuDateAttr
-              label="Time"
+              label="common.time"
               value={subSample.data[timeAttr.id]}
               presentation="time"
               onChange={val => (subSample.data[timeAttr.id] = val)} // eslint-disable-line no-return-assign
@@ -66,7 +66,7 @@ const TrapDetailsMain = ({ subSample }: Props) => {
 
         <IonList lines="full">
           <h3 className="list-title">
-            <T>Weather</T>
+            <T>common.weather</T>
           </h3>
           <div className="rounded-list">
             <Block record={subSample.data} block={weatherAttr} />

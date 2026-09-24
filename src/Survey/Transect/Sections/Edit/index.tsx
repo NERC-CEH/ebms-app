@@ -22,18 +22,18 @@ const useDeleteSpeciesPrompt = () => {
     const prompt = (resolve: (confirmed: boolean) => void) => {
       const taxonName = taxon.scientificName;
       alert({
-        header: t('Delete'),
+        header: t('common.delete'),
         skipTranslation: true,
-        message: t('Are you sure you want to delete {{taxon}} ?', {
+        message: t('common.confirmDeleteTaxon', {
           taxon: taxonName,
         }),
         buttons: [
           {
-            text: t('Cancel'),
+            text: t('common.cancel'),
             role: 'cancel',
           },
           {
-            text: t('Delete'),
+            text: t('common.delete'),
             role: 'destructive',
             handler: () => resolve(true),
           },
@@ -129,9 +129,7 @@ const EditController = () => {
   };
 
   const toggleSpeciesSort = () => {
-    const newSortOrder = appModel.cycleSpeciesListSortOrder();
-
-    toast.success(`Changed list ordering to ${newSortOrder}.`, {
+    toast.success(appModel.cycleSpeciesListSortOrder(), {
       color: 'light',
       position: 'bottom',
       duration: 1000,
@@ -150,7 +148,9 @@ const EditController = () => {
     const nextSectionSample = sample.samples[nextSectionIndex];
     const isLastSection = !nextSectionSample;
     if (isLastSection) {
-      return <HeaderButton onClick={() => goBack()}>Finish</HeaderButton>;
+      return (
+        <HeaderButton onClick={() => goBack()}>common.finish</HeaderButton>
+      );
     }
 
     const nextSectionSampleId = nextSectionSample.cid;
@@ -163,7 +163,7 @@ const EditController = () => {
       );
     };
 
-    return <HeaderButton onClick={navigateToSection}>Next</HeaderButton>;
+    return <HeaderButton onClick={navigateToSection}>common.next</HeaderButton>;
   };
 
   const getPreviousSectionOrSurvey = () => {
@@ -202,7 +202,7 @@ const EditController = () => {
 
     const previousSectionOrSurvey = getPreviousSectionOrSurvey();
     if (!previousSectionOrSurvey) {
-      toast.warn('Sorry, no previous survey to copy species from.');
+      toast.warn('common.sorryNoPrevious');
       return;
     }
 
@@ -237,10 +237,10 @@ const EditController = () => {
     subSample.shallowSpeciesList.sort(speciesNameSort);
 
     if (!newSpeciesList.length) {
-      toast.warn('Sorry, no species were found to copy.');
+      toast.warn('common.sorryNoSpecies');
     } else {
       toast.success(
-        i18n.t('You have successfully copied {{speciesCount}} species.', {
+        i18n.t('common.haveSuccessfullyCopied', {
           speciesCount: newSpeciesList.length,
         }),
         { skipTranslation: true }
@@ -260,7 +260,7 @@ const EditController = () => {
   };
 
   const sectionLocation = locations.idMap.get(subSample.data.locationId || '');
-  const sectionCode = sectionLocation?.data.code || t('Section');
+  const sectionCode = sectionLocation?.data.code || t('transect.section');
 
   const { speciesListSortOrder } = appModel.data;
   return (
@@ -268,6 +268,7 @@ const EditController = () => {
       <Header
         title={sectionCode}
         defaultHref="/home/user-surveys"
+        skipTranslation
         rightSlot={getNextSectionButton()}
       />
       <Main

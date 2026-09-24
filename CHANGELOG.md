@@ -1,3 +1,7 @@
+## 1.35.0
+
+Added Latvian.
+
 ## 1.34.0
 
 Added AreaCount survey species attribute locking.

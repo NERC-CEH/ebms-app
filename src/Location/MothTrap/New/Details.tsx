@@ -83,12 +83,19 @@ const Details = ({ onSave }: Props) => {
   const showDeleteLampPrompt = (index: number) => {
     const showPrompt = (resolve: (result: boolean) => void) => {
       alert({
-        header: 'Delete',
-        message:
-          'Are you sure you want to delete this lamp entry from the moth trap?',
+        header: 'common.delete',
+        message: 'locations.confirmDeleteLamp',
         buttons: [
-          { text: 'Cancel', role: 'cancel', handler: () => resolve(false) },
-          { text: 'Delete', role: 'destructive', handler: () => resolve(true) },
+          {
+            text: 'common.cancel',
+            role: 'cancel',
+            handler: () => resolve(false),
+          },
+          {
+            text: 'common.delete',
+            role: 'destructive',
+            handler: () => resolve(true),
+          },
         ],
       });
     };
@@ -105,13 +112,15 @@ const Details = ({ onSave }: Props) => {
 
   const getLampList = () => {
     if (!lamps.length)
-      return <InfoBackgroundMessage>No lamps added</InfoBackgroundMessage>;
+      return (
+        <InfoBackgroundMessage>locations.noLampsAdded</InfoBackgroundMessage>
+      );
 
     const renderLamp = (lamp: Lamp, index: number) => {
       const { quantity } = lamp;
       const lampValue = lamp.type || (
         <div className="text-warning">
-          <T>Lamp</T>
+          <T>locations.lamp</T>
         </div>
       );
 
@@ -130,7 +139,7 @@ const Details = ({ onSave }: Props) => {
               <div>
                 {!!quantity && (
                   <Badge skipTranslation>
-                    <T>Quantity</T>: {quantity}
+                    <T>locations.quantity</T>: {quantity}
                   </Badge>
                 )}
               </div>
@@ -138,7 +147,7 @@ const Details = ({ onSave }: Props) => {
           </IonItem>
           <IonItemOptions side="end" onClick={onDelete}>
             <IonItemOption color="danger">
-              <T>Delete</T>
+              <T>common.delete</T>
             </IonItemOption>
           </IonItemOptions>
         </IonItemSliding>
@@ -160,15 +169,15 @@ const Details = ({ onSave }: Props) => {
         <IonToolbar>
           <IonButtons slot="start">
             <IonButton onClick={onDismiss}>
-              <T>Cancel</T>
+              <T>common.cancel</T>
             </IonButton>
           </IonButtons>
           <IonTitle>
-            <T>Moth trap</T>
+            <T>common.mothTrap</T>
           </IonTitle>
           <IonButtons slot="end">
             <HeaderButton isInvalid={isInvalid} onClick={onSaveWrap}>
-              <T>Save</T>
+              <T>common.save</T>
             </HeaderButton>
           </IonButtons>
         </IonToolbar>
@@ -181,7 +190,7 @@ const Details = ({ onSave }: Props) => {
             <IonItem detail onClick={navigateToLocationPicker}>
               <IonIcon slot="start" icon={locationOutline} />
               <IonLabel>
-                <T>Location</T>
+                <T>common.location</T>
               </IonLabel>
               <IonLabel slot="end" className="text-sm mr-0">
                 {model.centroidSref}
@@ -193,7 +202,7 @@ const Details = ({ onSave }: Props) => {
           </div>
 
           <Button color="primary" onPress={addNewLamp} className="mx-auto my-5">
-            <T>Add lamp</T>
+            <T>locations.addLamp</T>
           </Button>
         </IonList>
 

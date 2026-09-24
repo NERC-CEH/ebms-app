@@ -113,13 +113,12 @@ export class AppModel extends Model<Data> {
       sortCycle[this.data.speciesListSortOrder] || 'alphabetical';
     this.save();
 
-    const prettySortName: Record<string, string> = {
-      alphabetical: 'alphabetical',
-      lastAdded: 'last added',
-      lastEdited: 'last edited',
+    const orders = {
+      alphabetical: 'survey.changedListOrderingAlphabetical',
+      lastAdded: 'survey.changedListOrderingLastAdded',
+      lastEdited: 'survey.changedListOrderingLastEdited',
     };
-
-    return prettySortName[this.data.speciesListSortOrder];
+    return orders[this.data.speciesListSortOrder];
   }
 
   toggleTaxonFilter(filter: number) {

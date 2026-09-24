@@ -1,7 +1,16 @@
 import { useContext } from 'react';
 import { Trans as T } from 'react-i18next';
 import { TypeOf } from 'zod';
-import { useToast, useLoader, Page, Header, device, useAlert } from '@flumens';
+import {
+  useToast,
+  useLoader,
+  Page,
+  Header,
+  device,
+  useAlert,
+  DrupalUserError,
+  DrupalUserErrorCode as E,
+} from '@flumens';
 import { NavContext } from '@ionic/react';
 import userModel, { UserModel } from 'models/user';
 import Main from './Main';
@@ -22,31 +31,34 @@ const LoginController = () => {
   async function onSubmit(details: Details) {
     const { email } = details;
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       await userModel.resetPassword(email.trim());
       alert({
-        header: "We've sent an email to you",
-        message: (
-          <T>
-            Click the link in the email to reset your password. If you don't see
-            the email, check other places like your junk, spam or other folders.
-          </T>
-        ),
+        header: 'user.weVeSent',
+        message: <T>user.clickLinkEmail</T>,
         buttons: [
           {
-            text: 'OK, got it',
+            text: 'common.okGotIt',
             role: 'cancel',
             handler: onSuccess,
           },
         ],
       });
     } catch (error) {
-      toast.error(error as Error);
+      if (error instanceof DrupalUserError) {
+        toast.error(
+          error.code === E.UnrecognizedEmail
+            ? 'user.unrecognizedEmail'
+            : error.message
+        );
+      } else {
+        toast.error(error);
+      }
     }
 
     loader.hide();
@@ -54,7 +66,7 @@ const LoginController = () => {
 
   return (
     <Page id="user-reset">
-      <Header className="ion-no-border" title="Reset" />
+      <Header className="ion-no-border" title="user.reset" />
       <Main onSubmit={onSubmit} />
     </Page>
   );

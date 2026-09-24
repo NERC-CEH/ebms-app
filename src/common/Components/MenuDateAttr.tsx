@@ -18,7 +18,7 @@ const MenuDateAttr = ({
   <IonItem className="m-0! rounded-none! [--border-radius:0]! [--border-style:solid]! [--inner-padding-end:8px]!">
     <IonIcon src={icon} slot="start" />
     <IonLabel className="!opacity-100">
-      <T>{label}</T>
+      <T i18nKey={label as never} />
     </IonLabel>
 
     <DatetimeButton

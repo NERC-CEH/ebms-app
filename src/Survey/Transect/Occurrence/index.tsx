@@ -35,7 +35,7 @@ const TransectHomeController = () => {
 
   return (
     <Page id="section-occurrence-edit">
-      <Header title="Edit Occurrence" />
+      <Header title="common.editOccurrence" />
       <Main className="pb-ion-s-10">
         <IonList lines="full">
           <div className="rounded-list">
@@ -56,7 +56,7 @@ const TransectHomeController = () => {
             <MenuAttrItemFromModel attr="comment" model={occurrence} />
 
             <NumberInput
-              label="Count"
+              label="common.count"
               onChange={getCounterOnChange}
               value={count}
               prefix={<IonIcon src={numberIcon} className="size-6" />}
@@ -66,7 +66,7 @@ const TransectHomeController = () => {
           </div>
 
           <h3 className="list-title">
-            <T>Species Photo</T>
+            <T>common.speciesPhoto</T>
           </h3>
           <div className="rounded-list">
             <PhotoPicker model={occurrence} />

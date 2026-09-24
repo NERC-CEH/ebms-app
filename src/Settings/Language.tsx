@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import { globeOutline } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import { Page, Main, Header, RadioInput } from '@flumens';
 import { IonIcon, IonList, NavContext } from '@ionic/react';
 import languages, { Language } from 'common/config/languages';
@@ -43,14 +44,16 @@ function SelectLanguage({ hideHeader }: Props) {
       id="language-select"
       className={clsx(hideHeader && 'pt-[var(--ion-safe-area-top,0)]')}
     >
-      {!hideHeader && <Header title="Language" />}
+      {!hideHeader && <Header title="common.language" />}
 
       <Main>
         <IonList className="my-10!">
           {hideHeader && (
             <div className="mx-auto flex flex-col items-center text-primary-900">
               <IonIcon icon={globeOutline} className="size-10" />
-              <h1>Select your language</h1>
+              <h1>
+                <T>settings.selectLanguage</T>
+              </h1>
             </div>
           )}
           <RadioInput

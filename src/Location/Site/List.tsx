@@ -46,14 +46,14 @@ const Site = () => {
 
   const refreshSites = async () => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       await locations.fetchRemote();
@@ -72,7 +72,7 @@ const Site = () => {
 
   const onCreateSite = () => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
     modal.current?.present();
@@ -91,7 +91,7 @@ const Site = () => {
       return false;
 
     try {
-      await loader.show('Please wait...');
+      await loader.show('common.pleaseWait');
 
       await newLocation.saveRemote();
 
@@ -104,7 +104,7 @@ const Site = () => {
 
       await refreshSites();
 
-      toast.success('Successfully saved a location.');
+      toast.success('common.locationSaved');
     } catch (error) {
       toast.error(error as Error);
       loader.hide();
@@ -121,14 +121,14 @@ const Site = () => {
       isInvalid={!device.isOnline}
       className="text-sm"
     >
-      Add
+      common.add
     </HeaderButton>
   );
 
   return (
     <>
       <IonPage id="sites" ref={page}>
-        <Header title="Sites" rightSlot={addButton} />
+        <Header title="common.sites" rightSlot={addButton} />
         <Main
           groupLocations={groupLocations}
           userLocations={userLocations}

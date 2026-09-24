@@ -168,7 +168,7 @@ const Controller = () => {
 
   return (
     <Page id="transect-sections-taxa">
-      <Header title="Species" rightSlot={<TaxonSearchFilters />} />
+      <Header title="common.species" rightSlot={<TaxonSearchFilters />} />
       <Main className="pb-ion-s-10">
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}

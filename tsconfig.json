@@ -15,9 +15,11 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
-    "noErrorTruncation": true,
+    "preserveSymlinks": true,
     "paths": {
       "axios": ["./node_modules/axios"],
+      "drizzle-orm": ["./node_modules/drizzle-orm"],
+      "drizzle-orm/*": ["./node_modules/drizzle-orm/*"],
       "@sentry/browser": ["./node_modules/@sentry/browser"],
       "common/*": ["./src/common/*"],
       "@flumens": ["./src/common/flumens"],

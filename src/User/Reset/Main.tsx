@@ -26,7 +26,7 @@ const ResetMain = ({ onSubmit }: Props) => {
           color="tertiary"
           prefix={<IonIcon src={informationCircleOutline} className="size-5" />}
         >
-          Enter your email address to request a password reset.
+          user.enterEmailAddress
         </InfoMessage>
 
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -39,7 +39,7 @@ const ResetMain = ({ onSubmit }: Props) => {
               name="email"
               prefix={<IonIcon icon={mailOutline} className="size-5" />}
               type="email"
-              placeholder="Email"
+              placeholder="user.email"
             />
           </div>
 
@@ -48,7 +48,7 @@ const ResetMain = ({ onSubmit }: Props) => {
             color="primary"
             onPress={() => handleSubmit(onSubmit)()}
           >
-            Reset
+            user.reset
           </Button>
         </form>
       </div>

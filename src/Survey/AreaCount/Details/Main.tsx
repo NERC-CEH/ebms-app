@@ -59,7 +59,7 @@ const AreaCountDetails = ({
             routerLink={`${baseURL}/group`}
             disabled={isDisabled}
             icon={peopleOutline}
-            label="Project"
+            label="common.project"
             value={group?.data.title}
             skipValueTranslation
           />
@@ -67,7 +67,7 @@ const AreaCountDetails = ({
             routerLink={`${baseURL}/site`}
             disabled={isDisabled}
             icon={locationOutline}
-            label="Site"
+            label="common.site"
             value={site?.data.name}
             skipValueTranslation
           />
@@ -80,51 +80,43 @@ const AreaCountDetails = ({
           )}
           <Toggle
             prefix={<IonIcon src={eyeOffOutline} className="size-6" />}
-            label="Sensitive"
+            label="area.sensitive"
             defaultSelected={Number.isFinite(sample.data.privacyPrecision)}
             onChange={onChangeSensitivityStatus}
             isDisabled={isDisabled}
           />
-          <InfoMessage inline>
-            This survey has sensitive species and should not be included in
-            public reports.
-          </InfoMessage>
+          <InfoMessage inline>area.surveyHasSensitive</InfoMessage>
           <PhotoPicker model={sample} />
-          <InfoMessage inline>
-            Representative photo of where the 15 minute count was made
-          </InfoMessage>
+          <InfoMessage inline>area.representativePhotoWhere</InfoMessage>
           <MenuAttrItem
             routerLink={`${baseURL}/comment`}
             disabled={isDisabled}
             icon={clipboardOutline}
-            label="Comment"
+            label="common.comment"
             value={comment}
             skipValueTranslation
           />
 
           <NumberInput
-            label="Recorders"
+            label="area.recorders"
             onChange={onChangeCounter}
             value={recorders}
             prefix={<IonIcon src={personOutline} className="size-6" />}
             minValue={1}
             isDisabled={isDisabled}
           />
-          <InfoMessage inline>
-            Enter the number of recorders of anyone who helped with this record
-            - including your own.
-          </InfoMessage>
+          <InfoMessage inline>area.enterNumberRecorders</InfoMessage>
         </div>
 
         <h3 className="list-title">
-          <T>Weather Conditions</T>
+          <T>area.weatherConditions</T>
         </h3>
         <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${baseURL}/temperature`}
             disabled={isDisabled}
             icon={thermometerOutline}
-            label="Temperature"
+            label="common.temperature"
             value={temperature}
             skipValueTranslation
           />
@@ -133,7 +125,7 @@ const AreaCountDetails = ({
             routerLink={`${baseURL}/cloud`}
             disabled={isDisabled}
             icon={cloudyOutline}
-            label="Cloud"
+            label="common.cloud"
             value={cloud}
             skipValueTranslation
           />
@@ -142,7 +134,7 @@ const AreaCountDetails = ({
             routerLink={`${baseURL}/windDirection`}
             disabled={isDisabled}
             icon={windIcon}
-            label="Wind Direction"
+            label="common.windDirection"
             value={windDirection}
           />
 
@@ -150,7 +142,7 @@ const AreaCountDetails = ({
             routerLink={`${baseURL}/windSpeed`}
             disabled={isDisabled}
             icon={windIcon}
-            label="Wind Speed"
+            label="common.windSpeed"
             value={windSpeed}
           />
         </div>

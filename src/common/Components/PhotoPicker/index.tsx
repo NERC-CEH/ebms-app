@@ -1,7 +1,6 @@
-import { useTranslation } from 'react-i18next';
 import { Capacitor } from '@capacitor/core';
 import { PhotoPicker, captureImage, device, useToast } from '@flumens';
-import { isPlatform, useIonActionSheet } from '@ionic/react';
+import { isPlatform } from '@ionic/react';
 import config from 'common/config';
 import Media from 'models/media';
 import Occurrence, { ClassifierSuggestion } from 'models/occurrence';
@@ -13,26 +12,6 @@ import ImageWithClassification from './ImageWithClassification';
 import './styles.scss';
 
 type URL = string;
-
-export function usePromptImageSource() {
-  const { t } = useTranslation();
-  const [presentActionSheet] = useIonActionSheet();
-
-  const promptImageSource = (resolve: (value: boolean | null) => void) => {
-    presentActionSheet({
-      buttons: [
-        { text: t('Gallery'), handler: () => resolve(false) },
-        { text: t('Camera'), handler: () => resolve(true) },
-        { text: t('Cancel'), role: 'cancel', handler: () => resolve(null) },
-      ],
-      header: t('Choose a method to upload a photo'),
-    });
-  };
-  const promptImageSourceWrap = () =>
-    new Promise<boolean | null>(promptImageSource);
-
-  return promptImageSourceWrap;
-}
 
 type Props = {
   model: Sample | Occurrence;
@@ -54,7 +33,7 @@ const AppPhotoPicker = ({ model, useClassifier = false }: Props) => {
       return;
 
     if (manualTrigger && !device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 

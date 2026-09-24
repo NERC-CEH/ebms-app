@@ -1,17 +1,18 @@
 [main]
 host = https://www.transifex.com
+lang_map = bg_BG: bg-BG, ca_ES: ca-ES, cs_CZ: cs-CZ, da_DK: da-DK, de_DE: de-DE, el_GR: el-GR, es_ES: es-ES, fi_FI: fi-FI, fr_FR: fr-FR, gl_ES: gl-ES, hr_HR: hr-HR, hu_HU: hu-HU, it_IT: it-IT, ja_JP: ja-JP, lt_LT: lt-LT, lv_LV: lv-LV, mi: mi-NZ, nl_NL: nl-NL, pl_PL: pl-PL, pt_PT: pt-PT, ro_RO: ro-RO, ru_RU: ru-RU, sk_SK: sk-SK, sl_SI: sl-SI, sq_AL: sq-AL, sr_RS: sr-RS, sr@latin: sr-Latn, sv_SE: sv-SE, tr_TR: tr-TR
 
 [o:ceh:p:ebms:r:app]
-file_filter  = src/common/translations/interface/<lang>.po
-source_file  = src/common/translations/interface/en.pot
+file_filter  = src/common/translations/interface/<lang>.json
+source_file  = src/common/translations/interface/en.json
 source_lang  = en
-type         = POT
-minimum_perc = 0
+type         = json
+minimum_perc = 1
 
 [o:ceh:p:ebms:r:app_species_descriptions]
-file_filter  = src/common/translations/species/<lang>.po
-source_file  = src/common/translations/species/en.pot
+file_filter  = src/common/translations/species/<lang>.json
+source_file  = src/common/translations/species/en.json
 source_lang  = en
-type         = POT
-minimum_perc = 0
+type         = json
+minimum_perc = 1
 

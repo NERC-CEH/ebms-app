@@ -104,6 +104,14 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
     survey?: Survey
   ) {
     const parsed = super.fromElasticDTO(json, options, survey);
+
+    // Elastic captions include the Beaufort rank; local options omit it.
+    (['windSpeed', 'wind', 'windEnd'] as const).forEach(key => {
+      if (typeof parsed.data[key] === 'string') {
+        parsed.data[key] = parsed.data[key].replace(/^\d+\.\s*/, '');
+      }
+    });
+
     const legacyLocation = parsed.data.location as
       (Location & { area?: number }) | undefined;
     if (legacyLocation?.shape) {
@@ -364,12 +372,12 @@ export const useValidateCheck = (sample?: Sample<any>) => {
     const invalids = sample?.validateRemote();
     if (invalids) {
       alert({
-        header: t('Survey incomplete'),
+        header: t('common.surveyIncomplete'),
         skipTranslation: true,
         message: <ModelValidationMessage {...invalids} />,
         buttons: [
           {
-            text: t('Got it'),
+            text: t('common.gotIt'),
             role: 'cancel',
           },
         ],

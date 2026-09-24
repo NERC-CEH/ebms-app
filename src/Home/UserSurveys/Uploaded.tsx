@@ -1,13 +1,7 @@
 import { useEffect, useState, type UIEventHandler } from 'react';
 import { observer } from 'mobx-react';
 import { useInfiniteLoader } from 'react-window-infinite-loader';
-import {
-  device,
-  getRelativeDate,
-  VirtualList,
-  useToast,
-  type ItemProps,
-} from '@flumens';
+import { device, VirtualList, useToast, type ItemProps } from '@flumens';
 import {
   IonLabel,
   IonList,
@@ -19,6 +13,7 @@ import samplesCollection, { bySurveyDate } from 'models/collections/samples';
 import Sample, { surveyConfigs } from 'models/sample';
 import userModel from 'models/user';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import RelativeDate from 'Components/RelativeDate';
 import Survey from './Survey';
 
 // https://stackoverflow.com/questions/47112393/getting-the-iphone-x-safe-area-using-javascript
@@ -121,7 +116,9 @@ const UploadedSurveys = ({ isOpen }: Props) => {
     if (!(item instanceof Sample)) {
       return (
         <div className="list-divider rounded-md" key={item.date} style={style}>
-          <IonLabel>{getRelativeDate(item.date)}</IonLabel>
+          <IonLabel>
+            <RelativeDate date={item.date} />
+          </IonLabel>
           {item.count > 1 && <IonLabel slot="end">{item.count}</IonLabel>}
         </div>
       );
@@ -165,7 +162,7 @@ const UploadedSurveys = ({ isOpen }: Props) => {
     return (
       <IonList>
         <InfoBackgroundMessage className="mb-[10vh] mt-[20vh]">
-          No uploaded surveys
+          records.noUploadedSurveys
         </InfoBackgroundMessage>
       </IonList>
     );
@@ -173,7 +170,7 @@ const UploadedSurveys = ({ isOpen }: Props) => {
 
   const onListRefreshPull = async (e: RefresherCustomEvent) => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       e?.detail?.complete();
       return;
     }

@@ -90,41 +90,49 @@ const moonPhaseValues = [
   {
     id: 20827,
     prefix: <IonIcon src={newIcon} className="size-6" />,
+    label: 'common.new',
     value: 'New',
   },
   {
     id: 20828,
     prefix: <IonIcon src={waxingCrescentIcon} className="size-6" />,
+    label: 'moth.waxingCrescent',
     value: 'Waxing crescent',
   },
   {
     id: 20829,
     prefix: <IonIcon src={firstQuarterMoonIcon} className="size-6" />,
+    label: 'moth.firstQuarter',
     value: 'First quarter',
   },
   {
     id: 20830,
     prefix: <IonIcon src={waxingGibbousIcon} className="size-6" />,
+    label: 'moth.waxingGibbous',
     value: 'Waxing gibbous',
   },
   {
     id: 20831,
     prefix: <IonIcon src={fullIcon} className="size-6" />,
+    label: 'moth.full',
     value: 'Full',
   },
   {
     id: 20832,
     prefix: <IonIcon src={wanningGibbousIcon} className="size-6" />,
+    label: 'moth.waningGibbous',
     value: 'Waning gibbous',
   },
   {
     id: 20833,
     prefix: <IonIcon src={lastQuarterIcon} className="size-6" />,
+    label: 'moth.lastQuarter',
     value: 'Last quarter',
   },
   {
     id: 20834,
     prefix: <IonIcon src={wanningCrescentIcon} className="size-6" />,
+    label: 'moth.waningCrescent',
     value: 'Waning crescent',
   },
 ];
@@ -132,7 +140,7 @@ const moonPhaseValues = [
 export const useTemporarySiteAttr = {
   id: 'temporarySite',
   type: 'yesNoInput',
-  title: 'Temporary',
+  title: 'moth.temporary',
   prefix: <IonIcon src={informationCircleOutline} className="size-6" />,
 } as const;
 
@@ -149,10 +157,10 @@ export const surveyEndDateAttr = {
 export const tempMothTrapTypeAttr = {
   id: 'smpAttr:2056',
   choices: [
-    { title: 'LED funnel trap', dataName: '24613' },
-    { title: 'Other funnel trap', dataName: '24614' },
-    { title: 'Trap with 2 sheets', dataName: '24615' },
-    { title: 'Other trap', dataName: '24616' },
+    { title: 'common.ledFunnelTrap', dataName: '24613' },
+    { title: 'common.otherFunnelTrap', dataName: '24614' },
+    { title: 'common.trap2Sheets', dataName: '24615' },
+    { title: 'common.otherTrap', dataName: '24616' },
   ],
 } as const;
 export const tempMothTrapOtherTypeAttr = { id: 'smpAttr:2057' } as const;
@@ -325,17 +333,17 @@ const getSetStartMoonEndPhase = (sample: Sample) => () => {
 const survey: Survey = {
   id: 681,
   name: 'moth',
-  label: 'Moth survey',
+  label: 'common.mothSurvey',
   webForm: 'enter-moth-trap-records',
 
   attrs: {
     surveyStartTime: {
-      menuProps: { label: 'Start Time' },
+      menuProps: { label: 'common.startTime' },
       pageProps: {
-        headerProps: { title: 'Start Time' },
+        headerProps: { title: 'common.startTime' },
         attrProps: {
           input: 'time',
-          info: 'Defaulted to sunset time',
+          info: 'moth.defaultedSunsetTime',
           inputProps: {
             format: { options: { hour: '2-digit', minute: '2-digit' } },
             presentation: 'time',
@@ -346,12 +354,12 @@ const survey: Survey = {
     },
 
     surveyEndTime: {
-      menuProps: { label: 'End Time' },
+      menuProps: { label: 'common.endTime' },
       pageProps: {
-        headerProps: { title: 'End Time' },
+        headerProps: { title: 'common.endTime' },
         attrProps: {
           input: 'time',
-          info: 'Defaulted to sunrise time',
+          info: 'moth.defaultedSunriseTime',
           inputProps: {
             format: { options: { hour: '2-digit', minute: '2-digit' } },
             presentation: 'time',
@@ -369,12 +377,12 @@ const survey: Survey = {
 
     // start weather
     direction: {
-      menuProps: { label: 'Wind Direction', icon: windIcon },
+      menuProps: { label: 'common.windDirection', icon: windIcon },
       pageProps: {
-        headerProps: { title: 'Wind Direction' },
+        headerProps: { title: 'common.windDirection' },
         attrProps: {
           input: 'radio',
-          info: 'Please specify the wind direction.',
+          info: 'common.pleaseSpecifyWind',
           inputProps: { options: windDirectionValues },
         },
       },
@@ -382,12 +390,12 @@ const survey: Survey = {
     },
 
     wind: {
-      menuProps: { label: 'Wind Speed', icon: windIcon },
+      menuProps: { label: 'common.windSpeed', icon: windIcon },
       pageProps: {
-        headerProps: { title: 'Wind Speed' },
+        headerProps: { title: 'common.windSpeed' },
         attrProps: {
           input: 'radio',
-          info: 'Please specify the wind speed.',
+          info: 'common.pleaseSpecifyWindSpeed',
           inputProps: { options: windSpeedValues },
         },
       },
@@ -395,12 +403,12 @@ const survey: Survey = {
     },
 
     cloud: {
-      menuProps: { icon: cloudyOutline, label: 'Cloud' },
+      menuProps: { icon: cloudyOutline, label: 'common.cloud' },
       pageProps: {
-        headerProps: { title: 'Cloud' },
+        headerProps: { title: 'common.cloud' },
         attrProps: {
           input: 'slider',
-          info: 'Please specify the % of cloud cover.',
+          info: 'common.pleaseSpecifyCloud',
           inputProps: { max: 100, min: 0 },
         },
       },
@@ -410,11 +418,11 @@ const survey: Survey = {
     moon: {
       menuProps: {
         icon: moonOutline,
-        label: 'Moon phase',
+        label: 'moth.moonPhase',
         parse: (moonPhase: string) => <IonImg src={moonIcons[moonPhase]} />,
       },
       pageProps: {
-        headerProps: { title: 'Moon phase' },
+        headerProps: { title: 'moth.moonPhase' },
         attrProps: {
           input: 'radio',
           inputProps: { options: moonPhaseValues },
@@ -424,12 +432,12 @@ const survey: Survey = {
     },
 
     temperature: {
-      menuProps: { icon: thermometerOutline, label: 'Temperature' },
+      menuProps: { icon: thermometerOutline, label: 'common.temperature' },
       pageProps: {
-        headerProps: { title: 'Temperature' },
+        headerProps: { title: 'common.temperature' },
         attrProps: {
           input: 'radio',
-          info: 'Please specify the temperature C°.',
+          info: 'common.temperatureRequired',
           inputProps: { options: temperatureValues },
         },
       },
@@ -438,12 +446,12 @@ const survey: Survey = {
 
     // end weather
     directionEnd: {
-      menuProps: { label: 'Wind Direction', icon: windIcon },
+      menuProps: { label: 'common.windDirection', icon: windIcon },
       pageProps: {
-        headerProps: { title: 'Wind Direction' },
+        headerProps: { title: 'common.windDirection' },
         attrProps: {
           input: 'radio',
-          info: 'Please specify the wind direction.',
+          info: 'common.pleaseSpecifyWind',
           inputProps: { options: windDirectionValues },
         },
       },
@@ -451,12 +459,12 @@ const survey: Survey = {
     },
 
     windEnd: {
-      menuProps: { label: 'Wind Speed', icon: windIcon },
+      menuProps: { label: 'common.windSpeed', icon: windIcon },
       pageProps: {
-        headerProps: { title: 'Wind Speed' },
+        headerProps: { title: 'common.windSpeed' },
         attrProps: {
           input: 'radio',
-          info: 'Please specify the wind speed.',
+          info: 'common.pleaseSpecifyWindSpeed',
           inputProps: { options: windSpeedValues },
         },
       },
@@ -466,11 +474,11 @@ const survey: Survey = {
     moonEnd: {
       menuProps: {
         icon: moonOutline,
-        label: 'Moon phase',
+        label: 'moth.moonPhase',
         parse: (moonPhase: string) => <IonImg src={moonIcons[moonPhase]} />,
       },
       pageProps: {
-        headerProps: { title: 'Moon phase' },
+        headerProps: { title: 'moth.moonPhase' },
         attrProps: {
           input: 'radio',
           inputProps: { options: moonPhaseValues },
@@ -480,12 +488,12 @@ const survey: Survey = {
     },
 
     temperatureEnd: {
-      menuProps: { icon: thermometerOutline, label: 'Temperature' },
+      menuProps: { icon: thermometerOutline, label: 'common.temperature' },
       pageProps: {
-        headerProps: { title: 'Temperature' },
+        headerProps: { title: 'common.temperature' },
         attrProps: {
           input: 'radio',
-          info: 'Please specify the temperature C°.',
+          info: 'common.temperatureRequired',
           inputProps: { options: temperatureValues },
         },
       },
@@ -493,12 +501,12 @@ const survey: Survey = {
     },
 
     cloudEnd: {
-      menuProps: { icon: cloudyOutline, label: 'Cloud' },
+      menuProps: { icon: cloudyOutline, label: 'common.cloud' },
       pageProps: {
-        headerProps: { title: 'Cloud' },
+        headerProps: { title: 'common.cloud' },
         attrProps: {
           input: 'slider',
-          info: 'Please specify the % of cloud cover.',
+          info: 'common.pleaseSpecifyCloud',
           inputProps: { max: 100, min: 0 },
         },
       },
@@ -512,7 +520,7 @@ const survey: Survey = {
           input: 'date',
           inputProps: () => ({
             max: () => new Date(),
-            label: 'Date',
+            label: 'common.date',
             icon: calendarOutline,
             autoFocus: false,
             presentation: 'date',
@@ -526,14 +534,15 @@ const survey: Survey = {
     comment: commentAttrOld,
 
     recorder: {
-      menuProps: { icon: personOutline },
+      menuProps: { icon: personOutline, label: 'common.recorder' },
       pageProps: {
+        headerProps: { title: 'common.recorder' },
         attrProps: {
           input: 'input',
           inputProps: {
-            placeholder: 'Recorder name',
+            placeholder: 'moth.recorderName',
           },
-          info: "Enter the recorder's name, if different.",
+          info: 'moth.enterRecorderS',
         },
       },
       remote: { id: 127 },
@@ -551,14 +560,15 @@ const survey: Survey = {
 
       comment: commentAttrOld,
       identifier: {
-        menuProps: { icon: personOutline },
+        menuProps: { icon: personOutline, label: 'moth.identifier' },
         pageProps: {
+          headerProps: { title: 'moth.identifier' },
           attrProps: {
             input: 'input',
             inputProps: {
-              placeholder: 'Recorder name',
+              placeholder: 'moth.recorderName',
             },
-            info: "Enter the recorder's name, if different.",
+            info: 'moth.enterRecorderS',
           },
         },
         remote: { id: 18 },
@@ -581,7 +591,7 @@ const survey: Survey = {
         })
         .refine(
           val => val.count + val['count-outside'] > 0,
-          'Count sum must be greater than 0'
+          'moth.countSumMust'
         );
 
       return occurrenceSchema.safeParse(attrs).error;
@@ -622,7 +632,7 @@ const survey: Survey = {
       })
       .refine(
         value => !!value.locationId || !!value.enteredSref,
-        'Location is missing.'
+        'common.locationMissing'
       )
       .safeParse(attrs).error,
 

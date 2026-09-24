@@ -10,7 +10,7 @@ const OccurrenceHome = () => {
 
   return (
     <Page id="moth-survey-edit-occurrence">
-      <Header title="Edit Occurrence" />
+      <Header title="common.editOccurrence" />
       <Main occurrence={occurrence} />
     </Page>
   );

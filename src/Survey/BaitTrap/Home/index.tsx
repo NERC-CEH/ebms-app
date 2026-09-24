@@ -66,7 +66,7 @@ const HomeController = () => {
 
   const onAddTrapVisit = () => {
     if (!sample.data.locationId) {
-      toast.warn('Please select a site first.');
+      toast.warn('bait.selectSiteFirst');
       navigate(`${match.url}/details`);
       return;
     }
@@ -77,7 +77,7 @@ const HomeController = () => {
   return (
     <Page id="survey-bait-trap-home">
       <Header
-        title="Bait-Trap Survey"
+        title="bait.baitTrapSurvey"
         rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
         subheader={sample.data.training && <TrainingHeader />}
         defaultHref="/home/user-surveys"

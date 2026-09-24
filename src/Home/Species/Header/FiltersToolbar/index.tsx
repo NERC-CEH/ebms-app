@@ -103,13 +103,13 @@ const FiltersToolbar = ({
           onIonInput={onSearch}
           slot="end"
           showCancelButton="always"
-          cancelButtonText={t('Done')}
+          cancelButtonText={t('common.done')}
           cancelButtonIcon={checkmarkOutline}
           onIonCancel={onSearchEnd}
           type="search"
           enterkeyhint="done"
           onKeyUp={onKeyUp}
-          placeholder={t('Species name or filter...')}
+          placeholder={t('species.speciesNameFilter')}
           value={searchPhrase}
         />
       </IonToolbar>

@@ -6,6 +6,7 @@ import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import Occurrence from 'models/occurrence';
 import { areaCountSchema, Survey, type Submission } from 'Survey/common/config';
+import getSurveyValueKey from 'Survey/common/translationKeys';
 import desertNettleImg from './common/images/desertNettle.jpg';
 import freshImg from './common/images/fresh.png';
 import mallowImg from './common/images/mallow.jpg';
@@ -28,21 +29,26 @@ export type PaintedLadyAttrs = {
 };
 
 const translateEggLayingValue = (eggLayingValues?: string[]) =>
-  eggLayingValues?.map(value => i18n.t(value)).join(', ') || null;
+  eggLayingValues
+    ?.map(value => i18n.t(getSurveyValueKey(value) as never, value))
+    .join(', ') || null;
 
 const wingConditionValues = [
   {
     icon: freshImg,
+    label: 'area.fresh',
     value: 'Fresh',
     id: 20687,
   },
   {
     icon: normal,
+    label: 'area.normal',
     value: 'Normal',
     id: 20688,
   },
   {
     icon: wornImg,
+    label: 'area.worn',
     value: 'Worn',
     id: 20689,
   },
@@ -50,19 +56,23 @@ const wingConditionValues = [
 
 const behaviourValues = [
   {
+    label: 'area.migrating',
     value: 'Migrating',
     id: 20679,
   },
   {
+    label: 'area.nectaring',
     value: 'Nectaring',
     id: 20680,
   },
   {
+    label: 'area.mating',
     value: 'Mating',
     id: 20681,
   },
 
   {
+    label: 'area.eggLayingHostplants',
     value: 'Egg-laying hostplants',
     id: 20682,
   },
@@ -94,47 +104,54 @@ const altitudeValues = [
 const flowersValues = [
   {
     icon: thistleImg,
+    label: 'area.thistles',
     value: 'Thistles',
     id: 20683,
   },
   {
     icon: mallowImg,
+    label: 'area.mallow',
     value: 'Mallow',
     id: 20684,
   },
   {
     icon: desertNettleImg,
+    label: 'area.desertNettle',
     value: 'Desert nettle',
     id: 20685,
   },
   {
     icon: otherImg,
+    label: 'common.other',
     value: 'Other',
     id: 20686,
   },
 ];
 
 const directionValues = [
-  { value: 'S', id: 20663 },
-  { value: 'SW', id: 20664 },
-  { value: 'W', id: 20665 },
-  { value: 'NW', id: 20666 },
-  { value: 'N', id: 20667 },
-  { value: 'NE', id: 20668 },
-  { value: 'E', id: 20669 },
-  { value: 'SE', id: 20670 },
+  { label: 'common.s', value: 'S', id: 20663 },
+  { label: 'common.sw', value: 'SW', id: 20664 },
+  { label: 'common.w', value: 'W', id: 20665 },
+  { label: 'common.nw', value: 'NW', id: 20666 },
+  { label: 'common.n', value: 'N', id: 20667 },
+  { label: 'common.ne', value: 'NE', id: 20668 },
+  { label: 'common.e', value: 'E', id: 20669 },
+  { label: 'common.se', value: 'SE', id: 20670 },
 ];
 
 const matingValues = [
   {
+    label: 'area.territorialDefenceHill',
     value: 'Territorial defence: hill-topping',
     id: 20676,
   },
   {
+    label: 'area.territorialDefenceOther',
     value: 'Territorial defence: other',
     id: 20677,
   },
   {
+    label: 'area.mating',
     value: 'Mating',
     id: 20678,
   },
@@ -143,7 +160,7 @@ const matingValues = [
 const speciesConfig: Survey = {
   id: 645,
   name: 'precise-single-species-area',
-  label: '15min Single Species Count',
+  label: 'common.minSingleSpecies',
 
   smp: {
     create: ({ taxon, zeroAbundance, parent }) => {
@@ -171,7 +188,7 @@ const speciesConfig: Survey = {
 
         wing: {
           pageProps: {
-            headerProps: { title: 'Wing condition' },
+            headerProps: { title: 'area.wingCondition' },
             attrProps: {
               input: 'checkbox',
               inputProps: { options: wingConditionValues },
@@ -190,8 +207,9 @@ const speciesConfig: Survey = {
         },
 
         behaviour: {
-          menuProps: { icon: butterflyIcon },
+          menuProps: { icon: butterflyIcon, label: 'area.behaviour' },
           pageProps: {
+            headerProps: { title: 'area.behaviour' },
             attrProps: {
               input: 'radio',
               set: (value: string | null, model: Occurrence) => {
@@ -217,8 +235,9 @@ const speciesConfig: Survey = {
         },
 
         direction: {
-          menuProps: { icon: arrowBackOutline },
+          menuProps: { icon: arrowBackOutline, label: 'area.direction' },
           pageProps: {
+            headerProps: { title: 'area.direction' },
             attrProps: {
               input: 'radio',
 
@@ -230,12 +249,12 @@ const speciesConfig: Survey = {
 
         altitude: {
           menuProps: {
-            label: 'Height',
+            label: 'area.height',
             icon: resizeOutline,
             parse: (value: string) => `${value} m`,
           },
           pageProps: {
-            headerProps: { title: 'Height above ground (meters)' },
+            headerProps: { title: 'area.heightAboveGround' },
             attrProps: {
               input: 'radio',
               inputProps: { options: altitudeValues },
@@ -245,8 +264,9 @@ const speciesConfig: Survey = {
         },
 
         mating: {
-          menuProps: { icon: butterflyIcon },
+          menuProps: { icon: butterflyIcon, label: 'area.mating' },
           pageProps: {
+            headerProps: { title: 'area.mating' },
             attrProps: {
               input: 'radio',
               inputProps: { options: matingValues },
@@ -256,13 +276,13 @@ const speciesConfig: Survey = {
         },
 
         nectarSource: {
-          menuProps: { icon: flowerOutline, label: 'Nectar' },
+          menuProps: { icon: flowerOutline, label: 'area.nectar' },
           pageProps: {
-            headerProps: { title: 'Nectar source' },
+            headerProps: { title: 'area.nectarSource' },
             attrProps: {
               input: 'textarea',
               inputProps: {
-                placeholder: 'Enter the nectar source here',
+                placeholder: 'area.enterNectarSource',
               },
             },
           },
@@ -272,11 +292,11 @@ const speciesConfig: Survey = {
         eggLaying: {
           menuProps: {
             icon: caterpillarIcon,
-            label: 'Hostplants',
+            label: 'area.hostplants',
             parse: translateEggLayingValue,
           },
           pageProps: {
-            headerProps: { title: 'Hostplants' },
+            headerProps: { title: 'area.hostplants' },
             attrProps: {
               input: 'checkbox',
               inputProps: { options: flowersValues },
@@ -310,14 +330,14 @@ const speciesConfig: Survey = {
         otherEggLaying: {
           menuProps: {
             icon: caterpillarIcon,
-            label: 'Other species',
+            label: 'area.otherSpecies',
           },
           pageProps: {
-            headerProps: { title: 'Other species' },
+            headerProps: { title: 'area.otherSpecies' },
             attrProps: {
               input: 'textarea',
               inputProps: {
-                placeholder: 'Other hostplant',
+                placeholder: 'area.otherHostplant',
               },
             },
           },
@@ -327,14 +347,14 @@ const speciesConfig: Survey = {
         otherThistles: {
           menuProps: {
             icon: caterpillarIcon,
-            label: 'Thistle species',
+            label: 'common.thistleSpecies',
           },
           pageProps: {
-            headerProps: { title: 'Thistle species' },
+            headerProps: { title: 'common.thistleSpecies' },
             attrProps: {
               input: 'textarea',
               inputProps: {
-                placeholder: 'What kind of thistle was it?',
+                placeholder: 'area.whatKindThistle',
               },
             },
           },
@@ -351,9 +371,9 @@ const speciesConfig: Survey = {
         data: areaCountSchema,
         samples: z
           .array(z.object({}), {
-            error: 'Please add your target species',
+            error: 'area.pleaseAddTarget',
           })
-          .min(1, 'Please add your target species'),
+          .min(1, 'area.pleaseAddTarget'),
       })
       .safeParse(model).error;
   },

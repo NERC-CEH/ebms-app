@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
-import { Badge, Button, getRelativeDate, useAlert } from '@flumens';
+import { Badge, Button, useAlert } from '@flumens';
 import {
   IonList,
   IonItem,
@@ -10,21 +10,22 @@ import {
 } from '@ionic/react';
 import TaxonList from 'common/models/taxonList';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import RelativeDate from 'Components/RelativeDate';
 
 function useShowDeletePopup() {
   const alert = useAlert();
 
   const showDeletePopup = (onDelete: () => void) =>
     alert({
-      header: 'Delete',
-      message: 'Are you sure you want to delete the list?',
+      header: 'common.delete',
+      message: 'lists.confirmDeleteList',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'common.cancel',
           role: 'cancel',
         },
         {
-          text: 'Delete',
+          text: 'common.delete',
           role: 'destructive',
           handler: onDelete,
         },
@@ -45,12 +46,14 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
 
   if (!lists.length) {
     return (
-      <InfoBackgroundMessage className="mt-20">
-        No species lists installed.
-        <br />
-        <br />
-        Browse the "Nearby" or "All Lists" tabs to install species lists for
-        offline use.
+      <InfoBackgroundMessage className="mt-20" skipTranslation>
+        <T i18nKey="lists.noInstalled">
+          No species lists installed.
+          <br />
+          <br />
+          Browse the "Nearby" or "All Lists" tabs to install species lists for
+          offline use.
+        </T>
       </InfoBackgroundMessage>
     );
   }
@@ -72,8 +75,12 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
               </h2>
 
               <div className="flex gap-2">
-                <Badge size="small">{`${list.getSize()}`} species</Badge>
-                <Badge size="small">{getRelativeDate(list.updatedAt)}</Badge>
+                <Badge size="small" skipTranslation>
+                  {list.getSize()} <T>common.speciesLower</T>
+                </Badge>
+                <Badge size="small" skipTranslation>
+                  <RelativeDate date={list.updatedAt} />
+                </Badge>
                 {list.data.type !== 'list' && (
                   <Badge size="small">
                     {list.data.type.replaceAll('_', ' ')}
@@ -87,14 +94,14 @@ const InstalledLists = ({ lists, onReinstall, onDelete }: Props) => {
               className="mx-1 shrink-0 px-3 py-1 text-sm"
               onPress={handleRefresh}
             >
-              Refresh
+              common.refresh
             </Button>
           </div>
         </IonItem>
 
         <IonItemOptions side="end">
           <IonItemOption color="danger" onClick={handleDelete}>
-            <T>Delete</T>
+            <T>common.delete</T>
           </IonItemOption>
         </IonItemOptions>
       </IonItemSliding>

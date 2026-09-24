@@ -46,14 +46,14 @@ const DetailsMain = ({
     <Main className="pb-ion-s-10">
       <IonList lines="full">
         <h3 className="list-title">
-          <T>Trap</T>
+          <T>common.trap</T>
         </h3>
         <div className="rounded-list">
           {!isUsingTemporarySite && (
             <MenuAttrItem
               routerLink={`${url}/trap`}
               icon={mothInsideBoxIcon}
-              label="Moth trap"
+              label="common.mothTrap"
               skipValueTranslation
               value={locationName}
               disabled={isDisabled}
@@ -63,7 +63,7 @@ const DetailsMain = ({
             <IonItem detail onClick={openTemporaryTrapModal}>
               <IonIcon slot="start" src={mothInsideBoxIcon} />
               <IonLabel>
-                <T>Moth trap</T>
+                <T>common.mothTrap</T>
               </IonLabel>
               <IonLabel slot="end" className="max-w-1/3 truncate">
                 {temporaryTrapName}
@@ -81,18 +81,18 @@ const DetailsMain = ({
 
       <IonList lines="full">
         <h3 className="list-title">
-          <T>Trap start</T>
+          <T>moth.trapStart</T>
         </h3>
         <div className="rounded-list">
           <MenuDateAttr
-            label="Date"
+            label="common.date"
             value={sample.data.date}
             onChange={val => (sample.data.date = val)}
             isDisabled={isDisabled}
           />
 
           <MenuDateAttr
-            label="Time"
+            label="common.time"
             id="surveyStartTime"
             value={sample.data.surveyStartTime}
             presentation="time"
@@ -103,7 +103,7 @@ const DetailsMain = ({
           <MenuAttrItem
             routerLink={`${url}/startWeather`}
             icon={cloudOutline}
-            label="Weather"
+            label="common.weather"
             skipValueTranslation
           />
         </div>
@@ -111,18 +111,18 @@ const DetailsMain = ({
 
       <IonList lines="full">
         <h3 className="list-title">
-          <T>Trap end</T>
+          <T>moth.trapEnd</T>
         </h3>
         <div className="rounded-list">
           <MenuDateAttr
-            label="Date"
+            label="common.date"
             id="trapEndDate" // needed for datepicker to work
             value={sample.data[surveyEndDateAttr.id]}
             onChange={val => (sample.data[surveyEndDateAttr.id] = val)}
             isDisabled={isDisabled}
           />
           <MenuDateAttr
-            label="Time"
+            label="common.time"
             id="surveyEndTime"
             value={sample.data.surveyEndTime}
             presentation="time"
@@ -131,7 +131,7 @@ const DetailsMain = ({
             icon={timeOutline}
           />
           <MenuDateAttr
-            label="Emptying time"
+            label="moth.emptyingTime"
             value={sample.data[trapEmptyingTimeAttr.id]}
             presentation="time"
             onChange={val => (sample.data[trapEmptyingTimeAttr.id] = val)}
@@ -142,7 +142,7 @@ const DetailsMain = ({
           <MenuAttrItem
             routerLink={`${url}/endWeather`}
             icon={cloudOutline}
-            label="Weather"
+            label="common.weather"
             skipValueTranslation
           />
         </div>
@@ -150,14 +150,14 @@ const DetailsMain = ({
 
       <IonList lines="full">
         <h3 className="list-title">
-          <T>Other</T>
+          <T>common.other</T>
         </h3>
         <div className="rounded-list">
           <MenuAttrItem
             routerLink={`${url}/group`}
             disabled={isDisabled}
             icon={peopleOutline}
-            label="Project"
+            label="common.project"
             value={group?.data.title}
             skipValueTranslation
           />

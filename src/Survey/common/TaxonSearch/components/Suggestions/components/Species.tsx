@@ -124,7 +124,7 @@ const Species = ({
         </div>
       </div>
       <div className="group">
-        <T>{speciesGroup}</T>
+        <T i18nKey={speciesGroup as never} />
       </div>
     </div>
   );

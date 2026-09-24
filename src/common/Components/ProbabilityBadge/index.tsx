@@ -54,14 +54,14 @@ const ProbabilityBadge = ({ probability, className, showInfo }: Props) => {
         <IonContent className="[--background:white] [--overflow:hidden]">
           <div className="pl-2 [&>*]:my-4 [&>*]:flex [&>*]:items-center [&>*]:gap-2">
             <div>
-              <Badge probability={1} /> <T>Higher classifier confidence.</T>
+              <Badge probability={1} /> <T>common.highConfidence</T>
             </div>
             <div>
-              <Badge probability={0.5} /> <T>Moderate classifier confidence.</T>
+              <Badge probability={0.5} /> <T>common.mediumConfidence</T>
             </div>
             <div>
               <Badge probability={0.2} />
-              <T>Lower classifier confidence.</T>
+              <T>common.lowConfidence</T>
             </div>
           </div>
         </IonContent>

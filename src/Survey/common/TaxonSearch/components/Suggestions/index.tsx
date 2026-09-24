@@ -51,10 +51,8 @@ function deDuplicateSuggestions(
 
 const getSearchInfo = (): ReactNode => (
   <InfoBackgroundMessage className="text-left" skipTranslation>
-    {i18n.t(
-      'For quicker searching of the taxa you can use different shortcuts. For example, to find'
-    )}{' '}
-    <i>Lopinga achine</i> {i18n.t('you can type in the search bar')}
+    {i18n.t('survey.quickerSearchingTaxa')} <i>Lopinga achine</i>{' '}
+    {i18n.t('common.canTypeSearch')}
     :
     <br />
     <br />
@@ -90,7 +88,7 @@ const Suggestions = ({
       <>
         <div>{/* quick hack to fix odd css style */}</div>
         <h3>
-          <T>Suggestions</T>:
+          <T>common.suggestions</T>:
         </h3>
         {species.map(getSuggestion)}
       </>
@@ -110,18 +108,21 @@ const Suggestions = ({
       return (
         <>
           <InfoBackgroundMessage className="mb-2">
-            No species found with this name
+            survey.noSpeciesFound
           </InfoBackgroundMessage>
 
           {hasProjectsOrSiteLists && (
-            <InfoBackgroundMessage className="mt-0">
-              Search outside my current project or site list.
-              <Button
-                className="mx-auto py-1.5 px-4 mt-3 mb-2 text-sm"
-                onPress={onOutsideSearch}
-              >
-                Search
-              </Button>
+            <InfoBackgroundMessage className="mt-0" skipTranslation>
+              <T i18nKey="survey.searchOutsideLists">
+                Search outside my current project or site list.
+                <Button
+                  className="mx-auto py-1.5 px-4 mt-3 mb-2 text-sm"
+                  onPress={onOutsideSearch}
+                  skipTranslation
+                >
+                  Search
+                </Button>
+              </T>
             </InfoBackgroundMessage>
           )}
         </>

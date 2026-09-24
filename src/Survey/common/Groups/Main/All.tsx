@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans as T, useTranslation } from 'react-i18next';
 import { Button } from '@flumens';
 import config from 'common/config';
 import countries from 'common/config/countries';
@@ -8,10 +8,12 @@ import Group from 'models/group';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 
 const newProjectMessage = (
-  <InfoBackgroundMessage>
-    To create a new project, visit the{' '}
-    <a href={`${config.backend.url}/projects/`}>projects page</a> on the{' '}
-    website.
+  <InfoBackgroundMessage skipTranslation>
+    <T i18nKey="survey.createProject">
+      To create a new project, visit the{' '}
+      <a href={`${config.backend.url}/projects/`}>projects page</a> on the{' '}
+      website.
+    </T>
   </InfoBackgroundMessage>
 );
 
@@ -29,14 +31,16 @@ const AllGroups = ({ groups, onJoin }: Props) => {
   if (!groups.length)
     return (
       <>
-        <InfoBackgroundMessage>
-          <div className="my-3 opacity-50">
-            {{ country } as unknown as ReactNode}
-          </div>
-          There are currently no new projects available to join.
-          <br />
-          <br />
-          Pull the page down to refresh the list.
+        <InfoBackgroundMessage skipTranslation>
+          <T i18nKey="survey.noNewProjects" values={{ country }}>
+            <div className="my-3 opacity-50">
+              {{ country } as unknown as ReactNode}
+            </div>
+            There are currently no new projects available to join.
+            <br />
+            <br />
+            Pull the page down to refresh the list.
+          </T>
         </InfoBackgroundMessage>
         {newProjectMessage}
       </>
@@ -59,7 +63,7 @@ const AllGroups = ({ groups, onJoin }: Props) => {
             color="secondary"
             fill="outline"
           >
-            Join
+            survey.join
           </Button>
         </div>
 

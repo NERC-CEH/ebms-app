@@ -63,7 +63,7 @@ const SitesList = ({
 
   const emptyOption = !!onSelect && (
     <Site
-      name={t('No site')}
+      name={t('locations.noSite')}
       onClick={() => onSelect?.()}
       isSelected={!selectedLocationId}
       className="h-12 opacity-60"
@@ -78,7 +78,7 @@ const SitesList = ({
           {entries}
         </>
       ) : (
-        <InfoBackgroundMessage>You have no saved sites.</InfoBackgroundMessage>
+        <InfoBackgroundMessage>locations.haveNoSaved</InfoBackgroundMessage>
       )}
     </IonList>
   );

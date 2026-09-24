@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { IonLabel } from '@ionic/react';
+import getSurveyValueKey from 'Survey/common/translationKeys';
 
 type Props = {
   behaviour: string;
@@ -31,7 +32,7 @@ export const PaintedLadyBehaviour = ({ behaviour, showLabel }: Props) => {
       />
       {showLabel && (
         <IonLabel>
-          <T>{behaviour}</T>
+          <T i18nKey={getSurveyValueKey(behaviour) as never} />
         </IonLabel>
       )}
     </div>

@@ -193,7 +193,7 @@ export async function fetchSquares(
     if (!data.aggregations) return [];
 
     const isValid = dtoSchema.safeParse(data).success;
-    if (!isValid) throw new Error('Invalid server response.');
+    if (!isValid) throw new Error('common.invalidServerResponse');
 
     const squares = data?.aggregations?.bySrid?.buckets
       .flatMap(bucket =>

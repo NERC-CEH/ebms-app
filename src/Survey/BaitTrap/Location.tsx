@@ -24,14 +24,14 @@ const BaitTrapLocation = () => {
 
   const refreshSites = async () => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       await locations.fetchRemote({ type: 'baitTraps' });
@@ -66,7 +66,7 @@ const BaitTrapLocation = () => {
 
   return (
     <IonPage id="bait-trap-sites">
-      <Header title="Sites" />
+      <Header title="common.sites" />
       <Main
         userLocations={userLocations}
         onSelectSite={onSelectSite}

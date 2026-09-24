@@ -4,7 +4,8 @@ import config from '@flumens/eslint-config';
 export default defineConfig([
   {
     files: ['**/*'],
-    extends: [config],
+    ignores: ['src/@types/resources.d.ts'],
+    extends: [config('./src/common/translations/interface/en.json')],
     rules: {
       '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
       'no-param-reassign': 0,

@@ -30,16 +30,16 @@ const useDeletePrompt = () => {
   return () =>
     new Promise<boolean>(resolve => {
       alert({
-        header: 'Delete',
-        message: 'Are you sure you want to delete your current track?',
+        header: 'common.delete',
+        message: 'area.confirmDeleteCurrent',
         buttons: [
           {
-            text: 'Cancel',
+            text: 'common.cancel',
             role: 'cancel',
             handler: () => resolve(false),
           },
           {
-            text: 'Delete',
+            text: 'common.delete',
             role: 'destructive',
             handler: () => resolve(true),
           },

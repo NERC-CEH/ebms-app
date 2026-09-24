@@ -2,14 +2,7 @@ import { observer } from 'mobx-react';
 import { addCircleOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
-import {
-  Main,
-  Button,
-  useAlert,
-  MenuAttrItem,
-  getRelativeDate,
-  Badge,
-} from '@flumens';
+import { Main, Button, useAlert, MenuAttrItem, Badge } from '@flumens';
 import {
   IonList,
   IonIcon,
@@ -21,6 +14,7 @@ import {
 import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import RelativeDate from 'Components/RelativeDate';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 import { Data, stratumAttr, SubSmpData } from '../config';
 
@@ -37,11 +31,11 @@ const useDeleteTrapVisit = () => {
     const deleteWrap = () => subSample.destroy();
 
     await alert({
-      header: 'Delete',
-      message: 'Are you sure you want to remove this entry?',
+      header: 'common.delete',
+      message: 'bait.confirmRemoveEntry',
       buttons: [
-        { text: 'Cancel', role: 'cancel' },
-        { text: 'Delete', role: 'destructive', handler: deleteWrap },
+        { text: 'common.cancel', role: 'cancel' },
+        { text: 'common.delete', role: 'destructive', handler: deleteWrap },
       ],
     });
   };
@@ -112,7 +106,7 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
           className="flex justify-between items-center rounded-md text-primary-900 font-semibold px-3 bg-primary-800/10"
         >
           <div>
-            <T>{getRelativeDate(item.date)}</T>
+            <RelativeDate date={item.date} />
           </div>
           {item.count > 1 && <div>{item.count}</div>}
         </div>
@@ -123,7 +117,7 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
 
     const occCount = trapVisit.occurrences?.length || 0;
     const location = locations.idMap.get(trapVisit.data.locationId || '');
-    const trapName = location?.data.name || <T>Trap visit</T>;
+    const trapName = location?.data.name || <T>bait.trapVisit</T>;
     const stratumValue = trapVisit?.data[stratumAttr.id];
     const stratum = stratumAttr.choices.find(
       c => c.dataName === stratumValue
@@ -142,8 +136,8 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
           <div className="flex gap-2 justify-between items-center w-full py-3">
             <div className="line-clamp-2">{trapName}</div>
             <div className="flex gap-2 items-center">
-              <Badge>
-                {`${occCount}`} <T>species</T>
+              <Badge skipTranslation>
+                {occCount} <T>common.speciesLower</T>
               </Badge>
               {stratum && <Badge>{stratum}</Badge>}
             </div>
@@ -156,7 +150,7 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
               color="danger"
               onClick={() => deleteTrapVisit(trapVisit)}
             >
-              <T>Delete</T>
+              <T>common.delete</T>
             </IonItemOption>
           </IonItemOptions>
         )}
@@ -170,7 +164,10 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
 
       <IonList lines="full">
         <div className="rounded-list">
-          <MenuAttrItem routerLink={`${url}/details`} label="Survey details" />
+          <MenuAttrItem
+            routerLink={`${url}/details`}
+            label="bait.surveyDetails"
+          />
         </div>
       </IonList>
 
@@ -181,12 +178,12 @@ const HomeMain = ({ sample, onAddTrapVisit }: Props) => {
           onPress={onAddTrapVisit}
           prefix={<IonIcon src={addCircleOutline} className="size-5" />}
         >
-          Add trap visit
+          bait.addTrapVisit
         </Button>
       )}
 
       {trapVisits.length === 0 && (
-        <InfoBackgroundMessage>No trap visits added</InfoBackgroundMessage>
+        <InfoBackgroundMessage>bait.noTrapVisits</InfoBackgroundMessage>
       )}
 
       {trapVisits.length > 0 && (

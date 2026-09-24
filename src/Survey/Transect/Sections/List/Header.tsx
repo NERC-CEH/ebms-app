@@ -8,11 +8,11 @@ type Props = {
 };
 
 const HeaderComponent = ({ showRefreshButton, onRefresh }: Props) => {
-  const title = showRefreshButton ? 'Transects' : 'Sections';
+  const title = showRefreshButton ? 'transect.transects' : 'transect.sections';
 
   const button = !showRefreshButton ? null : (
     <IonButton onClick={onRefresh}>
-      <T>Refresh</T>
+      <T>common.refresh</T>
     </IonButton>
   );
 

@@ -76,7 +76,7 @@ function Transects({ onTransectSelect }: Props) {
         color="tertiary"
         className="m-3"
       >
-        Please select your transect first.
+        transect.pleaseSelectTransect
       </InfoMessage>
 
       {hasTransects ? (
@@ -84,9 +84,7 @@ function Transects({ onTransectSelect }: Props) {
           <div className="rounded-list">{transectsList}</div>
         </IonList>
       ) : (
-        <InfoBackgroundMessage>
-          You don&#39;t have any transects. Please try to refresh the list.
-        </InfoBackgroundMessage>
+        <InfoBackgroundMessage>transect.donTHave</InfoBackgroundMessage>
       )}
     </Main>
   );

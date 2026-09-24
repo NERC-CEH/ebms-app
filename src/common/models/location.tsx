@@ -356,11 +356,11 @@ export const useValidateCheck = () => {
     const invalids = location.validateRemote();
     if (invalids) {
       alert({
-        header: 'Incomplete',
+        header: 'common.incomplete',
         message: <ModelValidationMessage {...invalids} />,
         buttons: [
           {
-            text: 'Got it',
+            text: 'common.gotIt',
             role: 'cancel',
           },
         ],

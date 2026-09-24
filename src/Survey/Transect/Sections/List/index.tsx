@@ -23,12 +23,12 @@ const SectionListController = () => {
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       await locations.fetchRemote();
 
-      toast.success('Transect list was successfully updated.');
+      toast.success('transect.transectListWas');
     } catch (error) {
       toast.error(error as Error);
     }

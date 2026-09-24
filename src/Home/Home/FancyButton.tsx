@@ -66,11 +66,11 @@ const FancyButton = ({
     >
       <div className="flex flex-col">
         <div className="font-bold text-xl line-clamp-1">
-          <T>{label}</T>
+          <T i18nKey={label as never} />
         </div>
         {description && (
           <span className="text-sm line-clamp-1">
-            <T>{description}</T>
+            <T i18nKey={description as never} />
           </span>
         )}
       </div>

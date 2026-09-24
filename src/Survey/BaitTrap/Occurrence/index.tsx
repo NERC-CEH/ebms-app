@@ -20,13 +20,13 @@ const OccurrenceController = () => {
 
   const nextButton = !sample.isDisabled && (
     <HeaderButton onClick={onFinish} isInvalid={!!isInvalid}>
-      Next
+      common.next
     </HeaderButton>
   );
 
   return (
     <Page id="survey-bait-trap-edit-occurrence">
-      <Header title="Edit Occurrence" rightSlot={nextButton} />
+      <Header title="common.editOccurrence" rightSlot={nextButton} />
       <Main occurrence={occurrence} />
     </Page>
   );

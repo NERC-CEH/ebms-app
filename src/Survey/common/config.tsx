@@ -29,7 +29,7 @@ export const appVersionAttr = { id: 'smpAttr:1139' } as const;
 export const temperatureValues = [
   {
     value: '',
-    label: 'Not recorded/no data',
+    label: 'survey.notRecordedNo',
     isDefault: true,
     id: 20167,
   },
@@ -88,12 +88,12 @@ export const temperatureValues = [
 ];
 
 export const temperatureAttr = {
-  menuProps: { icon: thermometerOutline, label: 'Temperature' },
+  menuProps: { icon: thermometerOutline, label: 'common.temperature' },
   pageProps: {
-    headerProps: { title: 'Temperature' },
+    headerProps: { title: 'common.temperature' },
     attrProps: {
       input: 'radio',
-      info: 'Please specify the temperature C°.',
+      info: 'common.temperatureRequired',
       inputProps: { options: temperatureValues },
     },
   },
@@ -112,25 +112,25 @@ export const speciesGroupsAttr = {
 } as const satisfies AttrConfig;
 
 export const windDirectionValues = [
-  { value: '', label: 'Not recorded/no data', id: 2460, isDefault: true },
-  { value: 'S', id: 2461 },
-  { value: 'SW', id: 2462 },
-  { value: 'W', id: 2463 },
-  { value: 'NW', id: 2464 },
-  { value: 'N', id: 2465 },
-  { value: 'NE', id: 2466 },
-  { value: 'E', id: 2467 },
-  { value: 'SE', id: 2468 },
-  { value: 'No direction', id: 2469 },
+  { value: '', label: 'survey.notRecordedNo', id: 2460, isDefault: true },
+  { label: 'common.s', value: 'S', id: 2461 },
+  { label: 'common.sw', value: 'SW', id: 2462 },
+  { label: 'common.w', value: 'W', id: 2463 },
+  { label: 'common.nw', value: 'NW', id: 2464 },
+  { label: 'common.n', value: 'N', id: 2465 },
+  { label: 'common.ne', value: 'NE', id: 2466 },
+  { label: 'common.e', value: 'E', id: 2467 },
+  { label: 'common.se', value: 'SE', id: 2468 },
+  { label: 'survey.noDirection', value: 'No direction', id: 2469 },
 ];
 
 export const windDirectionAttr = {
-  menuProps: { label: 'Wind Direction', icon: windIcon },
+  menuProps: { label: 'common.windDirection', icon: windIcon },
   pageProps: {
-    headerProps: { title: 'Wind Direction' },
+    headerProps: { title: 'common.windDirection' },
     attrProps: {
       input: 'radio',
-      info: 'Please specify the wind direction.',
+      info: 'common.pleaseSpecifyWind',
       inputProps: { options: windDirectionValues },
     },
   },
@@ -138,23 +138,47 @@ export const windDirectionAttr = {
 } as const satisfies AttrConfig;
 
 export const windSpeedValues = [
-  { value: '', label: 'Not recorded/no data', id: 2459, isDefault: true },
-  { value: 'Smoke rises vertically', id: 2606 },
-  { value: 'Slight smoke drift', id: 2453 },
-  { value: 'Wind felt on face, leaves rustle', id: 2454 },
-  { value: 'Leaves and twigs in slight motion', id: 2455 },
-  { value: 'Dust raised and small branches move', id: 2456 },
-  { value: 'Small trees in leaf begin to sway', id: 2457 },
-  { value: 'Large branches move and trees sway', id: 2458 },
+  { value: '', label: 'survey.notRecordedNo', id: 2459, isDefault: true },
+  {
+    label: 'common.smokeRisesVertically',
+    value: 'Smoke rises vertically',
+    id: 2606,
+  },
+  { label: 'common.slightSmokeDrift', value: 'Slight smoke drift', id: 2453 },
+  {
+    label: 'common.windFeltFace',
+    value: 'Wind felt on face, leaves rustle',
+    id: 2454,
+  },
+  {
+    label: 'common.leavesTwigsSlight',
+    value: 'Leaves and twigs in slight motion',
+    id: 2455,
+  },
+  {
+    label: 'common.dustRaisedSmall',
+    value: 'Dust raised and small branches move',
+    id: 2456,
+  },
+  {
+    label: 'common.smallTreesLeaf',
+    value: 'Small trees in leaf begin to sway',
+    id: 2457,
+  },
+  {
+    label: 'common.largeBranchesMove',
+    value: 'Large branches move and trees sway',
+    id: 2458,
+  },
 ];
 
 export const windSpeedAttr = {
-  menuProps: { label: 'Wind Speed', icon: windIcon },
+  menuProps: { label: 'common.windSpeed', icon: windIcon },
   pageProps: {
-    headerProps: { title: 'Wind Speed' },
+    headerProps: { title: 'common.windSpeed' },
     attrProps: {
       input: 'radio',
-      info: 'Please specify the wind speed.',
+      info: 'common.pleaseSpecifyWindSpeed',
       inputProps: { options: windSpeedValues },
     },
   },
@@ -164,18 +188,23 @@ export const windSpeedAttr = {
 /** @deprecated */
 export const commentAttrOld = {
   id: 'comment',
-  menuProps: { icon: chatboxOutline, skipValueTranslation: true },
+  menuProps: {
+    icon: chatboxOutline,
+    label: 'common.comment',
+    skipValueTranslation: true,
+  },
   pageProps: {
+    headerProps: { title: 'common.comment' },
     attrProps: {
       input: 'textarea',
-      info: 'Please add any extra info about this record.',
+      info: 'survey.pleaseAddAny',
     },
   },
 } as const;
 
 export const commentAttr = {
   id: 'comment',
-  title: 'Comment',
+  title: 'common.comment',
   type: 'textInput',
   appearance: 'multiline',
 } as const satisfies TextInputConf;
@@ -200,9 +229,9 @@ export const backwardsDateFormat = (date: number | string) =>
   dateFormatISO.format(new Date(date)); // for backwards compatibility, remove later
 
 export const surveyStartTimeAttr = {
-  menuProps: { label: 'Start Time' },
+  menuProps: { label: 'common.startTime' },
   pageProps: {
-    headerProps: { title: 'Start Time' },
+    headerProps: { title: 'common.startTime' },
     attrProps: {
       input: 'time',
       inputProps: {
@@ -214,9 +243,9 @@ export const surveyStartTimeAttr = {
 } as const;
 
 export const surveyEndTimeAttr = {
-  menuProps: { label: 'End Time' },
+  menuProps: { label: 'common.endTime' },
   pageProps: {
-    headerProps: { title: 'End Time' },
+    headerProps: { title: 'common.endTime' },
     attrProps: {
       input: 'time',
       inputProps: {
@@ -235,6 +264,7 @@ export const dateAttr = {
 export const guidAttr = {
   id: 'smpAttr:2021',
   type: 'textInput',
+  // eslint-disable-next-line local/valid-trans-key
   title: 'GUID',
   container: 'inline',
   prefix: <IonIcon icon={chatboxOutline} className="size-6" />,
@@ -251,51 +281,55 @@ export const areaCountSchema = z.object({
         longitude: z.number().nullable().optional(),
         shape: z.object({}).nullable().optional(),
       },
-      { error: 'Location is missing.' }
+      { error: 'common.locationMissing' }
     )
     .refine(
       val =>
         Number.isFinite(val.latitude) &&
         Number.isFinite(val.longitude) &&
         val.shape,
-      'Location is missing.'
+      'common.locationMissing'
     ),
 
   [areaSizeAttr.id]: z
-    .number({ error: 'Please add survey area information.' })
-    .min(1, 'Please add survey area information.')
-    .max(20000000, 'Please select a smaller area.'),
+    .number({ error: 'survey.pleaseAddSurvey' })
+    .min(1, 'survey.pleaseAddSurvey')
+    .max(20000000, 'survey.pleaseSelectSmaller'),
 
   surveyStartTime: z
-    .string({ error: 'Date is missing' })
-    .min(1, 'Date is missing'),
+    .string({ error: 'common.dateMissing' })
+    .min(1, 'common.dateMissing'),
 });
 
 const stageValues = [
-  { value: null, isDefault: true, label: 'Not Recorded' },
-  { value: 'Adult', id: 3929 },
-  { value: 'Egg', id: 3932 },
-  { value: 'Larva', id: 3931 },
-  { value: 'Larval web', id: 14079 },
-  { value: 'Pupa', id: 3930 },
+  { value: null, isDefault: true, label: 'survey.notRecorded' },
+  { label: 'common.adult', value: 'Adult', id: 3929 },
+  { label: 'survey.egg', value: 'Egg', id: 3932 },
+  { label: 'survey.larva', value: 'Larva', id: 3931 },
+  { label: 'survey.larvalWeb', value: 'Larval web', id: 14079 },
+  { label: 'survey.pupa', value: 'Pupa', id: 3930 },
 ];
 
 const dragonflyStageValues = [
-  { value: 'Adult', id: 5703 },
-  { value: 'Copulating or tandem pairs', id: 5704 },
-  { value: 'Ovipositing', id: 5705 },
-  { value: 'Larvae', id: 5706 },
-  { value: 'Exuviae', id: 5707 },
-  { value: 'Emergent', id: 5708 },
+  { label: 'common.adult', value: 'Adult', id: 5703 },
+  {
+    label: 'survey.copulatingTandemPairs',
+    value: 'Copulating or tandem pairs',
+    id: 5704,
+  },
+  { label: 'survey.ovipositing', value: 'Ovipositing', id: 5705 },
+  { label: 'survey.larvae', value: 'Larvae', id: 5706 },
+  { label: 'survey.exuviae', value: 'Exuviae', id: 5707 },
+  { label: 'survey.emergent', value: 'Emergent', id: 5708 },
 ];
 
 export const dragonflyStageAttr = {
   menuProps: { icon: caterpillarIcon },
   pageProps: {
-    headerProps: { title: 'Stage' },
+    headerProps: { title: 'common.stage' },
     attrProps: {
       input: 'radio',
-      info: 'Pick the life stage',
+      info: 'survey.pickLifeStage',
       inputProps: { options: dragonflyStageValues },
     },
   },
@@ -307,7 +341,7 @@ export const stageAttr = {
   pageProps: {
     attrProps: {
       input: 'radio',
-      info: 'Pick the life stage',
+      info: 'survey.pickLifeStage',
       set: (value: string | null, model: Occurrence) => {
         if (model.data.stage !== value && model.parent!.isPaintedLadySurvey()) {
           Object.assign(model.data, {
@@ -332,12 +366,12 @@ export const stageAttr = {
 } as const;
 
 export const cloudAttr = {
-  menuProps: { icon: cloudyOutline, label: 'Cloud' },
+  menuProps: { icon: cloudyOutline, label: 'common.cloud' },
   pageProps: {
-    headerProps: { title: 'Cloud' },
+    headerProps: { title: 'common.cloud' },
     attrProps: {
       input: 'slider',
-      info: 'Please specify the % of cloud cover.',
+      info: 'common.pleaseSpecifyCloud',
       inputProps: { max: 100, min: 0 },
     },
   },

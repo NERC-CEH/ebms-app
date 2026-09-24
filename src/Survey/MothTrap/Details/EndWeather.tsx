@@ -9,7 +9,7 @@ const EndWeather = () => {
 
   return (
     <Page id="moth-trap-end-weather">
-      <Header title="End Weather" />
+      <Header title="moth.endWeather" />
       <Main className="pb-ion-s-10">
         <IonList lines="full">
           <div className="rounded-list">

@@ -16,7 +16,7 @@ const SurveyHeaderButton = ({ sample, onClick }: Props) => {
 
   return (
     <HeaderButton isInvalid={isInvalid} onClick={onClick}>
-      {sample.metadata.saved ? 'Upload' : 'Finish'}
+      {sample.metadata.saved ? 'common.upload' : 'common.finish'}
     </HeaderButton>
   );
 };

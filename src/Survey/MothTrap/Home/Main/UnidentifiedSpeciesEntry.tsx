@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Badge, Button, useAlert } from '@flumens';
 import {
@@ -21,16 +22,15 @@ function useDeleteOccurrencePrompt(occ: Occurrence) {
 
   const showPrompt = () => {
     alert({
-      header: 'Delete',
-      skipTranslation: true,
-      message: 'Are you sure you want to remove this entry from your survey?',
+      header: 'common.delete',
+      message: 'moth.confirmRemoveEntry',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'common.cancel',
           role: 'cancel',
         },
         {
-          text: 'Delete',
+          text: 'common.delete',
           role: 'destructive',
           handler: () => occ.destroy(),
         },
@@ -119,7 +119,7 @@ const UnidentifiedSpeciesEntry = ({
           {!identifying && (
             <div className="flex w-full items-center justify-end gap-2">
               {!hasSpeciesPhoto && (
-                <Badge color="warning">Please add a photo</Badge>
+                <Badge color="warning">moth.pleaseAddPhoto</Badge>
               )}
 
               {hasSpeciesPhoto && !isDisabled && canBeIdentified() && (
@@ -129,7 +129,7 @@ const UnidentifiedSpeciesEntry = ({
                   className="px-2 py-1 text-sm"
                   preventDefault
                 >
-                  Identify
+                  moth.identify
                 </Button>
               )}
             </div>
@@ -142,7 +142,7 @@ const UnidentifiedSpeciesEntry = ({
       {!isDisabled && (
         <IonItemOptions side="end">
           <IonItemOption color="danger" onClick={deleteOccurrenceWrap}>
-            Delete
+            <T>common.delete</T>
           </IonItemOption>
         </IonItemOptions>
       )}

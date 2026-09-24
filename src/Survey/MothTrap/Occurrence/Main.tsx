@@ -24,7 +24,7 @@ const EditOccurrence = ({ occurrence }: Props) => {
     <Main id="moth-occurrence-edit" className="pb-ion-s-10">
       <IonList lines="full">
         <h3 className="list-title">
-          <T>Details</T>
+          <T>common.details</T>
         </h3>
         <div className="rounded-list">
           <IonItem
@@ -45,7 +45,7 @@ const EditOccurrence = ({ occurrence }: Props) => {
             input="counter"
             inputProps={{
               prefix: <IonIcon src={mothInsideBoxIcon} className="size-6" />,
-              label: 'Count inside',
+              label: 'moth.countInside',
               isDisabled,
               min: 0,
             }}
@@ -57,7 +57,7 @@ const EditOccurrence = ({ occurrence }: Props) => {
             input="counter"
             inputProps={{
               prefix: <IonIcon src={mothOutsideBoxIcon} className="size-6" />,
-              label: 'Count outside',
+              label: 'moth.countOutside',
               isDisabled,
               min: 0,
             }}
@@ -77,7 +77,7 @@ const EditOccurrence = ({ occurrence }: Props) => {
         </div>
 
         <h3 className="list-title">
-          <T>Moth Photos</T>
+          <T>moth.mothPhotos</T>
         </h3>
         <div className="rounded-list">
           <PhotoPicker

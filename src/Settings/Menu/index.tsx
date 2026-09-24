@@ -1,6 +1,7 @@
 /* eslint-disable prefer-arrow-callback */
 import { useContext } from 'react';
 import writeBlob from 'capacitor-blob-writer';
+import i18n from 'i18next';
 import { Directory, Filesystem } from '@capacitor/filesystem';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 import { Share } from '@capacitor/share';
@@ -22,12 +23,12 @@ const useDeleteUser = () => {
   const deleteUser = async () => {
     console.log('Settings:Menu:Controller: deleting the user!');
 
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       await userModel.delete();
       goBack();
-      toast.success('Done');
+      toast.success('common.done');
     } catch (error) {
       toast.error(error as Error);
     }
@@ -49,7 +50,7 @@ async function clearCache(toast: ReturnType<typeof useToast>) {
     };
     await Promise.all(samplesCollection.map(clearSample));
 
-    toast.success('Done');
+    toast.success('common.done');
   } catch (error) {
     toast.error(error as Error);
   }
@@ -68,7 +69,10 @@ const exportDatabase = async () => {
 
   await writeBlob({ path, directory, blob });
   const { uri: url } = await Filesystem.getUri({ directory, path });
-  await Share.share({ title: 'App database', files: [url] });
+  await Share.share({
+    title: i18n.t('settings.export.shareTitle'),
+    files: [url],
+  });
   await Filesystem.deleteFile({ directory, path });
 };
 
@@ -121,7 +125,7 @@ const Container = () => {
 
   return (
     <Page id="settings-menu">
-      <Header title="Settings" />
+      <Header title="settings.title" />
       <Main
         isLoggedIn={userModel.isLoggedIn()}
         deleteUser={deleteUser}

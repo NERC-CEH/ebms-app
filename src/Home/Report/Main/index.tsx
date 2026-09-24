@@ -60,18 +60,18 @@ const MainReport = ({
     return (
       <>
         <h3 className="list-title">
-          <T>{label}</T>
+          <T i18nKey={label as never} />
         </h3>
         <div className="rounded-list bg-white">
           <IonItem lines="full" className="list-header-labels">
             <IonLabel>
               <small>
-                <T>Species</T>
+                <T>common.species</T>
               </small>
             </IonLabel>
             <IonLabel className="ion-text-right">
               <small>
-                <T>Counts</T>
+                <T>reports.counts</T>
               </small>
             </IonLabel>
           </IonItem>
@@ -83,11 +83,7 @@ const MainReport = ({
   };
 
   if (hasNoData && !refreshing) {
-    return (
-      <InfoBackgroundMessage>
-        Sorry, no report data is available at the moment.
-      </InfoBackgroundMessage>
-    );
+    return <InfoBackgroundMessage>reports.sorryNoReport</InfoBackgroundMessage>;
   }
 
   const isLoggedIn = userModel.isLoggedIn();
@@ -100,16 +96,14 @@ const MainReport = ({
 
       <IonList lines="none">
         {!isLoggedIn && (
-          <InfoBackgroundMessage>
-            Please login to see your own data report.
-          </InfoBackgroundMessage>
+          <InfoBackgroundMessage>reports.pleaseLoginSee</InfoBackgroundMessage>
         )}
 
         {isLoggedIn &&
-          getReportTable(userSpeciesLastMonth, 'Your top species this month')}
-        {isLoggedIn && getReportTable(userSpecies, 'Your top species')}
+          getReportTable(userSpeciesLastMonth, 'reports.topSpeciesMonth')}
+        {isLoggedIn && getReportTable(userSpecies, 'reports.topSpecies')}
 
-        {getReportTable(species, 'Top Species from all timed counts')}
+        {getReportTable(species, 'reports.topSpeciesAll')}
       </IonList>
     </Main>
   );

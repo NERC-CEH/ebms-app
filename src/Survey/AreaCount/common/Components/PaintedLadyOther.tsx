@@ -1,20 +1,19 @@
 import { observer } from 'mobx-react';
 import i18n from 'i18next';
+import getSurveyValueKey from 'Survey/common/translationKeys';
 
 type Props = {
   text: string | string[];
 };
 
 export const PaintedLadyOther = ({ text }: Props) => {
-  let prettifyValue = text;
-
-  const eggLayingValues = Array.isArray(text);
-  if (eggLayingValues) {
-    const translate = (value: string) => i18n.t(value);
-    prettifyValue = (prettifyValue as string[]).map(translate).join(', ');
-  } else {
-    prettifyValue = i18n.t(prettifyValue);
-  }
+  const translate = (value: string) => {
+    const key = getSurveyValueKey(value);
+    return key ? i18n.t(key as never) : value;
+  };
+  const prettifyValue = Array.isArray(text)
+    ? text.map(translate).join(', ')
+    : translate(text);
 
   if (!text) return null;
 

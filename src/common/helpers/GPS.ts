@@ -99,8 +99,8 @@ async function startWatch() {
 
   watchId = await BackgroundGeolocation.addWatcher(
     {
-      backgroundTitle: i18n.t('Using your location.'),
-      backgroundMessage: i18n.t('Cancel to prevent battery drain.'),
+      backgroundTitle: i18n.t('common.usingLocation'),
+      backgroundMessage: i18n.t('common.cancelPreventBattery'),
       requestPermissions: true,
       stale: false,
     },

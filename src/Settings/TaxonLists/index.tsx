@@ -68,11 +68,11 @@ const TaxonLists = () => {
 
   const fetchRemoteLists = async () => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       const lists = await taxonLists.fetchRemote({ limit: 1000 }); // 1k should cover all lists
@@ -88,11 +88,11 @@ const TaxonLists = () => {
 
   const fetchNearbyLists = async () => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       // retrieve lat/lon from device location
@@ -118,11 +118,11 @@ const TaxonLists = () => {
 
   const onInstall = async (list: TaxonList) => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 
-    await loader.show('Installing list...');
+    await loader.show('lists.installingList');
 
     try {
       await list.save(true);
@@ -131,7 +131,7 @@ const TaxonLists = () => {
       taxonLists.upsert(list);
 
       toast.success(
-        t('Successfully installed "{{country}}" list with {{size}} species', {
+        t('lists.installedList', {
           country: list.data.title,
           size: list.data.size,
         }),
@@ -183,17 +183,17 @@ const TaxonLists = () => {
 
   const onReinstall = async (list: TaxonList) => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       await list.fetchRemoteSpecies();
 
       toast.success(
-        t('Successfully refreshed "{{country}}" list with {{size}} species', {
+        t('lists.refreshedList', {
           country: list.data.title,
           size: list.data.size,
         }),
@@ -215,7 +215,7 @@ const TaxonLists = () => {
 
   return (
     <Page id="species-list-settings">
-      <Header title="Species Lists" rightSlot={searchButton} />
+      <Header title="common.speciesLists" rightSlot={searchButton} />
 
       <Main className="[--padding-bottom:0] [--padding-top:0]">
         <IonToolbar
@@ -226,13 +226,13 @@ const TaxonLists = () => {
         >
           <div className="flex w-full items-center justify-end gap-2">
             <IonSearchbar
-              placeholder={t('List name')}
+              placeholder={t('lists.listName')}
               className={clsx('!py-0', !showSearch && 'hidden!')}
               onIonInput={onSearch}
               ref={searchbarRef}
               value={currentSearch}
               showCancelButton="always"
-              cancelButtonText={t('Cancel')}
+              cancelButtonText={t('common.cancel')}
               onIonCancel={() => {
                 setShowSearch(false);
                 setCurrentSearch('');
@@ -247,19 +247,19 @@ const TaxonLists = () => {
               >
                 <IonSegmentButton value="installed">
                   <IonLabel className="ion-text-wrap">
-                    <T>Installed</T>
+                    <T>lists.installed</T>
                   </IonLabel>
                 </IonSegmentButton>
 
                 <IonSegmentButton value="nearby" disabled={!location}>
                   <IonLabel className="ion-text-wrap">
-                    <T>Nearby</T>
+                    <T>lists.nearby</T>
                   </IonLabel>
                 </IonSegmentButton>
 
                 <IonSegmentButton value="all">
                   <IonLabel className="ion-text-wrap">
-                    <T>All Lists</T>
+                    <T>lists.allLists</T>
                   </IonLabel>
                 </IonSegmentButton>
               </IonSegment>

@@ -1,3 +1,4 @@
+/* eslint-disable local/valid-trans-key */
 import { Trans as T } from 'react-i18next';
 import { Page, Main, Header, Section } from '@flumens';
 import { IonItem, IonLabel } from '@ionic/react';
@@ -23,17 +24,14 @@ const getTaxonWithImageCopyright = (s: Species) => (
 
 const Credits = () => (
   <Page id="credits">
-    <Header title="Credits" />
+    <Header title="common.credits" />
     <Main className="ion-padding">
       <Section>
         <img src={sponsorsLogo} alt="" className="mx-auto" />
       </Section>
 
       <Section>
-        <H>
-          We are very grateful for all the people that helped to create this
-          app:
-        </H>
+        <H>info.weVeryGrateful</H>
         <IonItem>
           <IonLabel>
             <b>David Roy</b> (UK Centre for Ecology & Hydrology)
@@ -97,16 +95,7 @@ const Credits = () => (
       </Section>
 
       <Section>
-        <P>
-          In the UGP+ project*, citizens, policy makers and scientists work
-          together to develop future plans for urban nature in Europe. Counting
-          butterflies in cities is not only a great way to keep track of
-          biodiversity and the quality of urban green spaces, but also to
-          empower all of us to engage with questions of biodiversity, nature
-          policy, and propose new actions for people and the city. The data
-          contributed by participants will be analysed to inform urban
-          biodiversity conservation actions across Europe.
-        </P>
+        <P>info.ugpProjectCitizens</P>
         <IonItem>
           <a
             href="https://flumens.io"
@@ -116,23 +105,25 @@ const Credits = () => (
             <img src={flumensLogo} alt="" />
           </a>
         </IonItem>
-        <P>
-          This app was handcrafted with love by
-          <a href="https://flumens.io" style={{ whiteSpace: 'nowrap' }}>
-            {' '}
-            Flumens,
-          </a>{' '}
-          an agency specialising in building bespoke data-oriented solutions.
-          For suggestions and feedback please do not hesitate to{' '}
-          <a href="mailto:apps%40ceh.ac.uk?subject=ButterflyCount%20App">
-            contact us
-          </a>
-          .
+        <P skipTranslation>
+          <T i18nKey="info.flumensCredit">
+            This app was handcrafted with love by
+            <a href="https://flumens.io" style={{ whiteSpace: 'nowrap' }}>
+              {' '}
+              Flumens,
+            </a>{' '}
+            an agency specialising in building bespoke data-oriented solutions.
+            For suggestions and feedback please do not hesitate to{' '}
+            <a href="mailto:apps%40ceh.ac.uk?subject=ButterflyCount%20App">
+              contact us
+            </a>
+            .
+          </T>
         </P>
       </Section>
 
       <Section>
-        <H>Partners:</H>
+        <H>info.partners</H>
         <IonItem>
           <IonLabel>
             <b>Butterfly Conservation Europe</b> – Sue Collins, Martin Warren
@@ -162,24 +153,17 @@ const Credits = () => (
       </Section>
 
       <Section>
-        <H>Species descriptions</H>
-        <P>
-          Species descriptions included as part of the guide are based on those
-          produced for the Climatic Risk Atlas of European Butterflies. We thank
-          Josef Settele for making these available.
-        </P>
+        <H>info.speciesDescriptions</H>
+        <P>info.speciesDescriptionCredits</P>
       </Section>
 
       <Section>
-        <H>Weather conditions</H>
-        <P>
-          The current weather values are prepopulated using the OpenWeatherMap
-          API weather service.
-        </P>
+        <H>info.weatherConditions</H>
+        <P>info.currentWeatherValues</P>
       </Section>
 
       <Section>
-        <H>Photo credits</H>
+        <H>info.photoCredits</H>
 
         <ExpandableList>
           {species
@@ -189,7 +173,7 @@ const Credits = () => (
       </Section>
 
       <Section>
-        <H>Icons made by</H>
+        <H>info.iconsMadeBy</H>
         <IonItem lines="none">
           <IonLabel>
             <a
@@ -209,7 +193,7 @@ const Credits = () => (
             <a href="https://www.flaticon.com/authors/freepik" title="FreePick">
               FreePick
             </a>{' '}
-            <T>from</T>{' '}
+            <T>info.from</T>{' '}
             <a href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
@@ -225,12 +209,7 @@ const Credits = () => (
       </Section>
       <Section>
         <P skipTranslation className="text-sm opacity-70">
-          *{' '}
-          <T>
-            UGP+ stands for Enhancing Urban Greening Plans to Mainstream
-            Biodiversity in Society, and is a project funded by the European
-            Union
-          </T>
+          * <T>info.ugpStandsEnhancing</T>
         </P>
       </Section>
     </Main>

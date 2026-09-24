@@ -27,9 +27,17 @@ import {
 } from 'Survey/common/config';
 
 const reliabilityValues = [
-  { value: 'Suitable conditions', id: 16590 },
-  { value: 'Unsuitable conditions', id: 16591 },
-  { value: 'Unable to survey', id: 16592 },
+  {
+    label: 'transect.suitableConditions',
+    value: 'Suitable conditions',
+    id: 16590,
+  },
+  {
+    label: 'transect.unsuitableConditions',
+    value: 'Unsuitable conditions',
+    id: 16591,
+  },
+  { label: 'transect.unableSurvey', value: 'Unable to survey', id: 16592 },
 ];
 
 const getHasStartTimeAndLocation = (sample: Sample) => () =>
@@ -55,7 +63,7 @@ const getSetStartWeather = (sample: Sample) => async () => {
 const survey: Survey = {
   id: 562,
   name: 'transect',
-  label: 'eBMS Transect',
+  label: 'common.ebmsTransect',
   webForm: 'ebms-input-data',
   attrs: {
     date: dateAttr,
@@ -71,7 +79,7 @@ const survey: Survey = {
       pageProps: {
         attrProps: {
           input: 'text',
-          info: 'Please specify the person responsible for identifying the species.',
+          info: 'transect.pleaseSpecifyPerson',
         },
       },
       remote: { id: 1384 },
@@ -82,11 +90,16 @@ const survey: Survey = {
     attrs: {
       date: dateAttr,
       comment: {
-        menuProps: { icon: chatboxOutline, skipValueTranslation: true },
+        menuProps: {
+          icon: chatboxOutline,
+          label: 'common.comment',
+          skipValueTranslation: true,
+        },
         pageProps: {
+          headerProps: { title: 'common.comment' },
           attrProps: {
             input: 'textarea',
-            info: 'Please add any extra info about this section.',
+            info: 'transect.addSectionInfo',
           },
         },
       },
@@ -94,7 +107,7 @@ const survey: Survey = {
         pageProps: {
           attrProps: {
             input: 'radio',
-            info: 'Please specify the reliability of the section count.',
+            info: 'transect.countReliability',
             inputProps: { options: reliabilityValues },
           },
         },
@@ -131,7 +144,7 @@ const survey: Survey = {
       verify: attrs =>
         z
           .object({
-            count: z.number({ error: 'Count cannot be empty' }),
+            count: z.number({ error: 'transect.countEmpty' }),
           })
           .safeParse(attrs).error,
     },
@@ -157,7 +170,7 @@ const survey: Survey = {
       z
         .object({
           reliability: z.string({
-            error: 'Reliability cannot be empty.',
+            error: 'transect.reliabilityRequired',
           }),
         })
         .safeParse(attrs).error,
@@ -166,14 +179,14 @@ const survey: Survey = {
   verify: attrs =>
     z
       .object({
-        locationId: z.string({ error: 'Please select your transect.' }),
-        recorder: z.string({ error: 'Recorder info is missing' }),
-        surveyStartTime: z.string({ error: 'Start time is missing' }),
+        locationId: z.string({ error: 'transect.pleaseSelectYourTransect' }),
+        recorder: z.string({ error: 'transect.recorderInfoMissing' }),
+        surveyStartTime: z.string({ error: 'transect.startTimeMissing' }),
         // surveyEndTime: // automatically set on send
         temperature: z.number({
-          error: 'Temperature info is missing',
+          error: 'transect.temperatureRequired',
         }),
-        windSpeed: z.string({ error: 'Wind speed info is missing' }),
+        windSpeed: z.string({ error: 'transect.windSpeedInfo' }),
       })
       .safeParse(attrs).error,
 

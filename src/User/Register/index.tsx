@@ -1,7 +1,16 @@
 import { useContext } from 'react';
 import { Trans as T } from 'react-i18next';
 import { TypeOf } from 'zod';
-import { Page, Header, device, useToast, useAlert, useLoader } from '@flumens';
+import {
+  Page,
+  Header,
+  device,
+  useToast,
+  useAlert,
+  useLoader,
+  DrupalUserError,
+  DrupalUserErrorCode as E,
+} from '@flumens';
 import { NavContext } from '@ionic/react';
 import appModel from 'common/models/app';
 import userModel, { UserModel } from 'models/user';
@@ -31,10 +40,10 @@ const RegisterContainer = () => {
     /* eslint-enable @typescript-eslint/naming-convention */
 
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       await userModel.register(email, password, otherDetails);
@@ -44,23 +53,24 @@ const RegisterContainer = () => {
       userModel.save();
 
       alert({
-        header: 'Welcome aboard',
-        message: (
-          <T>
-            Before starting any surveys please check your email and click on the
-            verification link.
-          </T>
-        ),
+        header: 'user.welcomeAboard',
+        message: <T>user.beforeStartingAny</T>,
         buttons: [
           {
-            text: 'OK, got it',
+            text: 'common.okGotIt',
             role: 'cancel',
             handler: onSuccess,
           },
         ],
       });
     } catch (error) {
-      toast.error(error as Error);
+      if (error instanceof DrupalUserError) {
+        toast.error(
+          error.code === E.EmailTaken ? 'user.emailTaken' : error.message
+        );
+      } else {
+        toast.error(error);
+      }
     }
 
     loader.hide();
@@ -68,7 +78,7 @@ const RegisterContainer = () => {
 
   return (
     <Page id="user-register">
-      <Header className="ion-no-border" title="Register" />
+      <Header className="ion-no-border" title="common.register" />
       <Main onSubmit={onRegister} lang={appModel.data.language!} />
     </Page>
   );

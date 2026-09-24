@@ -115,7 +115,7 @@ const DetailsController = () => {
 
   const getNextButton = sample.isDetailsComplete() ? null : (
     <HeaderButton onClick={onFinish} isInvalid={isInvalid}>
-      Next
+      common.next
     </HeaderButton>
   );
 
@@ -124,7 +124,7 @@ const DetailsController = () => {
   return (
     <IonPage id="survey-moth-detail" ref={pageRef}>
       <Header
-        title="Survey Details"
+        title="common.surveyDetails"
         rightSlot={getNextButton}
         onLeave={onExit}
       />

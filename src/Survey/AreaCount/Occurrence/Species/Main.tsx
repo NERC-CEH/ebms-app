@@ -19,6 +19,7 @@ import { getSpeciesProfileImage } from 'common/data/profiles';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
+import getSurveyValueKey from 'Survey/common/translationKeys';
 
 type Props = {
   samples: Sample[];
@@ -43,6 +44,7 @@ const EditOccurrence = ({
         .replace(/(:\d{2}| [AP]M)$/, '');
 
       const { stage, dragonflyStage } = occ.data;
+      const stageValue = stage || dragonflyStage;
 
       let detailIcon;
       if (smp.gps.hasNoLocationAndNotLocating()) {
@@ -68,14 +70,16 @@ const EditOccurrence = ({
           >
             <IonLabel className="max-w-[66px] m-0">{prettyTime}</IonLabel>
             <IonLabel>
-              <Badge>{stage || dragonflyStage}</Badge>
+              <Badge skipTranslation>
+                <T i18nKey={getSurveyValueKey(stageValue) as never} />
+              </Badge>
               {location && <Badge className="ml-2">{location}</Badge>}
             </IonLabel>
           </IonItem>
           {!isDisabled && (
             <IonItemOptions side="end">
               <IonItemOption color="danger" onClick={deleteSubSample}>
-                <T>Delete</T>
+                <T>common.delete</T>
               </IonItemOption>
             </IonItemOptions>
           )}
@@ -116,11 +120,11 @@ const EditOccurrence = ({
         <div className="rounded-list mt-5">
           <div className="list-divider gap-10">
             <div>
-              <T>Time</T>
+              <T>common.time</T>
             </div>
             <div className="flex w-full justify-between">
               <div>
-                <T>Stage</T>
+                <T>common.stage</T>
               </div>
               <div>{count}</div>
             </div>
@@ -135,7 +139,7 @@ const EditOccurrence = ({
   return (
     <Main className="pb-ion-s-10">
       {!firstSubSample && (
-        <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
+        <InfoBackgroundMessage>common.noSpeciesAdded</InfoBackgroundMessage>
       )}
 
       {firstSubSample && getSpecies()}

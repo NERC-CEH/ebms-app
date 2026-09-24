@@ -21,7 +21,7 @@ const LampDetails = ({ lamp }: Props) => {
 
   return (
     <>
-      <Header title="Lamp details" />
+      <Header title="locations.lampDetails" />
 
       <Main>
         <BlockContext value={{ isDisabled: false }}>
@@ -34,7 +34,7 @@ const LampDetails = ({ lamp }: Props) => {
               />
               <Block block={mothTrapLampQuantityAttr} record={lamp} />
               <Block block={mothTrapLampDescriptionAttr} record={lamp} />
-              <InfoMessage>Additional description of lamp.</InfoMessage>
+              <InfoMessage>locations.lampDescription</InfoMessage>
             </div>
           </IonList>
         </BlockContext>

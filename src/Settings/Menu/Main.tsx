@@ -28,23 +28,22 @@ function useDatabaseExportDialog(exportFn: () => void) {
 
   const showDatabaseExportDialog = () => {
     alert({
-      header: 'Export',
+      header: 'common.export',
       message: (
-        <T>
-          Are you sure you want to export the data?
+        <>
+          <T>settings.export.confirm</T>
           <p className="my-2 font-bold">
-            This feature is intended solely for technical support and is not a
-            supported method for exporting your data
+            <T>settings.export.warning</T>
           </p>
-        </T>
+        </>
       ),
       buttons: [
         {
-          text: 'Cancel',
+          text: 'common.cancel',
           role: 'cancel',
         },
         {
-          text: 'Export',
+          text: 'common.export',
           handler: exportFn,
         },
       ],
@@ -59,29 +58,30 @@ function useUserDeleteDialog(deleteUser: () => void) {
 
   const showUserDeleteDialog = () => {
     alert({
-      header: 'Account delete',
+      header: 'settings.account.title',
       message: (
-        <T>
-          Are you sure you want to delete your account?
+        <>
+          <T>settings.account.confirm</T>
           <InfoMessage
             color="danger"
             prefix={<IonIcon src={warningOutline} />}
             skipTranslation
           >
-            This will remove your account on the{' '}
-            <b>{{ url: config.backend.url } as unknown as string}</b> website.
-            You will lose access to any records that you have previously
-            submitted using the app or website.
+            <T
+              i18nKey="settings.account.warning"
+              values={{ url: config.backend.url }}
+              components={{ website: <b /> }}
+            />
           </InfoMessage>
-        </T>
+        </>
       ),
       buttons: [
         {
-          text: 'Cancel',
+          text: 'common.cancel',
           role: 'cancel',
         },
         {
-          text: 'Delete',
+          text: 'common.delete',
           role: 'destructive',
           handler: deleteUser,
         },
@@ -97,16 +97,16 @@ function clearCacheDialog(
   alert: ReturnType<typeof useAlert>
 ) {
   alert({
-    header: 'Clear cache',
-    message: ' This will delete cached data, including your uploaded surveys.',
+    header: 'settings.cache.label',
+    message: 'settings.cache.confirm',
     buttons: [
       {
-        text: 'Cancel',
+        text: 'common.cancel',
         role: 'cancel',
         cssClass: 'primary',
       },
       {
-        text: 'Clear',
+        text: 'common.clear',
         role: 'destructive',
         handler: resetApp,
       },
@@ -164,33 +164,42 @@ const MenuMain = ({
   const languageLabel = languages[language]?.name;
 
   const taxonNameDisplayOptions = [
-    { value: 'commonScientific', label: 'Common and scientific' },
-    { value: 'commonOnly', label: 'Common only' },
-    { value: 'scientificOnly', label: 'Scientific only' },
+    {
+      value: 'commonScientific',
+      label: 'settings.names.both',
+    },
+    {
+      value: 'commonOnly',
+      label: 'settings.names.common',
+    },
+    {
+      value: 'scientificOnly',
+      label: 'settings.names.scientific',
+    },
   ];
 
   return (
     <Main className="[--padding-bottom:20px]">
       <IonList lines="full">
         <h3 className="list-title">
-          <T>Surveying</T>
+          <T>settings.surveying</T>
         </h3>
         <div className="rounded-list">
           <IonItem routerLink="/settings/species-lists" detail>
             <IonLabel>
-              <T>Species Lists</T>
+              <T>common.speciesLists</T>
             </IonLabel>
             <IonIcon icon={butterflyIcon} size="small" slot="start" />
           </IonItem>
           <IonItem routerLink="/settings/moth-survey" detail>
             <IonLabel>
-              <T>Moth Survey</T>
+              <T>settings.mothSurvey</T>
             </IonLabel>
             <IonIcon icon={mothIcon} size="small" slot="start" />
           </IonItem>
           <SelectInput
             prefix={<IonIcon icon={textOutline} className="size-6" />}
-            label="Species Name Display"
+            label="settings.names.label"
             value={taxonNameDisplay}
             onChange={onTaxonNameDisplayChange}
             options={taxonNameDisplayOptions}
@@ -198,7 +207,7 @@ const MenuMain = ({
           {isLoggedIn && (
             <IonItem routerLink="/locations/sites" detail>
               <IonLabel>
-                <T>Sites</T>
+                <T>common.sites</T>
               </IonLabel>
               <IonIcon icon={locationOutline} size="small" slot="start" />
             </IonItem>
@@ -206,69 +215,62 @@ const MenuMain = ({
         </div>
 
         <h3 className="list-title">
-          <T>Application</T>
+          <T>common.application</T>
         </h3>
         <div className="rounded-list">
           <IonItem routerLink="/settings/language" detail>
             <IonLabel>
-              <T>Language</T>
+              <T>common.language</T>
             </IonLabel>
             <IonIcon icon={languageOutline} size="small" slot="start" />
             <IonLabel slot="end">{languageLabel}</IonLabel>
           </IonItem>
           <IonItem routerLink="/settings/country" detail>
             <IonLabel>
-              <T>Country</T>
+              <T>common.country</T>
             </IonLabel>
             <IonIcon icon={globeOutline} size="small" slot="start" />
             <IonLabel slot="end">
-              <T>{countryLabel}</T>
+              <T i18nKey={countryLabel as never} />
             </IonLabel>
           </IonItem>
 
           <Toggle
             prefix={<IonIcon src={schoolOutline} className="size-6" />}
-            label="Training Mode"
+            label="settings.training.label"
             defaultSelected={useTraining}
             onChange={onTrainingToggle}
           />
-          <InfoMessage inline>
-            Mark any new records as &#39;training&#39; and exclude from all
-            reports.
-          </InfoMessage>
+          <InfoMessage inline>settings.training.info</InfoMessage>
           <Toggle
             prefix={<IonIcon src={flameOutline} className="size-6" />}
-            label="Experimental Features"
+            label="settings.experimental"
             defaultSelected={useExperiments}
             onChange={onUseExperiments}
           />
           <Toggle
             prefix={<IonIcon src={shareOutline} className="size-6" />}
-            label="Share App Analytics"
+            label="settings.analytics.label"
             defaultSelected={sendAnalytics}
             onChange={onSendAnalyticsToggle}
           />
-          <InfoMessage inline>
-            Share app crash data so we can make the app more reliable.
-          </InfoMessage>
+          <InfoMessage inline>settings.analytics.info</InfoMessage>
           <IonItem onClick={onClearCacheDialog}>
             <IonIcon icon={trashBinOutline} size="small" slot="start" />
             <IonLabel>
-              <T>Clear cache</T>
+              <T>settings.cache.label</T>
             </IonLabel>
           </IonItem>
-          <InfoMessage inline>
-            You can free up storage used by the app.
-          </InfoMessage>
+          <InfoMessage inline>settings.cache.info</InfoMessage>
           <IonItem onClick={showDatabaseExportDialog}>
             <IonIcon icon={cloudDownloadOutline} size="small" slot="start" />
-            <T>Export database</T>
+            <T>settings.export.label</T>
           </IonItem>
 
           {!isPlatform('hybrid') && (
             <IonItem onClick={importDatabase}>
               <IonIcon icon={cloudUploadOutline} size="small" slot="start" />
-              Import database
+              <T>settings.import</T>
             </IonItem>
           )}
         </div>
@@ -276,18 +278,16 @@ const MenuMain = ({
         {isLoggedIn && (
           <>
             <h3 className="list-title">
-              <T>Account</T>
+              <T>common.account</T>
             </h3>
             <div className="rounded-list">
               <IonItem onClick={showUserDeleteDialog} className="!text-danger">
                 <IonIcon icon={personRemoveOutline} size="small" slot="start" />
                 <IonLabel>
-                  <T>Delete account</T>
+                  <T>settings.account.delete</T>
                 </IonLabel>
               </IonItem>
-              <InfoMessage inline>
-                You can delete your user account from the system.
-              </InfoMessage>
+              <InfoMessage inline>settings.account.info</InfoMessage>
             </div>
           </>
         )}

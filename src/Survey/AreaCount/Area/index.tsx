@@ -37,16 +37,16 @@ const AreaController = () => {
     infoText = (
       <div className="text-with-icon-wrapper">
         <IonIcon icon={resizeOutline} />
-        <T>Selected area</T>: {area.toLocaleString()} m²
+        <T>area.selectedArea</T>: {area.toLocaleString()} m²
       </div>
     );
   } else {
     infoText = (
       <>
-        <T>Please draw your area on the map</T>
+        <T>area.pleaseDrawArea</T>
         {isGPSTracking && (
           <div>
-            <T>Disable the GPS tracking to enable the drawing tools.</T>
+            <T>area.disableGpsTracking</T>
           </div>
         )}
       </>
@@ -85,7 +85,7 @@ const AreaController = () => {
       return false;
 
     try {
-      await loader.show('Please wait...');
+      await loader.show('common.pleaseWait');
 
       await newLocation.saveRemote();
 
@@ -99,7 +99,7 @@ const AreaController = () => {
 
       await refreshLocations();
 
-      toast.success('Successfully saved a location.');
+      toast.success('common.locationSaved');
     } catch (error) {
       toast.error(error as Error);
       loader.hide();

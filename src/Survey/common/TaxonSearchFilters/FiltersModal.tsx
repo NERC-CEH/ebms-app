@@ -62,7 +62,7 @@ const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
   if (speciesGroups?.includes(groups.moths.id)) {
     options.splice(2, 0, {
       value: DAY_FLYING_MOTHS,
-      label: 'Use only day-flying moths',
+      label: 'survey.useOnlyDay',
       className: 'w-[85%] ml-auto',
     });
   }
@@ -72,11 +72,11 @@ const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>
-            <T>Species groups</T>
+            <T>survey.speciesGroups</T>
           </IonTitle>
           <IonButtons slot="end">
             <IonButton onClick={toggleModal}>
-              <T>Close</T>
+              <T>common.close</T>
             </IonButton>
           </IonButtons>
         </IonToolbar>
@@ -84,7 +84,7 @@ const FiltersModal = ({ toggleModal, showModal, sample }: Props) => {
 
       <Main fullscreen className="pb-ion-s-10">
         <InfoMessage className="blue m-3">
-          Please select the species groups that you always record.
+          survey.pleaseSelectSpecies
         </InfoMessage>
 
         <Checkbox

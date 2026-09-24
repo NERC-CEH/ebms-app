@@ -15,7 +15,7 @@ const TrapHomeController = () => {
 
   return (
     <Page id="survey-bait-trap-trap-home">
-      <Header title="Trap" />
+      <Header title="common.trap" />
       <Main subSample={subSample} />
     </Page>
   );

@@ -45,20 +45,20 @@ const RegisterMain = ({ onSubmit, lang }: Props) => {
               control={control}
               name="firstName"
               prefix={<IonIcon icon={personOutline} className="size-5" />}
-              placeholder="First Name"
+              placeholder="user.firstName"
             />
             <Input.Form
               control={control}
               name="lastName"
               prefix={<IonIcon icon={personOutline} className="size-5" />}
-              placeholder="Surname"
+              placeholder="user.surname"
             />
             <Input.Form
               control={control}
               name="email"
               prefix={<IonIcon icon={mailOutline} className="size-5" />}
               type="email"
-              placeholder="Email"
+              placeholder="user.email"
             />
 
             <Input.Form
@@ -73,22 +73,22 @@ const RegisterMain = ({ onSubmit, lang }: Props) => {
                 />
               }
               type={showPassword ? 'text' : 'password'}
-              placeholder="Password"
+              placeholder="user.password"
             />
           </div>
 
           <div className="mt-4 px-5 text-sm">
-            <T>I agree to</T>{' '}
+            <T>user.iAgree</T>{' '}
             <IonRouterLink
               href={`${config.backend.url}/privacy-notice?lang=${lang}`}
             >
-              <T>Privacy Policy</T>
+              <T>common.privacyPolicy</T>
             </IonRouterLink>{' '}
-            <T>and</T>{' '}
+            <T>common.and</T>{' '}
             <IonRouterLink
               href={`${config.backend.url}/terms-and-conditions?lang=${lang}`}
             >
-              <T>Terms and Conditions</T>
+              <T>user.termsConditions</T>
             </IonRouterLink>
           </div>
 
@@ -97,7 +97,7 @@ const RegisterMain = ({ onSubmit, lang }: Props) => {
             color="primary"
             onPress={() => handleSubmit(onSubmit)()}
           >
-            Register
+            common.register
           </Button>
         </form>
       </div>

@@ -44,16 +44,19 @@ function useDisabledImageIdentifierAlert() {
 
   const shownDisabledImageIdentifierAlert = () =>
     alert({
-      header: 'Image identification',
+      header: 'moth.imageIdentification',
       message: (
-        <T>
+        <T i18nKey="moth.imageClassifierCurrently">
           Image classifier is currently <b>disabled</b>. Please go to app{' '}
-          <b>Settings</b> to turn it on.
+          <b>
+            <T>settings.title</T>
+          </b>{' '}
+          to turn it on.
         </T>
       ),
       buttons: [
         {
-          text: 'OK, got it',
+          text: 'common.okGotIt',
           role: 'cancel',
           cssClass: 'primary',
         },
@@ -132,12 +135,12 @@ const HomeMain = ({
 
   const showCopyOptions = () => {
     alert({
-      header: 'Copy species',
-      message: 'Are you sure want to copy previous survey species list?',
+      header: 'common.copySpecies',
+      message: 'common.sureWantCopy',
       buttons: [
-        { text: 'Cancel' },
+        { text: 'common.cancel' },
         {
-          text: 'Copy',
+          text: 'common.copy',
           role: 'destructive',
           handler: copyPreviousSurveyTaxonList,
         },
@@ -186,7 +189,7 @@ const HomeMain = ({
         {!isDisabled && (
           <IonItemOptions side="end">
             <IonItemOption color="danger" onClick={deleteSpeciesWrap}>
-              <T>Delete</T>
+              <T>common.delete</T>
             </IonItemOption>
           </IonItemOptions>
         )}
@@ -235,7 +238,7 @@ const HomeMain = ({
                 !isUnidentifiedSpeciesLengthMoreThanFive() && 'full-width'
               )}
             >
-              <T>Not classified</T>
+              <T>moth.notClassified</T>
             </div>
             {!isUnidentifiedSpeciesLengthMoreThanFive() && (
               <div className="count">{count}</div>
@@ -247,7 +250,7 @@ const HomeMain = ({
                 color="secondary"
                 className="py-1 text-sm"
               >
-                Identify All
+                moth.identifyAll
               </Button>
             )}
           </div>
@@ -262,7 +265,7 @@ const HomeMain = ({
     if (!sample.occurrences.length && !sample.shallowSpeciesList.length) {
       return (
         <IonList id="list" lines="full">
-          <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
+          <InfoBackgroundMessage>common.noSpeciesAdded</InfoBackgroundMessage>
         </IonList>
       );
     }
@@ -326,11 +329,11 @@ const HomeMain = ({
           <div className="rounded-list">
             <div className="list-divider gap-4">
               <div>
-                <T>Count</T>
+                <T>common.count</T>
               </div>
               <div className="flex w-full justify-between">
                 <div>
-                  <T>Species</T>
+                  <T>common.species</T>
                 </div>
                 <div>{count}</div>
               </div>
@@ -352,7 +355,7 @@ const HomeMain = ({
           <MenuAttrItem
             routerLink={`${match.url}/details`}
             icon={locationOutline}
-            label="Survey Details"
+            label="common.surveyDetails"
           />
         </div>
       </IonList>
@@ -366,7 +369,7 @@ const HomeMain = ({
             onLongPress={showCopyOptionsWrap}
             prefix={<IonIcon src={addCircleOutline} className="size-5" />}
           >
-            Species
+            common.species
           </Button>
 
           <Button

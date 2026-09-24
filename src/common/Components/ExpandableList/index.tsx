@@ -25,7 +25,7 @@ const ExpandableList = ({ children, maxItems = MAX_ITEMS }: Props) => {
       {hidingMoreThanTwo && !showMore && (
         <IonItem className="expandable-list" onClick={() => setShowMore(true)}>
           <IonLabel>
-            <T>Show more</T>
+            <T>common.showMore</T>
           </IonLabel>
         </IonItem>
       )}
@@ -37,7 +37,7 @@ const ExpandableList = ({ children, maxItems = MAX_ITEMS }: Props) => {
       {hidingMoreThanTwo && showMore && (
         <IonItem className="expandable-list" onClick={() => setShowMore(false)}>
           <IonLabel>
-            <T>Show less</T>
+            <T>common.showLess</T>
           </IonLabel>
         </IonItem>
       )}

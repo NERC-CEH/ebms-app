@@ -55,6 +55,8 @@ export {
 } from '@flumens/models/dist/Indicia/helpers';
 export {
   default as DrupalUserModel,
+  DrupalUserError,
+  DrupalUserErrorCode,
   type Data as DrupalUserModelData,
   type Options as DrupalUserModelOptions,
 } from '@flumens/models/dist/Drupal/User';
@@ -102,10 +104,8 @@ export {
   usePhotoDeletePrompt,
 } from '@flumens/ionic/dist/components/PhotoPicker';
 export { default as MenuAttrItem } from '@flumens/ionic/dist/components/MenuAttrItem';
-export {
-  default as MenuAttrItemFromModel,
-  type MenuProps as MenuAttrItemFromModelMenuProps,
-} from '@flumens/ionic/dist/components/MenuAttrItemFromModel';
+export { default as MenuAttrItemFromModel } from '@flumens/ionic/dist/components/MenuAttrItemFromModel';
+export { type MenuProps as MenuAttrItemFromModelMenuProps } from '@flumens/ionic/dist/components/MenuAttrItemFromModel';
 export { default as MapHeader } from '@flumens/ionic/dist/components/Map/Header';
 export { default as LongPressFabButton } from '@flumens/ionic/dist/components/LongPressFabButton';
 export { useToast, useAlert, useLoader } from '@flumens/ionic/dist/hooks';

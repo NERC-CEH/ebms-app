@@ -24,6 +24,12 @@ appConfig.plugins.unshift(
   new webpack.EnvironmentPlugin(development)
 );
 
+// Linked @flumens/models must use the app's Drizzle instance.
+appConfig.resolve.alias = {
+  ...appConfig.resolve.alias,
+  'drizzle-orm': require('path').dirname(require.resolve('drizzle-orm')),
+};
+
 // For capacitor sqlite
 appConfig.resolve.fallback = { crypto: false };
 appConfig.plugins.push(

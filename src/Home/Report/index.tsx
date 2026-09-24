@@ -24,7 +24,7 @@ const Report = () => {
 
   const refreshReport = async () => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 

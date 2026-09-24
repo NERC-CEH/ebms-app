@@ -12,12 +12,12 @@ import { Survey } from 'Survey/common/config';
 async function showDraftAlert(alert: ReturnType<typeof useAlert>) {
   const alertWrap = (resolve: (continueDraft: boolean) => void) => {
     alert({
-      header: 'Draft',
-      message: 'Previous survey draft exists, would you like to continue it?',
+      header: 'common.draft',
+      message: 'survey.previousSurveyDraft',
       backdropDismiss: false,
       buttons: [
-        { text: 'Start new', handler: () => resolve(false) },
-        { text: 'Continue', handler: () => resolve(true) },
+        { text: 'survey.startNew', handler: () => resolve(false) },
+        { text: 'common.continue', handler: () => resolve(true) },
       ],
     });
   };
@@ -67,7 +67,7 @@ const useShowGPSPermissionDialog = () => {
         error instanceof Error &&
         error.message === GPS_DISABLED_ERROR_MESSAGE
       ) {
-        throw new HandledError(GPS_DISABLED_ERROR_MESSAGE);
+        throw new HandledError('common.locationServicesDisabled');
       }
     }
 
@@ -85,12 +85,15 @@ const useShowGPSPermissionDialog = () => {
 
     const prompt = (resolve: (granted: boolean) => void) => {
       alert({
-        header: 'Location permission',
-        message:
-          'To automatically set species locations and track your route, even if the device is locked. Allow the app to use your location.',
+        header: 'survey.locationPermission',
+        message: 'survey.automaticallySetSpecies',
         buttons: [
-          { text: 'Deny', role: 'destructive', handler: () => resolve(false) },
-          { text: 'Accept', handler: () => resolve(true) },
+          {
+            text: 'survey.deny',
+            role: 'destructive',
+            handler: () => resolve(false),
+          },
+          { text: 'survey.accept', handler: () => resolve(true) },
         ],
       });
     };

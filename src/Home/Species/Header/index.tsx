@@ -28,7 +28,7 @@ const Header = ({ onSearch, toggleFilter, filters, filterOptions }: Props) => {
         <IonToolbar className="species-toolbar">
           <div className="flex items-center justify-between">
             <div className="text-center font-bold text-2xl ml-8 w-full my-0! text-primary-800">
-              <T>Guide</T>
+              <T>common.guide</T>
             </div>
 
             <Button

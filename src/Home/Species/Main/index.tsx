@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { informationCircleOutline } from 'ionicons/icons';
+import { Trans as T, useTranslation } from 'react-i18next';
 import { InAppReview } from '@capacitor-community/in-app-review';
 import { Main, ModalHeader, InfoMessage, UserFeedbackRequest } from '@flumens';
 import { IonModal, IonIcon } from '@ionic/react';
 import config from 'common/config';
 import type { CountryCode } from 'common/config/countries';
 import speciesProfiles, { Species as SpeciesType } from 'common/data/profiles';
-import { translateSpeciesDescription } from 'common/translations/translator';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import userModel from 'models/user';
@@ -28,6 +28,7 @@ type Props = {
 };
 
 const MainComponent = ({ searchPhrase = '', filters }: Props) => {
+  const { t } = useTranslation();
   const [species, setSpecies] = useState<SpeciesType | null>(null);
 
   const showSpeciesModal = (id: number) => {
@@ -49,10 +50,12 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
       return isPresent;
     };
     const byNotEmptyContent = (sp: SpeciesType) => {
-      const hasDescription = translateSpeciesDescription(sp.descriptionKey);
+      const description = sp.descriptionKey
+        ? t(sp.descriptionKey as never, { ns: 'species' as never })
+        : null;
       const hasImage = sp?.imageCopyright?.length;
 
-      return hasImage && hasDescription;
+      return hasImage && description && description !== sp.descriptionKey;
     };
     const bySpeciesId = (sp1: SpeciesType, sp2: SpeciesType) =>
       sp1.sortId! - sp2.sortId!;
@@ -94,9 +97,7 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
   const getSpeciesGrid = (speciesList: SpeciesType[]) => {
     if (!speciesList.length)
       return (
-        <InfoBackgroundMessage>
-          Sorry, no species were found.
-        </InfoBackgroundMessage>
+        <InfoBackgroundMessage>species.sorryNoSpecies</InfoBackgroundMessage>
       );
 
     const getSpeciesElement = (sp: SpeciesType) => {
@@ -186,15 +187,15 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
           color="tertiary"
           inline
         >
-          This guide is still in development. It covers{' '}
-          {{ countrySpeciesCount } as unknown as string} butterfly species out
-          of the {{ totalSpeciesCountryCount } as unknown as string} species in
-          your selected country.
+          <T
+            i18nKey="species.guideCoverage"
+            values={{ countrySpeciesCount, totalSpeciesCountryCount }}
+          />
         </InfoMessage>
       )}
 
       <IonModal isOpen={!!species} backdropDismiss={false}>
-        <ModalHeader title="Species" onClose={hideSpeciesModal} />
+        <ModalHeader title="common.species" onClose={hideSpeciesModal} />
         {species && (
           <SpeciesProfile
             species={species}

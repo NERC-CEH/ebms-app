@@ -44,12 +44,12 @@ const DetailsMain = ({ sample }: Props) => {
       <BlockContext value={{ isDisabled }}>
         <IonList lines="full">
           <h3 className="list-title">
-            <T>Trapping Site</T>
+            <T>bait.trappingSite</T>
           </h3>
           <div className="rounded-list">
             <MenuAttrItem
               routerLink={`${url}/location`}
-              label="Site"
+              label="common.site"
               icon={locationOutline}
               skipValueTranslation
               value={locationName}
@@ -65,11 +65,11 @@ const DetailsMain = ({ sample }: Props) => {
 
         <IonList lines="full">
           <h3 className="list-title">
-            <T>Dates</T>
+            <T>bait.dates</T>
           </h3>
           <div className="rounded-list">
             <MenuDateAttr
-              label="Date"
+              label="common.date"
               value={sample.data.date}
               onChange={val => (sample.data.date = val)} // eslint-disable-line no-return-assign
               isDisabled={sample.isUploaded}
@@ -96,7 +96,7 @@ const DetailsMain = ({ sample }: Props) => {
 
         <IonList lines="full">
           <h3 className="list-title">
-            <T>Other</T>
+            <T>common.other</T>
           </h3>
           <div className="rounded-list">
             <Block record={sample.data} block={collectorsAttr} />
@@ -109,9 +109,7 @@ const DetailsMain = ({ sample }: Props) => {
               block={fieldCodeStartAttr}
               isDisabled={sample.metadata.completedDetails}
             />
-            <InfoMessage inline>
-              First specimen code for survey, letter then number, e.g. A1
-            </InfoMessage>
+            <InfoMessage inline>bait.firstSpecimenCode</InfoMessage>
             <Block record={sample.data} block={surveyCommentAttr} />
           </div>
         </IonList>

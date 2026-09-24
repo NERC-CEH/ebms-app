@@ -1,7 +1,15 @@
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TypeOf } from 'zod';
-import { useToast, useLoader, Page, Header, device } from '@flumens';
+import {
+  useToast,
+  useLoader,
+  Page,
+  Header,
+  device,
+  DrupalUserError,
+  DrupalUserErrorCode as E,
+} from '@flumens';
 import { NavContext } from '@ionic/react';
 import userModel, { UserModel } from 'models/user';
 import Main from './Main';
@@ -17,7 +25,7 @@ const LoginController = () => {
   const onSuccessReturn = () => {
     const { email } = userModel.data;
 
-    toast.success(t('Successfully logged in as: {{email}}', { email }), {
+    toast.success(t('user.successfullyLoggedAs', { email }), {
       skipTranslation: true,
     });
 
@@ -26,21 +34,26 @@ const LoginController = () => {
 
   async function onLogin({ email, password }: Details) {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
 
     try {
       await userModel.logIn(email.trim(), password);
 
       onSuccessReturn();
     } catch (err) {
-      if (err instanceof Error) {
-        toast.error(err.message);
+      if (err instanceof DrupalUserError) {
+        toast.error(
+          err.code === E.InvalidCredentials
+            ? 'user.incorrectCredentials'
+            : err.message
+        );
+      } else {
+        toast.error(err);
       }
-      console.error(err);
     }
 
     loader.hide();
@@ -48,7 +61,7 @@ const LoginController = () => {
 
   return (
     <Page id="user-login">
-      <Header className="ion-no-border" title="Login" />
+      <Header className="ion-no-border" title="common.login" />
       <Main onSubmit={onLogin} />
     </Page>
   );

@@ -25,18 +25,20 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
 
   if (!groups.length)
     return (
-      <InfoBackgroundMessage>
-        You haven't joined any projects yet. Go to the "All projects" tab to
-        join a project.
-        <br />
-        <br />
-        Pull the page down to refresh the list.
+      <InfoBackgroundMessage skipTranslation>
+        <T i18nKey="survey.noJoinedProjects">
+          You haven't joined any projects yet. Go to the "All projects" tab to
+          join a project.
+          <br />
+          <br />
+          Pull the page down to refresh the list.
+        </T>
       </InfoBackgroundMessage>
     );
 
   const getOption = (group: Group | null) => {
     if (!group)
-      return <RadioInput.Option value="" label="Not linked to any project" />;
+      return <RadioInput.Option value="" label="survey.notLinkedAny" />;
 
     return (
       <IonItemSliding key={group?.id} className="rounded-md mt-1">
@@ -50,12 +52,12 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
             <div className="flex items-center gap-2 m-1 empty:hidden opacity-90">
               {!!group.taxonListCids.length && (
                 <Badge size="small" className="bg-neutral-50 ring-neutral-200">
-                  Has species lists
+                  common.hasSpeciesLists
                 </Badge>
               )}
               {!!group.locationCids.length && (
                 <Badge size="small" className="bg-neutral-50 ring-neutral-200">
-                  Has sites
+                  survey.hasSites
                 </Badge>
               )}
             </div>
@@ -64,7 +66,7 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
 
         <IonItemOptions side="end">
           <IonItemOption color="danger" onClick={() => onLeave(group)}>
-            <T>Leave</T>
+            <T>survey.leave</T>
           </IonItemOption>
         </IonItemOptions>
       </IonItemSliding>

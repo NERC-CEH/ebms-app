@@ -78,13 +78,13 @@ const Sites = ({
               <IonSegment onIonChange={onSegmentClick} value={segment}>
                 <IonSegmentButton value="user">
                   <IonLabel className="ion-text-wrap">
-                    <T>My sites</T>
+                    <T>locations.mySites</T>
                   </IonLabel>
                 </IonSegmentButton>
 
                 <IonSegmentButton value="group">
                   <IonLabel className="ion-text-wrap">
-                    <T>Project</T>
+                    <T>common.project</T>
                   </IonLabel>
                 </IonSegmentButton>
               </IonSegment>
@@ -111,7 +111,7 @@ const Sites = ({
           )}
           {segment === 'group' && !groupLocations.length && (
             <InfoBackgroundMessage>
-              This project doesn't have any sites.
+              locations.projectNoSites
             </InfoBackgroundMessage>
           )}
         </IonContent>

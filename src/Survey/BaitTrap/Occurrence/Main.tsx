@@ -83,7 +83,7 @@ const OccurrenceMain = ({ occurrence }: Props) => {
 
         <IonList lines="full">
           <h3 className="list-title">
-            <T>Species photos</T>
+            <T>bait.speciesPhotos</T>
           </h3>
           <div className="rounded-list">
             <PhotoPicker model={occurrence} />

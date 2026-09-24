@@ -36,18 +36,18 @@ const HeaderComponent = ({
 
     if (isGPSTracking && !runGPS) {
       alert({
-        header: 'Warning',
-        message: 'Are you sure you want to turn off the GPS tracking?',
+        header: 'common.warning',
+        message: 'area.confirmTurnOff',
         buttons: [
           {
-            text: 'Cancel',
+            text: 'common.cancel',
             role: 'cancel',
             handler: () => {
               setIsGPSTracking(true);
             },
           },
           {
-            text: 'Turn off',
+            text: 'area.turnOff',
             cssClass: 'secondary',
             handler: () => {
               setIsGPSTracking(false);
@@ -61,12 +61,11 @@ const HeaderComponent = ({
 
     if (!isGPSTracking && isAreaShape) {
       alert({
-        header: 'Warning',
-        message:
-          'To resume the GPS tracking, you must first remove the drawn area from the map.',
+        header: 'common.warning',
+        message: 'area.resumeGpsTracking',
         buttons: [
           {
-            text: 'OK',
+            text: 'common.ok',
             role: 'cancel',
             handler: () => setIsGPSTracking(false),
           },
@@ -100,7 +99,9 @@ const HeaderComponent = ({
     </>
   );
 
-  return <Header title="Area" rightSlot={GPSToggle} subheader={subheader} />;
+  return (
+    <Header title="common.area" rightSlot={GPSToggle} subheader={subheader} />
+  );
 };
 
 export default observer(HeaderComponent);

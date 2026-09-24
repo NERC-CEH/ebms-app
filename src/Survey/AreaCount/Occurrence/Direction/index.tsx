@@ -18,19 +18,11 @@ import './styles.scss';
 
 const unsupportedDevice = (alert: ReturnType<typeof useAlert>) => {
   alert({
-    header: 'Unsupported device',
-    message: (
-      <T>
-        Unfortunately, it looks like your device doesn't have the necessary
-        sensor for the compass to function correctly. The compass relies on this
-        sensor to detect the earth's magnetic field and determine your device's
-        orientation relative to magnetic north. Thus, you will not be able to
-        use compass on this device.
-      </T>
-    ),
+    header: 'area.unsupportedDevice',
+    message: <T>area.unfortunatelyItLooks</T>,
     buttons: [
       {
-        text: 'OK, got it',
+        text: 'common.okGotIt',
         cssClass: 'primary',
       },
     ],
@@ -138,7 +130,7 @@ const Direction = () => {
 
   const showCompassModal = () => (
     <IonButton onClick={toggleModal}>
-      <T>Compass</T>
+      <T>area.compass</T>
     </IonButton>
   );
   return (
@@ -146,7 +138,7 @@ const Direction = () => {
       {startCompass && (
         <CompassModal hideCompass={toggleModal} value={rotationValue} />
       )}
-      <Header title="Direction" rightSlot={showCompassModal()} />
+      <Header title="area.direction" rightSlot={showCompassModal()} />
 
       <Main className="pb-ion-s-10">
         <Attr

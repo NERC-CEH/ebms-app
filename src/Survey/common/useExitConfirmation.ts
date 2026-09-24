@@ -14,13 +14,12 @@ const useExitConfirmation = () => {
   return () =>
     new Promise<boolean>(resolve => {
       alert({
-        header: 'Exit Survey',
+        header: 'survey.exitSurvey',
         backdropDismiss: false,
-        message:
-          'Are you sure you want to leave? Your survey will be saved as a draft.',
+        message: 'survey.confirmLeaveSurvey',
         buttons: [
-          { text: 'Cancel', handler: () => resolve(false) },
-          { text: 'Exit', handler: () => resolve(true) },
+          { text: 'common.cancel', handler: () => resolve(false) },
+          { text: 'survey.exit', handler: () => resolve(true) },
         ],
       });
     });

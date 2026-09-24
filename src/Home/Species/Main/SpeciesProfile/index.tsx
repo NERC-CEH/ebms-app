@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Trans as T } from 'react-i18next';
+import { Trans as T, useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
@@ -8,7 +8,6 @@ import { Main, useOnBackButton, ImageWithBackground, Badge } from '@flumens';
 import '@ionic/react/css/ionic-swiper.css';
 import { CountryCode } from 'common/config/countries';
 import { Species, AbundanceCode, abundances } from 'common/data/profiles';
-import { translateSpeciesDescription } from 'common/translations/translator';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
 import './styles.scss';
@@ -20,6 +19,7 @@ type Props = {
 };
 
 const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
+  const { t } = useTranslation();
   const [gallery, setGallery] = useState(false);
 
   const closeGallery = () => setGallery(false);
@@ -64,7 +64,10 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
     );
   };
 
-  const { commonName } = species;
+  const { commonName, descriptionKey } = species;
+  const description = descriptionKey
+    ? t(descriptionKey as never, { ns: 'species' as never })
+    : null;
 
   return (
     <>
@@ -89,17 +92,17 @@ const SpeciesProfile = ({ species, country, hideSpeciesModal }: Props) => {
           {status && (
             <div>
               <h3 className="species-label mr-3 inline">
-                <T>Status</T>:
+                <T>common.status</T>:
               </h3>
               <Badge>{status}</Badge>
             </div>
           )}
 
           <h3 className="species-label mt-5!">
-            <T>Description</T>:
+            <T>common.description</T>:
           </h3>
 
-          <p>{translateSpeciesDescription(species.descriptionKey)}</p>
+          <p>{description !== descriptionKey ? description : null}</p>
         </div>
       </Main>
     </>

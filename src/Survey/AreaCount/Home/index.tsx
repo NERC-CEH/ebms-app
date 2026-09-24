@@ -102,18 +102,18 @@ const useDeleteSpeciesPrompt = () => {
     const prompt = (resolve: (confirmed: boolean) => void) => {
       const name = taxon.scientificName;
       alert({
-        header: t('Delete'),
+        header: t('common.delete'),
         skipTranslation: true,
-        message: t('Are you sure you want to delete {{taxon}} ?', {
+        message: t('common.confirmDeleteTaxon', {
           taxon: name,
         }),
         buttons: [
           {
-            text: t('Cancel'),
+            text: t('common.cancel'),
             role: 'cancel',
           },
           {
-            text: t('Delete'),
+            text: t('common.delete'),
             role: 'destructive',
             handler: () => resolve(true),
           },
@@ -167,7 +167,7 @@ function useShowSpeciesGroupList(sample?: Sample) {
       );
 
       alert({
-        header: 'Which species groups have you counted?',
+        header: 'area.whichSpeciesGroups',
         cssClass: 'speciesGroupAlert',
         message: (
           <Checkbox
@@ -181,9 +181,9 @@ function useShowSpeciesGroupList(sample?: Sample) {
         ),
 
         buttons: [
-          { text: 'Cancel', role: 'cancel', handler: resolve },
+          { text: 'common.cancel', role: 'cancel', handler: resolve },
           {
-            text: 'Confirm',
+            text: 'common.confirm',
             handler: () => resolve(groupList.map(g => Number.parseInt(g, 10))),
           },
         ],
@@ -348,9 +348,7 @@ const HomeController = () => {
   };
 
   const toggleSpeciesSort = () => {
-    const newSortOrder = appModel.cycleSpeciesListSortOrder();
-
-    toast.success(`Changed list ordering to ${newSortOrder}.`, {
+    toast.success(appModel.cycleSpeciesListSortOrder(), {
       color: 'light',
       position: 'bottom',
       duration: 1000,
@@ -383,7 +381,7 @@ const HomeController = () => {
 
     const previousSurvey = getPreviousSurvey();
     if (!previousSurvey) {
-      toast.warn('Sorry, no previous survey to copy species from.');
+      toast.warn('common.sorryNoPrevious');
       return;
     }
 
@@ -419,10 +417,10 @@ const HomeController = () => {
     sample.shallowSpeciesList.sort(speciesNameSort);
 
     if (!newSpeciesList.length) {
-      toast.warn('Sorry, no species were found to copy.');
+      toast.warn('common.sorryNoSpecies');
     } else {
       toast.success(
-        t('You have successfully copied {{speciesCount}} species.', {
+        t('common.haveSuccessfullyCopied', {
           speciesCount: newSpeciesList.length,
         })
       );
@@ -564,7 +562,7 @@ const HomeController = () => {
     sample.save();
 
     await ref?.current?.closeOpened();
-    toast.success('Copied!', { color: 'tertiary' });
+    toast.success('area.copied', { color: 'tertiary' });
   };
 
   const isDisabled = !!sample.syncedAt;

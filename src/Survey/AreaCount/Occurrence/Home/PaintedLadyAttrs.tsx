@@ -38,7 +38,7 @@ const PaintedLadyAttrs = ({ occurrence }: Props) => {
         <MenuAttrItem
           routerLink={`${url}/wing`}
           value={<PaintedLadyWing wings={wing || []} />}
-          label="Wing condition"
+          label="area.wingCondition"
           icon={butterflyIcon}
           className="text-capitalize wing-value"
           disabled={isDisabled}
@@ -50,7 +50,7 @@ const PaintedLadyAttrs = ({ occurrence }: Props) => {
         <MenuAttrItem
           routerLink={`${url}/behaviour`}
           value={<PaintedLadyBehaviour behaviour={behaviour || ''} showLabel />}
-          label="Behaviour"
+          label="area.behaviour"
           icon={butterflyIcon}
           className="behaviour-value"
           disabled={isDisabled}

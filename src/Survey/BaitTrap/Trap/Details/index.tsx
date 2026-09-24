@@ -33,13 +33,13 @@ const TrapDetailsController = () => {
 
   const nextButton = subSample.metadata.completedDetails ? null : (
     <HeaderButton onClick={onFinish} isInvalid={isInvalid}>
-      Next
+      common.next
     </HeaderButton>
   );
 
   return (
     <Page id="survey-bait-trap-trap-detail">
-      <Header title="Trap details" rightSlot={nextButton} />
+      <Header title="bait.trapDetails" rightSlot={nextButton} />
       <Main subSample={subSample} />
     </Page>
   );

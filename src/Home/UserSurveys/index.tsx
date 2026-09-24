@@ -62,7 +62,7 @@ const UserSurveyComponent = () => {
             <IonSegmentButton value="pending">
               <div className="w-full flex-col py-1">
                 <div className="line-clamp-2 text-wrap">
-                  <T>Pending</T>
+                  <T>records.pending</T>
                 </div>
                 {getPendingSurveysCount()}
               </div>
@@ -70,13 +70,13 @@ const UserSurveyComponent = () => {
 
             <IonSegmentButton value="uploaded">
               <div className="line-clamp-2 w-full text-wrap py-1">
-                <T>Uploaded</T>
+                <T>records.uploaded</T>
               </div>
             </IonSegmentButton>
 
             <IonSegmentButton value="map">
               <div className="line-clamp-2 w-full text-wrap py-1">
-                <T>Map</T>
+                <T>records.map</T>
               </div>
             </IonSegmentButton>
           </IonSegment>

@@ -1,13 +1,7 @@
 import { useContext } from 'react';
 import type { TFunction } from 'i18next';
 import { Trans as T, useTranslation } from 'react-i18next';
-import {
-  useToast,
-  getRelativeDate,
-  VirtualList,
-  Button,
-  type ItemProps,
-} from '@flumens';
+import { useToast, VirtualList, Button, type ItemProps } from '@flumens';
 import { IonItemDivider, IonLabel, IonList, NavContext } from '@ionic/react';
 import samplesCollection, {
   uploadAllSamples,
@@ -15,6 +9,7 @@ import samplesCollection, {
 import Sample, { bySurveyDate } from 'models/sample';
 import userModel from 'models/user';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import RelativeDate from 'Components/RelativeDate';
 import Survey from './Survey';
 
 async function uploadAllSamplesWrap(
@@ -24,14 +19,14 @@ async function uploadAllSamplesWrap(
   console.log('Settings:Menu:Controller: sending all samples.');
 
   if (!userModel.isLoggedIn()) {
-    toast.warn('Please log in first to upload the records.');
+    toast.warn('records.pleaseLogFirst');
     return;
   }
 
   try {
     const affectedRecordsCount = await uploadAllSamples();
     toast.success(
-      t('Uploading {{count}} record', { count: affectedRecordsCount }),
+      t('records.uploadingCountRecord', { count: affectedRecordsCount }),
       { skipTranslation: true }
     );
   } catch (error) {
@@ -82,7 +77,7 @@ const getSurveys = (surveys: Sample[], showUploadAll?: boolean) => {
       return (
         <IonItemDivider key={item.date} style={style} mode="ios">
           <IonLabel>
-            <T>{getRelativeDate(item.date)}</T>
+            <RelativeDate date={item.date} />
           </IonLabel>
           {item.count > 1 && <IonLabel slot="end">{item.count}</IonLabel>}
         </IonItemDivider>
@@ -138,8 +133,8 @@ const Pending = () => {
 
   if (!surveys.length) {
     return (
-      <InfoBackgroundMessage className="mb-[10vh] mt-[20vh]">
-        No finished pending surveys.
+      <InfoBackgroundMessage className="mb-[10vh] mt-[20vh]" skipTranslation>
+        <T>records.noFinishedPending</T>
       </InfoBackgroundMessage>
     );
   }
@@ -157,7 +152,7 @@ const Pending = () => {
           onPress={onUploadAll}
           preventDefault
         >
-          Upload All
+          records.uploadAll
         </Button>
       )}
     </IonList>

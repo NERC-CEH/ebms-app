@@ -61,6 +61,7 @@ import {
   getDefaultTaxonCount,
   SpeciesSummary,
 } from 'Survey/common/taxonSortFunctions';
+import getSurveyValueKey from 'Survey/common/translationKeys';
 import CountdownClock from './CountdownClock';
 import './styles.scss';
 
@@ -70,10 +71,10 @@ const showCopyTip = (alert: ReturnType<typeof useAlert>) => {
   if (!appModel.data.showCopyHelpTip) return;
 
   alert({
-    header: 'Tip: Copy attributes',
+    header: 'area.tipCopyAttributes',
     cssClass: 'copy-attributes-alert',
     message: (
-      <T>
+      <T i18nKey="area.copyListEntry">
         To copy a list entry swipe it to the right and press
         <div className="alert-icon-wrapper">
           <IonIcon color="light" icon={copyOutline} />
@@ -83,7 +84,7 @@ const showCopyTip = (alert: ReturnType<typeof useAlert>) => {
     ),
     buttons: [
       {
-        text: 'OK, got it',
+        text: 'common.okGotIt',
         role: 'cancel',
         cssClass: 'primary',
       },
@@ -170,12 +171,12 @@ const AreaCount = ({
 
   const showCopyOptions = () => {
     alert({
-      header: 'Copy species',
-      message: 'Are you sure want to copy previous survey species list?',
+      header: 'common.copySpecies',
+      message: 'common.sureWantCopy',
       buttons: [
-        { text: 'Cancel' },
+        { text: 'common.cancel' },
         {
-          text: 'Copy',
+          text: 'common.copy',
           role: 'destructive',
           handler: copyPreviousSurveyTaxonList,
         },
@@ -210,7 +211,7 @@ const AreaCount = ({
           onPress={increaseCountWrap}
           onLongPress={increase5xCountWrap}
         >
-          Add
+          common.add
         </Button>
       );
     }
@@ -231,7 +232,7 @@ const AreaCount = ({
         onLongPress={showCopyOptionsWrap}
         prefix={<IonIcon src={addCircleOutline} className="size-5" />}
       >
-        Add species
+        common.addSpecies
       </Button>
     );
   };
@@ -282,7 +283,7 @@ const AreaCount = ({
         {!isDisabled && !sample.isSingleSpeciesSurvey() && (
           <IonItemOptions side="end">
             <IonItemOption color="danger" onClick={deleteSpeciesWrap}>
-              <T>Delete</T>
+              <T>common.delete</T>
             </IonItemOption>
           </IonItemOptions>
         )}
@@ -298,7 +299,7 @@ const AreaCount = ({
     if (hasNoSpecies)
       return (
         <IonList lines="full">
-          <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
+          <InfoBackgroundMessage>common.noSpeciesAdded</InfoBackgroundMessage>
         </IonList>
       );
 
@@ -373,11 +374,11 @@ const AreaCount = ({
           <div className="rounded-list">
             <div className="list-divider gap-6">
               <div>
-                <T>Count</T>
+                <T>common.count</T>
               </div>
               <div className="flex w-full justify-between">
                 <div>
-                  <T>Species</T>
+                  <T>common.species</T>
                 </div>
                 <div>{count}</div>
               </div>
@@ -448,7 +449,11 @@ const AreaCount = ({
             <div className="flex w-full items-center justify-start gap-4 py-1 pl-4">
               <div className="shrink-0">{prettyTime}</div>
               <div className="flex w-full flex-wrap justify-start gap-x-3 gap-y-1 align-middle">
-                {speciesStage && <Badge>{speciesStage}</Badge>}
+                {speciesStage && (
+                  <Badge skipTranslation>
+                    <T i18nKey={getSurveyValueKey(speciesStage) as never} />
+                  </Badge>
+                )}
                 <PaintedLadyWing wings={wing || []} />
                 <PaintedLadyBehaviour behaviour={behaviour || ''} />
                 <PaintedLadyDirection direction={String(direction || '')} />
@@ -463,7 +468,7 @@ const AreaCount = ({
           {!isDisabled && (
             <IonItemOptions side="end">
               <IonItemOption color="danger" onClick={deleteSubSample}>
-                <T>Delete</T>
+                <T>common.delete</T>
               </IonItemOption>
             </IonItemOptions>
           )}
@@ -481,9 +486,12 @@ const AreaCount = ({
       sample.samples.length === 1 && sample.samples[0].hasZeroAbundance();
     if (hasZeroAbundance) {
       return (
-        <InfoBackgroundMessage>
-          You don't have any <b>{{ prettySpeciesName } as unknown as string}</b>{' '}
-          records in your list.
+        <InfoBackgroundMessage skipTranslation>
+          <T
+            i18nKey="area.noSpeciesRecords"
+            values={{ prettySpeciesName }}
+            components={{ species: <b /> }}
+          />
         </InfoBackgroundMessage>
       );
     }
@@ -506,15 +514,14 @@ const AreaCount = ({
     if (sample.metadata.saved && !sample.isDisabled) {
       return (
         <>
-          <InfoMessage inline>
-            Please check if the recording area is correct before sending the
-            record.
-          </InfoMessage>
+          <InfoMessage inline>area.pleaseCheckIf</InfoMessage>
 
           {hasLongSections && (
-            <InfoMessage inline>
-              We have noticed that your survey has <b>long sections</b>. Please
-              make sure it is a correct <b>location</b>!
+            <InfoMessage inline skipTranslation>
+              <T i18nKey="area.longSections">
+                We have noticed that your survey has <b>long sections</b>.
+                Please make sure it is a correct <b>location</b>!
+              </T>
             </InfoMessage>
           )}
         </>
@@ -535,12 +542,11 @@ const AreaCount = ({
     }
 
     alert({
-      header: 'Tip: Adding Species',
-      message:
-        'You can bulk copy your previous species lists by long-pressing the Add Species button.',
+      header: 'area.tipAddingSpecies',
+      message: 'area.canBulkCopy',
       buttons: [
         {
-          text: 'OK, got it',
+          text: 'common.okGotIt',
           role: 'cancel',
           cssClass: 'primary',
         },
@@ -565,7 +571,7 @@ const AreaCount = ({
         <IonItem className="menu-attr-item" detailIcon={flagOutline} detail>
           <IonIcon icon={timeOutline} slot="start" mode="md" />
           <IonLabel>
-            <T>Duration</T>
+            <T>area.duration</T>
           </IonLabel>
           <IonLabel slot="end">
             {formattedStartTime} – {surveyEndTime}
@@ -594,7 +600,7 @@ const AreaCount = ({
       >
         <IonIcon icon={timeOutline} slot="start" mode="md" />
         <IonLabel>
-          <T>Duration</T>
+          <T>area.duration</T>
         </IonLabel>
         <CountdownClock isPaused={isTimerPaused} countdown={timerEndTime} />
       </IonItem>
@@ -624,14 +630,14 @@ const AreaCount = ({
 
       <IonList lines="full">
         <h3 className="list-title">
-          <T>Details</T>
+          <T>common.details</T>
         </h3>
         <div className="rounded-list">
           {isDisabled && (
             <IonItem className="menu-attr-item [--inner-padding-end:5px]">
               <IonIcon icon={informationCircleOutline} slot="start" mode="md" />
               <IonLabel>
-                <T>Record ID</T>
+                <T>area.recordId</T>
               </IonLabel>
               <IonLabel slot="end">{sample.id}</IonLabel>
             </IonItem>
@@ -639,7 +645,7 @@ const AreaCount = ({
           <MenuAttrItem
             routerLink={`${match.url}/area`}
             icon={mapOutline}
-            label="Area"
+            label="common.area"
             value={areaPretty}
             skipValueTranslation
           />
@@ -653,7 +659,7 @@ const AreaCount = ({
           <MenuAttrItem
             routerLink={`${match.url}/details`}
             icon={clipboardOutline}
-            label="Additional Details"
+            label="area.additionalDetails"
           />
         </div>
 

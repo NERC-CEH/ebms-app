@@ -59,7 +59,7 @@ const EditOccurrence = ({
     <Main id="area-count-occurrence-edit" className="pb-ion-s-10">
       <IonList lines="full">
         <h3 className="list-title">
-          <T>Details</T>
+          <T>common.details</T>
         </h3>
         <div className="rounded-list">
           {!isPreciseSurvey && (
@@ -88,7 +88,7 @@ const EditOccurrence = ({
               routerLink={`${sampleBaseUrl}/location`}
               disabled={isDisabled}
               icon={locationOutline}
-              label="Location"
+              label="common.location"
               value={locationPretty}
               skipValueTranslation
             />
@@ -106,7 +106,7 @@ const EditOccurrence = ({
                 routerLink={`${baseURL}/stage`}
                 disabled={isDisabled}
                 icon={caterpillarIcon}
-                label="Stage"
+                label="common.stage"
                 value={stage}
               />
             </AttrLock>
@@ -124,7 +124,7 @@ const EditOccurrence = ({
                 routerLink={`${baseURL}/dragonflyStage`}
                 disabled={isDisabled}
                 icon={caterpillarIcon}
-                label="Stage"
+                label="common.stage"
                 value={dragonflyStage}
               />
             </AttrLock>
@@ -147,9 +147,7 @@ const EditOccurrence = ({
 
         {isPaintedLadySurvey && (
           <>
-            <h3 className="list-title">
-              <T>{speciesName}</T>
-            </h3>
+            <h3 className="list-title">{speciesName}</h3>
             <div className="rounded-list">
               <PaintedLadyAttrs occurrence={occurrence} />
             </div>
@@ -157,7 +155,7 @@ const EditOccurrence = ({
         )}
 
         <h3 className="list-title">
-          <T>Species Photo</T>
+          <T>common.speciesPhoto</T>
         </h3>
         <div className="rounded-list">
           <PhotoPicker model={occurrence} />

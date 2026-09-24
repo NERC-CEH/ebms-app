@@ -25,15 +25,15 @@ function useDeleteSurveyPrompt(sample: Sample) {
 
   function deleteSurvey() {
     alert({
-      header: 'Delete',
-      message: 'Are you sure you want to delete this survey?',
+      header: 'common.delete',
+      message: 'records.confirmDeleteSurvey',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'common.cancel',
           role: 'cancel',
         },
         {
-          text: 'Delete',
+          text: 'common.delete',
           role: 'destructive',
           handler: () => sample.destroy(),
         },
@@ -187,7 +187,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
         <div className="flex w-full flex-nowrap items-center gap-2 pl-4">
           <div className="flex w-full flex-col content-center gap-1 overflow-hidden">
             <h3 className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap font-bold! my-0!">
-              <T>{survey.label}</T>
+              <T i18nKey={survey.label as never} />
             </h3>
             <div>{getInfo()}</div>
           </div>
@@ -203,7 +203,7 @@ const Survey = ({ sample, uploadIsPrimary, style }: Props) => {
       {allowDeletion && (
         <IonItemOptions side="end">
           <IonItemOption color="danger" onClick={showDeleteSurveyPrompt}>
-            <T>Delete</T>
+            <T>common.delete</T>
           </IonItemOption>
         </IonItemOptions>
       )}

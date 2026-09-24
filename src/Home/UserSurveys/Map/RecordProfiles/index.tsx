@@ -10,6 +10,7 @@ import { Gallery, ElasticOccurrence, ImageWithBackground } from '@flumens';
 import { IonCardHeader, IonCardContent, IonIcon } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
 import config from 'common/config';
+import getSurveyValueKey from 'Survey/common/translationKeys';
 import MultiPageCustomAlert from './MultiPageCustomAlert';
 import './styles.scss';
 
@@ -23,10 +24,11 @@ type Props = {
 };
 
 const statuses = {
-  C: 'Unconfirmed',
-  R: 'Rejected',
-  V: 'Accepted',
+  C: 'records.unconfirmed',
+  R: 'records.rejected',
+  V: 'records.accepted',
 };
+
 // Verification status 1: Accepted, Rejected or Unconfirmed
 // Verification status 2: Correct, Considered correct, Unable to verify, Incorrect, Not reviewed, or Plausible
 
@@ -147,26 +149,26 @@ const Profile = (record: ElasticOccurrence) => {
         <IonCardContent>
           <div className="record-attribute">
             <span>
-              <T>Status</T>:
+              <T>common.status</T>:
             </span>{' '}
-            <T>{statusText}</T>
+            <T i18nKey={statusText as never} />
           </div>
           <div className="record-attribute">
             <span>
-              <T>Date</T>:
+              <T>common.date</T>:
             </span>{' '}
             {formattedDate}
           </div>
           <div className="record-attribute">
             <span>
-              <T>Location</T>:
+              <T>common.location</T>:
             </span>{' '}
             {gridRef}
           </div>
           {count && (
             <div className="record-attribute">
               <span>
-                <T>Count</T>:
+                <T>common.count</T>:
               </span>{' '}
               {count}
             </div>
@@ -174,9 +176,13 @@ const Profile = (record: ElasticOccurrence) => {
           {stage && (
             <div className="record-attribute">
               <span>
-                <T>Stage</T>:
+                <T>common.stage</T>:
               </span>{' '}
-              <T>{stage}</T>
+              {getSurveyValueKey(stage) ? (
+                <T i18nKey={getSurveyValueKey(stage) as never} />
+              ) : (
+                stage
+              )}
             </div>
           )}
         </IonCardContent>

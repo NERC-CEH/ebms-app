@@ -199,9 +199,25 @@ async function seedRecordingData(page: Page) {
 type Fixtures = {
   homePage: Page;
   recordingPage: Page;
+  missingTranslationKeys: void;
 };
 
 export const test = base.extend<Fixtures>({
+  missingTranslationKeys: [
+    async ({ page }, use) => {
+      const missingKeys = new Set<string>();
+      page.on('console', message => {
+        const match = message.text().match(/^🇬🇧: (.+)$/);
+        if (match) missingKeys.add(match[1]);
+      });
+
+      await use();
+
+      expect([...missingKeys]).toEqual([]);
+    },
+    { auto: true },
+  ],
+
   homePage: async ({ page }, use) => {
     await mockRemoteReads(page);
     await completeFirstRun(page);

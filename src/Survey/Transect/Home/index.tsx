@@ -103,7 +103,7 @@ const TransectHomeController = () => {
   return (
     <Page id="transect-edit">
       <Header
-        title="Transect"
+        title="transect.transect"
         rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
         subheader={sample.data.training && <TrainingHeader />}
         defaultHref="/home/user-surveys"

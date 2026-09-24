@@ -20,16 +20,14 @@ const UploadedRecordInfoMessage = ({ sample }: Props) => {
       skipTranslation
       className="m-3 max-w-xl"
     >
-      <T>
-        This record has been submitted and cannot be edited within this App.
-      </T>
+      <T>survey.recordHasBeen</T>
       <Button
         href={`${config.backend.url}/${webForm}?sample_id=${sample.id}`}
         fill="outline"
         color="tertiary"
         className="mx-auto mt-4 max-w-sm py-1.5 text-sm"
       >
-        eBMS website
+        common.ebmsWebsite
       </Button>
     </InfoMessage>
   );

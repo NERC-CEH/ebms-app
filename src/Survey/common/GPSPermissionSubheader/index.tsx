@@ -20,7 +20,7 @@ const GPSPermissionSubheader = () => {
           error instanceof Error &&
           error.message === GPS_DISABLED_ERROR_MESSAGE
         ) {
-          throw new HandledError(GPS_DISABLED_ERROR_MESSAGE);
+          throw new HandledError('common.locationServicesDisabled');
         }
       }
 
@@ -44,7 +44,7 @@ const GPSPermissionSubheader = () => {
       {permissionDisabled && (
         <IonToolbar className="gps-subheader">
           <IonTitle className="gps-permission">
-            <T>Location Services (GPS) are disabled</T>
+            <T>survey.locationServicesGps</T>
           </IonTitle>
         </IonToolbar>
       )}

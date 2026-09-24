@@ -33,11 +33,15 @@ const useDeleteSpecies = () => {
 
   return (occ: Occurrence) => {
     alert({
-      header: 'Delete',
-      message: 'Are you sure you want to remove this entry?',
+      header: 'common.delete',
+      message: 'bait.confirmRemoveEntry',
       buttons: [
-        { text: 'Cancel', role: 'cancel' },
-        { text: 'Delete', role: 'destructive', handler: () => occ.destroy() },
+        { text: 'common.cancel', role: 'cancel' },
+        {
+          text: 'common.delete',
+          role: 'destructive',
+          handler: () => occ.destroy(),
+        },
       ],
     });
   };
@@ -75,7 +79,7 @@ const TrapHomeMain = ({ subSample }: Props) => {
         {!isDisabled && (
           <IonItemOptions side="end">
             <IonItemOption color="danger" onClick={() => onDeleteSpecies(occ)}>
-              <T>Delete</T>
+              <T>common.delete</T>
             </IonItemOption>
           </IonItemOptions>
         )}
@@ -87,7 +91,10 @@ const TrapHomeMain = ({ subSample }: Props) => {
     <Main className="pb-ion-s-10">
       <IonList lines="full">
         <div className="rounded-list">
-          <MenuAttrItem routerLink={`${url}/details`} label="Trap details" />
+          <MenuAttrItem
+            routerLink={`${url}/details`}
+            label="bait.trapDetails"
+          />
         </div>
       </IonList>
 
@@ -98,7 +105,7 @@ const TrapHomeMain = ({ subSample }: Props) => {
           onPress={onAddSpecies}
           prefix={<IonIcon src={addCircleOutline} className="size-5" />}
         >
-          Add species
+          common.addSpecies
         </Button>
       )}
 
@@ -107,17 +114,17 @@ const TrapHomeMain = ({ subSample }: Props) => {
           <div className="rounded-list">
             <div className="list-divider gap-6">
               <div>
-                <T>Code</T>
+                <T>bait.code</T>
               </div>
               <div className="flex w-full">
-                <T>Species</T>
+                <T>common.species</T>
               </div>
             </div>
             {subSample.occurrences.map(getListItem)}
           </div>
         </IonList>
       ) : (
-        <InfoBackgroundMessage>No species added</InfoBackgroundMessage>
+        <InfoBackgroundMessage>common.noSpeciesAdded</InfoBackgroundMessage>
       )}
     </Main>
   );

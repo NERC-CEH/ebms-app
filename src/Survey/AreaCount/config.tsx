@@ -53,7 +53,7 @@ const getSetWeather = (sample: Sample) => async () => {
 const survey: Survey = {
   id: 565,
   name: 'precise-area',
-  label: '15min Count',
+  label: 'common.minCount',
   webForm: 'mydata/samples/edit',
 
   attrs: {

@@ -34,10 +34,10 @@ const defaults: Attrs = {
 
 export class UserModel extends DrupalUserModel<Attrs> {
   static registerSchema = object({
-    email: z.string().email('Please fill in'),
-    password: z.string().min(1, 'Please fill in'),
-    firstName: z.string().min(1, 'Please fill in'),
-    lastName: z.string().min(1, 'Please fill in'),
+    email: z.string().email('common.required'),
+    password: z.string().min(1, 'common.required'),
+    firstName: z.string().min(1, 'common.required'),
+    lastName: z.string().min(1, 'common.required'),
   });
 
   userSpeciesReport: IObservableArray<ReportSpecies> = observable([]);
@@ -114,7 +114,7 @@ export const useUserStatusCheck = () => {
 
   const check = async () => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return false;
     }
 
@@ -124,18 +124,16 @@ export const useUserStatusCheck = () => {
     }
 
     if (!userModel.data.verified) {
-      await loader.show('Please wait...');
+      await loader.show('common.pleaseWait');
       const isVerified = await userModel.checkActivation();
       loader.hide();
 
       if (!isVerified) {
         const resendVerificationEmail = async () => {
-          await loader.show('Please wait...');
+          await loader.show('common.pleaseWait');
           try {
             await userModel.resendVerificationEmail();
-            toast.success(
-              'A new verification email was successfully sent now. If you did not receive the email, then check your Spam or Junk email folders.'
-            );
+            toast.success('common.newVerificationEmail');
           } catch (error) {
             toast.error(error as Error);
           }
@@ -143,16 +141,16 @@ export const useUserStatusCheck = () => {
         };
 
         alert({
-          header: "Looks like your email hasn't been verified yet.",
-          message: 'Should we resend the verification email?',
+          header: 'common.looksLikeEmail',
+          message: 'common.shouldWeResend',
           buttons: [
             {
-              text: 'Cancel',
+              text: 'common.cancel',
               role: 'cancel',
               cssClass: 'secondary',
             },
             {
-              text: 'Resend',
+              text: 'common.resend',
               cssClass: 'primary',
               handler: resendVerificationEmail,
             },

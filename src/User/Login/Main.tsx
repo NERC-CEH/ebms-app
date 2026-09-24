@@ -38,7 +38,7 @@ const LoginMain = ({ onSubmit }: Props) => {
           color="tertiary"
           prefix={<IonIcon src={informationCircleOutline} className="size-5" />}
         >
-          Please sign in with your eBMS account or register.
+          user.pleaseSignEbms
         </InfoMessage>
 
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -51,7 +51,7 @@ const LoginMain = ({ onSubmit }: Props) => {
               name="email"
               prefix={<IonIcon icon={mailOutline} className="size-5" />}
               type="email"
-              placeholder="Email"
+              placeholder="user.email"
             />
             <Input.Form
               control={control}
@@ -65,7 +65,7 @@ const LoginMain = ({ onSubmit }: Props) => {
                 />
               }
               type={showPassword ? 'text' : 'password'}
-              placeholder="Password"
+              placeholder="user.password"
             />
           </div>
 
@@ -74,20 +74,20 @@ const LoginMain = ({ onSubmit }: Props) => {
             color="primary"
             onPress={() => handleSubmit(onSubmit)()}
           >
-            Sign in
+            user.signIn
           </Button>
         </form>
 
         <div className="rounded-list mt-8">
           <IonItem routerLink="/user/register" detail>
-            <T>Register</T>
+            <T>common.register</T>
           </IonItem>
           <IonItem
             routerLink="/user/reset"
             detail
             className="[--ion-item-border-color:transparent]"
           >
-            <T>Forgot password?</T>
+            <T>user.forgotPassword</T>
           </IonItem>
         </div>
       </div>

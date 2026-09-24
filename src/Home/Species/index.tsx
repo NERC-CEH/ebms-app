@@ -29,9 +29,9 @@ const Species = () => {
     }
 
     alert({
-      header: 'Tip: Finding Help',
+      header: 'species.tipFindingHelp',
       message: (
-        <T>
+        <T i18nKey="species.pleaseVisitGuide">
           Please visit the Guide{' '}
           <IonIcon icon={bookOutline} style={{ marginBottom: '-3px' }} /> and
           Help{' '}
@@ -41,7 +41,7 @@ const Species = () => {
       ),
       buttons: [
         {
-          text: 'OK, got it',
+          text: 'common.okGotIt',
           role: 'cancel',
           cssClass: 'primary',
         },

@@ -11,9 +11,9 @@ function showLogoutConfirmationDialog(
   alert: ReturnType<typeof useAlert>
 ) {
   alert({
-    header: 'Logout',
+    header: 'menu.logout',
     message: (
-      <T>
+      <T i18nKey="menu.confirmLogoutPending">
         Are you sure you want to logout?
         <br />
         <br />
@@ -23,12 +23,12 @@ function showLogoutConfirmationDialog(
     ),
     buttons: [
       {
-        text: 'Cancel',
+        text: 'common.cancel',
         role: 'cancel',
         cssClass: 'secondary',
       },
       {
-        text: 'Logout',
+        text: 'menu.logout',
         cssClass: 'primary',
         handler: () => callback(),
       },
@@ -52,11 +52,11 @@ const Controller = ({ ...restProps }) => {
   const isLoggedIn = userModel.isLoggedIn();
 
   const checkActivation = async () => {
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
     try {
       await userModel.checkActivation();
       if (!userModel.data.verified) {
-        toast.warn('The user has not been activated or is blocked.');
+        toast.warn('menu.userHasNot');
       }
     } catch (error) {
       toast.error(error as Error);
@@ -65,12 +65,10 @@ const Controller = ({ ...restProps }) => {
   };
 
   const resendVerificationEmail = async () => {
-    await loader.show('Please wait...');
+    await loader.show('common.pleaseWait');
     try {
       await userModel.resendVerificationEmail();
-      toast.success(
-        'A new verification email was successfully sent now. If you did not receive the email, then check your Spam or Junk email folders.'
-      );
+      toast.success('common.newVerificationEmail');
     } catch (error) {
       toast.error(error as Error);
     }

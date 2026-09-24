@@ -39,13 +39,17 @@ const DetailsController = () => {
 
   const nextButton = sample.isDetailsComplete() ? null : (
     <HeaderButton onClick={onFinish} isInvalid={isInvalid}>
-      Next
+      common.next
     </HeaderButton>
   );
 
   return (
     <Page id="survey-bait-trap-detail">
-      <Header title="Survey Details" rightSlot={nextButton} onLeave={onExit} />
+      <Header
+        title="common.surveyDetails"
+        rightSlot={nextButton}
+        onLeave={onExit}
+      />
       <Main sample={sample} />
     </Page>
   );

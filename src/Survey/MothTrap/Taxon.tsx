@@ -148,7 +148,7 @@ const Taxon = () => {
 
   return (
     <Page id="moth-survey-taxasearch">
-      <Header title="Species" />
+      <Header title="common.species" />
       <Main className="pb-ion-s-10">
         <TaxonSearch
           onSpeciesSelected={onSpeciesSelected}

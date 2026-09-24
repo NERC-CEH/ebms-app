@@ -33,14 +33,14 @@ const Site = () => {
 
   const refreshSites = async () => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
 
     const isUserOK = await checkUserStatus();
     if (!isUserOK) return;
 
-    if (!userLocations.length) await loader.show('Please wait...');
+    if (!userLocations.length) await loader.show('common.pleaseWait');
 
     try {
       await locations.fetchRemote();
@@ -59,7 +59,7 @@ const Site = () => {
 
   const onCreateSite = () => {
     if (!device.isOnline) {
-      toast.warn("Sorry, looks like you're offline.");
+      toast.warn('common.sorryLooksLike');
       return;
     }
     modal.current?.present();
@@ -79,7 +79,7 @@ const Site = () => {
       return false;
 
     try {
-      await loader.show('Please wait...');
+      await loader.show('common.pleaseWait');
 
       const location = new Location({
         skipStore: true,
@@ -89,7 +89,7 @@ const Site = () => {
 
       await refreshSites();
 
-      toast.success('Successfully saved a location.');
+      toast.success('common.locationSaved');
     } catch (error) {
       toast.error(error as Error);
       loader.hide();
@@ -106,7 +106,7 @@ const Site = () => {
       isInvalid={!device.isOnline && !locations.isSynchronising}
       className="text-sm"
     >
-      Add
+      common.add
     </HeaderButton>
   );
 
@@ -118,7 +118,7 @@ const Site = () => {
     <>
       <IonPage id="moth-sites" ref={page}>
         <Header
-          title="Moth traps"
+          title="locations.mothTraps"
           rightSlot={addButton}
           subheader={gpsPermissionSubheader}
         />

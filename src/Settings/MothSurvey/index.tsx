@@ -7,25 +7,25 @@ import appModel from 'models/app';
 import './styles.scss';
 
 const SUNSET_OFFSET_OPTIONS = [
-  { value: '-45', label: '-45 mins' },
-  { value: '-40', label: '-40 mins' },
-  { value: '-35', label: '-35 mins' },
-  { value: '-30', label: '-30 mins' },
-  { value: '-25', label: '-25 mins' },
-  { value: '-20', label: '-20 mins' },
-  { value: '-15', label: '-15 mins' },
-  { value: '-10', label: '-10 mins' },
-  { value: '-5', label: '-5 mins' },
-  { value: '0', label: 'No offset' },
-  { value: '5', label: '+5 mins' },
-  { value: '10', label: '+10 mins' },
-  { value: '15', label: '+15 mins' },
-  { value: '20', label: '+20 mins' },
-  { value: '25', label: '+25 mins' },
-  { value: '30', label: '+30 mins' },
-  { value: '35', label: '+35 mins' },
-  { value: '40', label: '+40 mins' },
-  { value: '45', label: '+45 mins' },
+  { value: '-45', label: 'settings.offset.minus45' },
+  { value: '-40', label: 'settings.offset.minus40' },
+  { value: '-35', label: 'settings.offset.minus35' },
+  { value: '-30', label: 'settings.offset.minus30' },
+  { value: '-25', label: 'settings.offset.minus25' },
+  { value: '-20', label: 'settings.offset.minus20' },
+  { value: '-15', label: 'settings.offset.minus15' },
+  { value: '-10', label: 'settings.offset.minus10' },
+  { value: '-5', label: 'settings.offset.minus5' },
+  { value: '0', label: 'settings.noOffset' },
+  { value: '5', label: 'settings.offset.plus5' },
+  { value: '10', label: 'settings.offset.plus10' },
+  { value: '15', label: 'settings.offset.plus15' },
+  { value: '20', label: 'settings.offset.plus20' },
+  { value: '25', label: 'settings.offset.plus25' },
+  { value: '30', label: 'settings.offset.plus30' },
+  { value: '35', label: 'settings.offset.plus35' },
+  { value: '40', label: 'settings.offset.plus40' },
+  { value: '45', label: 'settings.offset.plus45' },
 ];
 
 const SUNRISE_OFFSET_OPTIONS = SUNSET_OFFSET_OPTIONS;
@@ -57,31 +57,28 @@ const MothSurveySettings = () => {
 
   return (
     <Page id="moth-survey-settings">
-      <Header title="Moth Survey Settings" />
+      <Header title="settings.mothSurveySettings" />
 
       <Main>
         <IonList lines="full">
           <div className="rounded-list">
             <Toggle
               prefix={<IonIcon src={cameraOutline} className="size-6" />}
-              label="Use image identification"
+              label="settings.imageIdentification"
               defaultSelected={useImageIdentifier}
               onChange={onTurnOffImageIdentifierToggle}
             />
-            <InfoMessage inline>
-              We will help you to identify species using our species image
-              classifier.
-            </InfoMessage>
+            <InfoMessage inline>settings.weWillHelp</InfoMessage>
             <SelectInput
               prefix={<IonIcon icon={moonOutline} className="size-6" />}
-              label="Sunset offset"
+              label="settings.sunsetOffset"
               value={`${mothSunsetOffset}`}
               onChange={onSunsetOffsetChange}
               options={SUNSET_OFFSET_OPTIONS}
             />
             <SelectInput
               prefix={<IonIcon icon={sunnyOutline} className="size-6" />}
-              label="Sunrise offset"
+              label="settings.sunriseOffset"
               value={`${mothSunriseOffset}`}
               onChange={onSunriseOffsetChange}
               options={SUNRISE_OFFSET_OPTIONS}

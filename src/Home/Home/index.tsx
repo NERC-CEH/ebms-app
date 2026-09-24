@@ -70,34 +70,34 @@ const Home = () => {
           <div className="flex flex-col gap-3 max-w-4xl mx-auto px-5">
             <FancyButton
               icon={countIcon}
-              label="15min Count"
+              label="common.minCount"
               path="/survey/precise-area"
-              description="Count for 15 minutes anywhere"
+              description="home.count15Minutes"
             />
             <FancyButton
               icon={transectIcon}
-              label="eBMS Transect"
+              label="common.ebmsTransect"
               path="/survey/transect"
-              description="Walk a fixed transect"
+              description="home.walkFixedTransect"
             />
             <FancyButton
               icon={mothIcon}
-              label="Moth survey"
+              label="common.mothSurvey"
               path="/survey/moth"
-              description="Record a moth-trap survey"
+              description="home.recordMothTrap"
             />
             <FancyButton
               icon={singleCountIcon}
-              label="15min Single Species Count"
+              label="common.minSingleSpecies"
               path="/survey/precise-single-species-area"
-              description="Count a single species for 15 minutes"
+              description="home.countSingleSpecies"
             />
             {(appModel.data.useExperiments || !isPlatform('hybrid')) && (
               <FancyButton
                 icon={baitTrapIcon}
-                label="Bait-trap survey"
+                label="home.baitTrapSurvey"
                 path="/survey/bait-trap"
-                description="Record a fixed bait-trap survey"
+                description="home.recordFixedBait"
               />
             )}
           </div>

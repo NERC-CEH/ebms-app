@@ -39,18 +39,18 @@ const useDeleteSpeciesPrompt = () => {
     const prompt = (resolve: (confirmed: boolean) => void) => {
       const taxonName = taxon.scientificName;
       alert({
-        header: t('Delete'),
+        header: t('common.delete'),
         skipTranslation: true,
-        message: t('Are you sure you want to delete {{taxon}} ?', {
+        message: t('common.confirmDeleteTaxon', {
           taxon: taxonName,
         }),
         buttons: [
           {
-            text: t('Cancel'),
+            text: t('common.cancel'),
             role: 'cancel',
           },
           {
-            text: t('Delete'),
+            text: t('common.delete'),
             role: 'destructive',
             handler: () => resolve(true),
           },
@@ -132,9 +132,7 @@ const HomeController = () => {
   };
 
   const toggleSpeciesSort = () => {
-    const newSortOrder = appModel.cycleSpeciesListSortOrder();
-
-    toast.success(`Changed list ordering to ${newSortOrder}.`, {
+    toast.success(appModel.cycleSpeciesListSortOrder(), {
       color: 'light',
       position: 'bottom',
       duration: 1000,
@@ -345,7 +343,7 @@ const HomeController = () => {
 
     const previousSurvey = getPreviousSurvey();
     if (!previousSurvey) {
-      toast.warn('Sorry, no previous survey to copy species from.');
+      toast.warn('common.sorryNoPrevious');
       return;
     }
 
@@ -380,10 +378,10 @@ const HomeController = () => {
     sample.shallowSpeciesList.sort(speciesNameSort);
 
     if (!newSpeciesList.length) {
-      toast.warn('Sorry, no species were found to copy.');
+      toast.warn('common.sorryNoSpecies');
     } else {
       toast.success(
-        i18n.t('You have successfully copied {{speciesCount}} species.', {
+        i18n.t('common.haveSuccessfullyCopied', {
           speciesCount: newSpeciesList.length,
         }),
         { skipTranslation: true }
@@ -408,7 +406,7 @@ const HomeController = () => {
   return (
     <Page id="survey-moth-home">
       <Header
-        title="Moth-trap survey"
+        title="moth.mothTrapSurvey"
         rightSlot={<SurveyHeaderButton onClick={onSubmit} sample={sample} />}
         subheader={trainingModeSubheader}
         defaultHref="/home/user-surveys"

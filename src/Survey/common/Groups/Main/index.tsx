@@ -66,13 +66,13 @@ const GroupsMain = ({
         <IonSegment onIonChange={onSegmentClick} value={segment}>
           <IonSegmentButton value="joined">
             <IonLabel className="ion-text-wrap">
-              <T>My projects</T>
+              <T>survey.myProjects</T>
             </IonLabel>
           </IonSegmentButton>
 
           <IonSegmentButton value="all">
             <IonLabel className="ion-text-wrap">
-              <T>All projects</T>
+              <T>survey.allProjects</T>
             </IonLabel>
           </IonSegmentButton>
         </IonSegment>

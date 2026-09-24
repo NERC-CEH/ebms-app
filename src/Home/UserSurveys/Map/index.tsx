@@ -197,7 +197,7 @@ const Map = () => {
     >
       {!userIsLoggedIn && (
         <div className="login-message">
-          <T>
+          <T i18nKey="records.needLoginAccount">
             You need to <Link to="/user/login">login</Link> to your account to
             be able to view the records.
           </T>

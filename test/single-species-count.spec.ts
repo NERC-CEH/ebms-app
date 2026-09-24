@@ -30,6 +30,18 @@ test('completes a Painted Lady single-species count', async ({
   await expect(
     occurrence.getByText('Behaviour', { exact: true })
   ).toBeVisible();
+
+  await occurrence.locator('.photo-picker button').click();
+  await expect(
+    recordingPage.getByText('Choose a method to upload a photo')
+  ).toBeVisible();
+  await expect(
+    recordingPage.getByRole('button', { name: 'Gallery' })
+  ).toBeVisible();
+  await expect(
+    recordingPage.getByRole('button', { name: 'Camera' })
+  ).toBeVisible();
+  await recordingPage.getByRole('button', { name: 'Cancel' }).click();
   await occurrence.getByRole('textbox', { name: 'Comment' }).fill('Migrating');
   await occurrence.getByText('Wing condition').click();
   await recordingPage.getByText('Fresh', { exact: true }).click();

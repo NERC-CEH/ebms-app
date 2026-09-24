@@ -18,6 +18,7 @@ const languages = {
   'it-IT': { name: 'Italiano', ISO_639_2: 'ita' },
   'ja-JP': { name: '日本語', ISO_639_2: 'jpn' },
   'lt-LT': { name: 'Lietuvių', ISO_639_2: 'lit' },
+  'lv-LV': { name: 'Latviešu', ISO_639_2: 'lav' },
   'mi-NZ': { name: 'Māori', ISO_639_2: 'mri' },
   'nl-NL': { name: 'Nederlands', ISO_639_2: 'nld' },
   'pl-PL': { name: 'Polski', ISO_639_2: 'pol' },

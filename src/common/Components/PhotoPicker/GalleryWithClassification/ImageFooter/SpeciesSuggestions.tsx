@@ -32,12 +32,9 @@ const SpeciesSuggestions = ({
     if (identifierFoundNoSpecies)
       return (
         <div className="mt-5 p-8">
-          <T>Sorry, we could not identify this species.</T>
+          <T>common.identificationFailed</T>
           <div>
-            <T>
-              Make sure that your species is in the centre of the image and is
-              in focus.
-            </T>
+            <T>common.identificationPhotoTip</T>
           </div>
         </div>
       );
@@ -66,7 +63,7 @@ const SpeciesSuggestions = ({
             }}
             fill="outline"
           >
-            Select
+            common.select
           </Button>
         </div>
       );
@@ -77,17 +74,14 @@ const SpeciesSuggestions = ({
     return (
       <div className="mx-2 mt-5">
         <h2 className="mx-2 text-xl font-bold!">
-          <T>Suggestions</T>:
+          <T>common.suggestions</T>:
         </h2>
         <div className="mx-2 my-1 opacity-80 text-sm">
           <div>
-            <T>Note that AI confidence levels are not absolute.</T>
+            <T>common.noteAiConfidence</T>
           </div>
           <div className="mt-1">
-            <T>
-              Supplement identifications with additional evidence where
-              possible.
-            </T>
+            <T>common.addIdentificationEvidence</T>
           </div>
         </div>
         <div className="flex flex-col">{suggestions}</div>
@@ -101,7 +95,8 @@ const SpeciesSuggestions = ({
   if (media.isIdentifying) {
     return (
       <div className="flex items-center justify-center gap-3 rounded-md border border-white bg-black/70 p-3 text-white">
-        <T>Identifying...</T> <IonSpinner color="light" className="size-5" />
+        <T>common.identifying</T>{' '}
+        <IonSpinner color="light" className="size-5" />
       </div>
     );
   }
@@ -113,7 +108,7 @@ const SpeciesSuggestions = ({
         onPress={() => identifySpecies?.(true)}
         fill="outline"
       >
-        Get species suggestions
+        common.getSpeciesSuggestions
       </Button>
     );
   }
@@ -135,7 +130,7 @@ const SpeciesSuggestions = ({
       fill="outline"
       prefix={<ClassificationStatus media={media} />}
     >
-      Suggestions
+      common.suggestions
     </Button>
   );
 };

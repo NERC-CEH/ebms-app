@@ -58,21 +58,21 @@ const HomeController = () => {
         <IonTabButton tab="home/home" href="/home/home">
           <IonIcon icon={homeOutline} />
           <IonLabel>
-            <T>Home</T>
+            <T>home.home</T>
           </IonLabel>
         </IonTabButton>
 
         <IonTabButton tab="home/species" href="/home/species">
           <IonIcon icon={butterflyIcon} />
           <IonLabel>
-            <T>Guide</T>
+            <T>common.guide</T>
           </IonLabel>
         </IonTabButton>
 
         <IonTabButton tab="home/report" href="/home/report">
           <IonIcon icon={statsChartOutline} />
           <IonLabel>
-            <T>Reports</T>
+            <T>home.reports</T>
           </IonLabel>
         </IonTabButton>
 
@@ -80,14 +80,14 @@ const HomeController = () => {
           <IonIcon icon={personOutline} />
           <IonLabel>
             <PendingSurveysBadge className="absolute bottom-1/3 left-2/4" />
-            <T>Surveys</T>
+            <T>common.surveys</T>
           </IonLabel>
         </IonTabButton>
 
         <IonTabButton tab="menu" href="/home/menu">
           <IonIcon icon={menuOutline} />
           <IonLabel>
-            <T>Menu</T>
+            <T>common.menu</T>
           </IonLabel>
         </IonTabButton>
       </IonTabBar>

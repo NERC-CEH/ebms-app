@@ -13,17 +13,16 @@ import Main from './Main';
 function useDeleteSurveyPrompt(alert: ReturnType<typeof useAlert>) {
   const deleteSurveyPromt = (resolve: (param: boolean) => void) => {
     alert({
-      header: 'Delete Survey',
-      message:
-        'Warning - This will discard the survey information you have entered so far.',
+      header: 'area.deleteSurvey',
+      message: 'area.warningWillDiscard',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'common.cancel',
           role: 'cancel',
           handler: () => resolve(false),
         },
         {
-          text: 'Discard',
+          text: 'area.discard',
           role: 'destructive',
           handler: () => resolve(true),
         },
@@ -39,7 +38,7 @@ function useDeleteSurveyPrompt(alert: ReturnType<typeof useAlert>) {
 const cancelButtonWrap = (onDeleteSurvey: () => void) => (
   <IonButtons slot="start">
     <IonButton onClick={onDeleteSurvey}>
-      <T>Cancel</T>
+      <T>common.cancel</T>
     </IonButton>
   </IonButtons>
 );
@@ -121,7 +120,7 @@ const DetailsController = () => {
 
   const startTimerButton = !hasTimerStarted && (
     <HeaderButton onClick={onStartTimer} isInvalid={isInvalid}>
-      Start Count
+      area.startCount
     </HeaderButton>
   );
 
@@ -131,7 +130,7 @@ const DetailsController = () => {
   return (
     <Page id="survey-area-count-detail-edit">
       <Header
-        title="Additional Details"
+        title="area.additionalDetails"
         BackButton={
           !hasTimerStarted ? () => cancelButtonWrap(onDeleteSurvey) : undefined
         }
