@@ -359,6 +359,7 @@ const HomeController = () => {
   const getPreviousSurvey = () => {
     const sortedSavedSamples = [...samplesCollection]
       .sort(byCreateTime)
+      .filter(smp => smp.isStored) // don't need remote since can be incomplete
       .reverse();
     const matchingSampleId = (s: Sample) => s.cid === sample.cid;
 
