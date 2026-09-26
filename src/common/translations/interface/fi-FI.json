@@ -131,6 +131,7 @@
   "common": {
     "about": "Lisätietoja",
     "absent": "Puuttuu",
+    "abundance": "",
     "account": "Käyttäjätili",
     "add": "Lisää",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Ladattu",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": ""
   },
   "reports": {

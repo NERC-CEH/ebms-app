@@ -131,6 +131,7 @@
   "common": {
     "about": "О програму",
     "absent": "Није присутна",
+    "abundance": "",
     "account": "Налог",
     "add": "Додај",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Послато",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Шаљем {{count}} налаз",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "Шаљем {{count}} налаза",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "Шаљем {{count}} налаза"
   },
   "reports": {

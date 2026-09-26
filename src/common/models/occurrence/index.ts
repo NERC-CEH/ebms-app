@@ -9,6 +9,7 @@ import {
 import config from 'common/config';
 import speciesGroups from 'common/data/groups';
 import { Suggestion } from 'common/services/waarneming';
+import { abundanceAttr } from 'Survey/AreaCount/config';
 import { PaintedLadyAttrs } from 'Survey/AreaCount/configSpecies';
 import { MachineInvolvement } from 'Survey/MothTrap/config';
 import { Survey } from 'Survey/common/config';
@@ -52,6 +53,7 @@ export type Data = Omit<OccurrenceData, 'taxon'> & {
   dragonflyStage?: string;
   identifier?: string;
   count?: number;
+  [abundanceAttr.id]?: number;
   'count-outside'?: number;
   timeOfSighting?: string;
 } & PaintedLadyAttrs;

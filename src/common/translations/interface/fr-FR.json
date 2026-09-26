@@ -131,6 +131,7 @@
   "common": {
     "about": "À propos ",
     "absent": "Absent",
+    "abundance": "",
     "account": "Compte",
     "add": "Ajouter",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Téléchargé",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Enregistrement {{count}} en cours de téléchargement",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "Enregistrements {{count}} en cours de téléchargement",
     "uploadingCountRecord_other": " {{count}} participations en cours de téléchargement"
   },
   "reports": {

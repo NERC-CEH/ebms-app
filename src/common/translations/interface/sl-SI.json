@@ -131,6 +131,7 @@
   "common": {
     "about": "O aplikaciji",
     "absent": "Odsotna",
+    "abundance": "",
     "account": "Račun",
     "add": "Dodaj",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Naloženo",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Prenos {{štetje}} podatkov",
-    "uploadingCountRecord_two": "Prenos {{štetje}} podatkov",
-    "uploadingCountRecord_few": "Prenos {{štetje}} podatkov",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "Prenos {{štetje}} podatkov"
   },
   "reports": {

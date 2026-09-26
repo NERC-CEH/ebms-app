@@ -131,6 +131,7 @@
   "common": {
     "about": "Sobre",
     "absent": "Absent",
+    "abundance": "",
     "account": "Compte",
     "add": "Afegir",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Carregat",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Enviant {{count}} registre",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "Enviant {{count}} registres ",
     "uploadingCountRecord_other": "Enviant {{count}} registres "
   },
   "reports": {

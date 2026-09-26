@@ -131,6 +131,7 @@
   "common": {
     "about": "Chi siamo",
     "absent": "Assente",
+    "abundance": "",
     "account": "Account",
     "add": "Aggiungi",
     "addIdentificationEvidence": "Integrare le identificazioni con ulteriori prove, ove possibile.",
@@ -679,9 +680,6 @@
     "uploaded": "Caricati",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Caricamento {{count}} compionamenti",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "Caricamento {{count}} campionamenti  ",
     "uploadingCountRecord_other": "Caricamento {{count}} campionamenti  "
   },
   "reports": {

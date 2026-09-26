@@ -5,9 +5,12 @@ import {
   getGeomWKT,
   isValidLocation,
   timeFormat,
+  type NumberInputConf,
   type Location,
 } from '@flumens';
+import { IonIcon } from '@ionic/react';
 import config from 'common/config';
+import numberIcon from 'common/images/number.svg';
 import appModel from 'common/models/app';
 import { assignIfMissing } from 'common/models/utils';
 import { fetchWeather } from 'common/services/openWeather';
@@ -49,6 +52,15 @@ const getSetWeather = (sample: Sample) => async () => {
   assignIfMissing(sample, 'windSpeed', weatherValues.windSpeed);
   assignIfMissing(sample, 'cloud', weatherValues.cloud);
 };
+
+export const abundanceAttr = {
+  id: 'occAttr:780',
+  type: 'numberInput',
+  title: 'common.abundance',
+  appearance: 'counter',
+  prefix: <IonIcon src={numberIcon} className="size-6" />,
+  validation: { min: 1 },
+} as const satisfies NumberInputConf;
 
 const survey: Survey = {
   id: 565,
@@ -177,7 +189,7 @@ const survey: Survey = {
         taxon: taxonAttr,
         comment: { block: commentAttr },
 
-        count: { remote: { id: 780 } },
+        [abundanceAttr.id]: { block: abundanceAttr },
 
         stage: stageAttr,
         dragonflyStage: dragonflyStageAttr,
@@ -197,7 +209,7 @@ const survey: Survey = {
             stage: !isDragonfly ? 'Adult' : undefined,
             dragonflyStage: isDragonfly ? 'Adult' : undefined,
             taxon,
-            count: 1,
+            [abundanceAttr.id]: 1,
             timeOfSighting: new Date().toISOString(),
           },
         });

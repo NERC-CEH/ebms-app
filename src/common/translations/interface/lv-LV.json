@@ -131,6 +131,7 @@
   "common": {
     "about": "Par",
     "absent": "Nav konstatēts",
+    "abundance": "",
     "account": "Konts",
     "add": "Pievienot",
     "addIdentificationEvidence": "Ja iespējams, papildiniet sugas noteikšanu ar papildu informāciju.",
@@ -677,12 +678,9 @@
     "unconfirmed": "Nav apstiprināts",
     "uploadAll": "Augšupielādēt visu",
     "uploaded": "Augšupielādēts",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
+    "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Augšupielādē {{count}} ierakstus",
-    "uploadingCountRecord_other": "Augšupielādē {{count}} ierakstu",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_zero": "Augšupielādē {{count}} ierakstus"
+    "uploadingCountRecord_other": "Augšupielādē {{count}} ierakstu"
   },
   "reports": {
     "counts": "Uzskaites",

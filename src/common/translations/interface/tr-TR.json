@@ -131,6 +131,7 @@
   "common": {
     "about": "Hakkında",
     "absent": "Yok",
+    "abundance": "",
     "account": "Hesabım",
     "add": "Ekle",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Yüklendi",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "{{sayım}} tane kayıt yükleniyor",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "{{count}} tane kayıt yükleniyor"
   },
   "reports": {

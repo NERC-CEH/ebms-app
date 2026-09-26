@@ -131,6 +131,7 @@
   "common": {
     "about": "Névjegy",
     "absent": "Nem él",
+    "abundance": "",
     "account": "Felhasználói fiók",
     "add": "Hozzáad",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Feltöltött",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "{{count}} adatrekord feltöltése",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "{{count}} felmérés adatainak feltöltése"
   },
   "reports": {

@@ -49,7 +49,7 @@ import PaintedLadyBehaviour from 'Survey/AreaCount/common/Components/PaintedLady
 import PaintedLadyDirection from 'Survey/AreaCount/common/Components/PaintedLadyDirection';
 import PaintedLadyOther from 'Survey/AreaCount/common/Components/PaintedLadyOther';
 import PaintedLadyWing from 'Survey/AreaCount/common/Components/PaintedLadyWing';
-import { areaSizeAttr } from 'Survey/AreaCount/config';
+import { abundanceAttr, areaSizeAttr } from 'Survey/AreaCount/config';
 import IncrementalButton from 'Survey/common/IncrementalButton';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
@@ -115,9 +115,7 @@ const buildSpeciesCount = (agg: SpeciesCounts, smp: Sample) => {
   if ((agg[id].updatedAt || 0) < smp.updatedAt)
     agg[id].updatedAt = smp.updatedAt;
 
-  if (smp.isSurveyPreciseSingleSpecies() && smp.hasZeroAbundance()) return agg;
-
-  agg[id].count++;
+  agg[id].count += smp.occurrences[0].data[abundanceAttr.id] ?? 1;
   agg[id].isGeolocating = agg[id].isGeolocating || smp.gps.isRunning();
 
   agg[id].hasLocationMissing =
@@ -419,6 +417,8 @@ const AreaCount = ({
         dragonflyStage,
       } = occ.data;
 
+      const count = occ.data[abundanceAttr.id];
+
       let location;
       if (smp.gps.hasNoLocationAndNotLocating()) {
         if (!isDisabled)
@@ -449,6 +449,7 @@ const AreaCount = ({
             <div className="flex w-full items-center justify-start gap-4 py-1 pl-4">
               <div className="shrink-0">{prettyTime}</div>
               <div className="flex w-full flex-wrap justify-start gap-x-3 gap-y-1 align-middle">
+                {count! > 1 && <Badge skipTranslation>{count}</Badge>}
                 {speciesStage && (
                   <Badge skipTranslation>
                     <T i18nKey={getSurveyValueKey(speciesStage) as never} />

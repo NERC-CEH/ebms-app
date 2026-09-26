@@ -131,6 +131,7 @@
   "common": {
     "about": "Σχετικά με την εφαρμογή",
     "absent": "Απουσιάζει",
+    "abundance": "",
     "account": "Λογαριασμός",
     "add": "Προσθήκη",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Μεταφορτωμένη",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Μεταφόρτωση {{count}} αρχείου",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "Μεταφόρτωση {{count}} αρχείων"
   },
   "reports": {

@@ -131,6 +131,7 @@
   "common": {
     "about": "o",
     "absent": "Nie występuje ",
+    "abundance": "",
     "account": "Konto",
     "add": "Dodaj",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Załadowano",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Ładowanie {{count}} obserwacji",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "Ładowanie {{count}} obserwacji",
-    "uploadingCountRecord_many": "Ładowanie {{count}} obserwacji",
     "uploadingCountRecord_other": "Ładowanie {{count}} obserwacji"
   },
   "reports": {

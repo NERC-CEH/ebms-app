@@ -36,6 +36,7 @@ import {
 } from 'models/occurrence';
 import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
+import { abundanceAttr } from 'Survey/AreaCount/config';
 import useExitConfirmation from 'Survey/common/useExitConfirmation';
 import { useDeleteConfirmation } from '../Occurrence/Species';
 import Header from './Header';
@@ -474,6 +475,7 @@ const HomeController = () => {
     if (sample.isSurveyPreciseSingleSpecies() && sample.hasZeroAbundance()) {
       const [occ] = sample.samples[0].occurrences;
       occ.data.zeroAbundance = false;
+      occ.data[abundanceAttr.id] = is5x ? DUMMY_ARRAY_OF_FIVE.length : 1;
 
       // update the timestamp to when the first observation is actually recorded,
       // not when the species was selected at the start of the count

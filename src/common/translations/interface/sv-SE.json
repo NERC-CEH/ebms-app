@@ -131,6 +131,7 @@
   "common": {
     "about": "Om",
     "absent": "Ej påträffad",
+    "abundance": "",
     "account": "Konto",
     "add": "Lägg till",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Uppladdade",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Oj då! Något gick fel.",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "Sänder in {{count}} inventeringar"
   },
   "reports": {

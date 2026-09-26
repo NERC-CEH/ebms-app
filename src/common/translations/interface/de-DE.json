@@ -131,6 +131,7 @@
   "common": {
     "about": "über",
     "absent": "Abwesend",
+    "abundance": "",
     "account": "Account",
     "add": "Hinzufügen",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Hochgeladen",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "{{count}} Zählung hochladen",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "{{count}} Zählungen hochladen"
   },
   "reports": {

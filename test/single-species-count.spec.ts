@@ -26,6 +26,9 @@ test('completes a Painted Lady single-species count', async ({
   const occurrence = recordingPage.locator(
     '#precise-area-count-edit-occurrence'
   );
+  await expect(
+    occurrence.getByRole('textbox', { name: 'Abundance' })
+  ).toHaveValue('1');
   await expect(occurrence.getByText('Wing condition')).toBeVisible();
   await expect(
     occurrence.getByText('Behaviour', { exact: true })

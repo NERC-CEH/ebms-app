@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { resizeOutline, flowerOutline, arrowBackOutline } from 'ionicons/icons';
 import { merge } from 'lodash';
 import z from 'zod';
+import { NumberInputConf } from 'common/flumens';
 import butterflyIcon from 'common/images/butterfly.svg';
 import caterpillarIcon from 'common/images/caterpillar.svg';
 import Occurrence from 'models/occurrence';
@@ -14,7 +15,7 @@ import normal from './common/images/normal.png';
 import otherImg from './common/images/other.jpg';
 import thistleImg from './common/images/thistle.jpg';
 import wornImg from './common/images/worn.png';
-import coreSurvey from './config';
+import coreSurvey, { abundanceAttr as abundanceAttrOrig } from './config';
 
 export type PaintedLadyAttrs = {
   wing?: string[];
@@ -157,6 +158,17 @@ const matingValues = [
   },
 ];
 
+export const abundanceAttr = {
+  ...abundanceAttrOrig,
+  validation: { min: 0 },
+  onChange: (val, _, { record }) => {
+    if (val === null) return;
+
+    record[abundanceAttr.id] = val;
+    record.zeroAbundance = val === 0;
+  },
+} as const satisfies NumberInputConf;
+
 const speciesConfig: Survey = {
   id: 645,
   name: 'precise-single-species-area',
@@ -173,19 +185,13 @@ const speciesConfig: Survey = {
       });
 
       subSample.occurrences[0].data.zeroAbundance = zeroAbundance;
+      if (zeroAbundance) subSample.occurrences[0].data[abundanceAttr.id] = 0;
+
       return subSample;
     },
 
     occ: {
       attrs: {
-        count: {
-          remote: {
-            id: 780,
-            values: (value: number, _: Submission, model?: Occurrence) =>
-              model?.data.zeroAbundance ? null : value,
-          },
-        },
-
         wing: {
           pageProps: {
             headerProps: { title: 'area.wingCondition' },

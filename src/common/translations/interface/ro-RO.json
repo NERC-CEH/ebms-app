@@ -131,6 +131,7 @@
   "common": {
     "about": "Despre",
     "absent": "Absent",
+    "abundance": "",
     "account": "Cont",
     "add": "Adaugă",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Încărcat",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Se încarcă {{count}} înregistrarea",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "Se încarcă {{count}} înregistrările",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "Se încarcă {{count}} înregistrările"
   },
   "reports": {

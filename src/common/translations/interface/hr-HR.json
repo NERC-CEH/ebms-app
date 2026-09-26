@@ -131,6 +131,7 @@
   "common": {
     "about": "O",
     "absent": "Odsutna",
+    "abundance": "",
     "account": "Račun",
     "add": "Dodajte",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Učitano",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": ""
   },
   "reports": {

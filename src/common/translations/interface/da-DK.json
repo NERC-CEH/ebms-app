@@ -131,6 +131,7 @@
   "common": {
     "about": "Om denne app",
     "absent": "Fraværende",
+    "abundance": "",
     "account": "Konto",
     "add": "Tilføj",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Uploadet",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Uploader {{count}} observation",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "Uploader {{count}} observationer"
   },
   "reports": {

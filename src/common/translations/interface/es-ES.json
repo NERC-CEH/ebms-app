@@ -131,6 +131,7 @@
   "common": {
     "about": "Acerca de",
     "absent": "Ausente",
+    "abundance": "",
     "account": "Cuenta",
     "add": "Añadir",
     "addIdentificationEvidence": "Siempre que sea posible, complemente las identificaciones con pruebas adicionales.",
@@ -679,9 +680,6 @@
     "uploaded": "Enviados",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Cargando {{count}} muestreo",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "Cargando {{count}} muestreos",
     "uploadingCountRecord_other": "Cargando {{count}} muestreos"
   },
   "reports": {

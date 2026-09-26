@@ -131,6 +131,7 @@
   "common": {
     "about": "За приложението",
     "absent": "Отсъства",
+    "abundance": "",
     "account": "Профил",
     "add": "Добави",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Изпратено",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Изпращане на {{count}} доклади с наблюдения",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "Изпращане на {{count}} доклада с наблюдения"
   },
   "reports": {

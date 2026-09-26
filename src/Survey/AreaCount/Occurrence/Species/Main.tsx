@@ -18,6 +18,7 @@ import {
 import { getSpeciesProfileImage } from 'common/data/profiles';
 import Sample from 'models/sample';
 import InfoBackgroundMessage from 'Components/InfoBackgroundMessage';
+import { abundanceAttr } from 'Survey/AreaCount/config';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import getSurveyValueKey from 'Survey/common/translationKeys';
 
@@ -44,6 +45,7 @@ const EditOccurrence = ({
         .replace(/(:\d{2}| [AP]M)$/, '');
 
       const { stage, dragonflyStage } = occ.data;
+      const count = occ.data[abundanceAttr.id] ?? 0;
       const stageValue = stage || dragonflyStage;
 
       let detailIcon;
@@ -73,6 +75,11 @@ const EditOccurrence = ({
               <Badge skipTranslation>
                 <T i18nKey={getSurveyValueKey(stageValue) as never} />
               </Badge>
+              {count > 1 && (
+                <Badge skipTranslation className="ml-2">
+                  {count}
+                </Badge>
+              )}
               {location && <Badge className="ml-2">{location}</Badge>}
             </IonLabel>
           </IonItem>

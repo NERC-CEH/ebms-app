@@ -131,6 +131,7 @@
   "common": {
     "about": "О",
     "absent": "Отсутствие",
+    "abundance": "",
     "account": "Учетная запись",
     "add": "Добавить",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Загружено",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": ""
   },
   "reports": {

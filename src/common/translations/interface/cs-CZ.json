@@ -131,6 +131,7 @@
   "common": {
     "about": "O aplikaci",
     "absent": "Nepřítomný",
+    "abundance": "",
     "account": "Účet",
     "add": "Vložit",
     "addIdentificationEvidence": "Doplňte určení dalšími prostředky, kdykoli je to možné.",
@@ -679,9 +680,6 @@
     "uploaded": "Nahráno",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Nahrávám {{count}} záznam",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "Nahrávám {{count}} záznamů",
-    "uploadingCountRecord_many": "Nahrávám {{count}} záznamů",
     "uploadingCountRecord_other": "Nahrávání {{count}} záznamů"
   },
   "reports": {

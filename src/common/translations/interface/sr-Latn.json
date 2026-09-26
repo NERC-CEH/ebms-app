@@ -131,6 +131,7 @@
   "common": {
     "about": "O programu",
     "absent": "Nije prisutna",
+    "abundance": "",
     "account": "Nalog",
     "add": "Dodaj",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Poslato",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Šaljem {{count}} nalaz",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "Šaljem {{count}} nalaza",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "Šaljem {{count}} nalaza"
   },
   "reports": {

@@ -131,6 +131,7 @@
   "common": {
     "about": "Acerca de",
     "absent": "Ausente",
+    "abundance": "",
     "account": "Conta",
     "add": "Engadir",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Cargada/o",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Subindo {{count}} rexistros",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "Subindo {{count}} rexistros"
   },
   "reports": {

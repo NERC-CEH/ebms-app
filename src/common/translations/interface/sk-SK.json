@@ -131,6 +131,7 @@
   "common": {
     "about": "O aplikácii",
     "absent": "Chýbajúci",
+    "abundance": "",
     "account": "Účet",
     "add": "Pridať",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "Nahraté",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Nahrávanie {{count}} záznamu",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "Nahrávanie {{count}} záznamov",
-    "uploadingCountRecord_many": "Nahrávanie {{count}} záznamov",
     "uploadingCountRecord_other": "Nahrávanie {{count}} záznamov"
   },
   "reports": {

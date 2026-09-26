@@ -181,6 +181,7 @@ export default interface Resources {
     "common": {
       "about": "About",
       "absent": "Absent",
+      "abundance": "Abundance",
       "account": "Account",
       "add": "Add",
       "addIdentificationEvidence": "Supplement identifications with additional evidence where possible.",

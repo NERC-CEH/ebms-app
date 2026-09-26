@@ -131,6 +131,7 @@
   "common": {
     "about": "Apie",
     "absent": "Nėra aptinkamas",
+    "abundance": "Kiekis",
     "account": "Paskyra",
     "add": "Pridėti",
     "addIdentificationEvidence": "Jei įmanoma, rūšies nustatymą papildykite kitais įrodymais.",
@@ -679,9 +680,6 @@
     "uploaded": "Išsiųsta",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "Siunčiama {{count}} įrašas",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "Siunčiama {{count}} įrašai",
-    "uploadingCountRecord_many": "Siunčiama {{count}} įrašų",
     "uploadingCountRecord_other": "Siunčiama {{count}} įrašų"
   },
   "reports": {

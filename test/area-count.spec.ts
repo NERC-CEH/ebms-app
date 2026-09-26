@@ -47,6 +47,58 @@ test.describe('15min Count', () => {
     ).toBeVisible();
   });
 
+  test('edits an occurrence count and updates the species total', async ({
+    recordingPage,
+  }) => {
+    await openSurvey(recordingPage, '15min Count');
+    await recordingPage.getByText('Add species', { exact: true }).click();
+    await selectSpecies(recordingPage, 'Painted', 'Painted Lady');
+
+    await recordingPage
+      .locator('#list')
+      .last()
+      .getByText('Painted Lady')
+      .click();
+    const speciesOccurrencesUrl = recordingPage.url();
+    const occurrenceEntry = recordingPage.getByRole('listitem').filter({
+      hasText: 'Adult',
+    });
+    await expect(occurrenceEntry.getByText('1', { exact: true })).toHaveCount(
+      0
+    );
+    await recordingPage.getByText('Adult', { exact: true }).last().click();
+
+    const occurrencePage = recordingPage
+      .locator('#precise-area-count-edit-occurrence')
+      .last();
+    const abundance = occurrencePage.getByRole('textbox', {
+      name: 'Abundance',
+    });
+    await expect(abundance).toHaveValue('1');
+    await abundance.fill('3');
+    await abundance.blur();
+
+    const surveyUrl = recordingPage.url().split('/samples/')[0];
+    await recordingPage.reload();
+    await expect(
+      recordingPage
+        .locator('#precise-area-count-edit-occurrence')
+        .last()
+        .getByRole('textbox', { name: 'Abundance' })
+    ).toHaveValue('3');
+
+    await recordingPage.goto(speciesOccurrencesUrl);
+    await expect(occurrenceEntry.getByText('3', { exact: true })).toBeVisible();
+
+    await recordingPage.goto(surveyUrl);
+    await expect(
+      recordingPage
+        .locator('#precise-area-count-edit')
+        .last()
+        .getByRole('button', { name: '3' })
+    ).toBeVisible();
+  });
+
   test('pauses and resumes the countdown', async ({ recordingPage }) => {
     await openSurvey(recordingPage, '15min Count');
 

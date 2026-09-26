@@ -131,6 +131,7 @@
   "common": {
     "about": "このアプリについて",
     "absent": "不在",
+    "abundance": "",
     "account": "アカウント",
     "add": "追加",
     "addIdentificationEvidence": "",
@@ -679,9 +680,6 @@
     "uploaded": "アップロード済み",
     "uploadingCountRecord_zero": "",
     "uploadingCountRecord_one": "",
-    "uploadingCountRecord_two": "",
-    "uploadingCountRecord_few": "",
-    "uploadingCountRecord_many": "",
     "uploadingCountRecord_other": "{{count}} 件の記録をアップロードしています"
   },
   "reports": {

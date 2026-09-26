@@ -10,6 +10,8 @@ import caterpillarIcon from 'common/images/caterpillar.svg';
 import Occurrence from 'models/occurrence';
 import Sample from 'models/sample';
 import PrettyLocation from 'Components/PrettyLocation';
+import { abundanceAttr } from 'Survey/AreaCount/config';
+import { abundanceAttr as speciesAbundanceAttr } from 'Survey/AreaCount/configSpecies';
 import AttrLock from 'Survey/common/AttrLock';
 import TaxonPrettyName from 'Survey/common/TaxonPrettyName';
 import { commentAttr } from 'Survey/common/config';
@@ -129,6 +131,16 @@ const EditOccurrence = ({
               />
             </AttrLock>
           )}
+
+          <Block
+            block={
+              occurrence.data.zeroAbundance
+                ? speciesAbundanceAttr
+                : abundanceAttr
+            }
+            record={occurrence.data}
+            isDisabled={isDisabled}
+          />
 
           <AttrLock
             sample={sample}
