@@ -1,8 +1,16 @@
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
-import { locationOutline } from 'ionicons/icons';
+import { locationOutline, peopleOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Badge, Block, Button, Main, useAlert, useModalNav } from '@flumens';
+import {
+  Badge,
+  Block,
+  Button,
+  Main,
+  useAlert,
+  useModalNav,
+  type ChoiceInputConf,
+} from '@flumens';
 import {
   IonButton,
   IonButtons,
@@ -18,9 +26,10 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import InfoBackgroundMessage from 'common/Components/InfoBackgroundMessage';
-import type { Data as Record } from 'models/location';
+import groups from 'common/models/collections/groups';
+import type LocationModel from 'models/location';
 import HeaderButton from 'Survey/common/HeaderButton';
-import { useRecord } from '.';
+import { useLocation } from '.';
 import LampDetails from './LampDetails';
 import LocationPicker from './Location';
 import {
@@ -37,13 +46,27 @@ import {
 } from './config';
 
 type Props = {
-  onSave: (record: Partial<Record>) => Promise<boolean>;
+  onSave: (location: LocationModel) => Promise<boolean>;
+  isTemporary?: boolean;
 };
 
-const Details = ({ onSave }: Props) => {
+const Details = ({ onSave, isTemporary }: Props) => {
   const nav = useModalNav();
   const alert = useAlert();
-  const { record: model } = useRecord();
+  const { location } = useLocation();
+  const model = location.data;
+
+  const projectAttr = {
+    id: 'groupId',
+    type: 'choiceInput',
+    title: 'common.project',
+    appearance: 'button',
+    prefix: <IonIcon icon={peopleOutline} className="size-6" />,
+    choices: [
+      { title: 'common.none', dataName: '' },
+      ...groups.map(g => ({ title: g.data.title, dataName: g.id! })),
+    ],
+  } as const satisfies ChoiceInputConf;
 
   const lamps = model[mothTrapLampsAttr.id] || [];
 
@@ -54,7 +77,7 @@ const Details = ({ onSave }: Props) => {
   const onSaveWrap = async () => {
     if (isInvalid) return;
 
-    const success = await onSave(model);
+    const success = await onSave(location);
     if (!success) return;
 
     onDismiss();
@@ -196,6 +219,10 @@ const Details = ({ onSave }: Props) => {
                 {model.centroidSref}
               </IonLabel>
             </IonItem>
+
+            {!isTemporary && (
+              <Block record={location.metadata} block={projectAttr} />
+            )}
 
             <Block block={mothTrapTypeAttr} record={model} />
             <Block block={mothTrapOtherTypeAttr} record={model} />

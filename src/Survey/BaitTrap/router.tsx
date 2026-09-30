@@ -1,6 +1,7 @@
 import { ComponentType } from 'react';
 import { Route } from 'react-router-dom';
 import { AttrPage, withSample } from '@flumens';
+import Groups from 'Survey/common/Groups';
 import StartNewSurvey from 'Survey/common/StartNewSurvey';
 import Details from './Details';
 import Home from './Home';
@@ -20,6 +21,7 @@ const routes = [
   [`${baseURL}/:smpId`, Home],
   [`${baseURL}/:smpId/details`, Details],
   [`${baseURL}/:smpId/details/:attr`, withSample(AttrPageFromRoute)],
+  [`${baseURL}/:smpId/details/group`, Groups],
   [`${baseURL}/:smpId/details/location`, Location],
   [`${baseURL}/:smpId/traps`, TrapPicker],
   [`${baseURL}/:smpId/traps/:subSmpId`, Trap],

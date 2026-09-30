@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
-import { IonPage, NavContext } from '@ionic/react';
+import { IonPage, NavContext, useIonViewWillEnter } from '@ionic/react';
 import { device, Header, useLoader, useSample, useToast } from 'common/flumens';
 import groups from 'common/models/collections/groups';
 import Sample from 'common/models/sample';
@@ -10,6 +10,11 @@ import Location, { LocationType } from 'models/location';
 import HeaderButton from 'Survey/common/HeaderButton';
 import Main from '../common/MapList';
 import NewSiteModal from './NewSiteModal';
+
+const REFRESH_INTERVAL = 30 * 60 * 1000;
+
+// Keep the timestamp across page remounts, but not across app reloads.
+let sitesRefreshTimestamp: number | null = null;
 
 const Site = () => {
   const { goBack } = useContext(NavContext);
@@ -56,7 +61,8 @@ const Site = () => {
     await loader.show('common.pleaseWait');
 
     try {
-      await locations.fetchRemote();
+      await locations.fetchRemote({ type: 'sites' });
+      sitesRefreshTimestamp = Date.now();
     } catch (error) {
       toast.error(error as Error);
     }
@@ -64,9 +70,17 @@ const Site = () => {
     loader.hide();
   };
 
-  useEffect(() => {
+  useIonViewWillEnter(() => {
+    if (!device.isOnline) return;
+
+    const shouldSyncWait =
+      sitesRefreshTimestamp !== null &&
+      Date.now() - sitesRefreshTimestamp < REFRESH_INTERVAL;
+
+    if (shouldSyncWait) return;
+
     refreshSites();
-  }, []);
+  });
 
   const modal = useRef<HTMLIonModalElement>(null);
 

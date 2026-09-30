@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import Main from 'Location/common/MapList';
 import {
@@ -9,12 +9,18 @@ import {
   useToast,
   LocationType,
 } from '@flumens';
-import { IonPage, NavContext } from '@ionic/react';
+import { IonPage, NavContext, useIonViewWillEnter } from '@ionic/react';
+import groups from 'common/models/collections/groups';
 import Sample from 'common/models/sample';
 import { useUserStatusCheck } from 'common/models/user';
 import locations, { byType } from 'models/collections/locations';
 import Location, { trapCountAttr } from 'models/location';
 import { Data, trapLocationsAttr, trapsAttr } from './config';
+
+const REFRESH_INTERVAL = 30 * 60 * 1000;
+
+// Keep the timestamp across page remounts, but not across app reloads.
+let sitesRefreshTimestamp: number | null = null;
 
 const BaitTrapLocation = () => {
   const { goBack } = useContext(NavContext);
@@ -35,6 +41,7 @@ const BaitTrapLocation = () => {
 
     try {
       await locations.fetchRemote({ type: 'baitTraps' });
+      sitesRefreshTimestamp = Date.now();
     } catch (error) {
       toast.error(error as Error);
     }
@@ -42,9 +49,17 @@ const BaitTrapLocation = () => {
     loader.hide();
   };
 
-  useEffect(() => {
+  useIonViewWillEnter(() => {
+    if (!device.isOnline) return;
+
+    const shouldSyncWait =
+      sitesRefreshTimestamp !== null &&
+      Date.now() - sitesRefreshTimestamp < REFRESH_INTERVAL;
+
+    if (shouldSyncWait) return;
+
     refreshSites();
-  }, []);
+  });
 
   const { sample } = useSample<Sample<Data>>();
   if (!sample) return null;
@@ -55,6 +70,11 @@ const BaitTrapLocation = () => {
   const userLocations = locations
     .filter(byType(LocationType.BaitTrapSite))
     .sort(alphabeticallyByName);
+
+  const group = groups.idMap.get(sample.data.groupId || '');
+  const groupLocations = userLocations.filter(location =>
+    group?.locationCids.includes(location.cid)
+  );
 
   const onSelectSite = (location?: Location) => {
     sample.data.locationId = location?.id;
@@ -71,7 +91,8 @@ const BaitTrapLocation = () => {
         userLocations={userLocations}
         onSelectSite={onSelectSite}
         selectedLocationId={sample?.data.locationId}
-        hasGroup={false}
+        groupLocations={groupLocations}
+        hasGroup={!!group}
         isFetchingLocations={locations.isSynchronising}
       />
     </IonPage>

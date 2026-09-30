@@ -16,12 +16,12 @@ import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import countries from 'common/config/countries';
 import appModel from 'common/models/app';
-import { useRecord } from '.';
+import { useLocation } from '.';
 
 const LocationPicker = () => {
-  const { record } = useRecord();
+  const { location: locationModel } = useLocation();
 
-  const coords = record.centroidSref?.split(' ').map(Number) || [];
+  const coords = locationModel.data.centroidSref?.split(' ').map(Number) || [];
   const location = { latitude: coords[0], longitude: coords[1] };
 
   const [mapRef, setMapRef] = useState<MapRef>();
@@ -35,7 +35,7 @@ const LocationPicker = () => {
   const setLocation = async (newLocation?: Location) => {
     if (!newLocation) return;
 
-    record.centroidSref = `${newLocation.latitude} ${newLocation.longitude}`;
+    locationModel.data.centroidSref = `${newLocation.latitude} ${newLocation.longitude}`;
   };
 
   const onManuallyTypedLocationChange = (e: InputCustomEvent) =>

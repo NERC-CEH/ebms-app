@@ -12,8 +12,6 @@ import {
 } from '@flumens';
 import { NavContext, IonButtons, IonButton } from '@ionic/react';
 import speciesGroupsList from 'common/data/groups';
-import groups from 'common/models/collections/groups';
-import locations from 'common/models/collections/locations';
 import Occurrence, {
   DRAGONFLY_GROUP,
   type Taxon as TaxonData,
@@ -21,6 +19,7 @@ import Occurrence, {
 import Sample from 'models/sample';
 import TaxonSearch from 'Survey/common/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
+import getTaxonListCids from 'Survey/common/getTaxonListCids';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
 const cancelButtonWrap = (onDeleteSurvey: () => void) => (
@@ -237,9 +236,6 @@ const TaxonController = () => {
     sample.data.speciesGroups = updatedSpeciesGroups;
   }, []);
 
-  const site = locations.idMap.get(sample.data.locationId || '');
-  const group = groups.idMap.get(sample.data.groupId || '');
-
   return (
     <Page id="precise-area-count-edit-taxa">
       <Header
@@ -256,11 +252,7 @@ const TaxonController = () => {
           recordedTaxa={recordedTaxa}
           speciesGroups={sample.data.speciesGroups}
           useDayFlyingMothsOnly={sample.metadata.useDayFlyingMothsOnly}
-          taxonListCids={
-            (site?.taxonListCids?.length
-              ? site?.taxonListCids
-              : group?.taxonListCids) as string[]
-          }
+          taxonListCids={getTaxonListCids(sample)}
         />
       </Main>
     </Page>

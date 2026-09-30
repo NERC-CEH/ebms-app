@@ -9,9 +9,8 @@ import {
 import { useRouteMatch } from 'react-router';
 import { Header, useSample, useRemoteSample, type Choice } from '@flumens';
 import { IonPage, NavContext } from '@ionic/react';
-import groups from 'common/models/collections/groups';
 import userModel from 'common/models/user';
-import type { Data as LocationData } from 'models/location';
+import type Location from 'models/location';
 import Sample, { useValidateCheck } from 'models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
 import { useOnExitDetails } from 'Survey/common/useExitConfirmation';
@@ -67,7 +66,7 @@ const DetailsController = () => {
     modalRef.current?.present();
   };
 
-  const saveTemporaryTrap = async (trap: Partial<LocationData>) => {
+  const saveTemporaryTrap = async ({ data: trap }: Location) => {
     sample.data.locationName = trap.name;
     sample.data.enteredSref = trap.centroidSref;
     sample.data.enteredSrefSystem =
@@ -119,8 +118,6 @@ const DetailsController = () => {
     </HeaderButton>
   );
 
-  const group = groups.idMap.get(sample.data.groupId!);
-
   return (
     <IonPage id="survey-moth-detail" ref={pageRef}>
       <Header
@@ -131,7 +128,6 @@ const DetailsController = () => {
 
       <Main
         sample={sample}
-        group={group}
         onOpenTemporaryTrapModal={openTemporaryTrapModal}
         onChangeSiteType={onChangeSiteType}
       />
@@ -153,6 +149,7 @@ const DetailsController = () => {
           ),
         }}
         onSave={saveTemporaryTrap}
+        isTemporary
       />
     </IonPage>
   );

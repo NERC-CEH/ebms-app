@@ -8,6 +8,7 @@ import Occurrence, { Taxon, DRAGONFLY_GROUP } from 'models/occurrence';
 import Sample from 'models/sample';
 import TaxonSearch from 'Survey/common/TaxonSearch';
 import TaxonSearchFilters from 'Survey/common/TaxonSearchFilters';
+import getTaxonListCids from 'Survey/common/getTaxonListCids';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
 const checkIfTaxonSelectedSame = (
@@ -174,6 +175,7 @@ const Controller = () => {
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}
           speciesGroups={appModel.data.speciesGroups}
+          taxonListCids={getTaxonListCids(sample)}
         />
       </Main>
     </Page>

@@ -1,101 +1,16 @@
-import { useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { Page, useToast, useLoader, device, useSample } from '@flumens';
-import appModel from 'models/app';
-import locations, { byType } from 'models/collections/locations';
-import Location, { LocationType } from 'models/location';
+import { Page, Header, useSample } from '@flumens';
 import Sample from 'models/sample';
-import { useUserStatusCheck } from 'models/user';
-import Header from './Header';
 import Main from './Main';
 
-const TWENTY_FOURTH_HOURS = 24 * 60 * 60 * 1000;
-
 const SectionListController = () => {
-  const checkUserStatus = useUserStatusCheck();
-  const loader = useLoader();
-  const toast = useToast();
-
   const { sample } = useSample<Sample>();
   if (!sample) throw new Error('Sample is missing');
 
-  const refreshUserTransects = async () => {
-    const isUserOK = await checkUserStatus();
-    if (!isUserOK) return;
-
-    await loader.show('common.pleaseWait');
-
-    try {
-      await locations.fetchRemote();
-
-      toast.success('transect.transectListWas');
-    } catch (error) {
-      toast.error(error as Error);
-    }
-    await loader.hide();
-  };
-
-  const onTransectSelect = (transect: Location) => {
-    sample.data.locationId = transect.id;
-    sample.data.enteredSref = transect?.data.centroidSref;
-    sample.data.enteredSrefSystem = transect?.data
-      .centroidSrefSystem as Sample['data']['enteredSrefSystem'];
-
-    const byTransectId = (section: Location) =>
-      section.data.parentId === transect.id;
-
-    const byCode = (loc1: Location, loc2: Location) => {
-      const sectionCodeNumberIndex1 = Number(
-        loc1.data.code?.match(/\d+$/)?.[0]
-      );
-      const sectionCodeNumberIndex2 = Number(
-        loc2.data.code?.match(/\d+$/)?.[0]
-      );
-      return sectionCodeNumberIndex1 - sectionCodeNumberIndex2;
-    };
-
-    const sections = locations
-      .filter(byType(LocationType.TransectSection))
-      .filter(byTransectId)
-      .sort(byCode);
-
-    const survey = sample.getSurvey();
-    const addSectionSample = (section: Location) => {
-      const sectionSample = survey.smp!.create!({ location: section });
-      sample.samples.push(sectionSample);
-    };
-
-    sections.forEach(addSectionSample);
-
-    sample.save();
-  };
-
-  useEffect(() => {
-    if (!locations.length && device.isOnline) {
-      refreshUserTransects();
-      appModel.data.transectsRefreshTimestamp = new Date().getTime();
-      return;
-    }
-
-    const lastSyncTime = appModel.data.transectsRefreshTimestamp;
-    if (!lastSyncTime) return;
-
-    const shouldSyncWait =
-      new Date().getTime() - lastSyncTime < TWENTY_FOURTH_HOURS;
-
-    const isTransectSelected = sample.data.locationId;
-    if (shouldSyncWait || isTransectSelected) return;
-
-    refreshUserTransects();
-    appModel.data.transectsRefreshTimestamp = new Date().getTime();
-  }, []);
-
-  const transect = locations.idMap.get(sample.data.locationId || '');
-
   return (
     <Page id="transect-sections-list">
-      <Header showRefreshButton={!transect} onRefresh={refreshUserTransects} />
-      <Main sample={sample} onTransectSelect={onTransectSelect} />
+      <Header title="transect.sections" defaultHref="/home/user-surveys" />
+      <Main sample={sample} />
     </Page>
   );
 };

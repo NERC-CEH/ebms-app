@@ -58,7 +58,7 @@ export class GroupCollection extends GroupCollectionBase<Group> {
 
     if (params?.type === 'member') {
       // we need to fetch new group-locations and link them together
-      await locations.fetchRemote({ type: 'sites' });
+      await locations.fetchRemote();
       await this.fetchAndLinkTaxonLists();
     }
   }

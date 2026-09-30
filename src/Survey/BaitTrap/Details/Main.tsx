@@ -7,6 +7,7 @@ import { IonList } from '@ionic/react';
 import MenuDateAttr from 'common/Components/MenuDateAttr';
 import locations from 'common/models/collections/locations';
 import Sample from 'models/sample';
+import ProjectMenuItem from 'Survey/common/ProjectMenuItem';
 import {
   trapLocationsAttr,
   trapsCarrionAttr,
@@ -47,6 +48,10 @@ const DetailsMain = ({ sample }: Props) => {
             <T>bait.trappingSite</T>
           </h3>
           <div className="rounded-list">
+            <ProjectMenuItem
+              isDisabled={isDisabled}
+              groupId={sample.data.groupId}
+            />
             <MenuAttrItem
               routerLink={`${url}/location`}
               label="common.site"

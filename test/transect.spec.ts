@@ -6,10 +6,28 @@ test('completes a transect across its configured sections', async ({
 }) => {
   await openSurvey(recordingPage, 'eBMS Transect');
 
+  const sectionsLink = recordingPage.getByRole('link', {
+    name: /^Sections \d+$/,
+  });
+  await expect(sectionsLink).not.toBeVisible();
   await recordingPage
-    .getByRole('link', { name: 'Sections No transect' })
+    .getByRole('link', { name: 'Transect No transect' })
     .click();
-  await recordingPage.getByText('Test Transect', { exact: true }).click();
+  await expect(recordingPage.locator('#transect-location')).toBeVisible();
+  await recordingPage
+    .locator('ion-modal ion-list > div')
+    .filter({ hasText: 'Test Transect' })
+    .click();
+  await expect(
+    recordingPage
+      .locator('#transect-edit')
+      .getByText('Test Transect', { exact: true })
+  ).toBeVisible();
+  await expect(
+    recordingPage.getByRole('link', { name: 'Transect Test Transect' })
+  ).toHaveCount(0);
+  await sectionsLink.click();
+  await expect(recordingPage.locator('.transect-section')).toHaveCount(2);
   await expect(
     recordingPage.getByText('Section 1', { exact: true })
   ).toBeVisible();

@@ -48,7 +48,6 @@ export type Data = ModelData & {
   // showWhatsNewInVersion122: boolean;
   showGPSPermissionTip: boolean;
   showCopyHelpTip: boolean;
-  transectsRefreshTimestamp: number | null;
   /**
    * Timestamp of last species lists automatic update.
    */
@@ -68,7 +67,6 @@ const defaults: Data = {
   feedbackGiven: false,
   speciesListSortOrder: 'alphabetical',
   showGPSPermissionTip: true,
-  transectsRefreshTimestamp: null,
 
   'draftId:precise-area': '',
   'draftId:precise-single-species-area': '',

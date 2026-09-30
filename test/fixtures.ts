@@ -15,6 +15,21 @@ export async function completeFirstRun(page: Page) {
   }
 
   await expect(page.locator('#home-home')).toBeVisible();
+  // Setup state must be saved before fixtures seed data and reload the app.
+  await expect
+    .poll(() =>
+      page.evaluate(async () => {
+        const app = (await (window as any).mainStore.findAll()).find(
+          (record: any) => record.cid === 'app'
+        );
+        return !!(
+          app?.data.language &&
+          app.data.country &&
+          app.data.showedWelcome
+        );
+      })
+    )
+    .toBe(true);
 }
 
 async function mockRemoteReads(page: Page) {
@@ -30,9 +45,43 @@ async function mockRemoteReads(page: Page) {
     });
   });
 
-  await page.route('https://warehouse1.indicia.org.uk/**', route =>
-    route.fulfill({ json: { data: [], hits: { hits: [] } } })
-  );
+  await page.route('https://warehouse1.indicia.org.uk/**', async route => {
+    const url = new URL(route.request().url());
+    const path = url.pathname;
+    const isLocationList = path.endsWith('/locations');
+    const locationType = path.endsWith('/ebms_app_sites_list_2.xml')
+      ? '777'
+      : path.endsWith('/ebms_app_sections_list_2.xml')
+        ? '778'
+        : url.searchParams.get('location_type_id');
+
+    if (isLocationList || locationType) {
+      const locations = await page.evaluate(async type => {
+        const records = await (window as any).locationsStore.findAll();
+        return records
+          .filter((record: any) => record.data.locationTypeId === type)
+          .map((record: any) => ({
+            ...record.data,
+            id: record.id,
+            lat: String(record.data.location.latitude),
+            lon: String(record.data.location.longitude),
+            createdOn: new Date(record.createdAt).toISOString(),
+            updatedOn: new Date(record.updatedAt).toISOString(),
+            attrLocation428: record.data['locAttr:428'],
+          }));
+      }, locationType);
+      await route.fulfill({
+        json: isLocationList
+          ? locations.map((values: Record<string, unknown>) => ({ values }))
+          : { data: locations },
+      });
+      return;
+    }
+
+    await route.fulfill({
+      json: path.endsWith('/groups') ? [] : { data: [], hits: { hits: [] } },
+    });
+  });
   await page.route('https://api.openweathermap.org/**', route =>
     route.fulfill({
       json: {
@@ -47,9 +96,19 @@ async function mockRemoteReads(page: Page) {
 
 async function seedRecordingData(page: Page) {
   await page.evaluate(async () => {
-    const { db, locationsStore, mainStore, taxaStore, taxonListsStore } =
-      window as any;
+    const {
+      db,
+      locationsStore,
+      mainStore,
+      groupsStore,
+      taxaStore,
+      taxonListsStore,
+    } = window as any;
     const now = Date.now();
+    const tokenLifetimeSeconds = 7 * 24 * 60 * 60;
+    const payload = btoa(
+      JSON.stringify({ exp: Math.floor(now / 1000) + tokenLifetimeSeconds })
+    );
 
     await mainStore.save({
       id: '1',
@@ -60,7 +119,18 @@ async function seedRecordingData(page: Page) {
         email: 'test@example.com',
         verified: true,
         profileFetched: true,
+        indiciaUserId: '1',
+        tokens: { access_token: `test.${payload}.test` },
       },
+      createdAt: now,
+      updatedAt: now,
+    });
+
+    // Avoid unrelated first-login project sync racing survey-specific mocks.
+    await groupsStore.save({
+      id: '9000',
+      cid: 'fixture-project',
+      data: { title: 'Fixture project', userIsMember: null },
       createdAt: now,
       updatedAt: now,
     });
@@ -149,6 +219,7 @@ async function seedRecordingData(page: Page) {
       data: {
         centroidSref: '51.5 -0.12',
         centroidSrefSystem: '4326',
+        createdById: '1',
         location: { latitude: 51.5, longitude: -0.12 },
         ...data,
       },
@@ -207,7 +278,8 @@ export const test = base.extend<Fixtures>({
     async ({ page }, use) => {
       const missingKeys = new Set<string>();
       page.on('console', message => {
-        const match = message.text().match(/^🇬🇧: (.+)$/);
+        // i18next also reports dynamic names and React markup, not just app keys.
+        const match = message.text().match(/^🇬🇧: (\w+\.[\w.]+)$/);
         if (match) missingKeys.add(match[1]);
       });
 
@@ -230,6 +302,7 @@ export const test = base.extend<Fixtures>({
     await expect(homePage.locator('#home-home')).toBeVisible();
     await homePage.evaluate(() => (window as any).testing.GPS.mock());
     await use(homePage);
+    await homePage.unrouteAll({ behavior: 'ignoreErrors' });
   },
 });
 

@@ -25,7 +25,6 @@ import {
 import { NavContext } from '@ionic/react';
 import distance from '@turf/distance';
 import speciesGroups, { SpeciesGroup } from 'common/data/groups';
-import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
@@ -209,7 +208,6 @@ const HomeController = () => {
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
 
   const site = sample && locations.idMap.get(sample.data.locationId!);
-  const group = sample && groups.idMap.get(sample.data.groupId!);
 
   const promptSpeciesGroupList = useShowSpeciesGroupList(sample);
 
@@ -574,8 +572,7 @@ const HomeController = () => {
 
   const previousSurvey = getPreviousSurvey();
 
-  const navigateToGroup = () =>
-    !isDisabled && navigate(`${match.url}/details/group`);
+  const navigateToGroup = () => navigate(`${match.url}/details/group`);
 
   return (
     <Page id="precise-area-count-edit">
@@ -583,7 +580,7 @@ const HomeController = () => {
         sample={sample}
         onSubmit={onSubmit}
         onGroupClick={navigateToGroup}
-        group={group}
+        isDisabled={isDisabled}
         onLeave={!sample.isTimerFinished() ? onExit : undefined}
       />
       <Main

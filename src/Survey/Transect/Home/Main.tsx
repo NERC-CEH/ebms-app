@@ -9,12 +9,13 @@ import {
   cloudyOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { Main, MenuAttrItem } from '@flumens';
+import { Badge, Main, MenuAttrItem } from '@flumens';
 import { IonList, IonItem, IonIcon, IonLabel } from '@ionic/react';
 import MenuDateAttr from 'common/Components/MenuDateAttr';
 import windIcon from 'common/images/wind.svg';
 import locations from 'models/collections/locations';
 import Sample from 'models/sample';
+import ProjectMenuItem from 'Survey/common/ProjectMenuItem';
 import UploadedRecordInfoMessage from 'Survey/common/UploadedRecordInfoMessage';
 
 type Props = {
@@ -23,13 +24,9 @@ type Props = {
 };
 
 const Edit = ({ sample, isDisabled }: Props) => {
-  const getPrettySectionsLabel = () => {
+  const getPrettyTransectLabel = () => {
     if (!sample.data.locationId)
-      return (
-        <IonLabel slot="end" color="danger">
-          <T>transect.noTransect</T>
-        </IonLabel>
-      );
+      return <Badge color="warning">transect.noTransect</Badge>;
 
     const transect = locations.idMap.get(sample.data.locationId || '');
     const transectName = transect?.data.name || sample.data.locationId; // locationId for remote ones
@@ -48,13 +45,31 @@ const Edit = ({ sample, isDisabled }: Props) => {
 
       <IonList lines="full">
         <div className="rounded-list">
-          <IonItem routerLink={`${baseURL}/sections`} detail>
+          <IonItem
+            routerLink={
+              !isDisabled && !sample.data.locationId
+                ? `${baseURL}/location`
+                : undefined
+            }
+            detail={false}
+          >
             <IonIcon icon={mapOutline} slot="start" mode="md" />
             <IonLabel>
-              <T>transect.sections</T>
+              <T>transect.transect</T>
             </IonLabel>
-            {getPrettySectionsLabel()}
+            {getPrettyTransectLabel()}
           </IonItem>
+
+          {!!sample.data.locationId && (
+            <IonItem routerLink={`${baseURL}/sections`}>
+              <IonIcon icon={mapOutline} slot="start" mode="md" />
+              <IonLabel>
+                <T>transect.sections</T>
+              </IonLabel>
+
+              <IonLabel slot="end">{sample.samples.length}</IonLabel>
+            </IonItem>
+          )}
 
           <MenuDateAttr
             label="common.startTime"
@@ -120,6 +135,10 @@ const Edit = ({ sample, isDisabled }: Props) => {
           <T>common.other</T>
         </h3>
         <div className="rounded-list">
+          <ProjectMenuItem
+            isDisabled={isDisabled}
+            groupId={sample.data.groupId}
+          />
           <MenuAttrItem
             routerLink={`${baseURL}/recorder`}
             disabled={isDisabled}

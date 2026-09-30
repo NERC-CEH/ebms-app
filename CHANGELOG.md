@@ -1,6 +1,14 @@
 ## 1.35.0
 
 Added Latvian.
+Added an abundance field to 15min and Single Species surveys.
+Added project selection to transect and bait-trap surveys.
+Expanded project-linked sites to moth traps and transects.
+Added a project option when creating moth traps.
+Added site and project species lists to moth, bait-trap and transect surveys.
+Improved transect selection with a map and site list.
+Fixed copying species lists from previous 15min Count surveys.
+Major clean up and modernisation of translations.
 
 ## 1.34.0
 

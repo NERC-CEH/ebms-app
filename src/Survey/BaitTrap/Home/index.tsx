@@ -6,6 +6,7 @@ import { NavContext } from '@ionic/react';
 import appModel from 'models/app';
 import Sample, { useValidateCheck } from 'models/sample';
 import userModel, { useUserStatusCheck } from 'models/user';
+import GroupHeader from 'Survey/common/GroupHeader';
 import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
 import TrainingHeader from 'Survey/common/TrainingHeader';
 import { useOnExit } from 'Survey/common/useExitConfirmation';
@@ -82,6 +83,11 @@ const HomeController = () => {
         subheader={sample.data.training && <TrainingHeader />}
         defaultHref="/home/user-surveys"
         onLeave={!sample.metadata.saved ? onExit : undefined}
+      />
+      <GroupHeader
+        groupId={sample.data.groupId}
+        isDisabled={sample.isDisabled}
+        onClick={() => navigate(`${match.url}/details/group`)}
       />
       <Main sample={sample} onAddTrapVisit={onAddTrapVisit} />
     </Page>

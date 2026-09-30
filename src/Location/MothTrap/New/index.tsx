@@ -8,11 +8,13 @@ import {
   useMemo,
   useState,
 } from 'react';
-import { observable } from 'mobx';
 import { IonModal } from '@ionic/react';
 import { ModalNav } from 'common/flumens';
 import userModel from 'common/models/user';
-import { LocationType, type Data as Record } from 'models/location';
+import LocationModel, {
+  LocationType,
+  type Data as Record,
+} from 'models/location';
 import Details from './Details';
 import {
   mothTrapLampsAttr,
@@ -20,37 +22,44 @@ import {
   mothTrapUserAttr,
 } from './config';
 
-const getInitialRecord = (initialRecord?: Partial<Record>) =>
-  observable({
-    locationTypeId: LocationType.MothTrap,
-    centroidSrefSystem: '4326',
-    [mothTrapOtherTypeAttr.id]: '',
-    [mothTrapUserAttr.id]: userModel.id,
-    ...initialRecord,
-    [mothTrapLampsAttr.id]: initialRecord?.[mothTrapLampsAttr.id] || [],
+const getNewLocation = (initialRecord?: Partial<Record>, groupId?: string) =>
+  new LocationModel({
+    skipStore: true,
+    metadata: { groupId },
+    data: {
+      locationTypeId: LocationType.MothTrap,
+      centroidSrefSystem: '4326',
+      [mothTrapOtherTypeAttr.id]: '',
+      [mothTrapUserAttr.id]: userModel.id,
+      ...initialRecord,
+      [mothTrapLampsAttr.id]: initialRecord?.[mothTrapLampsAttr.id] || [],
+    } as Record,
   });
 
-export type RecordContext = {
-  record: Partial<Record>;
-  setRecord: (record: Partial<Record>) => void;
+export type LocationContext = {
+  location: LocationModel;
+  setLocation: (location: LocationModel) => void;
 };
 
-const RecordContext = createContext<RecordContext | null>(null);
+const LocationContext = createContext<LocationContext | null>(null);
 
-export function useRecord(): RecordContext {
-  const ctx = useContext(RecordContext);
-  if (!ctx) throw new Error('useRecord must be used within <RecordContext/>');
+export function useLocation(): LocationContext {
+  const ctx = useContext(LocationContext);
+  if (!ctx)
+    throw new Error('useLocation must be used within <LocationContext/>');
   return ctx;
 }
 
 type Props = {
   presentingElement: HTMLElement | null;
   initialRecord?: Partial<Record>;
-  onSave: (record: Partial<Record>) => Promise<boolean>;
+  onSave: (location: LocationModel) => Promise<boolean>;
+  groupId?: string;
+  isTemporary?: boolean;
 };
 
 const NewSiteModal = (
-  { presentingElement, initialRecord, onSave }: Props,
+  { presentingElement, initialRecord, onSave, groupId, isTemporary }: Props,
   ref: React.ForwardedRef<HTMLIonModalElement>
 ) => {
   const modalRef = ref as MutableRefObject<HTMLIonModalElement | null>;
@@ -60,24 +69,23 @@ const NewSiteModal = (
     return true;
   };
 
-  const [record, setRecord] = useState<Partial<Record>>(
-    getInitialRecord(initialRecord)
+  const [location, setLocation] = useState<LocationModel>(
+    getNewLocation(initialRecord, groupId)
   );
 
-  const resetState = () => {
-    setRecord(getInitialRecord(initialRecord));
-  };
+  const resetState = () => setLocation(getNewLocation(initialRecord, groupId));
 
-  useEffect(() => {
-    resetState();
-  }, [initialRecord]);
+  useEffect(resetState, [initialRecord, groupId]);
 
-  const context: RecordContext = useMemo(
-    () => ({ record, setRecord }),
-    [record, setRecord]
+  const context: LocationContext = useMemo(
+    () => ({ location, setLocation }),
+    [location, setLocation]
   );
 
-  const detailsRoot = useCallback(() => <Details onSave={onSave} />, []);
+  const detailsRoot = useCallback(
+    () => <Details onSave={onSave} isTemporary={isTemporary} />,
+    []
+  );
 
   // prevent swipe-down gesture from closing the modal
   const canDismiss = async (_: unknown, role?: string) => role !== 'gesture';
@@ -91,13 +99,13 @@ const NewSiteModal = (
       onWillDismiss={resetState}
       focusTrap={false}
     >
-      <RecordContext.Provider value={context}>
+      <LocationContext.Provider value={context}>
         <ModalNav
           root={detailsRoot}
           onDismiss={onDismiss}
           swipeGesture={false}
         />
-      </RecordContext.Provider>
+      </LocationContext.Provider>
     </IonModal>
   );
 };

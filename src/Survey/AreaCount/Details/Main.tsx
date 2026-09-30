@@ -2,7 +2,6 @@ import { observer } from 'mobx-react';
 import {
   clipboardOutline,
   thermometerOutline,
-  peopleOutline,
   cloudyOutline,
   personOutline,
   eyeOffOutline,
@@ -22,15 +21,14 @@ import { IonList, IonIcon } from '@ionic/react';
 import PhotoPicker from 'common/Components/PhotoPicker';
 import windIcon from 'common/images/wind.svg';
 import appModel from 'common/models/app';
-import Group from 'common/models/group';
 import Location from 'common/models/location';
 import Sample from 'models/sample';
+import ProjectMenuItem from 'Survey/common/ProjectMenuItem';
 import { guidAttr } from 'Survey/common/config';
 
 type Props = {
   sample: Sample;
   site?: Location;
-  group?: Group;
   onChangeCounter: (value: number | null) => void;
   onChangeSensitivityStatus: (value: boolean) => void;
 };
@@ -38,7 +36,6 @@ type Props = {
 const AreaCountDetails = ({
   sample,
   site,
-  group,
   onChangeCounter,
   onChangeSensitivityStatus,
 }: Props) => {
@@ -55,13 +52,9 @@ const AreaCountDetails = ({
     <Main className="pb-ion-s-10">
       <IonList lines="full">
         <div className="rounded-list">
-          <MenuAttrItem
-            routerLink={`${baseURL}/group`}
-            disabled={isDisabled}
-            icon={peopleOutline}
-            label="common.project"
-            value={group?.data.title}
-            skipValueTranslation
+          <ProjectMenuItem
+            isDisabled={isDisabled}
+            groupId={sample.data.groupId}
           />
           <MenuAttrItem
             routerLink={`${baseURL}/site`}

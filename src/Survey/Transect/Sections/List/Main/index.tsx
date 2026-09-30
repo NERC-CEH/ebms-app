@@ -6,10 +6,8 @@ import { Main, getGeomMetersToLatLon } from '@flumens';
 import { IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
 import butterflyIcon from 'common/images/butterfly.svg';
 import locations from 'common/models/collections/locations';
-import Location from 'models/location';
 import Sample from 'models/sample';
 import SVG from './components/SVG';
-import Transects from './components/Transects';
 
 const getSectionItem = (sectionSample: Sample, match: { url: string }) => {
   const section = locations.idMap.get(sectionSample.data.locationId || '');
@@ -66,14 +64,9 @@ const getSectionItem = (sectionSample: Sample, match: { url: string }) => {
 
 type Props = {
   sample: Sample;
-  onTransectSelect: (transect: Location) => void;
 };
-const Sections = ({ sample, onTransectSelect }: Props) => {
+const Sections = ({ sample }: Props) => {
   const match = useRouteMatch();
-
-  const hasSelectedTransect = sample.data.locationId;
-  if (!hasSelectedTransect)
-    return <Transects onTransectSelect={onTransectSelect} />;
 
   const getSectionItemWrap = (s: Sample) => getSectionItem(s, match);
 

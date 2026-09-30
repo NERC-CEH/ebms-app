@@ -1,5 +1,4 @@
 import { Header } from '@flumens';
-import Group from 'common/models/group';
 import Sample from 'models/sample';
 import GroupHeader from 'Survey/common/GroupHeader';
 import SurveyHeaderButton from 'Survey/common/SurveyHeaderButton';
@@ -7,7 +6,7 @@ import TrainingHeader from 'Survey/common/TrainingHeader';
 
 type Props = {
   sample: Sample;
-  group?: Group;
+  isDisabled: boolean;
   onSubmit: () => void;
   onGroupClick: () => void;
   onLeave?: () => void;
@@ -15,7 +14,7 @@ type Props = {
 
 const HeaderComponent = ({
   sample,
-  group,
+  isDisabled,
   onSubmit,
   onGroupClick,
   onLeave,
@@ -27,7 +26,11 @@ const HeaderComponent = ({
   const trainingModeSubheader = (
     <>
       {trainingModeHeader}
-      <GroupHeader group={group} onClick={onGroupClick} />
+      <GroupHeader
+        groupId={sample.data.groupId}
+        isDisabled={isDisabled}
+        onClick={onGroupClick}
+      />
     </>
   );
 

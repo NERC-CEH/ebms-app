@@ -1,15 +1,15 @@
 /* eslint-disable no-return-assign */
 import { observer } from 'mobx-react';
-import { timeOutline, cloudOutline, peopleOutline } from 'ionicons/icons';
+import { timeOutline, cloudOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import { Main, MenuAttrItemFromModel, MenuAttrItem, Block } from '@flumens';
 import { IonIcon, IonItem, IonLabel, IonList } from '@ionic/react';
 import MenuDateAttr from 'common/Components/MenuDateAttr';
 import mothInsideBoxIcon from 'common/images/moth-inside-icon.svg';
-import Group from 'common/models/group';
 import locations from 'models/collections/locations';
 import Sample from 'models/sample';
+import ProjectMenuItem from 'Survey/common/ProjectMenuItem';
 import {
   trapEmptyingTimeAttr,
   surveyEndDateAttr,
@@ -18,14 +18,12 @@ import {
 
 type Props = {
   sample: Sample;
-  group?: Group;
   onOpenTemporaryTrapModal: () => void;
   onChangeSiteType: (value: boolean) => void;
 };
 
 const DetailsMain = ({
   sample,
-  group,
   onChangeSiteType,
   onOpenTemporaryTrapModal,
 }: Props) => {
@@ -153,13 +151,9 @@ const DetailsMain = ({
           <T>common.other</T>
         </h3>
         <div className="rounded-list">
-          <MenuAttrItem
-            routerLink={`${url}/group`}
-            disabled={isDisabled}
-            icon={peopleOutline}
-            label="common.project"
-            value={group?.data.title}
-            skipValueTranslation
+          <ProjectMenuItem
+            isDisabled={isDisabled}
+            groupId={sample.data.groupId}
           />
           <MenuAttrItemFromModel
             model={sample}

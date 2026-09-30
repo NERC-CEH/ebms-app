@@ -79,6 +79,21 @@ test.describe('15min Count', () => {
     await abundance.blur();
 
     const surveyUrl = recordingPage.url().split('/samples/')[0];
+    // Model autosave is debounced; reload only after the edit is durable.
+    await expect
+      .poll(() =>
+        recordingPage.evaluate(async () => {
+          const samples = await (window as any).samplesStore.findAll();
+          return samples.some((sample: any) =>
+            sample.data.samples.some((subSample: any) =>
+              subSample.occurrences.some(
+                (occurrence: any) => occurrence.data['occAttr:780'] === 3
+              )
+            )
+          );
+        })
+      )
+      .toBe(true);
     await recordingPage.reload();
     await expect(
       recordingPage

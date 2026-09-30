@@ -7,6 +7,7 @@ import groups from 'common/data/groups';
 import Occurrence, { Taxon as TaxonType } from 'models/occurrence';
 import Sample from 'models/sample';
 import TaxonSearch from 'Survey/common/TaxonSearch';
+import getTaxonListCids from 'Survey/common/getTaxonListCids';
 import { Data, OccData, SubSmpData } from './config';
 
 const Taxon = () => {
@@ -52,6 +53,7 @@ const Taxon = () => {
           onSpeciesSelected={onSpeciesSelected}
           recordedTaxa={recordedTaxa}
           speciesGroups={[groups.butterflies.id]}
+          taxonListCids={getTaxonListCids(subSample)}
         />
       </Main>
     </Page>

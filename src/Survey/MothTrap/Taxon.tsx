@@ -8,6 +8,7 @@ import Occurrence, { Taxon as TaxonData } from 'models/occurrence';
 import Sample from 'models/sample';
 import { getUnknownSpecies, MachineInvolvement } from 'Survey/MothTrap/config';
 import TaxonSearch from 'Survey/common/TaxonSearch';
+import getTaxonListCids from 'Survey/common/getTaxonListCids';
 import showMergeSpeciesAlert from 'Survey/common/showMergeSpeciesAlert';
 
 const Taxon = () => {
@@ -156,6 +157,7 @@ const Taxon = () => {
           recordedTaxa={recordedTaxa}
           speciesGroups={[groups.moths.id]}
           useDayFlyingMothsOnly={false}
+          taxonListCids={getTaxonListCids(sample)}
         />
       </Main>
     </Page>

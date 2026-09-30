@@ -8,6 +8,7 @@ export default defineConfig([
     extends: [config('./src/common/translations/interface/en.json')],
     rules: {
       '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
+      '@typescript-eslint/no-unsafe-enum-comparison': 0,
       'no-param-reassign': 0,
       '@typescript-eslint/naming-convention': [
         'error',

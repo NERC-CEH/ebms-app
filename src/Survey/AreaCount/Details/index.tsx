@@ -4,7 +4,6 @@ import { Trans as T } from 'react-i18next';
 import { useRouteMatch, useLocation } from 'react-router';
 import { Page, Header, useOnBackButton, useAlert, useSample } from '@flumens';
 import { IonButton, NavContext, IonButtons } from '@ionic/react';
-import groups from 'common/models/collections/groups';
 import locations from 'common/models/collections/locations';
 import Sample, { useValidateCheck } from 'models/sample';
 import HeaderButton from 'Survey/common/HeaderButton';
@@ -55,7 +54,6 @@ const DetailsController = () => {
   if (!sample) throw new Error('Sample is missing');
 
   const site = locations.idMap.get(sample.data.locationId!);
-  const group = groups.idMap.get(sample.data.groupId!);
 
   const checkSampleStatus = useValidateCheck(sample);
 
@@ -139,7 +137,6 @@ const DetailsController = () => {
       <Main
         sample={sample}
         site={site}
-        group={group}
         onChangeCounter={onChangeCounter}
         onChangeSensitivityStatus={onChangeSensitivityStatus}
       />

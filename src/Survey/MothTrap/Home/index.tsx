@@ -16,7 +16,6 @@ import {
 } from '@flumens';
 import { NavContext, isPlatform } from '@ionic/react';
 import CONFIG from 'common/config';
-import groups from 'common/models/collections/groups';
 import appModel from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import Media from 'models/media';
@@ -391,13 +390,12 @@ const HomeController = () => {
 
   const { speciesListSortOrder } = appModel.data;
 
-  const group = groups.idMap.get(sample.data.groupId!);
-
   const trainingModeSubheader = (
     <>
       {sample.data.training && <TrainingHeader />}
       <GroupHeader
-        group={group}
+        groupId={sample.data.groupId}
+        isDisabled={isDisabled}
         onClick={() => navigate(`${match.url}/details/group`)}
       />
     </>
