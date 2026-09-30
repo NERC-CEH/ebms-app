@@ -13,6 +13,10 @@ jest.mock('@ionic/react', () => ({
   isPlatform: () => false,
 }));
 
+jest.mock('Survey/AreaCount/config', () => ({
+  abundanceAttr: { id: 'occAttr:780' },
+}));
+
 jest.mock('Survey/MothTrap/config', () => ({
   __esModule: true,
   MachineInvolvement: {

@@ -135,10 +135,16 @@ function toggleTimer(sample: Sample) {
       Date.now() - new Date(sample.timerPausedTime.time).getTime();
     sample.metadata.pausedTime! += pausedTime;
     sample.timerPausedTime.time = null;
+    delete sample.metadata.timerPausedAt;
+    sample.notifications.start();
     sample.save();
     return;
   }
+
   sample.timerPausedTime.time = new Date();
+  sample.metadata.timerPausedAt = sample.timerPausedTime.time.toISOString();
+  sample.notifications.stop();
+  sample.save();
 }
 
 function byCreateTime(model1: Sample, model2: Sample) {

@@ -28,9 +28,9 @@ import initGPSExtension, {
   type Extension as GPSExtension,
 } from './GPSExt';
 import attrLockExtension from './attrLockExt';
-import initVibrateExtension, {
-  type Extension as VibrateExtension,
-} from './vibrateExt';
+import initialise, {
+  type Extension as NotificationsExtension,
+} from './notificationsExt';
 
 type AreaCountData = {
   location: Location;
@@ -88,6 +88,9 @@ type Metadata = SampleMetadata & {
    */
   pausedTime?: number;
 
+  /** Pause start, persisted so a restored count remains paused. */
+  timerPausedAt?: string;
+
   /**
    * Moth-trap survey
    */
@@ -139,7 +142,7 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
 
   declare gps: GPSExtension;
 
-  declare vibrate: VibrateExtension;
+  declare notifications: NotificationsExtension;
 
   constructor(options: SampleOptions) {
     super({
@@ -187,8 +190,12 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
       delete data.location.centroidSref;
     }
 
+    if (this.metadata.timerPausedAt) {
+      this.timerPausedTime.time = new Date(this.metadata.timerPausedAt);
+    }
+
     this.gps = initGPSExtension(this);
-    this.vibrate = initVibrateExtension(this);
+    this.notifications = initialise(this);
   }
 
   destroy(silent?: boolean) {
@@ -200,7 +207,7 @@ export default class Sample<T extends SampleData = Data> extends SampleModel<
     this.gps.stop();
     const stopGPS = (smp: Sample) => smp.gps.stop();
     this.samples.forEach(stopGPS);
-    this.vibrate.stop();
+    this.notifications.stop();
   };
 
   getSurvey(): Survey {

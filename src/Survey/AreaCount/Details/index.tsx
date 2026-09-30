@@ -107,7 +107,7 @@ const DetailsController = () => {
     if (!isValid) return;
 
     sample.data.surveyStartTime = new Date().toISOString();
-    sample.vibrate.start();
+    sample.notifications.start();
     sample.save();
 
     const path = url.replace('/details', '');

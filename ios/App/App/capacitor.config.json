@@ -13,6 +13,7 @@
 		"GeolocationPlugin",
 		"HapticsPlugin",
 		"KeyboardPlugin",
+		"LocalNotificationsPlugin",
 		"CAPNetworkPlugin",
 		"PushNotificationsPlugin",
 		"SharePlugin",

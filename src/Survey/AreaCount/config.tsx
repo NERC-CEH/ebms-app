@@ -246,7 +246,7 @@ const survey: Survey = {
     if (!sample.isSingleSpeciesSurvey()) {
       const createdOnString = new Date(sample.createdAt).toISOString();
       sample.data.surveyStartTime = createdOnString; // this can't be done in defaults for single species survey
-      sample.vibrate.start();
+      sample.notifications.start();
 
       // copy previous species groups and moth settings
       sample.data.speciesGroups = appModel.data.speciesGroups;
