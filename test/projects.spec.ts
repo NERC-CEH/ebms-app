@@ -204,6 +204,13 @@ async function prepareProjects(page: Page) {
         tokens: { access_token: `test.${payload}.test` },
       },
     });
+    const app = (await mainStore.findAll()).find(
+      (record: any) => record.cid === 'app'
+    );
+    await mainStore.save({
+      ...app,
+      data: { ...app.data, useDayFlyingMothsOnly: true },
+    });
     await groupsStore.delete('fixture-project');
     await groupsStore.save({
       id: '9001',
@@ -289,18 +296,27 @@ for (const survey of surveys) {
     // Project selection uses the existing model autosave, which is debounced.
     await expect
       .poll(() =>
-        page.evaluate(async projectId => {
-          const { samplesStore, mainStore } = window as any;
-          const samples = await samplesStore.findAll();
-          const app = (await mainStore.findAll()).find(
-            (record: any) => record.cid === 'app'
-          );
-          return (
-            samples.some(
-              (sample: any) => sample.data.data.groupId === projectId
-            ) && app?.data.defaultGroupId === projectId
-          );
-        }, PROJECT_ID)
+        page.evaluate(
+          async ({ projectId, rememberProject }) => {
+            const { samplesStore, mainStore } = window as any;
+            const samples = await samplesStore.findAll();
+            const app = (await mainStore.findAll()).find(
+              (record: any) => record.cid === 'app'
+            );
+            return (
+              samples.some(
+                (sample: any) => sample.data.data.groupId === projectId
+              ) &&
+              (rememberProject
+                ? app?.data.defaultGroupId === projectId
+                : !app?.data.defaultGroupId)
+            );
+          },
+          {
+            projectId: PROJECT_ID,
+            rememberProject: survey.name.startsWith('15min'),
+          }
+        )
       )
       .toBe(true);
 
@@ -329,6 +345,10 @@ for (const survey of surveys) {
       .getByRole('link', { name: survey.siteLink, exact: true })
       .click();
 
+    await expect(
+      page.getByText(survey.site, { exact: true })
+    ).not.toBeVisible();
+
     if (survey.name === 'eBMS Transect') {
       await page
         .locator('ion-modal ion-segment-button')
@@ -338,6 +358,10 @@ for (const survey of surveys) {
         .locator('ion-modal ion-list > div')
         .filter({ hasText: survey.site })
         .click();
+      await expect(
+        page.getByRole('link', { name: `Project ${PROJECT_NAME}`, exact: true })
+      ).toBeDisabled();
+      await expect(page.getByText(PROJECT_NAME, { exact: true })).toBeVisible();
       await page.getByRole('link', { name: /^Sections \d+$/ }).click();
       await expect(
         page.getByText('Project Section', { exact: true })
@@ -405,6 +429,15 @@ for (const survey of surveys) {
     await expect(
       page.locator('.search-result').getByText(siteSpecies, { exact: true })
     ).toBeVisible();
+    if (survey.name !== '15min Single Species Count') {
+      const wrongGroupSpecies =
+        survey.name === 'Moth survey' ? 'Peacock' : 'Light Emerald';
+      await expect(
+        page
+          .locator('.search-result')
+          .getByText(wrongGroupSpecies, { exact: true })
+      ).not.toBeVisible();
+    }
     await expect(
       page.locator('.search-result').getByText(projectSpecies, { exact: true })
     ).not.toBeVisible();
@@ -416,6 +449,125 @@ for (const survey of surveys) {
     await expect(
       page.locator('.search-result').getByText(projectSpecies, { exact: true })
     ).toBeVisible();
+  });
+}
+
+for (const survey of surveys) {
+  test(`${survey.name}: only count surveys prefill the project`, async ({
+    recordingPage: page,
+  }) => {
+    await prepareProjects(page);
+    await page.evaluate(async () => {
+      const store = (window as any).mainStore;
+      const app = (await store.findAll()).find(
+        (record: any) => record.cid === 'app'
+      );
+      await store.save({
+        ...app,
+        data: { ...app.data, defaultGroupId: '9001' },
+      });
+    });
+    await page.reload();
+    await expect(page.locator('#home-home')).toBeVisible();
+    await openSurvey(page, survey.name);
+
+    if (survey.name === '15min Single Species Count') {
+      await selectSpecies(page, 'Painted', 'Painted Lady');
+    }
+
+    if (survey.details)
+      await page.getByText('Additional Details', { exact: true }).click();
+
+    const projectLabel = survey.name.startsWith('15min')
+      ? 'Project Existing project'
+      : 'Project';
+    await expect(
+      page.getByRole('link', { name: projectLabel, exact: true })
+    ).toBeVisible();
+  });
+}
+
+for (const survey of surveys.filter(item =>
+  ['eBMS Transect', 'Bait-trap survey'].includes(item.name)
+)) {
+  test(`${survey.name}: excludes every project's sites from My sites`, async ({
+    recordingPage: page,
+  }) => {
+    await page.evaluate(async surveyName => {
+      const { db, groupsStore, locationsStore } = window as any;
+      const siteCid =
+        surveyName === 'eBMS Transect' ? 'test-transect' : 'test-bait-site';
+      const site = (await locationsStore.findAll()).find(
+        (record: any) => record.cid === siteCid
+      );
+      await groupsStore.save([
+        {
+          id: '9001',
+          cid: 'project-a',
+          data: { title: 'Project A', userIsMember: 't' },
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        },
+        {
+          id: '9002',
+          cid: 'project-b',
+          data: { title: 'Project B', userIsMember: 't' },
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        },
+      ]);
+      await locationsStore.save([
+        {
+          ...site,
+          id: '5001',
+          cid: 'other-project-site',
+          data: { ...site.data, name: 'Other project site' },
+        },
+        {
+          ...site,
+          id: '5002',
+          cid: 'personal-site',
+          data: { ...site.data, name: 'Personal site' },
+        },
+      ]);
+      await db.query({
+        sql: 'INSERT INTO groups_locations (group_cid, location_cid) VALUES (?, ?), (?, ?)',
+        params: ['project-a', siteCid, 'project-b', 'other-project-site'],
+      });
+    }, survey.name);
+    await page.reload();
+    await expect(page.locator('#home-home')).toBeVisible();
+    await page.context().setOffline(true);
+    await openSurvey(page, survey.name);
+    await page.getByRole('link', { name: 'Project', exact: true }).click();
+    await page
+      .getByRole('radio', { name: 'Project A', exact: true })
+      .press('Space');
+    await page
+      .getByRole('link', { name: survey.siteLink, exact: true })
+      .click();
+    await expect(
+      page.getByText('Personal site', { exact: true })
+    ).toBeVisible();
+    await expect(
+      page.getByText('Other project site', { exact: true })
+    ).not.toBeVisible();
+    const projectSite =
+      survey.name === 'eBMS Transect' ? 'Test Transect' : 'Test Bait Site';
+    await expect(
+      page.getByText(projectSite, { exact: true })
+    ).not.toBeVisible();
+    await page
+      .locator('ion-modal ion-segment-button')
+      .filter({ hasText: 'Project' })
+      .click();
+    await expect(page.getByText(projectSite, { exact: true })).toBeVisible();
+    await expect(
+      page.getByText('Other project site', { exact: true })
+    ).not.toBeVisible();
+    await expect(
+      page.getByText('Personal site', { exact: true })
+    ).not.toBeVisible();
   });
 }
 
@@ -438,11 +590,13 @@ test('creates a moth trap linked to the selected project', async ({
 
   const trap = {
     ...location('2002', 'New project trap', '18879'),
-    'locAttr:306': [],
+    'locAttr:306': [] as { value: string }[],
     'locAttr:330': '19306',
   };
   let created = false;
   let linked = false;
+  let creations = 0;
+  let linkAttempts = 0;
 
   await page.route(/\/services\/rest\/locations(\?.*)?$/, async route => {
     if (route.request().method() === 'POST') {
@@ -451,7 +605,12 @@ test('creates a moth trap linked to the selected project', async ({
       expect(values.location_type_id).toBe('18879');
       expect(values.centroid_sref).toMatch(/^-?[\d.]+ -?[\d.]+$/);
       expect(values['locAttr:306']).toHaveLength(1);
+      trap['locAttr:306'] = values['locAttr:306'].map((value: string) => ({
+        value,
+      }));
       expect(values).not.toHaveProperty('group_id');
+      if (!values.id) creations++;
+      else expect(values.id).toBe(trap.id);
       created = true;
       await route.fulfill({ json: { values: trap } });
       return;
@@ -468,6 +627,11 @@ test('creates a moth trap linked to the selected project', async ({
       expect(route.request().postDataJSON()).toEqual({
         values: { id: trap.id },
       });
+      linkAttempts++;
+      if (linkAttempts === 1) {
+        await route.fulfill({ status: 503, json: { message: 'Link failed' } });
+        return;
+      }
       linked = true;
       await route.fulfill({ json: {} });
       return;
@@ -498,6 +662,22 @@ test('creates a moth trap linked to the selected project', async ({
   });
 
   await openSurvey(page, 'Moth survey');
+  await page.getByRole('link', { name: 'Project', exact: true }).click();
+  const picker = page.locator('#precise-area-count-edit-group');
+  await picker
+    .locator('ion-segment-button')
+    .filter({ hasText: 'All projects' })
+    .click();
+  await expect(
+    picker.getByRole('button', { name: 'Join', exact: true })
+  ).toBeVisible();
+  await picker
+    .locator('ion-segment-button')
+    .filter({ hasText: 'My projects' })
+    .click();
+  await page
+    .getByRole('radio', { name: 'Existing project', exact: true })
+    .press('Space');
   await page.getByRole('link', { name: 'Moth trap', exact: true }).click();
   await page
     .locator('#moth-sites')
@@ -510,6 +690,9 @@ test('creates a moth trap linked to the selected project', async ({
   });
   await expect(projectButton).toBeVisible();
   await projectButton.click();
+  await expect(
+    page.getByRole('option', { name: PROJECT_NAME, exact: true })
+  ).toHaveCount(0);
   await page.getByRole('option', { name: 'None', exact: true }).click();
   await page.getByRole('button', { name: 'Project', exact: true }).click();
   await page
@@ -546,10 +729,33 @@ test('creates a moth trap linked to the selected project', async ({
     .click();
   await page.getByRole('button', { name: 'Save', exact: true }).click();
 
+  await expect.poll(() => linkAttempts).toBe(1);
+  await expect(
+    page.getByRole('button', { name: 'Save', exact: true })
+  ).toBeVisible();
+  await expect
+    .poll(() =>
+      page.evaluate(async () =>
+        (await (window as any).locationsStore.findAll()).some(
+          (record: any) => record.id === '2002'
+        )
+      )
+    )
+    .toBe(true);
+  await expect(page.locator('ion-loading')).not.toBeVisible();
+  await page.getByRole('button', { name: 'Save', exact: true }).click();
   await expect.poll(() => linked).toBe(true);
+  expect(creations).toBe(1);
   await page
     .locator('ion-modal ion-segment-button')
     .filter({ hasText: 'Project' })
     .click();
   await expect(page.getByText(trap.name, { exact: true })).toBeVisible();
+  const savedTrap = await page.evaluate(async () =>
+    (await (window as any).locationsStore.findAll()).find(
+      (record: any) => record.id === '2002'
+    )
+  );
+  expect(savedTrap.data['locAttr:330']).toBe(trap['locAttr:330']);
+  expect(savedTrap.data['locAttr:306']).toHaveLength(1);
 });

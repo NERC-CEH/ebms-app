@@ -105,3 +105,318 @@ for (const survey of surveys) {
     await openLocations(3);
   });
 }
+
+for (const failure of [
+  'project',
+  'location',
+  'location-request',
+  'attributes',
+  'personal',
+]) {
+  test(`moth refresh survives a failed ${failure} response`, async ({
+    recordingPage: page,
+  }) => {
+    await page.evaluate(async () => {
+      const { db, groupsStore, locationsStore } = window as any;
+      await groupsStore.save({
+        id: '9000',
+        cid: 'fixture-project',
+        data: { title: 'Fixture project', userIsMember: 't' },
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+      });
+      const trap = (await locationsStore.findAll()).find(
+        (record: any) => record.cid === 'test-moth-trap'
+      );
+      await locationsStore.save({
+        ...trap,
+        id: '2002',
+        cid: 'personal-recovery-trap',
+        data: { ...trap.data, name: 'Personal recovery trap' },
+      });
+      await db.query({
+        sql: 'INSERT INTO groups_locations (group_cid, location_cid) VALUES (?, ?)',
+        params: ['fixture-project', trap.cid],
+      });
+    });
+    await page.reload();
+    await expect(page.locator('#home-home')).toBeVisible();
+    const expectPersonalRefresh = [
+      'project',
+      'location',
+      'location-request',
+    ].includes(failure);
+    let personalRequests = 0;
+    let projectLocationRequests = 0;
+    await page.route('https://warehouse1.indicia.org.uk/**', async route => {
+      const url = new URL(route.request().url());
+      const path = url.pathname;
+
+      if (path.endsWith('/groups/9000/locations')) {
+        await route.fulfill(
+          failure === 'project'
+            ? { status: 503, json: {} }
+            : {
+                json: [
+                  {
+                    values: {
+                      id: 'link-2001',
+                      location_id: '2001',
+                      location_name: 'Test Moth Trap',
+                      location_type_id: '18879',
+                      location_boundary_geom: '',
+                      location_lat: '51.5',
+                      location_lon: '-0.12',
+                      location_created_on: new Date().toISOString(),
+                      location_updated_on: new Date().toISOString(),
+                      location_centroid_sref: '51.5 -0.12',
+                      location_centroid_sref_system: '4326',
+                    },
+                  },
+                ],
+              }
+        );
+        return;
+      }
+
+      if (path.endsWith('/locations/2001')) {
+        projectLocationRequests++;
+
+        if (failure === 'location-request') {
+          await route.fulfill({
+            status: 403,
+            json: { message: 'Location access denied' },
+          });
+          return;
+        }
+
+        const values = await page.evaluate(async () => {
+          const trap = (await (window as any).locationsStore.findAll()).find(
+            (record: any) => record.id === '2001'
+          );
+          return {
+            ...trap.data,
+            id: trap.id,
+            lat: '51.5',
+            lon: '-0.12',
+            createdOn: new Date(trap.createdAt).toISOString(),
+            updatedOn: new Date(trap.updatedAt).toISOString(),
+          };
+        });
+        if (failure === 'location') values.id = 'wrong-id';
+        if (failure === 'attributes')
+          values['locAttr:306'] = [{ value: 'invalid JSON' }];
+        await route.fulfill({ json: { values } });
+        return;
+      }
+
+      if (path.endsWith('/locations')) {
+        personalRequests++;
+        if (failure === 'personal' && personalRequests === 1) {
+          await route.fulfill({ status: 503, json: {} });
+          return;
+        }
+        const values = await page.evaluate(async () => {
+          const trap = (await (window as any).locationsStore.findAll()).find(
+            (record: any) => record.id === '2002'
+          );
+          return {
+            ...trap.data,
+            id: trap.id,
+            lat: '51.5',
+            lon: '-0.12',
+            createdOn: new Date(trap.createdAt).toISOString(),
+            updatedOn: new Date(trap.updatedAt).toISOString(),
+          };
+        });
+        if (expectPersonalRefresh) values.name = 'Refreshed personal trap';
+
+        await route.fulfill({ json: [{ values }] });
+        return;
+      }
+
+      await route.fulfill({ json: { data: [] } });
+    });
+    await openSurvey(page, 'Moth survey');
+    const locationLink = page.getByRole('link', {
+      name: 'Moth trap',
+      exact: true,
+    });
+    await locationLink.click();
+    const sites = page.locator('#moth-sites');
+    await expect.poll(() => personalRequests).toBe(1);
+    await expect(sites.locator('ion-spinner')).toHaveCount(0);
+    await expect(page.locator('ion-loading')).not.toBeVisible();
+    expect(projectLocationRequests).toBe(failure === 'project' ? 0 : 1);
+    await expect(
+      page.getByText(
+        expectPersonalRefresh
+          ? 'Refreshed personal trap'
+          : 'Personal recovery trap',
+        { exact: true }
+      )
+    ).toBeVisible();
+    await expect
+      .poll(() =>
+        page.evaluate(async () =>
+          (await (window as any).locationsStore.findAll()).some(
+            (record: any) => record.id === '2001'
+          )
+        )
+      )
+      .toBe(true);
+
+    if (failure === 'personal') {
+      await sites.getByRole('button', { name: 'Back', exact: true }).click();
+      await locationLink.click();
+      await expect.poll(() => personalRequests).toBe(2);
+      await expect(sites.locator('ion-spinner')).toHaveCount(0);
+    }
+  });
+}
+
+for (const source of ['project', 'personal']) {
+  test(`malformed ${source} lamps ${source === 'project' ? 'do not block valid locations' : 'still report an error'}`, async ({
+    recordingPage: page,
+  }) => {
+    await page.evaluate(async () => {
+      const { db, groupsStore, locationsStore } = window as any;
+      const now = Date.now();
+      await groupsStore.save({
+        id: '9000',
+        cid: 'fixture-project',
+        data: { title: 'Fixture project', userIsMember: 't' },
+        createdAt: now,
+        updatedAt: now,
+      });
+      const trap = (await locationsStore.findAll()).find(
+        (record: any) => record.cid === 'test-moth-trap'
+      );
+      await locationsStore.save({
+        ...trap,
+        id: '2002',
+        cid: 'personal-lamp-test-trap',
+        data: { ...trap.data, name: 'Personal trap before refresh' },
+      });
+      await db.query({
+        sql: 'INSERT INTO groups_locations (group_cid, location_cid) VALUES (?, ?)',
+        params: ['fixture-project', trap.cid],
+      });
+    });
+    await page.reload();
+    await expect(page.locator('#home-home')).toBeVisible();
+
+    const now = new Date().toISOString();
+    const groupLocation = {
+      location_type_id: '18879',
+      location_boundary_geom: '',
+      location_lat: '51.5',
+      location_lon: '-0.12',
+      location_created_on: now,
+      location_updated_on: now,
+      location_created_by_id: '2',
+      location_centroid_sref: '51.5 -0.12',
+      location_centroid_sref_system: '4326',
+    };
+    const invalidLamps = [{ value: 'invalid JSON' }];
+    let personalRequests = 0;
+    await page.route('https://warehouse1.indicia.org.uk/**', async route => {
+      const path = new URL(route.request().url()).pathname;
+
+      if (path.endsWith('/groups/9000/locations')) {
+        const docs = [
+          {
+            ...groupLocation,
+            id: 'link-2001',
+            location_id: '2001',
+            location_name: 'Malformed project trap',
+            'locAttr:306': source === 'project' ? invalidLamps : [],
+          },
+          {
+            ...groupLocation,
+            id: 'link-2003',
+            location_id: '2003',
+            location_name: 'Healthy project trap',
+            'locAttr:306': [],
+          },
+        ];
+        await route.fulfill({ json: docs.map(values => ({ values })) });
+        return;
+      }
+
+      if (path.endsWith('/locations')) {
+        personalRequests++;
+        await route.fulfill({
+          json: [
+            {
+              values: {
+                id: '2002',
+                name: 'Refreshed personal trap',
+                location_type_id: '18879',
+                lat: '51.5',
+                lon: '-0.12',
+                centroid_sref: '51.5 -0.12',
+                centroid_sref_system: '4326',
+                created_on: now,
+                updated_on: now,
+                created_by_id: '1',
+                'locAttr:306': source === 'personal' ? invalidLamps : [],
+              },
+            },
+          ],
+        });
+        return;
+      }
+
+      await route.fulfill({
+        json: path.endsWith('/groups') ? [] : { data: [] },
+      });
+    });
+    await openSurvey(page, 'Moth survey');
+    await page.getByRole('link', { name: 'Project', exact: true }).click();
+    await page
+      .getByRole('radio', { name: 'Fixture project', exact: true })
+      .press('Space');
+    await page.getByRole('link', { name: 'Moth trap', exact: true }).click();
+    await expect.poll(() => personalRequests).toBe(1);
+    await expect(page.locator('#moth-sites ion-spinner')).toHaveCount(0);
+    await expect(page.locator('ion-loading')).not.toBeVisible();
+
+    if (source === 'personal') {
+      await expect(
+        page.getByText('Could not parse a lamp', { exact: true })
+      ).toBeVisible();
+      await expect(
+        page.getByText('Personal trap before refresh', { exact: true })
+      ).toBeVisible();
+      await expect(
+        page.getByText('Refreshed personal trap', { exact: true })
+      ).not.toBeVisible();
+      return;
+    }
+
+    await expect(
+      page.getByText('Refreshed personal trap', { exact: true })
+    ).toBeVisible();
+    await expect
+      .poll(() =>
+        page.evaluate(async () =>
+          (await (window as any).locationsStore.findAll())
+            .filter((record: any) => record.data.locationTypeId === '18879')
+            .map((record: any) => record.id)
+            .sort()
+        )
+      )
+      .toEqual(['2002', '2003']);
+    await page
+      .locator('ion-modal ion-segment-button')
+      .filter({ hasText: 'Project' })
+      .click();
+    await expect(
+      page.getByText('Healthy project trap', { exact: true })
+    ).toBeVisible();
+    await expect(
+      page.getByText('Malformed project trap', { exact: true })
+    ).not.toBeVisible();
+  });
+}

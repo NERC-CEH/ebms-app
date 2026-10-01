@@ -56,6 +56,7 @@ const Details = ({ onSave, isTemporary }: Props) => {
   const { location } = useLocation();
   const model = location.data;
 
+  const userGroups = groups.filter(group => group.data.userIsMember === 't');
   const projectAttr = {
     id: 'groupId',
     type: 'choiceInput',
@@ -64,7 +65,7 @@ const Details = ({ onSave, isTemporary }: Props) => {
     prefix: <IonIcon icon={peopleOutline} className="size-6" />,
     choices: [
       { title: 'common.none', dataName: '' },
-      ...groups.map(g => ({ title: g.data.title, dataName: g.id! })),
+      ...userGroups.map(g => ({ title: g.data.title, dataName: g.id! })),
     ],
   } as const satisfies ChoiceInputConf;
 

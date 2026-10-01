@@ -650,7 +650,6 @@ const survey: Survey = {
         date: dateFormatISO.format(yesterday),
         enteredSrefSystem: 4326,
         training: appModel.data.useTraining,
-        groupId: appModel.data.defaultGroupId,
         inputForm: survey.webForm,
         locationId: undefined,
         recorder,

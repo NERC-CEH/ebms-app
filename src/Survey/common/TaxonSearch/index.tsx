@@ -30,63 +30,12 @@ const annotateRecordedTaxa = (
       : result
   );
 
-const useDefaultSpecies = (
-  taxonListCids?: string[],
-  recordedTaxa?: number[]
-) => {
-  const [defaultSpecies, setDefaultSpecies] = useState<SearchResult[]>();
-
-  // load all species by default if there are fewer than 200
-  useEffect(() => {
-    const language = getLanguageIso(appModel.data.language);
-
-    const fetchDefaultSpecies = async () => {
-      const lists = taxonLists.filter(list =>
-        taxonListCids?.includes(list.cid)
-      );
-
-      let speciesCount = 0;
-      lists.forEach(list => {
-        speciesCount += list.data.size || 0;
-      });
-      if (!speciesCount || speciesCount > 200) return;
-
-      const species: SearchResult[] = [];
-      await Promise.all(
-        lists.map(async list => {
-          const listSpecies = await list.fetchSpecies(language);
-          species.push(...listSpecies);
-        })
-      );
-
-      const annotated = annotateRecordedTaxa(species, recordedTaxa);
-
-      // sort by preferred name type (common vs scientific)
-      const { taxonNameDisplay } = appModel.data;
-      const preferCommonNames = taxonNameDisplay !== 'scientificOnly';
-      annotated.sort((a, b) => {
-        const nameA = preferCommonNames ? a.commonName : a.scientificName;
-        const nameB = preferCommonNames ? b.commonName : b.scientificName;
-        if (!nameA) return 1;
-        if (!nameB) return -1;
-        return nameA.localeCompare(nameB);
-      });
-
-      setDefaultSpecies(annotated);
-    };
-
-    fetchDefaultSpecies();
-  }, []);
-
-  return defaultSpecies;
-};
-
 const filterDayFlyingMoths = (
   table: typeof taxaStore.table,
   useDayFlyingMothsOnly?: boolean
 ): SQL => {
   const useDayMothsFilter =
-    useDayFlyingMothsOnly || appModel.data.useDayFlyingMothsOnly;
+    useDayFlyingMothsOnly ?? appModel.data.useDayFlyingMothsOnly;
   if (!useDayMothsFilter) return sql`1`;
 
   // filter for day-flying moths only
@@ -108,6 +57,65 @@ const speciesGroupFilter = (
   return or(
     ...informalGroups.map(groupId => eq(table.taxon_group_id, groupId))
   ) as SQL;
+};
+
+const useDefaultSpecies = (
+  taxonListCids?: string[],
+  recordedTaxa?: number[],
+  speciesGroups?: Props['speciesGroups'],
+  useDayFlyingMothsOnly?: boolean
+) => {
+  const [defaultSpecies, setDefaultSpecies] = useState<SearchResult[]>();
+
+  // load all species by default if there are fewer than 200
+  useEffect(() => {
+    setDefaultSpecies(undefined);
+    const language = getLanguageIso(appModel.data.language);
+
+    const fetchDefaultSpecies = async () => {
+      const lists = taxonLists.filter(list =>
+        taxonListCids?.includes(list.cid)
+      );
+
+      let speciesCount = 0;
+      lists.forEach(list => {
+        speciesCount += list.data.size || 0;
+      });
+      if (!speciesCount || speciesCount > 200) return;
+
+      const species: SearchResult[] = [];
+      await Promise.all(
+        lists.map(async list => {
+          const listSpecies = await list.fetchSpecies(language, table =>
+            and(
+              speciesGroupFilter(table, speciesGroups),
+              filterDayFlyingMoths(table, useDayFlyingMothsOnly)
+            )!
+          );
+          species.push(...listSpecies);
+        })
+      );
+
+      const annotated = annotateRecordedTaxa(species, recordedTaxa);
+
+      // sort by preferred name type (common vs scientific)
+      const { taxonNameDisplay } = appModel.data;
+      const preferCommonNames = taxonNameDisplay !== 'scientificOnly';
+      annotated.sort((a, b) => {
+        const nameA = preferCommonNames ? a.commonName : a.scientificName;
+        const nameB = preferCommonNames ? b.commonName : b.scientificName;
+        if (!nameA) return 1;
+        if (!nameB) return -1;
+        return nameA.localeCompare(nameB);
+      });
+
+      setDefaultSpecies(annotated);
+    };
+
+    fetchDefaultSpecies().catch(console.error);
+  }, [taxonListCids, recordedTaxa, speciesGroups, useDayFlyingMothsOnly]);
+
+  return defaultSpecies;
 };
 
 const taxonListFilter = (
@@ -142,7 +150,12 @@ const TaxonSearch = ({
 
   const [searchResults, setSearchResults] = useState<SearchResult[]>();
   const [searchPhrase, setSearchPhrase] = useState('');
-  const defaultSpecies = useDefaultSpecies(taxonListCids, recordedTaxa);
+  const defaultSpecies = useDefaultSpecies(
+    taxonListCids,
+    recordedTaxa,
+    speciesGroups,
+    useDayFlyingMothsOnly
+  );
 
   const [searchOutsideTaxonLists, setSearchOutsideTaxonLists] = useState(false);
 

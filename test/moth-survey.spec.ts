@@ -43,6 +43,13 @@ test('shows user-created project traps only in the project tab', async ({
   // Keep the seeded sites intact instead of refreshing them from the server.
   await page.context().setOffline(true);
   await openSurvey(page, 'Moth survey');
+  await expect(
+    page.getByRole('link', { name: 'Project', exact: true })
+  ).toBeVisible();
+  await page.getByRole('link', { name: 'Project', exact: true }).click();
+  await page
+    .getByRole('radio', { name: 'Test project', exact: true })
+    .press('Space');
   await page.getByRole('link', { name: 'Moth trap', exact: true }).click();
 
   const sites = page.locator('ion-modal');

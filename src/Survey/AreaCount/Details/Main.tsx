@@ -53,7 +53,7 @@ const AreaCountDetails = ({
       <IonList lines="full">
         <div className="rounded-list">
           <ProjectMenuItem
-            isDisabled={isDisabled}
+            isDisabled={isDisabled || !!sample.data.locationId}
             groupId={sample.data.groupId}
           />
           <MenuAttrItem

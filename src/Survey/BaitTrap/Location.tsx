@@ -67,14 +67,13 @@ const BaitTrapLocation = () => {
   const alphabeticallyByName = (a: Location, b: Location) =>
     a.data.name.localeCompare(b.data.name);
 
-  const userLocations = locations
-    .filter(byType(LocationType.BaitTrapSite))
-    .sort(alphabeticallyByName);
+  const sites = locations.filter(byType(LocationType.BaitTrapSite));
+  const userLocations = sites.sort(alphabeticallyByName);
 
   const group = groups.idMap.get(sample.data.groupId || '');
-  const groupLocations = userLocations.filter(location =>
-    group?.locationCids.includes(location.cid)
-  );
+  const groupLocations = sites
+    .filter(location => group?.locationCids.includes(location.cid))
+    .sort(alphabeticallyByName);
 
   const onSelectSite = (location?: Location) => {
     sample.data.locationId = location?.id;

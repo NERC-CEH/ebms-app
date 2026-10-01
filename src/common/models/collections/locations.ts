@@ -12,6 +12,7 @@ import {
   LocationDTO,
   isAxiosNetworkError,
   HandledError,
+  GroupLocationData,
 } from '@flumens';
 import config from 'common/config';
 import userModel from 'models/user';
@@ -21,6 +22,9 @@ import groups from './groups';
 import taxonLists from './taxonLists';
 
 type UnknownRecord = Record<string, unknown>;
+type RemoteFetchParams = {
+  type?: 'sites' | 'transects' | 'mothTraps' | 'baitTraps';
+};
 
 const normalizeKeys = (doc: UnknownRecord) =>
   mapKeys(doc, (_, key) => (key.includes(':') ? key : camelCase(key)));
@@ -32,7 +36,7 @@ const getUnique = (docs: LocationDTO[]) => [
 const validateDTO = (
   doc: UnknownRecord,
   schema: z.ZodSchema<LocationDTO> = dtoSchema
-) => schema.parse(doc);
+) => ({ ...doc, ...schema.parse(doc) });
 
 const throwFetchError = (error: unknown) => {
   if (isAxiosNetworkError(error as AxiosError))
@@ -80,15 +84,34 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
     reaction(getEmail, onLoginChange);
   }
 
-  async fetchRemote(
-    params: { type?: 'sites' | 'transects' | 'mothTraps' | 'baitTraps' } = {}
-  ) {
+  async fetchRemote(params: RemoteFetchParams = {}) {
     console.log(`📚 Collection: ${this.id} fetching`);
     this.remote.synchronising = true;
 
-    const { type } = params;
+    try {
+      await this.fetchLocations(params);
+    } catch (error) {
+      this.remote.synchronising = false;
+      throw error;
+    }
+
+    this.remote.synchronising = false;
+    console.log(`📚 Collection: ${this.id} collection fetching done`);
+  }
+
+  private async fetchLocations({ type }: RemoteFetchParams) {
     const groupDocs = await this.fetchGroupLocations();
     const refreshedModels: Location[] = [];
+
+    const createModels = (docs: LocationDTO[]) =>
+      docs.flatMap(doc => {
+        try {
+          return [this.Model.fromDTO(doc)];
+        } catch (error) {
+          console.error(error);
+          return [];
+        }
+      });
 
     if (!type || type === 'transects') {
       const docs = await this.fetchTransects();
@@ -98,9 +121,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       const uniqueDocs = getUnique([...transectGroupDocs, ...docs]);
       const locationList = uniqueDocs.map(({ id }) => id!);
       const sectionDocs = await this.fetchTransectSections(locationList);
-      const newModels = [...uniqueDocs, ...sectionDocs].map(doc =>
-        this.Model.fromDTO(doc)
-      );
+      const newModels = createModels([...uniqueDocs, ...sectionDocs]);
       this.upsert(...newModels);
       await Promise.all(newModels.map(m => m.save()));
       refreshedModels.push(...newModels);
@@ -116,7 +137,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         .map(([doc]) => doc)
         .filter(doc => doc.locationTypeId === LocType.MothTrap);
       const uniqueDocs = getUnique([...trapGroupDocs, ...docs]);
-      const newModels = uniqueDocs.map(doc => this.Model.fromDTO(doc));
+      const newModels = createModels(uniqueDocs);
       this.upsert(...newModels);
       await Promise.all(newModels.map(m => m.save()));
       refreshedModels.push(...newModels);
@@ -130,7 +151,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         .map(([doc]) => doc)
         .filter(doc => doc.locationTypeId === LocType.BaitTrapSite);
       const uniqueDocs = getUnique([...trapGroupDocs, ...siteDocs]);
-      const newSiteModels = uniqueDocs.map(doc => this.Model.fromDTO(doc));
+      const newSiteModels = createModels(uniqueDocs);
       this.upsert(...newSiteModels);
       await Promise.all(newSiteModels.map(m => m.save()));
       refreshedModels.push(...newSiteModels);
@@ -139,7 +160,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
       const locationList = uniqueDocs.map(({ id }) => id!);
       const trapDocs = await this.fetchBaitTraps(locationList);
-      const newTrapModels = trapDocs.map(doc => this.Model.fromDTO(doc));
+      const newTrapModels = createModels(trapDocs);
       this.upsert(...newTrapModels);
       await Promise.all(newTrapModels.map(m => m.save()));
       refreshedModels.push(...newTrapModels);
@@ -153,7 +174,7 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
         .map(([doc]) => doc)
         .filter(doc => doc.locationTypeId === LocType.Site);
       const uniqueDocs = getUnique([...siteGroupDocs, ...docs]);
-      const newModels = uniqueDocs.map(doc => this.Model.fromDTO(doc));
+      const newModels = createModels(uniqueDocs);
       this.upsert(...newModels);
       await Promise.all(newModels.map(m => m.save()));
       refreshedModels.push(...newModels);
@@ -163,10 +184,6 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
 
     await this.linkGroupLocations(groupDocs, refreshedModels);
     await this.fetchAndLinkTaxonLists(refreshedModels);
-
-    this.remote.synchronising = false;
-
-    console.log(`📚 Collection: ${this.id} collection fetching done`);
   }
 
   private async linkGroupLocations(
@@ -231,71 +248,36 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
   }
 
   private async fetchGroupLocations() {
-    //! use this once merged https://github.com/Indicia-Team/warehouse/pull/608
+    const transformGroupLocation = (doc: GroupLocationData) => {
+      const data = mapKeys(doc, (_, key) => {
+        const locationKey =
+          key === 'locationTypeId'
+            ? key
+            : camelCase(key.replace(/^location(?=[A-Z])/, ''));
 
-    //   const transformGroupLocation = (doc: GroupLocationData) => {
-    //   const data = mapKeys(doc, (_, key) => {
-    //     const locationKey =
-    //       key === 'locationTypeId'
-    //         ? key
-    //         : camelCase(key.replace(/^location(?=[A-Z])/, ''));
+        // fetchRemoteLocations camel-cases custom attribute keys too.
+        return locationKey.replace(/^locAttr(\d+)$/, 'locAttr:$1');
+      });
 
-    //     // fetchRemoteLocations camel-cases custom attribute keys too.
-    //     return locationKey.replace(/^locAttr(\d+)$/, 'locAttr:$1');
-    //   });
-
-    //   // The unprefixed ID belongs to the group-location link, not the location.
-    //   return validateDTO({ ...data, id: doc.locationId });
-    // };
-
-    // const memberGroups = groups.filter(byGroupMembershipStatus('member'));
-    // const groupDocs = memberGroups.map(async group => {
-    //   const docs = await group.fetchRemoteLocations();
-    //   return docs.map<[LocationDTO, string]>(doc => [
-    //     transformGroupLocation(doc),
-    //     group.id!,
-    //   ]);
-    // });
-
-    // return (await Promise.all(groupDocs)).flat();
+      // The unprefixed ID belongs to the group-location link, not the location.
+      return validateDTO({ ...data, id: doc.locationId });
+    };
 
     const memberGroups = groups.filter(byGroupMembershipStatus('member'));
-    const groupLocationLinks = (
-      await Promise.all(
-        memberGroups.map(async group => {
-          const docs = await group.fetchRemoteLocations();
-          return docs.map(doc => ({
-            locationId: doc.locationId,
-            groupId: group.id!,
-          }));
-        })
-      )
-    ).flat();
+    const groupDocs = memberGroups.map(async group => {
+      const docs = await group.fetchRemoteLocations();
+      return docs.map<[LocationDTO, string]>(doc => [
+        transformGroupLocation(doc),
+        group.id!,
+      ]);
+    });
 
-    if (!groupLocationLinks.length) return [];
-
-    const token = await userModel.getAccessToken();
-    const ids = [...new Set(groupLocationLinks.map(link => link.locationId))];
-    // The group endpoint omits location type, parent and trap attributes.
-    // Fetch the full location rather than treating every project location as a count site.
-    const docs = await Promise.all(
-      ids.map(async id => {
-        const url = `${this.remote.url}/index.php/services/rest/locations/${id}`;
-        const response = await axios.get<{ values: UnknownRecord }>(url, {
-          params: { verbose: 1 },
-          headers: { Authorization: `Bearer ${token}` },
-          timeout: 80000,
-        });
-        return validateDTO(
-          normalizeKeys(response.data.values),
-          dtoSchema.extend({ id: z.literal(id) })
-        );
+    return (
+      await Promise.all(groupDocs).catch(e => {
+        console.error(e);
+        return [];
       })
-    );
-    const docsMap = new Map(docs.map(doc => [doc.id, doc]));
-    return groupLocationLinks.map<[LocationDTO, string]>(
-      ({ locationId, groupId }) => [docsMap.get(locationId)!, groupId]
-    );
+    ).flat();
   }
 
   private async fetchTransectSections(locationList: string[]) {

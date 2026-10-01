@@ -16,12 +16,18 @@ const Taxon = () => {
   const { navigate, goBack } = useContext(NavContext);
   const UNKNOWN_SPECIES = getUnknownSpecies();
 
+  const isAllowedTaxon = (taxon: TaxonData) =>
+    taxon.taxonGroupId === groups.moths.id ||
+    taxon.warehouseId === UNKNOWN_SPECIES.warehouseId;
+
   const { sample, occurrence } = useSample<Sample, Occurrence>();
   if (!sample) return null;
 
   const onSpeciesSelected = async (
     taxon: TaxonData & { isRecorded?: boolean }
   ) => {
+    if (!isAllowedTaxon(taxon)) return;
+
     const { isRecorded } = taxon;
     const survey = sample.getSurvey();
 
@@ -145,7 +151,9 @@ const Taxon = () => {
   const uniqueSuggestions = new Map(
     suggestions.map(s => [s.warehouseId, s])
   ).values();
-  const sortedSuggestions = [...uniqueSuggestions].sort(byProbabilityDesc);
+  const sortedSuggestions = [...uniqueSuggestions]
+    .filter(isAllowedTaxon)
+    .sort(byProbabilityDesc);
 
   return (
     <Page id="moth-survey-taxasearch">

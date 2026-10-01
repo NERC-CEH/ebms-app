@@ -152,7 +152,7 @@ const DetailsMain = ({
         </h3>
         <div className="rounded-list">
           <ProjectMenuItem
-            isDisabled={isDisabled}
+            isDisabled={isDisabled || !!sample.data.locationId}
             groupId={sample.data.groupId}
           />
           <MenuAttrItemFromModel
