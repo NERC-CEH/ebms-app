@@ -210,6 +210,7 @@ export default interface Resources {
       "cancel": "Cancel",
       "cancelPreventBattery": "Cancel to prevent battery drain.",
       "centralAmerica": "Central America",
+      "chinaHongKong": "China (Hong Kong)",
       "clear": "Clear",
       "close": "Close",
       "cloud": "Cloud",

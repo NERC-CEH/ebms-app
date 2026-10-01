@@ -2,6 +2,7 @@
 
 Added 15min count timer push notifications.
 Added Latvian.
+Added China (Hong Kong).
 Added an abundance field to 15min and Single Species surveys.
 Added project selection to transect and bait-trap surveys.
 Expanded project-linked sites to moth traps and transects.

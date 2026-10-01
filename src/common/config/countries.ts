@@ -202,6 +202,13 @@ const countries = {
     id: 216031,
     continent: 'EU',
   },
+  HK: {
+    name: 'common.chinaHongKong',
+    latitude: 22.3193,
+    longitude: 114.1694,
+    zoom: 9,
+    continent: 'AS',
+  },
   HU: {
     name: 'common.hungary',
     latitude: 47.162494,
