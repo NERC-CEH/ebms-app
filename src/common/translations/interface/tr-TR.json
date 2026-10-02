@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Mevcut rotanızı silmek istediğinizden emin misiniz?",
     "confirmDeleteOccurrence": "Bu kaydı silmek istediğinizden emin misiniz?",
     "confirmTurnOff": "GPS takibini kapatmak istediğinizden emin misiniz?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Kopyalandı",
     "copyListEntry": "Bir liste girdisini kopyalamak için sağa kaydırın ve <1><0></0></1> simgesine dokunun.",
     "deleteSurvey": "Anketi sil",
@@ -15,6 +17,7 @@
     "direction": "Yön",
     "disableGpsTracking": "Çizim araçlarını etkinleştirmek için GPS takibi devre dışı bırakın.",
     "discard": "Çöpe at",
+    "dontShowAgain": "",
     "duration": "Süre",
     "eggLayingHostplants": "Yumurta bırakılan konukçu bitki",
     "enterNectarSource": "Buraya nektar kaynağını girin",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Onay emaili başarı ile gönderildi. Emaili almadıysanız Spam ya da Junk emaillerinize bakınız.",
     "newZealand": "Yeni Zellanda",
     "next": "Sonraki",
+    "no": "Hayır",
     "nigeria": "Nijerya",
     "none": "",
     "northAmerica": "Kuzey Amerika",
@@ -356,6 +360,7 @@
     "windDirection": "Rüzgar Yönü",
     "windFeltFace": "Rüzgar yüzde hissedilir, yapraklar hışırdar",
     "windSpeed": "Rüzgar Hızı",
+    "yes": "Evet",
     "yesterday": "Dün",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Uygulama kilitlenme verilerini paylaşın, böylece uygulamayı daha güvenilir hale getirebiliriz.",
       "label": "Uygulama analitiğini paylaş"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

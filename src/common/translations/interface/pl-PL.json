@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "",
     "confirmDeleteOccurrence": "Czy na pewno chcesz usunąć to wystąpienie?",
     "confirmTurnOff": "Czy na pewno chcesz wyłączyć śledzenie GPS?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "",
     "copyListEntry": "",
     "deleteSurvey": "",
@@ -15,6 +17,7 @@
     "direction": "",
     "disableGpsTracking": "",
     "discard": "Odrzuć",
+    "dontShowAgain": "",
     "duration": "Czas trwania",
     "eggLayingHostplants": "",
     "enterNectarSource": "",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Nowy email weryfikacyjny został pomyślnie wysłany. Jeśli nie otrzymałeś wiadomości email, sprawdź folder ze spamem.",
     "newZealand": "",
     "next": "Następny",
+    "no": "",
     "nigeria": "",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Kierunek wiatru",
     "windFeltFace": "Wiatr wyczuwany na skórze. Liście szeleszczą.",
     "windSpeed": "Szybkość wiatru",
+    "yes": "",
     "yesterday": "Wczoraj",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Udostępniaj dane o awariach aplikacji, abyśmy mogli uczynić ją bardziej niezawodną.",
       "label": "Share App Analytics"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

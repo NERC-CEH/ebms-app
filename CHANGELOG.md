@@ -11,6 +11,7 @@ Added site and project species lists to moth, bait-trap and transect surveys.
 Improved transect selection with a map and site list.
 Fixed copying species lists from previous 15min Count surveys.
 Major clean up and modernisation of translations.
+Added an option for continuous 15min count surveys.
 
 ## 1.34.0
 

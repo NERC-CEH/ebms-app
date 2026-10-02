@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Tem a certeza que pretende apagar o percurso atual?",
     "confirmDeleteOccurrence": "Tem a certeza que pretende apagar esta ocorrência?",
     "confirmTurnOff": "Tem a certeza que pretende desligar a localização por GPS?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Copiado!",
     "copyListEntry": "Para copiar uma linha da lista arraste-a para a direita e pressione o ícon<1><0></0></1>.",
     "deleteSurvey": "Apagar amostragem",
@@ -15,6 +17,7 @@
     "direction": "Direção",
     "disableGpsTracking": "Desative a localização por GPS para usar as ferramentas de desenho",
     "discard": "Rejeitar",
+    "dontShowAgain": "",
     "duration": "Duração",
     "eggLayingHostplants": "Plantas hospedeiras de posturas de ovos",
     "enterNectarSource": "Introduza aqui a fonte de néctar",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Um novo email de verificação acabou de ser enviado. Se não o recebeu verifique as suas pastas de Spam ou Lixo.",
     "newZealand": "Nova Zelândia",
     "next": "Próximo",
+    "no": "Não",
     "nigeria": "Nigéria",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Direção do vento",
     "windFeltFace": "O vento sente-se na cara, as folhas fazem ruído ao agitar",
     "windSpeed": "Velocidade do vento",
+    "yes": "Sim",
     "yesterday": "Ontem",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Partilhe os dados do mal-funcionamento da aplicação para que a possamos tornar mais estável.",
       "label": "Partilhe as análises da App"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

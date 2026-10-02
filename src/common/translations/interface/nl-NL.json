@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Weet je zeker dat je je huidige route wilt verwijderen?",
     "confirmDeleteOccurrence": "Weet je zeker dat je deze waarneming wil weggooien?",
     "confirmTurnOff": "Weet u zeker dat u de GPS wilt uitschakelen?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Gekopieerd!",
     "copyListEntry": "",
     "deleteSurvey": "Verwijder telling",
@@ -15,6 +17,7 @@
     "direction": "Richting",
     "disableGpsTracking": "Schakel GPS-tracking uit om de tekengereedschappen te activeren.",
     "discard": "Wijs af",
+    "dontShowAgain": "",
     "duration": "Duur",
     "eggLayingHostplants": "Waardplanten voor eiafzet",
     "enterNectarSource": "Voer hier de nectarbron in",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Er is nu een nieuwe e-mail ter verificatie verzonden. Als u de e-mail niet hebt ontvangen, controleer dan uw spam- of ongewenste e-mail.",
     "newZealand": "",
     "next": "Volgende",
+    "no": "",
     "nigeria": "",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Windrichting",
     "windFeltFace": "Wind voelbaar in gezicht, blad ritselt",
     "windSpeed": "Windsnelheid",
+    "yes": "",
     "yesterday": "Gisteren",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Deel uw app crash data zodat de app beter kunnen maken.",
       "label": "Deel app analysedata"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

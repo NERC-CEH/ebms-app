@@ -45,6 +45,7 @@ export type Data = ModelData & {
   showSurveysDeleteTip: boolean;
   showSurveyUploadTip: boolean;
   showCopySpeciesTip: boolean;
+  showContinueSurveyPrompt: boolean;
   // showWhatsNewInVersion122: boolean;
   showGPSPermissionTip: boolean;
   showCopyHelpTip: boolean;
@@ -91,6 +92,7 @@ const defaults: Data = {
   showSurveysDeleteTip: true,
   showSurveyUploadTip: true,
   showCopySpeciesTip: true,
+  showContinueSurveyPrompt: false,
 };
 
 export class AppModel extends Model<Data> {

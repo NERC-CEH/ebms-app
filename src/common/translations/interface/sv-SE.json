@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Är du säker att du vill radera ditt nuvarande spår.",
     "confirmDeleteOccurrence": "Är du säker på att du vill radera den här observationen?",
     "confirmTurnOff": "Är du säker på att du vill stänga av GPS-spårning",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Kopierad!",
     "copyListEntry": "För att kopiera en listpost, svep den åt höger och tryck på <1><0></0></1> ikonen.",
     "deleteSurvey": "Ta bort inventeringen",
@@ -15,6 +17,7 @@
     "direction": "Riktning",
     "disableGpsTracking": "Avaktivera GPS-spårning för att aktivera ritverktyget",
     "discard": "Ignorera",
+    "dontShowAgain": "",
     "duration": "Tidsintervall",
     "eggLayingHostplants": "Värdväxter för äggläggning",
     "enterNectarSource": "Lägg till nektarkälla här",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Ett nytt mejl med verifieringslänk skickades nu. Om du inte ser något mejl bör du titta bland papperskorgen, spamkorgen eller andra mejl-mappar.",
     "newZealand": "Nya Zeeland",
     "next": "Nästa",
+    "no": "Nej",
     "nigeria": "Nigeria",
     "none": "",
     "northAmerica": "Nordamerika",
@@ -356,6 +360,7 @@
     "windDirection": "Vindriktning",
     "windFeltFace": "2. Vinden känns i ansiktet, löven prasslar",
     "windSpeed": "Vindhastighet",
+    "yes": "Ja",
     "yesterday": "Igår",
     "zambia": "Zambia"
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Dela uppgifter om appen kraschar, för att hjälpa till att göra den mer stabil.",
       "label": "Tillåt delning av appens analysresultat"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

@@ -61,6 +61,7 @@ export default interface Resources {
       "confirmDeleteCurrent": "Are you sure you want to delete your current track?",
       "confirmDeleteOccurrence": "Are you sure you want to delete this occurrence?",
       "confirmTurnOff": "Are you sure you want to turn off the GPS tracking?",
+      "continueSurvey": "Would you like to continue counting by starting another 15-minute survey?",
       "copied": "Copied!",
       "copyListEntry": "To copy a list entry swipe it to the right and press<1><0></0></1>icon.",
       "deleteSurvey": "Delete Survey",
@@ -68,6 +69,7 @@ export default interface Resources {
       "direction": "Direction",
       "disableGpsTracking": "Disable the GPS tracking to enable the drawing tools.",
       "discard": "Discard",
+      "dontShowAgain": "Don't show this again",
       "duration": "Duration",
       "eggLayingHostplants": "Egg-laying hostplants",
       "enterNectarSource": "Enter the nectar source here",
@@ -99,6 +101,7 @@ export default interface Resources {
       "selectedArea": "Selected area",
       "sensitive": "Sensitive",
       "startCount": "Start Count",
+      "startSurvey": "Start New",
       "surveyHasSensitive": "This survey has sensitive species and should not be included in public reports.",
       "territorialDefenceHill": "Territorial defence: hill-topping",
       "territorialDefenceOther": "Territorial defence: other",
@@ -310,6 +313,7 @@ export default interface Resources {
       "newZealand": "New Zealand",
       "next": "Next",
       "nigeria": "Nigeria",
+      "no": "No",
       "noSpeciesAdded": "No species added",
       "none": "None",
       "northAmerica": "North America",
@@ -406,6 +410,7 @@ export default interface Resources {
       "windDirection": "Wind Direction",
       "windFeltFace": "Wind felt on face, leaves rustle",
       "windSpeed": "Wind Speed",
+      "yes": "Yes",
       "yesterday": "Yesterday",
       "zambia": "Zambia"
     },
@@ -722,6 +727,10 @@ export default interface Resources {
       "analytics": {
         "info": "Share app crash data so we can make the app more reliable.",
         "label": "Share App Analytics"
+      },
+      "autoStartAreaCounts": {
+        "info": "Ask to start another 15-minute count when the current count ends.",
+        "label": "Auto-start counts"
       },
       "bigButterflyCountNote": "This app is not for the <big>Big Butterfly Count</big>. If you want to take part in that survey please visit <website>this website</website>.",
       "cache": {

@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Biztos, hogy törlöd az útvonalat?",
     "confirmDeleteOccurrence": "Biztos, hogy törlöd ezt az előfordulási rekordot?",
     "confirmTurnOff": "Biztos, hogy kikapcsolod a GPS-t?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "",
     "copyListEntry": "Egy listaelem másolásához húzd az ujjad balról jobbra, és koppints a megjelenő <1><0></0></1>gombra!",
     "deleteSurvey": "Felmérés törlése",
@@ -15,6 +17,7 @@
     "direction": "Irány",
     "disableGpsTracking": "Kapcsold ki a GPS-t a szerkesztéshez!",
     "discard": "Elvet",
+    "dontShowAgain": "",
     "duration": "Stopper",
     "eggLayingHostplants": "Petenövény",
     "enterNectarSource": "Írd be a nektárforrást!",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Elküldtük az ellenőrző e-mail-t. Ha nem érkezik meg, nézd meg a \"levélszemét\" (Junk vagy Spam) mappában!",
     "newZealand": "",
     "next": "Tovább",
+    "no": "",
     "nigeria": "",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Szélirány",
     "windFeltFace": "A fák levelei zizegnek, az arcon érezhető a légmozgás.",
     "windSpeed": "Szélerősség",
+    "yes": "",
     "yesterday": "Tegnap",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Hibajelentések küldésének engedélyezése, hogy az alkalmazás még stabilabb és jobb legyen!",
       "label": "Hibajelentés engedélyezése"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Vai tiešām vēlaties dzēst pašreizējo maršrutu?",
     "confirmDeleteOccurrence": "Vai tiešām vēlaties dzēst šo novērojumu?",
     "confirmTurnOff": "Vai esat pārliecināts, ka vēlaties atslēgt GPS izsekošanu?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Nokopēts!",
     "copyListEntry": "Lai nokopētu saraksta ierakstu, pavelciet to pa labi un nospiediet <1><0></0></1>ikonu.",
     "deleteSurvey": "Dzēst uzskaiti",
@@ -15,6 +17,7 @@
     "direction": "Virziens",
     "disableGpsTracking": "Lai iespējotu zīmēšanas rīkus, atspējojiet GPS izsekošanu.",
     "discard": "Atmest ",
+    "dontShowAgain": "",
     "duration": "Ilgums",
     "eggLayingHostplants": "Barības augi olu dēšanai",
     "enterNectarSource": "Ievadiet šeit nektāra avotu",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Jauns verifikācijas e-pasts tagad ir veiksmīgi nosūtīts. Ja neesat saņēmis šo e-pastu, lūdzu, pārbaudiet savu mēstuļu vai drazu e-pasta mapi.",
     "newZealand": "Jaunzēlande",
     "next": "Tālāk",
+    "no": "Nē",
     "nigeria": "Nigērija",
     "none": "Neviens",
     "northAmerica": "Ziemeļamerika",
@@ -356,6 +360,7 @@
     "windDirection": "Vēja virziens",
     "windFeltFace": "Jūt vēja kustību uz sejas, čab lapas",
     "windSpeed": "Vēja ātrums",
+    "yes": "Jā",
     "yesterday": "Vakar",
     "zambia": "Zambija"
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Kopīgojiet datus par lietotnes darbības pārtraukumiem, lai palīdzētu mums uzlabot tās stabilitāti.",
       "label": "Kopīgot lietotnes analītikas datus"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

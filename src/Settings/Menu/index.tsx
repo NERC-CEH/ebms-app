@@ -1,5 +1,6 @@
 /* eslint-disable prefer-arrow-callback */
 import { useContext } from 'react';
+import { observer } from 'mobx-react';
 import writeBlob from 'capacitor-blob-writer';
 import i18n from 'i18next';
 import { Directory, Filesystem } from '@capacitor/filesystem';
@@ -130,6 +131,7 @@ const Container = () => {
         isLoggedIn={userModel.isLoggedIn()}
         deleteUser={deleteUser}
         useTraining={appModel.data.useTraining}
+        showContinueSurveyPrompt={appModel.data.showContinueSurveyPrompt}
         useExperiments={appModel.data.useExperiments}
         sendAnalytics={appModel.data.sendAnalytics}
         clearCache={clearCacheWrap}
@@ -145,4 +147,4 @@ const Container = () => {
   );
 };
 
-export default Container;
+export default observer(Container);

@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "",
     "confirmDeleteOccurrence": "",
     "confirmTurnOff": "Jeste li sigurni da želite isključiti GPS praćenje?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "",
     "copyListEntry": "",
     "deleteSurvey": "",
@@ -15,6 +17,7 @@
     "direction": "",
     "disableGpsTracking": "",
     "discard": "Odbaci",
+    "dontShowAgain": "",
     "duration": "Trajanje",
     "eggLayingHostplants": "",
     "enterNectarSource": "",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "",
     "newZealand": "",
     "next": "Sljedeće",
+    "no": "",
     "nigeria": "",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Smjer vjetra ",
     "windFeltFace": "Vjetar se osjeća na licu, lišće treperi",
     "windSpeed": "Brzina vjetra",
+    "yes": "",
     "yesterday": "Jučer",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Dijelite podatke o padu aplikacije kako bismo aplikaciju mogli učiniti pouzdanijom.",
       "label": "Dijelite analitiku aplikacije"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

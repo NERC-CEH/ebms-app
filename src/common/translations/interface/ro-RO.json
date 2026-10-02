@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Sunteți sigur că doriți să ștergeți înregistrarea actuală?",
     "confirmDeleteOccurrence": "Sigur doriți să ștergeți această observare?",
     "confirmTurnOff": "Sigur dorți să dezactivați urmărirea GPS?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Copiat!",
     "copyListEntry": "Pentru a  copia o înregistrare în listă, gilsează la dreapta și apăsați<1><0></0>pe pictogramă.",
     "deleteSurvey": "Șterge observația",
@@ -15,6 +17,7 @@
     "direction": "Directie",
     "disableGpsTracking": "Dezactivează datele GPS pt. activarea funcției de desenat",
     "discard": "Anulează",
+    "dontShowAgain": "",
     "duration": "Durata",
     "eggLayingHostplants": "Plante gazdă pentru depunerea ouălor",
     "enterNectarSource": "Adaugă sursa de nectar aici",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Un nou email de verificare a fost trimis cu succes acum. Dacă nu ați primit emailul, verificați folderele Spam și Junk.",
     "newZealand": "Noua Zeelandă",
     "next": "Următorul",
+    "no": "Nu",
     "nigeria": "Nigeria",
     "none": "",
     "northAmerica": "America de Nord",
@@ -356,6 +360,7 @@
     "windDirection": "Direcția vântului",
     "windFeltFace": "Se simte văntul pe față, frunzele foșnesc",
     "windSpeed": "Viteza vântului",
+    "yes": "Da",
     "yesterday": "Ieri",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Partajați datele despre blocarea aplicației, astfel încât să putem face aplicația mai fiabilă.",
       "label": "Partajați aplicația Analytics"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

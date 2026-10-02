@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Bist du sicher, dass du deine aktuelle Route löschen möchtest?",
     "confirmDeleteOccurrence": "Bist Du sicher, dass Du diese Beobachtung löschen möchtest?",
     "confirmTurnOff": "Bist Du sicher, dass Du die GPS-Ortung ausschalten möchtest?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Kopiert!",
     "copyListEntry": "Um einen Listeneintrag zu kopieren, streiche ihn nach rechts und drücke <1><0></0></1> Icon.",
     "deleteSurvey": "Beobachtung löschen",
@@ -15,6 +17,7 @@
     "direction": "Richtung",
     "disableGpsTracking": "Deaktivieren Sie das GPS-Tracking, um die Zeichenwerkzeuge zu aktivieren.",
     "discard": "Verwerfen ",
+    "dontShowAgain": "",
     "duration": "Dauer",
     "eggLayingHostplants": "Eiablagepflanze",
     "enterNectarSource": "Trage die Nektarquelle hier ein",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Eine neue Bestätigungs-E-Mail wurde gerade erfolgreich verschickt. Falls du die E-Mail nicht erhalten hast, überprüfe deinen Spam- oder Junk-E-Mail-Ordner.",
     "newZealand": "Neuseeland",
     "next": "Weiter",
+    "no": "Nein",
     "nigeria": "Nigeria",
     "none": "Keine",
     "northAmerica": "Nordamerika",
@@ -356,6 +360,7 @@
     "windDirection": "Windrichtung",
     "windFeltFace": " Wind am Gesicht fühlbar, Blätter rascheln",
     "windSpeed": "Windgeschwindigkeit",
+    "yes": "Ja",
     "yesterday": "Gestern",
     "zambia": "Sambia"
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Teile App-Absturzdaten, damit wir die App zuverlässiger machen können.",
       "label": "App Analytics teilen"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Ten a certeza de que quere eliminar o transecto actual?",
     "confirmDeleteOccurrence": "Ten a certeza de que quere eliminar esta ocorrencia?",
     "confirmTurnOff": "Ten a certeza de que quere apagar o posicionamento GPS?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Copiado!",
     "copyListEntry": "Para copiar a entrada dunha listaxe, pase o dedo cara á dereita e prema a icona <1><0></0></1>",
     "deleteSurvey": "Eliminar a mostraxe",
@@ -15,6 +17,7 @@
     "direction": "Dirección",
     "disableGpsTracking": "Desconecte o GPS para activar as ferramentas de debuxo.",
     "discard": "Descartar",
+    "dontShowAgain": "",
     "duration": "Duración",
     "eggLayingHostplants": "Ovopositando nas plantas nutricias",
     "enterNectarSource": "Introduza a fonte de alimento aquí",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Acaba de enviárselle un novo correo-e de verificación agora mesmo. Se non o recibiu, comprobe o cartafol do correo lixo. ",
     "newZealand": "Nova Zelandia",
     "next": "Seguinte",
+    "no": "Non",
     "nigeria": "Nixeria",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Dirección do vento",
     "windFeltFace": "Séntese o vento na cara e no murmurio das follas",
     "windSpeed": "Velocidade do vento",
+    "yes": "Si",
     "yesterday": "Onte",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Compartir os datos dos fallos da apli para mellorar a súa fiabilidade",
       "label": "Compartir as estatísticas da apli"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

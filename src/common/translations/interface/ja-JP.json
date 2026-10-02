@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "今の調査を消去してよろしいですか？",
     "confirmDeleteOccurrence": "この出現記録を削除してもよろしいですか?",
     "confirmTurnOff": "GPS追跡をオフにしてもよろしいですか？",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "コピーされました！",
     "copyListEntry": "リストの項目をコピーするためそれを右にスワイプして<1><0></0></1>アイコンを押してください。",
     "deleteSurvey": "調査内容を消去する",
@@ -15,6 +17,7 @@
     "direction": "方角",
     "disableGpsTracking": "描画ツールを有効にするためにGPS追跡を無効化してください。",
     "discard": "破棄する",
+    "dontShowAgain": "",
     "duration": "調査時間",
     "eggLayingHostplants": "産卵用の植物",
     "enterNectarSource": "蜜源をこちらに入力してください",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "新しい確認メールが正常に送信されました。 電子メールを受信していない場合は、スパムまたは迷惑メール フォルダを確認してください。",
     "newZealand": "ニュージーランド",
     "next": "次へ",
+    "no": "いいえ",
     "nigeria": "ナイジェリア",
     "none": "",
     "northAmerica": "北アメリカ",
@@ -356,6 +360,7 @@
     "windDirection": "風向き",
     "windFeltFace": "2：顔に風を感じる。木の葉が揺れる",
     "windSpeed": "風力",
+    "yes": "はい",
     "yesterday": "昨日",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "アプリのクラッシュ データを共有して、アプリの信頼性を高めます。",
       "label": "アプリ分析を共有する"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

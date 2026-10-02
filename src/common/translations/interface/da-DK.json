@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Er du sikker på, at du vil slette dit nuværende spor?",
     "confirmDeleteOccurrence": "Er du sikker på, at du vil slette denne forekomst?",
     "confirmTurnOff": "Er du sikker på at du vil slukke for GPS-placeringen?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Kopieret!",
     "copyListEntry": "",
     "deleteSurvey": "Slet undersøgelse",
@@ -15,6 +17,7 @@
     "direction": "Retning",
     "disableGpsTracking": "Deaktiver GPS-sporing for at aktivere tegneværktøjerne.",
     "discard": "Forkast",
+    "dontShowAgain": "",
     "duration": "Varighed",
     "eggLayingHostplants": "Værtsplanter til æg",
     "enterNectarSource": "Indtast nektarkilde her",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "En ny verifikations e-mail er blevet sent. Hvis du ikke har modtaget den, bedes du tjekke din spam-mappe eller mappen med uønskede e-mails.",
     "newZealand": "New Zealand",
     "next": "Næste",
+    "no": "Nej",
     "nigeria": "Nigeria",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Vindretning",
     "windFeltFace": "Vinden kan mærkes i ansigtet, bladene rasler",
     "windSpeed": "Vindhastighed",
+    "yes": "Ja",
     "yesterday": "I går",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Del data om app nedbrud, så vi kan gøre appen mere stabil.",
       "label": "Del App Analytics"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

@@ -10,7 +10,7 @@ import { toJS, observable } from 'mobx';
 import { observer } from 'mobx-react';
 import type { Feature, Point } from 'geojson';
 import { useTranslation } from 'react-i18next';
-import { useRouteMatch } from 'react-router';
+import { useLocation, useRouteMatch } from 'react-router';
 import {
   Page,
   useAlert,
@@ -42,6 +42,9 @@ import Header from './Header';
 import Main from './Main';
 
 const METERS_THRESHOLD = 200;
+
+const SESSION_STARTED_AT = Date.now();
+const promptedCounts = new WeakSet<Sample>();
 
 const DUMMY_ARRAY_OF_FIVE = [1, 2, 3, 4, 5];
 
@@ -200,11 +203,44 @@ function useShowSpeciesGroupList(sample?: Sample) {
   return showSpeciesGroupList;
 }
 
+function useNewSurveyPrompt(sample?: Sample) {
+  const alert = useAlert();
+
+  const newSurveyPrompt = (onContinue: () => Promise<void>) => {
+    if (!sample || !appModel.data.showContinueSurveyPrompt) return;
+
+    if (
+      sample.isDisabled ||
+      sample.metadata.saved ||
+      promptedCounts.has(sample) ||
+      sample.getTimerEndTime() < SESSION_STARTED_AT || // Restored counts that expired before this app session must not prompt.
+      !sample.isTimerFinished() ||
+      sample.validateRemote()
+    )
+      return;
+
+    promptedCounts.add(sample);
+
+    alert({
+      header: 'area.timeSUp',
+      backdropDismiss: false,
+      message: 'area.continueSurvey',
+      buttons: [
+        { text: 'common.cancel', role: 'cancel' },
+        { text: 'area.startSurvey', handler: onContinue },
+      ],
+    });
+  };
+
+  return newSurveyPrompt;
+}
+
 const HomeController = () => {
   const { t } = useTranslation();
 
   const { navigate, goBack } = useContext(NavContext);
   const match = useRouteMatch();
+  const { pathname } = useLocation();
   const showDeleteSpeciesPrompt = useDeleteSpeciesPrompt();
   const toast = useToast();
 
@@ -212,6 +248,8 @@ const HomeController = () => {
 
   let { sample } = useSample<Sample>();
   sample = useRemoteSample(sample, () => userModel.isLoggedIn(), Sample);
+
+  const newSurveyPrompt = useNewSurveyPrompt(sample);
 
   const site = sample && locations.idMap.get(sample.data.locationId!);
 
@@ -234,6 +272,72 @@ const HomeController = () => {
   };
 
   useOnBackButton(onExit);
+
+  const processDraft = async (continueSurvey = false) => {
+    if (!sample) return;
+
+    const isValid = checkSampleStatus();
+    if (!isValid) return;
+
+    const checkSpeciesGroups = !sample.isSingleSpeciesSurvey();
+    if (checkSpeciesGroups) {
+      const newSpeciesGroups = getSpeciesGroupList(sample);
+      sample.data.speciesGroups = newSpeciesGroups.map(({ id }) => id); // doing it here because if disabled prompt won't run
+      sample.save();
+
+      const showSpeciesGroupPrompt =
+        newSpeciesGroups.length > 1 &&
+        !newSpeciesGroups.every(({ disabled }) => disabled);
+      if (showSpeciesGroupPrompt) {
+        const newGroups = await promptSpeciesGroupList(newSpeciesGroups);
+        if (!newGroups) return;
+
+        sample.data.speciesGroups = newGroups;
+        sample.save();
+      }
+    }
+
+    const survey = sample.getSurvey();
+    appModel.data[`draftId:${survey.name}`] = '';
+    sample.metadata.saved = true;
+
+    // in case the automatic survey end time hasn't been set after the timeout
+    if (!sample.data.surveyEndTime)
+      sample.data.surveyEndTime = timeFormat.format(new Date());
+
+    sample.cleanUp();
+    await sample.save();
+    await appModel.save();
+
+    if (continueSurvey) {
+      navigate(`/survey/${survey.name}`, 'root', 'replace');
+      return;
+    }
+
+    navigate('/home/user-surveys', 'root');
+  };
+
+  const newSurveyPromptTimer = () => {
+    const timerEndTime = sample?.getTimerEndTime();
+    const isTimerPaused = sample?.isTimerPaused();
+    if (
+      !Number.isFinite(timerEndTime) ||
+      isTimerPaused ||
+      pathname !== match.url
+    )
+      return undefined;
+
+    // isTimerFinished uses a strict comparison, so check just after expiry.
+    const delay = Math.max(0, timerEndTime! - Date.now() + 100);
+    const timeout = setTimeout(
+      () => newSurveyPrompt(() => processDraft(true)),
+      delay
+    );
+
+    return () => clearTimeout(timeout);
+  };
+
+  useEffect(newSurveyPromptTimer, [pathname, match.url, newSurveyPrompt]);
 
   const calculateIfHasLongSections = () => {
     if (!sample) return;
@@ -298,41 +402,6 @@ const HomeController = () => {
 
     sample.upload().catch(toast.error);
 
-    navigate('/home/user-surveys', 'root');
-  };
-
-  const processDraft = async () => {
-    const isValid = checkSampleStatus();
-    if (!isValid) return;
-
-    const checkSpeciesGroups = !sample.isSingleSpeciesSurvey();
-    if (checkSpeciesGroups) {
-      const newSpeciesGroups = getSpeciesGroupList(sample);
-      sample.data.speciesGroups = newSpeciesGroups.map(({ id }) => id); // doing it here because if disabled prompt won't run
-      sample.save();
-
-      const showSpeciesGroupPrompt =
-        newSpeciesGroups.length > 1 &&
-        !newSpeciesGroups.every(({ disabled }) => disabled);
-      if (showSpeciesGroupPrompt) {
-        const newGroups = await promptSpeciesGroupList(newSpeciesGroups);
-        if (!newGroups) return;
-
-        sample.data.speciesGroups = newGroups;
-        sample.save();
-      }
-    }
-
-    const survey = sample.getSurvey();
-    appModel.data[`draftId:${survey.name}`] = '';
-    sample.metadata.saved = true;
-
-    // in case the automatic survey end time hasn't been set after the timeout
-    if (!sample.data.surveyEndTime)
-      sample.data.surveyEndTime = timeFormat.format(new Date());
-
-    sample.cleanUp();
-    sample.save();
     navigate('/home/user-surveys', 'root');
   };
 

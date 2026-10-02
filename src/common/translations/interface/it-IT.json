@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Sei sicuro di voler eliminare la traccia attuale?",
     "confirmDeleteOccurrence": "Sei sicuro di voler eliminare questo evento?",
     "confirmTurnOff": "Sei sicuro di voler spegnere il tracciamento con GPS ",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Copiato!",
     "copyListEntry": "Per copiare una voce dell'elenco, scorri il dito verso destra e premi <1><0></0></1>l'icona.",
     "deleteSurvey": "Elimina campionamento",
@@ -15,6 +17,7 @@
     "direction": "Direzione",
     "disableGpsTracking": "Disabilita il GPS per abilitare gli strumenti di disegno.",
     "discard": "Elimina ",
+    "dontShowAgain": "",
     "duration": "Durata",
     "eggLayingHostplants": "Piante nutrici con uova deposte",
     "enterNectarSource": "Inserisci qui la fonte di nettare",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Una nuova email di verifica è stata inviata con successo. Se non hai ricevuto l'email, controlla le tue cartelle Spam.",
     "newZealand": "Nuova Zelanda",
     "next": "Avanti",
+    "no": "No",
     "nigeria": "Nigeria",
     "none": "",
     "northAmerica": "America del Nord",
@@ -356,6 +360,7 @@
     "windDirection": "Direzione del vento",
     "windFeltFace": "Il vento si sentiva sul viso, si percepisce il fruscio delle foglie",
     "windSpeed": "Velocità del vento",
+    "yes": "Si",
     "yesterday": "Ieri",
     "zambia": "Zambia"
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Condividi i dati sugli arresti anomali dell'app in modo da rendere l'app più affidabile.",
       "label": "Condividi le statistiche dell'app"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

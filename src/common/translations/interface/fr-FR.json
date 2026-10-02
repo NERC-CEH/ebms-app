@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Etes-vous sûr de vouloir arrêter votre suivi en cours ?",
     "confirmDeleteOccurrence": "Voulez-vous vraiment supprimer cette occurrence ?",
     "confirmTurnOff": "Êtes-vous sûr de vouloir désactiver le suivi GPS ?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Copié !",
     "copyListEntry": "Pour copier une entrée de liste, faites-la glisser vers la droite et appuyez sur les icônes <1><0></0></1>.",
     "deleteSurvey": "Supprimer le suivi",
@@ -15,6 +17,7 @@
     "direction": "Direction",
     "disableGpsTracking": "Arrêter le GPS pour accéder aux outils de traçage",
     "discard": "Supprimer",
+    "dontShowAgain": "",
     "duration": "Durée",
     "eggLayingHostplants": "Plantes hôtes",
     "enterNectarSource": "Saisissez la source de nectar ici",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Un nouvel e-mail de vérification vous a été envoyé. Si vous ne l'avez pas reçu, vérifiez votre boîte de courriers indésirables.",
     "newZealand": "Nouvelle-Zélande",
     "next": "Suivant",
+    "no": "Non",
     "nigeria": "Nigéria",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Direction du vent",
     "windFeltFace": "Vent ressenti sur le visage, bruissement des feuilles",
     "windSpeed": "Vitesse du vent",
+    "yes": "Oui",
     "yesterday": "Hier",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Partagez les données de plantage de l'application afin que nous puissions rendre l'application plus fiable.",
       "label": "Partager l'analyse d'application"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

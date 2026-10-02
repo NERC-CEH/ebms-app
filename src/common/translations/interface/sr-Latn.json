@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Da li želite da obrišete vašu trenutnu putanju?",
     "confirmDeleteOccurrence": "Da li želite da obrišete ovaj unos?",
     "confirmTurnOff": "Da li želite da isključite GPS praćenje?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Kopirano!",
     "copyListEntry": "Da kopirajte unos sa spiska prevucite ga na desno i pritisnite ikonicu <1><0></0></1>.",
     "deleteSurvey": "Obriši obilazak",
@@ -15,6 +17,7 @@
     "direction": "Smer",
     "disableGpsTracking": "Isključite GPS praćenje da omogućite alate za crtanje.",
     "discard": "Zanemari",
+    "dontShowAgain": "",
     "duration": "Trajanje",
     "eggLayingHostplants": "Biljke za polaganje jaja",
     "enterNectarSource": "Unesite izvor nektara na ovoj lokaciji",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Nova poruka za potvrdu adrese e-pošte je upravo poslata. Ukoliko je niste primili, proverite nepoželjne poruke.",
     "newZealand": "Novi Zeland",
     "next": "Naredno",
+    "no": "Ne",
     "nigeria": "Nigerija",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Pravac vetra",
     "windFeltFace": "Vetar se oseća na licu, šuštanje lišća",
     "windSpeed": "Brzina vetra",
+    "yes": "Da",
     "yesterday": "Juče",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Podelite podatke o padu aplikacije kako bi mogli da je unapredimo.",
       "label": "Podelite analitiku aplikacije"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

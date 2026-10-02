@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Opravdu chcete smazat současnou trasu?",
     "confirmDeleteOccurrence": "Opravdu chcete smazat tento výskyt?",
     "confirmTurnOff": "Opravdu chcete vypnout sledování GPS?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Zkopírováno!",
     "copyListEntry": "Pro zkopírování seznamu přetáhněte doprava a zmáčkněte ikonku<1><0></0></1>.",
     "deleteSurvey": "Smazat záznam",
@@ -15,6 +17,7 @@
     "direction": "Směr",
     "disableGpsTracking": "Pro zapnutí kreslení vypněte GPS sledování ",
     "discard": "Zahodit změny",
+    "dontShowAgain": "",
     "duration": "Doba",
     "eggLayingHostplants": "Kladení vajec na živné rostliny",
     "enterNectarSource": "Vložte zdroj nektaru",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Nový ověřovací email byl úspěšně odeslán. Pokud ho neobdržíte, zpontrolujte záložky se spamy.",
     "newZealand": "Nový Zéland",
     "next": "Další",
+    "no": "Ne",
     "nigeria": "Nigérie",
     "none": "Nic",
     "northAmerica": "Severní Amerika",
@@ -356,6 +360,7 @@
     "windDirection": "Směr větru",
     "windFeltFace": "Vítr je cítit na tváři, listy ševelí",
     "windSpeed": "Rychlost větru",
+    "yes": "Ano",
     "yesterday": "Včera",
     "zambia": "Zambie"
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Sdílejte data hlášení dat, abychom mohli udělat tuto aplikaci důvěryhodnější.",
       "label": "Sdílejte analýzy aplikace"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

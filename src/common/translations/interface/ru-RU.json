@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "",
     "confirmDeleteOccurrence": "",
     "confirmTurnOff": "",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "",
     "copyListEntry": "",
     "deleteSurvey": "",
@@ -15,6 +17,7 @@
     "direction": "",
     "disableGpsTracking": "",
     "discard": "Сбросить",
+    "dontShowAgain": "",
     "duration": "Продолжительность",
     "eggLayingHostplants": "",
     "enterNectarSource": "",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "",
     "newZealand": "",
     "next": "Следующее",
+    "no": "",
     "nigeria": "",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Направление ветра",
     "windFeltFace": "Дуновение ветра ощущается лицом, листья шелестят",
     "windSpeed": "Скорость ветра",
+    "yes": "",
     "yesterday": "",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "",
       "label": "Поделиться статистикой"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

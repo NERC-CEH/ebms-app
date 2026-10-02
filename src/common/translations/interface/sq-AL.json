@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "",
     "confirmDeleteOccurrence": "",
     "confirmTurnOff": "",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "",
     "copyListEntry": "",
     "deleteSurvey": "",
@@ -15,6 +17,7 @@
     "direction": "",
     "disableGpsTracking": "",
     "discard": "Elimino",
+    "dontShowAgain": "",
     "duration": "Kohëzgjatja",
     "eggLayingHostplants": "",
     "enterNectarSource": "",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Një email i ri verifikimi është dërguar me sukses tani. Nëse nuk e keni marrë emailin, atëherë kontrolloni dosjen Spam në email.",
     "newZealand": "",
     "next": "Tjetra",
+    "no": "",
     "nigeria": "",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Drejtimi i erës",
     "windFeltFace": "Era ndihet në fytyrë, gjethet vërshëllejnë",
     "windSpeed": "Shpejtësia e Erës",
+    "yes": "",
     "yesterday": "",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "",
       "label": "Shpërndaj aplikacionin analitik"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

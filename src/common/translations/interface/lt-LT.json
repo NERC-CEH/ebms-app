@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Ar tikrai norite ištrinti pažymėtą maršrutą?",
     "confirmDeleteOccurrence": "Ar tikrai norite ištrinti šitą rūšį?",
     "confirmTurnOff": "Ar tikrai norite išjungti GPS sekimą?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Nukopijuota!",
     "copyListEntry": "Norėdami nukopijuoti įrašų sąrašą braukite į dešinę ir paspauskite <1><0></0></1>.",
     "deleteSurvey": "Ištrinti stebėjimus",
@@ -15,6 +17,7 @@
     "direction": "Kryptis",
     "disableGpsTracking": "Išjunkite GPS, jeigu norite matyti žemėlapio įrankius.",
     "discard": "Atmesti",
+    "dontShowAgain": "",
     "duration": "Trukmė",
     "eggLayingHostplants": "Augalas ant kurio dėjo kiaušinius",
     "enterNectarSource": "Įveskite čia nektaro šaltinį",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Naujas patvirtinimo el. laiškas sėkmingai išsiųstas. Jei negavote el. laiško, patikrinkite šlamšto aplankus el.pašte",
     "newZealand": "Naujoji Zelandija",
     "next": "Kitas",
+    "no": "Ne",
     "nigeria": "Nigerija",
     "none": "Nėra",
     "northAmerica": "Šiaurės Amerika",
@@ -356,6 +360,7 @@
     "windDirection": "Vėjo Kryptis",
     "windFeltFace": "Vėjas jaučiamas and veido, medžių lapai kruta",
     "windSpeed": "Vėjo Greitis",
+    "yes": "Taip",
     "yesterday": "Vakar",
     "zambia": "Zambija"
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Bendrinkite programėlės strigčių duomenis, kad galėtume ją padaryti patikimesnę.",
       "label": "Dalintis naudojimosi duomenimis"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

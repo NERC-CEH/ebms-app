@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "",
     "confirmDeleteOccurrence": "",
     "confirmTurnOff": "",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "",
     "copyListEntry": "",
     "deleteSurvey": "",
@@ -15,6 +17,7 @@
     "direction": "",
     "disableGpsTracking": "",
     "discard": "Hylkää",
+    "dontShowAgain": "",
     "duration": "Kesto",
     "eggLayingHostplants": "",
     "enterNectarSource": "",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "",
     "newZealand": "",
     "next": "Seuraava",
+    "no": "",
     "nigeria": "",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Tuulen suunta",
     "windFeltFace": "Tuulenvire kasvoilla, lehdet havisee",
     "windSpeed": "Tuulen voimakkuus",
+    "yes": "",
     "yesterday": "",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "",
       "label": "Jaa sovelluksen analytiikkaa"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

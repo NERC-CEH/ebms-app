@@ -8,6 +8,8 @@
     "confirmDeleteCurrent": "Segur que vols eliminar la pista en curs?",
     "confirmDeleteOccurrence": "Segur que vols esborrar aquesta cita?",
     "confirmTurnOff": "Segur que vols apagar el teu GPS?",
+    "continueSurvey": "",
+    "startSurvey": "",
     "copied": "Copiat!",
     "copyListEntry": "Per copiar una entrada en una llista fes-la lliscar cap a la dreta i apreta l'icona <1><0></0></1>.",
     "deleteSurvey": "Esborrar mostreig",
@@ -15,6 +17,7 @@
     "direction": "Direcció",
     "disableGpsTracking": "Desactiva el GPS per poder activar l'eina de dibuix.",
     "discard": "Descartar",
+    "dontShowAgain": "",
     "duration": "Duració",
     "eggLayingHostplants": "Plantes nutrícies",
     "enterNectarSource": "Entra aquí la font de nèctar",
@@ -259,6 +262,7 @@
     "newVerificationEmail": "Un nou correu de verificació s'ha enviat amb èxit. Si no has rebut aquest correu, consulta les carpetes Spam o Brossa del correu.",
     "newZealand": "Nova Zelanda",
     "next": "Següent",
+    "no": "No",
     "nigeria": "Nigèria",
     "none": "",
     "northAmerica": "",
@@ -356,6 +360,7 @@
     "windDirection": "Direcció del vent",
     "windFeltFace": "El vent es nota a la cara, les fulles cruixen",
     "windSpeed": "Velocitat del vent",
+    "yes": "Sí",
     "yesterday": "Ahir",
     "zambia": ""
   },
@@ -704,6 +709,10 @@
     "analytics": {
       "info": "Compartir les dades accidentades per tal que puguem fer l'aplicació més fiable.",
       "label": "Comparteix les analítiques de l'aplicació"
+    },
+    "autoStartAreaCounts": {
+      "info": "",
+      "label": ""
     },
     "bigButterflyCountNote": "",
     "cache": {

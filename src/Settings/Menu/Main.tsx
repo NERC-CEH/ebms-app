@@ -11,6 +11,7 @@ import {
   cloudUploadOutline,
   textOutline,
   languageOutline,
+  refreshOutline,
   locationOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
@@ -114,12 +115,17 @@ function clearCacheDialog(
   });
 }
 
-type BooleanSetting = 'sendAnalytics' | 'useTraining' | 'useExperiments';
+type BooleanSetting =
+  | 'sendAnalytics'
+  | 'useTraining'
+  | 'useExperiments'
+  | 'showContinueSurveyPrompt';
 
 type Props = {
   clearCache: () => void;
   onToggle: (setting: BooleanSetting, checked: boolean) => void;
   useTraining: boolean;
+  showContinueSurveyPrompt: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;
   isLoggedIn: boolean;
@@ -138,6 +144,7 @@ const MenuMain = ({
   isLoggedIn,
   deleteUser,
   useTraining,
+  showContinueSurveyPrompt,
   useExperiments,
   sendAnalytics,
   language,
@@ -197,6 +204,13 @@ const MenuMain = ({
             </IonLabel>
             <IonIcon icon={mothIcon} size="small" slot="start" />
           </IonItem>
+          <Toggle
+            prefix={<IonIcon icon={refreshOutline} className="size-6" />}
+            label="settings.autoStartAreaCounts.label"
+            isSelected={showContinueSurveyPrompt}
+            onChange={checked => onToggle('showContinueSurveyPrompt', checked)}
+          />
+          <InfoMessage inline>settings.autoStartAreaCounts.info</InfoMessage>
           <SelectInput
             prefix={<IonIcon icon={textOutline} className="size-6" />}
             label="settings.names.label"
