@@ -7,6 +7,7 @@ import {
   isAxiosNetworkError,
 } from '@flumens';
 import config from 'common/config';
+import speciesGroups from 'common/data/groups';
 import appModel from '../app';
 import { taxonListsStore } from '../store';
 import TaxonList, { DTO } from '../taxonList';
@@ -205,22 +206,34 @@ class TaxonListCollection extends Collection<TaxonList> {
     }
   }
 
-  async fetchDefaultCountryTaxonList(newCountry: string) {
-    if (newCountry === 'ELSEWHERE') return null;
+  async fetchDefaultCountry(
+    country: string,
+    speciesGroup: number = speciesGroups.butterflies.id
+  ) {
+    if (country === 'ELSEWHERE') return null;
 
     console.log(
       '📚 Collection: taxonLists fetching default country list for country:',
-      newCountry
+      country
     );
 
-    const newCountryNormalised =
-      newCountry === 'UK' ? 'GB' : newCountry.replace('_', ': ');
+    const countryNormalised =
+      country === 'UK' ? 'GB' : country.replace('_', ': ');
     const lists = await this.fetchRemote({
-      locationCode: newCountryNormalised,
+      locationCode: countryNormalised,
+      speciesGroupsFilter: [speciesGroup],
     });
 
-    const list = lists.find(l => l.data.locationCode === newCountryNormalised);
-    if (!list) throw new Error('No default country species list found');
+    const list = lists.find(
+      l =>
+        l.data.locationCode === countryNormalised &&
+        l.data.taxonGroups.includes(speciesGroup)
+    );
+
+    if (!list)
+      throw new Error(
+        `No country species list found ${country} (${speciesGroup})`
+      );
 
     this.upsert(list);
 
@@ -230,9 +243,9 @@ class TaxonListCollection extends Collection<TaxonList> {
   }
 
   /**
-   * Not for butterflies, but for other species groups we want to fetch the default list, so that users can easily find their species in the app and start contributing.
+   * Fetch global defaults for species groups without country-specific lists.
    */
-  async fetchDefaultSpeciesGroupList(groups: number[]) {
+  async fetchDefaultGroup(groups: number[]) {
     if (!groups.length) return [];
 
     console.log(

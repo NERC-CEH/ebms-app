@@ -43,11 +43,9 @@ mobxConfig({ enforceActions: 'never' });
   // in the background, fetch species lists for the selected country
   // TODO: remove in the future when users have redownloaded their lists.
   if (!taxonLists.length && appModel.data.country && device.isOnline)
-    taxonLists
-      .fetchDefaultCountryTaxonList(appModel.data.country)
-      .catch(error => {
-        console.error('Error fetching default country taxon list', error);
-      });
+    taxonLists.fetchDefaultCountry(appModel.data.country).catch(error => {
+      console.error('Error fetching default country taxon list', error);
+    });
 
   appModel.data.sendAnalytics &&
     initSentry({

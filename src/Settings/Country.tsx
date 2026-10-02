@@ -9,6 +9,7 @@ import countries, {
   ContinentCode,
   CountryCode,
 } from 'common/config/countries';
+import groups from 'common/data/groups';
 import taxonLists from 'common/models/collections/taxonLists';
 import appModel from 'models/app';
 
@@ -66,14 +67,13 @@ const SelectCountry = ({ hideHeader }: Props) => {
     appModel.data.country = newCountry;
     appModel.save();
 
-    try {
-      // in the background, fetch species lists for the selected country
-      taxonLists.fetchDefaultCountryTaxonList(newCountry);
-    } catch (error) {
-      console.error(
-        `Error fetching country species list for "${newCountry}"`,
-        error
-      );
+    // In the background, fetch species lists for the selected country.
+    taxonLists.fetchDefaultCountry(newCountry).catch(console.error);
+
+    if (appModel.data.speciesGroups.includes(groups.moths.id)) {
+      taxonLists
+        .fetchDefaultCountry(newCountry, groups.moths.id)
+        .catch(console.error);
     }
 
     if (!isOnboarding) goBack();

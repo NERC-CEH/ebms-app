@@ -12,7 +12,7 @@ import { Button, device, Main, Page } from '@flumens';
 import { IonButtons, IonFooter, IonIcon, IonToolbar } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
 import groups from 'common/data/groups';
-import taxonListsCollection from 'common/models/collections/taxonLists';
+import taxonLists from 'common/models/collections/taxonLists';
 import appModel from 'models/app';
 import SpeciesGroupsSlide from './SpeciesGroupsSlide';
 import graph from './images/welcome_1.png';
@@ -37,11 +37,19 @@ const Onboarding = ({ children }: { children: ReactNode }) => {
 
     if (!device.isOnline) return;
 
-    taxonListsCollection.fetchDefaultSpeciesGroupList(
-      appModel.data.speciesGroups.filter(
-        group => group !== groups.butterflies.id
-      )
-    );
+    const { country, speciesGroups } = appModel.data;
+
+    if (country && speciesGroups.includes(groups.moths.id)) {
+      taxonLists
+        .fetchDefaultCountry(country, groups.moths.id)
+        .catch(console.error);
+    }
+
+    const notMothsOrButterflies = (g: number) =>
+      g !== groups.butterflies.id && g !== groups.moths.id;
+    taxonLists
+      .fetchDefaultGroup(speciesGroups.filter(notMothsOrButterflies))
+      .catch(console.error);
   }
 
   const slideNextOrClose = () => {
