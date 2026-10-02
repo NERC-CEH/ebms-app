@@ -1,4 +1,4 @@
-GET https://api.openweathermap.org/data/2.5/onecall/timemachine
+GET https://api.openweathermap.org/data/3.0/onecall/timemachine
   ?lat=50.5100904
   &lon=-3.6142677
   &appid={{$dotenv APP_WEATHER_SITE_API_KEY}}

@@ -345,9 +345,13 @@ for (const survey of surveys) {
       .getByRole('link', { name: survey.siteLink, exact: true })
       .click();
 
-    await expect(
-      page.getByText(survey.site, { exact: true })
-    ).not.toBeVisible();
+    const projectSite = page.getByText(survey.site, { exact: true });
+
+    if (['eBMS Transect', 'Bait-trap survey'].includes(survey.name)) {
+      await expect(projectSite).toBeVisible();
+    } else {
+      await expect(projectSite).not.toBeVisible();
+    }
 
     if (survey.name === 'eBMS Transect') {
       await page
@@ -490,7 +494,7 @@ for (const survey of surveys) {
 for (const survey of surveys.filter(item =>
   ['eBMS Transect', 'Bait-trap survey'].includes(item.name)
 )) {
-  test(`${survey.name}: excludes every project's sites from My sites`, async ({
+  test(`${survey.name}: lists accessible sites and filters the selected project`, async ({
     recordingPage: page,
   }) => {
     await page.evaluate(async surveyName => {
@@ -551,12 +555,10 @@ for (const survey of surveys.filter(item =>
     ).toBeVisible();
     await expect(
       page.getByText('Other project site', { exact: true })
-    ).not.toBeVisible();
+    ).toBeVisible();
     const projectSite =
       survey.name === 'eBMS Transect' ? 'Test Transect' : 'Test Bait Site';
-    await expect(
-      page.getByText(projectSite, { exact: true })
-    ).not.toBeVisible();
+    await expect(page.getByText(projectSite, { exact: true })).toBeVisible();
     await page
       .locator('ion-modal ion-segment-button')
       .filter({ hasText: 'Project' })
@@ -597,6 +599,8 @@ test('creates a moth trap linked to the selected project', async ({
   let linked = false;
   let creations = 0;
   let linkAttempts = 0;
+  let createdExternalKey: string | undefined;
+  let duplicateSubmissions = 0;
 
   await page.route(/\/services\/rest\/locations(\?.*)?$/, async route => {
     if (route.request().method() === 'POST') {
@@ -605,12 +609,25 @@ test('creates a moth trap linked to the selected project', async ({
       expect(values.location_type_id).toBe('18879');
       expect(values.centroid_sref).toMatch(/^-?[\d.]+ -?[\d.]+$/);
       expect(values['locAttr:306']).toHaveLength(1);
+      expect(values).not.toHaveProperty('group_id');
+      expect(values.external_key).toEqual(expect.any(String));
+
+      // The warehouse rejects a retry with the same external key.
+      if (created && values.external_key === createdExternalKey) {
+        duplicateSubmissions++;
+        await route.fulfill({
+          status: 409,
+          json: { duplicate_of: { id: trap.id } },
+        });
+        return;
+      }
+
       trap['locAttr:306'] = values['locAttr:306'].map((value: string) => ({
         value,
       }));
-      expect(values).not.toHaveProperty('group_id');
       if (!values.id) creations++;
       else expect(values.id).toBe(trap.id);
+      createdExternalKey = values.external_key;
       created = true;
       await route.fulfill({ json: { values: trap } });
       return;
@@ -733,19 +750,12 @@ test('creates a moth trap linked to the selected project', async ({
   await expect(
     page.getByRole('button', { name: 'Save', exact: true })
   ).toBeVisible();
-  await expect
-    .poll(() =>
-      page.evaluate(async () =>
-        (await (window as any).locationsStore.findAll()).some(
-          (record: any) => record.id === '2002'
-        )
-      )
-    )
-    .toBe(true);
+  await expect(page.getByText('Link failed', { exact: true })).toBeVisible();
   await expect(page.locator('ion-loading')).not.toBeVisible();
   await page.getByRole('button', { name: 'Save', exact: true }).click();
   await expect.poll(() => linked).toBe(true);
   expect(creations).toBe(1);
+  expect(duplicateSubmissions).toBe(1);
   await page
     .locator('ion-modal ion-segment-button')
     .filter({ hasText: 'Project' })

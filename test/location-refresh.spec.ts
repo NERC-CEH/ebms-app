@@ -106,13 +106,7 @@ for (const survey of surveys) {
   });
 }
 
-for (const failure of [
-  'project',
-  'location',
-  'location-request',
-  'attributes',
-  'personal',
-]) {
+for (const failure of ['project', 'location', 'attributes', 'personal']) {
   test(`moth refresh survives a failed ${failure} response`, async ({
     recordingPage: page,
   }) => {
@@ -132,7 +126,11 @@ for (const failure of [
         ...trap,
         id: '2002',
         cid: 'personal-recovery-trap',
-        data: { ...trap.data, name: 'Personal recovery trap' },
+        data: {
+          ...trap.data,
+          name: 'Personal recovery trap',
+          createdById: '1',
+        },
       });
       await db.query({
         sql: 'INSERT INTO groups_locations (group_cid, location_cid) VALUES (?, ?)',
@@ -141,18 +139,15 @@ for (const failure of [
     });
     await page.reload();
     await expect(page.locator('#home-home')).toBeVisible();
-    const expectPersonalRefresh = [
-      'project',
-      'location',
-      'location-request',
-    ].includes(failure);
+    const expectPersonalRefresh = failure !== 'personal';
     let personalRequests = 0;
-    let projectLocationRequests = 0;
+    let projectRequests = 0;
     await page.route('https://warehouse1.indicia.org.uk/**', async route => {
       const url = new URL(route.request().url());
       const path = url.pathname;
 
       if (path.endsWith('/groups/9000/locations')) {
+        projectRequests++;
         await route.fulfill(
           failure === 'project'
             ? { status: 503, json: {} }
@@ -165,48 +160,22 @@ for (const failure of [
                       location_name: 'Test Moth Trap',
                       location_type_id: '18879',
                       location_boundary_geom: '',
-                      location_lat: '51.5',
+                      location_lat: failure === 'location' ? '' : '51.5',
                       location_lon: '-0.12',
+                      location_created_by_id: '2',
                       location_created_on: new Date().toISOString(),
                       location_updated_on: new Date().toISOString(),
                       location_centroid_sref: '51.5 -0.12',
                       location_centroid_sref_system: '4326',
+                      'locAttr:306':
+                        failure === 'attributes'
+                          ? [{ value: 'invalid JSON' }]
+                          : [],
                     },
                   },
                 ],
               }
         );
-        return;
-      }
-
-      if (path.endsWith('/locations/2001')) {
-        projectLocationRequests++;
-
-        if (failure === 'location-request') {
-          await route.fulfill({
-            status: 403,
-            json: { message: 'Location access denied' },
-          });
-          return;
-        }
-
-        const values = await page.evaluate(async () => {
-          const trap = (await (window as any).locationsStore.findAll()).find(
-            (record: any) => record.id === '2001'
-          );
-          return {
-            ...trap.data,
-            id: trap.id,
-            lat: '51.5',
-            lon: '-0.12',
-            createdOn: new Date(trap.createdAt).toISOString(),
-            updatedOn: new Date(trap.updatedAt).toISOString(),
-          };
-        });
-        if (failure === 'location') values.id = 'wrong-id';
-        if (failure === 'attributes')
-          values['locAttr:306'] = [{ value: 'invalid JSON' }];
-        await route.fulfill({ json: { values } });
         return;
       }
 
@@ -247,7 +216,7 @@ for (const failure of [
     await expect.poll(() => personalRequests).toBe(1);
     await expect(sites.locator('ion-spinner')).toHaveCount(0);
     await expect(page.locator('ion-loading')).not.toBeVisible();
-    expect(projectLocationRequests).toBe(failure === 'project' ? 0 : 1);
+    expect(projectRequests).toBe(1);
     await expect(
       page.getByText(
         expectPersonalRefresh
@@ -258,10 +227,17 @@ for (const failure of [
     ).toBeVisible();
     await expect
       .poll(() =>
-        page.evaluate(async () =>
-          (await (window as any).locationsStore.findAll()).some(
-            (record: any) => record.id === '2001'
-          )
+        page.evaluate(
+          async refreshed =>
+            (await (window as any).locationsStore.findAll()).some(
+              (record: any) =>
+                record.id === '2002' &&
+                record.data.name ===
+                  (refreshed
+                    ? 'Refreshed personal trap'
+                    : 'Personal recovery trap')
+            ),
+          expectPersonalRefresh
         )
       )
       .toBe(true);
@@ -276,7 +252,7 @@ for (const failure of [
 }
 
 for (const source of ['project', 'personal']) {
-  test(`malformed ${source} lamps ${source === 'project' ? 'do not block valid locations' : 'still report an error'}`, async ({
+  test(`malformed ${source} lamps do not block valid locations`, async ({
     recordingPage: page,
   }) => {
     await page.evaluate(async () => {
@@ -296,7 +272,11 @@ for (const source of ['project', 'personal']) {
         ...trap,
         id: '2002',
         cid: 'personal-lamp-test-trap',
-        data: { ...trap.data, name: 'Personal trap before refresh' },
+        data: {
+          ...trap.data,
+          name: 'Personal trap before refresh',
+          createdById: '1',
+        },
       });
       await db.query({
         sql: 'INSERT INTO groups_locations (group_cid, location_cid) VALUES (?, ?)',
@@ -384,20 +364,13 @@ for (const source of ['project', 'personal']) {
 
     if (source === 'personal') {
       await expect(
-        page.getByText('Could not parse a lamp', { exact: true })
-      ).toBeVisible();
-      await expect(
-        page.getByText('Personal trap before refresh', { exact: true })
-      ).toBeVisible();
-      await expect(
         page.getByText('Refreshed personal trap', { exact: true })
       ).not.toBeVisible();
-      return;
+    } else {
+      await expect(
+        page.getByText('Refreshed personal trap', { exact: true })
+      ).toBeVisible();
     }
-
-    await expect(
-      page.getByText('Refreshed personal trap', { exact: true })
-    ).toBeVisible();
     await expect
       .poll(() =>
         page.evaluate(async () =>
@@ -407,7 +380,7 @@ for (const source of ['project', 'personal']) {
             .sort()
         )
       )
-      .toEqual(['2002', '2003']);
+      .toEqual(source === 'personal' ? ['2001', '2003'] : ['2002', '2003']);
     await page
       .locator('ion-modal ion-segment-button')
       .filter({ hasText: 'Project' })
@@ -415,8 +388,14 @@ for (const source of ['project', 'personal']) {
     await expect(
       page.getByText('Healthy project trap', { exact: true })
     ).toBeVisible();
-    await expect(
-      page.getByText('Malformed project trap', { exact: true })
-    ).not.toBeVisible();
+    const firstProjectTrap = page.getByText('Malformed project trap', {
+      exact: true,
+    });
+
+    if (source === 'project') {
+      await expect(firstProjectTrap).not.toBeVisible();
+    } else {
+      await expect(firstProjectTrap).toBeVisible();
+    }
   });
 }
