@@ -60,6 +60,6 @@ test('resolves nested JSON translations', async () => {
     'Siunčiama 10 įrašų'
   );
   expect(translator.t('common.identificationFailed')).toBe(
-    'Sorry, we could not identify this species.'
+    'Atsiprašome, nepavyko nustatyti šios rūšies.'
   );
 });

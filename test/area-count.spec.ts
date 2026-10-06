@@ -1,5 +1,26 @@
+import type { Page } from '@playwright/test';
 import { test, expect } from './fixtures';
 import { openSurvey, selectSpecies, walkSurveyArea } from './utils';
+
+async function setCountContinuation(page: Page, enabled: boolean) {
+  await page.getByRole('tab', { name: 'Menu', exact: true }).click();
+  await page.locator('#info-menu').getByText('App', { exact: true }).click();
+
+  // Mobile switches render their label outside the switch input.
+  const toggle = page
+    .locator('.switch-input')
+    .filter({ hasText: 'Auto-start counts' })
+    .getByRole('switch');
+
+  if ((await toggle.isChecked()) !== enabled) {
+    await toggle.press('Space');
+  }
+
+  await expect(toggle).toBeChecked({ checked: enabled });
+  await page.getByRole('button', { name: 'Back' }).last().click();
+  await page.getByRole('tab', { name: 'Home', exact: true }).click();
+  await expect(page.locator('#home-home')).toBeVisible();
+}
 
 test.describe('15min Count', () => {
   test('requires an account before starting a survey', async ({ homePage }) => {
@@ -133,6 +154,7 @@ test.describe('15min Count', () => {
   test('offers continuation when the timer expires on the current page, respecting pauses', async ({
     recordingPage,
   }) => {
+    await setCountContinuation(recordingPage, true);
     await recordingPage.clock.install();
     await openSurvey(recordingPage, '15min Count');
     await walkSurveyArea(recordingPage);
@@ -164,6 +186,7 @@ test.describe('15min Count', () => {
   test('does not offer continuation for an invalid expired count', async ({
     recordingPage,
   }) => {
+    await setCountContinuation(recordingPage, true);
     await openSurvey(recordingPage, '15min Count');
     await expect(recordingPage).toHaveURL(/\/survey\/precise-area\/[^/]+$/);
     const surveyUrl = recordingPage.url();
@@ -188,6 +211,7 @@ test.describe('15min Count', () => {
   test('continues an expired count with a new survey and resets Back navigation', async ({
     recordingPage,
   }) => {
+    await setCountContinuation(recordingPage, true);
     await openSurvey(recordingPage, '15min Count');
     await walkSurveyArea(recordingPage);
     await recordingPage.getByText('Add species', { exact: true }).click();
@@ -232,6 +256,7 @@ test.describe('15min Count', () => {
   test('does not offer continuation for a count that expired before restart', async ({
     recordingPage,
   }) => {
+    await setCountContinuation(recordingPage, true);
     await openSurvey(recordingPage, '15min Count');
     await walkSurveyArea(recordingPage);
     const surveyUrl = recordingPage.url();
@@ -264,63 +289,37 @@ test.describe('15min Count', () => {
     ).not.toBeVisible();
   });
 
-  test('remembers not to offer continuation for future counts', async ({
+  test('does not offer continuation when disabled in Settings', async ({
     recordingPage,
   }) => {
+    await setCountContinuation(recordingPage, false);
+    await recordingPage.clock.install();
     await openSurvey(recordingPage, '15min Count');
     await walkSurveyArea(recordingPage);
-    const surveyUrl = recordingPage.url();
-    await recordingPage
-      .getByText('Additional Details', { exact: true })
-      .click();
-    await recordingPage.clock.setSystemTime(Date.now() + 16 * 60 * 1000);
-    await recordingPage.getByRole('button', { name: 'Back' }).last().click();
+    await expect(recordingPage.getByText(/\d+ m²/)).toBeVisible();
+    await recordingPage.clock.fastForward('16:00');
 
-    const prompt = recordingPage.getByRole('alertdialog', {
-      name: "Time's up!",
-    });
-    await prompt.getByText("Don't show this again", { exact: true }).click();
-    await expect(
-      prompt.getByRole('switch', { name: "Don't show this again" })
-    ).toBeChecked();
-    await prompt.getByRole('button', { name: 'No', exact: true }).click();
-    await expect(recordingPage).toHaveURL(surveyUrl);
     await expect
       .poll(() =>
         recordingPage.evaluate(async () => {
-          const app = (await (window as any).mainStore.findAll()).find(
-            (record: any) => record.cid === 'app'
-          );
-          return app.data.showContinueSurveyPrompt;
+          const [sample] = await (window as any).samplesStore.findAll();
+          return !!sample.data.data.surveyEndTime;
         })
       )
-      .toBe(false);
-
-    await recordingPage.goto('/home/home');
-    await openSurvey(recordingPage, '15min Count');
-    await recordingPage
-      .getByRole('alertdialog', { name: 'Draft' })
-      .getByRole('button', { name: 'Start new' })
-      .click();
-    await expect(recordingPage).not.toHaveURL(surveyUrl);
-    await recordingPage
-      .getByText('Additional Details', { exact: true })
-      .click();
-    await recordingPage.clock.setSystemTime(Date.now() + 32 * 60 * 1000);
-    await recordingPage.getByRole('button', { name: 'Back' }).last().click();
-    await expect(recordingPage.locator('#countdown').last()).toHaveText(
-      "Time's up!"
-    );
-    await expect(prompt).not.toBeVisible();
+      .toBe(true);
+    await expect(
+      recordingPage.getByRole('alertdialog', { name: "Time's up!" })
+    ).not.toBeVisible();
   });
 
   test('persists the auto-start area counts preference from Settings', async ({
     homePage,
   }) => {
     await homePage.goto('/settings/menu');
-    const autoStart = homePage.getByRole('switch', {
-      name: 'Auto-start area counts',
-    });
+    const autoStart = homePage
+      .locator('.switch-input')
+      .filter({ hasText: 'Auto-start counts' })
+      .getByRole('switch');
     const getPreference = () =>
       homePage.evaluate(async () => {
         const app = (await (window as any).mainStore.findAll()).find(
@@ -329,21 +328,21 @@ test.describe('15min Count', () => {
         return app.data.showContinueSurveyPrompt;
       });
 
-    await expect(autoStart).toBeChecked();
+    await expect(autoStart).not.toBeChecked();
     await expect(
       homePage.getByText(
         'Ask to start another 15-minute count when the current count ends.'
       )
     ).toBeVisible();
     await autoStart.press('Space');
-    await expect.poll(getPreference).toBe(false);
-    await homePage.reload();
-    await expect(autoStart).not.toBeChecked();
-
-    await autoStart.press('Space');
     await expect.poll(getPreference).toBe(true);
     await homePage.reload();
     await expect(autoStart).toBeChecked();
+
+    await autoStart.press('Space');
+    await expect.poll(getPreference).toBe(false);
+    await homePage.reload();
+    await expect(autoStart).not.toBeChecked();
   });
 
   test('records and keeps a draft while offline', async ({ recordingPage }) => {

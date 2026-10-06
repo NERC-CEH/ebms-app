@@ -91,6 +91,13 @@ const countries = {
     id: 215980,
     continent: 'EU',
   },
+  BR: {
+    name: 'common.brazil',
+    latitude: -14.235004,
+    longitude: -51.92528,
+    zoom: 3,
+    continent: 'SA',
+  },
   BG: {
     name: 'common.bulgaria',
     latitude: 42.733883,
@@ -342,6 +349,13 @@ const countries = {
     zoom: 2,
     id: 216114,
     continent: 'EU',
+  },
+  PE: {
+    name: 'common.peru',
+    latitude: -9.189967,
+    longitude: -75.015152,
+    zoom: 4,
+    continent: 'SA',
   },
   PL: {
     name: 'common.poland',

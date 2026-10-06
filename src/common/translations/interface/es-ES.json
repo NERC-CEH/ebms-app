@@ -8,8 +8,8 @@
     "confirmDeleteCurrent": "¿Está segur@ de que quieres borrar la ruta actual?",
     "confirmDeleteOccurrence": "¿Está seguro de que desea eliminar esta presencia?",
     "confirmTurnOff": "¿Está segur@ de que quieres desactivar el seguimiento GPS?",
-    "continueSurvey": "",
-    "startSurvey": "",
+    "continueSurvey": "¿Te gustaría seguir contando y empezar otro Recuento de 15 minutos?",
+    "startSurvey": "Empezar uno nuevo",
     "copied": "¡Copiado!",
     "copyListEntry": "Para copiar una entrada de la lista, deslícela hacia la derecha y pulse el icono<1><0></0></1>.",
     "deleteSurvey": "Eliminar muestreo",
@@ -17,7 +17,7 @@
     "direction": "Dirección",
     "disableGpsTracking": "Desactiva el seguimiento GPS para activar las herramientas de dibujo.",
     "discard": "Descartar",
-    "dontShowAgain": "",
+    "dontShowAgain": "No volver a mostrar esto",
     "duration": "Duración",
     "eggLayingHostplants": "Puesta de huevos en planta huésped",
     "enterNectarSource": "Introduzca aquí la fuente de néctar",
@@ -156,6 +156,7 @@
     "belgium": "Bélgica",
     "bosniaHerzegovina": "Bosnia y Herzegovina",
     "botswana": "Botsuana",
+    "brazil": "",
     "bulgaria": "Bulgaria",
     "bumblebees": "Abejorros",
     "butterflies": "Mariposas",
@@ -163,7 +164,7 @@
     "cancelPreventBattery": "Cancele para evitar que se agote la batería.",
     "canTypeSearch": "puedes escribir en la barra de búsqueda",
     "centralAmerica": "América Central",
-    "chinaHongKong": "",
+    "chinaHongKong": "China (Hong Kong)",
     "clear": "Borrar",
     "close": "Cerrar",
     "cloud": "Nubes",
@@ -278,6 +279,7 @@
     "otherFunnelTrap": "Otra trampa de embudo",
     "otherTrap": "Otra trampa",
     "paused": "Pausa",
+    "peru": "",
     "pleaseSpecifyCloud": "Especifique el % de cobertura de nubes.",
     "pleaseSpecifyWind": "Por favor especifique la dirección del viento",
     "pleaseSpecifyWindSpeed": "Por favor especifique la velocidad del viento",
@@ -711,8 +713,8 @@
       "label": "Compartir análisis de aplicaciones"
     },
     "autoStartAreaCounts": {
-      "info": "",
-      "label": ""
+      "info": "Pide que se inicie otro Recuento de 15 minutos cuando termine el actual.",
+      "label": "Inicios automáticos de recuento"
     },
     "bigButterflyCountNote": "Esta app no es para <big>Big Butterfly Count</big>. Si quieres formar parte de ese monitoreo, por favor visita <website>esta página web</website>.",
     "cache": {
