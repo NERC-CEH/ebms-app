@@ -230,10 +230,19 @@ class TaxonListCollection extends Collection<TaxonList> {
         l.data.taxonGroups.includes(speciesGroup)
     );
 
-    if (!list)
+    if (!list && speciesGroup === speciesGroups.moths.id) {
+      // until every country starts using custom moth species lists, we will default to
+      // default group list when it the list is missing
+      const [genericList] = await this.fetchDefaultGroup([speciesGroup]);
+
+      if (genericList) return genericList;
+    }
+
+    if (!list) {
       throw new Error(
         `No country species list found ${country} (${speciesGroup})`
       );
+    }
 
     this.upsert(list);
 
