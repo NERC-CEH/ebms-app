@@ -36,8 +36,8 @@ import Occurrence, {
   Taxon,
 } from 'common/models/occurrence';
 import Sample from 'common/models/sample';
-import appModel from 'models/app';
 import { Data as LocationData } from 'models/location';
+import userModel from 'models/user';
 import {
   Survey,
   appVersionAttr,
@@ -545,7 +545,7 @@ const survey = {
         [firstSampleDateAttr.id]: dateFormatISO.format(now),
         [lastSampleDateAttr.id]: dateFormatISO.format(now),
         sampleMethodId: 24552, // bait-trap
-        training: appModel.data.useTraining,
+        training: userModel.data.training === true,
         inputForm: SURVEY_FORM,
         [appVersionAttr.id]: config.version,
         [eventTypeAttr.id]: 'Bimonthly monitoring',

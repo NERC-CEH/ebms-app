@@ -25,7 +25,6 @@ export type Data = ModelData & {
   showedWelcome: boolean;
   language: LanguageCode | null;
   country?: CountryCode;
-  useTraining: boolean;
   feedbackGiven: boolean;
   speciesListSortOrder: SpeciesListSortOrder;
 
@@ -62,7 +61,6 @@ export type Data = ModelData & {
 
 const defaults: Data = {
   showedWelcome: false,
-  useTraining: false,
   language: null,
   country: undefined,
   feedbackGiven: false,

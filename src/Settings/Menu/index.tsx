@@ -13,7 +13,7 @@ import { db } from 'common/models/store';
 import appModel, { Data, TaxonNameDisplayType } from 'models/app';
 import samplesCollection from 'models/collections/samples';
 import Sample from 'models/sample';
-import userModel from 'models/user';
+import userModel, { useUserStatusCheck } from 'models/user';
 import Main from './Main';
 
 const useDeleteUser = () => {
@@ -114,6 +114,8 @@ const onToggle = (setting: BooleanKeys<Data>, checked: boolean) => {
 
 const Container = () => {
   const toast = useToast();
+  const loader = useLoader();
+  const checkUserStatus = useUserStatusCheck();
 
   const deleteUser = useDeleteUser();
 
@@ -124,13 +126,33 @@ const Container = () => {
     appModel.save();
   };
 
+  const updateTrainingSetting = async (value: boolean) => {
+    if (!(await checkUserStatus())) return;
+
+    await loader.show('common.pleaseWait');
+
+    const originalValue = userModel.data.training;
+
+    try {
+      userModel.data.training = value;
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      await userModel.updateRemote({ field_training: [{ value }] });
+    } catch (error) {
+      userModel.data.training = originalValue;
+      toast.error(error as Error);
+    }
+
+    loader.hide();
+  };
+
   return (
     <Page id="settings-menu">
       <Header title="settings.title" />
       <Main
         isLoggedIn={userModel.isLoggedIn()}
         deleteUser={deleteUser}
-        useTraining={appModel.data.useTraining}
+        useTraining={userModel.data.training === true}
+        onTrainingToggle={updateTrainingSetting}
         showContinueSurveyPrompt={appModel.data.showContinueSurveyPrompt}
         useExperiments={appModel.data.useExperiments}
         sendAnalytics={appModel.data.sendAnalytics}

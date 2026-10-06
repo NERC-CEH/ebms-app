@@ -82,6 +82,39 @@ async function mockRemoteReads(page: Page) {
       json: path.endsWith('/groups') ? [] : { data: [], hits: { hits: [] } },
     });
   });
+  await page.route('**/oauth/token', async route => {
+    const token = Buffer.from(
+      JSON.stringify({
+        sub: '1',
+        email: 'test@example.com',
+        email_verified: true,
+        'http://indicia.org.uk/user:id': 1,
+        exp: Math.floor(Date.now() / 1000) + 3600,
+      })
+    ).toString('base64url');
+
+    await route.fulfill({
+      json: {
+        access_token: `test.${token}.test`,
+        refresh_token: 'test-refresh-token',
+      },
+    });
+  });
+  await page.route('**/user/1?_format=json', async route => {
+    if (route.request().method() !== 'GET') {
+      await route.abort();
+      return;
+    }
+
+    await route.fulfill({
+      json: {
+        mail: [{ value: 'test@example.com' }],
+        field_first_name: [{ value: 'Test' }],
+        field_last_name: [{ value: 'Recorder' }],
+        field_training: [{ value: false }],
+      },
+    });
+  });
   await page.route('https://api.openweathermap.org/**', route =>
     route.fulfill({
       json: {
@@ -120,7 +153,11 @@ async function seedRecordingData(page: Page) {
         verified: true,
         profileFetched: true,
         indiciaUserId: '1',
-        tokens: { access_token: `test.${payload}.test` },
+        training: false,
+        tokens: {
+          access_token: `test.${payload}.test`,
+          refresh_token: 'test-refresh-token',
+        },
       },
       createdAt: now,
       updatedAt: now,

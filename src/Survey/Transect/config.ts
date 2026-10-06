@@ -7,7 +7,6 @@ import locations from 'common/models/collections/locations';
 import Sample from 'common/models/sample';
 import { assignIfMissing } from 'common/models/utils';
 import { fetchHistoricalWeather } from 'common/services/openWeather';
-import appModel from 'models/app';
 import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
 import userModel from 'models/user';
 import {
@@ -199,7 +198,7 @@ const survey: Survey = {
       data: {
         surveyId: survey.id,
         date: dateFormatISO.format(now),
-        training: appModel.data.useTraining,
+        training: userModel.data.training === true,
         sampleMethodId: 22,
         surveyStartTime: timeFormat.format(now),
         recorder,

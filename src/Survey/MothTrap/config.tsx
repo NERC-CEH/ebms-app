@@ -33,6 +33,7 @@ import appModel from 'models/app';
 import locations from 'models/collections/locations';
 import Occurrence, { Taxon } from 'models/occurrence';
 import Sample from 'models/sample';
+import userModel from 'models/user';
 import {
   Survey,
   commentAttrOld,
@@ -649,7 +650,7 @@ const survey: Survey = {
         surveyId: surveyId || survey.id,
         date: dateFormatISO.format(yesterday),
         enteredSrefSystem: 4326,
-        training: appModel.data.useTraining,
+        training: userModel.data.training === true,
         inputForm: survey.webForm,
         locationId: undefined,
         recorder,

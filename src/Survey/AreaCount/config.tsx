@@ -16,6 +16,7 @@ import { assignIfMissing } from 'common/models/utils';
 import { fetchWeather } from 'common/services/openWeather';
 import Occurrence, { DRAGONFLY_GROUP } from 'models/occurrence';
 import Sample from 'models/sample';
+import userModel from 'models/user';
 import {
   Survey,
   appVersionAttr,
@@ -230,7 +231,7 @@ const survey: Survey = {
         surveyId: surveyId || survey.id,
         date: dateFormatISO.format(new Date()),
         enteredSrefSystem: 4326,
-        training: appModel.data.useTraining,
+        training: userModel.data.training === true,
         groupId: appModel.data.defaultGroupId,
         inputForm: survey.webForm,
         [appVersionAttr.id]: config.version,

@@ -19,6 +19,8 @@ export type Attrs = {
   firstName?: string;
   lastName?: string;
   email?: string;
+  /** Drupal returns an empty array when field_training is unset. */
+  training?: boolean | [];
 
   /**
    * @deprecated
@@ -30,6 +32,7 @@ const defaults: Attrs = {
   firstName: '',
   lastName: '',
   email: '',
+  training: false,
 };
 
 export class UserModel extends DrupalUserModel<Attrs> {
@@ -47,13 +50,13 @@ export class UserModel extends DrupalUserModel<Attrs> {
   constructor(options: DrupalUserModelOptions<Attrs>) {
     super({ ...options, data: { ...defaults, ...options.data } });
 
-    const checkForValidation = () => {
-      if (this.isLoggedIn() && !this.data.verified) {
-        console.log('User: refreshing profile for validation');
-        this.refreshProfile();
+    const refreshAccount = () => {
+      if (this.isLoggedIn() && device.isOnline) {
+        console.log('User: refreshing profile');
+        this.refreshProfile().catch(console.error);
       }
     };
-    this.ready?.then(checkForValidation);
+    this.ready?.then(refreshAccount);
   }
 
   async checkActivation() {

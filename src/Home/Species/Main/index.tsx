@@ -151,7 +151,7 @@ const MainComponent = ({ searchPhrase = '', filters }: Props) => {
 
   const showFeedback = () => {
     if (appModel.data.feedbackGiven) return false;
-    if (appModel.data.useTraining) return false;
+    if (userModel.data.training === true) return false;
     if (!userModel.isLoggedIn()) return false;
 
     return samplesCollection.length > 5;

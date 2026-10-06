@@ -116,15 +116,13 @@ function clearCacheDialog(
 }
 
 type BooleanSetting =
-  | 'sendAnalytics'
-  | 'useTraining'
-  | 'useExperiments'
-  | 'showContinueSurveyPrompt';
+  'sendAnalytics' | 'useExperiments' | 'showContinueSurveyPrompt';
 
 type Props = {
   clearCache: () => void;
   onToggle: (setting: BooleanSetting, checked: boolean) => void;
   useTraining: boolean;
+  onTrainingToggle: (checked: boolean) => void;
   showContinueSurveyPrompt: boolean;
   useExperiments: boolean;
   sendAnalytics: boolean;
@@ -144,6 +142,7 @@ const MenuMain = ({
   isLoggedIn,
   deleteUser,
   useTraining,
+  onTrainingToggle,
   showContinueSurveyPrompt,
   useExperiments,
   sendAnalytics,
@@ -164,8 +163,6 @@ const MenuMain = ({
   const onUseExperiments = (checked: boolean) =>
     onToggle('useExperiments', checked);
   const onClearCacheDialog = () => clearCacheDialog(clearCache, alert);
-  const onTrainingToggle = (checked: boolean) =>
-    onToggle('useTraining', checked);
 
   const countryLabel = countries[country]?.name;
   const languageLabel = languages[language]?.name;
@@ -252,7 +249,8 @@ const MenuMain = ({
           <Toggle
             prefix={<IonIcon src={schoolOutline} className="size-6" />}
             label="settings.training.label"
-            defaultSelected={useTraining}
+            isSelected={useTraining}
+            isDisabled={!isLoggedIn}
             onChange={onTrainingToggle}
           />
           <InfoMessage inline>settings.training.info</InfoMessage>
