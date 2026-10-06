@@ -86,7 +86,7 @@ const HomeController = () => {
       />
       <GroupHeader
         groupId={sample.data.groupId}
-        isDisabled={sample.isDisabled}
+        isDisabled={sample.isDisabled || !!sample.data.locationId}
         onClick={() => navigate(`${match.url}/details/group`)}
       />
       <Main sample={sample} onAddTrapVisit={onAddTrapVisit} />

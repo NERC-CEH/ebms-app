@@ -395,7 +395,7 @@ const HomeController = () => {
       {sample.data.training && <TrainingHeader />}
       <GroupHeader
         groupId={sample.data.groupId}
-        isDisabled={isDisabled}
+        isDisabled={isDisabled || !!sample.data.locationId}
         onClick={() => navigate(`${match.url}/details/group`)}
       />
     </>
