@@ -220,7 +220,7 @@ const speciesConfig: Survey = {
               input: 'radio',
               set: (value: string | null, model: Occurrence) => {
                 if (model.data.behaviour !== value) {
-                  Object.assign(model.data, {
+                  const resetValues = {
                     direction: undefined,
                     altitude: undefined,
                     nectarSource: undefined,
@@ -228,7 +228,16 @@ const speciesConfig: Survey = {
                     otherEggLaying: undefined,
                     mating: undefined,
                     otherThistles: undefined,
-                  });
+                  };
+
+                  Object.assign(model.data, resetValues);
+                  Object.keys(resetValues).forEach(attr =>
+                    model.parent!.parent!.locks.unset(
+                      model.data.taxon.taxonGroupId,
+                      'occ',
+                      attr
+                    )
+                  );
                 }
 
                 model.data.behaviour = value ?? undefined;

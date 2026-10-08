@@ -54,7 +54,10 @@ export default () => {
     const lockedValue = get(taxonGroup, model, attr);
     if (arguments.length < 4) return lockedValue !== undefined;
 
-    return JSON.stringify(lockedValue) === JSON.stringify(value);
+    return (
+      lockedValue !== undefined &&
+      JSON.stringify(lockedValue) === JSON.stringify(value)
+    );
   }
 
   return { getAll, set, unset, get, isLocked };

@@ -12,6 +12,7 @@ Improved transect selection with a map and site list.
 Fixed copying species lists from previous 15min Count surveys.
 Major clean up and modernisation of translations.
 Auto-sync training mode with website.
+Added Vanessa Cardui species attribute locking.
 Added an option for continuous 15min count surveys.
 
 ## 1.34.0

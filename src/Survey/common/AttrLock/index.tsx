@@ -6,7 +6,7 @@ import {
   lockOpenOutline,
 } from 'ionicons/icons';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
-import { MenuAttrItem, useToast } from '@flumens';
+import { MenuAttrItem, MenuAttrItemFromModel, useToast } from '@flumens';
 import {
   IonIcon,
   IonItem,
@@ -24,6 +24,13 @@ type AttrLockProps = {
   model: 'smp' | 'occ';
   attr: string;
   value: unknown;
+  onLock?: (
+    taxonGroup: string | number | null | undefined,
+    model: 'smp' | 'occ',
+    attr: string,
+    value: unknown
+  ) => void;
+  onUnlock?: () => void;
   children: ReactElement<{ detailIcon?: string }>;
 };
 
@@ -33,16 +40,20 @@ const AttrLock = ({
   model,
   attr,
   value,
+  onLock,
+  onUnlock,
   children,
 }: AttrLockProps) => {
   const toast = useToast();
   const slider = useRef<HTMLIonItemSlidingElement>(null);
   const hasValue = value !== undefined && value !== null && value !== '';
+  const hasLock = sample.locks.isLocked(taxonGroup, model, attr);
   const isLocked = sample.locks.isLocked(taxonGroup, model, attr, value);
   const wasLocked = useRef(isLocked);
 
   useEffect(() => {
-    if (!wasLocked.current || isLocked) {
+    // An explicit unlock must not be mistaken for an edited locked value.
+    if (!wasLocked.current || isLocked || !hasLock) {
       wasLocked.current = isLocked;
       return;
     }
@@ -50,7 +61,7 @@ const AttrLock = ({
     if (hasValue) sample.locks.set(taxonGroup, model, attr, value);
     else sample.locks.unset(taxonGroup, model, attr);
     wasLocked.current = hasValue;
-  }, [attr, hasValue, isLocked, model, sample, taxonGroup, value]);
+  }, [attr, hasLock, hasValue, isLocked, model, sample, taxonGroup, value]);
 
   const toggleLock = async () => {
     await slider.current?.close();
@@ -59,11 +70,14 @@ const AttrLock = ({
     if (isLocked) {
       wasLocked.current = false;
       await sample.locks.unset(taxonGroup, model, attr);
+      onUnlock?.();
       return;
     }
 
     wasLocked.current = true;
-    await sample.locks.set(taxonGroup, model, attr, value);
+    onLock
+      ? onLock(taxonGroup, model, attr, value)
+      : await sample.locks.set(taxonGroup, model, attr, value);
     toast.success('survey.attributeValueWas', {
       color: 'success',
       position: 'bottom',
@@ -72,7 +86,9 @@ const AttrLock = ({
 
   const detailIcon = isLocked ? lockClosedOutline : chevronForwardOutline;
   const child =
-    children.type === IonItem || children.type === MenuAttrItem ? (
+    children.type === IonItem ||
+    children.type === MenuAttrItem ||
+    children.type === MenuAttrItemFromModel ? (
       cloneElement(children, { detailIcon })
     ) : (
       <IonItem

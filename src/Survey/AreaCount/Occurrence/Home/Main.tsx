@@ -161,7 +161,7 @@ const EditOccurrence = ({
           <>
             <h3 className="list-title">{speciesName}</h3>
             <div className="rounded-list">
-              <PaintedLadyAttrs occurrence={occurrence} />
+              <PaintedLadyAttrs sample={sample} occurrence={occurrence} />
             </div>
           </>
         )}

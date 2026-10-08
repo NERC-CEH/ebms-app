@@ -18,7 +18,9 @@ export const PaintedLadyOther = ({ text }: Props) => {
   if (!text) return null;
 
   return (
-    <div className="line-clamp-1 max-w-[200px] text-sm">{prettifyValue}</div>
+    <div className="line-clamp-1 max-w-[200px] text-sm items-center flex">
+      {prettifyValue}
+    </div>
   );
 };
 

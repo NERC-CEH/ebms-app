@@ -600,7 +600,11 @@ const HomeController = () => {
     if (isLastSampleDeleted) {
       const survey = sample.getSurvey();
 
-      const newSubSample = survey.smp!.create!({ taxon, zeroAbundance: true });
+      const newSubSample = survey.smp!.create!({
+        taxon,
+        zeroAbundance: true,
+        parent: sample,
+      });
       sample.samples.push(newSubSample);
       sample.save();
     }
