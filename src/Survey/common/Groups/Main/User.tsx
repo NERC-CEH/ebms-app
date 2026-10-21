@@ -40,6 +40,8 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
     if (!group)
       return <RadioInput.Option value="" label="survey.notLinkedAny" />;
 
+    const isPending = group.data.userIsPending === 't';
+
     return (
       <IonItemSliding key={group?.id} className="rounded-md mt-1">
         <IonItem className="[--padding-start:0] [--inner-padding-end:0] [--border-style:none] [--background:transparent]">
@@ -47,9 +49,15 @@ const UserGroups = ({ sample, onSelect, onLeave, groups }: Props) => {
             <RadioInput.Option
               value={group.id!}
               label={group.data.title}
+              isDisabled={isPending}
               className="w-full "
             />
             <div className="flex items-center gap-2 m-1 empty:hidden opacity-90">
+              {isPending && (
+                <Badge size="small" className="bg-neutral-50 ring-neutral-200">
+                  records.pending
+                </Badge>
+              )}
               {!!group.taxonListCids.length && (
                 <Badge size="small" className="bg-neutral-50 ring-neutral-200">
                   common.hasSpeciesLists

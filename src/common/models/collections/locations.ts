@@ -6,7 +6,6 @@ import {
   device,
   LocationCollection as LocationCollectionBase,
   LocationCollectionOptions,
-  byGroupMembershipStatus,
   byLocationType,
   LocationType as LocType,
   LocationDTO,
@@ -263,7 +262,9 @@ export class LocationsCollection extends LocationCollectionBase<Location> {
       return validateDTO({ ...data, id: doc.locationId });
     };
 
-    const memberGroups = groups.filter(byGroupMembershipStatus('member'));
+    const memberGroups = groups.filter(
+      group => group.data.userIsMember === 't'
+    );
     const groupDocs = memberGroups.map(async group => {
       const docs = await group.fetchRemoteLocations();
       return docs.map<[LocationDTO, string]>(doc => [

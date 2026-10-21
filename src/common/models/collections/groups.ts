@@ -50,6 +50,10 @@ export class GroupCollection extends GroupCollectionBase<Group> {
     const useCountryFilter =
       params?.type !== 'member' && Number.isFinite(countryId);
 
+    if (params?.type === 'member') {
+      await super.fetchRemote({ type: 'pending' });
+    }
+
     await super.fetchRemote({
       ...params,
       // we only want to show current country groups that are not the user's member groups

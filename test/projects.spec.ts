@@ -33,15 +33,21 @@ const projectLocations = [
 const section = location('1002', 'Project Section', '778', '1001');
 const baitTrap = location('3002', 'Project Bait Trap', '24554', '3001');
 
-async function prepareProjects(page: Page) {
+async function prepareProjects(page: Page, requiresApproval = false) {
   let joined = false;
-  const group = (id: string, title: string, member: boolean) => ({
+  const group = (
+    id: string,
+    title: string,
+    member: boolean,
+    pending = false
+  ) => ({
     values: {
       id,
       title,
       created_on: now,
       user_is_member: member ? 't' : null,
-      joining_method: 'P',
+      user_is_pending: pending ? 't' : null,
+      joining_method: requiresApproval ? 'R' : 'P',
     },
   });
 
@@ -58,16 +64,21 @@ async function prepareProjects(page: Page) {
 
     if (path.endsWith('/groups')) {
       const existing = group('9001', 'Existing project', true);
-      const project = group(PROJECT_ID, PROJECT_NAME, joined);
+      const pending = joined && requiresApproval;
+      const project = group(
+        PROJECT_ID,
+        PROJECT_NAME,
+        joined && !pending,
+        pending
+      );
+      const view = url.searchParams.get('view');
+      const projects = {
+        joinable: joined ? [] : [project],
+        pending: pending ? [project] : [],
+        member: joined && !pending ? [existing, project] : [existing],
+      };
       await route.fulfill({
-        json:
-          url.searchParams.get('view') === 'joinable'
-            ? joined
-              ? []
-              : [project]
-            : joined
-              ? [existing, project]
-              : [existing],
+        json: projects[view as keyof typeof projects] || [],
       });
       return;
     }
@@ -223,6 +234,86 @@ async function prepareProjects(page: Page) {
   await page.reload();
   await expect(page.locator('#home-home')).toBeVisible();
 }
+
+test('shows pending project requests in My projects until approved', async ({
+  recordingPage: page,
+}) => {
+  await prepareProjects(page, true);
+
+  const pendingSiteRequests: string[] = [];
+  page.on('request', request => {
+    if (request.url().includes(`/groups/${PROJECT_ID}/locations`)) {
+      pendingSiteRequests.push(request.url());
+    }
+  });
+
+  await openSurvey(page, '15min Count');
+  await page.getByText('Additional Details', { exact: true }).click();
+  await page.getByRole('link', { name: 'Project', exact: true }).click();
+
+  const picker = page.locator('#precise-area-count-edit-group');
+  const allProjects = picker
+    .locator('ion-segment-button')
+    .filter({ hasText: 'All projects' });
+
+  await allProjects.click();
+  await picker.getByRole('button', { name: 'Join', exact: true }).click();
+
+  const pendingProject = picker.getByRole('radio', { name: PROJECT_NAME });
+  await expect(pendingProject).toBeVisible();
+  await expect(pendingProject).toBeDisabled();
+  await expect(picker.getByText('Pending', { exact: true })).toBeVisible();
+  await expect(
+    picker.getByRole('radio', { name: 'Existing project', exact: true })
+  ).toBeEnabled();
+
+  await allProjects.click();
+  await expect(picker.getByText(PROJECT_NAME, { exact: true })).toHaveCount(0);
+
+  await page.reload();
+  await expect(pendingProject).toBeVisible();
+  await expect(pendingProject).toBeDisabled();
+  await expect(picker.getByText('Pending', { exact: true })).toBeVisible();
+  expect(pendingSiteRequests).toEqual([]);
+
+  await page.route('**/services/rest/groups?*', async route => {
+    const view = new URL(route.request().url()).searchParams.get('view');
+    await route.fulfill({
+      json:
+        view === 'member'
+          ? [
+              {
+                values: {
+                  id: PROJECT_ID,
+                  title: PROJECT_NAME,
+                  created_on: now,
+                  user_is_member: 't',
+                  user_is_pending: null,
+                },
+              },
+            ]
+          : [],
+    });
+  });
+  await picker.locator('ion-refresher').evaluate(element => {
+    element.dispatchEvent(
+      new CustomEvent('ionRefresh', { detail: { complete: () => {} } })
+    );
+  });
+
+  await expect(pendingProject).toBeEnabled();
+  await expect(picker.getByText('Pending', { exact: true })).toHaveCount(0);
+  await expect
+    .poll(() =>
+      page.evaluate(async projectId => {
+        const projects = await (window as any).groupsStore.findAll();
+        return projects
+          .filter((project: any) => project.id === projectId)
+          .map((project: any) => project.data.userIsMember);
+      }, PROJECT_ID)
+    )
+    .toEqual(['t']);
+});
 
 const surveys = [
   {
