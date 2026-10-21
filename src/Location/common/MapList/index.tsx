@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { wifiOutline } from 'ionicons/icons';
 import { ViewStateChangeEvent } from 'react-map-gl/mapbox';
-import { IonIcon, IonSpinner } from '@ionic/react';
+import {
+  IonIcon,
+  IonSpinner,
+  useIonViewWillEnter,
+  useIonViewWillLeave,
+} from '@ionic/react';
 import GeolocateButton from 'common/Components/GeolocateButton';
 import config from 'common/config';
 import countries from 'common/config/countries';
@@ -31,6 +36,11 @@ const MainSites = ({
   site,
 }: Props) => {
   const [showGroupsOnMap, setShowGroupsOnMap] = useState(false);
+  const [isPageActive, setIsPageActive] = useState(true);
+
+  useIonViewWillEnter(() => setIsPageActive(true));
+  useIonViewWillLeave(() => setIsPageActive(false));
+
   let initialViewState;
 
   if (site) {
@@ -69,7 +79,7 @@ const MainSites = ({
           onMoveEnd={updateMapCenter}
           maxZoom={19}
         >
-          <GeolocateButton />
+          <GeolocateButton autoLocate={isPageActive} />
 
           <MapContainer.Control>
             {isFetchingLocations ? (
